@@ -558,7 +558,7 @@
 		chest.sprite_sheets = tempRig.chest.sprite_sheets.Copy()
 		chest.sprite_sheets_obj = tempRig.chest.sprite_sheets.Copy()
 		slowdown = initial(slowdown)
-		suit_state = icon_state
+		suit_state = "nanomachine"
 		name = "nanosuit control cluster"
 		icon = 'icons/obj/rig_modules_ch.dmi' // Reset the icon back to its original
 		icon_state = "nanomachine_rig"
