@@ -37,3 +37,22 @@
 2024-05-11:
   FluffMedic:
   - qol: trash piles can be walked over
+2024-05-13:
+  FluffMedic:
+  - qol: Made the rad collectors engi access required instead of Chief engi
+  Irixue:
+  - rscadd: Colorable luna moth wings
+  MeepleMuncher:
+  - rscadd: Red, green, and purple dragon plushies.
+  StrangeWeirdKitten:
+  - rscadd: Protean's rigsuit control will mimic assimilated rigsuits
+  tacoguy7765093:
+  - bugfix: Known OM planets show up in helm now.
+  - maptweak: Stargazer modified for easier fuel canister swapping.
+  - sound: Planet arrival sound now plays for planets too.
+  - maptweak: VR ThirdLife bar dorms have bathrooms
+  - maptweak: Access changes in VR thirdlife bar
+  - sound: Removed the wailing souls from the Thirdlife bar
+  - qol: Vac-Pacs are now belt and back equippable.
+  - bugfix: Vap-Pac is less proper. Same with the generic headset.
+  - maptweak: Escape pods should actually allow people to enter them now.
