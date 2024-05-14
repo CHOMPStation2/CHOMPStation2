@@ -1,0 +1,7 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "dream slimes giving radioactive material instead of their intended"
+  - bugfix: "Nightmare slimes not killing you"
+  - qol: "Made nightmare slimes more forgiving"
+  - bugfix: "Removed some lines of obsolete code"
