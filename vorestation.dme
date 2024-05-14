@@ -4811,6 +4811,7 @@
 #include "modular_chomp\code\modules\event\meatyores.dm"
 #include "modular_chomp\code\modules\exploration\lootsafe.dm"
 #include "modular_chomp\code\modules\flufftext\Dreaming.dm"
+#include "modular_chomp\code\modules\food\recipes_fryer.dm"
 #include "modular_chomp\code\modules\food\drinkgglass\metaglass.dm"
 #include "modular_chomp\code\modules\food\food\drinks\bottle.dm"
 #include "modular_chomp\code\modules\food\food\snacks\meat.dm"

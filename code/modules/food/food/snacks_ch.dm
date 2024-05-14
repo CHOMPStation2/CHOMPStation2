@@ -321,3 +321,18 @@
 /obj/item/weapon/reagent_containers/food/snacks/blondiesslice/filled/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/churro
+	name = "churro"
+	desc = "Dough, deep fried in olive oil. No toppings on it!"
+	icon = 'icons/obj/food_ch.dmi'
+	icon_state = "churro"
+	trash = /obj/item/weapon/paper/crumpled
+	filling_color = "#F5B951"
+	bitesize = 2
+	nutriment_desc = list("deep fried dough" = 2)
+	nutriment_amt = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/churro/Initialize()
+	. = ..()
+	reagents.add_reagent("cookingoil", 1)
