@@ -1,0 +1,8 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - bugfix: "Fixes ZAS debug overlays not properly overlaying over everything they should"
+  - code_imp: "Some minor weirdness fixes to logic."
+  - qol: "Makes gas overlays marginally less laggy by caching icons and using effects instead of atoms to render"
+  - code_imp: "Turns get_zone_neighbors into a define"
+  - rscadd: "ATMOS_CANPASS_TURF"
