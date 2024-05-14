@@ -57709,7 +57709,6 @@
 /area/hallway/secondary/docking_hallway2)
 "kar" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/fans/tiny,
 /obj/machinery/smartfridge/sheets/persistent_lossy{
 	name = "\improper Persistent Industrial Sheet Storage";
 	desc = "An industrial sized storage unit for materials. Following company policy with B-Shift, this particular storage unit will retain a percentage of its material in-between crew transfers."
@@ -58226,7 +58225,6 @@
 	name = "\improper Non-Persistent Industrial Sheet Storage";
 	desc = "An industrial sized storage unit for materials. B-Shift's agreement to retain materials doesn't extend to this storage device, so you should probably only stock this with sheets you need."
 	},
-/obj/structure/fans/tiny,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
