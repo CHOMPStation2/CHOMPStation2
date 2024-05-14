@@ -13,7 +13,9 @@
 	var/group_multiplier = 1
 
 	//List of active tile overlays for this gas_mixture.  Updated by check_tile_graphic()
-	var/list/graphic
+	var/list/graphic = list() // CHOMPAdd
+
+	var/list/tile_overlay_cache	// COMPAdd
 
 /datum/gas_mixture/New(vol = CELL_VOLUME)
 	volume = vol
@@ -334,11 +336,13 @@
 	zburn(null, force_burn=0, no_check=0) //could probably just call zburn() here with no args but I like being explicit.
 
 
+// CHOMPEdit Start
 //Rechecks the gas_mixture and adjusts the graphic list if needed.
 //Two lists can be passed by reference if you need know specifically which graphics were added and removed.
 /datum/gas_mixture/proc/check_tile_graphic(list/graphic_add = null, list/graphic_remove = null)
-	var/list/cur_graphic = graphic // Cache for sanic speed
+	// var/list/cur_graphic = graphic // Cache for sanic speed
 	for(var/g in gas_data.overlay_limit)
+/*
 		if(cur_graphic && cur_graphic.Find(gas_data.tile_overlay[g]))
 			//Overlay is already applied for this gas, check if it's still valid.
 			if(gas[g] <= gas_data.overlay_limit[g])
@@ -347,7 +351,14 @@
 			//Overlay isn't applied for this gas, check if it's valid and needs to be added.
 			if(gas[g] > gas_data.overlay_limit[g])
 				LAZYADD(graphic_add, gas_data.tile_overlay[g])
+*/
+		if(gas[g] > gas_data.overlay_limit[g])
+			var/tile_overlay = get_tile_overlay(g)
+			if(!(tile_overlay in graphic))
+				LAZYADD(graphic_add, tile_overlay)
 
+	. = FALSE
+/*
 	. = 0
 	//Apply changes
 	if(LAZYLEN(graphic_add))
@@ -356,7 +367,14 @@
 	if(LAZYLEN(graphic_remove))
 		LAZYREMOVE(graphic, graphic_remove)
 		. = 1
-
+*/
+	if(graphic_add && graphic_add.len)
+		graphic |= graphic_add
+		. = TRUE
+	if(graphic_remove && graphic_remove.len)
+		graphic -= graphic_remove
+		. = TRUE
+// CHOMPEdit End
 
 //Simpler version of merge(), adjusts gas amounts directly and doesn't account for temperature or group_multiplier.
 /datum/gas_mixture/proc/add(datum/gas_mixture/right_side)
@@ -374,6 +392,12 @@
 
 	update_values()
 	return 1
+
+// Gets the gas overlay for a given gas, and returns the appropriate overlay. Caches. - CHOMPADD
+/datum/gas_mixture/proc/get_tile_overlay(gas_id)
+	if(!LAZYACCESS(tile_overlay_cache, gas_id))
+		LAZYSET(tile_overlay_cache, gas_id, new/obj/effect/gas_overlay(null, gas_id))
+	return tile_overlay_cache[gas_id]
 
 
 //Multiply all gas amounts by a factor.
