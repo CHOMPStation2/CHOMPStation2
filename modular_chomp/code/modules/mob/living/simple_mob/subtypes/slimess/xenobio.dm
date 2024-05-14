@@ -562,12 +562,8 @@
 			var/obj/item/organ/external/O = E
 			O.heal_damage(-2, -2, 0, -1)
 	else
-		holder.adjustBruteLoss(4)
-		holder.adjustFireLoss(4)
-
-	holder.adjustToxLoss(4)
-	holder.adjustOxyLoss(4)
-	holder.adjustCloneLoss(2)
+		holder.adjustBruteLoss(5)
+		holder.adjustFireLoss(5)
 
 /obj/item/slime_extract/nightmare
 	name = "nightmare slime extract"
