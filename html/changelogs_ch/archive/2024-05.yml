@@ -56,3 +56,6 @@
   - qol: Vac-Pacs are now belt and back equippable.
   - bugfix: Vap-Pac is less proper. Same with the generic headset.
   - maptweak: Escape pods should actually allow people to enter them now.
+2024-05-14:
+  Raeschen:
+  - balance: Size bracelets capped to 200 when emagging
