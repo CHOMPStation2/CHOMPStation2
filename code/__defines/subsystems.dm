@@ -50,16 +50,16 @@
 #define INITIALIZE_HINT_NORMAL   0  //Nothing happens
 #define INITIALIZE_HINT_LATELOAD 1  //Call LateInitialize
 #define INITIALIZE_HINT_QDEL     2  //Call qdel on the atom
-
+//CHOMPEdit Begin
 //type and all subtypes should always call Initialize in New()
 #define INITIALIZE_IMMEDIATE(X) ##X/New(loc, ...){\
 	..();\
-	if(!initialized) {\
+	if(!(flags & ATOM_INITIALIZED)) {\
 		args[1] = TRUE;\
 		SSatoms.InitAtom(src, args);\
 	}\
 }
-
+//CHOMPEdit End
 // SS runlevels
 
 #define RUNLEVEL_INIT 0			// "Initialize Only" - Used for subsystems that should never be fired (Should also have SS_NO_FIRE set)

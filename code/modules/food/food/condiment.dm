@@ -12,7 +12,8 @@
 	icon_state = "emptycondiment"
 	flags = OPENCONTAINER
 	possible_transfer_amounts = list(1,5,10)
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 	volume = 50
 
 /obj/item/weapon/reagent_containers/food/condiment/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
@@ -60,86 +61,103 @@
 				name = "Ketchup"
 				desc = "You feel more American already."
 				icon_state = "ketchup"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("mustard")
 				name = "Mustard"
 				desc = "A somewhat bitter topping."
 				icon_state = "mustard"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("capsaicin")
 				name = "Hotsauce"
 				desc = "You can almost TASTE the stomach ulcers now!"
 				icon_state = "hotsauce"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("enzyme")
 				name = "Universal Enzyme"
 				desc = "Used in cooking various dishes."
 				icon_state = "enzyme"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("soysauce")
 				name = "Soy Sauce"
 				desc = "A salty soy-based flavoring."
 				icon_state = "soysauce"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("vinegar")
 				name = "Vinegar"
 				desc = "An acetic acid used in various dishes."
 				icon_state = "vinegar"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("frostoil")
 				name = "Coldsauce"
 				desc = "Leaves the tongue numb in its passage."
 				icon_state = "coldsauce"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("sodiumchloride")
 				name = "Salt Shaker"
 				desc = "Salt. From space oceans, presumably."
 				icon_state = "saltshaker"
-				center_of_mass = list("x"=17, "y"=11)
+				center_of_mass_x = 17 //CHOMPEdit
+				center_of_mass_y= 11 //CHOMPEdit
 			if("blackpepper")
 				name = "Pepper Mill"
 				desc = "Often used to flavor food or make people sneeze."
 				icon_state = "peppermillsmall"
-				center_of_mass = list("x"=17, "y"=11)
+				center_of_mass_x = 17 //CHOMPEdit
+				center_of_mass_y= 11 //CHOMPEdit
 			if("cookingoil")
 				name = "Cooking Oil"
 				desc = "A delicious oil used in cooking. General purpose."
 				icon_state = "oliveoil"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("sugar")
 				name = "Sugar"
 				desc = "Tastey space sugar!"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("peanutbutter")
 				name = "Peanut Butter"
 				desc = "A jar of smooth peanut butter."
 				icon_state = "peanutbutter"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("mayo")
 				name = "Mayonnaise"
 				desc = "A jar of mayonnaise!"
 				icon_state = "mayo"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("yeast")
 				name = "Yeast"
 				desc = "This is what you use to make bread fluffy."
 				icon_state = "yeast"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("spacespice")
 				name = "bottle of space spice"
 				desc = "An exotic blend of spices for cooking. Definitely not worms."
 				icon_state = "spacespicebottle"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("barbecue")
 				name = "barbecue sauce"
 				desc = "Barbecue sauce, it's labeled 'sweet and spicy'."
 				icon_state = "barbecue"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if("sprinkles")
 				name = "sprinkles"
 				desc = "Bottle of sprinkles, colourful!"
 				icon_state= "sprinkles"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			else
 				name = "Misc Condiment Bottle"
 				if (reagents.reagent_list.len==1)
@@ -147,12 +165,14 @@
 				else
 					desc = "A mixture of various condiments. [reagents.get_master_reagent_name()] is one of them."
 				icon_state = "mixedcondiments"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 	else
 		icon_state = "emptycondiment"
 		name = "Condiment Bottle"
 		desc = "An empty condiment bottle."
-		center_of_mass = list("x"=16, "y"=6)
+		center_of_mass_x = 16 //CHOMPEdit
+		center_of_mass_y= 6 //CHOMPEdit
 		return
 
 /obj/item/weapon/reagent_containers/food/condiment/enzyme
@@ -224,7 +244,8 @@
 	possible_transfer_amounts = list(1,20)
 	amount_per_transfer_from_this = 1
 	volume = 20
-	center_of_mass = list()
+	center_of_mass_x = 0 //CHOMPEdit
+	center_of_mass_y = 0 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/condiment/small/on_reagent_change()
 	return
@@ -233,7 +254,8 @@
 	name = "salt shaker"											//	a large one.
 	desc = "Salt. From space oceans, presumably."
 	icon_state = "saltshakersmall"
-	center_of_mass = list("x"=17, "y"=11)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker/Initialize()
 	. = ..()
@@ -243,7 +265,8 @@
 	name = "pepper shaker"
 	desc = "Often used to flavor food or make people sneeze."
 	icon_state = "peppershakersmall"
-	center_of_mass = list("x"=17, "y"=11)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill/Initialize()
 	. = ..()
@@ -253,7 +276,8 @@
 	name = "pepper mill"
 	desc = "Fancy way to season a dish or make people sneeze."
 	icon_state = "peppermill"
-	center_of_mass = list("x"=17, "y"=11)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill/Initialize()
 	. = ..()
@@ -466,7 +490,8 @@
 	icon = 'icons/obj/food.dmi'
 	icon_state = "flour"
 	volume = 220
-	center_of_mass = list("x"=16, "y"=8)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/condiment/carton/flour/on_reagent_change()
 	update_icon()
@@ -497,7 +522,8 @@
 	desc = "A big carton of sugar. Sweet!"
 	icon_state = "sugar"
 	volume = 120
-	center_of_mass = list("x"=16, "y"=8)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/condiment/carton/sugar/on_reagent_change()
 	update_icon()

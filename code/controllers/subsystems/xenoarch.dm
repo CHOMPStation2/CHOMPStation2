@@ -34,8 +34,8 @@ SUBSYSTEM_DEF(xenoarch)
 		if(!M.density)
 			continue
 
-		if(isnull(M.geologic_data))
-			M.geologic_data = new /datum/geosample(M)
+		/*if(isnull(M.geologic_data)) CHOMP Removal. Initialized when needed now.
+			M.geologic_data = new /datum/geosample(M)*/
 
 		if((M.z in using_map.xenoarch_exempt_levels) || !prob(XENOARCH_SPAWN_CHANCE))
 			continue

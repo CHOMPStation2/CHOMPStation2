@@ -483,7 +483,7 @@ var/list/mining_overlay_cache = list()
 
 			excavation_level += S.excavation_amount
 			update_archeo_overlays(S.excavation_amount)
-
+			geologic_data = new /datum/geosample(src) //CHOMPEdit
 			//drop some rocks
 			next_rock += S.excavation_amount
 			while(next_rock > 50)
@@ -534,7 +534,7 @@ var/list/mining_overlay_cache = list()
 
 				excavation_level += P.excavation_amount
 				update_archeo_overlays(P.excavation_amount)
-
+				geologic_data = new /datum/geosample(src) //CHOMPEdit
 				//drop some rocks
 				next_rock += P.excavation_amount
 				while(next_rock > 50)
@@ -602,6 +602,7 @@ var/list/mining_overlay_cache = list()
 	if(!mineral)
 		return
 	clear_ore_effects()
+	geologic_data = new /datum/geosample(src) //CHOMPEdit
 	var/obj/item/weapon/ore/O = new mineral.ore (src)
 	if(istype(O))
 		geologic_data.UpdateNearbyArtifactInfo(src)
@@ -675,6 +676,7 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/proc/excavate_find(var/is_clean = 0, var/datum/find/F)
 	//with skill and luck, players can cleanly extract finds
 	//otherwise, they come out inside a chunk of rock
+	geologic_data = new /datum/geosample(src) //CHOMPEdit
 	var/obj/item/weapon/X
 	if(is_clean)
 		X = new /obj/item/weapon/archaeological_find(src, new_item_type = F.find_type)
