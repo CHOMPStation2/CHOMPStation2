@@ -1,0 +1,6 @@
+author: "cadyn"
+delete-after: True
+changes:
+  - code_imp: "adds proc profile_memory to be able to diagnose where memory is being used"
+  - bugfix: "several memory optimizations"
+  - bugfix: "try to fix planetary lighting issues again"
