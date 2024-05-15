@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 const { existsSync } = require(`fs`);
 const { createRequire } = require(`module`);
 const { resolve } = require(`path`);
 
 const relPnpApiPath = '../../../../.pnp.cjs';
+=======
+const {existsSync} = require(`fs`);
+const {createRequire} = require(`module`);
+const {resolve} = require(`path`);
+
+const relPnpApiPath = "../../../../.pnp.cjs";
+>>>>>>> 67c7afe3a1... tgui 5.0.1 (#15898)
 
 const absPnpApiPath = resolve(__dirname, relPnpApiPath);
 const absRequire = createRequire(absPnpApiPath);
