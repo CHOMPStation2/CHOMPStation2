@@ -59,3 +59,21 @@
 2024-05-14:
   Raeschen:
   - balance: Size bracelets capped to 200 when emagging
+2024-05-15:
+  FluffMedic:
+  - bugfix: dream slimes giving radioactive material instead of their intended
+  - bugfix: Nightmare slimes not killing you
+  - qol: Made nightmare slimes more forgiving
+  - bugfix: Removed some lines of obsolete code
+  Raeschen:
+  - balance: Buff red-eye kin energy gain in dark from 0.1 to 0.5
+  - balance: Buff orange-eye kin energy gain in dark from 0.25 to 0.5
+  TheCaramelion:
+  - rscadd: Churros as a food item
+  - bugfix: Fixes ZAS debug overlays not properly overlaying over everything they
+      should
+  - code_imp: Some minor weirdness fixes to logic.
+  - qol: Makes gas overlays marginally less laggy by caching icons and using effects
+      instead of atoms to render
+  - code_imp: Turns get_zone_neighbors into a define
+  - rscadd: ATMOS_CANPASS_TURF
