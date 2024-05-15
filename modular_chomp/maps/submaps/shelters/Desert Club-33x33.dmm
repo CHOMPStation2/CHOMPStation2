@@ -5,6 +5,7 @@
 "bv" = (/obj/structure/bed/chair/backed_grey{dir = 8},/obj/effect/floor_decal/spline/fancy/wood{dir = 5},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "bJ" = (/obj/structure/railing/grey{dir = 1},/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/turf/simulated/floor/water/turfpack/sif,/area/space)
 "bV" = (/obj/effect/floor_decal/stairs/wood_stairs,/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
+"bZ" = (/obj/machinery/door/blast/shutters{dir = 2; id = "dcgate"; icon_state = "shutter0"; density = 0; opacity = 0},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "cd" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/sif,/area/space)
 "cu" = (/obj/effect/floor_decal/spline/fancy{dir = 10},/turf/simulated/floor/outdoors/grass/heavy/turfpack/sif,/area/space)
 "cw" = (/obj/structure/table/marble,/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{pixel_x = 3},/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{pixel_x = -3},/obj/item/weapon/reagent_containers/food/condiment/enzyme,/turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,/area/space)
@@ -54,11 +55,11 @@
 "iz" = (/obj/structure/table/marble,/obj/machinery/computer/security/telescreen/entertainment{pixel_y = 26},/turf/simulated/floor/lino,/area/space)
 "iG" = (/obj/structure/bed/chair/bay/chair/padded/brown{dir = 1},/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
 "iP" = (/obj/effect/map_effect/perma_light,/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
+"jE" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/obj/machinery/door/blast/shutters{dir = 2; id = "dcgate"; icon_state = "shutter0"; density = 0; opacity = 0},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "jO" = (/obj/structure/closet/secure_closet/hydroponics{req_access = null},/turf/simulated/floor/wood/alt/parquet/turfpack/station,/area/space)
 "jV" = (/obj/effect/floor_decal/spline/fancy/wood/corner,/obj/effect/floor_decal/spline/fancy/wood/corner{dir = 4},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "kj" = (/mob/living/simple_mob/animal/passive/chicken,/obj/structure/flora/ausbushes/ywflowers,/turf/simulated/floor/grass,/area/space)
 "kl" = (/obj/effect/floor_decal/spline/fancy,/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/sif,/area/space)
-"kn" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/obj/machinery/door/blast/shutters{dir = 2; id = "dcgate"; icon_state = "shutter0"},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "kA" = (/obj/structure/bed/chair/bay/chair/padded/yellow{dir = 4},/obj/machinery/light,/turf/simulated/floor/wood/alt/parquet/turfpack/station,/area/space)
 "kD" = (/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
 "kF" = (/obj/structure/casino_table/blackjack_l,/turf/simulated/floor/carpet/sblucarpet,/area/space)
@@ -72,6 +73,7 @@
 "lG" = (/obj/structure/table/marble,/obj/effect/map_effect/perma_light,/turf/simulated/floor/lino,/area/space)
 "lU" = (/obj/structure/bed/chair/bay/chair/padded/red{dir = 8},/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
 "lY" = (/obj/structure/table/marble,/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{pixel_x = 3},/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{pixel_x = -3},/turf/simulated/floor/lino,/area/space)
+"mh" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 8},/obj/machinery/door/blast/shutters{dir = 2; id = "dcgate"; icon_state = "shutter0"; density = 0; opacity = 0},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "mi" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/effect/map_effect/perma_light,/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
 "mp" = (/obj/structure/sink{pixel_y = 14},/turf/simulated/floor/tiled/white/turfpack/station,/area/space)
 "mE" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 8},/turf/simulated/floor/wood/alt/parquet/turfpack/station,/area/space)
@@ -119,7 +121,6 @@
 "rm" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "rD" = (/obj/machinery/light{dir = 1},/obj/item/device/radio/intercom{dir = 4; name = "Station Intercom (General)"; pixel_x = 21},/obj/machinery/button/holosign{id = "dcsign"; name = "Open Sign"; pixel_x = 33; pixel_y = 6},/obj/machinery/button/remote/blast_door{id = "dcgate"; pixel_x = 34; pixel_y = -3},/turf/simulated/floor/lino,/area/space)
 "rK" = (/obj/machinery/light{dir = 4},/obj/machinery/smartfridge/drying_rack{dir = 4},/obj/effect/floor_decal/borderfloor{dir = 4},/obj/effect/floor_decal/corner/lime/border{dir = 4},/turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,/area/space)
-"rO" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 8},/obj/machinery/door/blast/shutters{dir = 2; id = "dcgate"; icon_state = "shutter0"},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "rR" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 8},/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/sif,/area/space)
 "rS" = (/obj/structure/bed/chair/backed_grey{dir = 4},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "rU" = (/obj/structure/table/glass,/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
@@ -301,7 +302,6 @@
 "SX" = (/obj/effect/map_effect/perma_light,/turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,/area/space)
 "Te" = (/obj/structure/disposalpipe/junction{dir = 1},/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
 "Tf" = (/obj/structure/table/marble,/obj/machinery/chemical_dispenser/bar_soft/full{dir = 4},/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,/turf/simulated/floor/lino,/area/space)
-"TI" = (/obj/machinery/door/blast/shutters{dir = 2; id = "dcgate"; icon_state = "shutter0"},/turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,/area/space)
 "TM" = (/obj/machinery/portable_atmospherics/hydroponics,/obj/effect/floor_decal/borderfloor{dir = 10},/obj/effect/floor_decal/corner/lime/border{dir = 10},/turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,/area/space)
 "TQ" = (/obj/effect/floor_decal/spline/plain{dir = 8},/obj/structure/bed/chair/bay/chair/padded/beige{dir = 8},/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
 "Ua" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/carpet/purcarpet/turfpack/station,/area/space)
@@ -372,6 +372,6 @@ PDPDeMususWuUCUCUCUCUCownhrmpepKQPaXoDnhrmxWUCUCUCUCUCBfususeMPDge
 PDPDeMususususususususcdqqdQBKpeQrcKRIjVijrRususususususususeMPDge
 PDPDeMususususususususWuowqqdQtMtMtMjVijxWBfususususususususeMPDge
 geeMeMeMeMeMeMeMeMeMeMusWuowqqzOqShfijxWBfuseMeMeMeMeMeMeMeMeMeMPD
-gePDeMPDPDPDeMPDPDPDeMeMeMeMeMrOTIkneMeMeMeMeMPDPDPDeMPDPDPDeMPDPD
+gePDeMPDPDPDeMPDPDPDeMeMeMeMeMmhbZjEeMeMeMeMeMPDPDPDeMPDPDPDeMPDPD
 gegePDPDgegePDPDPDPDeMPDPDPDeMnhqSrmeMPDPDPDeMPDgegePDgePDPDgegege
 "}
