@@ -2,7 +2,7 @@
 /mob/living/proc/succubus_bite()
 	set name = "Inject Prey"
 	set desc = "Bite prey and inject them with various toxins."
-	set category = "Abilities"
+	set category = "Abilities.Succubus" //CHOMPEdit
 
 	if(last_special > world.time)
 		return
@@ -120,7 +120,7 @@ var/eggs = 0
 /mob/living/proc/mobegglaying()
 	set name = "Egg laying"
 	set desc = "you can lay Eggs"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	var/mob/living/carbon/human/C = src
 
@@ -174,7 +174,7 @@ var/eggs = 0
 /mob/living/proc/insect_sting()
 	set name = "Insect Sting"
 	set desc = "Sting a target and inject a small amount of toxin"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(last_special > world.time)
 		return

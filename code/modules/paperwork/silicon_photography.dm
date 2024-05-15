@@ -95,21 +95,21 @@
 	injectmasteralbum(p)
 
 /mob/living/silicon/ai/proc/take_image()
-	set category = "AI Commands"
+	set category = "AI.Commands" //CHOMPEdit
 	set name = "Take Image"
 	set desc = "Takes an image"
 
 	aiCamera.toggle_camera_mode()
 
 /mob/living/silicon/ai/proc/view_images()
-	set category = "AI Commands"
+	set category = "AI.Commands" //CHOMPEdit
 	set name = "View Images"
 	set desc = "View images"
 
 	aiCamera.viewpictures()
 
 /obj/item/device/camera/siliconcam/ai_camera/verb/delete_images()
-	set category = "AI Commands"
+	set category = "AI.Commands" //CHOMPEdit
 	set name = "Delete Image"
 	set desc = "Delete image"
 	set src in usr

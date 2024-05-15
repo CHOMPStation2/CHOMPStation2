@@ -1,6 +1,6 @@
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1))
 	set name = "Robot Nom"
-	set category = "IC"
+	set category = "Abilities.Vore" //CHOMPEdit
 	set desc = "Allows you to eat someone."
 
 	if (stat != CONSCIOUS)
@@ -97,7 +97,7 @@
 
 /mob/living/silicon/robot/proc/robot_mount(var/mob/living/M in living_mobs(1))
 	set name = "Robot Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))

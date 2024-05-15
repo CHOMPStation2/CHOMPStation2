@@ -12,7 +12,7 @@
 // Persistence vars not included as we probably don't want losing limbs in the game mean losing limbs in real life. Definitely can't backfire.
 /mob/observer/dead/verb/fake_enter_vr()
 	set name = "Join virtual reality"
-	set category = "Ghost"
+	set category = "Ghost.Join"
 	set desc = "Log into NanoTrasen's local virtual reality server."
 
 /* Temp removal while I figure out how to reduce the respawn time to 1 minute

@@ -1,7 +1,7 @@
 /mob/living/carbon/human/proc/shapeshifter_reassemble()
 
 	set name = "Complete Reform"
-	set category = "Abilities"
+	set category = "Abilities.Shapeshift"
 
 	if(stat || world.time < last_special)
 		return

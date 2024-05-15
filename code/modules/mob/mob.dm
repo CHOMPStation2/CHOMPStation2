@@ -284,7 +284,7 @@
 
 /mob/verb/memory()
 	set name = "Notes"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	if(mind)
 		mind.show_memory(src)
 	else
@@ -292,7 +292,7 @@
 
 /mob/verb/add_memory(msg as message)
 	set name = "Add Note"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	msg = sanitize(msg)
 
@@ -380,7 +380,7 @@
 
 /mob/verb/abandon_mob()
 	set name = "Return to Menu"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 
 	if(stat != DEAD || !ticker)
 		to_chat(usr, "<span class='notice'><B>You must be dead to use this!</B></span>")
@@ -461,7 +461,7 @@
 
 /client/verb/changes()
 	set name = "Changelog"
-	set category = "OOC"
+	set category = "OOC.Resources" //CHOMPEdit
 	// CHOMPedit Start - Better Changelog
 	//src << browse('html/changelog.html', "window=changes;size=675x650")
 	//return
@@ -477,7 +477,7 @@
 
 /mob/verb/observe()
 	set name = "Observe"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	var/is_admin = 0
 
 	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
@@ -519,7 +519,7 @@
 
 /mob/verb/cancel_camera()
 	set name = "Cancel Camera View"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	unset_machine()
 	reset_view(null)
 
@@ -544,7 +544,7 @@
 /mob/verb/stop_pulling()
 
 	set name = "Stop Pulling"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(pulling)
 		if(ishuman(pulling))
@@ -1085,7 +1085,7 @@
 /mob/verb/face_direction()
 
 	set name = "Face Direction"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set src = usr
 
 	set_face_dir()

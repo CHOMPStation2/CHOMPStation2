@@ -217,7 +217,7 @@
 // CHOMPAdd - Verb for mice colour changing
 /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour()
 	set name = "Set Mouse Colour"
-	set category = "Abilities"
+	set category = "Abilities.Mouse" //CHOMPEdit
 	set desc = "Set the colour of your mouse."
 	var/new_mouse_colour = tgui_input_list(usr, "Set Mouse Colour", "Pick a colour", list("brown","gray","white","black"))
 	if(!new_mouse_colour) return
