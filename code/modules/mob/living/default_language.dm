@@ -4,7 +4,7 @@
 //CHOMPEdit Start 515 and tgui list
 /mob/living/verb/set_default_language()
 	set name = "Set Default Language"
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	var/language = tgui_input_list(usr, "Select your default language", "Available languages", languages)
 
@@ -45,7 +45,7 @@
 //CCHOMPEdit End
 /mob/living/verb/check_default_language()
 	set name = "Check Default Language"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(default_language)
 		to_chat(src, "<span class='notice'>You are currently speaking [default_language] by default.</span>")

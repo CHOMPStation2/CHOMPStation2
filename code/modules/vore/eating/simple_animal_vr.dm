@@ -14,7 +14,7 @@
 //
 /mob/living/simple_mob/proc/animal_nom(mob/living/T in living_mobs_in_view(1))
 	set name = "Animal Nom"
-	set category = "Abilities" // Moving this to abilities from IC as it's more fitting there
+	set category = "Abilities.Vore" // Moving this to abilities from IC as it's more fitting there  //CHOMPEdit
 	set desc = "Since you can't grab, you get a verb!"
 
 	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
@@ -48,7 +48,7 @@
 /mob/living/simple_mob/proc/toggle_digestion()
 	set name = "Toggle Animal's Digestion"
 	set desc = "Enables digestion on this mob for 20 minutes."
-	set category = "OOC"
+	set category = "OOC.Mob Settings" //CHOMPEdit
 	set src in oview(1)
 
 	var/mob/living/carbon/human/user = usr
@@ -77,7 +77,7 @@
 /mob/living/simple_mob/proc/toggle_fancygurgle()
 	set name = "Toggle Animal's Gurgle sounds"
 	set desc = "Switches between Fancy and Classic sounds on this mob."
-	set category = "OOC"
+	set category = "OOC.Mob Settings" //CHOMPEdit
 	set src in oview(1)
 
 	var/mob/living/user = usr	//I mean, At least ghosts won't use it.
@@ -123,7 +123,7 @@
 
 /mob/living/simple_mob/proc/nutrition_heal()
 	set name = "Nutrition Heal"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //CHOMPEdit
 	set desc = "Slowly regenerate health using nutrition."
 
 	if(nutrition < 10)

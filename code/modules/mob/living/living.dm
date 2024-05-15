@@ -100,7 +100,7 @@
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set desc = "Press this button if you are in crit and wish to die. Use this sparingly (ending a scene, no medical, etc.)"
 	var/confirm1 = tgui_alert(usr, "Pressing this button will kill you instantenously! Are you sure you wish to proceed?", "Confirm wish to succumb", list("No","Yes"))
 	var/confirm2 = "No"
@@ -713,7 +713,7 @@
 
 /mob/living/verb/Examine_OOC() //ChompEDIT - proc --> verb
 	set name = "Examine Meta-Info (OOC)"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	set src in view()
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
 	if(CONFIG_GET(flag/allow_metadata)) // CHOMPEdit
@@ -732,7 +732,7 @@
 
 /mob/living/verb/resist()
 	set name = "Resist"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(!incapacitated(INCAPACITATION_KNOCKOUT) && (last_resist_time + RESIST_COOLDOWN < world.time))
 		last_resist_time = world.time
@@ -792,7 +792,7 @@
 
 /mob/living/verb/lay_down()
 	set name = "Rest"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	resting = !resting
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")

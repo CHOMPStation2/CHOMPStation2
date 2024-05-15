@@ -1,6 +1,6 @@
 /client/proc/recipe_dump()
 	set name = "Generate Recipe Dump"
-	set category = "Server"
+	set category = "Server.Admin" //CHOMPEdit
 	set desc = "Dumps food and drink recipe info and images for wiki or other use."
 
 	if(!holder)
@@ -110,7 +110,7 @@
 			var/amt = drink_recipes[Rp]["Catalysts"][rid]
 			drink_recipes[Rp]["Catalysts"] -= rid
 			drink_recipes[Rp]["Catalysts"][R_name] = amt
-			
+
 	//We can also change the appliance to its proper name.
 	for(var/Rp in food_recipes)
 		switch(food_recipes[Rp]["Appliance"])
@@ -181,7 +181,7 @@
 
 		//Name
 		html += "<td><b>[food_recipes[Rp]["Result"]]</b></td>"
-		
+
 		//Appliance
 		html += "<td><b>[food_recipes[Rp]["Appliance"]]</b></td>"
 
@@ -199,9 +199,9 @@
 
 		//Coating
 		if(!food_recipes[Rp]["has_coatable_items"])
-			html += "<span class = \"coating coating_not_applicable\"><li><b>Coating:</b> N/A, no coatable items</li></span>" 
+			html += "<span class = \"coating coating_not_applicable\"><li><b>Coating:</b> N/A, no coatable items</li></span>"
 			// css can be used to style or hide these depending on the class.  This has two classes
-			// coating and coating_not_applicable, which can each have styles applied. 
+			// coating and coating_not_applicable, which can each have styles applied.
 		else if(food_recipes[Rp]["Coating"] == -1)
 			html += "<span class = \"coating coating_any_coating\"><li><b>Coating:</b> Optionally, any coating</li></span>"
 		else if(isnull(food_recipes[Rp]["Coating"]))
