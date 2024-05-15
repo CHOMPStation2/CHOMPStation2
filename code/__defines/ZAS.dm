@@ -23,6 +23,8 @@
 #define SOUTHDOWN (SOUTH|DOWN)
 #define WESTDOWN (WEST|DOWN)
 
+#define TURF_HAS_VALID_ZONE(T) (istype(T, /turf/simulated) && T:zone && !T:zone:invalid)
+
 #ifdef MULTIZAS
 
 GLOBAL_LIST_INIT(gzn_check, list(

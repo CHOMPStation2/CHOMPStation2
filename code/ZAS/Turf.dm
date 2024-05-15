@@ -1,21 +1,3 @@
-// CHOMPAdd
-#define GET_ZONE_NEIGHBOURS(T, ret) \
-	ret = 0; \
-	if (T.zone) { \
-		for (var/_gzn_dir in GLOB.gzn_check) { \
-			var/turf/simulated/other = get_step(T, _gzn_dir); \
-			if (istype(other) && other.zone == T.zone) { \
-				var/block; \
-				ATMOS_CANPASS_TURF(block, other, T); \
-				if (!(block & AIR_BLOCKED)) { \
-					ret |= _gzn_dir; \
-				} \
-			} \
-		} \
-	}
-
-// CHOMPEnd
-
 /turf/simulated/var/zone/zone
 /turf/simulated/var/open_directions
 
@@ -63,6 +45,24 @@
 
 				air_master.connect(sim, src)
 
+// CHOMPAdd
+#define GET_ZONE_NEIGHBOURS(T, ret) \
+	ret = 0; \
+	if (T.zone) { \
+		for (var/_gzn_dir in GLOB.gzn_check) { \
+			var/turf/simulated/other = get_step(T, _gzn_dir); \
+			if (istype(other) && other.zone == T.zone) { \
+				var/block; \
+				ATMOS_CANPASS_TURF(block, other, T); \
+				if (!(block & AIR_BLOCKED)) { \
+					ret |= _gzn_dir; \
+				} \
+			} \
+		} \
+	}
+
+// CHOMPEnd
+
 /*
 	Simple heuristic for determining if removing the turf from it's zone will not partition the zone (A very bad thing).
 	Instead of analyzing the entire zone, we only check the nearest 3x3 turfs surrounding the src turf.
@@ -89,6 +89,7 @@
 
 	var/check_dirs
 	GET_ZONE_NEIGHBOURS(src, check_dirs)
+	. = check_dirs
 
 	if (!(. & (. - 1)))
 		return TRUE
@@ -129,7 +130,7 @@
 			if(istype(other) && other.zone == T.zone && !(other.c_airblock(T) & AIR_BLOCKED) && get_dist(src, other) <= 1)
 				. |= dir
 */
-		return !.
+	. = !.
 // CHOMPEdit End
 
 /turf/simulated/update_air_properties()
@@ -204,9 +205,9 @@
 		if(istype(unsim, /turf/simulated))
 
 			var/turf/simulated/sim = unsim
-			sim.open_directions |= reverse_dir[d]
+			sim.open_directions |= GLOB.reverse_dir[d] // CHOMPEdit
 
-			if(air_master.has_valid_zone(sim))
+			if(TURF_HAS_VALID_ZONE(sim)) // CHOMPEdit
 
 				//Might have assigned a zone, since this happens for each direction.
 				if(!zone)
@@ -239,7 +240,7 @@
 					if(verbose) to_world("Connecting to [sim.zone]")
 					#endif
 
-					air_master.connect(src, sim)
+					SSair.connect(src, sim) // CHOMPEdit
 
 
 			#ifdef ZASDBG
@@ -254,7 +255,7 @@
 			if(!postponed) postponed = list()
 			postponed.Add(unsim)
 
-	if(!air_master.has_valid_zone(src)) //Still no zone, make a new one.
+	if(!TURF_HAS_VALID_ZONE(src)) //Still no zone, make a new one. CHOMPEdit
 		var/zone/newzone = new/zone()
 		newzone.add(src)
 
@@ -267,7 +268,7 @@
 	//At this point, a zone should have happened. If it hasn't, don't add more checks, fix the bug.
 
 	for(var/turf/T in postponed)
-		air_master.connect(src, T)
+		SSair.connect(src, T) // CHOMPEdit
 
 /turf/proc/post_update_air_properties()
 	if(connections) connections.update_all()
