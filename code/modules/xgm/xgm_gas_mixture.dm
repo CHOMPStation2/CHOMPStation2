@@ -341,6 +341,11 @@
 //Two lists can be passed by reference if you need know specifically which graphics were added and removed.
 /datum/gas_mixture/proc/check_tile_graphic(list/graphic_add = null, list/graphic_remove = null)
 	// var/list/cur_graphic = graphic // Cache for sanic speed
+
+	for(var/obj/effect/gas_overlay/O in graphic)
+		if(gas[O.gas_id] <= gas_data.overlay_limit[O.gas_id])
+			LAZYADD(graphic_remove, O)
+
 	for(var/g in gas_data.overlay_limit)
 /*
 		if(cur_graphic && cur_graphic.Find(gas_data.tile_overlay[g]))
