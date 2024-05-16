@@ -815,7 +815,9 @@
 					//YawnWider Add End
 					//CHOMPStation Add Start
 					/obj/item/toy/plushie/reddragon = 1,
+					/obj/item/toy/plushie/greendragon = 1,
 					/obj/item/toy/plushie/red_eastdragon = 1,
+					/obj/item/toy/plushie/green_eastdragon = 1,
 					/obj/item/toy/plushie/gold_eastdragon = 1
 					//CHOMPStation Add End
 					)
@@ -870,8 +872,10 @@
 					//YawnWider Add End
 					//CHOMPStation Add Start
 					/obj/item/toy/plushie/reddragon = 50,
+					/obj/item/toy/plushie/greendragon = 50,
 					/obj/item/toy/plushie/red_eastdragon = 50,
-					/obj/item/toy/plushie/gold_eastdragon = 200
+					/obj/item/toy/plushie/green_eastdragon = 50,
+					/obj/item/toy/plushie/gold_eastdragon = 500
 					//CHOMPStation Add End
 					)
 
