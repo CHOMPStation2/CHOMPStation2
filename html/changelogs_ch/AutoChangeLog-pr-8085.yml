@@ -1,9 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - rscadd: "cdn testserver script from tg"
-  - qol: "sorts our verbs"
-  - bugfix: "fixes ghostjump"
-  - bugfix: "fixes runtime in cmd_admin_z_narrate"
-  - code_imp: "Porting server maint subsystem from TG to remove nulls from important lists"
-  - rscadd: "Ping to the panel"

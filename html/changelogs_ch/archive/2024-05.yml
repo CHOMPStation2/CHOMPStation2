@@ -77,3 +77,22 @@
       instead of atoms to render
   - code_imp: Turns get_zone_neighbors into a define
   - rscadd: ATMOS_CANPASS_TURF
+2024-05-16:
+  Kashargul:
+  - rscadd: cdn testserver script from tg
+  - qol: sorts our verbs
+  - bugfix: fixes ghostjump
+  - bugfix: fixes runtime in cmd_admin_z_narrate
+  - code_imp: Porting server maint subsystem from TG to remove nulls from important
+      lists
+  - rscadd: Ping to the panel
+  ReoDaProtovali:
+  - rscadd: Unlock succubus bite
+  TheCaramelion:
+  - bugfix: Gas overlays get removed when there's not enough gas
+  - bugfix: ZAS zones not separating properly when airlocks open/close
+  cadyn:
+  - code_imp: adds proc profile_memory to be able to diagnose where memory is being
+      used
+  - bugfix: several memory optimizations
+  - bugfix: try to fix planetary lighting issues again
