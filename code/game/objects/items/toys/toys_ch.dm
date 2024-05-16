@@ -62,7 +62,7 @@
 
 /obj/item/toy/plushie/gold_eastdragon
 	name = "golden eastern dragon plushie"
-	desc = "A soft plushie of a shiny golden dragon. Expensive!"
+	desc = "A soft plushie of a shiny golden dragon. Made of Real* gold!"
 	icon = 'icons/obj/toy_ch.dmi'
 	icon_state = "goldeasterndragon"
 	pokephrase = "Shine!"
