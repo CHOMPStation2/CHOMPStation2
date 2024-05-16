@@ -244,7 +244,7 @@
 		if(istype(B) && B.storing_nutrition)
 			return FALSE
 		else if(isliving(B.owner))
-			B.owner.nutrition += stored_nutrition
+			B.owner.nutrition += stored_nutrition * (B.nutrition_percent / 100)
 			stored_nutrition = 0
 			qdel(src)
 			return w_class
