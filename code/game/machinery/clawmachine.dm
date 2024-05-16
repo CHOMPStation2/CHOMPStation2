@@ -73,7 +73,8 @@
 						/obj/item/toy/plushie/purple_dragon,
 						/obj/item/toy/plushie/white_eastdragon,
 						/obj/item/toy/plushie/red_eastdragon,
-						/obj/item/toy/plushie/green_eastdragon
+						/obj/item/toy/plushie/green_eastdragon,
+						/obj/item/toy/plushie/gold_eastdragon
 						//CHOMPStation Add End
 						)
 
