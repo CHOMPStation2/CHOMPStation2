@@ -12,6 +12,7 @@
 /obj/machinery/fusion_fuel_compressor/Initialize()
 	. = ..()
 	default_apply_parts()
+	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
 
 /obj/machinery/fusion_fuel_compressor/MouseDrop_T(var/atom/movable/target, var/mob/user)
 	if(user.incapacitated() || !user.Adjacent(src))
@@ -94,10 +95,10 @@
 	set category = "Object"
 	set src in view(1)
 
-	var/obj/item/stack/material/supermatter/S = new (get_turf(src))
-	usr.put_in_hands(S)
+	if(blitzprogress)
+		new/obj/item/stack/material/supermatter(get_turf(src))
+		blitzprogress = 0
 	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
-	blitzprogress = 0
 //CHOMPEdit End
 
 #undef FUSION_ROD_SHEET_AMT
