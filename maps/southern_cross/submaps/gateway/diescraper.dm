@@ -103,6 +103,7 @@
 	base_turf = /turf/simulated/sky/south
 	always_unpowered = TRUE
 	outdoors = OUTDOORS_YES
+	forced_ambience = list('sound/effects/weather/wind/wind_loop1.ogg')
 
 /area/awaymission/diescraper/outside
 	icon_state = "green"
