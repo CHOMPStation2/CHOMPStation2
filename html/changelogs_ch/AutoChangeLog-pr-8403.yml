@@ -1,5 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "The asteroid gateway now has a different and functioning portal puzzle. Filled in some blank spaces a smidge."
-  - bugfix: "Two eclipse sprites no longer go invisible in one direction."

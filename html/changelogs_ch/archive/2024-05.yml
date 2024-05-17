@@ -96,3 +96,13 @@
       used
   - bugfix: several memory optimizations
   - bugfix: try to fix planetary lighting issues again
+2024-05-17:
+  FluffMedic:
+  - rscadd: The asteroid gateway now has a different and functioning portal puzzle.
+      Filled in some blank spaces a smidge.
+  - bugfix: Two eclipse sprites no longer go invisible in one direction.
+  SlaysInCode:
+  - rscadd: One SP-Pod.
+  Verkister:
+  - bugfix: Fixed reclaimed nutrition pile gains not scaling with absorbing vorgan's
+      nutrition percent settings.

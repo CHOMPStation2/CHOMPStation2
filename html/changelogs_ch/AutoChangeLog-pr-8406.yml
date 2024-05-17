@@ -1,4 +1,0 @@
-author: "Verkister"
-delete-after: True
-changes:
-  - bugfix: "Fixed reclaimed nutrition pile gains not scaling with absorbing vorgan's nutrition percent settings."
