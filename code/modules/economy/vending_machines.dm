@@ -811,8 +811,16 @@
 					/obj/item/toy/plushie/teshari/_yw = 1,
 					/obj/item/toy/plushie/teshari/w_yw = 1,
 					/obj/item/toy/plushie/teshari/b_yw = 1,
-					/obj/item/toy/plushie/teshari/y_yw = 1)
+					/obj/item/toy/plushie/teshari/y_yw = 1,
 					//YawnWider Add End
+					//CHOMPStation Add Start
+					/obj/item/toy/plushie/red_dragon = 1,
+					/obj/item/toy/plushie/green_dragon = 1,
+					/obj/item/toy/plushie/red_eastdragon = 1,
+					/obj/item/toy/plushie/green_eastdragon = 1,
+					/obj/item/toy/plushie/gold_eastdragon = 1
+					//CHOMPStation Add End
+					)
 	premium = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 1,
 					/obj/item/weapon/storage/trinketbox = 2)
 	prices = list(/obj/item/weapon/storage/fancy/heartbox = 15,
@@ -860,9 +868,16 @@
 					/obj/item/toy/plushie/teshari/_yw = 150,
 					/obj/item/toy/plushie/teshari/w_yw = 150,
 					/obj/item/toy/plushie/teshari/b_yw = 150,
-					/obj/item/toy/plushie/teshari/y_yw = 150)
+					/obj/item/toy/plushie/teshari/y_yw = 150,
 					//YawnWider Add End
-
+					//CHOMPStation Add Start
+					/obj/item/toy/plushie/red_dragon = 50,
+					/obj/item/toy/plushie/green_dragon = 50,
+					/obj/item/toy/plushie/red_eastdragon = 50,
+					/obj/item/toy/plushie/green_eastdragon = 50,
+					/obj/item/toy/plushie/gold_eastdragon = 500
+					//CHOMPStation Add End
+					)
 
 /obj/machinery/vending/fishing
 	name = "Loot Trawler"

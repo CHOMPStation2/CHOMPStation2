@@ -42,3 +42,27 @@
 	icon_state = "purpledragon"
 	pokephrase = "GRAH!"
 
+/obj/item/toy/plushie/white_eastdragon
+	name = "white eastern dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "whiteeasterndragon"
+	pokephrase = "Rooar!"
+
+/obj/item/toy/plushie/red_eastdragon
+	name = "red eastern dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "redeasterndragon"
+	pokephrase = "Whoosh!"
+
+/obj/item/toy/plushie/green_eastdragon
+	name = "green eastern dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "greeneasterndragon"
+	pokephrase = "Fwoomp!"
+
+/obj/item/toy/plushie/gold_eastdragon
+	name = "golden eastern dragon plushie"
+	desc = "A soft plushie of a shiny golden dragon. Made of Real* gold!"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "goldeasterndragon"
+	pokephrase = "Shine!"
