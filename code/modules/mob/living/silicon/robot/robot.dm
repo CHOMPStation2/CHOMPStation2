@@ -972,6 +972,7 @@
 	cut_overlays()
 	if(typing) //CHOMPAdd, needed as we don't have priority overlays anymore
 		add_overlay(typing_indicator, TRUE) //CHOMPAdd, needed as we don't have priority overlays anymore
+	handle_status_indicators() //CHOMPAdd, needed as we don't have priority overlays anymore
 
 	icon			= sprite_datum.sprite_icon
 	icon_state		= sprite_datum.sprite_icon_state
