@@ -49,7 +49,9 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *          tooltipPosition="top"
  *          tooltip={"This button is for allowing or preventing others from giving you liquids from their vore organs."
  *          + (liq_rec ? " Click here to prevent receiving liquids." : " Click here to allow receiving liquids.")}
- *          content={liq_rec ? "Receiving Liquids Allowed" : "Do Not Allow Receiving Liquids"} />
+ *          >
+ *            {liq_rec ? "Receiving Liquids Allowed" : "Do Not Allow Receiving Liquids"}
+ *          </Button>
  *      </Flex.Item>
  *      <Flex.Item basis="49%">
  *        <Button
@@ -60,7 +62,9 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *          tooltipPosition="top"
  *           tooltip={"This button is for allowing or preventing others from taking liquids from your vore organs."
  *          + (liq_giv ? " Click here to prevent taking liquids." : " Click here to allow taking liquids.")}
- *          content={liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"} />
+ *          >
+ *            {liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"}
+ *          </Button>
  *      </Flex.Item>
  *
  * NEW EDITS 2/25/21: COLORED BELLY OVERLAYS
@@ -99,7 +103,9 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *                   onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
  *                   icon={disable_hud ? "toggle-on" : "toggle-off"}
  *                   selected={disable_hud}
- *                   content={disable_hud ? "Yes" : "No"} />
+ *                   >
+ *                     {disable_hud ? "Yes" : "No"}
+ *                   </Button>
  *               </LabeledList.Item>
  *             </LabeledList>
  *           </Section>
@@ -160,21 +166,20 @@ export const VorePanel = () => {
             <Flex>
               <Flex.Item basis="90%">Warning: Unsaved Changes!</Flex.Item>
               <Flex.Item>
-                <Button
-                  content="Save Prefs"
-                  icon="save"
-                  onClick={() => act('saveprefs')}
-                />
+                <Button icon="save" onClick={() => act('saveprefs')}>
+                  Save Prefs
+                </Button>
               </Flex.Item>
               <Flex.Item>
                 <Button
-                  content="Save Prefs & Export Selected Belly"
                   icon="download"
                   onClick={() => {
                     act('saveprefs');
                     act('exportpanel');
                   }}
-                />
+                >
+                  Save Prefs & Export Selected Belly
+                </Button>
               </Flex.Item>
             </Flex>
           </NoticeBox>

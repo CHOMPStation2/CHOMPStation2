@@ -24,16 +24,18 @@ export const VoreSelectedBellySounds = (props) => {
               onClick={() => act('set_attribute', { attribute: 'b_wetness' })}
               icon={is_wet ? 'toggle-on' : 'toggle-off'}
               selected={is_wet}
-              content={is_wet ? 'Yes' : 'No'}
-            />
+            >
+              {is_wet ? 'Yes' : 'No'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Internal Loop">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_wetloop' })}
               icon={wet_loop ? 'toggle-on' : 'toggle-off'}
               selected={wet_loop}
-              content={wet_loop ? 'Yes' : 'No'}
-            />
+            >
+              {wet_loop ? 'Yes' : 'No'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Use Fancy Sounds">
             <Button
@@ -42,14 +44,16 @@ export const VoreSelectedBellySounds = (props) => {
               }
               icon={fancy ? 'toggle-on' : 'toggle-off'}
               selected={fancy}
-              content={fancy ? 'Yes' : 'No'}
-            />
+            >
+              {fancy ? 'Yes' : 'No'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Vore Sound">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_sound' })}
-              content={sound}
-            />
+            >
+              {sound}
+            </Button>
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_soundtest' })}
               icon="volume-up"
@@ -58,8 +62,9 @@ export const VoreSelectedBellySounds = (props) => {
           <LabeledList.Item label="Release Sound">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_release' })}
-              content={release_sound}
-            />
+            >
+              {release_sound}
+            </Button>
             <Button
               onClick={() =>
                 act('set_attribute', { attribute: 'b_releasesoundtest' })
@@ -72,16 +77,18 @@ export const VoreSelectedBellySounds = (props) => {
               onClick={() =>
                 act('set_attribute', { attribute: 'b_sound_volume' })
               }
-              content={sound_volume + '%'}
-            />
+            >
+              {sound_volume + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Noise Frequency">
             <Button
               onClick={() =>
                 act('set_attribute', { attribute: 'b_noise_freq' })
               }
-              content={noise_freq}
-            />
+            >
+              {noise_freq}
+            </Button>
           </LabeledList.Item>
         </LabeledList>
       </Flex.Item>

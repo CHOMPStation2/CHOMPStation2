@@ -29,8 +29,9 @@ export const VoreSelectedMobTypeBellyButtons = (props) => {
                 onClick={() =>
                   act('set_attribute', { attribute: 'b_silicon_belly' })
                 }
-                content={capitalize(silicon_belly_overlay_preference)}
-              />
+              >
+                {capitalize(silicon_belly_overlay_preference)}
+              </Button>
             </LabeledList.Item>
           </LabeledList>
         </Section>

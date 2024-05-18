@@ -29,17 +29,17 @@ export const VoreSelectedBellyControls = (props) => {
           </>
         }
       >
-        <Button
-          onClick={() => act('set_attribute', { attribute: 'b_name' })}
-          content={belly_name}
-        />
+        <Button onClick={() => act('set_attribute', { attribute: 'b_name' })}>
+          {belly_name}
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Mode">
         <Button
           color={digestModeToColor[mode]}
           onClick={() => act('set_attribute', { attribute: 'b_mode' })}
-          content={mode}
-        />
+        >
+          {mode}
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Mode Addons">
         {(addons.length && addons.join(', ')) || 'None'}
@@ -52,8 +52,9 @@ export const VoreSelectedBellyControls = (props) => {
       <LabeledList.Item label="Item Mode">
         <Button
           onClick={() => act('set_attribute', { attribute: 'b_item_mode' })}
-          content={item_mode}
-        />
+        >
+          {item_mode}
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item>
         <Button.Confirm
@@ -61,10 +62,11 @@ export const VoreSelectedBellyControls = (props) => {
           icon="exclamation-triangle"
           confirmIcon="trash"
           color="red"
-          content="Delete Belly"
           confirmContent="This is irreversable!"
           onClick={() => act('set_attribute', { attribute: 'b_del' })}
-        />
+        >
+          Delete Belly
+        </Button.Confirm>
       </LabeledList.Item>
     </LabeledList>
   );

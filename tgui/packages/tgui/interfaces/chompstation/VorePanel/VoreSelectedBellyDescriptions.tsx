@@ -34,258 +34,296 @@ export const VoreSelectedBellyDescriptions = (props) => {
         {absorbed_desc}
       </LabeledList.Item>
       <LabeledList.Item label="Vore Verb">
-        <Button
-          onClick={() => act('set_attribute', { attribute: 'b_verb' })}
-          content={verb}
-        />
+        <Button onClick={() => act('set_attribute', { attribute: 'b_verb' })}>
+          {verb}
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Release Verb">
         <Button
           onClick={() => act('set_attribute', { attribute: 'b_release_verb' })}
-          content={release_verb}
-        />
+        >
+          {release_verb}
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Examine Messages">
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'em' })
           }
-          content="Examine Message (when full)"
-        />
+        >
+          Examine Message (when full)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'ema' })
           }
-          content="Examine Message (with absorbed victims)"
-        />
+        >
+          Examine Message (with absorbed victims)
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Struggle Messages">
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'smo' })
           }
-          content="Struggle Message (outside)"
-        />
+        >
+          Struggle Message (outside)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'smi' })
           }
-          content="Struggle Message (inside)"
-        />
+        >
+          Struggle Message (inside)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'asmo' })
           }
-          content="Absorbed Struggle Message (outside)"
-        />
+        >
+          Absorbed Struggle Message (outside)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'asmi' })
           }
-          content="Absorbed Struggle Message (inside)"
-        />
+        >
+          Absorbed Struggle Message (inside)
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Escape Messages">
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'escap' })
           }
-          content="Escape Attempt Message (to prey)"
-        />
+        >
+          Escape Attempt Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'escao' })
           }
-          content="Escape Attempt Message (to you)"
-        />
+        >
+          Escape Attempt Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'escp' })
           }
-          content="Escape Message (to prey)"
-        />
+        >
+          Escape Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'esco' })
           }
-          content="Escape Message (to you)"
-        />
+        >
+          Escape Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'escout' })
           }
-          content="Escape Message (outside)"
-        />
+        >
+          Escape Message (outside)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'escip' })
           }
-          content="Escape Item Message (to prey)"
-        />
+        >
+          Escape Item Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'escio' })
           }
-          content="Escape Item Message (to you)"
-        />
+        >
+          Escape Item Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'esciout' })
           }
-          content="Escape Item Message (outside)"
-        />
+        >
+          Escape Item Message (outside)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'escfp' })
           }
-          content="Escape Fail Message (to prey)"
-        />
+        >
+          Escape Fail Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'escfo' })
           }
-          content="Escape Fail Message (to you)"
-        />
+        >
+          Escape Fail Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'aescap' })
           }
-          content="Absorbed Escape Attempt Message (to prey)"
-        />
+        >
+          Absorbed Escape Attempt Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'aescao' })
           }
-          content="Absorbed Escape Attempt Message (to you)"
-        />
+        >
+          Absorbed Escape Attempt Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'aescp' })
           }
-          content="Absorbed Escape Message (to prey)"
-        />
+        >
+          Absorbed Escape Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'aesco' })
           }
-          content="Absorbed Escape Message (to you)"
-        />
+        >
+          Absorbed Escape Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'aescout' })
           }
-          content="Absorbed Escape Message (outside)"
-        />
+        >
+          Absorbed Escape Message (outside)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'aescfp' })
           }
-          content="Absorbed Escape Fail Message (to prey)"
-        />
+        >
+          Absorbed Escape Fail Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'aescfo' })
           }
-          content="Absorbed Escape Fail Message (to you)"
-        />
+        >
+          Absorbed Escape Fail Message (to you)
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Transfer Messages">
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'trnspp' })
           }
-          content="Primary Transfer Message (to prey)"
-        />
+        >
+          Primary Transfer Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'trnspo' })
           }
-          content="Primary Transfer Message (to you)"
-        />
+        >
+          Primary Transfer Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'trnssp' })
           }
-          content="Secondary Transfer Message (to prey)"
-        />
+        >
+          Secondary Transfer Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'trnsso' })
           }
-          content="Secondary Transfer Message (to you)"
-        />
+        >
+          Secondary Transfer Message (to you)
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Interaction Chance Messages">
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'stmodp' })
           }
-          content="Interaction Chance Digest Message (to prey)"
-        />
+        >
+          Interaction Chance Digest Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'stmodo' })
           }
-          content="Interaction Chance Digest Message (to you)"
-        />
+        >
+          Interaction Chance Digest Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'stmoap' })
           }
-          content="Interaction Chance Absorb Message (to prey)"
-        />
+        >
+          Interaction Chance Absorb Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'stmoao' })
           }
-          content="Interaction Chance Absorb Message (to you)"
-        />
+        >
+          Interaction Chance Absorb Message (to you)
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Bellymode Messages">
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'dmp' })
           }
-          content="Digest Message (to prey)"
-        />
+        >
+          Digest Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'dmo' })
           }
-          content="Digest Message (to you)"
-        />
+        >
+          Digest Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'amp' })
           }
-          content="Absorb Message (to prey)"
-        />
+        >
+          Absorb Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'amo' })
           }
-          content="Absorb Message (to you)"
-        />
+        >
+          Absorb Message (to you)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'uamp' })
           }
-          content="Unabsorb Message (to prey)"
-        />
+        >
+          Unabsorb Message (to prey)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'uamo' })
           }
-          content="Unabsorb Message (to you)"
-        />
+        >
+          Unabsorb Message (to you)
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Idle Messages">
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_hold' })
           }
-          content="Idle Messages (Hold)"
-        />
+        >
+          Idle Messages (Hold)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', {
@@ -293,20 +331,23 @@ export const VoreSelectedBellyDescriptions = (props) => {
               msgtype: 'im_holdabsorbed',
             })
           }
-          content="Idle Messages (Hold Absorbed)"
-        />
+        >
+          Idle Messages (Hold Absorbed)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_digest' })
           }
-          content="Idle Messages (Digest)"
-        />
+        >
+          Idle Messages (Digest)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_absorb' })
           }
-          content="Idle Messages (Absorb)"
-        />
+        >
+          Idle Messages (Absorb)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', {
@@ -314,44 +355,51 @@ export const VoreSelectedBellyDescriptions = (props) => {
               msgtype: 'im_unabsorb',
             })
           }
-          content="Idle Messages (Unabsorb)"
-        />
+        >
+          Idle Messages (Unabsorb)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_drain' })
           }
-          content="Idle Messages (Drain)"
-        />
+        >
+          Idle Messages (Drain)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_heal' })
           }
-          content="Idle Messages (Heal)"
-        />
+        >
+          Idle Messages (Heal)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_steal' })
           }
-          content="Idle Messages (Size Steal)"
-        />
+        >
+          Idle Messages (Size Steal)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_shrink' })
           }
-          content="Idle Messages (Shrink)"
-        />
+        >
+          Idle Messages (Shrink)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_grow' })
           }
-          content="Idle Messages (Grow)"
-        />
+        >
+          Idle Messages (Grow)
+        </Button>
         <Button
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'im_egg' })
           }
-          content="Idle Messages (Encase In Egg)"
-        />
+        >
+          Idle Messages (Encase In Egg)
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Reset Messages">
         <Button
@@ -359,8 +407,9 @@ export const VoreSelectedBellyDescriptions = (props) => {
           onClick={() =>
             act('set_attribute', { attribute: 'b_msgs', msgtype: 'reset' })
           }
-          content="Reset Messages"
-        />
+        >
+          Reset Messages
+        </Button>
       </LabeledList.Item>
     </LabeledList>
   );

@@ -470,57 +470,32 @@ const ChemMasterCustomization = (props) => {
     );
   }
 
-<<<<<<< HEAD
   return (
     <Section title="Pill Bottle Customization">
       <Button
         disabled={!data.loaded_pill_bottle}
-        content="Customize Bottle Color"
         onClick={() => modalOpen('change_pill_bottle_style')}
-      />
+      >
+        Customize Bottle Color
+      </Button>
       <Button
         disabled={!data.loaded_pill_bottle}
         icon="eject"
-        content={
-          data.loaded_pill_bottle
-            ? data.loaded_pill_bottle_name +
-              ' (' +
-              data.loaded_pill_bottle_contents_len +
-              '/' +
-              data.loaded_pill_bottle_storage_slots +
-              ')'
-            : 'None loaded'
-        }
         mb="0.5rem"
         onClick={() => act('ejectp')}
-      />
+      >
+        {data.loaded_pill_bottle
+          ? data.loaded_pill_bottle_name +
+            ' (' +
+            data.loaded_pill_bottle_contents_len +
+            '/' +
+            data.loaded_pill_bottle_storage_slots +
+            ')'
+          : 'None loaded'}
+      </Button>
     </Section>
   );
 };
 // CHOMPEdit End
-=======
-//   return (
-//     <Section title="Pill Bottle Customization">
-//       <Button
-//         disabled={!data.loaded_pill_bottle}
-//         icon="eject"
-//         mb="0.5rem"
-//         onClick={() => act('ejectp')}
-//        >
-//        {data.loaded_pill_bottle
-//         ? (
-//           data.loaded_pill_bottle_name
-//             + " ("
-//             + data.loaded_pill_bottle_contents_len
-//             + "/"
-//             + data.loaded_pill_bottle_storage_slots
-//             + ")"
-//         )
-//         : "None loaded"}
-//       </Button>
-//     </Section>
-//   );
-// };
->>>>>>> 349b1425b6... more ui fixes... (#15976)
 
 modalRegisterBodyOverride('analyze', analyzeModalBodyOverride);
