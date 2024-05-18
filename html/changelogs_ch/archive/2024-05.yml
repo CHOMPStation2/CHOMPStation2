@@ -106,3 +106,6 @@
   Verkister:
   - bugfix: Fixed reclaimed nutrition pile gains not scaling with absorbing vorgan's
       nutrition percent settings.
+2024-05-18:
+  Kashargul:
+  - bugfix: fixed an exploit to freely gain infinite supermatter sheets
