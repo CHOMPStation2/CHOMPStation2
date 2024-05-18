@@ -119,7 +119,7 @@
 
 /mob/living/verb/toggle_afk()
 	set name = "Toggle AFK"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set desc = "Mark yourself as Away From Keyboard, or clear that status!"
 	if(away_from_keyboard)
 		remove_status_indicator("afk")
