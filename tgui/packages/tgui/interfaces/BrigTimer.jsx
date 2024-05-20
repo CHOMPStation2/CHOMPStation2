@@ -8,7 +8,7 @@ import { Window } from '../layouts';
 export const BrigTimer = (props) => {
   const { act, data } = useBackend();
   return (
-    <Window width={300} height={138}>
+    <Window width={400} height={138}>
       <Window.Content scrollable>
         <Section
           title="Cell Timer"
@@ -38,7 +38,7 @@ export const BrigTimer = (props) => {
             value={data.time_left / 10}
             minValue={0}
             maxValue={data.max_time_left / 10}
-            format={(val) => formatTime(round(val))}
+            format={(val) => formatTime(round(val * 10))}
             onDrag={(e, val) => act('time', { time: val })}
           />
           <Flex mt={1}>
@@ -48,7 +48,13 @@ export const BrigTimer = (props) => {
                 icon="hourglass-start"
                 content={'Add ' + formatTime(data.preset_short / 10)}
                 onClick={() => act('preset', { preset: 'short' })}
+<<<<<<< HEAD
               />
+=======
+              >
+                {'Add ' + formatTime(data.preset_short)}
+              </Button>
+>>>>>>> 64907dbc78... multiple UI timing issues (#15992)
             </Flex.Item>
             <Flex.Item grow={1}>
               <Button
@@ -56,7 +62,13 @@ export const BrigTimer = (props) => {
                 icon="hourglass-start"
                 content={'Add ' + formatTime(data.preset_medium / 10)}
                 onClick={() => act('preset', { preset: 'medium' })}
+<<<<<<< HEAD
               />
+=======
+              >
+                {'Add ' + formatTime(data.preset_medium)}
+              </Button>
+>>>>>>> 64907dbc78... multiple UI timing issues (#15992)
             </Flex.Item>
             <Flex.Item grow={1}>
               <Button
@@ -64,7 +76,13 @@ export const BrigTimer = (props) => {
                 icon="hourglass-start"
                 content={'Add ' + formatTime(data.preset_long / 10)}
                 onClick={() => act('preset', { preset: 'long' })}
+<<<<<<< HEAD
               />
+=======
+              >
+                {'Add ' + formatTime(data.preset_long)}
+              </Button>
+>>>>>>> 64907dbc78... multiple UI timing issues (#15992)
             </Flex.Item>
           </Flex>
         </Section>
