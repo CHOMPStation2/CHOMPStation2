@@ -53,14 +53,15 @@ const analyzeModalBodyOverride = (modal) => {
               disabled={data.printing}
               iconSpin={!!data.printing}
               ml="0.5rem"
-              content="Print"
               onClick={() =>
                 act('print', {
                   idx: result.idx,
                   beaker: modal.args.beaker,
                 })
               }
-            />
+            >
+              Print
+            </Button>
           )}
         </LabeledList>
       </Box>
@@ -106,16 +107,14 @@ const ChemMasterBeaker = (props) => {
     <Button.Confirm
       icon="eject"
       disabled={!beaker}
-      content="Eject and Clear Buffer"
       onClick={() => act('eject')}
-    />
+    >
+      Eject and Clear Buffer
+    </Button.Confirm>
   ) : (
-    <Button
-      icon="eject"
-      disabled={!beaker}
-      content="Eject and Clear Buffer"
-      onClick={() => act('eject')}
-    />
+    <Button icon="eject" disabled={!beaker} onClick={() => act('eject')}>
+      Eject and Clear Buffer
+    </Button>
   );
 
   return (
@@ -127,7 +126,6 @@ const ChemMasterBeaker = (props) => {
           buttons={(chemical, i) => (
             <Box mb={i < beakerReagents.length - 1 && '2px'}>
               <Button
-                content="Analyze"
                 mb="0"
                 onClick={() =>
                   modalOpen('analyze', {
@@ -135,11 +133,12 @@ const ChemMasterBeaker = (props) => {
                     beaker: 1,
                   })
                 }
-              />
+              >
+                Analyze
+              </Button>
               {transferAmounts.map((am, j) => (
                 <Button
                   key={j}
-                  content={am}
                   mb="0"
                   onClick={() =>
                     act('add', {
@@ -147,10 +146,11 @@ const ChemMasterBeaker = (props) => {
                       amount: am,
                     })
                   }
-                />
+                >
+                  {am}
+                </Button>
               ))}
               <Button
-                content="All"
                 mb="0"
                 onClick={() =>
                   act('add', {
@@ -158,16 +158,19 @@ const ChemMasterBeaker = (props) => {
                     amount: chemical.volume,
                   })
                 }
-              />
+              >
+                All
+              </Button>
               <Button
-                content="Custom.."
                 mb="0"
                 onClick={() =>
                   modalOpen('addcustom', {
                     id: chemical.id,
                   })
                 }
-              />
+              >
+                Custom..
+              </Button>
             </Box>
           )}
         />
@@ -190,9 +193,10 @@ const ChemMasterBuffer = (props) => {
           <Button
             icon={mode ? 'flask' : 'trash'}
             color={!mode && 'bad'}
-            content={mode ? 'Beaker' : 'Disposal'}
             onClick={() => act('toggle')}
-          />
+          >
+            {mode ? 'Beaker' : 'Disposal'}
+          </Button>
         </Box>
       }
     >
@@ -203,7 +207,6 @@ const ChemMasterBuffer = (props) => {
           buttons={(chemical, i) => (
             <Box mb={i < bufferReagents.length - 1 && '2px'}>
               <Button
-                content="Analyze"
                 mb="0"
                 onClick={() =>
                   modalOpen('analyze', {
@@ -211,11 +214,12 @@ const ChemMasterBuffer = (props) => {
                     beaker: 0,
                   })
                 }
-              />
+              >
+                Analyze
+              </Button>
               {transferAmounts.map((am, i) => (
                 <Button
                   key={i}
-                  content={am}
                   mb="0"
                   onClick={() =>
                     act('remove', {
@@ -223,10 +227,11 @@ const ChemMasterBuffer = (props) => {
                       amount: am,
                     })
                   }
-                />
+                >
+                  {am}
+                </Button>
               ))}
               <Button
-                content="All"
                 mb="0"
                 onClick={() =>
                   act('remove', {
@@ -234,16 +239,19 @@ const ChemMasterBuffer = (props) => {
                     amount: chemical.volume,
                   })
                 }
-              />
+              >
+                All
+              </Button>
               <Button
-                content="Custom.."
                 mb="0"
                 onClick={() =>
                   modalOpen('removecustom', {
                     id: chemical.id,
                   })
                 }
-              />
+              >
+                Custom..
+              </Button>
             </Box>
           )}
         />
@@ -265,19 +273,18 @@ const ChemMasterProduction = (props) => {
           <Button
             disabled={!data.loaded_pill_bottle}
             icon="eject"
-            content={
-              data.loaded_pill_bottle
-                ? data.loaded_pill_bottle_name +
-                  ' (' +
-                  data.loaded_pill_bottle_contents_len +
-                  '/' +
-                  data.loaded_pill_bottle_storage_slots +
-                  ')'
-                : 'No pill bottle loaded'
-            }
             mb="0.5rem"
             onClick={() => act('ejectp')}
-          />
+          >
+            {data.loaded_pill_bottle
+              ? data.loaded_pill_bottle_name +
+                ' (' +
+                data.loaded_pill_bottle_contents_len +
+                '/' +
+                data.loaded_pill_bottle_storage_slots +
+                ')'
+              : 'No pill bottle loaded'}
+          </Button>
         }
       >
         <Flex height="100%">
@@ -299,19 +306,18 @@ const ChemMasterProduction = (props) => {
         <Button
           disabled={!data.loaded_pill_bottle}
           icon="eject"
-          content={
-            data.loaded_pill_bottle
-              ? data.loaded_pill_bottle_name +
-                ' (' +
-                data.loaded_pill_bottle_contents_len +
-                '/' +
-                data.loaded_pill_bottle_storage_slots +
-                ')'
-              : 'No pill bottle loaded'
-          }
           mb="0.5rem"
           onClick={() => act('ejectp')}
-        />
+        >
+          {data.loaded_pill_bottle
+            ? data.loaded_pill_bottle_name +
+              ' (' +
+              data.loaded_pill_bottle_contents_len +
+              '/' +
+              data.loaded_pill_bottle_storage_slots +
+              ')'
+            : 'No pill bottle loaded'}
+        </Button>
       }
     >
       {!props.isCondiment ? (
@@ -330,16 +336,18 @@ const ChemMasterProductionChemical = (props) => {
       <LabeledList.Item label="Pills">
         <Button
           icon="circle"
-          content="One (60u max)"
           mr="0.5rem"
           onClick={() => modalOpen('create_pill')}
-        />
+        >
+          One (60u max)
+        </Button>
         <Button
           icon="plus-circle"
-          content="Multiple"
           mb="0.5rem"
           onClick={() => modalOpen('create_pill_multiple')}
-        />
+        >
+          Multiple
+        </Button>
         <br />
         <Button onClick={() => modalOpen('change_pill_style')}>
           <div
@@ -370,29 +378,33 @@ const ChemMasterProductionChemical = (props) => {
       <LabeledList.Item label="Patches">
         <Button
           icon="square"
-          content="One (60u max)"
           mr="0.5rem"
           onClick={() => modalOpen('create_patch')}
-        />
+        >
+          One (60u max)
+        </Button>
         <Button
           icon="plus-square"
-          content="Multiple"
           onClick={() => modalOpen('create_patch_multiple')}
-        />
+        >
+          Multiple
+        </Button>
       </LabeledList.Item>
       <LabeledList.Item label="Bottle">
         <Button
           icon="wine-bottle"
-          content="Create bottle (60u max)"
           mr="0.5rem"
           mb="0.5rem"
           onClick={() => modalOpen('create_bottle')}
-        />
+        >
+          Create bottle (60u max)
+        </Button>
         <Button
           icon="plus-square"
-          content="Multiple"
           onClick={() => modalOpen('create_bottle_multiple')}
-        />
+        >
+          Multiple
+        </Button>
         <br />
         <Button mb="0.5rem" onClick={() => modalOpen('change_bottle_style')}>
           <div
@@ -430,17 +442,19 @@ const ChemMasterProductionCondiment = (props) => {
     <>
       <Button
         icon="box"
-        content="Create condiment pack (10u max)"
         mb="0.5rem"
         onClick={() => modalOpen('create_condi_pack')}
-      />
+      >
+        Create condiment pack (10u max)
+      </Button>
       <br />
       <Button
         icon="wine-bottle"
-        content="Create bottle (60u max)"
         mb="0"
         onClick={() => act('create_condi_bottle')}
-      />
+      >
+        Create bottle (60u max)
+      </Button>
     </>
   );
 };
@@ -460,25 +474,25 @@ const ChemMasterCustomization = (props) => {
     <Section title="Pill Bottle Customization">
       <Button
         disabled={!data.loaded_pill_bottle}
-        content="Customize Bottle Color"
         onClick={() => modalOpen('change_pill_bottle_style')}
-      />
+      >
+        Customize Bottle Color
+      </Button>
       <Button
         disabled={!data.loaded_pill_bottle}
         icon="eject"
-        content={
-          data.loaded_pill_bottle
-            ? data.loaded_pill_bottle_name +
-              ' (' +
-              data.loaded_pill_bottle_contents_len +
-              '/' +
-              data.loaded_pill_bottle_storage_slots +
-              ')'
-            : 'None loaded'
-        }
         mb="0.5rem"
         onClick={() => act('ejectp')}
-      />
+      >
+        {data.loaded_pill_bottle
+          ? data.loaded_pill_bottle_name +
+            ' (' +
+            data.loaded_pill_bottle_contents_len +
+            '/' +
+            data.loaded_pill_bottle_storage_slots +
+            ')'
+          : 'None loaded'}
+      </Button>
     </Section>
   );
 };

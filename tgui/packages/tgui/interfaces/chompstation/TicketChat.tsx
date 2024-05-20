@@ -55,7 +55,7 @@ export const TicketChat = (props) => {
           title={'Ticket #' + id}
           buttons={
             <Box nowrap>
-              <Button content={Level[level]} color={LevelColor[level]} />
+              <Button color={LevelColor[level]}>{Level[level]}</Button>
             </Box>
           }
         >
@@ -96,12 +96,13 @@ export const TicketChat = (props) => {
                 </Flex.Item>
                 <Flex.Item>
                   <Button
-                    content="Send"
                     onClick={() => {
                       act('send_msg', { msg: ticketChat });
                       setTicketChat('');
                     }}
-                  />
+                  >
+                    Send
+                  </Button>
                 </Flex.Item>
               </Flex>
             </Flex.Item>
