@@ -16,17 +16,19 @@ export const BrigTimer = (props) => {
             <>
               <Button
                 icon="clock-o"
-                content={data.timing ? 'Stop' : 'Start'}
                 selected={data.timing}
                 onClick={() => act(data.timing ? 'stop' : 'start')}
-              />
+              >
+                {data.timing ? 'Stop' : 'Start'}
+              </Button>
               {(data.flash_found && (
                 <Button
                   icon="lightbulb-o"
-                  content={data.flash_charging ? 'Recharging' : 'Flash'}
                   disabled={data.flash_charging}
                   onClick={() => act('flash')}
-                />
+                >
+                  {data.flash_charging ? 'Recharging' : 'Flash'}
+                </Button>
               )) ||
                 null}
             </>
@@ -46,43 +48,29 @@ export const BrigTimer = (props) => {
               <Button
                 fluid
                 icon="hourglass-start"
-                content={'Add ' + formatTime(data.preset_short / 10)}
                 onClick={() => act('preset', { preset: 'short' })}
-<<<<<<< HEAD
-              />
-=======
               >
                 {'Add ' + formatTime(data.preset_short)}
               </Button>
->>>>>>> 64907dbc78... multiple UI timing issues (#15992)
+
             </Flex.Item>
             <Flex.Item grow={1}>
               <Button
                 fluid
                 icon="hourglass-start"
-                content={'Add ' + formatTime(data.preset_medium / 10)}
                 onClick={() => act('preset', { preset: 'medium' })}
-<<<<<<< HEAD
-              />
-=======
               >
                 {'Add ' + formatTime(data.preset_medium)}
               </Button>
->>>>>>> 64907dbc78... multiple UI timing issues (#15992)
             </Flex.Item>
             <Flex.Item grow={1}>
               <Button
                 fluid
                 icon="hourglass-start"
-                content={'Add ' + formatTime(data.preset_long / 10)}
                 onClick={() => act('preset', { preset: 'long' })}
-<<<<<<< HEAD
-              />
-=======
               >
                 {'Add ' + formatTime(data.preset_long)}
               </Button>
->>>>>>> 64907dbc78... multiple UI timing issues (#15992)
             </Flex.Item>
           </Flex>
         </Section>

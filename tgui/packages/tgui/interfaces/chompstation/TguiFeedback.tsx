@@ -58,13 +58,14 @@ export const TguiFeedback = (props) => {
                 />
               </Section>
               <Button
-                content="Submit"
                 onClick={() =>
                   act('submit', { rating: rating, comment: comment })
                 }
-              />
+              >
+                Submit
+              </Button>
             </>
-          )}{' '}
+          )}
           : {<>Please select an open window on the left!</>}
         </Flex.Item>
       </Flex>

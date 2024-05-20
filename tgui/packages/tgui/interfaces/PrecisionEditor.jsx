@@ -53,21 +53,20 @@ const SeedStatus = (props, context) => {
               <Button
                 fluid
                 key={item.displayname}
-                content={item.displayname}
                 onClick={() => act('prune', { gene_name: item.name })}
-              />
+              >
+                {item.displayname}
+              </Button>
             ))}
           </LabeledList.Item>
-          <Button
-            content="Edit Colors"
-            onClick={() => act('change_focus', { window: 'colors' })}
-          />
-          <Button
-            content="Add Reagents"
-            onClick={() => act('change_focus', { window: 'reagents' })}
-          />
+          <Button onClick={() => act('change_focus', { window: 'colors' })}>
+            Edit Colors
+          </Button>
+          <Button onClick={() => act('change_focus', { window: 'reagents' })}>
+            Add Reagents
+          </Button>
           <LabeledList.Divider size={2} />
-          <Button content="Eject Seed" onClick={() => act('eject')} />
+          <Button onClick={() => act('eject')}>Eject Seed</Button>
         </>
       ) : (
         <LabeledList.Item label="Waiting">
@@ -88,19 +87,16 @@ const ColorEditor = (props, context) => {
       <ColorBox color={plantcolor} />
       <LabeledList.Item label="Fruit Color">{fruitcolor}</LabeledList.Item>
       <ColorBox color={fruitcolor} />
-      <Button
-        content="Change plant color"
-        onClick={() => act('change_color', { option: 0 })}
-      />
-      <Button
-        content="Change fruit color"
-        onClick={() => act('change_color', { option: 1 })}
-      />
+      <Button onClick={() => act('change_color', { option: 0 })}>
+        Change plant color
+      </Button>
+      <Button onClick={() => act('change_color', { option: 1 })}>
+        Change fruit color
+      </Button>
       <LabeledList.Divider size={2} />
-      <Button
-        content="Return"
-        onClick={() => act('change_focus', { window: 'main' })}
-      />
+      <Button onClick={() => act('change_focus', { window: 'main' })}>
+        Return
+      </Button>
     </LabeledList>
   );
 };
@@ -144,9 +140,10 @@ const BiochemEditor = (props, context) => {
                 <Button
                   key={item.displayname}
                   fluid
-                  content={item.displayname}
                   onClick={() => act('add_chem', { target_chem: item.name })}
-                />
+                >
+                  {item.displayname}
+                </Button>
               ))}
             </LabeledList.Item>
           ) : (
@@ -155,7 +152,7 @@ const BiochemEditor = (props, context) => {
             </NoticeBox>
           )}
 
-          <Button content="Eject Beaker" onClick={() => act('eject_beaker')} />
+          <Button onClick={() => act('eject_beaker')}>Eject Beaker</Button>
         </>
       ) : (
         <LabeledList.Item label="Waiting">
@@ -163,10 +160,9 @@ const BiochemEditor = (props, context) => {
         </LabeledList.Item>
       )}
 
-      <Button
-        content="Return"
-        onClick={() => act('change_focus', { window: 'main' })}
-      />
+      <Button onClick={() => act('change_focus', { window: 'main' })}>
+        Return
+      </Button>
     </LabeledList>
   );
 };

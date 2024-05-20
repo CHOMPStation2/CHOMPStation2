@@ -63,14 +63,15 @@ export const NIF = (props) => {
                   <Button.Confirm
                     icon="ban"
                     color="bad"
-                    content="Uninstall"
                     confirmIcon="ban"
                     confirmContent={'Uninstall ' + viewingModule.name + '?'}
                     onClick={() => {
                       act('uninstall', { module: viewingModule.ref });
                       setViewing(null);
                     }}
-                  />
+                  >
+                    Uninstall
+                  </Button.Confirm>
                   <Button
                     icon="window-close"
                     onClick={() => setViewing(null)}
@@ -238,9 +239,10 @@ const NIFMain = (props) => {
                 <Button
                   fluid
                   selected={module.active}
-                  content={module.stat_text}
                   onClick={() => act('toggle_module', { module: module.ref })}
-                />
+                >
+                  {module.stat_text}
+                </Button>
               )) || <Box>{module.stat_text}</Box>}
             </LabeledList.Item>
           ))}

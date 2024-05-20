@@ -17,8 +17,9 @@ export const VoreUserPreferenceItem = (props) => {
         back_color ? (test ? back_color.enabled : back_color.disabled) : ''
       }
       tooltip={tooltip.main + ' ' + (test ? tooltip.disable : tooltip.enable)}
-      content={test ? content.enabled : content.disabled}
       {...rest}
-    />
+    >
+      {test ? content.enabled : content.disabled}
+    </Button>
   );
 };

@@ -12,7 +12,7 @@
 /obj/machinery/fusion_fuel_compressor/Initialize()
 	. = ..()
 	default_apply_parts()
-	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
+	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet //CHOMPAdd
 
 /obj/machinery/fusion_fuel_compressor/MouseDrop_T(var/atom/movable/target, var/mob/user)
 	if(user.incapacitated() || !user.Adjacent(src))

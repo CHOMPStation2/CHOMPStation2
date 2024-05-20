@@ -15,98 +15,104 @@ export const VoreSelectedBellyInteractions = (props) => {
           onClick={() => act('set_attribute', { attribute: 'b_escapable' })}
           icon={escapable ? 'toggle-on' : 'toggle-off'}
           selected={escapable}
-          content={escapable ? 'Interactions On' : 'Interactions Off'}
-        />
+        >
+          {escapable ? 'Interactions On' : 'Interactions Off'}
+        </Button>
       }
     >
       {escapable ? (
         <LabeledList>
           <LabeledList.Item label="Escape Chance">
             <Button
-              content={interacts.escapechance + '%'}
               onClick={() =>
                 act('set_attribute', { attribute: 'b_escapechance' })
               }
-            />
+            >
+              {interacts.escapechance + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Absorbed Escape Chance">
             <Button
-              content={interacts.escapechance_absorbed + '%'}
               onClick={() =>
                 act('set_attribute', { attribute: 'b_escapechance_absorbed' })
               }
-            />
+            >
+              {interacts.escapechance_absorbed + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Escape Time">
             <Button
-              content={interacts.escapetime / 10 + 's'}
               onClick={() =>
                 act('set_attribute', { attribute: 'b_escapetime' })
               }
-            />
+            >
+              {interacts.escapetime / 10 + 's'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Divider />
           <LabeledList.Item label="Transfer Chance">
             <Button
-              content={interacts.transferchance + '%'}
               onClick={() =>
                 act('set_attribute', { attribute: 'b_transferchance' })
               }
-            />
+            >
+              {interacts.transferchance + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Transfer Location">
             <Button
-              content={
-                interacts.transferlocation
-                  ? interacts.transferlocation
-                  : 'Disabled'
-              }
               onClick={() =>
                 act('set_attribute', { attribute: 'b_transferlocation' })
               }
-            />
+            >
+              {interacts.transferlocation
+                ? interacts.transferlocation
+                : 'Disabled'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Divider />
           <LabeledList.Item label="Secondary Transfer Chance">
             <Button
-              content={interacts.transferchance_secondary + '%'}
               onClick={() =>
                 act('set_attribute', {
                   attribute: 'b_transferchance_secondary',
                 })
               }
-            />
+            >
+              {interacts.transferchance_secondary + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Secondary Transfer Location">
             <Button
-              content={
-                interacts.transferlocation_secondary
-                  ? interacts.transferlocation_secondary
-                  : 'Disabled'
-              }
               onClick={() =>
                 act('set_attribute', {
                   attribute: 'b_transferlocation_secondary',
                 })
               }
-            />
+            >
+              {interacts.transferlocation_secondary
+                ? interacts.transferlocation_secondary
+                : 'Disabled'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Divider />
           <LabeledList.Item label="Absorb Chance">
             <Button
-              content={interacts.absorbchance + '%'}
               onClick={() =>
                 act('set_attribute', { attribute: 'b_absorbchance' })
               }
-            />
+            >
+              {interacts.absorbchance + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Digest Chance">
             <Button
-              content={interacts.digestchance + '%'}
               onClick={() =>
                 act('set_attribute', { attribute: 'b_digestchance' })
               }
-            />
+            >
+              {interacts.digestchance + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Divider />
         </LabeledList>
@@ -122,64 +128,66 @@ export const VoreSelectedBellyInteractions = (props) => {
             }
             icon={autotransfer_enabled ? 'toggle-on' : 'toggle-off'}
             selected={autotransfer_enabled}
-            content={
-              autotransfer_enabled
-                ? 'Auto-Transfer Enabled'
-                : 'Auto-Transfer Disabled'
-            }
-          />
+          >
+            {autotransfer_enabled
+              ? 'Auto-Transfer Enabled'
+              : 'Auto-Transfer Disabled'}
+          </Button>
         }
       >
         {autotransfer_enabled ? (
           <LabeledList>
             <LabeledList.Item label="Auto-Transfer Time">
               <Button
-                content={autotransfer.autotransferwait / 10 + 's'}
                 onClick={() =>
                   act('set_attribute', { attribute: 'b_autotransferwait' })
                 }
-              />
+              >
+                {autotransfer.autotransferwait / 10 + 's'}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Min Amount">
               <Button
-                content={autotransfer.autotransfer_min_amount}
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransfer_min_amount',
                   })
                 }
-              />
+              >
+                {autotransfer.autotransfer_min_amount}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Max Amount">
               <Button
-                content={autotransfer.autotransfer_max_amount}
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransfer_max_amount',
                   })
                 }
-              />
+              >
+                {autotransfer.autotransfer_max_amount}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Divider />
             <LabeledList.Item label="Auto-Transfer Primary Chance">
               <Button
-                content={autotransfer.autotransferchance + '%'}
                 onClick={() =>
                   act('set_attribute', { attribute: 'b_autotransferchance' })
                 }
-              />
+              >
+                {autotransfer.autotransferchance + '%'}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Primary Location">
               <Button
-                content={
-                  autotransfer.autotransferlocation
-                    ? autotransfer.autotransferlocation
-                    : 'Disabled'
-                }
                 onClick={() =>
                   act('set_attribute', { attribute: 'b_autotransferlocation' })
                 }
-              />
+              >
+                {autotransfer.autotransferlocation
+                  ? autotransfer.autotransferlocation
+                  : 'Disabled'}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Primary Whitelist (Mobs)">
               {(autotransfer.autotransfer_whitelist.length &&
@@ -240,27 +248,27 @@ export const VoreSelectedBellyInteractions = (props) => {
             <LabeledList.Divider />
             <LabeledList.Item label="Auto-Transfer Secondary Chance">
               <Button
-                content={autotransfer.autotransferchance_secondary + '%'}
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransferchance_secondary',
                   })
                 }
-              />
+              >
+                {autotransfer.autotransferchance_secondary + '%'}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Secondary Location">
               <Button
-                content={
-                  autotransfer.autotransferlocation_secondary
-                    ? autotransfer.autotransferlocation_secondary
-                    : 'Disabled'
-                }
                 onClick={() =>
                   act('set_attribute', {
                     attribute: 'b_autotransferlocation_secondary',
                   })
                 }
-              />
+              >
+                {autotransfer.autotransferlocation_secondary
+                  ? autotransfer.autotransferlocation_secondary
+                  : 'Disabled'}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Secondary Whitelist (Mobs)">
               {(autotransfer.autotransfer_secondary_whitelist.length &&
