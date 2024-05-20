@@ -52,7 +52,6 @@ export const BrigTimer = (props) => {
               >
                 {'Add ' + formatTime(data.preset_short)}
               </Button>
-
             </Flex.Item>
             <Flex.Item grow={1}>
               <Button
