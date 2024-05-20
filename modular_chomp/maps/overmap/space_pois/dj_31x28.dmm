@@ -195,10 +195,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/submap/dj)
-"aD" = (
-/turf/simulated/wall/titanium,
-/turf/space,
-/area/submap/dj)
 "aE" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -1151,7 +1147,7 @@ IF
 bL
 bL
 bL
-aD
+aq
 aq
 aq
 ad
