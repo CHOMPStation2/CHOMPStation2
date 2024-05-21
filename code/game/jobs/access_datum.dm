@@ -262,18 +262,18 @@
 	desc = "Station Network"
 	region = ACCESS_REGION_RESEARCH
 
-var/const/access_explorer = 43
-/datum/access/explorer
-	id = access_explorer
-	desc = "Away Team"
+var/const/access_explorer = 43 //CHOMP explo keep
+/datum/access/explorer //CHOMP explo keep
+	id = access_explorer //CHOMP explo keep
+	desc = "Explorer" //CHOMP explo keep
 	region = ACCESS_REGION_GENERAL
-/*
+ //CHOMP explo keep removed a wide comment field on this line
 /var/const/access_pathfinder = 44
 /datum/access/pathfinder
 	id = access_pathfinder
 	desc = "Pathfinder"
 	region = ACCESS_REGION_GENERAL
-*/
+ //CHOMP explo keep removed the closing wide comment field on this line. KEEP THE PATHFINDER
 
 /var/const/access_surgery = 45
 /datum/access/surgery
@@ -518,9 +518,6 @@ var/const/access_pilot = 67
 /datum/access/alien
 	id = access_alien
 	desc = "#%_^&*@!"
-<<<<<<< HEAD
-	access_type = ACCESS_TYPE_PRIVATE
-=======
 	access_type = ACCESS_TYPE_PRIVATE
 
 /var/const/access_talon = 301
@@ -534,4 +531,3 @@ var/const/access_pilot = 67
 	id = access_lost
 	desc = "Lost"
 	access_type = ACCESS_TYPE_NONE
->>>>>>> 5c502c231e... lost borg changes (#15994)

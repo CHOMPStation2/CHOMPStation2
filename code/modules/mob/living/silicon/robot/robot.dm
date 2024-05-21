@@ -1583,9 +1583,9 @@
 	if(!rest_style)
 		rest_style = "Default"
 
-/mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs(1))
+/mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1)) //CHOMPEdit
 	set name = "Robot Nom"
-	set category = "IC"
+	set category = "Abilities.Vore" //CHOMPEdit
 	set desc = "Allows you to eat someone."
 
 	if (stat != CONSCIOUS)
@@ -1659,7 +1659,7 @@
 
 /mob/living/silicon/robot/proc/robot_mount(var/mob/living/M in living_mobs(1))
 	set name = "Robot Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -1679,6 +1679,15 @@
 			to_chat(src, "<span class='warning'>Your connection with the shell is suddenly interrupted!</span>")
 			undeploy()
 	..()
+
+//CHOMPAdd Start
+/mob/living/silicon/robot/use_power()
+	if(cell && cell.charge < cell.maxcharge)
+		if(nutrition >= 1 * CYBORG_POWER_USAGE_MULTIPLIER)
+			nutrition -= 1 * CYBORG_POWER_USAGE_MULTIPLIER
+			cell.charge += 10 * CYBORG_POWER_USAGE_MULTIPLIER
+	..()
+//CHOMPAdd End
 
 // Those basic ones require quite detailled checks on the robot's vars to see if they are installed!
 /mob/living/silicon/robot/proc/has_basic_upgrade(var/given_type)
