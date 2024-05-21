@@ -277,12 +277,13 @@
 	var/head_offset = 0
 	var/eye_icon = "eyes_s"
 	var/eye_icon_location = 'icons/mob/human_face.dmi'
+	var/eye_icon_override = FALSE		// if true, we dont reset our icon back to default
 	force = 3
 	throwforce = 7
 	var/eyes_over_markings = FALSE //VOREStation edit
 
 /obj/item/organ/external/head/Initialize()
-	if(config.allow_headgibs)
+	if(CONFIG_GET(flag/allow_headgibs)) // CHOMPEdit
 		cannot_gib = FALSE
 	return ..()
 
@@ -339,7 +340,7 @@
 		"<span class='notice'>You make \the [I] kiss \the [src]!.</span>")
 	return ..()
 
-/obj/item/organ/external/head/get_icon()
+/obj/item/organ/external/head/get_icon(var/skeletal, var/can_apply_transparency = TRUE)
 	..()
 
 	//The overlays are not drawn on the mob, they are used for if the head is removed and becomes an item
@@ -386,9 +387,11 @@
 
 	//Head markings
 	for(var/M in markings)
+		if (!markings[M]["on"])
+			continue
 		var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 		var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
-		mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) 
+		mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode)
 		add_overlay(mark_s) //So when it's not on your body, it has icons
 		mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
 		icon_cache_key += "[M][markings[M]["color"]]"
@@ -399,6 +402,9 @@
 		icon_cache_key += "[eye_icon]"
 
 	add_overlay(get_hair_icon())
+
+	if (transparent && can_apply_transparency) //VOREStation Edit: transparent instead of nonsolid
+		mob_icon += rgb(,,,180) //do it here so any markings become transparent as well
 
 	return mob_icon
 

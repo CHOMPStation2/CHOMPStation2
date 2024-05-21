@@ -83,6 +83,12 @@
 	light_power = 1
 	light_color = "#FF0D00"
 
+/obj/effect/projectile/tracer/laser_em
+	icon_state = "em_laser"
+	light_range = 3
+	light_power = 1
+	light_color = "#00C6FF"
+
 /obj/effect/projectile/tracer/darkmatter
 	icon_state = "darkb"
 	light_range = 2
@@ -90,6 +96,7 @@
 	light_color = "#8837A3"
 
 /obj/effect/projectile/tracer/precursor //CHOMPedit add precursor tracer
+	icon = 'icons/obj/projectiles_ch.dmi' // CHOMPEdit: Fix path + replace missing file
 	icon_state = "prec"
 	light_range = 2
 	light_power = 0.7
@@ -133,3 +140,13 @@
 	light_power = 0.5
 	light_color = "#80F5FF"
 //VOREStation edit ends
+/obj/effect/projectile/tracer/pointdefense
+	icon_state = "beam_pointdef"
+//CHOMPStation add coilgun pointdefense
+/obj/effect/projectile/tracer/coildefense
+	icon = 'icons/obj/projectiles_tracer_ch.dmi'
+	icon_state = "tracer_coildef"
+	light_range = 1
+	light_power = 2
+	light_color = "#FFFFFF"
+//CHOMPStation add end <3

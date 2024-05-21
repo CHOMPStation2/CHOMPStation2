@@ -1,6 +1,6 @@
 /turf/simulated/wall
 	name = "wall"
-	desc = "A huge chunk of metal used to seperate rooms."
+	desc = "A huge chunk of metal used to separate rooms."
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "generic"
 	opacity = 1
@@ -197,9 +197,10 @@
 		else
 			material.place_dismantled_girder(src, null, girder_material)
 		if(!devastated)
-			material.place_dismantled_product(src)
-			if (!reinf_material)
+			if (reinf_material)
 				material.place_dismantled_product(src)
+			else
+				material.place_dismantled_product(src, 2)
 
 	for(var/obj/O in src.contents) //Eject contents!
 		if(istype(O,/obj/structure/sign/poster))
@@ -309,6 +310,7 @@
 /turf/simulated/wall/can_engrave()
 	return (material && material.hardness >= 10 && material.hardness <= 100)
 
+/* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /turf/simulated/wall/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	if(material.integrity > 1000) // Don't decon things like elevatorium.
 		return FALSE
@@ -332,6 +334,7 @@
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)
 		return TRUE
 	return FALSE
+*/
 
 /turf/simulated/wall/AltClick(mob/user)
 	if(isliving(user))

@@ -31,7 +31,7 @@
 	result = "/obj/mecha/combat/scarab"
 	steps = list(
 					//1
-					list("key"=/obj/item/weapon/weldingtool,
+					list("key"=IS_WELDER,
 							"backkey"=IS_WRENCH,
 							"desc"="External armor is wrenched."),
 					 //2
@@ -40,10 +40,10 @@
 					 		"desc"="External armor is installed."),
 					 //3
 					 list("key"=/obj/item/stack/material/plasteel,
-					 		"backkey"=/obj/item/weapon/weldingtool,
+					 		"backkey"=IS_WELDER,
 					 		"desc"="Internal armor is welded."),
 					 //4
-					 list("key"=/obj/item/weapon/weldingtool,
+					 list("key"=IS_WELDER,
 					 		"backkey"=IS_WRENCH,
 					 		"desc"="Internal armor is wrenched"),
 					 //5
@@ -95,7 +95,7 @@
 					 		"backkey"=IS_SCREWDRIVER,
 					 		"desc"="The wiring is adjusted"),
 					 //17
-					 list("key"=/obj/item/weapon/tool/wirecutters,
+					 list("key"=IS_WIRECUTTER,
 					 		"backkey"=IS_SCREWDRIVER,
 					 		"desc"="The wiring is added"),
 					 //18

@@ -33,12 +33,26 @@ var/global/list/obj/item/device/pda/PDAs = list()
 								"slip" = 'sound/misc/slip.ogg',
 								"honk" = 'sound/items/bikehorn.ogg',
 								"SKREE" = 'sound/voice/shriek1.ogg',
-								// "holy" = 'sound/items/PDA/ambicha4-short.ogg',
 								"xeno" = 'sound/voice/hiss1.ogg',
-								"dust" = 'sound/effects/supermatter.ogg',
+								"dust" = 'sound/effects/supermatter.ogg', // CHOMPEdit - Keeps dust as ringtone
 								"spark" = 'sound/effects/sparks4.ogg',
 								"rad" = 'sound/items/geiger/high1.ogg',
-								"servo" = 'sound/machines/rig/rigservo.ogg')
+								"servo" = 'sound/machines/rig/rigservo.ogg',
+								// "buh-boop" = 'sound/misc/buh-boop.ogg', // CHOMPEdit - No.
+								"trombone" = 'sound/misc/sadtrombone.ogg',
+								"whistle" = 'sound/misc/boatswain.ogg',
+								"chirp" = 'sound/misc/nymphchirp.ogg',
+								"slurp" = 'sound/items/drink.ogg',
+								"pwing" = 'sound/items/nif_tone_good.ogg',
+								"clack" = 'sound/items/storage/toolbox.ogg',
+								"bzzt" = 'sound/misc/null.ogg',	//vibrate mode
+								"chimes" = 'sound/misc/notice3.ogg',
+								"prbt" = 'sound/voice/prbt.ogg',
+								"bark" = 'sound/voice/bark2.ogg',
+								"bork" = 'sound/voice/bork.ogg',
+								"roark" = 'sound/voice/roarbark.ogg',
+								"chitter" = 'sound/voice/moth/moth_chitter.ogg',
+								"squish" = 'sound/effects/slime_squish.ogg')
 	var/hidden = 0 // Is the PDA hidden from the PDA list?
 	var/touch_silent = 0 //If 1, no beeps on interacting.
 
@@ -72,10 +86,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		. += "The time [stationtime2text()] is displayed in the corner of the screen."
 
 /obj/item/device/pda/CtrlClick()
-	if(issilicon(usr))
-		return
-
-	if(can_use(usr))
+	if(can_use(usr) && !issilicon(usr))
 		remove_pen()
 		return
 	..()
@@ -99,10 +110,10 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		S = 'sound/machines/twobeep.ogg'
 	playsound(loc, S, 50, 1)
 	for(var/mob/O in hearers(3, loc))
-		O.show_message(text("[bicon(src)] *[ttone]*"))
+		O.show_message(text("[icon2html(src, O.client)] *[ttone]*"))
 
 /obj/item/device/pda/proc/set_ringtone()
-	var/t = input(usr, "Please enter new ringtone", name, ttone) as text
+	var/t = tgui_input_text(usr, "Please enter new ringtone", name, ttone)
 	if(in_range(src, usr) && loc == usr)
 		if(t)
 			if(hidden_uplink && hidden_uplink.check_trigger(usr, lowertext(t), lowertext(lock_code)))
@@ -127,11 +138,21 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	new /obj/item/weapon/pen(src)
 	pdachoice = isnull(H) ? 1 : (ishuman(H) ? H.pdachoice : 1)
 	switch(pdachoice)
-		if(1) icon = 'icons/obj/pda_vr.dmi'			//VOREStation edit
-		if(2) icon = 'icons/obj/pda_slim.dmi'
-		if(3) icon = 'icons/obj/pda_old.dmi'
-		if(4) icon = 'icons/obj/pda_rugged.dmi'
-		if(5) icon = 'icons/obj/pda_holo.dmi'
+		if(1)
+			icon = 'icons/obj/pda_vr.dmi'			//VOREStation edit
+			model_name = "Thinktronic 5230 Personal Data Assistant"
+		if(2)
+			icon = 'icons/obj/pda_slim.dmi'
+			model_name = "Ward-Takahashi SlimFit™ Personal Data Assistant"
+		if(3)
+			icon = 'icons/obj/pda_old.dmi'
+			model_name = "Thinktronic 5120 Personal Data Assistant"
+		if(4)
+			icon = 'icons/obj/pda_rugged.dmi'
+			model_name = "Hephaestus WARDEN Personal Data Assistant"
+		if(5)
+			icon = 'icons/obj/pda_holo.dmi'
+			model_name = "LunaCorp Holo-PDAssistant"
 		if(6)
 			icon = 'icons/obj/pda_wrist.dmi'
 			item_state = icon_state
@@ -146,12 +167,25 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				SPECIES_TESHARI = 'icons/mob/species/teshari/pda_wrist.dmi',
 				SPECIES_VR_TESHARI = 'icons/mob/species/teshari/pda_wrist.dmi',
 			)
-		if(7) icon = 'icons/obj/pda_slider.dmi'			//VOREStation edit
+		if(7)
+			icon = 'icons/obj/pda_slider.dmi'			//VOREStation edit
+			model_name = "Slider® Personal Data Assistant"
+		if(8)
+			icon = 'icons/obj/pda_vintage.dmi'
+			model_name = "\[ERR:INVALID_MANUFACTURER_ID\] Personal Data Assistant"
+			desc = "A vintage communication device. This device has been refitted for compatibility with modern messaging systems, ROM cartridges and ID cards. Despite its heavy modifications it does not feature voice communication."
+
 		else
 			icon = 'icons/obj/pda_old.dmi'
 			log_debug("Invalid switch for PDA, defaulting to old PDA icons. [pdachoice] chosen.")
-	add_overlay("pda-pen")
+	//add_overlay("pda-pen") //ChompEDIT no icon ops on New
 	start_program(find_program(/datum/data/pda/app/main_menu))
+
+//ChompEDIT START - move icon ops to initialize
+/obj/item/device/pda/Initialize()
+	. = ..()
+	add_overlay("pda-pen")
+//ChompEDIT END
 
 /obj/item/device/pda/proc/can_use(mob/user)
 	return (tgui_status(user, GLOB.tgui_inventory_state) == STATUS_INTERACTIVE)
@@ -463,7 +497,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/Destroy()
 	PDAs -= src
-	if (src.id && prob(100) && !delete_id) //IDs are kept in 90% of the cases //VOREStation Edit - 100% of the cases, excpet when specified otherwise
+	if (src.id && !delete_id && src.id.loc == src) //CHOMPEdit
 		src.id.forceMove(get_turf(src.loc))
 	else
 		QDEL_NULL(src.id)

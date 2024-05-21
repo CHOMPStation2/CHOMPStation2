@@ -12,7 +12,7 @@
 
 	maxHealth = 200
 	health = 200
-	movement_cooldown = 0
+	movement_cooldown = -1
 
 	faction = "worm"
 
@@ -58,6 +58,8 @@
 	var/time_maw_opened = 0
 	var/maw_cooldown = 30 SECONDS
 	var/open_maw = FALSE	// Are we trying to eat things?
+
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/space_worm/head
 	name = "space worm"
@@ -124,7 +126,7 @@
 /mob/living/simple_mob/animal/space/space_worm/head/verb/toggle_devour()
 	set name = "Toggle Feeding"
 	set desc = "Extends your teeth for 30 seconds so that you can chew through mobs and structures alike."
-	set category = "Abilities"
+	set category = "Abilities.Worm" //CHOMPEdit
 
 	if(world.time < time_maw_opened + maw_cooldown)
 		if(open_maw)

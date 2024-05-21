@@ -113,7 +113,7 @@
 			else if(prob(1))
 				playsound(M, 'sound/vore/schlorp.ogg', 50, 1)
 				P.absorbed = 0
-				M.visible_message("<font color='green'><b>Something spills into [M]'s [lowertext(B.name)]!</b></font>")
+				M.visible_message(span_green("<b>Something spills into [M]'s [lowertext(B.name)]!</b>"))
 
 ////////////////////////// TF Drugs //////////////////////////
 
@@ -123,7 +123,7 @@
 	description = "A base medical concoction, capable of rapidly altering genetic and physical structure of the body. Requires extra processing to allow for a targeted transformation."
 	reagent_state = LIQUID
 	color = "#AAAAAA"
-
+/* CHOMPStation Removal for using Chompstation reagents over upstreams'
 /datum/reagent/androrovir
 	name = "Androrovir"
 	id = "androrovir"
@@ -186,3 +186,4 @@
 				H.change_gender_identity(PLURAL)
 				H.visible_message("<span class='notice'>[H] suddenly twitches as some of their features seem to contort and reshape, adjusting... In the end, it seems they are now of mixed gender.</span>",
 								"<span class='warning'>Your body suddenly contorts, feeling very different in various ways... By the time the rushing feeling is over it seems you just became of mixed gender.</span>")
+*/

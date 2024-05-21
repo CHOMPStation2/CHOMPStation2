@@ -5,7 +5,7 @@ Scour its code if you dare.
 
 Here's a summary, however.
 
-This is a 128x64px mob with sprites drawn by Przyjaciel (thanks mate) and some codersprites.
+This is a 128x92px mob with sprites drawn by Przyjaciel (thanks mate) and some codersprites.
 
 The bigdragon is an 800 health hostile boss mob with three special attacks.
 The first (disarm intent) is a charge attack that activates when the target is >5 tiles away and requires line of sight.
@@ -54,7 +54,7 @@ I think I covered everything.
 	catalogue_data = list(/datum/category_item/catalogue/fauna/bigdragon)
 	tt_desc = "S Draco Ignis"
 	icon = 'icons/mob/vore128x64.dmi'
-	icon_state = "dragon_maneNone"	//Invisible, necessary for examine stuff
+	icon_state = "dragon_bodyScaled"	//CHOMPEdit - So mappers can see it. Gets removed in Initialize()
 	icon_rest = "dragon_maneNone"
 	icon_living = "dragon_maneNone"
 	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
@@ -62,6 +62,7 @@ I think I covered everything.
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
+	vis_height = 92
 	melee_damage_lower = 35
 	melee_damage_upper = 25
 	melee_miss_chance = 0
@@ -105,7 +106,7 @@ I think I covered everything.
 	special_attack_max_range = 10
 	special_attack_cooldown = 80
 
-	plane = ABOVE_MOB_PLANE
+	plane = MOB_PLANE //CHOMPEdit
 
 	//Dragon vars
 	var/notame
@@ -121,6 +122,8 @@ I think I covered everything.
 	var/small_icon = 'icons/mob/bigdragon_small.dmi'
 	var/small_icon_state = "dragon_small"
 	var/flames
+	var/firebreathtimer
+	var/chargetimer
 
 	tame_items = list(
 	/obj/item/weapon/coin/gold = 100,
@@ -188,6 +191,7 @@ I think I covered everything.
 	player_msg = "You're a variant of the large dragon stripped of its firebreath attack (harm intent). You can still charge (disarm) and tail sweep (grab). Rest to heal slowly. Check your abilities tab for functions."
 	norange = 1
 	noenrage = 1
+	nom_mob = TRUE
 
 // Weakened variant for maintpreds
 /mob/living/simple_mob/vore/bigdragon/friendly/maintpred
@@ -234,13 +238,13 @@ I think I covered everything.
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_style
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/set_style) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/toggle_glow) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/flame_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle) //CHOMPEdit TGPanel
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = "neutral"
@@ -252,12 +256,17 @@ I think I covered everything.
 	add_language(LANGUAGE_DRUDAKAR)
 	add_language(LANGUAGE_UNATHI)
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
+	icon_state = "dragon_maneNone" //CHOMPEdit
 
 /mob/living/simple_mob/vore/bigdragon/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
 /mob/living/simple_mob/vore/bigdragon/runechat_y_offset(width, height)
 	return (..()*size_multiplier) + 40
+
+/mob/living/simple_mob/vore/bigdragon/death()
+	. = ..()
+	canceltimers()
 
 ///
 ///		Verbs
@@ -266,14 +275,14 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow()
 	set name = "Toggle Glow"
 	set desc = "Switch between glowing and not glowing."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	glow_toggle = !glow_toggle
 
 /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle()
 	set name = "Toggle Small Sprite"
 	set desc = "Switches your sprite to a smaller variant so you can see what you're doing. Others will always see your standard sprite instead. "
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	if(!small)
 		var/image/I = image(icon = small_icon, icon_state = small_icon_state, loc = src)
@@ -288,7 +297,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle()
 	set name = "Toggle breath attack"
 	set desc = "Toggles whether you will breath attack on harm intent (If you have one)."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	if(norange)
 		to_chat(src, "<span class='userdanger'>You don't have a breath attack!</span>")
@@ -300,7 +309,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/special_toggle()
 	set name = "Toggle special attacks"
 	set desc = "Toggles whether you will tail spin and charge (If you have them)."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	if(nospecial)
 		to_chat(src, "<span class='userdanger'>You don't have special attacks!</span>")
@@ -318,6 +327,7 @@ I think I covered everything.
 	update_fullness()
 	build_icons()
 
+/* CHOMPEDIT - removed
 /mob/living/simple_mob/vore/bigdragon/update_fullness()
 	var/new_fullness = 0
 	// Only count stomachs to fullness
@@ -328,6 +338,7 @@ I think I covered everything.
 	new_fullness /= size_multiplier
 	new_fullness = round(new_fullness, 1)
 	vore_fullness = min(vore_capacity, new_fullness)
+*/
 
 /mob/living/simple_mob/vore/bigdragon/proc/build_icons(var/random)
 	cut_overlays()
@@ -407,7 +418,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_style()
 	set name = "Set Dragon Style"
 	set desc = "Customise your icons."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	var/list/options = list("Underbelly","Body","Ears","Mane","Horns","Eyes")
 	for(var/option in options)
@@ -504,7 +515,10 @@ I think I covered everything.
 ///	My thanks to Raeschen for these descriptions
 
 /mob/living/simple_mob/vore/bigdragon/init_vore()
+	if(!voremob_loaded || LAZYLEN(vore_organs)) //CHOMPEdit
+		return
 	var/obj/belly/B = new /obj/belly/dragon/maw(src)
+	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HOLD] = list(
 		"The dragon's breath continues to pant over you rhythmically, each exhale carrying a bone-shivering growl",
 		"The thick, heavy tongue lifts, curling around you, cramming you tightly against it's teeth, to squeeze some flavor out of you.",
@@ -514,6 +528,7 @@ I think I covered everything.
 	gut1 = B
 	vore_selected = B
 	B = new /obj/belly/dragon/throat(src)
+	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HOLD] = list(
 		"Gggllrrrk! Another loud, squelching swallow rings out in your ears, dragging you a little deeper into the furnace-like humid heat of the dragon's body.",
 		"Nestling in a still throat for a moment, you feel the walls quiver and undulate excitedly in tune with the beast's heartbeat.",
@@ -521,6 +536,7 @@ I think I covered everything.
 		"The throat closes in tightly, utterly cocooning you with it's silken spongey embrace. Like this it holds, until you feel like you might pass out... eventually, it would shlllrrk agape and loosen up all around you once more, the beast not wanting to lose the wriggly sensation of live prey.",
 		"Blrrbles and squelching pops from it's stomach echo out below you. Each swallow brings greater clarity to those digestive sounds, and stronger acidity to the muggy air around you, inching you closer to it's grasp. Not long now.")
 	B = new /obj/belly/dragon/stomach(src)
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.emote_lists[DM_DIGEST] = list(
 		"The stomach walls spontaneously contract! Those wavey, fleshy walls binding your body in their embrace for the moment, slathering you with thick, caustic acids.",
 		"You hear a soft rumbling as the dragon’s insides churn around your body, the well-used stomach walls shuddering with a growl as you melt down.",
@@ -529,6 +545,7 @@ I think I covered everything.
 		"The constant, rhythmic kneading and massaging starts to take its toll along with the muggy heat, making you feel weaker and weaker!",
 		"The drake happily wanders around while digesting its meal, almost like it is trying to show off the hanging gut you've given it.")
 	B = new /obj/belly/dragon/maw/heal(src)
+	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HEAL] = list(
 		"Gently, the dragon's hot, bumpy tongue cradles you, feeling like a slime-soaked memory-foam bed, twitching with life. The delicacy that the dragon holds you with is quite soothing.",
 		"The wide, slick throat infront of you constantly quivers and undulates. Every hot muggy exhale of the beast makes that throat spread, ropes of slime within it's hold shivering in the flow, inhales causing it to clench up somewhat.",
@@ -537,6 +554,7 @@ I think I covered everything.
 		"Saliva soaks the area all around you thickly, lubricating absolutely everything with the hot liquid. From time to time, the beast carefully shifts the rear of it's tongue to piston a cache of the goop down the hatch. The throat seen clenching tightly shut, the tongue's rear bobbing upwards, before down again - showing off a freshly slime-soaked entrance.")
 	gut2 = B
 	B = new /obj/belly/dragon/throat/heal(src)
+	B.affects_vore_sprites = FALSE //CHOMPEdit - Added so that the new system handles these not affecting the sprite.
 	B.emote_lists[DM_HEAL] = list(
 		"The tunnel of the gullet closely wraps around you, mummifying you in a hot writhing embrace of silky flesh. The walls are slick, soaked in a lubricating slime, and so very warm.",
 		"The walls around you pulse in time with the dragon's heartbeat, which itself pounds in your ears. Rushing wind of calm breaths fill the gaps, and distant squelches of slimy payloads shifted around by soft flesh echo down below.",
@@ -544,6 +562,7 @@ I think I covered everything.
 		"Soothing thrumms from the beast sound out, to try help calm you on your way down. The dragon seems to not want you to panic, using surprisingly gentle intent.",
 		"Clenchy embraces rhythmically squelch over you. Spreading outwards, the walls would relent, letting you spread a hot, gooey pocket of space around yourself. You linger, before another undulation of a swallow nudges you further down.")
 	B = new /obj/belly/dragon/stomach/heal(src)
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.emote_lists[DM_HEAL] = list(
 		"In tune with the beast's heartbeat, the walls heave and spread all around you. In, tight and close, and then outwards, spreading cobwebs of slime all around.",
 		"The thick folds of flesh around you blrrrble and sqllrrch, as the flesh itself secretes more of this strange, pure, goopy liquid, clenching it among it's crevices to squeeze it all over you in a mess.",
@@ -557,9 +576,10 @@ I think I covered everything.
 /obj/belly/dragon
 	autotransferchance = 50
 	autotransferwait = 150
+	autotransfer_enabled = 1 //ChompEDIT
 	escapable = 1
 	escapechance = 100
-	escapetime = 30
+	escapetime = 15
 	fancy_vore = 1
 	contamination_color = "grey"
 	contamination_flavor = "Wet"
@@ -729,7 +749,7 @@ I think I covered everything.
 		var/atom/movable/AM = am
 		if(AM == src || AM.anchored)
 			continue
-		addtimer(CALLBACK(src, .proc/yeet, am), 1)
+		addtimer(CALLBACK(src, PROC_REF(yeet), am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 //Split repulse into two parts so I can recycle this later
@@ -762,10 +782,14 @@ I think I covered everything.
 
 	do_windup_animation(A, charge_warmup)
 	//callbacks are more reliable than byond's process scheduler
-	addtimer(CALLBACK(src, .proc/chargeend, A), charge_warmup)
+	chargetimer = addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup, TIMER_STOPPABLE)
 
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
+	//make sure our target still exists and is on a turf
+	if(QDELETED(A) || !isturf(get_turf(A)))
+		set_AI_busy(FALSE)
+		return
 	status_flags |= LEAPING
 	flying  = 1		//So we can thunk into things
 	hovering = 1	// So we don't hurt ourselves running off cliffs
@@ -800,10 +824,14 @@ I think I covered everything.
 		set_AI_busy(TRUE)
 	flames = 1
 	build_icons()
-	addtimer(CALLBACK(src, .proc/firebreathend, A), charge_warmup)
+	firebreathtimer = addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup, TIMER_STOPPABLE)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)
+	//make sure our target still exists and is on a turf
+	if(QDELETED(A) || !isturf(get_turf(A)))
+		set_AI_busy(FALSE)
+		return
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
 	src.visible_message("<span class='danger'>\The [src] spews fire at \the [A]!</span>")
 	playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
@@ -887,6 +915,9 @@ I think I covered everything.
 	vore_selected = gut2 //Just incase it eats someone right after being tamed
 	ai_holder = new /datum/ai_holder/simple_mob/healbelly/retaliate/dragon(src)
 
+	//Cancel any charges or firebreaths winding up
+	canceltimers()
+
 /datum/ai_holder/simple_mob/healbelly
 	intelligence_level = 3
 	can_breakthrough = 0
@@ -940,6 +971,17 @@ I think I covered everything.
 		if(L.stat)
 			if(L.stat == DEAD && !handle_corpse) // Leave dead things alone
 				return
+		if(isanimal(L))	//Don't attack simplemobs unless they are hostile.
+			var/mob/living/simple_mob/M = L
+			if(M.client)	//Don't attack players for no reason even if they're a traditionally hostile mob
+				return 0
+			if(M.nom_mob)	//Don't attack mobs that are hostile for their vore functions to work
+				return 0
+			if(M.ai_holder)	//Don't attack non-hostile mobs
+				if(M.ai_holder.hostile)
+					return 1
+				else return 0
+			else return 0
 		if(holder.IIsAlly(L))
 			if(confirmPatient(L))
 				holder.a_intent = I_HELP
@@ -1017,6 +1059,17 @@ I think I covered everything.
 	ai_holder = D
 	vore_selected = gut1
 	D.give_target(attacker)
+
+/mob/living/simple_mob/vore/bigdragon/proc/canceltimers()
+	//Cancel any charges or firebreaths winding up
+	if(firebreathtimer)
+		deltimer(firebreathtimer)
+		firebreathtimer = null
+	if(chargetimer)
+		deltimer(chargetimer)
+		chargetimer = null
+	//re-enable the AI
+	set_AI_busy(FALSE)
 
 //Smack people it warns
 /datum/ai_holder/simple_mob/healbelly/retaliate/dragon/proc/dissuade(var/chump)

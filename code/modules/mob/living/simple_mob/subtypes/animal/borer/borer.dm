@@ -20,7 +20,7 @@
 
 	status_flags = CANPUSH
 	pass_flags = PASSTABLE
-	movement_cooldown = 5
+	movement_cooldown = 1.5
 
 	universal_understand = TRUE
 	can_be_antagged = TRUE
@@ -30,7 +30,7 @@
 
 	var/mob/living/carbon/human/host = null		// The humanoid host for the brain worm.
 	var/mob/living/captive_brain/host_brain		// Used for swapping control of the body back and forth.
-	
+
 	var/roundstart = FALSE						// If true, spawning won't try to pull a ghost.
 	var/antag = TRUE							// If false, will avoid setting up objectives and events
 
@@ -39,9 +39,11 @@
 	var/true_name = null						// String used when speaking among other worms.
 	var/controlling = FALSE						// Used in human death ceck.
 	var/docile = FALSE							// Sugar can stop borers from acting.
-	
+
 	var/has_reproduced = FALSE
 	var/used_dominate							// world.time when the dominate power was last used.
+
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/borer/roundstart
 	roundstart = TRUE
@@ -57,8 +59,8 @@
 /mob/living/simple_mob/animal/borer/Initialize()
 	add_language("Cortical Link")
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src, /mob/living/proc/ventcrawl) //CHOMPEdit
+	add_verb(src, /mob/living/proc/hide) //CHOMPEdit
 
 	true_name = "[pick("Primary","Secondary","Tertiary","Quaternary")] [rand(1000,9999)]"
 
@@ -122,9 +124,9 @@
 	controlling = FALSE
 
 	host.remove_language("Cortical Link")
-	host.verbs -= /mob/living/carbon/proc/release_control
-	host.verbs -= /mob/living/carbon/proc/punish_host
-	host.verbs -= /mob/living/carbon/proc/spawn_larvae
+	remove_verb(host,/mob/living/carbon/proc/release_control)  //CHOMPEdit
+	remove_verb(host,/mob/living/carbon/proc/punish_host)  //CHOMPEdit
+	remove_verb(host,/mob/living/carbon/proc/spawn_larvae)  //CHOMPEdit
 
 	if(host_brain)
 		// these are here so bans and multikey warnings are not triggered on the wrong people when ckey is changed.

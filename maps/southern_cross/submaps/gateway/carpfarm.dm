@@ -9,6 +9,9 @@
 /area/awaymission/carpfarm/base
 	icon_state = "away"
 
+/area/awaymission/carpfarm/hostilebase
+	icon_state = "green"
+
 /area/awaymission/carpfarm/base/entry
 	icon_state = "blue"
 

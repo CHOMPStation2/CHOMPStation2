@@ -1,7 +1,7 @@
 /mob/living/carbon/human/verb/toggle_resizing_immunity()
 	set name = "Toggle Resizing Immunity"
 	set desc = "Toggles your ability to resist resizing attempts"
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	resizable = !resizable
 	to_chat(src, "<span class='notice'>You are now [resizable ? "susceptible" : "immune"] to being resized.</span>")
@@ -35,7 +35,7 @@
 /mob/living/carbon/human/verb/toggle_gender_identity_vr()
 	set name = "Set Gender Identity"
 	set desc = "Sets the pronouns when examined and performing an emote."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 	var/new_gender_identity = tgui_input_list(usr, "Please select a gender Identity:", "Set Gender Identity", list(FEMALE, MALE, NEUTER, PLURAL, HERM))
 	if(!new_gender_identity)
 		return 0
@@ -44,14 +44,14 @@
 
 /mob/living/carbon/human/verb/switch_tail_layer()
 	set name = "Switch tail layer"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set desc = "Switch tail layer on top."
 	tail_alt = !tail_alt
 	update_tail_showing()
 
 /mob/living/carbon/human/verb/hide_wings_vr()
 	set name = "Show/Hide wings"
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 	set desc = "Hide your wings, or show them if you already hid them."
 	wings_hidden = !wings_hidden
 	update_wing_showing()
@@ -60,13 +60,27 @@
 		message = "reveals their wings!"
 	else
 		message = "hides their wings."
-	visible_message("[src] [message]")
+	visible_message("<span class='filter_notice'>[src] [message]</span>")
 
-// Chomp Edit Start
-/mob/living/carbon/human/verb/hide_nutrition_vr()
-	set name = "Show/Hide Nutrition Levels"
-	set category = "IC"
-	set desc = "Allow other player to see your current nutrition level or not."
-	nutrition_hidden = !nutrition_hidden
-	to_chat(src, "Players will [nutrition_hidden ? "no longer" : "now"] see your nutrition levels.")
-// Chomp Edit End
+/mob/living/carbon/human/verb/hide_tail_vr()
+	set name = "Show/Hide tail"
+	set category = "IC.Game" //CHOMPEdit
+	set desc = "Hide your tail, or show it if you already hid it."
+	if(!tail_style) //Just some checks.
+		to_chat(src,"<span class='notice'>You have no tail to hide!</span>")
+		return
+	else //They got a tail. Let's make sure it ain't hiding stuff!
+		var/datum/sprite_accessory/tail/current_tail = tail_style
+		if((current_tail.hide_body_parts && current_tail.hide_body_parts.len) || current_tail.clip_mask_state || current_tail.clip_mask)
+			to_chat(src,"<span class='notice'>Your current tail is too considerable to hide!</span>")
+			return
+	if(species.tail) //If they're using this verb, they already have a custom tail. This prevents their species tail from showing.
+		species.tail = null //Honestly, this should probably be done when a custom tail is chosen, but this is the only time it'd ever matter.
+	tail_hidden = !tail_hidden
+	update_tail_showing()
+	var/message = ""
+	if(!tail_hidden)
+		message = "reveals their tail!"
+	else
+		message = "hides their tail."
+	visible_message("<span class='filter_notice'>[src] [message]</span>")

@@ -2,7 +2,7 @@
 /obj/structure/loot_pile/mecha/mouse_tank
 	name = "\improper Whisker wreckage"
 	desc = "The ruins of a small tank. Perhaps some child's toy?"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "whisker-broken"
 	density = TRUE
 	anchored = FALSE // In case a dead mecha-mob dies in a bad spot.
@@ -104,5 +104,12 @@
 		)
 
 /obj/structure/loot_pile/mecha/ripley/pirate
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "pirate-broken"
+
+
+/obj/structure/loot_pile/maint/technical
+	density = FALSE
+
+/obj/structure/loot_pile/maint/boxfort
+	density = FALSE

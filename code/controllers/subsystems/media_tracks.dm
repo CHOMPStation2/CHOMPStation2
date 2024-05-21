@@ -13,13 +13,13 @@ SUBSYSTEM_DEF(media_tracks)
 	var/list/casino_tracks = list()
 	/// CHOMPstation edit end
 
-/datum/controller/subsystem/media_tracks/Initialize(timeofday)
+/datum/controller/subsystem/media_tracks/Initialize() // CHOMPEdit
 	load_tracks()
 	sort_tracks()
-	return ..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/media_tracks/proc/load_tracks()
-	for(var/filename in config.jukebox_track_files)
+	for(var/filename in CONFIG_GET(str_list/jukebox_track_files)) // CHOMPEdit
 		report_progress("Loading jukebox track: [filename]")
 
 		if(!fexists(filename))
@@ -64,7 +64,7 @@ SUBSYSTEM_DEF(media_tracks)
 
 /datum/controller/subsystem/media_tracks/proc/sort_tracks()
 	report_progress("Sorting media tracks...")
-	sortTim(all_tracks, /proc/cmp_media_track_asc)
+	sortTim(all_tracks, GLOBAL_PROC_REF(cmp_media_track_asc))
 
 	jukebox_tracks.Cut()
 	lobby_tracks.Cut()
@@ -88,7 +88,7 @@ SUBSYSTEM_DEF(media_tracks)
 		return
 
 	// Required
-	var/url = input(C, "REQUIRED: Provide URL for track, or paste JSON if you know what you're doing. See code comments.", "Track URL") as message|null
+	var/url = tgui_input_text(C, "REQUIRED: Provide URL for track, or paste JSON if you know what you're doing. See code comments.", "Track URL", multiline = TRUE)
 	if(!url)
 		return
 
@@ -120,27 +120,27 @@ SUBSYSTEM_DEF(media_tracks)
 			if(!songdata["url"] || !songdata["title"] || !songdata["duration"])
 				to_chat(C, "<span class='warning'>URL, Title, or Duration was missing from a song. Skipping.</span>")
 				continue
-			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"], songdata["casino"])
+			var/datum/track/T = new(songdata["url"], songdata["title"], songdata["duration"], songdata["artist"], songdata["genre"], songdata["secret"], songdata["lobby"], songdata["casino"]) //ChompEDIT, included 'casino'
 			all_tracks += T
 
 			report_progress("New media track added by [C]: [T.title]")
 		sort_tracks()
 		return
 
-	var/title = input(C, "REQUIRED: Provide title for track", "Track Title") as text|null
+	var/title = tgui_input_text(C, "REQUIRED: Provide title for track", "Track Title")
 	if(!title)
 		return
 
-	var/duration = input(C, "REQUIRED: Provide duration for track (in deciseconds, aka seconds*10)", "Track Duration") as num|null
+	var/duration = tgui_input_number(C, "REQUIRED: Provide duration for track (in deciseconds, aka seconds*10)", "Track Duration")
 	if(!duration)
 		return
 
 	// Optional
-	var/artist = input(C, "Optional: Provide artist for track", "Track Artist") as text|null
+	var/artist = tgui_input_text(C, "Optional: Provide artist for track", "Track Artist")
 	if(isnull(artist)) // Cancel rather than empty string
 		return
 
-	var/genre = input(C, "Optional: Provide genre for track (try to match an existing one)", "Track Genre") as text|null
+	var/genre = tgui_input_text(C, "Optional: Provide genre for track (try to match an existing one)", "Track Genre")
 	if(isnull(genre)) // Cancel rather than empty string
 		return
 
@@ -188,7 +188,7 @@ SUBSYSTEM_DEF(media_tracks)
 	if(!check_rights(R_DEBUG|R_FUN))
 		return
 
-	var/track = input(C, "Input track title or URL to remove (must be exact)", "Remove Track") as text|null
+	var/track = tgui_input_text(C, "Input track title or URL to remove (must be exact)", "Remove Track")
 	if(!track)
 		return
 

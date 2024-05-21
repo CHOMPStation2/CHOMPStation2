@@ -41,7 +41,7 @@
 
 /obj/machinery/telecomms/tgui_data(mob/user)
 	var/list/data = list()
-	
+
 	data["temp"] = temp
 	data["on"] = on
 
@@ -81,7 +81,7 @@
 				"index" = i,
 			)))
 		data["linked"] = linked
-		
+
 		var/list/filter = list()
 		for(var/x in freq_listening)
 			filter.Add(list(list(
@@ -213,7 +213,7 @@
 /obj/machinery/telecomms/bus/Options_Act(action, params)
 	if(..())
 		return TRUE
-	
+
 	switch(action)
 		if("change_freq")
 			. = TRUE
@@ -267,7 +267,7 @@
 /obj/machinery/telecomms/receiver/Options_Act(action, params)
 	if(..())
 		return TRUE
-	
+
 	switch(action)
 		if("range")
 			var/new_range = params["range"]
@@ -288,14 +288,15 @@
 			. = TRUE
 
 		if("id")
-			var/newid = copytext(reject_bad_text(input(usr, "Specify the new ID for this machine", src, id) as null|text),1,MAX_MESSAGE_LEN)
+			var/newid = copytext(reject_bad_text(tgui_input_text(usr, "Specify the new ID for this machine", src, id)),1,MAX_MESSAGE_LEN)
 			if(newid && canAccess(usr))
 				id = newid
 				set_temp("-% New ID assigned: \"[id]\" %-", "average")
 				. = TRUE
 
 		if("network")
-			var/newnet = input(usr, "Specify the new network for this machine. This will break all current links.", src, network) as null|text
+			var/newnet = tgui_input_text(usr, "Specify the new network for this machine. This will break all current links.", src, network)
+			newnet = sanitize(newnet,15)
 			if(newnet && canAccess(usr))
 
 				if(length(newnet) > 15)
@@ -312,13 +313,13 @@
 
 
 		if("freq")
-			var/newfreq = input(usr, "Specify a new frequency to filter (GHz). Decimals assigned automatically.", src, network) as null|num
+			var/newfreq = tgui_input_number(usr, "Specify a new frequency to filter (GHz). Decimals assigned automatically.", src, max_value=9999)
 			if(newfreq && canAccess(usr))
 				if(findtext(num2text(newfreq), "."))
 					newfreq *= 10 // shift the decimal one place
 				if(!(newfreq in freq_listening) && newfreq < 10000)
 					freq_listening.Add(newfreq)
-					set_temp("-% New frequency filter assigned: \"[newfreq] GHz\" %-", "average")
+					set_temp("-% New frequency filter assigned: \"[newfreq/10] GHz\" %-", "average")
 				. = TRUE
 
 		if("delete")

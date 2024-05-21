@@ -15,7 +15,7 @@
 	faction = "demon"
 	maxHealth = 30
 	health = 30
-	movement_cooldown = 0
+	movement_cooldown = -2
 
 	see_in_dark = 10
 	seedarkness = FALSE
@@ -46,6 +46,8 @@
 	var/shift_state = AB_SHIFT_NONE
 	var/last_shift = 0
 	var/is_shifting = FALSE
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/demon/init_vore()
 	if(!voremob_loaded)

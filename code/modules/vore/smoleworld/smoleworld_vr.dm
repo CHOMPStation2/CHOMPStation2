@@ -17,11 +17,13 @@
 /turf/simulated/floor/smole/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(L.hovering) // Flying things shouldn't make footprints.
+		if(L.hovering || L.flying) // Flying things shouldn't make footprints.
+			if(L.flying)
+				L.adjust_nutrition(-0.5)
 			return ..()
-		if(L.get_effective_size() <= RESIZE_NORMAL)
+		if(L.get_effective_size(FALSE) <= RESIZE_NORMAL)
 			return ..()
-		if(L.get_effective_size() >= RESIZE_A_BIGNORMAL)
+		if(L.get_effective_size(FALSE) >= RESIZE_A_BIGNORMAL)
 			playsound(src, 'sound/effects/footstep/giantstep_gigga.ogg', 35, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 			var/mdir = "[A.dir]"
 			crossed_dirs[mdir] = 1
@@ -112,7 +114,7 @@
 
 /obj/structure/smoletrack/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-		if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 			return
 		to_chat(user, "<span class='notice'>[src] was dismantaled into bricks.</span>")
 		playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
@@ -126,7 +128,7 @@
 	set name = "Rotate Road Clockwise"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 		return
 	src.set_dir(turn(src.dir, 270))
 
@@ -135,7 +137,7 @@
 	set name = "Use Color Pieces"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 		return
 	var/new_color = input(usr, "Please select color.", "Paint Color", color) as color|null
 	color = new_color
@@ -147,7 +149,7 @@
 	set name = "Take Road Apart"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 		return
 	playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	var/turf/simulated/floor/F = get_turf(src)
@@ -194,12 +196,14 @@
 	density = TRUE
 	anchored = TRUE
 	color = "#ffffff"
+	micro_target = TRUE	//Now micros can enter and navigate these things!!!
 	var/health = 75
 	var/damage
+
 //makes it so buildings can be dismaintaled or GodZilla style attacked
 /obj/structure/smolebuilding/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-		if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 			return
 		to_chat(user, "<span class='notice'>[src] was dismantaled into bricks.</span>")
 		playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
@@ -210,7 +214,7 @@
 
 	else if (usr.a_intent == I_HURT)
 
-		if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 			return
 
 		take_damage()
@@ -262,7 +266,7 @@
 //get material from ruins
 /obj/structure/smoleruins/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-		if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 			return
 		to_chat(user, "<span class='notice'>[src] was dismantaled into bricks.</span>")
 		playsound(src, 'sound/items/smolelargeunbuild.ogg', 50, 1, volume_channel = VOLUME_CHANNEL_MASTER)
@@ -293,7 +297,7 @@
 	set name = "Use Color Pieces"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 		return
 	var/new_color = input(usr, "Please select color.", "Paint Color", color) as color|null
 	color = new_color
@@ -304,7 +308,7 @@
 	set name = "Take Building Apart"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 		return
 	playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	if(!isnull(loc))
@@ -365,7 +369,7 @@
 //	. = ..()
 //	if(.)
 //
-//		if(M.get_effective_size() > RESIZE_TINY)
+//		if(M.get_effective_size(TRUE) > RESIZE_TINY)
 //			to_chat(M, SPAN_WARNING("You are to big to fit in \the [src]."))
 	//		. = FALSE
 //

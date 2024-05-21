@@ -86,13 +86,23 @@
 			/obj/item/toy/plushie/nukeplushie,
 			/obj/item/toy/plushie/otter,
 			/obj/item/toy/plushie/vox,
+			/obj/item/toy/plushie/shark,
 			//VOREStation Add End
 			//YawnWider Add Start
 			/obj/item/toy/plushie/teshari/_yw,
 			/obj/item/toy/plushie/teshari/w_yw,
 			/obj/item/toy/plushie/teshari/b_yw,
-			/obj/item/toy/plushie/teshari/y_yw)
+			/obj/item/toy/plushie/teshari/y_yw,
 			//YawnWider Add End
+			//CHOMPStation Add Start
+			/obj/item/toy/plushie/red_dragon,
+			/obj/item/toy/plushie/green_dragon,
+			/obj/item/toy/plushie/purple_dragon,
+			/obj/item/toy/plushie/white_eastdragon,
+			/obj/item/toy/plushie/red_eastdragon,
+			/obj/item/toy/plushie/green_eastdragon
+			//CHOMPStation Add End
+			)
 	name = "Plushies Crate"
 	cost = 15
 	containertype = /obj/structure/closet/crate/allico
@@ -153,6 +163,7 @@
 	containertype = /obj/structure/closet/crate/thinktronic
 	containername = "Holoplant crate"
 
+/* CHOMPedit, moved to medical.dm in modular folder
 /datum/supply_pack/misc/glucose_hypos
 	name = "Glucose Hypoinjectors"
 	contains = list(
@@ -161,7 +172,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/zenghu
 	containername = "Glucose Hypo Crate"
-
+*/
 /datum/supply_pack/misc/mre_rations
 	num_contained = 6
 	name = "Emergency - MREs"

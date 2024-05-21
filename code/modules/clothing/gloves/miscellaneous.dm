@@ -34,9 +34,10 @@
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+	armor = list(melee = 15, bullet = 10, laser = 10, energy = 10, bomb = 5, bio = 0, rad = 0) // CHOMPedit: Now protective.
 
-/obj/item/clothing/gloves/combat //Combined effect of SWAT gloves and insulated gloves
-	desc = "These tactical gloves are somewhat fire and impact resistant."
+/obj/item/clothing/gloves/combat //CHOMPedit: Combined effect of SWAT gloves and insulated gloves, with better protective stats.
+	desc = "These military-grade tactical gloves protect the user from electrical shocks, fire, high-velocity impacts and varying temperatures." // CHOMPedit: Updated description.
 	name = "combat gloves"
 	icon_state = "swat"
 	item_state = "swat"
@@ -46,6 +47,7 @@
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+	armor = list(melee = 20, bullet = 15, laser = 15, energy = 15, bomb = 10, bio = 0, rad = 0) // CHOMPedit: Now protective.
 
 /obj/item/clothing/gloves/sterile
 	name = "sterile gloves"
@@ -92,7 +94,12 @@
 	icon_state = "work"
 	item_state = "wgloves"
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 5, bomb = 0, bio = 0, rad = 0)
-
+// CHOMPEdit Start - If they resist lasers and energy they should help inulate against heat and cold.
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
+// CHOMPEdit End
 /obj/item/clothing/gloves/tactical
 	desc = "These brown tactical gloves are made from a durable synthetic, and have hardened knuckles."
 	name = "tactical gloves"
@@ -115,6 +122,7 @@
 	species_restricted = list("Vox")
 	drop_sound = 'sound/items/drop/metalboots.ogg'
 	pickup_sound = 'sound/items/pickup/toolbox.ogg'
+	armor = list (melee = 20, bullet = 15, laser = 10, energy = 10, bomb =5, bio = 30, rad = 30) //gently bumped up Heavy engineering gloves value for protection //ChompEdit
 
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
@@ -173,4 +181,57 @@
 	desc = "Swim aids designed to help a wearer float in water and learn to swim."
 	icon_state = "waterwings"
 
+/obj/item/clothing/gloves/watch
+	name = "wristwatch"
+	desc = "A cheap plastic quartz-based wristwatch. Painfully archaic by modern standards, but there's something charming about it all the same."
+	icon_state = "wristwatch_basic"
+	siemens_coefficient = 1
+	gender = "neuter"
 
+/obj/item/clothing/gloves/watch/examine(mob/user)
+	. = ..()
+
+	if(Adjacent(user))
+		. += "<span class='notice'>The current station time is [stationtime2text()].</span>"
+
+/obj/item/clothing/gloves/watch/silver
+	name = "silver wristwatch"
+	desc = "A humble silver (or maybe chrome) plated wristwatch. It's quite archaic, but nonetheless classy in its own way."
+	icon_state = "wristwatch_silver"
+
+/obj/item/clothing/gloves/watch/gold
+	name = "gold wristwatch"
+	desc = "A very fancy gold-plated wristwatch. For when you want to casually show off just how wealthy you are. It even tells the time!"
+	icon_state = "wristwatch_gold"
+
+/obj/item/clothing/gloves/watch/survival
+	name = "survival watch"
+	desc = "An overengineered wristwatch that purports to be both space and water proof, and includes a compass, micro GPS beacon, and temperature and pressure sensors. The beacon is off by default, and can only transmit its location: it cannot scan for other signals."
+	description_fluff = "Hold ALT whilst left-clicking on the survival watch to toggle the status of its micro-beacon."
+	icon_state = "wristwatch_survival"
+
+	var/obj/item/device/gps/gps = null
+
+/obj/item/clothing/gloves/watch/survival/examine(mob/user)
+	. = ..()
+
+	if(Adjacent(user) && src.loc == user)
+		. += "<span class='notice'>You are currently facing [dir2text(user.dir)]. The micro beacon is [gps.tracking ? "on" : "off"].</span>"
+		var/TB = src.loc.loc
+		if(istype(TB, /turf/simulated))	//no point returning atmospheric data from unsimulated tiles (they don't track pressure anyway, only temperature)
+			var/turf/simulated/T = TB
+			var/datum/gas_mixture/env = T.return_air()
+			. += "<span class='notice'>Pressure: [env.return_pressure()]kPa / Temperature: [env.temperature]K </span>"
+
+/obj/item/clothing/gloves/watch/survival/New()
+	gps = new/obj/item/device/gps/watch(src)
+
+/obj/item/device/gps/watch
+	gps_tag = "SRV-WTCH"
+
+/obj/item/clothing/gloves/watch/survival/AltClick(mob/user)
+	. = ..()
+
+	if(Adjacent(user))
+		gps.tracking = !gps.tracking
+		to_chat(user,"<span class='notice'>You turn the micro beacon [gps.tracking ? "on" : "off"].</span>")

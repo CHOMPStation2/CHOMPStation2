@@ -60,7 +60,7 @@
 
 	holder_type = /obj/item/weapon/holder/leech
 
-	movement_cooldown = 0
+	movement_cooldown = -2
 	aquatic_movement = -2
 
 	melee_damage_lower = 1
@@ -101,7 +101,7 @@
 	if(!istype(H))
 		return .
 
-	if(istype(L.buckled, /obj/vehicle) || L.hovering) // Ignore people hovering or on boats.
+	if(istype(L.buckled, /obj/vehicle) || L.hovering || L.flying) // Ignore people hovering or on boats.
 		return TRUE
 
 	if(!.)
@@ -119,8 +119,8 @@
 /mob/living/simple_mob/animal/sif/leech/Initialize()
 	. = ..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/animal/sif/leech/Stat()
 	..()
@@ -183,7 +183,7 @@
 
 		if(!docile && ishuman(host) && chemicals < max_chemicals)
 			var/mob/living/carbon/human/H = host
-			H.vessel.remove_reagent("blood", 1)
+			H.remove_blood(1)
 			if(!H.reagents.has_reagent("inaprovaline"))
 				H.reagents.add_reagent("inaprovaline", 1)
 			chemicals += 2
@@ -231,7 +231,7 @@
 		leave_host()
 
 /mob/living/simple_mob/animal/sif/leech/verb/infest()
-	set category = "Abilities"
+	set category = "Abilities.Leech" //CHOMPEdit
 	set name = "Infest"
 	set desc = "Infest a suitable humanoid host."
 
@@ -318,7 +318,7 @@
 		return
 
 /mob/living/simple_mob/animal/sif/leech/verb/uninfest()
-	set category = "Abilities"
+	set category = "Abilities.Leech" //CHOMPEdit
 	set name = "Uninfest"
 	set desc = "Leave your current host."
 
@@ -342,7 +342,7 @@
 	host = null
 
 /mob/living/simple_mob/animal/sif/leech/verb/inject_victim()
-	set category = "Abilities"
+	set category = "Abilities.Leech" //CHOMPEdit
 	set name = "Incapacitate Potential Host"
 	set desc = "Inject an organic host with an incredibly painful mixture of chemicals."
 
@@ -390,7 +390,7 @@
 	H.add_modifier(/datum/modifier/poisoned/paralysis, 15 SECONDS)
 
 /mob/living/simple_mob/animal/sif/leech/verb/medicate_host()
-	set category = "Abilities"
+	set category = "Abilities.Leech" //CHOMPEdit
 	set name = "Produce Chemicals (50)"
 	set desc = "Inject your host with possibly beneficial chemicals, to keep the blood flowing."
 
@@ -413,7 +413,7 @@
 		to_chat(src, span("alien","We injected \the [host] with five units of [chem]."))
 
 /mob/living/simple_mob/animal/sif/leech/verb/feed_on_organ()
-	set category = "Abilities"
+	set category = "Abilities.Leech" //CHOMPEdit
 	set name = "Feed on Organ"
 	set desc = "Extend probosci to feed on a piece of your host's organs."
 

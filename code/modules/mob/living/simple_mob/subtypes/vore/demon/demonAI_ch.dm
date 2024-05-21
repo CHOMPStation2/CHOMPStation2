@@ -6,7 +6,7 @@
 	icon_living = "boxfox"
 	icon_dead = "dead"
 	icon_rest = "boxfox_rest"
-	icon = 'icons/mob/demon_ch.dmi'
+	icon = 'modular_chomp/icons/mob/demon_ch.dmi'
 	vis_height = 47
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run
 	var/cloaked_alpha = 60			// Lower = Harder to see.
@@ -61,6 +61,9 @@
 	var/last_shift = 0
 	var/blood_spawn = 0
 	var/is_shifting = FALSE
+
+	can_pain_emote = FALSE
+	injury_enrages = TRUE
 
 /mob/living/simple_mob/vore/demonAI/init_vore()
 	if(!voremob_loaded)
@@ -136,27 +139,21 @@
 /mob/living/simple_mob/vore/demonAI/break_cloak()
 	uncloak()
 
-
 /mob/living/simple_mob/vore/demonAI/is_cloaked()
 	return cloaked
-
 
 // Cloaks the spider automatically, if possible.
 /mob/living/simple_mob/vore/demonAI/handle_special()
 	if(!cloaked && can_cloak())
 		cloak()
 
-
 // Applies bonus base damage if cloaked.
 /mob/living/simple_mob/vore/demonAI/apply_bonus_melee_damage(atom/A, damage_amount)
-	var/turf/T = get_turf(src)
 	if(cloaked)
-		new /obj/effect/gibspawner/generic(T)
 		playsound(src.loc, 'sound/effects/blobattack.ogg', 50, 1)
 		uncloak()
 		return damage_amount + cloaked_bonus_damage
 	return ..()
-
 
 // Force uncloaking if attacked.
 /mob/living/simple_mob/vore/demonAI/bullet_act(obj/item/projectile/P)
@@ -200,3 +197,11 @@
 /mob/living/simple_mob/vore/demonAI/attackby()
     playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
     ..()
+
+/mob/living/simple_mob/vore/demonAI/gibspam
+
+/mob/living/simple_mob/vore/demonAI/gibspam/apply_bonus_melee_damage(atom/A, damage_amount)
+	var/turf/T = get_turf(src)
+	if(cloaked)
+		new /obj/effect/gibspawner/generic(T)
+	return ..()

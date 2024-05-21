@@ -4,7 +4,7 @@
 /mob/living/carbon/human/proc/tie_hair()
 	set name = "Tie Hair"
 	set desc = "Style your hair."
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(incapacitated())
 		to_chat(src, "<span class='warning'>You can't mess with your hair right now!</span>")
@@ -34,7 +34,7 @@
 			to_chat(src, "<span class ='notice'>You're already using that style.</span>")
 
 /mob/living/carbon/human/proc/tackle()
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set name = "Tackle"
 	set desc = "Tackle someone down."
 
@@ -61,7 +61,7 @@
 		return
 
 	if(stat || paralysis || stunned || weakened || lying || restrained() || buckled)
-		to_chat(src, "You cannot tackle in your current state.")
+		to_chat(src, "<span class='filter_notice'>You cannot tackle in your current state.</span>")
 		return
 
 	last_special = world.time + 50
@@ -78,10 +78,10 @@
 
 	for(var/mob/O in viewers(src, null))
 		if ((O.client && !( O.blinded )))
-			O.show_message(text("<font color='red'><B>[] [failed ? "tried to tackle" : "has tackled"] down []!</font></B>", src, T), 1)
+			O.show_message("<span class='filter_warning'>[span_red("<B>[src] [failed ? "tried to tackle" : "has tackled"] down [T]!</B>")]</span>", 1)
 
 /mob/living/carbon/human/proc/commune()
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set name = "Commune with creature"
 	set desc = "Send a telepathic message to an unlucky recipient."
 
@@ -94,57 +94,57 @@
 
 	if(!target) return
 
-	text = input(usr, "What would you like to say?", "Speak to creature", null, null)
+	text = tgui_input_text(usr, "What would you like to say?", "Speak to creature", null, MAX_MESSAGE_LEN)
 
-	text = sanitize(text)
+	text = sanitize(text, MAX_MESSAGE_LEN)
 
 	if(!text) return
 
 	var/mob/M = targets[target]
 
 	if(istype(M, /mob/observer/dead) || M.stat == DEAD)
-		to_chat(src, "Not even a [src.species.name] can speak to the dead.")
+		to_chat(src, "<span class='filter_notice'>Not even a [src.species.name] can speak to the dead.</span>")
 		return
 
 	log_say("(COMMUNE to [key_name(M)]) [text]",src)
 
-	to_chat(M, "<font color='blue'>Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]</font>")
+	to_chat(M, "<span class='filter_say'>[span_blue("Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]")]</span>")
 	if(istype(M,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
 		if(H.species.name == src.species.name)
 			return
-		to_chat(H, "<font color='red'>Your nose begins to bleed...</font>")
+		to_chat(H, "<span class='filter_notice'>[span_red("Your nose begins to bleed...")]</span>")
 		H.drip(1)
 
 /mob/living/carbon/human/proc/regurgitate()
 	set name = "Regurgitate"
 	set desc = "Empties the contents of your stomach"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(stomach_contents.len)
 		for(var/mob/M in src)
 			if(M in stomach_contents)
 				stomach_contents.Remove(M)
 				M.loc = loc
-		src.visible_message("<font color='red'><B>[src] hurls out the contents of their stomach!</B></font>")
+		src.visible_message("<span class='filter_warning'>[span_red("<B>[src] hurls out the contents of their stomach!</B>")]</span>")
 	return
 
 /mob/living/carbon/human/proc/psychic_whisper(mob/M as mob in oview())
 	set name = "Psychic Whisper"
 	set desc = "Whisper silently to someone over a distance."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
-	var/msg = sanitize(input(usr, "Message:", "Psychic Whisper") as text|null)
+	var/msg = sanitize(tgui_input_text(usr, "Message:", "Psychic Whisper"))
 	if(msg)
 		log_say("(PWHISPER to [key_name(M)]) [msg]", src)
-		to_chat(M, "<font color='green'>You hear a strange, alien voice in your head... <i>[msg]</i></font>")
-		to_chat(src, "<font color='green'>You said: \"[msg]\" to [M]</font>")
+		to_chat(M, "<span class='filter_say'>[span_green("You hear a strange, alien voice in your head... <i>[msg]</i>")]</span>")
+		to_chat(src, "<span class='filter_say'>[span_green("You said: \"[msg]\" to [M]")]</span>")
 	return
 
 /mob/living/carbon/human/proc/diona_split_nymph()
 	set name = "Split"
 	set desc = "Split your humanoid form into its constituent nymphs."
-	set category = "Abilities"
+	set category = "Abilities.Diona" //CHOMPEdit
 	diona_split_into_nymphs(5)	// Separate proc to void argments being supplied when used as a verb
 
 /mob/living/carbon/human/proc/diona_split_into_nymphs(var/number_of_resulting_nymphs)
@@ -191,8 +191,8 @@
 			qdel(Org)
 
 		// Purge the diona verbs.
-		verbs -= /mob/living/carbon/human/proc/diona_split_nymph
-		verbs -= /mob/living/carbon/human/proc/regenerate
+		remove_verb(src,/mob/living/carbon/human/proc/diona_split_nymph) //CHOMPEdit TGPanel
+		remove_verb(src,/mob/living/carbon/human/proc/regenerate) //CHOMPEdit TGPanel
 
 		for(var/obj/item/organ/external/E in organs) // Just fall apart.
 			E.droplimb(TRUE)
@@ -204,20 +204,20 @@
 /mob/living/carbon/human/proc/self_diagnostics()
 	set name = "Self-Diagnostics"
 	set desc = "Run an internal self-diagnostic to check for damage."
-	set category = "IC"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(stat == DEAD) return
 
 	to_chat(src, "<span class='notice'>Performing self-diagnostic, please wait...</span>")
 
 	spawn(50)
-		var/output = "<span class='notice'>Self-Diagnostic Results:\n</span>"
+		var/output = "<span class='filter_notice'><span class='notice'>Self-Diagnostic Results:\n</span>"
 
 		output += "Internal Temperature: [convert_k2c(bodytemperature)] Degrees Celsius\n"
 
 		if(isSynthetic())
 			output += "Current Battery Charge: [nutrition]\n"
-			
+
 			var/toxDam = getToxLoss()
 			if(toxDam)
 				output += "System Instability: <span class='warning'>[toxDam > 25 ? "Severe" : "Moderate"]</span>. Seek charging station for cleanup.\n"
@@ -237,6 +237,7 @@
 					output += "[IO.name] - <span class='warning'>[IO.damage > 10 ? "Heavy Damage" : "Light Damage"]</span>\n"
 				else
 					output += "[IO.name] - <span style='color:green;'>OK</span>\n"
+		output += "</span>"
 
 		to_chat(src,output)
 
@@ -246,7 +247,7 @@
 /mob/living/carbon/human/proc/sonar_ping()
 	set name = "Listen In"
 	set desc = "Allows you to listen in to movement and noises around you."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(incapacitated())
 		to_chat(src, "<span class='warning'>You need to recover before you can use this ability.</span>")
@@ -262,7 +263,7 @@
 	to_chat(src, "<span class='notice'>You take a moment to listen in to your environment...</span>")
 	for(var/mob/living/L in range(client.view, src))
 		var/turf/T = get_turf(L)
-		if(!T || L == src || L.stat == DEAD || is_below_sound_pressure(T))
+		if(!T || L == src || L.stat == DEAD || is_below_sound_pressure(T) || L.is_incorporeal()) // CHOMPAdd - No bluespace ears.
 			continue
 		heard_something = TRUE
 		var/feedback = list()
@@ -291,7 +292,7 @@
 /mob/living/carbon/human/proc/regenerate()
 	set name = "Regenerate"
 	set desc = "Allows you to regrow limbs and heal organs after a period of rest."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(nutrition < 250)
 		to_chat(src, "<span class='warning'>You lack the biomass to begin regeneration!</span>")
@@ -302,7 +303,7 @@
 		return
 	else
 		active_regen = TRUE
-		src.visible_message("<B>[src]</B>'s flesh begins to mend...")
+		src.visible_message("<span class='filter_notice'><B>[src]</B>'s flesh begins to mend...</span>")
 
 	var/delay_length = round(active_regen_delay * species.active_regen_mult)
 	if(do_after(src,delay_length))
@@ -355,7 +356,7 @@
 /mob/living/carbon/human/proc/setmonitor_state()
 	set name = "Set monitor display"
 	set desc = "Set your monitor display"
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 	if(stat)
 		to_chat(src,"<span class='warning'>You must be awake and standing to perform this action!</span>")
 		return
@@ -374,5 +375,6 @@
 	if(choice)
 		E.eye_icon_location = robohead.monitor_icon
 		E.eye_icon = states[choice]
+		E.eye_icon_override = TRUE
 		to_chat(src,"<span class='warning'>You set your monitor to display [choice]!</span>")
 		update_icons_body()

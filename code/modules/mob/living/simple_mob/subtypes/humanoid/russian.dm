@@ -23,6 +23,7 @@
 
 	corpse = /obj/effect/landmark/mobcorpse/russian
 
+
 /mob/living/simple_mob/humanoid/russian/ranged
 	icon_state = "russianranged"
 	icon_living = "russianranged"

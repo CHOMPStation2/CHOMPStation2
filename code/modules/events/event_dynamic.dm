@@ -24,7 +24,7 @@ var/list/event_last_fired = list()
 
 //Always triggers an event when called, dynamically chooses events based on job population
 /proc/spawn_dynamic_event()
-	if(!config.allow_random_events)
+	if(!CONFIG_GET(flag/allow_random_events)) // CHOMPEdit
 		return
 
 	var/minutes_passed = world.time/600
@@ -208,6 +208,10 @@ var/list/event_last_fired = list()
 					active_with_role["Medical"]++
 				else if(istype(R.module, /obj/item/weapon/robot_module/robot/research))
 					active_with_role["Scientist"]++
+				else if(istype(R.module, /obj/item/weapon/robot_module/robot/janitor))
+					active_with_role["Janitor"]++
+				else if(istype(R.module, /obj/item/weapon/robot_module/robot/clerical/butler))
+					active_with_role["Botanist"]++
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING))
 			active_with_role["Engineer"]++
@@ -232,10 +236,10 @@ var/list/event_last_fired = list()
 
 		if(M.mind.assigned_role == "Botanist")
 			active_with_role["Botanist"]++
-			
+
 		if(M.mind.assigned_role == "Head of Security") //CHOMP Add
 			active_with_role["Head of Security"]++ //CHOMP Add
-			
+
 		if(M.mind.assigned_role == "Warden") //CHOMP Add
 			active_with_role["Warden"]++ //CHOMP Add
 

@@ -95,21 +95,21 @@
 	injectmasteralbum(p)
 
 /mob/living/silicon/ai/proc/take_image()
-	set category = "AI Commands"
+	set category = "AI.Commands" //CHOMPEdit
 	set name = "Take Image"
 	set desc = "Takes an image"
 
 	aiCamera.toggle_camera_mode()
 
 /mob/living/silicon/ai/proc/view_images()
-	set category = "AI Commands"
+	set category = "AI.Commands" //CHOMPEdit
 	set name = "View Images"
 	set desc = "View images"
 
 	aiCamera.viewpictures()
 
 /obj/item/device/camera/siliconcam/ai_camera/verb/delete_images()
-	set category = "AI Commands"
+	set category = "AI.Commands" //CHOMPEdit
 	set name = "Delete Image"
 	set desc = "Delete image"
 	set src in usr
@@ -117,14 +117,14 @@
 	deletepicture()
 
 /obj/item/device/camera/siliconcam/robot_camera/verb/take_image()
-	set category ="Robot Commands"
+	set category ="Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Take Image"
 	set desc = "Takes an image"
 	set src in usr
 	toggle_camera_mode()
 
 /obj/item/device/camera/siliconcam/robot_camera/verb/view_images()
-	set category ="Robot Commands"
+	set category ="Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "View Images"
 	set desc = "View images"
 	set src in usr
@@ -132,7 +132,7 @@
 	viewpictures()
 
 /obj/item/device/camera/siliconcam/robot_camera/verb/delete_images()
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set name = "Delete Image"
 	set desc = "Delete a local image"
 	set src in usr

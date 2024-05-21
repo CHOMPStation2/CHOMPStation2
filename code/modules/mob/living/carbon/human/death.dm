@@ -48,7 +48,10 @@
 	BITSET(hud_updateflag, LIFE_HUD)
 
 	//Handle species-specific deaths.
-	species.handle_death(src)
+	//CHOMPEdit start - Enable not-actually-dying being a species effect
+	if(species.handle_death(src))
+		return
+	//CHOMPEdit end
 	animate_tail_stop()
 	stop_flying() //VOREStation Edit.
 
@@ -77,7 +80,7 @@
 			B.host_brain.name = "host brain"
 			B.host_brain.real_name = "host brain"
 
-		verbs -= /mob/living/carbon/proc/release_control
+		remove_verb(src,/mob/living/carbon/proc/release_control) //CHOMPEdit TGPanel
 
 	callHook("death", list(src, gibbed))
 
@@ -87,8 +90,13 @@
 			if(O.client && O.client.is_preference_enabled(/datum/client_preference/show_dsay))
 				to_chat(O, "<span class='deadsay'><b>[src]</b> has died in <b>[get_area(src)]</b>. [ghost_follow_link(src, O)] </span>")
 
+	/* // CHOMPEdit Start: Replacing this with our own death sounds. :3
 	if(!gibbed && species.death_sound)
 		playsound(src, species.death_sound, 80, 1, 1)
+	*/
+	if(!gibbed && !isbelly(loc))
+		playsound(src, pick(get_species_sound(get_gendered_sound(src))["death"]), src.species.death_volume, 1, 20, volume_channel = VOLUME_CHANNEL_DEATH_SOUNDS)
+	// CHOMPEdit End
 
 	if(ticker && ticker.mode)
 		sql_report_death(src)
@@ -99,10 +107,12 @@
 
 	// If the body is in VR, move the mind back to the real world
 	if(vr_holder)
+		src.died_in_vr = TRUE //CHOMPedit, so avatar.dm can delete bodies
 		src.exit_vr()
 		src.vr_holder.vr_link = null
 		for(var/obj/item/W in src)
 			src.drop_from_inventory(W)
+
 
 	// If our mind is in VR, bring it back to the real world so it can die with its body
 	if(vr_link)

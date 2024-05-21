@@ -18,13 +18,12 @@
 		germ_level++
 
 /mob/living/carbon/Destroy()
-	qdel(ingested)
-	qdel(touching)
+	QDEL_NULL(ingested)
+	QDEL_NULL(touching)
 	// We don't qdel(bloodstr) because it's the same as qdel(reagents)
-	for(var/guts in internal_organs)
-		qdel(guts)
-	for(var/food in stomach_contents)
-		qdel(food)
+	bloodstr = null
+	QDEL_NULL_LIST(internal_organs)
+	QDEL_NULL_LIST(stomach_contents)
 	return ..()
 
 /mob/living/carbon/rejuvenate()
@@ -80,7 +79,7 @@
 		M.loc = src.loc
 		for(var/mob/N in viewers(src, null))
 			if(N.client)
-				N.show_message(text("<font color='red'><B>[M] bursts out of [src]!</B></font>"), 2)
+				N.show_message(span_red(text("<B>[M] bursts out of [src]!</B>")), 2)
 	..()
 
 /mob/living/carbon/attack_hand(mob/M as mob)
@@ -91,7 +90,7 @@
 		if (H.hand)
 			temp = H.organs_by_name["l_hand"]
 		if(temp && !temp.is_usable())
-			to_chat(H, "<font color='red'>You can't use your [temp.name]</font>")
+			to_chat(H, span_red("You can't use your [temp.name]"))
 			return
 
 	return
@@ -131,6 +130,7 @@
 		if(species.emp_sensitivity & EMP_DEAFEN)
 			src.ear_damage += rand(0,deafen_dur) //this will heal pretty quickly, but spamming them at someone could cause serious damage
 			src.ear_deaf = max(src.ear_deaf,deafen_dur)
+			src.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 		if(species.emp_sensitivity & EMP_CONFUSE)
 			if(confuse_dur >= 1)
 				to_chat(src, "<span class='danger'>Oh god, everything's spinning!</span>")
@@ -196,7 +196,7 @@
 	return shock_damage
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
-	if (src.health >= config.health_threshold_crit)
+	if (src.health >= CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
 		if(src == M && istype(src, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = src
 			var/datum/gender/T = gender_datums[H.get_visible_gender()]
@@ -236,7 +236,7 @@
 					status += "MISSING"
 				if(org.status & ORGAN_MUTATED)
 					status += "weirdly shapen"
-				if(org.dislocated == 2)
+				if(org.dislocated == 1) //VOREStation Edit Bugfix
 					status += "dislocated"
 				if(org.status & ORGAN_BROKEN)
 					status += "hurts when touched"
@@ -397,10 +397,10 @@
 
 /mob/living/carbon/verb/mob_sleep()
 	set name = "Sleep"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(usr.sleeping)
-		to_chat(usr, "<font color='red'>You are already sleeping</font>")
+		to_chat(usr, span_red("You are already sleeping"))
 		return
 	if(tgui_alert(src,"You sure you want to sleep for a while?","Sleep",list("Yes","No")) == "Yes")
 		usr.AdjustSleeping(20)
@@ -421,6 +421,10 @@
 	stop_pulling()
 	to_chat(src, "<span class='warning'>You slipped on [slipped_on]!</span>")
 	playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
+	if(slip_reflex && !lying) //CHOMPEdit Start
+		if(world.time >= next_emote)
+			src.emote("sflip")
+			return 1 //CHOMPEdit End
 	Weaken(FLOOR(stun_duration/2, 1))
 	return 1
 
@@ -450,6 +454,8 @@
 	return 0
 
 /mob/living/carbon/can_feel_pain(var/check_organ)
+	if(!species) //CHOMPEdit
+		return 0
 	if(isSynthetic())
 		return 0
 	return !(species.flags & NO_PAIN)
@@ -548,3 +554,9 @@
 		if(src.wear_mask)						//if the mob is not human, it cleans the mask without asking for bitflags
 			if(src.wear_mask.clean_blood())
 				src.update_inv_wear_mask(0)
+
+/mob/living/carbon/proc/food_preference(var/allergen_type) //RS edit
+
+	if(allergen_type in species.food_preference)
+		return species.food_preference_bonus
+	return 0

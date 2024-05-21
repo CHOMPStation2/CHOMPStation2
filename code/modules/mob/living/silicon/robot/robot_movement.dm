@@ -6,6 +6,7 @@
 /mob/living/silicon/robot/Check_Shoegrip()
 	return module && module.no_slip
 
+/* CHOMPedit: Nuking slipping.
 /mob/living/silicon/robot/Process_Spaceslipping(var/prob_slip)
 	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
 	if(thrust?.can_thrust(0.01))
@@ -13,6 +14,7 @@
 	if(module && module.no_slip)
 		return 0
 	..(prob_slip)
+*/// CHOMPedit end.
 
 /mob/living/silicon/robot/Process_Spacemove(var/check_drift = 0)
 	if(..())//Can move due to other reasons, don't use jetpack fuel
@@ -34,8 +36,10 @@
 
 	if(get_restraining_bolt())	// Borgs with Restraining Bolts move slower.
 		. += 1
+	if(nutrition > 1000) //CHOMPAdd
+		. += nutrition / 2000 //CHOMPAdd
 
-	. += config.robot_delay
+	. += CONFIG_GET(number/robot_delay) // CHOMPEdit
 
 	. += ..()
 
@@ -67,7 +71,7 @@
 		if(isturf(tile))
 			B.gather_all(tile, src, 1) //Shhh, unless the bag fills, don't spam the borg's chat with stuff that's going on every time they move!
 
-	if(istype(module, /obj/item/weapon/robot_module/robot/janitor) && isturf(loc))
+	if(scrubbing && isturf(loc))
 		var/turf/tile = loc
 		tile.clean_blood()
 		if (istype(tile, /turf/simulated))

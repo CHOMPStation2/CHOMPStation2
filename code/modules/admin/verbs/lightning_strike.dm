@@ -1,7 +1,7 @@
 /client/proc/admin_lightning_strike()
 	set name = "Lightning Strike"
 	set desc = "Causes lightning to strike on your tile. This can be made to hurt things on or nearby it severely."
-	set category = "Fun"
+	set category = "Fun.Do Not" //CHOMPEdit
 
 	if(!check_rights(R_FUN))
 		return
@@ -14,10 +14,10 @@
 
 	lightning_strike(get_turf(usr), fake_lightning)
 	log_and_message_admins("[key_name(src)] has caused [fake_lightning ? "cosmetic":"harmful"] lightning to strike at their position ([src.mob.x], [src.mob.y], [src.mob.z]). \
-	(<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.mob.x];Y=[src.mob.y];Z=[src.mob.z]'>JMP</a>)")
+	(<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[src.mob.x];Y=[src.mob.y];Z=[src.mob.z]'>JMP</a>)")
 
 #define LIGHTNING_REDIRECT_RANGE 28 // How far in tiles certain things draw lightning from.
-#define LIGHTNING_ZAP_RANGE 3 // How far the tesla effect zaps, as well as the bad effects from a direct strike.
+#define LIGHTNING_ZAP_RANGE 1 // How far the tesla effect zaps, as well as the bad effects from a direct strike.
 #define LIGHTNING_POWER 20000 // How much 'zap' is in a strike, used for tesla_zap().
 
 // The real lightning proc.
@@ -93,6 +93,7 @@
 			if(iscarbon(L))
 				var/mob/living/carbon/C = L
 				C.ear_deaf += 10
+				C.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 			to_chat(L, span("danger", "Lightning struck nearby, and the thunderclap is deafening!"))
 
 #undef LIGHTNING_ZAP_RANGE

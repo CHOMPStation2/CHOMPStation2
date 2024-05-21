@@ -22,8 +22,10 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/shadekin, /datum/unarmed_attack/bite/sharp/shadekin)
 	rarity_value = 15	//INTERDIMENSIONAL FLUFFERS
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
+
+	inherent_verbs = list(/mob/proc/adjust_hive_range)
 
 	siemens_coefficient = 1
 	darksight = 10
@@ -60,11 +62,11 @@
 
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
-	death_message = "phases to somewhere far away!"
-	male_cough_sounds = null
-	female_cough_sounds = null
-	male_sneeze_sound = null
-	female_sneeze_sound = null
+	//death_message = "phases to somewhere far away!" //CHOMPEdit Removed
+	// male_cough_sounds = null
+	// female_cough_sounds = null
+	// male_sneeze_sound = null
+	// female_sneeze_sound = null
 
 	speech_bubble_appearance = "ghost"
 
@@ -109,11 +111,21 @@
 	//SHADEKIN-UNIQUE STUFF GOES HERE
 	var/list/shadekin_abilities = list(/datum/power/shadekin/phase_shift,
 									   /datum/power/shadekin/regenerate_other,
-									   /datum/power/shadekin/create_shade)
+									   /datum/power/shadekin/create_shade,
+									   /datum/power/shadekin/dark_tunneling, //CHOMPEdit Add - Dark Tunneling
+									   /datum/power/shadekin/dark_respite, //CHOMPEdit Add - Dark Respite
+									   /datum/power/shadekin/dark_maw) //CHOMPEdit Add - Dark Maw
 	var/list/shadekin_ability_datums = list()
+	var/list/active_dark_maws = list() //CHOMPEdit - Add dark maws
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
+	var/nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
+	var/phase_gentle = TRUE //CHOMPEdit - Add gentle phasing, defaults to on.
+	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
+	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
+	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
+	var/nutrition_energy_conversion = TRUE //CHOMPEdit - Add toggle to nutrition and energy conversions
 
 /datum/species/shadekin/New()
 	..()
@@ -121,11 +133,142 @@
 		var/datum/power/shadekin/SKP = new power(src)
 		shadekin_ability_datums.Add(SKP)
 
+//CHOMPEdit Begin - Actually phase to the Dark on death
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
-	spawn(1)
-		for(var/obj/item/W in H)
-			H.drop_from_inventory(W)
-		qdel(H)
+	H.clear_dark_maws() //CHOMPEdit - clear dark maws on death or similar
+	if(respite_activating)
+		return TRUE
+	var/area/current_area = get_area(H)
+	if((H.ability_flags & AB_DARK_RESPITE) || H.has_modifier_of_type(/datum/modifier/dark_respite) || current_area.limit_dark_respite)
+		return
+	var/list/floors = list()
+	for(var/turf/unsimulated/floor/dark/floor in get_area_turfs(/area/shadekin))
+		floors.Add(floor)
+	if(!LAZYLEN(floors))
+		log_and_message_admins("[H] died outside of the dark but there were no valid floors to warp to")
+		return
+
+	H.visible_message("<b>\The [H.name]</b> phases to somewhere far away!")
+	var/obj/effect/temp_visual/shadekin/phase_out/phaseanimout = new /obj/effect/temp_visual/shadekin/phase_out(H.loc)
+	phaseanimout.dir = H.dir
+	respite_activating = TRUE
+
+	H.drop_l_hand()
+	H.drop_r_hand()
+
+	H.shadekin_set_energy(0)
+	H.ability_flags |= AB_DARK_RESPITE
+	H.invisibility = INVISIBILITY_SHADEKIN
+
+	H.adjustFireLoss(-(H.getFireLoss() * 0.75))
+	H.adjustBruteLoss(-(H.getBruteLoss() * 0.75))
+	H.adjustToxLoss(-(H.getToxLoss() * 0.75))
+	H.adjustCloneLoss(-(H.getCloneLoss() * 0.75))
+	H.germ_level = 0 // CHOMPAdd - Take away the germs, or we'll die AGAIN
+	H.vessel.add_reagent("blood",blood_volume-H.vessel.total_volume)
+	for(var/obj/item/organ/external/bp in H.organs)
+		bp.bandage()
+		bp.disinfect()
+	H.nutrition = 0
+	H.invisibility = INVISIBILITY_SHADEKIN
+	BITRESET(H.hud_updateflag, HEALTH_HUD)
+	BITRESET(H.hud_updateflag, STATUS_HUD)
+	BITRESET(H.hud_updateflag, LIFE_HUD)
+
+	if(istype(H.loc, /obj/belly))
+		//Yay digestion... presumably...
+		var/obj/belly/belly = H.loc
+		add_attack_logs(belly.owner, H, "Digested in [lowertext(belly.name)]")
+		to_chat(belly.owner, "<span class='notice'>\The [H.name] suddenly vanishes within your [belly.name]</span>")
+		H.forceMove(pick(floors))
+		if(H.ability_flags & AB_PHASE_SHIFTED)
+			H.phase_shift()
+		else
+			var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
+			phaseanim.dir = H.dir
+		H.invisibility = initial(H.invisibility)
+		respite_activating = FALSE
+		belly.owner.update_fullness()
+		H.clear_fullscreen("belly")
+		if(H.hud_used)
+			if(!H.hud_used.hud_shown)
+				H.toggle_hud_vis()
+		H.stop_sound_channel(CHANNEL_PREYLOOP)
+		H.add_modifier(/datum/modifier/dark_respite, 10 MINUTES)
+		H.muffled = FALSE
+		H.forced_psay = FALSE
+
+
+		spawn(5 MINUTES)
+			H.ability_flags &= ~AB_DARK_RESPITE
+			to_chat(H, "<span class='notice'>You feel like you can leave the Dark again</span>")
+	else
+		H.add_modifier(/datum/modifier/dark_respite, 25 MINUTES)
+
+		spawn(1 SECOND)
+			H.forceMove(pick(floors))
+			if(H.ability_flags & AB_PHASE_SHIFTED)
+				H.phase_shift()
+			else
+				var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(H.loc)
+				phaseanim.dir = H.dir
+			H.invisibility = initial(H.invisibility)
+			respite_activating = FALSE
+
+		spawn(15 MINUTES)
+			H.ability_flags &= ~AB_DARK_RESPITE
+			to_chat(H, "<span class='notice'>You feel like you can leave the Dark again</span>")
+
+	return TRUE
+
+/datum/modifier/dark_respite
+	name = "Dark Respite"
+	pain_immunity = 1
+
+/datum/modifier/dark_respite/tick()
+	if(istype(src.holder, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = src.holder
+		if(H.nutrition)
+			H.add_chemical_effect(CE_BLOODRESTORE, 5)
+			H.nutrition = max(H.nutrition - 5, 0)
+
+		if(istype(get_area(H), /area/shadekin))
+			if(!src.pain_immunity)
+				src.pain_immunity = 1
+			//Very good healing, but only in the Dark.
+			H.adjustFireLoss((-0.25))
+			H.adjustBruteLoss((-0.25))
+			H.adjustToxLoss((-0.25))
+			H.heal_organ_damage(3, 0)
+			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_NORM)
+			for(var/obj/item/organ/I in H.internal_organs)
+				if(I.robotic >= ORGAN_ROBOT)
+					continue
+				if(I.damage > 0)
+					I.damage = max(I.damage - 0.25, 0)
+				if(I.damage <= 5 && I.organ_tag == O_EYES)
+					H.sdisabilities &= ~BLIND
+			for(var/obj/item/organ/external/O in H.organs)
+				if(O.status & ORGAN_BROKEN)
+					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
+				for(var/datum/wound/W in O.wounds)
+					if(W.bleeding())
+						W.damage = max(W.damage - 3, 0)
+						if(W.damage <= 0)
+							O.wounds -= W
+					if(W.internal)
+						W.damage = max(W.damage - 3, 0)
+						if(W.damage <= 0)
+							O.wounds -= W
+		else
+			var/datum/species/shadekin/SK = H.species
+			if(SK.manual_respite)
+				to_chat(H, "<span class='notice'>As you leave the Dark, you stop focusing the Dark on healing yourself.</span>")
+				SK.manual_respite = FALSE
+				src.expire()
+			if(src.pain_immunity)
+				src.pain_immunity = 0
+//CHOMPEdit End
 
 /datum/species/shadekin/get_bodytype()
 	return SPECIES_SHADEKIN
@@ -146,7 +289,7 @@
 		H.ability_master = new /obj/screen/movable/ability_master/shadekin(H)
 	for(var/datum/power/shadekin/P in shadekin_ability_datums)
 		if(!(P.verbpath in H.verbs))
-			H.verbs += P.verbpath
+			add_verb(H,P.verbpath)  //CHOMPEdit
 			H.ability_master.add_shadekin_ability(
 					object_given = H,
 					verb_given = P.verbpath,
@@ -154,8 +297,18 @@
 					ability_icon_given = P.ability_icon_state,
 					arguments = list()
 					)
+	add_verb(H,/mob/living/carbon/human/proc/phase_strength_toggle ) //CHOMPEdit - Add gentle phasing //CHOMPEdit
+	add_verb(H,/mob/living/carbon/human/proc/nutrition_conversion_toggle ) //CHOMPEdit - Add nutrition conversion toggle //CHOMPEdit
+	add_verb(H,/mob/living/carbon/human/proc/clear_dark_maws ) //CHOMPEdit - Add Dark maw clearing //CHOMPEdit
 
 /datum/species/shadekin/proc/handle_shade(var/mob/living/carbon/human/H)
+	//CHOMPEdit begin - No energy during dark respite
+	if(H.has_modifier_of_type(/datum/modifier/dark_respite))
+		set_energy(H, 0)
+		update_shadekin_hud(H)
+		return
+	//CHOMPEdit End
+
 	//Shifted kin don't gain/lose energy (and save time if we're at the cap)
 	var/darkness = 1
 	var/dark_gains = 0
@@ -166,8 +319,12 @@
 		return
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
+	//CHOMPEdit begin - dark in bellies
+	if(isbelly(H.loc))
+		brightness = 0
+	//CHOMPEdit end
 	darkness = 1-brightness //Invert
-	var/is_dark = (darkness >= 0.5)
+	var/is_dark = (darkness >= 0.5) || istype(get_area(H), /area/shadekin) //CHOMPEdit - Dark provides health
 
 	if(H.ability_flags & AB_PHASE_SHIFTED)
 		dark_gains = 0
@@ -182,6 +339,13 @@
 			dark_gains = energy_dark
 		else
 			dark_gains = energy_light
+		//CHOMPEdit begin - Energy <-> nutrition conversion
+		if(nutrition_energy_conversion && get_energy(H) == 100 && dark_gains > 0)
+			H.nutrition += dark_gains * 5 * nutrition_conversion_scaling
+		else if(nutrition_energy_conversion && get_energy(H) < 50 && H.nutrition > 500)
+			H.nutrition -= nutrition_conversion_scaling * 50
+			dark_gains += nutrition_conversion_scaling
+		//CHOMPEdit end
 
 	set_energy(H, get_energy(H) + dark_gains)
 
@@ -193,6 +357,10 @@
 
 	if(!istype(shade_organ))
 		return 0
+	//CHOMPEdit - Dark Respite
+	if(H.ability_flags & AB_DARK_RESPITE || H.has_modifier_of_type(/datum/modifier/dark_respite))
+		return 0
+	//CHOMPEdit - Dark Respite
 	if(shade_organ.dark_energy_infinite)
 		return shade_organ.max_dark_energy
 
@@ -204,7 +372,7 @@
 	if(!istype(shade_organ))
 		return 0
 
-	return shade_organ.max_dark_energy
+	return shade_organ.max_dark_energy - (LAZYLEN(active_dark_maws) * 5)
 
 /datum/species/shadekin/proc/set_energy(var/mob/living/carbon/human/H, var/new_energy)
 	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
@@ -305,29 +473,35 @@
 
 	switch(eyecolor_type)
 		if(BLUE_EYES)
-			total_health = 100
+			total_health = 75 //ChompEDIT - balance tweaks
 			energy_light = 0.5
 			energy_dark = 0.5
+			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(RED_EYES)
-			total_health = 200
+			total_health = 150 //ChompEDIT - balance tweaks
 			energy_light = -1
-			energy_dark = 0.1
+			energy_dark = 0.5 //ChompEDIT
+			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
-			total_health = 150
+			total_health = 100 //ChompEDIT - balance tweaks
 			energy_light = -0.5
 			energy_dark = 1
+			nutrition_conversion_scaling = 1 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(YELLOW_EYES)
-			total_health = 100
+			total_health = 50 //ChompEDIT - balance tweaks
 			energy_light = -2
 			energy_dark = 3
+			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(GREEN_EYES)
-			total_health = 100
+			total_health = 100 //ChompEDIT - balance tweaks
 			energy_light = 0.125
 			energy_dark = 2
+			nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(ORANGE_EYES)
-			total_health = 175
+			total_health = 125 //ChompEDIT - balance tweaks
 			energy_light = -0.5
-			energy_dark = 0.25
+			energy_dark = 0.5 //ChompEDIT
+			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 
 	H.maxHealth = total_health
 

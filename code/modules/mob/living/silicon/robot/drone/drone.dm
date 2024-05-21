@@ -104,8 +104,8 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/New()
 	..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	remove_language("Robot Talk")
 	add_language("Robot Talk", 0)
 	add_language("Drone Talk", 1)
@@ -123,14 +123,14 @@ var/list/mob_hat_cache = list()
 		var/datum/robot_component/C = components[V]
 		C.max_damage = 10
 
-	verbs -= /mob/living/silicon/robot/verb/Namepick
-	
+	remove_verb(src,/mob/living/silicon/robot/verb/namepick) //CHOMPEdit TGPanel
+
 	if(can_pick_shell)
 		var/random = pick(shell_types)
 		icon_state = shell_types[random]
 		shell_accessories = list("[icon_state]-eyes-blue")
-	
-	updateicon()
+
+	update_icon()
 	updatename()
 
 /mob/living/silicon/robot/drone/init()
@@ -161,7 +161,7 @@ var/list/mob_hat_cache = list()
 	real_name = "[initial(name)] ([serial_number])"
 	name = real_name
 
-/mob/living/silicon/robot/drone/updateicon()
+/mob/living/silicon/robot/drone/update_icon()
 	cut_overlays()
 
 	if(islist(shell_accessories))
@@ -172,14 +172,14 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/verb/pick_shell()
 	set name = "Customize Appearance"
-	set category = "Robot Commands"
+	set category = "Abilities.Settings" //ChompEDIT - TGPanel
 
 	if(!can_pick_shell)
 		to_chat(src, "<span class='warning'>You already selected a shell or this drone type isn't customizable.</span>")
 		return
-	
+
 	var/list/choices = shell_types.Copy()
-	
+
 	if(can_blitz)
 		choices["Blitz"] = "blitzshell"
 
@@ -199,9 +199,9 @@ var/list/mob_hat_cache = list()
 			var/armor_color = tgui_input_list(src, "Select plating color:", "Eye Color", list("blue", "red", "orange", "green", "brown"))
 			if(armor_color)
 				LAZYADD(shell_accessories, "[icon_state]-shell-[armor_color]")
-	
+
 	can_pick_shell = FALSE
-	updateicon()
+	update_icon()
 
 /mob/living/silicon/robot/drone/choose_icon()
 	return
@@ -214,7 +214,7 @@ var/list/mob_hat_cache = list()
 		return
 	hat = new_hat
 	new_hat.loc = src
-	updateicon()
+	update_icon()
 
 //Drones cannot be upgraded with borg modules so we need to catch some items before they get used in ..().
 /mob/living/silicon/robot/drone/attackby(var/obj/item/weapon/W, var/mob/user)
@@ -231,7 +231,7 @@ var/list/mob_hat_cache = list()
 		to_chat(user, "<span class='danger'>\The [src] is not compatible with \the [W].</span>")
 		return
 
-	else if (W.is_crowbar())
+	else if (W.has_tool_quality(TOOL_CROWBAR))
 		to_chat(user, "<span class='danger'>\The [src] is hermetically sealed. You can't open the case.</span>")
 		return
 
@@ -239,7 +239,7 @@ var/list/mob_hat_cache = list()
 		var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 		if(stat == 2)
 
-			if(!config.allow_drone_spawn || emagged || health < -35) //It's dead, Dave.
+			if(!CONFIG_GET(flag/allow_drone_spawn) || emagged || health < -35) //It's dead, Dave. // CHOMPEdit
 				to_chat(user, "<span class='danger'>The interface is fried, and a distressing burned smell wafts from the robot's interior. You're not rebooting this one.</span>")
 				return
 
@@ -251,11 +251,11 @@ var/list/mob_hat_cache = list()
 			var/drones = 0
 			for(var/mob/living/silicon/robot/drone/D in player_list)
 				drones++
-			if(drones < config.max_maint_drones)
+			if(drones < CONFIG_GET(number/max_maint_drones)) // CHOMPEdit
 				request_player()
 			return
 
-		else
+		/*else //CHOMPEdit - Comment out drone shutting down since it seems to be a round remove with no recourse
 			user.visible_message("<span class='danger'>\The [user] swipes [TU.his] ID card through \the [src], attempting to shut it down.</span>", "<span class='danger'>You swipe your ID card through \the [src], attempting to shut it down.</span>")
 
 			if(emagged)
@@ -264,7 +264,7 @@ var/list/mob_hat_cache = list()
 			if(allowed(usr))
 				shut_down()
 			else
-				to_chat(user, "<span class='danger'>Access denied.</span>")
+				to_chat(user, "<span class='danger'>Access denied.</span>")*/
 
 		return
 
@@ -325,9 +325,10 @@ var/list/mob_hat_cache = list()
 		return
 	..()
 
-//DRONE MOVEMENT.
+/* DRONE MOVEMENT. // CHOMPedit: Nuking slipping.
 /mob/living/silicon/robot/drone/Process_Spaceslipping(var/prob_slip)
 	return 0
+*/// CHOMPedit end.
 
 //CONSOLE PROCS
 /mob/living/silicon/robot/drone/proc/law_resync()
@@ -395,10 +396,10 @@ var/list/mob_hat_cache = list()
 	to_chat(src, "Use <b>say ;Hello</b> to talk to other drones and <b>say Hello</b> to speak silently to your nearby fellows.")
 
 /mob/living/silicon/robot/drone/add_robot_verbs()
-	src.verbs |= silicon_subsystems
+	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
 
 /mob/living/silicon/robot/drone/remove_robot_verbs()
-	src.verbs -= silicon_subsystems
+	remove_verb(src,silicon_subsystems)  //CHOMPEdit
 
 /mob/living/silicon/robot/drone/construction/welcome_drone()
 	to_chat(src, "<b>You are a construction drone, an autonomous engineering and fabrication system.</b>.")

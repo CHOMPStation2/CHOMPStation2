@@ -1,31 +1,13 @@
-#define MILISECOND * 0.01
-#define MILLISECONDS * 0.01
-
-#define SECOND *10
-#define SECONDS *10
-
-#define MINUTE *600
-#define MINUTES *600
-
-#define HOUR *36000
-#define HOURS *36000
-
-#define DAY *864000
-#define DAYS *864000
+//CHOMPEdit Begin
+//Returns the world time in english
+/proc/worldtime2text()
+	return gameTimestamp("hh:mm:ss", world.time)
+//CHOMPEdit End
 
 #define TimeOfGame (get_game_time())
 #define TimeOfTick (TICK_USAGE*0.01*world.tick_lag)
 
-#define TICK *world.tick_lag
-#define TICKS *world.tick_lag
-
-#define DS2TICKS(DS) ((DS)/world.tick_lag)	// Convert deciseconds to ticks
-#define TICKS2DS(T) ((T) TICKS) 				// Convert ticks to deciseconds
 #define DS2NEARESTTICK(DS) TICKS2DS(-round(-(DS2TICKS(DS))))
-
-#define MS2DS(T) ((T) MILLISECONDS)
-
-#define DS2MS(T) ((T) * 100)
 
 var/world_startup_time
 
@@ -76,12 +58,14 @@ var/next_station_date_change = 1 DAY
 	var/time_portion = time2text(world.timeofday, "hh:mm:ss")
 	return "[date_portion]T[time_portion]"
 
+/* //ChompREMOVE
 /proc/get_timezone_offset()
 	var/midnight_gmt_here = text2num(time2text(0,"hh")) * 36000
 	if(midnight_gmt_here > 12 HOURS)
 		return 24 HOURS - midnight_gmt_here
 	else
 		return midnight_gmt_here
+*/ //ChompREMOVE END
 
 /proc/gameTimestamp(format = "hh:mm:ss", wtime=null)
 	if(!wtime)
@@ -140,7 +124,7 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 			warning("Time rollover error: world.timeofday decreased from previous check, but the day or last rollover is less than 12 hours old. System clock?")
 	rollovercheck_last_timeofday = world.timeofday
 	return midnight_rollovers
-  
+
 //Increases delay as the server gets more overloaded,
 //as sleeps aren't cheap and sleeping only to wake up and sleep again is wasteful
 #define DELTA_CALC max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)

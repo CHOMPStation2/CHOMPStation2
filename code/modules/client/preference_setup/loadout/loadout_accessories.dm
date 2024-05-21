@@ -150,32 +150,32 @@
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown"
 	path = /obj/item/clothing/accessory/storage/brown_vest
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") //YW ADDITIONS
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
 
 /datum/gear/accessory/black_vest
 	display_name = "webbing, black"
 	path = /obj/item/clothing/accessory/storage/black_vest
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") //YW ADDITIONS
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
 
 /datum/gear/accessory/white_vest
 	display_name = "webbing, white"
 	path = /obj/item/clothing/accessory/storage/white_vest
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") //YW ADDITIONS
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
 
 /datum/gear/accessory/brown_drop_pouches
 	display_name = "drop pouches, brown"
 	path = /obj/item/clothing/accessory/storage/brown_drop_pouches
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") //YW ADDITIONS
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
 
 /datum/gear/accessory/black_drop_pouches
 	display_name = "drop pouches, black"
 	path = /obj/item/clothing/accessory/storage/black_drop_pouches
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") //YW ADDITIONS
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
 
 /datum/gear/accessory/white_drop_pouches
 	display_name = "drop pouches, white"
 	path = /obj/item/clothing/accessory/storage/white_drop_pouches
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") //YW ADDITIONS
+//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
 
 /datum/gear/accessory/fannypack
 	display_name = "fannypack selection"
@@ -340,7 +340,7 @@
 /datum/gear/accessory/corpbadge
 	display_name = "investigator holobadge (IAA)"
 	path = /obj/item/clothing/accessory/badge/holo/investigator
-	allowed_roles = list("Internal affairs agent")
+	allowed_roles = list("Internal Affairs Agent")
 
 /datum/gear/accessory/pressbadge
 	display_name = "corporate press pass"
@@ -349,3 +349,27 @@
 /datum/gear/accessory/pressbadge
 	display_name = "freelance press pass"
 	path = /obj/item/clothing/accessory/badge/press/independent
+
+/datum/gear/accessory/wristband
+	display_name = "wristband (recolourable)"
+	path = /obj/item/clothing/accessory/wristband
+
+/datum/gear/accessory/wristband/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/accessory/wristband_collection
+	display_name = "wristbands (selection)"
+	path = /obj/item/clothing/accessory/wristbandcollection
+
+/datum/gear/accessory/wristband_collection/New()
+	..()
+	var/list/wristband_lists = list(
+	"Green, Blue and Yellow" = /obj/item/clothing/accessory/wristbandcollection,
+	"Pink, Black and Red" = /obj/item/clothing/accessory/wristbandcollection/pink,
+	"Red and Orange" = /obj/item/clothing/accessory/wristbandcollection/les,
+	"White, Pink and Blue" = /obj/item/clothing/accessory/wristbandcollection/trans,
+	"Blue, Purple and Pink" = /obj/item/clothing/accessory/wristbandcollection/bi,
+	"Black, White and Grey" = /obj/item/clothing/accessory/wristbandcollection/ace
+	)
+	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)

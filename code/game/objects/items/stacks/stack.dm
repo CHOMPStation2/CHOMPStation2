@@ -14,10 +14,11 @@
 	origin_tech = list(TECH_MATERIAL = 1)
 	icon = 'icons/obj/stacks_ch.dmi' //CHOMPedit - materials update
 	randpixel = 7
-	center_of_mass = null
+	center_of_mass_x = 0 //CHOMPEdit
+	center_of_mass_y = 0 //CHOMPEdit
 	var/list/datum/stack_recipe/recipes
 	var/singular_name
-	VAR_PROTECTED/amount = 1
+	var/amount = 1
 	var/max_amount //also see stack recipes initialisation, param "max_res_amount" must be equal to this max_amount
 	var/stacktype //determines whether different stack types can merge
 	var/build_type = null //used when directly applied to a turf
@@ -208,7 +209,7 @@
 
 					var/mattermult = istype(Ob, /obj/item) ? min(2000, 400 * Ob.w_class) : 2000
 
-					Ob.matter[recipe.use_material] = mattermult / produced * required
+					Ob.matter[recipe.matter_material] = mattermult / produced * required
 
 		O.set_dir(user.dir)
 		O.add_fingerprint(user)
@@ -240,8 +241,8 @@
 //Return 1 if an immediate subsequent call to use() would succeed.
 //Ensures that code dealing with stacks uses the same logic
 /obj/item/stack/proc/can_use(var/used)
-	if(used < 0 || used % 1)
-		stack_trace("Tried to use a bad stack amount: [used]")
+	if(used < 0 || (used != round(used)))
+		stack_trace("Tried to use a bad stack amount: [used]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 	if(get_amount() < used)
 		return 0
@@ -253,6 +254,7 @@
 	if(!uses_charge)
 		amount -= used
 		if (amount <= 0)
+			amount = 0 // stop amount going negative ideally
 			qdel(src) //should be safe to qdel immediately since if someone is still using this stack it will persist for a little while longer
 		update_icon()
 		return 1
@@ -265,8 +267,8 @@
 		return 1
 
 /obj/item/stack/proc/add(var/extra)
-	if(extra < 0 || extra % 1)
-		stack_trace("Tried to add a bad stack amount: [extra]")
+	if(extra < 0 || (extra != round(extra)))
+		stack_trace("Tried to add a bad stack amount: [extra]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 	if(!uses_charge)
 		if(amount + extra > get_max_amount())
@@ -283,8 +285,8 @@
 			S.add_charge(charge_costs[i] * extra)
 
 /obj/item/stack/proc/set_amount(var/new_amount, var/no_limits = FALSE)
-	if(new_amount < 0 || new_amount % 1)
-		stack_trace("Tried to set a bad stack amount: [new_amount]")
+	if(new_amount < 0 || (new_amount != round(new_amount)))
+		stack_trace("Tried to set a bad stack amount: [new_amount]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 
 	// Clean up the new amount
@@ -321,8 +323,8 @@
 	if (isnull(tamount))
 		tamount = src.get_amount()
 
-	if(tamount < 0 || tamount % 1)
-		stack_trace("Tried to transfer a bad stack amount: [tamount]")
+	if(tamount < 0 || (tamount != round(tamount)))
+		stack_trace("Tried to transfer a bad stack amount: [tamount]. Location: [src.loc] ([src.x],[src.y],[src.z])") //CHOMPEdit
 		return 0
 
 	var/transfer = max(min(tamount, src.get_amount(), (S.get_max_amount() - S.get_amount())), 0)
@@ -333,7 +335,10 @@
 		if (prob(transfer/orig_amount * 100))
 			transfer_fingerprints_to(S)
 			if(blood_DNA)
-				S.blood_DNA |= blood_DNA
+				if(S.blood_DNA)
+					S.blood_DNA |= blood_DNA
+				else
+					S.blood_DNA = blood_DNA.Copy()
 		return transfer
 	return 0
 
@@ -344,7 +349,7 @@
 	if(uses_charge)
 		return null
 
-	if(tamount < 0 || tamount % 1)
+	if(tamount < 0 || (tamount != round(tamount)))
 		stack_trace("Tried to split a bad stack amount: [tamount]")
 		return null
 
@@ -399,7 +404,10 @@
 
 /obj/item/stack/attack_hand(mob/user as mob)
 	if (user.get_inactive_hand() == src)
-		var/N = input(usr, "How many stacks of [src] would you like to split off?  There are currently [amount].", "Split stacks", 1) as num|null
+		var/N = tgui_input_number(usr, "How many stacks of [src] would you like to split off?  There are currently [amount].", "Split stacks", 1, amount, 1)
+		if(N != round(N))
+			to_chat(user, "<span class='warning'>You cannot separate a non-whole number of stacks!</span>")
+			return
 		if(N)
 			var/obj/item/stack/F = src.split(N)
 			if (F)

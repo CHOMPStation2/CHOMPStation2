@@ -6,8 +6,8 @@
 	tail = null //The tail is part of its body due to tail using the "icons/effects/species.dmi" file. It must be null, or they'll have a chimp tail.
 	greater_form = "Akula"
 	default_language = "Skrellian" //Closest we have.
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 /datum/species/monkey/sergal
 	name = SPECIES_MONKEY_SERGAL
@@ -16,8 +16,8 @@
 	deform = 'icons/mob/human_races/monkeys/r_sergaling_vr.dmi'
 	tail = null
 	default_language = LANGUAGE_SAGARU
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 /datum/species/monkey/sparra
 	name = SPECIES_MONKEY_NEVREAN
@@ -27,8 +27,8 @@
 	icobase = 'icons/mob/human_races/monkeys/r_sparra_vr.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_sparra_vr.dmi'
 	default_language = LANGUAGE_BIRDSONG
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 
 /* Example from Polaris code
@@ -58,20 +58,33 @@
 	flesh_color = "#966464"
 	base_color = "#000000"
 	tail = null
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	species_sounds = "Canine"
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 //INSERT CODE HERE SO MONKEYS CAN BE SPAWNED.
 //Also, M was added to the end of the spawn names to signify that it's a monkey, since some names were conflicting.
 
+/mob/living/carbon/human/sharkm
+	low_sorting_priority = TRUE
+
 /mob/living/carbon/human/sharkm/New(var/new_loc)
 	..(new_loc, "Sobaka")
+
+/mob/living/carbon/human/sergallingm
+	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sergallingm/New(var/new_loc)
 	..(new_loc, "Saru")
 
+/mob/living/carbon/human/sparram
+	low_sorting_priority = TRUE
+
 /mob/living/carbon/human/sparram/New(var/new_loc)
 	..(new_loc, "Sparra")
+
+/mob/living/carbon/human/wolpin
+	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/wolpin/New(var/new_loc)
 	..(new_loc, "Wolpin")

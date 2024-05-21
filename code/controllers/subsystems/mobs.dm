@@ -15,12 +15,15 @@ SUBSYSTEM_DEF(mobs)
 	var/list/currentrun = list()
 	var/log_extensively = FALSE
 	var/list/timelog = list()
-	
+
 	var/slept_mobs = 0
 	var/list/process_z = list()
 
-/datum/controller/subsystem/mobs/stat_entry()
-	..("P: [global.mob_list.len] | S: [slept_mobs]")
+//CHOMPEdit Begin
+/datum/controller/subsystem/mobs/stat_entry(msg)
+	msg = "P: [global.mob_list.len] | S: [slept_mobs]"
+	return ..()
+//CHOMPEdit End
 
 /datum/controller/subsystem/mobs/fire(resumed = 0)
 	if (!resumed)
@@ -40,10 +43,15 @@ SUBSYSTEM_DEF(mobs)
 		if(!M || QDELETED(M))
 			mob_list -= M
 			continue
-		else if(M.low_priority && !(M.loc && process_z[get_z(M)]))
+		else if(M.low_priority && !(M.loc && get_z(M) && process_z[get_z(M)]))
 			slept_mobs++
 			continue
-		
+		//CHOMPEdit Start - Enable pausing mobs (For transformation, holding until reformation, etc.)
+		else if(!M.enabled)
+			slept_mobs++
+			continue
+		//CHOMPEdit End
+
 		M.Life(times_fired)
 
 		if (MC_TICK_CHECK)
@@ -58,14 +66,14 @@ SUBSYSTEM_DEF(mobs)
 		log_world(msg)
 		return
 	msg += "Lists: currentrun: [currentrun.len], mob_list: [mob_list.len]\n"
-	
+
 	if(!currentrun.len)
 		msg += "!!The subsystem just finished the mob_list list, and currentrun is empty (or has never run).\n"
 		msg += "!!The info below is the tail of mob_list instead of currentrun.\n"
-	
+
 	var/datum/D = currentrun.len ? currentrun[currentrun.len] : mob_list[mob_list.len]
 	msg += "Tail entry: [describeThis(D)] (this is likely the item AFTER the problem item)\n"
-	
+
 	var/position = mob_list.Find(D)
 	if(!position)
 		msg += "Unable to find context of tail entry in mob_list list.\n"
@@ -91,3 +99,10 @@ SUBSYSTEM_DEF(mobs)
 /datum/controller/subsystem/mobs/critfail()
 	..()
 	log_recent()
+
+//CHOMPEdit Begin
+//Mobs need to immediately removed from the SS list on Destroy
+/mob/Destroy()
+	. = ..()
+	SSmobs.currentrun -= src
+//CHOMPEdit End

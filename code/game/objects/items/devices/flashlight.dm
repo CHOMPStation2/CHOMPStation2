@@ -126,7 +126,11 @@
 			if(H.species.vision_organ)
 				vision = H.internal_organs_by_name[H.species.vision_organ]
 			if(!vision)
+				user.visible_message("<b>\The [user]</b> directs [src] at [M]'s face.", \
+								 	 "<span class='notice'>You direct [src] at [M]'s face.</span>")
 				to_chat(user, "<span class='warning'>You can't find any [H.species.vision_organ ? H.species.vision_organ : "eyes"] on [H]!</span>")
+				user.setClickCooldown(user.get_attack_speed(src))
+				return
 
 			user.visible_message("<b>\The [user]</b> directs [src] to [M]'s eyes.", \
 							 	 "<span class='notice'>You direct [src] to [M]'s eyes.</span>")
@@ -227,11 +231,12 @@
 	. = ..()
 	if(!on)
 		return
-	var/datum/component/overlay_lighting/OL = GetComponent(/datum/component/overlay_lighting)
-	if(!OL)
-		return
-	var/turf/T = get_turf(target)
-	OL.place_directional_light(T)
+	if(light_system == MOVABLE_LIGHT_DIRECTIONAL)
+		var/datum/component/overlay_lighting/OL = GetComponent(/datum/component/overlay_lighting)
+		if(!OL)
+			return
+		var/turf/T = get_turf(target)
+		OL.place_directional_light(T)
 
 /obj/item/device/flashlight/pen
 	name = "penlight"
@@ -306,7 +311,8 @@
 	desc = "A desk lamp with an adjustable mount."
 	icon_state = "lamp"
 	force = 10
-	center_of_mass = list("x" = 13,"y" = 11)
+	center_of_mass_x = 13 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 	light_range = 5
 	w_class = ITEMSIZE_LARGE
 	power_use = 0
@@ -325,14 +331,16 @@
 /obj/item/device/flashlight/lamp/green
 	desc = "A classic green-shaded desk lamp."
 	icon_state = "lampgreen"
-	center_of_mass = list("x" = 15,"y" = 11)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 	light_color = "#FFC58F"
 
 // clown lamp
 /obj/item/device/flashlight/lamp/clown
 	desc = "A whacky banana peel shaped lamp."
 	icon_state = "bananalamp"
-	center_of_mass = list("x" = 15,"y" = 11)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 
 
 /*
@@ -342,7 +350,7 @@
 /obj/item/device/flashlight/flare
 	name = "flare"
 	desc = "A red standard-issue flare. There are instructions on the side reading 'pull cord, make light'."
-	w_class = ITEMSIZE_SMALL
+	w_class = ITEMSIZE_TINY // CHOMPedit: These can fit in more places.
 	light_range = 8 // Pretty bright.
 	light_power = 0.8
 	light_color = LIGHT_COLOR_FLARE
@@ -410,7 +418,7 @@
 /obj/item/device/flashlight/glowstick
 	name = "green glowstick"
 	desc = "A green military-grade chemical light."
-	w_class = ITEMSIZE_SMALL
+	w_class = ITEMSIZE_TINY // CHOMPedit: These can fit in more places.
 	light_system = MOVABLE_LIGHT
 	light_range = 4
 	light_power = 0.9

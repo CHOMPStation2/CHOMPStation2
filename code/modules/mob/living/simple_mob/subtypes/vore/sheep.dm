@@ -33,7 +33,7 @@
 	mount_offset_x = 0
 
 	say_list_type = /datum/say_list/sheep
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/edible
 
 //	var/harvestable_wool = TRUE			//Relating to wool growth and shearing down below.
 //	var/wool_growth = 0
@@ -48,9 +48,9 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 1.5
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/sheep/MouseDrop_T(mob/living/M, mob/living/user)
 	return

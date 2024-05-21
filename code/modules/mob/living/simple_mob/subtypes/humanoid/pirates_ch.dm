@@ -19,7 +19,7 @@
 	name = "Pirate"
 	desc = "Does what he wants cause a pirate is free."
 	tt_desc = "E Homo sapiens"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "piratemelee"
 	icon_living = "piratemelee"
 	icon_dead = "piratemelee_dead"
@@ -68,7 +68,6 @@
 	name = "Pirate Brush Cutter"
 	desc = "Does what he wants cause a pirate is free. This one has got a machete."
 	tt_desc = "E Homo sapiens"
-	icon = 'icons/mob/animal_ch.dmi'
 	icon_state = "piratemelee-machete"
 	icon_living = "piratemelee-machete"
 	icon_dead = "piratemelee_dead"
@@ -157,7 +156,7 @@
 /mob/living/simple_mob/humanoid/merc/melee/sword/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)	return
 	if(prob(25))
-		visible_message("<font color='red'><B>[src] blocks [Proj] with its shield!</B></font>")
+		visible_message(span_red("<B>[src] blocks [Proj] with its shield!</B>"))
 		if(Proj.firer)
 			ai_holder.react_to_attack(Proj.firer)
 		return
@@ -465,7 +464,7 @@
 	name = "Hull Ripper"
 	desc = "A Ripley modified by pirates. Sports additional riveted armor plating and a jury rigged machine gun in addition to its hull piercing drill."
 	catalogue_data = list(/datum/category_item/catalogue/technology/ripley)
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "pirate"
 	faction = "pirate"
 	wreckage = /obj/structure/loot_pile/mecha/ripley/pirate

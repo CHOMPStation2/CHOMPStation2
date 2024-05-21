@@ -13,6 +13,7 @@ var/list/spawntypes = list()
 	var/list/restrict_job = null
 	var/list/disallow_job = null
 	var/announce_channel = "Common"
+	var/allow_offmap_spawn = FALSE //CHOMPEdit - add option to allow offmap spawns to a spawnpoint without entirely restricting that spawnpoint
 	var/allowed_mob_types = JOB_SILICON|JOB_CARBON
 
 /datum/spawnpoint/proc/check_job_spawning(job)
@@ -26,7 +27,7 @@ var/list/spawntypes = list()
 	if(!J) // Couldn't find, admin shenanigans? Allow it
 		return 1
 
-	if(J.offmap_spawn && !(job in restrict_job))
+	if(J.offmap_spawn && !allow_offmap_spawn && !(job in restrict_job)) //CHOMPEdit - add option to allow offmap spawns to a spawnpoint without entirely restricting that spawnpoint
 		return 0
 
 	if(!(J.mob_type & allowed_mob_types))
@@ -40,6 +41,7 @@ var/list/spawntypes = list()
 /datum/spawnpoint/arrivals
 	display_name = "Arrivals Shuttle"
 	msg = "will arrive to the station shortly by shuttle"
+	disallow_job = list(JOB_OUTSIDER) //CHOMPEdit add
 
 /datum/spawnpoint/arrivals/New()
 	..()
@@ -65,6 +67,7 @@ var/list/spawntypes = list()
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
 	allowed_mob_types = JOB_CARBON
+	disallow_job = list(JOB_OUTSIDER) //CHOMPEdit add
 
 /datum/spawnpoint/cryo/New()
 	..()
@@ -74,6 +77,7 @@ var/list/spawntypes = list()
 	display_name = "Cyborg Storage"
 	msg = "has been activated from storage"
 	allowed_mob_types = JOB_SILICON
+	disallow_job = list(JOB_OUTSIDER) //CHOMPEdit add
 
 /datum/spawnpoint/cyborg/New()
 	..()
@@ -100,6 +104,7 @@ var/global/list/latejoin_tram   = list()
 /datum/spawnpoint/tram
 	display_name = "Tram Station"
 	msg = "will arrive to the station shortly by shuttle"
+	disallow_job = list(JOB_OUTSIDER) //CHOMPEdit add
 
 /datum/spawnpoint/tram/New()
 	..()

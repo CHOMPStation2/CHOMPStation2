@@ -40,7 +40,7 @@
 	var/energy = 100
 	var/max_energy = 100
 
-	movement_cooldown = 0.5
+	movement_cooldown = -1
 
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -87,8 +87,8 @@
 /mob/living/simple_mob/animal/sif/frostfly/Initialize()
 	. = ..()
 	smoke_special = new
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 /datum/say_list/frostfly
 	speak = list("Zzzz.", "Kss.", "Zzt?")

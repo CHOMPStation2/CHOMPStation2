@@ -45,19 +45,19 @@
 
 /client/proc/ToRban(task in list("update","toggle","show","remove","remove all","find"))
 	set name = "ToRban"
-	set category = "Server"
+	set category = "Server.Config" //CHOMPEdit
 	if(!holder)	return
 	switch(task)
 		if("update")
 			ToRban_update()
 		if("toggle")
 			if(config)
-				if(config.ToRban)
-					config.ToRban = 0
-					message_admins("<font color='red'>ToR banning disabled.</font>")
+				if(CONFIG_GET(flag/ToRban)) // CHOMPEdit
+					CONFIG_SET(flag/ToRban, FALSE) // CHOMPEdit
+					message_admins(span_red("ToR banning disabled."))
 				else
-					config.ToRban = 1
-					message_admins("<font colot='green'>ToR banning enabled.</font>")
+					CONFIG_SET(flag/ToRban, TRUE) // CHOMPEdit
+					message_admins(span_green("ToR banning enabled."))
 		if("show")
 			var/savefile/F = new(TORFILE)
 			var/dat
@@ -77,10 +77,10 @@
 		if("remove all")
 			to_chat(src, "<span class='filter_adminlog'><b>[TORFILE] was [fdel(TORFILE)?"":"not "]removed.</b></span>")
 		if("find")
-			var/input = input(src,"Please input an IP address to search for:","Find ToR ban",null) as null|text
+			var/input = tgui_input_text(src,"Please input an IP address to search for:","Find ToR ban",null)
 			if(input)
 				if(ToRban_isbanned(input))
-					to_chat(src, "<span class='filter_adminlog'><font color='green'><b>Address is a known ToR address</b></font></span>")
+					to_chat(src, "<span class='filter_adminlog'>[span_orange("<b>Address is a known ToR address</b>")]</span>")
 				else
 					to_chat(src, "<span class='filter_adminlog danger'>Address is not a known ToR address</span>")
 	return

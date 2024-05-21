@@ -74,11 +74,12 @@ GLOBAL_LIST_EMPTY(fusion_cores)
 		set_strength(target_field_strength)
 
 		spawn(1)
-			owned_field.process()
-			owned_field.stability_monitor()
-			owned_field.radiation_scale()
-			owned_field.temp_dump()
-			owned_field.temp_color()
+			if(!QDELETED(owned_field))
+				owned_field.process()
+				owned_field.stability_monitor()
+				owned_field.radiation_scale()
+				owned_field.temp_dump()
+				owned_field.temp_color()
 
 /obj/machinery/power/fusion_core/Topic(href, href_list)
 	if(..())
@@ -149,7 +150,8 @@ GLOBAL_LIST_EMPTY(fusion_cores)
 		return
 
 	if(istype(W, /obj/item/device/multitool))
-		var/new_ident = input(usr, "Enter a new ident tag.", "Fusion Core", id_tag) as null|text
+		var/new_ident = tgui_input_text(usr, "Enter a new ident tag.", "Fusion Core", id_tag, MAX_NAME_LEN)
+		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && user.Adjacent(src))
 			id_tag = new_ident
 		return

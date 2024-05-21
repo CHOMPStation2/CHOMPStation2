@@ -38,12 +38,12 @@
 /obj/machinery/power/grid_checker/attackby(obj/item/W, mob/user)
 	if(!user)
 		return
-	if(W.is_screwdriver())
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		default_deconstruction_screwdriver(user, W)
 		opened = !opened
-	else if(W.is_crowbar())
+	else if(W.has_tool_quality(TOOL_CROWBAR))
 		default_deconstruction_crowbar(user, W)
-	else if(istype(W, /obj/item/device/multitool) || W.is_wirecutter())
+	else if(istype(W, /obj/item/device/multitool) || W.has_tool_quality(TOOL_WIRECUTTER))
 		attack_hand(user)
 
 /obj/machinery/power/grid_checker/attack_hand(mob/user)
@@ -64,8 +64,8 @@
 /obj/machinery/power/grid_checker/proc/power_failure(var/announce = TRUE)
 	if(announce)
 		command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
-		the colony's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \
-		when Engineering can manually resolve the issue.",
+		the station's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \
+		when Engineering can manually resolve the issue.", //CHOMPEdit
 		"Critical Power Failure",
 		new_sound = 'sound/AI/poweroff.ogg')
 	power_failing = TRUE

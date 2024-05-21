@@ -181,6 +181,8 @@
 */ //CHOMP Remove end
 //this is largely hacky and bad :(	-Pete //less hacky and bad now :) -Ghost
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
+	if(istype(A, /obj/item/ammo_casing/a12g) || istype(A, /obj/item/ammo_magazine)) //CHOMPEdit: Trying to make sawn offs reload able
+		..()
 	if(sawn_off)
 		to_chat(user, "<span class='warning'>The [src] is already shortened!</span>")
 		return
@@ -226,3 +228,19 @@
 	w_class = ITEMSIZE_NORMAL
 	force = 5
 	sawn_off = TRUE
+
+//Sjorgen Inertial Shotgun
+/obj/item/weapon/gun/projectile/shotgun/semi
+	name = "semi-automatic shotgun"
+	desc = "A shotgun with a simple, yet effective recoil inertia loading mechanism for semi-automatic fire. This gun uses 12 gauge ammunition."
+	description_fluff = "Looking back on yet another venerable design, Hedberg-Hammarstrom settled on a pattern of shotgun that both had the reliability of a well proven semi-automatic loading system in addition to a striking visual aesthetic that would be appealing to even the most discerning of firearm collectors."
+	icon_state = "sjorgen"
+	item_state = "shotgun"
+	w_class = ITEMSIZE_LARGE
+	caliber = "12g"
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BACK
+	load_method = SINGLE_CASING
+	max_shells = 5
+	ammo_type = /obj/item/ammo_casing/a12g/beanbag
+

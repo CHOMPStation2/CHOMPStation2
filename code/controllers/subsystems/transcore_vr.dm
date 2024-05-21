@@ -36,7 +36,7 @@ SUBSYSTEM_DEF(transcore)
 			warning("Instantiated transcore DB without a key: [t]")
 			continue
 		databases[db.key] = db
-	return ..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/transcore/fire(resumed = 0)
 	var/timer = TICK_USAGE
@@ -74,9 +74,13 @@ SUBSYSTEM_DEF(transcore)
 		//In a human
 		BITSET(H.hud_updateflag, BACKUP_HUD)
 
-		if(H == imp.imp_in && H.mind && H.stat < DEAD)
-			db.m_backup(H.mind,H.nif)
-			persist_nif_data(H)
+		if(H == imp.imp_in && H.stat < DEAD) //CHOMPEdit Start
+			if(H.mind)
+				db.m_backup(H.mind,H.nif)
+				persist_nif_data(H)
+			else if(H.vr_link && H.vr_link.mind)
+				db.m_backup(H.vr_link.mind,H.nif)
+				persist_nif_data(H) //CHOMPEdit End
 
 		if(MC_TICK_CHECK)
 			return
@@ -112,19 +116,19 @@ SUBSYSTEM_DEF(transcore)
 		if(since_backup < overdue_time)
 			curr_MR.dead_state = MR_NORMAL
 		else
-			if(curr_MR.dead_state != MR_DEAD) //First time switching to dead	//Remove auto notification! Ghosts have a button to notify, so no more false flags. CHOMPEdit: Revert removal
+/*			if(curr_MR.dead_state != MR_DEAD) //First time switching to dead	//Remove auto notification! Ghosts have a button to notify, so no more false flags. CHOMPEdit: Readded removal.
 				if(curr_MR.do_notify)
 					db.notify(curr_MR)
 					curr_MR.last_notification = world.time
-
+*/
 			curr_MR.dead_state = MR_DEAD
 
 		if(MC_TICK_CHECK)
 			return
 
-/datum/controller/subsystem/transcore/stat_entry()
-	var/msg = list()
-	msg += "$:{"
+//CHOMPEdit Begin
+/datum/controller/subsystem/transcore/stat_entry(msg)
+	msg = "$:{"
 	msg += "IM:[round(cost_implants,1)]|"
 	msg += "BK:[round(cost_backups,1)]"
 	msg += "} "
@@ -137,7 +141,8 @@ SUBSYSTEM_DEF(transcore)
 		msg += "DFB:[default_db.body_scans.len]|"
 		msg += "DFI:[default_db.implants.len]"
 	msg += "} "
-	..(jointext(msg, null))
+	return ..()
+// CHOMPEdit End
 
 /datum/controller/subsystem/transcore/Recover()
 	for(var/key in SStranscore.databases)

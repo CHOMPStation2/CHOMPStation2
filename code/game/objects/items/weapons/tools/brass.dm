@@ -11,11 +11,13 @@
 /obj/item/weapon/tool/wirecutters/brass
 	icon_state = "cutters_brass"
 	item_state = "cutters_yellow"
+	random_color = FALSE // CHOMPFix, no more not-brass brass tools.
 
 //Screwdriver
 /obj/item/weapon/tool/screwdriver/brass
 	icon_state = "screwdriver_brass"
 	item_state = "screwdriver_black"
+	random_color = FALSE // CHOMPFix, no more not-brass brass tools.
 
 //Wrench
 /obj/item/weapon/tool/wrench/brass

@@ -47,6 +47,7 @@
 #define ui_construct_purge "EAST:00,CENTER-1:15"
 #define ui_construct_fire "EAST-1:16,CENTER+1:13" //above health, slightly to the left
 #define ui_construct_pull "EAST-1:28,SOUTH+1:10" //above the zone_sel icon
+#define ui_pai_comms "EAST-1:28,SOUTH+1:5"
 
 //Lower right, persistant menu
 #define ui_dropbutton "EAST-4:22,SOUTH:5"
@@ -57,9 +58,11 @@
 #define ui_zonesel "EAST-1:28,SOUTH:5"
 #define ui_acti_alt "EAST-1:28,SOUTH:5" //alternative intent switcher for when the interface is hidden (F12)
 
-#define ui_borg_pull "EAST-3:24,SOUTH+1:7"
-#define ui_borg_module "EAST-2:26,SOUTH+1:7"
-#define ui_borg_panel "EAST-1:28,SOUTH+1:7"
+#define ui_borg_pull "EAST-4:24,SOUTH+1:7" //borgs
+#define ui_borg_radio "EAST-2:26,SOUTH+1:7" //borgs
+#define ui_borg_panel "EAST-1:28,SOUTH+1:7" //borgs
+#define ui_borg_module "EAST-3:24,SOUTH+1:5"//borgs
+#define ui_vtec_control "EAST-3:24,SOUTH:5"//borgs
 
 #define ui_ai_core "SOUTH:6,WEST:16"
 #define ui_ai_camera_list "SOUTH:6,WEST+1:16"
@@ -113,8 +116,10 @@
 #define ui_temp "EAST-1:28,CENTER-2:13"
 #define ui_health "EAST-1:28,CENTER-1:15"
 #define ui_internal "EAST-1:28,CENTER:17"
+#define ui_under_health "EAST-1:28,CENTER-2:13"
 									//borgs
 #define ui_borg_health "EAST-1:28,CENTER-2:13" //borgs have the health display where humans have the pressure damage indicator.
+#define ui_borg_under_health "EAST-1:31,CENTER-3:13"
 #define ui_alien_health "EAST-1:28,CENTER-2:13" //aliens have the health display where humans have the pressure damage indicator.
 
 #define ui_ling_chemical_display "EAST-1:28,CENTER-3:15"
@@ -159,7 +164,10 @@
 #define ui_genetic_master "EAST-1:16,NORTH-3:16"
 
 // Ghost ones
-#define ui_ghost_returntomenu "SOUTH:6,CENTER-3:24"
+// CHOMPedit
+#define ui_ghost_returntomenu "SOUTH:6,CENTER-4:24"
+// CHOMPedit
+#define ui_ghost_vr "SOUTH: 6,CENTER-3:24"
 #define ui_ghost_jumptomob "SOUTH:6,CENTER-2:24"
 #define ui_ghost_orbit "SOUTH:6,CENTER-1:24"
 #define ui_ghost_reenter_corpse "SOUTH:6,CENTER:24"

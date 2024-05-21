@@ -33,7 +33,7 @@
 			to_chat(user, "<span class='warning'>Wiring \the [selected_io.holder]'s [selected_io.name] into itself is rather pointless.</span>")
 			return
 		if(io.io_type != selected_io.io_type)
-			to_chat(user, "<span class='warning'>Those two types of channels are incompatable.  The first is a [selected_io.io_type], \
+			to_chat(user, "<span class='warning'>Those two types of channels are incompatible. The first is a [selected_io.io_type], \
 			while the second is a [io.io_type].</span>")
 			return
 		if(io.holder.assembly && io.holder.assembly != selected_io.holder.assembly)
@@ -106,7 +106,7 @@
 /obj/item/device/integrated_electronics/debugger
 	name = "circuit debugger"
 	desc = "This small tool allows one working with custom machinery to directly set data to a specific pin, useful for writing \
-	settings to specific circuits, or for debugging purposes.  It can also pulse activation pins."
+	settings to specific circuits, or for debugging purposes. It can also pulse activation pins."
 	icon = 'icons/obj/integrated_electronics/electronic_tools.dmi'
 	icon_state = "debugger"
 	w_class = 2
@@ -122,20 +122,20 @@
 	switch(type_to_use)
 		if("string")
 			accepting_refs = 0
-			new_data = input(usr, "Now type in a string.","[src] string writing") as null|text
+			new_data = tgui_input_text(usr, "Now type in a string.","[src] string writing", null, MAX_MESSAGE_LEN)
 			new_data = sanitizeSafe(new_data, MAX_MESSAGE_LEN, 0, 0)
 			if(istext(new_data) && CanInteract(user, GLOB.tgui_physical_state))
 				data_to_write = new_data
 				to_chat(user, "<span class='notice'>You set \the [src]'s memory to \"[new_data]\".</span>")
 		if("number")
 			accepting_refs = 0
-			new_data = input(usr, "Now type in a number.","[src] number writing") as null|num
+			new_data = tgui_input_number(usr, "Now type in a number.","[src] number writing", min_value=-INFINITY, round_value=FALSE)
 			if(isnum(new_data) && CanInteract(user, GLOB.tgui_physical_state))
 				data_to_write = new_data
 				to_chat(user, "<span class='notice'>You set \the [src]'s memory to [new_data].</span>")
 		if("ref")
 			accepting_refs = 1
-			to_chat(user, "<span class='notice'>You turn \the [src]'s ref scanner on.  Slide it across \
+			to_chat(user, "<span class='notice'>You turn \the [src]'s ref scanner on. Slide it across \
 			an object for a ref of that object to save it in memory.</span>")
 		if("null")
 			data_to_write = null
@@ -143,9 +143,9 @@
 
 /obj/item/device/integrated_electronics/debugger/afterattack(atom/target, mob/living/user, proximity)
 	if(accepting_refs && proximity)
-		data_to_write = weakref(target)
+		data_to_write = WEAKREF(target)
 		visible_message("<span class='notice'>[user] slides \a [src]'s over \the [target].</span>")
-		to_chat(user, "<span class='notice'>You set \the [src]'s memory to a reference to [target.name] \[Ref\].  The ref scanner is \
+		to_chat(user, "<span class='notice'>You set \the [src]'s memory to a reference to [target.name] \[Ref\]. The ref scanner is \
 		now off.</span>")
 		accepting_refs = 0
 
@@ -154,7 +154,7 @@
 		io.write_data_to_pin(data_to_write)
 		var/data_to_show = data_to_write
 		if(isweakref(data_to_write))
-			var/weakref/w = data_to_write
+			var/datum/weakref/w = data_to_write
 			var/atom/A = w.resolve()
 			data_to_show = A.name
 		to_chat(user, "<span class='notice'>You write '[data_to_write ? data_to_show : "NULL"]' to the '[io]' pin of \the [io.holder].</span>")
@@ -206,7 +206,7 @@
 			to_chat(user, "<span class='warning'>Wiring \the [selected_io.holder]'s [selected_io.name] into itself is rather pointless.</span>")
 			return
 		if(io.io_type != selected_io.io_type)
-			to_chat(user, "<span class='warning'>Those two types of channels are incompatable.  The first is a [selected_io.io_type], \
+			to_chat(user, "<span class='warning'>Those two types of channels are incompatible. The first is a [selected_io.io_type], \
 			while the second is a [io.io_type].</span>")
 			return
 		if(io.holder.assembly && io.holder.assembly != selected_io.holder.assembly)
@@ -244,9 +244,9 @@
 
 /obj/item/device/multitool/afterattack(atom/target, mob/living/user, proximity)
 	if(accepting_refs && toolmode == MULTITOOL_MODE_INTCIRCUITS && proximity)
-		weakref_wiring = weakref(target)
+		weakref_wiring = WEAKREF(target)
 		visible_message("<span class='notice'>[user] slides \a [src]'s over \the [target].</span>")
-		to_chat(user, "<span class='notice'>You set \the [src]'s memory to a reference to [target.name] \[Ref\].  The ref scanner is \
+		to_chat(user, "<span class='notice'>You set \the [src]'s memory to a reference to [target.name] \[Ref\]. The ref scanner is \
 		now off.</span>")
 		accepting_refs = 0
 
@@ -277,10 +277,14 @@
 		/obj/item/device/integrated_electronics/debugger, //CHOMP Edit,
 		/obj/item/device/integrated_electronics/detailer, //CHOMP Edit,
 		)
-	cant_hold = list(/obj/item/weapon/tool/screwdriver/power)
+
+//CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
+//Which is enough to trigger byond's recursion level protection
+/obj/item/weapon/storage/bag/circuits/emp_act()
+	return	//No
 
 /obj/item/weapon/storage/bag/circuits/basic/Initialize()
-	. = ..()
+	//. = ..() CHOMPEdit
 	new /obj/item/weapon/storage/bag/circuits/mini/arithmetic(src)
 	new /obj/item/weapon/storage/bag/circuits/mini/trig(src)
 	new /obj/item/weapon/storage/bag/circuits/mini/input(src)
@@ -298,10 +302,14 @@
 	new /obj/item/device/multitool(src)
 	new /obj/item/weapon/tool/screwdriver(src)
 	new /obj/item/weapon/tool/crowbar(src)
+	new /obj/item/device/integrated_electronics/wirer(src) //CHOMPEdit
+	new /obj/item/device/integrated_electronics/debugger(src) //CHOMPEdit
+	new /obj/item/device/integrated_electronics/detailer(src) //CHOMPEdit
 	make_exact_fit()
+	. = ..() //CHOMPEdit
 
 /obj/item/weapon/storage/bag/circuits/all/Initialize()
-	. = ..()
+	//. = ..() CHOMPEdit
 	new /obj/item/weapon/storage/bag/circuits/mini/arithmetic/all(src)
 	new /obj/item/weapon/storage/bag/circuits/mini/trig/all(src)
 	new /obj/item/weapon/storage/bag/circuits/mini/input/all(src)
@@ -322,8 +330,10 @@
 	new /obj/item/device/electronic_assembly/drone(src)
 	new /obj/item/device/integrated_electronics/wirer(src)
 	new /obj/item/device/integrated_electronics/debugger(src)
+	new /obj/item/device/integrated_electronics/detailer(src) //CHOMPEdit
 	new /obj/item/weapon/tool/crowbar(src)
 	make_exact_fit()
+	. = ..() //CHOMPEdit
 
 /obj/item/weapon/storage/bag/circuits/mini
 	name = "circuit box"
@@ -341,13 +351,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/arithmetic/all // Don't believe this will ever be needed.
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/arithmetic/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/arithmetic/Initialize()
 	for(var/obj/item/integrated_circuit/arithmetic/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/trig
@@ -358,13 +368,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/trig/all // Ditto
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/trig/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/trig/Initialize()
 	for(var/obj/item/integrated_circuit/trig/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/input
@@ -375,13 +385,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/input/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/input/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/input/Initialize()
 	for(var/obj/item/integrated_circuit/input/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/output
@@ -392,13 +402,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/output/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/output/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/output/Initialize()
 	for(var/obj/item/integrated_circuit/output/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/memory
@@ -409,13 +419,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/memory/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/memory/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/memory/Initialize()
 	for(var/obj/item/integrated_circuit/memory/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/logic
@@ -426,13 +436,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/logic/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/logic/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/logic/Initialize()
 	for(var/obj/item/integrated_circuit/logic/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/time
@@ -443,13 +453,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/time/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/time/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/time/Initialize()
 	for(var/obj/item/integrated_circuit/time/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/reagents
@@ -460,13 +470,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/reagents/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/reagents/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/reagents/Initialize()
 	for(var/obj/item/integrated_circuit/reagent/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/transfer
@@ -477,13 +487,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/transfer/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/transfer/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/transfer/Initialize()
 	for(var/obj/item/integrated_circuit/transfer/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/converter
@@ -494,13 +504,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/converter/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/converter/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/converter/Initialize()
 	for(var/obj/item/integrated_circuit/converter/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 /obj/item/weapon/storage/bag/circuits/mini/smart
 	name = "smart box"
@@ -510,13 +520,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/smart/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/smart/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/smart/Initialize()
 	for(var/obj/item/integrated_circuit/smart/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 /obj/item/weapon/storage/bag/circuits/mini/manipulation
 	name = "manipulation box"
@@ -526,13 +536,13 @@
 /obj/item/weapon/storage/bag/circuits/mini/manipulation/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/manipulation/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/manipulation/Initialize()
 	for(var/obj/item/integrated_circuit/manipulation/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()
 
 
 /obj/item/weapon/storage/bag/circuits/mini/power
@@ -543,8 +553,7 @@
 /obj/item/weapon/storage/bag/circuits/mini/power/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-/obj/item/weapon/storage/bag/circuits/mini/power/New()
-	..()
+/obj/item/weapon/storage/bag/circuits/mini/power/Initialize()
 	for(var/obj/item/integrated_circuit/passive/power/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -554,3 +563,4 @@
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+	. = ..()

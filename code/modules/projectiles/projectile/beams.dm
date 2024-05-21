@@ -49,19 +49,59 @@
 	tracer_type = /obj/effect/projectile/tracer/laser_blue
 	impact_type = /obj/effect/projectile/impact/laser_blue
 
+/obj/item/projectile/beam/weaklaser/ion
+	damage_type = ELECTROMAG
+	light_color = "#00CCFF"
+	muzzle_type = /obj/effect/projectile/muzzle/laser_em
+	tracer_type = /obj/effect/projectile/tracer/laser_em
+	impact_type = /obj/effect/projectile/impact/laser_em
+
 /obj/item/projectile/beam/smalllaser
 	damage = 25
 	hud_state = "laser"
+
+/obj/item/projectile/beam/smalllaser/ion
+	damage_type = ELECTROMAG
+	light_color = "#00CCFF"
+	muzzle_type = /obj/effect/projectile/muzzle/laser_em
+	tracer_type = /obj/effect/projectile/tracer/laser_em
+	impact_type = /obj/effect/projectile/impact/laser_em
 
 /obj/item/projectile/beam/burstlaser
 	damage = 30
 	armor_penetration = 10
 	hud_state = "laser"
 
+/obj/item/projectile/beam/burstlaser/ion
+	damage_type = ELECTROMAG
+	light_color = "#00CCFF"
+	muzzle_type = /obj/effect/projectile/muzzle/laser_em
+	tracer_type = /obj/effect/projectile/tracer/laser_em
+	impact_type = /obj/effect/projectile/impact/laser_em
+
 /obj/item/projectile/beam/midlaser
 	damage = 40
 	armor_penetration = 10
 	hud_state = "laser"
+
+/obj/item/projectile/beam/midlaser/ion
+	damage_type = ELECTROMAG
+	light_color = "#00CCFF"
+	muzzle_type = /obj/effect/projectile/muzzle/laser_em
+	tracer_type = /obj/effect/projectile/tracer/laser_em
+	impact_type = /obj/effect/projectile/impact/laser_em
+
+/obj/item/projectile/beam/mininglaser
+	name = "pulsating laser"
+	damage = 10
+	armor_penetration = 20
+	fire_sound = 'sound/weapons/eluger.ogg'
+
+	excavation_amount = 100
+
+	muzzle_type = /obj/effect/projectile/muzzle/emitter
+	tracer_type = /obj/effect/projectile/tracer/emitter
+	impact_type = /obj/effect/projectile/impact/emitter
 
 /obj/item/projectile/beam/heavylaser
 	name = "heavy laser"
@@ -89,6 +129,13 @@
 	muzzle_type = /obj/effect/projectile/muzzle/emitter
 	tracer_type = /obj/effect/projectile/tracer/emitter
 	impact_type = /obj/effect/projectile/impact/emitter
+
+/obj/item/projectile/beam/heavylaser/ion
+	damage_type = ELECTROMAG
+	light_color = "#00CCFF"
+	muzzle_type = /obj/effect/projectile/muzzle/laser_em
+	tracer_type = /obj/effect/projectile/tracer/laser_em
+	impact_type = /obj/effect/projectile/impact/laser_em
 
 /obj/item/projectile/beam/heavylaser/cannon
 	damage = 80
@@ -191,6 +238,29 @@
 		var/mob/living/carbon/human/M = target
 		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
 			M.Weaken(5)
+			// CHOMPEdit Start - The thing just to drop the ball if hit
+			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
+				M.unEquip(M.l_hand)
+			if(istype(M.r_hand, /obj/item/weapon/laserdome_hyperball))
+				M.unEquip(M.r_hand)
+			// CHOMPEdit End
+	return 1
+
+/obj/item/projectile/beam/lasertag/blue/multhit
+	name = "blue multi-hit lasertag beam"
+
+/obj/item/projectile/beam/lasertag/blue/multihit/on_hit(var/atom/target, var/blocked = 0)
+	if(ishuman(target))
+		var/mob/living/carbon/human/M = target
+		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
+			var/obj/item/clothing/suit/redtag/S = M.wear_suit
+			if (S.lasertag_health <= 1)
+				M.Weaken(5)
+				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				S.lasertag_health = initial(S.lasertag_health)
+			else
+				S.lasertag_health--
+				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
 	return 1
 
 /obj/item/projectile/beam/lasertag/red
@@ -203,6 +273,29 @@
 		var/mob/living/carbon/human/M = target
 		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
 			M.Weaken(5)
+			// CHOMPEdit Start - The thing just to drop the ball if hit
+			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
+				M.unEquip(M.l_hand)
+			if(istype(M.r_hand, /obj/item/weapon/laserdome_hyperball))
+				M.unEquip(M.r_hand)
+			// CHOMPEdit End
+	return 1
+
+/obj/item/projectile/beam/lasertag/red/multhit
+	name = "red multi-hit lasertag beam"
+
+/obj/item/projectile/beam/lasertag/red/multihit/on_hit(var/atom/target, var/blocked = 0)
+	if(ishuman(target))
+		var/mob/living/carbon/human/M = target
+		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
+			var/obj/item/clothing/suit/bluetag/S = M.wear_suit
+			if(S.lasertag_health <= 1)
+				M.Weaken(5)
+				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				S.lasertag_health = initial(S.lasertag_health)
+			else
+				S.lasertag_health--
+				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
 	return 1
 
 /obj/item/projectile/beam/lasertag/omni//A laser tag bolt that stuns EVERYONE
@@ -330,6 +423,41 @@
 /obj/item/projectile/beam/shock/weak
 	damage = 5
 	agony = 10
+
+
+//
+// Projectile Beam Definitions
+//
+
+/obj/item/projectile/beam/pointdefense
+	name = "point defense salvo"
+	icon_state = "laser"
+	damage = 15
+	damage_type = ELECTROCUTE //You should be safe inside a voidsuit
+	sharp = FALSE //"Wide" spectrum beam
+	light_color = COLOR_GOLD
+
+	excavation_amount = 200 // Good at shooting rocks
+
+	muzzle_type = /obj/effect/projectile/muzzle/pointdefense
+	tracer_type = /obj/effect/projectile/tracer/pointdefense
+	impact_type = /obj/effect/projectile/impact/pointdefense
+
+// CHOMPADD a physical/projectile coil-gun type pointdefense
+/obj/item/projectile/beam/coildefense
+	name = "defense coil salvo"
+	icon_state = "coil"
+	damage = 15
+	damage_type = ELECTROCUTE //You should be safe inside a voidsuit
+	sharp = FALSE //"Wide" spectrum beam
+	light_color = "#FFFFFF"
+
+	excavation_amount = 200 // Good at shooting rocks
+
+	muzzle_type = /obj/effect/projectile/muzzle/coildefense
+	tracer_type = /obj/effect/projectile/tracer/coildefense
+	impact_type = /obj/effect/projectile/impact/coildefense
+
 
 /obj/item/projectile/beam/precursor //CHOMPedit added Precursor beam
 	name = "precursor beam"

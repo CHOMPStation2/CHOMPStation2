@@ -178,6 +178,8 @@ I think I covered everything.
 	)
 	var/eyes
 
+	can_be_drop_prey = FALSE
+
 ///
 ///		Subtypes
 ///
@@ -199,6 +201,7 @@ I think I covered everything.
 	maxHealth = 200
 	melee_damage_lower = 20
 	melee_damage_upper = 15
+	allow_mind_transfer = TRUE
 
 ///
 ///		Misc define stuff
@@ -235,13 +238,13 @@ I think I covered everything.
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_style
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount)
+	add_verb(src,/mob/living/proc/toggle_rider_reins)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/set_style)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/toggle_glow)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/flame_toggle)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle)
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = "neutral"
@@ -268,14 +271,14 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow()
 	set name = "Toggle Glow"
 	set desc = "Switch between glowing and not glowing."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	glow_toggle = !glow_toggle
 
 /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle()
 	set name = "Toggle Small Sprite"
 	set desc = "Switches your sprite to a smaller variant so you can see what you're doing. Others will always see your standard sprite instead. "
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(!small)
 		var/image/I = image(icon = small_icon, icon_state = small_icon_state, loc = src)
@@ -290,7 +293,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle()
 	set name = "Toggle breath attack"
 	set desc = "Toggles whether you will breath attack on harm intent (If you have one)."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(norange)
 		to_chat(src, "<span class='userdanger'>You don't have a breath attack!</span>")
@@ -302,7 +305,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/special_toggle()
 	set name = "Toggle special attacks"
 	set desc = "Toggles whether you will tail spin and charge (If you have them)."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(nospecial)
 		to_chat(src, "<span class='userdanger'>You don't have special attacks!</span>")
@@ -315,7 +318,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 	if(nameset)
 		to_chat(src, "<span class='userdanger'>You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must.</span>")
 		return
@@ -329,12 +332,12 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_desc()
 	set name = "Set Description"
 	set desc = "Set your description."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 	var/newdesc
 	newdesc = sanitizeSafe(input(src,"Set your description. Max 4096 chars.", "Description set","") as text, MAX_MESSAGE_LEN)
 	if(newdesc)
 		desc = newdesc
-*/ 
+*/
 
 ///
 ///		Icon generation stuff
@@ -344,7 +347,7 @@ I think I covered everything.
 	update_fullness()
 	build_icons()
 
-/mob/living/simple_mob/vore/bigdragon/update_fullness()
+/* /mob/living/simple_mob/vore/bigdragon/update_fullness()
 	var/new_fullness = 0
 	// Only count stomachs to fullness
 	for(var/obj/belly/B in vore_organs)
@@ -354,6 +357,7 @@ I think I covered everything.
 	new_fullness /= size_multiplier
 	new_fullness = round(new_fullness, 1)
 	vore_fullness = min(vore_capacity, new_fullness)
+	*/
 
 /mob/living/simple_mob/vore/bigdragon/proc/build_icons(var/random)
 	cut_overlays()
@@ -433,7 +437,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_style()
 	set name = "Set Dragon Style"
 	set desc = "Customise your icons."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	var/list/options = list("Underbelly","Body","Ears","Mane","Horns","Eyes")
 	for(var/option in options)
@@ -534,6 +538,7 @@ I think I covered everything.
 	if(!voremob_loaded)
 		return
 	var/obj/belly/B = new /obj/belly/dragon/maw(src)
+	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HOLD] = list(
 		"The dragon's breath continues to pant over you rhythmically, each exhale carrying a bone-shivering growl",
 		"The thick, heavy tongue lifts, curling around you, cramming you tightly against it's teeth, to squeeze some flavor out of you.",
@@ -543,6 +548,7 @@ I think I covered everything.
 	gut1 = B
 	vore_selected = B
 	B = new /obj/belly/dragon/throat(src)
+	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HOLD] = list(
 		"Gggllrrrk! Another loud, squelching swallow rings out in your ears, dragging you a little deeper into the furnace-like humid heat of the dragon's body.",
 		"Nestling in a still throat for a moment, you feel the walls quiver and undulate excitedly in tune with the beast's heartbeat.",
@@ -558,6 +564,7 @@ I think I covered everything.
 		"The constant, rhythmic kneading and massaging starts to take its toll along with the muggy heat, making you feel weaker and weaker!",
 		"The drake happily wanders around while digesting its meal, almost like it is trying to show off the hanging gut you've given it.")
 	B = new /obj/belly/dragon/maw/heal(src)
+	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HEAL] = list(
 		"Gently, the dragon's hot, bumpy tongue cradles you, feeling like a slime-soaked memory-foam bed, twitching with life. The delicacy that the dragon holds you with is quite soothing.",
 		"The wide, slick throat infront of you constantly quivers and undulates. Every hot muggy exhale of the beast makes that throat spread, ropes of slime within it's hold shivering in the flow, inhales causing it to clench up somewhat.",
@@ -566,6 +573,7 @@ I think I covered everything.
 		"Saliva soaks the area all around you thickly, lubricating absolutely everything with the hot liquid. From time to time, the beast carefully shifts the rear of it's tongue to piston a cache of the goop down the hatch. The throat seen clenching tightly shut, the tongue's rear bobbing upwards, before down again - showing off a freshly slime-soaked entrance.")
 	gut2 = B
 	B = new /obj/belly/dragon/throat/heal(src)
+	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HEAL] = list(
 		"The tunnel of the gullet closely wraps around you, mummifying you in a hot writhing embrace of silky flesh. The walls are slick, soaked in a lubricating slime, and so very warm.",
 		"The walls around you pulse in time with the dragon's heartbeat, which itself pounds in your ears. Rushing wind of calm breaths fill the gaps, and distant squelches of slimy payloads shifted around by soft flesh echo down below.",
@@ -758,7 +766,7 @@ I think I covered everything.
 		var/atom/movable/AM = am
 		if(AM == src || AM.anchored)
 			continue
-		addtimer(CALLBACK(src, .proc/yeet, am), 1)
+		addtimer(CALLBACK(src, PROC_REF(yeet), am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 //Split repulse into two parts so I can recycle this later
@@ -791,7 +799,7 @@ I think I covered everything.
 
 	do_windup_animation(A, charge_warmup)
 	//callbacks are more reliable than byond's process scheduler
-	addtimer(CALLBACK(src, .proc/chargeend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup)
 
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
@@ -829,7 +837,7 @@ I think I covered everything.
 		set_AI_busy(TRUE)
 	flames = 1
 	build_icons()
-	addtimer(CALLBACK(src, .proc/firebreathend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)

@@ -3,6 +3,7 @@
 	seed_name = "potato"
 	display_name = "potatoes"
 	kitchen_tag = "potato"
+	mutants = list("voltato") //CHOMPEdit - Adding mutation strain for voltatoes.
 	chems = list("nutriment" = list(1,10), "potatojuice" = list(10,10))
 
 /datum/seed/potato/New()

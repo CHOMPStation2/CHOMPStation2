@@ -1,5 +1,5 @@
 /mob/observer/dead/verb/nifjoin()
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Join Into Soulcatcher"
 	set desc = "Select a player with a working NIF + Soulcatcher NIFSoft to join into it."
 
@@ -58,7 +58,7 @@
 		SC.catch_mob(src) //This will result in us being deleted so...
 
 /mob/observer/dead/verb/backup_ping()
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Notify Transcore"
 	set desc = "If your past-due backup notification was missed or ignored, you can use this to send a new one."
 
@@ -68,7 +68,7 @@
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(mind.name)
 	if(db)
 		var/datum/transhuman/mind_record/record = db.backed_up[src.mind.name]
-		if(!(record.dead_state == MR_DEAD))	
+		if(!(record.dead_state == MR_DEAD))
 			if((world.time - timeofdeath ) > 5 MINUTES)	//Allows notify transcore to be used if you have an entry but for some reason weren't marked as dead
 				record.dead_state = MR_DEAD				//Such as if you got scanned but didn't take an implant. It's a little funky, but I mean, you got scanned
 				db.notify(record)						//So you probably will want to let someone know if you die.
@@ -86,7 +86,7 @@
 		to_chat(src,"<span class='warning'>No backup record could be found, sorry.</span>")
 // CHOMPEdit: Revert Removal
 /mob/observer/dead/verb/backup_delay()
-	set category = "Ghost"
+	set category = "Ghost.Settings" //CHOMPEdit
 	set name = "Cancel Transcore Notification"
 	set desc = "You can use this to avoid automatic backup notification happening. Manual notification can still be used."
 
@@ -105,7 +105,7 @@
 		to_chat(src,"<span class='warning'>No backup record could be found, sorry.</span>")
 
 /mob/observer/dead/verb/findghostpod() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Find Ghost Pod"
 	set desc = "Find an active ghost pod"
 	set popup_menu = FALSE
@@ -115,7 +115,7 @@
 
 	var/input = tgui_input_list(usr, "Select a ghost pod:", "Ghost Jump", observe_list_format(active_ghost_pods))
 	if(!input)
-		to_chat(src, "No active ghost pods detected.")
+		to_chat(src, "<span class='filter_notice'>No active ghost pods detected.</span>")
 		return
 
 	var/target = observe_list_format(active_ghost_pods)[input]
@@ -129,10 +129,10 @@
 			forceMove(T)
 			stop_following()
 		else
-			to_chat(src, "This ghost pod is not located in the game world.")
-			
+			to_chat(src, "<span class='filter_notice'>This ghost pod is not located in the game world.</span>")
+
 /mob/observer/dead/verb/findautoresleever()
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Find Auto Resleever"
 	set desc = "Find a Auto Resleever"
 	set popup_menu = FALSE

@@ -1,5 +1,5 @@
 /proc/log_nsay(text, inside, mob/speaker)
-	if (config.log_say)
+	if (CONFIG_GET(flag/log_say)) // CHOMPEdit
 		WRITE_LOG(diary, "NSAY (NIF:[inside]): [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
@@ -7,7 +7,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "nsay", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -17,7 +17,7 @@
 	//CHOMPEdit End
 
 /proc/log_nme(text, inside, mob/speaker)
-	if (config.log_emote)
+	if (CONFIG_GET(flag/log_emote)) // CHOMPEdit
 		WRITE_LOG(diary, "NME (NIF:[inside]): [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
@@ -25,7 +25,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "nme", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())
@@ -35,7 +35,7 @@
 	//CHOMPEdit End
 
 /proc/log_subtle(text, mob/speaker)
-	if (config.log_emote)
+	if (CONFIG_GET(flag/log_emote)) // CHOMPEdit
 		WRITE_LOG(diary, "SUBTLE: [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
@@ -43,7 +43,7 @@
 			establish_db_connection()
 			if(!SSdbcore.IsConnected())
 				return null
-		var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_dialog (mid, time, ckey, mob, type, message) VALUES (null, NOW(), :sender_ckey, :sender_mob, :message_type, :message_content)", \
 			list("sender_ckey" = speaker.ckey, "sender_mob" = speaker.real_name, "message_type" = "subtle", "message_content" = text))
 		if(!query_insert.Execute())
 			log_debug("Error during logging: "+query_insert.ErrorMsg())

@@ -3,11 +3,12 @@
  */
 /obj/item/weapon/storage/toolbox
 	name = "toolbox"
-	desc = "Danger. Very robust."
+	desc = "A metal toolbox with remarkably robust construction."
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "red"
 	item_state_slots = list(slot_r_hand_str = "toolbox_red", slot_l_hand_str = "toolbox_red")
-	center_of_mass = list("x" = 16,"y" = 11)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 	force = 10
 	throwforce = 10
 	throw_speed = 1
@@ -97,9 +98,9 @@
 /obj/item/weapon/storage/toolbox/syndicate/powertools
 	starts_with = list(
 		/obj/item/clothing/gloves/yellow,
-		/obj/item/weapon/tool/screwdriver/power,
+		/obj/item/weapon/tool/transforming/powerdrill,
 		/obj/item/weapon/weldingtool/experimental,
-		/obj/item/weapon/tool/crowbar/power,
+		/obj/item/weapon/tool/transforming/jawsoflife,
 		/obj/item/device/multitool,
 		/obj/item/stack/cable_coil/random_belt,
 		/obj/item/device/analyzer

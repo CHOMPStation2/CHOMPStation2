@@ -4,6 +4,7 @@
 	real_name = "cockroach"
 	desc = "This station is just crawling with bugs."
 	tt_desc = "E Blattella germanica"
+	icon = 'icons/mob/animal_vr.dmi'
 	icon_state = "cockroach"
 	item_state = "cockroach"
 	icon_living = "cockroach"
@@ -12,8 +13,9 @@
 
 	maxHealth = 1
 	health = 1
+	nutrition = 20 //CHOMPEdit
 
-	movement_cooldown = 2.5
+	movement_cooldown = -1
 
 	mob_size = MOB_MINISCULE
 	pass_flags = PASSTABLE
@@ -51,6 +53,8 @@
 	if(ismob(AM))
 		if(isliving(AM))
 			var/mob/living/A = AM
+			if(A.is_incorporeal()) // CHOMPADD - Bad kin, no squishing the roach
+				return
 			if(A.mob_size > MOB_SMALL)
 				if(prob(squish_chance))
 					A.visible_message("<span class='notice'>[A] squashed [src].</span>", "<span class='notice'>You squashed [src].</span>")

@@ -1,7 +1,7 @@
 //TODO: Flash range does nothing currently
 
 /proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
-	var/multi_z_scalar = config.multi_z_explosion_scalar
+	var/multi_z_scalar = CONFIG_GET(number/multi_z_explosion_scalar) // CHOMPEdit
 	spawn(0)
 		var/start = world.timeofday
 		epicenter = get_turf(epicenter)
@@ -38,6 +38,9 @@
 				// If inside the blast radius + world.view - 2
 				if(dist <= round(max_range + world.view - 2, 1))
 					M.playsound_local(epicenter, get_sfx("explosion"), 100, 1, frequency, falloff = 5) // get_sfx() is so that everyone gets the same sound
+					var/mob/living/mL = M // CHOMPStation Edit: Ear Ringing/Deaf
+					if(isliving(mL)) // CHOMPStation Edit: Fix
+						mL.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 				else if(dist <= far_dist)
 					var/far_volume = CLAMP(far_dist, 30, 50) // Volume is based on explosion size and dist
 					far_volume += (dist <= far_dist * 0.5 ? 50 : 0) // add 50 volume if the mob is pretty close to the explosion
@@ -54,7 +57,7 @@
 							M << 'sound/effects/explosionfar.ogg'
 
 		if(adminlog)
-			message_admins("Explosion with [shaped ? "shaped" : "non-shaped"] size ([devastation_range], [heavy_impact_range], [light_impact_range]) in area [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[epicenter.x];Y=[epicenter.y];Z=[epicenter.z]'>JMP</a>)")
+			message_admins("Explosion with [shaped ? "shaped" : "non-shaped"] size ([devastation_range], [heavy_impact_range], [light_impact_range]) in area [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z]) (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[epicenter.x];Y=[epicenter.y];Z=[epicenter.z]'>JMP</a>)")
 			log_game("Explosion with [shaped ? "shaped" : "non-shaped"] size ([devastation_range], [heavy_impact_range], [light_impact_range]) in area [epicenter.loc.name] ")
 
 		var/approximate_intensity = (devastation_range * 3) + (heavy_impact_range * 2) + light_impact_range
@@ -71,23 +74,28 @@
 		var/x0 = epicenter.x
 		var/y0 = epicenter.y
 		var/z0 = epicenter.z
-		if(config.use_recursive_explosions)
+		if(CONFIG_GET(flag/use_recursive_explosions)) // CHOMPEdit
 			var/power = devastation_range * 2 + heavy_impact_range + light_impact_range //The ranges add up, ie light 14 includes both heavy 7 and devestation 3. So this calculation means devestation counts for 4, heavy for 2 and light for 1 power, giving us a cap of 27 power.
 			explosion_rec(epicenter, power, shaped)
 		else
 			for(var/turf/T in trange(max_range, epicenter))
 				var/dist = sqrt((T.x - x0)**2 + (T.y - y0)**2)
 
-				if(dist < devastation_range)		dist = 1
-				else if(dist < heavy_impact_range)	dist = 2
-				else if(dist < light_impact_range)	dist = 3
-				else								continue
+				if(dist < devastation_range)
+					dist = 1
+				else if(dist < heavy_impact_range)
+					dist = 2
+				else if(dist < light_impact_range)
+					dist = 3
+				else
+					continue
 
 				if(!T)
 					T = locate(x0,y0,z0)
 				for(var/atom_movable in T.contents)	//bypass type checking since only atom/movable can be contained by turfs anyway
 					var/atom/movable/AM = atom_movable
-					if(AM && AM.simulated)	AM.ex_act(dist)
+					if(AM && AM.simulated)
+						AM.ex_act(dist)
 
 				T.ex_act(dist)
 

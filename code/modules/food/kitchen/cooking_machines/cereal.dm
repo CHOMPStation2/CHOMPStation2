@@ -16,12 +16,12 @@
 
 /obj/machinery/appliance/mixer/cereal/Initialize()
 	. = ..()
-	
+
 	cerealmaker_loop = new(list(src), FALSE)
-	
+
 /obj/machinery/appliance/mixer/cereal/Destroy()
 	. = ..()
-	
+
 	QDEL_NULL(cerealmaker_loop)
 
 /*
@@ -84,3 +84,13 @@
 	result.color = result.filling_color
 	for (var/i in images)
 		result.overlays += images[i]
+
+
+/obj/machinery/appliance/mixer/cereal/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
+		return
+	if(default_deconstruction_crowbar(user, O))
+		return
+	if(default_part_replacement(user, O))
+		return
+	..()

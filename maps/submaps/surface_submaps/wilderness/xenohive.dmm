@@ -35,6 +35,7 @@
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
@@ -533,6 +534,7 @@
 /obj/effect/alien/weeds,
 /obj/structure/prop/transmitter,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/device/gps/internal/poi,
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "Vj" = (

@@ -18,7 +18,7 @@
 	feedback_add_details("admin_verb","DEVR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_prison(mob/M as mob in mob_list)
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Prison"
 	if(!holder)
 		return
@@ -39,14 +39,14 @@
 			prisoner.equip_to_slot_or_del(new /obj/item/clothing/under/color/prison(prisoner), slot_w_uniform)
 			prisoner.equip_to_slot_or_del(new /obj/item/clothing/shoes/orange(prisoner), slot_shoes)
 		spawn(50)
-			to_chat(M, "<font color='red'>You have been sent to the prison station!</font>")
+			to_chat(M, span_red("You have been sent to the prison station!"))
 		log_admin("[key_name(usr)] sent [key_name(M)] to the prison station.")
-		message_admins("<font color='blue'>[key_name_admin(usr)] sent [key_name_admin(M)] to the prison station.</font>", 1)
+		message_admins(span_blue("[key_name_admin(usr)] sent [key_name_admin(M)] to the prison station."), 1)
 		feedback_add_details("admin_verb","PRISON") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 //Allows staff to determine who the newer players are.
 /client/proc/cmd_check_new_players()
-	set category = "Admin"
+	set category = "Admin.Investigate" //CHOMPEdit
 	set name = "Check new Players"
 	if(!holder)
 		return
@@ -79,48 +79,55 @@
 		to_chat(src, "No matches for that age range found.")
 
 /client/proc/cmd_admin_subtle_message(mob/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Admin" //CHOMPEdit
 	set name = "Subtle Message"
 
 	if(!ismob(M))	return
 	if (!holder)
 		return
 
-	var/msg = sanitize(input(usr, "Message:", text("Subtle PM to [M.key]")) as text)
+	var/msg = tgui_input_text(usr, "Message:", text("Subtle PM to [M.key]"))
 
 	if (!msg)
 		return
+
+	if(!(msg[1] == "<" && msg[length(msg)] == ">")) //You can use HTML but only if the whole thing is HTML. Tries to prevent admin 'accidents'.
+		msg = sanitize(msg)
+
 	if(usr)
 		if (usr.client)
 			if(usr.client.holder)
 				to_chat(M, "<B>You hear a voice in your head...</B> <i>[msg]</i>")
 
 	log_admin("SubtlePM: [key_name(usr)] -> [key_name(M)] : [msg]")
-	msg = "<span class='adminnotice'><b> SubtleMessage: [key_name_admin(usr)] -> [key_name_admin(M)] :</b> [msg]</span>"
+	msg = "<span class='pm adminnotice'><b> SubtleMessage: [key_name_admin(usr)] -> [key_name_admin(M)] :</b> [msg]</span>"
 	message_admins(msg)
 	admin_ticket_log(M, msg)
 	feedback_add_details("admin_verb","SMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_world_narrate() // Allows administrators to fluff events a little easier -- TLE
-	set category = "Special Verbs"
+	set category = "Fun.Narrate" //CHOMPEdit
 	set name = "Global Narrate"
 
 	if (!holder)
 		return
 
-	var/msg = input(usr, "Message:", text("Enter the text you wish to appear to everyone:")) as text
-	if(!(msg[1] == "<" && msg[length(msg)] == ">")) //You can use HTML but only if the whole thing is HTML. Tries to prevent admin 'accidents'.
-		msg = sanitize(msg)
+	var/msg = tgui_input_text(usr, "Message:", text("Enter the text you wish to appear to everyone:"))
 
 	if (!msg)
 		return
+	if(!(msg[1] == "<" && msg[length(msg)] == ">")) //You can use HTML but only if the whole thing is HTML. Tries to prevent admin 'accidents'.
+		msg = sanitize(msg)
+	if (!msg)		// We check both before and after, just in case sanitization ended us up with empty message.
+		return
+
 	to_world("[msg]")
 	log_admin("GlobalNarrate: [key_name(usr)] : [msg]")
-	message_admins("<font color='blue'><B> GlobalNarrate: [key_name_admin(usr)] : [msg]<BR></B></font>", 1)
+	message_admins(span_blue("<B> GlobalNarrate: [key_name_admin(usr)] : [msg]<BR></B>"), 1)
 	feedback_add_details("admin_verb","GLN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_direct_narrate(var/mob/M)	// Targetted narrate -- TLE
-	set category = "Special Verbs"
+	set category = "Fun.Narrate" //CHOMPEdit
 	set name = "Direct Narrate"
 
 	if(!holder)
@@ -132,7 +139,7 @@
 	if(!M)
 		return
 
-	var/msg = input(usr, "Message:", text("Enter the text you wish to appear to your target:")) as text
+	var/msg = tgui_input_text(usr, "Message:", text("Enter the text you wish to appear to your target:"))
 	if(msg && !(msg[1] == "<" && msg[length(msg)] == ">")) //You can use HTML but only if the whole thing is HTML. Tries to prevent admin 'accidents'.
 		msg = sanitize(msg)
 
@@ -141,7 +148,7 @@
 
 	to_chat(M, msg)
 	log_admin("DirectNarrate: [key_name(usr)] to ([M.name]/[M.key]): [msg]")
-	msg = "<span class='adminnotice'><b> DirectNarrate: [key_name(usr)] to ([M.name]/[M.key]):</b> [msg]<BR></span>"
+	msg = "<span class='pm adminnotice'><b> DirectNarrate: [key_name(usr)] to ([M.name]/[M.key]):</b> [msg]<BR></span>"
 	message_admins(msg)
 	admin_ticket_log(M, msg)
 	feedback_add_details("admin_verb","DIRN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -154,7 +161,7 @@
 		return
 
 	M.status_flags ^= GODMODE
-	to_chat(usr, "<font color='blue'> Toggled [(M.status_flags & GODMODE) ? "ON" : "OFF"]</font>")
+	to_chat(usr, span_blue("Toggled [(M.status_flags & GODMODE) ? "ON" : "OFF"]"))
 
 	log_admin("[key_name(usr)] has toggled [key_name(M)]'s nodamage to [(M.status_flags & GODMODE) ? "On" : "Off"]")
 	var/msg = "[key_name_admin(usr)] has toggled [ADMIN_LOOKUPFLW(M)]'s nodamage to [(M.status_flags & GODMODE) ? "On" : "Off"]"
@@ -165,18 +172,18 @@
 
 /proc/cmd_admin_mute(mob/M as mob, mute_type, automute = 0)
 	if(automute)
-		if(!config.automute_on)
+		if(!CONFIG_GET(flag/automute_on)) // CHOMPEdit
 			return
 	else
 		if(!usr || !usr.client)
 			return
 		if(!usr.client.holder)
-			to_chat(usr, "<font color='red'>Error: cmd_admin_mute: You don't have permission to do this.</font>")
+			to_chat(usr, span_red("Error: cmd_admin_mute: You don't have permission to do this."))
 			return
 		if(!M.client)
-			to_chat(usr, "<font color='red'>Error: cmd_admin_mute: This mob doesn't have a client tied to it.</font>")
+			to_chat(usr, span_red("Error: cmd_admin_mute: This mob doesn't have a client tied to it."))
 		if(M.client.holder)
-			to_chat(usr, "<font color='red'>Error: cmd_admin_mute: You cannot mute an admin/mod.</font>")
+			to_chat(usr, span_red("Error: cmd_admin_mute: You cannot mute an admin/mod."))
 	if(!M.client)
 		return
 	if(M.client.holder)
@@ -188,6 +195,7 @@
 	switch(mute_type)
 		if(MUTE_IC)			mute_string = "IC (say and emote)"
 		if(MUTE_OOC)		mute_string = "OOC"
+		if(MUTE_LOOC)		mute_string = "LOOC"
 		if(MUTE_PRAY)		mute_string = "pray"
 		if(MUTE_ADMINHELP)	mute_string = "adminhelp, admin PM and ASAY"
 		if(MUTE_DEADCHAT)	mute_string = "deadchat and DSAY"
@@ -216,7 +224,7 @@
 	feedback_add_details("admin_verb","MUTE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_add_random_ai_law()
-	set category = "Fun"
+	set category = "Fun.Silicon" //CHOMPEdit
 	set name = "Add Random AI Law"
 
 	if(!holder)
@@ -265,7 +273,7 @@ Ccomp's first proc.
 
 
 /client/proc/allow_character_respawn()
-	set category = "Special Verbs"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Allow player to respawn"
 	set desc = "Let a player bypass the wait to respawn or allow them to re-enter their corpse."
 
@@ -302,7 +310,7 @@ Ccomp's first proc.
 
 
 /client/proc/toggle_antagHUD_use()
-	set category = "Server"
+	set category = "Server.Game" //CHOMPEdit
 	set name = "Toggle antagHUD usage"
 	set desc = "Toggles antagHUD usage for observers"
 
@@ -310,25 +318,25 @@ Ccomp's first proc.
 		return
 
 	var/action=""
-	if(config.antag_hud_allowed)
+	if(CONFIG_GET(flag/antag_hud_allowed)) // CHOMPEdit
 		for(var/mob/observer/dead/g in get_ghosts())
 			if(!g.client.holder)						//Remove the verb from non-admin ghosts
-				g.verbs -= /mob/observer/dead/verb/toggle_antagHUD
+				remove_verb(g, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit
 			if(g.antagHUD)
 				g.antagHUD = 0						// Disable it on those that have it enabled
 				g.has_enabled_antagHUD = 2				// We'll allow them to respawn
-				to_chat(g, "<font color='red'><B>The Administrator has disabled AntagHUD </B></font>")
-		config.antag_hud_allowed = 0
-		to_chat(src, "<font color='red'><B>AntagHUD usage has been disabled</B></font>")
+				to_chat(g, span_red("<B>The Administrator has disabled AntagHUD </B>"))
+		CONFIG_SET(flag/antag_hud_allowed, FALSE) // CHOMPEdit
+		to_chat(src, span_red("<B>AntagHUD usage has been disabled</B>"))
 		action = "disabled"
 	else
 		for(var/mob/observer/dead/g in get_ghosts())
 			if(!g.client.holder)						// Add the verb back for all non-admin ghosts
-				g.verbs += /mob/observer/dead/verb/toggle_antagHUD
-			to_chat(g, "<font color='blue'><B>The Administrator has enabled AntagHUD </B></font>")	// Notify all observers they can now use AntagHUD
-		config.antag_hud_allowed = 1
+				add_verb(g, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit
+			to_chat(g, span_blue("<B>The Administrator has enabled AntagHUD </B>"))	// Notify all observers they can now use AntagHUD
+		CONFIG_SET(flag/antag_hud_allowed, TRUE) // CHOMPEdit
 		action = "enabled"
-		to_chat(src, "<font color='blue'><B>AntagHUD usage has been enabled</B></font>")
+		to_chat(src, span_blue("<B>AntagHUD usage has been enabled</B>"))
 
 
 	log_admin("[key_name(usr)] has [action] antagHUD usage for observers")
@@ -337,7 +345,7 @@ Ccomp's first proc.
 
 
 /client/proc/toggle_antagHUD_restrictions()
-	set category = "Server"
+	set category = "Server.Game" //CHOMPEdit
 	set name = "Toggle antagHUD Restrictions"
 	set desc = "Restricts players that have used antagHUD from being able to join this round."
 
@@ -345,21 +353,21 @@ Ccomp's first proc.
 		return
 
 	var/action=""
-	if(config.antag_hud_restricted)
+	if(CONFIG_GET(flag/antag_hud_restricted)) // CHOMPEdit
 		for(var/mob/observer/dead/g in get_ghosts())
-			to_chat(g, "<font color='blue'><B>The administrator has lifted restrictions on joining the round if you use AntagHUD</B></font>")
+			to_chat(g, span_blue("<B>The administrator has lifted restrictions on joining the round if you use AntagHUD</B>"))
 		action = "lifted restrictions"
-		config.antag_hud_restricted = 0
-		to_chat(src, "<font color='blue'><B>AntagHUD restrictions have been lifted</B></font>")
+		CONFIG_SET(flag/antag_hud_restricted, FALSE) // CHOMPEdit
+		to_chat(src, span_blue("<B>AntagHUD restrictions have been lifted</B>"))
 	else
 		for(var/mob/observer/dead/g in get_ghosts())
-			to_chat(g, "<font color='red'><B>The administrator has placed restrictions on joining the round if you use AntagHUD</B></font>")
-			to_chat(g, "<font color='red'><B>Your AntagHUD has been disabled, you may choose to re-enabled it but will be under restrictions </B></font>")
+			to_chat(g, span_red("<B>The administrator has placed restrictions on joining the round if you use AntagHUD</B>"))
+			to_chat(g, span_red("<B>Your AntagHUD has been disabled, you may choose to re-enabled it but will be under restrictions </B>"))
 			g.antagHUD = 0
 			g.has_enabled_antagHUD = 0
 		action = "placed restrictions"
-		config.antag_hud_restricted = 1
-		to_chat(src, "<font color='red'><B>AntagHUD restrictions have been enabled</B></font>")
+		CONFIG_SET(flag/antag_hud_restricted, TRUE) // CHOMPEdit
+		to_chat(src, span_red("<B>AntagHUD restrictions have been enabled</B>"))
 
 	log_admin("[key_name(usr)] has [action] on joining the round if they use AntagHUD")
 	message_admins("Admin [key_name_admin(usr)] has [action] on joining the round if they use AntagHUD", 1)
@@ -370,7 +378,7 @@ Works kind of like entering the game with a new character. Character receives a 
 Traitors and the like can also be revived with the previous role mostly intact.
 /N */
 /client/proc/respawn_character()
-	set category = "Special Verbs"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Spawn Character"
 	set desc = "(Re)Spawn a client's loaded character."
 
@@ -465,7 +473,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	switch(location)
 		if("Right Here") //Spawn them on your turf
 			spawnloc = get_turf(src.mob)
-			showy = tgui_alert(src,"Showy entrance?", "Showy", list("No", "Telesparks", "Drop Pod", "Cancel"))
+			showy = tgui_input_list(src,"Showy entrance?", "Showy", list("No", "Telesparks", "Drop Pod", "Fall", "Cancel"))
 			if(showy == "Cancel")
 				return
 			if(showy == "Drop Pod")
@@ -529,9 +537,10 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	//If desired, apply equipment.
 	if(equipment)
 		if(charjob)
-			job_master.EquipRank(new_character, charjob, 1)
-			new_character.mind.assigned_role = charjob
-			new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
+			job_master.EquipRank(new_character, charjob, 1, announce)
+			if(new_character.mind)
+				new_character.mind.assigned_role = charjob
+				new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
 		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
 
 	//If desired, add records.
@@ -550,11 +559,11 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	log_admin("[admin] has spawned [player_key]'s character [new_character.real_name].")
 	message_admins("[admin] has spawned [player_key]'s character [new_character.real_name].", 1)
 
-	
+
 
 	feedback_add_details("admin_verb","RSPCH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	
-	// Drop pods
+
+	// Drop pods and fall
 	if(showy == "Polite")
 		var/turf/T = get_turf(new_character)
 		new /obj/structure/drop_pod/polite(T, new_character)
@@ -563,19 +572,30 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		var/turf/T = get_turf(new_character)
 		new /obj/structure/drop_pod(T, new_character)
 		to_chat(new_character, "Please wait for your arrival.")
-	else
+	else if(showy == "Fall")
+		spawn(1)
+			var/initial_x = new_character.pixel_x
+			var/initial_y = new_character.pixel_y
+			new_character.plane = 1
+			new_character.pixel_x = rand(-150, 150)
+			new_character.pixel_y = 500 // When you think that pixel_z is height but you are wrong
+			new_character.density = FALSE
+			new_character.opacity = FALSE
+			animate(new_character, pixel_y = initial_y, pixel_x = initial_x , time = 7)
+			spawn(7)
+				new_character.end_fall()
 		to_chat(new_character, "You have been fully spawned. Enjoy the game.")
 
 	return new_character
 
 /client/proc/cmd_admin_add_freeform_ai_law()
-	set category = "Fun"
+	set category = "Fun.Silicon" //CHOMPEdit
 	set name = "Add Custom AI law"
 
 	if(!holder)
 		return
 
-	var/input = sanitize(input(usr, "Please enter anything you want the AI to do. Anything. Serious.", "What?", "") as text|null)
+	var/input = sanitize(tgui_input_text(usr, "Please enter anything you want the AI to do. Anything. Serious.", "What?", ""))
 	if(!input)
 		return
 	for(var/mob/living/silicon/ai/M in mob_list)
@@ -586,7 +606,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		else
 			M.add_ion_law(input)
 			for(var/mob/living/silicon/ai/O in mob_list)
-				to_chat(O,input + "<font color='red'>... LAWS UPDATED!</font>")
+				to_chat(O,input + span_red("... LAWS UPDATED!"))
 				O.show_laws()
 
 	log_admin("Admin [key_name(usr)] has added a new AI law - [input]")
@@ -598,7 +618,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","IONC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_rejuvenate(mob/living/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Rejuvenate"
 
 	if(!holder)
@@ -609,7 +629,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!istype(M))
 		tgui_alert_async(usr, "Cannot revive a ghost")
 		return
-	if(config.allow_admin_rev)
+	if(CONFIG_GET(flag/allow_admin_rev)) // CHOMPEdit
 		M.revive()
 
 		log_admin("[key_name(usr)] healed / revived [key_name(M)]")
@@ -621,14 +641,14 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","REJU") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_create_centcom_report()
-	set category = "Special Verbs"
+	set category = "Debug.Game" //CHOMPEdit
 	set name = "Create Command Report"
 
 	if(!holder)
 		return
 
-	var/input = sanitize(input(usr, "Please enter anything you want. Anything. Serious.", "What?", "") as message|null, extra = 0)
-	var/customname = sanitizeSafe(input(usr, "Pick a title for the report.", "Title") as text|null)
+	var/input = sanitize(tgui_input_text(usr, "Please enter anything you want. Anything. Serious.", "What?", "", multiline = TRUE, prevent_enter = TRUE), extra = 0)
+	var/customname = sanitizeSafe(tgui_input_text(usr, "Pick a title for the report.", "Title"))
 	if(!input)
 		return
 	if(!customname)
@@ -641,7 +661,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		if("Yes")
 			command_announcement.Announce(input, customname, new_sound = 'sound/AI/commandreport.ogg', msg_sanitized = 1);
 		if("No")
-			to_world("<font color='red'>New [using_map.company_name] Update available at all communication consoles.</font>")
+			to_world(span_red("New [using_map.company_name] Update available at all communication consoles."))
 			world << sound('sound/AI/commandreport.ogg')
 
 	log_admin("[key_name(src)] has created a command report: [input]")
@@ -649,7 +669,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","CCR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_delete(atom/O as obj|mob|turf in _validate_atom(O)) // I don't understand precisely how this fixes the string matching against a substring, but it does - Ater
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Delete"
 
 	if (!holder)
@@ -658,7 +678,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	admin_delete(O)
 
 /client/proc/cmd_admin_list_open_jobs()
-	set category = "Admin"
+	set category = "Admin.Investigate" //CHOMPEdit
 	set name = "List free slots"
 
 	if (!holder)
@@ -675,13 +695,13 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	if(!check_rights(R_DEBUG|R_FUN))	return //VOREStation Edit
 
-	var/devastation = input(usr, "Range of total devastation. -1 to none", text("Input"))  as num|null
+	var/devastation = tgui_input_number(usr, "Range of total devastation. -1 to none", text("Input"), min_value=-1)
 	if(devastation == null) return
-	var/heavy = input(usr, "Range of heavy impact. -1 to none", text("Input"))  as num|null
+	var/heavy = tgui_input_number(usr, "Range of heavy impact. -1 to none", text("Input"), min_value=-1)
 	if(heavy == null) return
-	var/light = input(usr, "Range of light impact. -1 to none", text("Input"))  as num|null
+	var/light = tgui_input_number(usr, "Range of light impact. -1 to none", text("Input"), min_value=-1)
 	if(light == null) return
-	var/flash = input(usr, "Range of flash. -1 to none", text("Input"))  as num|null
+	var/flash = tgui_input_number(usr, "Range of flash. -1 to none", text("Input"), min_value=-1)
 	if(flash == null) return
 
 	if ((devastation != -1) || (heavy != -1) || (light != -1) || (flash != -1))
@@ -703,13 +723,13 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	if(!check_rights(R_DEBUG|R_FUN))	return //VOREStation Edit
 
-	var/heavy = input(usr, "Range of heavy pulse.", text("Input"))  as num|null
+	var/heavy = tgui_input_number(usr, "Range of heavy pulse.", text("Input"))
 	if(heavy == null) return
-	var/med = input(usr, "Range of medium pulse.", text("Input"))  as num|null
+	var/med = tgui_input_number(usr, "Range of medium pulse.", text("Input"))
 	if(med == null) return
-	var/light = input(usr, "Range of light pulse.", text("Input"))  as num|null
+	var/light = tgui_input_number(usr, "Range of light pulse.", text("Input"))
 	if(light == null) return
-	var/long = input(usr, "Range of long pulse.", text("Input"))  as num|null
+	var/long = tgui_input_number(usr, "Range of long pulse.", text("Input"))
 	if(long == null) return
 
 	if (heavy || med || light || long)
@@ -746,7 +766,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 /client/proc/cmd_admin_gib_self()
 	set name = "Gibself"
-	set category = "Fun"
+	set category = "Fun.Do Not" //CHOMPEdit
 
 	if(!holder)
 		return
@@ -759,7 +779,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			mob.gib()
 
 		log_admin("[key_name(usr)] used gibself.")
-		message_admins("<font color='blue'>[key_name_admin(usr)] used gibself.</font>", 1)
+		message_admins(span_blue("[key_name_admin(usr)] used gibself."), 1)
 		feedback_add_details("admin_verb","GIBS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 /*
 /client/proc/cmd_manual_ban()
@@ -824,7 +844,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	return
 
 /client/proc/cmd_admin_check_contents(mob/living/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Admin.Investigate" //CHOMPEdit
 	set name = "Check Contents"
 	set popup_menu = FALSE //VOREStation Edit - Declutter.
 
@@ -868,7 +888,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 */
 
 /client/proc/toggle_view_range()
-	set category = "Special Verbs"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Change View Range"
 	set desc = "switches between 1x and custom views"
 
@@ -888,7 +908,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","CVRA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/admin_call_shuttle()
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 	set name = "Call Shuttle"
 
 	if ((!( ticker ) || !emergency_shuttle.location()))
@@ -916,14 +936,14 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	feedback_add_details("admin_verb","CSHUT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_admin("[key_name(usr)] admin-called the emergency shuttle.")
-	message_admins("<font color='blue'>[key_name_admin(usr)] admin-called the emergency shuttle.</font>", 1)
+	message_admins(span_blue("[key_name_admin(usr)] admin-called the emergency shuttle."), 1)
 	return
 
 /client/proc/admin_cancel_shuttle()
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 	set name = "Cancel Shuttle"
 
-	if(!check_rights(R_ADMIN))	return //VOREStation Edit
+	if(!check_rights(R_ADMIN|R_FUN))	return // CHOMPstation edit: Lets anyone cancel the shuttle.
 
 	if(tgui_alert(src, "You sure?", "Confirm", list("Yes", "No")) != "Yes") return
 
@@ -933,12 +953,12 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	emergency_shuttle.recall()
 	feedback_add_details("admin_verb","CCSHUT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_admin("[key_name(usr)] admin-recalled the emergency shuttle.")
-	message_admins("<font color='blue'>[key_name_admin(usr)] admin-recalled the emergency shuttle.</font>", 1)
+	message_admins(span_blue("[key_name_admin(usr)] admin-recalled the emergency shuttle."), 1)
 
 	return
 
 /client/proc/admin_deny_shuttle()
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 	set name = "Toggle Deny Shuttle"
 
 	if (!ticker)
@@ -955,14 +975,14 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	set category = "Special Verbs"
 	set name = "Attack Log"
 
-	to_chat(usr, "<font color='red'><b>Attack Log for [mob]</b></font>")
+	to_chat(usr, span_red("<b>Attack Log for [mob]</b>"))
 	for(var/t in M.attack_log)
 		to_chat(usr,t)
 	feedback_add_details("admin_verb","ATTL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
 /client/proc/everyone_random()
-	set category = "Fun"
+	set category = "Fun.Do Not" //CHOMPEdit
 	set name = "Make Everyone Random"
 	set desc = "Make everyone have a random appearance. You can only use this before rounds!"
 
@@ -987,7 +1007,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	message_admins("Admin [key_name_admin(usr)] has forced the players to have random appearances.", 1)
 
 	if(notifyplayers == "Yes")
-		to_world("<font color='blue'><b>Admin [usr.key] has forced the players to have completely random identities!</font></b>")
+		to_world(span_blue("<b>Admin [usr.key] has forced the players to have completely random identities!</b>"))
 
 	to_chat(usr, "<i>Remember: you can always disable the randomness by using the verb again, assuming the round hasn't started yet</i>.")
 
@@ -996,25 +1016,25 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 
 /client/proc/toggle_random_events()
-	set category = "Server"
+	set category = "Server.Game" //CHOMPEdit
 	set name = "Toggle random events on/off"
 	set desc = "Toggles random events such as meteors, black holes, blob (but not space dust) on/off"
 
 	if(!check_rights(R_SERVER))	return //VOREStation Edit
 
-	if(!config.allow_random_events)
-		config.allow_random_events = 1
+	if(!CONFIG_GET(flag/allow_random_events)) // CHOMPEdit
+		CONFIG_SET(flag/allow_random_events, TRUE) // CHOMPEdit
 		to_chat(usr, "Random events enabled")
 		message_admins("Admin [key_name_admin(usr)] has enabled random events.", 1)
 	else
-		config.allow_random_events = 0
+		CONFIG_SET(flag/allow_random_events, FALSE) // CHOMPEdit
 		to_chat(usr, "Random events disabled")
 		message_admins("Admin [key_name_admin(usr)] has disabled random events.", 1)
 	feedback_add_details("admin_verb","TRE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/despawn_player(var/mob/M in living_mob_list)
 	set name = "Cryo Player"
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	set desc = "Removes a player from the round as if they'd cryo'd."
 	set popup_menu = FALSE
 
@@ -1077,8 +1097,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 /client/proc/cmd_admin_droppod_spawn(var/object as text)
 	set name = "Drop Pod Atom"
 	set desc = "Spawn a new atom/movable in a drop pod where you are."
-	set category = "Fun"
-	
+	set category = "Fun.Drop Pod" //CHOMPEdit
+
 	if(!check_rights(R_SPAWN))
 		return
 
@@ -1099,7 +1119,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		chosen = tgui_input_list(usr, "Select a movable type:", "Spawn in Drop Pod", matches)
 		if(!chosen)
 			return
-	
+
 	var/podtype = tgui_alert(src,"Destructive drop pods cause damage in a 3x3 and may break turfs. Polite drop pods lightly damage the turfs but won't break through.", "Drop Pod", list("Polite", "Destructive", "Cancel"))
 	if(podtype == "Cancel")
 		return
@@ -1119,15 +1139,15 @@ Traitors and the like can also be revived with the previous role mostly intact.
 /client/proc/cmd_admin_droppod_deploy()
 	set name = "Drop Pod Deploy"
 	set desc = "Drop an existing mob where you are in a drop pod."
-	set category = "Fun"
-	
+	set category = "Fun.Drop Pod" //CHOMPEdit
+
 	if(!check_rights(R_SPAWN))
 		return
 
 	var/mob/living/L = tgui_input_list(usr, "Select the mob to drop:", "Mob Picker", living_mob_list)
 	if(!L)
 		return
-	
+
 	var/podtype = tgui_alert(src,"Destructive drop pods cause damage in a 3x3 and may break turfs. Polite drop pods lightly damage the turfs but won't break through.", "Drop Pod", list("Polite", "Destructive", "Cancel"))
 	if(podtype == "Cancel")
 		return

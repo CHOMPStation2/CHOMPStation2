@@ -21,9 +21,9 @@ var/jobban_keylist[0]		//to store the keys & ranks
 		*/
 
 		if (guest_jobbans(rank))
-			if(config.guest_jobban && IsGuestKey(M.key))
+			if(CONFIG_GET(flag/guest_jobban) && IsGuestKey(M.key)) // CHOMPEdit
 				return "Guest Job-ban"
-			if(config.usewhitelist && !check_whitelist(M))
+			if(CONFIG_GET(flag/usewhitelist) && !check_whitelist(M)) // CHOMPEdit
 				return "Whitelisted Job"
 
 		return ckey_is_jobbanned(M.ckey, rank)
@@ -59,7 +59,7 @@ DEBUG
 	return 1
 
 /proc/jobban_loadbanfile()
-	if(config.ban_legacy_system)
+	if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
 		var/savefile/S=new("data/job_full.ban")
 		S["keys[0]"] >> jobban_keylist
 		log_admin("Loading jobban_rank")
@@ -72,12 +72,12 @@ DEBUG
 		if(!establish_db_connection())
 			error("Database connection failed. Reverting to the legacy ban system.")
 			log_misc("Database connection failed. Reverting to the legacy ban system.")
-			config.ban_legacy_system = 1
+			CONFIG_SET(flag/ban_legacy_system, TRUE) // CHOMPedit
 			jobban_loadbanfile()
 			return
 
 		//Job permabans
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)") //CHOMPEdit TGSQL
 		query.Execute()
 
 		while(query.NextRow())
@@ -87,7 +87,7 @@ DEBUG
 			jobban_keylist.Add("[ckey] - [job]")
 		qdel(query) //CHOMPEdit TGSQL
 		//Job tempbans
-		var/DBQuery/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()") //CHOMPEdit TGSQL
+		var/datum/db_query/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()") //CHOMPEdit TGSQL
 		query1.Execute()
 
 		while(query1.NextRow())

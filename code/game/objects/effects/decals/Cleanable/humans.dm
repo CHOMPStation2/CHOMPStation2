@@ -49,10 +49,10 @@ var/global/list/image/splatter_cache=list()
 					if (B.blood_DNA)
 						blood_DNA |= B.blood_DNA.Copy()
 					qdel(B)
-	addtimer(CALLBACK(src, .proc/dry), DRYING_TIME * (amount+1))
+	addtimer(CALLBACK(src, PROC_REF(dry)), DRYING_TIME * (amount+1))
 
 /obj/effect/decal/cleanable/blood/update_icon()
-	if(basecolor == "rainbow") basecolor = "#[get_random_colour(1)]"
+	if(basecolor == "rainbow") basecolor = get_random_colour(1)
 	color = basecolor
 
 	if(basecolor == SYNTH_BLOOD_COLOUR)
@@ -128,7 +128,7 @@ var/global/list/image/splatter_cache=list()
 		user.bloody_hands += taken
 		user.hand_blood_color = basecolor
 		user.update_inv_gloves(1)
-		user.verbs += /mob/living/carbon/human/proc/bloody_doodle
+		add_verb(user, /mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit
 
 /obj/effect/decal/cleanable/blood/splatter
         random_icon_states = list("mgibbl1", "mgibbl2", "mgibbl3", "mgibbl4", "mgibbl5")
@@ -184,15 +184,16 @@ var/global/list/image/splatter_cache=list()
 
 	var/image/giblets = new(base_icon, "[icon_state]_flesh", dir)
 	if(!fleshcolor || fleshcolor == "rainbow")
-		fleshcolor = "#[get_random_colour(1)]"
+		fleshcolor = get_random_colour(1)
 	giblets.color = fleshcolor
 
 	var/icon/blood = new(base_icon,"[icon_state]",dir)
-	if(basecolor == "rainbow") basecolor = "#[get_random_colour(1)]"
+	if(basecolor == "rainbow") basecolor = get_random_colour(1)
 	blood.Blend(basecolor,ICON_MULTIPLY)
 
 	icon = blood
 	cut_overlays()
+	add_overlay(janhud)
 	add_overlay(giblets)
 
 /obj/effect/decal/cleanable/blood/gibs/up
@@ -237,6 +238,7 @@ var/global/list/image/splatter_cache=list()
 
 	var/list/datum/disease2/disease/virus2 = list()
 	var/dry = 0 // Keeps the lag down
+	var/sampled = FALSE
 
 /obj/effect/decal/cleanable/mucus/Initialize()
 	. = ..()

@@ -169,7 +169,7 @@
 /obj/machinery/sleeper/attack_hand(var/mob/user)
 	if(!controls_inside)
 		return FALSE
-	
+
 	if(user == occupant)
 		tgui_interact(user)
 
@@ -190,7 +190,7 @@
 		occupantData["stat"] = occupant.stat
 		occupantData["health"] = occupant.health
 		occupantData["maxHealth"] = occupant.maxHealth
-		occupantData["minHealth"] = config.health_threshold_dead
+		occupantData["minHealth"] = CONFIG_GET(number/health_threshold_dead) // CHOMPEdit
 		occupantData["bruteLoss"] = occupant.getBruteLoss()
 		occupantData["oxyLoss"] = occupant.getOxyLoss()
 		occupantData["toxLoss"] = occupant.getToxLoss()
@@ -423,6 +423,8 @@
 
 /obj/machinery/sleeper/relaymove(var/mob/user)
 	..()
+	if(user.incapacitated())
+		return
 	go_out()
 
 /obj/machinery/sleeper/emp_act(var/severity)
@@ -479,10 +481,12 @@
 		M.loc = src
 		update_use_power(USE_POWER_ACTIVE)
 		occupant = M
+		occupant.cozyloop.start() // CHOMPStation Add: Cozy Music
 		update_icon()
 
 /obj/machinery/sleeper/proc/go_out()
 	if(!occupant || occupant.loc != src)
+		occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
 		occupant = null // JUST IN CASE
 		return
 	if(occupant.client)
@@ -490,6 +494,7 @@
 		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.Stasis(0)
 	occupant.loc = src.loc
+	occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
 	occupant = null
 	for(var/atom/movable/A in src) // In case an object was dropped inside or something
 		if(A == beaker || A == circuit)

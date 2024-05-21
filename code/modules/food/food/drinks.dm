@@ -13,6 +13,16 @@
 	possible_transfer_amounts = list(5,10,15,25,30)
 	volume = 50
 	var/trash = null
+	var/cant_open = 0
+	var/cant_chance = 0
+
+	/// Yims
+	food_can_insert_micro = TRUE
+
+/obj/item/weapon/reagent_containers/food/drinks/Initialize()
+	. = ..()
+	if (prob(cant_chance))
+		cant_open = 1
 
 /obj/item/weapon/reagent_containers/food/drinks/on_reagent_change()
 	if (reagents.reagent_list.len > 0)
@@ -23,18 +33,91 @@
 			price_tag = null
 	return
 
-/obj/item/weapon/reagent_containers/food/drinks/proc/On_Consume(var/mob/M)
-	if(!usr)
-		usr = M
-	if(!reagents.total_volume)
+/obj/item/weapon/reagent_containers/food/drinks/Destroy()
+	if(food_inserted_micros)
+		for(var/mob/M in food_inserted_micros)
+			M.dropInto(loc)
+			food_inserted_micros -= M
+	. = ..()
+
+	return
+
+/obj/item/weapon/reagent_containers/food/drinks/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(food_can_insert_micro && istype(W, /obj/item/weapon/holder))
+		if(!(istype(W, /obj/item/weapon/holder/micro) || istype(W, /obj/item/weapon/holder/mouse)))
+			. = ..()
+			return
+
+		if(!is_open_container())
+			to_chat(user, "<span class='warning'>You cannot drop anything into \the [src] without opening it first.</span>")
+			return
+
+		var/obj/item/weapon/holder/H = W
+
+		if(!food_inserted_micros)
+			food_inserted_micros = list()
+
+		var/mob/living/M = H.held_mob
+
+		M.forceMove(src)
+		H.held_mob = null
+		user.drop_from_inventory(H)
+		qdel(H)
+
+		food_inserted_micros += M
+
+		to_chat(user, "<span class='warning'>You drop [M] into \the [src].</span>")
+		to_chat(M, "<span class='warning'>[user] drops you into \the [src].</span>")
+		return
+
+	return ..()
+
+/obj/item/weapon/reagent_containers/food/drinks/MouseDrop_T(mob/living/M, mob/user)
+	if(!user.stat && istype(M) && (M == user) && Adjacent(M) && (M.get_effective_size(TRUE) <= 0.50) && food_can_insert_micro)
+		if(!food_inserted_micros)
+			food_inserted_micros = list()
+
+		M.forceMove(src)
+
+		food_inserted_micros += M
+
+		to_chat(user, "<span class='warning'>You climb into \the [src].</span>")
+		return
+
+	return ..()
+
+/obj/item/weapon/reagent_containers/food/drinks/proc/On_Consume(var/mob/living/M, var/mob/user, var/changed = FALSE)
+	if(!user)
+		user = M
+
+	if(food_inserted_micros && food_inserted_micros.len)
+		if(M.can_be_drop_pred && M.food_vore && M.vore_selected)
+			for(var/mob/living/F in food_inserted_micros)
+				if(!F.can_be_drop_prey || !F.food_vore)
+					continue
+
+				var/do_nom = FALSE
+
+				if(!reagents.total_volume)
+					do_nom = TRUE
+				else
+					var/nom_chance = (1 - (reagents.total_volume / volume))*100
+					if(prob(nom_chance))
+						do_nom = TRUE
+
+				if(do_nom)
+					F.forceMove(M.vore_selected)
+					food_inserted_micros -= F
+
+	if(!reagents.total_volume && changed)
 		M.visible_message("<span class='notice'>[M] finishes drinking \the [src].</span>","<span class='notice'>You finish drinking \the [src].</span>")
 		if(trash)
-			usr.drop_from_inventory(src)	//so icons update :[
+			user.drop_from_inventory(src)	//so icons update :[
 			if(ispath(trash,/obj/item))
-				var/obj/item/TrashItem = new trash(usr)
-				usr.put_in_hands(TrashItem)
+				var/obj/item/TrashItem = new trash(user)
+				user.put_in_hands(TrashItem)
 			else if(istype(trash,/obj/item))
-				usr.put_in_hands(trash)
+				user.put_in_hands(trash)
 			qdel(src)
 	return
 
@@ -46,10 +129,14 @@
 		open(user)
 
 /obj/item/weapon/reagent_containers/food/drinks/proc/open(mob/user)
-	playsound(src,"canopen", rand(10,50), 1)
-	GLOB.cans_opened_roundstat++
-	to_chat(user, "<span class='notice'>You open [src] with an audible pop!</span>")
-	flags |= OPENCONTAINER
+	if(!cant_open)
+		playsound(src,"canopen", rand(10,50), 1)
+		GLOB.cans_opened_roundstat++
+		to_chat(user, "<span class='notice'>You open [src] with an audible pop!</span>")
+		flags |= OPENCONTAINER
+	else
+		to_chat(user, "<span class='warning'>...wait a second, this one doesn't have a ring pull. It's not a <b>can</b>, it's a <b>can't!</b></span>")
+		name = "\improper can't of [initial(name)]"	//don't update the name until they try to open it
 
 /obj/item/weapon/reagent_containers/food/drinks/attack(mob/M as mob, mob/user as mob, def_zone)
 	if(force && !(flags & NOBLUDGEON) && user.a_intent == I_HURT)
@@ -73,8 +160,11 @@
 	if(!is_open_container())
 		to_chat(user, "<span class='notice'>You need to open [src]!</span>")
 		return 1
-	On_Consume(target,user)
-	return ..()
+	var/original_volume = reagents.total_volume
+	.=..()
+	var/changed = !(reagents.total_volume == original_volume)
+	On_Consume(target,user,changed)
+	return
 
 /obj/item/weapon/reagent_containers/food/drinks/standard_dispenser_refill(var/mob/user, var/obj/structure/reagent_dispensers/target)
 	if(!is_open_container())
@@ -97,6 +187,10 @@
 /obj/item/weapon/reagent_containers/food/drinks/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
+		if(cant_open)
+			. += "<span class='warning'>It doesn't have a ring pull!</span>"
+		if(food_inserted_micros && food_inserted_micros.len)
+			. += "<span class='notice'>It has [english_list(food_inserted_micros)] [!reagents?.total_volume ? "sitting" : "floating"] in it.</span>"
 		if(!reagents?.total_volume)
 			. += "<span class='notice'>It is empty!</span>"
 		else if (reagents.total_volume <= volume * 0.25)
@@ -140,7 +234,8 @@
 	description_fluff = "A product of NanoPastures. Who would have thought that cows would thrive in zero-G?"
 	icon_state = "milk"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=9)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 9 //CHOMPEdit
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
@@ -154,7 +249,8 @@
 	description_fluff = "A product of NanoPastures. For those skeptical that cows can thrive in zero-G."
 	icon_state = "soymilk"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=9)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 9 //CHOMPEdit
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
@@ -169,7 +265,8 @@
 	volume = 30
 	icon_state = "mini-milk"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=9)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 9 //CHOMPEdit
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
@@ -184,7 +281,8 @@
 	volume = 30
 	icon_state = "mini-milk_choco"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=9)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 9 //CHOMPEdit
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
@@ -198,7 +296,8 @@
 	description_fluff = "Fresh coffee is almost unheard of outside of planets and stations where it is grown. Robust Coffee proudly advertises the six separate times it is freeze-dried during the production process of every cup of instant."
 	icon_state = "coffee"
 	trash = /obj/item/trash/coffee
-	center_of_mass = list("x"=15, "y"=10)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -213,7 +312,8 @@
 	icon_state = "chai_vended"
 	item_state = "coffee"
 	trash = /obj/item/trash/coffee
-	center_of_mass = list("x"=16, "y"=14)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 14 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -228,7 +328,8 @@
 	icon_state = "chai_vended"
 	item_state = "coffee"
 	trash = /obj/item/trash/coffee
-	center_of_mass = list("x"=16, "y"=14)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 14 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -240,7 +341,8 @@
 	name = "cup of ice"
 	desc = "Careful, cold ice, do not chew."
 	icon_state = "ice"
-	center_of_mass = list("x"=15, "y"=10)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 /obj/item/weapon/reagent_containers/food/drinks/ice/Initialize()
 	. = ..()
 	reagents.add_reagent("ice", 30)
@@ -252,7 +354,8 @@
 	icon_state = "coffee"
 	item_state = "hot_choc"
 	trash = /obj/item/trash/coffee
-	center_of_mass = list("x"=15, "y"=13)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 13 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -267,7 +370,8 @@
 	icon_state = "greentea_vended"
 	item_state = "coffee"
 	trash = /obj/item/trash/coffee
-	center_of_mass = list("x"=16, "y"=14)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 14 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -282,7 +386,8 @@
 	icon_state = "chai_vended"
 	item_state = "coffee"
 	trash = /obj/item/trash/coffee
-	center_of_mass = list("x"=16, "y"=14)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 14 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -297,7 +402,8 @@
 	icon_state = "coffee"
 	item_state = "coffee"
 	trash = /obj/item/trash/coffee
-	center_of_mass = list("x"=16, "y"=14)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 14 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -311,7 +417,8 @@
 	description_fluff = "Konohagakure Brand Ramen has been an instant meal staple for centuries. Cheap, quick and available in over two hundred varieties - though most taste like artifical chicken."
 	icon_state = "ramen"
 	trash = /obj/item/trash/ramen
-	center_of_mass = list("x"=16, "y"=11)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -325,7 +432,8 @@
 	icon_state = "water_cup_e"
 	possible_transfer_amounts = null
 	volume = 10
-	center_of_mass = list("x"=16, "y"=12)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 12 //CHOMPEdit
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
@@ -362,7 +470,8 @@
 	icon_state = "shaker"
 	amount_per_transfer_from_this = 10
 	volume = 120
-	center_of_mass = list("x"=17, "y"=10)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/shaker/on_reagent_change()
 	..()
@@ -374,7 +483,8 @@
 	item_state = "teapot"
 	amount_per_transfer_from_this = 10
 	volume = 120
-	center_of_mass = list("x"=17, "y"=7)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/teapot/on_reagent_change()
 	..()
@@ -384,7 +494,8 @@
 	desc = "A metal flask belonging to the Site Manager"
 	icon_state = "flask"
 	volume = 60
-	center_of_mass = list("x"=17, "y"=7)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/on_reagent_change()
 	..()
@@ -404,19 +515,21 @@
 	desc = "A metal flask with a leather band and golden badge belonging to the detective."
 	icon_state = "detflask"
 	volume = 60
-	center_of_mass = list("x"=17, "y"=8)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/barflask
 	name = "flask"
 	desc = "For those who can't be bothered to hang out at the bar to drink."
 	icon_state = "barflask"
 	volume = 60
-	center_of_mass = list("x"=17, "y"=7)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask
 	name = "vacuum flask"
 	desc = "Keeping your drinks at the perfect temperature since 1892."
 	icon_state = "vacuumflask"
 	volume = 60
-	center_of_mass = list("x"=15, "y"=4)
-
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 4 //CHOMPEdit

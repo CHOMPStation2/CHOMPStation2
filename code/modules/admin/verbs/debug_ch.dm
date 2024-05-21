@@ -1,5 +1,5 @@
 /datum/admins/proc/quick_authentic_nif()
-	set category = "Fun"
+	set category = "Fun.Add Nif"
 	set name = "Quick Auth NIF"
 	set desc = "Spawns an authentic NIF into someone in quick-implant mode."
 

@@ -18,7 +18,7 @@
 	faction = "dog"
 	maxHealth = 600
 	health = 600
-	movement_cooldown = 1
+	movement_cooldown = -1
 
 	response_help = "pets"
 	response_disarm = "rudely paps"
@@ -50,15 +50,15 @@
 
 	mob_size = MOB_SMALL
 
-	has_langs = list("Dog", "Canilunzt", "Galactic Common")
+	has_langs = list(LANGUAGE_ANIMAL, LANGUAGE_CANILUNZT, LANGUAGE_GALCOM)
 	say_list_type = /datum/say_list/softdog
 	swallowTime = 0.1 SECONDS
 
 /mob/living/simple_mob/vore/woof/New()
 	..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 /datum/say_list/softdog
 	speak = list("Woof~", "Woof!", "Yip!", "Yap!", "Yip~", "Yap~", "Awoooooo~", "Awoo!", "AwooooooooooOOOOOOoOooOoooOoOOoooo!")
@@ -207,7 +207,7 @@
 
 /mob/living/simple_mob/vore/woof/hostile/melee
 
-	movement_cooldown = 0
+	movement_cooldown = -2
 
 	ai_holder_type = /datum/ai_holder/simple_mob/woof/hostile
 
@@ -304,12 +304,12 @@
 
 /mob/living/simple_mob/vore/woof/hostile/aweful/melee
 
-	movement_cooldown = 0
+	movement_cooldown = -2
 
 	ai_holder_type = /datum/ai_holder/simple_mob/woof/hostile
 
 /mob/living/simple_mob/vore/woof/hostile/aweful/ranged
-	movement_cooldown = 0
+	movement_cooldown = -2
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/threatening/woof
 

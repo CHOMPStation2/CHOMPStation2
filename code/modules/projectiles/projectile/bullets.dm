@@ -58,6 +58,10 @@
 		if(D.glass) chance *= 2
 	else if(istype(A, /obj/structure/girder))
 		chance = 100
+	else if(istype(A, /obj/machinery/door/airlock/voidcraft)) //CHOMPEDIT Begin, lets the code see shuttlecraft structures and not treat them as air.
+		chance = 0
+	else if(istype(A, /turf/simulated/shuttle/wall))
+		chance = 0 //CHOMPEDIT End. Yeah, shuttlecraft can handle small arms fire just fine.
 
 	if(prob(chance))
 		if(A.opacity)
@@ -185,7 +189,7 @@
 /obj/item/projectile/bullet/rifle
 	fire_sound = 'sound/weapons/Gunshot_generic_rifle.ogg'
 	armor_penetration = 15
-	penetrating = 1
+	//penetrating = 1 CHOMPedit: This is the only thing I see that could cause stun and unsure what can be pierced with a penetrating of 1.
 	hud_state = "rifle"
 	hud_state_empty = "rifle_empty"
 
@@ -238,7 +242,7 @@
 	SA_vulnerability = SA_ANIMAL
 	hud_state = "rifle_heavy"
 
-/obj/item/projectile/bullet/rifle/a145 // 14.5�114mm is bigger than a .50 BMG round.
+/obj/item/projectile/bullet/rifle/a145 // 14.5×114mm is bigger than a .50 BMG round.
 	fire_sound = 'sound/weapons/Gunshot_cannon.ogg' // This is literally an anti-tank rifle caliber. It better sound like a fucking cannon.
 	damage = 80
 	stun = 3
@@ -314,6 +318,16 @@
 	range = 4
 	vacuum_traversal = 0
 	hud_state = "flame"
+
+/obj/item/projectile/bullet/incendiary/flamethrower/after_move()
+	..()
+
+
+	var/turf/T = get_turf(src)
+	if(istype(T))
+		for(var/obj/effect/plant/Victim in T)
+			if(prob(max(20, 100 - (Victim.seed.get_trait(TRAIT_ENDURANCE)))))	// Chance to immediately kill a vine or rampant growth, minimum of 20%.
+				Victim.die_off()
 
 /obj/item/projectile/bullet/incendiary/flamethrower/large
 	damage = 5

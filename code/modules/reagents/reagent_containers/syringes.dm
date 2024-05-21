@@ -12,7 +12,8 @@
 	icon = 'icons/obj/syringe.dmi'
 	item_state = "syringe_0"
 	icon_state = "0"
-	center_of_mass = list("x" = 16,"y" = 14)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 14 //CHOMPEdit
 	matter = list(MAT_GLASS = 150)
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = null
@@ -268,7 +269,7 @@
 		var/obj/item/organ/external/affecting = H.get_organ(target_zone)
 
 		if (!affecting || affecting.is_stump())
-			to_chat(user, "<span class='danger'>They are missing that limb!</span>")
+			balloon_alert(user, "They are missing that limb!") // CHOMPEdit - Changed to balloon_alert
 			return
 
 		var/hit_area = affecting.name
@@ -278,7 +279,7 @@
 
 		if (target != user && H.getarmor(target_zone, "melee") > 5 && prob(50))
 			for(var/mob/O in viewers(world.view, user))
-				O.show_message(text("<font color='red'><B>[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!</B></font>"), 1)
+				O.show_message(span_red(text("<B>[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!</B>")), 1)
 			user.remove_from_mob(src)
 			qdel(src)
 
@@ -286,18 +287,20 @@
 
 			return
 
-		user.visible_message("<span class='danger'>[user] stabs [target] in \the [hit_area] with [src.name]!</span>")
+		// user.visible_message("<span class='danger'>[user] stabs [target] in \the [hit_area] with [src.name]!</span>")
+		balloon_alert_visible("Stabs [target] in \the [hit_area] with [src.name]!") // CHOMPEdit - Changed to balloon alert
 
 		if(affecting.take_damage(3))
 			H.UpdateDamageIcon()
 
 	else
-		user.visible_message("<span class='danger'>[user] stabs [target] with [src.name]!</span>")
+		// user.visible_message("<span class='danger'>[user] stabs [target] with [src.name]!</span>")
+		balloon_alert_visible("Stabs [user] in \the [target] with [src.name]!") // CHOMPEdit - Changed to balloon alert
 		target.take_organ_damage(3)// 7 is the same as crowbar punch
 
 
 
-	var/syringestab_amount_transferred = rand(0, (reagents.total_volume - 5)) //nerfed by popular demand
+	var/syringestab_amount_transferred = rand(max(reagents.total_volume - 10, 0), (reagents.total_volume - 5)) //nerfed by popular demand
 	var/contained = reagents.get_reagents()
 	var/trans = reagents.trans_to_mob(target, syringestab_amount_transferred, CHEM_BLOOD)
 	if(isnull(trans)) trans = 0
@@ -370,7 +373,7 @@
 
 /obj/item/weapon/reagent_containers/syringe/drugs/Initialize()
 	. = ..()
-	reagents.add_reagent("space_drugs",  5)
+	reagents.add_reagent("bliss",  5)
 	reagents.add_reagent("mindbreaker",  5)
 	reagents.add_reagent("cryptobiolin", 5)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped

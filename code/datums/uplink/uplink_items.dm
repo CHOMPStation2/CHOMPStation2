@@ -174,7 +174,7 @@ var/datum/uplink/uplink = new()
 
 /datum/uplink_item/crated/log_icon()
 	var/obj/I = crate_path
-	return "\icon[I]"
+	return "[bicon(I)]"
 
 /****************
 * Support procs *

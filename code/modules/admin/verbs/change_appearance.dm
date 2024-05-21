@@ -1,7 +1,7 @@
 /client/proc/change_human_appearance_admin()
 	set name = "Change Mob Appearance - Admin"
 	set desc = "Allows you to change the mob appearance"
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 
 	if(!check_rights(R_FUN)) return
 
@@ -15,7 +15,7 @@
 /client/proc/change_human_appearance_self()
 	set name = "Change Mob Appearance - Self"
 	set desc = "Allows the mob to change its appearance"
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 
 	if(!check_rights(R_FUN)) return
 
@@ -37,7 +37,7 @@
 
 /client/proc/editappear()
 	set name = "Edit Appearance"
-	set category = "Fun"
+	set category = "Fun.Event Kit" //CHOMPEdit
 
 	if(!check_rights(R_FUN))	return
 
@@ -74,7 +74,7 @@
 		M.g_skin = hex2num(copytext(new_skin, 4, 6))
 		M.b_skin = hex2num(copytext(new_skin, 6, 8))
 
-	var/new_tone = input(usr, "Please select skin tone level: 1-220 (1=albino, 35=caucasian, 150=black, 220='very' black)", "Character Generation")  as text
+	var/new_tone = tgui_input_number(usr, "Please select skin tone level: 1-220 (1=albino, 35=caucasian, 150=black, 220='very' black)", "Character Generation", null, 220, 1)
 
 	if (new_tone)
 		M.s_tone = max(min(round(text2num(new_tone)), 220), 1)

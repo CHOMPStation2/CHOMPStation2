@@ -88,8 +88,18 @@
 
 /obj/item/device/taperecorder/hear_talk(mob/M, list/message_pieces, verb)
 	var/msg = multilingual_to_message(message_pieces, requires_machine_understands = TRUE, with_capitalization = TRUE)
+	//START OF CHOMPEDIT
+	var/voice = "Unknown"
+	if (M.type == /mob/living/carbon/human)
+	{
+		var/mob/living/carbon/human/H = M
+		voice = H.voice
+	}
+	else
+		voice = M.name
+	//END OF CHOMPEDIT
 	if(mytape && recording)
-		mytape.record_speech("[M.name] [verb], \"[msg]\"")
+		mytape.record_speech("[voice] [verb], \"[msg]\"")
 
 
 /obj/item/device/taperecorder/see_emote(mob/M as mob, text, var/emote_type)
@@ -258,13 +268,13 @@
 		var/playedmessage = mytape.storedinfo[i]
 		if (findtextEx(playedmessage,"*",1,2)) //remove marker for action sounds
 			playedmessage = copytext(playedmessage,2)
-		T.audible_message("<font color=Maroon><B>Tape Recorder</B>: [playedmessage]</font>", runemessage = playedmessage)
+		T.audible_message(span_maroon("<B>Tape Recorder</B>: [playedmessage]"), runemessage = playedmessage)
 
 		if(mytape.storedinfo.len < i+1)
 			playsleepseconds = 1
 			sleep(10)
 			T = get_turf(src)
-			T.audible_message("<font color=Maroon><B>Tape Recorder</B>: End of recording.</font>", runemessage = "click")
+			T.audible_message(span_maroon("<B>Tape Recorder</B>: End of recording."), runemessage = "click")
 			break
 		else
 			playsleepseconds = mytape.timestamp[i+1] - mytape.timestamp[i]
@@ -272,7 +282,7 @@
 		if(playsleepseconds > 14)
 			sleep(10)
 			T = get_turf(src)
-			T.audible_message("<font color=Maroon><B>Tape Recorder</B>: Skipping [playsleepseconds] seconds of silence</font>", runemessage = "tape winding")
+			T.audible_message(span_maroon("<B>Tape Recorder</B>: Skipping [playsleepseconds] seconds of silence"), runemessage = "tape winding")
 			playsleepseconds = 1
 		sleep(10 * playsleepseconds)
 
@@ -282,19 +292,19 @@
 
 	if(emagged)
 		var/turf/T = get_turf(src)
-		T.audible_message("<font color=Maroon><B>Tape Recorder</B>: This tape recorder will self-destruct in... Five.</font>", runemessage = "beep beep")
+		T.audible_message(span_maroon("<B>Tape Recorder</B>: This tape recorder will self-destruct in... Five."), runemessage = "beep beep")
 		sleep(10)
 		T = get_turf(src)
-		T.audible_message("<font color=Maroon><B>Tape Recorder</B>: Four.</font>")
+		T.audible_message(span_maroon("<B>Tape Recorder</B>: Four."))
 		sleep(10)
 		T = get_turf(src)
-		T.audible_message("<font color=Maroon><B>Tape Recorder</B>: Three.</font>")
+		T.audible_message(span_maroon("<B>Tape Recorder</B>: Three."))
 		sleep(10)
 		T = get_turf(src)
-		T.audible_message("<font color=Maroon><B>Tape Recorder</B>: Two.</font>")
+		T.audible_message(span_maroon("<B>Tape Recorder</B>: Two."))
 		sleep(10)
 		T = get_turf(src)
-		T.audible_message("<font color=Maroon><B>Tape Recorder</B>: One.</font>")
+		T.audible_message(span_maroon("<B>Tape Recorder</B>: One."))
 		sleep(10)
 		explode()
 
@@ -408,7 +418,7 @@
 
 
 /obj/item/device/tape/attackby(obj/item/I, mob/user, params)
-	if(ruined && I.is_screwdriver())
+	if(ruined && I.has_tool_quality(TOOL_SCREWDRIVER))
 		to_chat(user, "<span class='notice'>You start winding the tape back in...</span>")
 		playsound(src, I.usesound, 50, 1)
 		if(do_after(user, 120 * I.toolspeed, target = src))
@@ -417,7 +427,7 @@
 		return
 	else if(istype(I, /obj/item/weapon/pen))
 		if(loc == user && !user.incapacitated())
-			var/new_name = input(user, "What would you like to label the tape?", "Tape labeling") as null|text
+			var/new_name = tgui_input_text(user, "What would you like to label the tape?", "Tape labeling")
 			if(isnull(new_name)) return
 			new_name = sanitizeSafe(new_name)
 			if(new_name)

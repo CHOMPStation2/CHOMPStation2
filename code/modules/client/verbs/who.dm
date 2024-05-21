@@ -1,6 +1,6 @@
 /client/verb/who()
 	set name = "Who"
-	set category = "OOC"
+	set category = "OOC.Resources" //CHOMPEdit
 
 	var/msg = "<b>Current Players:</b>\n"
 
@@ -16,41 +16,42 @@
 		entry += " - Playing as [C.mob.real_name]"
 		switch(C.mob.stat)
 			if(UNCONSCIOUS)
-				entry += " - <font color='darkgray'><b>Unconscious</b></font>"
+				entry += " - [span_darkgray("<b>Unconscious</b>")]"
 			if(DEAD)
 				if(isobserver(C.mob))
 					var/mob/observer/dead/O = C.mob
 					if(O.started_as_observer)
-						entry += " - <font color='gray'>Observing</font>"
+						entry += " - [span_gray("Observing")]"
 					else
-						entry += " - <font color='black'><b>DEAD</b></font>"
+						entry += " - [span_black("<b>DEAD</b>")]"
 				else
-					entry += " - <font color='black'><b>DEAD</b></font>"
+					entry += " - [span_black("<b>DEAD</b>")]"
 
 		if(C.player_age != initial(C.player_age) && isnum(C.player_age)) // database is on
 			var/age = C.player_age
 			switch(age)
 				if(0 to 1)
-					age = "<font color='#ff0000'><b>[age] days old</b></font>"
+					age = span_red("<b>[age] days old</b>")
 				if(1 to 10)
-					age = "<font color='#ff8c00'><b>[age] days old</b></font>"
+					age = span_orange("<b>[age] days old</b>")
 				else
 					entry += " - [age] days old"
 
 		if(is_special_character(C.mob))
-			entry += " - <b><font color='red'>Antagonist</font></b>"
+			entry += " - [span_red("<b>Antagonist</b>")]"
 
 		if(C.is_afk())
 			var/seconds = C.last_activity_seconds()
 			entry += " (AFK - [round(seconds / 60)] minutes, [seconds % 60] seconds)"
 
-		entry += " (<A HREF='?_src_=holder;adminmoreinfo=\ref[C.mob]'>?</A>)"
+		entry += " [ADMIN_QUE(C.mob)]"
 		Lines += entry
 
 	for(var/line in sortList(Lines))
 		msg += "[line]\n"
 
 	msg += "<b>Total Players: [length(Lines)]</b>"
+	msg = "<span class='filter_notice'>[jointext(msg, "<br>")]</span>"
 	to_chat(src,msg)
 
 /client/verb/staffwho()
@@ -83,7 +84,7 @@
 		else if(check_rights(R_STEALTH, FALSE, C)) // event managers //VOREStation Edit: Retired Staff
 			category = R_EVENT
 			num_event_managers_online++
-		
+
 		temp += "\t[C] is a [C.holder.rank]"
 		if(holder)
 			if(C.holder.fakekey)
@@ -112,15 +113,37 @@
 
 	msg = "<b>Current Admins ([num_admins_online]):</b>\n" + msg
 
-	if(config.show_mods)
+	if(CONFIG_GET(flag/show_mods)) // CHOMPEdit
 		msg += "\n<b> Current Moderators ([num_mods_online]):</b>\n" + modmsg	//YW EDIT
 
-	if(config.show_devs)
+	if(CONFIG_GET(flag/show_devs)) // CHOMPEdit
 		msg += "\n<b> Current Developers ([num_devs_online]):</b>\n" + devmsg
 
-	if(config.show_event_managers)
+	if(CONFIG_GET(flag/show_event_managers)) // CHOMPEdit
 		msg += "\n<b> Current Miscellaneous ([num_event_managers_online]):</b>\n" + eventMmsg
+
+	var/num_mentors_online = 0
+	var/mmsg = ""
+
+	for(var/client/C in GLOB.mentors)
+		num_mentors_online++
+		mmsg += "\t[C] is a Mentor"
+		if(holder)
+			if(isobserver(C.mob))
+				mmsg += " - Observing"
+			else if(istype(C.mob,/mob/new_player))
+				mmsg += " - Lobby"
+			else
+				mmsg += " - Playing"
+
+			if(C.is_afk())
+				var/seconds = C.last_activity_seconds()
+				mmsg += " (AFK - [round(seconds / 60)] minutes, [seconds % 60] seconds)"
+		mmsg += "\n"
+
+	if(CONFIG_GET(flag/show_mentors)) // CHOMPEdit
+		msg += "\n<b> Current Mentors ([num_mentors_online]):</b>\n" + mmsg
 
 	msg += "\n<span class='info'>Adminhelps are also sent to Discord. If no admins are available in game try anyway and an admin on Discord may see it and respond.</span>"
 
-	to_chat(src, msg)
+	to_chat(src,"<span class='filter_notice'>[jointext(msg, "<br>")]</span>")

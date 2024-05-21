@@ -1,13 +1,13 @@
 // verb for admins to set custom event
 /client/proc/cmd_admin_change_custom_event()
-	set category = "Fun"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Change Custom Event"
 
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
 
-	var/input = sanitize(input(usr, "Enter the description of the custom event. Be descriptive. To cancel the event, make this blank or hit cancel.", "Custom Event", custom_event_msg) as message|null, MAX_PAPER_MESSAGE_LEN, extra = 0)
+	var/input = sanitize(tgui_input_text(usr, "Enter the description of the custom event. Be descriptive. To cancel the event, make this blank or hit cancel.", "Custom Event", custom_event_msg, MAX_PAPER_MESSAGE_LEN, TRUE, prevent_enter = TRUE), MAX_PAPER_MESSAGE_LEN, extra = 0)
 	if(!input || input == "")
 		custom_event_msg = null
 		log_admin("[usr.key] has cleared the custom event text.")
@@ -33,7 +33,7 @@
 
 // normal verb for players to view info
 /client/verb/cmd_view_custom_event()
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	set name = "Custom Event Info"
 
 	if(!custom_event_msg || custom_event_msg == "")

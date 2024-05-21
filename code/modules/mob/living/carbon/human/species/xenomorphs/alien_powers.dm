@@ -35,7 +35,7 @@
 			return
 
 	if(P.stored_plasma < cost)
-		to_chat(src, "<span class='danger'>You don't have enough phoron stored to do that.</span>")
+		to_chat(src, "<span class='danger'>We lack the plasma reserves to perform that task.</span>") // CHOMPedit: It's PLASMA, not PHORON. Fuck I hate mass edits.
 		return 0
 
 	if(needs_foundation)
@@ -56,7 +56,7 @@
 /mob/living/carbon/human/proc/transfer_plasma(mob/living/carbon/human/M as mob in oview())
 	set name = "Transfer Plasma"
 	set desc = "Transfer Plasma to another alien"
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 
 	if (get_dist(src,M) <= 1)
 		to_chat(src, "<span class='alium'>You need to be closer.</span>")
@@ -67,7 +67,7 @@
 		to_chat(src, "<span class='alium'>Their plasma vessel is missing.</span>")
 		return
 
-	var/amount = input(usr, "Amount:", "Transfer Plasma to [M]") as num
+	var/amount = tgui_input_number(usr, "Amount:", "Transfer Plasma to [M]")
 	if (amount)
 		amount = abs(round(amount))
 		if(check_alien_ability(amount,0,O_PLASMA))
@@ -79,22 +79,22 @@
 // Queen verbs.
 /mob/living/carbon/human/proc/lay_egg()
 
-	set name = "Lay Egg (200)"
-	set desc = "Lay an egg to produce huggers to impregnate prey with."
-	set category = "Abilities"
+	set name = "Lay Egg (500)" //Cost is entire queen reserve, to compensate being able to reproduce on it's own
+	set desc = "Lay an egg that will eventually hatch into a new xenomorph larva. Life finds a way."
+	set category = "Abilities.Alien" //CHOMPEdit
 
-	if(!config.aliens_allowed)
+	if(!CONFIG_GET(flag/aliens_allowed)) // CHOMPEdit
 		to_chat(src, "You begin to lay an egg, but hesitate. You suspect it isn't allowed.")
-		verbs -= /mob/living/carbon/human/proc/lay_egg
+		remove_verb(src,/mob/living/carbon/human/proc/lay_egg) //CHOMPEdit TGPanel
 		return
 
-	if(locate(/obj/structure/alien/egg) in get_turf(src))
+	if(locate(/obj/structure/ghost_pod/automatic/xenomorph_egg) in get_turf(src))
 		to_chat(src, "There's already an egg here.")
 		return
 
-	if(check_alien_ability(200,1,O_EGG))
+	if(check_alien_ability(500,1,O_EGG))
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
-		new /obj/structure/alien/egg(loc)
+		new /obj/structure/ghost_pod/automatic/xenomorph_egg(loc)
 
 	return
 
@@ -102,7 +102,7 @@
 /mob/living/carbon/human/proc/evolve()
 	set name = "Evolve (500)"
 	set desc = "Produce an internal egg sac capable of spawning children. Only one queen can exist at a time."
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 
 	if(alien_queen_exists())
 		to_chat(src, "<span class='notice'>We already have an active queen.</span>")
@@ -117,7 +117,7 @@
 /mob/living/carbon/human/proc/plant()
 	set name = "Plant Weeds (50)"
 	set desc = "Plants some alien weeds"
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 
 	if(check_alien_ability(50,1,O_RESIN))
 		visible_message("<span class='alium'><B>[src] has planted some alien weeds!</B></span>")
@@ -149,7 +149,7 @@
 /mob/living/carbon/human/proc/corrosive_acid(O as obj|turf in oview(1)) //If they right click to corrode, an error will flash if its an invalid target./N
 	set name = "Corrosive Acid (200)"
 	set desc = "Drench an object in acid, destroying it over time."
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 
 	if(!(O in oview(1)))
 		to_chat(src, "<span class='alium'>[O] is too far away.</span>")
@@ -186,7 +186,7 @@
 /mob/living/carbon/human/proc/neurotoxin()
 	set name = "Toggle Neurotoxic Spit (40)"
 	set desc = "Readies a neurotoxic spit, which paralyzes the target for a short time if they are not wearing protective gear."
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 
 	if(spitting)
 		to_chat(src, "<span class='alium'>You stop preparing to spit.</span>")
@@ -207,7 +207,7 @@
 /mob/living/carbon/human/proc/acidspit()
 	set name = "Toggle Acid Spit (50)"
 	set desc = "Readies an acidic spit, which burns the target if they are not wearing protective gear."
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 
 	if(spitting)
 		to_chat(src, "<span class='alium'>You stop preparing to spit.</span>")
@@ -228,7 +228,7 @@
 /mob/living/carbon/human/proc/resin() //Gurgs : Refactored resin ability, big thanks to Jon.
 	set name = "Secrete Resin (75)"
 	set desc = "Secrete tough malleable resin."
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 
 	var/list/options = list("resin door","resin wall","resin membrane","nest","resin blob")
 	for(var/option in options)
@@ -243,7 +243,7 @@
 
 	if(iswall(targetLoc))
 		targetLoc = get_turf(src)
-	
+
 	var/obj/O
 
 	switch(choice)
@@ -270,13 +270,13 @@
 
 	if(O)
 		visible_message("<span class='warning'><B>[src] vomits up a thick purple substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
-		O.color = "#321D37"
+//		O.color = "#321D37" // CHOMPedit: Removing colouration, adding predefined colour icons.
 		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 
 	return
 
 /mob/living/carbon/human/proc/leap()
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 	set name = "Leap"
 	set desc = "Leap at a target and grab them aggressively."
 
@@ -344,7 +344,7 @@
 	G.synch()
 
 /mob/living/carbon/human/proc/gut()
-	set category = "Abilities"
+	set category = "Abilities.Alien" //CHOMPEdit
 	set name = "Slaughter"
 	set desc = "While grabbing someone aggressively, rip their guts out or tear them apart."
 

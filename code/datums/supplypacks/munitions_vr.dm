@@ -1,23 +1,25 @@
-/datum/supply_pack/munitions/expeditionguns
-	name = "Frontier phaser (station-locked) crate"
+/datum/supply_pack/munitions/expeditionguns //CHOMP Edit begin: Re-appropriating this whole block. Changing frontier phasers to phaseguns.
+	name = "Exploration phasegun (station-locked) crate"
 	contains = list(
-			/obj/item/weapon/gun/energy/locked/frontier = 2,
-			/obj/item/weapon/gun/energy/locked/frontier/holdout = 2,
+			/obj/item/weapon/gun/energy/locked/phasegun/pistol = 2,
+			/obj/item/weapon/gun/energy/locked/phasegun/rifle = 2,
+			/obj/item/weapon/gun/energy/locked/phasegun =  2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure
-	containername = "frontier phaser crate"
+	containername = "phasegun crate"
 	access = access_explorer
 
-/datum/supply_pack/munitions/expeditionbows
-	name = "Frontier bows (station-locked) crate"
+/datum/supply_pack/munitions/expeditioncannon
+	name = "Exploration phasecannon (station-locked) crate"
 	contains = list(
-			/obj/item/weapon/gun/energy/locked/frontier/handbow=2
+			/obj/item/weapon/gun/energy/locked/phasegun/cannon = 1
 			)
-	cost = 20
+	cost = 50
 	containertype = /obj/structure/closet/crate/secure
-	containername = "phaser handbow crate"
-	access = access_explorer
+	containername = "phasegun cannon crate"
+	access = access_explorer 
+//CHOMP Edit end
 
 /datum/supply_pack/munitions/ofd_charge_emp
 	name = "OFD Charge - EMP"

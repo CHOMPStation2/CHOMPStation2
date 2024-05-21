@@ -55,6 +55,19 @@
 	recoil = 0 //it's a toy //CHOMP Edit
 
 /*
+ * Moist Nugget
+ */
+/obj/item/weapon/gun/projectile/shotgun/pump/toy/moistnugget
+	name = "\improper Donk-Soft mosin-nagant"
+	desc = "Donk-Soft foam mosin-nagant! It's Donk or Don't! Ages 8 and up."
+	description_fluff = "A special Donk-Soft rifle originally made to pair with a Soviet Soldier costume. It didn't catch on quite as well as other Donk-Soft products."
+	icon = 'icons/obj/gun_toy.dmi'
+	icon_state = "moistnugget"
+	item_state = "moistnugget"
+	max_shells = 5
+	matter = list(MAT_PLASTIC = 2500)
+
+/*
  * Pistol
  */
 /obj/item/weapon/gun/projectile/pistol/toy
@@ -199,13 +212,59 @@
 		icon_state = initial(icon_state)
 	else
 		icon_state = "[initial(icon_state)]-e"
+/*
+ * Cyborg
+ */
+/obj/item/weapon/gun/projectile/cyborgtoy
+	name = "\improper Donk-Soft Cyborg Blaster"
+	desc = "Donk-Soft Cyborg Blaster! It's Donk or Don't! Adult supervision required. Use to toggle between battle and cleanup mode."
+	icon = 'icons/obj/gun_toy.dmi'
+	icon_state = "smg"
+	caliber = "foam"
+	manual_chamber = FALSE //CHOMPEdit, borgs can't manually chamber...
+	load_method = SINGLE_CASING
+	max_shells = 15
+	var/cleanup = 0
+	ammo_type = /obj/item/ammo_casing/afoam_dart
+	projectile_type = /obj/item/projectile/bullet/foam_dart
+	recoil = null
+	handle_casings = null
 
+/obj/item/weapon/gun/projectile/cyborgtoy/attack_self(var/mob/user)
+	cleanup = !cleanup
+	to_chat(user, "The [src] is now on [cleanup ? "cleanup" : "battle"] mode.")
+
+/obj/item/weapon/gun/projectile/cyborgtoy/afterattack(atom/A, mob/living/user, adjacent, params)
+	if(cleanup)
+		if(!adjacent)
+			return 0
+		collectammo(A, user)
+		return 0
+	..()
+
+/obj/item/weapon/gun/projectile/cyborgtoy/proc/collectammo(atom/A, user)
+	if(loaded.len >= max_shells)
+		to_chat(user, "The [src] is at max capacity.")
+		return
+	var/T = get_turf(A)
+	var/success = 0
+	for(var/obj/item/ammo_casing/afoam_dart/D in T)
+		if(loaded.len >= max_shells)
+			break
+		D.loc = src
+		loaded.Insert(1, D)
+		success = 1
+	if(success)
+		playsound(src, 'sound/machines/hiss.ogg', 50, 0)
+		to_chat(user, "The [src] vacuums in the darts!")
+	else
+		to_chat(user, "No Donk-Soft brand foam darts detected. Aborting.")
 /*
  * Laser Tag
  */
 /obj/item/weapon/gun/energy/lasertag
 	name = "laser tag gun"
-	desc = "Standard issue weapon of the Imperial Guard"
+	desc = "Standard issue weapon of the Imperial Guard."
 	icon = 'icons/obj/gun_toy.dmi'
 	item_state = "omnitag"
 	item_state = "retro"
@@ -229,6 +288,12 @@
 	item_state = "bluetag"
 	projectile_type = /obj/item/projectile/beam/lasertag/blue
 	required_vest = /obj/item/clothing/suit/bluetag
+	fire_delay = 10
+
+	firemodes = list(
+		list(mode_name="instagib rules", fire_delay=10, projectile_type=/obj/item/projectile/beam/lasertag/blue, charge_cost = 240),
+		list(mode_name="multi-hit rules", fire_delay=5, projectile_type=/obj/item/projectile/beam/lasertag/blue/multihit, charge_cost = 120),
+		)
 
 /obj/item/weapon/gun/energy/lasertag/blue/sub
 	name = "Brigader Sidearm"
@@ -241,6 +306,12 @@
 	item_state = "redtag"
 	projectile_type = /obj/item/projectile/beam/lasertag/red
 	required_vest = /obj/item/clothing/suit/redtag
+	fire_delay = 10
+
+	firemodes = list(
+		list(mode_name="instagib rules", fire_delay=12, projectile_type=/obj/item/projectile/beam/lasertag/red, charge_cost = 240),
+		list(mode_name="multi-hit rules", fire_delay=5, projectile_type=/obj/item/projectile/beam/lasertag/red/multihit, charge_cost = 120),
+		)
 
 /obj/item/weapon/gun/energy/lasertag/red/dom
 	name = "Mu'tu'bi sidearm"

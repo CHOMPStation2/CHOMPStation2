@@ -125,7 +125,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		human = H
 		human.nif = src
 		stat = NIF_INSTALLING
-		H.verbs |= /mob/living/carbon/human/proc/set_nif_examine
+		add_verb(H,/mob/living/carbon/human/proc/set_nif_examine) //ChompEDIT
 		menu = H.AddComponent(/datum/component/nif_menu)
 		if(starting_software)
 			for(var/path in starting_software)
@@ -169,12 +169,14 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	stat = NIF_PREINSTALL
 	vis_update()
 	if(H)
-		H.verbs -= /mob/living/carbon/human/proc/set_nif_examine
+		remove_verb(H,/mob/living/carbon/human/proc/set_nif_examine)  //CHOMPEdit
 		H.nif = null
 	qdel_null(menu)
 	human = null
 	install_done = null
 	update_icon()
+
+/* CHOMPedit Remove: Disabling EMP effect on all Nifs. *
 
 //EMP adds wear and disables all nifsoft
 /obj/item/device/nif/emp_act(var/severity)
@@ -194,6 +196,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		if (4)
 			wear(rand(1,8))
 
+* CHOMPedit Remove end. */
+
 //Wear update/check proc
 /obj/item/device/nif/proc/wear(var/wear = 0)
 	wear *= (rand(85,115) / 100) //Apparently rand() only takes integers.
@@ -203,6 +207,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		persist_nif_data(human)
 
 	if(durability <= 0)
+		durability = 0	//failsafe us to a minimum of 0% so we don't just wash into massively negative durability from repeated EMPs
 		stat = NIF_TEMPFAIL
 		update_icon()
 
@@ -219,7 +224,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 //Attackby proc, for maintenance
 /obj/item/device/nif/attackby(obj/item/weapon/W, mob/user as mob)
-	if(open == 0 && W.is_screwdriver())
+	if(open == 0 && W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(do_after(user, 4 SECONDS, src) && open == 0)
 			user.visible_message("[user] unscrews and pries open \the [src].","<span class='notice'>You unscrew and pry open \the [src].</span>")
 			playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
@@ -229,6 +234,11 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		var/obj/item/stack/cable_coil/C = W
 		if(C.get_amount() < 3)
 			to_chat(user,"<span class='warning'>You need at least three coils of wire to add them to \the [src].</span>")
+			return
+		if(durability >= initial(durability))
+			to_chat(user,"<span class='notice'>There's no damaged wiring that needs replacing!</span>")
+			open = 3
+			update_icon()
 			return
 		if(do_after(user, 6 SECONDS, src) && open == 1 && C.use(3))
 			user.visible_message("[user] replaces some wiring in \the [src].","<span class='notice'>You replace any burned out wiring in \the [src].</span>")
@@ -240,7 +250,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			user.visible_message("[user] resets several circuits in \the [src].","<span class='notice'>You find and repair any faulty circuits in \the [src].</span>")
 			open = 3
 			update_icon()
-	else if(open == 3 && W.is_screwdriver())
+	else if(open == 3 && W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(do_after(user, 3 SECONDS, src) && open == 3)
 			user.visible_message("[user] closes up \the [src].","<span class='notice'>You re-seal \the [src] for use once more.</span>")
 			playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
@@ -277,7 +287,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			install_done = world.time + 1 MINUTE
 			notify("Welcome back, [owner]! Performing quick-calibration...")
 		else if(!owner)
-			install_done = world.time + 35 MINUTES
+			install_done = world.time + 15 MINUTES // CHOMPedit: Install time from 35 minutes to 15 minutes.
 			notify("Adapting to new user...")
 			sleep(5 SECONDS)
 			notify("Adjoining optic [human.isSynthetic() ? "interface" : "nerve"], please be patient.",TRUE)
@@ -287,7 +297,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			stat = NIF_TEMPFAIL
 			return FALSE
 
-	var/percent_done = (world.time - (install_done - (35 MINUTES))) / (35 MINUTES)
+	var/percent_done = (world.time - (install_done - (15 MINUTES))) / (15 MINUTES) //CHOMPedit: 35 minutes down to 15 minutes.
 
 	if(human.client)
 		human.client.screen.Add(global_hud.whitense) //This is the camera static
@@ -377,7 +387,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 	last_notification = message // TGUI Hook
 
-	to_chat(human,"<b>\[[bicon(src.big_icon)]NIF\]</b> displays, \"<span class='[alert ? "danger" : "notice"]'>[message]</span>\"")
+	to_chat(human,"<span class='filter_nif'><b>\[[icon2html(src.big_icon, human.client)]NIF\]</b> displays, \"<span class='[alert ? "danger" : "notice"]'>[message]</span>\"</span>")
 	if(prob(1)) human.visible_message("<span class='notice'>\The [human] [pick(look_messages)].</span>")
 	if(alert)
 		human << bad_sound
@@ -451,9 +461,16 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 //Uninstall a piece of software
 /obj/item/device/nif/proc/uninstall(var/datum/nifsoft/old_soft)
-	var/datum/nifsoft/NS = nifsofts[old_soft.list_pos]
+	var/datum/nifsoft/NS
+	if(nifsofts)
+		NS = nifsofts[old_soft.list_pos]
+
 	if(!NS || NS != old_soft)
 		return FALSE //what??
+
+	if(!NS.can_uninstall)
+		notify("The software \"[NS]\" refuses to be uninstalled.",TRUE)
+		return FALSE
 
 	nifsofts[old_soft.list_pos] = null
 	power_usage -= old_soft.p_drain
@@ -632,6 +649,18 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	bioadap = TRUE
 	gib_nodrop = TRUE
 
+/obj/item/device/nif/glitch
+	name = "weird NIF"
+	desc = "A NIF of a very dubious origin. It seems to be more durable than normal one... But are you sure about this?"
+	durability = 300
+	bioadap = TRUE
+	starting_software = list(
+		/datum/nifsoft/commlink,
+		/datum/nifsoft/soulcatcher,
+		/datum/nifsoft/ar_civ,
+		/datum/nifsoft/malware
+	)
+
 ////////////////////////////////
 // Special Promethean """surgery"""
 /obj/item/device/nif/attack(mob/living/M, mob/living/user, var/target_zone)
@@ -664,14 +693,14 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /mob/living/carbon/human/proc/set_nif_examine()
 	set name = "NIF Appearance"
 	set desc = "If your NIF alters your appearance in some way, describe it here."
-	set category = "OOC"
+	set category = "OOC.Game Settings" //CHOMPEdit
 
 	if(!nif)
-		verbs -= /mob/living/carbon/human/proc/set_nif_examine
+		remove_verb(src, /mob/living/carbon/human/proc/set_nif_examine) //ChompEDIT
 		to_chat(src,"<span class='warning'>You don't have a NIF, not sure why this was here.</span>")
 		return
 
-	var/new_flavor = sanitize(input(src,"Describe how your NIF alters your appearance, like glowy eyes or metal plate on your head, etc. Be sensible. Clear this for no examine text. 128ch max.","Describe NIF", nif.examine_msg) as null|text, max_length = 128)
+	var/new_flavor = sanitize(tgui_input_text(src,"Describe how your NIF alters your appearance, like glowy eyes or metal plate on your head, etc. Be sensible. Clear this for no examine text. 128ch max.","Describe NIF", nif.examine_msg, 128), max_length = 128)
 	//They clicked cancel or meanwhile lost their NIF
 	if(!nif || isnull(new_flavor))
 		return //No changes

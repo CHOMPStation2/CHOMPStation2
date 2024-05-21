@@ -21,7 +21,7 @@
 	else //If they have enough nutrition and body weight, they can exercise.
 		user.setClickCooldown(cooldown)
 		user.adjust_nutrition(-10 * weightloss_power)
-		user.weight -= 0.025 * weightloss_power * (0.01 * user.weight_loss)
+		user.weight -= 0.1 * weightloss_power * (0.01 * user.weight_loss) //CHOMPEdit Making weight loss mechanically more accessible
 		flick("[icon_state]2", src)
 		var/message = pick(messages)
 		to_chat(user, "<span class='notice'>[message].</span>")
@@ -55,7 +55,7 @@
 			"A honk emits from the punching bag as you hit it")
 
 /obj/machinery/fitness/heavy/attackby(obj/item/W, mob/living/user)
-	if(W.is_wrench())
+	if(W.has_tool_quality(TOOL_WRENCH))
 		add_fingerprint(user)
 		user.visible_message("<span class='warning'>[user] has [anchored ? "un" : ""]secured \the [src].</span>", "<span class='notice'>You [anchored ? "un" : ""]secure \the [src].</span>")
 		anchored = !anchored

@@ -4,6 +4,9 @@
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,"<span class='warning'>You can't use that here!</span>")
 		return FALSE
+	if((get_area(src).flags & PHASE_SHIELDED))
+		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		return FALSE
 
 	forceMove(T)
 	var/original_canmove = canmove
@@ -45,11 +48,12 @@
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,"<span class='vwarning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
 		// Do this after the potential vore, so we get the belly
 		update_icon()
 
+		/* CHOMPEdit, comment out and handle in custom proc
 		//Affect nearby lights
 		var/destroy_lights = 0
 		if(eye_state == RED_EYES)
@@ -66,6 +70,8 @@
 					L.broken()
 			else
 				L.flicker(10)
+		*/
+		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
 
 	//Shifting out
 	else
@@ -131,3 +137,74 @@
 	visible_message("<span class='notice'>\The [src] gently places a hand on \the [target]...</span>")
 	face_atom(target)
 	return TRUE
+
+
+//CHOMPEdit Begin - Add dark portal creation
+/mob/living/simple_mob/shadekin/proc/dark_tunneling()
+	var/template_id = "dark_portal"
+	var/datum/map_template/shelter/template
+
+	if(!template)
+		template = SSmapping.shelter_templates[template_id]
+		if(!template)
+			throw EXCEPTION("Shelter template ([template_id]) not found!")
+			return FALSE
+
+	var/turf/deploy_location = get_turf(src)
+	var/status = template.check_deploy(deploy_location)
+
+	switch(status)
+		//Not allowed due to /area technical reasons
+		if(SHELTER_DEPLOY_BAD_AREA)
+			to_chat(src, "<span class='warning'>A tunnel to the Dark will not function in this area.</span>")
+
+		//Anchored objects or no space
+		if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS)
+			var/width = template.width
+			var/height = template.height
+			to_chat(src, "<span class='warning'>There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!</span>")
+
+	if(status != SHELTER_DEPLOY_ALLOWED)
+		return FALSE
+
+	var/turf/T = deploy_location
+	var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
+	smoke.attach(T)
+	smoke.set_up(10, 0, T)
+	smoke.start()
+
+	src.visible_message("<span class='notice'>[src] begins pulling dark energies around themselves.</span>")
+	if(do_after(src, 600)) //60 seconds
+		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
+		src.visible_message("<span class='notice'>[src] finishes pulling dark energies around themselves, creating a portal.</span>")
+
+		log_and_message_admins("[key_name_admin(src)] created a tunnel to the dark at [get_area(T)]!")
+		template.annihilate_plants(deploy_location)
+		template.load(deploy_location, centered = TRUE)
+		template.update_lighting(deploy_location)
+		ability_flags &= AB_DARK_TUNNEL
+		return TRUE
+	else
+		return FALSE
+//CHOMPEdit End
+
+//CHOMPEdit Begin - Add Dark Maw
+/mob/living/simple_mob/shadekin/proc/dark_maw()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		to_chat(src, "<span class='warning'>You don't seem to be able to set a trap here!</span>")
+		return FALSE
+	else if(T.get_lumcount() >= 0.5)
+		to_chat(src, "<span class='warning'>There is too much light here for your trap to last!</span>")
+		return FALSE
+
+	if(do_after(src, 10))
+		if(ability_flags & AB_PHASE_SHIFTED)
+			new /obj/effect/abstract/dark_maw(loc, src, 1)
+		else
+			new /obj/effect/abstract/dark_maw(loc, src)
+
+		return TRUE
+	else
+		return FALSE
+//CHOMPEdit End

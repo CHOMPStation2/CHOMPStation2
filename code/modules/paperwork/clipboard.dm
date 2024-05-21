@@ -12,7 +12,7 @@
 	var/obj/item/weapon/toppaper	//The topmost piece of paper.
 	slot_flags = SLOT_BELT
 
-/obj/item/weapon/clipboard/New()
+/obj/item/weapon/clipboard/Initialize() //ChompEDIT New --> Initialize
 	update_icon()
 
 /obj/item/weapon/clipboard/MouseDrop(obj/over_object as obj) //Quick clipboard fix. -Agouri
@@ -58,6 +58,13 @@
 		update_icon()
 
 	return
+
+/obj/item/weapon/clipboard/afterattack(turf/T as turf, mob/user as mob)
+	for(var/obj/item/weapon/paper/P in T)
+		P.loc = src
+		toppaper = P
+		update_icon()
+		to_chat(user, "<span class='notice'>You clip the [P] onto \the [src].</span>")
 
 /obj/item/weapon/clipboard/attack_self(mob/user as mob)
 	var/dat = "<title>Clipboard</title>"

@@ -46,12 +46,12 @@
 	var/effective_dose = dose
 	if(issmall(M)) effective_dose *= 2
 
-	var/is_vampire = 0 //VOREStation Edit START
+	var/is_vampire = FALSE //VOREStation Edit START
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		if(H.species.organic_food_coeff == 0)
-			H.adjust_nutrition(removed)
-			is_vampire = 1 //VOREStation Edit END
+		if(H.species.bloodsucker)
+			H.adjust_nutrition(removed*30)
+			is_vampire = TRUE //VOREStation Edit END
 	if(alien == IS_SLIME)	// Treat it like nutriment for the jello, but not equivalent.
 		if(data["species"] == M.species.name)	// Unless it's Promethean goo, then refill this one's goo.
 			M.inject_blood(src, volume * volume_mod)
@@ -61,14 +61,14 @@
 		M.heal_organ_damage(0.2 * removed * volume_mod, 0)	// More 'effective' blood means more usable material.
 		M.adjust_nutrition(20 * removed * volume_mod)
 		M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
-		M.adjustToxLoss(removed / 2)	// Still has some water in the form of plasma.
+		//M.adjustToxLoss(removed / 2)	// Still has some water in the form of plasma. | CHOMP EDIT - No. Soda does not kill a prommie, their own blood should not either.
 		return
 
 	if(effective_dose > 5)
-		if(is_vampire == 0) //VOREStation Edit.
+		if(!is_vampire) //VOREStation Edit.
 			M.adjustToxLoss(removed) //VOREStation Edit.
 	if(effective_dose > 15)
-		if(is_vampire == 0) //VOREStation Edit.
+		if(!is_vampire) //VOREStation Edit.
 			M.adjustToxLoss(removed) //VOREStation Edit.
 	if(data && data["virus2"])
 		var/list/vlist = data["virus2"]

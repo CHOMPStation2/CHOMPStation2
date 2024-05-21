@@ -12,6 +12,7 @@
 
 	var/obj/item/weapon/reagent_containers/glass/rag/rag = null
 	var/rag_underlay = "rag"
+	var/violent_throw = FALSE
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/on_reagent_change() return // To suppress price updating. Bottles have their own price tags.
 
@@ -29,17 +30,25 @@
 	return ..()
 
 //when thrown on impact, bottles smash and spill their contents
+/obj/item/weapon/reagent_containers/food/drinks/bottle/throw_at(atom/target, range, speed, mob/thrower, spin = TRUE, datum/callback/callback)
+	. = ..()
+	if(istype(thrower) && thrower.a_intent == I_HURT)
+		violent_throw = TRUE
+		throw_source = get_turf(thrower)
+
 /obj/item/weapon/reagent_containers/food/drinks/bottle/throw_impact(atom/hit_atom, var/speed)
 	..()
 
-	var/mob/M = thrower
-	if(isGlass && istype(M) && M.a_intent == I_HURT)
+	if(isGlass && violent_throw)
 		var/throw_dist = get_dist(throw_source, loc)
-		if(speed >= throw_speed && smash_check(throw_dist)) //not as reliable as smashing directly
+		if(smash_check(throw_dist)) //not as reliable as smashing directly
 			if(reagents)
 				hit_atom.visible_message("<span class='notice'>The contents of \the [src] splash all over [hit_atom]!</span>")
 				reagents.splash(hit_atom, reagents.total_volume)
 			src.smash(loc, hit_atom)
+
+	violent_throw = FALSE
+	throw_source = null
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/proc/smash_check(var/distance)
 	if(!isGlass || !smash_duration)
@@ -196,7 +205,8 @@
 	name = "Griffeater Gin"
 	desc = "A bottle of high quality gin, produced in Alpha Centauri."
 	icon_state = "ginbottle"
-	center_of_mass = list("x"=16, "y"=4)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 4 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/gin/Initialize()
 	. = ..()
@@ -206,7 +216,8 @@
 	name = "Uncle Git's Special Reserve"
 	desc = "A premium single-malt whiskey, gently matured in a highly classified location."
 	icon_state = "whiskeybottle1"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey/Initialize()
 	. = ..()
@@ -216,7 +227,8 @@
 	name = "Special Blend Whiskey"
 	desc = "Just when you thought regular station whiskey was good... This silky, amber goodness has to come along and ruin everything."
 	icon_state = "whiskeybottle2"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey/Initialize()
 	. = ..()
@@ -226,7 +238,8 @@
 	name = "Tunguska Triple Distilled"
 	desc = "Aah, vodka. Prime choice of drink and fuel by Russians worldwide."
 	icon_state = "vodkabottle"
-	center_of_mass = list("x"=17, "y"=3)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vodka/Initialize()
 	. = ..()
@@ -236,7 +249,8 @@
 	name = "Caccavo Guaranteed Quality Tequilla"
 	desc = "Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!"
 	icon_state = "tequilabottle"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla/Initialize()
 	. = ..()
@@ -246,7 +260,8 @@
 	name = "Bottle of Nothing"
 	desc = "A bottle filled with nothing"
 	icon_state = "bottleofnothing"
-	center_of_mass = list("x"=17, "y"=5)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 5 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing/Initialize()
 	. = ..()
@@ -256,7 +271,8 @@
 	name = "Wrapp Artiste Patron"
 	desc = "Silver laced tequilla, served in night clubs across the galaxy."
 	icon_state = "patronbottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/patron/Initialize()
 	. = ..()
@@ -266,7 +282,8 @@
 	name = "Captain Pete's Cuban Spiced Rum"
 	desc = "This isn't just rum, oh no. It's practically Cuba in a bottle."
 	icon_state = "rumbottle"
-	center_of_mass = list("x"=16, "y"=8)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/rum/Initialize()
 	. = ..()
@@ -276,7 +293,8 @@
 	name = "Flask of Holy Water"
 	desc = "A flask of the chaplain's holy water."
 	icon_state = "holyflask"
-	center_of_mass = list("x"=17, "y"=10)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/holywater/Initialize()
 	. = ..()
@@ -286,7 +304,8 @@
 	name = "Goldeneye Vermouth"
 	desc = "Sweet, sweet dryness~"
 	icon_state = "vermouthbottle"
-	center_of_mass = list("x"=17, "y"=3)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth/Initialize()
 	. = ..()
@@ -296,7 +315,8 @@
 	name = "Robert Robust's Coffee Liqueur"
 	desc = "A widely known, Mexican coffee-flavoured liqueur. In production since 1936."
 	icon_state = "kahluabottle"
-	center_of_mass = list("x"=17, "y"=3)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua/Initialize()
 	. = ..()
@@ -306,7 +326,8 @@
 	name = "College Girl Goldschlager"
 	desc = "Because they are the only ones who will drink 100 proof cinnamon schnapps."
 	icon_state = "goldschlagerbottle"
-	center_of_mass = list("x"=15, "y"=3)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager/Initialize()
 	. = ..()
@@ -314,9 +335,10 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cognac
 	name = "Chateau De Baton Premium Cognac"
-	desc = "A sweet and strongly alchoholic drink, made after numerous distillations and years of maturing."
+	desc = "A sweet and strongly alcoholic drink, made after numerous distillations and years of maturing."
 	icon_state = "cognacbottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cognac/Initialize()
 	. = ..()
@@ -326,7 +348,8 @@
 	name = "Jailbreaker Verte"
 	desc = "One sip of this and you just know you're gonna have a good time."
 	icon_state = "absinthebottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe/Initialize()
 	. = ..()
@@ -336,7 +359,8 @@
 	name = "Emeraldine Melon Liqueur"
 	desc = "A bottle of 46 proof Emeraldine Melon Liquor. Sweet and light."
 	icon_state = "melon_liqueur"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/melonliquor/Initialize()
 	. = ..()
@@ -346,7 +370,8 @@
 	name = "Miss Blue Curacao"
 	desc = "A fruity, exceptionally azure drink. Does not allow the imbiber to use the fifth magic."
 	icon_state = "blue_curacao"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao/Initialize()
 	. = ..()
@@ -356,7 +381,8 @@
 	name = "Redeemer's Brew"
 	desc = "Just opening the top of this bottle makes you feel a bit tipsy. Not for the faint of heart."
 	icon_state = "redeemersbrew"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew/Initialize()
 	. = ..()
@@ -366,7 +392,8 @@
 	name = "Dr. Bone's Peppermint Schnapps"
 	desc = "A flavoured grain liqueur with a fresh, minty taste."
 	icon_state = "schnapps_pep"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/peppermintschnapps/Initialize()
 	. = ..()
@@ -376,7 +403,8 @@
 	name = "Dr. Bone's Peach Schnapps"
 	desc = "A flavoured grain liqueur with a fruity peach taste."
 	icon_state = "schnapps_pea"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/peachschnapps/Initialize()
 	. = ..()
@@ -386,7 +414,8 @@
 	name = "Dr. Bone's Lemonade Schnapps"
 	desc = "A flavoured grain liqueur with a sweetish, lemon taste."
 	icon_state = "schnapps_lem"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/lemonadeschnapps/Initialize()
 	. = ..()
@@ -396,7 +425,8 @@
 	name = "Schusskonig"
 	desc = "A complex tasting digestif. Thank god the original's trademark lapsed."
 	icon_state = "jager_bottle"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/jager/Initialize()
 	. = ..()
@@ -408,7 +438,8 @@
 	name = "Doublebeard Bearded Special Red"
 	desc = "Cheap cooking wine pretending to be drinkable."
 	icon_state = "winebottle"
-	center_of_mass = list("x"=16, "y"=4)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 4 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/wine/Initialize()
 	. = ..()
@@ -418,7 +449,8 @@
 	name = "Doublebeard Bearded Special White"
 	desc = "Cooking wine pretending to be drinkable."
 	icon_state = "whitewinebottle"
-	center_of_mass = list("x"=16, "y"=4)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 4 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine/Initialize()
 	. = ..()
@@ -428,7 +460,8 @@
 	name = "NanoTrasen Carnoth Red"
 	desc = "A NanoTrasen branded wine given to high ranking staff as gifts. Made special on the agricultural planet Carnoth."
 	icon_state = "carnoth"
-	center_of_mass = list("x"=16, "y"=4)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 4 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/carnoth/Initialize()
 	. = ..()
@@ -438,7 +471,8 @@
 	name = "Warlock's Velvet"
 	desc = "What a delightful packaging for a surely high quality wine! The vintage must be amazing!"
 	icon_state = "pwinebottle"
-	center_of_mass = list("x"=16, "y"=4)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 4 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/pwine/Initialize()
 	. = ..()
@@ -448,7 +482,8 @@
 	name = "Gilthari Luxury Champagne"
 	desc = "For those special occassions."
 	icon_state = "champagne"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/champagne/Initialize()
 	. = ..()
@@ -458,7 +493,8 @@
 	name = "Mono-No-Aware Luxury Sake"
 	desc = "Dry alcohol made from rice, a favorite of businessmen."
 	icon_state = "sakebottle"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/sake/Initialize()
 	. = ..()
@@ -470,7 +506,8 @@
 	name = "\improper two-liter Space Cola"
 	desc = "Cola. In space. Contains caffeine."
 	icon_state = "colabottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cola/Initialize()
 	. = ..()
@@ -480,7 +517,8 @@
 	name = "\improper two-liter Space Cola Free"
 	desc = "Cola. In space. Caffeine free."
 	icon_state = "decafcolabottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/decaf_cola/Initialize()
 	. = ..()
@@ -490,7 +528,8 @@
 	name = "\improper two-liter Space-Up"
 	desc = "Tastes like a hull breach in your mouth."
 	icon_state = "space-up_bottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/space_up/Initialize()
 	. = ..()
@@ -500,7 +539,8 @@
 	name = "\improper two-liter Space Mountain Wind"
 	desc = "Blows right through you like a space wind. Contains caffeine."
 	icon_state = "space_mountain_wind_bottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/space_mountain_wind/Initialize()
 	. = ..()
@@ -510,7 +550,8 @@
 	name = "\improper two-liter Dr. Gibb"
 	desc = "A delicious mixture of 42 different flavors. Contains caffeine."
 	icon_state = "dr_gibb_bottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/dr_gibb/Initialize()
 	. = ..()
@@ -521,7 +562,8 @@
 	desc = "Full of vitamins and deliciousness!"
 	icon_state = "orangejuice"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=7)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 	isGlass = 0
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice/Initialize()
@@ -533,7 +575,8 @@
 	desc = "Squeezed, pressed and ground to perfection!"
 	icon_state = "applejuice"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=7)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 	isGlass = 0
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/applejuice/Initialize()
@@ -545,7 +588,8 @@
 	desc = "It's milk. This carton's large enough to serve your biggest milk drinkers."
 	icon_state = "milk"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=9)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 9 //CHOMPEdit
 	isGlass = 0
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/milk/Initialize()
@@ -557,7 +601,8 @@
 	desc = "It's cream. Made from milk. What else did you think you'd find in there?"
 	icon_state = "cream"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=8)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 	isGlass = 0
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cream/Initialize()
@@ -569,7 +614,8 @@
 	desc = "Well, at least it LOOKS like tomato juice. You can't tell with all that redness."
 	icon_state = "tomatojuice"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=8)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 	isGlass = 0
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/tomatojuice/Initialize()
@@ -581,7 +627,8 @@
 	desc = "Sweet-sour goodness."
 	icon_state = "limejuice"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=8)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 	isGlass = 0
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/limejuice/Initialize()
@@ -593,7 +640,8 @@
 	desc = "Sweet-sour goodness. Minus the sweet."
 	icon_state = "lemonjuice"
 	item_state = "carton"
-	center_of_mass = list("x"=16, "y"=8)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 	isGlass = 0
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/lemonjuice/Initialize()
@@ -604,7 +652,8 @@
 	name = "Briar Rose Grenadine Syrup"
 	desc = "Sweet and tangy, a bar syrup used to add color or flavor to drinks."
 	icon_state = "grenadinebottle"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/grenadine/Initialize()
 	. = ..()
@@ -614,7 +663,8 @@
 	name = "Special Blend Grapejuice"
 	desc = "A delicious blend of various grape species in one succulent blend."
 	icon_state = "grapejuicebottle"
-	center_of_mass = list("x"=16, "y"=3)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 3 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/grapejuice/Initialize()
 	. = ..()
@@ -633,7 +683,8 @@
 	desc = "A remarkably unremarkable pale lager. Barley malt, hops and yeast."
 	description_fluff = "Identical to an earlier Earth-based variety of beer, Spacer beer was rebranded at the height of humanity's first extra-solar colonization boom in the 2130s and become the go-to cheap booze for those dreaming of a brighter future in the stars. Today, the beer is advertised as 'brewed in space, for space."
 	icon_state = "beer"
-	center_of_mass = list("x"=16, "y"=12)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 12 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/Initialize()
 	. = ..()
@@ -665,7 +716,8 @@
 	name = "Crisp's Cider"
 	desc = "Fermented apples never tasted this good."
 	icon_state = "cider"
-	center_of_mass = list("x"=16, "y"=12)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 12 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/small/cider/Initialize()
 	. = ..()
@@ -676,7 +728,8 @@
 	desc = "A true dorf's drink of choice."
 	icon_state = "alebottle"
 	item_state = "beer"
-	center_of_mass = list("x"=16, "y"=10)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale/Initialize()
 	. = ..()
@@ -698,7 +751,8 @@
 	name = "Space Cola"
 	desc = "Cola. In space."
 	icon_state = "colabottle2"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/small/cola/Initialize()
 	. = ..()
@@ -708,7 +762,8 @@
 	name = "Space-Up"
 	desc = "Tastes like a hull breach in your mouth."
 	icon_state = "space-up_bottle2"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/small/space_up/Initialize()
 	. = ..()
@@ -718,7 +773,8 @@
 	name = "Space Mountain Wind"
 	desc = "Blows right through you like a space wind."
 	icon_state = "space_mountain_wind_bottle2"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/small/space_mountain_wind/Initialize()
 	. = ..()
@@ -728,7 +784,8 @@
 	name = "Dr. Gibb"
 	desc = "A delicious mixture of 42 different flavors."
 	icon_state = "dr_gibb_bottle2"
-	center_of_mass = list("x"=16, "y"=6)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 6 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/small/dr_gibb/Initialize()
 	. = ..()

@@ -31,7 +31,7 @@
 	maxHealth = 125
 	health = 125
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-	movement_cooldown = 0.5 SECONDS
+	movement_cooldown = -1
 	heat_resist = -0.50
 	cold_resist = 0.75
 	melee_damage_lower = 15
@@ -56,6 +56,7 @@
 	say_list_type = /datum/say_list/savik
 	ai_holder_type = /datum/ai_holder/simple_mob/savik
 
+
 /datum/say_list/savik
 	speak = list("Hruuugh!","Hrunnph")
 	emote_see = list("paws the ground","shakes its mane","stomps")
@@ -79,7 +80,7 @@
 /mob/living/simple_mob/animal/sif/savik/verb/berserk()
 	set name = "Berserk"
 	set desc = "Enrage and become vastly stronger for a period of time, however you will be weaker afterwards."
-	set category = "Abilities"
+	set category = "Abilities.Savik" //CHOMPEdit
 
 	add_modifier(/datum/modifier/berserk, 30 SECONDS)
 

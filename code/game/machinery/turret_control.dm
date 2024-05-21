@@ -125,7 +125,7 @@
 /obj/machinery/turretid/tgui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "PortableTurret", name) // 500, 400
+		ui = new(user, src, "PortableTurret", name, ui_x = 500, ui_y = 400) // 500, 400
 		ui.open()
 
 /obj/machinery/turretid/tgui_data(mob/user)
@@ -194,7 +194,6 @@
 	TC.check_weapons = check_weapons
 	TC.check_anomalies = check_anomalies
 	TC.check_all = check_all
-	TC.check_down = check_down
 	TC.ailock = ailock
 
 	if(istype(control_area))

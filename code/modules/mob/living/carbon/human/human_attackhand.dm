@@ -42,7 +42,7 @@
 		if(H.hand)
 			temp = H.organs_by_name["l_hand"]
 		if(!temp || !temp.is_usable())
-			to_chat(H, "<font color='red'>You can't use your hand.</font>")
+			to_chat(H, "<span class='warning'>You can't use your hand.</span>")
 			return
 	if(H.lying)
 		return
@@ -57,7 +57,7 @@
 			if(!hit_zone)
 				H.do_attack_animation(src)
 				playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-				visible_message("<font color='red'><B>[H] reaches for [src], but misses!</B></font>")
+				visible_message("<span class='filter_combat'>[span_red("<B>[H] reaches for [src], but misses!</B>")]</span>")
 				return FALSE
 
 		if(H != src && check_shields(0, null, H, H.zone_sel.selecting, H.name))
@@ -75,7 +75,7 @@
 			if (istype(H) && attempt_to_scoop(H))
 				return 0;
 			// VOREStation Edit - End
-			if(istype(H) && health < config.health_threshold_crit)
+			if(istype(H) && health < CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
 				if(!H.check_has_mouth())
 					to_chat(H, "<span class='danger'>You don't have a mouth, you cannot perform CPR!</span>")
 					return
@@ -104,7 +104,7 @@
 				H.visible_message("<span class='danger'>\The [H] performs CPR on \the [src]!</span>")
 				to_chat(H, "<span class='warning'>Repeat at least every 7 seconds.</span>")
 
-				if(istype(H) && health > config.health_threshold_dead)
+				if(istype(H) && health > CONFIG_GET(number/health_threshold_dead)) // CHOMPEdit
 					adjustOxyLoss(-(min(getOxyLoss(), 5)))
 					updatehealth()
 					to_chat(src, "<span class='notice'>You feel a breath of fresh air enter your lungs. It feels good.</span>")
@@ -313,6 +313,7 @@
 				apply_effect(3, WEAKEN, armor_check)
 				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 				if(armor_check < 60)
+					drop_both_hands()	// CHOMPEdit - We've been pushed! Drop our stuff as well
 					visible_message("<span class='danger'>[M] has pushed [src]!</span>")
 				else
 					visible_message("<span class='warning'>[M] attempted to push [src]!</span>")
@@ -333,7 +334,7 @@
 						return
 
 			playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-			visible_message("<font color='red'> <B>[M] attempted to disarm [src]!</B></font>")
+			visible_message("<span class='filter_combat'>[span_red("<B>[M] attempted to disarm [src]!</B>")]</span>")
 	return
 
 /mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)
@@ -426,9 +427,9 @@
 	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 
 	if(user == src)
-		user.visible_message("\The [user] starts applying pressure to [TU.his] [organ.name]!", "You start applying pressure to your [organ.name]!")
+		user.visible_message("<span class='filter_notice'>\The [user] starts applying pressure to [TU.his] [organ.name]!</span>", "<span class='filter_notice'>You start applying pressure to your [organ.name]!</span>")
 	else
-		user.visible_message("\The [user] starts applying pressure to [src]'s [organ.name]!", "You start applying pressure to [src]'s [organ.name]!")
+		user.visible_message("<span class='filter_notice'>\The [user] starts applying pressure to [src]'s [organ.name]!</span>", "<span class='filter_notice'>You start applying pressure to [src]'s [organ.name]!</span>")
 	spawn(0)
 		organ.applied_pressure = user
 
@@ -438,15 +439,15 @@
 		organ.applied_pressure = null
 
 		if(user == src)
-			user.visible_message("\The [user] stops applying pressure to [TU.his] [organ.name]!", "You stop applying pressure to your [organ]!")
+			user.visible_message("\<span class='filter_notice'>The [user] stops applying pressure to [TU.his] [organ.name]!</span>", "<span class='filter_notice'>You stop applying pressure to your [organ]!</span>")
 		else
-			user.visible_message("\The [user] stops applying pressure to [src]'s [organ.name]!", "You stop applying pressure to [src]'s [organ.name]!")
+			user.visible_message("<span class='filter_notice'>\The [user] stops applying pressure to [src]'s [organ.name]!</span>", "<span class='filter_notice'>You stop applying pressure to [src]'s [organ.name]!</span>")
 
 	return TRUE
 
 /mob/living/carbon/human/verb/check_attacks()
 	set name = "Check Attacks"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set src = usr
 
 	var/dat = "<b><font size = 5>Known Attacks</font></b><br/><br/>"

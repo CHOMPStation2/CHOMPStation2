@@ -53,6 +53,9 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	pathweight = 100000 //Seriously, don't try and path over this one numbnuts
 	dynamic_lighting = 0 // Someday lets do proper lighting z-transfer.  Until then we are leaving this off so it looks nicer.
 	can_build_into_floor = TRUE
+	can_dirty = FALSE // It's open space
+	can_start_dirty = FALSE
+	turf_path_danger = TURF_PATH_DANGER_FALL //CHOMPEdit
 
 /turf/simulated/open/vacuum
 	oxygen = 0
@@ -94,6 +97,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 /turf/simulated/open/update_icon()
 	cut_overlays()
 	update_icon_edge()
+	add_overlay(GLOB.openspace_backdrop_one_for_all, TRUE) //Special grey square for projecting backdrop darkness filter on it. //ChompEDIT - add this on icon update.
 
 // Straight copy from space.
 /turf/simulated/open/attackby(obj/item/C as obj, mob/user as mob)

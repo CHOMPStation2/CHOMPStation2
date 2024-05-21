@@ -2,18 +2,21 @@
 //I don't know what the hell I'm doing right now. Please help. Especially with the update_icons stuff. -Joan Risu
 
 /obj/vehicle/train/rover/engine
-	name = "NT Humvee"
-	desc = "The NT version of the UF T-41LV, a Federation recon vehicle used as a personal transport. Can be latched to a trolly to transport equipment. "
+	name = "\improper NT T-41LV Humvee" //ChompEDIT
+	desc = "The corporate market model of the UF T-41LV, a SolGov reconnaissance and exploration vehicle, painted in Nanotrasen blue. Trailers can be latched for transporting heavy equipment, though its performance will noticeably degrade with more than one." //ChompEDIT
 	icon = 'icons/vore/rover_vr.dmi'
 	icon_state = "rover"
+	light_power = 2 // CHOMPedit: 1 to 2, more light range.
+	light_range = 6 // CHOMPedit: 3 to 6, more light range.
 	on = 0
 	powered = 1
 	locked = 0
-	move_delay = 0.5
+	move_delay = 0.2	//CHOMPedit: Move delay reduced from 0.5 to 0.2.
+	charge_use = 2.5	//CHOMPedit: Reduced from 5 to 2.5 for more fuel efficiency, being a dedicated transport vehicle.
 
 	//Health stuff
-	health = 100
-	maxhealth = 100
+	health = 250	// CHOMPedit: 100 to 250. Cars are usually just a bit tougher than humans.
+	maxhealth = 250	// CHOMPedit: Cars are usually just a bit tougher than humans.
 	fire_dam_coeff = 0.6
 	brute_dam_coeff = 0.5
 
@@ -22,22 +25,21 @@
 	pixel_x = -8
 	pixel_y = -8
 
-
-	var/car_limit = 0	//how many cars an engine can pull before performance degrades. This should be 0 to prevent trailers from unhitching.
+	var/car_limit = 1	//how many cars an engine can pull before performance degrades. This should be 0 to prevent trailers from unhitching.
+						//CHOMPedit: Set to 1 because the thing slows down to a crawl with even one trailer. Unhitching doesn't occur at regular movement speeds, or even at faster speeds than base.
 	active_engines = 1
 	var/obj/item/weapon/key/rover/key
 	var/siren = 0 //This is for eventually getting the siren sprite to work.
 
-	dunebuggy
-		name = "Research Dune Buggy"
-		desc = "A Dune Buggy developed for asteroid exploration and transportation. It has a sticker that says to wear EVA suits if used in space."
-		icon = 'icons/vore/rover_vr.dmi'
-		icon_state = "dunebug"
-
+/obj/vehicle/train/rover/engine/dunebuggy
+	name = "Research Dune Buggy"
+	desc = "A Dune Buggy developed for asteroid exploration and transportation. It has a sticker that says to wear EVA suits if used in space."
+	icon = 'icons/vore/rover_vr.dmi'
+	icon_state = "dunebug"
 
 /obj/item/weapon/key/rover
-	name = "The Rover key"
-	desc = "The Rover key used to start it."
+	name = "\improper ignition key" //CHOMPedit: Name update
+	desc = "A universal electronic tri-key for starting most Nanotrasen vehicles." //CHOMPedit: Desc update
 	icon = 'icons/obj/vehicles_vr.dmi'
 	icon_state = "securikey"
 	w_class = ITEMSIZE_TINY
@@ -100,8 +102,9 @@
 
 //cargo trains are open topped, so there is a chance the projectile will hit the mob ridding the train instead
 /obj/vehicle/train/rover/bullet_act(var/obj/item/projectile/Proj)
-	if(buckled_mob && prob(70))
-		buckled_mob.bullet_act(Proj)
+	if(has_buckled_mobs() && prob(70))
+		var/mob/living/L = pick(buckled_mobs)
+		L.bullet_act(Proj)
 		return
 	..()
 
@@ -173,7 +176,7 @@
 
 /obj/vehicle/train/rover/trolley/RunOver(var/mob/living/M)
 	..()
-	attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey])</font>")
+	attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey])")]")
 
 /obj/vehicle/train/rover/engine/RunOver(var/mob/living/M)
 	..()
@@ -183,9 +186,9 @@
 		to_chat(D, "<span class='danger'>You ran over \the [M]!</span>")
 		visible_message("<span class='danger'>\The [src] ran over \the [M]!</span>")
 		add_attack_logs(D,M,"Ran over with [src.name]")
-		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])</font>")
+		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])")]")
 	else
-		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey])</font>")
+		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey])")]")
 
 
 //-------------------------------------------
@@ -213,7 +216,7 @@
 
 /obj/vehicle/train/rover/engine/verb/start_engine()
 	set name = "Start engine"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -234,7 +237,7 @@
 
 /obj/vehicle/train/rover/engine/verb/stop_engine()
 	set name = "Stop engine"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -250,7 +253,7 @@
 
 /obj/vehicle/train/rover/engine/verb/remove_key()
 	set name = "Remove key"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -389,7 +392,7 @@
 	else
 		move_delay = max(0, (-car_limit * active_engines) + train_length - active_engines)	//limits base overweight so you cant overspeed trains
 		move_delay *= (1 / max(1, active_engines)) * 2 										//overweight penalty (scaled by the number of engines)
-		move_delay += config.run_speed 														//base reference speed
+		move_delay += 1 														//base reference speed //CHOMPedit: Move-delay from server config (2) to 1.
 		move_delay *= 1.1																	//makes cargo trains 10% slower than running when not overweight
 
 /obj/vehicle/train/rover/trolley/update_car(var/train_length, var/active_engines)

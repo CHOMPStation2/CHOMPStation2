@@ -13,12 +13,12 @@
 	maxHealth = 200
 	health = 200
 
-	movement_cooldown = 2
+	movement_cooldown = -1.5
 	see_in_dark = 10 //SHADEkin
 	has_hands = TRUE //Pawbs
 	seedarkness = FALSE //SHAAAADEkin
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_SHADEKIN)
+	has_langs = list(LANGUAGE_GALCOM, LANGUAGE_SHADEKIN)
 
 	melee_damage_lower = 10
 	melee_damage_upper = 20
@@ -79,6 +79,9 @@
 	var/check_for_observer = FALSE
 	var/check_timer = 0
 
+	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
+	var/list/active_dark_maws = list()
+
 /mob/living/simple_mob/shadekin/Initialize()
 	//You spawned the prototype, and want a totally random one.
 	if(type == /mob/living/simple_mob/shadekin)
@@ -94,7 +97,7 @@
 		var/new_type = pickweight(sk_types)
 
 		new new_type(loc)
-		initialized = TRUE
+		flags |= ATOM_INITIALIZED //CHOMPEdit
 		return INITIALIZE_HINT_QDEL
 
 	if(icon_state == "map_example")
@@ -131,6 +134,8 @@
 
 	update_icon()
 
+	add_verb(src,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
+
 	return ..()
 
 /mob/living/simple_mob/shadekin/Destroy()
@@ -138,12 +143,15 @@
 	. = ..()
 
 /mob/living/simple_mob/shadekin/init_vore()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
 	if(LAZYLEN(vore_organs))
 		return
 
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode
@@ -169,7 +177,7 @@
 		)
 	B.emote_lists[DM_ABSORB] = list(
 		"The walls cling to you awfully close... It's almost like you're sinking into them.",
-		"You can feel the walls press in tightly against you, clinging to you posessively!",
+		"You can feel the walls press in tightly against you, clinging to you possessively!",
 		"It almost feels like you're sinking into the soft, doughy flesh!",
 		"You can feel the walls press in around you. Almost molten, so squishy!!"
 		)
@@ -198,7 +206,7 @@
 		density = FALSE
 
 	//Convert spare nutrition into energy at a certain ratio
-	if(. && nutrition > initial(nutrition) && energy < 100)
+	if(. && nutrition > initial(nutrition) && energy < 100 && !(ability_flags | AB_DARK_RESPITE)) //CHOMPEdit - Dark Respite
 		nutrition = max(0, nutrition-5)
 		energy = min(100,energy+1)
 	if(!client && check_for_observer && check_timer++ > 5)
@@ -212,7 +220,7 @@
 			phase_shift() // shifting back in, nobody present
 		else if (non_kin_count && !(ability_flags & AB_PHASE_SHIFTED))
 			phase_shift() // shifting out, scaredy
-				
+
 /mob/living/simple_mob/shadekin/update_icon()
 	. = ..()
 
@@ -223,24 +231,105 @@
 	add_overlay(tailimage)
 	add_overlay(eye_icon_state)
 
-/mob/living/simple_mob/shadekin/Stat()
-	. = ..()
-	if(statpanel("Shadekin"))
-		abilities_stat()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/shadekin/update_misc_tabs()
+	..()
+	var/list/L = list()
+	for(var/obj/effect/shadekin_ability/A as anything in shadekin_abilities)
+		var/client/C = client
+		var/img
+		if(C && istype(C)) //sanity checks
+			if(A.ability_name in C.misc_cache)
+				img = C.misc_cache[A.ability_name]
+			else
+				img = icon2html(A,C,sourceonly=TRUE)
+				C.misc_cache[A.ability_name] = img
 
-/mob/living/simple_mob/shadekin/proc/abilities_stat()
-	for(var/obj/effect/shadekin_ability/ability as anything in shadekin_abilities)
-		stat("[ability.ability_name]",ability.atom_button_text())
+		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.atom_button_text(), REF(A))
+	misc_tabs["Shadekin"] = L
+//ChompEDIT END
 
 //They phase back to the dark when killed
 /mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")
+	//CHOMPEdit Begin - Dark Respite
+	if(respite_activating)
+		return
+	//CHOMPEdit End
 	cut_overlays()
-	icon_state = ""
 	flick("tp_out",src)
-	spawn(1 SECOND)
-		qdel(src) //Back from whence you came!
 
-	. = ..(FALSE, deathmessage)
+	//CHOMPEdit Begin - Actually phase to the dark on death
+	var/area/current_area = get_area(src)
+	if((ability_flags & AB_DARK_RESPITE) || current_area.limit_dark_respite)
+		icon_state = ""
+		spawn(1 SECOND)
+			qdel(src) //Back from whence you came!
+
+		return ..(FALSE, deathmessage)
+
+
+	var/list/floors = list()
+	for(var/turf/unsimulated/floor/dark/floor in get_area_turfs(/area/shadekin))
+		floors.Add(floor)
+	if(!LAZYLEN(floors))
+		log_and_message_admins("[src] died outside of the dark but there were no valid floors to warp to")
+		icon_state = ""
+		spawn(1 SECOND)
+			qdel(src) //Back from whence you came!
+
+		return ..(FALSE, deathmessage)
+
+	src.visible_message("<b>\The [src.name]</b> [deathmessage]")
+	respite_activating = TRUE
+
+	drop_l_hand()
+	drop_r_hand()
+
+	energy = 0
+	ability_flags |= AB_DARK_RESPITE
+	invisibility = INVISIBILITY_LEVEL_TWO
+
+	adjustFireLoss(-(getFireLoss() / 2))
+	adjustBruteLoss(-(getBruteLoss() / 2))
+	adjustToxLoss(-(getToxLoss() / 2))
+	Stun(10)
+	movement_cooldown = 5
+	nutrition = 0
+
+	if(istype(src.loc, /obj/belly))
+		//Yay digestion... presumably...
+		var/obj/belly/belly = src.loc
+		add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
+		to_chat(belly.owner, "<span class='notice'>\The [src.name] suddenly vanishes within your [belly.name]</span>")
+		forceMove(pick(floors))
+		flick("tp_in",src)
+		respite_activating = FALSE
+		belly.owner.update_fullness()
+		clear_fullscreen("belly")
+		if(hud_used)
+			if(!hud_used.hud_shown)
+				toggle_hud_vis()
+		stop_sound_channel(CHANNEL_PREYLOOP)
+
+
+		spawn(10 MINUTES)
+			ability_flags &= ~AB_DARK_RESPITE
+			movement_cooldown = initial(movement_cooldown)
+			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+	else
+		spawn(1 SECOND)
+			respite_activating = FALSE
+			forceMove(pick(floors))
+			update_icon()
+			flick("tp_in",src)
+			invisibility = initial(invisibility)
+			respite_activating = FALSE
+
+		spawn(15 MINUTES)
+			ability_flags &= ~AB_DARK_RESPITE
+			movement_cooldown = initial(movement_cooldown)
+			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+	//CHOMPEdit End
 
 /* //VOREStation AI Temporary Removal
 //Blue-eyes want to nom people to heal them
@@ -318,6 +407,10 @@
 
 	if(energy_adminbuse)
 		energy = 100
+	//CHOMPEdit Begin - Dark Respite
+	if(ability_flags & AB_DARK_RESPITE)
+		energy = 0
+	//CHOMPEdit End
 
 	//Update turf darkness hud
 	if(darkhud)

@@ -24,7 +24,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/rifle
 	name = "rifle cabinet"
-	req_one_access = list(access_explorer,access_brig)
+	req_one_access = list(access_explorer,access_brig) //CHOMP explo keep
 
 	starts_with = list(
 		/obj/item/ammo_magazine/clip/c762/hunter = 9,
@@ -38,8 +38,8 @@
 	return ..()
 
 /obj/structure/closet/secure_closet/guncabinet/phase
-	name = "explorer weapon cabinet"
-	req_one_access = list(access_explorer,access_brig)
+	name = "explorer weapon cabinet" //CHOMP explo keep
+	req_one_access = list(access_explorer,access_brig) //CHOMP explo keep
 
 	starts_with = list(
 		/obj/item/weapon/gun/energy/locked/phasegun = 2,
@@ -51,8 +51,8 @@
  * Explorer
  */
 /obj/structure/closet/secure_closet/explorer
-	name = "explorer locker"
-	req_access = list(access_explorer)
+	name = "explorer locker" //CHOMP explo keep
+	req_access = list(access_explorer) //CHOMP explo keep
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/explorer
 
 	starts_with = list(
@@ -93,12 +93,14 @@
  */
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder locker"
-	req_access = list(access_pathfinder)
+	req_access = list(access_pathfinder) //CHOMP explo keep
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
 
 	starts_with = list(
 		/obj/item/clothing/under/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer,
+		/obj/item/clothing/suit/armor/pcarrier/explorer/light, //CHOMPADD
+		/obj/item/clothing/head/helmet/explorer, //CHOMPADD
 		/obj/item/clothing/mask/gas/explorer,
 		/obj/item/weapon/storage/belt/explorer/pathfinder,
 		/obj/item/clothing/shoes/boots/winter/explorer,
@@ -125,9 +127,11 @@
 
 /obj/structure/closet/secure_closet/pathfinder/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack
+		starts_with += /obj/item/weapon/storage/backpack/explorer //CHOMPEDIT
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
+		starts_with += /obj/item/weapon/storage/backpack/satchel/explorer //CHOMPEDIT START
+	if(prob(50))
+		starts_with += /obj/item/weapon/storage/backpack/dufflebag/explorer //CHOMPEDIT STOP
 	return ..()
 
 /*
@@ -193,7 +197,7 @@
 	starts_with = list(
 		/obj/item/weapon/storage/backpack/parachute,
 		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/gun/energy/locked/frontier/holdout,
+		/obj/item/weapon/gun/energy/locked/frontier/holdout, //CHOMP explo keep
 		/obj/item/clothing/head/pilot_vr,
 		/obj/item/clothing/under/rank/pilot1,
 		/obj/item/clothing/suit/storage/toggle/bomber/pilot,
@@ -211,7 +215,10 @@
 		/obj/item/weapon/cell/device,
 		/obj/item/device/radio,
 		/obj/item/device/gps/explorer,
-		/obj/item/device/cataloguer/compact)
+		/obj/item/device/cataloguer/compact, //CHOMP edit
+	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
+		/obj/item/clothing/gloves/watch/survival
+		)
 
 /obj/structure/closet/secure_closet/pilot/Initialize()
 	if(prob(50))

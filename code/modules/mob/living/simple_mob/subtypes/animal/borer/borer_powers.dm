@@ -1,5 +1,5 @@
 /mob/living/simple_mob/animal/borer/verb/release_host()
-	set category = "Abilities"
+	set category = "Abilities.Borer" //CHOMPEdit
 	set name = "Release Host"
 	set desc = "Slither out of your host."
 
@@ -11,7 +11,7 @@
 		to_chat(src, "You cannot leave your host in your current state.")
 
 	if(docile)
-		to_chat(src, "<font color='blue'>You are feeling far too docile to do that.</font>")
+		to_chat(src, span_blue("You are feeling far too docile to do that."))
 		return
 
 	if(!host || !src) return
@@ -39,7 +39,7 @@
 		leave_host()
 
 /mob/living/simple_mob/animal/borer/verb/infest()
-	set category = "Abilities"
+	set category = "Abilities.Borer" //CHOMPEdit
 	set name = "Infest"
 	set desc = "Infest a suitable humanoid host."
 
@@ -127,7 +127,7 @@
 
 /*
 /mob/living/simple_mob/animal/borer/verb/devour_brain()
-	set category = "Abilities"
+	set category = "Abilities.Borer" //CHOMPEdit
 	set name = "Devour Brain"
 	set desc = "Take permanent control of a dead host."
 
@@ -165,12 +165,12 @@
 	H.add_language("Cortical Link")
 
 	if(host.stat == 2)
-		H.verbs |= /mob/living/carbon/human/proc/jumpstart
+		add_verb(H,/mob/living/carbon/human/proc/jumpstart) //CHOMPEdit TGPanel
 
-	H.verbs |= /mob/living/carbon/human/proc/psychic_whisper
-	H.verbs |= /mob/living/carbon/human/proc/tackle
+	add_verb(H,/mob/living/carbon/human/proc/psychic_whisper) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/carbon/human/proc/tackle) //CHOMPEdit TGPanel
 	if(antag)
-		H.verbs |= /mob/living/carbon/proc/spawn_larvae
+		add_verb(H,/mob/living/carbon/proc/spawn_larvae) //CHOMPEdit TGPanel
 
 	if(H.client)
 		H.ghostize(0)
@@ -200,7 +200,7 @@
 		H.lastKnownIP = s2h_ip
 
 /mob/living/simple_mob/animal/borer/verb/secrete_chemicals()
-	set category = "Abilities"
+	set category = "Abilities.Borer" //CHOMPEdit
 	set name = "Secrete Chemicals"
 	set desc = "Push some chemicals into your host's bloodstream."
 
@@ -212,7 +212,7 @@
 		to_chat(src, "You cannot secrete chemicals in your current state.")
 
 	if(docile)
-		to_chat(src, "<font color='blue'>You are feeling far too docile to do that.</font>")
+		to_chat(src, span_blue("You are feeling far too docile to do that."))
 		return
 
 	if(chemicals < 50)
@@ -223,12 +223,12 @@
 	if(!chem || chemicals < 50 || !host || controlling || !src || stat) //Sanity check.
 		return
 
-	to_chat(src, "<font color='red'><B>You squirt a measure of [chem] from your reservoirs into [host]'s bloodstream.</B></font>")
+	to_chat(src, span_red("<B>You squirt a measure of [chem] from your reservoirs into [host]'s bloodstream.</B>"))
 	host.reagents.add_reagent(chem, 10)
 	chemicals -= 50
 
 /mob/living/simple_mob/animal/borer/verb/dominate_victim()
-	set category = "Abilities"
+	set category = "Abilities.Borer" //CHOMPEdit
 	set name = "Paralyze Victim"
 	set desc = "Freeze the limbs of a potential host with supernatural fear."
 
@@ -261,14 +261,14 @@
 		to_chat(src, "You cannot infest someone who is already infested!")
 		return
 
-	to_chat(src, "<font color='red'>You focus your psychic lance on [M] and freeze their limbs with a wave of terrible dread.</font>")
-	to_chat(M, "<font color='red'>You feel a creeping, horrible sense of dread come over you, freezing your limbs and setting your heart racing.</font>")
+	to_chat(src, span_red("You focus your psychic lance on [M] and freeze their limbs with a wave of terrible dread."))
+	to_chat(M, span_red("You feel a creeping, horrible sense of dread come over you, freezing your limbs and setting your heart racing."))
 	M.Weaken(10)
 
 	used_dominate = world.time
 
 /mob/living/simple_mob/animal/borer/verb/bond_brain()
-	set category = "Abilities"
+	set category = "Abilities.Borer" //CHOMPEdit
 	set name = "Assume Control"
 	set desc = "Fully connect to the brain of your host."
 
@@ -281,7 +281,7 @@
 		return
 
 	if(docile)
-		to_chat(src, "<font color='blue'>You are feeling far too docile to do that.</font>")
+		to_chat(src, span_blue("You are feeling far too docile to do that."))
 		return
 
 	to_chat(src, "You begin delicately adjusting your connection to the host brain...")
@@ -292,8 +292,8 @@
 			return
 		else
 
-			to_chat(src, "<font color='red'><B>You plunge your probosci deep into the cortex of the host brain, interfacing directly with their nervous system.</B></font>")
-			to_chat(host, "<font color='red'><B>You feel a strange shifting sensation behind your eyes as an alien consciousness displaces yours.</B></font>")
+			to_chat(src, span_red("<B>You plunge your probosci deep into the cortex of the host brain, interfacing directly with their nervous system.</B>"))
+			to_chat(host, span_red("<B>You feel a strange shifting sensation behind your eyes as an alien consciousness displaces yours.</B>"))
 			host.add_language("Cortical Link")
 
 			// host -> brain
@@ -331,15 +331,15 @@
 
 			controlling = 1
 
-			host.verbs += /mob/living/carbon/proc/release_control
-			host.verbs += /mob/living/carbon/proc/punish_host
+			add_verb(host,/mob/living/carbon/proc/release_control)  //CHOMPEdit
+			add_verb(host,/mob/living/carbon/proc/punish_host)  //CHOMPEdit
 			if(antag)
-				host.verbs += /mob/living/carbon/proc/spawn_larvae
+				add_verb(host,/mob/living/carbon/proc/spawn_larvae)  //CHOMPEdit
 
 			return
 
 /mob/living/carbon/human/proc/jumpstart()
-	set category = "Abilities"
+	set category = "Abilities.Borer" //CHOMPEdit
 	set name = "Revive Host"
 	set desc = "Send a jolt of electricity through your host, reviving them."
 
@@ -347,7 +347,7 @@
 		to_chat(usr, "Your host is already alive.")
 		return
 
-	verbs -= /mob/living/carbon/human/proc/jumpstart
+	remove_verb(src,/mob/living/carbon/human/proc/jumpstart) //CHOMPEdit TGPanel
 	visible_message("<span class='warning'>With a hideous, rattling moan, [src] shudders back to life!</span>")
 
 	rejuvenate()

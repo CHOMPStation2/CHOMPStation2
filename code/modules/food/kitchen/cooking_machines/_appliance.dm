@@ -41,6 +41,7 @@
 	var/container_type = null
 
 	var/combine_first = FALSE // If TRUE, this appliance will do combination cooking before checking recipes
+	var/food_safety = FALSE	//RS ADD - If true, the appliance automatically ejects food instead of burning it
 
 /obj/machinery/appliance/Initialize()
 	. = ..()
@@ -157,12 +158,12 @@
 	if (stat & POWEROFF)//Its turned off
 		stat &= ~POWEROFF
 		use_power = 1
-		user.visible_message("[user] turns [src] on.", "You turn on [src].")
+		user.visible_message("<span class='filter_notice'>[user] turns [src] on.</span>", "<span class='filter_notice'>You turn on [src].</span>")
 
 	else //Its on, turn it off
 		stat |= POWEROFF
 		use_power = 0
-		user.visible_message("[user] turns [src] off.", "You turn off [src].")
+		user.visible_message("<span class='filter_notice'>[user] turns [src] off.</span>", "<span class='filter_notice'>You turn off [src].</span>")
 		cooking = FALSE // Stop cooking here, too, just in case.
 
 	playsound(src, 'sound/machines/click.ogg', 40, 1)
@@ -180,14 +181,14 @@
 		return
 
 	if (!usr.IsAdvancedToolUser())
-		to_chat(usr, "You lack the dexterity to do that!")
+		to_chat(usr, "<span class='filter_notice'>You lack the dexterity to do that!</span>")
 		return
 
 	if (usr.stat || usr.restrained() || usr.incapacitated())
 		return
 
 	if (!Adjacent(usr) && !issilicon(usr))
-		to_chat(usr, "You can't adjust the [src] from this distance, get closer!")
+		to_chat(usr, "<span class='filter_notice'>You can't adjust the [src] from this distance, get closer!</span>")
 		return
 
 	if(output_options.len)
@@ -242,7 +243,7 @@
 	else if(istype(check, /obj/item/weapon/disk/nuclear))
 		to_chat(user, "<span class='warning'>You can't cook that.</span>")
 		return 0
-	else if(I.is_crowbar() || I.is_screwdriver() || istype(I, /obj/item/weapon/storage/part_replacer)) // You can't cook tools, dummy.
+	else if(I.has_tool_quality(TOOL_CROWBAR) || I.has_tool_quality(TOOL_SCREWDRIVER) || istype(I, /obj/item/weapon/storage/part_replacer)) // You can't cook tools, dummy.
 		return 0
 	else if(!istype(check) &&  !istype(check, /obj/item/weapon/holder))
 		to_chat(user, "<span class='warning'>That's not edible.</span>")
@@ -354,7 +355,7 @@
 	//Rescaling cooking work to avoid insanely long times for large things
 	var/buffer = CI.max_cookwork
 	CI.max_cookwork = 0
-	var/multiplier = 1
+	var/multiplier = 0.35
 	var/step = 4
 	while (buffer > step)
 		buffer -= step
@@ -404,7 +405,10 @@
 		finish_cooking(CI)
 
 	else if (!CI.burned && CI.cookwork > min(CI.max_cookwork * CI.overcook_mult, CI.max_cookwork + 30))
-		burn_food(CI)
+		if(!food_safety)
+			burn_food(CI)
+		else
+			eject(CI, null)
 
 	// Gotta hurt.
 	for(var/obj/item/weapon/holder/H in CI.container.contents)
@@ -489,6 +493,10 @@
 	var/list/cooktypes = list()
 	var/datum/reagents/buffer = new /datum/reagents(1000)
 	var/totalcolour
+	var/reagents_determine_color
+
+	if(!LAZYLEN(CI.container.contents))	// It's possible to make something, such as a cake in the oven, with only reagents. This stops them from being grey and sad.
+		reagents_determine_color = TRUE
 
 	for (var/obj/item/I in CI.container)
 		var/obj/item/weapon/reagent_containers/food/snacks/S
@@ -526,6 +534,13 @@
 	var/obj/item/weapon/reagent_containers/food/snacks/result = new cook_path(CI.container)
 	buffer.trans_to_holder(result.reagents, buffer.total_volume) //trans_to doesn't handle food items well, so
 																 //just call trans_to_holder instead
+
+	// Reagent-only foods.
+	if(reagents_determine_color)
+		totalcolour = result.reagents.get_color()
+
+		for(var/datum/reagent/reag in result.reagents.reagent_list)
+			words |= text2list(reag.name, " ")
 
 	//Filling overlay
 	var/image/I = image(result.icon, "[result.icon_state]_filling")
@@ -595,7 +610,7 @@
 /obj/machinery/appliance/attack_hand(var/mob/user)
 	if(..())
 		return
-	
+
 	if(cooking_objs.len)
 		removal_menu(user)
 
@@ -633,7 +648,15 @@
 		delete = 0
 	else//If the container is empty OR contains more than one thing, then we must extract the container
 		thing = CI.container
-	if (!user || !user.put_in_hands(thing))
+
+	if (user)
+		if(!user.put_in_hands(thing))
+			thing.forceMove(get_turf(src))
+	else if(istype(thing, /obj/item/weapon/reagent_containers/cooking_container))
+		var/obj/item/weapon/reagent_containers/cooking_container/cc = thing
+		cc.do_empty()
+		delete = 0
+	else
 		thing.forceMove(get_turf(src))
 
 	if (delete)
@@ -641,7 +664,13 @@
 		qdel(CI)
 	else
 		CI.reset()//reset instead of deleting if the container is left inside
-	user.visible_message("<span class='notice'>\The [user] remove \the [thing] from \the [src].</span>")
+
+	if(user)
+		user.visible_message("<span class='notice'>\The [user] remove \the [thing] from \the [src].</span>")
+	else
+		src.visible_message("<b>\The [src]</b> pings as it automatically ejects its contents!")
+		if(cooked_sound)
+			playsound(get_turf(src), cooked_sound, 50, 1)
 
 /obj/machinery/appliance/proc/cook_mob(var/mob/living/victim, var/mob/user)
 	return
@@ -723,7 +752,7 @@
 /datum/cooking_item
 	var/max_cookwork
 	var/cookwork
-	var/overcook_mult = 3 // How long it takes to overcook. This is max_cookwork x overcook mult. If you're changing this, mind that at 3x, a max_cookwork of 30 becomes 90 ticks for the purpose of burning, and a max_cookwork of 4 only has 12 before burning!
+	var/overcook_mult = 6 // How long it takes to overcook. This is max_cookwork x overcook mult. If you're changing this, mind that at 3x, a max_cookwork of 30 becomes 90 ticks for the purpose of burning, and a max_cookwork of 4 only has 12 before burning! // CHOMPedit: doubled to 6
 	var/result_type = 0
 	var/obj/item/weapon/reagent_containers/cooking_container/container = null
 	var/combine_target = null
@@ -771,3 +800,16 @@
 	heating_power = initial(heating_power) + cap_rating * 25
 	cooking_power = cooking_coeff * (1 + (scan_rating + cap_rating) / 20) // 100% eff. becomes 120%, 140%, 160% w/ better parts, thus rewarding upgrading the appliances during your shift.
 	// to_world("RefreshParts returned cooking power of [cooking_power] during this step.") // Debug lines, uncomment if you need to test.
+
+
+/obj/machinery/appliance/verb/toggle_safety()
+	set name = "Toggle Safety"
+	set desc = "Toggles whether the appliance automatically ejects food when it starts to burn."
+	set category = "Object"
+	set src in view(1)
+
+	if(!isliving(usr))
+		return
+
+	food_safety = !food_safety
+	to_chat(usr, "<span class = 'notice'>You flip \the [src]'s safe mode switch. Safe mode is now [food_safety ? "on" : "off"].</span>")

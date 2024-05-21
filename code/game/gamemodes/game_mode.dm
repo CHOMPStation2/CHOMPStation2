@@ -59,23 +59,23 @@ var/global/list/additional_antag_types = list()
 		var/choice = ""
 		switch(href_list["set"])
 			if("shuttle_delay")
-				choice = input(usr, "Enter a new shuttle delay multiplier") as num
+				choice = tgui_input_number(usr, "Enter a new shuttle delay multiplier", null, null, 20, 1)
 				if(!choice || choice < 1 || choice > 20)
 					return
 				shuttle_delay = choice
 			if("antag_scaling")
-				choice = input(usr, "Enter a new antagonist cap scaling coefficient.") as num
+				choice = tgui_input_number(usr, "Enter a new antagonist cap scaling coefficient.", null, null, 100, 0)
 				if(isnull(choice) || choice < 0 || choice > 100)
 					return
 				antag_scaling_coeff = choice
 			if("event_modifier_moderate")
-				choice = input(usr, "Enter a new moderate event time modifier.") as num
+				choice = tgui_input_number(usr, "Enter a new moderate event time modifier.", null, null, 100, 0)
 				if(isnull(choice) || choice < 0 || choice > 100)
 					return
 				event_delay_mod_moderate = choice
 				refresh_event_modifiers()
 			if("event_modifier_severe")
-				choice = input(usr, "Enter a new moderate event time modifier.") as num
+				choice = tgui_input_number(usr, "Enter a new moderate event time modifier.", null, null, 100, 0)
 				if(isnull(choice) || choice < 0 || choice > 100)
 					return
 				event_delay_mod_major = choice
@@ -148,10 +148,10 @@ var/global/list/additional_antag_types = list()
 			playerC++
 
 	if(master_mode=="secret")
-		if(playerC < config.player_requirements_secret[config_tag])
+		if(playerC < CONFIG_GET(keyed_list/player_requirements_secret)[config_tag]) // CHOMPEdit
 			return 0
 	else
-		if(playerC < config.player_requirements[config_tag])
+		if(playerC < CONFIG_GET(keyed_list/player_requirements)[config_tag]) // CHOMPEdit
 			return 0
 
 	if(!(antag_templates && antag_templates.len))
@@ -218,6 +218,7 @@ var/global/list/additional_antag_types = list()
 		emergency_shuttle.auto_recall = 1
 
 	feedback_set_details("round_start","[time2text(world.realtime)]")
+	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart)) // CHOMPEdit
 	if(ticker && ticker.mode)
 		feedback_set_details("game_mode","[ticker.mode]")
 	feedback_set_details("server_ip","[world.internet_address]:[world.port]")
@@ -272,7 +273,7 @@ var/global/list/additional_antag_types = list()
 		for(var/datum/antagonist/antag in antag_templates)
 			if(!antag.antags_are_dead())
 				return 0
-		if(config.continous_rounds)
+		if(CONFIG_GET(flag/continuous_rounds)) // CHOMPEdit
 			emergency_shuttle.auto_recall = 0
 			return 0
 		return 1
@@ -348,7 +349,7 @@ var/global/list/additional_antag_types = list()
 					escaped_on_pod_large_2++
 				if(M_area_type == /area/shuttle/cryo/centcom) //CHOMP Add
 					escaped_on_cryopod++
-				
+
 
 
 			if(isobserver(M))
@@ -397,11 +398,11 @@ var/global/list/additional_antag_types = list()
 
 	send2mainirc("A round of [src.name] has ended - [surviving_total] survivors, [ghosts] ghosts.")
 	SSwebhooks.send(
-		WEBHOOK_ROUNDEND, 
+		WEBHOOK_ROUNDEND,
 		list(
-			"survivors" = surviving_total, 
-			"escaped" = escaped_total, 
-			"ghosts" = ghosts, 
+			"survivors" = surviving_total,
+			"escaped" = escaped_total,
+			"ghosts" = ghosts,
 			"clients" = clients
 		)
 	)
@@ -471,7 +472,7 @@ var/global/list/additional_antag_types = list()
 
 /datum/game_mode/proc/create_antagonists()
 
-	if(!config.traitor_scaling)
+	if(!CONFIG_GET(flag/traitor_scaling)) // CHOMPEdit
 		antag_scaling_coeff = 0
 
 	if(antag_tags && antag_tags.len)
@@ -508,15 +509,15 @@ var/global/list/additional_antag_types = list()
 					found = 1
 					break
 			if(!found)
-				msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<font color='#ffcc00'><b>Disconnected</b></font>)\n"
+				msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] ([span_yellow("<b>Disconnected</b>")])\n"
 
 		if(L.ckey && L.client)
 			if(L.client.inactivity >= (ROUNDSTART_LOGOUT_REPORT_TIME / 2))	//Connected, but inactive (alt+tabbed or something)
-				msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<font color='#ffcc00'><b>Connected, Inactive</b></font>)\n"
+				msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] ([span_yellow("<b>Connected, Inactive</b>")])\n"
 				continue //AFK client
 			if(L.stat)
 				if(L.suiciding)	//Suicider
-					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (<font color='red'><b>Suicide</b></font>)\n"
+					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] ([span_red("<b>Suicide</b>")])\n"
 					continue //Disconnected client
 				if(L.stat == UNCONSCIOUS)
 					msg += "<b>[L.name]</b> ([L.ckey]), the [L.job] (Dying)\n"
@@ -530,18 +531,20 @@ var/global/list/additional_antag_types = list()
 			if(D.mind && (D.mind.original == L || D.mind.current == L))
 				if(L.stat == DEAD)
 					if(L.suiciding)	//Suicider
-						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (<font color='red'><b>Suicide</b></font>)\n"
+						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] ([span_red("<b>Suicide</b>")])\n"
 						continue //Disconnected client
 					else
 						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (Dead)\n"
 						continue //Dead mob, ghost abandoned
 				else
 					if(D.can_reenter_corpse)
-						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (<font color='red'><b>Adminghosted</b></font>)\n"
+						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] ([span_red("<b>Adminghosted</b>")])\n"
 						continue //Lolwhat
 					else
-						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] (<font color='red'><b>Ghosted</b></font>)\n"
+						msg += "<b>[L.name]</b> ([ckey(D.mind.key)]), the [L.job] ([span_red("<b>Ghosted</b>")])\n"
 						continue //Ghosted while alive
+
+			continue // CHOMPEdit: Escape infinite loop in case there's nobody connected. Shouldn't happen ever, but.
 
 	msg += "</span>" // close the span from right at the top
 
@@ -572,7 +575,7 @@ var/global/list/additional_antag_types = list()
 
 /mob/verb/check_round_info()
 	set name = "Check Round Info"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 
 	if(!ticker || !ticker.mode)
 		to_chat(usr, "<span class='warning'>Something is terribly wrong; there is no gametype.</span>")

@@ -16,13 +16,13 @@
 
 	show_stat_health = FALSE //We will do it ourselves
 
-	response_help = "pets the" //CHOMP Edit
-	response_disarm = "gently pushes aside the " //CHOMP Edit
-	response_harm = "hits the" //CHOMP Edit
+	response_help = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm = "hits"
 
-	harm_intent_damage = 3
-	melee_damage_lower = 5 //CHOMP Edit
-	melee_damage_upper = 5 //CHOMP Edit
+	harm_intent_damage = 2
+	melee_damage_lower = 5
+	melee_damage_upper = 5
 	attacktext = list("slashed")
 
 	min_oxy = 0
@@ -35,7 +35,7 @@
 	max_n2 = 0
 	minbodytemp = 0
 	maxbodytemp = 900
-	movement_cooldown = 2
+	movement_cooldown = -0.5 // Should mean that the little blurb about being quicker in blobform rings true. May need further adjusting.
 
 	var/mob/living/carbon/human/humanform
 	var/obj/item/organ/internal/nano/refactory/refactory
@@ -47,7 +47,7 @@
 	var/human_brute = 0
 	var/human_burn = 0
 
-	player_msg = "In this form, your health will regenerate as long as you have metal in you." //CHOMP Edit removed ventcrawl
+	player_msg = "In this form, you can move a little faster, your health will regenerate as long as you have metal in you, and you can ventcrawl!"
 
 	can_buckle = TRUE //Blobsurfing
 
@@ -63,10 +63,8 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-//		verbs |= /mob/living/proc/ventcrawl //CHOMP Removal
-		verbs |= /mob/living/proc/hide
-		verbs |= /mob/living/simple_mob/protean_blob/proc/rig_transform //CHOMP Addition
-		verbs |= /mob/living/proc/usehardsuit //CHOMP Addition
+		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	else
 		update_icon()
 
@@ -93,7 +91,7 @@
 	return "synthetic"
 
 /mob/living/simple_mob/protean_blob/get_available_emotes()
-	return global._robot_default_emotes
+	return global._robot_default_emotes.Copy()
 
 /mob/living/simple_mob/protean_blob/init_vore()
 	return //Don't make a random belly, don't waste your time
@@ -101,10 +99,12 @@
 /mob/living/simple_mob/protean_blob/isSynthetic()
 	return TRUE // yup
 
-/mob/living/simple_mob/protean_blob/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/protean_blob/get_status_tab_items()
+	. = ..()
 	if(humanform)
-		humanform.species.Stat(humanform)
+		humanform.species.update_misc_tabs(humanform)
+//ChompEDIT END
 
 /mob/living/simple_mob/protean_blob/update_icon()
 	if(humanform)
@@ -278,7 +278,7 @@
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,"<span class='vwarning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
 /mob/living/simple_mob/protean_blob/attack_target(var/atom/A)
 	if(refactory && istype(A,/obj/item/stack/material))
@@ -291,22 +291,6 @@
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
 			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
-	else if(isitem(A) && a_intent == "grab") //CHOMP Add all this block, down to I.forceMove.
-		var/obj/item/I = A
-		if(!vore_selected)
-			to_chat(src,"<span class='warning'>You either don't have a belly selected, or don't have a belly!</span>")
-			return FALSE
-		if(is_type_in_list(I,item_vore_blacklist) || I.anchored)
-			to_chat(src, "<span class='warning'>You can't eat this.</span>")
-			return
-
-		if(is_type_in_list(I,edible_trash) | adminbus_trash)
-			if(I.hidden_uplink)
-				to_chat(src, "<span class='warning'>You really should not be eating this.</span>")
-				message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>" : "null"])")
-				return
-		visible_message("<b>[name]</b> stretches itself over the [I], engulfing it whole!")
-		I.forceMove(vore_selected)
 	else
 		return ..()
 
@@ -323,20 +307,7 @@
 			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
 	else
 		return ..()
-		
-/mob/living/simple_mob/protean_blob/attack_hand(mob/living/L) //CHOMP Add this whole block.
-	if(L.get_effective_size() >= (src.get_effective_size() + 0.5) )
-		src.get_scooped(L)
-	else
-		..()
-		
-/mob/living/simple_mob/protean_blob/MouseDrop(var/atom/over_object) //CHOMP Add this whole block.
-	if(ishuman(over_object) && usr == src && src.Adjacent(over_object))
-		var/mob/living/carbon/human/H = over_object
-		get_scooped(H, TRUE)
-	else
-		return ..()
-		
+
 /mob/living/simple_mob/protean_blob/MouseEntered(location,control,params)
 	if(resting)
 		return
@@ -350,8 +321,6 @@ var/global/list/disallowed_protean_accessories = list(
 
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
-	if(loc == /obj/item/weapon/rig/protean) //CHOMP Add
-		return //CHOMP Add
 	if(!force && !isturf(loc))
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
@@ -391,10 +360,10 @@ var/global/list/disallowed_protean_accessories = list(
 	things_to_drop -= things_to_not_drop //Crunch the lists
 	things_to_drop -= organs //Mah armbs
 	things_to_drop -= internal_organs //Mah sqeedily spooch
-	for(var/obj/item/weapon/rig/protean/O in things_to_drop) //CHOMP Add
-		things_to_drop -= O //CHOMP Add
 
 	for(var/obj/item/I in things_to_drop) //rip hoarders
+		if(I.protean_drop_whitelist)
+			continue
 		drop_from_inventory(I)
 
 	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
@@ -414,6 +383,13 @@ var/global/list/disallowed_protean_accessories = list(
 	//Put our owner in it (don't transfer var/mind)
 	blob.ckey = ckey
 	blob.ooc_notes = ooc_notes
+	blob.ooc_notes_likes = ooc_notes_likes
+	blob.ooc_notes_dislikes = ooc_notes_dislikes
+	//CHOMPEdit Start
+	blob.ooc_notes_favs = ooc_notes_favs
+	blob.ooc_notes_maybes = ooc_notes_maybes
+	blob.ooc_notes_style = ooc_notes_style
+	//CHOMPEdit End
 	temporary_form = blob
 
 	//Mail them to nullspace
@@ -449,44 +425,11 @@ var/global/list/disallowed_protean_accessories = list(
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
 		if(istype(I, /obj/item/weapon/holder))
 			root.remove_from_mob(I)
-	
-//CHOMP Add start
-/mob/living/simple_mob/protean_blob/proc/rig_transform() //CHOMP Add this whole block.
-	set name = "Modify Form - Hardsuit"
-	set desc = "Allows a protean blob to solidify its form into one extremely similar to a hardsuit."
-	set category = "Abilities"
-
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
-		src.forceMove(get_turf(prig))
-		qdel(prig)
-		return
-
-	if(isturf(loc))
-		var/obj/item/weapon/rig/protean/prig = new(loc)
-		if(prig)
-			prig.forceMove(get_turf(src))
-			src.forceMove(prig)
-			return
-
-/mob/living/proc/usehardsuit()
-	set name = "Utilize Hardsuit Interface"
-	set desc = "Allows a protean blob to open hardsuit interface."
-	set category = "Abilities"
-
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
-		to_chat(src, "You attempt to interface with the [prig].")
-		prig.ui_interact(src, interactive_state)
-	else
-		to_chat(src, "You are not in RIG form.")
-//CHOMP Add end
 
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
 	if(!istype(blob))
 		return
-	if(blob.loc == /obj/item/weapon/rig/protean) //CHOMP Add
-		return //CHOMP Add
+
 	if(!force && !isturf(blob.loc))
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
@@ -529,6 +472,13 @@ var/global/list/disallowed_protean_accessories = list(
 	//Put our owner in it (don't transfer var/mind)
 	ckey = blob.ckey
 	ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
+	ooc_notes_likes = blob.ooc_notes_likes
+	ooc_notes_dislikes = blob.ooc_notes_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = blob.ooc_notes_favs
+	ooc_notes_maybes = blob.ooc_notes_maybes
+	ooc_notes_style = blob.ooc_notes_style
+	//CHOMPEdit End
 	temporary_form = null
 
 	//Transfer vore organs
@@ -551,3 +501,20 @@ var/global/list/disallowed_protean_accessories = list(
 
 	//Return ourselves in case someone wants it
 	return src
+
+/mob/living/simple_mob/protean_blob/CanStumbleVore(mob/living/target)
+	if(target == humanform)
+		return FALSE
+	return ..()
+
+/mob/living/simple_mob/protean_blob/CanStumbleVore(mob/living/target)
+	if(target == humanform)
+		return FALSE
+	return ..()
+
+/mob/living/carbon/human/CanStumbleVore(mob/living/target)
+	if(istype(target, /mob/living/simple_mob/protean_blob))
+		var/mob/living/simple_mob/protean_blob/PB = target
+		if(PB.humanform == src)
+			return FALSE
+	return ..()

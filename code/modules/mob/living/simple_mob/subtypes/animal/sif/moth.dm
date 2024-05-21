@@ -41,7 +41,7 @@
 
 	hovering = TRUE
 
-	movement_cooldown = 0.5
+	movement_cooldown = -1
 
 	melee_damage_lower = 5
 	melee_damage_upper = 10
@@ -119,8 +119,8 @@
 /mob/living/simple_mob/animal/sif/tymisian/Initialize()
 	. = ..()
 	smoke_spore = new
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/animal/sif/tymisian/handle_special()
 	..()

@@ -5,8 +5,9 @@
 	name = "size gun" //I have no idea why this was called shrink ray when this increased and decreased size.
 	desc = "A highly advanced ray gun with a knob on the side to adjust the size you desire. Warning: Do not insert into mouth."
 	icon = 'icons/obj/gun_vr.dmi'
-	icon_state = "sizegun"
+	icon_state = "sizegun-shrink100"
 	item_state = "sizegun"
+	var/initial_icon_state = "sizegun"
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns_vr.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns_vr.dmi')
 	fire_sound = 'sound/weapons/wave.ogg'
 	charge_cost = 240
@@ -24,11 +25,20 @@
 
 /obj/item/weapon/gun/energy/sizegun/New()
 	..()
-	verbs += .proc/select_size
+	verbs += /obj/item/weapon/gun/energy/sizegun/proc/select_size
+	verbs += /obj/item/weapon/gun/energy/sizegun/proc/spin_dial
 
 /obj/item/weapon/gun/energy/sizegun/attack_self(mob/user)
 	. = ..()
 	select_size()
+
+/obj/item/weapon/gun/energy/sizegun/proc/spin_dial()
+	set name = "Spin Size Dial"
+	set category = "Object"
+	set src in view(1)
+
+	size_set_to = (rand(25,200)) /100
+	usr.visible_message("<span class='warning'>\The [usr] spins the size dial to a random value!</span>","<span class='notice'>You spin the dial to a random value!</span>")
 
 /obj/item/weapon/gun/energy/sizegun/consume_next_projectile()
 	. = ..()
@@ -41,7 +51,7 @@
 	set category = "Object"
 	set src in view(1)
 
-	var/size_select = input(usr, "Put the desired size (25-200%), (1-600%) in dormitory areas.", "Set Size", size_set_to * 100) as num|null
+	var/size_select = tgui_input_number(usr, "Put the desired size (25-200%), (1-600%) in dormitory areas.", "Set Size", size_set_to * 100, 600, 1)
 	if(!size_select)
 		return //cancelled
 	//We do valid resize testing in actual firings because people move after setting these things.
@@ -64,19 +74,14 @@
 		else
 			ratio = max(round(ratio, 0.25) * 100, 25)
 
-		icon_state = "[initial(icon_state)]-[grow_mode][ratio]"
-		item_state = "[initial(icon_state)]-[grow_mode]"
+		icon_state = "[initial_icon_state]-[grow_mode][ratio]"
+		item_state = "[initial_icon_state]-[grow_mode]"
 
 	if(!ignore_inhands) update_held_icon()
 
 /obj/item/weapon/gun/energy/sizegun/examine(mob/user)
 	. = ..()
 	. += "<span class='info'>It is currently set at [size_set_to*100]%</span>"
-
-/obj/item/weapon/gun/energy/sizegun/old
-	desc = "A highly advanced ray gun with a knob on the side to adjust the size you desire. This one seems to be an older model, but still functional. Warning: Do not insert into mouth."
-	icon_state = "sizegun-old"
-	item_state = "sizegun-old"
 
 /obj/item/weapon/gun/energy/sizegun/admin
 	name = "modified size gun"
@@ -87,8 +92,9 @@
 	creature well beyond any conceivable size. Only a handfull of these \
 	exist in the known universe and they are \
 	exclusively owned by NanoTrasen for research purposes."
-	icon_state = "sizegun_admin"
+	icon_state = "sizegun_admin-shrink100"
 	item_state = "sizegun_admin"
+	initial_icon_state = "sizegun_admin"
 	charge_cost = 0
 	projectile_type = /obj/item/projectile/beam/sizelaser/admin
 
@@ -110,8 +116,9 @@
 	name = "alien size gun"
 	desc = "A strange looking ray gun weapon with an adjustor knob on the side. The design is alien, but it bares a striking resemblence to the older model size guns that NT uses for research."
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_sizegun)
-	icon_state = "sizegun-abductor"
+	icon_state = "sizegun-abductor-shrink100"
 	item_state = "sizegun-abductor"
+	initial_icon_state = "sizegun-abductor"
 	charge_cost = 0
 	projectile_type = /obj/item/projectile/beam/sizelaser/admin/alien
 
@@ -120,7 +127,7 @@
 	set category = "Object"
 	set src in view(1)
 
-	var/size_select = input(usr, "Put the desired size (1-600%)", "Set Size", size_set_to * 100) as num|null
+	var/size_select = tgui_input_number(usr, "Put the desired size (1-600%)", "Set Size", size_set_to * 100, 600, 1)
 	if(!size_select)
 		return //cancelled
 	size_set_to = clamp((size_select/100), 0, 1000) //eheh
@@ -141,6 +148,7 @@
 	damage = 0
 	check_armour = "laser"
 	var/set_size = 1 //Let's default to 100%
+	can_miss = FALSE
 
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	tracer_type = /obj/effect/projectile/tracer/xray
@@ -156,8 +164,8 @@
 				M.visible_message("<span class='warning'>\The [H]'s bracelet flashes and absorbs the beam!</span>","<span class='notice'>Your bracelet flashes and absorbs the beam!</span>")
 				return
 		if(!M.resize(set_size, uncapped = M.has_large_resize_bounds(), ignore_prefs = ignoring_prefs))
-			to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
-		M.updateicon()
+			to_chat(M, span_blue("The beam fires into your body, changing your size!"))
+		M.update_icon()
 		return
 	return 1
 
@@ -176,8 +184,8 @@
 
 		M.resize(set_size, uncapped = TRUE, ignore_prefs = TRUE) // Always ignores prefs, caution is advisable
 
-		to_chat(M, "<font color='blue'>The beam fires into your body, changing your size!</font>")
-		M.updateicon()
+		to_chat(M, span_blue("The beam fires into your body, changing your size!"))
+		M.update_icon()
 		return
 	return 1
 

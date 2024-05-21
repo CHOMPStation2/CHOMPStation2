@@ -4,7 +4,7 @@
 //switch verb so we don't spam up the verb lists with like, 3 verbs for this feature.
 /client/proc/admin_memo(task in list("write","show","delete"))
 	set name = "Memo"
-	set category = "Server"
+	set category = "Server.Admin" //CHOMPEdit
 	#ifndef ENABLE_MEMOS
 	return
 	#endif
@@ -18,7 +18,7 @@
 /client/proc/admin_memo_write()
 	var/savefile/F = new(MEMOFILE)
 	if(F)
-		var/memo = sanitize(input(src,"Type your memo\n(Leaving it blank will delete your current memo):","Write Memo",null) as null|message, extra = 0)
+		var/memo = sanitize(tgui_input_text(src,"Type your memo\n(Leaving it blank will delete your current memo):","Write Memo",null, multiline = TRUE, prevent_enter = TRUE), extra = 0)
 		switch(memo)
 			if(null)
 				return

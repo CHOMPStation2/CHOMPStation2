@@ -8,9 +8,10 @@
 	var/falling_type = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita
 	var/crushing = TRUE
 
-/obj/effect/falling_effect/Initialize(mapload, type = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita)
+/obj/effect/falling_effect/Initialize(mapload, type)
 	..()
-	falling_type = type
+	if(type)
+		falling_type = type
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/falling_effect/LateInitialize()
@@ -30,6 +31,14 @@
 	qdel(src)
 
 /atom/movable/proc/end_fall(var/crushing = FALSE)
+	if(istype(src, /mob/living))
+		var/mob/living/L = src
+		if(L.vore_selected && L.can_be_drop_pred && L.drop_vore)
+			for(var/mob/living/P in loc)
+				if(P.can_be_drop_prey && P.drop_vore)
+					L.feed_grabbed_to_self_falling_nom(L,P)
+					L.visible_message("<span class='vdanger'>\The [L] falls right onto \the [P]!</span>")
+
 	if(crushing)
 		for(var/atom/movable/AM in loc)
 			if(AM != src)

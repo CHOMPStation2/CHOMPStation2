@@ -15,7 +15,8 @@
 	desc = "A cup with the British flag emblazoned on it."
 	icon_state = "britcup"
 	volume = 30
-	center_of_mass = list("x"=15, "y"=13)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 13 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/britcup/on_reagent_change()
 	..()
@@ -29,7 +30,8 @@
 	icon = 'icons/obj/drinks_vr.dmi'
 	icon_state = "textmug"
 	volume = 30
-	center_of_mass = list("x"=15, "y"=13)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 13 //CHOMPEdit
 
 /*
  * Coffee Mugs
@@ -78,12 +80,12 @@
 /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/alma
 	name = "\improper Almach Association coffee cup"
 	desc = "A grey coffee cup emblazoned with the star of the Almach Association."
-	icon_state = "coffeecup_alma"
+	base_icon = "coffeecup_alma"
 
 /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/almp
 	name = "\improper Almach Protectorate coffee cup"
 	desc = "A purple coffee cup emblazoned with the star of the Almach Protectorate."
-	icon_state = "coffeecup_almp"
+	base_icon = "coffeecup_almp"
 
 /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/psc
 	name = "\improper Pearlshield coffee mug"
@@ -119,7 +121,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/zeng
 	name = "\improper Zeng-Hu coffee cup"
 	desc = "A coffee cup bearing the Zeng-Hu logo."
-	icon_state = "coffeecup_zeng"
+	base_icon = "coffeecup_zeng"
 
 /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/bishop
 	name = "\improper Bishop coffee mug"
@@ -172,7 +174,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/flame
 	name = "flame coffee cup"
 	desc = "A coffee cup with the a flame emblazoned on it."
-	icon_state = "coffeecup_flame"
+	base_icon = "coffeecup_flame"
 
 // Pure colors & other
 /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/black

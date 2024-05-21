@@ -99,6 +99,11 @@
 	return parent.return_network(reference)
 
 /obj/machinery/atmospherics/pipe/Destroy()
+	//CHOMPEdit Begin
+	if(parent)
+		parent.members -= src
+		parent.edges -= src
+	//CHOMPEdit End
 	QDEL_NULL(parent)
 	if(air_temporary)
 		loc.assume_air(air_temporary)
@@ -116,7 +121,7 @@
 	if(istype(W,/obj/item/device/pipe_painter))
 		return 0
 
-	if (!W.is_wrench())
+	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	var/turf/T = src.loc
 	if (level==1 && isturf(T) && !T.is_plating())

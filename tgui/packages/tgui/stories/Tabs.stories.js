@@ -5,73 +5,92 @@
  */
 
 import { useLocalState } from '../backend';
-import { Box, Button, Divider, Section, Tabs } from '../components';
+import { Button, Section, Tabs } from '../components';
 
 export const meta = {
   title: 'Tabs',
   render: () => <Story />,
 };
 
-const TAB_RANGE = [
-  'Tab #1',
-  'Tab #2',
-  'Tab #3',
-  'Tab #4',
-];
+const TAB_RANGE = ['Tab #1', 'Tab #2', 'Tab #3', 'Tab #4'];
 
-const Story = (props, context) => {
-  const [tabProps, setTabProps] = useLocalState(context, 'tabProps', {});
+const Story = (props) => {
+  const [tabProps, setTabProps] = useLocalState('tabProps', {});
   return (
     <>
       <Section>
         <Button.Checkbox
           inline
-          content="vertical"
           checked={tabProps.vertical}
-          onClick={() => setTabProps({
-            ...tabProps,
-            vertical: !tabProps.vertical,
-          })} />
+          onClick={() =>
+            setTabProps({
+              ...tabProps,
+              vertical: !tabProps.vertical,
+            })
+          }
+        >
+          vertical
+        </Button.Checkbox>
         <Button.Checkbox
           inline
-          content="leftSlot"
           checked={tabProps.leftSlot}
-          onClick={() => setTabProps({
-            ...tabProps,
-            leftSlot: !tabProps.leftSlot,
-          })} />
+          onClick={() =>
+            setTabProps({
+              ...tabProps,
+              leftSlot: !tabProps.leftSlot,
+            })
+          }
+        >
+          leftSlot
+        </Button.Checkbox>
         <Button.Checkbox
           inline
-          content="rightSlot"
           checked={tabProps.rightSlot}
-          onClick={() => setTabProps({
-            ...tabProps,
-            rightSlot: !tabProps.rightSlot,
-          })} />
+          onClick={() =>
+            setTabProps({
+              ...tabProps,
+              rightSlot: !tabProps.rightSlot,
+            })
+          }
+        >
+          rightSlot
+        </Button.Checkbox>
         <Button.Checkbox
           inline
-          content="icon"
           checked={tabProps.icon}
-          onClick={() => setTabProps({
-            ...tabProps,
-            icon: !tabProps.icon,
-          })} />
+          onClick={() =>
+            setTabProps({
+              ...tabProps,
+              icon: !tabProps.icon,
+            })
+          }
+        >
+          icon
+        </Button.Checkbox>
         <Button.Checkbox
           inline
-          content="fluid"
           checked={tabProps.fluid}
-          onClick={() => setTabProps({
-            ...tabProps,
-            fluid: !tabProps.fluid,
-          })} />
+          onClick={() =>
+            setTabProps({
+              ...tabProps,
+              fluid: !tabProps.fluid,
+            })
+          }
+        >
+          fluid
+        </Button.Checkbox>
         <Button.Checkbox
           inline
-          content="centered"
           checked={tabProps.centered}
-          onClick={() => setTabProps({
-            ...tabProps,
-            centered: !tabProps.centered,
-          })} />
+          onClick={() =>
+            setTabProps({
+              ...tabProps,
+              centered: !tabProps.centered,
+            })
+          }
+        >
+          centered
+        </Button.Checkbox>
       </Section>
       <Section fitted>
         <TabsPrefab />
@@ -88,34 +107,32 @@ const Story = (props, context) => {
   );
 };
 
-const TabsPrefab = (props, context) => {
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
-  const [tabProps] = useLocalState(context, 'tabProps', {});
+const TabsPrefab = (props) => {
+  const [tabIndex, setTabIndex] = useLocalState('tabIndex', 0);
+  const [tabProps] = useLocalState('tabProps', {});
   return (
     <Tabs
       vertical={tabProps.vertical}
       fluid={tabProps.fluid}
-      textAlign={tabProps.centered && 'center'}>
+      textAlign={tabProps.centered && 'center'}
+    >
       {TAB_RANGE.map((text, i) => (
         <Tabs.Tab
           key={i}
           selected={i === tabIndex}
           icon={tabProps.icon && 'info-circle'}
-          leftSlot={tabProps.leftSlot && (
-            <Button
-              circular
-              compact
-              color="transparent"
-              icon="times" />
-          )}
-          rightSlot={tabProps.rightSlot && (
-            <Button
-              circular
-              compact
-              color="transparent"
-              icon="times" />
-          )}
-          onClick={() => setTabIndex(i)}>
+          leftSlot={
+            tabProps.leftSlot && (
+              <Button circular compact color="transparent" icon="times" />
+            )
+          }
+          rightSlot={
+            tabProps.rightSlot && (
+              <Button circular compact color="transparent" icon="times" />
+            )
+          }
+          onClick={() => setTabIndex(i)}
+        >
           {text}
         </Tabs.Tab>
       ))}

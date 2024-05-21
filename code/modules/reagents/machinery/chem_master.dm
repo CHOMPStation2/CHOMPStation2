@@ -1,6 +1,6 @@
 /obj/machinery/chem_master
 	name = "ChemMaster 3000"
-	desc = "Used to seperate and package chemicals in to patches, pills, or bottles. Warranty void if used to create Space Drugs."
+	desc = "Used to separate and package chemicals in to patches, pills, or bottles. Warranty void if used to create Space Drugs."
 	density = TRUE
 	anchored = TRUE
 	unacidable = TRUE
@@ -11,6 +11,7 @@
 	idle_power_usage = 20
 	var/obj/item/weapon/reagent_containers/beaker = null
 	var/obj/item/weapon/storage/pill_bottle/loaded_pill_bottle = null
+	var/list/pill_bottle_wrappers = null //CHOMPEdit - Enable customizing pill bottle type
 	var/mode = 0
 	var/condi = 0
 	var/useramount = 15 // Last used amount
@@ -83,7 +84,7 @@
 
 /obj/machinery/chem_master/ui_assets(mob/user)
 	return list(
-		get_asset_datum(/datum/asset/chem_master),
+		get_asset_datum(/datum/asset/spritesheet/chem_master),
 	)
 
 /obj/machinery/chem_master/tgui_interact(mob/user, datum/tgui/ui = null)
@@ -112,7 +113,7 @@
 	if(beaker)
 		var/list/beaker_reagents_list = list()
 		data["beaker_reagents"] = beaker_reagents_list
-		for(var/datum/reagent/R in beaker.reagents.reagent_list)
+		for(var/datum/reagent/R in beaker.reagents?.reagent_list)
 			beaker_reagents_list[++beaker_reagents_list.len] = list("name" = R.name, "volume" = R.volume, "description" = R.description, "id" = R.id)
 
 		var/list/buffer_reagents_list = list()
@@ -160,25 +161,27 @@
 
 					arguments["analysis"] = result
 					tgui_modal_message(src, id, "", null, arguments)
-				// if("change_pill_bottle_style")
-				// 	if(!loaded_pill_bottle)
-				// 		return
-				// 	if(!pill_bottle_wrappers)
-				// 		pill_bottle_wrappers = list(
-				// 			"CLEAR" = "Default",
-				// 			COLOR_RED = "Red",
-				// 			COLOR_GREEN = "Green",
-				// 			COLOR_PALE_BTL_GREEN = "Pale green",
-				// 			COLOR_BLUE = "Blue",
-				// 			COLOR_CYAN_BLUE = "Light blue",
-				// 			COLOR_TEAL = "Teal",
-				// 			COLOR_YELLOW = "Yellow",
-				// 			COLOR_ORANGE = "Orange",
-				// 			COLOR_PINK = "Pink",
-				// 			COLOR_MAROON = "Brown"
-				// 		)
-				// 	var/current = pill_bottle_wrappers[loaded_pill_bottle.wrapper_color] || "Default"
-				// 	tgui_modal_choice(src, id, "Please select a pill bottle wrapper:", null, arguments, current, pill_bottle_wrappers)
+				// CHOMPEdit Start - Enable changing pill bottle style
+				if("change_pill_bottle_style")
+					if(!loaded_pill_bottle)
+						return
+					if(!pill_bottle_wrappers)
+						pill_bottle_wrappers = list(
+							"CLEAR" = "Default",
+							COLOR_RED = "Red",
+							COLOR_GREEN = "Green",
+							COLOR_PALE_BTL_GREEN = "Pale green",
+							COLOR_BLUE = "Blue",
+							COLOR_CYAN_BLUE = "Light blue",
+							COLOR_TEAL = "Teal",
+							COLOR_YELLOW = "Yellow",
+							COLOR_ORANGE = "Orange",
+							COLOR_PINK = "Pink",
+							COLOR_MAROON = "Brown"
+						)
+					var/current = pill_bottle_wrappers[loaded_pill_bottle.wrapper_color] || "Default"
+					tgui_modal_choice(src, id, "Please select a pill bottle wrapper:", null, arguments, current, pill_bottle_wrappers)
+				// CHOMPEdit End
 				if("addcustom")
 					if(!beaker || !beaker.reagents.total_volume)
 						return
@@ -209,8 +212,8 @@
 				if("change_pill_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_PILL_SPRITE)
-						choices += "pill[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for pills:", null, arguments, pillsprite, choices)
+						choices += "chem_master32x32 pill[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for pills:", null, arguments, pillsprite, choices)
 				if("create_patch")
 					if(condi || !reagents.total_volume)
 						return
@@ -244,28 +247,30 @@
 				if("change_bottle_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_BOTTLE_SPRITE)
-						choices += "bottle-[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for bottles:", null, arguments, bottlesprite, choices)
+						choices += "chem_master32x32 bottle-[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for bottles:", null, arguments, bottlesprite, choices)
 				else
 					return FALSE
 		if(TGUI_MODAL_ANSWER)
 			var/answer = params["answer"]
 			switch(id)
-				// if("change_pill_bottle_style")
-				// 	if(!pill_bottle_wrappers || !loaded_pill_bottle) // wat?
-				// 		return
-				// 	var/color = "CLEAR"
-				// 	for(var/col in pill_bottle_wrappers)
-				// 		var/col_name = pill_bottle_wrappers[col]
-				// 		if(col_name == answer)
-				// 			color = col
-				// 			break
-				// 	if(length(color) && color != "CLEAR")
-				// 		loaded_pill_bottle.wrapper_color = color
-				// 		loaded_pill_bottle.apply_wrap()
-				// 	else
-				// 		loaded_pill_bottle.wrapper_color = null
-				// 		loaded_pill_bottle.cut_overlays()
+				// CHOMPEdit Start - Enable changing pill bottle style
+				if("change_pill_bottle_style")
+					if(!pill_bottle_wrappers || !loaded_pill_bottle) // wat?
+						return
+					var/color = "CLEAR"
+					for(var/col in pill_bottle_wrappers)
+						var/col_name = pill_bottle_wrappers[col]
+						if(col_name == answer)
+							color = col
+							break
+					if(length(color) && color != "CLEAR")
+						loaded_pill_bottle.wrapper_color = color
+						loaded_pill_bottle.update_icon()
+					else
+						loaded_pill_bottle.wrapper_color = null
+						loaded_pill_bottle.cut_overlays()
+				// CHOMPEdit End
 				if("addcustom")
 					var/amount = isgoodnumber(text2num(answer))
 					if(!amount || !arguments["id"])

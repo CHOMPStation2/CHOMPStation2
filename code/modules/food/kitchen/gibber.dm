@@ -57,7 +57,7 @@
 			M.gib()
 
 
-/obj/machinery/gibber/New()
+/obj/machinery/gibber/Initialize() //ChompEDIT New --> Initialize
 	..()
 	add_overlay("grjam")
 
@@ -111,6 +111,15 @@
 
 	move_into_gibber(user,G.affecting)
 	// Grab() process should clean up the grab item, no need to del it.
+
+/obj/machinery/gibber/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
+		return
+	if(default_deconstruction_crowbar(user, O))
+		return
+	if(default_part_replacement(user, O))
+		return
+	..()
 
 /obj/machinery/gibber/MouseDrop_T(mob/target, mob/user)
 	if(user.stat || user.restrained())
@@ -205,14 +214,13 @@
 		slab_nutrition *= 0.5
 	slab_nutrition /= slab_count
 
-	while(slab_count)
-		slab_count--
+	for(var/i=1 to slab_count)
 		var/obj/item/weapon/reagent_containers/food/snacks/meat/new_meat = new slab_type(src, rand(3,8))
 		if(istype(new_meat))
 			new_meat.name = "[slab_name] [new_meat.name]"
 			new_meat.reagents.add_reagent("nutriment",slab_nutrition)
 			if(src.occupant.reagents)
-				src.occupant.reagents.trans_to_obj(new_meat, round(occupant.reagents.total_volume/slab_count,1))
+				src.occupant.reagents.trans_to_obj(new_meat, round(occupant.reagents.total_volume/(2 + occupant.meat_amount),1))
 
 	add_attack_logs(user,occupant,"Used [src] to gib")
 
@@ -244,5 +252,3 @@
 			thing.throw_at(get_edge_target_turf(src,gib_throw_dir),rand(0,3),emagged ? 100 : 50) // Being pelted with bits of meat and bone would hurt.
 
 		update_icon()
-
-

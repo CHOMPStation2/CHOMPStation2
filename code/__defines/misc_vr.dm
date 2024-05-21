@@ -14,6 +14,11 @@
 #define VANTAG_KIDNAP  "vantag_kidnap"
 #define VANTAG_KILL    "vantag_kill"
 
+// ColorMate states
+#define COLORMATE_TINT 1
+#define COLORMATE_HSV 2
+#define COLORMATE_MATRIX 3
+
 #define DEPARTMENT_OFFDUTY			"Off-Duty"
 
 #define ANNOUNCER_NAME "Facility PA"
@@ -58,6 +63,7 @@
 #define PTO_CARGO			"Cargo"
 #define PTO_CIVILIAN		"Civilian"
 #define PTO_CYBORG			"Cyborg"
+#define PTO_TALON			"Talon Contractor"
 
 #define DEPARTMENT_TALON	"ITV Talon"
 

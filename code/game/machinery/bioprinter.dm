@@ -35,6 +35,7 @@
 		"Liver"   = list(/obj/item/organ/internal/liver,  20),
 		"Spleen"  = list(/obj/item/organ/internal/spleen, 20),
 		"Stomach"  = list(/obj/item/organ/internal/stomach, 20),
+		"Intestine" = list(/obj/item/organ/internal/intestine, 20), //ChompAdd: this was missing.
 		"Arm, Left"   = list(/obj/item/organ/external/arm,  40),
 		"Arm, Right"   = list(/obj/item/organ/external/arm/right,  40),
 		"Leg, Left"   = list(/obj/item/organ/external/leg,  40),
@@ -81,7 +82,7 @@
 /obj/machinery/organ_printer/Initialize()
 	. = ..()
 	default_apply_parts()
-	
+
 /obj/machinery/organ_printer/examine(var/mob/user)
 	. = ..()
 	var/biomass = get_biomass_volume()

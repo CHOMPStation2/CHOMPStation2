@@ -8,17 +8,28 @@
 /datum/sprite_accessory/tail
 	name = "You should not see this..."
 	icon = 'icons/mob/vore/tails_vr.dmi'
+	var/offset_x = 0
+	var/offset_y = 0
+	var/mob_offset_x = 0
+	var/mob_offset_y = 0
 	do_colouration = 0 //Set to 1 to enable coloration using the tail color.
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //This lets all races use
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //This lets all races use
 
-/datum/sprite_accessory/tail/New()
-	. = ..()
-	if(clip_mask_icon && clip_mask_state)
-		clip_mask = icon(icon = clip_mask_icon, icon_state = clip_mask_state)
+	var/list/lower_layer_dirs = list(SOUTH)
+	var/icon_loaf = null
 
 // Species-unique tails
 
 // Everyone tails
+
+/datum/sprite_accessory/tail/alien_slug
+	name = "Alien slug tail"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "alien_slug"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "alien_slug_markings"
 
 /datum/sprite_accessory/tail/invisible
 	name = "hide species-sprite tail"
@@ -89,6 +100,24 @@
 	desc = ""
 	icon_state = "bunny"
 	do_colouration = 1
+
+/datum/sprite_accessory/tail/rabbit
+    name = "rabbit, colourable (vwag)"
+    desc = ""
+    icon_state = "rabbit"
+    do_colouration = TRUE
+    color_blend_mode = ICON_MULTIPLY
+    ani_state = "rabbit_w"
+
+/datum/sprite_accessory/tail/rabbitalt
+    name = "rabbit, dual color (vwag)"
+    desc = ""
+    icon_state = "rabbitalt"
+    extra_overlay = "rabbitalt-tips"
+    do_colouration = TRUE
+    color_blend_mode = ICON_MULTIPLY
+    ani_state = "rabbitalt_w"
+    extra_overlay_w = "rabbitalt-tips_w"
 
 /datum/sprite_accessory/tail/bear_brown
 	name = "bear, brown"
@@ -235,6 +264,7 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "eboop_mark"
 
+/* // Chomp REMOVE start
 /datum/sprite_accessory/tail/molenar_kitsune
 	name = "quintail kitsune tails (Molenar)"
 	desc = ""
@@ -308,6 +338,7 @@
     desc = ""
     icon_state = "featherfluff_tail"
     ckeys_allowed = list("tucker0666")
+*/ // Chomp REMOVE end
 
 /datum/sprite_accessory/tail/ketrai_wag
 	name = "fennix tail (vwag)"
@@ -335,11 +366,33 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "ringtail_mark"
 
+/datum/sprite_accessory/tail/ringtailwag
+	name = "ringtail (vwag)"
+	desc = ""
+	icon_state = "wah"
+	ani_state = "wah_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "wah-stripes"
+	extra_overlay_w = "wah-stripes_w"
+
+/datum/sprite_accessory/tail/raccoon
+	name = "raccoon tail (vwag)"
+	desc = ""
+	icon_state = "raccoon"
+	ani_state = "raccoon_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "raccoon-stripes"
+	extra_overlay_w = "raccoon-stripes_w"
+
+/* // Chomp REMOVE start
 /datum/sprite_accessory/tail/holly
 	name = "tigress tail (Holly)"
 	desc = ""
 	icon_state = "tigresstail"
 	ckeys_allowed = list("hoodoo")
+*/ // Chomp REMOVE end
 
 /datum/sprite_accessory/tail/satyr
 	name = "goat legs, colorable"
@@ -396,6 +449,19 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "tigertail_mark"
 	extra_overlay_w = "tigertail_mark_w"
+
+/datum/sprite_accessory/tail/tigeralt
+	name = "tiger tail, alt (vwag)"
+	desc = ""
+	icon_state = "tigeralt"
+	extra_overlay = "tigeralt-tips"
+	extra_overlay2 = "tigeralt-tips2"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	ani_state = "tigeralt_w"
+	extra_overlay_w = "tigeralt-tips_w"
+	extra_overlay2_w = "tigeralt-tips2_w"
+
 
 /datum/sprite_accessory/tail/vulp_new
 	name = "new vulp tail (vwag)"
@@ -467,6 +533,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "deertail_mark"
+
+/datum/sprite_accessory/tail/deeralt
+	name = "deer alt, colorable (vwag)"
+	desc = ""
+	icon_state = "deeralt"
+	ani_state = "deeralt_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/tesh_feathered
 	name = "Teshari tail"
@@ -1157,6 +1231,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/* // Chomp REMOVE start
 /datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
 	name = "Peacock tail (vwag)"
 	desc = ""
@@ -1174,6 +1249,22 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	ckeys_allowed = list("prettiebyrd")
+*/ // Chomp REMOVE end
+
+/datum/sprite_accessory/tail/altevian
+	name = "Altevian Tail"
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "altevian"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	lower_layer_dirs = list(SOUTH, WEST)
+
+/datum/sprite_accessory/tail/shark_finless
+	name = "shark tail, finless (colorable)"
+	desc = ""
+	icon_state = "sharktail_finless"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/tentacle
 	name = "Tentacle, colorable (vwag)"
@@ -1184,10 +1275,147 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/* // Chomp REMOVE start
+/datum/sprite_accessory/tail/perrin_tentacles
+	name = "octopus tentacles"
+	desc = ""
+	icon_state = "perrintentacles"
+	ckeys_allowed = list("codeme", "siennaathens")
+*/ // Chomp REMOVE end
+
+/datum/sprite_accessory/tail/teshbeethorax
+	name = "Teshari bee thorax"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "beethorax_tesh"
+
+/datum/sprite_accessory/tail/teshbuggo
+	name = "Teshari bug abdomen, colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbug_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/teshbuggobee
+	name = "Teshari bug abdomen, bee top, dual-colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbug_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshbee_markings"
+
+/datum/sprite_accessory/tail/teshbeefull
+	name = "Teshari bug abdomen, bee full, dual-colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbug_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshbeefull_markings"
+
+/datum/sprite_accessory/tail/teshbuggounder
+	name = "Teshari bug abdomen, underside, dual-colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbug_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshunder_markings"
+
+/datum/sprite_accessory/tail/teshbuggofirefly
+	name = "Teshari bug abdomen, firefly, dual-colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbug_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshfirefly_markings"
+
+/datum/sprite_accessory/tail/fatteshbuggo
+	name = "Teshari fat bug abdomen, colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbugfat_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/fatteshbuggobee
+	name = "Teshari fat bug abdomen, bee top, dual-colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbugfat_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshfatbee_markings"
+
+/datum/sprite_accessory/tail/fatteshbeefull
+	name = "Teshari fat bug abdomen, bee full, dual-colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbugfat_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshfatbeefull_markings"
+
+/datum/sprite_accessory/tail/fatteshbuggounder
+	name = "Teshari fat bug abdomen, underside, dual-colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbugfat_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshfatunder_markings"
+
+/datum/sprite_accessory/tail/fatteshbuggofirefly
+	name = "Teshari fat bug abdomen, firefly, dual-colorable"
+	desc = ""
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "teshbugfat_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshfatfirefly_markings"
+
+/datum/sprite_accessory/tail/synthetic_stilt_legs
+	name = "synthetic stilt-legs, colorable"
+	desc = ""
+	icon_state = "synth_stilts"
+	color_blend_mode = ICON_MULTIPLY
+	do_colouration = 1
+	extra_overlay = "synth_stilts_marking"
+	hide_body_parts = list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT) //Exclude pelvis just in case.
+	clip_mask_icon = 'icons/mob/vore/taurs_vr.dmi'
+	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
+
+/datum/sprite_accessory/tail/blade_like_tail
+	name = "Blade-like Tail"
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "blade-like-tail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/sectdrone_tail
+	name = "Sect Drone Tail (To use with bodytype-marking)"
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "sectdrone_tail"
+	extra_overlay = "sectdrone_tail_mark"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/* // Chomp REMOVE start
+/datum/sprite_accessory/tail/kara //SatinIsle fluff item
+	name = "Pterokara Tail"
+	icon = 'icons/mob/vore/tails_vr.dmi'
+	icon_state = "kara_tail"
+	ckeys_allowed = list("satinisle")
+*/ // Chomp REMOVE end
+
 //LONG TAILS ARE NOT TAUR BUTTS >:O
 /datum/sprite_accessory/tail/longtail
 	name = "You should not see this..."
 	icon = 'icons/mob/vore/taurs_vr.dmi'
+	offset_x = -16
 	do_colouration = 1 // Yes color, using tail color
 	color_blend_mode = ICON_MULTIPLY  // The sprites for taurs are designed for ICON_MULTIPLY
 
@@ -1202,3 +1430,107 @@
 /datum/sprite_accessory/tail/longtail/shadekin_tail/shadekin_tail_long
 	name = "Shadekin Long Tail"
 	icon_state = "shadekin_long_s"
+
+/datum/sprite_accessory/tail/longtail/zaprat
+	name = "bolt-shaped tail, dual color"
+	icon = 'icons/mob/vore/taurs_vr.dmi'
+	icon_state = "zaprat_s"
+	extra_overlay = "zaprat_markings"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/longtail/zaprat/heart
+	name = "heart-bolt-shaped tail, dual color"
+	icon_state = "zaprat_heart_s"
+	extra_overlay = "zaprat_heart_markings"
+
+/datum/sprite_accessory/tail/satyrtail
+	name = "goat legs with tail, colorable"
+	desc = ""
+	icon_state = "satyr"
+	color_blend_mode = ICON_MULTIPLY
+	do_colouration = 1
+	hide_body_parts = list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT) //Exclude pelvis just in case.
+	clip_mask_icon = 'icons/mob/vore/taurs_vr.dmi'
+	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
+	extra_overlay = "horse" //I can't believe this works.
+
+/datum/sprite_accessory/tail/turkey //Would have been a really good thing for Thanksgiving probably but I'm not going to wait that long.
+	name = "turkey"
+	desc = ""
+	icon_state = "turkey"
+
+/datum/sprite_accessory/tail/shark_markings
+	name = "akula tail, colorable, tail and fins"
+	desc = ""
+	icon_state = "sharktail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "sharktail_markings"
+
+/datum/sprite_accessory/tail/shark_stripes
+	name = "akula tail, colorable, stripe"
+	desc = ""
+	icon_state = "sharktail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "sharktail_stripemarkings"
+
+/datum/sprite_accessory/tail/shark_tips
+	name = "akula tail, colorable, tips"
+	desc = ""
+	icon_state = "sharktail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "sharktail_tipmarkings"
+
+/datum/sprite_accessory/tail/narrow_tail
+	name = "feathered narrow tail, colorable"
+	desc = ""
+	icon_state = "narrowtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/narrow_tail2
+	name = "feathered narrow tail, 2 colors"
+	desc = ""
+	icon_state = "narrowtail_2color"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "narrowtail_2color-1"
+
+
+// Dino Tails
+
+/datum/sprite_accessory/tail/clubtail
+	name = "dino clubtail, colorable"
+	desc = ""
+	icon_state = "clubtail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "clubtail-1"
+
+/datum/sprite_accessory/tail/spiketail
+	name = "dino spiketail, colorable"
+	desc = ""
+	icon_state = "spiketail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "spiketail-1"
+
+/datum/sprite_accessory/tail/longtail/kaiju_tail_a_long
+	name = "Kaiju tail A, dual color"
+	icon = 'icons/mob/vore/taurs_vr.dmi'
+	icon_state = "kaiju_long_a"
+	extra_overlay = "kaiju_long_a_spikes"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/longtail/kaiju_tail_a_long_glow
+	name = "Kaiju tail A, dual color, glow"
+	icon = 'icons/mob/vore/taurs_vr.dmi'
+	icon_state = "kaiju_long_a"
+	extra_overlay = "kaiju_long_a_spikes"
+	extra_overlay2 = "kaiju_long_a_spikes_glow"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

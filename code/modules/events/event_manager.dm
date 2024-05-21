@@ -19,7 +19,7 @@
 
 /datum/controller/subsystem/events/proc/GetInteractWindow()
 	var/html = "<A align='right' href='?src=\ref[src];refresh=1'>Refresh</A>"
-	html += "<A align='right' href='?src=\ref[src];pause_all=[!config.allow_random_events]'>Pause All - [config.allow_random_events ? "Pause" : "Resume"]</A>"
+	html += "<A align='right' href='?src=\ref[src];pause_all=[!CONFIG_GET(flag/allow_random_events)]'>Pause All - [CONFIG_GET(flag/allow_random_events) ? "Pause" : "Resume"]</A>" // CHOMPEdit
 
 	if(selected_event_container)
 		var/event_time = max(0, selected_event_container.next_event_time - world.time)
@@ -153,10 +153,10 @@
 		EC.delayed = !EC.delayed
 		log_and_message_admins("has [EC.delayed ? "paused" : "resumed"] countdown for [severity_to_string[EC.severity]] events.")
 	else if(href_list["pause_all"])
-		config.allow_random_events = text2num(href_list["pause_all"])
-		log_and_message_admins("has [config.allow_random_events ? "resumed" : "paused"] countdown for all events.")
+		CONFIG_SET(flag/allow_random_events, text2num(href_list["pause_all"])) // CHOMPEdit
+		log_and_message_admins("has [CONFIG_GET(flag/allow_random_events) ? "resumed" : "paused"] countdown for all events.") // CHOMPEdit
 	else if(href_list["interval"])
-		var/delay = input(usr, "Enter delay modifier. A value less than one means events fire more often, higher than one less often.", "Set Interval Modifier") as num|null
+		var/delay = tgui_input_number(usr, "Enter delay modifier. A value less than one means events fire more often, higher than one less often.", "Set Interval Modifier")
 		if(delay && delay > 0)
 			var/datum/event_container/EC = locate(href_list["interval"])
 			EC.delay_modifier = delay
@@ -173,7 +173,7 @@
 	else if(href_list["back"])
 		selected_event_container = null
 	else if(href_list["set_name"])
-		var/name = sanitize(input(usr, "Enter event name.", "Set Name") as text|null)
+		var/name = sanitize(tgui_input_text(usr, "Enter event name.", "Set Name"))
 		if(name)
 			var/datum/event_meta/EM = locate(href_list["set_name"])
 			EM.name = name
@@ -183,7 +183,7 @@
 			var/datum/event_meta/EM = locate(href_list["set_type"])
 			EM.event_type = type
 	else if(href_list["set_weight"])
-		var/weight = input(usr, "Enter weight. A higher value means higher chance for the event of being selected.", "Set Weight") as num|null
+		var/weight = tgui_input_number(usr, "Enter weight. A higher value means higher chance for the event of being selected.", "Set Weight")
 		if(weight && weight > 0)
 			var/datum/event_meta/EM = locate(href_list["set_weight"])
 			EM.weight = weight
@@ -224,7 +224,7 @@
 
 /client/proc/forceEvent(var/type in SSevents.allEvents)
 	set name = "Trigger Event (Debug Only)"
-	set category = "Debug"
+	set category = "Debug.Dangerous" //CHOMPEdit
 
 	if(!holder)
 		return
@@ -235,6 +235,6 @@
 
 /client/proc/event_manager_panel()
 	set name = "Event Manager Panel"
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 	SSevents.Interact(usr)
 	feedback_add_details("admin_verb","EMP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

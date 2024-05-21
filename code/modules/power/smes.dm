@@ -57,6 +57,11 @@ GLOBAL_LIST_EMPTY(smeses)
 	var/should_be_mapped = 0 // If this is set to 0 it will send out warning on New()
 	var/grid_check = FALSE // If true, suspends all I/O.
 
+	// CHOMPAdd: More humming noises
+	var/datum/looping_sound/generator/soundloop
+	var/noisy = FALSE
+	// CHOMPAdd End
+
 /obj/machinery/power/smes/drain_power(var/drain_check, var/surge, var/amount = 0)
 
 	if(drain_check)
@@ -70,6 +75,9 @@ GLOBAL_LIST_EMPTY(smeses)
 	. = ..()
 	GLOB.smeses += src
 	add_nearby_terminals()
+	soundloop = new(list(src), FALSE) // CHOMPEdit: hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+	soundloop.extra_range = -6 // CHOMPEdit: Doing this here bc we're reusing the generator hum, and can't directly edit that one
+	soundloop.falloff = 0.2 // CHOMPEdit: Harsher falloff.
 	if(!check_terminals())
 		stat |= BROKEN
 		return
@@ -84,6 +92,7 @@ GLOBAL_LIST_EMPTY(smeses)
 		T.master = null
 	terminals = null
 	GLOB.smeses -= src
+	QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/power/smes/proc/add_nearby_terminals()
@@ -154,7 +163,10 @@ GLOBAL_LIST_EMPTY(smeses)
 	charge -= amount*SMESRATE
 
 /obj/machinery/power/smes/process()
-	if(stat & BROKEN)	return
+	if(stat & BROKEN)
+		soundloop.stop()
+		noisy = FALSE
+		return
 
 	// only update icon if state changed
 	if(last_disp != chargedisplay() || last_chrg != inputting || last_onln != outputting)
@@ -190,6 +202,17 @@ GLOBAL_LIST_EMPTY(smeses)
 		outputting = 1
 	else
 		output_used = 0
+
+	if(!noisy && outputting) // Are we actually outputting power?
+		soundloop.start()
+		noisy = TRUE
+	if(noisy && outputting)
+		// Capped to 40 volume since higher volumes get annoying and it sounds worse.
+		// Formula previously was min(round(power/10)+1, 20)
+		soundloop.volume = CLAMP((output_used / 1000), 1, 40)
+	if(!outputting)
+		soundloop.stop()
+		noisy = FALSE
 
 // called after all power processes are finished
 // restores charge level to smes if there was excess this ptick
@@ -287,8 +310,8 @@ GLOBAL_LIST_EMPTY(smeses)
 		to_chat(user, "<span class='filter_notice'><span class='warning'>You need to open access hatch on [src] first!</span></span>")
 		return FALSE
 
-	if(istype(W, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/WT = W
+	if(W.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weapon/weldingtool/WT = W.get_welder()
 		if(!WT.isOn())
 			to_chat(user, "<span class='filter_notice'>Turn on \the [WT] first!</span>")
 			return FALSE
@@ -315,9 +338,11 @@ GLOBAL_LIST_EMPTY(smeses)
 				"<span class='filter_notice'><span class='notice'>[user.name] has added cables to the [src].</span></span>",\
 				"<span class='filter_notice'><span class='notice'>You added cables to the [src].</span></span>")
 		stat = 0
+		if(!powernet)
+			connect_to_network()
 		return FALSE
 
-	else if(W.is_wirecutter() && !building_terminal)
+	else if(W.has_tool_quality(TOOL_WIRECUTTER) && !building_terminal)
 		building_terminal = TRUE
 		var/obj/machinery/power/terminal/term
 		for(var/obj/machinery/power/terminal/T in get_turf(user))
@@ -418,7 +443,7 @@ GLOBAL_LIST_EMPTY(smeses)
 		switch(io)
 			if(SMES_TGUI_INPUT)
 				set_input(target)
-			if(SMES_TGUI_OUTPUT)	
+			if(SMES_TGUI_OUTPUT)
 				set_output(target)
 
 

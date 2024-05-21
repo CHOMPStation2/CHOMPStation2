@@ -12,7 +12,7 @@
 	set category = "Object"
 	set src in view(1)
 
-	if(usr.incapacitated() || !istype(usr, /mob/living))
+	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
 		to_chat(usr, "<span class='warning'>You can't do that.</span>")
 		return
 
@@ -36,7 +36,7 @@
 	set category = "Object"
 	set src in view(1)
 
-	if(usr.incapacitated() || !istype(usr, /mob/living))
+	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
 		to_chat(usr, "<span class='warning'>You can't do that.</span>")
 		return
 
@@ -52,7 +52,7 @@
 	set category = "Object"
 	set src in view(1)
 
-	if(usr.incapacitated() || !istype(usr, /mob/living))
+	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
 		to_chat(usr, "<span class='warning'>You can't do that.</span>")
 		return
 
@@ -146,7 +146,7 @@
 			try_install_component(user, C)
 		else
 			to_chat(user, "This component is too large for \the [src].")
-	if(W.is_wrench())
+	if(W.has_tool_quality(TOOL_WRENCH))
 		var/list/components = get_all_components()
 		if(components.len)
 			to_chat(user, "Remove all components from \the [src] before disassembling it.")
@@ -155,8 +155,8 @@
 		src.visible_message("\The [src] has been disassembled by [user].")
 		qdel(src)
 		return
-	if(istype(W, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/WT = W
+	if(W.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weapon/weldingtool/WT = W.get_welder()
 		if(!WT.isOn())
 			to_chat(user, "\The [W] is off.")
 			return
@@ -171,7 +171,7 @@
 			to_chat(user, "You repair \the [src].")
 		return
 
-	if(W.is_screwdriver())
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		var/list/all_components = get_all_components()
 		if(!all_components.len)
 			to_chat(user, "This device doesn't have any components installed.")

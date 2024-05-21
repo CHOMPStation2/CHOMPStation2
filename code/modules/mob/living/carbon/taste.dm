@@ -11,8 +11,12 @@
 		from.trans_to_holder(temp, amount, multiplier, 1)
 
 		var/text_output = temp.generate_taste_message(src)
+		if(accumulated_rads >= 100) //If you're irradiated, you can't taste!
+			text_output = "nothing"
+
 		if(text_output != last_taste_text || last_taste_time + 100 < world.time) //We dont want to spam the same message over and over again at the person. Give it a bit of a buffer.
-			to_chat(src, "<span class='notice'>You can taste [text_output].</span>")//no taste means there are too many tastes and not enough flavor.
+			to_chat(src, "<span class='notice'>You can taste [text_output].</span>") //no taste means there are too many tastes and not enough flavor.
+			balloon_alert(src, "You can taste [text_output].") // CHOMPEdit - Balloon alert
 
 			last_taste_time = world.time
 			last_taste_text = text_output

@@ -16,104 +16,6 @@
 				  access_xenoarch)
 	one_access = TRUE
 
-/datum/supply_pack/misc/eva_rig
-	name = "eva hardsuit (empty)"
-	contains = list(
-			/obj/item/weapon/rig/eva = 1
-			)
-	cost = 150
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "eva hardsuit crate"
-	access = list(access_mining,
-				  access_eva,
-				  access_explorer,
-				  access_pilot)
-	one_access = TRUE
-
-/datum/supply_pack/misc/mining_rig
-	name = "industrial hardsuit (empty)"
-	contains = list(
-			/obj/item/weapon/rig/industrial = 1
-			)
-	cost = 150
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "industrial hardsuit crate"
-	access = list(access_mining,
-				  access_eva)
-	one_access = TRUE
-
-/datum/supply_pack/misc/medical_rig
-	name = "medical hardsuit (empty)"
-	contains = list(
-			/obj/item/weapon/rig/medical = 1
-			)
-	cost = 150
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "medical hardsuit crate"
-	access = access_medical
-
-/datum/supply_pack/misc/security_rig
-	name = "hazard hardsuit (empty)"
-	contains = list(
-			/obj/item/weapon/rig/hazard = 1
-			)
-	cost = 150
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "hazard hardsuit crate"
-	access = access_armory
-
-/datum/supply_pack/misc/science_rig
-	name = "ami hardsuit (empty)"
-	contains = list(
-			/obj/item/weapon/rig/hazmat = 1
-			)
-	cost = 150
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "ami hardsuit crate"
-	access = access_rd
-
-/datum/supply_pack/misc/ce_rig
-	name = "advanced hardsuit (empty)"
-	contains = list(
-			/obj/item/weapon/rig/ce = 1
-			)
-	cost = 150
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "advanced hardsuit crate"
-	access = access_ce
-
-// CHOMPStation EDIT Start: Change Commonwealth to Solgov
-/datum/supply_pack/misc/solgov_medical_rig
-	name = "solgov medical hardsuit (loaded)"
-	contains = list(
-			/obj/item/weapon/rig/baymed = 1
-			)
-	cost = 250
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Solgov medical hardsuit crate"
-	access = access_medical
-
-/datum/supply_pack/misc/solgov_engineering_rig
-	name = "solgov engineering hardsuit (loaded)"
-	contains = list(
-			/obj/item/weapon/rig/bayeng = 1
-			)
-	cost = 250
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Solgov engineering hardsuit crate"
-	access = access_engine
-
-// CHOMPStation EDIT End
-
-/datum/supply_pack/misc/zero_rig
-	name = "null hardsuit (jets)"
-	contains = list(
-			/obj/item/weapon/rig/zero = 1
-			)
-	cost = 75
-	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "null hardsuit crate"
-
 /datum/supply_pack/misc/jetpack
 	name = "jetpack (empty)"
 	contains = list(
@@ -125,12 +27,12 @@
 	access = list(access_mining,
 				  access_xenoarch,
 				  access_eva,
-				  access_explorer,
+				  access_explorer, //CHOMP explo keep
 				  access_pilot)
 	one_access = TRUE
 
 /datum/supply_pack/randomised/misc/explorer_shield
-	name = "Explorer shield"
+	name = "Explorer shield" //CHOMP explo keep
 	num_contained = 2
 	contains = list(
 			/obj/item/weapon/shield/riot/explorer,
@@ -139,7 +41,7 @@
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "exploration shield crate"
-	access = list(access_explorer,
+	access = list(access_explorer, //CHOMP explo keep
 				  access_eva,
 				  access_pilot)
 	one_access = TRUE
@@ -161,3 +63,34 @@
 	cost = 300
 	containertype = /obj/structure/closet/crate
 	containername = "cordless jukebox speakers crate"
+
+/datum/supply_pack/misc/explorer_headsets
+	name = "shortwave-capable headsets (x4)"
+	contains = list(
+		/obj/item/device/radio/headset/explorer = 4
+	)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "exploration radio headsets crate"
+	access = list(
+		access_explorer, //CHOMP explo keep
+		access_eva,
+		access_pilot
+	)
+	one_access = TRUE
+
+/datum/supply_pack/misc/swoopie //CHOMPAdd
+	name = "SWOOPIE XL CleanBot Kit"
+	contains = list()
+	cost = 100
+	containertype = /obj/structure/largecrate/animal/swoopie
+	containername = "SWOOPIE XL CleanBot Starter Kit"
+
+/datum/supply_pack/misc/emergency_beacons
+	name = "emergency locator beacons (x4)"
+	contains = list(
+		/obj/item/device/emergency_beacon = 4
+	)
+	cost = 20
+	containertype = /obj/structure/closet/crate
+	containername = "emergency beacons crate"

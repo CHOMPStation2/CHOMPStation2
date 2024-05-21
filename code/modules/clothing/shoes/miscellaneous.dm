@@ -92,9 +92,10 @@
 	icon_state = "clown"
 	slowdown = SHOES_SLOWDOWN+0.5
 	force = 0
-	var/footstep = 1	//used for squeeks whilst walking
+	//CHOMPRemove - removed built in squeak sounds
 	species_restricted = null
 
+/*	CHOMPEdit - Replaced with squeak component
 /obj/item/clothing/shoes/clown_shoes/handle_movement(var/turf/walking, var/running)
 	if(running)
 		if(footstep >= 2)
@@ -104,6 +105,7 @@
 			footstep++
 	else
 		playsound(src, "clownstep", 20, 1)
+*/
 
 /obj/item/clothing/shoes/cult
 	name = "boots"
@@ -144,7 +146,7 @@
 	item_state_slots = list(slot_r_hand_str = "slippers", slot_l_hand_str = "slippers")
 
 /obj/item/clothing/shoes/laceup
-	name = "black oxford  shoes"
+	name = "black oxford shoes"
 	icon_state = "oxford_black"
 
 /obj/item/clothing/shoes/laceup/grey
@@ -248,3 +250,9 @@
 	desc = "A stylish, expensive pair of red sneakers."
 	icon_state = "sneakersred"
 	item_state = "sneakersred"
+
+/obj/item/clothing/shoes/ballet
+	name = "pointe shoes"
+	desc = "These shoes feature long lace straps and flattened off toes. Great for the most elegant of dances!"
+	icon_state = "ballet"
+	item_state = "ballet"

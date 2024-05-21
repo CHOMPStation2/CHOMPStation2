@@ -1,0 +1,1532 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bb" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"cj" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/frame{
+	anchored = 1
+	},
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"cm" = (
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"cD" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/medical,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"dl" = (
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/unfinishedoutpost)
+"dG" = (
+/turf/simulated/floor/plating,
+/area/submap/unfinishedoutpost)
+"eL" = (
+/mob/living/simple_mob/mechanical/combat_drone/event,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"gK" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"gS" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/fireaxecabinet{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"hT" = (
+/turf/simulated/wall,
+/area/submap/unfinishedoutpost)
+"iK" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/unfinishedoutpost)
+"iM" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"iQ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/template_noop,
+/area/submap/unfinishedoutpost)
+"kv" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/rainbow,
+/obj/item/toy/plushie/slimeplushie,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"kE" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/curtain/open/privacy,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"kG" = (
+/turf/simulated/wall/r_wall,
+/area/submap/unfinishedoutpost)
+"kP" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/item/weapon/module/power_control,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"lg" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"lT" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/frame{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"mU" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"oc" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/mime,
+/obj/random/plushie,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"ov" = (
+/obj/structure/railing,
+/turf/template_noop,
+/area/submap/unfinishedoutpost)
+"pR" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/submap/unfinishedoutpost)
+"qg" = (
+/turf/template_noop,
+/area/submap/unfinishedoutpost)
+"rP" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/clowndouble,
+/obj/random/plushie,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"tq" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/table/standard,
+/obj/item/weapon/storage/backpack/dufflebag/syndie/med,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"tC" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/structure/table/standard,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"tP" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/random/energy,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"tZ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"vg" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"vA" = (
+/obj/effect/floor_decal/corner/green/diagonal,
+/obj/structure/table/standard,
+/obj/random/maintenance/research,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"wf" = (
+/obj/item/device/multitool,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"yp" = (
+/obj/structure/railing{
+	dir = 8;
+	icon_state = "railing0"
+	},
+/turf/template_noop,
+/area/submap/unfinishedoutpost)
+"yU" = (
+/obj/structure/door_assembly,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"AQ" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"AY" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/table/standard,
+/obj/item/weapon/storage/firstaid/surgery,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"BC" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"CM" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Dj" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/reddouble,
+/obj/random/plushie,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"Fn" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/door/airlock,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"FA" = (
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"FG" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/optable,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"FM" = (
+/obj/structure/catwalk,
+/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Gj" = (
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/turf/template_noop,
+/area/submap/unfinishedoutpost)
+"Gy" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/random/energy/sec,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"GM" = (
+/obj/structure/table/bench/wooden,
+/obj/item/device/flashlight/lamp/green,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"GT" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"HC" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/item/weapon/cell/super,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"HG" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating,
+/area/submap/unfinishedoutpost)
+"IJ" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/piratedouble,
+/obj/random/plushie,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"JW" = (
+/obj/structure/catwalk,
+/mob/living/simple_mob/mechanical/combat_drone/event,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Kj" = (
+/obj/structure/cable,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Mc" = (
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/obj/structure/railing,
+/turf/template_noop,
+/area/submap/unfinishedoutpost)
+"NU" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/submap/unfinishedoutpost)
+"Oz" = (
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"PO" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"PR" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/mob/living/simple_mob/mechanical/combat_drone/event,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"PZ" = (
+/obj/structure/grille,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Qz" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/unfinishedoutpost)
+"RF" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"RI" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/blue,
+/obj/random/plushie,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"Tq" = (
+/obj/structure/railing{
+	dir = 4;
+	icon_state = "railing0"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/template_noop,
+/area/submap/unfinishedoutpost)
+"Tw" = (
+/mob/living/simple_mob/mechanical/combat_drone/event,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/unfinishedoutpost)
+"TK" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/red,
+/obj/random/plushie,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"Uq" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"UJ" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"UP" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"VG" = (
+/turf/simulated/floor/carpet/oracarpet,
+/area/submap/unfinishedoutpost)
+"VR" = (
+/mob/living/simple_mob/mechanical/combat_drone/event,
+/turf/simulated/floor/carpet/oracarpet,
+/area/submap/unfinishedoutpost)
+"VW" = (
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"VZ" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/table/standard,
+/obj/random/firstaid,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"Wo" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/simulated/floor/tiled,
+/area/submap/unfinishedoutpost)
+"WZ" = (
+/obj/structure/door_assembly,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Xc" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Xt" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/mechanical/combat_drone/event,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Xw" = (
+/obj/item/weapon/cell/super/empty,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Yc" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/bluedouble,
+/obj/random/plushie,
+/turf/simulated/floor/wood,
+/area/submap/unfinishedoutpost)
+"YD" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Zg" = (
+/obj/structure/catwalk,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Zh" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+"Zj" = (
+/obj/item/frame/apc,
+/turf/simulated/floor/plating{
+	oxygen = 20.7263;
+	nitrogen = 93.7835;
+	temperature = 243.15
+	},
+/area/submap/unfinishedoutpost)
+
+(1,1,1) = {"
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+qg
+qg
+qg
+qg
+qg
+kG
+qg
+qg
+kG
+qg
+qg
+qg
+qg
+qg
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+kG
+"}
+(2,1,1) = {"
+kG
+Gy
+vg
+vg
+cj
+cj
+hT
+hT
+IJ
+GM
+Oz
+Oz
+Oz
+GM
+Dj
+kG
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+kG
+Yc
+GM
+Oz
+Oz
+Oz
+GM
+rP
+hT
+FG
+Wo
+Fn
+Wo
+Wo
+dG
+kG
+"}
+(3,1,1) = {"
+kG
+vg
+vg
+vg
+vg
+vg
+iM
+hT
+Oz
+VG
+VG
+pR
+VG
+VG
+Oz
+kG
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+kG
+Oz
+dl
+dl
+iK
+dl
+dl
+Oz
+hT
+AY
+dG
+hT
+VZ
+Wo
+lT
+kG
+"}
+(4,1,1) = {"
+kG
+gS
+vg
+Xt
+vg
+UJ
+UP
+hT
+Oz
+VG
+RF
+PO
+Uq
+VR
+Oz
+kG
+qg
+qg
+qg
+qg
+qg
+kG
+qg
+qg
+kG
+qg
+qg
+qg
+qg
+qg
+kG
+Oz
+dl
+RF
+PO
+Uq
+Tw
+Oz
+hT
+hT
+hT
+hT
+VZ
+Wo
+lT
+kG
+"}
+(5,1,1) = {"
+kG
+vg
+vg
+vg
+vg
+vg
+UP
+hT
+Oz
+VG
+VG
+NU
+VG
+VG
+Oz
+kG
+qg
+qg
+qg
+qg
+qg
+ov
+CM
+CM
+iQ
+qg
+qg
+qg
+qg
+qg
+kG
+Oz
+dl
+dl
+Qz
+dl
+dl
+Oz
+hT
+cD
+Wo
+kE
+Wo
+PR
+Wo
+kG
+"}
+(6,1,1) = {"
+kG
+tP
+vg
+vg
+cj
+cj
+hT
+hT
+oc
+GM
+Oz
+GM
+kv
+Oz
+Oz
+kG
+qg
+qg
+qg
+qg
+qg
+ov
+CM
+CM
+iQ
+qg
+qg
+qg
+qg
+qg
+kG
+Oz
+Oz
+TK
+GM
+Oz
+GM
+RI
+hT
+tq
+dG
+kE
+dG
+Wo
+Wo
+kG
+"}
+(7,1,1) = {"
+kG
+hT
+yU
+hT
+hT
+HG
+hT
+hT
+hT
+hT
+hT
+hT
+hT
+gK
+hT
+kG
+Gj
+Gj
+Gj
+Gj
+Gj
+Mc
+CM
+CM
+Tq
+Gj
+Gj
+Gj
+Gj
+Gj
+kG
+hT
+gK
+hT
+hT
+hT
+hT
+hT
+hT
+hT
+hT
+hT
+hT
+gK
+hT
+kG
+"}
+(8,1,1) = {"
+kG
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+eL
+FA
+FA
+FA
+FA
+FA
+FA
+kG
+CM
+CM
+CM
+CM
+CM
+CM
+Zg
+Zg
+CM
+CM
+CM
+CM
+CM
+CM
+kG
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+cm
+FA
+FA
+FA
+FA
+kG
+"}
+(9,1,1) = {"
+kG
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+CM
+JW
+CM
+CM
+CM
+CM
+FM
+CM
+CM
+CM
+CM
+JW
+CM
+CM
+WZ
+FA
+FA
+FA
+FA
+eL
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+WZ
+"}
+(10,1,1) = {"
+VW
+cm
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+cm
+FA
+FA
+FA
+FA
+FA
+kG
+CM
+CM
+CM
+CM
+CM
+CM
+CM
+CM
+CM
+CM
+CM
+CM
+CM
+CM
+kG
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+"}
+(11,1,1) = {"
+VW
+FA
+FA
+FA
+hT
+hT
+hT
+GT
+hT
+hT
+hT
+dG
+hT
+yU
+hT
+kG
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+kG
+hT
+gK
+hT
+hT
+hT
+GT
+hT
+GT
+GT
+hT
+hT
+FA
+FA
+FA
+FA
+"}
+(12,1,1) = {"
+kG
+FA
+eL
+FA
+hT
+FA
+FA
+FA
+cm
+FA
+FA
+bb
+lg
+lg
+vA
+kG
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+kG
+BC
+BC
+HC
+BC
+Xc
+BC
+BC
+BC
+BC
+BC
+hT
+FA
+eL
+FA
+VW
+"}
+(13,1,1) = {"
+kG
+FA
+FA
+FA
+hT
+FA
+FA
+FA
+FA
+FA
+FA
+Zh
+lg
+lg
+tC
+kG
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+kG
+BC
+Xc
+BC
+BC
+FA
+FA
+FA
+BC
+Xc
+BC
+hT
+FA
+FA
+FA
+VW
+"}
+(14,1,1) = {"
+kG
+FA
+FA
+FA
+hT
+FA
+FA
+Xw
+FA
+FA
+FA
+FA
+FA
+lg
+vA
+kG
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+kG
+BC
+FA
+FA
+FA
+eL
+FA
+FA
+FA
+BC
+mU
+hT
+FA
+FA
+FA
+FA
+"}
+(15,1,1) = {"
+kG
+FA
+FA
+FA
+hT
+FA
+FA
+FA
+FA
+FA
+eL
+FA
+FA
+FA
+lg
+kG
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+kG
+YD
+AQ
+AQ
+Kj
+wf
+FA
+FA
+cm
+FA
+BC
+HG
+FA
+FA
+FA
+FA
+"}
+(16,1,1) = {"
+kG
+FA
+FA
+FA
+hT
+cm
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+FA
+lg
+kG
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+kG
+FA
+FA
+Zj
+cm
+FA
+FA
+FA
+FA
+FA
+kP
+hT
+FA
+FA
+FA
+kG
+"}
+(17,1,1) = {"
+kG
+kG
+gK
+VW
+kG
+kG
+tZ
+tZ
+FA
+PZ
+PZ
+FA
+tZ
+VW
+kG
+kG
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+kG
+FA
+tZ
+FA
+VW
+tZ
+tZ
+VW
+FA
+PZ
+kG
+kG
+kG
+gK
+kG
+kG
+"}
+(18,1,1) = {"
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+"}
+(19,1,1) = {"
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+"}
+(20,1,1) = {"
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+"}

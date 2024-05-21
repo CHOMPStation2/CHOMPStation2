@@ -47,7 +47,7 @@
 		"rad" = 0
 		)
 
-	movement_cooldown = 2
+	movement_cooldown = -1
 
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
@@ -64,6 +64,8 @@
 	meat_amount = 1
 
 	say_list_type = /datum/say_list/hare
+	
+	can_be_drop_prey = TRUE //CHOMP Add
 
 /datum/say_list/hare
 	speak = list("Snrf...","Crk!")

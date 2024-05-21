@@ -30,6 +30,7 @@
 		if(breather.internals)
 			breather.internals.icon_state = "internal0"
 		breather.remove_from_mob(contained)
+		breather.cozyloop.stop()  // CHOMPStation Add: Cozy Music
 		visible_message("<span class='notice'>\The [contained] rapidly retracts just before /the [src] is destroyed!</span>")
 		breather = null
 
@@ -70,6 +71,7 @@
 		breather.remove_from_mob(contained)
 		contained.forceMove(src)
 		src.visible_message("<b>\The [user]</b> makes \the [contained] rapidly retract back into \the [src]!")
+		breather.cozyloop.stop()  // CHOMPStation Add: Cozy Music
 		if(breather.internals)
 			breather.internals.icon_state = "internal0"
 		breather = null
@@ -128,7 +130,7 @@
 	return 1
 
 /obj/machinery/oxygen_pump/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(W.is_screwdriver())
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		stat ^= MAINT
 		user.visible_message("<span class='notice'>\The [user] [(stat & MAINT) ? "opens" : "closes"] \the [src].</span>", "<span class='notice'>You [(stat & MAINT) ? "open" : "close"] \the [src].</span>")
 		icon_state = (stat & MAINT) ? icon_state_open : icon_state_closed
@@ -160,6 +162,7 @@
 				tank.forceMove(src)
 			breather.remove_from_mob(contained)
 			contained.forceMove(src)
+			breather.cozyloop.stop() // CHOMPStation Add: Cozy Music
 			src.visible_message("<span class='notice'>\The [contained] rapidly retracts back into \the [src]!</span>")
 			breather = null
 			update_use_power(USE_POWER_IDLE)
@@ -237,6 +240,23 @@
 	icon_state_open = "anesthetic_tank_open"
 	mask_type = /obj/item/clothing/mask/breath/anesthetic
 
+// CHOMPStation Add: Cozy Music
+/obj/machinery/oxygen_pump/anesthetic/attach_mask(var/mob/living/carbon/C)
+	if(C && istype(C))
+		contained.forceMove(get_turf(C))
+		C.equip_to_slot(contained, slot_wear_mask)
+		if(tank)
+			tank.forceMove(C)
+		breather = C
+		spawn(1)
+		if(!breather.internal && tank)
+			breather.internal = tank
+			if(breather.internals)
+				breather.internals.icon_state = "internal1"
+		update_use_power(USE_POWER_ACTIVE)
+		breather.cozyloop.start()
+// CHOMPStation Add End
+
 /obj/machinery/oxygen_pump/mobile
 	name = "portable oxygen pump"
 	icon = 'icons/obj/atmos.dmi'
@@ -272,6 +292,23 @@
 	icon_state_closed = "medpump_n2o"
 	icon_state_open = "medpump_n2o_open"
 	mask_type = /obj/item/clothing/mask/breath/anesthetic
+
+// CHOMPStation Add: Cozy Music
+/obj/machinery/oxygen_pump/mobile/anesthetic/attach_mask(var/mob/living/carbon/C)
+	if(C && istype(C))
+		contained.forceMove(get_turf(C))
+		C.equip_to_slot(contained, slot_wear_mask)
+		if(tank)
+			tank.forceMove(C)
+		breather = C
+		spawn(1)
+		if(!breather.internal && tank)
+			breather.internal = tank
+			if(breather.internals)
+				breather.internals.icon_state = "internal1"
+		update_use_power(USE_POWER_ACTIVE)
+		breather.cozyloop.start()
+// CHOMPStation Add End
 
 /obj/machinery/oxygen_pump/mobile/stabilizer
 	name = "portable patient stabilizer"

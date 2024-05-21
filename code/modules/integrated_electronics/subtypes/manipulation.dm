@@ -106,7 +106,7 @@
 	icon_state = "locomotion"
 	extended_desc = "The circuit accepts a 'dir' number as a direction to move towards.<br>\
 	Pulsing the 'step towards dir' activator pin will cause the machine to move a meter in that direction, assuming it is not \
-	being held, or anchored in some way.  It should be noted that the ability to move is dependant on the type of assembly that this circuit inhabits."
+	being held, or anchored in some way.  It should be noted that the ability to move is dependent on the type of assembly that this circuit inhabits."
 	w_class = ITEMSIZE_NORMAL
 	complexity = 20
 //	size = 5
@@ -188,14 +188,14 @@
 // These procs do not relocate the grenade, that's the callers responsibility
 /obj/item/integrated_circuit/manipulation/grenade/proc/attach_grenade(var/obj/item/weapon/grenade/G)
 	attached_grenade = G
-	GLOB.destroyed_event.register(attached_grenade, src, /obj/item/integrated_circuit/manipulation/grenade/proc/detach_grenade)
+	RegisterSignal(attached_grenade, COMSIG_OBSERVER_DESTROYED, /obj/item/integrated_circuit/manipulation/grenade/proc/detach_grenade)
 	size += G.w_class
 	desc += " \An [attached_grenade] is attached to it!"
 
 /obj/item/integrated_circuit/manipulation/grenade/proc/detach_grenade()
 	if(!attached_grenade)
 		return
-	GLOB.destroyed_event.unregister(attached_grenade, src, /obj/item/integrated_circuit/manipulation/grenade/proc/detach_grenade)
+	UnregisterSignal(attached_grenade, COMSIG_OBSERVER_DESTROYED)
 	attached_grenade = null
 	size = initial(size)
 	desc = initial(desc)
@@ -204,3 +204,32 @@
 	pre_attached_grenade_type = /obj/item/weapon/grenade/explosive
 	origin_tech = list(TECH_ENGINEERING = 3, TECH_DATA = 3, TECH_COMBAT = 10)
 	spawn_flags = null			// Used for world initializing, see the #defines above.
+
+//CHOMPADDITION: Size Circuit
+/obj/item/integrated_circuit/manipulation/Size
+	name = "size circuit"
+	desc = "This allows a given target to be resized."
+	icon_state = "locomotion"
+	extended_desc = "The Circuit accepts a reference to a creature and the size toset them to."
+	w_class = ITEMSIZE_NORMAL
+	complexity = 20
+	inputs = list(	"target ref",
+					"size" = IC_PINTYPE_NUMBER)
+	outputs = list()
+	activators = list("set size" = IC_PINTYPE_PULSE_IN,"on size set" = IC_PINTYPE_PULSE_OUT)
+	spawn_flags = IC_SPAWN_RESEARCH
+	power_draw_per_use = 100
+
+/obj/item/integrated_circuit/manipulation/size/do_work()
+	pull_data()
+	var/mob/living/target = get_pin_data(IC_INPUT, 1)
+	var/size = get_pin_data(IC_INPUT, 2)
+	var/turf/tt = get_turf(target)
+	var/turf/st = get_turf(src)
+
+	var/distance = sqrt((st.x - tt.x)**2 + (st.y - tt.y)**2)
+	if (distance >= 6)
+		return
+	if(target && istype(target,/mob/living/))
+		target.resize(size/100)
+	activate_pin(2)

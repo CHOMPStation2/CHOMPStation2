@@ -21,7 +21,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	
 	},
 /turf/simulated/floor,
 /area/awaymission/example)
@@ -32,7 +32,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	
 	},
 /turf/simulated/floor,
 /area/awaymission/example)
@@ -46,7 +46,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	
 	},
 /turf/simulated/floor,
 /area/awaymission/example)
@@ -70,31 +70,21 @@
 /area/awaymission/example)
 "ak" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor,
 /area/awaymission/example)
 "al" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -102,8 +92,6 @@
 /area/awaymission/example)
 "am" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
@@ -118,7 +106,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	
 	},
 /obj/machinery/gateway/centeraway,
 /turf/simulated/floor,
@@ -131,8 +119,6 @@
 /area/awaymission/example)
 "aq" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -151,8 +137,6 @@
 "at" = (
 /obj/machinery/gateway,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor,
@@ -162,8 +146,6 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -171,7 +153,6 @@
 /area/awaymission/example)
 "av" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -182,15 +163,13 @@
 "ax" = (
 /obj/structure/cable{
 	icon_state = "0-4";
-	d2 = 4
+	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/example)
 "ay" = (
 /obj/machinery/light/small,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -198,8 +177,6 @@
 /area/awaymission/example)
 "az" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -207,8 +184,6 @@
 /area/awaymission/example)
 "aA" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/decal/cleanable/oil,

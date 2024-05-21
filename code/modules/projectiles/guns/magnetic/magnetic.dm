@@ -134,12 +134,12 @@
 			. += "<span class='notice'>The installed [capacitor.name] has a charge level of [round((capacitor.charge/capacitor.max_charge)*100)]%.</span>"
 
 		if(state & ICON_BAD)
-			. += "<span class='notice'>The capacitor charge indicator is blinking <font color ='[COLOR_RED]'>red</font>. Maybe you should check the cell or capacitor.</span>"
+			. += "<span class='notice'>The capacitor charge indicator is blinking [span_red("red")]. Maybe you should check the cell or capacitor.</span>"
 		else
 			if(state & ICON_CHARGE)
-				. += "<span class='notice'>The capacitor charge indicator is <font color ='[COLOR_ORANGE]'>amber</font>.</span>"
+				. += "<span class='notice'>The capacitor charge indicator is [span_orange("amber")].</span>"
 			else
-				. += "<span class='notice'>The capacitor charge indicator is <font color ='[COLOR_GREEN]'>green</font>.</span>"
+				. += "<span class='notice'>The capacitor charge indicator is [span_green("green")].</span>"
 
 /obj/item/weapon/gun/magnetic/attackby(var/obj/item/thing, var/mob/user)
 
@@ -155,7 +155,7 @@
 			update_icon()
 			return
 
-		if(thing.is_screwdriver())
+		if(thing.has_tool_quality(TOOL_SCREWDRIVER))
 			if(!capacitor)
 				to_chat(user, "<span class='warning'>\The [src] has no capacitor installed.</span>")
 				return
@@ -331,7 +331,7 @@
 /obj/item/weapon/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, var/mob/living/carbon/M, var/max_range, var/banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
 	to_chat(M, "<span class='danger'>BANG</span>")						// Called during the loop that bangs people in lockers/containers and when banging
 	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
-	
+
 
 	//Checking for protections
 	var/eye_safety = 0
@@ -365,17 +365,20 @@
 			else
 				M.ear_damage += rand(0, 5)
 				M.ear_deaf = max(M.ear_deaf,15)
+				M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 
 	else if(get_dist(M, T) <= round(max_range * 0.5 * bang_effectiveness))
 		if(!ear_safety)
 			M.Confuse(8)
 			M.ear_damage += rand(0, 3)
 			M.ear_deaf = max(M.ear_deaf,10)
+			M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 
 	else if(!ear_safety && get_dist(M, T) <= (max_range * 0.7 * bang_effectiveness))
 		M.Confuse(4)
 		M.ear_damage += rand(0, 1)
 		M.ear_deaf = max(M.ear_deaf,5)
+		M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 
 	//This really should be in mob not every check
 	if(ishuman(M))

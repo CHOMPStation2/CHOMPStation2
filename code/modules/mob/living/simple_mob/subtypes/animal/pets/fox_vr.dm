@@ -9,7 +9,7 @@
 	icon_rest = "fox2_rest"
 	icon = 'icons/mob/pets.dmi'
 
-	movement_cooldown = 0.5
+	movement_cooldown = -1
 	see_in_dark = 6
 	mob_size = MOB_SMALL //Foxes are not smaller than cats so bumping them up to small
 
@@ -110,7 +110,7 @@
 
 /mob/living/simple_mob/animal/passive/fox/renault/verb/become_friends()
 	set name = "Become Friends"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set src in view(1)
 
 	var/mob/living/L = usr
@@ -169,7 +169,7 @@
 
 /mob/living/simple_mob/animal/passive/fox/fluff/verb/friend()
 	set name = "Become Friends"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set src in view(1)
 
 	if(friend && usr == friend)

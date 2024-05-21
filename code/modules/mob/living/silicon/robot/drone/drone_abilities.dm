@@ -2,7 +2,7 @@
 /mob/living/silicon/robot/drone/verb/set_mail_tag()
 	set name = "Set Mail Tag"
 	set desc = "Tag yourself for delivery through the disposals system."
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 
 	var/new_tag = tgui_input_list(usr, "Select the desired destination.", "Set Mail Tag", GLOB.tagger_locations)
 
@@ -29,7 +29,7 @@
 		H.put_in_hands(hat)
 		H.visible_message("<span class='danger'>\The [H] removes \the [src]'s [hat].</span>")
 		hat = null
-		updateicon()
+		update_icon()
 		return
 	else
 		return ..()

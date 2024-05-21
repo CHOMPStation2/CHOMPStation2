@@ -1,5 +1,5 @@
 /client/proc/callproc()
-	set category = "Debug"
+	set category = "Debug.Events" //CHOMPEdit
 	set name = "Advanced ProcCall"
 	set waitfor = 0
 
@@ -21,7 +21,7 @@
 			target = null
 			targetselected = 0
 
-	var/procname = input(usr, "Proc path, eg: /proc/fake_blood","Path:", null) as text|null
+	var/procname = tgui_input_text(usr, "Proc path, eg: /proc/fake_blood","Path:", null)
 	if(!procname)
 		return
 
@@ -39,12 +39,12 @@
 		testname = replacetext(testname, "()", "")
 
 	if(targetselected && !hascall(target,testname))
-		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Error: callproc(): type [target.type] has no proc named [procname].</font></span>")
+		to_chat(usr, "<span class='filter_adminlog'>" + span_red("Error: callproc(): type [target.type] has no proc named [procname].") + "</span>")
 		return
 	else
 		var/procpath = text2path(procname)
 		if (!procpath)
-			to_chat(usr, "<span class='filter_adminlog'><font color='red'>Error: callproc(): proc [procname] does not exist. (Did you forget the /proc/ part?)</font></span>")
+			to_chat(usr, "<span class='filter_adminlog'>" + span_red("Error: callproc(): proc [procname] does not exist. (Did you forget the /proc/ part?)") + "</span>")
 			return
 	var/list/lst = get_callproc_args()
 	if(!lst)
@@ -52,7 +52,7 @@
 
 	if(targetselected)
 		if(!target)
-			to_chat(usr, "<span class='filter_adminlog'><font color='red'>Error: callproc(): owner of proc no longer exists.</font></span>")
+			to_chat(usr, "<span class='filter_adminlog'>" + span_red("Error: callproc(): owner of proc no longer exists.") + "</span>")
 			return
 		var/msg = "[key_name(src)] called [target]'s [procname]() with [lst.len ? "the arguments [list2params(lst)]":"no arguments"]."
 		log_admin(msg)
@@ -129,18 +129,18 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 #endif
 
 /client/proc/callproc_datum(datum/A as null|area|mob|obj|turf)
-	set category = "Debug"
+	set category = "Debug.Events" //CHOMPEdit
 	set name = "Atom ProcCall"
 	set waitfor = 0
 
 	if(!check_rights(R_DEBUG))
 		return
 
-	var/procname = input(usr, "Proc name, eg: fake_blood","Proc:", null) as text|null
+	var/procname = tgui_input_text(usr, "Proc name, eg: fake_blood","Proc:", null)
 	if(!procname)
 		return
 	if(!hascall(A,procname))
-		to_chat(usr, "<span class='filter_adminlog'><font color='red'>Error: callproc_datum(): type [A.type] has no proc named [procname].</font></span>")
+		to_chat(usr, "<span class='filter_adminlog'>" + span_red("Error: callproc_datum(): type [A.type] has no proc named [procname].") + "</span>")
 		return
 	var/list/lst = get_callproc_args()
 	if(!lst)
@@ -161,7 +161,7 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 		to_chat(usr, .)
 
 /client/proc/get_callproc_args()
-	var/argnum = input(usr, "Number of arguments","Number:",0) as num|null
+	var/argnum = tgui_input_number(usr, "Number of arguments","Number:",0)
 	if(isnull(argnum))
 		return null					//Cancel
 
@@ -190,7 +190,7 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 	. = ""
 	if(islist(returnval))
 		var/list/returnedlist = returnval
-		. = "<font color='blue'>"
+		. = "<span class='blue'>"
 		if(returnedlist.len)
 			var/assoc_check = returnedlist[1]
 			if(istext(assoc_check) && (returnedlist[assoc_check] != null))
@@ -204,7 +204,7 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 					. += "\n[elem]"
 		else
 			. = "[procname] returned an empty list"
-		. += "</font>"
+		. += "</span>"
 
 	else
-		. = "<font color='blue'>[procname] returned: [!isnull(returnval) ? returnval : "null"]</font>"
+		. = span_blue("[procname] returned: [!isnull(returnval) ? returnval : "null"]")

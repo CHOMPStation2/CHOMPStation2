@@ -34,7 +34,7 @@
 		if(writing_space <= 0)
 			to_chat(user, SPAN_WARNING("There is no room left on \the [src]."))
 			return
-		var/text = sanitizeSafe(input(usr, "What would you like to write?") as text, writing_space)
+		var/text = sanitizeSafe(tgui_input_text(usr, "What would you like to write?", null, null, writing_space), writing_space)
 		if(!text || thing.loc != user || (!Adjacent(user) && loc != user) || user.incapacitated())
 			return
 		user.visible_message("<b>\The [user]</b> jots a note down on \the [src].")
@@ -97,7 +97,8 @@
 
 /obj/item/weapon/paper/sticky/Initialize()
 	. = ..()
-	GLOB.moved_event.register(src, src, /obj/item/weapon/paper/sticky/proc/reset_persistence_tracking)
+	AddComponent(/datum/component/recursive_move)
+	RegisterSignal(src, COMSIG_OBSERVER_MOVED, /obj/item/weapon/paper/sticky/proc/reset_persistence_tracking)
 
 /obj/item/weapon/paper/sticky/proc/reset_persistence_tracking()
 	SSpersistence.forget_value(src, /datum/persistent/paper/sticky)
@@ -106,7 +107,7 @@
 
 /obj/item/weapon/paper/sticky/Destroy()
 	reset_persistence_tracking()
-	GLOB.moved_event.unregister(src, src)
+	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
 	. = ..()
 
 /obj/item/weapon/paper/sticky/update_icon()

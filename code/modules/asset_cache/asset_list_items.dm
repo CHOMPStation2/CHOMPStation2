@@ -1,18 +1,4 @@
 //DEFINITIONS FOR ASSET DATUMS START HERE.
-/datum/asset/simple/tgui_common
-	// keep_local_name = TRUE
-	assets = list(
-		"tgui-common.bundle.js" = file("tgui/public/tgui-common.bundle.js"),
-	)
-
-/datum/asset/simple/tgui
-	// keep_local_name = TRUE
-	assets = list(
-		"tgui.bundle.js" = file("tgui/public/tgui.bundle.js"),
-		"tgui.bundle.css" = file("tgui/public/tgui.bundle.css"),
-	)
-
-
 /datum/asset/simple/headers
 	assets = list(
 		"alarm_green.gif" 			= 'icons/program_icons/alarm_green.gif',
@@ -129,6 +115,7 @@
 		"no_image32.png" = 'html/images/no_image32.png',
 	)
 
+/* CHOMPedit Start - Better Changelogs
 /datum/asset/simple/changelog
 	assets = list(
 		"88x31.png" = 'html/88x31.png',
@@ -150,6 +137,7 @@
 		"changelog.js" = 'html/changelog.js',
 		"changelog.html" = 'html/changelog.html'
 	)
+*/ // CHOMPedit end
 
 // /datum/asset/group/goonchat
 // 	children = list(
@@ -159,11 +147,6 @@
 // 		/datum/asset/simple/fontawesome
 // 	)
 
-// /datum/asset/simple/jquery
-// 	assets = list(
-// 		"jquery.min.js"            = 'code/modules/goonchat/browserassets/js/jquery.min.js',
-// 	)
-
 // /datum/asset/simple/goonchat
 // 	assets = list(
 // 		"json2.min.js"             = 'code/modules/goonchat/browserassets/js/json2.min.js',
@@ -171,24 +154,6 @@
 // 		"browserOutput.css"	       = 'code/modules/goonchat/browserassets/css/browserOutput.css',
 // 		"browserOutput_white.css"  = 'code/modules/goonchat/browserassets/css/browserOutput_white.css',
 // 	)
-
-/datum/asset/simple/fontawesome
-	assets = list(
-		"fa-regular-400.eot"  = 'html/font-awesome/webfonts/fa-regular-400.eot',
-		"fa-regular-400.woff" = 'html/font-awesome/webfonts/fa-regular-400.woff',
-		"fa-solid-900.eot"    = 'html/font-awesome/webfonts/fa-solid-900.eot',
-		"fa-solid-900.woff"   = 'html/font-awesome/webfonts/fa-solid-900.woff',
-		"font-awesome.css"    = 'html/font-awesome/css/all.min.css',
-		"v4shim.css"          = 'html/font-awesome/css/v4-shims.min.css'
-	)
-
-/datum/asset/simple/tgfont
-	assets = list(
-		"tgfont.eot" = file("tgui/packages/tgfont/dist/tgfont.eot"),
-		"tgfont.woff2" = file("tgui/packages/tgfont/dist/tgfont.woff2"),
-		"tgfont.css" = file("tgui/packages/tgfont/dist/tgfont.css"),
-	)
-
 
 // /datum/asset/spritesheet/goonchat
 // 	name = "chat"
@@ -295,20 +260,27 @@
 /datum/asset/spritesheet/pipes
 	name = "pipes"
 
-/datum/asset/spritesheet/pipes/register()
+/datum/asset/spritesheet/pipes/create_spritesheets()
 	for(var/each in list('icons/obj/pipe-item.dmi', 'icons/obj/pipes/disposal.dmi'))
 		InsertAll("", each, global.alldirs)
-	..()
 
 //VOREStation Add
 /datum/asset/spritesheet/vore
 	name = "vore"
 
-/datum/asset/spritesheet/vore/register()
-	var/icon/downscaled = icon('icons/mob/screen_full_vore_ch.dmi') //CHOMPedit
+/datum/asset/spritesheet/vore/create_spritesheets()
+	var/icon/downscaled = icon('modular_chomp/icons/mob/screen_full_vore_ch.dmi') //CHOMPedit: preserving save data
 	downscaled.Scale(240, 240)
 	InsertAll("", downscaled)
-	..()
+
+/datum/asset/spritesheet/vore_fixed //This should be getting loaded in the TGUI vore panel but the game refuses to do so, for some reason. It only loads the vore spritesheet. //CHOMPedit
+	name = "fixedvore" //CHOMPedit
+
+/datum/asset/spritesheet/vore_fixed/create_spritesheets() //CHOMPedi start: preserving save data
+	var/icon/downscaledVF = icon('icons/mob/screen_full_vore.dmi')
+	downscaledVF.Scale(240, 240)
+	InsertAll("", downscaledVF) //CHOMpedit end
+
 //VOREStation Add End
 
 // // Representative icons for each research design
@@ -373,7 +345,7 @@
 /datum/asset/spritesheet/vending
 	name = "vending"
 
-/datum/asset/spritesheet/vending/register()
+/datum/asset/spritesheet/vending/create_spritesheets()
 	populate_vending_products()
 	for(var/atom/item as anything in GLOB.vending_products)
 		if(!ispath(item, /atom))
@@ -411,7 +383,6 @@
 		var/imgid = replacetext(replacetext("[item]", "/obj/item/", ""), "/", "-")
 
 		Insert(imgid, I)
-	return ..()
 
 // this is cursed but necessary or else vending product icons can be missing
 // basically, if there's any vending machines that aren't already mapped in, our register() will not know
@@ -457,56 +428,40 @@
 // 	..()
 
 //Pill sprites for UIs
-/datum/asset/chem_master
-	var/assets = list()
-	var/verify = FALSE
+/datum/asset/spritesheet/chem_master
+	name = "chem_master"
 
-/datum/asset/chem_master/register()
+/datum/asset/spritesheet/chem_master/create_spritesheets()
 	for(var/i = 1 to 24)
-		assets["pill[i].png"] = icon('icons/obj/chemical.dmi', "pill[i]")
+		Insert("pill[i]", 'icons/obj/chemical.dmi', "pill[i]")
 
 	for(var/i = 1 to 4)
-		assets["bottle-[i].png"] = icon('icons/obj/chemical.dmi', "bottle-[i]")
+		Insert("bottle-[i]", 'icons/obj/chemical.dmi', "bottle-[i]")
 
-	for(var/asset_name in assets)
-		register_asset(asset_name, assets[asset_name])
-
-/datum/asset/chem_master/send(client)
-	send_asset_list(client, assets, verify)
+	for(var/i = 1 to 4) // CHOMPedit
+		Insert("patch[i].png", 'icons/obj/chemical.dmi', "patch[i]") // CHOMPedit
 
 //Cloning pod sprites for UIs
-/datum/asset/cloning
-	var/assets = list()
-	var/verify = FALSE
-
-/datum/asset/cloning/register()
-	assets["pod_idle.gif"] = icon('icons/obj/cloning.dmi', "pod_idle")
-	assets["pod_cloning.gif"] = icon('icons/obj/cloning.dmi', "pod_cloning")
-	assets["pod_mess.gif"] = icon('icons/obj/cloning.dmi', "pod_mess")
-	for(var/asset_name in assets)
-		register_asset(asset_name, assets[asset_name])
-
-/datum/asset/cloning/send(client)
-	send_asset_list(client, assets, verify)
+/datum/asset/simple/cloning
+	assets = list(
+		"pod_idle.gif" = 'icons/UI_Icons/synthprinter.gif',
+		"pod_cloning.gif" = 'icons/UI_Icons/synthprinter_working.gif',
+	)
 
 // VOREStation Add
-/datum/asset/cloning/resleeving
-/datum/asset/cloning/resleeving/register()
-	// This intentionally does not call the parent. Duplicate assets are not allowed.
-	assets["sleeve_empty.gif"] = icon('icons/obj/machines/implantchair.dmi', "implantchair")
-	assets["sleeve_occupied.gif"] = icon('icons/obj/machines/implantchair.dmi', "implantchair_on")
-	assets["synthprinter.gif"] = icon('icons/obj/machines/synthpod.dmi', "pod_0")
-	assets["synthprinter_working.gif"] = icon('icons/obj/machines/synthpod.dmi', "pod_1")
-	for(var/asset_name in assets)
-		register_asset(asset_name, assets[asset_name])
-// VOREStation Add End
+/datum/asset/simple/cloning/resleeving
+	assets = list(
+		"sleeve_empty.gif" = 'icons/UI_Icons/sleeve_empty.gif',
+		"sleeve_occupied.gif" = 'icons/UI_Icons/sleeve_occupied.gif',
+		"synthprinter.gif" = 'icons/UI_Icons/synthprinter.gif',
+		"synthprinter_working.gif" = 'icons/UI_Icons/synthprinter_working.gif',
+	)
 
 /datum/asset/spritesheet/sheetmaterials
 	name = "sheetmaterials"
 
-/datum/asset/spritesheet/sheetmaterials/register()
+/datum/asset/spritesheet/sheetmaterials/create_spritesheets()
 	InsertAll("", 'icons/obj/stacks.dmi')
-	..()
 
 // Nanomaps
 /datum/asset/simple/nanomaps
@@ -515,9 +470,9 @@
 	assets = list(
 		// CHOMP Edit: Restored for chomp station. Removed Tether.
 		"southern_cross_nanomap_z1.png"		= 'icons/_nanomaps/southern_cross_nanomap_z1.png',
-		"southern_cross_nanomap_z10.png"	= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 		"southern_cross_nanomap_z2.png"		= 'icons/_nanomaps/southern_cross_nanomap_z2.png',
 		"southern_cross_nanomap_z3.png"		= 'icons/_nanomaps/southern_cross_nanomap_z3.png',
+		"southern_cross_nanomap_z4.png"		= 'icons/_nanomaps/southern_cross_nanomap_z4.png',
 		"southern_cross_nanomap_z5.png"		= 'icons/_nanomaps/southern_cross_nanomap_z5.png',
 		"southern_cross_nanomap_z6.png"		= 'icons/_nanomaps/southern_cross_nanomap_z6.png',
 		"southern_cross_nanomap_z7.png"		= 'icons/_nanomaps/southern_cross_nanomap_z7.png',
@@ -525,20 +480,5 @@
 		"southern_cross_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z9.png',
 		"southern_cross_nanomap_z10.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 		"southern_cross_nanomap_z11.png"		= 'icons/_nanomaps/southern_cross_nanomap_z11.png',
-		//"tether_nanomap_z1.png"				= 'icons/_nanomaps/tether_nanomap_z1.png',
-		//"tether_nanomap_z2.png"				= 'icons/_nanomaps/tether_nanomap_z2.png',
-		//"tether_nanomap_z3.png"				= 'icons/_nanomaps/tether_nanomap_z3.png',
-		//"tether_nanomap_z4.png"				= 'icons/_nanomaps/tether_nanomap_z4.png',
-		//"tether_nanomap_z5.png"				= 'icons/_nanomaps/tether_nanomap_z5.png',
-		//"tether_nanomap_z6.png"				= 'icons/_nanomaps/tether_nanomap_z6.png',
-		//"tether_nanomap_z7.png"				= 'icons/_nanomaps/tether_nanomap_z7.png',
-		//"tether_nanomap_z8.png"				= 'icons/_nanomaps/tether_nanomap_z8.png',
-		//"tether_nanomap_z9.png"				= 'icons/_nanomaps/tether_nanomap_z9.png',
-		//"tether_nanomap_z10.png"			= 'icons/_nanomaps/tether_nanomap_z10.png',
-		//"tether_nanomap_z13.png"			= 'icons/_nanomaps/tether_nanomap_z13.png',
-		//"tether_nanomap_z14.png"			= 'icons/_nanomaps/tether_nanomap_z14.png',
-		//"stellardelight_nanomap_z1.png"		= 'icons/_nanomaps/sd_deck1.png',
-		//"stellardelight_nanomap_z2.png"		= 'icons/_nanomaps/sd_deck2.png',
-		//"stellardelight_nanomap_z3.png"		= 'icons/_nanomaps/sd_deck3.png',
 		// CHOMP Edit End
 	)

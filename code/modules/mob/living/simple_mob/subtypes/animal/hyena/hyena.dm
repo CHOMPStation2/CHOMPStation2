@@ -18,13 +18,13 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	value = CATALOGUER_REWARD_MEDIUM
 
 // Start Defining the mob here
-/mob/living/simple_mob/animal/hyena 
+/mob/living/simple_mob/animal/hyena
 	name = "Hyena"
 	desc = "Yeen! Its fur is a dusty yellow-brown color with black spots, and it has rounded ears... and SHARP TEETH! You inexplicably want to pet it, though."
 	tt_desc = "Crocuta crocuta"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/hyena)
 
-	icon = 'icons/mob/animals48x32_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animals48x32_ch.dmi'
 	icon_state = "yeen"
 	icon_living = "yeen"
 	icon_dead = "yeen_dead"
@@ -82,13 +82,15 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
 	say_list_type = /datum/say_list/hyena
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 	var/obj/item/clothing/head/hat = null // The hat the yeen is wearing when initialized, var will update with the chosen hat.
 
 // Silly stuff. HATS! Give your yeen a hat today <3
 /mob/living/simple_mob/animal/hyena/verb/remove_hat()
 	set name = "Remove Hat"
 	set desc = "Remove the yeen's hat. You monster. ;~;"
-	set category = "Abilities"
+	set category = "Abilities.Hyena" //CHOMPEdit
 	set src in view(1)
 
 	drop_hat(usr)
@@ -111,7 +113,7 @@ They're also cool, and Rykka/Nyria wrote this uwu
 /mob/living/simple_mob/animal/hyena/verb/give_hat()
 	set name = "Give Hat"
 	set desc = "Give the yeen a hat. You wonderful bean. <3"
-	set category = "Abilities"
+	set category = "Abilities.Hyena" //CHOMPEdit
 	set src in view(1)
 
 	take_hat(usr)

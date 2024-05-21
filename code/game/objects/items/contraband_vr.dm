@@ -42,12 +42,17 @@
 						/obj/item/mecha_parts/part/phazon_right_arm,
 						/obj/item/mecha_parts/part/phazon_right_leg,
 						/obj/item/mecha_parts/part/phazon_torso,
+						/obj/item/weapon/circuitboard/mecha/phazon/targeting,
+						/obj/item/weapon/circuitboard/mecha/phazon/peripherals,
+						/obj/item/weapon/circuitboard/mecha/phazon/main,
 						/obj/item/device/bodysnatcher,
+						/obj/item/device/mindbinder,	//CHOMPAdd
 						/obj/item/weapon/bluespace_harpoon,
 						/obj/item/clothing/accessory/permit/gun,
 						/obj/item/device/perfect_tele,
 						/obj/item/device/sleevemate,
 						/obj/item/weapon/disk/nifsoft/compliance,
+						/obj/item/weapon/implanter/compliance,
 						/obj/item/seeds/ambrosiadeusseed,
 						/obj/item/seeds/ambrosiavulgarisseed,
 						/obj/item/seeds/libertymycelium,
@@ -55,7 +60,7 @@
 						/obj/item/toy/nanotrasenballoon,
 						/obj/item/toy/syndicateballoon,
 						/obj/item/weapon/aiModule/syndicate,
-						/obj/item/weapon/book/manual/engineering_hacking,
+						/obj/item/weapon/book/manual/wiki/engineering_hacking, // CHOMPEdit
 						/obj/item/weapon/card/emag,
 						/obj/item/weapon/card/emag_broken,
 						/obj/item/weapon/card/id/syndicate,
@@ -87,18 +92,6 @@
 		new loot(usr.loc)
 		to_chat(user, "You unwrap the package.")
 		qdel(src)
-
-/obj/item/weapon/storage/fancy/cigar/havana // Putting this here 'cuz fuck it. -Spades
-	name = "\improper Havana cigar case"
-	desc = "Save these for the fancy-pantses at the next CentCom black tie reception. You can't blow the smoke from such majestic stogies in just anyone's face."
-	icon_state = "cigarcase"
-	icon = 'icons/obj/cigarettes.dmi'
-	w_class = ITEMSIZE_TINY
-	throwforce = 2
-	slot_flags = SLOT_BELT
-	storage_slots = 7
-	can_hold = list(/obj/item/clothing/mask/smokable/cigarette/cigar/havana)
-	icon_type = "cigar"
 
 /obj/item/weapon/miscdisc
 	name = "strange artefact"

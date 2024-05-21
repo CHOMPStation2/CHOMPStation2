@@ -716,7 +716,7 @@
 	if(stored_item && opened && !searching)
 		searching = TRUE
 		if(do_after(user, 10))
-			to_chat(user, "You find \icon[stored_item] [stored_item] in [src]!")
+			to_chat(user, "You find [icon2html(stored_item, user.client)] [stored_item] in [src]!")
 			stored_item.forceMove(get_turf(src))
 			stored_item = null
 			searching = FALSE
@@ -813,7 +813,7 @@
 	if(stored_item && opened && !searching)
 		searching = TRUE
 		if(do_after(user, 10))
-			to_chat(user, "You find \icon[stored_item] [stored_item] in [src]!")
+			to_chat(user, "You find [icon2html(stored_item, user.client)] [stored_item] in [src]!")
 			stored_item.forceMove(get_turf(src))
 			stored_item = null
 			searching = FALSE
@@ -843,10 +843,14 @@
 	if(!M.mind)
 		return 0
 
-	var/input = sanitizeSafe(input(usr, "What do you want to name the plushie?", ,""), MAX_NAME_LEN)
+	var/input = sanitizeSafe(tgui_input_text(usr, "What do you want to name the plushie?", ,""), MAX_NAME_LEN)
 
 	if(src && input && !M.stat && in_range(M,src))
 		name = input
+		//CHOMPAdd Start - Rename possessed voices too
+		for(var/mob/living/voice/V in possessed_voice)
+			V.name = input
+		//CHOMPAdd End
 		to_chat(M, "You name the plushie [input], giving it a hug for good luck.")
 		return 1
 

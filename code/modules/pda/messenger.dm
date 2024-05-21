@@ -12,6 +12,7 @@
 	var/m_hidden = 0 // Is the PDA hidden from the PDA list?
 	var/active_conversation = null // New variable that allows us to only view a single conversation.
 	var/list/conversations = list()    // For keeping up with who we have PDA messsages from.
+	var/list/fakepdas = list() //So that fake PDAs show up in conversations for props. Namedlist of "fakeName" = fakeRef
 
 /datum/data/pda/app/messenger/start()
 	. = ..()
@@ -42,6 +43,8 @@
 				convopdas.Add(list(list("Name" = "[P]", "Reference" = "\ref[P]", "Detonate" = "[P.detonate]", "inconvo" = "1")))
 			else
 				pdas.Add(list(list("Name" = "[P]", "Reference" = "\ref[P]", "Detonate" = "[P.detonate]", "inconvo" = "0")))
+		for(var/fakeRef in fakepdas)
+			convopdas.Add(list(list("Name" = "[fakepdas[fakeRef]]", "Reference" = "[fakeRef]", "Detonate" = "0", "inconvo" = "1")))
 
 		data["convopdas"] = convopdas
 		data["pdas"] = pdas
@@ -117,10 +120,10 @@
 			create_message(usr, P)
 			if(href_list["target"] in conversations)            // Need to make sure the message went through, if not welp.
 				active_conversation = href_list["target"]
-	
+
 
 /datum/data/pda/app/messenger/proc/create_message(var/mob/living/U, var/obj/item/device/pda/P)
-	var/t = input(U, "Please enter message", name, null) as text|null
+	var/t = tgui_input_text(U, "Please enter message", name, null)
 	if(!t)
 		return
 	t = sanitize(copytext(t, 1, MAX_MESSAGE_LEN))
@@ -178,7 +181,7 @@
 
 		SStgui.update_user_uis(U, P) // Update the sending user's PDA UI so that they can see the new message
 		log_pda("(PDA: [src.name]) sent \"[t]\" to [P.name]", usr)
-		to_chat(U, "[bicon(pda)] <b>Sent message to [P.owner] ([P.ownjob]), </b>\"[t]\"")
+		to_chat(U, "[icon2html(pda,U.client)] <b>Sent message to [P.owner] ([P.ownjob]), </b>\"[t]\"")
 	else
 		to_chat(U, "<span class='notice'>ERROR: Messaging server is not responding.</span>")
 
@@ -224,7 +227,7 @@
 /datum/data/pda/app/messenger/multicast
 /datum/data/pda/app/messenger/multicast/receive_message(list/data, ref)
 	. = ..()
-	
+
 	var/obj/item/device/pda/multicaster/M = pda
 	if(!istype(M))
 		return
@@ -242,3 +245,13 @@
 			var/datum/data/pda/app/messenger/P = target.find_program(/datum/data/pda/app/messenger)
 			if(P)
 				P.receive_message(modified_message, "\ref[M]")
+
+/*
+Generalized proc to handle GM fake prop messages, or future fake prop messages from mapping landmarks.
+We need a separate proc for this due to the "target" component and creation of a fake conversation entry.
+Invoked by /obj/item/device/pda/proc/createPropFakeConversation_admin(var/mob/M)
+*/
+/datum/data/pda/app/messenger/proc/createFakeMessage(fakeName, fakeRef, fakeJob, sent, message)
+	receive_message(list("sent" = sent, "owner" = "[fakeName]", "job" = "[fakeJob]", "message" = "[message]", "target" = "[fakeRef]"), fakeRef)
+	if(!fakepdas[fakeRef])
+		fakepdas[fakeRef] = fakeName

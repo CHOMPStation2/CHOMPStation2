@@ -16,14 +16,14 @@
 		return
 
 	if(!src.client.holder)
-		if(!config.dsay_allowed)
+		if(!CONFIG_GET(flag/dsay_allowed)) // CHOMPEdit
 			to_chat(src, "<span class='danger'>Deadchat is globally muted.</span>")
 			return
 
 
 	var/input
 	if(!message)
-		input = sanitize_or_reflect(input(src, "Choose an emote to display.") as text|null, src) //VOREStation Edit - Reflect too long messages, within reason
+		input = sanitize_or_reflect(tgui_input_text(src, "Choose an emote to display."), src) //VOREStation Edit - Reflect too long messages, within reason
 	else
 		input = message
 

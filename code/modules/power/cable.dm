@@ -177,7 +177,7 @@ var/list/possible_cable_coil_colours = list(
 	if(!T.is_plating())
 		return
 
-	if(W.is_wirecutter())
+	if(W.has_tool_quality(TOOL_WIRECUTTER))
 		var/obj/item/stack/cable_coil/CC
 		if(d1 == UP || d2 == UP)
 			to_chat(user, "<span class='warning'>You must cut this cable from above.</span>")
@@ -208,7 +208,7 @@ var/list/possible_cable_coil_colours = list(
 					if(c.d1 == UP || c.d2 == UP)
 						qdel(c)
 
-		investigate_log("was cut by [key_name(usr, usr.client)] in [user.loc.loc]","wires")
+		investigate_log("was cut by [key_name(user, user.client)] in [user.loc.loc]","wires") //ChompEDIT usr --> user
 
 		qdel(src)
 		return
@@ -245,7 +245,7 @@ var/list/possible_cable_coil_colours = list(
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
-		if(usr.stunned)
+		if(user.stunned) //ChompEDIT usr --> user
 			return 1
 	return 0
 
@@ -499,6 +499,7 @@ var/list/possible_cable_coil_colours = list(
 	amount = MAXCOIL
 	max_amount = MAXCOIL
 	color = COLOR_RED
+	gender = NEUTER
 	desc = "A coil of power cable."
 	throwforce = 10
 	w_class = ITEMSIZE_SMALL
@@ -509,6 +510,7 @@ var/list/possible_cable_coil_colours = list(
 	item_state = "coil"
 	attack_verb = list("whipped", "lashed", "disciplined", "flogged")
 	stacktype = /obj/item/stack/cable_coil
+	singular_name = "length"
 	drop_sound = 'sound/items/drop/accessory.ogg'
 	pickup_sound = 'sound/items/pickup/accessory.ogg'
 	tool_qualities = list(TOOL_CABLE_COIL)
@@ -599,8 +601,8 @@ var/list/possible_cable_coil_colours = list(
 
 /obj/item/stack/cable_coil/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/device/multitool))
-		var/selected_type = tgui_input_list(usr, "Pick new colour.", "Cable Colour", possible_cable_coil_colours)
-		set_cable_color(selected_type, usr)
+		var/selected_type = tgui_input_list(user, "Pick new colour.", "Cable Colour", possible_cable_coil_colours) //ChompEDIT usr --> user
+		set_cable_color(selected_type, user) //ChompEDIT usr --> user
 		return
 	return ..()
 
@@ -978,19 +980,19 @@ var/list/possible_cable_coil_colours = list(
 
 /obj/item/stack/cable_coil/alien/attack_hand(mob/user as mob)
 	if (user.get_inactive_hand() == src)
-		var/N = input(usr, "How many units of wire do you want to take from [src]?  You can only take up to [amount] at a time.", "Split stacks", 1) as num|null
+		var/N = tgui_input_number(user, "How many units of wire do you want to take from [src]?  You can only take up to [amount] at a time.", "Split stacks", 1, amount) //ChompEDIT usr --> user
 		if(N && N <= amount)
 			var/obj/item/stack/cable_coil/CC = new/obj/item/stack/cable_coil(user.loc)
 			CC.amount = N
 			CC.update_icon()
-			to_chat(user,"<font color='blue'>You take [N] units of wire from the [src].</font>")
+			to_chat(user,span_blue("You take [N] units of wire from the [src]."))
 			if (CC)
 				user.put_in_hands(CC)
 				src.add_fingerprint(user)
 				CC.add_fingerprint(user)
 				spawn(0)
-					if (src && usr.machine==src)
-						src.interact(usr)
+					if (src && user.machine==src) //ChompEDIT usr --> user
+						src.interact(user) //ChompEDIT usr --> user
 		else
 			return
 	else

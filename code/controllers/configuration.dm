@@ -79,6 +79,7 @@ var/list/gamemode_cache = list()
 	var/static/kick_inactive = 0				//force disconnect for inactive players after this many minutes, if non-0
 	var/static/show_mods = 0
 	var/static/show_devs = 0
+	var/static/show_mentors = 0
 	var/static/show_event_managers = 0
 	var/static/mods_can_tempban = 0
 	var/static/mods_can_job_tempban = 0
@@ -128,6 +129,7 @@ var/list/gamemode_cache = list()
 	var/static/discordurl
 	var/static/rulesurl
 	var/static/mapurl
+	var/static/patreonurl
 
 	//Alert level description
 	var/static/alert_desc_green = "All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced."
@@ -242,7 +244,7 @@ var/list/gamemode_cache = list()
 
 	var/persistence_disabled = FALSE
 	var/persistence_ignore_mapload = FALSE
-	
+
 	var/allow_byond_links = 1	//CHOMP Edit turned this on
 	var/allow_discord_links = 1	//CHOMP Edit turned this on
 	var/allow_url_links = 1				// honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit: pussy.
@@ -290,17 +292,35 @@ var/list/gamemode_cache = list()
 
 	// How strictly the loadout enforces object species whitelists
 	var/loadout_whitelist = LOADOUT_WHITELIST_LAX
-	
+
 	var/static/vgs_access_identifier = null	// VOREStation Edit - VGS
 	var/static/vgs_server_port = null	// VOREStation Edit - VGS
-	
+
 	var/disable_webhook_embeds = FALSE
-	
-	
+
+
 	var/static/list/jukebox_track_files
-	
+
 	var/static/suggested_byond_version
 	var/static/suggested_byond_build
+
+	var/static/invoke_youtubedl = null
+
+	//Enables/Disables the appropriate mob type from obtaining the verb on spawn. Still allows admins to manually give it to them.
+	var/static/allow_robot_recolor = FALSE
+	var/static/allow_simple_mob_recolor = FALSE
+
+	var/static/asset_transport
+
+	var/static/cache_assets = FALSE
+
+	var/static/save_spritesheets = FALSE
+
+	var/static/asset_simple_preload = FALSE
+
+	var/static/asset_cdn_webroot
+
+	var/static/asset_cdn_url
 
 /datum/configuration/New()
 	var/list/L = subtypesof(/datum/game_mode)
@@ -552,10 +572,13 @@ var/list/gamemode_cache = list()
 
 				if ("githuburl")
 					config.githuburl = value
-									
+
 				if ("discordurl")
 					config.discordurl = value
-				
+
+				if ("patreonurl")
+					config.patreonurl = value
+
 				if ("guest_jobban")
 					config.guest_jobban = 1
 
@@ -660,6 +683,9 @@ var/list/gamemode_cache = list()
 				if("show_devs")
 					config.show_devs = 1
 
+				if("show_mentors")
+					config.show_mentors = 1
+
 				if("show_event_managers")
 					config.show_event_managers = 1
 
@@ -721,6 +747,7 @@ var/list/gamemode_cache = list()
 					var/ticklag = text2num(value)
 					if(ticklag > 0)
 						fps = 10 / ticklag
+						world.fps = fps //CHOMPEdit
 
 				if("tick_limit_mc_init")
 					tick_limit_mc_init = text2num(value)
@@ -957,7 +984,7 @@ var/list/gamemode_cache = list()
 
 				if("enable_night_shifts")
 					config.enable_night_shifts = TRUE
-						
+
 				if("jukebox_track_files")
 					config.jukebox_track_files = splittext(value, ";")
 
@@ -973,6 +1000,34 @@ var/list/gamemode_cache = list()
 				if("vgs_server_port")
 					config.vgs_server_port = text2num(value)
 				// VOREStation Edit End
+
+				if("invoke_youtubedl")
+					config.invoke_youtubedl = value
+
+				if("asset_transport")
+					config.asset_transport = value
+
+				if("cache_assets")
+					config.cache_assets = TRUE
+
+				if("save_spritesheets")
+					config.save_spritesheets = TRUE
+
+				if("asset_simple_preload")
+					config.asset_simple_preload = TRUE
+
+				if("asset_cdn_webroot")
+					config.asset_cdn_webroot = value
+
+				if("asset_cdn_url")
+					config.asset_cdn_url = value
+
+//ChompEDIT - these belong here
+				if("allow_robot_recolor")
+					config.allow_robot_recolor = 1
+				if("allow_simple_mob_recolor")
+					config.allow_simple_mob_recolor = 1
+//ChompEDIT End
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
@@ -1039,9 +1094,15 @@ var/list/gamemode_cache = list()
 
 				if("use_loyalty_implants")
 					config.use_loyalty_implants = 1
-					
+
 				if("loadout_whitelist")
 					config.loadout_whitelist = text2num(value)
+/* //ChompEDIT - wrong place
+				if("allow_robot_recolor")
+					config.allow_robot_recolor = 1
+				if("allow_simple_mob_recolor")
+					config.allow_simple_mob_recolor = 1
+*/
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
@@ -1152,9 +1213,11 @@ var/list/gamemode_cache = list()
 	return runnable_modes
 
 /datum/configuration/proc/post_load()
+	SSdbcore.InitializeRound() // CHOMPEdit
+
 	//apply a default value to config.python_path, if needed
-	if (!config.python_path)
+	if (!CONFIG_GET(string/python_path)) // CHOMPEdit
 		if(world.system_type == UNIX)
-			config.python_path = "/usr/bin/env python2"
+			CONFIG_SET(string/python_path, "/usr/bin/env python2") // CHOMPEdit
 		else //probably windows, if not this should work anyway
-			config.python_path = "python"
+			CONFIG_SET(string/python_path, "python") // CHOMPEdit

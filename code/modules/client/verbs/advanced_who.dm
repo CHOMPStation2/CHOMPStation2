@@ -2,7 +2,7 @@
 /* YW EDIT START
 /client/verb/who_advanced()
 	set name = "Advanced Who"
-	set category = "OOC"
+	set category = "OOC.Resources" //CHOMPEdit
 
 	var/msg = "<b>Current Players:</b>\n"
 
@@ -68,7 +68,7 @@
 				entry += "[seconds % 60] seconds)"
 
 			entry += "</td><td>"
-			entry += " (<A HREF='?_src_=holder;adminmoreinfo=\ref[C.mob]'>?</A>)"
+			entry += " (<A HREF='?_src_=holder;[HrefToken()];adminmoreinfo=\ref[C.mob]'>?</A>)"
 			entry += "</td></tr>"
 
 			Lines += entry
@@ -94,6 +94,6 @@
 		msg += "[line]"
 	msg += "</table>"
 	msg += "<b>Total Players: [length(Lines)]</b>"
-	msg = "<span class='filter_info'>" + msg + "</span>"
+	msg = "<span class='filter_notice'>" + msg + "</span>"
 	to_chat(src, msg)
 YW EDIT STOP*/

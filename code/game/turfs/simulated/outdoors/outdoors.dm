@@ -8,7 +8,7 @@ var/list/turf_edge_cache = list()
 	var/outdoors = OUTDOORS_AREA
 
 /area
-	// If a turf's `outdoors` variable is set to `OUTDOORS_AREA`, 
+	// If a turf's `outdoors` variable is set to `OUTDOORS_AREA`,
 	// it will decide if it's outdoors or not when being initialized based on this var.
 	var/outdoors = OUTDOORS_NO
 
@@ -23,7 +23,7 @@ var/list/turf_edge_cache = list()
 	can_build_into_floor = TRUE
 
 	// When a turf gets demoted or promoted, this list gets adjusted.  The top-most layer is the layer on the bottom of the list, due to how pop() works.
-	var/list/turf_layers = list(/turf/simulated/floor/outdoors/rocks)
+	//var/list/turf_layers = list(/turf/simulated/floor/outdoors/rocks) CHOMPEdit kill. See outdoors_ch.dm for replacement.
 	var/can_dig = FALSE
 	var/loot_count
 
@@ -60,11 +60,12 @@ var/list/turf_edge_cache = list()
 			return
 
 	. = ..()
-
+/*	VOREStation remove - handled by parent
 /turf/simulated/floor/Initialize(mapload)
 	if(is_outdoors())
 		SSplanets.addTurf(src)
 	. = ..()
+*/
 
 /turf/simulated/floor/Destroy()
 	if(is_outdoors())
@@ -114,7 +115,7 @@ var/list/turf_edge_cache = list()
 /turf/simulated/floor/outdoors/mud
 	name = "mud"
 	icon_state = "mud_dark"
-	edge_blending_priority = 3
+	edge_blending_priority = 4 // CHOMPedit
 	initial_flooring = /decl/flooring/mud
 	can_dig = TRUE
 
@@ -123,11 +124,13 @@ var/list/turf_edge_cache = list()
 	desc = "Hard as a rock."
 	icon_state = "rock"
 	edge_blending_priority = 1
+	initial_flooring = /decl/flooring/rock
 
 /turf/simulated/floor/outdoors/rocks/caves
 	outdoors = OUTDOORS_NO
 
 // This proc adds a 'layer' on top of the turf.
+/* CHOMP Removal start
 /turf/simulated/floor/outdoors/proc/promote(var/new_turf_type)
 	var/list/new_turf_layer_list = turf_layers.Copy()
 	var/list/coords = list(x, y, z)
@@ -150,7 +153,7 @@ var/list/turf_edge_cache = list()
 	var/turf/simulated/floor/outdoors/T = locate(coords[1], coords[2], coords[3])
 	if(istype(T))
 		T.turf_layers = new_turf_layer_list.Copy()
-
+CHOMP Removal End */
 // Called by weather processes, and maybe technomancers in the future.
 /turf/simulated/floor/proc/chill()
 	return
@@ -179,3 +182,10 @@ var/list/turf_edge_cache = list()
 			if(prob(66))
 				return
 	demote()
+
+/turf/simulated/floor/outdoors/road
+	name = "road"
+	icon = 'icons/turf/concrete.dmi'
+	icon_state = "concrete_dark"
+	desc = "Some sort of material composite road."
+	edge_blending_priority = -1

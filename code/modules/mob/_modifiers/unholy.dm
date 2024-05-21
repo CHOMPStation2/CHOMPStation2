@@ -132,7 +132,7 @@
 
 				for(var/obj/item/organ/E in H.bad_external_organs) // Fix bones
 					var/obj/item/organ/external/affected = E
-					if((affected.damage < affected.min_broken_damage * config.organ_health_multiplier) && (affected.status & ORGAN_BROKEN))
+					if((affected.damage < affected.min_broken_damage * CONFIG_GET(number/organ_health_multiplier)) && (affected.status & ORGAN_BROKEN)) // CHOMPEdit
 						affected.status &= ~ORGAN_BROKEN
 
 					for(var/datum/wound/W in affected.wounds) // Fix IB
@@ -185,16 +185,14 @@
 			var/mob/living/carbon/human/H = holder
 			var/starting_nutrition = H.nutrition
 			H.adjust_nutrition(-10)
-			var/healing_amount = starting_nutrition - H.nutrition
-			if(healing_amount < 0) // If you are eating enough to somehow outpace this, congratulations, you are gluttonous enough to gain a boon.
-				healing_amount *= -2
+			var/healing_amount = starting_nutrition - H.nutrition //Anything above 9 nutrition will return 10. Anything below will give 0-9. Nutrition is capped at 0.
+			if(healing_amount)
+				H.adjustBruteLoss(-healing_amount * 0.25)
 
-			H.adjustBruteLoss(-healing_amount * 0.25)
+				H.adjustFireLoss(-healing_amount * 0.25)
 
-			H.adjustFireLoss(-healing_amount * 0.25)
+				H.adjustOxyLoss(-healing_amount * 0.25)
 
-			H.adjustOxyLoss(-healing_amount * 0.25)
-
-			H.adjustToxLoss(-healing_amount * 0.25)
+				H.adjustToxLoss(-healing_amount * 0.25)
 
 	..()

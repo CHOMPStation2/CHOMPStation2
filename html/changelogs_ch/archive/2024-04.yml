@@ -1,0 +1,355 @@
+2024-04-01:
+  Aroliacue:
+  - rscadd: Pilots and Field Medics now have full explorer access.
+  Kashargul:
+  - bugfix: default language selection verb and upgrades it to tgui input list
+  - bugfix: resetting robot language to galcom should now work properly with the set
+      default language verb on cancel
+  - bugfix: newscaster news icons not loading
+  cadyn:
+  - rscadd: humanoid simple mobs now (mostly) have pathfinding
+  - refactor: port citRP pathfinding for AI
+  - refactor: various optimizations for AI
+  - refactor: visible_message now uses component instead of in_view
+  tacoguy7765093:
+  - rscadd: The trash eat verb now gives a more ambiguous message instead of 'swallowing'
+      regardless of  vorgan.
+2024-04-02:
+  ReoDaProtovali:
+  - rscadd: Added synth emotes to corrupt hounds and subtypes. *roboboop
+  - rscadd: Added a maw belly to leopardmanders that autotransfers to their gut. Dunno
+      what made me do that (especially since it ended up being a lot of trouble to
+      get working properly)
+  - rscadd: Added a whole new AI to swoopies based on nurse spiders looking for items
+      to wrap. Right click an AI controlled swoopie and choose the "Change Settings"
+      verb to tell the swoopie to swoop stuff!
+  - rscadd: Added wrappers dropping in vorebellies if you eat and digest the whole
+      food item.
+  - rscadd: Added bones to merc and other humanoid corpses. (leave remains pref is
+      now enabled for them!)
+  - qol: Made vac-packs not ask if you want to set the destination to borg belly if
+      you're not a borg
+  - bugfix: Fixed throwing mobs into disposal bins. For some reason it was implemented
+      but in a very shitty way that only checked for micro holders. It should work
+      properly. No autoflush :(
+  - image: added the secondary belly layer to the original set of vore bellies. Somehow
+      we missed those and virgo had them. Now we should both have them!
+2024-04-03:
+  Kashargul:
+  - bugfix: some hairstyles not showing
+  - bugfix: new meka borg sprite not usable
+  - code_imp: cleanup some borg code
+  TheCaramelion:
+  - bugfix: Shields diffusers will actually work when meteors happen
+  cadyn:
+  - rscadd: hlscream
+  - rscadd: hlpain emote
+2024-04-04:
+  Kashargul:
+  - bugfix: fixes pain shouts on max health changes
+  Raeschen:
+  - rscadd: Speech sounds now penetrate walls
+  TheCaramelion:
+  - bugfix: Diffusers on point defenses won't turn off when meteors happen
+2024-04-05:
+  Ace:
+  - qol: Made Biohazard levels actually tell you what they are.
+  Drulikar:
+  - rscdel: Remove the corrupt lonehome map
+  - bugfix: UpdatePaths script will now also update maps inside the modular_chomp
+      folder
+  FluffMedic:
+  - rscadd: Southern Cross has new maints on floor 3 and 2. Viro, genetics and autorelseeving
+      are now upon floor 1
+  - rscadd: New turf to the valley
+  - rscadd: Two wands and one staff
+  - balance: Alters several POIs to have the new staff/wands instead of spellbooks
+  Kashargul:
+  - bugfix: Telecomms filters can be added through the multitool menu
+  - bugfix: admin maps showing on mapview (overmap is no longer considered for mapview)
+  - bugfix: omni_filter and omni_mixer showing too high flow values
+  Raeschen:
+  - bugfix: fix runtime in grass grass_type/animal_type spawning
+  - bugfix: fix decl emote check failiure
+  - bugfix: deck 3, 2.7k tiles + bad solars
+  ReoDaProtovali:
+  - rscadd: Properly implemented clear gas masks
+  - rscadd: Readded the original gasmask icon
+  - rscadd: added both clear and not clear gasmasks to loadout for 3 points. Happy
+      tiding!
+  - rscadd: replaced the normal gas masks in biohazard lockers with clear ones
+  - rscadd: secretly adds on-mob icons for mouth-held grenades for teshari because
+      I was bored
+  - rscdel: Removed the `obj/item/clothing/mask/gas/wwii` subtype of the mask since
+      the base subtype fills it's role.
+  - qol: Makes greytide AI carbon mobs have a bit more variation.
+  - image: Added all of the mob_vr_mask.dmi and associated species files to the modularity
+      folder
+  - code_imp: Removed the check for base gas masks to remove their face-consealing
+      abilities because they're no longer clear. Subtypes that are clear can now just
+      use the /clear subtype since it's properly in now
+2024-04-06:
+  FluffMedic:
+  - bugfix: virolgy door
+  - bugfix: runtime with new valley grass
+  Fracshun:
+  - bugfix: Sentient food items can no longer astral project if they struggle
+  - bugfix: Sentient items now despawn correctly when leaving through cryo/gateway
+  ItsSelis:
+  - refactor: Replaced the old configuration with the configuration controller.
+  - admin: Added "Reload Configuration" button to Debug tab (requires DEBUG permission),
+      to reload config from files.
+  Kashargul:
+  - bugfix: solarmoth no longer flickers
+  Raeschen:
+  - bugfix: fix solarpanel maxdist aswell
+  - bugfix: Increase solar tracker max range to locate a controller
+  cadyn:
+  - refactor: borg access is actually checked for many things that weren't checking
+      before
+  - balance: no more drone pod borg full access
+  - balance: station borgs no longer have centcomm or syndi access
+  - balance: borgs can be targeted by turrets
+  - admin: add air_alarm access while ghosting
+  - server: updated nanomap renderer script.
+2024-04-07:
+  cadyn:
+  - bugfix: hopefully maybe fixes icon related crashes
+  - refactor: Overlay subsystem replaced with TG version
+2024-04-08:
+  FluffMedic:
+  - rscadd: Added camera and airlock controller to viro
+  ItsSelis:
+  - rscdel: Removed some of the unused hooks.
+  Raeschen:
+  - admin: Reload job/alien whitelist buttons in admin tab
+2024-04-09:
+  Kashargul:
+  - bugfix: an issue with charging icons no longer working
+  Raeschen:
+  - rscadd: Check for client/key and remove on qdel of a ghost
+  tacoguy7765093:
+  - rscdel: Removed items being dropped when in a purple stun, Less butter fingers
+      when doing EVA!
+  - balance: '''Weaken'' status now allows you to use items. You still got a second
+      chance!'
+2024-04-10:
+  Fracshun:
+  - bugfix: Mice rays drop on the floor properly when shooting yourself
+  Raeschen:
+  - bugfix: Alongside say/whisper, emote/narrate voice-sounds now penetrate walls.
+  - bugfix: Mobkin selection bug in VR
+  - balance: Reduce dive speed increase
+  - balance: Aquatic now works the same on deep and shallow water (No speed penalty)
+2024-04-11:
+  Kashargul:
+  - bugfix: Crisis W0RM borg being shown as surgical
+  - bugfix: removes the double definition of the service W0RM borg
+  cadyn:
+  - bugfix: visible_messages pass to atoms in contents of other atoms correctly
+  - bugfix: visible_messages check visibility now
+  - code_imp: moved hearable.dm to components folder and renamed it to hearer.dm to
+      avoid conniptions
+  - refactor: fuck the stupid limb icon cache get out of here
+2024-04-12:
+  Raeschen:
+  - bugfix: fixed taj veils being low on layer being hidden by eyes
+  - bugfix: fixed a couple bad config multipliers
+  - bugfix: fixed PDA choice not working due to New --> Initialise change
+  cadyn:
+  - bugfix: fixed a couple runtimes that messed with integration tests
+  - bugfix: fixed sounds not reaching mobs inside of things
+  - code_imp: more harddel fixes
+2024-04-13:
+  Kashargul:
+  - bugfix: unathi hairs
+  - rscadd: more unathi and screll hairs
+2024-04-14:
+  Kashargul:
+  - bugfix: broken unicode characters again...
+  Upstream:
+  - bugfix: .swcrc now ignored by prettier
+  - bugfix: Fixed potential tgui dev server issue with windows
+  - qol: Updated tgui dependencies
+  - qol: Bumped yarn version to 4.1.1
+  - qol: Bumped typescript to version 5.91.0
+  - qol: Bumped Node version in dependencies file to (major) 20
+2024-04-15:
+  Kashargul:
+  - bugfix: autochangelog not working for maptweaks
+2024-04-17:
+  TheCaramelion:
+  - bugfix: Translocators will make sure everything is cool before sending you into
+      a stomach
+2024-04-20:
+  CHOMPStation2:
+  - rscadd: Teshari Face Mask from chompstation
+  - rscadd: Facial protection to the mask, since it cant be removed
+  - bugfix: Fixed an old `to_chat` and also added framework for adding more face states
+      to the mask
+  Kashargul:
+  - bugfix: scrolling not working on tgui windows
+  - bugfix: too many chat messages pushed to archive on login mid round after leaving
+  - bugfix: a rare crash condition on the BodyRecords UI if there were no records
+      available
+  - bugfix: borg pounces properly disarm on successful hits again
+  - bugfix: vore mobs stun at min(weakened, 2) seconds to prevent instant interruptions
+      of vore attempts
+  - bugfix: multiple verb usages for speech setting instead of proc calls
+  - bugfix: mind_bound items can use /me now
+  - bugfix: trait selection oof hardfeet along with no scan and no defib
+  - rscadd: mind transfer preference
+  - code_imp: remove mind transfer whitelist, move to individual subtype allowance
+      bool
+  Raeschen:
+  - bugfix: Icon edit access violation crash fit attempt
+  TheCaramelion:
+  - bugfix: Translocator not sending people into belly
+  TheGreatKitsune:
+  - bugfix: removes a round removal method for drones
+  - bugfix: reverts an earlier change that prevented kin from being smelled during
+      phase
+  cadyn:
+  - bugfix: temporarily disable server exploding submap
+  - rscadd: Add new marking Full Body Gloss (additive)
+  - bugfix: fix even more harddels woooo
+  - refactor: Steal TG's find_references()
+  - bugfix: Splash screen inconsistency
+  - maptweak: add splash screen to centcomm Z-level
+  - rscadd: new planetary lighting system
+2024-04-22:
+  Kashargul:
+  - bugfix: sleevemate not longer usable with pref disabled
+2024-04-23:
+  FluffMedic:
+  - maptweak: valley grass sprites are shifted to other sif turf sprites.
+  Raeschen:
+  - bugfix: Lockers check for opened when finishing the weld to prevent insta-traps
+  - bugfix: Another cached icon edit removal
+  TheCaramelion:
+  - qol: Shadekin Phase In/Out animation now adjusts to the shadekin's size
+  - bugfix: Thrown objects not passing though phased kins
+  Verkister:
+  - bugfix: Fixed empty hand interactions not working on non-rideable humanmobs with
+      forced buckling.
+  cadyn:
+  - bugfix: lighting runtimes
+  tacoguy7765093:
+  - rscdel: Removed VR respawn time
+  - bugfix: VR no longer will spawn duplicate PDAs flooding the PDA servers with fake
+      people.
+  - maptweak: VR new bar room added.
+  - bugfix: Adjustments to item staining with 'bloody' hands.
+2024-04-24:
+  TheCaramelion:
+  - rscadd: Instrument case holster, only for instruments
+  cadyn:
+  - rscadd: VR now uses the new sunlight system
+  - bugfix: various optimizations and fixes for sunlight
+  tacoguy7765093:
+  - qol: Adjusted VR avatar loadouts
+  - maptweak: The VR stripmall has more decor.
+2024-04-26:
+  FluffMedic:
+  - bugfix: Security law of maints 3 overriding the lockdown system I keep forgetting
+      exists.
+  - bugfix: solars devouring shield useage by adding platting
+  - bugfix: fixed the disposals and the lack of antibody scanners
+  - rscadd: Added ore grubs and lizardmen to the random mining mob spawn pool
+  Missile597:
+  - rscadd: Added a reaction to change liquid fire to neo liquid fire (liquid fire,
+      sulfur and a small amount of phoron + catalyst)
+  - balance: Changed the reagents in cherry bomb to liquid fire instead of neo liquid
+      fire
+  Raeschen:
+  - bugfix: fixed many bad uses of the usr variable
+  TheCaramelion:
+  - qol: Tagged mail will show it's location.
+  - bugfix: Fixed tagger not changing the tag of an already tagged envelope
+  - bugfix: Meatyores shower will have the proper text when ending
+  cadyn:
+  - bugfix: more GC bullshit
+  tacoguy7765093:
+  - bugfix: Fixed a bug involving making custom areas in VR which can delete you if
+      made.
+  - bugfix: Fixed certain firework stars from being able to change Sif's weather
+2024-04-27:
+  Missile597:
+  - rscadd: Added a colourmate to the shadekin hideout
+  - rscadd: Added air alarms to deck three maintenance areas that were missing them,
+      including drop nom spots
+  - rscadd: Added antibody scanners to the relocated virology that had previously
+      been missing
+  - rscadd: Adds a rusty old breaker to the rage cage for ease of electrifying the
+      arena.
+  - rscadd: Added diffusors to some of the deck 0 PD turrets that were missing them
+      to allow them to fire unobstructed
+  - rscadd: Added lockdown shutters back to virology - room scrungled a little smaller
+      to compensate for the space needed
+  - rscadd: Added lights to drop-nom spots so all consistent and able to see
+  - rscadd: Adds departmental lockdown shutters to drop nom maints areas for security
+  - rscadd: Adds another set of doors to medbay corridor to provide a buffer for medbay
+      in case the sci drop nom spot gets vented. Added an air alarm in the newly separated
+      area to compensate
+  - rscdel: Deleted a cable that mistakenly hotwired the command subgrid to mains
+  - rscdel: Deleted a mistakenly placed dorms sort junction placed near the bridge
+      in the walls
+  - bugfix: Fixed some missing atmos pipes on deck 3
+  - bugfix: Fixed a disposal junction facing the wrong way in the outpost reactor
+      area
+  - bugfix: Fixed the port solars - They now have cable coils placed underneath and
+      work again
+  - bugfix: Fixed a broken airlock on deck 0
+  - bugfix: Fixed a broken airlock on the trading ship shelter capsule
+  - bugfix: Fixed two sorting junctions having incorrect sorting tags, causing items
+      to be missing from the tagger list and causing the CMO tag to be broken
+  - bugfix: Moved the outpost reactor powernet sensor to be connected to the correct
+      grid (Was previously connected to an "empty" grid)
+  - bugfix: Fixed the engine room powernet not being correctly wired to the grid
+  - bugfix: Fixed the applied tag on partial taggers in cargo to apply the correct
+      tag
+  - bugfix: Fixed an unconnected ladder set in medical maints between deck 2 and 3
+  - bugfix: Fixes broken cable prefabs being used in rage cage
+  - maptweak: Changed the wall on deck 0 big bedroom to be false as originally intended
+  - maptweak: Removed the hallway area status from plating outside deck 1 escape pods
+      to prevent vines and mucous from spawning there
+  - maptweak: Tweaked the Fore-Starboard solars to be matching and more in line with
+      the other new solar arrays, minus the start of shift wiring of course
+  - maptweak: Renamed the solar arrays to be more appropriately distinct (Aft-Starboard
+      etc)
+  - maptweak: Added plating the gaps on the solar arrays so the gaps don't get filled
+      with power wasting shields
+  - maptweak: Replaced a few reinforced walls on deck 0 with basic walls to allow
+      for easier locations for building projects in-round. Hazardous (eg space/elevator)
+      and secure (eg grav gen) areas remain encased in reinforced walls for obvious
+      reasons.
+  - maptweak: Added new areas for deck zero and re-assigned these areas to the deck
+      zero maints due to areas being doubled up, causing APC issues with some other
+      maints areas. Removed some excess APCs.
+  - maptweak: Slightly nudges the xenobotany gas vent to space to the side with its
+      diffuser, so that the diffuser doesn't leave a vulnerable gap in the shields
+      by the lab's window for meteors
+  - maptweak: Extended the viro disposal chute and ended it with an outlet and a diffuser
+      - to stop shields from blocking the disposal, and to control its direction of
+      exit.
+  cadyn:
+  - bugfix: lighting bullshit
+2024-04-28:
+  tacoguy7765093:
+  - bugfix: Attempting to fix a rare subsystem crash
+2024-04-30:
+  FluffMedic:
+  - rscadd: 'Added admin spawn set of goggles that''s sole purpose is seeing kin (Rae:
+      commented out the meson/kin hybrid though)'
+  - balance: Makes it so the large kinetic weapons don't need wielding since that
+      code is appears broken and I doubt the two very rare items will become broken
+      if they get the kinetic blast effect.
+  - rscadd: Added a one life trait. Combination of no resleeve and no defib.
+  Verkister:
+  - bugfix: Belly-linked vac-pack dirt nutrition gain now scales with target vorgan's
+      gain setting.
+  cadyn:
+  - refactor: memory optimizations for lighting system
+  - bugfix: gc agony
+  tacoguy7765093:
+  - code_imp: '''hud_enabled'' variable for guns actually works now!'

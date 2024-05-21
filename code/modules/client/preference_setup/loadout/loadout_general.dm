@@ -57,6 +57,7 @@
 	// look if theres a better way to do this im all ears
 	blacklisted_types += subtypesof(/obj/item/toy/plushie/therapy)
 	blacklisted_types += subtypesof(/obj/item/toy/plushie/fluff)
+	blacklisted_types += /obj/item/toy/plushie/borgplushie/drake //VOREStation addition
 	for(var/obj/item/toy/plushie/plushie_type as anything in subtypesof(/obj/item/toy/plushie) - blacklisted_types)
 		plushies[initial(plushie_type.name)] = plushie_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(plushies))
@@ -110,7 +111,7 @@
 /datum/gear/lunchbox
 	display_name = "lunchbox"
 	description = "A little lunchbox."
-	cost = 2
+	cost = 0	// CHOMP EDIT "NT now supplies their employees with one free, optional lunch."
 	path = /obj/item/weapon/storage/toolbox/lunchbox
 
 /datum/gear/lunchbox/New()

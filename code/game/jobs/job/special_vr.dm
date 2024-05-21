@@ -72,7 +72,7 @@
 	get_access()
 		var/access = get_all_accesses()
 		return access*/
-		
+
 /datum/job/emergency_responder //For staff managing/leading ERTs
 	title = "Emergency Responder"
 	departments = list("Central Command")
@@ -98,7 +98,7 @@
 
 /datum/job/emergency_responder/get_access()
 	return get_all_accesses().Copy()
-
+/* CHOMPEDIT: Removing Clown/Mime job from being initialized at all (These are alt titles of Entertainer on our codebase)
 /datum/job/clown
 	title = "Clown"
 	flag = CLOWN
@@ -113,6 +113,7 @@
 	job_description = "A Clown is there to entertain the crew and keep high morale using various harmless pranks and ridiculous jokes!"
 	whitelist_only = 1
 	latejoin_only = 0
+	requestable = FALSE
 	outfit_type = /decl/hierarchy/outfit/job/clown
 	pto_type = PTO_CIVILIAN
 	alt_titles = list("Jester" = /datum/alt_title/jester, "Fool" = /datum/alt_title/fool)
@@ -124,7 +125,7 @@
 	title = "Fool"
 
 /datum/job/clown/get_access()
-	if(config.assistant_maint)
+	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
 		return list(access_maint_tunnels, access_entertainment, access_clown, access_tomfoolery)
 	else
 		return list(access_entertainment, access_clown, access_tomfoolery)
@@ -144,6 +145,7 @@
 	alt_titles = list("Poseur" = /datum/alt_title/poseur)
 	whitelist_only = 1
 	latejoin_only = 0
+	requestable = FALSE
 	outfit_type = /decl/hierarchy/outfit/job/mime
 	pto_type = PTO_CIVILIAN
 
@@ -151,7 +153,8 @@
 	title = "Poseur"
 
 /datum/job/mime/get_access()
-	if(config.assistant_maint)
+	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
 		return list(access_maint_tunnels, access_entertainment, access_tomfoolery, access_mime)
 	else
 		return list(access_entertainment, access_tomfoolery, access_mime)
+*/ //CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)

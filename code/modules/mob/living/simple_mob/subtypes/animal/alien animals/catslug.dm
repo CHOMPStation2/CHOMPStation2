@@ -26,7 +26,7 @@
 	faction = "catslug"
 	maxHealth = 50
 	health = 50
-	movement_cooldown = 2
+	movement_cooldown = -1
 	meat_amount = 2
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	holder_type = /obj/item/weapon/holder/catslug
@@ -43,17 +43,24 @@
 	mob_size = MOB_SMALL
 	friendly = list("hugs")
 	see_in_dark = 8
+	can_climb = TRUE
+	climbing_delay = 2.0
 
-	mobcard_provided = TRUE
+	ID_provided = TRUE
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/catslug
 	say_list_type = /datum/say_list/catslug
 	player_msg = "You have escaped the foul weather, into this much more pleasant place. You are an intelligent creature capable of more than most think. You can pick up and use many things, and even carry some of them with you into the vents, which you can use to move around quickly. You're quiet and capable, you speak with your hands and your deeds! <br>- - - - -<br> <span class='notice'>Keep in mind, your goal should generally be to survive. You're expected to follow the same rules as everyone else, so don't go self antagging without permission from the staff team, but you are able and capable of defending yourself from those who would attack you for no reason.</span>"
 
-	has_langs = list("Sign Language")
+	has_langs = list(LANGUAGE_SIGN)
 
-	var/picked_color = FALSE
+	var/obj/item/clothing/head/hat = null // Scughat.
+	var/can_wear_hat = TRUE				  // Some have inbuilt hats
+
+	allow_mind_transfer = TRUE //CHOMPAdd
+
+	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
 	can_enter_vent_with = list(
 		/obj/item/weapon/implant,
@@ -108,12 +115,14 @@
 	say_got_target = list()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPEdit
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The hot slick gut of a catslug!! Copious slime smears over you as you’re packed away into the gloom and oppressive humidity of this churning gastric sac. The pressure around you is intense, the squashy flesh bends and forms to your figure, clinging to you insistently! There’s basically no free space at all as your ears are filled with the slick slide of flesh against flesh and the burbling of gastric juices glooping all around you. The thumping of a heart booms from somewhere nearby, making everything pulse in against you in time with it! This is it! You’ve been devoured by a catslug!!!"
 	B.mode_flags = 40
-	B.belly_fullscreen = "yet_another_tumby"
+//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	B.digest_brute = 0.5
 	B.digest_burn = 0.5
 	B.digestchance = 10
@@ -126,15 +135,24 @@
 	retaliate = TRUE
 	speak_chance = 0.5
 	wander = TRUE
+	belly_attack = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Initialize()
 	. = ..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
-	verbs += /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color) //CHOMPEdit TGPanel
+
+/mob/living/simple_mob/vore/alienanimals/catslug/Destroy()
+	if(hat)
+		drop_hat()
+	return ..()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/attackby(var/obj/item/weapon/reagent_containers/food/snacks/O as obj, var/mob/user as mob)
-	if(!istype(O, /obj/item/weapon/reagent_containers/food/snacks))
+	if(istype(O, /obj/item/clothing/head)) // Handle hat simulator.
+		give_hat(O, user)
+		return
+	else if(!istype(O, /obj/item/weapon/reagent_containers/food/snacks))
 		return ..()
 	if(resting)
 		to_chat(user, "<span class='notice'>\The [src] is napping, and doesn't respond to \the [O].</span>")
@@ -160,7 +178,7 @@
 	else
 		to_chat(user, "<span class='notice'>\The [src] takes a bite of \the [O].</span>")
 		if(user != src)
-			to_chat(user, "<span class='notice'>\The [user] feeds \the [O] to you.</span>")
+			to_chat(src, "<span class='notice'>\The [user] feeds \the [O] to you.</span>")
 	playsound(src, 'sound/items/eatfood.ogg', 75, 1)
 
 /mob/living/simple_mob/vore/alienanimals/catslug/attack_hand(mob/living/carbon/human/M as mob)
@@ -168,6 +186,9 @@
 	if(stat == DEAD)
 		return ..()
 	if(M.a_intent != I_HELP)
+		if(M.a_intent == I_GRAB && hat)
+			remove_hat(M)
+			return
 		return ..()
 	playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 	if(resting)
@@ -207,20 +228,65 @@
 			return
 		visible_message("<span class='notice'>\The [src] pushes [M]'s hand away from their tummy and furrows their brow!</span>")
 		if(prob(5))
-			ai_holder.target = M
-			ai_holder.track_target_position()
-			ai_holder.set_stance(STANCE_FIGHT)
+			ai_holder.give_target(M, urgent = TRUE)
 	else
 		return ..()
 
+/mob/living/simple_mob/vore/alienanimals/catslug/update_icon()
+	..()
+
+	if(hat)
+		var/hat_state = hat.item_state ? hat.item_state : hat.icon_state
+		var/image/I = image('icons/inventory/head/mob.dmi', src, hat_state)
+		I.pixel_y = -7
+		I.color = hat.color
+		I.appearance_flags = RESET_COLOR | KEEP_APART
+		I.blend_mode = BLEND_OVERLAY
+		add_overlay(I)
+
+/mob/living/simple_mob/vore/alienanimals/catslug/proc/give_hat(var/obj/item/clothing/head/new_hat, var/mob/living/user)
+	if(!istype(new_hat))
+		to_chat(user, span("warning", "\The [new_hat] isn't a hat."))
+		return
+	if(hat)
+		to_chat(user, span("warning", "\The [src] is already wearing \a [hat]."))
+		return
+	else if(!can_wear_hat)
+		to_chat(user, span("warning", "\The [src] is unable to wear \a [hat]."))
+	else
+		user.drop_item(new_hat)
+		hat = new_hat
+		new_hat.forceMove(src)
+		to_chat(user, span("notice", "You place \a [new_hat] on \the [src]. How adorable!"))
+		update_icon()
+		return
+
+/mob/living/simple_mob/vore/alienanimals/catslug/proc/remove_hat(var/mob/living/user)
+	if(!hat)
+		to_chat(user, "<span class='warning'>\The [src] doesn't have a hat to remove.</span>")
+	else
+		hat.forceMove(get_turf(src))
+		user.put_in_hands(hat)
+		to_chat(user, "<span class='warning'>You take away \the [src]'s [hat.name]. How mean.</span>")
+		hat = null
+		update_icon()
+
+/mob/living/simple_mob/vore/alienanimals/catslug/proc/drop_hat()
+	if(!hat)
+		return
+	hat.forceMove(get_turf(src))
+	hat = null
+	update_icon()
+
 /mob/living/simple_mob/vore/alienanimals/catslug/Login()	//If someone plays as us let's just be a passive mob in case accidents happen if the player D/Cs
 	. = ..()
-	ai_holder.hostile = FALSE
-	ai_holder.wander = FALSE
+	if(ai_holder)
+		ai_holder.hostile = FALSE
+		ai_holder.wander = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color()
 	set name = "Pick Color"
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 	set desc = "You can set your color!"
 	if(picked_color)
 		to_chat(src, "<span class='notice'>You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0.</span>")
@@ -228,7 +294,7 @@
 	var/newcolor = input(usr, "Choose a color.", "", color) as color|null
 	if(newcolor)
 		color = newcolor
-	picked_color = TRUE
+		picked_color = TRUE
 	update_icon()
 
 /datum/ai_holder/simple_mob/melee/evasive/catslug/proc/consider_awakening()
@@ -242,7 +308,7 @@
 	else if(prob(0.5))
 		holder.lay_down()
 		go_sleep()
-		addtimer(CALLBACK(src, .proc/consider_awakening), rand(1 MINUTE, 5 MINUTES), TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
+		addtimer(CALLBACK(src, PROC_REF(consider_awakening)), rand(1 MINUTE, 5 MINUTES), TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
 	else
 		return ..()
 
@@ -290,12 +356,13 @@
 	digestable = 0
 	humanoid_hands = 1	//These should all be ones requiring admin-intervention to play as, so they can get decent tool-usage, as a treat.
 	var/siemens_coefficient = 1 		//Referenced later by others.
+	can_wear_hat = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/Initialize()
 	. = ..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
-	verbs -= /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color	//Most of these have custom sprites with colour already, so we'll not let them have this.
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	remove_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color) //CHOMPEdit TGPanel //Most of these have custom sprites with colour already, so we'll not let them have this.
 
 
 /datum/category_item/catalogue/fauna/catslug/custom/spaceslug
@@ -388,9 +455,7 @@
 			return
 		visible_message("<span class='notice'>\The [src] pushes [M]'s hand away from their tummy and furrows their brow, frantically pressing at the buttons [M] so carelessly pushed!</span>")
 		if(prob(5))
-			ai_holder.target = M
-			ai_holder.track_target_position()
-			ai_holder.set_stance(STANCE_FIGHT)
+			ai_holder.give_target(M, urgent = TRUE)
 	else
 		return ..()
 
@@ -426,7 +491,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/engislug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/engislug
 	say_list_type = /datum/say_list/catslug/custom/engislug
-	mobcard_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_construction, access_atmospherics)
+	myid_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_construction, access_atmospherics)
 	siemens_coefficient = 0 		//Noodly fella's gone and built up an immunity from many small shocks
 
 	minbodytemp = 200
@@ -490,9 +555,7 @@
 			return
 		visible_message("<span class='notice'>\The [src] pushes [M]'s hand away from their tummy and furrows their brow!</span>")
 		if(prob(5))
-			ai_holder.target = M
-			ai_holder.track_target_position()
-			ai_holder.set_stance(STANCE_FIGHT)
+			ai_holder.give_target(M, urgent = TRUE)
 	else
 		return ..()
 
@@ -543,7 +606,7 @@
 		"bio" = 0,
 		"rad" = 0
 		)		//Similarly, \some\ armour values for a smidge more survivability compared to other catslugs.
-	mobcard_access = list(access_security, access_sec_doors, access_forensics_lockers, access_maint_tunnels)
+	myid_access = list(access_security, access_sec_doors, access_forensics_lockers, access_maint_tunnels)
 
 /datum/say_list/catslug/custom/gatslug
 	speak = list("Have any flashbangs?", "Valids!", "Heard spiders?", "What is that?", "Freeze!", "What are you doing?", "How did you get here?", "Red alert means big bangsticks.", "No being naughty now.", "WAOW!", "Who ate all the donuts?")
@@ -580,7 +643,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/medislug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/medislug
 	say_list_type = /datum/say_list/catslug/custom/medislug
-	mobcard_access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
+	myid_access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
 
 /datum/say_list/catslug/custom/medislug
 	speak = list("Have any osteodaxon?", "What is that?", "Suit sensors!", "What are you doing?", "How did you get here?", "Put a mask on!", "No smoking!", "WAOW!", "Stop getting blood everywhere!", "WHERE IN MAINT?")
@@ -616,7 +679,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/scienceslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/scienceslug
 	say_list_type = /datum/say_list/catslug/custom/scienceslug
-	mobcard_access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
+	myid_access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
 
 
 /datum/say_list/catslug/custom/scienceslug
@@ -654,7 +717,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/cargoslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/cargoslug
 	say_list_type = /datum/say_list/catslug/custom/cargoslug
-	mobcard_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
+	myid_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
 
 /datum/say_list/catslug/custom/cargoslug
 	speak = list("Disposals is not for slip and slide.", "What is that?", "Stamp those manifests!", "What are you doing?", "How did you get here?", "Can order pizza crate?", "WAOW!", "Where are all of our materials?", "Got glubbs?")
@@ -693,7 +756,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/capslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/capslug
 	say_list_type = /datum/say_list/catslug/custom/capslug
-	mobcard_access = list(access_maint_tunnels)		//The all_station_access part below adds onto this.
+	myid_access = list(access_heads, access_keycard_auth)		//Same access as a bridge secretary.
 
 /datum/say_list/catslug/custom/capslug
 	speak = list("How open big glass box with shiny inside?.", "What is that?", "Respect my authority!", "What are you doing?", "How did you get here?", "Fax for yellow-shirts!", "WAOW!", "Why is that console blinking and clicking?", "Do we need to call for ERT?", "Have been called comdom before, not sure why they thought I was a balloon.")
@@ -708,13 +771,12 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/heads/captain 		//Might not be able to speak, but the catslug can listen.
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/heads/captain(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
 
 //=============================================================================
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
 //=============================================================================
 
-//Deathsquad catslug 
+//Deathsquad catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/deathslug
 	name = "Asset Purrtection"
 	desc = "What are you doing staring at this angry little fella? <b>Run.</b>"
@@ -725,7 +787,7 @@
 	icon_dead = "deathslug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug) 			//So they don't get the spaceslug's cataloguer entry
 	say_list_type = /datum/say_list/catslug 			//Similarly, so they don't get the spaceslug's speech lines.
-	mobcard_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
+	myid_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
 	maxHealth = 100		//Tough noodles
 	health = 100
 	taser_kill = 0
@@ -739,7 +801,7 @@
 		"bomb" = 40,
 		"bio" = 100,
 		"rad" = 100
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -750,9 +812,9 @@
 	. = ..()
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
 	mob_radio.frequency = DTH_FREQ 			//Can't tell if bugged, deathsquad freq in general seems broken
-	mobcard.access |= get_all_station_access()
-	
-//Syndicate catslug 
+	myid.access |= get_all_station_access()
+
+//Syndicate catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug
 	name = "Mercenyary"
 	desc = "What are you doing staring at this crimson-hardsuit wearing angry little fella? <b>Run.</b>"
@@ -763,13 +825,13 @@
 	icon_dead = "syndislug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	say_list_type = /datum/say_list/catslug
-	mobcard_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
+	myid_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
 	faction = "syndicate"
 	maxHealth = 100		//Tough noodles
 	health = 100
 	taser_kill = 0
 	melee_damage_lower = 15
-	melee_damage_upper = 20	
+	melee_damage_upper = 20
 	mob_size = MOB_MEDIUM		//Something something hardsuits are heavy.
 	siemens_coefficient = 0
 	armor = list(
@@ -780,7 +842,7 @@
 		"bomb" = 80,
 		"bio" = 100,
 		"rad" = 60
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -795,9 +857,9 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/syndicate
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/syndicate(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
 
-//ERT catslug 
+//ERT catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug
 	name = "Emeowgency Responder"
 	desc = "The cavalry has arrived."
@@ -808,7 +870,7 @@
 	icon_dead = "responseslug_dead"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	say_list_type = /datum/say_list/catslug
-	mobcard_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
+	myid_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
 	maxHealth = 100		//Tough noodles
 	health = 100
 	taser_kill = 0
@@ -822,7 +884,7 @@
 		"bomb" = 30,
 		"bio" = 100,
 		"rad" = 100
-		)	
+		)
 
 	minbodytemp = 0
 	maxbodytemp = 5000
@@ -834,19 +896,174 @@
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug/Initialize()
 	. = ..()
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)
-	mob_radio.frequency = ERT_FREQ 
+	mob_radio.frequency = ERT_FREQ
 	mob_radio.centComm = 1
 	mob_radio.ks2type = /obj/item/device/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/ert(mob_radio)
 	mob_radio.recalculateChannels(1)
-	mobcard.access |= get_all_station_access()
+	myid.access |= get_all_station_access()
+
+//Pilot Catslug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug
+	name = "Navigator Purrverick"
+	desc = "A black-furred noodley bodied creature with thin arms and legs, and gloomy dark eyes. This one exudes an aura of coolness, they're so cool that their pilot's liscense was suspended."
+	tt_desc = "Mollusca Felis Mischefterous"
+	color = "#2b2b2b"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/pilotslug)
+	say_list_type = /datum/say_list/catslug/custom/pilotslug
+
+	can_wear_hat = TRUE
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug/Initialize()
+	. = ..()
+	if(prob(25))
+		var/list/possible_targets = list()
+		for(var/obj/machinery/computer/ship/helm/h in world)
+			if(h.z in using_map.player_levels)
+				possible_targets |= h
+		var/final = pick(possible_targets)
+		forceMove(get_turf(final))
+		ghostjoin = TRUE
+
+/datum/category_item/catalogue/fauna/catslug/custom/pilotslug
+	name = "Alien Wildlife - Catslug - Navigator Purrverick"
+	desc = "A resident at NSB Rascal's Pass, Navigator Purrverick \
+	is a catslug who is known to dream big and seek the sky.\
+	Purrverick has proved to be quite capable of utilizing shuttle\
+	controls with excellent grace and skill. Purrverick can however\
+	be rather self assured, which has on more than one occasion\
+	lead to unfortunate mistakes and incidents.\
+	Purrverick's provisionary piloting liscense is marked as suspended.\
+	There are however still more records of the catslug's piloting escapades\
+	dated afer their suspension.\
+	\
+	The Catslug is an omnivorous terrestrial creature.\
+	Exhibiting properties of both a cat and a slug (hence its name)\
+	it moves somewhat awkwardly. However, the unique qualities of\
+	its body make it exceedingly flexible and smooth, allowing it to\
+	wiggle into and move effectively in even extremely tight spaces.\
+	Additionally, it has surprisingly capable hands, and moves quite\
+	well on two legs or four. Caution is advised when interacting\
+	with these creatures, they are quite intelligent, and proficient\
+	tool users."
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/say_list/catslug/custom/pilotslug
+	speak = list("In the pipe, five my five.","Kick the tires and light the fires!","Bogeys on my tail!","GOOSE!","I'm really good at the stick.","I'm not doing nothing.","Heh.","Can you keep up?","Can't keep the sky from me.")
+
+//Royal slug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/royalslug
+	name = "Ruler Purrton"
+	desc = "A golden-furred noodley bodied creature with thin arms and legs, and gloomy dark eyes. This one is adorned with a crown and red cloak, very fancy."
+	tt_desc = "Mollusca Felis Royallis"
+	icon_state = "catslugking"
+	icon_living = "catslugking"
+	icon_rest = "catslugking_rest"
+	icon_dead = "catslugking_dead"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/royalslug)
+	say_list_type = /datum/say_list/catslug/custom/royalslug
+
+/datum/category_item/catalogue/fauna/catslug/custom/royalslug
+	name = "Alien Wildlife - Catslug - Ruler Purrton"
+	desc = "Found in a castle beyond the redgate, Ruler Purrton\
+	is a catslug who spends their days presiding over this low \
+	technology town, living a life of luxury. Always seen with \
+	their trademark crown and cloak, this litter critter seems \
+	to just exude raw confidence and superiority. \
+	\
+	The Catslug is an omnivorous terrestrial creature.\
+	Exhibiting properties of both a cat and a slug (hence its name)\
+	it moves somewhat awkwardly. However, the unique qualities of\
+	its body make it exceedingly flexible and smooth, allowing it to\
+	wiggle into and move effectively in even extremely tight spaces.\
+	Additionally, it has surprisingly capable hands, and moves quite\
+	well on two legs or four. Caution is advised when interacting\
+	with these creatures, they are quite intelligent, and proficient\
+	tool users."
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/say_list/catslug/custom/royalslug
+	speak = list("Let them eat cake. Lots and lots of cake.", "Fetch my good cloak.", "I myself prefer my ancient eggs for breakfast!", "Have you come to pay tribute?", "How dare you intrude?", "Bring me the finest of fine finery.", "HARK!", "With great power comes great dinner.")
+
+//crypt slug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/cryptslug
+	name = "Keeper Sluguloth"
+	desc = "A dark-furred noodley bodied creature with thin arms and legs, and gloomy dark eyes. This one is adorned with a dark cloak that obscures most of it's body."
+	tt_desc = "Mollusca Felis Necrosis"
+	icon_state = "cryptslug"
+	icon_living = "cryptslug"
+	icon_rest = "cryptslug_rest"
+	icon_dead = "cryptslug_dead"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/cryptslug)
+	say_list_type = /datum/say_list/catslug/custom/cryptslug
+
+/datum/category_item/catalogue/fauna/catslug/custom/cryptslug
+	name = "Alien Wildlife - Catslug - Keeper Sluguloth"
+	desc = "Found in a deep beneath a town beyond the redgate, Sluguloth\
+	is a catslug who spends their days lurking within dark dungeons \
+	alongside monstrous beings of all sorts. Always seen within \
+	their dark cloak, obscuring them, this litter critter seems \
+	to just exude pure menance and up-to-no-goodness. \
+	\
+	The Catslug is an omnivorous terrestrial creature.\
+	Exhibiting properties of both a cat and a slug (hence its name)\
+	it moves somewhat awkwardly. However, the unique qualities of\
+	its body make it exceedingly flexible and smooth, allowing it to\
+	wiggle into and move effectively in even extremely tight spaces.\
+	Additionally, it has surprisingly capable hands, and moves quite\
+	well on two legs or four. Caution is advised when interacting\
+	with these creatures, they are quite intelligent, and proficient\
+	tool users."
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/say_list/catslug/custom/cryptslug
+	speak = list("I have a lot of nasty friends.", "Do not test me.", "I shall rise again!", "How dare you step foot in my domain?", "Dare you indluge in dark desires?", "I am become death, one day.", "Foul creature!", "I used to think my life was a tragedy, but now I realize it's kind of okay actually.")
+
+//jungle slug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/exploslug
+	name = "Explorer Pawdiana"
+	desc = "A green-furred noodley bodied creature with thin arms and legs, and gloomy dark eyes. This one is adorned with an explorers hat and vest."
+	tt_desc = "Mollusca Felis Exploris"
+	icon_state = "exploslug"
+	icon_living = "exploslug"
+	icon_rest = "exploslug_rest"
+	icon_dead = "exploslug_dead"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/exploslug)
+	say_list_type = /datum/say_list/catslug/custom/exploslug
+
+/datum/category_item/catalogue/fauna/catslug/custom/exploslug
+	name = "Alien Wildlife - Catslug - Explorer Pawdiana"
+	desc = "Found in the depths of an arugably magical jungle, Pawdiana\
+	is a catslug who spends their days treking through the dense foliage \
+	of the dangerous wild. Always seen within \
+	their fancy explorers kit, they are always ready to brave \
+	the hazards of unknown lands. \
+	\
+	The Catslug is an omnivorous terrestrial creature.\
+	Exhibiting properties of both a cat and a slug (hence its name)\
+	it moves somewhat awkwardly. However, the unique qualities of\
+	its body make it exceedingly flexible and smooth, allowing it to\
+	wiggle into and move effectively in even extremely tight spaces.\
+	Additionally, it has surprisingly capable hands, and moves quite\
+	well on two legs or four. Caution is advised when interacting\
+	with these creatures, they are quite intelligent, and proficient\
+	tool users."
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/say_list/catslug/custom/exploslug
+	speak = list("Fortune and porls, kid. Fortune and porls.", "Lizards, why'd it have to be lizards.", "That thingy is an important artifact. It belongs in a museum!", "Everything lost is meant to be found. By me.", "I swear I've seen that stone before...", "I should have packed more jellyfishes.", "I better get back before nightfall!", "A comfy bed? Hah! I sleep under the stars!")
+
 
 //=============================
 //Admin-spawn only catslugs end
 //=============================
 
 //Suslug's below
-
+/*CHOMP Remove START Removing among us meme
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug
 	name = "suslug"
 	desc = "A noodley bodied creature wearing a colorful space suit. Suspicious..."
@@ -858,13 +1075,14 @@
 	var/image/eye_image
 	var/is_impostor = FALSE
 	var/kill_cooldown
+	can_wear_hat = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/impostor
 	is_impostor = TRUE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/Initialize()
 	. = ..()
-	verbs += /mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate
+	add_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate) //CHOMPEdit TGPanel
 	update_icon()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/update_icon()
@@ -896,7 +1114,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate()
 	set name = "Kill Innocent"
-	set category = "Abilities"
+	set category = "Abilities.Catslug"
 	set desc = "Kill an innocent suslug!"
 	if(!is_impostor)
 		to_chat(src, "<span class='notice'>You are not an impostor! You can't kill like that!</span>")
@@ -982,3 +1200,4 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/color/light_yellow
 	color = COLOR_WHEAT
+CHOMP Remove END*/

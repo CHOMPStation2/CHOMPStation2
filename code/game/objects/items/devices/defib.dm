@@ -23,7 +23,7 @@
 /obj/item/device/defib_kit/get_cell()
 	return bcell
 
-/obj/item/device/defib_kit/New() //starts without a cell for rnd
+/obj/item/device/defib_kit/Initialize() //starts without a cell for rnd //ChompEDIT New --> Initialize
 	..()
 	if(ispath(paddles))
 		paddles = new paddles(src, src)
@@ -96,7 +96,7 @@
 			to_chat(user, "<span class='notice'>You install a cell in \the [src].</span>")
 			update_icon()
 
-	else if(W.is_screwdriver())
+	else if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(bcell)
 			bcell.update_icon()
 			bcell.forceMove(get_turf(src.loc))
@@ -291,16 +291,16 @@
 
 /obj/item/weapon/shockpaddles/proc/can_revive(mob/living/carbon/human/H) //This is checked right before attempting to revive
 	var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[O_BRAIN]
-	if(H.should_have_organ(O_BRAIN) && (!brain || brain.defib_timer <= 0 ) )
+	if(H.should_have_organ(O_BRAIN) && (!brain || (istype(brain) && brain.defib_timer <= 0 ) ) ) //CHOMPEdit - Fix a runtime when brain is an MMI
 		return "buzzes, \"Resuscitation failed - Excessive neural degeneration. Further attempts futile.\""
 
 	H.updatehealth()
 
 	if(H.isSynthetic())
-		if(H.health + H.getOxyLoss() + H.getToxLoss() <= config.health_threshold_dead)
+		if(H.health + H.getOxyLoss() + H.getToxLoss() <= CONFIG_GET(number/health_threshold_dead)) // CHOMPEdit
 			return "buzzes, \"Resuscitation failed - Severe damage detected. Begin manual repair before further attempts futile.\""
 
-	else if(H.health + H.getOxyLoss() <= config.health_threshold_dead || (HUSK in H.mutations) || !H.can_defib)
+	else if(H.health + H.getOxyLoss() <= CONFIG_GET(number/health_threshold_dead) || (HUSK in H.mutations) || !H.can_defib) // CHOMPEdit
 		return "buzzes, \"Resuscitation failed - Severe tissue damage makes recovery of patient impossible via defibrillator. Further attempts futile.\""
 
 	var/bad_vital_organ = check_vital_organs(H)
@@ -308,8 +308,8 @@
 		return bad_vital_organ
 
 	//this needs to be last since if any of the 'other conditions are met their messages take precedence
-	if(!H.client && !H.teleop)
-		return "buzzes, \"Resuscitation failed - Mental interface error. Further attempts may be successful.\""
+	//if(!H.client && !H.teleop)
+	//	return "buzzes, \"Resuscitation failed - Mental interface error. Further attempts may be successful.\""// CHOMPEdit, removing this check to allow revival through bad internet connections.
 
 	return null
 
@@ -346,8 +346,8 @@
 		blood_volume *= 0.3
 	else if(heart.is_bruised())
 		blood_volume *= 0.7
-	else if(heart.damage > 1)
-		blood_volume *= 0.8
+	else if(heart.damage > 5) //CHOMPedit, so ONE heart damage isnt 20% of blood missing, now its 5
+		blood_volume *= 0.9 //chompedit, 90% instead of 80%
 	return blood_volume < H.species.blood_volume*H.species.blood_level_fatal
 
 /obj/item/weapon/shockpaddles/proc/check_charge(var/charge_amt)
@@ -433,7 +433,7 @@
 	H.apply_damage(burn_damage_amt, BURN, BP_TORSO)
 
 	//set oxyloss so that the patient is just barely in crit, if possible
-	var/barely_in_crit = config.health_threshold_crit - 1
+	var/barely_in_crit = CONFIG_GET(number/health_threshold_crit) - 1 // CHOMPEdit
 	var/adjust_health = barely_in_crit - H.health //need to increase health by this much
 	H.adjustOxyLoss(-adjust_health)
 
@@ -519,7 +519,7 @@
 
 	// If the brain'd `defib_timer` var gets below this number, brain damage will happen at a linear rate.
 	// This is measures in `Life()` ticks. E.g. 10 minute defib timer = 6000 world.time units = 3000 `Life()` ticks.
-	var/brain_damage_timer = ((config.defib_timer MINUTES) / 2) - ((config.defib_braindamage_timer MINUTES) / 2)
+	var/brain_damage_timer = ((CONFIG_GET(number/defib_timer) MINUTES) / 2) - ((CONFIG_GET(number/defib_braindamage_timer) MINUTES) / 2) // CHOMPEdit
 
 	if(brain.defib_timer > brain_damage_timer)
 		return // They got revived before brain damage got a chance to set in.

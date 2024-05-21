@@ -5,6 +5,7 @@
 //////////////////////////////////////////////////////////////////
 
 /datum/surgery_step/cavity
+	surgery_name = "Cavity"
 	priority = 1
 
 /datum/surgery_step/cavity/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -39,6 +40,7 @@
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='danger'>[user]'s hand slips, scraping around inside [target]'s [affected.name] with \the [tool]!</span>", \
 	"<span class='danger'>Your hand slips, scraping around inside [target]'s [affected.name] with \the [tool]!</span>")
+	user.balloon_alert_visible("Slips, scraping around inside [target]'s [affected.name]", "Your hand slips, scraping around inside \the [affected.name]") // CHOMPEdit
 	affected.createwound(CUT, 20)
 
 ///////////////////////////////////////////////////////////////
@@ -46,6 +48,7 @@
 ///////////////////////////////////////////////////////////////
 
 /datum/surgery_step/cavity/make_space
+	surgery_name = "Create Cavity"
 	allowed_tools = list(
 		/obj/item/weapon/surgical/surgicaldrill = 100,	\
 		/obj/item/weapon/pen = 75,	\
@@ -53,7 +56,7 @@
 	)
 
 	min_duration = 60
-	max_duration = 80
+	max_duration = 60  //CHOMPedit
 
 /datum/surgery_step/cavity/make_space/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -62,8 +65,9 @@
 
 /datum/surgery_step/cavity/make_space/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("[user] starts making some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].", \
-	"You start making some space inside [target]'s [get_cavity(affected)] cavity with \the [tool]." )
+	user.visible_message("<span class='filter_notice'>[user] starts making some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].</span>", \
+	"<span class='filter_notice'>You start making some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].</span>" )
+	user.balloon_alert_visible("Starts making space inside [target]'s [get_cavity(affected)]", "Making space inside [get_cavity(affected)]") // CHOMPEdit
 	target.custom_pain("The pain in your chest is living hell!",1)
 	affected.cavity = 1
 	..()
@@ -72,12 +76,14 @@
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='notice'>[user] makes some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].</span>", \
 	"<span class='notice'>You make some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].</span>" )
+	user.balloon_alert_visible("Makes space inside [target]'s [get_cavity(affected)]", "Made space inside \the [get_cavity(affected)]") // CHOMPEdit
 
 ///////////////////////////////////////////////////////////////
 // Cavity Closing Surgery
 ///////////////////////////////////////////////////////////////
 
 /datum/surgery_step/cavity/close_space
+	surgery_name = "Close Cavity"
 	priority = 2
 	allowed_tools = list(
 		/obj/item/weapon/surgical/cautery = 100,			\
@@ -86,8 +92,8 @@
 		/obj/item/weapon/weldingtool = 25
 	)
 
-	min_duration = 60
-	max_duration = 80
+	min_duration = 30 //CHOMPedit
+	max_duration = 30 //CHOMPedit
 
 /datum/surgery_step/cavity/close_space/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -96,8 +102,9 @@
 
 /datum/surgery_step/cavity/close_space/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("[user] starts mending [target]'s [get_cavity(affected)] cavity wall with \the [tool].", \
-	"You start mending [target]'s [get_cavity(affected)] cavity wall with \the [tool]." )
+	user.visible_message("<span class='filter_notice'>[user] starts mending [target]'s [get_cavity(affected)] cavity wall with \the [tool].</span>", \
+	"<span class='filter_notice'>You start mending [target]'s [get_cavity(affected)] cavity wall with \the [tool].</span>" )
+	user.balloon_alert_visible("Starts mending [target]'s [get_cavity(affected)] cavity wall.", "Mending \the [get_cavity(affected)] cavity wall.") // CHOMPEdit
 	target.custom_pain("The pain in your chest is living hell!",1)
 	affected.cavity = 0
 	..()
@@ -105,18 +112,20 @@
 /datum/surgery_step/cavity/close_space/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='notice'>[user] mends [target]'s [get_cavity(affected)] cavity walls with \the [tool].</span>", \
-	"<span class='notice'> You mend[target]'s [get_cavity(affected)] cavity walls with \the [tool].</span>" )
+	"<span class='notice'> You mend [target]'s [get_cavity(affected)] cavity walls with \the [tool].</span>" )
+	user.balloon_alert_visible("Mends [target]'s [get_cavity(affected)] cavity walls", "Mended [get_cavity(affected)] cavity walls.") // CHOMPEdit
 
 ///////////////////////////////////////////////////////////////
 // Item Implantation Surgery
 ///////////////////////////////////////////////////////////////
 
 /datum/surgery_step/cavity/place_item
+	surgery_name = "Implant Object"
 	priority = 0
 	allowed_tools = list(/obj/item = 100)
 
 	min_duration = 80
-	max_duration = 100
+	max_duration = 80 //CHOMPedit
 
 /datum/surgery_step/cavity/place_item/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!istype(tool))
@@ -124,7 +133,14 @@
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
 		if(istype(user,/mob/living/silicon/robot))
-			return
+			if(istype(tool, /obj/item/weapon/gripper))
+				var/obj/item/weapon/gripper/Gripper = tool
+				if(Gripper.wrapped)
+					tool = Gripper.wrapped
+				else
+					return
+			else
+				return
 		if(affected && affected.cavity)
 			var/total_volume = tool.w_class
 			for(var/obj/item/I in affected.implants)
@@ -135,22 +151,31 @@
 
 /datum/surgery_step/cavity/place_item/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
+	if(isrobot(user) && istype(tool, /obj/item/weapon/gripper))
+		var/obj/item/weapon/gripper/G = tool
+		tool = G.wrapped
 	user.visible_message("<span class='notice'>[user] starts putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>", \
 	"<span class='notice'>You start putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>" ) //Nobody will probably ever see this, but I made these two blue. ~CK
+	user.balloon_alert_visible("Starts putting \the [tool] inside [target]'s [get_cavity(affected)]", "Putting \the [tool] inside \the [get_cavity(affected)]") // CHOMPEdit
 	target.custom_pain("The pain in your chest is living hell!",1)
 	..()
 
 /datum/surgery_step/cavity/place_item/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
-
+	if(isrobot(user) && istype(tool, /obj/item/weapon/gripper))
+		var/obj/item/weapon/gripper/G = tool
+		tool = G.wrapped
+		G.drop_item()
+	else
+		user.drop_item()
 	user.visible_message("<span class='notice'>[user] puts \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>", \
 	"<span class='notice'>You put \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>" )
+	user.balloon_alert_visible("Puts \the [tool] inside [target]'s [get_cavity(affected)]", "\the [tool] placed inside [get_cavity(affected)]") // CHOMPEdit
 	if (tool.w_class > get_max_wclass(affected)/2 && prob(50) && (affected.robotic < ORGAN_ROBOT))
 		to_chat(user, "<span class='danger'> You tear some blood vessels trying to fit such a big object in this cavity.</span>")
 		var/datum/wound/internal_bleeding/I = new (10)
 		affected.wounds += I
 		affected.owner.custom_pain("You feel something rip in your [affected.name]!", 1)
-	user.drop_item()
 	affected.implants += tool
 	tool.loc = affected
 	if(istype(tool,/obj/item/device/nif)){var/obj/item/device/nif/N = tool;N.implant(target)} //VOREStation Add - NIF support
@@ -161,6 +186,7 @@
 //////////////////////////////////////////////////////////////////
 
 /datum/surgery_step/cavity/implant_removal
+	surgery_name = "Remove Implant"
 	allowed_tools = list(
 		/obj/item/weapon/surgical/hemostat = 100,	\
 		/obj/item/weapon/material/kitchen/utensil/fork = 20
@@ -168,8 +194,8 @@
 
 	allowed_procs = list(IS_WIRECUTTER = 75)
 
-	min_duration = 80
-	max_duration = 100
+	min_duration = 50 //CHOMPedit
+	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/cavity/implant_removal/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -183,58 +209,70 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='notice'>[user] starts poking around inside [target]'s [affected.name] with \the [tool].</span>", \
 	"<span class='notice'>You start poking around inside [target]'s [affected.name] with \the [tool].</span>" )
+	user.balloon_alert_visible("Pokes inside [target]'s [affected.name]", "Poking around inside [affected.name]") // CHOMPEdit
 	target.custom_pain("The pain in your [affected.name] is living hell!",1)
 	..()
 
 /datum/surgery_step/cavity/implant_removal/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
 
-	var/time_to_remove = 0 // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
-
 	if (affected.implants.len)
 
-		var/obj/item/obj = pick(affected.implants)
+		var/obj/item/obj = tgui_input_list(user, "Which embedded item do you wish to remove?", "Surgery Select", affected.implants)
+		if(isnull(obj)) //They clicked cancel.
+			user.visible_message("<span class='notice'>[user] takes \the [tool] out of [target]'s [affected.name].</span>", \
+			"<span class='notice'>You take \the [tool] out of the incision on [target]'s [affected.name].</span>" )
+			user.balloon_alert_visible("Takes \the [tool] out of [target]'s [affected.name]", "\the [tool] taken out of the incison on \the [affected.name]") // CHOMPEdit
+			return
+		if(!do_mob(user, target, 1)) //They moved away
+			to_chat(user, "<span class='warning'>You must remain close to and keep focused on your patient to conduct surgery.</span>")
+			user.visible_message("<span class='notice'>[user] fails to remove anything from [target]'s [affected.name] with \the [tool]!</span>", \
+			"<span class='notice'>You fail to remove the [obj] from [target]'s [affected.name]s with \the [tool]!</span>" )
+			user.balloon_alert_visible("Fails to remove anything from [target]'s [affected.name]", "Failed to remove \the [obj] from \the [affected.name]") // CHOMPEdit
+			return
 
 		if(istype(obj,/obj/item/weapon/implant))
 			var/obj/item/weapon/implant/imp = obj
-			if (imp.islegal())
-				time_to_remove += 10 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
-			else
-				time_to_remove += 20 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
+			if (!imp.islegal()) //ILLEGAL IMPLANT ALERT!!!!!!!!!!
+				user.visible_message("<span class='notice'>[user] seems to be intently working on something within [target]'s [affected.name] with \the [tool]!</span>", \
+				"<span class='notice'>You intently begin to take [obj] out of the incision on [target]'s [affected.name]s with \the [tool]!</span>" )
+				user.balloon_alert_visible("Intently works on something within [target]'s [affected.name]", "Intently taking \the [obj] out of the incision in \the [affected.name]") // CHOMPEdit
+				if(!do_after(user, min_duration, target))
+					user.visible_message("<span class='notice'>[user] fails to remove anything from [target]'s [affected.name] with \the [tool]!</span>", \
+					"<span class='notice'>You fail to remove the [obj] from [target]'s [affected.name]s with \the [tool]!</span>" )
+					user.balloon_alert_visible("Fails to remove anything from [target]'s [affected.name]", "Failed to remove \the [obj] from \the [affected.name]") // CHOMPEdit
+					return
+
+
+		user.visible_message("<span class='notice'>[user] takes something out of the incision on [target]'s [affected.name] with \the [tool]!</span>", \
+		"<span class='notice'>You take [obj] out of the incision on [target]'s [affected.name]s with \the [tool]!</span>" )
+		user.balloon_alert_visible("Takes something out of the incision on [target]'s [affected.name]", "[obj] taken out of the incision on [affected.name]") // CHOMPEdit
+		affected.implants -= obj
+		if(!target.has_embedded_objects())
+			target.clear_alert("embeddedobject")
+
+		BITSET(target.hud_updateflag, IMPLOYAL_HUD)
+
+		//Handle possessive brain borers.
+		if(istype(obj,/mob/living/simple_mob/animal/borer))
+			var/mob/living/simple_mob/animal/borer/worm = obj
+			if(worm.controlling)
+				target.release_control()
+			worm.detatch()
+			worm.leave_host()
 		else
-			time_to_remove += 10 SECONDS // CHOMPEdit: Changes surgery pass/fail on prob to a timer. This else is shrapnel and the like.
-
-		if(do_after(user, time_to_remove)) // CHOMPEdit: Changes surgery pass/fail on prob to a timer.
-			user.visible_message("<span class='notice'>[user] takes something out of incision on [target]'s [affected.name] with \the [tool]!</span>", \
-			"<span class='notice'>You take [obj] out of incision on [target]'s [affected.name]s with \the [tool]!</span>" )
-			affected.implants -= obj
-			if(!target.has_embedded_objects())
-				target.clear_alert("embeddedobject")
-
-			BITSET(target.hud_updateflag, IMPLOYAL_HUD)
-
-			//Handle possessive brain borers.
-			if(istype(obj,/mob/living/simple_mob/animal/borer))
-				var/mob/living/simple_mob/animal/borer/worm = obj
-				if(worm.controlling)
-					target.release_control()
-				worm.detatch()
-				worm.leave_host()
-			else
-				obj.loc = get_turf(target)
-				obj.add_blood(target)
-				obj.update_icon()
-				if(istype(obj,/obj/item/weapon/implant))
-					var/obj/item/weapon/implant/imp = obj
-					imp.imp_in = null
-					imp.implanted = 0
-				else if(istype(tool,/obj/item/device/nif)){var/obj/item/device/nif/N = tool;N.unimplant(target)} //VOREStation Add - NIF support
-		else // CHOMPEdit: Shouldn't hit this anymore, but leaving in just-in-case.
-			user.visible_message("<span class='notice'>[user] removes \the [tool] from [target]'s [affected.name].</span>", \
-			"<span class='notice'>There's something inside [target]'s [affected.name], but you just missed it this time.</span>" )
+			obj.loc = get_turf(target)
+			obj.add_blood(target)
+			obj.update_icon()
+			if(istype(obj,/obj/item/weapon/implant))
+				var/obj/item/weapon/implant/imp = obj
+				imp.imp_in = null
+				imp.implanted = 0
+			else if(istype(tool,/obj/item/device/nif)){var/obj/item/device/nif/N = tool;N.unimplant(target)} //VOREStation Add - NIF support
 	else
 		user.visible_message("<span class='notice'>[user] could not find anything inside [target]'s [affected.name], and pulls \the [tool] out.</span>", \
 		"<span class='notice'>You could not find anything inside [target]'s [affected.name].</span>" )
+		user.balloon_alert_visible("Could not find anything inside", "Nothing found inside") // CHOMPEdit
 
 /datum/surgery_step/cavity/implant_removal/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	..()

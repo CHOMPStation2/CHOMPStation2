@@ -81,7 +81,7 @@ var/global/list/engineering_networks = list(
 
 /obj/machinery/camera/network/northern_star
 	network = list(NETWORK_NORTHERN_STAR)
-	
+
 /obj/machinery/camera/network/outside
 	network = list(NETWORK_OUTSIDE)
 
@@ -119,6 +119,13 @@ var/global/list/engineering_networks = list(
 	network = list(NETWORK_THUNDER)
 	invuln = 1
 	always_visible = TRUE
+
+// CHOMPEdit Begin - Bodycams
+/obj/machinery/camera/network/bodycamera
+	network = list(NETWORK_BODYCAM)
+	invuln = 1
+	always_visible = TRUE
+// CHOMPEdit End
 
 // EMP
 
@@ -161,7 +168,7 @@ var/global/list/engineering_networks = list(
 
 /obj/machinery/camera/motion/command
 	network = list(NETWORK_COMMAND)
-	
+
 /obj/machinery/camera/motion/telecom
 	network = list(NETWORK_TCOMMS) //yw edit
 

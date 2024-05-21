@@ -35,8 +35,8 @@
 	var/tail_animation										// If set, the icon to obtain tail animation states from.
 	var/tail_hair
 
-	var/icon_scale_x = 1										// Makes the icon wider/thinner.
-	var/icon_scale_y = 1										// Makes the icon taller/shorter.
+	var/icon_scale_x = DEFAULT_ICON_SCALE_X										// Makes the icon wider/thinner.
+	var/icon_scale_y = DEFAULT_ICON_SCALE_Y										// Makes the icon taller/shorter.
 
 	var/race_key = 0										// Used for mob icon cache string.
 	var/icon/icon_template									// Used for mob icon generation for non-32x32 species.
@@ -45,6 +45,7 @@
 	var/virus_immune
 	var/short_sighted										// Permanent weldervision.
 	var/blood_name = "blood"								// Name for the species' blood.
+	var/blood_reagents = "iron"								// Reagent(s) that restore lost blood. goes by reagent IDs.
 	var/blood_volume = 560									// Initial blood volume.
 	var/bloodloss_rate = 1									// Multiplier for how fast a species bleeds out. Higher = Faster
 	var/blood_level_safe = 0.85								//"Safe" blood level; above this, you're OK
@@ -63,6 +64,9 @@
 	var/min_age = 17
 	var/max_age = 70
 
+	var/icodigi = 'icons/mob/human_races/r_digi.dmi'
+	var/digi_allowed = FALSE
+
 	// Language/culture vars.
 	var/default_language = LANGUAGE_GALCOM					// Default language is used when 'say' is used without modifiers.
 	var/language = LANGUAGE_GALCOM							// Default racial language, if any.
@@ -75,17 +79,37 @@
 
 	// The languages the species can't speak without an assisted organ.
 	// This list is a guess at things that no one other than the parent species should be able to speak
-	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX) //VOREStation Edit
+	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN, LANGUAGE_HIVEMIND) //CHOMPedit: Added Hivemind.
 
 	//Soundy emotey things.
 	var/scream_verb_1p = "scream"
 	var/scream_verb_3p = "screams"
+	// CHOMPEdit Start: Overriding with our own species-specific sounds.
+	// If you're wanting to know where the lists are per-species, go to sound.dm
+	/*
 	var/male_scream_sound = list('sound/effects/mob_effects/m_scream_1.ogg','sound/effects/mob_effects/m_scream_2.ogg','sound/effects/mob_effects/m_scream_3.ogg','sound/effects/mob_effects/m_scream_4.ogg') //CHOMpedit start : Added tgstation screams
 	var/female_scream_sound = list('sound/effects/mob_effects/f_scream_1.ogg','sound/effects/mob_effects/f_scream_2.ogg','sound/effects/mob_effects/f_scream_3.ogg','sound/effects/mob_effects/f_scream_4.ogg') //CHOMPedit end
 	var/male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
 	var/female_cough_sounds = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg')
 	var/male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
 	var/female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
+	*/
+	/* Our base species sounds.
+	 * Note that species_sounds is meant to be used in the place of gendered sound.
+	 * If your species has gendered sounds, set 'gender_specific_species_sounds' to TRUE, and define your gendered sounds below.
+	*/
+	var/species_sounds = "None"
+	var/gender_specific_species_sounds = FALSE // This variable controls if our audible emotes pick based off of gender. Only humans have these so far.
+	var/species_sounds_male = "None" // Safely ignored if the above is set FALSE
+	var/species_sounds_female = "None" // Safely ignored if the above is set FALSE
+	var/cough_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/sneeze_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/scream_volume = 60 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/pain_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/gasp_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	var/death_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
+	// var/species_sounds_herm // If you want a custom sound played for other genders, just add them like so
+	// CHOMPEdit End
 
 	// Combat/health/chem/etc. vars.
 	var/total_health = 100								// How much damage the mob can take before entering crit.
@@ -102,12 +126,15 @@
 	var/flash_mod =     1								// Stun from blindness modifier (flashes and flashbangs)
 	var/flash_burn =    0								// how much damage to take from being flashed if light hypersensitive
 	var/sound_mod =     1								// Multiplier to the effective *range* of flashbangs. a flashbang's bang hits an entire screen radius, with some falloff.
-	var/chem_strength_heal =	1						// Multiplier to most beneficial chem strength
-	var/chem_strength_pain =	1						// Multiplier to painkiller strength (could be used in a negative trait to simulate long-term addiction reducing effects, etc.)
-	var/chem_strength_tox =		1						// Multiplier to toxic chem strength (inc. chloral/sopo/mindbreaker/etc. thresholds)
+	var/throwforce_absorb_threshold = 0					// Ignore damage of thrown items below this value
+
+	var/chem_strength_heal =    1						// Multiplier to most beneficial chem strength
+	var/chem_strength_pain =    1						// Multiplier to painkiller strength (could be used in a negative trait to simulate long-term addiction reducing effects, etc.)
+	var/chem_strength_tox =	    1						// Multiplier to toxic chem strength (inc. chloral/sopo/mindbreaker/etc. thresholds)
+	var/chem_strength_alcohol = 1						// Multiplier to alcohol strength; 0.5 = half, 0 = no effect at all, 2 = double, etc.
+
 	var/chemOD_threshold =		1						// Multiplier to overdose threshold; lower = easier overdosing
 	var/chemOD_mod =		1						// Damage modifier for overdose; higher = more damage from ODs
-	var/alcohol_mod =		1						// Multiplier to alcohol strength; 0.5 = half, 0 = no effect at all, 2 = double, etc.
 	var/pain_mod =			1						// Multiplier to pain effects; 0.5 = half, 0 = no effect (equal to NO_PAIN, really), 2 = double, etc.
 	var/stun_mod =			1						// Multiplier to stun effects; 0.5 = half, - = no effect (immune), 2 = double, etc.
 	var/weaken_mod =		1						// Multiplier to weakness effects; 0.5 = half, - = no effect (immune), 2 = double, etc.
@@ -138,6 +165,7 @@
 	var/water_breather = FALSE
 	var/suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
 	var/suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
+	var/bad_swimmer = FALSE
 
 	var/body_temperature = 310.15							// Species will try to stabilize at this temperature. (also affects temperature processing)
 
@@ -209,7 +237,8 @@
 	var/has_glowing_eyes = 0								// Whether the eyes are shown above all lighting
 	var/water_movement = 0									// How much faster or slower the species is in water
 	var/snow_movement = 0									// How much faster or slower the species is on snow
-
+	var/can_space_freemove = FALSE							// Can we freely move in space?
+	var/can_zero_g_move	= FALSE								// What about just in zero-g non-space?
 
 	var/item_slowdown_mod = 1								// How affected by item slowdown the species is.
 	var/primitive_form										// Lesser form, if any (ie. monkey for humans)
@@ -281,6 +310,8 @@
 	var/wikilink = null //link to wiki page for species
 	var/icon_height = 32
 	var/agility = 20 //prob() to do agile things
+	var/gun_accuracy_mod = 0	// More is better
+	var/gun_accuracy_dispersion_mod = 0	// More is worse
 
 	var/sort_hint = SPECIES_SORT_NORMAL
 
@@ -378,15 +409,17 @@
 		if((organ in H.organs) || (organ in H.internal_organs))
 			qdel(organ)
 
-	if(H.organs)									H.organs.Cut()
-	if(H.internal_organs)				 H.internal_organs.Cut()
-	if(H.organs_by_name)					H.organs_by_name.Cut()
-	if(H.internal_organs_by_name) H.internal_organs_by_name.Cut()
+	if(H.organs)					H.organs.Cut()
+	if(H.internal_organs)			H.internal_organs.Cut()
+	if(H.organs_by_name)			H.organs_by_name.Cut()
+	if(H.internal_organs_by_name) 	H.internal_organs_by_name.Cut()
+	if(H.bad_external_organs)		H.bad_external_organs.Cut()
 
 	H.organs = list()
 	H.internal_organs = list()
 	H.organs_by_name = list()
 	H.internal_organs_by_name = list()
+	H.bad_external_organs = list()
 
 	for(var/limb_type in has_limbs)
 		var/list/organ_data = has_limbs[limb_type]
@@ -405,6 +438,11 @@
 			O.organ_tag = organ_tag
 		H.internal_organs_by_name[organ_tag] = O
 
+	// set butcherable meats from species
+	for(var/obj/item/organ/O in H.organs)
+		O.set_initial_meat()
+	for(var/obj/item/organ/O in H.internal_organs)
+		O.set_initial_meat()
 
 /datum/species/proc/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 
@@ -448,13 +486,13 @@
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-			H.verbs -= verb_path
+			remove_verb(H,verb_path)  //CHOMPEdit
 	return
 
 /datum/species/proc/add_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-			H.verbs |= verb_path
+			add_verb(H,verb_path) //CHOMPEdit TGPanel
 	return
 
 /datum/species/proc/handle_post_spawn(var/mob/living/carbon/human/H) //Handles anything not already covered by basic species assignment.
@@ -513,6 +551,10 @@
 /datum/species/proc/can_breathe_water()
 	return water_breather
 
+// Called when standing on a water tile.
+/datum/species/proc/is_bad_swimmer()
+	return bad_swimmer
+
 // Impliments different trails for species depending on if they're wearing shoes.
 /datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)
 	if( H.shoes || ( H.wear_suit && (H.wear_suit.body_parts_covered & FEET) ) )
@@ -570,4 +612,3 @@
 
 /datum/species/proc/post_spawn_special(mob/living/carbon/human/H)
 	return
-

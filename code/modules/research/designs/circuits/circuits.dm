@@ -441,6 +441,13 @@ CIRCUITS BELOW
 	build_path = /obj/item/weapon/circuitboard/arf_generator
 	sort_string = "LAAAD"
 
+/datum/design/circuit/protean_reconstitutor
+	name = "protean reconstitutor"
+	id = "protean_recon"
+	req_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_DATA = 5)
+	build_path = /obj/item/weapon/circuitboard/protean_reconstitutor
+	sort_string = "LAAAE"
+
 /datum/design/circuit/mecha
 	req_tech = list(TECH_DATA = 3)
 
@@ -675,6 +682,20 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 5, TECH_BLUESPACE = 4)
 	build_path = /obj/item/weapon/circuitboard/microwave/advanced
 	sort_string = "HACAA"
+
+/datum/design/circuit/pointdefense
+	name = "point defense battery"
+	id = "pointdefense"
+	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 3, TECH_COMBAT = 4)
+	build_path = /obj/item/weapon/circuitboard/pointdefense
+	sort_string = "OAABA"
+
+/datum/design/circuit/pointdefense_control
+	name = "point defense control"
+	id = "pointdefense_control"
+	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_COMBAT = 2)
+	build_path = /obj/item/weapon/circuitboard/pointdefense_control
+	sort_string = "OAABB"
 
 /datum/design/circuit/shield_generator
 	name = "shield generator"

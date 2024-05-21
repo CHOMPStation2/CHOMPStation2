@@ -1,5 +1,5 @@
 /datum/species/teshari
-	mob_size = MOB_SMALL //YW Edit: changed from MOB_MEDIUM to MOB_SMALL
+	mob_size = MOB_MEDIUM
 	spawn_flags = SPECIES_CAN_JOIN
 	icobase = 'icons/mob/human_races/r_teshari_vr.dmi'
 	deform = 'icons/mob/human_races/r_teshari_vr.dmi'

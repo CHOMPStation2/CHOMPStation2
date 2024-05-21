@@ -63,7 +63,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	faction = "teppi"
 	maxHealth = 600
 	health = 600
-	movement_cooldown = 2
+	movement_cooldown = -1
 	meat_amount = 12
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
@@ -120,6 +120,8 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	var/teppi_warned = FALSE
 	var/teppi_mutate = FALSE	//Allows Teppi to get their children's colors scrambled, and possibly other things later on!
 
+	var/teppi_growingup = FALSE // flag to prevent multiple qdels
+
 	attacktext = list("nipped", "chomped", "bonked", "stamped on")
 	attack_sound = 'sound/voice/teppi/roar.ogg' // make a better one idiot
 	friendly = list("snoofs", "nuzzles", "nibbles", "smooshes on")
@@ -128,7 +130,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 
 	mob_size = MOB_LARGE
 
-	has_langs = list("Teppi")
+	has_langs = list(LANGUAGE_TEPPI)
 	say_list_type = /datum/say_list/teppi
 	player_msg = "Teppi are large omnivorous quadrupeds. You have four toes on each paw, a long, strong tail, and are quite tough and powerful. You’re a lot more intimidating than you are actually harmful though. Your kind are ordinarily rather passive, only really rising to violence when someone does violence to you or others like you. You’re not stupid though, you can commiunicate with others of your kind, and form bonds with those who are kind to you, be they Teppi or otherwise. <br>- - - - -<br><span class='notice'>While you may have access to galactic common, this is purely meant for making it so you can understand people in an OOC manner, for facilitating roleplay. You almost certainly should not be speaking to people or roleplaying as though you understand everything everyone says perfectly, but it's not unreasonable to be able to intuit intent and such through people's tones when they speak. Teppi are kind of smart, but they are animals, and should be roleplayed as such.</span> <span class='warning'>ADDITIONALLY, you have the ability to produce offspring if you're well fed enough every once in a while, and the ability to disable this from happening to you. These verbs exist for to preserve the mechanical functionality of the mob you are playing. You should be aware of your surroundings when you use this verb, and NEVER use it to prefbreak or be disruptive. If in doubt, don't use it.</span> <span class='notice'>Also, to note, AI Teppi will never initiate breeding with player Teppi.</span>"
 	loot_list = list(/obj/item/weapon/bone/horn = 100)
@@ -160,6 +162,11 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	vore_default_contamination_flavor = "Wet"
 	vore_default_contamination_color = "grey"
 	vore_default_item_mode = IM_DIGEST
+	vore_bump_chance = 5
+	vore_pounce_chance = 35
+	vore_pounce_falloff = 0
+	vore_standing_too = TRUE
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/alienanimals/teppi/init_vore()
 	if(!voremob_loaded) //CHOMPEdit
@@ -169,7 +176,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	B.name = "stomach"
 	B.desc = "The heat of the roiling flesh around you bakes into you immediately as you’re cast into the gloom of a Teppi’s primary gastric chamber. The undulations are practically smothering, clinging to you and grinding you all over as the Teppi continues about its day. The walls are heavy against you, so it’s really difficult to move at all, while the heart of this creature pulses rhythmically somewhere nearby, and you can feel the throb of its pulse in the doughy squish pressing up against you. Your figure sinks a ways into the flesh as it presses in, wrapping limbs up between countless slick folds and kneading waves. It’s not long before you’re positively soaked in a thin layer of slime as you’re rocked and squeezed and jostled in the stomach of your captor."
 	B.mode_flags = 40
-	B.belly_fullscreen = "yet_another_tumby"
+//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	B.digest_brute = 0.05
 	B.digest_burn = 0.05
 	B.digestchance = 5
@@ -278,6 +285,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 // The friend zone.
 	var/obj/belly/p = new /obj/belly(src)
 	p.immutable = TRUE
+	p.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	p.mode_flags = 40
 	p.human_prey_swallow_time = 0.01 SECONDS
 	p.digestchance = 0
@@ -298,7 +306,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	p.contamination_flavor = "Wet"
 	p.contamination_color = "grey"
 	p.item_digest_mode = IM_HOLD
-	p.belly_fullscreen = "yet_another_tumby"
+//	p.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	p.fancy_vore = 1
 	p.vore_verb = "nyomp"
 	friend_zone = p
@@ -331,11 +339,11 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		real_name = name
 	if(!teppi_adult)
 		nutrition = 0
-		verbs += /mob/living/proc/ventcrawl
-		verbs += /mob/living/proc/hide
+		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	else
-		verbs += /mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring
-		verbs += /mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring
+		add_verb(src,/mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring) //CHOMPEdit TGPanel
 
 
 //	teppi_id = rand(1,100000)
@@ -681,7 +689,10 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 			var/nutrition_cost = 500 + (nutrition / 2)
 			adjust_nutrition(-nutrition_cost)
 			new /mob/living/simple_mob/vore/alienanimals/teppi(loc, src)
-			qdel(src)
+			if(!teppi_growingup)
+				teppi_growingup = TRUE
+				qdel(src)
+				return
 		else
 			visible_message("\The [src] whines pathetically...", runemessage = "whines")
 			if(prob(50))
@@ -854,17 +865,17 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		affinity[person.real_name] = -100	//Don't hold a grudge though.
 
 /datum/say_list/teppi
-	speak = list("Gyooh~", "Gyuuuh!", "Gyuh?", "Gyaah...", "Iuuuuhh.", "Uoounh!", "GyoooOOOOoooh!", "Gyoh~", "Gyouh~")
+	speak = list("Gyooh~", "Gyuuuh!", "Gyuh?", "Gyaah...", "Iuuuuhh.", "Uoounh!", "GyoooOOOOoooh!", "Gyoh~", "Gyouh~","Gyuuuuh...", "Rrrr...", "Uuah~", "Groh!")
 	emote_hear = list("puffs", "huffs", "rumbles", "gyoohs","pants", "snoofs")
 	emote_see = list("sways its tail", "stretches", "yawns", "turns their head")
-	say_maybe_target = list("Gyuuh?")
+	say_maybe_target = list("Gyuuh?", "Rrrr!")
 	say_got_target = list("GYOOOHHHH!!!")
 
 /datum/say_list/teppibaby
-	speak = list("Gyooh~", "Gyuuuh!", "Gyuh?", "Gyaah...", "Iuuuuhh.", "Uoounh!", "GyoooOOOOoooh!", "Gyoh~", "Gyouh~", "Yip!")
+	speak = list("Gyooh~", "Gyuuuh!", "Gyuh?", "Gyaah...", "Iuuuuhh.", "Uoounh!", "GyoooOOOOoooh!", "Gyoh~", "Gyouh~","Gyuuuuh...", "Rrrr...", "Uuah~", "Groh!", "Yip!")
 	emote_hear = list("puffs", "huffs", "rumbles", "gyoohs","pants", "snoofs", "yips")
 	emote_see = list("sways its tail", "stretches", "yawns", "turns their head")
-	say_maybe_target = list("Gyuuh?")
+	say_maybe_target = list("Gyuuh?", "Rrrr!")
 	say_got_target = list("GYOOOHHHH!!!")
 
 
@@ -875,18 +886,6 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	retaliate = TRUE
 	speak_chance = 0.5
 	wander = TRUE
-
-/datum/language/teppi
-	name = "Teppi"
-	desc = "The language of the meat things."
-	speech_verb = "rumbles"
-	ask_verb = "tilts"
-	exclaim_verb = "roars"
-	key = "i"
-	flags = RESTRICTED
-	machine_understands = 0
-	space_chance = 100
-	syllables = list("gyoh", "snoof", "gyoooooOOOooh", "iuuuuh", "gyuuuuh")
 
 ////////////////// Da babby //////////////
 
@@ -905,7 +904,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	teppi_adult = FALSE
 	maxHealth = 50
 	health = 50
-	movement_cooldown = 4
+	movement_cooldown = 1
 	harm_intent_damage = 5
 	melee_damage_lower = 1
 	melee_damage_upper = 5
@@ -976,7 +975,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 //
 /mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring()
 	set name = "Produce Offspring"
-	set category = "Abilities"
+	set category = "Abilities.Teppi" //CHOMPEdit
 	set desc = "You can have babies if the conditions are right."
 	if(prevent_breeding)
 		to_chat(src, "<span class='notice'>You have elected to not participate in breeding mechanics, and so cannot complete that action.</span>")
@@ -1018,7 +1017,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 
 /mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring()
 	set name = "Toggle Producing Offspring"
-	set category = "Abilities"
+	set category = "Abilities.Teppi" //CHOMPEdit
 	set desc = "You can toggle whether or not you can produce offspring."
 	if(!prevent_breeding)
 		to_chat(src, "<span class='notice'>You disable breeding.</span>")

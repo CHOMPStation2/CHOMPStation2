@@ -57,7 +57,7 @@
 	S.set_species("Promethean")
 	S.shapeshifter_set_colour("#2398FF")
 	visible_message("<span class='warning'>The monkey cube suddenly takes the shape of a humanoid!</span>")
-	var/newname = sanitize(input(S, "You are a Promethean. Would you like to change your name to something else?", "Name change") as null|text, MAX_NAME_LEN)
+	var/newname = sanitize(tgui_input_text(S, "You are a Promethean. Would you like to change your name to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
 	if(newname)
 		S.real_name = newname
 		S.name = S.real_name
@@ -118,7 +118,8 @@
 	desc = "A glob of slime that is thick as honey.  For the brave Xenobiologist."
 	icon_state = "honeycomb"
 	filling_color = "#FFBB00"
-	center_of_mass = list("x"=17, "y"=10)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 	nutriment_amt = 25 // Very filling.
 	nutriment_desc = list("slime" = 10, "sweetness" = 10, "bliss" = 5)
 
@@ -141,9 +142,10 @@
 	light_range = 6
 	on = 1 //Bio-luminesence has one setting, on.
 	power_use = 0
+	light_system = STATIC_LIGHT
 
-/obj/item/device/flashlight/slime/New()
-	..()
+/obj/item/device/flashlight/slime/Initialize()
+	.=..()
 	set_light(light_range, light_power, light_color)
 
 /obj/item/device/flashlight/slime/update_brightness()

@@ -13,7 +13,7 @@
 	faction = "panther"
 	maxHealth = 200
 	health = 200
-	movement_cooldown = 4
+	movement_cooldown = 0.5
 	see_in_dark = 8
 
 	meat_amount = 8
@@ -42,6 +42,15 @@
 	say_list_type = /datum/say_list/panther
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
+	// CHOMPAdd Start :c
+	can_be_drop_prey = FALSE
+	allow_mind_transfer = TRUE
+	species_sounds = "Feline"
+	pain_emote_1p = list("yowl", "growl")
+	pain_emote_3p = list("yowls", "growls")
+	// CHOMPAdd End
+
+
 // Activate Noms!
 /mob/living/simple_mob/vore/aggressive/panther
 	vore_active = 1
@@ -53,9 +62,9 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 3
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	movement_cooldown = 0
 
 /mob/living/simple_mob/vore/aggressive/panther/MouseDrop_T(mob/living/M, mob/living/user)
 	return

@@ -10,6 +10,7 @@
 #define TEMPERATURE_SIF 243.15 // Roughly -30C / -22F
 #define TEMPERATURE_ALTSIF 225.15
 
+
 /turf/simulated/floor/outdoors/mud/sif/planetuse
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
@@ -83,6 +84,11 @@
 	nitrogen	= MOLES_N2SIF
 	temperature	= TEMPERATURE_SIF
 
+/turf/simulated/open/sif //CHOMP Edit now I'm adding shit here now too. Skylands
+	oxygen		= MOLES_O2SIF
+	nitrogen	= MOLES_N2SIF
+	temperature	= TEMPERATURE_ALTSIF
+
 // PoI compatability, to stop active edges.
 // In hindsight it would've been better to do this first instead of making a billion /sif subtypes above,
 // but maybe we can transition to this instead now and over time get rid of the /sif subtypes.
@@ -137,6 +143,10 @@
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
 	temperature	= TEMPERATURE_ALTSIF
+/turf/simulated/floor/tiled/asteroid_steel //CHOMP Edit now I'm adding shit here now too. Abandoned temple.
+	oxygen		= MOLES_O2SIF
+	nitrogen	= MOLES_N2SIF
+	temperature	= TEMPERATURE_ALTSIF
 
 // Space mineral tiles are now not the default, so they get demoted to subtype status.
 
@@ -171,10 +181,10 @@
 	edge_blending_priority = 6
 	movement_cost = 2
 	initial_flooring = /decl/flooring/snow
-	turf_layers = list(
+	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
-		)
+		) CHOMP Removal End */
 
 /turf/simulated/floor/outdoors/snow/sif/planetuse/Entered(atom/A)
 	if(isliving(A))

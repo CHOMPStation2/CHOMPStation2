@@ -1,21 +1,20 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ab" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/machinery/vending/coffee,
 /obj/effect/floor_decal/corner/red/border{
-	dir = 5;
-	icon_state = "bordercolor"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "ae" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -102,9 +101,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "eZ" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -169,9 +170,7 @@
 /area/submap/DogBase)
 "jD" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -249,7 +248,7 @@
 /area/submap/DogBase)
 "ng" = (
 /mob/living/bot/cleanbot{
-	faction = "syndicate"
+	faction = "malf_drone"
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/dark,
@@ -274,9 +273,7 @@
 /area/submap/DogBase)
 "qg" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
@@ -313,9 +310,11 @@
 /turf/template_noop,
 /area/template_noop)
 "re" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -346,8 +345,7 @@
 /area/submap/DogBase)
 "tz" = (
 /obj/effect/floor_decal/corner/red/border{
-	dir = 4;
-	icon_state = "bordercolor"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -385,15 +383,16 @@
 /area/submap/DogBase)
 "wQ" = (
 /obj/effect/floor_decal/corner/red/border{
-	dir = 8;
-	icon_state = "bordercolor"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "wS" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /turf/template_noop,
@@ -407,8 +406,7 @@
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
-	icon_state = "1-2";
-	pixel_y = 0
+	icon_state = "1-2"
 	},
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /turf/simulated/floor/plating,
@@ -420,8 +418,7 @@
 /obj/random/projectile/scrapped_smg,
 /obj/random/projectile/scrapped_shotgun,
 /obj/effect/floor_decal/corner/red/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -449,8 +446,7 @@
 /obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/corner/red/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -468,8 +464,7 @@
 /obj/random/projectile,
 /obj/random/projectile,
 /obj/effect/floor_decal/corner/red/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -504,8 +499,7 @@
 /area/submap/DogBase)
 "Cz" = (
 /obj/effect/floor_decal/corner/red/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -525,9 +519,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Dv" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -550,12 +546,10 @@
 /area/submap/DogBase)
 "FO" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/border{
-	dir = 10;
-	icon_state = "bordercolor"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -588,8 +582,7 @@
 /obj/random/projectile,
 /obj/effect/landmark/loot_spawn,
 /obj/effect/floor_decal/corner/red/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -637,22 +630,10 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /turf/simulated/floor/plating,
-/area/submap/DogBase)
-"KG" = (
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Le" = (
 /obj/structure/cable/green{
@@ -680,13 +661,11 @@
 /area/submap/DogBase)
 "Ng" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/machinery/vending/security,
 /obj/effect/floor_decal/corner/red/border{
-	dir = 9;
-	icon_state = "bordercolor"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -705,17 +684,21 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/bone/leg,
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/DogBase)
 "OR" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /obj/effect/floor_decal/industrial/danger{
@@ -766,9 +749,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "QB" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -831,8 +816,7 @@
 "Wm" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/corner/red/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /obj/random/curseditem,
 /turf/simulated/floor/tiled/dark,
@@ -857,8 +841,7 @@
 "WU" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/corner/red/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /obj/random/cash/huge,
 /turf/simulated/floor/tiled/dark,
@@ -868,9 +851,11 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "Ya" = (
-/mob/living/simple_mob/animal/wolf/direwolf/dog/sec{
+/mob/living/simple_mob/vore/wolf/direwolf/dog/sec{
 	desc = "The biggest and baddest guard dog around.";
 	faction = "syndicate";
+	max_co2 = 0;
+	max_tox = 0;
 	name = "syndicate guard dog"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -1320,7 +1305,7 @@ Rz
 wI
 Wq
 Ni
-KG
+RW
 PB
 hl
 se

@@ -203,7 +203,7 @@
 	else if(src.density && (user.a_intent == I_HURT)) //If we can't pry it open and it's not a weapon.... Eh, let's attack it anyway.
 		var/obj/item/weapon/W = C
 		user.setClickCooldown(user.get_attack_speed(W))
-		if(W.damtype == BRUTE || W.damtype == BURN)
+		if(istype(W) && (W.damtype == BRUTE || W.damtype == BURN))
 			user.do_attack_animation(src)
 			if(W.force < min_force) //No actual non-weapon item shouls have a force greater than the min_force, but let's include this just in case.
 				user.visible_message("<span class='danger'>\The [user] hits \the [src] with \the [W] with no visible effect.</span>")
@@ -273,7 +273,7 @@
 		force_open()
 
 	if(autoclose && src.operating && !(stat & BROKEN || stat & NOPOWER))
-		addtimer(CALLBACK(src, .proc/close, 15 SECONDS))
+		addtimer(CALLBACK(src, PROC_REF(close)), 15 SECONDS)
 	return 1
 
 // Proc: close()
@@ -318,6 +318,15 @@
 	icon_state = "pdoor0"
 	density = FALSE
 	opacity = 0
+
+/obj/machinery/door/blast/regular/bookcase //CHOMP Add code block
+	name = "bookcase"
+	desc = "On closer inspection, the array of books is decorative and built into the frame."
+	icon_state = "bookcase1"
+	icon_state_open = "bookcase0"
+	icon_state_opening = "bookcasec0"
+	icon_state_closed = "bookcase1"
+	icon_state_closing = "bookcasec1"
 
 // SUBTYPE: Shutters
 // Nicer looking, and also weaker, shutters. Found in kitchen and similar areas.

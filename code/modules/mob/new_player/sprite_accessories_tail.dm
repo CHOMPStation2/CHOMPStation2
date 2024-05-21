@@ -20,17 +20,20 @@
 	var/ani_state // State when wagging/animated
 	var/extra_overlay_w // Wagging state for extra overlay
 	var/extra_overlay2_w // Tertiary wagging.
-	var/list/hide_body_parts = list() //Uses organ tag defines. Bodyparts in this list do not have their icons rendered, allowing for more spriter freedom when doing taur/digitigrade stuff.
 	var/icon/clip_mask_icon = null //Icon file used for clip mask.
 	var/clip_mask_state = null //Icon state to generate clip mask. Clip mask is used to 'clip' off the lower part of clothing such as jumpsuits & full suits.
 	var/icon/clip_mask = null //Instantiated clip mask of given icon and state
+
+	// VOREStation Edit: Taur Loafing
+	var/can_loaf = FALSE
+	var/loaf_offset = 0
 
 	//species_allowed = list(SPECIES_EVENT1, SPECIES_EVENT2, SPECIES_EVENT3)			//Removing Polaris whitelits, ones we need are defined in our files
 
 /datum/sprite_accessory/tail/New()
 	. = ..()
-	if(clip_mask_icon && clip_mask_state)
-		clip_mask = icon(icon = clip_mask_icon, icon_state = clip_mask_state)
+	if(clip_mask_state)
+		clip_mask = icon(icon = (clip_mask_icon ? clip_mask_icon : icon), icon_state = clip_mask_state)
 
 // Species-unique tails
 
@@ -376,6 +379,54 @@
 	icon_state = "snaketail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/bigsnaketail
+	name = "large snake tail (vwag)"
+	desc = ""
+	icon_state = "bigsnaketail"
+	do_colouration = TRUE
+	color_blend_mode = ICON_MULTIPLY
+	ani_state = "bigsnaketail_w"
+
+/datum/sprite_accessory/tail/bigsnaketailstripes
+	name = "large snake tail, striped (vwag)"
+	desc = ""
+	icon_state = "bigsnaketailstripes"
+	extra_overlay = "bigsnaketailstripes-tips"
+	do_colouration = TRUE
+	color_blend_mode = ICON_MULTIPLY
+	ani_state = "bigsnaketailstripes_w"
+	extra_overlay_w = "bigsnaketailstripes-tips_w"
+
+/datum/sprite_accessory/tail/bigsnaketailstripes_alt
+	name = "large snake tail, striped, alt (vwag)"
+	desc = ""
+	icon_state = "bigsnaketailstripesalt"
+	extra_overlay = "bigsnaketailstripesalt-tips"
+	do_colouration = TRUE
+	color_blend_mode = ICON_MULTIPLY
+	ani_state = "bigsnaketailstripesalt_w"
+	extra_overlay_w = "bigsnaketailstripesalt-tips_w"
+
+/datum/sprite_accessory/tail/bigsnaketaildual
+	name = "large snake tail, dual color (vwag)"
+	desc = ""
+	icon_state = "bigsnaketaildual"
+	extra_overlay = "bigsnaketaildual-tips"
+	do_colouration = TRUE
+	color_blend_mode = ICON_MULTIPLY
+	ani_state = "bigsnaketaildual_w"
+	extra_overlay_w = "bigsnaketaildual-tips_w"
+
+/datum/sprite_accessory/tail/bigsnaketailunder
+	name = "large snake tail, under (vwag)"
+	desc = ""
+	icon_state = "bigsnaketailunder"
+	extra_overlay = "bigsnaketailunder-tips"
+	do_colouration = TRUE
+	color_blend_mode = ICON_MULTIPLY
+	ani_state = "bigsnaketailunder_w"
+	extra_overlay_w = "bigsnaketailunder-tips_w"
 
 /datum/sprite_accessory/tail/vulpan_alt
 	name = "vulpkanin alt style, colorable"
@@ -987,3 +1038,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "wardtakahashi_vulp_dc_mark"
+
+/datum/sprite_accessory/tail/zorgoia
+	name = "Zorgoia tail, dual-color"
+	desc = ""
+	icon = 'icons/mob/human_races/sprite_accessories/tails.dmi'
+	icon_state = "zorgoia"
+	extra_overlay = "zorgoia_fluff"
+	extra_overlay2 = "zorgoia_fluff_top"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

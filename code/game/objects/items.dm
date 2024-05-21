@@ -25,6 +25,7 @@
 	var/list/origin_tech = null	//Used by R&D to determine what research bonuses it grants.
 	var/list/attack_verb //Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
 	var/force = 0
+	var/can_cleave = FALSE // If true, a 'cleaving' attack will occur.
 
 	var/heat_protection = 0 //flags which determine which body parts are protected from heat. Use the HEAD, UPPER_TORSO, LOWER_TORSO, etc. flags. See setup.dm
 	var/cold_protection = 0 //flags which determine which body parts are protected from cold. Use the HEAD, UPPER_TORSO, LOWER_TORSO, etc. flags. See setup.dm
@@ -107,7 +108,12 @@
 
 	var/tip_timer // reference to timer id for a tooltip we might open soon
 
-/obj/item/Initialize(mapload)
+	var/no_random_knockdown = FALSE			//stops item from being able to randomly knock people down in combat
+
+	var/rock_climbing = FALSE //If true, allows climbing cliffs using click drag for single Z, walls if multiZ
+	var/climbing_delay = 1 //If rock_climbing, lower better.
+
+/obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
 	. = ..()
 	if(islist(origin_tech))
 		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
@@ -159,6 +165,10 @@
 		var/obj/item/organ/external/hand = H.organs_by_name[check_hand]
 		if(istype(hand) && hand.is_usable())
 			return TRUE
+	var/mob/living/simple_mob/S = M
+	if(istype(S) && S.has_hands) //Are they a mob? And do they have hands?
+		return TRUE
+
 	return FALSE
 
 
@@ -216,9 +226,13 @@
 
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
-	if(anchored)
-		to_chat(user, span("notice", "\The [src] won't budge, you can't pick it up!"))
-		return
+	..()
+	if(anchored) // Start CHOMPStation Edit
+		if(hascall(src, "attack_self"))
+			return src.attack_self(user)
+		else
+			to_chat (user, "This is anchored and you can't lift it.")
+		return // End CHOMPStation Edit
 	if (hasorgans(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name["r_hand"]
@@ -254,6 +268,15 @@
 			var/obj/effect/temporary_effect/item_pickup_ghost/ghost = new(old_loc)
 			ghost.assumeform(src)
 			ghost.animate_towards(user)
+	//VORESTATION EDIT START. This handles possessed items.
+	if(src.possessed_voice && src.possessed_voice.len > 1 && !(user.ckey in warned_of_possession)) // CHOMPEdit Is this item possessed?
+		warned_of_possession |= user.ckey
+		tgui_alert_async(user,{"
+		THIS ITEM IS POSSESSED BY A PLAYER CURRENTLY IN THE ROUND. This could be by anomalous means or otherwise.
+		If this is not something you wish to partake in, it is highly suggested you place the item back down.
+		If this is fine to you, ensure that the other player is fine with you doing things to them beforehand!
+		"},"OOC Warning")
+	//VORESTATION EDIT END.
 	return
 
 /obj/item/attack_ai(mob/user as mob)
@@ -342,13 +365,14 @@
 	user.position_hud_item(src,slot)
 	if(user.client)	user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
-	if((slot_flags & slot))
-		if(equip_sound)
-			playsound(src, equip_sound, 20)
-		else
-			playsound(src, drop_sound, 20)
+	if(("[slot]" in slot_flags_enumeration) && (slot_flags & slot_flags_enumeration["[slot]"]))
+		if(equip_sound && !muffled_by_belly(user)) //ChompEDIT
+			playsound(src, equip_sound, 20, preference = /datum/client_preference/pickup_sounds)
+		else if(!muffled_by_belly(user)) //ChompEDIT
+			playsound(src, drop_sound, 20, preference = /datum/client_preference/pickup_sounds)
 	else if(slot == slot_l_hand || slot == slot_r_hand)
-		playsound(src, pickup_sound, 20, preference = /datum/client_preference/pickup_sounds)
+		if(!muffled_by_belly(user)) //ChompEDIT
+			playsound(src, pickup_sound, 20, preference = /datum/client_preference/pickup_sounds)
 	return
 
 // As above but for items being equipped to an active module on a robot.
@@ -376,7 +400,7 @@ var/list/global/slot_flags_enumeration = list(
 //If you are making custom procs but would like to retain partial or complete functionality of this one, include a 'return ..()' to where you want this to happen.
 //Set disable_warning to 1 if you wish it to not give you outputs.
 //Should probably move the bulk of this into mob code some time, as most of it is related to the definition of slots and not item-specific
-/obj/item/proc/mob_can_equip(M as mob, slot, disable_warning = FALSE)
+/obj/item/proc/mob_can_equip(M as mob, slot, disable_warning = FALSE, var/ignore_obstruction = FALSE)
 	if(!slot) return 0
 	if(!M) return 0
 
@@ -402,7 +426,7 @@ var/list/global/slot_flags_enumeration = list(
 
 	//Next check if the slot is accessible.
 	var/mob/_user = disable_warning? null : H
-	if(!H.slot_is_accessible(slot, src, _user))
+	if(!ignore_obstruction && !H.slot_is_accessible(slot, src, _user))
 		return 0
 
 	//Lastly, check special rules for the desired slot.
@@ -488,17 +512,22 @@ var/list/global/slot_flags_enumeration = list(
 		return
 	if(!usr.canmove || usr.stat || usr.restrained() || !Adjacent(usr))
 		return
-	if((!istype(usr, /mob/living/carbon)) || (istype(usr, /mob/living/carbon/brain)))//Is humanoid, and is not a brain
+	if(isanimal(usr))	//VOREStation Edit Start - Allows simple mobs with hands to use the pickup verb
+		var/mob/living/simple_mob/s = usr
+		if(!s.has_hands)
+			to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
+			return
+	else if((!istype(usr, /mob/living/carbon)) || (istype(usr, /mob/living/carbon/brain)))//Is humanoid, and is not a brain
 		to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
 		return
-	var/mob/living/carbon/C = usr
+	var/mob/living/L = usr
 	if( usr.stat || usr.restrained() )//Is not asleep/dead and is not restrained
 		to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
 		return
 	if(src.anchored) //Object isn't anchored
 		to_chat(usr, "<span class='warning'>You can't pick that up!</span>")
 		return
-	if(C.get_active_hand()) //Hand is not full
+	if(L.get_active_hand()) //Hand is not full	//VOREStation Edit End
 		to_chat(usr, "<span class='warning'>Your hand is full.</span>")
 		return
 	if(!istype(src.loc, /turf)) //Object is on a turf
@@ -660,7 +689,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 
 /obj/item/proc/showoff(mob/user)
 	for (var/mob/M in view(user))
-		M.show_message("[user] holds up [src]. <a HREF=?src=\ref[M];lookitem=\ref[src]>Take a closer look.</a>",1)
+		M.show_message("<span class='filter_notice'>[user] holds up [src]. <a HREF=?src=\ref[M];lookitem=\ref[src]>Take a closer look.</a></span>",1)
 
 /mob/living/carbon/verb/showoff()
 	set name = "Show Held Item"
@@ -678,7 +707,14 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 //Looking through a scope or binoculars should /not/ improve your periphereal vision. Still, increase viewsize a tiny bit so that sniping isn't as restricted to NSEW
 /obj/item/var/ignore_visor_zoom_restriction = FALSE
 
-/obj/item/proc/zoom(var/tileoffset = 14,var/viewsize = 9) //tileoffset is client view offset in the direction the user is facing. viewsize is how far out this thing zooms. 7 is normal view
+/obj/item/proc/zoom(var/mob/living/M, var/tileoffset = 14,var/viewsize = 9) //tileoffset is client view offset in the direction the user is facing. viewsize is how far out this thing zooms. 7 is normal view
+
+	if(isliving(usr)) //Always prefer usr if set
+		M = usr
+
+	if(!isliving(M))
+		return 0
+
 
 	var/devicename
 
@@ -689,25 +725,26 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 	var/cannotzoom
 
-	if((usr.stat && !zoom) || !(istype(usr,/mob/living/carbon/human)))
-		to_chat(usr, "You are unable to focus through the [devicename]")
+	if((M.stat && !zoom) || !(istype(M,/mob/living/carbon/human)))
+		to_chat(M, "<span class='filter_notice'>You are unable to focus through the [devicename].</span>")
 		cannotzoom = 1
-	else if(!zoom && (global_hud.darkMask[1] in usr.client.screen))
-		to_chat(usr, "Your visor gets in the way of looking through the [devicename]")
+	else if(!zoom && (global_hud.darkMask[1] in M.client.screen))
+		to_chat(M, "<span class='filter_notice'>Your visor gets in the way of looking through the [devicename].</span>")
 		cannotzoom = 1
-	else if(!zoom && usr.get_active_hand() != src)
-		to_chat(usr, "You are too distracted to look through the [devicename], perhaps if it was in your active hand this might work better")
+	else if(!zoom && M.get_active_hand() != src)
+		to_chat(M, "<span class='filter_notice'>You are too distracted to look through the [devicename], perhaps if it was in your active hand this might work better.</span>")
 		cannotzoom = 1
 
 	//We checked above if they are a human and returned already if they weren't.
-	var/mob/living/carbon/human/H = usr
+	var/mob/living/carbon/human/H = M
 
 	if(!zoom && !cannotzoom)
 		if(H.hud_used.hud_shown)
 			H.toggle_zoom_hud()	// If the user has already limited their HUD this avoids them having a HUD when they zoom in
 		H.set_viewsize(viewsize)
 		zoom = 1
-		GLOB.moved_event.register(H, src, .proc/zoom)
+		H.AddComponent(/datum/component/recursive_move)
+		RegisterSignal(H, COMSIG_OBSERVER_MOVED, PROC_REF(zoom), override = TRUE)
 
 		var/tilesize = 32
 		var/viewoffset = tilesize * tileoffset
@@ -726,7 +763,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 				H.client.pixel_x = -viewoffset
 				H.client.pixel_y = 0
 
-		H.visible_message("[usr] peers through the [zoomdevicename ? "[zoomdevicename] of the [src.name]" : "[src.name]"].")
+		H.visible_message("<span class='filter_notice'>[M] peers through the [zoomdevicename ? "[zoomdevicename] of the [src.name]" : "[src.name]"].</span>")
 		if(!ignore_visor_zoom_restriction)
 			H.looking_elsewhere = TRUE
 		H.handle_vision()
@@ -736,7 +773,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		if(!H.hud_used.hud_shown)
 			H.toggle_zoom_hud()
 		zoom = 0
-		GLOB.moved_event.unregister(H, src, .proc/zoom)
+		UnregisterSignal(H, COMSIG_OBSERVER_MOVED)
 
 		H.client.pixel_x = 0
 		H.client.pixel_y = 0
@@ -744,7 +781,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		H.handle_vision()
 
 		if(!cannotzoom)
-			usr.visible_message("[zoomdevicename ? "[usr] looks up from the [src.name]" : "[usr] lowers the [src.name]"].")
+			M.visible_message("<span class='filter_notice'>[zoomdevicename ? "[M] looks up from the [src.name]" : "[M] lowers the [src.name]"].</span>")
 
 	return
 
@@ -812,8 +849,6 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	standing.alpha = alpha
 	standing.color = color
 	standing.layer = layer2use
-	if(istype(clip_mask)) //VOREStation Edit - For taur bodies/tails clipping off parts of uniforms and suits.
-		standing.filters += filter(type = "alpha", icon = clip_mask)
 
 	if(istype(clip_mask)) //For taur bodies/tails clipping off parts of uniforms and suits.
 		standing.filters += filter(type = "alpha", icon = clip_mask)
@@ -919,7 +954,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	. = ..()
 	if(usr.is_preference_enabled(/datum/client_preference/inv_tooltips) && ((src in usr) || isstorage(loc))) // If in inventory or in storage we're looking at
 		var/user = usr
-		tip_timer = addtimer(CALLBACK(src, .proc/openTip, location, control, params, user), 5, TIMER_STOPPABLE)
+		tip_timer = addtimer(CALLBACK(src, PROC_REF(openTip), location, control, params, user), 5, TIMER_STOPPABLE)
 
 /obj/item/MouseExited()
 	. = ..()
@@ -957,10 +992,12 @@ closest to where the cursor has clicked on.
 Note: This proc can be overwritten to allow for different types of auto-alignment.
 */
 
-/obj/item/var/list/center_of_mass = list("x" = 16,"y" = 16)
+///obj/item/var/list/center_of_mass = list("x" = 16,"y" = 16) CHOMPEdit NO STOP PLEASE -- center_of_mass - 52.0879 mb total
+/obj/item/var/center_of_mass_x = 16 //CHOMPEdit
+/obj/item/var/center_of_mass_y = 16 //CHOMPEdit
 
 /proc/auto_align(obj/item/W, click_parameters, var/animate = FALSE)
-	if(!W.center_of_mass)
+	if(!W.center_of_mass_x && !W.center_of_mass_y) //CHOMPEdit
 		W.randpixel_xy()
 		return
 
@@ -976,8 +1013,8 @@ Note: This proc can be overwritten to allow for different types of auto-alignmen
 		var/cell_x = max(0, min(CELLS-1, round(mouse_x/CELLSIZE)))
 		var/cell_y = max(0, min(CELLS-1, round(mouse_y/CELLSIZE)))
 
-		var/target_x = (CELLSIZE * (0.5 + cell_x)) - W.center_of_mass["x"]
-		var/target_y = (CELLSIZE * (0.5 + cell_y)) - W.center_of_mass["y"]
+		var/target_x = (CELLSIZE * (0.5 + cell_x)) - W.center_of_mass_x //CHOMPEdit
+		var/target_y = (CELLSIZE * (0.5 + cell_y)) - W.center_of_mass_y //CHOMPEdit
 		if(animate)
 			var/dist_x = abs(W.pixel_x - target_x)
 			var/dist_y = abs(W.pixel_y - target_y)
@@ -992,4 +1029,10 @@ Note: This proc can be overwritten to allow for different types of auto-alignmen
 
 // this gets called when the item gets chucked by the vending machine
 /obj/item/proc/vendor_action(var/obj/machinery/vending/V)
+	return
+
+/obj/item/proc/on_holder_escape(var/obj/item/weapon/holder/H)
+	return
+
+/obj/item/proc/get_welder()
 	return

@@ -52,7 +52,8 @@
 	icon_state = "eggbox"
 	icon_type = "egg"
 	name = "egg box"
-	center_of_mass = list("x" = 16,"y" = 7)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 	storage_slots = 12
 	can_hold = list(
 		/obj/item/weapon/reagent_containers/food/snacks/egg,
@@ -78,6 +79,8 @@
 
 /obj/item/weapon/storage/fancy/egg_box/open(mob/user as mob)
 	if(open)
+		return
+	if (isobserver(usr))
 		return
 	open = TRUE
 	update_icon()
@@ -383,16 +386,18 @@
 /obj/item/weapon/storage/fancy/cigar
 	name = "cigar case"
 	desc = "A case for holding your cigars when you are not smoking them."
-	description_fluff = "The tastefully engraved palm tree tells you that these 'Palma Grande' premium cigars are only sold on the luxury cruises and resorts of Oasis, though ten separate companies produce them for that purpose galaxy-wide. The standard is however very high."
+	description_fluff = "The tasteful stained palm case tells you that these 'Palma Grande' premium \
+	cigars are only sold on the luxury cruises and resorts of Oasis, though ten separate companies \
+	produce them for that purpose galaxy-wide. The standard is however very high."
 	icon_state = "cigarcase"
 	icon = 'icons/obj/cigarettes.dmi'
 	w_class = ITEMSIZE_TINY
 	throwforce = 2
 	slot_flags = SLOT_BELT
-	storage_slots = 7
+	storage_slots = 5
 	can_hold = list(/obj/item/clothing/mask/smokable/cigarette/cigar, /obj/item/trash/cigbutt/cigarbutt)
 	icon_type = "cigar"
-	starts_with = list(/obj/item/clothing/mask/smokable/cigarette/cigar = 8)
+	starts_with = list(/obj/item/clothing/mask/smokable/cigarette/cigar = 5)
 
 /obj/item/weapon/storage/fancy/cigar/Initialize()
 	. = ..()
@@ -417,7 +422,7 @@
 	if(open)
 		icon_state = open_state
 		if(contents.len >= 1)
-			add_overlay("cigarcase[contents.len]")
+			add_overlay("[initial(icon_state)][contents.len]")
 	else
 		icon_state = closed_state
 
@@ -432,6 +437,27 @@
 	open = FALSE
 	update_icon()
 	..()
+
+/obj/item/weapon/storage/fancy/cigar/choiba
+	name = "/improper Choiba cigar case"
+	desc = "A fancy case for holding your cigars when you are not smoking them."
+	description_fluff = "The exquisite wooden case bears the markings of the \
+	Choiba cigar company based out of Cuba. The perfectly humidized case keeps \
+	the companies signature Cigars in premium condidtion even when traveling \
+	long distances within a vacuume. The custom case itself can sell for quite \
+	a lot in some places."
+	icon_state = "cohibacase"
+	icon = 'icons/obj/cigarettes.dmi'
+	icon_type = "cigar"
+	starts_with = list(/obj/item/clothing/mask/smokable/cigarette/cigar/cohiba = 5)
+
+/obj/item/weapon/storage/fancy/cigar/havana
+	name = "\improper Havana cigar case"
+	desc = "A fancy case for holding your cigars when you are not smoking them."
+	icon_state = "havanacase"
+	icon = 'icons/obj/cigarettes.dmi'
+	icon_type = "cigar"
+	starts_with = list(/obj/item/clothing/mask/smokable/cigarette/cigar/havana = 5)
 
 /*
  * Tobacco Bits

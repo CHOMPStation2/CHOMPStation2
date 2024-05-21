@@ -6,10 +6,10 @@
 	icon_state = "emergency_double_vox"
 	gauge_icon = "indicator_double"
 	gauge_cap = 3
-	volume = 10
+	volume = 12		// CHOMP EDIT double extended
 
-/obj/item/weapon/tank/emergency/phoron/double/New()
-	..()
+/obj/item/weapon/tank/emergency/phoron/double/Initialize() //ChompEDIT New() -> Initialize()
+	. = ..()
 	air_contents.adjust_gas("phoron", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
 //New icons
@@ -72,12 +72,14 @@
 	icon = 'icons/obj/tank_vr.dmi'
 	icon_state = "emergency_nitrogen"
 	gauge_icon = "indicator_smalltank"
+	volume = 6			// CHOMP EDIT adds a custom volume to ensure things aren't buggy with changes
 	gauge_cap = 3
 
 /obj/item/weapon/tank/emergency/nitrogen/double
 	icon = 'icons/obj/tank_vr.dmi'
-	icon_state = "emergency_double_vox"
+	icon_state = "emergency_double_vox_old"		// CHOMP EDIT using the old red double sprite to indicate double nitrogen rather than sharing the phoron tank (cuz why share the phoron tank?)
 	gauge_icon = "indicator_double"
+	volume = 12		// CHOMP EDIT double extended
 	gauge_cap = 3
 
 /obj/item/weapon/tank/emergency/phoron

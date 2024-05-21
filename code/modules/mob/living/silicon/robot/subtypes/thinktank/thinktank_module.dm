@@ -11,7 +11,7 @@
 
 	var/list/decals
 	var/list/available_decals = list(
-		"Stripe" = "stripe", 
+		"Stripe" = "stripe",
 		"Vertical Stripe" = "stripe_vertical"
 	)
 
@@ -25,13 +25,13 @@
 /obj/item/weapon/robot_module/robot/platform/verb/set_eye_colour()
 	set name = "Set Eye Colour"
 	set desc = "Select an eye colour to use."
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set src in usr
 
 	var/new_pupil_color = input(usr, "Select a pupil colour.", "Pupil Colour Selection") as color|null
 	if(usr.incapacitated() || QDELETED(usr) || QDELETED(src) || loc != usr)
 		return
-	
+
 	pupil_color = new_pupil_color || initial(pupil_color)
 	usr.update_icon()
 
@@ -47,7 +47,7 @@
 		"Explorer" = 1
 	)
 
-/obj/item/weapon/robot_module/robot/platform/explorer/New()
+/obj/item/weapon/robot_module/robot/platform/explorer/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	modules += new /obj/item/weapon/weldingtool/electric/mounted/cyborg(src)
@@ -64,10 +64,10 @@
 	modules += bandaid
 	synths += medicine
 
-	var/obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg/phasegun = new(src) 
+	var/obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg/phasegun = new(src)  //CHOMP Edit
 	modules += phasegun
 
-	emag = new /obj/item/weapon/chainsaw(src)
+	emag += new /obj/item/weapon/chainsaw(src)
 
 /obj/item/weapon/robot_module/robot/platform/explorer/respawn_consumable(var/mob/living/silicon/robot/R, rate)
 	. = ..()
@@ -88,12 +88,12 @@
 	channels = list("Supply" = 1)
 	networks = list(NETWORK_MINE)
 
-/obj/item/weapon/robot_module/robot/platform/cargo/New()
+/obj/item/weapon/robot_module/robot/platform/cargo/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	modules += new /obj/item/weapon/packageWrap(src)
 	modules += new /obj/item/weapon/pen/multi(src)
 	modules += new /obj/item/device/destTagger(src)
-	emag = new /obj/item/weapon/stamp/denied
+	emag += new /obj/item/weapon/stamp/denied
 
 /obj/item/weapon/robot_module/robot/platform/cargo/respawn_consumable(mob/living/silicon/robot/R, rate)
 	. = ..()

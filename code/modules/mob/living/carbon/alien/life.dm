@@ -2,7 +2,7 @@
 /mob/living/carbon/alien/Life()
 
 	set invisibility = 0
-	set background = 1
+	//set background = 1 //CHOMPEdit
 
 	if (transforming)	return
 	if(!loc)			return
@@ -41,12 +41,14 @@
 	if(stat == DEAD)
 		blinded = 1
 		silent = 0
+		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 	else
 		updatehealth()
 		if(health <= 0)
 			death()
 			blinded = 1
 			silent = 0
+			deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 			return 1
 
 		if(paralysis && paralysis > 0)
@@ -150,7 +152,7 @@
 		adjustFireLoss((environment.temperature - (T0C+66))/5) // Might be too high, check in testing.
 		throw_alert("alien_fire", /obj/screen/alert/alien_fire)
 		if(prob(20))
-			to_chat(src, "<font color='red'>You feel a searing heat!</font>")
+			to_chat(src, span_red("You feel a searing heat!"))
 	else
 		clear_alert("alien_fire")
 

@@ -12,8 +12,11 @@ SUBSYSTEM_DEF(ai)
 	var/slept_mobs = 0
 	var/list/process_z = list()
 
-/datum/controller/subsystem/ai/stat_entry(msg_prefix)
-	..("P: [processing.len] | S: [slept_mobs]")
+//CHOMPEdit Begin
+/datum/controller/subsystem/ai/stat_entry(msg)
+	msg = "P: [processing.len] | S: [slept_mobs]"
+	return ..()
+//CHOMPEdit End
 
 /datum/controller/subsystem/ai/fire(resumed = 0)
 	if (!resumed)
@@ -39,7 +42,7 @@ SUBSYSTEM_DEF(ai)
 		if(!L?.loc)
 			continue
 
-		if(process_z[get_z(L)] || !L.low_priority) //VOREStation Edit End
+		if((get_z(L) && process_z[get_z(L)]) || !L.low_priority) //VOREStation Edit End
 			A.handle_strategicals()
 		else
 			slept_mobs++

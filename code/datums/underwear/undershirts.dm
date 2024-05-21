@@ -189,13 +189,38 @@
 	icon_state = "pinkblack_tshirt"
 
 /datum/category_item/underwear/undershirt/turtle
+	name = "Turtleneck, Old"
+	icon_state = "turtleneck_old"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/sleevelessturtle
+	name = "Turtleneck, Sleeveless, Old"
+	icon_state = "turtleneck_sleeveless_old"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/turtleneck
 	name = "Turtleneck"
 	icon_state = "turtleneck"
 	has_color = TRUE
 
-/datum/category_item/underwear/undershirt/sleevelessturtle
+/datum/category_item/underwear/undershirt/turtleneck_smooth
+	name = "Turtleneck, Smooth"
+	icon_state = "turtleneck_smooth"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/turtlesleeveless
 	name = "Turtleneck, Sleeveless"
-	icon_state = "sleevelessturtle"
+	icon_state = "turtleneck_sleeveless"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/leotardturtle
+	name = "Leotard Turtleneck"
+	icon_state = "leotard_turtleneck"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/leotardturtlesleeveless
+	name = "Leotard Turtleneck, Sleeveless"
+	icon_state = "leotard_turtleneck_sleeveless"
 	has_color = TRUE
 
 /datum/category_item/underwear/undershirt/dress_shirt_fem
@@ -206,4 +231,24 @@
 /datum/category_item/underwear/undershirt/dress_shirt
 	name = "Dress shirt, masculine"
 	icon_state = "undershirt_dress"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/midriff
+	name = "Tanktop, midriff"
+	icon_state = "tank_midriff"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/midriffshort
+	name = "Tanktop, midriff, short"
+	icon_state = "tank_midriff_short"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/shibari
+	name = "Shibari Binding"
+	icon_state = "shibari"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/leotard
+	name = "Leotard"
+	icon_state = "leotard"
 	has_color = TRUE

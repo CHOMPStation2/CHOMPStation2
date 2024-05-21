@@ -155,6 +155,6 @@
 			if(D.pulling)
 				D.pulling.forceMove(dest)
 	else
-		to_world("CANARY: Could not move [A] to [nx], [ny], [nz]: [dest ? "[dest]" : "null"]")
+		log_debug("CANARY: Could not move [A] to [nx], [ny], [nz]: [dest ? "[dest]" : "null"]") //CHOMPEdit - changed to log_debug
 
 	M.cleanup()

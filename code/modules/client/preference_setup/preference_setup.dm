@@ -232,6 +232,10 @@
 		return 1
 
 	. = OnTopic(href, href_list, usr)
+
+	if(!pref_mob || !pref_mob.client)		// Just in case we disappeared during OnTopic
+		return 1
+
 	if(. & TOPIC_UPDATE_PREVIEW)
 		pref_mob.client.prefs.update_preview_icon()
 	if(. & TOPIC_REFRESH)
@@ -300,3 +304,7 @@
 		if(PREF_FBP_SOFTWARE)
 			return 150
 	return S.max_age // welp
+
+#undef PREF_FBP_CYBORG
+#undef PREF_FBP_POSI
+#undef PREF_FBP_SOFTWARE

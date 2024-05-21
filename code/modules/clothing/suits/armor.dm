@@ -1,5 +1,5 @@
 /obj/item/clothing/suit/armor
-	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet)
+	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet,/obj/item/weapon/tank) //CHOMP Add tank
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	item_flags = THICKMATERIAL
 
@@ -198,10 +198,10 @@
 /obj/item/clothing/suit/armor/reactive/attack_self(mob/user as mob)
 	active = !( active )
 	if (active)
-		to_chat(user, "<font color='blue'>The reactive armor is now active.</font>")
+		to_chat(user, span_blue("The reactive armor is now active."))
 		icon_state = "reactive"
 	else
-		to_chat(user, "<font color='blue'>The reactive armor is now inactive.</font>")
+		to_chat(user, span_blue("The reactive armor is now inactive."))
 		icon_state = "reactiveoff"
 		add_fingerprint(user)
 	return
@@ -513,14 +513,17 @@
 		|ACCESSORY_SLOT_ARMOR_A\
 		|ACCESSORY_SLOT_ARMOR_L\
 		|ACCESSORY_SLOT_ARMOR_S\
-		|ACCESSORY_SLOT_ARMOR_M)
+		|ACCESSORY_SLOT_ARMOR_M\
+		|ACCESSORY_SLOT_OVER\
+		|ACCESSORY_SLOT_ARMBAND)	//CHOMPEdit - let pcarriers have fashion
 	restricted_accessory_slots = (\
 		ACCESSORY_SLOT_INSIGNIA\
 		|ACCESSORY_SLOT_ARMOR_C\
 		|ACCESSORY_SLOT_ARMOR_A\
 		|ACCESSORY_SLOT_ARMOR_L\
 		|ACCESSORY_SLOT_ARMOR_S\
-		|ACCESSORY_SLOT_ARMOR_M)
+		|ACCESSORY_SLOT_ARMOR_M\
+		|ACCESSORY_SLOT_ARMBAND)	//CHOMPEdit - let pcarriers have fashion
 	blood_overlay_type = "armor"
 
 /obj/item/clothing/suit/armor/pcarrier/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)
@@ -540,7 +543,7 @@
 		return 1
 
 /obj/item/clothing/suit/armor/pcarrier/explorer
-	name = "explorer suit"
+	name = "explorer plate carrier" // CHOMPedit: Clarity for vendors.
 	desc = "A lightweight explorer plate carrier. It can be equipped with armor plates, but only protects from the cold on it's own."
 	icon_state = "explorer"
 	flags = THICKMATERIAL

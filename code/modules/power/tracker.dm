@@ -16,6 +16,8 @@
 	var/id = 0
 	var/sun_angle = 0		// sun angle as set by sun datum
 	var/obj/machinery/power/solar_control/control = null
+	var/SOLAR_MAX_DIST = 60		//VOREStation Addition //ChompEDIT - ours are >40 away
+
 
 /obj/machinery/power/tracker/Initialize(mapload, glass_type)
 	. = ..()
@@ -51,7 +53,7 @@
 
 /obj/machinery/power/tracker/attackby(var/obj/item/weapon/W, var/mob/user)
 
-	if(W.is_crowbar())
+	if(W.has_tool_quality(TOOL_CROWBAR))
 		playsound(src, 'sound/machines/click.ogg', 50, 1)
 		user.visible_message("<span class='notice'>[user] begins to take the glass off the solar tracker.</span>")
 		if(do_after(user, 50))

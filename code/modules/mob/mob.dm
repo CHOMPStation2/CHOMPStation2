@@ -2,8 +2,8 @@
 	mob_list -= src
 	dead_mob_list -= src
 	living_mob_list -= src
+	player_list -= src
 	unset_machine()
-	qdel(hud_used)
 	clear_fullscreen()
 	if(client)
 		for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
@@ -12,10 +12,29 @@
 		client.screen = list()
 	if(mind && mind.current == src)
 		spellremove(src)
-	ghostize()
+	if(!istype(src,/mob/observer)) //CHOMPEdit
+		ghostize() //CHOMPEdit
+	//ChompEDIT start - fix hard qdels
 	QDEL_NULL(plane_holder)
-	..()
-	return QDEL_HINT_HARDDEL_NOW
+	QDEL_NULL(hud_used)
+	for(var/key in alerts) //clear out alerts
+		clear_alert(key)
+	if(pulling)
+		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
+
+	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
+	vore_selected = null // from code/modules/vore/eating/mob_vr
+	focus = null
+
+	if(mind)
+		if(mind.current == src)
+			mind.current = null
+		if(mind.original == src)
+			mind.original = null
+
+	. = ..()
+	update_client_z(null)
+	//return QDEL_HINT_HARDDEL_NOW
 
 /mob/proc/remove_screen_obj_references()
 	hands = null
@@ -42,10 +61,11 @@
 	lastarea = get_area(src)
 	set_focus(src) // VOREStation Add - Key Handling
 	hook_vr("mob_new",list(src)) //VOREStation Code
-	update_transform() // Some mobs may start bigger or smaller than normal.
-	return ..()
+	. = ..()
+	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 
-/mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
+/mob/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2) //CHOMPEdit show_message() moved to /atom/movable
+	var/time = say_timestamp()
 
 	if(!client && !teleop)	return
 
@@ -66,11 +86,17 @@
 					return
 	// Added voice muffling for Issue 41.
 	if(stat == UNCONSCIOUS || sleeping > 0)
-		to_chat(src, "<I>... You can almost hear someone talking ...</I>")
+		to_chat(src, "<span class='filter_notice'><I>... You can almost hear someone talking ...</I></span>")
 	else
-		to_chat(src,msg)
-		if(teleop)
-			to_chat(teleop, create_text_tag("body", "BODY:", teleop) + "[msg]")
+		if(client && client.prefs.chat_timestamp)
+			// TG-Chat filters latch directly to the spans, we no longer need that
+			//msg = replacetext(msg, new/regex("^(<span(?: \[^>]*)?>)((?:.|\\n)*</span>)", ""), "$1[time] $2") // Insteres timestamps after the first qualifying span
+			//msg = replacetext(msg, new/regex("^\[^<]((?:.|\\n)*)", ""), "[time] $1") // Spanless messages also get timestamped
+			to_chat(src,"[time] [msg]")
+		else if(teleop)
+			to_chat(teleop, create_text_tag("body", "BODY:", teleop.client) + "[msg]")
+		else
+			to_chat(src,msg)
 	return
 
 // Show a message to all mobs and objects in sight of this one
@@ -258,7 +284,7 @@
 
 /mob/verb/memory()
 	set name = "Notes"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	if(mind)
 		mind.show_memory(src)
 	else
@@ -266,7 +292,7 @@
 
 /mob/verb/add_memory(msg as message)
 	set name = "Add Note"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	msg = sanitize(msg)
 
@@ -293,15 +319,15 @@
 	set src in usr
 	if(usr != src)
 		to_chat(usr, "No.")
-	var/msg = sanitize(input(usr,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text)) as message|null, extra = 0)	//VOREStation Edit: separating out OOC notes
+	var/msg = sanitize(tgui_input_text(usr,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text), multiline = TRUE, prevent_enter = TRUE), extra = 0)	//VOREStation Edit: separating out OOC notes
 
 	if(msg != null)
 		flavor_text = msg
 
 /mob/proc/warn_flavor_changed()
 	if(flavor_text && flavor_text != "") // don't spam people that don't use it!
-		to_chat(src, "<h2 class='alert'>OOC Warning:</h2>")
-		to_chat(src, "<span class='alert'>Your flavor text is likely out of date! <a href='byond://?src=\ref[src];flavor_change=1'>Change</a></span>")
+		to_chat(src, "<span class='filter_notice'><h2 class='alert'>OOC Warning:</h2></span>")
+		to_chat(src, "<span class='filter_notice'><span class='alert'>Your flavor text is likely out of date! <a href='byond://?src=\ref[src];flavor_change=1'>Change</a></span></span>")
 
 /mob/proc/print_flavor_text()
 	if (flavor_text && flavor_text != "")
@@ -324,9 +350,9 @@
 	// Special cases, can never respawn
 	if(ticker?.mode?.deny_respawn)
 		time = -1
-	else if(!config.abandon_allowed)
+	else if(!CONFIG_GET(flag/abandon_allowed)) // CHOMPEdit
 		time = -1
-	else if(!config.respawn)
+	else if(!CONFIG_GET(flag/respawn)) // CHOMPEdit
 		time = -1
 
 	// Special case for observing before game start
@@ -335,7 +361,7 @@
 
 	// Wasn't given a time, use the config time
 	else if(!time)
-		time = config.respawn_time
+		time = CONFIG_GET(number/respawn_time) // CHOMPEdit
 
 	var/keytouse = ckey
 	// Try harder to find a key to use
@@ -347,14 +373,14 @@
 	GLOB.respawn_timers[keytouse] = world.time + time
 
 /mob/observer/dead/set_respawn_timer()
-	if(config.antag_hud_restricted && has_enabled_antagHUD)
+	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD) // CHOMPEdit
 		..(-1)
 	else
 		return // Don't set it, no need
 
 /mob/verb/abandon_mob()
 	set name = "Return to Menu"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 
 	if(stat != DEAD || !ticker)
 		to_chat(usr, "<span class='notice'><B>You must be dead to use this!</B></span>")
@@ -366,7 +392,9 @@
 		if(choice == "No, wait")
 			return
 		else if(mind.assigned_role)
-			var/extra_check = tgui_alert(usr, "Do you want to Quit This Round before you return to lobby? This will properly remove you from manifest, as well as prevent resleeving.","Quit This Round",list("Quit Round","Cancel"))
+			var/extra_check = tgui_alert(usr, "Do you want to Quit This Round before you return to lobby?\
+			This will properly remove you from manifest, as well as prevent resleeving. BEWARE: Pressing 'NO' will STILL return you to lobby!",
+			"Quit This Round",list("Quit Round","No"))
 			if(extra_check == "Quit Round")
 				//Update any existing objectives involving this mob.
 				for(var/datum/objective/O in all_objectives)
@@ -406,7 +434,6 @@
 				to_chat(src,"<span class='notice'>Your job has been free'd up, and you can rejoin as another character or quit. Thanks for properly quitting round, it helps the server!</span>")
 
 	// Beyond this point, you're going to respawn
-	to_chat(usr, config.respawn_message)
 
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")
@@ -425,29 +452,38 @@
 		qdel(M)
 		return
 
+	M.has_respawned = TRUE //When we returned to main menu, send respawn message
 	M.key = key
+
 	if(M.mind)
 		M.mind.reset()
 	return
 
 /client/verb/changes()
 	set name = "Changelog"
-	set category = "OOC"
-	src << browse('html/changelog.html', "window=changes;size=675x650")
+	set category = "OOC.Resources" //CHOMPEdit
+	// CHOMPedit Start - Better Changelog
+	//src << browse('html/changelog.html', "window=changes;size=675x650")
+	//return
+
+	if(!GLOB.changelog_tgui)
+		GLOB.changelog_tgui = new /datum/changelog()
+	GLOB.changelog_tgui.tgui_interact(usr)
+	// CHOMPedit END
 	if(prefs.lastchangelog != changelog_hash)
 		prefs.lastchangelog = changelog_hash
 		SScharacter_setup.queue_preferences_save(prefs)
-		winset(src, "rpane.changelog", "background-color=none;font-style=;")
+		// winset(src, "rpane.changelog", "background-color=none;font-style=;") //ChompREMOVE
 
 /mob/verb/observe()
 	set name = "Observe"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	var/is_admin = 0
 
 	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
 		is_admin = 1
 	else if(stat != DEAD || istype(src, /mob/new_player))
-		to_chat(usr, "<font color='blue'>You must be observing to use this!</font>")
+		to_chat(usr, "<span class='filter_notice'>[span_blue("You must be observing to use this!")]</span>")
 		return
 
 	if(is_admin && stat == DEAD)
@@ -483,7 +519,7 @@
 
 /mob/verb/cancel_camera()
 	set name = "Cancel Camera View"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	unset_machine()
 	reset_view(null)
 
@@ -508,7 +544,7 @@
 /mob/verb/stop_pulling()
 
 	set name = "Stop Pulling"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(pulling)
 		if(ishuman(pulling))
@@ -528,6 +564,9 @@
 
 	if (AM.anchored)
 		to_chat(src, "<span class='warning'>It won't budge!</span>")
+		return
+
+	if(lying) // CHOMPAdd - No pulling while we crawl.
 		return
 
 	var/mob/M = AM
@@ -598,7 +637,27 @@
 		playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25) //Quieter than hugging/grabbing but we still want some audio feedback
 
 		if(H.pull_damage())
-			to_chat(src, "<font color='red'><B>Pulling \the [H] in their current condition would probably be a bad idea.</B></font>")
+			to_chat(src, "<span class='filter_notice'>[span_red("<B>Pulling \the [H] in their current condition would probably be a bad idea.</B>")]</span>")
+
+	//Attempted fix for people flying away through space when cuffed and dragged.
+	if(ismob(AM))
+		var/mob/pulled = AM
+		pulled.inertia_dir = 0
+
+// We have pulled something before, so we should be able to safely continue pulling it. This proc is only for portals!
+/mob/proc/continue_pulling(var/atom/movable/AM)
+
+	if ( !AM || src==AM || !isturf(src.loc) )	//if there's no person pulling OR the person is pulling themself OR the object being pulled is inside something: abort!
+		return
+
+	if (AM.anchored)
+		return
+
+	src.pulling = AM
+	AM.pulledby = src
+
+	if(pullin)
+		pullin.icon_state = "pull1"
 
 	//Attempted fix for people flying away through space when cuffed and dragged.
 	if(ismob(AM))
@@ -638,6 +697,7 @@
 	for(var/mob/M in viewers())
 		M.see(message)
 
+/* CHOMP Removal
 /mob/Stat()
 	..()
 	. = (is_client_active(10 MINUTES))
@@ -647,7 +707,8 @@
 			stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 			if(ticker && ticker.current_state != GAME_STATE_PREGAME)
 				stat("Station Time", stationtime2text())
-				stat("Station Date", stationdate2text())
+				var/date = "[stationdate2text()], [capitalize(GLOB.world_time_season)]" // CHOMPEdit - Managed Globals
+				stat("Station Date", date)
 				stat("Round Duration", roundduration2text())
 
 		if(client.holder)
@@ -659,6 +720,7 @@
 				stat("Keys Held", keys2text(client.move_keys_held | client.mod_keys_held))
 				stat("Next Move ADD", dirs2text(client.next_move_dir_add))
 				stat("Next Move SUB", dirs2text(client.next_move_dir_sub))
+				stat("Current size:", size_multiplier * 100)
 
 			if(statpanel("MC"))
 				stat("Location:", "([x], [y], [z]) [loc]")
@@ -671,6 +733,10 @@
 					GLOB.stat_entry()
 				else
 					stat("Globals:", "ERROR")
+				if(config)
+					stat("[config]:", config.stat_entry())
+				else
+					stat("Config:", "ERROR")
 				if(Master)
 					Master.stat_entry()
 				else
@@ -684,8 +750,9 @@
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
 
-			if(statpanel("Tickets"))
-				GLOB.ahelp_tickets.stat_entry()
+			// CHOMPedit - Ticket System
+			//if(statpanel("Tickets"))
+				//GLOB.ahelp_tickets.stat_entry()
 
 
 			if(length(GLOB.sdql2_queries))
@@ -693,6 +760,10 @@
 					stat("Access Global SDQL2 List", GLOB.sdql2_vv_statobj)
 					for(var/datum/SDQL2_query/Q as anything in GLOB.sdql2_queries)
 						Q.generate_stat()
+
+		if(has_mentor_powers(client) || client.holder) // CHOMPedit - Ticket System
+			if(statpanel("Tickets"))
+				GLOB.tickets.stat_entry() // CHOMPedit - Ticket System
 
 		if(listed_turf && client)
 			if(!TurfAdjacent(listed_turf))
@@ -710,7 +781,18 @@
 						if(A.plane > plane)
 							continue
 						stat(A)
+*/
 
+/// Adds this list to the output to the stat browser
+/mob/proc/get_status_tab_items()
+	. = list()
+
+/// Gets all relevant proc holders for the browser statpenl
+/mob/proc/get_proc_holders()
+	. = list()
+	//if(mind)
+		//. += get_spells_for_statpanel(mind.spell_list)
+	//. += get_spells_for_statpanel(mob_spell_list)
 
 // facing verbs
 /mob/proc/canface()
@@ -904,11 +986,11 @@
 	usr.setClickCooldown(20)
 
 	if(usr.stat == 1)
-		to_chat(usr, "You are unconcious and cannot do that!")
+		to_chat(usr, "<span class='filter_notice'>You are unconcious and cannot do that!</span>")
 		return
 
 	if(usr.restrained())
-		to_chat(usr, "You are restrained and cannot do that!")
+		to_chat(usr, "<span class='filter_notice'>You are restrained and cannot do that!</span>")
 		return
 
 	var/mob/S = src
@@ -922,9 +1004,9 @@
 	valid_objects = get_visible_implants(0)
 	if(!valid_objects.len)
 		if(self)
-			to_chat(src, "You have nothing stuck in your body that is large enough to remove.")
+			to_chat(src, "<span class='filter_notice'>You have nothing stuck in your body that is large enough to remove.</span>")
 		else
-			to_chat(U, "[src] has nothing stuck in their wounds that is large enough to remove.")
+			to_chat(U, "<span class='filter_notice'>[src] has nothing stuck in their wounds that is large enough to remove.</span>")
 		return
 
 	var/obj/item/weapon/selection = tgui_input_list(usr, "What do you want to yank out?", "Embedded objects", valid_objects)
@@ -945,7 +1027,7 @@
 		visible_message("<span class='warning'><b>[usr] rips [selection] out of [src]'s body.</b></span>","<span class='warning'><b>[usr] rips [selection] out of your body.</b></span>")
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
-		src.verbs -= /mob/proc/yank_out_object
+		remove_verb(src,/mob/proc/yank_out_object)  //CHOMPEdit
 		clear_alert("embeddedobject")
 
 	if(ishuman(src))
@@ -995,9 +1077,6 @@
 
 	return 0
 
-/mob/proc/updateicon()
-	return
-
 // Please always use this proc, never just set the var directly.
 /mob/proc/set_stat(var/new_stat)
 	. = (stat != new_stat)
@@ -1006,15 +1085,15 @@
 /mob/verb/face_direction()
 
 	set name = "Face Direction"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set src = usr
 
 	set_face_dir()
 
 	if(!facing_dir)
-		to_chat(usr, "You are now not facing anything.")
+		to_chat(usr, "<span class='filter_notice'>You are now not facing anything.</span>")
 	else
-		to_chat(usr, "You are now facing [dir2text(facing_dir)].")
+		to_chat(usr, "<span class='filter_notice'>You are now facing [dir2text(facing_dir)].</span>")
 
 /mob/proc/set_face_dir(var/newdir)
 	if(newdir == facing_dir)
@@ -1085,6 +1164,33 @@
 	if(pixel_x <= (default_pixel_x + 16))
 		pixel_x++
 		is_shifted = TRUE
+
+/mob/verb/planeup()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(plane >= MOB_PLANE + 3)	//Don't bother going too high!
+		return
+	if(layer == MOB_LAYER)	//Become higher
+		layer = ABOVE_MOB_LAYER
+	plane += 1		//Increase the plane
+	if(plane == MOB_PLANE)	//Return to normal
+		layer = MOB_LAYER
+	is_shifted = TRUE
+
+/mob/verb/planedown()
+	set hidden = TRUE
+	if(!canface())
+		return FALSE
+	if(plane <= MOB_PLANE - 3)	//Don't bother going too low!
+		return
+	if(layer == MOB_LAYER)	//Become lower
+		layer = BELOW_MOB_LAYER
+	plane -= 1		//Decrease the plane
+	if(plane == MOB_PLANE)	//Return to normal
+		layer = MOB_LAYER
+	is_shifted = TRUE
+
 // End VOREstation edit
 
 /mob/proc/adjustEarDamage()
@@ -1110,12 +1216,21 @@
 
 /mob/proc/throw_mode_off()
 	src.in_throw_mode = 0
-	if(src.throw_icon) //in case we don't have the HUD and we use the hotkey
+	if(client)
+		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help intent
+			src.visible_message("<span class='notice'>[src] relaxes from their ready stance.</span>","<span class='notice'>You relax from your ready stance.</span>")
+	if(src.throw_icon && !issilicon(src)) //in case we don't have the HUD and we use the hotkey. Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_off"
 
 /mob/proc/throw_mode_on()
 	src.in_throw_mode = 1
-	if(src.throw_icon)
+	if(client)
+		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help
+			if(src.get_active_hand())
+				src.visible_message("<span class='warning'>[src] winds up to throw [get_active_hand()]!</span>","<span class='notice'>You wind up to throw [get_active_hand()].</span>")
+			else
+				src.visible_message("<span class='warning'>[src] looks ready to catch anything thrown at them!</span>","<span class='notice'>You get ready to catch anything thrown at you.</span>")
+	if(src.throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_on"
 
 /mob/proc/isSynthetic()
@@ -1125,12 +1240,24 @@
 	return 0
 
 //Exploitable Info Update
+/obj
+	var/datum/weakref/exploit_for //if this obj is an exploit for somebody, this points to them
 
 /mob/proc/amend_exploitable(var/obj/item/I)
 	if(istype(I))
 		exploit_addons |= I
 		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
 		exploit_record += exploitmsg
+		I.exploit_for = WEAKREF(src)
+
+
+/obj/Destroy()
+	if(exploit_for)
+		var/mob/exploited = exploit_for.resolve()
+		exploited?.exploit_addons -= src
+		exploit_for = null
+	. = ..()
+
 
 /client/proc/check_has_body_select()
 	return mob && mob.hud_used && istype(mob.zone_sel, /obj/screen/zone_sel)

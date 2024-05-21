@@ -687,9 +687,10 @@
 
 		if(talkative)
 			new_item.talking_atom = new(new_item)
-			LAZYINITLIST(new_item.origin_tech)
-			new_item.origin_tech[TECH_ARCANE] += 1
-			new_item.origin_tech[TECH_PRECURSOR] += 1
+			if("origin_tech" in new_item.vars) //ChompEDIT - fix runtimes with items that don't have this var
+				LAZYINITLIST(new_item.origin_tech)
+				new_item.origin_tech[TECH_ARCANE] += 1
+				new_item.origin_tech[TECH_PRECURSOR] += 1
 
 		if(become_anomalous)
 			new_item.become_anomalous()
@@ -699,6 +700,7 @@
 			T.last_find = new_item
 
 		qdel(src)
+		return
 
 	else if(talkative)
 		src.talking_atom = new(src)
@@ -708,3 +710,13 @@
 
 	if(become_anomalous)
 		become_anomalous()
+
+
+/obj/item/weapon/archaeological_find/Destroy()
+	if(src.is_anomalous())
+		var/datum/component/artifact_master/arti_mstr = GetComponent(/datum/component/artifact_master)
+		arti_mstr.ClearFromParent()
+		if(!QDELETED(arti_mstr))
+			qdel(arti_mstr)
+
+	. = ..()

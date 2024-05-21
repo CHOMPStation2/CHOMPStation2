@@ -15,7 +15,7 @@
 	melee_damage_lower = 1
 	melee_damage_upper = 3
 
-	movement_cooldown = 1.5
+	movement_cooldown = -1
 
 	mob_size = MOB_MINISCULE
 	pass_flags = PASSTABLE
@@ -32,7 +32,7 @@
 	minbodytemp = 223		//Below -50 Degrees Celcius
 	maxbodytemp = 323	//Above 50 Degrees Celcius
 
-	has_langs = list("Mouse")
+	has_langs = list(LANGUAGE_MOUSE)
 
 	holder_type = /obj/item/weapon/holder/mouse
 	meat_amount = 1
@@ -40,24 +40,42 @@
 
 	say_list_type = /datum/say_list/mouse
 
-	var/body_color //brown, gray and white, leave blank for random
-	
+	hasthermals = FALSE
+
+	var/body_color //brown, gray, white and black, leave blank for random
+
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
+	species_sounds = "Mouse"
+
+	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
+	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
+
+//CHOMPEdit Start
+/mob/living/simple_mob/animal/passive/mouse/Initialize()
+	. = ..()
+	ghostjoin = 1
+	ghostjoin_icon()
+	active_ghost_pods |= src
+
+/mob/living/simple_mob/animal/passive/mouse/Destroy()
+	active_ghost_pods -= src
+	return ..()
+//CHOMPEdit End
 
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 	if(name == initial(name))
 		name = "[name] ([rand(1, 1000)])"
 	real_name = name
 
 	if(!body_color)
-		body_color = pick( list("brown","gray","white") )
+		body_color = pick( list("brown","gray","white","black") )
 	icon_state = "mouse_[body_color]"
 	item_state = "mouse_[body_color]"
 	icon_living = "mouse_[body_color]"
@@ -83,7 +101,7 @@
 	if( ishuman(AM) )
 		if(!stat)
 			var/mob/M = AM
-			M.visible_message("<font color='blue'>[bicon(src)] Squeek!</font>")
+			M.visible_message(span_blue("[icon2html(src,viewers(src))] Squeek!"))
 			playsound(src, 'sound/effects/mouse_squeak.ogg', 35, 1)
 	..()
 
@@ -177,7 +195,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	maxbodytemp = 700
-	
+
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 //The names Cheese... Agent Cheese
@@ -195,3 +213,21 @@
 	speak = list("Squeek!","SQUEEK!","Squeek?")
 	emote_hear = list("squeeks","squeaks","squiks")
 	emote_see = list("runs in a circle", "shakes", "scritches at something")
+
+// CHOMPAdd - Verb for mice colour changing
+/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour()
+	set name = "Set Mouse Colour"
+	set category = "Abilities.Mouse" //CHOMPEdit
+	set desc = "Set the colour of your mouse."
+	var/new_mouse_colour = tgui_input_list(usr, "Set Mouse Colour", "Pick a colour", list("brown","gray","white","black"))
+	if(!new_mouse_colour) return
+	icon_state = resting ? "mouse_[new_mouse_colour]_sleep" : "mouse_[new_mouse_colour]"
+	item_state = "mouse_[new_mouse_colour]"
+	icon_living = "mouse_[new_mouse_colour]"
+	icon_dead = "mouse_[new_mouse_colour]_dead"
+	icon_rest = "mouse_[new_mouse_colour]_sleep"
+	desc = "A small [new_mouse_colour] rodent, often seen hiding in maintenance areas and making a nuisance of itself."
+	holder_type = text2path("/obj/item/weapon/holder/mouse/[new_mouse_colour]")
+	to_chat(src, SPAN_NOTICE("You are now a [new_mouse_colour] mouse!"))
+	remove_verb(src,/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour) //CHOMPEdit TGPanel
+// CHOMPAdd End

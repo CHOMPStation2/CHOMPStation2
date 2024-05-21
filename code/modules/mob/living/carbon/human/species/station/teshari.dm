@@ -19,15 +19,18 @@
 
 	health_hud_intensity = 3
 
-	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
-	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
-	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
-	female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
+	// CHOMPEdit Start: Species Sounds
+	species_sounds = "Teshari"
+	// male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
+	// female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
+	// male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
+	// female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
 
 	//CHOMPStation Add. Y'know I should probably just put this upstream.
-	male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
-	female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
+	// male_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
+	// female_scream_sound = 'sound/effects/mob_effects/teshariscream.ogg'
 	//CHOMPStation Add End
+	center_offset = 0
 
 	blood_color = "#D514F7"
 	flesh_color = "#5F7BB0"
@@ -64,7 +67,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED	| SPECIES_NO_POSIBRAIN //CHOMPedit: This is overriden by teshari_vr.dm. Noting here for future reference.
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
@@ -80,7 +83,7 @@
 	breath_cold_level_2 = 100	//Default 180
 	breath_cold_level_3 = 60	//Default 100
 
-	heat_level_1 = 320	//Default 360
+	heat_level_1 = 330	//Default 360
 	heat_level_2 = 370	//Default 400
 	heat_level_3 = 600	//Default 1000
 

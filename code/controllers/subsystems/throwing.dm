@@ -8,10 +8,11 @@ SUBSYSTEM_DEF(throwing)
 
 	var/list/currentrun
 	var/list/processing = list()
-
-/datum/controller/subsystem/throwing/stat_entry()
-	..("P:[processing.len]")
-
+//CHOMPEdit Begin
+/datum/controller/subsystem/throwing/stat_entry(msg)
+	msg = "P:[length(processing)]"
+	return ..()
+//CHOMPEdit End
 /datum/controller/subsystem/throwing/fire(resumed = 0)
 	if (!resumed)
 		src.currentrun = processing.Copy()
@@ -144,6 +145,9 @@ SUBSYSTEM_DEF(throwing)
 			return
 
 		AM.Move(step, get_dir(AM, step))
+
+		if (!AM)		// Us moving somehow destroyed us?
+			return
 
 		if (!AM.throwing) // we hit something during our move
 			finalize(hit = TRUE)

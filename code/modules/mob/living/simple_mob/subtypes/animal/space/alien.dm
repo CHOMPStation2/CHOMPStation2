@@ -32,6 +32,8 @@
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/xenomeat
 	meat_amount = 5
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/alien/drone
 	name = "alien drone"
@@ -85,7 +87,7 @@
 	projectilesound = 'sound/weapons/pierce.ogg'
 
 
-	movement_cooldown = 10
+	movement_cooldown = 3
 
 /mob/living/simple_mob/animal/space/alien/queen/empress
 	name = "alien empress"

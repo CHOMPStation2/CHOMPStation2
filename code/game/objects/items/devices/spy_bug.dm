@@ -110,7 +110,7 @@
 		else
 			to_chat(user, "Error: The device is linked to another monitor.")
 
-	else if(W.is_wrench() && user.a_intent != I_HURT)
+	else if(W.has_tool_quality(TOOL_WRENCH) && user.a_intent != I_HURT)
 		if(isturf(loc))
 			anchored = !anchored
 
@@ -191,7 +191,7 @@
 
 	operating = 1
 	while(selected_camera && Adjacent(user))
-		selected_camera = tgui_input_list(usr, "Select camera to view.", "Camera Choice", cameras)
+		selected_camera = tgui_input_list(user, "Select camera to view.", "Camera Choice", cameras) //ChompEDIT usr --> src
 	selected_camera = null
 	operating = 0
 

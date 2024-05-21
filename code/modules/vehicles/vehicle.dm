@@ -42,15 +42,25 @@
 	var/load_offset_y = 0		//pixel_y offset for item overlay
 	var/mob_offset_y = 0		//pixel_y offset for mob overlay
 
+	var/datum/looping_sound/idle_carengine/soundloop //CHOMPedit: Looping engine audio.
+
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-/obj/vehicle/New()
-	..()
-	//spawn the cell you want in each vehicle
+//ChompADD START
+/obj/vehicle/Initialize()
+	.=..()
+	soundloop = new(list(src), FALSE)
+	return
+//ChompADD END
+
+///obj/vehicle/New()
+//	..()
+//	//spawn the cell you want in each vehicle // CHOMPedit: Commented out in favour of initialize.
 
 /obj/vehicle/Destroy()
 	QDEL_NULL(riding_datum)
+	QDEL_NULL(soundloop) //ChompADD
 	return ..()
 
 //BUCKLE HOOKS
@@ -92,26 +102,26 @@
 	if(istype(W, /obj/item/weapon/hand_labeler))
 		return
 	if(mechanical)
-		if(W.is_screwdriver())
+		if(W.has_tool_quality(TOOL_SCREWDRIVER))
 			if(!locked)
 				open = !open
 				update_icon()
 				to_chat(user, "<span class='notice'>Maintenance panel is now [open ? "opened" : "closed"].</span>")
 				playsound(src, W.usesound, 50, 1)
-		else if(W.is_crowbar() && cell && open)
+		else if(W.has_tool_quality(TOOL_CROWBAR) && cell && open)
 			remove_cell(user)
 
 		else if(istype(W, /obj/item/weapon/cell) && !cell && open)
 			insert_cell(W, user)
-		else if(istype(W, /obj/item/weapon/weldingtool))
-			var/obj/item/weapon/weldingtool/T = W
+		else if(W.has_tool_quality(TOOL_WELDER))
+			var/obj/item/weapon/weldingtool/T = W.get_welder()
 			if(T.welding)
 				if(health < maxhealth)
 					if(open)
 						health = min(maxhealth, health+10)
 						user.setClickCooldown(user.get_attack_speed(W))
 						playsound(src, T.usesound, 50, 1)
-						user.visible_message("<font color='red'>[user] repairs [src]!</font>","<font color='blue'> You repair [src]!</font>")
+						user.visible_message(span_red("[user] repairs [src]!"),span_blue("You repair [src]!"))
 					else
 						to_chat(user, "<span class='notice'>Unable to repair with the maintenance panel closed.</span>")
 				else
@@ -193,17 +203,27 @@
 /obj/vehicle/proc/turn_on()
 	if(!mechanical || stat)
 		return FALSE
+	if(!cell)
+		return FALSE
 	if(powered && cell.charge < charge_use)
 		return FALSE
+	if(on)
+		return FALSE
 	on = 1
+	playsound(src, 'modular_chomp/sound/effects/vehicle/ignition_car.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
+	soundloop.start()
 	set_light(initial(light_range))
 	update_icon()
 	return TRUE
 
 /obj/vehicle/proc/turn_off()
+	if(!on)
+		return FALSE
 	if(!mechanical)
 		return FALSE
 	on = 0
+	playsound(src, 'modular_chomp/sound/effects/vehicle/engine_off.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
+	soundloop.stop()
 	set_light(0)
 	update_icon()
 
@@ -219,7 +239,8 @@
 		return TRUE
 
 /obj/vehicle/proc/explode()
-	src.visible_message("<font color='red'><B>[src] blows apart!</B></font>", 1)
+	src.visible_message(span_red("<B>[src] blows apart!</B>"), 1)
+	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	var/turf/Tsec = get_turf(src)
 
 	//stuns people who are thrown off a train that has been blown up
@@ -368,8 +389,13 @@
 	load.forceMove(dest)
 	load.set_dir(get_dir(loc, dest))
 	load.anchored = FALSE		//we can only load non-anchored items, so it makes sense to set this to false
-	load.pixel_x = initial(load.pixel_x)
-	load.pixel_y = initial(load.pixel_y)
+	if(ismob(load))
+		var/mob/L = load
+		L.pixel_x = L.default_pixel_x
+		L.pixel_y = L.default_pixel_y
+	else
+		load.pixel_x = initial(load.pixel_x)
+		load.pixel_y = initial(load.pixel_y)
 	load.layer = initial(load.layer)
 
 	if(ismob(load))
@@ -390,7 +416,7 @@
 	if(!damage)
 		return
 	visible_message("<span class='danger'>[user] [attack_message] the [src]!</span>")
-	user.attack_log += text("\[[time_stamp()]\] <font color='red'>attacked [src.name]</font>")
+	user.attack_log += text("\[[time_stamp()]\] [span_red("attacked [src.name]")]")
 	user.do_attack_animation(src)
 	src.health -= damage
 	if(mechanical && prob(10))
@@ -406,3 +432,18 @@
 		new /obj/effect/decal/cleanable/blood/oil(src.loc)
 	spawn(1) healthcheck()
 	return 1
+
+//ChompADD START
+//----------------------------
+// Engine sounds datum
+//----------------------------
+
+/datum/looping_sound/idle_carengine
+	mid_sounds = 'modular_chomp/sound/effects/vehicle/engine_loop.ogg'
+	mid_length = 2.60 SECONDS
+	chance = 100
+	volume = 10
+	exclusive = TRUE
+	volume_chan = VOLUME_CHANNEL_AMBIENCE
+
+//ChompADD END

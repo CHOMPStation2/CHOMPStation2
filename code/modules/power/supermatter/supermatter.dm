@@ -1,4 +1,3 @@
-
 #define NITROGEN_RETARDATION_FACTOR 0.15	//Higher == N2 slows reaction more
 #define THERMAL_RELEASE_MODIFIER 10000		//Higher == more heat released during reaction
 #define PHORON_RELEASE_MODIFIER 1500		//Higher == less phoron released by reaction
@@ -49,7 +48,7 @@
 
 /obj/machinery/power/supermatter
 	name = "Supermatter"
-	desc = "A strangely translucent and iridescent crystal. <font color='red'>You get headaches just from looking at it.</font>"
+	desc = "A strangely translucent and iridescent crystal. <span class='red'>You get headaches just from looking at it.</span>"
 	icon = 'icons/obj/supermatter.dmi'
 	icon_state = "darkmatter"
 	plane = MOB_PLANE // So people can walk behind the top part
@@ -85,8 +84,8 @@
 	var/pull_radius = 14
 	// Time in ticks between delamination ('exploding') and exploding (as in the actual boom)
 	var/pull_time = 100
-	var/min_explosion_power = 8
-	var/max_explosion_power = 16
+	var/min_explosion_power = 12 // CHOMPEdit some more damage was 8
+	var/max_explosion_power = 24 // CHOMPEdit some more damage was 16
 
 	var/emergency_issued = 0
 
@@ -108,11 +107,16 @@
 	var/config_hallucination_power = 0.1
 
 	var/debug = 0
-	
-	/// Cooldown tracker for accent sounds, 
+
+	/// Cooldown tracker for accent sounds,
 	var/last_accent_sound = 0
 
 	var/datum/looping_sound/supermatter/soundloop
+
+	var/engwarn = 0 // CHOMPEdit: Looping Alarms
+	var/critwarn = 0 // CHOMPEdit: Looping Alarms
+	var/causalitywarn = 0 // CHOMPEdit: Looping Alarms
+	var/stationcrystal = FALSE // CHOMPEdit: Looping Alarms
 
 /obj/machinery/power/supermatter/New()
 	..()
@@ -120,6 +124,8 @@
 
 /obj/machinery/power/supermatter/Initialize()
 	soundloop = new(list(src), TRUE)
+	if(src.z in using_map.station_levels) // CHOMPEdit: Looping Alarms
+		stationcrystal = TRUE  // CHOMPEdit: Looping Alarms
 	return ..()
 
 /obj/machinery/power/supermatter/Destroy()
@@ -169,11 +175,16 @@
 
 	set waitfor = 0
 
-	message_admins("Supermatter exploded at ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+	message_admins("Supermatter exploded at ([x],[y],[z] - <A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 	log_game("SUPERMATTER([x],[y],[z]) Exploded. Power:[power], Oxygen:[oxygen], Damage:[damage], Integrity:[get_integrity()]")
 	anchored = TRUE
 	grav_pulling = 1
 	exploded = 1
+	// CHOMPEdit Start - Looping Alarms. We want to stop the alarm here.
+	if(stationcrystal) // Are we an on-station crystal?
+		addtimer(CALLBACK(src, PROC_REF(reset_alarms)), 10 SECONDS, TIMER_STOPPABLE)
+	// CHOMPEdit End
+
 	sleep(pull_time)
 	var/turf/TS = get_turf(src)		// The turf supermatter is on. SM being in a locker, exosuit, or other container shouldn't block it's effects that way.
 	if(!istype(TS))
@@ -249,19 +260,46 @@
 	var/alert_msg = " Integrity at [integrity]%"
 	var/message_sound = 'sound/ambience/matteralarm.ogg'
 
+	if(!(src.z in using_map.station_levels)) // CHOMPEdit: SM Global Warn Fix; Is our location the same as the station? If no, then we're not going to warn.
+		return // CHOMPEdit: SM Global Warn Fix; No need to announce if we're outside the station's Z, at a POI, etc.
+
 	if(final_countdown) // Chompers additon
 		return
 	if(damage > emergency_point)
 		alert_msg = emergency_alert + alert_msg
 		lastwarning = world.timeofday - WARNING_DELAY * 4
+		// CHOMPEdit Start
+		if(!critwarn)
+			if(src.z in using_map.station_levels)
+				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+					var/area/our_area = get_area(candidate_alarm)
+					if(istype(our_area, /area/engineering))
+						candidate_alarm.critalarm.start()
+						candidate_alarm.critwarn = TRUE // Tell the fire alarm we're warning engineering
+			critwarn = 1
+		// CHOMPEdit End
 	else if(damage >= damage_archived) // The damage is still going up
+		// CHOMPEdit: Looping Alarms - we're not making a proc for initiating the alarms in this case.
+		if(!engwarn)
+			if(src.z in using_map.station_levels)
+				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+					var/area/our_area = get_area(candidate_alarm)
+					if(istype(our_area, /area/engineering))
+						for(var/obj/machinery/light/L in our_area)
+							L.set_alert_engineering()
+						candidate_alarm.engalarm.start()
+						candidate_alarm.engwarn = TRUE // Tell the fire alarm we're warning engineering
+			engwarn = 1 // So we don't repeatedly try and start over the soundloop/etc
+		// CHOMPEdit End
 		safe_warned = 0
 		alert_msg = warning_alert + alert_msg
 		lastwarning = world.timeofday
+
 	else if(!safe_warned)
 		safe_warned = 1 // We are safe, warn only once
 		alert_msg = safe_alert
 		lastwarning = world.timeofday
+		reset_alarms() // CHOMPEdit: Looping Alarms
 	else
 		alert_msg = null
 	if(alert_msg)
@@ -305,7 +343,7 @@
 		shift_light(4,initial(light_color))
 	if(grav_pulling)
 		supermatter_pull(src)
-	
+
 	// Vary volume by power produced.
 	if(power)
 		// Volume will be 1 at no power, ~12.5 at ENERGY_NITROGEN, and 20+ at ENERGY_PHORON.
@@ -318,7 +356,7 @@
 		soundloop.mid_sounds = list('sound/machines/sm/loops/delamming.ogg' = 1)
 	else
 		soundloop.mid_sounds = list('sound/machines/sm/loops/calm.ogg' = 1)
-	
+
 	// Play Delam/Neutral sounds at rate determined by power and damage.
 	if(last_accent_sound < world.time && prob(20))
 		var/aggression = min(((damage / 800) * (power / 2500)), 1.0) * 100
@@ -390,7 +428,7 @@
 		env.merge(removed)
 
 	for(var/mob/living/carbon/human/l in view(src, min(7, round(sqrt(power/6))))) // If they can see it without mesons on.  Bad on them.
-		if(!istype(l.glasses, /obj/item/clothing/glasses/meson)) // VOREStation Edit - Only mesons can protect you!
+		if(!istype(l.glasses, /obj/item/clothing/glasses/meson) || l.is_incorporeal()) // VOREStation Edit - Only mesons can protect you! - CHOMPEdit - OR if they're not in the same plane of existence
 			l.hallucination = max(0, min(200, l.hallucination + power * config_hallucination_power * sqrt( 1 / max(1,get_dist(l, src)) ) ) )
 
 	SSradiation.radiate(src, max(power * 1.5, 50) ) //Better close those shutters!
@@ -406,6 +444,20 @@
 
 /obj/machinery/power/supermatter/proc/countdown()
 	set waitfor = FALSE
+
+	if(!final_countdown)
+		if(!causalitywarn)
+			if(src.z in using_map.station_levels)
+				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+					var/area/our_area = get_area(candidate_alarm)
+					if(istype(our_area, /area/engineering))
+						candidate_alarm.causality.start()
+						candidate_alarm.causalitywarn = TRUE // Tell the fire alarm it's warning, too
+			causalitywarn = 1
+
+	if(!(src.z in using_map.station_levels)) // CHOMPEdit: SM Global Warn Fix; Is our location the same as the station? If no, then we're not going to use a stabilization field.
+		explode() // CHOMPEdit: SM Global Warn Fix;  Just exploding, because we're not on the station's Z. No safety countdown.
+		return // CHOMPEdit: SM Global Warn Fix; Stops the code here.
 
 	if(final_countdown) // We're already doing it go away
 		return
@@ -553,7 +605,7 @@
 
 /obj/machinery/power/supermatter/shard //Small subtype, less efficient and more sensitive, but less boom.
 	name = "Supermatter Shard"
-	desc = "A strangely translucent and iridescent crystal that looks like it used to be part of a larger structure. <font color='red'>You get headaches just from looking at it.</font>"
+	desc = "A strangely translucent and iridescent crystal that looks like it used to be part of a larger structure. <span class='red'>You get headaches just from looking at it.</span>"
 	icon_state = "darkmatter_shard"
 	base_icon_state = "darkmatter_shard"
 
@@ -578,7 +630,7 @@
 	icon_state = "darkmatter_broken"
 
 /obj/item/broken_sm/New()
-	message_admins("Broken SM shard created at ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+	message_admins("Broken SM shard created at ([x],[y],[z] - <A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 	START_PROCESSING(SSobj, src)
 	return ..()
 
@@ -588,3 +640,50 @@
 /obj/item/broken_sm/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
+
+// CHOMP Edit Start
+/obj/machinery/power/supermatter/station
+	stationcrystal = TRUE
+
+/obj/machinery/power/supermatter/proc/reset_alarms()
+	reset_sm_alarms()
+	engwarn = 0
+	critwarn = 0
+	causalitywarn = 0
+
+/proc/reset_sm_alarms()
+	for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+		var/area/our_area = get_area(candidate_alarm)
+		if(istype(our_area, /area/engineering))
+			for(var/obj/machinery/light/L in our_area)
+				L.reset_alert()
+			candidate_alarm.engalarm.stop()
+			candidate_alarm.engwarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
+			candidate_alarm.causality.stop() // Somehow, in case they reset the alarms and fix the SM.
+			candidate_alarm.causalitywarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
+			candidate_alarm.critalarm.stop()
+			candidate_alarm.critwarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
+// CHOMPEdit End
+
+#undef NITROGEN_RETARDATION_FACTOR
+#undef THERMAL_RELEASE_MODIFIER
+#undef PHORON_RELEASE_MODIFIER
+#undef OXYGEN_RELEASE_MODIFIER
+#undef REACTION_POWER_MODIFIER
+
+#undef DETONATION_RADS
+#undef DETONATION_MOB_CONCUSSION
+
+#undef DETONATION_APC_OVERLOAD_PROB
+#undef DETONATION_SHUTDOWN_APC
+#undef DETONATION_SHUTDOWN_CRITAPC
+#undef DETONATION_SHUTDOWN_SMES
+#undef DETONATION_SHUTDOWN_RNG_FACTOR
+#undef DETONATION_SOLAR_BREAK_CHANCE
+
+#undef DETONATION_EXPLODE_MIN_POWER
+#undef DETONATION_EXPLODE_MAX_POWER
+
+#undef WARNING_DELAY
+
+#undef SUPERMATTER_ACCENT_SOUND_COOLDOWN

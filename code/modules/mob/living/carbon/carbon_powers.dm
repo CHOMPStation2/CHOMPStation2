@@ -1,7 +1,7 @@
 //Brain slug proc for voluntary removal of control.
 /mob/living/carbon/proc/release_control()
 
-	set category = "Abilities"
+	set category = "Abilities.Brainslug" //CHOMPEdit
 	set name = "Release Control"
 	set desc = "Release control of your host's body."
 
@@ -12,16 +12,16 @@
 
 		B.detatch()
 
-		verbs -= /mob/living/carbon/proc/release_control
-		verbs -= /mob/living/carbon/proc/punish_host
-		verbs -= /mob/living/carbon/proc/spawn_larvae
+		remove_verb(src,/mob/living/carbon/proc/release_control) //CHOMPEdit TGPanel
+		remove_verb(src,/mob/living/carbon/proc/punish_host) //CHOMPEdit TGPanel
+		remove_verb(src,/mob/living/carbon/proc/spawn_larvae) //CHOMPEdit TGPanel
 
 	else
 		to_chat(src, "<span class='danger'>ERROR NO BORER OR BRAINMOB DETECTED IN THIS MOB, THIS IS A BUG !</span>")
 
 //Brain slug proc for tormenting the host.
 /mob/living/carbon/proc/punish_host()
-	set category = "Abilities"
+	set category = "Abilities.Brainslug" //CHOMPEdit
 	set name = "Torment host"
 	set desc = "Punish your host with agony."
 
@@ -39,7 +39,7 @@
 			to_chat(B.host_brain, "<span class='danger'><FONT size=3>Horrific, burning agony lances through you, ripping a soundless scream from your trapped mind!</FONT></span>")
 
 /mob/living/carbon/proc/spawn_larvae()
-	set category = "Abilities"
+	set category = "Abilities.Brainslug" //CHOMPEdit
 	set name = "Reproduce"
 	set desc = "Spawn several young."
 

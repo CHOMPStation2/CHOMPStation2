@@ -167,22 +167,22 @@ var/list/debug_verbs = list (
 
 
 /client/proc/enable_debug_verbs()
-	set category = "Debug"
+	set category = "Debug.Misc" //CHOMPEdit
 	set name = "Debug verbs"
 
 	if(!check_rights(R_DEBUG)) return
 
-	verbs += debug_verbs
+	add_verb(src,debug_verbs) //CHOMPEdit TGPanel
 
 	feedback_add_details("admin_verb","mDV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/hide_debug_verbs()
-	set category = "Debug"
+	set category = "Debug.Misc" //CHOMPEdit
 	set name = "Hide Debug verbs"
 
 	if(!check_rights(R_DEBUG)) return
 
-	verbs -= debug_verbs
+	remove_verb(src,debug_verbs) //CHOMPEdit TGPanel
 
 	feedback_add_details("admin_verb","hDV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -199,7 +199,7 @@ var/list/debug_verbs = list (
 	var/icon/yellow = new('icons/misc/debug_group.dmi', "yellow")
 
 	for(var/turf/T in Z.contents)
-		images += image(yellow, T, "zasdebug", TURF_LAYER)
+		images += image(yellow, T, "zasdebug", PLANE_ADMIN2) // CHOMPEDIT
 		testZAScolors_turfs += T
 	for(var/connection_edge/zone/edge in Z.edges)
 		var/zone/connected = edge.get_connected_zone(Z)
@@ -209,7 +209,7 @@ var/list/debug_verbs = list (
 
 
 /client/proc/testZAScolors()
-	set category = "ZAS"
+	set category = "Mapping" //CHOMPEdit
 	set name = "Check ZAS connections"
 
 	if(!check_rights(R_DEBUG)) return
@@ -218,7 +218,7 @@ var/list/debug_verbs = list (
 	var/turf/simulated/location = get_turf(usr)
 
 	if(!istype(location, /turf/simulated)) // We're in space, let's not cause runtimes.
-		to_chat(usr, "<font color='red'>this debug tool cannot be used from space</font>")
+		to_chat(usr, span_red("this debug tool cannot be used from space"))
 		return
 
 	var/icon/red = new('icons/misc/debug_group.dmi', "red")		//created here so we don't have to make thousands of these.
@@ -227,21 +227,21 @@ var/list/debug_verbs = list (
 
 	if(!usedZAScolors)
 		to_chat(usr, "ZAS Test Colors")
-		to_chat(usr, "Green = Zone you are standing in")
-		to_chat(usr, "Blue = Connected zone to the zone you are standing in")
-		to_chat(usr, "Yellow = A zone that is connected but not one adjacent to your connected zone")
-		to_chat(usr, "Red = Not connected")
+		to_chat(usr, "[span_green("Green")] = Zone you are standing in")
+		to_chat(usr, "[span_blue("Blue")] = Connected zone to the zone you are standing in")
+		to_chat(usr, "[span_yellow("Yellow")] = A zone that is connected but not one adjacent to your connected zone")
+		to_chat(usr, "[span_red("Red")] = Not connected")
 		usedZAScolors = 1
 
 	testZAScolors_zones += location.zone
 	for(var/turf/T in location.zone.contents)
-		images += image(green, T,"zasdebug", TURF_LAYER)
+		images += image(green, T,"zasdebug", PLANE_ADMIN2) // CHOMPEDIT
 		testZAScolors_turfs += T
 	for(var/connection_edge/zone/edge in location.zone.edges)
 		var/zone/Z = edge.get_connected_zone(location.zone)
 		testZAScolors_zones += Z
 		for(var/turf/T in Z.contents)
-			images += image(blue, T,"zasdebug",TURF_LAYER)
+			images += image(blue, T,"zasdebug",PLANE_ADMIN2) // CHOMPEDIT
 			testZAScolors_turfs += T
 		for(var/connection_edge/zone/z_edge in Z.edges)
 			var/zone/connected = z_edge.get_connected_zone(Z)
@@ -254,11 +254,11 @@ var/list/debug_verbs = list (
 			continue
 		if(T in testZAScolors_turfs)
 			continue
-		images += image(red, T, "zasdebug", TURF_LAYER)
+		images += image(red, T, "zasdebug", PLANE_ADMIN2) // CHOMPEDIT
 		testZAScolors_turfs += T
 
 /client/proc/testZAScolors_remove()
-	set category = "ZAS"
+	set category = "Mapping" //CHOMPEdit
 	set name = "Remove ZAS connection colors"
 
 	testZAScolors_turfs.Cut()
@@ -270,7 +270,7 @@ var/list/debug_verbs = list (
 				images.Remove(i)
 
 /client/proc/rebootAirMaster()
-	set category = "ZAS"
+	set category = "Mapping" //CHOMPEdit
 	set name = "Reboot ZAS"
 
 	if(tgui_alert(usr, "This will destroy and remake all zone geometry on the whole map.","Reboot ZAS",list("Reboot ZAS","Nevermind")) == "Reboot ZAS")
@@ -279,13 +279,13 @@ var/list/debug_verbs = list (
 /client/proc/count_objects_on_z_level()
 	set category = "Mapping"
 	set name = "Count Objects On Level"
-	var/level = input(usr, "Which z-level?","Level?") as text
+	var/level = tgui_input_text(usr, "Which z-level?","Level?")
 	if(!level) return
 	var/num_level = text2num(level)
 	if(!num_level) return
 	if(!isnum(num_level)) return
 
-	var/type_text = input(usr, "Which type path?","Path?") as text
+	var/type_text = tgui_input_text(usr, "Which type path?","Path?")
 	if(!type_text) return
 	var/type_path = text2path(type_text)
 	if(!type_path) return
@@ -323,7 +323,7 @@ var/list/debug_verbs = list (
 	set category = "Mapping"
 	set name = "Count Objects All"
 
-	var/type_text = input(usr, "Which type path?","") as text
+	var/type_text = tgui_input_text(usr, "Which type path?","")
 	if(!type_text) return
 	var/type_path = text2path(type_text)
 	if(!type_path) return
@@ -362,7 +362,7 @@ var/global/prevent_airgroup_regroup = 0
 	set category = "Mapping"
 	set name = "Regroup All Airgroups Attempt"
 
-	to_chat(usr, "<font color='red'>Proc disabled.</font>") //Why not.. Delete the procs instead?
+	to_chat(usr, span_red("Proc disabled.")) //Why not.. Delete the procs instead?
 
 	/*prevent_airgroup_regroup = 0
 	for(var/datum/air_group/AG in air_master.air_groups)
@@ -373,7 +373,7 @@ var/global/prevent_airgroup_regroup = 0
 	set category = "Mapping"
 	set name = "Kill pipe processing"
 
-	to_chat(usr, "<font color='red'>Proc disabled.</font>")
+	to_chat(usr, span_red("Proc disabled."))
 
 	/*pipe_processing_killed = !pipe_processing_killed
 	if(pipe_processing_killed)
@@ -385,7 +385,7 @@ var/global/prevent_airgroup_regroup = 0
 	set category = "Mapping"
 	set name = "Kill air processing"
 
-	to_chat(usr, "<font color='red'>Proc disabled.</font>")
+	to_chat(usr, span_red("Proc disabled."))
 
 	/*air_processing_killed = !air_processing_killed
 	if(air_processing_killed)
@@ -399,7 +399,7 @@ var/global/say_disabled = 0
 	set category = "Mapping"
 	set name = "Disable all communication verbs"
 
-	to_chat(usr, "<font color='red'>Proc disabled.</font>")
+	to_chat(usr, span_red("Proc disabled."))
 
 	/*say_disabled = !say_disabled
 	if(say_disabled)
@@ -414,7 +414,7 @@ var/global/movement_disabled_exception //This is the client that calls the proc,
 	set category = "Mapping"
 	set name = "Disable all movement"
 
-	to_chat(usr, "<font color='red'>Proc disabled.</font>")
+	to_chat(usr, span_red("Proc disabled."))
 
 	/*movement_disabled = !movement_disabled
 	if(movement_disabled)

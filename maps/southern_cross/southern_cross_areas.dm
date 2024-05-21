@@ -98,6 +98,7 @@
 	name = "Mountains"
 	icon_state = "darkred"
 
+/* //Sky islands removal, lack of use
 /area/surface/outside/wilderness/skylands
 	name = "Floating Islands"
 	icon_state = "blue"
@@ -106,6 +107,8 @@
 	name = "Sky"
 	icon_state = "red"
 	luminosity = 1
+*/
+
 
 /area/surface/outside/path/wilderness
 
@@ -145,6 +148,10 @@
 	name = "Tunnels"
 	icon_state = "explored"
 
+/area/surface/cave/explored/trader
+	name = "Trader Hideout"
+	icon_state = "hideaway"
+
 /area/surface/cave/unexplored/normal
 	name = "Tunnels"
 	icon_state = "unexplored"
@@ -169,6 +176,51 @@
 
 /area/surface/outpost/shelter
 	name = "Wilderness Shelter"
+
+/area/surface/outpost/shelter/dorms
+	name = "Wilderness Shelter Dorms"
+	icon_state = "Sleep"
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	flags = RAD_SHIELDED
+	block_tracking = TRUE
+
+/area/surface/outpost/shelter/exterior
+	name = "Wilderness Shelter Exterior"
+	icon_state = "exit"
+	ambience = list('sound/ambience/ambimine.ogg', 'sound/ambience/song_game.ogg', 'sound/music/LRRMenu.ogg', 'sound/music/LRRTrack3.ogg', 'sound/ambience/cave/AmbCaveDebriA.ogg', 'sound/ambience/cave/AmbCaveDebriB.ogg', 'sound/ambience/cave/AmbCaveDebriC.ogg', 'sound/ambience/cave/AmbCaveDebriD.ogg')
+	outdoors = OUTDOORS_YES
+
+/area/surface/outpost/shelter/utilityroom
+	name = "Wilderness Shelter Utility Room"
+	icon_state = "substation"
+
+//Valley stuffs, chomps Edit by Jasper, for wilds but stranger.
+/area/surface/outpost/unfinished
+	name = "Unfinished"
+	icon_state = "red"
+
+/area/surface/outside/valley/inner
+	name = "Valley Inner"
+	icon_state = "yellow"
+
+/area/surface/outside/valley/walls
+	name = "Valley Walls"
+	icon_state = "yellow"
+	outdoors = OUTDOORS_NO
+
+/area/surface/outside/valley/edge
+	name = "Valley Edge"
+	icon_state = "yellow"
+
+/area/surface/outside/valley/river
+	name = "Valley River"
+	icon_state = "yellow"
+
+/area/surface/outside/valley/end
+	name = "Valley's End"
+	icon_state = "red"
 
 // Main mining outpost
 /area/surface/outpost/mining_main
@@ -290,6 +342,10 @@
 
 /area/surface/outpost/research/xenoarcheology
 	name = "\improper Xenoarcheology"
+
+/area/surface/outpost/research/xenoarcheology/exterior
+	name = "\improper xenoarcheology Exterior"
+	icon_state = "exit"
 
 /area/surface/outpost/research/xenoarcheology/medical
 	name = "Xenoarcheology First-Aid Station"
@@ -626,12 +682,19 @@ z
 	base_turf = /turf/simulated/open
 
 // Elevator areas.
+// CHOMPEdit - Maintenance Deck
+/area/turbolift/port_deck_maints
+	name = "lift (maints deck)"
+	lift_floor_label = "Deck 0"
+	lift_floor_name = "Maintenance Deck"
+	lift_announce_str = "Arriving at Maintenance Deck: Engineering. Power Back Up. Gravity Generator."
+	base_turf = /turf/simulated/floor
+
 /area/turbolift/port_deck_one
 	name = "lift (first deck)"
 	lift_floor_label = "Deck 1"
 	lift_floor_name = "Hangar Deck"
 	lift_announce_str = "Arriving at Hangar Deck: Main Hangars.Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
-	base_turf = /turf/simulated/floor
 
 /area/turbolift/port_deck_two
 	name = "lift (second deck)"
@@ -791,10 +854,20 @@ z
 /area/hallway/primary/firstdeck/auxdockaft
 	name = "\improper First Deck Aft Auxiliary Dock"
 	icon_state = "docking_hallway"
+	forbid_events = TRUE
 
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper First Deck Fore Auxiliary Dock"
 	icon_state = "docking_hallway"
+
+//CHOMPStation Edit. Two new areas for the vault.
+/area/hallway/primary/firstdeck/vaultcheckpoint
+    name = "\improper Vault Checkpoint"
+    icon_state = "nuke_storage"
+
+/area/hallway/primary/firstdeck/vaultlobby
+    name = "\improper Vault Lobby"
+    icon_state = "nuke_storage"
 
 //CHOMPStation Edit Start TFF 4/5/20 - One of these ain't the same thing, bruh. Escape Pod 1, Escape Pod 2, Research Access Hallway.
 /area/hallway/secondary/escape/firstdeck/ep_port
@@ -852,6 +925,11 @@ z
 	name = "\improper First-Aid Station"
 	icon_state = "medbay2"
 
+//CHOMPedit begin 7/9/23, adds chem distillery
+/area/medical/distillery
+	name ="\improper Chemistry Distillery"
+	icon_state = "chem"
+//CHOMPedit end
 /area/medical/first_aid_station/firstdeck/
 	name = "\improper First Deck First-Aid Station"
 
@@ -932,6 +1010,10 @@ z
 	name = "Atmospherics Substation"
 	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
+/area/maintenance/substation/maintenance
+	name = "Maintenance Substation"
+	ambience = AMBIENCE_SUBSTATION
+
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
 	icon_state = "maint_eva"
@@ -974,6 +1056,25 @@ z
 /area/crew_quarters/seconddeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
+
+//CHOMPstation Edit 8/8/22 - Added a Art Gallery and some missing areas Kassc wanted me to add
+/area/crew_quarters/seconddeck/artgallery
+	name = "\improper Art Gallery"
+	icon_state = "art"
+
+/area/crew_quarters/seconddeck/artsupplies
+	name = "\improper Art Supplies"
+	icon_state = "artsupply"
+
+/area/crew_quarters/seconddeck/gameroom
+	name = "\improper Game Room"
+	icon_state = "gaming"
+
+//CHOMPstation Edit 8/27/22 - VR Room for station baby~
+/area/crew_quarters/thirddeck/vrroom
+	name = "\improper Virtual Reality Room"
+	icon_state = "gaming"
+	flags = RAD_SHIELDED //Depending on the video game, you might still get figuative cancer
 
 //CHOMPStation Edit End
 
@@ -1267,8 +1368,17 @@ z
 	name = "Third Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
+//CHOMPedit Giving a maint bar its own APC
+/area/maintenance/thirddeck/dormsstarboard/maintbar
+	name = "Third Deck Aft Starboard Speakeasy"
+	icon_state = "asmaint"
+//CHOMPedit end
 /area/maintenance/thirddeck/dormsaft
 	name = "Third Deck Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+/area/maintenance/thirddeck/hiddenkitchen
+	name = "Third Deck Hidden Kitchen"
 	icon_state = "asmaint"
 
 /area/maintenance/thirddeck/dormsatmos
@@ -1851,43 +1961,213 @@ End Chompstation Edit*/
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced/airless
 
-//CHOMPedit: Exploration Carrier areas
-
-/area/expoutpost
-	name = "\improper Exploration Carrier"
-	icon_state = "purple"
-
-/area/expoutpost/shuttle
-	name = "\improper Exploration Carrier shuttle"
+//CHOMPedit: New Explo Carrier Areas.
 
 /area/expoutpost/stationshuttle
 	name = "\improper Station Shuttle to Exploration Carrier"
 
-/area/expoutpost/debriefing
-	name = "\improper Exploration Carrier Debriefing"
-	ambience = AMBIENCE_EXPOUTPOST
+// Bow
 
-/area/expoutpost/prep
-	name = "\improper Exploration Carrier Prep Room"
+/area/expoutpost/portbowairlock
+	name = "\improper Port Bow Airlock"
 
-/area/expoutpost/prep/recovery
-	name = "\improper Exploration Carrier Recovery"
-	icon_state = "exam_room"
+/area/expoutpost/starboardbowairlock
+	name = "\improper Starboard Bow Airlock"
 
-/area/expoutpost/pathfinder
-	name = "\improper Exploration Carrier Pathfinder Office"
+/area/expoutpost/eva
+	name = "\improper EVA"
 
-/area/expoutpost/hallwayaftport
-	name = "\improper Exploration Carrier Aft Port Hallway"
+/area/expoutpost/botany
+	name = "\improper Botany Lab"
 
-/area/expoutpost/bathroom
-	name = "\improper Exploration Carrier Bathroom"
+/area/expoutpost/washroom
+	name = "\improper Washroom"
 
-/area/expoutpost/aftdock
-	name = "\improper Exploration Carrier Backup Shuttle Docks"
+/area/expoutpost/civaccesshallway
+	name = "\improper Civilian Access Hallway"
 
-/area/expoutpost/hangerhall
-	name = "\improper Exploration Carrier Hangar Hallway"
+/area/expoutpost/janitorial
+	name = "\improper Janitorial Closet"
+
+/area/expoutpost/kitchen
+	name = "\improper Kitchen"
+
+/area/expoutpost/restrooms
+	name = "\improper Restrooms"
+
+/area/expoutpost/portbowhallway
+	name = "\improper Port Bow Hallway"
+
+/area/expoutpost/bar
+	name = "\improper Bar"
+	flags = RAD_SHIELDED
+
+/area/expoutpost/starbowhallway
+	name = "\improper Starboard Bow Hallway"
+
+/area/expoutpost/suite1
+	name = "\improper Suite One"
+	flags = RAD_SHIELDED
+
+/area/expoutpost/suite2
+	name = "\improper Suite Two"
+	flags = RAD_SHIELDED
+
+/area/expoutpost/pathfinderroom
+	name = "\improper Pathfinder's Ready-Room"
+	flags = RAD_SHIELDED
+
+/area/expoutpost/commanderroom
+	name = "\improper Security Commander's Ready-Room"
+	flags = RAD_SHIELDED
+
+/area/expoutpost/portqpadjunction
+	name = "\improper Port Q-Pad Junction"
+
+/area/expoutpost/starqpadjunction
+	name = "\improper Starboard Q-Pad Junction"
+
+/area/expoutpost/slingcarrierdock
+	name = "\improper Sling Carrier Dock"
+
+/area/expoutpost/stationqpad
+	name ="\improper Station Q-Pad Junction"
+
+/area/expoutpost/secbowcheckpoint
+	name = "\improper Security Bow Checkpoint"
+
+// Midship
+
+/area/expoutpost/staginghangar
+	name = "\improper Staging Hangar"
+
+// Stern
+
+/area/expoutpost/uppersternhallway
+	name = "\improper Upper Stern Hallway"
+
+/area/expoutpost/medbaylobby
+	name = "\improper Medbay Lobby"
+
+/area/expoutpost/medicalbay
+	name = "\improper Medical Bay"
+
+/area/expoutpost/surgical1
+	name = "\improper Surgical Theatre One"
+
+/area/expoutpost/midsternhallway
+	name = "\improper Middle Stern Hallway"
+
+/area/expoutpost/exploarmory
+	name = "\improper Exploration Armory"
+
+/area/expoutpost/explobriefroom
+	name = "\improper Exploration Briefing Room"
+
+/area/expoutpost/explodorm1
+	name = "\improper Exploration Dorm One"
+	flags = RAD_SHIELDED
+
+/area/expoutpost/explodorm2
+	name = "\improper Exploration Dorm Two"
+	flags = RAD_SHIELDED
+
+/area/expoutpost/breakroom
+	name = "\improper Public Breakroom"
+
+/area/expoutpost/cic
+	name = "\improper Combat Information Center"
+
+/area/expoutpost/secoffice
+	name = "\improper Security Office"
+
+/area/expoutpost/gatewayeva
+	name = "\improper Gateway EVA"
+
+/area/expoutpost/gateway
+	name = "\improper Gateway"
+
+/area/expoutpost/secarmory
+	name = "\improper Security Armory"
+
+/area/expoutpost/miningfoyer
+	name = "\improper Mining Foyer"
+
+/area/expoutpost/reactoraccess
+	name = "\improper Reactor Access"
+
+/area/expoutpost/reactorcr
+	name = "\improper Reactor Control Room"
+
+/area/expoutpost/reactorroom
+	name = "\improper Fusion Reactor"
+
+/area/expoutpost/rndlobby
+	name = "\improper R&D Lobby"
+
+/area/expoutpost/rnd
+	name = "\improper Research and Development"
+
+/area/expoutpost/engoffice
+	name = "\improper Engineering Office"
+
+/area/expoutpost/engstorage
+	name = "\improper Engineering Equipment Room"
+
+/area/expoutpost/atmospherics
+	name = "\improper Atmospherics"
+
+/area/expoutpost/secureaccess
+	name = "\improper Secure Access Corridor"
+
+/area/expoutpost/techstorage
+	name = "\improper Technical Storage"
+
+/area/expoutpost/aicore
+	name = "\improper Auxiliary AI Core"
+
+/area/expoutpost/telecomms
+	name = "\improper Ship Telecomms"
+
+/area/expoutpost/disposals
+	name = "\improper Disposals Sorting"
+
+/area/expoutpost/lowersternhallway
+	name = "\improper Lower Stern Hallway"
+
+/area/expoutpost/portfuelstorage
+	name = "\improper Port Fuel Storage"
+
+/area/expoutpost/starfuelstorage
+	name = "\improper Starboard Fuel Storage"
+
+// Maints
+
+/area/expoutpost/portuppermaint
+	name = "\improper Port Upper Maintenance"
+
+/area/expoutpost/staruppermaint
+	name = "\improper Starboard Upper Maintenance"
+
+/area/expoutpost/portexplomaint
+	name = "\improper Port Exploration Maintenance"
+
+/area/expoutpost/starsciencemaint
+	name = "\improper Starboard Science Maintenance"
+
+/area/expoutpost/portlowermaint
+	name = "\improper Port Lower Maintenance"
+
+/area/expoutpost/starlowermaint
+	name = "\improper Starboard Lower Maintenance"
+
+/area/expoutpost/portsternairlock
+	name = "\improper Port Stern Airlock"
+
+/area/expoutpost/starsternairlock
+	name = "\improper Starboard Stern Airlock"
+
+// Hangars
 
 /area/expoutpost/hangarone
 	name = "\improper Exploration Carrier Hangar One"
@@ -1913,68 +2193,6 @@ End Chompstation Edit*/
 	name = "\improper Exploration Carrier Hangar Six"
 	icon_state = "hangar"
 
-/area/expoutpost/hangaroneprep
-	name = "\improper Exploration Carrier Hangar One Prep"
-
-/area/expoutpost/nukestorage //Yes this is a joke
-	name = "\improper Exploration Carrier Secure Storage"
-	icon_state = "nuke_storage"
-
-/area/expoutpost/teleporter
-	name = "\improper Exploration Carrier Teleporter"
-	icon_state = "teleporter"
-
-/area/expoutpost/gateway
-	name = "\improper Exploration Carrier Gateway"
-	icon_state = "teleporter"
-
-/area/expoutpost/displayroom
-	name = "\improper Exploration Carrier Display Room"
-
-/area/solar/expstarboardsolar
-	name = "\improper Exploration Carrier Starbound Solars"
-	icon_state = "panelsS"
-
-/area/solar/expportsolar
-	name = "\improper Exploration Carrier Port Solars"
-	icon_state = "panelsP"
-
-/area/maintenance/solars/expstarboardsolar
-	name = "\improper Exploration Carrier Starbound Solar Control"
-	icon_state = "SolarcontrolS"
-
-/area/maintenance/solars/expportsolar
-	name = "\improper Exploration Carrier Port Solar Control"
-	icon_state = "SolarcontrolP"
-
-/area/maintenance/expoutpost/atmospherics
-	name = "\improper Exploration Carrier Atmospherics"
-	icon_state = "smaint"
-
-/area/maintenance/expoutpost/portmaint
-	name = "\improper Exploration Carrier Port Maintenance"
-	icon_state = "pmaint"
-
-/area/maintenance/expoutpost/telecomms
-	name = "\improper Exploration Carrier Telecomms"
-	icon_state = "pmaint"
-
-/area/maintenance/expoutpost/innerstarboardmaint
-	name = "\improper Exploration Starboard Carrier Maintenance"
-	icon_state = "smaint"
-
-/area/maintenance/expoutpost/outerstarboardmaint
-	name = "\improper Exploration Starboard Carrier Maintenance"
-	icon_state = "smaint"
-
-/area/maintenance/expoutpost/outerportmaint
-	name = "\improper Exploration Carrier Port Maintenance"
-	icon_state = "pmaint"
-
-/area/maintenance/expoutpost/innerportmaint
-	name = "\improper Exploration Carrier Port Maintenance"
-	icon_state = "pmaint"
-
 //CHOMPedit: Exploration backup shuttle. For now this is a placeholder for future expedition content.
 
 /area/shuttle/shuttlebackup
@@ -1999,6 +2217,10 @@ End Chompstation Edit*/
 	name = "\improper Wreck"
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
+
+/area/shuttle/overmap/sif
+	name = "wilderness site"
+	icon_state = "shuttlered"
 
 //Temp Removal TFF 15/2/20
 /*
@@ -2052,3 +2274,126 @@ End Chompstation Edit*/
 	name = "Belter M2.0 Transit"
 	icon_state = "shuttle2"
 */
+// CHOMPAdd Start - Maintenance Deck Areas
+/area/maintenance/abcargo
+	name = "Abandoned Cargo"
+	icon_state = "maint_cargo"
+
+/area/maintenance/abmedical
+	name = "Abandoned Medical"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abfirstaid
+	name = "Abandoned First Aid Station"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abchemistry
+	name = "Abandoned Chemistry"
+	icon_state = "maint_medbay"
+
+/area/maintenance/abscience
+	name = "Abandoned Science"
+	icon_state = "asmaint"
+
+/area/maintenance/absgenetics
+	name = "Abandoned Genetics"
+	icon_state = "asmaint"
+
+/area/maintenance/thrift
+	name = "Abandoned Thrift Store"
+	icon_state = "mid_civilian_hallway"
+
+/area/maintenance/abtheatre
+	name = "Abandoned Theatre"
+	icon_state = "Theatre"
+	sound_env = LARGE_SOFTFLOOR
+
+/area/maintenance/ragecage
+	name = "Rage Cage"
+	icon_state = "nuke_storage"
+
+/area/engineering/lowlobby
+	name = "Engineering Deck 0 Lobby"
+	icon_state = "maint_pumpstation"
+
+/area/engineering/backuppowerlobby
+	name = "Engineering Backup Power Lobby"
+	icon_state = "engineering"
+
+/area/engineering/backuppower
+	name = "Engineering Backup Power"
+	icon_state = "engineering"
+
+/area/maintenance/substation/gravgen
+	name = "Gravity Generator Substation"
+	icon_state = "engineering"
+
+/area/engineering/gravgen
+	name = "Gravity Generator"
+	icon_state = "engineering"
+
+/area/maintenance/engineering/gravgen
+	name = "Gravity Generator Maintenance"
+
+/area/maintenance/fieldhallway
+	name = "Maintenance Deck Field Hallway"
+/area/maintenance/fieldthrift
+	name = "Maintenance Deck Thrift Store Hallway"
+
+/area/maintenance/abhydroponicssupp
+	name = "Abandoned Botany Supplies"
+
+/area/maintenance/abhydroponics
+	name = "Abandoned Botany"
+
+/area/maintenance/smoleroom
+	name = "Smole Room"
+
+/area/maintenance/janitoral
+	name = "Maintenance Deck Janitoral"
+
+/area/maintenance/lookout
+	name = "Maintenance Deck Lookout"
+
+/area/maintenance/bar/dorms
+	name = "Maintenance Bar Dorms"
+	icon_state = "Sleep"
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	flags = RAD_SHIELDED
+	block_tracking = TRUE
+
+/area/maintenance/bar/dorms/dorm_1
+	name = "Maintenance Deck Bar Dorms 1"
+
+/area/maintenance/bar/dorms/dorm_2
+	name = "Maintenance Deck Bar Dorms 2"
+
+/area/maintenance/zerocent
+	name = "Maintenance Deck Central"
+	icon_state = "maintcentral"
+
+/area/maintenance/zeroport
+	name = "Maintenance Deck Port"
+	icon_state = "pmaint"
+
+/area/maintenance/zeroaft
+	name = "Maintenance Deck Aft"
+	icon_state = "amaint"
+
+/area/maintenance/zerostarboard
+	name = "Maintenance Deck Starboard"
+	icon_state = "smaint"
+
+/area/maintenance/zerofore
+	name = "Maintenance Deck Fore"
+	icon_state = "fmaint"
+
+/area/maintenance/gravlobby
+	name = "Gravity Generator Lobby"
+	icon_state = "engineering"
+
+/area/maintenance/zerobar
+	name = "Abandoned Bar"
+	icon_state = "maint_bar"

@@ -20,7 +20,7 @@
 	desc = "An aging combat exosuit utilized by many corporations. It was originally developed to fight in the First Contact War."
 	catalogue_data = list(/datum/category_item/catalogue/technology/durand)
 	icon_state = "durand"
-	movement_cooldown = 10
+	movement_cooldown = 3
 	wreckage = /obj/structure/loot_pile/mecha/durand
 
 	maxHealth = 400
@@ -60,7 +60,7 @@
 /mob/living/simple_mob/mechanical/mecha/combat/durand/verb/toggle_defense_mode()
 	set name = "Toggle Defense Mode"
 	set desc = "Toggles a special mode which makes you immobile and much more resilient."
-	set category = "Abilities"
+	set category = "Abilities.Durand" //CHOMPEdit
 
 	set_defense_mode(!defense_mode)
 

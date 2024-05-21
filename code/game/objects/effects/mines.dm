@@ -4,7 +4,7 @@
 	density = FALSE
 	anchored = TRUE
 	icon = 'icons/obj/weapons.dmi'
-	icon_state = "uglymine"
+	icon_state = "landmine"
 	var/triggered = 0
 	var/smoke_strength = 3
 	var/obj/item/weapon/mine/mineitemtype = /obj/item/weapon/mine
@@ -16,7 +16,7 @@
 	var/obj/item/trap = null
 
 /obj/effect/mine/Initialize()
-	icon_state = "uglyminearmed"
+	icon_state = "landmine_armed"
 	wires = new(src)
 	. = ..()
 	if(ispath(trap))
@@ -96,11 +96,11 @@
 		explode(M)
 
 	if(istype(M, /mob/living/))
-		if(!M.hovering)
+		if(!M.hovering) //CHOMPedit: let's not make wings ignore mines because we use those here.
 			explode(M)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
-	if(W.is_screwdriver())
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		panel_open = !panel_open
 		user.visible_message("<span class='warning'>[user] very carefully screws the mine's panel [panel_open ? "open" : "closed"].</span>",
 		"<span class='notice'>You very carefully screw the mine's panel [panel_open ? "open" : "closed"].</span>")
@@ -109,7 +109,7 @@
 		// Panel open, stay uncloaked, or uncloak if already cloaked. If you don't cloak on place, ignore it and just be normal alpha.
 		alpha = camo_net ? (panel_open ? 255 : 50) : 255
 
-	else if((W.is_wirecutter() || istype(W, /obj/item/device/multitool)) && panel_open)
+	else if((W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/device/multitool)) && panel_open)
 		interact(user)
 	else
 		..()
@@ -234,6 +234,7 @@
 	mineitemtype = /obj/item/weapon/mine/emp
 
 /obj/effect/mine/emp/explode(var/mob/living/M)
+	triggered = 1 //ChompEDIT recursing mines
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(3, 1, src)
 	s.start()
@@ -287,7 +288,7 @@
 	name = "mine"
 	desc = "A small explosive mine with 'HE' and a grenade symbol on the side."
 	icon = 'icons/obj/weapons.dmi'
-	icon_state = "uglymine"
+	icon_state = "landmine"
 	var/countdown = 10
 	var/minetype = /obj/effect/mine		//This MUST be an /obj/effect/mine type, or it'll runtime.
 
@@ -308,7 +309,7 @@
 	return
 
 /obj/item/weapon/mine/attackby(obj/item/W as obj, mob/living/user as mob)
-	if(W.is_screwdriver() && trap)
+	if(W.has_tool_quality(TOOL_SCREWDRIVER) && trap)
 		to_chat(user, "<span class='notice'>You begin removing \the [trap].</span>")
 		if(do_after(user, 10 SECONDS))
 			to_chat(user, "<span class='notice'>You finish disconnecting the mine's trigger.</span>")
@@ -398,6 +399,6 @@
 
 // This tells AI mobs to not be dumb and step on mines willingly.
 /obj/item/weapon/mine/is_safe_to_step(mob/living/L)
-	if(!L.hovering)
+	if(!L.hovering) //CHOMPedit: Let's not trivialize mines.
 		return FALSE
 	return ..()

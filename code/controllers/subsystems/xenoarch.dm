@@ -1,8 +1,8 @@
 #define XENOARCH_SPAWN_CHANCE 0.5
 #define DIGSITESIZE_LOWER 4
 #define DIGSITESIZE_UPPER 12
-#define ARTIFACTSPAWNNUM_LOWER 6
-#define ARTIFACTSPAWNNUM_UPPER 12
+#define ARTIFACTSPAWNNUM_LOWER 12
+#define ARTIFACTSPAWNNUM_UPPER 24
 
 //
 // Xenoarch subsystem handles initialization of Xenoarcheaology artifacts and digsites.
@@ -14,9 +14,9 @@ SUBSYSTEM_DEF(xenoarch)
 	var/list/artifact_spawning_turfs = list()
 	var/list/digsite_spawning_turfs = list()
 
-/datum/controller/subsystem/xenoarch/Initialize(timeofday)
+/datum/controller/subsystem/xenoarch/Initialize() // CHOMPEdit
 	SetupXenoarch()
-	..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/xenoarch/Recover()
 	if (istype(SSxenoarch.artifact_spawning_turfs))
@@ -27,17 +27,17 @@ SUBSYSTEM_DEF(xenoarch)
 /datum/controller/subsystem/xenoarch/stat_entry(msg)
 	if (!Debug2)
 		return // Only show up in stat panel if debugging is enabled.
-	. = ..()
+	return ..() //CHOMPEdit
 
 /datum/controller/subsystem/xenoarch/proc/SetupXenoarch()
 	for(var/turf/simulated/mineral/M in world)
-		if(!M.density || (M.z in using_map.xenoarch_exempt_levels))
+		if(!M.density)
 			continue
 
-		if(isnull(M.geologic_data))
-			M.geologic_data = new /datum/geosample(M)
+		/*if(isnull(M.geologic_data)) CHOMP Removal. Initialized when needed now.
+			M.geologic_data = new /datum/geosample(M)*/
 
-		if(!prob(XENOARCH_SPAWN_CHANCE))
+		if((M.z in using_map.xenoarch_exempt_levels) || !prob(XENOARCH_SPAWN_CHANCE))
 			continue
 
 		var/farEnough = 1

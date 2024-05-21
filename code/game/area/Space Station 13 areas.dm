@@ -806,11 +806,13 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Shuttle Dock Hallway - Dock One"
 	icon_state = "entry_D1"
 	base_turf = /turf/space
+	forbid_events = TRUE
 
 /area/hallway/secondary/entry/D2
 	name = "\improper Shuttle Dock Hallway - Dock Two"
 	icon_state = "entry_D2"
 	base_turf = /turf/space
+	forbid_events = TRUE
 
 /area/hallway/secondary/entry/D2/arrivals
 	name = "\improper Shuttle Dock Hallway - Dock Two"
@@ -822,6 +824,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Shuttle Dock Hallway - Dock Three"
 	icon_state = "entry_D3"
 	base_turf = /turf/space
+	forbid_events = TRUE
 
 /area/hallway/secondary/entry/D4
 	name = "\improper Shuttle Dock Hallway - Dock Four"
@@ -963,6 +966,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "Sleep"
 	ambience = AMBIENCE_GENERIC
 	forbid_events = TRUE
+	forbid_singulo = TRUE
 
 /area/crew_quarters/toilet
 	name = "\improper Dormitory Toilets"
@@ -1757,6 +1761,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/riot_control
 	name = "\improper Security - Riot Control"
 	icon_state = "riot_control"
+	flags = RAD_SHIELDED //CHOMP Add
 
 /area/security/detectives_office
 	name = "\improper Security - Forensic Office"
@@ -1819,7 +1824,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Vault"
 	icon_state = "nuke_storage"
 	ambience = AMBIENCE_HIGHSEC
-	limit_shadekin_phasing = TRUE // CHOMPEdit
 
 /area/security/checkpoint
 	name = "\improper Security Checkpoint"
@@ -2663,5 +2667,15 @@ var/list/the_station_areas = list (
 
 /area/shuttle/baby_mammoth
 	name = "\improper Baby_mammoth"
+	icon_state = "shuttlered"
+	requires_power = 1
+
+/area/shuttle/spacebus
+	name = "\improper Space Bus"
+	icon_state = "shuttlered"
+	requires_power = 1
+
+/area/shuttle/junker
+	name = "\improper Junker"
 	icon_state = "shuttlered"
 	requires_power = 1

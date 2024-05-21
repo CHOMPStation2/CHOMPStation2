@@ -204,8 +204,7 @@
 				OutputBeaker = null
 
 		if("adjust temp")
-			target_temp = input(usr, "Choose a target temperature.", "Temperature.", T20C) as num
-			target_temp = CLAMP(target_temp, min_temp, max_temp)
+			target_temp = tgui_input_number(usr, "Choose a target temperature.", "Temperature.", T20C, max_temp, min_temp, round_value = FALSE)
 
 	update_icon()
 
@@ -368,3 +367,6 @@
 	desc = "A gas-operated variant of a chemical distillery. Able to reach much higher, and lower, temperatures through the use of treated gas."
 
 	use_atmos = TRUE
+
+	max_temp = T0C + 300 //ChompEDIT
+	min_temp = T0C - 270 //ChompEDIT

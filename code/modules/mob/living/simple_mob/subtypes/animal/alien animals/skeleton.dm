@@ -75,6 +75,7 @@
 	vore_default_contamination_flavor = "Wet"
 	vore_default_contamination_color = "grey"
 	vore_default_item_mode = IM_DIGEST
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/alienanimals/skeleton/alt
 	icon_state = "altskeleton"
@@ -87,7 +88,9 @@
 	emote_hear = list("rattles","makes a spooky sound","cackles madly","plinks","clacks")
 
 /mob/living/simple_mob/vore/alienanimals/skeleton/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "You're not sure quite how, but you've found your way inside of the skeleton's stomach! It's cramped and cold and sounds heavily of xylophones!"

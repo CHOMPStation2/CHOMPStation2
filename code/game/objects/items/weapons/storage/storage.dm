@@ -14,6 +14,7 @@
 		)
 	w_class = ITEMSIZE_NORMAL
 	show_messages = 1
+	matter = list(MAT_FIBERS = 50) //CHOMPAdd
 
 	/// List of objects which this item can store (if set, it can't store anything else)
 	var/list/can_hold
@@ -237,7 +238,11 @@
 
 /obj/item/weapon/storage/proc/open(mob/user as mob)
 	if (use_sound)
-		playsound(src, src.use_sound, 50, 0, -5)
+		//CHOMPStation Edit
+		var/obj/belly/B = user.loc
+		if(!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS))
+			playsound(src, src.use_sound, 50, 0, -5)
+		//CHOMPStation Edit end
 
 	orient2hud(user)
 	if(user.s_active)
@@ -476,6 +481,11 @@
 		if(!stop_messages)
 			to_chat(usr, "<span class='notice'>[src] cannot hold [W] as it's a storage item of the same size.</span>")
 		return 0 //To prevent the stacking of same sized storage items.
+	//CHOMPEdit - Getting around to proper object flags
+	if(HAS_TRAIT(W, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
+		if(!stop_messages)
+			to_chat(usr, "<span class='warning'>\the [W] is stuck to your hand, you can't put it in \the [src]!</span>")
+		return FALSE
 
 	return 1
 
@@ -717,13 +727,13 @@
 
 	while (cur_atom && !(cur_atom in container.contents))
 		if (isarea(cur_atom))
-			return -1
+			return INFINITY // CHOMPedit
 		if (istype(cur_atom.loc, /obj/item/weapon/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
-		return -1	//inside something with a null loc.
+		return INFINITY	// CHOMPedit - inside something with a null loc.
 
 	return depth
 
@@ -735,13 +745,13 @@
 
 	while (cur_atom && !isturf(cur_atom))
 		if (isarea(cur_atom))
-			return -1
+			return INFINITY // CHOMPedit
 		if (istype(cur_atom.loc, /obj/item/weapon/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
-		return -1	//inside something with a null loc.
+		return INFINITY	//CHOMPedit - inside something with a null loc.
 
 	return depth
 
@@ -850,15 +860,16 @@
 	plane = PLANE_PLAYER_HUD_ITEMS
 	layer = 0.1
 	alpha = 200
-	var/weakref/held_item
+	var/datum/weakref/held_item
 
 /atom/movable/storage_slot/New(newloc, obj/item/held_item)
 	ASSERT(held_item)
 	name += held_item.name
-	src.held_item = weakref(held_item)
+	src.held_item = WEAKREF(held_item)
 
 /atom/movable/storage_slot/Destroy()
 	held_item = null
+	..()
 
 /// Has to be this way. The fact that the overlays will be constantly mutated by other storage means we can't wait.
 /atom/movable/storage_slot/add_overlay(list/somethings)
@@ -877,8 +888,8 @@
 	if(target != user) return // If the user didn't drag themselves, exit
 	if(user.incapacitated() || user.buckled) return // If user is incapacitated or buckled, exit
 	if(get_holder_of_type(src, /mob/living/carbon/human) == user) return // No jumping into your own equipment
-	if(ishuman(user) && user.get_effective_size() > 0.25) return // Only micro characters
-	if(ismouse(user) && user.get_effective_size() > 1) return // Only normal sized mice or less
+	if(ishuman(user) && user.get_effective_size(TRUE) > 0.25) return // Only micro characters
+	if(ismouse(user) && user.get_effective_size(TRUE) > 1) return // Only normal sized mice or less
 
 	// Create a dummy holder with user's size to test insertion
 	var/obj/item/weapon/holder/D = new/obj/item/weapon/holder

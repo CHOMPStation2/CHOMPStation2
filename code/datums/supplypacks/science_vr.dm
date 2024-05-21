@@ -29,7 +29,7 @@
 	containertype = /obj/structure/largecrate/animal/weretiger
 	containername = "Weretiger crate"
 	access = access_xenobiology
-/*
+
 /datum/supply_pack/sci/otie
 	name = "VARMAcorp adoptable reject (Dangerous!)"
 	cost = 100
@@ -43,4 +43,3 @@
 	containertype = /obj/structure/largecrate/animal/otie/phoron
 	containername = "VARMAcorp adaptive beta subject (Experimental)"
 	access = access_xenobiology
-*/ //VORESTATION AI TEMPORARY REMOVAL. Oties commented out cuz broke.

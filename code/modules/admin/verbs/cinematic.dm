@@ -1,6 +1,6 @@
 /client/proc/cinematic(var/cinematic as anything in list("explosion",null))
 	set name = "Cinematic"
-	set category = "Fun"
+	set category = "Fun.Do Not" //CHOMPEdit
 	set desc = "Shows a cinematic."	// Intended for testing but I thought it might be nice for events on the rare occasion Feel free to comment it out if it's not wanted.
 
 	if(!check_rights(R_FUN))
@@ -12,7 +12,7 @@
 		if("explosion")
 			if(tgui_alert(usr, "The game will be over. Are you really sure?", "Confirmation", list("Continue","Cancel")) == "Cancel")
 				return
-			var/parameter = input(src,"station_missed = ?","Enter Parameter",0) as num
+			var/parameter = tgui_input_number(src,"station_missed = ?","Enter Parameter",0,1,0)
 			var/override
 			switch(parameter)
 				if(1)

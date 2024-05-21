@@ -17,14 +17,39 @@
 	var/list/logs = list() // Gets written to by exonet's send_message() function.
 
 	circuit = /obj/item/weapon/circuitboard/telecomms/exonet_node
+
+	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
+	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
 // Proc: New()
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
-/obj/machinery/exonet_node/map/Initialize()
+/obj/machinery/exonet_node/Initialize() //CHOMPAdd Start
 	. = ..()
 	default_apply_parts()
+	// CHOMPAdd: Exonet Machinery humming
+	soundloop = new(list(src), FALSE)
+	if(prob(60)) // 60% chance to change the midloop
+		if(prob(40))
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_02.ogg' = 1)
+			soundloop.mid_length = 40
+		else if(prob(20))
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_03.ogg' = 1)
+			soundloop.mid_length = 10
+		else
+			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
+			soundloop.mid_length = 30
+	soundloop.start() // CHOMPStation Edit: This starts on
+	// CHOMPAdd End
+
+/obj/machinery/exonet_node/map/Initialize()
+	. = ..()
+	//default_apply_parts() //CHOMPEdit
 	desc = "This machine is one of many, many nodes inside [using_map.starsys_name]'s section of the Exonet, connecting the [using_map.station_short] to the rest of the system, at least \
 	electronically."
+
+/obj/machinery/exonet_node/Destroy() // CHOMPAdd: Just in case.
+	QDEL_NULL(soundloop) // CHOMPAdd: Exonet noises
+	return ..()
 
 // Proc: update_icon()
 // Parameters: None
@@ -48,12 +73,19 @@
 		if(stat & (BROKEN|NOPOWER|EMPED))
 			on = 0
 			update_idle_power_usage(0)
+			soundloop.stop() // CHOMPStation Add: Hummy noises
+			noisy = FALSE // CHOMPStation Add: Hummy noises
 		else
 			on = 1
 			update_idle_power_usage(2500)
 	else
 		on = 0
 		update_idle_power_usage(0)
+		soundloop.stop() // CHOMPStation Add: Hummy noises
+		noisy = FALSE // CHOMPStation Add: Hummy noises
+	if(!noisy && on) // CHOMPStation Add: Hummy noises, safety in case it was already on
+		soundloop.start() // CHOMPStation Add: Hummy noises
+		noisy = TRUE // CHOMPStation Add: Hummy noises
 	update_icon()
 
 // Proc: emp_act()
@@ -78,9 +110,9 @@
 // Parameters: 2 (I - the item being whacked against the machine, user - the person doing the whacking)
 // Description: Handles deconstruction.
 /obj/machinery/exonet_node/attackby(obj/item/I, mob/user)
-	if(I.is_screwdriver())
+	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		default_deconstruction_screwdriver(user, I)
-	else if(I.is_crowbar())
+	else if(I.has_tool_quality(TOOL_CROWBAR))
 		default_deconstruction_crowbar(user, I)
 	else
 		..()

@@ -186,12 +186,12 @@
 	taste_mult = 0.6
 	reagent_state = LIQUID
 	color = "#CF3600"
-	strength = 20
-	metabolism = REM * 2
+	strength = 15 //CHOMPEdit this shit needs to be changed sheesh
+	metabolism = REM * 0.5 //CHOMPEdit holy balls
 
 /datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.adjustOxyLoss(20 * removed)
+	M.adjustOxyLoss(10 * removed) //CHOMPEdit the fucking toxins are already crazy enough, calm down
 	M.Sleeping(1)
 
 /datum/reagent/toxin/mold
@@ -485,6 +485,16 @@
 	power = 2
 	meltdose = 30
 
+/datum/reagent/acid/diet_digestive //CHOMPAdd
+	name = "Diluted digestive acid"
+	id = "diet_stomacid"
+	description = "Some form of digestive slurry."
+	taste_description = "vomit"
+	reagent_state = LIQUID
+	color = "#664330"
+	power = 0.4
+	meltdose = 150
+
 /datum/reagent/thermite/venom
 	name = "Pyrotoxin"
 	id = "thermite_v"
@@ -691,6 +701,7 @@
 			M.eye_blurry = max(M.eye_blurry, 30)
 			if(prob(20))
 				M.ear_deaf = max(M.ear_deaf, 4)
+				M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 				M.Confuse(2)
 			else
 				M.Weaken(2)
@@ -735,6 +746,7 @@
 		if(alien == IS_SLIME)
 			if(prob(30))
 				M.ear_deaf = max(M.ear_deaf, 4)
+				M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 			M.eye_blurry = max(M.eye_blurry, 60)
 			M.Weaken(30)
 			M.Confuse(40)

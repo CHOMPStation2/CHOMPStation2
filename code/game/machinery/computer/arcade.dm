@@ -40,7 +40,7 @@
 		var/atom/movable/AM = pick_n_take(special_prizes)
 		AM.forceMove(get_turf(src))
 		special_prizes -= AM
-	
+
 	else if(LAZYLEN(prizes))
 		var/prizeselect = pickweight(prizes)
 		new prizeselect(src.loc)
@@ -1125,7 +1125,7 @@
 
 			// This is not a status display message, since it's something the character
 			// themselves is meant to see BEFORE putting the money in
-			to_chat(usr, "[bicon(cashmoney)] <span class='warning'>That is not enough money.</span>")
+			to_chat(usr, "[icon2html(cashmoney,user.client)] <span class='warning'>That is not enough money.</span>")
 			return 0
 
 		if(istype(cashmoney, /obj/item/weapon/spacecash))
@@ -1182,7 +1182,7 @@
 	// Have the customer punch in the PIN before checking if there's enough money. Prevents people from figuring out acct is
 	// empty at high security levels
 	if(customer_account.security_level != 0) //If card requires pin authentication (ie seclevel 1 or 2)
-		var/attempt_pin = input(usr, "Enter pin code", "Vendor transaction") as num
+		var/attempt_pin = tgui_input_number(usr, "Enter pin code", "Vendor transaction")
 		customer_account = attempt_account_access(I.associated_account_number, attempt_pin, 2)
 
 		if(!customer_account)
@@ -1322,7 +1322,7 @@
 		gameStatus = "CLAWMACHINE_NEW"
 		emagged = 1
 		return 1
-		
+
 /obj/machinery/computer/arcade/attackby(obj/item/O, mob/user, params)
 	..()
 	if(istype(O, /obj/item/stack/arcadeticket))
@@ -1337,3 +1337,5 @@
 		O = T
 		to_chat(user, "<span class='notice'>You turn in 2 tickets to the [src] and claim a prize!</span>")
 		return
+	else
+		..() //You can now actually deconstruct these.

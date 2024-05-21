@@ -10,7 +10,7 @@
 	var/datum/disease2/disease/virus2 = null
 
 /obj/machinery/computer/centrifuge/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(O.is_screwdriver())
+	if(O.has_tool_quality(TOOL_SCREWDRIVER))
 		return ..(O,user)
 
 	if(default_unfasten_wrench(user, O, 20))
@@ -189,7 +189,7 @@
 		if(virus.len > 0)
 			for (var/ID in virus)
 				var/datum/disease2/disease/V = virus[ID]
-				P.info += "[V.name()]<br>"
+				P.info += "stamm #[add_zero("[V.uniqueID]", 4)]<br>" // CHOMPEdit - Making sure to not show the name at first!
 		else
 			P.info += "None<br>"
 

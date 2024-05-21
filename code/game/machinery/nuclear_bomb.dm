@@ -3,7 +3,7 @@ var/bomb_set
 /obj/machinery/nuclearbomb
 	name = "\improper Nuclear Fission Explosive"
 	desc = "Uh oh. RUN!!!!"
-	icon = 'icons/obj/stationobjs.dmi'
+	icon = 'modular_chomp/icons/obj/stationobjs.dmi' //chompedit, use the better one
 	icon_state = "nuclearbomb0"
 	density = TRUE
 	var/deployable = 0.0
@@ -47,6 +47,7 @@ var/bomb_set
 	if(timing)
 		bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
 		timeleft--
+		playsound(src, 'sound/items/timer.ogg',50) //chompedit... beep :)
 		if(timeleft <= 0)
 			explode()
 		for(var/mob/M in viewers(1, src))
@@ -55,7 +56,7 @@ var/bomb_set
 	return
 
 /obj/machinery/nuclearbomb/attackby(obj/item/weapon/O as obj, mob/user as mob)
-	if(O.is_screwdriver())
+	if(O.has_tool_quality(TOOL_SCREWDRIVER))
 		playsound(src, O.usesound, 50, 1)
 		add_fingerprint(user)
 		if(auth)
@@ -78,7 +79,7 @@ var/bomb_set
 			flick("nuclearbombc", src)
 
 		return
-	if(O.is_wirecutter() || istype(O, /obj/item/device/multitool))
+	if(O.has_tool_quality(TOOL_WIRECUTTER) || istype(O, /obj/item/device/multitool))
 		if(opened == 1)
 			nukehack_win(user)
 		return
@@ -94,9 +95,9 @@ var/bomb_set
 	if(anchored)
 		switch(removal_stage)
 			if(0)
-				if(istype(O,/obj/item/weapon/weldingtool))
+				if(O.has_tool_quality(TOOL_WELDER))
 
-					var/obj/item/weapon/weldingtool/WT = O
+					var/obj/item/weapon/weldingtool/WT = O.get_welder()
 					if(!WT.isOn()) return
 					if(WT.get_fuel() < 5) // uses up 5 fuel.
 						to_chat(user, "<span class='warning'>You need more fuel to complete this task.</span>")
@@ -111,7 +112,7 @@ var/bomb_set
 				return
 
 			if(1)
-				if(O.is_crowbar())
+				if(O.has_tool_quality(TOOL_CROWBAR))
 					user.visible_message("[user] starts forcing open the bolt covers on [src].", "You start forcing open the anchoring bolt covers with [O]...")
 
 					playsound(src, O.usesound, 50, 1)
@@ -122,9 +123,9 @@ var/bomb_set
 				return
 
 			if(2)
-				if(istype(O,/obj/item/weapon/weldingtool))
+				if(O.has_tool_quality(TOOL_WELDER))
 
-					var/obj/item/weapon/weldingtool/WT = O
+					var/obj/item/weapon/weldingtool/WT = O.get_welder()
 					if(!WT.isOn()) return
 					if(WT.get_fuel() < 5) // uses up 5 fuel.
 						to_chat(user, "<span class='warning'>You need more fuel to complete this task.</span>")
@@ -139,7 +140,7 @@ var/bomb_set
 				return
 
 			if(3)
-				if(O.is_wrench())
+				if(O.has_tool_quality(TOOL_WRENCH))
 
 					user.visible_message("[user] begins unwrenching the anchoring bolts on [src].", "You begin unwrenching the anchoring bolts...")
 					playsound(src, O.usesound, 50, 1)
@@ -150,7 +151,7 @@ var/bomb_set
 				return
 
 			if(4)
-				if(O.is_crowbar())
+				if(O.has_tool_quality(TOOL_CROWBAR))
 
 					user.visible_message("[user] begins lifting [src] off of the anchors.", "You begin lifting the device off the anchors...")
 					playsound(src, O.usesound, 50, 1)
@@ -262,7 +263,7 @@ var/bomb_set
 								visible_message("<span class='notice'>The [src] emits a quiet whirling noise!</span>")
 			if(href_list["act"] == "wire")
 				var/obj/item/I = usr.get_active_hand()
-				if(!I.is_wirecutter())
+				if(!I.has_tool_quality(TOOL_WIRECUTTER))
 					to_chat(usr, "You need wirecutters!")
 				else
 					wires[temp_wire] = !wires[temp_wire]
@@ -275,6 +276,7 @@ var/bomb_set
 								icon_state = "nuclearbomb1"
 						timing = 0
 						bomb_set = 0
+						set_security_level("red") //chompedit
 					if(light_wire == temp_wire)
 						lighthack = !lighthack
 
@@ -322,10 +324,13 @@ var/bomb_set
 							icon_state = "nuclearbomb2"
 						if(!safety)
 							bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
+							set_security_level("delta")//chompedit
 						else
 							bomb_set = 0
+							set_security_level("red")
 					else
 						bomb_set = 0
+						set_security_level("red") //chompedit
 						if(!lighthack)
 							icon_state = "nuclearbomb1"
 				if(href_list["safety"])
@@ -333,6 +338,7 @@ var/bomb_set
 					if(safety)
 						timing = 0
 						bomb_set = 0
+						set_security_level("red") //chompedit
 				if(href_list["anchor"])
 
 					if(removal_stage == 5)
@@ -370,7 +376,7 @@ var/bomb_set
 	safety = 1
 	if(!lighthack)
 		icon_state = "nuclearbomb3"
-	playsound(src,'sound/machines/Alarm.ogg',100,0,5)
+	world << sound('sound/machines/Alarm.ogg')//chompedit, nuke is big event, make it global
 	if(ticker && ticker.mode)
 		ticker.mode.explosion_in_progress = 1
 	sleep(100)

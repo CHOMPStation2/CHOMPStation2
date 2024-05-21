@@ -10,7 +10,7 @@
 
 	var/skip_act = FALSE
 	var/tgui_subtemplate = "ShuttleControlConsoleDefault"
-	var/ai_control = FALSE	//VOREStation Edit - AI/Borgs shouldn't really be flying off in ships without crew help
+	var/ai_control = TRUE	//VOREStation Edit - AI/Borgs shouldn't really be flying off in ships without crew help //ChompStation Edit: Flying is better prevented by restricting the helm console if wanted. This is only an unnecessary nuisance that also breaks various other uses for the shuttle console.
 
 /obj/machinery/computer/shuttle_control/attack_hand(user as mob)
 	if(..(user))
@@ -111,7 +111,8 @@
 			return TRUE
 
 		if("set_codes")
-			var/newcode = input(usr, "Input new docking codes", "Docking codes", shuttle.docking_codes) as text|null
+			var/newcode = tgui_input_text(usr, "Input new docking codes", "Docking codes", shuttle.docking_codes, MAX_NAME_LEN)
+			newcode = sanitize(newcode,MAX_NAME_LEN)
 			if(newcode && !..())
 				shuttle.set_docking_codes(uppertext(newcode))
 			return TRUE

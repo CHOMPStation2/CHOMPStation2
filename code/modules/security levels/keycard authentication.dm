@@ -42,7 +42,7 @@
 				event_triggered_by = usr
 				broadcast_request() //This is the device making the initial event request. It needs to broadcast to other devices
 
-	if(W.is_screwdriver())
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		to_chat(user, "You begin removing the faceplate from the [src]")
 		playsound(src, W.usesound, 50, 1)
 		if(do_after(user, 10 * W.toolspeed))
@@ -89,7 +89,7 @@
 	if(screen == 1)
 		dat += "Select an event to trigger:<ul>"
 		dat += "<li><A href='?src=\ref[src];triggerevent=Red alert'>Red alert</A></li>"
-		if(!config.ert_admin_call_only)
+		if(!CONFIG_GET(flag/ert_admin_call_only)) // CHOMPEdit
 			dat += "<li><A href='?src=\ref[src];triggerevent=Emergency Response Team'>Emergency Response Team</A></li>"
 
 		dat += "<li><A href='?src=\ref[src];triggerevent=Grant Emergency Maintenance Access'>Grant Emergency Maintenance Access</A></li>"
@@ -175,27 +175,27 @@
 			feedback_inc("alert_keycard_auth_maintRevoke",1)
 		if("Emergency Response Team")
 			if(is_ert_blocked())
-				to_chat(usr, "<font color='red'>All emergency response teams are dispatched and can not be called at this time.</font>")
+				to_chat(usr, span_red("All emergency response teams are dispatched and can not be called at this time."))
 				return
 
 			trigger_armed_response_team(1)
 			feedback_inc("alert_keycard_auth_ert",1)
 
 /obj/machinery/keycard_auth/proc/is_ert_blocked()
-	if(config.ert_admin_call_only) return 1
+	if(CONFIG_GET(flag/ert_admin_call_only)) return 1 // CHOMPEdit
 	return ticker.mode && ticker.mode.ert_disabled
 
 var/global/maint_all_access = 0
 
 /proc/make_maint_all_access()
 	maint_all_access = 1
-	to_world("<font size=4 color='red'>Attention!</font>")
-	to_world("<font color='red'>The maintenance access requirement has been revoked on all airlocks.</font>")
+	to_world(span_red("<font size=4>Attention!</font>"))
+	to_world(span_red("The maintenance access requirement has been revoked on all airlocks."))
 
 /proc/revoke_maint_all_access()
 	maint_all_access = 0
-	to_world("<font size=4 color='red'>Attention!</font>")
-	to_world("<font color='red'>The maintenance access requirement has been readded on all maintenance airlocks.</font>")
+	to_world(span_red("<font size=4>Attention!</font>"))
+	to_world(span_red("The maintenance access requirement has been readded on all maintenance airlocks."))
 
 /obj/machinery/door/airlock/allowed(mob/M)
 	if(maint_all_access && src.check_access_list(list(access_maint_tunnels)))

@@ -7,7 +7,8 @@
 	//description_fluff = "This could be used to engrave messages on suitable surfaces if you really put your mind to it! Alt-click a floor or wall to engrave with it." //This way it's not a completely hidden, arcane art to engrave. //CHOMP Remove
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver"
-	center_of_mass = list("x" = 13,"y" = 7)
+	center_of_mass_x = 13 //CHOMPEdit
+	center_of_mass_y= 7 //CHOMPEdit
 	slot_flags = SLOT_BELT | SLOT_EARS
 	force = 6
 	w_class = ITEMSIZE_TINY
@@ -106,41 +107,10 @@
 	toolspeed = 0.5
 
 /obj/item/weapon/tool/screwdriver/power
-	name = "hand drill"
-	desc = "A simple powered hand drill. It's fitted with a screw bit."
-	icon_state = "drill_screw"
-	item_state = "drill"
-	matter = list(MAT_STEEL = 150, MAT_SILVER = 50)
-	origin_tech = list(TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
-	slot_flags = SLOT_BELT
+	name = "power screwdriver"
+	desc = "You shouldn't see this."
 	force = 8
-	w_class = ITEMSIZE_SMALL
-	throwforce = 8
-	throw_speed = 2
-	throw_range = 3//it's heavier than a screw driver/wrench, so it does more damage, but can't be thrown as far
 	attack_verb = list("drilled", "screwed", "jabbed", "whacked")
 	hitsound = 'sound/items/drill_hit.ogg'
 	usesound = 'sound/items/drill_use.ogg'
 	toolspeed = 0.25
-	random_color = FALSE
-	var/obj/item/weapon/tool/wrench/power/counterpart = null
-
-/obj/item/weapon/tool/screwdriver/power/New(newloc, no_counterpart = TRUE)
-	..(newloc)
-	if(!counterpart && no_counterpart)
-		counterpart = new(src, FALSE)
-		counterpart.counterpart = src
-
-/obj/item/weapon/tool/screwdriver/power/Destroy()
-	if(counterpart)
-		counterpart.counterpart = null // So it can qdel cleanly.
-		QDEL_NULL(counterpart)
-	return ..()
-
-/obj/item/weapon/tool/screwdriver/power/attack_self(mob/user)
-	playsound(src,'sound/items/change_drill.ogg',50,1)
-	user.drop_item(src)
-	counterpart.forceMove(get_turf(src))
-	src.forceMove(counterpart)
-	user.put_in_active_hand(counterpart)
-	to_chat(user, "<span class='notice'>You attach the bolt driver bit to [src].</span>")

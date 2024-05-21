@@ -41,7 +41,7 @@
 	return ((H && H.isSynthetic()) ? "encounters a hardware fault and suddenly reboots!" : knockout_message)
 
 /datum/species/proc/get_death_message(var/mob/living/carbon/human/H)
-	if(config.show_human_death_message)
+	if(CONFIG_GET(flag/show_human_death_message)) // CHOMPEdit
 		return ((H && H.isSynthetic()) ? "gives one shrill beep before falling lifeless." : death_message)
 	else
 		return DEATHGASP_NO_MESSAGE
@@ -90,10 +90,18 @@
 	*/
 
 	var/discomfort_message
+	var/list/custom_cold = H.custom_cold
+	var/list/custom_heat = H.custom_heat
 	if(msg_type == ENVIRONMENT_COMFORT_MARKER_COLD && length(cold_discomfort_strings) /*&& !covered*/)
-		discomfort_message = pick(cold_discomfort_strings)
+		if(custom_cold && custom_cold.len > 0)
+			discomfort_message = pick(custom_cold)
+		else
+			discomfort_message = pick(cold_discomfort_strings)
 	else if(msg_type == ENVIRONMENT_COMFORT_MARKER_HOT && length(heat_discomfort_strings) /*&& covered*/)
-		discomfort_message = pick(heat_discomfort_strings)
+		if(custom_heat && custom_heat.len > 0)
+			discomfort_message = pick(custom_heat)
+		else
+			discomfort_message = pick(heat_discomfort_strings)
 
 	if(discomfort_message && prob(5))
 		to_chat(H, SPAN_DANGER(discomfort_message))
@@ -103,8 +111,10 @@
 	if(!name_language)
 		if(gender == FEMALE)
 			return capitalize(pick(first_names_female)) + " " + capitalize(pick(last_names))
-		else
+		else if(gender == MALE)
 			return capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
+		else
+			return capitalize(prob(50) ? pick(first_names_male) : pick(first_names_female)) + " " + capitalize(pick(last_names))
 
 	var/datum/language/species_language = GLOB.all_languages[name_language]
 	if(!species_language)

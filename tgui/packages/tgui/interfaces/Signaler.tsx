@@ -1,0 +1,116 @@
+import { toFixed } from 'common/math';
+
+import { useBackend } from '../backend';
+import { Button, NumberInput, Section, Table } from '../components';
+import { Window } from '../layouts';
+
+export const Signaler = () => {
+  return (
+    <Window width={280} height={132}>
+      <Window.Content>
+        <SignalerContent />
+      </Window.Content>
+    </Window>
+  );
+};
+
+type Data = {
+  code: number;
+  frequency: number;
+  minFrequency: number;
+  maxFrequency: number;
+};
+
+export const SignalerContent = (props) => {
+  const { act, data } = useBackend<Data>();
+  const { code, frequency, minFrequency, maxFrequency } = data;
+  return (
+    <Section>
+      <Table>
+        <Table.Row>
+          <Table.Cell size={1.4} color="label">
+            Frequency:
+          </Table.Cell>
+          <Table.Cell>
+            <NumberInput
+              animate
+              unit="kHz"
+              step={0.2}
+              stepPixelSize={6}
+              minValue={minFrequency / 10}
+              maxValue={maxFrequency / 10}
+              value={frequency / 10}
+              format={(value) => toFixed(value, 1)}
+              width="80px"
+              onDrag={(e, value) =>
+                act('freq', {
+                  freq: value,
+                })
+              }
+            />
+          </Table.Cell>
+          <Table.Cell>
+            <Button
+              ml={1.3}
+              icon="sync"
+              onClick={() =>
+                act('reset', {
+                  reset: 'freq',
+                })
+              }
+            >
+              Reset
+            </Button>
+          </Table.Cell>
+        </Table.Row>
+        <Table.Row mt={0.6}>
+          <Table.Cell size={1.4} color="label">
+            Code:
+          </Table.Cell>
+          <Table.Cell>
+            <NumberInput
+              animate
+              step={1}
+              stepPixelSize={6}
+              minValue={1}
+              maxValue={100}
+              value={code}
+              width="80px"
+              onDrag={(e, value) =>
+                act('code', {
+                  code: value,
+                })
+              }
+            />
+          </Table.Cell>
+          <Table.Cell>
+            <Button
+              ml={1.3}
+              icon="sync"
+              onClick={() =>
+                act('reset', {
+                  reset: 'code',
+                })
+              }
+            >
+              Reset
+            </Button>
+          </Table.Cell>
+        </Table.Row>
+        <Table.Row mt={0.8}>
+          <Table.Cell>
+            <Button
+              mb={-0.1}
+              fluid
+              icon="arrow-up"
+              textAlign="center"
+              onClick={() => act('signal')}
+            >
+              Send Signal
+            </Button>
+          </Table.Cell>
+        </Table.Row>
+      </Table>
+    </Section>
+  );
+};

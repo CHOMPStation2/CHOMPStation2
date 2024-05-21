@@ -38,6 +38,7 @@
 	var/image/modifier_overlay = null // Holds overlays from modifiers.
 	var/image/eye_layer = null		// Holds the eye overlay.
 	var/has_eye_glow = FALSE		// If true, adds an overlay over the lighting plane for [icon_state]-eyes.
+	var/custom_eye_color = null
 	attack_icon = 'icons/effects/effects.dmi' //Just the default, played like the weapon attack anim
 	attack_icon_state = "slash" //Just the default
 
@@ -46,7 +47,7 @@
 	var/has_langs = list(LANGUAGE_GALCOM)// Text name of their language if they speak something other than galcom. They speak the first one.
 
 	//Movement things.
-	var/movement_cooldown = 5			// Lower is faster.
+	var/movement_cooldown = 1			//VOREStation Edit - 1 is slower than normal human speed // Lower is faster.
 	var/movement_sound = null			// If set, will play this sound when it moves on its own will.
 	var/turn_sound = null				// If set, plays the sound when the mob's dir changes in most cases.
 	var/movement_shake_radius = 0		// If set, moving will shake the camera of all living mobs within this radius slightly.
@@ -166,17 +167,27 @@
 	var/limb_icon_key
 	var/understands_common = TRUE 		//VOREStation Edit - Makes it so that simplemobs can understand galcomm without being able to speak it.
 	var/heal_countdown = 5				//VOREStation Edit - A cooldown ticker for passive healing
-	var/obj/item/weapon/card/id/mobcard = null //VOREStation Edit
-	var/list/mobcard_access = list() //VOREStation Edit
-	var/mobcard_provided = FALSE //VOREStation Edit
+	var/list/myid_access = list() //VOREStation Edit
+	var/ID_provided = FALSE //VOREStation Edit
+	// VOREStation Add: Move/Shoot/Attack delays based on damage
+	var/damage_fatigue_mult = 1			// Our multiplier for how heavily mobs are affected by injury. [UPDATE THIS IF THE FORMULA CHANGES]: Formula = injury_level = round(rand(1,3) * damage_fatigue_mult * clamp(((rand(2,5) * (h / getMaxHealth())) - rand(0,2)), 1, 5))
+	var/injury_level = 0 				// What our injury level is. Rather than being the flat damage, this is the amount added to various delays to simulate injuries in a manner as lightweight as possible.
+	var/threshold = 0.6					// When we start slowing down. Configure this setting per-mob. Default is 60%
+	var/injury_enrages = FALSE			// Do injuries enrage (aka strengthen) our mob? If yes, we'll interpret how hurt we are differently.
+	// VOREStation Add End
+
+	var/has_recoloured = FALSE
+	var/hunting_cooldown = 0
+	var/hasthermals = TRUE
+	var/isthermal = 0
 
 /mob/living/simple_mob/Initialize()
-	verbs -= /mob/verb/observe
+	remove_verb(src,/mob/verb/observe) //CHOMPEdit TGPanel
 	health = maxHealth
 
-	if(mobcard_provided) //VOREStation Edit
-		mobcard = new /obj/item/weapon/card/id(src)
-		mobcard.access = mobcard_access.Copy()
+	if(ID_provided) //VOREStation Edit
+		myid = new /obj/item/weapon/card/id(src)
+		myid.access = myid_access.Copy()
 
 	for(var/L in has_langs)
 		languages |= GLOB.all_languages[L]
@@ -186,13 +197,17 @@
 	if(has_eye_glow)
 		add_eyes()
 
-	if(!IsAdvancedToolUser())	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
-		verbs |= /mob/living/simple_mob/proc/animal_nom
-		verbs |= /mob/living/proc/shred_limb
-	verbs |= /mob/living/simple_mob/proc/nutrition_heal //CHOMPSTATION edit
+	if(vore_active)	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
+		add_verb(src,/mob/living/simple_mob/proc/animal_nom) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/nutrition_heal) //CHOMPEdit TGPanel //CHOMPSTATION edit
 
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
+
+	if(CONFIG_GET(flag/allow_simple_mob_recolor)) //CHOMPEdit
+		add_verb(src,/mob/living/simple_mob/proc/ColorMate) //CHOMPEdit TGPanel
+
 
 	return ..()
 
@@ -220,6 +235,8 @@
 	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		voremob_loaded = TRUE
 		init_vore()
+	if(hasthermals)
+		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them. //ChompEDIT
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
@@ -252,11 +269,13 @@
 
 	// Turf related slowdown
 	var/turf/T = get_turf(src)
-	if(T && T.movement_cost && !hovering) // Flying mobs ignore turf-based slowdown. Aquatic mobs ignore water slowdown, and can gain bonus speed in it.
+	if(T && T.movement_cost && (!hovering || !flying)) // Flying mobs ignore turf-based slowdown. Aquatic mobs ignore water slowdown, and can gain bonus speed in it.
 		if(istype(T,/turf/simulated/floor/water) && aquatic_movement)
 			. -= aquatic_movement - 1
 		else
 			. += T.movement_cost
+		if(flying)
+			adjust_nutrition(-0.5)
 
 	if(purge)//Purged creatures will move more slowly. The more time before their purge stops, the slower they'll move.
 		if(. <= 0)
@@ -266,15 +285,23 @@
 	if(m_intent == "walk")
 		. *= 1.5
 
-	 . += config.animal_delay
+	// VOREStation Edit Start
+	if(injury_enrages) // If we enrage, then do this, else
+		. -= injury_level
+	else
+		. += injury_level
+	// VOREStation Edit Stop
 
-	 . += ..()
+	. += CONFIG_GET(number/animal_delay) // CHOMPEdit
 
+	. += ..()
 
-/mob/living/simple_mob/Stat()
-	..()
-	if(statpanel("Status") && show_stat_health)
-		stat(null, "Health: [round((health / getMaxHealth()) * 100)]%")
+//CHOMPEdit Begin
+/mob/living/simple_mob/get_status_tab_items()
+	. = ..()
+	. += ""
+	. += "Health: [round((health / getMaxHealth()) * 100)]%"
+//CHOMPEdit End
 
 /mob/living/simple_mob/lay_down()
 	..()
@@ -307,7 +334,7 @@
 
 //VOREStation Add Start		Makes it so that simplemobs can understand galcomm without being able to speak it.
 /mob/living/simple_mob/say_understands(var/mob/other, var/datum/language/speaking = null)
-	if(understands_common && speaking?.name == LANGUAGE_GALCOM)
+	if(understands_common && (speaking?.name == LANGUAGE_GALCOM || !speaking))
 		return TRUE
 	return ..()
 //Vorestation Add End
@@ -315,12 +342,62 @@
 /decl/mob_organ_names
 	var/list/hit_zones = list("body") //When in doubt, it's probably got a body.
 
-//VOREStation Add Start 	For allowing mobs with ID's door access
-/mob/living/simple_mob/Bump(var/atom/A)
-	if(mobcard && istype(A, /obj/machinery/door))
-		var/obj/machinery/door/D = A
-		if(!istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && !istype(D, /obj/machinery/door/airlock/lift) && D.check_access(mobcard))
-			D.open()
+/*
+ * VOREStation Add
+ * How injured are we? Returns a number that is then added to movement cooldown and firing/melee delay respectively.
+ * Called by movement_delay and our firing/melee delay checks
+*/
+/mob/living/simple_mob/proc/get_injury_level(var/mob/living/simple_mob/M)
+	var/h = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss // We're not updating our actual health here bc we want updatehealth() and other checks to handle that
+	if(h > 0) 												// Safety to prevent division by 0 errors
+		if((h / getMaxHealth()) <= threshold) 				// Essentially, did our health go down? We don't modify want to modify our total slowdown if we didn't actually take damage, and aren't below our threshold %
+			var/totaldelay = round(rand(1,3) * damage_fatigue_mult * clamp(((rand(2,5) * (h / getMaxHealth())) - rand(0,2)), 1, 5)) 	// totaldelay is how much delay we're going to feed into attacks and movement. Do NOT change this formula unless you know how to math.
+			injury_level = totaldelay 						// Adds our returned slowdown to the mob's injury level
+		else if((h / getMaxHealth()) >= threshold)			// If our health has gone up somehow, and we're over our threshold percentage now, reset it to full
+			injury_level = 0								// Reset to no slowdown
+
+/mob/living/simple_mob/updatehealth()	// We don't want to fully override the check, just hook our own code in
+	get_injury_level()					// We check how injured we are, then actually update the mob on how hurt we are.
+	. = ..() 							// Calling parent here, actually updating our mob on how hurt we are.
+
+// VOREStation Add End
+
+/mob/living/simple_mob/proc/ColorMate()
+	set name = "Recolour"
+	set category = "Abilities.Settings" //CHOMPEdit
+	set desc = "Allows to recolour once."
+
+	if(!has_recoloured)
+		var/datum/ColorMate/recolour = new /datum/ColorMate(usr)
+		recolour.tgui_interact(usr)
+		return
+	to_chat(usr, "You've already recoloured yourself once. You are only allowed to recolour yourself once during a around.")
+
+//Thermal vision adding
+
+/mob/living/simple_mob/proc/hunting_vision()
+	set name = "Track Prey Through Walls"
+	set category = "Abilities.Mob" //ChompEDIT
+	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
+
+	if(hunting_cooldown + 5 MINUTES < world.time)
+		to_chat(usr, "You can sense other creatures by focusing carefully on your surroundings.")
+		sight |= SEE_MOBS
+		hunting_cooldown = world.time
+		spawn(600)
+			to_chat(usr, "Your concentration wears off.")
+			sight -= SEE_MOBS
+	else if(hunting_cooldown + 5 MINUTES > world.time)
+		to_chat(usr, "You must wait for a while before using this again.")
+
+/mob/living/simple_mob/proc/hunting_vision_plus()
+	set name = "Thermal vision toggle"
+	set category = "Abilities.Mob" //ChompEDIT
+	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
+
+	if(!isthermal)
+		to_chat(usr, "You can sense other creatures by focusing carefully on your surroundings.")
+		sight |= SEE_MOBS
 	else
-		..()
-//Vorestation Add End
+		to_chat(usr, "You stop sensing creatures beyond the walls.")
+		sight -= SEE_MOBS

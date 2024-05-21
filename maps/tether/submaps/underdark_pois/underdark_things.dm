@@ -1,3 +1,8 @@
+/datum/random_map/noise/ore/underdark
+	descriptor = "Underdark ore distribution map"
+	deep_val = 0.7
+	rare_val = 0.5
+
 // Weakened version of Phoron spiders
 /mob/living/simple_mob/animal/giant_spider/phorogenic/weak
 	maxHealth = 100
@@ -10,10 +15,10 @@
 	poison_chance = 20
 
 // Adds Phoron Wolf
-/mob/living/simple_mob/animal/wolf/phoron
+/mob/living/simple_mob/vore/wolf/phoron
 
 	faction = "underdark"
-	movement_cooldown = 0
+	movement_cooldown = -1.5
 
 	harm_intent_damage = 5
 	melee_damage_lower = 5
@@ -51,9 +56,10 @@
 	prob_fall = 50
 	//guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/giant_spider/hunter = 1,
-		/mob/living/simple_mob/animal/giant_spider/phorogenic/weak = 1,
-		/mob/living/simple_mob/animal/giant_spider/tunneler = 1,
+		/mob/living/simple_mob/animal/giant_spider/hunter = 3,
+		/mob/living/simple_mob/animal/giant_spider/phorogenic/weak = 3,
+		/mob/living/simple_mob/animal/giant_spider/tunneler = 3,
+		/mob/living/simple_mob/vore/oregrub = 1,
 	)
 
 /obj/tether_away_spawner/underdark_hard
@@ -64,8 +70,9 @@
 	prob_fall = 50
 	//guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/vore/aggressive/corrupthound = 1,
-		/mob/living/simple_mob/vore/aggressive/rat/phoron = 2
+		/mob/living/simple_mob/vore/aggressive/corrupthound = 3,
+		/mob/living/simple_mob/vore/aggressive/rat/phoron = 6,
+		/mob/living/simple_mob/vore/oregrub/lava = 1,
 	)
 
 /obj/tether_away_spawner/underdark_boss

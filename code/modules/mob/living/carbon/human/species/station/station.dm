@@ -13,7 +13,7 @@
 	species_language = LANGUAGE_SOL_COMMON
 	secondary_langs = list(LANGUAGE_SOL_COMMON, LANGUAGE_TERMINUS)
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 
 	min_age = 18
 	max_age = 130
@@ -38,6 +38,13 @@
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
+
+	// CHOMPEdit: Species Specific Sounds
+	species_sounds = "Human Male"
+	gender_specific_species_sounds = TRUE
+	species_sounds_male = "Human Male"
+	species_sounds_female = "Human Female"
+	// CHOMPEdit End
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/tie_hair)
@@ -71,14 +78,22 @@
 	name_language = LANGUAGE_UNATHI
 	species_language = LANGUAGE_UNATHI
 	health_hud_intensity = 2.5
+	chem_strength_alcohol = 0.75
+	throwforce_absorb_threshold = 10
+	digi_allowed = TRUE
 
 	min_age = 32
 	max_age = 260
 
 	economic_modifier = 10
-	
-	male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit added unathi scream
-	female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg') //CHOMPedit
+
+	// CHOMPEdit: Reverted these back to Polaris, but commented them out. We're using species-specific sounds instead.
+	// male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
+	// female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
+	species_sounds = "Lizard" // Species sounds
+
+	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
+	pain_verb_3p = list("hisses", "growls") // CHOMPEdit: Pain emotes
 
 	blurb = "A heavily reptillian species, Unathi hail from the \
 	Uuosa-Eso system, which roughly translates to 'burning mother'.<br/><br/>Coming from a harsh, inhospitable \
@@ -198,14 +213,22 @@
 	name_language = LANGUAGE_SIIK
 	species_language = LANGUAGE_SIIK
 	health_hud_intensity = 2.5
+	chem_strength_alcohol = 1.25
+	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 110
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit Start: Species sounds
+	species_sounds = "Feline"
+	// male_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	//female_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+
+	pain_verb_1p = list("hiss", "growl", "yowl") // CHOMPEdit: Unathi pain emotes
+	pain_verb_3p = list("hisses", "growls", "yowls") // CHOMPEdit: Pain emotes
+	// CHOMPEdit End
 
 	blurb = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
 	While reaching to the stars independently from outside influences, the humans engaged them in peaceful trade contact \
@@ -302,8 +325,9 @@
 	secondary_langs = list(LANGUAGE_SKRELLIAN, LANGUAGE_SCHECHI)
 	name_language = LANGUAGE_SKRELLIAN
 	species_language = LANGUAGE_SKRELLIAN
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	health_hud_intensity = 2
+	chem_strength_alcohol = 5
 
 	water_movement = -3
 
@@ -312,13 +336,14 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	darksight = 4
 	flash_mod = 1.2
 	chemOD_mod = 0.9
 
+	blood_reagents = "copper"
 	bloodloss_rate = 1.5
 
 	ambiguous_genders = TRUE
@@ -379,6 +404,13 @@
 		O_INTESTINE =	/obj/item/organ/internal/intestine/skrell
 		)
 
+	default_emotes = list(
+		/decl/emote/audible/warble,
+		/decl/emote/audible/lwarble,
+		/decl/emote/audible/croon,
+		/decl/emote/audible/croak
+	)
+
 /datum/species/skrell/can_breathe_water()
 	return TRUE
 
@@ -394,14 +426,16 @@
 	flash_mod = 2
 	flash_burn = 15 //flashing a zaddat probably counts as police brutality
 	metabolic_rate = 0.7 //did u know if your ancestors starved ur body will actually start in starvation mode?
+	item_slowdown_mod = 0.30 //CHOMPedit: They can actually wear their living-required spacesuits without enormous slowdown now.
 	gluttonous = 1
 	taste_sensitivity = TASTE_SENSITIVE
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_ZADDAT, LANGUAGE_UNATHI)
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_SOL_COMMON, LANGUAGE_AKHANI, LANGUAGE_SIIK, LANGUAGE_GUTTER) //limited vocal range; can talk Unathi and magical Galcom but not much else
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN) //limited vocal range; can talk Unathi and magical Galcom but not much else
 	name_language = LANGUAGE_ZADDAT
 	species_language = LANGUAGE_ZADDAT
 	health_hud_intensity = 2.5
+	throwforce_absorb_threshold = 5
 
 	minimum_breath_pressure = 20 //have fun with underpressures. any higher than this and they'll be even less suitible for life on the station
 
@@ -410,8 +444,8 @@
 	min_age = 16
 	max_age = 90
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "The Zaddat are an Unathi client race only recently introduced to SolGov space. Having evolved on \
 	the high-pressure and post-apocalyptic world of Xohok, Zaddat require an environmental suit called a Shroud \
@@ -426,6 +460,7 @@
 	hazard_low_pressure = 220     // Dangerously low pressure.
 	safe_pressure = 400
 	poison_type = "nitrogen"      // technically it's a partial pressure thing but IDK if we can emulate that
+	ideal_air_type = /datum/gas_mixture/belly_air/zaddat
 
 	genders = list(FEMALE, PLURAL) //females are polyp-producing, infertile females and males are nigh-identical
 
@@ -501,9 +536,6 @@
 		if(!(K in covered))
 			H.apply_damage(light_amount/4, BURN, K, 0, 0, "Abnormal growths")
 
-/datum/species/zaddat/get_perfect_belly_air_type()
-	return /datum/gas_mixture/belly_air/zaddat
-
 /datum/species/diona
 	name = SPECIES_DIONA
 	name_plural = "Dionaea"
@@ -521,8 +553,10 @@
 	show_ssd = "completely quiescent"
 	health_hud_intensity = 2.5
 	item_slowdown_mod = 0.1
+	chem_strength_alcohol = 0
+	throwforce_absorb_threshold = 5
 
-	num_alternate_languages = 2
+	num_alternate_languages = 3
 	name_language = LANGUAGE_ROOTLOCAL
 	species_language = LANGUAGE_ROOTLOCAL
 	secondary_langs = list(LANGUAGE_ROOTGLOBAL)
@@ -532,8 +566,9 @@
 
 	economic_modifier = 10
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// CHOMPEdit: For shits and giggles, I want someone to give the Diona plant sounds from like, WoW. lmao
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \
@@ -570,7 +605,8 @@
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/diona_split_nymph,
-		/mob/living/carbon/human/proc/regenerate
+		/mob/living/carbon/human/proc/regenerate,
+		/mob/proc/adjust_hive_range	//VOREStation Add
 		)
 
 	warning_low_pressure = 50
@@ -632,8 +668,8 @@
 			qdel(Org)
 
 		// Purge the diona verbs.
-		H.verbs -= /mob/living/carbon/human/proc/diona_split_nymph
-		H.verbs -= /mob/living/carbon/human/proc/regenerate
+		remove_verb(H,/mob/living/carbon/human/proc/diona_split_nymph)  //CHOMPEdit
+		remove_verb(H,/mob/living/carbon/human/proc/regenerate)  //CHOMPEdit
 
 		return
 

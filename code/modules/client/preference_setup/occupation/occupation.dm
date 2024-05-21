@@ -19,6 +19,11 @@
 	S["job_talon_high"]		>> pref.job_talon_high
 	//VOREStation Add End
 	S["player_alt_titles"]	>> pref.player_alt_titles
+	//CHOMPStation Add
+	S["job_other_low"]		>> pref.job_other_low
+	S["job_other_med"]		>> pref.job_other_med
+	S["job_other_high"]		>> pref.job_other_high
+	//CHOMPStation Add End
 
 /datum/category_item/player_setup_item/occupation/save_character(var/savefile/S)
 	S["alternate_option"]	<< pref.alternate_option
@@ -37,6 +42,11 @@
 	S["job_talon_high"]		<< pref.job_talon_high
 	//VOREStation Add End
 	S["player_alt_titles"]	<< pref.player_alt_titles
+	//CHOMPStation Add
+	S["job_other_low"]		<< pref.job_other_low
+	S["job_other_med"]		<< pref.job_other_med
+	S["job_other_high"]		<< pref.job_other_high
+	//CHOMPStation Add End
 
 /datum/category_item/player_setup_item/occupation/sanitize_character()
 	pref.alternate_option	= sanitize_integer(pref.alternate_option, 0, 2, initial(pref.alternate_option))
@@ -54,6 +64,11 @@
 	pref.job_talon_med 		= sanitize_integer(pref.job_talon_med, 0, 65535, initial(pref.job_talon_med))
 	pref.job_talon_low 		= sanitize_integer(pref.job_talon_low, 0, 65535, initial(pref.job_talon_low))
 	//VOREStation Add End
+	//CHOMPStation Add
+	pref.job_other_high		= sanitize_integer(pref.job_other_high, 0, 65535, initial(pref.job_other_high))
+	pref.job_other_med		= sanitize_integer(pref.job_other_med, 0, 65535, initial(pref.job_other_med))
+	pref.job_other_low		= sanitize_integer(pref.job_other_low, 0, 65535, initial(pref.job_other_low))
+	//CHOMPStation Add End
 	if(!(pref.player_alt_titles)) pref.player_alt_titles = new()
 
 	if(!job_master)
@@ -133,12 +148,12 @@
 		lastJob = job
 		. += "<a href='?src=\ref[src];job_info=[rank]'>"
 		if(jobban_isbanned(user, rank))
-			if(config.usewhitelist && !check_whitelist(user))
+			if(CONFIG_GET(flag/usewhitelist) && !check_whitelist(user)) // CHOMPedit start
 				. += "<del>[rank]</del></td><td><b> \[WHITELISTED]</b></td></tr>"
 				continue
 			else
 				. += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
-				continue
+				continue // CHOMPedit end
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
 			. += "<del>[rank]</del></td></a><td> \[IN [(available_in_days)] DAYS]</td></tr>"
@@ -240,7 +255,7 @@
 		var/datum/job/job = locate(href_list["select_alt_title"])
 		if (job)
 			var/choices = list(job.title) + job.alt_titles
-			var/choice = tgui_input_list(usr, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job))
+			var/choice = tgui_input_list(user, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job)) //ChompEDIT - usr removal
 			if(choice && CanUseTopic(user))
 				SetPlayerAltTitle(job, choice)
 				return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
@@ -267,7 +282,7 @@
 		dat += "You answer to <b>[job.supervisors]</b> normally."
 
 		dat += "<hr style='clear:left;'>"
-		if(config.wikiurl)
+		if(CONFIG_GET(string/wikiurl)) // CHOMPEdit
 			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
 
 		var/alt_title = pref.GetPlayerAltTitle(job)
@@ -285,7 +300,7 @@
 
 	else if(href_list["job_wiki"])
 		var/rank = href_list["job_wiki"]
-		open_link(user,"[config.wikiurl][rank]")
+		open_link(user,"[CONFIG_GET(string/wikiurl)][rank]") // CHOMPEdit
 
 	return ..()
 
@@ -320,6 +335,7 @@
 	pref.job_medsci_high = 0
 	pref.job_engsec_high = 0
 	pref.job_talon_high = 0 //VOREStation Add
+	pref.job_other_high = 0 //CHOMPStation Add
 
 // Level is equal to the desired new level of the job. So for a value of 4, we want to disable the job.
 /datum/category_item/player_setup_item/occupation/proc/SetJobDepartment(var/datum/job/job, var/level)
@@ -377,6 +393,20 @@
 				if(3)
 					pref.job_talon_low |= job.flag
 		VOREStation Add End*/
+		//CHOMPStation Add
+		if(OTHER)
+			pref.job_other_low &= ~job.flag
+			pref.job_other_med &= ~job.flag
+			pref.job_other_high &= ~job.flag
+			switch(level)
+				if(1)
+					reset_jobhigh()
+					pref.job_other_high = job.flag
+				if(2)
+					pref.job_other_med |= job.flag
+				if(3)
+					pref.job_other_low |= job.flag
+		//CHOMPStation Add End
 
 	return 1
 
@@ -398,6 +428,12 @@
 	pref.job_talon_med = 0
 	pref.job_talon_low = 0
 	//VOREStation Add End
+
+	//CHOMPStation Add
+	pref.job_other_high = 0
+	pref.job_other_med = 0
+	pref.job_other_low = 0
+	//CHOMPStation Add End
 
 	pref.player_alt_titles.Cut()
 
@@ -431,4 +467,14 @@
 					return job_engsec_med
 				if(3)
 					return job_engsec_low
+		//CHOMPStation Add
+		if(OTHER)
+			switch(level)
+				if(1)
+					return job_other_high
+				if(2)
+					return job_other_med
+				if(3)
+					return job_other_low
+		//CHOMPStation Add End
 	return 0

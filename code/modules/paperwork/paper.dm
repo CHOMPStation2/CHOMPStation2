@@ -74,7 +74,7 @@
 	desc = "A gift card with a heart on the cover."
 	icon_state = "greetingcard_heart"
 
-/obj/item/weapon/paper/card/New()
+/obj/item/weapon/paper/card/Initialize() //ChompEDIT New --> Initialize
 	..()
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)
@@ -116,7 +116,7 @@
     if(mapload) // Jank, but we do this to prevent maploaded papers from somehow stacking across rounds if re-added to the board by a player.
         was_maploaded = TRUE
 
-/obj/item/weapon/paper/New(var/newloc, var/text, var/title)
+/obj/item/weapon/paper/Initialize(var/newloc, var/text, var/title) //ChompEDIT New --> Initialize
 	..()
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)
@@ -164,7 +164,7 @@
 		. += "<span class='notice'>You have to go closer if you want to read it.</span>"
 
 /obj/item/weapon/paper/proc/show_content(var/mob/user, var/forceshow=0)
-	if(!(istype(user, /mob/living/carbon/human) || istype(user, /mob/observer/dead) || istype(user, /mob/living/silicon) || user.universal_understand) && !forceshow)
+	if(!(forceshow || (istype(user, /mob/living/carbon/human) || istype(user, /mob/observer/dead) || istype(user, /mob/living/silicon) || (istype(user) && user.universal_understand))))
 		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY>[stars(info)][stamps]</BODY></HTML>", "window=[name]")
 		onclose(user, "[name]")
 	else
@@ -179,7 +179,7 @@
 	if((CLUMSY in usr.mutations) && prob(50))
 		to_chat(usr, "<span class='warning'>You cut yourself on the paper.</span>")
 		return
-	var/n_name = sanitizeSafe(input(usr, "What would you like to label the paper?", "Paper Labelling", null)  as text, MAX_NAME_LEN)
+	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the paper?", "Paper Labelling", null, MAX_NAME_LEN), MAX_NAME_LEN)
 
 	// We check loc one level up, so we can rename in clipboards and such. See also: /obj/item/weapon/photo/rename()
 	if((loc == usr || loc.loc && loc.loc == usr) && usr.stat == 0 && n_name)
@@ -373,9 +373,15 @@
 		t = replacetext(t, "\[grid\]", "<table>")
 		t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 		t = replacetext(t, "\[row\]", "</td><tr>")
+		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
 		t = replacetext(t, "\[cell\]", "<td>")
-		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>") //CHOMPEdit
-		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>") //CHOMPEdit 
+		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
+		 //CHOMPEdit Start
+		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>")
+		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>")
+		t = replacetext(t, "\[trlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/trader.png>")
+		t = replacetext(t, "\[pclogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/pclogo.png>")
+		//CHOMPEdit End
 
 		t = "<font face=\"[deffont]\" color=[P ? P.colour : "black"]>[t]</font>"
 	else // If it is a crayon, and he still tries to use these, make them empty!
@@ -389,6 +395,8 @@
 		t = replacetext(t, "\[/table\]", "")
 		t = replacetext(t, "\[row\]", "")
 		t = replacetext(t, "\[cell\]", "")
+		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
+		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
 		t = replacetext(t, "\[logo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 
@@ -432,7 +440,7 @@
 				qdel(src)
 
 			else
-				to_chat(user, "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>")
+				to_chat(user, span_red("You must hold \the [P] steady to burn \the [src]."))
 
 
 /obj/item/weapon/paper/Topic(href, href_list)
@@ -448,10 +456,10 @@
 			to_chat(usr, "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>")
 			return
 
-		var/raw = input(usr, "Enter what you want to write:", "Write") as null|message
+		var/raw = tgui_input_text(usr, "Enter what you want to write:", "Write", multiline = TRUE, prevent_enter = TRUE)
 		if(!raw)
 			return
-		
+
 		var/t =  sanitize(raw, MAX_PAPER_MESSAGE_LEN, extra = 0)
 		if(!t)
 			return
@@ -534,13 +542,29 @@
 /obj/item/weapon/paper/attackby(obj/item/weapon/P as obj, mob/user as mob)
 	..()
 	var/clown = 0
-	if(user.mind && (user.mind.assigned_role == "Clown"))
+	if(user.mind && ((user.mind.role_alt_title == "Clown") || (user.mind.role_alt_title == "Jester") || (user.mind.role_alt_title == "Fool"))) // CHOMPStation Edit - Let clows/fools/jesters use clown stamps
 		clown = 1
 
 	if(istype(P, /obj/item/weapon/tape_roll))
 		var/obj/item/weapon/tape_roll/tape = P
 		tape.stick(src, user)
 		return
+
+	if(istype(P, /obj/item/weapon/clipboard))
+		var/obj/item/weapon/clipboard/CB = P
+		if(src.loc == user)
+			user.drop_from_inventory(src)
+		src.loc = CB
+		CB.toppaper = src
+		CB.update_icon()
+		to_chat(user, "<span class='notice'>You clip the [src] onto \the [CB].</span>")
+
+	if(istype(P, /obj/item/weapon/folder))
+		if(src.loc == user)
+			user.drop_from_inventory(src)
+		src.loc = P
+		P.update_icon()
+		to_chat(user, "<span class='notice'>You tuck the [src] into \the [P].</span>")
 
 	if(istype(P, /obj/item/weapon/paper) || istype(P, /obj/item/weapon/photo))
 		if (istype(P, /obj/item/weapon/paper/carbon))
@@ -550,9 +574,9 @@
 				add_fingerprint(user)
 				return
 		var/obj/item/weapon/paper_bundle/B = new(src.loc)
-		if (name != "paper")
+		if (name != initial(name))
 			B.name = name
-		else if (P.name != "paper" && P.name != "photo")
+		else if (P.name != initial(P.name))
 			B.name = P.name
 		user.drop_from_inventory(P)
 		if (istype(user, /mob/living/carbon/human))
@@ -565,16 +589,12 @@
 				h_user.put_in_l_hand(B)
 			else if (h_user.l_store == src)
 				h_user.drop_from_inventory(src)
-				B.loc = h_user
-				B.hud_layerise()
-				h_user.l_store = B
-				//h_user.update_inv_pockets() //Doesn't do anything
+				if(!h_user.equip_to_slot_if_possible(B, slot_l_store))
+					h_user.drop_from_inventory(B)
 			else if (h_user.r_store == src)
 				h_user.drop_from_inventory(src)
-				B.loc = h_user
-				B.hud_layerise()
-				h_user.r_store = B
-				//h_user.update_inv_pockets() //Doesn't do anything
+				if(!h_user.equip_to_slot_if_possible(B, slot_r_store))
+					h_user.drop_from_inventory(B)
 			else if (h_user.head == src)
 				h_user.u_equip(src)
 				h_user.put_in_hands(B)

@@ -83,7 +83,7 @@
 
 /mob/living/carbon/human/proc/taur_mount(var/mob/living/M in living_mobs(1))
 	set name = "Taur Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -99,7 +99,7 @@
 		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
 
 /mob/living/carbon/human/attack_hand(mob/user as mob)
-	if(LAZYLEN(buckled_mobs))
+	if(LAZYLEN(buckled_mobs) && riding_datum) //CHOMPEdit
 		//We're getting off!
 		if(user in buckled_mobs)
 			riding_datum.force_dismount(user)
@@ -285,6 +285,11 @@
 	suit_sprites = 'icons/mob/taursuits_slug.dmi'
 	icon_sprite_tag = "slug"
 
+/datum/sprite_accessory/tail/taur/slug/snail
+	name = "Snail (Taur)"
+	icon_state = "slug_s"
+	extra_overlay = "snail_shell_marking"
+
 /datum/sprite_accessory/tail/taur/frog
 	name = "Frog (Taur)"
 	icon_state = "frog_s"
@@ -341,3 +346,13 @@
 	suit_sprites = 'icons/mob/taursuits_noodle.dmi'
 	clip_mask_state = "taur_clip_mask_noodle"
 	icon_sprite_tag = "noodle"
+
+/datum/sprite_accessory/tail/taur/zorgoia
+	name = "Zorgoia (Taur)"
+	icon = 'icons/mob/human_races/sprite_accessories/taurs.dmi'
+	icon_state = "zorgoia"
+	extra_overlay = "zorgoia_fluff"
+
+/datum/sprite_accessory/tail/taur/zorgoia/fat
+	name = "Zorgoia (Fat Taur)"
+	extra_overlay = "zorgoia_fat"

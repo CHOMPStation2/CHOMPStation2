@@ -38,15 +38,16 @@ var/list/GPS_list = list()
 /obj/item/device/gps/proc/update_holder()
 
 	if(holder && loc != holder)
-		GLOB.moved_event.unregister(holder, src)
-		GLOB.dir_set_event.unregister(holder, src)
+		UnregisterSignal(holder, COMSIG_OBSERVER_MOVED)
+		//GLOB.dir_set_event.unregister(holder, src)
 		holder.client?.screen -= compass
 		holder = null
 
 	if(istype(loc, /mob))
 		holder = loc
-		GLOB.moved_event.register(holder, src, .proc/update_compass)
-		GLOB.dir_set_event.register(holder, src, .proc/update_compass)
+		RegisterSignal(holder, COMSIG_OBSERVER_MOVED, PROC_REF(update_compass), override = TRUE)
+		holder.AddComponent(/datum/component/recursive_move)
+		//GLOB.dir_set_event.register(holder, src, PROC_REF(update_compass))
 
 	if(holder && tracking)
 		if(!is_in_processing_list)
@@ -91,9 +92,9 @@ var/list/GPS_list = list()
 	STOP_PROCESSING(SSobj, src)
 	is_in_processing_list = FALSE
 	GPS_list -= src
-	. = ..()
 	update_holder()
 	QDEL_NULL(compass)
+	. = ..()
 
 /obj/item/device/gps/proc/can_track(var/obj/item/device/gps/other, var/reachable_z_levels)
 	if(!other.tracking || other.emped || other.hide_signal)
@@ -137,12 +138,12 @@ var/list/GPS_list = list()
 	if(emped)
 		to_chat(user, "It's busted!")
 		return
-	
+
 	toggle_tracking()
 	if(tracking)
-		to_chat(user, "[src] is no longer tracking, or visible to other GPS devices.")
-	else
-		to_chat(user, "[src] is now tracking, and visible to other GPS devices.")
+		to_chat(user, "[src] is now tracking, and visible to other GPS devices.")			// CHOMPEDIT : purdev	Fixed an issue where the if/else argument was written backwards
+	else													// CHOMPEDIT : purdev	Fixed an issue where the if/else argument was written backwards
+		to_chat(user, "[src] is no longer tracking, or visible to other GPS devices.")			// CHOMPEDIT : purdev	Fixed an issue where the if/else argument was written backwards
 
 /obj/item/device/gps/proc/toggle_tracking()
 	tracking = !tracking
@@ -194,7 +195,7 @@ var/list/GPS_list = list()
 	dat["curr_z"] = curr.z
 	dat["curr_z_name"] = strip_improper(using_map.get_zlevel_name(curr.z))
 	dat["z_level_detection"] = using_map.get_map_levels(curr.z, long_range)
-	
+
 	var/list/gps_list = list()
 	for(var/obj/item/device/gps/G in GPS_list - src)
 
@@ -250,7 +251,7 @@ var/list/GPS_list = list()
 				dat += "<tr>"
 				var/gps_ref = "\ref[gps["ref"]]"
 				dat += "<td>[gps["gps_tag"]]</td><td>[gps["area_name"]]</td>"
-				
+
 				if(istype(gps_data["ref"], /obj/item/device/gps/internal/poi))
 					dat += "<td>[gps["local"] ? "[gps["direction"]] Dist: [round(gps["distance"], 10)]m" : "[gps["z_name"]]"]</td>"
 				else
@@ -323,7 +324,7 @@ var/list/GPS_list = list()
 				. = TRUE
 
 	if(href_list["tag"])
-		var/a = input(usr, "Please enter desired tag.", name, gps_tag) as text
+		var/a = tgui_input_text(usr, "Please enter desired tag.", name, gps_tag, 10)
 		a = uppertext(copytext(sanitize(a), 1, 11))
 		if(in_range(src, usr))
 			gps_tag = a

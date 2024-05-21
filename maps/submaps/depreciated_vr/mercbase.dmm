@@ -9,7 +9,6 @@
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/hos,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_w = 0;
 	pixel_x = 0;
 	pixel_y = 32
@@ -32,7 +31,6 @@
 "ae" = (
 /obj/structure/bed/padded,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_w = 0;
 	pixel_x = 0;
 	pixel_y = 32
@@ -164,7 +162,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/obj/item/weapon/storage/box/sniperammo,
+/obj/item/ammo_magazine/ammo_box/b145,
 /obj/item/weapon/gun/projectile/heavysniper,
 /turf/unsimulated/floor{
 	dir = 2;
@@ -285,8 +283,8 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
-/obj/item/weapon/storage/box/shotgunshells/large,
-/obj/item/weapon/storage/box/shotgunammo/large,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g,
 /obj/item/weapon/gun/projectile/shotgun/pump/combat,
 /obj/item/weapon/gun/projectile/shotgun/pump/combat,
 /turf/unsimulated/floor{
@@ -369,7 +367,6 @@
 /obj/item/stack/medical/bruise_pack,
 /obj/item/weapon/melee/telebaton,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_w = 0;
 	pixel_x = 0;
 	pixel_y = 32
@@ -645,7 +642,6 @@
 "aZ" = (
 /obj/structure/bed/padded,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_w = 0;
 	pixel_x = 32;
 	pixel_y = 0
@@ -1232,7 +1228,6 @@
 /area/antag/antag_base)
 "bP" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_w = 0;
 	pixel_x = 0;
 	pixel_y = 32
@@ -1694,10 +1689,10 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
 /turf/unsimulated/floor{
 	dir = 2;
 	icon_state = "dark"
@@ -3666,7 +3661,7 @@
 /area/shuttle/mercenary)
 "fZ" = (
 /obj/structure/closet/syndicate,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1";
@@ -3683,7 +3678,7 @@
 /area/shuttle/mercenary)
 "ga" = (
 /obj/structure/closet/syndicate,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/item/clothing/head/helmet,
 /obj/item/clothing/shoes/boots/jackboots,
 /obj/item/clothing/suit/armor/vest,
@@ -3926,7 +3921,7 @@
 	syndie = 1
 	},
 /obj/structure/closet/syndicate,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1";

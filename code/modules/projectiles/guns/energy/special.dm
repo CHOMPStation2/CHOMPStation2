@@ -44,6 +44,7 @@
 	name = "floral somatoray"
 	desc = "A tool that discharges controlled radiation which induces mutation in plant cells."
 	description_fluff = "The floral somatoray is a relatively recent invention of the NanoTrasen corporation, turning a process that once involved transferring plants to massive mutating racks, into a remote interface. Do not look directly into the transmission end."
+	icon = 'icons/obj/gun.dmi' //CHOMPedit
 	icon_state = "floramut100"
 	item_state = "floramut"
 	projectile_type = /obj/item/projectile/energy/floramut
@@ -81,7 +82,7 @@
 		else
 			to_chat(user, "<span class='notice'>[src] already has a laser.</span>")
 
-	else if(W.is_screwdriver())
+	else if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(emitter)
 			to_chat(user, "<span class='notice'>You remove the [emitter.name] from the [src].</span>")
 			emitter.loc = get_turf(src.loc)

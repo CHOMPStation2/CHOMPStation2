@@ -12,7 +12,8 @@
 
 	var/vore_active = 0					// If vore behavior is enabled for this mob
 
-	var/vore_capacity = 1				// The capacity (in people) this person can hold
+	//CHOMPEdit - Vore_capacity is now defined on code/modules/vore/eating/living_ch.dm
+	vore_capacity = 1					// The capacity (in people) this person can hold
 	var/vore_max_size = RESIZE_HUGE		// The max size this mob will consider eating
 	var/vore_min_size = RESIZE_TINY 	// The min size this mob will consider eating
 	var/vore_bump_chance = 0			// Chance of trying to eat anyone that bumps into them, regardless of hostility
@@ -31,6 +32,7 @@
 	var/vore_digest_chance = 25			// Chance to switch to digest mode if resisted
 	var/vore_absorb_chance = 0			// Chance to switch to absorb mode if resisted
 	var/vore_escape_chance = 25			// Chance of resisting out of mob
+	var/vore_escape_chance_absorbed = 20// Chance of absorbed prey finishing an escape. Requires a successful escape roll against the above as well.
 
 	var/vore_stomach_name				// The name for the first belly if not "stomach"
 	var/vore_stomach_flavor				// The flavortext for the first belly if not the default
@@ -40,41 +42,58 @@
 	var/vore_default_contamination_flavor = "Generic"	//Contamination descriptors
 	var/vore_default_contamination_color = "green"		//Contamination color
 
-	var/vore_fullness = 0				// How "full" the belly is (controls icons)
-	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
-	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	//CHOMPEDIT start - Moved to code/modules/vore/eating/living_ch
+	//var/vore_fullness = 0				// How "full" the belly is (controls icons)
+	//var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
+	//var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+	//var/belly_size_multiplier = 1
+	//CHOMPEDIT end.
+
 	var/life_disabled = 0				// For performance reasons
+
+	var/vore_attack_override = FALSE	// Enable on mobs you want to have special behaviour on melee grab attack.
 
 	var/mount_offset_x = 5				// Horizontal riding offset.
 	var/mount_offset_y = 8				// Vertical riding offset
 
-	var/obj/item/device/radio/headset/mob_headset/mob_radio		//Adminbus headset for simplemob shenanigans.
+	var/obj/item/device/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 	can_be_drop_pred = TRUE				// Mobs are pred by default.
+	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
+	var/damage_threshold  = 0 //For some mobs, they have a damage threshold required to deal damage to them.
 
+	var/nom_mob = FALSE //If a mob is meant to be hostile for vore purposes but is otherwise not hostile, if true makes certain AI ignore the mob
 
 	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.
 
 // Release belly contents before being gc'd!
 /mob/living/simple_mob/Destroy()
 	release_vore_contents()
-	prey_excludes.Cut()
+	LAZYCLEARLIST(prey_excludes)
 	return ..()
 
 //For all those ID-having mobs
 /mob/living/simple_mob/GetIdCard()
+	if(get_active_hand()) //CHOMPAdd Start
+		var/obj/item/I = get_active_hand()
+		var/id = I.GetID()
+		if(id)
+			return id //CHOMPAdd End
 	if(myid)
 		return myid
 
 // Update fullness based on size & quantity of belly contents
+/* CHOMPEdit - moved to code/modules/vore/eating/living_ch
 /mob/living/simple_mob/proc/update_fullness()
 	var/new_fullness = 0
 	for(var/obj/belly/B as anything in vore_organs)
 		for(var/mob/living/M in B)
 			new_fullness += M.size_multiplier
 	new_fullness = new_fullness / size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
+	new_fullness = new_fullness * belly_size_multiplier // Some mobs are small even at 100% size. Let's account for that.
 	new_fullness = round(new_fullness, 1) // Because intervals of 0.25 are going to make sprite artists cry.
 	vore_fullness = min(vore_capacity, new_fullness)
+*/
 
 /mob/living/simple_mob/update_icon()
 	. = ..()
@@ -84,6 +103,7 @@
 			voremob_awake = TRUE
 		update_fullness()
 		if(!vore_fullness)
+			update_transform()
 			return 0
 		else if((stat == CONSCIOUS) && (!icon_rest || !resting || !incapacitated(INCAPACITATION_DISABLED)) && (vore_icons & SA_ICON_LIVING))
 			icon_state = "[icon_living]-[vore_fullness]"
@@ -109,6 +129,8 @@
 	//CHOMPSTATION add
 	if(!M.devourable)	//Why was there never a check for edibility to begin with
 		return 0
+	if(M.is_incorporeal()) // CHOMPADD - No eating the phased ones
+		return 0
 	//CHOMPSTATION add end
 	if(vore_ignores_undigestable && !M.digestable) //Don't eat people with nogurgle prefs
 		//ai_log("vr/wont eat [M] because I am picky", 3) //VORESTATION AI TEMPORARY REMOVAL
@@ -116,7 +138,7 @@
 	if(!M.allowmobvore || !M.devourable) // Don't eat people who don't want to be ate by mobs
 		//ai_log("vr/wont eat [M] because they don't allow mob vore", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
-	if(M in prey_excludes) // They're excluded
+	if(LAZYFIND(prey_excludes, M)) // They're excluded
 		//ai_log("vr/wont eat [M] because they are excluded", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
 	if(M.size_multiplier < vore_min_size || M.size_multiplier > vore_max_size)
@@ -142,7 +164,7 @@
 			return PounceTarget(L, pouncechance)
 
 		// We're not attempting a pounce, if they're down or we can eat standing, do it as long as they're edible. Otherwise, hit normally.
-		if(will_eat(L) && (!L.canmove || vore_standing_too))
+		if(will_eat(L) && (L.lying || vore_standing_too)) //CHOMPEdit
 			return EatTarget(L)
 		else
 			return ..()
@@ -153,6 +175,10 @@
 /mob/living/simple_mob/proc/CanPounceTarget(var/mob/living/M) //returns either FALSE or a %chance of success
 	if(!M.canmove || issilicon(M) || world.time < vore_pounce_cooldown) //eliminate situations where pouncing CANNOT happen
 		return FALSE
+	// CHOMPADD Start - No pouncing on the shades
+	if(M.is_incorporeal())
+		return FALSE
+	// CHOMPADD End
 	if(!prob(vore_pounce_chance) || !will_eat(M)) //mob doesn't want to pounce
 		return FALSE
 	if(vore_standing_too) //100% chance of hitting people we can eat on the spot
@@ -173,7 +199,7 @@
 		M.visible_message("<span class='danger'>\The [src] attempts to pounce \the [M] but misses!</span>!")
 		playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 
-	if(will_eat(M) && (!M.canmove || vore_standing_too)) //if they're edible then eat them too
+	if(will_eat(M) && (M.lying || vore_standing_too)) //if they're edible then eat them too //CHOMPEdit
 		return EatTarget(M)
 	else
 		return //just leave them
@@ -213,13 +239,15 @@
 		return
 
 	// Since they have bellies, add verbs to toggle settings on them.
-	verbs |= /mob/living/simple_mob/proc/toggle_digestion
-	verbs |= /mob/living/simple_mob/proc/toggle_fancygurgle
+	add_verb(src,/mob/living/simple_mob/proc/toggle_digestion) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/toggle_fancygurgle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
 
 	//A much more detailed version of the default /living implementation
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
+	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode
@@ -230,6 +258,7 @@
 	B.contamination_color = vore_default_contamination_color
 	B.escapable = vore_escape_chance > 0
 	B.escapechance = vore_escape_chance
+	B.escapechance_absorbed = vore_escape_chance_absorbed
 	B.digestchance = vore_digest_chance
 	B.absorbchance = vore_absorb_chance
 	B.human_prey_swallow_time = swallowTime
@@ -255,6 +284,11 @@
 		"The juices pooling beneath you sizzle against your sore skin.",
 		"The churning walls slowly pulverize you into meaty nutrients.",
 		"The stomach glorps and gurgles as it tries to work you into slop.")
+	can_be_drop_pred = TRUE // Mobs will eat anyone that decides to drop/slip into them by default.
+//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Why are they even using this one, I do not understand.
+	B.belly_fullscreen = "a_tumby" //Chompedit
+	B.belly_fullscreen_color = "#823232" //Chompedit
+	B.belly_fullscreen_color2 = "#823232" //Chompedit
 
 /mob/living/simple_mob/Bumped(var/atom/movable/AM, yes)
 	if(tryBumpNom(AM))
@@ -264,6 +298,8 @@
 /mob/living/simple_mob/proc/tryBumpNom(var/mob/tmob)
 	//returns TRUE if we actually start an attempt to bumpnom, FALSE if checks fail or the random bump nom chance fails
 	if(istype(tmob) && will_eat(tmob) && !istype(tmob, type) && prob(vore_bump_chance) && !ckey) //check if they decide to eat. Includes sanity check to prevent cannibalism.
+		if(!faction_bump_vore && faction == tmob.faction)
+			return FALSE
 		if(tmob.canmove && prob(vore_pounce_chance)) //if they'd pounce for other noms, pounce for these too, otherwise still try and eat them if they hold still
 			tmob.Weaken(5)
 		tmob.visible_message("<span class='danger'>\The [src] [vore_bump_emote] \the [tmob]!</span>!")
@@ -355,7 +391,7 @@
 
 /mob/living/simple_mob/proc/animal_mount(var/mob/living/M in living_mobs(1))
 	set name = "Animal Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //CHOMPEdit
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -369,28 +405,28 @@
 	if(buckle_mob(M))
 		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
 
-/mob/living/simple_mob/handle_message_mode(message_mode, message, verb, speaking, used_radios, alt_name)
-	if(mob_radio)
-		switch(message_mode)
-			if("intercom")
-				for(var/obj/item/device/radio/intercom/I in view(1, null))
-					I.talk_into(src, message, verb, speaking)
-					used_radios += I
-			if("headset")
-				if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset/mob_headset))
-					mob_radio.talk_into(src,message,null,verb,speaking)
+/mob/living/simple_mob/handle_message_mode(message_mode, message, verb, used_radios, speaking, alt_name)
+	//CHOMPEdit - This whole proc tbh
+	if(message_mode)
+		if(message_mode == "intercom")
+			for(var/obj/item/device/radio/intercom/I in view(1, null))
+				I.talk_into(src,message,message_mode,verb,speaking)
+				used_radios += I
+		if(message_mode == "headset")
+			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+				mob_radio.talk_into(src,message,message_mode,verb,speaking)
+				used_radios += mob_radio
+		else
+			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+				if(mob_radio.channels[message_mode])
+					mob_radio.talk_into(src,message,message_mode,verb,speaking)
 					used_radios += mob_radio
-			else
-				if(message_mode)
-					if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset/mob_headset))
-						mob_radio.talk_into(src,message, message_mode, verb, speaking)
-						used_radios += mob_radio
 	else
 		..()
 
 /mob/living/simple_mob/proc/leap()
 	set name = "Pounce Target"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //CHOMPEdit
 	set desc = "Select a target to pounce at."
 
 	if(last_special > world.time)

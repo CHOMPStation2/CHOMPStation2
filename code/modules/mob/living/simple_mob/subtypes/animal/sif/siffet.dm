@@ -30,7 +30,7 @@
 	maxHealth = 60
 	health = 60
 
-	movement_cooldown = 0
+	movement_cooldown = -2
 
 	melee_damage_lower = 10
 	melee_damage_upper = 15
@@ -40,6 +40,7 @@
 
 	say_list_type = /datum/say_list/siffet
 	ai_holder_type = /datum/ai_holder/simple_mob/siffet
+	
 
 /datum/say_list/siffet
 	speak = list("Yap!", "Heh!", "Huff.")
@@ -57,5 +58,10 @@
 
 /mob/living/simple_mob/animal/sif/siffet/IIsAlly(mob/living/L)
 	. = ..()
-	if(!. && L.mob_size > 10) //Attacks things it considers small enough to take on, otherwise only attacks if attacked.
+	//CHOMPAdd START: Compatibility with structures
+	if(!. && !istype(L, /mob/living))
 		return TRUE
+	else
+		if(!. && L.mob_size > 10) //Attacks things it considers small enough to take on, otherwise only attacks if attacked.
+			return TRUE
+	//CHOMPAdd END

@@ -7,7 +7,6 @@
 	maint_access = 0
 	//add_req_access = 0
 	//operation_req_access = list(access_hos)
-	damage_absorption = list("brute"=0.7,"fire"=1,"bullet"=0.7,"laser"=0.85,"energy"=1,"bomb"=0.8)
 	var/am = "d3c2fbcadca903a41161ccc9df9cf948"
 
 	max_hull_equip = 2
@@ -98,7 +97,7 @@
 						return
 				M.updatehealth()
 			src.occupant_message("You hit [T].")
-			src.visible_message("<font color='red'><b>[src.name] hits [T].</b></font>")
+			src.visible_message(span_red("<b>[src.name] hits [T].</b>"))
 		else
 			step_away(M,src)
 			src.occupant_message("You push [T] out of the way.")
@@ -115,7 +114,7 @@
 		if(src.occupant.a_intent == I_HURT || istype(src.occupant, /mob/living/carbon/brain)) // Don't smash unless we mean it
 			if(damtype == "brute")
 				src.occupant_message("You hit [T].")
-				src.visible_message("<font color='red'><b>[src.name] hits [T]</b></font>")
+				src.visible_message(span_red("<b>[src.name] hits [T]</b>"))
 				playsound(src, 'sound/weapons/heavysmash.ogg', 50, 1)
 
 				if(istype(T, /obj/structure/girder))

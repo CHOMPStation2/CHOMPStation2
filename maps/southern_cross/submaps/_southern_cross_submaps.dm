@@ -4,47 +4,25 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Primary Load - these are areas that will ALWAYS be in play.
 
-//Temp Removal TFF 15/2/20
-/*
-// Rykka adds Belt Mining
 
-#include "asteroid_belt/_templates.dm"
-#include "asteroid_belt/belt_miner_things.dm"
-/datum/map_template/sc_lateload/sc_belt_miner
-	name = "Mining Asteroid Belt"
-	desc = "Mining, but harder, and in spess."
-	mappath = 'sc_belt_miner.dmm'
-
-	associated_map_datum = /datum/map_z_level/sc_lateload/belt_miner
-
-/datum/map_z_level/sc_lateload/belt_miner
-	name = "Asteroid Belt"
-	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
-	z = Z_LEVEL_BELT
-
-/datum/map_template/sc_lateload/sc_belt_miner/on_map_loaded(z) // code needed to run ore generation
-	. = ..()
-	seed_submaps(list(Z_LEVEL_BELT), 300, /area/mine/unexplored/belt_miner, /datum/map_template/asteroid_belt) // Give this Z-level 3x normal points for POI generation.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_BELT, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_BELT, 64, 64)         // Create the mining ore distribution map.
-
-*/
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 /// If you're reading this and want to add a new away mission, reference /tether/submaps/_tether_submaps.dm or existing away missions for how to set it up.
 
-/*
+// This is for integration tests only.
+// Always add any new away missions/gateways/lateloaded maps that are not PoIs here.
 #if AWAY_MISSION_TEST
-#include "beach/beach.dmm"
-#include "beach/cave.dmm"
-#include "alienship/alienship.dmm"
-#include "aerostat/aerostat.dmm"
-#include "aerostat/surface.dmm"
-#include "space/debrisfield.dmm"
+//#include "../overmap/planets/kara/aerostat/aerostat.dmm" //Disabled due to low usage
+//#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm" //Disabled due to low usage
+#include "../overmap/space/fueldepot.dmm"
+#include "../overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
+#include "gateway/BaseBlep.dmm"
+#include "gateway/maddnesslab.dmm"
+#include "gateway/snowfield.dmm"
+#include "gateway/hiddeneclipse.dmm"
+#include "virtual_reality/constructVR.dmm"
 #endif
-*/
 
-// Commented out until we either port or replace away missions, but this is the framework for loading each away mission.
 
 //////////////////////////////////////////////////////////////////////////////////////
 
@@ -59,11 +37,32 @@
 	name = "Gateway Destination"
 	z = Z_LEVEL_GATEWAY
 
-#include "gateway/snowfield_ch.dm"	//CHOMPEDIT - Use the good one instead
+#include "gateway/snowfield_ch.dm" //CHOMPEDIT - Use the good one instead
 /datum/map_template/sc_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"
 	mappath = 'gateway/snowfield.dmm'
+
+#include "gateway/darkrps.dm"
+/datum/map_template/sc_lateload/gateway/darkrps
+	name = "Abandoned City"
+	desc = "An abandoned city overrun with piracy and mercernaries."
+	mappath = 'gateway/darkrps.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+#include "gateway/BaseBlep.dm"
+/datum/map_template/sc_lateload/gateway/baseblep
+	name = "Base Blep"
+	desc = "A brand new but already lost base at the end of a squishy canyon"
+
+	mappath = 'gateway/BaseBlep.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+#include "gateway/maddnesslab.dm"
+/datum/map_template/sc_lateload/gateway/maddnesslab
+	name = "Maddness Lab"
+	desc = "An ancient base brimming with creations of maddness"
+	mappath = 'gateway/maddnesslab.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/carpfarm.dm"
@@ -73,8 +72,33 @@
 	mappath = 'gateway/carpfarm.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
+#include "gateway/hiddeneclipse.dm"
+/datum/map_template/sc_lateload/gateway/hiddeneclipse
+	name = "Distant Mining Facility"
+	desc = "Asteroid mining facility, lost to unknown horrors"
+	mappath = 'gateway/hiddeneclipse.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
+//VR maps go here, tell me if theres a better way to load this
+// #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
+/datum/map_template/sc_lateload/vr_world
+	name = "VR World"
+	desc = "A dynamic, virtual world."
+	mappath = 'virtual_reality/constructVR.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/vr_world
+
+/datum/map_z_level/sc_lateload/vr_world
+	name = "Away Mission - Fuel Depot"
+	z = Z_LEVEL_VR_REALM
+
+/datum/map_template/sc_lateload/thor
+	name = "Thor Surface"
+	desc = "The jungle like surface of Sif's moon"
+	mappath = 'maps/southern_cross/overmap/planets/thor/thor.dmm'
+	associated_map_datum = /datum/planet/thor
 
 //Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
+/* Pretty sure we don't use this.
 #include "../../expedition_vr/space/_fueldepot.dm"
 /datum/map_template/sc_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
@@ -85,7 +109,7 @@
 /datum/map_z_level/sc_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_FUELDEPOT
-
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps
@@ -200,7 +224,7 @@
 
 	if(!LAZYLEN(mobs_to_pick_from))
 		error("Mob spawner at [x],[y],[z] ([get_area(src)]) had no mobs_to_pick_from set on it!")
-		initialized = TRUE
+		flags |= ATOM_INITIALIZED //CHOMPEdit
 		return INITIALIZE_HINT_QDEL
 	START_PROCESSING(SSobj, src)
 

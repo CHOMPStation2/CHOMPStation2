@@ -506,10 +506,10 @@
 			user.drop_item()
 			I.loc = src
 			rockets += I
-			to_chat(user, "<font color='blue'>You put the rocket in [src].</font>")
-			to_chat(user, "<font color='blue'>[rockets.len] / [max_rockets] rockets.</font>")
+			to_chat(user, span_blue("You put the rocket in [src]."))
+			to_chat(user, span_blue("[rockets.len] / [max_rockets] rockets."))
 		else
-			to_chat(usr, "<font color='red'>[src] cannot hold more rockets.</font>")
+			to_chat(usr, span_red("[src] cannot hold more rockets."))
 
 /obj/item/weapon/gun/launcher/scopedrocket/consume_next_projectile()
 	if(rockets.len)
@@ -580,6 +580,17 @@
 	they won't be able to get in their lifetime, what they say.<BR>(00:52) Vlad is just using the lizard as their \
 	Punching bag, now. <BR>(00:59) Gosh, their screams are worser than my grandma. Who would know an overgrown lizard \
 	would sound like that..<BR>(01:07) Best to finish up, now. We can get more informations from'em. Yemelyan Fedoro, out."
+
+/obj/item/weapon/paper/awaygate/snowfield/final_note
+	name = "Final note"
+	info = "Gosh. We have opened up the hell's gate...<BR>Everyone is screaming and yelling into mid-air like a mania, \
+	and this... Whispering voice!<BR><B>It's in my head!</B><BR><BR>Peoples who managed to escape after the initial lockdown \
+	are now trying their damnnest to break back INSIDE the base!<BR><BR>I tried my best to ignore the voice and cornered \
+	in this security outpost, but I'm not sure how long I will maintain sane, unlike those peoples out there...\
+	The voice is now <B>yelling, SCREAMING</B> at me as the time passes by! <BR><BR> I can't take this anymore longer, \
+	it is madness... Pure madness... <BR>I blew up the fastest way to the command center, so these maniacs won't be able to \
+	get to the command center, where the voice is echoing... But they have guns now... <BR> I'm not sure how long the blockade \
+	will last with that much firepower and manpower... And their pure will of madness... <BR><BR> I don't want to be one of them..."
 
 /obj/item/weapon/paper/awaygate/snowfield/note // Little easter egg for appreciation.
 	desc = "A gift card with a heart on the cover. Hey, there's a scribble on its back..."
@@ -680,4 +691,4 @@
 	desc = "An ID card with a full access through out the base. There's a mark of a red \
 	star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp-dark", "top-blue", "pips-gold", "stripe-gold", "stamp-s", "clip")
-	access = list (1, 3, 20, 30, 47, 61)
+	access = list (1, 2, 3, 4, 5, 10, 11, 20, 26, 28, 30, 33, 45, 47, 53, 56, 61)

@@ -6,7 +6,7 @@
 	default_language = LANGUAGE_VOX
 	language = LANGUAGE_GALCOM
 	species_language = LANGUAGE_VOX
-	num_alternate_languages = 1
+	num_alternate_languages = 3
 	color_mult = 1  //CHOMP Edit
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL)
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,  /datum/unarmed_attack/claws/strong, /datum/unarmed_attack/bite/strong)
@@ -28,12 +28,17 @@
 
 	scream_verb_1p = "shriek"
 	scream_verb_3p = "shrieks"
-	male_scream_sound = 'sound/voice/shriek1.ogg'
-	female_scream_sound = 'sound/voice/shriek1.ogg'
-	male_cough_sounds = list('sound/voice/shriekcough.ogg')
-	female_cough_sounds = list('sound/voice/shriekcough.ogg')
-	male_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
-	female_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
+	pain_verb_1p = "shriek"
+	pain_verb_3p = "shrieks"
+	species_sounds = "Vox"
+	// CHOMPedit: Species Sounds Standardization
+	// male_scream_sound = list('sound/voice/shriek1.ogg') // CHOMPEdit: List-ified
+	// female_scream_sound = list('sound/voice/shriek1.ogg') // CHOMPEdit: List-ified
+	// male_cough_sounds = list('sound/voice/shriekcough.ogg')
+	// female_cough_sounds = list('sound/voice/shriekcough.ogg')
+	// male_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
+	// female_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
+	// CHOMPEdit End
 
 	warning_low_pressure = 50
 	hazard_low_pressure = 0
@@ -46,10 +51,12 @@
 
 	breath_type = "nitrogen" //CHOMPedit
 	poison_type = "oxygen"
+	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
 
 	flags = NO_SCAN | NO_DEFIB
-	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_SKIN_COLOR //CHOMP Edit
+	spawn_flags = SPECIES_IS_WHITELISTED
+	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_SKIN_COLOR
 
 	blood_color = "#9066BD"
 	flesh_color = "#808D11"
@@ -110,6 +117,3 @@
 	H.internal = locate(/obj/item/weapon/tank) in H.contents
 	if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
 		H.internals.icon_state = "internal1"
-
-/datum/species/vox/get_perfect_belly_air_type()
-	return /datum/gas_mixture/belly_air/vox

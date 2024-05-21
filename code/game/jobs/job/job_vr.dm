@@ -17,6 +17,11 @@
 	//Time required in the department as other jobs before playing this one (in hours)
 	var/dept_time_required = 0
 
+	//Do we forbid ourselves from earning PTO?
+	var/playtime_only = FALSE
+
+	var/requestable = TRUE
+
 // Check client-specific availability rules.
 /datum/job/proc/player_has_enough_pto(client/C)
 	return timeoff_factor >= 0 || (C && LAZYACCESS(C.department_hours, pto_type) > 0)
@@ -25,7 +30,7 @@
 	return (available_in_playhours(C) == 0)
 
 /datum/job/proc/available_in_playhours(client/C)
-	if(C && config.use_playtime_restriction_for_jobs && dept_time_required)
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required) // CHOMPEdit
 		if(isnum(C.play_hours[pto_type])) // Has played that department before
 			return max(0, dept_time_required - C.play_hours[pto_type])
 		else // List doesn't have that entry, maybe never played, maybe invalid PTO type (you should fix that...)
@@ -36,17 +41,17 @@
 
 // Captain gets every department combined
 /datum/job/captain/available_in_playhours(client/C)
-	if(C && config.use_playtime_restriction_for_jobs && dept_time_required)
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required) // CHOMPEdit
 		var/remaining_time_needed = dept_time_required
 		for(var/key in C.play_hours)
-			if(isnum(C.play_hours[key]))
+			if(isnum(C.play_hours[key]) && !(key == PTO_TALON))
 				remaining_time_needed = max(0, remaining_time_needed - C.play_hours[key])
 		return remaining_time_needed
 	return 0
 
 // HoP gets civilian, cargo, and exploration combined
 /datum/job/hop/available_in_playhours(client/C)
-	if(C && config.use_playtime_restriction_for_jobs && dept_time_required)
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required) // CHOMPEdit
 		var/remaining_time_needed = dept_time_required
 		if(isnum(C.play_hours[PTO_CIVILIAN]))
 			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_CIVILIAN])
@@ -56,3 +61,6 @@
 			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_EXPLORATION])
 		return remaining_time_needed
 	return 0
+
+/datum/job/proc/get_request_reasons()
+	return list()

@@ -42,8 +42,10 @@
 #define COMSIG_PARENT_QDELETING "parent_qdeleting"
 /// generic topic handler (usr, href_list)
 #define COMSIG_TOPIC "handle_topic"
-/// from datum ui_act (usr, action)
+/// from datum tgui_act (usr, action)
 #define COMSIG_UI_ACT "COMSIG_UI_ACT"
+/// from datum tgui_fallback (payload)
+#define COMSIG_UI_FALLBACK "COMSIG_UI_FALLBACK"
 
 
 /// fires on the target datum when an element is attached to it (/datum/element)
@@ -397,10 +399,6 @@
 #define COMSIG_CARBON_EMBED_RIP "item_embed_start_rip"
 ///called when removing a given item from a mob, from mob/living/carbon/remove_embedded_object(mob/living/carbon/target, /obj/item)
 #define COMSIG_CARBON_EMBED_REMOVAL "item_embed_remove_safe"
-
-// /mob/living/simple_animal/hostile signals
-#define COMSIG_HOSTILE_ATTACKINGTARGET "hostile_attackingtarget"
-	#define COMPONENT_HOSTILE_NO_ATTACK (1<<0)
 
 // /obj signals
 
@@ -781,3 +779,20 @@
 	#define ELEMENT_CONFLICT_FOUND	(1<<0)
 //From reagents touch_x.
 #define COMSIG_REAGENTS_TOUCH "reagent_touch"
+
+
+//Moved observer stuff to DCS
+#define COMSIG_OBSERVER_MOVED "observer_move"
+#define COMSIG_OBSERVER_DESTROYED "observer_destroyed"
+#define COMSIG_OBSERVER_SHUTTLE_ADDED "observer_shuttle_added"
+#define COMSIG_OBSERVER_SHUTTLE_PRE_MOVE "observer_shuttle_premove"
+#define COMSIG_OBSERVER_SHUTTLE_MOVED "observer_shuttle_moved"
+#define COMSIG_OBSERVER_TURF_ENTERED "observer_turf_entered"
+#define COMSIG_OBSERVER_TURF_EXITED "observer_turf_exited"
+#define COMSIG_OBSERVER_Z_MOVED "observer_z_moved"
+#define COMSIG_OBSERVER_MOB_EQUIPPED "observer_mob_equipped"
+#define COMSIG_OBSERVER_ITEM_EQUIPPED "observer_item_equipped"
+#define COMSIG_OBSERVER_MOB_UNEQUIPPED "observer_mob_unequipped"
+#define COMSIG_OBSERVER_ITEM_UNEQUIPPED "observer_item_unequipped"
+#define COMSIG_OBSERVER_APC "observer_apc"
+#define COMSIG_OBSERVER_GLOBALMOVED "observer_global_move"

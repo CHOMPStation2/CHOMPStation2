@@ -32,8 +32,8 @@
 		overlays.Cut() // Snowflake handling, avoiding SSoverlays
 	else
 		icon_state = enabled_icon_state
-		flags |= OVERLAY_QUEUED //Trick SSoverlays
-		SSoverlays.queue += src
+		//flags |= OVERLAY_QUEUED //Trick SSoverlays //CHOMPEdit
+		//SSoverlays.queue += src //CHOMPEdit
 
 /obj/effect/shield/proc/update_color()
 	if(disabled_for || diffused_for)
@@ -147,7 +147,7 @@
 			continue
 		// Note: Range is a non-exact aproximation of the spread effect. If it doesn't look good
 		// we'll need to switch to actually walking along the shields to get exact number of steps away.
-		addtimer(CALLBACK(S, .proc/impact_flash), get_dist(src, S) * 2)
+		addtimer(CALLBACK(S, PROC_REF(impact_flash)), get_dist(src, S) * 2)
 	impact_flash()
 
 // Small visual effect, makes the shield tiles brighten up by becoming more opaque for a moment

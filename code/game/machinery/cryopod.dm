@@ -219,6 +219,7 @@
 	var/last_no_computer_message = 0
 	var/applies_stasis = 0	//VOREStation Edit: allow people to change their mind
 
+	var/quiet = FALSE // CHOMPEdit - No announcement.
 /obj/machinery/cryopod/robot
 	name = "robotic storage unit"
 	desc = "A storage unit for robots."
@@ -421,6 +422,12 @@
 	items -= announce // or the autosay radio.
 
 	for(var/obj/item/W in items)
+		if(islist(W.possessed_voice)) //CHOMPAdd
+			for(var/mob/living/V in W.possessed_voice) //CHOMPEdit - Revert temporary patch
+				//CHOMPEdit Start - Don't try and despawn, instead just ghost and delete, same as item destruction
+				V.ghostize(0)
+				qdel(V)
+				//CHOMPEdit End
 		//VOREStation Addition Start
 		if(istype(W, /obj/item/device/pda))
 			var/obj/item/device/pda/found_pda = W
@@ -473,68 +480,76 @@
 		SStranscore.leave_round(to_despawn)
 	//VOREStation Edit End - Resleeving.
 
-	//Handle job slot/tater cleanup.
-	var/job = to_despawn.mind.assigned_role
+		// Everything below should only be applicable to a cliented living/carbon/human.
+		// All living/carbon/humans should have minds.
 
-	job_master.FreeRole(job)
+		//Handle job slot/tater cleanup.
+		var/job = to_despawn.mind.assigned_role
+		job_master.FreeRole(job)
+		to_despawn.mind.assigned_role = null
 
-	if(to_despawn.mind.objectives.len)
-		qdel(to_despawn.mind.objectives)
-		to_despawn.mind.special_role = null
+		if(to_despawn.mind.objectives.len)
+			qdel(to_despawn.mind.objectives)
+			to_despawn.mind.special_role = null
 
-	//else
-		//if(ticker.mode.name == "AutoTraitor")
-			//var/datum/game_mode/traitor/autotraitor/current_mode = ticker.mode
-			//current_mode.possible_traitors.Remove(to_despawn)
+		//else
+			//if(ticker.mode.name == "AutoTraitor")
+				//var/datum/game_mode/traitor/autotraitor/current_mode = ticker.mode
+				//current_mode.possible_traitors.Remove(to_despawn)
 
-	// Delete them from datacore.
+		// Delete them from datacore.
 
-	if(PDA_Manifest.len)
-		PDA_Manifest.Cut()
-	for(var/datum/data/record/R in data_core.medical)
-		if((R.fields["name"] == to_despawn.real_name))
-			qdel(R)
-	for(var/datum/data/record/T in data_core.security)
-		if((T.fields["name"] == to_despawn.real_name))
-			qdel(T)
-	for(var/datum/data/record/G in data_core.general)
-		if((G.fields["name"] == to_despawn.real_name))
-			qdel(G)
-
-	// Also check the hidden version of each datacore, if they're an offmap role.
-	var/datum/job/J = SSjob.get_job(job)
-	if(J?.offmap_spawn)
-		for(var/datum/data/record/R in data_core.hidden_general)
+		if(PDA_Manifest.len)
+			PDA_Manifest.Cut()
+		for(var/datum/data/record/R in data_core.medical)
 			if((R.fields["name"] == to_despawn.real_name))
 				qdel(R)
-		for(var/datum/data/record/T in data_core.hidden_security)
+		for(var/datum/data/record/T in data_core.security)
 			if((T.fields["name"] == to_despawn.real_name))
 				qdel(T)
-		for(var/datum/data/record/G in data_core.hidden_medical)
+		for(var/datum/data/record/G in data_core.general)
 			if((G.fields["name"] == to_despawn.real_name))
 				qdel(G)
 
-	icon_state = base_icon_state
+		// Also check the hidden version of each datacore, if they're an offmap role.
+		var/datum/job/J = SSjob.get_job(job)
+		if(J?.offmap_spawn)
+			for(var/datum/data/record/R in data_core.hidden_general)
+				if((R.fields["name"] == to_despawn.real_name))
+					qdel(R)
+			for(var/datum/data/record/T in data_core.hidden_security)
+				if((T.fields["name"] == to_despawn.real_name))
+					qdel(T)
+			for(var/datum/data/record/G in data_core.hidden_medical)
+				if((G.fields["name"] == to_despawn.real_name))
+					qdel(G)
 
-	//TODO: Check objectives/mode, update new targets if this mob is the target, spawn new antags?
+		icon_state = base_icon_state
+
+		//TODO: Check objectives/mode, update new targets if this mob is the target, spawn new antags?
 
 
-	//Make an announcement and log the person entering storage.
-	control_computer.frozen_crew += "[to_despawn.real_name], [to_despawn.mind.role_alt_title] - [stationtime2text()]"
-	control_computer._admin_logs += "[key_name(to_despawn)] ([to_despawn.mind.role_alt_title]) at [stationtime2text()]"
-	log_and_message_admins("[key_name(to_despawn)] ([to_despawn.mind.role_alt_title]) entered cryostorage.")
+		//Make an announcement and log the person entering storage.
+		control_computer.frozen_crew += "[to_despawn.real_name], [to_despawn.mind.role_alt_title] - [stationtime2text()]"
+		control_computer._admin_logs += "[key_name(to_despawn)] ([to_despawn.mind.role_alt_title]) at [stationtime2text()]"
+		log_and_message_admins("[key_name(to_despawn)] ([to_despawn.mind.role_alt_title]) entered cryostorage.")
 
-	//VOREStation Edit Start
-	var/depart_announce = TRUE
+		//VOREStation Edit Start
+		var/depart_announce = TRUE
+		var/departing_job = to_despawn.mind.role_alt_title
 
-	if(istype(to_despawn, /mob/living/dominated_brain))
-		depart_announce = FALSE
 
-	if(depart_announce)
-		announce.autosay("[to_despawn.real_name], [to_despawn.mind.role_alt_title], [on_store_message]", "[on_store_name]", announce_channel, using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE))
-		visible_message("<span class='notice'>\The [initial(name)] [on_store_visible_message_1] [to_despawn.real_name] [on_store_visible_message_2]</span>", 3)
+		if(istype(to_despawn, /mob/living/dominated_brain))
+			depart_announce = FALSE
 
-	//VOREStation Edit End
+		if(src.quiet) // CHOMPEdit - No announcement.
+			depart_announce = FALSE
+
+		if(depart_announce)
+			announce.autosay("[to_despawn.real_name][departing_job ? ", [departing_job], " : " "][on_store_message]", "[on_store_name]", announce_channel, using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE))
+			visible_message("<span class='notice'>\The [initial(name)] [on_store_visible_message_1] [to_despawn.real_name] [on_store_visible_message_2]</span>", 3)
+
+		//VOREStation Edit End
 
 	//VOREStation Edit begin: Dont delete mobs-in-mobs
 	if(to_despawn.client && to_despawn.stat<2)
@@ -732,7 +747,7 @@
 
 		// Book keeping!
 		var/turf/location = get_turf(src)
-		log_admin("[key_name_admin(M)] has entered a stasis pod. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)")
+		log_admin("[key_name_admin(M)] has entered a stasis pod. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)")
 		message_admins("<span class='notice'>[key_name_admin(M)] has entered a stasis pod.</span>")
 
 		//Despawning occurs when process() is called with an occupant without a client.

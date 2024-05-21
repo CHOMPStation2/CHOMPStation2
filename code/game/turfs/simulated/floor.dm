@@ -18,7 +18,15 @@
 		'sound/effects/footstep/plating2.ogg',
 		'sound/effects/footstep/plating3.ogg',
 		'sound/effects/footstep/plating4.ogg',
-		'sound/effects/footstep/plating5.ogg'))
+		'sound/effects/footstep/plating5.ogg'),
+		SPECIES_TESHARI = list(
+		'sound/effects/footstep/BudgieStep1.ogg',
+		'sound/effects/footstep/BudgieStep2.ogg',
+		'sound/effects/footstep/BudgieStep3.ogg',
+		'sound/effects/footstep/BudgieStep4.ogg',
+		'sound/effects/footstep/BudgieStep5.ogg',
+		'sound/effects/footstep/BudgieStep6.ogg',
+		)) // CHOMPedit: tesh steps
 
 	var/list/old_decals = null
 
@@ -27,6 +35,7 @@
 	var/initial_flooring
 	var/decl/flooring/flooring
 	var/mineral = DEFAULT_WALL_MATERIAL
+	var/can_be_plated = TRUE // This is here for inheritance's sake. Override to FALSE for turfs you don't want someone to simply slap a plating over such as hazards.
 
 	thermal_conductivity = 0.040
 	heat_capacity = 10000
@@ -87,7 +96,7 @@
 	if(!is_plating()) // Flooring -> Plating
 		swap_decals()
 		if(flooring.build_type && place_product)
-			new flooring.build_type(src)
+			new flooring.build_type(src, flooring.build_cost) //VOREstation Edit: conservation of mass
 		var/newtype = flooring.get_plating_type()
 		if(newtype) // Has a custom plating type to become
 			set_flooring(get_flooring_data(newtype))
@@ -111,6 +120,7 @@
 /turf/simulated/floor/can_engrave()
 	return (!flooring || flooring.can_engrave)
 
+/* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /turf/simulated/floor/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
@@ -178,10 +188,10 @@
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
 			ChangeTurf(get_base_turf_by_area(src), preserve_outdoors = TRUE)
 			return TRUE
-
+*/
 /turf/simulated/floor/AltClick(mob/user)
 	if(isliving(user))
 		var/mob/living/livingUser = user
 		if(try_graffiti(livingUser, livingUser.get_active_hand()))
 			return
-	. = ..() 
+	. = ..()

@@ -106,13 +106,13 @@
 		if(choice == "No")
 			return
 		var/basecolor = input(user, "Select a base color for the canvas:", "Base Color", canvas_color) as null|color
-		if(basecolor && Adjacent(user, src) && Adjacent(user, I))
+		if(basecolor && Adjacent(user) && user.get_active_hand() == I)
 			canvas_color = basecolor
 			reset_grid()
 			user.visible_message("[user] smears paint on [src], covering the entire thing in paint.", "You smear paint on [src], changing the color of the entire thing.", runemessage = "smears paint")
 			update_appearance()
 			return
-			
+
 	if(user.a_intent == I_HELP)
 		tgui_interact(user)
 	else
@@ -141,7 +141,8 @@
 				return FALSE
 			var/x = text2num(params["x"])
 			var/y = text2num(params["y"])
-			grid[x][y] = color
+			if(grid?[x]?[y])
+				grid[x][y] = color
 			used = TRUE
 			update_appearance()
 			. = TRUE
@@ -248,7 +249,7 @@
 	framed_offset_y = 6
 
 /obj/item/canvas/twentyfour_twentyfour
-	name = "ai universal standard canvas"
+	//name = "ai universal standard canvas"					// Uncomment this when AI can actually
 	//desc = "Besides being very large, the AI can accept these as a display from their internal database after you've hung it up." // Not yet
 	icon_state = "24x24"
 	width = 24
@@ -291,7 +292,7 @@
 	if(new_color)
 		selected_color = new_color
 		color_drop.color = new_color
-		
+
 	cut_overlays()
 	if(hud_level)
 		add_overlay(color_drop)
@@ -320,7 +321,7 @@
 	refund_type = /obj/item/stack/material/wood
 	icon_state = "frame-empty"
 	build_machine_type = /obj/structure/sign/painting
-	
+
 /obj/structure/sign/painting
 	name = "Painting"
 	desc = "Art or \"Art\"? You decide."
@@ -394,7 +395,7 @@
 		frame_canvas(user, I)
 	else if(current_canvas && current_canvas.painting_name == initial(current_canvas.painting_name) && istype(I,/obj/item/weapon/pen))
 		try_rename(user)
-	else if(current_canvas && I.is_wirecutter())
+	else if(current_canvas && I.has_tool_quality(TOOL_WIRECUTTER))
 		unframe_canvas(user)
 	else
 		return ..()
@@ -478,12 +479,12 @@
 /obj/structure/sign/painting/proc/load_persistent()
 	if(!persistence_id || !LAZYLEN(SSpersistence.unpicked_paintings))
 		return
-	
+
 	var/list/painting_category = list()
 	for (var/list/P in SSpersistence.unpicked_paintings)
 		if(P["persistence_id"] == persistence_id)
 			painting_category[++painting_category.len] = P
-	
+
 	var/list/painting
 	while(!painting)
 		if(!length(painting_category))
@@ -495,7 +496,7 @@
 			continue //and try again
 		painting = chosen
 		SSpersistence.unpicked_paintings -= list(chosen)
-	
+
 	var/title = painting["title"]
 	var/author_name = painting["author"]
 	var/author_ckey = painting["ckey"]
@@ -504,7 +505,7 @@
 	var/obj/item/canvas/new_canvas
 	var/w = I.Width()
 	var/h = I.Height()
-	
+
 	for(var/T in typesof(/obj/item/canvas))
 		new_canvas = T
 		if(initial(new_canvas.width) == w && initial(new_canvas.height) == h)
@@ -514,7 +515,7 @@
 	if(!new_canvas)
 		warning("Couldn't find a canvas to match [w]x[h] of painting")
 		return
-	
+
 	new_canvas.fill_grid_from_icon(I)
 	new_canvas.generated_icon = I
 	new_canvas.icon_generated = TRUE
@@ -527,6 +528,87 @@
 	loaded = TRUE
 	update_appearance()
 
+/*
+ * Recursive Proc. If given no arguments, requests user to input arguments with warning that generating the list may be res intensive
+ * Upon generating arguments, calls itself and spawns the painting
+ * Ideally called using the vvar dropdown admin verb and used using debugging the SSpersistence list to minimize lag
+ * usr must have an admin holder (ergo: only staff may use this)
+ * TODO: create a machine in the library for curators to spawn canvases and refactor this to use the proc used there.
+ * For now, we do it this way because calling this on a canvas itself might cause issues due to the whole dimension thing.
+*/
+/obj/structure/sign/painting/proc/admin_lateload_painting(var/spawn_specific = 0, var/which_painting = 0)
+	if(!usr.client.holder)
+		return 0
+	if(spawn_specific && isnum(which_painting))
+		var/list/painting = SSpersistence.all_paintings[which_painting]
+		var/title = painting["title"]
+		var/author_name = painting["author"]
+		var/author_ckey = painting["ckey"]
+		var/persistence_id = painting["persistence_id"]
+		var/png = "data/persistent/paintings/[persistence_id]/[painting["md5"]].png"
+		to_chat(usr, span_notice("The chosen painting is the following \n\n \
+		Title: [title] \n \
+		Author's Name: [author_name]. \n \
+		Author's CKey: [author_ckey]"))
+		if(tgui_alert(usr, "Check your chat log (if filtering for notices, check where you don't) for painting details.",
+		"Is this the painting you want?", list("Yes", "No")) == "No")
+			return 0
+		if(!fexists("data/persistent/paintings/[persistence_id]/[painting["md5"]].png"))
+			to_chat(usr, span_warning("Chosen painting could not be loaded! Incident was logged, but no action taken at this time"))
+			log_debug("[usr] tried to spawn painting of list id [which_painting] in all_paintings list and associated file could not be found. \n \
+			Painting was titled [title] by [author_ckey] of [persistence_id]")
+			return 0
+
+		var/icon/I = new(png)
+		var/obj/item/canvas/new_canvas
+		var/w = I.Width()
+		var/h = I.Height()
+		for(var/T in typesof(/obj/item/canvas))
+			new_canvas = T
+			if(initial(new_canvas.width) == w && initial(new_canvas.height) == h)
+				new_canvas = new T(src)
+				break
+
+		if(!new_canvas)
+			warning("Couldn't find a canvas to match [w]x[h] of painting")
+			return 0
+
+		new_canvas.fill_grid_from_icon(I)
+		new_canvas.generated_icon = I
+		new_canvas.icon_generated = TRUE
+		new_canvas.finalized = TRUE
+		new_canvas.painting_name = title
+		new_canvas.author_name = author_name
+		new_canvas.author_ckey = author_ckey
+		new_canvas.name = "painting - [title]"
+		current_canvas = new_canvas
+		loaded = TRUE
+		update_appearance()
+		log_and_message_admins("spawned painting from [author_ckey] with title [title]", usr)
+
+	else
+
+		if(tgui_alert(usr, "No painting list ID was given. You may obtain such by debugging SSPersistence and checking the all_paintings entry. \
+		If you do not wish to do that, you may request a list to be generated of painting titles. This might be resource intensive. \
+		Proceed? It will likely have over 500 entries", "Generate list?", list("Proceed!", "Cancel")) == "Cancel")
+			return
+
+		log_debug("[usr] generated list of paintings from SSPersistence")
+		var/list/paintings = list()
+		var/current = 1
+		for(var/entry in SSpersistence.all_paintings)
+			var/key = "[entry["title"]] by [entry["author"]]"
+			paintings[key] = current
+			current += 1
+
+		var/choice = tgui_input_list(usr, "Choose which painting to spawn!", "Spawn painting", paintings, null)
+		if(!choice)
+			return 0
+		admin_lateload_painting(1, paintings[choice])
+
+
+
+
 /obj/structure/sign/painting/proc/save_persistent()
 	if(!persistence_id || !current_canvas || current_canvas.no_save)
 		return
@@ -535,7 +617,7 @@
 		return
 	if(!current_canvas.painting_name)
 		current_canvas.painting_name = "Untitled Artwork"
-	
+
 	var/data = current_canvas.get_data_string()
 	var/md5 = md5(lowertext(data))
 	for(var/list/entry in SSpersistence.all_paintings)
@@ -544,10 +626,10 @@
 	var/png_directory = "data/persistent/paintings/[persistence_id]/"
 	var/png_path = png_directory + "[md5].png"
 	var/result = rustg_dmi_create_png(png_path,"[current_canvas.width]","[current_canvas.height]",data)
-	
+
 	if(result)
 		CRASH("Error saving persistent painting: [result]")
-	
+
 	SSpersistence.all_paintings += list(list(
 		"persistence_id" = persistence_id,
 		"title" = current_canvas.painting_name,

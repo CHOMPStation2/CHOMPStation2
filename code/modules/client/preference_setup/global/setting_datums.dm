@@ -95,7 +95,7 @@ var/list/_client_preferences_by_type
 	key = "DIGEST_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
-	
+
 /datum/client_preference/belch_noises // Belching noises - pref toggle for 'em
 	description = "Burping"
 	key = "BELCH_NOISES"
@@ -114,6 +114,13 @@ var/list/_client_preferences_by_type
 	enabled_description = "Visible"
 	disabled_description = "Hidden"
 	enabled_by_default = FALSE
+
+/datum/client_preference/ghost_see_whisubtle
+	description = "See subtles/whispers as ghost"
+	key = "GHOST_SEE_WHISUBTLE"
+	enabled_description = "Visible"
+	disabled_description = "Hidden"
+	enabled_by_default = TRUE
 //VOREStation Add End
 /datum/client_preference/weather_sounds
 	description ="Weather sounds"
@@ -154,6 +161,18 @@ var/list/_client_preferences_by_type
 /datum/client_preference/air_pump_noise
 	description ="Air Pump Ambient Noise"
 	key = "SOUND_AIRPUMP"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+
+/datum/client_preference/looping_alarms // CHOMPStation Add: Looping Alarms
+	description ="Looping Alarm Sounds"
+	key = "SOUND_ALARMLOOP"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+
+/datum/client_preference/fridge_hum // CHOMPStation Add: Misc Sounds
+	description ="Fridge Humming"
+	key = "SOUND_FRIDGEHUM"
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 
@@ -284,7 +303,7 @@ var/list/_client_preferences_by_type
 	key = "SOUND_INSTRUMENT"
 
 /datum/client_preference/vchat_enable
-	description = "Enable/Disable VChat"
+	description = "Enable/Disable TGChat"
 	key = "VCHAT_ENABLE"
 	enabled_description =  "Enabled"
 	disabled_description = "Disabled"
@@ -300,6 +319,36 @@ var/list/_client_preferences_by_type
 	key = "RADIO_SOUNDS"
 	enabled_description = "On"
 	disabled_description = "Off"
+
+/datum/client_preference/say_sounds
+	description = "Say Sounds"
+	key = "SAY_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
+/datum/client_preference/emote_sounds
+	description = "Me Sounds"
+	key = "EMOTE_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
+/datum/client_preference/whisper_sounds
+	description = "Whisper Sounds"
+	key = "WHISPER_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
+/datum/client_preference/subtle_sounds
+	description = "Subtle Sounds"
+	key = "SUBTLE_SOUNDS"
+	enabled_description = "On"
+	disabled_description = "Off"
+
+/datum/client_preference/vore_health_bars
+	description = "Vore Health Bars"
+	key = "VORE_HEALTH_BARS"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
 
 /datum/client_preference/runechat_mob
 	description = "Runechat (Mobs)"
@@ -339,6 +388,34 @@ var/list/_client_preferences_by_type
 	enabled_by_default = TRUE
 	enabled_description = "Popup New On Login"
 	disabled_description = "Do Nothing"
+
+/datum/client_preference/play_mentorhelp_ping
+	description = "Mentorhelps"
+	key = "SOUND_MENTORHELP"
+	enabled_description = "Hear"
+	disabled_description = "Silent"
+
+/datum/client_preference/player_tips
+	description = "Receive Tips Periodically"
+	key = "RECEIVE_TIPS"
+	enabled_description = "Enabled"
+	disabled_description = "Disabled"
+
+/datum/client_preference/pain_frequency
+	description = "Pain Messages Cooldown"
+	key = "PAIN_FREQUENCY"
+	enabled_by_default = FALSE
+	enabled_description = "Extended"
+	disabled_description = "Default"
+
+// CHOMPAdd
+/datum/client_preference/sleep_music
+	description = "Sleeping Music"
+	key = "SLEEP_MUSIC"
+	enabled_description = "Audible"
+	disabled_description = "Silent"
+// CHOMPAdd End
+
 
 /********************
 * Staff Preferences *
@@ -390,5 +467,11 @@ var/list/_client_preferences_by_type
 /datum/client_preference/holder/show_rlooc
 	description ="Remote LOOC chat"
 	key = "CHAT_RLOOC"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
+/datum/client_preference/holder/show_staff_dsay
+	description ="Staff Deadchat"
+	key = "CHAT_ADSAY"
 	enabled_description = "Show"
 	disabled_description = "Hide"

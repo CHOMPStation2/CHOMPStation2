@@ -34,10 +34,10 @@
 		html = data_core.get_manifest(FALSE,TRUE,snowflake = TRUE)
 	else
 		html = "<b>ERROR: NO DATACORE</b>" //Could make the error more fancy later
-	rustg_file_write(html,"[config.nodebot_location]\\html.html")
+	rustg_file_write(html,"[CONFIG_GET(string/nodebot_location)]\\html.html")
 
 /datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
-	if(config.nodebot_enabled)
+	if(CONFIG_GET(flag/nodebot_enabled))
 		ManifestToHtml()
 		return "http://manifest.chompstation13.net/"
 	else
@@ -66,7 +66,7 @@
 	if(!length(key_to_find))
 		return "[sender.friendly_name], you need to provide a Byond username at the end of the command. It can be in 'key' format (with spaces and characters) or 'ckey' format (without spaces or special characters)."
 
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = :t_ckey",list("t_ckey" = key_to_find))
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = :t_ckey",list("t_ckey" = key_to_find))
 	query.Execute()
 
 	if(!query.NextRow())
@@ -89,7 +89,7 @@
 	if(!params)
 		return "[sender.friendly_name], you need to provide a Discord ID at the end of the command. To obtain someone's Discord ID, you need to enable developer mode on discord, and then right click on their name and click Copy ID."
 
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=params))
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=params))
 	query.Execute()
 
 	if(!query.NextRow())
@@ -104,15 +104,15 @@
 /datum/tgs_chat_command/readfax/Run(sender, params)
 	var/list/all_params = splittext(params, " ")
 	var/faxid = all_params[1]
-	if(!all_params[1] || !fexists("[config.fax_export_dir]/fax_[faxid].html"))
+	if(!all_params[1] || !fexists("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html"))
 		return "I’m sorry Dave, I’m afraid I can’t do that"
-	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+	var/faxmsg = return_file_text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html")
 	return "FAX: ```[strip_html_properly(faxmsg)]```"
 
 /datum/tgs_chat_command/vore
 	name = "vore"
 	help_text = "vore"
 	admin_only = FALSE
-	
+
 /datum/tgs_chat_command/vore/Run(datum/tgs_chat_user/sender, params)
 	return "vore"

@@ -1,7 +1,7 @@
 /obj/structure/closet/crate/mimic/airlock
 	name = "Dusty Airlock"
 	desc = "It opens and closes. Though it appears it has been a while since it opened."
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "amimic"
 	mimic_chance = 30
 	anchored = 1 //You will not be able to push back the airlock mimic
@@ -18,7 +18,7 @@
 		mimic_active = FALSE
 		if(prob(mimic_chance))
 			var/mob/living/simple_mob/vore/aggressive/mimic/airlock/new_mimic = new(loc, src)
-			visible_message("<font color='red'><b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b></font>") //Controls the vars of the mimic that spawns
+			visible_message(span_red("<b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b>")) //Controls the vars of the mimic that spawns
 			forceMove(new_mimic)
 			new_mimic.real_crate = src
 			new_mimic.name = name
@@ -41,7 +41,7 @@
 
 /obj/structure/closet/crate/mimic/airlock/damage(var/damage)
 	if(contents.len)
-		visible_message("<font color='red'><b>The [src] let's out an enraged screach!</b></font>")
+		visible_message(span_red("<b>The [src] let's out an enraged screach!</b>"))
 		for(var/obj/O in src.contents)
 			qdel(O)
 	..()
@@ -94,7 +94,7 @@
 /obj/structure/closet/crate/mimic/closet
 	name = "old closet"
 	desc = "It's a basic storage unit. It seems awfully rickety."
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "cmimic"
 	mimic_chance = 30
 	mimic_active = TRUE
@@ -115,7 +115,7 @@
 		mimic_active = FALSE
 		if(prob(mimic_chance))
 			var/mob/living/simple_mob/vore/aggressive/mimic/closet/new_mimic = new(loc, src)
-			visible_message("<font color='red'><b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b></font>") //Controls the mimic that spawns
+			visible_message(span_red("<b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b>")) //Controls the mimic that spawns
 			forceMove(new_mimic)
 			new_mimic.real_crate = src
 			new_mimic.name = name
@@ -135,7 +135,7 @@
 
 /obj/structure/closet/crate/mimic/closet/damage(var/damage)
 	if(contents.len)
-		visible_message("<font color='red'><b>The [src] makes out a crunchy noise as its contents are destroyed!</b></font>")
+		visible_message(span_red("<b>The [src] makes out a crunchy noise as its contents are destroyed!</b>"))
 		for(var/obj/O in src.contents)
 			qdel(O)
 	..()
@@ -193,7 +193,7 @@
 	desc = "The boards here look rather loose."
 	density = 0
 	anchored = 1
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "wmimic"
 	var/mimic_chance = 30
 	var/mimic_active = TRUE

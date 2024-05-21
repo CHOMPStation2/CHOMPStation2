@@ -36,8 +36,8 @@
 	return
 
 /obj/singularity/energy_ball/Destroy()
-	if(orbiting && istype(orbiting.orbiting, /obj/singularity/energy_ball))
-		var/obj/singularity/energy_ball/EB = orbiting.orbiting
+	if(orbiting && istype(orbiting.parent, /obj/singularity/energy_ball)) //CHOMPEdit
+		var/obj/singularity/energy_ball/EB = orbiting.parent //CHOMPEdit
 		EB.orbiting_balls -= src
 
 	for(var/obj/singularity/energy_ball/EB as anything in orbiting_balls)
@@ -101,7 +101,7 @@
 		energy_to_raise = energy_to_raise * 1.25
 
 		playsound(src, 'sound/effects/lightning_chargeup.ogg', 100, 1, extrarange = 30)
-		//addtimer(CALLBACK(src, .proc/new_mini_ball), 100)
+		//addtimer(CALLBACK(src, PROC_REF(new_mini_ball)), 100)
 		spawn(100) new_mini_ball()
 
 	else if(energy < energy_to_lower && orbiting_balls.len)
@@ -146,8 +146,8 @@
 
 	. = ..()
 /obj/singularity/energy_ball/stop_orbit()
-	if (orbiting && istype(orbiting.orbiting, /obj/singularity/energy_ball))
-		var/obj/singularity/energy_ball/orbitingball = orbiting.orbiting
+	if (orbiting && istype(orbiting.parent, /obj/singularity/energy_ball)) //CHOMPEdit
+		var/obj/singularity/energy_ball/orbitingball = orbiting.parent //CHOMPEdit
 		orbitingball.orbiting_balls -= src
 		orbitingball.dissipate_strength = orbitingball.orbiting_balls.len + 1
 	..()

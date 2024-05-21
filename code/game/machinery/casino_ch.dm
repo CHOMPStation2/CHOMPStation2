@@ -277,7 +277,7 @@
 		"sodawater", "lemon_lime", "sugar", "orangejuice", "limejuice", "watermelonjuice", "thirteenloko", "grapesoda",
 		"coffee", "cafe_latte", "soy_latte", "hot_coco", "milk", "cream", "tea", "ice", "orangejuice", "lemonjuice",
 		"limejuice", "berryjuice", "mint", "lemon_lime", "sugar", "orangejuice", "limejuice", "sodawater",
-		"tonic", "beer", "kahlua", "whiskey", "wine", "vodka", "gin", "rum", "tequilla", "vermouth", "cognac",
+		"tonic", "beer", "kahlua", "whiskey", "redwine", "vodka", "gin", "rum", "tequilla", "vermouth", "cognac",
 		"ale", "mead", "bitters", "champagne", "singulo", "doctorsdelight", "nothing", "banana", "honey", "egg",
 		"coco", "cherryjelly", "carrotjuice", "applejuice", "tomatojuice", "peanutbutter", "soymilk", "grenadine", "gingerale", "roy_rogers",
 		"patron", "goldschlager", "gelatin", "melonliquor", "bluecuracao", "thirteenloko", "deadrum", "sake", "acidspit",
@@ -665,7 +665,7 @@
 
 /obj/machinery/casino_chip_exchanger
 	name = "Casino Chip Exchanger"
-	desc = "Takes all your cash and gives you chips back! No change and half refund!"
+	desc = "Converts thalers to casino chips at a ratio of 5 thalers to 1 chip! It can also convert chips back to thalers at the same rate."
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state ="casino_atm"
 	anchored = 1
@@ -690,7 +690,7 @@
 			playsound(loc, 'sound/items/polaroid2.ogg', 50, 1)
 
 		user << "<span class='info'>You insert [I] into [src].</span>"
-		spawn_money(round(I:worth*2.5), src.loc)
+		spawn_money(round(I:worth*5), src.loc)
 		src.attack_hand(user)
 		qdel(I)
 
@@ -1312,7 +1312,7 @@
 		Mech: Shuttlecraft 500<br>\
 		Rig: Solgov engineering hardsuit control module 500 <br>\
 		Rig: Solgov medical hardsuit control module 500 <br>\
-		Rig: Advanced voidsuit control module 500 <br>\
+		Rig: Advanced hardsuit control module 500 <br>\
 		Rig: Pursuit hardsuit control module 750 <br>\
 		Rig: Combat hardsuit control module 750 <br>\
 		Rig: ERT-J suit control module (Elite Janitor NT approved) 250 <br>\

@@ -57,6 +57,7 @@ var/list/all_maps = list()
 	//Similar to above, but only pick ONE to load, useful for random away missions and whatnot
 	var/list/lateload_gateway = list()
 	var/list/lateload_overmap = list() //VOREStation Add - The same thing as gateway, but not
+	var/list/lateload_redgate = list() //VOREStation Add - The same thing as gateway, but safe-ish
 
 	var/list/allowed_jobs = list() //Job datums to use.
 	                               //Works a lot better so if we get to a point where three-ish maps are used
@@ -135,6 +136,7 @@ var/list/all_maps = list()
 	var/list/unit_test_exempt_areas = list()
 	var/list/unit_test_exempt_from_atmos = list()
 	var/list/unit_test_exempt_from_apc = list()
+	var/list/unit_test_exempt_from_wires = list()
 	var/list/unit_test_z_levels //To test more than Z1, set your z-levels to test here.
 
 	var/list/planet_datums_to_make = list() // Types of `/datum/planet`s that will be instantiated by SSPlanets.
@@ -226,6 +228,18 @@ var/list/all_maps = list()
 	if(z) // Else, it's not a valid z and we want to expunge it
 		empty_levels |= z
 
+//CHOMPAdd Start restricted map view
+/datum/map/proc/get_visible_map_levels(var/srcz, var/long_range = FALSE)
+	if (long_range && (srcz in contact_levels))
+		return contact_levels.Copy() - admin_levels
+	//If in station levels, return station levels
+	else if (srcz in station_levels)
+		return station_levels.Copy()
+	//Just give them back their zlevel
+	else
+		return list(srcz)
+//CHOMPAdd End
+
 // Get a list of 'nearby' or 'connected' zlevels.
 // You should at least return a list with the given z if nothing else.
 /datum/map/proc/get_map_levels(var/srcz, var/long_range = FALSE, var/om_range = -1)
@@ -272,6 +286,7 @@ var/list/all_maps = list()
 		num2text(ENG_FREQ)   = list(access_engine_equip, access_atmospherics),
 		num2text(MED_FREQ)   = list(access_medical_equip),
 		num2text(MED_I_FREQ) = list(access_medical_equip),
+		num2text(BDCM_FREQ)  = list(access_security), // CHOMPEdit
 		num2text(SEC_FREQ)   = list(access_security),
 		num2text(SEC_I_FREQ) = list(access_security),
 		num2text(SCI_FREQ)   = list(access_tox,access_robotics,access_xenobiology),

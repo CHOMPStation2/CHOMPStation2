@@ -21,8 +21,35 @@
 
 	var/show_examine = TRUE	// Does this pop up on a mob when the mob is examined?
 
+	var/redgate_allowed = TRUE	//can we be taken through the redgate, in either direction?
+
 /obj/Destroy()
 	STOP_PROCESSING(SSobj, src)
+
+	//VOREStation Add Start - I really am an idiot why did I make it this way
+	if(micro_target)
+		for(var/thing in src.contents)
+			if(!ismob(thing))
+				continue
+			var/mob/m = thing
+			if(isbelly(src.loc))
+				m.forceMove(src.loc)
+			else
+				m.forceMove(get_turf(src.loc))
+			m.visible_message("<span class = 'notice'>\The [m] tumbles out of \the [src]!</span>")
+	//VOREStation Add End
+
+	//CHOMPAdd Start possessed item cleanup
+	if(istype(src, /obj/item))
+		var/obj/item/I = src
+		if(I.possessed_voice && I.possessed_voice.len)
+			for(var/mob/living/voice/V in I.possessed_voice)
+				if(!V.tf_mob_holder)
+					V.ghostize(0)
+					V.stat = DEAD //CHOMPAdd - Helps with autosleeving
+					V.Destroy()
+	//CHOMPAdd End
+
 	return ..()
 
 /obj/Topic(href, href_list, var/datum/tgui_state/state = GLOB.tgui_default_state)
@@ -41,7 +68,7 @@
 /obj/CanUseTopic(var/mob/user, var/datum/tgui_state/state = GLOB.tgui_default_state)
 	if(user.CanUseObjTopic(src))
 		return ..()
-	to_chat(user, "<span class='danger'>[bicon(src)]Access Denied!</span>")
+	to_chat(user, "<span class='danger'>[icon2html(src, user.client)]Access Denied!</span>")
 	return STATUS_CLOSE
 
 /mob/living/silicon/CanUseObjTopic(var/obj/O)
@@ -159,10 +186,10 @@
 
 /obj/proc/see_emote(mob/M as mob, text, var/emote_type)
 	return
-
+/* CHOMP Removal
 /obj/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	return
-
+*/
 // Used to mark a turf as containing objects that are dangerous to step onto.
 /obj/proc/register_dangerous_to_step()
 	var/turf/T = get_turf(src)

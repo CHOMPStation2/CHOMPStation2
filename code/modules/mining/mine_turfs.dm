@@ -60,9 +60,9 @@ var/list/mining_overlay_cache = list()
 		"silver" = /obj/item/weapon/ore/silver,
 		"diamond" = /obj/item/weapon/ore/diamond,
 		"phoron" = /obj/item/weapon/ore/phoron,
-		"osmium" = /obj/item/weapon/ore/osmium,
-		"hydrogen" = /obj/item/weapon/ore/hydrogen,
-		"silicates" = /obj/item/weapon/ore/glass,
+		"platinum" = /obj/item/weapon/ore/osmium,
+		"mhydrogen" = /obj/item/weapon/ore/hydrogen,
+		"sand" = /obj/item/weapon/ore/glass,
 		"carbon" = /obj/item/weapon/ore/coal,
 		"verdantium" = /obj/item/weapon/ore/verdantium,
 		"marble" = /obj/item/weapon/ore/marble,
@@ -361,7 +361,7 @@ var/list/mining_overlay_cache = list()
 //Not even going to touch this pile of spaghetti
 /turf/simulated/mineral/attackby(obj/item/weapon/W as obj, mob/user as mob)
 
-	if (!(istype(usr, /mob/living/carbon/human) || ticker) && ticker.mode.name != "monkey")
+	if (!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return
 
@@ -379,7 +379,6 @@ var/list/mining_overlay_cache = list()
 			if(P.sand_dig)
 				valid_tool = 1
 				digspeed = P.digspeed
-
 
 		if(valid_tool)
 			if (sand_dug)
@@ -412,30 +411,14 @@ var/list/mining_overlay_cache = list()
 					F.attackby(W,user)
 					return
 
-		else if(istype(W, /obj/item/stack/rods))
-			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-			if(L)
-				return
-			var/obj/item/stack/rods/R = W
-			if (R.use(1))
-				to_chat(user, "<span class='notice'>Constructing support lattice ...</span>")
-				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				new /obj/structure/lattice(get_turf(src))
-
 		else if(istype(W, /obj/item/stack/tile/floor))
-			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
-			if(L)
-				var/obj/item/stack/tile/floor/S = W
-				if (S.get_amount() < 1)
-					return
-				qdel(L)
-				playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-				ChangeTurf(/turf/simulated/floor)
-				S.use(1)
+			var/obj/item/stack/tile/floor/S = W
+			if (S.get_amount() < 1)
 				return
-			else
-				to_chat(user, "<span class='warning'>The plating is going to need some support.</span>")
-				return
+			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
+			ChangeTurf(/turf/simulated/floor)
+			S.use(1)
+			return
 
 
 	else
@@ -466,6 +449,49 @@ var/list/mining_overlay_cache = list()
 				if(do_after(user, 15))
 					to_chat(user, "<span class='notice'>\The [src] has been excavated to a depth of [excavation_level]cm.</span>")
 			return
+
+		if (istype(W, /obj/item/weapon/melee/shock_maul))
+			if(!istype(user.loc, /turf))
+				return
+
+			var/obj/item/weapon/melee/shock_maul/S = W
+			if(!S.wielded)	//CHOMPEdit - slight maul buff
+				to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands to be used for mining!</span>")	//CHOMPEdit - fixed improper name
+				return
+
+			var/newDepth = excavation_level + S.excavation_amount // Used commonly below
+
+			//handle any archaeological finds we might uncover
+			var/fail_message = ""
+			if(finds && finds.len)
+				var/datum/find/F = finds[1]
+				if(newDepth > F.excavation_required) // Digging too deep can break the item. At least you won't summon a Balrog (probably)
+					fail_message = ". <b>[pick("There is a crunching noise","[S] collides with some different rock","Part of the rock face crumbles away","Something breaks under [S]")]</b>"
+					wreckfinds(S.destroy_artefacts)
+
+			to_chat(user, "<span class='notice'>You smash through \the [src][fail_message].</span>")
+			//CHOMPEdit start - Moved the maul sounds up here and made it not cost energy to mine
+			user.visible_message("<span class='warning'>\The [src] discharges with a thunderous, hair-raising crackle!</span>")
+			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
+
+			if(newDepth >= 200) // This means the rock is mined out fully
+				if(S.destroy_artefacts)
+					GetDrilled(0)
+				else
+					excavate_turf()
+				return
+
+			excavation_level += S.excavation_amount
+			update_archeo_overlays(S.excavation_amount)
+			geologic_data = new /datum/geosample(src) //CHOMPEdit
+			//drop some rocks
+			next_rock += S.excavation_amount
+			while(next_rock > 50)
+				next_rock -= 50
+				var/obj/item/weapon/ore/O = new(src)
+				geologic_data.UpdateNearbyArtifactInfo(src)
+				O.geologic_data = geologic_data
+			//CHOMPEdit end
 
 		if (istype(W, /obj/item/weapon/pickaxe))
 			if(!istype(user.loc, /turf))
@@ -508,7 +534,7 @@ var/list/mining_overlay_cache = list()
 
 				excavation_level += P.excavation_amount
 				update_archeo_overlays(P.excavation_amount)
-
+				geologic_data = new /datum/geosample(src) //CHOMPEdit
 				//drop some rocks
 				next_rock += P.excavation_amount
 				while(next_rock > 50)
@@ -576,6 +602,7 @@ var/list/mining_overlay_cache = list()
 	if(!mineral)
 		return
 	clear_ore_effects()
+	geologic_data = new /datum/geosample(src) //CHOMPEdit
 	var/obj/item/weapon/ore/O = new mineral.ore (src)
 	if(istype(O))
 		geologic_data.UpdateNearbyArtifactInfo(src)
@@ -649,6 +676,7 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/proc/excavate_find(var/is_clean = 0, var/datum/find/F)
 	//with skill and luck, players can cleanly extract finds
 	//otherwise, they come out inside a chunk of rock
+	geologic_data = new /datum/geosample(src) //CHOMPEdit
 	var/obj/item/weapon/X
 	if(is_clean)
 		X = new /obj/item/weapon/archaeological_find(src, new_item_type = F.find_type)
@@ -678,7 +706,7 @@ var/list/mining_overlay_cache = list()
 
 /turf/simulated/mineral/proc/artifact_debris(var/severity = 0)
 	//cael's patented random limited drop componentized loot system!
-	//sky's patented not-fucking-retarded overhaul!
+	//sky's patented non-mischievious overhaul!
 
 	//Give a random amount of loot from 1 to 3 or 5, varying on severity.
 	for(var/j in 1 to rand(1, 3 + max(min(severity, 1), 0) * 2))

@@ -114,8 +114,7 @@ var/list/organ_cache = list()
 
 	handle_organ_mod_special()
 
-/obj/item/organ/Initialize()
-	. = ..()
+/obj/item/organ/proc/set_initial_meat()
 	if(owner)
 		if(!meat_type)
 			if(owner.isSynthetic())
@@ -180,7 +179,7 @@ var/list/organ_cache = list()
 		if(B && prob(40) && !isbelly(loc)) //VOREStation Edit
 			reagents.remove_reagent("blood",0.1)
 			blood_splatter(src,B,1)
-		if(config.organs_decay && decays) damage += rand(1,3)
+		if(CONFIG_GET(flag/organs_decay) && decays) damage += rand(1,3) // CHOMPEdit
 		if(damage >= max_damage)
 			damage = max_damage
 		adjust_germ_level(rand(2,6))
@@ -368,6 +367,9 @@ var/list/organ_cache = list()
 	robotize()
 
 /obj/item/organ/emp_act(severity)
+	for(var/obj/O as anything in src.contents)
+		O.emp_act(severity)
+
 	if(!(robotic >= ORGAN_ASSISTED))
 		return
 	for(var/i = 1; i <= robotic; i++)
@@ -391,14 +393,14 @@ var/list/organ_cache = list()
 		var/obj/item/organ/external/affected = owner.get_organ(parent_organ)
 		if(affected) affected.internal_organs -= src
 
-		forceMove(owner.drop_location())
+		owner.remove_from_mob(src, owner.drop_location())
 		START_PROCESSING(SSobj, src)
 		rejecting = null
 
 	if(istype(owner))
 		var/datum/reagent/blood/organ_blood = locate(/datum/reagent/blood) in reagents.reagent_list
 		if(!organ_blood || !organ_blood.data["blood_DNA"])
-			owner.vessel.trans_to(src, 5, 1, 1)
+			owner.vessel?.trans_to(src, 5, 1, 1)
 
 		if(owner && vital)
 			if(user)
@@ -482,7 +484,7 @@ var/list/organ_cache = list()
 			return TRUE
 
 		if(robotic >= ORGAN_ROBOT)
-			if(O.is_screwdriver())
+			if(O.has_tool_quality(TOOL_SCREWDRIVER))
 				return TRUE
 
 		else
@@ -538,11 +540,11 @@ var/list/organ_cache = list()
 
 	if(!removed && organ_verbs && check_verb_compatability())
 		for(var/verb_path in organ_verbs)
-			owner.verbs |= verb_path
+			add_verb(owner,verb_path) //CHOMPEdit TGPanel
 	else if(organ_verbs)
 		for(var/verb_path in organ_verbs)
 			if(!(verb_path in save_verbs))
-				owner.verbs -= verb_path
+				remove_verb(owner,verb_path)  //CHOMPEdit
 	return
 
 /obj/item/organ/proc/handle_organ_proc_special()	// Called when processed.

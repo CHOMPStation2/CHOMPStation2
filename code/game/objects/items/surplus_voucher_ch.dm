@@ -161,7 +161,7 @@
 
 /obj/item/surplus_voucher/ser/proc/spawn_item(var/turf/T)
 	var/path = pick(prob(4);/obj/item/weapon/reagent_containers/food/drinks/milk,
-					prob(4);/obj/item/weapon/reagent_containers/food/condiment/flour,
+					prob(4);/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
 					prob(4);/obj/item/weapon/reagent_containers/food/drinks/soymilk,
 					prob(4);/obj/item/weapon/storage/fancy/egg_box,
 					prob(3);/obj/item/weapon/reagent_containers/food/snacks/meat,

@@ -8,17 +8,22 @@
 	unity = TRUE
 	water_resist = 100 // Lets not kill the prommies
 	cores = 0
-	movement_cooldown = 3
+	movement_cooldown = 0
 	//appearance_flags = RADIATION_GLOWS
 	shock_resist = 0 // Lets not be immune to zaps.
 	friendly = list("nuzzles", "glomps", "snuggles", "cuddles", "squishes") // lets be cute :3
-	melee_damage_upper = 0
-	melee_damage_lower = 0
+//ChompEdit begins	Prommies are cute and all, but they're still slimes, and ought to be deadlier than even this.  So far this part is just a direct copy of Protean_blob.dm
+	harm_intent_damage = 3
+	melee_damage_lower = 5
+	melee_damage_upper = 5
+	see_in_dark = 10
+//Chomp Edit ends
 	player_msg = "You're a little squisher! Your cuteness level has increased tenfold."
 	heat_damage_per_tick = 20 // Hot and cold are bad, but cold is AS bad for prommies as it is for slimes.
 	cold_damage_per_tick = 20
 	//glow_range = 0
 	//glow_intensity = 0
+	has_hands = 1  //Chomp Addition, brings in line with Proteans' own blob form.
 
 	var/mob/living/carbon/human/humanform
 	var/datum/modifier/healing
@@ -43,14 +48,14 @@
 	)
 /mob/living/simple_mob/slime/promethean/Initialize(mapload, null)
 	//verbs -= /mob/living/proc/ventcrawl
-	verbs += /mob/living/simple_mob/slime/promethean/proc/prommie_blobform
-	verbs += /mob/living/proc/set_size
-	verbs += /mob/living/proc/hide
-	verbs += /mob/living/simple_mob/proc/animal_nom
-	verbs += /mob/living/proc/shred_limb
-	verbs += /mob/living/simple_mob/slime/promethean/proc/toggle_expand
-	verbs += /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour
-	verbs += /mob/living/simple_mob/slime/promethean/proc/toggle_shine
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_blobform) //CHOMPEdit
+	add_verb(src, /mob/living/proc/set_size) //CHOMPEdit
+	add_verb(src, /mob/living/proc/hide) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/proc/animal_nom) //CHOMPEdit
+	add_verb(src, /mob/living/proc/shred_limb) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_expand) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_shine) //CHOMPEdit
 	update_mood()
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
@@ -63,6 +68,12 @@
 
 /mob/living/simple_mob/slime/promethean/Destroy()
 	humanform = null
+	drop_l_hand()
+	drop_r_hand()
+	drop_from_inventory(mob_radio, loc)
+	mob_radio = null
+	drop_from_inventory(myid, loc)
+	myid = null
 	vore_organs = null
 	vore_selected = null
 	set_light(0)
@@ -70,16 +81,27 @@
 
 /mob/living/carbon/human/Destroy()
 	if(stored_blob)
-		stored_blob = null
-		qdel(stored_blob)
+		stored_blob.drop_l_hand()
+		stored_blob.drop_r_hand()
+		QDEL_NULL(stored_blob)
 	return ..()
 
-/mob/living/simple_mob/slime/promethean/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/slime/promethean/get_status_tab_items()
+	. = ..()
 	if(humanform)
 		humanform.species.Stat(humanform)
+//ChompEDIT END
 
 /mob/living/simple_mob/slime/promethean/handle_special() // Should disable default slime healing, we'll use nutrition based heals instead.
+//ChompAdd Begins.  They already heal from their carbon form while even in slime form, but this is for a small bonus healing for being unformed.
+	adjustOxyLoss(-0.2)
+	adjustToxLoss(-0.2)
+	adjustFireLoss(-0.2)
+	adjustCloneLoss(-0.2)
+	adjustBruteLoss(-0.2)
+	adjustHalLoss(-6) // HalLoss ticks down FAST
+//ChompAdd Ends
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
 		set_light(max(1,min(5,rad_glow/15)), max(1,min(10,rad_glow/25)), color)
@@ -229,7 +251,7 @@
 /mob/living/simple_mob/slime/promethean/proc/prommie_blobform()
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Promethean" //CHOMPEdit
 	set hidden = FALSE
 
 	var/atom/movable/to_locate = src
@@ -247,7 +269,7 @@
 /mob/living/simple_mob/slime/promethean/proc/toggle_expand()
 	set name = "Toggle Width"
 	set desc = "Switch between smole and lorge."
-	set category = "Abilities"
+	set category = "Abilities.Promethean" //CHOMPEdit
 	set hidden = FALSE
 
 	if(stat || world.time < last_special)
@@ -267,7 +289,7 @@
 /mob/living/simple_mob/slime/promethean/proc/toggle_shine()
 	set name = "Toggle Shine"
 	set desc = "Shine on you crazy diamond."
-	set category = "Abilities"
+	set category = "Abilities.Promethean" //CHOMPEdit
 	set hidden = FALSE
 
 	if(stat || world.time < last_special)
@@ -287,7 +309,7 @@
 /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour()
 
 	set name = "Select Body Colour"
-	set category = "Abilities"
+	set category = "Abilities.Promethean" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -311,7 +333,7 @@
 	return
 
 /mob/living/simple_mob/slime/promethean/get_available_emotes()
-	var/list/fulllist = _slime_default_emotes
+	var/list/fulllist = global._slime_default_emotes.Copy()
 	fulllist += default_emotes
 	return fulllist
 /mob/living/carbon/human
@@ -358,34 +380,47 @@
 	for(var/obj/item/clothing/head/H in things_to_drop)
 		if(H)
 			new_hat = H
-			has_hat = TRUE
+			has_hat = TRUE  //Chompedit, I'd delete the whole section, but this is used below for the slime having a hat.
 			drop_from_inventory(H)
 			things_to_drop -= H
+//Chompremoval start
+//	for(var/obj/item/I in things_to_drop) //rip hoarders  //Chompedit: Or not.
+//		drop_from_inventory(I)
 
-	for(var/obj/item/I in things_to_drop) //rip hoarders
-		drop_from_inventory(I)
-
-	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
-		var/obj/item/clothing/uniform = w_uniform
-		if(LAZYLEN(uniform.accessories))
-			for(var/obj/item/clothing/accessory/A in uniform.accessories)
-				if(is_type_in_list(A, disallowed_protean_accessories))
-					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
-
+//	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
+//		var/obj/item/clothing/uniform = w_uniform
+//		if(LAZYLEN(uniform.accessories))
+//			for(var/obj/item/clothing/accessory/A in uniform.accessories)
+//				if(is_type_in_list(A, disallowed_protean_accessories))
+//					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
+//Chompremoval End
 	//Size update
 	blob.transform = matrix()*size_multiplier
 	blob.size_multiplier = size_multiplier
 
-	if(l_hand) blob.prev_left_hand = l_hand //Won't save them if dropped above, but necessary if handdrop is disabled.
-	if(r_hand) blob.prev_right_hand = r_hand
+//ChompEdit Begins:  Let's drop what's in our hands.
+//	if(l_hand) blob.prev_left_hand = l_hand //Won't save them if dropped above, but necessary if handdrop is disabled.
+//	if(r_hand) blob.prev_right_hand = r_hand
+
+	if(l_hand) drop_from_inventory(l_hand)
+	if(r_hand) drop_from_inventory(r_hand)
+//ChompEdit Ends
 
 	//Put our owner in it (don't transfer var/mind)
-	blob.Weaken(2)
+//	blob.Weaken(2) //ChompRemoval  Not needed.
 	blob.transforming = TRUE
 	blob.ckey = ckey
 	blob.ooc_notes = ooc_notes
+	blob.ooc_notes_likes = ooc_notes_likes
+	blob.ooc_notes_dislikes = ooc_notes_dislikes
+	//CHOMPEdit Start
+	blob.ooc_notes_favs = ooc_notes_favs
+	blob.ooc_notes_maybes = ooc_notes_maybes
+	blob.ooc_notes_style = ooc_notes_style
+	//CHOMPEdit End
 	blob.transforming = FALSE
 	blob.name = name
+	blob.real_name = real_name //CHOMPEdit
 	blob.nutrition = nutrition
 	blob.color = rgb(r_skin, g_skin, b_skin)
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
@@ -393,15 +428,30 @@
 		blob.rad_glow = CLAMP(radiation,0,250)
 		set_light(0)
 		blob.set_light(max(1,min(5,radiation/15)), max(1,min(10,radiation/25)), blob.color)
-		blob.handle_light()
+	else
+		blob.set_light(0)
 	if(has_hat)
 		blob.hat = new_hat
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-	blob.verbs -= /mob/living/proc/ventcrawl // Absolutely not.
-	blob.verbs -= /mob/living/simple_mob/proc/set_name // We already have a name.
+	remove_verb(blob,/mob/living/proc/ventcrawl ) // Absolutely not. //CHOMPEdit
+	remove_verb(blob,/mob/living/simple_mob/proc/set_name ) // We already have a name. //CHOMPEdit
 	temporary_form = blob
+
+//ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.
+	var/obj/item/device/radio/R = null
+	if(isradio(l_ear))
+		R = l_ear
+	if(isradio(r_ear))
+		R = r_ear
+	if(R)
+		blob.mob_radio = R
+		R.forceMove(blob)
+	if(wear_id)
+		blob.myid = wear_id
+		wear_id.forceMove(blob)
+//ChompAdd End
 	//Mail them to nullspace
 	moveToNullspace()
 
@@ -451,11 +501,18 @@
 	forceMove(reform_spot)
 
 	//Put our owner in it (don't transfer var/mind)
-	Weaken(2)
+//	Weaken(2)  //Chompremoval again, not needed.
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
 	transforming = TRUE
 	ckey = blob.ckey
 	ooc_notes = blob.ooc_notes // Updating notes incase they change them in blob form.
+	ooc_notes_likes = blob.ooc_notes_likes
+	ooc_notes_dislikes = blob.ooc_notes_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = blob.ooc_notes_favs
+	ooc_notes_maybes = blob.ooc_notes_maybes
+	ooc_notes_style = blob.ooc_notes_style
+	//CHOMPEdit End
 	transforming = FALSE
 	blob.name = "Promethean Blob"
 	var/obj/item/hat = blob.hat
@@ -482,8 +539,21 @@
 		B.owner = src
 
 	//vore_organs.Cut()
-	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) //The restore for when reforming.
-	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
+
+//ChompEdit begin.  And let's drop them again.
+//	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand)
+//	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
+
+	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)
+	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
+
+	if(blob.mob_radio)
+		blob.mob_radio.forceMove(src)
+		blob.mob_radio = null
+	if(blob.myid)
+		blob.myid.forceMove(src)
+		blob.myid = null
+//ChompEdit End
 
 	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 

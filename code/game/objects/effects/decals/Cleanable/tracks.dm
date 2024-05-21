@@ -130,6 +130,7 @@ var/global/list/image/fluidtrack_cache=list()
 
 /obj/effect/decal/cleanable/blood/tracks/update_icon()
 	cut_overlays()
+	add_overlay(janhud)
 	color = "#FFFFFF"
 	var/truedir=0
 
@@ -202,3 +203,5 @@ var/global/list/image/fluidtrack_cache=list()
 	gender = PLURAL
 	random_icon_states = null
 	amount = 0
+
+#undef TRACKS_CRUSTIFY_TIME

@@ -145,6 +145,7 @@
 	desc = "Magnetic levitation tram tracks. Caution! Electrified!"
 	icon = 'icons/turf/flooring/maglevs.dmi'
 	icon_state = "maglevup"
+	can_be_plated = FALSE
 
 	var/area/shock_area = /area/tether/surfacebase/tram
 
@@ -211,7 +212,7 @@
 
 	var/mob/living/carbon/human/user = AM
 
-	var/choice = tgui_alert(user, "Do you want to depart via the tram? Your character will leave the round.","Departure",list("Yes","No"))
+	var/choice = tgui_alert(usr, "Do you want to depart via the tram? Your character will leave the round.","Departure",list("Yes","No"))
 	if(user && Adjacent(user) && choice == "Yes")
 		var/mob/observer/dead/newghost = user.ghostize()
 		newghost.timeofdeath = world.time
@@ -275,50 +276,18 @@
 
 	return ..(user)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/obj/structure/closet/secure_closet/guncabinet/excursion
-	name = "expedition weaponry cabinet"
-	req_one_access = list(access_explorer,access_armory)
-
-/obj/structure/closet/secure_closet/guncabinet/excursion/New()
-	..()
-	for(var/i = 1 to 3)
-		new /obj/item/weapon/gun/energy/locked/frontier(src)
-	for(var/i = 1 to 2)
-		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
-
-||||||| parent of 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
-/obj/structure/closet/secure_closet/guncabinet/excursion
-	name = "expedition weaponry cabinet"
-	req_one_access = list(access_explorer,access_armory)
-
-/obj/structure/closet/secure_closet/guncabinet/excursion/New()
-	..()
-	for(var/i = 1 to 2)
-		new /obj/item/weapon/gun/energy/locked/frontier(src)
-	for(var/i = 1 to 2)
-		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
-
-=======
->>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
-// Used at centcomm for the elevator
-/obj/machinery/cryopod/robot/door/dorms
-	spawnpoint_type = /datum/spawnpoint/tram
-
-||||||| parent of 2bb3d46cf5... Merge pull request #11734 from Heroman3003/sd-with-modules
-// Used at centcomm for the elevator
-/obj/machinery/cryopod/robot/door/dorms
-	spawnpoint_type = /datum/spawnpoint/tram
-
-=======
->>>>>>> 2bb3d46cf5... Merge pull request #11734 from Heroman3003/sd-with-modules
 //Tether-unique network cameras
 /obj/machinery/camera/network/tether
 	network = list(NETWORK_TETHER)
 
 /obj/machinery/camera/network/outside
 	network = list(NETWORK_OUTSIDE)
+
+// Shelter Capsule extra restrictions
+/datum/map_template/shelter/New()
+	..()
+	banned_areas += list(/area/tether/surfacebase/fish_farm, /area/tether/surfacebase/public_garden, /area/tether/surfacebase/tram)
+
 //
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
@@ -367,7 +336,7 @@
 	layer = ABOVE_WINDOW_LAYER
 /obj/machinery/vending/wallmed2
 	layer = ABOVE_WINDOW_LAYER
-/obj/structure/closet/fireaxecabinet
+/obj/structure/fireaxecabinet
 	layer = ABOVE_WINDOW_LAYER
 /obj/structure/extinguisher_cabinet
 	layer = ABOVE_WINDOW_LAYER
@@ -381,6 +350,5 @@
 	prob_spawn = 75
 	prob_fall = 50
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/passive/gaslamp = 300,
-		/mob/living/simple_mob/vore/alienanimals/teppi = 4
+		/mob/living/simple_mob/animal/passive/gaslamp = 300
 		)

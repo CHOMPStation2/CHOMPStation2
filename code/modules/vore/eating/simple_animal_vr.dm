@@ -1,7 +1,7 @@
 ///////////////////// Simple Animal /////////////////////
 /mob/living/simple_mob
 	var/swallowTime = (3 SECONDS)		//How long it takes to eat its prey in 1/10 of a second. The default is 3 seconds.
-	var/list/prey_excludes = list()		//For excluding people from being eaten.
+	var/list/prey_excludes = null		//For excluding people from being eaten.
 
 /mob/living/simple_mob/insidePanel() //CHOMPedit: On-demand belly loading.
 	if(vore_active && !voremob_loaded)
@@ -12,9 +12,9 @@
 //
 // Simple nom proc for if you get ckey'd into a simple_mob mob! Avoids grabs.
 //
-/mob/living/simple_mob/proc/animal_nom(mob/living/T in living_mobs(1))
+/mob/living/simple_mob/proc/animal_nom(mob/living/T in living_mobs_in_view(1))
 	set name = "Animal Nom"
-	set category = "IC"
+	set category = "Abilities.Vore" // Moving this to abilities from IC as it's more fitting there  //CHOMPEdit
 	set desc = "Since you can't grab, you get a verb!"
 
 	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
@@ -31,7 +31,7 @@
 		return
 	*/
 	feed_grabbed_to_self(src,T)
-	update_icon()
+	//update_icon() CHOMPEdit
 
 //CHOMPedit: On-demand belly loading.
 /mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
@@ -39,7 +39,7 @@
 		voremob_loaded = TRUE
 		init_vore()
 		belly = vore_selected
-	..()
+	return ..()
 
 //
 // Simple proc for animals to have their digestion toggled on/off externally
@@ -48,7 +48,7 @@
 /mob/living/simple_mob/proc/toggle_digestion()
 	set name = "Toggle Animal's Digestion"
 	set desc = "Enables digestion on this mob for 20 minutes."
-	set category = "OOC"
+	set category = "OOC.Mob Settings" //CHOMPEdit
 	set src in oview(1)
 
 	var/mob/living/carbon/human/user = usr
@@ -77,7 +77,7 @@
 /mob/living/simple_mob/proc/toggle_fancygurgle()
 	set name = "Toggle Animal's Gurgle sounds"
 	set desc = "Switches between Fancy and Classic sounds on this mob."
-	set category = "OOC"
+	set category = "OOC.Mob Settings" //CHOMPEdit
 	set src in oview(1)
 
 	var/mob/living/user = usr	//I mean, At least ghosts won't use it.
@@ -100,31 +100,30 @@
 				update_icon()
 				set_AI_busy(FALSE)
 			else if(!ai_holder.target) // no using this to clear a retaliate mob's target
-				ai_holder.target = user //just because you're not tasty doesn't mean you get off the hook. A swat for a swat.
+				ai_holder.give_target(user) //just because you're not tasty doesn't mean you get off the hook. A swat for a swat.
 				//AttackTarget() //VOREStation AI Temporary Removal
 				//LoseTarget() // only make one attempt at an attack rather than going into full rage mode
 		else
 			user.visible_message("<span class='info'>[user] swats [src] with [O]!</span>")
 			release_vore_contents()
 			for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
-				if(!(L in prey_excludes)) // Unless they're already on it, just to avoid fuckery.
-					prey_excludes += L
-					addtimer(CALLBACK(src, .proc/removeMobFromPreyExcludes, weakref(L)), 5 MINUTES)
+				if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.
+					LAZYSET(prey_excludes, L, world.time)
+					addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(L)), 5 MINUTES)
 	else if(istype(O, /obj/item/device/healthanalyzer))
 		var/healthpercent = health/maxHealth*100
 		to_chat(user, "<span class='notice'>[src] seems to be [healthpercent]% healthy.</span>")
 	else
 		..()
 
-/mob/living/simple_mob/proc/removeMobFromPreyExcludes(weakref/target)
+/mob/living/simple_mob/proc/removeMobFromPreyExcludes(datum/weakref/target)
 	if(isweakref(target))
 		var/mob/living/L = target.resolve()
-		if(L)
-			LAZYREMOVE(prey_excludes, L)
+		LAZYREMOVE(prey_excludes, L) // It's fine to remove a null from the list if we couldn't resolve L
 
 /mob/living/simple_mob/proc/nutrition_heal()
 	set name = "Nutrition Heal"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //CHOMPEdit
 	set desc = "Slowly regenerate health using nutrition."
 
 	if(nutrition < 10)

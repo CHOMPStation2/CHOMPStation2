@@ -16,24 +16,38 @@
 	var/can_start_dirty = TRUE	// If false, cannot start dirty roundstart
 	var/dirty_prob = 2	// Chance of being dirty roundstart
 	var/dirt = 0
+	var/special_temperature //Used for turf HE-Pipe interaction
+	var/climbable = FALSE //Adds proc to wall if set to TRUE on its initialization, defined here since not all walls are subtypes of wall
+
+	var/icon_edge = 'icons/turf/outdoors_edge.dmi'	//VOREStation Addition - Allows for alternative edge icon files
+	var/wet_cleanup_timer
 
 // This is not great.
 /turf/simulated/proc/wet_floor(var/wet_val = 1)
 	if(wet > 2)	//Can't mop up ice
 		return
-	spawn(0)
-		wet = wet_val
-		if(wet_overlay)
-			cut_overlay(wet_overlay)
-		wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
-		add_overlay(wet_overlay)
-		sleep(800)
-		if(wet == 2)
-			sleep(3200)
-		wet = 0
-		if(wet_overlay)
-			cut_overlay(wet_overlay)
-			wet_overlay = null
+	wet = wet_val
+	if(wet_overlay)
+		cut_overlay(wet_overlay)
+	wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	add_overlay(wet_overlay)
+	if(wet_cleanup_timer)
+		deltimer(wet_cleanup_timer)
+		wet_cleanup_timer = null
+	if(wet == 2)
+		wet_cleanup_timer = addtimer(CALLBACK(src, PROC_REF(wet_floor_finish)), 160 SECONDS, TIMER_STOPPABLE)
+	else
+		wet_cleanup_timer = addtimer(CALLBACK(src, PROC_REF(wet_floor_finish)), 40 SECONDS, TIMER_STOPPABLE)
+
+/turf/simulated/proc/wet_floor_finish()
+	wet = 0
+	if(wet_cleanup_timer)
+		deltimer(wet_cleanup_timer)
+		wet_cleanup_timer = null
+	if(wet_overlay)
+		cut_overlay(wet_overlay)
+		wet_overlay = null
+//ChompEDIT END
 
 /turf/simulated/proc/freeze_floor()
 	if(!wet) // Water is required for it to freeze.
@@ -60,6 +74,16 @@
 	if(istype(loc, /area/chapel))
 		holy = 1
 	levelupdate()
+	if(climbable)
+		verbs += /turf/simulated/proc/climb_wall
+	if(is_outdoors())	//VOREStation edit - quick fix for a planetary lighting issue
+		SSplanets.addTurf(src)
+
+/turf/simulated/examine(mob/user)
+	. = ..()
+	if(climbable)
+		. += "This [src] looks climbable."
+
 
 /turf/simulated/proc/AddTracks(var/typepath,var/bloodDNA,var/comingdir,var/goingdir,var/bloodcolor="#A10808")
 	var/obj/effect/decal/cleanable/blood/tracks/tracks = locate(typepath) in src
@@ -84,7 +108,7 @@
 	if (istype(A,/mob/living))
 		var/dirtslip = FALSE	//CHOMPEdit
 		var/mob/living/M = A
-		if(M.lying || M.flying) //VOREStation Edit
+		if(M.lying || M.flying || M.is_incorporeal()) //VOREStation Edit - CHOMPADD - Don't forget the phased ones.
 			return ..()
 
 		if(M.dirties_floor())
@@ -105,7 +129,7 @@
 			if(H.shoes)
 				var/obj/item/clothing/shoes/S = H.shoes
 				if(istype(S))
-					S.handle_movement(src,(H.m_intent == "run" ? 1 : 0))
+					S.handle_movement(src,(H.m_intent == "run" ? 1 : 0), H) // CHOMPEdit handle_movement now needs to know who is moving, for inshoe steppies
 					if(S.track_blood && S.blood_DNA)
 						bloodDNA = S.blood_DNA
 						bloodcolor=S.blood_color

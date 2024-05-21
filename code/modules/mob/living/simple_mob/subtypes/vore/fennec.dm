@@ -50,6 +50,13 @@
 	say_list_type = /datum/say_list/fennec
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
+	// CHOMPAdd: Start :c
+	allow_mind_transfer = TRUE
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+	species_sounds = "Vulpine"
+	//CHOMPAdd End
+
 // Activate Noms!
 /mob/living/simple_mob/vore/fennec
 	vore_active = 1
@@ -58,12 +65,12 @@
 	vore_pounce_chance = 40
 	vore_default_mode = DM_HOLD
 	vore_icons = SA_ICON_LIVING
-	
+
 /mob/living/simple_mob/vore/fennec/init_vore() // CHOMPEdit - Allow for customizing bellies on vorecritters
 	if(!voremob_loaded)
 		return
 	. = ..()
-	
+
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "Warm, slick, and wet. You're somewhere hot, tight, and very cramped, unless you happen to somehow be smaller than the fennec you're in! It's hard to see, as rippling pink walls clench and smother over your form. If you don't want to be here, a newspaper from a friend ought to get you out. ...right?"
@@ -98,7 +105,7 @@
 	mob_bump_flag = HEAVY
 	grab_resist = 100
 	mob_class = MOB_CLASS_HUMANOID
-	movement_cooldown = 1
+	movement_cooldown = -1
 	melee_miss_chance = 10
 
 	old_x = -32
@@ -140,7 +147,9 @@
 	add_overlay(bigshadow)
 
 /mob/living/simple_mob/vore/fennec/huge/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "The slimy wet insides of a rather large fennec! Not quite as clean as the fen on the outside."

@@ -42,6 +42,18 @@
 	..()
 	network = NETWORK_THUNDER
 
+// CHOMPEdit Begin - Bodycam
+/obj/item/weapon/circuitboard/security/telescreen/bodycamera
+	name = T_BOARD("security bodycamera monitor")
+	build_path = /obj/machinery/computer/security/telescreen/bodycamera
+	board_type = new /datum/frame/frame_types/display
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
+
+/obj/item/weapon/circuitboard/security/telescreen/bodycamera/New()
+	..()
+	network = NETWORK_BODYCAM
+// CHOMPEdit End
+
 /obj/item/weapon/circuitboard/security/construct(var/obj/machinery/computer/security/C)
 	if (..(C))
 		C.set_network(network.Copy())
@@ -74,7 +86,7 @@
 			to_chat(user, "<span class='warning'>Circuit controls are locked.</span>")
 			return
 		var/existing_networks = jointext(network,",")
-		var/input = sanitize(input(usr, "Which networks would you like to connect this camera console circuit to? Seperate networks with a comma. No Spaces!\nFor example: SS13,Security,Secret ", "Multitool-Circuitboard interface", existing_networks))
+		var/input = sanitize(tgui_input_text(usr, "Which networks would you like to connect this camera console circuit to? Separate networks with a comma. No Spaces!\nFor example: SS13,Security,Secret ", "Multitool-Circuitboard interface", existing_networks))
 		if(!input)
 			to_chat(usr, "No input found please hang up and try your call again.")
 			return

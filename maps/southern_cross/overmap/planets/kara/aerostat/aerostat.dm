@@ -13,7 +13,7 @@
 
 
 // -- Overmap -- //
-
+/* // Moved to kara.dm as this is part of the planet and future planet z-levels are planned. Also seems important for overmap to run properly.
 /obj/effect/overmap/visitable/sector/aerostat
 	name = "Aerostat"
 	desc = "Abandoned aerostat installation, floating in the low stratosphere."
@@ -29,7 +29,7 @@
 	in_space = 0
 	start_x =  14
 	start_y =  15
-
+*/
 
 
 //	extra_z_levels = list(Z_LEVEL_AEROSTAT_2) //SOON
@@ -117,70 +117,7 @@
 
 
 // -- Turfs -- //
-
-//Atmosphere properties //CHOMP Comment: I guess this Kara planetary information should go here. Kara is a gas giant, it ain't gonna be getting very many other maps.
-#define KARA_ONE_ATMOSPHERE	101.5 //kPa
-#define KARA_AVG_TEMP			150 //kelvin
-
-#define KARA_PER_N2		0.10 //percent
-#define KARA_PER_O2		0.03
-#define KARA_PER_N2O		0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
-#define KARA_PER_CO2		0.87
-#define KARA_PER_PHORON	0.00
-
-//Math only beyond this point
-#define KARA_MOL_PER_TURF		(KARA_ONE_ATMOSPHERE*CELL_VOLUME/(KARA_AVG_TEMP*R_IDEAL_GAS_EQUATION))
-#define KARA_MOL_N2			(KARA_MOL_PER_TURF * KARA_PER_N2)
-#define KARA_MOL_O2			(KARA_MOL_PER_TURF * KARA_PER_O2)
-#define KARA_MOL_N2O			(KARA_MOL_PER_TURF * KARA_PER_N2O)
-#define KARA_MOL_CO2			(KARA_MOL_PER_TURF * KARA_PER_CO2)
-#define KARA_MOL_PHORON		(KARA_MOL_PER_TURF * KARA_PER_PHORON)
-
-//Turfmakers
-#define KARA_SET_ATMOS	nitrogen=KARA_MOL_N2;oxygen=KARA_MOL_O2;carbon_dioxide=KARA_MOL_CO2;phoron=KARA_MOL_PHORON;temperature=KARA_AVG_TEMP
-#define KARA_TURF_CREATE(x)	x/kara/nitrogen=KARA_MOL_N2;x/kara/oxygen=KARA_MOL_O2;x/kara/carbon_dioxide=KARA_MOL_CO2;x/kara/phoron=KARA_MOL_PHORON;x/kara/temperature=KARA_AVG_TEMP;x/kara/color="#eacd7c"
-
-/turf/unsimulated/floor/sky/kara_sky
-	name = "kara atmosphere"
-	desc = "Be careful where you step!"
-	color = "#eacd7c"
-	KARA_SET_ATMOS
-	does_skyfall = FALSE
-
-/turf/unsimulated/floor/sky/kara_sky/Entered(atom/movable/AM, atom/oldloc)
-	. = ..()
-	if(isobserver(AM))
-		return //Don't ghostport, very annoying
-	if(AM.throwing)
-		return //Being thrown over, not fallen yet
-	if(!(AM.can_fall()))
-		return // Phased shifted kin should not fall
-	if(istype(AM, /obj/item/projectile))
-		return // pewpew should not fall out of the sky. pew.
-	if(istype(AM, /obj/effect/projectile))
-		return // ...neither should the effects be falling
-
-	var/mob/living/L
-	if(isliving(AM))
-		L = AM
-		if(L.is_floating)
-			return //Flyers/nograv can ignore it
-
-	qdel(AM)
-
-/turf/simulated/shuttle/wall/voidcraft/green/kara
-	KARA_SET_ATMOS
-	color = "#eacd7c"
-
-/turf/simulated/shuttle/wall/voidcraft/green/kara/nocol
-	color = null
-
-KARA_TURF_CREATE(/turf/unsimulated/wall/planetary)
-
-KARA_TURF_CREATE(/turf/simulated/wall)
-KARA_TURF_CREATE(/turf/simulated/floor/plating)
-KARA_TURF_CREATE(/turf/simulated/floor/bluegrid)
-KARA_TURF_CREATE(/turf/simulated/floor/tiled/techfloor)
+// Most turfs moved to kara.dm for use in future kara maps.
 
 /*
 KARA_TURF_CREATE(/turf/simulated/mineral)

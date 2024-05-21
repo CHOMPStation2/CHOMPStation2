@@ -11,7 +11,7 @@ var/global/list/grub_machine_overlays = list()
 
 	health = 5
 	maxHealth = 5
-	movement_cooldown = 3
+	movement_cooldown = 0
 
 	melee_damage_lower = 1	// This is a tiny worm. It will nibble and thats about it.
 	melee_damage_upper = 1
@@ -47,7 +47,11 @@ var/global/list/grub_machine_overlays = list()
 	var/obj/machinery/abstract_grub_machine/powermachine
 	var/power_drained = 0
 
+	var/tracked = FALSE
+
 	ai_holder_type = /datum/ai_holder/simple_mob/solargrub_larva
+
+	glow_override = TRUE
 
 /mob/living/simple_mob/animal/solargrub_larva/New()
 	..()
@@ -56,7 +60,7 @@ var/global/list/grub_machine_overlays = list()
 	sparks = new(src)
 	sparks.set_up()
 	sparks.attach(src)
-	verbs += /mob/living/proc/ventcrawl
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/animal/solargrub_larva/death()
 	powermachine.draining = 0
@@ -141,7 +145,7 @@ var/global/list/grub_machine_overlays = list()
 	sparks.start()
 	if(machine_effect)
 		QDEL_NULL(machine_effect)
-	ai_holder.target = null
+	ai_holder.remove_target()
 	powermachine.draining = 1
 	spawn(30)
 		set_AI_busy(FALSE)
@@ -173,7 +177,9 @@ var/global/list/grub_machine_overlays = list()
 /mob/living/simple_mob/animal/solargrub_larva/proc/expand_grub()
 	eject_from_machine()
 	visible_message("<span class='warning'>\The [src] suddenly balloons in size!</span>")
-	new /mob/living/simple_mob/vore/solargrub(get_turf(src))
+	log_game("A larva has matured into a grub in area [src.loc.name] ([src.x],[src.y],[src.z]")
+	var/mob/living/simple_mob/vore/solargrub/adult = new(get_turf(src))
+	adult.tracked = tracked
 //	grub.power_drained = power_drained //TODO
 	qdel(src)
 
@@ -182,6 +188,8 @@ var/global/list/grub_machine_overlays = list()
 	if(. == 0 && !is_dead())
 		set_light(1.5, 1, COLOR_YELLOW)
 		return 1
+	else if(is_dead())
+		glow_override = FALSE
 
 
 /obj/machinery/abstract_grub_machine
@@ -284,6 +292,16 @@ var/global/list/grub_machine_overlays = list()
 
 
 /obj/item/device/multitool/afterattack(obj/O, mob/user, proximity)
+	if(proximity)
+		if(istype(O, /obj/machinery))
+			var/mob/living/simple_mob/animal/solargrub_larva/grub = locate() in O
+			if(grub)
+				grub.eject_from_machine(O)
+				to_chat(user, "<span class='warning'>You disturb a grub nesting in \the [O]!</span>")
+				return
+	return ..()
+
+/obj/item/weapon/melee/baton/afterattack(obj/O, mob/user, proximity)
 	if(proximity)
 		if(istype(O, /obj/machinery))
 			var/mob/living/simple_mob/animal/solargrub_larva/grub = locate() in O

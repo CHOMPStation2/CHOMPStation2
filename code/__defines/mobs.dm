@@ -27,6 +27,8 @@
 #define BORGTHERM 0x2
 #define BORGXRAY  0x4
 #define BORGMATERIAL  0x8
+#define BORGANOMALOUS  0x10
+#define BORGJAN  0x20
 
 #define STANCE_ATTACK    11 // Backwards compatability
 #define STANCE_ATTACKING 12 // Ditto
@@ -136,8 +138,9 @@
 #define CLASS_MIDDLE 		"Average"
 #define CLASS_LOWMID		"Underpaid"
 #define CLASS_LOWER			"Poor"
+#define CLASS_BROKE			"Broke"	//VOREStation Add
 
-#define ECONOMIC_CLASS		list(CLASS_UPPER,CLASS_UPMID,CLASS_MIDDLE,CLASS_LOWMID,CLASS_LOWER)
+#define ECONOMIC_CLASS		list(CLASS_UPPER,CLASS_UPMID,CLASS_MIDDLE,CLASS_LOWMID,CLASS_LOWER,CLASS_BROKE)
 
 
 // Defines mob sizes, used by lockers and to determine what is considered a small sized mob, etc.
@@ -249,7 +252,7 @@
 #define BP_HEAD   "head"
 #define BP_TORSO  "torso"
 #define BP_GROIN  "groin"
-#define BP_ALL list(BP_GROIN, BP_TORSO, BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG)
+#define BP_ALL list(BP_TORSO, BP_HEAD, BP_GROIN, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT) //keep so that parent comes before child
 
 #define SYNTH_BLOOD_COLOUR "#030303"
 #define SYNTH_FLESH_COLOUR "#575757"
@@ -320,11 +323,12 @@
 #define SPECIES_VR_VOX			"Virtual Reality Vox"
 
 // Ayyy IDs.
-#define SPECIES_XENO			"Xenomorph"
-#define SPECIES_XENO_DRONE		"Xenomorph Drone"
-#define SPECIES_XENO_HUNTER		"Xenomorph Hunter"
-#define SPECIES_XENO_SENTINEL	"Xenomorph Sentinel"
-#define SPECIES_XENO_QUEEN		"Xenomorph Queen"
+#define SPECIES_XENO				"Xenomorph"
+#define SPECIES_XENO_DRONE			"Xenomorph Drone"
+#define SPECIES_XENO_HUNTER			"Xenomorph Hunter"
+#define SPECIES_XENO_SENTINEL		"Xenomorph Sentinel"
+#define SPECIES_XENO_QUEEN			"Xenomorph Queen"
+#define SPECIES_XENOMORPH_HYBRID 	"Xenomorph Hybrid" // CHOMPedit: Playable Xeno species.
 
 // Misc species. Mostly unused but might as well be complete.
 #define SPECIES_SHADOW			"Shadow"
@@ -399,18 +403,19 @@
 #define VIS_ADMIN3			20
 
 #define VIS_MESONS			21
+#define VIS_JANHUD			22
 
-#define VIS_TURFS			22
-#define VIS_OBJS			23
-#define VIS_MOBS		    24
+#define VIS_TURFS			23
+#define VIS_OBJS			24
+#define VIS_MOBS		    25
 
-#define VIS_BUILDMODE		25
+#define VIS_BUILDMODE		26
 
-#define VIS_CLOAKED			26
+#define VIS_CLOAKED			27
 
-#define VIS_STATUS			27
+#define VIS_STATUS			28
 
-#define VIS_COUNT			27 //Must be highest number from above.
+#define VIS_COUNT			28 //Must be highest number from above.
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100
@@ -447,3 +452,7 @@
 #define DEATHGASP_NO_MESSAGE "no message"
 
 #define RESIST_COOLDOWN		2 SECONDS
+
+#define VISIBLE_GENDER_FORCE_PLURAL 1		// Used by get_visible_gender to return PLURAL
+#define VISIBLE_GENDER_FORCE_IDENTIFYING 2	// Used by get_visible_gender to return the mob's identifying gender
+#define VISIBLE_GENDER_FORCE_BIOLOGICAL 3	// Used by get_visible_gender to return the mob's biological gender

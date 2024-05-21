@@ -64,7 +64,7 @@
 		return
 	if(!affects_dead && M.stat == DEAD)
 		return
-	if(!affects_robots && M.isSynthetic())
+	if(M.isSynthetic() && (!M.synth_reag_processing || !affects_robots)) //CHOMPEdit
 		return
 	if(!istype(location))
 		return
@@ -165,13 +165,16 @@
 			if(CHEM_BLOOD)
 				affect_blood(M, alien, removed)
 			if(CHEM_INGEST)
+				if(istype(src, /datum/reagent/toxin) && M.toxin_gut) //CHOMPAdd
+					remove_self(removed)
+					return
 				affect_ingest(M, alien, removed * ingest_abs_mult)
 			if(CHEM_TOUCH)
 				affect_touch(M, alien, removed)
-	if(overdose && (volume > overdose * M?.species.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH && !can_overdose_touch))
+	if(overdose && (volume > overdose * M?.species.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH || can_overdose_touch))
 		overdose(M, alien, removed)
 	if(M.species.allergens & allergen_type)	//uhoh, we can't handle this!
-		M.add_chemical_effect(CE_ALLERGEN,allergen_factor)
+		M.add_chemical_effect(CE_ALLERGEN, allergen_factor * removed)
 	remove_self(removed)
 	return
 
@@ -180,6 +183,8 @@
 
 /datum/reagent/proc/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	M.bloodstr.add_reagent(id, removed)
+	if(src.id == M.species.blood_reagents)
+		M.add_chemical_effect(CE_BLOODRESTORE, 8 * removed)
 	return
 
 /datum/reagent/proc/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
@@ -214,7 +219,7 @@
 /datum/reagent/Destroy() // This should only be called by the holder, so it's already handled clearing its references
 	holder = null
 	. = ..()
-	
+
 //YW edit start
 // Called when reagents are removed from a container, most likely after metabolizing in a mob
 /datum/reagent/proc/on_remove(var/atom/A)

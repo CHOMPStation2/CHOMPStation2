@@ -4,17 +4,19 @@
 	edge_blending_priority = 6
 	movement_cost = 2
 	initial_flooring = /decl/flooring/snow
-	turf_layers = list(
+	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
-		)
+		) CHOMP Removal End*/
 	var/list/crossed_dirs = list()
 
 
 /turf/simulated/floor/outdoors/snow/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(L.hovering) // Flying things shouldn't make footprints.
+		if(L.hovering || L.flying) // Flying things shouldn't make footprints.
+			if(L.flying)
+				L.adjust_nutrition(-0.5)
 			return ..()
 		var/mdir = "[A.dir]"
 		crossed_dirs[mdir] = 1
@@ -51,6 +53,7 @@
 	icon_state = "ice"
 	desc = "Looks slippery."
 	edge_blending_priority = 0
+	can_be_plated = FALSE
 
 /turf/simulated/floor/outdoors/ice/dark
 	name = "black ice"
@@ -76,3 +79,4 @@
 	icon_state = "ice"
 	desc = "Looks slippery."
 	movement_cost = 4
+	edge_blending_priority = 0

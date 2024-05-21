@@ -25,7 +25,7 @@
 	softfall = TRUE //Beings made of Hellmarble and powered by the tears of the damned are not concerned with mortal things such as 'gravity'.
 	parachuting = TRUE
 
-	has_langs = list(LANGUAGE_GALCOM, LANGUAGE_CULT, LANGUAGE_OCCULT)
+	has_langs = list(LANGUAGE_GALCOM, LANGUAGE_CULT)
 
 	has_eye_glow = TRUE
 
@@ -61,6 +61,9 @@
 	var/construct_type = "shade"
 	var/list/construct_spells = list()
 //	var/do_glow = TRUE
+
+	can_be_drop_prey = FALSE //CHOMP Add
+	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
 
 /mob/living/simple_mob/construct/place_spell_in_hand(var/path)
 	if(!path || !ispath(path))
@@ -103,7 +106,7 @@
 	real_name = name
 	for(var/spell in construct_spells)
 		src.add_spell(new spell, "const_spell_ready")
-	updateicon()
+	update_icon()
 
 /*
 /mob/living/simple_mob/construct/update_icon()

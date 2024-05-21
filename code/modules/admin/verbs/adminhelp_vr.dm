@@ -1,5 +1,12 @@
+/*
+
+CHOMPedit - This file has been excluded from the compilation.
+Reason: Replaced with "Tickets System"
+
+*/
+
 /datum/admin_help/proc/send2adminchat()
-	if(!config.chat_webhook_url)
+	if(!CONFIG_GET(string/chat_webhook_url)) // CHOMPEdit
 		return
 
 	var/list/adm = get_admin_counts()
@@ -13,7 +20,7 @@
 		query_string += "&msg=[url_encode(html_decode(name))]"
 		query_string += "&admin_number=[allmins.len]"
 		query_string += "&admin_number_afk=[afkmins.len]"
-		world.Export("[config.chat_webhook_url]?[query_string]")
+		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
 
 /client/verb/adminspice()
 	set category = "Admin"
@@ -33,6 +40,7 @@
 		return
 
 	//if they requested spice, then remove spice verb temporarily to prevent spamming
-	usr.verbs -= /client/verb/adminspice
-	spawn(6000)
-		usr.verbs += /client/verb/adminspice	// 10 minute cool-down for spice request
+	remove_verb(usr,/client/verb/adminspice)  //CHOMPEdit
+	spawn(10 MINUTES)
+		if(usr)		// In case we left in the 10 minute cooldown
+			add_verb(usr,/client/verb/adminspice	) // 10 minute cool-down for spice request //CHOMPEdit

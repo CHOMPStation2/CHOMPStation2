@@ -15,6 +15,8 @@
 	var/modifystate
 	var/charge_meter = 1	//if set, the icon state will be chosen based on the current charge
 
+	reload_time = 5		//Energy weapons are slower to reload than ballistics by default, but this is no change from current values
+
 	//self-recharging
 	var/self_recharge = 0	//if set, the weapon will recharge itself
 	var/use_external_power = 0 //if set, the weapon will look for an external power source to draw from, otherwise it recharges magically
@@ -25,9 +27,13 @@
 	var/shot_counter = TRUE // does this gun tell you how many shots it has?
 
 	var/battery_lock = 0	//If set, weapon cannot switch batteries
+	var/random_start_ammo = FALSE	//if TRUE, the weapon will spawn with randomly-determined ammo
 
 /obj/item/weapon/gun/energy/New()
-	..()
+	//..() CHOMPEdit moved to bottom
+	var/static/list/gun_icons = icon_states('icons/obj/gun_ch.dmi')
+	if (icon == 'icons/obj/gun_ch.dmi' && !(icon_state in gun_icons))
+		icon = 'icons/obj/gun.dmi'
 	if(self_recharge)
 		power_supply = new /obj/item/weapon/cell/device/weapon(src)
 		START_PROCESSING(SSobj, src)
@@ -36,8 +42,11 @@
 			power_supply = new cell_type(src)
 		else
 			power_supply = null
-
+	//random starting power! gives us a random number of shots in the battery between 0 and the max possible
+	if(random_start_ammo && cell_type)
+		power_supply.charge = charge_cost*rand(0,power_supply.maxcharge/charge_cost)
 	update_icon()
+	..() //CHOMPEdit if you see this, it is a cry for help. Please tell people to stop putting ..() at the top of New() :(
 
 /obj/item/weapon/gun/energy/Destroy()
 	if(self_recharge)
@@ -114,8 +123,8 @@
 	if(!power_supply) return null
 	if(!ispath(projectile_type)) return null
 	if(!power_supply.checked_use(charge_cost)) return null
-	var/mob/living/M = loc // TGMC Ammo HUD 
-	if(istype(M)) // TGMC Ammo HUD 
+	var/mob/living/M = loc // TGMC Ammo HUD
+	if(istype(M)) // TGMC Ammo HUD
 		M?.hud_used.update_ammo_hud(M, src)
 	return new projectile_type(src)
 
@@ -130,7 +139,7 @@
 				to_chat(user, "<span class='notice'>[src] already has a power cell.</span>")
 			else
 				user.visible_message("[user] is reloading [src].", "<span class='notice'>You start to insert [P] into [src].</span>")
-				if(do_after(user, 5 * P.w_class))
+				if(do_after(user, reload_time * P.w_class))
 					user.remove_from_mob(P)
 					power_supply = P
 					P.loc = src
