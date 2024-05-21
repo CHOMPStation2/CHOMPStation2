@@ -8,15 +8,11 @@
 
 	// New sprite stacks can be defined here. You could theoretically change icon-states as well but right now this file compiles before station_ids.dm so those wouldn't be affected.
 
-<<<<<<< HEAD
-/*
-=======
 //IDs
 
 /obj/item/weapon/card/id
 	initial_sprite_stack = list("base-stamp", "top-generic", "stamp-n")
 
->>>>>>> 5c502c231e... lost borg changes (#15994)
 /obj/item/weapon/card/id/generic
 	name = "Generic ID"
 	initial_sprite_stack = list("base-stamp", "top-generic", "stamp-silhouette", "clip")
@@ -292,7 +288,3 @@
 /obj/item/weapon/card/id/syndicate/officer
 	name = "Syndicate Officer ID"
 	initial_sprite_stack = list("base-stamp-dark", "top-syndicate", "stamp-s", "pips-gold", "stripe-gold")
-<<<<<<< HEAD
-*/
-=======
->>>>>>> 5c502c231e... lost borg changes (#15994)
