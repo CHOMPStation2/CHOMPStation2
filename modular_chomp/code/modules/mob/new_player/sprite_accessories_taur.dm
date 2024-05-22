@@ -41,7 +41,7 @@
 /datum/sprite_accessory/tail/taur/drake
 	vore_tail_sprite_variant = "Drake"
 	belly_variant_when_loaf = TRUE
-	fullness_icons = 1
+	fullness_icons = 3
 
 /datum/sprite_accessory/tail/taur/otie
 	vore_tail_sprite_variant = "Otie"
@@ -272,10 +272,10 @@
 	icon_state = "extended_fatdrake"
 	extra_overlay = "extended_fatdrake_markings"
 	extra_overlay2 = "extended_fatdrake_markings2"
-
-	can_loaf = FALSE //Soon
-	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
-	loaf_offset = 6
+	fullness_icons = 2
+	can_loaf = TRUE //Soon //Actually, NOW
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 5
 
 /datum/sprite_accessory/tail/taur/ch/bigleggy/AlienSlug
 	name = "Big Leggies (Alien Slug Tail)"
@@ -289,3 +289,97 @@
 	suit_sprites = 'icons/mob/taursuits_naga_alt_ch.dmi'
 	vore_tail_sprite_variant = "Naga3Piece"
 	fullness_icons = 1
+
+/datum/sprite_accessory/tail/taur/drake/spotty
+	name = "Spotted Drake (Taur, Tricolor)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "spotteddrake_s"
+	extra_overlay = "spotteddrake_markings"
+	extra_overlay_w = "spotteddrake_markings"
+	extra_overlay2 = "spotteddrake_markings_2"
+	extra_overlay2_w = "spotteddrake_markings_2"
+	suit_sprites = 'icons/mob/taursuits_drake_ch.dmi'
+	icon_sprite_tag = "drake"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 6
+
+/datum/sprite_accessory/tail/taur/drake/fat/spotty
+	name = "Fat Spotted Drake (Taur, Tricolor)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	vore_tail_sprite_variant = "FatDrake"
+	icon_state = "fatspotteddrake_s"
+	extra_overlay = "fatspotteddrake_markings"
+	extra_overlay_w = "fatspotteddrake_markings"
+	extra_overlay2 = "fatspotteddrake_markings_2"
+	extra_overlay2_w = "fatspotteddrake_markings_2"
+	fullness_icons = 2
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 6
+
+/datum/sprite_accessory/tail/taur/lizard/spotty
+	name = "Spotted Lizard (Taur, Tricolor)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "spottedlizard_s"
+	extra_overlay = "spottedlizard_markings"
+	extra_overlay_w = "spottedlizard_markings"
+	extra_overlay2 = "spottedlizard_markings_2"
+	extra_overlay2_w = "spottedlizard_markings_2"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 5
+
+/datum/sprite_accessory/tail/taur/lizard/fat/spotty
+	name = "Fat Spotted Lizard (Taur, Tricolor)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	icon_state = "fatspottedlizard_s"
+	extra_overlay = "fatspottedlizard_markings"
+	extra_overlay_w = "fatspottedlizard_markings"
+	extra_overlay2 = "fatspottedlizard_markings_2"
+	extra_overlay2_w = "fatspottedlizard_markings_2"
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 3
+
+/datum/sprite_accessory/tail/taur/drake/extended/spotty
+	name = "Fat Spotted Drake Extended (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	vore_tail_sprite_variant = "FatDrake"
+	icon_state = "spottedextended_fatdrake"
+	extra_overlay = "spottedextended_fatdrake_markings"
+	extra_overlay_w = "spottedextended_fatdrake_markings"
+	extra_overlay2 = "spottedextended_fatdrake_markings_2"
+	extra_overlay2_w = "spottedextended_fatdrake_markings_2"
+	fullness_icons = 2
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 5
+
+/datum/sprite_accessory/tail/taur/drake/extended_alt
+	name = "Drake Extended (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	vore_tail_sprite_variant = "Drake"
+	icon_state = "extended_drake"
+	extra_overlay = "extended_drake_markings"
+	extra_overlay_w = "extended_drake_markings"
+	extra_overlay2 = "extended_drake_markings_2"
+	extra_overlay2_w = "extended_drake_markings_2"
+	fullness_icons = 3
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 5
+
+/datum/sprite_accessory/tail/taur/drake/extended_alt/spotted
+	name = "Spotted Drake Extended (Taur)"
+	icon = 'icons/mob/vore/taurs_ch.dmi'
+	vore_tail_sprite_variant = "Drake"
+	icon_state = "spottedextended_drake"
+	extra_overlay = "spottedextended_drake_markings"
+	extra_overlay_w = "spottedextended_drake_markings"
+	extra_overlay2 = "spottedextended_drake_markings_2"
+	extra_overlay2_w = "spottedextended_drake_markings_2"
+	fullness_icons = 3
+	can_loaf = TRUE
+	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
+	loaf_offset = 5
