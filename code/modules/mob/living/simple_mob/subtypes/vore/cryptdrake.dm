@@ -129,8 +129,6 @@
 	set_AI_busy(FALSE)
 	if(Adjacent(L))	//We leapt at them but we didn't manage to hit them, let's see if we're next to them
 		L.Weaken(2)	//get knocked down, idiot
-<<<<<<< HEAD
-=======
 
 /mob/living/simple_mob/vore/cryptdrake/albedo //A slight variation of the cryptdrake requested for an event with glowing eyes
 	icon_dead = "cryptdrake_albedo-dead"
@@ -138,4 +136,3 @@
 	icon_state = "cryptdrake_albedo"
 	icon_rest = "cryptdrake_albedo"
 	has_eye_glow = TRUE
->>>>>>> 37548b1fd9... Event Crypt Drake Variant (#15999)
