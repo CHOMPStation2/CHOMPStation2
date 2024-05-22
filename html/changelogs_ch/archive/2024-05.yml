@@ -116,3 +116,6 @@
 2024-05-21:
   tacoguy7765093:
   - maptweak: Crash fix in the DJ inn
+2024-05-22:
+  FluffMedic:
+  - bugfix: laser staff used the wrong projectile path
