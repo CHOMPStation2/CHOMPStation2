@@ -967,14 +967,16 @@
 
 /obj/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/weapon/gun/G)
 
-	if(G.hud_enabled == FALSE)
-		return
-
 	if(!user?.client)
 		return
 
 	if(!G)
 		CRASH("/obj/screen/ammo/proc/add_hud() has been called from [src] without the required param of G")
+
+	//CHOMPAdd start
+	if(!G.hud_enabled)
+		return
+	//CHOMPAdd End
 
 	if(!G.has_ammo_counter())
 		return
