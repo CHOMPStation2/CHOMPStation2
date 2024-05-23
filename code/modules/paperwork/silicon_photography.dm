@@ -140,7 +140,7 @@
 	set desc = "Delete a local image"
 
 	if(aiCamera)
-		aiCamera.deletepicture(src)
+		aiCamera.deletepicture()
 
 /obj/item/device/camera/siliconcam/proc/getsource()
 	if(istype(src.loc, /mob/living/silicon/ai))
