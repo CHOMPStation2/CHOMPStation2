@@ -1,0 +1,5 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "fixed medi-sci maints"
+  - maptweak: "some valley POIs are a smidge diffrent"
