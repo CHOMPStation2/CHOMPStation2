@@ -115,9 +115,9 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "cf" = (
 /obj/effect/simple_portal/coords{
-	tele_x = 182;
-	tele_y = 13;
-	tele_z = 16
+	tele_x = 130;
+	tele_y = 132;
+	tele_z = 3
 	},
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/awaymission/hiddeneclipse/precursortemple)
@@ -980,9 +980,9 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "uB" = (
 /obj/effect/simple_portal/coords{
-	tele_x = 182;
-	tele_y = 13;
-	tele_z = 16
+	tele_x = 130;
+	tele_y = 132;
+	tele_z = 3
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/theabyss)
