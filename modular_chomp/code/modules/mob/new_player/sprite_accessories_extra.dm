@@ -347,3 +347,19 @@
 	name = "Xenomorph teeth (queen)"
 	icon_state = "xeno_teeth_queen"
 	body_parts = list(BP_HEAD)
+
+// WHISKIES //
+
+/datum/sprite_accessory/marking/ch/mole_whiskers
+	name = "mole whiskers"
+	icon_state = "molewhiskers"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SNOOT //
+
+/datum/sprite_accessory/marking/ch/vulp_lips
+	name = "face, vulp (Lips)"
+	icon_state = "vulp_lips"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
