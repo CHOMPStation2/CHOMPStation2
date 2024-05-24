@@ -119,3 +119,9 @@
 2024-05-22:
   FluffMedic:
   - bugfix: laser staff used the wrong projectile path
+2024-05-24:
+  FluffMedic:
+  - bugfix: fixed medi-sci maints
+  - maptweak: some valley POIs are a smidge diffrent
+  tacoguy7765093:
+  - rscadd: Added a new latex marking for digi paws
