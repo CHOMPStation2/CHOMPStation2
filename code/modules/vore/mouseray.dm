@@ -302,6 +302,7 @@
 	new_mob.no_latejoin_prey_warning_time = no_latejoin_prey_warning_time
 	new_mob.no_latejoin_vore_warning_persists = no_latejoin_vore_warning_persists
 	new_mob.no_latejoin_prey_warning_persists = no_latejoin_prey_warning_persists
+	new_mob.belly_rub_target = belly_rub_target
 	//CHOMP stuff End
 
 /////SUBTYPES/////

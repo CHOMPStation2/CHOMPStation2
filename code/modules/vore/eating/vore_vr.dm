@@ -87,6 +87,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/no_latejoin_prey_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_vore_warning_persists = FALSE
 	var/no_latejoin_prey_warning_persists = FALSE
+	var/belly_rub_target = null
 	//CHOMP stuff end
 
 	var/list/belly_prefs = list()
@@ -241,6 +242,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(no_latejoin_prey_warning_persists)
 		no_latejoin_prey_warning = json_from_file["no_latejoin_prey_warning"]
 		no_latejoin_prey_warning_time = json_from_file["no_latejoin_prey_warning_time"]
+	belly_rub_target = json_from_file["belly_rub_target"]
 	//CHOMP stuff End
 
 
@@ -424,6 +426,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"no_latejoin_prey_warning_time"		= no_latejoin_prey_warning_time, //CHOMPEdit
 			"no_latejoin_vore_warning_persists"		= no_latejoin_vore_warning_persists, //CHOMPEdit
 			"no_latejoin_prey_warning_persists"		= no_latejoin_prey_warning_persists, //CHOMPEdit
+			"belly_rub_target" = belly_rub_target //CHOMPEdit
 		)
 
 	//List to JSON

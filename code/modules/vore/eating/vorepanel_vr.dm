@@ -544,6 +544,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"weight_messages" = host.weight_messages,
 		"eating_privacy_global" = host.eating_privacy_global,
 		//CHOMPEdit start, vore sprites
+		"belly_rub_target" = host.belly_rub_target,
 		"vore_sprite_color" = host.vore_sprite_color,
 		"vore_sprite_multiply" = host.vore_sprite_multiply
 		//CHOMPEdit end
@@ -2018,15 +2019,25 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//CHOMPEdit start - vore sprites color
 		if("set_vs_color")
 			var/belly_choice = tgui_input_list(usr, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
-			var/newcolor = input(usr, "Choose a color.", "", host.vore_sprite_color[belly_choice]) as color|null
-			if(newcolor)
-				host.vore_sprite_color[belly_choice] = newcolor
-				var/multiply = tgui_input_list(usr, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
-				if(multiply == "Multiply")
-					host.vore_sprite_multiply[belly_choice] = TRUE
-				else if(multiply == "Add")
-					host.vore_sprite_multiply[belly_choice] = FALSE
-				host.update_icons_body()
+			if(belly_choice)
+				var/newcolor = input(usr, "Choose a color.", "", host.vore_sprite_color[belly_choice]) as color|null
+				if(newcolor)
+					host.vore_sprite_color[belly_choice] = newcolor
+					var/multiply = tgui_input_list(usr, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
+					if(multiply == "Multiply")
+						host.vore_sprite_multiply[belly_choice] = TRUE
+					else if(multiply == "Add")
+						host.vore_sprite_multiply[belly_choice] = FALSE
+					host.update_icons_body()
+					unsaved_changes = TRUE
+			return TRUE
+		if("set_belly_rub")
+			host.belly_rub_target = tgui_input_list(usr, "Which belly would you prefer to be rubbed?","Select Target", host.vore_organs)
+			if(!(host.belly_rub_target))
+				host.belly_rub_target = null
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.belly_rub_target = host.belly_rub_target
+			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_no_latejoin_vore_warning")
 			host.no_latejoin_vore_warning = !host.no_latejoin_vore_warning

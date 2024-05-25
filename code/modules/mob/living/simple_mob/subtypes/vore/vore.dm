@@ -71,6 +71,7 @@
 	no_latejoin_prey_warning_time = client.prefs_vr.no_latejoin_prey_warning_time
 	no_latejoin_vore_warning_persists = client.prefs_vr.no_latejoin_vore_warning_persists
 	no_latejoin_prey_warning_persists = client.prefs_vr.no_latejoin_prey_warning_persists
+	belly_rub_target = client.prefs_vr.belly_rub_target
 	//CHOMP Stuff End
 
 /mob/living/simple_mob/proc/set_name()
