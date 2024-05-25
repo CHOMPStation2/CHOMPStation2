@@ -6,7 +6,7 @@
 	name = "vox"
 	corpseid = 0
 
-/obj/effect/landmark/mobcorpse/vox/New()
+/obj/effect/landmark/mobcorpse/vox/Initialize()
 	createvoxCorpse()
 
 /obj/effect/landmark/mobcorpse/vox/proc/createvoxCorpse() //Creates a mob and checks for gear in each slot before attempting to equip it.
