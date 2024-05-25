@@ -4,6 +4,7 @@
 
 /obj/effect/landmark/mobcorpse/vox
 	name = "vox"
+	hair = "Short Vox Quills"
 	species = SPECIES_VOX
 
 //Types of Vox corpses:
