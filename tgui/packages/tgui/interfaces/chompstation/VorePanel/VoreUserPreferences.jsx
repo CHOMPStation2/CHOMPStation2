@@ -1006,7 +1006,7 @@ export const VoreUserPreferences = (props) => {
               onClick={() => act('set_belly_rub')}
               icon="crosshairs"
             >
-              {'Vorebelly rub target: ' +
+              {'Belly Rub Target: ' +
                 (belly_rub_target
                   ? belly_rub_target
                   : 'Current Active (' + selected.belly_name + ')')}
