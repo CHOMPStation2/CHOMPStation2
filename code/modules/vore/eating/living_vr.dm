@@ -864,17 +864,13 @@
 			to_chat(src, "<span class='warning'>\The [pocketpal] doesn't allow you to eat it.</span>")
 			return
 
-<<<<<<< HEAD
-	if(is_type_in_list(I,edible_trash) | adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) //chompstation add synth check
-=======
 	if(istype(I, /obj/item/weapon/book))
 		var/obj/item/weapon/book/book = I
 		if(book.carved)
 			to_chat(src, "<span class='warning'>\The [book] is not worth eating without the filling.</span>")
 			return
 
-	if(is_type_in_list(I,edible_trash) | adminbus_trash)
->>>>>>> 8649fe918a... Delicious knowledge (#16006)
+	if(is_type_in_list(I,edible_trash) | adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) //chompstation add synth check
 		if(I.hidden_uplink)
 			to_chat(src, "<span class='warning'>You really should not be eating this.</span>")
 			message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? ADMIN_JMP(src) : "null"])")
