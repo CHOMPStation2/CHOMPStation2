@@ -929,13 +929,9 @@
 				to_chat(src, "<span class='notice'>You can taste the flavor of aromatic rolling paper and funny looks.</span>")
 		else if(istype(I,/obj/item/weapon/paper))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of bureaucracy.</span>")
-<<<<<<< HEAD
-		else if(istype(I,/obj/item/weapon/dice)) //CHOMPedit: Removed roulette ball because that's not active here.
-=======
 		else if(istype(I,/obj/item/weapon/book))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of knowledge.</span>")
-		else if(istype(I,/obj/item/weapon/dice) || istype(I,/obj/item/roulette_ball))
->>>>>>> 8649fe918a... Delicious knowledge (#16006)
+		else if(istype(I,/obj/item/weapon/dice)) //CHOMPedit: Removed roulette ball because that's not active here.
 			to_chat(src, "<span class='notice'>You can taste the bitter flavor of cheating.</span>")
 		else if(istype(I,/obj/item/weapon/lipstick))
 			to_chat(src, "<span class='notice'>You can taste the flavor of couture and style. Toddler at the make-up bag style.</span>")
