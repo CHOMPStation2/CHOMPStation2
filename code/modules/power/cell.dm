@@ -39,9 +39,15 @@
 	..()
 	c_uid = cell_uid++
 	charge = maxcharge
-	update_icon()
+	//update_icon() //CHOMPRemove
 	if(self_recharge)
 		START_PROCESSING(SSobj, src)
+
+//CHOMPAdd Start
+/obj/item/weapon/cell/Initialize()
+	. = ..()
+	update_icon()
+//CHOMPAdd End
 
 /obj/item/weapon/cell/Destroy()
 	if(self_recharge)
