@@ -408,6 +408,7 @@ var/list/_client_preferences_by_type
 	enabled_description = "Extended"
 	disabled_description = "Default"
 
+<<<<<<< HEAD
 // CHOMPAdd
 /datum/client_preference/sleep_music
 	description = "Sleeping Music"
@@ -415,6 +416,14 @@ var/list/_client_preferences_by_type
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 // CHOMPAdd End
+=======
+/datum/client_preference/auto_afk
+	description = "Automatic AFK Status"
+	key = "AUTO_AFK"
+	enabled_by_default = TRUE
+	enabled_description = "Automatic"
+	disabled_description = "Manual Only"
+>>>>>>> b3aa4b75fa... Auto-AFK (#15997)
 
 
 /********************
