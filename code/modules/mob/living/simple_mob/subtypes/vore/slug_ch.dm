@@ -203,10 +203,16 @@
 	if(AM.is_incorporeal())
 		return
 
-	if(istype(AM, /mob/living))
+	if(istype(AM, /mob/living/simple_mob))
 		var/mob/living/L = AM
 		if(istype(L, /mob/living/simple_mob/vore/slug))
 			return
+		L.Weaken(10)
+		playsound(src, 'sound/rakshasa/Decay3.ogg', 100, 1)
+		alert_slug(L)
+
+	if(istype(AM, /mob/living/carbon) || istype(AM, /mob/living/silicon))
+		var/mob/living/L = AM
 
 		if(L.m_intent == "run" && !L.buckled)
 			if(has_buckled_mobs())
