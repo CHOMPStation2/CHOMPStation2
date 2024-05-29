@@ -61,3 +61,12 @@
 	holosign_type = /obj/structure/holosign/barrier/combifan
 	creation_time = 0
 	max_signs = 3
+
+/obj/item/weapon/holosign_creator/medical
+	name = "\improper PENLITE barrier projector"
+	desc = "A holographic projector that creates PENLITE holobarriers. Useful during quarantines since they halt those with malicious diseases."
+	icon = 'modular_chomp/icons/obj/device.dmi'
+	icon_state = "signmaker_med"
+	holosign_type = /obj/structure/holosign/barrier/medical
+	creation_time = 0
+	max_signs = 6
