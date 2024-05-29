@@ -49,13 +49,34 @@
 	wrapper_color = COLOR_GREEN
 
 /obj/item/weapon/storage/pill_bottle/purifyingagent
-
 	name = "pill bottle (purifying agent)"
-
 	desc = "Contains experimental pills, having application as an anti-toxin."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/purifyingagent = 7)
-
 	wrapper_color = COLOR_GREEN
+
+/obj/item/weapon/storage/pill_bottle/methylphenidate
+	name = "pill bottle (Methylphenidate)"
+	desc = "Contains pills used to help a patient concentrate. Usually prescribed for ADHD or similar conditions."
+	starts_with = list(/obj/item/weapon/reagent_containers/pill/methylphenidate = 7)
+	wrapper_color = COLOR_GUNMETAL
+
+/obj/item/weapon/storage/pill_bottle/paroxetine
+	name = "pill bottle (Paroxetine)"
+	desc = "Contains pills used to help treat severe depression. Side effects can include hallucinations."
+	starts_with = list(/obj/item/weapon/reagent_containers/pill/paroxetine = 7)
+	wrapper_color = COLOR_GRAY40
+
+/obj/item/weapon/storage/pill_bottle/adranol
+	name = "pill bottle (Adranol)"
+	desc = "Contains pills used to help treat jitters, blurred vision, and confusion."
+	starts_with = list(/obj/item/weapon/reagent_containers/pill/adranol = 7)
+	wrapper_color = COLOR_YELLOW
+
+/obj/item/weapon/storage/pill_bottle/aphrodisiac //this is totally first aid shut up
+	name = "pill bottle (Aphrodisiac)"
+	desc = "Contains pills used to help get it on."
+	starts_with = list(/obj/item/weapon/reagent_containers/pill/aphrodisiac = 14)
+	wrapper_color = COLOR_PINK
 
 //Pills
 /obj/item/weapon/reagent_containers/pill/neotane
@@ -130,4 +151,44 @@
 	. = ..()
 	reagents.add_reagent("purifyingagent", 10)
 
+	color = reagents.get_color()
+
+/obj/item/weapon/reagent_containers/pill/methylphenidate
+	name = "Methylphenidate (10u)"
+	desc = "A pill to help you concentrate."
+	icon_state = "pill2"
+
+/obj/item/weapon/reagent_containers/pill/methylphenidate/Initialize()
+	. = ..()
+	reagents.add_reagent("methylphenidate", 10)
+	color = reagents.get_color()
+
+/obj/item/weapon/reagent_containers/pill/paroxetine
+	name = "Paroxetine (10u)"
+	desc = "A pill to help treat severe depression."
+	icon_state = "pill2"
+
+/obj/item/weapon/reagent_containers/pill/paroxetine/Initialize()
+	. = ..()
+	reagents.add_reagent("paroxetine", 10)
+	color = reagents.get_color()
+
+/obj/item/weapon/reagent_containers/pill/adranol
+	name = "Adranol (10u)"
+	desc = "A pill to help treat jitters, confusion, and blurred vision."
+	icon_state = "pill2"
+
+/obj/item/weapon/reagent_containers/pill/adranol/Initialize()
+	. = ..()
+	reagents.add_reagent("adranol", 10)
+	color = reagents.get_color()
+
+/obj/item/weapon/reagent_containers/pill/aphrodisiac
+	name = "Aphrodisiac (20u)"
+	desc = "Just one couldn't hurt, right?"
+	icon_state = "pill2"
+
+/obj/item/weapon/reagent_containers/pill/aphrodisiac/Initialize()
+	. = ..()
+	reagents.add_reagent("aphrodisiac", 20)
 	color = reagents.get_color()
