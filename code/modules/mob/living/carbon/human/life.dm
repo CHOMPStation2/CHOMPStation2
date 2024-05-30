@@ -1325,8 +1325,12 @@
 				if (mind)
 					//Are they SSD? If so we'll keep them asleep but work off some of that sleep var in case of stoxin or similar.
 					if(client || sleeping > 3)
+<<<<<<< HEAD
 						AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
 						throw_alert("asleep", /obj/screen/alert/asleep)
+=======
+						handle_sleeping()
+>>>>>>> c2c86ce042... toggle sleep (#16012)
 				if( prob(2) && health && !hal_crit && client )
 					spawn(0)
 						emote("snore")

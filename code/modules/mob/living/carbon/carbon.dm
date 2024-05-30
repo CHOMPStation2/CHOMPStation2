@@ -395,6 +395,7 @@
 			return method ? ">250" : "extremely weak and fast, patient's artery feels like a thread"
 //			output for machines^	^^^^^^^output for people^^^^^^^^^
 
+<<<<<<< HEAD
 /mob/living/carbon/verb/mob_sleep()
 	set name = "Sleep"
 	set category = "IC.Game" //CHOMPEdit
@@ -405,6 +406,8 @@
 	if(tgui_alert(src,"You sure you want to sleep for a while?","Sleep",list("Yes","No")) == "Yes")
 		usr.AdjustSleeping(20)
 
+=======
+>>>>>>> c2c86ce042... toggle sleep (#16012)
 /mob/living/carbon/Bump(atom/A)
 	if(now_pushing)
 		return
