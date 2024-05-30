@@ -289,7 +289,7 @@
 	if(stat != DEAD && toggled_sleeping)
 		Sleeping(2)
 	if(sleeping)
-		AdjustSleeping(-1)
+		AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
 		throw_alert("asleep", /obj/screen/alert/asleep)
 	else
 		clear_alert("asleep")

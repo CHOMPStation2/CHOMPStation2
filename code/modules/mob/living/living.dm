@@ -1391,7 +1391,7 @@
 
 /mob/living/verb/mob_sleep()
 	set name = "Sleep"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	if(!toggled_sleeping && alert(src, "Are you sure you wish to go to sleep? You will snooze until you use the Sleep verb again.", "Sleepy Time", "No", "Yes") == "No")
 		return
 	toggled_sleeping = !toggled_sleeping
