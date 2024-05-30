@@ -128,3 +128,6 @@
 2024-05-28:
   Verkister:
   - bugfix: Fixed unathi size 1 bellysprites not working.
+2024-05-30:
+  TheCaramelion:
+  - bugfix: Fixed slug glue breaking agresive mobs AI
