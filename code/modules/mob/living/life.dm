@@ -289,7 +289,13 @@
 	if(stat != DEAD && toggled_sleeping)
 		Sleeping(2)
 	if(sleeping)
-		AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
+		//CHOMPEdit Start
+		if(iscarbon(src))
+			var/mob/living/carbon/C = src
+			AdjustSleeping(-1 * C.species.waking_speed)
+		else
+			AdjustSleeping(-1)
+		//CHOMPEdit End
 		throw_alert("asleep", /obj/screen/alert/asleep)
 	else
 		clear_alert("asleep")
