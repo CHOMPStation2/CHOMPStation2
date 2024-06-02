@@ -10,7 +10,7 @@
 		/area/holodeck,
 		/area/engineering/engine_room,
 		/area/engineering/engine_monitoring,
-		/area/maintenance
+		/area/maintenance,
 		/area/medical,
 		/area/rnd/test_area)
 
