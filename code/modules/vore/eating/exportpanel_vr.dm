@@ -43,11 +43,7 @@
 					addons.Add(flag_name)
 			belly_data["addons"] = addons
 			belly_data["item_mode"] = B.item_digest_mode
-<<<<<<< HEAD
-=======
 			belly_data["message_mode"] = B.message_mode
-
->>>>>>> 7807efcb97... allow to only show suitable belly messages (#16013)
 			// Messages
 			belly_data["struggle_messages_outside"] = list()
 			for(var/msg in B.struggle_messages_outside)
