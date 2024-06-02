@@ -10,7 +10,9 @@
 		/area/holodeck,
 		/area/engineering/engine_room,
 		/area/engineering/engine_monitoring,
-		/area/medical)
+		/area/maintenance
+		/area/medical,
+		/area/rnd/test_area)
 
 	var/commondisease = list(
 		"Friday Fever" = list(
@@ -97,11 +99,11 @@
 	var/decal
 
 	for(var/i in 1 to infected_tiles)
-		decal = rand(1, 3)
+		decal = rand(1, 5)
 		if(decal == 1)
 			var/obj/effect/decal/cleanable/blood/C
 			C = new(pick_n_take(target_turfs))
-			C.basecolor = get_random_colour(0)
+			C.basecolor = get_random_colour(rand(0, 1))
 			C.update_icon()
 			C.virus2 |= new /datum/disease2/disease
 			C.virus2[1] = virus.getcopy()
