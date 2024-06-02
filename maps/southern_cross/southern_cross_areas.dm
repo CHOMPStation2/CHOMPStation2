@@ -2328,10 +2328,6 @@ End Chompstation Edit*/
 	name = "Gravity Generator Substation"
 	icon_state = "engineering"
 
-/area/engineering/gravgen
-	name = "Gravity Generator"
-	icon_state = "engineering"
-
 /area/maintenance/engineering/gravgen
 	name = "Gravity Generator Maintenance"
 
