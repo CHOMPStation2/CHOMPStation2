@@ -8,8 +8,10 @@
 		/area/shuttle,
 		/area/crew_quarters,
 		/area/holodeck,
+		/area/construction,
 		/area/engineering/engine_room,
 		/area/engineering/engine_monitoring,
+		/area/engineering/gravgen,
 		/area/maintenance,
 		/area/medical,
 		/area/rnd/test_area)
