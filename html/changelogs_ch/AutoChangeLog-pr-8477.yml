@@ -1,0 +1,6 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - rscadd: "Infected room may pick blood or vomit as well"
+  - balance: "More species may get infected"
+  - balance: "Medical stays clean of viruses, as well as the engine room monitoring, construction, gravgen and toxins test area"
