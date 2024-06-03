@@ -6,22 +6,40 @@
 	icon = 'modular_chomp/icons/obj/power.dmi'
 	icon_state = "rtgfakez"
 
-/obj/turbolift_map_holder/diescraper
-	icon = 'icons/obj/turbolift_preview_5x5.dmi'
-	lift_size_x = 4
-	lift_size_y = 4
-	depth = 2
-	areas_to_use = list(
-		/area/turbolift/diescraper_1,
-		/area/turbolift/diescraper_2
-		)
+//The fake shuttle
+/area/shuttle/diescraper
+	name = "Skyscraper Elevator"
+	icon_state = "shuttle2"
+	base_turf = /turf/simulated/floor/reinforced
+
+/obj/machinery/computer/shuttle_control/diescraper
+	name = "Elevator Control Panel"
+	shuttle_tag = "Diescraper"
+
+/datum/shuttle/autodock/ferry/diescraper
+	name = "Diescraper"
+	warmup_time = 0
+	location = FERRY_LOCATION_STATION
+	shuttle_area = /area/shuttle/diescraper
+	landmark_offsite = "die_sling_outpost"
+	landmark_station = "die_sling_station"
+	docking_controller_tag = "die_sling"
+
+/obj/effect/shuttle_landmark/diescraper/sling_station
+	name = "Floor 51"
+	landmark_tag = "die_sling_station"
+	docking_controller = "die_sling_station"
+	base_area = /area/awaymission/diescraper/indoors/floor2
+	base_turf = /turf/simulated/floor/reinforced
+
+/obj/effect/shuttle_landmark/diescraper/sling_outpost
+	name = "Ground Floor"
+	landmark_tag = "die_sling_outpost"
+	docking_controller = "die_sling_outpost"
+
 
 //Areas
-/area/turbolift/diescraper_1
-	icon_state = "yellow"
 
-/area/turbolift/diescraper_2
-	icon_state = "yellow"
 /area/awaymission/diescraper
 	icon_state = "blank"
 
@@ -49,6 +67,11 @@
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/plating
 	name = "Away Mission - Skyscraper Floor 54"
+
+/area/awaymission/diescraper/indoors/floor4second
+	icon_state = "green"
+	base_turf = /turf/simulated/floor/plating
+	name = "Away Mission - Skyscraper Floor 54 Second"
 
 /area/awaymission/diescraper/indoors/floor5
 	icon_state = "green"
@@ -120,3 +143,7 @@
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/plating
 	name = "Away Mission - City Roof"
+
+/obj/item/weapon/card/id/diescrapergun
+	name = "Gunstore ID"
+	access = list(886)
