@@ -192,10 +192,12 @@ var/global/list/valid_ringtones = list(
 		else
 			pref.ringtone = choice
 		return TOPIC_REFRESH
+	/*CHOMPRemove Start,  remove RS No shoes
 	else if(href_list["toggle_shoes"])	//RS ADD START
 		if(CanUseTopic(user))
 			pref.shoe_hater = !pref.shoe_hater
 			return TOPIC_REFRESH
 			//RS ADD END
+	*///CHOMPRemove End, remove RS No shoes
 
 	return ..()
