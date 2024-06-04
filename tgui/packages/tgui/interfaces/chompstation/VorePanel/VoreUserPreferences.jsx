@@ -57,9 +57,10 @@ export const VoreUserPreferences = (props) => {
     nutrition_message_visible,
     weight_message_visible,
     selective_active,
+    belly_rub_target,
   } = data.prefs;
 
-  const { show_pictures, icon_overflow } = data;
+  const { show_pictures, icon_overflow, selected } = data;
 
   const preferences = {
     digestion: {
@@ -994,9 +995,21 @@ export const VoreUserPreferences = (props) => {
           <Flex.Item basis="50%">
             <VoreUserPreferenceItem spec={preferences.examine_weight} />
           </Flex.Item>
-          <Flex.Item basis="50%">
-            <Button fluid onClick={() => act('set_vs_color')}>
+          <Flex.Item basis="50%" grow={1}>
+            <Button fluid onClick={() => act('set_vs_color')} icon="palette">
               Vore Sprite Color
+            </Button>
+          </Flex.Item>
+          <Flex.Item basis="50%">
+            <Button
+              fluid
+              onClick={() => act('set_belly_rub')}
+              icon="crosshairs"
+            >
+              {'Belly Rub Target: ' +
+                (belly_rub_target
+                  ? belly_rub_target
+                  : 'Current Active (' + selected.belly_name + ')')}
             </Button>
           </Flex.Item>
         </Flex>
