@@ -1,0 +1,19 @@
+2024-06-04:
+  MeepleMuncher:
+  - rscadd: Added new bug bums
+  SilencedMP5A5:
+  - rscadd: + marking (mole whiskers)
+  - rscadd: + marking (vulp lips)
+  - rscadd: + ears (protegen but with horns) ((horny protogen))
+  TheCaramelion:
+  - rscadd: Infected room may pick blood or vomit as well
+  - balance: More species may get infected
+  - balance: Medical stays clean of viruses, as well as the engine room monitoring,
+      construction, gravgen and toxins test area
+  - rscadd: Holo-med projectors
+  - maptweak: Holo-med projectors in Medical/Virology
+  tacoguy7765093:
+  - maptweak: Sif shuttle landmarks will now never have POIs spawn on them.
+  - bugfix: Fixed a bug that didn't allow asteroid 1-3 to spawn in the OM
+  - maptweak: Swaps some airlocks in certain space POIs
+  - maptweak: Deck 3 escape pod access fixes

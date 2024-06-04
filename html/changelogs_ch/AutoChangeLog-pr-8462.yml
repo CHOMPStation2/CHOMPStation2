@@ -1,5 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - bugfix: "Fixed a bug that didn't allow asteroid 1-3 to spawn in the OM"
-  - maptweak: "Swaps some airlocks in certain space POIs"
