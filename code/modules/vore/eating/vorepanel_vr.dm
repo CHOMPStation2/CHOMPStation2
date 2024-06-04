@@ -210,6 +210,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		var/obj/belly/selected = host.vore_selected
 		selected_list = list(
 			"belly_name" = selected.name,
+			"message_mode" = selected.message_mode,
 			"is_wet" = selected.is_wet,
 			"wet_loop" = selected.wet_loop,
 			"mode" = selected.digest_mode,
@@ -685,6 +686,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/new_item_mode = html_encode(belly_data["item_mode"])
 					if(new_item_mode in new_belly.item_digest_modes)
 						new_belly.item_digest_mode = new_item_mode
+
+				if(isnum(belly_data["message_mode"]))
+					var/new_message_mode = belly_data["message_mode"]
+					if(new_message_mode == 0)
+						new_belly.message_mode = FALSE
+					if(new_message_mode == 1)
+						new_belly.message_mode = TRUE
 
 				if(islist(belly_data["addons"]))
 					new_belly.mode_flags = 0
@@ -2588,6 +2596,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 
 			host.vore_selected.name = new_name
+			. = TRUE
+		if("b_message_mode")
+			host.vore_selected.message_mode = !host.vore_selected.message_mode
 			. = TRUE
 		if("b_wetness")
 			host.vore_selected.is_wet = !host.vore_selected.is_wet
