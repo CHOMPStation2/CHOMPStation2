@@ -32,11 +32,12 @@
 	var/list/tail_type = null
 	var/list/ear_type = null
 	var/list/wing_type = null
+	var/hair = null // CHOMPAdd
 	var/corpsesynthtype = 0			// 0 for organic, 1 for drone, 2 for posibrain
 	var/corpsesynthbrand = "Unbranded"
 	var/corpsesensormode = 0	//CHOMPAdd - For setting the suit sensors of a corpse. Default to 0 so we don't annoy medbay.
 
-/obj/effect/landmark/mobcorpse/New()
+/obj/effect/landmark/mobcorpse/Initialize() //CHOMPEdit
 	createCorpse()
 
 /obj/effect/landmark/mobcorpse/proc/createCorpse() //Creates a mob and checks for gear in each slot before attempting to equip it.
@@ -86,6 +87,11 @@
 						M.g_ears3 = color_rgb_list[2]
 						M.b_ears3 = color_rgb_list[3]
 			M.update_hair()
+	//CHOMPAdd Start
+	if(hair)
+		M.h_style = hair
+		M.update_hair()
+	//CHOMPAdd End
 	if(wing_type && wing_type.len)
 		if(wing_type[1] in wing_styles_list)
 			M.wing_style = wing_styles_list[wing_type[1]]
