@@ -2285,6 +2285,56 @@
 			dest_belly = B
 			break
 	if(!dest_belly) return
+	if(ismob(prey))
+		var/living_count = 0
+		for(var/mob/living/L in contents)
+			living_count++
+		if(dest_belly_name == autotransferlocation_secondary)
+			var/secondary_transfer_owner_message = pick(secondary_transfer_messages_owner)
+			var/secondary_transfer_prey_message = pick(secondary_transfer_messages_prey)
+
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%pred", owner)
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%prey", prey)
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%belly", lowertext(name))
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%countprey", living_count)
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%count", contents.len)
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%dest", autotransferlocation_secondary)
+
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%pred", owner)
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%prey", prey)
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%belly", lowertext(name))
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%countprey", living_count)
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%count", contents.len)
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%dest", autotransferlocation_secondary)
+
+			secondary_transfer_owner_message = "<span class='vwarning'>[secondary_transfer_owner_message]</span>"
+			secondary_transfer_prey_message = "<span class='vwarning'>[secondary_transfer_prey_message]</span>"
+
+			to_chat(prey, secondary_transfer_prey_message)
+			to_chat(owner, secondary_transfer_owner_message)
+		else if (dest_belly_name == autotransferlocation)
+			var/primary_transfer_owner_message = pick(primary_transfer_messages_owner)
+			var/primary_transfer_prey_message = pick(primary_transfer_messages_prey)
+
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%pred", owner)
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%prey", prey)
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%belly", lowertext(name))
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%countprey", living_count)
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%count", contents.len)
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%dest", autotransferlocation)
+
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%pred", owner)
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%prey", prey)
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%belly", lowertext(name))
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%countprey", living_count)
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%count", contents.len)
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%dest", autotransferlocation)
+
+			primary_transfer_owner_message = "<span class='vwarning'>[primary_transfer_owner_message]</span>"
+			primary_transfer_prey_message = "<span class='vwarning'>[primary_transfer_prey_message]</span>"
+
+			to_chat(prey, primary_transfer_prey_message)
+			to_chat(owner, primary_transfer_owner_message)
 	transfer_contents(prey, dest_belly)
 	return TRUE //CHOMPEdit end
 
