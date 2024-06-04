@@ -276,6 +276,7 @@
 	P.no_latejoin_prey_warning_time = src.no_latejoin_prey_warning_time
 	P.no_latejoin_vore_warning_persists = src.no_latejoin_vore_warning_persists
 	P.no_latejoin_prey_warning_persists = src.no_latejoin_prey_warning_persists
+	P.belly_rub_target = src.belly_rub_target
 	//CHOMP Stuff End
 
 	var/list/serialized = list()
@@ -347,6 +348,7 @@
 	no_latejoin_prey_warning_time = P.no_latejoin_prey_warning_time
 	no_latejoin_vore_warning_persists = P.no_latejoin_vore_warning_persists
 	no_latejoin_prey_warning_persists = P.no_latejoin_prey_warning_persists
+	belly_rub_target = P.belly_rub_target
 
 	if(bellies)
 		if(isliving(src))
@@ -864,6 +866,12 @@
 			to_chat(src, "<span class='warning'>\The [pocketpal] doesn't allow you to eat it.</span>")
 			return
 
+	if(istype(I, /obj/item/weapon/book))
+		var/obj/item/weapon/book/book = I
+		if(book.carved)
+			to_chat(src, "<span class='warning'>\The [book] is not worth eating without the filling.</span>")
+			return
+
 	if(is_type_in_list(I,edible_trash) | adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) //chompstation add synth check
 		if(I.hidden_uplink)
 			to_chat(src, "<span class='warning'>You really should not be eating this.</span>")
@@ -923,6 +931,8 @@
 				to_chat(src, "<span class='notice'>You can taste the flavor of aromatic rolling paper and funny looks.</span>")
 		else if(istype(I,/obj/item/weapon/paper))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of bureaucracy.</span>")
+		else if(istype(I,/obj/item/weapon/book))
+			to_chat(src, "<span class='notice'>You can taste the dry flavor of knowledge.</span>")
 		else if(istype(I,/obj/item/weapon/dice)) //CHOMPedit: Removed roulette ball because that's not active here.
 			to_chat(src, "<span class='notice'>You can taste the bitter flavor of cheating.</span>")
 		else if(istype(I,/obj/item/weapon/lipstick))
@@ -1244,6 +1254,7 @@
 		dispvoreprefs += "<b>Late join prey auto accept:</b> [no_latejoin_prey_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Global Vore Privacy is:</b> [eating_privacy_global ? "<font color='green'>Subtle</font>" : "<font color='red'>Loud</font>"]<br>"
 	dispvoreprefs += "<b>Current active belly:</b> [vore_selected ? vore_selected.name : "None"]<br>"
+	dispvoreprefs += "<b>Current active belly:</b> [belly_rub_target ? belly_rub_target : vore_selected.name]<br>"
 	//CHOMPEdit End
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=300x400;can_resize=1;can_minimize=0")
 	onclose(user, "[name]")

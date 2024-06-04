@@ -366,6 +366,9 @@
 	if(M.ckey)
 		GLOB.prey_digested_roundstat++
 
+	owner.churn_count++ //CHOMPAdd
+	owner.handle_special_unlocks() //CHOMPAdd
+
 	var/personal_nutrition_modifier = M.get_digestion_nutrition_modifier()
 	var/pred_digestion_efficiency = owner.get_digestion_efficiency_modifier()
 

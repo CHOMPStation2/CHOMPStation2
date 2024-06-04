@@ -7,6 +7,7 @@
 	var/mute_entry = FALSE					//Toggleable vorgan entry logs.
 	var/parasitic = FALSE					//Digestion immunity and nutrition leeching variable
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
+	var/churn_count = 0						//Counter for digested livings
 
 	var/passtable_reset		// For crawling
 	var/passtable_crawl_checked = FALSE
@@ -14,6 +15,9 @@
 	// CHOMP vore icons refactor (Now on living)
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+
+/mob/living/proc/handle_special_unlocks()
+	return
 
 // Update fullness based on size & quantity of belly contents
 /mob/proc/update_fullness(var/returning = FALSE)
@@ -297,9 +301,9 @@
 		var/obj/belly/B = T.vore_selected
 		if(istype(B))
 			if(T == src)
-				custom_emote_vr(1, "rubs their [lowertext(B.name)].")
+				custom_emote_vr(1, "rubs their [belly_rub_target ? belly_rub_target : lowertext(B.name)].")
 			else
-				custom_emote_vr(1, "gives some rubs over [T]'s [lowertext(B.name)].")
+				custom_emote_vr(1, "gives some rubs over [T]'s [belly_rub_target ? belly_rub_target : lowertext(B.name)].")
 			B.quick_cycle()
 			return TRUE
 	to_chat(src, "<span class='vwarning'>There is no suitable belly for rubs.</span>")

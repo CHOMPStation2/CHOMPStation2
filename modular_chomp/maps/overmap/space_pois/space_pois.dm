@@ -94,7 +94,7 @@ Less important
 	block_size = 50
 
 /datum/map_template/dynamic_overmap/asteroid1_60x60
-	name = "Asteroid"
+	name = "Brown Asteroid"
 	mappath = "modular_chomp/maps/overmap/space_pois/asteroid1_60x60.dmm"
 	scanner_desc = "Large asteroid rich in minerals, faint GPS signal detected."
 	poi_icon = "asteroid1"
@@ -102,7 +102,7 @@ Less important
 	block_size = 60
 
 /datum/map_template/dynamic_overmap/asteroid2_60x60
-	name = "Asteroid"
+	name = "Frozen Asteroid"
 	mappath = "modular_chomp/maps/overmap/space_pois/asteroid2_60x60.dmm"
 	scanner_desc = "Frozen asteroids and comets. Signs of debris detected."
 	poi_icon = "asteroid2"
@@ -110,7 +110,7 @@ Less important
 	block_size = 60
 
 /datum/map_template/dynamic_overmap/asteroid3_60x60
-	name = "Asteroid"
+	name = "Spooky Asteroid"
 	mappath = "modular_chomp/maps/overmap/space_pois/asteroid3_60x60.dmm"
 	scanner_desc = "Large asteroid with strange exotic matter readings, high level of danger detected."
 	poi_icon = "asteroid3"
@@ -118,7 +118,7 @@ Less important
 	block_size = 60
 
 /datum/map_template/dynamic_overmap/asteroid4_60x60
-	name = "Asteroid"
+	name = "Hollow Asteroid"
 	mappath = "modular_chomp/maps/overmap/space_pois/asteroid4_60x60.dmm"
 	scanner_desc = "Large asteroid rich in materials. Asteroid scans return that it is hollow."
 	poi_icon = "asteroid2"
@@ -300,7 +300,7 @@ Less important
 /datum/map_template/dynamic_overmap/wizardcrash_20x35
 	name = "Crashed Anomalous Ship "
 	mappath = "modular_chomp/maps/overmap/space_pois/wizardcrash_20x35.dmm"
-	scanner_desc = "A ship propelled by unknown forced, need more information."
+	scanner_desc = "A ship propelled by unknown forces, need more information."
 	block_size = 35
 
 /datum/map_template/dynamic_overmap/spaceseveneleven_45x45

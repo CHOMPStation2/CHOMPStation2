@@ -83,6 +83,11 @@
 	name = "Pathway"
 	icon_state = "purple"
 
+// Used to overmap shuttle landing zones so POIs dont override it
+/area/surface/outside/landing/plains
+	name = "Plains"
+	icon_state = "purple"
+
 /area/surface/outside/path/plains
 
 /area/surface/outside/wilderness/normal
@@ -97,6 +102,11 @@
 /area/surface/outside/wilderness/mountains
 	name = "Mountains"
 	icon_state = "darkred"
+
+// so POIs don't block landing zones
+/area/surface/outside/landing/wilderness
+	name = "Wilderness"
+	icon_state = "purple"
 
 /* //Sky islands removal, lack of use
 /area/surface/outside/wilderness/skylands
@@ -2326,10 +2336,6 @@ End Chompstation Edit*/
 
 /area/maintenance/substation/gravgen
 	name = "Gravity Generator Substation"
-	icon_state = "engineering"
-
-/area/engineering/gravgen
-	name = "Gravity Generator"
 	icon_state = "engineering"
 
 /area/maintenance/engineering/gravgen

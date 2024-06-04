@@ -111,6 +111,9 @@
 		/mob/living/silicon/robot/proc/sensor_mode,
 		/mob/living/silicon/robot/proc/robot_checklaws,
 		/mob/living/silicon/robot/proc/robot_mount,
+		/mob/living/silicon/robot/proc/take_image,
+		/mob/living/silicon/robot/proc/view_images,
+		/mob/living/silicon/robot/proc/delete_images,
 		/mob/living/silicon/robot/proc/ex_reserve_refill, //CHOMPEdit re-adds the extinquisher refill from water
 		/mob/living/proc/toggle_rider_reins,
 		/mob/living/proc/vertical_nom,
