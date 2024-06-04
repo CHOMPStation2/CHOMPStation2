@@ -295,3 +295,19 @@
 
 	//to_world("[src] in B:[round(brightness,0.1)] C:[round(current,0.1)] A2:[round(adjust_to,0.1)] D:[round(distance,0.01)] T:[round(distance*10 SECONDS,0.1)]")
 	animate(dsoverlay, alpha = (adjust_to*255), time = (distance*10 SECONDS))
+
+/mob/living/proc/handle_sleeping()
+	if(stat != DEAD && toggled_sleeping)
+		Sleeping(2)
+	if(sleeping)
+		//CHOMPEdit Start
+		if(iscarbon(src))
+			var/mob/living/carbon/C = src
+			AdjustSleeping(-1 * C.species.waking_speed)
+		else
+			AdjustSleeping(-1)
+		//CHOMPEdit End
+		throw_alert("asleep", /obj/screen/alert/asleep)
+	else
+		clear_alert("asleep")
+	return sleeping
