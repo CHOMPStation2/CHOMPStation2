@@ -7,6 +7,7 @@
 	var/mute_entry = FALSE					//Toggleable vorgan entry logs.
 	var/parasitic = FALSE					//Digestion immunity and nutrition leeching variable
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
+	var/churn_count = 0						//Counter for digested livings
 
 	var/passtable_reset		// For crawling
 	var/passtable_crawl_checked = FALSE
@@ -14,6 +15,9 @@
 	// CHOMP vore icons refactor (Now on living)
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+
+/mob/living/proc/handle_special_unlocks()
+	return
 
 // Update fullness based on size & quantity of belly contents
 /mob/proc/update_fullness(var/returning = FALSE)

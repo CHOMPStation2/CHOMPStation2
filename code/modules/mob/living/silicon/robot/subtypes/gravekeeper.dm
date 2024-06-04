@@ -26,3 +26,16 @@
 	laws = new /datum/ai_laws/gravekeeper()
 
 	playsound(src, 'sound/mecha/nominalsyndi.ogg', 75, 0)
+
+//CHOMPAdd Start
+/mob/living/silicon/robot/gravekeeper/proc/scramble_hardware(var/chance)
+	if(prob(chance))  //Small chance to spawn with a scrambled
+		emag_items = 1
+
+/mob/living/silicon/robot/gravekeeper/handle_special_unlocks()
+	if(!emag_items)
+		scramble_hardware(10)
+	if (churn_count == 5)
+		module.emag += new /obj/item/device/self_repair_system/advanced(module)
+		hud_used.update_robot_modules_display()
+//CHOMPAdd End
