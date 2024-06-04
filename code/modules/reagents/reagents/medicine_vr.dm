@@ -77,7 +77,7 @@
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(8 * removed * chem_effective, 0)
-		
+
 /*CHOMPStation removal begin
 /datum/reagent/sleevingcure
 	name = "Vey-Med Resleeving Booster"
@@ -208,6 +208,8 @@
 	log_debug("polymorph start")
 	if(!istype(M))
 		log_debug("polymorph istype")
+		return
+	if(!M.allow_spontaneous_tf)
 		return
 	if(M.tf_mob_holder)
 		log_debug("polymorph tf_holder")
