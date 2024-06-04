@@ -365,7 +365,7 @@
 
 //This is called when the mob is thrown into a dense turf
 /mob/living/proc/turf_collision(var/turf/T, var/speed)
-	src.take_organ_damage(12)	// used to be 5 * speed. That's a default of 25 and I dont see anything ever changing the "speed" value.
+	src.take_organ_damage(speed * 5)	// used to be 5 * speed. That's a default of 25 and I dont see anything ever changing the "speed" value. //CHOMPEdit, no. We keep the damage values, no reduction to 12
 	//src.Weaken(3)				// That is absurdly high so im just setting it to a flat 12 with a bit of stun ontop. //Stun is too dangerous
 	playsound(src, get_sfx("punch"), 50) //ouch sound
 
