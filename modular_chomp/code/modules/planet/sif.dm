@@ -165,7 +165,7 @@
 			var/amount_blocked = H.run_armor_check(target_zone, "melee")
 			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
-			var/damage = rand(3,5)
+			var/damage = rand(1,2)
 
 			if(amount_blocked >= 10)
 				continue
@@ -196,7 +196,7 @@
 			var/turf/T = get_turf(H)
 			if(!T.is_outdoors())
 				continue
-			H.add_modifier(/datum/modifier/starrynight_boon, null, src)
+			H.add_modifier(/datum/modifier/starrynight_boon, 1 SECONDS, src)
 
 /datum/modifier/starrynight_boon
 	name = "Starry Night"
@@ -242,4 +242,4 @@
 			var/turf/T = get_turf(H)
 			if(!T.is_outdoors())
 				continue
-			H.add_modifier(/datum/modifier/midnightfog_boon, null, src)
+			H.add_modifier(/datum/modifier/midnightfog_boon, 1 SECONDS, src)
