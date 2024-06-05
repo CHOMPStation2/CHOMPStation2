@@ -1949,6 +1949,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/bar)
+"et" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/medical/medbay)
 "eu" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
@@ -1994,6 +2000,18 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/medical/medbay)
+"eA" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medbay)
@@ -10843,10 +10861,10 @@ du
 cM
 ec
 ek
-cP
-cP
-df
-cP
+et
+et
+eA
+et
 eG
 eO
 eO
