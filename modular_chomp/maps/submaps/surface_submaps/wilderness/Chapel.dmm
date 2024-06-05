@@ -564,6 +564,14 @@
 /obj/structure/closet/grave,
 /turf/simulated/floor/outdoors/rocks,
 /area/template_noop)
+"uG" = (
+/obj/machinery/power/apc/hyper{
+	dir = 1;
+	pixel_y = 24;
+	req_access = list(511)
+	},
+/turf/simulated/wall/log_sif,
+/area/submap/Chapel1)
 "uK" = (
 /obj/structure/closet/body_bag/large,
 /turf/simulated/floor/wood/sif,
@@ -674,7 +682,8 @@
 	},
 /obj/machinery/power/apc/hyper{
 	dir = 1;
-	pixel_y = 24
+	pixel_y = 24;
+	req_access = list(511)
 	},
 /obj/structure/cable/cyan{
 	d1 = 2;
@@ -760,7 +769,7 @@ aa
 aa
 aa
 ai
-ac
+uG
 ac
 aJ
 aP
