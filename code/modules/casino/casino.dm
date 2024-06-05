@@ -26,7 +26,7 @@
 
 /obj/structure/casino_table/roulette_table
 	name = "roulette"
-	desc = "Spin the roulette to try your luck." //CHOMPEdit
+	desc = "The roulette. Spin to try your luck."
 	icon_state = "roulette_wheel"
 	var/spin_state = "roulette_wheel_spinning"
 
