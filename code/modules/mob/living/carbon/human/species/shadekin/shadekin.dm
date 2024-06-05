@@ -164,6 +164,7 @@
 	H.adjustBruteLoss(-(H.getBruteLoss() * 0.75))
 	H.adjustToxLoss(-(H.getToxLoss() * 0.75))
 	H.adjustCloneLoss(-(H.getCloneLoss() * 0.75))
+	H.germ_level = 0 // CHOMPAdd - Take away the germs, or we'll die AGAIN
 	H.vessel.add_reagent("blood",blood_volume-H.vessel.total_volume)
 	for(var/obj/item/organ/external/bp in H.organs)
 		bp.bandage()
@@ -239,7 +240,7 @@
 			H.adjustBruteLoss((-0.25))
 			H.adjustToxLoss((-0.25))
 			H.heal_organ_damage(3, 0)
-			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_NORM)
+			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_SUPER) //CHOMP Edit - increased ANTIBIO from Normal to Super
 			for(var/obj/item/organ/I in H.internal_organs)
 				if(I.robotic >= ORGAN_ROBOT)
 					continue
@@ -288,7 +289,7 @@
 		H.ability_master = new /obj/screen/movable/ability_master/shadekin(H)
 	for(var/datum/power/shadekin/P in shadekin_ability_datums)
 		if(!(P.verbpath in H.verbs))
-			H.verbs += P.verbpath
+			add_verb(H,P.verbpath)  //CHOMPEdit
 			H.ability_master.add_shadekin_ability(
 					object_given = H,
 					verb_given = P.verbpath,
@@ -296,9 +297,9 @@
 					ability_icon_given = P.ability_icon_state,
 					arguments = list()
 					)
-	H.verbs += /mob/living/carbon/human/proc/phase_strength_toggle //CHOMPEdit - Add gentle phasing
-	H.verbs += /mob/living/carbon/human/proc/nutrition_conversion_toggle //CHOMPEdit - Add nutrition conversion toggle
-	H.verbs += /mob/living/carbon/human/proc/clear_dark_maws //CHOMPEdit - Add Dark maw clearing
+	add_verb(H,/mob/living/carbon/human/proc/phase_strength_toggle ) //CHOMPEdit - Add gentle phasing //CHOMPEdit
+	add_verb(H,/mob/living/carbon/human/proc/nutrition_conversion_toggle ) //CHOMPEdit - Add nutrition conversion toggle //CHOMPEdit
+	add_verb(H,/mob/living/carbon/human/proc/clear_dark_maws ) //CHOMPEdit - Add Dark maw clearing //CHOMPEdit
 
 /datum/species/shadekin/proc/handle_shade(var/mob/living/carbon/human/H)
 	//CHOMPEdit begin - No energy during dark respite
@@ -479,7 +480,7 @@
 		if(RED_EYES)
 			total_health = 150 //ChompEDIT - balance tweaks
 			energy_light = -1
-			energy_dark = 0.1
+			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
 			total_health = 100 //ChompEDIT - balance tweaks
@@ -499,7 +500,7 @@
 		if(ORANGE_EYES)
 			total_health = 125 //ChompEDIT - balance tweaks
 			energy_light = -0.5
-			energy_dark = 0.25
+			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 
 	H.maxHealth = total_health

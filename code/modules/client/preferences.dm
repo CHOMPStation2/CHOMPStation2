@@ -50,6 +50,7 @@ var/list/preferences_datums = list()
 	var/blood_reagents = "default"		//blood restoration reagents
 	var/backbag = 2						//backpack type
 	var/pdachoice = 1					//PDA type
+	//var/shoe_hater = FALSE				//RS ADD - if true, will spawn with no shoes //CHOMPRemove, remove RS No shoes
 	var/h_style = "Bald"				//Hair type
 	var/r_hair = 0						//Hair color
 	var/g_hair = 0						//Hair color
@@ -343,12 +344,12 @@ var/list/preferences_datums = list()
 	if(!istype(user, /mob/new_player))	return
 
 	if(href_list["preference"] == "open_whitelist_forum")
-		if(config.forumurl)
-			user << link(config.forumurl)
+		if(CONFIG_GET(string/forumurl)) // CHOMPEdit
+			user << link(CONFIG_GET(string/forumurl)) // CHOMPEdit
 		else
 			to_chat(user, "<span class='danger'>The forum URL is not set in the server configuration.</span>")
 			return
-	ShowChoices(usr)
+	ShowChoices(user) //ChompEDIT - usr removal
 	return 1
 
 /datum/preferences/Topic(href, list/href_list)
@@ -428,7 +429,7 @@ var/list/preferences_datums = list()
 	var/nickname //vorestation edit - This set appends nicknames to the save slot
 	var/list/charlist = list()
 	var/default //VOREStation edit
-	for(var/i=1, i<= config.character_slots, i++)
+	for(var/i = 1, i <= CONFIG_GET(number/character_slots), i++) // CHOMPEdit
 		S.cd = "/character[i]"
 		S["real_name"] >> name
 		S["nickname"] >> nickname //vorestation edit
@@ -470,7 +471,7 @@ var/list/preferences_datums = list()
 	var/name
 	var/nickname //vorestation edit - This set appends nicknames to the save slot
 	var/list/charlist = list()
-	for(var/i=1, i<= config.character_slots, i++)
+	for(var/i = 1, i <= CONFIG_GET(number/character_slots), i++) // CHOMPEdit
 		S.cd = "/character[i]"
 		S["real_name"] >> name
 		S["nickname"] >> nickname //vorestation edit

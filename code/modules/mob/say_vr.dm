@@ -4,7 +4,7 @@
 
 /mob/verb/me_verb_subtle(message as message) //This would normally go in say.dm
 	set name = "Subtle"
-	set category = "IC"
+	set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 
 	if(say_disabled)	//This is here to try to identify lag problems
@@ -26,7 +26,7 @@
 
 /mob/verb/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true
 	set name = "Subtle (Custom)"
-	set category = "IC"
+	set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
 	if(say_disabled)	//This is here to try to identify lag problems
@@ -200,6 +200,8 @@
 		for(var/mob/M as anything in vis_mobs)
 			if(isnewplayer(M))
 				continue
+			if(src.client && M && !(get_z(src) == get_z(M)))
+				message = "<span class='multizsay'>[message]</span>"
 			if(isobserver(M) && (!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) || \
 			!is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)
@@ -257,7 +259,7 @@
 ///// PSAY /////
 
 /mob/verb/psay(message as text)
-	set category = "IC"
+	set category = "IC.Subtle" //CHOMPEdit
 	set name = "Psay"
 	set desc = "Talk to people affected by complete absorbed or dominate predator/prey."
 
@@ -351,8 +353,8 @@
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
-			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears && \
-			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle)))
+			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears) && \
+			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle))
 				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
 					to_chat(G, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")
 		log_say(message,M)
@@ -363,7 +365,7 @@
 ///// PME /////
 
 /mob/verb/pme(message as message)
-	set category = "IC"
+	set category = "IC.Subtle" //CHOMPEdit
 	set name = "Pme"
 	set desc = "Emote to people affected by complete absorbed or dominate predator/prey."
 
@@ -467,7 +469,7 @@
 		M.me_verb(message)
 
 /mob/living/verb/player_narrate(message as message)
-	set category = "IC"
+	set category = "IC.Chat" //CHOMPEdit
 	set name = "Narrate (Player)"
 	set desc = "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!"
 
@@ -497,7 +499,7 @@
 		ourfreq = voice_freq
 
 	if(client)
-		playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/client_preference/emote_sounds)
+		playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = TRUE, preference = /datum/client_preference/emote_sounds) //ChompEDIT - ignore walls
 
 	var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,2,remote_ghosts = client ? TRUE : FALSE)
 	var/list/m_viewers = in_range["mobs"]
@@ -513,7 +515,7 @@
 
 /mob/verb/select_speech_bubble()
 	set name = "Select Speech Bubble"
-	set category = "OOC"
+	set category = "OOC.Chat Settings" //CHOMPEdit
 
 	var/new_speech_bubble = tgui_input_list(src, "Pick new voice (default for automatic selection)", "Character Preference", selectable_speech_bubbles)
 	if(new_speech_bubble)

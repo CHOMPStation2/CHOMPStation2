@@ -6,6 +6,7 @@
 /yarn.lock
 /.pnp.*
 
+.swcrc
 /docs
 /public
 /packages/tgui-polyfill
@@ -18,6 +19,3 @@
 ## Build artifacts
 /public/.tmp/**/*
 /public/*.map
-
-## CHOMPEdit - Until removed
-/packages/tgui_ch

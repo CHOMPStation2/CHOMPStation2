@@ -1,11 +1,16 @@
 /datum/preferences
+	//Our OOC Metadata additions
+	var/metadata_maybes = ""
+	var/metadata_favs = ""
+	var/matadata_ooc_style = FALSE
+
 	var/job_other_low = 0
 	var/job_other_med = 0
 	var/job_other_high = 0
 
 /client/verb/toggle_random_emote_pitch()
 	set name = "Toggle Random Emote Pitch"
-	set category = "Preferences"
+	set category = "Preferences.Character"
 	set desc = "Toggles whether or not emotes with sound you make will have random pitch."
 
 	var/pref_path = /datum/client_preference/random_emote_pitch
@@ -20,7 +25,7 @@
 
 /client/verb/toggle_autotranscore()
 	set name = "Toggle Automatic Transcore Notification"
-	set category = "Preferences"
+	set category = "Preferences.Character"
 	set desc = "Toggles whether or not your death with a backup implant will automatically trigger a transcore notification after a few minutes."
 
 	var/pref_path = /datum/client_preference/autotranscore
@@ -50,7 +55,7 @@
 	blood color
 	*/
 	if (copy_name)
-		if(config.humans_need_surnames)
+		if(CONFIG_GET(flag/humans_need_surnames)) // CHOMPEdit
 			var/firstspace = findtext(real_name, " ")
 			var/name_length = length(real_name)
 			if(!firstspace)	//we need a surname

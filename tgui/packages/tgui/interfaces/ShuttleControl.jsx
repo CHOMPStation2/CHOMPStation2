@@ -144,7 +144,7 @@ const ShuttleControlConsoleDefault = (props) => {
 
 const ShuttleControlConsoleMulti = (props) => {
   const { act, data } = useBackend();
-  const { can_cloak, can_pick, legit, cloaked, destination_name } = data;
+  const { can_cloak, can_pick, legit, cloaked } = data;
   return (
     <>
       <ShuttleControlSharedShuttleStatus />
@@ -168,7 +168,7 @@ const ShuttleControlConsoleMulti = (props) => {
               disabled={!can_pick}
               onClick={() => act('pick')}
             >
-              {destination_name}
+              {props.destination_name}
             </Button>
           </LabeledList.Item>
         </LabeledList>
@@ -467,24 +467,28 @@ const ShuttleControlConsoleWeb = (props) => {
   );
 };
 
-// This may look tempting to convert to require() or some kind of dynamic call
-// Don't do it. XSS abound.
-const SubtemplateList = {
-  ShuttleControlConsoleDefault: <ShuttleControlConsoleDefault />,
-  ShuttleControlConsoleMulti: <ShuttleControlConsoleMulti />,
-  ShuttleControlConsoleExploration: <ShuttleControlConsoleExploration />,
-  ShuttleControlConsoleWeb: <ShuttleControlConsoleWeb />,
-};
-
 export const ShuttleControl = (props) => {
   const { act, data } = useBackend();
-  const { subtemplate } = data;
+  const { subtemplate, destination_name } = data;
   return (
     <Window
       width={470}
       height={subtemplate === 'ShuttleControlConsoleWeb' ? 560 : 370}
     >
-      <Window.Content>{SubtemplateList[subtemplate]}</Window.Content>
+      <Window.Content>
+        {(subtemplate === 'ShuttleControlConsoleDefault' && (
+          <ShuttleControlConsoleDefault />
+        )) ||
+          (subtemplate === 'ShuttleControlConsoleMulti' && (
+            <ShuttleControlConsoleMulti destination_name={destination_name} />
+          )) ||
+          (subtemplate === 'ShuttleControlConsoleExploration' && (
+            <ShuttleControlConsoleExploration />
+          )) ||
+          (subtemplate === 'ShuttleControlConsoleWeb' && (
+            <ShuttleControlConsoleWeb />
+          ))}
+      </Window.Content>
     </Window>
   );
 };

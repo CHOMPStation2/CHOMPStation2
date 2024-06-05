@@ -1,7 +1,19 @@
+import { filter } from 'common/collections';
+import { flow } from 'common/fp';
 import { classes } from 'common/react';
+import { createSearch } from 'common/string';
+import { useState } from 'react';
 
 import { useBackend } from '../backend';
-import { Box, Button, Section, Table, Tooltip } from '../components';
+import {
+  Box,
+  Button,
+  Icon,
+  Input,
+  Section,
+  Table,
+  Tooltip,
+} from '../components';
 import { Window } from '../layouts';
 
 const VendingRow = (props) => {
@@ -9,7 +21,7 @@ const VendingRow = (props) => {
   const { actively_vending } = data;
   const { product } = props;
   return (
-    <Table.Row>
+    <Table.Row className="candystripe">
       <Table.Cell collapsing>
         {(product.isatom && (
           <span
@@ -47,13 +59,14 @@ const VendingRow = (props) => {
           icon={product.price ? 'credit-card' : 'download'}
           iconSpin={actively_vending === product.name}
           disabled={product.amount === 0}
-          content={product.price ? 'Buy (' + product.price + '₮)' : 'Vend'}
           onClick={() =>
             act('vend', {
               vend: product.key,
             })
           }
-        />
+        >
+          {product.price ? 'Buy (' + product.price + '₮)' : 'Vend'}
+        </Button>
       </Table.Cell>
     </Table.Row>
   );
@@ -62,11 +75,16 @@ const VendingRow = (props) => {
 export const Vending = (props) => {
   const { act, data } = useBackend();
   const { panel } = data;
+  const [searchText, setSearchText] = useState('');
+
+  function handleSearchText(value) {
+    setSearchText(value);
+  }
 
   return (
     <Window width={450} height={600}>
       <Window.Content scrollable>
-        <VendingProducts />
+        <VendingProducts searchText={searchText} onSearch={handleSearchText} />
         {panel ? <VendingMaintenance /> : null}
       </Window.Content>
     </Window>
@@ -79,6 +97,7 @@ export const VendingProducts = (props) => {
 
   // Just in case we still have undefined values in the list
   let myproducts = products.filter((item) => !!item);
+  myproducts = prepareSearch(myproducts, props.searchText);
   return (
     <>
       {!!chargesMoney && (
@@ -93,9 +112,21 @@ export const VendingProducts = (props) => {
         </Section>
       )}
       <Section title="Products">
+        <Table mb={1}>
+          <Table.Cell width="8%">
+            <Icon name="search" ml={1.5} />
+          </Table.Cell>
+          <Table.Cell>
+            <Input
+              fluid
+              placeholder="Search for products..."
+              onInput={(e, value) => props.onSearch(value)}
+            />
+          </Table.Cell>
+        </Table>
         <Table>
           {myproducts.map((product) => (
-            <VendingRow key={product.name} product={product} />
+            <VendingRow key={product} product={product} />
           ))}
         </Table>
       </Section>
@@ -103,11 +134,9 @@ export const VendingProducts = (props) => {
         <Section
           title={coin + ' deposited'}
           buttons={
-            <Button
-              icon="eject"
-              content="Eject Coin"
-              onClick={() => act('remove_coin')}
-            />
+            <Button icon="eject" onClick={() => act('remove_coin')}>
+              Eject Coin
+            </Button>
           }
         />
       )}
@@ -126,12 +155,25 @@ export const VendingMaintenance = (props) => {
         buttons={
           <Button
             icon={speaker ? 'volume-up' : 'volume-off'}
-            content={speaker ? 'Enabled' : 'Disabled'}
             selected={speaker}
             onClick={() => act('togglevoice')}
-          />
+          >
+            {speaker ? 'Enabled' : 'Disabled'}
+          </Button>
         }
       />
     </Section>
   );
+};
+
+/**
+ * Search box
+ */
+export const prepareSearch = (products, searchText = '') => {
+  const testSearch =
+    createSearch < ProductRecord > (searchText, (product) => product.name);
+  return flow([
+    // Optional search term
+    searchText && filter(testSearch),
+  ])(products);
 };

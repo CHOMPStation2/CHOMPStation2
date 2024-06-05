@@ -125,7 +125,7 @@
 
 /obj/machinery/computer/cloning/resleeving/ui_assets(mob/user)
 	return list(
-		get_asset_datum(/datum/asset/cloning)
+		get_asset_datum(/datum/asset/simple/cloning)
 	)
 
 /obj/machinery/computer/cloning/tgui_interact(mob/user, datum/tgui/ui = null)
@@ -336,7 +336,7 @@
 						set_temp("Error: Not enough biomass.", "danger")
 					else if(pod.mess)
 						set_temp("Error: The cloning pod is malfunctioning.", "danger")
-					else if(!config.revival_cloning)
+					else if(!CONFIG_GET(flag/revival_cloning)) // CHOMPEdit
 						set_temp("Error: Unable to initiate cloning cycle.", "danger")
 					else
 						cloneresult = pod.growclone(C)

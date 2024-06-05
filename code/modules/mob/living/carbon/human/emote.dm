@@ -181,7 +181,12 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/flip/slip,
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
-	/decl/emote/audible/xenopurr
+	/decl/emote/audible/xenopurr,
+	/decl/emote/audible/gwah,
+	/decl/emote/audible/wawa,
+	/decl/emote/audible/malehumanscream,
+	/decl/emote/audible/scientist/scream,
+	/decl/emote/audible/scientist/pain
 	//CHOMP Add end
 )
 
@@ -346,7 +351,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/verb/pose()
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
@@ -355,7 +360,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	var/HTML = "<body>"
 	HTML += "<tt><center>"

@@ -506,7 +506,9 @@
 					/obj/item/clothing/under/color/white = 5,
 					/obj/item/clothing/under/color/yellow = 5,
 					/obj/item/clothing/shoes/black = 20,
-					/obj/item/clothing/shoes/white = 20)
+					/obj/item/clothing/shoes/white = 20,
+					/obj/item/clothing/gloves/watch = 20
+					)
 	prices = list()
 
 /obj/machinery/vending/loadout/accessory
@@ -600,6 +602,13 @@
 					/obj/item/clothing/accessory/wcoat/swvest = 5,
 					/obj/item/clothing/accessory/wcoat/swvest/blue = 5,
 					/obj/item/clothing/accessory/wcoat/swvest/red = 5,
+					/obj/item/clothing/accessory/wristband = 5,
+					/obj/item/clothing/accessory/wristbandcollection = 5,
+					/obj/item/clothing/accessory/wristbandcollection/pink = 5,
+					/obj/item/clothing/accessory/wristbandcollection/les = 5,
+					/obj/item/clothing/accessory/wristbandcollection/bi = 5,
+					/obj/item/clothing/accessory/wristbandcollection/trans = 5,
+					/obj/item/clothing/accessory/wristbandcollection/ace = 5,
 					/obj/item/weapon/storage/wallet = 5,
 					/obj/item/weapon/storage/wallet/poly = 5,
 					/obj/item/weapon/storage/wallet/womens = 5,
@@ -644,7 +653,11 @@
 					/obj/item/clothing/accessory/pride/pan = 5,
 					/obj/item/clothing/accessory/pride/lesbian = 5,
 					/obj/item/clothing/accessory/pride/intersex = 5,
-					/obj/item/clothing/accessory/pride/vore = 5)
+					/obj/item/clothing/accessory/pride/vore = 5,
+					/obj/item/clothing/gloves/watch = 5,
+					/obj/item/clothing/gloves/watch/silver = 5,
+					/obj/item/clothing/gloves/watch/gold = 5
+					)
 	prices = list(/obj/item/clothing/accessory = 50,
 					/obj/item/clothing/accessory/armband/med/color = 50,
 					/obj/item/clothing/accessory/asymmetric = 50,
@@ -729,6 +742,13 @@
 					/obj/item/clothing/accessory/wcoat/swvest = 50,
 					/obj/item/clothing/accessory/wcoat/swvest/blue = 50,
 					/obj/item/clothing/accessory/wcoat/swvest/red = 50,
+					/obj/item/clothing/accessory/wristband = 10,
+					/obj/item/clothing/accessory/wristbandcollection = 30,
+					/obj/item/clothing/accessory/wristbandcollection/pink = 30,
+					/obj/item/clothing/accessory/wristbandcollection/les = 30,
+					/obj/item/clothing/accessory/wristbandcollection/bi = 30,
+					/obj/item/clothing/accessory/wristbandcollection/trans = 30,
+					/obj/item/clothing/accessory/wristbandcollection/ace = 30,
 					/obj/item/weapon/storage/wallet = 50,
 					/obj/item/weapon/storage/wallet/poly = 50,
 					/obj/item/weapon/storage/wallet/womens = 50,
@@ -769,7 +789,11 @@
 					/obj/item/clothing/accessory/pride/pan = 50,
 					/obj/item/clothing/accessory/pride/lesbian = 50,
 					/obj/item/clothing/accessory/pride/intersex = 50,
-					/obj/item/clothing/accessory/pride/vore = 50)
+					/obj/item/clothing/accessory/pride/vore = 50,
+					/obj/item/clothing/gloves/watch = 50,
+					/obj/item/clothing/gloves/watch/silver = 100,
+					/obj/item/clothing/gloves/watch/gold = 200
+					)
 	premium = list(/obj/item/weapon/bedsheet/rainbow = 1)
 	contraband = list(/obj/item/clothing/mask/gas/clown_hat = 1,
 	                   /obj/item/clothing/accessory/collar/collarplanet_earth = 5)

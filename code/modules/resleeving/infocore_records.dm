@@ -26,6 +26,11 @@
 	var/mind_oocnotes = ""
 	var/mind_ooclikes = ""
 	var/mind_oocdislikes = ""
+	//CHOMPEdit Start
+	var/mind_oocfavs = ""
+	var/mind_oocmaybes = ""
+	var/mind_oocstyle = FALSE
+	//CHOMPEdit End
 	var/nif_path
 	var/nif_durability
 	var/list/nif_software
@@ -86,6 +91,11 @@
 	var/body_oocnotes
 	var/body_ooclikes
 	var/body_oocdislikes
+	//CHOMPEdit Start
+	var/body_oocfavs
+	var/body_oocmaybes
+	var/body_oocstyle
+	//CHOMPEdit End
 	var/list/limb_data = list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_TORSO)
 	var/list/organ_data = list(O_HEART, O_EYES, O_LUNGS, O_BRAIN)
 	var/list/genetic_modifiers = list()
@@ -108,6 +118,7 @@
 	mind_ref = null
 	limb_data.Cut()
 	organ_data.Cut()
+	..()
 	return QDEL_HINT_HARDDEL // For now at least there is no easy way to clear references to this in machines etc.
 
 /datum/transhuman/body_record/proc/init_from_mob(var/mob/living/carbon/human/M, var/add_to_db = 0, var/ckeylock = 0, var/database_key)

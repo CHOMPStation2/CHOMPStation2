@@ -46,12 +46,16 @@ export const Pda = (props) => {
 
   const [settingsMode, setSettingsMode] = useState(false);
 
+  function handleSettingsMode(value) {
+    setSettingsMode(value);
+  }
+
   return (
     <Window width={580} height={670} theme={useRetro ? 'pda-retro' : null}>
       <Window.Content scrollable>
         <PDAHeader
           settingsMode={settingsMode}
-          setSettingsMode={setSettingsMode}
+          onSettingsMode={handleSettingsMode}
         />
         {(settingsMode && <PDASettings />) || (
           <Section
@@ -67,7 +71,7 @@ export const Pda = (props) => {
           </Section>
         )}
         <Box mb={8} />
-        <PDAFooter setSettingsMode={setSettingsMode} />
+        <PDAFooter onSettingsMode={handleSettingsMode} />
       </Window.Content>
     </Window>
   );
@@ -75,8 +79,6 @@ export const Pda = (props) => {
 
 const PDAHeader = (props) => {
   const { act, data } = useBackend();
-
-  const { settingsMode, setSettingsMode } = props;
 
   const { idInserted, idLink, cartridge_name, stationTime } = data;
 
@@ -89,8 +91,9 @@ const PDAHeader = (props) => {
               icon="eject"
               color="transparent"
               onClick={() => act('Authenticate')}
-              content={idLink}
-            />
+            >
+              {idLink}
+            </Button>
           </Flex.Item>
         )}
         <Flex.Item grow={1} textAlign="center" bold>
@@ -98,8 +101,8 @@ const PDAHeader = (props) => {
         </Flex.Item>
         <Flex.Item>
           <Button
-            selected={settingsMode}
-            onClick={() => setSettingsMode(!settingsMode)}
+            selected={props.settingsMode}
+            onClick={() => props.onSettingsMode(!props.settingsMode)}
             icon="cog"
           />
           <Button onClick={() => act('Retro')} icon="adjust" />
@@ -118,36 +121,31 @@ const PDASettings = (props) => {
     <Section title="Settings">
       <LabeledList>
         <LabeledList.Item label="R.E.T.R.O Mode">
-          <Button
-            icon="cog"
-            content={'Retro Theme'}
-            onClick={() => act('Retro')}
-          />
+          <Button icon="cog" onClick={() => act('Retro')}>
+            Retro Theme
+          </Button>
         </LabeledList.Item>
         <LabeledList.Item label="Touch Sounds">
           <Button
             icon="cog"
             selected={!touch_silent}
-            content={touch_silent ? 'Disabled' : 'Enabled'}
             onClick={() => act('TouchSounds')}
-          />
+          >
+            {touch_silent ? 'Disabled' : 'Enabled'}
+          </Button>
         </LabeledList.Item>
         {!!cartridge_name && (
           <LabeledList.Item label="Cartridge">
-            <Button
-              icon="eject"
-              onClick={() => act('Eject')}
-              content={cartridge_name}
-            />
+            <Button icon="eject" onClick={() => act('Eject')}>
+              {cartridge_name}
+            </Button>
           </LabeledList.Item>
         )}
         {!!idInserted && (
           <LabeledList.Item label="ID Card">
-            <Button
-              icon="eject"
-              onClick={() => act('Authenticate')}
-              content={idLink}
-            />
+            <Button icon="eject" onClick={() => act('Authenticate')}>
+              {idLink}
+            </Button>
           </LabeledList.Item>
         )}
       </LabeledList>
@@ -157,8 +155,6 @@ const PDASettings = (props) => {
 
 const PDAFooter = (props) => {
   const { act, data } = useBackend();
-
-  const { setSettingsMode } = props;
 
   const { app, useRetro } = data;
 
@@ -193,7 +189,7 @@ const PDAFooter = (props) => {
             mb={0}
             fontSize={1.7}
             onClick={() => {
-              setSettingsMode(false);
+              props.onSettingsMode(false);
               act('Home');
             }}
           />

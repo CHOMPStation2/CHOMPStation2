@@ -1,4 +1,6 @@
-import { useBackend, useLocalState } from '../backend';
+import { useState } from 'react';
+
+import { useBackend } from '../backend';
 import { Box, Button, Section, Tabs } from '../components';
 import { Window } from '../layouts';
 import { ICON_BY_CATEGORY_NAME } from './RapidPipeDispenser';
@@ -7,7 +9,7 @@ export const PipeDispenser = (props) => {
   const { act, data } = useBackend();
   const { disposals, p_layer, pipe_layers, categories = [] } = data;
 
-  const [categoryName, setCategoryName] = useLocalState('categoryName');
+  const [categoryName, setCategoryName] = useState('categoryName');
   const shownCategory =
     categories.find((category) => category.cat_name === categoryName) ||
     categories[0];
@@ -22,13 +24,14 @@ export const PipeDispenser = (props) => {
                   key={layerName}
                   fluid
                   checked={pipe_layers[layerName] === p_layer}
-                  content={layerName}
                   onClick={() =>
                     act('p_layer', {
                       p_layer: pipe_layers[layerName],
                     })
                   }
-                />
+                >
+                  {layerName}
+                </Button.Checkbox>
               ))}
             </Box>
           </Section>
@@ -52,7 +55,6 @@ export const PipeDispenser = (props) => {
               key={recipe.pipe_name}
               fluid
               ellipsis
-              content={recipe.pipe_name}
               title={recipe.pipe_name}
               onClick={() =>
                 act('dispense_pipe', {
@@ -61,7 +63,9 @@ export const PipeDispenser = (props) => {
                   category: shownCategory.cat_name,
                 })
               }
-            />
+            >
+              {recipe.pipe_name}
+            </Button>
           ))}
         </Section>
       </Window.Content>

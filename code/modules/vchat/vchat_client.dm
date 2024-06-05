@@ -132,7 +132,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 	send_playerinfo()
 	load_database()
 
-	owner.verbs += /client/proc/vchat_export_log
+	add_verb(owner,/client/proc/vchat_export_log)  //CHOMPEdit
 
 //Perform DB shenanigans
 /datum/chatOutput/proc/load_database()
@@ -241,6 +241,8 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 			loaded = FALSE
 		if("debug")
 			data = debugmsg(arglist(params))
+		if("set_theme")
+			usr << output(params["theme"], "statbrowser:set_theme")
 
 	if(href_list["showingnum"])
 		message_buffer = CLAMP(text2num(href_list["showingnum"]), 50, 2000)
@@ -291,7 +293,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 	return FALSE
 
 GLOBAL_LIST_EMPTY(bicon_cache) // Cache of the <img> tag results, not the icons
-/proc/bicon(var/obj, var/use_class = 1, var/custom_classes = "")
+/proc/icon2html(var/obj, var/use_class = 1, var/custom_classes = "")
 	var/class = use_class ? "class='icon misc [custom_classes]'" : null
 	if(!obj)
 		return
@@ -316,7 +318,7 @@ GLOBAL_LIST_EMPTY(bicon_cache) // Cache of the <img> tag results, not the icons
 		base64 = icon2base64(A.examine_icon(), key)
 		GLOB.bicon_cache[key] = base64
 		if(changes_often)
-			addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(expire_bicon_cache), key), 50 SECONDS, TIMER_UNIQUE)
+			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(expire_bicon_cache), key), 50 SECONDS, TIMER_UNIQUE)
 
 	// May add a class to the img tag created by bicon
 	if(use_class)
@@ -387,7 +389,7 @@ var/to_chat_src
 
 /client/proc/vchat_export_log()
 	set name = "Export chatlog"
-	set category = "OOC"
+	set category = "OOC.Chat" //CHOMPEdit
 
 	if(chatOutput.broken)
 		to_chat(src, "<span class='warning'>Error: VChat isn't processing your messages!</span>")

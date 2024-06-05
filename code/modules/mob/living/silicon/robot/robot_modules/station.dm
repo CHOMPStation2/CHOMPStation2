@@ -168,10 +168,10 @@ var/global/list/robot_modules = list(
 	added_networks.Cut()
 
 /obj/item/weapon/robot_module/proc/add_subsystems(var/mob/living/silicon/robot/R)
-	R.verbs |= subsystems
+	add_verb(R,subsystems) //CHOMPEdit TGPanel
 
 /obj/item/weapon/robot_module/proc/remove_subsystems(var/mob/living/silicon/robot/R)
-	R.verbs -= subsystems
+	remove_verb(R,subsystems)  //CHOMPEdit
 
 /obj/item/weapon/robot_module/proc/apply_status_flags(var/mob/living/silicon/robot/R)
 	if(!can_be_pushed)
@@ -553,6 +553,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/pupscrubber(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
 	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
+	src.modules += new /obj/item/borg/sight/janitor(src)
 	var/obj/item/weapon/reagent_containers/spray/LS = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag += LS
 	LS.reagents.add_reagent("lube", 250)

@@ -149,7 +149,7 @@
 			drop.forceMove(T)
 
 /datum/admins/proc/call_drop_pod()
-	set category = "Fun"
+	set category = "Fun.Drop Pod" //CHOMPEdit
 	set desc = "Call an immediate drop pod on your location."
 	set name = "Call Drop Pod"
 
@@ -164,7 +164,7 @@
 		return
 
 	if(tgui_alert(usr, "Do you wish the mob to have a player?","Assign Player?",list("No","Yes")) == "No")
-		var/spawn_count = tgui_input_number(usr, "How many mobs do you wish the pod to contain?", "Drop Pod Selection", null)
+		var/spawn_count = tgui_input_number(usr, "How many mobs do you wish the pod to contain?", "Drop Pod Selection", null, min_value=1)
 		if(spawn_count <= 0)
 			return
 		for(var/i=0;i<spawn_count;i++)

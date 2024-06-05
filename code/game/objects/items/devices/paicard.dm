@@ -45,7 +45,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 	if(istype(rig))
 		rig.forced_move(direction, user)
 
-/obj/item/device/paicard/New()
+/obj/item/device/paicard/Initialize() //ChompEDIT New --> Initialize
 	..()
 	add_overlay("pai-off")
 

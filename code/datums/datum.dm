@@ -22,22 +22,22 @@
 	var/list/open_tguis // CHOMPEdit: FIXME: open_uis
 
 	/// Active timers with this datum as the target
-	var/list/active_timers
+	var/list/_active_timers // CHOMPEdit
 
 	/**
 	  * Components attached to this datum
 	  *
-	  * Lazy associated list in the structure of `type:component/list of components`
+	  * Lazy associated list in the structure of `type -> component/list of components`
 	  */
-	var/list/datum_components
+	var/list/_datum_components
 	/**
 	  * Any datum registered to receive signals from this datum is in this list
 	  *
-	  * Lazy associated list in the structure of `signal:registree/list of registrees`
+	  * Lazy associated list in the structure of `signal -> registree/list of registrees`
 	  */
-	var/list/comp_lookup
-	var/list/list/signal_procs // List of lists
-	var/signal_enabled = FALSE
+	var/list/_listen_lookup
+	/// Lazy associated list in the structure of `target -> list(signal -> proctype)` that are run when the datum receives that signal
+	var/list/list/_signal_procs
 
 	/// Datum level flags
 	var/datum_flags = NONE
@@ -58,42 +58,72 @@
 #ifdef REFERENCE_TRACKING
 	var/tmp/running_find_references
 	var/tmp/last_find_references = 0
+	var/tmp/find_references_on_destroy = FALSE //set this to true on an item to have it find refs after
 	#ifdef REFERENCE_TRACKING_DEBUG
 	///Stores info about where refs are found, used for sanity checks and testing
 	var/list/found_refs
 	#endif
 #endif
 
+	// If we have called dump_harddel_info already. Used to avoid duped calls (since we call it immediately in some cases on failure to process)
+	// Create and destroy is weird and I wanna cover my bases
+	var/harddel_deets_dumped = FALSE
+
 // Default implementation of clean-up code.
 // This should be overridden to remove all references pointing to the object being destroyed.
 // Return the appropriate QDEL_HINT; in most cases this is QDEL_HINT_QUEUE.
 /datum/proc/Destroy(force=FALSE)
+	SHOULD_CALL_PARENT(TRUE)
+	// SHOULD_NOT_SLEEP(TRUE) FIXME: Causing some big issues still
+	tag = null
+	weak_reference = null //ensure prompt GCing of weakref.
 
 	//clear timers
-	var/list/timers = active_timers
-	active_timers = null
+	var/list/timers = _active_timers // CHOMPEdit
+	_active_timers = null // CHOMPEdit
 	for(var/datum/timedevent/timer as anything in timers)
 		if (timer.spent)
 			continue
 		qdel(timer)
 
-	weak_reference = null // Clear this reference to ensure it's kept for as brief duration as possible.
+	#ifdef REFERENCE_TRACKING
+	#ifdef REFERENCE_TRACKING_DEBUG
+	found_refs = null
+	#endif
+	#endif
 
 	//BEGIN: ECS SHIT
-	signal_enabled = FALSE
-
-	var/list/dc = datum_components
+	var/list/dc = _datum_components
 	if(dc)
-		var/all_components = dc[/datum/component]
-		if(length(all_components))
-			for(var/datum/component/C as anything in all_components)
-				qdel(C, FALSE, TRUE)
-		else
-			var/datum/component/C = all_components
-			qdel(C, FALSE, TRUE)
+		for(var/component_key in dc)
+			var/component_or_list = dc[component_key]
+			if(islist(component_or_list))
+				for(var/datum/component/component as anything in component_or_list)
+					qdel(component, FALSE)
+			else
+				var/datum/component/C = component_or_list
+				qdel(C, FALSE)
 		dc.Cut()
 
-	var/list/lookup = comp_lookup
+	_clear_signal_refs()
+	//END: ECS SHIT
+
+	tag = null
+	SStgui.close_uis(src)
+
+	#ifdef REFERENCE_TRACKING
+	if(find_references_on_destroy)
+		return QDEL_HINT_FINDREFERENCE
+	if(SSgarbage.find_reference_on_fail_global_toggle)
+		return QDEL_HINT_IFFAIL_FINDREFERENCE
+	#endif
+
+	return QDEL_HINT_QUEUE
+
+///Only override this if you know what you're doing. You do not know what you're doing
+///This is a threat
+/datum/proc/_clear_signal_refs()
+	var/list/lookup = _listen_lookup
 	if(lookup)
 		for(var/sig in lookup)
 			var/list/comps = lookup[sig]
@@ -103,15 +133,10 @@
 			else
 				var/datum/component/comp = comps
 				comp.UnregisterSignal(src, sig)
-		comp_lookup = lookup = null
+		_listen_lookup = lookup = null
 
-	for(var/target in signal_procs)
-		UnregisterSignal(target, signal_procs[target])
-	//END: ECS SHIT
-
-	tag = null
-	SStgui.close_uis(src)
-	return QDEL_HINT_QUEUE
+	for(var/target in _signal_procs)
+		UnregisterSignal(target, _signal_procs[target])
 
 /**
  * Callback called by a timer to end an associative-list-indexed cooldown.
@@ -142,3 +167,16 @@
 		return
 	SEND_SIGNAL(source, COMSIG_CD_RESET(index), S_TIMER_COOLDOWN_TIMELEFT(source, index))
 	TIMER_COOLDOWN_END(source, index)
+
+/// Return text from this proc to provide extra context to hard deletes that happen to it
+/// Optional, you should use this for cases where replication is difficult and extra context is required
+/// Can be called more then once per object, use harddel_deets_dumped to avoid duplicate calls (I am so sorry)
+/datum/proc/dump_harddel_info()
+	return
+
+///images are pretty generic, this should help a bit with tracking harddels related to them
+/image/dump_harddel_info()
+	if(harddel_deets_dumped)
+		return
+	harddel_deets_dumped = TRUE
+	return "Image icon: [icon] - icon_state: [icon_state] [loc ? "loc: [loc] ([loc.x],[loc.y],[loc.z])" : ""]"

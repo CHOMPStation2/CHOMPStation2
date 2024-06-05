@@ -32,7 +32,7 @@
 /datum/admins/var/datum/virus2_editor/virus2_editor_datum = new
 /client/proc/virus2_editor()
 	set name = "Virus Editor"
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 	if(!holder || !check_rights(R_SPAWN)) return // spawn privileges to create viruses
 
 	holder.virus2_editor_datum.show_ui(src)
@@ -150,7 +150,7 @@
 				if(!infectee.species || !(infectee.species.get_bodytype() in species))
 					infectee = null
 		if("ichance")
-			var/I = tgui_input_number(usr, "Input infection chance", "Infection Chance", infectionchance)
+			var/I = tgui_input_number(usr, "Input infection chance", "Infection Chance", infectionchance, 100)
 			if(!I) return
 			infectionchance = I
 		if("stype")
@@ -172,7 +172,7 @@
 			else if(href_list["reset"])
 				antigens = list()
 		if("resistance")
-			var/S = tgui_input_number(usr, "Input % resistance to antibiotics", "Resistance", resistance)
+			var/S = tgui_input_number(usr, "Input % resistance to antibiotics", "Resistance", resistance, 100)
 			if(!S) return
 			resistance = S
 		if("infectee")

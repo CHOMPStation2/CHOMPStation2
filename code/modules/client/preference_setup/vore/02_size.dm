@@ -168,7 +168,7 @@
 			This measurement should be set relative to a normal 5'10'' person's body and not the actual size of your character.\n\
 			If you set your weight to 500 because you're a naga or have metal implants then complain that you're a blob I\n\
 			swear to god I will find you and I will punch you for not reading these directions!\n\
-			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN)
+			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN, round_value=FALSE)
 		if(new_weight)
 			var/unit_of_measurement = tgui_alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", list("Pounds", "Kilograms"))
 			if(unit_of_measurement == "Pounds")
@@ -182,7 +182,7 @@
 		var/weight_gain_rate = tgui_input_number(user, "Choose your character's rate of weight gain between 100% \
 			(full realism body fat gain) and 0% (no body fat gain).\n\
 			(If you want to disable weight gain, set this to 0.01 to round it to 0%.)\
-			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference", pref.weight_gain)
+			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference", pref.weight_gain, WEIGHT_CHANGE_MAX, WEIGHT_CHANGE_MIN, round_value=FALSE)
 		if(weight_gain_rate)
 			pref.weight_gain = round(text2num(weight_gain_rate),1)
 			return TOPIC_REFRESH
@@ -191,14 +191,14 @@
 		var/weight_loss_rate = tgui_input_number(user, "Choose your character's rate of weight loss between 100% \
 			(full realism body fat loss) and 0% (no body fat loss).\n\
 			(If you want to disable weight loss, set this to 0.01 round it to 0%.)\
-			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference", pref.weight_loss)
+			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference", pref.weight_loss, WEIGHT_CHANGE_MAX, WEIGHT_CHANGE_MIN, round_value=FALSE)
 		if(weight_loss_rate)
 			pref.weight_loss = round(text2num(weight_loss_rate),1)
 			return TOPIC_REFRESH
 
 	else if(href_list["voice_freq"])
 		var/list/preset_voice_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
-		var/choice = tgui_input_list(usr, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs)
+		var/choice = tgui_input_list(user, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs) //ChompEDIT - usr removal
 		if(!choice)
 			return
 		choice = preset_voice_freqs[choice]
@@ -206,7 +206,7 @@
 			pref.voice_freq = 42500 //CHOMPEdit
 			return TOPIC_REFRESH
 		else if(choice == 1)
-			choice = tgui_input_number(user, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ, round_value = TRUE)
+			choice = tgui_input_number(user, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ)
 		if(choice > MAX_VOICE_FREQ)
 			choice = MAX_VOICE_FREQ
 		else if(choice < MIN_VOICE_FREQ)
@@ -231,7 +231,7 @@
 			"goon speak roach",
 			"goon speak skelly",
 			"xeno speak") // CHOMPedit
-		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
+		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!pref.voice_sound)
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
 		else if(!choice)
@@ -240,7 +240,7 @@
 			pref.voice_sound = choice
 		return TOPIC_REFRESH
 	else if(href_list["customize_speech_bubble"])
-		var/choice = tgui_input_list(usr, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
+		var/choice = tgui_input_list(user, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
 		if(!choice)
 			pref.custom_speech_bubble = "default"
 		else
@@ -289,7 +289,7 @@
 	// CHOMPEdit Start: Pain/Scream/Death sounds
 	else if(href_list["species_sound_options"]) // You shouldn't be able to see this option if you don't have the option to select a custom icon base, so we don't need to re-check for safety here.
 		var/list/possible_species_sound_types = species_sound_map
-		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's species sounds? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
+		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's species sounds? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
 		if(!choice)
 			return TOPIC_REFRESH // No choice? Don't reset our selection
 		else

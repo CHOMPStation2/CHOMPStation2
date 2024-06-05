@@ -7,7 +7,7 @@
 	if(!ishuman(parent))
 		return COMPONENT_INCOMPATIBLE
 	xeno = parent //asigning the reference
-	xeno.verbs |= /mob/living/carbon/human/proc/queen_aura_toggle
+	add_verb(xeno,/mob/living/carbon/human/proc/queen_aura_toggle) //CHOMPEdit TGPanel
 
 /datum/component/xenoqueenbuff/process()
 	if(QDELETED(xeno))
@@ -47,7 +47,7 @@
 
 /mob/living/carbon/human/proc/queen_aura_toggle()
 	set name = "Commanding Aura"
-	set category = "Abilities"
+	set category = "Abilities.Xeno"
 	set desc = "Toggles your Xenomorph Queen buff aura."
 
 	if(stat == DEAD) //Disable the verb while we're dead

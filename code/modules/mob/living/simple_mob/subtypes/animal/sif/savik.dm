@@ -55,7 +55,7 @@
 
 	say_list_type = /datum/say_list/savik
 	ai_holder_type = /datum/ai_holder/simple_mob/savik
-	
+
 
 /datum/say_list/savik
 	speak = list("Hruuugh!","Hrunnph")
@@ -80,7 +80,7 @@
 /mob/living/simple_mob/animal/sif/savik/verb/berserk()
 	set name = "Berserk"
 	set desc = "Enrage and become vastly stronger for a period of time, however you will be weaker afterwards."
-	set category = "Abilities"
+	set category = "Abilities.Savik" //CHOMPEdit
 
 	add_modifier(/datum/modifier/berserk, 30 SECONDS)
 

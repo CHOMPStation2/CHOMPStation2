@@ -96,6 +96,9 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 
 	add_overlay("glass")
 
+	pinboard = SSvis_overlays.add_vis_overlay(src, icon = icon, iconstate = "pinboard", layer = 0.1, add_appearance_flags = KEEP_TOGETHER, add_vis_flags = VIS_INHERIT_ID|VIS_INHERIT_PLANE, unique = TRUE)
+	pinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
+	/*
 	pinboard = new()
 	pinboard.icon = icon
 	pinboard.icon_state = "pinboard"
@@ -104,6 +107,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	pinboard.appearance_flags = KEEP_TOGETHER
 	pinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
 	vis_contents += pinboard
+	*/
 
 	. = ..()
 
@@ -201,6 +205,10 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 
 	add_overlay("glass")
 
+	bpinboard = SSvis_overlays.add_vis_overlay(src, icon = icon, iconstate = "pinboard", layer = 0.1, add_appearance_flags = KEEP_TOGETHER, add_vis_flags = VIS_INHERIT_ID|VIS_INHERIT_PLANE, unique = TRUE)
+	bpinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
+	vis_contents += bpinboard
+	/*
 	bpinboard = new()
 	bpinboard.icon = icon
 	bpinboard.icon_state = "pinboard"
@@ -209,6 +217,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	bpinboard.appearance_flags = KEEP_TOGETHER
 	bpinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
 	vis_contents += bpinboard
+	*/
 
 	. = ..()
 

@@ -11,6 +11,7 @@
 /obj/belly
 	name = "belly"							// Name of this location
 	desc = "It's a belly! You're in it!"	// Flavor text description of inside sight/sound/smells/feels.
+	var/message_mode = FALSE				// If all options for messages are shown
 	var/vore_sound = "Gulp"					// Sound when ingesting someone
 	var/vore_verb = "ingest"				// Verb for eating with this in messages
 	var/release_verb = "expels"				// Verb for releasing something from a stomach
@@ -49,6 +50,7 @@
 	var/egg_type = "Egg"					// Default egg type and path.
 	var/egg_path = /obj/item/weapon/storage/vore_egg
 	var/egg_name = null						// CHOMPAdd. Custom egg name
+	var/egg_size = 0						// CHOMPAdd. Custom egg size
 	var/list/list/emote_lists = list()			// Idle emotes that happen on their own, depending on the bellymode. Contains lists of strings indexed by bellymode
 	var/emote_time = 60						// How long between stomach emotes at prey (in seconds)
 	var/emote_active = TRUE					// Are we even giving emotes out at all or not?
@@ -88,9 +90,11 @@
 	//Actual full digest modes
 	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_ABSORB,DM_DRAIN,DM_SELECT,DM_UNABSORB,DM_HEAL,DM_SHRINK,DM_GROW,DM_SIZE_STEAL,DM_EGG)
 	//Digest mode addon flags
-	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY, "Slow Body Digestion" = DM_FLAG_SLOWBODY, "Muffle Items" = DM_FLAG_MUFFLEITEMS, "TURBO MODE" = DM_FLAG_TURBOMODE) //CHOMPEdit
+	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY, "Spare Prosthetics" = DM_FLAG_SPARELIMB, "Slow Body Digestion" = DM_FLAG_SLOWBODY, "Muffle Items" = DM_FLAG_MUFFLEITEMS, "TURBO MODE" = DM_FLAG_TURBOMODE) //CHOMPEdit
 	//Item related modes
-	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL)
+	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL) //CHOMPEdit
+	//drain modes
+	var/tmp/static/list/drainmodes = list(DR_NORMAL,DR_SLEEP,DR_FAKE,DR_WEIGHT)
 
 	//List of slots that stripping handles strips
 	var/tmp/static/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
@@ -99,6 +103,7 @@
 	var/tmp/digest_mode = DM_HOLD				// Current mode the belly is set to from digest_modes (+transform_modes if human)
 	var/tmp/list/items_preserved = list()		// Stuff that wont digest so we shouldn't process it again.
 	var/tmp/recent_sound = FALSE				// Prevent audio spam
+	var/tmp/drainmode = DR_NORMAL				// Simply drains the prey then does nothing.
 
 	// Don't forget to watch your commas at the end of each line if you change these.
 	var/list/struggle_messages_outside = list(
@@ -274,6 +279,7 @@
 	"name",
 	"desc",
 	"absorbed_desc",
+	"message_mode",
 	"vore_sound",
 	"vore_verb",
 	"release_verb",
@@ -439,6 +445,7 @@
 	"sound_volume",
 	"speedy_mob_processing",
 	"egg_name",
+	"egg_size",
 	"recycling",
 	"storing_nutrition",
 	"is_feedable",
@@ -453,6 +460,7 @@
 	"belly_mob_mult",
 	"belly_item_mult",
 	"belly_overall_mult",
+	"drainmode",
 	)
 
 	if (save_digest_mode == 1)
@@ -483,7 +491,7 @@
 	owner?.vore_organs?.Remove(src)
 	owner = null
 	for(var/mob/observer/G in src)
-		G.forceMove(get_turf(src)) //CHOMPEdit End
+		G.forceMove(get_turf(src)) //ported from CHOMPStation PR#7132
 	return ..()
 
 // Called whenever an atom enters this belly
@@ -500,8 +508,8 @@
 			playsound(T, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/client_preference/digestion_noises) //CHOMPEdit
 			cycle_sloshed = TRUE
 	thing.belly_cycles = 0 //reset cycle count
-	if(istype(thing, /mob/observer)) //Silence, spook.
-		if(desc)
+	if(istype(thing, /mob/observer)) //Ports CHOMPStation PR#3072
+		if(desc) //Ports CHOMPStation PR#4772
 			//Allow ghosts see where they are if they're still getting squished along inside.
 			var/formatted_desc
 			formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
@@ -517,10 +525,11 @@
 
 	//Generic entered message
 	if(!owner.mute_entry && entrance_logs) //CHOMPEdit
-		to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
+		if(!istype(thing, /mob/observer))	//Don't have ghosts announce they're reentering the belly on death
+			to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
 
 	//Sound w/ antispam flag setting
-	if(vore_sound && !recent_sound)
+	if(vore_sound && !recent_sound && !istype(thing, /mob/observer))
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_vore_sounds[vore_sound]
@@ -596,6 +605,8 @@
 // Called whenever an atom leaves this belly
 /obj/belly/Exited(atom/movable/thing, atom/OldLoc)
 	. = ..()
+	if(QDELETED(owner))
+		return
 	thing.exit_belly(src) // CHOMPEdit - atom movable proc, does nothing by default. Overridden in children for special behavior.
 	if(isbelly(thing.loc)) //CHOMPEdit Start
 		var/obj/belly/NB = thing.loc
@@ -1011,6 +1022,8 @@
 	for(var/atom/movable/AM as anything in contents)
 		if(isliving(AM))
 			var/mob/living/L = AM
+			if(L.stat)
+				L.SetSleeping(min(L.sleeping,20))
 			if(L.absorbed && !include_absorbed)
 				continue
 		count += release_specific_contents(AM, silent = TRUE)
@@ -1096,6 +1109,12 @@
 						absorbed_count++
 				Pred.bloodstr.trans_to(Prey, Pred.reagents.total_volume / absorbed_count)
 
+	//Makes it so that if prey are heavily asleep, they will wake up shortly after release
+	if(isliving(M))
+		var/mob/living/ML = M
+		if(ML.stat)
+			ML.SetSleeping(min(ML.sleeping,20))
+
 	//Clean up our own business
 	if(!ishuman(owner))
 		owner.update_icons()
@@ -1164,7 +1183,7 @@
 // but can easily make the message vary based on how many people are inside, etc.
 // Returns a string which shoul be appended to the Examine output.
 /obj/belly/proc/get_examine_msg()
-	if(!(contents.len) || !(examine_messages.len))
+	if(!(contents?.len) || !(examine_messages?.len)) //ChompEDIT - runtimes
 		return ""
 
 	var/formatted_message
@@ -1175,6 +1194,15 @@
 	for(var/mob/living/L in contents)
 		living_count++
 
+	var/count_total = contents.len
+	for(var/mob/observer/C in contents)
+		count_total-- //Exclude any ghosts from %count
+
+	var/list/vore_contents = list()
+	for(var/G in contents)
+		if(!isobserver(G))
+			vore_contents += G //Exclude any ghosts from %prey
+
 	for(var/mob/living/P in contents)
 		if(!P.absorbed) //This is required first, in case there's a person absorbed and not absorbed in a stomach.
 			total_bulge += P.size_multiplier
@@ -1184,14 +1212,14 @@
 
 	formatted_message = replacetext(raw_message, "%belly", lowertext(name))
 	formatted_message = replacetext(formatted_message, "%pred", owner)
-	formatted_message = replacetext(formatted_message, "%prey", english_list(contents))
+	formatted_message = replacetext(formatted_message, "%prey", english_list(vore_contents))
 	formatted_message = replacetext(formatted_message, "%countprey", living_count)
-	formatted_message = replacetext(formatted_message, "%count", contents.len)
+	formatted_message = replacetext(formatted_message, "%count", count_total)
 
 	return(span_red("<i>[formatted_message]</i>"))
 
 /obj/belly/proc/get_examine_msg_absorbed()
-	if(!(contents.len) || !(examine_messages_absorbed.len) || !display_absorbed_examine)
+	if(!(contents?.len) || !(examine_messages_absorbed?.len) || !display_absorbed_examine) //ChompEDIT - runtimes
 		return ""
 
 	var/formatted_message
@@ -1484,7 +1512,7 @@
 	var/obj/item/device/mmi/hasMMI // CHOMPEdit - Adjust how MMI's are handled
 
 	//Drop all items into the belly.
-	if(config.items_survive_digestion)
+	if(CONFIG_GET(flag/items_survive_digestion)) // CHOMPEdit
 		for(var/obj/item/W in M)
 			if(istype(W, /obj/item/organ/internal/mmi_holder/posibrain))
 				var/obj/item/organ/internal/mmi_holder/MMI = W
@@ -2218,7 +2246,7 @@
 		return
 	content.belly_cycles = 0 //CHOMPEdit
 	content.forceMove(target)
-	if(ismob(content))
+	if(ismob(content) && !isobserver(content))
 		var/mob/ourmob = content
 		ourmob.reset_view(owner)
 	if(isitem(content))
@@ -2259,6 +2287,56 @@
 			dest_belly = B
 			break
 	if(!dest_belly) return
+	if(ismob(prey))
+		var/living_count = 0
+		for(var/mob/living/L in contents)
+			living_count++
+		if(dest_belly_name == autotransferlocation_secondary)
+			var/secondary_transfer_owner_message = pick(secondary_transfer_messages_owner)
+			var/secondary_transfer_prey_message = pick(secondary_transfer_messages_prey)
+
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%pred", owner)
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%prey", prey)
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%belly", lowertext(name))
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%countprey", living_count)
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%count", contents.len)
+			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%dest", autotransferlocation_secondary)
+
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%pred", owner)
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%prey", prey)
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%belly", lowertext(name))
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%countprey", living_count)
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%count", contents.len)
+			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%dest", autotransferlocation_secondary)
+
+			secondary_transfer_owner_message = "<span class='vwarning'>[secondary_transfer_owner_message]</span>"
+			secondary_transfer_prey_message = "<span class='vwarning'>[secondary_transfer_prey_message]</span>"
+
+			to_chat(prey, secondary_transfer_prey_message)
+			to_chat(owner, secondary_transfer_owner_message)
+		else if (dest_belly_name == autotransferlocation)
+			var/primary_transfer_owner_message = pick(primary_transfer_messages_owner)
+			var/primary_transfer_prey_message = pick(primary_transfer_messages_prey)
+
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%pred", owner)
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%prey", prey)
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%belly", lowertext(name))
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%countprey", living_count)
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%count", contents.len)
+			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%dest", autotransferlocation)
+
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%pred", owner)
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%prey", prey)
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%belly", lowertext(name))
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%countprey", living_count)
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%count", contents.len)
+			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%dest", autotransferlocation)
+
+			primary_transfer_owner_message = "<span class='vwarning'>[primary_transfer_owner_message]</span>"
+			primary_transfer_prey_message = "<span class='vwarning'>[primary_transfer_prey_message]</span>"
+
+			to_chat(prey, primary_transfer_prey_message)
+			to_chat(owner, primary_transfer_owner_message)
 	transfer_contents(prey, dest_belly)
 	return TRUE //CHOMPEdit end
 
@@ -2383,6 +2461,7 @@
 	//// Non-object variables
 	dupe.name = name
 	dupe.desc = desc
+	dupe.message_mode = message_mode
 	dupe.absorbed_desc = absorbed_desc
 	dupe.vore_sound = vore_sound
 	dupe.vore_verb = vore_verb
@@ -2487,6 +2566,7 @@
 	dupe.slow_brutal = slow_brutal
 	dupe.sound_volume = sound_volume
 	dupe.egg_name = egg_name
+	dupe.egg_size = egg_size
 	dupe.recycling = recycling
 	dupe.storing_nutrition = storing_nutrition
 	dupe.is_feedable = is_feedable

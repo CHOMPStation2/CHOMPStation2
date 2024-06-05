@@ -214,7 +214,7 @@
 		if(!T) return
 
 		if(client)
-			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/client_preference/say_sounds) //CHOMPEdit - use say prefs instead
+			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/client_preference/say_sounds) //CHOMPEdit - use say prefs instead //ChompEDIT - also ignore walls
 		var/list/in_range = get_mobs_and_objs_in_view_fast(T,range,2,remote_ghosts = client ? TRUE : FALSE)
 		var/list/m_viewers = in_range["mobs"]
 		var/list/o_viewers = in_range["objs"]
@@ -224,6 +224,8 @@
 				if(M)
 					if(isobserver(M))
 						message = "<span class='emote'><B>[src]</B> ([ghost_follow_link(src, M)]) [input]</span>"
+					if(usr && usr.client && M && !(get_z(usr) == get_z(M)))
+						message = "<span class='multizsay'>[message]</span>"
 					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
 					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/weapon/holder) && src.loc.loc == M)))
 						M.show_message(message)

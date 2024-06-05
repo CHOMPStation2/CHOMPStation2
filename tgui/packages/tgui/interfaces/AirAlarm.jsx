@@ -1,7 +1,7 @@
 import { toFixed } from 'common/math';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
-import { useBackend, useLocalState } from '../backend';
+import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { getGasColor, getGasLabel } from '../constants';
 import { Window } from '../layouts';
@@ -10,6 +10,13 @@ import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
 
 export const AirAlarm = (props) => {
   const { act, data } = useBackend();
+
+  const [screen, setScreen] = useState('');
+
+  function handleSetScreen(value) {
+    setScreen(value);
+  }
+
   const locked = data.locked && !data.siliconUser && !data.remoteUser;
   return (
     <Window width={440} height={650}>
@@ -17,7 +24,9 @@ export const AirAlarm = (props) => {
         <InterfaceLockNoticeBox />
         <AirAlarmStatus />
         <AirAlarmUnlockedControl />
-        {!locked && <AirAlarmControl />}
+        {!locked && (
+          <AirAlarmControl screen={screen} onScreen={handleSetScreen} />
+        )}
       </Window.Content>
     </Window>
   );
@@ -97,25 +106,27 @@ const AirAlarmUnlockedControl = (props) => {
         <LabeledList.Item label="Remote Control">
           <Button
             selected={rcon === 1}
-            content="Off"
             onClick={() => act('rcon', { rcon: 1 })}
-          />
+          >
+            Off
+          </Button>
           <Button
             selected={rcon === 2}
-            content="Auto"
             onClick={() => act('rcon', { rcon: 2 })}
-          />
+          >
+            Auto
+          </Button>
           <Button
             selected={rcon === 3}
-            content="On"
             onClick={() => act('rcon', { rcon: 3 })}
-          />
+          >
+            On
+          </Button>
         </LabeledList.Item>
         <LabeledList.Item label="Thermostat">
-          <Button
-            content={target_temperature}
-            onClick={() => act('temperature')}
-          />
+          <Button onClick={() => act('temperature')}>
+            {target_temperature}
+          </Button>
         </LabeledList.Item>
       </LabeledList>
     </Section>
@@ -146,23 +157,20 @@ const AIR_ALARM_ROUTES = {
 };
 
 const AirAlarmControl = (props) => {
-  const [screen, setScreen] = useLocalState('screen');
-  const route = AIR_ALARM_ROUTES[screen] || AIR_ALARM_ROUTES.home;
+  const route = AIR_ALARM_ROUTES[props.screen] || AIR_ALARM_ROUTES.home;
   const Component = route.component();
   return (
     <Section
       title={route.title}
       buttons={
-        screen && (
-          <Button
-            icon="arrow-left"
-            content="Back"
-            onClick={() => setScreen()}
-          />
+        props.screen && (
+          <Button icon="arrow-left" onClick={() => props.onScreen()}>
+            Back
+          </Button>
         )
       }
     >
-      <Component />
+      <Component onScreen={props.onScreen} />
     </Section>
   );
 };
@@ -172,51 +180,44 @@ const AirAlarmControl = (props) => {
 
 const AirAlarmControlHome = (props) => {
   const { act, data } = useBackend();
-  const [screen, setScreen] = useLocalState('screen');
   const { mode, atmos_alarm } = data;
   return (
     <>
       <Button
         icon={atmos_alarm ? 'exclamation-triangle' : 'exclamation'}
         color={atmos_alarm && 'caution'}
-        content="Area Atmosphere Alarm"
         onClick={() => act(atmos_alarm ? 'reset' : 'alarm')}
-      />
+      >
+        Area Atmosphere Alarm
+      </Button>
       <Box mt={1} />
       <Button
         icon={mode === 3 ? 'exclamation-triangle' : 'exclamation'}
         color={mode === 3 && 'danger'}
-        content="Panic Siphon"
         onClick={() =>
           act('mode', {
             mode: mode === 3 ? 1 : 3,
           })
         }
-      />
+      >
+        Panic Siphon
+      </Button>
       <Box mt={2} />
-      <Button
-        icon="sign-out-alt"
-        content="Vent Controls"
-        onClick={() => setScreen('vents')}
-      />
+      <Button icon="sign-out-alt" onClick={() => props.onScreen('vents')}>
+        Vent Controls
+      </Button>
       <Box mt={1} />
-      <Button
-        icon="filter"
-        content="Scrubber Controls"
-        onClick={() => setScreen('scrubbers')}
-      />
+      <Button icon="filter" onClick={() => props.onScreen('scrubbers')}>
+        Scrubber Controls
+      </Button>
       <Box mt={1} />
-      <Button
-        icon="cog"
-        content="Operating Mode"
-        onClick={() => setScreen('modes')}
-      />
+      <Button icon="cog" onClick={() => props.onScreen('modes')}>
+        Operating Mode
+      </Button>
       <Box mt={1} />
-      <Button
-        icon="chart-bar"
-        content="Alarm Thresholds"
-        onClick={() => setScreen('thresholds')}
-      />
+      <Button icon="chart-bar" onClick={() => props.onScreen('thresholds')}>
+        Alarm Thresholds
+      </Button>
     </>
   );
 };
@@ -262,9 +263,10 @@ const AirAlarmControlModes = (props) => {
         icon={mode.selected ? 'check-square-o' : 'square-o'}
         selected={mode.selected}
         color={mode.selected && mode.danger && 'danger'}
-        content={mode.name}
         onClick={() => act('mode', { mode: mode.mode })}
-      />
+      >
+        {mode.name}
+      </Button>
       <Box mt={1} />
     </Fragment>
   ));
@@ -298,14 +300,15 @@ const AirAlarmControlThresholds = (props) => {
             {threshold.settings.map((setting) => (
               <td key={setting.val}>
                 <Button
-                  content={toFixed(setting.selected, 2)}
                   onClick={() =>
                     act('threshold', {
                       env: setting.env,
                       var: setting.val,
                     })
                   }
-                />
+                >
+                  {toFixed(setting.selected, 2)}
+                </Button>
               </td>
             ))}
           </tr>

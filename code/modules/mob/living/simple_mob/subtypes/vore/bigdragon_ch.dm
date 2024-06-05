@@ -177,8 +177,8 @@ I think I covered everything.
 		"Normal"
 	)
 	var/eyes
-	
-	can_be_drop_prey = FALSE //CHOMP Add
+
+	can_be_drop_prey = FALSE
 
 ///
 ///		Subtypes
@@ -201,6 +201,7 @@ I think I covered everything.
 	maxHealth = 200
 	melee_damage_lower = 20
 	melee_damage_upper = 15
+	allow_mind_transfer = TRUE
 
 ///
 ///		Misc define stuff
@@ -237,13 +238,13 @@ I think I covered everything.
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_style
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount)
+	add_verb(src,/mob/living/proc/toggle_rider_reins)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/set_style)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/toggle_glow)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/flame_toggle)
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle)
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = "neutral"
@@ -270,14 +271,14 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow()
 	set name = "Toggle Glow"
 	set desc = "Switch between glowing and not glowing."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	glow_toggle = !glow_toggle
 
 /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle()
 	set name = "Toggle Small Sprite"
 	set desc = "Switches your sprite to a smaller variant so you can see what you're doing. Others will always see your standard sprite instead. "
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(!small)
 		var/image/I = image(icon = small_icon, icon_state = small_icon_state, loc = src)
@@ -292,7 +293,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle()
 	set name = "Toggle breath attack"
 	set desc = "Toggles whether you will breath attack on harm intent (If you have one)."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(norange)
 		to_chat(src, "<span class='userdanger'>You don't have a breath attack!</span>")
@@ -304,7 +305,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/special_toggle()
 	set name = "Toggle special attacks"
 	set desc = "Toggles whether you will tail spin and charge (If you have them)."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(nospecial)
 		to_chat(src, "<span class='userdanger'>You don't have special attacks!</span>")
@@ -317,7 +318,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 	if(nameset)
 		to_chat(src, "<span class='userdanger'>You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must.</span>")
 		return
@@ -331,12 +332,12 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_desc()
 	set name = "Set Description"
 	set desc = "Set your description."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 	var/newdesc
 	newdesc = sanitizeSafe(input(src,"Set your description. Max 4096 chars.", "Description set","") as text, MAX_MESSAGE_LEN)
 	if(newdesc)
 		desc = newdesc
-*/ 
+*/
 
 ///
 ///		Icon generation stuff
@@ -436,7 +437,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_style()
 	set name = "Set Dragon Style"
 	set desc = "Customise your icons."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	var/list/options = list("Underbelly","Body","Ears","Mane","Horns","Eyes")
 	for(var/option in options)
@@ -765,7 +766,7 @@ I think I covered everything.
 		var/atom/movable/AM = am
 		if(AM == src || AM.anchored)
 			continue
-		addtimer(CALLBACK(src, .proc/yeet, am), 1)
+		addtimer(CALLBACK(src, PROC_REF(yeet), am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 //Split repulse into two parts so I can recycle this later
@@ -798,7 +799,7 @@ I think I covered everything.
 
 	do_windup_animation(A, charge_warmup)
 	//callbacks are more reliable than byond's process scheduler
-	addtimer(CALLBACK(src, .proc/chargeend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup)
 
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
@@ -836,7 +837,7 @@ I think I covered everything.
 		set_AI_busy(TRUE)
 	flames = 1
 	build_icons()
-	addtimer(CALLBACK(src, .proc/firebreathend, A), charge_warmup)
+	addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)

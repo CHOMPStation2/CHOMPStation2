@@ -16425,7 +16425,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/suit/fire/firefighter,
 /obj/item/weapon/tank/oxygen/red,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/item/clothing/head/hardhat/red,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/research)
@@ -16586,12 +16586,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/tram)
-"aCc" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/grey/border,
-/obj/effect/landmark/start/entrepreneur,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/visitor_laundry)
 "aCd" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -17479,7 +17473,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/landmark/start/entrepreneur,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/visitor_laundry)
 "aDL" = (
@@ -17558,7 +17551,6 @@
 /obj/structure/table/bench/standard,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/grey/border,
-/obj/effect/landmark/start/entrepreneur,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/visitor_laundry)
 "aDU" = (
@@ -17982,7 +17974,6 @@
 /obj/effect/floor_decal/corner/grey/border,
 /obj/machinery/light/small,
 /obj/structure/table/bench/standard,
-/obj/effect/landmark/start/entrepreneur,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/visitor_laundry)
 "aEO" = (
@@ -19427,7 +19418,7 @@
 /obj/random/action_figure,
 /obj/random/action_figure,
 /obj/structure/closet/wardrobe/grey{
-	starts_with = list(/obj/structure/barricade/cutout/viva, /obj/item/clothing/under/color/grey = 3, /obj/item/clothing/shoes/black = 3, /obj/item/clothing/head/soft/grey = 3, /obj/item/clothing/mask/gas/wwii = 3, /obj/item/weapon/storage/toolbox/mechanical = 3, /obj/item/clothing/gloves/fyellow = 3, /obj/item/weapon/card/id/gold/captain/spare/fakespare = 3, /obj/item/weapon/soap/syndie = 3, /obj/item/weapon/storage/box/mousetraps = 3)
+	starts_with = list(/obj/structure/barricade/cutout/viva, /obj/item/clothing/under/color/grey = 3, /obj/item/clothing/shoes/black = 3, /obj/item/clothing/head/soft/grey = 3, /obj/item/clothing/mask/gas = 3, /obj/item/weapon/storage/toolbox/mechanical = 3, /obj/item/clothing/gloves/fyellow = 3, /obj/item/weapon/card/id/gold/captain/spare/fakespare = 3, /obj/item/weapon/soap/syndie = 3, /obj/item/weapon/storage/box/mousetraps = 3)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
@@ -21071,7 +21062,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/suit/fire/firefighter,
 /obj/item/weapon/tank/oxygen/red,
-/obj/item/clothing/mask/gas/wwii,
+/obj/item/clothing/mask/gas,
 /obj/item/clothing/head/hardhat/red,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/research)
@@ -53733,7 +53724,7 @@ aSX
 aTG
 aSo
 arm
-aCc
+bcT
 aVf
 aUs
 aUu

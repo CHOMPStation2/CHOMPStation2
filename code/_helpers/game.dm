@@ -68,6 +68,7 @@
 
 	return heard
 
+
 /proc/isStationLevel(var/level)
 	return level in using_map.station_levels
 
@@ -221,7 +222,7 @@
 //CHOMPEdit - entire proc changed basically to use recursive listening
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
 
-	set background = 1
+	//set background = 1 //CHOMPEdit
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
 	for(var/obj/item/device/radio/R as anything in radios)

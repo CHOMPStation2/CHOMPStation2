@@ -64,8 +64,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/cryptdrake/init_vore()
@@ -129,3 +129,10 @@
 	set_AI_busy(FALSE)
 	if(Adjacent(L))	//We leapt at them but we didn't manage to hit them, let's see if we're next to them
 		L.Weaken(2)	//get knocked down, idiot
+
+/mob/living/simple_mob/vore/cryptdrake/albedo //A slight variation of the cryptdrake requested for an event with glowing eyes
+	icon_dead = "cryptdrake_albedo-dead"
+	icon_living = "cryptdrake_albedo"
+	icon_state = "cryptdrake_albedo"
+	icon_rest = "cryptdrake_albedo"
+	has_eye_glow = TRUE

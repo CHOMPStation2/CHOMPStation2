@@ -27,9 +27,10 @@ export const AccountsTerminal = (props) => {
               <Button
                 icon={id_inserted ? 'eject' : 'sign-in-alt'}
                 fluid
-                content={id_card}
                 onClick={() => act('insert_card')}
-              />
+              >
+                {id_card}
+              </Button>
             </LabeledList.Item>
           </LabeledList>
         </Section>
@@ -61,13 +62,17 @@ const AccountTerminalContent = (props) => {
         >
           New Account
         </Tabs.Tab>
-        <Tabs.Tab
-          disabled={creating_new_account}
-          icon="print"
-          onClick={() => act('print')}
-        >
-          Print
-        </Tabs.Tab>
+        {!creating_new_account ? (
+          <Tabs.Tab
+            disabled={creating_new_account}
+            icon="print"
+            onClick={() => act('print')}
+          >
+            Print
+          </Tabs.Tab>
+        ) : (
+          ''
+        )}
       </Tabs>
       {(creating_new_account && <NewAccountView />) ||
         (detailed_account_view && <DetailedView />) || <ListView />}
@@ -102,8 +107,9 @@ const NewAccountView = (props) => {
             starting_funds: newMoney,
           })
         }
-        content="Create"
-      />
+      >
+        Create
+      </Button>
     </Section>
   );
 };
@@ -129,9 +135,10 @@ const DetailedView = (props) => {
         <Button
           icon="ban"
           selected={suspended}
-          content="Suspend"
           onClick={() => act('toggle_suspension')}
-        />
+        >
+          Suspend
+        </Button>
       }
     >
       <LabeledList>
@@ -152,26 +159,23 @@ const DetailedView = (props) => {
               fluid
               icon="ban"
               confirmIcon="ban"
-              content="Revoke"
               confirmContent="This cannot be undone."
               disabled={account_number === station_account_number}
               onClick={() => act('revoke_payroll')}
-            />
+            >
+              Revoke
+            </Button.Confirm>
           </LabeledList.Item>
         </LabeledList>
       </Section>
       {access_level >= 2 && (
         <Section title="Silent Funds Transfer" level={2}>
-          <Button
-            icon="plus"
-            onClick={() => act('add_funds')}
-            content="Add Funds"
-          />
-          <Button
-            icon="plus"
-            onClick={() => act('remove_funds')}
-            content="Remove Funds"
-          />
+          <Button icon="plus" onClick={() => act('add_funds')}>
+            Add Funds
+          </Button>
+          <Button icon="plus" onClick={() => act('remove_funds')}>
+            Remove Funds
+          </Button>
         </Section>
       )}
       <Section title="Transactions" level={2} mt={1}>
@@ -217,13 +221,14 @@ const ListView = (props) => {
             >
               <Button
                 fluid
-                content={'#' + acc.account_number}
                 onClick={() =>
                   act('view_account_detail', {
                     account_index: acc.account_index,
                   })
                 }
-              />
+              >
+                {'#' + acc.account_number}
+              </Button>
             </LabeledList.Item>
           ))}
         </LabeledList>

@@ -151,7 +151,7 @@
 	if(!D)
 		return 0
 	if(!secured)
-		visible_message("\icon[src][bicon(src)] *beep* *beep*", "*beep* *beep*")
+		visible_message("[icon2html(src,viewers(src))] *beep* *beep*", "*beep* *beep*")
 	if((normal) && (a_right) && (a_left))
 		if(a_right != D)
 			a_right.pulsed(0)
@@ -170,7 +170,7 @@
 /obj/item/device/assembly_holder/timer_igniter
 	name = "timer-igniter assembly"
 
-/obj/item/device/assembly_holder/timer_igniter/New()
+/obj/item/device/assembly_holder/timer_igniter/Initialize() //ChompEDIT New --> Initialize
 	..()
 
 	var/obj/item/device/assembly/igniter/ign = new(src)

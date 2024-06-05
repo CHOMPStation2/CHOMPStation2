@@ -68,7 +68,7 @@
 /obj/CanUseTopic(var/mob/user, var/datum/tgui_state/state = GLOB.tgui_default_state)
 	if(user.CanUseObjTopic(src))
 		return ..()
-	to_chat(user, "<span class='danger'>\icon[src][bicon(src)]Access Denied!</span>")
+	to_chat(user, "<span class='danger'>[icon2html(src, user.client)]Access Denied!</span>")
 	return STATUS_CLOSE
 
 /mob/living/silicon/CanUseObjTopic(var/obj/O)
@@ -186,10 +186,10 @@
 
 /obj/proc/see_emote(mob/M as mob, text, var/emote_type)
 	return
-
+/* CHOMP Removal
 /obj/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	return
-
+*/
 // Used to mark a turf as containing objects that are dangerous to step onto.
 /obj/proc/register_dangerous_to_step()
 	var/turf/T = get_turf(src)

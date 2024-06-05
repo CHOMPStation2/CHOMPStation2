@@ -1,22 +1,46 @@
-//Timing subsystem
-//Don't run if there is an identical unique timer active
-//if the arguments to addtimer are the same as an existing timer, it doesn't create a new timer, and returns the id of the existing timer
-#define TIMER_UNIQUE			(1<<0)
-//For unique timers: Replace the old timer rather then not start this one
-#define TIMER_OVERRIDE			(1<<1)
-//Timing should be based on how timing progresses on clients, not the sever.
-//	tracking this is more expensive,
-//	should only be used in conjuction with things that have to progress client side, such as animate() or sound()
-#define TIMER_CLIENT_TIME		(1<<2)
-//Timer can be stopped using deltimer()
-#define TIMER_STOPPABLE			(1<<3)
-//To be used with TIMER_UNIQUE
-//prevents distinguishing identical timers with the wait variable
-#define TIMER_NO_HASH_WAIT		(1<<4)
-//Loops the timer repeatedly until qdeleted
-//In most cases you want a subsystem instead
-#define TIMER_LOOP				(1<<5)
+//! Defines for subsystems and overlays
+//!
+//! Lots of important stuff in here, make sure you have your brain switched on
+//! when editing this file
 
+//! ## Timing subsystem
+/**
+ * Don't run if there is an identical unique timer active
+ *
+ * if the arguments to addtimer are the same as an existing timer, it doesn't create a new timer,
+ * and returns the id of the existing timer
+ */
+#define TIMER_UNIQUE (1<<0)
+
+///For unique timers: Replace the old timer rather then not start this one
+#define TIMER_OVERRIDE (1<<1)
+
+/**
+ * Timing should be based on how timing progresses on clients, not the server.
+ *
+ * Tracking this is more expensive,
+ * should only be used in conjuction with things that have to progress client side, such as
+ * animate() or sound()
+ */
+#define TIMER_CLIENT_TIME (1<<2)
+
+///Timer can be stopped using deltimer()
+#define TIMER_STOPPABLE (1<<3)
+
+///prevents distinguishing identical timers with the wait variable
+///
+///To be used with TIMER_UNIQUE
+#define TIMER_NO_HASH_WAIT (1<<4)
+
+///Loops the timer repeatedly until qdeleted
+///
+///In most cases you want a subsystem instead, so don't use this unless you have a good reason
+#define TIMER_LOOP (1<<5)
+
+///Delete the timer on parent datum Destroy() and when deltimer'd
+#define TIMER_DELETE_ME (1<<6)
+
+///Empty ID define
 #define TIMER_ID_NULL -1
 
 #define INITIALIZATION_INSSATOMS 0	//New should not call Initialize
@@ -26,16 +50,16 @@
 #define INITIALIZE_HINT_NORMAL   0  //Nothing happens
 #define INITIALIZE_HINT_LATELOAD 1  //Call LateInitialize
 #define INITIALIZE_HINT_QDEL     2  //Call qdel on the atom
-
+//CHOMPEdit Begin
 //type and all subtypes should always call Initialize in New()
 #define INITIALIZE_IMMEDIATE(X) ##X/New(loc, ...){\
 	..();\
-	if(!initialized) {\
+	if(!(flags & ATOM_INITIALIZED)) {\
 		args[1] = TRUE;\
 		SSatoms.InitAtom(src, args);\
 	}\
 }
-
+//CHOMPEdit End
 // SS runlevels
 
 #define RUNLEVEL_INIT 0			// "Initialize Only" - Used for subsystems that should never be fired (Should also have SS_NO_FIRE set)
@@ -72,6 +96,8 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
+#define INIT_ORDER_TITLE			99	//CHOMPEdit
+#define INIT_ORDER_SERVER_MAINT		93 //CHOMPEdit
 #define INIT_ORDER_WEBHOOKS			50
 #define INIT_ORDER_DBCORE			41	//CHOMPEdit
 #define INIT_ORDER_SQLITE			40
@@ -110,6 +136,7 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define INIT_ORDER_SKYBOX			-30 //Visual only, irrelevant to gameplay, but needs to be late enough to have overmap populated fully
 #define INIT_ORDER_TICKER			-50
 #define INIT_ORDER_MAPRENAME		-60 //Initiating after Ticker to ensure everything is loaded and everything we rely on us working
+#define INIT_ORDER_STATPANELS		-98 //CHOMPEdit
 #define INIT_ORDER_CHAT				-100 //Should be last to ensure chat remains smooth during init.
 
 
@@ -126,8 +153,10 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_VOTE			8
 #define FIRE_PRIORITY_INSTRUMENTS	9
 #define FIRE_PRIORITY_PING			10
+#define FIRE_PRIORITY_SERVER_MAINT	10 //CHOMPEdit
 #define FIRE_PRIORITY_AI			10
 #define FIRE_PRIORITY_GARBAGE		15
+#define FIRE_PRIORITY_ASSETS 		20
 #define FIRE_PRIORITY_ALARM			20
 #define FIRE_PRIORITY_CHARSETUP     25
 #define FIRE_PRIORITY_AIRFLOW		30
@@ -140,6 +169,23 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_MACHINES		100
 #define FIRE_PRIORITY_TGUI			110
 #define FIRE_PRIORITY_PROJECTILES	150
+#define FIRE_PRIORITY_STATPANEL		390 //CHOMPEdit
 #define FIRE_PRIORITY_CHAT			400
 #define FIRE_PRIORITY_OVERLAYS		500
+#define FIRE_PRIORITY_TIMER			700
+#define FIRE_PRIORITY_SPEECH_CONTROLLER 900 // CHOMPEdit
+#define FIRE_PRIORITY_DELAYED_VERBS 950 // CHOMPEdit
 #define FIRE_PRIORITY_INPUT			1000 // This must always always be the max highest priority. Player input must never be lost.
+
+/**
+	Create a new timer and add it to the queue.
+	* Arguments:
+	* * callback the callback to call on timer finish
+	* * wait deciseconds to run the timer for
+	* * flags flags for this timer, see: code\__DEFINES\subsystems.dm
+	* * timer_subsystem the subsystem to insert this timer into
+*/
+#define addtimer(args...) _addtimer(args, file = __FILE__, line = __LINE__)
+
+/// The timer key used to know how long subsystem initialization takes // CHOMPEdit
+#define SS_INIT_TIMER_KEY "ss_init" // CHOMPEdit

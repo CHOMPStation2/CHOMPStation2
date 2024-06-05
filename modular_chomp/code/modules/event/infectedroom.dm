@@ -8,7 +8,13 @@
 		/area/shuttle,
 		/area/crew_quarters,
 		/area/holodeck,
-		/area/engineering/engine_room)
+		/area/construction,
+		/area/engineering/engine_room,
+		/area/engineering/engine_monitoring,
+		/area/engineering/gravgen,
+		/area/maintenance,
+		/area/medical,
+		/area/rnd/test_area)
 
 	var/commondisease = list(
 		"Friday Fever" = list(
@@ -42,7 +48,7 @@
 	)
 
 /datum/event/infectedroom/setup()
-	announceWhen = rand(0, 3000)
+	announceWhen = rand(0, 1500)
 	endWhen = announceWhen + 1
 	var/list/area/affected_area = get_station_areas(excluded)
 	var/chosenvirus = pick(commondisease)
@@ -52,16 +58,16 @@
 			virus.makerandom(rand(2,3))
 		else
 			virus.makedisease(commondisease[chosenvirus], rand(2,3), chosenvirus)
-		infected_tiles = rand(4, 8)
+		infected_tiles = rand(7, 10)
 	else if(severity == EVENT_LEVEL_MODERATE)
 		if(prob(50))
 			virus.makerandom(2)
 		else
 			virus.makedisease(commondisease[chosenvirus], 2, chosenvirus)
-		infected_tiles = rand(3, 6)
+		infected_tiles = rand(5, 8)
 	else
 		virus.makerandom(1)
-		infected_tiles = rand(2, 4)
+		infected_tiles = rand(3, 6)
 
 	for(var/i in 1 to 10)
 		var/area/A = pick(affected_area)
@@ -71,7 +77,7 @@
 
 		var/list/turfs = list()
 		for(var/turf/simulated/floor/F in A)
-			if(turf_clear(F))
+			if(!F.check_density())
 				turfs += F
 		if(turfs.len == 0)
 			log_debug("infectedroom event: Rejected [A] because it has no clear turfs.")
@@ -85,15 +91,31 @@
 		return
 	else
 		log_debug("infectedroom event: [target_area] was chosen. Infecting...")
-		log_admin("Infected room event started; Virus: [english_list(virus.name())]")
+		log_admin("Infected room event started; Virus: [virus.name()]")
 		message_admins("Infected room event started; Virus: <a href='?src=\ref[virus];[HrefToken()];info=1'>[virus.name()]</a>")
 
 /datum/event/infectedroom/announce()
-	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [location_name()]. \
-	All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
+	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [location_name()]. All personnel must contain the outbreak.", "Infectious Contaminant in [target_area.name]", new_sound = 'sound/AI/outbreak7.ogg')
 
 /datum/event/infectedroom/start()
-	var/obj/effect/decal/cleanable/mucus/mapped/M
+	var/decal
+
 	for(var/i in 1 to infected_tiles)
-		M = new(pick_n_take(target_turfs))
-		M.virus2[1] = virus.getcopy()
+		decal = rand(1, 5)
+		if(decal == 1)
+			var/obj/effect/decal/cleanable/blood/C
+			C = new(pick_n_take(target_turfs))
+			C.basecolor = get_random_colour(rand(0, 1))
+			C.update_icon()
+			C.virus2 |= new /datum/disease2/disease
+			C.virus2[1] = virus.getcopy()
+		else if(decal == 2)
+			var/obj/effect/decal/cleanable/vomit/V
+			V = new(pick_n_take(target_turfs))
+			V.virus2 |= new /datum/disease2/disease
+			V.virus2[1] = virus.getcopy()
+		else
+			var/obj/effect/decal/cleanable/mucus/M
+			M = new(pick_n_take(target_turfs))
+			M.virus2 |= new /datum/disease2/disease
+			M.virus2[1] = virus.getcopy()

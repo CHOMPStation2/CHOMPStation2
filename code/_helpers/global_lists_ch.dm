@@ -36,6 +36,7 @@ var/global/list/item_digestion_blacklist = list(
 		/obj/item/device/perfect_tele_beacon,
 		/obj/item/organ/internal/brain/slime,
 		/obj/item/device/mmi/digital/posibrain,
+		/obj/item/device/mmi/digital/robot,
 		/obj/item/weapon/rig/protean)
 
 // Options for transforming into a different mob in virtual reality.
@@ -62,7 +63,11 @@ var/global/list/vr_mob_tf_options = list(
 	"Tech golem" = /mob/living/simple_mob/mechanical/technomancer_golem,
 	"Metroid" = /mob/living/simple_mob/metroid/juvenile/baby,
 	"Otie" = /mob/living/simple_mob/vore/otie/cotie/chubby,
-	"Shadekin" = /mob/living/simple_mob/shadekin,
+	"Red-eyed Shadekin" = /mob/living/simple_mob/shadekin/red,
+	"Blue-eyed Shadekin" = /mob/living/simple_mob/shadekin/blue,
+	"Purple-eyed Shadekin" = /mob/living/simple_mob/shadekin/purple,
+	"Green-eyed Shadekin" = /mob/living/simple_mob/shadekin/green,
+	"Yellow-eyed Shadekin" = /mob/living/simple_mob/shadekin/yellow,
 	"Slime" = /mob/living/simple_mob/slime/xenobio/metal,
 	"Corrupt hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 	"Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw/den,

@@ -18,7 +18,15 @@
 		'sound/effects/footstep/plating2.ogg',
 		'sound/effects/footstep/plating3.ogg',
 		'sound/effects/footstep/plating4.ogg',
-		'sound/effects/footstep/plating5.ogg'))
+		'sound/effects/footstep/plating5.ogg'),
+		SPECIES_TESHARI = list(
+		'sound/effects/footstep/BudgieStep1.ogg',
+		'sound/effects/footstep/BudgieStep2.ogg',
+		'sound/effects/footstep/BudgieStep3.ogg',
+		'sound/effects/footstep/BudgieStep4.ogg',
+		'sound/effects/footstep/BudgieStep5.ogg',
+		'sound/effects/footstep/BudgieStep6.ogg',
+		)) // CHOMPedit: tesh steps
 
 	var/list/old_decals = null
 
@@ -88,7 +96,7 @@
 	if(!is_plating()) // Flooring -> Plating
 		swap_decals()
 		if(flooring.build_type && place_product)
-			new flooring.build_type(src)
+			new flooring.build_type(src, flooring.build_cost) //VOREstation Edit: conservation of mass
 		var/newtype = flooring.get_plating_type()
 		if(newtype) // Has a custom plating type to become
 			set_flooring(get_flooring_data(newtype))

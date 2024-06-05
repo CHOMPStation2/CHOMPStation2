@@ -22,12 +22,15 @@ SUBSYSTEM_DEF(plants)
 	var/list/processing = list()
 	var/list/currentrun = list()
 
-/datum/controller/subsystem/plants/stat_entry()
-	..("P:[processing.len]|S:[seeds.len]")
-
-/datum/controller/subsystem/plants/Initialize(timeofday)
-	setup()
+//CHOMPEdit Begin
+/datum/controller/subsystem/plants/stat_entry(msg)
+	msg = "P:[processing.len]|S:[seeds.len]"
 	return ..()
+
+/datum/controller/subsystem/plants/Initialize()
+	setup()
+	return SS_INIT_SUCCESS
+//CHOMPEdit End
 
 // Predefined/roundstart varieties use a string key to make it
 // easier to grab the new variety when mutating. Post-roundstart
@@ -126,7 +129,7 @@ SUBSYSTEM_DEF(plants)
 
 	// Caching
 	var/list/currentrun = src.currentrun
-	
+
 	while(currentrun.len)
 		var/obj/effect/plant/P = currentrun[currentrun.len]
 		--currentrun.len
@@ -138,7 +141,8 @@ SUBSYSTEM_DEF(plants)
 			return
 
 /datum/controller/subsystem/plants/proc/add_plant(var/obj/effect/plant/plant)
-	processing |= plant
+	if(!QDELETED(plant)) //CHOMPEdit GC
+		processing |= plant //CHOMPEdit GC
 
 /datum/controller/subsystem/plants/proc/remove_plant(var/obj/effect/plant/plant)
 	processing -= plant
@@ -146,7 +150,7 @@ SUBSYSTEM_DEF(plants)
 
 // Debug for testing seed genes.
 /client/proc/show_plant_genes()
-	set category = "Debug"
+	set category = "Debug.Investigate" //CHOMPEdit
 	set name = "Show Plant Genes"
 	set desc = "Prints the round's plant gene masks."
 

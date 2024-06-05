@@ -84,14 +84,16 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 	say_list_type = /datum/say_list/sect_drone
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 /mob/living/simple_mob/vore/sect_drone/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/vore/sect_drone/proc/set_abdomen_color
+	add_verb(src,/mob/living/simple_mob/vore/sect_drone/proc/set_abdomen_color) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/sect_drone/proc/set_abdomen_color()
 	set name = "Set Glow Color"
 	set desc = "Customize your eyes and abdomen glow color."
-	set category = "Abilities"
+	set category = "Abilities.Sect Drone" //CHOMPEdit
 
 	var/new_color = input(src, "Please select color.", "Glow Color", custom_eye_color) as color|null
 	if(new_color)

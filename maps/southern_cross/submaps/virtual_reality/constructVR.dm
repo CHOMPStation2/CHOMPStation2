@@ -146,6 +146,62 @@
 	name = "VR Dungeon"
 	icon_state = "darkred"
 
+/area/vr/powered/mall
+	name = "VR Mall"
+	icon_state = "yellow"
+
+/area/vr/powered/mall/vw
+	name = "VR Vibe"
+	icon_state = "pink"
+	ambience = list('sound/ambience/vaporwave.ogg')
+
+/area/vr/powered/mall/secondlife
+	name = "VR Thirdlife Bar"
+	icon_state = "pink"
+	ambience = list(AMBIENCE_GENERIC)
+
+/area/vr/powered/mall/dorms
+	name = "VR Mall Dorms"
+	icon_state = "Sleep"
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	flags = RAD_SHIELDED
+	block_tracking = TRUE
+
+/area/vr/powered/mall/dorms/dorms1
+
+/area/vr/powered/mall/dorms/dorms2
+
+/area/vr/powered/mall/dorms/dorms3
+
+/area/vr/powered/mall/dorms/dorms4
+
+/area/vr/powered/mall/dorms/dorms5
+
+/area/vr/powered/mall/dorms/dorms6
+
+/area/vr/powered/mall/dorms/secondlife
+	name = "VR Third-Life Dorms"
+
+/area/vr/powered/mall/dorms/secondlife2
+
+/area/vr/powered/mall/dorms/secondlife3
+
+/area/vr/powered/mall/dorms/secondlife4
+
+/area/vr/powered/mall/dorms/secondlife5
+
+
+/area/vr/outdoors/powered/mall
+	name = "VR Mall Outdoors"
+	icon_state = "bluenew"
+
+/area/vr/powered/mall/backrooms
+	name = "VR ???"
+	icon_state = "darkred"
+	forced_ambience = list('sound/ambience/fluorescentlight.ogg')
+
 /area/vr/powered/dungeon/indoors
 	name = "VR Sewers"
 	icon_state = "red"
@@ -169,6 +225,7 @@
 // -- Objects -- //
 /obj/effect/fake_sun/always_day
 	name = "fake sun"
+	advanced_lighting = TRUE
 	desc = "Deletes itself, but first updates all the lighting on outdoor turfs to cool colors."
 	possible_light_setups = list(
 
@@ -189,3 +246,7 @@
 			"color" = "#F07AD8"
 		)
 	)
+
+// VR EXCLUSIVE ITEMS
+/obj/item/weapon/reagent_containers/glass/beaker/mayo
+	prefill = list("mayo" = 30) //;)

@@ -51,7 +51,7 @@
 
 	pref.lastchangelog	= sanitize_text(pref.lastchangelog, initial(pref.lastchangelog))
 	pref.lastnews		= sanitize_text(pref.lastnews, initial(pref.lastnews))
-	pref.default_slot	= sanitize_integer(pref.default_slot, 1, config.character_slots, initial(pref.default_slot))
+	pref.default_slot	= sanitize_integer(pref.default_slot, 1, CONFIG_GET(number/character_slots), initial(pref.default_slot)) // CHOMPEdit
 
 /datum/category_item/player_setup_item/player_global/settings/content(var/mob/user)
 	. = list()
@@ -85,13 +85,13 @@
 
 /**
  * This can take either a single preference datum or a list of preferences, and will return true if *all* preferences in the arguments are enabled.
- */ 
+ */
 /client/proc/is_preference_enabled(var/preference)
 	if(!islist(preference))
 		preference = list(preference)
 	for(var/p in preference)
 		var/datum/client_preference/cp = get_client_preference(p)
-		if(!prefs || !cp || !(cp.key in prefs.preferences_enabled))
+		if(!prefs || !cp || !istype(cp, /datum/client_preference) || !(cp.key in prefs.preferences_enabled))
 			return FALSE
 	return TRUE
 

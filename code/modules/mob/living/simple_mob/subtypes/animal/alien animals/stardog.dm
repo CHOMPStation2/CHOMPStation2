@@ -69,8 +69,8 @@
 
 /mob/living/simple_mob/vore/overmap/stardog/Login()
 	. = ..()
-	verbs -= /mob/living/simple_mob/proc/set_name
-	verbs -= /mob/living/simple_mob/proc/set_desc
+	remove_verb(src,/mob/living/simple_mob/proc/set_name) //CHOMPEdit TGPanel
+	remove_verb(src,/mob/living/simple_mob/proc/set_desc) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/overmap/stardog/attack_hand(mob/living/user)
 	if(!(user.pickup_pref && user.pickup_active))
@@ -187,14 +187,14 @@
 /mob/living/simple_mob/vore/overmap/stardog/verb/eject()
 	set name = "Eject"
 	set desc = "Stop controlling the dog and return to your own body."
-	set category = "Abilities"
+	set category = "Abilities.Stardog" //CHOMPEdit
 
 	control_node.eject()
 
 /mob/living/simple_mob/vore/overmap/stardog/verb/eat_space_weather()
 	set name = "Eat Space Weather"
 	set desc = "Eat carp or rocks!"
-	set category = "Abilities"
+	set category = "Abilities.Stardog" //CHOMPEdit
 
 	var/obj/effect/overmap/event/E
 	var/nut = 0
@@ -297,7 +297,7 @@
 /mob/living/simple_mob/vore/overmap/stardog/verb/transition()	//Don't ask how it works. I don't know. I didn't think about it. I just thought it would be cool.
 	set name = "Transition"
 	set desc = "Attempt to go to the location you have arrived at, or return to space!"
-	set category = "Abilities"
+	set category = "Abilities.Stardog" //CHOMPEdit
 	if(nutrition <= 500)
 		to_chat(src, "<span class='warning'>You're too hungry...</span>")
 		return
@@ -377,7 +377,7 @@
 	edge_blending_priority = 4
 	initial_flooring = /decl/flooring/fur
 	can_dig = FALSE
-	turf_layers = list()
+	//turf_layers = list() CHOMP Removal
 	var/tree_chance = 25
 	var/tree_color = null
 	var/tree_type = /obj/structure/flora/tree/fur
@@ -451,7 +451,7 @@
 /turf/simulated/floor/outdoors/fur/verb/pet()
 	set name = "Pet Fur"
 	set desc = "Pet the fur!"
-	set category = "IC"
+	set category = "IC.Stardog" //CHOMPEdit
 	set src in oview(1)
 
 	usr.visible_message("<span class = 'notice'>\The [usr] pets \the [src].</span>", "<span class = 'notice'>You pet \the [src].</span>", runemessage = "pet pat...")
@@ -466,7 +466,7 @@
 /turf/simulated/floor/outdoors/fur/verb/emote_beyond(message as message)	//Now even the stars will know your sin.
 	set name = "Emote Beyond"
 	set desc = "Emote to those beyond the fur!"
-	set category = "IC"
+	set category = "IC.Chat" //CHOMPEdit
 	set src in oview(1)
 
 	if(!isliving(usr))
@@ -1139,7 +1139,7 @@
 /obj/machinery/computer/ship/navigation/verb/emote_beyond(message as message)	//I could have put this into any other file but right here will do
 	set name = "Emote Beyond"
 	set desc = "Emote to those beyond the ship!"
-	set category = "IC"
+	set category = "IC.Chat" //CHOMPEdit
 	set src in oview(7)
 
 	if(!isliving(usr))

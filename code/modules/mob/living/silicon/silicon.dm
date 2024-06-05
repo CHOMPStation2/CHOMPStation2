@@ -33,7 +33,7 @@
 	silicon_mob_list |= src
 	..()
 	add_language(LANGUAGE_GALCOM)
-	set_default_language(GLOB.all_languages[LANGUAGE_GALCOM])
+	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM]) //CHOMPEdit
 	init_id()
 	init_subsystems()
 
@@ -128,32 +128,36 @@
 
 
 // this function shows the health of the AI in the Status panel
+//ChompEDIT START - TGPanel
 /mob/living/silicon/proc/show_system_integrity()
+	. = list()
 	if(!src.stat)
-		stat(null, text("System integrity: [round((health/getMaxHealth())*100)]%"))
+		. += "System integrity: [round((health/getMaxHealth())*100)]%"
 	else
-		stat(null, text("Systems nonfunctional"))
+		. += "Systems nonfunctional"
 
 
 // This is a pure virtual function, it should be overwritten by all subclasses
 /mob/living/silicon/proc/show_malf_ai()
-	return 0
+	. = list()
 
 // this function displays the shuttles ETA in the status panel if the shuttle has been called
 /mob/living/silicon/proc/show_emergency_shuttle_eta()
+	. = list()
 	if(emergency_shuttle)
 		var/eta_status = emergency_shuttle.get_status_panel_eta()
 		if(eta_status)
-			stat(null, eta_status)
+			. += "[eta_status]"
 
 
 // This adds the basic clock, shuttle recall timer, and malf_ai info to all silicon lifeforms
-/mob/living/silicon/Stat()
-	if(statpanel("Status"))
-		show_emergency_shuttle_eta()
-		show_system_integrity()
-		show_malf_ai()
-	..()
+/mob/living/silicon/get_status_tab_items()
+	. = ..()
+	. += ""
+	. += show_emergency_shuttle_eta()
+	. += show_system_integrity()
+	. += show_malf_ai()
+//ChompEDIT END
 
 /* VOREStation Removal
 // this function displays the stations manifest in a separate window
@@ -257,14 +261,14 @@
 /mob/living/silicon/verb/pose()
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	pose =  strip_html_simple(tgui_input_text(usr, "This is [src]. It is...", "Pose", null))
 
 /mob/living/silicon/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	var/new_flavortext = strip_html_simple(tgui_input_text(usr, "Please enter your new flavour text.", "Flavour text", flavor_text, multiline = TRUE))
 	if(new_flavortext)

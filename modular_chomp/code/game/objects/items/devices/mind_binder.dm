@@ -11,47 +11,6 @@
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2, TECH_ILLEGAL = 1)
 	possessed_voice = list()
 	var/self_bind = FALSE
-	var/list/whitelisted = list(
-		/mob/living/carbon,
-		/mob/living/silicon,
-		/mob/living/simple_mob/animal/sif,
-		/mob/living/simple_mob/animal/passive,
-		/mob/living/simple_mob/slime,
-		/mob/living/bot,
-		/mob/living/simple_mob/vore/horse,
-		/mob/living/simple_mob/vore/wolf,
-		/mob/living/simple_mob/animal/giant_spider,
-		/mob/living/simple_mob/vore/pakkun,
-		/mob/living/simple_mob/vore/otie,
-		/mob/living/simple_mob/vore/scel,
-		/mob/living/simple_mob/vore/aggressive/corrupthound,
-		/mob/living/simple_mob/vore/rabbit,
-		/mob/living/simple_mob/vore/redpanda,
-		/mob/living/simple_mob/vore/fennec,
-		/mob/living/simple_mob/vore/fennix,
-		/mob/living/simple_mob/vore/bee,
-		/mob/living/simple_mob/animal/space/bear,
-		/mob/living/simple_mob/vore/aggressive/dino,
-		/mob/living/simple_mob/vore/aggressive/lizardman,
-		/mob/living/simple_mob/vore/aggressive/frog,
-		/mob/living/simple_mob/vore/aggressive/rat,
-		/mob/living/simple_mob/vore/jelly,
-		/mob/living/simple_mob/animal/hyena,
-		/mob/living/simple_mob/vore/solargrub,
-		/mob/living/simple_mob/vore/sect_queen,
-		/mob/living/simple_mob/vore/sect_drone,
-		/mob/living/simple_mob/vore/xeno_defanged,
-		/mob/living/simple_mob/vore/aggressive/panther,
-		/mob/living/simple_mob/vore/aggressive/giant_snake,
-		/mob/living/simple_mob/vore/aggressive/deathclaw,
-		/mob/living/simple_mob/vore/weretiger,
-		/mob/living/simple_mob/vore/bigdragon/friendly/maintpred,
-		/mob/living/simple_mob/vore/alienanimals/catslug,
-		/mob/living/simple_mob/vore/alienanimals/teppi,
-		/mob/living/simple_mob/vore/squirrel/big,
-		/mob/living/simple_mob/vore/raptor,
-		/mob/living/simple_mob/vore/bat,
-		) // Limit to safe types
 
 /obj/item/device/mindbinder/New()
 	..()
@@ -84,7 +43,7 @@
 		A = H.held_mob
 	if(istype(A, /mob/living))
 		var/mob/living/M = A
-		if(!is_type_in_list(A, whitelisted))
+		if(!M.allow_mind_transfer)
 			to_chat(usr,"<span class='danger'>The target's mind is too complex to be affected!</span>")
 			return
 		if(usr == M)
@@ -166,7 +125,7 @@
 			log_and_message_admins("attempted to bind themselves to \an [item] with a Mind Binder.")
 			usr.visible_message("<span class='warning'>[usr] presses [src] against [item]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind yourself into [item]!</span>")
 			if(do_after(usr,30 SECONDS,item))
-				item.inhabit_item(usr, null, null)
+				item.inhabit_item(usr, null, null, TRUE)
 				self_bind = !self_bind
 				update_icon()
 				to_chat(usr,"<span class='notice'>Your mind as been bound to [item].</span>")
@@ -177,7 +136,7 @@
 	if(do_after(usr,5 SECONDS,item))
 		if(possessed_voice.len == 1)
 			var/mob/living/voice/V = possessed_voice[1]
-			item.inhabit_item(V, null, V.tf_mob_holder)
+			item.inhabit_item(V, null, V.tf_mob_holder, TRUE)
 			V.Destroy()
 			possessed_voice = list()
 			to_chat(usr,"<span class='notice'>Mind bound to [item].</span>")

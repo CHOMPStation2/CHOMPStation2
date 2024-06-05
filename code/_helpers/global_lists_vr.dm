@@ -219,6 +219,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/trash,
 				/obj/item/weapon/digestion_remains,
 				/obj/item/weapon/bananapeel,
+				/obj/item/weapon/book,
 				/obj/item/weapon/bone,
 				/obj/item/weapon/broken_bottle,
 				/obj/item/weapon/card/emag_broken,
@@ -250,6 +251,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/storage/wallet,
 				/obj/item/weapon/storage/vore_egg,
 				/obj/item/weapon/bikehorn/tinytether,
+				/obj/item/weapon/entrepreneur,
 				/obj/item/capture_crystal,
 				/obj/item/weapon/material/kitchen, //chompstation addition start
 				/obj/item/weapon/storage/mre,
@@ -1019,7 +1021,7 @@ var/global/list/selectable_speech_bubbles = list(
 // If you want someone to
 var/global/list/BUILDABLE_AREA_TYPES = list(
 	/area/space,
-	/area/mine,
+	/area/mine
 //	/area/surface/outside, 	//SC //CHOMP Comment - Actually these are causing compilation error.
 //	/area/surface/cave,		//SC
 //	/area/tether/surfacebase/outside,	//CHOMP Edit Downstreams, uncomment these if you are using these maps
@@ -1034,7 +1036,7 @@ var/global/list/BUILDABLE_AREA_TYPES = list(
 
 var/static/list/blacklisted_areas = typecacheof(list(
 	/area/space,
-	/area/mine,
+	/area/mine
 //	/area/surface/outside,	//SC //CHOMP Comment - Actually these are causing compilation error.
 //	/area/surface/cave,		//SC
 	//TETHER STUFF BELOW THIS	//CHOMP Edit Downstreams, uncomment these if you are using these maps
@@ -1066,7 +1068,8 @@ var/global/list/SPECIALS = list(
 	/turf/unsimulated/wall/planetary,
 	/area/submap/virgo2,
 	/area/submap/event,
-	/area/submap/casino_event
+	/area/submap/casino_event,
+	/area/vr //CHOMPedit
 	// /area/derelict //commented out, all hail derelict-rebuilders!
 )
 
@@ -1088,5 +1091,6 @@ var/global/list/area_or_turf_fail_types = typecacheof(list(
 	/turf/unsimulated/wall/planetary,
 	/area/submap/virgo2,
 	/area/submap/event,
-	/area/submap/casino_event
+	/area/submap/casino_event,
+	/area/vr //CHOMPedit
 	))

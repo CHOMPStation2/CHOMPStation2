@@ -50,14 +50,13 @@
 			B.owner = tf_mob_holder
 			tf_mob_holder.vore_organs |= B
 			vore_organs -= B
-
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	//VOREStation Addition End
-
-	qdel(selected_image)
-	QDEL_NULL(vorePanel) //VOREStation Add
-	QDEL_LIST_NULL(vore_organs) //VOREStation Add
+	QDEL_NULL_LIST(hud_list)
+	QDEL_NULL(selected_image)
+	//QDEL_NULL(vorePanel) //VOREStation Add commented and moved to /mob
+	//QDEL_LIST_NULL(vore_organs) //VOREStation Add commented and moved to /mob
 	temp_language_sources = null //VOREStation Add
 	temp_languages = null //VOREStation Add
 
@@ -101,7 +100,7 @@
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set desc = "Press this button if you are in crit and wish to die. Use this sparingly (ending a scene, no medical, etc.)"
 	var/confirm1 = tgui_alert(usr, "Pressing this button will kill you instantenously! Are you sure you wish to proceed?", "Confirm wish to succumb", list("No","Yes"))
 	var/confirm2 = "No"
@@ -118,12 +117,29 @@
 		else
 			to_chat(src, span_blue("You are not injured enough to succumb to death!"))
 
+/mob/living/verb/toggle_afk()
+	set name = "Toggle AFK"
+	set category = "IC.Game" //CHOMPEdit
+	set desc = "Mark yourself as Away From Keyboard, or clear that status!"
+	if(away_from_keyboard)
+		remove_status_indicator("afk")
+		to_chat(src, "<span class='notice'>You are no longer marked as AFK.</span>")
+		away_from_keyboard = FALSE
+		manual_afk = FALSE
+	else
+		add_status_indicator("afk")
+		to_chat(src, "<span class='notice'>You are now marked as AFK.</span>")
+		away_from_keyboard = TRUE
+		manual_afk = TRUE
+
 /mob/living/proc/updatehealth()
 	if(status_flags & GODMODE)
 		health = 100
 		set_stat(CONSCIOUS)
 	else
 		// CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
+		if(health > getMaxHealth()) //Overhealth
+			health = getMaxHealth()
 		var/initialhealth = health // CHOMPEdit: Getting our health before this check
 		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss
 		if(!((ishuman(src)) || (issilicon(src))) && src.can_pain_emote) // Only run this if we're non-human/non-silicon (bots and mechanical simplemobs should be allowed to make pain sounds) & can emote pain, bc humans + carbons already do this. human_damage doesn't call parent, but sanity is better here.
@@ -710,12 +726,12 @@
 	return
 
 
-/mob/living/proc/Examine_OOC()
+/mob/living/verb/Examine_OOC() //ChompEDIT - proc --> verb
 	set name = "Examine Meta-Info (OOC)"
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	set src in view()
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
-	if(config.allow_Metadata)
+	if(CONFIG_GET(flag/allow_metadata)) // CHOMPEdit
 		if(ooc_notes)
 			ooc_notes_window(usr)
 //			to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[ooc_notes]</span>")
@@ -731,7 +747,7 @@
 
 /mob/living/verb/resist()
 	set name = "Resist"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(!incapacitated(INCAPACITATION_KNOCKOUT) && (last_resist_time + RESIST_COOLDOWN < world.time))
 		last_resist_time = world.time
@@ -791,7 +807,7 @@
 
 /mob/living/verb/lay_down()
 	set name = "Rest"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	resting = !resting
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
@@ -827,6 +843,15 @@
 
 /mob/living/proc/slip(var/slipped_on,stun_duration=8)
 	return 0
+
+// CHOMPAdd - Drop both things on hands
+/mob/living/proc/drop_both_hands()
+	if(l_hand)
+		unEquip(l_hand)
+	if(r_hand)
+		unEquip(r_hand)
+	return
+// CHOMPEnd
 
 /mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/target = null)
 	return !(W in internal_organs) && ..()
@@ -960,17 +985,43 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
+	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // CHOMPAdd - Making sure we're in good condition to crawl
+		canmove = 0
+		//drop_both_hands() CHOMPremove, purple stuns dont drop items, this makes space EVA less frustrating and slips/shoves are already coded to drop your stuff.
+	else
+		canmove = 1
+
 	if(lying)
 		density = FALSE
+	/* CHOMPEdit - Allow us to hold stuff while laying down.
 		if(l_hand)
 			unEquip(l_hand)
 		if(r_hand)
 			unEquip(r_hand)
 		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
+	*/
 		update_water() // Submerges the mob.
+		// CHOMPAdd Start - For crawling.
+		stop_pulling()
+
+		if(!passtable_crawl_checked)
+			passtable_crawl_checked = TRUE
+			if(pass_flags & PASSTABLE)
+				passtable_reset = FALSE
+			else
+				passtable_reset = TRUE
+				pass_flags |= PASSTABLE
+
+		// CHOMPEdit End
 	else
 		density = initial(density)
+	// CHOMPEdit Start - Rest passtable when crawling
+		if(passtable_reset)
+			passtable_reset = TRUE
+			pass_flags &= ~PASSTABLE
+		passtable_crawl_checked = FALSE
+	// CHOMPEdit End
 
 	for(var/obj/item/weapon/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
@@ -1144,7 +1195,7 @@
 				add_attack_logs(src,M,"Thrown via grab to [end_T.x],[end_T.y],[end_T.z]")
 			if(ishuman(M))
 				var/mob/living/carbon/human/N = M
-				if((N.health + N.halloss) < config.health_threshold_crit || N.stat == DEAD)
+				if((N.health + N.halloss) < CONFIG_GET(number/health_threshold_crit) || N.stat == DEAD) // CHOMPEdit
 					N.adjustBruteLoss(rand(10,30))
 			src.drop_from_inventory(G)
 
@@ -1321,7 +1372,7 @@
 /datum/component/character_setup/proc/character_setup_click(source, location, control, params, user)
 	var/mob/owner = user
 	if(owner.client?.prefs)
-		INVOKE_ASYNC(owner.client.prefs, /datum/preferences/proc/ShowChoices, owner)
+		INVOKE_ASYNC(owner.client.prefs, TYPE_PROC_REF(/datum/preferences, ShowChoices), owner)
 
 /**
  * Screen object for vore panel
@@ -1334,5 +1385,18 @@
 
 /mob/living/set_dir(var/new_dir)
 	. = ..()
-	if(size_multiplier != 1 || icon_scale_x != 1 && center_offset > 0)
+	if(size_multiplier != 1 || icon_scale_x != DEFAULT_ICON_SCALE_X && center_offset > 0)
 		update_transform(TRUE)
+
+/mob/living
+	var/toggled_sleeping = FALSE
+
+/mob/living/verb/mob_sleep()
+	set name = "Sleep"
+	set category = "IC.Game" //CHOMPEdit
+	if(!toggled_sleeping && alert(src, "Are you sure you wish to go to sleep? You will snooze until you use the Sleep verb again.", "Sleepy Time", "No", "Yes") == "No")
+		return
+	toggled_sleeping = !toggled_sleeping
+	to_chat(src, SPAN_NOTICE("You are [toggled_sleeping ? "now sleeping. Use the Sleep verb again to wake up" : "no longer sleeping"]."))
+	if(toggled_sleeping)
+		Sleeping(1)

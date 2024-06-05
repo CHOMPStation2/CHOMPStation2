@@ -1,3 +1,5 @@
+//CHOMPEDIT -- this file is no longer ticked. See overlays_ch.dm for the new overlays subsystem.
+
 SUBSYSTEM_DEF(overlays)
 	name = "Overlay"
 	flags = SS_TICKER
@@ -27,14 +29,14 @@ SUBSYSTEM_DEF(overlays)
 		atom.flags &= ~OVERLAY_QUEUED
 		CHECK_TICK
 
-
-/datum/controller/subsystem/overlays/Initialize(timeofday)
+//CHOMPEdit Begin
+/datum/controller/subsystem/overlays/Initialize()
 	fire(FALSE, TRUE)
-	..()
+	return SS_INIT_SUCCESS
 
-/datum/controller/subsystem/overlays/stat_entry()
-	..("Queued Atoms: [queue.len], Cache Size: [cache_size]")
-
+/datum/controller/subsystem/overlays/stat_entry(msg)
+	msg = "Queued Atoms: [queue.len], Cache Size: [cache_size]"
+	return ..()
 
 /datum/controller/subsystem/overlays/fire(resumed, no_mc_tick)
 	var/count = 1
@@ -77,23 +79,31 @@ SUBSYSTEM_DEF(overlays)
 	var/list/result = list()
 	var/icon/icon = subject.icon
 	for (var/atom/entry as anything in sources)
-		if (!entry)
-			continue
-		else if (istext(entry))
-			result += GetStateAppearance(icon, entry)
-		else if (isicon(entry))
-			result += GetIconAppearance(entry)
-		else
-			if (isloc(entry))
-				if (entry.flags & OVERLAY_QUEUED)
-					entry.ImmediateOverlayUpdate()
-			if (!ispath(entry))
-				result += entry.appearance
-			else
-				var/image/image = entry
-				result += image.appearance
+		AppearanceListEntry(entry, result, icon)
 	return result
 
+//Fixes runtime with overlays present in 515
+/datum/controller/subsystem/overlays/proc/AppearanceListEntry(var/atom/entry,var/list/result,var/icon/icon)
+	if (!entry)
+		return
+	else if(islist(entry))
+		var/list/entry_list = entry
+		for(var/entry_item in entry_list)
+			AppearanceListEntry(entry_item)
+	else if (istext(entry))
+		result += GetStateAppearance(icon, entry)
+	else if (isicon(entry))
+		result += GetIconAppearance(entry)
+	else
+		if (isloc(entry))
+			if (entry.flags & OVERLAY_QUEUED)
+				entry.ImmediateOverlayUpdate()
+		if (!ispath(entry))
+			if(entry.appearance)
+				result += entry.appearance
+		else
+			var/image/image = entry
+			result += image.appearance
 
 /// Enqueues the atom for an overlay update if not already queued
 /atom/proc/QueueOverlayUpdate()

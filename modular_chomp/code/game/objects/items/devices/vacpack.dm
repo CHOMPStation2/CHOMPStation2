@@ -1,11 +1,12 @@
 //Vac attachment
 /obj/item/device/vac_attachment
-	name = "Vac-Pack attachment"
+	name = "\improper Vac-Pack attachment"
 	desc = "Useful for slurping mess off the floors. Even things and stuff depending on settings. Can be connected to a trash bag or vore belly. On-mob sprites can be toggled via verb in Objects tab."
 	icon = 'modular_chomp/icons/mob/vacpack.dmi'
 	icon_override = 'modular_chomp/icons/mob/vacpack.dmi'
 	icon_state = "sucker_drop"
 	item_state = "sucker"
+	slot_flags = SLOT_BELT | SLOT_BACK
 	var/vac_power = 0
 	var/output_dest = null
 	var/list/vac_settings = list(
@@ -36,9 +37,12 @@
 			if(vac_owner && user != vac_owner)
 				to_chat(user, "<span class='warning'>Only designated owner can change this setting.</span>")
 				return
-			var/set_output = tgui_input_list(user, "Set your vacuum attachment's connection port", "Vac Settings", list("Vore Belly", "Borg Belly", "Trash Bag"))
-			if(set_output)
-				if(set_output == "Borg Belly")
+			var/vac_options = list("Vore Belly", "Trash Bag") //Dont show option for borg belly if the user isnt even a borg. QOL!
+			if(isrobot(user))
+				vac_options = list("Vore Belly", "Borg Belly", "Trash Bag")
+			var/set_output = tgui_input_list(user, "Set your vacuum attachment's connection port", "Vac Settings", vac_options)
+			switch(set_output)
+				if("Borg Belly")
 					if(isrobot(user))
 						var/mob/living/silicon/robot/R = user
 						var/obj/item/weapon/robot_module/M = R.module
@@ -47,7 +51,7 @@
 								output_dest = S
 								return
 					to_chat(user, "<span class='warning'>Borg belly not found.</span>")
-				if(set_output == "Trash Bag")
+				if("Trash Bag")
 					if(isrobot(user))
 						var/mob/living/silicon/robot/R = user
 						var/obj/item/weapon/robot_module/M = R.module
@@ -60,7 +64,7 @@
 							output_dest = T
 							return
 					to_chat(user, "<span class='warning'>Trash bag not found.</span>")
-				if(set_output == "Vore Belly")
+				if("Vore Belly")
 					if(user.vore_selected)
 						output_dest = user.vore_selected
 			return
@@ -172,6 +176,9 @@
 				if(is_type_in_list(F,item_vore_blacklist) || F.loc != target)
 					continue
 				if(istype(F,/obj/effect/decal/cleanable))
+					if(isbelly(output_dest))
+						var/obj/belly/B = output_dest
+						B.owner_adjust_nutrition(1)
 					qdel(F)
 					continue
 				if(istype(output_dest,/obj/item/weapon/storage/bag/trash))
@@ -195,6 +202,9 @@
 							F.forceMove(output_dest)
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
+				if(isbelly(output_dest) && T.dirt > 50)
+					var/obj/belly/B = output_dest
+					B.owner_adjust_nutrition((T.dirt - 50) / 10) //Max tile dirt is 101. so about 5 nutrition from a disgusting floor, I think that's okay.
 				T.dirt = 0
 				T.clean_blood()
 		return

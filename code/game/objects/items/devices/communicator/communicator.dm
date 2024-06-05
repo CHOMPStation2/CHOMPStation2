@@ -153,7 +153,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 		if (ismob(loc))
 			var/mob/M = loc
 			M.put_in_hands(id)
-			to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
+			to_chat(M, "<span class='notice'>You remove the ID from the [name].</span>") //ChompEDIT usr --> M
 			playsound(src, 'sound/machines/id_swipe.ogg', 100, 1)
 		else
 			id.loc = get_turf(src)
@@ -402,7 +402,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	//CHOMPADDITION END
 	for(var/mob/living/voice/voice in contents)
 		voice_mobs.Remove(voice)
-		to_chat(voice, "<span class='danger'>\icon[src][bicon(src)] Connection timed out with remote host.</span>")
+		to_chat(voice, "<span class='danger'>[icon2html(src, voice.client)] Connection timed out with remote host.</span>")
 		qdel(voice)
 	close_connection(reason = "Connection timed out")
 

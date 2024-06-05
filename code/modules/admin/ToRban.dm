@@ -45,18 +45,18 @@
 
 /client/proc/ToRban(task in list("update","toggle","show","remove","remove all","find"))
 	set name = "ToRban"
-	set category = "Server"
+	set category = "Server.Config" //CHOMPEdit
 	if(!holder)	return
 	switch(task)
 		if("update")
 			ToRban_update()
 		if("toggle")
 			if(config)
-				if(config.ToRban)
-					config.ToRban = 0
+				if(CONFIG_GET(flag/ToRban)) // CHOMPEdit
+					CONFIG_SET(flag/ToRban, FALSE) // CHOMPEdit
 					message_admins(span_red("ToR banning disabled."))
 				else
-					config.ToRban = 1
+					CONFIG_SET(flag/ToRban, TRUE) // CHOMPEdit
 					message_admins(span_green("ToR banning enabled."))
 		if("show")
 			var/savefile/F = new(TORFILE)

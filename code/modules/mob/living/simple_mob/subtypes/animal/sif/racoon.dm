@@ -78,7 +78,7 @@
 /mob/living/simple_mob/animal/sif/sakimm/verb/remove_hat()
 	set name = "Remove Hat"
 	set desc = "Remove the animal's hat. You monster."
-	set category = "Abilities"
+	set category = "Abilities.Sakimm" //CHOMPEdit
 	set src in view(1)
 
 	drop_hat(usr)
@@ -101,7 +101,7 @@
 /mob/living/simple_mob/animal/sif/sakimm/verb/give_hat()
 	set name = "Give Hat"
 	set desc = "Give the animal a hat. You hero."
-	set category = "Abilities"
+	set category = "Abilities.Sakimm" //CHOMPEdit
 	set src in view(1)
 
 	take_hat(usr)
@@ -159,8 +159,8 @@
 /mob/living/simple_mob/animal/sif/sakimm/Initialize()
 	. = ..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 	if(randomize_size)
 		adjust_scale(rand(8, 11) / 10)

@@ -192,7 +192,7 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 				if(28) //Space thanksgiving.
 					Holiday["Appreciation Day"] = "Originally an old holiday from Earth, Appreciation Day follows many of the \
 					traditions that its predecessor did, such as having a large feast (turkey often included), gathering with family, and being thankful \
-					for what one has in life." 
+					for what one has in life."
 			if(28 > DD > 20)
 				if(time2text(world.timeofday, "Day") == "Thursday")
 					Holiday["Thanksgiving"] = "Originally an old holiday from Earth, Thanksgiving follows many of the \
@@ -230,8 +230,8 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 
 //Allows GA and GM to set the Holiday variable
 /client/proc/Set_Holiday()
-	set name = ".Set Holiday"
-	set category = "Fun"
+	set name = "Set Holiday" // Fixed Typo?
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set desc = "Force-set the Holiday variable to make the game think it's a certain day."
 	if(!check_rights(R_SERVER))	return
 

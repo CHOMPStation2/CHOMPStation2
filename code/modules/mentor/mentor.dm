@@ -36,14 +36,14 @@ var/list/mentor_verbs_default = list(
 
 /client/proc/add_mentor_verbs()
 	if(mentorholder)
-		verbs += mentor_verbs_default
+		add_verb(src,mentor_verbs_default) //CHOMPEdit TGPanel
 
 /client/proc/remove_mentor_verbs()
 	if(mentorholder)
-		verbs -= mentor_verbs_default
+		remove_verb(src,mentor_verbs_default) //CHOMPEdit TGPanel
 
 /client/proc/make_mentor()
-	set category = "Special Verbs"
+	set category = "Admin.Secrets" //CHOMPEdit
 	set name = "Make Mentor"
 	if(!holder)
 		to_chat(src, "<span class='pm warning'>Error: Only administrators may use this command.</span>")
@@ -73,7 +73,7 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit End
 
 /client/proc/unmake_mentor()
-	set category = "Special Verbs"
+	set category = "Admin.Secrets" //CHOMPEdit
 	set name = "Unmake Mentor"
 	if(!holder)
 		to_chat(src, "<span class='pm warning'>Error: Only administrators may use this command.</span>")
@@ -97,7 +97,7 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit End
 
 /client/proc/cmd_mentor_say(msg as text)
-	set category = "Admin"
+	set category = "Admin.Chat" //CHOMPEdit
 	set name ="Mentorsay"
 
 	//check rights
@@ -139,7 +139,7 @@ var/list/mentor_verbs_default = list(
 	mentor_commands(href, href_list, usr)
 
 /client/proc/cmd_dementor()
-	set category = "Admin"
+	set category = "Admin.Misc" //CHOMPEdit
 	set name = "De-mentor"
 
 	if(tgui_alert(usr, "Confirm self-dementor for the round? You can't re-mentor yourself without someone promoting you.","Dementor",list("Yes","No")) == "Yes")
@@ -163,7 +163,7 @@ var/list/mentor_verbs_default = list(
 
 	if(T) // CHOMPedit - Ticket System
 		message_mentors("<span class='mentor_channel'>[src] has started replying to [C]'s mentor help.</span>")
-	var/msg = tgui_input_text(src,"Message:", "Private message to [C]")
+	var/msg = tgui_input_text(src,"Message:", "Private message to [C]", multiline = TRUE)
 	if (!msg)
 		message_mentors("<span class='mentor_channel'>[src] has cancelled their reply to [C]'s mentor help.</span>")
 		return
@@ -181,7 +181,7 @@ var/list/mentor_verbs_default = list(
 	set hidden = 1
 
 	var/mhelp = tgui_alert(usr, "Select the help you need.","Request for Help",list("Adminhelp","Mentorhelp")) == "Mentorhelp"
-	var/msg = tgui_input_text(usr, "Input your request for help.", "Request for Help")
+	var/msg = tgui_input_text(usr, "Input your request for help.", "Request for Help", multiline = TRUE)
 
 	if (mhelp)
 		mentorhelp(msg)
@@ -215,7 +215,7 @@ var/list/mentor_verbs_default = list(
 
 	//get message text, limit it's length.and clean/escape html
 	if(!msg)
-		msg = tgui_input_text(src,"Message:", "Mentor-PM to [whom]")
+		msg = tgui_input_text(src,"Message:", "Mentor-PM to [whom]", multiline = TRUE)
 
 		if(!msg)
 			return

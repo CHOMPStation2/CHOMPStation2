@@ -92,6 +92,7 @@
 	if(target != firer)	//If you shot yourself, you probably want to be TFed so don't bother with prefs.
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
+	M.drop_both_hands()	//CHOMPAdd - Drop items in hand before transformation
 	if(M.tf_mob_holder)
 		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit Start
 		var/mob/living/ourmob = M.tf_mob_holder
@@ -283,6 +284,7 @@
 	new_mob.text_warnings = text_warnings
 
 	//CHOMP stuff Start
+	new_mob.allow_mind_transfer = allow_mind_transfer
 	new_mob.phase_vore = phase_vore
 	new_mob.latejoin_vore = latejoin_vore
 	new_mob.latejoin_prey = latejoin_prey
@@ -300,6 +302,7 @@
 	new_mob.no_latejoin_prey_warning_time = no_latejoin_prey_warning_time
 	new_mob.no_latejoin_vore_warning_persists = no_latejoin_vore_warning_persists
 	new_mob.no_latejoin_prey_warning_persists = no_latejoin_prey_warning_persists
+	new_mob.belly_rub_target = belly_rub_target
 	//CHOMP stuff End
 
 /////SUBTYPES/////
@@ -424,7 +427,8 @@
 		"opossum" = /mob/living/simple_mob/animal/passive/opossum,
 		"horse" = /mob/living/simple_mob/vore/horse,
 		"goose" = /mob/living/simple_mob/animal/space/goose,
-		"sheep" = /mob/living/simple_mob/vore/sheep
+		"sheep" = /mob/living/simple_mob/vore/sheep,
+		"catslug" = /mob/living/simple_mob/vore/alienanimals/catslug
 		)
 
 /obj/item/weapon/gun/energy/mouseray/metamorphosis/advanced

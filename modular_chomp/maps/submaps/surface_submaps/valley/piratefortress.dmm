@@ -236,10 +236,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "kC" = (
-/obj/machinery/porta_turret/stationary/syndie{
-	faction = "pirate"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external,
 /area/submap/piratefortress)
 "lc" = (
 /obj/effect/floor_decal/corner/paleblue/border{
@@ -573,6 +570,12 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
+"EC" = (
+/obj/machinery/porta_turret/stationary/syndie{
+	faction = "pirate"
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/piratefortress)
 "Fo" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -636,7 +639,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/sif{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/piratefortress)
 "La" = (
 /turf/simulated/floor/outdoors/rocks,
@@ -656,6 +663,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
+/area/submap/piratefortress)
+"Mu" = (
+/turf/simulated/floor/plating,
 /area/submap/piratefortress)
 "MC" = (
 /obj/effect/floor_decal/corner/green/border{
@@ -888,7 +898,11 @@
 /area/submap/piratefortress)
 "ZQ" = (
 /obj/structure/railing,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/sif{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/piratefortress)
 
 (1,1,1) = {"
@@ -1397,7 +1411,7 @@ ms
 ms
 La
 La
-vT
+EC
 kC
 vT
 vT
@@ -1406,8 +1420,8 @@ vT
 vT
 vT
 vT
-kC
-vT
+Mu
+EC
 vT
 vT
 vT
@@ -1452,17 +1466,17 @@ oX
 PP
 Qw
 oX
-kC
+Mu
 vT
 vT
 vT
-kC
+vT
 vT
 vT
 La
 La
 kC
-La
+EC
 ms
 ms
 ms
@@ -1622,7 +1636,7 @@ ms
 ms
 La
 vT
-kC
+vT
 oX
 oX
 St
@@ -1645,7 +1659,7 @@ oX
 vT
 vT
 kC
-La
+EC
 La
 ms
 ms
@@ -1757,7 +1771,7 @@ ms
 ms
 ms
 La
-kC
+vT
 oX
 oX
 XJ
@@ -1825,7 +1839,7 @@ Uz
 QM
 Pl
 oX
-kC
+vT
 vT
 La
 ms
@@ -1892,7 +1906,7 @@ or
 ms
 La
 La
-vT
+kC
 oX
 uu
 uu
@@ -1915,7 +1929,7 @@ nl
 RI
 wq
 oX
-vT
+kC
 vT
 La
 ms
@@ -1937,7 +1951,7 @@ ms
 ms
 La
 DN
-vT
+EC
 oX
 uu
 uu
@@ -1960,7 +1974,7 @@ oX
 oX
 oX
 oX
-kC
+EC
 vT
 La
 ms
@@ -1982,7 +1996,7 @@ ms
 ms
 La
 vT
-vT
+kC
 oX
 uu
 uu
@@ -2005,7 +2019,7 @@ Up
 Xv
 mU
 oX
-vT
+kC
 vT
 La
 ms
@@ -2117,7 +2131,7 @@ ms
 ms
 La
 vT
-kC
+vT
 oX
 XJ
 VJ
@@ -2297,7 +2311,16 @@ ms
 ms
 ms
 La
-La
+EC
+kC
+vT
+vT
+vT
+vT
+vT
+vT
+kC
+EC
 kC
 vT
 vT
@@ -2306,21 +2329,12 @@ vT
 vT
 vT
 vT
-kC
 vT
 vT
 vT
 vT
 kC
-vT
-vT
-vT
-vT
-vT
-vT
-vT
-kC
-vT
+EC
 vT
 La
 La

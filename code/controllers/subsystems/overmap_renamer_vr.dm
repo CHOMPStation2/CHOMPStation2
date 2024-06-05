@@ -8,12 +8,9 @@ SUBSYSTEM_DEF(overmap_renamer)
 	runlevels = RUNLEVEL_INIT
 	flags = SS_NO_FIRE
 
-
-
-/datum/controller/subsystem/overmap_renamer/Initialize(timeofday)
+/datum/controller/subsystem/overmap_renamer/Initialize() // CHOMPEdit
 	update_names()
-
-	..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /*Shouldn't be a switch statement. We want ALL of the if(map_template.name in visitable_z_leves_name_list) to fire
 if we end up with multiple renamable lateload overmap objects.*/

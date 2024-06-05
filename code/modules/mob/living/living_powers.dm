@@ -8,7 +8,7 @@
 /mob/living/proc/hide()
 	set name = "Hide"
 	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(stat == DEAD || paralysis || weakened || stunned || restrained() || buckled || LAZYLEN(grabbed_by) || has_buckled_mobs()) //VORE EDIT: Check for has_buckled_mobs() (taur riding)
 		return
@@ -20,3 +20,11 @@
 		layer = HIDING_LAYER //Just above cables with their 2.44
 		plane = OBJ_PLANE
 		to_chat(src,"<span class='notice'>You are now hiding.</span>")
+
+//ChompEDIT START - re-assert our layer and plane
+/mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
+	. = ..()
+	if(status_flags & HIDING)
+		layer = HIDING_LAYER
+		plane = OBJ_PLANE
+//ChompEDIT END

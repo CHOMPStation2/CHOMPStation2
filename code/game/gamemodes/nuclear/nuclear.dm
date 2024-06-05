@@ -33,7 +33,7 @@ var/list/nuke_disks = list()
 	return 0
 
 /datum/game_mode/nuclear/declare_completion()
-	if(config.objectives_disabled)
+	if(CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
 		..()
 		return
 	var/disk_rescued = 1

@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   Dropdown,
+  Flex,
   LabeledList,
   Modal,
   NoticeBox,
@@ -20,17 +21,6 @@ const NIF_POWFAIL = 1;
 const NIF_TEMPFAIL = 2;
 const NIF_INSTALLING = 3;
 const NIF_PREINSTALL = 4;
-
-const validThemes = [
-  'abductor',
-  'cardtable',
-  'hackerman',
-  'malfunction',
-  'ntos',
-  'paper',
-  'retro',
-  'syndicate',
-];
 
 export const NIF = (props) => {
   const { act, config, data } = useBackend();
@@ -73,14 +63,15 @@ export const NIF = (props) => {
                   <Button.Confirm
                     icon="ban"
                     color="bad"
-                    content="Uninstall"
                     confirmIcon="ban"
                     confirmContent={'Uninstall ' + viewingModule.name + '?'}
                     onClick={() => {
                       act('uninstall', { module: viewingModule.ref });
                       setViewing(null);
                     }}
-                  />
+                  >
+                    Uninstall
+                  </Button.Confirm>
                   <Button
                     icon="window-close"
                     onClick={() => setViewing(null)}
@@ -90,14 +81,14 @@ export const NIF = (props) => {
             >
               <Box>{viewingModule.desc}</Box>
               <Box>
-                It consumes{' '}
+                It consumes
                 <Box color="good" inline>
                   {viewingModule.p_drain}
-                </Box>{' '}
-                energy units while installed, and{' '}
+                </Box>
+                energy units while installed, and
                 <Box color="average" inline>
                   {viewingModule.a_drain}
-                </Box>{' '}
+                </Box>
                 additionally while active.
               </Box>
               <Box color={viewingModule.illegal ? 'bad' : 'good'}>
@@ -105,7 +96,7 @@ export const NIF = (props) => {
                 package.
               </Box>
               <Box>
-                The MSRP of the package is{' '}
+                The MSRP of the package is
                 <Box color="good" inline>
                   {viewingModule.cost}₮.
                 </Box>
@@ -149,16 +140,12 @@ const getNifCondition = (nif_stat, nif_percent) => {
       } else {
         return 'Operating Normally';
       }
-      break;
     case NIF_POWFAIL:
       return 'Insufficient Energy!';
-      break;
     case NIF_TEMPFAIL:
       return 'System Failure!';
-      break;
     case NIF_INSTALLING:
       return 'Adapting To User';
-      break;
   }
   return 'Unknown';
 };
@@ -184,14 +171,7 @@ const getNutritionText = (nutrition, isSynthetic) => {
 const NIFMain = (props) => {
   const { act, config, data } = useBackend();
 
-  const {
-    nif_percent,
-    nif_stat,
-    last_notification,
-    nutrition,
-    isSynthetic,
-    modules,
-  } = data;
+  const { nif_percent, nif_stat, nutrition, isSynthetic, modules } = data;
 
   const { setViewing } = props;
 
@@ -259,9 +239,10 @@ const NIFMain = (props) => {
                 <Button
                   fluid
                   selected={module.active}
-                  content={module.stat_text}
                   onClick={() => act('toggle_module', { module: module.ref })}
-                />
+                >
+                  {module.stat_text}
+                </Button>
               )) || <Box>{module.stat_text}</Box>}
             </LabeledList.Item>
           ))}
@@ -274,18 +255,35 @@ const NIFMain = (props) => {
 const NIFSettings = (props) => {
   const { act, data } = useBackend();
 
-  const { theme } = data;
+  const { valid_themes, theme } = data;
 
   return (
     <LabeledList>
       <LabeledList.Item label="NIF Theme" verticalAlign="top">
-        <Dropdown
-          width="100%"
-          placeholder="Default"
-          selected={theme}
-          options={validThemes}
-          onSelected={(val) => act('setTheme', { theme: val })}
-        />
+        <Flex>
+          <Flex.Item grow={1}>
+            <Dropdown
+              grow={1}
+              selected={theme || 'default'}
+              options={valid_themes}
+              onSelected={(val) => act('setTheme', { theme: val })}
+            />
+          </Flex.Item>
+          {theme ? (
+            <Flex.Item>
+              <Button
+                width="22px"
+                icon="undo"
+                color="red"
+                onClick={() => {
+                  act('setTheme', { theme: null });
+                }}
+              />
+            </Flex.Item>
+          ) : (
+            ''
+          )}
+        </Flex>
       </LabeledList.Item>
     </LabeledList>
   );

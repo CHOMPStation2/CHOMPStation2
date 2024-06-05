@@ -31,33 +31,43 @@
 			else
 				command_announcement.Announce("\The [location_name()] is now in a meatyore shower.", "Meteor Alert")
 
+/datum/event/meteor_wave/meatyores/end()
+	if(has_skybox_image)
+		SSskybox.rebuild_skyboxes(affecting_z)
+	if(!victim)
+		switch(severity)
+			if(EVENT_LEVEL_MAJOR)
+				command_announcement.Announce("\The [location_name()] has cleared the meatyore storm.", "Meteor Alert")
+			else
+				command_announcement.Announce("\The [location_name()] has cleared the meatyore shower", "Meteor Alert")
+
 /datum/event/meteor_wave/meatyores/proc/get_meatyores()
 	switch(severity)
 		if(EVENT_LEVEL_MAJOR)
-			return meatyores_major
+			return GLOB.meatyores_major
 		if(EVENT_LEVEL_MODERATE)
-			return meatyores_moderate
+			return GLOB.meatyores_moderate
 		else
-			return meatyores_minor
+			return GLOB.meatyores_minor
 
-var/list/meatyores_minor = list(
+GLOBAL_LIST_INIT(meatyores_minor, list(
 	/obj/effect/meteor/medium/meatyore     = 80,
 	/obj/effect/meteor/dust/meatyore       = 30,
 	/obj/effect/meteor/irradiated/meatyore = 30,
 	/obj/effect/meteor/big/meatyore        = 30,
 	/obj/effect/meteor/flaming/meatyore    = 10,
-)
+))
 
-var/list/meatyores_moderate = list(
+GLOBAL_LIST_INIT(meatyores_moderate, list(
 	/obj/effect/meteor/medium/meatyore     = 80,
 	/obj/effect/meteor/big/meatyore        = 30,
 	/obj/effect/meteor/dust/meatyore       = 30,
 	/obj/effect/meteor/irradiated/meatyore = 30,
 	/obj/effect/meteor/flaming/meatyore    = 10,
 	/obj/effect/meteor/emp/meatyore        = 10,
-)
+))
 
-var/list/meatyores_major = list(
+GLOBAL_LIST_INIT(meatyores_major, list(
 	/obj/effect/meteor/medium/meatyore     = 80,
 	/obj/effect/meteor/big/meatyore        = 30,
 	/obj/effect/meteor/dust/meatyore       = 30,
@@ -65,4 +75,4 @@ var/list/meatyores_major = list(
 	/obj/effect/meteor/emp/meatyore        = 30,
 	/obj/effect/meteor/flaming/meatyore    = 10,
 	/obj/effect/meteor/tunguska/meatyore   = 1,
-)
+))

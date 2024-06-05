@@ -41,6 +41,7 @@ const initialState = {
     activeTab: SETTINGS_TABS[0].id,
   },
   showReconnectWarning: true,
+  prependTimestamps: false,
   visibleMessageLimit: 2500,
   persistentMessageLimit: 1000,
   saveInterval: 10,
@@ -57,6 +58,9 @@ const initialState = {
   lastId: null,
   initialized: false,
   storedTypes: {},
+  hideImportantInAdminTab: false,
+  interleave: false,
+  interleaveColor: '#909090',
 };
 
 export const settingsReducer = (state = initialState, action) => {

@@ -6,12 +6,18 @@
 	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
 	var/mute_entry = FALSE					//Toggleable vorgan entry logs.
 	var/parasitic = FALSE					//Digestion immunity and nutrition leeching variable
-	var/trash_catching = FALSE				//Toggle for trash throw vore.
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
+	var/churn_count = 0						//Counter for digested livings
+
+	var/passtable_reset		// For crawling
+	var/passtable_crawl_checked = FALSE
 
 	// CHOMP vore icons refactor (Now on living)
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
+
+/mob/living/proc/handle_special_unlocks()
+	return
 
 // Update fullness based on size & quantity of belly contents
 /mob/proc/update_fullness(var/returning = FALSE)
@@ -107,7 +113,7 @@
 
 /mob/living/proc/vore_check_reagents()
 	set name = "Check Belly Liquid (Vore)"
-	set category = "Abilities"
+	set category = "Abilities.Vore"
 	set desc = "Check the amount of liquid in your belly."
 
 	var/obj/belly/RTB = input("Choose which vore belly to check") as null|anything in src.vore_organs
@@ -118,7 +124,7 @@
 
 /mob/living/proc/vore_transfer_reagents()
 	set name = "Transfer Liquid (Vore)"
-	set category = "Abilities"
+	set category = "Abilities.Vore"
 	set desc = "Transfer liquid from an organ to another or stomach, or into another person or container."
 	set popup_menu = FALSE
 
@@ -282,7 +288,7 @@
 
 /mob/living/proc/vore_bellyrub(var/mob/living/T in view(1,src))
 	set name = "Give Bellyrubs"
-	set category = "Abilities"
+	set category = "Abilities.General"
 	set desc = "Provide bellyrubs to either yourself or another mob with a belly."
 
 	if(!T)
@@ -295,9 +301,9 @@
 		var/obj/belly/B = T.vore_selected
 		if(istype(B))
 			if(T == src)
-				custom_emote_vr(1, "rubs their [lowertext(B.name)].")
+				custom_emote_vr(1, "rubs their [belly_rub_target ? belly_rub_target : lowertext(B.name)].")
 			else
-				custom_emote_vr(1, "gives some rubs over [T]'s [lowertext(B.name)].")
+				custom_emote_vr(1, "gives some rubs over [T]'s [belly_rub_target ? belly_rub_target : lowertext(B.name)].")
 			B.quick_cycle()
 			return TRUE
 	to_chat(src, "<span class='vwarning'>There is no suitable belly for rubs.</span>")
@@ -305,35 +311,28 @@
 
 /mob/living/proc/mute_entry()
 	set name = "Mute Vorgan Entrance"
-	set category = "Preferences"
+	set category = "Preferences.Vore"
 	set desc = "Mute the chatlog messages when something enters a vore belly."
 	mute_entry = !mute_entry
 	to_chat(src, "<span class='vwarning'>Entrance logs [mute_entry ? "disabled" : "enabled"].</span>")
 
-/mob/living/proc/toggle_trash_catching()
-	set name = "Toggle Trash Catching"
-	set category = "Abilities"
-	set desc = "Toggle Trash Eater throw vore abilities."
-	trash_catching = !trash_catching
-	to_chat(src, "<span class='vwarning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>")
-
 /mob/living/proc/restrict_trasheater()
 	set name = "Restrict Trash Eater"
-	set category = "Abilities"
+	set category = "Abilities.Vore"
 	set desc = "Toggle Trash Eater restriction level."
 	adminbus_trash = !adminbus_trash
 	to_chat(src, "<span class='vwarning'>Trash Eater restriction level set to [adminbus_trash ? "everything not blacklisted" : "only whitelisted items"].</span>")
 
 /mob/living/proc/liquidbelly_visuals()
 	set name = "Toggle Liquidbelly Visuals"
-	set category = "Preferences"
+	set category = "Preferences.Vore"
 	set desc = "Toggle liquidbelly fullscreen visual effect."
 	liquidbelly_visuals = !liquidbelly_visuals
 	to_chat(src, "<span class='vwarning'>Liquidbelly overlays [liquidbelly_visuals ? "enabled" : "disabled"].</span>")
 
 /mob/living/proc/fix_vore_effects()
 	set name = "Fix Vore Effects"
-	set category = "OOC"
+	set category = "OOC.Debug"
 	set desc = "Fix certain vore effects lingering after you've exited a belly."
 
 	if(!isbelly(src.loc))
@@ -348,7 +347,7 @@
 
 /mob/living/verb/vore_check_nutrition()
 	set name = "Check Nutrition"
-	set category = "Abilities"
+	set category = "Abilities.Vore"
 	set desc = "Check your current nutrition level."
 	to_chat(src, "<span class='vnotice'>Current nutrition level: [nutrition].</span>")
 

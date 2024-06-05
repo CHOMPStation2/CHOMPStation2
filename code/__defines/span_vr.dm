@@ -52,6 +52,12 @@
 
 #define span_reflex_shoot(str) ("<span class='reflex_shoot'>" + str + "</span>")
 
+/* Vore messages */
+
+#define span_vdanger(str) ("<span class='vdanger'>" + str + "</span>")
+#define span_vwarning(str) ("<span class='vwarning'>" + str + "</span>")
+#define span_vnotice(str) ("<span class='vnotice'>" + str + "</span>")
+
 /* Languages */
 
 #define span_alien(str) ("<span class='alien'>" + str + "</span>")
@@ -93,6 +99,8 @@
 #define span_red(str) ("<span class='red'>" + str + "</span>")
 #define span_orange(str) ("<span class='orange'>" + str + "</span>")
 #define span_blue(str) ("<span class='blue'>" + str + "</span>")
+#define span_boldannounce(str) ("<span class='boldannounce'>" + str + "</span>") // CHOMPEdit - Boldannounce
+#define span_boldwarning(str) ("<span class='boldwarning'>" + str + "</span>") // CHOMPEdit - Boldwarning
 #define span_green(str) ("<span class='green'>" + str + "</span>")
 #define span_purple(str) ("<span class='purple'>" + str + "</span>")
 #define span_yellow(str) ("<span class='yellow'>" + str + "</span>")

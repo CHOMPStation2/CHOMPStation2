@@ -22,8 +22,20 @@
 
 /mob/new_player/New()
 	mob_list += src
-	verbs |= /mob/proc/insidePanel
-	initialized = TRUE // Explicitly don't use Initialize().  New players join super early and use New()
+	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
+	//CHOMPEdit Begin
+	if(length(GLOB.newplayer_start))
+		forceMove(pick(GLOB.newplayer_start))
+	else
+		forceMove(locate(1,1,1))
+	//CHOMPEdit End
+	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New() //CHOMPEdit
+
+
+/mob/new_player/Destroy()
+	if(panel)
+		QDEL_NULL(panel)
+	. = ..()
 
 /mob/new_player/verb/new_player_panel()
 	set src = usr
@@ -81,7 +93,7 @@
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br><i>No Changes</i></p>" //ChompEDIT - fixed height
 	*/
 
-	if(client.check_for_new_server_news())
+	if(client?.check_for_new_server_news())
 		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
 	else
 		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br><i>No Changes</i></p>" //ChompEDIT 'Game updates' --> 'Server news'
@@ -117,37 +129,39 @@
 	panel.set_content(output)
 	panel.open()
 	return
+//CHOMPEdit Begin
+/mob/new_player/get_status_tab_items()
+	. = ..()
+	. += ""
 
-/mob/new_player/Stat()
-	..()
+	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
 
-	if(statpanel("Lobby") && SSticker)
-		stat("Game Mode:", SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]")
+	if(SSvote.mode)
+		. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
 
-		if(SSvote.mode)
-			stat("Vote: [capitalize(SSvote.mode)]", "Time Left: [SSvote.time_remaining] s")
+	if(SSticker.current_state == GAME_STATE_INIT)
+		. += "Time To Start: Server Initializing"
 
-		if(SSticker.current_state == GAME_STATE_INIT)
-			stat("Time To Start:", "Server Initializing")
-
-		else if(SSticker.current_state == GAME_STATE_PREGAME)
-			stat("Time To Start:", "[round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (DELAYED)"]")
-			stat("Players: [totalPlayers]", "Players Ready: [totalPlayersReady]")
-			totalPlayers = 0
-			totalPlayersReady = 0
-			var/datum/job/refJob = null
-			for(var/mob/new_player/player in player_list)
-				refJob = player.client.prefs.get_highest_job()
-				if(player.client.prefs.obfuscate_key && player.client.prefs.obfuscate_job)
-					stat("Anonymous User", (player.ready)?("Ready!"):(null))
-				else if(player.client.prefs.obfuscate_key)
-					stat("Anonymous User", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
-				else if(player.client.prefs.obfuscate_job)
-					stat("[player.key]", (player.ready)?("Ready!"):(null))
-				else
-					stat("[player.key]", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
-				totalPlayers++
-				if(player.ready)totalPlayersReady++
+	else if(SSticker.current_state == GAME_STATE_PREGAME)
+		. += "Time To Start: [round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (DELAYED)"]"
+		. += "Players: [totalPlayers]"
+		. += "Players Ready: [totalPlayersReady]"
+		totalPlayers = 0
+		totalPlayersReady = 0
+		var/datum/job/refJob = null
+		for(var/mob/new_player/player in player_list)
+			refJob = player.client.prefs.get_highest_job()
+			if(player.client.prefs.obfuscate_key && player.client.prefs.obfuscate_job)
+				. += "Anonymous User [player.ready ? "Ready!" : null]"
+			else if(player.client.prefs.obfuscate_key)
+				. += "Anonymous User [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
+			else if(player.client.prefs.obfuscate_job)
+				. += "[player.key] [player.ready ? "Ready!" : null]"
+			else
+				. += "[player.key] [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
+			totalPlayers++
+			if(player.ready)totalPlayersReady++
+//CHOMPEdit End
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
@@ -172,11 +186,11 @@
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
-			var/mob/living/carbon/human/dummy/mannequin = new()
+			var/mob/living/carbon/human/dummy/mannequin = get_mannequin(client.ckey)
 			client.prefs.dress_preview_mob(mannequin)
 			var/mob/observer/dead/observer = new(mannequin)
 			observer.moveToNullspace() //Let's not stay in our doomed mannequin
-			qdel(mannequin)
+			//qdel(mannequin)
 
 			spawning = 1
 			if(client.media)
@@ -197,13 +211,14 @@
 				client.prefs.real_name = random_name(client.prefs.identifying_gender)
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
-			if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.
-				observer.verbs -= /mob/observer/dead/verb/toggle_antagHUD        // Poor guys, don't know what they are missing!
+			if(!client.holder && !CONFIG_GET(flag/antag_hud_allowed))           // For new ghosts we remove the verb from even showing up if it's not allowed. // CHOMPEdit
+				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit        // Poor guys, don't know what they are missing!
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
+			observer.client.init_verbs()
 			qdel(src)
 
-			return 1
+			return TRUE
 
 	if(href_list["late_join"])
 
@@ -240,7 +255,7 @@
 				return
 		*/ //Vorestation Removal End
 
-		if(!config.enter_allowed)
+		if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
 			to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 			return
 		else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)
@@ -457,7 +472,7 @@
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 		to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 		return 0
-	if(!config.enter_allowed)
+	if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 		return 0
 	if(!IsJobAvailable(rank))
@@ -605,6 +620,8 @@
 		if(gut)
 			character.forceMove(gut)
 
+	character.client.init_verbs() // init verbs for the late join
+
 	qdel(src) // Delete new_player mob
 
 /mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, var/zlevel)
@@ -713,6 +730,7 @@
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.name = real_name
+	client.init_verbs()
 	new_character.dna.ready_dna(new_character)
 	new_character.dna.b_type = client.prefs.b_type
 	new_character.sync_organ_dna()

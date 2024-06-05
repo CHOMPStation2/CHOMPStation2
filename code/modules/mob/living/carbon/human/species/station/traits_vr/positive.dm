@@ -7,7 +7,8 @@
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
-
+//	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJ, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
+//	custom_only = FALSE //Keeping these in comments in case we decide to open them up in future, so the species are already organised.
 
 /datum/trait/positive/hardy
 	name = "Hardy"
@@ -15,6 +16,8 @@
 	cost = 1
 	var_changes = list("item_slowdown_mod" = 0.5)
 	excludes = list(/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus,/datum/trait/positive/speed_fast)
+	custom_only = FALSE
+	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN) //Either not applicable or buffs are too strong
 
 /datum/trait/positive/hardy_plus
 	name = "Hardy, Major"
@@ -22,13 +25,16 @@
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
 	excludes = list(/datum/trait/positive/speed_fast,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy) // CHOMPEdit: Prevents Haste + Hardy being taken together.
-
+	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN) //Either not applicable or buffs are too strong
+	custom_only = FALSE
 
 /datum/trait/positive/endurance_high
 	name = "High Endurance"
 	desc = "Increases your maximum total hitpoints to 125. You require 250 damage in total to die, compared to 200 normally. You will still go into crit after losing 125 HP, compared to crit at 100 HP." // CHOMPEdit: Clarity for players' sake.
 	cost = 3 // CHOMPEdit
 	var_changes = list("total_health" = 125)
+	custom_only = FALSE
+	banned_species = list(SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_SHADEKIN_CREW) //Either not applicable or buffs are too strong
 
 /datum/trait/positive/endurance_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -52,13 +58,18 @@
 	desc = "Allows you to see a short distance in the dark and 10% more susceptible to flashes." //CHOMP Edit
 	cost = 1
 	var_changes = list("darksight" = 3)  //CHOMP Edit
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN, SPECIES_XENOHYBRID, SPECIES_VULPKANIN, SPECIES_XENO, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //These species already have strong darksight by default.
 
 /datum/trait/positive/darksight_plus
 	name = "Darksight, Major"
 	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
 	cost = 2
 	var_changes = list("darksight" = 6)  //CHOMP Edit
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN, SPECIES_XENOHYBRID, SPECIES_VULPKANIN, SPECIES_XENO, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //These species already have strong darksight by default.
 */
+
 /datum/trait/positive/melee_attack
 	name = "Special Attack: Sharp Melee" // Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
 	desc = "Provides sharp melee attacks that do slightly more damage."
@@ -82,6 +93,8 @@
 	desc = "Adds 10% resistance to brute damage sources." //CHOMP Edit
 	cost = 1 //CHOMP Edit
 	var_changes = list("brute_mod" = 0.9) //CHOMP Edit
+	custom_only = FALSE
+	banned_species = list(SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //Most of these are already this resistant or stronger, or it'd be way too much of a boost for tesh.
 
 /datum/trait/positive/brute_resist
 	name = "Brute Resist"
@@ -120,9 +133,9 @@
 
 /datum/trait/positive/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/flying_toggle
-	H.verbs |= /mob/living/proc/flying_vore_toggle
-	H.verbs |= /mob/living/proc/start_wings_hovering
+	add_verb(H,/mob/living/proc/flying_toggle) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/proc/flying_vore_toggle) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/proc/start_wings_hovering) //CHOMPEdit TGPanel
 
 /datum/trait/positive/soft_landing
 	name = "Soft Landing"
@@ -147,7 +160,7 @@
 
 /datum/trait/positive/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/lick_wounds
+	add_verb(H,/mob/living/carbon/human/proc/lick_wounds) //CHOMPEdit TGPanel
 
 /datum/trait/positive/traceur
 	name = "Traceur"
@@ -174,11 +187,11 @@
 
 /datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/check_silk_amount
-	H.verbs |= /mob/living/carbon/human/proc/toggle_silk_production
-	H.verbs |= /mob/living/carbon/human/proc/weave_structure
-	H.verbs |= /mob/living/carbon/human/proc/weave_item
-	H.verbs |= /mob/living/carbon/human/proc/set_silk_color
+	add_verb(H,/mob/living/carbon/human/proc/check_silk_amount) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/carbon/human/proc/toggle_silk_production) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/carbon/human/proc/weave_structure) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/carbon/human/proc/weave_item) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/carbon/human/proc/set_silk_color) //CHOMPEdit TGPanel
 
 /datum/trait/positive/aquatic
 	name = "Aquatic"
@@ -189,8 +202,8 @@
 
 /datum/trait/positive/aquatic/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/water_stealth
-	H.verbs |= /mob/living/carbon/human/proc/underwater_devour
+	add_verb(H,/mob/living/carbon/human/proc/water_stealth) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/carbon/human/proc/underwater_devour) //CHOMPEdit TGPanel
 
 /datum/trait/positive/cocoon_tf
 	name = "Cocoon Spinner"
@@ -199,7 +212,7 @@
 
 /datum/trait/positive/cocoon_tf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/enter_cocoon
+	add_verb(H,/mob/living/carbon/human/proc/enter_cocoon) //CHOMPEdit TGPanel
 
 /* //CHOMPedit: We already have our own version of this trait.
 /datum/trait/positive/linguist
@@ -229,6 +242,7 @@
 	var_changes = list("trauma_mod" = 0.85)
 	excludes = list(/datum/trait/negative/neural_hypersensitivity)
 	can_take = ORGANICS
+	custom_only = FALSE
 
 /datum/trait/positive/throw_resistance
 	name = "Firm Body"

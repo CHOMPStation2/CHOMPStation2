@@ -215,8 +215,10 @@
 		/obj/item/weapon/cell/device,
 		/obj/item/device/radio,
 		/obj/item/device/gps/explorer,
-		/obj/item/device/cataloguer/compact) //CHOMP edit
-	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked) //CHOMP Removed
+		/obj/item/device/cataloguer/compact, //CHOMP edit
+	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
+		/obj/item/clothing/gloves/watch/survival
+		)
 
 /obj/structure/closet/secure_closet/pilot/Initialize()
 	if(prob(50))

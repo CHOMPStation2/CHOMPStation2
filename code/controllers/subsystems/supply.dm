@@ -35,15 +35,16 @@ SUBSYSTEM_DEF(supply)
 		else
 			qdel(P)
 
-	. = ..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 // Supply shuttle ticker - handles supply point regeneration. Just add points over time.
 /datum/controller/subsystem/supply/fire()
 	points += points_per_process
-
-/datum/controller/subsystem/supply/stat_entry()
-	..("Points: [points]")
-
+//CHOMPEdit Begin
+/datum/controller/subsystem/supply/stat_entry(msg)
+	msg = "Points: [points]"
+	return ..()
+//CHOMPEdit End
 //To stop things being sent to CentCom which should not be sent to centcomm. Recursively checks for these types.
 /datum/controller/subsystem/supply/proc/forbidden_atoms_check(atom/A)
 	if(isliving(A))
@@ -58,6 +59,8 @@ SUBSYSTEM_DEF(supply)
 		return 1										//VOREStation Addition: Translocator beacons
 	if(istype(A,/obj/machinery/power/quantumpad)) //	//VOREStation Add: Quantum pads
 		return 1					//VOREStation Add: Quantum pads
+	if(istype(A,/obj/structure/extraction_point )) // CHOMPStation Add: Fulton beacons
+		return 1
 
 	for(var/atom/B in A.contents)
 		if(.(B))

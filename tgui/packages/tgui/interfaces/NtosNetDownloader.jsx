@@ -30,7 +30,7 @@ export const NtosNetDownloader = (props) => {
         {!!error && (
           <NoticeBox>
             <Box mb={1}>{error}</Box>
-            <Button content="Reset" onClick={() => act('PRG_reseterror')} />
+            <Button onClick={() => act('PRG_reseterror')}>Reset</Button>
           </NoticeBox>
         )}
         <Section>
@@ -86,7 +86,7 @@ const Program = (props) => {
         <Flex.Item color="label" nowrap>
           {program.size} GQ
         </Flex.Item>
-        <Flex.Item ml={2} width="94px" textAlign="center">
+        <Flex.Item ml={2} width="110px" textAlign="center">
           {(program.filename === downloadname && (
             <ProgressBar
               color="green"
@@ -94,7 +94,7 @@ const Program = (props) => {
               maxValue={downloadsize}
               value={downloadcompletion}
             >
-              {round((downloadcompletion / downloadsize) * 100, 1)}% (
+              {round((downloadcompletion / downloadsize) * 100, 1)}%&nbsp;(
               {downloadspeed}GQ/s)
             </ProgressBar>
           )) ||
@@ -114,14 +114,15 @@ const Program = (props) => {
               <Button
                 fluid
                 icon="download"
-                content="Download"
                 disabled={program.size > disk_free}
                 onClick={() =>
                   act('PRG_downloadfile', {
                     filename: program.filename,
                   })
                 }
-              />
+              >
+                Download
+              </Button>
             )}
         </Flex.Item>
       </Flex>

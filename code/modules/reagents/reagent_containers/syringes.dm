@@ -12,7 +12,8 @@
 	icon = 'icons/obj/syringe.dmi'
 	item_state = "syringe_0"
 	icon_state = "0"
-	center_of_mass = list("x" = 16,"y" = 14)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 14 //CHOMPEdit
 	matter = list(MAT_GLASS = 150)
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = null
@@ -268,7 +269,7 @@
 		var/obj/item/organ/external/affecting = H.get_organ(target_zone)
 
 		if (!affecting || affecting.is_stump())
-			to_chat(user, "<span class='danger'>They are missing that limb!</span>")
+			balloon_alert(user, "They are missing that limb!") // CHOMPEdit - Changed to balloon_alert
 			return
 
 		var/hit_area = affecting.name
@@ -286,13 +287,15 @@
 
 			return
 
-		user.visible_message("<span class='danger'>[user] stabs [target] in \the [hit_area] with [src.name]!</span>")
+		// user.visible_message("<span class='danger'>[user] stabs [target] in \the [hit_area] with [src.name]!</span>")
+		balloon_alert_visible("Stabs [target] in \the [hit_area] with [src.name]!") // CHOMPEdit - Changed to balloon alert
 
 		if(affecting.take_damage(3))
 			H.UpdateDamageIcon()
 
 	else
-		user.visible_message("<span class='danger'>[user] stabs [target] with [src.name]!</span>")
+		// user.visible_message("<span class='danger'>[user] stabs [target] with [src.name]!</span>")
+		balloon_alert_visible("Stabs [user] in \the [target] with [src.name]!") // CHOMPEdit - Changed to balloon alert
 		target.take_organ_damage(3)// 7 is the same as crowbar punch
 
 

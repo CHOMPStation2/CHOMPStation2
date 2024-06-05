@@ -82,7 +82,8 @@
 		/obj/item/weapon/storage/belt/janitor,
 		/obj/item/device/vac_attachment, //CHOMPAdd
 		/obj/item/weapon/holosign_creator, //CHOMPAdd
-		/obj/item/clothing/shoes/galoshes
+		/obj/item/clothing/shoes/galoshes,
+		/obj/item/clothing/glasses/hud/janitor
 		)
 
 /*

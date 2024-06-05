@@ -102,7 +102,7 @@
 				"timeoff_factor" = job.timeoff_factor,
 				"pto_department" = job.pto_type
 			)
-		if(config.time_off && config.pto_job_change)
+		if(CONFIG_GET(flag/time_off) && CONFIG_GET(flag/pto_job_change)) // CHOMPEdit
 			data["allow_change_job"] = TRUE
 			if(job && job.timeoff_factor < 0) // Currently are Off Duty, so gotta lookup what on-duty jobs are open
 				data["job_choices"] = getOpenOnDutyJobs(user, job.pto_type)
@@ -221,16 +221,18 @@
 /obj/machinery/computer/timeclock/proc/checkCardCooldown()
 	if(!card)
 		return FALSE
-	var/time_left = 10 MINUTES - (world.time - card.last_job_switch)
+	var/time_left = 1 MINUTE - (world.time - card.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
 	if(time_left > 0)
 		to_chat(usr, "You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch.")
 		return FALSE
 	return TRUE
 
 /obj/machinery/computer/timeclock/proc/checkFace()
+	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
 	if(!card)
 		to_chat(usr, "<span class='notice'>No ID is inserted.</span>")
 		return FALSE
+/* CHOMPedit start. Allows anyone to change people's IDs.
 	var/mob/living/carbon/human/H = usr
 	if(!(istype(H)))
 		to_chat(usr, "<span class='warning'>Invalid user detected. Access denied.</span>")
@@ -241,7 +243,10 @@
 	else if(H.get_face_name() == "Unknown" || !(H.real_name == card.registered_name))
 		to_chat(usr, "<span class='warning'>Facial recognition scan failed. Access denied.</span>")
 		return FALSE
+CHOMPedit end. */
 	else
+		message_admins("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal. [ADMIN_JMP(location)]") // CHOMPedit: Logging
+		log_game("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal.") // CHOMPedit: Logging
 		return TRUE
 
 /obj/item/weapon/card/id

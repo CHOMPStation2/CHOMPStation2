@@ -164,7 +164,7 @@
 			return PounceTarget(L, pouncechance)
 
 		// We're not attempting a pounce, if they're down or we can eat standing, do it as long as they're edible. Otherwise, hit normally.
-		if(will_eat(L) && (!L.canmove || vore_standing_too))
+		if(will_eat(L) && (L.lying || vore_standing_too)) //CHOMPEdit
 			return EatTarget(L)
 		else
 			return ..()
@@ -199,7 +199,7 @@
 		M.visible_message("<span class='danger'>\The [src] attempts to pounce \the [M] but misses!</span>!")
 		playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 
-	if(will_eat(M) && (!M.canmove || vore_standing_too)) //if they're edible then eat them too
+	if(will_eat(M) && (M.lying || vore_standing_too)) //if they're edible then eat them too //CHOMPEdit
 		return EatTarget(M)
 	else
 		return //just leave them
@@ -239,9 +239,9 @@
 		return
 
 	// Since they have bellies, add verbs to toggle settings on them.
-	verbs |= /mob/living/simple_mob/proc/toggle_digestion
-	verbs |= /mob/living/simple_mob/proc/toggle_fancygurgle
-	verbs |= /mob/living/proc/vertical_nom
+	add_verb(src,/mob/living/simple_mob/proc/toggle_digestion) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/toggle_fancygurgle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
 
 	//A much more detailed version of the default /living implementation
 	var/obj/belly/B = new /obj/belly(src)
@@ -391,7 +391,7 @@
 
 /mob/living/simple_mob/proc/animal_mount(var/mob/living/M in living_mobs(1))
 	set name = "Animal Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //CHOMPEdit
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -426,7 +426,7 @@
 
 /mob/living/simple_mob/proc/leap()
 	set name = "Pounce Target"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //CHOMPEdit
 	set desc = "Select a target to pounce at."
 
 	if(last_special > world.time)

@@ -12,6 +12,18 @@
 	var/nitrogen = 0
 	var/phoron = 0
 
+	//CHOMPEdit Begin
+	//* Movement / Pathfinding
+	/// How much the turf slows down movement, if any.
+	var/slowdown = 0
+	/// Pathfinding cost
+	var/path_weight = 1
+	/// danger flags to avoid
+	var/turf_path_danger = NONE
+	/// pathfinding id - used to avoid needing a big closed list to iterate through every cycle of jps
+	var/pathfinding_cycle
+	//CHOMPEdit End
+
 	//Properties for airtight tiles (/wall)
 	var/thermal_conductivity = 0.05
 	var/heat_capacity = 1
@@ -49,8 +61,8 @@
 		directional_opacity = ALL_CARDINALS
 
 	//Pathfinding related
-	if(movement_cost && pathweight == 1) // This updates pathweight automatically.
-		pathweight = movement_cost
+	if(movement_cost && path_weight == 1) // This updates pathweight automatically. //CHOMPEdit
+		path_weight = movement_cost
 
 	var/turf/Ab = GetAbove(src)
 	if(Ab)
@@ -262,7 +274,7 @@
 /turf/proc/Distance(turf/t)
 	if(get_dist(src,t) == 1)
 		var/cost = (src.x - t.x) * (src.x - t.x) + (src.y - t.y) * (src.y - t.y)
-		cost *= (pathweight+t.pathweight)/2
+		cost *= ((isnull(path_weight)? slowdown : path_weight) + (isnull(t.path_weight)? t.slowdown : t.path_weight))/2 //CHOMPEdit
 		return cost
 	else
 		return get_dist(src,t)
@@ -302,9 +314,10 @@
 
 // Called when turf is hit by a thrown object
 /turf/hitby(atom/movable/AM as mob|obj, var/speed)
-	if(src.density)
-		spawn(2)
-			step(AM, turn(AM.last_move, 180))
+	if(density)
+		if(!has_gravity(AM)) //Checked a different codebase for reference. Turns out it's only supposed to happen in no-gravity
+			spawn(2)
+				step(AM, turn(AM.last_move, 180)) //This makes it float away after hitting a wall in 0G
 		if(isliving(AM))
 			var/mob/living/M = AM
 			M.turf_collision(src, speed)

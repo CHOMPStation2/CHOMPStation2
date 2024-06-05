@@ -1,5 +1,6 @@
 import { Component } from 'react';
 
+import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
 import { Box, Button, Icon, LabeledList, Slider, Tooltip } from '.';
 
@@ -14,8 +15,6 @@ const pauseEvent = (e) => {
   e.returnValue = false;
   return false;
 };
-
-const zoomScale = 280;
 
 export class NanoMap extends Component {
   constructor(props) {
@@ -78,8 +77,8 @@ export class NanoMap extends Component {
     };
 
     this.handleOnClick = (e) => {
-      let byondX = e.offsetX / this.state.zoom / zoomScale;
-      let byondY = 1 - e.offsetY / this.state.zoom / zoomScale; // Byond origin is bottom left, this is top left
+      let byondX = e.offsetX / this.state.zoom / this.props.zoomScale;
+      let byondY = 1 - e.offsetY / this.state.zoom / this.props.zoomScale; // Byond origin is bottom left, this is top left
 
       e.byondX = byondX;
       e.byondY = byondY;
@@ -121,13 +120,15 @@ export class NanoMap extends Component {
   }
 
   render() {
-    const { config } = useBackend(this.context);
+    const { config } = useBackend();
     const { dragging, offsetX, offsetY, zoom = 1 } = this.state;
     const { children } = this.props;
 
-    const mapUrl = config.map + '_nanomap_z' + config.mapZLevel + '.png';
+    const mapUrl = resolveAsset(
+      config.map + '_nanomap_z' + config.mapZLevel + '.png',
+    );
     // (x * zoom), x Needs to be double the turf- map size. (for virgo, 140x140)
-    const mapSize = zoomScale * zoom + 'px';
+    const mapSize = this.props.zoomScale * zoom + 'px';
     const newStyle = {
       width: mapSize,
       height: mapSize,
@@ -158,7 +159,7 @@ export class NanoMap extends Component {
   }
 }
 
-const NanoMapMarker = (props, context) => {
+const NanoMapMarker = (props) => {
   const { x, y, zoom = 1, icon, tooltip, color, onClick } = props;
 
   const handleOnClick = (e) => {
@@ -211,11 +212,12 @@ const NanoMapZoomer = (props) => {
               <Button
                 key={level}
                 selected={~~level === ~~config.mapZLevel}
-                content={level}
                 onClick={() => {
                   act('setZLevel', { mapZLevel: level });
                 }}
-              />
+              >
+                {level}
+              </Button>
             ))}
         </LabeledList.Item>
       </LabeledList>

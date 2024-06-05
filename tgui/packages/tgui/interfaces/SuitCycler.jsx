@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { useBackend } from '../backend';
 import {
   Box,
@@ -12,9 +14,32 @@ import { Window } from '../layouts';
 
 export const SuitCycler = (props) => {
   const { act, data } = useBackend();
-  const { active, locked, uv_active } = data;
+  const { active, locked, uv_active, species, departments } = data;
 
-  let subTemplate = <SuitCyclerContent />;
+  const [selectedDepartment, setSelectedDepartment] = useState(
+    (!!departments && departments[0]) || null,
+  );
+
+  const [selectedSpecies, setSelectedSpecies] = useState(
+    (!!species && species[0]) || null,
+  );
+
+  function handleSelectedDepartment(value) {
+    setSelectedDepartment(value);
+  }
+
+  function handleSelectedSpecies(value) {
+    setSelectedSpecies(value);
+  }
+
+  let subTemplate = (
+    <SuitCyclerContent
+      selectedDepartment={selectedDepartment}
+      selectedSpecies={selectedSpecies}
+      onSelectedDepartment={handleSelectedDepartment}
+      onSelectedSpecies={handleSelectedSpecies}
+    />
+  );
 
   if (uv_active) {
     subTemplate = <SuitCyclerUV />;
@@ -51,7 +76,9 @@ const SuitCyclerContent = (props) => {
       <Section
         title="Storage"
         buttons={
-          <Button icon="lock" content="Lock" onClick={() => act('lock')} />
+          <Button icon="lock" onClick={() => act('lock')}>
+            Lock
+          </Button>
         }
       >
         {!!(occupied && safeties) && (
@@ -62,44 +89,45 @@ const SuitCyclerContent = (props) => {
               fluid
               icon="eject"
               color="red"
-              content="Eject Entity"
               onClick={() => act('eject_guy')}
-            />
+            >
+              Eject Entity
+            </Button>
           </NoticeBox>
         )}
         <LabeledList>
           <LabeledList.Item label="Helmet">
             <Button
               icon={helmet ? 'square' : 'square-o'}
-              content={helmet || 'Empty'}
               disabled={!helmet}
               onClick={() =>
                 act('dispense', {
                   item: 'helmet',
                 })
               }
-            />
+            >
+              {helmet || 'Empty'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Suit">
             <Button
               icon={suit ? 'square' : 'square-o'}
-              content={suit || 'Empty'}
               disabled={!suit}
               onClick={() =>
                 act('dispense', {
                   item: 'suit',
                 })
               }
-            />
+            >
+              {suit || 'Empty'}
+            </Button>
           </LabeledList.Item>
           {can_repair && damage ? (
             <LabeledList.Item label="Suit Damage">
               {damage}
-              <Button
-                icon="wrench"
-                content="Repair"
-                onClick={() => act('repair_suit')}
-              />
+              <Button icon="wrench" onClick={() => act('repair_suit')}>
+                Repair
+              </Button>
             </LabeledList.Item>
           ) : null}
         </LabeledList>
@@ -111,8 +139,11 @@ const SuitCyclerContent = (props) => {
               noscroll
               width="150px"
               options={departments}
-              selected={departments[0]}
-              onSelected={(val) => act('department', { department: val })}
+              selected={props.selectedDepartment}
+              onSelected={(val) => {
+                props.onSelectedDepartment(val);
+                act('department', { department: val });
+              }}
             />
           </LabeledList.Item>
           <LabeledList.Item label="Target Species">
@@ -120,17 +151,17 @@ const SuitCyclerContent = (props) => {
               width="150px"
               maxHeight="160px"
               options={species}
-              selected={species[0]}
-              onSelected={(val) => act('species', { species: val })}
+              selected={props.selectedSpecies}
+              onSelected={(val) => {
+                props.onSelectedSpecies(val);
+                act('species', { species: val });
+              }}
             />
           </LabeledList.Item>
         </LabeledList>
-        <Button
-          mt={1}
-          fluid
-          content="Customize"
-          onClick={() => act('apply_paintjob')}
-        />
+        <Button mt={1} fluid onClick={() => act('apply_paintjob')}>
+          Customize
+        </Button>
       </Section>
       <Section title="UV Decontamination">
         <LabeledList>
@@ -181,10 +212,11 @@ const SuitCyclerLocked = (props) => {
       <Box>
         <Button
           icon="unlock"
-          content="[Unlock]"
           disabled={!userHasAccess}
           onClick={() => act('lock')}
-        />
+        >
+          [Unlock]
+        </Button>
       </Box>
     </Section>
   );

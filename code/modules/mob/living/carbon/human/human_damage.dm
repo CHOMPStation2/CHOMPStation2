@@ -16,6 +16,8 @@
 		total_burn  += O.burn_dam
 
 	// CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
+	if(health > getMaxHealth()) //Overhealth
+		health = getMaxHealth()
 	var/initialhealth = health // CHOMPEdit: Getting our health before this check
 	health = getMaxHealth() - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute
 	if(can_feel_pain() || ((isSynthetic() && synth_cosmetic_pain))) // Are we capable of feeling pain?
@@ -26,7 +28,7 @@
 			switch(damage)
 				if(-INFINITY to 0)
 					//TODO: fix husking
-					if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)
+					if( ((getMaxHealth() - total_burn) < CONFIG_GET(number/health_threshold_dead) * huskmodifier) && stat == DEAD) // CHOMPEdit
 						ChangeToHusk()
 					return
 				if(1 to 25)
@@ -41,7 +43,7 @@
 	// CHOMPEdit End: Pain
 
 	//TODO: fix husking
-	if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)
+	if( ((getMaxHealth() - total_burn) < CONFIG_GET(number/health_threshold_dead) * huskmodifier) && stat == DEAD) // CHOMPEdit
 		ChangeToHusk()
 	return
 

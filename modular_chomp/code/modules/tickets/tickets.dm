@@ -11,16 +11,16 @@ Reason: Replaced with "Tickets System". Main logic has been moved to: modular_ch
 // CHOMPEdit Begin
 /proc/get_ahelp_channel()
 	var/datum/tgs_api/v5/api = TGS_READ_GLOBAL(tgs)
-	if(istype(api) && config.ahelp_channel_tag)
+	if(istype(api) && CONFIG_GET(string/ahelp_channel_tag))
 		for(var/datum/tgs_chat_channel/channel in api.chat_channels)
-			if(channel.custom_tag == config.ahelp_channel_tag)
+			if(channel.custom_tag == CONFIG_GET(string/ahelp_channel_tag))
 				return list(channel)
 	return 0
 
 /proc/ahelp_discord_message(var/message)
 	if(!message)
 		return
-	if(config.discord_ahelps_disabled)
+	if(CONFIG_GET(flag/discord_ahelps_disabled))
 		return
 	var/datum/tgs_chat_channel/ahelp_channel = get_ahelp_channel()
 	if(ahelp_channel)
@@ -101,10 +101,13 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	usr << browse(dat.Join(), "window=ahelp_list[state];size=600x480")
 
 //Tickets statpanel
-/datum/tickets/proc/stat_entry()
+/datum/tickets/proc/stat_entry(client/target)
+	SHOULD_CALL_PARENT(TRUE)
+	SHOULD_NOT_SLEEP(TRUE)
+	var/list/L = list()
 	var/num_disconnected = 0
-	stat("== Tickets ==")
-	stat("Active Tickets:", astatclick.update("[active_tickets.len]"))
+	L[++L.len] = list("== Admin Tickets ==", "", null, null)
+	L[++L.len] = list("Active Tickets:", "[astatclick.update("[active_tickets.len]")]", null, REF(astatclick))
 	for(var/datum/ticket/T as anything in active_tickets)
 		if(T.initiator)
 			var/type = "N/A"
@@ -114,14 +117,15 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 				if(1)
 					type = "MEN"
 
-			if(usr.client.holder || T.level > 0)
-				stat("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.statclick.update())
+			if((target && target.holder) || T.level > 0)
+				L[++L.len] = list("\[[type]\] #[T.id]. [T.initiator_key_name]:", T.name, null, REF(T.statclick))
 		else
 			++num_disconnected
 	if(num_disconnected)
-		stat("Disconnected:", astatclick.update("[num_disconnected]"))
-	stat("Closed Tickets:", cstatclick.update("[closed_tickets.len]"))
-	stat("Resolved Tickets:", rstatclick.update("[resolved_tickets.len]"))
+		L[++L.len] = list("Disconnected:", "[astatclick.update("[num_disconnected]")]", null, REF(astatclick))
+	L[++L.len] = list("Closed Tickets:", "[cstatclick.update("[closed_tickets.len]")]", null, REF(cstatclick))
+	L[++L.len] = list("Resolved Tickets:", "[rstatclick.update("[resolved_tickets.len]")]", null, REF(rstatclick))
+	return L
 
 //Reassociate still open ticket if one exists
 /datum/tickets/proc/ClientLogin(client/C)
@@ -312,7 +316,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 
 /datum/ticket/proc/AddInteraction(formatted_message)
 	var/curinteraction = "[gameTimestamp()]: [formatted_message]"
-	if(config.discord_ahelps_all)	//CHOMPEdit
+	if(CONFIG_GET(flag/discord_ahelps_all))	//CHOMPEdit
 		ahelp_discord_message("ADMINHELP: TICKETID:[id] [strip_html_properly(curinteraction)]") //CHOMPEdit
 	_interactions += curinteraction
 

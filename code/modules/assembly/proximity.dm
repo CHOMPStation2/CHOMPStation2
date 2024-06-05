@@ -47,7 +47,7 @@
 	var/turf/mainloc = get_turf(src)
 	pulse(0)
 	if(!holder)
-		mainloc.visible_message("\icon[src][bicon(src)] *beep* *beep*", "*beep* *beep*")
+		mainloc.visible_message("[icon2html(src,viewers(src))] *beep* *beep*", "*beep* *beep*")
 
 /obj/item/device/assembly/prox_sensor/process()
 	if(scanning)
@@ -107,7 +107,7 @@
 /obj/item/device/assembly/prox_sensor/tgui_data(mob/user)
 	var/list/data = ..()
 
-	data["time"] = time * 10
+	data["time"] = time
 	data["timing"] = timing
 	data["range"] = range
 	data["maxRange"] = 5

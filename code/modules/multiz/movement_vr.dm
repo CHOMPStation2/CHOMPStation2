@@ -177,15 +177,15 @@
 			climb_time += 10 SECONDS
 		if(climbing_delay_min > 1.0)
 			climb_time += 2.5 SECONDS
-	switch(L.nutrition)	//Values are 50 lower than the warning icon appearing
-		if(100 to 200)
-			to_chat(L, SPAN_NOTICE("Climbing while [L.isSynthetic() ? "low on power" : "hungry"] slows you down"))
-			climb_time += 1 SECONDS
-		if(nutrition_cost to 100)
-			to_chat(L, SPAN_DANGER("You [L.isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
-			climb_time +=3 SECONDS
-			if(fall_chance < 30)
-				fall_chance = 30
+
+	if(L.nutrition >= 100 && L.nutrition <= 200)
+		to_chat(L, SPAN_NOTICE("Climbing while [L.isSynthetic() ? "low on power" : "hungry"] slows you down"))
+		climb_time += 1 SECONDS
+	else if(L.nutrition >= nutrition_cost && L.nutrition < 100)
+		to_chat(L, SPAN_DANGER("You [L.isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
+		climb_time +=3 SECONDS
+		if(fall_chance < 30)
+			fall_chance = 30
 	L.visible_message(message = "<b>[L]</b> begins to climb up on <b>\The [src]</b>", self_message = "You begin to clumb up on <b>\The [src]</b>", \
 		blind_message = "You hear the sounds of climbing!", runemessage = "Tap Tap")
 	var/oops_time = world.time
@@ -212,7 +212,7 @@
 /mob/living/verb/climb_down()
 	set name = "Climb down wall"
 	set desc = "attempt to climb down the wall you are standing on, in direction you're looking"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	var/fall_chance = 0	//Increased if we can't actually climb
 	var/turf/our_turf = get_turf(src) //floor we're standing on
@@ -294,15 +294,14 @@
 			climb_time += 10 SECONDS
 		if(climbing_delay_min > 1.0)
 			climb_time += 2.5 SECONDS
-	switch(nutrition)	//Values are 50 lower than the warning icon appearing
-		if(100 to 200)
-			to_chat(src, SPAN_NOTICE("Climbing while [isSynthetic() ? "low on power" : "hungry"] slows you down"))
-			climb_time += 1 SECONDS
-		if(nutrition_cost to 100)
-			to_chat(src, SPAN_DANGER("You [isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
-			climb_time +=3 SECONDS
-			if(fall_chance < 30)
-				fall_chance = 30
+	if(nutrition >= 100 && nutrition <= 200)
+		to_chat(src, SPAN_NOTICE("Climbing while [isSynthetic() ? "low on power" : "hungry"] slows you down"))
+		climb_time += 1 SECONDS
+	else if(nutrition >= nutrition_cost && nutrition < 100)
+		to_chat(src, SPAN_DANGER("You [isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
+		climb_time +=3 SECONDS
+		if(fall_chance < 30)
+			fall_chance = 30
 
 	if(!climbing_surface.climbable)
 		to_chat(src, SPAN_DANGER("\The [climbing_surface] is not suitable for climbing! Even for a master climber, this is risky!"))

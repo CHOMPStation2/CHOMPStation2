@@ -66,9 +66,10 @@ export const CharacterDirectory = (props) => {
                   <Button
                     icon={overwritePrefs ? 'toggle-on' : 'toggle-off'}
                     selected={overwritePrefs}
-                    content={overwritePrefs ? 'On' : 'Off'}
                     onClick={() => setOverwritePrefs(!overwritePrefs)}
-                  />
+                  >
+                    {overwritePrefs ? 'On' : 'Off'}
+                  </Button>
                 </>
               }
             >
@@ -76,67 +77,74 @@ export const CharacterDirectory = (props) => {
                 <LabeledList.Item label="Visibility">
                   <Button
                     fluid
-                    content={personalVisibility ? 'Shown' : 'Not Shown'}
                     onClick={() =>
                       act('setVisible', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalVisibility ? 'Shown' : 'Not Shown'}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Vore Tag">
                   <Button
                     fluid
-                    content={personalTag}
                     onClick={() =>
                       act('setTag', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Gender">
                   <Button
                     fluid
-                    content={personalGenderTag}
                     onClick={() =>
                       act('setGenderTag', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalGenderTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Sexuality">
                   <Button
                     fluid
-                    content={personalSexualityTag}
                     onClick={() =>
                       act('setSexualityTag', {
                         overwrite_prefs: overwritePrefs,
                       })
                     }
-                  />
+                  >
+                    {personalSexualityTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="ERP Tag">
                   <Button
                     fluid
-                    content={personalErpTag}
                     onClick={() =>
                       act('setErpTag', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalErpTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Event Pref">
                   <Button
                     fluid
-                    content={personalEventTag}
                     onClick={() =>
                       act('setEventTag', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalEventTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Advertisement">
                   <Button
                     fluid
-                    content="Edit Ad"
                     onClick={() =>
                       act('editAd', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    Edit Ad
+                  </Button>
                 </LabeledList.Item>
               </LabeledList>
             </Section>
@@ -153,11 +161,9 @@ const ViewCharacter = (props) => {
     <Section
       title={props.overlay.name}
       buttons={
-        <Button
-          icon="arrow-left"
-          content="Back"
-          onClick={() => props.onOverlay(null)}
-        />
+        <Button icon="arrow-left" onClick={() => props.onOverlay(null)}>
+          Back
+        </Button>
       }
     >
       <Section level={2} title="Species">
@@ -188,6 +194,65 @@ const ViewCharacter = (props) => {
       <Section level={2} title="OOC Notes">
         <Box style={{ 'word-break': 'break-all' }} preserveWhitespace>
           {props.overlay.ooc_notes || 'Unset.'}
+          {props.overlay.ooc_notes_style &&
+          (props.overlay.ooc_notes_favs ||
+            props.overlay.ooc_notes_likes ||
+            props.overlay.ooc_notes_maybes ||
+            props.overlay.ooc_notes_dislikes) ? (
+            <Table>
+              <Table.Row bold>
+                {props.overlay.ooc_notes_favs ? (
+                  <Table.Cell>FAVOURITES</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_likes ? (
+                  <Table.Cell>LIKES</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_maybes ? (
+                  <Table.Cell>MAYBES</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_dislikes ? (
+                  <Table.Cell>DISLIKES</Table.Cell>
+                ) : (
+                  ''
+                )}
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>
+                  <br />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                {props.overlay.ooc_notes_favs ? (
+                  <Table.Cell>{props.overlay.ooc_notes_favs}</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_likes ? (
+                  <Table.Cell>{props.overlay.ooc_notes_likes}</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_maybes ? (
+                  <Table.Cell>{props.overlay.ooc_notes_maybes}</Table.Cell>
+                ) : (
+                  ''
+                )}
+                {props.overlay.ooc_notes_dislikes ? (
+                  <Table.Cell>{props.overlay.ooc_notes_dislikes}</Table.Cell>
+                ) : (
+                  ''
+                )}
+              </Table.Row>
+            </Table>
+          ) : (
+            ''
+          )}
         </Box>
       </Section>
       <Section level={2} title="Flavor Text">
@@ -204,25 +269,90 @@ const CharacterDirectoryList = (props) => {
 
   const { directory } = data;
 
-  const [sortId, _setSortId] = useState('name');
-  const [sortOrder, _setSortOrder] = useState('name');
+  const [sortId, setSortId] = useState('name');
+  const [sortOrder, setSortOrder] = useState('name');
+
+  function handleSortId(value) {
+    setSortId(value);
+  }
+  function handleSortOrder(value) {
+    setSortOrder(value);
+  }
 
   return (
     <Section
       title="Directory"
       buttons={
-        <Button icon="sync" content="Refresh" onClick={() => act('refresh')} />
+        <Button icon="sync" onClick={() => act('refresh')}>
+          Refresh
+        </Button>
       }
     >
       <Table>
         <Table.Row bold>
-          <SortButton id="name">Name</SortButton>
-          <SortButton id="species">Species</SortButton>
-          <SortButton id="tag">Vore Tag</SortButton>
-          <SortButton id="gendertag">Gender</SortButton>
-          <SortButton id="sexualitytag">Sexuality</SortButton>
-          <SortButton id="erptag">ERP Tag</SortButton>
-          <SortButton id="eventtag">Event Pref</SortButton>
+          <SortButton
+            id="name"
+            sortId={sortId}
+            sortOrder={sortOrder}
+            onSortId={handleSortId}
+            onSortOrder={handleSortOrder}
+          >
+            Name
+          </SortButton>
+          <SortButton
+            id="species"
+            sortId={sortId}
+            sortOrder={sortOrder}
+            onSortId={handleSortId}
+            onSortOrder={handleSortOrder}
+          >
+            Species
+          </SortButton>
+          <SortButton
+            id="tag"
+            sortId={sortId}
+            sortOrder={sortOrder}
+            onSortId={handleSortId}
+            onSortOrder={handleSortOrder}
+          >
+            Vore Tag
+          </SortButton>
+          <SortButton
+            id="gendertag"
+            sortId={sortId}
+            sortOrder={sortOrder}
+            onSortId={handleSortId}
+            onSortOrder={handleSortOrder}
+          >
+            Gender
+          </SortButton>
+          <SortButton
+            id="sexualitytag"
+            sortId={sortId}
+            sortOrder={sortOrder}
+            onSortId={handleSortId}
+            onSortOrder={handleSortOrder}
+          >
+            Sexuality
+          </SortButton>
+          <SortButton
+            id="erptag"
+            sortId={sortId}
+            sortOrder={sortOrder}
+            onSortId={handleSortId}
+            onSortOrder={handleSortOrder}
+          >
+            ERP Tag
+          </SortButton>
+          <SortButton
+            id="eventtag"
+            sortId={sortId}
+            sortOrder={sortOrder}
+            onSortId={handleSortId}
+            onSortOrder={handleSortOrder}
+          >
+            Event Pref
+          </SortButton>
           <Table.Cell collapsing textAlign="right">
             View
           </Table.Cell>
@@ -247,8 +377,9 @@ const CharacterDirectoryList = (props) => {
                   color="transparent"
                   icon="sticky-note"
                   mr={1}
-                  content="View"
-                />
+                >
+                  View
+                </Button>
               </Table.Cell>
             </Table.Row>
           ))}
@@ -263,26 +394,27 @@ const SortButton = (props) => {
   const { id, children } = props;
 
   // Hey, same keys mean same data~
-  const [sortId, setSortId] = useState('name');
-  const [sortOrder, setSortOrder] = useState('name');
 
   return (
     <Table.Cell collapsing>
       <Button
         width="100%"
-        color={sortId !== id && 'transparent'}
+        color={props.sortId !== id && 'transparent'}
         onClick={() => {
-          if (sortId === id) {
-            setSortOrder(!sortOrder);
+          if (props.sortId === id) {
+            props.onSortOrder(!props.sortOrder);
           } else {
-            setSortId(id);
-            setSortOrder(true);
+            props.onSortId(id);
+            props.onSortOrder(true);
           }
         }}
       >
         {children}
-        {sortId === id && (
-          <Icon name={sortOrder ? 'sort-up' : 'sort-down'} ml="0.25rem;" />
+        {props.sortId === id && (
+          <Icon
+            name={props.sortOrder ? 'sort-up' : 'sort-down'}
+            ml="0.25rem;"
+          />
         )}
       </Button>
     </Table.Cell>

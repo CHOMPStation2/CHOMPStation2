@@ -169,13 +169,13 @@
 /mob/living/simple_mob/animal/synx/New() //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
 //some things should be here that arent tho.
 	..()
-	verbs |= /mob/living/proc/ventcrawl
-	verbs |= /mob/living/simple_mob/animal/synx/proc/distend_stomach //to do later: sprites of stomach outside the body.
-	verbs |= /mob/living/simple_mob/proc/contort
-	verbs |= /mob/living/simple_mob/animal/synx/proc/sonar_ping
-	verbs |= /mob/living/proc/shred_limb
-	verbs |= /mob/living/simple_mob/animal/synx/proc/disguise
-	verbs |= /mob/living/simple_mob/animal/synx/proc/randomspeech
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/distend_stomach) //CHOMPEdit TGPanel //to do later: sprites of stomach outside the body.
+	add_verb(src,/mob/living/simple_mob/proc/contort) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/sonar_ping) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/disguise) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/randomspeech) //CHOMPEdit TGPanel
 	realname = name
 	voices += "Garbled voice"
 	voices += "Unidentifiable Voice"
@@ -399,7 +399,7 @@
 /mob/living/simple_mob/proc/contort()
 	set name = "contort"
 	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
-	set category = "Abilities"
+	set category = "Abilities.Synx" //CHOMPEdit
 
 	if(stat == DEAD || paralysis || weakened || stunned || restrained())
 		return
@@ -419,7 +419,7 @@
 /mob/living/simple_mob/animal/synx/proc/disguise()
 	set name = "Toggle Form"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Synx" //CHOMPEdit
 
 	if(stat == DEAD || paralysis || weakened || stunned || restrained())
 		return
@@ -442,7 +442,7 @@
 /mob/living/simple_mob/animal/synx/proc/randomspeech()
 	set name = "speak"
 	set desc = "Take a sentence you heard and speak it."
-	set category = "Abilities"
+	set category = "Abilities.Synx" //CHOMPEdit
 	if(speak && voices)
 		handle_mimic()
 	else
@@ -463,7 +463,7 @@
 /mob/living/simple_mob/animal/synx/proc/sonar_ping()
 	set name = "Listen In"
 	set desc = "Allows you to listen in to movement and noises around you."
-	set category = "Abilities"
+	set category = "Abilities.Synx" //CHOMPEdit
 
 	if(incapacitated())
 		to_chat(src, "<span class='warning'>You need to recover before you can use this ability.</span>")
@@ -512,7 +512,7 @@
 /mob/living/simple_mob/animal/synx/proc/distend_stomach()
 	set name = "Distend Stomach"
 	set desc = "Allows you to throw up your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
-	set category = "Abilities"
+	set category = "Abilities.Synx" //CHOMPEdit
 
 	if(!stomach_distended) //true if stomach distended is null, 0, or ""
 		stomach_distended = !stomach_distended //switch statement
@@ -581,7 +581,7 @@
 /*/mob/living/simple_mob/animal/synx/proc/honk()
 	set name = "HONK"
 	set desc = "TAAA RAINBOW"
-	set category = "Abilities"
+	set category = "Abilities.Synx" //CHOMPEdit
 	icon_state = "synx_pet_rainbow"
 	icon_living = "synx_pet_rainbow"
 	playsound(src.loc, 'sound/items/bikehorn.ogg', 50, 1)
@@ -754,25 +754,25 @@
 /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename()
 	set name = "rename"
 	set desc = "Renames the synx"
-	set category = "DEBUG"
+	set category = "Debug.Synx" //CHOMPEdit
 	name = input(usr, "What would you like to change name to?", "Renaming", null)
 
 /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc()
 	set name = "redesc"
 	set desc = "Redescribes the synx"
-	set category = "DEBUG"
+	set category = "Debug.Synx" //CHOMPEdit
 	desc = input(usr, "What would you like to change desc to?", "Redescribing", null)
 
 /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite()
 	set name = "resprite"
 	set desc = "Resprite the synx"
-	set category = "DEBUG"
+	set category = "Debug.Synx" //CHOMPEdit
 	icon_state = input(usr, "What would you like to change icon_state to?", "Respriting", null)
 
 /mob/living/simple_mob/animal/synx/ai/pet/debug/New()
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc) //CHOMPEdit TGPanel
 
 ////////////////////////////////////////
 ////////////////SYNX SPAWNER////////////

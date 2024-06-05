@@ -14,10 +14,10 @@ SUBSYSTEM_DEF(planets)
 	var/static/list/needs_sun_update = list()
 	var/static/list/needs_temp_update = list()
 
-/datum/controller/subsystem/planets/Initialize(timeofday)
+/datum/controller/subsystem/planets/Initialize() // CHOMPEdit
 	admin_notice("<span class='danger'>Initializing planetary weather.</span>", R_DEBUG)
 	createPlanets()
-	..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/planets/proc/createPlanets()
 	var/list/planet_datums = using_map.planet_datums_to_make
@@ -45,7 +45,7 @@ SUBSYSTEM_DEF(planets)
 		else if(istype(T, /turf/simulated) && T.is_outdoors())
 			P.planet_floors += T
 			P.weather_holder.apply_to_turf(T)
-			P.sun_holder.apply_to_turf(T)
+			//P.sun_holder.apply_to_turf(T) CHOMPEdit replaced planetary lighting
 
 /datum/controller/subsystem/planets/proc/removeTurf(var/turf/T,var/is_edge)
 	if(z_to_planet.len >= T.z)
@@ -108,6 +108,7 @@ SUBSYSTEM_DEF(planets)
 
 	var/new_color = P.sun["color"]
 	P.sun_holder.update_color(new_color)
+	SSlighting.update_sunlight(SSlighting.get_pshandler_planet(P)) //CHOMPEdit
 
 /datum/controller/subsystem/planets/proc/updateTemp(var/datum/planet/P)
 	//Set new temperatures

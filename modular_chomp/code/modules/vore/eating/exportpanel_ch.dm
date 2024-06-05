@@ -51,6 +51,7 @@
 					addons.Add(flag_name)
 			belly_data["addons"] = addons
 			belly_data["item_mode"] = B.item_digest_mode
+			belly_data["message_mode"] = B.message_mode
 
 			// Messages
 			belly_data["struggle_messages_outside"] = list()
@@ -275,6 +276,7 @@
 			belly_data["vorespawn_blacklist"] = B.vorespawn_blacklist
 			belly_data["egg_type"] = B.egg_type
 			belly_data["egg_name"] = B.egg_name
+			belly_data["egg_size"] = B.egg_size
 			belly_data["selective_preference"] = B.selective_preference
 			belly_data["recycling"] = B.recycling
 			belly_data["storing_nutrition"] = B.storing_nutrition

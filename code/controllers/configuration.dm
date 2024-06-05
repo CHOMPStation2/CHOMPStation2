@@ -306,6 +306,22 @@ var/list/gamemode_cache = list()
 
 	var/static/invoke_youtubedl = null
 
+	//Enables/Disables the appropriate mob type from obtaining the verb on spawn. Still allows admins to manually give it to them.
+	var/static/allow_robot_recolor = FALSE
+	var/static/allow_simple_mob_recolor = FALSE
+
+	var/static/asset_transport
+
+	var/static/cache_assets = FALSE
+
+	var/static/save_spritesheets = FALSE
+
+	var/static/asset_simple_preload = FALSE
+
+	var/static/asset_cdn_webroot
+
+	var/static/asset_cdn_url
+
 /datum/configuration/New()
 	var/list/L = subtypesof(/datum/game_mode)
 	for (var/T in L)
@@ -731,6 +747,7 @@ var/list/gamemode_cache = list()
 					var/ticklag = text2num(value)
 					if(ticklag > 0)
 						fps = 10 / ticklag
+						world.fps = fps //CHOMPEdit
 
 				if("tick_limit_mc_init")
 					tick_limit_mc_init = text2num(value)
@@ -987,6 +1004,31 @@ var/list/gamemode_cache = list()
 				if("invoke_youtubedl")
 					config.invoke_youtubedl = value
 
+				if("asset_transport")
+					config.asset_transport = value
+
+				if("cache_assets")
+					config.cache_assets = TRUE
+
+				if("save_spritesheets")
+					config.save_spritesheets = TRUE
+
+				if("asset_simple_preload")
+					config.asset_simple_preload = TRUE
+
+				if("asset_cdn_webroot")
+					config.asset_cdn_webroot = value
+
+				if("asset_cdn_url")
+					config.asset_cdn_url = value
+
+//ChompEDIT - these belong here
+				if("allow_robot_recolor")
+					config.allow_robot_recolor = 1
+				if("allow_simple_mob_recolor")
+					config.allow_simple_mob_recolor = 1
+//ChompEDIT End
+
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
 
@@ -1055,6 +1097,12 @@ var/list/gamemode_cache = list()
 
 				if("loadout_whitelist")
 					config.loadout_whitelist = text2num(value)
+/* //ChompEDIT - wrong place
+				if("allow_robot_recolor")
+					config.allow_robot_recolor = 1
+				if("allow_simple_mob_recolor")
+					config.allow_simple_mob_recolor = 1
+*/
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
@@ -1168,8 +1216,8 @@ var/list/gamemode_cache = list()
 	SSdbcore.InitializeRound() // CHOMPEdit
 
 	//apply a default value to config.python_path, if needed
-	if (!config.python_path)
+	if (!CONFIG_GET(string/python_path)) // CHOMPEdit
 		if(world.system_type == UNIX)
-			config.python_path = "/usr/bin/env python2"
+			CONFIG_SET(string/python_path, "/usr/bin/env python2") // CHOMPEdit
 		else //probably windows, if not this should work anyway
-			config.python_path = "python"
+			CONFIG_SET(string/python_path, "python") // CHOMPEdit

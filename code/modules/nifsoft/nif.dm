@@ -125,7 +125,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		human = H
 		human.nif = src
 		stat = NIF_INSTALLING
-		H.verbs |= /mob/living/carbon/human/proc/set_nif_examine
+		add_verb(H,/mob/living/carbon/human/proc/set_nif_examine) //ChompEDIT
 		menu = H.AddComponent(/datum/component/nif_menu)
 		if(starting_software)
 			for(var/path in starting_software)
@@ -169,7 +169,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	stat = NIF_PREINSTALL
 	vis_update()
 	if(H)
-		H.verbs -= /mob/living/carbon/human/proc/set_nif_examine
+		remove_verb(H,/mob/living/carbon/human/proc/set_nif_examine)  //CHOMPEdit
 		H.nif = null
 	qdel_null(menu)
 	human = null
@@ -387,7 +387,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 	last_notification = message // TGUI Hook
 
-	to_chat(human,"<span class='filter_nif'><b>\[\icon[src.big_icon][bicon(src.big_icon)]NIF\]</b> displays, \"<span class='[alert ? "danger" : "notice"]'>[message]</span>\"</span>")
+	to_chat(human,"<span class='filter_nif'><b>\[[icon2html(src.big_icon, human.client)]NIF\]</b> displays, \"<span class='[alert ? "danger" : "notice"]'>[message]</span>\"</span>")
 	if(prob(1)) human.visible_message("<span class='notice'>\The [human] [pick(look_messages)].</span>")
 	if(alert)
 		human << bad_sound
@@ -461,7 +461,10 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 //Uninstall a piece of software
 /obj/item/device/nif/proc/uninstall(var/datum/nifsoft/old_soft)
-	var/datum/nifsoft/NS = nifsofts[old_soft.list_pos]
+	var/datum/nifsoft/NS
+	if(nifsofts)
+		NS = nifsofts[old_soft.list_pos]
+
 	if(!NS || NS != old_soft)
 		return FALSE //what??
 
@@ -690,10 +693,10 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /mob/living/carbon/human/proc/set_nif_examine()
 	set name = "NIF Appearance"
 	set desc = "If your NIF alters your appearance in some way, describe it here."
-	set category = "OOC"
+	set category = "OOC.Game Settings" //CHOMPEdit
 
 	if(!nif)
-		verbs -= /mob/living/carbon/human/proc/set_nif_examine
+		remove_verb(src, /mob/living/carbon/human/proc/set_nif_examine) //ChompEDIT
 		to_chat(src,"<span class='warning'>You don't have a NIF, not sure why this was here.</span>")
 		return
 

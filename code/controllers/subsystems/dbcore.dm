@@ -41,7 +41,7 @@ SUBSYSTEM_DEF(dbcore)
 	//var/db_daemon_started = FALSE
 
 /datum/controller/subsystem/dbcore/Initialize()
-	return ..()
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/dbcore/stat_entry(msg)
 	msg = "P:[length(all_queries)]|Active:[length(queries_active)]|Standby:[length(queries_standby)]"
@@ -150,13 +150,14 @@ SUBSYSTEM_DEF(dbcore)
 			UNTIL(query.process())
 			queries_active -= query
 
-		/*var/datum/db_query/query_round_shutdown = SSdbcore.NewQuery(
+		var/datum/db_query/query_round_shutdown = SSdbcore.NewQuery(
 			"UPDATE [format_table_name("round")] SET shutdown_datetime = Now(), end_state = :end_state WHERE id = :round_id",
-			list("end_state" = SSticker.end_state, "round_id" = GLOB.round_id),
+			//list("end_state" = SSticker.end_state, "round_id" = GLOB.round_id),
+			list("end_state" = "undefined", "round_id" = GLOB.round_id), // FIXME: end_state does not exist on ticker
 			TRUE
-		)*/
-		//query_round_shutdown.Execute(FALSE)
-		//qdel(query_round_shutdown)
+		)
+		query_round_shutdown.Execute(FALSE)
+		qdel(query_round_shutdown)
 
 	log_debug("Done clearing DB queries standby:[length(queries_standby)] active: [length(queries_active)] all: [length(all_queries)]")
 	if(IsConnected())
@@ -202,18 +203,19 @@ SUBSYSTEM_DEF(dbcore)
 		failed_connection_timeout = world.time + 50
 		return FALSE
 
-	if(!config.sql_enabled)
+	if(!CONFIG_GET(flag/sql_enabled))
 		return FALSE
 
 	//start_db_daemon()
 
-	var/user = sqlfdbklogin
-	var/pass = sqlfdbkpass
-	var/db = sqlfdbkdb
-	var/address = sqladdress
-	var/port = text2num(sqlport)
-	var/timeout = 10
-	var/thread_limit = 50
+	var/user = CONFIG_GET(string/feedback_login)
+	var/pass = CONFIG_GET(string/feedback_password)
+	var/db = CONFIG_GET(string/feedback_database)
+	var/address = CONFIG_GET(string/address)
+	var/port = CONFIG_GET(number/port)
+	var/timeout = max(CONFIG_GET(number/async_query_timeout), CONFIG_GET(number/blocking_query_timeout))
+	var/min_sql_connections = CONFIG_GET(number/pooling_min_sql_connections)
+	var/max_sql_connections = CONFIG_GET(number/pooling_max_sql_connections)
 
 	var/result = json_decode(rustg_sql_connect_pool(json_encode(list(
 		"host" = address,
@@ -223,7 +225,8 @@ SUBSYSTEM_DEF(dbcore)
 		"db_name" = db,
 		"read_timeout" = timeout,
 		"write_timeout" = timeout,
-		"max_threads" = thread_limit,
+		"min_threads" = min_sql_connections,
+		"max_threads" = max_sql_connections,
 	))))
 	. = (result["status"] == "ok")
 	if (.)
@@ -235,7 +238,7 @@ SUBSYSTEM_DEF(dbcore)
 		++failed_connections
 
 /datum/controller/subsystem/dbcore/proc/CheckSchemaVersion()
-	if(config.sql_enabled)
+	if(CONFIG_GET(flag/sql_enabled))
 		if(Connect())
 			log_world("Database connection established.")
 		else
@@ -247,20 +250,18 @@ SUBSYSTEM_DEF(dbcore)
 	if(!Connect())
 		return
 	var/datum/db_query/query_round_initialize = SSdbcore.NewQuery(
-		//"INSERT INTO [format_table_name("round")] (initialize_datetime, server_ip, server_port) VALUES (Now(), INET_ATON(:internet_address), :port)",
-		"INSERT INTO round (initialize_datetime, server_ip, server_port) VALUES (Now(), INET_ATON(:internet_address), :port)",
+		"INSERT INTO [format_table_name("round")] (initialize_datetime, server_ip, server_port) VALUES (Now(), INET_ATON(:internet_address), :port)",
 		list("internet_address" = world.internet_address || "0", "port" = "[world.port]")
 	)
 	query_round_initialize.Execute(async = FALSE)
-	//GLOB.round_id = "[query_round_initialize.last_insert_id]"
+	GLOB.round_id = "[query_round_initialize.last_insert_id]"
 	qdel(query_round_initialize)
 
 /datum/controller/subsystem/dbcore/proc/SetRoundStart()
 	if(!Connect())
 		return
 	var/datum/db_query/query_round_start = SSdbcore.NewQuery(
-		//"UPDATE [format_table_name("round")] SET start_datetime = Now() WHERE id = :round_id",
-		"UPDATE round SET start_datetime = Now() WHERE id = :round_id",
+		"UPDATE [format_table_name("round")] SET start_datetime = Now() WHERE id = :round_id",
 		list("round_id" = GLOB.round_id)
 	)
 	query_round_start.Execute()
@@ -270,8 +271,7 @@ SUBSYSTEM_DEF(dbcore)
 	if(!Connect())
 		return
 	var/datum/db_query/query_round_end = SSdbcore.NewQuery(
-		//"UPDATE [format_table_name("round")] SET end_datetime = Now(), game_mode_result = :game_mode_result, station_name = :station_name WHERE id = :round_id",
-		"UPDATE round SET end_datetime = Now(), game_mode_result = :game_mode_result, station_name = :station_name WHERE id = :round_id",
+		"UPDATE [format_table_name("round")] SET end_datetime = Now(), game_mode_result = :game_mode_result, station_name = :station_name WHERE id = :round_id",
 		//list("game_mode_result" = SSticker.mode_result, "station_name" = station_name(), "round_id" = GLOB.round_id)
 		list("game_mode_result" = "extended", "station_name" = station_name(), "round_id" = GLOB.round_id) // FIXME: temporary solution as we only use extended so far
 	)
@@ -285,14 +285,14 @@ SUBSYSTEM_DEF(dbcore)
 	connection = null
 
 /datum/controller/subsystem/dbcore/proc/IsConnected()
-	if (!config.sql_enabled)
+	if (!CONFIG_GET(flag/sql_enabled))
 		return FALSE
 	if (!connection)
 		return FALSE
 	return json_decode(rustg_sql_connected(connection))["status"] == "online"
 
 /datum/controller/subsystem/dbcore/proc/ErrorMsg()
-	if(!config.sql_enabled)
+	if(!CONFIG_GET(flag/sql_enabled))
 		return "Database disabled by configuration"
 	return last_error
 

@@ -13,14 +13,14 @@ SUBSYSTEM_DEF(mapping)
 	flags |= SS_NO_INIT // Make extra sure we don't initialize twice.
 	shelter_templates = SSmapping.shelter_templates
 
-/datum/controller/subsystem/mapping/Initialize(timeofday)
+/datum/controller/subsystem/mapping/Initialize() // CHOMPEdit
 	if(subsystem_initialized)
 		return
 	world.max_z_changed() // This is to set up the player z-level list, maxz hasn't actually changed (probably)
 	maploader = new()
 	load_map_templates()
 
-	if(config.generate_map)
+	if(CONFIG_GET(flag/generate_map)) // CHOMPEdit
 		// Map-gen is still very specific to the map, however putting it here should ensure it loads in the correct order.
 		using_map.perform_map_generation()
 
@@ -31,7 +31,7 @@ SUBSYSTEM_DEF(mapping)
 	// Lateload Code related to Expedition areas.
 	if(using_map) // VOREStation Edit: Re-enable this.
 		loadLateMaps()
-	..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/mapping/proc/load_map_templates()
 	for(var/datum/map_template/template as anything in subtypesof(/datum/map_template))
@@ -52,8 +52,8 @@ SUBSYSTEM_DEF(mapping)
 
 	// Choose an engine type
 	var/datum/map_template/engine/chosen_type = null
-	if (LAZYLEN(config.engine_map))
-		var/chosen_name = pick(config.engine_map)
+	if (LAZYLEN(CONFIG_GET(str_list/engine_map))) // CHOMPEdit
+		var/chosen_name = pick(CONFIG_GET(str_list/engine_map)) // CHOMPEdit
 		chosen_type = map_templates[chosen_name]
 		if(!istype(chosen_type))
 			error("Configured engine map [chosen_name] is not a valid engine map name!")
@@ -172,4 +172,4 @@ SUBSYSTEM_DEF(mapping)
 /datum/controller/subsystem/mapping/stat_entry(msg)
 	if (!Debug2)
 		return // Only show up in stat panel if debugging is enabled.
-	. = ..()
+	return ..() //CHOMPEdit

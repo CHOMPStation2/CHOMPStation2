@@ -267,9 +267,9 @@
 		avatar.regenerate_icons()
 		avatar.update_transform()
 		job_master.EquipRank(avatar,"Visitor", 1, FALSE)
-		avatar.verbs += /mob/living/carbon/human/proc/exit_vr
-		avatar.verbs += /mob/living/carbon/human/proc/vr_transform_into_mob
-		avatar.verbs |= /mob/living/proc/set_size // Introducing NeosVR
+		add_verb(avatar,/mob/living/carbon/human/proc/exit_vr)  //CHOMPEdit
+		add_verb(avatar,/mob/living/carbon/human/proc/vr_transform_into_mob)  //CHOMPEdit
+		add_verb(avatar,/mob/living/proc/set_size) //CHOMPEdit TGPanel // Introducing NeosVR
 		avatar.virtual_reality_mob = TRUE
 
 		// Prompt for username after they've enterred the body.
@@ -281,7 +281,7 @@
 		if(tf)
 			var/mob/living/new_form = avatar.transform_into_mob(tf, TRUE) // No need to check prefs when the occupant already chose to transform.
 			if(isliving(new_form)) // Make sure the mob spawned properly.
-				new_form.verbs += /mob/living/proc/vr_revert_mob_tf
+				add_verb(new_form,/mob/living/proc/vr_revert_mob_tf)  //CHOMPEdit
 				new_form.virtual_reality_mob = TRUE
 
 	else
@@ -295,7 +295,7 @@
 // I am not making a new file just for vr-specific mob procs.
 /mob/living/carbon/human/proc/vr_transform_into_mob()
 	set name = "Transform Into Creature"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 	set desc = "Become a different creature"
 
 	var/tf = null
@@ -306,19 +306,19 @@
 
 	var/mob/living/new_form = transform_into_mob(tf, TRUE, TRUE)
 	if(isliving(new_form)) // Sanity check
-		new_form.verbs += /mob/living/proc/vr_revert_mob_tf
+		add_verb(new_form,/mob/living/proc/vr_revert_mob_tf)  //CHOMPEdit
 		new_form.virtual_reality_mob = TRUE
 
 /mob/living/proc/vr_revert_mob_tf()
 	set name = "Revert Transformation"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 
 	revert_mob_tf()
 
 // Exiting VR but for ghosts
 /mob/living/carbon/human/proc/fake_exit_vr()
 	set name = "Log Out Of Virtual Reality"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 
 	if(tgui_alert(usr, "Would you like to log out of virtual reality?", "Log out?", list("Yes", "No")) == "Yes")
 		release_vore_contents(TRUE)

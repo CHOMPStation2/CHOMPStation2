@@ -1,7 +1,7 @@
 /mob/living/carbon/human/proc/phase_shift()
 	set name = "Phase Shift (100)"
 	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/ability_cost = 100
 
@@ -140,6 +140,8 @@
 
 		//Cosmetics mostly
 		var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(src.loc)
+		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
+		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
 		phaseanim.dir = dir
 		alpha = 0
 		custom_emote(1,"phases in!")
@@ -232,6 +234,8 @@
 			B.escapable = FALSE
 
 		var/obj/effect/temp_visual/shadekin/phase_out/phaseanim = new /obj/effect/temp_visual/shadekin/phase_out(src.loc)
+		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
+		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
 		phaseanim.dir = dir
 		alpha = 0
 		add_modifier(/datum/modifier/shadekin_phase_vision)
@@ -276,7 +280,7 @@
 /mob/living/carbon/human/proc/phase_strength_toggle()
 	set name = "Toggle Phase Strength"
 	set desc = "Toggle strength of phase. Gentle but slower, or faster but destructive to lights."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))

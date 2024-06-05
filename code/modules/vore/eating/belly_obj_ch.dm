@@ -218,6 +218,8 @@
 						if(is_beneficial && reagents.total_volume)
 							reagents.trans_to(L, affecting_amt, 1, FALSE)
 				for(var/obj/item/I in touchable_atoms)
+					if(is_type_in_list(I, item_digestion_blacklist))
+						continue
 					if(reagents.total_volume)
 						reagents.trans_to(I, affecting_amt, 1, FALSE)
 		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, FALSE, reagents.total_volume) // Signals vore_fx() reagents updates.
@@ -229,7 +231,8 @@
 /obj/belly/proc/GenerateBellyReagents()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
-		R.cell.charge -= gen_cost*10
+		if(!R.use_direct_power(gen_cost*10, 200))
+			return
 	else
 		owner.nutrition -= gen_cost
 	for(var/reagent in generated_reagents)
@@ -669,3 +672,9 @@
 			var/obj/item/I = thing
 			surrounding.Add(get_belly_surrounding(I.contents))
 	return surrounding
+
+/obj/belly/proc/effective_emote_hearers()
+	. = list(loc)
+	for(var/atom/movable/AM as anything in contents)
+		//if(AM.atom_flags & ATOM_HEAR)
+		. += AM

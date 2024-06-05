@@ -52,6 +52,8 @@
 	var/do_seasons = TRUE
 	picked_color = FALSE //CHOMPedit: removed "var/" since we already have this defined for all simple_mobs.
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 /////////////////////////////////////// Vore stuff///////////////////////////////////////////
 
 	swallowTime = 4 SECONDS
@@ -153,7 +155,7 @@
 /mob/living/simple_mob/vore/squirrel/Initialize()
 	. = ..()
 	if(do_seasons)
-		switch(world_time_season)
+		switch(GLOB.world_time_season) // CHOMPEdit - Managed Globals
 			if("spring")
 				if(prob(1))
 					winterize()
@@ -208,7 +210,7 @@
 
 /mob/living/simple_mob/vore/squirrel/verb/squirrel_color()
 	set name = "Pick Color"
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 	set desc = "You can set your color!"
 	if(picked_color)
 		to_chat(src, "<span class='notice'>You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0.</span>")

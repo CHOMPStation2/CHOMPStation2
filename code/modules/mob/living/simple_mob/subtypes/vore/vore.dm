@@ -10,8 +10,8 @@
 
 /mob/living/simple_mob/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/proc/set_name
-	verbs |= /mob/living/simple_mob/proc/set_desc
+	add_verb(src,/mob/living/simple_mob/proc/set_name) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/set_desc) //CHOMPEdit TGPanel
 
 	if(copy_prefs_to_mob)
 		login_prefs()
@@ -21,6 +21,11 @@
 	ooc_notes = client.prefs.metadata
 	ooc_notes_likes = client.prefs.metadata_likes
 	ooc_notes_dislikes = client.prefs.metadata_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = client.prefs.metadata_favs
+	ooc_notes_maybes = client.prefs.metadata_maybes
+	ooc_notes_style = client.prefs.matadata_ooc_style
+	//CHOMPEdit End
 	digestable = client.prefs_vr.digestable
 	devourable = client.prefs_vr.devourable
 	absorbable = client.prefs_vr.absorbable
@@ -40,6 +45,7 @@
 	drop_vore = client.prefs_vr.drop_vore
 	stumble_vore = client.prefs_vr.stumble_vore
 	slip_vore = client.prefs_vr.slip_vore
+	digest_pain = client.prefs_vr.digest_pain
 
 	resizable = client.prefs_vr.resizable
 	show_vore_fx = client.prefs_vr.show_vore_fx
@@ -47,6 +53,7 @@
 	pickup_pref = client.prefs_vr.pickup_pref
 
 	//CHOMP Stuff Start
+	allow_mind_transfer = client.prefs_vr.allow_mind_transfer
 	phase_vore = client.prefs_vr.phase_vore
 	latejoin_vore = client.prefs_vr.latejoin_vore
 	latejoin_prey = client.prefs_vr.latejoin_prey
@@ -64,12 +71,13 @@
 	no_latejoin_prey_warning_time = client.prefs_vr.no_latejoin_prey_warning_time
 	no_latejoin_vore_warning_persists = client.prefs_vr.no_latejoin_vore_warning_persists
 	no_latejoin_prey_warning_persists = client.prefs_vr.no_latejoin_prey_warning_persists
+	belly_rub_target = client.prefs_vr.belly_rub_target
 	//CHOMP Stuff End
 
 /mob/living/simple_mob/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 	if(limit_renames && nameset)
 		to_chat(src, "<span class='userdanger'>You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must.</span>")
 		return
@@ -83,7 +91,7 @@
 /mob/living/simple_mob/proc/set_desc()
 	set name = "Set Description"
 	set desc = "Set your description."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 	var/newdesc
 	newdesc = sanitizeSafe(tgui_input_text(src,"Set your description. Max 4096 chars.", "Description set","", prevent_enter = TRUE), MAX_MESSAGE_LEN)
 	if(newdesc)

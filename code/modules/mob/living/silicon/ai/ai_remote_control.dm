@@ -2,12 +2,12 @@
 	var/mob/living/silicon/robot/deployed_shell = null //For shell control
 
 /mob/living/silicon/ai/Initialize()
-	if(config.allow_ai_shells)
-		verbs += /mob/living/silicon/ai/proc/deploy_to_shell_act
+	if(CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
+		add_verb(src,/mob/living/silicon/ai/proc/deploy_to_shell_act) //CHOMPEdit TGPanel
 	return ..()
 
 /mob/living/silicon/ai/proc/deploy_to_shell(var/mob/living/silicon/robot/target)
-	if(!config.allow_ai_shells)
+	if(!CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
 		to_chat(src, span("warning", "AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
 		return
 
@@ -59,11 +59,17 @@
 			target.resize(src.client.prefs.size_multiplier) //CHOMPADDITION: Resize shell based on our preffered size
 		target.deploy_init(src)
 		mind.transfer_to(target)
+		if(target.first_transfer)
+			target.first_transfer = FALSE
+			target.copy_from_prefs_vr()
+			if(LAZYLEN(target.vore_organs))
+				target.vore_selected = target.vore_organs[1]
+		src.copy_vore_prefs_to_mob(target)
 		teleop = target // So the AI 'hears' messages near its core.
 		target.post_deploy()
 
 /mob/living/silicon/ai/proc/deploy_to_shell_act()
-	set category = "AI Commands"
+	set category = "AI.Commands" //CHOMPEdit
 	set name = "Deploy to Shell"
 	deploy_to_shell() // This is so the AI is not prompted with a list of all mobs when using the 'real' proc.
 

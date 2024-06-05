@@ -156,7 +156,7 @@
 
 /mob/living/proc/set_size()
 	set name = "Adjust Mass"
-	set category = "Abilities" //Seeing as prometheans have an IC reason to be changing mass.
+	set category = "Abilities.General" //Seeing as prometheans have an IC reason to be changing mass. //CHOMPEdit
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
 	var/default = size_multiplier * 100
@@ -213,6 +213,9 @@
  * @return false if normal code should continue, true to prevent normal code.
  */
 /mob/living/proc/handle_micro_bump_helping(mob/living/tmob)
+	// CHOMPAdd - Phased
+	if(is_incorporeal() || tmob.is_incorporeal())
+		return FALSE
 	//Riding and being moved to us or something similar
 	if(tmob in buckled_mobs)
 		return TRUE
@@ -237,8 +240,6 @@
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 				src_message = tail.msg_owner_help_run
 				tmob_message = tail.msg_prey_help_run
-			if(tmob.is_incorporeal())	// CHOMPEdit - Nothing to step over.
-				return TRUE
 
 		//Smaller person stepping under larger person
 		else if(get_effective_size(TRUE) < tmob.get_effective_size(TRUE) && ishuman(tmob))
@@ -249,8 +250,6 @@
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 				src_message = tail.msg_prey_stepunder
 				tmob_message = tail.msg_owner_stepunder
-			if(tmob.is_incorporeal())	// CHOMPEdit - Can't run between what's not there
-				return TRUE
 
 		if(src_message)
 			to_chat(src, "<span class='filter_notice'>[STEP_TEXT_OWNER(src_message)]</span>")
@@ -275,6 +274,9 @@
 		return
 	//We can't be stepping on anyone
 	if(!canmove || buckled)
+		return
+	// CHOMPAdd - Phased
+	if(is_incorporeal() || tmob.is_incorporeal())
 		return
 
 	//Riding and being moved to us or something similar
@@ -414,7 +416,7 @@
 /mob/living/verb/toggle_pickups()
 	set name = "Toggle Micro Pick-up"
 	set desc = "Toggles whether your help-intent action attempts to pick up the micro or pet/hug/help them. Does not disable participation in pick-up mechanics entirely, refer to Vore Panel preferences for that."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	pickup_active = !pickup_active
 	to_chat(src, "<span class='filter_notice'>You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent.</span>")

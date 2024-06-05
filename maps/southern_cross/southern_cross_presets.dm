@@ -4,6 +4,7 @@ var/const/NETWORK_FIRST_DECK   = "First Deck"
 var/const/NETWORK_SUPPLY       = "Supply"
 var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outpost cameras
+var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance deck
 
 //
 // Cameras
@@ -27,6 +28,9 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 
 /obj/machinery/camera/network/carrier //CHOMPedit: Exploration carrier cameras
 	network = list(NETWORK_CARRIER)
+
+/obj/machinery/camera/network/maint_deck // CHOMPEdit - Maintenance deck
+	network = list(NETWORK_MAINT_DECK)
 
 // ### Preset machines  ###
 
@@ -72,10 +76,17 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 	listening_level = Z_LEVEL_MISC
 	autolinkers = list("exp_relay")
 
+/obj/machinery/telecomms/relay/preset/southerncross/d0
+	id = "Station Relay 0"
+	listening_level = Z_LEVEL_STATION_MAINTS
+	autolinkers = list("d0_relay")
+
+/* //Sky islands removal due to lack of use
 /obj/machinery/telecomms/relay/preset/southerncross/skylands
 	id = "Sky Island Relay"
 	listening_level = Z_LEVEL_SURFACE_SKYLANDS
 	autolinkers = list("sky_relay")
+*/
 
 /obj/machinery/telecomms/relay/preset/southerncross/valley
 	id = "Valley Relay"
@@ -100,8 +111,9 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub",
-		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "cnt_relay", "explorer", "exp_relay", "sky_relay", "valley_relay",
+		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "cnt_relay", "explorer", "exp_relay", "valley_relay",
 		//"belt_relay", // Chompstation edit - adds belt outpost to relays.	Temp Removal of Belt Relay TFF 15/2/20, Added Valley comn stuff 2/14/2023
+		//"sky_relay", // Sky islands removal due to lack of use
 		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused",
 		"hb_relay", "receiverA", "broadcasterA"
 	) //CHOMPedit: Adds "exp_relay"

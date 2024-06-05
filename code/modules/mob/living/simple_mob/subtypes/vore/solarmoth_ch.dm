@@ -68,7 +68,9 @@
 				"bio" = 100,
 				"rad" = 100)
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
+
+	glow_override = TRUE
 
 /datum/say_list/solarmoth
 	emote_see = list("flutters")
@@ -149,6 +151,8 @@
 	if(. == 0 && !is_dead())
 		set_light(9.5, 1, mycolour) //9.5 makes the brightness range super huge.
 		return 1
+	else if(is_dead())
+		glow_override = FALSE
 
 
 /mob/living/simple_mob/vore/solarmoth //active noms

@@ -40,6 +40,7 @@
 	var/is_animating_door = FALSE
 	/// Our visual object for the closet door, if we're animating
 	var/obj/effect/overlay/closet_door/door_obj
+	var/vore_sound = 'sound/effects/metalscrape2.ogg'
 
 /obj/structure/closet/Initialize()
 	..()
@@ -95,7 +96,7 @@
 			. += "It is full."
 
 	if(!opened && isobserver(user))
-		. += "It contains: [counting_english_list(contents)]"
+		. += "It contains: [counting_english_list(contents, user)]" //CHOMPEdit
 
 /obj/structure/closet/CanPass(atom/movable/mover, turf/target)
 	if(wall_mounted)
@@ -335,6 +336,8 @@
 						to_chat(user, "<span class='notice'>You need more welding fuel to complete this task.</span>")
 						return
 			if(do_after(user, 20 * S.toolspeed))
+				if(opened) //ChompEDIT - cancel weld if opened mid-progress to prevent welder-traps
+					return //ChompEDIT
 				playsound(src, S.usesound, 50)
 				sealed = !sealed
 				update_icon()
@@ -543,3 +546,49 @@
 	M.Multiply(matrix(cos(angle), 0, 0, -sin(angle) * closet_appearance.door_anim_squish, 1, 0))
 	M.Translate(closet_appearance.door_hinge, 0)
 	return M
+
+//verb to eat people in the same closet as yourself
+
+/obj/structure/closet/verb/hidden_vore()
+	set src in oview(1)
+	set category = "Object"
+	set name = "Devour Occupants" //ChompEDIT vore as a verb is cronge
+
+	if(!istype(usr, /mob/living)) //no ghosts
+		return
+
+	if(!(usr in src.contents))
+		to_chat(usr, "<span class='warning'>You need to be inside \the [src] to do this.</span>")
+		return
+
+	var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
+
+	for(var/mob/living/L in src.contents)
+		if(!istype(L, /mob/living)) //Don't eat anything that isn't mob/living. Failsafe.
+			continue
+		if(L == usr) //no eating yourself. 1984.
+			continue
+		if(L.devourable)
+			targets += L
+
+	if(targets == 0)
+		to_chat(src, "<span class='notice'>No eligible targets found.</span>")
+		return
+
+	var/mob/living/target = tgui_input_list(usr, "Please select a target.", "Victim", targets)
+
+	if(!target)
+		return
+
+	if(!istype(target, /mob/living)) //Safety.
+		to_chat(src, "<span class='warning'>You need to select a living target!</span>")
+		return
+
+	if (get_dist(src,target) >= 1 || get_dist(src,usr) >= 1) //in case they leave the locker
+		to_chat(src, "<span class='warning'>You are no longer both in \the [src].</span>")
+		return
+
+	playsound(src, vore_sound, 25)
+
+	var/mob/living/M = usr
+	M.perform_the_nom(usr,target,usr,usr.vore_selected,1)

@@ -143,8 +143,12 @@
 	user.drop_item()
 	if(I)
 		if(istype(I, /obj/item/weapon/holder/micro))
-			log_and_message_admins("placed [I.name]  inside \the [src]", user)
-		I.forceMove(src)
+			log_and_message_admins("placed [I.name] inside \the [src]", user)
+			var/obj/item/weapon/holder/H = I
+			H.held_mob.forceMove(src)
+			qdel(I)
+		else
+			I.forceMove(src)
 
 	to_chat(user, "You place \the [I] into the [src].")
 	for(var/mob/M in viewers(src))
@@ -528,14 +532,23 @@
 
 /obj/machinery/disposal/hitby(atom/movable/AM)
 	. = ..()
-	if(istype(AM, /obj/item) && !istype(AM, /obj/item/projectile))
+	//CHOMPEdit: fixes thrown disposal dunking with mobs~ - Reo
+	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
-			if(istype(AM, /obj/item/weapon/holder/micro))
-				log_and_message_admins("[AM] was thrown into \the [src]")
 			AM.forceMove(src)
-			visible_message("\The [AM] lands in \the [src].")
+			if(istype(AM, /obj/item/weapon/holder/micro) || istype(AM, /mob/living))
+				log_and_message_admins("[AM] was thrown into \the [src]")
+				visible_message("\The [AM] lands in \the [src]!")
+				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse
+				//flush = 1 //1984. No autoflush, no autopull. Leaving this here incase someone wants to revisit this in the future when the mood on this changes
+			else
+				visible_message("\The [AM] lands in \the [src].")
+			update_icon() //Yogs did this, so it probably doesnt hurt..
 		else
 			visible_message("\The [AM] bounces off of \the [src]'s rim!")
+			return ..() //...Yogs also did this! it's probably good to stop it from flying after clonking the thing. Also prevents trying to insert the mob repeatedly due to it the throw not ending.
+	return ..()
+	//CHOMPEdit End.
 
 /obj/machinery/disposal/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover, /obj/item/projectile))
@@ -642,7 +655,6 @@
 			src.destinationTag = T.sortTag
 		// CHOMPEdit End
 
-
 // start the movement process
 // argument is the disposal unit the holder started in
 /obj/structure/disposalholder/proc/start(var/obj/machinery/disposal/D)
@@ -734,12 +746,15 @@
 		return
 
 	var/mob/living/U = user
-
+	/* CHOMPEdit: Clong, clong baby.
 	if (U.stat || U.last_special <= world.time)
 		return
 
 	U.last_special = world.time+100
-
+	*/
+	if(U.stat)
+		return
+	//CHOMPEdit End.
 	if (src.loc)
 		for (var/mob/M in hearers(src.loc.loc))
 			to_chat(M, "<FONT size=[max(0, 5 - get_dist(src, M))]>CLONG, clong!</FONT>")
@@ -752,7 +767,15 @@
 	return
 
 /obj/structure/disposalholder/Destroy()
-	qdel(gas)
+	QDEL_NULL(gas)
+	if(contents.len)
+		var/turf/qdelloc = get_turf(src)
+		if(qdelloc)
+			for(var/atom/movable/AM in contents)
+				AM.loc = qdelloc
+		else
+			log_and_message_admins("A disposal holder was deleted with contents in nullspace") //ideally, this should never happen
+
 	active = 0
 	return ..()
 
@@ -864,6 +887,10 @@
 /obj/structure/disposalpipe/proc/expel(var/obj/structure/disposalholder/H, var/turf/T, var/direction)
 	if(!istype(H))
 		return
+
+	if(!isturf(T)) // try very hard to ensure we have a valid turf target
+		var/turf/GT = get_turf(T)
+		T = (GT ? GT : get_turf(src))
 
 	// Empty the holder if it is expelled into a dense turf.
 	// Leaving it intact and sitting in a wall is stupid.

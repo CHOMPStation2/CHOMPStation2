@@ -1217,7 +1217,7 @@
 /obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "c20r-[round(ammo_magazine.stored_ammo.len,10)]"
+		icon_state = "c20r-[round(ammo_magazine.stored_ammo.len,4)]"
 	else
 		icon_state = "c20r"
 	return
@@ -1252,7 +1252,7 @@
 /obj/item/weapon/gun/projectile/automatic/wt550
 	muzzle_velocity = 375	//Guestimation
 	icon = 'icons/obj/64x32guns_ch.dmi'
-	icon_state = "wt550-50"
+	icon_state = "wt550-20"
 	icon_expected_height = 32
 	icon_expected_width = 64
 
@@ -1278,7 +1278,7 @@
 /obj/item/weapon/gun/projectile/automatic/z8/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,5)]"
+		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
 	else
 		icon_state = "carbine-e"
 	return

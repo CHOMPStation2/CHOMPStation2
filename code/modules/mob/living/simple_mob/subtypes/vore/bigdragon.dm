@@ -106,7 +106,7 @@ I think I covered everything.
 	special_attack_max_range = 10
 	special_attack_cooldown = 80
 
-	plane = ABOVE_MOB_PLANE
+	plane = MOB_PLANE //CHOMPEdit
 
 	//Dragon vars
 	var/notame
@@ -122,6 +122,8 @@ I think I covered everything.
 	var/small_icon = 'icons/mob/bigdragon_small.dmi'
 	var/small_icon_state = "dragon_small"
 	var/flames
+	var/firebreathtimer
+	var/chargetimer
 
 	tame_items = list(
 	/obj/item/weapon/coin/gold = 100,
@@ -236,13 +238,13 @@ I think I covered everything.
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_style
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle
-	verbs |= /mob/living/simple_mob/vore/bigdragon/proc/special_toggle
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/set_style) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/toggle_glow) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/flame_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle) //CHOMPEdit TGPanel
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = "neutral"
@@ -262,6 +264,10 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/runechat_y_offset(width, height)
 	return (..()*size_multiplier) + 40
 
+/mob/living/simple_mob/vore/bigdragon/death()
+	. = ..()
+	canceltimers()
+
 ///
 ///		Verbs
 ///
@@ -269,14 +275,14 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow()
 	set name = "Toggle Glow"
 	set desc = "Switch between glowing and not glowing."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	glow_toggle = !glow_toggle
 
 /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle()
 	set name = "Toggle Small Sprite"
 	set desc = "Switches your sprite to a smaller variant so you can see what you're doing. Others will always see your standard sprite instead. "
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	if(!small)
 		var/image/I = image(icon = small_icon, icon_state = small_icon_state, loc = src)
@@ -291,7 +297,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle()
 	set name = "Toggle breath attack"
 	set desc = "Toggles whether you will breath attack on harm intent (If you have one)."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	if(norange)
 		to_chat(src, "<span class='userdanger'>You don't have a breath attack!</span>")
@@ -303,7 +309,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/special_toggle()
 	set name = "Toggle special attacks"
 	set desc = "Toggles whether you will tail spin and charge (If you have them)."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	if(nospecial)
 		to_chat(src, "<span class='userdanger'>You don't have special attacks!</span>")
@@ -412,7 +418,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_style()
 	set name = "Set Dragon Style"
 	set desc = "Customise your icons."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 
 	var/list/options = list("Underbelly","Body","Ears","Mane","Horns","Eyes")
 	for(var/option in options)
@@ -570,6 +576,7 @@ I think I covered everything.
 /obj/belly/dragon
 	autotransferchance = 50
 	autotransferwait = 150
+	autotransfer_enabled = 1 //ChompEDIT
 	escapable = 1
 	escapechance = 100
 	escapetime = 15
@@ -775,10 +782,14 @@ I think I covered everything.
 
 	do_windup_animation(A, charge_warmup)
 	//callbacks are more reliable than byond's process scheduler
-	addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup)
+	chargetimer = addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup, TIMER_STOPPABLE)
 
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
+	//make sure our target still exists and is on a turf
+	if(QDELETED(A) || !isturf(get_turf(A)))
+		set_AI_busy(FALSE)
+		return
 	status_flags |= LEAPING
 	flying  = 1		//So we can thunk into things
 	hovering = 1	// So we don't hurt ourselves running off cliffs
@@ -813,10 +824,14 @@ I think I covered everything.
 		set_AI_busy(TRUE)
 	flames = 1
 	build_icons()
-	addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup)
+	firebreathtimer = addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup, TIMER_STOPPABLE)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)
+	//make sure our target still exists and is on a turf
+	if(QDELETED(A) || !isturf(get_turf(A)))
+		set_AI_busy(FALSE)
+		return
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
 	src.visible_message("<span class='danger'>\The [src] spews fire at \the [A]!</span>")
 	playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
@@ -899,6 +914,9 @@ I think I covered everything.
 	norange = 1		//Don't start fires while friendly
 	vore_selected = gut2 //Just incase it eats someone right after being tamed
 	ai_holder = new /datum/ai_holder/simple_mob/healbelly/retaliate/dragon(src)
+
+	//Cancel any charges or firebreaths winding up
+	canceltimers()
 
 /datum/ai_holder/simple_mob/healbelly
 	intelligence_level = 3
@@ -1041,6 +1059,17 @@ I think I covered everything.
 	ai_holder = D
 	vore_selected = gut1
 	D.give_target(attacker)
+
+/mob/living/simple_mob/vore/bigdragon/proc/canceltimers()
+	//Cancel any charges or firebreaths winding up
+	if(firebreathtimer)
+		deltimer(firebreathtimer)
+		firebreathtimer = null
+	if(chargetimer)
+		deltimer(chargetimer)
+		chargetimer = null
+	//re-enable the AI
+	set_AI_busy(FALSE)
 
 //Smack people it warns
 /datum/ai_holder/simple_mob/healbelly/retaliate/dragon/proc/dissuade(var/chump)

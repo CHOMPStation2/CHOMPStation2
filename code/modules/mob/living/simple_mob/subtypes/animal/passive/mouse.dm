@@ -40,6 +40,8 @@
 
 	say_list_type = /datum/say_list/mouse
 
+	hasthermals = FALSE
+
 	var/body_color //brown, gray, white and black, leave blank for random
 
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
@@ -65,8 +67,8 @@
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 	if(name == initial(name))
 		name = "[name] ([rand(1, 1000)])"
@@ -99,7 +101,7 @@
 	if( ishuman(AM) )
 		if(!stat)
 			var/mob/M = AM
-			M.visible_message(span_blue("\icon[src][bicon(src)] Squeek!"))
+			M.visible_message(span_blue("[icon2html(src,viewers(src))] Squeek!"))
 			playsound(src, 'sound/effects/mouse_squeak.ogg', 35, 1)
 	..()
 
@@ -215,7 +217,7 @@
 // CHOMPAdd - Verb for mice colour changing
 /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour()
 	set name = "Set Mouse Colour"
-	set category = "Abilities"
+	set category = "Abilities.Mouse" //CHOMPEdit
 	set desc = "Set the colour of your mouse."
 	var/new_mouse_colour = tgui_input_list(usr, "Set Mouse Colour", "Pick a colour", list("brown","gray","white","black"))
 	if(!new_mouse_colour) return
@@ -227,5 +229,5 @@
 	desc = "A small [new_mouse_colour] rodent, often seen hiding in maintenance areas and making a nuisance of itself."
 	holder_type = text2path("/obj/item/weapon/holder/mouse/[new_mouse_colour]")
 	to_chat(src, SPAN_NOTICE("You are now a [new_mouse_colour] mouse!"))
-	verbs -= /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour
+	remove_verb(src,/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour) //CHOMPEdit TGPanel
 // CHOMPAdd End

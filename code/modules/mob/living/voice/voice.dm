@@ -4,12 +4,13 @@
 	desc = "How are you examining me?"
 	see_invisible = SEE_INVISIBLE_LIVING
 	var/obj/item/device/communicator/comm = null
+	var/item_tf = FALSE //CHOMPEdit
 
 	emote_type = 2 //This lets them emote through containers.  The communicator has a image feed of the person calling them so...
 
 /mob/living/voice/Initialize(loc)
 	add_language(LANGUAGE_GALCOM)
-	set_default_language(GLOB.all_languages[LANGUAGE_GALCOM])
+	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM]) //CHOMPEdit
 
 	if(istype(loc, /obj/item/device/communicator))
 		comm = loc
@@ -83,7 +84,7 @@
 	var/new_name = sanitizeSafe(tgui_input_text(src, "Who would you like to be now?", "Communicator", src.client.prefs.real_name, MAX_NAME_LEN), MAX_NAME_LEN)
 	if(new_name)
 		if(comm)
-			comm.visible_message("<span class='notice'>\icon[comm][bicon(comm)] [src.name] has left, and now you see [new_name].</span>")
+			comm.visible_message("<span class='notice'>[icon2html(comm,viewers(comm))] [src.name] has left, and now you see [new_name].</span>")
 		//Do a bit of logging in-case anyone tries to impersonate other characters for whatever reason.
 		var/msg = "[src.client.key] ([src]) has changed their communicator identity's name to [new_name]."
 		message_admins(msg)
@@ -140,5 +141,10 @@
 	return ..()
 
 /mob/living/voice/custom_emote(var/m_type = VISIBLE_MESSAGE, var/message = null, var/range = world.view)
-	if(!comm) return
-	..(m_type,message,comm.video_range)
+	//CHOMPEdit Start
+	if(comm)
+		..(m_type,message,comm.video_range)
+	else if(item_tf)
+		..(m_type,message,range)
+	//CHOMPEdit End
+

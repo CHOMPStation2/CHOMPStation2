@@ -871,7 +871,11 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		"parent_type",
 		"verbs",
 		"ckey",
-		"key"
+		"key",
+		"_active_timers", // ChompEDIT - blacklist timers
+		"_datum_components", // ChompEDIT - blacklist DCS
+		"_listen_lookup",  // ChompEDIT - blacklist signal listeners
+		"_signal_procs" // ChompEDIT - blacklist signal procs
 	)
 	if(perfectcopy)
 		if((O) && (original))
@@ -1386,7 +1390,7 @@ var/mob/dview/dview_mob = new
 #undef HAS_FLAG
 
 //datum may be null, but it does need to be a typed var
-#define NAMEOF(datum, X) (#X || ##datum.##X)
+//#define NAMEOF(datum, X) (#X || ##datum.##X) // CHOMPEdit: Moved to nameof_ch.dm
 
 #define VARSET_LIST_CALLBACK(target, var_name, var_value) CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(___callbackvarset), ##target, ##var_name, ##var_value)
 //dupe code because dm can't handle 3 level deep macros

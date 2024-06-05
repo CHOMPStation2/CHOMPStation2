@@ -274,21 +274,18 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
-/* //CHOMPRemove - we dont use the old sprites so this is useless
 /datum/robot_sprite/dogborg/tall/service/newmeka
 	name = "MEKA v2"
 	sprite_icon_state = "newmeka"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
-	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
-*/
+
 /datum/robot_sprite/dogborg/tall/service/mmeka
 	name = "NIKO"
 	sprite_icon_state = "mmeka"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
-	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/service/fmeka
@@ -296,7 +293,6 @@
 	sprite_icon_state = "fmeka"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
-	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/service/k4t

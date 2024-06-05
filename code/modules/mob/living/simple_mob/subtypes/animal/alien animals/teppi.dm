@@ -120,6 +120,8 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	var/teppi_warned = FALSE
 	var/teppi_mutate = FALSE	//Allows Teppi to get their children's colors scrambled, and possibly other things later on!
 
+	var/teppi_growingup = FALSE // flag to prevent multiple qdels
+
 	attacktext = list("nipped", "chomped", "bonked", "stamped on")
 	attack_sound = 'sound/voice/teppi/roar.ogg' // make a better one idiot
 	friendly = list("snoofs", "nuzzles", "nibbles", "smooshes on")
@@ -128,7 +130,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 
 	mob_size = MOB_LARGE
 
-	//has_langs = list(LANGUAGE_TEPPI) //CHOMPEdit: Requested for this to be removed so players can have teppi
+	has_langs = list(LANGUAGE_TEPPI)
 	say_list_type = /datum/say_list/teppi
 	player_msg = "Teppi are large omnivorous quadrupeds. You have four toes on each paw, a long, strong tail, and are quite tough and powerful. You’re a lot more intimidating than you are actually harmful though. Your kind are ordinarily rather passive, only really rising to violence when someone does violence to you or others like you. You’re not stupid though, you can commiunicate with others of your kind, and form bonds with those who are kind to you, be they Teppi or otherwise. <br>- - - - -<br><span class='notice'>While you may have access to galactic common, this is purely meant for making it so you can understand people in an OOC manner, for facilitating roleplay. You almost certainly should not be speaking to people or roleplaying as though you understand everything everyone says perfectly, but it's not unreasonable to be able to intuit intent and such through people's tones when they speak. Teppi are kind of smart, but they are animals, and should be roleplayed as such.</span> <span class='warning'>ADDITIONALLY, you have the ability to produce offspring if you're well fed enough every once in a while, and the ability to disable this from happening to you. These verbs exist for to preserve the mechanical functionality of the mob you are playing. You should be aware of your surroundings when you use this verb, and NEVER use it to prefbreak or be disruptive. If in doubt, don't use it.</span> <span class='notice'>Also, to note, AI Teppi will never initiate breeding with player Teppi.</span>"
 	loot_list = list(/obj/item/weapon/bone/horn = 100)
@@ -337,11 +339,11 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		real_name = name
 	if(!teppi_adult)
 		nutrition = 0
-		verbs += /mob/living/proc/ventcrawl
-		verbs += /mob/living/proc/hide
+		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	else
-		verbs += /mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring
-		verbs += /mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring
+		add_verb(src,/mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring) //CHOMPEdit TGPanel
 
 
 //	teppi_id = rand(1,100000)
@@ -687,7 +689,10 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 			var/nutrition_cost = 500 + (nutrition / 2)
 			adjust_nutrition(-nutrition_cost)
 			new /mob/living/simple_mob/vore/alienanimals/teppi(loc, src)
-			qdel(src)
+			if(!teppi_growingup)
+				teppi_growingup = TRUE
+				qdel(src)
+				return
 		else
 			visible_message("\The [src] whines pathetically...", runemessage = "whines")
 			if(prob(50))
@@ -970,7 +975,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 //
 /mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring()
 	set name = "Produce Offspring"
-	set category = "Abilities"
+	set category = "Abilities.Teppi" //CHOMPEdit
 	set desc = "You can have babies if the conditions are right."
 	if(prevent_breeding)
 		to_chat(src, "<span class='notice'>You have elected to not participate in breeding mechanics, and so cannot complete that action.</span>")
@@ -1012,7 +1017,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 
 /mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring()
 	set name = "Toggle Producing Offspring"
-	set category = "Abilities"
+	set category = "Abilities.Teppi" //CHOMPEdit
 	set desc = "You can toggle whether or not you can produce offspring."
 	if(!prevent_breeding)
 		to_chat(src, "<span class='notice'>You disable breeding.</span>")

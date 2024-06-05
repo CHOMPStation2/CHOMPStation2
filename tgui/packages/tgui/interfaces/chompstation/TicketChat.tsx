@@ -1,6 +1,8 @@
 /* eslint react/no-danger: "off" */
+import { useState } from 'react';
+
 import { KEY_ENTER } from '../../../common/keycodes';
-import { useBackend, useLocalState } from '../../backend';
+import { useBackend } from '../../backend';
 import {
   Box,
   Button,
@@ -44,7 +46,7 @@ type Data = {
 
 export const TicketChat = (props) => {
   const { act, data } = useBackend<Data>();
-  const [ticketChat, setTicketChat] = useLocalState('ticketChat', '');
+  const [ticketChat, setTicketChat] = useState('');
   const { id, level, handler, log } = data;
   return (
     <Window width={900} height={600}>
@@ -53,7 +55,7 @@ export const TicketChat = (props) => {
           title={'Ticket #' + id}
           buttons={
             <Box nowrap>
-              <Button content={Level[level]} color={LevelColor[level]} />
+              <Button color={LevelColor[level]}>{Level[level]}</Button>
             </Box>
           }
         >
@@ -94,12 +96,13 @@ export const TicketChat = (props) => {
                 </Flex.Item>
                 <Flex.Item>
                   <Button
-                    content="Send"
                     onClick={() => {
                       act('send_msg', { msg: ticketChat });
                       setTicketChat('');
                     }}
-                  />
+                  >
+                    Send
+                  </Button>
                 </Flex.Item>
               </Flex>
             </Flex.Item>

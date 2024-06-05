@@ -140,7 +140,7 @@
 
 	if(!breath || (breath.total_moles == 0))
 		H.failed_last_breath = 1
-		if(H.health > config.health_threshold_crit)
+		if(H.health > CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
 			H.adjustOxyLoss(ALRAUNE_MAX_OXYLOSS)
 		else
 			H.adjustOxyLoss(ALRAUNE_CRIT_MAX_OXYLOSS)
@@ -384,7 +384,7 @@
 /mob/living/carbon/human/proc/alraune_fruit_select() //So if someone doesn't want fruit/vegetables, they don't have to select one.
 	set name = "Select fruit"
 	set desc = "Select what fruit/vegetable you wish to grow."
-	set category = "Abilities"
+	set category = "Abilities.Alraune" //CHOMPEdit
 	var/obj/item/organ/internal/fruitgland/fruit_gland
 	for(var/F in contents)
 		if(istype(F, /obj/item/organ/internal/fruitgland))
@@ -395,7 +395,7 @@
 		var/selection = tgui_input_list(src, "Choose your character's fruit type. Choosing nothing will result in a default of apples.", "Fruit Type", acceptable_fruit_types)
 		if(selection)
 			fruit_gland.fruit_type = selection
-		verbs |= /mob/living/carbon/human/proc/alraune_fruit_pick
+		add_verb(src,/mob/living/carbon/human/proc/alraune_fruit_pick) //CHOMPEdit TGPanel
 		//verbs -= /mob/living/carbon/human/proc/alraune_fruit_select // Chomp Edit
 		fruit_gland.organ_owner = src
 		fruit_gland.emote_descriptor = list("fruit right off of [fruit_gland.organ_owner]!", "a fruit from [fruit_gland.organ_owner]!")

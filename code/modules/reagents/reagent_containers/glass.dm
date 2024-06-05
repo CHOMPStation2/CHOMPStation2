@@ -77,10 +77,12 @@
 /obj/item/weapon/reagent_containers/glass/attack_self()
 	..()
 	if(is_open_container())
-		to_chat(usr, "<span class = 'notice'>You put the lid on \the [src].</span>")
+		// to_chat(usr, "<span class = 'notice'>You put the lid on \the [src].</span>")
+		balloon_alert(usr, "Lid put on \the [src]")
 		flags ^= OPENCONTAINER
 	else
-		to_chat(usr, "<span class = 'notice'>You take the lid off \the [src].</span>")
+		// to_chat(usr, "<span class = 'notice'>You take the lid off \the [src].</span>")
+		balloon_alert(usr, "Lid removed off \the [src]") // CHOMPEdit - Changed to ballopn alert
 		flags |= OPENCONTAINER
 	update_icon()
 
@@ -102,7 +104,8 @@
 	return ..()
 
 /obj/item/weapon/reagent_containers/glass/self_feed_message(var/mob/user)
-	to_chat(user, "<span class='notice'>You swallow a gulp from \the [src].</span>")
+	// to_chat(user, "<span class='notice'>You swallow a gulp from \the [src].</span>")
+	balloon_alert(user, "Swallowed from \the [src]") // CHOMPEdit - Changed to balloon alert
 
 /obj/item/weapon/reagent_containers/glass/afterattack(var/obj/target, var/mob/user, var/proximity)
 	if(!is_open_container() || !proximity) //Is the container open & are they next to whatever they're clicking?
@@ -118,7 +121,8 @@
 		if(standard_splash_mob(user,target))
 			return 1
 		if(reagents && reagents.total_volume)
-			to_chat(user, "<span class='notice'>You splash the solution onto [target].</span>") //They are on harm intent, aka wanting to spill it.
+			// to_chat(user, "<span class='notice'>You splash the solution onto [target].</span>") //They are on harm intent, aka wanting to spill it.
+			balloon_alert(user, "Splashed the solution onto [target]")
 			reagents.splash(target, reagents.total_volume)
 			return 1
 	..()
@@ -129,17 +133,20 @@
 		if(length(tmp_label) > 50)
 			to_chat(user, "<span class='notice'>The label can be at most 50 characters long.</span>")
 		else if(length(tmp_label) > 10)
-			to_chat(user, "<span class='notice'>You set the label.</span>")
+			// to_chat(user, "<span class='notice'>You set the label.</span>")
+			balloon_alert(user, "Label set.") // CHOMPEdit - Changed to balloon alert
 			label_text = tmp_label
 			update_name_label()
 		else
-			to_chat(user, "<span class='notice'>You set the label to \"[tmp_label]\".</span>")
+			// to_chat(user, "<span class='notice'>You set the label to \"[tmp_label]\".</span>")
+			balloon_alert(user, "Label set to \"[tmp_label]\"") // CHOMPEdit - Changed to balloon alert
 			label_text = tmp_label
 			update_name_label()
 	if(istype(W,/obj/item/weapon/storage/bag))
 		..()
 	if(W && W.w_class <= w_class && (flags & OPENCONTAINER) && user.a_intent != I_HELP)
-		to_chat(user, "<span class='notice'>You dip \the [W] into \the [src].</span>")
+		// to_chat(user, "<span class='notice'>You dip \the [W] into \the [src].</span>")
+		balloon_alert(user, "[W] dipped into \the [src].") // CHOMPEdit - Changed to balloon alert
 		reagents.touch_obj(W, reagents.total_volume)
 
 /obj/item/weapon/reagent_containers/glass/proc/update_name_label()
@@ -159,7 +166,8 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "beaker"
 	item_state = "beaker"
-	center_of_mass = list("x" = 15,"y" = 11)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 	matter = list(MAT_GLASS = 500)
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
@@ -215,7 +223,8 @@
 	name = "large beaker"
 	desc = "A large beaker."
 	icon_state = "beakerlarge"
-	center_of_mass = list("x" = 16,"y" = 11)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 	matter = list(MAT_GLASS = 5000)
 	volume = 120
 	amount_per_transfer_from_this = 10
@@ -227,7 +236,8 @@
 	name = "cryostasis beaker"
 	desc = "A cryostasis beaker that allows for chemical storage without reactions."
 	icon_state = "beakernoreact"
-	center_of_mass = list("x" = 16,"y" = 13)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 13 //CHOMPEdit
 	matter = list(MAT_GLASS = 500)
 	volume = 60
 	amount_per_transfer_from_this = 10
@@ -237,7 +247,8 @@
 	name = "bluespace beaker"
 	desc = "A bluespace beaker, powered by experimental bluespace technology."
 	icon_state = "beakerbluespace"
-	center_of_mass = list("x" = 16,"y" = 11)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 11 //CHOMPEdit
 	matter = list(MAT_GLASS = 5000)
 	volume = 300
 	amount_per_transfer_from_this = 10
@@ -249,7 +260,8 @@
 	name = "vial"
 	desc = "A small glass vial."
 	icon_state = "vial"
-	center_of_mass = list("x" = 15,"y" = 9)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 9 //CHOMPEdit
 	matter = list(MAT_GLASS = 250)
 	volume = 30
 	w_class = ITEMSIZE_TINY
@@ -268,7 +280,8 @@
 	name = "stoppered bottle"
 	desc = "A stoppered bottle for keeping beverages fresh."
 	icon_state = "stopperedbottle"
-	center_of_mass = list("x" = 16,"y" = 13)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 13 //CHOMPEdit
 	volume = 120
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5,10,15,25,30,60,120)
@@ -280,7 +293,8 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "bucket"
 	item_state = "bucket"
-	center_of_mass = list("x" = 16,"y" = 10)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 	matter = list(MAT_STEEL = 200)
 	w_class = ITEMSIZE_NORMAL
 	amount_per_transfer_from_this = 20
@@ -300,7 +314,8 @@
 		qdel(src)
 		return
 	else if(D.has_tool_quality(TOOL_WIRECUTTER))
-		to_chat(user, "<span class='notice'>You cut a big hole in \the [src] with \the [D].  It's kinda useless as a bucket now.</span>")
+		// to_chat(user, "<span class='notice'>You cut a big hole in \the [src] with \the [D].  It's kinda useless as a bucket now.</span>")
+		balloon_alert(user, "You cut a big hole in \the [src] with \the [D]. It's kinda useless now.") // CHOMPEdit - Changed to balloon alert
 		user.put_in_hands(new /obj/item/clothing/head/helmet/bucket)
 		user.drop_from_inventory(src)
 		qdel(src)
@@ -310,16 +325,19 @@
 		if (M.use(1))
 			var/obj/item/weapon/secbot_assembly/edCLN_assembly/B = new /obj/item/weapon/secbot_assembly/edCLN_assembly
 			B.loc = get_turf(src)
-			to_chat(user, "<span class='notice'>You armed the robot frame.</span>")
+			// to_chat(user, "<span class='notice'>You armed the robot frame.</span>")
+			balloon_alert(user, "Armed the robot frame.")
 			if (user.get_inactive_hand()==src)
 				user.remove_from_mob(src)
 				user.put_in_inactive_hand(B)
 			qdel(src)
 		else
-			to_chat(user, "<span class='warning'>You need one sheet of metal to arm the robot frame.</span>")
+			// to_chat(user, "<span class='warning'>You need one sheet of metal to arm the robot frame.</span>")
+			balloon_alert(user, "One sheet of metal is needed to arm the robot frame.") // CHOMPEdit - Changed to balloon alert
 	else if(istype(D, /obj/item/weapon/mop) || istype(D, /obj/item/weapon/soap) || istype(D, /obj/item/weapon/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
 		if(reagents.total_volume < 1)
-			to_chat(user, "<span class='warning'>\The [src] is empty!</span>")
+			// to_chat(user, "<span class='warning'>\The [src] is empty!</span>")
+			balloon_alert(user, "\The [src] is empty!") // CHOMPEdit - Changed to balloon alert
 		else
 			reagents.trans_to_obj(D, 5)
 			to_chat(user, "<span class='notice'>You wet \the [D] in \the [src].</span>")
@@ -338,7 +356,8 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "woodbucket"
 	item_state = "woodbucket"
-	center_of_mass = list("x" = 16,"y" = 8)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 8 //CHOMPEdit
 	matter = list(MAT_WOOD = 50)
 	w_class = ITEMSIZE_LARGE
 	amount_per_transfer_from_this = 20

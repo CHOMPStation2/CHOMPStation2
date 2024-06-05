@@ -73,7 +73,7 @@
 	protectiveness = 30
 	conductive = 0
 	opacity = 0.25
-	reflectivity = 60
+	reflectivity = 0.6
 	supply_conversion_value = 4
 
 /obj/item/stack/material/crystalscale
@@ -99,7 +99,7 @@
 	ignition_point = T0C+200
 	melting_point = T0C+400
 	protectiveness = 60
-	reflectivity = 30
+	reflectivity = 0.3
 	supply_conversion_value = 1
 
 /obj/item/stack/material/dreamscale
@@ -120,7 +120,7 @@
 	icon_base = "solid"
 	icon_reinf = "reinf_mesh"
 	integrity = 250
-	weight = 100
+	weight = 70
 	ignition_point = T0C+300
 	melting_point = T0C+600
 	protectiveness = 50

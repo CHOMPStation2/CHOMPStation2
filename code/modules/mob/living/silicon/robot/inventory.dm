@@ -51,6 +51,7 @@
 		module_state_3:loc = module
 		module_state_3 = null
 		inv3.icon_state = "inv3"
+	after_equip()
 	update_icon()
 	hud_used.update_robot_modules_display()
 
@@ -84,6 +85,7 @@
 		module_state_3:loc = module
 		module_state_3 = null
 		inv3.icon_state = "inv3"
+	after_equip()
 	update_icon()
 
 /mob/living/silicon/robot/proc/activated(obj/item/O)
@@ -252,6 +254,30 @@
 			sight_mode |= module_state_3:sight_mode
 	else
 		to_chat(src, "<span class='notice'>You need to disable a module first!</span>")
+		return
+	after_equip(O)
+
+/mob/living/silicon/robot/proc/after_equip(var/obj/item/O)
+	if(istype(O, /obj/item/device/gps))
+		var/obj/item/device/gps/tracker = O
+		if(tracker.tracking)
+			tracker.tracking = FALSE
+			tracker.toggle_tracking()
+	/* //ChompEDIT START - remove bluespace pounce
+	if(sight_mode & BORGANOMALOUS)
+		var/obj/item/weapon/dogborg/pounce/pounce = has_upgrade_module(/obj/item/weapon/dogborg/pounce)
+		if(pounce)
+			pounce.name = "bluespace pounce"
+			pounce.icon_state = "bluespace_pounce"
+			pounce.bluespace = TRUE
+	else
+		var/obj/item/weapon/dogborg/pounce/pounce = has_upgrade_module(/obj/item/weapon/dogborg/pounce)
+		if(pounce)
+			pounce.name = initial(pounce.name)
+			pounce.icon_state = initial(pounce.icon_state)
+			pounce.desc = initial(pounce.desc)
+			pounce.bluespace = initial(pounce.bluespace)
+	*/ //ChompEDIT END
 
 /mob/living/silicon/robot/put_in_hands(var/obj/item/W) // No hands.
 	W.loc = get_turf(src)

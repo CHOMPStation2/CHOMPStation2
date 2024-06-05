@@ -162,3 +162,65 @@ Talon pin
 /datum/gear/accessory/antediluvian/loin
 	display_name = "antediluvian loincloth"
 	path = /obj/item/clothing/accessory/antediluvian/loincloth
+
+//Replikant accessories
+
+/datum/gear/accessory/sleekpatch
+	display_name = "sleek uniform patch"
+	path = /obj/item/clothing/accessory/sleekpatch
+
+/datum/gear/accessory/poncho/roles/cloak/custom/gestaltjacket
+	display_name = "sleek uniform jacket"
+	path = /obj/item/clothing/accessory/poncho/roles/cloak/custom/gestaltjacket
+
+/datum/gear/accessory/replika
+	display_name = "replikant vest selection"
+	path = /obj/item/clothing/accessory/replika
+
+/datum/gear/accessory/replika/New()
+	..()
+	var/list/replika_vests = list(
+	"controller replikant chestplate" = /obj/item/clothing/accessory/replika/klbr,
+	"combat-engineer replikant chestplate" = /obj/item/clothing/accessory/replika/lstr,
+	"security-controller replikant chestplate" = /obj/item/clothing/accessory/replika/stcr,
+	"security-technician replikant chestplate" = /obj/item/clothing/accessory/replika/star
+	)
+	gear_tweaks += new/datum/gear_tweak/path(replika_vests)
+
+/datum/gear/accessory/insignia
+	display_name = "Insignia Selection"
+	path = /obj/item/clothing/accessory/solgov/department
+
+/datum/gear/accessory/insignia/New()
+	..()
+	var/insignia = list(
+	"Command - Crew" = /obj/item/clothing/accessory/solgov/department/command,
+	"Command - Crew Short" = /obj/item/clothing/accessory/solgov/department/command/service,
+	"Command - Bands" = /obj/item/clothing/accessory/solgov/department/command/fleet,
+	"Command - Echelons" = /obj/item/clothing/accessory/solgov/department/command/army,
+	"Security - Crew" = /obj/item/clothing/accessory/solgov/department/security,
+	"Security - Crew Short" = /obj/item/clothing/accessory/solgov/department/security/service,
+	"Security - Bands" = /obj/item/clothing/accessory/solgov/department/security/fleet,
+	"Security - Echelons" = /obj/item/clothing/accessory/solgov/department/security/army,
+	"Medical - Crew" = /obj/item/clothing/accessory/solgov/department/medical,
+	"Medical - Crew Short" = /obj/item/clothing/accessory/solgov/department/medical/service,
+	"Medical - Bands" = /obj/item/clothing/accessory/solgov/department/medical/fleet,
+	"Medical - Echelons" = /obj/item/clothing/accessory/solgov/department/medical/army,
+	"Science - Crew" = /obj/item/clothing/accessory/solgov/department/research,
+	"Science - Crew Short" = /obj/item/clothing/accessory/solgov/department/research/service,
+	"Science - Bands" = /obj/item/clothing/accessory/solgov/department/research/fleet,
+	"Science - Echelons" = /obj/item/clothing/accessory/solgov/department/research/army,
+	"Engineering - Crew" = /obj/item/clothing/accessory/solgov/department/engineering,
+	"Engineering - Crew Short" = /obj/item/clothing/accessory/solgov/department/engineering/service,
+	"Engineering - Bands" = /obj/item/clothing/accessory/solgov/department/engineering/fleet,
+	"Engineering - Echelons" = /obj/item/clothing/accessory/solgov/department/engineering/army,
+	"Supply - Crew" = /obj/item/clothing/accessory/solgov/department/supply,
+	"Supply - Crew Short" = /obj/item/clothing/accessory/solgov/department/supply/service,
+	"Supply - Bands" = /obj/item/clothing/accessory/solgov/department/supply/fleet,
+	"Supply - Echelons" = /obj/item/clothing/accessory/solgov/department/supply/army,
+	"Service - Crew" = /obj/item/clothing/accessory/solgov/department/service,
+	"Service - Crew Short" = /obj/item/clothing/accessory/solgov/department/service/service,
+	"Service - Bands" = /obj/item/clothing/accessory/solgov/department/service/fleet,
+	"Service - Echelons" = /obj/item/clothing/accessory/solgov/department/service/army
+	)
+	gear_tweaks += new/datum/gear_tweak/path(insignia)

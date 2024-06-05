@@ -5,18 +5,18 @@
 		enabled = 0
 	New()
 		..()
-		src.enabled = config.socket_talk
+		src.enabled = CONFIG_GET(flag/socket_talk) // CHOMPEdit
 
 		if(enabled)
-			LIBCALL("DLLSocket.so","establish_connection")("127.0.0.1","8019")
+			call_ext("DLLSocket.so","establish_connection")("127.0.0.1","8019") // CHOMPEdit
 
 	proc
 		send_raw(message)
 			if(enabled)
-				return LIBCALL("DLLSocket.so","send_message")(message)
+				return call_ext("DLLSocket.so","send_message")(message) // CHOMPEdit
 		receive_raw()
 			if(enabled)
-				return LIBCALL("DLLSocket.so","recv_message")()
+				return call_ext("DLLSocket.so","recv_message")() // CHOMPEdit
 		send_log(var/log, var/message)
 			return send_raw("type=log&log=[log]&message=[message]")
 		send_keepalive()

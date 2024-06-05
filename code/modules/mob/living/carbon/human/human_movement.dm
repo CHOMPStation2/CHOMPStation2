@@ -116,7 +116,7 @@
 			. *= 0.5
 		. -= chem_effects[CE_SPEEDBOOST]	// give 'em a buff on top.
 
-	. = max(HUMAN_LOWEST_SLOWDOWN, . + config.human_delay)	// Minimum return should be the same as force_max_speed
+	. = max(HUMAN_LOWEST_SLOWDOWN, . + CONFIG_GET(number/human_delay))	// Minimum return should be the same as force_max_speed // CHOMPEdit
 	. += ..()
 
 /mob/living/carbon/human/Moved()
@@ -154,7 +154,8 @@
 		var/turf_move_cost = T.movement_cost
 		if(istype(T, /turf/simulated/floor/water))
 			if(species.water_movement)
-				turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15)
+				//turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15) //ChompEDIT - all water is free movement for aquatics
+				turf_move_cost = 0 //ChompEDIT - all water is free movement for aquatics
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
 				if(istype(feet) && feet.water_speed)
@@ -258,12 +259,14 @@
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
-	if(!istype(T) || is_incorporeal() || !config.footstep_volume || !T.footstep_sounds || !T.footstep_sounds.len)
+	if(!istype(T) || is_incorporeal() || !CONFIG_GET(number/footstep_volume) || !T.footstep_sounds || !T.footstep_sounds.len) // CHOMPEdit
 		return	//CHOMPEdit - Condensed some return checks
-	// Future Upgrades - Multi species support
-	var/list/footstep_sounds = T.footstep_sounds["human"]
-	if(!footstep_sounds)
-		return
+	// CHOMPedit start: Future Upgrades - Multi species support
+	var/list/footstep_sounds = T.footstep_sounds[src.get_species()]
+	if(!LAZYLEN(footstep_sounds))
+		footstep_sounds = T.footstep_sounds["human"] // Probably doesn't have species sounds, use the default // TODO: replace this with a define, unfortunately SPECIES_HUMAN is "Human" instead of "human"
+		if(!footstep_sounds)
+			return // CHOMPedit end
 	var/S = pick(footstep_sounds)
 	GLOB.step_taken_shift_roundstat++
 	if(!S) return
@@ -280,7 +283,7 @@
 	if(step_count % 2 == 0)	//CHOMPAdd, since I removed the returns up above, need this to track each odd step.
 		return
 
-	var/volume = config.footstep_volume
+	var/volume = CONFIG_GET(number/footstep_volume) // CHOMPEdit
 
 	// Reduce volume while walking or barefoot
 	if(!shoes || m_intent == "walk")

@@ -99,5 +99,5 @@
 	if(movement_range <= 0)
 		qdel(src)
 	else
-		sleep(lag)
-		move(lag)
+		spawn(lag)
+			move(lag)

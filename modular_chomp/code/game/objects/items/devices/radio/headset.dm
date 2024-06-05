@@ -88,7 +88,7 @@
 
 
 /obj/item/device/radio/headset/outsider
-	name = "Generic headset"
+	name = "generic headset"
 	desc = "Headset used by those upon the planet, or in other words, outsiders."
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE

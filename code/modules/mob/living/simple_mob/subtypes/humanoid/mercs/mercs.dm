@@ -56,7 +56,7 @@
 	for(var/mob/M in range(T, 2))
 		if(M.faction == faction) 	// Don't grenade our friends
 			return FALSE
-		if(M in oview(src, special_attack_max_range))	// And lets check if we can actually see at least two people before we throw a grenade
+		if(M!=src && can_see(M))	// And lets check if we can actually see at least two people before we throw a grenade //CHOMPEdit dear god
 			if(!M.stat)			// Dead things don't warrant a grenade
 				mob_count ++
 	if(mob_count < 2)
@@ -88,6 +88,7 @@
 	wander = TRUE			// ... but "patrol" a little.
 	intelligence_level = AI_SMART // Also knows not to walk while confused if it risks death.
 	threaten_delay = 30 SECONDS // Mercs will give you 30 seconds to leave or get shot.
+	use_astar = TRUE //CHOMPEdit
 
 /datum/ai_holder/simple_mob/merc/ranged
 	pointblank = TRUE		// They get close? Just shoot 'em!

@@ -177,3 +177,126 @@
   - refactor: DBCore updated to match TGStation
   - server: TGS DMAPI Updated
   - server: RUST-G Updated alongwith its DMAPI
+2024-02-17:
+  Aroliacue:
+  - rscadd: Reenabled doorbells on airlocks and knocking on regular doors. This can
+      be done by leftalt-clicking on a door.
+  FluffMedic:
+  - rscadd: More traits!
+  Missile597:
+  - rscadd: Added a missing shutter on deck one docking area
+  - rscadd: Added airlock tanks and station to the broken airlock by the vault and
+      connected it to distro, so this should function properly now.
+  - rscadd: Added some missing shutters from airlocks for consistency
+  - rscdel: Deleted some unnecessary emergency shutters on airlock windows for consistency
+  - rscdel: Deleted a random extra vent in deck 1 security checkpoint
+  - rscdel: Deleted unused wiring and scrubber pipework that used to go to the old
+      vault through maints. The vault now pulls from elsewhere.
+  - bugfix: Fixed the positioning of the fire alarms on the restaurant and bar outsider
+      shelter
+  - bugfix: Fixed the access levels on the trading ship airlock and suit cycler
+  - bugfix: 'Fixed the airlock on the trading ship so that the buttons and control
+      panel operate the doors. KNOWN BUG: Trying to cycle the airlock results in one
+      tick of cycled air before the vents shut down. I''m unsure how to fix this but
+      the doors can still be overridden and manually cycled. There''s atmos shields
+      on the doors either way to prevent air loss'
+  - bugfix: Rotates the pressure regulators on deck one to face the right direction,
+      no longer cutting off half of deck 1 from distro. This loop is probably in need
+      of improvements but it works.
+  TheCaramelion:
+  - rscadd: Added a quiet gateway to The Dark
+  - rscadd: Added a quiet gateway to Sif
+2024-02-18:
+  Kashargul:
+  - bugfix: fixes the character Directory
+2024-02-19:
+  Kashargul:
+  - rscadd: the item digest blacklist to belly reagents
+  - rscadd: the drone board to the list to prevent round removing of lost drones in
+      vore encounters
+  - bugfix: fixes the runtime in the liquid system hopefully fully this time
+  KotetsuRedwood:
+  - rscadd: Added Welder's Originals as a cookable food.
+  - rscadd: Added Hot Butter Ice Cream as a cookable food.
+  - spellcheck: Removed description of cream topping from the butterscotch pie.
+  - rscadd: Added *gwah and *wawa as sound emotes.
+  - sound: Added sounds for *gwah and *wawa emotes.
+2024-02-20:
+  ItsSelis:
+  - qol: developers no longer have to generate a javascript bundle when changing the
+      user interface
+  - rscadd: Added CI workflow to test out TGS based changes.
+  Kashargul:
+  - bugfix: the character directory sorting table for react
+  KotetsuRedwood:
+  - bugfix: Changed the recipe for hot butter ice cream to use ice instead of milk.
+  - bugfix: Gives Butterscotch and Hot Butter Ice Cream trash items when eaten. You
+      have to eat the bowls deliberately now.
+  Raeschen:
+  - bugfix: optimisation on particle accelerator
+  - bugfix: outdated callback syntax
+  - bugfix: fixed high CPU usage in turf/simulated/wet_floor
+  - code_imp: stop qdelling progressbars
+  - bugfix: Bigdragon noms didn't autotransfer
+  tacoguy7765093:
+  - bugfix: Fixed a corrupted overmap POI map crashing.
+2024-02-21:
+  Raeschen:
+  - rscadd: Emergency closet shelter in the tcomms supplies room
+  - bugfix: No qdelling hud element and selected_image /images
+  - rscdel: Remove hallucination 'fake_attacker'
+  cadyn:
+  - bugfix: fix VV number inputs
+2024-02-22:
+  FluffMedic:
+  - bugfix: Several odd materials use the proper numbers
+  Kashargul:
+  - code_imp: editing the chomp specific UIs to be react compliant
+  - rscadd: miasma for the chem grenade that some mobs spawn on loading
+  Raeschen:
+  - rscadd: Wilderness shelter now flattened, thank you Bib bob
+  - rscdel: sky islands removed
+  - rscdel: Removed 2x Kara Z layers (Aerostat, Mines)
+2024-02-23:
+  Delams-The-SM:
+  - rscadd: Ability to dominate mob via dominate predator
+  - rscadd: Ability to dominate body without player's mind  (The same way one can
+      do via mind binder)
+  - code_imp: Mob whitelist from mind binder became a global list var/global/list/mob_takeover_whitelist
+2024-02-24:
+  Kashargul:
+  - bugfix: a runtime in the tgs status command
+  - rscadd: modified AR-Visor for teshari
+2024-02-25:
+  KotetsuRedwood:
+  - rscadd: Adds a "big nostrils" marking for characters with huge noses.
+  Raeschen:
+  - bugfix: Synths no longer infinitely get a rename prompt on MMI insertion
+  - code_imp: Atmos scrubbers kill the final trace left behind after their minimum
+      threshold for scrubbing is passed.
+  TheCaramelion:
+  - bugfix: Added an amount of meat to drop to metroids
+2024-02-26:
+  ItsSelis:
+  - rscadd: Added TGS event handler to notify of updates
+  - admin: Added TGS event handler to notify/warn for specific server events
+  - server: Updates DMAPI to version 5.9.0
+  TheCaramelion:
+  - qol: Grand piano can be moved around now
+2024-02-28:
+  Raeschen:
+  - bugfix: fixed datumcomponents
+  - bugfix: Hiding no longer resets after moving.
+  cadyn:
+  - refactor: 515 Compatability
+  - refactor: Nuke observer datums in favor of comsigs
+  - refactor: GC Update
+  - refactor: Mob stale references dealt with and set to GC normally
+  - refactor: bicon and /icon ditched in favor of icon2html
+  - refactor: Asset delivery redone
+2024-02-29:
+  ItsSelis:
+  - server: DMAPI updated to version 7.1.1 to solve a very rare infinite hang bug
+      on world startup.
+  Raeschen:
+  - bugfix: prevents mind-bound items crashing the MC

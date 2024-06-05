@@ -3,7 +3,6 @@
 	var/list/speech_sounds = list()
 	var/speech_chance = 75 //mobs can be a bit more emotive than carbon/humans
 	var/speech_sound_enabled = TRUE
-	var/has_recoloured = FALSE
 
 	//vars for vore_icons toggle control
 	var/vore_icons_cache = null // null by default. Going from ON to OFF should store vore_icons val here, OFF to ON reset as null
@@ -24,7 +23,7 @@
 
 	set name = "Toggle Vore Sprite"
 	set desc = "Toggle visibility of changed mob sprite when you have eaten other things."
-	set category = "Abilities"
+	set category = "Abilities.Vore"
 
 	if(!vore_icons && !vore_icons_cache)
 		to_chat(src,"<span class='warning'>This simplemob has no vore sprite.</span>")
@@ -42,7 +41,7 @@
 /mob/living/simple_mob/verb/toggle_speech_sounds()
 	set name = "Toggle Species Speech Sounds"
 	set desc = "Toggle if your species defined speech sound has a chance of playing on a Say"
-	set category = "IC"
+	set category = "IC.Mob"
 
 	if(stat)
 		to_chat(src, "<span class='warning'>You must be awake and standing to perform this action!</span>")
@@ -105,7 +104,7 @@
 /mob/living/simple_mob/proc/use_headset()
 	set name = "Use Headset"
 	set desc = "Opens your headset's GUI, if you have one."
-	set category = "IC"
+	set category = "Abilities.Mob"
 
 	if(istype(mob_radio, /obj/item/device/radio/headset))
 		mob_radio.tgui_interact(src)
@@ -115,7 +114,7 @@
 /mob/living/simple_mob/proc/use_pda()
 	set name = "Use PDA"
 	set desc = "Opens your PDA's GUI, if you have one."
-	set category = "IC"
+	set category = "Abilities.Mob"
 
 	if(istype(myid, /obj/item/device/pda))
 		myid.tgui_interact(src)
@@ -124,8 +123,8 @@
 
 /mob/living/simple_mob/New(var/newloc)
 	..()
-	verbs |= /mob/living/simple_mob/proc/use_headset
-	verbs |= /mob/living/simple_mob/proc/use_pda
+	add_verb(src,/mob/living/simple_mob/proc/use_headset) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/use_pda) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/update_icon()
 	. = ..()
@@ -136,14 +135,3 @@
 
 /mob/living/simple_mob/proc/character_directory_species()
 	return "simplemob"
-
-/mob/living/simple_mob/verb/ColorMate()
-	set name = "Recolour"
-	set category = "Abilities"
-	set desc = "Allows to recolour once."
-
-	if(!has_recoloured)
-		var/datum/ColorMate/recolour = new /datum/ColorMate(usr)
-		recolour.tgui_interact(usr)
-		return
-	to_chat(usr, "You've already recoloured yourself once. You are only allowed to recolour yourself once during a around.")

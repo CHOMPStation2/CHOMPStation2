@@ -254,9 +254,6 @@
 	if(get_dist(src, L) > 7)	//if it's too far away, why bother?
 		return TURRET_NOT_TARGET
 
-	if(!(L in check_trajectory(L, src)))	//check if we have true line of sight
-		return TURRET_NOT_TARGET
-
 	if(L.lying)		//Don't need to stun-lock the players
 		return TURRET_NOT_TARGET
 
@@ -378,11 +375,10 @@
 			lethal_shot_sound = 'sound/weapons/eluger.ogg'
 			shot_sound = 'sound/weapons/Taser.ogg'
 
-/obj/machinery/porta_turret/proc/HasController()
-	var/area/A = get_area(src)
-	return A && A.turret_controls.len > 0
-
 /obj/machinery/porta_turret/proc/isLocked(mob/user)
+	if(locked && !issilicon(user))
+		to_chat(user, "<span class='notice'>Controls locked.</span>")
+		return TRUE // CHOMPEdit
 	if(HasController())
 		return TRUE
 	if(isrobot(user) || isAI(user))
@@ -409,6 +405,10 @@
 
 /obj/machinery/porta_turret/attack_hand(mob/user)
 	tgui_interact(user)
+
+/obj/machinery/porta_turret/proc/HasController()
+	var/area/A = get_area(src)
+	return A && A.turret_controls.len > 0
 
 /obj/machinery/porta_turret/tgui_interact(mob/user, datum/tgui/ui = null)
 	if(HasController())
@@ -656,7 +656,7 @@
 /obj/machinery/porta_turret/proc/die()	//called when the turret dies, ie, health <= 0
 	health = 0
 	stat |= BROKEN	//enables the BROKEN bit
-	spark_system.start()	//creates some sparks because they look cool
+	spark_system?.start()	//creates some sparks because they look cool
 	update_icon()
 
 /obj/machinery/porta_turret/process()
@@ -675,39 +675,27 @@
 	var/list/targets = list()			//list of primary targets
 	var/list/secondarytargets = list()	//targets that are least important
 
-	/* CHOMPEdit Start
-	var/list/seenturfs = list()
-	for(var/turf/T in oview(world.view, src))
-		seenturfs += T
+	//CHOMPEdit Begin
 
-	for(var/mob/M as anything in living_mob_list)
-		if(M.z != z) //Skip
-			continue
-		if(get_turf(M) in seenturfs)
-			assess_and_assign(M, targets, secondarytargets)
-	This was dumb.*/
-
-	for(var/mob/M in oview(world.view, src))
+	for(var/mob/M in mobs_in_xray_view(world.view, src))
 		assess_and_assign(M, targets, secondarytargets)
 	//CHOMPEdit End
 
-	if(!tryToShootAt(targets))
-		if(!tryToShootAt(secondarytargets)) // if no valid targets, go for secondary targets
-			timeout--
-			if(timeout <= 0)
-				spawn()
-					popDown() // no valid targets, close the cover
+	if(!tryToShootAt(targets) && !tryToShootAt(secondarytargets) && --timeout <= 0)
+		popDown() // no valid targets, close the cover
 
 	if(auto_repair && (health < maxhealth))
 		use_power(20000)
 		health = min(health+1, maxhealth) // 1HP for 20kJ
 
-/obj/machinery/porta_turret/proc/assess_and_assign(var/mob/living/L, var/list/targets, var/list/secondarytargets)
+//CHOMPAdd Start
+/obj/machinery/porta_turret/proc/assess_and_assign(mob/living/L, list/targets, list/secondarytargets)
 	switch(assess_living(L))
 		if(TURRET_PRIORITY_TARGET)
 			targets += L
 		if(TURRET_SECONDARY_TARGET)
 			secondarytargets += L
+//CHOMPAdd End
 
 /obj/machinery/porta_turret/proc/assess_living(var/mob/living/L)
 	if(!istype(L))
@@ -716,22 +704,16 @@
 	if(L.invisibility >= INVISIBILITY_LEVEL_ONE) // Cannot see him. see_invisible is a mob-var
 		return TURRET_NOT_TARGET
 
-	if(!L)
-		return TURRET_NOT_TARGET
-
 	if(faction && L.faction == faction)
 		return TURRET_NOT_TARGET
 
-	if(!emagged && issilicon(L) && check_all == FALSE)	// Don't target silica, unless told to neutralize everything.
+	if((!emagged && siliconaccess(L) && check_all == FALSE) || (!check_access && !check_all))	// Don't target silica, unless told to neutralize everything. //CHOMPEdit no more free pass for borg...
 		return TURRET_NOT_TARGET
 
 	if(L.stat == DEAD && !emagged)		//if the perp is dead, no need to bother really
 		return TURRET_NOT_TARGET	//move onto next potential victim!
 
 	if(get_dist(src, L) > 7)	//if it's too far away, why bother?
-		return TURRET_NOT_TARGET
-
-	if(!(L in check_trajectory(L, src)))	//check if we have true line of sight
 		return TURRET_NOT_TARGET
 
 	if(emagged)		// If emagged not even the dead get a rest
@@ -741,7 +723,7 @@
 		return TURRET_NOT_TARGET
 
 	if(check_synth || check_all)	//If it's set to attack all non-silicons or everything, target them!
-		if(L.lying)
+		if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED))) // CHOMPEdit - Crawling targets are dangerous, if they are able.
 			return check_down ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 		return TURRET_PRIORITY_TARGET
 
@@ -758,10 +740,19 @@
 		if(assess_perp(L) < 4)
 			return TURRET_NOT_TARGET	//if threat level < 4, keep going
 
-	if(L.lying)		//if the perp is lying down, it's still a target but a less-important target
+	if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED)))		//if the perp is lying down, it's still a target but a less-important target - CHOMPEdit - Crawling targets are dangerous, if they are able.
 		return check_down ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 
 	return TURRET_PRIORITY_TARGET	//if the perp has passed all previous tests, congrats, it is now a "shoot-me!" nominee
+
+/obj/machinery/porta_turret/proc/assess_mecha(var/obj/mecha/M)
+	if(!istype(M))
+		return TURRET_NOT_TARGET
+
+	if(!M.occupant)
+		return check_all ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
+
+	return assess_living(M.occupant)
 
 /obj/machinery/porta_turret/proc/assess_perp(var/mob/living/carbon/human/H)
 	if(!H || !istype(H))
@@ -784,6 +775,7 @@
 
 
 /obj/machinery/porta_turret/proc/popUp()	//pops the turret up
+	set waitfor = FALSE
 	if(disabled)
 		return
 	if(raising || raised)
@@ -805,6 +797,7 @@
 	timeout = 10
 
 /obj/machinery/porta_turret/proc/popDown()	//pops the turret down
+	set waitfor = FALSE
 	last_target = null
 	if(disabled)
 		return
@@ -833,17 +826,17 @@
 
 /obj/machinery/porta_turret/proc/target(var/mob/living/target)
 	if(disabled)
-		return
+		return FALSE
 	if(target)
-		last_target = target
-		spawn()
+		if(target in check_trajectory(target, src))	//Finally, check if we can actually hit the target
+			last_target = target
 			popUp()				//pop the turret up if it's not already up.
-		set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
-		playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
-		spawn()
-			shootAt(target)
-		return 1
-	return
+			set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
+			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
+			spawn()
+				shootAt(target)
+			return TRUE
+	return FALSE
 
 /obj/machinery/porta_turret/proc/shootAt(var/mob/living/target)
 	//any emagged turrets will shoot extremely fast! This not only is deadly, but drains a lot power!
@@ -855,9 +848,7 @@
 			sleep(shot_delay)
 			last_fired = FALSE
 
-	var/turf/T = get_turf(src)
-	var/turf/U = get_turf(target)
-	if(!istype(T) || !istype(U))
+	if(!isturf(get_turf(src)) || !isturf(get_turf(target)))
 		return
 
 	if(!raised) //the turret has to be raised in order to fire - makes sense, right?
@@ -872,9 +863,12 @@
 		A = new projectile(loc)
 		playsound(src, shot_sound, 75, 1)
 
-	// Lethal/emagged turrets use twice the power due to higher energy beams
-	// Emagged turrets again use twice as much power due to higher firing rates
-	use_power(reqpower * (2 * (emagged || lethal)) * (2 * emagged))
+	var/power_mult = 1
+	if(emagged)
+		power_mult = 4 // Lethal beams + higher rate of fire
+	else if(lethal)
+		power_mult = 2 // Lethal beams
+	use_power(reqpower * power_mult)
 
 	//Turrets aim for the center of mass by default.
 	//If the target is grabbing someone then the turret smartly aims for extremities

@@ -58,6 +58,8 @@
 	var/obj/item/clothing/head/hat = null // Scughat.
 	var/can_wear_hat = TRUE				  // Some have inbuilt hats
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
 	can_enter_vent_with = list(
@@ -137,9 +139,9 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Initialize()
 	. = ..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
-	verbs += /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Destroy()
 	if(hat)
@@ -226,9 +228,7 @@
 			return
 		visible_message("<span class='notice'>\The [src] pushes [M]'s hand away from their tummy and furrows their brow!</span>")
 		if(prob(5))
-			ai_holder.target = M
-			ai_holder.track_target_position()
-			ai_holder.set_stance(STANCE_FIGHT)
+			ai_holder.give_target(M, urgent = TRUE)
 	else
 		return ..()
 
@@ -286,7 +286,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color()
 	set name = "Pick Color"
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 	set desc = "You can set your color!"
 	if(picked_color)
 		to_chat(src, "<span class='notice'>You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0.</span>")
@@ -360,9 +360,9 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/Initialize()
 	. = ..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
-	verbs -= /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color	//Most of these have custom sprites with colour already, so we'll not let them have this.
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	remove_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color) //CHOMPEdit TGPanel //Most of these have custom sprites with colour already, so we'll not let them have this.
 
 
 /datum/category_item/catalogue/fauna/catslug/custom/spaceslug
@@ -455,9 +455,7 @@
 			return
 		visible_message("<span class='notice'>\The [src] pushes [M]'s hand away from their tummy and furrows their brow, frantically pressing at the buttons [M] so carelessly pushed!</span>")
 		if(prob(5))
-			ai_holder.target = M
-			ai_holder.track_target_position()
-			ai_holder.set_stance(STANCE_FIGHT)
+			ai_holder.give_target(M, urgent = TRUE)
 	else
 		return ..()
 
@@ -557,9 +555,7 @@
 			return
 		visible_message("<span class='notice'>\The [src] pushes [M]'s hand away from their tummy and furrows their brow!</span>")
 		if(prob(5))
-			ai_holder.target = M
-			ai_holder.track_target_position()
-			ai_holder.set_stance(STANCE_FIGHT)
+			ai_holder.give_target(M, urgent = TRUE)
 	else
 		return ..()
 
@@ -760,7 +756,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/capslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/capslug
 	say_list_type = /datum/say_list/catslug/custom/capslug
-	myid_access = list(access_maint_tunnels)		//The all_station_access part below adds onto this.
+	myid_access = list(access_heads, access_keycard_auth)		//Same access as a bridge secretary.
 
 /datum/say_list/catslug/custom/capslug
 	speak = list("How open big glass box with shiny inside?.", "What is that?", "Respect my authority!", "What are you doing?", "How did you get here?", "Fax for yellow-shirts!", "WAOW!", "Why is that console blinking and clicking?", "Do we need to call for ERT?", "Have been called comdom before, not sure why they thought I was a balloon.")
@@ -775,7 +771,6 @@
 	mob_radio.ks2type = /obj/item/device/encryptionkey/heads/captain 		//Might not be able to speak, but the catslug can listen.
 	mob_radio.keyslot2 = new /obj/item/device/encryptionkey/heads/captain(mob_radio)
 	mob_radio.recalculateChannels(1)
-	myid.access |= get_all_station_access()
 
 //=============================================================================
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
@@ -1027,6 +1022,41 @@
 /datum/say_list/catslug/custom/cryptslug
 	speak = list("I have a lot of nasty friends.", "Do not test me.", "I shall rise again!", "How dare you step foot in my domain?", "Dare you indluge in dark desires?", "I am become death, one day.", "Foul creature!", "I used to think my life was a tragedy, but now I realize it's kind of okay actually.")
 
+//jungle slug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/exploslug
+	name = "Explorer Pawdiana"
+	desc = "A green-furred noodley bodied creature with thin arms and legs, and gloomy dark eyes. This one is adorned with an explorers hat and vest."
+	tt_desc = "Mollusca Felis Exploris"
+	icon_state = "exploslug"
+	icon_living = "exploslug"
+	icon_rest = "exploslug_rest"
+	icon_dead = "exploslug_dead"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/exploslug)
+	say_list_type = /datum/say_list/catslug/custom/exploslug
+
+/datum/category_item/catalogue/fauna/catslug/custom/exploslug
+	name = "Alien Wildlife - Catslug - Explorer Pawdiana"
+	desc = "Found in the depths of an arugably magical jungle, Pawdiana\
+	is a catslug who spends their days treking through the dense foliage \
+	of the dangerous wild. Always seen within \
+	their fancy explorers kit, they are always ready to brave \
+	the hazards of unknown lands. \
+	\
+	The Catslug is an omnivorous terrestrial creature.\
+	Exhibiting properties of both a cat and a slug (hence its name)\
+	it moves somewhat awkwardly. However, the unique qualities of\
+	its body make it exceedingly flexible and smooth, allowing it to\
+	wiggle into and move effectively in even extremely tight spaces.\
+	Additionally, it has surprisingly capable hands, and moves quite\
+	well on two legs or four. Caution is advised when interacting\
+	with these creatures, they are quite intelligent, and proficient\
+	tool users."
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/say_list/catslug/custom/exploslug
+	speak = list("Fortune and porls, kid. Fortune and porls.", "Lizards, why'd it have to be lizards.", "That thingy is an important artifact. It belongs in a museum!", "Everything lost is meant to be found. By me.", "I swear I've seen that stone before...", "I should have packed more jellyfishes.", "I better get back before nightfall!", "A comfy bed? Hah! I sleep under the stars!")
+
 
 //=============================
 //Admin-spawn only catslugs end
@@ -1052,7 +1082,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/Initialize()
 	. = ..()
-	verbs += /mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate
+	add_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate) //CHOMPEdit TGPanel
 	update_icon()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/update_icon()
@@ -1084,7 +1114,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate()
 	set name = "Kill Innocent"
-	set category = "Abilities"
+	set category = "Abilities.Catslug"
 	set desc = "Kill an innocent suslug!"
 	if(!is_impostor)
 		to_chat(src, "<span class='notice'>You are not an impostor! You can't kill like that!</span>")

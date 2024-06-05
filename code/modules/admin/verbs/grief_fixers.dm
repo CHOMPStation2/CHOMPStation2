@@ -1,5 +1,5 @@
 /client/proc/fixatmos()
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Fix Atmospherics Grief"
 
 	if(!check_rights(R_ADMIN|R_DEBUG|R_EVENT)) return
@@ -20,7 +20,7 @@
 	to_chat(usr, "\[1/5\] - Supermatter depowered")
 
 	// Remove all gases from all pipenets
-	for(var/datum/pipe_network/PN in pipe_networks)
+	for(var/datum/pipe_network/PN in SSmachines.networks)
 		for(var/datum/gas_mixture/G in PN.gases)
 			G.gas = list()
 			G.update_values()

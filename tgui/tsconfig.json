@@ -7,7 +7,12 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": false,
     "jsx": "preserve",
-    "lib": ["DOM", "DOM.Iterable", "ESNext", "ScriptHost"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext",
+      "ScriptHost"
+    ],
     "module": "ESNext",
     "moduleResolution": "Node",
     "noEmit": true,
@@ -17,9 +22,8 @@
     "strictNullChecks": true,
     "target": "ES5"
   },
-  "include": ["./*.d.ts", "./packages"],
-  // CHOMPEdit - Until removed
-  "exclude": [
-    "./packages/tgui_ch/**"
+  "include": [
+    "./*.d.ts",
+    "./packages"
   ]
 }

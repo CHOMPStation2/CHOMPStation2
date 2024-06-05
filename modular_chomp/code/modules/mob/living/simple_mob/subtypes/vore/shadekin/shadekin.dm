@@ -3,7 +3,7 @@
 
 /mob/living/simple_mob/shadekin/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/shadekin/proc/phase_strength_toggle
+	add_verb(src,/mob/living/simple_mob/shadekin/proc/phase_strength_toggle) //CHOMPEdit TGPanel
 
 
 // Allow horizontal resting
@@ -39,7 +39,7 @@
 /mob/living/simple_mob/shadekin/proc/phase_strength_toggle()
 	set name = "Toggle Phase Strength"
 	set desc = "Toggle strength of phase. Gentle but slower, or faster but destructive to lights."
-	set category = "Abilities"
+	set category = "Abilities.Shadekin"
 
 	if(phase_gentle)
 		to_chat(src, "<span class='notice'>Phasing toggled to Normal. You may damage lights.</span>")

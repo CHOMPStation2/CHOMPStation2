@@ -152,7 +152,6 @@
 	..()
 
 /mob/living/simple_mob/vore/spacecritter/livingice/proc/cold_aura()
-	for(var/mob/living/L in view(2, src))
 	var/turf/T = get_turf(src)
 	var/datum/gas_mixture/env = T.return_air()
 	if(env)

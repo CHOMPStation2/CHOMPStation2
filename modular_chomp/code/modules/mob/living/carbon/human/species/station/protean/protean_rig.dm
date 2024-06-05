@@ -50,17 +50,28 @@
 		var/datum/species/protean/S = P.species
 		S.OurRig = src
 		if(P.back)
-			addtimer(CALLBACK(src, .proc/AssimilateBag, P, 1, P.back), 3)
+			addtimer(CALLBACK(src, PROC_REF(AssimilateBag), P, 1, P.back), 3)
 			myprotean = P
 		else
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
 	..(newloc)
+
+/obj/item/weapon/rig/protean/Destroy()
+	if(myprotean)
+		var/mob/living/carbon/human/P = myprotean
+		var/datum/species/protean/S = P?.species
+		S?.OurRig = null
+		myprotean = null
+	. = ..()
+
 
 /obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
 	if(istype(B,/obj/item/weapon/storage/backpack))
 		if(spawned)
 			B = P.back
 			P.unEquip(P.back)
+		if(QDELETED(B)) // for mannequins or such
+			return
 		B.forceMove(src)
 		rig_storage = B
 		P.drop_item(B)
@@ -262,7 +273,7 @@
 								playsound(src, 'sound/machines/defib_success.ogg', 50, 0)
 								new /obj/effect/gibspawner/robot(src.loc)
 								src.atom_say("Contact received! Reassembly nanites calibrated. Estimated time to resucitation: 1 minute 30 seconds")
-								addtimer(CALLBACK(src, .proc/make_alive, myprotean?:humanform), 900)
+								addtimer(CALLBACK(src, PROC_REF(make_alive), myprotean?:humanform), 900)
 				return
 	if(istype(W,/obj/item/weapon/rig))
 		if(!assimilated_rig)
@@ -411,10 +422,10 @@
 	charge_amount = 100
 	var/mob/living/carbon/human/charger
 
-/obj/item/weapon/cell/protean/New()
+/obj/item/weapon/cell/protean/Initialize() //ChompEDIT New --> Initialize
 	charge = maxcharge
 	update_icon()
-	addtimer(CALLBACK(src, .proc/search_for_protean), 60)
+	addtimer(CALLBACK(src, PROC_REF(search_for_protean)), 60)
 
 /obj/item/weapon/cell/protean/proc/search_for_protean()
 	if(istype(src.loc, /obj/item/weapon/rig/protean))
@@ -497,22 +508,30 @@
 		gloves.sprite_sheets_obj = R.gloves.sprite_sheets.Copy()
 		gloves.icon = R.gloves.icon
 		gloves.icon_state = R.gloves.icon_state
+		gloves.default_worn_icon = R.gloves.default_worn_icon
 	if(R.helmet)
 		helmet.sprite_sheets = R.helmet.sprite_sheets.Copy()
 		helmet.sprite_sheets_obj = R.helmet.sprite_sheets.Copy()
 		helmet.icon = R.helmet.icon
 		helmet.icon_state = R.helmet.icon_state
+		helmet.default_worn_icon = R.helmet.default_worn_icon
 	if(R.boots)
 		boots.sprite_sheets = R.boots.sprite_sheets.Copy()
 		boots.sprite_sheets_obj = R.boots.sprite_sheets.Copy()
 		boots.icon = R.boots.icon
 		boots.icon_state = R.boots.icon_state
+		boots.default_worn_icon = R.boots.default_worn_icon
 	if(R.chest)
 		chest.sprite_sheets = R.chest.sprite_sheets.Copy()
 		chest.sprite_sheets_obj = R.chest.sprite_sheets.Copy()
 		chest.icon = R.chest.icon
 		chest.icon_state = R.chest.icon_state
+		chest.default_worn_icon = R.chest.default_worn_icon
+
 	suit_state = R.suit_state
+	name = R.name
+	icon = R.icon
+	icon_state = R.icon_state
 	user.drop_item(R)
 	contents += R
 	assimilated_rig = R
@@ -530,6 +549,7 @@
 			piece.max_heat_protection_temperature = initial(piece.max_heat_protection_temperature)
 			piece.icon_state = src.icon_state
 			piece.icon = initial(piece.icon)
+			piece.default_worn_icon = initial(piece.default_worn_icon)
 
 		//Byond at this time does not support initial() on lists
 		//So we have to create a new rig, just so we can copy the lists we're after
@@ -544,6 +564,9 @@
 		chest.sprite_sheets = tempRig.chest.sprite_sheets.Copy()
 		chest.sprite_sheets_obj = tempRig.chest.sprite_sheets.Copy()
 		slowdown = initial(slowdown)
+		name = tempRig.name
+		icon = tempRig.icon // Reset the icon back to its original
+		icon_state = tempRig.icon_state
 		suit_state = icon_state
 		offline_slowdown = initial(offline_slowdown)
 		usr.put_in_hands(assimilated_rig)

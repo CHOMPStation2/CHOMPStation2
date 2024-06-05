@@ -25,6 +25,12 @@
 			to_chat(usr,"<span class='warning'>A warning pops up on the device, informing you that [M] appears braindead.</span>")
 			return
 
+		//CHOMPAdd Start
+		if(!M.allow_mind_transfer)
+			to_chat(usr,"<span class='danger'>The target's mind is too complex to be affected!</span>")
+			return
+		//CHOMPAdd End
+
 		if(M.stat == DEAD) //Are they dead?
 			to_chat(usr,"<span class='warning'>A warning pops up on the device, informing you that [M] is dead, and, as such, the mind transfer can not be done.</span>")
 			return
@@ -47,6 +53,14 @@
 					var/target_ooc_notes = M.ooc_notes
 					var/target_likes = M.ooc_notes_likes
 					var/target_dislikes = M.ooc_notes_dislikes
+					//CHOMPEdit Start
+					var/target_favs = M.ooc_notes_favs
+					var/target_maybes = M.ooc_notes_maybes
+					var/target_style = M.ooc_notes_style
+					var/user_favs = user.ooc_notes_favs
+					var/user_maybes = user.ooc_notes_maybes
+					var/user_style = user.ooc_notes_style
+					//CHOMPEdit End
 					var/user_ooc_notes = user.ooc_notes
 					var/user_likes = user.ooc_notes_likes
 					var/user_dislikes = user.ooc_notes_dislikes
@@ -63,6 +77,14 @@
 					M.ooc_notes = user_ooc_notes //Let's keep their OOC notes over to their new body.
 					M.ooc_notes_likes = user_likes
 					M.ooc_notes_dislikes = user_dislikes
+					//CHOMPEdit Start
+					M.ooc_notes_favs = user_favs
+					M.ooc_notes_maybes = user_maybes
+					M.ooc_notes_style = user_style
+					user.ooc_notes_favs = target_favs
+					user.ooc_notes_maybes = target_maybes
+					user.ooc_notes_style = target_style
+					//CHOMPEdit End
 					user.ooc_notes = target_ooc_notes
 					user.ooc_notes_likes = target_likes
 					user.ooc_notes_dislikes = target_dislikes

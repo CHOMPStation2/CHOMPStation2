@@ -56,6 +56,8 @@
 		"scel_green"
 	)
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 /mob/living/simple_mob/vore/scel/New()
 	..()
 	if(random_skin)
@@ -84,12 +86,12 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	verbs |= /mob/living/proc/glow_toggle
-	verbs |= /mob/living/proc/glow_color
-	verbs |= /mob/living/proc/long_vore
-	verbs |= /mob/living/proc/target_lunge
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/glow_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/glow_color) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/long_vore) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/target_lunge) //CHOMPEdit TGPanel
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/scel/init_vore()
@@ -242,20 +244,3 @@
 	icon_state = "scel_red"
 	icon_rest = "scel_red-rest"
 	random_skin = 0
-
-/mob/living/simple_mob/vore/scel/handle_light()
-	if(glow_override)
-		return FALSE
-
-	if(instability >= TECHNOMANCER_INSTABILITY_MIN_GLOW)
-		var/distance = round(sqrt(instability / 2))
-		if(distance)
-			set_light(distance, distance * 4, l_color = "#660066")
-			return TRUE
-
-	else if(glow_toggle)
-		set_light(glow_range, glow_intensity, glow_color)
-
-	else
-		set_light(0)
-		return FALSE

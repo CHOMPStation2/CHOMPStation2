@@ -132,7 +132,7 @@
 /datum/language/proc/broadcast(var/mob/living/speaker,var/message,var/speaker_mask)
 	log_say("(HIVE) [message]", speaker)
 
-	speaker.verbs |= /mob/proc/adjust_hive_range
+	add_verb(speaker,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
 
 	if(!speaker_mask) speaker_mask = speaker.real_name
 	message = "[get_spoken_verb(message)], \"[format_message(message, get_spoken_verb(message))]\""
@@ -207,7 +207,7 @@
 	languages.Add(new_language)
 	//VOREStation Addition Start
 	if(new_language.flags & HIVEMIND)
-		verbs |= /mob/proc/adjust_hive_range
+		add_verb(src,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
 	//VOREStation Addition End
 
 	return 1
@@ -252,13 +252,13 @@
 	if(client && client.prefs.language_prefixes && client.prefs.language_prefixes.len)
 		return client.prefs.language_prefixes[1]
 
-	return config.language_prefixes[1]
+	return CONFIG_GET(str_list/language_prefixes)[1] // CHOMPEdit
 
 /mob/proc/is_language_prefix(var/prefix)
 	if(client && client.prefs.language_prefixes && client.prefs.language_prefixes.len)
 		return prefix in client.prefs.language_prefixes
 
-	return prefix in config.language_prefixes
+	return prefix in CONFIG_GET(str_list/language_prefixes) // CHOMPEdit
 
 //TBD
 /mob/proc/check_lang_data()
@@ -287,7 +287,7 @@
 
 /mob/verb/check_languages()
 	set name = "Check Known Languages"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set src = usr
 
 	var/datum/browser/popup = new(src, "checklanguage", "Known Languages", 420, 470)
@@ -298,13 +298,13 @@
 	if(href_list["default_lang"])
 		if(href_list["default_lang"] == "reset")
 			if (species_language)
-				set_default_language(GLOB.all_languages[species_language])
+				apply_default_language(GLOB.all_languages[species_language]) //CHOMPEdit
 			else
-				set_default_language(GLOB.all_languages[LANGUAGE_GIBBERISH])
+				apply_default_language(GLOB.all_languages[LANGUAGE_GIBBERISH]) //CHOMPEdit
 		else
 			var/datum/language/L = locate(href_list["default_lang"])
 			if(L && (L in languages))
-				set_default_language(L)
+				apply_default_language(L) //CHOMPEdit
 		check_languages()
 		return 1
 	else if(href_list["set_lang_key"])

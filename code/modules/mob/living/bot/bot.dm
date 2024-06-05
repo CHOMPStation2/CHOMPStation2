@@ -43,6 +43,7 @@
 	var/max_frustration = 0
 
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
+	allow_mind_transfer = TRUE //CHOMPAdd
 
 /mob/living/bot/New()
 	..()
@@ -334,7 +335,7 @@
 /mob/living/bot/proc/startPatrol()
 	var/turf/T = getPatrolTurf()
 	if(T)
-		patrol_path = AStar(get_turf(loc), T, /turf/proc/CardinalTurfsWithAccess, /turf/proc/Distance, 0, max_patrol_dist, id = botcard, exclude = obstacle)
+		target_path = SSpathfinder.default_bot_pathfinding(src, T, 1) //CHOMPEdit
 		if(!patrol_path)
 			patrol_path = list()
 		obstacle = null
@@ -366,7 +367,7 @@
 	return
 
 /mob/living/bot/proc/calcTargetPath()
-	target_path = AStar(get_turf(loc), get_turf(target), /turf/proc/CardinalTurfsWithAccess, /turf/proc/Distance, 0, max_target_dist, id = botcard, exclude = obstacle)
+	target_path = SSpathfinder.default_bot_pathfinding(src, get_turf(target), 1) //CHOMPEdit
 	if(!target_path)
 		if(target && target.loc)
 			ignore_list |= target
@@ -536,6 +537,11 @@
 	ooc_notes = AI.ooc_notes
 	ooc_notes_likes = AI.ooc_notes_likes
 	ooc_notes_dislikes = AI.ooc_notes_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = AI.ooc_notes_favs
+	ooc_notes_maybes = AI.ooc_notes_maybes
+	ooc_notes_style = AI.ooc_notes_style
+	//CHOMPEdit End
 	to_chat(src, span_notice("You feel a tingle in your circuits as your systems interface with \the [initial(src.name)]."))
 	if(AI.idcard.access)
 		botcard.access	|= AI.idcard.access
@@ -547,6 +553,11 @@
 		AI.ooc_notes = ooc_notes
 		AI.ooc_notes_likes = ooc_notes_likes
 		AI.ooc_notes_dislikes = ooc_notes_dislikes
+		//CHOMPEdit Start
+		AI.ooc_notes_favs = ooc_notes_favs
+		AI.ooc_notes_maybes = ooc_notes_maybes
+		AI.ooc_notes_style = ooc_notes_style
+		//CHOMPEdit End
 		paicard.forceMove(src.loc)
 		paicard = null
 		name = initial(name)
@@ -575,7 +586,7 @@
 /mob/living/bot/Login()
 	no_vore = FALSE // ROBOT VORE
 	init_vore() // ROBOT VORE
-	verbs |= /mob/proc/insidePanel
+	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 
 	return ..()
 
@@ -583,7 +594,7 @@
 	no_vore = TRUE // ROBOT VORE
 	release_vore_contents()
 	init_vore() // ROBOT VORE
-	verbs -= /mob/proc/insidePanel
+	remove_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	no_vore = TRUE
 	devourable = FALSE
 	feeding = FALSE

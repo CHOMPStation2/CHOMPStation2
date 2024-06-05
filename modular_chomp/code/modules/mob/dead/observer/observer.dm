@@ -12,9 +12,10 @@
 // Persistence vars not included as we probably don't want losing limbs in the game mean losing limbs in real life. Definitely can't backfire.
 /mob/observer/dead/verb/fake_enter_vr()
 	set name = "Join virtual reality"
-	set category = "Ghost"
+	set category = "Ghost.Join"
 	set desc = "Log into NanoTrasen's local virtual reality server."
 
+/* Temp removal while I figure out how to reduce the respawn time to 1 minute
 	var/time_till_respawn = time_till_respawn()
 	if(time_till_respawn == -1) // Special case, never allowed to respawn
 		to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
@@ -22,7 +23,7 @@
 	if(time_till_respawn) // Nonzero time to respawn
 		to_chat(usr, "<span class='warning'>You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes.</span>")
 		return
-
+*/
 	var/datum/data/record/record_found
 	record_found = find_general_record("name", client.prefs.real_name)
 	// Found their record, they were spawned previously. Remind them corpses cannot play games.
@@ -61,10 +62,10 @@
 
 	avatar.regenerate_icons()
 	avatar.update_transform()
-	job_master.EquipRank(avatar,"Visitor", 1, FALSE)
-	avatar.verbs += /mob/living/carbon/human/proc/fake_exit_vr
-	avatar.verbs += /mob/living/carbon/human/proc/vr_transform_into_mob
-	avatar.verbs |= /mob/living/proc/set_size // Introducing NeosVR
+	job_master.EquipRank(avatar,"VR Avatar", 1, FALSE)
+	add_verb(avatar,/mob/living/carbon/human/proc/fake_exit_vr)  //CHOMPEdit
+	add_verb(avatar,/mob/living/carbon/human/proc/vr_transform_into_mob)  //CHOMPEdit
+	add_verb(avatar,/mob/living/proc/set_size) //CHOMPEdit TGPanel // Introducing NeosVR
 	avatar.virtual_reality_mob = TRUE
 	log_and_message_admins("[key_name_admin(avatar)] joined virtual reality from the ghost menu.")
 

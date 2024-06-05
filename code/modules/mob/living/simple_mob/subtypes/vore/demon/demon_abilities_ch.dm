@@ -2,7 +2,7 @@
 /mob/living/simple_mob/vore/demon/verb/blood_burst()
 	set name = "Blood burst"
 	set desc = "Spawn bloody remains from your past hunts."
-	set category = "Abilities"
+	set category = "Abilities.Demon"
 
 	var/turf/T = get_turf(src)
 
@@ -26,7 +26,7 @@
 /mob/living/simple_mob/vore/demon/verb/toggle_laugh()
 	set name = "Toggle Auto Laugh"
 	set desc = "Toggles whether the demon will automatically laugh when interacted with."
-	set category = "Abilities"
+	set category = "Abilities.Demon"
 
 	enable_autolaugh = !enable_autolaugh
 	if(enable_autolaugh)
@@ -37,7 +37,7 @@
 /mob/living/simple_mob/vore/demon/verb/manual_laugh()
 	set name = "Laugh"
 	set desc = "Plays the laugh track."
-	set category = "Abilities"
+	set category = "Abilities.Demon"
 
 	if(!enable_autolaugh) //yeah this is kinda sorta dirty but id rather use a bool over something else here to control this.
 		enable_autolaugh = !enable_autolaugh
@@ -49,7 +49,7 @@
 
 /mob/living/simple_mob/vore/demon/verb/sizespell()
 	set name = "Shrink/Grow Prey"
-	set category = "Abilities"
+	set category = "Abilities.Demon"
 	set desc = "Shrink/Grow someone nearby! (60 second cooldown)"
 	set popup_menu = FALSE // Stop licking by accident! //Yes this is from lick code, sue me.
 
@@ -80,7 +80,7 @@
 /mob/living/simple_mob/vore/demon/verb/toggle_sizespell()
 	set name = "Shrink/Grow Amount"
 	set desc = "Changes the amount you grow/shrink people."
-	set category = "Abilities"
+	set category = "Abilities.Demon"
 
 	var/size_select = input("Put the desired size (25-200%)", "Set Size", size_amount * 100) as num //Stolen from sizegun code
 	if(size_select > 200 || size_select < 25)
@@ -91,7 +91,7 @@
 
 /mob/living/simple_mob/vore/demon/verb/demon_bite()
 	set name = "Mindbreaker Bite"
-	set category = "Abilities"
+	set category = "Abilities.Demon"
 	set desc = "Inject mindbreaker into your grabbed prey!"
 	set popup_menu = FALSE // Stop licking by accident! //Yes this is from lick code, sue me.
 

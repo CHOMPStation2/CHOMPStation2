@@ -33,10 +33,10 @@ SUBSYSTEM_DEF(game_master)
 
 	GM = new game_master_type()
 
-	if(config && !config.enable_game_master)
+	if(config && !CONFIG_GET(flag/enable_game_master)) // CHOMPEdit
 		can_fire = FALSE
 
-	return ..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/game_master/fire(resumed)
 	adjust_staleness(1)

@@ -3,7 +3,6 @@
 /**/*.bundle.*
 /**/*.chunk.*
 /**/*.hot-update.*
-
 **.lock
 **.log
 **.json
@@ -15,6 +14,3 @@
 **.woff2
 **.eot
 **.ttf
-
-# CHOMPEdit - Until removed
-/packages/tgui_ch/**

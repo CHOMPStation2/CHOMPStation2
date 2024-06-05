@@ -502,7 +502,7 @@
 	required = /obj/item/slime_extract/dream
 
 /decl/chemical_reaction/instant/slime/dreamscale/on_reaction(var/datum/reagents/holder)
-	new /obj/item/stack/material/uranium(get_turf(holder.my_atom), 10)
+	new /obj/item/stack/material/dreamscale(get_turf(holder.my_atom), 10)
 	..()
 
 /decl/chemical_reaction/instant/slime/nightmareslime
@@ -542,16 +542,28 @@
 	for(var/mob/living/carbon/L in view(src, 3))
 		if(L.stat == DEAD)
 			continue
-		L.add_modifier(/datum/modifier/doomed, null, src)
-		L.add_modifier(/datum/modifier/dreamarmor, null, src)
+		L.add_modifier(/datum/modifier/aura/dreamarmor, null, src)
 
-/datum/modifier/dreamarmor
+/datum/modifier/aura/dreamarmor
 	name = "dream armor"
 	desc = "You are highly resistant to damage."
 	stacks = MODIFIER_STACK_FORBID
 
 	mob_overlay_state = "cult_aura"
-	incoming_damage_percent = 0.3
+	incoming_damage_percent = 0.5
+
+/datum/modifier/aura/dreamarmor/tick()
+	if(holder.stat == DEAD)
+		expire()
+
+	if(ishuman(holder)) // Robolimbs need this code sadly.
+		var/mob/living/carbon/human/H = holder
+		for(var/obj/item/organ/external/E in H.organs)
+			var/obj/item/organ/external/O = E
+			O.heal_damage(-2, -2, 0, -1)
+	else
+		holder.adjustBruteLoss(5)
+		holder.adjustFireLoss(5)
 
 /obj/item/slime_extract/nightmare
 	name = "nightmare slime extract"

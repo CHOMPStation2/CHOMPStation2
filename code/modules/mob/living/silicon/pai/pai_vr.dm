@@ -74,10 +74,10 @@
 /mob/living/silicon/pai/Initialize()
 	. = ..()
 
-	verbs |= /mob/proc/dominate_predator
-	verbs |= /mob/living/proc/dominate_prey
-	verbs |= /mob/living/proc/set_size
-	verbs |= /mob/living/proc/shred_limb
+	add_verb(src,/mob/proc/dominate_predator) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/dominate_prey) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/set_size) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
 
 /mob/living/silicon/pai/Login()
 	. = ..()
@@ -474,7 +474,7 @@
 /mob/living/silicon/pai/verb/toggle_gender_identity_vr()
 	set name = "Set Gender Identity"
 	set desc = "Sets the pronouns when examined and performing an emote."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 	var/new_gender_identity = tgui_input_list(usr, "Please select a gender Identity:", "Set Gender Identity", list(FEMALE, MALE, NEUTER, PLURAL, HERM))
 	if(!new_gender_identity)
 		return 0
@@ -484,7 +484,7 @@
 /mob/living/silicon/pai/verb/pai_hide()
 	set name = "Hide"
 	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	hide()
 	if(status_flags & HIDING)

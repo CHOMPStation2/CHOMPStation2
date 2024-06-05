@@ -52,4 +52,12 @@
 		resistance += 10
 
 	if(GLOB.all_species.len)
-		affected_species = get_infectable_species()
+		affected_species = get_all_infectable_species()
+
+/proc/get_all_infectable_species()
+	var/list/meat = list()
+	for (var/specie in GLOB.all_species)
+		var/datum/species/S = GLOB.all_species[specie]
+		if(!S.get_virus_immune())
+			meat += S
+	return meat

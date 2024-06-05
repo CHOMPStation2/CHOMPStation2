@@ -35,12 +35,13 @@ export const AtmosControlContent = (props) => {
         {sortedAlarms.map((alarm) => (
           <Button
             key={alarm.name}
-            content={alarm.name}
             color={
               alarm.danger === 2 ? 'bad' : alarm.danger === 1 ? 'average' : ''
             }
             onClick={() => act('alarm', { alarm: alarm.ref })}
-          />
+          >
+            {alarm.name}
+          </Button>
         ))}
       </Section>
     );
@@ -50,7 +51,7 @@ export const AtmosControlContent = (props) => {
     // and change the @for scss to match.
     body = (
       <Box height="526px" mb="0.5rem" overflow="hidden">
-        <NanoMap onZoom={(v) => setZoom(v)}>
+        <NanoMap zoomScale={data.zoomScale} onZoom={(v) => setZoom(v)}>
           {sortedAlarms
             .filter((x) => ~~x.z === ~~config.mapZLevel)
             .map((cm) => (

@@ -14,11 +14,16 @@
  */
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
-/proc/sanitizeSQL(var/t as text) 
+/proc/sanitizeSQL(var/t as text)
 	//var/sqltext = dbcon.Quote(t); //CHOMPEdit Begin
 	//return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 	return t
 	//CHOMPEdit End
+
+// CHOMPEdit - Adds format_table_name
+/proc/format_table_name(table as text)
+	//return CONFIG_GET(string/feedback_tableprefix) + table
+	return table // We don't implement tableprefix
 
 /*
  * Text sanitization
@@ -344,16 +349,17 @@
 //The icon var could be local in the proc, but it's a waste of resources
 //	to always create it and then throw it out.
 /var/icon/text_tag_icons = 'icons/chattags.dmi'
-/var/list/text_tag_cache = list()
+GLOBAL_LIST_EMPTY(text_tag_cache)
+
 /proc/create_text_tag(var/tagname, var/tagdesc = tagname, var/client/C = null)
 	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))
 		return tagdesc
-	if(!text_tag_cache[tagname])
-		var/icon/tag = icon(text_tag_icons, tagname)
-		text_tag_cache[tagname] = bicon(tag, TRUE, "text_tag")
+	if(!GLOB.text_tag_cache[tagname])
+		var/datum/asset/spritesheet/chatassets = get_asset_datum(/datum/asset/spritesheet/chat)
+		GLOB.text_tag_cache[tagname] = chatassets.icon_tag(tagname)
 	if(!C.tgui_panel.is_ready() || C.tgui_panel.oldchat)
 		return "<IMG src='\ref[text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
-	return text_tag_cache[tagname]
+	return GLOB.text_tag_cache[tagname]
 
 /proc/create_text_tag_old(var/tagname, var/tagdesc = tagname, var/client/C = null)
 	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))
@@ -614,3 +620,10 @@
 	paper_text = replacetext(paper_text, "<br>", "\n")
 	paper_text = strip_html_properly(paper_text) // Get rid of everything else entirely.
 	return paper_text
+
+//json decode that will return null on parse error instead of runtiming.
+/proc/safe_json_decode(data)
+	try
+		return json_decode(data)
+	catch
+		return null

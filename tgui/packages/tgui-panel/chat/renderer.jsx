@@ -20,11 +20,13 @@ import {
   MESSAGE_TYPES,
 } from './constants';
 import {
+  adminPageOnly,
   canPageAcceptType,
   canStoreType,
   createMessage,
   isSameMessage,
   serializeMessage,
+  typeIsImportant,
 } from './model';
 import { highlightNode, linkifyNode } from './replaceInTextNode';
 
@@ -75,10 +77,36 @@ const createMessageNode = () => {
   return node;
 };
 
+const interleaveMessage = (node, interleave, color) => {
+  if (interleave) {
+    node.setAttribute('style', 'background-color:' + color);
+    node.setAttribute('display', 'block');
+  } else {
+    node.removeAttribute('style');
+    node.removeAttribute('display');
+  }
+  return node;
+};
+
 const createReconnectedNode = () => {
   const node = document.createElement('div');
   node.className = 'Chat__reconnected';
   return node;
+};
+
+const getChatTimestamp = (message) => {
+  let stamp = '';
+  if (message.createdAt && !message.hasTimestamp) {
+    const dateTime = new Date(message.createdAt);
+    stamp =
+      '[' +
+      dateTime.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
+      }) +
+      ']&nbsp;';
+  }
+  return stamp;
 };
 
 const handleImageError = (e) => {
@@ -131,14 +159,18 @@ class ChatRenderer {
     this.page = null;
     this.events = new EventEmitter();
     // Adjustables
+    this.prependTimestamps = false;
     this.visibleMessageLimit = 2500;
     this.combineMessageLimit = 5;
     this.combineIntervalLimit = 5;
-    this.exportLimit = 0;
     this.logLimit = 0;
     this.logEnable = true;
     this.roundId = null;
     this.storedTypes = {};
+    this.interleave = false;
+    this.interleaveEnabled = false;
+    this.interleaveColor = '#909090';
+    this.hideImportantInAdminTab = false;
     // Scroll handler
     /** @type {HTMLElement} */
     this.scrollNode = null;
@@ -184,7 +216,7 @@ class ChatRenderer {
       this.scrollToBottom();
     });
     // Flush the queue
-    this.tryFlushQueue(true);
+    this.tryFlushQueue();
   }
 
   onStateLoaded() {
@@ -350,6 +382,32 @@ class ChatRenderer {
     this.scrollNode.scrollTop = this.scrollNode.scrollHeight;
   }
 
+  setVisualChatLimits(
+    visibleMessageLimit,
+    combineMessageLimit,
+    combineIntervalLimit,
+    logEnable,
+    logLimit,
+    storedTypes,
+    roundId,
+    prependTimestamps,
+    hideImportantInAdminTab,
+    interleaveEnabled,
+    interleaveColor,
+  ) {
+    this.visibleMessageLimit = visibleMessageLimit;
+    this.combineMessageLimit = combineMessageLimit;
+    this.combineIntervalLimit = combineIntervalLimit;
+    this.logEnable = logEnable;
+    this.logLimit = logLimit;
+    this.storedTypes = storedTypes;
+    this.roundId = roundId;
+    this.prependTimestamps = prependTimestamps;
+    this.hideImportantInAdminTab = hideImportantInAdminTab;
+    this.interleaveEnabled = interleaveEnabled;
+    this.interleaveColor = interleaveColor;
+  }
+
   changePage(page) {
     if (!this.isReady()) {
       this.page = page;
@@ -364,8 +422,21 @@ class ChatRenderer {
     const fragment = document.createDocumentFragment();
     let node;
     for (let message of this.messages) {
-      if (canPageAcceptType(page, message.type)) {
+      if (
+        canPageAcceptType(page, message.type) &&
+        !(
+          adminPageOnly(page) &&
+          typeIsImportant(message.type) &&
+          this.hideImportantInAdminTab
+        )
+      ) {
         node = message.node;
+        node = interleaveMessage(
+          node,
+          this.interleaveEnabled && this.interleave,
+          this.interleaveColor,
+        );
+        this.interleave = !this.interleave;
         fragment.appendChild(node);
         this.visibleMessages.push(message);
       }
@@ -374,26 +445,6 @@ class ChatRenderer {
       this.rootNode.appendChild(fragment);
       node.scrollIntoView();
     }
-  }
-
-  setVisualChatLimits(
-    visibleMessageLimit,
-    combineMessageLimit,
-    combineIntervalLimit,
-    exportLimit,
-    logEnable,
-    logLimit,
-    storedTypes,
-    roundId,
-  ) {
-    this.visibleMessageLimit = visibleMessageLimit;
-    this.combineMessageLimit = combineMessageLimit;
-    this.combineIntervalLimit = combineIntervalLimit;
-    this.exportLimit = exportLimit;
-    this.logEnable = logEnable;
-    this.logLimit = logLimit;
-    this.storedTypes = storedTypes;
-    this.roundId = roundId;
   }
 
   getCombinableMessage(predicate) {
@@ -456,22 +507,17 @@ class ChatRenderer {
         node = createMessageNode();
         // Payload is plain text
         if (message.text) {
-          node.textContent = message.text;
+          node.textContent = this.prependTimestamps
+            ? getChatTimestamp(message) + message.text
+            : message.text;
         }
         // Payload is HTML
         else if (message.html) {
-          node.innerHTML = message.html;
+          node.innerHTML = this.prependTimestamps
+            ? getChatTimestamp(message) + message.html
+            : message.html;
         } else {
           logger.error('Error: message is missing text payload', message);
-        }
-        // Get our commands we might want to send to chat
-        const commands = node.querySelectorAll('[data-command]');
-        if (commands.length) {
-          const command = commands[0].getAttribute('data-command');
-          if (command === '$do_export') {
-            this.saveToDisk(this.exportLimit);
-          }
-          return; // We do not want those logged or shown!
         }
         // Get all nodes in this message that want to be rendered like jsx
         const nodes = node.querySelectorAll('[data-component]');
@@ -597,7 +643,20 @@ class ChatRenderer {
         }
         this.archivedMessages.push(serializeMessage(message, true)); // TODO: Actually having a better message archiving maybe for exports?
       }
-      if (canPageAcceptType(this.page, message.type)) {
+      if (
+        canPageAcceptType(this.page, message.type) &&
+        !(
+          adminPageOnly(this.page) &&
+          typeIsImportant(message.type) &&
+          this.hideImportantInAdminTab
+        )
+      ) {
+        node = interleaveMessage(
+          node,
+          this.interleaveEnabled && this.interleave,
+          this.interleaveColor,
+        );
+        this.interleave = !this.interleave;
         fragment.appendChild(node);
         this.visibleMessages.push(message);
       }

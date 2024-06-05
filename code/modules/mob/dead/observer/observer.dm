@@ -207,15 +207,15 @@ Works together with spawning an observer, noted above.
 			B.update()
 		if(ghost.client)
 			ghost.client.time_died_as_mouse = ghost.timeofdeath
-		if(ghost.client && !ghost.client.holder && !config.antag_hud_allowed)		// For new ghosts we remove the verb from even showing up if it's not allowed.
-			ghost.verbs -= /mob/observer/dead/verb/toggle_antagHUD	// Poor guys, don't know what they are missing!
+		if(ghost.client && !ghost.client.holder && !CONFIG_GET(flag/antag_hud_allowed))		// For new ghosts we remove the verb from even showing up if it's not allowed. // CHOMPEdit
+			remove_verb(ghost,/mob/observer/dead/verb/toggle_antagHUD	) // Poor guys, don't know what they are missing! //CHOMPEdit
 		return ghost
 
 /*
 This is the proc mobs get to turn into a ghost. Forked from ghostize due to compatibility issues.
 */
 /mob/living/verb/ghost()
-	set category = "OOC"
+	set category = "OOC.Game" //CHOMPEdit
 	set name = "Ghost"
 	set desc = "Relinquish your life and enter the land of the dead."
 
@@ -249,16 +249,18 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/dead/can_use_hands()	return 0
 /mob/observer/dead/is_active()		return 0
 
-/mob/observer/dead/Stat()
-	..()
-	if(statpanel("Status"))
-		if(emergency_shuttle)
-			var/eta_status = emergency_shuttle.get_status_panel_eta()
-			if(eta_status)
-				stat(null, eta_status)
+//ChompEDIT START
+/mob/observer/dead/get_status_tab_items()
+	. = ..()
+	if(emergency_shuttle)
+		var/eta_status = emergency_shuttle.get_status_panel_eta()
+		if(eta_status)
+			. += ""
+			. += "[eta_status]"
+//ChompEDIT END
 
 /mob/observer/dead/verb/reenter_corpse()
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set name = "Re-enter Corpse"
 	if(!client)	return
 	if(!(mind && mind.current && can_reenter_corpse))
@@ -297,7 +299,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return 1
 
 /mob/observer/dead/verb/toggle_medHUD()
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set name = "Toggle MedicHUD"
 	set desc = "Toggles Medical HUD allowing you to see how everyone is doing"
 
@@ -307,7 +309,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	to_chat(src, "<span class='notice'><B>Medical HUD [medHUD ? "Enabled" : "Disabled"]</B></span>")
 
 /mob/observer/dead/verb/toggle_secHUD()
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set name = "Toggle Security HUD"
 	set desc = "Toggles Security HUD allowing you to see people's displayed ID's job, wanted status, etc"
 
@@ -320,17 +322,17 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	to_chat(src, "<span class='notice'><B>Security HUD [secHUD ? "Enabled" : "Disabled"]</B></span>")
 
 /mob/observer/dead/verb/toggle_antagHUD()
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set name = "Toggle AntagHUD"
 	set desc = "Toggles AntagHUD allowing you to see who is the antagonist"
 
-	if(!config.antag_hud_allowed && !client.holder)
+	if(!CONFIG_GET(flag/antag_hud_allowed) && !client.holder) // CHOMPEdit
 		to_chat(src, "<span class='filter_notice'>[span_red("Admins have disabled this for this round.")]</span>")
 		return
 	if(jobban_isbanned(src, "AntagHUD"))
 		to_chat(src, "<span class='filter_notice'>[span_red("<B>You have been banned from using this feature</B>")]</span>")
 		return
-	if(config.antag_hud_restricted && !has_enabled_antagHUD && !client.holder)
+	if(CONFIG_GET(flag/antag_hud_restricted) && !has_enabled_antagHUD && !client.holder) // CHOMPEdit
 		var/response = tgui_alert(src, "If you turn this on, you will not be able to take any part in the round.","Are you sure you want to turn this feature on?",list("Yes","No"))
 		if(response == "No") return
 		can_reenter_corpse = FALSE
@@ -372,7 +374,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/verb/dead_tele(areaname as anything in jumpable_areas())
 	set name = "Teleport"
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set desc = "Teleport to a location."
 
 	if(!istype(usr, /mob/observer/dead))
@@ -381,12 +383,15 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	var/area/A
 
-	if(!areaname)
-		var/list/areas = jumpable_areas()
-		var/input = tgui_input_list(usr, "Select an area:", "Ghost Teleport", areas)
-		if(!input)
+	//CHOMPEdit Start
+	if(areaname)
+		A = return_sorted_areas()[areaname]
+	else
+		A = return_sorted_areas()[tgui_input_list(usr,  "Select an area:", "Ghost Teleport", jumpable_areas())]
+		/*if(!input)
 			return
-		A = areas[input]
+		A = areas[input]*/
+		//CHOMPEdit End
 		if(!A)
 			return
 
@@ -394,12 +399,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(usr, "Not when you're not dead!")
 		return
 
-	usr.forceMove(pick(get_area_turfs(A || jumpable_areas()[areaname])))
+	usr.forceMove(pick(get_area_turfs(A))) //CHOMPEdit
 	usr.on_mob_jump()
 
 /mob/observer/dead/verb/follow(mobname as anything in jumpable_mobs())
 	set name = "Follow"
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set desc = "Follow and haunt a mob."
 
 	if(!istype(usr, /mob/observer/dead))
@@ -423,7 +428,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	ManualFollow(M || jumpable_mobs()[mobname])
 
-/mob/observer/dead/forceMove(atom/destination)
+/mob/observer/dead/forceMove(atom/destination, direction, movetime) //ChompEDIT - pass movetime through
 	if(client?.holder)
 		return ..()
 
@@ -459,9 +464,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(get_z(target) in using_map?.secret_levels)
 		to_chat(src, "<span class='warning'>Sorry, that target is in an area that ghosts aren't allowed to go.</span>")
 		return
-	if(target != src)
+	/*if(target != src) CHOMP Removal holy mother of spaghetti fucking bullshit god please no
 		if(following && following == target)
 			return
+		if(following)
+			src.stop_following()
 		following = target
 		to_chat(src, "<span class='notice'>Now following [target]</span>")
 		if(ismob(target))
@@ -481,7 +488,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 					// To stop the ghost flickering.
 					if(loc != T)
 						forceMove(T)
-					sleep(15)
+					sleep(15)*/
 
 	var/icon/I = icon(target.icon,target.icon_state,target.dir)
 
@@ -533,7 +540,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			following_mobs -= M
 		else
 			if(M.loc != .)
-				M.forceMove(.)
+				M.forceMove(., movetime = MOVE_GLIDE_CALC(glide_size, moving_diagonally)) //ChompEDIT - pass movespeed
 
 /mob
 	var/list/following_mobs = list()
@@ -550,6 +557,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		M.following_mobs -= src
 	stop_following()
 	observer_mob_list -= src
+	//ChompEDIT START - deal with weird behavior on qdelled ghosts
+	if(client) //qdelling a ghost with a client = make a new ghost i guess
+		ghostize()
+	if(key) //qdelling a ghost with a key = remove the key first to prevent logging into the GC queue
+		key = null
+	//ChompEDIT END
+
 	return ..()
 
 /mob/Moved(atom/old_loc, direction, forced = FALSE)
@@ -571,7 +585,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return (T && T.holy) && (is_manifest || (mind in cult.current_antagonists))
 
 /mob/observer/dead/verb/jumptomob() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set name = "Jump to Mob"
 	set desc = "Teleport to a mob"
 	set popup_menu = FALSE
@@ -610,7 +624,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/verb/analyze_air()
 	set name = "Analyze Air"
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 
 	if(!istype(usr, /mob/observer/dead)) return
 
@@ -637,7 +651,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/verb/check_radiation()
 	set name = "Check Radiation"
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 
 	var/turf/t = get_turf(src)
 	if(t)
@@ -647,9 +661,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/verb/become_mouse()
 	set name = "Become mouse"
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 
-	if(config.disable_player_mice)
+	if(CONFIG_GET(flag/disable_player_mice)) // CHOMPEdit
 		to_chat(src, "<span class='warning'>Spawning as a mouse is currently disabled.</span>")
 		return
 
@@ -692,7 +706,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, "<span class='warning'>Unable to find any unwelded vents to spawn mice at.</span>")
 
 	if(host)
-		if(config.uneducated_mice)
+		if(CONFIG_GET(flag/uneducated_mice)) // CHOMPEdit
 			host.universal_understand = 0
 		announce_ghost_joinleave(src, 0, "They are now a mouse.")
 		host.ckey = src.ckey
@@ -701,7 +715,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/verb/view_manfiest()
 	set name = "Show Crew Manifest"
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 
 	var/dat
 	dat += "<h4>Crew Manifest</h4>"
@@ -721,11 +735,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 //Used for drawing on walls with blood puddles as a spooky ghost.
 /mob/observer/dead/verb/bloody_doodle()
 
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set name = "Write in blood"
 	set desc = "If the round is sufficiently spooky, write a short message in blood on the floor or a wall. Remember, no IC in OOC or OOC in IC."
 
-	if(!(config.cult_ghostwriter))
+	if(!CONFIG_GET(flag/cult_ghostwriter)) // CHOMPEdit
 		to_chat(src, "<span class='filter_notice'>[span_red("That verb is not currently permitted.")]</span>")
 		return
 
@@ -737,7 +751,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	var/ghosts_can_write
 	if(ticker.mode.name == "cult")
-		if(cult.current_antagonists.len > config.cult_ghostwriter_req_cultists)
+		if(cult.current_antagonists.len > CONFIG_GET(number/cult_ghostwriter_req_cultists)) // CHOMPEdit
 			ghosts_can_write = 1
 
 	if(!ghosts_can_write && !check_rights(R_ADMIN|R_EVENT|R_FUN, 0)) //Let's allow for admins to write in blood for events and the such.
@@ -801,8 +815,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/manifest(mob/user)
 	is_manifest = TRUE
-	verbs |= /mob/observer/dead/proc/toggle_visibility
-	verbs |= /mob/observer/dead/proc/ghost_whisper
+	add_verb(src,/mob/observer/dead/proc/toggle_visibility) //CHOMPEdit TGPanel
+	add_verb(src,/mob/observer/dead/proc/ghost_whisper) //CHOMPEdit TGPanel
 	to_chat(src, "<span class='filter_notice'>[span_purple("As you are now in the realm of the living, you can whisper to the living with the <b>Spectral Whisper</b> verb, inside the IC tab.")]</span>")
 	if(plane != PLANE_WORLD)
 		user.visible_message( \
@@ -832,7 +846,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		client.images += J
 
 /mob/observer/dead/proc/toggle_visibility(var/forced = 0)
-	set category = "Ghost"
+	set category = "Ghost.Game" //CHOMPEdit
 	set name = "Toggle Visibility"
 	set desc = "Allows you to turn (in)visible (almost) at will."
 
@@ -854,7 +868,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	toggle_icon("cult")
 
 /mob/observer/dead/verb/toggle_anonsay()
-	set category = "Ghost"
+	set category = "Ghost.Settings" //CHOMPEdit
 	set name = "Toggle Anonymous Chat"
 	set desc = "Toggles showing your key in dead chat."
 
@@ -873,7 +887,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/dead/verb/toggle_ghostsee()
 	set name = "Toggle Ghost Vision"
 	set desc = "Toggles your ability to see things only ghosts can see, like other ghosts"
-	set category = "Ghost"
+	set category = "Ghost.Settings" //CHOMPEdit
 	ghostvision = !ghostvision
 	updateghostsight()
 	to_chat(src, "<span class='filter_notice'>You [ghostvision ? "now" : "no longer"] have ghost vision.</span>")
@@ -881,7 +895,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/dead/verb/toggle_darkness()
 	set name = "Toggle Darkness"
 	set desc = "Toggles your ability to see lighting overlays, and the darkness they create."
-	set category = "Ghost"
+	set category = "Ghost.Settings"
 
 	var/static/list/darkness_names = list("normal darkness levels", "30% darkness removed", "70% darkness removed", "no darkness")
 	var/static/list/darkness_levels = list(255, 178, 76, 0)
@@ -908,7 +922,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(feedback)
 			to_chat(src, "<span class='warning'>Your non-dead body prevent you from respawning.</span>")
 		return 0
-	if(config.antag_hud_restricted && has_enabled_antagHUD == 1)
+	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1) // CHOMPEdit
 		if(feedback)
 			to_chat(src, "<span class='warning'>antagHUD restrictions prevent you from respawning.</span>")
 		return 0
@@ -934,7 +948,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/ghost_whisper()
 	set name = "Spectral Whisper"
-	set category = "IC"
+	set category = "IC.Subtle" //CHOMPEdit
 
 	if(is_manifest)  //Only able to whisper if it's hit with a tome.
 		var/list/options = list()
@@ -955,7 +969,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, "<span class='danger'>You have not been pulled past the veil!</span>")
 
 /mob/observer/dead/verb/choose_ghost_sprite()
-	set category = "Ghost"
+	set category = "Ghost.Settings" //CHOMPEdit
 	set name = "Choose Sprite"
 
 	var/choice
@@ -989,7 +1003,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return FALSE
 
 /mob/observer/dead/verb/paialert()
-	set category = "Ghost"
+	set category = "Ghost.Message" //CHOMPEdit
 	set name = "Blank pAI alert"
 	set desc = "Flash an indicator light on available blank pAI devices for a smidgen of hope."
 
@@ -1043,5 +1057,5 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/verb/respawn()
 	set name = "Respawn"
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	src.abandon_mob()

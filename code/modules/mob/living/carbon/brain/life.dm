@@ -94,7 +94,7 @@
 		silent = 0
 		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 	else				//ALIVE. LIGHTS ARE ON
-		if( !container && (health < config.health_threshold_dead || ((world.time - timeofhostdeath) > config.revival_brain_life)) )
+		if( !container && (health < CONFIG_GET(number/health_threshold_dead) || ((world.time - timeofhostdeath) > CONFIG_GET(number/revival_brain_life))) ) // CHOMPEdit
 			death()
 			blinded = 1
 			silent = 0

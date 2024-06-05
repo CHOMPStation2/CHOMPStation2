@@ -12,24 +12,12 @@
 	has_vore_belly_resting_sprites = TRUE
 	has_eye_light_sprites = TRUE
 
-/*Upstream implemented
-/datum/robot_sprite/dogborg/tall/mining
-	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
-
-/datum/robot_sprite/dogborg/raptor/mining
-	module_type = "Miner"
-	sprite_icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi'
-
-/datum/robot_sprite/dogborg/raptor/mining/raptor
-	name = "Raptor V-4"
-	sprite_icon_state = "mineraptor"
-	has_custom_equipment_sprites = TRUE
-	rest_sprite_options = list("Default", "Bellyup")
-*/
-
 //sprite name overwrites
 /datum/robot_sprite/dogborg/tall/mining/meka
 	name = "MEKA - Mining"
+
+/datum/robot_sprite/dogborg/tall/mining/newmeka
+	name = "MEKA v2 - Mining"
 
 /datum/robot_sprite/dogborg/tall/mining/mmeka
 	name = "NIKO - Mining"

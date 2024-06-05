@@ -3,7 +3,7 @@
 
 /mob/verb/whisper(message as text)
 	set name = "Whisper"
-	set category = "IC"
+	set category = "IC.Subtle" //CHOMPEdit
 	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
@@ -14,7 +14,9 @@
 
 /mob/verb/say_verb(message as text)
 	set name = "Say"
-	set category = "IC"
+	set category = "IC.Chat" //CHOMPEdit
+	set instant = TRUE // CHOMPEdit
+
 	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
@@ -22,11 +24,16 @@
 	//VOREStation Addition End
 
 	set_typing_indicator(FALSE)
-	usr.say(message)
+	// CHOMPEdit Start
+	//queue this message because verbs are scheduled to process after SendMaps in the tick and speech is pretty expensive when it happens.
+	//by queuing this for next tick the mc can compensate for its cost instead of having speech delay the start of the next tick
+	if(message)
+		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, say), message), SSspeech_controller)
+	// CHOMPEdit End
 
 /mob/verb/me_verb(message as message)
 	set name = "Me"
-	set category = "IC"
+	set category = "IC.Chat" //CHOMPEdit
 
 	if(say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, span_red("Speech is currently admin-disabled."))
@@ -60,7 +67,7 @@
 		return // Clientless mobs shouldn't be trying to talk in deadchat.
 
 	if(!client.holder)
-		if(!config.dsay_allowed)
+		if(!CONFIG_GET(flag/dsay_allowed)) // CHOMPEdit
 			to_chat(src, "<span class='danger'>Deadchat is globally muted.</span>")
 			return
 

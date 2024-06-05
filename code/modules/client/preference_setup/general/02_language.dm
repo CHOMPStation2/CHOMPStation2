@@ -53,7 +53,8 @@
 				pref.alternate_languages -= language
 
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
-		pref.language_prefixes = config.language_prefixes.Copy()
+		var/list/prefixes = CONFIG_GET(str_list/language_prefixes) // CHOMPEdit
+		pref.language_prefixes = prefixes.Copy() // CHOMPEdit
 	for(var/prefix in pref.language_prefixes)
 		if(prefix in forbidden_prefixes)
 			pref.language_prefixes -= prefix
@@ -119,7 +120,7 @@
 				if(new_lang && pref.alternate_languages.len < (S.num_alternate_languages + pref.extra_languages))
 					var/datum/language/chosen_lang = GLOB.all_languages[new_lang]
 					if(istype(chosen_lang))
-						var/choice = tgui_alert(usr, "[chosen_lang.desc]",chosen_lang.name, list("Take","Cancel"))
+						var/choice = tgui_alert(user, "[chosen_lang.desc]",chosen_lang.name, list("Take","Cancel")) //ChompEDIT - usr removal
 						if(choice != "Cancel" && pref.alternate_languages.len < (S.num_alternate_languages + pref.extra_languages))
 							pref.alternate_languages |= new_lang
 					return TOPIC_REFRESH
@@ -128,7 +129,7 @@
 		var/char
 		var/keys[0]
 		do
-			char = tgui_input_text(usr, "Enter a single special character.\nYou may re-select the same characters.\nThe following characters are already in use by radio: ; : .\nThe following characters are already in use by special say commands: ! * ^", "Enter Character - [3 - keys.len] remaining")
+			char = tgui_input_text(user, "Enter a single special character.\nYou may re-select the same characters.\nThe following characters are already in use by radio: ; : .\nThe following characters are already in use by special say commands: ! * ^", "Enter Character - [3 - keys.len] remaining") //ChompEDIT - usr removal
 			if(char)
 				if(length(char) > 1)
 					tgui_alert_async(user, "Only single characters allowed.", "Error")
@@ -146,7 +147,8 @@
 			pref.language_prefixes = keys
 			return TOPIC_REFRESH
 	else if(href_list["reset_prefix"])
-		pref.language_prefixes = config.language_prefixes.Copy()
+		var/list/prefixes = CONFIG_GET(str_list/language_prefixes) // CHOMPEdit
+		pref.language_prefixes = prefixes.Copy() // CHOMPEdit
 		return TOPIC_REFRESH
 
 	else if(href_list["set_custom_key"])
