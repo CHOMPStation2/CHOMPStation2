@@ -22,7 +22,7 @@
 	title = "Healthcare Manager"
 
 /datum/job/cmo/get_request_reasons()
-	return list("Surgery pending", "Viral outbreak", "Training crew")
+	return list("Surgery pending", "Viral outbreak", "Training crew", "Assembling expedition team")
 
 
 /datum/job/doctor
@@ -49,7 +49,7 @@
 	title_blurb = "A Medical Contractor can be anything from a full-blown doctor to the likes of a nurse or orderly, but isn't directly employed by NT proper."
 
 /datum/job/doctor/get_request_reasons()
-	return list("Surgery pending", "Viral outbreak")
+	return list("Surgery pending", "Viral outbreak", "Assembling expedition team")
 
 
 /datum/job/chemist
@@ -93,4 +93,10 @@
 /* //CHOMPedit: Commented out because this is an actual job here
 /datum/alt_title/sar
 	title = "Search and Rescue"
+<<<<<<< HEAD
 */
+=======
+
+/datum/job/paramedic/get_request_reasons()
+	return list("Assembling expedition team")
+>>>>>>> 3223f17203... Adds new fax reason for expedition teams (#16026)
