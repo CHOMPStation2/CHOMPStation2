@@ -44,14 +44,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor7)
-"ah" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/diescraper/indoors/floor2)
 "aj" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/modular_computer/laptop/preset/custom_loadout/elite,
@@ -651,9 +643,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
 "cR" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
 "cS" = (
@@ -1761,9 +1751,7 @@
 	},
 /area/awaymission/diescraper/sky)
 "ir" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor10)
 "iu" = (
@@ -2202,6 +2190,14 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
+"kl" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor2)
 "km" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/spacecasinocash,
@@ -2251,9 +2247,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "kz" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor4)
 "kB" = (
@@ -2735,11 +2729,11 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
 "mx" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/structure/barricade/cutout,
+/obj/effect/floor_decal/rust,
+/obj/random/soap,
 /turf/simulated/floor/plating,
-/area/awaymission/diescraper/indoors/floor4)
+/area/awaymission/diescraper/indoors/floor4second)
 "mz" = (
 /obj/structure/table/rack/wood,
 /obj/item/weapon/spacecash/c1000,
@@ -3176,16 +3170,12 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor9)
 "op" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "or" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor4)
 "ot" = (
@@ -3343,6 +3333,7 @@
 "pj" = (
 /obj/structure/barricade/cutout,
 /obj/random/maintenance,
+/obj/random/soap,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
 "pk" = (
@@ -3708,9 +3699,7 @@
 /turf/unsimulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor9)
 "qE" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
 "qG" = (
@@ -3769,9 +3758,7 @@
 /turf/simulated/floor/grass2,
 /area/awaymission/diescraper/indoors/floor5)
 "qW" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "qX" = (
@@ -4049,9 +4036,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
 "sa" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/diescraper/indoors/floor10)
 "sc" = (
@@ -4280,18 +4265,8 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor1)
-"sW" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/diescraper/indoors/floor2)
 "ta" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/kafel_full,
 /area/awaymission/diescraper/indoors/floor10)
 "tb" = (
@@ -4416,6 +4391,14 @@
 /obj/item/weapon/bedsheet/double,
 /turf/unsimulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor8)
+"tw" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor2)
 "tx" = (
 /obj/machinery/light{
 	dir = 4;
@@ -5605,6 +5588,10 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4second)
+"yF" = (
+/obj/random/soap,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor4second)
 "yG" = (
 /obj/item/weapon/material/shard{
 	icon_state = "splinterslarge"
@@ -5870,14 +5857,6 @@
 /obj/structure/window/reinforced/tinted/frosted,
 /turf/simulated/floor/tiled/kafel_full,
 /area/awaymission/diescraper/indoors/floor9)
-"zD" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/diescraper/indoors/floor2)
 "zE" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
@@ -7528,9 +7507,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
 "FP" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -7876,6 +7853,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor5)
+"Hq" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor2)
 "Hr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9205,6 +9190,17 @@
 /obj/item/organ/internal/augment/armmounted/shoulder/surge,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/awaymission/diescraper/indoors/floor8)
+"ME" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor2)
 "MF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -10582,9 +10578,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4second)
 "SF" = (
-/obj/machinery/door/airlock{
-	id = "yourefireduwu"
-	},
+/obj/machinery/door/airlock,
 /obj/structure/fans/hardlight/colorable,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor10)
@@ -11052,17 +11046,6 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/awaymission/diescraper/indoors/floor6)
-"Uw" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	pixel_x = -26
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/diescraper/indoors/floor2)
 "Ux" = (
 /obj/effect/map_effect/perma_light/brighter{
 	light_range = 10;
@@ -11275,6 +11258,12 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor4)
+"Vr" = (
+/obj/machinery/door/airlock{
+	id_tag = "yourefireduwu"
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors/floor10)
 "Vt" = (
 /obj/structure/salvageable/implant_container_os,
 /turf/simulated/floor/tiled/steel{
@@ -15442,7 +15431,7 @@ ng
 ng
 ng
 ng
-Uw
+ME
 ng
 ng
 ng
@@ -15700,7 +15689,7 @@ ng
 ng
 ng
 ng
-ah
+kl
 ng
 ng
 ng
@@ -15958,9 +15947,9 @@ ng
 ng
 ng
 ng
-sW
-zD
-zD
+tw
+Hq
+Hq
 hv
 ng
 uR
@@ -23318,7 +23307,7 @@ sz
 gP
 YU
 GQ
-mx
+Ny
 ao
 Ln
 lN
@@ -26400,7 +26389,7 @@ eo
 HO
 mN
 mN
-mN
+yF
 Pu
 Ss
 Ss
@@ -28460,7 +28449,7 @@ Xr
 cf
 Uu
 Sf
-Ol
+mx
 yx
 mN
 UP
@@ -59167,7 +59156,7 @@ Xj
 Xj
 Xj
 Xj
-op
+Vr
 tr
 mj
 ww
@@ -59684,7 +59673,7 @@ Xj
 Xj
 iL
 iL
-op
+Vr
 iL
 ws
 iL
