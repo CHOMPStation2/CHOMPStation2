@@ -93,10 +93,7 @@
 /* //CHOMPedit: Commented out because this is an actual job here
 /datum/alt_title/sar
 	title = "Search and Rescue"
-<<<<<<< HEAD
 */
-=======
 
 /datum/job/paramedic/get_request_reasons()
 	return list("Assembling expedition team")
->>>>>>> 3223f17203... Adds new fax reason for expedition teams (#16026)

@@ -69,8 +69,4 @@
 	title = "Security Contractor"
 
 /datum/job/officer/get_request_reasons()
-<<<<<<< HEAD
-	return list("Wildlife management")
-=======
 	return list("Wildlife management", "Assembling expedition team")
->>>>>>> 3223f17203... Adds new fax reason for expedition teams (#16026)
