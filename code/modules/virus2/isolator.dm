@@ -68,8 +68,8 @@
 			for (var/ID in virus)
 				var/datum/disease2/disease/V = virus[ID]
 				var/datum/data/record/R = null
-				if (ID in virusDB)
-					R = virusDB[ID]
+				if (ID in GLOB.virusDB) // CHOMPEdit - Globals
+					R = GLOB.virusDB[ID] // CHOMPEdit - Globals
 
 				var/mob/living/carbon/human/D = B.data["donor"]
 				pathogen_pool.Add(list(list(\
@@ -82,8 +82,8 @@
 	data["pathogen_pool"] = pathogen_pool
 
 	var/list/db = list()
-	for(var/ID in virusDB)
-		var/datum/data/record/r = virusDB[ID]
+	for(var/ID in GLOB.virusDB) // CHOMPEdit - Globals
+		var/datum/data/record/r = GLOB.virusDB[ID] // CHOMPEdit - Globals
 		db.Add(list(list("name" = r.fields["name"], "record" = "\ref[r]")))
 	data["database"] = db
 	data["modal"] = tgui_modal_data(src)
@@ -108,7 +108,7 @@
 
 	var/mob/user = usr
 	add_fingerprint(user)
-	
+
 	. = TRUE
 	switch(tgui_modal_act(src, action, params))
 		if(TGUI_MODAL_ANSWER)
@@ -185,9 +185,9 @@
 "}
 
 			var/i = 0
-			for (var/ID in virusDB)
+			for (var/ID in GLOB.virusDB) // CHOMPEdit - Globals
 				i++
-				var/datum/data/record/r = virusDB[ID]
+				var/datum/data/record/r = GLOB.virusDB[ID] // CHOMPEdit - Globals
 				P.info += "[i]. " + r.fields["name"]
 				P.info += "<br>"
 

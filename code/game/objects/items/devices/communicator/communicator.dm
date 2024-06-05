@@ -274,7 +274,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 		if(!comm || !comm.exonet || !comm.exonet.address || comm.exonet.address == src.exonet.address) //Don't add addressless devices, and don't add ourselves.
 			continue
 		src.known_devices |= comm
-	for(var/mob/observer/dead/O in dead_mob_list)
+	for(var/mob/observer/dead/O in GLOB.dead_mob_list) // CHOMPEdit - Globals
 		if(!O.client || O.client.prefs.communicator_visibility == 0)
 			continue
 		src.known_devices |= O

@@ -104,14 +104,14 @@ var/global/list/default_medbay_channels = list(
 	if(bluespace_radio)
 		if(bs_tx_preload_id)
 			//Try to find a receiver
-			for(var/obj/machinery/telecomms/receiver/RX in telecomms_list)
+			for(var/obj/machinery/telecomms/receiver/RX in GLOB.telecomms_list) // CHOMPEdit - Globals
 				if(RX.id == bs_tx_preload_id) //Again, bs_tx is the thing to TRANSMIT TO, so a receiver.
 					bs_tx_weakref = WEAKREF(RX)
 					RX.link_radio(src)
 					break
 			//Hmm, howabout an AIO machine
 			if(!bs_tx_weakref)
-				for(var/obj/machinery/telecomms/allinone/AIO in telecomms_list)
+				for(var/obj/machinery/telecomms/allinone/AIO in GLOB.telecomms_list) // CHOMPEdit - Globals
 					if(AIO.id == bs_tx_preload_id)
 						bs_tx_weakref = WEAKREF(AIO)
 						AIO.link_radio(src)
@@ -122,14 +122,14 @@ var/global/list/default_medbay_channels = list(
 		if(bs_rx_preload_id)
 			var/found = 0
 			//Try to find a transmitter
-			for(var/obj/machinery/telecomms/broadcaster/TX in telecomms_list)
+			for(var/obj/machinery/telecomms/broadcaster/TX in GLOB.telecomms_list) // CHOMPEdit - Globals
 				if(TX.id == bs_rx_preload_id) //Again, bs_rx is the thing to RECEIVE FROM, so a transmitter.
 					TX.link_radio(src)
 					found = 1
 					break
 			//Hmm, howabout an AIO machine
 			if(!found)
-				for(var/obj/machinery/telecomms/allinone/AIO in telecomms_list)
+				for(var/obj/machinery/telecomms/allinone/AIO in GLOB.telecomms_list) // CHOMPEdit - Globals
 					if(AIO.id == bs_rx_preload_id)
 						AIO.link_radio(src)
 						found = 1
@@ -505,11 +505,11 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		signal.transmission_method = TRANSMISSION_SUBSPACE
 
 		//#### Sending the signal to all subspace receivers ####//
-		for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
+		for(var/obj/machinery/telecomms/receiver/R in GLOB.telecomms_list) // CHOMPEdit - Globals
 			R.receive_signal(signal)
 
 		// Allinone can act as receivers.
-		for(var/obj/machinery/telecomms/allinone/R in telecomms_list)
+		for(var/obj/machinery/telecomms/allinone/R in GLOB.telecomms_list) // CHOMPEdit - Globals
 			R.receive_signal(signal)
 
 		// Receiving code can be located in Telecommunications.dm
@@ -533,14 +533,14 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		signal.transmission_method = TRANSMISSION_SUBSPACE
 		signal.data["compression"] = 0
 
-		for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
+		for(var/obj/machinery/telecomms/receiver/R in GLOB.telecomms_list) // CHOMPEdit - Globals
 			R.receive_signal(signal)
 
 		// Allinone can act as receivers.
-		for(var/obj/machinery/telecomms/allinone/R in telecomms_list)
+		for(var/obj/machinery/telecomms/allinone/R in GLOB.telecomms_list) // CHOMPEdit - Globals
 			R.receive_signal(signal)
 
-	for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
+	for(var/obj/machinery/telecomms/receiver/R in GLOB.telecomms_list) // CHOMPEdit - Globals
 		R.receive_signal(signal)
 
 		if(signal.data["done"] && (pos_z in signal.data["level"]))

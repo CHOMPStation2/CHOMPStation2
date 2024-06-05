@@ -16,7 +16,7 @@
 
 
 /datum/event/communications_blackout/start()
-	for(var/obj/machinery/telecomms/T in telecomms_list)
+	for(var/obj/machinery/telecomms/T in GLOB.telecomms_list) // CHOMPEdit - Globals
 		T.emp_act(1)
 	for(var/obj/machinery/exonet_node/N in machines)
 		N.emp_act(1)

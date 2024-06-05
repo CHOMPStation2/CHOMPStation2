@@ -87,7 +87,7 @@
 
 	if(owner && owner.stat == DEAD)
 		owner.set_stat(CONSCIOUS)
-		dead_mob_list -= owner
+		GLOB.dead_mob_list -= owner // CHOMPEdit - Globals
 		living_mob_list |= owner
 		owner.visible_message("<span class='danger'>\The [owner] twitches visibly!</span>")
 

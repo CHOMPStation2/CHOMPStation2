@@ -9,8 +9,8 @@
 	pick_message_server()
 
 /datum/event/pda_spam/proc/pick_message_server()
-	if(message_servers)
-		for (var/obj/machinery/message_server/MS in message_servers)
+	if(GLOB.message_servers) // CHOMPEdit - Globals
+		for (var/obj/machinery/message_server/MS in GLOB.message_servers) // CHOMPEdit - Globals
 			if(MS.active)
 				useMS = MS
 				break
@@ -35,7 +35,7 @@
 			// /obj/machinery/message_server/proc/send_pda_message(var/recipient = "",var/sender = "",var/message = "")
 			var/obj/item/device/pda/P
 			var/list/viables = list()
-			for(var/obj/item/device/pda/check_pda in sortAtom(PDAs))
+			for(var/obj/item/device/pda/check_pda in sortAtom(GLOB.PDAs)) // CHOMPEdit - Globals
 				if (!check_pda.owner || check_pda == src || check_pda.hidden)
 					continue
 

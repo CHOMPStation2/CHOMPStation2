@@ -34,13 +34,13 @@
 
 	var/S = null
 	var/list/vr_landmarks = list()
-	for(var/obj/effect/landmark/virtual_reality/sloc in landmarks_list)
+	for(var/obj/effect/landmark/virtual_reality/sloc in GLOB.landmarks_list) // CHOMPEdit - Globals
 		vr_landmarks += sloc.name
 
 	S = tgui_input_list(usr, "Please select a location to spawn your avatar at:", "Spawn location", vr_landmarks)
 	if(!S)
 		return 0
-	for(var/obj/effect/landmark/virtual_reality/i in landmarks_list)
+	for(var/obj/effect/landmark/virtual_reality/i in GLOB.landmarks_list) // CHOMPEdit - Globals
 		if(i.name == S)
 			S = i
 			break

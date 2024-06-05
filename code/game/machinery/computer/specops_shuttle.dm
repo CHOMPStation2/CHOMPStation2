@@ -159,10 +159,10 @@ var/specops_shuttle_timeleft = 0
 		sleep(10)
 
 		var/spawn_marauder[] = new()
-		for(var/obj/effect/landmark/L in landmarks_list)
+		for(var/obj/effect/landmark/L in GLOB.landmarks_list) // CHOMPEdit - Globals
 			if(L.name == "Marauder Entry")
 				spawn_marauder.Add(L)
-		for(var/obj/effect/landmark/L in landmarks_list)
+		for(var/obj/effect/landmark/L in GLOB.landmarks_list) // CHOMPEdit - Globals
 			if(L.name == "Marauder Exit")
 				var/obj/effect/portal/P = new(L.loc)
 				P.invisibility = 101//So it is not seen by anyone.

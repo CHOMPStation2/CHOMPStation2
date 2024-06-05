@@ -213,8 +213,8 @@
 					dat += "<span class='warning'>Unknown substance[(unknown > 1)?"s":""] found in subject's dermis.</span><br>"
 		if(C.virus2.len)
 			for (var/ID in C.virus2)
-				if (ID in virusDB)
-					var/datum/data/record/V = virusDB[ID]
+				if (ID in GLOB.virusDB) // CHOMPEdit - Globals
+					var/datum/data/record/V = GLOB.virusDB[ID] // CHOMPEdit - Globals
 					dat += "<span class='warning'>Warning: Pathogen [V.fields["name"]] detected in subject's blood. Known antigen : [V.fields["antigen"]]</span><br>"
 				else
 					dat += "<span class='warning'>Warning: Unknown pathogen detected in subject's blood.</span><br>"

@@ -426,7 +426,7 @@
 
 	if(!check_rights(R_ADMIN|R_FUN|R_EVENT)) return
 
-	var/mob/living/silicon/S = tgui_input_list(usr, "Select silicon.", "Rename Silicon.", silicon_mob_list)
+	var/mob/living/silicon/S = tgui_input_list(usr, "Select silicon.", "Rename Silicon.", GLOB.silicon_mob_list) // CHOMPEdit - Globals
 	if(!S) return
 
 	var/new_name = sanitizeSafe(tgui_input_text(src, "Enter new name. Leave blank or as is to cancel.", "[S.real_name] - Enter new silicon name", S.real_name))
@@ -441,7 +441,7 @@
 
 	if(!check_rights(R_ADMIN|R_EVENT)) return
 
-	var/mob/living/silicon/S = tgui_input_list(usr, "Select silicon.", "Manage Silicon Laws", silicon_mob_list)
+	var/mob/living/silicon/S = tgui_input_list(usr, "Select silicon.", "Manage Silicon Laws", GLOB.silicon_mob_list) // CHOMPEdit - Globals
 	if(!S) return
 
 	var/datum/tgui_module/law_manager/admin/L = new(S)

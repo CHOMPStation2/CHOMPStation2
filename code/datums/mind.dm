@@ -178,7 +178,7 @@
 		if(antag) antag.place_mob(src.current)
 
 	else if (href_list["role_edit"])
-		var/new_role = input("Select new role", "Assigned role", assigned_role) as null|anything in joblist
+		var/new_role = input("Select new role", "Assigned role", assigned_role) as null|anything in GLOB.joblist // CHOMPEdit - Globals
 		if (!new_role) return
 		assigned_role = new_role
 

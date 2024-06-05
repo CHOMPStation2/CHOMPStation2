@@ -114,7 +114,7 @@ mob/living/carbon/proc/charmed() //TODO
 
 
 //egglaying
-var/eggs = 0
+GLOBAL_VAR_INIT(eggs, 0)
 
 
 /mob/living/proc/mobegglaying()
@@ -137,17 +137,17 @@ var/eggs = 0
 		if(choice == "Make a Egg")
 			src.show_message("<span class='warning'>You feel your belly bulging a bit, you made an egg!</span>")
 			C.nutrition -=150
-			eggs += 1
+			GLOB.eggs += 1
 			return 0
-		else if(choice == "Make a Egg" && eggs > 5)
+		else if(choice == "Make a Egg" && GLOB.eggs > 5)
 			src.show_message("<span class='warning'>Your Belly is full of Eggs you cant have more!!</span>")
 			return 0
-		else if(choice == "lay your Eggs" && eggs > 0)
+		else if(choice == "lay your Eggs" && GLOB.eggs > 0)
 			src.visible_message(span_white("<b>[src] freezes and vissibly tries to squat down</b>"))
 
-			while(eggs > 0)
+			while(GLOB.eggs > 0)
 				src.show_message("<span class='warning'>You lay a egg!</span>")
-				eggs--
+				GLOB.eggs--
 				var/obj/item/weapon/reagent_containers/food/snacks/egg/E = new(get_turf(src))
 				E.pixel_x = rand(-6,6)
 				E.pixel_y = rand(-6,6)
@@ -160,9 +160,9 @@ var/eggs = 0
 	if(layeggs == 1)
 		src.visible_message("<font color='white'><b>[src] freezes and vissibly tries to squat down</b></font>")
 
-	while(eggs > 0)
+	while(GLOB.eggs > 0)
 		src.show_message("<span class='warning'>You lay you egg!</span>")
-		eggs--
+		GLOB.eggs--
 		var/obj/item/weapon/reagent_containers/food/snacks/egg/E = new(get_turf(src))
 		E.pixel_x = rand(-6,6)
 		E.pixel_y = rand(-6,6)

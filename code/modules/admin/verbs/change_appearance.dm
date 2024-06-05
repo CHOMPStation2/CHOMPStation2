@@ -5,7 +5,7 @@
 
 	if(!check_rights(R_FUN)) return
 
-	var/mob/living/carbon/human/H = tgui_input_list(usr, "Select mob.", "Change Mob Appearance - Admin", human_mob_list)
+	var/mob/living/carbon/human/H = tgui_input_list(usr, "Select mob.", "Change Mob Appearance - Admin", GLOB.human_mob_list) // CHOMPEdit - Globals
 	if(!H) return
 
 	log_and_message_admins("is altering the appearance of [H].")
@@ -19,13 +19,13 @@
 
 	if(!check_rights(R_FUN)) return
 
-	var/mob/living/carbon/human/H = tgui_input_list(usr, "Select mob.", "Change Mob Appearance - Self", human_mob_list)
+	var/mob/living/carbon/human/H = tgui_input_list(usr, "Select mob.", "Change Mob Appearance - Self", GLOB.human_mob_list) // CHOMPEdit - Globals
 	if(!H) return
 
 	if(!H.client)
 		to_chat(usr, "<span class='filter_arning'> Only mobs with clients can alter their own appearance.</span>")
 		return
-	var/datum/gender/T = gender_datums[H.get_visible_gender()]
+	var/datum/gender/T = GLOB.gender_datums[H.get_visible_gender()] // CHOMPEdit - Globals
 	switch(tgui_alert(usr, "Do you wish for [H] to be allowed to select non-whitelisted races?","Alter Mob Appearance","Yes","No","Cancel"))
 		if("Yes")
 			log_and_message_admins("has allowed [H] to change [T.his] appearance, without whitelisting of races.")
@@ -41,7 +41,7 @@
 
 	if(!check_rights(R_FUN))	return
 
-	var/mob/living/carbon/human/M = tgui_input_list(usr, "Select mob.", "Edit Appearance", human_mob_list)
+	var/mob/living/carbon/human/M = tgui_input_list(usr, "Select mob.", "Edit Appearance", GLOB.human_mob_list) // CHOMPEdit - Globals
 
 	if(!istype(M, /mob/living/carbon/human))
 		to_chat(usr, "<span class='warning'>You can only do this to humans!</span>")

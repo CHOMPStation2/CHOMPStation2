@@ -1,24 +1,27 @@
 //Since it didn't really belong in any other category, I'm putting this here
 //This is for procs to replace all the goddamn 'in world's that are chilling around the code
 
+// CHOMPEdit Start - Globals
 var/global/list/player_list = list()				//List of all mobs **with clients attached**. Excludes /mob/new_player
 var/global/list/mob_list = list()					//List of all mobs, including clientless
-var/global/list/human_mob_list = list()				//List of all human mobs and sub-types, including clientless
-var/global/list/silicon_mob_list = list()			//List of all silicon mobs, including clientless
+GLOBAL_LIST_EMPTY(human_mob_list)					//List of all human mobs and sub-types, including clientless
+GLOBAL_LIST_EMPTY(silicon_mob_list)					//List of all silicon mobs, including clientless
 var/global/list/ai_list = list()					//List of all AIs, including clientless
 var/global/list/living_mob_list = list()			//List of all alive mobs, including clientless. Excludes /mob/new_player
-var/global/list/dead_mob_list = list()				//List of all dead mobs, including clientless. Excludes /mob/new_player
-var/global/list/observer_mob_list = list()			//List of all /mob/observer/dead, including clientless.
+GLOBAL_LIST_EMPTY(dead_mob_list)					//List of all dead mobs, including clientless. Excludes /mob/new_player
+GLOBAL_LIST_EMPTY(observer_mob_list)				//List of all /mob/observer/dead, including clientless.
 var/global/list/listening_objects = list()			//List of all objects which care about receiving messages (communicators, radios, etc)
-var/global/list/cleanbot_reserved_turfs = list()	//List of all turfs currently targeted by some cleanbot
+GLOBAL_LIST_EMPTY(cleanbot_reserved_turfs)			//List of all turfs currently targeted by some cleanbot
 
-var/global/list/cable_list = list()					//Index for all cables, so that powernets don't have to look through the entire world all the time
-var/global/list/landmarks_list = list()				//list of all landmarks created
-var/global/list/event_triggers = list()				//Associative list of creator_ckey:list(landmark references) for event triggers
-var/global/list/surgery_steps = list()				//list of all surgery steps  |BS12
-var/global/list/side_effects = list()				//list of all medical sideeffects types by thier names |BS12
-var/global/list/mechas_list = list()				//list of all mechs. Used by hostile mobs target tracking.
-var/global/list/joblist = list()					//list of all jobstypes, minus borg and AI
+GLOBAL_LIST_EMPTY(cable_list)						//Index for all cables, so that powernets don't have to look through the entire world all the time
+GLOBAL_LIST_EMPTY(landmarks_list)					//list of all landmarks created
+GLOBAL_LIST_EMPTY(event_triggers)					//Associative list of creator_ckey:list(landmark references) for event triggers
+GLOBAL_LIST_EMPTY(surgery_steps)					//list of all surgery steps  |BS12
+// UNUSED / NO REFERENCE IN CODE - side_effects
+//GLOBAL_LIST_EMPTY(side_effects)					//list of all medical sideeffects types by thier names |BS12
+GLOBAL_LIST_EMPTY(mechas_list)						//list of all mechs. Used by hostile mobs target tracking.
+GLOBAL_LIST_EMPTY(joblist)							//list of all jobstypes, minus borg and AI
+// CHOMPEdit End
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER,HERM) //VOREStaton Edit
 #define all_genders_text_list list("Male","Female","Plural","Neuter","Herm") //VOREStation Edit
@@ -58,17 +61,17 @@ var/global/list/pdachoicelist = list("Default", "Slim", "Old", "Rugged", "Hologr
 var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 
 // Visual nets
-var/list/datum/visualnet/visual_nets = list()
+GLOBAL_LIST_EMPTY_TYPED(visual_nets, /datum/visualnet) // CHOMPEdit - Globals
 var/datum/visualnet/camera/cameranet = new()
 var/datum/visualnet/cult/cultnet = new()
 
 // Runes
-var/global/list/rune_list = new()
-var/global/list/escape_list = list()
-var/global/list/endgame_exits = list()
-var/global/list/endgame_safespawns = list()
+GLOBAL_LIST_INIT(rune_list, new()) // CHOMPEdit - Globals
+GLOBAL_LIST_EMPTY(escape_list) // CHOMPEdit - Globals
+GLOBAL_LIST_EMPTY(endgame_exits) // CHOMPEdit - Globals
+GLOBAL_LIST_EMPTY(endgame_safespawns) // CHOMPEdit - Globals
 
-var/global/list/syndicate_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
+GLOBAL_LIST_INIT(syndicate_access, list(access_maint_tunnels, access_syndicate, access_external_airlocks)) // CHOMPEdit - Globals
 
 // Ores (for mining)
 GLOBAL_LIST_EMPTY(ore_data)
@@ -158,7 +161,7 @@ GLOBAL_LIST_EMPTY(mannequins)
 	paths = subtypesof(/datum/surgery_step)
 	for(var/T in paths)
 		var/datum/surgery_step/S = new T
-		surgery_steps += S
+		GLOB.surgery_steps += S // CHOMPEdit - Globals
 	sort_surgeries()
 
 	//List of job. I can't believe this was calculated multiple times per tick!
@@ -166,7 +169,7 @@ GLOBAL_LIST_EMPTY(mannequins)
 	paths -= exclude_jobs
 	for(var/T in paths)
 		var/datum/job/J = new T
-		joblist[J.title] = J
+		GLOB.joblist[J.title] = J // CHOMPEdit - Globals
 
 	//Languages
 	paths = subtypesof(/datum/language)

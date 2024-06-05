@@ -166,8 +166,8 @@
 
 		else if(task == "rank")
 			var/new_rank
-			if(admin_ranks.len)
-				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", (admin_ranks|"*New Rank*"))
+			if(GLOB.admin_ranks.len) // CHOMPEdit - Globals
+				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", (GLOB.admin_ranks|"*New Rank*")) // CHOMPEdit - Globals
 			else
 				new_rank = tgui_input_list(usr, "Please select a rank", "New rank", list("Game Master","Head Admin","Game Admin", "Trial Admin", "Admin Observer","Moderator","Mentor","Badmin","Retired Admin","Event Manager","Developer","DevMod","*New Rank*")) //CHOMP Edit bandaid fix to assigning titles because we're having some funky database issues, I think. Other option is to manually edit database entry for someone's title.
 
@@ -184,15 +184,15 @@
 						to_chat(usr, "<span class='filter_adminlog warning'>Error: Topic 'editrights': Invalid rank</span>")
 						return
 					if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
-						if(admin_ranks.len)
-							if(new_rank in admin_ranks)
-								rights = admin_ranks[new_rank]		//we typed a rank which already exists, use its rights
+						if(GLOB.admin_ranks.len) // CHOMPEdit - Globals
+							if(new_rank in GLOB.admin_ranks) // CHOMPEdit - Globals
+								rights = GLOB.admin_ranks[new_rank]	//we typed a rank which already exists, use its rights // CHOMPEdit - Globals
 							else
-								admin_ranks[new_rank] = 0			//add the new rank to admin_ranks
+								GLOB.admin_ranks[new_rank] = 0 //add the new rank to admin_ranks // CHOMPEdit - Globals
 				else
 					if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
 						new_rank = ckeyEx(new_rank)
-						rights = admin_ranks[new_rank]				//we input an existing rank, use its rights
+						rights = GLOB.admin_ranks[new_rank]	//we input an existing rank, use its rights // CHOMPEdit - Globals
 
 			if(D)
 				D.disassociate()								//remove adminverbs and unlink from client

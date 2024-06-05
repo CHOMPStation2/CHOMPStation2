@@ -12,10 +12,10 @@
 
 /datum/visualnet/New()
 	..()
-	visual_nets += src
+	GLOB.visual_nets += src // CHOMPEdit - Globals
 
 /datum/visualnet/Destroy()
-	visual_nets -= src
+	GLOB.visual_nets -= src // CHOMPEdit - Globals
 	return ..()
 
 // Checks if a chunk has been Generated in x, y, z.
