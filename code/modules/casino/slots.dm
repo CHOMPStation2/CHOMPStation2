@@ -9,7 +9,7 @@
 /obj/machinery/slot_machine
 	name = "slot machine"
 	desc = "A gambling machine designed to give you false hope and rob you of your wealth, hence why it's often called a one armed bandit."
-	icon = 'icons/obj/casino.dmi'
+	icon = 'icons/obj/casino_ch.dmi' //CHOMPEdit
 	icon_state = "slotmachine"
 	anchored = 1
 	density = 1

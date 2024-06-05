@@ -5,8 +5,8 @@
 /obj/machinery/chipmachine
 	name = "Casino Chip Exchange"
 	desc = "Converts thalers to casino chips at a ratio of 5 thalers to 1 chip! It can also convert chips back to thalers at the same rate." //CHOMPEdit
-	icon = 'icons/obj/casino.dmi'
-	icon_state ="chipmachine"
+	icon = 'icons/obj/casino_ch.dmi' //CHOMNPEdit
+	icon_state ="casino_atm" //CHOMNPEdit
 	anchored = 1
 
 /obj/machinery/chipmachine/attackby(obj/item/I as obj, mob/user as mob)

@@ -343,16 +343,19 @@
 //Blackjack table
 //
 /obj/structure/casino_table/blackjack_l
+	icon = 'icons/obj/casino_ch.dmi' //CHOMPEdit
 	name = "gambling table"
 	desc = "Gambling table, try your luck and skills!"
 	icon_state = "blackjack_l"
 
 /obj/structure/casino_table/blackjack_m
+	icon = 'icons/obj/casino_ch.dmi' //CHOMPEdit
 	name = "gambling table"
 	desc = "Gambling table, try your luck and skills!"
 	icon_state = "blackjack_m"
 
 /obj/structure/casino_table/blackjack_r
+	icon = 'icons/obj/casino_ch.dmi' //CHOMPEdit
 	name = "gambling table"
 	desc = "Gambling table, try your luck and skills!"
 	icon_state = "blackjack_r"
