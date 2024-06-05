@@ -1,6 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - balance: "lost and gravekeeper drones now have a small chance to unlock the scrambled module by digesting mobs"
-  - balance: "lost and gravekeeper get access to an advanced self repair module when digesting 5 mobs (stats are experimental and could change in the future)"
-  - rscadd: "advanced self repair module which can repair all modules, but only one after another"
