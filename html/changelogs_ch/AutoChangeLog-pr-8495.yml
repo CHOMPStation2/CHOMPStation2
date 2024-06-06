@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - rscadd: "re-adds the station date and season to the Panel"
