@@ -154,7 +154,7 @@
 	var/cheatball = FALSE
 
 /obj/item/roulette_ball/proc/get_cheated_result()
-	return rand(0,37)		// No cheating by default
+	return rand(0,36)		// No cheating by default //CHOMPEdit
 
 /obj/item/roulette_ball/proc/get_ball_desc()
 	return ball_desc
