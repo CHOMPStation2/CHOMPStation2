@@ -11,8 +11,8 @@
 //Locked Vendors (require access to use)
 //
 /obj/machinery/vending/deluxe_boozeomat
-	name = "Premium Drink Distributor"
-	desc = "A top of the line drink vendor that carries some of the finest drinks in the frontier."
+	name = "Deluxe Drink Distributor" //CHOMPEdit
+	desc = "A top of the line and experimental drink vendor, it uses bluespace technology for storage!" //CHOMPEdit
 	icon = 'icons/obj/casino.dmi'
 	icon_state = "premiumbooze"
 	products = list(/obj/item/weapon/glass_extra/stick = 50,
@@ -49,10 +49,11 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing = 10,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps = 10, //CHOMPAdd
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 15,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 50, //CHOMPEdit
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer = 15,
+					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer = 50, //CHOMPEdit
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor = 15,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer = 15,
@@ -71,7 +72,9 @@
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/applejuice = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/milk = 10,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/cream = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/ice = 10
+					/obj/item/weapon/reagent_containers/food/drinks/ice = 10,
+					/obj/item/weapon/reagent_containers/food/drinks/flask/barflask = 10, //CHOMPAdd
+					/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask = 10 //CHOMPAdd
 					)
 
 	contraband = list()
@@ -80,48 +83,74 @@
 	req_access = list(access_bar)
 	req_log_access = access_bar
 	has_logs = 1
-	vending_sound = "machines/vending/vending_cans.ogg"
 
 /obj/machinery/vending/deluxe_dinner
-	name = "Premium Dining Distributor"
-	desc = "A top of the line drink vendor that carries some of the finest foods in the frontier."
+	name = "Deluxe Dining Distributor" //CHOMPEdit
+	desc = "A top of the line and experimental food vendor, it uses bluespace technology for storage!" //CHOMPEdit
 	icon = 'icons/obj/casino.dmi'
 	icon_state = "premiumfood"
-	products = list(/obj/item/weapon/reagent_containers/food/snacks/bigbiteburger = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/meatsteak = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/fries = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/onionrings = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/cheeseburrito= 30,
-					/obj/item/weapon/reagent_containers/food/snacks/enchiladas= 30,
-					/obj/item/weapon/reagent_containers/food/snacks/meatburrito= 30,
-					/obj/item/weapon/reagent_containers/food/snacks/taco= 30,
-					/obj/item/weapon/reagent_containers/food/snacks/cheesenachos= 30,
-					/obj/item/weapon/reagent_containers/food/snacks/cubannachos= 30,
-					/obj/item/weapon/reagent_containers/food/snacks/stew= 20,
-					/obj/item/weapon/reagent_containers/food/snacks/roastbeef = 20,
-					/obj/item/weapon/reagent_containers/food/snacks/aesirsalad = 20,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/sushi = 20,
-					/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon = 20,
-					/obj/item/weapon/reagent_containers/food/snacks/baguette = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/appletart = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/muffin = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/berrymuffin = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/cherrypie = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/croissant = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/pie = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/poppypretzel = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/sugarcookie = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/waffles = 30,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/applecake = 2,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/birthdaycake = 2,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake = 2,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesecake = 2,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/chocolatecake = 2,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/lemoncake = 2,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/limecake = 2,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/orangecake = 2,
-					/obj/item/weapon/reagent_containers/food/snacks/sliceable/plaincake = 2
-					)
+	products = list(
+		//CHOMPAdd Start
+		/obj/item/weapon/tray = 8,
+		/obj/item/weapon/material/kitchen/utensil/fork = 15,
+		/obj/item/weapon/material/knife/plastic = 15,
+		/obj/item/weapon/material/kitchen/utensil/spoon = 15,
+		/obj/item/weapon/material/kitchen/rollingpin = 5,
+		/obj/item/weapon/material/knife = 5,
+		/obj/item/weapon/material/knife/butch = 3,
+		/obj/item/clothing/suit/chef/classic = 3,
+		/obj/item/weapon/storage/bag/food = 3,
+		/obj/item/weapon/storage/toolbox/lunchbox = 10,
+		/obj/item/weapon/storage/toolbox/lunchbox/heart = 10,
+		/obj/item/weapon/storage/toolbox/lunchbox/cat = 10,
+		/obj/item/weapon/storage/toolbox/lunchbox/nt = 10,
+		/obj/item/weapon/storage/toolbox/lunchbox/mars = 10,
+		/obj/item/weapon/storage/toolbox/lunchbox/cti = 10,
+		/obj/item/weapon/storage/toolbox/lunchbox/nymph = 10,
+		/obj/item/weapon/storage/toolbox/lunchbox/syndicate = 10,
+		//CHOMPAdd End
+		/obj/item/weapon/reagent_containers/food/snacks/bigbiteburger = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/meatsteak = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/fries = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/onionrings = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/cheeseburrito= 30,
+		/obj/item/weapon/reagent_containers/food/snacks/enchiladas= 30,
+		/obj/item/weapon/reagent_containers/food/snacks/meatburrito= 30,
+		/obj/item/weapon/reagent_containers/food/snacks/taco= 30,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesenachos= 30,
+		/obj/item/weapon/reagent_containers/food/snacks/cubannachos= 30,
+		//CHOMPAdd Start
+		/obj/item/weapon/reagent_containers/food/snacks/tamales = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/bigos = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/concha = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/pandenata = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/tocino = 30,
+		//CHOMPAdd End
+		/obj/item/weapon/reagent_containers/food/snacks/stew= 20,
+		/obj/item/weapon/reagent_containers/food/snacks/roastbeef = 20,
+		/obj/item/weapon/reagent_containers/food/snacks/aesirsalad = 20,
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/sushi = 20,
+		/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon = 20,
+		/obj/item/weapon/reagent_containers/food/snacks/baguette = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/appletart = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/muffin = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/berrymuffin = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/cherrypie = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/sugarcookie = 30, //CHOMPadd
+		/obj/item/weapon/reagent_containers/food/snacks/croissant = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/pie = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/poppypretzel = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/sugarcookie = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/waffles = 30,
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/applecake = 10, //CHOMPEdit
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/birthdaycake = 10, //CHOMPEdit
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake = 10, //CHOMPEdit
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesecake = 10, //CHOMPEdit
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/chocolatecake = 10, //CHOMPEdit
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/lemoncake = 10, //CHOMPEdit
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/limecake = 10, //CHOMPEdit
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/orangecake = 10, //CHOMPEdit
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/plaincake = 10) //CHOMPEdit
 
 	contraband = list()
 	vend_delay = 15
