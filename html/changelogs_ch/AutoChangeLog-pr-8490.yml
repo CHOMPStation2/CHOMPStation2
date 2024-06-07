@@ -1,7 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - rscdel: "nano ui"
-  - code_imp: "merge the casino code into upstream's enhanced version"
-  - code_imp: "casino_chip_exchanger -> chipmachine"
-  - code_imp: "casinoslave_handler -> casinosentientprize_handler"
