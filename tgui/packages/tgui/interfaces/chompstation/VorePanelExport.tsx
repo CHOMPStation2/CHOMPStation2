@@ -203,6 +203,10 @@ type Belly = {
   primary_transfer_messages_prey: string[];
   secondary_transfer_messages_owner: string[];
   secondary_transfer_messages_prey: string[];
+  primary_autotransfer_messages_owner: string[];
+  primary_autotransfer_messages_prey: string[];
+  secondary_autotransfer_messages_owner: string[];
+  secondary_autotransfer_messages_prey: string[];
   digest_chance_messages_owner: string[];
   digest_chance_messages_prey: string[];
   absorb_chance_messages_owner: string[];
@@ -405,6 +409,10 @@ const generateBellyString = (belly: Belly, index: number) => {
     primary_transfer_messages_prey,
     secondary_transfer_messages_owner,
     secondary_transfer_messages_prey,
+    primary_autotransfer_messages_owner,
+    primary_autotransfer_messages_prey,
+    secondary_autotransfer_messages_owner,
+    secondary_autotransfer_messages_prey,
     digest_chance_messages_owner,
     digest_chance_messages_prey,
     absorb_chance_messages_owner,
@@ -731,6 +739,30 @@ const generateBellyString = (belly: Belly, index: number) => {
 
   result += '<div class="tab-pane fade" id="secondaryTransferMessagesPrey' + index + '" role="messagesTabpanel">';
   secondary_transfer_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="primaryAutoTransferMessagesOwner' + index + '" role="messagesTabpanel">';
+  primary_autotransfer_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="primaryAutoTransferMessagesPrey' + index + '" role="messagesTabpanel">';
+  primary_autotransfer_messages_prey?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="secondaryAutoTransferMessagesOwner' + index + '" role="messagesTabpanel">';
+  secondary_autotransfer_messages_owner?.forEach((msg) => {
+    result += msg + '<br>';
+  });
+  result += '</div>';
+
+  result += '<div class="tab-pane fade" id="secondaryAutoTransferMessagesPrey' + index + '" role="messagesTabpanel">';
+  secondary_autotransfer_messages_prey?.forEach((msg) => {
     result += msg + '<br>';
   });
   result += '</div>';
