@@ -408,6 +408,58 @@ const VoreSelectedBellyDescriptionsTransfer = (props) => {
           </Button>
         </>
       )}
+      {(message_mode ||
+        !!interacts.transferlocation ||
+        !!autotransfer.autotransferlocation) && (
+        <>
+          <Button
+            onClick={() =>
+              act('set_attribute', {
+                attribute: 'b_msgs',
+                msgtype: 'atrnspp',
+              })
+            }
+          >
+            Primary Auto-Transfer Message (to prey)
+          </Button>
+          <Button
+            onClick={() =>
+              act('set_attribute', {
+                attribute: 'b_msgs',
+                msgtype: 'atrnspo',
+              })
+            }
+          >
+            Primary Auto-Transfer Message (to you)
+          </Button>
+        </>
+      )}
+      {(message_mode ||
+        !!interacts.transferlocation_secondary ||
+        !!autotransfer.autotransferlocation_secondary) && (
+        <>
+          <Button
+            onClick={() =>
+              act('set_attribute', {
+                attribute: 'b_msgs',
+                msgtype: 'atrnssp',
+              })
+            }
+          >
+            Secondary Auto-Transfer Message (to prey)
+          </Button>
+          <Button
+            onClick={() =>
+              act('set_attribute', {
+                attribute: 'b_msgs',
+                msgtype: 'atrnsso',
+              })
+            }
+          >
+            Secondary Auto-Transfer Message (to you)
+          </Button>
+        </>
+      )}
     </LabeledList.Item>
   );
 };
