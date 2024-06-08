@@ -356,8 +356,7 @@ const VoreSelectedBellyDescriptionsTransfer = (props) => {
 
   return (
     <LabeledList.Item label="Transfer Messages">
-      {(message_mode ||
-        !!interacts.transferlocation) && (
+      {(message_mode || !!interacts.transferlocation) && (
         <>
           <Button
             onClick={() =>
@@ -381,8 +380,7 @@ const VoreSelectedBellyDescriptionsTransfer = (props) => {
           </Button>
         </>
       )}
-      {(message_mode ||
-        !!interacts.transferlocation_secondary) && (
+      {(message_mode || !!interacts.transferlocation_secondary) && (
         <>
           <Button
             onClick={() =>
@@ -406,8 +404,7 @@ const VoreSelectedBellyDescriptionsTransfer = (props) => {
           </Button>
         </>
       )}
-      {(message_mode ||
-        !!autotransfer.autotransferlocation) && (
+      {(message_mode || !!autotransfer.autotransferlocation) && (
         <>
           <Button
             onClick={() =>
@@ -431,8 +428,7 @@ const VoreSelectedBellyDescriptionsTransfer = (props) => {
           </Button>
         </>
       )}
-      {(message_mode ||
-        !!autotransfer.autotransferlocation_secondary) && (
+      {(message_mode || !!autotransfer.autotransferlocation_secondary) && (
         <>
           <Button
             onClick={() =>
