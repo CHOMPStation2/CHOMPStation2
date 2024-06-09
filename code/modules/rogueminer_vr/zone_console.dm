@@ -164,3 +164,8 @@
 	You can then travel to the new area to mine in that location.<br>
 	<br>
 	<font size=1>This technology produced under license from Thinktronic Systems, LTD.</font>"}
+
+
+#undef OUTPOST_Z
+#undef TRANSIT_Z
+#undef BELT_Z
