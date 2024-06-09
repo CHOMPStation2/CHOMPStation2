@@ -101,10 +101,6 @@ Also includes Life and New
 		stasis += hit.stasisforce
 	..()
 
-<<<<<<< HEAD
-/mob/living/simple_animal/xeno/Destroy()
-=======
 /mob/living/simple_mob/xeno/Destroy()
->>>>>>> 071c1b1996... Merge pull request #16032 from Kashargul/gcMistakes
 	QDEL_NULL(traitdat)
 	..()
