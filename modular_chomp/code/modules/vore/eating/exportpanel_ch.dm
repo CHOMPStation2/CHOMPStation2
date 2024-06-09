@@ -154,6 +154,22 @@
 			for(var/msg in B.secondary_transfer_messages_prey)
 				belly_data["secondary_transfer_messages_prey"] += msg
 
+			belly_data["primary_autotransfer_messages_owner"] = list()
+			for(var/msg in B.primary_autotransfer_messages_owner)
+				belly_data["primary_autotransfer_messages_owner"] += msg
+
+			belly_data["primary_autotransfer_messages_prey"] = list()
+			for(var/msg in B.primary_autotransfer_messages_prey)
+				belly_data["primary_autotransfer_messages_prey"] += msg
+
+			belly_data["secondary_autotransfer_messages_owner"] = list()
+			for(var/msg in B.secondary_autotransfer_messages_owner)
+				belly_data["secondary_autotransfer_messages_owner"] += msg
+
+			belly_data["secondary_autotransfer_messages_prey"] = list()
+			for(var/msg in B.secondary_autotransfer_messages_prey)
+				belly_data["secondary_autotransfer_messages_prey"] += msg
+
 			belly_data["digest_chance_messages_owner"] = list()
 			for(var/msg in B.digest_chance_messages_owner)
 				belly_data["digest_chance_messages_owner"] += msg
