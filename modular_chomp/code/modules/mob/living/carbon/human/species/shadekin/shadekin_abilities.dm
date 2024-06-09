@@ -210,6 +210,13 @@
 		stop_pulling()
 		canmove = FALSE
 
+		//CHOMPAdd Start
+		if(nif)
+			var/obj/item/device/nif/lost_nif = nif
+			lost_nif.unimplant(src)
+			lost_nif.forceMove(drop_location())
+		//CHOMPAdd End
+
 		// change
 		ability_flags |= AB_PHASE_SHIFTED
 		ability_flags |= AB_PHASE_SHIFTING
