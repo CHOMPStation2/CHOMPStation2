@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - code_imp: "move the update_icon in xenoarch to Initialize as well"

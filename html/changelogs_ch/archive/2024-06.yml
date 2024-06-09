@@ -36,3 +36,12 @@
   SpringSkipper:
   - balance: Dark Respite antibio improved
   - bugfix: Infections no longer deathlock shadekin
+2024-06-07:
+  Kashargul:
+  - rscadd: re-adds the station date and season to the Panel
+  - rscdel: nano ui
+  - code_imp: merge the casino code into upstream's enhanced version
+  - code_imp: casino_chip_exchanger -> chipmachine
+  - code_imp: casinoslave_handler -> casinosentientprize_handler
+  tacoguy7765093:
+  - maptweak: The chapel POI for lost borgs now have lost borg access
