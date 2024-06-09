@@ -13,10 +13,14 @@
 				P.id = null
 
 		for(var/mob/living/voice/V in possessed_voice) // Delete voices.
+<<<<<<< HEAD
 			V.ghostize(0) //CHOMPAdd - Prevent Reenter Corpse sending observers to the shadow realm
 			V.stat = DEAD //CHOMPAdd - Helps with autosleeving
 			if(V.mind) V.mind.vore_death = 1 //CHOMPAdd - Digested item TFs get vore_death timer
 			V.Destroy() //Destroy the voice.
+=======
+			qdel(V)
+>>>>>>> 071c1b1996... Merge pull request #16032 from Kashargul/gcMistakes
 		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
 			M.forceMove(item_storage)
 		for(var/obj/item/O in contents)
@@ -81,8 +85,12 @@
 				P.id = null
 		/* CHOMPEdit Start - This is handled lower down now
 		for(var/mob/living/voice/V in possessed_voice) // Delete voices.
+<<<<<<< HEAD
 			V.Destroy() //Destroy the voice.
 		CHOMPEdit End */
+=======
+			qdel(V)
+>>>>>>> 071c1b1996... Merge pull request #16032 from Kashargul/gcMistakes
 		for(var/mob/living/M in contents)//Drop mobs from objects(shoes) before deletion
 			if(item_storage)
 				M.forceMove(item_storage)
