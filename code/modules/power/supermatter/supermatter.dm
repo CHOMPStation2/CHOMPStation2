@@ -641,6 +641,7 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
+<<<<<<< HEAD
 // CHOMP Edit Start
 /obj/machinery/power/supermatter/station
 	stationcrystal = TRUE
@@ -664,6 +665,13 @@
 			candidate_alarm.critalarm.stop()
 			candidate_alarm.critwarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
 // CHOMPEdit End
+=======
+#undef POWER_FACTOR
+#undef DECAY_FACTOR
+#undef CRITICAL_TEMPERATURE
+#undef CHARGING_FACTOR
+#undef DAMAGE_RATE_LIMIT
+>>>>>>> 6cabe9f7e6... Undefines local defines and moves global to __define (#16028)
 
 #undef NITROGEN_RETARDATION_FACTOR
 #undef THERMAL_RELEASE_MODIFIER

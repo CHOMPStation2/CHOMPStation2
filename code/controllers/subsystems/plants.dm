@@ -162,3 +162,5 @@ SUBSYSTEM_DEF(plants)
 
 	for(var/mask in SSplants.gene_tag_masks)
 		to_chat(usr, "[mask]: [SSplants.gene_tag_masks[mask]]")
+
+#undef PLANT_TICK_TIME
