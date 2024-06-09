@@ -410,3 +410,5 @@
 /obj/machinery/casino_prize_dispenser/process() //Might not need this, but just to be safe for now
 	if(stat & (BROKEN|NOPOWER))
 		return
+
+#undef CASINO_PRIZE

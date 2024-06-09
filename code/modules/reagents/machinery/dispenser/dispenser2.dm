@@ -29,7 +29,7 @@
 
 /obj/machinery/chemical_dispenser/examine(mob/user)
 	. = ..()
-	. += "It has [cartridges.len] cartridges installed, and has space for [max_catriges - cartridges.len] more." //CHOMPEdit
+	. += "It has [cartridges.len] cartridges installed, and has space for [max_catriges - cartridges.len] more."
 
 /obj/machinery/chemical_dispenser/verb/rotate_clockwise()
 	set name = "Rotate Dispenser Clockwise"
@@ -48,7 +48,7 @@
 			to_chat(user, "<span class='warning'>\The [C] will not fit in \the [src]!</span>")
 		return
 
-	if(cartridges.len >= max_catriges) //CHOMPEdit
+	if(cartridges.len >= max_catriges)
 		if(user)
 			to_chat(user, "<span class='warning'>\The [src] does not have any slots open for \the [C] to fit into!</span>")
 		return

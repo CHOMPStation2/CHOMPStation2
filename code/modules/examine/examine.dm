@@ -5,7 +5,7 @@
 	This means that this file can be unchecked, along with the other examine files, and can be removed entirely with no effort.
 */
 
-// #define EXAMINE_PANEL_PADDING "               " //CHOMPRemove
+// # define EXAMINE_PANEL_PADDING "               " //CHOMPRemove
 
 /atom/
 	var/description_info = null //Helpful blue text.
@@ -198,3 +198,5 @@
 		results = list("You were unable to examine that. Tell a developer!")
 	to_chat(src, jointext(results, "<br>"))
 	update_examine_panel(B)
+
+// # undef EXAMINE_PANEL_PADDING //CHOMPRemove
