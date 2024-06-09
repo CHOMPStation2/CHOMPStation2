@@ -211,10 +211,13 @@
 		canmove = FALSE
 
 		//CHOMPAdd Start
-		if(nif)
-			var/obj/item/device/nif/lost_nif = nif
-			lost_nif.unimplant(src)
-			lost_nif.forceMove(drop_location())
+		for(var/obj/item/organ/external/organ in organs)
+			for(var/obj/item/O in organ.implants)
+				if(O == nif)
+					nif.unimplant(src)
+				O.forceMove(drop_location())
+				organ.implants -= O
+		clear_alert("embeddedobject")
 		//CHOMPAdd End
 
 		// change
