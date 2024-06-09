@@ -1,6 +1,6 @@
 #define SERVERS 0
 #define OPTIONS 1
-#define OPTIONS 2
+#define RECEIVE 2
 #define REC_CONF 3
 #define SENDING 4
 #define CHAT	5
