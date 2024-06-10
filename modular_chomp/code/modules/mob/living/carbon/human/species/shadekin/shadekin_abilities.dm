@@ -211,9 +211,13 @@
 		canmove = FALSE
 
 		//CHOMPAdd Start
+		var/list/allowed_implants = list(
+			/obj/item/weapon/implant/sizecontrol,
+			/obj/item/weapon/implant/compliance,
+		)
 		for(var/obj/item/organ/external/organ in organs)
 			for(var/obj/item/O in organ.implants)
-				if(istype(O, /obj/item/weapon/implant))
+				if(is_type_in_list(O, allowed_implants))
 					continue
 				if(O == nif)
 					nif.unimplant(src)
