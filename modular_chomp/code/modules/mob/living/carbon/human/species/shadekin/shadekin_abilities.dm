@@ -213,6 +213,8 @@
 		//CHOMPAdd Start
 		for(var/obj/item/organ/external/organ in organs)
 			for(var/obj/item/O in organ.implants)
+				if(istype(O, /obj/item/weapon/implant))
+					continue
 				if(O == nif)
 					nif.unimplant(src)
 				O.forceMove(drop_location())
