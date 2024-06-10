@@ -223,7 +223,8 @@
 					nif.unimplant(src)
 				O.forceMove(drop_location())
 				organ.implants -= O
-		clear_alert("embeddedobject")
+		if(!has_embedded_objects())
+			clear_alert("embeddedobject")
 		//CHOMPAdd End
 
 		// change
