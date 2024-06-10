@@ -45,3 +45,12 @@
   - code_imp: casinoslave_handler -> casinosentientprize_handler
   tacoguy7765093:
   - maptweak: The chapel POI for lost borgs now have lost borg access
+2024-06-10:
+  Fracshun:
+  - rscadd: Separated messages for auto-transfers versus struggle transfers
+  - qol: Disabling Entrance Logs also stops the pred from seeing auto-transfer messages
+  - bugfix: Fixed tasting things not directly entering a belly, such as in boxes or
+      held by others
+  Kashargul:
+  - bugfix: hides some verbs which shouldn't show on the panel
+  - code_imp: move the update_icon in xenoarch to Initialize as well
