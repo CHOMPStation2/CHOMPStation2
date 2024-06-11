@@ -1,0 +1,4 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "snowfield's armory is no longer magically linked to SC's"
