@@ -6735,7 +6735,7 @@
 /area/awaymission/snowfield/medical/staff_room)
 "fRn" = (
 /obj/machinery/button/remote/blast_door{
-	id = "Armoury";
+	id = "Snowfield Front Armoury";
 	name = "Emergency Access";
 	pixel_x = 24;
 	req_access = list(3)
@@ -27644,7 +27644,7 @@
 	req_one_access = list(3)
 	},
 /obj/machinery/door/blast/regular{
-	id = "Armoury";
+	id = "Snowfield Front Armoury";
 	name = "Emergency Access"
 	},
 /turf/simulated/floor/tiled/dark,
