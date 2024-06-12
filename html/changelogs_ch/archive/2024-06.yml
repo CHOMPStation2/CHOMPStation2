@@ -54,3 +54,8 @@
   Kashargul:
   - bugfix: hides some verbs which shouldn't show on the panel
   - code_imp: move the update_icon in xenoarch to Initialize as well
+2024-06-12:
+  FluffMedic:
+  - bugfix: snowfield's armory is no longer magically linked to SC's
+  Kashargul:
+  - bugfix: belly reagent examine messaged relying to direct volume instead of percentage
