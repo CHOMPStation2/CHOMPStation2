@@ -44,4 +44,10 @@
 
 /obj/item/weapon/circuitboard/mecha/weasel/main
 		name = T_BOARD_MICRO_MECHA("Weasel central control")
+<<<<<<< HEAD
 		icon_state = "mainboard" */
+=======
+		icon_state = "mainboard"
+
+#undef T_BOARD_MICRO_MECHA
+>>>>>>> ab31632830... even more local defines (#16033)

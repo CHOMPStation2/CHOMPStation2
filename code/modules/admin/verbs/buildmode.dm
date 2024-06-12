@@ -878,3 +878,4 @@ CHOMP Remove end */
 #undef BUILDMODE_LIGHTS
 #undef BUILDMODE_AI
 #undef LAST_BUILDMODE
+#undef BUILDMODE_DROP
