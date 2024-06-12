@@ -290,12 +290,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			install_done = world.time + 1 MINUTE
 			notify("Welcome back, [owner]! Performing quick-calibration...")
 		else if(!owner)
-<<<<<<< HEAD
 			install_done = world.time + 15 MINUTES // CHOMPedit: Install time from 35 minutes to 15 minutes.
-=======
 			owner_key = human.ckey
-			install_done = world.time + 35 MINUTES
->>>>>>> b77c398149... assign account to nifs (#16036)
 			notify("Adapting to new user...")
 			sleep(5 SECONDS)
 			notify("Adjoining optic [human.isSynthetic() ? "interface" : "nerve"], please be patient.",TRUE)
