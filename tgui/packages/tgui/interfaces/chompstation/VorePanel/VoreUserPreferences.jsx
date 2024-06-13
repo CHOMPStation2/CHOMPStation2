@@ -58,6 +58,9 @@ export const VoreUserPreferences = (props) => {
     weight_message_visible,
     selective_active,
     belly_rub_target,
+    soulcatcher_allow_capture,
+    soulcatcher_allow_transfer,
+    soulcatcher_allow_deletion,
   } = data.prefs;
 
   const { show_pictures, icon_overflow, selected } = data;
@@ -609,411 +612,88 @@ export const VoreUserPreferences = (props) => {
         disabled: 'Vore Spawn Prey Auto Accept Disabled',
       },
     },
+    soulcatcher: {
+      action: 'toggle_soulcatcher_allow_capture',
+      test: soulcatcher_allow_capture,
+      tooltip: {
+        main: 'This button is for allowing or preventing vorgans from soulcatching you.',
+        enable: 'Click here to allow soul capturing.',
+        disable: 'Click here to prevent soul capturing.',
+      },
+      content: {
+        enabled: 'Soul Capturing Allowed',
+        disabled: 'Do Not Allow Soul Capturing',
+      },
+    },
+    soulcatcher_transfer: {
+      action: 'toggle_soulcatcher_allow_transfer',
+      test: soulcatcher_allow_transfer,
+      tooltip: {
+        main: 'This button is for allowing or preventing soulcatchers from transferring your soul.',
+        enable: 'Click here to allow soul transferring to sleevemates or mmis.',
+        disable:
+          'Click here to prevent soul transferring to sleevemates or mmis.',
+      },
+      content: {
+        enabled: 'Soul Transfer Allowed',
+        disabled: 'Do Not Allow Soul Transfer',
+      },
+    },
+    soulcatcher_delete: {
+      action: 'toggle_soulcatcher_allow_deletion',
+      test: soulcatcher_allow_deletion,
+      tooltip: {
+        main: 'This button is for allowing or preventing soulcatchers from deleting your soul WARNING! Deletion will round remove you.',
+        enable: 'Click here to allow the deletion of your soul.',
+        disable: 'Click here to prevent the deletion of your soul.',
+      },
+      back_color: {
+        enabled: 'red',
+        disabled: '',
+      },
+      content: {
+        enabled: 'DANGER! Soul Deletion Allowed',
+        disabled: 'Do Not Allow Soul Deletion',
+      },
+    },
   };
 
   return (
     <Box nowrap>
-      <Section
-        title="Mechanical Preferences"
-        buttons={
-          <Button
-            icon="eye"
-            selected={show_pictures}
-            tooltip={
-              'Allows to toggle if belly contents are shown as icons or in list format. ' +
-              (show_pictures
-                ? 'Contents shown as pictures.'
-                : 'Contents shown as lists.') +
-              (show_pictures && icon_overflow
-                ? 'Temporarily disabled. Stomach contents above limits.'
-                : '')
-            }
-            backgroundColor={show_pictures && icon_overflow ? 'orange' : ''}
-            onClick={() => act('show_pictures')}
-          >
-            Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}
-          </Button>
-        }
-      >
-        <Flex spacing={1} wrap="wrap" justify="center">
-          <Flex.Item basis="33%">
-            <VoreUserPreferenceItem
-              spec={preferences.steppref}
-              tooltipPosition="right"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%" grow={1}>
-            <VoreUserPreferenceItem
-              spec={preferences.pickuppref}
-              tooltipPosition="top"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%">
-            <VoreUserPreferenceItem
-              spec={preferences.resize}
-              tooltipPosition="left"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%">
-            <VoreUserPreferenceItem
-              spec={preferences.feed}
-              tooltipPosition="right"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%" grow={1}>
-            <VoreUserPreferenceItem
-              spec={preferences.liquid_receive}
-              tooltipPosition="top"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%">
-            <VoreUserPreferenceItem
-              spec={preferences.liquid_give}
-              tooltipPosition="left"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%">
-            <VoreUserPreferenceItem
-              spec={preferences.noisy}
-              tooltipPosition="right"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%" grow={1}>
-            <VoreUserPreferenceItem
-              spec={preferences.noisy_full}
-              tooltipPosition="top"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%">
-            <VoreUserPreferenceItem
-              spec={preferences.eating_privacy_global}
-              tooltipPosition="left"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%">
-            <VoreUserPreferenceItem
-              spec={preferences.vore_fx}
-              tooltipPosition="right"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%" grow={1}>
-            <VoreUserPreferenceItem
-              spec={preferences.spontaneous_tf}
-              tooltipPosition="top"
-            />
-          </Flex.Item>
-          <Flex.Item basis="33%">
-            <VoreUserPreferenceItem
-              spec={preferences.mind_transfer}
-              tooltipPosition="top"
-            />
-          </Flex.Item>
-        </Flex>
-      </Section>
-      <Section
-        title="Devouring Preferences"
-        buttons={
-          <Box nowrap>
-            <VoreUserPreferenceItem
-              spec={preferences.devour}
-              tooltipPosition="top"
-            />
-          </Box>
-        }
-      >
-        {devourable ? (
-          <Flex spacing={1} wrap="wrap" justify="center">
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.healbelly}
-                tooltipPosition="right"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%" grow={1}>
-              <VoreUserPreferenceItem
-                spec={preferences.digestion}
-                tooltipPosition="top"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.absorbable}
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <Button
-                fluid
-                backgroundColor={digestModeToColor[selective_active]}
-                tooltip="Allows to set the personal belly mode preference for selective bellies."
-                tooltipPosition="right"
-                onClick={() => act('switch_selective_mode_pref')}
-              >
-                {'Selective Mode Preference: ' + capitalize(selective_active)}
-              </Button>
-            </Flex.Item>
-            <Flex.Item basis="33%" grow={1}>
-              <VoreUserPreferenceItem
-                spec={preferences.mobvore}
-                tooltipPosition="top"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.autotransferable}
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.strippref}
-                tooltipPosition="right"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%" grow={1}>
-              <VoreUserPreferenceItem
-                spec={preferences.liquid_apply}
-                tooltipPosition="top"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.remains}
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.toggle_digest_pain}
-                tooltipPosition="right"
-              />
-            </Flex.Item>
-          </Flex>
-        ) : (
-          ''
-        )}
-      </Section>
-      <Section
-        title="Spontaneous Preferences"
-        buttons={
-          <Box nowrap>
-            <VoreUserPreferenceItem
-              spec={preferences.dropnom_prey}
-              tooltipPosition="top"
-            />
-            <VoreUserPreferenceItem
-              spec={preferences.dropnom_pred}
-              tooltipPosition="top"
-            />
-          </Box>
-        }
-      >
-        {can_be_drop_prey || can_be_drop_pred ? (
-          <Flex spacing={1} wrap="wrap" justify="center">
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.toggle_drop_vore}
-                tooltipPosition="right"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%" grow={1}>
-              <VoreUserPreferenceItem
-                spec={preferences.toggle_slip_vore}
-                tooltipPosition="top"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.toggle_stumble_vore}
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.toggle_throw_vore}
-                tooltipPosition="right"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%" grow={1}>
-              <VoreUserPreferenceItem
-                spec={preferences.toggle_food_vore}
-                tooltipPosition="top"
-              />
-            </Flex.Item>
-            <Flex.Item basis="33%">
-              <VoreUserPreferenceItem
-                spec={preferences.toggle_phase_vore}
-                tooltipPosition="left"
-              />
-            </Flex.Item>
-          </Flex>
-        ) : (
-          ''
-        )}
-      </Section>
-      <Section
-        title="Spawn Preferences"
-        buttons={
-          <Box nowrap>
-            <VoreUserPreferenceItem
-              spec={preferences.spawnbelly}
-              tooltipPosition="top"
-            />
-            <VoreUserPreferenceItem
-              spec={preferences.spawnprey}
-              tooltipPosition="top"
-            />
-          </Box>
-        }
-      >
-        <Flex spacing={1} wrap="wrap" justify="center">
-          {latejoin_vore ? (
-            <>
-              <Flex.Item basis="33%">
-                <VoreUserPreferenceItem
-                  spec={preferences.no_spawnpred_warning}
-                  tooltipPosition="top"
-                />
-              </Flex.Item>
-              <Flex.Item basis="12%">
-                <NumberInput
-                  fluid
-                  value={no_spawnpred_warning_time}
-                  minValue={0}
-                  maxValue={30}
-                  unit="s"
-                  step={5}
-                  stepPixelSize={20}
-                  onChange={(e, value) =>
-                    act('adjust_no_latejoin_vore_warning_time', {
-                      new_pred_time: value,
-                    })
-                  }
-                >
-                  T
-                </NumberInput>
-              </Flex.Item>
-              <Flex.Item basis="5%">
-                <Button
-                  fluid
-                  backgroundColor={no_spawnpred_warning_save ? 'green' : ''}
-                  tooltip="Toggles vore spawnpoint auto accept persistency."
-                  tooltipPosition="top"
-                  onClick={() =>
-                    act('toggle_no_latejoin_vore_warning_persists')
-                  }
-                >
-                  P
-                </Button>
-              </Flex.Item>
-            </>
-          ) : (
-            ''
-          )}
-          {latejoin_prey ? (
-            <>
-              <Flex.Item basis="33%">
-                <VoreUserPreferenceItem
-                  spec={preferences.no_spawnprey_warning}
-                  tooltipPosition="top"
-                />
-              </Flex.Item>
-              <Flex.Item basis="12%">
-                <NumberInput
-                  fluid
-                  value={no_spawnprey_warning_time}
-                  minValue={0}
-                  maxValue={30}
-                  unit="s"
-                  step={5}
-                  stepPixelSize={20}
-                  onChange={(e, value) =>
-                    act('adjust_no_latejoin_prey_warning_time', {
-                      new_prey_time: value,
-                    })
-                  }
-                >
-                  T
-                </NumberInput>
-              </Flex.Item>
-              <Flex.Item basis="5%">
-                <Button
-                  fluid
-                  backgroundColor={no_spawnprey_warning_save ? 'green' : ''}
-                  tooltip="Toggles preyspawn auto accept persistency."
-                  tooltipPosition="top"
-                  onClick={() =>
-                    act('toggle_no_latejoin_prey_warning_persists')
-                  }
-                >
-                  P
-                </Button>
-              </Flex.Item>
-            </>
-          ) : (
-            ''
-          )}
-        </Flex>
-      </Section>
-      <Section title="Aesthetic Preferences">
-        <Flex spacing={1} wrap="wrap" justify="center">
-          <Flex.Item basis="50%" grow={1}>
-            <Button fluid icon="grin-tongue" onClick={() => act('setflavor')}>
-              Set Taste
-            </Button>
-          </Flex.Item>
-          <Flex.Item basis="50%">
-            <Button fluid icon="wind" onClick={() => act('setsmell')}>
-              Set Smell
-            </Button>
-          </Flex.Item>
-          <Flex.Item basis="50%" grow={1}>
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_msgs', msgtype: 'en' })
-              }
-              icon="flask"
-              fluid
-            >
-              Set Nutrition Examine Message
-            </Button>
-          </Flex.Item>
-          <Flex.Item basis="50%">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_msgs', msgtype: 'ew' })
-              }
-              icon="weight-hanging"
-              fluid
-            >
-              Set Weight Examine Message
-            </Button>
-          </Flex.Item>
-          <Flex.Item basis="50%" grow={1}>
-            <VoreUserPreferenceItem spec={preferences.examine_nutrition} />
-          </Flex.Item>
-          <Flex.Item basis="50%">
-            <VoreUserPreferenceItem spec={preferences.examine_weight} />
-          </Flex.Item>
-          <Flex.Item basis="50%" grow={1}>
-            <Button fluid onClick={() => act('set_vs_color')} icon="palette">
-              Vore Sprite Color
-            </Button>
-          </Flex.Item>
-          <Flex.Item basis="50%">
-            <Button
-              fluid
-              onClick={() => act('set_belly_rub')}
-              icon="crosshairs"
-            >
-              {'Belly Rub Target: ' +
-                (belly_rub_target
-                  ? belly_rub_target
-                  : 'Current Active (' + selected.belly_name + ')')}
-            </Button>
-          </Flex.Item>
-        </Flex>
-      </Section>
+      <VoreUserPreferencesMechanical
+        show_pictures={show_pictures}
+        icon_overflow={icon_overflow}
+        preferences={preferences}
+      />
+      <VoreUserPreferencesDevouring
+        devourable={devourable}
+        digestModeToColor={digestModeToColor}
+        selective_active={selective_active}
+        preferences={preferences}
+      />
+      <VoreUserPreferencesSpontaneous
+        can_be_drop_prey={can_be_drop_prey}
+        can_be_drop_pred={can_be_drop_pred}
+        preferences={preferences}
+      />
+      <VoreUserPreferencesSoulcatcher
+        soulcatcher_allow_capture={soulcatcher_allow_capture}
+        preferences={preferences}
+      />
+      <VoreUserPreferencesSpawn
+        latejoin_vore={latejoin_vore}
+        no_spawnpred_warning_time={no_spawnpred_warning_time}
+        preferences={preferences}
+        no_spawnpred_warning_save={no_spawnpred_warning_save}
+        latejoin_prey={latejoin_prey}
+        no_spawnprey_warning_time={no_spawnprey_warning_time}
+        no_spawnprey_warning_save={no_spawnprey_warning_save}
+      />
+      <VoreUserPreferencesAesthetic
+        preferences={preferences}
+        belly_rub_target={belly_rub_target}
+        selected={selected}
+      />
       <Divider />
       <Section>
         <Flex spacing={1}>
@@ -1030,5 +710,483 @@ export const VoreUserPreferences = (props) => {
         </Flex>
       </Section>
     </Box>
+  );
+};
+
+const VoreUserPreferencesMechanical = (props) => {
+  const { act } = useBackend();
+  const { show_pictures, icon_overflow, preferences } = props;
+
+  return (
+    <Section
+      title="Mechanical Preferences"
+      buttons={
+        <Button
+          icon="eye"
+          selected={show_pictures}
+          tooltip={
+            'Allows to toggle if belly contents are shown as icons or in list format. ' +
+            (show_pictures
+              ? 'Contents shown as pictures.'
+              : 'Contents shown as lists.') +
+            (show_pictures && icon_overflow
+              ? 'Temporarily disabled. Stomach contents above limits.'
+              : '')
+          }
+          backgroundColor={show_pictures && icon_overflow ? 'orange' : ''}
+          onClick={() => act('show_pictures')}
+        >
+          Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}
+        </Button>
+      }
+    >
+      <Flex spacing={1} wrap="wrap" justify="center">
+        <Flex.Item basis="33%">
+          <VoreUserPreferenceItem
+            spec={preferences.steppref}
+            tooltipPosition="right"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%" grow={1}>
+          <VoreUserPreferenceItem
+            spec={preferences.pickuppref}
+            tooltipPosition="top"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%">
+          <VoreUserPreferenceItem
+            spec={preferences.resize}
+            tooltipPosition="left"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%">
+          <VoreUserPreferenceItem
+            spec={preferences.feed}
+            tooltipPosition="right"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%" grow={1}>
+          <VoreUserPreferenceItem
+            spec={preferences.liquid_receive}
+            tooltipPosition="top"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%">
+          <VoreUserPreferenceItem
+            spec={preferences.liquid_give}
+            tooltipPosition="left"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%">
+          <VoreUserPreferenceItem
+            spec={preferences.noisy}
+            tooltipPosition="right"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%" grow={1}>
+          <VoreUserPreferenceItem
+            spec={preferences.noisy_full}
+            tooltipPosition="top"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%">
+          <VoreUserPreferenceItem
+            spec={preferences.eating_privacy_global}
+            tooltipPosition="left"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%">
+          <VoreUserPreferenceItem
+            spec={preferences.vore_fx}
+            tooltipPosition="right"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%" grow={1}>
+          <VoreUserPreferenceItem
+            spec={preferences.spontaneous_tf}
+            tooltipPosition="top"
+          />
+        </Flex.Item>
+        <Flex.Item basis="33%">
+          <VoreUserPreferenceItem
+            spec={preferences.mind_transfer}
+            tooltipPosition="top"
+          />
+        </Flex.Item>
+      </Flex>
+    </Section>
+  );
+};
+
+const VoreUserPreferencesDevouring = (props) => {
+  const { act } = useBackend();
+  const { devourable, digestModeToColor, selective_active, preferences } =
+    props;
+
+  return (
+    <Section
+      title="Devouring Preferences"
+      buttons={
+        <Box nowrap>
+          <VoreUserPreferenceItem
+            spec={preferences.devour}
+            tooltipPosition="top"
+          />
+        </Box>
+      }
+    >
+      {devourable ? (
+        <Flex spacing={1} wrap="wrap" justify="center">
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.healbelly}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%" grow={1}>
+            <VoreUserPreferenceItem
+              spec={preferences.digestion}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.absorbable}
+              tooltipPosition="left"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <Button
+              fluid
+              backgroundColor={digestModeToColor[selective_active]}
+              tooltip="Allows to set the personal belly mode preference for selective bellies."
+              tooltipPosition="right"
+              onClick={() => act('switch_selective_mode_pref')}
+            >
+              {'Selective Mode Preference: ' + capitalize(selective_active)}
+            </Button>
+          </Flex.Item>
+          <Flex.Item basis="33%" grow={1}>
+            <VoreUserPreferenceItem
+              spec={preferences.mobvore}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.autotransferable}
+              tooltipPosition="left"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.strippref}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%" grow={1}>
+            <VoreUserPreferenceItem
+              spec={preferences.liquid_apply}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.remains}
+              tooltipPosition="left"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.toggle_digest_pain}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+        </Flex>
+      ) : (
+        ''
+      )}
+    </Section>
+  );
+};
+
+const VoreUserPreferencesSpontaneous = (props) => {
+  const { can_be_drop_prey, can_be_drop_pred, preferences } = props;
+
+  return (
+    <Section
+      title="Spontaneous Preferences"
+      buttons={
+        <Box nowrap>
+          <VoreUserPreferenceItem
+            spec={preferences.dropnom_prey}
+            tooltipPosition="top"
+          />
+          <VoreUserPreferenceItem
+            spec={preferences.dropnom_pred}
+            tooltipPosition="top"
+          />
+        </Box>
+      }
+    >
+      {can_be_drop_prey || can_be_drop_pred ? (
+        <Flex spacing={1} wrap="wrap" justify="center">
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.toggle_drop_vore}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%" grow={1}>
+            <VoreUserPreferenceItem
+              spec={preferences.toggle_slip_vore}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.toggle_stumble_vore}
+              tooltipPosition="left"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.toggle_throw_vore}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%" grow={1}>
+            <VoreUserPreferenceItem
+              spec={preferences.toggle_food_vore}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.toggle_phase_vore}
+              tooltipPosition="left"
+            />
+          </Flex.Item>
+        </Flex>
+      ) : (
+        ''
+      )}
+    </Section>
+  );
+};
+
+const VoreUserPreferencesSoulcatcher = (props) => {
+  const { soulcatcher_allow_capture, preferences } = props;
+
+  return (
+    <Section
+      title="Soulcatcher Preferences"
+      buttons={
+        <Box nowrap>
+          <VoreUserPreferenceItem
+            spec={preferences.soulcatcher}
+            tooltipPosition="top"
+          />
+        </Box>
+      }
+    >
+      {soulcatcher_allow_capture ? (
+        <Flex spacing={1} wrap="wrap" justify="center">
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.soulcatcher_transfer}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.soulcatcher_delete}
+              tooltipPosition="top"
+            />
+          </Flex.Item>
+        </Flex>
+      ) : (
+        ''
+      )}
+    </Section>
+  );
+};
+
+const VoreUserPreferencesSpawn = (props) => {
+  const { act } = useBackend();
+  const {
+    latejoin_vore,
+    no_spawnpred_warning_time,
+    preferences,
+    no_spawnpred_warning_save,
+    latejoin_prey,
+    no_spawnprey_warning_time,
+    no_spawnprey_warning_save,
+  } = props;
+
+  return (
+    <Section
+      title="Spawn Preferences"
+      buttons={
+        <Box nowrap>
+          <VoreUserPreferenceItem
+            spec={preferences.spawnbelly}
+            tooltipPosition="top"
+          />
+          <VoreUserPreferenceItem
+            spec={preferences.spawnprey}
+            tooltipPosition="top"
+          />
+        </Box>
+      }
+    >
+      <Flex spacing={1} wrap="wrap" justify="center">
+        {latejoin_vore ? (
+          <>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.no_spawnpred_warning}
+                tooltipPosition="top"
+              />
+            </Flex.Item>
+            <Flex.Item basis="12%">
+              <NumberInput
+                fluid
+                value={no_spawnpred_warning_time}
+                minValue={0}
+                maxValue={30}
+                unit="s"
+                step={5}
+                stepPixelSize={20}
+                onChange={(e, value) =>
+                  act('adjust_no_latejoin_vore_warning_time', {
+                    new_pred_time: value,
+                  })
+                }
+              >
+                T
+              </NumberInput>
+            </Flex.Item>
+            <Flex.Item basis="5%">
+              <Button
+                fluid
+                backgroundColor={no_spawnpred_warning_save ? 'green' : ''}
+                tooltip="Toggles vore spawnpoint auto accept persistency."
+                tooltipPosition="top"
+                onClick={() => act('toggle_no_latejoin_vore_warning_persists')}
+              >
+                P
+              </Button>
+            </Flex.Item>
+          </>
+        ) : (
+          ''
+        )}
+        {latejoin_prey ? (
+          <>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.no_spawnprey_warning}
+                tooltipPosition="top"
+              />
+            </Flex.Item>
+            <Flex.Item basis="12%">
+              <NumberInput
+                fluid
+                value={no_spawnprey_warning_time}
+                minValue={0}
+                maxValue={30}
+                unit="s"
+                step={5}
+                stepPixelSize={20}
+                onChange={(e, value) =>
+                  act('adjust_no_latejoin_prey_warning_time', {
+                    new_prey_time: value,
+                  })
+                }
+              >
+                T
+              </NumberInput>
+            </Flex.Item>
+            <Flex.Item basis="5%">
+              <Button
+                fluid
+                backgroundColor={no_spawnprey_warning_save ? 'green' : ''}
+                tooltip="Toggles preyspawn auto accept persistency."
+                tooltipPosition="top"
+                onClick={() => act('toggle_no_latejoin_prey_warning_persists')}
+              >
+                P
+              </Button>
+            </Flex.Item>
+          </>
+        ) : (
+          ''
+        )}
+      </Flex>
+    </Section>
+  );
+};
+
+const VoreUserPreferencesAesthetic = (props) => {
+  const { act } = useBackend();
+  const { preferences, belly_rub_target, selected } = props;
+
+  return (
+    <Section title="Aesthetic Preferences">
+      <Flex spacing={1} wrap="wrap" justify="center">
+        <Flex.Item basis="50%" grow={1}>
+          <Button fluid icon="grin-tongue" onClick={() => act('setflavor')}>
+            Set Taste
+          </Button>
+        </Flex.Item>
+        <Flex.Item basis="50%">
+          <Button fluid icon="wind" onClick={() => act('setsmell')}>
+            Set Smell
+          </Button>
+        </Flex.Item>
+        <Flex.Item basis="50%" grow={1}>
+          <Button
+            onClick={() =>
+              act('set_attribute', { attribute: 'b_msgs', msgtype: 'en' })
+            }
+            icon="flask"
+            fluid
+          >
+            Set Nutrition Examine Message
+          </Button>
+        </Flex.Item>
+        <Flex.Item basis="50%">
+          <Button
+            onClick={() =>
+              act('set_attribute', { attribute: 'b_msgs', msgtype: 'ew' })
+            }
+            icon="weight-hanging"
+            fluid
+          >
+            Set Weight Examine Message
+          </Button>
+        </Flex.Item>
+        <Flex.Item basis="50%" grow={1}>
+          <VoreUserPreferenceItem spec={preferences.examine_nutrition} />
+        </Flex.Item>
+        <Flex.Item basis="50%">
+          <VoreUserPreferenceItem spec={preferences.examine_weight} />
+        </Flex.Item>
+        <Flex.Item basis="50%" grow={1}>
+          <Button fluid onClick={() => act('set_vs_color')} icon="palette">
+            Vore Sprite Color
+          </Button>
+        </Flex.Item>
+        <Flex.Item basis="50%">
+          <Button fluid onClick={() => act('set_belly_rub')} icon="crosshairs">
+            {'Belly Rub Target: ' +
+              (belly_rub_target
+                ? belly_rub_target
+                : 'Current Active (' + selected.belly_name + ')')}
+          </Button>
+        </Flex.Item>
+      </Flex>
+    </Section>
   );
 };

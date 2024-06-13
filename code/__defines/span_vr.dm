@@ -57,6 +57,7 @@
 #define span_vdanger(str) ("<span class='vdanger'>" + str + "</span>")
 #define span_vwarning(str) ("<span class='vwarning'>" + str + "</span>")
 #define span_vnotice(str) ("<span class='vnotice'>" + str + "</span>")
+#define span_nif(str) ("<span class='nif'>" + str + "</span>") //CHOMPAdd
 
 /* Languages */
 

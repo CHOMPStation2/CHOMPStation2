@@ -233,6 +233,8 @@
 			M.vore_organs -= B
 			ourmob.vore_organs += B
 
+		M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+
 		ourmob.Life(1)
 		if(ishuman(M))
 			log_debug("polymorph human")
@@ -291,6 +293,8 @@
 				B.owner = new_mob
 				M.vore_organs -= B
 				new_mob.vore_organs += B
+
+			M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
 
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)

@@ -547,9 +547,31 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//CHOMPEdit start, vore sprites
 		"belly_rub_target" = host.belly_rub_target,
 		"vore_sprite_color" = host.vore_sprite_color,
-		"vore_sprite_multiply" = host.vore_sprite_multiply
+		"vore_sprite_multiply" = host.vore_sprite_multiply,
+		//Soulcatcher
+		"soulcatcher_allow_capture" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE,
+		"soulcatcher_allow_transfer" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER,
+		"soulcatcher_allow_deletion" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION
 		//CHOMPEdit end
 	)
+	//CHOMPAdd Start, Soulcatcher
+	var/list/stored_souls = list()
+	for(var/soul in host.soulgem.brainmobs)
+		var/list/info = list("displayText" = "[soul]", "value" = "\ref[soul]")
+		stored_souls.Add(list(info))
+	data["soulcatcher"] = list(
+		"active" = host.soulgem.flag_check(SOULGEM_ACTIVE),
+		"caught_souls" = stored_souls,
+		"selected_soul" = host.soulgem.selected_soul,
+		"interior_design" =  host.soulgem.inside_flavor,
+		"catch_self" = host.soulgem.flag_check(NIF_SC_CATCHING_ME),
+		"catch_prey" = host.soulgem.flag_check(NIF_SC_CATCHING_OTHERS),
+		"ext_hearing" = host.soulgem.flag_check(NIF_SC_ALLOW_EARS),
+		"ext_vision" = host.soulgem.flag_check(NIF_SC_ALLOW_EYES),
+		"mind_backups" = host.soulgem.flag_check(NIF_SC_BACKUPS),
+		"ar_projecting" = host.soulgem.flag_check(NIF_SC_PROJECTING)
+	)
+	//CHOMPAdd End, Soulcatcher
 
 	return data
 
@@ -2106,6 +2128,117 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.no_latejoin_prey_warning_persists = host.no_latejoin_prey_warning_persists
 			unsaved_changes = TRUE
+			return TRUE
+		//Soulcatcher prefs
+		if("toggle_soulcatcher_allow_capture")
+			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_CAPTURE
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_soulcatcher_allow_transfer")
+			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_TRANSFER
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_soulcatcher_allow_deletion")
+			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DETELION
+			unsaved_changes = TRUE
+			return TRUE
+		//Soulcatcher settings
+		if("soulcatcher_toggle")
+			host.soulgem.toggle_setting(SOULGEM_ACTIVE)
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_select")
+			host.soulgem.selected_soul = locate(params["selected_soul"])
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_release")
+			host.soulgem.release_selected()
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_transfer")
+			host.soulgem.transfer_selected()
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_delete")
+			host.soulgem.delete_selected()
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_self_catching")
+			host.soulgem.toggle_setting(NIF_SC_CATCHING_ME)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_prey_catching")
+			host.soulgem.toggle_setting(NIF_SC_CATCHING_OTHERS)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_ext_hearing")
+			host.soulgem.toggle_setting(NIF_SC_ALLOW_EARS)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_ext_vision")
+			host.soulgem.toggle_setting(NIF_SC_ALLOW_EYES)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_mind_backup")
+			host.soulgem.toggle_setting(NIF_SC_BACKUPS)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_ar_projecting")
+			host.soulgem.toggle_setting(NIF_SC_PROJECTING)
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_release_all")
+			unsaved_changes = TRUE
+			host.soulgem.release_mobs()
+			return TRUE
+		if("soulcatcher_erase_all")
+			unsaved_changes = TRUE
+			host.soulgem.erase_mobs()
+			return TRUE
+		if("soulcatcher_interior_design")
+			var/new_flavor = tgui_input_text(host, "Type what the prey sees after being 'caught'. This will be \
+				printed after an intro set in the capture message to the prey. If you already \
+				have prey, this will be printed to them after the transit message. Limit [MAX_MESSAGE_LEN * 2] chars.", \
+				"VR Environment", html_decode(host.soulgem.inside_flavor), MAX_MESSAGE_LEN * 2, TRUE, prevent_enter = TRUE)
+			if(new_flavor)
+				unsaved_changes = TRUE
+				host.soulgem.adjust_interior(new_flavor)
+			return TRUE
+		if("soulcatcher_capture_message")
+			var/message = tgui_input_text(host, "Type what the prey sees while being 'caught'. This will be \
+				printed before the iterior design to the prey. Limit [MAX_MESSAGE_LEN / 4] chars.", \
+				"VR Capture", html_decode(host.soulgem.capture_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "capture")
+			return TRUE
+		if("soulcatcher_transit_message")
+			var/message = tgui_input_text(host, "Type what the prey sees when you change the interior with them already captured. \
+				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Transit", html_decode(host.soulgem.transit_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "transit")
+			return TRUE
+		if("soulcatcher_release_message")
+			var/message = tgui_input_text(host, "Type what the prey sees when they are released. \
+				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Release", html_decode(host.soulgem.release_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "release")
+			return TRUE
+		if("soulcatcher_transfer_message")
+			var/message = tgui_input_text(host, "Type what the prey sees when they are transfered. \
+				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Transfer", html_decode(host.soulgem.transfer_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "transfer")
+			return TRUE
+		if("soulcatcher_delete_message")
+			var/message = tgui_input_text(host, "Type what the prey sees when they are deleted. \
+				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Transfer", html_decode(host.soulgem.delete_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "delete")
 			return TRUE
 		//CHOMPEdit end
 

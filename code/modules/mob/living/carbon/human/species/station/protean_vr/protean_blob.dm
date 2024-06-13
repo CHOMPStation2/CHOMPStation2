@@ -409,6 +409,8 @@ var/global/list/disallowed_protean_accessories = list(
 		B.forceMove(blob)
 		B.owner = blob
 
+	soulgem.owner = blob //CHOMPAdd
+
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
 
@@ -486,6 +488,8 @@ var/global/list/disallowed_protean_accessories = list(
 	for(var/obj/belly/B as anything in blob.vore_organs)
 		B.forceMove(src)
 		B.owner = src
+
+	soulgem.owner = src //CHOMPAdd
 
 	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) //The restore for when reforming.
 	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)

@@ -6,6 +6,7 @@ import { Button, Flex, Icon, NoticeBox, Tabs } from '../../../components';
 import { Window } from '../../../layouts';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
+import { VoreSoulcatcher } from './VoreSoulcatcher';
 import { VoreUserPreferences } from './VoreUserPreferences';
 
 /**
@@ -156,7 +157,8 @@ export const VorePanel = () => {
   const tabs: React.JSX.Element[] = [];
 
   tabs[0] = <VoreBellySelectionAndCustomization />;
-  tabs[1] = <VoreUserPreferences />;
+  tabs[1] = <VoreSoulcatcher />;
+  tabs[2] = <VoreUserPreferences />;
 
   return (
     <Window width={990} height={660} theme="abstract">
@@ -192,6 +194,10 @@ export const VorePanel = () => {
             <Icon name="list" ml={0.5} />
           </Tabs.Tab>
           <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
+            Soulcatcher
+            <Icon name="ghost" ml={0.5} />
+          </Tabs.Tab>
+          <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
             Preferences
             <Icon name="user-cog" ml={0.5} />
           </Tabs.Tab>

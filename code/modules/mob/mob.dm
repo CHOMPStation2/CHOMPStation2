@@ -15,6 +15,7 @@
 	if(!istype(src,/mob/observer)) //CHOMPEdit
 		ghostize() //CHOMPEdit
 	//ChompEDIT start - fix hard qdels
+	QDEL_NULL(soulgem) //CHOMPAdd
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)
 	for(var/key in alerts) //clear out alerts
@@ -61,6 +62,7 @@
 	lastarea = get_area(src)
 	set_focus(src) // VOREStation Add - Key Handling
 	hook_vr("mob_new",list(src)) //VOREStation Code
+	soulgem = new(src) //CHOMPAdd
 	. = ..()
 	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 

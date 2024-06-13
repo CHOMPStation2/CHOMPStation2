@@ -6,6 +6,7 @@
 #define NIF_SC_ALLOW_EYES			0x8
 #define NIF_SC_BACKUPS				0x10
 #define NIF_SC_PROJECTING			0x20
+#define SOULGEM_ACTIVE				0x400
 
 ///////////
 // Soulcatcher - Like a posibrain, sorta!
@@ -212,6 +213,7 @@
 //Complex version for catching in-round characters
 /datum/nifsoft/soulcatcher/proc/catch_mob(var/mob/M)
 	if(!M.mind)	return
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE)) return
 
 	//Create a new brain mob
 	var/mob/living/carbon/brain/caught_soul/brainmob = new(nif)
@@ -312,7 +314,7 @@
 
 	. = ..()
 
-	if(!parent_mob && !transient &&(life_tick % 150 == 0) && soulcatcher.setting_flags & NIF_SC_BACKUPS)
+	if(!parent_mob && !transient &&(life_tick % 150 == 0) && soulcatcher?.setting_flags & NIF_SC_BACKUPS) //CHOMPEdit
 		SStranscore.m_backup(mind,0) //Passed 0 means "Don't touch the nif fields on the mind record"
 
 	life_tick++
@@ -413,7 +415,7 @@
 	plane = PLANE_AUGMENTED
 	icon = 'icons/obj/machines/ar_elements.dmi'
 	icon_state = "beacon"
-	var/mob/living/carbon/human/parent_human
+	var/mob/living/parent_human //CHOMPEdit, no human, all living!
 
 /mob/observer/eye/ar_soul/New(var/mob/brainmob, var/human)
 	ASSERT(brainmob && brainmob.client)
@@ -474,19 +476,33 @@
 
 ///////////////////
 //The catching hook
-/hook/death/proc/nif_soulcatcher(var/mob/living/carbon/human/H)
-	if(!istype(H) || !H.mind) return TRUE //Hooks must return TRUE
+/hook/death/proc/nif_soulcatcher(var/mob/living/L) 	//CHOMPEdit Start
+	if(!istype(L) || !L.mind) return TRUE //Hooks must return TRUE
 
-	if(isbelly(H.loc)) //Died in someone
-		var/obj/belly/B = H.loc
+	if(isbelly(L.loc)) //Died in someone
+		var/obj/belly/B = L.loc
+		var/mob/living/owner = B.owner
+		var/obj/soulgem/gem = owner.soulgem
+		if(owner && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS))
+			gem.catch_mob(L)
+			return TRUE
 		var/mob/living/carbon/human/HP = B.owner
+		var/mob/living/carbon/human/H = L
+		if(!istype(H)) return TRUE
 		if(istype(HP) && HP.nif && HP.nif.flag_check(NIF_O_SCOTHERS,NIF_FLAGS_OTHER))
 			var/datum/nifsoft/soulcatcher/SC = HP.nif.imp_check(NIF_SOULCATCHER)
 			SC.catch_mob(H)
-	else if(H.nif && H.nif.flag_check(NIF_O_SCMYSELF,NIF_FLAGS_OTHER)) //They are caught in their own NIF
-		var/datum/nifsoft/soulcatcher/SC = H.nif.imp_check(NIF_SOULCATCHER)
-		SC.catch_mob(H)
-
+	else
+		var/obj/soulgem/gem = L.soulgem
+		if(gem && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_ME))
+			gem.catch_mob(L)
+			return TRUE
+		var/mob/living/carbon/human/H = L
+		if(!istype(H)) return TRUE
+		if(H.nif && H.nif.flag_check(NIF_O_SCMYSELF,NIF_FLAGS_OTHER)) //They are caught in their own NIF
+			var/datum/nifsoft/soulcatcher/SC = H.nif.imp_check(NIF_SOULCATCHER)
+			SC.catch_mob(H)
+//CHOMPEdit End
 	return TRUE
 
 ///////////////////
