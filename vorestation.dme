@@ -133,11 +133,8 @@
 #include "code\__defines\span_vr.dm"
 #include "code\__defines\species_languages.dm"
 #include "code\__defines\species_languages_vr.dm"
-<<<<<<< HEAD
 #include "code\__defines\species_languages_YW.dm"
-=======
 #include "code\__defines\spells.dm"
->>>>>>> ab31632830... even more local defines (#16033)
 #include "code\__defines\sprite_sheets.dm"
 #include "code\__defines\sprite_sheets_ch.dm"
 #include "code\__defines\sqlite_defines.dm"
@@ -156,11 +153,8 @@
 #include "code\__defines\turfs.dm"
 #include "code\__defines\typeids.dm"
 #include "code\__defines\unit_tests.dm"
-<<<<<<< HEAD
 #include "code\__defines\verb_manager_ch.dm"
-=======
 #include "code\__defines\update_icons.dm"
->>>>>>> ab31632830... even more local defines (#16033)
 #include "code\__defines\vore.dm"
 #include "code\__defines\vote.dm"
 #include "code\__defines\vv.dm"

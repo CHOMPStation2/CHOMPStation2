@@ -12,7 +12,7 @@
 #define COLD_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when your body temperature passes the 200K point
 #define COLD_DAMAGE_LEVEL_3 3 //Amount of damage applied when your body temperature passes the 120K point
 
-#define RADIATION_SPEED_COEFFICIENT 0.1
+//# define RADIATION_SPEED_COEFFICIENT 0.1 //CHOMPRemove
 #define HUMAN_COMBUSTION_TEMP 524 //524k is the sustained combustion temperature of human fat
 
 /mob/living/carbon/human
@@ -2219,5 +2219,5 @@ End Chomp edit */
 #undef COLD_DAMAGE_LEVEL_2
 #undef COLD_DAMAGE_LEVEL_3
 
-#undef RADIATION_SPEED_COEFFICIENT
+//# undef RADIATION_SPEED_COEFFICIENT //CHOMPRemove
 #undef HUMAN_COMBUSTION_TEMP

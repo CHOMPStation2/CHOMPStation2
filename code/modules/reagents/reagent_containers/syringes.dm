@@ -11,13 +11,9 @@
 /obj/item/weapon/reagent_containers/syringe
 	name = "syringe"
 	desc = "A syringe."
-<<<<<<< HEAD
-	//description_fluff = "This could be used to engrave messages on suitable surfaces if you really put your mind to it! Alt-click a floor or wall to engrave with it." //This way it's not a completely hidden, arcane art to engrave. //CHOMP Remove
 	icon = 'icons/obj/syringe.dmi'
-=======
-	description_fluff = "This could be used to engrave messages on suitable surfaces if you really put your mind to it! Alt-click a floor or wall to engrave with it." //This way it's not a completely hidden, arcane art to engrave.
+	//description_fluff = "This could be used to engrave messages on suitable surfaces if you really put your mind to it! Alt-click a floor or wall to engrave with it." //This way it's not a completely hidden, arcane art to engrave. //CHOMP Remove
 	icon = 'icons/goonstation/objects/syringe_vr.dmi'
->>>>>>> ab31632830... even more local defines (#16033)
 	item_state = "syringe_0"
 	icon_state = "0"
 	center_of_mass_x = 16 //CHOMPEdit

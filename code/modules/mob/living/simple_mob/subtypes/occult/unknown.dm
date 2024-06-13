@@ -350,8 +350,6 @@
 	intelligence_level = AI_SMART
 	vision_range = 9
 	closest_distance = 4
-<<<<<<< HEAD
-=======
 
 #undef GA_ADS
 #undef GA_CALLDOWN
@@ -360,4 +358,3 @@
 #undef GA_BULLETHELL
 #undef GA_LINES
 #undef GA_CONFUSION
->>>>>>> ab31632830... even more local defines (#16033)
