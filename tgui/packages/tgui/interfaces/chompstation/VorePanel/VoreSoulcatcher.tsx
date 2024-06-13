@@ -76,7 +76,7 @@ export const VoreSoulcatcher = (props) => {
                 />
               </Stack.Item>
               <Stack.Item>
-                <Box>{'Stored: ' + caught_souls.length}</Box>
+                <Box>{caught_souls.length}</Box>
               </Stack.Item>
             </Stack>
           </LabeledList.Item>
