@@ -1,3 +1,4 @@
+//CHOMPEDIT Start: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
 #define WING_LOWER_LAYER		3		//Wings as viewed from the south //CHOMPStation edit - underneath bodyparts
@@ -39,3 +40,4 @@
 #define MOB_WATER_LAYER			39		//'Mob submerged' overlay layer
 #define TARGETED_LAYER			40		//'Aimed at' overlay layer
 #define TOTAL_LAYERS			40		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+//CHOMPEdit End
