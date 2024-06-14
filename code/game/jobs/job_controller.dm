@@ -83,6 +83,15 @@ var/global/datum/controller/occupations/job_master
 		return 1
 	return 0
 
+//CHOMPAdd Start
+/datum/controller/occupations/proc/update_limit(var/rank, var/comperator)
+	var/datum/job/job = GetJob(rank)
+	if(job && job.total_positions != -1)
+		job.update_limit(comperator)
+		return 1
+	return 0
+//CHOMPAdd End
+
 /datum/controller/occupations/proc/FindOccupationCandidates(datum/job/job, level, flag)
 	Debug("Running FOC, Job: [job], Level: [level], Flag: [flag]")
 	var/list/candidates = list()
