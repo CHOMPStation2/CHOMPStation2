@@ -571,6 +571,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"mind_backups" = host.soulgem.flag_check(NIF_SC_BACKUPS),
 		"ar_projecting" = host.soulgem.flag_check(NIF_SC_PROJECTING)
 	)
+	var/nutri_value = 0
+	if(istype(host, /mob/living))
+		var/mob/living/H = host
+		nutri_value = H.nutrition
+	data["abilities"] = list (
+		"nutrition" = nutri_value,
+		"current_size" = host.size_multiplier,
+		"minimum_size" = host.has_large_resize_bounds() ? RESIZE_MINIMUM_DORMS : RESIZE_MINIMUM,
+		"maximum_size" = host.has_large_resize_bounds() ? RESIZE_MAXIMUM_DORMS : RESIZE_MAXIMUM
+	)
 	//CHOMPAdd End, Soulcatcher
 
 	return data
@@ -2141,6 +2151,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("toggle_soulcatcher_allow_deletion")
 			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DETELION
 			unsaved_changes = TRUE
+			return TRUE
+		if("adjust_own_size")
+			var/new_size = text2num(params["new_mob_size"])
+			var/costs = text2num(params["resize_mob_cost"])
+			new_size = clamp(new_size, RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
+			if(istype(host, /mob/living))
+				var/mob/living/H = host
+				if(H.nutrition >= costs)
+					H.adjust_nutrition(-costs)
+					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
 		//Soulcatcher settings
 		if("soulcatcher_toggle")
