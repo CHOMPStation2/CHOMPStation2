@@ -239,7 +239,7 @@ export const VoreSoulcatcher = (props) => {
                       yellow: [150, 200],
                       red: [200, 600],
                     }) ||
-                    (!is_enabled(nutrition, resize_cost) && { black: [0, 6.0] })
+                    (!is_enabled(nutrition, resize_cost) && { black: [0, 600] })
                   }
                   format={(value) => toFixed(value, 2) + '%'}
                   value={current_size * 100}
