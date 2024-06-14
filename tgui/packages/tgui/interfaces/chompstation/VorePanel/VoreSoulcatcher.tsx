@@ -223,7 +223,10 @@ export const VoreSoulcatcher = (props) => {
           'Soulcatching disabled.'
         )}
       </Section>
-      <Section title="Abilities" buttons={'Nutrition: ' + nutrition}>
+      <Section
+        title="Abilities"
+        buttons={'Nutrition: ' + toFixed(nutrition, 1)}
+      >
         <LabeledList>
           <LabeledList.Item label="Resize">
             <Flex align="baseline">
