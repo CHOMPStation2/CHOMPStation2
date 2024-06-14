@@ -1,12 +1,13 @@
+//CHOMPEdit, all moved to globals! code\__defines\nif_ch.dm
 //These two also have NIF FLAG representations. These are the local setting representations.
-#define NIF_SC_CATCHING_ME			0x1
-#define NIF_SC_CATCHING_OTHERS		0x2
+//# define NIF_SC_CATCHING_ME			0x1 //CHOMPRemove
+//# define NIF_SC_CATCHING_OTHERS		0x2 //CHOMPRemove
 //These are purely local setings flags, without global representation.
-#define NIF_SC_ALLOW_EARS			0x4
-#define NIF_SC_ALLOW_EYES			0x8
-#define NIF_SC_BACKUPS				0x10
-#define NIF_SC_PROJECTING			0x20
-#define SOULGEM_ACTIVE				0x400
+//# define NIF_SC_ALLOW_EARS			0x4 //CHOMPRemove
+//# define NIF_SC_ALLOW_EYES			0x8 //CHOMPRemove
+//# define NIF_SC_BACKUPS				0x10 //CHOMPRemove
+//# define NIF_SC_PROJECTING			0x20 //CHOMPRemove
+//# define SOULGEM_ACTIVE				0x400 //CHOMPRemove
 
 ///////////
 // Soulcatcher - Like a posibrain, sorta!
@@ -634,9 +635,9 @@
 		var/sane_message = sanitize(message)
 		soulcatcher.emote_into(sane_message,src,null)
 
-#undef NIF_SC_CATCHING_ME
-#undef NIF_SC_CATCHING_OTHERS
-#undef NIF_SC_ALLOW_EARS
-#undef NIF_SC_ALLOW_EYES
-#undef NIF_SC_BACKUPS
-#undef NIF_SC_PROJECTING
+//# undef NIF_SC_CATCHING_ME //CHOMPRemove
+//# undef NIF_SC_CATCHING_OTHERS //CHOMPRemove
+//# undef NIF_SC_ALLOW_EARS //CHOMPRemove
+//# undef NIF_SC_ALLOW_EYES //CHOMPRemove
+//# undef NIF_SC_BACKUPS //CHOMPRemove
+//# undef NIF_SC_PROJECTING //CHOMPRemove
