@@ -1,4 +1,5 @@
 /* eslint react/no-danger: "off" */
+import { round, toFixed } from 'common/math';
 import { useState } from 'react';
 
 import { KEY_ENTER } from '../../../common/keycodes';
@@ -206,15 +207,23 @@ export const TicketsPanel = (props) => {
                   </LabeledList.Item>
                   {State[selected_ticket.state] === State.open ? (
                     <LabeledList.Item label="Opened At">
-                      {selected_ticket.opened_at_date} (
-                      {Math.round((selected_ticket.opened_at / 600) * 10) / 10}
-                      minutes ago.)
+                      {selected_ticket.opened_at_date +
+                        ' (' +
+                        toFixed(
+                          round((selected_ticket.opened_at / 600) * 10, 0) / 10,
+                          1,
+                        ) +
+                        ' minutes ago.)'}
                     </LabeledList.Item>
                   ) : (
                     <LabeledList.Item label="Closed At">
-                      {selected_ticket.closed_at_date} (
-                      {Math.round((selected_ticket.closed_at / 600) * 10) / 10}
-                      minutes ago.)
+                      {selected_ticket.closed_at_date +
+                        ' (' +
+                        toFixed(
+                          round((selected_ticket.closed_at / 600) * 10, 0) / 10,
+                          1,
+                        ) +
+                        ' minutes ago.)'}
                       <Button onClick={() => act('reopen_ticket')}>
                         Reopen
                       </Button>

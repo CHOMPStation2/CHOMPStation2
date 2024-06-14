@@ -1,4 +1,5 @@
 /* eslint react/no-danger: "off" */
+import { round, toFixed } from 'common/math';
 import { useState } from 'react';
 
 import { KEY_ENTER } from '../../../common/keycodes';
@@ -95,13 +96,17 @@ export const Ticket = (props) => {
             <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
             {State[state] === State.open ? (
               <LabeledList.Item label="Opened At">
-                {opened_at_date} ({Math.round((opened_at / 600) * 10) / 10}
-                minutes ago.)
+                {opened_at_date +
+                  ' (' +
+                  toFixed(round((opened_at / 600) * 10, 0) / 10, 1) +
+                  ' minutes ago.)'}
               </LabeledList.Item>
             ) : (
               <LabeledList.Item label="Closed At">
-                {closed_at_date} ({Math.round((closed_at / 600) * 10) / 10}
-                minutes ago.)
+                {closed_at_date +
+                  ' (' +
+                  toFixed(round((closed_at / 600) * 10, 0) / 10, 1) +
+                  ' minutes ago.)'}
                 <Button onClick={() => act('reopen')}>Reopen</Button>
               </LabeledList.Item>
             )}

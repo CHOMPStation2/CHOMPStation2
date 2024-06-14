@@ -1,4 +1,4 @@
-import { round } from 'common/math';
+import { toFixed } from 'common/math';
 
 import { useBackend } from '../../backend';
 import {
@@ -54,8 +54,12 @@ export const ICAssembly = (props) => {
                 value={total_parts / max_components}
                 maxValue={1}
               >
-                {total_parts} / {max_components} (
-                {round((total_parts / max_components) * 100, 1)}%)
+                {total_parts +
+                  ' / ' +
+                  max_components +
+                  ' (' +
+                  toFixed((total_parts / max_components) * 100, 1) +
+                  '%)'}
               </ProgressBar>
             </LabeledList.Item>
             <LabeledList.Item label="Complexity">
@@ -68,8 +72,12 @@ export const ICAssembly = (props) => {
                 value={total_complexity / max_complexity}
                 maxValue={1}
               >
-                {total_complexity} / {max_complexity} (
-                {round((total_complexity / max_complexity) * 100, 1)}%)
+                {total_complexity +
+                  ' / ' +
+                  max_complexity +
+                  ' (' +
+                  toFixed((total_complexity / max_complexity) * 100, 1) +
+                  '%)'}
               </ProgressBar>
             </LabeledList.Item>
             <LabeledList.Item label="Cell Charge">
@@ -83,8 +91,12 @@ export const ICAssembly = (props) => {
                   value={battery_charge / battery_max}
                   maxValue={1}
                 >
-                  {battery_charge} / {battery_max} (
-                  {round((battery_charge / battery_max) * 100, 1)}%)
+                  {battery_charge +
+                    ' / ' +
+                    battery_max +
+                    ' (' +
+                    toFixed((battery_charge / battery_max) * 100, 1) +
+                    '%)'}
                 </ProgressBar>
               )) || <Box color="bad">No cell detected.</Box>}
             </LabeledList.Item>
