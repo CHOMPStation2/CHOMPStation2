@@ -96,5 +96,6 @@
 				C.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 			to_chat(L, span("danger", "Lightning struck nearby, and the thunderclap is deafening!"))
 
+#undef LIGHTNING_REDIRECT_RANGE
 #undef LIGHTNING_ZAP_RANGE
 #undef LIGHTNING_POWER
