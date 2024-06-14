@@ -34,6 +34,7 @@ export const VoreSoulcatcher = (props) => {
       current_size: number;
       minimum_size: number;
       maximum_size: number;
+      resize_cost: number;
     };
   };
 
@@ -55,13 +56,11 @@ export const VoreSoulcatcher = (props) => {
     ar_projecting,
   } = data.soulcatcher;
 
-  const resize_cost = 125;
-
   function is_enabled(nutrition, cost) {
     return nutrition >= cost;
   }
 
-  const { nutrition, current_size, minimum_size, maximum_size } =
+  const { nutrition, current_size, minimum_size, maximum_size, resize_cost } =
     data.abilities;
 
   return (
@@ -256,7 +255,6 @@ export const VoreSoulcatcher = (props) => {
                   onChange={(e, value) =>
                     act('adjust_own_size', {
                       new_mob_size: value / 100,
-                      resize_mob_cost: resize_cost,
                     })
                   }
                 />

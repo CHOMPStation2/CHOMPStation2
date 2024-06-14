@@ -19,6 +19,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 														"could_it_be_a_tumby")
 */ //Chomp REMOVE End
 
+#define VORE_RESIZE_COST 125 //CHOMPAdd
+
 /mob
 	var/datum/vore_look/vorePanel
 
@@ -579,7 +581,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"nutrition" = nutri_value,
 		"current_size" = host.size_multiplier,
 		"minimum_size" = host.has_large_resize_bounds() ? RESIZE_MINIMUM_DORMS : RESIZE_MINIMUM,
-		"maximum_size" = host.has_large_resize_bounds() ? RESIZE_MAXIMUM_DORMS : RESIZE_MAXIMUM
+		"maximum_size" = host.has_large_resize_bounds() ? RESIZE_MAXIMUM_DORMS : RESIZE_MAXIMUM,
+		"resize_cost" = VORE_RESIZE_COST
 	)
 	//CHOMPAdd End, Soulcatcher
 
@@ -2154,12 +2157,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		if("adjust_own_size")
 			var/new_size = text2num(params["new_mob_size"])
-			var/costs = text2num(params["resize_mob_cost"])
 			new_size = clamp(new_size, RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
 			if(istype(host, /mob/living))
 				var/mob/living/H = host
-				if(H.nutrition >= costs)
-					H.adjust_nutrition(-costs)
+				if(H.nutrition >= VORE_RESIZE_COST)
+					H.adjust_nutrition(-VORE_RESIZE_COST)
 					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
 		//Soulcatcher settings
@@ -4155,3 +4157,5 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	if(.)
 		unsaved_changes = TRUE
 //CHOMPedit end
+
+#undef VORE_RESIZE_COST //CHOMPAdd
