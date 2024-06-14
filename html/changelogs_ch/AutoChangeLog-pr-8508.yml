@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - balance: "Shadekin now drop all shrapnels, NIFs and most implants on phase shifting. Size and Compliance implants are whitelisted from this."

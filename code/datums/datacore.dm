@@ -470,6 +470,7 @@ var/global/list/PDA_Manifest = list()
 		hidden_general += G
 	else
 		general += G
+		job_master.update_limit(JOB_ANOMALY, general.len) //CHOMPAdd
 
 	return G
 

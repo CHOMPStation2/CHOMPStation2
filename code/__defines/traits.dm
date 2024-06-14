@@ -1,3 +1,4 @@
+//CHOMPAdd Start
 /*
 Remember to update _globalvars/traits.dm if you're adding/removing/renaming traits.
 */
@@ -209,3 +210,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define FROGENITE_TRAIT "frogenite"
 #define FERVEATIUM_TRAIT "ferveatium"
 */
+//CHOMPAdd End
+
+#define ORGANICS	1
+#define SYNTHETICS	2
