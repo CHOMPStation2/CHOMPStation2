@@ -57,10 +57,7 @@ export const VoreSoulcatcher = (props) => {
   } = data.soulcatcher;
 
   function is_enabled(nutri: number, cost: number): boolean {
-    if (nutri >= cost) {
-      return true;
-    }
-    return false;
+    return nutri >= cost;
   }
 
   const { nutrition, current_size, minimum_size, maximum_size, resize_cost } =
