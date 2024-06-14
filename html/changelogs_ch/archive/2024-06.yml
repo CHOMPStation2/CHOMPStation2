@@ -59,3 +59,6 @@
   - bugfix: snowfield's armory is no longer magically linked to SC's
   Kashargul:
   - bugfix: belly reagent examine messaged relying to direct volume instead of percentage
+2024-06-14:
+  tacoguy7765093:
+  - bugfix: Reconstituting as a teshari xeno chimera should no longer break vore sprites.
