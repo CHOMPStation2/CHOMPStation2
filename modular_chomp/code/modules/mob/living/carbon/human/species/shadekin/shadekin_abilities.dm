@@ -210,6 +210,23 @@
 		stop_pulling()
 		canmove = FALSE
 
+		//CHOMPAdd Start
+		var/list/allowed_implants = list(
+			/obj/item/weapon/implant/sizecontrol,
+			/obj/item/weapon/implant/compliance,
+		)
+		for(var/obj/item/organ/external/organ in organs)
+			for(var/obj/item/O in organ.implants)
+				if(is_type_in_list(O, allowed_implants))
+					continue
+				if(O == nif)
+					nif.unimplant(src)
+				O.forceMove(drop_location())
+				organ.implants -= O
+		if(!has_embedded_objects())
+			clear_alert("embeddedobject")
+		//CHOMPAdd End
+
 		// change
 		ability_flags |= AB_PHASE_SHIFTED
 		ability_flags |= AB_PHASE_SHIFTING

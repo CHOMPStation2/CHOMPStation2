@@ -1,0 +1,5 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - balance: "Paradox gen requires to be wired like an emitter"
+  - balance: "Paradox gen requires 1/20th of the power now. Loot pool is adjusted"
