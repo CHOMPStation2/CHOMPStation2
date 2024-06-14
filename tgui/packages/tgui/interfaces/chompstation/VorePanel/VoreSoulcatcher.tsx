@@ -56,8 +56,11 @@ export const VoreSoulcatcher = (props) => {
     ar_projecting,
   } = data.soulcatcher;
 
-  function is_enabled(nutrition, cost) {
-    return nutrition >= cost;
+  function is_enabled(nutri: number, cost: number): boolean {
+    if (nutri >= cost) {
+      return true;
+    }
+    return false;
   }
 
   const { nutrition, current_size, minimum_size, maximum_size, resize_cost } =
@@ -229,6 +232,7 @@ export const VoreSoulcatcher = (props) => {
             <Flex align="baseline">
               <Flex.Item>
                 <Slider
+                  disabled={!is_enabled(nutrition, resize_cost)}
                   width="250px"
                   ranges={
                     (is_enabled(nutrition, resize_cost) && {
@@ -242,16 +246,8 @@ export const VoreSoulcatcher = (props) => {
                   }
                   format={(value) => toFixed(value, 2) + '%'}
                   value={current_size * 100}
-                  minValue={
-                    is_enabled(nutrition, resize_cost)
-                      ? minimum_size * 100
-                      : current_size * 100
-                  }
-                  maxValue={
-                    is_enabled(nutrition, resize_cost)
-                      ? maximum_size * 100
-                      : current_size * 100
-                  }
+                  minValue={minimum_size * 100}
+                  maxValue={maximum_size * 100}
                   onChange={(e, value) =>
                     act('adjust_own_size', {
                       new_mob_size: value / 100,
