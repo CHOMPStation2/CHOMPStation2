@@ -155,10 +155,7 @@
 	M.ghostize(FALSE)
 	qdel(M)
 
-/obj/soulgem/proc/transfer_selected()
-	if(!selected_soul) return
-	if(!(selected_soul.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER)) return
-	brainmobs -= selected_soul
+/obj/soulgem/proc/find_transfer_objects()
 	var/list/valid_trasfer_objects = list(
 		/obj/item/device/sleevemate,
 		/obj/item/device/mmi
@@ -180,27 +177,40 @@
 	if(!valid_objects.len)
 		to_chat(owner, span_warning("No valid objects found!"))
 		return
-	var/obj/item/target = tgui_input_list(owner, "Select where you want to store the mind intoi", "Mind Transfer Target", valid_objects)
-	if(!target) return
+	return valid_objects
+
+/obj/soulgem/proc/transfer_selected()
+	if(!selected_soul) return
+	if(!(selected_soul.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER)) return
+	var/list/valid_objects = find_transfer_objects()
+	if(!valid_objects || !valid_objects.len)
+		return
+	var/obj/item/target = tgui_input_list(owner, "Select where you want to store the mind into.", "Mind Transfer Target", valid_objects)
+	transfer_mob(selected_soul, target)
+
+/obj/soulgem/proc/transfer_mob(var/mob/M, var/obj/target)
+	if(!M || !target) return
 	if(istype(target, /obj/item/device/sleevemate))
 		var/obj/item/device/sleevemate/mate = target
 		if(!mate.stored_mind)
 			to_chat(owner, span_notice("You scan yourself to transfer the soul into the [target]!"))
-			to_chat(selected_soul, span_notice("[transfer_message]"))
-			mate.get_mind(selected_soul)
-	else if(istype(target, /obj/item/device/mmi))
+			to_chat(M, span_notice("[transfer_message]"))
+			mate.get_mind(M)
+	else if(istype(M, /obj/item/device/mmi))
 		var/obj/item/device/mmi/mm = target
 		if(!mm.brainmob)
 			to_chat(owner, span_notice("You transfer the soul into the [target]!"))
-			to_chat(selected_soul, span_notice("[transfer_message]"))
-			mm.transfer_identity(selected_soul)
+			to_chat(M, span_notice("[transfer_message]"))
+			mm.transfer_identity(M)
 	else
 		return
-	qdel(selected_soul)
-	if(brainmobs.len > 1)
-		selected_soul = brainmobs[1]
-	else
-		selected_soul = null
+	brainmobs -= M
+	if(M == selected_soul)
+		if(brainmobs.len > 1)
+			selected_soul = brainmobs[1]
+		else
+			selected_soul = null
+	qdel(M)
 
 /obj/soulgem/proc/delete_selected()
 	if(!selected_soul) return

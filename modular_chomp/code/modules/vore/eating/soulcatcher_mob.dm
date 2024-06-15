@@ -141,3 +141,17 @@
 	if(message)
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
+
+/mob/living/carbon/brain/caught_soul/vore/verb/transfer_self()
+	set name = "Transfer Self"
+	set desc = "Transfer youself into a nearby Sleevemate or MMI."
+	set category = "Soulcatcher"
+
+	if(eyeobj)
+		to_chat(src, span_warning("You can't do that while AR projecting!"))
+		return
+	var/list/valid_objects = gem.find_transfer_objects()
+	if(!valid_objects || !valid_objects.len)
+		return
+	var/obj/item/target = tgui_input_list(src, "Select where you want to store your own mind into.", "Mind Transfer Target", valid_objects)
+	gem.transfer_mob(src, target)
