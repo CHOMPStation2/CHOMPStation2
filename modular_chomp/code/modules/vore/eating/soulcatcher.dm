@@ -96,7 +96,7 @@
 		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = null
 		return
-	if(!sbelly(belly))
+	if(!isbelly(belly))
 		return
 	if(!linked_belly)
 		linked_belly = belly
