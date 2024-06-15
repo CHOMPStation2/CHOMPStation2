@@ -206,7 +206,7 @@
 			mm.transfer_identity(M)
 	else
 		return
-	if(M.mind = own_mind)
+	if(M.mind == own_mind)
 		own_mind = null
 	brainmobs -= M
 	if(M == selected_soul)
