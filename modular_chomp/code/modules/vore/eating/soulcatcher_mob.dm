@@ -108,6 +108,7 @@
 
 	eyeobj = new/mob/observer/eye/ar_soul(src, gem.owner)
 	gem.notify_holder("[src] now AR projecting.")
+	gem.clear_vore_fx(src)
 
 /mob/living/carbon/brain/caught_soul/vore/jump_to_owner()
 	set name = "Jump to Owner"
@@ -131,6 +132,7 @@
 
 	QDEL_NULL(eyeobj)
 	gem.notify_holder("[src] ended AR projection.")
+	gem.show_vore_fx(src, TRUE)
 
 /mob/living/carbon/brain/caught_soul/vore/nsay_brain()
 	set name = "NSay"

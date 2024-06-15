@@ -2176,7 +2176,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			unsaved_changes = TRUE
 			return TRUE
 		if("soulcatcher_sfx")
-			host.soulgem.linked_belly = locate(params["selected_belly"])
+			var/obj/belly = locate(params["selected_belly"])
+			if(istype(belly))
+				host.soulgem.update_linked_belly(belly)
 			unsaved_changes = TRUE
 			return TRUE
 		if("soulcatcher_release")

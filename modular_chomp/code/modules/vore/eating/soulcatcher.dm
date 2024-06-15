@@ -37,7 +37,7 @@
 	. = ..()
 	for(var/obj/belly in owner.vore_organs)
 		if(belly.name == data["linked_belly"])
-			linked_belly = belly
+			update_linked_belly(belly)
 			return
 	linked_belly = null
 
@@ -50,6 +50,8 @@
 
 /obj/soulgem/Destroy()
 	owner = null
+	UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
+	linked_belly = null
 	..()
 
 /obj/soulgem/proc/notify_holder(var/message)
@@ -87,6 +89,38 @@
 			to_chat(CS, span_nif("<b>[sender_name]</b> [message]"))
 
 	log_nme(message, owner.real_name,sender)
+
+/obj/soulgem/proc/update_linked_belly(var/obj/belly)
+	if(!belly && linked_belly)
+		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
+		linked_belly = null
+		return
+	if(!linked_belly)
+		linked_belly = belly
+		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
+		return
+	if(belly != linked_belly)
+		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
+		linked_belly = belly
+		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
+
+/obj/soulgem/proc/soulgem_vfx(var/update, var/severity = 0)
+	if(linked_belly)
+		for(var/mob/living/L in brainmobs)
+			if(flag_check(SOULGEM_SHOW_VORE_SFX))
+				show_vore_fx(L, update, severity)
+			else
+				clear_vore_fx()
+
+/obj/soulgem/proc/show_vore_fx(var/mob/living/L, var/update, var/severity = 0)
+	if(!linked_belly || !flag_check(SOULGEM_SHOW_VORE_SFX))
+		return
+	if(!istype(L) || L.eyeobj)
+		return
+	linked_belly.vore_fx(L, update, severity)
+
+/obj/soulgem/proc/clear_vore_fx(var/mob/M)
+	M.clear_fullscreen("belly")
 
 /obj/soulgem/proc/catch_mob(var/mob/M, var/custom_name)
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE)) return
@@ -148,8 +182,7 @@
 
 	//Announce to host and other minds
 	notify_holder("New mind loaded: [brainmob.name]")
-	if(linked_belly && flag_check(SOULGEM_SHOW_VORE_SFX))
-		linked_belly.vore_fx(brainmob, TRUE)
+	show_vore_fx(brainmob, TRUE)
 	return TRUE
 
 /obj/soulgem/proc/release_selected()
@@ -291,6 +324,8 @@
 
 /obj/soulgem/proc/toggle_setting(var/flag)
 	setting_flags ^= flag
+	if(flag & SOULGEM_SHOW_VORE_SFX)
+		soulgem_vfx(TRUE)
 
 /obj/soulgem/proc/flag_check(var/flag)
 	return setting_flags & flag
