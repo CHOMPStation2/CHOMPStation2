@@ -154,7 +154,7 @@
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
 
-/mob/living/carbon/brain/caught_soul/vore/verb/transfer_self()
+/mob/living/carbon/brain/caught_soul/vore/proc/transfer_self()
 	set name = "Transfer Self"
 	set desc = "Transfer youself while being in your own soulcatcher into a nearby Sleevemate or MMI."
 	set category = "Soulcatcher"

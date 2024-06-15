@@ -148,6 +148,7 @@
 		brainmob.parent_mob = TRUE
 		own_mind = brainmob.mind
 		remove_verb(brainmob, /mob/proc/enter_soulcatcher) //No recursive self capturing...
+		add_verb(brainmob, /mob/living/carbon/brain/caught_soul/vore/proc/transfer_self)
 
 	//If they have these values, apply them
 	if(isliving(M))
