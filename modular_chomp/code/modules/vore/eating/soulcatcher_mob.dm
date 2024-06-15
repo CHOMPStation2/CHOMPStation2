@@ -42,8 +42,6 @@
 
 	if(!soulgem) // Only sanity...
 		return
-	if(soulgem.own_mind)
-		return
 	if(soulgem && soulgem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_ME))
 		soulgem.catch_mob(src)
 

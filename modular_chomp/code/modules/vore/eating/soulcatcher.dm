@@ -81,6 +81,7 @@
 /obj/soulgem/proc/catch_mob(var/mob/M, var/custom_name)
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE)) return
 	if(!M.mind)	return
+	if(isbrain(owner)) return
 	//Create a new brain mob
 	var/mob/living/carbon/brain/caught_soul/vore/brainmob = new(src)
 	brainmob.gem = src
@@ -102,6 +103,7 @@
 		brainmob.ext_blind = FALSE
 		brainmob.parent_mob = TRUE
 		own_mind = brainmob.mind
+		remove_verb(brainmob, /mob/proc/enter_soulcatcher) //No recursive self capturing...
 
 	//If they have these values, apply them
 	if(isliving(M))
