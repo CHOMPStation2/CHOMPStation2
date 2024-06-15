@@ -95,6 +95,7 @@ export const VoreSoulcatcher = (props) => {
               (active ? 'Disables' : 'Enables') +
               ' the ability to capture souls upon vore death.'
             }
+            tooltipPosition="top"
             selected={active}
           >
             {active ? 'Soulcatcher On' : 'Soulcatcher Off'}
@@ -128,6 +129,7 @@ export const VoreSoulcatcher = (props) => {
                   <Button
                     icon="key"
                     tooltip="Release the currently selected soul as ghosts."
+                    tooltipPosition="bottom"
                     onClick={() => act('soulcatcher_release')}
                     selected
                   >
@@ -136,6 +138,7 @@ export const VoreSoulcatcher = (props) => {
                   <Button
                     icon="right-left"
                     tooltip="Tansfer the currently selected soul into a held or nearby Sleevemate or MMI."
+                    tooltipPosition="bottom"
                     onClick={() => act('soulcatcher_transfer')}
                   >
                     Transfer
@@ -143,6 +146,7 @@ export const VoreSoulcatcher = (props) => {
                   <Button.Confirm
                     icon="skull"
                     tooltip="Delete the currently selected soul if preferences align or release it."
+                    tooltipPosition="bottom"
                     color="red"
                     confirmIcon="triangle-exclamation"
                     onClick={() => act('soulcatcher_delete')}
@@ -157,6 +161,7 @@ export const VoreSoulcatcher = (props) => {
                 <Button.Confirm
                   icon="tornado"
                   tooltip="Release all captured souls as ghosts."
+                  tooltipPosition="bottom"
                   confirmColor="green"
                   confirmIcon="triangle-exclamation"
                   onClick={() => act('soulcatcher_release_all')}
@@ -166,6 +171,7 @@ export const VoreSoulcatcher = (props) => {
                 <Button.Confirm
                   icon="eraser"
                   tooltip="Delete all captured souls if preferences align or release them."
+                  tooltipPosition="bottom"
                   color="red"
                   confirmIcon="triangle-exclamation"
                   onClick={() => act('soulcatcher_erase_all')}
@@ -182,6 +188,7 @@ export const VoreSoulcatcher = (props) => {
                     (catch_self ? 'Allow' : 'Disallow') +
                     ' your own soulcatcher to capture your own soul upon vore death.'
                   }
+                  tooltipPosition="bottom"
                   color={catch_self ? 'green' : 'red'}
                   onClick={() => act('toggle_self_catching')}
                 >
@@ -193,6 +200,7 @@ export const VoreSoulcatcher = (props) => {
                     (catch_prey ? 'Allow' : 'Disallow') +
                     ' your own soulcatcher to capture prey souls upon vore death.'
                   }
+                  tooltipPosition="bottom"
                   color={catch_prey ? 'green' : 'red'}
                   onClick={() => act('toggle_prey_catching')}
                 >
@@ -204,6 +212,7 @@ export const VoreSoulcatcher = (props) => {
                     (ext_hearing ? 'Allow' : 'Disallow') +
                     ' your captured souls to hear.'
                   }
+                  tooltipPosition="bottom"
                   color={ext_hearing ? 'green' : 'red'}
                   onClick={() => act('toggle_ext_hearing')}
                 >
@@ -215,6 +224,7 @@ export const VoreSoulcatcher = (props) => {
                     (ext_vision ? 'Allow' : 'Disallow') +
                     ' your captured souls to see.'
                   }
+                  tooltipPosition="bottom"
                   color={ext_vision ? 'green' : 'red'}
                   onClick={() => act('toggle_ext_vision')}
                 >
@@ -226,6 +236,7 @@ export const VoreSoulcatcher = (props) => {
                     (mind_backups ? 'Allow' : 'Disallow') +
                     ' your captured souls to have regular mind backups.'
                   }
+                  tooltipPosition="bottom"
                   color={mind_backups ? 'green' : 'red'}
                   onClick={() => act('toggle_mind_backup')}
                 >
@@ -237,6 +248,7 @@ export const VoreSoulcatcher = (props) => {
                     (ar_projecting ? 'Allow' : 'Disallow') +
                     ' your captured souls to AR project themselves.'
                   }
+                  tooltipPosition="bottom"
                   color={ar_projecting ? 'green' : 'red'}
                   onClick={() => act('toggle_ar_projecting')}
                 >
@@ -248,6 +260,7 @@ export const VoreSoulcatcher = (props) => {
                     (show_vore_sfx ? 'Show' : 'Hide') +
                     ' the selected vore SFX to your captured souls.'
                   }
+                  tooltipPosition="bottom"
                   color={show_vore_sfx ? 'green' : 'red'}
                   onClick={() => act('toggle_vore_sfx')}
                 >
@@ -261,6 +274,7 @@ export const VoreSoulcatcher = (props) => {
                 <Button
                   icon="wand-magic-sparkles"
                   tooltip="Customize your soulcatcher flavour text."
+                  tooltipPosition="left"
                   onClick={() => act('soulcatcher_interior_design')}
                 />
               }
