@@ -7,3 +7,4 @@
 #define NIF_SC_BACKUPS				0x10
 #define NIF_SC_PROJECTING			0x20
 #define SOULGEM_ACTIVE				0x400
+#define SOULGEM_SHOW_VORE_SFX		0x800

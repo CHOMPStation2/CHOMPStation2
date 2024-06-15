@@ -565,13 +565,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"active" = host.soulgem.flag_check(SOULGEM_ACTIVE),
 		"caught_souls" = stored_souls,
 		"selected_soul" = host.soulgem.selected_soul,
+		"selected_sfx" = host.soulgem.linked_belly,
 		"interior_design" =  host.soulgem.inside_flavor,
 		"catch_self" = host.soulgem.flag_check(NIF_SC_CATCHING_ME),
 		"catch_prey" = host.soulgem.flag_check(NIF_SC_CATCHING_OTHERS),
 		"ext_hearing" = host.soulgem.flag_check(NIF_SC_ALLOW_EARS),
 		"ext_vision" = host.soulgem.flag_check(NIF_SC_ALLOW_EYES),
 		"mind_backups" = host.soulgem.flag_check(NIF_SC_BACKUPS),
-		"ar_projecting" = host.soulgem.flag_check(NIF_SC_PROJECTING)
+		"ar_projecting" = host.soulgem.flag_check(NIF_SC_PROJECTING),
+		"show_vore_sfx" = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
 	)
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
@@ -2173,6 +2175,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.soulgem.selected_soul = locate(params["selected_soul"])
 			unsaved_changes = TRUE
 			return TRUE
+		if("soulcatcher_sfx")
+			host.soulgem.linked_belly = locate(params["selected_belly"])
+			unsaved_changes = TRUE
+			return TRUE
 		if("soulcatcher_release")
 			host.soulgem.release_selected()
 			unsaved_changes = TRUE
@@ -2207,6 +2213,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		if("toggle_ar_projecting")
 			host.soulgem.toggle_setting(NIF_SC_PROJECTING)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_vore_sfx")
+			host.soulgem.toggle_setting(SOULGEM_SHOW_VORE_SFX)
 			unsaved_changes = TRUE
 			return TRUE
 		if("soulcatcher_release_all")
@@ -3736,6 +3746,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(failure_msg)
 				tgui_alert_async(user,failure_msg,"Error!")
 				return FALSE
+
+			//CHOMPAdd Start, Soulcatcher
+			if(host.soulgem?.linked_belly == host.vore_selected)
+				host.soulgem.linked_belly = null
+			//CHOMPAdd End, Soulcatcher
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]

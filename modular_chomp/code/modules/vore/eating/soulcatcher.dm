@@ -3,6 +3,7 @@
 	desc = "A mind storage and processing system capable of capturing and supporting human-level minds in a small VR space."
 	var/mob/living/owner
 	var/datum/own_mind
+	var/obj/belly/linked_belly
 
 	var/setting_flags = (NIF_SC_ALLOW_EARS|NIF_SC_ALLOW_EYES|NIF_SC_BACKUPS|NIF_SC_PROJECTING)
 	var/mob/selected_soul = null
@@ -22,7 +23,8 @@
 		"transit_message",
 		"release_message",
 		"transfer_message",
-		"delete_message"
+		"delete_message",
+		"linked_belly"
 	)
 	return ..() + saving
 
@@ -30,6 +32,14 @@
 	. = ..()
 	if(ismob(loc))
 		owner = loc
+
+/obj/soulgem/deserialize(list/data)
+	. = ..()
+	for(var/obj/belly in owner.vore_organs)
+		if(belly.name == data["linked_belly"])
+			linked_belly = belly
+			return
+	linked_belly = null
 
 /obj/soulgem/proc/transfer_self(var/mob/target)
 	QDEL_NULL(target.soulgem)
@@ -138,6 +148,8 @@
 
 	//Announce to host and other minds
 	notify_holder("New mind loaded: [brainmob.name]")
+	if(linked_belly && flag_check(SOULGEM_SHOW_VORE_SFX))
+		linked_belly.vore_fx(brainmob, TRUE)
 	return TRUE
 
 /obj/soulgem/proc/release_selected()

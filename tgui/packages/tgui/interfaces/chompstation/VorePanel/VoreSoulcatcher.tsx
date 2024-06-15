@@ -20,6 +20,7 @@ export const VoreSoulcatcher = (props) => {
     soulcatcher: {
       active: BooleanLike;
       caught_souls: DropdownEntry[];
+      selected_sfx: string;
       selected_soul: string;
       interior_design: string;
       catch_self: BooleanLike;
@@ -28,6 +29,7 @@ export const VoreSoulcatcher = (props) => {
       ext_vision: BooleanLike;
       mind_backups: BooleanLike;
       ar_projecting: BooleanLike;
+      show_vore_sfx: BooleanLike;
     };
     abilities: {
       nutrition: number;
@@ -36,12 +38,28 @@ export const VoreSoulcatcher = (props) => {
       maximum_size: number;
       resize_cost: number;
     };
+    our_bellies: Partial<belly> & {
+      map(arg0: (belly: belly) => DropdownEntry): DropdownEntry[];
+    };
+  };
+
+  type belly = {
+    selected: BooleanLike;
+    name: string;
+    ref: string;
+    digest_mode: string;
+    contents: number;
   };
 
   type DropdownEntry = {
     displayText: string;
     value: string;
   };
+  const { our_bellies } = data;
+
+  const getBellies = our_bellies.map((belly) => {
+    return { ...belly, displayText: belly.name, value: belly.ref };
+  });
 
   const {
     active,
@@ -54,14 +72,16 @@ export const VoreSoulcatcher = (props) => {
     ext_vision,
     mind_backups,
     ar_projecting,
+    selected_sfx,
+    show_vore_sfx,
   } = data.soulcatcher;
+
+  const { nutrition, current_size, minimum_size, maximum_size, resize_cost } =
+    data.abilities;
 
   function is_enabled(nutri: number, cost: number): boolean {
     return nutri >= cost;
   }
-
-  const { nutrition, current_size, minimum_size, maximum_size, resize_cost } =
-    data.abilities;
 
   return (
     <>
@@ -159,7 +179,7 @@ export const VoreSoulcatcher = (props) => {
                 <Button
                   icon="circle-user"
                   tooltip={
-                    (catch_self ? 'Disallow' : 'Allow') +
+                    (catch_self ? 'Allow' : 'Disallow') +
                     ' your own soulcatcher to capture your own soul upon vore death.'
                   }
                   color={catch_self ? 'green' : 'red'}
@@ -170,7 +190,7 @@ export const VoreSoulcatcher = (props) => {
                 <Button
                   icon="person"
                   tooltip={
-                    (catch_prey ? 'Disallow' : 'Allow') +
+                    (catch_prey ? 'Allow' : 'Disallow') +
                     ' your own soulcatcher to capture prey souls upon vore death.'
                   }
                   color={catch_prey ? 'green' : 'red'}
@@ -181,7 +201,7 @@ export const VoreSoulcatcher = (props) => {
                 <Button
                   icon={ext_hearing ? 'ear-listen' : 'ear-deaf'}
                   tooltip={
-                    (ext_hearing ? 'Disallow' : 'Allow') +
+                    (ext_hearing ? 'Allow' : 'Disallow') +
                     ' your captured souls to hear.'
                   }
                   color={ext_hearing ? 'green' : 'red'}
@@ -192,7 +212,7 @@ export const VoreSoulcatcher = (props) => {
                 <Button
                   icon={ext_vision ? 'eye' : 'eye-slash'}
                   tooltip={
-                    (ext_vision ? 'Disallow' : 'Allow') +
+                    (ext_vision ? 'Allow' : 'Disallow') +
                     ' your captured souls to see.'
                   }
                   color={ext_vision ? 'green' : 'red'}
@@ -203,7 +223,7 @@ export const VoreSoulcatcher = (props) => {
                 <Button
                   icon="database"
                   tooltip={
-                    (mind_backups ? 'Disallow' : 'Allow') +
+                    (mind_backups ? 'Allow' : 'Disallow') +
                     ' your captured souls to have regular mind backups.'
                   }
                   color={mind_backups ? 'green' : 'red'}
@@ -214,13 +234,24 @@ export const VoreSoulcatcher = (props) => {
                 <Button
                   icon="street-view"
                   tooltip={
-                    (mind_backups ? 'Disallow' : 'Allow') +
+                    (mind_backups ? 'Allow' : 'Disallow') +
                     ' your captured souls to AR project themselves.'
                   }
-                  color={ar_projecting ? 'green' : 'red'}
+                  color={mind_backups ? 'green' : 'red'}
                   onClick={() => act('toggle_ar_projecting')}
                 >
                   AR Projecting
+                </Button>
+                <Button
+                  icon={show_vore_sfx ? 'circle-play' : 'circle-pause'}
+                  tooltip={
+                    (show_vore_sfx ? 'Show' : 'Hide') +
+                    ' the selected vore SFX to your captured souls.'
+                  }
+                  color={show_vore_sfx ? 'green' : 'red'}
+                  onClick={() => act('toggle_vore_sfx')}
+                >
+                  Show Vore SFX
                 </Button>
               </Box>
             </LabeledList.Item>
@@ -235,6 +266,18 @@ export const VoreSoulcatcher = (props) => {
               }
             >
               {interior_design}
+            </LabeledList.Item>
+            <LabeledList.Item label="Interior SFX">
+              <Dropdown
+                width="200px"
+                selected={selected_sfx}
+                options={getBellies}
+                onSelected={(value) =>
+                  act('soulcatcher_sfx', {
+                    selected_belly: value,
+                  })
+                }
+              />
             </LabeledList.Item>
             <LabeledList.Item label="Custom Messages">
               <Box>
