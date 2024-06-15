@@ -234,10 +234,10 @@ export const VoreSoulcatcher = (props) => {
                 <Button
                   icon="street-view"
                   tooltip={
-                    (mind_backups ? 'Allow' : 'Disallow') +
+                    (ar_projecting ? 'Allow' : 'Disallow') +
                     ' your captured souls to AR project themselves.'
                   }
-                  color={mind_backups ? 'green' : 'red'}
+                  color={ar_projecting ? 'green' : 'red'}
                   onClick={() => act('toggle_ar_projecting')}
                 >
                   AR Projecting
