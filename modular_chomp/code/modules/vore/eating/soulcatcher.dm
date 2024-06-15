@@ -2,6 +2,7 @@
 	name = "Soulgem"
 	desc = "A mind storage and processing system capable of capturing and supporting human-level minds in a small VR space."
 	var/mob/living/owner
+	var/datum/own_mind
 
 	var/setting_flags = (NIF_SC_ALLOW_EARS|NIF_SC_ALLOW_EYES|NIF_SC_BACKUPS|NIF_SC_PROJECTING)
 	var/mob/selected_soul = null
@@ -100,6 +101,7 @@
 		brainmob.ext_deaf = FALSE
 		brainmob.ext_blind = FALSE
 		brainmob.parent_mob = TRUE
+		own_mind = brainmob.mind
 
 	//If they have these values, apply them
 	if(isliving(M))
@@ -204,6 +206,8 @@
 			mm.transfer_identity(M)
 	else
 		return
+	if(M.mind = own_mind)
+		own_mind = null
 	brainmobs -= M
 	if(M == selected_soul)
 		if(brainmobs.len > 1)
@@ -241,6 +245,21 @@
 	notify_holder("Updating environment...")
 	for(var/mob/living/carbon/brain/caught_soul/vore/CS as anything in brainmobs)
 		to_chat(CS, span_notice("[transit_message]") + "\n[inside_flavor]")
+
+/obj/soulgem/proc/return_to_body(var/datum/mind)
+	if(!gem.own_mind == mind)
+		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
+		return
+	var/mob/self = null
+	for(var/mob/mob in brainmobs)
+		if(brainmobs.mind == mind)
+			self = mob
+			break
+	if(!self)
+		return
+	self.mind.transfer_to(owner)
+	own_mind = null
+	qdel(self)
 
 /obj/soulgem/proc/set_custom_message(var/message, var/target)
 	message = sanitize(message, MAX_MESSAGE_LEN / 4)

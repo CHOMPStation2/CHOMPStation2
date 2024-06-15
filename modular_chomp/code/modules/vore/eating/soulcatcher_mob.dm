@@ -35,6 +35,18 @@
 
 	to_chat(src, span_warning("There's no way out! You're stuck inside your predator."))
 
+/mob/proc/enter_soulcatcher()
+	set name = "Enter Soulcatcher"
+	set desc = "Enter your own Soulcatcher."
+	set category = "IC.Vore"
+
+	if(!soulgem) // Only sanity...
+		return
+	if(soulgem.own_mind)
+		return
+	if(soulgem && soulgem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_ME))
+		soulgem.catch_mob(src)
+
 /mob/proc/nsay_vore()
 	set name = "NSay Vore"
 	set desc = "Speak into your Soulcatcher."
@@ -144,14 +156,28 @@
 
 /mob/living/carbon/brain/caught_soul/vore/verb/transfer_self()
 	set name = "Transfer Self"
-	set desc = "Transfer youself into a nearby Sleevemate or MMI."
+	set desc = "Transfer youself while being in your own soulcatcher into a nearby Sleevemate or MMI."
 	set category = "Soulcatcher"
 
 	if(eyeobj)
 		to_chat(src, span_warning("You can't do that while AR projecting!"))
 		return
+	if(!gem.own_mind == mind)
+		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
+		return
+
 	var/list/valid_objects = gem.find_transfer_objects()
 	if(!valid_objects || !valid_objects.len)
 		return
 	var/obj/item/target = tgui_input_list(src, "Select where you want to store your own mind into.", "Mind Transfer Target", valid_objects)
 	gem.transfer_mob(src, target)
+
+/mob/living/carbon/brain/caught_soul/vore/verb/reenter_body()
+	set name = "Re-enter Body"
+	set desc = "Return to your body after self capturing."
+	set category = "Soulcatcher"
+
+	if(eyeobj)
+		to_chat(src, span_warning("You can't do that while AR projecting!"))
+		return
+	gem.return_to_body(mind)
