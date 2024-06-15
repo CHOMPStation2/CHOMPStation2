@@ -656,7 +656,7 @@
 
 // Updates the belly_surrounding list variable. Called in bellymodes_vr.dm
 /obj/belly/proc/update_belly_surrounding()
-	if(!contents.len && !LAZYLEN(owner.soulgem.brainmobs))
+	if(!contents.len && !LAZYLEN(owner.soulgem?.brainmobs))
 		belly_surrounding = list()
 		return
 	belly_surrounding = get_belly_surrounding(contents)
