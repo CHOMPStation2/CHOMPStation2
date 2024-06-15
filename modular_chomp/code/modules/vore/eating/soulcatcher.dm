@@ -96,6 +96,8 @@
 		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = null
 		return
+	if(!sbelly(belly))
+		return
 	if(!linked_belly)
 		linked_belly = belly
 		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
