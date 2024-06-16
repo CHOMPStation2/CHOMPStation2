@@ -1070,7 +1070,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/new_emote_time = belly_data["emote_time"]
 					new_belly.emote_time = CLAMP(new_emote_time, 60, 600)
 
-				new_belly.set_zero_digestion_damage // CHOMP Edit; needed for importing a belly to overwrite an existing belly; otherwise pre-existing values throw off the unused digestion damage.
+				new_belly.set_zero_digestion_damage() // CHOMP Edit; needed for importing a belly to overwrite an existing belly; otherwise pre-existing values throw off the unused digestion damage.
 
 				if(isnum(belly_data["digest_brute"]))
 					var/new_digest_brute = belly_data["digest_brute"]
