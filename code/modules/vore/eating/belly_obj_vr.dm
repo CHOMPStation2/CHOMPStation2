@@ -1522,13 +1522,11 @@
 //CHOMPEdit Start - new procs for handling digestion damage as a total rather than per-type
 // Returns the current total digestion damage per tick of a belly.
 /obj/belly/proc/get_total_digestion_damage()
-	var/total = digest_brute + digest_burn + digest_oxy + digest_tox + digest_clone
-	return total
+	return (digest_brute + digest_burn + digest_oxy + digest_tox + digest_clone)
 
 // Returns the remaining 'budget' of digestion damage between the current and the maximum.
 /obj/belly/proc/get_unused_digestion_damage()
-	var/total = digest_brute + digest_burn + digest_oxy + digest_tox + digest_clone
-	return max(digest_max - total, 0)
+	return max(digest_max - get_total_digestion_damage(), 0)
 
 /obj/belly/proc/set_zero_digestion_damage()
 	digest_brute = 0
