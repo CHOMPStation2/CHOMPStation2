@@ -37,7 +37,7 @@
 	. = ..()
 	for(var/obj/belly in owner.vore_organs)
 		if(belly.name == data["linked_belly"])
-			update_linked_belly(belly)
+			update_linked_belly(belly, TRUE)
 			return
 	linked_belly = null
 
@@ -91,7 +91,7 @@
 
 	log_nme(message, owner.real_name,sender)
 
-/obj/soulgem/proc/update_linked_belly(var/obj/belly)
+/obj/soulgem/proc/update_linked_belly(var/obj/belly, var/skip_unreg = FALSE)
 	if(!belly && linked_belly)
 		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = null
@@ -103,7 +103,8 @@
 		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
 		return
 	if(belly != linked_belly)
-		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
+		if(!skip_unreg)
+			UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = belly
 		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
 
@@ -284,6 +285,10 @@
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION))
 		release_mob(M)
 		return
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION_INSTANT))
+		if(!(tgui_alert(M, "Do you really want to allow [owner] to delete you?", "Allow Deletion", list("No", "Yes")) == "Yes"))
+			to_chat(owner, span_notice("[M] denied your deletion request."))
+			return
 	to_chat(M, span_danger("[delete_message]"))
 	brainmobs -= M
 	var/mob/observer/dead/ghost = M.ghostize(FALSE)

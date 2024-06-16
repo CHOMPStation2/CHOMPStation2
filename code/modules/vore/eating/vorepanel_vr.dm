@@ -553,7 +553,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//Soulcatcher
 		"soulcatcher_allow_capture" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE,
 		"soulcatcher_allow_transfer" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER,
-		"soulcatcher_allow_deletion" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION
+		"soulcatcher_allow_deletion" = (global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DETELION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DETELION_INSTANT))
 		//CHOMPEdit end
 	)
 	//CHOMPAdd Start, Soulcatcher
@@ -2154,7 +2154,17 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_soulcatcher_allow_deletion")
-			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DETELION
+			var/current_number = global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DETELION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DETELION_INSTANT)
+			switch(current_number)
+				if(0)
+					host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DETELION
+				if(1)
+					host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DETELION_INSTANT
+				if(2)
+					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION)
+						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DETELION
+					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION_INSTANT)
+						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DETELION_INSTANT
 			unsaved_changes = TRUE
 			return TRUE
 		if("adjust_own_size")

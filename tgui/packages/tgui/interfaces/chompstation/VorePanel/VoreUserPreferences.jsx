@@ -645,14 +645,24 @@ export const VoreUserPreferences = (props) => {
       tooltip: {
         main: 'This button is for allowing or preventing soulcatchers from deleting your soul WARNING! Deletion will round remove you.',
         enable: 'Click here to allow the deletion of your soul.',
-        disable: 'Click here to prevent the deletion of your soul.',
+        disable:
+          (soulcatcher_allow_deletion === 1 &&
+            'Click here to allow the deletion of your soul without additional request.') ||
+          (soulcatcher_allow_deletion === 2 &&
+            'Click here to prevent the deletion of your soul.'),
       },
       back_color: {
-        enabled: 'red',
+        enabled:
+          (soulcatcher_allow_deletion === 1 && 'orange') ||
+          (soulcatcher_allow_deletion === 2 && 'red'),
         disabled: '',
       },
       content: {
-        enabled: 'DANGER! Soul Deletion Allowed',
+        enabled:
+          (soulcatcher_allow_deletion === 1 &&
+            'WARNING, Soul Deletion Possible') ||
+          (soulcatcher_allow_deletion === 2 &&
+            'DANGER! Instant Soul Deletion Allowed'),
         disabled: 'Do Not Allow Soul Deletion',
       },
     },
