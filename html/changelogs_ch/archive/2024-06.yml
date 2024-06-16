@@ -62,3 +62,19 @@
 2024-06-14:
   tacoguy7765093:
   - bugfix: Reconstituting as a teshari xeno chimera should no longer break vore sprites.
+2024-06-15:
+  FluffMedic:
+  - rscadd: Strange weather
+  - balance: Nif vendors have logs now. Sec can check them
+  - balance: Paradox gen requires to be wired like an emitter
+  - balance: Paradox gen requires 1/20th of the power now. Loot pool is adjusted
+  Kashargul:
+  - balance: Shadekin now drop all shrapnels, NIFs and most implants on phase shifting.
+      Size and Compliance implants are whitelisted from this.
+  - qol: linearizes the anomaly limit
+  Verkister:
+  - bugfix: Fixed synths not getting the verb to change eye color.
+  tacoguy7765093:
+  - balance: 75% reduction in blood loss from burns
+  theXDkidoflol:
+  - rscadd: Certain medications are now available as loadout items
