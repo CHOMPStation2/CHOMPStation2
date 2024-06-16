@@ -1070,25 +1070,27 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/new_emote_time = belly_data["emote_time"]
 					new_belly.emote_time = CLAMP(new_emote_time, 60, 600)
 
+				new_belly.set_zero_digestion_damage // CHOMP Edit; needed for importing a belly to overwrite an existing belly; otherwise pre-existing values throw off the unused digestion damage.
+
 				if(isnum(belly_data["digest_brute"]))
 					var/new_digest_brute = belly_data["digest_brute"]
-					new_belly.digest_brute = CLAMP(new_digest_brute, 0, 6)
+					new_belly.digest_brute = CLAMP(new_digest_brute, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 				if(isnum(belly_data["digest_burn"]))
 					var/new_digest_burn = belly_data["digest_burn"]
-					new_belly.digest_burn = CLAMP(new_digest_burn, 0, 6)
+					new_belly.digest_burn = CLAMP(new_digest_burn, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 				if(isnum(belly_data["digest_oxy"]))
 					var/new_digest_oxy = belly_data["digest_oxy"]
-					new_belly.digest_oxy = CLAMP(new_digest_oxy, 0, 12)
+					new_belly.digest_oxy = CLAMP(new_digest_oxy, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 12
 
 				if(isnum(belly_data["digest_tox"]))
 					var/new_digest_tox = belly_data["digest_tox"]
-					new_belly.digest_tox = CLAMP(new_digest_tox, 0, 6)
+					new_belly.digest_tox = CLAMP(new_digest_tox, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 				if(isnum(belly_data["digest_clone"]))
 					var/new_digest_clone = belly_data["digest_clone"]
-					new_belly.digest_clone = CLAMP(new_digest_clone, 0, 6)
+					new_belly.digest_clone = CLAMP(new_digest_clone, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 				if(isnum(belly_data["shrink_grow_size"]))
 					var/new_shrink_grow_size = belly_data["shrink_grow_size"]
@@ -3263,40 +3265,85 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.nutrition_percent = new_new_nutrition
 			. = TRUE
 		if("b_burn_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", host.vore_selected.digest_burn, 6, 0, round_value=FALSE)
+			// var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", host.vore_selected.digest_burn, 6, 0, round_value=FALSE)
+			// CHOMP Edit
+			var/old_damage = host.vore_selected.digest_burn
+			var/max_total_damage = host.vore_selected.digest_max
+			var/current_total_damage = host.vore_selected.get_total_digestion_damage()
+			var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Max of 36 across all damage types.", "Set Belly Burn Damage.", old_damage, max_total_damage, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 6)
+			// the highest we're allowed to set this damage type (ignore the damage type itself, since that's what we're changing)
+			var/max_allowed = max(max_total_damage - current_total_damage + old_damage, 0)
+			// var/new_new_damage = CLAMP(new_damage, 0, 6)
+			var/new_new_damage = CLAMP(new_damage, 0, max_allowed)
+			// End CHOMP Edit
 			host.vore_selected.digest_burn = new_new_damage
 			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_brute_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0, round_value=FALSE)
+			// var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0, round_value=FALSE)
+			// CHOMP Edit
+			var/old_damage = host.vore_selected.digest_brute
+			var/max_total_damage = host.vore_selected.digest_max
+			var/current_total_damage = host.vore_selected.get_total_digestion_damage()
+			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Max of 36 across all damage types.", "Set Belly Brute Damage.", old_damage, max_total_damage, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 6)
+			// the highest we're allowed to set this damage type (ignore the damage type itself, since that's what we're changing)
+			var/max_allowed = max(max_total_damage - current_total_damage + old_damage, 0)
+			// var/new_new_damage = CLAMP(new_damage, 0, 6)
+			var/new_new_damage = CLAMP(new_damage, 0, max_allowed)
+			// End CHOMP Edit
 			host.vore_selected.digest_brute = new_new_damage
 			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_oxy_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0, round_value=FALSE)
+			// var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0, round_value=FALSE)
+			// CHOMP Edit
+			var/old_damage = host.vore_selected.digest_oxy
+			var/max_total_damage = host.vore_selected.digest_max
+			var/current_total_damage = host.vore_selected.get_total_digestion_damage()
+			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Max of 36 across all damage types.", "Set Belly Suffocation Damage.", old_damage, max_total_damage, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 12)
+			// the highest we're allowed to set this damage type (ignore the damage type itself, since that's what we're changing)
+			var/max_allowed = max(max_total_damage - current_total_damage + old_damage, 0)
+			// var/new_new_damage = CLAMP(new_damage, 0, 12)
+			var/new_new_damage = CLAMP(new_damage, 0, max_allowed)
+			// End CHOMP Edit
 			host.vore_selected.digest_oxy = new_new_damage
 			. = TRUE
 		if("b_tox_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Ranges from 0 to 6", "Set Belly Toxins Damage.", host.vore_selected.digest_tox, 6, 0, round_value=FALSE)
+			// var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Ranges from 0 to 6", "Set Belly Toxins Damage.", host.vore_selected.digest_tox, 6, 0, round_value=FALSE)
+			// CHOMP Edit
+			var/old_damage = host.vore_selected.digest_tox
+			var/max_total_damage = host.vore_selected.digest_max
+			var/current_total_damage = host.vore_selected.get_total_digestion_damage()
+			var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Max of 36 across all damage types.", "Set Belly Toxins Damage.", old_damage, max_total_damage, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 6)
+			// the highest we're allowed to set this damage type (ignore the damage type itself, since that's what we're changing)
+			var/max_allowed = max(max_total_damage - current_total_damage + old_damage, 0)
+			// var/new_new_damage = CLAMP(new_damage, 0, 6)
+			var/new_new_damage = CLAMP(new_damage, 0, max_allowed)
+			// End CHOMP Edit
 			host.vore_selected.digest_tox = new_new_damage
 			. = TRUE
 		if("b_clone_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Ranges from 0 to 6", "Set Belly Clone Damage.", host.vore_selected.digest_clone, 6, 0, round_value=FALSE)
+			// var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Ranges from 0 to 6", "Set Belly Clone Damage.", host.vore_selected.digest_clone, 6, 0, round_value=FALSE)
+			// CHOMP Edit
+			var/old_damage = host.vore_selected.digest_clone
+			var/max_total_damage = host.vore_selected.digest_max
+			var/current_total_damage = host.vore_selected.get_total_digestion_damage()
+			var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Max of 36 across all damage types.", "Set Belly Clone Damage.", old_damage, max_total_damage, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 6)
+			// the highest we're allowed to set this damage type (ignore the damage type itself, since that's what we're changing)
+			var/max_allowed = max(max_total_damage - current_total_damage + old_damage, 0)
+			// var/new_new_damage = CLAMP(new_damage, 0, 6)
+			var/new_new_damage = CLAMP(new_damage, 0, max_allowed)
+			// End CHOMP Edit
 			host.vore_selected.digest_clone = new_new_damage
 			. = TRUE
 		if("b_drainmode")
