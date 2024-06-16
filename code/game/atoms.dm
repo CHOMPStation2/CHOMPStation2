@@ -493,6 +493,7 @@
 	if(istype(blood_DNA, /list))
 		blood_DNA = null
 		return TRUE
+	blood_color = null //chompfixy, cleaning objects saved its future blood color no matter what
 
 /atom/proc/on_rag_wipe(var/obj/item/weapon/reagent_containers/glass/rag/R)
 	clean_blood()
