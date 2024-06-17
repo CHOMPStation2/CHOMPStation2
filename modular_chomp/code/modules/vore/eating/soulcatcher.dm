@@ -286,8 +286,8 @@
 		release_mob(M)
 		return
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION_INSTANT))
-		if(!(tgui_alert(M, "Do you really want to allow [owner] to delete you?", "Allow Deletion", list("No", "Yes")) == "Yes"))
-			to_chat(owner, span_notice("[M] denied your deletion request."))
+		if(!(tgui_alert(M, "Do you really want to allow [owner] to delete you? On decline, you'll be ghosted.", "Allow Deletion", list("No", "Yes")) == "Yes"))
+			release_mob(M)
 			return
 	to_chat(M, span_danger("[delete_message]"))
 	brainmobs -= M
