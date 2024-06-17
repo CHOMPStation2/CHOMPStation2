@@ -53,7 +53,7 @@
 	selected_soul = null
 	own_mind = null
 	QDEL_LIST_NULL(brainmobs)
-	if(linked_belly)
+	if(istype(linked_belly))
 		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = null
 	..()
