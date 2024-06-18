@@ -52,6 +52,10 @@
 /mob/proc/init_vore()
 	//Something else made organs, meanwhile.
 	if(LAZYLEN(vore_organs))
+		//CHOMPAdd Start
+		if(!soulgem)
+			soulgem = new(src)
+		//CHOMPAdd End
 		return TRUE
 
 	//We'll load our client's organs if we have one
@@ -76,7 +80,11 @@
 			var/mob/living/carbon/human/H = src
 			if(istype(H.species,/datum/species/monkey))
 				allow_spontaneous_tf = TRUE
+		//CHOMPAdd Start
+		if(!soulgem)
+			soulgem = new(src)
 		return TRUE
+		//CHOMPAdd End
 
 //
 // Hide vore organs in contents

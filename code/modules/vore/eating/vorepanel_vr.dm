@@ -563,6 +563,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		stored_souls.Add(list(info))
 	data["soulcatcher"] = list(
 		"active" = host.soulgem.flag_check(SOULGEM_ACTIVE),
+		"name" = host.soulgem.name,
 		"caught_souls" = stored_souls,
 		"selected_soul" = host.soulgem.selected_soul,
 		"selected_sfx" = host.soulgem.linked_belly,
@@ -2238,6 +2239,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("soulcatcher_erase_all")
 			unsaved_changes = TRUE
 			host.soulgem.erase_mobs()
+			return TRUE
+		if("soulcatcher_rename")
+			var/new_name = tgui_input_text(host, "Adjust the name of your soulcatcher. Limit 60 chars.", \
+				"New Name", html_decode(host.soulgem.name), 60, prevent_enter = TRUE)
+			if(new_name)
+				unsaved_changes = TRUE
+				host.soulgem.rename(new_name)
 			return TRUE
 		if("soulcatcher_interior_design")
 			var/new_flavor = tgui_input_text(host, "Type what the prey sees after being 'caught'. This will be \

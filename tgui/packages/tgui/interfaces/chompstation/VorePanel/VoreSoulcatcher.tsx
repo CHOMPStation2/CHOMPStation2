@@ -19,6 +19,7 @@ export const VoreSoulcatcher = (props) => {
   type Data = {
     soulcatcher: {
       active: BooleanLike;
+      name: string;
       caught_souls: DropdownEntry[];
       selected_sfx: string;
       selected_soul: string;
@@ -63,6 +64,7 @@ export const VoreSoulcatcher = (props) => {
 
   const {
     active,
+    name,
     caught_souls,
     selected_soul,
     interior_design,
@@ -86,20 +88,27 @@ export const VoreSoulcatcher = (props) => {
   return (
     <>
       <Section
-        title="Soulcatcher"
+        title={'Soulcatcher (' + name + ')'}
         buttons={
-          <Button
-            onClick={() => act('soulcatcher_toggle')}
-            icon={active ? 'toggle-on' : 'toggle-off'}
-            tooltip={
-              (active ? 'Disables' : 'Enables') +
-              ' the ability to capture souls upon vore death.'
-            }
-            tooltipPosition="top"
-            selected={active}
-          >
-            {active ? 'Soulcatcher On' : 'Soulcatcher Off'}
-          </Button>
+          <>
+            <Button
+              onClick={() => act('soulcatcher_rename')}
+              icon="pen"
+              tooltip="Click here to rename your soulcatcher."
+            />
+            <Button
+              onClick={() => act('soulcatcher_toggle')}
+              icon={active ? 'toggle-on' : 'toggle-off'}
+              tooltip={
+                (active ? 'Disables' : 'Enables') +
+                ' the ability to capture souls upon vore death.'
+              }
+              tooltipPosition="top"
+              selected={active}
+            >
+              {active ? 'Soulcatcher On' : 'Soulcatcher Off'}
+            </Button>
+          </>
         }
       >
         {active ? (

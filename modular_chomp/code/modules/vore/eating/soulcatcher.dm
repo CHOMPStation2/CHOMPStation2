@@ -1,5 +1,5 @@
 /obj/soulgem
-	name = "Soulgem"
+	name = "Mind imprintation matrix"
 	desc = "A mind storage and processing system capable of capturing and supporting human-level minds in a small VR space."
 	var/mob/living/owner
 	var/datum/own_mind
@@ -59,10 +59,10 @@
 	..()
 
 /obj/soulgem/proc/notify_holder(var/message)
-	to_chat(owner, span_nif("<b>Soulcatcher</b> displays, \"<span class='notice nif'>[message]</span>\""))
+	to_chat(owner, span_nif("<b>[name]</b> displays, \"<span class='notice nif'>[message]</span>\""))
 
 	for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-		to_chat(CS, span_nif("<b>Soulcatcher</b> displays, \"<span class='notice nif'>[message]</span>\""))
+		to_chat(CS, span_nif("<b>[name]</b> displays, \"<span class='notice nif'>[message]</span>\""))
 
 /obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, var/mob/eyeobj)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
@@ -333,6 +333,13 @@
 			transfer_message = message
 		if("delete")
 			delete_message = message
+
+/obj/soulgem/proc/rename(var/new_name)
+	if(length(new_name) < 3 || length(new_name) > 60)
+		to_chat(owner, span_warning("Your soulcatcher's name needs to be between 3 and 60 characters long!"))
+		return
+	new_name = sanitize(new_name, 60)
+	name = new_name
 
 /obj/soulgem/proc/toggle_setting(var/flag)
 	setting_flags ^= flag
