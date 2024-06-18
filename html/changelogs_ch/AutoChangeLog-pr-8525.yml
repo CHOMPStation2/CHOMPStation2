@@ -1,0 +1,4 @@
+author: "Missile597"
+delete-after: True
+changes:
+  - maptweak: "Moved and removed some vending machines in the dark which were unnecessary or gave shadekin loot they shouldn't be using"
