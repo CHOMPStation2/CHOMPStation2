@@ -254,7 +254,7 @@
 	var/rads = 25
 
 /mob/living/simple_mob/slime/feral/green/handle_special()
-	if(stat != DEAD && !isbelly(src.loc)) //CHOMPEdit
+	if(stat != DEAD)
 		irradiate()
 	..()
 
@@ -269,7 +269,7 @@
 	glow_toggle = TRUE
 
 /mob/living/simple_mob/slime/feral/pink/handle_special()
-	if(stat != DEAD && !isbelly(src.loc)) //CHOMPEdit
+	if(stat != DEAD)
 		heal_aura()
 	..()
 
@@ -288,7 +288,7 @@
 	coretype = /obj/item/slime_extract/emerald
 
 /mob/living/simple_mob/slime/feral/emerald/handle_special()
-	if(stat != DEAD && !isbelly(src.loc)) //CHOMPEdit
+	if(stat != DEAD)
 		zoom_aura()
 	..()
 
