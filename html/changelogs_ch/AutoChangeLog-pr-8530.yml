@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - server: "move the asset cache dir in the same way TG did"
