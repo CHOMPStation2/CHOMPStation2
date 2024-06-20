@@ -1501,6 +1501,7 @@ const VoreSelectedBellyVisuals = (props) => {
                   >
                     {absorbed_multiplier}
                   </Button>
+<<<<<<< HEAD
                 </LabeledList.Item>
                 <LabeledList.Item label="Count liquid reagents for vore sprites">
                   <Button
@@ -1523,6 +1524,8 @@ const VoreSelectedBellyVisuals = (props) => {
                   >
                     {liquid_multiplier}
                   </Button>
+=======
+>>>>>>> 5991ca21be... No content ... (#16065)
                 </LabeledList.Item>
                 <LabeledList.Item label="Count items for vore sprites">
                   <Button
