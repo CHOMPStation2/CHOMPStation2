@@ -13,7 +13,6 @@ import {
   LabeledList,
   NoticeBox,
   Section,
-  Stack,
   Tabs,
 } from '../components';
 import { Window } from '../layouts';
@@ -77,7 +76,6 @@ export const VorePanel = (props) => {
                   Save Prefs
                 </Button>
               </Flex.Item>
-              {/* CHOMPEdit - "Belly HTML Export Earlyport" */}
               <Flex.Item>
                 <Button
                   icon="download"
@@ -89,7 +87,6 @@ export const VorePanel = (props) => {
                   Save Prefs & Export Selected Belly
                 </Button>
               </Flex.Item>
-              {/* CHOMPEdit End */}
             </Flex>
           </NoticeBox>
         )) ||
@@ -172,10 +169,6 @@ const VoreBellySelectionAndCustomization = (props) => {
               Export
               <Icon name="file-export" ml={0.5} />
             </Tabs.Tab>
-            <Tabs.Tab onClick={() => act('importpanel')}>
-              Import
-              <Icon name="file-import" ml={0.5} />
-            </Tabs.Tab>
             <Divider />
             {our_bellies.map((belly) => (
               <Tabs.Tab
@@ -236,10 +229,6 @@ const VoreSelectedBelly = (props) => {
 
   tabs[6] = <VoreContentsPanel outside contents={contents} />;
 
-  tabs[7] = <VoreSelectedBellyLiquidOptions belly={belly} />;
-
-  tabs[8] = <VoreSelectedBellyLiquidMessages belly={belly} />;
-
   return (
     <>
       <Tabs>
@@ -263,12 +252,6 @@ const VoreSelectedBelly = (props) => {
         </Tabs.Tab>
         <Tabs.Tab selected={tabIndex === 6} onClick={() => setTabIndex(6)}>
           Contents ({contents.length})
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 7} onClick={() => setTabIndex(7)}>
-          Liquid Options
-        </Tabs.Tab>
-        <Tabs.Tab selected={tabIndex === 8} onClick={() => setTabIndex(8)}>
-          Liquid Messages
         </Tabs.Tab>
       </Tabs>
       {tabs[tabIndex] || 'Error'}
@@ -1003,7 +986,6 @@ const VoreSelectedBellyOptions = (props) => {
   const { belly } = props;
   const {
     can_taste,
-    is_feedable,
     nutrition_percent,
     digest_brute,
     digest_burn,
@@ -1019,7 +1001,6 @@ const VoreSelectedBellyOptions = (props) => {
     contaminate_flavor,
     contaminate_color,
     egg_type,
-    egg_name,
     selective_preference,
     save_digest_mode,
     eating_privacy_local,
@@ -1027,7 +1008,6 @@ const VoreSelectedBellyOptions = (props) => {
     belly_mob_mult,
     belly_item_mult,
     belly_overall_mult,
-    vorespawn_blacklist,
     drainmode,
   } = belly;
 
@@ -1044,19 +1024,10 @@ const VoreSelectedBellyOptions = (props) => {
               {can_taste ? 'Yes' : 'No'}
             </Button>
           </LabeledList.Item>
-          <LabeledList.Item label="Feedable">
-            <Button
-              onClick={() => act('set_attribute', { attribute: 'b_feedable' })}
-              icon={is_feedable ? 'toggle-on' : 'toggle-off'}
-              selected={is_feedable}
-            >
-              {is_feedable ? 'Yes' : 'No'}
-            </Button>
-          </LabeledList.Item>
           <LabeledList.Item label="Contaminates">
             <Button
               onClick={() =>
-                act('set_attribute', { attribute: 'b_contaminates' })
+                act('set_attribute', { attribute: 'b_contaminate' })
               }
               icon={contaminates ? 'toggle-on' : 'toggle-off'}
               selected={contaminates}
@@ -1217,31 +1188,12 @@ const VoreSelectedBellyOptions = (props) => {
               {shrink_grow_size * 100 + '%'}
             </Button>
           </LabeledList.Item>
-          <LabeledList.Item label="Vore Spawn Blacklist">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_vorespawn_blacklist' })
-              }
-              icon={vorespawn_blacklist ? 'toggle-on' : 'toggle-off'}
-              selected={vorespawn_blacklist}
-            >
-              {vorespawn_blacklist ? 'Yes' : 'No'}
-            </Button>
-          </LabeledList.Item>
           <LabeledList.Item label="Egg Type">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_egg_type' })}
               icon="pen"
             >
               {capitalize(egg_type)}
-            </Button>
-          </LabeledList.Item>
-          <LabeledList.Item label="Custom Egg Name">
-            <Button
-              onClick={() => act('set_attribute', { attribute: 'b_egg_name' })}
-              icon="pen"
-            >
-              {egg_name ? egg_name : 'Default'}
             </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Selective Mode Preference">
@@ -1339,7 +1291,7 @@ const VoreSelectedBellySounds = (props) => {
   const { act } = useBackend();
 
   const { belly } = props;
-  const { is_wet, wet_loop, fancy, sound, release_sound, sound_volume } = belly;
+  const { is_wet, wet_loop, fancy, sound, release_sound } = belly;
 
   return (
     <Flex wrap="wrap">
@@ -1398,15 +1350,6 @@ const VoreSelectedBellySounds = (props) => {
               icon="volume-up"
             />
           </LabeledList.Item>
-          <LabeledList.Item label="Sound Volume">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_sound_volume' })
-              }
-            >
-              {sound_volume + '%'}
-            </Button>
-          </LabeledList.Item>
         </LabeledList>
       </Flex.Item>
     </Flex>
@@ -1419,25 +1362,17 @@ const VoreSelectedBellyVisuals = (props) => {
   const { belly } = props;
   const {
     belly_fullscreen,
+    possible_fullscreens,
+    disable_hud,
     belly_fullscreen_color,
     belly_fullscreen_color_secondary,
     belly_fullscreen_color_trinary,
     mapRef,
     colorization_enabled,
-<<<<<<< HEAD
-    possible_fullscreens,
-    disable_hud,
-=======
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
     vore_sprite_flags,
     affects_voresprite,
     absorbed_voresprite,
     absorbed_multiplier,
-<<<<<<< HEAD
-    liquid_voresprite,
-    liquid_multiplier,
-=======
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
     item_voresprite,
     item_multiplier,
     health_voresprite,
@@ -1467,14 +1402,9 @@ const VoreSelectedBellyVisuals = (props) => {
                 }
                 icon={affects_voresprite ? 'toggle-on' : 'toggle-off'}
                 selected={affects_voresprite}
-<<<<<<< HEAD
               >
                 {affects_voresprite ? 'Yes' : 'No'}
               </Button>
-=======
-                content={affects_voresprite ? 'Yes' : 'No'}
-              />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
             </LabeledList.Item>
             {affects_voresprite ? (
               <span>
@@ -1498,14 +1428,9 @@ const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={absorbed_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={absorbed_voresprite}
-<<<<<<< HEAD
                   >
                     {absorbed_voresprite ? 'Yes' : 'No'}
                   </Button>
-=======
-                    content={absorbed_voresprite ? 'Yes' : 'No'}
-                  />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Absorbed Multiplier">
                   <Button
@@ -1514,36 +1439,9 @@ const VoreSelectedBellyVisuals = (props) => {
                         attribute: 'b_absorbed_multiplier',
                       })
                     }
-<<<<<<< HEAD
                   >
                     {absorbed_multiplier}
                   </Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Count liquid reagents for vore sprites">
-                  <Button
-                    onClick={() =>
-                      act('set_attribute', {
-                        attribute: 'b_count_liquid_for_sprites',
-                      })
-                    }
-                    icon={liquid_voresprite ? 'toggle-on' : 'toggle-off'}
-                    selected={liquid_voresprite}
-                  >
-                    {liquid_voresprite ? 'Yes' : 'No'}
-                  </Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Liquid Multiplier">
-                  <Button
-                    onClick={() =>
-                      act('set_attribute', { attribute: 'b_liquid_multiplier' })
-                    }
-                  >
-                    {liquid_multiplier}
-                  </Button>
-=======
-                    content={absorbed_multiplier}
-                  />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Count items for vore sprites">
                   <Button
@@ -1554,28 +1452,18 @@ const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={item_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={item_voresprite}
-<<<<<<< HEAD
                   >
                     {item_voresprite ? 'Yes' : 'No'}
                   </Button>
-=======
-                    content={item_voresprite ? 'Yes' : 'No'}
-                  />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Items Multiplier">
                   <Button
                     onClick={() =>
                       act('set_attribute', { attribute: 'b_item_multiplier' })
                     }
-<<<<<<< HEAD
                   >
                     {item_multiplier}
                   </Button>
-=======
-                    content={item_multiplier}
-                  />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Prey health affects vore sprites">
                   <Button
@@ -1586,14 +1474,9 @@ const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={health_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={health_voresprite}
-<<<<<<< HEAD
                   >
                     {health_voresprite ? 'Yes' : 'No'}
                   </Button>
-=======
-                    content={health_voresprite ? 'Yes' : 'No'}
-                  />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Animation when prey resist">
                   <Button
@@ -1602,14 +1485,9 @@ const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={resist_animation ? 'toggle-on' : 'toggle-off'}
                     selected={resist_animation}
-<<<<<<< HEAD
                   >
                     {resist_animation ? 'Yes' : 'No'}
                   </Button>
-=======
-                    content={resist_animation ? 'Yes' : 'No'}
-                  />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Vore Sprite Size Factor">
                   <Button
@@ -1618,14 +1496,9 @@ const VoreSelectedBellyVisuals = (props) => {
                         attribute: 'b_size_factor_sprites',
                       })
                     }
-<<<<<<< HEAD
                   >
                     {voresprite_size_factor}
                   </Button>
-=======
-                    content={voresprite_size_factor}
-                  />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 {belly_sprite_option_shown ? (
                   <LabeledList.Item label="Belly Sprite to affect">
@@ -1635,14 +1508,9 @@ const VoreSelectedBellyVisuals = (props) => {
                           attribute: 'b_belly_sprite_to_affect',
                         })
                       }
-<<<<<<< HEAD
                     >
                       {belly_sprite_to_affect}
                     </Button>
-=======
-                      content={belly_sprite_to_affect}
-                    />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                   </LabeledList.Item>
                 ) : (
                   ''
@@ -1657,14 +1525,9 @@ const VoreSelectedBellyVisuals = (props) => {
                             attribute: 'b_undergarment_choice',
                           })
                         }
-<<<<<<< HEAD
                       >
                         {undergarment_chosen}
                       </Button>
-=======
-                        content={undergarment_chosen}
-                      />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                     </LabeledList.Item>
                     <LabeledList.Item label="Undergarment if none equipped">
                       <Button
@@ -1673,22 +1536,10 @@ const VoreSelectedBellyVisuals = (props) => {
                             attribute: 'b_undergarment_if_none',
                           })
                         }
-<<<<<<< HEAD
                       >
                         {undergarment_if_none}
                       </Button>
                     </LabeledList.Item>
-                    <FeatureColorInput
-                      action_name="b_undergarment_color"
-                      value_of={null}
-                      back_color={undergarment_color}
-                      name_of="Undergarment Color if none"
-                    />
-=======
-                        content={undergarment_if_none}
-                      />
-                    </LabeledList.Item>
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                   </div>
                 ) : (
                   ''
@@ -1702,14 +1553,9 @@ const VoreSelectedBellyVisuals = (props) => {
                           attribute: 'b_tail_to_change_to',
                         })
                       }
-<<<<<<< HEAD
                     >
                       {tail_to_change_to}
                     </Button>
-=======
-                      content={tail_to_change_to}
-                    />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                   </LabeledList.Item>
                 ) : (
                   ''
@@ -1723,11 +1569,10 @@ const VoreSelectedBellyVisuals = (props) => {
       </Section>
       <Section title="Belly Fullscreens Preview and Coloring">
         <Flex direction="row">
-          <FeatureColorInput
-            action_name="b_fullscreen_color"
-            value_of={null}
-            back_color={belly_fullscreen_color}
-            name_of="1"
+          <Box
+            backgroundColor={belly_fullscreen_color}
+            width="20px"
+            height="20px"
           />
           <Button
             icon="eye-dropper"
@@ -1860,13 +1705,7 @@ const VoreSelectedBellyInteractions = (props) => {
   const { act } = useBackend();
 
   const { belly } = props;
-  const {
-    escapable,
-    interacts,
-    vorespawn_blacklist,
-    autotransfer_enabled,
-    autotransfer,
-  } = belly;
+  const { escapable, interacts } = belly;
 
   return (
     <Section
@@ -1975,109 +1814,10 @@ const VoreSelectedBellyInteractions = (props) => {
               {interacts.digestchance + '%'}
             </Button>
           </LabeledList.Item>
-          <LabeledList.Divider />
         </LabeledList>
       ) : (
         'These options only display while interactions are turned on.'
       )}
-      <Section
-        title="Auto-Transfer Options"
-        buttons={
-          <Button
-            onClick={() =>
-              act('set_attribute', { attribute: 'b_autotransfer_enabled' })
-            }
-            icon={autotransfer_enabled ? 'toggle-on' : 'toggle-off'}
-            selected={autotransfer_enabled}
-          >
-            {autotransfer_enabled
-              ? 'Auto-Transfer Enabled'
-              : 'Auto-Transfer Disabled'}
-          </Button>
-        }
-      >
-        {autotransfer_enabled ? (
-          <LabeledList>
-            <LabeledList.Item label="Auto-Transfer Time">
-              <Button
-                onClick={() =>
-                  act('set_attribute', { attribute: 'b_autotransferwait' })
-                }
-              >
-                {autotransfer.autotransferwait / 10 + 's'}
-              </Button>
-            </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Chance">
-              <Button
-                onClick={() =>
-                  act('set_attribute', { attribute: 'b_autotransferchance' })
-                }
-              >
-                {autotransfer.autotransferchance + '%'}
-              </Button>
-            </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Location">
-              <Button
-                onClick={() =>
-                  act('set_attribute', { attribute: 'b_autotransferlocation' })
-                }
-              >
-                {autotransfer.autotransferlocation
-                  ? autotransfer.autotransferlocation
-                  : 'Disabled'}
-              </Button>
-            </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Secondary Chance">
-              <Button
-                onClick={() =>
-                  act('set_attribute', {
-                    attribute: 'b_autotransferchance_secondary',
-                  })
-                }
-              >
-                {autotransfer.autotransferchance_secondary + '%'}
-              </Button>
-            </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Secondary Location">
-              <Button
-                onClick={() =>
-                  act('set_attribute', {
-                    attribute: 'b_autotransferlocation_secondary',
-                  })
-                }
-              >
-                {autotransfer.autotransferlocation_secondary
-                  ? autotransfer.autotransferlocation_secondary
-                  : 'Disabled'}
-              </Button>
-            </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Min Amount">
-              <Button
-                onClick={() =>
-                  act('set_attribute', {
-                    attribute: 'b_autotransfer_min_amount',
-                  })
-                }
-              >
-                {autotransfer.autotransfer_min_amount}
-              </Button>
-            </LabeledList.Item>
-            <LabeledList.Item label="Auto-Transfer Max Amount">
-              <Button
-                onClick={() =>
-                  act('set_attribute', {
-                    attribute: 'b_autotransfer_max_amount',
-                  })
-                }
-              >
-                {autotransfer.autotransfer_max_amount}
-              </Button>
-            </LabeledList.Item>
-          </LabeledList>
-        ) : (
-          'These options only display while Auto-Transfer is enabled.'
-        )}
-      </Section>
     </Section>
   );
 };
@@ -2180,16 +1920,11 @@ const VoreUserPreferences = (props) => {
     show_vore_fx,
     can_be_drop_prey,
     can_be_drop_pred,
-    latejoin_vore,
-    latejoin_prey,
+    allow_inbelly_spawning,
     allow_spontaneous_tf,
     step_mechanics_active,
     pickup_mechanics_active,
     noisy,
-    noisy_full,
-    liq_rec,
-    liq_giv,
-    autotransferable,
     drop_vore,
     stumble_vore,
     slip_vore,
@@ -2202,8 +1937,6 @@ const VoreUserPreferences = (props) => {
   } = data.prefs;
 
   const { show_pictures } = data;
-
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tabIndex', 0);
 
   const preferences = {
     digestion: {
@@ -2410,26 +2143,15 @@ const VoreUserPreferences = (props) => {
       action: 'toggle_allow_inbelly_spawning',
       test: allow_inbelly_spawning,
       tooltip: {
-        main: 'Toggle late join vore spawnpoint.',
-        enable: 'Click here to turn on vorish spawnpoint.',
-        disable: 'Click here to turn off vorish spawnpoint.',
+        main:
+          'This toggle is ghosts being able to spawn in one of your bellies.' +
+          ' You will have to confirm again when they attempt to.',
+        enable: 'Click here to allow prey to spawn in you.',
+        disable: 'Click here to prevent prey from spawning in you.',
       },
       content: {
-        enabled: 'Vore Spawn Pred Enabled',
-        disabled: 'Vore Spawn Pred Disabled',
-      },
-    },
-    spawnprey: {
-      action: 'toggle_latejoin_prey',
-      test: latejoin_prey,
-      tooltip: {
-        main: 'Toggle late join preds spawning on you.',
-        enable: 'Click here to turn on preds spawning around you.',
-        disable: 'Click here to turn off preds spawning around you.',
-      },
-      content: {
-        enabled: 'Vore Spawn Prey Enabled',
-        disabled: 'Vore Spawn Prey Disabled',
+        enabled: 'Inbelly Spawning Allowed',
+        disabled: 'Inbelly Spawning Forbidden',
       },
     },
     noisy: {
@@ -2443,19 +2165,6 @@ const VoreUserPreferences = (props) => {
       content: {
         enabled: 'Hunger Noises Enabled',
         disabled: 'Hunger Noises Disabled',
-      },
-    },
-    noisy_full: {
-      action: 'toggle_noisy_full',
-      test: noisy_full,
-      tooltip: {
-        main: 'Toggle belching while full.',
-        enable: 'Click here to turn on belching while full.',
-        disable: 'Click here to turn off belching while full.',
-      },
-      content: {
-        enabled: 'Belching Enabled',
-        disabled: 'Belching Disabled',
       },
     },
     resize: {
@@ -2596,45 +2305,6 @@ const VoreUserPreferences = (props) => {
         disabled: 'Global Vore Privacy: Loud',
       },
     },
-    liquid_receive: {
-      action: 'toggle_liq_rec',
-      test: liq_rec,
-      tooltip: {
-        main: 'This button is for allowing or preventing others from giving you liquids from their vore organs.',
-        enable: 'Click here to allow receiving liquids.',
-        disable: 'Click here to prevent receiving liquids.',
-      },
-      content: {
-        enabled: 'Receiving Liquids Allowed',
-        disabled: 'Do Not Allow Receiving Liquids',
-      },
-    },
-    liquid_give: {
-      action: 'toggle_liq_giv',
-      test: liq_giv,
-      tooltip: {
-        main: 'This button is for allowing or preventing others from taking liquids from your vore organs.',
-        enable: 'Click here to allow taking liquids.',
-        disable: 'Click here to prevent taking liquids.',
-      },
-      content: {
-        enabled: 'Taking Liquids Allowed',
-        disabled: 'Do Not Allow Taking Liquids',
-      },
-    },
-    autotransferable: {
-      action: 'toggle_autotransferable',
-      test: autotransferable,
-      tooltip: {
-        main: 'This button is for allowing or preventing belly auto-transfer mechanics from moving you.',
-        enable: 'Click here to allow autotransfer.',
-        disable: 'Click here to prevent autotransfer.',
-      },
-      content: {
-        enabled: 'Auto-Transfer Allowed',
-        disabled: 'Do Not Allow Auto-Transfer',
-      },
-    },
   };
 
   return (
@@ -2737,23 +2407,8 @@ const VoreUserPreferences = (props) => {
             Selective Mode Preference
           </Button>
         </Flex.Item>
-        <Flex.Item basis="32%">
+        <Flex.Item basis="32%" grow={3}>
           <VoreUserPreferenceItem spec={preferences.eating_privacy_global} />
-        </Flex.Item>
-        <Flex.Item basis="32%" grow={1}>
-          <VoreUserPreferenceItem spec={preferences.autotransferable} />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem
-            spec={preferences.liquid_receive}
-            tooltipPosition="top"
-          />
-        </Flex.Item>
-        <Flex.Item basis="32%">
-          <VoreUserPreferenceItem
-            spec={preferences.liquid_give}
-            tooltipPosition="top"
-          />
         </Flex.Item>
       </Flex>
       <Section title="Aesthetic Preferences">
@@ -2797,17 +2452,9 @@ const VoreUserPreferences = (props) => {
             <VoreUserPreferenceItem spec={preferences.examine_weight} />
           </Flex.Item>
           <Flex.Item basis="50%">
-<<<<<<< HEAD
             <Button fluid onClick={() => act('set_vs_color')}>
               Vore Sprite Color
             </Button>
-=======
-            <Button
-              fluid
-              content="Vore Sprite Color"
-              onClick={() => act('set_vs_color')}
-            />
->>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
           </Flex.Item>
         </Flex>
       </Section>
@@ -2846,35 +2493,6 @@ const VoreUserPreferenceItem = (props) => {
       {...rest}
     >
       {test ? content.enabled : content.disabled}
-    </Button>
-  );
-};
-
-const FeatureColorInput = (props, context) => {
-  const { act } = useBackend(context);
-  const { action_name, value_of, back_color, name_of } = props;
-  return (
-    <Button
-      onClick={() => {
-        act('set_attribute', { attribute: action_name, val: value_of });
-      }}
-    >
-      <Stack align="center" fill>
-        <Stack.Item>
-          <Box
-            style={{
-              background: back_color.startsWith('#')
-                ? back_color
-                : `#${back_color}`,
-              border: '2px solid white',
-              'box-sizing': 'content-box',
-              height: '11px',
-              width: '11px',
-            }}
-          />
-        </Stack.Item>
-        <Stack.Item>Change {name_of}</Stack.Item>
-      </Stack>
     </Button>
   );
 };
