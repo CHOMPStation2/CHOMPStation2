@@ -1424,14 +1424,20 @@ const VoreSelectedBellyVisuals = (props) => {
     belly_fullscreen_color_trinary,
     mapRef,
     colorization_enabled,
+<<<<<<< HEAD
     possible_fullscreens,
     disable_hud,
+=======
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
     vore_sprite_flags,
     affects_voresprite,
     absorbed_voresprite,
     absorbed_multiplier,
+<<<<<<< HEAD
     liquid_voresprite,
     liquid_multiplier,
+=======
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
     item_voresprite,
     item_multiplier,
     health_voresprite,
@@ -1461,9 +1467,14 @@ const VoreSelectedBellyVisuals = (props) => {
                 }
                 icon={affects_voresprite ? 'toggle-on' : 'toggle-off'}
                 selected={affects_voresprite}
+<<<<<<< HEAD
               >
                 {affects_voresprite ? 'Yes' : 'No'}
               </Button>
+=======
+                content={affects_voresprite ? 'Yes' : 'No'}
+              />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
             </LabeledList.Item>
             {affects_voresprite ? (
               <span>
@@ -1487,9 +1498,14 @@ const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={absorbed_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={absorbed_voresprite}
+<<<<<<< HEAD
                   >
                     {absorbed_voresprite ? 'Yes' : 'No'}
                   </Button>
+=======
+                    content={absorbed_voresprite ? 'Yes' : 'No'}
+                  />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Absorbed Multiplier">
                   <Button
@@ -1498,6 +1514,7 @@ const VoreSelectedBellyVisuals = (props) => {
                         attribute: 'b_absorbed_multiplier',
                       })
                     }
+<<<<<<< HEAD
                   >
                     {absorbed_multiplier}
                   </Button>
@@ -1523,6 +1540,10 @@ const VoreSelectedBellyVisuals = (props) => {
                   >
                     {liquid_multiplier}
                   </Button>
+=======
+                    content={absorbed_multiplier}
+                  />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Count items for vore sprites">
                   <Button
@@ -1533,18 +1554,28 @@ const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={item_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={item_voresprite}
+<<<<<<< HEAD
                   >
                     {item_voresprite ? 'Yes' : 'No'}
                   </Button>
+=======
+                    content={item_voresprite ? 'Yes' : 'No'}
+                  />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Items Multiplier">
                   <Button
                     onClick={() =>
                       act('set_attribute', { attribute: 'b_item_multiplier' })
                     }
+<<<<<<< HEAD
                   >
                     {item_multiplier}
                   </Button>
+=======
+                    content={item_multiplier}
+                  />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Prey health affects vore sprites">
                   <Button
@@ -1555,9 +1586,14 @@ const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={health_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={health_voresprite}
+<<<<<<< HEAD
                   >
                     {health_voresprite ? 'Yes' : 'No'}
                   </Button>
+=======
+                    content={health_voresprite ? 'Yes' : 'No'}
+                  />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Animation when prey resist">
                   <Button
@@ -1566,9 +1602,14 @@ const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={resist_animation ? 'toggle-on' : 'toggle-off'}
                     selected={resist_animation}
+<<<<<<< HEAD
                   >
                     {resist_animation ? 'Yes' : 'No'}
                   </Button>
+=======
+                    content={resist_animation ? 'Yes' : 'No'}
+                  />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 <LabeledList.Item label="Vore Sprite Size Factor">
                   <Button
@@ -1577,9 +1618,14 @@ const VoreSelectedBellyVisuals = (props) => {
                         attribute: 'b_size_factor_sprites',
                       })
                     }
+<<<<<<< HEAD
                   >
                     {voresprite_size_factor}
                   </Button>
+=======
+                    content={voresprite_size_factor}
+                  />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                 </LabeledList.Item>
                 {belly_sprite_option_shown ? (
                   <LabeledList.Item label="Belly Sprite to affect">
@@ -1589,9 +1635,14 @@ const VoreSelectedBellyVisuals = (props) => {
                           attribute: 'b_belly_sprite_to_affect',
                         })
                       }
+<<<<<<< HEAD
                     >
                       {belly_sprite_to_affect}
                     </Button>
+=======
+                      content={belly_sprite_to_affect}
+                    />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                   </LabeledList.Item>
                 ) : (
                   ''
@@ -1606,9 +1657,14 @@ const VoreSelectedBellyVisuals = (props) => {
                             attribute: 'b_undergarment_choice',
                           })
                         }
+<<<<<<< HEAD
                       >
                         {undergarment_chosen}
                       </Button>
+=======
+                        content={undergarment_chosen}
+                      />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                     </LabeledList.Item>
                     <LabeledList.Item label="Undergarment if none equipped">
                       <Button
@@ -1617,6 +1673,7 @@ const VoreSelectedBellyVisuals = (props) => {
                             attribute: 'b_undergarment_if_none',
                           })
                         }
+<<<<<<< HEAD
                       >
                         {undergarment_if_none}
                       </Button>
@@ -1627,6 +1684,11 @@ const VoreSelectedBellyVisuals = (props) => {
                       back_color={undergarment_color}
                       name_of="Undergarment Color if none"
                     />
+=======
+                        content={undergarment_if_none}
+                      />
+                    </LabeledList.Item>
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                   </div>
                 ) : (
                   ''
@@ -1640,9 +1702,14 @@ const VoreSelectedBellyVisuals = (props) => {
                           attribute: 'b_tail_to_change_to',
                         })
                       }
+<<<<<<< HEAD
                     >
                       {tail_to_change_to}
                     </Button>
+=======
+                      content={tail_to_change_to}
+                    />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
                   </LabeledList.Item>
                 ) : (
                   ''
@@ -2730,9 +2797,17 @@ const VoreUserPreferences = (props) => {
             <VoreUserPreferenceItem spec={preferences.examine_weight} />
           </Flex.Item>
           <Flex.Item basis="50%">
+<<<<<<< HEAD
             <Button fluid onClick={() => act('set_vs_color')}>
               Vore Sprite Color
             </Button>
+=======
+            <Button
+              fluid
+              content="Vore Sprite Color"
+              onClick={() => act('set_vs_color')}
+            />
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
           </Flex.Item>
         </Flex>
       </Section>
