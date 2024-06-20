@@ -18,9 +18,13 @@
 #define LANGUAGE_MOUSE "Mouse"
 
 #define LANGUAGE_SHADEKIN "Shadekin Empathy"
+<<<<<<< HEAD
 #define LANGUAGE_MARISH "Marish" // CHOMPedit
 
 //CHOMPedit Start - Xeno languages selectable
 #define LANGUAGE_XENOLINGUA "Xenolingua"
 #define LANGUAGE_HIVEMIND "Hivemind"
 // CHOMPedit End.
+=======
+#define LANGUAGE_LLEILL "Glamour Speak"
+>>>>>>> 2edd5276d7... New event species - Part 1 (#16037)
