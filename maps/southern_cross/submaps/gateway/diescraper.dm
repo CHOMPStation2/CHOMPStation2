@@ -57,11 +57,13 @@
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/plating
 	name = "Away Mission - Skyscraper Floor 52"
+	forced_ambience = list('sound/ambience/fluorescentlight.ogg')
 
 /area/awaymission/diescraper/indoors/floor3
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/plating
 	name = "Away Mission - Skyscraper Floor 53"
+	forced_ambience = list('sound/ambience/fluorescentlight.ogg')
 
 /area/awaymission/diescraper/indoors/floor4
 	icon_state = "green"
