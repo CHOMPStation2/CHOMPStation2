@@ -88,3 +88,6 @@
   Missile597:
   - maptweak: Moved and removed some vending machines in the dark which were unnecessary
       or gave shadekin loot they shouldn't be using
+2024-06-20:
+  Kashargul:
+  - server: move the asset cache dir in the same way TG did
