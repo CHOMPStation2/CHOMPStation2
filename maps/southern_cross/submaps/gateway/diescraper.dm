@@ -109,6 +109,8 @@
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/plating
 	name = "Away Mission - Skyscraper Roof Maintinence"
+	requires_power = 0
+	flags = PHASE_SHIELDED
 
 /area/awaymission/diescraper/indoors/floor112
 	icon_state = "green"
@@ -149,3 +151,8 @@
 /obj/item/weapon/card/id/diescrapergun
 	name = "Gunstore ID"
 	access = list(886)
+
+/obj/structure/sign/warning/secure_area/slabs
+	name = "Mysterious Slab"
+	icon = 'modular_chomp/icons/obj/stationobjs.dmi'
+	icon_state = "slab1-off"
