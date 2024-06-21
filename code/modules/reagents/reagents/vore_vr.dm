@@ -186,10 +186,7 @@
 				H.change_gender_identity(PLURAL)
 				H.visible_message("<span class='notice'>[H] suddenly twitches as some of their features seem to contort and reshape, adjusting... In the end, it seems they are now of mixed gender.</span>",
 								"<span class='warning'>Your body suddenly contorts, feeling very different in various ways... By the time the rushing feeling is over it seems you just became of mixed gender.</span>")
-<<<<<<< HEAD
 */
-=======
-
 
 ////////////////////////// Misc Drugs //////////////////////////
 
@@ -245,4 +242,3 @@
 	M.add_chemical_effect(CE_PAINKILLER, -200)
 	if(prob(0.01)) //1 in 10000 chance per tick. Extremely rare.
 		to_chat(M,"<span class='warning'>Your body feels as though it's on fire!</span>")
->>>>>>> e1f88e992e... Ports Venom Bite / Injection from Rogue Star (#16060)

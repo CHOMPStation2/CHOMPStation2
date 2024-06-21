@@ -1535,7 +1535,7 @@
 
 /mob/living/proc/injection() // Allows the user to inject reagents into others somehow, like stinging, or biting.
 	set name = "Injection"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set desc = "Inject another being with something!"
 
 	if(stat || paralysis || weakened || stunned || world.time < last_special) //Epic copypasta from tongue grabbing.
