@@ -1,0 +1,9 @@
+#define HOMETAB 1
+#define PHONTAB 2
+#define CONTTAB 3
+#define MESSTAB 4
+#define NEWSTAB 5
+#define NOTETAB 6
+#define WTHRTAB 7
+#define MANITAB 8
+#define SETTTAB 9
