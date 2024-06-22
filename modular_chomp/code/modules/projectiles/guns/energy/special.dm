@@ -85,9 +85,10 @@
 /obj/item/weapon/gun/energy/supercannon
 	name = "Super-Rail Cannon"
 	desc = "This weapon seems to be vibrating with a barely containable energy, with no charging ports or battery ports in sight, you only have a singlular shot of this. Ever"
-	icon = 'icons/obj/gun_ch.dmi'
-	icon_state = "ziplas"
-	item_state = "ziplas"
+	icon = 'modular_chomp/icons/obj/guns/supercannon/supercannon.dmi'
+	icon_state = "supercannon"
+	item_state = "supercannon"
+	wielded_item_state = "supercannon-wielded"
 	w_class = ITEMSIZE_HUGE
 	fire_sound = 'sound/weapons/Gunshot_cannon.ogg'
 	slot_flags = SLOT_BELT|SLOT_BACK
@@ -95,3 +96,9 @@
 	projectile_type = /obj/item/projectile/bullet/magnetic/supercannon //Fuck you.
 	cell_type = /obj/item/weapon/cell/device/weapon
 	battery_lock = 1
+	force = 15 //pretty robust
+	one_handed_penalty = 90
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/supercannon/lefthand_guns.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/supercannon/righthand_guns.dmi',
+		)
