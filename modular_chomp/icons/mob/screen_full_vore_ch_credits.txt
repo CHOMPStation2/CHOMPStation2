@@ -58,5 +58,7 @@ VBO_notbelly
 VBO_wriggly
 
 Hunter Dovetail
-VBO_maw15
 VBOanim_belly2
+VBOanim_gullet1
+VBOanim_gullet2
+VBOanim_intestine1
