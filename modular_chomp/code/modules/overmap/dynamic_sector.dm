@@ -4,7 +4,7 @@
 
 GLOBAL_VAR_INIT(dynamic_sector_master, null)
 // Also adjust find_z_levels() if you adjust increase dynamic levels, that part is hard-coded so you don't gloss over world.increment_max_z().
-#define MAX_DYNAMIC_LEVELS 3
+#define MAX_DYNAMIC_LEVELS 2
 #define MAX_DYNAMIC_POI_DIMENSIONS 200 // Keep this an even number if using even world.maxx/maxy. This value MUST
 // a large enough static border to fit OM ships. A 30x30 ship means max dimensions must be 60 less than the z-level max
 // to keep a 30 turf border on each side of the load/unload area.
@@ -37,7 +37,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 // This means extra_z_levels won't do anything, which is intentional.
 /obj/effect/overmap/visitable/dynamic/find_z_levels()
 	if(!generated_z && (GLOB.dynamic_sector_master == src)) // Ensure this only runs once per round.
-		for(var/i = 1; i <= 3; i++) // Hard-coding limit because this is dangerous.
+		for(var/i = 1; i <= 2; i++) // Hard-coding limit because this is dangerous.
 			world.increment_max_z()
 			map_z[i] = world.maxz
 			// Spawn shuttle_landmarks near the lower x border, aligned with the POI spawning turf. These move during POI generation.
