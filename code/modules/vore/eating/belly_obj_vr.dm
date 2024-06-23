@@ -11,6 +11,7 @@
 /obj/belly
 	name = "belly"							// Name of this location
 	desc = "It's a belly! You're in it!"	// Flavor text description of inside sight/sound/smells/feels.
+	var/message_mode = FALSE				// If all options for messages are shown
 	var/vore_sound = "Gulp"					// Sound when ingesting someone
 	var/vore_verb = "ingest"				// Verb for eating with this in messages
 	var/release_verb = "expels"				// Verb for releasing something from a stomach
@@ -89,7 +90,7 @@
 	//Actual full digest modes
 	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_ABSORB,DM_DRAIN,DM_SELECT,DM_UNABSORB,DM_HEAL,DM_SHRINK,DM_GROW,DM_SIZE_STEAL,DM_EGG)
 	//Digest mode addon flags
-	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY, "Slow Body Digestion" = DM_FLAG_SLOWBODY, "Muffle Items" = DM_FLAG_MUFFLEITEMS, "TURBO MODE" = DM_FLAG_TURBOMODE) //CHOMPEdit
+	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY, "Spare Prosthetics" = DM_FLAG_SPARELIMB, "Slow Body Digestion" = DM_FLAG_SLOWBODY, "Muffle Items" = DM_FLAG_MUFFLEITEMS, "TURBO MODE" = DM_FLAG_TURBOMODE) //CHOMPEdit
 	//Item related modes
 	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL) //CHOMPEdit
 	//drain modes
@@ -190,13 +191,27 @@
 		"%prey slid into your %dest due to their struggling inside your %belly!")
 
 	var/list/primary_transfer_messages_prey = list(
-		"Your attempt to escape %pred's %belly has failed and your struggles only results in you sliding into pred's %dest!")
+		"Your attempt to escape %pred's %belly has failed and your struggles only results in you sliding into %pred's %dest!") //CHOMPEdit
 
 	var/list/secondary_transfer_messages_owner = list(
 		"%prey slid into your %dest due to their struggling inside your %belly!")
 
 	var/list/secondary_transfer_messages_prey = list(
-		"Your attempt to escape %pred's %belly has failed and your struggles only results in you sliding into pred's %dest!")
+		"Your attempt to escape %pred's %belly has failed and your struggles only results in you sliding into %pred's %dest!") //CHOMPEdit
+
+	//CHOMPAdd Start
+	var/list/primary_autotransfer_messages_owner = list(
+		"%prey moves along into your %dest!")
+
+	var/list/primary_autotransfer_messages_prey = list(
+		"%pred's %belly moves you along into their %dest!")
+
+	var/list/secondary_autotransfer_messages_owner = list(
+		"%prey moves along into your %dest!")
+
+	var/list/secondary_autotransfer_messages_prey = list(
+		"%pred's %belly moves you along into their %dest!")
+	//CHOMPAdd End
 
 	var/list/digest_chance_messages_owner = list(
 		"You feel your %belly beginning to become active!")
@@ -278,6 +293,7 @@
 	"name",
 	"desc",
 	"absorbed_desc",
+	"message_mode",
 	"vore_sound",
 	"vore_verb",
 	"release_verb",
@@ -330,6 +346,10 @@
 	"primary_transfer_messages_prey",
 	"secondary_transfer_messages_owner",
 	"secondary_transfer_messages_prey",
+	"primary_autotransfer_messages_owner",		//CHOMPAdd
+	"primary_autotransfer_messages_prey",		//CHOMPAdd
+	"secondary_autotransfer_messages_owner",	//CHOMPAdd
+	"secondary_autotransfer_messages_prey",		//CHOMPAdd
 	"digest_chance_messages_owner",
 	"digest_chance_messages_prey",
 	"absorb_chance_messages_owner",
@@ -570,7 +590,7 @@
 			to_chat(M, "<span class='vnotice'><B>[formatted_desc]</B></span>")
 
 		var/taste
-		if(can_taste && (taste = M.get_taste_message(FALSE)))
+		if(can_taste && M.loc == src && (taste = M.get_taste_message(FALSE))) //CHOMPEdit - Prevent indirect tasting
 			to_chat(owner, "<span class='vnotice'>[M] tastes of [taste].</span>")
 		vore_fx(M, TRUE) //CHOMPEdit: update belleh
 		if(owner.previewing_belly == src) //CHOMPEdit
@@ -1244,7 +1264,7 @@
 // This is useful in customization boxes and such. The delimiter right now is \n\n so
 // in message boxes, this looks nice and is easily delimited.
 /obj/belly/proc/get_messages(type, delim = "\n\n")
-	ASSERT(type == "smo" || type == "smi" || type == "asmo" || type == "asmi" || type == "escao" || type == "escap" || type == "escp" || type == "esco" || type == "escout" || type == "escip" || type == "escio" || type == "esciout" || type == "escfp" || type == "escfo" || type == "aescao" || type == "aescap" || type == "aescp" || type == "aesco" || type == "aescout" || type == "aescfp" || type == "aescfo" || type == "trnspp" || type == "trnspo" || type == "trnssp" || type == "trnsso" || type == "stmodp" || type == "stmodo" || type == "stmoap" || type == "stmoao" || type == "dmo" || type == "dmp" || type == "amo" || type == "amp" || type == "uamo" || type == "uamp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb")
+	ASSERT(type == "smo" || type == "smi" || type == "asmo" || type == "asmi" || type == "escao" || type == "escap" || type == "escp" || type == "esco" || type == "escout" || type == "escip" || type == "escio" || type == "esciout" || type == "escfp" || type == "escfo" || type == "aescao" || type == "aescap" || type == "aescp" || type == "aesco" || type == "aescout" || type == "aescfp" || type == "aescfo" || type == "trnspp" || type == "trnspo" || type == "trnssp" || type == "trnsso" || type == "atrnspp" || type == "atrnspo" || type == "atrnssp" || type == "atrnsso" || type == "stmodp" || type == "stmodo" || type == "stmoap" || type == "stmoao" || type == "dmo" || type == "dmp" || type == "amo" || type == "amp" || type == "uamo" || type == "uamp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") //CHOMPEdit
 
 	var/list/raw_messages
 	switch(type)
@@ -1298,6 +1318,16 @@
 			raw_messages = secondary_transfer_messages_owner
 		if("trnssp")
 			raw_messages = secondary_transfer_messages_prey
+		//CHOMPAdd Start
+		if("atrnspo")
+			raw_messages = primary_autotransfer_messages_owner
+		if("atrnspp")
+			raw_messages = primary_autotransfer_messages_prey
+		if("atrnsso")
+			raw_messages = secondary_autotransfer_messages_owner
+		if("atrnssp")
+			raw_messages = secondary_autotransfer_messages_prey
+		//CHOMPAdd End
 		if("stmodo")
 			raw_messages = digest_chance_messages_owner
 		if("stmodp")
@@ -1353,7 +1383,7 @@
 // replacement strings and linebreaks as delimiters (two \n\n by default).
 // They also sanitize the messages.
 /obj/belly/proc/set_messages(raw_text, type, delim = "\n\n")
-	ASSERT(type == "smo" || type == "smi" || type == "asmo" || type == "asmi" || type == "escao" || type == "escap" || type == "escp" || type == "esco" || type == "escout" || type == "escip" || type == "escio" || type == "esciout" || type == "escfp" || type == "escfo" || type == "aescao" || type == "aescap" || type == "aescp" || type == "aesco" || type == "aescout" || type == "aescfp" || type == "aescfo" || type == "trnspp" || type == "trnspo" || type == "trnssp" || type == "trnsso" || type == "stmodp" || type == "stmodo" || type == "stmoap" || type == "stmoao" || type == "dmo" || type == "dmp" || type == "amo" || type == "amp" || type == "uamo" || type == "uamp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb")
+	ASSERT(type == "smo" || type == "smi" || type == "asmo" || type == "asmi" || type == "escao" || type == "escap" || type == "escp" || type == "esco" || type == "escout" || type == "escip" || type == "escio" || type == "esciout" || type == "escfp" || type == "escfo" || type == "aescao" || type == "aescap" || type == "aescp" || type == "aesco" || type == "aescout" || type == "aescfp" || type == "aescfo" || type == "trnspp" || type == "trnspo" || type == "trnssp" || type == "trnsso" || type == "atrnspp" || type == "atrnspo" || type == "atrnssp" || type == "atrnsso" || type == "stmodp" || type == "stmodo" || type == "stmoap" || type == "stmoao" || type == "dmo" || type == "dmp" || type == "amo" || type == "amp" || type == "uamo" || type == "uamp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") //CHOMPEdit
 
 	var/list/raw_list = splittext(html_encode(raw_text),delim)
 	if(raw_list.len > 10)
@@ -1428,6 +1458,16 @@
 			secondary_transfer_messages_owner = raw_list
 		if("trnssp")
 			secondary_transfer_messages_prey = raw_list
+		//CHOMPAdd Start
+		if("atrnspo")
+			primary_autotransfer_messages_owner = raw_list
+		if("atrnspp")
+			primary_autotransfer_messages_prey = raw_list
+		if("atrnsso")
+			secondary_autotransfer_messages_owner = raw_list
+		if("atrnssp")
+			secondary_autotransfer_messages_prey = raw_list
+		//CHOMPAdd End
 		if("stmodo")
 			digest_chance_messages_owner = raw_list
 		if("stmodp")
@@ -2285,6 +2325,38 @@
 			dest_belly = B
 			break
 	if(!dest_belly) return
+	if(ismob(prey))
+		var/living_count = 0
+		for(var/mob/living/L in contents)
+			living_count++
+
+		var/autotransfer_owner_message = pick(primary_autotransfer_messages_owner)
+		var/autotransfer_prey_message = pick(primary_autotransfer_messages_prey)
+		if(dest_belly_name == autotransferlocation_secondary)
+			autotransfer_owner_message = pick(secondary_autotransfer_messages_owner)
+			autotransfer_prey_message = pick(secondary_autotransfer_messages_prey)
+
+		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%pred", owner)
+		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%prey", prey)
+		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%belly", lowertext(name))
+		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%countprey", living_count)
+		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%count", contents.len)
+		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%dest", dest_belly_name)
+
+		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%pred", owner)
+		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%prey", prey)
+		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%belly", lowertext(name))
+		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%countprey", living_count)
+		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%count", contents.len)
+		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%dest", dest_belly_name)
+
+		autotransfer_owner_message = "<span class='vwarning'>[autotransfer_owner_message]</span>"
+		autotransfer_prey_message = "<span class='vwarning'>[autotransfer_prey_message]</span>"
+
+		to_chat(prey, autotransfer_prey_message)
+		if(entrance_logs)
+			to_chat(owner, autotransfer_owner_message)
+
 	transfer_contents(prey, dest_belly)
 	return TRUE //CHOMPEdit end
 
@@ -2409,6 +2481,7 @@
 	//// Non-object variables
 	dupe.name = name
 	dupe.desc = desc
+	dupe.message_mode = message_mode
 	dupe.absorbed_desc = absorbed_desc
 	dupe.vore_sound = vore_sound
 	dupe.vore_verb = vore_verb

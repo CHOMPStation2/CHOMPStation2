@@ -71,6 +71,7 @@ What is the naming convention for planes or layers?
 	#define UNDERWATER_LAYER	2.5 // Anything on this layer will render under the water layer.
 	#define WATER_LAYER			3.0 // Layer for water overlays.
 	#define ABOVE_TURF_LAYER	3.1	// Snow and wallmounted/floormounted equipment
+	#define GASFIRE_LAYER		5.05 // Any fires that occur use this layer. CHOMPADD
 #define DECAL_PLANE				-44 // Permanent decals
 	#define DECAL_LAYER			10
 #define DIRTY_PLANE				-43 // Nonpermanent decals
@@ -161,6 +162,7 @@ What is the naming convention for planes or layers?
 #define PLANE_CH_STATUS_OOC		24 //OOC status hud for spooks
 
 #define PLANE_MESONS			30 //Stuff seen with mesons, like open ceilings. This is 30 for downstreams.
+#define PLANE_JANHUD			31 //Stuff seen with janiHUD. Mostly highlight of dirt.
 
 #define PLANE_ADMIN2			33 //Purely for shenanigans (above lighting)
 

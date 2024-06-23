@@ -24,7 +24,7 @@
 	title = "Maintenance Manager"
 
 /datum/job/chief_engineer/get_request_reasons()
-	return list("Engine setup", "Construction project", "Repairs necessary", "Training crew")
+	return list("Engine setup", "Construction project", "Repairs necessary", "Training crew", "Assembling expedition team")
 
 
 /datum/job/engineer
@@ -42,7 +42,7 @@
 	title_blurb = "An Engineering Contractor fulfills similar duties to other engineers, but isn't directly employed by NT proper."
 
 /datum/job/engineer/get_request_reasons()
-	return list("Engine setup", "Construction project", "Repairs necessary")
+	return list("Engine setup", "Construction project", "Repairs necessary", "Assembling expedition team")
 
 
 
@@ -63,4 +63,4 @@
 	title_blurb = "A Disposals Technician is an Atmospheric Technician still and can fulfill all the same duties, although specializes more in disposals delivery system's operations and configurations."
 
 /datum/job/atmos/get_request_reasons()
-	return list("Construction project", "Repairs necessary")
+	return list("Construction project", "Repairs necessary", "Assembling expedition team")

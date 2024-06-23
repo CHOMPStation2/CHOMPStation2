@@ -95,6 +95,14 @@
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "mothwings_luna"
 
+/datum/sprite_accessory/wing/mothwings_luna_colorable
+    name = "Moth Wings (Luna, Colorable)"
+    desc = ""
+    icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+    icon_state = "mothwings_luna_colorable"
+    do_colouration = 1
+    color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/wing/mothwings_atlas
 	name = "Moth Wings (Atlas)"
 	desc = ""

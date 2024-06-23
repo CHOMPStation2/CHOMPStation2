@@ -207,7 +207,7 @@
 /mob/living/carbon/human/proc/plant_weak()
 	set name = "Plant Weeds (150)"
 	set desc = "Plants some alien weeds."
-	set category = "Abilities"
+	set category = "Abilities.Alien"
 
 	if(check_alien_ability(150,1,O_RESIN))
 		visible_message("<span class='alium'><B>[src] has planted some alien weeds!</B></span>")
@@ -217,7 +217,7 @@
 
 /mob/living/carbon/human/proc/check_plasma_amount(mob/living/carbon/human/M as mob)
 	set name = "Check Plasma Reserves"
-	set category = "Abilities"
+	set category = "Abilities.Alien"
 
 	var/obj/item/organ/internal/xenos/plasmavessel/I = M.internal_organs_by_name[O_PLASMA]
 	if(!istype(I))
@@ -230,7 +230,7 @@
 /mob/living/carbon/human/proc/resin_weak() // Technically stronger in some aspects.
 	set name = "Secrete Resin (25)"
 	set desc = "Secrete tough, malleable resin in front of us."
-	set category = "Abilities"
+	set category = "Abilities.Alien"
 
 	var/list/options = list("resin door","resin wall","resin membrane","nest","resin blob")
 	for(var/option in options)

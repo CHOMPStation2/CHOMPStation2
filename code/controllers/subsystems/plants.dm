@@ -150,7 +150,7 @@ SUBSYSTEM_DEF(plants)
 
 // Debug for testing seed genes.
 /client/proc/show_plant_genes()
-	set category = "Debug"
+	set category = "Debug.Investigate" //CHOMPEdit
 	set name = "Show Plant Genes"
 	set desc = "Prints the round's plant gene masks."
 
@@ -162,3 +162,5 @@ SUBSYSTEM_DEF(plants)
 
 	for(var/mask in SSplants.gene_tag_masks)
 		to_chat(usr, "[mask]: [SSplants.gene_tag_masks[mask]]")
+
+#undef PLANT_TICK_TIME

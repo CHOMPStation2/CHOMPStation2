@@ -7,7 +7,7 @@
 /obj/item/weapon/storage/box/casino/foamcrossbow
 	name = "foam crossbow"
 	starts_with = list(
-	//obj/item/weapon/gun/projectile/revolver/toy/crossbow,
+	/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
 	/obj/item/ammo_casing/afoam_dart,
 	/obj/item/ammo_casing/afoam_dart,
 	/obj/item/ammo_casing/afoam_dart,
@@ -79,34 +79,11 @@
 	/obj/item/clothing/head/helmet/gladiator
 	)
 
-/obj/item/weapon/storage/box/casino/costume_pirate
-	name = "pirate costume"
-	starts_with = list(
-	/obj/item/clothing/under/pirate,
-	/obj/item/clothing/suit/pirate,
-	/obj/item/clothing/head/pirate,
-	/obj/item/clothing/glasses/eyepatch
-	)
-
-/obj/item/weapon/storage/box/casino/costume_commie
-	name = "communist costume"
-	starts_with = list(
-	/obj/item/clothing/under/soviet,
-	/obj/item/clothing/head/ushanka
-	)
-
 /obj/item/weapon/storage/box/casino/costume_imperiummonk
 	name = "imperium monk costume"
 	starts_with = list(
 	/obj/item/clothing/suit/imperium_monk,
 	/obj/item/clothing/mask/gas/cyborg
-	)
-
-/obj/item/weapon/storage/box/casino/costume_plaguedoctor
-	name = "plague doctor costume"
-	starts_with = list(
-	/obj/item/clothing/suit/bio_suit/plaguedoctorsuit,
-	/obj/item/clothing/head/plaguedoctorhat
 	)
 
 /obj/item/weapon/storage/box/casino/costume_cutewitch

@@ -45,6 +45,7 @@
 	drop_vore = client.prefs_vr.drop_vore
 	stumble_vore = client.prefs_vr.stumble_vore
 	slip_vore = client.prefs_vr.slip_vore
+	digest_pain = client.prefs_vr.digest_pain
 
 	resizable = client.prefs_vr.resizable
 	show_vore_fx = client.prefs_vr.show_vore_fx
@@ -70,12 +71,13 @@
 	no_latejoin_prey_warning_time = client.prefs_vr.no_latejoin_prey_warning_time
 	no_latejoin_vore_warning_persists = client.prefs_vr.no_latejoin_vore_warning_persists
 	no_latejoin_prey_warning_persists = client.prefs_vr.no_latejoin_prey_warning_persists
+	belly_rub_target = client.prefs_vr.belly_rub_target
 	//CHOMP Stuff End
 
 /mob/living/simple_mob/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 	if(limit_renames && nameset)
 		to_chat(src, "<span class='userdanger'>You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must.</span>")
 		return
@@ -89,7 +91,7 @@
 /mob/living/simple_mob/proc/set_desc()
 	set name = "Set Description"
 	set desc = "Set your description."
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 	var/newdesc
 	newdesc = sanitizeSafe(tgui_input_text(src,"Set your description. Max 4096 chars.", "Description set","", prevent_enter = TRUE), MAX_MESSAGE_LEN)
 	if(newdesc)

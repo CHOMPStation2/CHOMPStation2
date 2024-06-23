@@ -1,7 +1,7 @@
 /*#ifdef T_BOARD_MICRO_MECHA ////CHOMPedit commented micromech stuff, because fuck this trash
 #error T_BOARD_MICRO_MECHA already defined elsewhere, we can't use it.
 #endif
-#define T_BOARD_MICRO_MECHA(name)	"exosuit module circuit board (" + (name) + ")"
+# define T_BOARD_MICRO_MECHA(name)	"exosuit module circuit board (" + (name) + ")"
 
 /obj/item/weapon/circuitboard/mecha/gopher
 		origin_tech = list(TECH_DATA = 3)
@@ -44,4 +44,5 @@
 
 /obj/item/weapon/circuitboard/mecha/weasel/main
 		name = T_BOARD_MICRO_MECHA("Weasel central control")
-		icon_state = "mainboard" */
+		icon_state = "mainboard"
+# undef T_BOARD_MICRO_MECHA */

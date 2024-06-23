@@ -1,9 +1,5 @@
 var/global/datum/controller/occupations/job_master
 
-#define GET_RANDOM_JOB 0
-#define BE_ASSISTANT 1
-#define RETURN_TO_LOBBY 2
-
 /datum/controller/occupations
 		//List of all jobs
 	var/list/occupations = list()
@@ -86,6 +82,15 @@ var/global/datum/controller/occupations/job_master
 		job.total_positions++
 		return 1
 	return 0
+
+//CHOMPAdd Start
+/datum/controller/occupations/proc/update_limit(var/rank, var/comperator)
+	var/datum/job/job = GetJob(rank)
+	if(job && job.total_positions != -1)
+		job.update_limit(comperator)
+		return 1
+	return 0
+//CHOMPAdd End
 
 /datum/controller/occupations/proc/FindOccupationCandidates(datum/job/job, level, flag)
 	Debug("Running FOC, Job: [job], Level: [level], Flag: [flag]")
@@ -430,6 +435,10 @@ var/global/datum/controller/occupations/job_master
 					//if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
 					//	custom_equip_leftovers += thing
 					//else
+					/* CHOMPRemove Start, remove RS No shoes
+					if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)	//RS ADD
+						continue
+					*///CHOMPRemove End, remove RS No shoes
 					if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
 						to_chat(H, "<span class='notice'>Equipping you with \the [thing]!</span>")
 						if(G.slot != slot_tie)
@@ -455,6 +464,10 @@ var/global/datum/controller/occupations/job_master
 		// If some custom items could not be equipped before, try again now.
 		for(var/thing in custom_equip_leftovers)
 			var/datum/gear/G = gear_datums[thing]
+			/* CHOMPRemove Start, remove RS No shoes
+			if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)	//RS ADD
+				continue
+			*///CHOMPRemove End, remove RS No shoes
 			if(G.slot in custom_equip_slots)
 				spawn_in_storage += thing
 			else

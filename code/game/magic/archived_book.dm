@@ -3,7 +3,6 @@
 #define BOOK_VERSION_MIN	1
 #define BOOK_VERSION_MAX	2
 #define BOOK_PATH			"data/books/"
-#define BOOKS_USE_SQL		0				// no guarentee for this branch to work right with sql
 
 var/global/datum/book_manager/book_mgr = new()
 
@@ -35,7 +34,7 @@ var/global/datum/book_manager/book_mgr = new()
 /client/proc/delbook()
 	set name = "Delete Book"
 	set desc = "Permamently deletes a book from the database."
-	set category = "Admin"
+	set category = "Admin.Moderation" //CHOMPEdit
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return

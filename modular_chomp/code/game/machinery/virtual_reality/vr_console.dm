@@ -295,7 +295,7 @@
 // I am not making a new file just for vr-specific mob procs.
 /mob/living/carbon/human/proc/vr_transform_into_mob()
 	set name = "Transform Into Creature"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 	set desc = "Become a different creature"
 
 	var/tf = null
@@ -311,14 +311,14 @@
 
 /mob/living/proc/vr_revert_mob_tf()
 	set name = "Revert Transformation"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 
 	revert_mob_tf()
 
 // Exiting VR but for ghosts
 /mob/living/carbon/human/proc/fake_exit_vr()
 	set name = "Log Out Of Virtual Reality"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 
 	if(tgui_alert(usr, "Would you like to log out of virtual reality?", "Log out?", list("Yes", "No")) == "Yes")
 		release_vore_contents(TRUE)

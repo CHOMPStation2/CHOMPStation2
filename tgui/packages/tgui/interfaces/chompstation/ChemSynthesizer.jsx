@@ -50,9 +50,10 @@ const ChemSynthesizerQueueRecipes = (props) => {
                 color={use_catalyst ? 'green' : 'bad'}
                 icon="wrench"
                 tooltip="Enable/Disable the catalyst BEFORE starting the queue."
-                content={use_catalyst ? 'Catalyst Active' : 'Catalyst Disabled'}
                 onClick={() => act('toggle_catalyst')}
-              />
+              >
+                {use_catalyst ? 'Catalyst Active' : 'Catalyst Disabled'}
+              </Button>
               <Button.Confirm
                 disabled={!queue.length}
                 color="bad"
@@ -190,8 +191,9 @@ const ChemSynthesizerChemicals = (props) => {
                 height="100%"
                 align="flex-start"
                 disabled={1}
-                content={c.title + ' (' + c.amount + ')'}
-              />
+              >
+                {c.title + ' (' + c.amount + ')'}
+              </Button>
             </Flex.Item>
           ))}
           {flexFillers.map((_, i) => (
@@ -219,10 +221,11 @@ const ChemSynthesizerChemicals = (props) => {
             )}
             <Button
               icon="eject"
-              content="Eject"
               disabled={!catalyst || !!busy}
               onClick={() => act('eject_catalyst')}
-            />
+            >
+              Eject
+            </Button>
           </Box>
         }
       >
@@ -257,22 +260,22 @@ const ChemSynthesizerSettings = (props) => {
               <Button
                 color={production_mode ? 'green' : 'bad'}
                 icon="wrench"
-                content={
-                  production_mode
-                    ? 'Recipe mode: Import'
-                    : 'Recipe mode: Tutorial'
-                }
                 onClick={() => act('mode_toggle')}
-              />
+              >
+                {production_mode
+                  ? 'Recipe mode: Import'
+                  : 'Recipe mode: Tutorial'}
+              </Button>
             </Flex.Item>
             <Flex.Item>
               <Button
                 disabled={!!busy}
                 color={panel_open ? 'bad' : 'green'}
                 icon="wrench"
-                content={panel_open ? 'Panel Open' : 'Panel Closed'}
                 onClick={() => act('panel_toggle')}
-              />
+              >
+                {panel_open ? 'Panel Open' : 'Panel Closed'}
+              </Button>
             </Flex.Item>
             <Flex.Item>
               {!busy && (
@@ -281,9 +284,10 @@ const ChemSynthesizerSettings = (props) => {
                   color="bad"
                   icon="flask"
                   tooltip="For emptying the reaction vessel if the machine stalls."
-                  content="Bottle Manually"
                   onClick={() => act('bottle_product')}
-                />
+                >
+                  Bottle Manually
+                </Button>
               )}
             </Flex.Item>
             <Flex.Item>
@@ -291,9 +295,10 @@ const ChemSynthesizerSettings = (props) => {
                 disabled={!busy}
                 color="bad"
                 icon="minus-circle"
-                content="EMERGENCY STOP"
                 onClick={() => act('emergency_stop')}
-              />
+              >
+                EMERGENCY STOP
+              </Button>
             </Flex.Item>
           </Flex>
         </Section>
@@ -304,11 +309,12 @@ const ChemSynthesizerSettings = (props) => {
             <LabeledList.Item label="Bottle">
               <Button
                 icon="wine-bottle"
-                content="Activate"
                 selected={data.drug_substance === 1}
                 mr="0.5rem"
                 onClick={() => act('drug_form', { drug_index: 1 })}
-              />
+              >
+                Activate
+              </Button>
               <Button onClick={() => modalOpen('change_bottle_style')}>
                 <div
                   style={{
@@ -338,11 +344,12 @@ const ChemSynthesizerSettings = (props) => {
             <LabeledList.Item label="Pill">
               <Button
                 icon="circle"
-                content="Activate"
                 selected={data.drug_substance === 2}
                 mr="0.5rem"
                 onClick={() => act('drug_form', { drug_index: 2 })}
-              />
+              >
+                Activate
+              </Button>
               <Button onClick={() => modalOpen('change_pill_style')}>
                 <div
                   style={{
@@ -372,11 +379,12 @@ const ChemSynthesizerSettings = (props) => {
             <LabeledList.Item label="Patch">
               <Button
                 icon="square"
-                content="Activate"
                 selected={data.drug_substance === 3}
                 mr="0.5rem"
                 onClick={() => act('drug_form', { drug_index: 3 })}
-              />
+              >
+                Activate
+              </Button>
               <Button onClick={() => modalOpen('change_patch_style')}>
                 <div
                   style={{

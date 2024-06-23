@@ -49,16 +49,18 @@ export const VoreSelectedBellyOptions = (props) => {
               onClick={() => act('set_attribute', { attribute: 'b_tastes' })}
               icon={can_taste ? 'toggle-on' : 'toggle-off'}
               selected={can_taste}
-              content={can_taste ? 'Yes' : 'No'}
-            />
+            >
+              {can_taste ? 'Yes' : 'No'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Feedable">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_feedable' })}
               icon={is_feedable ? 'toggle-on' : 'toggle-off'}
               selected={is_feedable}
-              content={is_feedable ? 'Yes' : 'No'}
-            />
+            >
+              {is_feedable ? 'Yes' : 'No'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Contaminates">
             <Button
@@ -67,8 +69,9 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={contaminates ? 'toggle-on' : 'toggle-off'}
               selected={contaminates}
-              content={contaminates ? 'Yes' : 'No'}
-            />
+            >
+              {contaminates ? 'Yes' : 'No'}
+            </Button>
           </LabeledList.Item>
           {(contaminates && (
             <>
@@ -80,8 +83,9 @@ export const VoreSelectedBellyOptions = (props) => {
                     })
                   }
                   icon="pen"
-                  content={contaminate_flavor}
-                />
+                >
+                  {contaminate_flavor}
+                </Button>
               </LabeledList.Item>
               <LabeledList.Item label="Contamination Color">
                 <Button
@@ -89,8 +93,9 @@ export const VoreSelectedBellyOptions = (props) => {
                     act('set_attribute', { attribute: 'b_contamination_color' })
                   }
                   icon="pen"
-                  content={capitalize(contaminate_color)}
-                />
+                >
+                  {capitalize(contaminate_color)}
+                </Button>
               </LabeledList.Item>
             </>
           )) ||
@@ -100,16 +105,18 @@ export const VoreSelectedBellyOptions = (props) => {
               onClick={() =>
                 act('set_attribute', { attribute: 'b_nutritionpercent' })
               }
-              content={nutrition_percent + '%'}
-            />
+            >
+              {nutrition_percent + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Required Examine Size">
             <Button
               onClick={() =>
                 act('set_attribute', { attribute: 'b_bulge_size' })
               }
-              content={bulge_size * 100 + '%'}
-            />
+            >
+              {bulge_size * 100 + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Display Absorbed Examines">
             <Button
@@ -120,16 +127,18 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={display_absorbed_examine ? 'toggle-on' : 'toggle-off'}
               selected={display_absorbed_examine}
-              content={display_absorbed_examine ? 'True' : 'False'}
-            />
+            >
+              {display_absorbed_examine ? 'True' : 'False'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Toggle Vore Privacy">
             <Button
               onClick={() =>
                 act('set_attribute', { attribute: 'b_eating_privacy' })
               }
-              content={capitalize(eating_privacy_local)}
-            />
+            >
+              {capitalize(eating_privacy_local)}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Toggle Struggle Privacy">
             <Button
@@ -138,8 +147,9 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={private_struggle ? 'toggle-on' : 'toggle-off'}
               selected={private_struggle}
-              content={private_struggle ? 'Private' : 'Loud'}
-            />
+            >
+              {private_struggle ? 'Private' : 'Loud'}
+            </Button>
           </LabeledList.Item>
 
           <LabeledList.Item label="Save Digest Mode">
@@ -149,8 +159,9 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={save_digest_mode ? 'toggle-on' : 'toggle-off'}
               selected={save_digest_mode}
-              content={save_digest_mode ? 'True' : 'False'}
-            />
+            >
+              {save_digest_mode ? 'True' : 'False'}
+            </Button>
           </LabeledList.Item>
         </LabeledList>
         <VoreSelectedMobTypeBellyButtons belly={belly} />
@@ -164,58 +175,67 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={emote_active ? 'toggle-on' : 'toggle-off'}
               selected={emote_active}
-              content={emote_active ? 'Active' : 'Inactive'}
-            />
+            >
+              {emote_active ? 'Active' : 'Inactive'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Idle Emote Delay">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_emotetime' })}
-              content={emote_time + ' seconds'}
-            />
+            >
+              {emote_time + ' seconds'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Digest Brute Damage">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_brute_dmg' })}
-              content={digest_brute}
-            />
+            >
+              {digest_brute}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Digest Burn Damage">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_burn_dmg' })}
-              content={digest_burn}
-            />
+            >
+              {digest_burn}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Digest Suffocation Damage">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_oxy_dmg' })}
-              content={digest_oxy}
-            />
+            >
+              {digest_oxy}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Digest Toxins Damage">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_tox_dmg' })}
-              content={digest_tox}
-            />
+            >
+              {digest_tox}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Digest Clone Damage">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_clone_dmg' })}
-              content={digest_clone}
-            />
+            >
+              {digest_clone}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Drain Finishing Mode">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_drainmode' })}
-              content={drainmode}
-            />
+            >
+              {drainmode}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Shrink/Grow Size">
             <Button
               onClick={() =>
                 act('set_attribute', { attribute: 'b_grow_shrink' })
               }
-              content={shrink_grow_size * 100 + '%'}
-            />
+            >
+              {shrink_grow_size * 100 + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Vore Spawn Blacklist">
             <Button
@@ -224,36 +244,41 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={vorespawn_blacklist ? 'toggle-on' : 'toggle-off'}
               selected={vorespawn_blacklist}
-              content={vorespawn_blacklist ? 'Yes' : 'No'}
-            />
+            >
+              {vorespawn_blacklist ? 'Yes' : 'No'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Egg Type">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_egg_type' })}
               icon="pen"
-              content={capitalize(egg_type)}
-            />
+            >
+              {capitalize(egg_type)}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Custom Egg Name">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_egg_name' })}
               icon="pen"
-              content={egg_name ? egg_name : 'Default'}
-            />
+            >
+              {egg_name ? egg_name : 'Default'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Custom Egg Size">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_egg_size' })}
-              content={egg_size ? egg_size * 100 + '%' : 'Automatic'}
-            />
+            >
+              {egg_size ? egg_size * 100 + '%' : 'Automatic'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Recycling">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_recycling' })}
               icon={recycling ? 'toggle-on' : 'toggle-off'}
               selected={recycling}
-              content={recycling ? 'Enabled' : 'Disabled'}
-            />
+            >
+              {recycling ? 'Enabled' : 'Disabled'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Storing Nutrition">
             <Button
@@ -262,8 +287,9 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={storing_nutrition ? 'toggle-on' : 'toggle-off'}
               selected={storing_nutrition}
-              content={storing_nutrition ? 'Storing' : 'Absorbing'}
-            />
+            >
+              {storing_nutrition ? 'Storing' : 'Absorbing'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Entrance Logs">
             <Button
@@ -272,8 +298,9 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={entrance_logs ? 'toggle-on' : 'toggle-off'}
               selected={entrance_logs}
-              content={entrance_logs ? 'Enabled' : 'Disabled'}
-            />
+            >
+              {entrance_logs ? 'Enabled' : 'Disabled'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Item Digestion Logs">
             <Button
@@ -282,8 +309,9 @@ export const VoreSelectedBellyOptions = (props) => {
               }
               icon={item_digest_logs ? 'toggle-on' : 'toggle-off'}
               selected={item_digest_logs}
-              content={item_digest_logs ? 'Enabled' : 'Disabled'}
-            />
+            >
+              {item_digest_logs ? 'Enabled' : 'Disabled'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Selective Mode Preference">
             <Button
@@ -292,8 +320,9 @@ export const VoreSelectedBellyOptions = (props) => {
                   attribute: 'b_selective_mode_pref_toggle',
                 })
               }
-              content={capitalize(selective_preference)}
-            />
+            >
+              {capitalize(selective_preference)}
+            </Button>
           </LabeledList.Item>
         </LabeledList>
       </Flex.Item>

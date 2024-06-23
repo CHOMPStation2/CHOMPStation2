@@ -66,9 +66,10 @@ export const CharacterDirectory = (props) => {
                   <Button
                     icon={overwritePrefs ? 'toggle-on' : 'toggle-off'}
                     selected={overwritePrefs}
-                    content={overwritePrefs ? 'On' : 'Off'}
                     onClick={() => setOverwritePrefs(!overwritePrefs)}
-                  />
+                  >
+                    {overwritePrefs ? 'On' : 'Off'}
+                  </Button>
                 </>
               }
             >
@@ -76,67 +77,74 @@ export const CharacterDirectory = (props) => {
                 <LabeledList.Item label="Visibility">
                   <Button
                     fluid
-                    content={personalVisibility ? 'Shown' : 'Not Shown'}
                     onClick={() =>
                       act('setVisible', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalVisibility ? 'Shown' : 'Not Shown'}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Vore Tag">
                   <Button
                     fluid
-                    content={personalTag}
                     onClick={() =>
                       act('setTag', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Gender">
                   <Button
                     fluid
-                    content={personalGenderTag}
                     onClick={() =>
                       act('setGenderTag', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalGenderTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Sexuality">
                   <Button
                     fluid
-                    content={personalSexualityTag}
                     onClick={() =>
                       act('setSexualityTag', {
                         overwrite_prefs: overwritePrefs,
                       })
                     }
-                  />
+                  >
+                    {personalSexualityTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="ERP Tag">
                   <Button
                     fluid
-                    content={personalErpTag}
                     onClick={() =>
                       act('setErpTag', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalErpTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Event Pref">
                   <Button
                     fluid
-                    content={personalEventTag}
                     onClick={() =>
                       act('setEventTag', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    {personalEventTag}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Advertisement">
                   <Button
                     fluid
-                    content="Edit Ad"
                     onClick={() =>
                       act('editAd', { overwrite_prefs: overwritePrefs })
                     }
-                  />
+                  >
+                    Edit Ad
+                  </Button>
                 </LabeledList.Item>
               </LabeledList>
             </Section>
@@ -153,11 +161,9 @@ const ViewCharacter = (props) => {
     <Section
       title={props.overlay.name}
       buttons={
-        <Button
-          icon="arrow-left"
-          content="Back"
-          onClick={() => props.onOverlay(null)}
-        />
+        <Button icon="arrow-left" onClick={() => props.onOverlay(null)}>
+          Back
+        </Button>
       }
     >
       <Section level={2} title="Species">
@@ -277,7 +283,9 @@ const CharacterDirectoryList = (props) => {
     <Section
       title="Directory"
       buttons={
-        <Button icon="sync" content="Refresh" onClick={() => act('refresh')} />
+        <Button icon="sync" onClick={() => act('refresh')}>
+          Refresh
+        </Button>
       }
     >
       <Table>
@@ -369,8 +377,9 @@ const CharacterDirectoryList = (props) => {
                   color="transparent"
                   icon="sticky-note"
                   mr={1}
-                  content="View"
-                />
+                >
+                  View
+                </Button>
               </Table.Cell>
             </Table.Row>
           ))}

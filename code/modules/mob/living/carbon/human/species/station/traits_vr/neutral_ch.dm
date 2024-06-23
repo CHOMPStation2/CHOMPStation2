@@ -11,6 +11,7 @@
 	name = "Succubus Bite"
 	desc = "Allows you to inject your prey with poison, much like a venemous snake."
 	cost = 0
+	custom_only = FALSE	//CHOMPEdit I hate custom only
 
 /datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()

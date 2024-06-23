@@ -5,7 +5,7 @@
 
 
 /client/proc/fake_pdaconvos()
-	set category = "Fun.EventKit" //ChompEDIT
+	set category = "Fun.Event Kit" //ChompEDIT
 	set name = "Manage PDA identities"
 	set desc = "Creates fake identities for use in setting up PDA props"
 

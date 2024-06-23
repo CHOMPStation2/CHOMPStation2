@@ -219,6 +219,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/trash,
 				/obj/item/weapon/digestion_remains,
 				/obj/item/weapon/bananapeel,
+				/obj/item/weapon/book,
 				/obj/item/weapon/bone,
 				/obj/item/weapon/broken_bottle,
 				/obj/item/weapon/card/emag_broken,
@@ -275,7 +276,7 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/weapon/clipboard,
 				/obj/item/weapon/coin,
 				/obj/item/clothing/ears, //chompstation addition end
-				//CHOMPedit: disabled because this is in a file we don't use /obj/item/roulette_ball
+				/obj/item/roulette_ball,
 				/obj/item/pizzabox
 				)
 

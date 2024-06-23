@@ -45,8 +45,14 @@
 	//random starting power! gives us a random number of shots in the battery between 0 and the max possible
 	if(random_start_ammo && cell_type)
 		power_supply.charge = charge_cost*rand(0,power_supply.maxcharge/charge_cost)
-	update_icon()
+	//update_icon() //CHOMPRemove
 	..() //CHOMPEdit if you see this, it is a cry for help. Please tell people to stop putting ..() at the top of New() :(
+
+//CHOMPEdit Start
+/obj/item/weapon/gun/energy/Initialize()
+	. = ..()
+	update_icon()
+//CHOMPEdit End
 
 /obj/item/weapon/gun/energy/Destroy()
 	if(self_recharge)

@@ -7,7 +7,7 @@
 
 /turf/unsimulated/Initialize(mapload)
 	if(skip_init)
-		initialized = TRUE
+		flags |= ATOM_INITIALIZED //CHOMPEdit
 		return INITIALIZE_HINT_NORMAL
 	. = ..()
 
@@ -17,7 +17,7 @@
 	icon = 'icons/turf/space.dmi'
 	icon_state = "0"
 	dynamic_lighting = FALSE
-	initialized = FALSE
+	//initialized = FALSE CHOMP Removal (what the fuck)
 
 /turf/unsimulated/fake_space/Initialize(mapload)
 	. = ..()

@@ -287,7 +287,7 @@
 
 /mob/verb/check_languages()
 	set name = "Check Known Languages"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set src = usr
 
 	var/datum/browser/popup = new(src, "checklanguage", "Known Languages", 420, 470)

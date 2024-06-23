@@ -1,11 +1,12 @@
 //Vac attachment
 /obj/item/device/vac_attachment
-	name = "Vac-Pack attachment"
+	name = "\improper Vac-Pack attachment"
 	desc = "Useful for slurping mess off the floors. Even things and stuff depending on settings. Can be connected to a trash bag or vore belly. On-mob sprites can be toggled via verb in Objects tab."
 	icon = 'modular_chomp/icons/mob/vacpack.dmi'
 	icon_override = 'modular_chomp/icons/mob/vacpack.dmi'
 	icon_state = "sucker_drop"
 	item_state = "sucker"
+	slot_flags = SLOT_BELT | SLOT_BACK
 	var/vac_power = 0
 	var/output_dest = null
 	var/list/vac_settings = list(

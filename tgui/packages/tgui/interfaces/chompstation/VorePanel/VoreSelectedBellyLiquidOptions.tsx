@@ -23,8 +23,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
           tooltip={
             'These are the settings for liquid bellies, every belly has a liquid storage.'
           }
-          content={show_liq ? 'Liquids On' : 'Liquids Off'}
-        />
+        >
+          {show_liq ? 'Liquids On' : 'Liquids Off'}
+        </Button>
       }
     >
       {show_liq ? (
@@ -36,8 +37,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
               }
               icon={liq_interacts.liq_reagent_gen ? 'toggle-on' : 'toggle-off'}
               selected={liq_interacts.liq_reagent_gen}
-              content={liq_interacts.liq_reagent_gen ? 'On' : 'Off'}
-            />
+            >
+              {liq_interacts.liq_reagent_gen ? 'On' : 'Off'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Liquid Type">
             <Button
@@ -48,8 +50,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
               }
               icon="pen"
               color={reagentToColor[liq_interacts.liq_reagent_type]}
-              content={liq_interacts.liq_reagent_type}
-            />
+            >
+              {liq_interacts.liq_reagent_type}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Liquid Name">
             <Button
@@ -58,8 +61,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_liq_reagent_name',
                 })
               }
-              content={liq_interacts.liq_reagent_name}
-            />
+            >
+              {liq_interacts.liq_reagent_name}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Transfer Verb">
             <Button
@@ -68,8 +72,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_liq_reagent_transfer_verb',
                 })
               }
-              content={liq_interacts.liq_reagent_transfer_verb}
-            />
+            >
+              {liq_interacts.liq_reagent_transfer_verb}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Generation Time">
             <Button
@@ -79,11 +84,10 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                 })
               }
               icon="clock"
-              content={
-                ((liq_interacts.liq_reagent_nutri_rate + 1) * 10) / 60 +
-                ' Hours'
-              }
-            />
+            >
+              {((liq_interacts.liq_reagent_nutri_rate + 1) * 10) / 60 +
+                ' Hours'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Liquid Capacity">
             <Button
@@ -92,8 +96,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_liq_reagent_capacity',
                 })
               }
-              content={liq_interacts.liq_reagent_capacity}
-            />
+            >
+              {liq_interacts.liq_reagent_capacity}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Slosh Sounds">
             <Button
@@ -102,8 +107,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
               }
               icon={liq_interacts.liq_sloshing ? 'toggle-on' : 'toggle-off'}
               selected={liq_interacts.liq_sloshing}
-              content={liq_interacts.liq_sloshing ? 'On' : 'Off'}
-            />
+            >
+              {liq_interacts.liq_sloshing ? 'On' : 'Off'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Liquid Addons">
             {(liq_interacts.liq_reagent_addons.length &&
@@ -126,8 +132,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
               }
               icon={liq_interacts.reagent_touches ? 'toggle-on' : 'toggle-off'}
               selected={liq_interacts.reagent_touches}
-              content={liq_interacts.reagent_touches ? 'On' : 'Off'}
-            />
+            >
+              {liq_interacts.reagent_touches ? 'On' : 'Off'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Custom Liquid Color">
             <LiquidColorInput
@@ -144,8 +151,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
               }
               icon={liq_interacts.liquid_overlay ? 'toggle-on' : 'toggle-off'}
               selected={liq_interacts.liquid_overlay}
-              content={liq_interacts.liquid_overlay ? 'On' : 'Off'}
-            />
+            >
+              {liq_interacts.liquid_overlay ? 'On' : 'Off'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Max Liquid Level">
             <Button
@@ -154,8 +162,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_max_liquid_level',
                 })
               }
-              content={liq_interacts.max_liquid_level + '%'}
-            />
+            >
+              {liq_interacts.max_liquid_level + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Custom Liquid Alpha">
             <Button
@@ -164,8 +173,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_custom_reagentalpha',
                 })
               }
-              content={liq_interacts.custom_reagentalpha}
-            />
+            >
+              {liq_interacts.custom_reagentalpha}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Fullness Overlay">
             <Button
@@ -174,8 +184,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
               }
               icon={liq_interacts.mush_overlay ? 'toggle-on' : 'toggle-off'}
               selected={liq_interacts.mush_overlay}
-              content={liq_interacts.mush_overlay ? 'On' : 'Off'}
-            />
+            >
+              {liq_interacts.mush_overlay ? 'On' : 'Off'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Mush Overlay Color">
             <LiquidColorInput
@@ -192,8 +203,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_mush_alpha',
                 })
               }
-              content={liq_interacts.mush_alpha}
-            />
+            >
+              {liq_interacts.mush_alpha}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Mush Overlay Scaling">
             <Button
@@ -202,8 +214,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_max_mush',
                 })
               }
-              content={liq_interacts.max_mush}
-            />
+            >
+              {liq_interacts.max_mush}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Minimum Mush Level">
             <Button
@@ -212,8 +225,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_min_mush',
                 })
               }
-              content={liq_interacts.min_mush + '%'}
-            />
+            >
+              {liq_interacts.min_mush + '%'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Item Mush Value">
             <Button
@@ -222,8 +236,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_item_mush_val',
                 })
               }
-              content={liq_interacts.item_mush_val + ' fullness per item'}
-            />
+            >
+              {liq_interacts.item_mush_val + ' fullness per item'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Metabolism Overlay">
             <Button
@@ -236,8 +251,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                 liq_interacts.metabolism_overlay ? 'toggle-on' : 'toggle-off'
               }
               selected={liq_interacts.metabolism_overlay}
-              content={liq_interacts.metabolism_overlay ? 'On' : 'Off'}
-            />
+            >
+              {liq_interacts.metabolism_overlay ? 'On' : 'Off'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Metabolism Mush Ratio">
             <Button
@@ -246,11 +262,10 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_metabolism_mush_ratio',
                 })
               }
-              content={
-                liq_interacts.metabolism_mush_ratio +
-                ' fullness per reagent unit'
-              }
-            />
+            >
+              {liq_interacts.metabolism_mush_ratio +
+                ' fullness per reagent unit'}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Metabolism Overlay Scaling">
             <Button
@@ -259,8 +274,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_max_ingested',
                 })
               }
-              content={liq_interacts.max_ingested}
-            />
+            >
+              {liq_interacts.max_ingested}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Custom Metabolism Color">
             <LiquidColorInput
@@ -277,8 +293,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
                   liq_attribute: 'b_custom_ingested_alpha',
                 })
               }
-              content={liq_interacts.custom_ingested_alpha}
-            />
+            >
+              {liq_interacts.custom_ingested_alpha}
+            </Button>
           </LabeledList.Item>
           <LabeledList.Item label="Purge Liquids">
             <Button
@@ -286,8 +303,9 @@ export const VoreSelectedBellyLiquidOptions = (props) => {
               onClick={() =>
                 act('liq_set_attribute', { liq_attribute: 'b_liq_purge' })
               }
-              content="Purge Liquids"
-            />
+            >
+              Purge Liquids
+            </Button>
           </LabeledList.Item>
         </LabeledList>
       ) : (

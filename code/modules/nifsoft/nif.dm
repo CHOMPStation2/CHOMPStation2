@@ -35,6 +35,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	var/tmp/list/nifsofts[TOTAL_NIF_SOFTWARE]	// All our nifsofts
 	var/tmp/list/nifsofts_life = list()			// Ones that want to be talked to on life()
 	var/owner									// Owner character name
+	var/owner_key								// Account associated with the nif
 	var/examine_msg								//Message shown on examine.
 
 	var/tmp/vision_flags = 0		// Flags implants set for faster lookups
@@ -155,6 +156,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 				return
 			if(H.mind)
 				owner = H.mind.name
+				owner_key = H.ckey
 			implant(H)
 		return TRUE
 
@@ -284,16 +286,18 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	//Firsties
 	if(!install_done)
 		if(human.mind.name == owner)
+			owner_key = human.ckey
 			install_done = world.time + 1 MINUTE
 			notify("Welcome back, [owner]! Performing quick-calibration...")
 		else if(!owner)
 			install_done = world.time + 15 MINUTES // CHOMPedit: Install time from 35 minutes to 15 minutes.
+			owner_key = human.ckey
 			notify("Adapting to new user...")
 			sleep(5 SECONDS)
 			notify("Adjoining optic [human.isSynthetic() ? "interface" : "nerve"], please be patient.",TRUE)
 		else
 			notify("You are not an authorized user for this device. Please contact [owner].",TRUE)
-			unimplant()
+			unimplant(human)
 			stat = NIF_TEMPFAIL
 			return FALSE
 
@@ -693,7 +697,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /mob/living/carbon/human/proc/set_nif_examine()
 	set name = "NIF Appearance"
 	set desc = "If your NIF alters your appearance in some way, describe it here."
-	set category = "OOC"
+	set category = "OOC.Game Settings" //CHOMPEdit
 
 	if(!nif)
 		remove_verb(src, /mob/living/carbon/human/proc/set_nif_examine) //ChompEDIT

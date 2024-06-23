@@ -49,8 +49,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                 }
                 icon={affects_voresprite ? 'toggle-on' : 'toggle-off'}
                 selected={affects_voresprite}
-                content={affects_voresprite ? 'Yes' : 'No'}
-              />
+              >
+                {affects_voresprite ? 'Yes' : 'No'}
+              </Button>
             </LabeledList.Item>
             {affects_voresprite ? (
               <span>
@@ -74,8 +75,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={absorbed_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={absorbed_voresprite}
-                    content={absorbed_voresprite ? 'Yes' : 'No'}
-                  />
+                  >
+                    {absorbed_voresprite ? 'Yes' : 'No'}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Absorbed Multiplier">
                   <Button
@@ -84,8 +86,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                         attribute: 'b_absorbed_multiplier',
                       })
                     }
-                    content={absorbed_multiplier}
-                  />
+                  >
+                    {absorbed_multiplier}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Count liquid reagents for vore sprites">
                   <Button
@@ -96,16 +99,18 @@ export const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={liquid_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={liquid_voresprite}
-                    content={liquid_voresprite ? 'Yes' : 'No'}
-                  />
+                  >
+                    {liquid_voresprite ? 'Yes' : 'No'}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Liquid Multiplier">
                   <Button
                     onClick={() =>
                       act('set_attribute', { attribute: 'b_liquid_multiplier' })
                     }
-                    content={liquid_multiplier}
-                  />
+                  >
+                    {liquid_multiplier}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Count items for vore sprites">
                   <Button
@@ -116,16 +121,18 @@ export const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={item_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={item_voresprite}
-                    content={item_voresprite ? 'Yes' : 'No'}
-                  />
+                  >
+                    {item_voresprite ? 'Yes' : 'No'}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Items Multiplier">
                   <Button
                     onClick={() =>
                       act('set_attribute', { attribute: 'b_item_multiplier' })
                     }
-                    content={item_multiplier}
-                  />
+                  >
+                    {item_multiplier}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Prey health affects vore sprites">
                   <Button
@@ -136,8 +143,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={health_voresprite ? 'toggle-on' : 'toggle-off'}
                     selected={health_voresprite}
-                    content={health_voresprite ? 'Yes' : 'No'}
-                  />
+                  >
+                    {health_voresprite ? 'Yes' : 'No'}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Animation when prey resist">
                   <Button
@@ -146,8 +154,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                     }
                     icon={resist_animation ? 'toggle-on' : 'toggle-off'}
                     selected={resist_animation}
-                    content={resist_animation ? 'Yes' : 'No'}
-                  />
+                  >
+                    {resist_animation ? 'Yes' : 'No'}
+                  </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Vore Sprite Size Factor">
                   <Button
@@ -156,8 +165,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                         attribute: 'b_size_factor_sprites',
                       })
                     }
-                    content={voresprite_size_factor}
-                  />
+                  >
+                    {voresprite_size_factor}
+                  </Button>
                 </LabeledList.Item>
                 {belly_sprite_option_shown ? (
                   <LabeledList.Item label="Belly Sprite to affect">
@@ -167,8 +177,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                           attribute: 'b_belly_sprite_to_affect',
                         })
                       }
-                      content={belly_sprite_to_affect}
-                    />
+                    >
+                      {belly_sprite_to_affect}
+                    </Button>
                   </LabeledList.Item>
                 ) : (
                   <LabeledList.Item label="Belly Sprite to affect">
@@ -187,8 +198,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                             attribute: 'b_undergarment_choice',
                           })
                         }
-                        content={undergarment_chosen}
-                      />
+                      >
+                        {undergarment_chosen}
+                      </Button>
                     </LabeledList.Item>
                     <LabeledList.Item label="Undergarment if none equipped">
                       <Button
@@ -197,8 +209,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                             attribute: 'b_undergarment_if_none',
                           })
                         }
-                        content={undergarment_if_none}
-                      />
+                      >
+                        {undergarment_if_none}
+                      </Button>
                     </LabeledList.Item>
                     <FeatureColorInput
                       action_name="b_undergarment_color"
@@ -219,8 +232,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                           attribute: 'b_tail_to_change_to',
                         })
                       }
-                      content={tail_to_change_to}
-                    />
+                    >
+                      {tail_to_change_to}
+                    </Button>
                   </LabeledList.Item>
                 ) : (
                   ''
@@ -272,24 +286,27 @@ export const VoreSelectedBellyVisuals = (props) => {
             }
             icon={colorization_enabled ? 'toggle-on' : 'toggle-off'}
             selected={colorization_enabled}
-            content={colorization_enabled ? 'Yes' : 'No'}
-          />
+          >
+            {colorization_enabled ? 'Yes' : 'No'}
+          </Button>
         </LabeledList.Item>
         <LabeledList.Item label="Preview Belly">
           <Button
             onClick={() =>
               act('set_attribute', { attribute: 'b_preview_belly' })
             }
-            content={'Preview'}
-          />
+          >
+            Preview
+          </Button>
         </LabeledList.Item>
         <LabeledList.Item label="Clear Preview">
           <Button
             onClick={() =>
               act('set_attribute', { attribute: 'b_clear_preview' })
             }
-            content={'Clear'}
-          />
+          >
+            Clear
+          </Button>
         </LabeledList.Item>
       </Section>
       <Section>
@@ -302,8 +319,9 @@ export const VoreSelectedBellyVisuals = (props) => {
                 }
                 icon={disable_hud ? 'toggle-on' : 'toggle-off'}
                 selected={disable_hud}
-                content={disable_hud ? 'Yes' : 'No'}
-              />
+              >
+                {disable_hud ? 'Yes' : 'No'}
+              </Button>
             </LabeledList.Item>
           </LabeledList>
         </Section>

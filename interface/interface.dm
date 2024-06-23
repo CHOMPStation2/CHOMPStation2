@@ -2,7 +2,7 @@
 /client/verb/wiki(query as text)
 	set name = "wiki"
 	set desc = "Type what you want to know about.  This will open the wiki on your web browser."
-	set category = "OOC"
+	set category = "OOC.Resources" //CHOMPEdit
 	if(CONFIG_GET(string/wikiurl)) // CHOMPEdit
 		if(query)
 			if(CONFIG_GET(string/wikisearchurl)) // CHOMPEdit
@@ -95,7 +95,7 @@
 
 /client/verb/hotkeys_help()
 	set name = "hotkeys-help"
-	set category = "OOC"
+	set category = "OOC.Resources" //CHOMPEdit
 
 	var/admin = {"<font color='AD5AAD'>
 Admin:

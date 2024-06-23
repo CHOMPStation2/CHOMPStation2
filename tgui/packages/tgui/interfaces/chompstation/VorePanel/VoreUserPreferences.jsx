@@ -30,6 +30,7 @@ export const VoreUserPreferences = (props) => {
     throw_vore,
     phase_vore,
     food_vore,
+    digest_pain,
     latejoin_vore,
     latejoin_prey,
     noisy,
@@ -56,9 +57,10 @@ export const VoreUserPreferences = (props) => {
     nutrition_message_visible,
     weight_message_visible,
     selective_active,
+    belly_rub_target,
   } = data.prefs;
 
-  const { show_pictures, icon_overflow } = data;
+  const { show_pictures, icon_overflow, selected } = data;
 
   const preferences = {
     digestion: {
@@ -260,6 +262,21 @@ export const VoreUserPreferences = (props) => {
       content: {
         enabled: 'Food Vore Enabled',
         disabled: 'Food Vore Disabled',
+      },
+    },
+    toggle_digest_pain: {
+      action: 'toggle_digest_pain',
+      test: digest_pain,
+      tooltip: {
+        main:
+          'Allows for pain messages to show when being digested. ' +
+          ' Can be toggled off to disable pain messages.',
+        enable: 'Click here to allow for digestion pain.',
+        disable: 'Click here to disable digestion pain.',
+      },
+      content: {
+        enabled: 'Digestion Pain Enabled',
+        disabled: 'Digestion Pain Disabled',
       },
     },
     spawnbelly: {
@@ -727,14 +744,13 @@ export const VoreUserPreferences = (props) => {
             <Flex.Item basis="33%">
               <Button
                 fluid
-                content={
-                  'Selective Mode Preference: ' + capitalize(selective_active)
-                }
                 backgroundColor={digestModeToColor[selective_active]}
                 tooltip="Allows to set the personal belly mode preference for selective bellies."
                 tooltipPosition="right"
                 onClick={() => act('switch_selective_mode_pref')}
-              />
+              >
+                {'Selective Mode Preference: ' + capitalize(selective_active)}
+              </Button>
             </Flex.Item>
             <Flex.Item basis="33%" grow={1}>
               <VoreUserPreferenceItem
@@ -764,6 +780,12 @@ export const VoreUserPreferences = (props) => {
               <VoreUserPreferenceItem
                 spec={preferences.remains}
                 tooltipPosition="left"
+              />
+            </Flex.Item>
+            <Flex.Item basis="33%">
+              <VoreUserPreferenceItem
+                spec={preferences.toggle_digest_pain}
+                tooltipPosition="right"
               />
             </Flex.Item>
           </Flex>
@@ -874,14 +896,15 @@ export const VoreUserPreferences = (props) => {
               <Flex.Item basis="5%">
                 <Button
                   fluid
-                  content={'P'}
                   backgroundColor={no_spawnpred_warning_save ? 'green' : ''}
                   tooltip="Toggles vore spawnpoint auto accept persistency."
                   tooltipPosition="top"
                   onClick={() =>
                     act('toggle_no_latejoin_vore_warning_persists')
                   }
-                />
+                >
+                  P
+                </Button>
               </Flex.Item>
             </>
           ) : (
@@ -916,14 +939,15 @@ export const VoreUserPreferences = (props) => {
               <Flex.Item basis="5%">
                 <Button
                   fluid
-                  content={'P'}
                   backgroundColor={no_spawnprey_warning_save ? 'green' : ''}
                   tooltip="Toggles preyspawn auto accept persistency."
                   tooltipPosition="top"
                   onClick={() =>
                     act('toggle_no_latejoin_prey_warning_persists')
                   }
-                />
+                >
+                  P
+                </Button>
               </Flex.Item>
             </>
           ) : (
@@ -934,40 +958,36 @@ export const VoreUserPreferences = (props) => {
       <Section title="Aesthetic Preferences">
         <Flex spacing={1} wrap="wrap" justify="center">
           <Flex.Item basis="50%" grow={1}>
-            <Button
-              fluid
-              content="Set Taste"
-              icon="grin-tongue"
-              onClick={() => act('setflavor')}
-            />
+            <Button fluid icon="grin-tongue" onClick={() => act('setflavor')}>
+              Set Taste
+            </Button>
           </Flex.Item>
           <Flex.Item basis="50%">
-            <Button
-              fluid
-              content="Set Smell"
-              icon="wind"
-              onClick={() => act('setsmell')}
-            />
+            <Button fluid icon="wind" onClick={() => act('setsmell')}>
+              Set Smell
+            </Button>
           </Flex.Item>
           <Flex.Item basis="50%" grow={1}>
             <Button
               onClick={() =>
                 act('set_attribute', { attribute: 'b_msgs', msgtype: 'en' })
               }
-              content="Set Nutrition Examine Message"
               icon="flask"
               fluid
-            />
+            >
+              Set Nutrition Examine Message
+            </Button>
           </Flex.Item>
           <Flex.Item basis="50%">
             <Button
               onClick={() =>
                 act('set_attribute', { attribute: 'b_msgs', msgtype: 'ew' })
               }
-              content="Set Weight Examine Message"
               icon="weight-hanging"
               fluid
-            />
+            >
+              Set Weight Examine Message
+            </Button>
           </Flex.Item>
           <Flex.Item basis="50%" grow={1}>
             <VoreUserPreferenceItem spec={preferences.examine_nutrition} />
@@ -975,12 +995,22 @@ export const VoreUserPreferences = (props) => {
           <Flex.Item basis="50%">
             <VoreUserPreferenceItem spec={preferences.examine_weight} />
           </Flex.Item>
+          <Flex.Item basis="50%" grow={1}>
+            <Button fluid onClick={() => act('set_vs_color')} icon="palette">
+              Vore Sprite Color
+            </Button>
+          </Flex.Item>
           <Flex.Item basis="50%">
             <Button
               fluid
-              content="Vore Sprite Color"
-              onClick={() => act('set_vs_color')}
-            />
+              onClick={() => act('set_belly_rub')}
+              icon="crosshairs"
+            >
+              {'Belly Rub Target: ' +
+                (belly_rub_target
+                  ? belly_rub_target
+                  : 'Current Active (' + selected.belly_name + ')')}
+            </Button>
           </Flex.Item>
         </Flex>
       </Section>
@@ -988,20 +1018,14 @@ export const VoreUserPreferences = (props) => {
       <Section>
         <Flex spacing={1}>
           <Flex.Item basis="50%">
-            <Button
-              fluid
-              content="Save Prefs"
-              icon="save"
-              onClick={() => act('saveprefs')}
-            />
+            <Button fluid icon="save" onClick={() => act('saveprefs')}>
+              Save Prefs
+            </Button>
           </Flex.Item>
           <Flex.Item basis="50%" grow={1}>
-            <Button
-              fluid
-              content="Reload Prefs"
-              icon="undo"
-              onClick={() => act('reloadprefs')}
-            />
+            <Button fluid icon="undo" onClick={() => act('reloadprefs')}>
+              Reload Prefs
+            </Button>
           </Flex.Item>
         </Flex>
       </Section>

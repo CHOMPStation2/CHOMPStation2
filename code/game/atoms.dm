@@ -39,7 +39,7 @@
 	//Detective Work, used for the duplicate data points kept in the scanners
 	var/list/original_atom
 	// Track if we are already had initialize() called to prevent double-initialization.
-	var/initialized = FALSE
+	//var/initialized = FALSE CHOMPEdit moved to flag
 
 	/// Last name used to calculate a color for the chatmessage overlays
 	var/chat_color_name
@@ -91,9 +91,9 @@
 /atom/proc/Initialize(mapload, ...)
 	if(QDELETED(src))
 		stack_trace("GC: -- [type] had initialize() called after qdel() --")
-	if(initialized)
+	if(flags & ATOM_INITIALIZED) //CHOMPEdit moved initialized to flag
 		stack_trace("Warning: [src]([type]) initialized multiple times!")
-	initialized = TRUE
+	flags |= ATOM_INITIALIZED //CHOMPEdit moved initialized to flag
 	return INITIALIZE_HINT_NORMAL
 
 /atom/Destroy()
@@ -493,6 +493,7 @@
 	if(istype(blood_DNA, /list))
 		blood_DNA = null
 		return TRUE
+	blood_color = null //chompfixy, cleaning objects saved its future blood color no matter what
 
 /atom/proc/on_rag_wipe(var/obj/item/weapon/reagent_containers/glass/rag/R)
 	clean_blood()

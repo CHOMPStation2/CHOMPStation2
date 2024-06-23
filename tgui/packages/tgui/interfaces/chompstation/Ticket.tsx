@@ -78,13 +78,11 @@ export const Ticket = (props) => {
           title={'Ticket #' + id}
           buttons={
             <Box nowrap>
-              <Button
-                icon="pen"
-                content="Rename Ticket"
-                onClick={() => act('retitle')}
-              />{' '}
-              <Button content="Legacy UI" onClick={() => act('legacy')} />{' '}
-              <Button content={Level[level]} color={LevelColor[level]} />
+              <Button icon="pen" onClick={() => act('retitle')}>
+                Rename Ticket
+              </Button>
+              <Button onClick={() => act('legacy')}>Legacy UI</Button>
+              <Button color={LevelColor[level]}>{Level[level]}</Button>
             </Box>
           }
         >
@@ -97,14 +95,14 @@ export const Ticket = (props) => {
             <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
             {State[state] === State.open ? (
               <LabeledList.Item label="Opened At">
-                {opened_at_date} ({Math.round((opened_at / 600) * 10) / 10}{' '}
+                {opened_at_date} ({Math.round((opened_at / 600) * 10) / 10}
                 minutes ago.)
               </LabeledList.Item>
             ) : (
               <LabeledList.Item label="Closed At">
-                {closed_at_date} ({Math.round((closed_at / 600) * 10) / 10}{' '}
-                minutes ago.){' '}
-                <Button content="Reopen" onClick={() => act('reopen')} />
+                {closed_at_date} ({Math.round((closed_at / 600) * 10) / 10}
+                minutes ago.)
+                <Button onClick={() => act('reopen')}>Reopen</Button>
               </LabeledList.Item>
             )}
             <LabeledList.Item label="Actions">
@@ -148,7 +146,6 @@ export const Ticket = (props) => {
                 </Flex.Item>
                 <Flex.Item>
                   <Button
-                    content="Send"
                     onClick={() => {
                       act('send_msg', {
                         msg: ticketChat,
@@ -156,7 +153,9 @@ export const Ticket = (props) => {
                       });
                       setTicketChat('');
                     }}
-                  />
+                  >
+                    Send
+                  </Button>
                 </Flex.Item>
               </Flex>
             </Flex.Item>
