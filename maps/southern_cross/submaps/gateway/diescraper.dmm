@@ -11151,14 +11151,6 @@
 /obj/item/pizzavoucher,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/diescraper/indoors/floor1)
-"Gl" = (
-/obj/effect/floor_decal/corner/lightgrey/diagonal,
-/obj/effect/shuttle_landmark/diescraper/sling_outpost{
-	base_area = /area/awaymission/diescraper/indoors/floor1;
-	base_turf = /turf/simulated/floor/reinforced
-	},
-/turf/simulated/floor/tiled/white,
-/area/awaymission/diescraper/indoors/floor1)
 "Gm" = (
 /obj/structure/sign/securearea{
 	icon_state = "restroom"
@@ -34912,7 +34904,7 @@ qG
 qG
 iy
 iy
-Gl
+iy
 iy
 iy
 Bz
