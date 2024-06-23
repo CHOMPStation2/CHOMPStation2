@@ -14,13 +14,13 @@
 	docking_controller_tag = "exp_sling"
 
 /obj/effect/shuttle_landmark/southern_cross/sling_station
-	name = "Floor 51"
+	name = "Sling Station"
 	landmark_tag = "sling_station"
 	docking_controller = "exp_sling_station"
 	base_area = /area/space
 	base_turf = /turf/simulated/floor/reinforced/airless
 
 /obj/effect/shuttle_landmark/southern_cross/sling_outpost
-	name = "Ground Floor	"
+	name = "Sling Carrier"
 	landmark_tag = "sling_outpost"
 	docking_controller = "exp_sling_outpost"
