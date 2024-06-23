@@ -4714,6 +4714,7 @@
 #include "modular_chomp\code\game\machinery\airconditioner_ch.dm"
 #include "modular_chomp\code\game\machinery\autolathe_armory.dm"
 #include "modular_chomp\code\game\machinery\cryopod.dm"
+#include "modular_chomp\code\game\machinery\door_control.dm"
 #include "modular_chomp\code\game\machinery\holosign.dm"
 #include "modular_chomp\code\game\machinery\paradox.dm"
 #include "modular_chomp\code\game\machinery\petrification.dm"
