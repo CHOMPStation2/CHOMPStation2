@@ -129,6 +129,7 @@
 	dir = 4
 	},
 /obj/structure/undies_wardrobe,
+/obj/item/device/mindbinder,
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/diescraper/indoors/floor9)
 "au" = (
@@ -255,6 +256,13 @@
 /obj/item/weapon/book/bundle/custom_library/nonfiction/skrelliancastesystem,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor6)
+"aQ" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_y = 0
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/diescraper/indoors/floor9)
 "aR" = (
 /obj/structure/table/steel,
 /obj/item/weapon/storage/box/bodybags,
@@ -333,6 +341,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
+"bg" = (
+/obj/structure/bed/chair/oldsofa/right,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
+"bh" = (
+/obj/structure/bed/chair/oldsofa/right{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/awaymission/diescraper/indoors/floor9)
 "bi" = (
 /obj/machinery/door/airlock/freezer{
 	name = "Restrooms"
@@ -551,7 +569,7 @@
 /obj/structure/sign/warning/secure_area/slabs{
 	icon_state = "slab3-off"
 	},
-/turf/simulated/wall/cult,
+/turf/unsimulated/wall/cult,
 /area/awaymission/diescraper/indoors/floor11)
 "bN" = (
 /obj/structure/sign/directions/stairs_up{
@@ -624,7 +642,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "bX" = (
-/turf/simulated/wall/cult,
+/turf/unsimulated/wall/cult,
 /area/awaymission/diescraper/indoors/floor11)
 "bY" = (
 /obj/structure/filingcabinet/filingcabinet,
@@ -735,6 +753,13 @@
 /obj/structure/barricade/planks,
 /turf/simulated/floor,
 /area/awaymission/diescraper/indoors/floor3)
+"co" = (
+/obj/machinery/light{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "cp" = (
 /turf/unsimulated/floor/tiled/freezer,
 /area/awaymission/diescraper/indoors/floor8)
@@ -965,6 +990,10 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
+"dm" = (
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "dn" = (
 /obj/machinery/gateway/centeraway{
 	calibrated = 0
@@ -1018,6 +1047,13 @@
 "dx" = (
 /turf/simulated/wall/wood,
 /area/awaymission/diescraper/indoors/floor9)
+"dy" = (
+/obj/machinery/light{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "dz" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/box/glasses/square{
@@ -1184,6 +1220,13 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor1)
+"dW" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "dX" = (
 /obj/machinery/light{
 	dir = 8
@@ -1204,16 +1247,32 @@
 /obj/item/weapon/coin/iron,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
+"eb" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "ec" = (
 /obj/random/instrument,
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/carpet,
 /area/awaymission/diescraper/indoors/floor9)
+"ed" = (
+/obj/structure/closet/crate/secure/large,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "ee" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/laundry_basket,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor9)
+"ef" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/mask/gas,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "eg" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -1246,6 +1305,10 @@
 /obj/item/weapon/paper_bin,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
+"ek" = (
+/obj/effect/decal/remains/mummy2,
+/turf/simulated/floor/grass2,
+/area/awaymission/diescraper/indoors/floor5)
 "el" = (
 /obj/structure/prop/machine/solifier/starts_on,
 /turf/simulated/floor/tiled/old_tile,
@@ -1259,6 +1322,11 @@
 /obj/structure/closet,
 /turf/simulated/floor/tiled/kafel_full,
 /area/awaymission/diescraper/indoors/floor10)
+"en" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/cell/mech/super,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "eo" = (
 /obj/random/maintenance,
 /turf/simulated/floor/plating,
@@ -1287,6 +1355,18 @@
 /obj/random/tool/power,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor8)
+"ev" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "ew" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave,
@@ -1303,10 +1383,18 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
+"eA" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/lino,
+/area/awaymission/diescraper/indoors/floor10)
 "eB" = (
 /obj/item/taperoll/police,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor1)
+"eC" = (
+/obj/item/weapon/storage/mrebag/pill,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "eD" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -1553,6 +1641,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor2)
+"fv" = (
+/obj/item/ammo_magazine/awp,
+/obj/item/weapon/gun/projectile/automatic/serdy/awp,
+/turf/simulated/floor/reinforced{
+	temperature = 277;
+	outdoors = 1
+	},
+/area/awaymission/diescraper/roof)
 "fw" = (
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor3)
@@ -1560,6 +1656,10 @@
 /obj/machinery/autolathe/armory,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor6)
+"fy" = (
+/obj/structure/barricade/cutout/viva,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "fz" = (
 /obj/random/plushielarge,
 /turf/simulated/floor/wood/alt,
@@ -1689,6 +1789,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor9)
+"fO" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_range = 10;
+	light_color = "#b3deff"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor6)
 "fP" = (
 /obj/effect/simple_portal/linked{
 	portal_id = 6666;
@@ -1731,6 +1838,14 @@
 /obj/item/weapon/storage/box/cups,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
+"fT" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/window/titanium{
+	dir = 2
+	},
+/obj/random/maintenance/clean,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "fU" = (
 /obj/machinery/power/rtg/fake_z_wires,
 /obj/structure/cable/green,
@@ -1846,6 +1961,16 @@
 "gq" = (
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor7)
+"gr" = (
+/obj/machinery/light{
+	dir = 4;
+	pixel_y = 0
+	},
+/obj/machinery/computer/arcade{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/retro,
+/area/awaymission/diescraper/indoors/floor9)
 "gs" = (
 /obj/machinery/power/rtg/fake_z_wires,
 /obj/structure/cable{
@@ -1915,6 +2040,13 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
+"gA" = (
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 0
+	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "gB" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wmarble,
@@ -1935,6 +2067,10 @@
 /obj/item/weapon/storage/pill_bottle/healing_nanites,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
+"gF" = (
+/obj/item/weapon/grenade/confetti,
+/turf/simulated/floor/carpet/retro,
+/area/awaymission/diescraper/indoors/floor9)
 "gG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair/comfy/black{
@@ -2042,6 +2178,13 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor4)
+"gX" = (
+/obj/effect/floor_decal/industrial/warning/color/yellow{
+	dir = 1
+	},
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/awaymission/diescraper/indoors/floor10)
 "gY" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/lino,
@@ -2052,6 +2195,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
+"ha" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/awaymission/diescraper/indoors/floor10)
 "hb" = (
 /obj/structure/table/glass,
 /obj/machinery/chemical_dispenser/bar_soft/full,
@@ -2079,6 +2230,10 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
+"hf" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor6)
 "hg" = (
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor1)
@@ -2171,6 +2326,9 @@
 /obj/random/tool,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
+"hw" = (
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "hy" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light{
@@ -2185,6 +2343,12 @@
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
+"hA" = (
+/obj/structure/table/bench/sifwooden/padded,
+/obj/item/weapon/firework_star/weather/confetti,
+/obj/item/weapon/reagent_containers/food/snacks/tomatomeat,
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/diescraper/indoors/floor9)
 "hB" = (
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/diescraper/indoors/floor9)
@@ -2470,6 +2634,12 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor1)
+"iH" = (
+/obj/structure/bed/chair/oldsofa{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "iI" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2601,6 +2771,16 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/diescraper)
+"jc" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
+/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind,
+/obj/item/weapon/reagent_containers/food/drinks/cans/root_beer,
+/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale,
+/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "jd" = (
 /obj/structure/window/basic,
 /obj/structure/table/rack/wood,
@@ -2647,6 +2827,13 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
+"jn" = (
+/obj/machinery/light{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors/floor8)
 "jo" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -2774,6 +2961,13 @@
 /obj/fruitspawner/potato,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
+"jK" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "jL" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/device/flashlight/lamp/green,
@@ -2944,6 +3138,10 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
+"kj" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/tiled/white,
+/area/awaymission/diescraper/indoors/floor9)
 "kk" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/window/basic{
@@ -3002,6 +3200,13 @@
 /obj/item/weapon/spacecasinocash,
 /turf/unsimulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor6)
+"kn" = (
+/obj/structure/bed/chair/oldsofa/right{
+	dir = 8;
+	pixel_y = 0
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/diescraper/indoors/floor9)
 "ko" = (
 /obj/effect/fake_sun/warm,
 /turf/simulated/wall/solidrock,
@@ -3014,6 +3219,14 @@
 	icon_state = "slab2"
 	},
 /area/awaymission/diescraper/outside)
+"kq" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_y = 0
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/space,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "kr" = (
 /obj/item/weapon/stool/baystool/padded{
 	pixel_y = 0;
@@ -3302,6 +3515,7 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
+/mob/living/simple_mob/slime/feral,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "lg" = (
@@ -3380,6 +3594,14 @@
 /obj/random/awayloot/looseloot,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
+"lt" = (
+/obj/structure/table/bench/sifwooden/padded,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/awaymission/diescraper/indoors/floor9)
+"lu" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors/floor10)
 "lv" = (
 /obj/machinery/light{
 	dir = 4
@@ -3435,6 +3657,7 @@
 /obj/machinery/light/small/torch{
 	dir = 1
 	},
+/obj/effect/decal/remains,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor5)
 "lB" = (
@@ -3495,6 +3718,10 @@
 /obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor5)
+"lM" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "lN" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3537,8 +3764,17 @@
 "lV" = (
 /turf/simulated/wall/concrete,
 /area/awaymission/diescraper/indoors/floor3)
+"lW" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "lX" = (
-/obj/item/weapon/flamethrower/full,
+/obj/item/weapon/gun/magnetic/gasthrower,
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
@@ -3566,12 +3802,20 @@
 /obj/structure/sign/warning/secure_area/slabs{
 	icon_state = "slab4-off"
 	},
-/turf/simulated/wall/cult,
+/turf/unsimulated/wall/cult,
 /area/awaymission/diescraper/indoors/floor11)
 "mb" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor3)
+"mc" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors/floor8)
 "md" = (
 /obj/structure/railing{
 	dir = 4
@@ -3598,6 +3842,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
+"mi" = (
+/obj/structure/bed/chair/oldsofa/left{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "mj" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/weapon/folder,
@@ -3658,6 +3908,12 @@
 /obj/machinery/appliance/mixer/candy,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor10)
+"mt" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/awaymission/diescraper/indoors/floor112)
 "mu" = (
 /obj/structure/closet/crate/solar,
 /obj/machinery/light{
@@ -3677,12 +3933,22 @@
 /obj/structure/barricade/cutout,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
+"mw" = (
+/mob/living/simple_mob/clowns/big/c_shift/anormal{
+	dir = 2
+	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "mx" = (
 /obj/structure/barricade/cutout,
 /obj/effect/floor_decal/rust,
 /obj/random/soap,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4second)
+"my" = (
+/obj/effect/decal/remains/mummy1,
+/turf/simulated/floor/grass2,
+/area/awaymission/diescraper/indoors/floor5)
 "mz" = (
 /obj/structure/table/rack/wood,
 /obj/item/weapon/spacecash/c1000,
@@ -3934,6 +4200,10 @@
 /area/awaymission/diescraper/indoors/floor7)
 "nt" = (
 /obj/item/weapon/storage/toolbox/mechanical,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
 "nu" = (
@@ -3978,6 +4248,9 @@
 /area/awaymission/diescraper/indoors/floor1)
 "ny" = (
 /obj/structure/bed/chair/sofa/right/orange,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/unsimulated/floor/wood/alt/parquet,
 /area/awaymission/diescraper/indoors/floor9)
 "nz" = (
@@ -4120,6 +4393,12 @@
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack,
 /area/awaymission/diescraper/indoors/floor7)
+"nT" = (
+/obj/structure/bed/chair/oldsofa/left{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/awaymission/diescraper/indoors/floor9)
 "nU" = (
 /obj/structure/bed/chair/sofa/left/orange,
 /turf/unsimulated/floor/wood/alt/parquet,
@@ -4290,6 +4569,10 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
+"ow" = (
+/mob/living/simple_mob/slime/feral,
+/turf/unsimulated/floor/wood/alt/panel,
+/area/awaymission/diescraper/indoors/floor9)
 "ox" = (
 /obj/random/tool,
 /turf/simulated/floor/plating,
@@ -4393,6 +4676,11 @@
 /obj/random/medical/lite,
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor7)
+"oR" = (
+/obj/effect/overlay/snow/floor,
+/obj/effect/floor_decal/industrial/caution/yellow,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/sky)
 "oS" = (
 /obj/structure/table/standard,
 /obj/random/medical,
@@ -4641,6 +4929,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4)
+"pE" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "pF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
@@ -4692,6 +4986,13 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/diescraper/indoors/floor7)
+"pM" = (
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/floor/wmarble,
+/area/awaymission/diescraper/indoors/floor9)
 "pN" = (
 /obj/structure/table/marble,
 /obj/structure/window/basic{
@@ -4725,6 +5026,12 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
+"pT" = (
+/mob/living/simple_mob/animal/passive/mouse/rat{
+	name = "Emily"
+	},
+/turf/simulated/floor/carpet/purple,
+/area/awaymission/diescraper/indoors/floor9)
 "pU" = (
 /obj/machinery/light{
 	dir = 2;
@@ -4898,6 +5205,10 @@
 /obj/structure/bookcase,
 /turf/simulated/floor/wood/alt/panel/broken,
 /area/awaymission/diescraper/indoors/floor7)
+"qs" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "qt" = (
 /obj/machinery/door/airlock{
 	name = "Custodial Closet"
@@ -4953,6 +5264,10 @@
 	temperature = 277
 	},
 /area/awaymission/diescraper/roof)
+"qw" = (
+/obj/item/weapon/storage/mrebag/side,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "qy" = (
 /obj/structure/toilet{
 	dir = 4
@@ -5075,6 +5390,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
+"qT" = (
+/obj/item/weapon/grenade/confetti/party_ball,
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "qU" = (
 /obj/effect/map_effect/perma_light/brighter{
 	light_range = 10;
@@ -5087,7 +5406,7 @@
 /obj/structure/sign/warning/secure_area/slabs{
 	icon_state = "slab2-off"
 	},
-/turf/simulated/wall/cult,
+/turf/unsimulated/wall/cult,
 /area/awaymission/diescraper/indoors/floor11)
 "qW" = (
 /obj/machinery/door/airlock,
@@ -5284,6 +5603,10 @@
 /obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
+"rz" = (
+/obj/item/weapon/gun/launcher/confetti_cannon/fake_shottie,
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "rA" = (
 /obj/machinery/light{
 	dir = 4;
@@ -5304,6 +5627,12 @@
 /obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor7)
+"rE" = (
+/obj/machinery/computer/arcade{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/retro,
+/area/awaymission/diescraper/indoors/floor9)
 "rF" = (
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/white,
@@ -5440,6 +5769,11 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/diescraper/indoors/floor10)
+"sb" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "sc" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 171;
@@ -5540,6 +5874,13 @@
 /obj/item/weapon/reagent_containers/pill/vermicetol,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
+"sp" = (
+/obj/machinery/light{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "sq" = (
 /turf/simulated/wall/concrete,
 /area/awaymission/diescraper/indoors/floor9)
@@ -5949,6 +6290,10 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
+"tz" = (
+/obj/item/weapon/toy/partypopper,
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "tA" = (
 /obj/structure/prop/machine/comm_tower/starts_on,
 /turf/simulated/floor/reinforced{
@@ -6050,9 +6395,29 @@
 "tM" = (
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor10)
+"tN" = (
+/mob/living/simple_mob/vore/aggressive/rat/phoron{
+	size_multiplier = 1.25;
+	name = "giant rat";
+	health = 150;
+	maxhealth = 150;
+	desc = "This rat makes all of the rules."
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor10)
 "tO" = (
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor6)
+"tP" = (
+/obj/effect/decal/remains,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced{
+	temperature = 277;
+	outdoors = 1
+	},
+/area/awaymission/diescraper/roof)
 "tQ" = (
 /obj/machinery/door/airlock/medical{
 	name = "Morgue";
@@ -6163,9 +6528,17 @@
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"uj" = (
+/obj/item/clothing/shoes/bhop,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/sky)
 "ul" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/indoors/floor9)
+"un" = (
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "uo" = (
 /obj/structure/bed/chair/oldsofa{
 	dir = 4
@@ -6463,6 +6836,13 @@
 "vf" = (
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"vg" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 2
+	},
+/obj/effect/decal/remains,
+/turf/simulated/floor/wood/alt/panel,
+/area/awaymission/diescraper/indoors/floor3)
 "vh" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/food/snacks/fish_taco{
@@ -6488,6 +6868,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor11)
+"vj" = (
+/obj/structure/table/bench/sifwooden/padded,
+/obj/item/weapon/grenade/confetti/party_ball,
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "vk" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -6498,6 +6883,16 @@
 /obj/structure/closet/crate/solar,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
+"vn" = (
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
+"vo" = (
+/obj/item/weapon/reagent_containers/food/snacks/tomatosoup,
+/obj/effect/decal/remains,
+/obj/effect/decal/cleanable/filth,
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "vp" = (
 /obj/effect/floor_decal/corner/purple/diagonal{
 	color = "#f700ff"
@@ -6513,6 +6908,11 @@
 	outdoors = 1
 	},
 /area/awaymission/diescraper/roof)
+"vs" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/weapon/gun/energy/supercannon,
+/turf/unsimulated/floor/cult,
+/area/awaymission/diescraper/indoors/floor11)
 "vt" = (
 /obj/machinery/light{
 	pixel_y = 0;
@@ -6602,16 +7002,45 @@
 /obj/item/tape/engineering,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"vI" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/barricade/cutout,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "vJ" = (
 /obj/machinery/light/poi{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor10)
+"vK" = (
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor10)
+"vL" = (
+/obj/structure/closet/crate/secure/large,
+/obj/random/material,
+/obj/random/material,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "vM" = (
 /obj/random/awayloot/looseloot,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
+"vN" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/item/weapon/cell/giga,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "vO" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/indoors/floor10)
@@ -6789,9 +7218,11 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
 "wt" = (
-/obj/machinery/door/airlock,
-/turf/unsimulated/wall/seperator,
-/area/awaymission/diescraper/sky)
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor11)
 "wv" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -6818,6 +7249,11 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"wz" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "wA" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced/tinted{
@@ -6834,6 +7270,15 @@
 	},
 /turf/unsimulated/floor/tiled/freezer,
 /area/awaymission/diescraper/indoors/floor8)
+"wC" = (
+/obj/effect/step_trigger/teleporter/poi{
+	teleport_x = 233;
+	teleport_y = 239
+	},
+/turf/simulated/sky/moving/south{
+	temperature = 277
+	},
+/area/awaymission/diescraper/sky)
 "wD" = (
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor4)
@@ -6924,6 +7369,10 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/sky)
+"wJ" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/tiled/kafel_full/beige,
+/area/awaymission/diescraper/indoors/floor10)
 "wK" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 1
@@ -6954,6 +7403,13 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
+"wO" = (
+/obj/structure/railing,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor11)
 "wQ" = (
 /obj/structure/table/reinforced,
 /obj/random/organ,
@@ -7050,6 +7506,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
+"xi" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "xj" = (
 /obj/machinery/light{
 	dir = 4
@@ -7064,6 +7530,12 @@
 /obj/structure/barricade/cutout,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
+"xm" = (
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor6)
 "xn" = (
 /mob/living/simple_mob/vore/aggressive/rat,
 /obj/effect/floor_decal/rust,
@@ -7209,6 +7681,12 @@
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/diescraper/indoors/floor1)
+"xN" = (
+/obj/machinery/light/floortube{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "xP" = (
 /obj/structure/filingcabinet/filingcabinet,
 /turf/simulated/floor/lino,
@@ -7220,6 +7698,10 @@
 /obj/item/weapon/reagent_containers/food/condiment/mustard,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
+"xR" = (
+/mob/living/simple_mob/slime/feral,
+/turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors/floor10)
 "xT" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/overlay/snow/floor,
@@ -7268,6 +7750,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
+"yc" = (
+/obj/structure/table/bench/sifwooden/padded,
+/obj/item/weapon/gun/launcher/confetti_cannon/overdrive,
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
+"yd" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "ye" = (
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/decal/cleanable/dirt,
@@ -7371,8 +7865,7 @@
 "yw" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/machinery/light{
-	dir = 1;
-	on = 1
+	dir = 1
 	},
 /obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
@@ -7408,6 +7901,12 @@
 /obj/structure/barricade/cutout,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4second)
+"yy" = (
+/mob/living/simple_mob/tomato{
+	dir = 2
+	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "yz" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 213;
@@ -7479,6 +7978,15 @@
 /obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
+"yM" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/door/window/brigdoor/eastleft{
+	dir = 2;
+	req_access = list(886)
+	},
+/obj/machinery/cash_register,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "yN" = (
 /obj/structure/table/steel_reinforced,
 /obj/fiftyspawner/concrete,
@@ -7532,6 +8040,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
+"yV" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor11)
 "yW" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
@@ -7684,6 +8198,10 @@
 /obj/random/pottedplant,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
+"zp" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "zq" = (
 /obj/structure/mopbucket,
 /obj/item/weapon/mop,
@@ -7829,12 +8347,24 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor7)
+"zF" = (
+/obj/structure/bed/chair/shuttle{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "zH" = (
 /obj/structure/reagent_dispensers/water_cooler/full{
 	dir = 1
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
+"zI" = (
+/obj/machinery/computer/arcade{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro,
+/area/awaymission/diescraper/indoors/floor9)
 "zJ" = (
 /obj/machinery/light{
 	dir = 1;
@@ -7901,7 +8431,8 @@
 	},
 /obj/machinery/door/window/eastleft,
 /obj/machinery/door/window/brigdoor/eastleft{
-	dir = 8
+	dir = 8;
+	req_access = list(886)
 	},
 /obj/random/awayloot/looseloot,
 /turf/simulated/floor/wood/alt/panel,
@@ -8317,6 +8848,12 @@
 	},
 /turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/indoors/floor10)
+"AX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "AY" = (
 /obj/machinery/light/floortube{
 	dir = 4
@@ -8342,6 +8879,13 @@
 	temperature = 277
 	},
 /area/awaymission/diescraper/roof)
+"Bb" = (
+/obj/effect/floor_decal/industrial/warning/color/yellow{
+	dir = 2
+	},
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/awaymission/diescraper/indoors/floor10)
 "Bc" = (
 /obj/machinery/gateway,
 /obj/effect/floor_decal/techfloor/orange,
@@ -8349,6 +8893,15 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "Be" = (
 /obj/structure/table/hardwoodtable,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#f58d42"
+	},
+/obj/item/stack/material/morphium{
+	amount = 20
+	},
+/obj/item/stack/material/supermatter{
+	amount = 20
+	},
 /turf/unsimulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor11)
 "Bf" = (
@@ -8394,6 +8947,7 @@
 	dir = 2
 	},
 /obj/structure/table/woodentable,
+/obj/item/weapon/card/id/diescrapergun,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "Bk" = (
@@ -8441,6 +8995,11 @@
 	},
 /turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/indoors/floor7)
+"Bq" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/projectile,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "Br" = (
 /turf/simulated/floor/tiled/dark{
 	icon_state = "milspec-damaged2"
@@ -8449,6 +9008,10 @@
 "Bs" = (
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
+"Bu" = (
+/obj/random/mech,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "Bv" = (
 /obj/structure/bed/chair/oldsofa{
 	dir = 4
@@ -8562,6 +9125,10 @@
 /obj/effect/floor_decal/stairs,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor8)
+"BO" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/tiled,
+/area/awaymission/diescraper/indoors/floor10)
 "BP" = (
 /obj/machinery/light{
 	dir = 4;
@@ -8658,6 +9225,11 @@
 /obj/item/stack/material/glass/reinforced{
 	amount = 10
 	},
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
 "Cd" = (
@@ -8717,6 +9289,15 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/diescraper/indoors/floor6)
+"Ck" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/door/window/brigdoor/eastleft{
+	dir = 4;
+	req_access = list(886)
+	},
+/obj/item/weapon/cell/giga,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "Cl" = (
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
@@ -8775,6 +9356,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
+"Cv" = (
+/obj/machinery/door/airlock/sandstone,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "Cx" = (
 /obj/effect/map_effect/perma_light/brighter{
 	light_range = 10;
@@ -8889,6 +9474,12 @@
 /obj/structure/salvageable/server,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/awaymission/diescraper/indoors/floor8)
+"CR" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/retro,
+/area/awaymission/diescraper/indoors/floor9)
 "CT" = (
 /obj/machinery/light{
 	pixel_y = 0;
@@ -8981,6 +9572,12 @@
 /obj/item/organ/internal/augment/bioaugment/thermalshades,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
+"Dd" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "De" = (
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
@@ -9001,6 +9598,10 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/diescraper/indoors/floor7)
+"Dh" = (
+/obj/structure/barricade/cutout,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "Di" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9017,6 +9618,22 @@
 "Dk" = (
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor8)
+"Dl" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/weapon/reagent_containers/food/drinks/cans/tonic,
+/obj/item/weapon/reagent_containers/food/drinks/cans/tonic,
+/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind,
+/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater,
+/obj/item/weapon/reagent_containers/food/drinks/cans/root_beer,
+/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale,
+/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb,
+/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "Dm" = (
 /obj/structure/fence/door{
 	dir = 4
@@ -9110,6 +9727,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
+"Dx" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/weapon/paper_bin,
+/turf/simulated/floor/wood/alt/panel,
+/area/awaymission/diescraper/indoors/floor3)
 "Dy" = (
 /obj/machinery/light/poi{
 	dir = 1
@@ -9135,6 +9757,14 @@
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
+"DB" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "DC" = (
 /obj/structure/railing/grey{
 	dir = 1;
@@ -9176,6 +9806,9 @@
 	},
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/awaymission/diescraper/indoors/floor112)
@@ -9230,6 +9863,11 @@
 "DR" = (
 /turf/simulated/floor/concrete,
 /area/awaymission/diescraper/indoors/floor7)
+"DT" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/ammo,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "DU" = (
 /obj/machinery/light{
 	dir = 1
@@ -9378,6 +10016,12 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor1)
+"Eu" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/tool/power,
+/obj/item/weapon/rcd/advanced/loaded,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor6)
 "Ev" = (
 /obj/machinery/light{
 	dir = 4
@@ -9403,6 +10047,10 @@
 "Ey" = (
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
+"Ez" = (
+/obj/structure/prop/statue,
+/turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors/floor5)
 "EA" = (
 /obj/structure/flora/bboulder2,
 /turf/unsimulated/floor/outdoors/mud/turfpack/station,
@@ -9447,6 +10095,23 @@
 /obj/random/maintenance,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"EJ" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#DDFFD3"
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor10)
 "EK" = (
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor10)
@@ -9525,6 +10190,13 @@
 "EZ" = (
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/diescraper/indoors/floor10)
+"Fa" = (
+/obj/structure/bed/chair/oldsofa/left,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "Fb" = (
 /obj/machinery/atmospherics/unary/heater{
 	dir = 4
@@ -9550,6 +10222,17 @@
 	nitrogen = 93.7835
 	},
 /area/awaymission/diescraper/indoors/floor7)
+"Ff" = (
+/obj/machinery/floor_light{
+	anchored = 1
+	},
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor8)
 "Fg" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood/alt/tile,
@@ -9758,6 +10441,11 @@
 "FC" = (
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor5)
+"FD" = (
+/obj/structure/table/glass,
+/obj/random/pottedplant,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "FE" = (
 /obj/machinery/computer/shuttle_control/diescraper,
 /turf/simulated/floor/wmarble,
@@ -9973,6 +10661,12 @@
 "Gn" = (
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
+"Go" = (
+/obj/structure/bed/chair/oldsofa/left{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/diescraper/indoors/floor9)
 "Gp" = (
 /obj/item/weapon/material/shard/shrapnel,
 /obj/item/weapon/material/shard/shrapnel,
@@ -10225,6 +10919,14 @@
 "GY" = (
 /turf/simulated/wall/wood,
 /area/awaymission/diescraper/indoors/floor4)
+"GZ" = (
+/obj/machinery/light{
+	dir = 4;
+	layer = 3
+	},
+/obj/structure/table/bench/standard,
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "Ha" = (
 /turf/simulated/wall/thull,
 /area/awaymission/diescraper/indoors/floor7)
@@ -10267,6 +10969,10 @@
 "Hh" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/indoors/floor11)
+"Hj" = (
+/obj/structure/table/bench/standard,
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "Hk" = (
 /turf/simulated/floor/reinforced{
 	temperature = 277;
@@ -10361,6 +11067,12 @@
 /obj/structure/table/bench/standard,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"HA" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "HB" = (
 /obj/machinery/light{
 	dir = 1
@@ -10417,6 +11129,11 @@
 	outdoors = 0
 	},
 /area/awaymission/diescraper/indoors/floor5)
+"HK" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/grenade/box,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "HL" = (
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/carpet/brown,
@@ -10427,6 +11144,13 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"HN" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_range = 10;
+	light_color = "#b3deff"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor7)
 "HO" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
@@ -10509,6 +11233,10 @@
 /obj/item/clothing/head/welding,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/diescraper/indoors/floor6)
+"HZ" = (
+/obj/item/weapon/storage/mrebag/menu3,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "Ia" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 94;
@@ -10524,6 +11252,10 @@
 /obj/structure/bookcase,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
+"Ic" = (
+/obj/random/maintenance/clean,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor6)
 "If" = (
 /obj/structure/table/standard,
 /obj/structure/closet/secure_closet/medical_wall{
@@ -10604,6 +11336,18 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor9)
+"Im" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/clothing/under/syndicate/tacticool,
+/obj/item/clothing/under/syndicate/tacticool,
+/obj/item/clothing/under/syndicate/tacticool,
+/obj/item/clothing/suit/storage/vest/tactical,
+/obj/item/clothing/suit/storage/vest/tactical,
+/obj/item/clothing/suit/storage/vest/tactical,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/awaymission/diescraper/indoors/floor10)
 "In" = (
 /turf/simulated/sky/moving/south{
 	temperature = 277
@@ -10637,6 +11381,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor9)
+"Is" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/mask/gas/clear,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
+"It" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_range = 10;
+	light_color = "#b3deff"
+	},
+/obj/effect/decal/remains/mummy2,
+/turf/simulated/floor/grass2,
+/area/awaymission/diescraper/indoors/floor5)
 "Iu" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp/green,
@@ -10731,10 +11488,20 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor3)
+"IH" = (
+/obj/structure/railing,
+/obj/structure/table/hardwoodtable,
+/obj/item/device/multitool,
+/obj/item/weapon/storage/toolbox/mechanical,
+/turf/simulated/floor/wood,
+/area/awaymission/diescraper/indoors/floor1)
 "II" = (
 /obj/structure/medical_stand/anesthetic,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
+"IJ" = (
+/turf/simulated/floor/lava,
+/area/awaymission/diescraper/indoors/floor11)
 "IK" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -10745,6 +11512,10 @@
 /obj/effect/floor_decal/stairs,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor11)
+"IM" = (
+/obj/structure/barricade/cutout/gondola,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "IN" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -10872,6 +11643,14 @@
 	outdoors = 1
 	},
 /area/awaymission/diescraper/outside)
+"Jk" = (
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/white,
+/area/awaymission/diescraper/indoors/floor9)
 "Jl" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
@@ -10905,6 +11684,19 @@
 	dir = 4;
 	pixel_y = 0
 	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
+"Jq" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/lino,
+/area/awaymission/diescraper/indoors/floor10)
+"Jr" = (
+/mob/living/simple_mob/slime/feral,
 /turf/unsimulated/floor/wood/alt/parquet,
 /area/awaymission/diescraper/indoors/floor9)
 "Ju" = (
@@ -11036,6 +11828,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
+"JS" = (
+/obj/effect/overlay/snow/floor,
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor7)
 "JT" = (
 /obj/effect/floor_decal/corner/purple/diagonal{
 	color = "#f700ff"
@@ -11060,6 +11857,10 @@
 /obj/item/weapon/cell/giga,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor6)
+"JX" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor7)
 "JZ" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/indoors/floor6)
@@ -11130,6 +11931,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor3)
+"Ki" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "Kj" = (
 /obj/item/weapon/melee/umbrella/random,
 /turf/simulated/floor/lino,
@@ -11185,6 +11992,21 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
+"Ku" = (
+/obj/structure/closet/crate/secure/large,
+/obj/effect/floor_decal/rust,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/ammo_magazine/m9mm/compact,
+/obj/item/weapon/gun/projectile/pistol,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/awaymission/diescraper/indoors/floor10)
+"Kv" = (
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor7)
 "Kw" = (
 /obj/machinery/power/solar,
 /obj/structure/cable{
@@ -11206,6 +12028,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
+"Ky" = (
+/obj/item/weapon/digestion_remains/skull/teshari,
+/obj/effect/decal/cleanable/filth,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/mob/living/simple_mob/animal/passive/mouse/rat,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor10)
 "Kz" = (
 /obj/structure/barricade/cutout,
 /obj/random/maintenance,
@@ -11264,6 +12093,10 @@
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
+"KJ" = (
+/obj/machinery/computer/arcade/clawmachine,
+/turf/simulated/floor/carpet/retro,
+/area/awaymission/diescraper/indoors/floor9)
 "KK" = (
 /obj/structure/table/rack/wood,
 /obj/item/clothing/shoes/sandals_elegant{
@@ -11302,6 +12135,17 @@
 	oxygen = 20.7263
 	},
 /area/awaymission/diescraper/indoors/floor7)
+"KN" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko,
+/obj/item/weapon/reagent_containers/food/drinks/cans/space_up,
+/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater,
+/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet,
+/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "KO" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -11336,6 +12180,11 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"KV" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/energy/highend,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "KW" = (
 /turf/simulated/floor/tiled/steel{
 	icon_state = "milspec-damaged4"
@@ -11364,6 +12213,10 @@
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor2)
+"La" = (
+/obj/structure/bed/chair/shuttle,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "Lb" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -11439,6 +12292,11 @@
 	icon_state = "elevatorshaft"
 	},
 /area/awaymission/diescraper/indoors/floor8)
+"Lm" = (
+/obj/structure/closet/grave,
+/obj/item/weapon/material/gravemarker,
+/turf/simulated/floor/grass2,
+/area/awaymission/diescraper/indoors/floor5)
 "Ln" = (
 /obj/structure/cable/green{
 	d2 = 2;
@@ -11477,6 +12335,14 @@
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor4)
+"Ls" = (
+/obj/structure/closet/crate/secure/large,
+/obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
+/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime,
+/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet,
+/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "Lt" = (
 /obj/machinery/light/floortube{
 	dir = 1
@@ -11588,6 +12454,13 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor7)
+"LH" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/ammo_all,
+/obj/random/ammo_all,
+/obj/item/weapon/storage/mre/random,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "LI" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
@@ -12024,6 +12897,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
+"MP" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/gun/magnetic/railgun,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "MQ" = (
 /obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 2
@@ -12050,6 +12928,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor8)
+"MU" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/rig/industrial/equipped,
+/obj/item/weapon/gun/launcher/spikethrower,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor6)
 "MV" = (
 /obj/structure/salvageable/server_os,
 /turf/simulated/floor/reinforced,
@@ -12069,6 +12953,10 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor1)
+"MZ" = (
+/mob/living/simple_mob/tomato,
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "Na" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/white,
@@ -12199,6 +13087,13 @@
 /obj/item/weapon/toy/partypopper,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
+"Nw" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/sblucarpet,
+/area/awaymission/diescraper/indoors/floor9)
 "Nx" = (
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/diescraper)
@@ -12311,6 +13206,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
+"NP" = (
+/obj/structure/barricade/cutout/cultist,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "NQ" = (
 /obj/machinery/light{
 	dir = 1;
@@ -12336,6 +13235,11 @@
 "NU" = (
 /obj/machinery/washing_machine,
 /turf/simulated/floor/bmarble,
+/area/awaymission/diescraper/indoors/floor9)
+"NV" = (
+/obj/structure/flora/pottedplant/decorative,
+/mob/living/simple_mob/slime/feral,
+/turf/unsimulated/floor/wood/alt/parquet,
 /area/awaymission/diescraper/indoors/floor9)
 "NX" = (
 /obj/machinery/light{
@@ -12492,6 +13396,12 @@
 	nitrogen = 93.7835
 	},
 /area/awaymission/diescraper/indoors/floor7)
+"Oq" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#f58d42"
+	},
+/turf/unsimulated/floor/cult,
+/area/awaymission/diescraper/indoors/floor11)
 "Or" = (
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor9)
@@ -12509,6 +13419,14 @@
 "Ou" = (
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor4)
+"Ov" = (
+/obj/structure/table/sifwooden_reinforced,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
+"Ow" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/tiled/kafel_full,
+/area/awaymission/diescraper/indoors/floor10)
 "Oy" = (
 /obj/structure/safe/floor,
 /obj/item/weapon/gun/projectile/gyropistol,
@@ -12527,6 +13445,10 @@
 	dir = 1
 	},
 /turf/simulated/floor/lino,
+/area/awaymission/diescraper/indoors/floor10)
+"OA" = (
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
 "OB" = (
 /obj/machinery/oxygen_pump/mobile/stabilizer,
@@ -12576,6 +13498,9 @@
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
+"OL" = (
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "OM" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/eastleft{
@@ -12600,6 +13525,10 @@
 "OO" = (
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/awaymission/diescraper/indoors/floor5)
+"OP" = (
+/obj/structure/bed/chair/oldsofa,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "OQ" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 4
@@ -12667,6 +13596,14 @@
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor3)
+"Pc" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/glass,
+/obj/random/awayloot/looseloot,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "Pd" = (
 /obj/structure/closet/cabinet,
 /obj/random/maintenance/medical,
@@ -12749,10 +13686,20 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/awaymission/diescraper/indoors/floor8)
+"Pq" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "Pr" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor10)
+"Ps" = (
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor7)
 "Pt" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/fruitspawner/lettuce,
@@ -12897,9 +13844,15 @@
 /obj/random/unidentified_medicine,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor4)
+"PN" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#f58d42"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor11)
 "PO" = (
 /obj/structure/sign/warning/secure_area/slabs,
-/turf/simulated/wall/cult,
+/turf/unsimulated/wall/cult,
 /area/awaymission/diescraper/indoors/floor11)
 "PP" = (
 /obj/machinery/computer/shuttle_control/diescraper,
@@ -12971,6 +13924,14 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
+"Qg" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32;
+	pixel_y = -4
+	},
+/obj/item/weapon/reagent_containers/food/snacks/tomatosoup,
+/turf/simulated/floor/carpet/purcarpet,
+/area/awaymission/diescraper/indoors/floor9)
 "Qh" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
@@ -13026,6 +13987,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor9)
+"Qs" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "Qt" = (
 /obj/structure/cable/green{
@@ -13101,6 +14069,11 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/grass2,
 /area/awaymission/diescraper/indoors/floor5)
+"QG" = (
+/obj/effect/overlay/snow/floor,
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/sky)
 "QH" = (
 /obj/structure/table/standard,
 /obj/structure/mirror{
@@ -13110,6 +14083,11 @@
 /obj/item/weapon/surgical/cautery,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
+"QI" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/cell_charger,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "QJ" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -13160,6 +14138,11 @@
 /obj/random/material/refined,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor3)
+"QR" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/cell/device/weapon/recharge/alien/omni,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "QU" = (
 /obj/machinery/door/window/northright,
 /turf/simulated/floor/bmarble,
@@ -13174,6 +14157,16 @@
 	outdoors = -1
 	},
 /area/awaymission/diescraper/indoors/floor6)
+"QW" = (
+/obj/structure/barricade/cutout/greytide,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
+"QX" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#f58d42"
+	},
+/turf/simulated/floor/lava,
+/area/awaymission/diescraper/indoors/floor11)
 "QZ" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -13201,6 +14194,11 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
+"Rd" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weapon/storage/mre/random,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "Re" = (
 /obj/structure/flora/pottedplant/drooping,
 /turf/simulated/floor/lino,
@@ -13707,6 +14705,10 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4second)
+"SD" = (
+/obj/random/pottedplant,
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "SE" = (
 /obj/machinery/light{
 	dir = 4
@@ -13791,6 +14793,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor10)
+"SR" = (
+/obj/structure/closet/crate/secure/large,
+/obj/random/material/refined,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "SS" = (
 /obj/structure/table/glass,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
@@ -13815,6 +14822,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
+"ST" = (
+/obj/structure/bed/chair/oldsofa/right{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "SU" = (
 /obj/structure/table/marble{
 	color = "grey"
@@ -14309,6 +15326,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor3)
+"Un" = (
+/mob/living/simple_mob/mechanical/mecha/ripley/deathripley,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "Uo" = (
 /obj/item/stack/material/steel,
 /turf/simulated/floor/plating{
@@ -14317,6 +15338,12 @@
 	nitrogen = 93.7835
 	},
 /area/awaymission/diescraper/indoors/floor7)
+"Up" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/awaymission/diescraper/indoors/floor9)
 "Uq" = (
 /obj/structure/table/standard,
 /obj/random/drinkbottle,
@@ -14384,6 +15411,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "UB" = (
 /obj/structure/table/hardwoodtable,
+/obj/item/slime_extract/yellow,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "UC" = (
@@ -14551,6 +15579,13 @@
 	outdoors = -1
 	},
 /area/awaymission/diescraper/indoors/floor2)
+"Vf" = (
+/obj/machinery/light{
+	dir = 4;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/awaymission/diescraper/indoors/floor8)
 "Vg" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable/green{
@@ -14580,6 +15615,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
+"Vk" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/obj/item/weapon/toy/partypopper,
+/turf/simulated/floor/carpet/retro_red,
+/area/awaymission/diescraper/indoors/floor9)
 "Vm" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/tool/power,
@@ -14772,6 +15815,16 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
+"VM" = (
+/obj/machinery/light{
+	dir = 4;
+	layer = 3
+	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
+"VN" = (
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "VO" = (
 /obj/effect/map_effect/perma_light/brighter{
 	light_range = 10;
@@ -14890,6 +15943,10 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
+"Wi" = (
+/obj/machinery/light/floortube,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "Wj" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/tiled/old_tile,
@@ -14939,6 +15996,11 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
+"Wr" = (
+/obj/structure/closet/grave,
+/obj/item/weapon/material/gravemarker,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
+/area/awaymission/diescraper/indoors/floor5)
 "Ws" = (
 /turf/simulated/wall/r_concrete,
 /area/awaymission/diescraper/indoors/floor4second)
@@ -15106,6 +16168,13 @@
 "WX" = (
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor3)
+"WY" = (
+/obj/machinery/light{
+	dir = 8;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "WZ" = (
 /obj/structure/table/steel_reinforced,
 /obj/fiftyspawner/rods,
@@ -15245,6 +16314,10 @@
 "Xx" = (
 /turf/unsimulated/floor/tiled/milspec,
 /area/awaymission/diescraper/indoors/floor6)
+"Xy" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "Xz" = (
 /obj/structure/simple_door/wood,
 /turf/unsimulated/floor/tiled/yellow,
@@ -15280,6 +16353,10 @@
 /obj/machinery/light/floortube,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor3)
+"XF" = (
+/obj/item/weapon/gun/projectile/revolver/stainless,
+/turf/simulated/floor/wood/alt/panel,
+/area/awaymission/diescraper/indoors/floor3)
 "XG" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -15312,6 +16389,11 @@
 /obj/structure/girder,
 /turf/simulated/floor/reinforced,
 /area/awaymission/diescraper/sky)
+"XO" = (
+/obj/machinery/door/airlock,
+/obj/item/tape/police,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor10)
 "XP" = (
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 8
@@ -15328,6 +16410,10 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
+"XS" = (
+/obj/item/weapon/storage/mrebag/menu6,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "XT" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
@@ -15360,6 +16446,11 @@
 /obj/structure/barricade/cutout,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
+"XY" = (
+/obj/structure/table/glass,
+/obj/random/awayloot/looseloot,
+/turf/simulated/floor/tiled/steel,
+/area/awaymission/diescraper/indoors/floor11)
 "XZ" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/bmarble,
@@ -15421,6 +16512,17 @@
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor7)
+"Yi" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/toy/tennis/blue{
+	pixel_y = 0;
+	pixel_x = -3
+	},
+/obj/item/toy/tennis/red{
+	pixel_x = 4
+	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "Yj" = (
 /obj/structure/closet/jcloset,
 /obj/item/weapon/soap/nanotrasen,
@@ -15514,6 +16616,16 @@
 /obj/machinery/papershredder,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
+"Yz" = (
+/obj/machinery/light{
+	dir = 4;
+	pixel_y = 0
+	},
+/obj/structure/closet/crate/secure/large,
+/obj/random/material,
+/obj/random/material,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "YA" = (
 /obj/machinery/optable,
 /turf/simulated/floor/tiled/white,
@@ -15586,6 +16698,13 @@
 /obj/item/clothing/head/helmet/bucket/wood,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor7)
+"YM" = (
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/unsimulated/floor/wood/alt/parquet,
+/area/awaymission/diescraper/indoors/floor9)
 "YN" = (
 /obj/machinery/light{
 	pixel_y = 0;
@@ -15645,6 +16764,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4)
+"YV" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating,
+/area/awaymission/diescraper/indoors/floor11)
 "YW" = (
 /obj/structure/flora/bboulder1,
 /turf/simulated/floor/water/turfpack/station{
@@ -15683,6 +16806,10 @@
 /obj/item/weapon/rcd_ammo/large,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
+"Ze" = (
+/obj/structure/barricade/cutout/fluke,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "Zf" = (
 /obj/structure/bed/chair/oldsofa/left,
 /turf/simulated/floor/carpet/brown,
@@ -15797,6 +16924,7 @@
 "Zt" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/industrial/warning/color/tile/yellow,
+/obj/item/tape/engineering,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/sky)
 "Zu" = (
@@ -15912,6 +17040,10 @@
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
+"ZI" = (
+/obj/structure/bed/chair/oldsofa/left,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/awaymission/diescraper/indoors/floor10)
 "ZJ" = (
 /obj/machinery/vending/coffee{
 	dir = 4;
@@ -15959,6 +17091,11 @@
 /obj/machinery/photocopier/faxmachine,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
+"ZQ" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/medical/lite,
+/turf/simulated/floor/tiled/eris/dark/techfloor_grid,
+/area/awaymission/diescraper/indoors/floor3)
 "ZR" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
@@ -24905,11 +26042,11 @@ QM
 lV
 ok
 WX
-WX
+XF
 WX
 KR
 vP
-vP
+Dx
 vP
 WX
 WX
@@ -25163,7 +26300,7 @@ QM
 lV
 ok
 WX
-DO
+vg
 vP
 vP
 vP
@@ -29285,19 +30422,19 @@ ci
 ci
 Ss
 ET
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+ef
+OL
+Is
+OL
+sb
+OL
+OL
+OL
+LH
+OL
+Rd
+eC
+ZQ
 ET
 Ss
 ci
@@ -29543,19 +30680,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+ef
+OL
+Is
+OL
+sb
+OL
+OL
+qw
+LH
+HZ
+Rd
+OL
+ZQ
 HI
 Ss
 ci
@@ -29801,19 +30938,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+ef
+OL
+Is
+OL
+sb
+OL
+OL
+OL
+LH
+OL
+Rd
+XS
+ZQ
 HI
 Ss
 ci
@@ -30059,19 +31196,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+ef
+OL
+Is
+OL
+sb
+OL
+OL
+OL
+LH
+qw
+Rd
+OL
+ZQ
 HI
 Ss
 ci
@@ -30317,19 +31454,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
 HI
 Ss
 ci
@@ -30575,19 +31712,19 @@ ci
 ci
 Ss
 ET
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
 ET
 Ss
 ci
@@ -30833,19 +31970,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
+eb
+OL
+QR
+OL
+OL
+OL
 ET
 ET
 ET
 ET
-TC
-TC
-TC
+OL
+OL
+OL
 HI
 Ss
 ci
@@ -31091,19 +32228,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
+eb
+OL
+QR
+OL
+OL
+OL
 ho
 ho
 oK
 ET
-TC
-TC
-TC
+OL
+OL
+OL
 HI
 Ss
 ci
@@ -31349,19 +32486,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
+en
+OL
+wz
+Un
+OL
+OL
 ho
 ho
 qQ
 ET
-TC
-TC
-TC
+OL
+OL
+OL
 HI
 Ss
 ci
@@ -31607,19 +32744,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
+en
+OL
+wz
+OL
+OL
+OL
 ET
 ET
 ET
 ET
-TC
-TC
-TC
+OL
+OL
+OL
 HI
 Ss
 ci
@@ -31865,19 +33002,19 @@ ci
 ci
 Ss
 ET
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
 ET
 Ss
 ci
@@ -32123,19 +33260,19 @@ ci
 ci
 Ss
 kt
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+vn
+OL
+vn
+OL
+OL
+OL
+OL
+OL
+QI
+DB
+Ck
+vN
+vN
 kt
 Ss
 ci
@@ -32381,19 +33518,19 @@ ci
 ci
 Ss
 HI
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+OL
+Bu
+OL
+OL
+OL
+OL
+OL
+OL
+fT
+MP
+DT
+DT
+DT
 HI
 Ss
 ci
@@ -32505,7 +33642,7 @@ yl
 yl
 yl
 yl
-rm
+IH
 Pk
 qG
 qG
@@ -32639,19 +33776,19 @@ ci
 ci
 Ss
 kt
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+vn
+OL
+vn
+OL
+OL
+OL
+OL
+OL
+yM
+OL
+OL
+OL
+OL
 kt
 Ss
 ci
@@ -32897,19 +34034,19 @@ ci
 ci
 Ss
 kt
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+ET
+OL
+OL
+OL
+KV
 kt
 Ss
 ci
@@ -33155,19 +34292,19 @@ ci
 ci
 Ss
 ET
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
-TC
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+OL
+Cv
+OL
+HK
+Bq
+KV
 ET
 Ss
 ci
@@ -35990,7 +37127,7 @@ Mg
 Mg
 Mg
 Mg
-wt
+Mg
 Mg
 Mg
 Mg
@@ -47867,7 +49004,7 @@ Ss
 Ss
 Zt
 GD
-GD
+oR
 wI
 Zt
 Ss
@@ -49415,7 +50552,7 @@ vY
 Rl
 Lo
 Lo
-Lo
+Ic
 Lo
 eS
 eS
@@ -49479,7 +50616,7 @@ OO
 OO
 Fo
 Fo
-VD
+It
 Fo
 fB
 Ss
@@ -49737,7 +50874,7 @@ OO
 OO
 OO
 OO
-Fo
+ek
 Fo
 fB
 Ss
@@ -49931,11 +51068,11 @@ eS
 eS
 eS
 Lo
+xm
 Lo
-Lo
-eS
-eS
-eS
+hf
+hf
+hf
 eS
 Lo
 JZ
@@ -49985,7 +51122,7 @@ ci
 Ss
 fB
 Fo
-Fo
+ek
 OO
 Rv
 Rv
@@ -50132,7 +51269,7 @@ dP
 dP
 dK
 Bw
-Bw
+Ps
 Bw
 BC
 Px
@@ -50185,7 +51322,7 @@ Ss
 UZ
 Lo
 Ok
-Lo
+fO
 Rl
 Lo
 Lo
@@ -50450,7 +51587,7 @@ Lo
 Lo
 Lo
 wL
-PQ
+Eu
 PQ
 Lo
 Lo
@@ -50645,7 +51782,7 @@ Wo
 xT
 aS
 aS
-Bw
+Kv
 me
 me
 me
@@ -50901,7 +52038,7 @@ In
 Wo
 dP
 dP
-Bw
+Kv
 Bw
 Bw
 me
@@ -50958,7 +52095,7 @@ ci
 Ss
 UZ
 Lo
-Si
+MU
 Lo
 RR
 Lo
@@ -50969,7 +52106,7 @@ Lo
 Lo
 Lo
 Lo
-Lo
+Ic
 Lo
 fd
 fd
@@ -51022,7 +52159,7 @@ OO
 OO
 Ma
 lA
-ol
+Ez
 XK
 OO
 OO
@@ -51159,15 +52296,15 @@ Wo
 dP
 dP
 dK
-Bw
-Bw
-Bw
-me
+Kv
 Bw
 Bw
 me
 Bw
 Bw
+me
+Bw
+Ps
 Bw
 BC
 Wo
@@ -51222,7 +52359,7 @@ Lo
 Lo
 Lo
 Lo
-Lo
+Ic
 Lo
 Lo
 Lo
@@ -51414,15 +52551,15 @@ In
 In
 Wo
 zd
-dK
-dK
-Bw
-Bw
+JS
+JS
+Kv
+Kv
 Bw
 Bw
 me
-Bw
-Bw
+Kv
+Kv
 me
 Bw
 Bw
@@ -51677,7 +52814,7 @@ dK
 Bw
 Bw
 Bw
-Bw
+Ps
 me
 Bw
 Bw
@@ -51933,14 +53070,14 @@ BC
 dK
 dK
 dK
-Bw
-Bw
-Bw
-me
+HN
 Bw
 Bw
 me
 Bw
+Bw
+me
+HN
 Bw
 Bw
 BC
@@ -52253,7 +53390,7 @@ WZ
 rZ
 yN
 Lo
-Lo
+xm
 Lo
 Lo
 vM
@@ -52314,11 +53451,11 @@ Rv
 Rv
 Rv
 Rv
+Wr
 OO
-OO
-OO
+Wr
 Fo
-Fo
+ek
 fB
 xo
 xo
@@ -52369,8 +53506,8 @@ In
 In
 Wo
 Hh
-Iw
-Iw
+VN
+Wi
 IL
 Uf
 Hh
@@ -52457,7 +53594,7 @@ Bw
 Bw
 Bw
 Bw
-Bw
+Ps
 Bw
 zd
 Wo
@@ -52565,18 +53702,18 @@ ci
 Ss
 fB
 Fo
+ek
+Fo
+OO
+OO
+OO
+OO
+OO
+OO
+OO
 Fo
 Fo
-OO
-OO
-OO
-OO
-OO
-OO
-OO
-Fo
-Fo
-Fo
+my
 fB
 Ss
 Ss
@@ -52627,8 +53764,8 @@ In
 In
 Wo
 oD
-Iw
-Iw
+VN
+Wi
 IL
 eJ
 Hh
@@ -52637,7 +53774,7 @@ Iw
 Iw
 Df
 Df
-Df
+Oq
 Df
 bX
 Hh
@@ -52765,15 +53902,15 @@ Ss
 gi
 Lo
 Lo
+fO
+Lo
+Ic
 Lo
 Lo
 Lo
 Lo
 Lo
-Lo
-Lo
-Lo
-Lo
+fO
 eS
 Lo
 JZ
@@ -52830,9 +53967,9 @@ Fo
 Fo
 OO
 OO
-OO
+Wr
 Fo
-Fo
+Lm
 VD
 Fo
 fB
@@ -52885,14 +54022,14 @@ In
 In
 Wo
 oD
-Iw
-Iw
+VN
+VN
 Hh
 Hh
 Hh
 Hh
-Iw
-Iw
+wt
+PN
 PO
 YE
 YE
@@ -52962,10 +54099,10 @@ In
 In
 Wo
 BC
+JX
+JX
 Bw
-Bw
-Bw
-Bw
+JX
 Bw
 me
 Bw
@@ -53081,7 +54218,7 @@ ci
 Ss
 fB
 Fo
-Fo
+ek
 Fo
 Fo
 Fo
@@ -53143,8 +54280,8 @@ In
 In
 Wo
 oD
-Iw
-Iw
+VN
+VN
 Hh
 Hh
 Hh
@@ -53153,7 +54290,7 @@ Iw
 Iw
 mM
 Df
-Df
+Oq
 Df
 bX
 Hh
@@ -53229,8 +54366,8 @@ zd
 zd
 BC
 zd
-Bw
-Bw
+Kv
+Kv
 zd
 zd
 BC
@@ -53401,11 +54538,11 @@ In
 In
 Wo
 oD
-Iw
-Iw
-Iw
-Iw
-Iw
+VN
+VN
+VN
+VN
+VN
 Hh
 Iw
 Iw
@@ -53487,7 +54624,7 @@ Wo
 Wo
 Wo
 Wo
-LO
+uj
 LO
 Ss
 Ss
@@ -53659,17 +54796,17 @@ In
 In
 Wo
 Hh
-Iw
-Iw
-Iw
-Iw
-Iw
+Pc
+VN
+VN
+VN
+VN
 rP
 Iw
 Iw
 mM
 Df
-Df
+Oq
 Df
 bX
 Hh
@@ -53744,9 +54881,9 @@ In
 In
 In
 Wo
-GD
+QG
 LO
-LO
+uj
 vQ
 vQ
 LO
@@ -53917,11 +55054,11 @@ In
 In
 Wo
 oD
-Iw
-Iw
-Iw
-Iw
-Iw
+La
+VN
+xN
+VN
+VN
 rP
 Iw
 Iw
@@ -54175,17 +55312,17 @@ In
 In
 Wo
 oD
-Iw
-Iw
-Iw
-Iw
-Iw
+La
+VN
+VN
+VN
+VN
 rP
 Iw
-Iw
+yV
 mM
 Df
-Df
+Oq
 Df
 bX
 Hh
@@ -54433,14 +55570,14 @@ In
 In
 Wo
 oD
-Iw
-Iw
-Iw
-Iw
-Iw
+La
+VN
+VN
+VN
+VN
 rP
-Iw
-Iw
+YV
+QX
 ma
 Ec
 Ec
@@ -54691,14 +55828,14 @@ In
 In
 Wo
 oD
-Iw
-Iw
-Iw
-Iw
-Iw
+La
+VN
+VN
+VN
+VN
 rP
-Iw
-Iw
+YV
+IJ
 AQ
 Df
 Df
@@ -54949,14 +56086,14 @@ In
 In
 Wo
 Hh
-Iw
-Iw
-Iw
-Iw
-Iw
+yd
+VN
+xN
+VN
+FD
 Hh
-Iw
-Iw
+wO
+IJ
 lG
 Df
 Be
@@ -55207,17 +56344,17 @@ In
 In
 Wo
 Az
-Iw
-Iw
-Iw
-Iw
-Iw
+VN
+VN
+VN
+VN
+XY
 oD
-Iw
-Iw
+YV
+IJ
 lG
 Df
-Be
+vs
 Df
 bX
 Hh
@@ -55465,14 +56602,14 @@ In
 In
 Wo
 oD
-Iw
-Iw
-Iw
-Iw
-Iw
+VN
+VN
+VN
+VN
+XY
 oD
-Iw
-Iw
+YV
+IJ
 kh
 Df
 dZ
@@ -55723,14 +56860,14 @@ In
 In
 Wo
 Az
-Iw
-Iw
-Iw
-Iw
-Iw
+La
+VN
+VN
+VN
+XY
 oD
-Iw
-Iw
+YV
+IJ
 bX
 bX
 bX
@@ -55981,11 +57118,11 @@ In
 In
 Wo
 Az
-Iw
-Iw
-Iw
-Iw
-Iw
+La
+VN
+xN
+VN
+FD
 Hh
 Hh
 Hh
@@ -56239,14 +57376,14 @@ In
 In
 Wo
 Hh
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+lM
+zF
+zF
+HA
+VN
+VN
+VN
+Dd
 QN
 QN
 eM
@@ -58697,11 +59834,11 @@ Wo
 ul
 eR
 GU
-GU
+Up
 mq
 mq
 mq
-GU
+Up
 GU
 dx
 Vz
@@ -58913,7 +60050,7 @@ iL
 Yr
 rg
 oL
-tr
+lu
 tr
 tr
 er
@@ -59165,7 +60302,7 @@ Xj
 Xj
 Xj
 Xj
-Xj
+eA
 Xj
 iL
 qE
@@ -59230,7 +60367,7 @@ hB
 hB
 hB
 dx
-yP
+pT
 yP
 yP
 yP
@@ -59417,7 +60554,7 @@ Xj
 Xj
 rw
 rq
-Xj
+eA
 Xj
 Xj
 Xj
@@ -60448,7 +61585,7 @@ Xj
 Xj
 Xj
 Xj
-Xj
+eA
 Xj
 Xj
 Xj
@@ -60461,7 +61598,7 @@ ws
 dR
 dR
 dR
-dR
+BO
 dR
 dR
 dR
@@ -60724,7 +61861,7 @@ dR
 cA
 cA
 dR
-dR
+BO
 wS
 Rp
 mn
@@ -60982,7 +62119,7 @@ dR
 Hu
 Pr
 dR
-dR
+BO
 wS
 Rp
 mo
@@ -61278,7 +62415,7 @@ Wo
 kv
 AF
 AF
-AF
+Jr
 AF
 dx
 dx
@@ -62267,10 +63404,10 @@ ws
 tr
 jL
 UB
-tr
+xR
 iL
 iM
-rG
+Ow
 rG
 rG
 iL
@@ -62309,7 +63446,7 @@ In
 Wo
 ul
 vV
-oT
+Yi
 AF
 aC
 dx
@@ -62534,7 +63671,7 @@ gL
 iL
 YT
 RZ
-EZ
+wJ
 ql
 iL
 Xj
@@ -63024,9 +64161,9 @@ In
 Wo
 vO
 Cc
-oN
-oN
-qE
+vK
+tN
+XO
 Xj
 Xj
 Xj
@@ -63282,8 +64419,8 @@ In
 Wo
 vO
 nt
-tR
-oN
+EJ
+Ky
 VE
 Xj
 Xj
@@ -63312,7 +64449,7 @@ iL
 iL
 iL
 Xj
-cE
+Jq
 Rr
 sA
 Xj
@@ -63368,7 +64505,7 @@ jy
 dx
 XB
 lf
-RV
+ow
 RV
 RV
 RV
@@ -64348,7 +65485,7 @@ Xj
 Rr
 rr
 Xj
-Xj
+eA
 Xj
 ws
 Wo
@@ -64387,9 +65524,9 @@ OS
 vD
 AF
 AF
+Jr
 AF
-AF
-AF
+Jr
 AF
 UF
 dO
@@ -64841,7 +65978,7 @@ VE
 PW
 sF
 pl
-ac
+gX
 Cu
 ws
 Xj
@@ -65613,7 +66750,7 @@ nj
 nj
 VE
 iB
-Pf
+Bb
 pl
 ac
 hr
@@ -65924,12 +67061,12 @@ AF
 AF
 gB
 CL
-CL
+pM
 CL
 dx
-AF
-AF
-AF
+sj
+Jk
+sj
 AF
 dx
 ui
@@ -66181,13 +67318,13 @@ ul
 AF
 AF
 dx
-CL
-CL
-CL
+zC
+Il
+Vz
 dx
-AF
-AF
-AF
+sj
+TT
+TT
 AF
 dx
 Mr
@@ -66443,9 +67580,9 @@ dx
 dx
 dx
 dx
-AF
-AF
-AF
+kj
+TT
+TT
 AF
 dx
 LB
@@ -66656,7 +67793,7 @@ Xj
 EU
 Xj
 Xj
-Xj
+eA
 Xj
 VE
 oN
@@ -66698,7 +67835,7 @@ AF
 AF
 AF
 AF
-AF
+YM
 AF
 AF
 AF
@@ -66910,7 +68047,7 @@ ml
 ws
 Xj
 Xj
-Xj
+eA
 Xj
 Xj
 Xj
@@ -66956,8 +68093,8 @@ AF
 AF
 AF
 AF
-AF
-AF
+Jr
+Jr
 AF
 AF
 AF
@@ -66969,7 +68106,7 @@ uO
 AF
 AF
 AF
-uO
+NV
 AF
 AF
 AF
@@ -67210,13 +68347,13 @@ In
 Wo
 ul
 AF
+VM
 AF
 AF
 AF
-AF
-AF
-AF
-AF
+Hj
+Hj
+GZ
 AF
 AF
 AF
@@ -67229,7 +68366,7 @@ AF
 AF
 AF
 AF
-AF
+Jr
 AF
 AF
 bQ
@@ -68763,7 +69900,7 @@ kv
 kv
 ul
 ul
-kv
+ul
 kv
 kv
 ul
@@ -68962,15 +70099,15 @@ vO
 vO
 Yt
 fZ
-oN
-oN
+Mf
+Mf
 vO
-oN
-oN
-oN
-oN
-oN
-oN
+lW
+xi
+ev
+Dh
+Dh
+vI
 vO
 Wo
 In
@@ -69017,19 +70154,19 @@ In
 In
 Wo
 ul
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+SD
+AF
+AF
+AX
+dx
+AF
+AF
+hB
+mi
+iH
+ST
+hB
+AF
 ul
 Wo
 In
@@ -69220,15 +70357,15 @@ vO
 vO
 uE
 fZ
-oN
-oN
+Mf
+Mf
 vO
-oN
-oN
-oN
-oN
-oN
-oN
+lW
+xi
+Ku
+Dh
+Dh
+Dh
 ws
 Wo
 In
@@ -69275,19 +70412,19 @@ In
 In
 Wo
 kv
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+AF
+AF
+rz
+AF
+dx
+AF
+AF
+hB
+yc
+vj
+vj
+hB
+AF
 kv
 Wo
 In
@@ -69481,12 +70618,12 @@ vO
 LR
 LR
 vO
-oN
-oN
-oN
-oN
-oN
-oN
+Dl
+KN
+ha
+hw
+hw
+hw
 ws
 Wo
 In
@@ -69533,19 +70670,19 @@ In
 In
 Wo
 kv
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+AF
+AF
+AF
+AF
+dx
+AF
+AF
+hB
+qT
+hB
+qT
+hB
+AF
 kv
 Wo
 In
@@ -69732,19 +70869,19 @@ In
 In
 Wo
 vO
-oN
-oN
-oN
+Ki
+Ki
+Ki
 vO
 LR
 LR
 vO
-oN
-oN
-oN
-oN
-oN
-oN
+Ls
+jc
+Im
+hw
+hw
+hw
 vO
 Wo
 In
@@ -69791,19 +70928,19 @@ In
 In
 Wo
 ul
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+AF
+AF
+mw
+AF
+US
+AF
+AF
+hB
+hB
+qT
+hB
+tz
+AF
 ul
 Wo
 In
@@ -69990,19 +71127,19 @@ In
 In
 Wo
 vO
-oN
-oN
-oN
+Ki
+Ki
+Ki
 vO
 LR
 LR
 vO
-oN
-oN
-oN
-oN
-oN
-oN
+ed
+SR
+vL
+QW
+fy
+hw
 vO
 Wo
 In
@@ -70049,19 +71186,19 @@ In
 In
 Wo
 ul
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+lt
+nT
+bh
+LB
+dx
+gA
+AF
+hB
+hB
+hB
+hB
+hB
+AF
 ul
 Wo
 In
@@ -70248,19 +71385,19 @@ In
 In
 Wo
 ws
-oN
-oN
-oN
+Pq
+un
+Ov
 vO
 LR
 LR
 vO
 vO
-oN
-oN
-oN
-oN
-oN
+SR
+Yz
+NP
+IM
+hw
 ws
 Wo
 In
@@ -70307,19 +71444,19 @@ In
 In
 Wo
 kv
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+LB
+LB
+LB
+LB
+dx
+AF
+AF
+sp
+jK
+Vk
+jK
+sp
+AF
 kv
 Wo
 In
@@ -70368,12 +71505,12 @@ Wo
 zQ
 rN
 EW
-Gn
+mc
 ea
 rl
 jh
 Gn
-Gn
+mc
 Gn
 Gn
 Ut
@@ -70506,19 +71643,19 @@ In
 In
 Wo
 ws
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+Pq
+un
+Ov
+kq
+hw
+hw
+WY
 vO
 vO
 vO
-oN
-oN
-oN
+pE
+hw
+hw
 ws
 Wo
 In
@@ -70565,19 +71702,19 @@ In
 In
 Wo
 kv
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+KU
+Nw
+Nw
+LB
+dx
+AF
+AF
 ul
 ul
 ul
 ul
 ul
-Or
+AF
 kv
 Wo
 In
@@ -70764,19 +71901,19 @@ In
 In
 Wo
 vO
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+hw
+hw
+hw
+hw
+hw
+hw
+hw
 vO
 rf
 HE
-oN
-oN
-oN
+hw
+hw
+hw
 vO
 Wo
 In
@@ -70823,19 +71960,19 @@ In
 In
 Wo
 ul
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+dx
+dx
+dx
+dx
+dx
+AF
+AF
 fA
 hN
 ul
 yz
 fA
-Or
+AF
 ul
 Wo
 In
@@ -71022,19 +72159,19 @@ In
 In
 Wo
 vO
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+dW
+OA
+Xy
+hw
+hw
+hw
+hw
 vO
 bv
 HE
-oN
-oN
-oN
+hw
+hw
+hw
 vO
 Wo
 In
@@ -71081,19 +72218,19 @@ In
 In
 Wo
 ul
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+dx
+dx
+dx
+dx
+dx
+AF
+AF
 fA
 Hw
 ul
 bL
 fA
-Or
+AF
 ul
 Wo
 In
@@ -71149,7 +72286,7 @@ Gn
 Gn
 Gn
 Gn
-Gn
+jn
 nD
 fa
 Ut
@@ -71280,19 +72417,19 @@ In
 In
 Wo
 ws
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+qs
+OA
+Xy
+hw
+hw
+hw
+hw
 vO
 vO
 vO
-oN
-oN
-oN
+pE
+Ze
+hw
 ws
 Wo
 In
@@ -71339,19 +72476,19 @@ In
 In
 Wo
 kv
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+aQ
+Qs
+Qg
+vf
+dx
+AF
+AF
 ul
 ul
 ul
 ul
 ul
-Or
+AF
 kv
 Wo
 In
@@ -71411,7 +72548,7 @@ Ut
 Ut
 Ut
 Ut
-zQ
+Ut
 Wo
 In
 In
@@ -71538,19 +72675,19 @@ In
 In
 Wo
 ws
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+hw
+hw
+hw
+hw
+hw
+hw
+hw
+WY
+hw
+WY
+hw
+hw
+hw
 ws
 Wo
 In
@@ -71597,19 +72734,19 @@ In
 In
 Wo
 kv
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+vf
+kn
+Go
+hA
+dx
+AF
+AF
+CR
+gF
+OS
+OS
+CR
+AF
 kv
 Wo
 In
@@ -71796,19 +72933,19 @@ In
 In
 Wo
 vO
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+dm
+Ki
+Ki
+Ki
+hw
+hw
+hw
+hw
+hw
+Ze
+hw
+hw
+Ze
 vO
 Wo
 In
@@ -71855,19 +72992,19 @@ In
 In
 Wo
 ul
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+vf
+vf
+vf
+vf
+dx
+gA
+AF
+rE
+rE
+rE
+rE
+OS
+AF
 ul
 Wo
 In
@@ -71982,8 +73119,8 @@ Hk
 Hk
 Hk
 Hk
-Hk
-Hk
+fv
+tP
 Hk
 Hk
 Hk
@@ -72054,19 +73191,19 @@ In
 In
 Wo
 vO
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+dm
+Ki
+Ki
+Ki
+hw
+hw
+Ze
+hw
+hw
+hw
+hw
+hw
+hw
 vO
 Wo
 In
@@ -72113,19 +73250,19 @@ In
 In
 Wo
 ul
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+yy
+AF
+MZ
+AF
+US
+AF
+AF
+zI
+zI
+KJ
+zI
+OS
+AF
 ul
 Wo
 In
@@ -72174,16 +73311,16 @@ Wo
 Ut
 mW
 Gn
-Gn
+mc
 Gn
 Gn
 lB
 lB
+Ff
 Kb
 Kb
 Kb
-Kb
-Kb
+Ff
 lB
 Ut
 Wo
@@ -72312,19 +73449,19 @@ In
 In
 Wo
 ws
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+bg
+bg
+bg
+bg
+hw
+zp
+hw
+hw
+hw
+hw
+Ze
+hw
+hw
 ws
 Wo
 In
@@ -72371,19 +73508,19 @@ In
 In
 Wo
 kv
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+AF
+vo
+AF
+AF
+dx
+AF
+AF
+OS
+OS
+gF
+OS
+OS
+AF
 kv
 Wo
 In
@@ -72570,19 +73707,19 @@ In
 In
 Wo
 ws
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+OP
+OP
+OP
+OP
+hw
+hw
+hw
+hw
+hw
+hw
+hw
+hw
+hw
 ws
 Wo
 In
@@ -72629,19 +73766,19 @@ In
 In
 Wo
 kv
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+AF
+MZ
+AF
+AF
+dx
+AF
+AF
+OS
+OS
+OS
+OS
+OS
+AF
 kv
 Wo
 In
@@ -72828,19 +73965,19 @@ In
 In
 Wo
 vO
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
-oN
+ZI
+ZI
+Fa
+ZI
+hw
+hw
+hw
+hw
+hw
+hw
+dy
+hw
+hw
 vO
 Wo
 In
@@ -72887,19 +74024,19 @@ In
 In
 Wo
 ul
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
-Or
+SD
+AF
+AF
+co
+dx
+AF
+AF
+KJ
+rE
+rE
+gr
+OS
+AF
 ul
 Wo
 In
@@ -72949,14 +74086,14 @@ Ut
 hj
 Gn
 Gn
+jn
 Gn
-Gn
 lB
 lB
 lB
 lB
 lB
-lB
+Vf
 lB
 lB
 Ut
@@ -73149,7 +74286,7 @@ kv
 kv
 ul
 ul
-kv
+ul
 kv
 kv
 ul
@@ -73342,7 +74479,7 @@ In
 In
 In
 In
-Wo
+wC
 Wo
 Wo
 Wo
@@ -74825,7 +75962,7 @@ Hk
 Hk
 yj
 MV
-UX
+mt
 IT
 yj
 Hk
