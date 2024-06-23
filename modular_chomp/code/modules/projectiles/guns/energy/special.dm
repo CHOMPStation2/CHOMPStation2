@@ -93,6 +93,8 @@
 	fire_sound = 'sound/weapons/Gunshot_cannon.ogg'
 	slot_flags = SLOT_BELT|SLOT_BACK
 	charge_cost = 2400 //You got 1 shot...
+	self_recharge = TRUE
+	recharge_time = 6 HOURS //This is how to get around rechargers being able to recharge it, I dont wanna rewrite base level code
 	projectile_type = /obj/item/projectile/bullet/magnetic/supercannon //Fuck you.
 	cell_type = /obj/item/weapon/cell/device/weapon
 	battery_lock = 1
