@@ -6706,11 +6706,9 @@
 /area/awaymission/diescraper/indoors/floor10)
 "tN" = (
 /mob/living/simple_mob/vore/aggressive/rat/phoron{
-	size_multiplier = 1.25;
 	name = "giant rat";
-	health = 150;
-	maxhealth = 150;
-	desc = "This rat makes all of the rules."
+	desc = "This rat makes all of the rules.";
+	health = 150
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
@@ -10571,8 +10569,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "EJ" = (
 /obj/machinery/light{
-	dir = 4;
-	light_color = "#DDFFD3"
+	dir = 4
 	},
 /obj/structure/sink{
 	dir = 4;
