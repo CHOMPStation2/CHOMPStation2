@@ -273,7 +273,9 @@
 		if(!(load_method & AM.mag_type) || caliber != AM.caliber || allowed_magazines && !is_type_in_list(A, allowed_magazines))
 			to_chat(user, "<span class='warning'>[AM] won't load into [src]!</span>")
 			return
-		switch(AM.mag_type)
+		var/loading_method = AM.mag_type & load_method
+		if(loading_method == (MAGAZINE & SPEEDLOADER)) loading_method = MAGAZINE //Default to magazine if both are valid
+		switch(loading_method)
 			if(MAGAZINE)
 				if(ammo_magazine)
 					to_chat(user, "<span class='warning'>[src] already has a magazine loaded.</span>") //already a magazine here
