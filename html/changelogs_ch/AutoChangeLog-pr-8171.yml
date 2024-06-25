@@ -1,0 +1,6 @@
+author: "cadyn"
+delete-after: True
+changes:
+  - rscadd: "you can now transfer ammo between magazines and boxes of ammo"
+  - rscadd: "guns now tell you what magazines they accept"
+  - refactor: "ammo simplified drastically"
