@@ -29,6 +29,12 @@
 	name = "Cultist ship."
 	description = "A medium size cult themed ship, it has some basic cultist gear."
 
+/datum/map_template/shelter/superpose/dragoncave
+	shelter_id = "DragonCave"
+	mappath = "modular_chomp/maps/submaps/shelters/DragonCave-18x18.dmm"
+	name = "Dragon Cave"
+	description = "A small cave with treasure featuring a tucked away hotspring."
+
 /datum/map_template/shelter/superpose/DemonPool
 	shelter_id = "DemonPool"
 	mappath = "modular_chomp/maps/submaps/shelters/DemonPool-21x21.dmm"
