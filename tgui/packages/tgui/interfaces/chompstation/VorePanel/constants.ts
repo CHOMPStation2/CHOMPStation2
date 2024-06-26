@@ -1,6 +1,6 @@
 export const stats: (string | undefined)[] = [undefined, 'average', 'bad'];
 
-export const digestModeToColor: Record<string, string | undefined> = {
+export const digestModeToColor = {
   Default: undefined,
   Hold: undefined,
   Digest: 'red',
@@ -15,7 +15,7 @@ export const digestModeToColor: Record<string, string | undefined> = {
   'Encase In Egg': 'blue',
 };
 
-export const reagentToColor: Record<string, string | undefined> = {
+export const reagentToColor = {
   Water: undefined,
   Milk: undefined,
   Cream: undefined,
@@ -30,7 +30,7 @@ export const reagentToColor: Record<string, string | undefined> = {
   Tricordrazine: 'green',
 };
 
-export const digestModeToPreyMode: Record<string, string> = {
+export const digestModeToPreyMode = {
   Hold: 'being held.',
   Digest: 'being digested.',
   Absorb: 'being absorbed.',

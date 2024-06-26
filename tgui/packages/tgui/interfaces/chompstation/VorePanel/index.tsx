@@ -152,7 +152,15 @@ import { VoreUserPreferences } from './VoreUserPreferences';
 export const VorePanel = () => {
   const { act, data } = useBackend<Data>();
 
-  const { inside, our_bellies, selected, soulcatcher, prefs } = data;
+  const {
+    inside,
+    our_bellies,
+    selected,
+    soulcatcher,
+    prefs,
+    show_pictures,
+    icon_overflow,
+  } = data;
 
   const [tabIndex, setTabIndex] = useState(0);
 
@@ -162,12 +170,21 @@ export const VorePanel = () => {
     <VoreBellySelectionAndCustomization
       our_bellies={our_bellies}
       selected={selected}
+      show_pictures={show_pictures}
+      icon_overflow={icon_overflow}
     />
   );
   tabs[1] = (
     <VoreSoulcatcher our_bellies={our_bellies} soulcatcher={soulcatcher} />
   );
-  tabs[2] = <VoreUserPreferences prefs={prefs} selected={selected} />;
+  tabs[2] = (
+    <VoreUserPreferences
+      prefs={prefs}
+      selected={selected}
+      show_pictures={show_pictures}
+      icon_overflow={icon_overflow}
+    />
+  );
 
   return (
     <Window width={990} height={660} theme="abstract">
@@ -196,7 +213,11 @@ export const VorePanel = () => {
           </NoticeBox>
         )) ||
           null}
-        <VoreInsidePanel inside={inside} />
+        <VoreInsidePanel
+          inside={inside}
+          show_pictures={show_pictures}
+          icon_overflow={icon_overflow}
+        />
         <Tabs>
           <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
             Bellies

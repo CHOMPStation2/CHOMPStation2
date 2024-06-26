@@ -1,8 +1,8 @@
 /* eslint react/no-danger: "off" */
+import { KEY } from 'common/keys';
 import { round, toFixed } from 'common/math';
 import { useState } from 'react';
 
-import { KEY_ENTER } from '../../../common/keycodes';
 import { BooleanLike } from '../../../common/react';
 import { useBackend } from '../../backend';
 import {
@@ -262,12 +262,9 @@ export const TicketsPanel = (props) => {
                           fluid
                           placeholder="Enter a message..."
                           value={ticketChat}
-                          onInput={(e, value) => setTicketChat(value)}
-                          onKeyDown={(event) => {
-                            const keyCode = window.event
-                              ? event.which
-                              : event.keyCode;
-                            if (keyCode === KEY_ENTER) {
+                          onInput={(e, value: string) => setTicketChat(value)}
+                          onKeyDown={(e) => {
+                            if (KEY.Enter === e.key) {
                               act('send_msg', { msg: ticketChat });
                               setTicketChat('');
                             }

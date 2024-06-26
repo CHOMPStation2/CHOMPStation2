@@ -3,18 +3,24 @@ import { BooleanLike } from 'common/react';
 import { useBackend } from '../../../backend';
 import { Button, Flex, LabeledList } from '../../../components';
 import { stats } from './constants';
-import { contentData, Data } from './types';
+import { contentData } from './types';
 
 export const VoreContentsPanel = (props: {
   contents: contentData[];
   belly?: string;
   outside?: BooleanLike;
+  show_pictures: BooleanLike;
+  icon_overflow: BooleanLike;
 }) => {
-  const { act, data } = useBackend<Data>();
+  const { act } = useBackend();
 
-  const { contents, belly, outside = false } = props;
-
-  const { show_pictures, icon_overflow } = data;
+  const {
+    contents,
+    belly,
+    outside = false,
+    show_pictures,
+    icon_overflow,
+  } = props;
 
   return (
     <>
