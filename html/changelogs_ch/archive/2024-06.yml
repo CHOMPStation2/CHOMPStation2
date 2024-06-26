@@ -91,3 +91,8 @@
 2024-06-20:
   Kashargul:
   - server: move the asset cache dir in the same way TG did
+2024-06-26:
+  cadyn:
+  - rscadd: you can now transfer ammo between magazines and boxes of ammo
+  - rscadd: guns now tell you what magazines they accept
+  - refactor: ammo simplified drastically
