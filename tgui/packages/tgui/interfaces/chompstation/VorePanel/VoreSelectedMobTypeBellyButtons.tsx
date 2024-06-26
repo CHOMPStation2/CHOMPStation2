@@ -1,14 +1,12 @@
-import { BooleanLike } from 'common/react';
 import { capitalize } from 'common/string';
 
 import { useBackend } from '../../../backend';
 import { Button, LabeledList, Section } from '../../../components';
+import { Data, selectedData } from './types';
 
-type Data = {
-  host_mobtype: { is_cyborg: BooleanLike; is_vore_simple_mob: BooleanLike };
-};
-
-export const VoreSelectedMobTypeBellyButtons = (props) => {
+export const VoreSelectedMobTypeBellyButtons = (props: {
+  belly: selectedData;
+}) => {
   const { act, data } = useBackend<Data>();
   const { host_mobtype } = data;
   const { is_cyborg, is_vore_simple_mob } = host_mobtype;

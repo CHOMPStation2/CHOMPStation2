@@ -1,7 +1,17 @@
 import { useBackend } from '../../../backend';
 import { Button } from '../../../components';
 
-export const VoreUserPreferenceItem = (props) => {
+export const VoreUserPreferenceItem = (props: {
+  spec: {
+    action: string;
+    test: boolean;
+    tooltip: { main: string; enable: string; disable: string };
+    content: { enabled: string; disabled: string };
+    fluid?: boolean;
+    back_color?: { enabled: string; disabled: string };
+  };
+  [rest: string]: any;
+}) => {
   const { act } = useBackend();
 
   const { spec, ...rest } = props;

@@ -1,11 +1,11 @@
-import { useBackend } from '../../../backend';
 import { Box, Collapsible, Section } from '../../../components';
 import { digestModeToPreyMode, reagentToColor } from './constants';
 import { digestModeToColor } from './constants';
+import { insideData } from './types';
 import { VoreContentsPanel } from './VoreContentsPanel';
 
-export const VoreInsidePanel = (props) => {
-  const { act, data } = useBackend();
+export const VoreInsidePanel = (props: { inside: insideData }) => {
+  const { inside } = props;
 
   const {
     absorbed,
@@ -18,7 +18,7 @@ export const VoreInsidePanel = (props) => {
     liq_lvl,
     liq_reagent_type,
     liuq_name,
-  } = data.inside;
+  } = inside;
 
   if (!belly_name) {
     return <Section title="Inside">You aren&apos;t inside anyone.</Section>;

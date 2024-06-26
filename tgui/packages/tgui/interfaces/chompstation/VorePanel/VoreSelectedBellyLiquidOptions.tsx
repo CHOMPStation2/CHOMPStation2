@@ -2,8 +2,11 @@ import { useBackend } from '../../../backend';
 import { Button, LabeledList, Section } from '../../../components';
 import { reagentToColor } from './constants';
 import { LiquidColorInput } from './LiquidColorInput';
+import { selectedData } from './types';
 
-export const VoreSelectedBellyLiquidOptions = (props) => {
+export const VoreSelectedBellyLiquidOptions = (props: {
+  belly: selectedData;
+}) => {
   const { act } = useBackend();
 
   const { belly } = props;

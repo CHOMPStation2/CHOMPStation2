@@ -1,12 +1,16 @@
 import { useBackend } from '../../../backend';
 import { Box, Divider, Flex, Icon, Section, Tabs } from '../../../components';
 import { digestModeToColor } from './constants';
+import { bellyData, selectedData } from './types';
 import { VoreSelectedBelly } from './VoreSelectedBelly';
 
-export const VoreBellySelectionAndCustomization = (props) => {
-  const { act, data } = useBackend();
+export const VoreBellySelectionAndCustomization = (props: {
+  our_bellies: bellyData[];
+  selected: selectedData;
+}) => {
+  const { act } = useBackend();
 
-  const { our_bellies, selected } = data;
+  const { our_bellies, selected } = props;
 
   return (
     <Flex>
@@ -32,10 +36,10 @@ export const VoreBellySelectionAndCustomization = (props) => {
               <Icon name="file-import" ml={0.5} />
             </Tabs.Tab>
             <Divider />
-            {our_bellies.map((belly) => (
+            {our_bellies.map((belly, i) => (
               <Tabs.Tab
-                key={belly}
-                selected={belly.selected}
+                key={i}
+                selected={!!belly.selected}
                 textColor={digestModeToColor[belly.digest_mode]}
                 onClick={() => act('bellypick', { bellypick: belly.ref })}
               >
@@ -43,7 +47,7 @@ export const VoreBellySelectionAndCustomization = (props) => {
                   inline
                   textColor={
                     (belly.selected && digestModeToColor[belly.digest_mode]) ||
-                    null
+                    undefined
                   }
                 >
                   {belly.name} ({belly.contents})

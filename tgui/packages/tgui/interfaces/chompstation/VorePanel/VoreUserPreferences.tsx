@@ -10,10 +10,11 @@ import {
   Section,
 } from '../../../components';
 import { digestModeToColor } from './constants';
+import { Data } from './types';
 import { VoreUserPreferenceItem } from './VoreUserPreferenceItem';
 
 export const VoreUserPreferences = (props) => {
-  const { act, data } = useBackend();
+  const { act, data } = useBackend<Data>();
 
   const {
     digestable,

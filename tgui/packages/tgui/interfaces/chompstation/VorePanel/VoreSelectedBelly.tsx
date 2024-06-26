@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Tabs } from '../../../components';
+import { selectedData } from './types';
 import { VoreContentsPanel } from './VoreContentsPanel';
 import { VoreSelectedBellyControls } from './VoreSelectedBellyControls';
 import { VoreSelectedBellyDescriptions } from './VoreSelectedBellyDescriptions';
@@ -10,11 +11,10 @@ import { VoreSelectedBellyLiquidOptions } from './VoreSelectedBellyLiquidOptions
 import { VoreSelectedBellyOptions } from './VoreSelectedBellyOptions';
 import { VoreSelectedBellySounds } from './VoreSelectedBellySounds';
 import { VoreSelectedBellyVisuals } from './VoreSelectedBellyVisuals';
-
 /**
  * Subtemplate of VoreBellySelectionAndCustomization
  */
-export const VoreSelectedBelly = (props) => {
+export const VoreSelectedBelly = (props: { belly: selectedData }) => {
   const { belly } = props;
   const { contents } = belly;
 

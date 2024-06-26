@@ -305,9 +305,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"tail_extra_overlay2" = selected.tail_extra_overlay2,
 			"noise_freq" = selected.noise_freq,
 			"item_digest_logs" = selected.item_digest_logs,
-			"private_struggle" = selected.private_struggle,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
+			"private_struggle" = selected.private_struggle,
 		)
 
 		var/list/addons = list()
@@ -558,24 +558,25 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	)
 	//CHOMPAdd Start, Soulcatcher
 	var/list/stored_souls = list()
-	for(var/soul in host.soulgem.brainmobs)
-		var/list/info = list("displayText" = "[soul]", "value" = "\ref[soul]")
-		stored_souls.Add(list(info))
-	data["soulcatcher"] = list(
-		"active" = host.soulgem.flag_check(SOULGEM_ACTIVE),
-		"name" = host.soulgem.name,
-		"caught_souls" = stored_souls,
-		"selected_soul" = host.soulgem.selected_soul,
-		"selected_sfx" = host.soulgem.linked_belly,
-		"interior_design" =  host.soulgem.inside_flavor,
-		"catch_self" = host.soulgem.flag_check(NIF_SC_CATCHING_ME),
-		"catch_prey" = host.soulgem.flag_check(NIF_SC_CATCHING_OTHERS),
-		"ext_hearing" = host.soulgem.flag_check(NIF_SC_ALLOW_EARS),
-		"ext_vision" = host.soulgem.flag_check(NIF_SC_ALLOW_EYES),
-		"mind_backups" = host.soulgem.flag_check(NIF_SC_BACKUPS),
-		"ar_projecting" = host.soulgem.flag_check(NIF_SC_PROJECTING),
-		"show_vore_sfx" = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
-	)
+	data["soulcatcher"] = null
+	if(host.soulgem)
+		data["soulcatcher"] = list()
+		for(var/soul in host.soulgem.brainmobs)
+			var/list/info = list("displayText" = "[soul]", "value" = "\ref[soul]")
+			stored_souls.Add(list(info))
+		data["soulcatcher"]["active"] = host.soulgem.flag_check(SOULGEM_ACTIVE)
+		data["soulcatcher"]["name"] = host.soulgem.name
+		data["soulcatcher"]["caught_souls"] = stored_souls
+		data["soulcatcher"]["selected_soul"] = host.soulgem.selected_soul
+		data["soulcatcher"]["selected_sfx"] = host.soulgem.linked_belly
+		data["soulcatcher"]["interior_design"] =  host.soulgem.inside_flavor
+		data["soulcatcher"]["catch_self"] = host.soulgem.flag_check(NIF_SC_CATCHING_ME)
+		data["soulcatcher"]["catch_prey"] = host.soulgem.flag_check(NIF_SC_CATCHING_OTHERS)
+		data["soulcatcher"]["ext_hearing"] = host.soulgem.flag_check(NIF_SC_ALLOW_EARS)
+		data["soulcatcher"]["ext_vision"] = host.soulgem.flag_check(NIF_SC_ALLOW_EYES)
+		data["soulcatcher"]["mind_backups"] = host.soulgem.flag_check(NIF_SC_BACKUPS)
+		data["soulcatcher"]["ar_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
+		data["soulcatcher"]["show_vore_sfx"] = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
 		var/mob/living/H = host

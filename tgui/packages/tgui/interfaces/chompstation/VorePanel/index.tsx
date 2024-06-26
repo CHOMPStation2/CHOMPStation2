@@ -1,9 +1,9 @@
-import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { useBackend } from '../../../backend';
 import { Button, Flex, Icon, NoticeBox, Tabs } from '../../../components';
 import { Window } from '../../../layouts';
+import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
 import { VoreSoulcatcher } from './VoreSoulcatcher';
@@ -150,14 +150,23 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  */
 
 export const VorePanel = () => {
-  const { act, data } = useBackend<{ unsaved_changes: BooleanLike }>();
+  const { act, data } = useBackend<Data>();
+
+  const { inside, our_bellies, selected, soulcatcher } = data;
 
   const [tabIndex, setTabIndex] = useState(0);
 
   const tabs: React.JSX.Element[] = [];
 
-  tabs[0] = <VoreBellySelectionAndCustomization />;
-  tabs[1] = <VoreSoulcatcher />;
+  tabs[0] = (
+    <VoreBellySelectionAndCustomization
+      our_bellies={our_bellies}
+      selected={selected}
+    />
+  );
+  tabs[1] = (
+    <VoreSoulcatcher our_bellies={our_bellies} soulcatcher={soulcatcher} />
+  );
   tabs[2] = <VoreUserPreferences />;
 
   return (
@@ -187,7 +196,7 @@ export const VorePanel = () => {
           </NoticeBox>
         )) ||
           null}
-        <VoreInsidePanel />
+        <VoreInsidePanel inside={inside} />
         <Tabs>
           <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
             Bellies
