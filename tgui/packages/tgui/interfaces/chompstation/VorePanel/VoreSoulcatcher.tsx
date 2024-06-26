@@ -141,30 +141,32 @@ const VoreSoulcatcherSection = (props: {
               </Box>
             </LabeledList.Item>
           )}
-          <LabeledList.Item label="Global Options">
-            <Box>
-              <Button.Confirm
-                icon="tornado"
-                tooltip="Release all captured souls as ghosts."
-                tooltipPosition="bottom"
-                confirmColor="green"
-                confirmIcon="triangle-exclamation"
-                onClick={() => act('soulcatcher_release_all')}
-              >
-                Release Souls
-              </Button.Confirm>
-              <Button.Confirm
-                icon="eraser"
-                tooltip="Delete all captured souls if preferences align or release them."
-                tooltipPosition="bottom"
-                color="red"
-                confirmIcon="triangle-exclamation"
-                onClick={() => act('soulcatcher_erase_all')}
-              >
-                Erase Souls
-              </Button.Confirm>
-            </Box>
-          </LabeledList.Item>
+          {caught_souls.length && (
+            <LabeledList.Item label="Global Options">
+              <Box>
+                <Button.Confirm
+                  icon="tornado"
+                  tooltip="Release all captured souls as ghosts."
+                  tooltipPosition="bottom"
+                  confirmColor="green"
+                  confirmIcon="triangle-exclamation"
+                  onClick={() => act('soulcatcher_release_all')}
+                >
+                  Release Souls
+                </Button.Confirm>
+                <Button.Confirm
+                  icon="eraser"
+                  tooltip="Delete all captured souls if preferences align or release them."
+                  tooltipPosition="bottom"
+                  color="red"
+                  confirmIcon="triangle-exclamation"
+                  onClick={() => act('soulcatcher_erase_all')}
+                >
+                  Erase Souls
+                </Button.Confirm>
+              </Box>
+            </LabeledList.Item>
+          )}
           <LabeledList.Item label="Global Settings">
             <Box>
               <Button
