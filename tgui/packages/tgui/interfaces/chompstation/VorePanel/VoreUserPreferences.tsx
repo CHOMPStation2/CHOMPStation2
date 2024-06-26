@@ -1,3 +1,4 @@
+import { BooleanLike } from 'common/react';
 import { capitalize } from 'common/string';
 
 import { useBackend } from '../../../backend';
@@ -10,12 +11,16 @@ import {
   Section,
 } from '../../../components';
 import { digestModeToColor } from './constants';
-import { Data } from './types';
+import { Data, localPrefs, prefData, selectedData } from './types';
 import { VoreUserPreferenceItem } from './VoreUserPreferenceItem';
 
-export const VoreUserPreferences = (props) => {
-  const { act, data } = useBackend<Data>();
+export const VoreUserPreferences = (props: {
+  prefs: prefData;
+  selected: selectedData;
+}) => {
+  const { data, act } = useBackend<Data>();
 
+  const { prefs, selected } = props;
   const {
     digestable,
     absorbable,
@@ -62,11 +67,11 @@ export const VoreUserPreferences = (props) => {
     soulcatcher_allow_capture,
     soulcatcher_allow_transfer,
     soulcatcher_allow_deletion,
-  } = data.prefs;
+  } = prefs;
 
-  const { show_pictures, icon_overflow, selected } = data;
+  const { show_pictures, icon_overflow } = data;
 
-  const preferences = {
+  const preferences: localPrefs = {
     digestion: {
       action: 'toggle_digest',
       test: digestable,
@@ -650,12 +655,14 @@ export const VoreUserPreferences = (props) => {
           (soulcatcher_allow_deletion === 1 &&
             'Click here to allow the deletion of your soul without additional request.') ||
           (soulcatcher_allow_deletion === 2 &&
-            'Click here to prevent the deletion of your soul.'),
+            'Click here to prevent the deletion of your soul.') ||
+          '',
       },
       back_color: {
         enabled:
           (soulcatcher_allow_deletion === 1 && 'orange') ||
-          (soulcatcher_allow_deletion === 2 && 'red'),
+          (soulcatcher_allow_deletion === 2 && 'red') ||
+          '',
         disabled: '',
       },
       content: {
@@ -663,7 +670,8 @@ export const VoreUserPreferences = (props) => {
           (soulcatcher_allow_deletion === 1 &&
             'WARNING, Soul Deletion Possible') ||
           (soulcatcher_allow_deletion === 2 &&
-            'DANGER! Instant Soul Deletion Allowed'),
+            'DANGER! Instant Soul Deletion Allowed') ||
+          '',
         disabled: 'Do Not Allow Soul Deletion',
       },
     },
@@ -724,7 +732,11 @@ export const VoreUserPreferences = (props) => {
   );
 };
 
-const VoreUserPreferencesMechanical = (props) => {
+const VoreUserPreferencesMechanical = (props: {
+  show_pictures: BooleanLike;
+  icon_overflow: BooleanLike;
+  preferences: localPrefs;
+}) => {
   const { act } = useBackend();
   const { show_pictures, icon_overflow, preferences } = props;
 
@@ -829,7 +841,12 @@ const VoreUserPreferencesMechanical = (props) => {
   );
 };
 
-const VoreUserPreferencesDevouring = (props) => {
+const VoreUserPreferencesDevouring = (props: {
+  devourable: BooleanLike;
+  digestModeToColor: Record<string, string | undefined>;
+  selective_active: string;
+  preferences: localPrefs;
+}) => {
   const { act } = useBackend();
   const { devourable, digestModeToColor, selective_active, preferences } =
     props;
@@ -921,7 +938,11 @@ const VoreUserPreferencesDevouring = (props) => {
   );
 };
 
-const VoreUserPreferencesSpontaneous = (props) => {
+const VoreUserPreferencesSpontaneous = (props: {
+  can_be_drop_prey: BooleanLike;
+  can_be_drop_pred: BooleanLike;
+  preferences: localPrefs;
+}) => {
   const { can_be_drop_prey, can_be_drop_pred, preferences } = props;
 
   return (
@@ -986,7 +1007,10 @@ const VoreUserPreferencesSpontaneous = (props) => {
   );
 };
 
-const VoreUserPreferencesSoulcatcher = (props) => {
+const VoreUserPreferencesSoulcatcher = (props: {
+  soulcatcher_allow_capture: BooleanLike;
+  preferences: localPrefs;
+}) => {
   const { soulcatcher_allow_capture, preferences } = props;
 
   return (
@@ -1023,16 +1047,24 @@ const VoreUserPreferencesSoulcatcher = (props) => {
   );
 };
 
-const VoreUserPreferencesSpawn = (props) => {
+const VoreUserPreferencesSpawn = (props: {
+  latejoin_vore: BooleanLike;
+  no_spawnpred_warning_time: number;
+  no_spawnpred_warning_save: BooleanLike;
+  latejoin_prey: BooleanLike;
+  no_spawnprey_warning_time: number;
+  no_spawnprey_warning_save: BooleanLike;
+  preferences: localPrefs;
+}) => {
   const { act } = useBackend();
   const {
     latejoin_vore,
     no_spawnpred_warning_time,
-    preferences,
     no_spawnpred_warning_save,
     latejoin_prey,
     no_spawnprey_warning_time,
     no_spawnprey_warning_save,
+    preferences,
   } = props;
 
   return (
@@ -1139,9 +1171,13 @@ const VoreUserPreferencesSpawn = (props) => {
   );
 };
 
-const VoreUserPreferencesAesthetic = (props) => {
+const VoreUserPreferencesAesthetic = (props: {
+  belly_rub_target: string | null;
+  selected: selectedData;
+  preferences: localPrefs;
+}) => {
   const { act } = useBackend();
-  const { preferences, belly_rub_target, selected } = props;
+  const { belly_rub_target, selected, preferences } = props;
 
   return (
     <Section title="Aesthetic Preferences">

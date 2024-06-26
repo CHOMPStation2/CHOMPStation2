@@ -228,7 +228,7 @@ type liqMessageData = {
   liq_msg5: BooleanLike;
 };
 
-type prefData = {
+export type prefData = {
   digestable: BooleanLike;
   devourable: BooleanLike;
   resizable: BooleanLike;
@@ -299,4 +299,15 @@ export type soulcatcherData = {
 export type DropdownEntry = {
   displayText: string;
   value: string;
+};
+
+export type localPrefs = Record<string, preferenceData>;
+
+type preferenceData = {
+  action: string;
+  test: BooleanLike;
+  tooltip: { main: string; enable: string; disable: string };
+  content: { enabled: string; disabled: string };
+  fluid?: boolean;
+  back_color?: { enabled: string; disabled: string };
 };

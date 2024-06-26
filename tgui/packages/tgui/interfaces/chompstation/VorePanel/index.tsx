@@ -152,7 +152,7 @@ import { VoreUserPreferences } from './VoreUserPreferences';
 export const VorePanel = () => {
   const { act, data } = useBackend<Data>();
 
-  const { inside, our_bellies, selected, soulcatcher } = data;
+  const { inside, our_bellies, selected, soulcatcher, prefs } = data;
 
   const [tabIndex, setTabIndex] = useState(0);
 
@@ -167,7 +167,7 @@ export const VorePanel = () => {
   tabs[1] = (
     <VoreSoulcatcher our_bellies={our_bellies} soulcatcher={soulcatcher} />
   );
-  tabs[2] = <VoreUserPreferences />;
+  tabs[2] = <VoreUserPreferences prefs={prefs} selected={selected} />;
 
   return (
     <Window width={990} height={660} theme="abstract">
