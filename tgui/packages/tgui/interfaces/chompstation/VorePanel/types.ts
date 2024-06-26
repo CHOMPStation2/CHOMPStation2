@@ -301,7 +301,47 @@ export type DropdownEntry = {
   value: string;
 };
 
-export type localPrefs = Record<string, preferenceData>;
+export type localPrefs = {
+  digestion: preferenceData;
+  absorbable: preferenceData;
+  devour: preferenceData;
+  mobvore: preferenceData;
+  feed: preferenceData;
+  healbelly: preferenceData;
+  dropnom_prey: preferenceData;
+  dropnom_pred: preferenceData;
+  toggle_drop_vore: preferenceData;
+  toggle_slip_vore: preferenceData;
+  toggle_stumble_vore: preferenceData;
+  toggle_throw_vore: preferenceData;
+  toggle_phase_vore: preferenceData;
+  toggle_food_vore: preferenceData;
+  toggle_digest_pain: preferenceData;
+  spawnbelly: preferenceData;
+  spawnprey: preferenceData;
+  noisy: preferenceData;
+  noisy_full: preferenceData;
+  resize: preferenceData;
+  steppref: preferenceData;
+  vore_fx: preferenceData;
+  remains: preferenceData;
+  pickuppref: preferenceData;
+  spontaneous_tf: preferenceData;
+  mind_transfer: preferenceData;
+  examine_nutrition: preferenceData;
+  examine_weight: preferenceData;
+  strippref: preferenceData;
+  eating_privacy_global: preferenceData;
+  autotransferable: preferenceData;
+  liquid_receive: preferenceData;
+  liquid_give: preferenceData;
+  liquid_apply: preferenceData;
+  no_spawnpred_warning: preferenceData;
+  no_spawnprey_warning: preferenceData;
+  soulcatcher: preferenceData;
+  soulcatcher_transfer: preferenceData;
+  soulcatcher_delete: preferenceData;
+};
 
 export type preferenceData = {
   action: string;
