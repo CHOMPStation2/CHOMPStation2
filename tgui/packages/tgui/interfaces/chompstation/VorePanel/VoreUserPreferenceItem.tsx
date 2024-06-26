@@ -1,17 +1,9 @@
-import { BooleanLike } from 'common/react';
-
 import { useBackend } from '../../../backend';
 import { Button } from '../../../components';
+import { preferenceData } from './types';
 
 export const VoreUserPreferenceItem = (props: {
-  spec: {
-    action: string;
-    test: BooleanLike;
-    tooltip: { main: string; enable: string; disable: string };
-    content: { enabled: string; disabled: string };
-    fluid?: boolean;
-    back_color?: { enabled: string; disabled: string };
-  };
+  spec: preferenceData;
   [rest: string]: any;
 }) => {
   const { act } = useBackend();

@@ -303,7 +303,7 @@ export type DropdownEntry = {
 
 export type localPrefs = Record<string, preferenceData>;
 
-type preferenceData = {
+export type preferenceData = {
   action: string;
   test: BooleanLike;
   tooltip: { main: string; enable: string; disable: string };
