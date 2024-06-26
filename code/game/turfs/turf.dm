@@ -41,7 +41,7 @@
 
 	var/movement_cost = 0       // How much the turf slows down movement, if any.
 
-	var/list/footstep_sounds = null
+	// var/list/footstep_sounds = null CHOMPEdit - Better footstep sounds
 	var/list/vorefootstep_sounds = null	//CHOMPstation edit
 
 	var/block_tele = FALSE      // If true, most forms of teleporting to or from this turf tile will fail.

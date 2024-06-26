@@ -259,6 +259,7 @@
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
+	/*
 	if(!istype(T) || is_incorporeal() || !CONFIG_GET(number/footstep_volume) || !T.footstep_sounds || !T.footstep_sounds.len) // CHOMPEdit
 		return	//CHOMPEdit - Condensed some return checks
 	// CHOMPedit start: Future Upgrades - Multi species support
@@ -268,8 +269,9 @@
 		if(!footstep_sounds)
 			return // CHOMPedit end
 	var/S = pick(footstep_sounds)
+	*/ // CHOMPEdit - Less lists, more footsteps
 	GLOB.step_taken_shift_roundstat++
-	if(!S) return
+	// if(!S) return - CHOMPEdit
 
 	// Play every 20 steps while walking, for the sneak
 	if(m_intent == "walk" && step_count++ % 20 != 0)
@@ -302,7 +304,7 @@
 	if(!has_gravity(src) && prob(75))
 		return // Far less likely to make noise in no gravity
 
-	playsound(T, S, volume, FALSE)
+	// playsound(T, S, volume, FALSE) - CHOMPEdit
 	return
 
 /mob/living/carbon/human/set_dir(var/new_dir)
