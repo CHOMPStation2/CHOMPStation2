@@ -102,7 +102,6 @@
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "hc" = (
-/obj/machinery/autolathe,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "jp" = (
