@@ -346,14 +346,9 @@
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "ba" = (
-/obj/machinery/door/airlock/glass{
-	id_tag = "die_sling_hatch";
-	locked = 1;
-	icon_state = "door_locked";
-	frequency = 1380
-	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/shuttle/floor/black,
-/area/shuttle/diescraper)
+/area/awaymission/diescraper/indoors/floor2)
 "bb" = (
 /obj/machinery/light{
 	dir = 4
@@ -823,12 +818,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor8)
 "cl" = (
-/obj/machinery/door/airlock/glass{
-	id_tag = "die_sling_outpost_door";
-	locked = 1;
-	icon_state = "door_locked";
-	frequency = 1380
-	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor1)
 "cm" = (
@@ -963,12 +953,10 @@
 	},
 /area/awaymission/diescraper/indoors/floor7)
 "cK" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "die_sling_station";
-	name = "shuttle bay controller";
-	pixel_y = 26;
-	tag_door = "die_sling_station_door"
+/obj/item/weapon/paper{
+	name = "Maintinence Paper";
+	info = "What do you mean the elevator is out of service? This teleporting lookin ass thing doesnt fit with the asthetic? I want the old elevator back this instant.";
+	pixel_y = 26
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor2)
@@ -1219,15 +1207,8 @@
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "dF" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "die_sling_outpost";
-	name = "elevator doors controller";
-	req_one_access = list();
-	tag_door = "die_sling_outpost_door";
-	pixel_y = 22
-	},
-/turf/simulated/floor/wmarble,
+/obj/machinery/door/airlock/glass,
+/turf/simulated/shuttle/floor/black,
 /area/awaymission/diescraper/indoors/floor1)
 "dG" = (
 /obj/effect/simple_portal/coords{
@@ -1542,9 +1523,8 @@
 /turf/simulated/floor/grass2,
 /area/awaymission/diescraper/indoors/floor5)
 "eI" = (
-/obj/machinery/computer/shuttle_control/diescraper,
 /turf/simulated/shuttle/floor/black,
-/area/shuttle/diescraper)
+/area/awaymission/diescraper/indoors/floor2)
 "eJ" = (
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 207;
@@ -2978,7 +2958,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/black,
-/area/shuttle/diescraper)
+/area/awaymission/diescraper/indoors/floor2)
 "jc" = (
 /obj/structure/closet/crate/secure/large,
 /obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
@@ -3737,18 +3717,12 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "lc" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "die_sling";
-	name = "elevator controller";
-	tag_door = "die_sling_hatch";
-	pixel_x = -23
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/diescraper)
+/mob/living/simple_mob/metroid/juvenile/super,
+/turf/simulated/floor/bmarble,
+/area/awaymission/diescraper/indoors/floor1)
 "ld" = (
 /obj/structure/sign/poster/custom{
 	dir = 4
@@ -3775,11 +3749,8 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "lg" = (
-/obj/effect/shuttle_landmark/diescraper/sling_outpost{
-	base_area = /area/awaymission/diescraper/indoors/floor1;
-	base_turf = /turf/simulated/floor/reinforced
-	},
-/turf/simulated/floor/reinforced,
+/mob/living/simple_mob/metroid/juvenile/omega,
+/turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "lh" = (
 /obj/structure/closet/wardrobe/mixed,
@@ -4270,7 +4241,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "mI" = (
 /turf/simulated/wall/elevator,
-/area/shuttle/diescraper)
+/area/awaymission/diescraper/indoors/floor2)
 "mJ" = (
 /obj/structure/bed/chair/sofa/bench/marble{
 	dir = 8
@@ -9563,7 +9534,11 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor9)
 "BF" = (
-/turf/simulated/floor/reinforced,
+/obj/machinery/hyperpad/centre{
+	map_pad_id = "rizz";
+	map_pad_link_id = "skibidi"
+	},
+/turf/simulated/shuttle/floor/black,
 /area/awaymission/diescraper/indoors/floor1)
 "BG" = (
 /obj/structure/table/steel_reinforced,
@@ -10460,12 +10435,7 @@
 /obj/effect/floor_decal/industrial/warning/color/yellow{
 	dir = 2
 	},
-/obj/machinery/door/airlock/glass{
-	id_tag = "die_sling_station_door";
-	locked = 1;
-	icon_state = "door_locked";
-	frequency = 1380
-	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor2)
 "Ec" = (
@@ -11031,8 +11001,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/diescraper/indoors/floor11)
 "FE" = (
-/obj/machinery/computer/shuttle_control/diescraper,
-/turf/simulated/floor/wmarble,
+/mob/living/simple_mob/metroid/juvenile/alpha,
+/turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "FF" = (
 /obj/machinery/power/rtg/fake_z_wires,
@@ -13017,10 +12987,10 @@
 /area/awaymission/diescraper/indoors/floor4)
 "Ls" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime,
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/weapon/storage/backpack/parachute,
+/obj/item/weapon/storage/backpack/parachute,
+/obj/item/weapon/storage/backpack/parachute,
+/obj/item/weapon/storage/backpack/parachute,
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
 "Lt" = (
@@ -13275,12 +13245,11 @@
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "LW" = (
-/obj/effect/shuttle_landmark/diescraper/sling_station{
-	base_area = /area/awaymission/diescraper/indoors/floor2;
-	base_turf = /turf/simulated/floor/reinforced
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/black,
-/area/shuttle/diescraper)
+/area/awaymission/diescraper/indoors/floor1)
 "LX" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced/tinted{
@@ -13803,8 +13772,12 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "Nx" = (
+/obj/machinery/hyperpad/centre{
+	map_pad_id = "skibidi";
+	map_pad_link_id = "rizz"
+	},
 /turf/simulated/shuttle/floor/black,
-/area/shuttle/diescraper)
+/area/awaymission/diescraper/indoors/floor2)
 "Ny" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/plating,
@@ -14577,10 +14550,6 @@
 /obj/structure/sign/warning/secure_area/slabs,
 /turf/unsimulated/wall/cult,
 /area/awaymission/diescraper/indoors/floor11)
-"PP" = (
-/obj/machinery/computer/shuttle_control/diescraper,
-/turf/simulated/floor/wmarble,
-/area/awaymission/diescraper/indoors/floor2)
 "PQ" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/tool/power,
@@ -24969,7 +24938,7 @@ mI
 mI
 mI
 iR
-PP
+Tt
 Ah
 Ah
 Ah
@@ -25222,9 +25191,9 @@ Tt
 uR
 UO
 mI
-lc
-Nx
-Nx
+jb
+eI
+eI
 ba
 Eb
 Tt
@@ -25482,7 +25451,7 @@ UO
 mI
 eI
 Nx
-LW
+eI
 ba
 Eb
 Tt
@@ -25739,8 +25708,8 @@ uR
 UO
 mI
 jb
-Nx
-Nx
+eI
+eI
 ba
 Eb
 Tt
@@ -26571,13 +26540,13 @@ ur
 ur
 Bz
 mQ
-BF
-BF
-BF
-BF
-BF
+Bg
+Bg
+Bg
+Bg
+Bg
 PL
-FE
+NR
 ur
 ur
 ur
@@ -26829,11 +26798,11 @@ ur
 ur
 Bz
 mQ
-BF
-BF
-BF
-BF
-BF
+Bg
+LW
+Uw
+Uw
+dF
 cl
 ur
 ur
@@ -27087,11 +27056,11 @@ ur
 ur
 Bz
 mQ
+Bg
+Uw
 BF
-BF
-BF
-lg
-BF
+Uw
+dF
 cl
 ur
 ur
@@ -27345,11 +27314,11 @@ ur
 ur
 Bz
 mQ
-BF
-BF
-BF
-BF
-BF
+Bg
+LW
+Uw
+Uw
+dF
 cl
 ur
 oH
@@ -27603,13 +27572,13 @@ ur
 ur
 Bz
 mQ
-BF
-BF
-BF
-BF
-BF
+Bg
+Bg
+Bg
+Bg
+Bg
 mQ
-dF
+NR
 ur
 ur
 ur
@@ -30948,7 +30917,7 @@ aK
 rT
 kA
 ur
-ur
+FE
 ur
 NR
 NR
@@ -31465,7 +31434,7 @@ Bz
 Bz
 og
 ur
-ur
+og
 Bz
 Bz
 Bz
@@ -32237,7 +32206,7 @@ Lx
 Lx
 Lx
 Bz
-he
+lc
 lb
 og
 Bz
@@ -32495,9 +32464,9 @@ Lx
 Lx
 Lx
 Bz
+lg
 ur
-ur
-ur
+lg
 Bz
 Lx
 Lx

@@ -7,6 +7,7 @@
 	icon_state = "rtgfakez"
 
 //The fake shuttle
+/* The code fucking breaks when the gateway ISNT lateloaded because all shuttles must be mapped in. No way around it.
 /area/shuttle/diescraper
 	name = "Skyscraper Elevator"
 	icon_state = "shuttle2"
@@ -36,7 +37,7 @@
 	name = "Ground Floor"
 	landmark_tag = "die_sling_outpost"
 	docking_controller = "die_sling_outpost"
-
+*/
 
 //Areas
 
