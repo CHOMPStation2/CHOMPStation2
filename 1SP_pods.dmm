@@ -443,6 +443,10 @@
 /obj/structure/sign/mining,
 /turf/simulated/shuttle/wall/voidcraft/survival,
 /area/template_noop)
+"apf" = (
+/obj/structure/outcrop/iron,
+/turf/template_noop,
+/area/template_noop)
 "apk" = (
 /obj/structure/bed/padded,
 /obj/machinery/flasher{
@@ -529,7 +533,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/techfloor/kara,
+/turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
 "asr" = (
 /obj/machinery/door/window/eastleft,
@@ -551,6 +555,9 @@
 	icon_state = "cult-narsie"
 	},
 /area/template_noop)
+"ate" = (
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "atu" = (
 /obj/fire,
 /turf/template_noop,
@@ -846,6 +853,10 @@
 	color = "red"
 	},
 /area/template_noop)
+"aFs" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/DragonCave)
 "aFE" = (
 /obj/machinery/door/window/survival_pod,
 /turf/simulated/shuttle/plating/skipjack,
@@ -1258,6 +1269,9 @@
 /obj/structure/girder,
 /turf/simulated/floor,
 /area/survivalpod/superpose/MethLab)
+"aSQ" = (
+/turf/simulated/floor/water/hotspring,
+/area/survivalpod/superpose/DragonCave)
 "aSS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 6
@@ -1617,6 +1631,11 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
+"bkg" = (
+/obj/machinery/microwave/cookingpot,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/DragonCave)
 "bkF" = (
 /obj/structure/table/survival_pod,
 /turf/simulated/shuttle/floor/voidcraft,
@@ -1778,7 +1797,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/turf/simulated/floor/tiled/techfloor/kara,
+/turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
 "bpM" = (
 /obj/structure/fence{
@@ -1878,6 +1897,10 @@
 "btE" = (
 /turf/simulated/goreeyes,
 /area/survivalpod/superpose/HellCave)
+"btN" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/DragonCave)
 "buk" = (
 /obj/machinery/light{
 	dir = 8
@@ -1927,6 +1950,12 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"bvq" = (
+/obj/item/clothing/shoes/tribalwear,
+/obj/item/clothing/under/tribalwear/shaman,
+/obj/item/weapon/material/twohanded/spear,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "bvG" = (
 /obj/machinery/camera{
 	c_tag = "Central Hallway";
@@ -1942,6 +1971,9 @@
 "bwm" = (
 /turf/simulated/wall/r_wall,
 /area/template_noop)
+"bwD" = (
+/turf/simulated/mineral/ignore_mapgen,
+/area/survivalpod/superpose/DragonCave)
 "bwU" = (
 /obj/effect/floor_decal/industrial/danger/corner,
 /turf/simulated/floor/tiled,
@@ -2259,6 +2291,12 @@
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"bKu" = (
+/obj/effect/decal/cleanable/blood/splatter{
+	color = "red"
+	},
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/DragonCave)
 "bKW" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
@@ -3136,6 +3174,13 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/survivalpod/superpose/HydroCave)
+"ctj" = (
+/obj/item/clothing/under/tribalwear/common1,
+/obj/item/clothing/shoes/tribalwear,
+/obj/item/weapon/material/twohanded/spear,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "cto" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
@@ -3935,6 +3980,10 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod)
+"cXM" = (
+/obj/structure/outcrop/lead,
+/turf/template_noop,
+/area/template_noop)
 "cYi" = (
 /turf/simulated/floor/plating,
 /area/template_noop)
@@ -4111,6 +4160,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/HydroCave)
+"diq" = (
+/obj/structure/table/sifwooden_reinforced,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/DragonCave)
 "diw" = (
 /obj/item/device/gps/computer,
 /turf/simulated/floor/plating,
@@ -4132,6 +4187,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
+"djP" = (
+/obj/item/clothing/shoes/tribalwear,
+/obj/item/clothing/under/tribalwear/hunter,
+/obj/item/weapon/material/twohanded/spear,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "dko" = (
 /obj/random/junk,
 /turf/simulated/floor/wood,
@@ -4272,6 +4333,23 @@
 /obj/structure/table/bench/standard,
 /turf/simulated/shuttle/floor/white,
 /area/survivalpod/superpose/ScienceShip)
+"doB" = (
+/obj/item/weapon/material/twohanded/spear/flint,
+/obj/item/weapon/coin/gold{
+	pixel_x = -14;
+	pixel_y = 8
+	},
+/obj/item/weapon/coin/gold{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/item/weapon/coin/gold{
+	pixel_x = -13;
+	pixel_y = -6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "doG" = (
 /obj/structure/closet/secure_closet/brig{
 	id = "Cell";
@@ -4435,11 +4513,11 @@
 "dva" = (
 /mob/living/simple_mob/vore/demonAI/engorge{
 	evasion = 1;
+	faction = "neutral";
 	health = 750;
 	projectilesound = 'sound/weapons/taser2.ogg';
 	projectiletype = /obj/item/projectile/beam/stun/electric_spider;
-	size_multiplier = 3;
-	faction = "neutral"
+	size_multiplier = 3
 	},
 /turf/simulated/floor/cult,
 /area/survivalpod/superpose/DemonPool)
@@ -4993,6 +5071,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
+"dLD" = (
+/obj/structure/bonfire/permanent/sifwood,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "dMu" = (
 /turf/simulated/wall/wood,
 /area/survivalpod/superpose/Farm)
@@ -5194,12 +5276,12 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /turf/simulated/floor/wood,
 /area/template_noop)
@@ -5576,6 +5658,11 @@
 "eeG" = (
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
+"eeP" = (
+/obj/item/weapon/material/twohanded/longsword,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "efD" = (
 /obj/structure/sink{
 	pixel_y = 14
@@ -5900,6 +5987,10 @@
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/wood,
 /area/template_noop)
+"eph" = (
+/obj/item/weapon/coin/gold,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "epj" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -6267,6 +6358,9 @@
 /obj/structure/sign/warning/secure_area,
 /turf/simulated/wall/iron,
 /area/survivalpod/superpose/CrashedQurantineShip)
+"eAn" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "eAz" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -6404,6 +6498,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
+"eCN" = (
+/obj/structure/flora/rocks2,
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/DragonCave)
 "eDL" = (
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -6906,6 +7004,10 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
+"eWe" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "eWv" = (
 /obj/machinery/vending/cigarette,
 /turf/simulated/shuttle/wall/voidcraft/survival,
@@ -7025,6 +7127,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod)
+"fat" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/alt/parquet/broken,
+/area/survivalpod/superpose/DragonCave)
 "fay" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -7603,6 +7709,10 @@
 	temperature = 80
 	},
 /area/template_noop)
+"fxs" = (
+/obj/structure/flora/lily1,
+/turf/simulated/floor/water/hotspring,
+/area/survivalpod/superpose/DragonCave)
 "fxy" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cult/forge,
@@ -7695,6 +7805,10 @@
 /obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"fzt" = (
+/obj/structure/ledge/ledge_stairs,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "fzN" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -7792,8 +7906,8 @@
 	pixel_y = -27
 	},
 /obj/item/clothing/under/swimsuit/stripper/mankini{
-	pixel_y = 5;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 5
 	},
 /turf/simulated/floor/wood,
 /area/template_noop)
@@ -8157,6 +8271,18 @@
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/survivalpod/superpose/MethLab)
+"fPF" = (
+/obj/item/clothing/accessory/bracelet/material/gold{
+	pixel_x = -7;
+	pixel_y = 20
+	},
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/instrument/violin/golden{
+	pixel_x = 7
+	},
+/obj/item/weapon/flame/lighter/zippo/gold,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "fPP" = (
 /obj/item/device/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft,
@@ -8272,6 +8398,9 @@
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/survivalpod)
+"fVI" = (
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/DragonCave)
 "fVZ" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -8348,6 +8477,10 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod)
+"fXu" = (
+/obj/structure/outcrop/gold,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "fXO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/portable_atmospherics/canister/air,
@@ -9031,6 +9164,9 @@
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/survivalpod/superpose/GrandLibrary)
+"gys" = (
+/turf/simulated/wall/wood,
+/area/survivalpod/superpose/DragonCave)
 "gyJ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/crate/large,
@@ -9063,6 +9199,12 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/shuttle/plating/skipjack,
 /area/template_noop)
+"gAv" = (
+/obj/structure/flora/sif/subterranean{
+	icon_state = "glowplant1"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "gAN" = (
 /obj/item/device/suit_cooling_unit/emergency,
 /turf/simulated/floor/tiled/techmaint,
@@ -9295,6 +9437,10 @@
 	},
 /turf/simulated/shuttle/wall/alien/blue/hard_corner,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"gDZ" = (
+/obj/item/stack/material/gold,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "gEk" = (
 /obj/fire,
 /obj/fire,
@@ -10366,6 +10512,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
+"hsH" = (
+/obj/effect/decal/remains/deer,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "htj" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/survivalpod/superpose/HydroCave)
@@ -10375,6 +10525,10 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
+"hux" = (
+/obj/item/weapon/ore/gold,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "huy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -10827,6 +10981,14 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
+"hJi" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/seeds/wheatseed{
+	icon_state = "seed"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "hJu" = (
 /obj/structure/table/alien,
 /obj/effect/floor_decal/techfloor{
@@ -11306,6 +11468,15 @@
 /obj/machinery/cell_charger,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod)
+"ibf" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/DragonCave)
 "ibi" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -11626,6 +11797,17 @@
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"inz" = (
+/obj/item/weapon/reagent_containers/glass/bucket/wood{
+	pixel_x = 8;
+	pixel_y = 7
+	},
+/obj/item/weapon/reagent_containers/glass/bucket/wood{
+	pixel_x = -7;
+	pixel_y = -6
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "iob" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 4
@@ -12034,6 +12216,10 @@
 /obj/fiftyspawner/blucarpet,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"iHk" = (
+/obj/effect/decal/remains/ribcage,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "iIe" = (
 /obj/structure/grille/cult,
 /turf/simulated/floor/cult,
@@ -12157,6 +12343,16 @@
 "iMj" = (
 /turf/simulated/shuttle/floor/white,
 /area/template_noop)
+"iMp" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	dir = 4;
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "iMr" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -12284,7 +12480,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor/kara,
+/turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
 "iRQ" = (
 /obj/structure/cliff/automatic/corner{
@@ -12554,6 +12750,13 @@
 /obj/structure/sign/warning/lethal_turrets,
 /turf/simulated/wall/r_wall,
 /area/survivalpod/superpose/HydroCave)
+"jbq" = (
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "jbR" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -12649,6 +12852,11 @@
 /obj/random/junk,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
+"jfO" = (
+/obj/effect/decal/remains/unathi,
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "jgz" = (
 /obj/structure/bed/chair/oldsofa/left{
 	dir = 8
@@ -13237,6 +13445,9 @@
 /obj/machinery/door/airlock/voidcraft/survival_pod,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"jBV" = (
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/DragonCave)
 "jCp" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
@@ -13457,6 +13668,32 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
+"jKz" = (
+/obj/structure/closet/cabinet,
+/obj/item/weapon/cell/high,
+/obj/item/weapon/storage/box/flare,
+/obj/random/soap,
+/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/device/flashlight,
+/obj/item/device/threadneedle,
+/obj/item/device/radio,
+/obj/item/weapon/extinguisher/mini,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/device/healthanalyzer,
+/obj/item/weapon/storage/pill_bottle/antitox,
+/obj/item/weapon/storage/mre/menu11,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/menu10,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/toolbox/hydro,
+/obj/fiftyspawner/log/sif,
+/obj/item/weapon/material/knife/machete/hatchet/stone/bone,
+/obj/item/weapon/material/kitchen/rollingpin,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "jKW" = (
 /obj/machinery/camera{
 	c_tag = "Lobby North";
@@ -13717,6 +13954,13 @@
 /obj/item/weapon/storage/belt/utility/full,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"jUJ" = (
+/obj/effect/decal/cleanable/blood/splatter{
+	color = "red"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "jUV" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor,
@@ -13738,6 +13982,10 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
+"jVK" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/DragonCave)
 "jVP" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 4
@@ -13887,7 +14135,7 @@
 /obj/item/weapon/ore/osmium,
 /obj/item/weapon/ore/silver,
 /obj/item/weapon/ore/uranium,
-/obj/item/weapon/ore/bluespace_crystal,
+/obj/item/weapon/ore,
 /obj/item/clothing/head/sombrero,
 /obj/item/clothing/head/sombrero,
 /obj/item/clothing/suit/poncho,
@@ -13908,6 +14156,14 @@
 "kag" = (
 /turf/template_noop,
 /area/survivalpod/superpose/HellCave)
+"kaj" = (
+/obj/effect/decal/remains/deer,
+/obj/effect/decal/cleanable/blood/splatter{
+	color = "red"
+	},
+/obj/item/weapon/coin/gold,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "kam" = (
 /obj/structure/bed/pod,
 /obj/item/weapon/bedsheet/ce,
@@ -14721,6 +14977,11 @@
 	},
 /turf/simulated/floor/atoll,
 /area/template_noop)
+"kBw" = (
+/obj/structure/outcrop/gold,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "kBL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -16152,8 +16413,8 @@
 	pixel_y = -2
 	},
 /obj/item/weapon/deck/cards{
-	pixel_y = 5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet,
@@ -16229,8 +16490,8 @@
 	pixel_y = -27
 	},
 /obj/item/clothing/under/fluff/latexmaid{
-	pixel_y = 7;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 7
 	},
 /turf/simulated/floor/wood,
 /area/template_noop)
@@ -16280,6 +16541,11 @@
 /obj/fire,
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"lCJ" = (
+/obj/structure/dogbed,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/DragonCave)
 "lCN" = (
 /turf/simulated/floor/greengrid/nitrogen,
 /area/template_noop)
@@ -16964,6 +17230,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"lZL" = (
+/obj/effect/decal/remains/lizard,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "mak" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -17329,7 +17599,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/tiled/techfloor/kara,
+/turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
 "mlT" = (
 /obj/structure/bed/chair/comfy/black,
@@ -17467,6 +17737,10 @@
 	},
 /turf/simulated/floor/gorefloor2,
 /area/survivalpod/superpose/DemonPool)
+"mpT" = (
+/obj/structure/flora/lily3,
+/turf/simulated/floor/water/hotspring,
+/area/survivalpod/superpose/DragonCave)
 "mqR" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/flame/lighter/random{
@@ -17655,6 +17929,10 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod)
+"myj" = (
+/obj/structure/flora/rocks1,
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/DragonCave)
 "myq" = (
 /obj/machinery/shower,
 /obj/item/weapon/soap/deluxe,
@@ -17782,11 +18060,11 @@
 	dir = 4
 	},
 /obj/structure/curtain/black{
+	dir = 2;
 	icon_state = "open";
 	layer = 2;
 	name = "privacy curtain";
-	opacity = 0;
-	dir = 2
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/Dinner)
@@ -17823,6 +18101,12 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
+"mHT" = (
+/obj/structure/ledge/ledge_stairs{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/DragonCave)
 "mHY" = (
 /obj/structure/table/fancyblack,
 /turf/simulated/floor/carpet/blue2,
@@ -18235,6 +18519,15 @@
 "mUG" = (
 /turf/simulated/floor/outdoors/rocks,
 /area/template_noop)
+"mUQ" = (
+/obj/fiftyspawner/gold,
+/obj/item/slime_extract/gold,
+/obj/item/weapon/flame/lighter/zippo/gold{
+	pixel_x = 11;
+	pixel_y = -5
+	},
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "mUV" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/material/kitchen/rollingpin,
@@ -18660,7 +18953,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/kara,
+/turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
 "nkc" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
@@ -18947,8 +19240,8 @@
 "nxX" = (
 /obj/structure/urinal{
 	dir = 4;
-	pixel_y = 0;
-	pixel_x = -31
+	pixel_x = -31;
+	pixel_y = 0
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/freezer,
@@ -19218,12 +19511,12 @@
 	pixel_x = -4
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/box/donkpockets{
-	pixel_y = -3;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -3
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
@@ -20166,10 +20459,10 @@
 /area/survivalpod/superpose/HydroCave)
 "otF" = (
 /obj/machinery/vending/security{
+	dir = 1;
 	pixel_x = 3;
 	pixel_y = -1;
-	req_access = null;
-	dir = 1
+	req_access = null
 	},
 /turf/simulated/shuttle/plating/skipjack,
 /area/template_noop)
@@ -20744,8 +21037,8 @@
 	},
 /obj/machinery/disposal/wall{
 	dir = 4;
-	pixel_y = 0;
-	pixel_x = -37
+	pixel_x = -37;
+	pixel_y = 0
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -20758,6 +21051,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/broken,
 /area/survivalpod/superpose/LoneHome)
+"oEP" = (
+/obj/structure/flora/sif/subterranean{
+	icon_state = "glowplant2"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "oEU" = (
 /obj/structure/sign/redcross{
 	desc = "The Star of Life, a symbol of Medical Aid.";
@@ -21313,8 +21612,8 @@
 /area/survivalpod/superpose/TradingShip)
 "oYf" = (
 /obj/machinery/door/airlock/maintenance/command{
-	req_one_access = null;
-	name = "Bridge Access"
+	name = "Bridge Access";
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
@@ -21512,6 +21811,13 @@
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/template_noop)
+"pdo" = (
+/obj/item/weapon/potion_material/golden_scale{
+	pixel_x = 7;
+	pixel_y = -9
+	},
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "pdM" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -24163,6 +24469,12 @@
 /obj/fiftyspawner/steel,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod)
+"pSH" = (
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "pTg" = (
 /obj/machinery/light/small{
 	brightness_color = "#DA0205";
@@ -24339,6 +24651,13 @@
 /obj/machinery/floodlight,
 /turf/simulated/shuttle/plating/skipjack,
 /area/template_noop)
+"pXI" = (
+/obj/effect/decal/remains/xeno,
+/obj/item/clothing/accessory/collar/holo,
+/obj/effect/decal/cleanable/filth,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "pXO" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -24446,6 +24765,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/ScienceShip)
+"qcn" = (
+/obj/structure/flora/sif/subterranean{
+	icon_state = "glowplant1"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "qcu" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4
@@ -24482,6 +24808,10 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
 /area/survivalpod)
+"qdH" = (
+/obj/structure/flora/bboulder1,
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/DragonCave)
 "qen" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -24586,6 +24916,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
+"qhx" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "qhD" = (
 /obj/structure/table/woodentable,
 /obj/item/device/starcaster_news,
@@ -25287,6 +25621,23 @@
 /obj/item/fulton_core,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"qFp" = (
+/obj/item/clothing/gloves/ring/material/gold,
+/obj/item/clothing/ears/earring/stud/gold,
+/obj/item/weapon/gun/projectile/deagle/gold{
+	pixel_x = -11;
+	pixel_y = -22
+	},
+/obj/item/weapon/coin/gold{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/weapon/coin/gold{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "qFs" = (
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
@@ -25367,6 +25718,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/template_noop)
+"qJY" = (
+/turf/simulated/floor/wood/alt/parquet/broken,
+/area/survivalpod/superpose/DragonCave)
 "qKd" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -26400,6 +26754,10 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"rGc" = (
+/obj/structure/curtain/black,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "rGi" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/shuttle/floor/purple,
@@ -26700,6 +27058,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
+"rSf" = (
+/obj/item/weapon/bone/skull/tajaran,
+/obj/item/clothing/accessory/collar/silver,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "rSA" = (
 /obj/structure/table/reinforced,
 /obj/item/device/gps/advanced/science,
@@ -26916,20 +27280,20 @@
 /obj/item/weapon/material/twohanded/fireaxe/foam,
 /obj/item/weapon/material/twohanded/spear/foam,
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_palette{
-	pixel_y = 6;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/paint_brush{
-	pixel_y = 4;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /obj/item/device/camera_film,
 /obj/item/device/camera_film,
@@ -26939,16 +27303,16 @@
 /obj/item/device/camera,
 /obj/item/weapon/storage/photo_album,
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/crayons{
-	pixel_y = -3;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /obj/item/weapon/storage/fancy/markers{
-	pixel_y = 6;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 6
 	},
 /obj/item/weapon/tape_roll,
 /obj/item/weapon/tape_roll,
@@ -27063,6 +27427,10 @@
 	},
 /turf/simulated/shuttle/wall/dark,
 /area/template_noop)
+"seq" = (
+/obj/effect/map_effect/interval/effect_emitter/steam,
+/turf/simulated/floor/water/hotspring,
+/area/survivalpod/superpose/DragonCave)
 "seD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -27078,8 +27446,8 @@
 "sfl" = (
 /obj/structure/urinal{
 	dir = 4;
-	pixel_y = 0;
-	pixel_x = -31
+	pixel_x = -31;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/template_noop)
@@ -27101,6 +27469,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/template_noop,
 /area/template_noop)
+"sgQ" = (
+/obj/item/weapon/bone/skull/tajaran,
+/obj/item/clothing/accessory/collar/gold,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "sgU" = (
 /obj/machinery/door/airlock/voidcraft/survival_pod,
 /obj/effect/floor_decal/industrial/hatch,
@@ -27483,6 +27857,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
+"sxV" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "syj" = (
 /obj/structure/table/bench/marble,
 /obj/structure/flora/pottedplant/bamboo{
@@ -27530,12 +27908,12 @@
 	icon_state = "pwindow"
 	},
 /obj/machinery/recharger{
-	pixel_y = 0;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 0
 	},
 /obj/machinery/recharger{
-	pixel_y = 0;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
@@ -27872,6 +28250,14 @@
 /obj/item/device/gps,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"sMe" = (
+/obj/effect/decal/remains/tajaran,
+/obj/effect/decal/cleanable/blood/splatter{
+	color = "red"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "sMq" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /turf/simulated/shuttle/plating,
@@ -28365,6 +28751,16 @@
 	},
 /turf/simulated/shuttle/plating/skipjack,
 /area/template_noop)
+"tiZ" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	dir = 4;
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/floor/outdoors/rocks,
+/area/survivalpod/superpose/DragonCave)
 "tjg" = (
 /obj/item/weapon/circuitboard/jukebox,
 /turf/simulated/floor/tiled/techmaint,
@@ -28387,8 +28783,8 @@
 "tki" = (
 /obj/machinery/disposal/wall{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 35
+	pixel_x = 35;
+	pixel_y = 0
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -28503,6 +28899,10 @@
 /obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/HydroCave)
+"tls" = (
+/obj/structure/flora/log2,
+/turf/simulated/floor/water/hotspring,
+/area/survivalpod/superpose/DragonCave)
 "tlz" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp,
@@ -28714,6 +29114,16 @@
 /obj/machinery/vending/sovietsoda,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
+"tqh" = (
+/obj/effect/decal/cleanable/filth,
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "tql" = (
 /turf/template_noop,
 /area/survivalpod/superpose/DemonPool)
@@ -28847,6 +29257,14 @@
 /obj/fiftyspawner/glass,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
+"txP" = (
+/obj/item/weapon/flame/lighter/zippo/gold{
+	pixel_x = -6;
+	pixel_y = -8
+	},
+/obj/item/weapon/coin/gold,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "txT" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -28967,6 +29385,10 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
+"tFm" = (
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "tFt" = (
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
@@ -29015,6 +29437,11 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/ScienceShip)
+"tHI" = (
+/obj/effect/decal/remains/mouse,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "tIp" = (
 /obj/structure/bed/chair/sofa/left{
 	dir = 8
@@ -29056,6 +29483,18 @@
 /obj/machinery/light,
 /turf/simulated/floor/water/deep/pool,
 /area/template_noop)
+"tKK" = (
+/obj/item/clothing/accessory/medal/solgov/gold/sun,
+/obj/item/weapon/pickaxe/gold{
+	pixel_x = -12;
+	pixel_y = 9
+	},
+/obj/item/weapon/reagent_containers/food/drinks/golden_cup{
+	pixel_x = -10;
+	pixel_y = -5
+	},
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "tKN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -29308,6 +29747,10 @@
 /obj/item/clothing/gloves/yellow,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
+"tWP" = (
+/obj/item/weapon/bone/skull/tajaran,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "tWX" = (
 /obj/item/weapon/storage/box/wormcan/deluxe,
 /turf/simulated/floor/outdoors/rocks,
@@ -29389,6 +29832,10 @@
 	},
 /turf/simulated/shuttle/wall/hard_corner,
 /area/survivalpod/superpose/CrashedQurantineShip)
+"uaH" = (
+/obj/item/weapon/material/sword/katana,
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "uaI" = (
 /obj/machinery/smartfridge/survival_pod{
 	pixel_y = 12
@@ -29595,10 +30042,10 @@
 	dir = 1
 	},
 /obj/structure/curtain/bed{
-	name = "Bathroom curtain";
-	icon_state = "open";
-	opacity = 0;
 	dir = 2;
+	icon_state = "open";
+	name = "Bathroom curtain";
+	opacity = 0;
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -29641,6 +30088,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ScienceShip)
+"uhD" = (
+/obj/structure/outcrop/gold,
+/turf/template_noop,
+/area/template_noop)
 "uhF" = (
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer_1";
@@ -29684,6 +30135,15 @@
 /obj/item/weapon/cell/slime,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
+"uid" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "uig" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/oracarpet,
@@ -29956,6 +30416,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/ScienceShip)
+"usz" = (
+/obj/effect/decal/cleanable/blood/splatter{
+	color = "red"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "usN" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/paper_bin{
@@ -31137,6 +31603,10 @@
 /obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
+"vpW" = (
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "vpY" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -32684,6 +33154,16 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
+"wzV" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "wAr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
@@ -32774,6 +33254,13 @@
 /obj/item/weapon/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
+"wBZ" = (
+/obj/item/clothing/shoes/tribalwear,
+/obj/item/clothing/under/tribalwear/common2,
+/obj/item/weapon/material/twohanded/spear,
+/obj/structure/dogbed,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "wCa" = (
 /obj/structure/table/rack,
 /obj/item/clothing/head/soft/mbill{
@@ -32976,6 +33463,13 @@
 /obj/machinery/recharge_station,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
+"wIU" = (
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/effect/decal/cleanable/filth,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "wJr" = (
 /obj/structure/fans/tiny,
 /obj/effect/floor_decal/industrial/danger/full,
@@ -33225,8 +33719,8 @@
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/bar_coffee{
 	dir = 8;
-	pixel_y = 0;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/Dinner)
@@ -33298,7 +33792,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/techfloor/kara,
+/turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
 "wUM" = (
 /obj/structure/cable{
@@ -33432,7 +33926,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/kara,
+/turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
 "wYv" = (
 /obj/machinery/newscaster{
@@ -33690,6 +34184,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/OldHotel)
+"xgk" = (
+/obj/item/weapon/ore/gold,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "xgw" = (
 /obj/structure/fans,
 /turf/simulated/floor/wood,
@@ -33929,6 +34427,18 @@
 /obj/structure/flora/tree/jungle,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/survivalpod/superpose/Farm)
+"xms" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/seeds/onionseed{
+	icon_state = "seed"
+	},
+/obj/item/seeds/tomatoseed{
+	icon_state = "seed";
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/DragonCave)
 "xmy" = (
 /obj/item/weapon/dice,
 /obj/structure/table/hardwoodtable,
@@ -34081,6 +34591,17 @@
 /obj/random/cash/huge,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/OldHotel)
+"xrC" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	req_access = null
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/DragonCave)
 "xrZ" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
@@ -35121,11 +35642,18 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/template_noop)
+"yhW" = (
+/obj/item/weapon/ore/gold{
+	pixel_x = 8;
+	pixel_y = -9
+	},
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "yhZ" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/techfloor/kara,
+/turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
 "yie" = (
 /obj/structure/closet/wardrobe/pjs,
@@ -94928,14 +95456,14 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -95179,22 +95707,22 @@ ktQ
 ktQ
 ktQ
 ktQ
+bwD
+bwD
+uhD
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+bwD
+fXu
+fXu
+eAn
+jbq
+bwD
+bwD
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -95435,24 +95963,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+fXu
+eAn
+eAn
+iHk
+eWe
+eAn
+kBw
+oEP
+eeP
+bwD
+apf
 ktQ
 ktQ
 ktQ
@@ -95692,24 +96220,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+eAn
+eAn
+gAv
+eAn
+eAn
+eAn
+eAn
+xgk
+hux
+sxV
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -95949,24 +96477,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+bwD
+eAn
+eAn
+eAn
+usz
+eAn
+eAn
+vpW
+eAn
+eWe
+ate
+uaH
+kaj
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -96206,24 +96734,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+eAn
+eAn
+qhx
+qhx
+eAn
+eAn
+eWe
+eAn
+eAn
+eAn
+ate
+yhW
+gDZ
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -96463,24 +96991,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+eAn
+eAn
+uid
+eAn
+uid
+wzV
+lZL
+tqh
+uid
+sgQ
+eAn
+tFm
+pdo
+mUQ
+fPF
+bwD
 ktQ
 ktQ
 ktQ
@@ -96720,24 +97248,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+eAn
+eAn
+eAn
+bwD
+eAn
+eAn
+eAn
+qhx
+eAn
+vpW
+hsH
+ate
+tHI
+qFp
+tKK
+bwD
 ktQ
 ktQ
 ktQ
@@ -96977,24 +97505,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+mHT
+mHT
+mHT
+bwD
+fXu
+eAn
+pSH
+eAn
+sMe
+eAn
+vpW
+eAn
+eph
+txP
+doB
+bwD
 ktQ
 ktQ
 ktQ
@@ -97234,24 +97762,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+eCN
+fVI
+tiZ
+qdH
+bwD
+oEP
+eAn
+jUJ
+eAn
+eAn
+jfO
+eAn
+tWP
+qhx
+qcn
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -97491,24 +98019,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+fzt
+ibf
+ibf
+myj
+bwD
+bwD
+bwD
+bwD
+qhx
+rSf
+iMp
+vpW
+fXu
+eWe
+xgk
+bwD
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -97748,23 +98276,23 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+fzt
+myj
+fVI
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+kBw
+wIU
+pXI
+gys
+rGc
+rGc
+gys
+bwD
 ktQ
 ktQ
 ktQ
@@ -98005,23 +98533,23 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+fzt
+bKu
+bwD
+bwD
+bwD
+aFs
+diq
+jVK
+bwD
+bwD
+bwD
+bwD
+gys
+eAn
+eAn
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -98262,24 +98790,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+gys
+bkg
+qJY
+btN
+btN
+jKz
+bwD
+bwD
+bwD
+eAn
+eAn
+qhx
+tls
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -98519,24 +99047,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+gys
+xrC
+jBV
+btN
+qhx
+eAn
+ctj
+bwD
+bvq
+qhx
+eAn
+aSQ
+fxs
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -98776,24 +99304,24 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+gys
+gys
+lCJ
+fat
+wBZ
+qhx
+eAn
+eAn
+qhx
+qhx
+inz
+aSQ
+seq
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -99033,23 +99561,23 @@ ktQ
 ktQ
 ktQ
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+djP
+dLD
+hJi
+xms
+oEP
+mpT
+aSQ
+bwD
+bwD
 ktQ
 ktQ
 ktQ
@@ -99291,22 +99819,22 @@ ktQ
 ktQ
 ktQ
 ktQ
+bwD
+bwD
+apf
 ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
-ktQ
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+bwD
+cXM
 ktQ
 ktQ
 ktQ

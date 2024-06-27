@@ -13,6 +13,8 @@
 
 /area/survivalpod/superpose/Dinner
 
+/area/survivalpod/superpose/DragonCave
+
 /area/survivalpod/superpose/ExplorerHome
 
 /area/survivalpod/superpose/Farm
