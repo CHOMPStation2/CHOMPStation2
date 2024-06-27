@@ -37,6 +37,8 @@
 	init_id()
 	init_subsystems()
 
+	set_slosh() // CHOMPAdd - Slosh element, for VORE
+
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src
 	for(var/datum/alarm_handler/AH in SSalarm.all_handlers)
