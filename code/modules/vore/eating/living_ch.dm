@@ -54,7 +54,7 @@
 	updating_fullness = FALSE
 	return new_fullness
 
-
+/* This is an ELEMENT now
 /mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	if(vore_footstep_volume_cooldown++ >= 5) //updating the 'dominating' belly, the one that has most liquid and is loudest.
 		choose_vorefootstep()
@@ -85,7 +85,7 @@
 	else					//Volume will start at least at 20 so theres more initial sound
 		vore_footstep_volume = 20 + highest_vol * 4/5
 		vore_footstep_chance = highest_vol/4
-
+*/
 
 //
 // Returns examine messages for how much reagents are in bellies

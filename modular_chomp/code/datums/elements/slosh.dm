@@ -52,7 +52,7 @@
 
 		if(highest_vol < 20)
 			vore_footstep_volume = 0
-			source.vore_footstep_chance = 0
+			vore_footstep_chance = 0
 		else
 			vore_footstep_volume = 20 + highest_vol * 4/5
 			vore_footstep_chance = highest_vol/4
@@ -62,7 +62,7 @@
 	if(!vore_footstep_volume || !vore_footstep_chance)
 		return
 
-	if(prob(source.vore_footstep_chance))
+	if(prob(vore_footstep_chance))
 		handle_vorefootstep(source)
 
 /datum/element/slosh/proc/handle_vorefootstep(mob/living/source)
