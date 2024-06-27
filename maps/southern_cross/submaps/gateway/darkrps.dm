@@ -337,6 +337,8 @@
 //Map exclssive powers
 
 /obj/item/weapon/card/id/slabI
+	name = "Slab ID I"
 	access = list(886)
 /obj/item/weapon/card/id/slabII
+	name = "Slab ID II"
 	access = list(887)
