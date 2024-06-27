@@ -1070,25 +1070,27 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					var/new_emote_time = belly_data["emote_time"]
 					new_belly.emote_time = CLAMP(new_emote_time, 60, 600)
 
+				new_belly.set_zero_digestion_damage() // CHOMP Edit; needed for importing a belly to overwrite an existing belly; otherwise pre-existing values throw off the unused digestion damage.
+
 				if(isnum(belly_data["digest_brute"]))
 					var/new_digest_brute = belly_data["digest_brute"]
-					new_belly.digest_brute = CLAMP(new_digest_brute, 0, 6)
+					new_belly.digest_brute = CLAMP(new_digest_brute, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 				if(isnum(belly_data["digest_burn"]))
 					var/new_digest_burn = belly_data["digest_burn"]
-					new_belly.digest_burn = CLAMP(new_digest_burn, 0, 6)
+					new_belly.digest_burn = CLAMP(new_digest_burn, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 				if(isnum(belly_data["digest_oxy"]))
 					var/new_digest_oxy = belly_data["digest_oxy"]
-					new_belly.digest_oxy = CLAMP(new_digest_oxy, 0, 12)
+					new_belly.digest_oxy = CLAMP(new_digest_oxy, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 12
 
 				if(isnum(belly_data["digest_tox"]))
 					var/new_digest_tox = belly_data["digest_tox"]
-					new_belly.digest_tox = CLAMP(new_digest_tox, 0, 6)
+					new_belly.digest_tox = CLAMP(new_digest_tox, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 				if(isnum(belly_data["digest_clone"]))
 					var/new_digest_clone = belly_data["digest_clone"]
-					new_belly.digest_clone = CLAMP(new_digest_clone, 0, 6)
+					new_belly.digest_clone = CLAMP(new_digest_clone, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 				if(isnum(belly_data["shrink_grow_size"]))
 					var/new_shrink_grow_size = belly_data["shrink_grow_size"]
@@ -3262,43 +3264,45 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/new_new_nutrition = CLAMP(new_nutrition, 0.01, 100)
 			host.vore_selected.nutrition_percent = new_new_nutrition
 			. = TRUE
+		// CHOMPEdit Start - modified these to be flexible rather than maxing at 6/6/12/6/6
 		if("b_burn_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", host.vore_selected.digest_burn, 6, 0, round_value=FALSE)
+			var/new_damage = tgui_input_number(user, "Choose the amount of burn damage prey will take per tick. Max of [host.vore_selected.digest_max] across all damage types. [host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_burn] remaining.", "Set Belly Burn Damage.", host.vore_selected.digest_burn, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_burn, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 6)
-			host.vore_selected.digest_burn = new_new_damage
+			new_damage = CLAMP(new_damage, 0, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_burn) // sanity check following tgui input
+			host.vore_selected.digest_burn = new_damage
 			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_brute_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Ranges from 0 to 6", "Set Belly Brute Damage.", host.vore_selected.digest_brute, 6, 0, round_value=FALSE)
+			var/new_damage = tgui_input_number(user, "Choose the amount of brute damage prey will take per tick. Max of [host.vore_selected.digest_max] across all damage types. [host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_brute] remaining.", "Set Belly Brute Damage.", host.vore_selected.digest_brute, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_brute, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 6)
-			host.vore_selected.digest_brute = new_new_damage
+			new_damage = CLAMP(new_damage, 0, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_brute)
+			host.vore_selected.digest_brute = new_damage
 			host.vore_selected.items_preserved.Cut() //CHOMPAdd
 			. = TRUE
 		if("b_oxy_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of suffocation damage prey will take per tick. Ranges from 0 to 12.", "Set Belly Suffocation Damage.", host.vore_selected.digest_oxy, 12, 0, round_value=FALSE)
+			var/new_damage = tgui_input_number(user, "Choose the amount of oxygen damage prey will take per tick. Max of [host.vore_selected.digest_max] across all damage types. [host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_oxy] remaining.", "Set Belly Oxygen Damage.", host.vore_selected.digest_oxy, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_oxy, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 12)
-			host.vore_selected.digest_oxy = new_new_damage
+			new_damage = CLAMP(new_damage, 0, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_oxy)
+			host.vore_selected.digest_oxy = new_damage
 			. = TRUE
 		if("b_tox_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of toxins damage prey will take per tick. Ranges from 0 to 6", "Set Belly Toxins Damage.", host.vore_selected.digest_tox, 6, 0, round_value=FALSE)
+			var/new_damage = tgui_input_number(user, "Choose the amount of toxin damage prey will take per tick. Max of [host.vore_selected.digest_max] across all damage types. [host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_tox] remaining.", "Set Belly Toxin Damage.", host.vore_selected.digest_tox, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_tox, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 6)
-			host.vore_selected.digest_tox = new_new_damage
+			new_damage = CLAMP(new_damage, 0, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_tox)
+			host.vore_selected.digest_tox = new_damage
 			. = TRUE
 		if("b_clone_dmg")
-			var/new_damage = tgui_input_number(user, "Choose the amount of brute DNA damage (clone) prey will take per tick. Ranges from 0 to 6", "Set Belly Clone Damage.", host.vore_selected.digest_clone, 6, 0, round_value=FALSE)
+			var/new_damage = tgui_input_number(user, "Choose the amount of genetic (clone) damage prey will take per tick. Max of [host.vore_selected.digest_max] across all damage types. [host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_clone] remaining.", "Set Belly Genetic Damage.", host.vore_selected.digest_clone, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_clone, 0, round_value=FALSE)
 			if(new_damage == null)
 				return FALSE
-			var/new_new_damage = CLAMP(new_damage, 0, 6)
-			host.vore_selected.digest_clone = new_new_damage
+			new_damage = CLAMP(new_damage, 0, host.vore_selected.get_unused_digestion_damage() + host.vore_selected.digest_clone)
+			host.vore_selected.digest_clone = new_damage
 			. = TRUE
+		// CHOMPEdit End
 		if("b_drainmode")
 			var/list/menu_list = host.vore_selected.drainmodes.Copy()
 			var/new_drainmode = tgui_input_list(user, "Choose Mode (currently [host.vore_selected.digest_mode])", "Mode Choice", menu_list) //ChompEDIT - user, not usr

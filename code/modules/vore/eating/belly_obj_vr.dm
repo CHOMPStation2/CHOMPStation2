@@ -18,6 +18,7 @@
 	var/human_prey_swallow_time = 100		// Time in deciseconds to swallow /mob/living/carbon/human
 	var/nonhuman_prey_swallow_time = 30		// Time in deciseconds to swallow anything else
 	var/nutrition_percent = 100				// Nutritional percentage per tick in digestion mode
+	var/digest_max = 36						// CHOMPEdit; maximum total damage across all types
 	var/digest_brute = 0.5					// Brute damage per tick in digestion mode
 	var/digest_burn = 0.5					// Burn damage per tick in digestion mode
 	var/digest_oxy = 0						// Oxy damage per tick in digestion mode
@@ -470,7 +471,8 @@
 	"entrance_logs",
 	"noise_freq",
 	"private_struggle",
-	"item_digest_logs", //CHOMP end of variables from CHOMP
+	"item_digest_logs",
+	"digest_max", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
 	"eating_privacy_local",
@@ -1516,6 +1518,24 @@
 			emote_lists[DM_UNABSORB] = raw_list
 
 	return
+
+//CHOMPEdit Start - new procs for handling digestion damage as a total rather than per-type
+// Returns the current total digestion damage per tick of a belly.
+/obj/belly/proc/get_total_digestion_damage()
+	return (digest_brute + digest_burn + digest_oxy + digest_tox + digest_clone)
+
+// Returns the remaining 'budget' of digestion damage between the current and the maximum.
+/obj/belly/proc/get_unused_digestion_damage()
+	return max(digest_max - get_total_digestion_damage(), 0)
+
+/obj/belly/proc/set_zero_digestion_damage()
+	digest_brute = 0
+	digest_burn = 0
+	digest_oxy = 0
+	digest_tox = 0
+	digest_clone = 0
+	return
+// CHOMPEdit End
 
 // Handle the death of a mob via digestion.
 // Called from the process_Life() methods of bellies that digest prey.
@@ -2592,7 +2612,8 @@
 	dupe.is_feedable = is_feedable
 	dupe.entrance_logs = entrance_logs
 	dupe.noise_freq = noise_freq
-	dupe.item_digest_logs = item_digest_logs //CHOMP end of variables from CHOMP
+	dupe.item_digest_logs = item_digest_logs
+	dupe.digest_max = digest_max //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
