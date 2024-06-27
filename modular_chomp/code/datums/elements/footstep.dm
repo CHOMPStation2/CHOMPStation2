@@ -145,7 +145,7 @@
 		if(source.species.special_step_sounds)
 			playsound(source.loc, pick(source.species.special_step_sounds), 50, TRUE, falloff = 1, vary = sound_vary)
 		else if (istype(source.species, /datum/species/shapeshifter/promethean))
-			playsound(source.loc, 'modular_chomp/sound/effects/footstep/slime1.ogg', vol = 25, TRUE, falloff = 1)
+			playsound(source.loc, 'modular_chomp/sound/effects/footstep/slime1.ogg', 25, TRUE, falloff = 1)
 		else
 			var/barefoot_type = prepared_steps[FOOTSTEP_MOB_BAREFOOT]
 			var/bare_footstep_sounds
