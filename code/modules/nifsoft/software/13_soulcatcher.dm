@@ -483,7 +483,7 @@
 		var/obj/belly/B = L.loc
 		var/mob/living/owner = B.owner
 		var/obj/soulgem/gem = owner.soulgem
-		if(owner && gem.flag_check(list(SOULGEM_ACTIVE, NIF_SC_CATCHING_OTHERS)))
+		if(owner && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS, TRUE))
 			gem.catch_mob(L)
 			return TRUE
 		var/mob/living/carbon/human/HP = B.owner
@@ -494,7 +494,7 @@
 			SC.catch_mob(H)
 	else
 		var/obj/soulgem/gem = L.soulgem
-		if(gem && gem.flag_check(list(SOULGEM_ACTIVE, NIF_SC_CATCHING_ME)))
+		if(gem && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_ME, TRUE))
 			gem.catch_mob(L)
 			return TRUE
 		var/mob/living/carbon/human/H = L
