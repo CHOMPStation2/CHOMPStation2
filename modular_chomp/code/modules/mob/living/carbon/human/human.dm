@@ -1,7 +1,3 @@
-/mob/living/carbon/human/Initialize(mapload, new_species)
-	AddElement(/datum/element/footstep, FOOTSTEP_MOB_HUMAN, 1, -6)
-	. = ..()
-
 /mob/living/carbon/human/update_fullness(var/returning = FALSE)
 	if(!returning)
 		if(updating_fullness)

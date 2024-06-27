@@ -25,35 +25,33 @@
 	src.e_range = e_range
 	src.footstep_type = footstep_type
 	src.sound_vary = sound_vary
-	switch(footstep_type)
-		if(FOOTSTEP_MOB_HUMAN)
-			if(!ishuman(target))
-				return ELEMENT_INCOMPATIBLE
-			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_humanstep))
-			steps_for_living[target] = 0
-			return
-		if(FOOTSTEP_MOB_CLAW)
-			footstep_sounds = GLOB.clawfootstep
-		if(FOOTSTEP_MOB_BAREFOOT)
-			footstep_sounds = GLOB.barefootstep
-		if(FOOTSTEP_MOB_HEAVY)
-			footstep_sounds = GLOB.heavyfootstep
-		if(FOOTSTEP_MOB_SHOE)
-			footstep_sounds = GLOB.footstep
-		if(FOOTSTEP_MOB_SLIME)
-			footstep_sounds = 'modular_chomp/sound/effects/footstep/slime1.ogg'
-		/*
-		if(FOOTSTEP_OBJ_MACHINE)
-			footstep_sounds = 'sound/effects/bang.ogg'
-			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
-			return
-		if(FOOTSTEP_OBJ_ROBOT)
-			footstep_sounds = 'modular_chomp/sound/effects/tank_treads.ogg'
-			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
-			return
-		*/
+
+	if(ishuman(target))
+		RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_humanstep))
+		steps_for_living[target] = 0
+		return
+
+	footstep_sounds = check_footstep_type(footstep_type)
+
 	RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep))
 	steps_for_living[target] = 0
+
+/datum/element/footstep/proc/check_footstep_type(footstep_type)
+	var/footstep_ret
+	switch(footstep_type)
+		if(FOOTSTEP_MOB_TESHARI)
+			footstep_ret = GLOB.lightclawfootstep
+		if(FOOTSTEP_MOB_CLAW)
+			footstep_ret = GLOB.clawfootstep
+		if(FOOTSTEP_MOB_BAREFOOT)
+			footstep_ret = GLOB.barefootstep
+		if(FOOTSTEP_MOB_HEAVY)
+			footstep_ret = GLOB.heavyfootstep
+		if(FOOTSTEP_MOB_SHOE)
+			footstep_ret = GLOB.footstep
+		if(FOOTSTEP_MOB_SLIME)
+			footstep_ret = 'modular_chomp/sound/effects/footstep/slime1.ogg'
+	return footstep_ret
 
 /datum/element/footstep/Detach(atom/movable/source)
 	UnregisterSignal(source, COMSIG_MOVABLE_MOVED)
@@ -64,6 +62,9 @@
 /datum/element/footstep/proc/prepare_step(mob/living/source)
 	var/turf/simulated/turf = get_turf(source)
 	if(!istype(turf))
+		return
+
+	if(source.is_incorporeal())
 		return
 
 	if(source.buckled || source.throwing || source.movement_type & (source.is_ventcrawling | source.flying))
@@ -90,7 +91,7 @@
 	if(steps % 2)
 		return
 
-	if(steps != 0 && !source.has_gravity()) // don't need to step as often when you hop around
+	if(steps != 0 && !has_gravity(source)) // don't need to step as often when you hop around
 		return
 
 	. = list(FOOTSTEP_MOB_SHOE = turf.footstep, FOOTSTEP_MOB_BAREFOOT = turf.barefootstep, FOOTSTEP_MOB_HEAVY = turf.heavyfootstep, FOOTSTEP_MOB_CLAW = turf.clawfootstep, STEP_SOUND_PRIORITY = STEP_SOUND_NO_PRIORITY)
@@ -128,15 +129,13 @@
 
 	//cache for sanic speed (lists are references anyways)
 	var/footstep_sounds = GLOB.footstep
-	///list returned by playsound() filled by client mobs who heard the footstep. given to play_fov_effect()
-	var/list/heard_clients = list()
 
-	if((source.wear_suit?.body_parts_covered | source.w_uniform?.body_parts_covered | source.shoes?.body_parts_covered) & FEET)
+	if( source.shoes || ( source.wear_suit && (source.wear_suit.body_parts_covered & FEET) ) )
 		// we are wearing shoes
 
 		var/shoestep_type = prepared_steps[FOOTSTEP_MOB_SHOE]
 		if(!isnull(shoestep_type) && footstep_sounds[shoestep_type]) // shoestep type can be null
-			heard_clients = playsound(source.loc, pick(footstep_sounds[shoestep_type][1]),
+			playsound(source.loc, pick(footstep_sounds[shoestep_type][1]),
 				footstep_sounds[shoestep_type][2] * volume * volume_multiplier,
 				TRUE,
 				footstep_sounds[shoestep_type][3] + e_range + range_adjustment, falloff = 1, vary = sound_vary)
@@ -144,22 +143,23 @@
 		// we are barefoot
 
 		if(source.species.special_step_sounds)
-			heard_clients = playsound(source.loc, pick(source.species.special_step_sounds), 50, TRUE, falloff = 1, vary = sound_vary)
+			playsound(source.loc, pick(source.species.special_step_sounds), 50, TRUE, falloff = 1, vary = sound_vary)
+		else if (istype(source.species, /datum/species/shapeshifter/promethean))
+			playsound(source.loc, 'modular_chomp/sound/effects/footstep/slime1.ogg', vol = 25, TRUE, falloff = 1)
 		else
 			var/barefoot_type = prepared_steps[FOOTSTEP_MOB_BAREFOOT]
-			var/bare_footstep_sounds = GLOB.barefootstep
+			var/bare_footstep_sounds
+			if(source.species.footstep != FOOTSTEP_MOB_HUMAN)
+				bare_footstep_sounds = check_footstep_type(source.species.footstep)
+			else
+				bare_footstep_sounds = GLOB.barefootstep
 			if(!isnull(barefoot_type) && bare_footstep_sounds[barefoot_type]) // barefoot_type can be null
-				heard_clients = playsound(source.loc, pick(bare_footstep_sounds[barefoot_type][1]),
+				playsound(source.loc, pick(bare_footstep_sounds[barefoot_type][1]),
 					bare_footstep_sounds[barefoot_type][2] * volume * volume_multiplier,
 					TRUE,
 					bare_footstep_sounds[barefoot_type][3] + e_range + range_adjustment, falloff = 1, vary = sound_vary)
-	/*
-	if(heard_clients)
-		play_fov_effect(source, 5, "footstep", direction, ignore_self = TRUE, override_list = heard_clients)
-	*/
 
 ///Prepares a footstep for machine walking
-/*
 /datum/element/footstep/proc/play_simplestep_machine(atom/movable/source, atom/oldloc, direction, forced, list/old_locs, momentum_change)
 	SIGNAL_HANDLER
 
@@ -168,5 +168,4 @@
 		return
 
 	playsound(source_loc, footstep_sounds, 50, falloff = 1, vary = sound_vary)
-*/
 #undef SHOULD_DISABLE_FOOTSTEPS

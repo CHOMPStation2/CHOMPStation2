@@ -11,8 +11,10 @@
 //barefoot sounds
 #define FOOTSTEP_WOOD_BAREFOOT "woodbarefoot"
 #define FOOTSTEP_WOOD_CLAW "woodclaw"
+#define FOOTSTEP_WOOD_LIGHTCLAW "woodlightclaw"
 #define FOOTSTEP_HARD_BAREFOOT "hardbarefoot"
 #define FOOTSTEP_HARD_CLAW "hardclaw"
+#define FOOTSTEP_HARD_LIGHTCLAW "hardlightclaw"
 #define FOOTSTEP_CARPET_BAREFOOT "carpetbarefoot"
 //misc footstep sounds
 #define FOOTSTEP_GENERIC_HEAVY "heavy"
@@ -20,21 +22,19 @@
 
 //footstep mob defines
 #define FOOTSTEP_MOB_CLAW "footstep_claw"
+#define FOOTSTEP_MOB_TESHARI "footstep_lightclaw"
 #define FOOTSTEP_MOB_BAREFOOT "footstep_barefoot"
 #define FOOTSTEP_MOB_HEAVY "footstep_heavy"
 #define FOOTSTEP_MOB_SHOE "footstep_shoe"
 #define FOOTSTEP_MOB_HUMAN "footstep_human" //Warning: Only works on /mob/living/carbon/human
 #define FOOTSTEP_MOB_SLIME "footstep_slime"
-/*
 #define FOOTSTEP_OBJ_MACHINE "footstep_machine"
 #define FOOTSTEP_OBJ_ROBOT "footstep_robot"
-*/
 
 //priority defines for the footstep_override element
 #define STEP_SOUND_NO_PRIORITY 0
 #define STEP_SOUND_CONVEYOR_PRIORITY 1
 #define STEP_SOUND_TABLE_PRIORITY 2
-#define STEP_SOUND_BELLY_PRIORITY 3
 
 ///the name of the index key for priority
 #define STEP_SOUND_PRIORITY "step_sound_priority"
@@ -150,13 +150,13 @@ GLOBAL_LIST_INIT(barefootstep, list(
 
 //claw footsteps lists
 GLOBAL_LIST_INIT(clawfootstep, list(
-	FOOTSTEP_WOOD_CLAW = list(list(
+	FOOTSTEP_WOOD_BAREFOOT = list(list(
 		'modular_chomp/sound/effects/footstep/woodclaw1.ogg',
 		'modular_chomp/sound/effects/footstep/woodclaw2.ogg',
 		'modular_chomp/sound/effects/footstep/woodclaw3.ogg',
 		'modular_chomp/sound/effects/footstep/woodclaw2.ogg',
 		'modular_chomp/sound/effects/footstep/woodclaw1.ogg'), 90, 1),
-	FOOTSTEP_HARD_CLAW = list(list(
+	FOOTSTEP_HARD_BAREFOOT = list(list(
 		'modular_chomp/sound/effects/footstep/hardclaw1.ogg',
 		'modular_chomp/sound/effects/footstep/hardclaw2.ogg',
 		'modular_chomp/sound/effects/footstep/hardclaw3.ogg',
@@ -174,6 +174,46 @@ GLOBAL_LIST_INIT(clawfootstep, list(
 		'sound/effects/footstep/asteroid3.ogg',
 		'sound/effects/footstep/asteroid4.ogg',
 		'sound/effects/footstep/asteroid5.ogg'), 75, 0),
+	FOOTSTEP_GRASS = list(list(
+		'sound/effects/footstep/grass1.ogg',
+		'sound/effects/footstep/grass2.ogg',
+		'sound/effects/footstep/grass3.ogg',
+		'sound/effects/footstep/grass4.ogg'), 75, 0),
+	FOOTSTEP_WATER = list(list(
+		'sound/effects/footstep/water1.ogg',
+		'sound/effects/footstep/water2.ogg',
+		'sound/effects/footstep/water3.ogg',
+		'sound/effects/footstep/water4.ogg'), 100, 1),
+	FOOTSTEP_LAVA = list(list(
+		'sound/effects/footstep/lava1.ogg',
+		'sound/effects/footstep/lava2.ogg',
+		'sound/effects/footstep/lava3.ogg'), 100, 0),
+	FOOTSTEP_MEAT = list(list(
+		'modular_chomp/sound/effects/meatslap.ogg'), 100, 0),
+))
+
+//light claw footsteps list
+GLOBAL_LIST_INIT(lightclawfootstep, list(
+	FOOTSTEP_WOOD_BAREFOOT = list(list(
+		'sound/effects/footstep/BudgieStep1.ogg',
+		'sound/effects/footstep/BudgieStep2.ogg',
+		'sound/effects/footstep/BudgieStep3.ogg',
+		'sound/effects/footstep/BudgieStep4.ogg',
+		'sound/effects/footstep/BudgieStep5.ogg',
+		'sound/effects/footstep/BudgieStep6.ogg'), 90, 1),
+	FOOTSTEP_HARD_BAREFOOT = list(list(
+		'sound/effects/footstep/BudgieStep1.ogg',
+		'sound/effects/footstep/BudgieStep2.ogg',
+		'sound/effects/footstep/BudgieStep3.ogg',
+		'sound/effects/footstep/BudgieStep4.ogg',
+		'sound/effects/footstep/BudgieStep5.ogg',
+		'sound/effects/footstep/BudgieStep6.ogg'), 90, 1),
+	FOOTSTEP_CARPET_BAREFOOT = list(list(
+		'sound/effects/footstep/asteroid1.ogg',
+		'sound/effects/footstep/asteroid2.ogg',
+		'sound/effects/footstep/asteroid3.ogg',
+		'sound/effects/footstep/asteroid4.ogg',
+		'sound/effects/footstep/asteroid5.ogg'), 75, -2),
 	FOOTSTEP_GRASS = list(list(
 		'sound/effects/footstep/grass1.ogg',
 		'sound/effects/footstep/grass2.ogg',

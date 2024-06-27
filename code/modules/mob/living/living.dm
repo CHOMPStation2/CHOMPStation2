@@ -1400,3 +1400,10 @@
 	to_chat(src, SPAN_NOTICE("You are [toggled_sleeping ? "now sleeping. Use the Sleep verb again to wake up" : "no longer sleeping"]."))
 	if(toggled_sleeping)
 		Sleeping(1)
+
+// CHOMPAdd - Everyone starts as a human, augh.
+/mob/living/proc/set_footsteps(footstep_sounds = FOOTSTEP_MOB_HUMAN)
+	AddElement(/datum/element/footstep, footstep_sounds, 1, -6)
+
+/mob/living/proc/set_slosh()
+	AddElement(/datum/element/slosh)

@@ -72,7 +72,7 @@
 	if(is_plating() && !initializing) // Plating -> Flooring
 		swap_decals()
 	flooring = newflooring
-	vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
+	// vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
 	// footstep_sounds = newflooring.footstep_sounds CHOMPEdit - Better footsteps
 	if(!initializing)
 		update_icon(1)
