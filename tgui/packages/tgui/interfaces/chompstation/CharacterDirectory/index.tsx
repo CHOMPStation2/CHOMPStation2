@@ -20,7 +20,7 @@ export const CharacterDirectory = (props) => {
     directory,
   } = data;
 
-  const [overlay, setOverlay] = useState<mobEntry>({} as mobEntry);
+  const [overlay, setOverlay] = useState<mobEntry | null>(null);
   const [overwritePrefs, setOverwritePrefs] = useState<boolean>(false);
 
   function handleOverlay(value: mobEntry) {
