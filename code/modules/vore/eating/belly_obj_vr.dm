@@ -1597,7 +1597,7 @@
 	if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
 		if(R.mmi && R.mind && R.mmi.brainmob)
-			if((R.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && owner.soulgem)
+			if((R.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && owner.soulgem && soulgem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS))
 				owner.soulgem.catch_mob(R, R.name)
 			else
 				R.mmi.loc = src
