@@ -42,7 +42,7 @@
 
 	if(!soulgem) // Only sanity...
 		return
-	if(soulgem && soulgem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_ME))
+	if(soulgem && soulgem.flag_check(SOULGEM_ACTIVE))
 		soulgem.catch_mob(src)
 
 /mob/proc/nsay_vore()

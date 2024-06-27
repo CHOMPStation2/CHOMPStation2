@@ -346,5 +346,13 @@
 	if(flag & SOULGEM_SHOW_VORE_SFX)
 		soulgem_vfx(TRUE)
 
+// Checks a single flag, or an entire list if all elements in it are true
 /obj/soulgem/proc/flag_check(var/flag)
+	if(islist(flag))
+		var/flag_state = TRUE
+		for(var/single_flag in flag)
+			flag_state = flag_check(single_flag)
+			if(!flag_state)
+				break
+		return flag_state
 	return setting_flags & flag

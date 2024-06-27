@@ -7,7 +7,6 @@
 //# define NIF_SC_ALLOW_EYES			0x8 //CHOMPRemove
 //# define NIF_SC_BACKUPS				0x10 //CHOMPRemove
 //# define NIF_SC_PROJECTING			0x20 //CHOMPRemove
-//# define SOULGEM_ACTIVE				0x400 //CHOMPRemove
 
 ///////////
 // Soulcatcher - Like a posibrain, sorta!
@@ -484,7 +483,7 @@
 		var/obj/belly/B = L.loc
 		var/mob/living/owner = B.owner
 		var/obj/soulgem/gem = owner.soulgem
-		if(owner && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS))
+		if(owner && gem.flag_check(list(SOULGEM_ACTIVE, NIF_SC_CATCHING_OTHERS)))
 			gem.catch_mob(L)
 			return TRUE
 		var/mob/living/carbon/human/HP = B.owner
@@ -495,7 +494,7 @@
 			SC.catch_mob(H)
 	else
 		var/obj/soulgem/gem = L.soulgem
-		if(gem && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_ME))
+		if(gem && gem.flag_check(list(SOULGEM_ACTIVE, NIF_SC_CATCHING_ME)))
 			gem.catch_mob(L)
 			return TRUE
 		var/mob/living/carbon/human/H = L
