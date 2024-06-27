@@ -144,9 +144,10 @@
 				to_chat(H, effect_message)
 
 /datum/weather/sif/sandstorm
+	name = "Sandstorm"
 	icon_state = "sandstorm"
+	temp_low = 293.15
 	temp_high = 313.15
-	temp_low = 333.15
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
@@ -180,11 +181,12 @@
 //datum/weather/sif/stupidbrainwantingthingsinfives
 
 /datum/weather/sif/starryrift
+	name = "starry skies"
 	icon_state = "starry_night"
 	light_modifier = 1.5
 
-	temp_high = 323.15
-	temp_low = 343.15
+	temp_low = 283.15
+	temp_high = 303.15
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
@@ -226,11 +228,12 @@
 */
 
 /datum/weather/sif/midnightfog
+	name = "heavy fog"
 	icon_state = "midnight_fog"
 	light_modifier = 0.3
 
+	temp_low = 283.15
 	temp_high = 303.15
-	temp_low = 323.15
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
