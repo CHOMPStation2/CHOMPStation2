@@ -1207,8 +1207,8 @@
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "dF" = (
-/obj/machinery/door/airlock/glass,
-/turf/simulated/shuttle/floor/black,
+/mob/living/simple_mob/metroid/juvenile/omega,
+/turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "dG" = (
 /obj/effect/simple_portal/coords{
@@ -2954,11 +2954,12 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "jb" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/hyperpad/centre{
+	map_pad_id = "rizz";
+	map_pad_link_id = "skibidi"
 	},
 /turf/simulated/shuttle/floor/black,
-/area/awaymission/diescraper/indoors/floor2)
+/area/awaymission/diescraper/indoors/floor1)
 "jc" = (
 /obj/structure/closet/crate/secure/large,
 /obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
@@ -3720,9 +3721,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/mob/living/simple_mob/metroid/juvenile/super,
-/turf/simulated/floor/bmarble,
-/area/awaymission/diescraper/indoors/floor1)
+/turf/simulated/shuttle/floor/black,
+/area/awaymission/diescraper/indoors/floor2)
 "ld" = (
 /obj/structure/sign/poster/custom{
 	dir = 4
@@ -3749,7 +3749,10 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "lg" = (
-/mob/living/simple_mob/metroid/juvenile/omega,
+/obj/machinery/light{
+	dir = 1
+	},
+/mob/living/simple_mob/metroid/juvenile/super,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "lh" = (
@@ -9534,10 +9537,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor9)
 "BF" = (
-/obj/machinery/hyperpad/centre{
-	map_pad_id = "rizz";
-	map_pad_link_id = "skibidi"
-	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/diescraper/indoors/floor1)
 "BG" = (
@@ -11001,8 +11001,10 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/diescraper/indoors/floor11)
 "FE" = (
-/mob/living/simple_mob/metroid/juvenile/alpha,
-/turf/simulated/floor/bmarble,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/black,
 /area/awaymission/diescraper/indoors/floor1)
 "FF" = (
 /obj/machinery/power/rtg/fake_z_wires,
@@ -13245,11 +13247,15 @@
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "LW" = (
-/obj/machinery/light{
-	dir = 1
+/obj/effect/step_trigger/teleporter/deathfall{
+	teleport_x = 55;
+	teleport_y = 16
 	},
-/turf/simulated/shuttle/floor/black,
-/area/awaymission/diescraper/indoors/floor1)
+/obj/item/weapon/storage/backpack/parachute,
+/turf/simulated/sky/moving/south{
+	temperature = 277
+	},
+/area/awaymission/diescraper/sky)
 "LX" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced/tinted{
@@ -14550,6 +14556,10 @@
 /obj/structure/sign/warning/secure_area/slabs,
 /turf/unsimulated/wall/cult,
 /area/awaymission/diescraper/indoors/floor11)
+"PP" = (
+/mob/living/simple_mob/metroid/juvenile/alpha,
+/turf/simulated/floor/bmarble,
+/area/awaymission/diescraper/indoors/floor1)
 "PQ" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/tool/power,
@@ -25191,7 +25201,7 @@ Tt
 uR
 UO
 mI
-jb
+lc
 eI
 eI
 ba
@@ -25707,7 +25717,7 @@ Tt
 uR
 UO
 mI
-jb
+lc
 eI
 eI
 ba
@@ -26799,10 +26809,10 @@ ur
 Bz
 mQ
 Bg
-LW
+FE
 Uw
 Uw
-dF
+BF
 cl
 ur
 ur
@@ -27058,9 +27068,9 @@ Bz
 mQ
 Bg
 Uw
-BF
+jb
 Uw
-dF
+BF
 cl
 ur
 ur
@@ -27315,10 +27325,10 @@ ur
 Bz
 mQ
 Bg
-LW
+FE
 Uw
 Uw
-dF
+BF
 cl
 ur
 oH
@@ -30917,7 +30927,7 @@ aK
 rT
 kA
 ur
-FE
+PP
 ur
 NR
 NR
@@ -32206,7 +32216,7 @@ Lx
 Lx
 Lx
 Bz
-lc
+lg
 lb
 og
 Bz
@@ -32464,9 +32474,9 @@ Lx
 Lx
 Lx
 Bz
-lg
+dF
 ur
-lg
+dF
 Bz
 Lx
 Lx
@@ -68397,7 +68407,7 @@ In
 In
 In
 Wo
-Wo
+LW
 vO
 vO
 vO
