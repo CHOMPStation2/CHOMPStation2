@@ -123,7 +123,7 @@ GLOBAL_LIST_INIT(barefootstep, list(
 		'modular_chomp/sound/effects/footstep/carpetbarefoot2.ogg',
 		'modular_chomp/sound/effects/footstep/carpetbarefoot3.ogg',
 		'modular_chomp/sound/effects/footstep/carpetbarefoot4.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot5.ogg'), 75, -2),
+		'modular_chomp/sound/effects/footstep/carpetbarefoot5.ogg'), 75, -1),
 	FOOTSTEP_SAND = list(list(
 		'sound/effects/footstep/asteroid1.ogg',
 		'sound/effects/footstep/asteroid2.ogg',
