@@ -134,7 +134,7 @@
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/marble
-	name = "sandstone brick"
+	name = "marble brick"
 	result = /obj/item/stack/material/marble
 	reqs = list(/obj/item/weapon/ore/marble = 4)
 	time = 10 //Not realstic but I don't want to waste too much time.
