@@ -1,5 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - qol: "refactored alcohol traits"
-  - qol: "expanded feedback when you drink from a glass"

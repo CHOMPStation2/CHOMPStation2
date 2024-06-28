@@ -1,4 +1,0 @@
-author: "SpringSkipper"
-delete-after: True
-changes:
-  - qol: "digestion damage types can be set higher; the max total damage is still the same."

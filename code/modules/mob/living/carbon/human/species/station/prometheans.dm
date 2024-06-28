@@ -137,6 +137,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/decl/emote/visible/vibrate
 	)
 
+	footstep = FOOTSTEP_MOB_SLIME // CHOMPEdit
+
 /datum/species/shapeshifter/promethean/New()
 	..()
 	prometheans = src

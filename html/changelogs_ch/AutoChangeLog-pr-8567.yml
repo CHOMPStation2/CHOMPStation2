@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "Drop Overmap dynamic Z levels from 3 to 2"

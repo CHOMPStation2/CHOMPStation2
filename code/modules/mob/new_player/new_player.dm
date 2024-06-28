@@ -122,7 +122,7 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-	panel = new(src, "Welcome","Welcome", 210, 400, src) // VOREStation Edit //ChompEDIT, height 300 -> 400
+	panel = new(src, "Welcome","Welcome", 210, 500, src) // VOREStation Edit //ChompEDIT, height 300 -> 500
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -760,6 +760,9 @@
 	new_character.force_update_limbs()
 	new_character.update_icons_body()
 	new_character.update_transform() //VOREStation Edit
+
+	new_character.set_footsteps(chosen_species.footstep) // CHOMPEdit
+	new_character.set_slosh() //CHOMPEdit
 
 	new_character.key = key		//Manually transfer the key to log them in
 

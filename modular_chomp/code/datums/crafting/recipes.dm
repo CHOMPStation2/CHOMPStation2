@@ -123,3 +123,19 @@
 	time = 60
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
+
+
+//SS13 survivial part 1 aka me giving outsiders easier access to some things.
+/datum/crafting_recipe/sandstone
+	name = "sandstone brick"
+	result = /obj/item/stack/material/sandstone
+	reqs = list(/obj/item/weapon/ore/glass = 4)
+	time = 10 //Not realstic but I don't want to waste too much time.
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/marble
+	name = "marble brick"
+	result = /obj/item/stack/material/marble
+	reqs = list(/obj/item/weapon/ore/marble = 4)
+	time = 10 //Not realstic but I don't want to waste too much time.
+	category = CAT_PRIMAL

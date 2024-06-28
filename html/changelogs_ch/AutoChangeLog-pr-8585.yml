@@ -1,0 +1,13 @@
+author: "Hunter-Dovetail"
+delete-after: True
+changes:
+  - rscadd: "VBOanim_synthbelly1"
+  - rscadd: "VBOanim_taurbelly1"
+  - rscadd: "VBOanim_belly4"
+  - rscadd: "VBOanim_belly5"
+  - rscadd: "VBOanim_belly6"
+  - rscadd: "VBOanim_belly7"
+  - rscadd: "VBO_maw18"
+  - rscadd: "Kasssc's VBOanim_belly1"
+  - rscadd: "VBOanim_intestine2"
+  - rscadd: "Cleans up some of the previous maw visuals by erasing cutout scratches (well not really this PR... but, I'm working on it!)"

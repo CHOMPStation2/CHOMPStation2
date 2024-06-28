@@ -229,3 +229,11 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	if(reopen)
 		ooc_notes_window(user)
 //ChompEDIT END - Removal of usr
+
+/mob/living/revive()
+	..()
+	RemoveElement(/datum/element/footstep)
+
+	if(ishuman(src))
+		var/mob/living/carbon/human/H = src
+		H.set_footsteps(H.species.footstep)
