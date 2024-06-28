@@ -1,5 +1,5 @@
 //CHOMP reagent vore belly sloshing
-
+/* This is an ELEMENT now
 // Handle footstep sounds
 /mob/living/carbon/human/handle_vorefootstep(var/m_intent, var/turf/T)
 
@@ -29,3 +29,4 @@
 		return // Far less likely to make noise in no gravity
 	playsound(T, S, volume, FALSE, preference = /datum/client_preference/digestion_noises)
 	return
+*/

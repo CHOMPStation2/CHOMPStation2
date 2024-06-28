@@ -1,5 +1,5 @@
 //CHOMP reagent vore belly sloshing
-
+/* This is an ELEMENT now
 /mob/living/silicon/robot
 	var/step_count = 0
 
@@ -28,3 +28,4 @@
 		return // Far less likely to make noise in no gravity
 	playsound(T, S, volume, FALSE, preference = /datum/client_preference/digestion_noises)
 	return
+*/

@@ -761,6 +761,9 @@
 	new_character.update_icons_body()
 	new_character.update_transform() //VOREStation Edit
 
+	new_character.set_footsteps(chosen_species.footstep) // CHOMPEdit
+	new_character.set_slosh() //CHOMPEdit
+
 	new_character.key = key		//Manually transfer the key to log them in
 
 	return new_character

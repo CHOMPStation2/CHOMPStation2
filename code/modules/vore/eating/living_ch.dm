@@ -1,9 +1,9 @@
 ///////////////////// Mob Living /////////////////////
 /mob/living
-	var/list/vore_organs_reagents = list()	//Reagent datums in vore bellies in a mob
-	var/vore_footstep_volume = 0			//Variable volume for a mob, updated every 5 steps where a footstep hasnt occurred.
-	var/vore_footstep_chance = 0
-	var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
+	// var/list/vore_organs_reagents = list()	//Reagent datums in vore bellies in a mob
+	// var/vore_footstep_volume = 0			//Variable volume for a mob, updated every 5 steps where a footstep hasnt occurred.
+	// var/vore_footstep_chance = 0
+	// var/vore_footstep_volume_cooldown = 0	//goes up each time a step isnt heard, and will proc update of list of viable bellies to determine the most filled and loudest one to base audio on.
 	var/mute_entry = FALSE					//Toggleable vorgan entry logs.
 	var/parasitic = FALSE					//Digestion immunity and nutrition leeching variable
 	var/liquidbelly_visuals = TRUE			//Toggle for liquidbelly level visuals.
@@ -54,7 +54,7 @@
 	updating_fullness = FALSE
 	return new_fullness
 
-
+/* This is an ELEMENT now
 /mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
 	if(vore_footstep_volume_cooldown++ >= 5) //updating the 'dominating' belly, the one that has most liquid and is loudest.
 		choose_vorefootstep()
@@ -85,7 +85,7 @@
 	else					//Volume will start at least at 20 so theres more initial sound
 		vore_footstep_volume = 20 + highest_vol * 4/5
 		vore_footstep_chance = highest_vol/4
-
+*/
 
 //
 // Returns examine messages for how much reagents are in bellies
