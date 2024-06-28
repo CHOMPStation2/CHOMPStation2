@@ -135,12 +135,14 @@ GLOBAL_LIST_INIT(grass_grass,list(
 		),
 	"sif" = list(
 		/obj/structure/flora/sif/eyes = 1,
-		/obj/structure/flora/sif/tendrils = 10
+		/obj/structure/flora/sif/tendrils = 5,
+		/obj/structure/flora/bush = 5
 		),
 	"sifforest" = list(
 		/obj/structure/flora/sif/frostbelle = 1,
 		/obj/structure/flora/sif/eyes = 5,
-		/obj/structure/flora/sif/tendrils = 30
+		/obj/structure/flora/sif/tendrils = 20,
+		/obj/structure/flora/bush = 10
 		),
 	"valley" = list(
 		/obj/structure/flora/sif/eyes = 20,
