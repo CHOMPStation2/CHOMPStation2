@@ -15,7 +15,7 @@ import { bellyData, Data, DropdownEntry, soulcatcherData } from './types';
 
 export const VoreSoulcatcher = (props: {
   soulcatcher: soulcatcherData | null;
-  our_bellies: Partial<bellyData> & {
+  our_bellies: Required<bellyData> & {
     map(arg0: (belly: bellyData) => DropdownEntry): DropdownEntry[];
   };
 }) => {
