@@ -50,7 +50,7 @@
 	if(floortype)
 		set_flooring(get_flooring_data(floortype), TRUE)
 		. = INITIALIZE_HINT_LATELOAD // We'll update our icons after everyone is ready
-	else
+	// else
 		// vorefootstep_sounds = base_vorefootstep_sounds //CHOMPstation edit
 		// footstep_sounds = base_footstep_sounds CHOMPEdit - Better footsteps
 	if(can_dirty && can_start_dirty)
