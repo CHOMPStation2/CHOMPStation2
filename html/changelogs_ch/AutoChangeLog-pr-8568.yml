@@ -1,5 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - qol: "anom weathers are a smidge less spicy"
-  - bugfix: "missing weather names"

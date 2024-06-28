@@ -96,3 +96,28 @@
   - rscadd: you can now transfer ammo between magazines and boxes of ammo
   - rscadd: guns now tell you what magazines they accept
   - refactor: ammo simplified drastically
+2024-06-28:
+  CHOMPStation2:
+  - qol: made patches transfer their reagents straight into blood, so you can use
+      them for anything
+  - qol: refactored alcohol traits
+  - qol: expanded feedback when you drink from a glass
+  FluffMedic:
+  - qol: Weaver is useable by all species
+  - qol: anom weathers are a smidge less spicy
+  - bugfix: missing weather names
+  - qol: ' Diona ar now the speed of lizards.'
+  - balance: Diona now have a value of 0.5 slowdown compared to their previous 5
+  Kashargul:
+  - balance: halves pink slime brute / burn heal
+  Raeschen:
+  - bugfix: Drop Overmap dynamic Z levels from 3 to 2
+  SpringSkipper:
+  - qol: digestion damage types can be set higher; the max total damage is still the
+      same.
+  chizzy376:
+  - rscadd: Added a new outsider pod "Dragon Cave"
+  tacoguy7765093:
+  - rscadd: Added a new gateway map called Diescraper. Dont fall!
+  - rscadd: Added single use for mapping purposes.
+  - maptweak: Fixes slab IDs in Downtown city

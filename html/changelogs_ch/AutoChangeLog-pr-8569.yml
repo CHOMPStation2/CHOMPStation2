@@ -1,6 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - rscadd: "Added a new gateway map called Diescraper. Dont fall!"
-  - rscadd: "Added single use for mapping purposes."
-  - maptweak: "Fixes slab IDs in Downtown city"
