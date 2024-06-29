@@ -121,3 +121,27 @@
   - rscadd: Added a new gateway map called Diescraper. Dont fall!
   - rscadd: Added single use for mapping purposes.
   - maptweak: Fixes slab IDs in Downtown city
+2024-06-29:
+  FluffMedic:
+  - qol: New snowish looking bushes have been added to sif grass spawn pool. They
+      can give six fiber used in primal stuff
+  - qol: Sandstone and marble bricks can be manually created at a cost of 4 to 1,
+      and 10 seconds.
+  Hunter-Dovetail:
+  - rscadd: VBOanim_synthbelly1
+  - rscadd: VBOanim_taurbelly1
+  - rscadd: VBOanim_belly4
+  - rscadd: VBOanim_belly5
+  - rscadd: VBOanim_belly6
+  - rscadd: VBOanim_belly7
+  - rscadd: VBO_maw18
+  - rscadd: Kasssc's VBOanim_belly1
+  - rscadd: VBOanim_intestine2
+  - rscadd: Cleans up some of the previous maw visuals by erasing cutout scratches
+      (well not really this PR... but, I'm working on it!)
+  Raeschen:
+  - bugfix: Increase the main menu window height to kill the scrollbar on default
+      load
+  TheCaramelion:
+  - rscadd: Footstep and slosh elements
+  - code_imp: No more lists in every single turf in existance with footstep sounds

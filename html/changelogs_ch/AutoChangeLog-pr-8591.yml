@@ -1,0 +1,6 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - code_imp: "Deleted some now unused files"
+  - code_imp: "Slosh sounds moved to global_lists_ch"
+  - code_imp: "Exterminated the last list from all the turfs"

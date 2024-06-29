@@ -522,10 +522,10 @@
 		return
 	thing.enter_belly(src) // Atom movable proc, does nothing by default. Overridden in children for special behavior.
 	if(owner && istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
-		var/turf/simulated/T = owner.loc
-		var/S = pick(T.base_vorefootstep_sounds["human"]) //ChompEDIT
+		// var/turf/simulated/T = owner.loc // CHOMPEdit
+		var/S = pick(GLOB.slosh) //ChompEDIT
 		if(S)
-			playsound(T, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/client_preference/digestion_noises) //CHOMPEdit
+			playsound(owner.loc, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/client_preference/digestion_noises) //CHOMPEdit
 			cycle_sloshed = TRUE
 	thing.belly_cycles = 0 //reset cycle count
 	if(istype(thing, /mob/observer)) //Ports CHOMPStation PR#3072
