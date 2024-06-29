@@ -1,5 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - rscadd: "Footstep and slosh elements"
-  - code_imp: "No more lists in every single turf in existance with footstep sounds"
