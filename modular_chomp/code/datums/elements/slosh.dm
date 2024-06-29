@@ -19,7 +19,7 @@
 
 /datum/element/slosh/Detach(datum/source)
 	UnregisterSignal(source, COMSIG_MOVABLE_MOVED)
-	return
+	return ..()
 
 /datum/element/slosh/proc/handle_footstep(mob/living/source)
 	SIGNAL_HANDLER
