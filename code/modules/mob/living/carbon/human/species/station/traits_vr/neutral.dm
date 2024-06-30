@@ -166,6 +166,7 @@
 		Paralysis Toxin: Will make someone paralyzed. <br> \
 		Numbing Enzyme: Will make someone unable to feel pain. <br> \
 		Pain Enzyme: Will make someone feel pain, amplifieed <br> \
+		Aphrodisiac: Will make someone feel in the mood.<br> \
 		===== Side Notes ===== <br> \
 		You aren't required to inject anything if you prefer to just use it as a normal bite!"
 	cost = 0
@@ -173,7 +174,8 @@
 
 /datum/trait/neutral/venom_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/injection
+	//H.verbs |= /mob/living/proc/injection
+	add_verb(H,/mob/living/proc/injection) //CHOMPedit tgpanel
 	H.trait_injection_reagents += "microcillin"		// get small
 	H.trait_injection_reagents += "macrocillin"		// get BIG
 	H.trait_injection_reagents += "normalcillin"	// normal
@@ -185,6 +187,7 @@
 	H.trait_injection_reagents += "rainbowtoxin" 	// Funny flashing lights.
 	H.trait_injection_reagents += "paralysistoxin" 	// Paralysis!
 	H.trait_injection_reagents += "painenzyme"		// Pain INCREASER
+	H.trait_injection_reagents += "aphrodisiac"		// Horni //CHOMPedit
 
 /datum/trait/neutral/long_vore
 	name = "Long Predatorial Reach"
