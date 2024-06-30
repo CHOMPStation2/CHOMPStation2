@@ -41,6 +41,8 @@
 
 /area/survivalpod/superpose/OldHotel
 
+/area/survivalpod/superpose/NewHotel
+
 /area/survivalpod/superpose/ScienceShip
 
 /area/survivalpod/superpose/SmallCombatShip
@@ -140,6 +142,7 @@
 /area/survivalpod/superpose/logcabin
 
 /area/survivalpod/superpose/hotel
+
 
 /obj/item/device/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"

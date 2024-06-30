@@ -129,6 +129,12 @@
 	name = "Old hotel."
 	description = "An old worn down wooden hotel, heavily damaged but with enough materials to patch it up."
 
+/datum/map_template/shelter/superpose/NewHotel
+	shelter_id = "NewHotel"
+	mappath = "modular_chomp/maps/submaps/shelters/NewHotel-18x22.dmm"
+	name = "New Hotel."
+	description = "An new not-worn down wooden hotel, not heavily damaged but with enough materials to do whatever."
+
 /datum/map_template/shelter/superpose/ScienceShip
 	shelter_id = "ScienceShip"
 	mappath = "modular_chomp/maps/submaps/shelters/ScienceShip-25x33.dmm"
