@@ -150,12 +150,45 @@
 /obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/NewHotel)
+"ge" = (
+/obj/structure/table/marble,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_y = 2;
+	pixel_x = -7
+	},
+/obj/item/weapon/reagent_containers/food/condiment/spacespice{
+	pixel_x = 5;
+	pixel_y = 9
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
 "go" = (
 /obj/structure/simple_door/iron,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
 "gA" = (
 /turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/NewHotel)
+"gP" = (
+/obj/machinery/appliance/cooker/oven,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
 /area/survivalpod/superpose/NewHotel)
 "hc" = (
 /obj/structure/table/woodentable,
@@ -212,6 +245,12 @@
 	pixel_x = 3
 	},
 /turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"lI" = (
+/obj/item/weapon/stool{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/NewHotel)
 "mR" = (
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
@@ -329,7 +368,23 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/NewHotel)
 "zs" = (
-/obj/structure/table/woodentable,
+/obj/structure/closet/crate,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/NewHotel)
 "zt" = (
@@ -378,13 +433,21 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
 "Cx" = (
-/obj/structure/table/steel_reinforced,
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
+/obj/structure/closet/crate,
+/obj/fruitspawner/apple,
+/obj/fruitspawner/apple,
+/obj/fruitspawner/eggplant,
+/obj/fruitspawner/eggplant,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/lemon,
+/obj/fruitspawner/lemon,
+/obj/fruitspawner/lemon,
+/turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/NewHotel)
 "Dx" = (
 /obj/structure/closet/secure_closet/freezer/fridge{
@@ -416,27 +479,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
-"Gp" = (
-/obj/structure/table/steel_reinforced,
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
-	pixel_y = 2;
-	pixel_x = -7
-	},
-/obj/item/weapon/reagent_containers/food/condiment/spacespice{
-	pixel_x = 5;
-	pixel_y = 9
-	},
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
-/area/survivalpod/superpose/NewHotel)
 "Gz" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 8
@@ -448,23 +490,14 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/NewHotel)
 "GC" = (
-/obj/structure/closet/crate,
-/obj/fruitspawner/apple,
-/obj/fruitspawner/apple,
-/obj/fruitspawner/eggplant,
-/obj/fruitspawner/eggplant,
-/obj/fruitspawner/corn,
-/obj/fruitspawner/corn,
-/obj/fruitspawner/corn,
-/obj/fruitspawner/corn,
-/obj/fruitspawner/corn,
-/obj/fruitspawner/corn,
-/obj/fruitspawner/lemon,
-/obj/fruitspawner/lemon,
-/obj/fruitspawner/lemon,
+/obj/structure/table/woodentable,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/NewHotel)
 "GN" = (
+/obj/machinery/appliance/cooker/grill,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -488,18 +521,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
-"HG" = (
-/obj/machinery/appliance/cooker/oven,
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/window/plastitanium{
-	dir = 8
-	},
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
-/area/survivalpod/superpose/NewHotel)
 "Ik" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/medical,
@@ -510,35 +531,6 @@
 /area/survivalpod/superpose/NewHotel)
 "Jq" = (
 /turf/simulated/floor/tiled/asteroid_steel,
-/area/survivalpod/superpose/NewHotel)
-"Ky" = (
-/obj/machinery/appliance/cooker/grill,
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
-/area/survivalpod/superpose/NewHotel)
-"Li" = (
-/obj/structure/closet/crate,
-/obj/fruitspawner/lettuce,
-/obj/fruitspawner/lettuce,
-/obj/fruitspawner/lettuce,
-/obj/fruitspawner/lettuce,
-/obj/fruitspawner/lettuce,
-/obj/fruitspawner/potato,
-/obj/fruitspawner/potato,
-/obj/fruitspawner/potato,
-/obj/fruitspawner/potato,
-/obj/fruitspawner/potato,
-/obj/fruitspawner/tomato,
-/obj/fruitspawner/tomato,
-/obj/fruitspawner/tomato,
-/obj/fruitspawner/tomato,
-/obj/fruitspawner/tomato,
-/obj/fruitspawner/tomato,
-/turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/NewHotel)
 "Mk" = (
 /obj/item/device/gps,
@@ -607,9 +599,24 @@
 /obj/random/soap,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/NewHotel)
+"OH" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
 "PO" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/NewHotel)
+"Qa" = (
+/obj/structure/table/marble,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
 /area/survivalpod/superpose/NewHotel)
 "Qv" = (
 /obj/structure/table/woodentable,
@@ -631,22 +638,6 @@
 /area/survivalpod/superpose/NewHotel)
 "RQ" = (
 /obj/machinery/appliance/cooker/fryer,
-/turf/simulated/floor/concrete{
-	outdoors = 1
-	},
-/area/survivalpod/superpose/NewHotel)
-"Sd" = (
-/obj/structure/table/steel_reinforced,
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat{
-	pixel_y = -2
-	},
-/obj/item/weapon/reagent_containers/food/snacks/meat{
-	pixel_y = -5
-	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -786,10 +777,9 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod/superpose/NewHotel)
 "WD" = (
-/obj/item/weapon/stool{
-	dir = 8
+/turf/simulated/floor/concrete{
+	outdoors = 1
 	},
-/turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/NewHotel)
 "WH" = (
 /obj/structure/closet/cabinet,
@@ -800,8 +790,18 @@
 /obj/random/maintenance,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
-"Yc" = (
-/obj/structure/closet/crate/bin,
+"YG" = (
+/obj/structure/table/marble,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat{
+	pixel_y = -2
+	},
+/obj/item/weapon/reagent_containers/food/snacks/meat{
+	pixel_y = -5
+	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -1101,7 +1101,7 @@ QG
 if
 qg
 go
-GN
+WD
 AO
 pn
 bb
@@ -1125,17 +1125,17 @@ Mo
 qg
 qg
 go
-GN
-GN
-GN
-GN
-GN
-GN
-GN
-GN
-GN
-GN
-GN
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+WD
 Es
 "}
 (14,1,1) = {"
@@ -1151,15 +1151,15 @@ hQ
 hQ
 hQ
 Ac
-GN
-GN
-HG
-GN
-GN
-GN
-GN
-GN
-GN
+WD
+WD
+gP
+WD
+WD
+WD
+WD
+WD
+WD
 Es
 "}
 (15,1,1) = {"
@@ -1174,16 +1174,16 @@ hQ
 dr
 Jq
 mR
+WD
+WD
+WD
+ge
+YG
 GN
-GN
-GN
-Gp
-Sd
-Ky
-Cx
-Yc
-GN
-GN
+Qa
+OH
+WD
+WD
 hQ
 "}
 (16,1,1) = {"
@@ -1198,13 +1198,13 @@ hQ
 Sy
 ai
 hQ
+Cx
+gA
+gA
 GC
-gA
-gA
-zs
-zs
-zs
-zs
+GC
+GC
+GC
 gA
 gA
 gA
@@ -1222,13 +1222,13 @@ hQ
 Sf
 hQ
 hQ
-Li
+zs
 gA
 gA
-WD
-WD
-WD
-WD
+lI
+lI
+lI
+lI
 gA
 gA
 gA
