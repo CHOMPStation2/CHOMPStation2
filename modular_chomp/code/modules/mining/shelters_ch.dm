@@ -369,3 +369,9 @@
 	mappath = "modular_chomp/maps/submaps/shelters/Hotel-36x18.dmm"
 	name = "Large Sif Hotel"
 	description = "A large hotel designed for hospitality of up to 8 people, comes with a kitchen and a bar. May contain pests."
+
+/datum/map_template/shelter/superpose/XenoBotanySetup
+	shelter_id = "XenoBotanySetup"
+	mappath = "modular_chomp/maps/submaps/shelters/XenobotanySetup-19x11.dmm"
+	name = "Xenobotany Lab"
+	description = "A cozy little lab made for plant life."

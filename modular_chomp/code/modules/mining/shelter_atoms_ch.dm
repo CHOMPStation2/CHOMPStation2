@@ -143,6 +143,7 @@
 
 /area/survivalpod/superpose/hotel
 
+/area/survivalpod/superpose/XenoBotanySetup
 
 /obj/item/device/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"
