@@ -1,0 +1,7 @@
+author: "Hunter-Dovetail"
+delete-after: True
+changes:
+  - rscadd: "VBOanim_gullet1"
+  - rscadd: "VBO_maw19"
+  - bugfix: "other VBOs quality and brightness"
+  - bugfix: "increased brightness to some layers of VBO_maw18"
