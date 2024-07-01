@@ -2,4 +2,5 @@
 #define IS_CHIMERA 12
 #define IS_SHADEKIN 13
 #define IS_ALRAUNE 14
-#define IS_GREY 15 //ywedit
+#define IS_LLEILL 15
+#define IS_GREY 16 //ywedit
