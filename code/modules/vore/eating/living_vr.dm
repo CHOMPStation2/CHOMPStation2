@@ -261,6 +261,7 @@
 	P.weight_message_visible = src.weight_message_visible
 	P.weight_messages = src.weight_messages
 
+<<<<<<< HEAD
 	//CHOMP stuff Start
 	P.allow_mind_transfer = src.allow_mind_transfer
 	P.phase_vore = src.phase_vore
@@ -282,6 +283,9 @@
 	P.no_latejoin_prey_warning_persists = src.no_latejoin_prey_warning_persists
 	P.belly_rub_target = src.belly_rub_target
 	//CHOMP Stuff End
+=======
+	P.vore_sprite_color = istype(src, /mob/living/carbon/human) ? src:vore_sprite_color : null
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
@@ -333,6 +337,7 @@
 	weight_message_visible = P.weight_message_visible
 	weight_messages = P.weight_messages
 
+<<<<<<< HEAD
 	//CHOMP stuff
 	allow_mind_transfer = P.allow_mind_transfer
 	phase_vore = P.phase_vore
@@ -353,6 +358,11 @@
 	no_latejoin_vore_warning_persists = P.no_latejoin_vore_warning_persists
 	no_latejoin_prey_warning_persists = P.no_latejoin_prey_warning_persists
 	belly_rub_target = P.belly_rub_target
+=======
+
+	if (istype(src, /mob/living/carbon/human))
+		src:vore_sprite_color = P.vore_sprite_color
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
 
 	if(bellies)
 		if(isliving(src))
