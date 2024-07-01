@@ -19,6 +19,8 @@
 //The sandstorm boss. Dinosaur.
 //The acidrain boss. Either summoner, or ranged.
 /mob/living/simple_mob/vore/weatherbeast/sandstorm //slow but endless hunter
+	name = "fossil tank"
+	desc = "A large metal tank."
 	health = 300 //15 laser shots
 	maxHealth = 300 //15 laser shots, assuming no armor
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)  //No thematics but I like boss critters to take a bit
@@ -149,6 +151,8 @@
 
 
 /mob/living/simple_mob/vore/weatherbeast/acidrain //acidrain
+	name = "toxic jellyfish"
+	desc = "A glowing green jellyfish"
 	health = 300 //15 laser shots
 	maxHealth = 300 //15 laser shots, assuming no armor
 	armor = list(melee = 60, bullet = 60, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 100) //So, it's made of jelly. Bullets and melee bounces off of it. The 20 laser and energy are for a smidge extra tankny because I savour endurance fights
@@ -236,6 +240,8 @@
 
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist //the dark mist
+	name = "strange figure"
+	desc = "A figure cloaked in purple."
 	health = 300 //15 laser shots
 	maxHealth = 300 //15 laser shots, assuming no armor
 	armor = list(melee = 20, bullet = 20, laser = 60, energy = 60, bomb = 50, bio = 100, rad = 100) //Is use to manpulation of strange energies
@@ -507,9 +513,11 @@
 
 //Note to future self, alter this one later to match the one up above when energy returns.
 /mob/living/simple_mob/vore/weatherbeast/starsky //starry skies
+	name = "guardian unit"
+	desc = "A strange robotic being."
 	health = 300
 	maxHealth = 300
-	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)
+	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)
 	icon_state = "astral_sniper"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/dark_stranger
 	damage_fatigue_mult = 0
