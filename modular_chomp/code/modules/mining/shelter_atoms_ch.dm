@@ -29,6 +29,8 @@
 
 /area/survivalpod/superpose/LoneHome
 
+/area/survivalpod/superpose/LoneHomeclean
+
 /area/survivalpod/superpose/MechFabShip
 
 /area/survivalpod/superpose/MechStorageFab
@@ -38,6 +40,8 @@
 /area/survivalpod/superpose/MethLab
 
 /area/survivalpod/superpose/OldHotel
+
+/area/survivalpod/superpose/NewHotel
 
 /area/survivalpod/superpose/ScienceShip
 
@@ -50,6 +54,8 @@
 	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalDIY_11x11
+
+/area/survivalpod/superpose/SurvivalDIY_11x11lite
 
 /area/survivalpod/superpose/SurvivalDIY_7x7
 
@@ -132,6 +138,12 @@
 /area/survivalpod/superpose/PizzaParlor
 
 /area/survivalpod/superpose/GrandLibrary
+
+/area/survivalpod/superpose/logcabin
+
+/area/survivalpod/superpose/hotel
+
+/area/survivalpod/superpose/XenoBotanySetup
 
 /obj/item/device/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"

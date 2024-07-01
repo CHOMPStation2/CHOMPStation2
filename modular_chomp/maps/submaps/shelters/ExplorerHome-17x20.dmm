@@ -602,7 +602,11 @@
 "zc" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
-/obj/structure/cable/green,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/ExplorerHome)
 "Dg" = (
