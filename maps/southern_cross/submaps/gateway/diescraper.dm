@@ -75,6 +75,7 @@
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/plating
 	name = "Away Mission - Skyscraper Floor 54 Second"
+	requires_power = FALSE
 
 /area/awaymission/diescraper/indoors/floor5
 	icon_state = "green"
