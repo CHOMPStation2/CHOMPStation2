@@ -8,6 +8,7 @@
 	melee_attack_delay = 1 SECOND
 	grab_resist = 100
 	devourable = 0
+	faction = "Weather_Boss"
 
 
 //Sup, trying to be better with commenting of my code and explain the oddities behind myself. Several may seem off

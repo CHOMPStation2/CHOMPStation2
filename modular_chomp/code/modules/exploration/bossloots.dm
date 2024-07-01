@@ -85,9 +85,7 @@
 	icon_state = "mist"
 	fire_sound='sound/weapons/gauss_shoot.ogg'
 	damage = 0
-	range = 60
 	nodamage = 1
-	penetrating = 20
 	modifier_type_to_apply = /datum/modifier/astralkarma
 	modifier_duration = 0.1 MINUTE
 
