@@ -365,19 +365,19 @@
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/north_laser(atom/target)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x, src.y-1, src.z)
+	var/turf = locate(src.x, src.y+1, src.z)
 	target = turf
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/east_laser(atom/target)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x, src.y-1, src.z)
+	var/turf = locate(src.x+1, src.y, src.z)
 	target = turf
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/west_laser(atom/target)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x, src.y-1, src.z)
+	var/turf = locate(src.x-1, src.y, src.z)
 	target = turf
 	P.launch_projectile(target, BP_TORSO, src)
 
