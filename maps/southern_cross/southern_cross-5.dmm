@@ -4291,10 +4291,10 @@
 /area/surface/outpost/engineering/auxiliary_storage)
 "ip" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "response_ship_planet";
-	name = "Sif Surface East";
+	base_area = /area/surface/outside/landing/plains;
 	base_turf = /turf/simulated/floor/outdoors/rocks/sif/planetuse;
-	base_area = /area/surface/outside/landing/plains
+	landmark_tag = "response_ship_planet";
+	name = "Sif Surface East"
 	},
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/landing/plains)
@@ -5528,6 +5528,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_1)
+"kr" = (
+/obj/structure/prop/weather_signal,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/surface/outside/plains/normal)
 "ks" = (
 /obj/structure/closet/hydrant{
 	pixel_x = -32
@@ -89275,7 +89279,7 @@ WP
 WP
 WP
 WP
-WP
+kr
 WP
 WP
 WP
