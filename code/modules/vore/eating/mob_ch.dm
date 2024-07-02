@@ -15,6 +15,7 @@
 	var/no_latejoin_vore_warning_persists = FALSE	//Do we save it?
 	var/no_latejoin_prey_warning_persists = FALSE	//Do we save it?
 	var/belly_rub_target = null
+	var/soulcatcher_pref_flags = 0			//Default disabled
 
 	// CHOMP vore icons refactor (Now on mob)
 	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
@@ -28,3 +29,5 @@
 	var/list/vore_icon_bellies = list("stomach")
 	var/updating_fullness = FALSE
 	var/obj/belly/previewing_belly
+
+	var/obj/soulgem/soulgem

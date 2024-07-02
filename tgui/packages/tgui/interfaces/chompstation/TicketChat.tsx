@@ -1,7 +1,7 @@
 /* eslint react/no-danger: "off" */
+import { KEY } from 'common/keys';
 import { useState } from 'react';
 
-import { KEY_ENTER } from '../../../common/keycodes';
 import { useBackend } from '../../backend';
 import {
   Box,
@@ -82,12 +82,9 @@ export const TicketChat = (props) => {
                     fluid
                     placeholder="Enter a message..."
                     value={ticketChat}
-                    onInput={(e, value) => setTicketChat(value)}
-                    onKeyDown={(event) => {
-                      const keyCode = window.event
-                        ? event.which
-                        : event.keyCode;
-                      if (keyCode === KEY_ENTER) {
+                    onInput={(e, value: string) => setTicketChat(value)}
+                    onKeyDown={(e) => {
+                      if (KEY.Enter === e.key) {
                         act('send_msg', { msg: ticketChat });
                         setTicketChat('');
                       }

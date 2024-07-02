@@ -1617,17 +1617,20 @@
 	if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
 		if(R.mmi && R.mind && R.mmi.brainmob)
-			R.mmi.loc = src
-			items_preserved += R.mmi
-			var/obj/item/weapon/robot_module/MB = locate() in R.contents
-			if(MB)
-				R.mmi.brainmob.languages = MB.original_languages
+			if((R.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && owner.soulgem && owner.soulgem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS, TRUE))
+				owner.soulgem.catch_mob(R, R.name)
 			else
-				R.mmi.brainmob.languages = R.languages
-			R.mmi.brainmob.remove_language("Robot Talk")
-			hasMMI = R.mmi
-			M.mind.transfer_to(hasMMI.brainmob)
-			R.mmi = null
+				R.mmi.loc = src
+				items_preserved += R.mmi
+				var/obj/item/weapon/robot_module/MB = locate() in R.contents
+				if(MB)
+					R.mmi.brainmob.languages = MB.original_languages
+				else
+					R.mmi.brainmob.languages = R.languages
+				R.mmi.brainmob.remove_language("Robot Talk")
+				hasMMI = R.mmi
+				M.mind.transfer_to(hasMMI.brainmob)
+				R.mmi = null
 		else if(!R.shell) // Shells don't have brainmobs in their MMIs.
 			to_chat(R, "<span class='danger'>Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug.</span>")
 		if(R.shell) // Let the standard procedure for shells handle this.

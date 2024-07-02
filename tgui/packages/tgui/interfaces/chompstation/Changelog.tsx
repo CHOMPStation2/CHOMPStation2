@@ -43,9 +43,22 @@ const icons = {
   wip: { icon: 'hammer', color: 'orange' },
 };
 
-export class Changelog extends Component {
-  constructor() {
-    super();
+type Data = { dates: string[] };
+
+export class Changelog extends Component<
+  {},
+  {
+    data:
+      | string
+      | { date: string; authors: { name: string; changes: string[] } };
+    selectedDate: string;
+    selectedIndex: number;
+  }
+> {
+  dateChoices: string[];
+
+  constructor(props) {
+    super(props);
     this.state = {
       data: 'Loading changelog data...',
       selectedDate: '',
@@ -67,7 +80,7 @@ export class Changelog extends Component {
   }
 
   getData = (date, attemptNumber = 1) => {
-    const { act } = useBackend(this.context);
+    const { act } = useBackend();
     const self = this;
     const maxAttempts = 6;
 
@@ -99,7 +112,7 @@ export class Changelog extends Component {
   componentDidMount() {
     const {
       data: { dates = [] },
-    } = useBackend(this.context);
+    } = useBackend<Data>();
 
     if (dates) {
       dates.forEach((date) =>
@@ -114,7 +127,7 @@ export class Changelog extends Component {
     const { data, selectedDate, selectedIndex } = this.state;
     const {
       data: { dates },
-    } = useBackend(this.context);
+    } = useBackend<Data>();
     const { dateChoices } = this;
 
     const dateDropdown = dateChoices.length > 0 && (
@@ -281,7 +294,7 @@ export class Changelog extends Component {
                   <h4>{name} changed:</h4>
                   <Box ml={3}>
                     <Table>
-                      {changes.map((change) => {
+                      {(changes as string[]).map((change) => {
                         const changeType = Object.keys(change)[0];
                         return (
                           <Table.Row key={changeType + change[changeType]}>

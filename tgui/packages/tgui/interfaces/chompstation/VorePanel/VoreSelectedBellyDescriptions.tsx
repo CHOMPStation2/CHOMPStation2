@@ -1,7 +1,10 @@
 import { useBackend } from '../../../backend';
 import { Button, LabeledList } from '../../../components';
+import { selectedData } from './types';
 
-export const VoreSelectedBellyDescriptions = (props) => {
+export const VoreSelectedBellyDescriptions = (props: {
+  belly: selectedData;
+}) => {
   const { act } = useBackend();
 
   const { belly } = props;

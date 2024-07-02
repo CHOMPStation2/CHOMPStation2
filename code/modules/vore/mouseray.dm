@@ -113,6 +113,8 @@
 				M.vore_organs -= B
 				ourmob.vore_organs += B
 			ourmob.nutrition = M.nutrition
+			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+
 		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)
@@ -176,6 +178,7 @@
 				M.vore_organs -= B
 				new_mob.vore_organs += B
 			new_mob.nutrition = M.nutrition //CHOMPAdd
+			M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
 
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)
@@ -219,6 +222,8 @@
 			vore_organs -= B
 			ourmob.vore_organs += B
 		ourmob.nutrition = nutrition
+		soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+
 	ourmob.ckey = ckey
 	ourmob.Life(1)
 
@@ -303,6 +308,7 @@
 	new_mob.no_latejoin_vore_warning_persists = no_latejoin_vore_warning_persists
 	new_mob.no_latejoin_prey_warning_persists = no_latejoin_prey_warning_persists
 	new_mob.belly_rub_target = belly_rub_target
+	new_mob.soulcatcher_pref_flags = soulcatcher_pref_flags
 	//CHOMP stuff End
 
 /////SUBTYPES/////
@@ -373,6 +379,7 @@
 				M.vore_organs -= B
 				ourmob.vore_organs += B
 			ourmob.nutrition = M.nutrition
+			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)

@@ -1,12 +1,20 @@
+import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../../../backend';
 import { Box, Divider, Flex, Icon, Section, Tabs } from '../../../components';
 import { digestModeToColor } from './constants';
+import { bellyData, selectedData } from './types';
 import { VoreSelectedBelly } from './VoreSelectedBelly';
 
-export const VoreBellySelectionAndCustomization = (props) => {
-  const { act, data } = useBackend();
+export const VoreBellySelectionAndCustomization = (props: {
+  our_bellies: bellyData[];
+  selected: selectedData;
+  show_pictures: BooleanLike;
+  icon_overflow: BooleanLike;
+}) => {
+  const { act } = useBackend();
 
-  const { our_bellies, selected } = data;
+  const { our_bellies, selected, show_pictures, icon_overflow } = props;
 
   return (
     <Flex>
@@ -32,10 +40,10 @@ export const VoreBellySelectionAndCustomization = (props) => {
               <Icon name="file-import" ml={0.5} />
             </Tabs.Tab>
             <Divider />
-            {our_bellies.map((belly) => (
+            {our_bellies.map((belly, i) => (
               <Tabs.Tab
-                key={belly}
-                selected={belly.selected}
+                key={i}
+                selected={!!belly.selected}
                 textColor={digestModeToColor[belly.digest_mode]}
                 onClick={() => act('bellypick', { bellypick: belly.ref })}
               >
@@ -43,7 +51,7 @@ export const VoreBellySelectionAndCustomization = (props) => {
                   inline
                   textColor={
                     (belly.selected && digestModeToColor[belly.digest_mode]) ||
-                    null
+                    undefined
                   }
                 >
                   {belly.name} ({belly.contents})
@@ -56,7 +64,11 @@ export const VoreBellySelectionAndCustomization = (props) => {
       <Flex.Item grow>
         {selected && (
           <Section title={selected.belly_name}>
-            <VoreSelectedBelly belly={selected} />
+            <VoreSelectedBelly
+              belly={selected}
+              show_pictures={show_pictures}
+              icon_overflow={icon_overflow}
+            />
           </Section>
         )}
       </Flex.Item>

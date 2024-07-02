@@ -88,6 +88,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/no_latejoin_vore_warning_persists = FALSE
 	var/no_latejoin_prey_warning_persists = FALSE
 	var/belly_rub_target = null
+	var/soulcatcher_pref_flags = 0
+	var/list/soulcatcher_prefs = list()
 	//CHOMP stuff end
 
 	var/list/belly_prefs = list()
@@ -243,6 +245,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		no_latejoin_prey_warning = json_from_file["no_latejoin_prey_warning"]
 		no_latejoin_prey_warning_time = json_from_file["no_latejoin_prey_warning_time"]
 	belly_rub_target = json_from_file["belly_rub_target"]
+	soulcatcher_pref_flags = json_from_file["soulcatcher_pref_flags"]
+	soulcatcher_prefs = json_from_file["soulcatcher_prefs"]
 	//CHOMP stuff End
 
 
@@ -367,6 +371,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		no_latejoin_vore_warning_persists = FALSE
 	if(isnull(no_latejoin_prey_warning_persists))
 		no_latejoin_prey_warning_persists = FALSE
+	if(isnull(soulcatcher_pref_flags))
+		soulcatcher_pref_flags = 0
+	if(isnull(soulcatcher_prefs))
+		soulcatcher_prefs = list()
 	//CHOMP stuff End
 
 	return TRUE
@@ -426,7 +434,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"no_latejoin_prey_warning_time"		= no_latejoin_prey_warning_time, //CHOMPEdit
 			"no_latejoin_vore_warning_persists"		= no_latejoin_vore_warning_persists, //CHOMPEdit
 			"no_latejoin_prey_warning_persists"		= no_latejoin_prey_warning_persists, //CHOMPEdit
-			"belly_rub_target" = belly_rub_target //CHOMPEdit
+			"belly_rub_target" = belly_rub_target, //CHOMPEdit
+			"soulcatcher_pref_flags" = soulcatcher_pref_flags, //CHOMPAdd
+			"soulcatcher_prefs"			= soulcatcher_prefs //CHOMPAdd
 		)
 
 	//List to JSON

@@ -1,6 +1,8 @@
+import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { Tabs } from '../../../components';
+import { selectedData } from './types';
 import { VoreContentsPanel } from './VoreContentsPanel';
 import { VoreSelectedBellyControls } from './VoreSelectedBellyControls';
 import { VoreSelectedBellyDescriptions } from './VoreSelectedBellyDescriptions';
@@ -10,12 +12,15 @@ import { VoreSelectedBellyLiquidOptions } from './VoreSelectedBellyLiquidOptions
 import { VoreSelectedBellyOptions } from './VoreSelectedBellyOptions';
 import { VoreSelectedBellySounds } from './VoreSelectedBellySounds';
 import { VoreSelectedBellyVisuals } from './VoreSelectedBellyVisuals';
-
 /**
  * Subtemplate of VoreBellySelectionAndCustomization
  */
-export const VoreSelectedBelly = (props) => {
-  const { belly } = props;
+export const VoreSelectedBelly = (props: {
+  belly: selectedData;
+  show_pictures: BooleanLike;
+  icon_overflow: BooleanLike;
+}) => {
+  const { belly, show_pictures, icon_overflow } = props;
   const { contents } = belly;
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -28,7 +33,14 @@ export const VoreSelectedBelly = (props) => {
   tabs[3] = <VoreSelectedBellySounds belly={belly} />;
   tabs[4] = <VoreSelectedBellyVisuals belly={belly} />;
   tabs[5] = <VoreSelectedBellyInteractions belly={belly} />;
-  tabs[6] = <VoreContentsPanel outside contents={contents} />;
+  tabs[6] = (
+    <VoreContentsPanel
+      outside
+      contents={contents}
+      show_pictures={show_pictures}
+      icon_overflow={icon_overflow}
+    />
+  );
   tabs[7] = <VoreSelectedBellyLiquidOptions belly={belly} />;
   tabs[8] = <VoreSelectedBellyLiquidMessages belly={belly} />;
 

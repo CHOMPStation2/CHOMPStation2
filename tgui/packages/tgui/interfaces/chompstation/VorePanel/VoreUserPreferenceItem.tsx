@@ -1,7 +1,11 @@
 import { useBackend } from '../../../backend';
 import { Button } from '../../../components';
+import { preferenceData } from './types';
 
-export const VoreUserPreferenceItem = (props) => {
+export const VoreUserPreferenceItem = (props: {
+  spec: preferenceData;
+  [rest: string]: any;
+}) => {
   const { act } = useBackend();
 
   const { spec, ...rest } = props;

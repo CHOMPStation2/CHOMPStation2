@@ -2,9 +2,10 @@ import { capitalize } from 'common/string';
 
 import { useBackend } from '../../../backend';
 import { Button, Flex, LabeledList } from '../../../components';
+import { selectedData } from './types';
 import { VoreSelectedMobTypeBellyButtons } from './VoreSelectedMobTypeBellyButtons';
 
-export const VoreSelectedBellyOptions = (props) => {
+export const VoreSelectedBellyOptions = (props: { belly: selectedData }) => {
   const { act, data } = useBackend();
 
   const { belly } = props;
@@ -73,7 +74,7 @@ export const VoreSelectedBellyOptions = (props) => {
               {contaminates ? 'Yes' : 'No'}
             </Button>
           </LabeledList.Item>
-          {(contaminates && (
+          {contaminates ? (
             <>
               <LabeledList.Item label="Contamination Flavor">
                 <Button
@@ -98,8 +99,9 @@ export const VoreSelectedBellyOptions = (props) => {
                 </Button>
               </LabeledList.Item>
             </>
-          )) ||
-            null}
+          ) : (
+            ''
+          )}
           <LabeledList.Item label="Nutritional Gain">
             <Button
               onClick={() =>
