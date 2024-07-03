@@ -300,6 +300,7 @@
 	if(stat != DEAD && toggled_sleeping)
 		Sleeping(2)
 	if(sleeping)
+<<<<<<< HEAD
 		//CHOMPEdit Start
 		if(iscarbon(src))
 			var/mob/living/carbon/C = src
@@ -307,6 +308,9 @@
 		else
 			AdjustSleeping(-1)
 		//CHOMPEdit End
+=======
+		AdjustSleeping(-1)
+>>>>>>> 3660e408a1... Merge pull request #16086 from VOREStation/revert-16082-kk-sleepies
 		throw_alert("asleep", /obj/screen/alert/asleep)
 	else
 		clear_alert("asleep")
