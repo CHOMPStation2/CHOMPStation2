@@ -3,5 +3,9 @@
 #define PLANE_CH_STATUS_R			27 //Right-side status icon
 #define PLANE_CH_BACKUP				28 //Backup implant
 #define PLANE_CH_VANTAG				29 //Vore Antag hud
+<<<<<<< HEAD
+=======
+#define PLANE_CH_STOMACH			-11 //Stomach Plane
+>>>>>>> 84afdde865... tummy hotfix (#16074)
 
 #define PLANE_AUGMENTED				40 //Augmented-reality plane
