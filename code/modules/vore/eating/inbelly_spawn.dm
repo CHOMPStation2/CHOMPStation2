@@ -173,6 +173,11 @@ Please do not abuse this ability.
 			new_character.default_language = def_lang
 	// VOREStation Add End
 
+	// CHOMPAdd Start - Elements for footstep and slosh
+	new_character.set_footsteps(new_character.species.footstep)
+	new_character.set_slosh()
+	// CHOMPAdd End
+
 	new_character.regenerate_icons()
 
 	new_character.update_transform()
