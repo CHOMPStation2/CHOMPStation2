@@ -91,6 +91,12 @@
 	name = "Lonely home."
 	description = "An old very worn down wooden house, with enough materials and tools to refurnish and repair it."
 
+/datum/map_template/shelter/superpose/LoneHomeclean
+	shelter_id = "LoneHomeclean"
+	mappath = "modular_chomp/maps/submaps/shelters/LoneHomeclean-18x22.dmm"
+	name = "Lonely home. (Repaired)"
+
+
 /datum/map_template/shelter/superpose/MechFabShip
 	shelter_id = "MechFabShip"
 	mappath = "modular_chomp/maps/submaps/shelters/MechFabShip-27x24.dmm"
@@ -123,6 +129,12 @@
 	name = "Old hotel."
 	description = "An old worn down wooden hotel, heavily damaged but with enough materials to patch it up."
 
+/datum/map_template/shelter/superpose/NewHotel
+	shelter_id = "NewHotel"
+	mappath = "modular_chomp/maps/submaps/shelters/NewHotel-18x22.dmm"
+	name = "New Hotel."
+	description = "An new not-worn down wooden hotel, not heavily damaged but with enough materials to do whatever."
+
 /datum/map_template/shelter/superpose/ScienceShip
 	shelter_id = "ScienceShip"
 	mappath = "modular_chomp/maps/submaps/shelters/ScienceShip-25x33.dmm"
@@ -152,6 +164,12 @@
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalDIY-11x11.dmm"
 	name = "Survival DIY large."
 	description = "NT patented Do-it-yourself survival pod, a large inflatable building filled with building materials. It even has a RCD and a cargo vehicle."
+
+/datum/map_template/shelter/superpose/SurvivalDIYlite_11x11
+	shelter_id = "SurvivalDIY_11x11lite"
+	mappath = "modular_chomp/maps/submaps/shelters/SurvivalDIY-11x11lite.dmm"
+	name = "Survival DIY large. (Lite version)"
+	description = "NT patented Do-it-yourself survival pod, a much more stripped down of the existing large pod for more construction freedom."
 
 /datum/map_template/shelter/superpose/SurvivalDIY_7x7
 	shelter_id = "SurvivalDIY_7x7"
@@ -339,3 +357,21 @@
 	mappath = "modular_chomp/maps/submaps/shelters/GrandLibrary-31x24.dmm"
 	name = "Pizza Parlor"
 	description = "A grand ornate library, more books than you can count."
+
+/datum/map_template/shelter/superpose/logcabin
+	shelter_id = "logcabin"
+	mappath = "modular_chomp/maps/submaps/shelters/Logcabin-19x9.dmm"
+	name = "Log Cabin"
+	description = "A cozy log cabin with some 'magical' items."
+
+/datum/map_template/shelter/superpose/hotel
+	shelter_id = "hotel"
+	mappath = "modular_chomp/maps/submaps/shelters/Hotel-36x18.dmm"
+	name = "Large Sif Hotel"
+	description = "A large hotel designed for hospitality of up to 8 people, comes with a kitchen and a bar. May contain pests."
+
+/datum/map_template/shelter/superpose/XenoBotanySetup
+	shelter_id = "XenoBotanySetup"
+	mappath = "modular_chomp/maps/submaps/shelters/XenobotanySetup-19x11.dmm"
+	name = "Xenobotany Lab"
+	description = "A cozy little lab made for plant life."

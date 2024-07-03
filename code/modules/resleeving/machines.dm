@@ -136,6 +136,11 @@
 	if(current_project.speciesname)
 		H.custom_species = current_project.speciesname
 
+	// CHOMPAdd Start - Elements for footstep and slosh
+	H.set_footsteps(H.species.footstep)
+	H.set_slosh()
+	// CHOMPAdd End
+
 	//Suiciding var
 	H.suiciding = 0
 
@@ -363,6 +368,11 @@
 	H.weight = current_project.weight
 	if(current_project.speciesname)
 		H.custom_species = current_project.speciesname
+
+	// CHOMPAdd Start - Elements for footstep and slosh
+	H.set_footsteps(H.species.footstep)
+	H.set_slosh()
+	// CHOMPAdd End
 
 	//Suiciding var
 	H.suiciding = 0

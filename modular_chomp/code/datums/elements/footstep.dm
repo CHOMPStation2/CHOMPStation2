@@ -17,7 +17,7 @@
 	///Whether or not to add variation to the sounds played
 	var/sound_vary = FALSE
 
-/datum/element/footstep/Attach(datum/target, footstep_type = FOOTSTEP_MOB_BAREFOOT, volume = 0.5, e_range = -8, sound_vary = FALSE)
+/datum/element/footstep/Attach(datum/target, footstep_type = FOOTSTEP_MOB_BAREFOOT, volume = 0.1, e_range = -8, sound_vary = FALSE)
 	. = ..()
 	if(!ismovable(target))
 		return ELEMENT_INCOMPATIBLE
@@ -104,6 +104,9 @@
 /datum/element/footstep/proc/play_simplestep(mob/living/source, atom/oldloc, direction, forced, list/old_locs, momentum_change)
 	SIGNAL_HANDLER
 
+	if(!isturf(source.loc))
+		return
+
 	var/list/prepared_steps = prepare_step(source)
 	if(isnull(prepared_steps))
 		return
@@ -120,7 +123,7 @@
 /datum/element/footstep/proc/play_humanstep(mob/living/carbon/human/source, atom/oldloc, direction, forced, list/old_locs, momentum_change)
 	SIGNAL_HANDLER
 
-	var/volume_multiplier = 1
+	var/volume_multiplier = 0.5
 	var/range_adjustment = 0
 
 	var/list/prepared_steps = prepare_step(source)
@@ -143,9 +146,9 @@
 		// we are barefoot
 
 		if(source.species.special_step_sounds)
-			playsound(source.loc, pick(source.species.special_step_sounds), 50, TRUE, falloff = 1, vary = sound_vary)
+			playsound(source.loc, pick(source.species.special_step_sounds), volume, TRUE, falloff = 1, vary = sound_vary)
 		else if (istype(source.species, /datum/species/shapeshifter/promethean))
-			playsound(source.loc, 'modular_chomp/sound/effects/footstep/slime1.ogg', 25, TRUE, falloff = 1)
+			playsound(source.loc, 'modular_chomp/sound/effects/footstep/slime1.ogg', volume, TRUE, falloff = 1)
 		else
 			var/barefoot_type = prepared_steps[FOOTSTEP_MOB_BAREFOOT]
 			var/bare_footstep_sounds

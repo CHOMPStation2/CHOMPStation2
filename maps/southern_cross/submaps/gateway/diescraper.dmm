@@ -3965,7 +3965,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt/turfpack/station,
+/turf/simulated/floor/outdoors/newdirt/turfpack/station{
+	outdoors = 0
+	},
 /area/awaymission/diescraper/indoors/floor7)
 "lQ" = (
 /obj/machinery/light{
@@ -5170,6 +5172,11 @@
 	dir = 1
 	},
 /obj/structure/barricade/cutout,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/rtg/fake_z_wires,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
 "pu" = (
@@ -7850,7 +7857,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
 "xa" = (
-/turf/simulated/floor/outdoors/newdirt/turfpack/station,
+/turf/simulated/floor/outdoors/newdirt/turfpack/station{
+	outdoors = 0
+	},
 /area/awaymission/diescraper/indoors/floor7)
 "xb" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8359,12 +8368,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor4)
-"yB" = (
-/obj/item/weapon/storage/backpack/dufflebag/cratebooze,
-/turf/simulated/sky/south{
-	temperature = 295.15
-	},
-/area/awaymission/diescraper/sky)
 "yC" = (
 /obj/item/stack/material/steel,
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -8885,7 +8888,9 @@
 /area/awaymission/diescraper/indoors/floor10)
 "zP" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/newdirt/turfpack/station,
+/turf/simulated/floor/outdoors/newdirt/turfpack/station{
+	outdoors = 0
+	},
 /area/awaymission/diescraper/indoors/floor7)
 "zQ" = (
 /obj/machinery/door/firedoor/border_only,
@@ -12546,7 +12551,6 @@
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor7)
 "Kd" = (
-/obj/effect/floor_decal/rust,
 /turf/unsimulated/wall/cult,
 /area/awaymission/diescraper/indoors/floor4second)
 "Ke" = (
@@ -12859,6 +12863,11 @@
 	dir = 4
 	},
 /obj/structure/barricade/cutout,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
 "KZ" = (
@@ -13246,16 +13255,6 @@
 /obj/item/weapon/storage/pill_bottle/phenethylamine,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
-"LW" = (
-/obj/effect/step_trigger/teleporter/deathfall{
-	teleport_x = 55;
-	teleport_y = 16
-	},
-/obj/item/weapon/storage/backpack/parachute,
-/turf/simulated/sky/moving/south{
-	temperature = 277
-	},
-/area/awaymission/diescraper/sky)
 "LX" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced/tinted{
@@ -15209,7 +15208,9 @@
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/diescraper/indoors/floor10)
 "Sa" = (
-/obj/structure/prop/transmitter,
+/obj/structure/prop/transmitter{
+	message_to_play = "Youre so skibidi"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
 "Sb" = (
@@ -16392,6 +16393,9 @@
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/diescraper/indoors/floor9)
 "Vl" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#f58d42"
+	},
 /turf/simulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor4second)
 "Vm" = (
@@ -17824,12 +17828,9 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4second)
 "Zz" = (
-/obj/effect/map_effect/perma_light/brighter{
-	light_color = "#f58d42"
-	},
 /obj/machinery/button/remote/blast_door/single_use/slab/slab4{
 	id = "youup";
-	pixel_y = 30
+	pixel_y = 28
 	},
 /turf/simulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor4second)
@@ -20219,10 +20220,10 @@ ci
 ci
 ci
 ci
-yB
-yB
-yB
-yB
+ci
+ci
+ci
+ci
 ci
 ci
 ci
@@ -68407,7 +68408,7 @@ In
 In
 In
 Wo
-LW
+Wo
 vO
 vO
 vO

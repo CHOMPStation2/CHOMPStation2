@@ -1,0 +1,10 @@
+2024-07-01:
+  Hunter-Dovetail:
+  - rscadd: VBOanim_gullet1
+  - rscadd: VBO_maw19
+  - bugfix: other VBOs quality and brightness
+  - bugfix: increased brightness to some layers of VBO_maw18
+  TheCaramelion:
+  - bugfix: fixed random slosh sounds happening with 0 liquids
+  tacoguy7765093:
+  - bugfix: Fixed the Venom Injection trait to work for CHOMP/.
