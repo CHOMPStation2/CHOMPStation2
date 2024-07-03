@@ -55,7 +55,7 @@
 
 //Detective alternative
 /datum/gear/suit/detective_alt
-	display_name = "sleek modern coat selection, detective"
+	display_name = "sleek modern coat selection"
 	path = /obj/item/clothing/suit/storage/det_trench/alt
 	allowed_roles = list("Head of Security", "Detective")
 
@@ -112,7 +112,11 @@ Talon winter coat
 /datum/gear/suit/armor/combat/crusader_explo
 	display_name = "knight, explo"
 	path = /obj/item/clothing/suit/armor/combat/crusader_explo
+<<<<<<< HEAD
 	allowed_roles = list("Explorer","Field Medic","Pathfinder") //CHOMP keep explo
+=======
+	//allowed_roles = list("Explorer","Pathfinder")
+>>>>>>> cd6e87a30e... loadout restrictions specified (#16072)
 
 /datum/gear/suit/armor/combat/crusader_explo/FM
 	display_name = "knight, Field Medic"
@@ -232,11 +236,13 @@ Talon winter coat
 	display_name = "boat cloak, site manager"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/boat/cap
 	allowed_roles = list("Site Manager")
+	show_roles = FALSE
 
 /datum/gear/suit/roles/hopboatcloak
 	display_name = "boat cloak, head of personnel"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/boat/hop
 	allowed_roles = list("Head of Personnel")
+	show_roles = FALSE
 
 /datum/gear/suit/roles/boatcloaks
 	display_name = "boat cloak selection"
@@ -268,11 +274,13 @@ Talon winter coat
 	display_name = "shroud, site manager"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/shroud/cap
 	allowed_roles = list("Site Manager")
+	show_roles = FALSE
 
 /datum/gear/suit/roles/hopshroud
 	display_name = "shroud, head of personnel"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/shroud/hop
 	allowed_roles = list("Head of Personnel")
+	show_roles = FALSE
 
 /datum/gear/suit/roles/shrouds
 	display_name = "shroud selection"
