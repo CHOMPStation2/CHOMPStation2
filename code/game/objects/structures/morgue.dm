@@ -241,12 +241,7 @@ GLOBAL_LIST_BOILERPLATE(all_crematoriums, /obj/structure/morgue/crematorium)
 				A.forceMove(src.connected.loc)
 			src.connected.icon_state = "cremat"
 		else
-<<<<<<< HEAD
-			qdel(src.connected)
-			src.connected = null //CHOMPEdit - Fix morgues breaking for a while with something solid in front of door.
-=======
 			qdel_null(connected)
->>>>>>> fba6f4f513... Fix crematorium opening lockup (#16075)
 	src.add_fingerprint(user)
 	update()
 
