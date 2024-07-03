@@ -301,7 +301,7 @@
 	if(stat != DEAD && toggled_sleeping)
 		Sleeping(2)
 	if(sleeping)
-<<<<<<< HEAD
+		set_stat(UNCONSCIOUS)
 		//CHOMPEdit Start
 		if(iscarbon(src))
 			var/mob/living/carbon/C = src
@@ -309,10 +309,6 @@
 		else
 			AdjustSleeping(-1)
 		//CHOMPEdit End
-=======
-		set_stat(UNCONSCIOUS)
-		AdjustSleeping(-1)
->>>>>>> f8075fed94... Update life.dm (#16082)
 		throw_alert("asleep", /obj/screen/alert/asleep)
 	else
 		set_stat(CONSCIOUS)
