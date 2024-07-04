@@ -162,7 +162,6 @@ SUBSYSTEM_DEF(job)
 		fdel(savepath)
 	var/json_to_file = json_encode(shift_keys)
 	if(!json_to_file)
-		to_world("failed to write to json")
 		log_debug("Saving: [savepath] failed jsonencode")
 		return
 
