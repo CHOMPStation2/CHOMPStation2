@@ -8,3 +8,13 @@
   - bugfix: fixed random slosh sounds happening with 0 liquids
   tacoguy7765093:
   - bugfix: Fixed the Venom Injection trait to work for CHOMP/.
+2024-07-04:
+  TheCaramelion:
+  - qol: Reduced the footstep volume
+  - bugfix: Footstep and slosh elements making sounds when transfering through bellies/storages
+  - bugfix: Footstep and slosh elements not applying on resleeve/cloning/in-belly
+      spawns
+  tacoguy7765093:
+  - maptweak: Diescraper's turfs should be properly indoors now
+  - maptweak: Fixed secret button not proccing.
+  - rscadd: 5 New superposed pods have been added.
