@@ -79,7 +79,7 @@
 		if(SSjob.restricted_keys.len)
 			var/list/check = SSjob.restricted_keys[J.title]
 			if(client.ckey in check)
-				to_chat(src,"<span class = 'danger'>[J.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit - round_duration_in_ds) / 600)] minutes, if slots remain open.</span>")
+				to_chat(src,"<span class = 'danger'>[J.title] is not presently selectable because you played as it last round. It will become available to you in [round(CONFIG_GET(number/job_camp_time_limit - round_duration_in_ds) / 600)] minutes, if slots remain open.</span>")
 				pass = FALSE
 	//RS ADD END
 
