@@ -34,8 +34,8 @@
 /datum/job/shadekin
     title = JOB_ANOMALY
     disallow_jobhop = TRUE
-    total_positions = 3
-    spawn_positions = 3
+    total_positions = 5
+    spawn_positions = 5
     supervisors = "nobody, but you fall under NanoTrasen's Unauthorized Personnel SOP while on NT property. Please read <a href='https://wiki.chompstation13.net/index.php/Rules#Shadekin/%22Anomaly%22_Guidelines'>the Shadekin Guidelines</a> clearly before playing"
 
     flag = NONCREW
@@ -65,7 +65,7 @@
 		return FALSE
 
 /datum/job/shadekin/update_limit(var/comperator)
-	var/current_limit = clamp(comperator / 5, 3, 5) + round(comperator / 50)
+	var/current_limit = spawn_positions + round(comperator / 50)
 	if(current_limit > total_positions)
 		total_positions = current_limit
 
