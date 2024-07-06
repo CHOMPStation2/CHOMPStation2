@@ -1,6 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - qol: "Reduced the footstep volume"
-  - bugfix: "Footstep and slosh elements making sounds when transfering through bellies/storages"
-  - bugfix: "Footstep and slosh elements not applying on resleeve/cloning/in-belly spawns"
