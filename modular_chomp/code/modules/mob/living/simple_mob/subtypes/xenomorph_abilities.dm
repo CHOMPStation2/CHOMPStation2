@@ -37,7 +37,6 @@
 
 		if(O)
 			visible_message("<span class='warning'><B>[src] vomits up a thick purple substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
-			O.color = "#321D37"
 			playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 
 
@@ -63,7 +62,7 @@
 
 /datum/action/innate/xeno_ch/xeno_build
 	name = "Build resin structures"
-	button_icon_state = "Nest"
+	button_icon_state = "Weed Node"
 
 /datum/action/innate/xeno_ch/xeno_build/Activate()
 	parent_xeno.xeno_build()
@@ -75,6 +74,7 @@
 
 /datum/action/innate/xeno_ch/xeno_neuro/Activate()
 	parent_xeno.neurotoxin()
+	button_icon_state = "Neuro Spit On"
 
 
 /datum/action/innate/xeno_ch/xeno_acidspit
@@ -83,6 +83,7 @@
 
 /datum/action/innate/xeno_ch/xeno_acidspit/Activate()
 	parent_xeno.acidspit()
+	button_icon_state = "Acid Spit On"
 
 
 /datum/action/innate/xeno_ch/xeno_corrode
@@ -91,6 +92,7 @@
 
 /datum/action/innate/xeno_ch/xeno_corrode/Activate()
 	parent_xeno.corrosive_acid()
+	button_icon_state = "Acid On"
 
 
 /datum/action/innate/xeno_ch/xeno_pounce
@@ -99,6 +101,7 @@
 
 /datum/action/innate/xeno_ch/xeno_pounce/Activate()
 	parent_xeno.pounce_toggle()
+	button_icon_state = "Pounce On"
 
 /datum/action/innate/xeno_ch/xeno_spin
 	name = "Spin"
@@ -115,3 +118,8 @@
 	corrode_action.Grant(src)
 	pounce_action.Grant(src)
 	spin_action.Grant(src)
+
+/datum/action/innate/xeno_ch/larval_egg
+	name = "Lay Larval Egg"
+	button_icon_state = "template"
+

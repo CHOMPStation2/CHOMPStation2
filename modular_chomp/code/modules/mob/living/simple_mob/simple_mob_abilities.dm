@@ -3,8 +3,8 @@
 	// pounce proc specific
 	var/pouncing = 0 // if the user has toggled 'pounce mode' on
 	var/pounce_last = 0 // time of previous pounce
-	var/pounce_delay = 0 // pounce delay in game ticks
-	var/pounce_speed = 1 // pounce speed in idk?? 2 kinda fast tho
+	var/pounce_delay = 50 // pounce delay in game ticks
+	var/pounce_speed = 2 // pounce speed in idk?? 2 kinda fast tho // 1 kinda slow tho
 
 	// icon handling for pounce. Has to handle a possible file change
 	var/icon_state_prepounce = null //icon state for 'preparing to pounce'. Null to not use any icon.
@@ -108,7 +108,7 @@
 /mob/living/simple_mob/proc/pounce_toggle()
 	set name = "Toggle Pouncing"
 	set desc = "Toggle pouncing. Doubleclick to pounce."
-	set category = "Abilities.Mob"
+	set category = "Abilities.Xeno"
 
 	if(pouncing)
 		to_chat(src, "<span class='notice'>Pouncing toggled off.</span>")
@@ -248,7 +248,7 @@
 /mob/living/simple_mob/proc/neurotoxin()
 	set name = "Toggle Neurotoxic Spit"
 	set desc = "Readies a neurotoxic spit, which paralyzes the target for a short time if they are not wearing protective gear."
-	set category = "Abilities.Mob"
+	set category = "Abilities.Xeno"
 
 	if(spitting)
 		to_chat(src, "<span class='notice'>You stop preparing to spit.</span>")
@@ -262,7 +262,7 @@
 /mob/living/simple_mob/proc/acidspit()
 	set name = "Toggle Acid Spit"
 	set desc = "Readies an acidic spit, which burns the target if they are not wearing protective gear."
-	set category = "Abilities.Mob"
+	set category = "Abilities.Xeno"
 
 	if(spitting)
 		to_chat(src, "<span class='notice'>You stop preparing to spit.</span>")
@@ -276,7 +276,7 @@
 /mob/living/simple_mob/proc/corrosive_acid(O as obj|turf in oview(1)) //If they right click to corrode, an error will flash if its an invalid target./N
 	set name = "Corrosive Acid"
 	set desc = "Drench an object in acid, destroying it over time."
-	set category = "Abilities.Mob"
+	set category = "Abilities.Xeno"
 
 	if(!(O in oview(1)))
 		to_chat(src, "<span class='notice'>[O] is too far away.</span>")
@@ -313,7 +313,7 @@
 /mob/living/simple_mob/proc/speen(var/range = 2)
 	set name = "Spin Attack"
 	set desc = "Spins to strike enemies away from you."
-	set category = "Abilities.Mob"
+	set category = "Abilities.Xeno"
 
 	if(world.time < speen_last)
 		to_chat(src, "<span class='warning'>You cannot spin again so soon.</span>")
@@ -347,3 +347,23 @@
 		to_chat(M, "<span class='userdanger'>You're thrown back by [src]!</span>")
 		playsound(src, get_sfx("punch"), 50, 1)
 	AM.throw_at(throwtarget, maxthrow, 3, src)
+
+/mob/living/simple_mob/proc/lay_egg()
+	set name = "Lay Larval Egg" // An egg that will eventually hatch into a larva, bypassing the facehugger stage.
+	set desc = "Lay an egg that will eventually hatch into a new xenomorph larva. Life finds a way."
+	set category = "Abilities.Xeno" //CHOMPEdit
+
+	if(!CONFIG_GET(flag/aliens_allowed)) // CHOMPEdit
+		to_chat(src, "You begin to lay an egg, but hesitate. You suspect it isn't allowed.")
+		remove_verb(src,/mob/living/carbon/human/proc/lay_egg) //CHOMPEdit TGPanel
+		return
+
+	if(locate(/obj/structure/ghost_pod/automatic/xenomorph_egg) in get_turf(src))
+		to_chat(src, "There's already an egg here.")
+		return
+
+	else
+		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
+		new /obj/structure/ghost_pod/automatic/xenomorph_egg(loc)
+
+	return
