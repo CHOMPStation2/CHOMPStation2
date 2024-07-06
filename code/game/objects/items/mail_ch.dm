@@ -62,6 +62,83 @@
 		for(var/i = 1, i <= stamp_count, i++)
 			stamps += list("stamp_[rand(2, 8)]")
 
+/obj/item/mail/blank
+	desc = "A blank envelope."
+	stamped = FALSE
+	postmarked = FALSE
+	var/set_recipient = FALSE
+	var/set_content = FALSE
+	var/sealed = FALSE
+	var/list/mail_recipients = list()
+
+/obj/item/mail/blank/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/device/destTagger) && sealed)
+		var/obj/item/device/destTagger/O = W
+		if(O.currTag)
+			if(src.sortTag != O.currTag)
+				balloon_alert(user, "You have labeled the destination as [O.currTag].")
+				src.sortTag = O.currTag
+				playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
+				W.description_info = " It is labeled for [O.currTag]"
+			else
+				balloon_alert(user, "The mail is already labeled for [O.currTag].")
+		else
+			balloon_alert(user, "You need to set a destination first!")
+		return
+
+	if(istype(W, /obj/item/weapon/pen) && sealed)
+		setRecipient(user)
+		add_fingerprint(user)
+		return
+
+	if(!set_content && !sealed)
+		if(!do_after(user, 1.5 SECONDS, target = user))
+			set_content = FALSE
+		user.drop_item()
+		W.forceMove(src)
+		balloon_alert(user, "Placed the [W] into the [src]")
+		set_content = TRUE
+		return
+	return
+
+/obj/item/mail/proc/setRecipient(mob/user)
+	var/list/recipients = list()
+	for(var/mob/living/player in player_list)
+		if(!player_is_antag(player.mind) && player.mind.show_in_directory)
+			recipients += player
+
+	recipients = tgui_input_list(user, "Choose recipient", "Recipients", recipients, recipients)
+
+	if(recipients)
+		initialize_for_recipient(recipients, preset_goodies = TRUE)
+
+/obj/item/mail/blank/AltClick(mob/user)
+	if(sealed)
+		return
+
+	for(var/obj/stuff as anything in contents)
+		if(isitem(stuff))
+			user.put_in_hands(stuff)
+		else
+			stuff.forceMove(drop_location())
+	set_content = FALSE
+
+/obj/item/mail/blank/ShiftClick(mob/user)
+	..()
+	if(!sealed)
+		var/sender = tgui_input_text(user, "Write name", "Name", user.name)
+		if(sender)
+			desc = "A signed envelope, from [sender]."
+
+/obj/item/mail/blank/attack_self(mob/user)
+	if(!sealed)
+		balloon_alert(user, "Sealing the envelope...")
+		if(!do_after(user, 1.5 SECONDS, target = user))
+			sealed = FALSE
+		sealed = TRUE
+		return
+	. = ..()
+
 /obj/item/mail/update_icon()
 	. = ..()
 	var/bonus_stamp_offset = 0
@@ -132,7 +209,7 @@
 	playsound(loc, 'sound/items/poster_ripped.ogg', 100, TRUE)
 	qdel(src)
 
-/obj/item/mail/proc/initialize_for_recipient(mob/new_recipient)
+/obj/item/mail/proc/initialize_for_recipient(mob/new_recipient, var/preset_goodies = FALSE)
 	recipient = new_recipient
 	var/current_title = new_recipient.mind.role_alt_title ? new_recipient.mind.role_alt_title : new_recipient.mind.assigned_role
 	name = "[initial(name)] for [new_recipient.real_name] ([current_title])"
@@ -144,17 +221,20 @@
 		var/image/envelope = image(icon, icon_state)
 		envelope.color = this_job.get_mail_color()
 		add_overlay(envelope)
-		var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
-		if(LAZYLEN(job_goodies))
-			if(this_job.exclusive_mail_goodies)
-				goodies = job_goodies
-			else
-				goodies += job_goodies
+		if(!preset_goodies)
+			var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
+			if(LAZYLEN(job_goodies))
+				if(this_job.exclusive_mail_goodies)
+					goodies = job_goodies
+				else
+					goodies += job_goodies
 
-	for(var/iterator in 1 to goodie_count)
-		var/target_good = pickweight(goodies)
-		var/atom/movable/target_atom = new target_good(src)
-		log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
+	if(!preset_goodies)
+		for(var/iterator in 1 to goodie_count)
+			var/target_good = pickweight(goodies)
+			var/atom/movable/target_atom = new target_good(src)
+			log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
+
 	update_icon()
 	return TRUE
 
