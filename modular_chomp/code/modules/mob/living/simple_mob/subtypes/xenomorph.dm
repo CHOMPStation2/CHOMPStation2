@@ -136,7 +136,7 @@
 
 /mob/living/simple_mob/xeno_ch/Initialize(mapload)
     .=..()
-    LoadComponent(/datum/component/squeak, list('modular_chomp/sound/effects/footstep/hardclaw1.ogg'), 50)
+    set_footsteps(FOOTSTEP_MOB_CLAW)
 
 /mob/living/simple_mob/xeno_ch/Login()
 	. = ..()
