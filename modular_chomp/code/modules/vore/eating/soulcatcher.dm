@@ -231,6 +231,13 @@
 	for(var/obj/item/I in range(0, get_turf(owner)))
 		if(is_type_in_list(I))
 			valid_objects += I
+	for(var/mob/M in range(1, get_turf(owner)))
+		if(M == owner)
+			continue
+		if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER))
+			continue
+		if(M.client && M.soulgem)
+			valid_objects += M.soulgem
 	if(!valid_objects.len)
 		to_chat(owner, span_warning("No valid objects found!"))
 		return
@@ -242,7 +249,16 @@
 	var/list/valid_objects = find_transfer_objects()
 	if(!valid_objects || !valid_objects.len)
 		return
-	var/obj/item/target = tgui_input_list(owner, "Select where you want to store the mind into.", "Mind Transfer Target", valid_objects)
+	var/obj/target = tgui_input_list(owner, "Select where you want to store the mind into.", "Mind Transfer Target", valid_objects)
+	if(istype(target, /obj/soulgem))
+		var/obj/soulgem/gem = target
+		if(!gem.owner)
+			return
+		if((tgui_alert(gem.owner, "Do you want to allow [owner] to transfer [selected_soul] to your soulcatcher?", "Allow Transfer", list("No", "Yes")) == "Yes"))
+			if(!(gem.owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER))
+				return
+			transfer_mob_soulcatcher(selected_soul, gem)
+		return
 	transfer_mob(selected_soul, target)
 
 /obj/soulgem/proc/transfer_mob(var/mob/M, var/obj/target)
@@ -270,6 +286,13 @@
 		else
 			selected_soul = null
 	qdel(M)
+
+/obj/soulgem/proc/transfer_mob_soulcatcher(var/mob/living/carbon/brain/caught_soul/vore/M, var/obj/soulgem/gem)
+	if(!istype(M) || !gem) return
+	brainmobs -= M
+	M.gem = gem
+	M.container = gem
+	gem.brainmobs += M
 
 /obj/soulgem/proc/delete_selected()
 	if(!selected_soul) return
