@@ -41,6 +41,11 @@ radiantaurora - Protean
 ryumi - Protean
 seiga - Vox
 sepulchre - Vox
+<<<<<<< HEAD
+=======
+sharplight - Protean
+shirosenshi - Xenochimera
+>>>>>>> 21d09086d5... Merge pull request #16085 from SatinIsle/sharplight
 silvertalismen - Diona
 silvertalismen - Vox
 silvertalismen - Xenochimera
