@@ -64,6 +64,7 @@
 
 /obj/item/mail/blank
 	desc = "A blank envelope."
+	description_info = "An object can be placed into the envelope, click on it with an empty hand to seal it. Alt-Click to retrieve the items from inside before sealing."
 	stamped = FALSE
 	postmarked = FALSE
 	var/set_recipient = FALSE
@@ -72,22 +73,10 @@
 	var/list/mail_recipients = list()
 
 /obj/item/mail/blank/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/device/destTagger) && sealed)
-		var/obj/item/device/destTagger/O = W
-		if(O.currTag)
-			if(src.sortTag != O.currTag)
-				balloon_alert(user, "You have labeled the destination as [O.currTag].")
-				src.sortTag = O.currTag
-				playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
-				W.description_info = " It is labeled for [O.currTag]"
-			else
-				balloon_alert(user, "The mail is already labeled for [O.currTag].")
-		else
-			balloon_alert(user, "You need to set a destination first!")
-		return
-
-	if(istype(W, /obj/item/weapon/pen) && sealed)
-		setRecipient(user)
+	..()
+	if(istype(W, /obj/item/weapon/pen) && sealed && !set_recipient)
+		if(setRecipient(user))
+			set_recipient = TRUE
 		add_fingerprint(user)
 		return
 
@@ -98,6 +87,7 @@
 		W.forceMove(src)
 		balloon_alert(user, "Placed the [W] into the [src]")
 		set_content = TRUE
+		description_info = "Click with an empty hand to seal it, or Alt-Click to retrieve the object out."
 		return
 	return
 
@@ -107,10 +97,11 @@
 		if(!player_is_antag(player.mind) && player.mind.show_in_directory)
 			recipients += player
 
-	recipients = tgui_input_list(user, "Choose recipient", "Recipients", recipients, recipients)
+	recipients = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
 
 	if(recipients)
 		initialize_for_recipient(recipients, preset_goodies = TRUE)
+		return TRUE
 
 /obj/item/mail/blank/AltClick(mob/user)
 	if(sealed)
@@ -122,6 +113,7 @@
 		else
 			stuff.forceMove(drop_location())
 	set_content = FALSE
+	description_info = initial(description_info)
 
 /obj/item/mail/blank/ShiftClick(mob/user)
 	..()
@@ -136,6 +128,7 @@
 		if(!do_after(user, 1.5 SECONDS, target = user))
 			sealed = FALSE
 		sealed = TRUE
+		description_info = "Shift Click to add the sender's name to the envelope, or attack with a pen to set a receiver."
 		return
 	. = ..()
 
@@ -176,7 +169,7 @@
 				balloon_alert(user, "The mail is already labeled for [O.currTag].")
 		else
 			balloon_alert(user, "You need to set a destination first!")
-	return
+		return
 
 /obj/item/mail/attack_self(mob/user)
 	if(!unwrap(user))
@@ -242,6 +235,54 @@
 	SIGNAL_HANDLER
 	if(!hasmob)
 		disposal_holder.destinationTag = sortTag
+
+// Mail spawn for events
+/datum/admins/proc/spawn_mail(var/object as text)
+	set name = "Spawn Mail"
+	set category = "Fun.Event Kit"
+	set desc = "Spawn mail for a specific player, with a specific item."
+
+	if(!check_rights(R_SPAWN)) return
+
+	var/obj/item/mail/new_mail = new
+	var/list/types = typesof(/atom)
+	var/list/matches = new()
+	var/list/recipients = list()
+
+	for(var/path in types)
+		if(findtext("[path]", object))
+			matches += path
+
+	if(matches.len==0)
+		return
+	var/chosen
+	if(matches.len==1)
+		chosen = matches[1]
+	else
+		chosen = tgui_input_list(usr, "Select an atom type", "Spawn Atom in Mail", matches)
+		if(!chosen)
+			return
+
+	for(var/mob/living/player in player_list)
+		recipients += player
+
+	recipients = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
+
+	if(recipients)
+		new_mail.initialize_for_recipient(recipients, TRUE)
+		new chosen(new_mail)
+
+	var/shuttle_spawn = tgui_alert(usr, "Spawn mail at location or in the shuttle?", "Spawn mail", list("Location", "Shuttle"))
+	if(shuttle_spawn == "Shuttle")
+		SSmail.admin_mail += new_mail
+		log_and_message_admins("spawned [chosen] inside an envelope at the shuttle")
+	else
+		var/obj/item/mail/ground_mail = new /obj/item/mail(usr.loc)
+		ground_mail.initialize_for_recipient(recipients, TRUE)
+		new chosen(ground_mail)
+		log_and_message_admins("spawned [chosen] inside an envelope at ([usr.x],[usr.y],[usr.z])")
+
+	feedback_add_details("admin_verb","SE")
 
 // Mail Crate
 /obj/structure/closet/crate/mail
