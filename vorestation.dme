@@ -4705,6 +4705,7 @@
 #include "modular_chomp\code\datums\supplypacks\misc.dm"
 #include "modular_chomp\code\datums\supplypacks\science.dm"
 #include "modular_chomp\code\datums\supplypacks\security.dm"
+#include "modular_chomp\code\datums\supplypacks\supply.dm"
 #include "modular_chomp\code\datums\underwear\socks.dm"
 #include "modular_chomp\code\game\atoms\atoms.dm"
 #include "modular_chomp\code\game\gamemodes\meteor\meteors.dm"

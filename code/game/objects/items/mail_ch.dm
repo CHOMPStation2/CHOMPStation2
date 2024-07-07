@@ -44,6 +44,11 @@
 	var/stamp_offset_y = 2
 	var/opening = FALSE
 
+/obj/item/mail/container_resist(mob/living/M)
+	if(istype(M, /mob/living/voice)) return
+	M.forceMove(get_turf(src))
+	to_chat(M, span_warning("You climb out of \the [src]."))
+
 /obj/item/mail/envelope
 	name = "envelope"
 	icon_state = "mail_large"
