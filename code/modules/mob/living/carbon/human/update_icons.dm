@@ -173,6 +173,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			M.Scale(desired_scale_x, desired_scale_y)
 			M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		else
+<<<<<<< HEAD
 			M.Scale(desired_scale_x, desired_scale_y)
 			if(isnull(resting_dir))
 				resting_dir = pick(FALSE, TRUE)
@@ -183,6 +184,27 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 				M.Translate((1 / desired_scale_x * 4) - (desired_scale_x * cent_offset), 0)
 				M.Turn(90)
 		// CHOMPEdit End
+=======
+			if(rest_dir)
+				if(rest_dir < 0)
+					M.Turn(-90)
+					rest_dir = 0
+				else
+					M.Turn(90)
+					rest_dir = 0
+			else
+				var/randn = rand(1, 2)
+				if(randn <= 1) // randomly choose a rotation
+					M.Turn(-90)
+				else
+					M.Turn(90)
+			if(species.icon_height == 64)
+				M.Translate(13,-22)
+			else
+				M.Translate(1,-6)
+			M.Scale(desired_scale_y, desired_scale_x)
+		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
+>>>>>>> 79b2288e99... Choose to rest left or right (#16090)
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit

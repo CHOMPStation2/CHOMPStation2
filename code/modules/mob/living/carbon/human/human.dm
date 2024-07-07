@@ -21,6 +21,8 @@
 	var/active_regen_delay = 300
 	var/last_breath_sound				// Feels weird doing this, but allows us to store the value across proc calls per-mob.
 
+	var/rest_dir = 0					//To lay down in a specific direction
+
 /mob/living/carbon/human/Initialize(mapload, var/new_species = null)
 	if(!dna)
 		dna = new /datum/dna(null)
@@ -1789,3 +1791,38 @@
 
 /mob/living/carbon/human/get_mob_riding_slots()
 	return list(back, head, wear_suit)
+<<<<<<< HEAD
+=======
+
+/mob/living/carbon/human/proc/update_fullness()
+	var/list/new_fullness = list()
+	vore_fullness = 0
+	for(var/belly_class in vore_icon_bellies)
+		new_fullness[belly_class] = 0
+	for(var/obj/belly/B as anything in vore_organs)
+		new_fullness[B.belly_sprite_to_affect] += B.GetFullnessFromBelly()
+	for(var/belly_class in vore_icon_bellies)
+		new_fullness[belly_class] /= size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
+		new_fullness[belly_class] = round(new_fullness[belly_class], 1) // Because intervals of 0.25 are going to make sprite artists cry.
+		vore_fullness_ex[belly_class] = min(vore_capacity_ex[belly_class], new_fullness[belly_class])
+		vore_fullness += new_fullness[belly_class]
+	vore_fullness = min(vore_capacity, vore_fullness)
+	update_vore_belly_sprite()
+	update_vore_tail_sprite()
+
+/mob/living/carbon/human/verb/lay_down_left()
+	set name = "Rest-Left"
+
+	rest_dir = -1
+	resting = !resting
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
+	update_canmove()
+
+/mob/living/carbon/human/verb/lay_down_right()
+	set name = "Rest-Right"
+
+	rest_dir = 1
+	resting = !resting
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
+	update_canmove()
+>>>>>>> 79b2288e99... Choose to rest left or right (#16090)
