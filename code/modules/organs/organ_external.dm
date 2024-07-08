@@ -1095,7 +1095,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 	status |= ORGAN_BROKEN
 	broken_description = pick("broken","fracture","hairline fracture")
 
-	// Fractures have a	 chance of getting you out of restraints
+	// Fractures have a chance of getting you out of restraints
 	if (prob(25))
 		release_restraints()
 
