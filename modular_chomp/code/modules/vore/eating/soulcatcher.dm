@@ -73,9 +73,9 @@
 
 	//Not AR Projecting
 	else
-		to_chat(owner, span_nif("<b>[sender_name]</b> speaks, \"[message]\""))
+		to_chat(owner, span_nif("<b>\[MIM\] [sender_name]</b> speaks, \"[message]\""))
 		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-			to_chat(CS, span_nif("<b>[sender_name]</b> speaks, \"[message]\""))
+			to_chat(CS, span_nif("<b>\[MIM\] [sender_name]</b> speaks, \"[message]\""))
 
 	log_nsay(message, owner.real_name, sender)
 
