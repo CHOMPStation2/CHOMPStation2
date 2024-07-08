@@ -1088,11 +1088,14 @@ Note that amputating the affected organ does in fact remove the infection from t
 			owner.emote("scream")
 		jostle_bone()	//VOREStation Edit End
 
-	playsound(src, "fracture", 90, 1, -2) // CHOMPedit: Much more audible bonebreaks.
+	if(istype(owner.loc, /obj/belly)) //CHOMPedit, bone breaks in bellys should be whisper range to prevent bar wide blender prefbreak. This is a hacky passive hardcode, if a pref gets added, remove this if else
+		playsound(src, "fracture", 90, 1, -6.5)
+	else
+		playsound(src, "fracture", 90, 1, -2) // CHOMPedit: Much more audible bonebreaks.
 	status |= ORGAN_BROKEN
 	broken_description = pick("broken","fracture","hairline fracture")
 
-	// Fractures have a chance of getting you out of restraints
+	// Fractures have a	 chance of getting you out of restraints
 	if (prob(25))
 		release_restraints()
 
