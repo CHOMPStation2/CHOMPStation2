@@ -1282,7 +1282,11 @@
 			vessel.maximum_volume = species.blood_volume
 		fixblood()
 		species.update_attack_types() //VOREStation Edit - Required for any trait that updates unarmed_types in setup.
+<<<<<<< HEAD
 		species.update_vore_belly_def_variant() //CHOMPedit - Custom species post spawn logic
+=======
+		species.update_vore_belly_def_variant()
+>>>>>>> 4151cf2d07... Fixes teshari stomachs & Unathi Stomachs (#16102)
 
 	// Rebuild the HUD. If they aren't logged in then login() should reinstantiate it for them.
 	update_hud()
