@@ -16,8 +16,6 @@
 	has_laser_sprite = FALSE //Missing from the dmi
 	has_taser_sprite = FALSE //ditto
 
-
-/* place holder, sprites getting replaced
 /datum/robot_sprite/dogborg/tall/security/dullsec
 	name = "Dullahan"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sec.dmi'
@@ -29,7 +27,10 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	pixel_x = 0
-*/
+
+/* place holder, sprites getting replaced
+
+
 /datum/robot_sprite/dogborg/tall/security/dullsecalt
 	name = "Dullahan"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sec_alt.dmi'
@@ -41,3 +42,4 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	pixel_x = 0
+*/
