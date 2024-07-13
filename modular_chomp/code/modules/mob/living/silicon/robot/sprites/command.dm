@@ -50,3 +50,15 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/tall/command/dullahan
+	module_type = "Command"
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/Dullahan_pk.dmi'
+	pixel_x = 0
+/datum/robot_sprite/dogborg/tall/command/dullahan/dullcommand
+	name = "Dullahan"
+	sprite_icon_state = "dullahanpeace"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")

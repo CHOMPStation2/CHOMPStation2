@@ -70,3 +70,15 @@
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
+
+/datum/robot_sprite/dogborg/tall/mining/dullahanminer
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/Dullahan_mine.dmi'
+	pixel_x = 0
+
+/datum/robot_sprite/dogborg/tall/mining/dullahanminer/dullmine
+	name = "Dullahan"
+	sprite_icon_state = "dullahanmine"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
