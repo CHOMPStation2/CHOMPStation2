@@ -102,12 +102,12 @@
 	has_dead_sprite = TRUE
 
 
-/datum/robot_sprite/dogborg/tall/dullahancrisis
+/datum/robot_sprite/dogborg/tall/dullahancrisismodule
 	module_type = "Crisis"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med_ch.dmi'
 	pixel_x = 0
 
-/datum/robot_sprite/dogborg/tall/dullahancrisis/dullcrisis
+/datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisis
 	name = "Dullahan"
 	sprite_icon_state = "dullahanmed"
 	has_eye_light_sprites = TRUE
@@ -117,8 +117,8 @@
 	pixel_x = 0
 
 
-/datum/robot_sprite/dogborg/tall/dullahancrisis/dullcrisis_alt
-	name = "Dullahan alt"
+/datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisisalt
+	name = "Dullahan v2"
 	sprite_icon_state = "dullahanmed_alt"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE

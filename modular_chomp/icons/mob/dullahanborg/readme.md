@@ -21,3 +21,10 @@ If you are porting this content, it is the personal request of the artist that:
  -	This skinline is ported in full, even if your codebase has no use for a certain job-module.
 
 This content was made for free.
+
+
+
+
+EDIT:
+these sprites were edited by asher-49 and MAK
+- animations made by asher-49

@@ -19,21 +19,22 @@
 	sprite_icon_state = "mekaserve_alt"
 	rest_sprite_options = list("Default", "Sit")
 
-/datum/robot_sprite/dogborg/tall/service/dullserv_alt
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_serv.dmi'
-	name = "Dullahan Alt"
+
+/datum/robot_sprite/dogborg/tall/service/dullahanservice
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_serv_ch.dmi'
+	name = "Dullahan"
 	pixel_x = 0
-	sprite_icon_state = "dullahanserv_alt"
+	sprite_icon_state = "dullahanserv"
 	rest_sprite_options = list("Default", "Sit")
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
-/datum/robot_sprite/dogborg/tall/service/dullserv
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_serv.dmi'
-	name = "Dullahan"
+/datum/robot_sprite/dogborg/tall/service/dullahanservicealt
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_serv_ch.dmi'
+	name = "Dullahan v2"
 	pixel_x = 0
-	sprite_icon_state = "dullahanserv"
+	sprite_icon_state = "dullahanserv_alt"
 	rest_sprite_options = list("Default", "Sit")
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
