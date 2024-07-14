@@ -8,7 +8,7 @@
 
 /datum/robot_sprite/dogborg/engineering/dullahanengineering
 	name = "Dullahan"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_eng_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_eng.dmi'
 	sprite_icon_state = "dullahaneng"
 	pixel_x = 0
 	rest_sprite_options = list("Default", "Sit")
@@ -18,7 +18,7 @@
 
 /datum/robot_sprite/dogborg/engineering/dullahanengineeringalt
 	name = "Dullahan v2"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_eng_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_eng.dmi'
 	sprite_icon_state = "dullahaneng_alt"
 	pixel_x = 0
 	rest_sprite_options = list("Default", "Sit")

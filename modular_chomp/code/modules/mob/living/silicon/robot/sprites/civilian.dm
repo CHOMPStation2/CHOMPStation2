@@ -21,7 +21,7 @@
 
 
 /datum/robot_sprite/dogborg/tall/service/dullahanservice
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_serv_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_serv.dmi'
 	name = "Dullahan"
 	pixel_x = 0
 	sprite_icon_state = "dullahanserv"
@@ -31,7 +31,7 @@
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/tall/service/dullahanservicealt
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_serv_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_serv.dmi'
 	name = "Dullahan v2"
 	pixel_x = 0
 	sprite_icon_state = "dullahanserv_alt"

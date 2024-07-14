@@ -15,7 +15,7 @@
 
 /datum/robot_sprite/dogborg/tall/dullahan
 	module_type = "Exploration"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_explorer_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_explorer.dmi'
 	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/dullahan/explorer

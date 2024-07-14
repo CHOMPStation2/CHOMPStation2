@@ -14,7 +14,7 @@
 
 /datum/robot_sprite/dogborg/dullahanjanitormodule
 	module_type = "Janitor"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_jani_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_jani.dmi'
 
 
 /datum/robot_sprite/dogborg/tall/dullahanjanitormodule/dullahanjanitor

@@ -72,7 +72,7 @@
 	rest_sprite_options = list("Default", "Bellyup")
 
 /datum/robot_sprite/dogborg/tall/mining/dullahanminermodule
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_mine_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_mine.dmi'
 	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/mining/dullahanminermodule/dullahanminer
@@ -92,7 +92,7 @@
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/dullahancargo
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_cargo_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_cargo.dmi'
 	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/mining/dullahancargomodule/dullahancargo

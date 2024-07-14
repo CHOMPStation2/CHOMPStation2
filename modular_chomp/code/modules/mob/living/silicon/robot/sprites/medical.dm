@@ -104,7 +104,7 @@
 
 /datum/robot_sprite/dogborg/tall/dullahancrisismodule
 	module_type = "Crisis"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med.dmi'
 	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisis

@@ -18,7 +18,7 @@
 
 /datum/robot_sprite/dogborg/tall/security/dullahansecurity
 	name = "Dullahan"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sec_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sec.dmi'
 	sprite_icon_state = "dullahansec"
 	sprite_hud_icon_state = "k9"
 	has_laser_sprite = FALSE //Missing from the dmi
@@ -30,7 +30,7 @@
 
 /datum/robot_sprite/dogborg/tall/security/dullahansecurityalt
 	name = "Dullahan v2"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sec_ch.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sec.dmi'
 	sprite_icon_state = "dullahansec_alt"
 	sprite_hud_icon_state = "k9"
 	has_laser_sprite = FALSE //Missing from the dmi
