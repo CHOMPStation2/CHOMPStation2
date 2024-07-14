@@ -37,6 +37,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 					SEND_SOUND(L, sound(get_sfx("fancy_death_prey")))
 			B.handle_digestion_death(L)
 			if(!B.fancy_vore)
+<<<<<<< HEAD
 				return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
 			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
 		else
@@ -60,6 +61,19 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			return
 
  		//CHOMPedit end
+=======
+				SEND_SOUND(L, sound(get_sfx("classic_death_sounds")))
+			else
+				SEND_SOUND(L, sound(get_sfx("fancy_death_prey")))
+		B.handle_digestion_death(L)
+		if(!L)
+			if (istype(B.owner, /mob/living/carbon/human))
+				var/mob/living/carbon/human/howner = B.owner
+				howner.update_fullness()
+		if(!B.fancy_vore)
+			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
+		return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
 
 	// Deal digestion damage (and feed the pred)
 	var/old_health = L.health
@@ -87,6 +101,11 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		damage_gain = damage_gain * 0.5
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
+
+	if(B.health_impacts_size)
+		if (istype(B.owner, /mob/living/carbon/human))
+			var/mob/living/carbon/human/howner = B.owner
+			howner.update_fullness()
 
 	consider_healthbar(L, old_health, B.owner)
 	if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...

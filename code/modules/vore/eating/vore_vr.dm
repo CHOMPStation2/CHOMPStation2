@@ -68,6 +68,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/step_mechanics_pref = FALSE
 	var/pickup_pref = TRUE
 
+<<<<<<< HEAD
 	//CHOMP stuff
 	var/allow_mind_transfer = FALSE
 	var/phase_vore = TRUE
@@ -89,6 +90,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/no_latejoin_prey_warning_persists = FALSE
 	var/belly_rub_target = null
 	//CHOMP stuff end
+=======
+	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
 
 	var/list/belly_prefs = list()
 	var/vore_taste = "nothing in particular"
@@ -218,6 +222,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	weight_message_visible = json_from_file["weight_message_visible"]
 	weight_messages = json_from_file["weight_messages"]
 	eating_privacy_global = json_from_file["eating_privacy_global"]
+	vore_sprite_color = json_from_file["vore_sprite_color"]
 
 
 	//CHOMP stuff Start
@@ -329,6 +334,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	else if(weight_messages.len < 10)
 		while(weight_messages.len < 10)
 			weight_messages.Add("")
+<<<<<<< HEAD
 
 	//CHOMP stuff Start
 	if(isnull(allow_mind_transfer))
@@ -369,6 +375,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		no_latejoin_prey_warning_persists = FALSE
 	//CHOMP stuff End
 
+=======
+	if(isnull(vore_sprite_color))
+		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
 	return TRUE
 
 /datum/vore_preferences/proc/save_vore()
@@ -417,6 +427,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"weight_message_visible"	= weight_message_visible,
 			"weight_messages"			= weight_messages,
 			"eating_privacy_global"		= eating_privacy_global,
+<<<<<<< HEAD
 			"vore_sprite_color"			= vore_sprite_color, //CHOMPEdit
 			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
 			"strip_pref" 			= strip_pref, //CHOMPEdit
@@ -427,6 +438,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"no_latejoin_vore_warning_persists"		= no_latejoin_vore_warning_persists, //CHOMPEdit
 			"no_latejoin_prey_warning_persists"		= no_latejoin_prey_warning_persists, //CHOMPEdit
 			"belly_rub_target" = belly_rub_target //CHOMPEdit
+=======
+			"vore_sprite_color"		= vore_sprite_color,
+>>>>>>> 8ff0932889... Adds Toggleable Stomachs w/ toggleable visibility (#16052)
 		)
 
 	//List to JSON
