@@ -287,9 +287,11 @@ type Belly = {
   autotransferwait: number;
   autotransferchance: number;
   autotransferlocation: string;
+  autotransferextralocation: string[];
   autotransfer_enabled: BooleanLike;
   autotransferchance_secondary: number;
   autotransferlocation_secondary: string;
+  autotransferextralocation_secondary: string[];
   autotransfer_min_amount: number;
   autotransfer_max_amount: number;
   autotransfer_whitelist: string[];
@@ -487,8 +489,10 @@ const generateBellyString = (belly: Belly, index: number) => {
     autotransferwait,
     autotransferchance,
     autotransferlocation,
+    autotransferextralocation,
     autotransferchance_secondary,
     autotransferlocation_secondary,
+    autotransferextralocation_secondary,
     autotransfer_enabled,
     autotransfer_min_amount,
     autotransfer_max_amount,
@@ -1058,12 +1062,14 @@ const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Auto-Transfer Max Amount: ' + autotransfer_max_amount + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Primary Chance: ' + autotransferchance + '%</li>';
   result += '<li class="list-group-item">Auto-Transfer Primary Location: ' + autotransferlocation + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Primary Location Extras: ' + autotransferextralocation.join(', ') + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Primary Whitelist (Mobs): ' + GetAutotransferFlags(autotransfer_whitelist, true) + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Primary Whitelist (Items): ' + GetAutotransferFlags(autotransfer_whitelist_items, true) + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Primary Blacklist (Mobs): ' + GetAutotransferFlags(autotransfer_blacklist, false) + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Primary Blacklist (Items): ' + GetAutotransferFlags(autotransfer_blacklist_items, false) + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Secondary Chance: ' + autotransferchance_secondary + '%</li>';
   result += '<li class="list-group-item">Auto-Transfer Secondary Location: ' + autotransferlocation_secondary + '</li>';
+  result += '<li class="list-group-item">Auto-Transfer Secondary Location Extras: ' + autotransferextralocation_secondary.join(', ') + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist (Mobs): ' + GetAutotransferFlags(autotransfer_secondary_whitelist, true) + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Secondary Whitelist (Items): ' + GetAutotransferFlags(autotransfer_secondary_whitelist_items, true) + '</li>';
   result += '<li class="list-group-item">Auto-Transfer Secondary Blacklist (Mobs): ' + GetAutotransferFlags(autotransfer_secondary_blacklist, false) + '</li>';
