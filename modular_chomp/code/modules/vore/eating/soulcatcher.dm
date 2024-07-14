@@ -310,10 +310,10 @@
 		delete_mob(M)
 
 /obj/soulgem/proc/delete_mob(var/mob/M)
-	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION))
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION))
 		release_mob(M)
 		return
-	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DETELION_INSTANT))
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT))
 		if(!(tgui_alert(M, "Do you really want to allow [owner] to delete you? On decline, you'll be ghosted.", "Allow Deletion", list("No", "Yes")) == "Yes"))
 			release_mob(M)
 			return
