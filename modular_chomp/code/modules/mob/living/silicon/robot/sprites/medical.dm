@@ -117,11 +117,6 @@
 	pixel_x = 0
 
 
-/datum/robot_sprite/dogborg/tall/dullahancrisis_alt
-	module_type = "Crisis"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med_alt.dmi'
-	pixel_x = 0
-
 /datum/robot_sprite/dogborg/tall/dullahancrisis/dullcrisis_alt
 	name = "Dullahan alt"
 	sprite_icon_state = "dullahanmed_alt"
