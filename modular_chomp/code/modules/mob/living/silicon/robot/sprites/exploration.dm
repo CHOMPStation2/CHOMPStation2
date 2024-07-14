@@ -13,8 +13,6 @@
 	sprite_icon_state = "exploration"
 	has_eye_light_sprites = TRUE
 
-//dullahan sprite
-
 /datum/robot_sprite/dogborg/tall/dullahan
 	module_type = "Exploration"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_explorer.dmi'

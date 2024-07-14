@@ -72,12 +72,36 @@
 	rest_sprite_options = list("Default", "Bellyup")
 
 /datum/robot_sprite/dogborg/tall/mining/dullahanminer
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/Dullahan_mine.dmi'
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_mine.dmi'
 	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/mining/dullahanminer/dullmine
-	name = "Dullahan"
+	name = "Dullahan Mining unit"
 	sprite_icon_state = "dullahanmine"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/tall/mining/dullahancargo
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_cargo.dmi'
+	pixel_x = 0
+
+/datum/robot_sprite/dogborg/tall/mining/dullahancargo/dullcargo
+	name = "Dullahan Cargo"
+	sprite_icon_state = "dullahancargo"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/tall/mining/dullahanminer
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_mine.dmi'
+	pixel_x = 0
+
+/datum/robot_sprite/dogborg/tall/mining/dullahanmine_alt/dullmine_alt
+	name = "Dullahan Mining unit alt"
+	sprite_icon_state = "dullahanmine_alt"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
