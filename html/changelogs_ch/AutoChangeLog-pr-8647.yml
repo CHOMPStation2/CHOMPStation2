@@ -1,0 +1,5 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - code_imp: "HasProximity is now garbage collected"
+  - qol: "Xenochimeras now get stunned instead of weakened when reconstituting"
