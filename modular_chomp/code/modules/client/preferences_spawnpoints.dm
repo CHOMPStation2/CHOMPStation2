@@ -32,3 +32,12 @@
 /datum/spawnpoint/plainspath/New()
 	..()
 	turfs = GLOB.latejoin_plainspath
+
+/datum/spawnpoint/valleyvillage
+	display_name = "Desert Valley"
+	msg = "has awoken on tyr"
+	restrict_job = list(JOB_OUTSIDER, JOB_ANOMALY)
+
+/datum/spawnpoint/valleyvillage/New()
+	..()
+	turfs = GLOB.latejoin_valleyvillage
