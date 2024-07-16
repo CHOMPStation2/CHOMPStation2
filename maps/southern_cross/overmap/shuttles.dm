@@ -157,3 +157,29 @@
 /obj/machinery/computer/shuttle_control/explore/junker
 	name = "short jump console"
 	shuttle_tag = "Junker"
+
+//Preform some pirarcy
+/datum/shuttle/autodock/overmap/supernova
+	name = "Frozen Supernova"
+	warmup_time = 4
+	current_location = "supernovaspawn"
+	docking_controller_tag = "fsupernova"
+	shuttle_area = /area/shuttle/supernovaship
+	fuel_consumption = 1
+	move_direction = NORTH
+
+/obj/effect/overmap/visitable/ship/landable/supernova
+	name = "Frozen Supernova"
+	desc = "Medium class ship, non-NT property."
+	vessel_mass = 3000
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "fsupernova"
+
+/obj/machinery/computer/shuttle_control/explore/supernova
+	name = "short jump console"
+	shuttle_tag = "fsupernova"
+
+/area/shuttle/supernovaship //Actually unsure where this is meant to go
+	name = "\improper Supernova"
+	icon_state = "shuttlered"
+	requires_power = 1

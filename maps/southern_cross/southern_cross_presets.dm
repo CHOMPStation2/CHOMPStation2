@@ -87,12 +87,12 @@ var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance dec
 	listening_level = Z_LEVEL_SURFACE_SKYLANDS
 	autolinkers = list("sky_relay")
 */
-
+/* BEGONE
 /obj/machinery/telecomms/relay/preset/southerncross/valley
 	id = "Valley Relay"
 	listening_level = Z_LEVEL_SURFACE_VALLEY
 	autolinkers = list("valley_relay")
-
+*/
 //Temp Removal TFF 15/2/20
 /*
 /obj/machinery/telecomms/relay/preset/belt_outpost // CHOMPedit: Tcomms relay for Belt Outpost
