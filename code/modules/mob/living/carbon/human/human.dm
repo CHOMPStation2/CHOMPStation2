@@ -1791,8 +1791,6 @@
 
 /mob/living/carbon/human/get_mob_riding_slots()
 	return list(back, head, wear_suit)
-<<<<<<< HEAD
-=======
 
 /mob/living/carbon/human/proc/update_fullness()
 	var/list/new_fullness = list()
@@ -1825,4 +1823,3 @@
 	resting = !resting
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
 	update_canmove()
->>>>>>> 79b2288e99... Choose to rest left or right (#16090)
