@@ -1,0 +1,6 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - rscadd: "vore soulcatcher"
+  - rscadd: "experimental resize, costing 125 Nutrition"
+  - code_imp: "changes all our UI files to typescript"
