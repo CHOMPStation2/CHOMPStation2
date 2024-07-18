@@ -59,16 +59,19 @@
 /area/survivalpod/superpose/MechFabShip)
 "bL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/cryopod/robot/door/gateway/quiet,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
 /obj/machinery/light/poi{
 	dir = 1
 	},
-/obj/machinery/computer/cryopod/gateway{
-	pixel_y = 32
-	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/tool/rcd,
+/obj/item/mecha_parts/mecha_equipment/tool/sleeper,
+/obj/item/mecha_parts/mecha_equipment/tool/syringe_gun,
+/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
+/obj/item/mecha_parts/mecha_equipment/tool/drill/diamonddrill,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "bP" = (
@@ -94,6 +97,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "dz" = (
@@ -165,19 +169,20 @@
 /turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "hu" = (
-/obj/machinery/cryopod/robot{
-	base_icon_state = "borg_pod_closed";
-	dir = 4;
-	icon = 'icons/obj/structures.dmi';
-	icon_state = "borg_pod_closed";
-	occupied_icon_state = "borg_pod_opened"
-	},
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
 /obj/structure/sign/department/drones{
 	pixel_y = 32
 	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/part/gygax_head,
+/obj/item/mecha_parts/part/gygax_left_arm,
+/obj/item/mecha_parts/part/gygax_left_leg,
+/obj/item/mecha_parts/part/gygax_right_arm,
+/obj/item/mecha_parts/part/gygax_right_leg,
+/obj/item/mecha_parts/part/gygax_torso,
+/obj/item/mecha_parts/part/gygax_armour,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "hz" = (
@@ -306,8 +311,6 @@
 /obj/item/clothing/glasses/welding,
 /obj/item/device/bodysnatcher,
 /obj/item/weapon/card/emag,
-/obj/item/weapon/cell/super,
-/obj/item/weapon/cell/super,
 /obj/item/weapon/cell/device/super,
 /obj/item/weapon/cell/device/super,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -833,6 +836,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "AK" = (
@@ -941,11 +945,11 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Dj" = (
-/obj/machinery/r_n_d/protolathe,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
+/obj/structure/table/steel_reinforced,
+/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "Dm" = (
@@ -981,6 +985,11 @@
 	name = "Port Cannons"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
+/area/survivalpod/superpose/MechFabShip)
+"Fc" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/working/ripley,
+/turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "FC" = (
 /obj/structure/window/plastitanium/full,
@@ -1110,8 +1119,20 @@
 /obj/structure/sign/electricshock{
 	pixel_y = 32
 	},
+/obj/machinery/cryopod/robot{
+	base_icon_state = "borg_pod_closed";
+	dir = 4;
+	icon = 'icons/obj/structures.dmi';
+	icon_state = "borg_pod_closed";
+	occupied_icon_state = "borg_pod_opened"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
+"Jy" = (
+/obj/effect/spawner/parts/t2,
+/obj/effect/spawner/parts/t2,
+/turf/template_noop,
+/area/template_noop)
 "JW" = (
 /obj/structure/salvageable/console_os{
 	name = "Turret control console"
@@ -1135,6 +1156,23 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
+/area/survivalpod/superpose/MechFabShip)
+"Ka" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/sign/department/drones{
+	pixel_y = 32
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/chassis/odysseus,
+/obj/item/mecha_parts/part/odysseus_head,
+/obj/item/mecha_parts/part/odysseus_left_arm,
+/obj/item/mecha_parts/part/odysseus_left_leg,
+/obj/item/mecha_parts/part/odysseus_right_arm,
+/obj/item/mecha_parts/part/odysseus_right_leg,
+/obj/item/mecha_parts/part/odysseus_torso,
+/turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "KC" = (
 /obj/structure/cable/green{
@@ -1292,8 +1330,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Nr" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
+/obj/machinery/r_n_d/destructive_analyzer,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
@@ -1507,10 +1544,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "RE" = (
-/obj/machinery/recharge_station,
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
 	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/weapon/phoron_bore,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "Sh" = (
@@ -1619,7 +1659,16 @@
 /area/survivalpod/superpose/MechFabShip)
 "VZ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/foodcart,
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/component/electrical/high_current,
+/obj/item/mecha_parts/component/armor/military,
+/obj/item/mecha_parts/component/armor/lightweight,
+/obj/item/mecha_parts/component/hull/lightweight,
+/obj/item/mecha_parts/component/hull,
+/obj/item/mecha_parts/component/gas/reinforced,
+/obj/item/mecha_parts/component/actuator/hispeed,
+/obj/item/weapon/cell/super,
+/obj/item/weapon/cell/super,
 /turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "Wl" = (
@@ -1746,8 +1795,11 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Yt" = (
-/obj/machinery/r_n_d/destructive_analyzer,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack/shelf/steel,
+/obj/effect/spawner/parts/t2,
+/obj/effect/spawner/parts/t2,
+/obj/effect/spawner/parts/t2,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "YM" = (
@@ -1791,10 +1843,13 @@
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "ZH" = (
-/obj/machinery/recharge_station,
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 9
 	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "ZY" = (
@@ -2069,7 +2124,7 @@ ph
 He
 yN
 qf
-tC
+Fc
 ph
 ph
 Bz
@@ -2144,7 +2199,7 @@ qX
 YM
 Dj
 ph
-hu
+Ka
 dz
 Zm
 VZ
@@ -2399,7 +2454,7 @@ iC
 iC
 iC
 iC
-iC
+Jy
 iC
 iC
 ph
