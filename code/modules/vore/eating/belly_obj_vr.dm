@@ -69,12 +69,14 @@
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
 	var/autotransferwait = 10 				// Time between trying to transfer.
 	var/autotransferlocation				// Place to send them
+	var/autotransferextralocation = list()	// List of extra places this could go //CHOMPAdd
 	var/autotransfer_whitelist = 0			// Flags for what can be transferred to the primary location //CHOMPAdd
 	var/autotransfer_blacklist = 2			// Flags for what can not be transferred to the primary location, defaults to Absorbed //CHOMPAdd
 	var/autotransfer_whitelist_items = 0	// Flags for what can be transferred to the primary location //CHOMPAdd
 	var/autotransfer_blacklist_items = 0	// Flags for what can not be transferred to the primary location //CHOMPAdd
 	var/autotransferchance_secondary = 0 	// % Chance of prey being autotransferred to secondary transfer location //CHOMPAdd
 	var/autotransferlocation_secondary		// Second place to send them //CHOMPAdd
+	var/autotransferextralocation_secondary = list()	// List of extra places the secondary transfer could go //CHOMPAdd
 	var/autotransfer_secondary_whitelist = 0// Flags for what can be transferred to the secondary location //CHOMPAdd
 	var/autotransfer_secondary_blacklist = 2// Flags for what can not be transferred to the secondary location, defaults to Absorbed //CHOMPAdd
 	var/autotransfer_secondary_whitelist_items = 0// Flags for what can be transferred to the secondary location //CHOMPAdd
@@ -446,8 +448,10 @@
 	"autotransferchance",
 	"autotransferwait",
 	"autotransferlocation",
+	"autotransferextralocation",
 	"autotransfer_enabled",
 	"autotransferchance_secondary",
+	"autotransferextralocation_secondary",
 	"autotransferlocation_secondary",
 	"autotransfer_secondary_whitelist",
 	"autotransfer_secondary_blacklist",
@@ -2331,14 +2335,14 @@
 	var/dest_belly_name
 	if(autotransferlocation_secondary && prob(autotransferchance_secondary))
 		if(ismob(prey) && autotransfer_filter(prey, autotransfer_secondary_whitelist, autotransfer_secondary_blacklist))
-			dest_belly_name = autotransferlocation_secondary
+			dest_belly_name = pick(autotransferextralocation_secondary + autotransferlocation_secondary)
 		if(isitem(prey) && autotransfer_filter(prey, autotransfer_secondary_whitelist_items, autotransfer_secondary_blacklist_items))
-			dest_belly_name = autotransferlocation_secondary
+			dest_belly_name = pick(autotransferextralocation_secondary + autotransferlocation_secondary)
 	if(autotransferlocation && prob(autotransferchance))
 		if(ismob(prey) && autotransfer_filter(prey, autotransfer_whitelist, autotransfer_blacklist))
-			dest_belly_name = autotransferlocation
+			dest_belly_name = pick(autotransferextralocation + autotransferlocation)
 		if(isitem(prey) && autotransfer_filter(prey, autotransfer_whitelist_items, autotransfer_blacklist_items))
-			dest_belly_name = autotransferlocation
+			dest_belly_name = pick(autotransferextralocation + autotransferlocation)
 	if(!dest_belly_name) // Didn't transfer, so wait before retrying
 		prey.belly_cycles = 0
 		return

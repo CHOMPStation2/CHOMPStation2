@@ -356,8 +356,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["autotransfer"]["autotransferchance"] = selected.autotransferchance
 			selected_list["autotransfer"]["autotransferwait"] = selected.autotransferwait
 			selected_list["autotransfer"]["autotransferlocation"] = selected.autotransferlocation
+			selected_list["autotransfer"]["autotransferextralocation"] = selected.autotransferextralocation				//CHOMPAdd
 			selected_list["autotransfer"]["autotransferchance_secondary"] = selected.autotransferchance_secondary		//CHOMPAdd
 			selected_list["autotransfer"]["autotransferlocation_secondary"] = selected.autotransferlocation_secondary	//CHOMPAdd
+			selected_list["autotransfer"]["autotransferextralocation_secondary"] = selected.autotransferextralocation_secondary	//CHOMPAdd
 			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 			//CHOMPAdd auto-transfer flags
@@ -1540,6 +1542,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						if(new_autotransferlocation == new_belly.name)
 							new_belly.autotransferlocation = null
 
+				if(islist(belly_data["autotransferextralocation"]))
+					var/new_autotransferextralocation = belly_data["autotransferextralocation"]
+					if(new_autotransferextralocation)
+						new_belly.autotransferextralocation = list()
+						for(var/extra_belly in new_autotransferextralocation)
+							if(extra_belly in valid_names)
+								new_belly.autotransferextralocation += extra_belly
+
 				if(isnum(belly_data["autotransferchance_secondary"]))
 					var/new_autotransferchance_secondary = belly_data["autotransferchance_secondary"]
 					new_belly.autotransferchance_secondary = sanitize_integer(new_autotransferchance_secondary, 0, 100, initial(new_belly.autotransferchance_secondary))
@@ -1555,6 +1565,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							new_belly.autotransferlocation_secondary = new_autotransferlocation_secondary
 						if(new_autotransferlocation_secondary == new_belly.name)
 							new_belly.autotransferlocation_secondary = null
+
+				if(islist(belly_data["autotransferextralocation_secondary"]))
+					var/new_autotransferextralocation_secondary = belly_data["autotransferextralocation_secondary"]
+					if(new_autotransferextralocation_secondary)
+						new_belly.autotransferextralocation_secondary = list()
+						for(var/extra_belly in new_autotransferextralocation_secondary)
+							if(extra_belly in valid_names)
+								new_belly.autotransferextralocation_secondary += extra_belly
+
 
 				if(isnum(belly_data["autotransfer_min_amount"]))
 					var/new_autotransfer_min_amount = belly_data["autotransfer_min_amount"]
@@ -3597,6 +3616,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.autotransferlocation = choice.name
 			. = TRUE
+		if("b_autotransferextralocation")
+			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation))
+			if(!choice) //They cancelled, no changes
+				return FALSE
+			else if(choice.name in host.vore_selected.autotransferextralocation)
+				host.vore_selected.autotransferextralocation -= choice.name
+			else
+				host.vore_selected.autotransferextralocation += choice.name
+			. = TRUE
 		if("b_autotransferchance_secondary")
 			var/autotransferchance_secondary_input = input(user, "Set secondary belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Secondary Auto-Transfer Chance") as num|null
 			if(!isnull(autotransferchance_secondary_input))
@@ -3610,6 +3638,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation_secondary = null
 			else
 				host.vore_selected.autotransferlocation_secondary = choice.name
+			. = TRUE
+		if("b_autotransferextralocation_secondary")
+			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation_secondary))
+			if(!choice) //They cancelled, no changes
+				return FALSE
+			else if(choice.name in host.vore_selected.autotransferextralocation_secondary)
+				host.vore_selected.autotransferextralocation_secondary -= choice.name
+			else
+				host.vore_selected.autotransferextralocation_secondary += choice.name
 			. = TRUE
 		if("b_autotransfer_whitelist")
 			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()

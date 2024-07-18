@@ -192,6 +192,20 @@ export const VoreSelectedBellyInteractions = (props: {
                   : 'Disabled'}
               </Button>
             </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Primary Location Extras">
+              {(autotransfer.autotransferextralocation &&
+                autotransfer.autotransferextralocation.join(', ')) ||
+                ''}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransferextralocation',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
+            </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Primary Whitelist (Mobs)">
               {(autotransfer.autotransfer_whitelist.length &&
                 autotransfer.autotransfer_whitelist.join(', ')) ||
@@ -272,6 +286,20 @@ export const VoreSelectedBellyInteractions = (props: {
                   ? autotransfer.autotransferlocation_secondary
                   : 'Disabled'}
               </Button>
+            </LabeledList.Item>
+            <LabeledList.Item label="Auto-Transfer Secondary Location Extras">
+              {(autotransfer.autotransferextralocation_secondary &&
+                autotransfer.autotransferextralocation_secondary.join(', ')) ||
+                ''}
+              <Button
+                onClick={() =>
+                  act('set_attribute', {
+                    attribute: 'b_autotransferextralocation_secondary',
+                  })
+                }
+                ml={1}
+                icon="plus"
+              />
             </LabeledList.Item>
             <LabeledList.Item label="Auto-Transfer Secondary Whitelist (Mobs)">
               {(autotransfer.autotransfer_secondary_whitelist.length &&
