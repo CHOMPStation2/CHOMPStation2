@@ -72,6 +72,10 @@ var/global/datum/controller/occupations/job_master
 			player.mind.role_alt_title = GetPlayerAltTitle(player, rank)
 			unassigned -= player
 			job.current_positions++
+			//CHOMPadd START
+			if(job.camp_protection && round_duration_in_ds < transfer_controller.shift_hard_end - 30 MINUTES)
+				job.register_shift_key(player.client.ckey)
+			//CHOMPadd END
 			return 1
 	Debug("AR has failed, Player: [player], Rank: [rank]")
 	return 0

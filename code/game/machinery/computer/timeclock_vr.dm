@@ -177,7 +177,17 @@
 		return
 	if(newassignment != newjob.title && !(newassignment in newjob.alt_titles))
 		return
+	//CHOMPadd START
+	if(newjob.camp_protection && round_duration_in_ds < CONFIG_GET(number/job_camp_time_limit))
+		if(SSjob.restricted_keys.len)
+			var/list/check = SSjob.restricted_keys[newjob.title]
+			if(usr.client.ckey in check)
+				to_chat(usr,span_danger("[newjob.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit) - round_duration_in_ds) / 600)] minutes, if slots remain open."))
+				return
+	//CHOMPadd END
+
 	if(newjob)
+		newjob.register_shift_key(usr.client.ckey)//CHOMPadd
 		card.access = newjob.get_access()
 		card.rank = newjob.title
 		card.assignment = newassignment

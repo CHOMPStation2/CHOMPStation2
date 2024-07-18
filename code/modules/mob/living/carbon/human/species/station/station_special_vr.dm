@@ -85,13 +85,16 @@
 
 	//While regenerating
 	if(H.revive_ready == REVIVING_NOW || H.revive_ready == REVIVING_DONE)
-		H.weakened = 5
+		H.stunned = 5 // CHOMPEdit - Crawling is a thing now
 		H.canmove = 0
 		H.does_not_breathe = TRUE
 		var/regen_sounds = H.regen_sounds
 		if(prob(2)) // 2% chance of playing squelchy noise while reviving, which is run roughly every 2 seconds/tick while regenerating.
 			playsound(H, pick(regen_sounds), 30)
 			H.visible_message("<span class='danger'><p><font size=4>[H.name]'s motionless form shudders grotesquely, rippling unnaturally.</font></p></span>")
+		// CHOMPAdd - F A L L
+		if(!H.lying)
+			H.lay_down()
 
 	//Cold/pressure effects when not regenerating
 	else

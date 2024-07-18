@@ -56,6 +56,10 @@
 /mob/proc/init_vore()
 	//Something else made organs, meanwhile.
 	if(LAZYLEN(vore_organs))
+		//CHOMPAdd Start
+		if(!soulgem)
+			soulgem = new(src)
+		//CHOMPAdd End
 		return TRUE
 
 	//We'll load our client's organs if we have one
@@ -80,7 +84,11 @@
 			var/mob/living/carbon/human/H = src
 			if(istype(H.species,/datum/species/monkey))
 				allow_spontaneous_tf = TRUE
+		//CHOMPAdd Start
+		if(!soulgem)
+			soulgem = new(src)
 		return TRUE
+		//CHOMPAdd End
 
 //
 // Hide vore organs in contents
@@ -281,6 +289,7 @@
 	P.no_latejoin_vore_warning_persists = src.no_latejoin_vore_warning_persists
 	P.no_latejoin_prey_warning_persists = src.no_latejoin_prey_warning_persists
 	P.belly_rub_target = src.belly_rub_target
+	P.soulcatcher_pref_flags = src.soulcatcher_pref_flags
 	//CHOMP Stuff End
 
 	var/list/serialized = list()
@@ -289,6 +298,7 @@
 
 	P.belly_prefs = serialized
 
+	P.soulcatcher_prefs = src.soulgem.serialize() // CHOMPAdd
 	return TRUE
 
 //
@@ -353,6 +363,7 @@
 	no_latejoin_vore_warning_persists = P.no_latejoin_vore_warning_persists
 	no_latejoin_prey_warning_persists = P.no_latejoin_prey_warning_persists
 	belly_rub_target = P.belly_rub_target
+	soulcatcher_pref_flags = P.soulcatcher_pref_flags
 
 	if(bellies)
 		if(isliving(src))
@@ -361,6 +372,14 @@
 		QDEL_LIST(vore_organs) // CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
+
+	if(soulgem)
+		src.soulgem.release_mobs()
+		QDEL_NULL(soulgem)
+	if(P.soulcatcher_prefs.len)
+		soulgem = list_to_object(P.soulcatcher_prefs, src)
+	else
+		soulgem = new(src)
 
 	return TRUE
 

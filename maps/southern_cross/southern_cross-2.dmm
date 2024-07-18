@@ -24599,6 +24599,8 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 9
 	},
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bxA" = (
@@ -26628,6 +26630,7 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
 	},
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bCU" = (
@@ -55322,6 +55325,11 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/wood/alt/parquet,
 /area/library)
 "iQe" = (
@@ -61001,6 +61009,9 @@
 	pixel_y = 5
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/carpet,
 /area/hallway/secondary/entry/docking_lounge)
 "lVD" = (

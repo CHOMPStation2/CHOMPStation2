@@ -74,6 +74,14 @@
 		if(points_left < 0 || traits_left < 0)
 			pass = FALSE
 			to_chat(src,"<span class='warning'>Your custom species is not playable. Reconfigure your traits on the VORE tab.</span>")
+//CHOMPadd start
+	if(J.camp_protection && round_duration_in_ds < CONFIG_GET(number/job_camp_time_limit))
+		if(SSjob.restricted_keys.len)
+			var/list/check = SSjob.restricted_keys[J.title]
+			if(client.ckey in check)
+				to_chat(client,span_danger("[J.title] is not presently selectable because you played as it last round. It will become available to you in [round(CONFIG_GET(number/job_camp_time_limit - round_duration_in_ds) / 600)] minutes, if slots remain open."))
+				pass = FALSE
+	//CHOMPadd end
 
 	//CHOMP Addition Begin
 	if(client?.prefs?.neu_traits)

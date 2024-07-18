@@ -1,0 +1,4 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - rscadd: "Re-Adds deadman interaction with signalers again."

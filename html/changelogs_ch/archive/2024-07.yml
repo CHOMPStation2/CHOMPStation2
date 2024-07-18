@@ -24,3 +24,10 @@
 2024-07-06:
   TheCaramelion:
   - bugfix: Fixed slosh sounds playing while phased
+2024-07-16:
+  TheCaramelion:
+  - code_imp: HasProximity is now garbage collected
+  - qol: Xenochimeras now get stunned instead of weakened when reconstituting
+2024-07-18:
+  TheCaramelion:
+  - bugfix: Xenochimeras not being able to revive properly
