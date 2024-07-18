@@ -28,3 +28,6 @@
   TheCaramelion:
   - code_imp: HasProximity is now garbage collected
   - qol: Xenochimeras now get stunned instead of weakened when reconstituting
+2024-07-18:
+  TheCaramelion:
+  - bugfix: Xenochimeras not being able to revive properly
