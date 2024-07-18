@@ -148,11 +148,7 @@
 	revive()
 	mutations.Remove(HUSK)
 	setBrainLoss(braindamage)
-<<<<<<< HEAD
-	species.update_vore_belly_def_variant() //CHOMPedit fixes vore sprites for teshari xenochimera
-=======
 	species.update_vore_belly_def_variant()
->>>>>>> 4151cf2d07... Fixes teshari stomachs & Unathi Stomachs (#16102)
 
 	if(!uninjured)
 		nutrition = old_nutrition * 0.5
