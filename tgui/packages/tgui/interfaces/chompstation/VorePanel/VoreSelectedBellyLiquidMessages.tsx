@@ -1,7 +1,10 @@
 import { useBackend } from '../../../backend';
 import { Button, LabeledList, Section } from '../../../components';
+import { selectedData } from './types';
 
-export const VoreSelectedBellyLiquidMessages = (props) => {
+export const VoreSelectedBellyLiquidMessages = (props: {
+  belly: selectedData;
+}) => {
   const { act } = useBackend();
 
   const { belly } = props;

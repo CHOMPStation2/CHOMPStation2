@@ -1,11 +1,17 @@
-import { useBackend } from '../../../backend';
+import { BooleanLike } from 'common/react';
+
 import { Box, Collapsible, Section } from '../../../components';
 import { digestModeToPreyMode, reagentToColor } from './constants';
 import { digestModeToColor } from './constants';
+import { insideData } from './types';
 import { VoreContentsPanel } from './VoreContentsPanel';
 
-export const VoreInsidePanel = (props) => {
-  const { act, data } = useBackend();
+export const VoreInsidePanel = (props: {
+  inside: insideData;
+  show_pictures: BooleanLike;
+  icon_overflow: BooleanLike;
+}) => {
+  const { inside, show_pictures, icon_overflow } = props;
 
   const {
     absorbed,
@@ -18,7 +24,7 @@ export const VoreInsidePanel = (props) => {
     liq_lvl,
     liq_reagent_type,
     liuq_name,
-  } = data.inside;
+  } = inside;
 
   if (!belly_name) {
     return <Section title="Inside">You aren&apos;t inside anyone.</Section>;
@@ -63,7 +69,12 @@ export const VoreInsidePanel = (props) => {
       <Box color="label">{desc}</Box>
       {(contents.length && (
         <Collapsible title="Belly Contents">
-          <VoreContentsPanel contents={contents} belly={ref} />
+          <VoreContentsPanel
+            contents={contents}
+            belly={ref}
+            show_pictures={show_pictures}
+            icon_overflow={icon_overflow}
+          />
         </Collapsible>
       )) ||
         'There is nothing else around you.'}

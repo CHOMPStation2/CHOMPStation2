@@ -1,7 +1,8 @@
 /* eslint react/no-danger: "off" */
+import { KEY } from 'common/keys';
+import { round, toFixed } from 'common/math';
 import { useState } from 'react';
 
-import { KEY_ENTER } from '../../../common/keycodes';
 import { useBackend } from '../../backend';
 import {
   Box,
@@ -53,12 +54,15 @@ type Data = {
   log: string[];
 };
 
+window.addEventListener('keydown', (event) => {
+  console.log(event);
+});
+
 export const Ticket = (props) => {
   const { act, data } = useBackend<Data>();
   const [ticketChat, setTicketChat] = useState('');
   const {
     id,
-    title,
     name,
     ticket_ref,
     state,
@@ -95,13 +99,17 @@ export const Ticket = (props) => {
             <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
             {State[state] === State.open ? (
               <LabeledList.Item label="Opened At">
-                {opened_at_date} ({Math.round((opened_at / 600) * 10) / 10}
-                minutes ago.)
+                {opened_at_date +
+                  ' (' +
+                  toFixed(round((opened_at / 600) * 10, 0) / 10, 1) +
+                  ' minutes ago.)'}
               </LabeledList.Item>
             ) : (
               <LabeledList.Item label="Closed At">
-                {closed_at_date} ({Math.round((closed_at / 600) * 10) / 10}
-                minutes ago.)
+                {closed_at_date +
+                  ' (' +
+                  toFixed(round((closed_at / 600) * 10, 0) / 10, 1) +
+                  ' minutes ago.)'}
                 <Button onClick={() => act('reopen')}>Reopen</Button>
               </LabeledList.Item>
             )}
@@ -129,12 +137,9 @@ export const Ticket = (props) => {
                     fluid
                     placeholder="Enter a message..."
                     value={ticketChat}
-                    onInput={(e, value) => setTicketChat(value)}
-                    onKeyDown={(event) => {
-                      const keyCode = window.event
-                        ? event.which
-                        : event.keyCode;
-                      if (keyCode === KEY_ENTER) {
+                    onInput={(e, value: string) => setTicketChat(value)}
+                    onKeyDown={(e) => {
+                      if (KEY.Enter === e.key) {
                         act('send_msg', {
                           msg: ticketChat,
                           ticket_ref: ticket_ref,
