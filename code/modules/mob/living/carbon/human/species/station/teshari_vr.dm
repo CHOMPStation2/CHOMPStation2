@@ -16,13 +16,10 @@
 /* Begin Chomp edit
 	male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
 	female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
-<<<<<<< HEAD
 End Chomp Edit */
-=======
 
 	vore_belly_default_variant = "T" //Teshari belly sprite
 
->>>>>>> 4151cf2d07... Fixes teshari stomachs & Unathi Stomachs (#16102)
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/proc/hide,
