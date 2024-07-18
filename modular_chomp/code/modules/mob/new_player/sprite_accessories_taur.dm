@@ -68,7 +68,8 @@
 
 /datum/sprite_accessory/tail/taur/ch/zorgoia/fat
 	name = "Zorgoia (Fat Taur)"
-	extra_overlay = "zorgoia_fat"
+	icon_state = "zorgoia_fat"
+	extra_overlay = "zorgoia_fat_overlay"
 
 /datum/sprite_accessory/tail/taur/ch/redpanda
 	name = "Red Panda (Taur)"
