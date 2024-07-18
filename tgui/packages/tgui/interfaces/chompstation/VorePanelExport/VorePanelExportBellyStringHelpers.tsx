@@ -1,5 +1,7 @@
 import { BooleanLike } from 'common/react';
 
+import { AddonIcon, AutotransferFlagIcon, ReagentAddonIcon } from './constants';
+
 export const GetAddons = (addons: string[]) => {
   let result: string[] = [];
 

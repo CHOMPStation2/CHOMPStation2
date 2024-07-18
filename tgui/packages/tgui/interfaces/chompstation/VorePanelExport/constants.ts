@@ -1,4 +1,4 @@
-const ModeSpan = {
+export const ModeSpan = {
   Hold: '<span class="badge text-bg-secondary">Hold</span>',
   Digest: '<span class="badge text-bg-danger">Digest</span>',
   Absorb: '<span class="badge text-bg-light">Absorb</span>',
@@ -12,7 +12,7 @@ const ModeSpan = {
   'Encase In Egg': '<span class="badge text-bg-primary">Encase In Egg</span>',
 };
 
-const ItemModeSpan = {
+export const ItemModeSpan = {
   Hold: '<span class="badge text-bg-secondary">Item: Hold</span>',
   'Digest (Food Only)':
     '<span class="badge text-bg-danger">Item: Digest (Food Only)</span>',
@@ -21,7 +21,7 @@ const ItemModeSpan = {
     '<span class="badge text-bg-danger">Item: Digest (Dispersed Damage)</span>',
 };
 
-const AddonIcon = {
+export const AddonIcon = {
   Numbing: '',
   Stripping: '',
   'Leave Remains': '',
@@ -31,14 +31,14 @@ const AddonIcon = {
   'Complete Absorb': '',
 };
 
-const ReagentAddonIcon = {
+export const ReagentAddonIcon = {
   'Produce Liquids': '',
   'Digestion Liquids': '',
   'Absorption Liquids': '',
   'Draining Liquids': '',
 };
 
-const AutotransferFlagIcon = {
+export const AutotransferFlagIcon = {
   Creatures: '',
   Absorbed: '',
   Carbon: '',

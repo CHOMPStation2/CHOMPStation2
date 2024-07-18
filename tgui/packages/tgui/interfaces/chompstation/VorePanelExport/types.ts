@@ -157,9 +157,11 @@ export type Belly = {
   autotransferwait: number;
   autotransferchance: number;
   autotransferlocation: string;
+  autotransferextralocation: string[];
   autotransfer_enabled: BooleanLike;
   autotransferchance_secondary: number;
   autotransferlocation_secondary: string;
+  autotransferextralocation_secondary: string[];
   autotransfer_min_amount: number;
   autotransfer_max_amount: number;
   autotransfer_whitelist: string[];
