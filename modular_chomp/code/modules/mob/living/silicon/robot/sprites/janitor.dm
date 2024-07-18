@@ -12,7 +12,7 @@
 	has_eye_light_sprites = TRUE
 
 
-/datum/robot_sprite/dogborg/dullahanjanitormodule
+/datum/robot_sprite/dogborg/tall/dullahanjanitormodule
 	module_type = "Janitor"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_jani.dmi'
 
