@@ -1,0 +1,7 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - maptweak: "Adds a coffee machine to the sci break room"
+  - maptweak: "Moved the copy machine to R&D"
+  - maptweak: "Removed the medkit and added a nanomed in the sci break room"
+  - maptweak: "Sci break room gets cups too"
