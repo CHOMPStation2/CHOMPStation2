@@ -4,14 +4,12 @@ import { useBackend } from '../../../backend';
 import { Box, Button, Divider, Flex, Section } from '../../../components';
 import { digestModeToColor } from './constants';
 import { localPrefs, prefData, selectedData } from './types';
-import {
-  VoreUserPreferencesAesthetic,
-  VoreUserPreferencesDevouring,
-  VoreUserPreferencesMechanical,
-  VoreUserPreferencesSoulcatcher,
-  VoreUserPreferencesSpawn,
-  VoreUserPreferencesSpontaneous,
-} from './VoreUserPreferencesTabs';
+import { VoreUserPreferencesAesthetic } from './VoreUserPreferencesTabs/VoreUserPreferencesAesthetic';
+import { VoreUserPreferencesDevouring } from './VoreUserPreferencesTabs/VoreUserPreferencesDevouring';
+import { VoreUserPreferencesMechanical } from './VoreUserPreferencesTabs/VoreUserPreferencesMechanical';
+import { VoreUserPreferencesSoulcatcher } from './VoreUserPreferencesTabs/VoreUserPreferencesSoulcatcher';
+import { VoreUserPreferencesSpawn } from './VoreUserPreferencesTabs/VoreUserPreferencesSpawn';
+import { VoreUserPreferencesSpontaneous } from './VoreUserPreferencesTabs/VoreUserPreferencesSpontaneous';
 
 export const VoreUserPreferences = (props: {
   prefs: prefData;

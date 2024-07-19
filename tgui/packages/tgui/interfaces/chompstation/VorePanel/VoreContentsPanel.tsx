@@ -1,7 +1,7 @@
 import { BooleanLike } from 'common/react';
 
 import { useBackend } from '../../../backend';
-import { Button, Flex, LabeledList } from '../../../components';
+import { Button, Flex, Image, LabeledList } from '../../../components';
 import { stats } from './constants';
 import { contentData } from './types';
 
@@ -58,13 +58,11 @@ export const VoreContentsPanel = (props: {
                   )
                 }
               >
-                <img
+                <Image
                   src={'data:image/jpeg;base64, ' + thing.icon}
                   width="64px"
                   height="64px"
                   style={{
-                    // This style property has been made obsolete since Internet Explorer 9
-                    // '-ms-interpolation-mode': 'nearest-neighbor',
                     marginLeft: '-5px',
                   }}
                 />

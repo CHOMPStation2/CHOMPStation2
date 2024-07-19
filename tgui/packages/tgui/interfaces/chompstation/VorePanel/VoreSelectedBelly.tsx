@@ -2,7 +2,7 @@ import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { Tabs } from '../../../components';
-import { selectedData } from './types';
+import { hostMob, selectedData } from './types';
 import { VoreContentsPanel } from './VoreContentsPanel';
 import { VoreSelectedBellyControls } from './VoreSelectedBellyControls';
 import { VoreSelectedBellyDescriptions } from './VoreSelectedBellyDescriptions';
@@ -18,9 +18,10 @@ import { VoreSelectedBellyVisuals } from './VoreSelectedBellyVisuals';
 export const VoreSelectedBelly = (props: {
   belly: selectedData;
   show_pictures: BooleanLike;
+  host_mobtype: hostMob;
   icon_overflow: BooleanLike;
 }) => {
-  const { belly, show_pictures, icon_overflow } = props;
+  const { belly, show_pictures, host_mobtype, icon_overflow } = props;
   const { contents } = belly;
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -29,7 +30,9 @@ export const VoreSelectedBelly = (props: {
 
   tabs[0] = <VoreSelectedBellyControls belly={belly} />;
   tabs[1] = <VoreSelectedBellyDescriptions belly={belly} />;
-  tabs[2] = <VoreSelectedBellyOptions belly={belly} />;
+  tabs[2] = (
+    <VoreSelectedBellyOptions belly={belly} host_mobtype={host_mobtype} />
+  );
   tabs[3] = <VoreSelectedBellySounds belly={belly} />;
   tabs[4] = <VoreSelectedBellyVisuals belly={belly} />;
   tabs[5] = <VoreSelectedBellyInteractions belly={belly} />;

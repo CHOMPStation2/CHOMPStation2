@@ -90,18 +90,18 @@ export type Belly = {
   examine_messages: string[];
   examine_messages_absorbed: string[];
 
-  // emote_list: any[];
-  emotes_digest;
-  emotes_hold;
-  emotes_holdabsorbed;
-  emotes_absorb;
-  emotes_heal;
-  emotes_drain;
-  emotes_steal;
-  emotes_egg;
-  emotes_shrink;
-  emotes_grow;
-  emotes_unabsorb;
+  // emote_list: string[];
+  emotes_digest: string[];
+  emotes_hold: string[];
+  emotes_holdabsorbed: string[];
+  emotes_absorb: string[];
+  emotes_heal: string[];
+  emotes_drain: string[];
+  emotes_steal: string[];
+  emotes_egg: string[];
+  emotes_shrink: string[];
+  emotes_grow: string[];
+  emotes_unabsorb: string[];
 
   // Sounds
   is_wet: BooleanLike;
