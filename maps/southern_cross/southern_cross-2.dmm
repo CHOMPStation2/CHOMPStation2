@@ -24554,10 +24554,6 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/brown/bordercorner2,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "bxt" = (
@@ -27171,6 +27167,10 @@
 "bEx" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "bEy" = (
@@ -57721,21 +57721,12 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/docking_hallway2)
 "kar" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/fans/tiny,
 /obj/machinery/smartfridge/sheets/persistent_lossy{
 	desc = "An industrial sized storage unit for materials. Following company policy with B-Shift, this particular storage unit will retain a percentage of its material in-between crew transfers.";
 	name = "\improper Persistent Industrial Sheet Storage"
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/turf/simulated/floor/plating,
-/area/quartermaster/office)
+/turf/simulated/wall,
+/area/quartermaster/warehouse)
 "kay" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -101107,7 +101098,7 @@ aOj
 aQI
 aSR
 bxr
-bGn
+kar
 bAG
 qmn
 bEy
@@ -104199,7 +104190,7 @@ bYD
 bRG
 bqo
 bqn
-kar
+bsn
 bug
 bCU
 bEJ
