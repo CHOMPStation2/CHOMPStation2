@@ -19,7 +19,7 @@
 	has_custom_open_sprites = TRUE
 	pixel_x = 0
 
-/datum/robot_sprite/dogborg/tall/science/dullahanscience
+/datum/robot_sprite/dogborg/tall/science/dullahansciencealt
 	name = "Dullahan v2"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sci.dmi'
 	sprite_icon_state = "dullahansci_alt"
