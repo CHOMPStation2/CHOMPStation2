@@ -31,3 +31,36 @@
 2024-07-18:
   TheCaramelion:
   - bugfix: Xenochimeras not being able to revive properly
+2024-07-19:
+  Asher-42:
+  - rscadd: 'added in new borg sprites (dullahan) for the following modules: medical,
+      cargo, sec, service, mining, exploration, engineering, janitor, science
+
+      :cl:'
+  FluffMedic:
+  - rscadd: Some new boss esque mobs that can be accessed by messing with a strange
+      machine during an anomalous weather
+  Fracshun:
+  - rscadd: Auto-transfer locations can now have extra destinations beyond the main
+      location.
+  Hunter-Dovetail:
+  - rscadd: VBO_maw20 (canine)
+  - rscadd: VBO_maw21 (draconic)
+  - rscadd: VBO_maw22 (crocodile/alligator)
+  - bugfix: FINALLY clears up (some) background smudges, tidying up maw_16,17,18 and
+      19 (including the stray tongue dot, on maw_18's throat)
+  Kashargul:
+  - rscadd: vore soulcatcher
+  - rscadd: experimental resize, costing 125 Nutrition
+  - code_imp: changes all our UI files to typescript
+  TheCaramelion:
+  - rscadd: Added "Blank Mail Envelope"
+  - rscadd: Added Spawn-Mail proc, staff only.
+  - rscadd: Added Postal Services supply crate
+  - rscadd: Added Blank Mail Envelopes in some points of the station
+  tacoguy7765093:
+  - rscadd: Re-Adds deadman interaction with signalers again.
+  - rscadd: Added anti-job-camping to Anomalys
+  - qol: Bone breaks inside guts are now only audible to people in whisper range,
+      have fun blendering.
+  - image: Zorgoia taur tail sprites have been adjusted.
