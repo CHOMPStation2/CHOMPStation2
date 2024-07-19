@@ -1,0 +1,5 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - maptweak: "Science PA has been removed from round start."
+  - maptweak: "Ore Storage is now in the Cargo Warehouse."
