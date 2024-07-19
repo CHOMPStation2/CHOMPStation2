@@ -4,14 +4,14 @@ import { useState } from 'react';
 import { Tabs } from '../../../components';
 import { hostMob, selectedData } from './types';
 import { VoreContentsPanel } from './VoreContentsPanel';
-import { VoreSelectedBellyControls } from './VoreSelectedBellyControls';
-import { VoreSelectedBellyDescriptions } from './VoreSelectedBellyDescriptions';
-import { VoreSelectedBellyInteractions } from './VoreSelectedBellyInteractions';
-import { VoreSelectedBellyLiquidMessages } from './VoreSelectedBellyLiquidMessages';
-import { VoreSelectedBellyLiquidOptions } from './VoreSelectedBellyLiquidOptions';
-import { VoreSelectedBellyOptions } from './VoreSelectedBellyOptions';
-import { VoreSelectedBellySounds } from './VoreSelectedBellySounds';
-import { VoreSelectedBellyVisuals } from './VoreSelectedBellyVisuals';
+import { VoreSelectedBellyControls } from './VoreSelectedMobTypeBellyTabs/VoreSelectedBellyControls';
+import { VoreSelectedBellyDescriptions } from './VoreSelectedMobTypeBellyTabs/VoreSelectedBellyDescriptions';
+import { VoreSelectedBellyInteractions } from './VoreSelectedMobTypeBellyTabs/VoreSelectedBellyInteractions';
+import { VoreSelectedBellyLiquidMessages } from './VoreSelectedMobTypeBellyTabs/VoreSelectedBellyLiquidMessages';
+import { VoreSelectedBellyLiquidOptions } from './VoreSelectedMobTypeBellyTabs/VoreSelectedBellyLiquidOptions';
+import { VoreSelectedBellyOptions } from './VoreSelectedMobTypeBellyTabs/VoreSelectedBellyOptions';
+import { VoreSelectedBellySounds } from './VoreSelectedMobTypeBellyTabs/VoreSelectedBellySounds';
+import { VoreSelectedBellyVisuals } from './VoreSelectedMobTypeBellyTabs/VoreSelectedBellyVisuals';
 /**
  * Subtemplate of VoreBellySelectionAndCustomization
  */
