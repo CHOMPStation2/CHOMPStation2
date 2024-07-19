@@ -1,0 +1,4 @@
+author: "Fracshun"
+delete-after: True
+changes:
+  - rscadd: "Auto-transfer locations can now have extra destinations beyond the main location."

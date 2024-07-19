@@ -1,0 +1,7 @@
+author: "Hunter-Dovetail"
+delete-after: True
+changes:
+  - rscadd: "VBO_maw20 (canine)"
+  - rscadd: "VBO_maw21 (draconic)"
+  - rscadd: "VBO_maw22 (crocodile/alligator)"
+  - bugfix: "FINALLY clears up (some) background smudges, tidying up maw_16,17,18 and 19 (including the stray tongue dot, on maw_18's throat)"

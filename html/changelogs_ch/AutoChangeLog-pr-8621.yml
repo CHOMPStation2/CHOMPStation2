@@ -1,0 +1,7 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - rscadd: "Added \"Blank Mail Envelope\""
+  - rscadd: "Added Spawn-Mail proc, staff only."
+  - rscadd: "Added Postal Services supply crate"
+  - rscadd: "Added Blank Mail Envelopes in some points of the station"
