@@ -64,3 +64,27 @@
   - qol: Bone breaks inside guts are now only audible to people in whisper range,
       have fun blendering.
   - image: Zorgoia taur tail sprites have been adjusted.
+2024-07-20:
+  Kashargul:
+  - code_imp: small typescript cleanup and oversighted chomp UI
+  MeepleMuncher:
+  - rscadd: Mushroom head markings
+  TheCaramelion:
+  - maptweak: Adds a coffee machine to the sci break room
+  - maptweak: Moved the copy machine to R&D
+  - maptweak: Removed the medkit and added a nanomed in the sci break room
+  - maptweak: Sci break room gets cups too
+  TheGreatKitsune:
+  - balance: rebalanced how locus difficulty of transport is handled. In the process
+      makes it much harder to accidentally destroy the station with loci
+  purplefoxy27:
+  - rscadd: Adds "Spawn in Belly" verb for ghosts
+  tacoguy7765093:
+  - rscdel: Removes overpowered mecha weapon from MechFabStorage pod
+  - rscdel: Removes the protolathe from MechFabShip pod and replaces it with mecha
+      parts and prebuilt mechs.
+  - rscdel: Removes Locus spawner in Oldhotel.
+  - rscdel: Removed the SciencePod, Sciencepodv2 and Science ship from the superpose
+      pod spawn list.
+  - maptweak: Science PA has been removed from round start.
+  - maptweak: Ore Storage is now in the Cargo Warehouse.

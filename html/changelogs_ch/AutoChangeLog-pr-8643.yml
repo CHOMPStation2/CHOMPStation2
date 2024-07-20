@@ -1,4 +1,0 @@
-author: "TheGreatKitsune"
-delete-after: True
-changes:
-  - balance: "rebalanced how locus difficulty of transport is handled. In the process makes it much harder to accidentally destroy the station with loci"

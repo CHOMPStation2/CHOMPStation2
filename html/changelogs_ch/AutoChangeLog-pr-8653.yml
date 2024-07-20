@@ -1,7 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - rscdel: "Removes overpowered mecha weapon from MechFabStorage pod"
-  - rscdel: "Removes the protolathe from MechFabShip pod and replaces it with mecha parts and prebuilt mechs."
-  - rscdel: "Removes Locus spawner in Oldhotel."
-  - rscdel: "Removed the SciencePod, Sciencepodv2 and Science ship from the superpose pod spawn list."
