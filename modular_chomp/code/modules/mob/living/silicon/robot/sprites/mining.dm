@@ -105,7 +105,7 @@
 
 /datum/robot_sprite/dogborg/tall/mining/dullahancargomodule/dullahancargoalt
 	name = "Dullahan Cargo v2"
-	sprite_icon_state = "dullahanmine_alt"
+	sprite_icon_state = "dullahancargo_alt"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
