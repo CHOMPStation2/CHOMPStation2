@@ -160,6 +160,7 @@ export const VorePanel = () => {
     prefs,
     show_pictures,
     icon_overflow,
+    host_mobtype,
   } = data;
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -171,6 +172,7 @@ export const VorePanel = () => {
       our_bellies={our_bellies}
       selected={selected}
       show_pictures={show_pictures}
+      host_mobtype={host_mobtype}
       icon_overflow={icon_overflow}
     />
   );

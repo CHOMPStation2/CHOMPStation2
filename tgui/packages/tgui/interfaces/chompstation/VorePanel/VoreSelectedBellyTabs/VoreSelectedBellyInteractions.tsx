@@ -1,6 +1,6 @@
-import { useBackend } from '../../../backend';
-import { Button, LabeledList, Section } from '../../../components';
-import { selectedData } from './types';
+import { useBackend } from '../../../../backend';
+import { Button, LabeledList, Section } from '../../../../components';
+import { selectedData } from '../types';
 
 export const VoreSelectedBellyInteractions = (props: {
   belly: selectedData;

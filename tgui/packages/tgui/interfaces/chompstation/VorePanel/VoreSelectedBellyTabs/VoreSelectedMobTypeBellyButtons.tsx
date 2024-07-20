@@ -1,21 +1,22 @@
 import { capitalize } from 'common/string';
 
-import { useBackend } from '../../../backend';
-import { Button, LabeledList, Section } from '../../../components';
-import { Data, selectedData } from './types';
+import { useBackend } from '../../../../backend';
+import { Button, LabeledList, Section } from '../../../../components';
+import { hostMob, selectedData } from '../types';
 
 export const VoreSelectedMobTypeBellyButtons = (props: {
   belly: selectedData;
+  host_mobtype: hostMob;
 }) => {
-  const { act, data } = useBackend<Data>();
-  const { host_mobtype } = data;
-  const { is_cyborg, is_vore_simple_mob } = host_mobtype;
-  const { belly } = props;
+  const { act } = useBackend();
+  const { belly, host_mobtype } = props;
   const {
     silicon_belly_overlay_preference,
     belly_sprite_option_shown,
     belly_sprite_to_affect,
   } = belly;
+
+  const { is_cyborg, is_vore_simple_mob } = host_mobtype;
 
   if (is_cyborg) {
     if (belly_sprite_option_shown && belly_sprite_to_affect === 'sleeper') {

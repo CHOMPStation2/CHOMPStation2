@@ -1,11 +1,19 @@
 /* eslint react/no-danger: "off" */
-import { resolveAsset } from '../assets';
-import { useBackend } from '../backend';
-import { Button, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
+import { BooleanLike } from 'common/react';
 
-export const StarcasterCh = (props, context) => {
-  const { act, data } = useBackend(context);
+import { resolveAsset } from '../../assets';
+import { useBackend } from '../../backend';
+import { Button, Image, LabeledList, Section } from '../../components';
+import { Window } from '../../layouts';
+
+type Data = {
+  showing_archived: BooleanLike;
+  article: { title: String; cover: string; content: string } | null;
+  all_articles: { name: string; uid: number; archived: BooleanLike }[];
+};
+
+export const StarcasterCh = (props) => {
+  const { data } = useBackend<Data>();
 
   const { article } = data;
 
@@ -16,14 +24,14 @@ export const StarcasterCh = (props, context) => {
   }
 
   return (
-    <Window width={575} height={750} resizable>
+    <Window width={575} height={750}>
       <Window.Content scrollable>{body}</Window.Content>
     </Window>
   );
 };
 
-const SelectedArticle = (props, context) => {
-  const { act, data } = useBackend(context);
+const SelectedArticle = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { article } = data;
 
@@ -42,7 +50,7 @@ const SelectedArticle = (props, context) => {
         </Button>
       }
     >
-      {!!cover && <img src={resolveAsset(cover)} />}
+      {!!cover && <Image src={resolveAsset(cover)} />}
       {/* News articles are written in premade .html files and cannot be edited by players, so it should be
        * safe enough to use dangerouslySetInnerHTML here.
        */}
@@ -51,8 +59,8 @@ const SelectedArticle = (props, context) => {
   );
 };
 
-const ViewArticles = (props, context) => {
-  const { act, data } = useBackend(context);
+const ViewArticles = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { showing_archived, all_articles } = data;
 

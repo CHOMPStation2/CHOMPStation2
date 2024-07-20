@@ -3,18 +3,20 @@ import { BooleanLike } from 'common/react';
 import { useBackend } from '../../../backend';
 import { Box, Divider, Flex, Icon, Section, Tabs } from '../../../components';
 import { digestModeToColor } from './constants';
-import { bellyData, selectedData } from './types';
+import { bellyData, hostMob, selectedData } from './types';
 import { VoreSelectedBelly } from './VoreSelectedBelly';
 
 export const VoreBellySelectionAndCustomization = (props: {
   our_bellies: bellyData[];
   selected: selectedData;
   show_pictures: BooleanLike;
+  host_mobtype: hostMob;
   icon_overflow: BooleanLike;
 }) => {
   const { act } = useBackend();
 
-  const { our_bellies, selected, show_pictures, icon_overflow } = props;
+  const { our_bellies, selected, show_pictures, host_mobtype, icon_overflow } =
+    props;
 
   return (
     <Flex>
@@ -67,6 +69,7 @@ export const VoreBellySelectionAndCustomization = (props: {
             <VoreSelectedBelly
               belly={selected}
               show_pictures={show_pictures}
+              host_mobtype={host_mobtype}
               icon_overflow={icon_overflow}
             />
           </Section>

@@ -108,7 +108,7 @@ const VoreSoulcatcherSection = (props: {
               </Stack.Item>
             </Stack>
           </LabeledList.Item>
-          {!!selected_soul && (
+          {selected_soul ? (
             <LabeledList.Item label="Soul Options">
               <Box>
                 <Button
@@ -140,8 +140,10 @@ const VoreSoulcatcherSection = (props: {
                 </Button.Confirm>
               </Box>
             </LabeledList.Item>
+          ) : (
+            ''
           )}
-          {caught_souls.length && (
+          {caught_souls.length ? (
             <LabeledList.Item label="Global Options">
               <Box>
                 <Button.Confirm
@@ -166,6 +168,8 @@ const VoreSoulcatcherSection = (props: {
                 </Button.Confirm>
               </Box>
             </LabeledList.Item>
+          ) : (
+            ''
           )}
           <LabeledList.Item label="Global Settings">
             <Box>
@@ -336,7 +340,7 @@ const VoreAbilities = (props) => {
                 value={current_size * 100}
                 minValue={minimum_size * 100}
                 maxValue={maximum_size * 100}
-                onChange={(e, value) =>
+                onChange={(e, value: number) =>
                   act('adjust_own_size', {
                     new_mob_size: value / 100,
                   })

@@ -1,14 +1,17 @@
 import { capitalize } from 'common/string';
 
-import { useBackend } from '../../../backend';
-import { Button, Flex, LabeledList } from '../../../components';
-import { selectedData } from './types';
+import { useBackend } from '../../../../backend';
+import { Button, Flex, LabeledList } from '../../../../components';
+import { hostMob, selectedData } from '../types';
 import { VoreSelectedMobTypeBellyButtons } from './VoreSelectedMobTypeBellyButtons';
 
-export const VoreSelectedBellyOptions = (props: { belly: selectedData }) => {
-  const { act, data } = useBackend();
+export const VoreSelectedBellyOptions = (props: {
+  belly: selectedData;
+  host_mobtype: hostMob;
+}) => {
+  const { act } = useBackend();
 
-  const { belly } = props;
+  const { belly, host_mobtype } = props;
   const {
     can_taste,
     is_feedable,
@@ -166,7 +169,10 @@ export const VoreSelectedBellyOptions = (props: { belly: selectedData }) => {
             </Button>
           </LabeledList.Item>
         </LabeledList>
-        <VoreSelectedMobTypeBellyButtons belly={belly} />
+        <VoreSelectedMobTypeBellyButtons
+          belly={belly}
+          host_mobtype={host_mobtype}
+        />
       </Flex.Item>
       <Flex.Item basis="49%" grow={1}>
         <LabeledList>
