@@ -198,7 +198,7 @@
 //CHOMPAdd Start, Locked Designs
 /obj/machinery/r_n_d/protolathe/proc/allowedToBuild(var/datum/design/D)
 	if(D in LockedDesigns)
-		visible_message(span_warning("The fabricator denied to build \the [X]."))
+		visible_message(span_warning("The fabricator denied to build \the [D]."))
 		return 0
 	return 1
 //CHOMPAdd End, Locked Designs

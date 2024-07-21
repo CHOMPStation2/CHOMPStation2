@@ -184,7 +184,7 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 //CHOMPAdd Start, Locked Designs
 /obj/machinery/r_n_d/circuit_imprinter/proc/allowedToBuild(var/datum/design/D)
 	if(D in LockedDesigns)
-		visible_message(span_warning("The fabricator denied to print \the [X]."))
+		visible_message(span_warning("The fabricator denied to print \the [D]."))
 		return 0
 	return 1
 //CHOMPAdd End, Locked Designs
