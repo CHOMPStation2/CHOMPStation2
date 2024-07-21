@@ -5077,6 +5077,7 @@
 #include "modular_chomp\game\turfs\shuttlewalls_attacks.dm"
 #include "modular_chomp\game\turfs\shuttlewalls_icon.dm"
 #include "modular_chomp\maps\overmap\aegis_carrier\aegis_objs.dm"
+#include "modular_chomp\maps\overmap\om_ships\offmap.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_areas.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
 #include "modular_chomp\maps\submaps\engine_submaps\engine.dm"
