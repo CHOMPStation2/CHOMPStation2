@@ -50,9 +50,11 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 		update_icon()
 		return
 	var/datum/design/D = queue[1]
+	//CHOMPAdd Start
 	if(!allowedToBuild(D))
 		removeFromQueue(1)
 		return
+	//CHOMPAdd End
 	if(canBuild(D))
 		busy = 1
 		progress += speed
