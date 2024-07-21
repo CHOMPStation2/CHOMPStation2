@@ -123,7 +123,7 @@
 	if(busy)
 		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
 		return 1
-	if(!LAZYLEN(LockedDesigns) && default_deconstruction_screwdriver(user, O))//CHOMPADDITION Locked lathes are hard coded
+	if(default_deconstruction_screwdriver(user, O))
 		if(linked_console)
 			linked_console.linked_lathe = null
 			linked_console = null
@@ -194,6 +194,8 @@
 	//CHOMPADDITION: LOCKED designs
 	for(var/datum/design/X in LockedDesigns)
 		if(X == D)
+			to_chat(user, "<span class='warning'>The fabricator denied to build \the [X].</span>")
+			removeFromQueue(D)
 			return 0
 	//CHOMPADDITION: LOCKED designs
 	for(var/M in D.materials)

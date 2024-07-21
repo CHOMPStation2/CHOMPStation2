@@ -16,6 +16,8 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 	var/mat_efficiency = 1
 	var/speed = 1
 
+	var/list/LockedDesigns = list() //CHOMPADDITION: FOR VR mainly.
+
 	materials = list(MAT_STEEL = 0, MAT_GLASS = 0, MAT_PLASTEEL = 0, MAT_PLASTIC = 0, MAT_GRAPHITE = 0, MAT_GOLD = 0, MAT_SILVER = 0, MAT_OSMIUM = 0, MAT_LEAD = 0, MAT_PHORON = 0, MAT_URANIUM = 0, MAT_DIAMOND = 0, MAT_DURASTEEL = 0, MAT_VERDANTIUM = 0, MAT_MORPHIUM = 0, MAT_METALHYDROGEN = 0, MAT_SUPERMATTER = 0)
 
 	hidden_materials = list(MAT_PLASTEEL, MAT_DURASTEEL, MAT_GRAPHITE, MAT_VERDANTIUM, MAT_MORPHIUM, MAT_METALHYDROGEN, MAT_SUPERMATTER)
@@ -175,6 +177,13 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 	return
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/canBuild(var/datum/design/D)
+	//CHOMPADDITION: LOCKED designs
+	for(var/datum/design/X in LockedDesigns)
+		if(X == D)
+			to_chat(user, "<span class='warning'>The fabricator denied to print \the [X].</span>")
+			removeFromQueue(D)
+			return 0
+	//CHOMPADDITION: LOCKED designs
 	for(var/M in D.materials)
 		if(materials[M] < (D.materials[M] * mat_efficiency))
 			return 0

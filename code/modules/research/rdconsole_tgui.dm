@@ -227,6 +227,10 @@
 			continue
 		if(search && !findtext(D.name, search))
 			continue
+		//CHOMPAdd Start, Locked Designs
+		if(known_designs in LockedLatheDesigns)
+			continue
+		//CHOMPAdd End, Locked Designs
 
 		var/list/mat_list = list()
 		for(var/M in D.materials)
@@ -265,6 +269,10 @@
 			continue
 		if(search && !findtext(D.name, search))
 			continue
+		//CHOMPAdd Start, Locked Designs
+		if(known_designs in LockedPrinterDesigns)
+			continue
+		//CHOMPAdd End, Locked Designs
 
 		var/list/mat_list = list()
 		for(var/M in D.materials)
