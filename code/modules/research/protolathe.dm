@@ -194,7 +194,7 @@
 	//CHOMPADDITION: LOCKED designs
 	for(var/datum/design/X in LockedDesigns)
 		if(X == D)
-			to_chat(user, "<span class='warning'>The fabricator denied to build \the [X].</span>")
+			visible_message(span_warning("The fabricator denied to build \the [X]."))
 			removeFromQueue(D)
 			return 0
 	//CHOMPADDITION: LOCKED designs
