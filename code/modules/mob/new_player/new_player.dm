@@ -122,7 +122,11 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
+<<<<<<< HEAD
 	panel = new(src, "Welcome","Welcome", 210, 500, src) // VOREStation Edit //ChompEDIT, height 300 -> 500
+=======
+	panel = new(src, "Welcome","Welcome", 210, 320, src) // VOREStation Edit
+>>>>>>> 185e767bc6... Update new_player.dm (#16115)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
