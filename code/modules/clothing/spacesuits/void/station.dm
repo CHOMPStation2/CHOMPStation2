@@ -376,7 +376,6 @@
 	armor = list(melee = 50, bullet = 15, laser = 35, energy = 25, bomb = 30, bio = 100, rad = 70)
 	camera_networks = list(NETWORK_EXPLORATION)
 	light_overlay = "helmet_light_dual" //explorer_light
-	camera_networks = list(NETWORK_EXPLORATION)
 
 /obj/item/clothing/suit/space/void/exploration
 	name = "exploration voidsuit"
