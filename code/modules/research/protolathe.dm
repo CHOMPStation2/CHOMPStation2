@@ -62,6 +62,9 @@
 		update_icon()
 		return
 	var/datum/design/D = queue[1]
+	if(!allowedToBuild(D))
+		removeFromQueue(1)
+		return
 	if(canBuild(D))
 		busy = 1
 		progress += speed
@@ -190,14 +193,15 @@
 	queue.Cut(index, index + 1)
 	return
 
+//CHOMPAdd Start, Locked Designs
+/obj/machinery/r_n_d/protolathe/proc/allowedToBuild(var/datum/design/D)
+	if(D in LockedDesigns)
+		visible_message(span_warning("The fabricator denied to build \the [X]."))
+		return 0
+	return 1
+//CHOMPAdd End, Locked Designs
+
 /obj/machinery/r_n_d/protolathe/proc/canBuild(var/datum/design/D)
-	//CHOMPADDITION: LOCKED designs
-	for(var/datum/design/X in LockedDesigns)
-		if(X == D)
-			visible_message(span_warning("The fabricator denied to build \the [X]."))
-			removeFromQueue(D)
-			return 0
-	//CHOMPADDITION: LOCKED designs
 	for(var/M in D.materials)
 		if(materials[M] < (D.materials[M] * mat_efficiency))
 			return 0
