@@ -228,7 +228,7 @@
 		if(search && !findtext(D.name, search))
 			continue
 		//CHOMPAdd Start, Locked Designs
-		if(D in LockedLatheDesigns)
+		if(is_type_in_list(D, LockedLatheDesigns))
 			continue
 		//CHOMPAdd End, Locked Designs
 
@@ -270,7 +270,7 @@
 		if(search && !findtext(D.name, search))
 			continue
 		//CHOMPAdd Start, Locked Designs
-		if(D in LockedPrinterDesigns)
+		if(is_type_in_list(D, LockedPrinterDesigns))
 			continue
 		//CHOMPAdd End, Locked Designs
 
