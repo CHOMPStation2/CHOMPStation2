@@ -1,265 +1,6 @@
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/VorePanelExport.tsx
-import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../backend';
-import { Button, Section } from '../components';
-import { Window } from '../layouts';
-
-const ModeSpan = {
-  Hold: '<span class="badge text-bg-secondary">Hold</span>',
-  Digest: '<span class="badge text-bg-danger">Digest</span>',
-  Absorb: '<span class="badge text-bg-light">Absorb</span>',
-  Drain: '<span class="badge text-bg-warning">Drain</span>',
-  Selective: '<span class="badge text-bg-warning">Selective</span>',
-  Unabsorb: '<span class="badge text-bg-light">Unabsorb</span>',
-  Heal: '<span class="badge text-bg-success">Heal</span>',
-  Shrink: '<span class="badge text-bg-info">Shrink</span>',
-  Grow: '<span class="badge text-bg-info">Grow</span>',
-  'Size Steal': '<span class="badge text-bg-info">Size Steal</span>',
-  'Encase In Egg': '<span class="badge text-bg-primary">Encase In Egg</span>',
-};
-
-const ItemModeSpan = {
-  Hold: '<span class="badge text-bg-secondary">Item: Hold</span>',
-  'Digest (Food Only)':
-    '<span class="badge text-bg-danger">Item: Digest (Food Only)</span>',
-  Digest: '<span class="badge text-bg-danger">Item: Digest</span>',
-  'Digest (Dispersed Damage)':
-    '<span class="badge text-bg-danger">Item: Digest (Dispersed Damage)</span>',
-};
-
-const AddonIcon = {
-  Numbing: '',
-  Stripping: '',
-  'Leave Remains': '',
-  Muffles: 'bi-volume-mute',
-  'Affect Worn Items': '',
-  'Jams Sensors': 'bi-wifi-off',
-  'Complete Absorb': '',
-};
-
-const ReagentAddonIcon = {
-  'Produce Liquids': '',
-  'Digestion Liquids': '',
-  'Absorption Liquids': '',
-  'Draining Liquids': '',
-};
-
-const GetAddons = (addons: string[]) => {
-  let result: string[] = [];
-
-  addons?.forEach((addon) => {
-    result.push(
-      '<span class="badge text-bg-secondary"><i class="' +
-        AddonIcon[addon] +
-        '"></i>' +
-        addon +
-        '</span>',
-    );
-  });
-
-  if (result.length === 0) {
-    result.push('No Addons Set');
-  }
-
-  return result;
-};
-
-const GetLiquidAddons = (addons: string[]) => {
-  let result: string[] = [];
-
-  addons?.forEach((addon) => {
-    result.push(
-      '<span class="badge text-bg-secondary"><i class="' +
-        ReagentAddonIcon[addon] +
-        '"></i>' +
-        addon +
-        '</span>',
-    );
-  });
-
-  if (result.length === 0) {
-    result.push('No Addons Set');
-  }
-
-  return result;
-};
-
-type Data = {
-  db_version: string;
-  db_repo: string;
-  mob_name: string;
-  bellies: Belly[];
-};
-
-type Belly = {
-  // General Information
-  name: string;
-  desc: string;
-  message_mode: BooleanLike;
-  absorbed_desc: string;
-  vore_verb: string;
-  release_verb: string;
-
-  // Controls
-  mode: string;
-  addons: string[];
-  item_mode: string;
-
-  // Options
-  digest_brute: number;
-  digest_burn: number;
-  digest_oxy: number;
-
-  can_taste: BooleanLike;
-  is_feedable: BooleanLike;
-  contaminates: BooleanLike;
-  contamination_flavor: string;
-  contamination_color: string;
-  nutrition_percent: number;
-  bulge_size: number;
-  display_absorbed_examine: BooleanLike;
-  save_digest_mode: BooleanLike;
-  emote_active: BooleanLike;
-  emote_time: number;
-  shrink_grow_size: number;
-  vorespawn_blacklist: BooleanLike;
-  egg_type: string;
-  selective_preference: string;
-
-  // Messages
-  struggle_messages_outside: string[];
-  struggle_messages_inside: string[];
-  absorbed_struggle_messages_outside: string[];
-  absorbed_struggle_messages_inside: string[];
-  escape_attempt_messages_owner: string[];
-  escape_attempt_messages_prey: string[];
-  escape_messages_owner: string[];
-  escape_messages_prey: string[];
-  escape_messages_outside: string[];
-  escape_item_messages_owner: string[];
-  escape_item_messages_prey: string[];
-  escape_item_messages_outside: string[];
-  escape_fail_messages_owner: string[];
-  escape_fail_messages_prey: string[];
-  escape_attempt_absorbed_messages_owner: string[];
-  escape_attempt_absorbed_messages_prey: string[];
-  escape_absorbed_messages_owner: string[];
-  escape_absorbed_messages_prey: string[];
-  escape_absorbed_messages_outside: string[];
-  escape_fail_absorbed_messages_owner: string[];
-  escape_fail_absorbed_messages_prey: string[];
-  primary_transfer_messages_owner: string[];
-  primary_transfer_messages_prey: string[];
-  secondary_transfer_messages_owner: string[];
-  secondary_transfer_messages_prey: string[];
-  digest_chance_messages_owner: string[];
-  digest_chance_messages_prey: string[];
-  absorb_chance_messages_owner: string[];
-  absorb_chance_messages_prey: string[];
-  digest_messages_owner: string[];
-  digest_messages_prey: string[];
-  absorb_messages_owner: string[];
-  absorb_messages_prey: string[];
-  unabsorb_messages_owner: string[];
-  unabsorb_messages_prey: string[];
-  examine_messages: string[];
-  examine_messages_absorbed: string[];
-
-  // emote_list: any[];
-  emotes_digest;
-  emotes_hold;
-  emotes_holdabsorbed;
-  emotes_absorb;
-  emotes_heal;
-  emotes_drain;
-  emotes_steal;
-  emotes_egg;
-  emotes_shrink;
-  emotes_grow;
-  emotes_unabsorb;
-
-  // Sounds
-  is_wet: BooleanLike;
-  wet_loop: BooleanLike;
-  fancy_vore: BooleanLike;
-  vore_sound: string;
-  release_sound: string;
-
-  // Visuals
-  affects_vore_sprites: BooleanLike;
-  count_absorbed_prey_for_sprite: BooleanLike;
-  absorbed_multiplier: number;
-  count_liquid_for_sprite: BooleanLike;
-  liquid_multiplier: number;
-  count_items_for_sprite: BooleanLike;
-  item_multiplier: number;
-  health_impacts_size: BooleanLike;
-  resist_triggers_animation: BooleanLike;
-  size_factor_for_sprite: number;
-  belly_sprite_to_affect: string;
-
-  // Visuals (Belly Fullscreens Preview and Coloring)
-  belly_fullscreen_color: string;
-
-  // Visuals (Vore FX)
-  disable_hud: BooleanLike;
-
-  // Interactions
-  escapable: BooleanLike;
-
-  escapechance: number;
-  escapechance_absorbed: number;
-  escapetime: number;
-
-  transferchance: number;
-  transferlocation: string;
-
-  transferchance_secondary: number;
-  transferlocation_secondary: string;
-
-  absorbchance: number;
-  digestchance: number;
-
-  // Interactions (Auto-Transfer)
-  autotransferwait: number;
-  autotransferchance: number;
-  autotransferlocation: string;
-  autotransfer_enabled: BooleanLike;
-  autotransferchance_secondary: number;
-  autotransferlocation_secondary: string;
-  autotransfer_min_amount: number;
-  autotransfer_max_amount: number;
-
-  // Liquid Options
-  show_liquids: BooleanLike;
-  reagentbellymode: BooleanLike;
-  reagent_chosen: string;
-  reagent_name: string;
-  reagent_transfer_verb: string;
-  gen_time_display: string;
-  custom_max_volume: number;
-  vorefootsteps_sounds: BooleanLike;
-  reagent_mode_flag_list: string[];
-
-  // Liquid Messages
-  liquid_fullness1_messages: BooleanLike;
-  liquid_fullness2_messages: BooleanLike;
-  liquid_fullness3_messages: BooleanLike;
-  liquid_fullness4_messages: BooleanLike;
-  liquid_fullness5_messages: BooleanLike;
-
-  fullness1_messages: string[];
-  fullness2_messages: string[];
-  fullness3_messages: string[];
-  fullness4_messages: string[];
-  fullness5_messages: string[];
-};
-=======
 import { ItemModeSpan, ModeSpan } from './constants';
 import { Belly } from './types';
 import { GetAddons } from './VorePanelExportBellyStringHelpers';
->>>>>>> b93ce5619e... Second part of the typescript migration (#16109):tgui/packages/tgui/interfaces/VorePanelExport/VorePanelExportBellyString.tsx
 
 // prettier-ignore
 export const generateBellyString = (belly: Belly, index: number) => {
@@ -281,9 +22,10 @@ export const generateBellyString = (belly: Belly, index: number) => {
     digest_brute,
     digest_burn,
     digest_oxy,
+    digest_tox,
+    digest_clone,
 
     can_taste,
-	is_feedable,
     contaminates,
     contamination_flavor,
     contamination_color,
@@ -294,7 +36,6 @@ export const generateBellyString = (belly: Belly, index: number) => {
     emote_active,
     emote_time,
     shrink_grow_size,
-    vorespawn_blacklist,
     egg_type,
     selective_preference,
 
@@ -357,16 +98,6 @@ export const generateBellyString = (belly: Belly, index: number) => {
     vore_sound,
     release_sound,
 
-    // Visuals
-    affects_vore_sprites,
-    count_absorbed_prey_for_sprite,
-    resist_triggers_animation,
-    size_factor_for_sprite,
-    belly_sprite_to_affect,
-
-    // Visuals (Belly Fullscreens Preview and Coloring)
-    belly_fullscreen_color,
-
     // Visuals (Vore FX)
     disable_hud,
 
@@ -385,40 +116,6 @@ export const generateBellyString = (belly: Belly, index: number) => {
 
     absorbchance,
     digestchance,
-
-    // Interactions (Auto-Transfer)
-	autotransferwait,
-    autotransferchance,
-    autotransferlocation,
-	autotransferchance_secondary,
-    autotransferlocation_secondary,
-    autotransfer_enabled,
-    autotransfer_min_amount,
-    autotransfer_max_amount,
-
-    // Liquid Options
-    show_liquids,
-		reagentbellymode,
-		reagent_chosen,
-		reagent_name,
-		reagent_transfer_verb,
-		gen_time_display,
-		custom_max_volume,
-		vorefootsteps_sounds,
-		reagent_mode_flag_list,
-
-    // Liquid Messages
-    liquid_fullness1_messages,
-    liquid_fullness2_messages,
-    liquid_fullness3_messages,
-    liquid_fullness4_messages,
-    liquid_fullness5_messages,
-
-    fullness1_messages,
-    fullness2_messages,
-    fullness3_messages,
-    fullness4_messages,
-    fullness5_messages,
   } = belly;
 
   let result = '';
@@ -432,6 +129,10 @@ export const generateBellyString = (belly: Belly, index: number) => {
     digest_burn +
     '</span>/<span style="color: blue;">' +
     digest_oxy +
+    '</span>/<span style="color: green;">' +
+    digest_tox +
+    '</span>/<span style="color: purple;">' +
+    digest_clone +
     '</span>) - ' +
     ModeSpan[mode] +
     ' - ' +
@@ -809,7 +510,6 @@ export const generateBellyString = (belly: Belly, index: number) => {
   result += '<div class="accordion-body">';
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Can Taste: ' + (can_taste ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Feedable: ' + (is_feedable ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
   result += '<li class="list-group-item">Contaminates: ' + (contaminates ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
   result += '<li class="list-group-item">Contamination Flavor: ' + contamination_flavor + '</li>';
   result += '<li class="list-group-item">Contamination Color: ' + contamination_color + '</li>';
@@ -820,7 +520,6 @@ export const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Idle Emotes: ' + (emote_active ? '<span style="color: green;">Active' : '<span style="color: red;">Inactive') + '</li>';
   result += '<li class="list-group-item">Idle Emote Delay: ' + emote_time + ' seconds</li>';
   result += '<li class="list-group-item">Shrink/Grow Size: ' + shrink_grow_size * 100 + '%</li>';
-  result += '<li class="list-group-item">Vore Spawn Blacklist: ' + (vorespawn_blacklist ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
   result += '<li class="list-group-item">Egg Type: ' + egg_type + '</li>';
   result += '<li class="list-group-item">Selective Mode Preference: ' + selective_preference + '</li>';
   result += '</ul>';
@@ -857,18 +556,6 @@ export const generateBellyString = (belly: Belly, index: number) => {
 
   result += '<div id="settingsAccordion' + index + '-collapseVisuals" class="accordion-collapse collapse" aria-labelledby="settingsAccordion' + index + '-headingVisuals>';
   result += '<div class="accordion-body">';
-  result += '<b>Vore Sprites</b>';
-  result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Affect Vore Sprites: ' + (affects_vore_sprites ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Count Absorbed prey for vore sprites: ' + (count_absorbed_prey_for_sprite ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Animation when prey resist: ' + (resist_triggers_animation ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
-  result += '<li class="list-group-item">Vore Sprite Size Factor: ' + size_factor_for_sprite + '</li>';
-  result += '<li class="list-group-item">Belly Sprite to affect: ' + belly_sprite_to_affect + '</li>';
-  result += '</ul>';
-  result += '<b>Belly Fullscreens Preview and Coloring</b>';
-  result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Color: <span style="color: ' + belly_fullscreen_color + ';">' + belly_fullscreen_color + '</span>';
-  result += '</ul>';
   result += '<b>Vore FX</b>';
   result += '<ul class="list-group">';
   result += '<li class="list-group-item">Disable Prey HUD: ' + (disable_hud ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
@@ -900,110 +587,9 @@ export const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Absorb Chance: ' + absorbchance + '%</li>';
   result += '<li class="list-group-item">Digest Chance: ' + digestchance + '%</li>';
   result += '</ul>';
-  result += '<hr>';
-  result += '<b>Auto-Transfer Options (' +
-  (autotransfer_enabled ? '<span style="color: green;">Enabled' : '<span style="color: red;">Disabled') +
-  '</span>)</b>';
-  result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Auto-Transfer Time: ' + autotransferwait / 10 + 's</li>';
-  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance + '%</li>';
-  result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Chance: ' + autotransferchance_secondary + '%</li>';
-  result += '<li class="list-group-item">Auto-Transfer Location: ' + autotransferlocation_secondary + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Min Amount: ' + autotransfer_min_amount + '</li>';
-  result += '<li class="list-group-item">Auto-Transfer Max Amount: ' + autotransfer_max_amount + '</li>';
-  result += '</ul>';
   result += '</div></div></div>';
 
   // END INTERACTIONS
-  // LIQUID OPTIONS
-
-  result += '<div class="accordion-item">';
-  result += '<h2 class="accordion-header" id="settingsAccordion' + index + '-headingFour">';
-  result += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsAccordion' + index + '-collapseFour" aria-expanded="true" aria-controls="settingsAccordion' + index + '-collapseFour">';
-  result += '<b>== Liquid Options (' +
-  (show_liquids ? '<span style="color: green;">Liquids On' : '<span style="color: red;">Liquids Off') +
-  '</span>) ==</b>';
-  result += '</button></h2>';
-
-  result += '<div id="settingsAccordion' + index + '-collapseFour" class="accordion-collapse collapse" aria-labelledby="settingsAccordion' + index + '-headingFour">';
-  result += '<div class="accordion-body">';
-  result += '<ul class="list-group">';
-  result += '<li class="list-group-item">Generate Liquids: ' + (reagentbellymode ? '<span style="color: green;">On' : '<span style="color: red;">Off') + '</li>';
-  result += '<li class="list-group-item">Liquid Type: ' + reagent_chosen + '</li>';
-  result += '<li class="list-group-item">Liquid Name: ' + reagent_name + '</li>';
-  result += '<li class="list-group-item">Transfer Verb: ' + reagent_transfer_verb + '</li>';
-  result += '<li class="list-group-item">Generation Time: ' + gen_time_display + '</li>';
-  result += '<li class="list-group-item">Liquid Capacity: ' + custom_max_volume + '</li>';
-  result += '<li class="list-group-item">Slosh Sounds: ' + (vorefootsteps_sounds ? '<span style="color: green;">On' : '<span style="color: red;">Off') + '</li>';
-  result += '<li class="list-group-item">Liquid Addons: ' + GetLiquidAddons(reagent_mode_flag_list) + '</li>';
-  result += '</ul>';
-  result += '</div></div></div>';
-
-  // END LIQUID OPTIONS
-  // LIQUID MESSAGES
-
-  result += '<div class="accordion-item">';
-  result += '<h2 class="accordion-header" id="settingsAccordion' + index + '-headingFive">';
-  result += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settingsAccordion' + index + '-collapseFive" aria-expanded="true" aria-controls="settingsAccordion' + index + '-collapseFive">';
-  result += '<b>== Liquid Messages (' +
-  (show_liquids ? '<span style="color: green;">Messages On' : '<span style="color: red;">Messages Off') +
-  '</span>) ==</b>';
-  result += '</button></h2>';
-
-  result += '<div id="settingsAccordion' + index + '-collapseFive" class="accordion-collapse collapse" aria-labelledby="settingsAccordion' + index + '-headingFive">';
-  result += '<div class="accordion-body">';
-
-  result += '<div role="liquidMessagesTabpanel">'; // Start Div liquidMessagesTabpanel
-  result += '<div class="row"><div class="col-4">';
-  result += '<div class="list-group" id="liquidMessagesList" role="messagesTablist">';
-  result += '<a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#examineMessage0_20' + index + '" role="tab">Examine Message (0 to 20%) (' + (liquid_fullness1_messages ? '<span style="color: green;">On' : '<span style="color: red;">Off') + '</span>)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#examineMessage20_40' + index + '" role="tab">Examine Message (20 to 40%) (' + (liquid_fullness2_messages ? '<span style="color: green;">On' : '<span style="color: red;">Off') + '</span>)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#examineMessage40_60' + index + '" role="tab">Examine Message (40 to 60%) (' + (liquid_fullness3_messages ? '<span style="color: green;">On' : '<span style="color: red;">Off') + '</span>)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#examineMessage60_80' + index + '" role="tab">Examine Message (60 to 80%) (' + (liquid_fullness4_messages ? '<span style="color: green;">On' : '<span style="color: red;">Off') + '</span>)</a>';
-  result += '<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#examineMessage80_100' + index + '" role="tab">Examine Message (80 to 100%) (' + (liquid_fullness5_messages ? '<span style="color: green;">On' : '<span style="color: red;">Off') + '</span>)</a>';
-  result += '</div></div>';
-
-  result += '<div class="col-8">';
-  result += '<div class="tab-content">';
-
-  result += '<div class="tab-pane fade show active" id="examineMessage0_20' + index + '" role="liquidMessagesTabpanel">';
-  fullness1_messages?.forEach((msg) => {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-
-  result += '<div class="tab-pane fade" id="examineMessage20_40' + index + '" role="liquidMessagesTabpanel">';
-  fullness2_messages?.forEach((msg) => {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-
-  result += '<div class="tab-pane fade" id="examineMessage40_60' + index + '" role="liquidMessagesTabpanel">';
-  fullness3_messages?.forEach((msg) => {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-
-  result += '<div class="tab-pane fade" id="examineMessage60_80' + index + '" role="liquidMessagesTabpanel">';
-  fullness4_messages?.forEach((msg) => {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-
-  result += '<div class="tab-pane fade" id="examineMessage80_100' + index + '" role="liquidMessagesTabpanel">';
-  fullness5_messages?.forEach((msg) => {
-    result += msg + '<br>';
-  });
-  result += '</div>';
-
-  result += '</div>';
-  result += '</div></div>';
-  result += '</div>'; // End Div liquidMessagesTabpanel
-
-  result += '</div></div></div>';
-
-  // END LIQUID MESSAGES
 
   result += '</div></div></div>';
 

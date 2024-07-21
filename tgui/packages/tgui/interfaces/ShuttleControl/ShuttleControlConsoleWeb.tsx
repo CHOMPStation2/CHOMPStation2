@@ -216,15 +216,9 @@ export const ShuttleControlConsoleWeb = (props) => {
       {(Object.keys(sensors!).length && (
         <Section title="Sensors">
           <LabeledList>
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/ShuttleControl.jsx
-            {Object.keys(sensors).map((key, index) => {
-              let sensor = sensors[key];
-              if (sensor.reading === -1) {
-=======
             {Object.keys(sensors!).map((key, index) => {
               const sensor = sensors![key];
               if (sensor.reading !== -1) {
->>>>>>> b93ce5619e... Second part of the typescript migration (#16109):tgui/packages/tgui/interfaces/ShuttleControl/ShuttleControlConsoleWeb.tsx
                 return (
                   <LabeledList.Item key={index} label={key} color="bad">
                     Unable to get sensor air reading.
