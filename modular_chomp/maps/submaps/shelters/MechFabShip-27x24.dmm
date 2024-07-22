@@ -115,6 +115,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
+"eB" = (
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechFabShip)
 "eM" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
@@ -409,7 +415,10 @@
 	},
 /obj/machinery/door/blast/regular{
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	opacity = 0;
+	density = 0;
+	icon_state = "pdoor0"
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -577,7 +586,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -615,7 +627,10 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "qK" = (
-/obj/machinery/computer/rdconsole/public,
+/obj/machinery/vending/robotics{
+	emagged = 1;
+	req_access = null
+	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
@@ -639,10 +654,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "qY" = (
-/obj/machinery/vending/robotics{
-	emagged = 1;
-	req_access = null
-	},
+/obj/machinery/computer/rdconsole/public,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/poi{
 	dir = 1
@@ -811,6 +823,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
+"zz" = (
+/obj/machinery/door/blast/regular/open,
+/turf/template_noop,
+/area/template_noop)
 "zC" = (
 /obj/machinery/autolathe{
 	hacked = 1
@@ -909,15 +925,16 @@
 /area/survivalpod/superpose/MechFabShip)
 "Cu" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	icon_state = "door_locked";
 	id_tag = "kalipso_hatch";
-	locked = 1;
 	name = "Cargo Hold"
 	},
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
@@ -1007,7 +1024,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1022,7 +1042,10 @@
 /obj/machinery/door/airlock/hatch,
 /obj/machinery/door/blast/regular{
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	opacity = 0;
+	density = 0;
+	icon_state = "pdoor0"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
@@ -1071,9 +1094,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "HC" = (
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
+/obj/machinery/mecha_part_fabricator/pros,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -1310,7 +1331,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
@@ -1341,9 +1365,9 @@
 /turf/simulated/wall/skipjack,
 /area/survivalpod/superpose/MechFabShip)
 "Oo" = (
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/tiled/yellow,
-/area/survivalpod/superpose/MechFabShip)
+/obj/machinery/door/blast/regular,
+/turf/template_noop,
+/area/template_noop)
 "Ov" = (
 /obj/machinery/optable{
 	name = "Robotics Operating Table"
@@ -1503,7 +1527,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1711,7 +1738,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1751,7 +1781,10 @@
 	},
 /obj/machinery/door/blast/regular{
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	opacity = 0;
+	density = 0;
+	icon_state = "pdoor0"
 	},
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -1835,7 +1868,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1867,7 +1903,10 @@
 	},
 /obj/machinery/door/blast/regular{
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	opacity = 0;
+	density = 0;
+	icon_state = "pdoor0"
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -2169,7 +2208,7 @@ at
 ph
 qK
 DF
-Oo
+DF
 DF
 Yt
 ph
@@ -2220,7 +2259,7 @@ LN
 Xm
 ph
 qY
-rZ
+eB
 rZ
 SE
 gv
@@ -2258,7 +2297,7 @@ gH
 ND
 Di
 Di
-iC
+Oo
 iC
 iC
 "}
@@ -2284,7 +2323,7 @@ ny
 Cu
 Di
 Di
-iC
+zz
 iC
 iC
 "}
