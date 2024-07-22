@@ -24,7 +24,7 @@
 // The shuttle's 'shuttle' computer
 /obj/machinery/computer/shuttle_control/explore/generic_shuttle
 	name = "short jump console"
-	shuttle_tag = "Private Vessel"
+	shuttle_tag = "Private Vessel" //These names must match
 	req_one_access = list(access_pilot)
 
 // A shuttle lateloader landmark
@@ -37,7 +37,7 @@
 
 // The 'shuttle'
 /datum/shuttle/autodock/overmap/generic_shuttle
-	name = "Private Vessel"
+	name = "Private Vessel" //These names must match
 	current_location = "omship_spawn_generic_shuttle"
 	docking_controller_tag = "generic_shuttle_docker" //This is the only thing you map in and var edit, use the map helpers to designate doors and pumps
 	shuttle_area = list(/area/shuttle/generic_shuttle/eng, /area/shuttle/generic_shuttle/gen)
@@ -45,11 +45,11 @@
 
 // The 'ship'
 /obj/effect/overmap/visitable/ship/landable/generic_shuttle
-	name = "Private Vessel"
+	name = "Private Vessel" //These names must match
 	scanner_desc = @{"[i]Registration[/i]: PRIVATE
 [i]Class[/i]: Small Shuttle
 [i]Transponder[/i]: Transmitting (CIV), non-hostile
 [b]Notice[/b]: Small private vessel"}
 	vessel_mass = 1000
 	vessel_size = SHIP_SIZE_TINY
-	shuttle = "Private Vessel"
+	shuttle = "Private Vessel" //These names must match
