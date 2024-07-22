@@ -348,12 +348,10 @@
 /obj/soulgem/proc/delete_mob(var/mob/M)
 	if(is_taken_over()) return FALSE
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION))
-		release_mob(M)
-		return
+		return release_mob(M)
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT))
 		if(!(tgui_alert(M, "Do you really want to allow [owner] to delete you? On decline, you'll be ghosted.", "Allow Deletion", list("No", "Yes")) == "Yes"))
-			release_mob(M)
-			return FALSE
+			return release_mob(M)
 	to_chat(M, span_danger("[delete_message]"))
 	brainmobs -= M
 	var/mob/observer/dead/ghost = M.ghostize(FALSE)
