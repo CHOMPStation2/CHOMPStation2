@@ -130,6 +130,7 @@
 	M.clear_fullscreen("belly")
 
 /obj/soulgem/proc/take_control_selected()
+	if(!selected_soul) return
 	take_control(selected_soul)
 
 /obj/soulgem/proc/take_control_owner()
@@ -149,6 +150,9 @@
 	catch_mob(owner)
 	M.mind.transfer_to(owner)
 	qdel(M)
+
+/obj/soulgem/proc/is_taken_over()
+	return (own_mind && owner.mind != own_mind)
 
 /obj/soulgem/proc/catch_mob(var/mob/M, var/custom_name)
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE)) return
@@ -216,11 +220,12 @@
 	return TRUE
 
 /obj/soulgem/proc/release_selected()
-	release_mob(selected_soul)
-	if(brainmobs.len > 1)
-		selected_soul = brainmobs[1]
-	else
-		selected_soul = null
+	if(!selected_soul) return
+	if(release_mob(selected_soul))
+		if(brainmobs.len > 1)
+			selected_soul = brainmobs[1]
+		else
+			selected_soul = null
 
 /obj/soulgem/proc/release_mobs()
 	selected_soul = null
@@ -229,10 +234,12 @@
 		release_mob(M)
 
 /obj/soulgem/proc/release_mob(var/mob/M)
+	if(is_taken_over()) return FALSE
 	to_chat(M, span_notice("[release_message]"))
 	brainmobs -= M
 	M.ghostize(FALSE)
 	qdel(M)
+	return TRUE
 
 /obj/soulgem/proc/find_transfer_objects()
 	var/list/valid_trasfer_objects = list(
@@ -286,6 +293,7 @@
 	transfer_mob(selected_soul, target)
 
 /obj/soulgem/proc/transfer_mob(var/mob/M, var/obj/target)
+	if(is_taken_over()) return
 	if(!M || !target) return
 	if(istype(target, /obj/item/device/sleevemate))
 		var/obj/item/device/sleevemate/mate = target
@@ -312,19 +320,25 @@
 	qdel(M)
 
 /obj/soulgem/proc/transfer_mob_soulcatcher(var/mob/living/carbon/brain/caught_soul/vore/M, var/obj/soulgem/gem)
+	if(is_taken_over()) return
 	if(!istype(M) || !gem) return
 	brainmobs -= M
 	M.gem = gem
 	M.container = gem
 	gem.brainmobs += M
+	if(M == selected_soul)
+		if(brainmobs.len > 1)
+			selected_soul = brainmobs[1]
+		else
+			selected_soul = null
 
 /obj/soulgem/proc/delete_selected()
 	if(!selected_soul) return
-	delete_mob(selected_soul)
-	if(brainmobs.len > 1)
-		selected_soul = brainmobs[1]
-	else
-		selected_soul = null
+	if(delete_mob(selected_soul))
+		if(brainmobs.len > 1)
+			selected_soul = brainmobs[1]
+		else
+			selected_soul = null
 
 /obj/soulgem/proc/erase_mobs()
 	if(!brainmobs.len) return
@@ -332,18 +346,20 @@
 		delete_mob(M)
 
 /obj/soulgem/proc/delete_mob(var/mob/M)
+	if(is_taken_over()) return FALSE
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION))
 		release_mob(M)
 		return
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT))
 		if(!(tgui_alert(M, "Do you really want to allow [owner] to delete you? On decline, you'll be ghosted.", "Allow Deletion", list("No", "Yes")) == "Yes"))
 			release_mob(M)
-			return
+			return FALSE
 	to_chat(M, span_danger("[delete_message]"))
 	brainmobs -= M
 	var/mob/observer/dead/ghost = M.ghostize(FALSE)
 	ghost.abandon_mob()
 	qdel(M)
+	return TRUE
 
 /obj/soulgem/proc/adjust_interior(var/new_flavor)
 	new_flavor = sanitize(new_flavor, MAX_MESSAGE_LEN * 2)

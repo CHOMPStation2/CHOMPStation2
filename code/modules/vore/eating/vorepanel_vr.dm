@@ -573,7 +573,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		data["soulcatcher"]["selected_soul"] = host.soulgem.selected_soul
 		data["soulcatcher"]["selected_sfx"] = host.soulgem.linked_belly
 		data["soulcatcher"]["interior_design"] =  host.soulgem.inside_flavor
-		data["soulcatcher"]["taken_over"] = (host.soulgem.own_mind && host.mind != host.soulgem.own_mind)
+		data["soulcatcher"]["taken_over"] = host.soulgem.is_taken_over()
 		data["soulcatcher"]["catch_self"] = host.soulgem.flag_check(NIF_SC_CATCHING_ME)
 		data["soulcatcher"]["catch_prey"] = host.soulgem.flag_check(NIF_SC_CATCHING_OTHERS)
 		data["soulcatcher"]["ext_hearing"] = host.soulgem.flag_check(NIF_SC_ALLOW_EARS)
