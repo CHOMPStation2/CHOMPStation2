@@ -336,6 +336,12 @@
 	body_parts = list(BP_HEAD)
 	hide_body_parts = list(BP_HEAD)
 
+/datum/sprite_accessory/marking/ch/hippo_snout_head
+	name = "Hippo Snout"
+	icon_state = "hippo_snout-head"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
 // TEETH //
 
 /datum/sprite_accessory/marking/ch/xenomorph/xeno_teeth
