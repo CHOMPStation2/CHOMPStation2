@@ -129,6 +129,27 @@
 /obj/soulgem/proc/clear_vore_fx(var/mob/M)
 	M.clear_fullscreen("belly")
 
+/obj/soulgem/proc/take_control_selected()
+	take_control(selected_soul)
+
+/obj/soulgem/proc/take_control_owner()
+	var/mob/self = null
+	for(var/mob/mob in brainmobs)
+		if(mob.mind == own_mind)
+			self = mob
+			break
+	if(!self)
+		return
+	take_control(self)
+	own_mind = null
+
+/obj/soulgem/proc/take_control(var/mob/M)
+	if(!owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKE_OVER) return
+	if(!M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKE_OVER) return
+	catch_mob(owner)
+	M.mind.transfer_to(owner)
+	qdel(M)
+
 /obj/soulgem/proc/catch_mob(var/mob/M, var/custom_name)
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE)) return
 	if(!M.mind)	return
@@ -149,7 +170,7 @@
 	brainmob.real_name = custom_name ? custom_name : brainmob.mind.name
 
 	//If we caught our owner, special settings.
-	if(M == owner)
+	if(M == owner && !own_mind) // Need some more sanity if we allow takeover
 		brainmob.ext_deaf = FALSE
 		brainmob.ext_blind = FALSE
 		brainmob.parent_mob = TRUE
@@ -342,6 +363,8 @@
 			break
 	if(!self)
 		return
+	if(owner.mind)
+		catch_mob(owner)
 	self.mind.transfer_to(owner)
 	own_mind = null
 	qdel(self)

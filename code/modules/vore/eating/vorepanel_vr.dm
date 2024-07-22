@@ -555,6 +555,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//Soulcatcher
 		"soulcatcher_allow_capture" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE,
 		"soulcatcher_allow_transfer" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER,
+		"soulcatcher_allow_takeover" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKE_OVER,
 		"soulcatcher_allow_deletion" = (global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION_INSTANT))
 		//CHOMPEdit end
 	)
@@ -572,6 +573,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		data["soulcatcher"]["selected_soul"] = host.soulgem.selected_soul
 		data["soulcatcher"]["selected_sfx"] = host.soulgem.linked_belly
 		data["soulcatcher"]["interior_design"] =  host.soulgem.inside_flavor
+		data["soulcatcher"]["taken_over"] = (host.soulgem.own_mind && host.mind != host.soulgem.own_mind)
 		data["soulcatcher"]["catch_self"] = host.soulgem.flag_check(NIF_SC_CATCHING_ME)
 		data["soulcatcher"]["catch_prey"] = host.soulgem.flag_check(NIF_SC_CATCHING_OTHERS)
 		data["soulcatcher"]["ext_hearing"] = host.soulgem.flag_check(NIF_SC_ALLOW_EARS)
@@ -2199,6 +2201,28 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					H.adjust_nutrition(-VORE_RESIZE_COST)
 					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
+		//Soulcatcher functions
+		if("soulcatcher_release_all")
+			host.soulgem.release_mobs()
+			return TRUE
+		if("soulcatcher_erase_all")
+			host.soulgem.erase_mobs()
+			return TRUE
+		if("soulcatcher_release")
+			host.soulgem.release_selected()
+			return TRUE
+		if("soulcatcher_transfer")
+			host.soulgem.transfer_selected()
+			return TRUE
+		if("soulcatcher_delete")
+			host.soulgem.delete_selected()
+			return TRUE
+		if("soulcatcher_transfer_control")
+			host.soulgem.take_control_selected()
+			return TRUE
+		if("soulcatcher_release_control")
+			host.soulgem.take_control_owner()
+			return TRUE
 		//Soulcatcher settings
 		if("soulcatcher_toggle")
 			host.soulgem.toggle_setting(SOULGEM_ACTIVE)
@@ -2206,24 +2230,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		if("soulcatcher_select")
 			host.soulgem.selected_soul = locate(params["selected_soul"])
-			unsaved_changes = TRUE
 			return TRUE
 		if("soulcatcher_sfx")
 			var/obj/belly = locate(params["selected_belly"])
 			if(istype(belly))
 				host.soulgem.update_linked_belly(belly)
-			unsaved_changes = TRUE
-			return TRUE
-		if("soulcatcher_release")
-			host.soulgem.release_selected()
-			unsaved_changes = TRUE
-			return TRUE
-		if("soulcatcher_transfer")
-			host.soulgem.transfer_selected()
-			unsaved_changes = TRUE
-			return TRUE
-		if("soulcatcher_delete")
-			host.soulgem.delete_selected()
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_self_catching")
@@ -2253,14 +2264,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("toggle_vore_sfx")
 			host.soulgem.toggle_setting(SOULGEM_SHOW_VORE_SFX)
 			unsaved_changes = TRUE
-			return TRUE
-		if("soulcatcher_release_all")
-			unsaved_changes = TRUE
-			host.soulgem.release_mobs()
-			return TRUE
-		if("soulcatcher_erase_all")
-			unsaved_changes = TRUE
-			host.soulgem.erase_mobs()
 			return TRUE
 		if("soulcatcher_rename")
 			var/new_name = tgui_input_text(host, "Adjust the name of your soulcatcher. Limit 60 chars.", \
