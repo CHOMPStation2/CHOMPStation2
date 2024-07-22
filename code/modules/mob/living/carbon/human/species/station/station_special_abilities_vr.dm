@@ -168,7 +168,7 @@
 	//Unfreeze some things
 	does_not_breathe = FALSE
 	update_canmove()
-	weakened = 2
+	stunned = 2 // CHOMPEdit - Whoops, crawling is a thing now.
 
 	revive_ready = world.time + 10 MINUTES //set the cooldown CHOMPEdit: Reduced this to 10 minutes, you're playing with fire if you're reviving that often.
 

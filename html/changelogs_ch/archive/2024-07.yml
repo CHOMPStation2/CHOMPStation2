@@ -8,3 +8,83 @@
   - bugfix: fixed random slosh sounds happening with 0 liquids
   tacoguy7765093:
   - bugfix: Fixed the Venom Injection trait to work for CHOMP/.
+2024-07-04:
+  TheCaramelion:
+  - qol: Reduced the footstep volume
+  - bugfix: Footstep and slosh elements making sounds when transfering through bellies/storages
+  - bugfix: Footstep and slosh elements not applying on resleeve/cloning/in-belly
+      spawns
+  tacoguy7765093:
+  - maptweak: Diescraper's turfs should be properly indoors now
+  - maptweak: Fixed secret button not proccing.
+  - rscadd: 5 New superposed pods have been added.
+2024-07-05:
+  Razgriz1032:
+  - rscadd: Base Shadekin spawns from 3 to 5
+2024-07-06:
+  TheCaramelion:
+  - bugfix: Fixed slosh sounds playing while phased
+2024-07-16:
+  TheCaramelion:
+  - code_imp: HasProximity is now garbage collected
+  - qol: Xenochimeras now get stunned instead of weakened when reconstituting
+2024-07-18:
+  TheCaramelion:
+  - bugfix: Xenochimeras not being able to revive properly
+2024-07-19:
+  Asher-42:
+  - rscadd: 'added in new borg sprites (dullahan) for the following modules: medical,
+      cargo, sec, service, mining, exploration, engineering, janitor, science
+
+      :cl:'
+  FluffMedic:
+  - rscadd: Some new boss esque mobs that can be accessed by messing with a strange
+      machine during an anomalous weather
+  Fracshun:
+  - rscadd: Auto-transfer locations can now have extra destinations beyond the main
+      location.
+  Hunter-Dovetail:
+  - rscadd: VBO_maw20 (canine)
+  - rscadd: VBO_maw21 (draconic)
+  - rscadd: VBO_maw22 (crocodile/alligator)
+  - bugfix: FINALLY clears up (some) background smudges, tidying up maw_16,17,18 and
+      19 (including the stray tongue dot, on maw_18's throat)
+  Kashargul:
+  - rscadd: vore soulcatcher
+  - rscadd: experimental resize, costing 125 Nutrition
+  - code_imp: changes all our UI files to typescript
+  TheCaramelion:
+  - rscadd: Added "Blank Mail Envelope"
+  - rscadd: Added Spawn-Mail proc, staff only.
+  - rscadd: Added Postal Services supply crate
+  - rscadd: Added Blank Mail Envelopes in some points of the station
+  tacoguy7765093:
+  - rscadd: Re-Adds deadman interaction with signalers again.
+  - rscadd: Added anti-job-camping to Anomalys
+  - qol: Bone breaks inside guts are now only audible to people in whisper range,
+      have fun blendering.
+  - image: Zorgoia taur tail sprites have been adjusted.
+2024-07-20:
+  Kashargul:
+  - code_imp: small typescript cleanup and oversighted chomp UI
+  MeepleMuncher:
+  - rscadd: Mushroom head markings
+  TheCaramelion:
+  - maptweak: Adds a coffee machine to the sci break room
+  - maptweak: Moved the copy machine to R&D
+  - maptweak: Removed the medkit and added a nanomed in the sci break room
+  - maptweak: Sci break room gets cups too
+  TheGreatKitsune:
+  - balance: rebalanced how locus difficulty of transport is handled. In the process
+      makes it much harder to accidentally destroy the station with loci
+  purplefoxy27:
+  - rscadd: Adds "Spawn in Belly" verb for ghosts
+  tacoguy7765093:
+  - rscdel: Removes overpowered mecha weapon from MechFabStorage pod
+  - rscdel: Removes the protolathe from MechFabShip pod and replaces it with mecha
+      parts and prebuilt mechs.
+  - rscdel: Removes Locus spawner in Oldhotel.
+  - rscdel: Removed the SciencePod, Sciencepodv2 and Science ship from the superpose
+      pod spawn list.
+  - maptweak: Science PA has been removed from round start.
+  - maptweak: Ore Storage is now in the Cargo Warehouse.

@@ -11,6 +11,7 @@
 	module_type = "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical_large.dmi'
 
+
 //sprite name overwrites
 /datum/robot_sprite/surgical/toiletbot
 	name = "Telemachus - Surgical"
@@ -99,3 +100,28 @@
 	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi'
 	has_vore_belly_sprites = TRUE
 	has_dead_sprite = TRUE
+
+
+/datum/robot_sprite/dogborg/tall/dullahancrisismodule
+	module_type = "Crisis"
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med.dmi'
+	pixel_x = 0
+
+/datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisis
+	name = "Dullahan"
+	sprite_icon_state = "dullahanmed"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+	pixel_x = 0
+
+
+/datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisisalt
+	name = "Dullahan v2"
+	sprite_icon_state = "dullahanmed_alt"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+	pixel_x = 0

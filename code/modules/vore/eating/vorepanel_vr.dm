@@ -19,6 +19,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 														"could_it_be_a_tumby")
 */ //Chomp REMOVE End
 
+#define VORE_RESIZE_COST 125 //CHOMPAdd
+
 /mob
 	var/datum/vore_look/vorePanel
 
@@ -303,9 +305,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"tail_extra_overlay2" = selected.tail_extra_overlay2,
 			"noise_freq" = selected.noise_freq,
 			"item_digest_logs" = selected.item_digest_logs,
-			"private_struggle" = selected.private_struggle,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
+			"private_struggle" = selected.private_struggle,
 		)
 
 		var/list/addons = list()
@@ -354,8 +356,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["autotransfer"]["autotransferchance"] = selected.autotransferchance
 			selected_list["autotransfer"]["autotransferwait"] = selected.autotransferwait
 			selected_list["autotransfer"]["autotransferlocation"] = selected.autotransferlocation
+			selected_list["autotransfer"]["autotransferextralocation"] = selected.autotransferextralocation				//CHOMPAdd
 			selected_list["autotransfer"]["autotransferchance_secondary"] = selected.autotransferchance_secondary		//CHOMPAdd
 			selected_list["autotransfer"]["autotransferlocation_secondary"] = selected.autotransferlocation_secondary	//CHOMPAdd
+			selected_list["autotransfer"]["autotransferextralocation_secondary"] = selected.autotransferextralocation_secondary	//CHOMPAdd
 			selected_list["autotransfer"]["autotransfer_min_amount"] = selected.autotransfer_min_amount
 			selected_list["autotransfer"]["autotransfer_max_amount"] = selected.autotransfer_max_amount
 			//CHOMPAdd auto-transfer flags
@@ -547,9 +551,46 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//CHOMPEdit start, vore sprites
 		"belly_rub_target" = host.belly_rub_target,
 		"vore_sprite_color" = host.vore_sprite_color,
-		"vore_sprite_multiply" = host.vore_sprite_multiply
+		"vore_sprite_multiply" = host.vore_sprite_multiply,
+		//Soulcatcher
+		"soulcatcher_allow_capture" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE,
+		"soulcatcher_allow_transfer" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER,
+		"soulcatcher_allow_deletion" = (global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION_INSTANT))
 		//CHOMPEdit end
 	)
+	//CHOMPAdd Start, Soulcatcher
+	var/list/stored_souls = list()
+	data["soulcatcher"] = null
+	if(host.soulgem)
+		data["soulcatcher"] = list()
+		for(var/soul in host.soulgem.brainmobs)
+			var/list/info = list("displayText" = "[soul]", "value" = "\ref[soul]")
+			stored_souls.Add(list(info))
+		data["soulcatcher"]["active"] = host.soulgem.flag_check(SOULGEM_ACTIVE)
+		data["soulcatcher"]["name"] = host.soulgem.name
+		data["soulcatcher"]["caught_souls"] = stored_souls
+		data["soulcatcher"]["selected_soul"] = host.soulgem.selected_soul
+		data["soulcatcher"]["selected_sfx"] = host.soulgem.linked_belly
+		data["soulcatcher"]["interior_design"] =  host.soulgem.inside_flavor
+		data["soulcatcher"]["catch_self"] = host.soulgem.flag_check(NIF_SC_CATCHING_ME)
+		data["soulcatcher"]["catch_prey"] = host.soulgem.flag_check(NIF_SC_CATCHING_OTHERS)
+		data["soulcatcher"]["ext_hearing"] = host.soulgem.flag_check(NIF_SC_ALLOW_EARS)
+		data["soulcatcher"]["ext_vision"] = host.soulgem.flag_check(NIF_SC_ALLOW_EYES)
+		data["soulcatcher"]["mind_backups"] = host.soulgem.flag_check(NIF_SC_BACKUPS)
+		data["soulcatcher"]["ar_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
+		data["soulcatcher"]["show_vore_sfx"] = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
+	var/nutri_value = 0
+	if(istype(host, /mob/living))
+		var/mob/living/H = host
+		nutri_value = H.nutrition
+	data["abilities"] = list (
+		"nutrition" = nutri_value,
+		"current_size" = host.size_multiplier,
+		"minimum_size" = host.has_large_resize_bounds() ? RESIZE_MINIMUM_DORMS : RESIZE_MINIMUM,
+		"maximum_size" = host.has_large_resize_bounds() ? RESIZE_MAXIMUM_DORMS : RESIZE_MAXIMUM,
+		"resize_cost" = VORE_RESIZE_COST
+	)
+	//CHOMPAdd End, Soulcatcher
 
 	return data
 
@@ -1501,6 +1542,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						if(new_autotransferlocation == new_belly.name)
 							new_belly.autotransferlocation = null
 
+				if(islist(belly_data["autotransferextralocation"]))
+					var/new_autotransferextralocation = belly_data["autotransferextralocation"]
+					if(new_autotransferextralocation)
+						new_belly.autotransferextralocation = list()
+						for(var/extra_belly in new_autotransferextralocation)
+							if(extra_belly in valid_names)
+								new_belly.autotransferextralocation += extra_belly
+
 				if(isnum(belly_data["autotransferchance_secondary"]))
 					var/new_autotransferchance_secondary = belly_data["autotransferchance_secondary"]
 					new_belly.autotransferchance_secondary = sanitize_integer(new_autotransferchance_secondary, 0, 100, initial(new_belly.autotransferchance_secondary))
@@ -1516,6 +1565,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							new_belly.autotransferlocation_secondary = new_autotransferlocation_secondary
 						if(new_autotransferlocation_secondary == new_belly.name)
 							new_belly.autotransferlocation_secondary = null
+
+				if(islist(belly_data["autotransferextralocation_secondary"]))
+					var/new_autotransferextralocation_secondary = belly_data["autotransferextralocation_secondary"]
+					if(new_autotransferextralocation_secondary)
+						new_belly.autotransferextralocation_secondary = list()
+						for(var/extra_belly in new_autotransferextralocation_secondary)
+							if(extra_belly in valid_names)
+								new_belly.autotransferextralocation_secondary += extra_belly
+
 
 				if(isnum(belly_data["autotransfer_min_amount"]))
 					var/new_autotransfer_min_amount = belly_data["autotransfer_min_amount"]
@@ -2108,6 +2166,153 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.no_latejoin_prey_warning_persists = host.no_latejoin_prey_warning_persists
 			unsaved_changes = TRUE
+			return TRUE
+		//Soulcatcher prefs
+		if("toggle_soulcatcher_allow_capture")
+			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_CAPTURE
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_soulcatcher_allow_transfer")
+			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_TRANSFER
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_soulcatcher_allow_deletion")
+			var/current_number = global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION_INSTANT)
+			switch(current_number)
+				if(0)
+					host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION
+				if(1)
+					host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION_INSTANT
+				if(2)
+					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION)
+						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION
+					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT)
+						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION_INSTANT
+			unsaved_changes = TRUE
+			return TRUE
+		if("adjust_own_size")
+			var/new_size = text2num(params["new_mob_size"])
+			new_size = clamp(new_size, RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
+			if(istype(host, /mob/living))
+				var/mob/living/H = host
+				if(H.nutrition >= VORE_RESIZE_COST)
+					H.adjust_nutrition(-VORE_RESIZE_COST)
+					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
+			return TRUE
+		//Soulcatcher settings
+		if("soulcatcher_toggle")
+			host.soulgem.toggle_setting(SOULGEM_ACTIVE)
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_select")
+			host.soulgem.selected_soul = locate(params["selected_soul"])
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_sfx")
+			var/obj/belly = locate(params["selected_belly"])
+			if(istype(belly))
+				host.soulgem.update_linked_belly(belly)
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_release")
+			host.soulgem.release_selected()
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_transfer")
+			host.soulgem.transfer_selected()
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_delete")
+			host.soulgem.delete_selected()
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_self_catching")
+			host.soulgem.toggle_setting(NIF_SC_CATCHING_ME)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_prey_catching")
+			host.soulgem.toggle_setting(NIF_SC_CATCHING_OTHERS)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_ext_hearing")
+			host.soulgem.toggle_setting(NIF_SC_ALLOW_EARS)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_ext_vision")
+			host.soulgem.toggle_setting(NIF_SC_ALLOW_EYES)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_mind_backup")
+			host.soulgem.toggle_setting(NIF_SC_BACKUPS)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_ar_projecting")
+			host.soulgem.toggle_setting(NIF_SC_PROJECTING)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_vore_sfx")
+			host.soulgem.toggle_setting(SOULGEM_SHOW_VORE_SFX)
+			unsaved_changes = TRUE
+			return TRUE
+		if("soulcatcher_release_all")
+			unsaved_changes = TRUE
+			host.soulgem.release_mobs()
+			return TRUE
+		if("soulcatcher_erase_all")
+			unsaved_changes = TRUE
+			host.soulgem.erase_mobs()
+			return TRUE
+		if("soulcatcher_rename")
+			var/new_name = tgui_input_text(host, "Adjust the name of your soulcatcher. Limit 60 chars.", \
+				"New Name", html_decode(host.soulgem.name), 60, prevent_enter = TRUE)
+			if(new_name)
+				unsaved_changes = TRUE
+				host.soulgem.rename(new_name)
+			return TRUE
+		if("soulcatcher_interior_design")
+			var/new_flavor = tgui_input_text(host, "Type what the prey sees after being 'caught'. This will be \
+				printed after an intro set in the capture message to the prey. If you already \
+				have prey, this will be printed to them after the transit message. Limit [MAX_MESSAGE_LEN * 2] chars.", \
+				"VR Environment", html_decode(host.soulgem.inside_flavor), MAX_MESSAGE_LEN * 2, TRUE, prevent_enter = TRUE)
+			if(new_flavor)
+				unsaved_changes = TRUE
+				host.soulgem.adjust_interior(new_flavor)
+			return TRUE
+		if("soulcatcher_capture_message")
+			var/message = tgui_input_text(host, "Type what the prey sees while being 'caught'. This will be \
+				printed before the iterior design to the prey. Limit [MAX_MESSAGE_LEN / 4] chars.", \
+				"VR Capture", html_decode(host.soulgem.capture_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "capture")
+			return TRUE
+		if("soulcatcher_transit_message")
+			var/message = tgui_input_text(host, "Type what the prey sees when you change the interior with them already captured. \
+				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Transit", html_decode(host.soulgem.transit_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "transit")
+			return TRUE
+		if("soulcatcher_release_message")
+			var/message = tgui_input_text(host, "Type what the prey sees when they are released. \
+				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Release", html_decode(host.soulgem.release_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "release")
+			return TRUE
+		if("soulcatcher_transfer_message")
+			var/message = tgui_input_text(host, "Type what the prey sees when they are transfered. \
+				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Transfer", html_decode(host.soulgem.transfer_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "transfer")
+			return TRUE
+		if("soulcatcher_delete_message")
+			var/message = tgui_input_text(host, "Type what the prey sees when they are deleted. \
+				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Transfer", html_decode(host.soulgem.delete_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
+			if(message)
+				unsaved_changes = TRUE
+				host.soulgem.set_custom_message(message, "delete")
 			return TRUE
 		//CHOMPEdit end
 
@@ -3411,6 +3616,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else
 				host.vore_selected.autotransferlocation = choice.name
 			. = TRUE
+		if("b_autotransferextralocation")
+			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation))
+			if(!choice) //They cancelled, no changes
+				return FALSE
+			else if(choice.name in host.vore_selected.autotransferextralocation)
+				host.vore_selected.autotransferextralocation -= choice.name
+			else
+				host.vore_selected.autotransferextralocation += choice.name
+			. = TRUE
 		if("b_autotransferchance_secondary")
 			var/autotransferchance_secondary_input = input(user, "Set secondary belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Secondary Auto-Transfer Chance") as num|null
 			if(!isnull(autotransferchance_secondary_input))
@@ -3424,6 +3638,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation_secondary = null
 			else
 				host.vore_selected.autotransferlocation_secondary = choice.name
+			. = TRUE
+		if("b_autotransferextralocation_secondary")
+			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation_secondary))
+			if(!choice) //They cancelled, no changes
+				return FALSE
+			else if(choice.name in host.vore_selected.autotransferextralocation_secondary)
+				host.vore_selected.autotransferextralocation_secondary -= choice.name
+			else
+				host.vore_selected.autotransferextralocation_secondary += choice.name
 			. = TRUE
 		if("b_autotransfer_whitelist")
 			var/list/menu_list = host.vore_selected.autotransfer_flags_list.Copy()
@@ -3585,6 +3808,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(failure_msg)
 				tgui_alert_async(user,failure_msg,"Error!")
 				return FALSE
+
+			//CHOMPAdd Start, Soulcatcher
+			if(host.soulgem?.linked_belly == host.vore_selected)
+				host.soulgem.linked_belly = null
+			//CHOMPAdd End, Soulcatcher
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
@@ -4006,3 +4234,5 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	if(.)
 		unsaved_changes = TRUE
 //CHOMPedit end
+
+#undef VORE_RESIZE_COST //CHOMPAdd
