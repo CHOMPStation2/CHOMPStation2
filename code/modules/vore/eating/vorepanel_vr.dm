@@ -2227,13 +2227,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("soulcatcher_release_control")
 			host.soulgem.take_control_owner()
 			return TRUE
+		if("soulcatcher_select")
+			host.soulgem.selected_soul = locate(params["selected_soul"])
+			return TRUE
 		//Soulcatcher settings
 		if("soulcatcher_toggle")
 			host.soulgem.toggle_setting(SOULGEM_ACTIVE)
 			unsaved_changes = TRUE
-			return TRUE
-		if("soulcatcher_select")
-			host.soulgem.selected_soul = locate(params["selected_soul"])
 			return TRUE
 		if("soulcatcher_sfx")
 			var/obj/belly = locate(params["selected_belly"])
