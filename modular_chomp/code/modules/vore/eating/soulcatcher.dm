@@ -331,7 +331,7 @@
 		to_chat(CS, span_notice("[transit_message]") + "\n[inside_flavor]")
 
 /obj/soulgem/proc/return_to_body(var/datum/mind)
-	if(!own_mind == mind)
+	if(own_mind != mind)
 		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
 		return
 	var/mob/self = null

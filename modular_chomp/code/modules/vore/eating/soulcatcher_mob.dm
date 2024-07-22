@@ -162,7 +162,7 @@
 	if(eyeobj)
 		to_chat(src, span_warning("You can't do that while AR projecting!"))
 		return
-	if(!gem.own_mind == mind)
+	if(gem.own_mind != mind)
 		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
 		return
 
