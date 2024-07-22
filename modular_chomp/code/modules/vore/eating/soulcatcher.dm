@@ -156,6 +156,7 @@
 		own_mind = brainmob.mind
 		remove_verb(brainmob, /mob/proc/enter_soulcatcher) //No recursive self capturing...
 		add_verb(brainmob, /mob/living/carbon/brain/caught_soul/vore/proc/transfer_self)
+		add_verb(brainmob, /mob/living/carbon/brain/caught_soul/vore/proc/reenter_body)
 
 	//If they have these values, apply them
 	if(isliving(M))
@@ -331,7 +332,7 @@
 		to_chat(CS, span_notice("[transit_message]") + "\n[inside_flavor]")
 
 /obj/soulgem/proc/return_to_body(var/datum/mind)
-	if(!own_mind == mind)
+	if(own_mind != mind)
 		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
 		return
 	var/mob/self = null

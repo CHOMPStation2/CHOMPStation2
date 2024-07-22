@@ -162,7 +162,7 @@
 	if(eyeobj)
 		to_chat(src, span_warning("You can't do that while AR projecting!"))
 		return
-	if(!gem.own_mind == mind)
+	if(gem.own_mind != mind)
 		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
 		return
 
@@ -172,7 +172,7 @@
 	var/obj/item/target = tgui_input_list(src, "Select where you want to store your own mind into.", "Mind Transfer Target", valid_objects)
 	gem.transfer_mob(src, target)
 
-/mob/living/carbon/brain/caught_soul/vore/verb/reenter_body()
+/mob/living/carbon/brain/caught_soul/vore/proc/reenter_body()
 	set name = "Re-enter Body"
 	set desc = "Return to your body after self capturing."
 	set category = "Soulcatcher"
