@@ -1,4 +1,4 @@
-import { useBackend } from '../backend';
+import { useBackend } from '../../backend';
 import {
   Box,
   Button,
@@ -6,15 +6,25 @@ import {
   LabeledList,
   NoticeBox,
   Section,
-} from '../components';
-import { Window } from '../layouts';
+} from '../../components';
+import { Window } from '../../layouts';
 
-export const PrecisionEditor = (props, context) => {
-  const { act, data } = useBackend(context);
+type Data = {
+  screenstate: string;
+  beakerchems: { name: string; displayname: string }[];
+  seedname: string;
+  health: number;
+  plantcolor: string;
+  fruitcolor: string;
+  chems: { name: string; displayname: string }[];
+};
+
+export const PrecisionEditor = (props) => {
+  const { data } = useBackend<Data>();
   // Extract `health` and `color` variables from the `data` object.
   const { screenstate } = data;
   return (
-    <Window resizable>
+    <Window>
       <Window.Content scrollable>
         <Section title="Seed status">
           {screenstate === 'main' && <SeedStatus />}
@@ -26,8 +36,8 @@ export const PrecisionEditor = (props, context) => {
   );
 };
 
-const SeedStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const SeedStatus = (props) => {
+  const { act, data } = useBackend<Data>();
   const { health, plantcolor, fruitcolor, chems, seedname } = data;
 
   return (
@@ -77,8 +87,8 @@ const SeedStatus = (props, context) => {
   );
 };
 
-const ColorEditor = (props, context) => {
-  const { act, data } = useBackend(context);
+const ColorEditor = (props) => {
+  const { act, data } = useBackend<Data>();
   const { plantcolor, fruitcolor } = data;
 
   return (
@@ -101,8 +111,8 @@ const ColorEditor = (props, context) => {
   );
 };
 
-const BiochemEditor = (props, context) => {
-  const { act, data } = useBackend(context);
+const BiochemEditor = (props) => {
+  const { act, data } = useBackend<Data>();
   const { beakerchems, health } = data;
 
   return (
@@ -116,7 +126,7 @@ const BiochemEditor = (props, context) => {
           {'UNVIABLE'}
         </LabeledList.Item>
       )}
-      <NoticeBox info={1} width={19} height={9} ml={1}>
+      <NoticeBox info width={19} height={9} ml={1}>
         {
           'Available chems to choose are based on the reagents stored in the beaker. '
         }
@@ -124,7 +134,7 @@ const BiochemEditor = (props, context) => {
           ' A minimum of 100 units of reagent is required to generate a viable sequence. '
         }
         {'The chosen reagent will be consumed in the process.'}
-        <Box bold={1} mt={1}>
+        <Box bold mt={1}>
           {'This process severely damages genetic integrity.'}
         </Box>
       </NoticeBox>
@@ -147,7 +157,7 @@ const BiochemEditor = (props, context) => {
               ))}
             </LabeledList.Item>
           ) : (
-            <NoticeBox warning={1}>
+            <NoticeBox warning>
               {'WARNING: Genetic integrity of seed is too poor to proceed.'}
             </NoticeBox>
           )}

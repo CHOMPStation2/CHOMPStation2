@@ -1,9 +1,23 @@
-import { useBackend } from '../backend';
-import { Button, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
+import { BooleanLike } from 'common/react';
 
-export const PetrificationInterface = (props, context) => {
-  const { act, data } = useBackend(context);
+import { useBackend } from '../../backend';
+import { Button, LabeledList, Section } from '../../components';
+import { Window } from '../../layouts';
+
+type Data = {
+  material: string;
+  identifier: string;
+  adjective: string;
+  tint: string;
+  t: BooleanLike;
+  target: string;
+  able_to_unpetrify: BooleanLike;
+  discard_clothes: BooleanLike;
+  can_remote: BooleanLike;
+};
+
+export const PetrificationInterface = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const {
     material,
@@ -18,7 +32,7 @@ export const PetrificationInterface = (props, context) => {
   } = data;
 
   return (
-    <Window width={425} height={313} resizable>
+    <Window width={425} height={313}>
       <Window.Content scrollable>
         <Section title="Interface">
           <LabeledList>
