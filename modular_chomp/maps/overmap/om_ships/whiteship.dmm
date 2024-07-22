@@ -27,13 +27,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
 	},
-/obj/structure/shuttle/engine/heater{
-	dir = 4
-	},
-/turf/simulated/wall/thull,
-/area/shuttle/whiteshipOM)
-"bm" = (
-/turf/simulated/shuttle/plating/airless/carry,
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM)
 "bP" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
@@ -60,7 +55,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/shuttle/whiteshipOM)
 "cm" = (
-/obj/machinery/atmospherics/unary/engine/bigger{
+/obj/machinery/atmospherics/unary/engine{
 	dir = 8
 	},
 /turf/simulated/shuttle/plating/airless/carry,
@@ -1123,14 +1118,13 @@
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/whiteshipOM)
 "DW" = (
-/obj/effect/catwalk_plated/dark,
 /obj/machinery/shipsensors{
 	dir = 8
 	},
 /obj/structure/sign/science{
 	pixel_x = 32
 	},
-/turf/template_noop,
+/turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM)
 "Eg" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -2877,13 +2871,13 @@ Eq
 Eq
 sH
 sH
-bm
+cm
 cm
 sH
-bm
+cm
 cm
 sH
-bm
+cm
 cm
 sH
 sH
@@ -2896,13 +2890,13 @@ Ro
 SE
 sH
 sH
-bm
+cm
 cm
 sH
-bm
+cm
 cm
 sH
-bm
+cm
 cm
 sH
 sH
@@ -2912,14 +2906,14 @@ Eq
 Eq
 sH
 oX
-bm
-bm
 oX
-bm
-bm
 oX
-bm
-bm
+oX
+oX
+oX
+oX
+oX
+oX
 oX
 sH
 sH
@@ -2931,14 +2925,14 @@ WL
 sH
 sH
 oX
-bm
-bm
 oX
-bm
-bm
 oX
-bm
-bm
+oX
+oX
+oX
+oX
+oX
+oX
 oX
 sH
 Eq
