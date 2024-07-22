@@ -555,7 +555,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//Soulcatcher
 		"soulcatcher_allow_capture" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE,
 		"soulcatcher_allow_transfer" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER,
-		"soulcatcher_allow_takeover" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKE_OVER,
+		"soulcatcher_allow_takeover" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER,
 		"soulcatcher_allow_deletion" = (global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION_INSTANT))
 		//CHOMPEdit end
 	)
@@ -2176,6 +2176,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		if("toggle_soulcatcher_allow_transfer")
 			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_TRANSFER
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_soulcatcher_allow_takeover")
+			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_TAKEOVER
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_soulcatcher_allow_deletion")

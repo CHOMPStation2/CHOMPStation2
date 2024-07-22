@@ -144,8 +144,8 @@
 	own_mind = null
 
 /obj/soulgem/proc/take_control(var/mob/M)
-	if(!(owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKE_OVER)) return
-	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKE_OVER)) return
+	if(!(owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
 	catch_mob(owner)
 	M.mind.transfer_to(owner)
 	qdel(M)
