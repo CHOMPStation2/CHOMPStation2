@@ -229,6 +229,13 @@
 		return (setting_flags & flag) == flag
 	return setting_flags & flag
 
+// Updates the selected soul after an interaction which rleased, deleted or transferred the previous one
+/obj/soulgem/proc/update_selected_soul()
+	if(brainmobs.len > 1)
+		selected_soul = brainmobs[1]
+	else
+		selected_soul = null
+
 // VORE FX Section
 
 // Updates the vore FX signal links to the new given belly
@@ -377,25 +384,21 @@
 		own_mind = null
 	brainmobs -= M
 	if(M == selected_soul)
-		if(brainmobs.len > 1)
-			selected_soul = brainmobs[1]
-		else
-			selected_soul = null
+		update_selected_soul()
 	qdel(M)
 
 // Transfers a captured soul to another soulcatcher
 /obj/soulgem/proc/transfer_mob_soulcatcher(var/mob/living/carbon/brain/caught_soul/vore/M, var/obj/soulgem/gem)
 	if(is_taken_over()) return
 	if(!istype(M) || !gem) return
+	if(M.mind == own_mind)
+		own_mind = null
 	brainmobs -= M
 	M.gem = gem
 	M.container = gem
 	gem.brainmobs += M
 	if(M == selected_soul)
-		if(brainmobs.len > 1)
-			selected_soul = brainmobs[1]
-		else
-			selected_soul = null
+		update_selected_soul()
 
 // Release section
 
@@ -403,10 +406,7 @@
 /obj/soulgem/proc/release_selected()
 	if(!selected_soul) return
 	if(release_mob(selected_soul))
-		if(brainmobs.len > 1)
-			selected_soul = brainmobs[1]
-		else
-			selected_soul = null
+		update_selected_soul()
 
 // Release all captured souls as ghosts
 /obj/soulgem/proc/release_mobs()
@@ -430,10 +430,7 @@
 /obj/soulgem/proc/delete_selected()
 	if(!selected_soul) return
 	if(delete_mob(selected_soul))
-		if(brainmobs.len > 1)
-			selected_soul = brainmobs[1]
-		else
-			selected_soul = null
+		update_selected_soul()
 
 // Delete all captured mobs
 /obj/soulgem/proc/erase_mobs()
