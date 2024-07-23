@@ -245,7 +245,7 @@
 		selected_soul = null
 
 // Backup toggling
-/obj/soulgem/proc/soulgem_hear()
+/obj/soulgem/proc/soulgem_backup()
 	if(flag_check(NIF_SC_BACKUPS))
 		notify_holder("External backups disabled.")
 	else
