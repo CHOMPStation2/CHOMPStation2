@@ -114,8 +114,8 @@
 	brainmob.stat = 0
 	brainmob.silent = FALSE
 	dead_mob_list -= brainmob
-	brainmob.ext_deaf = flag_check(NIF_SC_ALLOW_EARS)
-	brainmob.ext_blind = flag_check(NIF_SC_ALLOW_EYES)
+	brainmob.ext_deaf = !flag_check(NIF_SC_ALLOW_EARS)
+	brainmob.ext_blind = !flag_check(NIF_SC_ALLOW_EYES)
 	brainmob.add_language(LANGUAGE_GALCOM)
 	brainmobs |= brainmob
 
@@ -247,27 +247,27 @@
 // Backup toggling
 /obj/soulgem/proc/soulgem_backup()
 	if(flag_check(NIF_SC_BACKUPS))
-		notify_holder("External backups disabled.")
-	else
 		notify_holder("External backups enabled.")
+	else
+		notify_holder("External backups disabled.")
 
 // Deaf toggling
 /obj/soulgem/proc/soulgem_hear()
 	for(var/mob/living/carbon/brain/caught_soul/L in brainmobs)
-		L.ext_deaf = flag_check(NIF_SC_ALLOW_EARS)
+		L.ext_deaf = !flag_check(NIF_SC_ALLOW_EARS)
 	if(flag_check(NIF_SC_ALLOW_EARS))
-		notify_holder("External sounds disabled.")
-	else
 		notify_holder("External sounds enabled.")
+	else
+		notify_holder("External sounds disabled.")
 
 // Sight toggling
 /obj/soulgem/proc/soulgem_sight()
 	for(var/mob/living/carbon/brain/caught_soul/L in brainmobs)
-		L.ext_blind = flag_check(NIF_SC_ALLOW_EYES)
+		L.ext_blind = !flag_check(NIF_SC_ALLOW_EYES)
 	if(flag_check(NIF_SC_ALLOW_EYES))
-		notify_holder("External vision disabled.")
-	else
 		notify_holder("External vision enabled.")
+	else
+		notify_holder("External vision disabled.")
 
 // VORE FX Section
 

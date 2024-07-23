@@ -27,19 +27,18 @@
 
 	if(!client)
 		return
-	if(gem.flag_check(SOULGEM_SHOW_VORE_SFX))
-		eye_blind = 0
+
+	if(ext_blind)
+		eye_blind = 5
 		client.screen.Remove(global_hud.whitense)
-		clear_fullscreen("blind")
+		overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
 	else
-		if(ext_blind)
-			eye_blind = 5
-			client.screen.Remove(global_hud.whitense)
-			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
-		else
-			eye_blind = 0
-			clear_fullscreens()
+		eye_blind = 0
+		clear_fullscreen("blind")
+		if(!gem.flag_check(SOULGEM_SHOW_VORE_SFX))
 			client.screen.Add(global_hud.whitense)
+	if(gem.flag_check(SOULGEM_SHOW_VORE_SFX))
+		client.screen.Remove(global_hud.whitense)
 
 // Say proc for captures souls
 /mob/living/carbon/brain/caught_soul/vore/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
