@@ -329,14 +329,16 @@
 	if(parent_mob) return
 
 	//If they're blinded
-	if(ext_blind)
-		eye_blind = 5
-		client.screen.Remove(global_hud.whitense)
-		overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
-	else
-		eye_blind = 0
-		clear_fullscreens()
-		client.screen.Add(global_hud.whitense)
+	if(soulcatcher) // CHOMPEdit Start, needs it's own handling to allow vore_fx
+		if(ext_blind)
+			eye_blind = 5
+			client.screen.Remove(global_hud.whitense)
+			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+		else
+			eye_blind = 0
+			clear_fullscreens()
+			client.screen.Add(global_hud.whitense)
+	//CHOMPEdit End
 
 	//If they're deaf
 	if(ext_deaf)

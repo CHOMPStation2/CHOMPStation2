@@ -19,9 +19,27 @@
 // Handling the automatic transcore backups in a set interval
 /mob/living/carbon/brain/caught_soul/vore/Life()
 	. = ..()
+	if(QDELETED(src))
+		return
 
 	if(!parent_mob && !transient &&(life_tick % 150 == 0) && gem.setting_flags & NIF_SC_BACKUPS)
 		SStranscore.m_backup(mind,0) //Passed 0 means "Don't touch the nif fields on the mind record"
+
+	if(!client)
+		return
+	if(gem.flag_check(SOULGEM_SHOW_VORE_SFX))
+		eye_blind = 0
+		client.screen.Remove(global_hud.whitense)
+		clear_fullscreen("blind")
+	else
+		if(ext_blind)
+			eye_blind = 5
+			client.screen.Remove(global_hud.whitense)
+			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+		else
+			eye_blind = 0
+			clear_fullscreens()
+			client.screen.Add(global_hud.whitense)
 
 // Say proc for captures souls
 /mob/living/carbon/brain/caught_soul/vore/say(var/message, var/datum/language/speaking = null, var/whispering = 0)

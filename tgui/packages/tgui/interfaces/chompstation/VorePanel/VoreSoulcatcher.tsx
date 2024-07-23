@@ -111,88 +111,92 @@ const VoreSoulcatcherSection = (props: {
           </LabeledList.Item>
           {selected_soul ? (
             <LabeledList.Item label="Soul Options">
-              {!taken_over ? (
-                <Box>
-                  <Button
-                    icon="key"
-                    tooltip="Release the currently selected soul as ghosts."
-                    tooltipPosition="bottom"
-                    onClick={() => act('soulcatcher_release')}
-                    selected
-                  >
-                    Release
-                  </Button>
-                  <Button
-                    icon="right-left"
-                    tooltip="Tansfer the currently selected soul into a held or nearby Sleevemate or MMI."
-                    tooltipPosition="bottom"
-                    onClick={() => act('soulcatcher_transfer')}
-                  >
-                    Transfer
-                  </Button>
-                  <Button.Confirm
-                    icon="skull"
-                    tooltip="Delete the currently selected soul if preferences align or release it."
-                    tooltipPosition="bottom"
-                    color="red"
-                    confirmIcon="triangle-exclamation"
-                    onClick={() => act('soulcatcher_delete')}
-                  >
-                    Delete
-                  </Button.Confirm>
-                </Box>
-              ) : (
-                ''
-              )}
-              <Button
-                icon="arrows-left-right"
-                color="yellow"
-                tooltip="Transfer control to the selected soul."
-                tooltipPosition="bottom"
-                onClick={() => act('soulcatcher_transfer_control')}
-              >
-                Transfer Control
-              </Button>
+              <Box>
+                {!taken_over ? (
+                  <>
+                    <Button
+                      icon="key"
+                      tooltip="Release the currently selected soul as ghosts."
+                      tooltipPosition="bottom"
+                      onClick={() => act('soulcatcher_release')}
+                      selected
+                    >
+                      Release
+                    </Button>
+                    <Button
+                      icon="right-left"
+                      tooltip="Tansfer the currently selected soul into a held or nearby Sleevemate or MMI."
+                      tooltipPosition="bottom"
+                      onClick={() => act('soulcatcher_transfer')}
+                    >
+                      Transfer
+                    </Button>
+                    <Button.Confirm
+                      icon="skull"
+                      tooltip="Delete the currently selected soul if preferences align or release it."
+                      tooltipPosition="bottom"
+                      color="red"
+                      confirmIcon="triangle-exclamation"
+                      onClick={() => act('soulcatcher_delete')}
+                    >
+                      Delete
+                    </Button.Confirm>
+                  </>
+                ) : (
+                  ''
+                )}
+                <Button
+                  icon="arrows-left-right"
+                  color="yellow"
+                  tooltip="Transfer control to the selected soul."
+                  tooltipPosition="bottom"
+                  onClick={() => act('soulcatcher_transfer_control')}
+                >
+                  Transfer Control
+                </Button>
+              </Box>
             </LabeledList.Item>
           ) : (
             ''
           )}
           {caught_souls.length ? (
             <LabeledList.Item label="Global Options">
-              {!taken_over ? (
-                <Box>
-                  <Button.Confirm
-                    icon="tornado"
-                    tooltip="Release all captured souls as ghosts."
+              <Box>
+                {!taken_over ? (
+                  <>
+                    <Button.Confirm
+                      icon="tornado"
+                      tooltip="Release all captured souls as ghosts."
+                      tooltipPosition="bottom"
+                      confirmColor="green"
+                      confirmIcon="triangle-exclamation"
+                      onClick={() => act('soulcatcher_release_all')}
+                    >
+                      Release Souls
+                    </Button.Confirm>
+                    <Button.Confirm
+                      icon="eraser"
+                      tooltip="Delete all captured souls if preferences align or release them."
+                      tooltipPosition="bottom"
+                      color="red"
+                      confirmIcon="triangle-exclamation"
+                      onClick={() => act('soulcatcher_erase_all')}
+                    >
+                      Erase Souls
+                    </Button.Confirm>
+                  </>
+                ) : (
+                  <Button
+                    icon="arrow-up-from-bracket"
+                    color="green"
+                    tooltip="Release the body back to the owner."
                     tooltipPosition="bottom"
-                    confirmColor="green"
-                    confirmIcon="triangle-exclamation"
-                    onClick={() => act('soulcatcher_release_all')}
+                    onClick={() => act('soulcatcher_release_control')}
                   >
-                    Release Souls
-                  </Button.Confirm>
-                  <Button.Confirm
-                    icon="eraser"
-                    tooltip="Delete all captured souls if preferences align or release them."
-                    tooltipPosition="bottom"
-                    color="red"
-                    confirmIcon="triangle-exclamation"
-                    onClick={() => act('soulcatcher_erase_all')}
-                  >
-                    Erase Souls
-                  </Button.Confirm>
-                </Box>
-              ) : (
-                <Button
-                  icon="arrow-up-from-bracket"
-                  color="green"
-                  tooltip="Release the body back to the owner."
-                  tooltipPosition="bottom"
-                  onClick={() => act('soulcatcher_release_control')}
-                >
-                  Release Control
-                </Button>
-              )}
+                    Release Control
+                  </Button>
+                )}
+              </Box>
             </LabeledList.Item>
           ) : (
             ''
