@@ -117,7 +117,7 @@
 	brainmob.ext_deaf = !flag_check(NIF_SC_ALLOW_EARS)
 	brainmob.ext_blind = !flag_check(NIF_SC_ALLOW_EYES)
 	brainmob.add_language(LANGUAGE_GALCOM)
-	brainmob.soulcatcher_pref_flags = M.soulcatcher_pref_flags
+	brainmob.soulcatcher_pref_flags = M.client.prefs_vr.soulcatcher_pref_flags
 	brainmobs |= brainmob
 
 	//Put the mind and player into the mob
