@@ -263,7 +263,7 @@
 			if(flag_check(SOULGEM_SHOW_VORE_SFX))
 				show_vore_fx(L, update, severity)
 			else
-				clear_vore_fx()
+				clear_vore_fx(L)
 
 // Function to show the vore fx overlay
 /obj/soulgem/proc/show_vore_fx(var/mob/living/L, var/update, var/severity = 0)
