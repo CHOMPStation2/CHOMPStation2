@@ -88,3 +88,10 @@
       pod spawn list.
   - maptweak: Science PA has been removed from round start.
   - maptweak: Ore Storage is now in the Cargo Warehouse.
+2024-07-23:
+  Kashargul:
+  - bugfix: Anorole camp message
+  - bugfix: caught souls being able to take over the pred's body
+  tacoguy7765093:
+  - maptweak: Moved a couple machines in mechfabship and also has the shutters open
+      by default to prevent lockouts.
