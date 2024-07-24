@@ -335,6 +335,9 @@
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
 	catch_mob(owner)
 	M.mind.transfer_to(owner)
+	brainmobs -= M
+	if(M == selected_soul)
+		update_selected_soul()
 	qdel(M)
 
 // Funtion to test if the owner's body has been taken over
