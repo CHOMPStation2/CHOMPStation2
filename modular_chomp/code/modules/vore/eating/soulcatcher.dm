@@ -117,7 +117,6 @@
 	brainmob.ext_deaf = !flag_check(NIF_SC_ALLOW_EARS)
 	brainmob.ext_blind = !flag_check(NIF_SC_ALLOW_EYES)
 	brainmob.add_language(LANGUAGE_GALCOM)
-	brainmob.soulcatcher_pref_flags = M.soulcatcher_pref_flags
 	brainmobs |= brainmob
 
 	//Put the mind and player into the mob
@@ -409,7 +408,7 @@
 			to_chat(owner, span_notice("You scan yourself to transfer the soul into the [target]!"))
 			to_chat(M, span_notice("[transfer_message]"))
 			mate.get_mind(M)
-	else if(istype(M, /obj/item/device/mmi))
+	else if(istype(target, /obj/item/device/mmi))
 		var/obj/item/device/mmi/mm = target
 		if(!mm.brainmob)
 			to_chat(owner, span_notice("You transfer the soul into the [target]!"))
