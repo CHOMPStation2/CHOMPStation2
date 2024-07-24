@@ -366,7 +366,7 @@ const VoreAbilities = (props) => {
                   }) ||
                   (!is_enabled(nutrition, resize_cost) && { black: [0, 600] })
                 }
-                format={(value) => toFixed(value, 2) + '%'}
+                format={(value: number) => toFixed(value, 2) + '%'}
                 value={current_size * 100}
                 minValue={minimum_size * 100}
                 maxValue={maximum_size * 100}

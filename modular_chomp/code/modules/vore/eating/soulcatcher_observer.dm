@@ -32,9 +32,7 @@
 	var/req_time = world.time
 	gem.notify_holder("Transient mindstate detected, analyzing...")
 	sleep(15) //So if they are typing they get interrupted by sound and message, and don't type over the box
-	var/response = tgui_alert(M,"[src.name] wants to join into your Soulcatcher.","Soulcatcher Request",list("Deny","Allow"), timeout=1 MINUTES)
-
-	if(response != "Allow")
+	if(tgui_alert(M,"[src.name] wants to join into your Soulcatcher.","Soulcatcher Request",list("Deny","Allow"), timeout=1 MINUTES) != "Allow")
 		to_chat(src, span_warning("[M] has denied your request."))
 		return
 
@@ -43,7 +41,7 @@
 		return
 
 	//Final check since we waited for input a couple times.
-	if(M && src && src.key && !M.stat && gem)
+	if(M && src && src.key && !M.stat && gem?.flag_check(SOULGEM_ACTIVE))
 		if(!mind) //No mind yet, aka haven't played in this round.
 			mind = new(key)
 

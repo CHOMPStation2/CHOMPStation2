@@ -105,7 +105,7 @@
 
 // The capture function which transfers the given mob's mind into the soulcatcher
 /obj/soulgem/proc/catch_mob(var/mob/M, var/custom_name)
-	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE)) return
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && !isobserver(M)) return // Bypass pref check for observer join
 	if(!M.mind)	return
 	if(isbrain(owner)) return
 	//Create a new brain mob
@@ -311,6 +311,8 @@
 // Function to clear the vore fx overlay
 /obj/soulgem/proc/clear_vore_fx(var/mob/M)
 	M.clear_fullscreen("belly")
+	if(M.hud_used && !M.hud_used.hud_shown)
+		M.toggle_hud_vis(TRUE)
 
 // Takeover section
 
@@ -336,8 +338,8 @@
 	taken_over_name = null
 
 /obj/soulgem/proc/take_control(var/mob/M)
-	if(!(owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
-	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
+	if(!(owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) || !(owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) || !(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
 	catch_mob(owner, taken_over_name)
 	taken_over_name = M.name
 	M.mind.transfer_to(owner)
@@ -487,7 +489,7 @@
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION))
 		return release_mob(M)
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT))
-		if(!(tgui_alert(M, "Do you really want to allow [owner] to delete you? On decline, you'll be ghosted.", "Allow Deletion", list("No", "Yes")) == "Yes"))
+		if(tgui_alert(M, "Do you really want to allow [owner] to delete you? On decline, you'll be ghosted.", "Allow Deletion", list("No", "Yes"), timeout=1 MINUTES) != "Yes")
 			return release_mob(M)
 	to_chat(M, span_danger("[delete_message]"))
 	brainmobs -= M
