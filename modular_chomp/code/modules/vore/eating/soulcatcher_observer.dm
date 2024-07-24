@@ -17,7 +17,7 @@
 	if(!picked)
 		return
 
-	if(!is_mob(picked))
+	if(!ismob(picked))
 		to_chat(src, span_warning("Target is no mob."))
 		return
 
@@ -32,7 +32,7 @@
 	var/req_time = world.time
 	gem.notify_holder("Transient mindstate detected, analyzing...")
 	sleep(15) //So if they are typing they get interrupted by sound and message, and don't type over the box
-	var/response = tgui_alert(M,"[src.prefs.real_name] wants to join into your Soulcatcher.","Soulcatcher Request",list("Deny","Allow"), timeout=1 MINUTES)
+	var/response = tgui_alert(M,"[src.name] wants to join into your Soulcatcher.","Soulcatcher Request",list("Deny","Allow"), timeout=1 MINUTES)
 
 	if(response != "Allow")
 		to_chat(src, span_warning("[M] has denied your request."))
