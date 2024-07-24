@@ -2172,14 +2172,20 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//Soulcatcher prefs
 		if("toggle_soulcatcher_allow_capture")
 			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_CAPTURE
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.soulcatcher_pref_flags = host.soulcatcher_pref_flags
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_soulcatcher_allow_transfer")
 			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_TRANSFER
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.soulcatcher_pref_flags = host.soulcatcher_pref_flags
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_soulcatcher_allow_takeover")
 			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_TAKEOVER
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.soulcatcher_pref_flags = host.soulcatcher_pref_flags
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_soulcatcher_allow_deletion")
@@ -2194,6 +2200,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION
 					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT)
 						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION_INSTANT
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.soulcatcher_pref_flags = host.soulcatcher_pref_flags
 			unsaved_changes = TRUE
 			return TRUE
 		if("adjust_own_size")
