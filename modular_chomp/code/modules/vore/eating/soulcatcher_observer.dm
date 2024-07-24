@@ -1,6 +1,6 @@
 /mob/observer/dead/verb/soulcatcherjoin()
 	set category = "Ghost.Join"
-	set name = "Join Into Voresoulcatcher"
+	set name = "Join Into Soulcatcher(Vore)"
 	set desc = "Select a player with enabled Soulcatcher to join."
 
 	var/list/valid_players = list()
