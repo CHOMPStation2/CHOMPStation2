@@ -66,7 +66,10 @@
 	if(!soulgem) // Only sanity...
 		return
 	if(soulgem && soulgem.flag_check(SOULGEM_ACTIVE))
-		soulgem.catch_mob(src)
+		var/to_use_custom_name = null
+		if(issilicon(src) || isanimal(src))
+			to_use_custom_name = src.name
+		soulgem.catch_mob(src, to_use_custom_name)
 
 // Speak to the captured souls within the own soulcatcher
 /mob/proc/nsay_vore()

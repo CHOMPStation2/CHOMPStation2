@@ -4,6 +4,7 @@
 	var/mob/living/owner
 	var/datum/own_mind
 	var/obj/belly/linked_belly
+	var/taken_over_name
 
 	var/setting_flags = (NIF_SC_ALLOW_EARS|NIF_SC_ALLOW_EYES|NIF_SC_BACKUPS|NIF_SC_PROJECTING)
 	var/mob/selected_soul = null
@@ -191,9 +192,10 @@
 	if(!self)
 		return
 	if(owner.mind)
-		catch_mob(owner)
+		catch_mob(owner, taken_over_name)
 	self.mind.transfer_to(owner)
 	own_mind = null
+	taken_over_name = null
 	qdel(self)
 
 // Sets the custom messages depending on the input
@@ -316,6 +318,9 @@
 /obj/soulgem/proc/take_control_selected()
 	if(!selected_soul) return
 	take_control(selected_soul)
+	if(owner.mind == own_mind)
+		own_mind = null
+		taken_over_name = null
 
 // Give back control of the body to the owner
 /obj/soulgem/proc/take_control_owner()
@@ -328,11 +333,13 @@
 		return
 	take_control(self)
 	own_mind = null
+	taken_over_name = null
 
 /obj/soulgem/proc/take_control(var/mob/M)
 	if(!(owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
-	catch_mob(owner)
+	catch_mob(owner, taken_over_name)
+	taken_over_name = M.name
 	M.mind.transfer_to(owner)
 	brainmobs -= M
 	if(M == selected_soul)
