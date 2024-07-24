@@ -342,7 +342,7 @@
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) || !(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
 	if(!own_mind)
 		if(issilicon(owner) || isanimal(owner))
-			taken_over_name = M.name
+			taken_over_name = owner.name
 	catch_mob(owner, taken_over_name)
 	taken_over_name = M.name
 	M.mind.transfer_to(owner)
