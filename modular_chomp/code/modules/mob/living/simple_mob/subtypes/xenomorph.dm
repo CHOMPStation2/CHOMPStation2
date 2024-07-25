@@ -172,9 +172,9 @@
 				"bio" = 100,
 				"rad" = 100
 				)
-	grab_resist = 0 // Probability check for a grab attempt to fail. 100 is full immunity.
+	grab_resist = 0
 
-	melee_damage_lower = 5 // Keep the lower/upper values the same for consistent damage, easier to balance than RNG.
+	melee_damage_lower = 5
 	melee_damage_upper = 5
 
 	movement_cooldown = -1
