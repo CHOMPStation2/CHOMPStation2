@@ -25622,8 +25622,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/lockerroom)
 "bzv" = (
-/turf/simulated/wall,
-/area/quartermaster/lockerroom)
+/turf/simulated/wall/r_wall,
+/area/quartermaster/warehouse)
 "bzx" = (
 /obj/machinery/atmospherics/valve/shutoff{
 	name = "Deck 2 Port automatic shutoff valve"
@@ -48795,9 +48795,6 @@
 /obj/structure/railing,
 /turf/simulated/open,
 /area/rnd/research)
-"fvp" = (
-/turf/simulated/wall/r_wall,
-/area/quartermaster/warehouse)
 "fvE" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/tape_roll,
@@ -55249,9 +55246,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
-"iNb" = (
-/turf/simulated/wall/r_wall,
-/area/quartermaster/qm)
 "iNs" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
@@ -56314,9 +56308,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
-"jnJ" = (
-/turf/simulated/wall/r_wall,
-/area/quartermaster/disposal_sort)
 "jnX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -61398,6 +61389,9 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/maintenance/locker)
+"mhi" = (
+/turf/simulated/wall/r_wall,
+/area/quartermaster/disposal_sort)
 "mhL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -66904,7 +66898,7 @@
 /area/maintenance/research)
 "pqw" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/lockerroom)
 "pqA" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -69000,6 +68994,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
+"qxo" = (
+/turf/simulated/wall/r_wall,
+/area/quartermaster/qm)
 "qxp" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -99821,16 +99818,16 @@ sqJ
 tRZ
 bkW
 bkW
-fvp
-fvp
-fvp
-fvp
-fvp
-fvp
-fvp
-fvp
-fvp
-fvp
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
 bZi
 vDJ
 bQe
@@ -100079,7 +100076,7 @@ mtC
 bkY
 aJx
 bkW
-fvp
+bzv
 aOh
 jfp
 xpv
@@ -100346,7 +100343,7 @@ bbK
 bbK
 bdO
 iqj
-fvp
+bzv
 bZi
 sdb
 bLr
@@ -100595,7 +100592,7 @@ bkW
 bkW
 bkW
 bkW
-fvp
+bzv
 dWe
 rHm
 hPV
@@ -100853,8 +100850,8 @@ aIJ
 aIJ
 fZr
 cpW
-fvp
-fvp
+bzv
+bzv
 jUJ
 wqa
 jwK
@@ -100862,7 +100859,7 @@ bGm
 lTy
 bdP
 bEx
-fvp
+bzv
 bHP
 hMM
 bLh
@@ -101120,7 +101117,7 @@ kar
 bAG
 qmn
 bEy
-fvp
+bzv
 bHQ
 bps
 bLi
@@ -101378,7 +101375,7 @@ pWU
 ygs
 qmn
 sxu
-fvp
+bzv
 xNV
 bQq
 bLj
@@ -101628,7 +101625,7 @@ aIM
 eRm
 fdO
 hoa
-fvp
+bzv
 myX
 pog
 qKC
@@ -101636,7 +101633,7 @@ sQm
 ygs
 qmn
 sbU
-fvp
+bzv
 gTx
 bMU
 bLm
@@ -101880,13 +101877,13 @@ bGl
 bGl
 bxq
 bga
-jnJ
-jnJ
-jnJ
-jnJ
-jnJ
-jnJ
-jnJ
+mhi
+mhi
+mhi
+mhi
+mhi
+mhi
+mhi
 jGK
 lYj
 mOu
@@ -101894,7 +101891,7 @@ qsk
 jim
 omq
 xVd
-fvp
+bzv
 gTx
 bpt
 bLm
@@ -102152,7 +102149,7 @@ oTe
 nyl
 viN
 efz
-fvp
+bzv
 pbP
 bMS
 bLm
@@ -102396,8 +102393,8 @@ baV
 vUV
 beq
 bgb
-jnJ
-jnJ
+mhi
+mhi
 hDI
 gpI
 gck
@@ -102410,7 +102407,7 @@ aXQ
 bGn
 bGn
 aje
-fvp
+bzv
 bHL
 bJG
 fDD
@@ -102913,7 +102910,7 @@ beq
 beq
 bgb
 fzk
-jnJ
+mhi
 qlc
 ode
 xYN
@@ -103170,8 +103167,8 @@ vco
 beq
 bgb
 bgb
-jnJ
-jnJ
+mhi
+mhi
 pFE
 rhm
 ydm
@@ -105234,7 +105231,7 @@ bGg
 bJF
 wLi
 bgj
-iNb
+qxo
 nWH
 nWH
 buj
@@ -105492,7 +105489,7 @@ vcN
 bJF
 wLn
 bgk
-iNb
+qxo
 aHk
 blh
 aJB
@@ -105750,7 +105747,7 @@ ayq
 bJF
 aCj
 bgl
-iNb
+qxo
 bjC
 aIN
 aKi
@@ -106008,7 +106005,7 @@ bbh
 bJF
 bet
 bgm
-iNb
+qxo
 yet
 mnB
 eqB
@@ -106266,7 +106263,7 @@ bbi
 bJF
 aCk
 aDF
-iNb
+qxo
 aHl
 aIP
 aKj
@@ -106524,14 +106521,14 @@ bGg
 bzy
 wMO
 bzy
-iNb
-iNb
-iNb
-iNb
-iNb
-iNb
-iNb
-iNb
+qxo
+qxo
+qxo
+qxo
+qxo
+qxo
+qxo
+qxo
 wtP
 pXv
 wtP
@@ -106788,12 +106785,12 @@ lXu
 bzy
 wcF
 wcF
-bzv
+wtP
 buk
 bvG
 bxD
 bzt
-idI
+bDb
 bDc
 lMA
 eXF
@@ -107046,12 +107043,12 @@ aVb
 bzy
 bou
 oEb
-bzv
+wtP
 aQO
 bvH
 nQk
 aYd
-idI
+bDb
 bfo
 bhw
 bGG
@@ -107304,7 +107301,7 @@ hhw
 dyK
 aLZ
 bqu
-bzv
+wtP
 bum
 aST
 aVJ
@@ -107567,7 +107564,7 @@ rii
 bvI
 qoN
 bzu
-idI
+bDb
 idI
 idI
 idI
@@ -107820,12 +107817,12 @@ bzy
 bzy
 bow
 nGq
-bzv
-bzv
-bzv
+wtP
+wtP
+wtP
 gkY
-bzv
-cbx
+wtP
+sEx
 bfr
 hwR
 bGI
