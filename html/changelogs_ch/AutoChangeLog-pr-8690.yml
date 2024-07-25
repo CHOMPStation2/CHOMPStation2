@@ -1,0 +1,5 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - maptweak: "Adds cargo access to the lossy sheet storage in the cargo warehouse."
+  - maptweak: "External cargo walls are reinforced"
