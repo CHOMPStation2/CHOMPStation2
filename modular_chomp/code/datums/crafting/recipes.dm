@@ -61,7 +61,7 @@
 		list(/obj/item/stack/material/cloth = 10),
 		list(/obj/item/stack/material/crystalscale = 2),
 		list(/obj/item/stack/material/resin = 8),
-		/obj/item/weapon/stock_parts/capacitor = 1
+		list(/obj/item/weapon/stock_parts/capacitor = 1)
 	)
 	time = 60
 	category = CAT_CLOTHING
@@ -71,7 +71,7 @@
 	result = /obj/item/clothing/shoes/boots/frost
 	reqs = list(
 		list(/obj/item/stack/material/frostscale = 2),
-		/obj/item/clothing/shoes/boots/winter = 1
+		list(/obj/item/clothing/shoes/boots/winter = 1)
 	)
 	time = 60
 	category = CAT_CLOTHING
