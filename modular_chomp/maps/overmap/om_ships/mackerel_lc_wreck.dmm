@@ -29,7 +29,7 @@
 /obj/machinery/computer/ship/helm{
 	req_one_access = list()
 	},
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "bI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -70,13 +70,13 @@
 "cv" = (
 /obj/machinery/computer/shuttle_control/explore/mackerel_lc_wreck,
 /obj/item/weapon/material/shard,
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "cD" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/item/weapon/material/shard/shrapnel,
 /obj/item/weapon/material/shard/shrapnel,
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "dG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow,
@@ -95,7 +95,7 @@
 	},
 /obj/item/weapon/material/shard,
 /obj/item/weapon/material/shard/shrapnel,
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "ju" = (
 /obj/machinery/light/small/flicker{
@@ -136,7 +136,7 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/item/weapon/material/shard,
 /obj/machinery/light/flicker,
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "lT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -164,7 +164,7 @@
 /obj/item/weapon/tank/oxygen,
 /obj/item/weapon/material/shard,
 /obj/machinery/light,
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "mi" = (
 /obj/structure/shuttle/engine/heater,
@@ -562,7 +562,7 @@
 	icon_state = "door_open";
 	opacity = 0
 	},
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "FS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
@@ -599,7 +599,7 @@
 /area/shuttle/mackerel_lc_wreck)
 "He" = (
 /obj/machinery/computer/ship/sensors,
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "HI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -667,7 +667,7 @@
 "Ly" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/item/weapon/material/shard/shrapnel,
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "LU" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -843,7 +843,7 @@
 	pixel_x = -8;
 	pixel_y = 22
 	},
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "Wj" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -906,7 +906,7 @@
 "Zp" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/landmark/corpse/vintage/pilot,
-/turf/simulated/floor/tiled/techmaint/airless,
+/turf/simulated/floor/tiled/techmaint/turfpack/airless,
 /area/shuttle/mackerel_lc_wreck)
 "ZJ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
