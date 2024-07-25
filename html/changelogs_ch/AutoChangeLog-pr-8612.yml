@@ -1,0 +1,5 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "loadout items now show what jobs they're restricted to/enabled by"
+  - bugfix: "fixed a couple of teshi belted cloaks being under general outerwear rather than in xenowear"
