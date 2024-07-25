@@ -112,11 +112,7 @@ Talon winter coat
 /datum/gear/suit/armor/combat/crusader_explo
 	display_name = "knight, explo"
 	path = /obj/item/clothing/suit/armor/combat/crusader_explo
-<<<<<<< HEAD
 	allowed_roles = list("Explorer","Field Medic","Pathfinder") //CHOMP keep explo
-=======
-	//allowed_roles = list("Explorer","Pathfinder")
->>>>>>> cd6e87a30e... loadout restrictions specified (#16072)
 
 /datum/gear/suit/armor/combat/crusader_explo/FM
 	display_name = "knight, Field Medic"

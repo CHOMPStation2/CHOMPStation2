@@ -402,12 +402,8 @@
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-<<<<<<< HEAD
 	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
-=======
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
 	show_roles = FALSE
->>>>>>> cd6e87a30e... loadout restrictions specified (#16072)
 
 /datum/gear/suit/wintercoat/security/hos
 	display_name = "winter coat, head of security"
@@ -418,22 +414,14 @@
 /datum/gear/suit/wintercoat/medical
 	display_name = "winter coat, medical"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical
-<<<<<<< HEAD
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic") //CHOMP keep explo
-=======
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist")
 	show_roles = FALSE
->>>>>>> cd6e87a30e... loadout restrictions specified (#16072)
 
 /datum/gear/suit/wintercoat/medical/alt
 	display_name = "winter coat, medical alt"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical/alt
-<<<<<<< HEAD
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist","Field Medic") //CHOMP keep explo
-=======
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist")
 	show_roles = FALSE
->>>>>>> cd6e87a30e... loadout restrictions specified (#16072)
 
 /datum/gear/suit/wintercoat/medical/viro
 	display_name = "winter coat, virologist"
@@ -462,12 +450,8 @@
 /datum/gear/suit/wintercoat/medical/sar
 	display_name = "winter coat, search and rescue"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar
-<<<<<<< HEAD
-	allowed_roles = list("Chief Medical Officer", "Field Medic") //CHOMP keep explo
-=======
-	allowed_roles = list("Chief Medical Officer","Paramedic")
+	allowed_roles = list("Chief Medical Officer", "Paramedic", "Field Medic") //CHOMP keep explo
 	show_roles = FALSE
->>>>>>> cd6e87a30e... loadout restrictions specified (#16072)
 
 /datum/gear/suit/wintercoat/science
 	display_name = "winter coat, science"
@@ -664,25 +648,15 @@
 
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
-<<<<<<< HEAD
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command
 	allowed_roles = list("Site Manager","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard") //YW ADDITIONS
+	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot")
-=======
-	path = /obj/item/clothing/suit/storage/snowsuit/command
-	allowed_roles = list("Site Manager","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary")
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
 	show_roles = FALSE
-
-/datum/gear/suit/snowsuit/security
-	display_name = "snowsuit, security"
-	path = /obj/item/clothing/suit/storage/snowsuit/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
-	show_roles = FALSE
->>>>>>> cd6e87a30e... loadout restrictions specified (#16072)
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"

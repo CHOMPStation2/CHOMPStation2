@@ -57,7 +57,6 @@
 	path = /obj/item/clothing/accessory/collar/holo/indigestible
 
 /datum/gear/accessory/holster
-<<<<<<< HEAD
 	display_name = "holster selection (SM, HoP, Sec, Explo)" // CHOMPedit: Clearer description.
 	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Field Medic","Explorer","Pathfinder","Talon Captain","Talon Guard") // CHOMPedit: Readd explo
 
@@ -93,37 +92,6 @@
 
 /datum/gear/accessory/bluespace
 	display_name = "bluespace badge" // CHOMPedit: Anyone can use.
-=======
-	display_name = "holster selection"
-	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Talon Captain","Talon Guard")
-
-/datum/gear/accessory/brown_vest
-	display_name = "webbing, brown"
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
-
-/datum/gear/accessory/black_vest
-	display_name = "webbing, black"
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
-
-/datum/gear/accessory/white_vest
-	display_name = "webbing, white"
-	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Talon Doctor")
-
-/datum/gear/accessory/brown_drop_pouches
-	display_name = "drop pouches, brown"
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
-
-/datum/gear/accessory/black_drop_pouches
-	display_name = "drop pouches, black"
-	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard", "Talon Miner")
-
-/datum/gear/accessory/white_drop_pouches
-	display_name = "drop pouches, white"
-	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Talon Doctor")
-
-/datum/gear/accessory/bluespace
-	display_name = "bluespace badge"
->>>>>>> cd6e87a30e... loadout restrictions specified (#16072)
 	path = /obj/item/clothing/accessory/storage/bluespace
 //	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Field Medic","Explorer","Pathfinder","Shaft Miner","Talon Captain","Talon Doctor","Talon Engineer","Talon Guard","Talon Miner","Pilot") // CHOMPedit: Anyone can use.
 	cost = 2
