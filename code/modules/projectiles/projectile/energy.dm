@@ -195,7 +195,7 @@
 	icon_state = "neurotoxin"
 	damage = 0
 	damage_type = BIOACID
-	agony = 60 //CHOMPedit lowered agony damage
+	agony = 20 //CHOMPedit lowered agony damage
 	check_armour = "bio"
 	armor_penetration = 25	// It's acid-based
 	hitsound_wall = 'sound/weapons/effects/alien_spit_wall.ogg'

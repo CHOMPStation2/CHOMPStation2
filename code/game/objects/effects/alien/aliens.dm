@@ -263,7 +263,8 @@
 /obj/effect/alien/acid
 	name = "acid"
 	desc = "Burbling corrossive stuff. I wouldn't want to touch it."
-	icon_state = "acid"
+	icon = 'modular_chomp/icons/effects/effects.dmi' // CHOMPedit: New acid icon for xenos
+	icon_state = "acid" // CHOMPedit: New acid icon for xenos
 
 	density = FALSE
 	opacity = 0

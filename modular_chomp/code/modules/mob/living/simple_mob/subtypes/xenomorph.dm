@@ -133,31 +133,102 @@
 	..()
 	src.adjust_nutrition(src.max_nutrition)
 	sight |= SEE_MOBS
-
-/mob/living/simple_mob/xeno_ch/Initialize(mapload)
-    .=..()
-    set_footsteps(FOOTSTEP_MOB_CLAW)
+//    set_footsteps(FOOTSTEP_MOB_CLAW)
 
 /mob/living/simple_mob/xeno_ch/Login()
 	. = ..()
 	faction = "neutral"
-	add_verb(src,/mob/living/simple_mob/verb/toggle_speech_sounds) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/verb/toggle_speech_sounds)
+
+//
+/// XENOS ///
+//
+
 
 ////// TIER ONE XENOMORPH CASTES //////
 
-/// XENOMORPH LARVA /// - WIP
 
-/// XENOMORPH DRONE /// - WIP
+/// XENOMORPH LARVA /// - A baby Xenomorph. D'awwh!
 
-/// XENOMORPH DEFENDER /// - WIP
+/mob/living/simple_mob/xeno_ch/larva
+	name = "Xenomorph Larva"
+	desc = "An extraterrestrial hive-based endoparasitoid with a multi-staged life cycle. This one appears to be smaller and more agile than the rest."
+
+	icon = 'modular_chomp/icons/mob/xenomorph/xeno_ch32x32.dmi'
+	icon_dead = "Larva Dead"
+	icon_living = "Larva Moving"
+	icon_rest = "Larva Sleeping"
+	icon_state = "Larva Moving"
+	vis_height = 32
+
+	maxHealth = 50
+	health = 50
+	armor = list(
+				"melee" = 0,
+				"bullet" = 0,
+				"laser" = 0,
+				"energy" = 0,
+				"bomb" = 0,
+				"bio" = 100,
+				"rad" = 100
+				)
+	grab_resist = 0 // Probability check for a grab attempt to fail. 100 is full immunity.
+
+	melee_damage_lower = 5 // Keep the lower/upper values the same for consistent damage, easier to balance than RNG.
+	melee_damage_upper = 5
+
+	movement_cooldown = -1
+
+/mob/living/simple_mob/xeno_ch/larva/Login()
+	. = ..()
+	add_verb(src,/mob/living/proc/hide)
+
+/// XENOMORPH DRONE /// - The Drone's primary role is to build the hive and assist other castes where needed.
+
+/mob/living/simple_mob/xeno_ch/drone
+	name = "Xenomorph Drone"
+	desc = "An extraterrestrial hive-based endoparasitoid with a multi-staged life cycle. This one appears to be smaller and more agile than the rest."
+
+	movement_cooldown = -0.2
+
+	icon_dead = "Drone Dead"
+	icon_living = "Drone Walking"
+	icon_rest = "Drone Sleeping"
+	icon_state = "Drone Walking"
+	pixel_x = -10
+	default_pixel_x = -10
+
+/mob/living/simple_mob/xeno_ch/drone/Login()
+	. = ..()
+	add_verb(src,/mob/living/simple_mob/xeno_ch/proc/xeno_build)
+	add_verb(src,/mob/living/simple_mob/proc/corrosive_acid)
+	build_action.Grant(src)
+	corrode_action.Grant(src)
+
+/// XENOMORPH DEFENDER /// - The Defender serves as a tough bulwark, protecting other, less durable castes.
 
 /// XENOMORPH HUNTER /// - The Hunter's role in the hive is as the name suggests: They aggressively and stealthily hunt down targets, usually lone crewmembers.
 
 /mob/living/simple_mob/xeno_ch/hunter
-	name = "xenomorph hunter"
+	name = "Xenomorph Hunter"
 	desc = "An extraterrestrial hive-based endoparasitoid with a multi-staged life cycle. This one appears to be smaller and more agile than the rest."
 
-	movement_cooldown = -0.2
+	maxHealth = 200
+	health = 200
+	armor = list(
+				"melee" = 25,
+				"bullet" = 30,
+				"laser" = 20,
+				"energy" = 15,
+				"bomb" = 10,
+				"bio" = 100,
+				"rad" = 100
+				)
+
+	movement_cooldown = -0.5
+
+	melee_damage_lower = 18
+	melee_damage_upper = 18
 
 	icon_dead = "Hunter Dead"
 	icon_living = "Hunter Walking"
@@ -172,34 +243,51 @@
 
 /mob/living/simple_mob/xeno_ch/hunter/Login()
 	. = ..()
-	add_verb(src,/mob/living/simple_mob/proc/pounce_toggle) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/pounce_toggle)
+	add_verb(src,/mob/living/proc/ventcrawl)
+	add_verb(src,/mob/living/proc/hide)
 	pounce_action.Grant(src)
 
 /// XENOMORPH SENTINEL /// - The Sentinel serves as a flexible, ranged offensive/defensive caste.
 
 /mob/living/simple_mob/xeno_ch/sentinel
-	name = "xenomorph sentinel"
+	name = "Xenomorph Sentinel"
 	desc = "A chitin-covered bipedal creature with an acrid scent about it."
 
-	movement_cooldown = 1.5
+	maxHealth = 230
+	health = 230
+	armor = list(
+				"melee" = 25,
+				"bullet" = 30,
+				"laser" = 20,
+				"energy" = 15,
+				"bomb" = 10,
+				"bio" = 100,
+				"rad" = 100
+				)
 
-	icon_dead = "aliens_dead"
-	icon_living = "aliens"
-	icon_rest = "aliens_sleep"
-	icon_state = "aliens"
+	melee_damage_lower = 13
+	melee_damage_upper = 13
+
+	icon_dead = "Sentinel Dead"
+	icon_living = "Sentinel Walking"
+	icon_rest = "Sentinel Sleeping"
+	icon_state = "Sentinel Walking"
+	pixel_x = -10
+	default_pixel_x = -10
 
 /mob/living/simple_mob/xeno_ch/sentinel/Login()
 	. = ..()
-	add_verb(src,/mob/living/simple_mob/proc/neurotoxin) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/acidspit) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/corrosive_acid) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/neurotoxin)
+	add_verb(src,/mob/living/simple_mob/proc/acidspit)
+	add_verb(src,/mob/living/simple_mob/proc/corrosive_acid)
 	neurotox_action.Grant(src)
 	acidspit_action.Grant(src)
 	corrode_action.Grant(src)
 
+
 ////// TIER TWO XENOMORPH CASTES //////
+
 
 /// XENOMORPH WARRIOR /// - WIP
 
@@ -207,25 +295,29 @@
 
 /// XENOMORPH HIVELORD /// - WIP
 
+
 ////// TIER THREE XENOMORPH CASTES //////
+
 
 /// XENOMORPH CHARGER /// - WIP
 
 /// XENOMORPH PRAETORIAN /// - WIP
 
+
 ////// HIVE LEADER CASTES //////
+
 
 /// XENOMORPH QUEEN /// - The Queen leads and expands the hive.
 
 /mob/living/simple_mob/xeno_ch/queen
-	name = "xenomorph queen"
+	name = "Xenomorph Queen"
 	desc = "A towering chitin-covered bipedal creature with a rather intimidating aura about them."
 
-	icon_dead = "alienq_dead"
-	icon_living = "alienq"
-	icon_rest = "alienq_sleep"
-	icon_state = "alienq"
-	icon = 'modular_chomp/icons/mob/xenoqueen_64.dmi'
+	icon_dead = "Queen Dead"
+	icon_living = "Queen Walking"
+	icon_rest = "Queen Sleeping"
+	icon_state = "Queen Walking"
+	icon = 'modular_chomp/icons/mob/xenomorph/xeno_ch2x2.dmi'
 	vis_height = 64
 	pixel_x = -16
 	default_pixel_x = -16
@@ -234,29 +326,114 @@
 
 	maxHealth = 600
 	health = 600
+	grab_resist = 100
+	armor = list(
+				"melee" = 35,
+				"bullet" = 40,
+				"laser" = 30,
+				"energy" = 25,
+				"bomb" = 60,
+				"bio" = 100,
+				"rad" = 100
+				)
 
-	movement_cooldown = 2
+	movement_cooldown = 0.5
+
+	melee_damage_lower = 22
+	melee_damage_upper = 22
 
 /mob/living/simple_mob/xeno_ch/queen/Login()
 	. = ..()
-	add_verb(src,/mob/living/simple_mob/proc/neurotoxin) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/acidspit) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/corrosive_acid) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/speen) //CHOMPEdit TGPanel
-	neurotox_action.Grant(src)
+	add_verb(src,/mob/living/simple_mob/proc/acidspit)
+	add_verb(src,/mob/living/simple_mob/proc/corrosive_acid)
+	add_verb(src,/mob/living/simple_mob/proc/speen)
+	add_verb(src,/mob/living/simple_mob/xeno_ch/proc/xeno_build)
+	add_verb(src,/mob/living/simple_mob/proc/lay_egg)
 	acidspit_action.Grant(src)
 	corrode_action.Grant(src)
 	spin_action.Grant(src)
-
-/mob/living/simple_mob/xeno_ch/queen/maid
-	name = "xenomorph maid queen"
-	desc = "A towering chitin-covered bipedal creature with a rather intimidating aura about them... though, they seem to be wearing an interesting outfit."
-
-	icon_dead = "alienqmaid_dead"
-	icon_living = "alienqmaid"
-	icon_rest = "alienqmaid_sleep"
-	icon_state = "alienqmaid"
+	build_action.Grant(src)
 
 /// XENOMORPH KING /// - The King assists the Queen in leading the hive, and is a very powerful combatant in its own right.
 
-/// XENOMORPH DESTROYER /// - Adminbus WIP
+/mob/living/simple_mob/xeno_ch/king
+	name = "Xenomorph King"
+	desc = "A towering chitin-covered bipedal creature with a rather intimidating aura about them."
+
+	icon_dead = "Red King Dead"
+	icon_living = "Red King Walking"
+	icon_rest = "Red King Sleeping"
+	icon_state = "Red King Walking"
+	icon = 'modular_chomp/icons/mob/xenomorph/xeno_ch2x2.dmi'
+	vis_height = 64
+	pixel_x = -16
+	default_pixel_x = -16
+	pixel_y = 0
+	default_pixel_y = 0
+
+	maxHealth = 750
+	health = 750
+	grab_resist = 100
+	armor = list(
+				"melee" = 45,
+				"bullet" = 50,
+				"laser" = 40,
+				"energy" = 25,
+				"bomb" = 80,
+				"bio" = 100,
+				"rad" = 100
+				)
+
+	movement_cooldown = 0.5
+
+	melee_damage_lower = 25
+	melee_damage_upper = 25
+
+/mob/living/simple_mob/xeno_ch/king/Login()
+	. = ..()
+	add_verb(src,/mob/living/simple_mob/proc/corrosive_acid)
+	add_verb(src,/mob/living/simple_mob/proc/speen)
+	add_verb(src,/mob/living/simple_mob/xeno_ch/proc/xeno_build)
+	corrode_action.Grant(src)
+	spin_action.Grant(src)
+	build_action.Grant(src)
+
+/// XENOMORPH DESTROYER /// - Adminbus, do not spawn in under normal circumstances
+
+/mob/living/simple_mob/xeno_ch/destroyer
+	name = "Xenomorph Destroyer"
+	desc = "An absolutely gargantuan, chitin-and-spike-covered creature. Running away seems like a good idea."
+
+	icon_dead = "Destroyer Dead"
+	icon_living = "Destroyer Walking"
+	icon_rest = "Destroyer Sleeping"
+	icon_state = "Destroyer Walking"
+	icon = 'modular_chomp/icons/mob/xenomorph/xeno_ch2x2.dmi'
+	vis_height = 64
+	pixel_x = -16
+	default_pixel_x = -16
+	pixel_y = 0
+	default_pixel_y = 0
+
+	maxHealth = 1000
+	health = 1000
+	grab_resist = 100
+	armor = list(
+				"melee" = 50,
+				"bullet" = 50,
+				"laser" = 50,
+				"energy" = 50,
+				"bomb" = 80,
+				"bio" = 100,
+				"rad" = 100
+				)
+
+	movement_cooldown = 0
+
+	melee_damage_lower = 30
+	melee_damage_upper = 30
+
+/mob/living/simple_mob/xeno_ch/destroyer/Login()
+	. = ..()
+	add_verb(src,/mob/living/simple_mob/proc/speen)
+	spin_action.Grant(src)

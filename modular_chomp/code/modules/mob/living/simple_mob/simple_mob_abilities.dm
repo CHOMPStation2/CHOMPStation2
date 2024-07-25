@@ -353,17 +353,65 @@
 	set desc = "Lay an egg that will eventually hatch into a new xenomorph larva. Life finds a way."
 	set category = "Abilities.Xeno" //CHOMPEdit
 
-	if(!CONFIG_GET(flag/aliens_allowed)) // CHOMPEdit
-		to_chat(src, "You begin to lay an egg, but hesitate. You suspect it isn't allowed.")
-		remove_verb(src,/mob/living/carbon/human/proc/lay_egg) //CHOMPEdit TGPanel
-		return
-
-	if(locate(/obj/structure/ghost_pod/automatic/xenomorph_egg) in get_turf(src))
+	if(locate(/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg) in get_turf(src))
 		to_chat(src, "There's already an egg here.")
 		return
 
 	else
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
-		new /obj/structure/ghost_pod/automatic/xenomorph_egg(loc)
+		new /obj/structure/ghost_pod/ghost_activated/xeno_ch_egg(loc)
 
+	return
+
+/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg
+	name = "Xenomorph Egg"
+	desc = "A disgusting, discoloured egg dripping with clear ooze. Keeping your distance might be wise."
+	description_info = "This contains a growing xenomorph larva, which may wake up at any moment. The larva will be another player, once activated."
+	icon = 'icons/mob/alien.dmi'
+	icon_state = "egg"
+	icon_state_opened = "egg_opened"
+	var/health = 50 //So they can be destroyed by the crew
+	density = FALSE
+	anchored = TRUE
+
+/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg/create_occupant(var/mob/M)
+	var/mob/living/simple_mob/xeno_ch/larva/R = new(get_turf(src))
+	if(M.mind)
+		M.mind.transfer_to(R)
+	// Description for new larva, so they understand what to expect.
+	to_chat(M, "<span class='notice'>You are a <b>Xenomorph Larva</b>, freshly slithered out of their egg to serve the hive.</span>")
+	to_chat(M, "<span class='notice'><b>Be sure to carefully listen to your queen, as xenomorph egg spawns may act different to loner xenomorph spawns.</b></span>")
+	to_chat(M, "<span class='warning'><b>Remember, you are an antagonist. Following our rules must always come before IC orders or instructions given by your Hive Leader. Your goal is to spice up the round, not necessarily win!</b></span>")
+	to_chat(M, "<span class='notice'>Your life for the hive!</span>")
+	R.ckey = M.ckey
+	visible_message("<span class='warning'>\the [src] peels open, and a disgusting, serpentine larva slithers out!</span>")
+	..()
+
+/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg/proc/healthcheck()
+	if(health <=0)
+		visible_message("<span class='warning'>\the [src] splatters everywhere as it cracks open!</span>")
+		playsound(src, 'sound/effects/slime_squish.ogg', 50, 1)
+		qdel(src)
+	return
+
+/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg/attackby(obj/item/W as obj, mob/user as mob)
+	user.setClickCooldown(user.get_attack_speed(W))
+	switch(W.damtype)
+		if("fire")
+			health -= W.force * 1.25 //It really doesn't like fire
+		if("brute")
+			health -= W.force * 0.75 //Bit hard to cut
+	playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
+	healthcheck()
+	..()
+	return
+
+/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg/bullet_act(var/obj/item/projectile/Proj)
+	switch(damtype)
+		if("fire")
+			health -= Proj.damage * 1.5 //It burns!
+		if("brute")
+			health -= Proj.damage //It hurts a bit more then a sharp stick
+	healthcheck()
+	..()
 	return

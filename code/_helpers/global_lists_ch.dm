@@ -89,7 +89,6 @@ var/global/list/vr_mob_tf_options = list(
 	"Sect drone" = /mob/living/simple_mob/vore/sect_drone,
 	"Armalis vox" = /mob/living/simple_mob/vox/armalis,
 	"Xeno hunter" = /mob/living/simple_mob/xeno_ch/hunter,
-	"Xeno queen" = /mob/living/simple_mob/xeno_ch/queen/maid,
 	"Xeno sentinel" = /mob/living/simple_mob/xeno_ch/sentinel,
 	"Space carp" = /mob/living/simple_mob/animal/space/carp,
 	"Jelly blob" = /mob/living/simple_mob/vore/jelly,
