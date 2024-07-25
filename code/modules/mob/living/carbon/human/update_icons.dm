@@ -1114,7 +1114,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		apply_layer(tail_layer)
 		return
 
-	var/species_tail = species.get_tail(src) // Species tail icon_state prefix.
+	var/species_tail = species?.get_tail(src) // Species tail icon_state prefix.
 
 	//This one is actually not that bad I guess.
 	if(species_tail && !(wear_suit && wear_suit.flags_inv & HIDETAIL))

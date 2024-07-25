@@ -18,6 +18,7 @@
 #define LANGUAGE_MOUSE "Mouse"
 
 #define LANGUAGE_SHADEKIN "Shadekin Empathy"
+#define LANGUAGE_LLEILL "Glamour Speak"
 #define LANGUAGE_MARISH "Marish" // CHOMPedit
 
 //CHOMPedit Start - Xeno languages selectable

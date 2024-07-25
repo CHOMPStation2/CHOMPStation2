@@ -19,7 +19,8 @@
 	var/can_defib = 1					//Horrible damage (like beheadings) will prevent defibbing organics.
 	var/active_regen = FALSE //Used for the regenerate proc in human_powers.dm
 	var/active_regen_delay = 300
-	var/last_breath_sound				// Feels weird doing this, but allows us to store the value across proc calls per-mob.
+	var/last_breath_sound				//CHOMPAdd, Feels weird doing this, but allows us to store the value across proc calls per-mob.
+	var/list/teleporters = list() //Used for lleill abilities
 
 /mob/living/carbon/human/Initialize(mapload, var/new_species = null)
 	if(!dna)
