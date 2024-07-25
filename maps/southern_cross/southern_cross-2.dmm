@@ -12636,7 +12636,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/warehouse)
 "aMQ" = (
 /obj/structure/disposalpipe/segment{
@@ -13049,7 +13049,7 @@
 /area/quartermaster/warehouse)
 "aOj" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/warehouse)
 "aOk" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -47880,7 +47880,7 @@
 /area/quartermaster/foyer)
 "eVz" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/cargo)
 "eWt" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -48740,7 +48740,7 @@
 /area/construction/seconddeck/construction1)
 "fub" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/disposal_sort)
 "fur" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -48795,6 +48795,9 @@
 /obj/structure/railing,
 /turf/simulated/open,
 /area/rnd/research)
+"fvp" = (
+/turf/simulated/wall/r_wall,
+/area/quartermaster/warehouse)
 "fvE" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/tape_roll,
@@ -55246,6 +55249,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
+"iNb" = (
+/turf/simulated/wall/r_wall,
+/area/quartermaster/qm)
 "iNs" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
@@ -56308,6 +56314,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"jnJ" = (
+/turf/simulated/wall/r_wall,
+/area/quartermaster/disposal_sort)
 "jnX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -99812,17 +99821,17 @@ sqJ
 tRZ
 bkW
 bkW
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bHL
+fvp
+fvp
+fvp
+fvp
+fvp
+fvp
+fvp
+fvp
+fvp
+fvp
+bZi
 vDJ
 bQe
 bZi
@@ -100070,7 +100079,7 @@ mtC
 bkY
 aJx
 bkW
-bGn
+fvp
 aOh
 jfp
 xpv
@@ -100337,8 +100346,8 @@ bbK
 bbK
 bdO
 iqj
-bGn
-bHL
+fvp
+bZi
 sdb
 bLr
 tCR
@@ -100586,7 +100595,7 @@ bkW
 bkW
 bkW
 bkW
-bGn
+fvp
 dWe
 rHm
 hPV
@@ -100844,8 +100853,8 @@ aIJ
 aIJ
 fZr
 cpW
-bGn
-bGn
+fvp
+fvp
 jUJ
 wqa
 jwK
@@ -100853,7 +100862,7 @@ bGm
 lTy
 bdP
 bEx
-bGn
+fvp
 bHP
 hMM
 bLh
@@ -101111,7 +101120,7 @@ kar
 bAG
 qmn
 bEy
-bGn
+fvp
 bHQ
 bps
 bLi
@@ -101369,7 +101378,7 @@ pWU
 ygs
 qmn
 sxu
-bGn
+fvp
 xNV
 bQq
 bLj
@@ -101619,7 +101628,7 @@ aIM
 eRm
 fdO
 hoa
-bGn
+fvp
 myX
 pog
 qKC
@@ -101627,7 +101636,7 @@ sQm
 ygs
 qmn
 sbU
-bGn
+fvp
 gTx
 bMU
 bLm
@@ -101871,13 +101880,13 @@ bGl
 bGl
 bxq
 bga
-iEa
-iEa
-iEa
-iEa
-iEa
-iEa
-iEa
+jnJ
+jnJ
+jnJ
+jnJ
+jnJ
+jnJ
+jnJ
 jGK
 lYj
 mOu
@@ -101885,7 +101894,7 @@ qsk
 jim
 omq
 xVd
-bGn
+fvp
 gTx
 bpt
 bLm
@@ -102143,7 +102152,7 @@ oTe
 nyl
 viN
 efz
-bGn
+fvp
 pbP
 bMS
 bLm
@@ -102387,8 +102396,8 @@ baV
 vUV
 beq
 bgb
-iEa
-iEa
+jnJ
+jnJ
 hDI
 gpI
 gck
@@ -102401,7 +102410,7 @@ aXQ
 bGn
 bGn
 aje
-bGn
+fvp
 bHL
 bJG
 fDD
@@ -102659,7 +102668,7 @@ aXR
 bam
 bCP
 bGs
-bLs
+bQz
 bHV
 bQu
 qcm
@@ -102904,7 +102913,7 @@ beq
 beq
 bgb
 fzk
-iEa
+jnJ
 qlc
 ode
 xYN
@@ -103161,8 +103170,8 @@ vco
 beq
 bgb
 bgb
-iEa
-iEa
+jnJ
+jnJ
 pFE
 rhm
 ydm
@@ -103175,7 +103184,7 @@ bCU
 bCU
 bCU
 bCU
-bLs
+bQz
 bHV
 bQu
 bLr
@@ -103433,8 +103442,8 @@ bzn
 bAM
 bdQ
 bCU
-bLs
-bLs
+bQz
+bQz
 bJJ
 bLq
 bZi
@@ -103692,7 +103701,7 @@ bAO
 bdS
 ptE
 bko
-bLs
+bQz
 qPw
 bLr
 bZi
@@ -103950,7 +103959,7 @@ bAO
 bCU
 ptE
 bGw
-bLs
+bQz
 qPw
 qjH
 bZi
@@ -104208,8 +104217,8 @@ bAO
 bCU
 ptE
 bkp
-bLs
-bLs
+bQz
+bQz
 bLh
 bZi
 bZi
@@ -104467,7 +104476,7 @@ bCU
 bCU
 bGx
 bHZ
-bLs
+bQz
 icB
 bMS
 bZi
@@ -104725,7 +104734,7 @@ bfm
 oNr
 bLu
 sBv
-bLs
+bQz
 bLr
 bMU
 kgk
@@ -105225,7 +105234,7 @@ bGg
 bJF
 wLi
 bgj
-buj
+iNb
 nWH
 nWH
 buj
@@ -105483,7 +105492,7 @@ vcN
 bJF
 wLn
 bgk
-buj
+iNb
 aHk
 blh
 aJB
@@ -105741,7 +105750,7 @@ ayq
 bJF
 aCj
 bgl
-buj
+iNb
 bjC
 aIN
 aKi
@@ -105999,7 +106008,7 @@ bbh
 bJF
 bet
 bgm
-buj
+iNb
 yet
 mnB
 eqB
@@ -106257,7 +106266,7 @@ bbi
 bJF
 aCk
 aDF
-buj
+iNb
 aHl
 aIP
 aKj
@@ -106515,15 +106524,15 @@ bGg
 bzy
 wMO
 bzy
-buj
-buj
-buj
-buj
-buj
-buj
-buj
-buj
-bzv
+iNb
+iNb
+iNb
+iNb
+iNb
+iNb
+iNb
+iNb
+wtP
 pXv
 wtP
 bDb
