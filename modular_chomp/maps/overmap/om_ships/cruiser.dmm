@@ -5878,7 +5878,9 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/mothership/bridge)
 "ms" = (
-/obj/machinery/computer/ship/helm,
+/obj/machinery/computer/ship/helm{
+	req_one_access = list()
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/mothership/bridge)
 "mu" = (
