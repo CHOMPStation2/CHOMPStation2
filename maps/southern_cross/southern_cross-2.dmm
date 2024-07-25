@@ -12636,7 +12636,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/warehouse)
 "aMQ" = (
 /obj/structure/disposalpipe/segment{
@@ -13049,7 +13049,7 @@
 /area/quartermaster/warehouse)
 "aOj" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/warehouse)
 "aOk" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -25622,8 +25622,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/lockerroom)
 "bzv" = (
-/turf/simulated/wall,
-/area/quartermaster/lockerroom)
+/turf/simulated/wall/r_wall,
+/area/quartermaster/warehouse)
 "bzx" = (
 /obj/machinery/atmospherics/valve/shutoff{
 	name = "Deck 2 Port automatic shutoff valve"
@@ -47880,7 +47880,7 @@
 /area/quartermaster/foyer)
 "eVz" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/cargo)
 "eWt" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -48740,7 +48740,7 @@
 /area/construction/seconddeck/construction1)
 "fub" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/disposal_sort)
 "fur" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -57723,7 +57723,8 @@
 "kar" = (
 /obj/machinery/smartfridge/sheets/persistent_lossy{
 	desc = "An industrial sized storage unit for materials. Following company policy with B-Shift, this particular storage unit will retain a percentage of its material in-between crew transfers.";
-	name = "\improper Persistent Industrial Sheet Storage"
+	name = "\improper Persistent Industrial Sheet Storage";
+	req_one_access = list(31,48)
 	},
 /turf/simulated/wall,
 /area/quartermaster/warehouse)
@@ -61388,6 +61389,9 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/maintenance/locker)
+"mhi" = (
+/turf/simulated/wall/r_wall,
+/area/quartermaster/disposal_sort)
 "mhL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -66894,7 +66898,7 @@
 /area/maintenance/research)
 "pqw" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/quartermaster/lockerroom)
 "pqA" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -68990,6 +68994,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
+"qxo" = (
+/turf/simulated/wall/r_wall,
+/area/quartermaster/qm)
 "qxp" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -99811,17 +99818,17 @@ sqJ
 tRZ
 bkW
 bkW
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bGn
-bHL
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bzv
+bZi
 vDJ
 bQe
 bZi
@@ -100069,7 +100076,7 @@ mtC
 bkY
 aJx
 bkW
-bGn
+bzv
 aOh
 jfp
 xpv
@@ -100336,8 +100343,8 @@ bbK
 bbK
 bdO
 iqj
-bGn
-bHL
+bzv
+bZi
 sdb
 bLr
 tCR
@@ -100585,7 +100592,7 @@ bkW
 bkW
 bkW
 bkW
-bGn
+bzv
 dWe
 rHm
 hPV
@@ -100843,8 +100850,8 @@ aIJ
 aIJ
 fZr
 cpW
-bGn
-bGn
+bzv
+bzv
 jUJ
 wqa
 jwK
@@ -100852,7 +100859,7 @@ bGm
 lTy
 bdP
 bEx
-bGn
+bzv
 bHP
 hMM
 bLh
@@ -101110,7 +101117,7 @@ kar
 bAG
 qmn
 bEy
-bGn
+bzv
 bHQ
 bps
 bLi
@@ -101368,7 +101375,7 @@ pWU
 ygs
 qmn
 sxu
-bGn
+bzv
 xNV
 bQq
 bLj
@@ -101618,7 +101625,7 @@ aIM
 eRm
 fdO
 hoa
-bGn
+bzv
 myX
 pog
 qKC
@@ -101626,7 +101633,7 @@ sQm
 ygs
 qmn
 sbU
-bGn
+bzv
 gTx
 bMU
 bLm
@@ -101870,13 +101877,13 @@ bGl
 bGl
 bxq
 bga
-iEa
-iEa
-iEa
-iEa
-iEa
-iEa
-iEa
+mhi
+mhi
+mhi
+mhi
+mhi
+mhi
+mhi
 jGK
 lYj
 mOu
@@ -101884,7 +101891,7 @@ qsk
 jim
 omq
 xVd
-bGn
+bzv
 gTx
 bpt
 bLm
@@ -102142,7 +102149,7 @@ oTe
 nyl
 viN
 efz
-bGn
+bzv
 pbP
 bMS
 bLm
@@ -102386,8 +102393,8 @@ baV
 vUV
 beq
 bgb
-iEa
-iEa
+mhi
+mhi
 hDI
 gpI
 gck
@@ -102400,7 +102407,7 @@ aXQ
 bGn
 bGn
 aje
-bGn
+bzv
 bHL
 bJG
 fDD
@@ -102658,7 +102665,7 @@ aXR
 bam
 bCP
 bGs
-bLs
+bQz
 bHV
 bQu
 qcm
@@ -102903,7 +102910,7 @@ beq
 beq
 bgb
 fzk
-iEa
+mhi
 qlc
 ode
 xYN
@@ -103160,8 +103167,8 @@ vco
 beq
 bgb
 bgb
-iEa
-iEa
+mhi
+mhi
 pFE
 rhm
 ydm
@@ -103174,7 +103181,7 @@ bCU
 bCU
 bCU
 bCU
-bLs
+bQz
 bHV
 bQu
 bLr
@@ -103432,8 +103439,8 @@ bzn
 bAM
 bdQ
 bCU
-bLs
-bLs
+bQz
+bQz
 bJJ
 bLq
 bZi
@@ -103691,7 +103698,7 @@ bAO
 bdS
 ptE
 bko
-bLs
+bQz
 qPw
 bLr
 bZi
@@ -103949,7 +103956,7 @@ bAO
 bCU
 ptE
 bGw
-bLs
+bQz
 qPw
 qjH
 bZi
@@ -104207,8 +104214,8 @@ bAO
 bCU
 ptE
 bkp
-bLs
-bLs
+bQz
+bQz
 bLh
 bZi
 bZi
@@ -104466,7 +104473,7 @@ bCU
 bCU
 bGx
 bHZ
-bLs
+bQz
 icB
 bMS
 bZi
@@ -104724,7 +104731,7 @@ bfm
 oNr
 bLu
 sBv
-bLs
+bQz
 bLr
 bMU
 kgk
@@ -105224,7 +105231,7 @@ bGg
 bJF
 wLi
 bgj
-buj
+qxo
 nWH
 nWH
 buj
@@ -105482,7 +105489,7 @@ vcN
 bJF
 wLn
 bgk
-buj
+qxo
 aHk
 blh
 aJB
@@ -105740,7 +105747,7 @@ ayq
 bJF
 aCj
 bgl
-buj
+qxo
 bjC
 aIN
 aKi
@@ -105998,7 +106005,7 @@ bbh
 bJF
 bet
 bgm
-buj
+qxo
 yet
 mnB
 eqB
@@ -106256,7 +106263,7 @@ bbi
 bJF
 aCk
 aDF
-buj
+qxo
 aHl
 aIP
 aKj
@@ -106514,15 +106521,15 @@ bGg
 bzy
 wMO
 bzy
-buj
-buj
-buj
-buj
-buj
-buj
-buj
-buj
-bzv
+qxo
+qxo
+qxo
+qxo
+qxo
+qxo
+qxo
+qxo
+wtP
 pXv
 wtP
 bDb
@@ -106778,12 +106785,12 @@ lXu
 bzy
 wcF
 wcF
-bzv
+wtP
 buk
 bvG
 bxD
 bzt
-idI
+bDb
 bDc
 lMA
 eXF
@@ -107036,12 +107043,12 @@ aVb
 bzy
 bou
 oEb
-bzv
+wtP
 aQO
 bvH
 nQk
 aYd
-idI
+bDb
 bfo
 bhw
 bGG
@@ -107294,7 +107301,7 @@ hhw
 dyK
 aLZ
 bqu
-bzv
+wtP
 bum
 aST
 aVJ
@@ -107557,7 +107564,7 @@ rii
 bvI
 qoN
 bzu
-idI
+bDb
 idI
 idI
 idI
@@ -107810,12 +107817,12 @@ bzy
 bzy
 bow
 nGq
-bzv
-bzv
-bzv
+wtP
+wtP
+wtP
 gkY
-bzv
-cbx
+wtP
+sEx
 bfr
 hwR
 bGI
