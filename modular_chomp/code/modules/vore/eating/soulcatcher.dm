@@ -232,6 +232,8 @@
 		soulgem_hear()
 	if(flag & NIF_SC_ALLOW_EYES)
 		soulgem_sight()
+	if(flag & NIF_SC_PROJECTING)
+		soulgem_projecting()
 
 // Checks a single flag, or if all combined flags are true
 /obj/soulgem/proc/flag_check(var/flag, var/match_all = FALSE)
@@ -271,6 +273,13 @@
 	else
 		notify_holder("External vision disabled.")
 
+// Projecting toggling
+/obj/soulgem/proc/soulgem_projecting()
+	if(flag_check(NIF_SC_PROJECTING))
+		notify_holder("AR projecting enabled.")
+	else
+		notify_holder("AR projecting disabled.")
+
 // VORE FX Section
 
 // Updates the vore FX signal links to the new given belly
@@ -299,6 +308,10 @@
 				show_vore_fx(L, update, severity)
 			else
 				clear_vore_fx(L)
+		if(flag_check(SOULGEM_SHOW_VORE_SFX))
+			notify_holder("Interior simulation enabled.")
+		else
+			notify_holder("Interior simulation disabled.")
 
 // Function to show the vore fx overlay
 /obj/soulgem/proc/show_vore_fx(var/mob/living/L, var/update, var/severity = 0)

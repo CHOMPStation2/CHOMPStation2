@@ -10,13 +10,15 @@ export type Data = {
   selected: selectedData;
   prefs: prefData;
   soulcatcher: soulcatcherData | null;
-  abilities: {
-    nutrition: number;
-    current_size: number;
-    minimum_size: number;
-    maximum_size: number;
-    resize_cost: number;
-  };
+  abilities: abilities;
+};
+
+export type abilities = {
+  nutrition: number;
+  current_size: number;
+  minimum_size: number;
+  maximum_size: number;
+  resize_cost: number;
 };
 
 export type hostMob = {
@@ -297,6 +299,7 @@ export type soulcatcherData = {
   interior_design: string;
   catch_self: BooleanLike;
   catch_prey: BooleanLike;
+  catch_ghost: BooleanLike;
   ext_hearing: BooleanLike;
   ext_vision: BooleanLike;
   mind_backups: BooleanLike;

@@ -5,7 +5,7 @@
 
 	var/list/valid_players = list()
 	for(var/mob/player in player_list)
-		if(player.soulgem?.flag_check(SOULGEM_ACTIVE))
+		if(player.soulgem?.flag_check(SOULGEM_ACTIVE | SOULGEM_CATCHING_GHOSTS, TRUE))
 			valid_players += player
 
 	if(!valid_players.len)
@@ -41,7 +41,7 @@
 		return
 
 	//Final check since we waited for input a couple times.
-	if(M && src && src.key && !M.stat && gem?.flag_check(SOULGEM_ACTIVE))
+	if(M && src && src.key && !M.stat && gem?.flag_check(SOULGEM_ACTIVE | SOULGEM_CATCHING_GHOSTS, TRUE))
 		if(!mind) //No mind yet, aka haven't played in this round.
 			mind = new(key)
 

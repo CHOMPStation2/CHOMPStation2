@@ -576,6 +576,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		data["soulcatcher"]["taken_over"] = host.soulgem.is_taken_over()
 		data["soulcatcher"]["catch_self"] = host.soulgem.flag_check(NIF_SC_CATCHING_ME)
 		data["soulcatcher"]["catch_prey"] = host.soulgem.flag_check(NIF_SC_CATCHING_OTHERS)
+		data["soulcatcher"]["catch_ghost"] = host.soulgem.flag_check(SOULGEM_CATCHING_GHOSTS)
 		data["soulcatcher"]["ext_hearing"] = host.soulgem.flag_check(NIF_SC_ALLOW_EARS)
 		data["soulcatcher"]["ext_vision"] = host.soulgem.flag_check(NIF_SC_ALLOW_EYES)
 		data["soulcatcher"]["mind_backups"] = host.soulgem.flag_check(NIF_SC_BACKUPS)
@@ -2255,6 +2256,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		if("toggle_prey_catching")
 			host.soulgem.toggle_setting(NIF_SC_CATCHING_OTHERS)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_ghost_catching")
+			host.soulgem.toggle_setting(SOULGEM_CATCHING_GHOSTS)
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_ext_hearing")
