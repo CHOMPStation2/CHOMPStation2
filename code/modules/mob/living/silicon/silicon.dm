@@ -37,8 +37,7 @@
 	init_id()
 	init_subsystems()
 
-	// CHOMPAdd - Elements :)
-	AddElement(/datum/element/slosh)
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPAdd
 
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src

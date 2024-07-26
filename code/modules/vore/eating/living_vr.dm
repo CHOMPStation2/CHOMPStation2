@@ -88,6 +88,8 @@
 		if(!soulgem)
 			soulgem = new(src)
 		return TRUE
+
+	AddElement(/datum/element/slosh)
 		//CHOMPAdd End
 
 //

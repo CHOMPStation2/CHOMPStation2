@@ -113,6 +113,8 @@
 /datum/element/footstep/proc/play_simplestep(mob/living/source, atom/oldloc, direction, forced, list/old_locs, momentum_change)
 	SIGNAL_HANDLER
 
+	var/volume_multiplier = 0.3
+
 	if(!isturf(source.loc))
 		return
 
@@ -121,7 +123,7 @@
 		return
 
 	if(isfile(footstep_sounds) || istext(footstep_sounds))
-		playsound(source.loc, footstep_sounds, volume, falloff = 1, vary = sound_vary)
+		playsound(source.loc, footstep_sounds, volume * volume_multiplier, falloff = 1, vary = sound_vary)
 		return
 
 	var/turf_footstep = prepared_steps[footstep_type]
