@@ -8,6 +8,10 @@
 	if (!default_language && species_language)
 		default_language = GLOB.all_languages[species_language]
 
+	// CHOMPAdd - Elements :)
+	AddElement(/datum/element/footstep, custom_footstep, 1, -6)
+	AddElement(/datum/element/slosh)
+
 /mob/living/carbon/Life()
 	..()
 

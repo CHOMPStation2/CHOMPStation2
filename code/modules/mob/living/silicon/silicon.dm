@@ -37,7 +37,8 @@
 	init_id()
 	init_subsystems()
 
-	set_slosh() // CHOMPAdd - Slosh element, for VORE
+	// CHOMPAdd - Elements :)
+	AddElement(/datum/element/slosh)
 
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src

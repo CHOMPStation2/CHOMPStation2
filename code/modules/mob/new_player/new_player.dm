@@ -70,7 +70,7 @@
 	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
 
 	output += "<hr>" //ChompADD - a line divider between functional and info buttons
-	
+
 	//nobody uses this feature //WELL WE'RE GONNA
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -760,9 +760,6 @@
 	new_character.force_update_limbs()
 	new_character.update_icons_body()
 	new_character.update_transform() //VOREStation Edit
-
-	new_character.set_footsteps(chosen_species.footstep) // CHOMPEdit
-	new_character.set_slosh() //CHOMPEdit
 
 	new_character.key = key		//Manually transfer the key to log them in
 

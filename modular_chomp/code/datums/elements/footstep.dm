@@ -51,6 +51,8 @@
 			footstep_ret = GLOB.footstep
 		if(FOOTSTEP_MOB_SLIME)
 			footstep_ret = 'modular_chomp/sound/effects/footstep/slime1.ogg'
+		if(FOOTSTEP_MOB_SLITHER)
+			footstep_ret = 'modular_chomp/sound/effects/footstep/crawl1.ogg'
 	return footstep_ret
 
 /datum/element/footstep/Detach(atom/movable/source)
@@ -94,7 +96,14 @@
 	if(steps != 0 && !has_gravity(source)) // don't need to step as often when you hop around
 		return
 
-	. = list(FOOTSTEP_MOB_SHOE = turf.footstep, FOOTSTEP_MOB_BAREFOOT = turf.barefootstep, FOOTSTEP_MOB_HEAVY = turf.heavyfootstep, FOOTSTEP_MOB_CLAW = turf.clawfootstep, STEP_SOUND_PRIORITY = STEP_SOUND_NO_PRIORITY)
+	. = list(
+		FOOTSTEP_MOB_SHOE = turf.footstep,
+		FOOTSTEP_MOB_BAREFOOT = turf.barefootstep,
+		FOOTSTEP_MOB_HEAVY = turf.heavyfootstep,
+		FOOTSTEP_MOB_CLAW = turf.clawfootstep,
+		STEP_SOUND_PRIORITY = STEP_SOUND_NO_PRIORITY
+		)
+
 	var/overriden = SEND_SIGNAL(turf, COMSIG_TURF_PREPARE_STEP_SOUND, .) & FOOTSTEP_OVERRIDEN
 	//The turf has no footstep sound (e.g. open space) and none of the objects on that turf (e.g. catwalks) overrides it
 	if(!overriden && isnull(turf.footstep))
@@ -149,11 +158,13 @@
 			playsound(source.loc, pick(source.species.special_step_sounds), volume, TRUE, falloff = 1, vary = sound_vary)
 		else if (istype(source.species, /datum/species/shapeshifter/promethean))
 			playsound(source.loc, 'modular_chomp/sound/effects/footstep/slime1.ogg', volume, TRUE, falloff = 1)
+		else if (source.custom_footstep == FOOTSTEP_MOB_SLITHER)
+			playsound(source.loc, 'modular_chomp/sound/effects/footstep/crawl1.ogg', 15 * volume, falloff = 1, vary = sound_vary)
 		else
 			var/barefoot_type = prepared_steps[FOOTSTEP_MOB_BAREFOOT]
 			var/bare_footstep_sounds
-			if(source.species.footstep != FOOTSTEP_MOB_HUMAN)
-				bare_footstep_sounds = check_footstep_type(source.species.footstep)
+			if(source.custom_footstep != FOOTSTEP_MOB_HUMAN)
+				bare_footstep_sounds = check_footstep_type(source.custom_footstep)
 			else
 				bare_footstep_sounds = GLOB.barefootstep
 			if(!isnull(barefoot_type) && bare_footstep_sounds[barefoot_type]) // barefoot_type can be null

@@ -196,3 +196,10 @@ var/global/list/vr_mob_spawner_options = list(
 	"Neaera" = /mob/living/carbon/human/neaera,
 	"Stok" = /mob/living/carbon/human/stok
 	)
+
+var/global/list/selectable_footstep = list(
+	"Default" = FOOTSTEP_MOB_HUMAN,
+	"Claw" = FOOTSTEP_MOB_CLAW,
+	"Light Claw" = FOOTSTEP_MOB_TESHARI,
+	"Slither" = FOOTSTEP_MOB_SLITHER,
+)
