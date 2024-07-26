@@ -55,6 +55,7 @@
 
 /mob/proc/init_vore()
 	//Something else made organs, meanwhile.
+	AddElement(/datum/element/slosh) // Sloshy element
 	if(LAZYLEN(vore_organs))
 		//CHOMPAdd Start
 		if(!soulgem)
@@ -88,8 +89,6 @@
 		if(!soulgem)
 			soulgem = new(src)
 		return TRUE
-
-	AddElement(/datum/element/slosh)
 		//CHOMPAdd End
 
 //
