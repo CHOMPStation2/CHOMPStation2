@@ -36,6 +36,7 @@
 				)
 	grab_resist = 50 // Probability check for a grab attempt to fail. 100 is full immunity.
 	damage_fatigue_mult = 0 // No slowdown from low health values.
+	thick_armor = TRUE // Stops injection-type attacks. No dusting xenos with supermatter syringes.
 
 // ENVIRONMENTAL - These should stay at 0. //
 	min_oxy = 0
@@ -151,7 +152,7 @@
 /// XENOMORPH LARVA /// - A baby Xenomorph. D'awwh!
 
 /mob/living/simple_mob/xeno_ch/larva
-	name = "Xenomorph Larva"
+	name = "xenomorph larva"
 	desc = "An extraterrestrial hive-based endoparasitoid with a multi-staged life cycle. This one appears to be smaller and more agile than the rest."
 
 	icon = 'modular_chomp/icons/mob/xenomorph/xeno_ch32x32.dmi'
@@ -186,7 +187,7 @@
 /// XENOMORPH DRONE /// - The Drone's primary role is to build the hive and assist other castes where needed.
 
 /mob/living/simple_mob/xeno_ch/drone
-	name = "Xenomorph Drone"
+	name = "xenomorph drone"
 	desc = "An extraterrestrial hive-based endoparasitoid with a multi-staged life cycle. This one appears to be smaller and more agile than the rest."
 
 	movement_cooldown = -0.2
@@ -210,7 +211,7 @@
 /// XENOMORPH HUNTER /// - The Hunter's role in the hive is as the name suggests: They aggressively and stealthily hunt down targets, usually lone crewmembers.
 
 /mob/living/simple_mob/xeno_ch/hunter
-	name = "Xenomorph Hunter"
+	name = "xenomorph hunter"
 	desc = "An extraterrestrial hive-based endoparasitoid with a multi-staged life cycle. This one appears to be smaller and more agile than the rest."
 
 	maxHealth = 200
@@ -251,7 +252,7 @@
 /// XENOMORPH SENTINEL /// - The Sentinel serves as a flexible, ranged offensive/defensive caste.
 
 /mob/living/simple_mob/xeno_ch/sentinel
-	name = "Xenomorph Sentinel"
+	name = "xenomorph sentinel"
 	desc = "A chitin-covered bipedal creature with an acrid scent about it."
 
 	maxHealth = 230
@@ -310,8 +311,8 @@
 /// XENOMORPH QUEEN /// - The Queen leads and expands the hive.
 
 /mob/living/simple_mob/xeno_ch/queen
-	name = "Xenomorph Queen"
-	desc = "A towering chitin-covered bipedal creature with a rather intimidating aura about them."
+	name = "xenomorph queen"
+	desc = "An extraterrestrial hive-based endoparasitoid with a multi-staged life cycle. Covered in glossy-black chitin, gargantuan in size and bearing an enormous crest, there's no doubt that this is the Queen of the hive."
 
 	icon_dead = "Queen Dead"
 	icon_living = "Queen Walking"
@@ -357,8 +358,8 @@
 /// XENOMORPH KING /// - The King assists the Queen in leading the hive, and is a very powerful combatant in its own right.
 
 /mob/living/simple_mob/xeno_ch/king
-	name = "Xenomorph King"
-	desc = "A towering chitin-covered bipedal creature with a rather intimidating aura about them."
+	name = "xenomorph king"
+	desc = "An extraterrestrial hive-based endoparasitoid with a multi-staged life cycle."
 
 	icon_dead = "Red King Dead"
 	icon_living = "Red King Walking"
@@ -401,7 +402,7 @@
 /// XENOMORPH DESTROYER /// - Adminbus, do not spawn in under normal circumstances
 
 /mob/living/simple_mob/xeno_ch/destroyer
-	name = "Xenomorph Destroyer"
+	name = "xenomorph destroyer"
 	desc = "An absolutely gargantuan, chitin-and-spike-covered creature. Running away seems like a good idea."
 
 	icon_dead = "Destroyer Dead"

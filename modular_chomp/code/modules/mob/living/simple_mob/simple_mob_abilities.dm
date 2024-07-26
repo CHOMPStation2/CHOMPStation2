@@ -353,28 +353,31 @@
 	set desc = "Lay an egg that will eventually hatch into a new xenomorph larva. Life finds a way."
 	set category = "Abilities.Xeno" //CHOMPEdit
 
-	if(locate(/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg) in get_turf(src))
+	if(locate(/obj/structure/ghost_pod/automatic/xeno_ch_egg) in get_turf(src))
 		to_chat(src, "There's already an egg here.")
 		return
 
 	else
 		visible_message("<span class='alium'><B>[src] has laid an egg!</B></span>")
-		new /obj/structure/ghost_pod/ghost_activated/xeno_ch_egg(loc)
+		new /obj/structure/ghost_pod/automatic/xeno_ch_egg(loc)
 
 	return
 
-/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg
-	name = "Xenomorph Egg"
+/obj/structure/ghost_pod/automatic/xeno_ch_egg
+	name = "xenomorph egg"
 	desc = "A disgusting, discoloured egg dripping with clear ooze. Keeping your distance might be wise."
 	description_info = "This contains a growing xenomorph larva, which may wake up at any moment. The larva will be another player, once activated."
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "egg"
 	icon_state_opened = "egg_opened"
 	var/health = 50 //So they can be destroyed by the crew
+	ghost_query_type = /datum/ghost_query/xenomorph_larva
+	delay_to_self_open = 5 MINUTES // Time for egg to mature.
+	delay_to_try_again = 1 MINUTES // Delay between each ghost ping for players with xenomorph antag enabled.
 	density = FALSE
 	anchored = TRUE
 
-/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg/create_occupant(var/mob/M)
+/obj/structure/ghost_pod/automatic/xeno_ch_egg/create_occupant(var/mob/M)
 	var/mob/living/simple_mob/xeno_ch/larva/R = new(get_turf(src))
 	if(M.mind)
 		M.mind.transfer_to(R)
@@ -387,14 +390,14 @@
 	visible_message("<span class='warning'>\the [src] peels open, and a disgusting, serpentine larva slithers out!</span>")
 	..()
 
-/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg/proc/healthcheck()
+/obj/structure/ghost_pod/automatic/xeno_ch_egg/proc/healthcheck()
 	if(health <=0)
 		visible_message("<span class='warning'>\the [src] splatters everywhere as it cracks open!</span>")
 		playsound(src, 'sound/effects/slime_squish.ogg', 50, 1)
 		qdel(src)
 	return
 
-/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg/attackby(obj/item/W as obj, mob/user as mob)
+/obj/structure/ghost_pod/automatic/xeno_ch_egg/attackby(obj/item/W as obj, mob/user as mob)
 	user.setClickCooldown(user.get_attack_speed(W))
 	switch(W.damtype)
 		if("fire")
@@ -406,7 +409,7 @@
 	..()
 	return
 
-/obj/structure/ghost_pod/ghost_activated/xeno_ch_egg/bullet_act(var/obj/item/projectile/Proj)
+/obj/structure/ghost_pod/automatic/xeno_ch_egg/bullet_act(var/obj/item/projectile/Proj)
 	switch(damtype)
 		if("fire")
 			health -= Proj.damage * 1.5 //It burns!

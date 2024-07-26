@@ -11,7 +11,7 @@
 		return FALSE
 	. = TRUE
 
-	var/targetLoc = get_step(src, dir)
+	var/targetLoc = (loc)
 
 	if(iswall(targetLoc))
 		targetLoc = get_turf(src)
@@ -110,6 +110,9 @@
 /datum/action/innate/xeno_ch/xeno_spin/Activate()
 	parent_xeno.speen()
 
+/datum/action/innate/xeno_ch/larval_egg
+	name = "Lay Larval Egg"
+	button_icon_state = "template"
 
 /mob/living/simple_mob/xeno_ch/proc/grantallactions()
 	build_action.Grant(src)
@@ -118,8 +121,4 @@
 	corrode_action.Grant(src)
 	pounce_action.Grant(src)
 	spin_action.Grant(src)
-
-/datum/action/innate/xeno_ch/larval_egg
-	name = "Lay Larval Egg"
-	button_icon_state = "template"
 
