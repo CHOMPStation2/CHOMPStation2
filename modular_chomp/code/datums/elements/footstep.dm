@@ -132,7 +132,7 @@
 /datum/element/footstep/proc/play_humanstep(mob/living/carbon/human/source, atom/oldloc, direction, forced, list/old_locs, momentum_change)
 	SIGNAL_HANDLER
 
-	var/volume_multiplier = 0.5
+	var/volume_multiplier = 0.3
 	var/range_adjustment = 0
 
 	var/list/prepared_steps = prepare_step(source)
