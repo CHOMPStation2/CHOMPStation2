@@ -95,3 +95,18 @@
   tacoguy7765093:
   - maptweak: Moved a couple machines in mechfabship and also has the shutters open
       by default to prevent lockouts.
+2024-07-26:
+  CHOMPStation2:
+  - rscadd: loadout items now show what jobs they're restricted to/enabled by
+  - bugfix: fixed a couple of teshi belted cloaks being under general outerwear rather
+      than in xenowear
+  FluffMedic:
+  - bugfix: properly implents marble/sandstone crafting
+  - bugfix: re-adds missing cost to items that were missing it
+  Kashargul:
+  - balance: removes some boards from outsider circuit printer
+  tacoguy7765093:
+  - maptweak: Adds cargo access to the lossy sheet storage in the cargo warehouse.
+  - maptweak: External cargo walls are reinforced
+  - rscadd: Added a way for staff to spawn in overmap ships mid round via the Map-Template-Place-NewZ
+      verb.
