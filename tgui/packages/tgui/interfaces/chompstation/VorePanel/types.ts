@@ -299,6 +299,7 @@ export type soulcatcherData = {
   interior_design: string;
   catch_self: BooleanLike;
   catch_prey: BooleanLike;
+  catch_drain: BooleanLike;
   catch_ghost: BooleanLike;
   ext_hearing: BooleanLike;
   ext_vision: BooleanLike;

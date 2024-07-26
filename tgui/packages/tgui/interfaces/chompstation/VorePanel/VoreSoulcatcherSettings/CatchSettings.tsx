@@ -6,11 +6,12 @@ import { Box, Button, LabeledList } from '../../../../components';
 export const CatchSettings = (props: {
   catch_self: BooleanLike;
   catch_prey: BooleanLike;
+  catch_drain: BooleanLike;
   catch_ghost: BooleanLike;
 }) => {
   const { act } = useBackend();
 
-  const { catch_self, catch_prey, catch_ghost } = props;
+  const { catch_self, catch_prey, catch_drain, catch_ghost } = props;
 
   return (
     <LabeledList.Item label="Catch Settings">
@@ -38,6 +39,18 @@ export const CatchSettings = (props: {
           onClick={() => act('toggle_prey_catching')}
         >
           Catch Prey
+        </Button>
+        <Button
+          icon="person-falling-burst"
+          tooltip={
+            (catch_drain ? 'Allow' : 'Disallow') +
+            ' catching prey with draining abilities like "Succubus Drain" (Lethal).'
+          }
+          tooltipPosition="bottom"
+          color={catch_drain ? 'green' : 'red'}
+          onClick={() => act('toggle_drain_catching')}
+        >
+          Catch Drain
         </Button>
         <Button
           icon="ghost"

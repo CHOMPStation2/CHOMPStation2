@@ -56,6 +56,7 @@ const VoreSoulcatcherSection = (props: {
     interior_design,
     catch_self,
     catch_prey,
+    catch_drain,
     catch_ghost,
     ext_hearing,
     ext_vision,
@@ -117,6 +118,7 @@ const VoreSoulcatcherSection = (props: {
           <CatchSettings
             catch_self={catch_self}
             catch_prey={catch_prey}
+            catch_drain={catch_drain}
             catch_ghost={catch_ghost}
           />
           <GlobalSettings
