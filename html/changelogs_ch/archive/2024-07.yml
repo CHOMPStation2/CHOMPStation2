@@ -110,3 +110,15 @@
   - maptweak: External cargo walls are reinforced
   - rscadd: Added a way for staff to spawn in overmap ships mid round via the Map-Template-Place-NewZ
       verb.
+2024-07-27:
+  Kashargul:
+  - rscadd: An option to give body control to any stored soul within the vore soulcatcher
+      as long as prefs align
+  - rscadd: succubus drain (lethal) can soulcatch
+  - rscadd: ghost join for vore soulcatcher
+  - bugfix: priority issues for vore soulcatcher overlays when blind and vorefx were
+      enabled causing toggling effects (blind can now blind on vorefx)
+  - bugfix: applying vore soulcatcher preference settings right away not working
+  - bugfix: transfer to MMIs from vore soulcatcher
+  - bugfix: captured simple_mobs and silicons not always showing their custom name
+      in vore soulscatchers
