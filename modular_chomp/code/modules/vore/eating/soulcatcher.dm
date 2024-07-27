@@ -4,6 +4,7 @@
 	var/mob/living/owner
 	var/datum/own_mind
 	var/obj/belly/linked_belly
+	var/taken_over_name
 
 	var/setting_flags = (NIF_SC_ALLOW_EARS|NIF_SC_ALLOW_EYES|NIF_SC_BACKUPS|NIF_SC_PROJECTING)
 	var/mob/selected_soul = null
@@ -15,6 +16,7 @@
 	var/transfer_message = "Transfer Message"
 	var/delete_message = "Delete Message"
 
+// Append the vars to save to our savefile list
 /obj/soulgem/vars_to_save()
 	var/list/saving = list (
 		"setting_flags",
@@ -28,11 +30,13 @@
 	)
 	return ..() + saving
 
+// Load the vars_to_save from the savefile
 /obj/soulgem/Initialize()
 	. = ..()
 	if(ismob(loc))
 		owner = loc
 
+// Store the vars_to_save into the save file
 /obj/soulgem/deserialize(list/data)
 	. = ..()
 	for(var/obj/belly in owner.vore_organs)
@@ -41,6 +45,7 @@
 			return
 	linked_belly = null
 
+// Allows to transfer the soulgem to the given mob
 /obj/soulgem/proc/transfer_self(var/mob/target)
 	QDEL_NULL(target.soulgem)
 	owner.soulgem = null
@@ -48,6 +53,7 @@
 	owner = target
 	target.soulgem = src
 
+// Cleaning up our refs before deletion
 /obj/soulgem/Destroy()
 	owner = null
 	selected_soul = null
@@ -58,12 +64,14 @@
 		linked_belly = null
 	..()
 
+// Sends messages to the owner of the soulcatcher
 /obj/soulgem/proc/notify_holder(var/message)
 	to_chat(owner, span_nif("<b>[name]</b> displays, \"<span class='notice nif'>[message]</span>\""))
 
 	for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 		to_chat(CS, span_nif("<b>[name]</b> displays, \"<span class='notice nif'>[message]</span>\""))
 
+// Forwards the speech of captured souls
 /obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, var/mob/eyeobj)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
@@ -79,6 +87,7 @@
 
 	log_nsay(message, owner.real_name, sender)
 
+// Forwards the emotes of captured souls
 /obj/soulgem/proc/use_emote(var/message, var/mob/living/sender, var/mob/eyeobj)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
@@ -94,43 +103,9 @@
 
 	log_nme(message, owner.real_name,sender)
 
-/obj/soulgem/proc/update_linked_belly(var/obj/belly, var/skip_unreg = FALSE)
-	if(!belly && linked_belly)
-		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
-		linked_belly = null
-		return
-	if(!isbelly(belly))
-		return
-	if(!linked_belly)
-		linked_belly = belly
-		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
-		return
-	if(belly != linked_belly)
-		if(!skip_unreg)
-			UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
-		linked_belly = belly
-		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
-
-/obj/soulgem/proc/soulgem_vfx(var/update, var/severity = 0)
-	if(linked_belly)
-		for(var/mob/living/L in brainmobs)
-			if(flag_check(SOULGEM_SHOW_VORE_SFX))
-				show_vore_fx(L, update, severity)
-			else
-				clear_vore_fx()
-
-/obj/soulgem/proc/show_vore_fx(var/mob/living/L, var/update, var/severity = 0)
-	if(!linked_belly || !flag_check(SOULGEM_SHOW_VORE_SFX))
-		return
-	if(!istype(L) || L.eyeobj)
-		return
-	linked_belly.vore_fx(L, update, severity)
-
-/obj/soulgem/proc/clear_vore_fx(var/mob/M)
-	M.clear_fullscreen("belly")
-
+// The capture function which transfers the given mob's mind into the soulcatcher
 /obj/soulgem/proc/catch_mob(var/mob/M, var/custom_name)
-	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE)) return
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && !isobserver(M)) return // Bypass pref check for observer join
 	if(!M.mind)	return
 	if(isbrain(owner)) return
 	//Create a new brain mob
@@ -140,6 +115,8 @@
 	brainmob.stat = 0
 	brainmob.silent = FALSE
 	dead_mob_list -= brainmob
+	brainmob.ext_deaf = !flag_check(NIF_SC_ALLOW_EARS)
+	brainmob.ext_blind = !flag_check(NIF_SC_ALLOW_EYES)
 	brainmob.add_language(LANGUAGE_GALCOM)
 	brainmobs |= brainmob
 
@@ -149,7 +126,7 @@
 	brainmob.real_name = custom_name ? custom_name : brainmob.mind.name
 
 	//If we caught our owner, special settings.
-	if(M == owner)
+	if(M == owner && !own_mind) // Need some more sanity if we allow takeover
 		brainmob.ext_deaf = FALSE
 		brainmob.ext_blind = FALSE
 		brainmob.parent_mob = TRUE
@@ -194,25 +171,206 @@
 	show_vore_fx(brainmob, TRUE)
 	return TRUE
 
-/obj/soulgem/proc/release_selected()
-	release_mob(selected_soul)
+// Allows to adjust the interior of the soulcatcher
+/obj/soulgem/proc/adjust_interior(var/new_flavor)
+	new_flavor = sanitize(new_flavor, MAX_MESSAGE_LEN * 2)
+	inside_flavor = new_flavor
+	notify_holder("Updating environment...")
+	for(var/mob/living/carbon/brain/caught_soul/vore/CS as anything in brainmobs)
+		to_chat(CS, span_notice("[transit_message]") + "\n[inside_flavor]")
+
+// Allows to return to the body after being captured by one's own soulcatcher
+/obj/soulgem/proc/return_to_body(var/datum/mind)
+	if(own_mind != mind)
+		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
+		return
+	var/mob/self = null
+	for(var/mob/mob in brainmobs)
+		if(mob.mind == mind)
+			self = mob
+			break
+	if(!self)
+		return
+	if(owner.mind)
+		catch_mob(owner, taken_over_name)
+	self.mind.transfer_to(owner)
+	own_mind = null
+	taken_over_name = null
+	qdel(self)
+
+// Sets the custom messages depending on the input
+/obj/soulgem/proc/set_custom_message(var/message, var/target)
+	message = sanitize(message, MAX_MESSAGE_LEN / 4)
+	switch(target)
+		if("capture")
+			capture_message = message
+		if("transit")
+			transit_message = message
+		if("release")
+			release_message = message
+		if("transfer")
+			transfer_message = message
+		if("delete")
+			delete_message = message
+
+// Allows to rename the soulgem
+/obj/soulgem/proc/rename(var/new_name)
+	if(length(new_name) < 3 || length(new_name) > 60)
+		to_chat(owner, span_warning("Your soulcatcher's name needs to be between 3 and 60 characters long!"))
+		return
+	new_name = sanitize(new_name, 60)
+	name = new_name
+
+// Toggles the given flag
+/obj/soulgem/proc/toggle_setting(var/flag)
+	setting_flags ^= flag
+	if(flag & SOULGEM_SHOW_VORE_SFX)
+		soulgem_vfx(TRUE)
+	if(flag & NIF_SC_BACKUPS)
+		soulgem_backup()
+	if(flag & NIF_SC_ALLOW_EARS)
+		soulgem_hear()
+	if(flag & NIF_SC_ALLOW_EYES)
+		soulgem_sight()
+	if(flag & NIF_SC_PROJECTING)
+		soulgem_projecting()
+
+// Checks a single flag, or if all combined flags are true
+/obj/soulgem/proc/flag_check(var/flag, var/match_all = FALSE)
+	if(match_all)
+		return (setting_flags & flag) == flag
+	return setting_flags & flag
+
+// Updates the selected soul after an interaction which rleased, deleted or transferred the previous one
+/obj/soulgem/proc/update_selected_soul()
 	if(brainmobs.len > 1)
 		selected_soul = brainmobs[1]
 	else
 		selected_soul = null
 
-/obj/soulgem/proc/release_mobs()
-	selected_soul = null
-	if(!brainmobs.len) return
-	for(var/mob/M in brainmobs)
-		release_mob(M)
+// Backup toggling
+/obj/soulgem/proc/soulgem_backup()
+	if(flag_check(NIF_SC_BACKUPS))
+		notify_holder("External backups enabled.")
+	else
+		notify_holder("External backups disabled.")
 
-/obj/soulgem/proc/release_mob(var/mob/M)
-	to_chat(M, span_notice("[release_message]"))
+// Deaf toggling
+/obj/soulgem/proc/soulgem_hear()
+	for(var/mob/living/carbon/brain/caught_soul/L in brainmobs)
+		L.ext_deaf = !flag_check(NIF_SC_ALLOW_EARS)
+	if(flag_check(NIF_SC_ALLOW_EARS))
+		notify_holder("External sounds enabled.")
+	else
+		notify_holder("External sounds disabled.")
+
+// Sight toggling
+/obj/soulgem/proc/soulgem_sight()
+	for(var/mob/living/carbon/brain/caught_soul/L in brainmobs)
+		L.ext_blind = !flag_check(NIF_SC_ALLOW_EYES)
+	if(flag_check(NIF_SC_ALLOW_EYES))
+		notify_holder("External vision enabled.")
+	else
+		notify_holder("External vision disabled.")
+
+// Projecting toggling
+/obj/soulgem/proc/soulgem_projecting()
+	if(flag_check(NIF_SC_PROJECTING))
+		notify_holder("AR projecting enabled.")
+	else
+		notify_holder("AR projecting disabled.")
+
+// VORE FX Section
+
+// Updates the vore FX signal links to the new given belly
+/obj/soulgem/proc/update_linked_belly(var/obj/belly, var/skip_unreg = FALSE)
+	if(!belly && linked_belly)
+		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
+		linked_belly = null
+		return
+	if(!isbelly(belly))
+		return
+	if(!linked_belly)
+		linked_belly = belly
+		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
+		return
+	if(belly != linked_belly)
+		if(!skip_unreg)
+			UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
+		linked_belly = belly
+		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
+
+// Handles the vore fx updates for the captured souls
+/obj/soulgem/proc/soulgem_vfx(var/update, var/severity = 0)
+	if(linked_belly)
+		for(var/mob/living/L in brainmobs)
+			if(flag_check(SOULGEM_SHOW_VORE_SFX))
+				show_vore_fx(L, update, severity)
+			else
+				clear_vore_fx(L)
+		if(flag_check(SOULGEM_SHOW_VORE_SFX))
+			notify_holder("Interior simulation enabled.")
+		else
+			notify_holder("Interior simulation disabled.")
+
+// Function to show the vore fx overlay
+/obj/soulgem/proc/show_vore_fx(var/mob/living/L, var/update, var/severity = 0)
+	if(!linked_belly || !flag_check(SOULGEM_SHOW_VORE_SFX))
+		return
+	if(!istype(L) || L.eyeobj)
+		return
+	linked_belly.vore_fx(L, update, severity)
+
+// Function to clear the vore fx overlay
+/obj/soulgem/proc/clear_vore_fx(var/mob/M)
+	M.clear_fullscreen("belly")
+	if(M.hud_used && !M.hud_used.hud_shown)
+		M.toggle_hud_vis(TRUE)
+
+// Takeover section
+
+// Give control of the body to the current selected soul
+/obj/soulgem/proc/take_control_selected()
+	if(!selected_soul) return
+	take_control(selected_soul)
+	if(owner.mind == own_mind)
+		own_mind = null
+		taken_over_name = null
+
+// Give back control of the body to the owner
+/obj/soulgem/proc/take_control_owner()
+	var/mob/self = null
+	for(var/mob/mob in brainmobs)
+		if(mob.mind == own_mind)
+			self = mob
+			break
+	if(!self)
+		return
+	take_control(self)
+	own_mind = null
+	taken_over_name = null
+
+/obj/soulgem/proc/take_control(var/mob/M)
+	if(!(owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) || !(owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) || !(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER)) return
+	if(!own_mind)
+		if(issilicon(owner) || isanimal(owner))
+			taken_over_name = owner.name
+	catch_mob(owner, taken_over_name)
+	taken_over_name = M.name
+	M.mind.transfer_to(owner)
 	brainmobs -= M
-	M.ghostize(FALSE)
+	if(M == selected_soul)
+		update_selected_soul()
 	qdel(M)
 
+// Funtion to test if the owner's body has been taken over
+/obj/soulgem/proc/is_taken_over()
+	return (own_mind && owner.mind != own_mind)
+
+// Transfer section to transfer captured souls
+
+// Returns nearby,valid transfer locations as a list
 /obj/soulgem/proc/find_transfer_objects()
 	var/list/valid_trasfer_objects = list(
 		/obj/item/device/sleevemate,
@@ -244,6 +402,7 @@
 		return
 	return valid_objects
 
+// Transfer the selected soul to either a valid object or another soulcatcher
 /obj/soulgem/proc/transfer_selected()
 	if(!selected_soul) return
 	if(!(selected_soul.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER)) return
@@ -264,7 +423,9 @@
 		return
 	transfer_mob(selected_soul, target)
 
+// Transfers a captured soul to a valid object (sleevemate, mmi)
 /obj/soulgem/proc/transfer_mob(var/mob/M, var/obj/target)
+	if(is_taken_over()) return
 	if(!M || !target) return
 	if(istype(target, /obj/item/device/sleevemate))
 		var/obj/item/device/sleevemate/mate = target
@@ -272,7 +433,7 @@
 			to_chat(owner, span_notice("You scan yourself to transfer the soul into the [target]!"))
 			to_chat(M, span_notice("[transfer_message]"))
 			mate.get_mind(M)
-	else if(istype(M, /obj/item/device/mmi))
+	else if(istype(target, /obj/item/device/mmi))
 		var/obj/item/device/mmi/mm = target
 		if(!mm.brainmob)
 			to_chat(owner, span_notice("You transfer the soul into the [target]!"))
@@ -284,96 +445,71 @@
 		own_mind = null
 	brainmobs -= M
 	if(M == selected_soul)
-		if(brainmobs.len > 1)
-			selected_soul = brainmobs[1]
-		else
-			selected_soul = null
+		update_selected_soul()
 	qdel(M)
 
+// Transfers a captured soul to another soulcatcher
 /obj/soulgem/proc/transfer_mob_soulcatcher(var/mob/living/carbon/brain/caught_soul/vore/M, var/obj/soulgem/gem)
+	if(is_taken_over()) return
 	if(!istype(M) || !gem) return
+	if(M.mind == own_mind)
+		own_mind = null
 	brainmobs -= M
 	M.gem = gem
 	M.container = gem
 	gem.brainmobs += M
+	if(M == selected_soul)
+		update_selected_soul()
 
+// Release section
+
+// Release the selected soul as a ghost
+/obj/soulgem/proc/release_selected()
+	if(!selected_soul) return
+	if(release_mob(selected_soul))
+		update_selected_soul()
+
+// Release all captured souls as ghosts
+/obj/soulgem/proc/release_mobs()
+	selected_soul = null
+	if(!brainmobs.len) return
+	for(var/mob/M in brainmobs)
+		release_mob(M)
+
+// Proc to release the soul as ghost, returns TRUE on success
+/obj/soulgem/proc/release_mob(var/mob/M)
+	if(is_taken_over()) return FALSE
+	to_chat(M, span_notice("[release_message]"))
+	brainmobs -= M
+	M.ghostize(FALSE)
+	qdel(M)
+	return TRUE
+
+// Delete section to delete captured souls from the soulcatcher
+
+// Delete the selected mob
 /obj/soulgem/proc/delete_selected()
 	if(!selected_soul) return
-	delete_mob(selected_soul)
-	if(brainmobs.len > 1)
-		selected_soul = brainmobs[1]
-	else
-		selected_soul = null
+	if(delete_mob(selected_soul))
+		update_selected_soul()
 
+// Delete all captured mobs
 /obj/soulgem/proc/erase_mobs()
 	if(!brainmobs.len) return
 	for(var/mob/M in brainmobs)
 		delete_mob(M)
 
+// The function handling the actual delete, returns TRUE on success
 /obj/soulgem/proc/delete_mob(var/mob/M)
+	if(is_taken_over()) return FALSE
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION))
-		release_mob(M)
-		return
+		return release_mob(M)
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT))
-		if(!(tgui_alert(M, "Do you really want to allow [owner] to delete you? On decline, you'll be ghosted.", "Allow Deletion", list("No", "Yes")) == "Yes"))
-			release_mob(M)
-			return
+		if(tgui_alert(M, "Do you really want to allow [owner] to delete you? On decline, you'll be ghosted.", "Allow Deletion", list("No", "Yes"), timeout=1 MINUTES) != "Yes")
+			return release_mob(M)
 	to_chat(M, span_danger("[delete_message]"))
 	brainmobs -= M
 	var/mob/observer/dead/ghost = M.ghostize(FALSE)
 	ghost.abandon_mob()
 	qdel(M)
-
-/obj/soulgem/proc/adjust_interior(var/new_flavor)
-	new_flavor = sanitize(new_flavor, MAX_MESSAGE_LEN * 2)
-	inside_flavor = new_flavor
-	notify_holder("Updating environment...")
-	for(var/mob/living/carbon/brain/caught_soul/vore/CS as anything in brainmobs)
-		to_chat(CS, span_notice("[transit_message]") + "\n[inside_flavor]")
-
-/obj/soulgem/proc/return_to_body(var/datum/mind)
-	if(own_mind != mind)
-		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
-		return
-	var/mob/self = null
-	for(var/mob/mob in brainmobs)
-		if(mob.mind == mind)
-			self = mob
-			break
-	if(!self)
-		return
-	self.mind.transfer_to(owner)
-	own_mind = null
-	qdel(self)
-
-/obj/soulgem/proc/set_custom_message(var/message, var/target)
-	message = sanitize(message, MAX_MESSAGE_LEN / 4)
-	switch(target)
-		if("capture")
-			capture_message = message
-		if("transit")
-			transit_message = message
-		if("release")
-			release_message = message
-		if("transfer")
-			transfer_message = message
-		if("delete")
-			delete_message = message
-
-/obj/soulgem/proc/rename(var/new_name)
-	if(length(new_name) < 3 || length(new_name) > 60)
-		to_chat(owner, span_warning("Your soulcatcher's name needs to be between 3 and 60 characters long!"))
-		return
-	new_name = sanitize(new_name, 60)
-	name = new_name
-
-/obj/soulgem/proc/toggle_setting(var/flag)
-	setting_flags ^= flag
-	if(flag & SOULGEM_SHOW_VORE_SFX)
-		soulgem_vfx(TRUE)
-
-// Checks a single flag, or an entire list if all elements in it are true
-/obj/soulgem/proc/flag_check(var/flag, var/match_all = FALSE)
-	if(match_all)
-		return (setting_flags & flag) == flag
-	return setting_flags & flag
+	return TRUE

@@ -10,13 +10,15 @@ export type Data = {
   selected: selectedData;
   prefs: prefData;
   soulcatcher: soulcatcherData | null;
-  abilities: {
-    nutrition: number;
-    current_size: number;
-    minimum_size: number;
-    maximum_size: number;
-    resize_cost: number;
-  };
+  abilities: abilities;
+};
+
+export type abilities = {
+  nutrition: number;
+  current_size: number;
+  minimum_size: number;
+  maximum_size: number;
+  resize_cost: number;
 };
 
 export type hostMob = {
@@ -285,6 +287,7 @@ export type prefData = {
   soulcatcher_allow_capture: BooleanLike;
   soulcatcher_allow_transfer: BooleanLike;
   soulcatcher_allow_deletion: BooleanLike;
+  soulcatcher_allow_takeover: BooleanLike;
 };
 
 export type soulcatcherData = {
@@ -296,11 +299,14 @@ export type soulcatcherData = {
   interior_design: string;
   catch_self: BooleanLike;
   catch_prey: BooleanLike;
+  catch_drain: BooleanLike;
+  catch_ghost: BooleanLike;
   ext_hearing: BooleanLike;
   ext_vision: BooleanLike;
   mind_backups: BooleanLike;
   ar_projecting: BooleanLike;
   show_vore_sfx: BooleanLike;
+  taken_over: BooleanLike;
 };
 
 export type DropdownEntry = {
@@ -347,6 +353,7 @@ export type localPrefs = {
   no_spawnprey_warning: preferenceData;
   soulcatcher: preferenceData;
   soulcatcher_transfer: preferenceData;
+  soulcatcher_takeover: preferenceData;
   soulcatcher_delete: preferenceData;
 };
 

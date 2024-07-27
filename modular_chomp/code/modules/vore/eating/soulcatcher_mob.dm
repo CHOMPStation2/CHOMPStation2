@@ -4,6 +4,7 @@
 
 	var/obj/soulgem/gem
 
+// Cleaning up the refs during deletion
 /mob/living/carbon/brain/caught_soul/vore/Destroy()
 	if(gem)
 		gem.notify_holder("Mind unloaded: [name]")
@@ -15,26 +16,48 @@
 	container = null
 	return ..()
 
+// Handling the automatic transcore backups in a set interval
 /mob/living/carbon/brain/caught_soul/vore/Life()
 	. = ..()
+	if(QDELETED(src))
+		return
 
 	if(!parent_mob && !transient &&(life_tick % 150 == 0) && gem.setting_flags & NIF_SC_BACKUPS)
 		SStranscore.m_backup(mind,0) //Passed 0 means "Don't touch the nif fields on the mind record"
 
+	if(!client)
+		return
+
+	if(ext_blind)
+		eye_blind = 5
+		client.screen.Remove(global_hud.whitense)
+		overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+	else
+		eye_blind = 0
+		clear_fullscreen("blind")
+		if(!gem.flag_check(SOULGEM_SHOW_VORE_SFX))
+			client.screen.Add(global_hud.whitense)
+	if(gem.flag_check(SOULGEM_SHOW_VORE_SFX))
+		client.screen.Remove(global_hud.whitense)
+
+// Say proc for captures souls
 /mob/living/carbon/brain/caught_soul/vore/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
 	if(silent) return FALSE
 	gem.use_speech(message, src, eyeobj)
 
+// Emote proc for captured souls
 /mob/living/carbon/brain/caught_soul/vore/custom_emote(var/m_type, var/message)
 	if(silent) return FALSE
 	gem.use_emote(message,src,eyeobj)
 
+// Resist override, only returning a message that one is stuck for now
 /mob/living/carbon/brain/caught_soul/vore/resist()
 	set name = "Resist"
 	set category = "IC.Game" //CHOMPEdit
 
 	to_chat(src, span_warning("There's no way out! You're stuck inside your predator."))
 
+// Allows the predator to enter their own soulcatcher
 /mob/proc/enter_soulcatcher()
 	set name = "Enter Soulcatcher"
 	set desc = "Enter your own Soulcatcher."
@@ -43,8 +66,12 @@
 	if(!soulgem) // Only sanity...
 		return
 	if(soulgem && soulgem.flag_check(SOULGEM_ACTIVE))
-		soulgem.catch_mob(src)
+		var/to_use_custom_name = null
+		if(issilicon(src) || isanimal(src))
+			to_use_custom_name = src.name
+		soulgem.catch_mob(src, to_use_custom_name)
 
+// Speak to the captured souls within the own soulcatcher
 /mob/proc/nsay_vore()
 	set name = "NSay Vore"
 	set desc = "Speak into your Soulcatcher."
@@ -67,6 +94,7 @@
 		var/sane_message = sanitize(message)
 		gem.use_speech(sane_message, src)
 
+// Emote to the captured souls within the soulcatcher
 /mob/proc/nme_vore()
 	set name = "NMe Vore"
 	set desc = "Emote into your Soulcatcher."
@@ -90,6 +118,7 @@
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
 
+// AR project as captured soul
 /mob/living/carbon/brain/caught_soul/vore/ar_project()
 	set name = "AR Project"
 	set desc = "Project your form into Augmented Reality for those around your predator with the appearance of your loaded character."
@@ -110,6 +139,7 @@
 	gem.notify_holder("[src] now AR projecting.")
 	gem.clear_vore_fx(src)
 
+// Jump to the owner as AR projection
 /mob/living/carbon/brain/caught_soul/vore/jump_to_owner()
 	set name = "Jump to Owner"
 	set desc = "Jump your projection back to the owner of the soulcatcher you're inside."
@@ -121,6 +151,7 @@
 
 	eyeobj.forceMove(get_turf(gem))
 
+// End AR projecting and return to the soulcatcher containing the soul
 /mob/living/carbon/brain/caught_soul/vore/reenter_soulcatcher()
 	set name = "Re-enter Soulcatcher"
 	set desc = "Leave AR projection and drop back into the soulcatcher."
@@ -154,6 +185,7 @@
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
 
+// Allows the captured owner to transfer themselves to valid nearby objects
 /mob/living/carbon/brain/caught_soul/vore/proc/transfer_self()
 	set name = "Transfer Self"
 	set desc = "Transfer youself while being in your own soulcatcher into a nearby Sleevemate or MMI."
@@ -172,6 +204,7 @@
 	var/obj/item/target = tgui_input_list(src, "Select where you want to store your own mind into.", "Mind Transfer Target", valid_objects)
 	gem.transfer_mob(src, target)
 
+// Allows the owner to reenter the body after being caught or having given away control
 /mob/living/carbon/brain/caught_soul/vore/proc/reenter_body()
 	set name = "Re-enter Body"
 	set desc = "Return to your body after self capturing."
