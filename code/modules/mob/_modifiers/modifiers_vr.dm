@@ -80,7 +80,7 @@
 		if(water_floor.depth > 1) //CHOMPAdd Start
 			holder.alpha = 50
 		else
-			holder.alpha = 128 //CHOMPAdd End
+			holder.alpha = 65 //CHOMPAdd End
 	else
 		expire(silent = FALSE)
 
