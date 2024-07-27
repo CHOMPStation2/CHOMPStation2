@@ -174,9 +174,9 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		else
 			M.Scale(desired_scale_x, desired_scale_y)
-			if(isnull(resting_dir))
-				resting_dir = pick(FALSE, TRUE)
-			if(resting_dir)
+			if(isnull(rest_dir))
+				rest_dir = pick(FALSE, TRUE)
+			if(rest_dir)
 				M.Translate((1 / desired_scale_x * -4) + (desired_scale_x * cent_offset), 0)
 				M.Turn(-90)
 			else

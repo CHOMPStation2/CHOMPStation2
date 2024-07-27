@@ -22,6 +22,8 @@
 	var/last_breath_sound				//CHOMPAdd, Feels weird doing this, but allows us to store the value across proc calls per-mob.
 	var/list/teleporters = list() //Used for lleill abilities
 
+	var/rest_dir = 0					//To lay down in a specific direction
+
 /mob/living/carbon/human/Initialize(mapload, var/new_species = null)
 	if(!dna)
 		dna = new /datum/dna(null)
@@ -1790,3 +1792,19 @@
 
 /mob/living/carbon/human/get_mob_riding_slots()
 	return list(back, head, wear_suit)
+
+/mob/living/carbon/human/verb/lay_down_left()
+	set name = "Rest-Left"
+
+	rest_dir = 1 // CHOMPEdit
+	resting = !resting
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
+	update_canmove()
+
+/mob/living/carbon/human/verb/lay_down_right()
+	set name = "Rest-Right"
+
+	rest_dir = 0 // CHOMPEdit
+	resting = !resting
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
+	update_canmove()
