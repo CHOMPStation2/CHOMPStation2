@@ -55,9 +55,9 @@
 	set name = "Flip Resting Direction"
 	set category = "Abilities.General"
 	set desc = "Switch your horizontal direction while prone."
-	if(isnull(resting_dir))
-		resting_dir = FALSE
-	resting_dir = !resting_dir
+	if(isnull(rest_dir))
+		rest_dir = FALSE
+	rest_dir = !rest_dir
 	update_transform(TRUE)
 
 /mob/living/carbon/human/proc/synth_reag_toggle()

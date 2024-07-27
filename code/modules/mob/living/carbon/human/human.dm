@@ -1795,7 +1795,7 @@
 /mob/living/carbon/human/verb/lay_down_left()
 	set name = "Rest-Left"
 
-	rest_dir = -1
+	rest_dir = 1 // CHOMPEdit
 	resting = !resting
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
 	update_canmove()
@@ -1803,7 +1803,7 @@
 /mob/living/carbon/human/verb/lay_down_right()
 	set name = "Rest-Right"
 
-	rest_dir = 1
+	rest_dir = 0 // CHOMPEdit
 	resting = !resting
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
 	update_canmove()
