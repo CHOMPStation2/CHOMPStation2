@@ -591,10 +591,13 @@
 	return ..()
 
 /mob/living/bot/Logout()
-	no_vore = TRUE // ROBOT VORE
 	release_vore_contents()
+<<<<<<< HEAD
 	init_vore() // ROBOT VORE
 	remove_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
+=======
+	verbs -= /mob/proc/insidePanel
+>>>>>>> e9d1868c41... edits some no_vore usage (#16131)
 	no_vore = TRUE
 	devourable = FALSE
 	feeding = FALSE
