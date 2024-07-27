@@ -18,6 +18,7 @@
 /mob/living/carbon/human
 	var/in_stasis = 0
 	var/heartbeat = 0
+	var/chemical_darksight = 0
 
 /mob/living/carbon/human/Life()
 	set invisibility = 0
@@ -1223,6 +1224,13 @@
 		if(prob(belch_prob))
 			src.emote("belch")
 	//CHOMPEdit End
+
+	if((CE_DARKSIGHT in chem_effects) && chemical_darksight == 0)
+		recalculate_vis()
+		chemical_darksight = 1
+	if(!(CE_DARKSIGHT in chem_effects) && chemical_darksight == 1)
+		recalculate_vis()
+		chemical_darksight = 0
 
 	// TODO: stomach and bloodstream organ.
 	if(!isSynthetic())
