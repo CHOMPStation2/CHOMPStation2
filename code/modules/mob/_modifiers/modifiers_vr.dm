@@ -77,10 +77,10 @@
 		var/turf/simulated/floor/water/water_floor = holder.loc
 		if(water_floor.depth < 1) //You're not in deep enough water anymore.
 			expire(silent = FALSE)
-		if(water_floor.depth > 1)
+		if(water_floor.depth > 1) //CHOMPAdd Start
 			holder.alpha = 50
 		else
-			holder.alpha = 128
+			holder.alpha = 128 //CHOMPAdd End
 	else
 		expire(silent = FALSE)
 
