@@ -11,7 +11,7 @@
 /mob/living/carbon/human/proc/lleill_invisibility()
 	set name = "Invisibility (75)"
 	set desc = "Change your appearance to match your surroundings, becoming completely invisible to the naked eye."
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 
 	var/energy_cost = 75
 
@@ -43,7 +43,7 @@
 /mob/living/carbon/human/proc/lleill_select_shape()
 
 	set name = "Select Body Shape"
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -70,7 +70,7 @@
 /mob/living/carbon/human/proc/lleill_select_colour()
 
 	set name = "Select Body Colour"
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -99,7 +99,7 @@
 /mob/living/carbon/human/proc/lleill_transmute()
 	set name = "Transmute Object (50)"
 	set desc = "Convert an object into a piece of glamour."
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 
 	var/list/transmute_list = list(
 		"Transparent Glamour" = /obj/item/weapon/potion_material/glamour_transparent,
@@ -160,7 +160,7 @@
 /mob/living/carbon/human/proc/lleill_rings()
 	set name = "Place/Use Rings"
 	set desc = "Place or teleport to a glamour ring."
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 
 	var/energy_cost_multi = src.teleporters.len
 	var/energy_cost_spawn = (25 * energy_cost_multi)
@@ -235,7 +235,7 @@
 /mob/living/carbon/human/proc/lleill_contact()
 	set name = "Energy Transfer"
 	set desc = "Take the energy of another creature by making physical contact with them, the other party must consent. This will make them feel drained."
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 	if(!ishuman(src))
 		return //If you're not a human you don't have permission to do this.
 	var/datum/species/lleill/LL = species
@@ -325,7 +325,7 @@
 /mob/living/carbon/human/proc/lleill_alchemy()
 	set name = "Alchemy (25)"
 	set desc = "Convert a potion material into a potion without the use of a base or alembic."
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 
 	var/energy_cost = 25
 
