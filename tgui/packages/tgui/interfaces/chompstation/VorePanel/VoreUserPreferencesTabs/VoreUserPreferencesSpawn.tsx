@@ -65,14 +65,12 @@ export const VoreUserPreferencesSpawn = (props: {
                 unit="s"
                 step={5}
                 stepPixelSize={20}
-                onChange={(e, value) =>
+                onChange={(value) =>
                   act('adjust_no_latejoin_vore_warning_time', {
                     new_pred_time: value,
                   })
                 }
-              >
-                T
-              </NumberInput>
+              />
             </Flex.Item>
             <Flex.Item basis="5%">
               <Button
@@ -106,14 +104,12 @@ export const VoreUserPreferencesSpawn = (props: {
                 unit="s"
                 step={5}
                 stepPixelSize={20}
-                onChange={(e, value) =>
+                onChange={(value) =>
                   act('adjust_no_latejoin_prey_warning_time', {
                     new_prey_time: value,
                   })
                 }
-              >
-                T
-              </NumberInput>
+              />
             </Flex.Item>
             <Flex.Item basis="5%">
               <Button
