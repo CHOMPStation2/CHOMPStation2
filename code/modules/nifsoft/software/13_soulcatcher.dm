@@ -329,14 +329,16 @@
 	if(parent_mob) return
 
 	//If they're blinded
-	if(ext_blind)
-		eye_blind = 5
-		client.screen.Remove(global_hud.whitense)
-		overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
-	else
-		eye_blind = 0
-		clear_fullscreens()
-		client.screen.Add(global_hud.whitense)
+	if(soulcatcher) // CHOMPEdit Start, needs it's own handling to allow vore_fx
+		if(ext_blind)
+			eye_blind = 5
+			client.screen.Remove(global_hud.whitense)
+			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+		else
+			eye_blind = 0
+			clear_fullscreens()
+			client.screen.Add(global_hud.whitense)
+	//CHOMPEdit End
 
 	//If they're deaf
 	if(ext_deaf)
@@ -484,7 +486,10 @@
 		var/mob/living/owner = B.owner
 		var/obj/soulgem/gem = owner.soulgem
 		if(owner && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS, TRUE))
-			gem.catch_mob(L)
+			var/to_use_custom_name = null
+			if(isanimal(L))
+				to_use_custom_name = L.name
+			gem.catch_mob(L, to_use_custom_name)
 			return TRUE
 		var/mob/living/carbon/human/HP = B.owner
 		var/mob/living/carbon/human/H = L
@@ -495,7 +500,10 @@
 	else
 		var/obj/soulgem/gem = L.soulgem
 		if(gem && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_ME, TRUE))
-			gem.catch_mob(L)
+			var/to_use_custom_name = null
+			if(isanimal(L))
+				to_use_custom_name = L.name
+			gem.catch_mob(L, to_use_custom_name)
 			return TRUE
 		var/mob/living/carbon/human/H = L
 		if(!istype(H)) return TRUE

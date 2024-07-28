@@ -57,7 +57,7 @@
 	path = /obj/item/clothing/accessory/collar/holo/indigestible
 
 /datum/gear/accessory/holster
-	display_name = "holster selection (SM, HoP, Sec, Explo)" // CHOMPedit: Clearer description.
+	display_name = "holster selection"
 	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Field Medic","Explorer","Pathfinder","Talon Captain","Talon Guard") // CHOMPedit: Readd explo
 
 /datum/gear/accessory/brown_vest

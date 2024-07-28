@@ -134,18 +134,18 @@
 	mappath = "modular_chomp/maps/submaps/shelters/NewHotel-18x22.dmm"
 	name = "New Hotel."
 	description = "An new not-worn down wooden hotel, not heavily damaged but with enough materials to do whatever."
-
+/* Commented out due to poor implemantation, might be re-added as an outsider OM object.
 /datum/map_template/shelter/superpose/ScienceShip
 	shelter_id = "ScienceShip"
 	mappath = "modular_chomp/maps/submaps/shelters/ScienceShip-25x33.dmm"
 	name = "Science ship."
 	description = "An expedition science ship with all the needs to host a small team."
-
+*/
 /datum/map_template/shelter/superpose/SmallCombatShip
 	shelter_id = "SmallCombatShip"
 	mappath = "modular_chomp/maps/submaps/shelters/SmallCombatShip-9x11.dmm"
 	name = "Small combat ship."
-	description = "A small combat ship with the bear minimum needs for survival."
+	description = "A small combat ship with the bare minimum needs for survival."
 
 /datum/map_template/shelter/superpose/SurvivalBarracks
 	shelter_id = "SurvivalBarracks"
@@ -248,13 +248,13 @@
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalQuarters-9x9.dmm"
 	name = "Survival living quarters."
 	description = "NT patented survival quarters pod, loaded with survival equipment and enough beds for 4 crewmates."
-
+/* Commented out due to powergame
 /datum/map_template/shelter/superpose/SurvivalScience
 	shelter_id = "SurvivalScience"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalScience-9x9.dmm"
 	name = "Survival science dep."
 	description = "NT patented science survival pod, loaded with research terminals, mech fabricator, autolathe and everything to do field research."
-
+*/
 /datum/map_template/shelter/superpose/SurvivalSecurity
 	shelter_id = "SurvivalSecurity"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalSecurity-9x9.dmm"
@@ -327,13 +327,13 @@
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalMethLab-9x10.dmm"
 	name = "Survival Meth Lab"
 	description = "A medium survival pod, repurposed and locked for the production of illegal chems. Don't get caught."
-
+/* Removed due to powergaming
 /datum/map_template/shelter/superpose/SurvivalScienceV2
 	shelter_id = "SurvivalScienceV2"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalScience2-9x9.dmm"
 	name = "Survival Science V2"
 	description = "NT patented science survival pod, loaded with research terminals, mech fabricator, autolathe and everything to do field research."
-
+*/
 /datum/map_template/shelter/superpose/SurvivalSecurityV2
 	shelter_id = "SurvivalSecurityV2"
 	mappath = "modular_chomp/maps/submaps/shelters/SurvivalSecurity2-9x9.dmm"

@@ -2,6 +2,7 @@
 	display_name = "cloak, blueshield"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/blueshield
 	allowed_roles = list("Blueshield Guard")
+	show_roles = FALSE
 
 /datum/gear/suit/victailcoat
 	display_name = "Victorian tailcoat"

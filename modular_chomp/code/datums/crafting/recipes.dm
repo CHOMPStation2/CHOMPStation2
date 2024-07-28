@@ -61,7 +61,7 @@
 		list(/obj/item/stack/material/cloth = 10),
 		list(/obj/item/stack/material/crystalscale = 2),
 		list(/obj/item/stack/material/resin = 8),
-		/obj/item/weapon/stock_parts/capacitor = 1
+		list(/obj/item/weapon/stock_parts/capacitor = 1)
 	)
 	time = 60
 	category = CAT_CLOTHING
@@ -71,7 +71,7 @@
 	result = /obj/item/clothing/shoes/boots/frost
 	reqs = list(
 		list(/obj/item/stack/material/frostscale = 2),
-		/obj/item/clothing/shoes/boots/winter = 1
+		list(/obj/item/clothing/shoes/boots/winter = 1)
 	)
 	time = 60
 	category = CAT_CLOTHING
@@ -129,13 +129,13 @@
 /datum/crafting_recipe/sandstone
 	name = "sandstone brick"
 	result = /obj/item/stack/material/sandstone
-	reqs = list(/obj/item/weapon/ore/glass = 4)
+	reqs = list(list(/obj/item/weapon/ore/glass = 4))
 	time = 10 //Not realstic but I don't want to waste too much time.
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/marble
 	name = "marble brick"
 	result = /obj/item/stack/material/marble
-	reqs = list(/obj/item/weapon/ore/marble = 4)
+	reqs = list(list(/obj/item/weapon/ore/marble = 4))
 	time = 10 //Not realstic but I don't want to waste too much time.
 	category = CAT_PRIMAL

@@ -49,13 +49,5 @@
 		env_trait.handle_environment_special(H)
 	return
 
-/datum/species/proc/update_vore_belly_def_variant()
-	// Determine the actual vore_belly_default_variant, if the base species in the VORE tab is set
-	switch (base_species)
-		if("Teshari")
-			vore_belly_default_variant = "T"
-		if("Unathi")
-			vore_belly_default_variant = "L"
-
 /datum/species/proc/update_misc_tabs(var/mob/living/carbon/human/H)
 	return

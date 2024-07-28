@@ -4,14 +4,12 @@ import { useBackend } from '../../../backend';
 import { Box, Button, Divider, Flex, Section } from '../../../components';
 import { digestModeToColor } from './constants';
 import { localPrefs, prefData, selectedData } from './types';
-import {
-  VoreUserPreferencesAesthetic,
-  VoreUserPreferencesDevouring,
-  VoreUserPreferencesMechanical,
-  VoreUserPreferencesSoulcatcher,
-  VoreUserPreferencesSpawn,
-  VoreUserPreferencesSpontaneous,
-} from './VoreUserPreferencesTabs';
+import { VoreUserPreferencesAesthetic } from './VoreUserPreferencesTabs/VoreUserPreferencesAesthetic';
+import { VoreUserPreferencesDevouring } from './VoreUserPreferencesTabs/VoreUserPreferencesDevouring';
+import { VoreUserPreferencesMechanical } from './VoreUserPreferencesTabs/VoreUserPreferencesMechanical';
+import { VoreUserPreferencesSoulcatcher } from './VoreUserPreferencesTabs/VoreUserPreferencesSoulcatcher';
+import { VoreUserPreferencesSpawn } from './VoreUserPreferencesTabs/VoreUserPreferencesSpawn';
+import { VoreUserPreferencesSpontaneous } from './VoreUserPreferencesTabs/VoreUserPreferencesSpontaneous';
 
 export const VoreUserPreferences = (props: {
   prefs: prefData;
@@ -68,6 +66,7 @@ export const VoreUserPreferences = (props: {
     soulcatcher_allow_capture,
     soulcatcher_allow_transfer,
     soulcatcher_allow_deletion,
+    soulcatcher_allow_takeover,
   } = prefs;
 
   const preferences: localPrefs = {
@@ -628,6 +627,20 @@ export const VoreUserPreferences = (props: {
       content: {
         enabled: 'Soul Capturing Allowed',
         disabled: 'Do Not Allow Soul Capturing',
+      },
+    },
+    soulcatcher_takeover: {
+      action: 'toggle_soulcatcher_allow_takeover',
+      test: soulcatcher_allow_takeover,
+      tooltip: {
+        main: 'This button is for allowing or preventing to give body control to captured souls.',
+        enable:
+          'Click here to allow body takeovers. (Both parties need it enabled to function)',
+        disable: 'Click here to prevent body takeovers.',
+      },
+      content: {
+        enabled: 'Body Takeover Allowed',
+        disabled: 'Do Not Allow Body Takeover',
       },
     },
     soulcatcher_transfer: {
