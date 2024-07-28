@@ -122,3 +122,9 @@
   - bugfix: transfer to MMIs from vore soulcatcher
   - bugfix: captured simple_mobs and silicons not always showing their custom name
       in vore soulscatchers
+2024-07-28:
+  TheCaramelion:
+  - rscadd: You can now place reagents inside chewables
+  Verkister:
+  - balance: Adjusted diver visibility in shallow water.
+  - balance: Simplemob targeting ai invisibility threshold changed from 50% to 25%.

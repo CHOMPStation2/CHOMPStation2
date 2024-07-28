@@ -1,5 +1,0 @@
-author: "Verkister"
-delete-after: True
-changes:
-  - balance: "Adjusted diver visibility in shallow water."
-  - balance: "Simplemob targeting ai invisibility threshold changed from 50% to 25%."
