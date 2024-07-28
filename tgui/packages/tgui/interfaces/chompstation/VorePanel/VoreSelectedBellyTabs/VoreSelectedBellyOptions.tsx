@@ -98,7 +98,7 @@ export const VoreSelectedBellyOptions = (props: {
                   }
                   icon="pen"
                 >
-                  {capitalize(contaminate_color)}
+                  {!!contaminate_color && capitalize(contaminate_color)}
                 </Button>
               </LabeledList.Item>
             </>

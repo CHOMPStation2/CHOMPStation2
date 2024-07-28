@@ -26,14 +26,15 @@ export const VoreAbilities = (props: { abilities: abilities }) => {
                 disabled={!is_enabled(nutrition, resize_cost)}
                 width="250px"
                 ranges={
-                  (is_enabled(nutrition, resize_cost) && {
-                    bad: [1, 25],
-                    average: [25, 50],
-                    green: [50, 150],
-                    yellow: [150, 200],
-                    red: [200, 600],
-                  }) ||
-                  (!is_enabled(nutrition, resize_cost) && { black: [0, 600] })
+                  is_enabled(nutrition, resize_cost)
+                    ? {
+                        bad: [1, 25],
+                        average: [25, 50],
+                        green: [50, 150],
+                        yellow: [150, 200],
+                        red: [200, 600],
+                      }
+                    : { black: [0, 600] }
                 }
                 format={(value: number) => toFixed(value, 2) + '%'}
                 value={current_size * 100}
