@@ -16,6 +16,14 @@
 #define WEATHER_FALLOUT				"fallout" // Modified emberfall, actually harmful. Admin only.
 #define WEATHER_FALLOUT_TEMP		"short-term fallout" // Nuclear fallout that actually ends. Firework-only
 #define WEATHER_CONFETTI			"confetti" // Firework-only
+#define WEATHER_EERIE_WIND			"breezy winds"
+#define WEATHER_SANDSTORM			"sandstorm"
+#define WEATHER_TOXIN_RAIN			"toxic rain"
+#define WEATHER_STARRY_RIFT			"starry skies"
+#define WEATHER_MIDNIGHT_FOG		"heavy fog"
+#define WEATHER_DOWNPOURWARNING		"early exrteme monsoon"
+#define WEATHER_DOWNPOUR			"extreme monsoon"
+#define WEATHER_DOWNPOURFATAL		"fatal monsoon"
 
 #define MOON_PHASE_NEW_MOON			"new moon"
 #define MOON_PHASE_WAXING_CRESCENT	"waxing crescent"
