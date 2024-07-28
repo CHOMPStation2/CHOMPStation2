@@ -118,6 +118,7 @@
 /datum/looping_sound/weather/rainextreme
 	mid_sounds = 'sound/effects/weather/downpour/rainextreme.ogg'
 	mid_length = 37 SECONDS
+	volume = 80
 
 /datum/looping_sound/weather/rainindoors
 	mid_sounds = 'sound/effects/weather/downpour/rainindoors.ogg'

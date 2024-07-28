@@ -23,8 +23,8 @@
 		WEATHER_STARRY_RIFT		= new /datum/weather/sif/starryrift(),
 		WEATHER_MIDNIGHT_FOG	= new /datum/weather/sif/midnightfog(),
 		WEATHER_DOWNPOURWARNING = new /datum/weather/sif/downpourwarning(),
-		WEATHER_DOWNPOUR = new /datum/weather/sif/downpour(),
-		WEATHER_DOWNPOURFATAL = new /datum/weather/sif/downpourfatal() //CHOMPedit end
+		WEATHER_DOWNPOUR 		= new /datum/weather/sif/downpour(),
+		WEATHER_DOWNPOURFATAL 	= new /datum/weather/sif/downpourfatal() //CHOMPedit end
 		)
 //Weather
 /datum/weather/sif/fog
@@ -263,8 +263,7 @@
 		)
 /datum/weather/sif/downpourwarning
 	name = "early extreme monsoon"
-	icon_state = "rain"
-	light_modifier = 0.5
+	light_modifier = 0.4
 	timer_low_bound = 1
 	timer_high_bound = 2
 
@@ -280,10 +279,12 @@
 
 /datum/weather/sif/downpour
 	name = "extreme monsoon"
-	icon_state = "storm"
-	light_modifier = 0.4
+	icon_state = "downpour"
+	light_modifier = 0.3
 	timer_low_bound = 1
 	timer_high_bound = 1
+	wind_high = 4
+	wind_low = 2
 	flight_failure_modifier = 100
 	effect_message = "<span class='warning'>Extreme rain is knocking you down!</span>"
 
@@ -324,7 +325,7 @@
 			*/
 
 			L.water_act(2)
-			L.Weaken(2)
+			L.Weaken(3)
 			if(show_message)
 				to_chat(L, effect_message)
 
@@ -341,10 +342,12 @@
 
 /datum/weather/sif/downpourfatal
 	name = "fatal monsoon"
-	icon_state = "storm"
-	light_modifier = 0.2
+	icon_state = "downpourfatal"
+	light_modifier = 0.15
 	timer_low_bound = 1
 	timer_high_bound = 3
+	wind_high = 6
+	wind_low = 4
 	flight_failure_modifier = 100
 	effect_message = "<span class='warning'>Extreme rain is crushing you!</span>"
 
@@ -395,7 +398,7 @@
 				continue // No need to apply damage.
 
 			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "rain bludgoning")
-			L.Weaken(2)
+			L.Weaken(3)
 			if(show_message)
 				to_chat(L, effect_message)
 
