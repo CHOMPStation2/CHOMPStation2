@@ -2057,13 +2057,9 @@
 		if(stat == DEAD)
 			holder.icon_state = "-100" 	// X_X
 		else
-<<<<<<< HEAD
 			holder.icon_state = RoundHealth((health-CONFIG_GET(number/health_threshold_crit))/(getMaxHealth()-CONFIG_GET(number/health_threshold_crit))*100) // CHOMPEdit
-=======
-			holder.icon_state = RoundHealth((health-config.health_threshold_crit)/(getMaxHealth()-config.health_threshold_crit)*100)
 		if(block_hud)
 			holder.icon_state = "hudblank"
->>>>>>> bc87e5204a... Lleill Species - Part 2 (#16127)
 		apply_hud(HEALTH_HUD, holder)
 
 	if (BITTEST(hud_updateflag, LIFE_HUD))
@@ -2109,13 +2105,10 @@ End Chomp edit */
 				holder2.icon_state = "hudill"
 			else
 				holder2.icon_state = "hudhealthy"
-<<<<<<< HEAD
-=======
 		if(block_hud)
 			holder.icon_state = "hudblank"
 			holder2.icon_state = "hudblank"
 
->>>>>>> bc87e5204a... Lleill Species - Part 2 (#16127)
 		apply_hud(STATUS_HUD, holder)
 		apply_hud(STATUS_HUD_OOC, holder2)
 
