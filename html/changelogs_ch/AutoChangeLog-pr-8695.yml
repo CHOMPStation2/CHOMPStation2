@@ -1,0 +1,6 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - rscadd: "Added an option for players to choose their footstep sound"
+  - qol: "Reduced footstep volume"
+  - code_imp: "Less procs, more signals"
