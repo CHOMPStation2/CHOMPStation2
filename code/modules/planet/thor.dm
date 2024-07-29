@@ -298,7 +298,7 @@ var/datum/planet/thor/planet_thor = null
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
-	effect_message = span_warning("Rain falls on you, drenching you in water")
+	effect_message = span_warning("Rain falls on you, drenching you in water.")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
