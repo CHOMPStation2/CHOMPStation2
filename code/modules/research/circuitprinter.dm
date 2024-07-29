@@ -16,6 +16,8 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 	var/mat_efficiency = 1
 	var/speed = 1
 
+	var/list/LockedDesigns = list() //CHOMPADDITION: FOR VR mainly.
+
 	materials = list(MAT_STEEL = 0, MAT_GLASS = 0, MAT_PLASTEEL = 0, MAT_PLASTIC = 0, MAT_GRAPHITE = 0, MAT_GOLD = 0, MAT_SILVER = 0, MAT_OSMIUM = 0, MAT_LEAD = 0, MAT_PHORON = 0, MAT_URANIUM = 0, MAT_DIAMOND = 0, MAT_DURASTEEL = 0, MAT_VERDANTIUM = 0, MAT_MORPHIUM = 0, MAT_METALHYDROGEN = 0, MAT_SUPERMATTER = 0)
 
 	hidden_materials = list(MAT_PLASTEEL, MAT_DURASTEEL, MAT_GRAPHITE, MAT_VERDANTIUM, MAT_MORPHIUM, MAT_METALHYDROGEN, MAT_SUPERMATTER)
@@ -48,6 +50,11 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 		update_icon()
 		return
 	var/datum/design/D = queue[1]
+	//CHOMPAdd Start
+	if(!allowedToBuild(D))
+		removeFromQueue(1)
+		return
+	//CHOMPAdd End
 	if(canBuild(D))
 		busy = 1
 		progress += speed
@@ -173,6 +180,14 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 /obj/machinery/r_n_d/circuit_imprinter/proc/removeFromQueue(var/index)
 	queue.Cut(index, index + 1)
 	return
+
+//CHOMPAdd Start, Locked Designs
+/obj/machinery/r_n_d/circuit_imprinter/proc/allowedToBuild(var/datum/design/D)
+	if(is_type_in_list(D, LockedDesigns))
+		visible_message(span_warning("The fabricator denied to print \the [D]."))
+		return 0
+	return 1
+//CHOMPAdd End, Locked Designs
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/canBuild(var/datum/design/D)
 	for(var/M in D.materials)

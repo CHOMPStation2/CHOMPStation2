@@ -7,6 +7,7 @@ SUBSYSTEM_DEF(mail)
 
 	var/mail_waiting = 0					// Pending mail
 	var/mail_per_process = 0.45				// Mail to be generated
+	var/admin_mail = list()					// Mail added by Spawn Mail
 
 /datum/controller/subsystem/mail/fire()
 	mail_waiting += mail_per_process
@@ -42,5 +43,10 @@ SUBSYSTEM_DEF(mail)
 			mail_recipients -= mail_to
 		else
 			new_mail.junk_mail()
+	// Admin mail
+	if(admin_mail)
+		for(var/obj/item/mail/ad_mail in admin_mail)
+			ad_mail.loc = mailcrate
+		clearlist(admin_mail)
 	mail_waiting = 0
 	return mailcrate

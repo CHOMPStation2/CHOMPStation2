@@ -5,3 +5,4 @@
 	is_public = TRUE
 	req_access = ""
 	circuit = /obj/item/weapon/circuitboard/rdconsole/public
+	LockedPrinterDesigns = list(/datum/design/circuit/protolathe,/datum/design/circuit/circuit_imprinter,/datum/design/circuit/destructive_analyzer)

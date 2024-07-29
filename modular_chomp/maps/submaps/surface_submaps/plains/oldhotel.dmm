@@ -260,9 +260,6 @@
 /area/submap/oldhotel)
 "vA" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/telecube/randomized{
-	name = "Odd artifact"
-	},
 /turf/simulated/floor/wood,
 /area/submap/oldhotel)
 "vM" = (
@@ -424,15 +421,6 @@
 /obj/item/weapon/flame/lighter/random,
 /obj/item/weapon/flame/lighter/random,
 /obj/item/weapon/melee/umbrella/random,
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
-"Ha" = (
-/obj/structure/table/woodentable,
-/obj/item/trash/candle,
-/obj/item/weapon/paper{
-	info = "This is a stupid tresure hunt task, that thing is not taking us anywhere. Go on and have fun finding a waste of time.";
-	name = "Wrinkled sheet of paper"
-	},
 /turf/simulated/floor/wood,
 /area/submap/oldhotel)
 "Ik" = (
@@ -877,7 +865,7 @@ hQ
 qg
 Se
 ly
-Ha
+rK
 hQ
 MU
 gA

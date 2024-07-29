@@ -44,6 +44,11 @@
 	var/stamp_offset_y = 2
 	var/opening = FALSE
 
+/obj/item/mail/container_resist(mob/living/M)
+	if(istype(M, /mob/living/voice)) return
+	M.forceMove(get_turf(src))
+	to_chat(M, span_warning("You climb out of \the [src]."))
+
 /obj/item/mail/envelope
 	name = "envelope"
 	icon_state = "mail_large"
@@ -61,6 +66,76 @@
 		var/stamp_count = rand(1, stamp_max)
 		for(var/i = 1, i <= stamp_count, i++)
 			stamps += list("stamp_[rand(2, 8)]")
+
+/obj/item/mail/blank
+	desc = "A blank envelope."
+	description_info = "An object can be placed into the envelope, click on it with an empty hand to seal it. Alt-Click to retrieve the items from inside before sealing."
+	stamped = FALSE
+	postmarked = FALSE
+	var/set_recipient = FALSE
+	var/set_content = FALSE
+	var/sealed = FALSE
+	var/list/mail_recipients = list()
+
+/obj/item/mail/blank/attackby(obj/item/W, mob/user)
+	..()
+	if(istype(W, /obj/item/weapon/pen) && sealed && !set_recipient)
+		if(setRecipient(user))
+			set_recipient = TRUE
+		add_fingerprint(user)
+		return
+
+	if(!set_content && !sealed)
+		if(!do_after(user, 1.5 SECONDS, target = user))
+			set_content = FALSE
+		user.drop_item()
+		W.forceMove(src)
+		balloon_alert(user, "Placed the [W] into the [src]")
+		set_content = TRUE
+		description_info = "Click with an empty hand to seal it, or Alt-Click to retrieve the object out."
+		return
+	return
+
+/obj/item/mail/proc/setRecipient(mob/user)
+	var/list/recipients = list()
+	for(var/mob/living/player in player_list)
+		if(!player_is_antag(player.mind) && player.mind.show_in_directory)
+			recipients += player
+
+	recipients = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
+
+	if(recipients)
+		initialize_for_recipient(recipients, preset_goodies = TRUE)
+		return TRUE
+
+/obj/item/mail/blank/AltClick(mob/user)
+	if(sealed)
+		return
+
+	for(var/obj/stuff as anything in contents)
+		if(isitem(stuff))
+			user.put_in_hands(stuff)
+		else
+			stuff.forceMove(drop_location())
+	set_content = FALSE
+	description_info = initial(description_info)
+
+/obj/item/mail/blank/ShiftClick(mob/user)
+	..()
+	if(!sealed)
+		var/sender = tgui_input_text(user, "Write name", "Name", user.name)
+		if(sender)
+			desc = "A signed envelope, from [sender]."
+
+/obj/item/mail/blank/attack_self(mob/user)
+	if(!sealed)
+		balloon_alert(user, "Sealing the envelope...")
+		if(!do_after(user, 1.5 SECONDS, target = user))
+			sealed = FALSE
+		sealed = TRUE
+		description_info = "Shift Click to add the sender's name to the envelope, or attack with a pen to set a receiver."
+		return
+	. = ..()
 
 /obj/item/mail/update_icon()
 	. = ..()
@@ -99,7 +174,7 @@
 				balloon_alert(user, "The mail is already labeled for [O.currTag].")
 		else
 			balloon_alert(user, "You need to set a destination first!")
-	return
+		return
 
 /obj/item/mail/attack_self(mob/user)
 	if(!unwrap(user))
@@ -132,7 +207,7 @@
 	playsound(loc, 'sound/items/poster_ripped.ogg', 100, TRUE)
 	qdel(src)
 
-/obj/item/mail/proc/initialize_for_recipient(mob/new_recipient)
+/obj/item/mail/proc/initialize_for_recipient(mob/new_recipient, var/preset_goodies = FALSE)
 	recipient = new_recipient
 	var/current_title = new_recipient.mind.role_alt_title ? new_recipient.mind.role_alt_title : new_recipient.mind.assigned_role
 	name = "[initial(name)] for [new_recipient.real_name] ([current_title])"
@@ -144,17 +219,20 @@
 		var/image/envelope = image(icon, icon_state)
 		envelope.color = this_job.get_mail_color()
 		add_overlay(envelope)
-		var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
-		if(LAZYLEN(job_goodies))
-			if(this_job.exclusive_mail_goodies)
-				goodies = job_goodies
-			else
-				goodies += job_goodies
+		if(!preset_goodies)
+			var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
+			if(LAZYLEN(job_goodies))
+				if(this_job.exclusive_mail_goodies)
+					goodies = job_goodies
+				else
+					goodies += job_goodies
 
-	for(var/iterator in 1 to goodie_count)
-		var/target_good = pickweight(goodies)
-		var/atom/movable/target_atom = new target_good(src)
-		log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
+	if(!preset_goodies)
+		for(var/iterator in 1 to goodie_count)
+			var/target_good = pickweight(goodies)
+			var/atom/movable/target_atom = new target_good(src)
+			log_game("[key_name(new_recipient)] received [target_atom.name] in the mail ([target_good])")
+
 	update_icon()
 	return TRUE
 
@@ -162,6 +240,54 @@
 	SIGNAL_HANDLER
 	if(!hasmob)
 		disposal_holder.destinationTag = sortTag
+
+// Mail spawn for events
+/datum/admins/proc/spawn_mail(var/object as text)
+	set name = "Spawn Mail"
+	set category = "Fun.Event Kit"
+	set desc = "Spawn mail for a specific player, with a specific item."
+
+	if(!check_rights(R_SPAWN)) return
+
+	var/obj/item/mail/new_mail = new
+	var/list/types = typesof(/atom)
+	var/list/matches = new()
+	var/list/recipients = list()
+
+	for(var/path in types)
+		if(findtext("[path]", object))
+			matches += path
+
+	if(matches.len==0)
+		return
+	var/chosen
+	if(matches.len==1)
+		chosen = matches[1]
+	else
+		chosen = tgui_input_list(usr, "Select an atom type", "Spawn Atom in Mail", matches)
+		if(!chosen)
+			return
+
+	for(var/mob/living/player in player_list)
+		recipients += player
+
+	recipients = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
+
+	if(recipients)
+		new_mail.initialize_for_recipient(recipients, TRUE)
+		new chosen(new_mail)
+
+	var/shuttle_spawn = tgui_alert(usr, "Spawn mail at location or in the shuttle?", "Spawn mail", list("Location", "Shuttle"))
+	if(shuttle_spawn == "Shuttle")
+		SSmail.admin_mail += new_mail
+		log_and_message_admins("spawned [chosen] inside an envelope at the shuttle")
+	else
+		var/obj/item/mail/ground_mail = new /obj/item/mail(usr.loc)
+		ground_mail.initialize_for_recipient(recipients, TRUE)
+		new chosen(ground_mail)
+		log_and_message_admins("spawned [chosen] inside an envelope at ([usr.x],[usr.y],[usr.z])")
+
+	feedback_add_details("admin_verb","SE")
 
 // Mail Crate
 /obj/structure/closet/crate/mail

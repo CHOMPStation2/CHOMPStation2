@@ -47,7 +47,7 @@
 
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
-		if(M)
+		if(!QDELETED(M))
 			M.init_vore()
 
 	//return TRUE to hook-caller
@@ -56,6 +56,10 @@
 /mob/proc/init_vore()
 	//Something else made organs, meanwhile.
 	if(LAZYLEN(vore_organs))
+		//CHOMPAdd Start
+		if(!soulgem)
+			soulgem = new(src)
+		//CHOMPAdd End
 		return TRUE
 
 	//We'll load our client's organs if we have one
@@ -80,7 +84,16 @@
 			var/mob/living/carbon/human/H = src
 			if(istype(H.species,/datum/species/monkey))
 				allow_spontaneous_tf = TRUE
+		//CHOMPAdd Start
+		if(!soulgem)
+			soulgem = new(src)
 		return TRUE
+		//CHOMPAdd End
+
+/mob/living/init_vore()
+	if(no_vore)
+		return FALSE
+	return ..()
 
 //
 // Hide vore organs in contents
@@ -281,6 +294,7 @@
 	P.no_latejoin_vore_warning_persists = src.no_latejoin_vore_warning_persists
 	P.no_latejoin_prey_warning_persists = src.no_latejoin_prey_warning_persists
 	P.belly_rub_target = src.belly_rub_target
+	P.soulcatcher_pref_flags = src.soulcatcher_pref_flags
 	//CHOMP Stuff End
 
 	var/list/serialized = list()
@@ -289,6 +303,7 @@
 
 	P.belly_prefs = serialized
 
+	P.soulcatcher_prefs = src.soulgem.serialize() // CHOMPAdd
 	return TRUE
 
 //
@@ -353,6 +368,7 @@
 	no_latejoin_vore_warning_persists = P.no_latejoin_vore_warning_persists
 	no_latejoin_prey_warning_persists = P.no_latejoin_prey_warning_persists
 	belly_rub_target = P.belly_rub_target
+	soulcatcher_pref_flags = P.soulcatcher_pref_flags
 
 	if(bellies)
 		if(isliving(src))
@@ -361,6 +377,14 @@
 		QDEL_LIST(vore_organs) // CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
+
+	if(soulgem)
+		src.soulgem.release_mobs()
+		QDEL_NULL(soulgem)
+	if(P.soulcatcher_prefs.len)
+		soulgem = list_to_object(P.soulcatcher_prefs, src)
+	else
+		soulgem = new(src)
 
 	return TRUE
 
@@ -583,6 +607,7 @@
 		G.can_revert = TRUE
 		qdel(G)
 		log_and_message_admins("[key_name(src)] used the OOC escape button to revert back from being petrified.")
+
 	//CHOMPEdit - In-shoe OOC escape. Checking voices as precaution if something akin to obj TF or possession happens
 	else if(!istype(src, /mob/living/voice) && istype(src.loc, /obj/item/clothing/shoes))
 		var/obj/item/clothing/shoes/S = src.loc
@@ -592,6 +617,14 @@
 	else if(istype(loc, /obj/item/weapon/holder/micro) && (istype(loc.loc, /obj/machinery/microwave)))
 		forceMove(get_turf(src))
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a microwave.")
+
+	//You are in food and for some reason can't resist out
+	else if(istype(loc, /obj/item/weapon/reagent_containers/food))
+		var/obj/item/weapon/reagent_containers/food/F = src.loc
+		if(F.food_inserted_micros)
+			F.food_inserted_micros -= src
+		src.forceMove(get_turf(F))
+		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a food item.")
 
 	//Don't appear to be in a vore situation
 	else

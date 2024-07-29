@@ -97,7 +97,17 @@
 		flash()
 	..(severity)
 
-/obj/machinery/flasher/portable/HasProximity(turf/T, atom/movable/AM, oldloc)
+// CHOMPEdit Start
+/obj/machinery/flasher/portable/HasProximity(turf/T, datum/weakref/WF, oldloc)
+	SIGNAL_HANDLER
+	if(isnull(WF))
+		return
+
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
+		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+		return
+// CHOMPEdit End
 	if(disable || !anchored || (last_flash && world.time < last_flash + 150))
 		return
 
@@ -114,12 +124,12 @@
 		if(!anchored)
 			user.show_message(text("<span class='warning'>[src] can now be moved.</span>"))
 			cut_overlays()
-			unsense_proximity(callback = /atom/proc/HasProximity)
+			unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 		else if(anchored)
 			user.show_message(text("<span class='warning'>[src] is now secured.</span>"))
 			add_overlay("[base_state]-s")
-			sense_proximity(callback = /atom/proc/HasProximity)
+			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 /obj/machinery/button/flasher
 	name = "flasher button"

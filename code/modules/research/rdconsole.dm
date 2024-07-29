@@ -42,6 +42,9 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	var/obj/machinery/r_n_d/protolathe/linked_lathe = null				//Linked Protolathe
 	var/obj/machinery/r_n_d/circuit_imprinter/linked_imprinter = null	//Linked Circuit Imprinter
 
+	var/list/LockedLatheDesigns = list() //CHOMPADDITION: FOR VR mainly.
+	var/list/LockedPrinterDesigns = list() //CHOMPADDITION: FOR VR mainly.
+
 	var/id = 0			//ID of the computer (for server restrictions).
 	var/sync = 1		//If sync = 0, it doesn't show up on Server Control Console
 	var/is_public = FALSE //Above mentions the option for public consoles. But for that, we need to remove the sync tab from the console entirely
@@ -90,10 +93,14 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			if(linked_lathe == null)
 				linked_lathe = D
 				D.linked_console = src
+				linked_lathe.LockedDesigns.Cut()
+				linked_lathe.LockedDesigns = LockedLatheDesigns.Copy();
 		else if(istype(D, /obj/machinery/r_n_d/circuit_imprinter))
 			if(linked_imprinter == null)
 				linked_imprinter = D
 				D.linked_console = src
+				linked_imprinter.LockedDesigns.Cut()
+				linked_imprinter.LockedDesigns = LockedPrinterDesigns.Copy();
 	return
 
 /obj/machinery/computer/rdconsole/proc/griefProtection() //Have it automatically push research to the CentCom server so wild griffins can't fuck up R&D's work

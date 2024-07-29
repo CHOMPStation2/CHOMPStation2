@@ -163,6 +163,8 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 					new_mob.vore_organs += B
 				new_mob.nutrition = src.nutrition
 
+				src.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
+
 			new_mob.ckey = src.ckey
 			if(new_mob.tf_form_ckey)
 				src.ckey = new_mob.tf_form_ckey
@@ -229,11 +231,3 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	if(reopen)
 		ooc_notes_window(user)
 //ChompEDIT END - Removal of usr
-
-/mob/living/revive()
-	..()
-	RemoveElement(/datum/element/footstep)
-
-	if(ishuman(src))
-		var/mob/living/carbon/human/H = src
-		H.set_footsteps(H.species.footstep)

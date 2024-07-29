@@ -34,6 +34,8 @@
 	offline_slowdown = 2.5
 	slowdown = 0
 	emp_protection = 40 //change this to 30 if too high.
+	rigsuit_max_pressure = 20 * ONE_ATMOSPHERE			  // Max pressure the rig protects against when sealed
+	rigsuit_min_pressure = 0							  // Min pressure the rig protects against when sealed
 
 	req_one_access = list()
 	req_access = list(access_engine)

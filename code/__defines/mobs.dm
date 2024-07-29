@@ -447,7 +447,7 @@
 
 #define MAX_NUTRITION	6000 //VOREStation Edit
 
-#define FAKE_INVIS_ALPHA_THRESHOLD 127 // If something's alpha var is at or below this number, certain things will pretend it is invisible.
+#define FAKE_INVIS_ALPHA_THRESHOLD 64 //CHOMPEdit. 25% down from 50% // If something's alpha var is at or below this number, certain things will pretend it is invisible.
 
 #define DEATHGASP_NO_MESSAGE "no message"
 
