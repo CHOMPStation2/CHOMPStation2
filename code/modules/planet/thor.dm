@@ -255,7 +255,7 @@ var/datum/planet/thor/planet_thor = null
 	wind_high = 2
 	wind_low = 1
 	light_modifier = 0.5
-	effect_message = "<span class='warning'>Rain falls on you.</span>"
+	effect_message = span_warning("Rain falls on you.")
 
 	transition_chances = list(
 		WEATHER_OVERCAST = 25,
@@ -284,7 +284,7 @@ var/datum/planet/thor/planet_thor = null
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella.</span>")
+					to_chat(L, span_notice("Rain patters softly onto your umbrella."))
 				continue
 
 			L.water_act(1)
@@ -298,7 +298,7 @@ var/datum/planet/thor/planet_thor = null
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
-	effect_message = "<span class='warning'>Rain falls on you, drenching you in water.</span>"
+	effect_message = span_warning("Rain falls on you, drenching you in water")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
@@ -334,7 +334,7 @@ var/datum/planet/thor/planet_thor = null
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
+					to_chat(L, span_notice("Rain showers loudly onto your umbrella!</span>"))
 				continue
 
 
@@ -360,7 +360,7 @@ var/datum/planet/thor/planet_thor = null
 	flight_failure_modifier = 15
 	timer_low_bound = 2
 	timer_high_bound = 5
-	effect_message = "<span class='warning'>The hail smacks into you!</span>"
+	effect_message = span_warning("The hail smacks into you!")
 
 	transition_chances = list(
 		WEATHER_HAIL = 10,
@@ -390,7 +390,7 @@ var/datum/planet/thor/planet_thor = null
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(H, "<span class='notice'>Hail patters onto your umbrella.</span>")
+					to_chat(H, span_notice("Hail patters onto your umbrella"))
 				continue
 
 			var/target_zone = pick(BP_ALL)
@@ -616,7 +616,7 @@ var/datum/planet/thor/planet_thor = null
 	)
 	observed_message = "It looks like a very bad storm is about to approach."
 	transition_messages = list(
-		"<span class='danger'>Inky black clouds cover the sky in a eerie rumble, get to cover!</span>"
+		span_danger("Inky black clouds cover the sky in a eerie rumble, get to cover!")
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rainrumble
 	indoor_sounds_type = /datum/looping_sound/weather/rainrumble/indoors
@@ -630,7 +630,7 @@ var/datum/planet/thor/planet_thor = null
 	wind_high = 4
 	wind_low = 2
 	flight_failure_modifier = 100
-	effect_message = "<span class='warning'>Extreme rain is knocking you down!</span>"
+	effect_message = span_warning("Extreme rain is knocking you down!")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
@@ -642,7 +642,7 @@ var/datum/planet/thor/planet_thor = null
 	)
 	observed_message = "Extreme rain is crushing you, get to cover!"
 	transition_messages = list(
-		"<span class='danger'>An immense downpour of falls on top of of the planet crushing anything in its path!</span>"
+		span_danger("An immense downpour of falls on top of of the planet crushing anything in its path!")
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rainheavy
 	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
@@ -693,7 +693,7 @@ var/datum/planet/thor/planet_thor = null
 	wind_high = 6
 	wind_low = 4
 	flight_failure_modifier = 100
-	effect_message = "<span class='warning'>Extreme rain is crushing you!</span>"
+	effect_message = span_warning("Extreme rain is crushing you!")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 1 SECONDS

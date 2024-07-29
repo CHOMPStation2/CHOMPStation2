@@ -127,7 +127,7 @@
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(H, "<span class='notice'>Rain patters onto your umbrella.</span>")
+					to_chat(H, span_notice("Rain patters onto your umbrella."))
 				continue
 
 			var/target_zone = pick(BP_ALL)
@@ -272,7 +272,7 @@
 	)
 	observed_message = "It looks like a very bad storm is about to approach."
 	transition_messages = list(
-		"<span class='danger'>Inky black clouds cover the sky in a eerie rumble, get to cover!</span>"
+		span_danger("Inky black clouds cover the sky in a eerie rumble, get to cover!")
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rainrumble
 	indoor_sounds_type = /datum/looping_sound/weather/rainrumble/indoors
@@ -286,7 +286,7 @@
 	wind_high = 4
 	wind_low = 2
 	flight_failure_modifier = 100
-	effect_message = "<span class='warning'>Extreme rain is knocking you down!</span>"
+	effect_message = span_warning("Extreme rain is knocking you down!")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
@@ -298,7 +298,7 @@
 	)
 	observed_message = "Extreme rain is crushing you, get to cover!"
 	transition_messages = list(
-		"<span class='danger'>An immense downpour of falls on top of of the planet crushing anything in its path!</span>"
+		span_danger("An immense downpour of falls on top of of the planet crushing anything in its path!")
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rainheavy
 	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
@@ -349,7 +349,7 @@
 	wind_high = 6
 	wind_low = 4
 	flight_failure_modifier = 100
-	effect_message = "<span class='warning'>Extreme rain is crushing you!</span>"
+	effect_message = span_warning("Extreme rain is crushing you!")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 1 SECONDS
