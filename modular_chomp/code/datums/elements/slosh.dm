@@ -10,7 +10,7 @@
 	if(!isliving(target))
 		return ELEMENT_INCOMPATIBLE
 
-	RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(handle_sloshstep))
+	RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(handle_sloshstep), override = TRUE)
 	step_count = 0
 	vore_organs_reagents = list()
 	vore_footstep_volume = 0
