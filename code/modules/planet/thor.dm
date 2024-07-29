@@ -334,7 +334,7 @@ var/datum/planet/thor/planet_thor = null
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(L, span_notice("Rain showers loudly onto your umbrella!</span>"))
+					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
 				continue
 
 
