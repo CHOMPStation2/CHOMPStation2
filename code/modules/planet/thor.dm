@@ -390,7 +390,7 @@ var/datum/planet/thor/planet_thor = null
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(H, span_notice("Hail patters onto your umbrella"))
+					to_chat(H, span_notice("Hail patters onto your umbrella."))
 				continue
 
 			var/target_zone = pick(BP_ALL)
