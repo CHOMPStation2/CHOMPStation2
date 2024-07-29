@@ -179,11 +179,6 @@
 			new_character.default_language = def_lang
 	// VOREStation Add End
 
-	// CHOMPAdd Start - Elements for footstep and slosh
-	new_character.set_footsteps(chosen_species.footstep)
-	new_character.set_slosh()
-	// CHOMPAdd End
-
 	//If desired, apply equipment.
 	if(equip_body)
 		if(charjob)
