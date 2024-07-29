@@ -158,11 +158,11 @@
 	name = "short jump console"
 	shuttle_tag = "Junker"
 
-//Preform some pirarcy
+//POI stealable shuttle
 /datum/shuttle/autodock/overmap/supernova
 	name = "Frozen Supernova"
 	warmup_time = 4
-	current_location = "supernovaspawn"
+	current_location = "novaspawn"
 	docking_controller_tag = "fsupernova"
 	shuttle_area = /area/shuttle/supernovaship
 	fuel_consumption = 1
