@@ -1,0 +1,5 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - rscadd: "Added a new extreme weather for admins called \"extreme monsoon\""
+  - bugfix: "Weather defines updated"
