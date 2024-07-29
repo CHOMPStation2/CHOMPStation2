@@ -311,18 +311,17 @@
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
 
-			// If they have an open umbrella, it'll guard from rain TODO: Give feedback that umbrella doesnt work
-			/*
-			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
+			// If they have an open umbrella, knock it off, this is more then an umbrella
+			if(ishuman(L))
+				var/mob/living/carbon/human/H = L
+				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				if(!istype(U) || !U.open)
+					U = L.get_inactive_hand()
 
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, "<span class='notice'>The rain pushes the umbrella off your hands!</span>")
-					//L.drop_both_hands
-				return
-			*/
+				if(istype(U) && U.open)
+					if(show_message)
+						to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
+						H.drop_both_hands()
 
 			L.water_act(2)
 			L.Weaken(3)
@@ -372,18 +371,17 @@
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
 
-			// Knock the umbrella off your hands, aint protecting you c: TODO: Make the feedback work
-			/*
-			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
+			// Knock the umbrella off your hands, aint protecting you c:
+			if(ishuman(L))
+				var/mob/living/carbon/human/H = L
+				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				if(!istype(U) || !U.open)
+					U = L.get_inactive_hand()
 
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, "<span class='notice'>The rain pushes the umbrella off your hands!</span>")
-					//L.drop_both_hands
-				continue
-			*/
+				if(istype(U) && U.open)
+					if(show_message)
+						to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
+						H.drop_both_hands()
 
 			var/target_zone = pick(BP_ALL)
 			var/amount_blocked = L.run_armor_check(target_zone, "melee")
