@@ -36,7 +36,7 @@
 /datum/spawnpoint/valleyvillage
 	display_name = "Desert Valley"
 	msg = "has awoken on tyr"
-	restrict_job = list(JOB_OUTSIDER, JOB_ANOMALY)
+	restrict_job = list(JOB_OUTSIDER)
 
 /datum/spawnpoint/valleyvillage/New()
 	..()

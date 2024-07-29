@@ -49,7 +49,6 @@
 	icon_state = "sheet-void_opal"
 	singular_name = "weathered agate"
 	default_type = "weathered agate"
-	apply_colour = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/weatherlily
 	name = "strange leaves"

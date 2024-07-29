@@ -35,7 +35,7 @@
 	name = "tyr leaf cloak"
 	result = /obj/item/clothing/suit/armor/tyrtribalcloak
 	reqs = list(
-		list(/obj/item/weapon/reagent_containers/food/snacks/weatherlily = 10),
+		list(/obj/item/weapon/reagent_containers/food/snacks/weatherlily = 1),
 		list(/obj/item/stack/material/fiber = 6),
 		list(/obj/item/stack/material/cloth = 3)
 	)
