@@ -10,7 +10,7 @@
 
 	var/list/smite_types = list(SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT,
 								SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE,
-								SMITE_PIE, SMITE_SPICE) //CHOMP Add pie and spicy air
+								SMITE_PIE, SMITE_SPICE, SMITE_HOTDOG) //CHOMP Add pie, spicy air and hot dog
 
 	var/smite_choice = tgui_input_list(usr, "Select the type of SMITE for [target]","SMITE Type Choice", smite_types)
 	if(!smite_choice)
@@ -173,6 +173,22 @@
 			target.Weaken(5)
 			playsound(target, 'sound/effects/spray2.ogg', 100, 1, get_rand_frequency(), falloff = 5)
 
+		if(SMITE_HOTDOG)
+			playsound(target, 'sound/effects/whistle.ogg', 50, 1, get_rand_frequency(), falloff = 5)
+			sleep(2 SECONDS)
+			target.Stun(10)
+			if(ishuman(target))
+				if(target.head)
+					target.unEquip(target.head)
+				if(target.wear_suit)
+					target.unEquip(target.wear_suit)
+				var/obj/item/clothing/suit = new /obj/item/clothing/suit/storage/hooded/foodcostume/hotdog
+				var/obj/item/clothing/hood = new /obj/item/clothing/head/hood_vr/hotdog_hood
+				target.equip_to_slot_if_possible(suit, slot_wear_suit, 0, 0, 1)
+				target.equip_to_slot_if_possible(hood, slot_head, 0, 0, 1)
+				sleep(5 SECONDS)
+				qdel(suit)
+				qdel(hood)
 		else
 			return //Injection? Don't print any messages.
 
