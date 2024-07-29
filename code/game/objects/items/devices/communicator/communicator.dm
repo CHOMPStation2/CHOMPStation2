@@ -5,6 +5,7 @@
 var/global/list/obj/item/device/communicator/all_communicators = list()
 
 // List of core tabs the communicator can switch to
+/* CHOMPEdit - moved to defines_ch.dm
 #define HOMETAB 1
 #define PHONTAB 2
 #define CONTTAB 3
@@ -14,6 +15,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 #define WTHRTAB 7
 #define MANITAB 8
 #define SETTTAB 9
+*/ // CHOMPEdit End
 
 /obj/item/device/communicator
 	name = "communicator"
@@ -478,6 +480,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 	icon_state = initial(icon_state)
 
+/* CHOMPEdit - Moved to undefines.dm
 #undef HOMETAB
 #undef PHONTAB
 #undef CONTTAB
@@ -487,3 +490,4 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 #undef WTHRTAB
 #undef MANITAB
 #undef SETTTAB
+*/ // CHOMPEdit End
