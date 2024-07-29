@@ -62,6 +62,8 @@
 	var/list/recipes = list()
 	for(var/datum/category_group/autolathe/A in autolathe_recipes.categories)
 		categories += A.name
+		for(var/datum/category_item/autolathe/whfabricator/M in A.items) //CHOMPadd: For wierd alien fabricator
+			continue
 		for(var/datum/category_item/autolathe/M in A.items)
 			if(M.hidden && !hacked)
 				continue

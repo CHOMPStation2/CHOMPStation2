@@ -4,7 +4,7 @@
 	icon_state = "hornet_mantis"
 	maxHealth = 40 //three hits with an agate sword. 4 with spear.
 	health = 40
-	pass_flags = PASSTABLE
+	pass_flags = PASSTABLE //flying bug
 	movement_cooldown = 1
 
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
@@ -22,6 +22,7 @@
 	name = "chromatic fly"
 	desc = "A strange insect."
 	icon_state = "firefly"
+	icon_dead = "firefly_dead"
 	maxHealth = 10 //Not sure why you're fighting this, but any agate weapon one shots it. Except bow.
 	health = 10
 	pass_flags = PASSTABLE
@@ -33,21 +34,31 @@
 
 	glow_color = "#FF3300"
 	light_color = "#FF3300"
-	glow_range = 3
-	glow_intensity = 3
+	glow_range = 4
+	glow_intensity = 4
 
 	melee_damage_lower = 5 //I guess it could theortically kill you dirrectly
 	melee_damage_upper = 5
 
 	hovering = TRUE
 
+/mob/living/simple_mob/animal/tyr/rainbow_fly/handle_special()
+	if(stat != DEAD)
+		painbow_aura()
+	..()
+
+/mob/living/simple_mob/animal/tyr/rainbow_fly/proc/painbow_aura()
+	for(var/mob/living/L in view(src, 4))
+		L.druggy = max(L.druggy, 10)
+
 /mob/living/simple_mob/animal/tyr/groundpitcher
 	name = "underground pitcher"
 	desc = "A large insect."
 	icon_state = "groundpitcher"
+	icon_dead = "groundpitcher"
 	maxHealth = 20 //two hits with sword and spear..
 	health = 20
-	pass_flags = PASSTABLE
+	pass_flags = PASSTABLE //This was from me copy and pasting but...it's an unmoving plant. Kind of want to keep it here.
 	movement_cooldown = 1
 
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/pitcher
@@ -109,3 +120,53 @@
 		"Each bead of slick fluid running down your body leaves you feeling weaker.",
 		"It's cramped and dark, the air thick and heavy. Your limbs feel like lead.",
 		"Strength drains from your frame. The cramped chamber feels easier to settle into with each passing moment.")
+
+//More things
+/mob/living/simple_mob/animal/tyr/rollyinsect
+	name = "metallido"
+	desc = "A large mutant looking armadillo."
+	icon_state = "armadillo"
+	icon_dead = "armadillo_dead"
+	maxHealth = 70 //Highest health of all tyr natural wildlife. 7 hits?
+	health = 70
+	movement_cooldown = 0
+
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/rollyinsect
+
+	faction = "metallido"
+
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+
+/mob/living/simple_mob/animal/tyr/rollyinsect/IIsAlly(mob/living/L) //Will attack silicons, and wildlife but will leave unarmed folks alone
+	. = ..()
+	if(!.)
+		if(issilicon(L))
+			return FALSE
+		if(ishuman(L))
+			var/mob/living/carbon/human/H = L
+			if(H.get_active_hand())
+				var/obj/item/I = H.get_active_hand()
+				if(I.force <= 1 * melee_damage_upper)
+					return TRUE
+		else if(istype(L, /mob/living/simple_mob))
+			var/mob/living/simple_mob/S = L
+			if(S.melee_damage_upper > 1 * melee_damage_upper)
+				return TRUE
+
+/datum/ai_holder/simple_mob/intentional/rollyinsect
+	hostile = TRUE
+	retaliate = TRUE
+	cooperative = TRUE
+	can_flee = TRUE
+	flee_when_dying = TRUE
+	var/random_follow = TRUE // Turn off if you want to bus with crabs.
+
+/datum/ai_holder/simple_mob/intentional/rollyinsect/handle_stance_strategical() //You may obtain a temporary friend.
+	..()
+	if(random_follow && stance == STANCE_IDLE && !leader)
+		if(prob(10))
+			for(var/mob/living/L in hearers(holder))
+				if(!istype(L, holder))
+					holder.visible_message("<b>\The [holder]</b> starts to follow \the [L].")
+					set_follow(L, rand(20 SECONDS, 40 SECONDS))

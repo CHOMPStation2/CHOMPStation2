@@ -9,7 +9,7 @@
 	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	special_attack_min_range = 1
 	special_attack_max_range = 7
-	special_attack_cooldown = 0 //This things attack soley via speical attacks hence the no cooldown
+	special_attack_cooldown = 10 //This things attack soley via speical attacks hence basically no cooldown
 	shock_resist = -0.2
 	var/specialattackprojectile = /obj/item/projectile/energy/phase/bolt
 
@@ -249,11 +249,11 @@
 
 /datum/ai_holder/simple_mob/intentional/three_phases/pre_special_attack(atom/A)
 	if(isliving(A))
-		if(flee_when_dying && (holder.health / holder.getMaxHealth()) <= 0.7) //Phase two
-			holder.a_intent = I_GRAB
-
-		else if(flee_when_dying && (holder.health / holder.getMaxHealth()) <= 0.35) //Phase three!
+		if((holder.health / holder.getMaxHealth()) <= 0.35) //Phase three!
 			holder.a_intent = I_DISARM
+
+		else if((holder.health / holder.getMaxHealth()) <= 0.7) //Phase two
+			holder.a_intent = I_GRAB
 
 		else
 			holder.a_intent = I_HURT
@@ -1008,7 +1008,7 @@
 //High overall defense, swaps between Burn and brute defense based off what was just used.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt //The final boss
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100)
-	specialattackprojectile = /obj/item/projectile/energy/darkmatter
+	specialattackprojectile = /obj/item/projectile/energy/plasma/vepr
 	icon_state = "eclipse_janus"
 	var/attackcycle = 1
 

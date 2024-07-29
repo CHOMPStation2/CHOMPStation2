@@ -934,13 +934,12 @@
 	special_attack_max_range = 7
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant/do_special_attack(atom/A)
-	var/mob/living/simple_mob/humanoid/eclipse/solar/plant/D
 	var/mob/living/carbon/human/H = A
 	var/obj/item/I = H.get_active_hand()
 	H.drop_item()
 	if(I)
-		I.throw_at(D, 2, 4) // Just yoinked.
-		D.visible_message("<span class='danger'>The [name] heaves, pulling \the [A]'s weapon from their hands!</span>")
+		I.throw_at(src, 2, 4) // Just yoinked.
+		src.visible_message("<span class='danger'>The [name] heaves, pulling \the [A]'s weapon from their hands!</span>")
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter
 	name = "Lunar Eclipse Experimenter"

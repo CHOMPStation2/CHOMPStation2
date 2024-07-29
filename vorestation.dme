@@ -4734,6 +4734,7 @@
 #include "modular_chomp\code\game\machinery\petrification.dm"
 #include "modular_chomp\code\game\machinery\portable_turret.dm"
 #include "modular_chomp\code\game\machinery\vending.dm"
+#include "modular_chomp\code\game\machinery\tyr\crafter.dm"
 #include "modular_chomp\code\game\machinery\virtual_reality\vr_console.dm"
 #include "modular_chomp\code\game\mecha\mecha_construction_paths.dm"
 #include "modular_chomp\code\game\mecha\mecha_parts.dm"
