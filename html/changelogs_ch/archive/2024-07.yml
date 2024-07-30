@@ -128,3 +128,12 @@
   Verkister:
   - balance: Adjusted diver visibility in shallow water.
   - balance: Simplemob targeting ai invisibility threshold changed from 50% to 25%.
+2024-07-30:
+  TheCaramelion:
+  - rscadd: Added an option for players to choose their footstep sound
+  - qol: Reduced footstep volume
+  - code_imp: Less procs, more signals
+  - admin: Adds a new option to the smites
+  tacoguy7765093:
+  - rscadd: Added a new extreme weather for admins called "extreme monsoon"
+  - bugfix: Weather defines updated
