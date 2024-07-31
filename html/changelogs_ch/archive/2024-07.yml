@@ -137,3 +137,6 @@
   tacoguy7765093:
   - rscadd: Added a new extreme weather for admins called "extreme monsoon"
   - bugfix: Weather defines updated
+2024-07-31:
+  TheCaramelion:
+  - bugfix: Fixes a small oversight that made foostep element throw constant runtimes

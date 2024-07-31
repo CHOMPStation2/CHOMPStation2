@@ -1,4 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - bugfix: "Fixes a small oversight that made foostep element throw constant runtimes"
