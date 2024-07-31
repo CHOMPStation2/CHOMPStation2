@@ -11,3 +11,4 @@
 #include "shelter_5.dm"
 #include "shelter_6.dm"
 #include "cruiser.dm"
+#include "pizzashuttle.dm"
