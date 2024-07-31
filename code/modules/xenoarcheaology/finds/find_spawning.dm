@@ -687,21 +687,15 @@
 
 		if(talkative)
 			new_item.talking_atom = new(new_item)
-<<<<<<< HEAD
 			if("origin_tech" in new_item.vars) //ChompEDIT - fix runtimes with items that don't have this var
-				LAZYINITLIST(new_item.origin_tech)
-				new_item.origin_tech[TECH_ARCANE] += 1
-				new_item.origin_tech[TECH_PRECURSOR] += 1
-=======
-			var/list/new_tech
-			if(new_item.origin_tech)
-				new_tech = new_item.origin_tech.Copy()
-			else
-				new_tech = list()
-			new_tech[TECH_ARCANE] += 1
-			new_tech[TECH_PRECURSOR] += 1
-			new_item.origin_tech = new_tech
->>>>>>> 05940866d5... Merge pull request #16139 from Kashargul/xenoLists
+				var/list/new_tech
+				if(new_item.origin_tech)
+					new_tech = new_item.origin_tech.Copy()
+				else
+					new_tech = list()
+				new_tech[TECH_ARCANE] += 1
+				new_tech[TECH_PRECURSOR] += 1
+				new_item.origin_tech = new_tech
 
 		if(become_anomalous)
 			new_item.become_anomalous()
