@@ -693,7 +693,12 @@
 									plastic.add_charge(total_material)
 								if(material == "wood" && wood)
 									wood.add_charge(total_material)
-					hound.nutrition += 5 * digested //drain(-50 * digested) //CHOMPEdit
+					//CHOMPEdit Start
+					if(istype(target, /obj/item/trash))
+						hound.nutrition += digested
+					else
+						hound.nutrition += 5 * digested //drain(-50 * digested)
+					//CHOMPEdit End
 			else if(istype(target,/obj/effect/decal/remains))
 				qdel(target)
 				hound.nutrition += 10 //drain(-100) //CHOMPEdit
