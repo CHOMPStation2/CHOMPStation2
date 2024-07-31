@@ -1,5 +1,6 @@
 /datum/map_template/shelter
 	var/superpose = FALSE
+	var/shuttle = FALSE
 
 // Subtype to mark maps for use with the superpose capsule. This is mostly to prevent automatic additions from upstream changes.
 /datum/map_template/shelter/superpose
