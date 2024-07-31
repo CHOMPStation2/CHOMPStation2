@@ -1,13 +1,13 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
 #if MAP_TEST
-#include "pizza_shuttle.dmm"
+#include "pizzashuttle-11x13.dmm"
 #endif
 
 // Map template for spawning the shuttle
 /datum/map_template/om_ships/hybrid
 	name = "OM Ship - Pizza Delivery Shuttle"
 	desc = "A small moderate condition pizza parlor on the go."
-	mappath = 'pizzashuttle.dmm'
+	mappath = 'pizzashuttle-11x13.dmm'
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -48,3 +48,12 @@
 	vessel_mass = 900 //YEET
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Pizza Gut" //These names must match
+
+//FOR SHUTTLE SUPERPOSED PODS
+/datum/map_template/shelter/superpose/pizzashuttle
+	shelter_id = "PizzaShuttle"
+	mappath = 'pizzashuttle-11x13.dmm'
+	name = "Pizza Gut Shuttle"
+	description = "A medium size pizza resturaunt ship."
+	superpose = FALSE
+	shuttle = TRUE
