@@ -84,14 +84,14 @@
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/tall/mining/dullahanminermodule/dullahanmineralt
-	name = "Dullahan Mining unit"
+	name = "Dullahan Mining unit v2"
 	sprite_icon_state = "dullahanmine_alt"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 
-/datum/robot_sprite/dogborg/tall/mining/dullahancargo
+/datum/robot_sprite/dogborg/tall/mining/dullahancargomodule
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_cargo.dmi'
 	pixel_x = 0
 
