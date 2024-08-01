@@ -1,0 +1,6 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - qol: "Added the ability to point at items in your inventory"
+  - code_imp: "Added COMSIG_MOB_POINTED"
+  - refactor: "Everything point related moved to the modular folder"
