@@ -225,7 +225,8 @@
 /obj/soulgem/proc/toggle_setting(var/flag)
 	setting_flags ^= flag
 	if(flag & SOULGEM_SHOW_VORE_SFX)
-		soulgem_vfx(TRUE)
+		soulgem_show_vfx(TRUE)
+		soulgem_vfx()
 	if(flag & NIF_SC_BACKUPS)
 		soulgem_backup()
 	if(flag & NIF_SC_ALLOW_EARS)
@@ -292,26 +293,22 @@
 		return
 	if(!linked_belly)
 		linked_belly = belly
-		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
+		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_show_vfx))
 		return
 	if(belly != linked_belly)
 		if(!skip_unreg)
 			UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = belly
-		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_vfx))
+		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_show_vfx))
 
 // Handles the vore fx updates for the captured souls
-/obj/soulgem/proc/soulgem_vfx(var/update, var/severity = 0)
+/obj/soulgem/proc/soulgem_show_vfx(var/update, var/severity = 0)
 	if(linked_belly)
 		for(var/mob/living/L in brainmobs)
 			if(flag_check(SOULGEM_SHOW_VORE_SFX))
 				show_vore_fx(L, update, severity)
 			else
 				clear_vore_fx(L)
-		if(flag_check(SOULGEM_SHOW_VORE_SFX))
-			notify_holder("Interior simulation enabled.")
-		else
-			notify_holder("Interior simulation disabled.")
 
 // Function to show the vore fx overlay
 /obj/soulgem/proc/show_vore_fx(var/mob/living/L, var/update, var/severity = 0)
@@ -326,6 +323,13 @@
 	M.clear_fullscreen("belly")
 	if(M.hud_used && !M.hud_used.hud_shown)
 		M.toggle_hud_vis(TRUE)
+
+// VFX toggling
+/obj/soulgem/proc/soulgem_vfx()
+	if(flag_check(SOULGEM_SHOW_VORE_SFX))
+		notify_holder("Interior simulation enabled.")
+	else
+		notify_holder("Interior simulation disabled.")
 
 // Takeover section
 
