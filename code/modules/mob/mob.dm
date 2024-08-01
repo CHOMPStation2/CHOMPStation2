@@ -230,7 +230,7 @@
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
 		return TRUE
-
+/* CHOMPEdit - Moved to modular_chomp/modules/point/point.dm
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
 	set name = "Point To"
 	set category = "Object"
@@ -260,7 +260,7 @@
 
 	face_atom(A)
 	return 1
-
+*/
 
 /mob/proc/ret_grab(list/L, flag)
 	return
