@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "Fixed a case in which belly signals could trigger too many soulcatcher messages"
