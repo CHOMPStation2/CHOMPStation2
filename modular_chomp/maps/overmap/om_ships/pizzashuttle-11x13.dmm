@@ -272,6 +272,12 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	dir = 6;
+	pixel_x = -7;
+	pixel_y = -24
+	},
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/plating,
 /area/shuttle/pizza_shuttle)
 "C" = (
@@ -299,6 +305,22 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/pizza_shuttle)
+"H" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/airlock_sensor{
+	pixel_x = -24;
+	pixel_y = -25
+	},
+/obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/shuttle/pizza_shuttle)
 "I" = (
@@ -586,7 +608,7 @@ d
 d
 m
 d
-l
+H
 f
 Q
 v
