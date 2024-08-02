@@ -571,7 +571,7 @@
 /// 0 / RAD_RESIST_CALC_DIV = Each turf absorbs some fraction of the working radiation level
 /// 1 / RAD_RESIST_CALC_SUB = Each turf absorbs a fixed amount of radiation
 /datum/config_entry/flag/radiation_resistance_calc_mode
-	default = RAD_RESIST_CALC_SUB
+	default = RAD_RESIST_CALC_DIV
 
 /datum/config_entry/flag/radiation_resistance_calc_mode/ValidateAndSet(str_val)
 	if(!VASProcCallGuard(str_val))

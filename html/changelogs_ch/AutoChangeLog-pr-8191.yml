@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - rscadd: "Check for client/key and remove on qdel of a ghost"

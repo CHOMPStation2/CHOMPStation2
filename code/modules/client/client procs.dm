@@ -5,7 +5,7 @@
 #define MIN_CLIENT_VERSION	0		//Just an ambiguously low version for now, I don't want to suddenly stop people playing.
 									//I would just like the code ready should it ever need to be used.
 
-//#define TOPIC_DEBUGGING 1
+//# define TOPIC_DEBUGGING 1
 
 	/*
 	When somebody clicks a link in game, this Topic is called first.
@@ -279,6 +279,7 @@
 		void = new()
 	screen += void
 
+	//disabled because we don't use the ingame changelog system any more // CHOMPEdit: Enabled because we do
 	if((prefs.lastchangelog != changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
 		to_chat(src, "<span class='info'>You have unread updates in the changelog.</span>")
 		winset(src, "rpane.changelog", "background-color=#eaeaea;font-style=bold")
@@ -511,7 +512,7 @@
 
 /client/verb/character_setup()
 	set name = "Character Setup"
-	set category = "Preferences"
+	set category = "Preferences.Character" //CHOMPEdit
 	if(prefs)
 		prefs.ShowChoices(usr)
 
@@ -613,7 +614,7 @@
 
 /client/verb/toggle_fullscreen()
 	set name = "Toggle Fullscreen"
-	set category = "OOC"
+	set category = "OOC.Client Settings" //CHOMPEdit
 
 	fullscreen = !fullscreen
 
@@ -634,7 +635,7 @@
 /*
 /client/verb/toggle_status_bar()
 	set name = "Toggle Status Bar"
-	set category = "OOC"
+	set category = "OOC.Client Settings" //CHOMPEdit
 
 	show_status_bar = !show_status_bar
 

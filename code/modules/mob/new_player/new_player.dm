@@ -23,7 +23,13 @@
 /mob/new_player/New()
 	mob_list += src
 	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
-	initialized = TRUE // Explicitly don't use Initialize().  New players join super early and use New()
+	//CHOMPEdit Begin
+	if(length(GLOB.newplayer_start))
+		forceMove(pick(GLOB.newplayer_start))
+	else
+		forceMove(locate(1,1,1))
+	//CHOMPEdit End
+	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New() //CHOMPEdit
 
 
 /mob/new_player/Destroy()
@@ -65,8 +71,7 @@
 
 	output += "<hr>" //ChompADD - a line divider between functional and info buttons
 
-	/*
-	//nobody uses this feature
+	//nobody uses this feature //WELL WE'RE GONNA
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
 
@@ -85,7 +90,6 @@
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>" //ChompEDIT - fixed height
 			else
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br><i>No Changes</i></p>" //ChompEDIT - fixed height
-	*/
 
 	if(client?.check_for_new_server_news())
 		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>" //ChompEDIT 'Game updates' --> 'Server news'
@@ -118,7 +122,7 @@
 		client.prefs.lastlorenews = GLOB.news_data.newsindex
 		SScharacter_setup.queue_preferences_save(client.prefs)
 
-	panel = new(src, "Welcome","Welcome", 210, 400, src) // VOREStation Edit //ChompEDIT, height 300 -> 400
+	panel = new(src, "Welcome","Welcome", 210, 500, src) // VOREStation Edit //ChompEDIT, height 320 -> 500
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()

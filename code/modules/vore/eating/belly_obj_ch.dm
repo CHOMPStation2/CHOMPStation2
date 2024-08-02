@@ -231,13 +231,16 @@
 /obj/belly/proc/GenerateBellyReagents()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
-		R.cell.charge -= gen_cost*10
+		if(!R.use_direct_power(gen_cost*10, 200))
+			return
 	else
 		owner.nutrition -= gen_cost
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent])
 	if(count_liquid_for_sprite)
 		owner.update_fullness() //This is run whenever a belly's contents are changed.
+	if(LAZYLEN(belly_surrounding))
+		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, FALSE, reagents.total_volume) // Signals vore_fx() reagents updates.
 
 //////////////////////////// REAGENT_DIGEST ////////////////////////
 
@@ -653,10 +656,12 @@
 
 // Updates the belly_surrounding list variable. Called in bellymodes_vr.dm
 /obj/belly/proc/update_belly_surrounding()
-	if(!contents.len)
+	if(!contents.len && !LAZYLEN(owner.soulgem?.brainmobs))
 		belly_surrounding = list()
 		return
 	belly_surrounding = get_belly_surrounding(contents)
+	if(owner.soulgem?.linked_belly == src)
+		belly_surrounding += owner.soulgem.brainmobs
 
 // Recursive proc that returns all living mobs directly and indirectly inside a belly
 // This can also be called more generically to get all living mobs not in bellies within any contents list

@@ -174,3 +174,10 @@
 	var/obj/structure/closet/crate/C = new/obj/structure/closet/crate
 	C.contents = objs
 	C.loc = src.loc
+
+#undef SERVERS
+#undef OPTIONS
+#undef RECEIVE
+#undef REC_CONF
+#undef SENDING
+#undef CHAT

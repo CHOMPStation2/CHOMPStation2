@@ -9,7 +9,7 @@ var/silent_ert = 0
 
 /client/proc/response_team()
 	set name = "Dispatch Emergency Response Team"
-	set category = "Special Verbs"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set desc = "Send an emergency response team to the station"
 
 	if(!holder)
@@ -44,7 +44,7 @@ var/silent_ert = 0
 /client/verb/JoinResponseTeam()
 
 	set name = "Join Response Team"
-	set category = "IC"
+	set category = "IC.Event" //CHOMPEdit
 
 	if(!MayRespawn(1))
 		to_chat(usr, "<span class='warning'>You cannot join the response team at this time.</span>")

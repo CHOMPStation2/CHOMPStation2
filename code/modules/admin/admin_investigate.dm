@@ -28,7 +28,7 @@
 //ADMINVERBS
 /client/proc/investigate_show( subject in list("hrefs","notes","singulo","telesci") )
 	set name = "Investigate"
-	set category = "Admin"
+	set category = "Admin.Investigate" //CHOMPEdit
 	if(!holder)	return
 	switch(subject)
 		if("singulo", "telesci")			//general one-round-only stuff
@@ -48,3 +48,5 @@
 			else
 				to_chat(src, "<span class='filter_adminlog warning'>Error: admin_investigate: Href Logging is not on.</span>")
 				return
+
+#undef INVESTIGATE_DIR

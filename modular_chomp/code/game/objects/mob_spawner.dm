@@ -14,6 +14,8 @@
 		/obj/structure/closet/crate/mimic/dangerous = 2,
 		/mob/living/simple_mob/animal/space/bats = 70,
 		/mob/living/simple_mob/vore/jelly = 25,
+		/mob/living/simple_mob/vore/oregrub = 25,
+		/mob/living/simple_mob/vore/aggressive/lizardman = 25,
 		/mob/living/simple_mob/animal/space/bear = 1,
 		/mob/living/simple_mob/vore/aggressive/deathclaw = 1,
 		/mob/living/simple_mob/animal/space/goose = 60,
@@ -31,8 +33,9 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "tunnel_hole"
 	spawn_types = list(
-	/mob/living/simple_mob/animal/passive/mouse= 100,
+	/mob/living/simple_mob/animal/passive/mouse = 100,
     /mob/living/simple_mob/animal/passive/cockroach = 25,
+	/mob/living/simple_mob/animal/passive/mouse/rat = 10, // Because I'm a horrible person. <3
 	/obj/effect/spider/spiderling/non_growing = 5)
 
 /obj/structure/mob_spawner/mouse_nest/mousehole/New()

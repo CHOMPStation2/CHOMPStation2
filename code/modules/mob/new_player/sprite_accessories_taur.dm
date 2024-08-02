@@ -83,7 +83,7 @@
 
 /mob/living/carbon/human/proc/taur_mount(var/mob/living/M in living_mobs(1))
 	set name = "Taur Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -99,7 +99,7 @@
 		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
 
 /mob/living/carbon/human/attack_hand(mob/user as mob)
-	if(LAZYLEN(buckled_mobs))
+	if(LAZYLEN(buckled_mobs) && riding_datum) //CHOMPEdit
 		//We're getting off!
 		if(user in buckled_mobs)
 			riding_datum.force_dismount(user)

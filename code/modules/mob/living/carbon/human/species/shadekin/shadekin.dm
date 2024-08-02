@@ -240,7 +240,7 @@
 			H.adjustBruteLoss((-0.25))
 			H.adjustToxLoss((-0.25))
 			H.heal_organ_damage(3, 0)
-			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_NORM)
+			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_SUPER) //CHOMP Edit - increased ANTIBIO from Normal to Super
 			for(var/obj/item/organ/I in H.internal_organs)
 				if(I.robotic >= ORGAN_ROBOT)
 					continue
@@ -480,7 +480,7 @@
 		if(RED_EYES)
 			total_health = 150 //ChompEDIT - balance tweaks
 			energy_light = -1
-			energy_dark = 0.1
+			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
 			total_health = 100 //ChompEDIT - balance tweaks
@@ -500,7 +500,7 @@
 		if(ORANGE_EYES)
 			total_health = 125 //ChompEDIT - balance tweaks
 			energy_light = -0.5
-			energy_dark = 0.25
+			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 
 	H.maxHealth = total_health

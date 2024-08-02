@@ -1,8 +1,3 @@
-// Flags for specifying which states we have vore icon_states for.
-#define SA_ICON_LIVING	0x01
-#define SA_ICON_DEAD	0x02
-#define SA_ICON_REST	0x04
-
 /mob/living/simple_mob
 	melee_attack_delay = 1
 	base_attack_cooldown = 10
@@ -235,6 +230,13 @@
 	if(!vore_active || no_vore || !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		return
 
+	AddElement(/datum/element/slosh) // Sloshy element
+
+	//CHOMPAdd Start
+	if(!soulgem)
+		soulgem = new(src)
+	//CHOMPAdd End
+
 	if(LAZYLEN(vore_organs))
 		return
 
@@ -391,7 +393,7 @@
 
 /mob/living/simple_mob/proc/animal_mount(var/mob/living/M in living_mobs(1))
 	set name = "Animal Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //CHOMPEdit
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -426,7 +428,7 @@
 
 /mob/living/simple_mob/proc/leap()
 	set name = "Pounce Target"
-	set category = "Abilities"
+	set category = "Abilities.Mob" //CHOMPEdit
 	set desc = "Select a target to pounce at."
 
 	if(last_special > world.time)

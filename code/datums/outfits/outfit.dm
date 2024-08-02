@@ -127,7 +127,10 @@ var/list/outfits_decls_by_type_
 	if(gloves)
 		H.equip_to_slot_or_del(new gloves(H),slot_gloves)
 	if(shoes)
+	//CHOMPEdit Start, remove RS No shoes
+	//	if(!(H.client?.prefs?.shoe_hater))	//RS ADD
 		H.equip_to_slot_or_del(new shoes(H),slot_shoes)
+	//CHOMPEdit End, remove RS No Shoes
 	if(mask)
 		H.equip_to_slot_or_del(new mask(H),slot_wear_mask)
 	if(head)

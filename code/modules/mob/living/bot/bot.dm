@@ -43,6 +43,7 @@
 	var/max_frustration = 0
 
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
+	allow_mind_transfer = TRUE //CHOMPAdd
 
 /mob/living/bot/New()
 	..()
@@ -590,9 +591,7 @@
 	return ..()
 
 /mob/living/bot/Logout()
-	no_vore = TRUE // ROBOT VORE
 	release_vore_contents()
-	init_vore() // ROBOT VORE
 	remove_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	no_vore = TRUE
 	devourable = FALSE

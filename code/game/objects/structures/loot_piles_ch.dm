@@ -106,3 +106,10 @@
 /obj/structure/loot_pile/mecha/ripley/pirate
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "pirate-broken"
+
+
+/obj/structure/loot_pile/maint/technical
+	density = FALSE
+
+/obj/structure/loot_pile/maint/boxfort
+	density = FALSE

@@ -30,162 +30,58 @@ GLOBAL_VAR(world_time_day)
 
 	initial_flooring = /decl/flooring/grass/seasonal_grass
 
-	grass_types = list()
+	grass = null //CHOMPEdit
 	var/static/list/overlays_cache = list()
 	animal_chance = 0.5 // CHOMPedit: upstream redeclared these as new vars for some reason
-	animal_types = list() // CHOMPedit end
+	animals = null // CHOMPedit end
 	var/tree_chance = 1
-	var/tree_types = list()
+	var/trees = null //CHOMPEdit
 	var/snow_chance = 10
 
 /turf/simulated/floor/outdoors/grass/seasonal/Initialize() //There are A LOT of chompedits here, I guess.
 
 	switch(GLOB.world_time_season)
 		if("spring")
-			tree_types = list(
-				/obj/structure/flora/tree/bigtree,
-				/obj/structure/flora/tree/jungle_small,
-				/obj/structure/flora/tree/jungle
-			)
-			animal_types = list(
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10, //CHOMP Edit
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1, //CHOMP Edit
-				/mob/living/simple_mob/vore/redpanda = 40,
-				/mob/living/simple_mob/vore/redpanda/fae = 2, //CHOMP Edit
-				/mob/living/simple_mob/vore/sheep = 20,
-				/mob/living/simple_mob/vore/rabbit/black = 20,
-				/mob/living/simple_mob/vore/rabbit/white = 20,
-				/mob/living/simple_mob/vore/rabbit/brown = 20,
-				/mob/living/simple_mob/vore/leopardmander = 2,
-				/mob/living/simple_mob/vore/horse/big = 10,
-				/mob/living/simple_mob/vore/bigdragon/friendly = 1,
-				/mob/living/simple_mob/vore/alienanimals/dustjumper = 20,
-				/mob/living/simple_mob/vore/bee = 20,
-				/mob/living/simple_mob/vore/horse/big = 5,
-				/mob/living/simple_mob/vore/wolf = 5,
-				/mob/living/simple_mob/vore/wolf/direwolf = 1,
-				/mob/living/simple_mob/vore/wolf/direwolf/dog = 1,
-				/mob/living/simple_mob/vore/squirrel = 20
-			)
-			grass_types = list(
-				/obj/structure/flora/ausbushes/sparsegrass,
-				/obj/structure/flora/ausbushes/fullgrass,
-				/obj/structure/flora/ausbushes/brflowers,
-				/obj/structure/flora/ausbushes/genericbush,
-				/obj/structure/flora/ausbushes/lavendergrass,
-				/obj/structure/flora/ausbushes/leafybush,
-				/obj/structure/flora/ausbushes/ppflowers,
-				/obj/structure/flora/ausbushes/sunnybush,
-				/obj/structure/flora/ausbushes/ywflowers,
-				/obj/structure/flora/mushroom
-			)
+			trees = "seasonalspring" //CHOMPEdit
+			animals = "seasonalspring" //CHOMPEdit
+			grass = "seasonalspring" //CHOMPEdit
 
 			grass_chance = 30
 		if("summer")
-			tree_types = list(
-				/obj/structure/flora/tree/bigtree,
-				/obj/structure/flora/tree/jungle_small,
-				/obj/structure/flora/tree/jungle
-			)
-			animal_types = list(
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
-				/mob/living/simple_mob/vore/redpanda = 40, //CHOMP Edit
-				/mob/living/simple_mob/vore/redpanda/fae = 2, //CHOMP Edit
-				/mob/living/simple_mob/vore/sheep = 20,
-				/mob/living/simple_mob/vore/rabbit/black = 20,
-				/mob/living/simple_mob/vore/rabbit/white = 20,
-				/mob/living/simple_mob/vore/rabbit/brown = 20,
-				/mob/living/simple_mob/vore/leopardmander = 2,
-				/mob/living/simple_mob/vore/horse/big = 10,
-				/mob/living/simple_mob/vore/bigdragon/friendly = 1,
-				/mob/living/simple_mob/vore/alienanimals/dustjumper = 20,
-				/mob/living/simple_mob/vore/bee = 5,
-				/mob/living/simple_mob/vore/horse/big = 5,
-				/mob/living/simple_mob/vore/pakkun = 2,
-				/mob/living/simple_mob/vore/fennix = 1,
-				/mob/living/simple_mob/vore/wolf/direwolf/dog = 1,
-				/mob/living/simple_mob/animal/passive/bird/parrot = 1,
-				/mob/living/simple_mob/vore/squirrel = 20
-			)
-			grass_types = list(
-				/obj/structure/flora/ausbushes/sparsegrass,
-				/obj/structure/flora/ausbushes/fullgrass
-			)
+			trees = "seasonalsummer" //CHOMPEdit
+			animals = "seasonalsummer" //CHOMPEdit
+			grass = "seasonalsummer" //CHOMPEdit
 
 		if("autumn")
-			tree_types = list(
-				/obj/structure/flora/tree/bigtree
-			)
+			trees = "seasonalautumn" //CHOMPEdit
 
-			animal_types = list(
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
-				/mob/living/simple_mob/vore/redpanda = 40,
-				/mob/living/simple_mob/vore/redpanda/fae = 2,
-				/mob/living/simple_mob/vore/sheep = 20,
-				/mob/living/simple_mob/vore/rabbit/black = 20,
-				/mob/living/simple_mob/vore/rabbit/white = 20,
-				/mob/living/simple_mob/vore/rabbit/brown = 20,
-				/mob/living/simple_mob/vore/horse/big = 10,
-				/mob/living/simple_mob/vore/alienanimals/dustjumper = 20,
-				/mob/living/simple_mob/vore/horse/big = 1,
-				/mob/living/simple_mob/vore/wolf = 1,
-				/mob/living/simple_mob/vore/wolf/direwolf = 1,
-				/mob/living/simple_mob/vore/wolf/direwolf/dog = 1,
-				/mob/living/simple_mob/vore/squirrel = 20
-			)
-			grass_types = list(
-				/obj/structure/flora/ausbushes/sparsegrass,
-				/obj/structure/flora/pumpkin,
-				/obj/structure/flora/ausbushes
-			)
+			animals = "seasonalautumn" //CHOMPEdit
+			grass = "seasonalautumn" //CHOMPEdit
 
 			grass_chance = 10
 			animal_chance = 0.25
 		if("winter")
 			grass_chance = 0
-			tree_types = list(
-				/obj/structure/flora/tree/dead,
-				/obj/structure/flora/tree/pine
-			)
+			trees = "seasonalwinter"
 
-			animal_types = list(
-				/mob/living/simple_mob/vore/rabbit/white = 40,
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
-				/mob/living/simple_mob/vore/redpanda = 10,
-				/mob/living/simple_mob/vore/wolf = 10,
-				/mob/living/simple_mob/vore/wolf/direwolf = 1,
-				/mob/living/simple_mob/vore/wolf/direwolf/dog = 1,
-				/mob/living/simple_mob/vore/otie/friendly = 2,
-				/mob/living/simple_mob/vore/otie/friendly/chubby = 1,
-				/mob/living/simple_mob/vore/otie/red/friendly = 1,
-				/mob/living/simple_mob/vore/otie/red/chubby = 1,
-				/mob/living/simple_mob/vore/squirrel = 20
-			)
+			animals = "seasonalwinter" //CHOMPEdit
 			if(prob(snow_chance))
 				chill()
 				return
 
-			grass_types = list(
-				/obj/structure/flora/grass/both,
-				/obj/structure/flora/grass/brown,
-				/obj/structure/flora/grass/green,
-				/obj/structure/flora/bush
-			)
+			grass = "seasonalwinter" //CHOMPEdit
 
 			grass_chance = 1
 			animal_chance = 0.1
 
 
 	if(tree_chance && prob(tree_chance) && !check_density())
-		var/tree_type = pickweight(tree_types)
+		var/tree_type = pickweight(GLOB.grass_trees[trees]) //CHOMPEdit
 		new tree_type(src)
 
 
 	if(animal_chance && prob(animal_chance) && !check_density())
-		var/animal_type = pickweight(animal_types)
+		var/animal_type = pickweight(GLOB.grass_animals[animals]) //CHOMPEdit
 		new animal_type(src)
 
 

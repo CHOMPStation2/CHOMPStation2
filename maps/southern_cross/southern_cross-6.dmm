@@ -25,24 +25,24 @@
 	id = "anolongstorage"
 	},
 /turf/simulated/floor/plating{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology)
 "ai" = (
 /turf/simulated/floor/plating{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology)
 "aj" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology)
 "ak" = (
@@ -51,18 +51,18 @@
 	req_access = list(65)
 	},
 /turf/simulated/floor/plating{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology)
 "al" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology)
 "am" = (
@@ -4189,11 +4189,6 @@
 	},
 /turf/simulated/wall/solidrock,
 /area/surface/cave/unexplored/normal)
-"jK" = (
-/obj/structure/table/marble,
-/obj/item/weapon/book/manual/anomaly_testing,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "jU" = (
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
@@ -4347,6 +4342,14 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
+"tS" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/surface/cave/explored/trader)
 "xh" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
@@ -4388,6 +4391,12 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"BX" = (
+/obj/structure/bed,
+/obj/item/weapon/bedsheet/cosmos,
+/mob/living/simple_mob/humanoid/starhunter/trader/farmer,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "Co" = (
 /obj/machinery/light{
 	dir = 8
@@ -4462,10 +4471,7 @@
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
 "In" = (
-/obj/structure/bed,
-/obj/item/weapon/bedsheet/cosmos,
-/mob/living/simple_mob/humanoid/starhunter/trader/farmer,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/plating,
 /area/surface/cave/explored/trader)
 "Jk" = (
 /obj/effect/map_effect/portal/line/side_a,
@@ -4536,6 +4542,17 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
+"QY" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/structure/cable/blue{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/surface/cave/explored/trader)
 "RM" = (
 /turf/simulated/wall/sandstone,
 /area/surface/cave/explored/trader)
@@ -4567,6 +4584,14 @@
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness/river,
 /turf/simulated/wall/solidrock,
 /area/surface/outpost/wall)
+"UB" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/blue{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/surface/cave/explored/trader)
 "VK" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -4586,6 +4611,19 @@
 	outdoors = 0
 	},
 /area/surface/cave/explored/normal)
+"WQ" = (
+/obj/structure/table/marble,
+/obj/item/weapon/book/manual/anomaly_testing,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
+"Xk" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/surface/cave/explored/trader)
 "YU" = (
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
@@ -68575,10 +68613,10 @@ ae
 ae
 ae
 RM
-YU
-YU
-YU
-sH
+BX
+WQ
+kx
+RM
 YU
 YU
 YU
@@ -68836,7 +68874,7 @@ RM
 YU
 YU
 YU
-RM
+sH
 YU
 YU
 YU
@@ -69608,8 +69646,8 @@ ae
 ae
 RM
 In
-jK
-kx
+In
+UB
 RM
 St
 oO
@@ -69865,9 +69903,9 @@ ae
 ae
 ae
 RM
-YU
-YU
-YU
+QY
+Xk
+tS
 RM
 YU
 YU
@@ -70123,9 +70161,9 @@ ae
 ae
 ae
 RM
-YU
-YU
-YU
+In
+In
+In
 sH
 YU
 YU

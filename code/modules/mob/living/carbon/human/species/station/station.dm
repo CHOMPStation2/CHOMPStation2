@@ -78,7 +78,7 @@
 	name_language = LANGUAGE_UNATHI
 	species_language = LANGUAGE_UNATHI
 	health_hud_intensity = 2.5
-	chem_strength_alcohol = 0.75
+	chem_strength_alcohol = 1.25
 	throwforce_absorb_threshold = 10
 	digi_allowed = TRUE
 
@@ -90,6 +90,7 @@
 	// CHOMPEdit: Reverted these back to Polaris, but commented them out. We're using species-specific sounds instead.
 	// male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
 	// female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
+	footstep = FOOTSTEP_MOB_CLAW // CHOMPEdit
 	species_sounds = "Lizard" // Species sounds
 
 	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
@@ -213,7 +214,7 @@
 	name_language = LANGUAGE_SIIK
 	species_language = LANGUAGE_SIIK
 	health_hud_intensity = 2.5
-	chem_strength_alcohol = 1.25
+	chem_strength_alcohol = 0.75
 	digi_allowed = TRUE
 
 	min_age = 18
@@ -327,7 +328,7 @@
 	species_language = LANGUAGE_SKRELLIAN
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	health_hud_intensity = 2
-	chem_strength_alcohol = 5
+	chem_strength_alcohol = 0.2
 
 	water_movement = -3
 
@@ -553,7 +554,7 @@
 	show_ssd = "completely quiescent"
 	health_hud_intensity = 2.5
 	item_slowdown_mod = 0.1
-	chem_strength_alcohol = 0
+	chem_strength_alcohol = 10000	//a little hacky, maybe? but whatever. nobody plays diona anyway.
 	throwforce_absorb_threshold = 5
 
 	num_alternate_languages = 3

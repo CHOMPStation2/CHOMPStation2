@@ -66,7 +66,16 @@
 						/obj/item/toy/plushie/borgplushie/drake/jani,
 						/obj/item/toy/plushie/borgplushie/drake/trauma,
 						/obj/item/toy/plushie/otter,
-						/obj/item/toy/plushie/shark
+						/obj/item/toy/plushie/shark,
+						//CHOMPStation Add Start
+						/obj/item/toy/plushie/red_dragon,
+						/obj/item/toy/plushie/green_dragon,
+						/obj/item/toy/plushie/purple_dragon,
+						/obj/item/toy/plushie/white_eastdragon,
+						/obj/item/toy/plushie/red_eastdragon,
+						/obj/item/toy/plushie/green_eastdragon,
+						/obj/item/toy/plushie/gold_eastdragon
+						//CHOMPStation Add End
 						)
 
 /obj/machinery/clawmachine/update_icon()

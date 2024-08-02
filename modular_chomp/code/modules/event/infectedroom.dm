@@ -8,8 +8,13 @@
 		/area/shuttle,
 		/area/crew_quarters,
 		/area/holodeck,
+		/area/construction,
 		/area/engineering/engine_room,
-		/area/maintenance)
+		/area/engineering/engine_monitoring,
+		/area/engineering/gravgen,
+		/area/maintenance,
+		/area/medical,
+		/area/rnd/test_area)
 
 	var/commondisease = list(
 		"Friday Fever" = list(
@@ -72,7 +77,7 @@
 
 		var/list/turfs = list()
 		for(var/turf/simulated/floor/F in A)
-			if(turf_clear(F))
+			if(!F.check_density())
 				turfs += F
 		if(turfs.len == 0)
 			log_debug("infectedroom event: Rejected [A] because it has no clear turfs.")
@@ -93,7 +98,24 @@
 	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [location_name()]. All personnel must contain the outbreak.", "Infectious Contaminant in [target_area.name]", new_sound = 'sound/AI/outbreak7.ogg')
 
 /datum/event/infectedroom/start()
-	var/obj/effect/decal/cleanable/mucus/mapped/M
+	var/decal
+
 	for(var/i in 1 to infected_tiles)
-		M = new(pick_n_take(target_turfs))
-		M.virus2[1] = virus.getcopy()
+		decal = rand(1, 5)
+		if(decal == 1)
+			var/obj/effect/decal/cleanable/blood/C
+			C = new(pick_n_take(target_turfs))
+			C.basecolor = get_random_colour(rand(0, 1))
+			C.update_icon()
+			C.virus2 |= new /datum/disease2/disease
+			C.virus2[1] = virus.getcopy()
+		else if(decal == 2)
+			var/obj/effect/decal/cleanable/vomit/V
+			V = new(pick_n_take(target_turfs))
+			V.virus2 |= new /datum/disease2/disease
+			V.virus2[1] = virus.getcopy()
+		else
+			var/obj/effect/decal/cleanable/mucus/M
+			M = new(pick_n_take(target_turfs))
+			M.virus2 |= new /datum/disease2/disease
+			M.virus2[1] = virus.getcopy()

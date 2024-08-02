@@ -173,7 +173,7 @@
 
 /datum/weather
 	var/name = "weather base"
-	var/icon = 'icons/effects/weather.dmi'
+	var/icon = 'modular_chomp/icons/effects/weather.dmi' //ChompEDIT: I am making custom weather and I am not touching upstream.
 	var/icon_state = null // Icon to apply to turf undergoing weather.
 	var/temp_high = T20C // Temperature to apply when at noon.
 	var/temp_low = T0C // Temperature to apply when at midnight.

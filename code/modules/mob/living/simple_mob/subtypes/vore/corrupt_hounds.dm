@@ -74,6 +74,7 @@
 	loot_list = list(/obj/item/borg/upgrade/basic/syndicate = 6, /obj/item/borg/upgrade/basic/vtec = 6, /obj/item/weapon/material/knife/ritual = 6, /obj/item/weapon/disk/nifsoft/compliance = 6)
 
 	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE //CHOMPAdd
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi
 	name = "corrupt corrupt hound"

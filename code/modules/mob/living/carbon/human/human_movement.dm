@@ -154,7 +154,8 @@
 		var/turf_move_cost = T.movement_cost
 		if(istype(T, /turf/simulated/floor/water))
 			if(species.water_movement)
-				turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15)
+				//turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15) //ChompEDIT - all water is free movement for aquatics
+				turf_move_cost = 0 //ChompEDIT - all water is free movement for aquatics
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
 				var/obj/item/clothing/shoes/feet = shoes
 				if(istype(feet) && feet.water_speed)
@@ -258,6 +259,7 @@
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
+	/*CHOMPEdit - This is an Element now
 	if(!istype(T) || is_incorporeal() || !CONFIG_GET(number/footstep_volume) || !T.footstep_sounds || !T.footstep_sounds.len) // CHOMPEdit
 		return	//CHOMPEdit - Condensed some return checks
 	// CHOMPedit start: Future Upgrades - Multi species support
@@ -276,9 +278,11 @@
 	// Play every other step while running
 	if(m_intent == "run" && step_count++ % 2 != 0)
 		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
+	*/
 	if(shoes && loc == T && has_gravity(loc) && !flying)
 		if(SEND_SIGNAL(shoes, COMSIG_SHOES_STEP_ACTION, m_intent))	//CHOMPEdit - Shoe step comsig
 			return
+	/*
 	if(step_count % 2 == 0)	//CHOMPAdd, since I removed the returns up above, need this to track each odd step.
 		return
 
@@ -302,6 +306,7 @@
 		return // Far less likely to make noise in no gravity
 
 	playsound(T, S, volume, FALSE)
+	*/
 	return
 
 /mob/living/carbon/human/set_dir(var/new_dir)

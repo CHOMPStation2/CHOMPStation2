@@ -82,3 +82,11 @@
 	custom_only = TRUE
 	var_changes = list("water_resistance" = 0, "water_damage_mod" = 0.8)
 	excludes = list(/datum/trait/negative/meltable)
+
+/datum/trait/negative/onelife
+	name = "One Life"
+	desc = "For whatever reason, once you dead, that is final."
+	cost = -2
+	custom_only = TRUE
+	var_changes = list("flags" = NO_SCAN, NO_DEFIB)
+	excludes = list(/datum/trait/negative/nodefib, /datum/trait/negative/noresleeve)

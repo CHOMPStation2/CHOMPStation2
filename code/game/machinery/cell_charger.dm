@@ -27,12 +27,10 @@
 		var/newlevel = 	round(charging.percent() * 4.0 / 99)
 		//to_world("nl: [newlevel]")
 
-		//CHOMPEdit Start prevet overlay overflow
 		cut_overlays()
 		add_overlay("ccharger-o[newlevel]")
 
 		chargelevel = newlevel
-		//CHOMPEdit End prevet overlay overflow
 		add_overlay(image(charging.icon, charging.icon_state))
 		add_overlay("ccharger-[charging.connector_type]-on")
 
@@ -125,11 +123,11 @@
 		return
 
 	if(charging && !charging.fully_charged())
-		var/newlevel = 	round(charging.percent() * 4.0 / 99) //CHOMPEdit prevent overlay overflow
+		var/newlevel = 	round(charging.percent() * 4.0 / 99)
 		charging.give(efficiency*CELLRATE)
 		update_use_power(USE_POWER_ACTIVE)
-		if(chargelevel != newlevel) //CHOMPEdit prevent overlay overflow
-			update_icon() //CHOMPEdit prevent overlay overflow
+		if(chargelevel != newlevel)
+			update_icon()
 	else
 		update_use_power(USE_POWER_IDLE)
 

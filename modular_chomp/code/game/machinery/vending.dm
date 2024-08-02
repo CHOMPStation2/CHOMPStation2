@@ -199,3 +199,8 @@
 		/obj/item/stack/material/bronze = 12,
 		/obj/item/weapon/circuitboard/defenseonelisk = 5000
 		)
+
+//Some stuff to let sec do things
+/obj/machinery/vending/nifsoft_shop
+	req_log_access = access_security
+	has_logs = 1

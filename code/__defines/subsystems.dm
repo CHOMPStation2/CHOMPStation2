@@ -50,16 +50,16 @@
 #define INITIALIZE_HINT_NORMAL   0  //Nothing happens
 #define INITIALIZE_HINT_LATELOAD 1  //Call LateInitialize
 #define INITIALIZE_HINT_QDEL     2  //Call qdel on the atom
-
+//CHOMPEdit Begin
 //type and all subtypes should always call Initialize in New()
 #define INITIALIZE_IMMEDIATE(X) ##X/New(loc, ...){\
 	..();\
-	if(!initialized) {\
+	if(!(flags & ATOM_INITIALIZED)) {\
 		args[1] = TRUE;\
 		SSatoms.InitAtom(src, args);\
 	}\
 }
-
+//CHOMPEdit End
 // SS runlevels
 
 #define RUNLEVEL_INIT 0			// "Initialize Only" - Used for subsystems that should never be fired (Should also have SS_NO_FIRE set)
@@ -96,6 +96,8 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
+#define INIT_ORDER_TITLE			99	//CHOMPEdit
+#define INIT_ORDER_SERVER_MAINT		93 //CHOMPEdit
 #define INIT_ORDER_WEBHOOKS			50
 #define INIT_ORDER_DBCORE			41	//CHOMPEdit
 #define INIT_ORDER_SQLITE			40
@@ -151,6 +153,7 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_VOTE			8
 #define FIRE_PRIORITY_INSTRUMENTS	9
 #define FIRE_PRIORITY_PING			10
+#define FIRE_PRIORITY_SERVER_MAINT	10 //CHOMPEdit
 #define FIRE_PRIORITY_AI			10
 #define FIRE_PRIORITY_GARBAGE		15
 #define FIRE_PRIORITY_ASSETS 		20

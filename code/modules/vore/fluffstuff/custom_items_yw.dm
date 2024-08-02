@@ -642,7 +642,7 @@
 /obj/item/weapon/implant/fluff/coda/proc/coda_implant_resize(var/mob/living/carbon/human/H)
 	set name = "Resize (Implant)"
 	set desc = "Change your size between two different preset options."
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(H.stat == DEAD)
 		return

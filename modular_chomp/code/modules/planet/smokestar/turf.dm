@@ -13,15 +13,9 @@
 
 	animal_chance = 0.1
 
-	animal_types = list(
-		/mob/living/simple_mob/vore/smokestar/drider = 1
-		)
+	animals = "smokestar"
 
-	grass_types = list(
-		/obj/structure/flora/opalflowers,
-		/obj/structure/flora/weepinggrass,
-		/obj/random/outcrop
-		)
+	grass = "smokestar"
 
 
 /obj/structure/flora/opalflowers

@@ -23,7 +23,7 @@
 
 	set name = "Toggle Vore Sprite"
 	set desc = "Toggle visibility of changed mob sprite when you have eaten other things."
-	set category = "Abilities"
+	set category = "Abilities.Vore"
 
 	if(!vore_icons && !vore_icons_cache)
 		to_chat(src,"<span class='warning'>This simplemob has no vore sprite.</span>")
@@ -41,7 +41,7 @@
 /mob/living/simple_mob/verb/toggle_speech_sounds()
 	set name = "Toggle Species Speech Sounds"
 	set desc = "Toggle if your species defined speech sound has a chance of playing on a Say"
-	set category = "IC"
+	set category = "IC.Mob"
 
 	if(stat)
 		to_chat(src, "<span class='warning'>You must be awake and standing to perform this action!</span>")
@@ -104,7 +104,7 @@
 /mob/living/simple_mob/proc/use_headset()
 	set name = "Use Headset"
 	set desc = "Opens your headset's GUI, if you have one."
-	set category = "IC"
+	set category = "Abilities.Mob"
 
 	if(istype(mob_radio, /obj/item/device/radio/headset))
 		mob_radio.tgui_interact(src)
@@ -114,7 +114,7 @@
 /mob/living/simple_mob/proc/use_pda()
 	set name = "Use PDA"
 	set desc = "Opens your PDA's GUI, if you have one."
-	set category = "IC"
+	set category = "Abilities.Mob"
 
 	if(istype(myid, /obj/item/device/pda))
 		myid.tgui_interact(src)

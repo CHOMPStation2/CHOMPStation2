@@ -21,6 +21,7 @@
 
 	// CHOMPEdit Start: Species Sounds
 	species_sounds = "Teshari"
+	footstep = FOOTSTEP_MOB_TESHARI // CHOMPEdit
 	// male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	// female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	// male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
@@ -172,6 +173,10 @@
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
 /* //CHOMPedit: disabling for now
+	/*CHOMPRemove Start,  remove RS No shoes
+	if(!(H.client?.prefs?.shoe_hater))
+		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+	*///CHOMPRemove End, remove RS No shoes
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
 	// Tesh can glide to save themselves from some falls. Basejumping bird

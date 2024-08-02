@@ -780,8 +780,17 @@
 				/obj/item/toy/plushie/teshari/_yw,
 				/obj/item/toy/plushie/teshari/w_yw,
 				/obj/item/toy/plushie/teshari/b_yw,
-				/obj/item/toy/plushie/teshari/y_yw)
+				/obj/item/toy/plushie/teshari/y_yw,
 				//YawnWider Add End
+				//CHOMPStation Add Start
+				/obj/item/toy/plushie/red_dragon,
+				/obj/item/toy/plushie/green_dragon,
+				/obj/item/toy/plushie/purple_dragon,
+				/obj/item/toy/plushie/white_eastdragon,
+				/obj/item/toy/plushie/red_eastdragon,
+				/obj/item/toy/plushie/green_eastdragon,
+				/obj/item/toy/plushie/gold_eastdragon)
+				//CHOMPStation Add End
 
 /obj/random/plushielarge
 	name = "random large plushie"
@@ -829,7 +838,8 @@
 				/obj/item/toy/mecha/seraph,
 				/obj/item/toy/mecha/mauler,
 				/obj/item/toy/mecha/odysseus,
-				/obj/item/toy/mecha/phazon)
+				/obj/item/toy/mecha/phazon,
+				/obj/item/weapon/toy/monster_bait)
 
 /obj/random/mouseremains
 	name = "random mouseremains"
@@ -1143,5 +1153,13 @@
 		prob(8);/obj/item/capture_crystal/random,
 		prob(10);/obj/item/weapon/bluespace_harpoon,
 		prob(10);/obj/item/weapon/bluespace_crystal,
-		prob(1);/obj/item/clothing/glasses/graviton
+		prob(1);/obj/item/clothing/glasses/graviton,
+		prob(10);/obj/item/weapon/cracker,
+		prob(1);/obj/item/weapon/cracker/shrinking,
+		prob(1);/obj/item/weapon/cracker/growing,
+		prob(1);/obj/item/weapon/cracker/invisibility,
+		prob(1);/obj/item/weapon/cracker/drugged,
+		prob(1);/obj/item/weapon/cracker/knockover,
+		prob(1);/obj/item/weapon/cracker/vore,
+		prob(1);/obj/item/weapon/cracker/money
 	)

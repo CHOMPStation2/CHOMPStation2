@@ -1217,7 +1217,7 @@
 /obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "c20r-[round(ammo_magazine.stored_ammo.len,4)]"
+		icon_state = "c20r-[round(CLAMP(ammo_magazine.stored_ammo.len*2/3,0,20),4)]"
 	else
 		icon_state = "c20r"
 	return
@@ -1278,7 +1278,7 @@
 /obj/item/weapon/gun/projectile/automatic/z8/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
+		icon_state = "carbine-[round(CLAMP(ammo_magazine.stored_ammo.len/2,0,10),2)]"
 	else
 		icon_state = "carbine-e"
 	return

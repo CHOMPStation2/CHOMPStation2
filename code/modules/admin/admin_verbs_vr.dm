@@ -1,5 +1,5 @@
 /client/proc/adminorbit()
-	set category = "Fun"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Orbit Things"
 	set desc = "Makes something orbit around something else."
 	set popup_menu = FALSE
@@ -57,7 +57,7 @@
 
 /client/proc/removetickets()
 	set name = "Security Tickets"
-	set category = "Admin"
+	set category = "Admin.Investigate" //CHOMPEdit
 	set desc = "Allows one to remove tickets from the global list."
 
 	if(!check_rights(R_ADMIN))
@@ -78,7 +78,7 @@
 /client/proc/delbook()
 	set name = "Delete Book"
 	set desc = "Permamently deletes a book from the database."
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -125,7 +125,7 @@
 /client/proc/toggle_spawning_with_recolour()
 	set name = "Toggle Simple/Robot recolour verb"
 	set desc = "Makes it so new robots/simple_mobs spawn with a verb to recolour themselves for this round. You must set them separately."
-	set category = "Server"
+	set category = "Server.Game" //CHOMPEdit
 
 	if(!check_rights(R_ADMIN|R_EVENT|R_FUN))
 		return

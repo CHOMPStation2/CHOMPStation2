@@ -31,6 +31,8 @@ only use the hollow_point and armor_penetration values.*/
 	energy = max(0,energy - amount)
 	velocity = sqrt(2*energy/(grains / GRAINS_PER_KG))
 
+#undef GRAINS_PER_KG
+
 //Pistol projectiles
 /obj/item/projectile/bullet/pistol	//9x19mm
 	fire_sound = 'sound/weapons/ballistics/a9mm.ogg'

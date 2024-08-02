@@ -1,5 +1,5 @@
 /mob/living/verb/give(var/mob/living/target in living_mobs_in_view(1))
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set name = "Give"
 
 	do_give(target)

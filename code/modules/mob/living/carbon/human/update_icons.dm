@@ -2,11 +2,13 @@
 	Global associative list for caching humanoid icons.
 	Index format m or f, followed by a string of 0 and 1 to represent bodyparts followed by husk fat hulk skeleton 1 or 0.
 */
-var/global/list/human_icon_cache = list() //key is incredibly complex, see update_icons_body()
-var/global/list/tail_icon_cache = list() //key is [species.race_key][r_skin][g_skin][b_skin]
-var/global/list/wing_icon_cache = list() // See tail.
-var/global/list/light_overlay_cache = list() //see make_worn_icon() on helmets
-var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
+//ChompEDIT START - change to managed GLOB
+GLOBAL_LIST_EMPTY(human_icon_cache) //key is incredibly complex, see update_icons_body()
+GLOBAL_LIST_EMPTY(tail_icon_cache) //key is [species.race_key][r_skin][g_skin][b_skin]
+GLOBAL_LIST_EMPTY(wing_icon_cache) // See tail.
+GLOBAL_LIST_EMPTY(light_overlay_cache) //see make_worn_icon() on helmets
+GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
+//ChompEDIT END
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // # Human Icon Updating System
@@ -60,6 +62,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 // These are used as the layers for the icons, as well as indexes in a list that holds onto them.
 // Technically the layers used are all -100+layer to make them FLOAT_LAYER overlays.
 //CHOMPEDIT: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
+/*CHOMPRemove Start: Global here!
 //Human Overlays Indexes/////////
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
@@ -103,6 +106,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define TARGETED_LAYER			40		//'Aimed at' overlay layer
 #define TOTAL_LAYERS			40		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
+*///CHOMPRemove End
 
 //These two are only used for gargoyles currently
 #define HUMAN_BODY_LAYERS list(MUTATIONS_LAYER, TAIL_LOWER_LAYER, WING_LOWER_LAYER, BODYPARTS_LAYER, SKIN_LAYER, BLOOD_LAYER, MOB_DAM_LAYER, TAIL_UPPER_LAYER, HAIR_LAYER, HAIR_ACCESSORY_LAYER, EYES_LAYER, WING_LAYER, VORE_BELLY_LAYER, VORE_TAIL_LAYER, TAIL_UPPER_LAYER_ALT)
@@ -170,9 +174,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		else
 			M.Scale(desired_scale_x, desired_scale_y)
-			if(isnull(resting_dir))
-				resting_dir = pick(FALSE, TRUE)
-			if(resting_dir)
+			if(isnull(rest_dir))
+				rest_dir = pick(FALSE, TRUE)
+			if(rest_dir)
 				M.Translate((1 / desired_scale_x * -4) + (desired_scale_x * cent_offset), 0)
 				M.Turn(-90)
 			else
@@ -226,13 +230,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(O.damage_state == "00") continue
 		var/icon/DI
 		var/cache_index = "[O.damage_state]/[O.icon_name]/[species.get_blood_colour(src)]/[species.get_bodytype(src)]"
-		if(damage_icon_parts[cache_index] == null)
+		if(GLOB.damage_icon_parts[cache_index] == null) //ChompEDIT Managed GLOB
 			DI = icon(species.get_damage_overlays(src), O.damage_state)			// the damage icon for whole human
 			DI.Blend(icon(species.get_damage_mask(src), O.icon_name), ICON_MULTIPLY)	// mask with this organ's pixels
 			DI.Blend(species.get_blood_colour(src), ICON_MULTIPLY)
-			damage_icon_parts[cache_index] = DI
+			GLOB.damage_icon_parts[cache_index] = DI //ChompEDIT Managed GLOB
 		else
-			DI = damage_icon_parts[cache_index]
+			DI = GLOB.damage_icon_parts[cache_index] //ChompEDIT Managed GLOB
 
 		standing_image.add_overlay(DI)
 
@@ -348,12 +352,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	icon_key = "[icon_key][husk ? 1 : 0][fat ? 1 : 0][hulk ? 1 : 0][skeleton ? 1 : 0]"
 	var/icon/base_icon
-	if(human_icon_cache[icon_key])
-		base_icon = human_icon_cache[icon_key]
+
+	if(GLOB.human_icon_cache[icon_key])
+		base_icon = GLOB.human_icon_cache[icon_key]
 	else
 		//BEGIN CACHED ICON GENERATION.
 		var/obj/item/organ/external/chest = get_organ(BP_TORSO)
-		base_icon = chest?.get_icon(skeleton, !wholeicontransparent)
+		base_icon = new(chest?.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
 
 		var/apply_extra_transparency_leg = organs_by_name[BP_L_LEG] && organs_by_name[BP_R_LEG]
 		var/apply_extra_transparency_foot = organs_by_name[BP_L_FOOT] && organs_by_name[BP_R_FOOT]
@@ -379,7 +384,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		for(var/obj/item/organ/external/part in organs)
 			if(isnull(part) || part.is_stump() || part == chest || part.is_hidden_by_sprite_accessory()) //VOREStation Edit allowing tails to prevent bodyparts rendering, granting more spriter freedom for taur/digitigrade stuff.
 				continue
-			var/icon/temp = part.get_icon(skeleton, !wholeicontransparent)
+			var/icon/temp = new(part.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
 
 			if((part.organ_tag in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)) && Cutter)
 				temp.Blend(Cutter, ICON_AND, x = icon_x_offset, y = icon_y_offset)
@@ -395,10 +400,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				if(!(part.icon_position & RIGHT))
 					temp2.Insert(new/icon(temp,dir=WEST),dir=WEST)
 				base_icon.Blend(temp2, ICON_OVERLAY)
+				/* //ChompEDIT START - icon crashes
 				temp2.Insert(temp2,"blank",dir=NORTH) //faaaaairly certain this is more efficient than reloading temp2, doing this so we don't blend the icons twice (it matters more in transparent limbs)
 				temp2.Insert(temp2,"blank",dir=SOUTH)
 				temp2.Insert(temp2,"blank",dir=EAST)
 				temp2.Insert(temp2,"blank",dir=WEST)
+				*/
+				temp2 = new(species.icon_template ? species.icon_template : 'icons/mob/human.dmi', icon_state = "blank")
+				//ChompEDIT END
 				if(part.icon_position & LEFT)
 					temp2.Insert(new/icon(temp,dir=EAST),dir=EAST)
 				if(part.icon_position & RIGHT)
@@ -430,9 +439,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			husk_over.Blend(mask, ICON_ADD)
 			base_icon.Blend(husk_over, ICON_OVERLAY)
 
-		human_icon_cache[icon_key] = base_icon
+		GLOB.human_icon_cache[icon_key] = base_icon
 
-	//END CACHED ICON GENERATION.
+	//END CACHED ICON GENERATION. //ChompEDIT END
 	stand_icon.Blend(base_icon,ICON_OVERLAY)
 
 	var/image/body = image(stand_icon)
@@ -1105,7 +1114,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		apply_layer(tail_layer)
 		return
 
-	var/species_tail = species.get_tail(src) // Species tail icon_state prefix.
+	var/species_tail = species?.get_tail(src) // Species tail icon_state prefix.
 
 	//This one is actually not that bad I guess.
 	if(species_tail && !(wear_suit && wear_suit.flags_inv & HIDETAIL))
@@ -1118,7 +1127,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 //TODO: Is this the appropriate place for this, and not on species...?
 /mob/living/carbon/human/proc/get_tail_icon()
 	var/icon_key = "[species.get_race_key(src)][r_skin][g_skin][b_skin][r_hair][g_hair][b_hair]"
-	var/icon/tail_icon = tail_icon_cache[icon_key]
+	var/icon/tail_icon = GLOB.tail_icon_cache[icon_key] //ChompEDIT Managed GLOB
 	if(!tail_icon)
 		//generate a new one
 		var/species_tail_anim = species.get_tail_animation(src)
@@ -1132,7 +1141,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			var/icon/hair_icon = icon('icons/effects/species.dmi', "[species.get_tail(src)]_[use_species_tail]")
 			hair_icon.Blend(rgb(r_hair, g_hair, b_hair), species.color_mult ? ICON_MULTIPLY : ICON_ADD)				//Check for species color_mult
 			tail_icon.Blend(hair_icon, ICON_OVERLAY)
-		tail_icon_cache[icon_key] = tail_icon
+		GLOB.tail_icon_cache[icon_key] = tail_icon //ChompEDIT Managed GLOB
 
 	return tail_icon
 
@@ -1440,37 +1449,43 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 //Human Overlays Indexes/////////
 /* CHOMPEdit - why are these undefined??
-#undef MUTATIONS_LAYER
-#undef SKIN_LAYER
-#undef MOB_DAM_LAYER
-#undef SURGERY_LAYER
-#undef UNDERWEAR_LAYER
-#undef SHOES_LAYER_ALT
-#undef UNIFORM_LAYER
-#undef ID_LAYER
-#undef SHOES_LAYER
-#undef GLOVES_LAYER
-#undef BELT_LAYER
-#undef SUIT_LAYER
-#undef TAIL_UPPER_LAYER
-#undef TAIL_LOWER_LAYER
-#undef GLASSES_LAYER
-#undef BELT_LAYER_ALT
-#undef SUIT_STORE_LAYER
-#undef BACK_LAYER
-#undef HAIR_LAYER
-#undef EARS_LAYER
-#undef EYES_LAYER
-#undef FACEMASK_LAYER
-#undef HEAD_LAYER
-#undef HANDCUFF_LAYER
-#undef LEGCUFF_LAYER
-#undef L_HAND_LAYER
-#undef R_HAND_LAYER
-#undef VORE_BELLY_LAYER
-#undef MODIFIER_EFFECTS_LAYER
-#undef FIRE_LAYER
-#undef WATER_LAYER
-#undef TARGETED_LAYER
-#undef TOTAL_LAYERS
+# undef MUTATIONS_LAYER
+# undef SKIN_LAYER
+# undef BLOOD_LAYER
+# undef MOB_DAM_LAYER
+# undef SURGERY_LAYER
+# undef UNDERWEAR_LAYER
+# undef SHOES_LAYER_ALT
+# undef UNIFORM_LAYER
+# undef ID_LAYER
+# undef SHOES_LAYER
+# undef GLOVES_LAYER
+# undef BELT_LAYER
+# undef SUIT_LAYER
+# undef TAIL_UPPER_LAYER
+# undef TAIL_LOWER_LAYER
+# undef WING_LOWER_LAYER
+# undef GLASSES_LAYER
+# undef BELT_LAYER_ALT
+# undef SUIT_STORE_LAYER
+# undef BACK_LAYER
+# undef HAIR_LAYER
+# undef HAIR_ACCESSORY_LAYER
+# undef EARS_LAYER
+# undef EYES_LAYER
+# undef FACEMASK_LAYER
+# undef GLASSES_LAYER_ALT
+# undef HEAD_LAYER
+# undef HANDCUFF_LAYER
+# undef LEGCUFF_LAYER
+# undef L_HAND_LAYER
+# undef R_HAND_LAYER
+# undef VORE_BELLY_LAYER
+# undef WING_LAYER
+# undef TAIL_UPPER_LAYER_ALT
+# undef MODIFIER_EFFECTS_LAYER
+# undef FIRE_LAYER
+# undef WATER_LAYER
+# undef TARGETED_LAYER
+# undef TOTAL_LAYERS
 */

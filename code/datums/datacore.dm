@@ -470,6 +470,7 @@ var/global/list/PDA_Manifest = list()
 		hidden_general += G
 	else
 		general += G
+		job_master.update_limit(JOB_ANOMALY, general.len) //CHOMPAdd
 
 	return G
 
@@ -487,7 +488,6 @@ var/global/list/PDA_Manifest = list()
 	R.fields["ma_crim"]		= "None"
 	R.fields["ma_crim_d"]	= "No major crime convictions."
 	R.fields["notes"]		= "No notes."
-	R.fields["notes"] = "No notes."
 	if(hidden)
 		hidden_security += R
 	else

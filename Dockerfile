@@ -1,7 +1,7 @@
 FROM i386/ubuntu:xenial as base
 
-ARG BYOND_MAJOR=514
-ARG BYOND_MINOR=1589
+ARG BYOND_MAJOR=515
+ARG BYOND_MINOR=1640
 
 RUN apt-get update \
     && apt-get install -y \
@@ -35,7 +35,7 @@ RUN apt-get install -y --no-install-recommends \
     gcc-multilib \
     && curl https://sh.rustup.rs -sSf | sh -s -- -y --default-host i686-unknown-linux-gnu \
     && git init \
-    && git remote add origin https://github.com/VOREStation/rust-g
+    && git remote add origin https://github.com/tgstation/rust-g
 
 COPY _build_dependencies.sh .
 

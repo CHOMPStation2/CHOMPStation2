@@ -1,11 +1,12 @@
-import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { useBackend } from '../../../backend';
 import { Button, Flex, Icon, NoticeBox, Tabs } from '../../../components';
 import { Window } from '../../../layouts';
+import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
+import { VoreSoulcatcher } from './VoreSoulcatcher';
 import { VoreUserPreferences } from './VoreUserPreferences';
 
 /**
@@ -49,7 +50,9 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *          tooltipPosition="top"
  *          tooltip={"This button is for allowing or preventing others from giving you liquids from their vore organs."
  *          + (liq_rec ? " Click here to prevent receiving liquids." : " Click here to allow receiving liquids.")}
- *          content={liq_rec ? "Receiving Liquids Allowed" : "Do Not Allow Receiving Liquids"} />
+ *          >
+ *            {liq_rec ? "Receiving Liquids Allowed" : "Do Not Allow Receiving Liquids"}
+ *          </Button>
  *      </Flex.Item>
  *      <Flex.Item basis="49%">
  *        <Button
@@ -60,7 +63,9 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *          tooltipPosition="top"
  *           tooltip={"This button is for allowing or preventing others from taking liquids from your vore organs."
  *          + (liq_giv ? " Click here to prevent taking liquids." : " Click here to allow taking liquids.")}
- *          content={liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"} />
+ *          >
+ *            {liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"}
+ *          </Button>
  *      </Flex.Item>
  *
  * NEW EDITS 2/25/21: COLORED BELLY OVERLAYS
@@ -99,7 +104,9 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *                   onClick={() => act("set_attribute", { attribute: "b_disable_hud" })}
  *                   icon={disable_hud ? "toggle-on" : "toggle-off"}
  *                   selected={disable_hud}
- *                   content={disable_hud ? "Yes" : "No"} />
+ *                   >
+ *                     {disable_hud ? "Yes" : "No"}
+ *                   </Button>
  *               </LabeledList.Item>
  *             </LabeledList>
  *           </Section>
@@ -143,50 +150,91 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  */
 
 export const VorePanel = () => {
-  const { act, data } = useBackend<{ unsaved_changes: BooleanLike }>();
+  const { act, data } = useBackend<Data>();
+
+  const {
+    inside,
+    our_bellies,
+    selected,
+    soulcatcher,
+    abilities,
+    prefs,
+    show_pictures,
+    icon_overflow,
+    host_mobtype,
+  } = data;
 
   const [tabIndex, setTabIndex] = useState(0);
 
   const tabs: React.JSX.Element[] = [];
 
-  tabs[0] = <VoreBellySelectionAndCustomization />;
-  tabs[1] = <VoreUserPreferences />;
+  tabs[0] = (
+    <VoreBellySelectionAndCustomization
+      our_bellies={our_bellies}
+      selected={selected}
+      show_pictures={show_pictures}
+      host_mobtype={host_mobtype}
+      icon_overflow={icon_overflow}
+    />
+  );
+  tabs[1] = (
+    <VoreSoulcatcher
+      our_bellies={our_bellies}
+      soulcatcher={soulcatcher}
+      abilities={abilities}
+    />
+  );
+  tabs[2] = (
+    <VoreUserPreferences
+      prefs={prefs}
+      selected={selected}
+      show_pictures={show_pictures}
+      icon_overflow={icon_overflow}
+    />
+  );
 
   return (
-    <Window width={890} height={660} theme="abstract">
+    <Window width={990} height={660} theme="abstract">
       <Window.Content scrollable>
         {(data.unsaved_changes && (
           <NoticeBox danger>
             <Flex>
               <Flex.Item basis="90%">Warning: Unsaved Changes!</Flex.Item>
               <Flex.Item>
-                <Button
-                  content="Save Prefs"
-                  icon="save"
-                  onClick={() => act('saveprefs')}
-                />
+                <Button icon="save" onClick={() => act('saveprefs')}>
+                  Save Prefs
+                </Button>
               </Flex.Item>
               <Flex.Item>
                 <Button
-                  content="Save Prefs & Export Selected Belly"
                   icon="download"
                   onClick={() => {
                     act('saveprefs');
                     act('exportpanel');
                   }}
-                />
+                >
+                  Save Prefs & Export Selected Belly
+                </Button>
               </Flex.Item>
             </Flex>
           </NoticeBox>
         )) ||
           null}
-        <VoreInsidePanel />
+        <VoreInsidePanel
+          inside={inside}
+          show_pictures={show_pictures}
+          icon_overflow={icon_overflow}
+        />
         <Tabs>
           <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
             Bellies
             <Icon name="list" ml={0.5} />
           </Tabs.Tab>
           <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
+            Soulcatcher
+            <Icon name="ghost" ml={0.5} />
+          </Tabs.Tab>
+          <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
             Preferences
             <Icon name="user-cog" ml={0.5} />
           </Tabs.Tab>

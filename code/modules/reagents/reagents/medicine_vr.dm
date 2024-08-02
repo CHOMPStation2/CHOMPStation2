@@ -15,7 +15,7 @@
 	if(M.eye_blurry)
 		M.eye_blurry = max(M.eye_blurry - 25*removed, 0)
 	if(M.jitteriness)
-		M.make_jittery(max(M.jitteriness - 25*removed,0))
+		M.make_jittery(min(-25*removed,0))
 
 /datum/reagent/numbing_enzyme
 	name = "Numbing Enzyme"
@@ -77,7 +77,7 @@
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(8 * removed * chem_effective, 0)
-		
+
 /*CHOMPStation removal begin
 /datum/reagent/sleevingcure
 	name = "Vey-Med Resleeving Booster"
@@ -209,6 +209,8 @@
 	if(!istype(M))
 		log_debug("polymorph istype")
 		return
+	if(!M.allow_spontaneous_tf)
+		return
 	if(M.tf_mob_holder)
 		log_debug("polymorph tf_holder")
 		var/mob/living/ourmob = M.tf_mob_holder
@@ -230,6 +232,8 @@
 			B.owner = ourmob
 			M.vore_organs -= B
 			ourmob.vore_organs += B
+
+		M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 
 		ourmob.Life(1)
 		if(ishuman(M))
@@ -290,6 +294,8 @@
 				M.vore_organs -= B
 				new_mob.vore_organs += B
 
+			M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
+
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)
 				var/datum/ai_holder/old_AI = M.ai_holder
@@ -315,3 +321,18 @@
 	log_debug("polymorph tf_type pass")
 	var/new_mob = new tf_type(get_turf(target))
 	return new_mob
+
+/datum/reagent/glamour
+	name = "Glamour"
+	id = "glamour"
+	description = "This material is from somewhere else, just being near produces changes."
+	taste_description = "change"
+	reagent_state = LIQUID
+	color = "#ffffff"
+	scannable = 1
+
+/datum/reagent/glamour/affect_blood(var/mob/living/carbon/target, var/removed)
+	target.verbs |= /mob/living/carbon/human/proc/enter_cocoon
+	target.bloodstr.clear_reagents() //instantly clears reagents afterwards
+	target.ingested.clear_reagents()
+	target.touching.clear_reagents()

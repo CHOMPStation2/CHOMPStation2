@@ -189,6 +189,7 @@ var/list/admin_verbs_spawn = list(
 	/datum/admins/proc/check_custom_items,
 	/datum/admins/proc/spawn_plant,
 	/datum/admins/proc/spawn_atom,		//allows us to spawn instances,
+	/datum/admins/proc/spawn_mail,	// CHOMPStation Add
 	/client/proc/cmd_admin_droppod_spawn,
 	/client/proc/respawn_character,
 	/client/proc/spawn_character_mob,  //VOREStation Add,
@@ -197,7 +198,9 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
 	/client/proc/map_template_load_on_new_z,
-	/client/proc/eventkit_open_mob_spawner //VOREStation Add
+	/client/proc/eventkit_open_mob_spawner,
+	/client/proc/generic_structure, //VOREStation Add
+	/client/proc/generic_item //VOREStation Add
 	)
 
 var/list/admin_verbs_server = list(

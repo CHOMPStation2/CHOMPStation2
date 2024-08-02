@@ -529,17 +529,17 @@
 
 	if(light_on)
 		// Generate object icon.
-		if(!light_overlay_cache["[light_overlay]_icon"])
-			light_overlay_cache["[light_overlay]_icon"] = image(icon = 'icons/obj/light_overlays.dmi', icon_state = "[light_overlay]")
-		helmet_light = light_overlay_cache["[light_overlay]_icon"]
+		if(!GLOB.light_overlay_cache["[light_overlay]_icon"]) //ChompEDIT Managed GLOB
+			GLOB.light_overlay_cache["[light_overlay]_icon"] = image(icon = 'icons/obj/light_overlays.dmi', icon_state = "[light_overlay]") //ChompEDIT Managed GLOB
+		helmet_light = GLOB.light_overlay_cache["[light_overlay]_icon"] //ChompEDIT Managed GLOB
 		add_overlay(helmet_light)
 
 		// Generate and cache the on-mob icon, which is used in update_inv_head().
 		var/body_type = (H && H.species.get_bodytype(H))
 		var/cache_key = "[light_overlay][body_type && LAZYACCESS(sprite_sheets, body_type) ? body_type : ""]"
-		if(!light_overlay_cache[cache_key])
+		if(!GLOB.light_overlay_cache[cache_key]) //ChompEDIT Managed GLOB
 			var/use_icon = LAZYACCESS(sprite_sheets, body_type) || 'icons/mob/light_overlays.dmi'
-			light_overlay_cache[cache_key] = image(icon = use_icon, icon_state = "[light_overlay]")
+			GLOB.light_overlay_cache[cache_key] = image(icon = use_icon, icon_state = "[light_overlay]") //ChompEDIT Managed GLOB
 
 	else if(helmet_light)
 		cut_overlay(helmet_light)
@@ -630,7 +630,7 @@
 /obj/item/clothing/shoes/proc/draw_knife()
 	set name = "Draw Boot Knife"
 	set desc = "Pull out your boot knife."
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set src in usr
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())

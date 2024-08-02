@@ -9,7 +9,7 @@
 /obj/machinery/slot_machine
 	name = "slot machine"
 	desc = "A gambling machine designed to give you false hope and rob you of your wealth, hence why it's often called a one armed bandit."
-	icon = 'icons/obj/casino.dmi'
+	icon = 'icons/obj/casino_ch.dmi' //CHOMPEdit
 	icon_state = "slotmachine"
 	anchored = 1
 	density = 1
@@ -155,7 +155,7 @@
 
 	var/output //Output variable to send out in chat after the large if statement.
 	var/winnings = 0 //How much money will be given if any.
-	var/platinumwin = 0 // If you win the platinum chip or not
+	// var/platinumwin = 0 // CHOMPRemove If you win the platinum chip or not - Ringa ding ding babe! No chips until further notice!
 	var/celebrate = 0
 	var/delaytime = 5 SECONDS
 
@@ -188,18 +188,18 @@
 			winnings = 200
 
 		if (symbol1 == "seven" && symbol2 == "seven" && symbol3 == "seven")
-			output = "<span class='notice'>Three sevens! The slot machine deposits a 500 credit chip!</span>"
-			winnings = 500
+			output = "<span class='notice'>Three sevens! The slot machine deposits a 300 credit chip!</span>" //CHOMPEdit
+			winnings = 300 //CHOMPEdit
 			celebrate = 1
 
 		if (symbol1 == "diamond" && symbol2 == "diamond" && symbol3 == "diamond")
-			output = "<span class='notice'>Three diamonds! The slot machine deposits a 1000 credit chip!</span>"
-			winnings = 1000
+			output = "<span class='notice'>Three diamonds! The slot machine deposits a 500 credit chip!</span>" //CHOMPEdit
+			winnings = 500 //CHOMPEdit
 			celebrate = 1
 
 		if (symbol1 == "platinum coin" && symbol2 == "platinum coin" && symbol3 == "platinum coin")
-			output = "<span class='notice'>Three platinum coins! The slot machine deposits a platinum chip!</span>"
-			platinumwin = TRUE
+			output = "<span class='notice'>Three platinum coins! The slot machine deposits a 1000 credit chip!</span>" //CHOMPEdit
+			winnings = 1000 //CHOMPEdit
 			celebrate = 1
 
 		icon_state = initial(icon_state) // Set it back to the original iconstate.
@@ -211,9 +211,11 @@
 
 		to_chat(user,output) //Output message
 
+		/* CHOMPRemove Start, Disabled until further notice, platinum now more rare
 		if(platinumwin) // Did they win the platinum chip?
 			new /obj/item/weapon/casino_platinum_chip(src.loc)
 			playsound(src.loc, 'sound/machines/slotmachine.ogg', 25, 1)
+		*/// CHOMPRemove End
 
 		if(winnings) //Did the person win?
 			icon_state = "slotmachine_winning"

@@ -24,6 +24,7 @@ var/list/ai_verbs_default = list(
 	/mob/living/silicon/ai/proc/toggle_camera_light,
 	/mob/living/silicon/ai/proc/take_image,
 	/mob/living/silicon/ai/proc/view_images,
+	/mob/living/silicon/ai/proc/delete_images,
 	/mob/living/silicon/ai/proc/toggle_multicam_verb,
 	/mob/living/silicon/ai/proc/add_multicam_verb
 )
@@ -351,7 +352,7 @@ var/list/ai_verbs_default = list(
 		update_use_power(USE_POWER_ACTIVE)
 
 /mob/living/silicon/ai/proc/pick_icon()
-	set category = "AI Settings"
+	set category = "AI.Settings" //CHOMPEdit
 	set name = "Set AI Core Display"
 	if(stat || aiRestorePowerRoutine)
 		return
@@ -363,7 +364,7 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/var/message_cooldown = 0
 /mob/living/silicon/ai/proc/ai_announcement()
-	set category = "AI Commands"
+	set category = "AI.Station Commands" //CHOMPEdit
 	set name = "Make Station Announcement"
 	if(check_unable(AI_CHECK_WIRELESS | AI_CHECK_RADIO))
 		return
@@ -384,7 +385,7 @@ var/list/ai_verbs_default = list(
 		message_cooldown = 0
 
 /mob/living/silicon/ai/proc/ai_call_shuttle()
-	set category = "AI Commands"
+	set category = "AI.Station Commands" //CHOMPEdit
 	set name = "Call Emergency Shuttle"
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
@@ -402,7 +403,7 @@ var/list/ai_verbs_default = list(
 		post_status(src, "shuttle", user = src)
 
 /mob/living/silicon/ai/proc/ai_recall_shuttle()
-	set category = "AI Commands"
+	set category = "AI.Station Commands" //CHOMPEdit
 	set name = "Recall Emergency Shuttle"
 
 	if(check_unable(AI_CHECK_WIRELESS))
@@ -418,7 +419,7 @@ var/list/ai_verbs_default = list(
 /mob/living/silicon/ai/var/emergency_message_cooldown = 0
 
 /mob/living/silicon/ai/proc/ai_emergency_message()
-	set category = "AI Commands"
+	set category = "AI.Station Commands" //CHOMPEdit
 	set name = "Send Emergency Message"
 
 	if(check_unable(AI_CHECK_WIRELESS))
@@ -539,7 +540,7 @@ var/list/ai_verbs_default = list(
 	return 1
 
 /mob/living/silicon/ai/cancel_camera()
-	set category = "AI Commands"
+	set category = "AI.Camera Control" //CHOMPEdit
 	set name = "Cancel Camera View"
 	view_core()
 
@@ -562,7 +563,7 @@ var/list/ai_verbs_default = list(
 	return cameralist
 
 /mob/living/silicon/ai/proc/ai_network_change(var/network in get_camera_network_list())
-	set category = "AI Commands"
+	set category = "AI.Commands" //CHOMPEdit
 	set name = "Jump To Network"
 	unset_machine()
 
@@ -585,7 +586,7 @@ var/list/ai_verbs_default = list(
 //End of code by Mord_Sith
 
 /mob/living/silicon/ai/proc/ai_statuschange()
-	set category = "AI Settings"
+	set category = "AI.Settings" //CHOMPEdit
 	set name = "AI Status"
 
 	if(check_unable(AI_CHECK_WIRELESS))
@@ -598,7 +599,7 @@ var/list/ai_verbs_default = list(
 /mob/living/silicon/ai/proc/ai_hologram_change()
 	set name = "Change Hologram"
 	set desc = "Change the default hologram available to AI to something else."
-	set category = "AI Settings"
+	set category = "AI.Settings" //CHOMPEdit
 
 	if(check_unable())
 		return
@@ -732,7 +733,7 @@ var/list/ai_verbs_default = list(
 /mob/living/silicon/ai/proc/toggle_camera_light()
 	set name = "Toggle Camera Light"
 	set desc = "Toggles the light on the camera the AI is looking through."
-	set category = "AI Commands"
+	set category = "AI.Camera Control" //CHOMPEdit
 	if(check_unable())
 		return
 
@@ -806,7 +807,7 @@ var/list/ai_verbs_default = list(
 /mob/living/silicon/ai/proc/control_integrated_radio()
 	set name = "Radio Settings"
 	set desc = "Allows you to change settings of your radio."
-	set category = "AI Settings"
+	set category = "AI.Settings" //CHOMPEdit
 
 	if(check_unable(AI_CHECK_RADIO))
 		return
@@ -817,7 +818,7 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/proc/sensor_mode()
 	set name = "Toggle Sensor Augmentation" //VOREStation Add
-	set category = "AI Settings"
+	set category = "AI.Settings" //CHOMPEdit
 	set desc = "Augment visual feed with internal sensor overlays"
 	sensor_type = !sensor_type //VOREStation Add
 	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add
@@ -825,7 +826,7 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/proc/toggle_hologram_movement()
 	set name = "Toggle Hologram Movement"
-	set category = "AI Settings"
+	set category = "AI.Settings" //CHOMPEdit
 	set desc = "Toggles hologram movement based on moving with your virtual eye."
 
 	hologram_follow = !hologram_follow
@@ -917,7 +918,7 @@ var/list/ai_verbs_default = list(
 // Pass lying down or getting up to our pet human, if we're in a rig.
 /mob/living/silicon/ai/lay_down()
 	set name = "Rest"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	resting = 0
 	var/obj/item/weapon/rig/rig = src.get_rig()
@@ -1000,12 +1001,12 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/proc/toggle_multicam_verb()
 	set name = "Toggle Multicam"
-	set category = "AI Commands"
+	set category = "AI.Camera Control" //CHOMPEdit
 	toggle_multicam()
 
 /mob/living/silicon/ai/proc/add_multicam_verb()
 	set name = "Add Multicam Viewport"
-	set category = "AI Commands"
+	set category = "AI.Camera Control" //CHOMPEdit
 	drop_new_multicam()
 
 //Special subtype kept around for global announcements

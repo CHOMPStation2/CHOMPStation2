@@ -15,7 +15,6 @@ List of things solar grubs should be able to do:
 	Therefore, if you see the grubs, kill them while they're small, or things might escalate." // TODO: PORT SOLAR MOTHS - Rykka
 	value = CATALOGUER_REWARD_EASY
 
-#define SINK_POWER 1
 GLOBAL_VAR_INIT(moth_amount, 0) // Chompstation Addition, Rykka waz here. *pawstamp*
 
 /mob/living/simple_mob/vore/solargrub
@@ -62,6 +61,7 @@ GLOBAL_VAR_INIT(moth_amount, 0) // Chompstation Addition, Rykka waz here. *pawst
 	var/tracked = FALSE
 
 	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE //CHOMPAdd
 	glow_override = TRUE
 
 /datum/say_list/solargrub

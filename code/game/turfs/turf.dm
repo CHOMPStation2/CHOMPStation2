@@ -41,8 +41,8 @@
 
 	var/movement_cost = 0       // How much the turf slows down movement, if any.
 
-	var/list/footstep_sounds = null
-	var/list/vorefootstep_sounds = null	//CHOMPstation edit
+	// var/list/footstep_sounds = null CHOMPEdit - Better footstep sounds
+	// var/list/vorefootstep_sounds = null	//CHOMPstation edit
 
 	var/block_tele = FALSE      // If true, most forms of teleporting to or from this turf tile will fail.
 	var/can_build_into_floor = FALSE // Used for things like RCDs (and maybe lattices/floor tiles in the future), to see if a floor should replace it.
@@ -314,9 +314,10 @@
 
 // Called when turf is hit by a thrown object
 /turf/hitby(atom/movable/AM as mob|obj, var/speed)
-	if(src.density)
-		spawn(2)
-			step(AM, turn(AM.last_move, 180))
+	if(density)
+		if(!has_gravity(AM)) //Checked a different codebase for reference. Turns out it's only supposed to happen in no-gravity
+			spawn(2)
+				step(AM, turn(AM.last_move, 180)) //This makes it float away after hitting a wall in 0G
 		if(isliving(AM))
 			var/mob/living/M = AM
 			M.turf_collision(src, speed)

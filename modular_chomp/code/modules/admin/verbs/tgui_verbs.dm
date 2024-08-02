@@ -2,7 +2,7 @@
 /client/proc/tgui_admin_lists()
 	set name = "TGUI Admin Lists"
 	set desc = "Allows to have some procs with searchable lists."
-	set category = "Admin"
+	set category = "Admin.Game"
 	if(!check_rights(R_ADMIN|R_EVENT))
 		return
 

@@ -147,7 +147,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "ay" = (
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/space)
@@ -304,7 +304,8 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/concrete{
 	oxygen = 0;
-	nitrogen = 0
+	nitrogen = 0;
+	outdoors = 1
 	},
 /area/space)
 "aR" = (
@@ -522,7 +523,8 @@
 "bt" = (
 /turf/simulated/floor/concrete{
 	oxygen = 0;
-	nitrogen = 0
+	nitrogen = 0;
+	outdoors = 1
 	},
 /area/space)
 "bu" = (
@@ -620,7 +622,7 @@
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/abandonedzoo)
 "bM" = (
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/submap/abandonedzoo)
@@ -701,7 +703,7 @@
 /area/submap/abandonedzoo)
 "cI" = (
 /obj/machinery/portable_atmospherics/canister/phoron/cold,
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/space)
@@ -904,7 +906,7 @@
 /area/submap/abandonedzoo)
 "mc" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/space)
@@ -972,7 +974,7 @@
 /area/submap/abandonedzoo)
 "pa" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/submap/abandonedzoo)
@@ -1305,7 +1307,7 @@
 /area/submap/abandonedzoo)
 "JH" = (
 /obj/machinery/pointdefense,
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/space)

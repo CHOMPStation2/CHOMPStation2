@@ -7,6 +7,7 @@
 	reach = 2
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
+	requires_wield = FALSE
 
 /obj/item/weapon/pickaxe/anamolous
 	name = "strange pickaxe"
@@ -16,3 +17,7 @@
 	throwforce = 25.0
 	origin_tech = list(TECH_MATERIAL = 3)
 	desc = "This oddly lightweight pickaxe seems rather sturdy."
+
+
+/obj/item/weapon/kinetic_crusher
+	requires_wield = FALSE

@@ -992,10 +992,12 @@ closest to where the cursor has clicked on.
 Note: This proc can be overwritten to allow for different types of auto-alignment.
 */
 
-/obj/item/var/list/center_of_mass = list("x" = 16,"y" = 16)
+///obj/item/var/list/center_of_mass = list("x" = 16,"y" = 16) CHOMPEdit NO STOP PLEASE -- center_of_mass - 52.0879 mb total
+/obj/item/var/center_of_mass_x = 16 //CHOMPEdit
+/obj/item/var/center_of_mass_y = 16 //CHOMPEdit
 
 /proc/auto_align(obj/item/W, click_parameters, var/animate = FALSE)
-	if(!W.center_of_mass)
+	if(!W.center_of_mass_x && !W.center_of_mass_y) //CHOMPEdit
 		W.randpixel_xy()
 		return
 
@@ -1011,8 +1013,8 @@ Note: This proc can be overwritten to allow for different types of auto-alignmen
 		var/cell_x = max(0, min(CELLS-1, round(mouse_x/CELLSIZE)))
 		var/cell_y = max(0, min(CELLS-1, round(mouse_y/CELLSIZE)))
 
-		var/target_x = (CELLSIZE * (0.5 + cell_x)) - W.center_of_mass["x"]
-		var/target_y = (CELLSIZE * (0.5 + cell_y)) - W.center_of_mass["y"]
+		var/target_x = (CELLSIZE * (0.5 + cell_x)) - W.center_of_mass_x //CHOMPEdit
+		var/target_y = (CELLSIZE * (0.5 + cell_y)) - W.center_of_mass_y //CHOMPEdit
 		if(animate)
 			var/dist_x = abs(W.pixel_x - target_x)
 			var/dist_y = abs(W.pixel_y - target_y)

@@ -68,3 +68,37 @@
 /obj/structure/holosign/barrier/combifan/Initialize(mapload)
 	.=..()
 	update_nearby_tiles()
+
+/obj/structure/holosign/barrier/medical
+	name = "\improper PENLITE holobarrier"
+	desc = "A holobarrier that uses biometrics to detect human viruses. Denies passing to personnel with easily-detected, malicious viruses. Good for quarantines."
+	icon_state = "holo_medical"
+	alpha = 125
+	var/buzzed = 0
+
+/obj/structure/holosign/barrier/medical/CanPass(atom/movable/mover, border_dir)
+	. = ..()
+	if(mover.has_buckled_mobs())
+		for(var/mob/living/L as anything in buckled_mobs)
+			if(ishuman(L))
+				if(CheckHuman(L))
+					return FALSE
+	if(ishuman(mover))
+		return CheckHuman(mover)
+	return TRUE
+
+/obj/structure/holosign/barrier/medical/Bumped(atom/movable/AM)
+	. = ..()
+	if(ishuman(AM) && !CheckHuman(AM))
+		if(buzzed < world.time)
+			playsound(get_turf(src), 'sound/machines/buzz-sigh.ogg', 50, 1)
+			buzzed = (world.time + 60)
+
+		icon_state = "holo_medical-deny"
+		sleep(10 SECONDS)
+		icon_state = "holo_medical"
+
+/obj/structure/holosign/barrier/medical/proc/CheckHuman(mob/living/carbon/human/H)
+	if(isemptylist(H.virus2) && !istype(H.species, /datum/species/xenochimera))
+		return TRUE
+	return FALSE

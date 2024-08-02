@@ -1,6 +1,6 @@
 /client/proc/hide_most_verbs()//Allows you to keep some functionality while hiding some verbs
 	set name = "Adminverbs - Hide Most"
-	set category = "Admin"
+	set category = "Admin.Misc" //CHOMPEdit
 
 	remove_verb(src, list(/client/proc/hide_most_verbs,admin_verbs_hideable)) //CHOMPEdit TGPanel
 	add_verb(src,/client/proc/show_verbs) //CHOMPEdit TGPanel
@@ -11,7 +11,7 @@
 
 /client/proc/hide_verbs()
 	set name = "Adminverbs - Hide All"
-	set category = "Admin"
+	set category = "Admin.Misc" //CHOMPEdit
 
 	remove_admin_verbs()
 	add_verb(src, /client/proc/show_verbs) //CHOMPEdit
@@ -22,7 +22,7 @@
 
 /client/proc/show_verbs()
 	set name = "Adminverbs - Show"
-	set category = "Admin"
+	set category = "Admin.Misc" //CHOMPEdit
 
 	remove_verb(src, /client/proc/show_verbs) //CHOMPEdit
 	add_admin_verbs()
@@ -100,7 +100,7 @@
 
 /client/proc/player_panel()
 	set name = "Player Panel"
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	if(holder)
 		holder.player_panel_old()
 	feedback_add_details("admin_verb","PP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -108,7 +108,7 @@
 
 /client/proc/player_panel_new()
 	set name = "Player Panel New"
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	if(holder)
 		holder.player_panel_new()
 	feedback_add_details("admin_verb","PPN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -116,7 +116,7 @@
 
 /client/proc/check_antagonists()
 	set name = "Check Antagonists"
-	set category = "Admin"
+	set category = "Admin.Investigate" //CHOMPEdit
 	if(holder)
 		holder.check_antagonists()
 		log_admin("[key_name(usr)] checked antagonists.")	//for tsar~
@@ -125,7 +125,7 @@
 
 /client/proc/jobbans()
 	set name = "Display Job bans"
-	set category = "Admin"
+	set category = "Admin.Investigate" //CHOMPEdit
 	if(holder)
 		if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
 			holder.Jobbans()
@@ -136,7 +136,7 @@
 
 /client/proc/unban_panel()
 	set name = "Unban Panel"
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	if(holder)
 		if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
 			holder.unbanpanel()
@@ -155,14 +155,14 @@
 
 /client/proc/secrets()
 	set name = "Secrets"
-	set category = "Admin"
+	set category = "Admin.Secrets" //CHOMPEdit
 	if (holder)
 		holder.Secrets()
 	feedback_add_details("admin_verb","S") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/colorooc()
-	set category = "Fun"
+	set category = "Admin.Misc" //CHOMPEdit
 	set name = "OOC Text Color"
 	if(!holder)	return
 	var/response = tgui_alert(src, "Please choose a distinct color that is easy to read and doesn't mix with all the other chat and radio frequency colors.", "Change own OOC color", list("Pick new color", "Reset to default", "Cancel"))
@@ -195,7 +195,7 @@
 	GLOB.stealthminID["[ckey]"] = "@[num2text(num)]"
 
 /client/proc/stealth()
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	set name = "Stealth Mode"
 	if(holder)
 		if(holder.fakekey)
@@ -258,7 +258,7 @@
 #undef AUTOBANTIME
 
 /client/proc/drop_bomb() // Some admin dickery that can probably be done better -- TLE
-	set category = "Special Verbs.Fun"
+	set category = "Fun.Do Not" //CHOMPEdit
 	set name = "Drop Bomb"
 	set desc = "Cause an explosion of varying strength at your location."
 
@@ -286,7 +286,7 @@
 	feedback_add_details("admin_verb","DB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/give_disease2(mob/T as mob in mob_list) // -- Giacom
-	set category = "Fun"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Give Disease"
 	set desc = "Gives a Disease to a mob."
 
@@ -317,7 +317,7 @@
 	message_admins(span_blue("[key_name_admin(usr)] gave [key_name(T)] a [greater] disease2 with infection chance [D.infectionchance]."), 1)
 
 /client/proc/admin_give_modifier(var/mob/living/L)
-	set category = "Debug"
+	set category = "Debug.Game" //CHOMPEdit
 	set name = "Give Modifier"
 	set desc = "Makes a mob weaker or stronger by adding a specific modifier to them."
 	set popup_menu = FALSE //VOREStation Edit - Declutter.
@@ -341,7 +341,7 @@
 	log_and_message_admins("has given [key_name(L)] the modifer [new_modifier_type], with a duration of [duration ? "[duration / 600] minutes" : "forever"].")
 
 /client/proc/make_sound(var/obj/O in world) // -- TLE
-	set category = "Special Verbs.Events"
+	set category = "Fun.Sounds" //CHOMPEdit
 	set name = "Make Sound"
 	set desc = "Display a message to everyone who can hear the target"
 	if(O)
@@ -356,13 +356,13 @@
 
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
-	set category = "Special Verbs.Events"
+	set category = "Debug.Events" //CHOMPEdit
 	if(src.mob)
 		togglebuildmode(src.mob)
 	feedback_add_details("admin_verb","TBMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/object_talk(var/msg as text) // -- TLE
-	set category = "Special Verbs.Events"
+	set category = "Fun.Narrate" //CHOMPEdit
 	set name = "oSay"
 	set desc = "Display a message to everyone who can hear the target"
 	if(mob.control_object)
@@ -373,7 +373,7 @@
 	feedback_add_details("admin_verb","OT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/kill_air() // -- TLE
-	set category = "Debug"
+	set category = "Debug.Dangerous" //CHOMPEdit
 	set name = "Kill Air"
 	set desc = "Toggle Air Processing"
 	SSair.can_fire = !SSair.can_fire
@@ -384,7 +384,7 @@
 
 /client/proc/readmin_self()
 	set name = "Re-Admin self"
-	set category = "Admin"
+	set category = "Admin.Misc" //CHOMPEdit
 
 	if(deadmin_holder)
 		deadmin_holder.reassociate()
@@ -395,7 +395,7 @@
 
 /client/proc/deadmin_self()
 	set name = "De-admin self"
-	set category = "Admin"
+	set category = "Admin.Misc" //CHOMPEdit
 
 	if(holder)
 		if(tgui_alert(usr, "Confirm self-deadmin for the round? You can't re-admin yourself without someone promoting you.","Deadmin",list("Yes","No")) == "Yes")
@@ -408,7 +408,7 @@
 
 /client/proc/toggle_log_hrefs()
 	set name = "Toggle href logging"
-	set category = "Server"
+	set category = "Server.Config" //CHOMPEdit
 	if(!holder)	return
 	if(config)
 		CONFIG_SET(flag/log_hrefs, !CONFIG_GET(flag/log_hrefs)) // CHOMPEdit
@@ -416,13 +416,13 @@
 
 /client/proc/check_ai_laws()
 	set name = "Check AI Laws"
-	set category = "Admin.Game"
+	set category = "Admin.Silicon" //CHOMPEdit
 	if(holder)
 		src.holder.output_ai_laws()
 
 /client/proc/rename_silicon()
 	set name = "Rename Silicon"
-	set category = "Admin"
+	set category = "Admin.Silicon" //CHOMPEdit
 
 	if(!check_rights(R_ADMIN|R_FUN|R_EVENT)) return
 
@@ -437,7 +437,7 @@
 
 /client/proc/manage_silicon_laws()
 	set name = "Manage Silicon Laws"
-	set category = "Admin"
+	set category = "Admin.Silicon" //CHOMPEdit
 
 	if(!check_rights(R_ADMIN|R_EVENT)) return
 
@@ -464,7 +464,7 @@
 
 /client/proc/shuttle_panel()
 	set name = "Shuttle Control Panel"
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 
 	if(!check_rights(R_ADMIN | R_EVENT))
 		return
@@ -478,7 +478,7 @@
 
 /client/proc/mod_panel()
 	set name = "Moderator Panel"
-	set category = "Admin"
+	set category = "Admin.Moderation" //CHOMPEdit
 /*	if(holder)
 		holder.mod_panel()*/
 //	feedback_add_details("admin_verb","MP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -486,14 +486,14 @@
 
 /client/proc/playernotes()
 	set name = "Show Player Info"
-	set category = "Admin"
+	set category = "Admin.Moderation" //CHOMPEdit
 	if(holder)
 		holder.PlayerNotes()
 	return
 
 /client/proc/free_slot()
 	set name = "Free Job Slot"
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	if(holder)
 		var/list/jobs = list()
 		for (var/datum/job/J in job_master.occupations)
@@ -510,7 +510,7 @@
 
 /client/proc/toggleghostwriters()
 	set name = "Toggle ghost writers"
-	set category = "Server"
+	set category = "Server.Game" //CHOMPEdit
 	if(!holder)	return
 	if(config)
 		CONFIG_SET(flag/cult_ghostwriter, !CONFIG_GET(flag/cult_ghostwriter)) // CHOMPEdit
@@ -518,14 +518,14 @@
 
 /client/proc/toggledrones()
 	set name = "Toggle maintenance drones"
-	set category = "Server"
+	set category = "Server.Game" //CHOMPEdit
 	if(!holder)	return
 	if(config)
 		CONFIG_SET(flag/allow_drone_spawn, !CONFIG_GET(flag/allow_drone_spawn)) // CHOMPEdit
 		message_admins("Admin [key_name_admin(usr)] has [CONFIG_GET(flag/allow_drone_spawn) ? "en" : "dis"]abled maintenance drones.", 1) // CHOMPEdit
 
 /client/proc/man_up(mob/T as mob in mob_list)
-	set category = "Fun"
+	set category = "Fun.Do Not" //CHOMPEdit
 	set name = "Man Up"
 	set desc = "Tells mob to man up and deal with it."
 	set popup_menu = FALSE //VOREStation Edit - Declutter.
@@ -539,7 +539,7 @@
 	message_admins(span_blue("[key_name_admin(usr)] told [key_name(T)] to man up and deal with it."), 1)
 
 /client/proc/global_man_up()
-	set category = "Fun"
+	set category = "Fun.Do Not" //CHOMPEdit
 	set name = "Man Up Global"
 	set desc = "Tells everyone to man up and deal with it."
 
@@ -553,7 +553,7 @@
 	message_admins(span_blue("[key_name_admin(usr)] told everyone to man up and deal with it."), 1)
 
 /client/proc/give_spell(mob/T as mob in mob_list) // -- Urist
-	set category = "Fun"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Give Spell"
 	set desc = "Gives a spell to a mob."
 	var/spell/S = tgui_input_list(usr, "Choose the spell to give to that guy", "ABRAKADABRA", spells)

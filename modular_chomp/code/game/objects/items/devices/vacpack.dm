@@ -1,11 +1,12 @@
 //Vac attachment
 /obj/item/device/vac_attachment
-	name = "Vac-Pack attachment"
+	name = "\improper Vac-Pack attachment"
 	desc = "Useful for slurping mess off the floors. Even things and stuff depending on settings. Can be connected to a trash bag or vore belly. On-mob sprites can be toggled via verb in Objects tab."
 	icon = 'modular_chomp/icons/mob/vacpack.dmi'
 	icon_override = 'modular_chomp/icons/mob/vacpack.dmi'
 	icon_state = "sucker_drop"
 	item_state = "sucker"
+	slot_flags = SLOT_BELT | SLOT_BACK
 	var/vac_power = 0
 	var/output_dest = null
 	var/list/vac_settings = list(
@@ -176,7 +177,8 @@
 					continue
 				if(istype(F,/obj/effect/decal/cleanable))
 					if(isbelly(output_dest))
-						user.adjust_nutrition(1)
+						var/obj/belly/B = output_dest
+						B.owner_adjust_nutrition(1)
 					qdel(F)
 					continue
 				if(istype(output_dest,/obj/item/weapon/storage/bag/trash))
@@ -201,7 +203,8 @@
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
 				if(isbelly(output_dest) && T.dirt > 50)
-					user.adjust_nutrition((T.dirt - 50) / 10) //Max tile dirt is 101. so about 5 nutrition from a disgusting floor, I think that's okay.
+					var/obj/belly/B = output_dest
+					B.owner_adjust_nutrition((T.dirt - 50) / 10) //Max tile dirt is 101. so about 5 nutrition from a disgusting floor, I think that's okay.
 				T.dirt = 0
 				T.clean_blood()
 		return

@@ -973,6 +973,11 @@
 	if(!G)
 		CRASH("/obj/screen/ammo/proc/add_hud() has been called from [src] without the required param of G")
 
+	//CHOMPAdd start
+	if(!G.hud_enabled)
+		return
+	//CHOMPAdd End
+
 	if(!G.has_ammo_counter())
 		return
 

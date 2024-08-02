@@ -1,6 +1,3 @@
-var/list/grass_types = list(
-
-)
 
 /turf/simulated/floor/outdoors/grass
 	name = "grass"
@@ -8,23 +5,23 @@ var/list/grass_types = list(
 	edge_blending_priority = 4
 	initial_flooring = /decl/flooring/grass/outdoors // VOREStation Edit
 	can_dig = TRUE
-	turf_layers = list(
+	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
-		)
+		)CHOMP Removal End*/
 	var/grass_chance = 12
 
 	var/animal_chance = 1
 
 	// Weighted spawn list.
-	var/list/animal_types = list(
+	/*var/list/animal_types = list( CHOMP Removal begin
 		/mob/living/simple_mob/animal/passive/tindalos = 1
 		)
 
 	var/list/grass_types = list(
 		/obj/structure/flora/ausbushes/sparsegrass,
 		/obj/structure/flora/ausbushes/fullgrass
-		)
+		) CHOMP Removal End */
 
 /datum/category_item/catalogue/flora/sif_grass
 	name = "Sivian Flora - Moss"
@@ -45,7 +42,7 @@ var/list/grass_types = list(
 
 
 	animal_chance = 0.25 //CHOMPedit
-
+	/* CHOMP Removal Begin
 	animal_types = list(
 		/mob/living/simple_mob/animal/sif/diyaab = 7,
 		/mob/living/simple_mob/animal/sif/glitterfly = 2,
@@ -59,7 +56,7 @@ var/list/grass_types = list(
 		/obj/structure/flora/sif/eyes = 1,
 		/obj/structure/flora/sif/tendrils = 10
 		)
-
+	CHOMP Removal End*/
 	catalogue_data = list(/datum/category_item/catalogue/flora/sif_grass)
 	catalogue_delay = 2 SECONDS
 
@@ -69,13 +66,13 @@ var/list/grass_types = list(
 	. = ..()
 
 /turf/simulated/floor/outdoors/grass/Initialize()
-	if(grass_chance && prob(grass_chance) && !check_density())
-		var/grass_type = pickweight(grass_types)
+	if(grass && grass_chance && prob(grass_chance) && !check_density()) //CHOMPEdit
+		var/grass_type = pickweight(GLOB.grass_grass[grass]) //CHOMPEdit
 		if(grass_type) //ChompEDIT - runtime
 			new grass_type(src)
 
-	if(animal_chance && prob(animal_chance) && !check_density())
-		var/animal_type = pickweight(animal_types)
+	if(animals && animal_chance && prob(animal_chance) && !check_density()) //CHOMPEdit
+		var/animal_type = pickweight(GLOB.grass_animals[animals]) //CHOMPEdit
 		if(animal_type) //ChompEDIT - runtime
 			new animal_type(src)
 
@@ -97,24 +94,15 @@ var/list/grass_types = list(
 	tree_chance = 4
 	grass_chance = 1
 
-	grass_types = list(
-		/obj/structure/flora/sif/frostbelle = 1,
-		/obj/structure/flora/sif/eyes = 5,
-		/obj/structure/flora/sif/tendrils = 30
-		)
+	grass = "sifforest"
 
 //CHOMPedit: animal spawning for sif rocks. This probably doesn't belong in grass.dm but it's where there other Sif spawns are, sue me.
 /turf/simulated/floor/outdoors/rocks/sif
 	var/animal_chance = 0.3 //Should spawn around... 0-7 per round? Tweak as needed.
 
-	var/animal_types = list(
-		/mob/living/simple_mob/vore/slug = 1
-		)
-
 /turf/simulated/floor/outdoors/rocks/sif/Initialize()
 	if(animal_chance && prob(animal_chance) && !check_density())
-		var/animal_type = pickweight(animal_types)
-		new animal_type(src)
+		new /mob/living/simple_mob/vore/slug(src)
 
 	. = ..()
 //CHOMPedit end

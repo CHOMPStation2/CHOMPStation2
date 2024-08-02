@@ -7,7 +7,8 @@
 	amount_per_transfer_from_this = 5
 	volume = 30
 	unacidable = TRUE //glass
-	center_of_mass = list("x"=16, "y"=10)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 	matter = list(MAT_GLASS = 500)
 
 /obj/item/weapon/reagent_containers/food/drinks/drinkingglass/on_reagent_change()
@@ -15,7 +16,8 @@
 		icon_state = "glass_empty"
 		name = "glass"
 		desc = "Your standard drinking glass."
-		center_of_mass = list("x"=16, "y"=10)
+		center_of_mass_x = 16 //CHOMPEdit
+		center_of_mass_y= 10 //CHOMPEdit
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -35,9 +37,11 @@
 		desc = "You can't really tell what this is."
 
 	if(R.glass_center_of_mass)
-		center_of_mass = R.glass_center_of_mass
+		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
+		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
 	else
-		center_of_mass = list("x"=16, "y"=10)
+		center_of_mass_x = 16 //CHOMPEdit
+		center_of_mass_y= 10 //CHOMPEdit
 
 	if(R.price_tag)
 		price_tag = R.price_tag
@@ -50,14 +54,16 @@
 	icon_state = "cup_empty"
 	amount_per_transfer_from_this = 5
 	volume = 30
-	center_of_mass = list("x"=16, "y"=16)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 16 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cup/on_reagent_change()
 	if (!length(reagents?.reagent_list))
 		icon_state = "cup_empty"
 		name = "coffee cup"
 		desc = "The container of oriental luxuries."
-		center_of_mass = list("x"=16, "y"=16)
+		center_of_mass_x = 16 //CHOMPEdit
+		center_of_mass_y= 16 //CHOMPEdit
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -77,9 +83,11 @@
 		desc = "You can't really tell what this is."
 
 	if(R.cup_center_of_mass)
-		center_of_mass = R.cup_center_of_mass
+		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
+		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
 	else
-		center_of_mass = list("x"=16, "y"=16)
+		center_of_mass_x = 16 //CHOMPEdit
+		center_of_mass_y= 16 //CHOMPEdit
 
 	if(R.price_tag)
 		price_tag = R.price_tag

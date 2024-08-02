@@ -832,10 +832,6 @@
 /obj/item/clothing/under/soviet,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
-"dO" = (
-/turf/simulated/wall/titanium,
-/turf/simulated/wall/titanium,
-/area/derelict/arrival)
 "dP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
@@ -1122,6 +1118,7 @@
 	})
 "eN" = (
 /obj/structure/table/standard,
+/obj/item/ammo_casing/microbattery/combat/final,
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -2009,6 +2006,7 @@
 	})
 "hC" = (
 /obj/structure/bed/chair,
+/mob/living/simple_mob/humanoid/merc/ranged/poi,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -2461,11 +2459,6 @@
 /area/derelict/arrival)
 "jk" = (
 /turf/simulated/shuttle/floor/black,
-/area/derelict/arrival)
-"jl" = (
-/turf/simulated/shuttle/floor{
-	icon_state = "floor4"
-	},
 /area/derelict/arrival)
 "jm" = (
 /turf/simulated/floor,
@@ -5731,6 +5724,15 @@
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
+"GG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/weapon/storage/belt/utility/holding,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva{
+	name = "Derelict Annex"
+	})
 "JE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/cooper,
@@ -5756,6 +5758,11 @@
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
+"KG" = (
+/obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/ion,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/crew_quarters)
 "Lo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/green/border,
@@ -5801,9 +5808,12 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
 "Ol" = (
-/turf/simulated/wall/titanium,
-/turf/simulated/wall/titanium,
-/area/derelict/crew_quarters)
+/obj/structure/table/standard,
+/obj/item/weapon/gun/energy/medigun,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva{
+	name = "Derelict Annex"
+	})
 "OW" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -5913,6 +5923,13 @@
 /mob/living/simple_mob/animal/giant_spider/hunter,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
+"WX" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/inducer/syndicate,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva{
+	name = "Derelict Annex"
+	})
 "Xi" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -6355,7 +6372,7 @@ mm
 oG
 mm
 mm
-jl
+oG
 mm
 mm
 ac
@@ -7164,7 +7181,7 @@ ac
 ac
 ac
 ro
-dO
+ro
 Oe
 gM
 gM
@@ -7357,7 +7374,7 @@ fF
 fE
 fZ
 gs
-dO
+ro
 ro
 ro
 ac
@@ -8498,7 +8515,7 @@ rE
 rb
 rB
 rF
-dO
+ro
 ro
 ac
 ac
@@ -8916,7 +8933,7 @@ ac
 ac
 ac
 lc
-eN
+Ol
 mi
 fj
 fJ
@@ -10298,7 +10315,7 @@ ag
 ag
 lc
 lc
-hB
+GG
 gj
 fJ
 fk
@@ -10522,7 +10539,7 @@ qS
 qS
 qS
 rT
-dO
+ro
 ro
 ac
 ac
@@ -10671,7 +10688,7 @@ ac
 lc
 eL
 lc
-hP
+WX
 hR
 mi
 hP
@@ -11431,7 +11448,7 @@ qA
 qA
 qW
 MO
-bz
+KG
 MO
 Og
 bz
@@ -12070,7 +12087,7 @@ qA
 nX
 om
 oC
-Ol
+pm
 pm
 TA
 TA

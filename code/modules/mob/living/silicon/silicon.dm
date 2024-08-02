@@ -33,9 +33,11 @@
 	GLOB.silicon_mob_list |= src // CHOMPEdit - Globals
 	..()
 	add_language(LANGUAGE_GALCOM)
-	set_default_language(GLOB.all_languages[LANGUAGE_GALCOM])
+	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM]) //CHOMPEdit
 	init_id()
 	init_subsystems()
+
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPAdd
 
 /mob/living/silicon/Destroy()
 	GLOB.silicon_mob_list -= src // CHOMPEdit - Globals
@@ -261,14 +263,14 @@
 /mob/living/silicon/verb/pose()
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	pose =  strip_html_simple(tgui_input_text(usr, "This is [src]. It is...", "Pose", null))
 
 /mob/living/silicon/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	var/new_flavortext = strip_html_simple(tgui_input_text(usr, "Please enter your new flavour text.", "Flavour text", flavor_text, multiline = TRUE))
 	if(new_flavortext)

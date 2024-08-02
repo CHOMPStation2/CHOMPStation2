@@ -12,6 +12,10 @@
 		set_listening(listening_recursive)
 
 /atom/movable/Destroy()
+	if(em_block)
+		cut_overlay(em_block)
+		UnregisterSignal(em_block, COMSIG_PARENT_QDELETING)
+		QDEL_NULL(em_block)
 	. = ..()
 	set_listening(NON_LISTENING_ATOM)
 
@@ -63,3 +67,15 @@
 
 /atom/movable/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	return
+
+/atom/movable/proc/emblocker_gc(var/datum/source)
+	UnregisterSignal(source, COMSIG_PARENT_QDELETING)
+	cut_overlay(source)
+	if(em_block == source)
+		em_block = null
+
+/atom/movable/proc/abstract_move(atom/new_loc)
+	var/atom/old_loc = loc
+	var/direction = get_dir(old_loc, new_loc)
+	loc = new_loc
+	Moved(old_loc, direction, TRUE)

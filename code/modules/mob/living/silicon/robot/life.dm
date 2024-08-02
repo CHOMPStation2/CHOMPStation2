@@ -1,6 +1,6 @@
 /mob/living/silicon/robot/Life()
 	set invisibility = 0
-	set background = 1
+	//set background = 1 CHOMPEdit
 
 	if (src.transforming)
 		return
@@ -157,6 +157,7 @@
 /mob/living/silicon/robot/handle_regular_hud_updates()
 	var/fullbright = FALSE
 	var/seemeson = FALSE
+	var/seejanhud = src.sight_mode & BORGJAN
 
 	var/area/A = get_area(src)
 	if(A?.no_spoilers)
@@ -190,6 +191,12 @@
 		src.see_in_dark = 8
 		src.see_invisible = SEE_INVISIBLE_LEVEL_TWO
 		fullbright = TRUE
+	/* //ChompEDIT START - remove this for now
+	else if (src.sight_mode & BORGANOMALOUS)
+		src.see_in_dark = 8
+		src.see_invisible = INVISIBILITY_SHADEKIN
+		fullbright = TRUE
+	*/ //ChompEDIT END
 	else if (!seedarkness)
 		src.sight &= ~SEE_MOBS
 		src.sight &= ~SEE_TURFS
@@ -207,6 +214,7 @@
 	if(plane_holder)
 		plane_holder.set_vis(VIS_FULLBRIGHT,fullbright)
 		plane_holder.set_vis(VIS_MESONS,seemeson)
+		plane_holder.set_vis(VIS_JANHUD,seejanhud)
 
 	..()
 

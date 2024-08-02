@@ -103,7 +103,7 @@ Field studies suggest analytical abilities on par with some species of cepholapo
 
 /mob/living/simple_mob/animal/sif/grafadreka/verb/sit_down()
 	set name = "Sit Down"
-	set category = "IC"
+	set category = "IC.Grafadreka" //CHOMPEdit
 
 	if(sitting)
 		resting = FALSE
@@ -565,7 +565,7 @@ var/global/list/wounds_being_tended_by_drakes = list()
 /mob/living/simple_mob/animal/sif/grafadreka/verb/rally_pack()
 	set name = "Rally Pack"
 	set desc = "Tries to command your fellow pack members to follow you."
-	set category = "Abilities"
+	set category = "Abilities.Grafadreka" //CHOMPEdit
 
 	if(!has_modifier_of_type(/datum/modifier/ace))
 		to_chat(src, SPAN_WARNING("You aren't the pack leader! Sit down!"))

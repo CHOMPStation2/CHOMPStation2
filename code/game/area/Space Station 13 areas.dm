@@ -2643,6 +2643,10 @@ var/list/the_station_areas = list (
 	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
 
+/area/engineering/gravgen
+	name = "Gravity Generator"
+	icon_state = "engineering"
+
 //CHOMPedit KSC = overmap exploration shuttles
 
 /area/shuttle/stargazer

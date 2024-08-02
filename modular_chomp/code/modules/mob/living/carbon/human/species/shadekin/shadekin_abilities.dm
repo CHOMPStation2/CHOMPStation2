@@ -140,6 +140,8 @@
 
 		//Cosmetics mostly
 		var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(src.loc)
+		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
+		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
 		phaseanim.dir = dir
 		alpha = 0
 		custom_emote(1,"phases in!")
@@ -208,6 +210,23 @@
 		stop_pulling()
 		canmove = FALSE
 
+		//CHOMPAdd Start
+		var/list/allowed_implants = list(
+			/obj/item/weapon/implant/sizecontrol,
+			/obj/item/weapon/implant/compliance,
+		)
+		for(var/obj/item/organ/external/organ in organs)
+			for(var/obj/item/O in organ.implants)
+				if(is_type_in_list(O, allowed_implants))
+					continue
+				if(O == nif)
+					nif.unimplant(src)
+				O.forceMove(drop_location())
+				organ.implants -= O
+		if(!has_embedded_objects())
+			clear_alert("embeddedobject")
+		//CHOMPAdd End
+
 		// change
 		ability_flags |= AB_PHASE_SHIFTED
 		ability_flags |= AB_PHASE_SHIFTING
@@ -232,6 +251,8 @@
 			B.escapable = FALSE
 
 		var/obj/effect/temp_visual/shadekin/phase_out/phaseanim = new /obj/effect/temp_visual/shadekin/phase_out(src.loc)
+		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
+		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
 		phaseanim.dir = dir
 		alpha = 0
 		add_modifier(/datum/modifier/shadekin_phase_vision)

@@ -1,4 +1,5 @@
 //Created the autolathe entries here to keep stuff organized and also compact so the files aren't too spread out.
+/* Begone fops of the past! Your ballistics are now cringe
 /datum/category_item/autolathe/arms/smg_mp5
 	name = "mp5 magazine(9x19mm standard)"
 	path = /obj/item/ammo_magazine/mp5mag
@@ -370,4 +371,4 @@
 	name = ".45 LC"
 	path = /obj/item/ammo_casing/a45lc
 	hidden = 1
-
+*/

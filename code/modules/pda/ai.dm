@@ -22,7 +22,7 @@
 
 //AI verb and proc for sending PDA messages.
 /obj/item/device/pda/ai/verb/cmd_pda_open_ui()
-	set category = "Abilities.AI_IM" //ChompEDIT - TGPanel
+	set category = "Abilities.AI" //ChompEDIT - TGPanel
 	set name = "Use PDA"
 	set src in usr
 
@@ -44,7 +44,7 @@
 	ttone = "assist"
 	var/our_owner = null // Ref to a pAI
 
-/obj/item/device/pda/ai/pai/Initialize(mob/living/silicon/pai/P) //ChompEDIT New --> Initialize
+/obj/item/device/pda/ai/pai/New(mob/living/silicon/pai/P)
 	if(istype(P))
 		our_owner = REF(P)
 	return ..()

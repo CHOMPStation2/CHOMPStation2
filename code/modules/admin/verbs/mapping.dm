@@ -167,7 +167,7 @@ var/list/debug_verbs = list (
 
 
 /client/proc/enable_debug_verbs()
-	set category = "Debug"
+	set category = "Debug.Misc" //CHOMPEdit
 	set name = "Debug verbs"
 
 	if(!check_rights(R_DEBUG)) return
@@ -177,7 +177,7 @@ var/list/debug_verbs = list (
 	feedback_add_details("admin_verb","mDV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/hide_debug_verbs()
-	set category = "Debug"
+	set category = "Debug.Misc" //CHOMPEdit
 	set name = "Hide Debug verbs"
 
 	if(!check_rights(R_DEBUG)) return
@@ -199,7 +199,7 @@ var/list/debug_verbs = list (
 	var/icon/yellow = new('icons/misc/debug_group.dmi', "yellow")
 
 	for(var/turf/T in Z.contents)
-		images += image(yellow, T, "zasdebug", TURF_LAYER)
+		images += image(yellow, T, "zasdebug", PLANE_ADMIN2) // CHOMPEDIT
 		testZAScolors_turfs += T
 	for(var/connection_edge/zone/edge in Z.edges)
 		var/zone/connected = edge.get_connected_zone(Z)
@@ -209,7 +209,7 @@ var/list/debug_verbs = list (
 
 
 /client/proc/testZAScolors()
-	set category = "ZAS"
+	set category = "Mapping" //CHOMPEdit
 	set name = "Check ZAS connections"
 
 	if(!check_rights(R_DEBUG)) return
@@ -235,13 +235,13 @@ var/list/debug_verbs = list (
 
 	testZAScolors_zones += location.zone
 	for(var/turf/T in location.zone.contents)
-		images += image(green, T,"zasdebug", TURF_LAYER)
+		images += image(green, T,"zasdebug", PLANE_ADMIN2) // CHOMPEDIT
 		testZAScolors_turfs += T
 	for(var/connection_edge/zone/edge in location.zone.edges)
 		var/zone/Z = edge.get_connected_zone(location.zone)
 		testZAScolors_zones += Z
 		for(var/turf/T in Z.contents)
-			images += image(blue, T,"zasdebug",TURF_LAYER)
+			images += image(blue, T,"zasdebug",PLANE_ADMIN2) // CHOMPEDIT
 			testZAScolors_turfs += T
 		for(var/connection_edge/zone/z_edge in Z.edges)
 			var/zone/connected = z_edge.get_connected_zone(Z)
@@ -254,11 +254,11 @@ var/list/debug_verbs = list (
 			continue
 		if(T in testZAScolors_turfs)
 			continue
-		images += image(red, T, "zasdebug", TURF_LAYER)
+		images += image(red, T, "zasdebug", PLANE_ADMIN2) // CHOMPEDIT
 		testZAScolors_turfs += T
 
 /client/proc/testZAScolors_remove()
-	set category = "ZAS"
+	set category = "Mapping" //CHOMPEdit
 	set name = "Remove ZAS connection colors"
 
 	testZAScolors_turfs.Cut()
@@ -270,7 +270,7 @@ var/list/debug_verbs = list (
 				images.Remove(i)
 
 /client/proc/rebootAirMaster()
-	set category = "ZAS"
+	set category = "Mapping" //CHOMPEdit
 	set name = "Reboot ZAS"
 
 	if(tgui_alert(usr, "This will destroy and remake all zone geometry on the whole map.","Reboot ZAS",list("Reboot ZAS","Nevermind")) == "Reboot ZAS")

@@ -1267,7 +1267,8 @@
 	base_name = "Clara's Vacuum Flask"
 	base_icon = "claraflask"
 	icon = 'icons/vore/custom_items_vr.dmi'
-	center_of_mass = list("x" = 15,"y" = 4)
+	center_of_mass_x = 15 //CHOMPEdit
+	center_of_mass_y= 4 //CHOMPEdit
 	filling_states = list(15, 30, 50, 60, 80, 100)
 	volume = 60
 

@@ -270,6 +270,8 @@
 	for(var/atom/thing in nearby_things)
 		if(thing.type != desired_type)
 			continue
+		if(thing.is_incorporeal())
+			continue
 		valid_things.Add(thing)
 	if(valid_things.len)
 		O.data = WEAKREF(pick(valid_things))
@@ -313,11 +315,15 @@
 			var/desired_type = A.type
 			if(desired_type)
 				for(var/atom/thing in nearby_things)
+					if(thing.is_incorporeal())
+						continue
 					if(thing.type == desired_type)
 						valid_things.Add(thing)
 	else if(istext(I.data))
 		var/DT = I.data
 		for(var/atom/thing in nearby_things)
+			if(thing.is_incorporeal())
+				continue
 			if(findtext(addtext(thing.name," ",thing.desc), DT, 1, 0) )
 				valid_things.Add(thing)
 	if(valid_things.len)

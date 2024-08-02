@@ -462,31 +462,185 @@
 	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_soap"
 
-/datum/sprite_accessory/facial_hair/teshari/scraggly
-	icon = 'modular_chomp/icons/mob/human_face.dmi'
+//screll hair override
+/datum/sprite_accessory/hair/skr/chomp
+	name = "Tentacles Ch., Average"
+	icon_state = "skrell_short"
+	name = "Tentacles, Average"
+	icon_state = "skrell_short"
+	icon = 'modular_chomp/icons/mob/hair_skrell.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_skrell_add.dmi'
 
-/datum/sprite_accessory/facial_hair/teshari/chomp
-	name = "Teshari Ch. Beard"
-	icon = 'modular_chomp/icons/mob/human_face.dmi'
-	icon_state = "teshari_chin"
+/datum/sprite_accessory/hair/skr/pullback
+	icon = 'modular_chomp/icons/mob/hair_skrell.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_skrell_add.dmi'
+	name = "Tentacles, Average, Pullback"
+	icon_state = "skrell_short_pullback"
 
-/datum/sprite_accessory/facial_hair/teshari/cowlick
-	name = "Teshari Cowlick"
-	icon = 'modular_chomp/icons/mob/human_face.dmi'
-	icon_state = "teshari_cowlick"
+/datum/sprite_accessory/hair/skr/very_short
+	icon = 'modular_chomp/icons/mob/hair_skrell.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_skrell_add.dmi'
+	name = "Tentacles, Short"
+	icon_state = "skrell_very_short"
 
-/datum/sprite_accessory/facial_hair/teshari/chops
-	icon = 'modular_chomp/icons/mob/human_face.dmi'
+/datum/sprite_accessory/hair/skr/long
+	icon = 'modular_chomp/icons/mob/hair_skrell.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_skrell_add.dmi'
+	name = "Tentacles, Long"
+	icon_state = "skrell_long"
+
+/datum/sprite_accessory/hair/skr/long/pullback
+	name = "Tentacles, Long, Pullback"
+	icon_state = "skrell_long_pullback"
+
+/datum/sprite_accessory/hair/skr/long/scarf
+	name = "Tentacles, Long, Scarf"
+	icon_state = "skrell_long_scarf"
+
+/datum/sprite_accessory/hair/skr/long/wavy
+	name = "Tentacles, Long, Wavy"
+	icon_state = "skrell_long_wavy"
+
+/datum/sprite_accessory/hair/skr/very_long
+	icon = 'modular_chomp/icons/mob/hair_skrell.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_skrell_add.dmi'
+	name = "Tentacles, Very Long"
+	icon_state = "skrell_very_long"
+
+/datum/sprite_accessory/hair/skr/very_long/pullback
+	name = "Tentacles, Very Long, Pullback"
+	icon_state = "skrell_very_long_pullback"
+
+/datum/sprite_accessory/hair/skr/very_long/scarf
+	name = "Tentacles, Very Long, Scarf"
+	icon_state = "skrell_very_long_scarf"
+
+/datum/sprite_accessory/hair/skr/very_long/wavy
+	name = "Tentacles, Very Long, Wavy"
+	icon_state = "skrell_very_long_wavy"
+
+/datum/sprite_accessory/hair/skr/split
+	icon = 'modular_chomp/icons/mob/hair_skrell.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_skrell_add.dmi'
+	name = "Tentacles, Split"
+	icon_state = "skrell_split"
 
 //una hair override with shading
-/datum/sprite_accessory/facial_hair/una/hornadorns
-	icon = 'modular_chomp/icons/mob/human_face.dmi'
+/datum/sprite_accessory/hair/una/Chomp
+	name = "Long Unathi Spines Ch."
+	icon_state = "soghun_longspines"
+	name = "Long Unathi Spines"
+	icon_state = "soghun_longspines"
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
 
-/datum/sprite_accessory/facial_hair/una/spinespikes
-	icon = 'modular_chomp/icons/mob/human_face.dmi'
+/datum/sprite_accessory/hair/una/finhawk
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Unathi Finhawk"
+	icon_state = "fin_hawk"
 
-/datum/sprite_accessory/facial_hair/una/dorsalfrill
-	icon = 'modular_chomp/icons/mob/human_face.dmi'
+/datum/sprite_accessory/hair/una/downcurve_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Downward-Curved Unathi Horns"
+	icon_state = "curved_down"
+
+/datum/sprite_accessory/hair/una/upcurve_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Upward-Curved Unathi Horns"
+	icon_state = "curved_up"
+
+/datum/sprite_accessory/hair/una/samurai_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Unathi Samurai Horns"
+	icon_state = "samurai"
+
+/datum/sprite_accessory/hair/una/big_frills
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Big Unathi Frills"
+	icon_state = "big_frills"
+
+/datum/sprite_accessory/hair/una/head_spikes
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Unathi Head Spikes"
+	icon_state = "head_spikes"
+
+/datum/sprite_accessory/hair/una/overgrown_spikes
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Overgrown Unathi Head Spikes"
+	icon_state = "overgrown_head_spikes"
+
+/datum/sprite_accessory/hair/una/cobrahood
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Unathi Cobra Hood"
+	icon_state = "unathi_cobrahood"
+
+/datum/sprite_accessory/hair/una/demon_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Unathi Demon Horns"
+	icon_state = "unathi_horns_demon"
+
+/datum/sprite_accessory/hair/una/large_ram_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Large Unathi Ram Horns"
+	icon_state = "unathi_horns_ram_big"
+
+/datum/sprite_accessory/hair/una/aqua_frills
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Unathi Aqua Frills"
+	icon_state = "unathi_frills_aqua"
+
+/datum/sprite_accessory/hair/una/curled_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Curled Unathi Horns"
+	icon_state = "unathi_horns_curled"
+
+/datum/sprite_accessory/hair/una/ram_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Unathi Ram Horns"
+	icon_state = "unathi_horns_ram"
+
+/datum/sprite_accessory/hair/una/thick_ram_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Thick Unathi Ram Horns"
+	icon_state = "unathi_horns_ram_thick"
+
+/datum/sprite_accessory/hair/una/double_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Double Unathi Horns"
+	icon_state = "unathi_horns_double"
+
+/datum/sprite_accessory/hair/una/swept_horns
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Swept Unathi Horns"
+	icon_state = "unathi_horns_swept"
+
+/datum/sprite_accessory/hair/una/short_spined_frills
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Short Spined Unathi Frills"
+	icon_state = "unathi_spined_short_frills"
+
+/datum/sprite_accessory/hair/una/long_spined_frills
+	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
+	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
+	name = "Long Spined Unathi Frills"
+	icon_state = "unathi_spined_long_frills"
 
 /datum/sprite_accessory/hair/braid
 	icon_add = 'modular_chomp/icons/mob/human_face_alt_add.dmi'

@@ -7,7 +7,8 @@
 	icon_state = "lego"
 	desc = "An absolutely horrifying mechanical trap, banned in most sectors across the universe. Placing one is considered a major war crime."
 	randpixel = 0
-	center_of_mass = null
+	center_of_mass_x = 0 //CHOMPEdit
+	center_of_mass_y = 0 //CHOMPEdit
 	throwforce = 0
 	w_class = ITEMSIZE_SMALL
 
@@ -36,7 +37,8 @@
 	icon_state = "lego"
 	desc = "An absolutely horrifying mechanical trap, banned in most sectors across the universe. Placing one is considered a major war crime."
 	randpixel = 0
-	center_of_mass = null
+	center_of_mass_x = 0 //CHOMPEdit
+	center_of_mass_y = 0 //CHOMPEdit
 	throwforce = 0
 	w_class = ITEMSIZE_SMALL
 
@@ -55,4 +57,3 @@
 			playsound(src, 'sound/misc/legodeath.ogg', 50, 1)
 			qdel(src)
 	..()
-

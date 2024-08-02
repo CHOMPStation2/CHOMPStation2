@@ -1,5 +1,5 @@
 /client/proc/spawn_character_mob()
-	set category = "Special Verbs"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Spawn Character As Mob"
 	set desc = "Spawn a specified ckey as a chosen mob."
 
@@ -76,7 +76,7 @@
 	return new_mob
 
 /client/proc/cmd_admin_z_narrate() // Allows administrators to fluff events a little easier -- TLE
-	set category = "Special Verbs"
+	set category = "Fun.Narrate" //CHOMPEdit
 	set name = "Z Narrate"
 	set desc = "Narrates to your Z level."
 
@@ -84,12 +84,13 @@
 		return
 
 	var/msg = tgui_input_text(usr, "Message:", text("Enter the text you wish to appear to everyone:"))
-	if(!(msg[1] == "<" && msg[length(msg)] == ">")) //You can use HTML but only if the whole thing is HTML. Tries to prevent admin 'accidents'.
-		msg = sanitize(msg)
-
+	//CHOMPEdit Start fixes runtime crash on empty input
 	if (!msg)
 		return
 
+	if(!(msg[1] == "<" && msg[length(msg)] == ">")) //You can use HTML but only if the whole thing is HTML. Tries to prevent admin 'accidents'.
+		msg = sanitize(msg)
+	//CHOMPEdit End
 	var/pos_z = get_z(src.mob)
 	if (!pos_z)
 		return
@@ -101,7 +102,7 @@
 	feedback_add_details("admin_verb","GLNA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_vantag_hud(var/mob/target as mob)
-	set category = "Fun"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Give/Remove Event HUD"
 	set desc = "Give a mob the event hud, which shows them other people's event preferences, or remove it from them"
 

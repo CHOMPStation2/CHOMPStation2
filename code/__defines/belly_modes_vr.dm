@@ -21,9 +21,10 @@
 #define DM_FLAG_AFFECTWORN		0x10
 #define DM_FLAG_JAMSENSORS		0x20
 #define DM_FLAG_FORCEPSAY		0x40
-#define DM_FLAG_SLOWBODY		0x80 //CHOMPAdd
-#define DM_FLAG_MUFFLEITEMS		0x100 //CHOMPAdd
-#define DM_FLAG_TURBOMODE		0x200 //CHOMPAdd
+#define DM_FLAG_SPARELIMB		0x80
+#define DM_FLAG_SLOWBODY		0x100 //CHOMPAdd
+#define DM_FLAG_MUFFLEITEMS		0x200 //CHOMPAdd
+#define DM_FLAG_TURBOMODE		0x400 //CHOMPAdd
 
 //Item related modes
 #define IM_HOLD									"Hold"

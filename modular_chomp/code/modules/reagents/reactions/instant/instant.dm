@@ -133,3 +133,12 @@
 	required_reagents = list("ethanol" = 2, "sodium" = 2, "phoron" = 0.1)
 	catalysts = list("phoron" = 5)
 	result_amount = 4
+
+//Xenobotany update
+/decl/chemical_reaction/instant/neoliquidfire
+	name = "neoliquidfire" //distil phoron dragon blood from basic dragon blood
+	id = "neoliquidfire"
+	result = "neoliquidfire"
+	required_reagents = list("liquidfire" = 1, "sulfur" = 1, "phoron" = 0.1)
+	catalysts = list("phoron" = 5)
+	result_amount = 1

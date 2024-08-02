@@ -122,6 +122,7 @@
 	item_state = "tajblind"
 	prescription = 1
 	body_parts_covered = EYES
+	glasses_layer_above = TRUE //ChompEDIT
 	sprite_sheets = list(SPECIES_VOX = 'icons/inventory/eyes/mob_vox.dmi')
 
 /obj/item/clothing/glasses/hud/health/tajblind

@@ -347,3 +347,51 @@
 	name = "Xenomorph teeth (queen)"
 	icon_state = "xeno_teeth_queen"
 	body_parts = list(BP_HEAD)
+
+// WHISKIES //
+
+/datum/sprite_accessory/marking/ch/mole_whiskers
+	name = "mole whiskers"
+	icon_state = "molewhiskers"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SNOOT //
+
+/datum/sprite_accessory/marking/ch/vulp_lips
+	name = "face, vulp (Lips)"
+	icon_state = "vulp_lips"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SHROOM //
+
+/datum/sprite_accessory/marking/ch/shroomhead
+	name = "Mushroom Head (Base)"
+	icon_state = "mushroom_head"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SHROOM UNDER //
+
+/datum/sprite_accessory/marking/ch/shroomhead_under
+	name = "Mushroom Head (Under)"
+	icon_state = "mushroom_head_under"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SHROOM TOP //
+
+/datum/sprite_accessory/marking/ch/shroomhead_top
+	name = "Mushroom Head (Top)"
+	icon_state = "mushroom_head_top"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SHROOM SPOTS //
+
+/datum/sprite_accessory/marking/ch/shroomhead_spots
+	name = "Mushroom Head (Spots)"
+	icon_state = "mushroom_head_spots"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY

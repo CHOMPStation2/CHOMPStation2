@@ -50,4 +50,4 @@
 	charge_tick = 0
 	can_charge = TRUE
 
-	projectile_type = /obj/item/weapon/spell/construct/projectile/inverted_beam
+	projectile_type = /obj/item/projectile/beam/inversion

@@ -34,7 +34,7 @@
 	chance_maxm = 2
 
 /datum/disease2/effect/lang/activate(var/mob/living/carbon/mob,var/multiplier)
-	mob.set_default_language(pick(mob.languages))
+	mob.apply_default_language(pick(mob.languages)) //CHOMPEdit
 
 ///////////////////////////////////////////////
 /////////////////// Stage 3 ///////////////////

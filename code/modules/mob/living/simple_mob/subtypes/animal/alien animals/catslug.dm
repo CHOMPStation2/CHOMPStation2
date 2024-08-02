@@ -58,6 +58,8 @@
 	var/obj/item/clothing/head/hat = null // Scughat.
 	var/can_wear_hat = TRUE				  // Some have inbuilt hats
 
+	allow_mind_transfer = TRUE //CHOMPAdd
+
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
 	can_enter_vent_with = list(
@@ -66,6 +68,7 @@
 		/obj/item/weapon/holder,
 		/obj/machinery/camera,
 		/obj/belly,
+		/obj/soulgem, // CHOMPAdd
 		/obj/screen,
 		/atom/movable/emissive_blocker,
 		/obj/item/weapon/material,
@@ -284,7 +287,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color()
 	set name = "Pick Color"
-	set category = "Abilities"
+	set category = "Abilities.Settings" //CHOMPEdit
 	set desc = "You can set your color!"
 	if(picked_color)
 		to_chat(src, "<span class='notice'>You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0.</span>")
@@ -1112,7 +1115,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate()
 	set name = "Kill Innocent"
-	set category = "Abilities"
+	set category = "Abilities.Catslug"
 	set desc = "Kill an innocent suslug!"
 	if(!is_impostor)
 		to_chat(src, "<span class='notice'>You are not an impostor! You can't kill like that!</span>")

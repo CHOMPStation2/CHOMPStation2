@@ -50,6 +50,13 @@
 	mappath = 'gateway/darkrps.dmm'
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
+#include "gateway/diescraper.dm"
+/datum/map_template/sc_lateload/gateway/diescraper
+	name = "Skyscraper"
+	desc = "A skyscraper of various businesses, apartments, and recreations. Do not fall"
+	mappath = 'gateway/diescraper.dmm'
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+
 #include "gateway/BaseBlep.dm"
 /datum/map_template/sc_lateload/gateway/baseblep
 	name = "Base Blep"
@@ -224,7 +231,7 @@
 
 	if(!LAZYLEN(mobs_to_pick_from))
 		error("Mob spawner at [x],[y],[z] ([get_area(src)]) had no mobs_to_pick_from set on it!")
-		initialized = TRUE
+		flags |= ATOM_INITIALIZED //CHOMPEdit
 		return INITIALIZE_HINT_QDEL
 	START_PROCESSING(SSobj, src)
 

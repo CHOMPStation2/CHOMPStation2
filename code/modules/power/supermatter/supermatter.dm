@@ -665,6 +665,12 @@
 			candidate_alarm.critwarn = FALSE // Tell the fire alarm we're done, too. Yes this is janky, someone will come along and fix it later:tm:
 // CHOMPEdit End
 
+#undef POWER_FACTOR
+#undef DECAY_FACTOR
+#undef CRITICAL_TEMPERATURE
+#undef CHARGING_FACTOR
+#undef DAMAGE_RATE_LIMIT
+
 #undef NITROGEN_RETARDATION_FACTOR
 #undef THERMAL_RELEASE_MODIFIER
 #undef PHORON_RELEASE_MODIFIER
@@ -686,4 +692,5 @@
 
 #undef WARNING_DELAY
 
+#undef SUPERMATTER_COUNTDOWN_TIME
 #undef SUPERMATTER_ACCENT_SOUND_COOLDOWN

@@ -1,0 +1,5 @@
+author: "Fracshun"
+delete-after: True
+changes:
+  - qol: "Vorespawns with auto-accept on aren't affected by inactivity"
+  - rscadd: "Vorespawns into a belly with entrance logs disabled don't announce the entrance to the pred"

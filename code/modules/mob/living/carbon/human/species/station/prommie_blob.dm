@@ -251,7 +251,7 @@
 /mob/living/simple_mob/slime/promethean/proc/prommie_blobform()
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Promethean" //CHOMPEdit
 	set hidden = FALSE
 
 	var/atom/movable/to_locate = src
@@ -269,7 +269,7 @@
 /mob/living/simple_mob/slime/promethean/proc/toggle_expand()
 	set name = "Toggle Width"
 	set desc = "Switch between smole and lorge."
-	set category = "Abilities"
+	set category = "Abilities.Promethean" //CHOMPEdit
 	set hidden = FALSE
 
 	if(stat || world.time < last_special)
@@ -289,7 +289,7 @@
 /mob/living/simple_mob/slime/promethean/proc/toggle_shine()
 	set name = "Toggle Shine"
 	set desc = "Shine on you crazy diamond."
-	set category = "Abilities"
+	set category = "Abilities.Promethean" //CHOMPEdit
 	set hidden = FALSE
 
 	if(stat || world.time < last_special)
@@ -309,7 +309,7 @@
 /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour()
 
 	set name = "Select Body Colour"
-	set category = "Abilities"
+	set category = "Abilities.Promethean" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -465,6 +465,8 @@
 		B.forceMove(blob)
 		B.owner = blob
 
+	soulgem.owner = blob
+
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
 
@@ -537,6 +539,8 @@
 	for(var/obj/belly/B as anything in blob.vore_organs)
 		B.forceMove(src)
 		B.owner = src
+
+	soulgem.owner = src //CHOMPAdd
 
 	//vore_organs.Cut()
 

@@ -40,7 +40,7 @@
 			var/channel = href_list["change_volume"]
 			if(!(channel in pref.volume_channels))
 				pref.volume_channels["[channel]"] = 1
-			var/value = tgui_input_number(usr, "Choose your volume for [channel] (0-200%)", "[channel] volume", (pref.volume_channels[channel] * 100), 200, 0)
+			var/value = tgui_input_number(user, "Choose your volume for [channel] (0-200%)", "[channel] volume", (pref.volume_channels[channel] * 100), 200, 0) //ChompEDIT - usr removal
 			if(isnum(value))
 				value = CLAMP(value, 0, 200)
 				pref.volume_channels["[channel]"] = (value / 100)
@@ -74,7 +74,7 @@
 /datum/volume_panel/tgui_data(mob/user)
 	if(!user.client || !user.client.prefs)
 		return list("error" = TRUE)
-	
+
 	var/list/data = ..()
 	data["volume_channels"] = user.client.prefs.volume_channels
 	return data
@@ -97,7 +97,7 @@
 
 /client/verb/volume_panel()
 	set name = "Volume Panel"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Allows you to adjust volume levels on the fly."
 
 	if(!volume_panel)

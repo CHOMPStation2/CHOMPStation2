@@ -4,10 +4,10 @@
 	edge_blending_priority = 6
 	movement_cost = 2
 	initial_flooring = /decl/flooring/snow
-	turf_layers = list(
+	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
-		)
+		) CHOMP Removal End*/
 	var/list/crossed_dirs = list()
 
 
@@ -80,3 +80,17 @@
 	desc = "Looks slippery."
 	movement_cost = 4
 	edge_blending_priority = 0
+
+// Extra cold variants
+
+/turf/simulated/floor/outdoors/snow/v5
+	temperature = 150
+	oxygen = 8
+	nitrogen = 17
+	carbon_dioxide = 75
+
+/turf/simulated/floor/outdoors/ice/v5
+	temperature = 150
+	oxygen = 8
+	nitrogen = 17
+	carbon_dioxide = 75

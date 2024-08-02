@@ -1,7 +1,7 @@
 /mob/living/simple_mob/xeno_ch/proc/xeno_build()
 	set name = "Build Resin Structure"
 	set desc = "Build a xenomorph resin structure."
-	set category = "Abilities"
+	set category = "Abilities.Xeno"
 
 	var/list/options = list("Resin Door","Resin Membrane","Nest","Resin Wall","Weed Node")
 	for(var/option in options)

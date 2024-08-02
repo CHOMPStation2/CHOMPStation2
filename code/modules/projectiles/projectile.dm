@@ -469,7 +469,7 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
-	qdel(trajectory)
+	QDEL_NULL(trajectory) //CHOMPEdit
 	cleanup_beam_segments()
 
 	if(my_case)
@@ -864,3 +864,6 @@
 		if(silenced)
 			volume = 5
 		playsound(A, hitsound_wall, volume, 1, -1)
+
+#undef MOVES_HITSCAN
+#undef MUZZLE_EFFECT_PIXEL_INCREMENT

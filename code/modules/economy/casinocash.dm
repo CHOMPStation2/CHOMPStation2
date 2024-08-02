@@ -4,9 +4,9 @@
 
 /obj/machinery/chipmachine
 	name = "Casino Chip Exchange"
-	desc = "Takes all your cash and gives you chips back! No change and half refund!"
-	icon = 'icons/obj/casino.dmi'
-	icon_state ="chipmachine"
+	desc = "Converts thalers to casino chips at a ratio of 5 thalers to 1 chip! It can also convert chips back to thalers at the same rate." //CHOMPEdit
+	icon = 'icons/obj/casino_ch.dmi' //CHOMNPEdit
+	icon_state ="casino_atm" //CHOMNPEdit
 	anchored = 1
 
 /obj/machinery/chipmachine/attackby(obj/item/I as obj, mob/user as mob)
@@ -17,7 +17,7 @@
 		else
 			playsound(loc, 'sound/items/polaroid2.ogg', 50, 1)
 
-		user << "<span class='info'>You insert [I] into [src].</span>"
+		to_chat(user, span_info("You insert [I] into [src]."))
 		spawn_casinochips(round(I:worth/5), src.loc)
 		src.attack_hand(user)
 		qdel(I)
@@ -29,7 +29,7 @@
 		else
 			playsound(loc, 'sound/items/polaroid2.ogg', 50, 1)
 
-		user << "<span class='info'>You insert [I] into [src].</span>"
+		to_chat(user, span_info("You insert [I] into [src]."))
 		spawn_money(round(I:worth*5), src.loc)
 		src.attack_hand(user)
 		qdel(I)
@@ -64,7 +64,7 @@
 			h_user.drop_from_inventory(src)
 			h_user.drop_from_inventory(SC)
 			h_user.put_in_hands(SC)
-		user << "<span class='notice'>You combine the casino chips to a stack of [SC.worth] casino credits.</span>"
+		to_chat(user, span_notice("You combine the casino chips to a stack of [SC.worth] casino credits."))
 		qdel(src)
 
 /obj/item/weapon/spacecasinocash/update_icon()

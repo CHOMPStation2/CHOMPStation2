@@ -208,6 +208,15 @@
 			list -= null
 	return
 
+//CHOMPAdd Start, list clear with return value
+/**
+ * Removes any null entries from the list
+ * Returns TRUE if the list had nulls, FALSE otherwise
+**/
+/proc/list_clear_nulls(list/list_to_clear)
+	return (list_to_clear.RemoveAll(null) > 0)
+//CHOMPAdd End
+
 /*
  * Returns list containing all the entries from first list that are not present in second.
  * If skiprep = 1, repeated elements are treated as one.

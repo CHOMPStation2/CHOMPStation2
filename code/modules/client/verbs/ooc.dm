@@ -1,7 +1,7 @@
 
 /client/verb/ooc(msg as text)
 	set name = "OOC"
-	set category = "OOC"
+	set category = "OOC.Chat" //CHOMPEdit
 
 	if(say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='warning'>Speech is currently admin-disabled.</span>")
@@ -84,7 +84,7 @@
 /client/verb/looc(msg as text)
 	set name = "LOOC"
 	set desc = "Local OOC, seen only by those in view."
-	set category = "OOC"
+	set category = "OOC.Chat" //CHOMPEdit
 
 	if(say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
@@ -112,7 +112,7 @@
 		if(!CONFIG_GET(flag/dooc_allowed) && (mob.stat == DEAD)) // CHOMPEdit
 			to_chat(usr, "<span class='danger'>OOC for dead mobs has been turned off.</span>")
 			return
-		if(prefs.muted & MUTE_OOC)
+		if(prefs.muted & MUTE_LOOC)
 			to_chat(src, "<span class='danger'>You cannot use OOC (muted).</span>")
 			return
 		if(findtext(msg, "byond://") && !CONFIG_GET(flag/allow_byond_links)) // CHOMPEdit
@@ -134,7 +134,7 @@
 	log_looc(msg,src)
 
 	if(msg)
-		handle_spam_prevention(MUTE_OOC)
+		handle_spam_prevention(MUTE_LOOC)
 
 	var/mob/source = mob.get_looc_source()
 	var/turf/T = get_turf(source)

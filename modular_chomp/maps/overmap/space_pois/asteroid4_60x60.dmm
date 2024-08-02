@@ -184,16 +184,24 @@
 /area/submap/asteroid4)
 "nj" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1479;
+	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "ass4outer";
+	id_tag = "poitoxins_outer";
 	locked = 1;
+	name = "External Airlock Access";
 	req_access = null
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "poitoxins_airlock";
+	name = "exterior access button";
+	pixel_x = 25
 	},
 /turf/simulated/floor/plating,
 /area/submap/asteroid4)
 "nn" = (
-/obj/structure/shuttle/window,
+/obj/structure/window/reinforced/full,
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/submap/asteroid4)
@@ -454,13 +462,21 @@
 /area/submap/asteroid4)
 "Ec" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1479;
+	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "ass4inner";
+	id_tag = "poitoxins_inner";
 	locked = 1;
+	name = "External Airlock Access";
 	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "poitoxins_airlock";
+	name = "interior access button";
+	pixel_x = -25
+	},
 /turf/simulated/floor/plating,
 /area/submap/asteroid4)
 "Ed" = (
@@ -672,18 +688,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
-"Qr" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1479;
-	master_tag = "ass4airlock";
-	name = "exterior access button";
-	pixel_x = 23;
-	pixel_y = 35
-	},
-/obj/effect/catwalk_plated/techfloor,
-/turf/simulated/mineral/floor/vacuum,
-/area/submap/asteroid4)
 "Rd" = (
 /turf/simulated/shuttle/floor,
 /area/submap/asteroid4)
@@ -699,7 +703,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "RW" = (
-/obj/structure/shuttle/window,
+/obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
 /area/submap/asteroid4)
 "Sf" = (
@@ -725,28 +729,21 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "Ui" = (
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1479;
-	id_tag = "ass4airlock";
-	pixel_x = -25;
-	tag_airpump = "ass4pump";
-	tag_chamber_sensor = "ass4sensor";
-	tag_exterior_door = "ass4outer";
-	tag_interior_door = "ass4inner"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	frequency = 1479;
 	id_tag = "ass4pump"
 	},
-/obj/machinery/airlock_sensor{
-	frequency = 1479;
-	id_tag = "ass4sensor";
-	pixel_x = 25;
-	pixel_y = -5
-	},
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	pixel_y = 3;
+	dir = 2;
+	id_tag = "poitoxins_airlock";
+	tag_interior_door = "poitoxins_inner";
+	tag_exterior_door = "poitoxins_outer";
+	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
 /area/submap/asteroid4)
@@ -836,7 +833,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "ZB" = (
-/obj/structure/shuttle/window,
+/obj/structure/window/reinforced/full,
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -2864,7 +2861,7 @@ PB
 Ec
 Ui
 nj
-Qr
+TX
 TX
 TX
 TX

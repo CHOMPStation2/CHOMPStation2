@@ -1,13 +1,13 @@
 /mob/verb/up()
 	set name = "Move Upwards"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(zMove(UP))
 		to_chat(src, "<span class='notice'>You move upwards.</span>")
 
 /mob/verb/down()
 	set name = "Move Down"
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(zMove(DOWN))
 		to_chat(src, "<span class='notice'>You move down.</span>")

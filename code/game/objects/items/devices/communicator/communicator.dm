@@ -153,7 +153,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 		if (ismob(loc))
 			var/mob/M = loc
 			M.put_in_hands(id)
-			to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
+			to_chat(M, "<span class='notice'>You remove the ID from the [name].</span>") //ChompEDIT usr --> M
 			playsound(src, 'sound/machines/id_swipe.ogg', 100, 1)
 		else
 			id.loc = get_turf(src)

@@ -149,7 +149,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Emitter crate"
-	access = access_ce
+	access = access_engine //CHOMPedit
 
 /datum/supply_pack/eng/engine/field_gen
 	name = "Field Generator crate"

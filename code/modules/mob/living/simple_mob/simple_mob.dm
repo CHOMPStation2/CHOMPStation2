@@ -208,6 +208,7 @@
 	if(CONFIG_GET(flag/allow_simple_mob_recolor)) //CHOMPEdit
 		add_verb(src,/mob/living/simple_mob/proc/ColorMate) //CHOMPEdit TGPanel
 
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPEdit - Giving them all shoe footsteps FOR NOW until I go through all of them and give appropiate ones
 
 	return ..()
 
@@ -364,7 +365,7 @@
 
 /mob/living/simple_mob/proc/ColorMate()
 	set name = "Recolour"
-	set category = "Abilities.Mob" //ChompEDIT
+	set category = "Abilities.Settings" //CHOMPEdit
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
