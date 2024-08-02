@@ -870,40 +870,10 @@
 "genre": "Pop"
 },
 {
-"url": "https://cdn.discordapp.com/attachments/528973352728264714/956446080638283826/Deus_Ex_-_009_-_UNATCO_-_Ambient.mp3",
-"title": "UNATCO - Ambience",
-"duration": 1610,
-"artist": "Michiel van den Bos",
-"secret": false,
-"lobby": false,
-"jukebox": true,
-"genre": "Electronic"
-},
-{
 "url": "https://files.catbox.moe/gcej08.m4a",
 "title": "UNATCO - Conversation",
 "duration": 1720,
 "artist": "Michiel van den Bos",
-"secret": false,
-"lobby": false,
-"jukebox": true,
-"genre": "Electronic"
-},
-{
-"url": "https://cdn.discordapp.com/attachments/528973352728264714/956453078750593044/EdenShard_-_Deus_Ex-_Revision_Original_Soundtrack_-_06_The_Oath_of_Service.mp3",
-"title": "Oath of Service",
-"duration": 2160,
-"artist": "EdenShard",
-"secret": false,
-"lobby": false,
-"jukebox": true,
-"genre": "Electronic"
-},
-{
-"url": "https://cdn.discordapp.com/attachments/528973352728264714/956453288600039434/EdenShard_-_Deus_Ex-_Revision_Original_Soundtrack_-_08_Mind_the_Synaptic_Gap.mp3",
-"title": "Mind the Synaptic Gap",
-"duration": 5460,
-"artist": "EdenShard",
 "secret": false,
 "lobby": false,
 "jukebox": true,
@@ -3541,6 +3511,7 @@
 "genre": "Rock"
 },
 {
+<<<<<<< HEAD
 "url" : "https://cdn.discordapp.com/attachments/404660884531707906/676726491806957568/Cassette.mp3",
 "title" : "Cassette",
 "duration" :  2310,
@@ -3933,6 +3904,8 @@
 },
 {
 "duration" : 1416,
+=======
+>>>>>>> 0b659c8573... remove discord-based entries (#16149)
 "url" : "https://files.catbox.moe/h967s5.mp3",
 "title" : "MEGALOVANIA",
 "artist" : "Toby Fox",
@@ -4360,7 +4333,6 @@
 "lobby": false,
 "jukebox": true
 },
-
 {
 "url": "https://files.catbox.moe/qa6ahi.mp3",
 "title": "Deadlines",
