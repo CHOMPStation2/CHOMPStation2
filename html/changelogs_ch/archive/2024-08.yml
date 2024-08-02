@@ -1,0 +1,15 @@
+2024-08-02:
+  Asher-42:
+  - bugfix: dullahancargomodule class
+  - bugfix: second dullahan miner name -> v2
+  Fracshun:
+  - qol: Vorespawns with auto-accept on aren't affected by inactivity
+  - rscadd: Vorespawns into a belly with entrance logs disabled don't announce the
+      entrance to the pred
+  Kashargul:
+  - bugfix: Fixed a case in which belly signals could trigger too many soulcatcher
+      messages
+  TheCaramelion:
+  - qol: Added the ability to point at items in your inventory
+  - code_imp: Added COMSIG_MOB_POINTED
+  - refactor: Everything point related moved to the modular folder
