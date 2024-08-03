@@ -76,7 +76,6 @@
 	desc = "A medium bullet casing, probably fit for a rifle"
 	caliber = "medium"
 	icon_state = "rifle-casing"
-	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	matter = list(MAT_STEEL = 180)
 	ammo_flags = AMMO_FLAG_MEDIUM
 
@@ -84,7 +83,6 @@
 	desc = "A large bullet casing, probably fit for a sniper."
 	icon_state = "lcasing"
 	caliber = "large"
-	projectile_type = /obj/item/projectile/bullet/rifle/a338
 	matter = list(MAT_STEEL = 800)
 	ammo_flags = AMMO_FLAG_LARGE
 
