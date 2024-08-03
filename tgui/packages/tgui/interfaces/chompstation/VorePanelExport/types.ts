@@ -40,7 +40,7 @@ export type Belly = {
   shrink_grow_size: number;
   vorespawn_blacklist: BooleanLike;
   vorespawn_whitelist: string[];
-  vorespawn_absorbed: string;
+  vorespawn_absorbed: number;
   egg_type: string;
   egg_name: string;
   selective_preference: string;

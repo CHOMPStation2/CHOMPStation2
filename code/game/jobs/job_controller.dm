@@ -673,7 +673,7 @@ var/global/datum/controller/occupations/job_master
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
-	var/absorb_choice = "No" //CHOMPAdd - Ability to start absorbed with vorespawn
+	var/absorb_choice = 0 //CHOMPAdd - Ability to start absorbed with vorespawn
 	var/mob/living/prey_to_nomph
 	var/obj/item/item_to_be //CHOMPEdit - Item TF spawning
 	var/mob/living/item_carrier //CHOMPEdit - Capture crystal spawning
@@ -721,12 +721,13 @@ var/global/datum/controller/occupations/job_master
 				if(!vore_spawn_gut)
 					return
 				//CHOMPAdd Start
-				if(vore_spawn_gut.vorespawn_absorbed == "Yes")
-					absorb_choice = alert(C, "[pred]'s [vore_spawn_gut] will start with you absorbed. Continue?", "Confirm", "Yes", "No")
-					if(absorb_choice != "Yes")
+				if(vore_spawn_gut.vorespawn_absorbed == 1)
+					if(alert(C, "[pred]'s [vore_spawn_gut] will start with you absorbed. Continue?", "Confirm", "Yes", "No") != "Yes")
 						return
-				if(vore_spawn_gut.vorespawn_absorbed == "Prey Choice")
-					absorb_choice = alert(C, "Do you want to start absorbed into [pred]'s [vore_spawn_gut]?", "Confirm", "Yes", "No")
+					absorb_choice = 1
+				if(vore_spawn_gut.vorespawn_absorbed == 2)
+					if(alert(C, "Do you want to start absorbed into [pred]'s [vore_spawn_gut]?", "Confirm", "Yes", "No") == "Yes")
+						absorb_choice = 1
 				//CHOMPAdd End
 				to_chat(C, "<b><span class='warning'>[pred] has received your spawn request. Please wait.</span></b>")
 				log_admin("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
@@ -736,7 +737,7 @@ var/global/datum/controller/occupations/job_master
 				if(pred.no_latejoin_vore_warning)
 					if(pred.no_latejoin_vore_warning_time > 0)
 						//CHOMPEdit Start
-						if(absorb_choice == "Yes")
+						if(absorb_choice)
 							confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn absorbed as your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), pred.no_latejoin_vore_warning_time SECONDS)
 						else
 							confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), pred.no_latejoin_vore_warning_time SECONDS)
@@ -745,7 +746,7 @@ var/global/datum/controller/occupations/job_master
 						confirm = "Yes"
 				else
 					//CHOMPEdit Start
-					if(absorb_choice == "Yes")
+					if(absorb_choice)
 						confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn absorbed as your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
 					else
 						confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
@@ -807,7 +808,10 @@ var/global/datum/controller/occupations/job_master
 				vore_spawn_gut = input(C, "Choose your Belly.", "Belly Spawnpoint") as null|anything in available_bellies
 				if(!vore_spawn_gut)
 					return
-				absorb_choice = alert(C, "Do you want to instantly absorb them?", "Confirm", "Yes", "No") //CHOMPAdd
+				//CHOMPAdd Start
+				if(alert(C, "Do you want to instantly absorb them?", "Confirm", "Yes", "No") == "Yes")
+					absorb_choice = 1
+				//CHOMPAdd End
 				to_chat(C, "<b><span class='warning'>[prey] has received your spawn request. Please wait.</span></b>")
 				log_admin("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
 				message_admins("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
@@ -816,7 +820,7 @@ var/global/datum/controller/occupations/job_master
 				if(prey.no_latejoin_prey_warning)
 					if(prey.no_latejoin_prey_warning_time > 0)
 						//CHOMPEdit Start
-						if(absorb_choice == "Yes")
+						if(absorb_choice)
 							confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore and instantly absorb you with their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), prey.no_latejoin_prey_warning_time SECONDS)
 						else
 							confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), prey.no_latejoin_prey_warning_time SECONDS)
@@ -825,7 +829,7 @@ var/global/datum/controller/occupations/job_master
 						confirm = "Yes"
 				else
 					//CHOMPEdit Start
-					if(absorb_choice == "Yes")
+					if(absorb_choice)
 						confirm = alert(prey, "[C.prefs.real_name] is attempting to televore and instantly absorb you with their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
 					else
 						confirm = alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")

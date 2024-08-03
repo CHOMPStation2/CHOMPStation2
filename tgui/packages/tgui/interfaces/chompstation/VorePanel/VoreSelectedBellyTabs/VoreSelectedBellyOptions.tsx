@@ -277,9 +277,9 @@ export const VoreSelectedBellyOptions = (props: {
               <LabeledList.Item label="Vore Spawn Absorbed">
                 <Button
                   color={
-                    vorespawn_absorbed === 'No'
+                    vorespawn_absorbed === 0
                       ? undefined
-                      : vorespawn_absorbed === 'Yes'
+                      : vorespawn_absorbed === 1
                         ? 'green'
                         : 'orange'
                   }
@@ -287,7 +287,11 @@ export const VoreSelectedBellyOptions = (props: {
                     act('set_attribute', { attribute: 'b_vorespawn_absorbed' })
                   }
                 >
-                  {vorespawn_absorbed}
+                  {vorespawn_absorbed === 0
+                    ? 'No'
+                    : vorespawn_absorbed === 1
+                      ? 'Yes'
+                      : 'Prey Choice'}
                 </Button>
               </LabeledList.Item>
             </>

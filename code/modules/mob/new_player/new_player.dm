@@ -615,14 +615,14 @@
 		tele.start()
 		character.forceMove(get_turf(prey))
 		//CHOMPAdd Start
-		if(start_absorbed == "Yes")
+		if(start_absorbed)
 			prey.absorbed = 1
 		//CHOMPAdd End
 		prey.forceMove(gut_to_enter)
 	else
 		if(gut)
 			//CHOMPAdd Start
-			if(start_absorbed == "Yes")
+			if(start_absorbed)
 				character.absorbed = 1
 			//CHOMPAdd End
 			character.forceMove(gut)
