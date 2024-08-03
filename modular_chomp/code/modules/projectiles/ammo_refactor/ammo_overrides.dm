@@ -806,7 +806,7 @@ Large Weapons
 
 
 /obj/item/weapon/gun/projectile/heavysniper
-	caliber = "large"
+	caliber = "14.5" //Editing these back to 14.5 bullets, these are extremely damaging and shouldnt be as free as 'large bullets'. Also the override doesnt work on these.
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
@@ -816,7 +816,7 @@ Large Weapons
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
 /obj/item/weapon/gun/projectile/revolver/slab
-	caliber = "large"
+	caliber = "14.5" ////Editing these back to 14.5 bullets, these are extremely damaging and shouldnt be as free as 'large bullets'
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
