@@ -1,3 +1,4 @@
+//File has been unticked for combat refactor walkback
 
 /mob/living/simple_mob/vore/aggressive/rat
 	maxHealth = 75

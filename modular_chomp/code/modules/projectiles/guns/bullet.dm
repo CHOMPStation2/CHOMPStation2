@@ -1,6 +1,6 @@
 /obj/item/projectile/bullet
 	damage = 25 //seems many bullets use this vaule for some reason
-
+/* Combat refactor walkback, default bullets do 60 damage I think so im keeping this, were not getting the CR20 incident again lol
 /obj/item/projectile/bullet/pistol
 	damage = 10
 
@@ -127,3 +127,4 @@
 
 /obj/item/projectile/bullet/pellet/fragment/strong
 	damage = 7
+*/

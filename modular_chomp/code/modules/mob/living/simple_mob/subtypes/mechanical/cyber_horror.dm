@@ -1,6 +1,6 @@
 /mob/living/simple_mob/mechanical/cyber_horror/corgi
 	projectiletype = /obj/item/projectile/energy/mob/drone
-
+/* Combat refactor walkback
 /mob/living/simple_mob/mechanical/cyber_horror
 	maxHealth = 87
 	health = 87
@@ -28,3 +28,4 @@
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror
 	maxHealth = 20
 	health = 20
+*/

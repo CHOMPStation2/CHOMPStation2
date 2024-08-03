@@ -24,7 +24,7 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/lemat
 	caliber = "small"
@@ -34,7 +34,7 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver/stainless
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/detective
 	caliber = "small"
@@ -49,17 +49,17 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver/lombardi
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/lombardi/panther
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/lombardi/gold
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/cappeacekeeper
 	caliber = "small"
@@ -69,7 +69,7 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver/mateba
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/deckard
 	caliber = "small"
@@ -94,22 +94,22 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver/nova
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/cerberus
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/nagant
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/nagant/skinned
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/saa
 	caliber = "small"
@@ -261,12 +261,12 @@ Small Weapons
 /obj/item/weapon/gun/projectile/contender
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/contender/tacticool
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/colt
 	caliber = "small"
@@ -325,7 +325,7 @@ Small Weapons
 /obj/item/weapon/gun/projectile/derringer
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/luger
 	caliber = "small"
