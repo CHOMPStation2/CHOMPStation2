@@ -804,9 +804,9 @@ Large Weapons
 */
 
 
-
+/* These are superheavy weapons, and the overrides dont even work on them anyway, 14.5 ammo will be its own seperate 'superheavy' ammo
 /obj/item/weapon/gun/projectile/heavysniper
-	caliber = "14.5" //Editing these back to 14.5 bullets, these are extremely damaging and shouldnt be as free as 'large bullets'. Also the override doesnt work on these.
+	caliber = "14.5"
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
@@ -819,7 +819,7 @@ Large Weapons
 	caliber = "14.5" ////Editing these back to 14.5 bullets, these are extremely damaging and shouldnt be as free as 'large bullets'
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
-
+*/
 /obj/item/weapon/gun/projectile/automatic/serdy/awp
 	caliber = "large"
 	projectile_type = /obj/item/projectile/bullet/rifle/a338
