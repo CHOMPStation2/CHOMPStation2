@@ -154,7 +154,7 @@ I think I covered everything.
 	var/list/body_styles = list(
 		"Smooth",
 		"Scaled"
-)
+	)
 	var/body
 	var/list/ear_styles = list(
 		"Normal"
