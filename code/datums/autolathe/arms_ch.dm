@@ -71,7 +71,7 @@
 	name = "flamethrower"
 	path =/obj/item/weapon/flamethrower/full
 	hidden = 1
-//CHOMPedit start, these were unticked and I want them in
+
 /datum/category_item/autolathe/arms/rifle_145
 	name = "14.5mm round"
 	path = /obj/item/ammo_casing/a145
@@ -90,4 +90,3 @@
 	name = "riot foam dart"
 	path = /obj/item/ammo_casing/afoam_dart/riot
 	hidden = 1
-//CHOMPedit end
