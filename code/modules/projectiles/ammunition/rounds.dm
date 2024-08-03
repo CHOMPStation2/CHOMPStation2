@@ -402,7 +402,7 @@
 
 /obj/item/ammo_casing/a145/highvel
 	desc = "A 14.5mm sabot shell."
-	projectile_type = /obj/item/projectile/bullet/rifle/a145
+	projectile_type = /obj/item/projectile/bullet/rifle/a145/highvel
 	matter = list(MAT_STEEL = 4000, MAT_PLASTEEL = 1000) //CHOMPedit Makes them a bit more expensive
 
 /obj/item/ammo_casing/a145/spent/Initialize()
