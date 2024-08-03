@@ -77,7 +77,7 @@
 	path = /obj/item/ammo_casing/a145
 	hidden = 1
 
-/datum/category_item/autolathe/arms/rifle_145
+/datum/category_item/autolathe/arms/rifle_145ap
 	name = "14.5mm round (sabot)"
 	path = /obj/item/ammo_casing/a145/highvel
 	hidden = 1
