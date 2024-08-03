@@ -290,6 +290,8 @@
 			belly_data["emote_time"] = B.emote_time
 			belly_data["shrink_grow_size"] = B.shrink_grow_size
 			belly_data["vorespawn_blacklist"] = B.vorespawn_blacklist
+			belly_data["vorespawn_whitelist"] = B.vorespawn_whitelist
+			belly_data["vorespawn_absorbed"] = B.vorespawn_absorbed
 			belly_data["egg_type"] = B.egg_type
 			belly_data["egg_name"] = B.egg_name
 			belly_data["egg_size"] = B.egg_size

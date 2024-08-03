@@ -282,6 +282,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"custom_ingested_color" = selected.custom_ingested_color,
 			"custom_ingested_alpha" = selected.custom_ingested_alpha,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
+			"vorespawn_whitelist" = selected.vorespawn_whitelist,
+			"vorespawn_absorbed" = selected.vorespawn_absorbed,
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
 			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
@@ -1147,6 +1149,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.vorespawn_blacklist = FALSE
 					if(new_vorespawn_blacklist == 1)
 						new_belly.vorespawn_blacklist = TRUE
+
+				if(islist(belly_data["vorespawn_whitelist"]))
+					var/new_vorespawn_whitelist = splittext(sanitize(lowertext(jointext(belly_data["vorespawn_whitelist"],"\n")),MAX_MESSAGE_LEN,0,0,0),"\n")
+					new_belly.vorespawn_whitelist = new_vorespawn_whitelist
+
+				if(istext(belly_data["vorespawn_absorbed"]))
+					var/new_vorespawn_absorbed = sanitize(belly_data["vorespawn_absorbed"],MAX_MESSAGE_LEN,0,0,0)
+					if(new_vorespawn_absorbed)
+						if(new_vorespawn_absorbed in list("Yes","No","Prey Choice"))
+							new_belly.vorespawn_absorbed = new_vorespawn_absorbed
 
 				if(istext(belly_data["egg_type"]))
 					var/new_egg_type = sanitize(belly_data["egg_type"],MAX_MESSAGE_LEN,0,0,0)
@@ -3847,6 +3859,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
+			. = TRUE
+		if("b_vorespawn_whitelist") //CHOMP Addition
+			var/new_vorespawn_whitelist = sanitize(tgui_input_text(user,"Input ckeys allowed to vorespawn on separate lines. Cancel will clear the list.","Allowed Players",jointext(host.vore_selected.vorespawn_whitelist,"\n"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+			if(new_vorespawn_whitelist)
+				host.vore_selected.vorespawn_whitelist = splittext(lowertext(new_vorespawn_whitelist),"\n")
+			else
+				host.vore_selected.vorespawn_whitelist = list()
+			. = TRUE
+		if("b_vorespawn_absorbed") //CHOMP Addition
+			var/new_vorespawn_absorbed = tgui_input_list(user, "Do you want prey who vorespawn this belly to start absorbed? Prey Choice lets the prey choose when spawning.","Absorbed Choice", list("Yes","No","Prey Choice"))
+			if(new_vorespawn_absorbed)
+				host.vore_selected.vorespawn_absorbed = new_vorespawn_absorbed
 			. = TRUE
 		if("b_belly_sprite_to_affect") //CHOMP Addition
 			var/belly_choice = tgui_input_list(user, "Which belly sprite do you want your [lowertext(host.vore_selected.name)] to affect?","Select Region", host.vore_icon_bellies) //ChompEDIT - user, not usr

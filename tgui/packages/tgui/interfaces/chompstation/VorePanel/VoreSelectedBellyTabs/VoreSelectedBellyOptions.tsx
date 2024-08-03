@@ -40,6 +40,8 @@ export const VoreSelectedBellyOptions = (props: {
     save_digest_mode,
     eating_privacy_local,
     vorespawn_blacklist,
+    vorespawn_whitelist,
+    vorespawn_absorbed,
     private_struggle,
     drainmode,
   } = belly;
@@ -256,6 +258,40 @@ export const VoreSelectedBellyOptions = (props: {
               {vorespawn_blacklist ? 'Yes' : 'No'}
             </Button>
           </LabeledList.Item>
+          {vorespawn_blacklist ? (
+            ''
+          ) : (
+            <>
+              <LabeledList.Item label="Vore Spawn Whitelist">
+                <Button
+                  onClick={() =>
+                    act('set_attribute', { attribute: 'b_vorespawn_whitelist' })
+                  }
+                  icon="pen"
+                >
+                  {vorespawn_whitelist.length
+                    ? vorespawn_whitelist.join(', ')
+                    : 'Anyone!'}
+                </Button>
+              </LabeledList.Item>
+              <LabeledList.Item label="Vore Spawn Absorbed">
+                <Button
+                  color={
+                    vorespawn_absorbed === 'No'
+                      ? undefined
+                      : vorespawn_absorbed === 'Yes'
+                        ? 'green'
+                        : 'orange'
+                  }
+                  onClick={() =>
+                    act('set_attribute', { attribute: 'b_vorespawn_absorbed' })
+                  }
+                >
+                  {vorespawn_absorbed}
+                </Button>
+              </LabeledList.Item>
+            </>
+          )}
           <LabeledList.Item label="Egg Type">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_egg_type' })}
