@@ -38,6 +38,7 @@
 		var/obj/item/projectile/P = new projectile_type_real(src.loc)
 		P.agony = round(P.damage * AMMO_RUBBER_AGONY_MULT) //In exchange for agony proportional to damage
 		P.damage = round(P.damage * AMMO_RUBBER_DAMAGE_MULT) //Severely reduced damage
+		P.sharp = FALSE //Rubber shot shouldnt bleed you
 		qdel(src)
 		return P.launch_from_gun(target, target_zone, user, params, angle_override, forced_spread, launcher)
 	if(ammo_flags & AMMO_FLAG_HUNTER)
