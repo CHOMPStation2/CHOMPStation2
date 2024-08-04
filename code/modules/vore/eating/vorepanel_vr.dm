@@ -283,7 +283,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"custom_ingested_alpha" = selected.custom_ingested_alpha,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
 			"vorespawn_whitelist" = selected.vorespawn_whitelist,
-			"vorespawn_absorbed" = selected.vorespawn_absorbed,
+			"vorespawn_absorbed" = (global_flag_check(selected.vorespawn_absorbed, VS_FLAG_ABSORB_YES) + global_flag_check(selected.vorespawn_absorbed, VS_FLAG_ABSORB_PREY)),
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
 			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
@@ -1155,8 +1155,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					new_belly.vorespawn_whitelist = new_vorespawn_whitelist
 
 				if(isnum(belly_data["vorespawn_absorbed"]))
-					var/new_vorespawn_absorbed = belly_data["vorespawn_absorbed"]
-					new_belly.vorespawn_absorbed = sanitize_integer(new_vorespawn_absorbed, 0, 2, initial(new_belly.vorespawn_absorbed))
+					var/new_vorespawn_absorbed = 0
+					var/updated_vorespawn_absorbed = belly_data["vorespawn_absorbed"]
+					if(updated_vorespawn_absorbed & VS_FLAG_ABSORB_YES)
+						new_vorespawn_absorbed |= VS_FLAG_ABSORB_YES
+					if(updated_vorespawn_absorbed & VS_FLAG_ABSORB_PREY)
+						new_vorespawn_absorbed |= VS_FLAG_ABSORB_YES
+						new_vorespawn_absorbed |= VS_FLAG_ABSORB_PREY
+					new_belly.vorespawn_absorbed = new_vorespawn_absorbed
 
 				if(istext(belly_data["egg_type"]))
 					var/new_egg_type = sanitize(belly_data["egg_type"],MAX_MESSAGE_LEN,0,0,0)
@@ -3866,11 +3872,17 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.vorespawn_whitelist = list()
 			. = TRUE
 		if("b_vorespawn_absorbed") //CHOMP Addition
-			var/list/menu_list = host.vore_selected.vorespawn_absorbed_flags_list.Copy()
-			var/new_vorespawn_absorbed = tgui_input_list(user, "Do you want prey who vorespawn this belly to start absorbed? Prey Choice lets the prey choose when spawning.","Absorbed Choice", menu_list)
-			if(new_vorespawn_absorbed)
-				host.vore_selected.vorespawn_absorbed = menu_list[new_vorespawn_absorbed]
-			. = TRUE
+			var/current_number = global_flag_check(host.vore_selected.vorespawn_absorbed, VS_FLAG_ABSORB_YES) + global_flag_check(host.vore_selected.vorespawn_absorbed, VS_FLAG_ABSORB_PREY)
+			switch(current_number)
+				if(0)
+					host.vore_selected.vorespawn_absorbed |= VS_FLAG_ABSORB_YES
+				if(1)
+					host.vore_selected.vorespawn_absorbed |= VS_FLAG_ABSORB_PREY
+				if(2)
+					host.vore_selected.vorespawn_absorbed &= ~(VS_FLAG_ABSORB_YES)
+					host.vore_selected.vorespawn_absorbed &= ~(VS_FLAG_ABSORB_PREY)
+			unsaved_changes = TRUE
+			return TRUE
 		if("b_belly_sprite_to_affect") //CHOMP Addition
 			var/belly_choice = tgui_input_list(user, "Which belly sprite do you want your [lowertext(host.vore_selected.name)] to affect?","Select Region", host.vore_icon_bellies) //ChompEDIT - user, not usr
 			if(!belly_choice) //They cancelled, no changes

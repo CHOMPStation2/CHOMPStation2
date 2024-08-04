@@ -1,4 +1,10 @@
 export const stats: (string | undefined)[] = [undefined, 'average', 'bad'];
+export const vorespawnAbsorbedText: string[] = ['No', 'Yes', 'Prey Choice'];
+export const vorespawnAbsorbedColor: (string | undefined)[] = [
+  undefined,
+  'green',
+  'orange',
+];
 
 export const digestModeToColor = {
   Default: undefined,

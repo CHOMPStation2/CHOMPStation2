@@ -57,7 +57,6 @@
 	var/vorespawn_blacklist = FALSE
 	var/vorespawn_whitelist = list()
 	var/vorespawn_absorbed = 0
-	var/tmp/static/list/vorespawn_absorbed_flags_list = list("No" = 0, "Yes" = VS_FLAG_ABSORB_YES, "Prey Choice" = VS_FLAG_ABSORB_CHOICE)
 
 	var/list/fullness1_messages = list(
 		"%pred's %belly looks empty"

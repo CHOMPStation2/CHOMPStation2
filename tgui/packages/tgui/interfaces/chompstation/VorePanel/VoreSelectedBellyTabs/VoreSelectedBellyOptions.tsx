@@ -2,6 +2,7 @@ import { capitalize } from 'common/string';
 
 import { useBackend } from '../../../../backend';
 import { Button, Flex, LabeledList } from '../../../../components';
+import { vorespawnAbsorbedColor, vorespawnAbsorbedText } from '../constants';
 import { hostMob, selectedData } from '../types';
 import { VoreSelectedMobTypeBellyButtons } from './VoreSelectedMobTypeBellyButtons';
 
@@ -276,22 +277,13 @@ export const VoreSelectedBellyOptions = (props: {
               </LabeledList.Item>
               <LabeledList.Item label="Vore Spawn Absorbed">
                 <Button
-                  color={
-                    vorespawn_absorbed === 0
-                      ? undefined
-                      : vorespawn_absorbed === 1
-                        ? 'green'
-                        : 'orange'
-                  }
+                  color={vorespawnAbsorbedColor[vorespawn_absorbed]}
+                  tooltip="Click to toggle between No, Yes and Prey's Choice."
                   onClick={() =>
                     act('set_attribute', { attribute: 'b_vorespawn_absorbed' })
                   }
                 >
-                  {vorespawn_absorbed === 0
-                    ? 'No'
-                    : vorespawn_absorbed === 1
-                      ? 'Yes'
-                      : 'Prey Choice'}
+                  {vorespawnAbsorbedText[vorespawn_absorbed]}
                 </Button>
               </LabeledList.Item>
             </>

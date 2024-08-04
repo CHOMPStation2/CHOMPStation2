@@ -43,4 +43,4 @@
 
 //Vorespawn flags
 #define VS_FLAG_ABSORB_YES		0x1
-#define VS_FLAG_ABSORB_CHOICE	0x2
+#define VS_FLAG_ABSORB_PREY		0x2

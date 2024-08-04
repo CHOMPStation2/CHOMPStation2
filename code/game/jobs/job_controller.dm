@@ -673,7 +673,7 @@ var/global/datum/controller/occupations/job_master
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
-	var/absorb_choice = 0 //CHOMPAdd - Ability to start absorbed with vorespawn
+	var/absorb_choice = FALSE //CHOMPAdd - Ability to start absorbed with vorespawn
 	var/mob/living/prey_to_nomph
 	var/obj/item/item_to_be //CHOMPEdit - Item TF spawning
 	var/mob/living/item_carrier //CHOMPEdit - Capture crystal spawning
@@ -721,13 +721,13 @@ var/global/datum/controller/occupations/job_master
 				if(!vore_spawn_gut)
 					return
 				//CHOMPAdd Start
-				if(vore_spawn_gut.vorespawn_absorbed == 1)
-					if(alert(C, "[pred]'s [vore_spawn_gut] will start with you absorbed. Continue?", "Confirm", "Yes", "No") != "Yes")
+				if(vore_spawn_gut.vorespawn_absorbed & VS_FLAG_ABSORB_YES)
+					absorb_choice = TRUE
+					if(vore_spawn_gut.vorespawn_absorbed & VS_FLAG_ABSORB_PREY)
+						if(alert(C, "Do you want to start absorbed into [pred]'s [vore_spawn_gut]?", "Confirm", "Yes", "No") != "Yes")
+							absorb_choice = FALSE
+					else if(alert(C, "[pred]'s [vore_spawn_gut] will start with you absorbed. Continue?", "Confirm", "Yes", "No") != "Yes")
 						return
-					absorb_choice = 1
-				if(vore_spawn_gut.vorespawn_absorbed == 2)
-					if(alert(C, "Do you want to start absorbed into [pred]'s [vore_spawn_gut]?", "Confirm", "Yes", "No") == "Yes")
-						absorb_choice = 1
 				//CHOMPAdd End
 				to_chat(C, "<b><span class='warning'>[pred] has received your spawn request. Please wait.</span></b>")
 				log_admin("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
@@ -810,7 +810,7 @@ var/global/datum/controller/occupations/job_master
 					return
 				//CHOMPAdd Start
 				if(alert(C, "Do you want to instantly absorb them?", "Confirm", "Yes", "No") == "Yes")
-					absorb_choice = 1
+					absorb_choice = TRUE
 				//CHOMPAdd End
 				to_chat(C, "<b><span class='warning'>[prey] has received your spawn request. Please wait.</span></b>")
 				log_admin("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
