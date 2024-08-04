@@ -4666,6 +4666,7 @@
 #include "maps\southern_cross\items\clothing\sc_accessory.dm"
 #include "maps\southern_cross\items\clothing\sc_suit.dm"
 #include "maps\southern_cross\items\clothing\sc_under.dm"
+<<<<<<< HEAD
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
 #include "maps\southern_cross\loadout\loadout_vr.dm"
@@ -4676,6 +4677,9 @@
 #include "maps\southern_cross\structures\closets\security.dm"
 #include "maps\southern_cross\submaps\virtual_reality\constructVR.dm"
 #include "maps\southern_cross\turfs\outdoors.dm"
+=======
+#include "maps\tether\tether.dm"
+>>>>>>> 3808a394d0... Merge pull request #16158 from VOREStation/Map-Swap-1
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
 #include "maps\~map_system\maps.dm"
