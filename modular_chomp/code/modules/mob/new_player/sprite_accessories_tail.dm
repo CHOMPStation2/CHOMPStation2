@@ -34,9 +34,9 @@
 
 /datum/sprite_accessory/tail/longtail/shadekin_tail/shadekin_tail_fat
 	name = "Shadekin Fat Tail"
-	icon = 'icons/mob/vore/tails_ch.dmi' //long tails in taurs for some reason
+	icon = 'icons/mob/vore/taurs_ch.dmi' //long tails in taurs for some reason
 	icon_state = "shadekin_fat_s"
 
-/datum/sprite_accessory/tail/longtail/shadekin_tail/shadekin_tail_fat_spot
+/datum/sprite_accessory/tail/longtail/shadekin_tail/shadekin_tail_fat/spots
 	name = "Shadekin Fat Tail (Spotted)"
 	extra_overlay = "shadekin_fat_spots"
