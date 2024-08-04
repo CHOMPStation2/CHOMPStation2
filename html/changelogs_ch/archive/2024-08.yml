@@ -13,3 +13,6 @@
   - qol: Added the ability to point at items in your inventory
   - code_imp: Added COMSIG_MOB_POINTED
   - refactor: Everything point related moved to the modular folder
+2024-08-04:
+  CHOMPStation2:
+  - rscadd: New wings, "Large speckled leather wings, tricolor"
