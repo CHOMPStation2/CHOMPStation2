@@ -82,7 +82,7 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "small"
-	matter = list(DEFAULT_WALL_MATERIAL = 800)
+	matter = list(MAT_STEEL = 800)
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/simple/small
 
@@ -122,7 +122,7 @@
 	max_ammo = 50
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(DEFAULT_WALL_MATERIAL = 1500)
+	matter = list(MAT_STEEL = 1500)
 	ammo_type = /obj/item/ammo_casing/simple/small
 
 /obj/item/ammo_magazine/smg_drum/empty
@@ -156,7 +156,7 @@
 	max_ammo = 30
 	mag_type = MAGAZINE
 	caliber = "medium"
-	matter = list(DEFAULT_WALL_MATERIAL = 1400)
+	matter = list(MAT_STEEL = 1400)
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
@@ -192,7 +192,7 @@
 	max_ammo = 20
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(DEFAULT_WALL_MATERIAL = 1800)
+	matter = list(MAT_STEEL = 1800)
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
 /obj/item/ammo_magazine/medium_small/empty
@@ -227,7 +227,7 @@
 	max_ammo = 50
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(DEFAULT_WALL_MATERIAL = 2500)
+	matter = list(MAT_STEEL = 2500)
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
 /obj/item/ammo_magazine/medium_drum/empty
@@ -258,7 +258,7 @@
 	caliber = "medium"
 	mag_type = MAGAZINE | SPEEDLOADER //Act as both, because the garand will use you like a magazine bb
 	multiple_sprites = 1
-	matter = list(DEFAULT_WALL_MATERIAL = 400)
+	matter = list(MAT_STEEL = 400)
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
 /obj/item/ammo_magazine/clip/medium/empty
@@ -294,7 +294,7 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(DEFAULT_WALL_MATERIAL = 8000)
+	matter = list(MAT_STEEL = 8000)
 	ammo_type = /obj/item/ammo_casing/simple/medium
 
 /obj/item/ammo_magazine/medium_box/empty
@@ -326,7 +326,7 @@
 	max_ammo = 7
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(DEFAULT_WALL_MATERIAL = 2400)
+	matter = list(MAT_STEEL = 2400)
 	ammo_type = /obj/item/ammo_casing/simple/large
 
 /obj/item/ammo_magazine/large/empty
@@ -354,7 +354,7 @@
 	max_ammo = 100
 	mag_type = MAGAZINE
 	multiple_sprites = 1
-	matter = list(DEFAULT_WALL_MATERIAL = 20000)
+	matter = list(MAT_STEEL = 20000)
 	ammo_type = /obj/item/ammo_casing/simple/large
 
 /obj/item/ammo_magazine/large_box/empty
