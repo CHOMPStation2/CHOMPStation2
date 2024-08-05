@@ -123,6 +123,8 @@ export type selectedData = {
   custom_ingested_color: string;
   custom_ingested_alpha: number;
   vorespawn_blacklist: BooleanLike;
+  vorespawn_whitelist: string[];
+  vorespawn_absorbed: number;
   sound_volume: number;
   affects_voresprite: BooleanLike;
   absorbed_voresprite: BooleanLike;

@@ -430,6 +430,8 @@
 	"fullness4_messages",
 	"fullness5_messages",
 	"vorespawn_blacklist",
+	"vorespawn_whitelist",
+	"vorespawn_absorbed",
 	"vore_sprite_flags",
 	"affects_vore_sprites",
 	"count_absorbed_prey_for_sprite",
@@ -2586,6 +2588,8 @@
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume
 	dupe.vorespawn_blacklist = vorespawn_blacklist
+	dupe.vorespawn_whitelist = vorespawn_whitelist
+	dupe.vorespawn_absorbed = vorespawn_absorbed
 	dupe.vore_sprite_flags = vore_sprite_flags
 	dupe.affects_vore_sprites = affects_vore_sprites
 	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
