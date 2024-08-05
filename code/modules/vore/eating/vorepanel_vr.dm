@@ -2214,10 +2214,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(1)
 					host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION_INSTANT
 				if(2)
-					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION)
-						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION
-					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT)
-						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION_INSTANT
+					host.soulcatcher_pref_flags &= ~(SOULCATCHER_ALLOW_DELETION)
+					host.soulcatcher_pref_flags &= ~(SOULCATCHER_ALLOW_DELETION_INSTANT)
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.soulcatcher_pref_flags = host.soulcatcher_pref_flags
 			unsaved_changes = TRUE
