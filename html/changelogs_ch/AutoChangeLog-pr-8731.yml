@@ -1,0 +1,5 @@
+author: "Fracshun"
+delete-after: True
+changes:
+  - rscadd: "Two new belly options for vorespawn. Whitelisting ckeys and whether the belly absorbs prey on spawn."
+  - rscadd: "Added a prompt for vorespawn preds to instantly absorb their chosen prey."
