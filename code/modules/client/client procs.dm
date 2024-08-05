@@ -634,7 +634,7 @@
 
 /client/verb/toggle_verb_panel()
 	set name = "Toggle Verbs"
-	set category = "OOC"
+	set category = "OOC.Client Settings" //CHOMPEdit
 
 	show_verb_panel = !show_verb_panel
 
