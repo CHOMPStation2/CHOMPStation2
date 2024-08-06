@@ -2142,11 +2142,7 @@
 #include "code\modules\client\preference_setup\loadout\gear_tweaks_vr.dm"
 #include "code\modules\client\preference_setup\loadout\loadout.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_accessories.dm"
-<<<<<<< HEAD
-#include "code\modules\client\preference_setup\loadout\loadout_accessories_vr.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_accessories_yw.dm"
-=======
->>>>>>> 721d27609f... Late Selectors Pass Addon (#16144)
 #include "code\modules\client\preference_setup\loadout\loadout_cosmetics.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_cosmetics_vr.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_cyberware.dm"
