@@ -1,0 +1,4 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscdel: "purged some tracks from the jukebox that were no longer playing because they relied on invalidated discord links"
