@@ -595,7 +595,7 @@
 		if("Living Mobs")
 			to_chat(usr, span("filter_debuglogs", jointext(living_mob_list,",")))
 		if("Dead Mobs")
-			to_chat(usr, span("filter_debuglogs", jointext(dead_mob_list,",")))
+			to_chat(usr, span("filter_debuglogs", jointext(GLOB.dead_mob_list,","))) // CHOMPEdit - Globals
 		if("Clients")
 			to_chat(usr, span("filter_debuglogs", jointext(GLOB.clients,",")))
 

@@ -140,8 +140,8 @@
 	if(!istype(H))
 		return 0
 
-	dead_mob_list.Remove(H)
-	if((H in living_mob_list) || (H in dead_mob_list))
+	GLOB.dead_mob_list.Remove(H) // CHOMPEdit - Globals
+	if((H in living_mob_list) || (H in GLOB.dead_mob_list)) // CHOMPEdit - Globals
 		WARNING("Mob [H] was ring-defibbed but already in the living or dead list still!")
 	living_mob_list += H
 

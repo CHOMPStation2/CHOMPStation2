@@ -96,7 +96,7 @@
 			var/foundVirus = 0
 
 			for (var/ID in patient.virus2)
-				if (ID in virusDB)
+				if (ID in GLOB.virusDB) // CHOMPEdit - Globals
 					foundVirus = 1
 					break
 

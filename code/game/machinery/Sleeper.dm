@@ -308,7 +308,7 @@
 			if(!occupant)
 				return
 			if(occupant.stat == DEAD)
-				var/datum/gender/G = gender_datums[occupant.get_visible_gender()]
+				var/datum/gender/G = GLOB.gender_datums[occupant.get_visible_gender()] // CHOMPEdit - Globals
 				to_chat(usr, "<span class='danger'>This person has no life to preserve anymore. Take [G.him] to a department capable of reanimating [G.him].</span>")
 				return
 			var/chemical = params["chemid"]

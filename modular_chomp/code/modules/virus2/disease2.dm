@@ -43,8 +43,8 @@
 		else
 			infectionchance = rand(60,90)
 
-	antigen = list(pick(ALL_ANTIGENS))
-	antigen |= pick(ALL_ANTIGENS)
+	antigen = list(pick(GLOB.ALL_ANTIGENS)) // CHOMPEdit - Globals
+	antigen |= pick(GLOB.ALL_ANTIGENS) // CHOMPEdit - Globals
 	spreadtype = prob(70) ? "Airborne" : "Contact"
 	resistance = rand(15,70)
 

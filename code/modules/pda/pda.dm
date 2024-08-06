@@ -1,7 +1,7 @@
 
 //The advanced pea-green monochrome lcd of tomorrow.
 
-var/global/list/obj/item/device/pda/PDAs = list()
+GLOBAL_LIST_EMPTY_TYPED(PDAs, /obj/item/device/pda) // CHOMPEdit - Globals
 
 /obj/item/device/pda
 	name = "\improper PDA"
@@ -129,8 +129,8 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda/New(var/mob/living/carbon/human/H)
 	..()
-	PDAs += src
-	PDAs = sortAtom(PDAs)
+	GLOB.PDAs += src // CHOMPEdit - Globals
+	GLOB.PDAs = sortAtom(GLOB.PDAs) // CHOMPEdit - Globals
 	update_programs()
 	if(default_cartridge)
 		cartridge = new default_cartridge(src)
@@ -496,7 +496,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	return
 
 /obj/item/device/pda/Destroy()
-	PDAs -= src
+	GLOB.PDAs -= src // CHOMPEdit - Globals
 	if (src.id && !delete_id && src.id.loc == src) //CHOMPEdit
 		src.id.forceMove(get_turf(src.loc))
 	else

@@ -1,4 +1,4 @@
-var/global/last_fax_role_request
+GLOBAL_VAR(last_fax_role_request) // CHOMPEdit - Globals
 
 /obj/machinery/photocopier/faxmachine
 	req_one_access = list()
@@ -133,7 +133,7 @@ var/global/last_fax_role_request
 		return
 	if(L.stat || L.restrained())
 		return
-	if(last_fax_role_request && (world.time - last_fax_role_request < 5 MINUTES))
+	if(GLOB.last_fax_role_request && (world.time - GLOB.last_fax_role_request < 5 MINUTES)) // CHOMPEdit - Globals
 		to_chat(L, "<span class='warning'>The global automated relays are still recalibrating. Try again later or relay your request in written form for processing.</span>")
 		return
 
@@ -197,5 +197,5 @@ var/global/last_fax_role_request
 	message_color = ping_dept.color
 
 	message_chat_rolerequest(message_color, ping_name, reason, role)
-	last_fax_role_request = world.time
+	GLOB.last_fax_role_request = world.time // CHOMPEdit - Globals
 	to_chat(L, "<span class='notice'>Your request was transmitted.</span>")

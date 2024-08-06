@@ -1,6 +1,6 @@
 /mob/Destroy()//This makes sure that mobs withGLOB.clients/keys are not just deleted from the game.
 	mob_list -= src
-	dead_mob_list -= src
+	GLOB.dead_mob_list -= src // CHOMPEdit - Globals
 	living_mob_list -= src
 	player_list -= src
 	unset_machine()
@@ -56,7 +56,7 @@
 /mob/Initialize()
 	mob_list += src
 	if(stat == DEAD)
-		dead_mob_list += src
+		GLOB.dead_mob_list += src // CHOMPEdit - Globals
 	else
 		living_mob_list += src
 	lastarea = get_area(src)
@@ -496,7 +496,7 @@
 	targets += observe_list_format(nuke_disks)
 	targets += observe_list_format(GLOB.all_singularities) //CHOMP Edit
 	targets += getmobs()
-	targets += observe_list_format(sortAtom(mechas_list))
+	targets += observe_list_format(sortAtom(GLOB.mechas_list)) // CHOMPEdit - Globals
 	targets += observe_list_format(SSshuttles.ships)
 
 	client.perspective = EYE_PERSPECTIVE

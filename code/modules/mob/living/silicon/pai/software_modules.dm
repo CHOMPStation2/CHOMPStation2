@@ -70,7 +70,7 @@
 			count++
 
 		// Check the carrier
-		var/datum/gender/TM = gender_datums[M.get_visible_gender()]
+		var/datum/gender/TM = GLOB.gender_datums[M.get_visible_gender()] // CHOMPEdit - Globals
 		var/answer = tgui_alert(M, "[P] is requesting a DNA sample from you. Will you allow it to confirm your identity?", "[P] Check DNA", list("Yes", "No"))
 		if(answer == "Yes")
 			var/turf/T = get_turf(P.loc)

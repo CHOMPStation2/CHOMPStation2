@@ -35,8 +35,8 @@
 		else
 			infectionchance = rand(60,90)
 
-	antigen = list(pick(ALL_ANTIGENS))
-	antigen |= pick(ALL_ANTIGENS)
+	antigen = list(pick(GLOB.ALL_ANTIGENS)) // CHOMPEdit - Globals
+	antigen |= pick(GLOB.ALL_ANTIGENS) // CHOMPEdit - Globals
 	spreadtype = prob(70) ? "Airborne" : "Contact"
 	resistance = rand(15,70)
 
@@ -158,8 +158,8 @@
 			exclude += D.effect.type
 	holder.majormutate(exclude)
 	if (prob(5) && prob(100-resistance)) // The more resistant the disease,the lower the chance of randomly developing the antibodies
-		antigen = list(pick(ALL_ANTIGENS))
-		antigen |= pick(ALL_ANTIGENS)
+		antigen = list(pick(GLOB.ALL_ANTIGENS)) // CHOMPEdit - Globals
+		antigen |= pick(GLOB.ALL_ANTIGENS) // CHOMPEdit - Globals
 	if (prob(5) && GLOB.all_species.len)
 		affected_species = get_infectable_species()
 	if (prob(10))
@@ -215,15 +215,15 @@
 	return res
 
 
-var/global/list/virusDB = list()
+GLOBAL_LIST_EMPTY(virusDB) // CHOMPEdit - Globals
 
 /datum/disease2/disease/proc/name()
 	if(name) // CHOMPEdit - Lets use our name
 		.= "[name]"
 	else // CHOMPEdit - ...unless we're an undiscovered disease.
 		.= "stamm #[add_zero("[uniqueID]", 4)]"
-	if ("[uniqueID]" in virusDB)
-		var/datum/data/record/V = virusDB["[uniqueID]"]
+	if ("[uniqueID]" in GLOB.virusDB) // CHOMPEdit - Globals
+		var/datum/data/record/V = GLOB.virusDB["[uniqueID]"] // CHOMPEdit - Globals
 		.= V.fields["name"]
 
 /datum/disease2/disease/proc/get_basic_info()
@@ -273,7 +273,7 @@ var/global/list/virusDB = list()
 	.["symptoms"] = symptoms
 
 /datum/disease2/disease/proc/addToDB()
-	if ("[uniqueID]" in virusDB)
+	if ("[uniqueID]" in GLOB.virusDB) // CHOMPEdit - Globals
 		return 0
 	var/datum/data/record/v = new()
 	v.fields["id"] = uniqueID
@@ -283,7 +283,7 @@ var/global/list/virusDB = list()
 	v.fields["tgui_description"]["record"] = "\ref[v]"
 	v.fields["antigen"] = antigens2string(antigen)
 	v.fields["spread type"] = spreadtype
-	virusDB["[uniqueID]"] = v
+	GLOB.virusDB["[uniqueID]"] = v // CHOMPEdit - Globals
 	return 1
 
 /proc/virus2_lesser_infection()

@@ -393,7 +393,7 @@
 						answer = text2num(answer)
 
 					if(field == "rank")
-						if(answer in joblist)
+						if(answer in GLOB.joblist) // CHOMPEdit - Globals
 							active1.fields["real_rank"] = answer
 
 					if(field == "criminal")

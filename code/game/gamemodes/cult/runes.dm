@@ -17,7 +17,7 @@ var/list/sacrificed = list()
 	var/allrunesloc[]
 	allrunesloc = new/list()
 	var/index = 0
-	for(var/obj/effect/rune/R in rune_list)
+	for(var/obj/effect/rune/R in GLOB.rune_list) // CHOMPEdit - Globals
 		if(R == src)
 			continue
 		if(R.word1 == cultwords["travel"] && R.word2 == cultwords["self"] && R.word3 == key && isPlayerLevel(R.z))
@@ -51,7 +51,7 @@ var/list/sacrificed = list()
 	var/runecount = 0
 	var/obj/effect/rune/IP = null
 	var/mob/living/user = usr
-	for(var/obj/effect/rune/R in rune_list)
+	for(var/obj/effect/rune/R in GLOB.rune_list) // CHOMPEdit - Globals
 		if(R == src)
 			continue
 		if(R.word1 == cultwords["travel"] && R.word2 == cultwords["other"] && R.word3 == key)
@@ -160,7 +160,7 @@ var/list/sacrificed = list()
 		if (!target.can_feel_pain())
 			target.visible_message("<span class='warning'>The markings below \the [target] glow a bloody red.</span>")
 		else
-			var/datum/gender/TT = gender_datums[target.get_visible_gender()]
+			var/datum/gender/TT = GLOB.gender_datums[target.get_visible_gender()] // CHOMPEdit - Globals
 			target.visible_message("<span class='warning'>[target] writhes in pain as the markings below [TT.him] glow a bloody red.</span>", "<span class='danger'>AAAAAAHHHH!</span>", "<span class='warning'>You hear an anguished scream.</span>")
 
 		if(!waiting_for_input[target]) //so we don't spam them with dialogs if they hesitate
@@ -234,7 +234,7 @@ var/list/sacrificed = list()
 
 /obj/effect/rune/proc/drain()
 	var/drain = 0
-	for(var/obj/effect/rune/R in rune_list)
+	for(var/obj/effect/rune/R in GLOB.rune_list) // CHOMPEdit - Globals
 		if(R.word1==cultwords["travel"] && R.word2==cultwords["blood"] && R.word3==cultwords["self"])
 			for(var/mob/living/carbon/D in R.loc)
 				if(D.stat!=2)
@@ -334,7 +334,7 @@ var/list/sacrificed = list()
 
 	is_sacrifice_target = 0
 	find_sacrifice:
-		for(var/obj/effect/rune/R in rune_list)
+		for(var/obj/effect/rune/R in GLOB.rune_list) // CHOMPEdit - Globals
 			if(R.word1==cultwords["blood"] && R.word2==cultwords["join"] && R.word3==cultwords["hell"])
 				for(var/mob/living/carbon/human/N in R.loc)
 					if(cult && N.mind && N.mind == cult.sacrifice_target)
@@ -366,8 +366,8 @@ var/list/sacrificed = list()
 
 	if(corpse_to_raise.client)
 
-		var/datum/gender/TU = gender_datums[corpse_to_raise.get_visible_gender()]
-		var/datum/gender/TT = gender_datums[body_to_sacrifice.get_visible_gender()]
+		var/datum/gender/TU = GLOB.gender_datums[corpse_to_raise.get_visible_gender()] // CHOMPEdit - Globals
+		var/datum/gender/TT = GLOB.gender_datums[body_to_sacrifice.get_visible_gender()] // CHOMPEdit - Globals
 
 		cult.add_antagonist(corpse_to_raise.mind)
 		corpse_to_raise.revive()
@@ -423,7 +423,7 @@ var/list/sacrificed = list()
 /obj/effect/rune/proc/ajourney() //some bits copypastaed from admin tools - Urist
 	if(usr.loc==src.loc)
 		var/mob/living/carbon/human/L = usr
-		var/datum/gender/TU = gender_datums[L.get_visible_gender()]
+		var/datum/gender/TU = GLOB.gender_datums[L.get_visible_gender()] // CHOMPEdit - Globals
 		usr.say("Fwe[pick("'","`")]sh mah erl nyag r'ya!")
 		usr.visible_message("<span class='warning'>[usr]'s eyes glow blue as [TU.he] freeze[TU.s] in place, absolutely motionless.</span>", \
 		"<span class='warning'>The shadow that is your spirit separates itself from your body. You are now in the realm beyond. While this is a great sight, being here strains your mind and body. Hurry...</span>", \
@@ -590,7 +590,7 @@ var/list/sacrificed = list()
 
 /obj/effect/rune/proc/mend()
 	var/mob/living/user = usr
-	var/datum/gender/TU = gender_datums[usr.get_visible_gender()]
+	var/datum/gender/TU = GLOB.gender_datums[usr.get_visible_gender()] // CHOMPEdit - Globals
 	src = null
 	user.say("Uhrast ka'hfa heldsagen ver[pick("'","`")]lot!")
 	user.take_overall_damage(200, 0)
@@ -878,7 +878,7 @@ var/list/sacrificed = list()
 		if (cultist == user) //just to be sure.
 			return
 		if(cultist.buckled || cultist.handcuffed || (!isturf(cultist.loc) && !istype(cultist.loc, /obj/structure/closet)))
-			var/datum/gender/TU = gender_datums[cultist.get_visible_gender()]
+			var/datum/gender/TU = GLOB.gender_datums[cultist.get_visible_gender()] // CHOMPEdit - Globals
 			to_chat(user, "<span class='warning'>You cannot summon \the [cultist], for [TU.his] shackles of blood are strong.</span>")
 			return fizzle()
 		cultist.loc = src.loc
@@ -1037,7 +1037,7 @@ var/list/sacrificed = list()
 		if(iscultist(C) && !C.stat)
 			culcount++
 	if(culcount >= 5)
-		for(var/obj/effect/rune/R in rune_list)
+		for(var/obj/effect/rune/R in GLOB.rune_list) // CHOMPEdit - Globals
 			if(R.blood_DNA == src.blood_DNA)
 				for(var/mob/living/M in orange(2,R))
 					M.take_overall_damage(0,15)

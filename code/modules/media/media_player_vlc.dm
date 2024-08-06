@@ -1,6 +1,7 @@
 // Open up VLC and play musique.
 // Converted to VLC for cross-platform and ogg support. - N3X
-var/const/PLAYER_VLC_HTML={"
+// CHOMPEdit - Globals
+GLOBAL_VAR_INIT(PLAYER_VLC_HTML, {"
 <object classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab" id="player"></object>
 	<script>
 function noErrorMessages () { return true; }
@@ -24,4 +25,4 @@ function SetMusic(url, time, volume) {
 	vlc.audio.volume = volume*100; // \[0-200]
 }
 	</script>
-"}
+"})

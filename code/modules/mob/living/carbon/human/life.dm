@@ -1997,29 +1997,29 @@
 
 	if(Pump)
 		for(var/datum/reagent/R in reagents.reagent_list)
-			if(R.id in bradycardics)
+			if(R.id in GLOB.bradycardics) // CHOMPEdit - Globals
 				if(temp <= Pump.standard_pulse_level + 3 && temp >= Pump.standard_pulse_level)
 					temp--
-			if(R.id in tachycardics)
+			if(R.id in GLOB.tachycardics) // CHOMPEdit - Globals
 				if(temp <= Pump.standard_pulse_level + 1 && temp >= PULSE_NONE)
 					temp++
-			if(R.id in heartstopper) //To avoid using fakedeath
+			if(R.id in GLOB.heartstopper) //To avoid using fakedeath // CHOMPEdit - Globals
 				temp = PULSE_NONE
-			if(R.id in cheartstopper) //Conditional heart-stoppage
+			if(R.id in GLOB.cheartstopper) //Conditional heart-stoppage // CHOMPEdit - Globals
 				if(R.volume >= R.overdose)
 					temp = PULSE_NONE
 		return temp * brain_modifier
 	//handles different chems' influence on pulse
 	for(var/datum/reagent/R in reagents.reagent_list)
-		if(R.id in bradycardics)
+		if(R.id in GLOB.bradycardics) // CHOMPEdit - Globals
 			if(temp <= PULSE_THREADY && temp >= PULSE_NORM)
 				temp--
-		if(R.id in tachycardics)
+		if(R.id in GLOB.tachycardics) // CHOMPEdit - Globals
 			if(temp <= PULSE_FAST && temp >= PULSE_NONE)
 				temp++
-		if(R.id in heartstopper) //To avoid using fakedeath
+		if(R.id in GLOB.heartstopper) //To avoid using fakedeath // CHOMPEdit - Globals
 			temp = PULSE_NONE
-		if(R.id in cheartstopper) //Conditional heart-stoppage
+		if(R.id in GLOB.cheartstopper) //Conditional heart-stoppage // CHOMPEdit - Globals
 			if(R.volume >= R.overdose)
 				temp = PULSE_NONE
 
@@ -2077,7 +2077,7 @@
 	if (BITTEST(hud_updateflag, STATUS_HUD))
 		var/foundVirus = 0
 		for (var/ID in virus2)
-			if (ID in virusDB)
+			if (ID in GLOB.virusDB) // CHOMPEdit - Globals
 				foundVirus = 1
 				break
 

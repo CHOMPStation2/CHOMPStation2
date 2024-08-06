@@ -8,14 +8,14 @@
 	. = ..()
 	mob_list -= src
 	living_mob_list -= src
-	dead_mob_list -= src
-	human_mob_list -= src
+	GLOB.dead_mob_list -= src // CHOMPEdit - Globals
+	GLOB.human_mob_list -= src // CHOMPEdit - Globals
 
 /mob/living/carbon/human/dummy/Life()
 	mob_list -= src
 	living_mob_list -= src
-	dead_mob_list -= src
-	human_mob_list -= src
+	GLOB.dead_mob_list -= src // CHOMPEdit - Globals
+	GLOB.human_mob_list -= src // CHOMPEdit - Globals
 	return
 
 /mob/living/carbon/human/dummy/mannequin/Initialize()

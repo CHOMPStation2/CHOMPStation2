@@ -81,7 +81,7 @@
 					adjustBruteLoss(-MED.heal_brute)
 					visible_message("<b>\The [user]</b> applies the [MED] on [src].")
 		else
-			var/datum/gender/T = gender_datums[src.get_visible_gender()]
+			var/datum/gender/T = GLOB.gender_datums[src.get_visible_gender()] // CHOMPEdit - Globals
 			to_chat(user, "<span class='notice'>\The [src] is dead, medical items won't bring [T.him] back to life.</span>") // the gender lookup is somewhat overkill, but it functions identically to the obsolete gender macros and future-proofs this code
 	if(can_butcher(user, O))	//if the animal can be butchered, do so and return. It's likely to be gibbed.
 		harvest(user, O)
@@ -315,4 +315,3 @@
 	if(ignore_thickness)
 		return TRUE
 	return !thick_armor
-

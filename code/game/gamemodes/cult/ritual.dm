@@ -72,7 +72,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 	for(var/mob/living/silicon/ai/AI in player_list)
 		if(AI.client)
 			AI.client.images += blood_image
-	rune_list.Add(src)
+	GLOB.rune_list.Add(src) // CHOMPEdit - Globals
 
 /obj/effect/rune/Destroy()
 	for(var/mob/living/silicon/ai/AI in player_list)
@@ -80,7 +80,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 			AI.client.images -= blood_image
 	qdel(blood_image)
 	blood_image = null
-	rune_list.Remove(src)
+	GLOB.rune_list.Remove(src) // CHOMPEdit - Globals
 	..()
 
 /obj/effect/rune/examine(mob/user)
@@ -323,7 +323,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 		runerandom()
 	if(iscultist(user))
 		var/C = 0
-		for(var/obj/effect/rune/N in rune_list)
+		for(var/obj/effect/rune/N in GLOB.rune_list) // CHOMPEdit - Globals
 			C++
 		if (!istype(user.loc,/turf))
 			to_chat(user, "<span class='warning'>You do not have enough space to write a proper rune.</span>")

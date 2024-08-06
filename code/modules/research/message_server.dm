@@ -1,7 +1,7 @@
 #define MESSAGE_SERVER_SPAM_REJECT 1
 #define MESSAGE_SERVER_DEFAULT_SPAM_LIMIT 10
 
-var/global/list/obj/machinery/message_server/message_servers = list()
+GLOBAL_LIST_EMPTY_TYPED(message_servers, /obj/machinery/message_server) // CHOMPEdit - Globals
 
 /datum/data_pda_msg
 	var/recipient = "Unspecified" //name of the person
@@ -74,7 +74,7 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 	var/noisy = FALSE  // CHOMPStation Add: Hummy noises
 
 /obj/machinery/message_server/New()
-	message_servers += src
+	GLOB.message_servers += src // CHOMPEdit - Globals
 	decryptkey = GenerateKey()
 	send_pda_message("System Administrator", "system", "This is an automated message. The messaging system is functioning correctly.")
 
@@ -95,7 +95,7 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 	return
 
 /obj/machinery/message_server/Destroy()
-	message_servers -= src
+	GLOB.message_servers -= src // CHOMPEdit - Globals
 	QDEL_NULL(soundloop) // CHOMPStation Add: Hummy noises
 	..()
 	return

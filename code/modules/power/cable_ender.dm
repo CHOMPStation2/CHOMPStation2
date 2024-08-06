@@ -17,7 +17,7 @@
 /obj/structure/cable/ender/get_connections(var/powernetless_only = 0)
 	. = ..() // Do the normal stuff
 	if(id)
-		for(var/obj/structure/cable/ender/target in cable_list)
+		for(var/obj/structure/cable/ender/target in GLOB.cable_list) // CHOMPEdit - Globals
 			if(target.id == id)
 				if (!powernetless_only || !target.powernet)
 					. |= target
@@ -36,4 +36,3 @@
 // Because they cannot be rebuilt, they are hard to destroy
 /obj/structure/cable/ender/ex_act(severity)
 	return
-

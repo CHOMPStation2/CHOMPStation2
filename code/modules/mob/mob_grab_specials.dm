@@ -90,7 +90,7 @@
 		return
 	if(target.lying)
 		return
-	var/datum/gender/T = gender_datums[attacker.get_visible_gender()]
+	var/datum/gender/T = GLOB.gender_datums[attacker.get_visible_gender()] // CHOMPEdit - Globals
 	attacker.visible_message("<span class='danger'>[attacker] thrusts [T.his] head into [target]'s skull!</span>")
 
 	var/damage = 20

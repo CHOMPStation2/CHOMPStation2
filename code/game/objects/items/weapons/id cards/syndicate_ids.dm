@@ -11,7 +11,7 @@
 /obj/item/weapon/card/id/syndicate/Initialize()
 	. = ..()
 	agentcard_module = new(src)
-	access = syndicate_access.Copy()
+	access = GLOB.syndicate_access.Copy() // CHOMPEdit - Globals
 
 /obj/item/weapon/card/id/syndicate/station_access/Initialize()
 	. = ..() // Same as the normal Syndicate id, only already has all station access

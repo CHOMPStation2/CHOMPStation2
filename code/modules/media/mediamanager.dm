@@ -126,11 +126,11 @@
 		volume = owner.prefs.media_volume
 	switch(owner.prefs.media_player)
 		if(0)
-			playerstyle = PLAYER_VLC_HTML
+			playerstyle = GLOB.PLAYER_VLC_HTML // CHOMPEdit - Globals
 		if(1)
-			playerstyle = PLAYER_WMP_HTML
+			playerstyle = GLOB.PLAYER_WMP_HTML // CHOMPEdit - Globals
 		if(2)
-			playerstyle = PLAYER_HTML5_HTML
+			playerstyle = GLOB.PLAYER_HTML5_HTML // CHOMPEdit - Globals
 	owner << browse(null, "window=[WINDOW_ID]")
 	owner << browse(playerstyle, "window=[WINDOW_ID]")
 	send_update()
