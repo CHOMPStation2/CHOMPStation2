@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 /datum/gear/shoes/boots/winter/medical
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic") //CHOMP keep explo
 
-=======
->>>>>>> 721d27609f... Late Selectors Pass Addon (#16144)
 /datum/gear/shoes/black/cuffs
 	display_name = "legwraps, black"
 	path = /obj/item/clothing/shoes/black/cuffs
