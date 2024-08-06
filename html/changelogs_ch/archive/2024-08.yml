@@ -16,3 +16,14 @@
 2024-08-04:
   CHOMPStation2:
   - rscadd: New wings, "Large speckled leather wings, tricolor"
+2024-08-06:
+  CHOMPStation2:
+  - qol: most ships start as known, except for wrecks and the mercenary manta
+  Fracshun:
+  - rscadd: Two new belly options for vorespawn. Whitelisting ckeys and whether the
+      belly absorbs prey on spawn.
+  - rscadd: Added a prompt for vorespawn preds to instantly absorb their chosen prey.
+  Kashargul:
+  - bugfix: showing borg name on the fax instead of just 1
+  tacoguy7765093:
+  - rscadd: Adds a new shadekin tail, Shadekin Fat Tail
