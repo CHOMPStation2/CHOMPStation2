@@ -2,6 +2,7 @@ import { capitalize } from 'common/string';
 
 import { useBackend } from '../../../../backend';
 import { Button, Flex, LabeledList } from '../../../../components';
+import { vorespawnAbsorbedColor, vorespawnAbsorbedText } from '../constants';
 import { hostMob, selectedData } from '../types';
 import { VoreSelectedMobTypeBellyButtons } from './VoreSelectedMobTypeBellyButtons';
 
@@ -40,6 +41,8 @@ export const VoreSelectedBellyOptions = (props: {
     save_digest_mode,
     eating_privacy_local,
     vorespawn_blacklist,
+    vorespawn_whitelist,
+    vorespawn_absorbed,
     private_struggle,
     drainmode,
   } = belly;
@@ -256,6 +259,35 @@ export const VoreSelectedBellyOptions = (props: {
               {vorespawn_blacklist ? 'Yes' : 'No'}
             </Button>
           </LabeledList.Item>
+          {vorespawn_blacklist ? (
+            ''
+          ) : (
+            <>
+              <LabeledList.Item label="Vore Spawn Whitelist">
+                <Button
+                  onClick={() =>
+                    act('set_attribute', { attribute: 'b_vorespawn_whitelist' })
+                  }
+                  icon="pen"
+                >
+                  {vorespawn_whitelist.length
+                    ? vorespawn_whitelist.join(', ')
+                    : 'Anyone!'}
+                </Button>
+              </LabeledList.Item>
+              <LabeledList.Item label="Vore Spawn Absorbed">
+                <Button
+                  color={vorespawnAbsorbedColor[vorespawn_absorbed]}
+                  tooltip="Click to toggle between No, Yes and Prey's Choice."
+                  onClick={() =>
+                    act('set_attribute', { attribute: 'b_vorespawn_absorbed' })
+                  }
+                >
+                  {vorespawnAbsorbedText[vorespawn_absorbed]}
+                </Button>
+              </LabeledList.Item>
+            </>
+          )}
           <LabeledList.Item label="Egg Type">
             <Button
               onClick={() => act('set_attribute', { attribute: 'b_egg_type' })}

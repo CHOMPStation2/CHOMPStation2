@@ -40,3 +40,7 @@
 #define AT_FLAG_ORES			0x40
 #define AT_FLAG_CLOTHES			0x80
 #define AT_FLAG_FOOD			0x100
+
+//Vorespawn flags
+#define VS_FLAG_ABSORB_YES		0x1
+#define VS_FLAG_ABSORB_PREY		0x2

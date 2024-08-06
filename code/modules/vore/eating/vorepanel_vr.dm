@@ -282,6 +282,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"custom_ingested_color" = selected.custom_ingested_color,
 			"custom_ingested_alpha" = selected.custom_ingested_alpha,
 			"vorespawn_blacklist" = selected.vorespawn_blacklist,
+			"vorespawn_whitelist" = selected.vorespawn_whitelist,
+			"vorespawn_absorbed" = (global_flag_check(selected.vorespawn_absorbed, VS_FLAG_ABSORB_YES) + global_flag_check(selected.vorespawn_absorbed, VS_FLAG_ABSORB_PREY)),
 			"sound_volume" = selected.sound_volume,
 			"affects_voresprite" = selected.affects_vore_sprites,
 			"absorbed_voresprite" = selected.count_absorbed_prey_for_sprite,
@@ -1147,6 +1149,20 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.vorespawn_blacklist = FALSE
 					if(new_vorespawn_blacklist == 1)
 						new_belly.vorespawn_blacklist = TRUE
+
+				if(islist(belly_data["vorespawn_whitelist"]))
+					var/new_vorespawn_whitelist = splittext(sanitize(lowertext(jointext(belly_data["vorespawn_whitelist"],"\n")),MAX_MESSAGE_LEN,0,0,0),"\n")
+					new_belly.vorespawn_whitelist = new_vorespawn_whitelist
+
+				if(isnum(belly_data["vorespawn_absorbed"]))
+					var/new_vorespawn_absorbed = 0
+					var/updated_vorespawn_absorbed = belly_data["vorespawn_absorbed"]
+					if(updated_vorespawn_absorbed & VS_FLAG_ABSORB_YES)
+						new_vorespawn_absorbed |= VS_FLAG_ABSORB_YES
+					if(updated_vorespawn_absorbed & VS_FLAG_ABSORB_PREY)
+						new_vorespawn_absorbed |= VS_FLAG_ABSORB_YES
+						new_vorespawn_absorbed |= VS_FLAG_ABSORB_PREY
+					new_belly.vorespawn_absorbed = new_vorespawn_absorbed
 
 				if(istext(belly_data["egg_type"]))
 					var/new_egg_type = sanitize(belly_data["egg_type"],MAX_MESSAGE_LEN,0,0,0)
@@ -2198,10 +2214,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(1)
 					host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION_INSTANT
 				if(2)
-					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION)
-						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION
-					if(host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_DELETION_INSTANT)
-						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION_INSTANT
+					host.soulcatcher_pref_flags &= ~(SOULCATCHER_ALLOW_DELETION)
+					host.soulcatcher_pref_flags &= ~(SOULCATCHER_ALLOW_DELETION_INSTANT)
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.soulcatcher_pref_flags = host.soulcatcher_pref_flags
 			unsaved_changes = TRUE
@@ -3848,6 +3862,25 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_vorespawn_blacklist") //CHOMP Addition
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
 			. = TRUE
+		if("b_vorespawn_whitelist") //CHOMP Addition
+			var/new_vorespawn_whitelist = sanitize(tgui_input_text(user,"Input ckeys allowed to vorespawn on separate lines. Cancel will clear the list.","Allowed Players",jointext(host.vore_selected.vorespawn_whitelist,"\n"), multiline = TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN,0,0,0)
+			if(new_vorespawn_whitelist)
+				host.vore_selected.vorespawn_whitelist = splittext(lowertext(new_vorespawn_whitelist),"\n")
+			else
+				host.vore_selected.vorespawn_whitelist = list()
+			. = TRUE
+		if("b_vorespawn_absorbed") //CHOMP Addition
+			var/current_number = global_flag_check(host.vore_selected.vorespawn_absorbed, VS_FLAG_ABSORB_YES) + global_flag_check(host.vore_selected.vorespawn_absorbed, VS_FLAG_ABSORB_PREY)
+			switch(current_number)
+				if(0)
+					host.vore_selected.vorespawn_absorbed |= VS_FLAG_ABSORB_YES
+				if(1)
+					host.vore_selected.vorespawn_absorbed |= VS_FLAG_ABSORB_PREY
+				if(2)
+					host.vore_selected.vorespawn_absorbed &= ~(VS_FLAG_ABSORB_YES)
+					host.vore_selected.vorespawn_absorbed &= ~(VS_FLAG_ABSORB_PREY)
+			unsaved_changes = TRUE
+			return TRUE
 		if("b_belly_sprite_to_affect") //CHOMP Addition
 			var/belly_choice = tgui_input_list(user, "Which belly sprite do you want your [lowertext(host.vore_selected.name)] to affect?","Select Region", host.vore_icon_bellies) //ChompEDIT - user, not usr
 			if(!belly_choice) //They cancelled, no changes

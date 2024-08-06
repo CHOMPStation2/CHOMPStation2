@@ -632,6 +632,16 @@
 		winset(usr, "mainwindow", "is-maximized=false")
 		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport") // The attempt_auto_fit_viewport() proc is not implemented yet
 
+/*CHOMPRemove Start, we use TGPanel
+/client/verb/toggle_verb_panel()
+	set name = "Toggle Verbs"
+	set category = "OOC.Client Settings" //CHOMPEdit
+
+	show_verb_panel = !show_verb_panel
+
+	to_chat(usr, "Your verbs are now [show_verb_panel ? "on" : "off. To turn them back on, type 'toggle-verbs' into the command bar."].")
+*///CHOMPRemove End
+
 /*
 /client/verb/toggle_status_bar()
 	set name = "Toggle Status Bar"
