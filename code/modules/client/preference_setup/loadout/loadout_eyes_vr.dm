@@ -1,13 +1,6 @@
 /datum/gear/eyes/medical
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist","Field Medic") //CHOMP keep explo
 
-<<<<<<< HEAD
-/datum/gear/eyes/meson
-	display_name = "Optical Meson Scanners (Eng, Sci, Explo)"
-	allowed_roles = list("Engineer","Chief Engineer","Atmospheric Technician", "Scientist", "Research Director", "Explorer", "Pathfinder") //CHOMP keep explo
-
-=======
->>>>>>> d3767ec44f... selectors pass (#16137)
 /datum/gear/eyes/arglasses
 	display_name = "AR glasses"
 	path = /obj/item/clothing/glasses/omnihud
