@@ -40,8 +40,8 @@
 
 	darksight = 10 //Can see in dark
 
-	burn_mod = 0.25 //Very resistant to fire
-	pain_mod = 0.25 //Whilst not resistant to brute or stunning, they are quite resistant to pain, making them tanky in their own way.
+	//burn_mod = 0.25 //Very resistant to fire CHOMPedit: Less overtune species stats pleas
+	//pain_mod = 0.25 //Whilst not resistant to brute or stunning, they are quite resistant to pain, making them tanky in their own way.CHOMPedit: See above
 
 	warning_low_pressure = 50
 	hazard_low_pressure = -1
