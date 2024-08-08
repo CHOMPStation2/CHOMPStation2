@@ -370,7 +370,7 @@
 
 // Funtion to test if the owner's body has been taken over
 /obj/soulgem/proc/is_taken_over()
-	return (own_mind && owner.mind != own_mind)
+	return (own_mind && owner.mind && owner.mind != own_mind)
 
 // Transfer section to transfer captured souls
 
@@ -392,7 +392,7 @@
 		if(is_type_in_list(H.get_right_hand(), valid_trasfer_objects))
 			valid_objects += H.get_right_hand()
 	for(var/obj/item/I in range(0, get_turf(owner)))
-		if(is_type_in_list(I))
+		if(is_type_in_list(I, valid_trasfer_objects))
 			valid_objects += I
 	for(var/mob/M in range(1, get_turf(owner)))
 		if(M == owner)
@@ -436,17 +436,21 @@
 		if(!mate.stored_mind)
 			to_chat(owner, span_notice("You scan yourself to transfer the soul into the [target]!"))
 			to_chat(M, span_notice("[transfer_message]"))
+			if(M.mind == own_mind)
+				own_mind = null
 			mate.get_mind(M)
 	else if(istype(target, /obj/item/device/mmi))
 		var/obj/item/device/mmi/mm = target
-		if(!mm.brainmob)
+		if(!mm.brainmob || !mm.brainmob.mind)
+			if(M.mind == own_mind)
+				own_mind = null
 			to_chat(owner, span_notice("You transfer the soul into the [target]!"))
 			to_chat(M, span_notice("[transfer_message]"))
 			mm.transfer_identity(M)
+			if(!mm.brainmob.mind && M.mind)
+				M.mind.transfer_to(mm.brainmob)
 	else
 		return
-	if(M.mind == own_mind)
-		own_mind = null
 	brainmobs -= M
 	if(M == selected_soul)
 		update_selected_soul()
