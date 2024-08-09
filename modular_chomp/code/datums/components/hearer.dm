@@ -77,7 +77,7 @@
 				M.create_chat_message(source, "[runemessage]", FALSE, list("emote"), audible = FALSE)
 		else if(blind_message)
 			M.show_message(blind_message, AUDIBLE_MESSAGE)
-	else
+	else if (source.invisibility <= SEE_INVISIBLE_LIVING)
 		parent_atom.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
 
 //Atom definition (base)
