@@ -16,12 +16,15 @@
 	attacktext = list("mauled")
 	friendly = list("nuzzles", "noses softly at", "noseboops", "headbumps against", "nibbles affectionately on")
 	meat_amount = 5
+	has_eye_glow = TRUE //(evil)
+
+	old_x = 0
+	old_y = 0
+	default_pixel_x = 0
+	pixel_x = 0
+	pixel_y = 0
 
 	color = null //color is selected when spawned
-
-	max_buckled_mobs = 0 //No Yeehaw
-	can_buckle = FALSE
-	buckle_movable = FALSE
 
 	//say_list_type = /datum/say_list/zorgoia
 	vore_active = 1
@@ -36,7 +39,7 @@
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 
 	//This is copypastad from protean code, hope it isnt too painful lol
-	var/list/goia_overlays = list(
+	var/list/goia_overlays = list( //all 10 overlays, in order
 		"zorgoia_belly" = "#FFFFFF",
 		"zorgoia_main" = "#FFFFFF",
 		"zorgoia_ears" = "#FFFFFF",
@@ -49,14 +52,24 @@
 		"zorgoia_spike" = "#FFFFFF"
 	)
 
-/mob/living/simple_mob/vore/otie/zorgoia/proc/appearance_switch()
+/mob/living/simple_mob/vore/otie/zorgoia/proc/recolor() //Base sprite wont need a radical menu selection
+	set name = "Change Color"
+	set desc = "Change your main color."
+	set category = "Abilities.General"
+	var/new_color = input("Pick new colors:","Color", goia_overlays[2]) as null|color
+	if(!new_color)
+		return 0
+	goia_overlays[goia_overlays[2]] = new_color
+	update_icon()
+
+/mob/living/simple_mob/vore/otie/zorgoia/proc/appearance_switch() //This is just copypastas of the radial menu code, each block of code is the options for each bit of customisation... all 9 of them
 	set name = "Adjust Mob Markings"
 	set desc = "Change your markings and mob colors."
 	set category = "Abilities.General"
 
 	var/list/options = list("Belly","Spike","Ears","Spots","Claws","Spines","Fluff","Underbelly","Eyes")
 	for(var/option in options)
-		LAZYSET(options, option, image('icons/effects/bigdragon_labels.dmi', option))
+		LAZYSET(options, option, image('modular_chomp/icons/effects/goia_labels.dmi', option))
 	var/choice = show_radial_menu(src, src, options, radius = 60)
 	if(!choice || QDELETED(src) || src.incapacitated())
 		return FALSE
@@ -108,6 +121,7 @@
 				return 0
 			goia_overlays[1] = choice
 			goia_overlays[goia_overlays[1]] = new_color
+			update_icon()
 
 		if("Spike")
 			options = spiky_styles
@@ -122,6 +136,7 @@
 				return 0
 			goia_overlays[10] = choice
 			goia_overlays[goia_overlays[10]] = new_color
+			update_icon()
 
 
 		if("Ears")
@@ -137,6 +152,7 @@
 				return 0
 			goia_overlays[3] = choice
 			goia_overlays[goia_overlays[3]] = new_color
+			update_icon()
 
 		if("Spots")
 			options = spots_styles
@@ -151,6 +167,7 @@
 				return 0
 			goia_overlays[4] = choice
 			goia_overlays[goia_overlays[4]] = new_color
+			update_icon()
 
 		if("Claws")
 			options = claws_styles
@@ -165,6 +182,7 @@
 				return 0
 			goia_overlays[5] = choice
 			goia_overlays[goia_overlays[5]] = new_color
+			update_icon()
 
 		if("Spines")
 			options = spines_styles
@@ -179,6 +197,7 @@
 				return 0
 			goia_overlays[6] = choice
 			goia_overlays[goia_overlays[6]] = new_color
+			update_icon()
 
 		if("Fluff")
 			options = fluff_styles
@@ -193,6 +212,7 @@
 				return 0
 			goia_overlays[7] = choice
 			goia_overlays[goia_overlays[7]] = new_color
+			update_icon()
 
 		if("Underbelly")
 			options = underbelly_styles
@@ -207,6 +227,7 @@
 				return 0
 			goia_overlays[8] = choice
 			goia_overlays[goia_overlays[8]] = new_color
+			update_icon()
 
 		if("Eyes")
 			options = eyes_styles
@@ -221,6 +242,7 @@
 				return 0
 			goia_overlays[9] = choice
 			goia_overlays[goia_overlays[9]] = new_color
+			update_icon()
 		else
 
 
@@ -229,13 +251,14 @@
 	..()
 	update_icon()
 	add_verb(src,/mob/living/simple_mob/vore/otie/zorgoia/proc/appearance_switch)
+	add_verb(src,/mob/living/simple_mob/vore/otie/zorgoia/proc/recolor)
 
 /mob/living/simple_mob/vore/otie/zorgoia/update_icon()
 	..()
 	cut_overlays()
 	icon = 'modular_chomp/icons/mob/zorgoia64x32.dmi'
 	vore_capacity = 3
-	var/image/I = image(icon, "[goia_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]") //todo, check kasscs resting sprite
+	var/image/I = image(icon, "[goia_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16) //todo, check kasscs resting sprite
 	I.color = goia_overlays[goia_overlays[1]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -243,7 +266,7 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[2]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[2]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[2]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -251,7 +274,7 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[3]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[3]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[3]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -259,7 +282,7 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[4]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[4]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[4]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -267,7 +290,7 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[5]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[5]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[5]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -275,7 +298,7 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[6]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[6]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[6]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -283,7 +306,7 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[7]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[7]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[7]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -291,7 +314,7 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[8]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[8]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[8]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -299,14 +322,14 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[9]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[9]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[9]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = PLANE_LIGHTING_ABOVE
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[10]][resting? "-rest" : null]")
+	I = image(icon, "[goia_overlays[10]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[10]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
