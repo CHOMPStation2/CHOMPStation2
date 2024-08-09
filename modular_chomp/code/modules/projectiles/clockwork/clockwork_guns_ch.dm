@@ -49,7 +49,7 @@
 
 /obj/item/projectile/bullet/rifle/clockwork
 	fire_sound = 'modular_chomp/sound/weapons/clockwork/cwc_rifle_fire.ogg'
-	damage = 10
+	damage = 20 //Old 10
 	hud_state = "rifle_heavy"
 
 /obj/item/projectile/beam/shock/clockwork
@@ -62,7 +62,7 @@
 	tracer_type = /obj/effect/projectile/tracer/voltbeam
 	impact_type = /obj/effect/projectile/impact/voltbeam
 
-	damage = 20
+	damage = 40 //Old 20
 	agony = 15
 	eyeblur = 2
 	hitsound = 'sound/effects/lightningshock.ogg'

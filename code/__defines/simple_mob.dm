@@ -5,4 +5,4 @@
 
 // Hivebots are tuned towards how many default lasers are needed to kill them.
 // As such, if laser damage is ever changed, you should change this define.
-#define LASERS_TO_KILL * 15 //chompedit: Reduce health of hivebots by reducing 40 to 15
+#define LASERS_TO_KILL * 40

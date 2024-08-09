@@ -522,6 +522,7 @@
 	bolt_name = "bolt"
 	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
 	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
+	fire_sound = "sound/weapons/serdy/sks.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mosin/scoped
 	name = "Scoped Mosin Nagant"
@@ -600,6 +601,7 @@
 	bolt_name = "bolt"
 	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
 	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
+	fire_sound = "sound/weapons/serdy/sks.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/awp/ui_action_click()
 	scope()
@@ -636,6 +638,7 @@
 	bolt_name = "bolt"
 	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
 	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
+	fire_sound = "sound/weapons/serdy/sks.ogg"
 
 
 /obj/item/weapon/gun/projectile/automatic/serdy/hectate/ui_action_click()

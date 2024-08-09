@@ -164,7 +164,7 @@ None of these for now, too. -DHA */
 	desc = "A dense-core projectile fired from a small cannon."
 	id = "ptrshell"
 	req_tech = list(TECH_COMBAT = 7, TECH_ILLEGAL = 4)
-	materials = list(MAT_TITANIUM = 4000, MAT_URANIUM = 500, MAT_PLASTEEL = 500)
+	materials = list(MAT_STEEL = 4000, MAT_PLASTEEL = 500) //CHOMPedit Nerfs costs a bit for something a bit more sensical
 	build_path = /obj/item/ammo_casing/a145
 	sort_string = "MABBD"
 

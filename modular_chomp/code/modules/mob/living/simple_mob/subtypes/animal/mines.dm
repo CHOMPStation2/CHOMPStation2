@@ -1,3 +1,5 @@
+//File unticked for combat refactor walkback
+
 /mob/living/simple_mob/animal/space/goose
 	maxHealth = 15
 	health = 15

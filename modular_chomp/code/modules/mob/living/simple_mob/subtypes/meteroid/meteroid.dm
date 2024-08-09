@@ -1,3 +1,5 @@
+//File unticked due to combat refactor walkback
+
 /mob/living/simple_mob/metroid/jellybrig
 	maxHealth = 200
 	health = 200

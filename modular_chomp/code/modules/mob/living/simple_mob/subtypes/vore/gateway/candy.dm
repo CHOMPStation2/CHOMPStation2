@@ -8,7 +8,7 @@
 	but their presence bolstering others of their kind."
 	value = CATALOGUER_REWARD_MEDIUM
 
-//Someone remind me to get someone to make actual sprites for this things.
+//Someone remind me to get someone to make actual sprites for this things. //Combat refactor walkback wont touch these, idk the balance and afaik theyre a swarm mob
 /mob/living/simple_mob/vore/candy
 	name = "candy critter"
 	desc = "A creature made of candy"

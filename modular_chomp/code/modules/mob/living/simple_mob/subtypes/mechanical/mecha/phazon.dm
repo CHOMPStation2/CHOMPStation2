@@ -8,8 +8,8 @@
 	wreckage = /obj/structure/loot_pile/mecha/phazon
 	color = "#ffffff"
 
-	health = 250
-	maxHealth = 250
+	health = 500 //Old 250
+	maxHealth = 500
 	evasion = 10
 
 	special_attack_min_range = 1

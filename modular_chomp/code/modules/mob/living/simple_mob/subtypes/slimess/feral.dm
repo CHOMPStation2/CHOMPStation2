@@ -1,6 +1,6 @@
 /mob/living/simple_mob/slime/feral
 	cores = 3 // Xenobio will love getting their hands on these.
-	maxHealth = 75
+	maxHealth = 150 //Old 75
 	movement_cooldown = 0
 	melee_damage_lower = 15
 	melee_damage_upper = 15

@@ -1,3 +1,5 @@
+//File unticked for combat refactor walkback
+
 /mob/living/simple_mob/humanoid/possessed
 	health = 100
 	maxHealth = 100

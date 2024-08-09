@@ -1,7 +1,9 @@
+
+/*
 /mob/living/simple_mob/humanoid/cultist
 	maxHealth = 75
 	health = 75
-
+*/
 /mob/living/simple_mob/humanoid/cultist/human
 	movement_cooldown = 1
 	melee_damage_lower = 15
@@ -10,40 +12,40 @@
 /mob/living/simple_mob/humanoid/cultist/caster
 	movement_cooldown = 1
 	projectiletype = /obj/item/projectile/energy/inversion
-	melee_damage_lower = 7
-	melee_damage_upper = 7
+	melee_damage_lower = 15 //Old 7
+	melee_damage_upper = 15
 
 /mob/living/simple_mob/humanoid/cultist/tesh
 	movement_cooldown = -1
-	melee_damage_lower = 7
-	melee_damage_upper = 7
+	melee_damage_lower = 15 //Old 7
+	melee_damage_upper = 15
 	maxHealth = 37
 	health = 37
 
 /mob/living/simple_mob/humanoid/cultist/castertesh
 	movement_cooldown = -1
 	projectiletype = /obj/item/projectile/energy/inversion
-	melee_damage_lower = 7
-	melee_damage_upper = 7
-	maxHealth = 37
-	health = 37
+	melee_damage_lower = 15
+	melee_damage_upper = 15
+	maxHealth = 50
+	health = 50
 
 /mob/living/simple_mob/humanoid/cultist/elite
 	movement_cooldown = 1
-	melee_damage_lower = 15
-	melee_damage_upper = 15
+	melee_damage_lower = 20
+	melee_damage_upper = 20
 
 /mob/living/simple_mob/humanoid/cultist/magus
 	movement_cooldown = 1
 	projectiletype = /obj/item/projectile/energy/inversion
-	maxHealth = 100
-	health = 100
+	maxHealth = 150 //Old 100
+	health = 150
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 
 /mob/living/simple_mob/humanoid/cultist/hunter
-	maxHealth = 87 //Ehhh, this AI is like mini-boss at best
-	health = 87
+	maxHealth = 175 //Ehhh, this AI is like mini-boss at best //Old 87
+	health = 175
 	movement_cooldown = 0
 	melee_damage_lower = 21	//Saw Cleaver Brutality
 	melee_damage_upper = 21
@@ -69,8 +71,8 @@
 	desc = "An indiuval wrapped up in a makeshift rig, made from fallen cultist."
 	icon_state = "cobra-cultist"
 	icon_living = "cobra-cultist"
-	maxHealth = 75
-	health = 75
+	maxHealth = 150 //Old 75
+	health = 150
 
 	faction = "cult"
 
@@ -81,8 +83,8 @@
 	response_harm = "hits"
 
 	harm_intent_damage = 5
-	melee_damage_lower = 7
-	melee_damage_upper = 7
+	melee_damage_lower = 15 //old 7
+	melee_damage_upper = 25 //old 15
 	attack_sharp = 1
 	attack_edge = 1
 	attacktext = list("slashed", "stabbed")
