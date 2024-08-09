@@ -46,3 +46,6 @@
       they relied on invalidated discord links
   TheCaramelion:
   - bugfix: Fixed not facing pointed atoms.
+2024-08-09:
+  Kashargul:
+  - bugfix: self transfer to mmis not working
