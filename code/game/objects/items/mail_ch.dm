@@ -161,6 +161,7 @@
 		add_overlay(postmark_image)
 
 /obj/item/mail/attackby(obj/item/W as obj, mob/user as mob)
+	. = ..()
 	// Destination tagging
 	if(istype(W, /obj/item/device/destTagger))
 		var/obj/item/device/destTagger/O = W
@@ -323,7 +324,7 @@
 	icon_state = "mailbag"
 	slot_flags = SLOT_BELT | SLOT_POCKET
 	w_class = ITEMSIZE_NORMAL
-	storage_slots = 28
+	storage_slots = 31
 	max_storage_space = 50
 	max_w_class = ITEMSIZE_NORMAL
 	use_to_pickup = TRUE
