@@ -37,19 +37,19 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected)
 		to_chat(user, "<span class='warning'>Something is in the way! You can't attach [E] here!</span>")
-		user.balloon_alert("Something is in the way!") // CHOMPEdit
+		user.balloon_alert(user, "Something is in the way!") // CHOMPEdit
 		return 0
 	if(!P)
 		to_chat(user, "<span class='warning'>There's nothing to attach [E] to!</span>")
-		user.balloon_alert("There's nothing to attach [E] to!") // CHOMPEdit
+		user.balloon_alert(user, "There's nothing to attach [E] to!") // CHOMPEdit
 		return 0
 	else if((P.robotic >= ORGAN_ROBOT) && (E.robotic < ORGAN_ROBOT))
 		to_chat(user, "<span class='warning'>Attaching [E] to [P] wouldn't work well.</span>")
-		user.balloon_alert("Attaching [E] to [P] wouldn't work well") // CHOMPEdit
+		user.balloon_alert(user, "Attaching [E] to [P] wouldn't work well") // CHOMPEdit
 		return 0
 	else if(istype(E, /obj/item/organ/external/head) && E.robotic >= ORGAN_ROBOT && P.robotic < ORGAN_ROBOT)
 		to_chat(user, "<span class='warning'>Attaching [E] to [P] might break [E].</span>")
-		user.balloon_alert("Attaching [E] to [P] might break [E]") // CHOMPEdit
+		user.balloon_alert(user, "Attaching [E] to [P] might break [E]") // CHOMPEdit
 		return 0
 	else
 		return 1
