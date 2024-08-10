@@ -258,15 +258,9 @@
 	cut_overlays()
 	icon = 'modular_chomp/icons/mob/zorgoia64x32.dmi'
 	vore_capacity = 3
-	var/image/I = image(icon, "[goia_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16) //todo, check kasscs resting sprite
-	I.color = goia_overlays[goia_overlays[1]]
-	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
-	I.plane = MOB_PLANE
-	I.layer = MOB_LAYER
-	add_overlay(I)
-	qdel(I)
+	//Heads up, the order of these overlays stacking on top of each other is different from the array order. So goia_overlay[1] is the belly, but rendering on top of everything at the end instead
 
-	I = image(icon, "[goia_overlays[2]][resting? "-rest" : null]", pixel_x = -16)
+	var/image/I = image(icon, "[goia_overlays[2]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[2]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
@@ -331,6 +325,14 @@
 
 	I = image(icon, "[goia_overlays[10]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays[goia_overlays[10]]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = MOB_PLANE
+	I.layer = MOB_LAYER
+	add_overlay(I)
+	qdel(I)
+
+	I = image(icon, "[goia_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16) //todo, check kasscs resting sprite
+	I.color = goia_overlays[goia_overlays[1]]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
