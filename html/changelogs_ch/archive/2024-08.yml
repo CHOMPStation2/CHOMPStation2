@@ -49,3 +49,9 @@
 2024-08-09:
   Kashargul:
   - bugfix: self transfer to mmis not working
+2024-08-10:
+  TheCaramelion:
+  - qol: 3 more slots for the mailbag
+  - bugfix: Fixed mailbag not able to pick up mail off the ground
+  Verkister:
+  - bugfix: Fixed bigdragon scaling issues.
