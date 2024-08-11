@@ -385,13 +385,9 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		return TOPIC_REFRESH
 
 	else if(href_list["blood_reset"])
-<<<<<<< HEAD
-		var/choice = tgui_alert(user, "Reset blood color to human default (#A10808)?","Reset Blood Color",list("Reset","Cancel")) //ChompEDIT - usr removal
-=======
 		var/datum/species/spec = GLOB.all_species[pref.species]
 		var/new_blood = spec.blood_color ? spec.blood_color : "#A10808"
 		var/choice = tgui_alert(usr, "Reset blood color to species default ([new_blood])?","Reset Blood Color",list("Reset","Cancel"))
->>>>>>> 65c3fa8e56... Fixes species blood color (#16174)
 		if(choice == "Reset")
 			pref.blood_color = new_blood
 		return TOPIC_REFRESH
