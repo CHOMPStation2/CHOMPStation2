@@ -389,6 +389,7 @@
 
 	to_chat(src, span_notice("You have toggled chat timestamps: [prefs.chat_timestamp ? "ON" : "OFF"]."))
 
+<<<<<<< HEAD
 /client/verb/toggle_throwmode_messages()
 	set name = "Toggle Throw Mode Messages"
 	set category = "Preferences.Chat" //CHOMPEdit
@@ -399,6 +400,8 @@
 
 	to_chat(src, span_notice("You have toggled throw mode messages: [prefs.throwmode_loud ? "ON" : "OFF"]."))
 
+=======
+>>>>>>> 4406e228fa... revert throw notifs (#16169)
 /client/verb/toggle_status_indicators()
 	set name = "Toggle Status Indicators"
 	set category = "Preferences.Game" //CHOMPEdit
