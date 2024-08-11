@@ -290,7 +290,11 @@ var/list/preferences_datums = list()
 	popup.open(FALSE) // Skip registring onclose on the browser pane
 	onclose(user, "preferences_window", src) // We want to register on the window itself
 
+<<<<<<< HEAD
 /*datum/preferences/proc/update_character_previews(mutable_appearance/MA) //CHOMPEdit _ch override.
+=======
+/datum/preferences/proc/update_character_previews(var/mob/living/carbon/human/mannequin)
+>>>>>>> de3ebb5333... fix charsetup tail layering (#16166)
 	if(!client)
 		return
 
@@ -319,9 +323,17 @@ var/list/preferences_datums = list()
 			O.pref = src
 			LAZYSET(char_render_holders, "[D]", O)
 			client.screen |= O
+		mannequin.set_dir(D)
+		mannequin.update_tail_showing()
+		mannequin.ImmediateOverlayUpdate()
+		var/mutable_appearance/MA = new(mannequin)
 		O.appearance = MA
+<<<<<<< HEAD
 		O.dir = D
 		O.screen_loc = preview_screen_locs["[D]"]*/
+=======
+		O.screen_loc = preview_screen_locs["[D]"]
+>>>>>>> de3ebb5333... fix charsetup tail layering (#16166)
 
 /datum/preferences/proc/show_character_previews()
 	if(!client || !char_render_holders)
