@@ -22,7 +22,13 @@
 	var/list/open_tguis // CHOMPEdit: FIXME: open_uis
 
 	/// Active timers with this datum as the target
+<<<<<<< HEAD
 	var/list/_active_timers // CHOMPEdit
+=======
+	var/list/active_timers
+	/// Status traits attached to this datum. associative list of the form: list(trait name (string) = list(source1, source2, source3,...))
+	var/list/_status_traits
+>>>>>>> 7a7920f29e... TGUI Say (#16160)
 
 	/**
 	  * Components attached to this datum

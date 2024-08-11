@@ -3,7 +3,12 @@
 
 /mob/verb/whisper(message as text)
 	set name = "Whisper"
+<<<<<<< HEAD
 	set category = "IC.Subtle" //CHOMPEdit
+=======
+	set category = "IC"
+	set hidden = 1
+>>>>>>> 7a7920f29e... TGUI Say (#16160)
 	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
@@ -14,15 +19,21 @@
 
 /mob/verb/say_verb(message as text)
 	set name = "Say"
+<<<<<<< HEAD
 	set category = "IC.Chat" //CHOMPEdit
 	set instant = TRUE // CHOMPEdit
 
+=======
+	set category = "IC"
+	set hidden = 1
+>>>>>>> 7a7920f29e... TGUI Say (#16160)
 	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
 		return
 	//VOREStation Addition End
 
+<<<<<<< HEAD
 	set_typing_indicator(FALSE)
 	// CHOMPEdit Start
 	//queue this message because verbs are scheduled to process after SendMaps in the tick and speech is pretty expensive when it happens.
@@ -34,6 +45,16 @@
 /mob/verb/me_verb(message as message)
 	set name = "Me"
 	set category = "IC.Chat" //CHOMPEdit
+=======
+	client?.stop_thinking()
+	usr.say(message)
+
+/mob/verb/me_verb(message as message)
+	set name = "Me"
+	set category = "IC"
+	set desc = "Emote to nearby people (and your pred/prey)"
+	set hidden = 1
+>>>>>>> 7a7920f29e... TGUI Say (#16160)
 
 	if(say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, span_red("Speech is currently admin-disabled."))
@@ -52,7 +73,7 @@
 	message = sanitize_or_reflect(message,src) //VOREStation Edit - Reflect too-long messages (within reason)
 	//VOREStation Edit End
 
-	set_typing_indicator(FALSE)
+	client?.stop_thinking()
 	if(use_me)
 		custom_emote(usr.emote_type, message)
 	else

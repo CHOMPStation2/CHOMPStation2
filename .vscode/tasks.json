@@ -96,7 +96,27 @@
 				"$eslint-stylish"
 			],
 			"group": "build",
+<<<<<<< HEAD
 			"label": "tgui: rebuild tgfont"
+=======
+			"label": "tgui: prettybuild"
+		},
+		{
+			"type": "shell",
+			"command": "bin/tgui --dev",
+			"windows": {
+				"command": ".\\bin\\tgui.bat --dev"
+			},
+			"problemMatcher": [
+				"$tsc",
+				"$eslint-stylish"
+			],
+			"options": {
+				"cwd": ".\\tgui\\",
+			},
+			"group": "build",
+			"label": "tgui: dev server"
+>>>>>>> 7a7920f29e... TGUI Say (#16160)
 		}
 	]
 }
