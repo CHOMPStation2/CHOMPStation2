@@ -25,10 +25,12 @@
 		-----Outsiders are not allowed to log-off with station key items (e.g. Captain's spare, station blueprints, nuclear authentication disk, bluespace harpoon, large quantities of station goods, etc). Please leave these items on station or with relevant crew.
 		-----We encourage outsiders to take on exploration content as a group, staff will not help you for any hardships of solo play.
 		-----Notice: The outsider role is relatively new; if you encounter bugs, please notify a staff member and avoid using exploits."}
-	alt_titles = list("Spacefarer" = /datum/alt_title/spacefarer)
+	//alt_titles = list("Spacefarer" = /datum/alt_title/spacefarer) todo fix shuttles
 
+/* todo, fix the shuttles
 /datum/alt_title/spacefarer
 	title = "Spacefarer"
+*/
 
 /*seems to be a kin only thing?
 /datum/job/noncrew/is_species_banned(species_name, brain_type)
