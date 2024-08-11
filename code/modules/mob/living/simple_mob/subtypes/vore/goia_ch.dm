@@ -6,7 +6,7 @@
 	icon_state = null //Overlay system will make the goias
 	icon_living = null
 	icon_rest = null
-	icon_dead = "zorgoia-dead"
+	icon_dead = "zorgoia-death"
 	faction = "zorgoia"
 	maxHealth = 250 //chonk
 	health = 250
@@ -81,24 +81,25 @@
 		"zorgoia_spike"
 	)
 	var/list/ear_styles = list(
+		"null",
 		"zorgoia_ears"
 	)
 	var/list/spots_styles = list(
+		"null",
 		"zorgoia_spots",
-		"zorgoia_stripes",
-		"null"
+		"zorgoia_stripes"
 	)
 	var/list/claws_styles = list(
+		"null",
 		"zorgoia_claws",
-		"null"
 	)
 	var/list/spines_styles = list(
-		"zorgoia_spines",
-		"null"
+		"null",
+		"zorgoia_spines"
 	)
 	var/list/fluff_styles = list(
-		"zorgoia_fluff",
-		"null"
+		"null",
+		"zorgoia_fluff"
 	)
 	var/list/underbelly_styles = list(
 		"zorgoia_underbelly",
@@ -252,9 +253,17 @@
 	update_icon()
 	add_verb(src,/mob/living/simple_mob/vore/otie/zorgoia/proc/appearance_switch)
 	add_verb(src,/mob/living/simple_mob/vore/otie/zorgoia/proc/recolor)
+	add_verb(src,/mob/living/proc/injection) //Poison sting c:
+	src.trait_injection_reagents += "paralysistoxin" 	// Paralysis!
+	src.trait_injection_reagents += "painenzyme"		// Pain INCREASER
+	src.trait_injection_reagents += "aphrodisiac"		// Horni //CHOMPedit
 
 /mob/living/simple_mob/vore/otie/zorgoia/update_icon()
 	..()
+	if(stat == DEAD)
+		icon_state = "zorgoia-death"
+		plane = MOB_LAYER
+		return
 	cut_overlays()
 	icon = 'modular_chomp/icons/mob/zorgoia64x32.dmi'
 	vore_capacity = 3
@@ -338,3 +347,7 @@
 	I.layer = MOB_LAYER
 	add_overlay(I)
 	qdel(I)
+
+/mob/living/simple_mob/vore/otie/zorgoia/death() //are they going to be ok?
+	. = ..()
+	cut_overlays()
