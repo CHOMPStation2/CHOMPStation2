@@ -18806,6 +18806,9 @@
 	name = "mailman's locker";
 	starts_with = list(/obj/item/clothing/under/rank/mailman,/obj/item/clothing/head/mailman,/obj/item/clothing/shoes/black,/obj/item/device/radio/headset/headset_cargo,/obj/item/device/radio/headset/headset_cargo/alt,/obj/item/weapon/storage/bag/mail,/obj/item/device/destTagger)
 	},
+/obj/item/mail_scanner,
+/obj/item/mail_scanner,
+/obj/item/mail_scanner,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "hIE" = (
@@ -32255,6 +32258,10 @@
 	pixel_y = -5
 	},
 /obj/item/mail/blank,
+/obj/item/mail_scanner{
+	pixel_x = -5;
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "vbP" = (
