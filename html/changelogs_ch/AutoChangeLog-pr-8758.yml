@@ -1,0 +1,4 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "talon miners now have a job icon for AR HUDs"
