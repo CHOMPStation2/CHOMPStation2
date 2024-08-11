@@ -55,3 +55,6 @@
   - bugfix: Fixed mailbag not able to pick up mail off the ground
   Verkister:
   - bugfix: Fixed bigdragon scaling issues.
+2024-08-11:
+  TheCaramelion:
+  - bugfix: Fixed various runtimes regarding balloon alerts
