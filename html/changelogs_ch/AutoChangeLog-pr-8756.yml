@@ -1,0 +1,4 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscdel: "removed text notifs when prepping to throw/catch stuff"
