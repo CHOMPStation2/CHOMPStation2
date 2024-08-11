@@ -1,0 +1,5 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - qol: "Shorter autoresleeve time after steps mechanics are applied"
+  - qol: "Shoes muffle the death message"
