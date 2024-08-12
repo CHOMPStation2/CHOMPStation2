@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "b" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/steel_reinforced,
@@ -349,7 +349,9 @@
 /turf/simulated/floor/tiled/old_tile/red,
 /area/shuttle/pizza_shuttle)
 "L" = (
-/obj/machinery/atmospherics/pipe/tank/air/full,
+/obj/machinery/atmospherics/pipe/tank/air/full{
+	start_pressure = 10000
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/shuttle/pizza_shuttle)
 "M" = (

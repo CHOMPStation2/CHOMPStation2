@@ -4,7 +4,7 @@
 #endif
 
 // Map template for spawning the shuttle
-/datum/map_template/om_ships/hybrid
+/datum/map_template/om_ships/pizzashuttle
 	name = "OM Ship - Pizza Delivery Shuttle"
 	desc = "A small moderate condition pizza parlor on the go."
 	mappath = 'pizzashuttle-11x13.dmm'

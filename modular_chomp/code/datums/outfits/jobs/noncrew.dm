@@ -19,7 +19,7 @@
 	if(istype(wallet))
 		wallet.owner_name = H.real_name
 		wallet.worth = 1000
-
+/* Todo, fix the shuttle superposed pod before giving this to players
 /decl/hierarchy/outfit/noncrew/spacefarer
 	name = OUTFIT_JOB_NAME("Spacefarer")
 	uniform = /obj/item/clothing/under/rank/pilot2
@@ -28,7 +28,7 @@
 	l_pocket = /obj/item/device/survivalcapsule/superpose/shuttle
 
 	flags = OUTFIT_HAS_JETPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
-
+*/
 /decl/hierarchy/outfit/shadekin
 	name = OUTFIT_JOB_NAME(JOB_ANOMALY)
 	//hierarchy_type = /decl/hierarchy/outfit/noncrew
