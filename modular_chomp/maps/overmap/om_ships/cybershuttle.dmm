@@ -16,7 +16,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "e" = (
-/obj/machinery/door/airlock/voidcraft/vertical,
+/obj/machinery/door/airlock/glass_external{
+	safe = 0
+	},
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
@@ -100,7 +102,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "w" = (
-/obj/machinery/door/airlock/voidcraft,
+/obj/machinery/door/airlock/glass_external{
+	safe = 0
+	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 8;
@@ -135,12 +139,6 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/cybershuttle)
-"B" = (
-/obj/machinery/shipsensors{
-	dir = 1
-	},
-/turf/simulated/floor/plating/external,
 /area/shuttle/cybershuttle)
 "D" = (
 /obj/structure/window/plastitanium/full,
@@ -223,6 +221,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
+"T" = (
+/obj/machinery/shipsensors{
+	dir = 1
+	},
+/turf/simulated/floor/plating/external,
+/area/shuttle/cybershuttle)
 "V" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall/rthull,
@@ -268,7 +272,7 @@ a
 a
 a
 a
-B
+T
 l
 j
 a
