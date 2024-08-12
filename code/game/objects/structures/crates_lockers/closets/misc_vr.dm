@@ -215,17 +215,12 @@
 		/obj/item/weapon/cell/device,
 		/obj/item/device/radio,
 		/obj/item/device/gps/explorer,
-<<<<<<< HEAD
 		/obj/item/device/cataloguer/compact, //CHOMP edit
 	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
-		/obj/item/clothing/gloves/watch/survival
-=======
-		/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked,
 		/obj/item/clothing/gloves/watch/survival,
 		/obj/item/clothing/accessory/storage/webbing/pilot1,
 		/obj/item/clothing/accessory/storage/webbing/pilot2,
 		/obj/item/device/emergency_beacon
->>>>>>> 5016701440... Emergency Beacon Update (#16152)
 		)
 
 /obj/structure/closet/secure_closet/pilot/Initialize()
