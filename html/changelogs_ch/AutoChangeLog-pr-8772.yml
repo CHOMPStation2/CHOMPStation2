@@ -1,0 +1,4 @@
+author: "RandoGuy999"
+delete-after: True
+changes:
+  - bugfix: "Souls caught in the vore soulcatcher will now actually have their prefs."
