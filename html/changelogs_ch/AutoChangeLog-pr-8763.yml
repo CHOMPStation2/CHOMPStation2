@@ -1,0 +1,4 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - qol: "electrical storms have a high chance to flicker the lights instead of obliterating them"
