@@ -350,7 +350,7 @@
 	icon_state = "mail_scanner"
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_SMALL
-	var/cargo_points = 15
+	var/cargo_points = 5
 	var/obj/item/mail/saved
 
 /obj/item/mail_scanner/examine(mob/user)
@@ -397,7 +397,7 @@
 		saved.scanned = TRUE
 		saved = null
 
-		cargo_points = rand(10, 20)
+		cargo_points = rand(5, 10)
 		to_chat(user, SPAN_NOTICE("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
 		playsound(loc, 'modular_chomp/sound/items/mail/mailapproved.ogg', 50, TRUE)
 		SSsupply.points += cargo_points
