@@ -136,7 +136,7 @@
 	set name = "Rotate Road Counter-Clockwise"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 		return
 	src.set_dir(turn(src.dir, 90))
 
