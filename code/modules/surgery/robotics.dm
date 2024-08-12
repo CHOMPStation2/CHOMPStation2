@@ -491,17 +491,17 @@
 
 	if(!(affected.robotic >= ORGAN_ROBOT))
 		to_chat(user, "<span class='danger'>You cannot install a computer brain into a meat skull.</span>")
-		user.balloon_alert("You cannot install a computer brain into a meat skull") // CHOMPEdit
+		user.balloon_alert(user, "You cannot install a computer brain into a meat skull") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(!target.should_have_organ("brain"))
 		to_chat(user, "<span class='danger'>You're pretty sure [target.species.name_plural] don't normally have a brain.</span>")
-		user.balloon_alert("You're pertty sure [target.species.name_plural] don't normall have a brain") // CHOMPEdit
+		user.balloon_alert(user, "You're pertty sure [target.species.name_plural] don't normall have a brain") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(!isnull(target.internal_organs["brain"]))
 		to_chat(user, "<span class='danger'>Your subject already has a brain.</span>")
-		user.balloon_alert("Your subject already has a brain") // CHOMPEdit
+		user.balloon_alert(user, "Your subject already has a brain") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	return 1
@@ -580,27 +580,27 @@
 
 	if(!N.held_mob.client || N.held_mob.stat >= DEAD)
 		to_chat(user, "<span class='danger'>That nymph is not viable.</span>")
-		user.balloon_alert("That nymph is not viable") // CHOMPEdit
+		user.balloon_alert(user, "That nymph is not viable") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(!(affected.robotic >= ORGAN_ROBOT))
 		to_chat(user, "<span class='danger'>You cannot install a nymph into a meat puppet.</span>")
-		user.balloon_alert("You cannot install a nymph into a meat puppet") // CHOMPEdit
+		user.balloon_alert(user, "You cannot install a nymph into a meat puppet") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(!(affected.model != "Skrellian Exoskeleton"))
 		to_chat(user, "<span class='dangerou'>You're fairly certain a nymph can't pilot a normal robot.</span>")
-		user.balloon_alert("You're fairly certain a nymph can't pilot a normal robot") // CHOMPEdit
+		user.balloon_alert(user, "You're fairly certain a nymph can't pilot a normal robot") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(!target.should_have_organ("brain"))
 		to_chat(user, "<span class='danger'>You're pretty sure [target.species.name_plural] don't normally have a brain.</span>")
-		user.balloon_alert("You're pretty sure [target.species.name_plural] don't normall have a brain") // CHOMPEdit
+		user.balloon_alert(user, "You're pretty sure [target.species.name_plural] don't normall have a brain") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(!isnull(target.internal_organs["brain"]))
 		to_chat(user, "<span class='danger'>Your subject already has a cephalon.</span>")
-		user.balloon_alert("Your subject already has a cephalon") // CHOMPEdit
+		user.balloon_alert(user, "Your subject already has a cephalon") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	return 1
@@ -609,7 +609,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("<span class='filter_notice'>[user] starts setting \the [tool] into [target]'s [affected.name].</span>", \
 	"<span class='filter_notice'>You start setting \the [tool] into [target]'s [affected.name].</span>")
-	user.balloon_alert_visible("Stars setting \the [tool] into [target]'s [affected.name]", "Setting \the into \the [affected.name]") // CHOMPEdit
+	user.balloon_alert_visible("Starts setting \the [tool] into [target]'s [affected.name]", "Setting \the into \the [affected.name]") // CHOMPEdit
 	..()
 
 /datum/surgery_step/robotics/install_nymph/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
