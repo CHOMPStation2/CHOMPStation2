@@ -8,8 +8,8 @@
 	icon_rest = null
 	icon_dead = "zorgoia-death"
 	faction = "zorgoia"
-	maxHealth = 250 //chonk
-	health = 250
+	maxHealth = 150 //chonk
+	health = 150
 	melee_damage_lower = 5
 	melee_damage_upper = 15 //Don't break my bones bro
 	see_in_dark = 5
@@ -32,6 +32,7 @@
 	vore_icons = 0 //The icon system down there handles the vore belly
 	vore_pounce_chance = 35
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+
 
 	// CHOMPAdd: Don't think its checked, but just in case
 	species_sounds = "None"
@@ -351,3 +352,6 @@
 /mob/living/simple_mob/vore/otie/zorgoia/death() //are they going to be ok?
 	. = ..()
 	cut_overlays()
+
+/mob/living/simple_mob/vore/otie/zorgoia/tamed
+	tamed = TRUE
