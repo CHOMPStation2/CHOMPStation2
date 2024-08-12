@@ -136,6 +136,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
+"B" = (
+/obj/machinery/shipsensors{
+	dir = 1
+	},
+/turf/simulated/floor/plating/external,
+/area/shuttle/cybershuttle)
 "D" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/grille/rustic{
@@ -262,7 +268,7 @@ a
 a
 a
 a
-G
+B
 l
 j
 a
