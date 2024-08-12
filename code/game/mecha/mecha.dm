@@ -1100,9 +1100,9 @@
 /obj/mecha/proc/dynhitby(atom/movable/A)
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
 
-	//var/temp_deflect_chance = deflect_chance //CHOMPremove
-	//var/temp_damage_minimum = damage_minimum
-	var/temp_minimum_penetration = minimum_penetration
+	var/temp_deflect_chance = deflect_chance
+	//var/temp_damage_minimum = damage_minimum //CHOMPremove
+	//var/temp_minimum_penetration = minimum_penetration //CHOMPremove
 	var/temp_fail_penetration_value = fail_penetration_value
 
 	if(!ArmC)
@@ -1139,7 +1139,7 @@
 				src.visible_message("\The [A] bounces off \the [src] armor")
 				return
 
-			else if(O.armor_penetration < mininum_penetration)	//If you don't have enough pen, you won't do full damage //CHOMPedit, temp_minimum_penetration -> minimum_penetration
+			else if(O.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage //CHOMPedit, temp_minimum_penetration -> minimum_penetration
 				src.occupant_message("<span class='notice'>\The [A] struggles to bypass \the [src] armor.</span>")
 				src.visible_message("\The [A] struggles to bypass \the [src] armor")
 				pass_damage_reduc_mod = temp_fail_penetration_value	//This will apply to reduce damage to 2/3 or 66% by default
