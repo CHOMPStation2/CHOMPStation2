@@ -1,0 +1,8 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - qol: "emergency beacon behaviour tweaks; shorter activation, fixed deployment location, and integrated micro-gps"
+  - qol: "added emergency beacons to pilot lockers"
+  - qol: "deployed emergency beacons can be disassembled with a wrench"
+  - rscadd: "added `isopenturf` helper, returns true if the checked turf is `space` or `simulated/open`"
+  - rscadd: "added `isnonsolidturf` helper, returns true if the checked turf is `space`, `simulated/open`, `simulated/floor/water`, or `simulated/floor/lava`"
