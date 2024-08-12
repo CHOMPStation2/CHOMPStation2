@@ -169,6 +169,7 @@
 	//Announce to host and other minds
 	notify_holder("New mind loaded: [brainmob.name]")
 	show_vore_fx(brainmob, TRUE)
+	brainmob.copy_from_prefs_vr(bellies = FALSE)
 	return TRUE
 
 // Allows to adjust the interior of the soulcatcher
