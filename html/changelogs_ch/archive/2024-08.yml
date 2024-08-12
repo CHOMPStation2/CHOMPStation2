@@ -58,3 +58,28 @@
 2024-08-11:
   TheCaramelion:
   - bugfix: Fixed various runtimes regarding balloon alerts
+2024-08-12:
+  CHOMPStation2:
+  - qol: an unarmoured version of the martian miner coat is now available in loadouts
+  - qol: electrical storms have a high chance to flicker the lights instead of obliterating
+      them
+  - rscdel: removed text notifs when prepping to throw/catch stuff
+  - bugfix: accidentally had patches on patchless tan jacket's inventory sprite
+  - rscadd: two variant landing markers on the space whale, to make landing at the
+      existing landing zones easier
+  - qol: emergency beacon behaviour tweaks; shorter activation, fixed deployment location,
+      and integrated micro-gps
+  - qol: added emergency beacons to pilot lockers
+  - qol: deployed emergency beacons can be disassembled with a wrench
+  - rscadd: added `isopenturf` helper, returns true if the checked turf is `space`
+      or `simulated/open`
+  - rscadd: added `isnonsolidturf` helper, returns true if the checked turf is `space`,
+      `simulated/open`, `simulated/floor/water`, or `simulated/floor/lava`
+  - bugfix: techmaint tiles are no longer destroyed when crowbarred up, and replacements
+      can be made using steel sheets
+  - bugfix: techfloor, steel hi-grip floor, and techgrid floor tiles can all be made
+      using steel as well
+  - rscadd: talon miners now have a job icon for AR HUDs
+  TheCaramelion:
+  - qol: Shorter autoresleeve time after steps mechanics are applied
+  - qol: Shoes muffle the death message

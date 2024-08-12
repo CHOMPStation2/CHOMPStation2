@@ -1,5 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - bugfix: "techmaint tiles are no longer destroyed when crowbarred up, and replacements can be made using steel sheets"
-  - bugfix: "techfloor, steel hi-grip floor, and techgrid floor tiles can all be made using steel as well"
