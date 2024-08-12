@@ -127,8 +127,6 @@
 
 	src.set_dir(turn(src.dir, 270))
 	return
-<<<<<<< HEAD
-=======
 
 //VOREstation edit: counter-clockwise rotation
 /obj/structure/gravemarker/verb/rotate_counterclockwise()
@@ -143,9 +141,8 @@
 		return
 	if(usr.stat || usr.restrained())
 		return
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
 		return
 
 	src.set_dir(turn(src.dir, 90))
 	return
->>>>>>> 90720f8a67... Various fixes (#16176)
