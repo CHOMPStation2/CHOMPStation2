@@ -1,0 +1,6 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - rscadd: "Mail Scanner, a tool for mail carriers to verify mail delivery"
+  - qol: "Mailman > Mail Carrier"
+  - qol: "Mail Carriers start with their job stuff in their backpack now"
