@@ -83,3 +83,6 @@
   TheCaramelion:
   - qol: Shorter autoresleeve time after steps mechanics are applied
   - qol: Shoes muffle the death message
+2024-08-13:
+  RandoGuy999:
+  - bugfix: Souls caught in the vore soulcatcher will now actually have their prefs.
