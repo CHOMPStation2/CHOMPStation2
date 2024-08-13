@@ -1,3 +1,4 @@
+//File has been unticked due to combat refactor walkback
 /mob/living/simple_mob/vore/demonAI
 	maxHealth = 100
 	health = 100

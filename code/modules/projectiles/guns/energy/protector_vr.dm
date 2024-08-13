@@ -16,7 +16,7 @@
 	item_state = "gun"
 
 	fire_sound = 'sound/weapons/Taser.ogg'
-	projectile_type = /obj/item/projectile/beam/stun
+	projectile_type = /obj/item/projectile/beam/stun/med //CHOMPedit, default proj uses weak stun but firemode switches to med, fixing
 
 	modifystate = "stun"
 

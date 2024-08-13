@@ -1,3 +1,4 @@
+/* Combat refactor walkback
 /obj/machinery/porta_turret
 	health = 40				//the turret's health
 	maxhealth = 40			//turrets maximal health.
@@ -22,7 +23,7 @@
 	health = 125
 	maxhealth = 125
 
-
+*/
 /obj/machinery/porta_turret/obelisk
 	name = "defense obelisk"
 	catalogue_data = list(/datum/category_item/catalogue/technology/turret)

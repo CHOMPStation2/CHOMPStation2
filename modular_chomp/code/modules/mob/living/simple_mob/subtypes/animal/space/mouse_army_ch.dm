@@ -1,7 +1,8 @@
+/* Combat refactor changes commented out
 /mob/living/simple_mob/animal/space/mouse_army
 	maxHealth = 25
 	health = 25
-
+*/
 //Honestly with pretty low damage I am not touching it.
 /mob/living/simple_mob/animal/space/mouse_army/operative
 	icon_state = "mouse_operative"
@@ -33,7 +34,7 @@
 	icon_dead = "mouse_stealth_dead"
 	icon_rest = "mouse_stealth_sleep"
 
-
+/* Combat refactor changes commented out
 /mob/living/simple_mob/mechanical/mecha/mouse_tank
 	maxHealth = 75
 
@@ -43,3 +44,4 @@
 
 /mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator
 	maxHealth = 150
+*/

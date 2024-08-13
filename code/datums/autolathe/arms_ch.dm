@@ -71,3 +71,22 @@
 	name = "flamethrower"
 	path =/obj/item/weapon/flamethrower/full
 	hidden = 1
+
+/datum/category_item/autolathe/arms/rifle_145
+	name = "14.5mm round"
+	path = /obj/item/ammo_casing/a145
+	hidden = 1
+
+/datum/category_item/autolathe/arms/rifle_145ap
+	name = "14.5mm round (sabot)"
+	path = /obj/item/ammo_casing/a145/highvel
+	hidden = 1
+/datum/category_item/autolathe/arms/foamdart
+	name = "foam dart"
+	path = /obj/item/ammo_casing/afoam_dart
+	hidden = 0
+
+/datum/category_item/autolathe/arms/foamdartriot
+	name = "riot foam dart"
+	path = /obj/item/ammo_casing/afoam_dart/riot
+	hidden = 1
