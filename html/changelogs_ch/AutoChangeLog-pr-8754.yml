@@ -1,0 +1,6 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - balance: "Player controled zorgoia now can inject prey."
+  - image: "Modified the zorgoia simplemob sprite majorly now with customisation."
+  - image: "Removed Herobrine"
