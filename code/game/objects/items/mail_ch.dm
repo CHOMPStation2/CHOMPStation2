@@ -42,7 +42,10 @@
 	var/stamp_offset_x = 0
 	// Physical offset of stamps on the object. Y direction.
 	var/stamp_offset_y = 2
+	// If the mail is actively being opened right now
 	var/opening = FALSE
+	// If the mail has been scanned with a mail scanner
+	var/scanned
 
 /obj/item/mail/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return
@@ -336,6 +339,68 @@
 		/obj/item/stolenpackage,
 		/obj/item/contraband
 	)
+
+// Mail Scanner
+/obj/item/mail_scanner
+	name = "mail scanner"
+	desc = "Sponsored by the Intergalactic Mail Service, this device logs mail deliveries in exchance for financial compensation."
+	force = 0
+	throwforce = 0
+	icon = 'modular_chomp/icons/obj/bureaucracy.dmi'
+	icon_state = "mail_scanner"
+	slot_flags = SLOT_BELT
+	w_class = ITEMSIZE_SMALL
+	var/cargo_points = 5
+	var/obj/item/mail/saved
+
+/obj/item/mail_scanner/examine(mob/user)
+	. = ..()
+	. += SPAN_NOTICE("Scan a letter to log it into the active database, then scan the person you wish to hand the letter to. Correctly scanning the recipient of the letter logged into the active database will add points to the supply budget.")
+
+/obj/item/mail_scanner/attack()
+	return
+
+/obj/item/mail_scanner/afterattack(atom/A, mob/user)
+	if(istype(A, /obj/item/mail))
+		var/obj/item/mail/saved_mail = A
+		if(saved_mail.scanned)
+			user.balloon_alert(user, "This letter has already been scanned!")
+			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			return
+		user.balloon_alert(user, "Mail added to database")
+		playsound(loc, 'modular_chomp/sound/items/mail/mailscanned.ogg', 50, TRUE)
+		saved = A
+		return
+	if(isliving(A))
+		var/mob/living/M = A
+
+		if(!saved)
+			user.balloon_alert(user, "No logged mail!")
+			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			return
+
+		var/mob/living/recipient = saved.recipient
+
+		if(M.stat == DEAD)
+			to_chat(user, SPAN_WARNING("Consent Verification failed: You can't deliver mail to a corpse!"))
+			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			return
+		if(M.real_name != recipient.real_name)
+			to_chat(user, SPAN_WARNING("Identity Verification failed: Target is not authorized recipient of this envelope!"))
+			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			return
+		if(!M.client)
+			to_chat(user, SPAN_WARNING("Consent Verification failed: The scanner does not accept orders from SSD crewmemmbers!"))
+			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			return
+
+		saved.scanned = TRUE
+		saved = null
+
+		cargo_points = rand(5, 10)
+		to_chat(user, SPAN_NOTICE("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
+		playsound(loc, 'modular_chomp/sound/items/mail/mailapproved.ogg', 50, TRUE)
+		SSsupply.points += cargo_points
 
 // JUNK MAIL STUFF
 
