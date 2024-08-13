@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - qol: "reduces nutrition gain of trash for sleepers from 5 to 1, there's enough ways to get nutrition and some units, like janitors can collect a lot of trash into their sleeper"
