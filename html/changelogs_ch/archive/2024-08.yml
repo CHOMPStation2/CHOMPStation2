@@ -86,3 +86,57 @@
 2024-08-13:
   RandoGuy999:
   - bugfix: Souls caught in the vore soulcatcher will now actually have their prefs.
+2024-08-14:
+  Asher-42:
+  - rscadd: Added in smol raptor borgs from bubber station!
+  CHOMPStation2:
+  - bugfix: fixed tails layering weirdly under the character on character setup
+  - bugfix: Species blood color is used again
+  - qol: Blood color reset button now uses the species' default
+  - qol: Blood color button now has a colored dot
+  - rscadd: Reagent Dispensers now allow you to save a series of button presses as
+      a recipe/macro and replay it. This is per-dispenser per-shift.
+  - bugfix: random loot spawners delete properly
+  - qol: adds counter-clockwise rotation to pipes, grave markers, windoors, infrared
+      assemblies, vending machines, drill braces, floor tubes, chemical dispensers,
+      water coolers, disposal pipes, shield capacitors, and micro roads
+  - bugfix: prevents cortical borers from crashing VR pods
+  - qol: removes 0 tick blood dry timers from maploaded blood
+  - bugfix: prevents storing grabs in crates
+  - bugfix: fixes look-up verb when outdoors
+  - rscadd: vehicles obey gravity
+  - rscadd: cargo tug can dangerously traverse stairs
+  - bugfix: fixes incorrect "TECH_MAGNETS" defines
+  - bugfix: fixes med/sec bot runtimes
+  - bugfix: fixes injury/stumblevore proccing every step when buckled to borgs or
+      taurs
+  - bugfix: fixes item interactions with virus dishes
+  Kashargul:
+  - qol: reduces nutrition gain of trash for sleepers from 5 to 1, there's enough
+      ways to get nutrition and some units, like janitors can collect a lot of trash
+      into their sleeper
+  MeepleMuncher:
+  - rscadd: More emotes for mind-binded individuals
+  TheCaramelion:
+  - rscadd: Mail Scanner, a tool for mail carriers to verify mail delivery
+  - qol: Mailman > Mail Carrier
+  - qol: Mail Carriers start with their job stuff in their backpack now
+  tacoguy7765093:
+  - balance: Mob HP has been buffed back to normal values, mostly double the HP
+  - balance: Projectiles are notably more lethal now. Double the amount, damage breakpoints
+      are now 20/40/60 instead of 10/20/40,
+  - bugfix: Fixes revolvers using the wrong projectile path.
+  - balance: Laser weaponry now has less shots to compensate for higher damage.
+  - balance: 14.5mm ammo is now separate from big ammo.
+  - balance: Foam and riot foam darts are now printable
+  - balance: increased cost of 14.5mm ammo
+  - bugfix: Fixed autolathes printing the wrong bullet paths involving 14.5
+  - balance: Foam Riot Darts 50->20
+  - qol: Foam riot darts are now printable
+  - bugfix: Fixed weapons that fire medium/large bullets firing the wrong projectile.
+  - bugfix: Fixed rubbershot being as lethal as the real thing.
+  - sound: Added better sounds for the sniper rifles.
+  - balance: Rubbershot doesn't cause bleeding anymore.
+  - balance: Player controled zorgoia now can inject prey.
+  - image: Modified the zorgoia simplemob sprite majorly now with customisation.
+  - image: Removed Herobrine
