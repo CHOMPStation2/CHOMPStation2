@@ -110,3 +110,26 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/mining/smolraptorminersprite
+	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_min.dmi'
+
+/datum/robot_sprite/dogborg/mining/smolraptorcargosprite
+	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_car.dmi'
+
+
+/datum/robot_sprite/dogborg/mining/smolraptorminersprite/smolraptorminer
+	name = "Small Raptor"
+	sprite_icon_state = "smolraptor"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = FALSE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/mining/smolraptorcargosprite/smolraptorcargo
+	name = "Small Raptor"
+	sprite_icon_state = "smolraptor"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = FALSE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")

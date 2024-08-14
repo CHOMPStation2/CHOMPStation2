@@ -50,3 +50,14 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/command/smolraptorcommandsprite
+	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_cc.dmi'
+
+/datum/robot_sprite/dogborg/command/smolraptorcommandsprite/smolraptorcommand
+	name = "Small Raptor"
+	sprite_icon_state = "smolraptor"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = FALSE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
