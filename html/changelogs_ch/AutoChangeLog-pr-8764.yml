@@ -1,0 +1,6 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - bugfix: "Species blood color is used again"
+  - qol: "Blood color reset button now uses the species' default"
+  - qol: "Blood color button now has a colored dot"
