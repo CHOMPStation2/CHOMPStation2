@@ -1,5 +1,4 @@
-//I think most of the energy weapons are security but I regonize a few of this from the aliens and drones.
-//Combat refactor walkback, damage values will be reverted but bonuses and AP will stay, idk if this will affect balance
+//THIS FILE HAS BEEN UNTICKED, We already got energy_ch.dm, we dont need to override twice
 /obj/item/projectile/energy/excavate
 	//damage = 20
 	armor_penetration = 60
