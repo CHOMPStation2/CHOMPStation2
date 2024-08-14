@@ -1,0 +1,4 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "Reagent Dispensers now allow you to save a series of button presses as a recipe/macro and replay it. This is per-dispenser per-shift."
