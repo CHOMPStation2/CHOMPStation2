@@ -1,6 +1,6 @@
 /mob/living/simple_mob/vore/zorgoia
 	name = "zorgoia"
-	desc = "It's a a reptilian mammal hybrid, known for its voracious nature and love for fruits. By more popular terms its refered to as the furry slinky!"
+	desc = "It's a a reptilian mammal hybrid, known for its voracious nature and love for fruits. By more popular terms its referred to as the furry slinky!"
 	tt_desc = "Zorgoyuh slinkus"
 	icon = 'modular_chomp/icons/mob/zorgoia64x32.dmi' //We use the new modular ones now
 	icon_state = null //Overlay system will make the goias
@@ -13,6 +13,9 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 15 //Don't break my bones bro
 	see_in_dark = 5
+	response_help = "pets"
+	response_disarm = "bops"
+	response_harm = "hits"
 	attacktext = list("mauled")
 	friendly = list("nuzzles", "noses softly at", "noseboops", "headbumps against", "nibbles affectionately on")
 	meat_amount = 5
@@ -30,18 +33,19 @@
 	buckle_lying = FALSE
 	mount_offset_y = 10
 
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/zorgoia
 	var/mob/living/carbon/human/friend
 	var/tamed = 0
 	var/tame_chance = 50 //It's a fiddy-fiddy default you may get a buddy pal or you may get mauled and ate. Win-win!
 
 	color = null //color is selected when spawned
 
-	//say_list_type = /datum/say_list/zorgoia
 	vore_active = 1
 	vore_capacity = 3
 	vore_icons = 0 //The icon system down there handles the vore belly
 	vore_pounce_chance = 35
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+	//Todo: Give zorgoia belly text when I am not coding this at 4AM
 
 
 	can_be_drop_prey = FALSE
@@ -414,9 +418,19 @@
 	add_verb(src,/mob/living/proc/toggle_rider_reins)
 	movement_cooldown = 0
 
+/mob/living/simple_mob/vore/zorgoia/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
 /mob/living/simple_mob/vore/zorgoia/death() //are they going to be ok?
 	. = ..()
 	cut_overlays()
 
 /mob/living/simple_mob/vore/zorgoia/tamed
 	tamed = TRUE
+
+/datum/ai_holder/simple_mob/melee/evasive/zorgoia
+
+/datum/ai_holder/simple_mob/melee/evasive/zorgoia/New(var/mob/living/simple_mob/vore/otie/new_holder)
+	.=..()
+	if(new_holder.tamed)
+		hostile = FALSE
