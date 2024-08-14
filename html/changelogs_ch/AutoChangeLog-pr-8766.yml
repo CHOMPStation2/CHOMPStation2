@@ -1,0 +1,15 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - bugfix: "random loot spawners delete properly"
+  - qol: "adds counter-clockwise rotation to pipes, grave markers, windoors, infrared assemblies, vending machines, drill braces, floor tubes, chemical dispensers, water coolers, disposal pipes, shield capacitors, and micro roads"
+  - bugfix: "prevents cortical borers from crashing VR pods"
+  - qol: "removes 0 tick blood dry timers from maploaded blood"
+  - bugfix: "prevents storing grabs in crates"
+  - bugfix: "fixes look-up verb when outdoors"
+  - rscadd: "vehicles obey gravity"
+  - rscadd: "cargo tug can dangerously traverse stairs"
+  - bugfix: "fixes incorrect \"TECH_MAGNETS\" defines"
+  - bugfix: "fixes med/sec bot runtimes"
+  - bugfix: "fixes injury/stumblevore proccing every step when buckled to borgs or taurs"
+  - bugfix: "fixes item interactions with virus dishes"
