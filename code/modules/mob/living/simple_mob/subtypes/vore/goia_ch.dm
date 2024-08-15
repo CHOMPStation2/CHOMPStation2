@@ -98,7 +98,8 @@
 	)
 	var/list/ear_styles = list(
 		"null",
-		"zorgoia_ears"
+		"zorgoia_ears",
+		"zorgoia_ears2"
 	)
 	var/list/spots_styles = list(
 		"null",
