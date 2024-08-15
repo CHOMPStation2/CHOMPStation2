@@ -1572,7 +1572,6 @@ window "text_editor"
 		saved-params = ""
 		multi-line = true
 
-<<<<<<< HEAD
 window "statwindow"
 	elem "statwindow"
 		type = MAIN
@@ -1589,7 +1588,7 @@ window "statwindow"
 		anchor1 = 0,0
 		anchor2 = 100,100
 		is-visible = false
-=======
+
 window "tgui_say"
 	elem "tgui_say"
 		type = MAIN
@@ -1607,5 +1606,4 @@ window "tgui_say"
 		size = 360x30
 		anchor1 = 0,0
 		anchor2 = 0,0
->>>>>>> 7a7920f29e... TGUI Say (#16160)
 		saved-params = ""

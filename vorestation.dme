@@ -137,11 +137,8 @@
 #include "code\__defines\span_vr.dm"
 #include "code\__defines\species_languages.dm"
 #include "code\__defines\species_languages_vr.dm"
-<<<<<<< HEAD
 #include "code\__defines\species_languages_YW.dm"
-=======
 #include "code\__defines\speech_channels.dm"
->>>>>>> 7a7920f29e... TGUI Say (#16160)
 #include "code\__defines\spells.dm"
 #include "code\__defines\sprite_sheets.dm"
 #include "code\__defines\sprite_sheets_ch.dm"
@@ -174,16 +171,12 @@
 #include "code\__defines\dcs\flags.dm"
 #include "code\__defines\dcs\helpers.dm"
 #include "code\__defines\dcs\signals.dm"
-<<<<<<< HEAD
 #include "code\__defines\dcs\signals_ch.dm"
 #include "code\__defines\dcs\signals_ch\signals_subsystem.dm"
 #include "code\__defines\dcs\signals_ch\signals_mob\signals_mob_main_ch.dm"
 #include "code\__defines\traits\_traits.dm"
-=======
-#include "code\__defines\traits\_traits.dm"
 #include "code\__defines\traits\declarations.dm"
 #include "code\__defines\traits\sources.dm"
->>>>>>> 7a7920f29e... TGUI Say (#16160)
 #include "code\_global_vars\_regexes.dm"
 #include "code\_global_vars\bitfields.dm"
 #include "code\_global_vars\configuration_ch.dm"

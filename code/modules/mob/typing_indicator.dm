@@ -13,7 +13,7 @@
 
 /mob/verb/say_wrapper()
 	set name = "Say verb"
-	set category = "IC"
+	set category = "IC.Chat" //CHOMPEdit
 
 	if(is_preference_enabled(/datum/client_preference/tgui_say))
 		winset(src, null, "command=[client.tgui_say_create_open_command(SAY_CHANNEL)]")
@@ -29,7 +29,7 @@
 
 /mob/verb/me_wrapper()
 	set name = "Me verb"
-	set category = "IC"
+	set category = "IC.Chat" //CHOMPEdit
 
 	if(is_preference_enabled(/datum/client_preference/tgui_say))
 		winset(src, null, "command=[client.tgui_say_create_open_command(ME_CHANNEL)]")
@@ -45,7 +45,7 @@
 
 /mob/verb/whisper_wrapper()
 	set name = "Whisper verb"
-	set category = "IC"
+	set category = "IC.Subtle" //CHOMPEdit
 
 	if(is_preference_enabled(/datum/client_preference/tgui_say))
 		winset(src, null, "command=[client.tgui_say_create_open_command(WHIS_CHANNEL)]")
@@ -62,7 +62,7 @@
 
 /mob/verb/subtle_wrapper()
 	set name = "Subtle verb"
-	set category = "IC"
+	set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 
 	if(is_preference_enabled(/datum/client_preference/tgui_say))
@@ -73,10 +73,7 @@
 		client?.start_thinking()
 		client?.start_typing()
 	var/message = tgui_input_text(usr, "Type your message:", "Subtle", multiline = TRUE)
-<<<<<<< HEAD
-=======
 	client?.stop_thinking()
 
->>>>>>> 7a7920f29e... TGUI Say (#16160)
 	if(message)
 		me_verb_subtle(message)
