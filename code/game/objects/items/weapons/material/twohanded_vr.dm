@@ -59,7 +59,6 @@
 	edge = FALSE
 	sharp = FALSE
 
-/* ChompEDit: This code provides full protection from melee, and I am unsure how to fix it currently. So temp.removal hopefully.
 /obj/item/weapon/material/twohanded/staff/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	var/parry_chance
 	if(istype(damage_source, /obj/item/projectile))	//can't block ranged attacks, only melee!
@@ -72,9 +71,8 @@
 		if(unique_parry_check(user, attacker, damage_source) && prob(parry_chance))
 			user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
 			playsound(src, 'sound/weapons/punchmiss.ogg', 50, 1)
-		return 1
+			return 1
 	return 0
-*/
 
 /obj/item/weapon/material/twohanded/staff/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	. = ..()
