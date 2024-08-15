@@ -17,8 +17,8 @@
 	name = "energy ball"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "spikeenergyball"
-	damage = 40 //after remebering throwing things into walls deals bonus damage. Will that wall thwacking out damage this 5 bonus...yes. But shotgun likly wins most DPS tests anyway
-	armor_penetration = 40 //damage and AP matching makes brain happy for some reason. No real logic here, just brain saying yes, this is right
+	damage = 60 //after remebering throwing things into walls deals bonus damage. Will that wall thwacking out damage this 5 bonus...yes. But shotgun likly wins most DPS tests anyway
+	armor_penetration = 60 //damage and AP matching makes brain happy for some reason. No real logic here, just brain saying yes, this is right
 	range = 7
 	speed = 5
 	check_armour = "melee"
@@ -28,7 +28,7 @@
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "shotgun_blast"
-	damage = 35
+	damage = 45
 	range = 3
 	check_armour = "laser"
 
@@ -44,14 +44,14 @@
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "blaster_blast"
-	damage = 25
+	damage = 30
 	range = 5
 	check_armour = "laser"
 
 /obj/item/projectile/beam/precursor_tyr
 	name = "laser"
 	icon_state = "laser"
-	damage = 25
+	damage = 30
 	damage_type = BURN
 	check_armour = "laser"
 	range = 4

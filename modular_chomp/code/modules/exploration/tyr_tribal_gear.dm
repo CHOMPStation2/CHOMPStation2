@@ -223,4 +223,61 @@
 		return TRUE
 	return FALSE
 
-//Tier 2...is mostly going into a new gun folder. Unsure what to do for the armor currently.
+//Placeholder placing here, but the special items found in the strange vaults of tyr.
+//Starry Night
+//ehh either making custom medicells later or some fancy science tool
+
+
+//Blizzard
+/obj/item/weapon/tool/wirecutters/hybrid/alien
+	toolspeed = 0.2
+
+/obj/item/weapon/tool/wrench/hybrid
+	toolspeed = 0.2
+
+/obj/item/weapon/tool/crowbar/hybrid
+	toolspeed = 0.2
+
+/obj/item/weapon/tool/screwdriver/hybrid
+	toolspeed = 0.2
+
+/obj/item/weapon/weldingtool/experimental/hybrid
+	eye_safety_modifier = 0
+
+//Rad Storm
+/obj/item/weapon/pickaxe/diamonddrill/alien
+	name = "strane mining drill"
+	icon_state = "diamonddrill"
+	item_state = "jackhammer"
+	digspeed = 6
+	sand_dig = TRUE
+	reach = 3 //proabaly useless but someone may utilize it.
+	color = "#FF3300"
+
+//Blood Moon
+/obj/item/weapon/melee/energy/sword/dualsaber
+	name = "dual energy sword"
+	desc = "May the force be within you."
+	active_force = 40
+	active_armourpen = 70
+	active_throwforce = 40
+	icon_state = "dualsaber"
+	item_state = "dualsaber"
+	sharp = TRUE
+	edge = TRUE
+	can_cleave = TRUE
+	colorable = TRUE
+	defend_chance = 65
+
+
+//Five player check
+/obj/item/shield_projector/rectangle/automatic/tyrvault
+	shield_health = 250
+	max_shield_health = 250
+	shield_regen_delay = 600 SECONDS
+	shield_regen_amount = 50
+	size_x = 4
+	size_y = 4
+	color = "#FF3300"
+	high_color = "#FF3300"
+	low_color = "#F08F4F"

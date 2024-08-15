@@ -4,9 +4,9 @@ var/datum/planet/tyr/planet_tyr = null
 	seconds_in_day = 24 HOURS
 
 /datum/planet/tyr
-	name = "Thor"
-	desc = "Sif's moon, heavy in flora and fauna." //rewrite me
-	current_time = new /datum/time/thor()
+	name = "Tyr"
+	desc = "Tyr, a hot planet." //rewrite me
+	current_time = new /datum/time/tyr()
 //	expected_z_levels = list(1) // This is defined elsewhere.
 	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/thor
 
@@ -103,12 +103,11 @@ var/datum/planet/tyr/planet_tyr = null
 		WEATHER_FLAMESTORM			= new /datum/weather/tyr/flamestorm(),
 		WEATHER_SANDSTORM			= new /datum/weather/tyr/sandstorm(),
 		WEATHER_HEAVYSANDSTORM			= new /datum/weather/tyr/sandstorm_fierce(),
-		WEATHER_SIRENS			= new /datum/weather/tyr/siren(),
-		WEATHER_ACIDRAIN			= new /datum/weather/tyr/acidrain(),
-		WEATHER_BLOODSKY			= new /datum/weather/tyr/bloodsky(),
-		WEATHER_SNOWFALL			= new /datum/weather/tyr/freezefall(),
-		WEATHER_OILFALL			= new /datum/weather/tyr/oilfall(),
-		WEATHER_STARYYNIGHT			= new /datum/weather/tyr/starrynight()
+		WEATHER_FALLOUT_TEMP			= new /datum/weather/tyr/starrynight(),
+		WEATHER_BLIZZARD	= new /datum/weather/tyr/blizzard(),
+		WEATHER_STORM		= new /datum/weather/tyr/storm(),
+		WEATHER_FOG			= new /datum/weather/tyr/fog()
+
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 100
@@ -122,10 +121,9 @@ var/datum/planet/tyr/planet_tyr = null
 /datum/weather/tyr/clear
 	name = "clear"
 	transition_chances = list(
-		WEATHER_FIRESTART = 30,
+		WEATHER_FIRESTART = 35,
 		WEATHER_CLEAR = 30,
-		WEATHER_SANDSTORM = 30,
-		WEATHER_SIRENS = 10
+		WEATHER_SANDSTORM = 35
 		)
 	transition_messages = list(
 		"The sky clears up.",
@@ -225,7 +223,7 @@ var/datum/planet/tyr/planet_tyr = null
 
 /datum/weather/tyr/sandstorm_fierce
 	name = "fierce sandstorm"
-	icon_state = "sandstorm_fierce"
+	icon_state = "sandstorm"
 	transition_chances = list(
 		WEATHER_FIRESTART = 25,
 		WEATHER_CLEAR = 25,
@@ -236,6 +234,8 @@ var/datum/planet/tyr/planet_tyr = null
 		)
 	sky_visible = TRUE
 	observed_message = "The sky is full of sand."
+	light_color = "#996600"
+	light_modifier = 0.5
 
 /datum/weather/tyr/sandstorm_fierce/process_effects()
 	..()
@@ -261,59 +261,124 @@ var/datum/planet/tyr/planet_tyr = null
 			if(show_message)
 				to_chat(H, effect_message)
 
-
-/datum/weather/tyr/siren
-	name = "unknown"
-	transition_chances = list(
-		WEATHER_ACIDRAIN = 20,
-		WEATHER_BLOODSKY = 20,
-		WEATHER_SNOWFALL = 20,
-		WEATHER_OILFALL = 20,
-		WEATHER_STARRYNIGHT = 20
-		)
-	transition_messages = list(
-		"The sky clears up but sirens are heard in the distance."
-		)
-	sky_visible = TRUE
-	observed_message = "The sky is clear but siren are heard from the distance."
-
-
-/datum/weather/tyr/acidrain
-	name = "unknown"
-	icon_state = "toxic_rain"
-	light_modifier = 0.5
-	light_color = "#00FF00"
-	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_ACIDRAIN = 50)
-
-/datum/weather/tyr/bloodsky
-	name = "unknown"
-	light_modifier = 0.5
-	light_color = "#FF0000"
-	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_BLOODSKY = 50)
-
-/datum/weather/tyr/freezefall
-	name = "unknown"
-	icon_state = "snowfall_heavy_old"
-	temp_high = 223.15
-	temp_low = 200.15
-	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_SNOWFALL = 50)
-
-/datum/weather/tyr/oilfall
-	name = "unknown"
-	icon_state = "oilfall"
-	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_OILFALL = 50)
-
+//Anomalous/summonable weather
 /datum/weather/tyr/starrynight
 	name = "unknown"
 	icon_state = "starry_night"
 	transition_chances = list(
 		WEATHER_CLEAR = 50,
-		WEATHER_STARRYNIGHT = 50)
+		WEATHER_FALLOUT_TEMP = 50)
+
+/datum/weather/tyr/starrynight/process_effects()
+	..()
+	for(var/mob/living/carbon/H as anything in human_mob_list)
+		if(H?.z in holder.our_planet.expected_z_levels)
+			var/turf/T = get_turf(H)
+			if(!T.is_outdoors())
+				continue
+			H.add_modifier(/datum/modifier/starrynight_boon, 1 SECONDS, src)
+
+/datum/weather/tyr/blizzard
+	name = "blizzard"
+	icon_state = "snowfall_heavy_old"
+	temp_high = 123.15
+	temp_low = 100.15
+	transition_chances = list(
+		WEATHER_CLEAR = 50,
+		WEATHER_BLIZZARD = 50)
+	outdoor_sounds_type = /datum/looping_sound/weather/storm
+	indoor_sounds_type = /datum/looping_sound/weather/storm/indoors
+
+/datum/weather/tyr/storm
+	icon_state = "fallout"
+	light_modifier = 0.7
+	light_color = "#CCFFCC"
+	transition_chances = list(
+		WEATHER_CLEAR = 50,
+		WEATHER_STORM = 50)
+	imminent_transition_message = "Sky and clouds are growing sickly green... Radiation storm is approaching, get to cover!"
+	outdoor_sounds_type = /datum/looping_sound/weather/wind
+	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+
+	// How much radiation a mob gets while on an outside tile.
+	var/direct_rad_low = RAD_LEVEL_LOW
+	var/direct_rad_high = RAD_LEVEL_MODERATE
+
+	// How much radiation is bursted onto a random tile near a mob.
+	var/fallout_rad_low = RAD_LEVEL_HIGH
+	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
+
+/datum/weather/tyr/storm/process_effects()
+	..()
+	for(var/mob/living/L as anything in living_mob_list)
+		if(L.z in holder.our_planet.expected_z_levels)
+			irradiate_nearby_turf(L)
+			var/turf/T = get_turf(L)
+			if(!T.is_outdoors())
+				continue // They're indoors, so no need to irradiate them with fallout.
+
+			L.rad_act(rand(direct_rad_low, direct_rad_high))
+
+// This makes random tiles near people radioactive for awhile.
+// Tiles far away from people are left alone, for performance.
+/datum/weather/tyr/storm/proc/irradiate_nearby_turf(mob/living/L)
+	if(!istype(L))
+		return
+	var/list/turfs = RANGE_TURFS(world.view, L)
+	var/turf/T = pick(turfs) // We get one try per tick.
+	if(!istype(T))
+		return
+	if(T.is_outdoors())
+		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
+
+
+
+/datum/weather/tyr/fog
+	light_modifier = 0.5
+	light_color = "#FF0000"
+	transition_chances = list(
+		WEATHER_CLEAR = 50,
+		WEATHER_FOG = 50)
+	var/next_lightning_strike = 0 // world.time when lightning will strike.
+	var/min_lightning_cooldown = 5 SECONDS
+	var/max_lightning_cooldown = 1 MINUTE
+
+/datum/weather/tyr/fog/process_effects()
+	..()
+	for(var/mob/living/L as anything in living_mob_list)
+		if(L.z in holder.our_planet.expected_z_levels)
+			var/turf/T = get_turf(L)
+			if(!T.is_outdoors())
+				continue // They're indoors, so no need to rain on them.
+
+			// If they have an open umbrella, it'll guard from rain
+			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			if(!istype(U) || !U.open)
+				U = L.get_inactive_hand()
+
+			if(istype(U) && U.open)
+				if(show_message)
+					to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
+				continue
+
+
+			L.water_act(2)
+			if(show_message)
+				to_chat(L, effect_message)
+
+	handle_lightning()
+
+// This gets called to do lightning periodically.
+// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
+/datum/weather/tyr/fog/proc/handle_lightning()
+	if(world.time < next_lightning_strike)
+		return // It's too soon to strike again.
+	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
+	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
+	lightning_strike(T)
+
+/*
+WEATHER_BLIZZARD	= new (),
+		WEATHER_STORM		= new(),
+		WEATHER_FOG			= new /datum/weather/tyr/fog()
+	*/

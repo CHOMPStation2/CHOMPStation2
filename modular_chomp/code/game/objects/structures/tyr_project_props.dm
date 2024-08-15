@@ -22,3 +22,47 @@
 	anchored = TRUE
 
 
+
+/obj/structure/prop/weatherdoor
+	name = "strange door"
+	icon = 'modular_chomp/icons/obj/weather_ruins.dmi'
+	icon_state = "star_door"
+	anchored = TRUE
+	var/weather_requirment = /datum/weather/tyr/starrynight
+
+
+/obj/structure/prop/weatherdoor/proc/get_planet()
+	var/turf/T = get_turf(src)
+	if(!T)
+		return
+
+	if(!T.is_outdoors())
+		return
+
+	var/datum/planet/P = SSplanets.z_to_planet[T.z]
+	if(!P)
+		return
+	return P
+
+/obj/structure/prop/weatherdoor/attack_hand(mob/living/user)
+	var/datum/planet/P = get_planet()
+	if(user.is_incorporeal())
+		return
+	to_chat(user, "You push on the [src].")
+	if(P.weather_holder == weather_requirment)
+		visible_message(span_orange("<B>The [src] slowly opens!.</B>"))
+		density = FALSE
+		icon_state = "open_door"
+
+
+/obj/structure/prop/weatherdoor/tyrblizz
+	icon_state = "blizzard_door"
+	weather_requirment = /datum/weather/tyr/blizzard
+
+/obj/structure/prop/weatherdoor/tyrstorm
+	icon_state = "storm_door"
+	weather_requirment = /datum/weather/tyr/storm
+
+/obj/structure/prop/weatherdoor/tyrfog
+	icon_state = "fog_door"
+	weather_requirment = /datum/weather/tyr/fog
