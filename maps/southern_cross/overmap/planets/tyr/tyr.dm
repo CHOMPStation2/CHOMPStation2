@@ -103,6 +103,19 @@
 /area/surface/tyr/eclipse_stronghold
 	name = "Base Neon"
 	icon_state = "bluenew"
+	requires_power = FALSE //note to self, remove when I figure out how engineering works
+
+/area/surface/tyr/eclipse_stronghold/sectora
+
+/area/surface/tyr/eclipse_stronghold/sectorb
+
+/area/surface/tyr/eclipse_stronghold/sectorc
+
+/area/surface/tyr/eclipse_stronghold/sectord
+
+/area/surface/tyr/eclipse_stronghold/sectore
+
+/area/surface/tyr/eclipse_stronghold/sectorfinale
 
 /turf/unsimulated/wall/planetary/normal/tyr
 	oxygen		= TYR_MOL_O2

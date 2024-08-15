@@ -232,16 +232,16 @@
 /obj/item/weapon/tool/wirecutters/hybrid/alien
 	toolspeed = 0.2
 
-/obj/item/weapon/tool/wrench/hybrid
+/obj/item/weapon/tool/wrench/hybrid/alien
 	toolspeed = 0.2
 
-/obj/item/weapon/tool/crowbar/hybrid
+/obj/item/weapon/tool/crowbar/hybrid/alien
 	toolspeed = 0.2
 
-/obj/item/weapon/tool/screwdriver/hybrid
+/obj/item/weapon/tool/screwdriver/hybrid/alien
 	toolspeed = 0.2
 
-/obj/item/weapon/weldingtool/experimental/hybrid
+/obj/item/weapon/weldingtool/experimental/hybrid/alien
 	eye_safety_modifier = 0
 
 //Rad Storm

@@ -790,8 +790,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle //If you have a Nif, or are a borg you get hit with confusion and adds Edit, can't currently figure out NIF targeting
 	name = "Solar Eclipse Disabler Serpent"
 	desc = "A naga cladded in strange orange armor, seemingly guarded from lasers and energy based weaponry."
-	health = 90
-	maxHealth = 90
+	health = 120
+	maxHealth = 120
 	icon_state = "eclipse_disabler"
 	icon_living = "eclipse_disabler"
 	reload_max = 5
@@ -835,8 +835,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
 	desc = "A hungry looking naga, their strange armor protecting them from ballistics and physical weaponry."
-	health = 90
-	maxHealth = 90
+	health = 120
+	maxHealth = 120
 	reload_max = 6
 	movement_cooldown = 1
 
@@ -859,8 +859,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/plant
 	name = "Solar Eclipse Bioexpirment"
 	desc = "A strange armored looking plant."
-	health = 90
-	maxHealth = 90
+	health = 120
+	maxHealth = 120
 	reload_max = 6
 	movement_cooldown = 1
 
@@ -883,8 +883,8 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter
 	name = "Lunar Eclipse Experimenter"
 	desc = "A lizard cladded in strange red-purple armor, seemingly guarded from lasers and energy based weaponry."
-	health = 90
-	maxHealth = 90
+	health = 120
+	maxHealth = 120
 	icon_state = "eclipse_gravliz"
 	icon_living = "eclipse_gravliz"
 	reload_max = 1
@@ -905,8 +905,8 @@
 //The Precursor intative big folks
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit
 	name = "Lunar Eclipse Titan Hunter"
-	health = 90
-	maxHealth = 90
+	health = 120
+	maxHealth = 120
 	desc = "A strange being with resistance to brunt force trauma."
 	icon_state = "eclipse_titan"
 	melee_damage_lower = 20
@@ -933,8 +933,8 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/nuclear
 	name = "Solar Eclipse Nuclear Technician"
-	health = 90
-	maxHealth = 90
+	health = 120
+	maxHealth = 120
 	desc = "A strange being wearing a burn resistaint coat."
 	icon_state = "eclipse_nuke"
 	projectiletype = /obj/item/projectile/energy/declone
@@ -957,8 +957,8 @@
 //One is a familiar shape from Sif, the other is new and anomalous based.
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker //teleporting stalker
 	name = "Solar Eclipse Froststalker"
-	health = 90
-	maxHealth = 90
+	health = 120
+	maxHealth = 120
 	desc = "A somewhat see through being wearing a burn resistaint coat."
 	melee_damage_lower = 10
 	melee_damage_upper = 10
@@ -1018,8 +1018,8 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver
 	name = "Lunar Eclipse Abyss Diver"
-	health = 90
-	maxHealth = 90
+	health = 120
+	maxHealth = 120
 	desc = "A strange being wearing a blunt resistaint coat."
 	projectiletype = /obj/item/projectile/scatter/shotgun
 	icon_state = "eclipse_diver" //note to self try to redo this sprite sometime
