@@ -4,7 +4,7 @@
 
 /mob/verb/me_verb_subtle(message as message) //This would normally go in say.dm
 	set name = "Subtle"
-	set category = "IC.Subtle" //CHOMPEdit
+	//set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 

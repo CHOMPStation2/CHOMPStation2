@@ -5,8 +5,10 @@
 // Please do note that there is absolutely no bearing on what traits are added to what subtype of `/datum`, this is just an easily referenceable list sorted by type.
 // The only thing that truly matters about traits is the code that is built to handle the traits, and where that code is located. Nothing else.
 
+/* CHOMPRemove, see traits.dm
 GLOBAL_LIST_INIT(traits_by_type, list(
 	/mob = list(
 		"TRAIT_THINKING_IN_CHARACTER" = TRAIT_THINKING_IN_CHARACTER,
 	)
 ))
+*/
