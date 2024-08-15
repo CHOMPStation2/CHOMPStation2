@@ -6,24 +6,22 @@
 	has_vore_belly_resting_sprites = TRUE
 
 
-/datum/robot_sprite/dogborg/engineering/dullahanengineering
-	name = "Dullahan"
+/datum/robot_sprite/dogborg/engineering/dullahan
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_eng.dmi'
-	sprite_icon_state = "dullahaneng"
 	pixel_x = 0
+
+/datum/robot_sprite/dogborg/engineering/dullahan/engineer
+	name = "Dullahan"
+	sprite_icon_state = "dullahaneng"
 	rest_sprite_options = list("Default", "Sit")
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
-/datum/robot_sprite/dogborg/engineering/dullahanengineeringalt
+/datum/robot_sprite/dogborg/engineering/dullahan/engineeralt
 	name = "Dullahan v2"
-	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_eng.dmi'
 	sprite_icon_state = "dullahaneng_alt"
-	pixel_x = 0
 	rest_sprite_options = list("Default", "Sit")
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/engineering/smolraptorengineeringsprite
@@ -33,6 +31,5 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = FALSE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")

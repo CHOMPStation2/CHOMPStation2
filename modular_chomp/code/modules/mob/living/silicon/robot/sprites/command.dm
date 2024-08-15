@@ -58,6 +58,5 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = FALSE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")

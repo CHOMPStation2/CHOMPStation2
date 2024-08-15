@@ -22,7 +22,6 @@
 	name = "Dullahan"
 	sprite_icon_state = "dullahanexplo"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 
@@ -30,7 +29,6 @@
 	name = "Dullahan v2"
 	sprite_icon_state = "dullahanexplo_alt"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 

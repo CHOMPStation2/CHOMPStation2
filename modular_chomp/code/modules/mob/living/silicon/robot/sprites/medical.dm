@@ -102,38 +102,31 @@
 	has_dead_sprite = TRUE
 
 
-/datum/robot_sprite/dogborg/tall/dullahancrisismodule
+/datum/robot_sprite/dogborg/tall/dullahan
 	module_type = "Crisis"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med.dmi'
 	pixel_x = 0
-
-/datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisis
+/datum/robot_sprite/dogborg/tall/dullahan/crisis
 	name = "Dullahan"
 	sprite_icon_state = "dullahanmed"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
-	pixel_x = 0
 
-
-/datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisisalt
+/datum/robot_sprite/dogborg/tall/dullahan/crisisalt
 	name = "Dullahan v2"
 	sprite_icon_state = "dullahanmed_alt"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
-	pixel_x = 0
 
-/datum/robot_sprite/dogborg/smolraptormedicalsprite
+/datum/robot_sprite/dogborg/smolraptor
 	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_med.dmi'
 	module_type = "Crisis"
 
-/datum/robot_sprite/dogborg/smolraptormedicalsprite/smolraptormed
+/datum/robot_sprite/dogborg/smolraptor/crisis
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = FALSE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
