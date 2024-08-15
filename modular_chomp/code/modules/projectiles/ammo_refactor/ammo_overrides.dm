@@ -676,7 +676,7 @@ Medium Weapons
 /obj/item/weapon/gun/projectile/automatic/serdy/sks
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
-	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	projectile_type = /obj/item/projectile/bullet/rifle/a762/sniper
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mosin
 	caliber = "medium"
@@ -738,7 +738,7 @@ Medium Weapons
 
 /obj/item/weapon/gun/projectile/automatic/serdy/rpd
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762/sniper
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
