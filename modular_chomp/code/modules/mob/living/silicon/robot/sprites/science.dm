@@ -20,7 +20,6 @@
 	sprite_hud_icon_state = "sci-borg"
 	has_vore_belly_sprites = TRUE
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 
 /datum/robot_sprite/dogborg/tall/science/dullahan/scialt
 	name = "Dullahan v2"
@@ -28,7 +27,6 @@
 	sprite_hud_icon_state = "sci-borg"
 	has_vore_belly_sprites = TRUE
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 
 /datum/robot_sprite/dogborg/science/smolraptor
 	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_sci.dmi'
@@ -38,6 +36,5 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")

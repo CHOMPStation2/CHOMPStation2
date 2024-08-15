@@ -28,7 +28,6 @@
 	has_laser_sprite = FALSE //Missing from the dmi
 	has_taser_sprite = FALSE //ditto
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/tall/security/dullahan/secalt
@@ -38,7 +37,6 @@
 	has_laser_sprite = FALSE //Missing from the dmi
 	has_taser_sprite = FALSE //ditto
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/security/smolraptor
@@ -48,6 +46,5 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
