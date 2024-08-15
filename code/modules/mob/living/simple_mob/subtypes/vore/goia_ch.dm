@@ -44,8 +44,12 @@
 	vore_capacity = 3
 	vore_icons = 0 //The icon system down there handles the vore belly
 	vore_pounce_chance = 35
+	vore_bump_chance = 25
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
-	//Todo: Give zorgoia belly text when I am not coding this at 4AM
+	vore_stomach_name = "stomach"
+	vore_stomach_flavor = "You find yourself greedily gulped down into the zorgoia's stomach, the walls are suprinsingly roomy in comparason to other critters of this size as their stomach makes up a majority of their long noodle like body. Your body contorting with the zorgoias long shape as every inch of you is tightly bound by their glowy walls."
+	vore_default_contamination_flavor = "Acrid"
+	vore_default_item_mode = IM_DIGEST
 
 
 	can_be_drop_prey = FALSE
