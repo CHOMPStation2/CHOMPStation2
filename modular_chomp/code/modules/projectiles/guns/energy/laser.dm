@@ -1,3 +1,4 @@
+//File has been unticked due to combat refactor walk-back, things do more damage now
 /obj/item/weapon/gun/energy
 	charge_cost = 80
 

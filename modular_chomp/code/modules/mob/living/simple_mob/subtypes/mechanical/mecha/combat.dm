@@ -6,7 +6,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/hoverpod
 	projectiletype = /obj/item/projectile/energy/mob/smalllaser
-
+/* Combat refactor walkback
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced
 	maxHealth = 225
 
@@ -44,3 +44,4 @@
 // Immune to heat damage, resistant to lasers, and somewhat beefier. Still tries to melee you.
 /mob/living/simple_mob/mechanical/mecha/ripley/firefighter
 	maxHealth = 125
+*/

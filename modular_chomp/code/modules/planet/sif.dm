@@ -21,7 +21,10 @@
 		WEATHER_SANDSTORM 		= new /datum/weather/sif/sandstorm(),
 		WEATHER_TOXIN_RAIN		= new /datum/weather/sif/toxinrain(),
 		WEATHER_STARRY_RIFT		= new /datum/weather/sif/starryrift(),
-		WEATHER_MIDNIGHT_FOG	= new /datum/weather/sif/midnightfog()
+		WEATHER_MIDNIGHT_FOG	= new /datum/weather/sif/midnightfog(),
+		WEATHER_DOWNPOURWARNING = new /datum/weather/sif/downpourwarning(),
+		WEATHER_DOWNPOUR 		= new /datum/weather/sif/downpour(),
+		WEATHER_DOWNPOURFATAL 	= new /datum/weather/sif/downpourfatal() //CHOMPedit end
 		)
 //Weather
 /datum/weather/sif/fog
@@ -124,7 +127,7 @@
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(H, "<span class='notice'>Rain patters onto your umbrella.</span>")
+					to_chat(H, span_notice("Rain patters onto your umbrella."))
 				continue
 
 			var/target_zone = pick(BP_ALL)
@@ -246,3 +249,165 @@
 			if(!T.is_outdoors())
 				continue
 			H.add_modifier(/datum/modifier/midnightfog_boon, 1 SECONDS, src)
+
+/datum/weather/sif/fallout/temp
+	name = "short-term fallout"
+	timer_low_bound = 1
+	timer_high_bound = 3
+	transition_chances = list(
+		WEATHER_FALLOUT = 10,
+		WEATHER_RAIN = 50,
+		WEATHER_FOG = 35,
+		WEATHER_STORM = 20,
+		WEATHER_OVERCAST = 5
+		)
+/datum/weather/sif/downpourwarning
+	name = "early extreme monsoon"
+	light_modifier = 0.4
+	timer_low_bound = 1
+	timer_high_bound = 2
+
+	transition_chances = list(
+		WEATHER_DOWNPOUR = 100
+	)
+	observed_message = "It looks like a very bad storm is about to approach."
+	transition_messages = list(
+		span_danger("Inky black clouds cover the sky in a eerie rumble, get to cover!")
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/rainrumble
+	indoor_sounds_type = /datum/looping_sound/weather/rainrumble/indoors
+
+/datum/weather/sif/downpour
+	name = "extreme monsoon"
+	icon_state = "downpour"
+	light_modifier = 0.3
+	timer_low_bound = 1
+	timer_high_bound = 1
+	wind_high = 4
+	wind_low = 2
+	flight_failure_modifier = 100
+	effect_message = span_warning("Extreme rain is knocking you down!")
+
+	var/next_lightning_strike = 0 // world.time when lightning will strike.
+	var/min_lightning_cooldown = 5 SECONDS
+	var/max_lightning_cooldown = 15 SECONDS
+
+	transition_chances = list(
+		WEATHER_DOWNPOURFATAL = 90,
+		WEATHER_STORM = 10
+	)
+	observed_message = "Extreme rain is crushing you, get to cover!"
+	transition_messages = list(
+		span_danger("An immense downpour of falls on top of of the planet crushing anything in its path!")
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/rainheavy
+	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
+
+/datum/weather/sif/downpour/process_effects()
+	..()
+	for(var/mob/living/L as anything in living_mob_list)
+		if(L.z in holder.our_planet.expected_z_levels)
+			var/turf/T = get_turf(L)
+			if(!T.is_outdoors())
+				continue // They're indoors, so no need to rain on them.
+
+			// If they have an open umbrella, knock it off, this is more then an umbrella
+			if(ishuman(L))
+				var/mob/living/carbon/human/H = L
+				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				if(!istype(U) || !U.open)
+					U = L.get_inactive_hand()
+
+				if(istype(U) && U.open)
+					if(show_message)
+						to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
+						H.drop_both_hands()
+
+			L.water_act(2)
+			L.Weaken(3)
+			if(show_message)
+				to_chat(L, effect_message)
+
+	handle_lightning()
+
+// This gets called to do lightning periodically.
+// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
+/datum/weather/sif/downpour/proc/handle_lightning()
+	if(world.time < next_lightning_strike)
+		return // It's too soon to strike again.
+	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
+	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
+	lightning_strike(T)
+
+/datum/weather/sif/downpourfatal
+	name = "fatal monsoon"
+	icon_state = "downpourfatal"
+	light_modifier = 0.15
+	timer_low_bound = 1
+	timer_high_bound = 3
+	wind_high = 6
+	wind_low = 4
+	flight_failure_modifier = 100
+	effect_message = span_warning("Extreme rain is crushing you!")
+
+	var/next_lightning_strike = 0 // world.time when lightning will strike.
+	var/min_lightning_cooldown = 1 SECONDS
+	var/max_lightning_cooldown = 3 SECONDS
+
+	transition_chances = list(
+		WEATHER_RAIN = 90,
+		WEATHER_STORM = 10
+	)
+	observed_message = "Extreme rain is crushing you, get to cover!"
+	//No transition message, supposed to be the 'actual' rain
+	outdoor_sounds_type = /datum/looping_sound/weather/rainextreme
+	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
+
+/datum/weather/sif/downpourfatal/process_effects()
+	..()
+	for(var/mob/living/L as anything in living_mob_list)
+		if(L.z in holder.our_planet.expected_z_levels)
+			var/turf/T = get_turf(L)
+			if(!T.is_outdoors())
+				continue // They're indoors, so no need to rain on them.
+
+			// Knock the umbrella off your hands, aint protecting you c:
+			if(ishuman(L))
+				var/mob/living/carbon/human/H = L
+				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				if(!istype(U) || !U.open)
+					U = L.get_inactive_hand()
+
+				if(istype(U) && U.open)
+					if(show_message)
+						to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
+						H.drop_both_hands()
+
+			var/target_zone = pick(BP_ALL)
+			var/amount_blocked = L.run_armor_check(target_zone, "melee")
+			var/amount_soaked = L.get_armor_soak(target_zone, "melee")
+
+			var/damage = rand(10,30) //Ow
+
+			if(amount_blocked >= 30)
+				continue
+
+			if(amount_soaked >= damage)
+				continue // No need to apply damage.
+
+			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "rain bludgoning")
+			L.Weaken(3)
+			if(show_message)
+				to_chat(L, effect_message)
+
+
+	handle_lightning()
+
+// This gets called to do lightning periodically.
+// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
+/datum/weather/sif/downpourfatal/proc/handle_lightning()
+	if(world.time < next_lightning_strike)
+		return // It's too soon to strike again.
+	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
+	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
+	lightning_strike(T)

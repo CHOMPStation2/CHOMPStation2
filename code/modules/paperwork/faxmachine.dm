@@ -38,8 +38,8 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 /obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob) // CH edit begins here; this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 	user.set_machine(src)
 
-	if(issilicon(usr))
-		authenticated = 1
+	if(issilicon(user))
+		authenticated = user.name
 		tgui_interact(user)
 	else
 		tgui_interact(user)

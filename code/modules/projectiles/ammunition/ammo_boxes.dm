@@ -342,7 +342,7 @@
 	icon_state = "sniper"
 	caliber = "14.5mm"
 	ammo_type = /obj/item/ammo_casing/a145
-	matter = list(MAT_STEEL = 8750)
+	matter = list(MAT_STEEL = 28000, MAT_PLASTEEL = 3500) //CHOMPedit Makes them a bit more expensive
 	max_ammo = 7
 	multiple_sprites = 1
 
@@ -351,8 +351,8 @@
 	desc = "A box of 14.5mm sabot rounds"
 	icon_state = "sniper"
 	caliber = "14.5mm"
-	ammo_type = /obj/item/ammo_casing/a145
-	matter = list(MAT_STEEL = 8750)
+	ammo_type = /obj/item/ammo_casing/a145/highvel //CHOMPedit
+	matter = list(MAT_STEEL = 2800, MAT_PLASTEEL = 7000) //CHOMPedit Makes them a bit more expensive
 	max_ammo = 7
 	multiple_sprites = 1
 

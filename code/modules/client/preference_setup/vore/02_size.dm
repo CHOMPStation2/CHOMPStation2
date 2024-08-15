@@ -16,6 +16,7 @@
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
 	var/custom_speech_bubble = "default"
+	var/custom_footstep = "Default"	// CHOMPAdd
 	var/species_sound = "Unset"		// CHOMPEdit: Use default species pain/scream sounds based off icon base if none set, override otherwise
 
 // Definition of the stuff for Sizing
@@ -33,6 +34,7 @@
 	S["voice_freq"]			>> pref.voice_freq
 	S["voice_sound"]		>> pref.voice_sound
 	S["custom_speech_bubble"]		>> pref.custom_speech_bubble
+	S["custom_footstep"]	>> pref.custom_footstep // CHOMPEdit
 	S["species_sound"]		>> pref.species_sound  // CHOMPEdit
 
 /datum/category_item/player_setup_item/vore/size/save_character(var/savefile/S)
@@ -45,6 +47,7 @@
 	S["voice_freq"]			<< pref.voice_freq
 	S["voice_sound"]		<< pref.voice_sound
 	S["custom_speech_bubble"]		<< pref.custom_speech_bubble
+	S["custom_footstep"]	<< pref.custom_footstep // CHOMPEdit
 	S["species_sound"]		<< pref.species_sound // CHOMPEdit
 
 
@@ -60,6 +63,8 @@
 		pref.size_multiplier = initial(pref.size_multiplier)
 	if(!(pref.custom_speech_bubble in selectable_speech_bubbles))
 		pref.custom_speech_bubble = "default"
+	if(!(pref.custom_footstep))	// CHOMPAdd
+		pref.custom_footstep = "Default"
 	// var/datum/species/selected_species = GLOB.all_species[pref.species] // CHOMPEdit
 	if(!(pref.species_sound)) // CHOMPEdit // && selected_species.selects_bodytype
 		pref.species_sound = "Unset" // CHOMPEdit - otherwise, we leave this as null or w/e the default is
@@ -112,6 +117,7 @@
 				character.voice_sounds_list = goon_speak_skelly_sound
 				*/ //CHOMPEDIT Global voice lookup
 	character.custom_speech_bubble = pref.custom_speech_bubble
+	character.custom_footstep = pref.custom_footstep
 
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
@@ -125,6 +131,7 @@
 	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
 	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
 	. += "<b>Custom Speech Bubble:</b> <a href='?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
+	. += "<b>Custom Footstep Sounds:</b><a href='?src=\ref[src];customize_footsteps=1'>[pref.custom_footstep]</a><br>"
 	// CHOMPEdit Start: Pain/Scream/Death Custom Sounds
 	// var/datum/species/selected_species = GLOB.all_species[pref.species]
 	// if(selected_species.selects_bodytype)
@@ -237,6 +244,14 @@
 		else
 			pref.voice_sound = choice
 		return TOPIC_REFRESH
+	// CHOMPAdd Start
+	else if(href_list["customize_footsteps"])
+		var/list/footstep_choice = selectable_footstep
+		var/choice = tgui_input_list(user, "What footstep sounds would your character make?", "Custom Foostep Sounds", footstep_choice)
+		if(choice)
+			pref.custom_footstep = footstep_choice[choice]
+			return TOPIC_REFRESH
+	// CHOMPAdd End
 	else if(href_list["customize_speech_bubble"])
 		var/choice = tgui_input_list(user, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
 		if(!choice)

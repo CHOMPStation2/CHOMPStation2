@@ -125,3 +125,15 @@
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 	pixel_x = 0
+
+/datum/robot_sprite/dogborg/smolraptormedicalsprite
+	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_med.dmi'
+	module_type = "Crisis"
+
+/datum/robot_sprite/dogborg/smolraptormedicalsprite/smolraptormed
+	name = "Small Raptor"
+	sprite_icon_state = "smolraptor"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = FALSE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")

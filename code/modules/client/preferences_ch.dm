@@ -28,6 +28,7 @@
 
 	feedback_add_details("admin_verb", "TSleepMusic")
 
+/* // Up-ported to Virgo, disabling here
 /datum/preferences/proc/update_character_previews(var/mob/living/carbon/human/mannequin)
 	if(!client)
 		return
@@ -63,3 +64,4 @@
 		var/mutable_appearance/MA = new(mannequin)
 		O.appearance = MA
 		O.screen_loc = preview_screen_locs["[D]"]
+*/

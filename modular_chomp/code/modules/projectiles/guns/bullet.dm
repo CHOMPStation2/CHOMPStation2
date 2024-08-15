@@ -1,6 +1,14 @@
 /obj/item/projectile/bullet
-	damage = 25 //seems many bullets use this vaule for some reason
+	damage = 25 //seems many bullets use this value for some reason
 
+/obj/item/projectile/bullet/a38 //These projectiles are used but dont exist, revolvers were super underpowered forever
+	damage = 25 //.38 pretty bwoomp
+
+/obj/item/projectile/bullet/rifle/a45lc
+	damage = 35 //.45 used by a single revolver
+
+
+/* Combat refactor walkback, default bullets do 60 damage I think so im keeping this, were not getting the CR20 incident again lol
 /obj/item/projectile/bullet/pistol
 	damage = 10
 
@@ -127,3 +135,4 @@
 
 /obj/item/projectile/bullet/pellet/fragment/strong
 	damage = 7
+*/
