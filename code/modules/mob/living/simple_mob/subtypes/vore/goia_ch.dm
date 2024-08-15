@@ -46,8 +46,8 @@
 	vore_pounce_chance = 35
 	vore_bump_chance = 25
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
-	vore_stomach_name = "stomach"
-	vore_stomach_flavor = "You find yourself greedily gulped down into the zorgoia's stomach, the walls are suprinsingly roomy in comparason to other critters of this size as their stomach makes up a majority of their long noodle like body. Your body contorting with the zorgoias long shape as every inch of you is tightly bound by their glowy walls."
+	vore_stomach_name = "stomach" //Might make a better vore text but have this one for now.
+	vore_stomach_flavor = "You find yourself greedily gulped down into the zorgoia's stomach; the walls are surprisingly roomy in comparison to other critters of this size as their stomach makes up a majority of their long noodle shaped body. Your body contorting with the zorgoias long shape as every inch of you is tightly bound by their glowy walls."
 	vore_default_contamination_flavor = "Acrid"
 	vore_default_item_mode = IM_DIGEST
 
