@@ -16,7 +16,6 @@
 /datum/robot_sprite/dogborg/tall/dullahan
 	module_type = "Exploration"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_explorer.dmi'
-	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/dullahan/explorer
 	name = "Dullahan"
@@ -25,6 +24,7 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/dullahan/exploreralt
 	name = "Dullahan v2"
@@ -33,6 +33,7 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+	pixel_x = 0
 
 /* placeholder
 /datum/robot_sprite/dogborg/tall/explorer

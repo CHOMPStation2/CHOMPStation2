@@ -73,7 +73,6 @@
 
 /datum/robot_sprite/dogborg/tall/mining/dullahanminermodule
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_mine.dmi'
-	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/mining/dullahanminermodule/dullahanminer
 	name = "Dullahan Mining unit"
@@ -93,7 +92,6 @@
 
 /datum/robot_sprite/dogborg/tall/mining/dullahancargomodule
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_cargo.dmi'
-	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/mining/dullahancargomodule/dullahancargo
 	name = "Dullahan Cargo"
@@ -102,6 +100,7 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/mining/dullahancargomodule/dullahancargoalt
 	name = "Dullahan Cargo v2"
@@ -110,6 +109,7 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+	pixel_x = 0
 
 /datum/robot_sprite/dogborg/mining/smolraptorminersprite
 	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_min.dmi'
@@ -122,7 +122,7 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = FALSE
+	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 
@@ -130,6 +130,6 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = FALSE
+	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")

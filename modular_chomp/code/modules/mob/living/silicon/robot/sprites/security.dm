@@ -27,7 +27,6 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	pixel_x = 0
-
 /datum/robot_sprite/dogborg/tall/security/dullahansecurityalt
 	name = "Dullahan v2"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sec.dmi'
@@ -40,7 +39,6 @@
 	has_vore_belly_sprites = TRUE
 	pixel_x = 0
 
-
 /datum/robot_sprite/dogborg/security/smolraptorsecuritysprite
 	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_pk.dmi'
 
@@ -48,6 +46,6 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = FALSE
+	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")

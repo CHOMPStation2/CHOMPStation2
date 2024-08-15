@@ -105,7 +105,6 @@
 /datum/robot_sprite/dogborg/tall/dullahancrisismodule
 	module_type = "Crisis"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med.dmi'
-	pixel_x = 0
 
 /datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisis
 	name = "Dullahan"
@@ -115,7 +114,6 @@
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 	pixel_x = 0
-
 
 /datum/robot_sprite/dogborg/tall/dullahancrisismodule/dullcrisisalt
 	name = "Dullahan v2"
@@ -134,6 +132,6 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = FALSE
+	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
