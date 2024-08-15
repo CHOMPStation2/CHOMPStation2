@@ -1,6 +1,6 @@
-/mob/living/simple_mob/vore/otie/zorgoia //Yes im basing the goias on oties for now, sue me....please dont sue me - Jack
+/mob/living/simple_mob/vore/zorgoia
 	name = "zorgoia"
-	desc = "It's a a reptilian mammal hybrid, known for its voracious nature and love for fruits. By more popular terms its refered to as the furry slinky!"
+	desc = "It's a a reptilian mammal hybrid, known for its voracious nature and love for fruits. By more popular terms its referred to as the furry slinky!"
 	tt_desc = "Zorgoyuh slinkus"
 	icon = 'modular_chomp/icons/mob/zorgoia64x32.dmi' //We use the new modular ones now
 	icon_state = null //Overlay system will make the goias
@@ -13,6 +13,9 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 15 //Don't break my bones bro
 	see_in_dark = 5
+	response_help = "pets"
+	response_disarm = "bops"
+	response_harm = "hits"
 	attacktext = list("mauled")
 	friendly = list("nuzzles", "noses softly at", "noseboops", "headbumps against", "nibbles affectionately on")
 	meat_amount = 5
@@ -24,17 +27,33 @@
 	pixel_x = 0
 	pixel_y = 0
 
+	max_buckled_mobs = 1 //Yeehaw
+	can_buckle = TRUE
+	buckle_movable = TRUE
+	buckle_lying = FALSE
+	mount_offset_y = 10
+
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/zorgoia
+	var/mob/living/carbon/human/friend
+	var/tamed = 0
+	var/tame_chance = 50 //It's a fiddy-fiddy default you may get a buddy pal or you may get mauled and ate. Win-win!
+
 	color = null //color is selected when spawned
 
-	//say_list_type = /datum/say_list/zorgoia
 	vore_active = 1
 	vore_capacity = 3
 	vore_icons = 0 //The icon system down there handles the vore belly
 	vore_pounce_chance = 35
+	vore_bump_chance = 25
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+	vore_stomach_name = "stomach" //Might make a better vore text but have this one for now.
+	vore_stomach_flavor = "You find yourself greedily gulped down into the zorgoia's stomach; the walls are surprisingly roomy in comparison to other critters of this size as their stomach makes up a majority of their long noodle shaped body. Your body contorting with the zorgoias long shape as every inch of you is tightly bound by their glowy walls."
+	vore_default_contamination_flavor = "Acrid"
+	vore_default_item_mode = IM_DIGEST
 
 
-	// CHOMPAdd: Don't think its checked, but just in case
+	can_be_drop_prey = FALSE
+	allow_mind_transfer = TRUE
 	species_sounds = "None"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
@@ -53,7 +72,7 @@
 		"zorgoia_spike" = "#FFFFFF"
 	)
 
-/mob/living/simple_mob/vore/otie/zorgoia/proc/recolor() //Base sprite wont need a radical menu selection
+/mob/living/simple_mob/vore/zorgoia/proc/recolor() //Base sprite wont need a radical menu selection
 	set name = "Change Color"
 	set desc = "Change your main color."
 	set category = "Abilities.General"
@@ -63,7 +82,7 @@
 	goia_overlays[goia_overlays[2]] = new_color
 	update_icon()
 
-/mob/living/simple_mob/vore/otie/zorgoia/proc/appearance_switch() //This is just copypastas of the radial menu code, each block of code is the options for each bit of customisation... all 9 of them
+/mob/living/simple_mob/vore/zorgoia/proc/appearance_switch() //This is just copypastas of the radial menu code, each block of code is the options for each bit of customisation... all 9 of them
 	set name = "Adjust Mob Markings"
 	set desc = "Change your markings and mob colors."
 	set category = "Abilities.General"
@@ -83,7 +102,8 @@
 	)
 	var/list/ear_styles = list(
 		"null",
-		"zorgoia_ears"
+		"zorgoia_ears",
+		"zorgoia_ears2"
 	)
 	var/list/spots_styles = list(
 		"null",
@@ -249,17 +269,26 @@
 
 
 
-/mob/living/simple_mob/vore/otie/zorgoia/Initialize()
+/mob/living/simple_mob/vore/zorgoia/Initialize()
 	..()
 	update_icon()
-	add_verb(src,/mob/living/simple_mob/vore/otie/zorgoia/proc/appearance_switch)
-	add_verb(src,/mob/living/simple_mob/vore/otie/zorgoia/proc/recolor)
+	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/appearance_switch)
+	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/recolor)
 	add_verb(src,/mob/living/proc/injection) //Poison sting c:
+	src.trait_injection_reagents += "microcillin"		// get small
+	src.trait_injection_reagents += "macrocillin"		// get BIG
+	src.trait_injection_reagents += "normalcillin"	// normal
+	src.trait_injection_reagents += "numbenzyme"		// no feelings
+	src.trait_injection_reagents += "androrovir" 		// -> MALE
+	src.trait_injection_reagents += "gynorovir" 		// -> FEMALE
+	src.trait_injection_reagents += "androgynorovir" 	// -> PLURAL
+	src.trait_injection_reagents += "stoxin"			// night night chem
+	src.trait_injection_reagents += "rainbowtoxin" 	// Funny flashing lights.
 	src.trait_injection_reagents += "paralysistoxin" 	// Paralysis!
 	src.trait_injection_reagents += "painenzyme"		// Pain INCREASER
-	src.trait_injection_reagents += "aphrodisiac"		// Horni //CHOMPedit
+	src.trait_injection_reagents += "aphrodisiac"		// Horni
 
-/mob/living/simple_mob/vore/otie/zorgoia/update_icon()
+/mob/living/simple_mob/vore/zorgoia/update_icon()
 	..()
 	if(stat == DEAD)
 		icon_state = "zorgoia-death"
@@ -349,9 +378,64 @@
 	add_overlay(I)
 	qdel(I)
 
-/mob/living/simple_mob/vore/otie/zorgoia/death() //are they going to be ok?
+/mob/living/simple_mob/vore/zorgoia/attack_hand(mob/living/carbon/human/M as mob)
+
+	switch(M.a_intent)
+		if(I_HELP)
+			if(health > 0)
+				if(M.zone_sel.selecting == BP_GROIN)
+					if(M.vore_bellyrub(src))
+						return
+				M.visible_message("<span class='notice'>[M] [response_help] \the [src].</span>")
+				if(has_AI())
+					var/datum/ai_holder/AI = ai_holder
+					AI.set_stance(STANCE_IDLE)
+					if(prob(tame_chance))
+						AI.violent_breakthrough = FALSE
+						AI.hostile = FALSE
+						friend = M
+						AI.set_follow(friend)
+						if(tamed != 1)
+							tamed = 1
+							faction = M.faction
+					sleep(1 SECOND)
+
+		if(I_GRAB)
+			if(health > 0)
+				if(has_AI())
+					var/datum/ai_holder/AI = ai_holder
+					audible_emote("growls disapprovingly at [M].")
+					if(M == friend)
+						AI.lose_follow()
+						friend = null
+				return
+			else
+				..()
+
+		else
+			..()
+
+/mob/living/simple_mob/vore/zorgoia/Login()
+	. = ..()
+	if(!riding_datum)
+		riding_datum = new /datum/riding/simple_mob(src)
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount)
+	add_verb(src,/mob/living/proc/toggle_rider_reins)
+	movement_cooldown = 0
+
+/mob/living/simple_mob/vore/zorgoia/MouseDrop_T(mob/living/M, mob/living/user)
+	return
+
+/mob/living/simple_mob/vore/zorgoia/death() //are they going to be ok?
 	. = ..()
 	cut_overlays()
 
-/mob/living/simple_mob/vore/otie/zorgoia/tamed
+/mob/living/simple_mob/vore/zorgoia/tamed
 	tamed = TRUE
+
+/datum/ai_holder/simple_mob/melee/evasive/zorgoia
+
+/datum/ai_holder/simple_mob/melee/evasive/zorgoia/New(var/mob/living/simple_mob/vore/zorgoia/new_holder)
+	.=..()
+	if(new_holder.tamed)
+		hostile = FALSE
