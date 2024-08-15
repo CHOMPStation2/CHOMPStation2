@@ -1,0 +1,7 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - rscadd: "Zorgoia now have the full poison catalog to inject people with."
+  - rscadd: "Zorgoia are properly ridable."
+  - rscdel: "Removed the otie subtype for zorgoia"
+  - image: "Sprite tweak with the zorgoia sprite"
