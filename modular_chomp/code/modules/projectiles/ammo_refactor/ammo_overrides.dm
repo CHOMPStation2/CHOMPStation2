@@ -738,7 +738,7 @@ Medium Weapons
 
 /obj/item/weapon/gun/projectile/automatic/serdy/rpd
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	projectile_type = /obj/item/projectile/bullet/rifle/a762/sniper
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
