@@ -140,3 +140,10 @@
   - balance: Player controled zorgoia now can inject prey.
   - image: Modified the zorgoia simplemob sprite majorly now with customisation.
   - image: Removed Herobrine
+2024-08-15:
+  tacoguy7765093:
+  - balance: Fixed a bug that made phase weapons do improper amounts of damage.
+  - balance: Colt-Single-Action 25 -> 35
+  - balance: Most small caliber revolvers 10 -> 25
+  - bugfix: Fixed a bug that made half of the lower caliber revolvers doing the improper
+      amount of damage.

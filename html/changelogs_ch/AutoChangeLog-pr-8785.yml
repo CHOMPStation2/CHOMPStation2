@@ -1,6 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - balance: "Colt-Single-Action 25 -> 35"
-  - balance: "Most small caliber revolvers 10 -> 25"
-  - bugfix: "Fixed a bug that made half of the lower caliber revolvers doing the improper amount of damage."
