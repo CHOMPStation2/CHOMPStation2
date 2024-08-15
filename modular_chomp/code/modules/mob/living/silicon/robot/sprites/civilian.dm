@@ -29,7 +29,6 @@
 	sprite_icon_state = "dullahanserv"
 	rest_sprite_options = list("Default", "Sit")
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/tall/service/dullahan/servicealt
@@ -37,7 +36,6 @@
 	sprite_icon_state = "dullahanserv_alt"
 	rest_sprite_options = list("Default", "Sit")
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
 /datum/robot_sprite/dogborg/service/smolraptorservicesprite
@@ -47,6 +45,5 @@
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")

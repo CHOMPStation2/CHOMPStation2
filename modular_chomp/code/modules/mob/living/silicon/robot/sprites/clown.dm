@@ -29,7 +29,6 @@
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_clown.dmi'
 	sprite_icon_state = "dullahanclown"
 	has_eye_light_sprites = TRUE
-	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 	pixel_x = 0
