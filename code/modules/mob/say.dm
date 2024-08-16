@@ -3,7 +3,7 @@
 
 /mob/verb/whisper(message as text)
 	set name = "Whisper"
-	//set category = "IC.Subtle" //CHOMPEdit
+	set category = "IC.Subtle" //CHOMPEdit
 	set hidden = 1
 	//VOREStation Addition Start
 	if(forced_psay)
@@ -15,7 +15,7 @@
 
 /mob/verb/say_verb(message as text)
 	set name = "Say"
-	//set category = "IC.Chat" //CHOMPEdit
+	set category = "IC.Chat" //CHOMPEdit
 	set instant = TRUE // CHOMPEdit
 	set hidden = 1
 	//VOREStation Addition Start
@@ -34,7 +34,7 @@
 
 /mob/verb/me_verb(message as message)
 	set name = "Me"
-	//set category = "IC.Chat" //CHOMPEdit
+	set category = "IC.Chat" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
