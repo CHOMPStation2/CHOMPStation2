@@ -988,9 +988,14 @@
 		return
 
 	cut_overlays()
+<<<<<<< HEAD
 	if(typing) //CHOMPAdd, needed as we don't have priority overlays anymore
 		add_overlay(typing_indicator, TRUE) //CHOMPAdd, needed as we don't have priority overlays anymore
 	handle_status_indicators() //CHOMPAdd, needed as we don't have priority overlays anymore
+=======
+	add_overlay(active_thinking_indicator)
+	add_overlay(active_typing_indicator)
+>>>>>>> 215d199864... Merge pull request #16189 from Kashargul/robotSpeech
 
 	icon			= sprite_datum.sprite_icon
 	icon_state		= sprite_datum.sprite_icon_state
