@@ -147,3 +147,13 @@
   - balance: Most small caliber revolvers 10 -> 25
   - bugfix: Fixed a bug that made half of the lower caliber revolvers doing the improper
       amount of damage.
+2024-08-16:
+  Asher-42:
+  - rscadd: Dullahan Clownborg
+  - rscadd: panel covers to dullahan and smol raptors
+  - rscadd: dullahan syndicate sprite to only medic
+  tacoguy7765093:
+  - rscadd: Zorgoia now have the full poison catalog to inject people with.
+  - rscadd: Zorgoia are properly ridable.
+  - rscdel: Removed the otie subtype for zorgoia
+  - image: Sprite tweak with the zorgoia sprite
