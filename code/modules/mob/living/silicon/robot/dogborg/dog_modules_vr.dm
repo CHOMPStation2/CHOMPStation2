@@ -569,11 +569,8 @@
 	var/armor_soak = get_armor_soak(T, "melee")
 	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
 	if(prob(75)) //75% chance to stun for 5 seconds, really only going to be 4 bcus click cooldown+animation.
-<<<<<<< HEAD
 		T.apply_effect(5, STUN, armor_block)
 		T.drop_both_hands() //CHOMPEdit Stuns no longer drop items
-=======
-		T.apply_effect(5, WEAKEN, armor_block)
 
 /obj/item/weapon/reagent_containers/glass/beaker/large/borg
 	var/mob/living/silicon/robot/R
@@ -599,4 +596,3 @@
 /obj/item/weapon/reagent_containers/glass/beaker/large/borg/Destroy()
 	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
 	..()
->>>>>>> 20bb7bd7af... Merge pull request #16192 from Kashargul/borgBeaker
