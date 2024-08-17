@@ -79,7 +79,7 @@
 	if(message)
 		pme(message)
 
-/mob/verb/player_narrate_ch()
+/mob/living/verb/player_narrate_ch()
 	set name = "Narrate (Player)"
 	set category = "IC.Chat"
 
