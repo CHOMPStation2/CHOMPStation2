@@ -1,9 +1,9 @@
 /mob/proc/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
 	return
 
-/mob/verb/whisper(message as text)
-	set name = "Whisper"
-	set category = "IC.Subtle" //CHOMPEdit
+/mob/proc/whisper(message as text)  //CHOMPEdit
+	set name = "Whisper old" //CHOMPEdit
+	// set category = "IC.Subtle" //CHOMPEdit
 	set hidden = 1
 	//VOREStation Addition Start
 	if(forced_psay)
@@ -13,9 +13,9 @@
 
 	usr.say(message,whispering=1)
 
-/mob/verb/say_verb(message as text)
-	set name = "Say"
-	set category = "IC.Chat" //CHOMPEdit
+/mob/proc/say_verb(message as text) //CHOMPEdit
+	set name = "Say old" //CHOMPEdit
+	// set category = "IC.Chat" //CHOMPEdit
 	set instant = TRUE // CHOMPEdit
 	set hidden = 1
 	//VOREStation Addition Start
@@ -32,9 +32,9 @@
 		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, say), message), SSspeech_controller)
 	// CHOMPEdit End
 
-/mob/verb/me_verb(message as message)
-	set name = "Me"
-	set category = "IC.Chat" //CHOMPEdit
+/mob/proc/me_verb(message as message) //CHOMPEdit
+	set name = "Me old" //CHOMPEdit
+	// set category = "IC.Chat" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 

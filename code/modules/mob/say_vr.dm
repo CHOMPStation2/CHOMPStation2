@@ -2,9 +2,9 @@
 ////////////////////SUBTLE COMMAND////////////////////
 //////////////////////////////////////////////////////
 
-/mob/verb/me_verb_subtle(message as message) //This would normally go in say.dm
-	set name = "Subtle"
-	set category = "IC.Subtle" //CHOMPEdit
+/mob/proc/me_verb_subtle(message as message) //This would normally go in say.dm //CHOMPEdit
+	set name = "Subtle old" //CHOMPEdit
+	// set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
@@ -25,9 +25,9 @@
 	else
 		usr.emote_vr(message)
 
-/mob/verb/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true
-	set name = "Subtle (Custom)"
-	set category = "IC.Subtle" //CHOMPEdit
+/mob/proc/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true //CHOMPEdit
+	set name = "Subtle (Custom) old"
+	// set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
 	if(say_disabled)	//This is here to try to identify lag problems
@@ -260,9 +260,9 @@
 
 ///// PSAY /////
 
-/mob/verb/psay(message as text)
-	set category = "IC.Subtle" //CHOMPEdit
-	set name = "Psay"
+/mob/proc/psay(message as text) //CHOMPEdit
+	// set category = "IC.Subtle" //CHOMPEdit
+	set name = "Psay old"  //CHOMPEdit
 	set desc = "Talk to people affected by complete absorbed or dominate predator/prey."
 
 	if (src.client)
@@ -366,9 +366,9 @@
 
 ///// PME /////
 
-/mob/verb/pme(message as message)
-	set category = "IC.Subtle" //CHOMPEdit
-	set name = "Pme"
+/mob/proc/pme(message as message) //CHOMPEdit
+	// set category = "IC.Subtle" //CHOMPEdit
+	set name = "Pme old" //CHOMPedit
 	set desc = "Emote to people affected by complete absorbed or dominate predator/prey."
 
 	if (src.client)
@@ -470,9 +470,9 @@
 		M.forced_psay = FALSE
 		M.me_verb(message)
 
-/mob/living/verb/player_narrate(message as message)
-	set category = "IC.Chat" //CHOMPEdit
-	set name = "Narrate (Player)"
+/mob/living/proc/player_narrate(message as message) //CHOMPEdit
+	// set category = "IC.Chat" //CHOMPEdit
+	set name = "Narrate (Player) old" //CHOMPedit
 	set desc = "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!"
 
 	if(src.client)
