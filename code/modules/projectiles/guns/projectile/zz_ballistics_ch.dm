@@ -1008,6 +1008,7 @@
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 860
 	one_handed_penalty = 90
+	fire_sound = 'sound/weapons/serdy/strela.ogg'
 
 //commented this out because it seems to be breaking the Kord -- Ocelot
 /*
