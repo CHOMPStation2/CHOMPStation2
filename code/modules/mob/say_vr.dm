@@ -2,8 +2,8 @@
 ////////////////////SUBTLE COMMAND////////////////////
 //////////////////////////////////////////////////////
 
-/mob/proc/me_verb_subtle(message as message) //This would normally go in say.dm //CHOMPEdit
-	set name = "Subtle old" //CHOMPEdit
+/mob/verb/me_verb_subtle(message as message) //This would normally go in say.dm //CHOMPEdit
+	set name = "Subtle"
 	// set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
@@ -25,8 +25,8 @@
 	else
 		usr.emote_vr(message)
 
-/mob/proc/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true //CHOMPEdit
-	set name = "Subtle (Custom) old"
+/mob/verb/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true //CHOMPEdit
+	set name = "Subtle (Custom)"
 	// set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
@@ -260,9 +260,9 @@
 
 ///// PSAY /////
 
-/mob/proc/psay(message as text) //CHOMPEdit
+/mob/verb/psay(message as text) //CHOMPEdit
 	// set category = "IC.Subtle" //CHOMPEdit
-	set name = "Psay old"  //CHOMPEdit
+	set name = "Psay"
 	set desc = "Talk to people affected by complete absorbed or dominate predator/prey."
 
 	if (src.client)
@@ -366,9 +366,9 @@
 
 ///// PME /////
 
-/mob/proc/pme(message as message) //CHOMPEdit
+/mob/verb/pme(message as message) //CHOMPEdit
 	// set category = "IC.Subtle" //CHOMPEdit
-	set name = "Pme old" //CHOMPedit
+	set name = "Pme"
 	set desc = "Emote to people affected by complete absorbed or dominate predator/prey."
 
 	if (src.client)
@@ -470,9 +470,9 @@
 		M.forced_psay = FALSE
 		M.me_verb(message)
 
-/mob/living/proc/player_narrate(message as message) //CHOMPEdit
+/mob/living/verb/player_narrate(message as message) //CHOMPEdit
 	// set category = "IC.Chat" //CHOMPEdit
-	set name = "Narrate (Player) old" //CHOMPedit
+	set name = "Narrate (Player)"
 	set desc = "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!"
 
 	if(src.client)

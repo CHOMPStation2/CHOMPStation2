@@ -9,7 +9,7 @@
 	return ultimate_mob
 
 /mob/verb/say_verb_ch()
-	set name = "Say"
+	set name = "Say CH"
 	set category = "IC.Chat"
 
 	client?.start_typing()
@@ -20,7 +20,7 @@
 		say_verb(message)
 
 /mob/verb/me_verb_ch()
-	set name = "Me"
+	set name = "Me CH"
 	set category = "IC.Chat"
 	set desc = "Emote to nearby people (and your pred/prey)"
 
@@ -32,7 +32,7 @@
 		me_verb(message)
 
 /mob/verb/whisper_ch()
-	set name = "Whisper"
+	set name = "Whisper CH"
 	set category = "IC.Subtle"
 
 	var/message = tgui_input_text(usr, "Speak to nearby people.\nType your message:", "Whisper")
@@ -42,7 +42,7 @@
 
 
 /mob/verb/me_verb_subtle_ch()
-	set name = "Subtle"
+	set name = "Subtle CH"
 	set category = "IC.Subtle"
 	set desc = "Emote to nearby people (and your pred/prey)"
 
@@ -52,7 +52,7 @@
 		me_verb_subtle(message)
 
 /mob/verb/me_verb_subtle_custom_ch()
-	set name = "Subtle (Custom)"
+	set name = "Subtle (Custom) CH"
 	set category = "IC.Subtle"
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
@@ -62,7 +62,7 @@
 		me_verb_subtle_custom(message)
 
 /mob/verb/psay_ch()
-	set name = "Psay"
+	set name = "Psay CH"
 	set category = "IC.Subtle"
 
 	var/message = tgui_input_text(usr, "Talk to people affected by complete absorbed or dominate predator/prey.\nType your message:", "Psay")
@@ -71,7 +71,7 @@
 		psay(message)
 
 /mob/verb/pme_ch()
-	set name = "Pme"
+	set name = "Pme CH"
 	set category = "IC.Subtle"
 
 	var/message = tgui_input_text(usr, "Emote to people affected by complete absorbed or dominate predator/prey.\nType your message:", "Psay")
@@ -80,7 +80,7 @@
 		pme(message)
 
 /mob/living/verb/player_narrate_ch()
-	set name = "Narrate (Player)"
+	set name = "Narrate (Player) CH"
 	set category = "IC.Chat"
 
 	var/message = tgui_input_text(usr, "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!\nType your message:", "Psay")
