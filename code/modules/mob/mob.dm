@@ -751,9 +751,15 @@
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
 
+<<<<<<< HEAD
 			// CHOMPedit - Ticket System
 			//if(statpanel("Tickets"))
 				//GLOB.ahelp_tickets.stat_entry()
+=======
+			if(statpanel("Tickets"))
+				if(check_rights(R_ADMIN|R_SERVER,FALSE)) //Prevents non-staff from opening the list of ahelp tickets
+					GLOB.ahelp_tickets.stat_entry()
+>>>>>>> 98e542b484... Merge pull request #16200 from SatinIsle/LOOC-rights
 
 
 			if(length(GLOB.sdql2_queries))
