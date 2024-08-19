@@ -12,6 +12,7 @@
 	set name = "Say CH"
 	set category = "IC.Chat"
 
+	client?.start_thinking()
 	client?.start_typing()
 	var/message = tgui_input_text(usr, "Speak to people in sight.\nType your message:", "Say")
 	client?.stop_thinking()
@@ -24,6 +25,7 @@
 	set category = "IC.Chat"
 	set desc = "Emote to nearby people (and your pred/prey)"
 
+	client?.start_thinking()
 	client?.start_typing()
 	var/message = tgui_input_text(usr, "Emote to people in sight (and your pred/prey).\nType your message:", "Emote", multiline = TRUE)
 	client?.stop_thinking()
