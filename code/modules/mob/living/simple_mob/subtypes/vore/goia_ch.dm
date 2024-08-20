@@ -378,6 +378,7 @@
 	add_overlay(I)
 	qdel(I)
 
+/* Doesnt even work, breaks grabs.
 /mob/living/simple_mob/vore/zorgoia/attack_hand(mob/living/carbon/human/M as mob)
 
 	switch(M.a_intent)
@@ -414,7 +415,7 @@
 
 		else
 			..()
-
+*/
 /mob/living/simple_mob/vore/zorgoia/Login()
 	. = ..()
 	if(!riding_datum)
