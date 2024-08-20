@@ -378,9 +378,8 @@
 	add_overlay(I)
 	qdel(I)
 
-/* Doesnt even work, breaks grabs.
-/mob/living/simple_mob/vore/zorgoia/attack_hand(mob/living/carbon/human/M as mob)
 
+/mob/living/simple_mob/vore/zorgoia/attack_hand(mob/living/carbon/human/M as mob)
 	switch(M.a_intent)
 		if(I_HELP)
 			if(health > 0)
@@ -409,13 +408,13 @@
 					if(M == friend)
 						AI.lose_follow()
 						friend = null
-				return
+					return
+				..()
 			else
 				..()
-
 		else
 			..()
-*/
+
 /mob/living/simple_mob/vore/zorgoia/Login()
 	. = ..()
 	if(!riding_datum)
