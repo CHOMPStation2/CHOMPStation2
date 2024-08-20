@@ -378,7 +378,6 @@
 	add_overlay(I)
 	qdel(I)
 
-
 /mob/living/simple_mob/vore/zorgoia/attack_hand(mob/living/carbon/human/M as mob)
 	switch(M.a_intent)
 		if(I_HELP)
