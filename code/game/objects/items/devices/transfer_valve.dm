@@ -60,12 +60,11 @@
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
-
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+	attached_device?.HasProximity(T, WEAKREF(AM), old_loc)
 // CHOMPEdit End
-	attached_device?.HasProximity(T, AM, old_loc)
 
 /obj/item/device/transfer_valve/Moved(old_loc, direction, forced)
 	. = ..()

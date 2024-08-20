@@ -666,13 +666,12 @@ var/list/global/tank_gauge_cache = list()
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
-	var/atom/movable/AM = WF.resolve()
+	var/atom/movable/AM = WF
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
+	assembly?.HasProximity(T, WEAKREF(AM), old_loc)
 // CHOMPEdit End
-	assembly?.HasProximity(T, AM, old_loc)
-
 /obj/item/device/tankassemblyproxy/Moved(old_loc, direction, forced)
 	if(isturf(old_loc))
 		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
