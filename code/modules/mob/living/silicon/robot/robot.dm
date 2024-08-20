@@ -905,7 +905,7 @@
 			switch(H.a_intent)
 				if(I_HELP)
 					if(client && !client.prefs.borg_petting)
-						visible_message("<span class='notice'>[H] reaches out for [src], but quickly refrains from petting.</span>")
+						visible_message("<span class='notice'>[H] reaches out for [src], but they dodge. seemily, they do not want to be pet, you probably should stop trying.</span>")
 						return
 					else
 						visible_message("<span class='notice'>[H] pets [src].</span>")
