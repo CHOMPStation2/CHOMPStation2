@@ -61,9 +61,18 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 				for(var/rider in L.buckled_mobs)
 					R.force_dismount(rider)
 		//VOREStation Addition End: Prevent taurriding abuse
+		// CHOMPAdd Start
+		if(isbelly(target))
+			if(target == M)
+				return
+			if(istype(M, /mob/living))
+				var/mob/living/L = M
+				if(L.can_be_drop_prey && L.devourable)
+					do_teleport(M, target)
+					return
+		// CHOMPAdd End
 		if(prob(failchance)) //oh dear a problem, put em in deep space
 			src.icon_state = "portal1"
 			do_teleport(M, locate(rand(5, world.maxx - 5), rand(5, world.maxy -5), 3), 0)
 		else
 			do_teleport(M, target, 1) ///You will appear adjacent to the beacon
-
