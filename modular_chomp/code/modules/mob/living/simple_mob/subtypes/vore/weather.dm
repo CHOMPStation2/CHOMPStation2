@@ -202,8 +202,8 @@
 	if(health < maxHealth*0.25)
 		visible_message(span_orange("<B>The fossil tank begins self repairs!.</B>"))
 		sleep(50)
-		adjustBruteLoss(-600)
-		adjustFireLoss(-600)
+		adjustBruteLoss(-300)
+		adjustFireLoss(-300)
 	else
 		Beam(A, icon_state = "sat_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
 		sleep(30)
