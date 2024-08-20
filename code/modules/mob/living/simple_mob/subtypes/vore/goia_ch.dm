@@ -408,9 +408,7 @@
 						AI.lose_follow()
 						friend = null
 					return
-				..()
-			else
-				..()
+			..()
 		else
 			..()
 
