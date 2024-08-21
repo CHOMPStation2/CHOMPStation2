@@ -157,3 +157,8 @@
   - rscadd: Zorgoia are properly ridable.
   - rscdel: Removed the otie subtype for zorgoia
   - image: Sprite tweak with the zorgoia sprite
+2024-08-21:
+  TheCaramelion:
+  - bugfix: Fixed various proximity related runtimes
+  tacoguy7765093:
+  - bugfix: Fixed a oversight that prevents zorgoia from being grabbed.

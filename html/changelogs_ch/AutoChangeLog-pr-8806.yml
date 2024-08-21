@@ -1,4 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - bugfix: "Fixed a oversight that prevents zorgoia from being grabbed."
