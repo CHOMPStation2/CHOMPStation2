@@ -15,130 +15,97 @@
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x, src.y+2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/up_up_left(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x-1, src.y+2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/up_up_left_left(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x-2, src.y+2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/up_up_right(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x+1, src.y+2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/up_up_right_right(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x+2, src.y+2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/up_right_right(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x+2, src.y+1, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/up_left_left(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x-2, src.y+1, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/left_left(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x-2, src.y, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/right_right(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x+2, src.y, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/down_down(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x, src.y-2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/down_down_left(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x-1, src.y-2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/down_down_left_left(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x-2, src.y-2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/down_down_right(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x+1, src.y-2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/down_down_right_right(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x+2, src.y-2, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/down_right_right(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x+2, src.y-1, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vore/weatherbeast/proc/down_left_left(atom/target)
 	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
 	var/turf = locate(src.x-2, src.y-1, src.z)
 	target = turf
-	Beam(get_turf(target), icon_state = "sniper_beam", time = 0.5 SECONDS, maxdistance = 5)
-	sleep(15)
 	P.launch_projectile(target, BP_TORSO, src)
-
 
 //Sup, trying to be better with commenting of my code and explain the oddities behind myself. Several may seem off
 //A bit ago I added rare anomalous weather with the intent to add some creatures to summon during them, and well here they are.
@@ -151,8 +118,8 @@
 /mob/living/simple_mob/vore/weatherbeast/sandstorm //slow but endless hunter
 	name = "fossil tank"
 	desc = "A large metal tank."
-	health = 800 //15 laser shots
-	maxHealth = 800 //15 laser shots, assuming no armor
+	health = 800
+	maxHealth = 800
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)  //No thematics but I like boss critters to take a bit
 	icon_state = "rex"
 	melee_attack_delay = 0.5 SECOND
@@ -222,6 +189,7 @@
 	maxHealth = 700 //15 laser shots, assuming no armor
 	armor = list(melee = 60, bullet = 60, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 100) //So, it's made of jelly. Bullets and melee bounces off of it. The 20 laser and energy are for a smidge extra tankny because I savour endurance fights
 	icon_state = "jellyfish"
+	icon_state = "jellyfish_dead"
 	movement_cooldown = -2
 	damage_fatigue_mult = 0 //It's a mutant jellyfish boss mob.
 	glow_color = "#14ff20"
@@ -315,6 +283,7 @@
 	maxHealth = 700
 	armor = list(melee = 20, bullet = 20, laser = 60, energy = 60, bomb = 50, bio = 100, rad = 100) //Is use to manpulation of strange energies
 	icon_state = "stranger"
+	icon_dead = "stranger_dead"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/dark_stranger
 	damage_fatigue_mult = 0
 	movement_cooldown = -1
@@ -363,6 +332,7 @@
 		close_three(target)
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_one(atom/target) //we attempt to be a machine gun
+	icon_state = "stranger_one"
 	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
 	var/obj/item/projectile/P = new /obj/item/projectile/energy/mob/precursor(get_turf(src))
 	sleep(5)
@@ -374,6 +344,8 @@
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_two(atom/target) //Get up/down or to the side
 	attack_cycle = 3
+	icon_state = "stranger_three"
+	sleep(10)
 	if(prob(50))
 		up_up(target)
 		up_up_left(target)
@@ -390,6 +362,8 @@
 		right_right(target)
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_three(atom/target) //Yes
+	icon_state = "stranger_five"
+	sleep(10)
 	up_left_left(target)
 	left_left(target)
 	down_left_left(target)
@@ -418,6 +392,7 @@
 		normal_three(target)
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_one(atom/target) //Firing a laser
+	icon_state = "stranger_two"
 	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
 	sleep(25)
@@ -426,6 +401,8 @@
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_two(atom/target) //Does either an X or a cross
 	attack_cycle = 3
+	icon_state = "stranger_four"
+	sleep(10)
 	if(prob(50))
 		up_up_left_left(target)
 		up_up_right_right(target)
@@ -438,6 +415,8 @@
 		right_right(target)
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_three(atom/target)
+	icon_state = "stranger_six"
+	sleep(10)
 	up_up_left_left(target)
 	down_down_right_right(target)
 	sleep(5)
@@ -472,6 +451,7 @@
 		phasetwo_three(target)
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_one(atom/target) //Lighting
+	icon_state = "stranger_eight"
 	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/chain_lightning(get_turf(src))
 	sleep(5)
@@ -480,6 +460,8 @@
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_two(atom/target) //four spinny lasers. However lesser damage projectile
 	weatherprojectile = /obj/item/projectile/beam/inversion
+	icon_state = "stranger_seven"
+	sleep(10)
 	up_up_left_left(target)
 	down_down_right_right(target)
 	down_down_left_left(target)
@@ -523,6 +505,8 @@
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_three(atom/target) //and reverse with a dangerous projectile
 	weatherprojectile = /obj/item/projectile/beam/crippling_beam
+	icon_state = "stranger_nine"
+	sleep(10)
 	down_left_left(target)
 	up_right_right(target)
 	down_down_left(target)
@@ -572,6 +556,7 @@
 	maxHealth = 300
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)
 	icon_state = "astral_sniper"
+	icon_dead = "astral_sniper_dead"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/dark_stranger
 	damage_fatigue_mult = 0
 	movement_cooldown = -1
