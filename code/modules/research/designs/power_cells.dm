@@ -24,7 +24,7 @@
 	build_path = /obj/item/weapon/cell
 	category = list("Misc")
 	sort_string = "BAAAA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/powercell/high
 	name = "high-capacity"

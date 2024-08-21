@@ -23,6 +23,7 @@
 	id = "cart_basic"
 	build_path = /obj/item/weapon/cartridge
 	sort_string = "WBAAA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/pda_cartridge/engineering
 	id = "cart_engineering"

@@ -22,7 +22,7 @@
 	materials = list(MAT_STEEL = 80)
 	build_path = /obj/item/weapon/stock_parts/matter_bin
 	sort_string = "AAAAA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/adv_matter_bin
 	id = "adv_matter_bin"
@@ -64,7 +64,7 @@
 	materials = list(MAT_STEEL = 30)
 	build_path = /obj/item/weapon/stock_parts/manipulator
 	sort_string = "AAABA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/nano_mani
 	id = "nano_mani"
@@ -106,7 +106,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 50)
 	build_path = /obj/item/weapon/stock_parts/capacitor
 	sort_string = "AAACA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/adv_capacitor
 	id = "adv_capacitor"
@@ -148,7 +148,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 20)
 	build_path = /obj/item/weapon/stock_parts/scanning_module
 	sort_string = "AAADA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/adv_sensor
 	id = "adv_sensor"
@@ -190,7 +190,7 @@
 	materials = list(MAT_STEEL = 10, MAT_GLASS = 20)
 	build_path = /obj/item/weapon/stock_parts/micro_laser
 	sort_string = "AAAEA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/high_micro_laser
 	id = "high_micro_laser"
@@ -232,7 +232,7 @@
 	materials = list(MAT_STEEL = 1100, MAT_GLASS = 450)
 	build_path = /obj/effect/spawner/parts/t1
 	sort_string = "AAAFA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/bundle/t2
 	id = "parts_bundle_t2"

@@ -1,4 +1,6 @@
 // Telecomm parts
+/datum/design/item/stock_part/subspace // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/stock_part/subspace/AssembleDesignName()
 	..()

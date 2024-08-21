@@ -5,6 +5,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 1000)
 	build_path = /obj/item/clothing/under/hyperfiber
 	sort_string = "TAVAA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/bluespace_jumpsuit
 	name = "Bluespace jumpsuit"
@@ -13,6 +14,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000)
 	build_path = /obj/item/clothing/under/hyperfiber/bluespace
 	sort_string = "TAVAB"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/sizegun
 	name = "Size gun"
@@ -21,6 +23,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000)
 	build_path = /obj/item/weapon/gun/energy/sizegun
 	sort_string = "TAVBA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/sizegun_gradual
 	name = "Gradual size gun"
@@ -29,6 +32,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000)
 	build_path = /obj/item/device/slow_sizegun
 	sort_string = "TAVBB"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/bluespace_collar
 	name = "Bluespace collar"
@@ -37,6 +41,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
 	build_path = /obj/item/clothing/accessory/collar/shock/bluespace
 	sort_string = "TAVBC"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/bodysnatcher
 	name = "Body Snatcher"
@@ -45,6 +50,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
 	build_path = /obj/item/device/bodysnatcher
 	sort_string = "TBVAA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/inducer_sci
 	name = "Inducer (Scientific)"
@@ -79,7 +85,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
 	build_path = /obj/item/device/walkpod
 	sort_string = "TCVAD"
-	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SERVICE | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/juke_remote
 	name = "BoomTown Cordless Speaker"
@@ -88,4 +94,4 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
 	build_path = /obj/item/device/juke_remote
 	sort_string = "TCVAE"
-	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SERVICE | LATHE_PUBLIC // CHOMPAdd

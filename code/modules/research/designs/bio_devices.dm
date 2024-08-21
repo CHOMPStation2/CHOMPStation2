@@ -1,5 +1,6 @@
 /datum/design/item/biotech
 	materials = list(MAT_STEEL = 30, MAT_GLASS = 20)
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/AssembleDesignName()
 	..()
@@ -13,7 +14,6 @@
 	req_tech = list(TECH_BIO = 2, TECH_MAGNET = 2)
 	build_path = /obj/item/device/mass_spectrometer
 	sort_string = "JAAAA"
-	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/adv_mass_spectrometer
 	desc = "A device for analyzing chemicals in blood and their quantities."
@@ -21,7 +21,6 @@
 	req_tech = list(TECH_BIO = 2, TECH_MAGNET = 4)
 	build_path = /obj/item/device/mass_spectrometer/adv
 	sort_string = "JAAAB"
-	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/reagent_scanner
 	desc = "A device for identifying chemicals."
@@ -29,7 +28,6 @@
 	req_tech = list(TECH_BIO = 2, TECH_MAGNET = 2)
 	build_path = /obj/item/device/reagent_scanner
 	sort_string = "JAABA"
-	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/adv_reagent_scanner
 	desc = "A device for identifying chemicals and their proportions."
@@ -37,7 +35,6 @@
 	req_tech = list(TECH_BIO = 2, TECH_MAGNET = 4)
 	build_path = /obj/item/device/reagent_scanner/adv
 	sort_string = "JAABB"
-	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/robot_scanner
 	desc = "A hand-held scanner able to diagnose robotic injuries."

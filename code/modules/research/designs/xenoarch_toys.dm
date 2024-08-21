@@ -4,6 +4,9 @@
 
 // Xenoarch tools
 
+/datum/design/item/weapon/xenoarch // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE
+
 /datum/design/item/weapon/xenoarch/ano_scanner
 	name = "Alden-Saraspova counter"
 	id = "ano_scanner"

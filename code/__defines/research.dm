@@ -27,3 +27,4 @@
 #define LATHE_CARGO				0x10
 #define LATHE_SERVICE			0x20
 #define LATHE_SECURITY			0x40
+#define LATHE_PUBLIC			0x80

@@ -27,3 +27,7 @@
 	name = "Security Protolathe"
 	req_category = LATHE_SECURITY
 	dep_overlay = "sec"
+
+/obj/machinery/r_n_d/protolathe/public
+	name = "Public Protolathe"
+	req_category = LATHE_PUBLIC

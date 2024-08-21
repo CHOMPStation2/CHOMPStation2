@@ -13,6 +13,7 @@
 	id = "gps_gen"
 	build_path = /obj/item/device/gps
 	sort_string = "DAAAA"
+	department = LATHE_ALL | LATHE_PUBLIC// CHOMPAdd
 
 /datum/design/item/gps/command
 	name = "COM"
