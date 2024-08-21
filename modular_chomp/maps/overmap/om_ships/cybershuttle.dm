@@ -1,13 +1,13 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
 #if MAP_TEST
-#include "cybershuttle.dmm"
+#include "cybershuttle-10x11"
 #endif
 
 // Map template for spawning the shuttle
 /datum/map_template/om_ships/cybershuttle
 	name = "OM Ship - Cyber Shuttle"
 	desc = "A small privately-owned vessel with some snobbiness to it."
-	mappath = 'cybershuttle.dmm'
+	mappath = 'cybershuttle-10x11.dmm'
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -49,3 +49,11 @@
 	burn_delay = 0.25 SECONDS //Fast as fuck
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Cyber Shuttle" //These names must match
+
+/datum/map_template/shelter/superpose/cybershuttle
+	shelter_id = "CyberShuttle"
+	mappath = 'cybershuttle-10x11.dmm'
+	name = "CyberShuttle"
+	description = "A very fast, very snobby very dangerous deathtrap that make you look rich."
+	superpose = FALSE
+	shuttle = TRUE

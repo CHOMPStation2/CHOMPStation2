@@ -49,8 +49,6 @@
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Pizza Gut" //These names must match
 
-//FOR SHUTTLE SUPERPOSED PODS todo: fix superposed pods to not leave space on depart
-/*
 /datum/map_template/shelter/superpose/pizzashuttle
 	shelter_id = "PizzaShuttle"
 	mappath = 'pizzashuttle-11x13.dmm'
@@ -58,4 +56,3 @@
 	description = "A medium size pizza resturaunt ship."
 	superpose = FALSE
 	shuttle = TRUE
-*/

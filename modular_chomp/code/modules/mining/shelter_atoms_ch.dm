@@ -188,8 +188,9 @@
 		to_chat(user, "<span class='notice'>You reset the pod's selection.</span>")
 	..()
 
-/obj/item/device/survivalcapsule/superpose/shuttle //Broken, do not spawn ships on planet layers unless you want a hole leading to space
+/obj/item/device/survivalcapsule/superpose/shuttle
 	name = "superposed surfluid shuttle capsule"
+	is_ship = TRUE //So you cant just make holes in planets
 
 /obj/item/device/survivalcapsule/superpose/shuttle/attack_self()
 	if(!pod_initialized)
