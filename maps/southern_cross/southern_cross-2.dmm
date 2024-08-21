@@ -27485,8 +27485,7 @@
 /obj/machinery/door/airlock/glass_security{
 	id_tag = "BrigFoyer";
 	layer = 2.8;
-	name = "Security Wing";
-	req_access = s
+	name = "Security Wing"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -29020,8 +29019,7 @@
 	id_tag = "BrigFoyer";
 	layer = 2.8;
 	name = "Security Wing";
-	req_access = list(63);
-	req_one_access = s
+	req_access = list(63)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/security_hallway)
