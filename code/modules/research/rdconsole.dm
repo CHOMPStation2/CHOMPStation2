@@ -126,11 +126,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/attackby(var/obj/item/weapon/D as obj, var/mob/user as mob)
 	//Loading a disk into it.
 	if(istype(D, /obj/item/weapon/disk))
-	// CHOMPEdit Add
-		if(is_public)
-			to_chat(SPAN_NOTICE("This console doesn't accept disks!"))
-			return
-	// CHOMPEdit End
 		if(t_disk || d_disk)
 			to_chat(user, "<span class='filter_notice'>A disk is already loaded into the machine.</span>")
 			return
