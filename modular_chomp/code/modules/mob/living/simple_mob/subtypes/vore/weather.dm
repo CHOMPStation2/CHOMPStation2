@@ -201,9 +201,13 @@
 /mob/living/simple_mob/vore/weatherbeast/sandstorm/do_special_attack(atom/A)
 	if(health < maxHealth*0.25)
 		visible_message(span_orange("<B>The fossil tank begins self repairs!.</B>"))
-		sleep(50)
-		adjustBruteLoss(-300)
-		adjustFireLoss(-300)
+		sleep(30)
+		for(var/i =1 to 10)
+			adjustBruteLoss(-100)
+			adjustFireLoss(-100)
+			sleep(15)
+		adjustBruteLoss(-100)
+		adjustFireLoss(-100)
 	else
 		Beam(A, icon_state = "sat_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
 		sleep(30)
@@ -242,10 +246,11 @@
 			L.adjustHalLoss(20)
 
 /mob/living/simple_mob/vore/weatherbeast/acidrain/do_special_attack(atom/A)
-	if(nutrition > 400)
+	if(nutrition > 1100)
 		visible_message(span_orange("<B>The giant jellyfish begins to regenerate!.</B>"))
 		adjustBruteLoss(-300)
 		adjustFireLoss(-300)
+		adjust_nutrition(-500)
 	else
 		return
 
@@ -253,10 +258,13 @@
 	..()
 	if(istype(P, /obj/item/projectile/energy))
 		projectiletype = /obj/item/projectile/energy/declone
+		adjust_nutrition(-50)
 	if(istype(P, /obj/item/projectile/bullet))
 		projectiletype = /obj/item/projectile/energy/bolt
+		adjust_nutrition(-50)
 	if(istype(P, /obj/item/projectile/beam))
 		projectiletype = /obj/item/projectile/beam/gamma
+		adjust_nutrition(-50)
 
 /mob/living/simple_mob/vore/weatherbeast/acidrain/handle_special()
 	if(stat != DEAD)
@@ -276,7 +284,7 @@
 			L.add_modifier(/datum/modifier/poisoned/weak/acid, 12, src)
 
 /datum/modifier/poisoned/weak/acid //Getting multiple of this will destroy you swiftly.
-	incoming_tox_damage_percent = 1.2
+	incoming_tox_damage_percent = 1.5
 
 /datum/ai_holder/simple_mob/intentional/dark_stranger
 	use_astar = TRUE
@@ -358,24 +366,9 @@
 	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
 	var/obj/item/projectile/P = new /obj/item/projectile/energy/mob/precursor(get_turf(src))
 	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(5)
+	for(var/i =1 to 5)
+		P.launch_projectile(target, BP_TORSO, src)
+		sleep(5)
 	P.launch_projectile(, BP_TORSO, src)
 	attack_cycle = 2
 
