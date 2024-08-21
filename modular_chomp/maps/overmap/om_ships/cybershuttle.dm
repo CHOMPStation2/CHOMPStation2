@@ -1,6 +1,6 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
 #if MAP_TEST
-#include "cybershuttle-10x11"
+#include "cybershuttle-10x11.dmm"
 #endif
 
 // Map template for spawning the shuttle
