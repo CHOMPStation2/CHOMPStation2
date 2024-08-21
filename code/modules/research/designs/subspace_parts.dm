@@ -4,6 +4,9 @@
 	..()
 	name = "Subspace component design ([item_name])"
 
+/datum/design/item/stock_part/subspace // CHOMPAdd
+	department = LATHE_ALL | LATHE_ENGINEERING
+
 /datum/design/item/stock_part/subspace/subspace_ansible
 	id = "s-ansible"
 	req_tech = list(TECH_DATA = 3, TECH_MAGNET = 4, TECH_MATERIAL = 4, TECH_BLUESPACE = 2)

@@ -25,30 +25,35 @@
 	id = "gps_sec"
 	build_path = /obj/item/device/gps/security
 	sort_string = "DAAAC"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/gps/medical
 	name = "MED"
 	id = "gps_med"
 	build_path = /obj/item/device/gps/medical
 	sort_string = "DAAAD"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/gps/engineering
 	name = "ENG"
 	id = "gps_eng"
 	build_path = /obj/item/device/gps/engineering
 	sort_string = "DAAAE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/gps/science
 	name = "SCI"
 	id = "gps_sci"
 	build_path = /obj/item/device/gps/science
 	sort_string = "DAAAF"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/gps/mining
 	name = "MINE"
 	id = "gps_mine"
 	build_path = /obj/item/device/gps/mining
 	sort_string = "DAAAG"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/gps/explorer
 	name = "EXP"
@@ -70,6 +75,7 @@
 	materials = list(MAT_STEEL = 1000,MAT_GLASS = 500)
 	build_path = /obj/item/device/beacon_locator
 	sort_string = "DBAAA"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/locator/beacon
 	name = "Bluespace tracking beacon"
@@ -78,3 +84,4 @@
 	materials = list (MAT_STEEL = 20, MAT_GLASS = 10)
 	build_path = /obj/item/device/radio/beacon
 	sort_string = "DBABA"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd

@@ -53,6 +53,7 @@
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 2000, MAT_URANIUM = 4000, MAT_PHORON = 4000)
 	build_path = /obj/item/weapon/inducer/sci
 	sort_string = "TCVAA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/general/inducer_eng
 	name = "Inducer (Industrial)"
@@ -61,6 +62,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000, MAT_URANIUM = 2000, MAT_TITANIUM = 2000)
 	build_path = /obj/item/weapon/inducer/unloaded
 	sort_string = "TCVAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/weapon/mining/mining_scanner
 	id = "mining_scanner"
@@ -68,6 +70,7 @@
 	materials = list(MAT_STEEL = 1000,MAT_GLASS = 500)
 	build_path = /obj/item/weapon/mining_scanner/advanced
 	sort_string = "FBAAB"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/general/walkpod
 	name = "PodZu Music Player"
@@ -76,6 +79,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
 	build_path = /obj/item/device/walkpod
 	sort_string = "TCVAD"
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
 
 /datum/design/item/general/juke_remote
 	name = "BoomTown Cordless Speaker"
@@ -84,3 +88,4 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
 	build_path = /obj/item/device/juke_remote
 	sort_string = "TCVAE"
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd

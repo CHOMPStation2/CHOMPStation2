@@ -25,6 +25,7 @@
 	materials = list(MAT_STEEL = 4000)
 	build_path = /obj/item/weapon/gun/energy/stunrevolver
 	sort_string = "MAAAA"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/energy/nuclear_gun
 	id = "nuclear_gun"
@@ -32,6 +33,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000, MAT_URANIUM = 500)
 	build_path = /obj/item/weapon/gun/energy/gun/nuclear
 	sort_string = "MAAAB"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/energy/phoronpistol
 	id = "ppistol"
@@ -39,6 +41,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000, MAT_PHORON = 3000)
 	build_path = /obj/item/weapon/gun/energy/toxgun
 	sort_string = "MAAAC"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/energy/lasercannon
 	desc = "The lasing medium of this prototype is enclosed in a tube lined with uranium-235 and subjected to high neutron flux in a nuclear reactor core."
@@ -47,6 +50,7 @@
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 1000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/weapon/gun/energy/lasercannon
 	sort_string = "MAAAD"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/energy/decloner
 	id = "decloner"
@@ -54,6 +58,7 @@
 	materials = list(MAT_GOLD = 5000,MAT_URANIUM = 10000)
 	build_path = /obj/item/weapon/gun/energy/decloner
 	sort_string = "MAAAE"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/energy/temp_gun
 	desc = "A gun that shoots high-powered glass-encased energy temperature bullets."
@@ -62,6 +67,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 500, MAT_SILVER = 3000)
 	build_path = /obj/item/weapon/gun/energy/temperature
 	sort_string = "MAAAF"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/energy/flora_gun
 	id = "flora_gun"
@@ -69,6 +75,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 500, MAT_URANIUM = 500)
 	build_path = /obj/item/weapon/gun/energy/floragun
 	sort_string = "MAAAG"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/weapon/energy/vinstunrevolver
 	id = "vinstunrevolver"
@@ -76,6 +83,7 @@
 	materials = list(MAT_STEEL = 4000)
 	build_path = /obj/item/weapon/gun/energy/stunrevolver/vintage
 	sort_string = "MAAAH"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // Ballistic weapons
 
@@ -90,6 +98,7 @@
 	materials = list(MAT_STEEL = 8000, MAT_SILVER = 2000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/weapon/gun/projectile/automatic/advanced_smg
 	sort_string = "MABAA"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // Ballistic ammo
 
@@ -105,6 +114,7 @@
 	materials = list(MAT_STEEL = 3750, MAT_SILVER = 100) // Requires silver for proprietary magazines! Or something.
 	build_path = /obj/item/ammo_magazine/m9mmAdvanced
 	sort_string = "MABBA"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/ballistic/ammo/stunshell
 	name = "stun shells"
@@ -114,6 +124,7 @@
 	materials = list(MAT_STEEL = 4000)
 	build_path = /obj/item/ammo_magazine/ammo_box/b12g/stunshell
 	sort_string = "MABBB"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/ballistic/ammo/empshell
 	name = "emp shells"
@@ -123,6 +134,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_URANIUM = 1000)
 	build_path = /obj/item/ammo_magazine/ammo_box/b12g/emp
 	sort_string = "MABBC"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // Phase weapons
 
@@ -168,6 +180,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000)
 	build_path = /obj/item/weapon/gun/launcher/syringe/rapid
 	sort_string = "MADAA"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/weapon/dartgun
 	desc = "A gun that fires small hollow chemical-payload darts."
@@ -176,6 +189,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GOLD = 5000, MAT_SILVER = 2500, MAT_GLASS = 750)
 	build_path = /obj/item/weapon/gun/projectile/dartgun/research
 	sort_string = "MADAB"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/weapon/chemsprayer
 	desc = "An advanced chem spraying device."
@@ -184,6 +198,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000)
 	build_path = /obj/item/weapon/reagent_containers/spray/chemsprayer
 	sort_string = "MADAC"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/weapon/fuelrod
 	id = "fuelrod_gun"
@@ -191,6 +206,7 @@
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 2000, MAT_GOLD = 500, MAT_SILVER = 500, MAT_URANIUM = 1000, MAT_PHORON = 3000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/weapon/gun/magnetic/fuelrod
 	sort_string = "MADAD"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 // Ammo for those
 
@@ -200,6 +216,7 @@
 	materials = list(MAT_STEEL = 300, MAT_GOLD = 100, MAT_SILVER = 100, MAT_GLASS = 300)
 	build_path = /obj/item/ammo_magazine/chemdart/small
 	sort_string = "MADBA"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/weapon/ammo/dartgun_ammo_small
 	id = "dartgun_ammo_s"
@@ -207,6 +224,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GOLD = 30, MAT_SILVER = 30, MAT_GLASS = 50)
 	build_path = /obj/item/ammo_casing/chemdart/small
 	sort_string = "MADBB"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/weapon/ammo/dartgunmag_med
 	id = "dartgun_mag_m"
@@ -214,6 +232,7 @@
 	materials = list(MAT_STEEL = 500, MAT_GOLD = 150, MAT_SILVER = 150, MAT_DIAMOND = 200, MAT_GLASS = 400)
 	build_path = /obj/item/ammo_magazine/chemdart
 	sort_string = "MADBC"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/weapon/ammo/dartgun_ammo_med
 	id = "dartgun_ammo_m"
@@ -221,6 +240,7 @@
 	materials = list(MAT_STEEL = 80, MAT_GOLD = 40, MAT_SILVER = 40, MAT_GLASS = 60)
 	build_path = /obj/item/ammo_casing/chemdart
 	sort_string = "MADBD"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/weapon/ammo/flechette
 	id = "magnetic_ammo"
@@ -228,6 +248,7 @@
 	materials = list(MAT_STEEL = 500, MAT_GOLD = 300, MAT_GLASS = 150, MAT_PHORON = 100)
 	build_path = /obj/item/weapon/magnetic_ammo
 	sort_string = "MADBE"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // Melee weapons
 
@@ -242,6 +263,7 @@
 	materials = list(MAT_PLASTEEL = 3500, MAT_GLASS = 1000, MAT_LEAD = 2250, MAT_METALHYDROGEN = 500)
 	build_path = /obj/item/weapon/melee/energy/sword/charge
 	sort_string = "MBAAA"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/melee/eaxe
 	name = "Energy Axe"
@@ -250,6 +272,7 @@
 	materials = list(MAT_PLASTEEL = 3500, MAT_OSMIUM = 2000, MAT_LEAD = 2000, MAT_METALHYDROGEN = 500)
 	build_path = /obj/item/weapon/melee/energy/axe/charge
 	sort_string = "MBAAB"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // Grenade stuff
 /datum/design/item/weapon/grenade/AssembleDesignName()
@@ -262,3 +285,4 @@
 	materials = list(MAT_STEEL = 3000)
 	build_path = /obj/item/weapon/grenade/chem_grenade/large
 	sort_string = "MCAAA"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd

@@ -18,3 +18,12 @@
 #define MECHFAB		0x0004	//Mechfab
 #define CHASSIS		0x0008	//For protolathe, but differently
 #define PROSFAB		0x0010  //For prosthetics fab
+
+// CHOMPAdd - Departmental Lathes
+#define LATHE_ALL 				0x0001
+#define LATHE_SCIENCE			0x0002
+#define LATHE_ENGINEERING		0x0004
+#define LATHE_MEDICAL			0x0008
+#define LATHE_CARGO				0x0016
+#define LATHE_SERVICE			0x0032
+#define LATHE_SECURITY			0x0064

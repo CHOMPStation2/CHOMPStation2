@@ -4,6 +4,7 @@
 	req_tech = list(TECH_ENGINEERING = 3, TECH_BIO = 2)
 	build_path = /obj/item/weapon/circuitboard/algae_farm
 	sort_string = "HABAE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/thermoregulator
 	name = "thermal regulator"
@@ -11,6 +12,7 @@
 	req_tech = list(TECH_ENGINEERING = 4, TECH_POWER = 3)
 	build_path = /obj/item/weapon/circuitboard/thermoregulator
 	sort_string = "HABAF"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/bomb_tester
 	name = "Explosive Effect Simulator"
@@ -155,6 +157,7 @@
 	req_tech = list(TECH_DATA = 3, TECH_POWER = 3, TECH_PHORON = 3, TECH_ENGINEERING = 3)
 	build_path = /obj/item/weapon/circuitboard/machine/rtg
 	sort_string = "HAAD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/rtg_advanced
 	name = "advanced radioisotope TEG"
@@ -162,6 +165,7 @@
 	req_tech = list(TECH_DATA = 5, TECH_POWER = 5, TECH_PHORON = 5, TECH_ENGINEERING = 5)
 	build_path = /obj/item/weapon/circuitboard/machine/rtg/advanced
 	sort_string = "HAAE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/rtg
 	name = "vitals monitor"
@@ -183,6 +187,7 @@
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 3, TECH_COMBAT = 4)
 	build_path = /obj/item/weapon/circuitboard/pointdefense
 	sort_string = "OAABA"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/pointdefense_control
 	name = "point defense control"
@@ -190,3 +195,4 @@
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_COMBAT = 2)
 	build_path = /obj/item/weapon/circuitboard/pointdefense_control
 	sort_string = "OAABB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

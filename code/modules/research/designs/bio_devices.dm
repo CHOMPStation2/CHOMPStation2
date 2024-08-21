@@ -13,6 +13,7 @@
 	req_tech = list(TECH_BIO = 2, TECH_MAGNET = 2)
 	build_path = /obj/item/device/mass_spectrometer
 	sort_string = "JAAAA"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/adv_mass_spectrometer
 	desc = "A device for analyzing chemicals in blood and their quantities."
@@ -20,6 +21,7 @@
 	req_tech = list(TECH_BIO = 2, TECH_MAGNET = 4)
 	build_path = /obj/item/device/mass_spectrometer/adv
 	sort_string = "JAAAB"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/reagent_scanner
 	desc = "A device for identifying chemicals."
@@ -27,6 +29,7 @@
 	req_tech = list(TECH_BIO = 2, TECH_MAGNET = 2)
 	build_path = /obj/item/device/reagent_scanner
 	sort_string = "JAABA"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/adv_reagent_scanner
 	desc = "A device for identifying chemicals and their proportions."
@@ -34,6 +37,7 @@
 	req_tech = list(TECH_BIO = 2, TECH_MAGNET = 4)
 	build_path = /obj/item/device/reagent_scanner/adv
 	sort_string = "JAABB"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/robot_scanner
 	desc = "A hand-held scanner able to diagnose robotic injuries."
@@ -42,6 +46,7 @@
 	materials = list(MAT_STEEL = 500, MAT_GLASS = 200)
 	build_path = /obj/item/device/robotanalyzer
 	sort_string = "JAACA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/biotech/nanopaste
 	desc = "A tube of paste containing swarms of repair nanites. Very effective in repairing robotic machinery."
@@ -50,6 +55,7 @@
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 7000)
 	build_path = /obj/item/stack/nanopaste
 	sort_string = "JAACB"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/biotech/plant_analyzer
 	desc = "A device capable of quickly scanning all relevant data about a plant."
@@ -58,4 +64,4 @@
 	materials = list(MAT_STEEL = 500, MAT_GLASS = 500)
 	build_path = /obj/item/device/analyzer/plant_analyzer
 	sort_string = "JAADA"
-
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd

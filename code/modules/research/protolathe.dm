@@ -38,6 +38,8 @@
 
 	hidden_materials = list(MAT_PLASTEEL, MAT_DURASTEEL, MAT_GRAPHITE, MAT_VERDANTIUM, MAT_MORPHIUM, MAT_METALHYDROGEN, MAT_SUPERMATTER)
 
+	var/req_category = LATHE_ALL // CHOMPAdd - Departmental Lathes
+
 /obj/machinery/r_n_d/protolathe/Initialize()
 	. = ..()
 
