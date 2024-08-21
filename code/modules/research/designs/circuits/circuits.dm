@@ -192,6 +192,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 4)
 	build_path = /obj/item/weapon/circuitboard/aiupload
 	sort_string = "HAABA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/borgupload
 	name = "cyborg upload console"
@@ -199,6 +200,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 4)
 	build_path = /obj/item/weapon/circuitboard/borgupload
 	sort_string = "HAABB"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/destructive_analyzer
 	name = "destructive analyzer"
@@ -206,6 +208,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 2, TECH_MAGNET = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/circuitboard/destructive_analyzer
 	sort_string = "HABAA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/protolathe
 	name = "protolathe"
@@ -213,6 +216,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/circuitboard/protolathe
 	sort_string = "HABAB"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/circuit_imprinter
 	name = "circuit imprinter"
@@ -220,6 +224,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/circuitboard/circuit_imprinter
 	sort_string = "HABAC"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/autolathe
 	name = "autolathe board"
@@ -227,6 +232,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/circuitboard/autolathe
 	sort_string = "HABAD"
+	department = LATHE_ALL | LATHE_SCIENCE | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/rdservercontrol
 	name = "R&D server control console"
@@ -234,6 +240,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 3)
 	build_path = /obj/item/weapon/circuitboard/rdservercontrol
 	sort_string = "HABBA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/rdserver
 	name = "R&D server"
@@ -241,6 +248,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 3)
 	build_path = /obj/item/weapon/circuitboard/rdserver
 	sort_string = "HABBB"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/mechfab
 	name = "exosuit fabricator"
@@ -248,6 +256,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 3)
 	build_path = /obj/item/weapon/circuitboard/mechfab
 	sort_string = "HABAE"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/prosfab
 	name = "prosthetics fabricator"
@@ -255,6 +264,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 3)
 	build_path = /obj/item/weapon/circuitboard/prosthetics
 	sort_string = "HABAF"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/mech_recharger
 	name = "mech recharger"
@@ -262,7 +272,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 2, TECH_POWER = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/circuitboard/mech_recharger
 	sort_string = "HACAA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/recharge_station
 	name = "cyborg recharge station"
@@ -270,7 +280,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/circuitboard/recharge_station
 	sort_string = "HACAC"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/atmosalerts
 	name = "atmosphere alert console"
@@ -413,6 +423,7 @@ CIRCUITS BELOW
 	id = "ordercomp"
 	build_path = /obj/item/weapon/circuitboard/supplycomp
 	sort_string = "KAAAY"	// Duplicate string, really need to redo this whole thing
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/supplycomp
 	name = "supply control console"
@@ -420,6 +431,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 3)
 	build_path = /obj/item/weapon/circuitboard/supplycomp/control
 	sort_string = "KAAAZ"	// Duplicate string, really need to redo this whole thing
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/biogenerator
 	name = "biogenerator"
@@ -427,6 +439,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 2)
 	build_path = /obj/item/weapon/circuitboard/biogenerator
 	sort_string = "KBAAA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/miningdrill
 	name = "mining drill head"
@@ -434,6 +447,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1)
 	build_path = /obj/item/weapon/circuitboard/miningdrill
 	sort_string = "KCAAA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/miningdrillbrace
 	name = "mining drill brace"
@@ -441,24 +455,28 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1)
 	build_path = /obj/item/weapon/circuitboard/miningdrillbrace
 	sort_string = "KCAAB"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/comconsole
 	name = "communications console"
 	id = "comconsole"
 	build_path = /obj/item/weapon/circuitboard/communications
 	sort_string = "LAAAA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/idcardconsole
 	name = "ID card modification console"
 	id = "idcardconsole"
 	build_path = /obj/item/weapon/circuitboard/card
 	sort_string = "LAAAB"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/emp_data
 	name = "employment records console"
 	id = "emp_data"
 	build_path = /obj/item/weapon/circuitboard/skills
 	sort_string = "LAAAC"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/arf_generator
 	name = "atmospheric field generator"
@@ -474,9 +492,11 @@ CIRCUITS BELOW
 	req_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_DATA = 5)
 	build_path = /obj/item/weapon/circuitboard/protean_reconstitutor
 	sort_string = "LAAAE"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/mecha
 	req_tech = list(TECH_DATA = 3)
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/circuit/mecha/AssembleDesignName()
 	name = "Exosuit module circuit design ([name])"
@@ -566,6 +586,7 @@ CIRCUITS BELOW
 
 /datum/design/circuit/tcom
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 4)
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/tcom/AssembleDesignName()
 	name = "Telecommunications machinery circuit design ([name])"
@@ -577,28 +598,24 @@ CIRCUITS BELOW
 	id = "tcom-server"
 	build_path = /obj/item/weapon/circuitboard/telecomms/server
 	sort_string = "PAAAA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/tcom/processor
 	name = "processor unit"
 	id = "tcom-processor"
 	build_path = /obj/item/weapon/circuitboard/telecomms/processor
 	sort_string = "PAAAB"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/tcom/bus
 	name = "bus mainframe"
 	id = "tcom-bus"
 	build_path = /obj/item/weapon/circuitboard/telecomms/bus
 	sort_string = "PAAAC"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/tcom/hub
 	name = "hub mainframe"
 	id = "tcom-hub"
 	build_path = /obj/item/weapon/circuitboard/telecomms/hub
 	sort_string = "PAAAD"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/tcom/relay
 	name = "relay mainframe"
@@ -606,7 +623,6 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 4, TECH_BLUESPACE = 3)
 	build_path = /obj/item/weapon/circuitboard/telecomms/relay
 	sort_string = "PAAAE"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/tcom/broadcaster
 	name = "subspace broadcaster"
@@ -614,7 +630,6 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 4, TECH_BLUESPACE = 2)
 	build_path = /obj/item/weapon/circuitboard/telecomms/broadcaster
 	sort_string = "PAAAF"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/tcom/receiver
 	name = "subspace receiver"
@@ -622,7 +637,6 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_BLUESPACE = 2)
 	build_path = /obj/item/weapon/circuitboard/telecomms/receiver
 	sort_string = "PAAAG"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/tcom/exonet_node
 	name = "exonet node"
@@ -630,11 +644,11 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 5, TECH_BLUESPACE = 4)
 	build_path = /obj/item/weapon/circuitboard/telecomms/exonet_node
 	sort_string = "PAAAH"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/shield
 	req_tech = list(TECH_BLUESPACE = 4, TECH_PHORON = 3)
 	materials = list(MAT_GLASS = 2000, MAT_GOLD = 1000)
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/shield/AssembleDesignName()
 	name = "Shield generator circuit design ([name])"
@@ -647,14 +661,12 @@ CIRCUITS BELOW
 	id = "shield_gen"
 	build_path = /obj/item/weapon/circuitboard/shield_gen
 	sort_string = "VAAAZ"	// Duplicate string, really need to redo this whole thing
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/shield/hull
 	name = "hull (OBSOLETE)" //VOREStation Edit
 	id = "shield_gen_ex"
 	build_path = /obj/item/weapon/circuitboard/shield_gen_ex
 	sort_string = "VAAAB"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/shield/capacitor
 	name = "capacitor (OBSOLETE)" //VOREStation Edit"
@@ -663,7 +675,6 @@ CIRCUITS BELOW
 	req_tech = list(TECH_MAGNET = 3, TECH_POWER = 4)
 	build_path = /obj/item/weapon/circuitboard/shield_cap
 	sort_string = "VAAAC"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/circuit/ntnet_relay
 	name = "NTNet Quantum Relay"
@@ -679,6 +690,8 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 4, TECH_BIO = 3)
 	build_path = /obj/item/weapon/circuitboard/aicore
 	sort_string = "XAAAA"
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_SCIENCE // CHOMPAdd
+
 // Cooking Appliances
 /datum/design/circuit/microwave
 	name = "microwave board"

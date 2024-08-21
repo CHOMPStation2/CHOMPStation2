@@ -75,7 +75,7 @@
 	materials = list(MAT_STEEL = 1000,MAT_GLASS = 500)
 	build_path = /obj/item/device/beacon_locator
 	sort_string = "DBAAA"
-	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/locator/beacon
 	name = "Bluespace tracking beacon"
@@ -84,4 +84,4 @@
 	materials = list (MAT_STEEL = 20, MAT_GLASS = 10)
 	build_path = /obj/item/device/radio/beacon
 	sort_string = "DBABA"
-	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
