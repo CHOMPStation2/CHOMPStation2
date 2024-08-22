@@ -718,11 +718,21 @@
 	ckeywhitelist = list("luminescentring")
 	character_name = list("Briana Moore")
 
+<<<<<<< HEAD
 /datum/gear/fluff/entchtut_medal
 	path = /obj/item/clothing/accessory/medal/conduct
 	display_name = "Entchtut's Conduct Medal"
 	ckeywhitelist = list("littlebigkid2000")
 	character_name = list("Entchtut Cenein")
+=======
+/datum/gear/fluff/zharritool
+	path = /obj/item/weapon/tool/transforming/altevian
+	display_name = "Zharri's Custom Omni-Tool"
+	description = "A Hull Systems Omni-Tool capable of temporarily shrinking to handheld sizes for even the most delicate work."
+	ckeywhitelist = list("lewzharri")
+	character_name = list ("Kovgam Zharri")
+	allowed_roles = list("Roboticist","Engineer","Scientist","Xenobiologist","Xenobotanist","Research Director")
+>>>>>>> 31677e921d... Merge pull request #16202 from Lewzharri/fluff-item-whitelist-addition
 
 //  M CKEYS
 /datum/gear/fluff/phi_box
