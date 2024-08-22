@@ -19,7 +19,7 @@
 		-----Server rules still apply to the fullest
 		-----Outsiders are considered unauthorized personnel on Southern Cross.
 		-----Outsiders are not allowed to take part in events and mini-event areas unless the EM says otherwise.
-		-----Outsiders are not allowed to take station jobs.gonna
+		-----Outsiders are not allowed to take station jobs.
 		-----Outsiders are not allowed to know more than two department jobs.
 		-----Outsiders are expected to behave in accordance with Unauthorized Personnel SOP regardless of their IC knowledge.
 		-----Outsiders are not allowed to log-off with station key items (e.g. Captain's spare, station blueprints, nuclear authentication disk, bluespace harpoon, large quantities of station goods, etc). Please leave these items on station or with relevant crew.
