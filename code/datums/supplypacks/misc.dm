@@ -245,11 +245,12 @@
 	access = list(access_mining,
 				  access_xenoarch,
 				  access_eva,
+				  access_explorer, //CHOMP explo keep
 				  access_pilot)
 	one_access = TRUE
 
 /datum/supply_pack/randomised/misc/explorer_shield
-	name = "Away Team shield"
+	name = "Explorer shield" //CHOMP explo keep
 	num_contained = 2
 	contains = list(
 			/obj/item/weapon/shield/riot/explorer,
@@ -258,7 +259,8 @@
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "exploration shield crate"
-	access = list(access_eva,
+	access = list(access_explorer, //CHOMP explo keep
+				  access_eva,
 				  access_pilot)
 	one_access = TRUE
 
@@ -289,7 +291,7 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "exploration radio headsets crate"
 	access = list(
-		access_explorer,
+		access_explorer, //CHOMP explo keep
 		access_eva,
 		access_pilot
 	)
@@ -303,6 +305,13 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate
 	containername = "emergency beacons crate"
+
+/datum/supply_pack/misc/swoopie //CHOMPAdd
+	name = "SWOOPIE XL CleanBot Kit"
+	contains = list()
+	cost = 100
+	containertype = /obj/structure/largecrate/animal/swoopie
+	containername = "SWOOPIE XL CleanBot Starter Kit"
 
 /datum/supply_pack/misc/random_corpo
 	name = "random corporate supply crate"

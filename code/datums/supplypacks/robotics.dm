@@ -221,6 +221,7 @@
 	containertype = /obj/structure/largecrate/vehicle/quadtrailer
 	containername = "ATV Trailer Crate"
 
+/* //CHOMPedit commented micromech stuff, because fuck this trash
 /datum/supply_pack/robotics/mecha_gopher
 	name = "Circuit Crate (\"Gopher\" APLU)"
 	contains = list(
@@ -254,7 +255,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/science
 	containername = "APLU \"Weasel\" Circuit Crate"
-	access = access_robotics
+	access = access_robotics */
 
 /datum/supply_pack/robotics/some_robolimbs
 	name = "Basic Robolimb Blueprints"

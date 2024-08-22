@@ -687,7 +687,8 @@
 	containername = "Morale Posters"
 	access = access_maint_tunnels
 
-/*/datum/supply_pack/security/guardbeast //VORESTATION AI TEMPORARY REMOVAL
+//CHOMPEdit Start, enable this
+/datum/supply_pack/security/guardbeast
 	name = "VARMAcorp autoNOMous security solution"
 	cost = 150
 	containertype = /obj/structure/largecrate/animal/guardbeast
@@ -706,7 +707,7 @@
 			access_security,
 			access_xenobiology)
 	one_access = TRUE
-*/
+//CHOMPEdit End
 
 /datum/supply_pack/security/biosuit
 	contains = list(
@@ -714,7 +715,7 @@
 			/obj/item/clothing/under/rank/security = 3,
 			/obj/item/clothing/suit/bio_suit/security = 3,
 			/obj/item/clothing/shoes/white = 3,
-			/obj/item/clothing/mask/gas = 3,
+			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: Implementation of clear gas masks
 			/obj/item/weapon/tank/oxygen = 3,
 			/obj/item/clothing/gloves/sterile/latex,
 			/obj/item/weapon/storage/box/gloves
