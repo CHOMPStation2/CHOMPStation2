@@ -110,8 +110,6 @@
 /datum/supply_pack/randomised/hospitality/
 	group = "Hospitality"
 
-<<<<<<< HEAD
-=======
 /datum/supply_pack/randomised/hospitality/burgers_vr
 	num_contained = 5
 	contains = list(
@@ -225,4 +223,3 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "Sweets crate"
->>>>>>> 1e49f4bdb5... Supply System Updates (#16161)
