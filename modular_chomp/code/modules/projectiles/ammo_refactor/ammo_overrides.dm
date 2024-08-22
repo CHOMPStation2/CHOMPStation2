@@ -43,8 +43,8 @@ Small Weapons
 
 /obj/item/weapon/gun/projectile/revolver/detective45
 	caliber = "small"
-	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber
+	ammo_type = /obj/item/ammo_casing/simple/small/rubber
+	projectile_type = /obj/item/projectile/bullet/pistol/medium
 
 /obj/item/weapon/gun/projectile/revolver/lombardi
 	caliber = "small"
@@ -586,19 +586,19 @@ Medium Weapons
 
 /obj/item/weapon/gun/projectile/automatic/serdy/krinkov
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/akm
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/scrapak
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
@@ -676,7 +676,7 @@ Medium Weapons
 /obj/item/weapon/gun/projectile/automatic/serdy/sks
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762/sniper
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mosin
 	caliber = "medium"
@@ -702,19 +702,19 @@ Medium Weapons
 
 /obj/item/weapon/gun/projectile/automatic/serdy/memegun
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/tkb408
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/groza
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
@@ -738,13 +738,13 @@ Medium Weapons
 
 /obj/item/weapon/gun/projectile/automatic/serdy/rpd
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
 /obj/item/weapon/gun/projectile/automatic/serdy/rpk
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_drum)
 	magazine_type = /obj/item/ammo_magazine/medium_drum
 
