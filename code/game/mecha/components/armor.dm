@@ -216,7 +216,7 @@
 /obj/item/mecha_parts/component/armor/alien
 	name = "strange mecha plating"
 	step_delay = 2
-	//Chompedit start  Trying to make this armor decent, without making it OP. Chompedit 2, nerfing damage absorption 8/12/2024
+	//Chompedit start  Trying to make this armor decent, without making it OP. Chompedit 2, nerfing damage absorption 2024/8/12
 	//damage_minimum = 12
 	//minimum_penetration = 10
 	//Chompedit end
