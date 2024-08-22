@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - balance: "limits item size of suitable vacuumable items to everything smaller than huge size"
