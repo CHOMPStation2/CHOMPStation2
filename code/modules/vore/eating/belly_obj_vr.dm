@@ -1915,7 +1915,7 @@
 
 <<<<<<< HEAD
 	//CHOMPEdit Start - vore sprites struggle animation
-	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1) && !private_struggle)
+	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1) && !private_struggle && resist_triggers_animation && affects_vore_sprites)
 		owner.vs_animate(belly_sprite_to_affect)
 	//CHOMPEdit End
 
@@ -1927,16 +1927,6 @@
 			else
 				struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
 			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
-=======
-	if(resist_triggers_animation && affects_vore_sprites)
-		var/mob/living/carbon/human/O = owner
-		if(istype(O))
-			O.vore_belly_animation()
-
-	if(is_wet)
-		if(!fancy_vore)
-			struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
->>>>>>> 9ce3a7f4e0... Fixed vore struggle animation not working (#16182)
 		else
 			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 	//CHOMPEdit End
