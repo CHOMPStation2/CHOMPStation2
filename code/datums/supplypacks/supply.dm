@@ -218,7 +218,7 @@
 	containername = "food cubes"
 
 /datum/supply_pack/pathfindergear
-	name="Away Team Leader gear"
+	name="Explorer Leader gear" //CHOMPEdit Keep Explo
 	contains = list (
 					/obj/item/device/cataloguer/compact/pathfinder,
 					/obj/item/device/geiger,
@@ -242,5 +242,5 @@
 					)
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/xion
-	containername = "Away Team Leader equipment"
+	containername = "Explorer Leader equipment" //CHOMPEdit Keep Explo
 	access = list(access_explorer)
