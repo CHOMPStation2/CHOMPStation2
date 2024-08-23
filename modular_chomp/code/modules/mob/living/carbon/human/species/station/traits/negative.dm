@@ -91,7 +91,6 @@
 	var_changes = list("flags" = NO_SCAN, NO_DEFIB)
 	excludes = list(/datum/trait/negative/nodefib, /datum/trait/negative/noresleeve)
 
-
 /datum/trait/negative/lightweight_light
 	name = "Lesser Lightweight"
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping if you are unprepared)"
