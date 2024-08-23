@@ -32,8 +32,8 @@
 		)
 
 /obj/item/projectile/beam/phaser/shotgun
-	damage = 10
-	SA_bonus_damage = 10
+	damage = 7
+	SA_bonus_damage = 7
 	range = 4
 	icon_state = "phaser_heavy"
 	light_range = 3
