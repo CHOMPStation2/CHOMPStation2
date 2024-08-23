@@ -32,6 +32,7 @@
 	slot_flags = SLOT_BELT
 	magazine_type = null // R&D builds this. Starts unloaded.
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmAdvanced, /obj/item/ammo_magazine/m9mm)
+	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -113,6 +114,7 @@
 	magazine_type = /obj/item/ammo_magazine/m545
 	allowed_magazines = list(/obj/item/ammo_magazine/m545)
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
+	fire_sound = "sound/weapons/ballistics/a762.ogg" //CHOMPedit
 
 	one_handed_penalty = 30
 
@@ -145,6 +147,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m9mmAdvanced
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmAdvanced)
+	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -179,6 +182,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmt)
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 /obj/item/weapon/gun/projectile/automatic/wt550/update_icon()
 	..()
@@ -214,6 +218,7 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
+	fire_sound = "sound/weapons/ballistics/a762.ogg" //CHOMPedit
 
 	one_handed_penalty = 60
 
@@ -293,6 +298,7 @@
 	magazine_type = /obj/item/ammo_magazine/m545saw
 	allowed_magazines = list(/obj/item/ammo_magazine/m545saw, /obj/item/ammo_magazine/m545)
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
+	fire_sound = "sound/weapons/Gunshot_light.ogg" //CHOMPedit
 
 	one_handed_penalty = 90
 
@@ -407,6 +413,7 @@
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 	var/is64x32 = TRUE
 	var/is_picked_up = FALSE
+	fire_sound = "sound/weapons/gunshot_pathetic.ogg" //CHOMPedit
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0),
@@ -489,6 +496,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m45tommy
 	allowed_magazines = list(/obj/item/ammo_magazine/m45tommy, /obj/item/ammo_magazine/m45tommydrum)
+	fire_sound = "sound/weapons/Gunshot1.ogg" //CHOMPedit
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0),
@@ -522,6 +530,7 @@
 	magazine_type = /obj/item/ammo_magazine/m762
 	allowed_magazines = list(/obj/item/ammo_magazine/m762, /obj/item/ammo_magazine/m762/ext)
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	fire_sound = "sound/weapons/ballistics/a762.ogg" //CHOMPedit
 
 	one_handed_penalty = 45
 
@@ -557,6 +566,7 @@
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 4)
 	magazine_type = /obj/item/ammo_magazine/m9mmt
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mmt)
+	fire_sound = "sound/weapons/Gunshot1.ogg" //CHOMPedit
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0),
