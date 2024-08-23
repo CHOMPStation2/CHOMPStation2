@@ -221,6 +221,10 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/whiteshipOM2)
+"iv" = (
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM2)
 "iQ" = (
 /obj/structure/table/wooden_reinforced,
 /obj/structure/flora/pottedplant/smallcactus{
@@ -2139,6 +2143,10 @@
 	pixel_y = -6;
 	pixel_x = 4
 	},
+/obj/item/weapon/weldingtool,
+/obj/item/weapon/reagent_containers/dropper{
+	pixel_y = -4
+	},
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/whiteshipOM2)
 "Zc" = (
@@ -2857,7 +2865,7 @@ sH
 sH
 sv
 Oi
-SE
+iv
 sH
 be
 be
