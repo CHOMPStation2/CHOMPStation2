@@ -26,9 +26,8 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
-	dir = 8;
-	pixel_x = 6;
-	pixel_y = 26
+	dir = 6;
+	pixel_y = 25
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/plating,
