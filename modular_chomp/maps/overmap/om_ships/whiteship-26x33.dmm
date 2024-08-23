@@ -291,7 +291,7 @@
 	id_tag = "estrella_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	id_tag = "whiteship_docker";
+	id_tag = "whiteship_docker2";
 	pixel_y = 25
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -475,7 +475,7 @@
 	wires = 7
 	},
 /obj/machinery/computer/ship/helm{
-	req_one_access = newlist();
+	req_one_access = null;
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/voidcraft,

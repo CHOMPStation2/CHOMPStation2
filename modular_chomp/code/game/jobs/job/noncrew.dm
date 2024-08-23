@@ -28,6 +28,7 @@
 
 /datum/alt_title/spacefarer
 	title = "Spacefarer"
+	title_outfit = /decl/hierarchy/outfit/noncrew/spacefarer
 
 /*seems to be a kin only thing?
 /datum/job/noncrew/is_species_banned(species_name, brain_type)

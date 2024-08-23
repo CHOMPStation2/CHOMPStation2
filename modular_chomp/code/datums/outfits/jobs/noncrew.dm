@@ -26,8 +26,9 @@
 	shoes = /obj/item/clothing/shoes/boots/jackboots/
 	r_pocket = /obj/item/weapon/spacecash/ewallet
 	l_pocket = /obj/item/device/survivalcapsule/superpose/shuttle
+	l_hand = /obj/item/weapon/tank/jetpack/oxygen //OUTFIT_HAS_JETPACK doesnt seem to work.
 
-	flags = OUTFIT_HAS_JETPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
 /decl/hierarchy/outfit/shadekin
 	name = OUTFIT_JOB_NAME(JOB_ANOMALY)
