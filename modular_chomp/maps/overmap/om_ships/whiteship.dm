@@ -22,7 +22,6 @@
 	icon_state = "shuttle2"
 	requires_power = 1
 
-
 // The shuttle's 'shuttle' computer
 /obj/machinery/computer/shuttle_control/explore/whiteship
 	name = "short jump console"
