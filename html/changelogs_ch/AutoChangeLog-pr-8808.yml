@@ -1,0 +1,5 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "Weather beasts have their stats adjusted"
+  - qol: "The heavy fog weather beast has more of a tell to their attacks."
