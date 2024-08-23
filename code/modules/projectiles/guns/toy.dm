@@ -53,6 +53,7 @@
 	matter = list(MAT_PLASTIC = 2000)
 	handle_casings = null
 	recoil = 0 //it's a toy //CHOMP Edit
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Moist Nugget
@@ -66,6 +67,7 @@
 	item_state = "moistnugget"
 	max_shells = 5
 	matter = list(MAT_PLASTIC = 2500)
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Pistol
@@ -84,6 +86,7 @@
 	load_method = MAGAZINE
 	matter = list(MAT_PLASTIC = 1000)
 	recoil = 0 //it's a toy //CHOMP Edit
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /obj/item/weapon/gun/projectile/pistol/toy/update_icon()
 	if(ammo_magazine)
@@ -116,6 +119,7 @@
 	item_state = "leveraction"
 	max_shells = 5
 	pump_animation = "leveraction-cycling"
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Revolver
@@ -135,6 +139,7 @@
 	matter = list(MAT_PLASTIC = 1000)
 	handle_casings = null
 	recoil = null //it's a toy
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Big Iron
@@ -198,6 +203,7 @@
 	projectile_type = /obj/item/projectile/bullet/foam_dart
 	matter = list(MAT_PLASTIC = 1500)
 	recoil = null //it's a toy
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -229,6 +235,7 @@
 	projectile_type = /obj/item/projectile/bullet/foam_dart
 	recoil = null
 	handle_casings = null
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /obj/item/weapon/gun/projectile/cyborgtoy/attack_self(var/mob/user)
 	cleanup = !cleanup
