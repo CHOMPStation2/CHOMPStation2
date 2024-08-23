@@ -19,6 +19,7 @@
 	if(istype(wallet))
 		wallet.owner_name = H.real_name
 		wallet.worth = 1000
+
 /decl/hierarchy/outfit/noncrew/spacefarer
 	name = OUTFIT_JOB_NAME("Spacefarer")
 	uniform = /obj/item/clothing/under/rank/pilot2
