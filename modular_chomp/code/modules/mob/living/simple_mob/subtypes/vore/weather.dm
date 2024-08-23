@@ -9,7 +9,103 @@
 	grab_resist = 100
 	devourable = 0
 	faction = "Weather_Boss"
+	var/weatherprojectile = /obj/item/projectile/energy/phase/bolt
 
+/mob/living/simple_mob/vore/weatherbeast/proc/up_up(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x, src.y+2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/up_up_left(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x-1, src.y+2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/up_up_left_left(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x-2, src.y+2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/up_up_right(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x+1, src.y+2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/up_up_right_right(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x+2, src.y+2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/up_right_right(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x+2, src.y+1, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/up_left_left(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x-2, src.y+1, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/left_left(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x-2, src.y, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/right_right(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x+2, src.y, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/down_down(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x, src.y-2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/down_down_left(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x-1, src.y-2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/down_down_left_left(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x-2, src.y-2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/down_down_right(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x+1, src.y-2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/down_down_right_right(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x+2, src.y-2, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/down_right_right(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x+2, src.y-1, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/weatherbeast/proc/down_left_left(atom/target)
+	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
+	var/turf = locate(src.x-2, src.y-1, src.z)
+	target = turf
+	P.launch_projectile(target, BP_TORSO, src)
 
 //Sup, trying to be better with commenting of my code and explain the oddities behind myself. Several may seem off
 //A bit ago I added rare anomalous weather with the intent to add some creatures to summon during them, and well here they are.
@@ -22,8 +118,8 @@
 /mob/living/simple_mob/vore/weatherbeast/sandstorm //slow but endless hunter
 	name = "fossil tank"
 	desc = "A large metal tank."
-	health = 300 //15 laser shots
-	maxHealth = 300 //15 laser shots, assuming no armor
+	health = 800
+	maxHealth = 800
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)  //No thematics but I like boss critters to take a bit
 	icon_state = "rex"
 	melee_attack_delay = 0.5 SECOND
@@ -72,92 +168,28 @@
 /mob/living/simple_mob/vore/weatherbeast/sandstorm/do_special_attack(atom/A)
 	if(health < maxHealth*0.25)
 		visible_message(span_orange("<B>The fossil tank begins self repairs!.</B>"))
-		sleep(3)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
-		sleep(1)
-		adjustBruteLoss(-40)
-		adjustFireLoss(-40)
-		adjustToxLoss(-40)
-		adjustOxyLoss(-40)
-		adjustCloneLoss(-40)
+		sleep(30)
+		for(var/i =1 to 10)
+			adjustBruteLoss(-100)
+			adjustFireLoss(-100)
+			sleep(15)
+		adjustBruteLoss(-100)
+		adjustFireLoss(-100)
 	else
 		Beam(A, icon_state = "sat_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
 		sleep(30)
-		var/obj/item/projectile/P = new /obj/item/projectile/beam/stun(get_turf(src))
+		var/obj/item/projectile/P = new /obj/item/projectile/beam/lightning(get_turf(src))
 		P.launch_projectile(A, BP_TORSO, src)
 
 
 /mob/living/simple_mob/vore/weatherbeast/acidrain //acidrain
 	name = "toxic jellyfish"
 	desc = "A glowing green jellyfish"
-	health = 300 //15 laser shots
-	maxHealth = 300 //15 laser shots, assuming no armor
+	health = 700 //15 laser shots
+	maxHealth = 700 //15 laser shots, assuming no armor
 	armor = list(melee = 60, bullet = 60, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 100) //So, it's made of jelly. Bullets and melee bounces off of it. The 20 laser and energy are for a smidge extra tankny because I savour endurance fights
 	icon_state = "jellyfish"
+	icon_state = "jellyfish_dead"
 	movement_cooldown = -2
 	damage_fatigue_mult = 0 //It's a mutant jellyfish boss mob.
 	glow_color = "#14ff20"
@@ -182,10 +214,11 @@
 			L.adjustHalLoss(20)
 
 /mob/living/simple_mob/vore/weatherbeast/acidrain/do_special_attack(atom/A)
-	if(nutrition > 400)
+	if(nutrition > 1100)
 		visible_message(span_orange("<B>The giant jellyfish begins to regenerate!.</B>"))
 		adjustBruteLoss(-300)
 		adjustFireLoss(-300)
+		adjust_nutrition(-500)
 	else
 		return
 
@@ -193,10 +226,13 @@
 	..()
 	if(istype(P, /obj/item/projectile/energy))
 		projectiletype = /obj/item/projectile/energy/declone
+		adjust_nutrition(-50)
 	if(istype(P, /obj/item/projectile/bullet))
 		projectiletype = /obj/item/projectile/energy/bolt
+		adjust_nutrition(-50)
 	if(istype(P, /obj/item/projectile/beam))
 		projectiletype = /obj/item/projectile/beam/gamma
+		adjust_nutrition(-50)
 
 /mob/living/simple_mob/vore/weatherbeast/acidrain/handle_special()
 	if(stat != DEAD)
@@ -216,7 +252,7 @@
 			L.add_modifier(/datum/modifier/poisoned/weak/acid, 12, src)
 
 /datum/modifier/poisoned/weak/acid //Getting multiple of this will destroy you swiftly.
-	incoming_tox_damage_percent = 1.2
+	incoming_tox_damage_percent = 1.5
 
 /datum/ai_holder/simple_mob/intentional/dark_stranger
 	use_astar = TRUE
@@ -243,17 +279,19 @@
 /mob/living/simple_mob/vore/weatherbeast/darkmist //the dark mist
 	name = "strange figure"
 	desc = "A figure cloaked in purple."
-	health = 300 //15 laser shots
-	maxHealth = 300 //15 laser shots, assuming no armor
+	health = 700
+	maxHealth = 700
 	armor = list(melee = 20, bullet = 20, laser = 60, energy = 60, bomb = 50, bio = 100, rad = 100) //Is use to manpulation of strange energies
 	icon_state = "stranger"
+	icon_dead = "stranger_dead"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/dark_stranger
 	damage_fatigue_mult = 0
 	movement_cooldown = -1
 	special_attack_min_range = 1
 	special_attack_max_range = 7
-	special_attack_cooldown = 10 SECONDS
+	special_attack_cooldown = 0.5 SECONDS
 	projectiletype = /obj/item/projectile/energy/mob/precursor
+	weatherprojectile = /obj/item/projectile/energy/mob/precursor
 	var/attack_cycle = 1
 
 /obj/item/projectile/bullet/precursorburst
@@ -284,232 +322,230 @@
 
 
 //The way too many special attacks for one boss
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_range(atom/target)
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_range(atom/target) //when things are close, going to do pure lasers
+	weatherprojectile = /obj/item/projectile/beam/precursor
 	if(attack_cycle == 1)
-		fake_pulse(target)
+		close_one(target)
 	else if(attack_cycle == 2)
-		cross_beam(target)
+		close_two(target)
 	else if(attack_cycle == 3)
-		x_beam(target)
+		close_three(target)
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/bullet_wave(atom/target)
-	if(attack_cycle == 1)
-		bullet_storm(target)
-	else if(attack_cycle == 2)
-		laser_grenade(target)
-	else if(attack_cycle == 3)
-		laser_shotgun(target)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phase_two(atom/target)
-	if(attack_cycle == 1)
-		dodge_this(target)
-	else if(attack_cycle == 2)
-		pulse_spam(target)
-	else if(attack_cycle == 3)
-		influx_wave(target)
-
-//close range attacks.
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/fake_pulse(atom/target)
-	Beam(target, icon_state = "sat_beam", time = 1.5 SECONDS, maxdistance = INFINITY)
-	sleep(20)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	P.launch_projectile(target, BP_TORSO, src)
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_one(atom/target) //we attempt to be a machine gun
+	icon_state = "stranger_one"
+	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
+	var/obj/item/projectile/P = new /obj/item/projectile/energy/mob/precursor(get_turf(src))
+	sleep(5)
+	for(var/i =1 to 5)
+		P.launch_projectile(target, BP_TORSO, src)
+		sleep(5)
+	P.launch_projectile(, BP_TORSO, src)
 	attack_cycle = 2
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/cross_beam(atom/target) //Lasers in a cross
-	visible_message(span("warning", "\The [src] pulls out a strange cube. It begins to glow red!"))
-	sleep(15)
-	down_left_laser(target)
-	down_right_laser(target)
-	up_left_laser(target)
-	up_right_laser(target)
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_two(atom/target) //Get up/down or to the side
 	attack_cycle = 3
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/down_left_laser(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x-1, src.y-1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/down_right_laser(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x+1, src.y-1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/up_left_laser(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x-1, src.y+1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/up_right_laser(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x+1, src.y+1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/x_beam(atom/target) //Lasers in an X
-	visible_message(span("warning", "\The [src] pulls out a strange cube. It begins to glow blue!"))
-	sleep(15)
-	south_laser(target)
-	north_laser(target)
-	east_laser(target)
-	west_laser(target)
-	attack_cycle = 1
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/south_laser(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x, src.y-1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/north_laser(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x, src.y+1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/east_laser(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x+1, src.y, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/west_laser(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	var/turf = locate(src.x-1, src.y, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-//BH based attacks
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/bullet_storm(atom/target) //Storm of lasers
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/precursorburst(get_turf(src))
-	visible_message(span("warning", "\The [src] pulls out a strange cube. It begins to widly spin!"))
-	sleep(20)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(30)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(30)
-	P.launch_projectile(target, BP_TORSO, src)
-	attack_cycle = 2
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/laser_grenade(atom/target)
-	visible_message(span("warning", "\The [src] pulls out a strange cube. It begins to glow green!"))
-	sleep(20)
+	icon_state = "stranger_three"
+	sleep(10)
 	if(prob(50))
-		north_laser(target)
-		sleep(10)
-		up_right_laser(target)
-		sleep(10)
-		east_laser(target)
-		sleep(10)
-		down_right_laser(target)
-		sleep(10)
-		south_laser(target)
-		sleep(10)
-		down_left_laser(target)
-		sleep(10)
-		west_laser(target)
-		sleep(10)
-		up_left_laser(target)
-		attack_cycle = 2
+		up_up(target)
+		up_up_left(target)
+		up_up_right(target)
+		down_down(target)
+		down_down_right(target)
+		down_down_left(target)
 	else
-		north_laser(target)
-		sleep(10)
-		up_left_laser(target)
-		sleep(10)
-		west_laser(target)
-		sleep(10)
-		down_left_laser(target)
-		sleep(10)
-		south_laser(target)
-		sleep(10)
-		down_right_laser(target)
-		sleep(10)
-		east_laser(target)
-		sleep(10)
-		up_right_laser(target)
-		attack_cycle = 3
+		up_left_left(target)
+		left_left(target)
+		down_left_left(target)
+		down_right_right(target)
+		up_right_right(target)
+		right_right(target)
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/laser_shotgun(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/precursorburst/shotgun(get_turf(src))
-	visible_message(span("warning", "\The [src] pulls out a strange cube. It begins to glow bright purple!"))
-	sleep(20) //A build up before the BH.
-	P.launch_projectile(target, BP_TORSO, src)
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_three(atom/target) //Yes
+	icon_state = "stranger_five"
 	sleep(10)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(10)
-	P.launch_projectile(target, BP_TORSO, src)
+	up_left_left(target)
+	left_left(target)
+	down_left_left(target)
+	down_right_right(target)
+	up_right_right(target)
+	right_right(target)
+	up_up(target)
+	up_up_left(target)
+	up_up_right(target)
+	down_down(target)
+	down_down_right(target)
+	down_down_left(target)
+	down_down_left_left(target)
+	down_down_right_right(target)
+	up_up_right_right(target)
+	up_up_left_left(target)
 	attack_cycle = 1
 
-//Phase two attacks. This names are from a previous draft and I laugh at them so they're staying.
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/dodge_this(atom/target) //two spinny laser wheels of death
-	visible_message(span("warning", "\The [src] pulls out a strange cube. It begins to glow orange!"))
-	sleep(20)
-	north_laser(target)
-	south_laser(target)
-	sleep(10)
-	down_right_laser(target)
-	up_left_laser(target)
-	sleep(10)
-	west_laser(target)
-	east_laser(target)
-	sleep(10)
-	up_right_laser(target)
-	down_left_laser(target)
-	sleep(10)
-	north_laser(target)
-	south_laser(target)
-	sleep(10)
-	down_right_laser(target)
-	up_left_laser(target)
-	sleep(10)
-	west_laser(target)
-	east_laser(target)
-	sleep(10)
-	up_right_laser(target)
-	down_left_laser(target)
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/bullet_wave(atom/target) //when long away, projectiles.
+	weatherprojectile = /obj/item/projectile/energy/mob/precursor
+	if(attack_cycle == 1)
+		normal_one(target)
+	else if(attack_cycle == 2)
+		normal_two(target)
+	else if(attack_cycle == 3)
+		normal_three(target)
+
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_one(atom/target) //Firing a laser
+	icon_state = "stranger_two"
+	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
+	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
+	sleep(25)
+	P.launch_projectile(target, BP_TORSO, src)
 	attack_cycle = 2
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/pulse_spam(atom/target) //x laser, and cross laser followed by a flower.
-	visible_message(span("warning", "\The [src] pulls out a strange cube. It begins to glow silver!"))
-	sleep(20)
-	south_laser(target)
-	north_laser(target)
-	east_laser(target)
-	west_laser(target)
-	sleep(20)
-	down_left_laser(target)
-	down_right_laser(target)
-	up_left_laser(target)
-	up_right_laser(target)
-	sleep(20)
-	south_laser(target)
-	north_laser(target)
-	east_laser(target)
-	west_laser(target)
-	down_left_laser(target)
-	down_right_laser(target)
-	up_left_laser(target)
-	up_right_laser(target)
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_two(atom/target) //Does either an X or a cross
+	attack_cycle = 3
+	icon_state = "stranger_four"
+	sleep(10)
+	if(prob(50))
+		up_up_left_left(target)
+		up_up_right_right(target)
+		down_down_left_left(target)
+		down_down_right_right(target)
+	else
+		up_up(target)
+		down_down(target)
+		left_left(target)
+		right_right(target)
+
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_three(atom/target)
+	icon_state = "stranger_six"
+	sleep(10)
+	up_up_left_left(target)
+	down_down_right_right(target)
+	sleep(5)
+	up_left_left(target)
+	down_right_right(target)
+	sleep(5)
+	left_left(target)
+	right_right(target)
+	sleep(5)
+	down_left_left(target)
+	up_right_right(target)
+	sleep(5)
+	down_down_left_left(target)
+	up_up_right_right(target)
+	sleep(5)
+	down_down_left(target)
+	up_up_right(target)
+	sleep(5)
+	down_down(target)
+	up_up(target)
+	sleep(5)
+	down_down_left(target)
+	up_up_right(target)
+	attack_cycle = 1
+
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phase_two(atom/target) //phase two we just mix and and match.
+	if(attack_cycle == 1)
+		phasetwo_one(target)
+	else if(attack_cycle == 2)
+		phasetwo_two(target)
+	else if(attack_cycle == 3)
+		phasetwo_three(target)
+
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_one(atom/target) //Lighting
+	icon_state = "stranger_eight"
+	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
+	var/obj/item/projectile/P = new /obj/item/projectile/beam/chain_lightning(get_turf(src))
+	sleep(5)
+	P.launch_projectile(target, BP_TORSO, src)
+	attack_cycle = 2
+
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_two(atom/target) //four spinny lasers. However lesser damage projectile
+	weatherprojectile = /obj/item/projectile/beam/inversion
+	icon_state = "stranger_seven"
+	sleep(10)
+	up_up_left_left(target)
+	down_down_right_right(target)
+	down_down_left_left(target)
+	up_up_right_right(target)
+	sleep(5)
+	up_left_left(target)
+	down_right_right(target)
+	down_down_left_left(target)
+	up_up_right(target)
+	sleep(5)
+	down_down(target)
+	up_up(target)
+	left_left(target)
+	right_right(target)
+	sleep(5)
+	down_left_left(target) //test
+	up_right_right(target)
+	down_down_left(target)
+	up_up_right(target)
+	sleep(5)
+	up_up_left_left(target)
+	down_down_right_right(target)
+	down_down_left_left(target)
+	up_up_right_right(target)
+	sleep(5)
+	up_left_left(target)
+	down_right_right(target)
+	down_down_left_left(target)
+	up_up_right_right(target)
+	sleep(5)
+	down_down(target)
+	up_up(target)
+	left_left(target)
+	right_right(target)
+	sleep(5)
+	down_left_left(target)
+	up_right_right(target)
+	down_down_left(target)
+	up_up_right(target)
 	attack_cycle = 3
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/influx_wave(atom/target) //X and cross laser patterns paired with shotgun blasts
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/precursorburst/shotgun(get_turf(src))
-	visible_message(span("warning", "\The [src] pulls out a strange cube. It begins to glow pink!"))
-	sleep(20)
-	down_left_laser(target)
-	down_right_laser(target)
-	up_left_laser(target)
-	up_right_laser(target)
-	P.launch_projectile(target, BP_TORSO, src)
-	sleep(20)
-	south_laser(target)
-	north_laser(target)
-	east_laser(target)
-	west_laser(target)
-	P.launch_projectile(target, BP_TORSO, src)
+/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_three(atom/target) //and reverse with a dangerous projectile
+	weatherprojectile = /obj/item/projectile/beam/crippling_beam
+	icon_state = "stranger_nine"
+	sleep(10)
+	down_left_left(target)
+	up_right_right(target)
+	down_down_left(target)
+	up_up_right(target)
+	sleep(5)
+	down_down(target)
+	up_up(target)
+	left_left(target)
+	right_right(target)
+	sleep(5)
+	up_left_left(target)
+	down_right_right(target)
+	down_down_left_left(target)
+	up_up_right_right(target)
+	sleep(5)
+	up_up_left_left(target)
+	down_down_right_right(target)
+	down_down_left_left(target)
+	up_up_right_right(target)
+	sleep(5)
+	down_left_left(target)
+	up_right_right(target)
+	down_down_left(target)
+	up_up_right(target)
+	sleep(5)
+	down_down(target)
+	up_up(target)
+	left_left(target)
+	right_right(target)
+	sleep(5)
+	up_left_left(target)
+	down_right_right(target)
+	down_down_left(target)
+	up_up_right(target)
+	sleep(5)
+	up_up_left_left(target)
+	down_down_right_right(target)
+	down_down_left_left(target)
+	up_up_right_right(target)
 	attack_cycle = 1
 
 //Note to future self, alter this one later to match the one up above when energy returns.
@@ -520,6 +556,7 @@
 	maxHealth = 300
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)
 	icon_state = "astral_sniper"
+	icon_dead = "astral_sniper_dead"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/dark_stranger
 	damage_fatigue_mult = 0
 	movement_cooldown = -1
@@ -527,6 +564,7 @@
 	special_attack_max_range = 7
 	special_attack_cooldown = 10 SECONDS
 	projectiletype = /obj/item/projectile/energy/astralrail
+	weatherprojectile = /obj/item/projectile/energy/astralrail
 
 
 /mob/living/simple_mob/vore/weatherbeast/starsky/do_special_attack(atom/A)
@@ -538,102 +576,6 @@
 			far_wave(A)
 		if(I_GRAB)
 			phase_two(A)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/up_up(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/up_up_left(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x-1, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/up_up_left_left(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x-2, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/up_up_right(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x+1, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/up_up_right_right(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x+2, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/up_right_right(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x+2, src.y+1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/up_left_left(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x-2, src.y+1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/left_left(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x-2, src.y, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/right_right(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x+2, src.y, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/down_down(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/down_down_left(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x-1, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/down_down_left_left(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x-2, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/down_down_right(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x+1, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/down_down_right_right(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x+2, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/down_right_right(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x+2, src.y-1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/down_left_left(atom/target)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/astralrail(get_turf(src))
-	var/turf = locate(src.x-2, src.y-1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
 
 
 /mob/living/simple_mob/vore/weatherbeast/starsky/proc/close_wave(atom/target) //bullet pattern when folks up close
