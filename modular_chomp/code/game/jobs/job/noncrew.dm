@@ -1,5 +1,4 @@
 /datum/job/noncrew
-
 	title = JOB_OUTSIDER
 	disallow_jobhop = TRUE
 	total_positions = 6
