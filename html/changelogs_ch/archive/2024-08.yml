@@ -162,3 +162,38 @@
   - bugfix: Fixed various proximity related runtimes
   tacoguy7765093:
   - bugfix: Fixed a oversight that prevents zorgoia from being grabbed.
+2024-08-23:
+  Asher-42:
+  - bugfix: dullahan syndies now show up in the drop down
+  CHOMPStation2:
+  - rscadd: Advanced TGUI Say modal
+  - qol: Verb panel say/me/whisper/subtle have been renamed to "Say verb"/etc - and
+      pop open the tgui say panel/tgui input/normal input instead of always using
+      the native dialog.
+  - rscadd: Every speech bubble now has an extra spinning/"thinking" state.
+  - qol: Added /tg/'s trait system, currently just used for indicating that you're
+      in the typing state.
+  - bugfix: TGUI dev server works again (keep_local_name = TRUE is really important,
+      both for that and reliability)
+  - qol: Subtle/Whisper now has typing indicators by default - you can turn indicators
+      off for these channels specifically with a new pref.
+  - qol: Typing indicators switched fully to /tg/'s system for them with traits and
+      client integration and... stuff.
+  Kashargul:
+  - bugfix: all objects picking up ALL visible messages, even those they shouldn't
+  - balance: limits item size of suitable vacuumable items to everything smaller than
+      huge size
+  TheCaramelion:
+  - rscadd: Teppi plushie
+  tacoguy7765093:
+  - balance: All AK type weapons 25 -> 35 (7.62 supreme)
+  - balance: AK-74s damage 25 -> 30 (They use 5.56)
+  - balance: SKS damage 25 -> 35 + hitscan
+  - balance: CR-20 damage 25 -> 20
+  - balance: SMG mercs damage 25 -> 20
+  - balance: Phase weapon capacity halved. 30 -> 15
+  - qol: Floragun capacity 10 -> 30
+  - bugfix: LMG projectile shoots properly, 30 damage now.
+  - bugfix: 7.62 weapons now point to the right projectile path.
+  - bugfix: The detectives .45 revolver now wont TF real bullets to rubber bullets
+      if loaded with such.
