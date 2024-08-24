@@ -197,3 +197,13 @@
   - bugfix: 7.62 weapons now point to the right projectile path.
   - bugfix: The detectives .45 revolver now wont TF real bullets to rubber bullets
       if loaded with such.
+2024-08-24:
+  FluffMedic:
+  - bugfix: Weather beasts have their stats adjusted
+  - qol: The heavy fog weather beast has more of a tell to their attacks.
+  TheCaramelion:
+  - rscadd: Teppi plushies are obtainable in the vending machines now
+  tacoguy7765093:
+  - bugfix: Fixed in-hand sprites for the m4 and m6
+  - sound: Modified all of the gun sounds.
+  - balance: Mech armor has been nerfed.
