@@ -149,7 +149,7 @@ default behaviour is:
 				now_pushing = 0
 				return
 			//CHOMPSTATION edit Adding alternative to lightweight
-			if(H.species.lightweight == 1 && H.a_intent == I_HELP)
+			if(H.species.lightweight_light == 1 && H.a_intent == I_HELP)
 				H.visible_message("<span class='warning'>[src] bumps into [H], knocking them off balance!</span>")
 				H.Weaken(5)
 				now_pushing = 0
