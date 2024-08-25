@@ -14,11 +14,13 @@
 					pick_turfs += T
 		// CHOMPAdd Start - Chance to end up in a belly. Fun (:
 		for(var/mob/living/mob in player_list)
-			if(mob.can_be_drop_pred && isturf(mob.loc))
-				if(mob.vore_selected)
-					exits += mob.vore_selected
-				else if(mob.vore_organs.len)
-					exits += pick(mob.vore_organs)
+			if(mob.can_be_drop_pred && isfloor(mob.loc))
+				var/turf/simulated/floor/T = get_turf(mob.loc)
+				if(!T.block_tele)
+					if(mob.vore_selected)
+						exits += mob.vore_selected
+					else if(mob.vore_organs.len)
+						exits += pick(mob.vore_organs)
 
 		exits |= pick_turfs
 		// CHOMPAdd End
