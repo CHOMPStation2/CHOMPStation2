@@ -38,3 +38,4 @@
 /obj/machinery/r_n_d/protolathe/public
 	name = "Public Protolathe"
 	req_category = LATHE_PUBLIC
+	circuit = /obj/item/weapon/circuitboard/protolathe/public

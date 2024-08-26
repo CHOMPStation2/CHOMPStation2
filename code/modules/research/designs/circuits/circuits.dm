@@ -218,6 +218,45 @@ CIRCUITS BELOW
 	sort_string = "HABAB"
 	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
+// CHOMPEdit - Departmental Lathes
+
+/datum/design/circuit/protolathe/science
+	name = "science protolathe"
+	build_path = /obj/item/weapon/circuitboard/protolathe/science
+	sort_string = "HADAA"
+
+/datum/design/circuit/protolathe/engineering
+	name = "engineering protolathe"
+	build_path = /obj/item/weapon/circuitboard/protolathe/engineering
+	sort_string = "HADAB"
+
+/datum/design/circuit/protolathe/medical
+	name = "medical protolathe"
+	build_path = /obj/item/weapon/circuitboard/protolathe/medical
+	sort_string = "HADAC"
+
+/datum/design/circuit/protolathe/cargo
+	name = "cargo protolathe"
+	build_path = /obj/item/weapon/circuitboard/protolathe/cargo
+	sort_string = "HADAD"
+
+/datum/design/circuit/protolathe/service
+	name = "service protolathe"
+	build_path = /obj/item/weapon/circuitboard/protolathe/service
+	sort_string = "HADAE"
+
+/datum/design/circuit/protolathe/security
+	name = "security protolathe"
+	build_path = /obj/item/weapon/circuitboard/protolathe/security
+	sort_string = "HADAF"
+
+/datum/design/circuit/protolathe/public
+	name = "public protolathe"
+	build_path = /obj/item/weapon/circuitboard/protolathe/public
+	sort_string = "HADAG"
+
+// CHOMPEdit End
+
 /datum/design/circuit/circuit_imprinter
 	name = "circuit imprinter"
 	id = "circuit_imprinter"
