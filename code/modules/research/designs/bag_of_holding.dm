@@ -12,6 +12,7 @@
 	materials = list(MAT_GOLD = 1000, MAT_DIAMOND = 500, MAT_URANIUM = 250) // Less expensive since it can only hold ores
 	build_path = /obj/item/weapon/storage/bag/ore/holding
 	sort_string = "QAAAA"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/boh/bag_holding
 	name = "Bag of Holding"
@@ -39,6 +40,7 @@
 	materials = list("gold" = 2000, "diamond" = 1000, "uranium" = 250)
 	build_path = /obj/item/weapon/storage/bag/trash/holding
 	sort_string = "QAAAC"
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
 
 /datum/design/item/boh/pouch_holding
 	name = "Pouch of Holding"
@@ -48,7 +50,7 @@
 	materials = list("gold" = 3000, "diamond" = 2000, "uranium" = 250)
 	build_path = /obj/item/weapon/storage/pouch/holding
 	sort_string = "QAAAD"
-	
+
 
 /datum/design/item/boh/belt_holding_med
 	name = "Medical Belt of Holding"
@@ -58,6 +60,7 @@
 	materials = list("gold" = 3000, "diamond" = 2000, "titanium" = 500)
 	build_path = /obj/item/weapon/storage/belt/medical/holding
 	sort_string = "QAAAE"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/boh/belt_holding_utility
 	name = "Tool-Belt of Holding"
@@ -67,4 +70,4 @@
 	materials = list("gold" = 3000, "diamond" = 2000, "titanium" = 500)
 	build_path = /obj/item/weapon/storage/belt/utility/holding
 	sort_string = "QAAAF"
-	
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

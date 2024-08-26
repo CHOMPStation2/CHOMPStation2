@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "all objects picking up ALL visible messages, even those they shouldn't"

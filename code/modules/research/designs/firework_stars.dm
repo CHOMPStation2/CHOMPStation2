@@ -1,4 +1,6 @@
 // Firework Stars
+/datum/design/item/firework_star // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/firework_star/AssembleDesignName()
 	name = "Firework star prototype ([item_name])"

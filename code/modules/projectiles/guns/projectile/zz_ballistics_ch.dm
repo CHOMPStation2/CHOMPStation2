@@ -336,6 +336,7 @@
 	muzzle_velocity = 910
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/m41a.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/patriot
 	name = "Patriot"
@@ -674,6 +675,7 @@
 	muzzle_velocity = 715
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 40
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/tkb408
 	name = "TKB-408"
@@ -692,6 +694,7 @@
 	muzzle_velocity = 750
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 60
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/groza
 	name = "OTs-14"
@@ -771,6 +774,7 @@
 	muzzle_velocity = 470
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/strela.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/spas35
 	name = "Spas-35"
@@ -819,6 +823,7 @@
 	auto_loading_type = OPEN_BOLT
 	load_method = MAGAZINE
 	muzzle_velocity = 488
+	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mp5
 	name = "MP5"
@@ -841,6 +846,7 @@
 	load_method = MAGAZINE
 	muzzle_velocity = 400
 	is_long = FALSE
+	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/pitchgun
 	name = "Pitch-gun"

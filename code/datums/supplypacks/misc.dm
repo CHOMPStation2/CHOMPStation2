@@ -100,7 +100,9 @@
 			/obj/item/toy/plushie/purple_dragon,
 			/obj/item/toy/plushie/white_eastdragon,
 			/obj/item/toy/plushie/red_eastdragon,
-			/obj/item/toy/plushie/green_eastdragon
+			/obj/item/toy/plushie/green_eastdragon,
+			/obj/item/toy/plushie/teppi,
+			/obj/item/toy/plushie/teppi/alt
 			//CHOMPStation Add End
 			)
 	name = "Plushies Crate"
