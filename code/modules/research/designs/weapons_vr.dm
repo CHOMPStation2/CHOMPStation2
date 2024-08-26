@@ -16,6 +16,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 2000, MAT_SILVER = 1000)
 	build_path = /obj/item/weapon/gun/energy/gun/protector
 	sort_string = "MAAVA"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/energy/sickshot
 	desc = "A 'Sickshot' is a 4-shot energy revolver that causes nausea and confusion."
@@ -24,6 +25,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000)
 	build_path = /obj/item/weapon/gun/energy/sickshot
 	sort_string = "MAAVB"
+	department = LATHE_ALL | LATHE_SECURITY | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/weapon/energy/netgun
 	desc  = "The \"Varmint Catcher\" is an energy net projector designed to immobilize dangerous wildlife."
@@ -32,6 +34,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 3000)
 	build_path = /obj/item/weapon/gun/energy/netgun
 	sort_string = "MAAVC"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // Misc weapons
 
@@ -42,6 +45,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 3000, MAT_URANIUM = 1000)
 	build_path = /obj/item/weapon/gun/energy/pummeler
 	sort_string = "MADVA"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // Anti-particle stuff
 
@@ -56,6 +60,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000, MAT_GOLD = 1000, MAT_URANIUM = 750)
 	build_path = /obj/item/weapon/gun/energy/particle/advanced
 	sort_string = "MAAUA"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/particle/particlecannon
 	name = "Anti-particle cannon"
@@ -64,6 +69,7 @@
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 1500, MAT_GOLD = 2000, MAT_URANIUM = 1000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/weapon/gun/energy/particle/cannon
 	sort_string = "MAAUB"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /datum/design/item/weapon/particle/pressureinterlock
 	name = "APP pressure interlock"
@@ -72,6 +78,7 @@
 	materials = list(MAT_STEEL = 1000, MAT_GLASS = 250)
 	build_path = /obj/item/pressurelock
 	sort_string = "MAAUC"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // NSFW gun and cells
 /*
@@ -167,6 +174,7 @@ None of these for now, too. -DHA */
 	materials = list(MAT_STEEL = 4000, MAT_PLASTEEL = 500) //CHOMPedit Nerfs costs a bit for something a bit more sensical
 	build_path = /obj/item/ammo_casing/a145
 	sort_string = "MABBD"
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 /*
 /datum/design/item/nsfw_cell/final

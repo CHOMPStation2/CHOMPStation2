@@ -39,6 +39,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/a57p90 // The magazine type it spawns with.
 	allowed_magazines = list(/obj/item/ammo_magazine/a57p90) // What kind of magazine(s) it can load.
+	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 	firemodes = list(
 		list(mode_name="semi-automatic", burst=1, fire_delay=0, move_delay=0),
@@ -79,6 +80,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m10mm)
+	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 	firemodes = list(
 		list(mode_name="semi-automatic", burst=1, fire_delay=0, move_delay=0),
@@ -113,6 +115,7 @@
 	magazine_type = /obj/item/ammo_magazine/m762/ext
 	allowed_magazines = list(/obj/item/ammo_magazine/m762, /obj/item/ammo_magazine/m762/ext)
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	fire_sound = "sound/weapons/ballistics/a762.ogg"
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),

@@ -4,6 +4,7 @@
 	req_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 5, TECH_BLUESPACE = 4)
 	build_path = /obj/item/weapon/circuitboard/microwave/advanced
 	sort_string = "MAAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/circuit/mecha/scarab_main
 	name = "'Scarab' central control"

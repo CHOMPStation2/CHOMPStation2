@@ -1,0 +1,4 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - bugfix: "Fixed Protolathe consoles not syncing with the research server"

@@ -32,6 +32,7 @@ other types of metals and chemistry for reagents).
 	var/list/category = list() 			//Primarily used for Mech Fabricators, but can be used for anything.
 	var/sort_string = "ZZZZZ"		//Sorting order
 	var/search_metadata 			// Optional string that interfaces can use as part of search filters. See- item/borg/upgrade/ai and the Exosuit Fabs.
+	var/department = LATHE_ALL 		// Flag as to what departmental lathe can print this design
 
 /datum/design/New()
 	..()

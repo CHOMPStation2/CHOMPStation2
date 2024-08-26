@@ -1,5 +1,6 @@
 /datum/design/item/medical
 	materials = list(MAT_STEEL = 30, MAT_GLASS = 20)
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/medical/AssembleDesignName()
 	..()
