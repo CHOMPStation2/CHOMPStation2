@@ -216,7 +216,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/cargo
 	name = "Cargo Protolathe Console"
 	id = 5
-	req_access = list(access_medical)
+	req_access = list(access_cargo)
 
 /obj/machinery/computer/rdconsole/service
 	name = "Service Protolathe Console"
