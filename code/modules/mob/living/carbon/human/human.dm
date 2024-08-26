@@ -1805,7 +1805,6 @@
 /mob/living/carbon/human/get_mob_riding_slots()
 	return list(back, head, wear_suit)
 
-<<<<<<< HEAD
 /mob/living/carbon/human/verb/lay_down_left()
 	set name = "Rest-Left"
 
@@ -1821,7 +1820,8 @@
 	resting = !resting
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
 	update_canmove()
-=======
+
+/*CHOMPRemove Start
 /mob/living/carbon/human/proc/update_fullness()
 	var/list/new_fullness = list()
 	vore_fullness = 0
@@ -1837,4 +1837,4 @@
 	vore_fullness = min(vore_capacity, vore_fullness)
 	update_vore_belly_sprite()
 	update_vore_tail_sprite()
->>>>>>> 64428f9b36 (Adds Toggleable Stomachs w/ toggleable visibility)
+*///CHOMPRemove End
