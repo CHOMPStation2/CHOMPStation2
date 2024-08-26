@@ -26,13 +26,13 @@
 	name = "Service Protolathe"
 	req_category = LATHE_SERVICE
 	dep_overlay = "serv"
-	circuit = build_path = /obj/item/weapon/circuitboard/protolathe/service
+	circuit = /obj/item/weapon/circuitboard/protolathe/service
 
 /obj/machinery/r_n_d/protolathe/security
 	name = "Security Protolathe"
 	req_category = LATHE_SECURITY
 	dep_overlay = "sec"
-	circuit = build_path = /obj/item/weapon/circuitboard/protolathe/security
+	circuit = /obj/item/weapon/circuitboard/protolathe/security
 
 // Actually unsure if this should be used? *shrug
 /obj/machinery/r_n_d/protolathe/public
