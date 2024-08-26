@@ -5051,6 +5051,7 @@
 #include "modular_chomp\code\modules\research\designs\misc.dm"
 #include "modular_chomp\code\modules\research\designs\power_cells.dm"
 #include "modular_chomp\code\modules\research\designs\weapons.dm"
+#include "modular_chomp\code\modules\research\lathes\protolathe.dm"
 #include "modular_chomp\code\modules\shieldgen\shield_capacitor.dm"
 #include "modular_chomp\code\modules\shieldgen\shield_gen.dm"
 #include "modular_chomp\code\modules\spells\spells.dm"

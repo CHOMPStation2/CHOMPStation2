@@ -22,6 +22,7 @@
 	materials = list(MAT_STEEL = 80)
 	build_path = /obj/item/weapon/stock_parts/matter_bin
 	sort_string = "AAAAA"
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/adv_matter_bin
 	id = "adv_matter_bin"
@@ -29,6 +30,7 @@
 	materials = list(MAT_STEEL = 80)
 	build_path = /obj/item/weapon/stock_parts/matter_bin/adv
 	sort_string = "AAAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/super_matter_bin
 	id = "super_matter_bin"
@@ -36,6 +38,7 @@
 	materials = list(MAT_STEEL = 80)
 	build_path = /obj/item/weapon/stock_parts/matter_bin/super
 	sort_string = "AAAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/hyper_matter_bin
 	id = "hyper_matter_bin"
@@ -43,6 +46,7 @@
 	materials = list(MAT_STEEL = 200, MAT_VERDANTIUM = 60, MAT_DURASTEEL = 75)
 	build_path = /obj/item/weapon/stock_parts/matter_bin/hyper
 	sort_string = "AAAAD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/omni_matter_bin
 	id = "omni_matter_bin"
@@ -50,6 +54,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_PLASTEEL = 100, MAT_MORPHIUM = 100, MAT_DURASTEEL = 100)
 	build_path = /obj/item/weapon/stock_parts/matter_bin/omni
 	sort_string = "AAAAE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 // Micro-manipulators
 
@@ -59,6 +64,7 @@
 	materials = list(MAT_STEEL = 30)
 	build_path = /obj/item/weapon/stock_parts/manipulator
 	sort_string = "AAABA"
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/nano_mani
 	id = "nano_mani"
@@ -66,6 +72,7 @@
 	materials = list(MAT_STEEL = 30)
 	build_path = /obj/item/weapon/stock_parts/manipulator/nano
 	sort_string = "AAABB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/pico_mani
 	id = "pico_mani"
@@ -73,6 +80,7 @@
 	materials = list(MAT_STEEL = 30)
 	build_path = /obj/item/weapon/stock_parts/manipulator/pico
 	sort_string = "AAABC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/hyper_mani
 	id = "hyper_mani"
@@ -80,6 +88,7 @@
 	materials = list(MAT_STEEL = 200, MAT_VERDANTIUM = 50, MAT_DURASTEEL = 50)
 	build_path = /obj/item/weapon/stock_parts/manipulator/hyper
 	sort_string = "AAABD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/omni_mani
 	id = "omni_mani"
@@ -87,6 +96,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_PLASTEEL = 500, MAT_MORPHIUM = 100, MAT_DURASTEEL = 100)
 	build_path = /obj/item/weapon/stock_parts/manipulator/omni
 	sort_string = "AAABE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 // Capacitors
 
@@ -96,6 +106,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 50)
 	build_path = /obj/item/weapon/stock_parts/capacitor
 	sort_string = "AAACA"
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/adv_capacitor
 	id = "adv_capacitor"
@@ -103,6 +114,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 50)
 	build_path = /obj/item/weapon/stock_parts/capacitor/adv
 	sort_string = "AAACB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/super_capacitor
 	id = "super_capacitor"
@@ -110,6 +122,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 50, MAT_GOLD = 20)
 	build_path = /obj/item/weapon/stock_parts/capacitor/super
 	sort_string = "AAACC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/hyper_capacitor
 	id = "hyper_capacitor"
@@ -117,6 +130,7 @@
 	materials = list(MAT_STEEL = 200, MAT_GLASS = 100, MAT_VERDANTIUM = 30, MAT_DURASTEEL = 25)
 	build_path = /obj/item/weapon/stock_parts/capacitor/hyper
 	sort_string = "AAACD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/omni_capacitor
 	id = "omni_capacitor"
@@ -124,6 +138,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_DIAMOND = 1000, MAT_GLASS = 1000, MAT_MORPHIUM = 100, MAT_DURASTEEL = 100)
 	build_path = /obj/item/weapon/stock_parts/capacitor/omni
 	sort_string = "AAACE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 // Sensors
 
@@ -133,6 +148,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 20)
 	build_path = /obj/item/weapon/stock_parts/scanning_module
 	sort_string = "AAADA"
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/adv_sensor
 	id = "adv_sensor"
@@ -140,6 +156,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 20)
 	build_path = /obj/item/weapon/stock_parts/scanning_module/adv
 	sort_string = "AAADB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/phasic_sensor
 	id = "phasic_sensor"
@@ -147,6 +164,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 20, MAT_SILVER = 10)
 	build_path = /obj/item/weapon/stock_parts/scanning_module/phasic
 	sort_string = "AAADC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/hyper_sensor
 	id = "hyper_sensor"
@@ -154,6 +172,7 @@
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 20, MAT_SILVER = 50, MAT_VERDANTIUM = 40, MAT_DURASTEEL = 50)
 	build_path = /obj/item/weapon/stock_parts/scanning_module/hyper
 	sort_string = "AAADD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/omni_sensor
 	id = "omni_sensor"
@@ -161,6 +180,7 @@
 	materials = list(MAT_STEEL = 1000, MAT_PLASTEEL = 500, MAT_GLASS = 750, MAT_SILVER = 500, MAT_MORPHIUM = 60, MAT_DURASTEEL = 100)
 	build_path = /obj/item/weapon/stock_parts/scanning_module/omni
 	sort_string = "AAADE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 // Micro-lasers
 
@@ -170,6 +190,7 @@
 	materials = list(MAT_STEEL = 10, MAT_GLASS = 20)
 	build_path = /obj/item/weapon/stock_parts/micro_laser
 	sort_string = "AAAEA"
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/high_micro_laser
 	id = "high_micro_laser"
@@ -177,6 +198,7 @@
 	materials = list(MAT_STEEL = 10, MAT_GLASS = 20)
 	build_path = /obj/item/weapon/stock_parts/micro_laser/high
 	sort_string = "AAAEB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/ultra_micro_laser
 	id = "ultra_micro_laser"
@@ -184,6 +206,7 @@
 	materials = list(MAT_STEEL = 10, MAT_GLASS = 20, MAT_URANIUM = 10)
 	build_path = /obj/item/weapon/stock_parts/micro_laser/ultra
 	sort_string = "AAAEC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/hyper_micro_laser
 	id = "hyper_micro_laser"
@@ -191,6 +214,7 @@
 	materials = list(MAT_STEEL = 200, MAT_GLASS = 20, MAT_URANIUM = 30, MAT_VERDANTIUM = 50, MAT_DURASTEEL = 100)
 	build_path = /obj/item/weapon/stock_parts/micro_laser/hyper
 	sort_string = "AAAED"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/omni_micro_laser
 	id = "omni_micro_laser"
@@ -198,6 +222,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 500, MAT_URANIUM = 2000, MAT_MORPHIUM = 50, MAT_DURASTEEL = 100)
 	build_path = /obj/item/weapon/stock_parts/micro_laser/omni
 	sort_string = "AAAEE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 
 // part bundles, because i HATE queues and i don't want to rewrite it for stack-printing
@@ -207,6 +232,7 @@
 	materials = list(MAT_STEEL = 1100, MAT_GLASS = 450)
 	build_path = /obj/effect/spawner/parts/t1
 	sort_string = "AAAFA"
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/stock_part/bundle/t2
 	id = "parts_bundle_t2"
@@ -214,6 +240,7 @@
 	materials = list(MAT_STEEL = 1100, MAT_GLASS = 450)
 	build_path = /obj/effect/spawner/parts/t2
 	sort_string = "AAAFB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/bundle/t3
 	id = "parts_bundle_t3"
@@ -221,6 +248,7 @@
 	materials = list(MAT_STEEL = 1100, MAT_GLASS = 450, MAT_SILVER = 50, MAT_GOLD = 100, MAT_URANIUM = 50)
 	build_path = /obj/effect/spawner/parts/t3
 	sort_string = "AAAFC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/bundle/t4
 	id = "parts_bundle_t4"
@@ -228,6 +256,7 @@
 	materials = list(MAT_STEEL = 4250, MAT_GLASS = 700, MAT_SILVER = 250, MAT_URANIUM = 150, MAT_DURASTEEL = 1450, MAT_VERDANTIUM = 900)
 	build_path = /obj/effect/spawner/parts/t4
 	sort_string = "AAAFD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/bundle/t5
 	id = "parts_bundle_t5"
@@ -235,6 +264,7 @@
 	materials = list(MAT_STEEL = 45000, MAT_PLASTEEL = 5500, MAT_GLASS = 11250, MAT_SILVER = 2500, MAT_URANIUM = 10000, MAT_DIAMOND = 5000, MAT_DURASTEEL = 2500, MAT_MORPHIUM = 2050)
 	build_path = /obj/effect/spawner/parts/t5
 	sort_string = "AAAFE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 // RPEDs
 
@@ -246,6 +276,7 @@
 	materials = list(MAT_STEEL = 15000, MAT_GLASS = 5000)
 	build_path = /obj/item/weapon/storage/part_replacer
 	sort_string = "ABAAA"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/ARPED
 	name = "Advanced Rapid Part Exchange Device"
@@ -256,6 +287,7 @@
 	materials = list(MAT_STEEL = 30000, MAT_GLASS = 10000)
 	build_path = /obj/item/weapon/storage/part_replacer/adv
 	sort_string = "ABAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/stock_part/PBRPED
 	name = "Prototype Bluespace Rapid Part Exchange Device"
@@ -266,3 +298,4 @@
 	materials = list(MAT_STEEL = 30000, MAT_GLASS = 10000, MAT_SILVER = 5000, MAT_GOLD = 5000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/weapon/storage/part_replacer/adv/discount_bluespace
 	sort_string = "ABAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

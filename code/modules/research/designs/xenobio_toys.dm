@@ -3,6 +3,8 @@
 	name = "Xenobiology equipment design ([item_name])"
 
 // Xenobio Weapons
+/datum/design/item/weapon/xenobio // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE
 
 /datum/design/item/weapon/xenobio/slimebaton
 	id = "slimebaton"
