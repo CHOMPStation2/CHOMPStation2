@@ -81,6 +81,10 @@
 	name = T_BOARD("security protolathe")
 	build_path = /obj/machinery/r_n_d/protolathe/security
 
+/obj/item/weapon/circuitboard/protolathe/public
+	name = T_BOARD("public protolathe")
+	build_path = /obj/machinery/r_n_d/protolathe/public
+
 // CHOMPAdd End
 
 /obj/item/weapon/circuitboard/circuit_imprinter
