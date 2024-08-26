@@ -1,0 +1,5 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - rscdel: "Removed night shift voice lines"
+  - config: "Night shift depends now on Sif"
