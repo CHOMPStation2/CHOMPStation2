@@ -200,3 +200,27 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/core
 	name = "Core R&D Console"
 	id = 1
+
+// CHOMPAdd Start - Departmental lathes
+
+/obj/machinery/computer/rdconsole/engineering
+	name = "Engineering Protolathe Console"
+	id = 3
+
+/obj/machinery/computer/rdconsole/medical
+	name = "Medical Protolathe Console"
+	id = 4
+
+/obj/machinery/computer/rdconsole/cargo
+	name = "Cargo Protolathe Console"
+	id = 5
+
+/obj/machinery/computer/rdconsole/service
+	name = "Service Protolathe Console"
+	id = 6
+
+/obj/machinery/computer/rdconsole/security
+	name = "Security Protolathe Console"
+	id = 7
+
+// CHOMPEnd
