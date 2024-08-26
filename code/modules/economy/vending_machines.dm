@@ -819,7 +819,8 @@
 					/obj/item/toy/plushie/red_eastdragon = 1,
 					/obj/item/toy/plushie/green_eastdragon = 1,
 					/obj/item/toy/plushie/gold_eastdragon = 1,
-					/obj/item/toy/plushie/teppi = 1
+					/obj/item/toy/plushie/teppi = 1,
+					/obj/item/toy/plushie/teppi/alt = 1
 					//CHOMPStation Add End
 					)
 	premium = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 1,
@@ -877,7 +878,8 @@
 					/obj/item/toy/plushie/red_eastdragon = 50,
 					/obj/item/toy/plushie/green_eastdragon = 50,
 					/obj/item/toy/plushie/gold_eastdragon = 500,
-					/obj/item/toy/plushie/teppi = 50
+					/obj/item/toy/plushie/teppi = 50,
+					/obj/item/toy/plushie/teppi/alt = 50
 					//CHOMPStation Add End
 					)
 
