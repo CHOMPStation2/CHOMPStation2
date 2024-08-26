@@ -210,7 +210,7 @@
 	extra_overlay = "altnaga_markings"
 	extra_overlay2 = "altnaga_rattler"
 
-/datum/sprite_accessory/tail/taur/naga/alt_3c_tailmaw
+/datum/sprite_accessory/tail/taur/naga/alt_3c_tailmaw //CHOMPEdit
 	name = "Naga alt style tri-color, tailmaw (Taur)"
 	suit_sprites = 'icons/mob/taursuits_naga_alt_vr.dmi'
 	icon_state = "altnagatailmaw_s"
