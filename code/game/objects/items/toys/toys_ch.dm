@@ -75,6 +75,7 @@
 	pokephrase = "Gyooooooooh!"
 
 /obj/item/toy/plushie/teppi/alt
+	name = "teppi plush"
 	desc = "No teppi were harmed in the creation of this plushie."
 	icon_state = "teppialt"
 
