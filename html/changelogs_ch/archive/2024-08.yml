@@ -207,3 +207,19 @@
   - bugfix: Fixed in-hand sprites for the m4 and m6
   - sound: Modified all of the gun sounds.
   - balance: Mech armor has been nerfed.
+2024-08-27:
+  CHOMPStation2:
+  - rscadd: added research samples, for research. collect them using special sample
+      containers, then analyze them or reduce them into useful resources! or just
+      put them on a table and use them as a conversation piece.
+  MeepleMuncher:
+  - rscadd: Alternate teppi plushie
+  TheCaramelion:
+  - rscadd: Departamental Lathes for each department
+  - rscdel: Removed night shift voice lines
+  - config: Night shift depends now on Sif
+  - bugfix: Fixed Protolathe consoles not syncing with the research server
+  - rscadd: Designs for all the departmental protolathes
+  - bugfix: Fixed departmental lathes changing to omni lathes
+  - bugfix: Engineering console has the right name now
+  - bugfix: Departamental lathes can sync with R&D's server.
