@@ -325,7 +325,7 @@
 /datum/sprite_accessory/tail/taur/lizard
 	name = "Lizard (Taur)"
 	icon_state = "lizard_s"
-//	suit_sprites = 'icons/mob/taursuits_lizard_vr.dmi'	 //Ported from Chomp
+//	suit_sprites = 'icons/mob/taursuits_lizard_vr.dmi'	//Ported from Chomp
 	suit_sprites = 'icons/mob/taursuits_lizard_ch.dmi'
 	icon_sprite_tag = "lizard"
 	can_loaf = TRUE
@@ -490,10 +490,10 @@
 
 /datum/sprite_accessory/tail/taur/feline/fatfeline_2c
 	name = "Fat Feline 3-color (Taur)"
-	icon = 'icons/mob/vore/taurs_ch.dmi'  //Ported from Chomp
+	icon = 'icons/mob/vore/taurs_ch.dmi' //Ported from Chomp
 	icon_state = "fatfeline_s"
 	extra_overlay = "fatfeline_markings"
-	extra_overlay2 = "fatfeline_markings_2"  //Ported from Chomp
+	extra_overlay2 = "fatfeline_markings_2" //Ported from Chomp
 	//icon_sprite_tag = "fatfeline2c"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
@@ -501,13 +501,13 @@
 
 /datum/sprite_accessory/tail/taur/feline/feline_2c_wag
 	name = "Feline 3-color (Taur, Fat vwag)"
-	icon = 'icons/mob/vore/taurs_ch.dmi'  //Ported from Chomp
+	icon = 'icons/mob/vore/taurs_ch.dmi' //Ported from Chomp
 	icon_state = "feline_s"
 	extra_overlay = "feline_markings"
 	extra_overlay2 = "feline_markings_2"
 	ani_state = "fatfeline_s"
 	extra_overlay_w = "fatfeline_markings"
-	extra_overlay2_w = "fatfeline_markings_2"  //Ported from Chomp
+	extra_overlay2_w = "fatfeline_markings_2" //Ported from Chomp
 	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/feline/synthfeline
@@ -933,7 +933,7 @@
 	name = "Fat Sect Drone (Taur)"
 	icon_state = "fat_sect_drone"
 	extra_overlay = "fat_sect_drone_markings"
-	icon_sprite_tag = "sect_drone"  //Ported from Chomp
+	icon_sprite_tag = "sect_drone" //Ported from Chomp
 
 /datum/sprite_accessory/tail/taur/sect_drone/drone_wag
 	name = "Sect Drone (Taur, Fat vwag)"
@@ -941,7 +941,7 @@
 	extra_overlay = "sect_drone_markings"
 	ani_state = "fat_sect_drone"
 	extra_overlay_w = "fat_sect_drone_markings"
-	icon_sprite_tag = "sect_drone"  //Ported from Chomp
+	icon_sprite_tag = "sect_drone" //Ported from Chomp
 
 /datum/sprite_accessory/tail/taur/giantspider_colorable//these are honestly better fit for vass icontypes whoops
 	name = "Giant Spider dual-color (Taur)"
