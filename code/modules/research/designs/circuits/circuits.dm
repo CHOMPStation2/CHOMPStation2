@@ -222,36 +222,43 @@ CIRCUITS BELOW
 
 /datum/design/circuit/protolathe/science
 	name = "science protolathe"
+	id = "science_protolathe"
 	build_path = /obj/item/weapon/circuitboard/protolathe/science
 	sort_string = "HADAA"
 
 /datum/design/circuit/protolathe/engineering
 	name = "engineering protolathe"
+	id = "engineering_protolathe"
 	build_path = /obj/item/weapon/circuitboard/protolathe/engineering
 	sort_string = "HADAB"
 
 /datum/design/circuit/protolathe/medical
 	name = "medical protolathe"
+	id = "medical_protolathe"
 	build_path = /obj/item/weapon/circuitboard/protolathe/medical
 	sort_string = "HADAC"
 
 /datum/design/circuit/protolathe/cargo
 	name = "cargo protolathe"
+	id = "cargo_protolathe"
 	build_path = /obj/item/weapon/circuitboard/protolathe/cargo
 	sort_string = "HADAD"
 
 /datum/design/circuit/protolathe/service
 	name = "service protolathe"
+	id = "service_protolathe"
 	build_path = /obj/item/weapon/circuitboard/protolathe/service
 	sort_string = "HADAE"
 
 /datum/design/circuit/protolathe/security
 	name = "security protolathe"
+	id = "security_protolathe"
 	build_path = /obj/item/weapon/circuitboard/protolathe/security
 	sort_string = "HADAF"
 
 /datum/design/circuit/protolathe/public
 	name = "public protolathe"
+	id = "public_protolathe"
 	build_path = /obj/item/weapon/circuitboard/protolathe/public
 	sort_string = "HADAG"
 
