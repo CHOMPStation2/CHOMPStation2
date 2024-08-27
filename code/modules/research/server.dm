@@ -308,5 +308,5 @@
 /obj/machinery/r_n_d/server/core
 	name = "Core R&D Server"
 	id_with_upload_string = "1"
-	id_with_download_string = "1;3;4;5;6" // CHOMPEdit - Departmental lathes
+	id_with_download_string = "1;3;4;5;6;7" // CHOMPEdit - Departmental lathes
 	server_id = 1
