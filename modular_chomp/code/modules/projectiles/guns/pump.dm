@@ -15,10 +15,10 @@
 	phase_power = 30 //Same as sniper.
 	projectile_type = /obj/item/projectile/scatter/frontierlaser
 	move_delay = 0
-	charge_cost = 360
+	charge_cost = 400
 	fire_delay = 8
 	firemodes = list(
-		list(mode_name="full", projectile_type=/obj/item/projectile/scatter/frontierlaser, charge_cost = 360),
+		list(mode_name="full", projectile_type=/obj/item/projectile/scatter/frontierlaser, charge_cost = 400),
 		list(mode_name="conserve", projectile_type=/obj/item/projectile/beam/phaser/shotgun, charge_cost = 120),
 	)
 
@@ -26,7 +26,7 @@
 /obj/item/projectile/scatter/frontierlaser
 	submunition_spread_max = 120
 	submunition_spread_min = 60
-
+	spread_submunition_damage = FALSE
 	submunitions = list(
 		/obj/item/projectile/beam/phaser/shotgun = 5
 		)
