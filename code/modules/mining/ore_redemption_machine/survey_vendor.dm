@@ -55,6 +55,7 @@
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/manhacks/station/locked,	100),
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/ward,						150),
 		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/rifle,				800), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Frontier Shotgun", 	/obj/item/weapon/gun/energy/locked/frontier/shotgun,				800), //CHOMPADD
 		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				800), //CHOMPEDIT
 		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/weapon/gun/energy/locked/frontier,					600), //CHOMPADD
 		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/holdout,				300), //CHOMPADD
