@@ -137,6 +137,7 @@
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping. Think of it like a bowling ball versus a pin. (STOP TAKING THIS AS SECURITY! We're MRP, so expect to lose your junk immediately, especially in events. - Love, Admins)" //CHOMP Edit btw
 	cost = -2
 	var_changes = list("lightweight" = 1)
+	excludes = list(/datum/trait/negative/lightweight_light) //CHOMPedit Added a lesser version of this trait
 	custom_only = FALSE
 
 /datum/trait/negative/neural_hypersensitivity

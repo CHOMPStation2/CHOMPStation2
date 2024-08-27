@@ -97,4 +97,5 @@
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping if you are unprepared)"
 	cost = -1
 	var_changes = list("lightweight_light" = 1)
+	excludes = list(/datum/trait/negative/lightweight)
 	custom_only = FALSE
