@@ -1,5 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Frontier shotgun is added to the game, and exploration vendor."
-  - bugfix: "Frontier Marksmen Rifle not starting with the correct firing speed"

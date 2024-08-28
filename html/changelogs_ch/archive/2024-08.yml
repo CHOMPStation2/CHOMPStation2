@@ -223,3 +223,12 @@
   - bugfix: Fixed departmental lathes changing to omni lathes
   - bugfix: Engineering console has the right name now
   - bugfix: Departamental lathes can sync with R&D's server.
+2024-08-28:
+  FluffMedic:
+  - rscadd: Frontier shotgun is added to the game, and exploration vendor.
+  - bugfix: Frontier Marksmen Rifle not starting with the correct firing speed
+  - bugfix: overide left on a projectile has been switched off.
+  - bugfix: Needing extra pumps on full power frontier shotgun mode to end the sequence.
+  - rscadd: Lesser lightweight
+  Kashargul:
+  - bugfix: security console not being linked to the RD server
