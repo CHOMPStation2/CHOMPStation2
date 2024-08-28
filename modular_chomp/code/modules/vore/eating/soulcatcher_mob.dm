@@ -72,14 +72,14 @@
 		soulgem.catch_mob(src, to_use_custom_name)
 
 // Speak to the captured souls within the own soulcatcher
-/mob/proc/nsay_vore()
+/mob/proc/nsay_vore(message as message)
 	set name = "NSay Vore"
 	set desc = "Speak into your Soulcatcher."
 	set category = "IC.Vore"
 
-	src.nsay_vore_act()
+	src.nsay_vore_act(message)
 
-/mob/proc/nsay_vore_act()
+/mob/proc/nsay_vore_act(var/message)
 	if(stat != CONSCIOUS)
 		to_chat(src, span_warning("You can't use NSay Vore while unconscious."))
 		return
@@ -89,20 +89,22 @@
 	if(!gem.brainmobs.len)
 		to_chat(src, span_warning("You need a devoured soul to use NSay Vore."))
 		return
-	var/message = tgui_input_text(usr, "Type a message to say.","Speak into Soulcatcher", multiline=TRUE)
+
+	if(!message)
+		message = tgui_input_text(usr, "Type a message to say.","Speak into Soulcatcher", multiline=TRUE)
 	if(message)
 		var/sane_message = sanitize(message)
 		gem.use_speech(sane_message, src)
 
 // Emote to the captured souls within the soulcatcher
-/mob/proc/nme_vore()
+/mob/proc/nme_vore(message as message)
 	set name = "NMe Vore"
 	set desc = "Emote into your Soulcatcher."
 	set category = "IC.Vore"
 
-	src.nme_vore_act()
+	src.nme_vore_act(message)
 
-/mob/proc/nme_vore_act()
+/mob/proc/nme_vore_act(var/message)
 	if(stat != CONSCIOUS)
 		to_chat(src, span_warning("You can't use NMe Vore while unconscious."))
 		return
@@ -113,7 +115,8 @@
 		to_chat(src, span_warning("You need a devoured soul to use NMe Vore."))
 		return
 
-	var/message = tgui_input_text(usr, "Type an action to perform.","Emote into Soulcatcher", multiline=TRUE)
+	if(!message)
+		message = tgui_input_text(usr, "Type an action to perform.","Emote into Soulcatcher", multiline=TRUE)
 	if(message)
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
