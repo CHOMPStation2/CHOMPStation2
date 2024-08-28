@@ -2,9 +2,18 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
+"b" = (
+/obj/machinery/ion_engine{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/template_noop)
 "c" = (
 /obj/machinery/computer/ship/helm{
-	req_one_access = newlist()
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -49,7 +58,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/cybershuttle)
+/area/template_noop)
 "k" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/tank/air/full{
@@ -61,12 +70,10 @@
 /turf/simulated/wall/rthull,
 /area/shuttle/cybershuttle)
 "m" = (
-/obj/machinery/power/terminal{
-	dir = 2
-	},
 /obj/structure/cable/yellow{
+	d1 = 2;
 	d2 = 4;
-	icon_state = "0-4"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -81,6 +88,10 @@
 /area/shuttle/cybershuttle)
 "q" = (
 /obj/machinery/computer/shuttle_control/explore/cybershuttle,
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "r" = (
@@ -169,21 +180,22 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
+"K" = (
+/obj/machinery/power/terminal{
+	dir = 2
+	},
+/obj/structure/cable/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
 "P" = (
 /obj/machinery/ion_engine{
 	dir = 1
 	},
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/cybershuttle)
+/area/template_noop)
 "Q" = (
-/obj/machinery/ion_engine{
-	dir = 1
-	},
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/cybershuttle)
+/turf/simulated/wall/rthull,
+/area/template_noop)
 "R" = (
 /obj/effect/shuttle_landmark/shuttle_initializer/cybershuttle,
 /obj/structure/cable/yellow{
@@ -269,10 +281,10 @@ a
 a
 a
 a
+a
 T
 l
 j
-a
 "}
 (3,1,1) = {"
 a
@@ -284,8 +296,8 @@ l
 W
 l
 l
-Q
-a
+l
+P
 "}
 (4,1,1) = {"
 a
@@ -295,10 +307,10 @@ J
 g
 F
 g
+g
 h
 l
-l
-a
+Q
 "}
 (5,1,1) = {"
 a
@@ -309,9 +321,9 @@ g
 g
 g
 m
+K
 o
-Q
-a
+P
 "}
 (6,1,1) = {"
 a
@@ -322,9 +334,9 @@ g
 S
 t
 r
+g
 z
-Q
-a
+P
 "}
 (7,1,1) = {"
 a
@@ -337,7 +349,7 @@ R
 w
 l
 l
-a
+Q
 "}
 (8,1,1) = {"
 a
@@ -349,8 +361,8 @@ l
 e
 l
 l
-Q
-a
+l
+P
 "}
 (9,1,1) = {"
 a
@@ -360,10 +372,10 @@ a
 a
 a
 a
+a
 y
 l
-P
-a
+b
 "}
 (10,1,1) = {"
 a
