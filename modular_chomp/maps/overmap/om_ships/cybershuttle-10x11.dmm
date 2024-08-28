@@ -2,15 +2,6 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
-"b" = (
-/obj/machinery/ion_engine{
-	dir = 1
-	},
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/turf/simulated/shuttle/plating/airless/carry,
-/area/template_noop)
 "c" = (
 /obj/machinery/computer/ship/helm{
 	req_one_access = null
@@ -35,12 +26,21 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
-	dir = 6;
+	dir = 4;
 	pixel_y = 25
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
+"f" = (
+/obj/machinery/ion_engine{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/template_noop)
 "g" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -54,16 +54,14 @@
 /obj/machinery/ion_engine{
 	dir = 1
 	},
-/obj/structure/window/plastitanium{
-	dir = 8
-	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/template_noop)
 "k" = (
 /obj/machinery/light,
-/obj/machinery/atmospherics/pipe/tank/air/full{
-	start_pressure = 10000
+/obj/machinery/atmospherics/portables_connector{
+	dir = 2
 	},
+/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "l" = (
@@ -180,21 +178,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
-"K" = (
-/obj/machinery/power/terminal{
-	dir = 2
-	},
-/obj/structure/cable/yellow,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/cybershuttle)
 "P" = (
+/turf/simulated/wall/rthull,
+/area/template_noop)
+"Q" = (
 /obj/machinery/ion_engine{
 	dir = 1
 	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/template_noop)
-"Q" = (
-/turf/simulated/wall/rthull,
 /area/template_noop)
 "R" = (
 /obj/effect/shuttle_landmark/shuttle_initializer/cybershuttle,
@@ -259,6 +253,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
+"Z" = (
+/obj/machinery/power/terminal{
+	dir = 2
+	},
+/obj/structure/cable/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
 
 (1,1,1) = {"
 a
@@ -284,7 +285,7 @@ a
 a
 T
 l
-j
+Q
 "}
 (3,1,1) = {"
 a
@@ -297,7 +298,7 @@ W
 l
 l
 l
-P
+j
 "}
 (4,1,1) = {"
 a
@@ -310,7 +311,7 @@ g
 g
 h
 l
-Q
+P
 "}
 (5,1,1) = {"
 a
@@ -321,9 +322,9 @@ g
 g
 g
 m
-K
+Z
 o
-P
+j
 "}
 (6,1,1) = {"
 a
@@ -336,7 +337,7 @@ t
 r
 g
 z
-P
+j
 "}
 (7,1,1) = {"
 a
@@ -349,7 +350,7 @@ R
 w
 l
 l
-Q
+P
 "}
 (8,1,1) = {"
 a
@@ -362,7 +363,7 @@ e
 l
 l
 l
-P
+j
 "}
 (9,1,1) = {"
 a
@@ -375,7 +376,7 @@ a
 a
 y
 l
-b
+f
 "}
 (10,1,1) = {"
 a
