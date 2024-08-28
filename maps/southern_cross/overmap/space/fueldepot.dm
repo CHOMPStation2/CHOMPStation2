@@ -27,6 +27,7 @@
 	known = TRUE
 	//start_x  = 10 // Future note: remove these two vars if we ever want this to have a random spawn location on the overmap. //Yes c:
 	//start_y  = 11
+	docking_codes = null
 
 
 // -- Areas -- //
