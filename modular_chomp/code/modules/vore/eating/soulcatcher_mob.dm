@@ -75,9 +75,15 @@
 /mob/proc/nsay_vore(message as message)
 	set name = "NSay Vore"
 	set desc = "Speak into your Soulcatcher."
-	set category = "IC.Vore"
 
 	src.nsay_vore_act(message)
+
+/mob/proc/nsay_vore_ch()
+	set name = "NSay Vore CH"
+	set desc = "Speak into your Soulcatcher."
+	set category = "IC.Vore"
+
+	src.nsay_vore_act()
 
 /mob/proc/nsay_vore_act(var/message)
 	if(stat != CONSCIOUS)
@@ -100,9 +106,15 @@
 /mob/proc/nme_vore(message as message)
 	set name = "NMe Vore"
 	set desc = "Emote into your Soulcatcher."
-	set category = "IC.Vore"
 
 	src.nme_vore_act(message)
+
+/mob/proc/nme_vore_ch()
+	set name = "NMe Vore CH"
+	set desc = "Emote into your Soulcatcher."
+	set category = "IC.Vore"
+
+	src.nme_vore_act()
 
 /mob/proc/nme_vore_act(var/message)
 	if(stat != CONSCIOUS)
