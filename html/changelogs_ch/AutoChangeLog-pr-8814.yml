@@ -1,0 +1,10 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "added \"random corporate supply\" and contraband \"special corporate supply\" crates to cargo terminals; the former mostly has harmless stuff, whilst the latter can spawn all sorts of stuff from the random pool but can also include weapons (rarely)."
+  - qol: "refactored the supply spawning behaviour slightly, so crates are no longer mandatory. imagine the manifest comes stickytaped to the item, or whatever"
+  - qol: "supply consoles start tracking orders at 0 (so the first order is order 1, etc.) rather than a random number between 1 and 9000"
+  - bugfix: "the random pizza pack crate now comes with the pizza delivery outfit and visor, deleting a duplicate pizza supply pack that was inaccessible anyway due to not having a defined name or container"
+  - rscdel: "merged all _vr supplypacks into the main supplypack files"
+  - rscadd: "new \"full lid\" 'decal' option for crates"
+  - qol: "added desatti catering, nukies energy drinks, and coyote salvage corp suit crates to random spawners"
