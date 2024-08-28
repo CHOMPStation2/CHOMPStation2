@@ -416,7 +416,7 @@
 		return
 	var/obj/target = tgui_input_list(owner, "Select where you want to store the mind into.", "Mind Transfer Target", valid_objects)
 	if(istype(target, /obj/soulgem))
-		transfer_mob_soulcatcher(selected_soul, gem)
+		transfer_mob_soulcatcher(selected_soul, target)
 		return
 	transfer_mob(selected_soul, target)
 
