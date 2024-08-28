@@ -416,7 +416,7 @@
 		return
 	var/obj/target = tgui_input_list(owner, "Select where you want to store the mind into.", "Mind Transfer Target", valid_objects)
 	if(istype(target, /obj/soulgem))
-			transfer_mob_soulcatcher(selected_soul, gem)
+		transfer_mob_soulcatcher(selected_soul, gem)
 		return
 	transfer_mob(selected_soul, target)
 
@@ -453,8 +453,7 @@
 /obj/soulgem/proc/transfer_mob_soulcatcher(var/mob/living/carbon/brain/caught_soul/vore/M, var/obj/soulgem/gem)
 	if(is_taken_over()) return
 	if(!istype(M) || !gem) return
-	if(!gem.owner)
-		return
+	if(!gem.owner) return
 	if((tgui_alert(gem.owner, "Do you want to allow [owner] to transfer [selected_soul] to your soulcatcher?", "Allow Transfer", list("No", "Yes")) == "Yes"))
 		if(!in_range(gem.owner, owner))
 			return
