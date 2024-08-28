@@ -12,19 +12,19 @@
 	has_eye_light_sprites = TRUE
 
 
-/datum/robot_sprite/dogborg/tall/dullahan
+/datum/robot_sprite/dogborg/tall/janitor/dullahan
 	module_type = "Janitor"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_jani.dmi'
 	pixel_x = 0
 
-/datum/robot_sprite/dogborg/tall/dullahan/janitor
+/datum/robot_sprite/dogborg/tall/janitor/dullahan/janitor
 	name = "Dullahan"
 	sprite_icon_state = "dullahanjani"
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 
-/datum/robot_sprite/dogborg/tall/dullahan/janitoralt
+/datum/robot_sprite/dogborg/tall/janitor/dullahan/janitoralt
 	name = "Dullahan v2"
 	sprite_icon_state = "dullahanjani_alt"
 	has_eye_light_sprites = TRUE
