@@ -13,6 +13,12 @@
 /obj/fruitspawner/watermelon,
 /obj/item/device/gps/explorer,
 /obj/item/device/gps/explorer,
+/obj/structure/closet/walllocker_double/east,
+/obj/item/weapon/gun/projectile/garand,
+/obj/item/ammo_magazine/clip/medium,
+/obj/item/ammo_magazine/clip/medium,
+/obj/item/ammo_magazine/clip/medium,
+/obj/item/weapon/storage/firstaid/regular,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "e" = (
@@ -46,7 +52,7 @@
 /area/shuttle/cybershuttle)
 "h" = (
 /obj/machinery/computer/ship/engines{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -147,6 +153,20 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
+/area/shuttle/cybershuttle)
+"C" = (
+/obj/structure/table/survival_pod,
+/obj/item/glass_jar{
+	pixel_y = 13;
+	pixel_x = 6
+	},
+/obj/random/action_figure{
+	pixel_y = -4;
+	pixel_x = -9
+	},
+/obj/item/weapon/dice/d20,
+/obj/item/weapon/deck/tarot,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "D" = (
 /obj/structure/window/plastitanium/full,
@@ -308,7 +328,7 @@ J
 g
 F
 g
-g
+C
 h
 l
 P
