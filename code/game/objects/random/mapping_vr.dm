@@ -16,46 +16,46 @@
 
 /obj/random/forgotten_tram/item_to_spawn()
 	return pick(
-			prob(2);/obj/item/device/flashlight,
-			prob(2);/obj/item/device/flashlight/color,
-			prob(2);/obj/item/device/flashlight/color/green,
-			prob(2);/obj/item/device/flashlight/color/purple,
-			prob(2);/obj/item/device/flashlight/color/red,
-			prob(2);/obj/item/device/flashlight/color/orange,
-			prob(2);/obj/item/device/flashlight/color/yellow,
-			prob(2);/obj/item/device/flashlight/glowstick,
-			prob(2);/obj/item/device/flashlight/glowstick/blue,
-			prob(1);/obj/item/device/flashlight/glowstick/orange,
-			prob(1);/obj/item/device/flashlight/glowstick/red,
-			prob(1);/obj/item/device/flashlight/glowstick/yellow,
-			prob(1);/obj/item/device/flashlight/pen,
-			prob(2);/obj/item/device/flashlight/maglight,
+			prob(2);/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/color, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/color/green, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/color/purple, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/color/red, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/color/orange, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/color/yellow, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/glowstick, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/glowstick/blue, // CHOMPEdit - Removal of obj/item/device
+			prob(1);/obj/item/flashlight/glowstick/orange, // CHOMPEdit - Removal of obj/item/device
+			prob(1);/obj/item/flashlight/glowstick/red, // CHOMPEdit - Removal of obj/item/device
+			prob(1);/obj/item/flashlight/glowstick/yellow, // CHOMPEdit - Removal of obj/item/device
+			prob(1);/obj/item/flashlight/pen, // CHOMPEdit - Removal of obj/item/device
+			prob(2);/obj/item/flashlight/maglight, // CHOMPEdit - Removal of obj/item/device
 			prob(5);/obj/random/cigarettes,
 			prob(5);/obj/random/soap,
 			prob(5);/obj/random/drinksoft,
 			prob(5);/obj/random/snack,
 			prob(5);/obj/random/plushie,
-			prob(2);/obj/item/weapon/storage/secure/briefcase,
-			prob(4);/obj/item/weapon/storage/briefcase,
-			prob(5);/obj/item/weapon/storage/backpack,
-			prob(5);/obj/item/weapon/storage/backpack/medic,
-			prob(5);/obj/item/weapon/storage/backpack/industrial,
-			prob(5);/obj/item/weapon/storage/backpack/toxins,
-			prob(3);/obj/item/weapon/storage/backpack/dufflebag,
-			prob(3);/obj/item/weapon/storage/backpack/dufflebag/med,
-			prob(3);/obj/item/weapon/storage/backpack/dufflebag/eng,
-			prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie,
-			prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie/med,
-			prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo,
-			prob(4);/obj/item/weapon/storage/backpack/satchel,
-			prob(5);/obj/item/weapon/storage/backpack/satchel/norm,
-			prob(5);/obj/item/weapon/storage/backpack/satchel/med,
-			prob(5);/obj/item/weapon/storage/backpack/satchel/eng,
-			prob(5);/obj/item/weapon/storage/backpack/satchel/tox,
-			prob(5);/obj/item/weapon/storage/backpack/messenger/med,
-			prob(5);/obj/item/weapon/storage/backpack/messenger/engi,
-			prob(5);/obj/item/weapon/storage/backpack/messenger/tox,
-			prob(3);/obj/item/weapon/storage/wallet,
+			prob(2);/obj/item/storage/secure/briefcase, // CHOMPEdit - Removal of obj/item/weapon
+			prob(4);/obj/item/storage/briefcase, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/medic, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/industrial, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/toxins, // CHOMPEdit - Removal of obj/item/weapon
+			prob(3);/obj/item/storage/backpack/dufflebag, // CHOMPEdit - Removal of obj/item/weapon
+			prob(3);/obj/item/storage/backpack/dufflebag/med, // CHOMPEdit - Removal of obj/item/weapon
+			prob(3);/obj/item/storage/backpack/dufflebag/eng, // CHOMPEdit - Removal of obj/item/weapon
+			prob(1);/obj/item/storage/backpack/dufflebag/syndie, // CHOMPEdit - Removal of obj/item/weapon
+			prob(1);/obj/item/storage/backpack/dufflebag/syndie/med, // CHOMPEdit - Removal of obj/item/weapon
+			prob(1);/obj/item/storage/backpack/dufflebag/syndie/ammo, // CHOMPEdit - Removal of obj/item/weapon
+			prob(4);/obj/item/storage/backpack/satchel, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/satchel/norm, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/satchel/med, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/satchel/eng, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/satchel/tox, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/messenger/med, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/messenger/engi, // CHOMPEdit - Removal of obj/item/weapon
+			prob(5);/obj/item/storage/backpack/messenger/tox, // CHOMPEdit - Removal of obj/item/weapon
+			prob(3);/obj/item/storage/wallet, // CHOMPEdit - Removal of obj/item/weapon
 			prob(1);/obj/item/clothing/gloves/black,
 			prob(1);/obj/item/clothing/gloves/blue,
 			prob(1);/obj/item/clothing/gloves/brown,
@@ -145,9 +145,9 @@
 			prob(3);/obj/item/clothing/accessory/poncho/roles/cloak/research,
 			prob(3);/obj/item/clothing/accessory/poncho/roles/cloak/security,
 			prob(2);/obj/item/clothing/accessory/stethoscope,
-			prob(2);/obj/item/device/camera,
-			prob(3);/obj/item/device/pda,
-			prob(3);/obj/item/device/radio/headset,
+			prob(2);/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+			prob(3);/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+			prob(3);/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
 			prob(2);/obj/item/toy/tennis,
 			prob(2);/obj/item/toy/tennis/red,
 			prob(2);/obj/item/toy/tennis/yellow,

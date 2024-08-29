@@ -2,7 +2,7 @@
 // Chomp gift, randomized color and size, wider selection of items to obtain, also chance of chaos present with even wilder stuff
 
 
-/obj/item/weapon/a_gift/advanced
+/obj/item/a_gift/advanced // CHOMPEdit - Removal of obj/item/weapon
 	name = "present"
 	desc = "Its a Christmas present! It has a tag on it that says: 'Chomp staff thank you all for the year that has passed and wish you a merry Christmas and a happy new year. May the new year be good and well for you with many achievements and happy times!'"
 	icon = 'icons/obj/items_ch.dmi'
@@ -11,7 +11,7 @@
 	plane = ABOVE_MOB_PLANE
 	var/chaos
 
-/obj/item/weapon/a_gift/advanced/New()
+/obj/item/a_gift/advanced/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	icon_state += "_[pick("g","r","b","y","p")]"
 	if(prob(1))
@@ -21,89 +21,89 @@
 		desc = "The casino dev messed up and gave you the wrong present! This one pulses with potential for good or evil!"
 	return
 
-/obj/item/weapon/a_gift/advanced/attack_self(mob/M as mob) //WIP - ALWAYS add more items to list! - Jack
+/obj/item/a_gift/advanced/attack_self(mob/M as mob) //WIP - ALWAYS add more items to list! - Jack // CHOMPEdit - Removal of obj/item/weapon
 	var/gift_type_advanced = pick(
-		/obj/item/device/binoculars/spyglass,
-		/obj/item/device/bodysnatcher,
-		/obj/item/device/cataloguer/advanced,
-		/obj/item/device/flashlight/slime,
-		/obj/item/device/lightreplacer,
-		/obj/item/weapon/book/tome,
-		/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
-		/obj/item/weapon/disk/nifsoft/compliance,
-		/obj/item/weapon/implanter/adrenalin,
-		/obj/item/weapon/lego,
-		/obj/item/weapon/moneybag,
-		/obj/item/weapon/pickaxe/diamonddrill,
-		/obj/item/weapon/rcd/advanced/loaded,
-		/obj/item/weapon/bluespace_harpoon,
-		/obj/item/weapon/storage/backpack/dufflebag/syndie,
-		/obj/item/weapon/storage/belt/medical/alien,
-		/obj/item/weapon/storage/toolbox/syndicate/powertools,
-		/obj/item/weapon/surgical/FixOVein/alien,
-		/obj/item/weapon/surgical/bone_clamp/alien,
-		/obj/item/weapon/surgical/cautery/alien,
-		/obj/item/weapon/surgical/circular_saw/alien,
-		/obj/item/weapon/surgical/hemostat/alien,
-		/obj/item/weapon/surgical/retractor/alien,
-		/obj/item/weapon/surgical/scalpel/alien,
-		/obj/item/weapon/surgical/surgicaldrill/alien,
-		/obj/item/weapon/sword/fluff/joanaria/scisword,
-		/obj/item/weapon/tool/wrench/alien,
-		/obj/item/weapon/tool/wirecutters/alien,
-		/obj/item/weapon/tool/screwdriver/alien,
-		/obj/item/weapon/tool/crowbar/alien,
-		/obj/item/weapon/weldingtool/alien,
-		/obj/item/weapon/twohanded/fireaxe/fluff/mjollnir,
-		/obj/item/weapon/gun/launcher/confetti_cannon/overdrive,
-		/obj/item/weapon/gun/energy/sizegun,
-		/obj/item/weapon/gun/energy/netgun,
-		/obj/item/weapon/storage/belt/utility/alien,
+		/obj/item/binoculars/spyglass, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/bodysnatcher, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cataloguer/advanced, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/slime, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/book/tome, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device/weapon/recharge/alien/hybrid, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/disk/nifsoft/compliance, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implanter/adrenalin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/lego, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/moneybag, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pickaxe/diamonddrill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rcd/advanced/loaded, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/bluespace_harpoon, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/backpack/dufflebag/syndie, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/belt/medical/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/toolbox/syndicate/powertools, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/FixOVein/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/bone_clamp/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/cautery/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/circular_saw/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/hemostat/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/retractor/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/scalpel/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/surgicaldrill/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/sword/fluff/joanaria/scisword, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/twohanded/fireaxe/fluff/mjollnir, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/launcher/confetti_cannon/overdrive, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/sizegun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/netgun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/belt/utility/alien, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/suit/armor/alien,
 		/obj/item/clothing/glasses/monocoole,
-		/obj/item/weapon/reagent_containers/spray/chemsprayer,
-		/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
-		/obj/item/weapon/reagent_containers/glass/beaker/noreact,
-		/obj/item/weapon/storage/box/casino/costume_whitebunny,
-		/obj/item/weapon/storage/box/casino/costume_blackbunny,
-		/obj/item/weapon/storage/box/casino/costume_sexymime,
-		/obj/item/weapon/storage/box/casino/costume_sexyclown,
-		/obj/item/weapon/storage/box/casino/costume_nyangirl,
-		/obj/item/weapon/storage/box/casino/costume_wizard,
-		/obj/item/weapon/storage/box/casino/costume_chicken,
-		/obj/item/weapon/storage/box/casino/costume_gladiator,
-		/obj/item/weapon/storage/box/casino/costume_pirate,
-		/obj/item/weapon/storage/box/casino/costume_commie,
-		/obj/item/weapon/storage/box/casino/costume_imperiummonk,
-		/obj/item/weapon/storage/box/casino/costume_plaguedoctor,
-		/obj/item/weapon/storage/box/casino/costume_cutewitch,
-		/obj/item/weapon/grenade/spawnergrenade/casino,
-		/obj/item/weapon/grenade/spawnergrenade/casino/goat,
-		/obj/item/weapon/grenade/spawnergrenade/casino/armadillo,
-		/obj/item/weapon/grenade/spawnergrenade/casino/cat,
-		/obj/item/weapon/grenade/spawnergrenade/casino/chicken,
-		/obj/item/weapon/grenade/spawnergrenade/casino/cow,
-		/obj/item/weapon/grenade/spawnergrenade/casino/corgi,
-		/obj/item/weapon/grenade/spawnergrenade/casino/fox,
-		/obj/item/weapon/grenade/spawnergrenade/casino/lizard,
-		/obj/item/weapon/grenade/spawnergrenade/casino/penguin,
-		/obj/item/weapon/grenade/spawnergrenade/casino/snake,
-		/obj/item/weapon/grenade/spawnergrenade/casino/yithian,
-		/obj/item/weapon/grenade/spawnergrenade/casino/tindalos,
-		/obj/item/weapon/grenade/spawnergrenade/casino/fennec,
-		/obj/item/weapon/grenade/spawnergrenade/casino/redpanda,
-		/obj/item/weapon/grenade/spawnergrenade/casino/horse,
-		/obj/item/weapon/grenade/spawnergrenade/casino/otie,
-		/obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby,
-		/obj/item/weapon/grenade/spawnergrenade/casino/zorgoia,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax,
-		/obj/item/weapon/lego,
-		/obj/item/weapon/dnainjector/nobreath,
-		/obj/item/weapon/dnainjector/regenerate,
-		/obj/item/weapon/dnainjector/remoteview,
-		/obj/item/weapon/dnainjector/runfast,
-		/obj/item/weapon/dnainjector/telemut,
-		/obj/item/weapon/dnainjector/xraymut,
+		/obj/item/reagent_containers/spray/chemsprayer, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/beaker/bluespace, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/beaker/noreact, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_whitebunny, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_blackbunny, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_sexymime, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_sexyclown, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_nyangirl, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_wizard, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_chicken, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_gladiator, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_pirate, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_commie, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_imperiummonk, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_plaguedoctor, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/casino/costume_cutewitch, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/goat, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/armadillo, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/cat, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/chicken, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/cow, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/corgi, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/fox, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/lizard, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/penguin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/snake, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/yithian, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/tindalos, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/fennec, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/redpanda, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/horse, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/otie, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/otie/chubby, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/zorgoia, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/lego, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/dnainjector/nobreath, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/dnainjector/regenerate, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/dnainjector/remoteview, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/dnainjector/runfast, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/dnainjector/telemut, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/dnainjector/xraymut, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/instrument/accordion,
 		/obj/item/instrument/banjo,
 		/obj/item/instrument/bikehorn,
@@ -124,51 +124,51 @@
 		/obj/item/instrument/violin,
 		/obj/item/instrument/violin/golden,
 		/obj/item/instrument/xylophone,
-		/obj/item/weapon/implantcase/adrenalin,
-		/obj/item/weapon/implantcase/analyzer,
-		/obj/item/weapon/implantcase/armblade,
-		/obj/item/weapon/implantcase/dart,
-		/obj/item/weapon/implantcase/freedom,
-		/obj/item/weapon/implantcase/handblade,
-		/obj/item/weapon/implantcase/language/eal,
-		/obj/item/weapon/implantcase/laser,
-		/obj/item/weapon/implantcase/loyalty,
-		/obj/item/weapon/implantcase/medkit,
-		/obj/item/weapon/implantcase/restrainingbolt,
-		/obj/item/weapon/implantcase/shades,
-		/obj/item/weapon/implantcase/sprinter,
-		/obj/item/weapon/implantcase/surge,
-		/obj/item/weapon/implantcase/sword,
-		/obj/item/weapon/implantcase/taser,
-		/obj/item/weapon/implantcase/toolkit,
-		/obj/item/weapon/implantcase/vrlanguage,
-		/obj/item/weapon/implanter/sizecontrol,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/mining,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/firefighter,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/serenity,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/Odysseus,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/scree,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/janus,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/scarab,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlepod,
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlecraft,
-		/obj/item/weapon/rig/bayeng,
-		/obj/item/weapon/rig/baymed,
-		/obj/item/weapon/rig/ce,
-		/obj/item/weapon/rig/ch/pursuit,
-		/obj/item/weapon/rig/combat,
-		/obj/item/weapon/rig/ert/janitor,
-		/obj/item/weapon/rig/industrial,
-		/obj/item/weapon/rig/internalaffairs,
-		/obj/item/weapon/rig/medical)
+		/obj/item/implantcase/adrenalin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/analyzer, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/armblade, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/dart, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/freedom, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/handblade, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/language/eal, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/laser, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/loyalty, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/medkit, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/restrainingbolt, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/shades, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/sprinter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/surge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/sword, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/taser, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/toolkit, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase/vrlanguage, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implanter/sizecontrol, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/mining, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/firefighter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/serenity, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/Odysseus, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/scree, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/janus, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/scarab, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/shuttlepod, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/gygax/shuttlecraft, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/bayeng, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/baymed, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/ce, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/ch/pursuit, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/combat, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/ert/janitor, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/industrial, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/internalaffairs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rig/medical) // CHOMPEdit - Removal of obj/item/weapon
 
 	var/gift_type_chaos = pick(
-		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/gorilla,
-		/obj/item/weapon/dnainjector/hulkmut,
-		/obj/item/weapon/grenade/spawnergrenade/casino/infinitycake,
-		/obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer,
-		/obj/item/weapon/spellbook,
-		/obj/item/weapon/book/tome/imbued)
+		/obj/item/grenade/spawnergrenade/casino/gygax/gorilla, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/dnainjector/hulkmut, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/infinitycake, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/spawnergrenade/casino/universal_technomancer, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spellbook, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/book/tome/imbued) // CHOMPEdit - Removal of obj/item/weapon
 
 	var/obj/item/I = null
 

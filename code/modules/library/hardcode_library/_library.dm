@@ -2,7 +2,7 @@
  * Home of the New (NOV 1st, 2019) library books.
  */
 
-/obj/item/weapon/book/custom_library
+/obj/item/book/custom_library // CHOMPEdit - Removal of obj/item/weapon
 	name = "Book"
 	desc = "A hardbound book."
 	description_info = "This book is printed from the custom repo. If you can see this, something went wrong."
@@ -14,22 +14,22 @@
 	var/origkey = null
 	author = "UNKNOWN"
 
-/obj/item/weapon/book/custom_library/fiction
+/obj/item/book/custom_library/fiction // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Fiction"
 
-/obj/item/weapon/book/custom_library/nonfiction
+/obj/item/book/custom_library/nonfiction // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Non-Fiction"
 
-/obj/item/weapon/book/custom_library/reference
+/obj/item/book/custom_library/reference // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Reference"
 
-/obj/item/weapon/book/custom_library/religious
+/obj/item/book/custom_library/religious // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Religious"
 /*
-/obj/item/weapon/book/custom_library/adult
+/obj/item/book/custom_library/adult // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Adult"
 */
-/obj/item/weapon/book/bundle/custom_library
+/obj/item/book/bundle/custom_library // CHOMPEdit - Removal of obj/item/weapon
 	name = "Book"
 	desc = "A hardbound book."
 	description_info = "This book is printed from the custom repo. If you can see this, something went wrong."
@@ -44,18 +44,18 @@
 	page = 1 //current page
 	pages = list() //the contents of each page
 
-/obj/item/weapon/book/bundle/custom_library/fiction
+/obj/item/book/bundle/custom_library/fiction // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Fiction"
 
-/obj/item/weapon/book/bundle/custom_library/nonfiction
+/obj/item/book/bundle/custom_library/nonfiction // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Non-Fiction"
 
-/obj/item/weapon/book/bundle/custom_library/reference
+/obj/item/book/bundle/custom_library/reference // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Reference"
 
-/obj/item/weapon/book/bundle/custom_library/religious
+/obj/item/book/bundle/custom_library/religious // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Religious"
 /*
-/obj/item/weapon/book/bundle/custom_library/adult
+/obj/item/book/bundle/custom_library/adult // CHOMPEdit - Removal of obj/item/weapon
 	libcategory = "Adult"
 */

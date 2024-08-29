@@ -172,42 +172,42 @@
 	desc = "This is a random can of (legal) Nukies Energy Drink."
 
 /obj/random/nukies_can_legal/item_to_spawn()
-	return pick(/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_peach,
-				/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_pear,
-				/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_cherry,
-				/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_melon,
-				/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_banana,
-				/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_rose,
-				/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_lemon,
-				/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_fruit,
-				/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_special)
+	return pick(/obj/item/reagent_containers/food/drinks/cans/nukie_peach, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/cans/nukie_pear, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/cans/nukie_cherry, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/cans/nukie_melon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/cans/nukie_banana, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/cans/nukie_rose, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/cans/nukie_lemon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/cans/nukie_fruit, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/cans/nukie_special) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/random/desatti_snacks
 	name = "Random Desatti Snacks"
 	desc = "This is a random Desatti Catering snack."
 
 /obj/random/desatti_snacks/item_to_spawn()
-	return pick(/obj/item/weapon/storage/box/jaffacake,
-				/obj/item/weapon/storage/box/winegum,
-				/obj/item/weapon/storage/box/saucer,
-				/obj/item/weapon/storage/box/shrimpsandbananas,
-				/obj/item/weapon/storage/box/rhubarbcustard,
-				/obj/item/weapon/storage/box/custardcream,
-				/obj/item/weapon/storage/box/bourbon,
-				/obj/item/weapon/reagent_containers/food/snacks/packaged/sausageroll,
-				/obj/item/weapon/reagent_containers/food/snacks/packaged/pasty,
-				/obj/item/weapon/reagent_containers/food/snacks/packaged/scotchegg,
-				/obj/item/weapon/reagent_containers/food/snacks/packaged/porkpie)
+	return pick(/obj/item/storage/box/jaffacake, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/winegum, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/saucer, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/shrimpsandbananas, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/rhubarbcustard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/custardcream, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/bourbon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/packaged/sausageroll, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/packaged/pasty, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/packaged/scotchegg, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/packaged/porkpie) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/random_multi/single_item/captains_spare_id
 	name = "Multi Point - Captain's Spare"
 	id = "Captain's spare id"
-	item_path = /obj/item/weapon/card/id/gold/captain/spare
+	item_path = /obj/item/card/id/gold/captain/spare // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/random_multi/single_item/hand_tele
 	name = "Multi Point - Hand Teleporter"
 	id = "hand tele"
-	item_path = /obj/item/weapon/hand_tele
+	item_path = /obj/item/hand_tele // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/random_multi/single_item/sfr_headset
 	name = "Multi Point - headset"
@@ -222,10 +222,10 @@
 	icon_state = "rup"
 
 /obj/random/sfr/item_to_spawn()
-	return pick(prob(25);/obj/item/device/radio/headset/heads/captain/sfr,
-				prob(25);/obj/item/device/radio/headset/headset_cargo/alt,
-				prob(25);/obj/item/device/radio/headset/headset_com/alt,
-				prob(25);/obj/item/device/radio/headset)
+	return pick(prob(25);/obj/item/radio/headset/heads/captain/sfr, // CHOMPEdit - Removal of obj/item/device
+				prob(25);/obj/item/radio/headset/headset_cargo/alt, // CHOMPEdit - Removal of obj/item/device
+				prob(25);/obj/item/radio/headset/headset_com/alt, // CHOMPEdit - Removal of obj/item/device
+				prob(25);/obj/item/radio/headset) // CHOMPEdit - Removal of obj/item/device
 
 // Mining Goodies
 /obj/random/multiple/minevault
@@ -238,73 +238,73 @@
 	return pick(
 			prob(5);list(
 				/obj/item/clothing/mask/smokable/pipe,
-				/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-				/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,
-				/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-				/obj/item/weapon/flame/lighter/zippo,
+				/obj/item/reagent_containers/food/drinks/bottle/rum, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/bottle/whiskey, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/flame/lighter/zippo, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/hydroponics
 			),
 			prob(5);list(
-				/obj/item/weapon/pickaxe,
+				/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/under/rank/miner,
 				/obj/item/clothing/head/hardhat,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(5);list(
-				/obj/item/weapon/pickaxe/drill,
+				/obj/item/pickaxe/drill, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/suit/space/void/mining,
 				/obj/item/clothing/head/helmet/space/void/mining,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(5);list(
-				/obj/item/weapon/pickaxe/advdrill,
+				/obj/item/pickaxe/advdrill, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/suit/space/void/mining/alt,
 				/obj/item/clothing/head/helmet/space/void/mining/alt,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(5);list(
-				/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
-				/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
-				/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+				/obj/item/reagent_containers/glass/beaker/bluespace, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/glass/beaker/bluespace, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/glass/beaker/bluespace, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/science
 			),
 			prob(5);list(
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/engineering
 			),
 			prob(5);list(
-				/obj/item/weapon/pickaxe,
+				/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/glasses/material,
 				/obj/structure/ore_box,
 				/obj/structure/closet/crate
 			),
 			prob(5);list(
-				/obj/item/weapon/reagent_containers/glass/beaker/noreact,
-				/obj/item/weapon/reagent_containers/glass/beaker/noreact,
-				/obj/item/weapon/reagent_containers/glass/beaker/noreact,
+				/obj/item/reagent_containers/glass/beaker/noreact, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/glass/beaker/noreact, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/glass/beaker/noreact, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/science
 			),
 			prob(5);list(
-				/obj/item/weapon/storage/secure/briefcase/money,
+				/obj/item/storage/secure/briefcase/money, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/freezer/rations
 			),
 			prob(5);list(
@@ -317,10 +317,10 @@
 				/obj/structure/closet/crate
 			),
 			prob(5);list(
-				/obj/item/weapon/melee/baton,
-				/obj/item/weapon/melee/baton,
-				/obj/item/weapon/melee/baton,
-				/obj/item/weapon/melee/baton,
+				/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(5);list(
@@ -329,10 +329,10 @@
 				/obj/structure/closet/crate
 			),
 			prob(2);list(
-				/obj/item/weapon/melee/baton/cattleprod,
-				/obj/item/weapon/melee/baton/cattleprod,
-				/obj/item/weapon/cell/high,
-				/obj/item/weapon/cell/high,
+				/obj/item/melee/baton/cattleprod, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/melee/baton/cattleprod, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/high, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/high, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(2);list(
@@ -346,8 +346,8 @@
 				/obj/structure/closet/crate
 			),
 			prob(2);list(
-				/obj/item/weapon/rig/industrial/equipped,
-				/obj/item/weapon/storage/bag/ore,
+				/obj/item/rig/industrial/equipped, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
@@ -375,8 +375,8 @@
 				/obj/item/clothing/head/helmet/space/syndicate/black/red,
 				/obj/item/clothing/suit/space/syndicate/black/red,
 				/obj/item/clothing/head/helmet/space/syndicate/black/red,
-				/obj/item/weapon/gun/projectile/automatic/mini_uzi,
-				/obj/item/weapon/gun/projectile/automatic/mini_uzi,
+				/obj/item/gun/projectile/automatic/mini_uzi, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/gun/projectile/automatic/mini_uzi, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/ammo_magazine/m45uzi,
 				/obj/item/ammo_magazine/m45uzi,
 				/obj/item/ammo_magazine/m45uzi/empty,
@@ -386,14 +386,14 @@
 			prob(2);list(
 				/obj/item/clothing/suit/ianshirt,
 				/obj/item/clothing/suit/ianshirt,
-				/obj/item/weapon/bedsheet/ian,
+				/obj/item/bedsheet/ian, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/plastic
 			),
 			prob(2);list(
 				/obj/item/clothing/suit/armor/vest,
 				/obj/item/clothing/suit/armor/vest,
-				/obj/item/weapon/gun/projectile/garand,
-				/obj/item/weapon/gun/projectile/garand,
+				/obj/item/gun/projectile/garand, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/gun/projectile/garand, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/ammo_magazine/m762enbloc,
 				/obj/item/ammo_magazine/m762enbloc,
 				/obj/structure/closet/crate/plastic
@@ -405,63 +405,63 @@
 				/obj/mecha/working/hoverpod/combatpod
 			),
 			prob(2);list(
-				/obj/item/weapon/pickaxe/silver,
-				/obj/item/weapon/storage/bag/ore,
+				/obj/item/pickaxe/silver, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
-				/obj/item/weapon/pickaxe/advdrill,
-				/obj/item/weapon/storage/bag/ore,
+				/obj/item/pickaxe/advdrill, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
-				/obj/item/weapon/pickaxe/jackhammer,
-				/obj/item/weapon/storage/bag/ore,
+				/obj/item/pickaxe/jackhammer, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
-				/obj/item/weapon/pickaxe/diamond,
-				/obj/item/weapon/storage/bag/ore,
+				/obj/item/pickaxe/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
-				/obj/item/weapon/pickaxe/diamonddrill,
-				/obj/item/weapon/storage/bag/ore,
+				/obj/item/pickaxe/diamonddrill, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
-				/obj/item/weapon/pickaxe/gold,
-				/obj/item/weapon/storage/bag/ore,
+				/obj/item/pickaxe/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
-				/obj/item/weapon/pickaxe/plasmacutter,
-				/obj/item/weapon/storage/bag/ore,
+				/obj/item/pickaxe/plasmacutter, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
-				/obj/item/weapon/material/sword/katana,
-				/obj/item/weapon/material/sword/katana,
+				/obj/item/material/sword/katana, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/material/sword/katana, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(2);list(
-				/obj/item/weapon/material/sword,
-				/obj/item/weapon/material/sword,
+				/obj/item/material/sword, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/material/sword, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(1);list(
 				/obj/item/clothing/mask/balaclava,
-				/obj/item/weapon/material/star,
-				/obj/item/weapon/material/star,
-				/obj/item/weapon/material/star,
-				/obj/item/weapon/material/star,
+				/obj/item/material/star, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/material/star, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/material/star, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/material/star, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(1);list(
@@ -473,65 +473,65 @@
 				/obj/item/clothing/head/bearpelt,
 				/obj/item/clothing/under/soviet,
 				/obj/item/clothing/under/soviet,
-				/obj/item/weapon/gun/projectile/shotgun/pump/rifle/ceremonial,
-				/obj/item/weapon/gun/projectile/shotgun/pump/rifle/ceremonial,
+				/obj/item/gun/projectile/shotgun/pump/rifle/ceremonial, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/gun/projectile/shotgun/pump/rifle/ceremonial, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(1);list(
-				/obj/item/weapon/gun/projectile/revolver/detective,
-				/obj/item/weapon/gun/projectile/contender,
-				/obj/item/weapon/gun/projectile/p92x,
-				/obj/item/weapon/gun/projectile/derringer,
+				/obj/item/gun/projectile/revolver/detective, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/gun/projectile/contender, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/gun/projectile/p92x, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/gun/projectile/derringer, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(1);list(
-				/obj/item/weapon/melee/cultblade,
+				/obj/item/melee/cultblade, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/suit/cultrobes,
 				/obj/item/clothing/head/culthood,
-				/obj/item/device/soulstone,
+				/obj/item/soulstone, // CHOMPEdit - Removal of obj/item/device
 				/obj/structure/closet/crate
 			),
 			prob(1);list(
-				/obj/item/weapon/vampiric,
-				/obj/item/weapon/vampiric,
+				/obj/item/vampiric, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/vampiric, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/science
 			),
 			prob(1);list(
-				/obj/item/weapon/archaeological_find
+				/obj/item/archaeological_find // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(1);list(
-				/obj/item/weapon/melee/energy/sword,
-				/obj/item/weapon/melee/energy/sword,
-				/obj/item/weapon/melee/energy/sword,
-				/obj/item/weapon/shield/energy,
-				/obj/item/weapon/shield/energy,
+				/obj/item/melee/energy/sword, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/melee/energy/sword, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/melee/energy/sword, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/shield/energy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/shield/energy, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/science
 			),
 			prob(1);list(
-				/obj/item/weapon/storage/backpack/clown,
+				/obj/item/storage/backpack/clown, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/under/rank/clown,
 				/obj/item/clothing/shoes/clown_shoes,
-				/obj/item/device/pda/clown,
+				/obj/item/pda/clown, // CHOMPEdit - Removal of obj/item/device
 				/obj/item/clothing/mask/gas/clown_hat,
-				/obj/item/weapon/bikehorn,
-				/obj/item/weapon/reagent_containers/spray/waterflower,
-				/obj/item/weapon/pen/crayon/rainbow,
+				/obj/item/bikehorn, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/spray/waterflower, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/crayon/rainbow, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(1);list(
 				/obj/item/clothing/under/mime,
 				/obj/item/clothing/shoes/black,
-				/obj/item/device/pda/mime,
+				/obj/item/pda/mime, // CHOMPEdit - Removal of obj/item/device
 				/obj/item/clothing/gloves/white,
 				/obj/item/clothing/mask/gas/mime,
 				/obj/item/clothing/head/beret,
 				/obj/item/clothing/suit/suspenders,
-				/obj/item/weapon/pen/crayon/mime,
-				/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing,
+				/obj/item/pen/crayon/mime, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/drinks/bottle/bottleofnothing, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate
 			),
 			prob(1);list(
-				/obj/item/weapon/storage/belt/champion,
+				/obj/item/storage/belt/champion, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/mask/luchador,
 				/obj/item/clothing/mask/luchador/rudos,
 				/obj/item/clothing/mask/luchador/tecnicos,
@@ -558,143 +558,143 @@
 /obj/random/multiple/ore_pile/item_to_spawn()
 	return pick(
 			/*prob(10);list(
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite,
-				/obj/item/weapon/ore/bauxite
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/bauxite // CHOMPEdit - Removal of obj/item/weapon
 			),*/
 			prob(10);list(
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal,
-				/obj/item/weapon/ore/coal
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/coal // CHOMPEdit - Removal of obj/item/weapon
 			),
 			/*prob(10);list(
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper,
-				/obj/item/weapon/ore/copper
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/copper // CHOMPEdit - Removal of obj/item/weapon
 			),*/
 			prob(3);list(
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond,
-				/obj/item/weapon/ore/diamond
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/diamond // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(15);list(
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass,
-				/obj/item/weapon/ore/glass
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/glass // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(5);list(
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold,
-				/obj/item/weapon/ore/gold
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/gold // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(2);list(
-				/obj/item/weapon/ore/hydrogen,
-				/obj/item/weapon/ore/hydrogen
+				/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/hydrogen // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(10);list(
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron,
-				/obj/item/weapon/ore/iron
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/iron // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(10);list(
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead,
-				/obj/item/weapon/ore/lead
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/lead // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(5);list(
-				/obj/item/weapon/ore/marble,
-				/obj/item/weapon/ore/marble,
-				/obj/item/weapon/ore/marble,
-				/obj/item/weapon/ore/marble,
-				/obj/item/weapon/ore/marble
+				/obj/item/ore/marble, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/marble, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/marble, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/marble, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/marble // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(3);list(
-				/obj/item/weapon/ore/osmium,
-				/obj/item/weapon/ore/osmium,
-				/obj/item/weapon/ore/osmium
+				/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/osmium // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(5);list(
-				/obj/item/weapon/ore/phoron,
-				/obj/item/weapon/ore/phoron,
-				/obj/item/weapon/ore/phoron,
-				/obj/item/weapon/ore/phoron,
-				/obj/item/weapon/ore/phoron
+				/obj/item/ore/phoron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/phoron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/phoron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/phoron, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/phoron // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(5);list(
-				/obj/item/weapon/ore/rutile,
-				/obj/item/weapon/ore/rutile,
-				/obj/item/weapon/ore/rutile,
-				/obj/item/weapon/ore/rutile,
-				/obj/item/weapon/ore/rutile
+				/obj/item/ore/rutile, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/rutile, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/rutile, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/rutile, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/rutile // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(5);list(
-				/obj/item/weapon/ore/silver,
-				/obj/item/weapon/ore/silver,
-				/obj/item/weapon/ore/silver,
-				/obj/item/weapon/ore/silver,
-				/obj/item/weapon/ore/silver
+				/obj/item/ore/silver, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/silver, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/silver, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/silver, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/silver // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(3);list(
-				/obj/item/weapon/ore/uranium,
-				/obj/item/weapon/ore/uranium,
-				/obj/item/weapon/ore/uranium
+				/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/uranium // CHOMPEdit - Removal of obj/item/weapon
 			),
 			prob(2);list(
-				/obj/item/weapon/ore/verdantium,
-				/obj/item/weapon/ore/verdantium
+				/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/verdantium // CHOMPEdit - Removal of obj/item/weapon
 			),/*
 			prob(2);list(
-				/obj/item/weapon/ore/void_opal,
-				/obj/item/weapon/ore/void_opal
+				/obj/item/ore/void_opal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/ore/void_opal // CHOMPEdit - Removal of obj/item/weapon
 			),*/
 		)
 
@@ -749,11 +749,11 @@
 				/obj/structure/closet/crate/freezer/centauri //CENTAURI SNACKS
 			),
 			prob(10);list(
-				/obj/item/weapon/storage/box/donkpockets,
-				/obj/item/weapon/storage/box/donkpockets,
-				/obj/item/weapon/storage/box/donkpockets,
-				/obj/item/weapon/storage/box/donkpockets,
-				/obj/item/weapon/storage/box/donkpockets,
+				/obj/item/storage/box/donkpockets, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/donkpockets, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/donkpockets, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/donkpockets, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/donkpockets, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/freezer/centauri //CENTAURI DONK-POCKETS
 			),
 			prob(10);list(
@@ -764,16 +764,16 @@
 				/obj/structure/closet/crate/einstein //EINSTEIN BATTERYPACK
 			),
 			prob(5);list(
-				/obj/item/weapon/circuitboard/smes,
+				/obj/item/circuitboard/smes, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/random/smes_coil,
 				/obj/random/smes_coil,
 				/obj/structure/closet/crate/focalpoint //FOCAL SMES
 			),
 			prob(10);list(
-				/obj/item/weapon/module/power_control,
+				/obj/item/module/power_control, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/stack/cable_coil,
 				/obj/item/frame/apc,
-				/obj/item/weapon/cell/apc,
+				/obj/item/cell/apc, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/focalpoint //FOCAL APC
 			),
 			prob(5);list(
@@ -810,10 +810,10 @@
 			prob(2);list(
 				/obj/random/energy,
 				/obj/random/energy,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/secure/heph //HEPHAESTUS ENERGY
 			),
 			prob(1);list(
@@ -860,7 +860,7 @@
 			prob(5);list(
 				/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
 				/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
-				/obj/item/weapon/tank/jetpack/breaker,
+				/obj/item/tank/jetpack/breaker, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/coyote_salvage //CSC SUIT
 			),
 			prob(10);list(
@@ -915,63 +915,63 @@
 				/obj/structure/closet/crate/freezer/zenghu //ZENGHU PILLS
 			),
 			prob(10);list(
-				/obj/item/device/toner,
-				/obj/item/device/toner,
-				/obj/item/device/toner,
-				/obj/item/weapon/clipboard,
-				/obj/item/weapon/clipboard,
-				/obj/item/weapon/pen/red,
-				/obj/item/weapon/pen/blue,
-				/obj/item/weapon/pen/blue,
-				/obj/item/device/camera_film,
-				/obj/item/weapon/folder/blue,
-				/obj/item/weapon/folder/red,
-				/obj/item/weapon/folder/yellow,
-				/obj/item/weapon/hand_labeler,
-				/obj/item/weapon/tape_roll,
-				/obj/item/weapon/paper_bin,
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/red, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/camera_film, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/folder/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/folder/red, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/folder/yellow, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/hand_labeler, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tape_roll, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/paper_bin, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/sticky_pad/random,
 				/obj/structure/closet/crate/ummarcar //UMMARCAR OFFICE TRASH
 			),
 			prob(5);list(
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/unathi //UNAJERKY
 			),
 			prob(10);list(
-				/obj/item/weapon/reagent_containers/glass/bucket,
-				/obj/item/weapon/mop,
+				/obj/item/reagent_containers/glass/bucket, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/mop, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/under/rank/janitor,
-				/obj/item/weapon/cartridge/janitor,
+				/obj/item/cartridge/janitor, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/gloves/black,
 				/obj/item/clothing/head/soft/purple,
-				/obj/item/weapon/storage/belt/janitor,
+				/obj/item/storage/belt/janitor, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/shoes/galoshes,
 				/obj/item/clothing/glasses/hud/janitor,
-				/obj/item/weapon/storage/bag/trash,
-				/obj/item/device/lightreplacer,
-				/obj/item/weapon/reagent_containers/spray/cleaner,
-				/obj/item/weapon/reagent_containers/glass/rag,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
+				/obj/item/storage/bag/trash, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/reagent_containers/spray/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/glass/rag, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/galaksi //GALAKSI JANITOR SUPPLIES
 			),
 			prob(5);list(
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/allico //GUMMIES
 			),
 			prob(5);list(
@@ -993,8 +993,8 @@
 				/obj/structure/closet/crate/desatti //DESATTI SNACKI
 			),
 			prob(2);list(
-				/obj/item/weapon/tank/phoron/pressurized,
-				/obj/item/weapon/tank/phoron/pressurized,
+				/obj/item/tank/phoron/pressurized, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tank/phoron/pressurized, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/secure/phoron //HQ FUEL TANKS
 			),
 			prob(1);list(
@@ -1093,16 +1093,16 @@
 				/obj/structure/closet/crate/einstein //EINSTEIN BATTERYPACK
 			),
 			prob(5);list(
-				/obj/item/weapon/circuitboard/smes,
+				/obj/item/circuitboard/smes, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/random/smes_coil,
 				/obj/random/smes_coil,
 				/obj/structure/closet/crate/focalpoint //FOCAL SMES
 			),
 			prob(10);list(
-				/obj/item/weapon/module/power_control,
+				/obj/item/module/power_control, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/stack/cable_coil,
 				/obj/item/frame/apc,
-				/obj/item/weapon/cell/apc,
+				/obj/item/cell/apc, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/focalpoint //FOCAL APC
 			),
 			prob(5);list(
@@ -1163,7 +1163,7 @@
 			prob(5);list(
 				/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
 				/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
-				/obj/item/weapon/tank/jetpack/breaker,
+				/obj/item/tank/jetpack/breaker, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/coyote_salvage //CSC SUIT
 			),
 			prob(10);list(
@@ -1218,63 +1218,63 @@
 				/obj/structure/closet/crate/freezer/zenghu //ZENGHU PILLS
 			),
 			prob(10);list(
-				/obj/item/device/toner,
-				/obj/item/device/toner,
-				/obj/item/device/toner,
-				/obj/item/weapon/clipboard,
-				/obj/item/weapon/clipboard,
-				/obj/item/weapon/pen/red,
-				/obj/item/weapon/pen/blue,
-				/obj/item/weapon/pen/blue,
-				/obj/item/device/camera_film,
-				/obj/item/weapon/folder/blue,
-				/obj/item/weapon/folder/red,
-				/obj/item/weapon/folder/yellow,
-				/obj/item/weapon/hand_labeler,
-				/obj/item/weapon/tape_roll,
-				/obj/item/weapon/paper_bin,
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/red, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/camera_film, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/folder/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/folder/red, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/folder/yellow, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/hand_labeler, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tape_roll, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/paper_bin, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/sticky_pad/random,
 				/obj/structure/closet/crate/ummarcar //UMMARCAR OFFICE TRASH
 			),
 			prob(5);list(
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/unathi //UNAJERKY
 			),
 			prob(10);list(
-				/obj/item/weapon/reagent_containers/glass/bucket,
-				/obj/item/weapon/mop,
+				/obj/item/reagent_containers/glass/bucket, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/mop, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/under/rank/janitor,
-				/obj/item/weapon/cartridge/janitor,
+				/obj/item/cartridge/janitor, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/gloves/black,
 				/obj/item/clothing/head/soft/purple,
-				/obj/item/weapon/storage/belt/janitor,
+				/obj/item/storage/belt/janitor, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/shoes/galoshes,
 				/obj/item/clothing/glasses/hud/janitor,
-				/obj/item/weapon/storage/bag/trash,
-				/obj/item/device/lightreplacer,
-				/obj/item/weapon/reagent_containers/spray/cleaner,
-				/obj/item/weapon/reagent_containers/glass/rag,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
+				/obj/item/storage/bag/trash, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/reagent_containers/spray/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/glass/rag, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/galaksi //GALAKSI JANITOR SUPPLIES
 			),
 			prob(5);list(
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/allico //GUMMIES
 			),
 			prob(5);list(
@@ -1296,8 +1296,8 @@
 				/obj/structure/closet/crate/desatti //DESATTI SNACKI
 			),
 			prob(2);list(
-				/obj/item/weapon/tank/phoron/pressurized,
-				/obj/item/weapon/tank/phoron/pressurized,
+				/obj/item/tank/phoron/pressurized, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tank/phoron/pressurized, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/secure/phoron //HQ FUEL TANKS
 			),
 			prob(1);list(
@@ -1357,8 +1357,8 @@
 				/obj/structure/closet/crate/large/einstein //EIN BATTERY MEGAPACK
 			),
 			prob(20);list(
-				/obj/item/weapon/circuitboard/smes,
-				/obj/item/weapon/circuitboard/smes,
+				/obj/item/circuitboard/smes, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/circuitboard/smes, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/random/smes_coil,
 				/obj/random/smes_coil,
 				/obj/random/smes_coil,
@@ -1370,16 +1370,16 @@
 			prob(2);list(
 				/obj/random/energy,
 				/obj/random/energy,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/random/energy,
 				/obj/random/energy,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
-				/obj/item/weapon/cell/device/weapon,
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/large/secure/heph //HEPH ENERGY
 			),
 			prob(2);list(
@@ -1456,8 +1456,8 @@
 				/obj/structure/closet/crate/large/einstein //EIN BATTERY MEGAPACK
 			),
 			prob(20);list(
-				/obj/item/weapon/circuitboard/smes,
-				/obj/item/weapon/circuitboard/smes,
+				/obj/item/circuitboard/smes, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/circuitboard/smes, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/random/smes_coil,
 				/obj/random/smes_coil,
 				/obj/random/smes_coil,
@@ -1598,14 +1598,14 @@
 
 /obj/random/multiple/underdark/miningdrills/item_to_spawn()
 	return pick(
-				prob(10);list(/obj/item/weapon/pickaxe/silver),
-				prob(8);list(/obj/item/weapon/pickaxe/drill),
-				prob(6);list(/obj/item/weapon/pickaxe/advdrill),
-				prob(6);list(/obj/item/weapon/pickaxe/jackhammer),
-				prob(5);list(/obj/item/weapon/pickaxe/gold),
-				prob(4);list(/obj/item/weapon/pickaxe/plasmacutter),
-				prob(2);list(/obj/item/weapon/pickaxe/diamond),
-				prob(1);list(/obj/item/weapon/pickaxe/diamonddrill)
+				prob(10);list(/obj/item/pickaxe/silver), // CHOMPEdit - Removal of obj/item/weapon
+				prob(8);list(/obj/item/pickaxe/drill), // CHOMPEdit - Removal of obj/item/weapon
+				prob(6);list(/obj/item/pickaxe/advdrill), // CHOMPEdit - Removal of obj/item/weapon
+				prob(6);list(/obj/item/pickaxe/jackhammer), // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);list(/obj/item/pickaxe/gold), // CHOMPEdit - Removal of obj/item/weapon
+				prob(4);list(/obj/item/pickaxe/plasmacutter), // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);list(/obj/item/pickaxe/diamond), // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);list(/obj/item/pickaxe/diamonddrill) // CHOMPEdit - Removal of obj/item/weapon
 				)
 
 /obj/random/multiple/underdark/ores
@@ -1617,84 +1617,84 @@
 /obj/random/multiple/underdark/ores/item_to_spawn()
 	return pick(
 				prob(9);list(
-							/obj/item/weapon/storage/bag/ore,
-							/obj/item/weapon/shovel,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen
+							/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/shovel, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen // CHOMPEdit - Removal of obj/item/weapon
 							),
 				prob(7);list(
-							/obj/item/weapon/storage/bag/ore,
-							/obj/item/weapon/pickaxe,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium
+							/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium // CHOMPEdit - Removal of obj/item/weapon
 							),
 				prob(4);list(
 							/obj/item/clothing/suit/radiation,
 							/obj/item/clothing/head/radiation,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium),
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium), // CHOMPEdit - Removal of obj/item/weapon
 				prob(2);list(
-							/obj/item/device/flashlight/lantern,
+							/obj/item/flashlight/lantern, // CHOMPEdit - Removal of obj/item/device
 							/obj/item/clothing/glasses/material,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond // CHOMPEdit - Removal of obj/item/weapon
 							),
 				prob(1);list(
-							/obj/item/weapon/mining_scanner,
-							/obj/item/weapon/shovel/spade,
-							/obj/item/weapon/ore/verdantium,
-							/obj/item/weapon/ore/verdantium,
-							/obj/item/weapon/ore/verdantium,
-							/obj/item/weapon/ore/verdantium,
-							/obj/item/weapon/ore/verdantium
+							/obj/item/mining_scanner, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/shovel/spade, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium // CHOMPEdit - Removal of obj/item/weapon
 							)
 				)
 
@@ -1715,10 +1715,10 @@
 							/obj/item/clothing/head/pirate
 							),
 				prob(4);list(
-							/obj/item/weapon/storage/bag/cash,
-							/obj/item/weapon/spacecash/c500,
-							/obj/item/weapon/spacecash/c100,
-							/obj/item/weapon/spacecash/c50
+							/obj/item/storage/bag/cash, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/spacecash/c500, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/spacecash/c100, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/spacecash/c50 // CHOMPEdit - Removal of obj/item/weapon
 							),
 				prob(3);list(
 							/obj/item/clothing/head/hardhat/orange,
@@ -1821,16 +1821,16 @@
 				/obj/structure/closet/crate/einstein //EINSTEIN BATTERYPACK
 			),
 			prob(5);list(
-				/obj/item/weapon/circuitboard/smes,
+				/obj/item/circuitboard/smes, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/random/smes_coil,
 				/obj/random/smes_coil,
 				/obj/structure/closet/crate/focalpoint //FOCAL SMES
 			),
 			prob(10);list(
-				/obj/item/weapon/module/power_control,
+				/obj/item/module/power_control, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/stack/cable_coil,
 				/obj/item/frame/apc,
-				/obj/item/weapon/cell/apc,
+				/obj/item/cell/apc, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/focalpoint //FOCAL APC
 			),
 			prob(5);list(
@@ -1869,7 +1869,7 @@
 			prob(5);list(
 				/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
 				/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
-				/obj/item/weapon/tank/jetpack/breaker,
+				/obj/item/tank/jetpack/breaker, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/coyote_salvage //CSC SUIT
 			),
 			prob(10);list(
@@ -1916,63 +1916,63 @@
 				/obj/structure/closet/crate/freezer/zenghu //ZENGHU PILLS
 			),
 			prob(10);list(
-				/obj/item/device/toner,
-				/obj/item/device/toner,
-				/obj/item/device/toner,
-				/obj/item/weapon/clipboard,
-				/obj/item/weapon/clipboard,
-				/obj/item/weapon/pen/red,
-				/obj/item/weapon/pen/blue,
-				/obj/item/weapon/pen/blue,
-				/obj/item/device/camera_film,
-				/obj/item/weapon/folder/blue,
-				/obj/item/weapon/folder/red,
-				/obj/item/weapon/folder/yellow,
-				/obj/item/weapon/hand_labeler,
-				/obj/item/weapon/tape_roll,
-				/obj/item/weapon/paper_bin,
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/red, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/camera_film, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/folder/blue, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/folder/red, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/folder/yellow, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/hand_labeler, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tape_roll, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/paper_bin, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/sticky_pad/random,
 				/obj/structure/closet/crate/ummarcar //UMMARCAR OFFICE TRASH
 			),
 			prob(5);list(
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
-				/obj/item/weapon/reagent_containers/food/snacks/unajerky,
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/unathi //UNAJERKY
 			),
 			prob(10);list(
-				/obj/item/weapon/reagent_containers/glass/bucket,
-				/obj/item/weapon/mop,
+				/obj/item/reagent_containers/glass/bucket, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/mop, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/under/rank/janitor,
-				/obj/item/weapon/cartridge/janitor,
+				/obj/item/cartridge/janitor, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/gloves/black,
 				/obj/item/clothing/head/soft/purple,
-				/obj/item/weapon/storage/belt/janitor,
+				/obj/item/storage/belt/janitor, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/shoes/galoshes,
 				/obj/item/clothing/glasses/hud/janitor,
-				/obj/item/weapon/storage/bag/trash,
-				/obj/item/device/lightreplacer,
-				/obj/item/weapon/reagent_containers/spray/cleaner,
-				/obj/item/weapon/reagent_containers/glass/rag,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
-				/obj/item/weapon/grenade/chem_grenade/cleaner,
+				/obj/item/storage/bag/trash, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/reagent_containers/spray/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/glass/rag, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/galaksi //GALAKSI JANITOR SUPPLIES
 			),
 			prob(5);list(
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-				/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food/snacks/candy/gummy, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/allico //GUMMIES
 			),
 			prob(5);list(
@@ -1994,8 +1994,8 @@
 				/obj/structure/closet/crate/desatti //DESATTI SNACKI
 			),
 			prob(2);list(
-				/obj/item/weapon/tank/phoron/pressurized,
-				/obj/item/weapon/tank/phoron/pressurized,
+				/obj/item/tank/phoron/pressurized, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tank/phoron/pressurized, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/structure/closet/crate/secure/phoron //HQ FUEL TANKS
 			),
 		)

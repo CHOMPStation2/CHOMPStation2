@@ -24,93 +24,93 @@
 
 /obj/machinery/chemical_dispenser/deluxe/full
 	spawn_cartridges = list(
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/water,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/ice,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/coffee,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/cream,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tea,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/icetea,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/cola,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/smw,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/dr_gibb,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/spaceup,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tonic,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodawater,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lemon_lime,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/orange,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lime,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/watermelon,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lemon,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/coffee,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/cafe_latte,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/soy_latte,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/hot_coco,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/milk,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/cream,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tea,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/ice,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/mint,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/orange,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lemon,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lime,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/berry,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lemon_lime,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/orange,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lime,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodawater,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tonic,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/beer,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/kahlua,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/whiskey,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/redwine,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/vodka,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/gin,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/rum,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tequila,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/vermouth,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/cognac,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/ale,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/mead,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/champagne,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/grapesoda,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/singulo,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/doctorsdelight,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/nothing,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/banana,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/honey,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/egg,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/coco,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/cherryjelly,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/carrotjuice,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/applejuice,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tomatojuice,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/soymilk,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/peanutbutter,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/matcha_latte,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/grenadine,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/gingerale,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/roy_rogers,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/patron,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/goldschlager,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/melonliquor,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/bluecuracao,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/thirteenloko,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/deadrum,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sake,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/acidspit,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/amasec,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/beepskysmash,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/atomicbomb,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/nuka_cola,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/threemileisland,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/manhattan_proj,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/psilocybin,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/moonshine,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/specialwhiskey,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/unathiliquor,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/winebrandy,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/snaps
+			/obj/item/reagent_containers/chem_disp_cartridge/water, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/ice, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/coffee, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/cream, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/tea, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/icetea, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/cola, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/smw, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/dr_gibb, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/spaceup, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/tonic, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/sodawater, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/lemon_lime, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/sugar, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/orange, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/lime, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/watermelon, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/lemon, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/coffee, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/cafe_latte, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/soy_latte, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/hot_coco, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/milk, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/cream, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/tea, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/ice, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/mint, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/orange, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/lemon, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/lime, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/berry, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/lemon_lime, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/sugar, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/orange, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/lime, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/sodawater, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/tonic, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/beer, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/kahlua, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/whiskey, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/redwine, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/vodka, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/gin, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/rum, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/tequila, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/vermouth, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/cognac, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/ale, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/mead, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/champagne, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/grapesoda, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/singulo, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/doctorsdelight, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/nothing, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/banana, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/honey, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/egg, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/coco, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/cherryjelly, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/carrotjuice, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/applejuice, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/tomatojuice, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/soymilk, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/peanutbutter, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/matcha_latte, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/gelatin, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/grenadine, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/gingerale, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/roy_rogers, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/patron, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/goldschlager, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/melonliquor, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/bluecuracao, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/thirteenloko, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/deadrum, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/sake, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/acidspit, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/amasec, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/beepskysmash, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/atomicbomb, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/nuka_cola, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/threemileisland, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/manhattan_proj, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/psilocybin, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/moonshine, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/specialwhiskey, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/unathiliquor, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/winebrandy, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/chem_disp_cartridge/snaps // CHOMPEdit - Removal of obj/item/weapon
 			)

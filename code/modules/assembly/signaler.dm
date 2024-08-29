@@ -1,4 +1,4 @@
-/obj/item/device/assembly/signaler
+/obj/item/assembly/signaler // CHOMPEdit - Removal of obj/item/device
 	name = "remote signaling device"
 	desc = "Used to remotely activate devices.  Tap against another secured signaler to transfer configuration."
 	icon_state = "signaller"
@@ -17,27 +17,27 @@
 	var/datum/radio_frequency/radio_connection
 	var/deadman = FALSE //CHOMPAdd
 
-/obj/item/device/assembly/signaler/Initialize()
+/obj/item/assembly/signaler/Initialize() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	set_frequency(frequency)
 
-/obj/item/device/assembly/signaler/activate()
+/obj/item/assembly/signaler/activate() // CHOMPEdit - Removal of obj/item/device
 	if(!process_cooldown())
 		return FALSE
 	signal()
 	return TRUE
 
-/obj/item/device/assembly/signaler/update_icon()
+/obj/item/assembly/signaler/update_icon() // CHOMPEdit - Removal of obj/item/device
 	if(holder)
 		holder.update_icon()
 
-/obj/item/device/assembly/signaler/tgui_interact(mob/user, datum/tgui/ui)
+/obj/item/assembly/signaler/tgui_interact(mob/user, datum/tgui/ui) // CHOMPEdit - Removal of obj/item/device
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "Signaler", name)
 		ui.open()
 
-/obj/item/device/assembly/signaler/tgui_data(mob/user)
+/obj/item/assembly/signaler/tgui_data(mob/user) // CHOMPEdit - Removal of obj/item/device
 	var/list/data = list()
 	data["frequency"] = frequency
 	data["code"] = code
@@ -45,7 +45,7 @@
 	data["maxFrequency"] = RADIO_HIGH_FREQ
 	return data
 
-/obj/item/device/assembly/signaler/tgui_act(action, params)
+/obj/item/assembly/signaler/tgui_act(action, params) // CHOMPEdit - Removal of obj/item/device
 	if(..())
 		return TRUE
 
@@ -71,9 +71,9 @@
 
 	update_icon()
 
-/obj/item/device/assembly/signaler/attackby(var/obj/item/weapon/W, mob/user, params)
+/obj/item/assembly/signaler/attackby(var/obj/item/W, mob/user, params) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 	if(issignaler(W))
-		var/obj/item/device/assembly/signaler/signaler2 = W
+		var/obj/item/assembly/signaler/signaler2 = W // CHOMPEdit - Removal of obj/item/device
 		if(secured && signaler2.secured)
 			code = signaler2.code
 			set_frequency(signaler2.frequency)
@@ -81,7 +81,7 @@
 	else
 		..()
 
-/obj/item/device/assembly/signaler/proc/signal()
+/obj/item/assembly/signaler/proc/signal() // CHOMPEdit - Removal of obj/item/device
 	if(!radio_connection)
 		return
 	if(is_jammed(src))
@@ -93,7 +93,7 @@
 	signal.data["message"] = "ACTIVATE"
 	radio_connection.post_signal(src, signal)
 
-/obj/item/device/assembly/signaler/pulse(var/radio = 0)
+/obj/item/assembly/signaler/pulse(var/radio = 0) // CHOMPEdit - Removal of obj/item/device
 	if(is_jammed(src))
 		return FALSE
 	if(connected && wires)
@@ -104,7 +104,7 @@
 		..(radio)
 	return TRUE
 
-/obj/item/device/assembly/signaler/receive_signal(datum/signal/signal)
+/obj/item/assembly/signaler/receive_signal(datum/signal/signal) // CHOMPEdit - Removal of obj/item/device
 	if(!signal)
 		return FALSE
 	if(signal.encryption != code)
@@ -119,7 +119,7 @@
 		for(var/mob/O in hearers(1, src.loc))
 			O.show_message("[icon2html(src, O.client)] *beep* *beep*", 3, "*beep* *beep*", 2)
 
-/obj/item/device/assembly/signaler/proc/set_frequency(new_frequency)
+/obj/item/assembly/signaler/proc/set_frequency(new_frequency) // CHOMPEdit - Removal of obj/item/device
 	if(!frequency)
 		return
 	if(!radio_controller)
@@ -131,7 +131,7 @@
 	frequency = new_frequency
 	radio_connection = radio_controller.add_object(src, frequency, RADIO_CHAT)
 //CHOMPedit BEGIN re-adds stealth removal
-/obj/item/device/assembly/signaler/process()
+/obj/item/assembly/signaler/process() // CHOMPEdit - Removal of obj/item/device
 	if(!deadman)
 		STOP_PROCESSING(SSobj, src)
 	var/mob/M = src.loc
@@ -143,7 +143,7 @@
 	else if(prob(5))
 		M.visible_message("[M]'s finger twitches a bit over [src]'s signal button!")
 
-/obj/item/device/assembly/signaler/verb/deadman_it()
+/obj/item/assembly/signaler/verb/deadman_it() // CHOMPEdit - Removal of obj/item/device
 	set src in usr
 	set name = "Threaten to push the button!"
 	set desc = "BOOOOM!"
@@ -153,7 +153,7 @@
 	usr.visible_message("<font color='red'>[usr] moves their finger over [src]'s signal button...</font>")
 //CHOMPedit end
 
-/obj/item/device/assembly/signaler/Destroy()
+/obj/item/assembly/signaler/Destroy() // CHOMPEdit - Removal of obj/item/device
 	if(radio_controller)
 		radio_controller.remove_object(src,frequency)
 	frequency = 0

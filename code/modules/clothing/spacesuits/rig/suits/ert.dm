@@ -2,7 +2,7 @@
 	light_overlay = "helmet_light_dual"
 	camera_networks = list(NETWORK_ERT)
 
-/obj/item/weapon/rig/ert
+/obj/item/rig/ert // CHOMPEdit - Removal of obj/item/weapon
 	name = "ERT-C hardsuit control module"
 	desc = "A suit worn by the commander of an Emergency Response Team. Has blue highlights. Armoured and space ready."
 	suit_type = "ERT commander"
@@ -15,22 +15,22 @@
 
 	armor = list(melee = 60, bullet = 50, laser = 30,energy = 15, bomb = 30, bio = 100, rad = 100)
 	allowed = list(
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank,
-		/obj/item/device/t_scanner,
-		/obj/item/weapon/rcd,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/device/multitool,
-		/obj/item/device/radio,
-		/obj/item/device/analyzer,
-		/obj/item/weapon/storage,
-		/obj/item/weapon/melee/baton,
-		/obj/item/weapon/gun,
-		/obj/item/weapon/reagent_containers/hypospray,
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/t_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/rcd, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/analyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/hypospray, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/roller
 		)
 
@@ -40,7 +40,7 @@
 		/obj/item/rig_module/datajack,
 		)
 
-/obj/item/weapon/rig/ert/engineer
+/obj/item/rig/ert/engineer // CHOMPEdit - Removal of obj/item/weapon
 	name = "ERT-E suit control module"
 	desc = "A suit worn by the engineering division of an Emergency Response Team. Has orange highlights. Armoured and space ready."
 	suit_type = "ERT engineer"
@@ -55,7 +55,7 @@
 		/obj/item/rig_module/device/rcd
 		)
 
-/obj/item/weapon/rig/ert/medical
+/obj/item/rig/ert/medical // CHOMPEdit - Removal of obj/item/weapon
 	name = "ERT-M suit control module"
 	desc = "A suit worn by the medical division of an Emergency Response Team. Has white highlights. Armoured and space ready."
 	suit_type = "ERT medic"
@@ -68,7 +68,7 @@
 		/obj/item/rig_module/chem_dispenser/injector/advanced
 		)
 
-/obj/item/weapon/rig/ert/security
+/obj/item/rig/ert/security // CHOMPEdit - Removal of obj/item/weapon
 	name = "ERT-S suit control module"
 	desc = "A suit worn by the security division of an Emergency Response Team. Has red highlights. Armoured and space ready."
 	suit_type = "ERT security"
@@ -81,7 +81,7 @@
 		/obj/item/rig_module/mounted/egun,
 		)
 
-/obj/item/weapon/rig/ert/assetprotection
+/obj/item/rig/ert/assetprotection // CHOMPEdit - Removal of obj/item/weapon
 	name = "Heavy Asset Protection suit control module"
 	desc = "A heavy suit worn by the highest level of Asset Protection, don't mess with the person wearing this. Armoured and space ready."
 	suit_type = "heavy asset protection"
@@ -107,7 +107,7 @@
 		/obj/item/rig_module/datajack
 		)
 		
-/obj/item/weapon/rig/ert/assetprotection/antiareli
+/obj/item/rig/ert/assetprotection/antiareli // CHOMPEdit - Removal of obj/item/weapon
 	name = "Heavy Asset Protection Special Agent control module"
 	desc = "A heavy suit worn by the highest level of the highest level of Asset Protection, don't mess with the person wearing this. Armoured and space ready and protected against almost fucking everything"
 	armor = list(melee = 80, bullet = 80, laser = 80,energy = 80, bomb = 100, bio = 100, rad = 100)

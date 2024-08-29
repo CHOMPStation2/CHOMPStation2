@@ -1,4 +1,4 @@
-/obj/item/weapon/rcd
+/obj/item/rcd // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/tools_vr.dmi'
 	icon_state = "rcd"
 	item_state = "rcd"
@@ -15,7 +15,7 @@
 	var/static/image/radial_image_floorwall = image(icon = 'icons/mob/radial.dmi', icon_state = "wallfloor")
 
 // Ammo for the (non-electric) RCDs.
-/obj/item/weapon/rcd_ammo
+/obj/item/rcd_ammo // CHOMPEdit - Removal of obj/item/weapon
 	name = "compressed matter cartridge"
 	desc = "Highly compressed matter for the RCD."
 	icon = 'icons/obj/tools_vr.dmi'
@@ -26,15 +26,15 @@
 		slot_r_hand_str = 'icons/mob/items/righthand_vr.dmi',
 	)
 
-/obj/item/weapon/rcd/Initialize()
+/obj/item/rcd/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	update_icon()
 
-/obj/item/weapon/rcd/consume_resources(amount)
+/obj/item/rcd/consume_resources(amount) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	update_icon()
 
-/obj/item/weapon/rcd/update_icon()
+/obj/item/rcd/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	var/nearest_ten = round((stored_matter/max_stored_matter)*10, 1)
 
 	//Just to prevent updates every use
@@ -52,22 +52,22 @@
 
 	add_overlay("[initial(icon_state)]_charge[nearest_ten]")
 
-/obj/item/weapon/rcd/proc/perform_effect(var/atom/A, var/time_taken)
+/obj/item/rcd/proc/perform_effect(var/atom/A, var/time_taken) // CHOMPEdit - Removal of obj/item/weapon
 	effects[A] = new /obj/effect/constructing_effect(get_turf(A), time_taken, modes[mode_index])
 
-/obj/item/weapon/rcd/use_rcd(atom/A, mob/living/user)
+/obj/item/rcd/use_rcd(atom/A, mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	cleanup_effect(A)
 
-/obj/item/weapon/rcd/proc/cleanup_effect(var/atom/A)
+/obj/item/rcd/proc/cleanup_effect(var/atom/A) // CHOMPEdit - Removal of obj/item/weapon
 	if(A in effects)
 		qdel(effects[A])
 		effects -= A
 
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
-/obj/item/weapon/rcd/attackby(obj/item/weapon/W, mob/user)
-	if(istype(W, /obj/item/weapon/rcd_ammo))
-		var/obj/item/weapon/rcd_ammo/cartridge = W
+/obj/item/rcd/attackby(obj/item/W, mob/user) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W, /obj/item/rcd_ammo)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/rcd_ammo/cartridge = W // CHOMPEdit - Removal of obj/item/weapon
 		var/can_store = min(max_stored_matter - stored_matter, cartridge.remaining)
 		if(can_store <= 0)
 			to_chat(user, span("warning", "There's either no space or \the [cartridge] is empty!"))
@@ -85,7 +85,7 @@
 	return ..()
 */
 
-/obj/item/weapon/rcd/proc/check_menu(mob/living/user)
+/obj/item/rcd/proc/check_menu(mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!istype(user))
 		return FALSE
 	if(user.incapacitated() || !user.Adjacent(src))
@@ -93,7 +93,7 @@
 	return TRUE
 
 // Mounted one is more complex
-/obj/item/weapon/rcd/electric/mounted/rig/check_menu(mob/living/user)
+/obj/item/rcd/electric/mounted/rig/check_menu(mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!istype(user))
 		world.log << "One"
 		return FALSE
@@ -109,7 +109,7 @@
 	return TRUE
 
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
-/obj/item/weapon/rcd/attack_self(mob/living/user)
+/obj/item/rcd/attack_self(mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	var/list/choices = list(
 		"Airlock" = radial_image_airlock,
@@ -176,22 +176,22 @@
 */
 
 //////////////////
-/obj/item/weapon/rcd/electric/update_icon()
+/obj/item/rcd/electric/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	return
 
-/obj/item/weapon/rcd/shipwright
+/obj/item/rcd/shipwright // CHOMPEdit - Removal of obj/item/weapon
 	icon_state = "swrcd"
 	item_state = "ircd"
 	can_remove_rwalls = TRUE
 	make_rwalls = TRUE
 
 //////////////////
-/obj/item/weapon/rcd_ammo/examine(mob/user)
+/obj/item/rcd_ammo/examine(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	. += display_resources()
 
 // Used to show how much stuff (matter units, cell charge, etc) is left inside.
-/obj/item/weapon/rcd_ammo/proc/display_resources()
+/obj/item/rcd_ammo/proc/display_resources() // CHOMPEdit - Removal of obj/item/weapon
 	return "It currently holds [remaining]/[initial(remaining)] matter-units."
 
 //////////////////

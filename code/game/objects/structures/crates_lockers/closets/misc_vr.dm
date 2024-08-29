@@ -20,7 +20,7 @@
 	req_one_access = list(access_armory,access_captain)
 
 	starts_with = list(
-		/obj/item/weapon/gun/energy/gun = 4)
+		/obj/item/gun/energy/gun = 4) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/structure/closet/secure_closet/guncabinet/rifle
 	name = "rifle cabinet"
@@ -28,13 +28,13 @@
 
 	starts_with = list(
 		/obj/item/ammo_magazine/clip/c762/hunter = 9,
-		/obj/item/weapon/gun/projectile/shotgun/pump/rifle = 2)
+		/obj/item/gun/projectile/shotgun/pump/rifle = 2) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/structure/closet/secure_closet/guncabinet/rifle/Initialize()
 	if(prob(85))
-		starts_with += /obj/item/weapon/gun/projectile/shotgun/pump/rifle
+		starts_with += /obj/item/gun/projectile/shotgun/pump/rifle // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever
+		starts_with += /obj/item/gun/projectile/shotgun/pump/rifle/lever // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /obj/structure/closet/secure_closet/guncabinet/phase
@@ -42,9 +42,9 @@
 	req_one_access = list(access_explorer,access_brig) //CHOMP explo keep
 
 	starts_with = list(
-		/obj/item/weapon/gun/energy/locked/phasegun = 2,
-		/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-		/obj/item/weapon/cell/device/weapon = 2,
+		/obj/item/gun/energy/locked/phasegun = 2, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/locked/phasegun/pistol, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device/weapon = 2, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/permit/gun/planetside)
 
 /*
@@ -59,33 +59,33 @@
 		/obj/item/clothing/under/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer,
 		/obj/item/clothing/mask/gas/explorer,
-		/obj/item/weapon/storage/belt/explorer,
+		/obj/item/storage/belt/explorer, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
-		/obj/item/device/radio/headset/explorer,
-		/obj/item/device/radio/headset/explorer/alt,
-		/obj/item/weapon/cartridge/explorer,
-		/obj/item/device/flashlight,
-		/obj/item/device/gps/explorer,
-		/obj/item/weapon/storage/box/flare,
-		/obj/item/device/geiger,
-		/obj/item/weapon/cell/device,
-		/obj/item/device/radio,
+		/obj/item/radio/headset/explorer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/explorer/alt, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cartridge/explorer, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/gps/explorer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage/box/flare, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/geiger, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/stack/marker_beacon/thirty,
-		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/material/knife/machete,
+		/obj/item/material/knife/tacknife/survival, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/knife/machete, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/holster/machete,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-		/obj/item/device/cataloguer)
+		/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/liquidprotein, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cataloguer) // CHOMPEdit - Removal of obj/item/device
 
 /obj/structure/closet/secure_closet/explorer/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/explorer
+		starts_with += /obj/item/storage/backpack/explorer // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/explorer
+		starts_with += /obj/item/storage/backpack/satchel/explorer // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/explorer
+		starts_with += /obj/item/storage/backpack/dufflebag/explorer // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /*
@@ -102,36 +102,36 @@
 		/obj/item/clothing/suit/armor/pcarrier/explorer/light, //CHOMPADD
 		/obj/item/clothing/head/helmet/explorer, //CHOMPADD
 		/obj/item/clothing/mask/gas/explorer,
-		/obj/item/weapon/storage/belt/explorer/pathfinder,
+		/obj/item/storage/belt/explorer/pathfinder, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
-		/obj/item/device/radio/headset/pathfinder,
-		/obj/item/device/radio/headset/pathfinder/alt,
-		/obj/item/weapon/cartridge/explorer,
-		/obj/item/device/flashlight,
-		/obj/item/device/gps/explorer,
-		/obj/item/weapon/storage/box/flare,
-		/obj/item/weapon/storage/box/explorerkeys,
-		/obj/item/device/geiger,
-		/obj/item/weapon/cell/device,
-		/obj/item/device/radio,
+		/obj/item/radio/headset/pathfinder, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/pathfinder/alt, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cartridge/explorer, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/gps/explorer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage/box/flare, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/explorerkeys, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/geiger, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/stack/marker_beacon/thirty,
-		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/material/knife/machete/deluxe,
+		/obj/item/material/knife/tacknife/survival, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/knife/machete/deluxe, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/holster/machete,
 		/obj/random/explorer_shield,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-		/obj/item/device/cataloguer/compact/pathfinder,
-		/obj/item/device/mapping_unit)
+		/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/liquidprotein, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cataloguer/compact/pathfinder, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/mapping_unit) // CHOMPEdit - Removal of obj/item/device
 
 /obj/structure/closet/secure_closet/pathfinder/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/explorer //CHOMPEDIT
+		starts_with += /obj/item/storage/backpack/explorer //CHOMPEDIT // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/explorer //CHOMPEDIT START
+		starts_with += /obj/item/storage/backpack/satchel/explorer //CHOMPEDIT START // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/explorer //CHOMPEDIT STOP
+		starts_with += /obj/item/storage/backpack/dufflebag/explorer //CHOMPEDIT STOP // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /*
@@ -144,46 +144,46 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/sar
 
 	starts_with = list(
-		/obj/item/weapon/storage/backpack/dufflebag/emt,
-		/obj/item/weapon/storage/box/autoinjectors,
-		/obj/item/weapon/storage/box/syringes,
-		/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline,
-		/obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
-		/obj/item/weapon/storage/belt/medical/emt,
-		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/gun/energy/locked/frontier/holdout,
+		/obj/item/storage/backpack/dufflebag/emt, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/autoinjectors, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/syringes, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/bottle/inaprovaline, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/bottle/antitoxin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/belt/medical/emt, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/knife/tacknife/survival, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/locked/frontier/holdout, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/mask/gas/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer/medic,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar,
 		/obj/item/clothing/shoes/boots/winter/explorer,
-		/obj/item/device/radio/headset/sar,
-		/obj/item/device/radio/headset/sar/alt,
-		/obj/item/weapon/cartridge/sar,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank/emergency/oxygen/engi,
+		/obj/item/radio/headset/sar, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/sar/alt, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cartridge/sar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank/emergency/oxygen/engi, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/glasses/hud/health,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/radio/off,
+		/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/off, // CHOMPEdit - Removal of obj/item/device
 		/obj/random/medical,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 2,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 2,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/storage/box/freezer,
+		/obj/item/reagent_containers/food/snacks/liquidfood = 2, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/liquidprotein = 2, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher/mini, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/freezer, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/storage/white_vest,
 		/obj/item/taperoll/medical,
-		/obj/item/device/gps/medical,
-		/obj/item/device/geiger,
+		/obj/item/gps/medical, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/geiger, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/bodybag/cryobag,
-		/obj/item/device/cataloguer/compact)
+		/obj/item/cataloguer/compact) // CHOMPEdit - Removal of obj/item/device
 
 /obj/structure/closet/secure_closet/sar/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/medic
+		starts_with += /obj/item/storage/backpack/medic // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/med
+		starts_with += /obj/item/storage/backpack/satchel/med // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/med
+		starts_with += /obj/item/storage/backpack/dufflebag/med // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /*
@@ -195,9 +195,9 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pilot
 
 	starts_with = list(
-		/obj/item/weapon/storage/backpack/parachute,
-		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/gun/energy/locked/frontier/holdout, //CHOMP explo keep
+		/obj/item/storage/backpack/parachute, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/knife/tacknife/survival, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/locked/frontier/holdout, //CHOMP explo keep // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/pilot_vr,
 		/obj/item/clothing/under/rank/pilot1/no_webbing,
 		/obj/item/clothing/suit/storage/toggle/bomber/pilot,
@@ -205,29 +205,29 @@
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/gloves/fingerless,
-		/obj/item/device/radio/headset/pilot,
-		/obj/item/device/radio/headset/pilot/alt,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-		/obj/item/weapon/storage/box/flare,
-		/obj/item/weapon/cell/device,
-		/obj/item/device/radio,
-		/obj/item/device/gps/explorer,
-		/obj/item/device/cataloguer/compact, //CHOMP edit
-	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
+		/obj/item/radio/headset/pilot, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/pilot/alt, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/liquidprotein, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/flare, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/gps/explorer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cataloguer/compact, //CHOMP edit // CHOMPEdit - Removal of obj/item/device
+	//	/obj/item/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/gloves/watch/survival,
 		/obj/item/clothing/accessory/storage/webbing/pilot1,
 		/obj/item/clothing/accessory/storage/webbing/pilot2,
-		/obj/item/device/emergency_beacon
+		/obj/item/emergency_beacon // CHOMPEdit - Removal of obj/item/device
 		)
 
 /obj/structure/closet/secure_closet/pilot/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack
+		starts_with += /obj/item/storage/backpack // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
+		starts_with += /obj/item/storage/backpack/satchel/norm // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /*
@@ -262,8 +262,8 @@
 
 	starts_with = list(
 		/obj/item/clothing/suit/space/void/autolok,
-		/obj/item/weapon/tank/emergency/oxygen/engi,
-		/obj/item/device/suit_cooling_unit/emergency
+		/obj/item/tank/emergency/oxygen/engi, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/suit_cooling_unit/emergency // CHOMPEdit - Removal of obj/item/device
 	)
 
 /*
@@ -284,6 +284,6 @@
 	starts_with = list(
 		/obj/item/clothing/head/helmet/space/emergency,
 		/obj/item/clothing/suit/space/emergency,
-		/obj/item/weapon/tank/emergency/oxygen/engi,
-		/obj/item/device/suit_cooling_unit/emergency
+		/obj/item/tank/emergency/oxygen/engi, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/suit_cooling_unit/emergency // CHOMPEdit - Removal of obj/item/device
 	)

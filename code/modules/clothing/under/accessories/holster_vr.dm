@@ -1,7 +1,7 @@
 /obj/item/clothing/accessory/holster/waist/kinetic_accelerator
 	name = "KA holster"
 	desc = "A specialized holster, made specifically for Kinetic Accelerators."
-	can_hold = list(/obj/item/weapon/gun/energy/kinetic_accelerator)
+	can_hold = list(/obj/item/gun/energy/kinetic_accelerator) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/item/clothing/accessory/holster/waist/lanyard
 	name = "baton lanyard"
@@ -9,9 +9,9 @@
 	icon_state = "holster_lanyard"
 	overlay_state = "holster_lanyard"
 	can_hold = list(
-		/obj/item/weapon/melee/baton,
-		/obj/item/weapon/melee/classic_baton,
-		/obj/item/weapon/melee/telebaton		
+		/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/classic_baton, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/telebaton // CHOMPEdit - Removal of obj/item/weapon
 		)
 
 /obj/item/clothing/accessory/holster/machete/rapier
@@ -23,18 +23,18 @@
 	var/has_full_icon = 1
 	icon_override = 'icons/inventory/accessory/mob_vr.dmi'
 	overlay_state = "sheath"
-	can_hold = list(/obj/item/weapon/melee/rapier)
+	can_hold = list(/obj/item/melee/rapier) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/item/clothing/accessory/holster/machete/rapier/swords
 	name = "sword sheath"
 	desc = "A beautiful red sheath, probably for a beautiful blade."
 	can_hold = list(
-		/obj/item/weapon/melee/rapier,
-		/obj/item/weapon/material/sword/katana,
+		/obj/item/melee/rapier, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/sword/katana, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/toy/cultsword,
-		/obj/item/weapon/material/sword,
-		/obj/item/weapon/melee/cursedblade,
-		/obj/item/weapon/melee/cultblade
+		/obj/item/material/sword, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/cursedblade, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/cultblade // CHOMPEdit - Removal of obj/item/weapon
 		)
 
 /obj/item/clothing/accessory/holster/machete/rapier/proc/occupied()

@@ -115,7 +115,7 @@
 	if(!istype(user))
 		return 0
 
-	var/obj/item/weapon/card/id/I = user.GetIdCard()
+	var/obj/item/card/id/I = user.GetIdCard() // CHOMPEdit - Removal of obj/item/weapon
 	if(!I)
 		if(loud)
 			to_chat(user, "<span class='notice'>\The [computer] flashes an \"RFID Error - Unable to scan ID\" warning.</span>")

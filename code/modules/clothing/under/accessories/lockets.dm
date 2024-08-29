@@ -35,7 +35,7 @@
 		to_chat(user, "You have to open it first.")
 		return
 
-	if(istype(O,/obj/item/weapon/paper) || istype(O, /obj/item/weapon/photo))
+	if(istype(O,/obj/item/paper) || istype(O, /obj/item/photo)) // CHOMPEdit - Removal of obj/item/weapon
 		if(held)
 			to_chat(usr, "\The [src] already has something inside it.")
 		else

@@ -150,7 +150,7 @@
 	var/vision_flags = SEE_SELF							// Same flags as glasses.
 
 	// Death vars.
-	var/meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/human
+	var/meat_type = /obj/item/reagent_containers/food/snacks/meat/human // CHOMPEdit - Removal of obj/item/weapon
 	var/remains_type = /obj/effect/decal/remains/xeno
 	var/gibbed_anim = "gibbed-h"
 	var/dusted_anim = "dust-h"
@@ -365,26 +365,26 @@
 	return sanitizeName(name, MAX_NAME_LEN, robot)
 
 /datum/species/proc/equip_survival_gear(var/mob/living/carbon/human/H,var/extendedtank = 0,var/comprehensive = 0)
-	var/boxtype = /obj/item/weapon/storage/box/survival //Default survival box
+	var/boxtype = /obj/item/storage/box/survival //Default survival box // CHOMPEdit - Removal of obj/item/weapon
 
 	var/synth = H.isSynthetic()
 
 	//Empty box for synths
 	if(synth)
-		boxtype = /obj/item/weapon/storage/box/survival/synth
+		boxtype = /obj/item/storage/box/survival/synth // CHOMPEdit - Removal of obj/item/weapon
 
 	//Special box with extra equipment
 	else if(comprehensive)
-		boxtype = /obj/item/weapon/storage/box/survival/comp
+		boxtype = /obj/item/storage/box/survival/comp // CHOMPEdit - Removal of obj/item/weapon
 
 	//Create the box
-	var/obj/item/weapon/storage/box/box = new boxtype(H)
+	var/obj/item/storage/box/box = new boxtype(H) // CHOMPEdit - Removal of obj/item/weapon
 
 	//If not synth, they get an air tank (if they breathe)
 	if(!synth && breath_type)
 		//Create a tank (if such a thing exists for this species)
-		var/tanktext = "/obj/item/weapon/tank/emergency/" + "[breath_type]"
-		var/obj/item/weapon/tank/emergency/tankpath //Will force someone to come look here if they ever alter this path.
+		var/tanktext = "/obj/item/tank/emergency/" + "[breath_type]" // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/tank/emergency/tankpath //Will force someone to come look here if they ever alter this path. // CHOMPEdit - Removal of obj/item/weapon
 		if(extendedtank)
 			tankpath = text2path(tanktext + "/engi")
 			if(!tankpath) //Is it just that there's no /engi?
@@ -398,7 +398,7 @@
 
 	//If they are synth, they get a smol battery
 	else if(synth)
-		new /obj/item/device/fbp_backup_cell(box)
+		new /obj/item/fbp_backup_cell(box) // CHOMPEdit - Removal of obj/item/device
 
 	box.calibrate_size()
 

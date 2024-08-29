@@ -63,7 +63,7 @@
 			to_chat(user, "<span class='notice'>The broken glass falls out.</span>")
 			icon_state = "mirror_frame"
 			glass = !glass
-			new /obj/item/weapon/material/shard( src.loc )
+			new /obj/item/material/shard( src.loc ) // CHOMPEdit - Removal of obj/item/weapon
 			return
 		if(!shattered && glass)
 			playsound(src, I.usesound, 50, 1)

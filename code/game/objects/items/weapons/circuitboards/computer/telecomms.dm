@@ -2,17 +2,17 @@
 #error T_BOARD macro is not defined but we need it! 
 #endif
 
-/obj/item/weapon/circuitboard/comm_monitor
+/obj/item/circuitboard/comm_monitor // CHOMPEdit - Removal of obj/item/weapon
 	name = T_BOARD("telecommunications monitor console")
 	build_path = /obj/machinery/computer/telecomms/monitor
 	origin_tech = list(TECH_DATA = 3)
 
-/obj/item/weapon/circuitboard/comm_server
+/obj/item/circuitboard/comm_server // CHOMPEdit - Removal of obj/item/weapon
 	name = T_BOARD("telecommunications server monitor console")
 	build_path = /obj/machinery/computer/telecomms/server
 	origin_tech = list(TECH_DATA = 3)
 
-/obj/item/weapon/circuitboard/comm_traffic
+/obj/item/circuitboard/comm_traffic // CHOMPEdit - Removal of obj/item/weapon
 	name = T_BOARD("telecommunications traffic control console")
 	build_path = /obj/machinery/computer/telecomms/traffic
 	origin_tech = list(TECH_DATA = 3)

@@ -46,38 +46,38 @@
 							'sound/voice/hiss5.ogg')
 	has_hands = TRUE
 
-	can_enter_vent_with = list(	/obj/item/weapon/implant,
-								/obj/item/device/radio/borg,
-								/obj/item/weapon/holder,
+	can_enter_vent_with = list(	/obj/item/implant, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/radio/borg, // CHOMPEdit - Removal of obj/item/device
+								/obj/item/holder, // CHOMPEdit - Removal of obj/item/weapon
 								/obj/machinery/camera,
 								/obj/belly,
 								/obj/soulgem, // CHOMPAdd
 								/obj/screen,
 								/atom/movable/emissive_blocker,
-								/obj/item/weapon/material,
-								/obj/item/weapon/melee,
+								/obj/item/material, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/melee, // CHOMPEdit - Removal of obj/item/weapon
 								/obj/item/stack/,
-								/obj/item/weapon/tool,
-								/obj/item/weapon/reagent_containers/food,
-								/obj/item/weapon/coin,
-								/obj/item/weapon/aliencoin,
-								/obj/item/weapon/ore,
-								/obj/item/weapon/disk/nuclear,
+								/obj/item/tool, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/reagent_containers/food, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/coin, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/aliencoin, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/ore, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/disk/nuclear, // CHOMPEdit - Removal of obj/item/weapon
 								/obj/item/toy,
-								/obj/item/weapon/card,
-								/obj/item/device/radio,
-								/obj/item/device/perfect_tele_beacon,
-								/obj/item/weapon/clipboard,
-								/obj/item/weapon/paper,
-								/obj/item/weapon/pen,
+								/obj/item/card, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/radio, // CHOMPEdit - Removal of obj/item/device
+								/obj/item/perfect_tele_beacon, // CHOMPEdit - Removal of obj/item/device
+								/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/paper, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/pen, // CHOMPEdit - Removal of obj/item/weapon
 								/obj/item/canvas,
 								/obj/item/paint_palette,
 								/obj/item/paint_brush,
-								/obj/item/device/camera,
-								/obj/item/weapon/photo,
-								/obj/item/device/camera_film,
-								/obj/item/device/taperecorder,
-								/obj/item/device/tape)
+								/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+								/obj/item/photo, // CHOMPEdit - Removal of obj/item/weapon
+								/obj/item/camera_film, // CHOMPEdit - Removal of obj/item/device
+								/obj/item/taperecorder, // CHOMPEdit - Removal of obj/item/device
+								/obj/item/tape) // CHOMPEdit - Removal of obj/item/device
 
 	var/xeno_build_time = 5 //time to build a structure
 

@@ -86,7 +86,7 @@
 	minbodytemp = 0
 
 	//speak_chance = 1 //VORESTATION AI TEMPORARY REMOVAL
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/bearmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/bearmeat // CHOMPEdit - Removal of obj/item/weapon
 /datum/say_list/polar_bear
 	speak = list("RAWR!","Rawr!","GRR!","Growl!")
 	emote_hear = list("rawrs","grumbles","grawls")

@@ -22,45 +22,45 @@
 	//CHOMPEdit Block Start - Modified List
 		if ("small")
 			starts_with = list(
-				/obj/item/weapon/storage/toolbox/emergency,
-				/obj/item/weapon/tank/emergency/oxygen = 2,
+				/obj/item/storage/toolbox/emergency, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tank/emergency/oxygen = 2, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/mask/breath = 2,
 				/obj/item/clothing/suit/space/emergency = 2,
 				/obj/item/clothing/head/helmet/space/emergency = 2,
-				/obj/item/device/suit_cooling_unit/emergency = 2)
+				/obj/item/suit_cooling_unit/emergency = 2) // CHOMPEdit - Removal of obj/item/device
 		if ("aid")
 			starts_with = list(
-				/obj/item/weapon/storage/toolbox/emergency,
-				/obj/item/weapon/storage/firstaid/o2,
-				/obj/item/weapon/tank/emergency/oxygen/engi = 2,
+				/obj/item/storage/toolbox/emergency, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/firstaid/o2, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tank/emergency/oxygen/engi = 2, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/mask/breath = 2,
 				/obj/item/clothing/suit/space/emergency = 2,
 				/obj/item/clothing/head/helmet/space/emergency = 2,
-				/obj/item/device/suit_cooling_unit/emergency = 2)
+				/obj/item/suit_cooling_unit/emergency = 2) // CHOMPEdit - Removal of obj/item/device
 		if ("tank")
 			starts_with = list(
-				/obj/item/weapon/storage/toolbox/emergency,
-				/obj/item/weapon/tank/emergency/oxygen/double = 2,
+				/obj/item/storage/toolbox/emergency, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tank/emergency/oxygen/double = 2, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/mask/breath = 2,
 				/obj/item/clothing/suit/space/emergency = 2,
 				/obj/item/clothing/head/helmet/space/emergency = 2,
-				/obj/item/device/suit_cooling_unit = 2)
+				/obj/item/suit_cooling_unit = 2) // CHOMPEdit - Removal of obj/item/device
 		if ("both")
 			starts_with = list(
-				/obj/item/weapon/storage/toolbox/emergency,
-				/obj/item/weapon/storage/firstaid/o2,
-				/obj/item/weapon/tank/emergency/oxygen/double = 2,
+				/obj/item/storage/toolbox/emergency, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/firstaid/o2, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/tank/emergency/oxygen/double = 2, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/mask/breath = 2,
 				/obj/item/clothing/suit/space/emergency = 2,
 				/obj/item/clothing/head/helmet/space/emergency = 2,
-				/obj/item/device/suit_cooling_unit = 2)
+				/obj/item/suit_cooling_unit = 2) // CHOMPEdit - Removal of obj/item/device
 	//CHOMPEdit Block End
 
 	return ..()
 
 /obj/structure/closet/emcloset/legacy
 	starts_with = list(
-		/obj/item/weapon/tank/oxygen,
+		/obj/item/tank/oxygen, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/mask/gas)
 
 /*
@@ -74,26 +74,26 @@
 	starts_with = list(
 		/obj/item/clothing/suit/fire,
 		/obj/item/clothing/mask/gas,
-		/obj/item/weapon/tank/oxygen/red,
-		/obj/item/weapon/extinguisher,
+		/obj/item/tank/oxygen/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/hardhat/red)
 
 /obj/structure/closet/firecloset/full
 	starts_with = list(
 		/obj/item/clothing/suit/fire,
 		/obj/item/clothing/mask/gas,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank/oxygen/red,
-		/obj/item/weapon/extinguisher,
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank/oxygen/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/hardhat/red)
 
 /obj/structure/closet/firecloset/full/double
 	starts_with = list(
 		/obj/item/clothing/suit/fire = 2,
 		/obj/item/clothing/mask/gas = 2,
-		/obj/item/device/flashlight = 2,
-		/obj/item/weapon/tank/oxygen/red = 2,
-		/obj/item/weapon/extinguisher = 2,
+		/obj/item/flashlight = 2, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank/oxygen/red = 2, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher = 2, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/hardhat/red = 2)
 
 /obj/structure/closet/firecloset/full/atmos
@@ -103,9 +103,9 @@
 
 	starts_with = list(
 		/obj/item/clothing/suit/fire/heavy,
-		/obj/item/weapon/tank/oxygen/red,
-		/obj/item/weapon/extinguisher/atmo,
-		/obj/item/device/flashlight,
+		/obj/item/tank/oxygen/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher/atmo, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/head/hardhat/firefighter/atmos)
 
 /*
@@ -121,21 +121,21 @@
 	if(prob(40))
 		starts_with += /obj/item/clothing/suit/storage/hazardvest
 	if(prob(70))
-		starts_with += /obj/item/device/flashlight
+		starts_with += /obj/item/flashlight // CHOMPEdit - Removal of obj/item/device
 	if(prob(70))
-		starts_with += /obj/item/weapon/tool/screwdriver
+		starts_with += /obj/item/tool/screwdriver // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(70))
-		starts_with += /obj/item/weapon/tool/wrench
+		starts_with += /obj/item/tool/wrench // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(70))
-		starts_with += /obj/item/weapon/weldingtool
+		starts_with += /obj/item/weldingtool // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(70))
-		starts_with += /obj/item/weapon/tool/crowbar
+		starts_with += /obj/item/tool/crowbar // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(70))
-		starts_with += /obj/item/weapon/tool/wirecutters
+		starts_with += /obj/item/tool/wirecutters // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(70))
-		starts_with += /obj/item/device/t_scanner
+		starts_with += /obj/item/t_scanner // CHOMPEdit - Removal of obj/item/device
 	if(prob(20))
-		starts_with += /obj/item/weapon/storage/belt/utility
+		starts_with += /obj/item/storage/belt/utility // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(30))
 		starts_with += /obj/item/stack/cable_coil/random
 	if(prob(30))
@@ -143,13 +143,13 @@
 	if(prob(30))
 		starts_with += /obj/item/stack/cable_coil/random
 	if(prob(20))
-		starts_with += /obj/item/device/multitool
+		starts_with += /obj/item/multitool // CHOMPEdit - Removal of obj/item/device
 	if(prob(5))
 		starts_with += /obj/item/clothing/gloves/yellow
 	if(prob(40))
 		starts_with += /obj/item/clothing/head/hardhat
 	if(prob(30))
-		starts_with += /obj/item/weapon/reagent_containers/spray/windowsealant //VOREStation Add
+		starts_with += /obj/item/reagent_containers/spray/windowsealant //VOREStation Add // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /*
@@ -163,7 +163,7 @@
 	starts_with = list(
 		/obj/item/clothing/suit/radiation = 2,
 		/obj/item/clothing/head/radiation = 2,
-		/obj/item/device/geiger = 2)
+		/obj/item/geiger = 2) // CHOMPEdit - Removal of obj/item/device
 
 /*
  * Bombsuit closet
@@ -215,9 +215,9 @@
 	starts_with = list(
 		/obj/item/clothing/suit/fire/firefighter,
 		/obj/item/clothing/mask/gas,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank/oxygen/red,
-		/obj/item/weapon/extinguisher,
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank/oxygen/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/hardhat/red)
 
 /*

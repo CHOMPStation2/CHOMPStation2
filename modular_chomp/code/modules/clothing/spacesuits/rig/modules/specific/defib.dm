@@ -4,21 +4,21 @@
 	icon_state = "flash"
 	interface_name = "mounted defib"
 	interface_desc = "Toggle to swap between FBP and Organic compatibility."
-	device_type = /obj/item/weapon/shockpaddles/standalone/rig
+	device_type = /obj/item/shockpaddles/standalone/rig // CHOMPEdit - Removal of obj/item/weapon
 	usable = 1
 	engage_string = "Toggle Mode"
 
-/obj/item/weapon/shockpaddles/standalone/rig
+/obj/item/shockpaddles/standalone/rig // CHOMPEdit - Removal of obj/item/weapon
 	name = "mounted defib"
 	desc = "Rig mounted defib. How are you seeing this? Stop that."
 	wielded = 1
 
-/obj/item/weapon/shockpaddles/standalone/rig/emp_act(severity)
+/obj/item/shockpaddles/standalone/rig/emp_act(severity) // CHOMPEdit - Removal of obj/item/weapon
 	return
 
-/obj/item/weapon/shockpaddles/standalone/rig/checked_use(var/charge_amt)
+/obj/item/shockpaddles/standalone/rig/checked_use(var/charge_amt) // CHOMPEdit - Removal of obj/item/weapon
 	return 1
 
-/obj/item/weapon/shockpaddles/standalone/rig/attack_self()
+/obj/item/shockpaddles/standalone/rig/attack_self() // CHOMPEdit - Removal of obj/item/weapon
 	use_on_synthetic = !use_on_synthetic
 	to_chat(usr, "<span class='notice'>You switch the [src] to [use_on_synthetic ? "FBP" : "organic"] compatibility.</span>")

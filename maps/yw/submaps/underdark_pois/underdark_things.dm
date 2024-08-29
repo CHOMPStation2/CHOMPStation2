@@ -103,13 +103,13 @@
 
 /obj/random/multiple/underdark/miningdrills/item_to_spawn()
 	return pick(
-				prob(10);list(/obj/item/weapon/pickaxe/silver),
-				prob(8);list(/obj/item/weapon/pickaxe/drill),
-				prob(6);list(/obj/item/weapon/pickaxe/jackhammer),
-				prob(5);list(/obj/item/weapon/pickaxe/gold),
-				prob(4);list(/obj/item/weapon/pickaxe/plasmacutter),
-				prob(2);list(/obj/item/weapon/pickaxe/diamond),
-				prob(1);list(/obj/item/weapon/pickaxe/diamonddrill)
+				prob(10);list(/obj/item/pickaxe/silver), // CHOMPEdit - Removal of obj/item/weapon
+				prob(8);list(/obj/item/pickaxe/drill), // CHOMPEdit - Removal of obj/item/weapon
+				prob(6);list(/obj/item/pickaxe/jackhammer), // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);list(/obj/item/pickaxe/gold), // CHOMPEdit - Removal of obj/item/weapon
+				prob(4);list(/obj/item/pickaxe/plasmacutter), // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);list(/obj/item/pickaxe/diamond), // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);list(/obj/item/pickaxe/diamonddrill) // CHOMPEdit - Removal of obj/item/weapon
 				)
 
 /obj/random/multiple/underdark/ores
@@ -121,84 +121,84 @@
 /obj/random/multiple/underdark/ores/item_to_spawn()
 	return pick(
 				prob(9);list(
-							/obj/item/weapon/storage/bag/ore,
-							/obj/item/weapon/shovel,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/glass,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen,
-							/obj/item/weapon/ore/hydrogen
+							/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/shovel, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/glass, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/hydrogen // CHOMPEdit - Removal of obj/item/weapon
 							),
 				prob(7);list(
-							/obj/item/weapon/storage/bag/ore,
-							/obj/item/weapon/pickaxe,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium,
-							/obj/item/weapon/ore/osmium
+							/obj/item/storage/bag/ore, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/osmium // CHOMPEdit - Removal of obj/item/weapon
 							),
 				prob(4);list(
 							/obj/item/clothing/suit/radiation,
 							/obj/item/clothing/head/radiation,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium,
-							/obj/item/weapon/ore/uranium),
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/uranium), // CHOMPEdit - Removal of obj/item/weapon
 				prob(2);list(
-							/obj/item/device/flashlight/lantern,
+							/obj/item/flashlight/lantern, // CHOMPEdit - Removal of obj/item/device
 							/obj/item/clothing/glasses/material,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond,
-							/obj/item/weapon/ore/diamond
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/diamond // CHOMPEdit - Removal of obj/item/weapon
 							),
 				prob(1);list(
-							/obj/item/weapon/mining_scanner,
-							/obj/item/weapon/shovel/spade,
-							/obj/item/weapon/ore/verdantium,
-							/obj/item/weapon/ore/verdantium,
-							/obj/item/weapon/ore/verdantium,
-							/obj/item/weapon/ore/verdantium,
-							/obj/item/weapon/ore/verdantium
+							/obj/item/mining_scanner, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/shovel/spade, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/ore/verdantium // CHOMPEdit - Removal of obj/item/weapon
 							)
 				)
 
@@ -219,10 +219,10 @@
 							/obj/item/clothing/head/pirate
 							),
 				prob(4);list(
-							/obj/item/weapon/storage/bag/cash,
-							/obj/item/weapon/spacecash/c500,
-							/obj/item/weapon/spacecash/c100,
-							/obj/item/weapon/spacecash/c50
+							/obj/item/storage/bag/cash, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/spacecash/c500, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/spacecash/c100, // CHOMPEdit - Removal of obj/item/weapon
+							/obj/item/spacecash/c50 // CHOMPEdit - Removal of obj/item/weapon
 							),
 				prob(3);list(
 							/obj/item/clothing/head/hardhat/orange,

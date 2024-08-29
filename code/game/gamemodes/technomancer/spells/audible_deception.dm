@@ -4,11 +4,11 @@
 	enhancement_desc = "An extremely loud bike horn sound that costs  large amount of energy and instability becomes available, \
 	which will deafen and stun all who are near the targeted tile, including yourself if unprotected."
 	cost = 50
-	obj_path = /obj/item/weapon/spell/audible_deception
+	obj_path = /obj/item/spell/audible_deception // CHOMPEdit - Removal of obj/item/weapon
 	ability_icon_state = "tech_audibledeception"
 	category = UTILITY_SPELLS
 
-/obj/item/weapon/spell/audible_deception
+/obj/item/spell/audible_deception // CHOMPEdit - Removal of obj/item/weapon
 	name = "audible deception"
 	icon_state = "audible_deception"
 	desc = "Make them all paranoid!"
@@ -64,7 +64,7 @@
 		)
 	var/selected_sound = null
 
-/obj/item/weapon/spell/audible_deception/on_use_cast(mob/user)
+/obj/item/spell/audible_deception/on_use_cast(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	var/list/sound_options = available_sounds
 	if(check_for_scepter())
 		sound_options["!!AIR HORN!!"] = 'sound/items/AirHorn.ogg'
@@ -72,7 +72,7 @@
 	if(new_sound)
 		selected_sound = sound_options[new_sound]
 
-/obj/item/weapon/spell/audible_deception/on_ranged_cast(atom/hit_atom, mob/living/user)
+/obj/item/spell/audible_deception/on_ranged_cast(atom/hit_atom, mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	var/turf/T = get_turf(hit_atom)
 	if(selected_sound && pay_energy(200))
 		playsound(src, selected_sound, 80, 1, -1)

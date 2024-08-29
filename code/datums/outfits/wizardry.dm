@@ -1,12 +1,12 @@
 /decl/hierarchy/outfit/wizard
 	uniform = /obj/item/clothing/under/color/lightpurple
 	shoes = /obj/item/clothing/shoes/sandal
-	l_ear = /obj/item/device/radio/headset
-	r_pocket = /obj/item/weapon/teleportation_scroll
-	l_hand = /obj/item/weapon/staff
-	r_hand = /obj/item/weapon/spellbook
-	back = /obj/item/weapon/storage/backpack
-	backpack_contents = list(/obj/item/weapon/storage/box = 1)
+	l_ear = /obj/item/radio/headset // CHOMPEdit - Removal of obj/item/device
+	r_pocket = /obj/item/teleportation_scroll // CHOMPEdit - Removal of obj/item/weapon
+	l_hand = /obj/item/staff // CHOMPEdit - Removal of obj/item/weapon
+	r_hand = /obj/item/spellbook // CHOMPEdit - Removal of obj/item/weapon
+	back = /obj/item/storage/backpack // CHOMPEdit - Removal of obj/item/weapon
+	backpack_contents = list(/obj/item/storage/box = 1) // CHOMPEdit - Removal of obj/item/weapon
 	hierarchy_type = /decl/hierarchy/outfit/wizard
 
 /decl/hierarchy/outfit/wizard/blue

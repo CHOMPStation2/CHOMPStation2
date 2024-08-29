@@ -16,8 +16,8 @@
 
 	src.split()
 
-	if(istype(loc,/obj/item/weapon/holder/diona))
-		var/obj/item/weapon/holder/diona/L = loc
+	if(istype(loc,/obj/item/holder/diona)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/holder/diona/L = loc // CHOMPEdit - Removal of obj/item/weapon
 		src.loc = L.loc
 		qdel(L)
 

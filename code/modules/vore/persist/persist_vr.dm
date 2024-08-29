@@ -245,7 +245,7 @@
 		warning("Persist (NIF): [H] has no prefs datum, skipping")
 		return
 
-	var/obj/item/device/nif/nif = H.nif
+	var/obj/item/nif/nif = H.nif // CHOMPEdit - Removal of obj/item/device
 
 	if(nif && H.ckey != nif.owner_key)
 		return

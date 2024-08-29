@@ -51,7 +51,7 @@
 	if(powernet && (powernet == control.powernet)) //update if we're still in the same powernet
 		control.cdir = angle
 
-/obj/machinery/power/tracker/attackby(var/obj/item/weapon/W, var/mob/user)
+/obj/machinery/power/tracker/attackby(var/obj/item/W, var/mob/user) // CHOMPEdit - Removal of obj/item/weapon
 
 	if(W.has_tool_quality(TOOL_CROWBAR))
 		playsound(src, 'sound/machines/click.ogg', 50, 1)
@@ -69,7 +69,7 @@
 
 // Tracker Electronic
 
-/obj/item/weapon/tracker_electronics
+/obj/item/tracker_electronics // CHOMPEdit - Removal of obj/item/weapon
 
 	name = "tracker electronics"
 	icon = 'icons/obj/doors/door_assembly.dmi'

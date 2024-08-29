@@ -1,4 +1,4 @@
-/obj/item/device/laser_pointer
+/obj/item/laser_pointer // CHOMPEdit - Removal of obj/item/device
 	name = "laser pointer"
 	desc = "Don't shine it in your eyes!"
 	icon = 'icons/obj/device.dmi'
@@ -17,35 +17,35 @@
 	var/last_used_time = 0
 	var/recharging = 0
 	var/recharge_locked = 0
-	var/obj/item/weapon/stock_parts/micro_laser/diode //used for upgrading!
+	var/obj/item/stock_parts/micro_laser/diode //used for upgrading! // CHOMPEdit - Removal of obj/item/weapon
 
 
-/obj/item/device/laser_pointer/red
+/obj/item/laser_pointer/red // CHOMPEdit - Removal of obj/item/device
 	pointer_icon_state = "red_laser"
-/obj/item/device/laser_pointer/green
+/obj/item/laser_pointer/green // CHOMPEdit - Removal of obj/item/device
 	pointer_icon_state = "green_laser"
-/obj/item/device/laser_pointer/blue
+/obj/item/laser_pointer/blue // CHOMPEdit - Removal of obj/item/device
 	pointer_icon_state = "blue_laser"
-/obj/item/device/laser_pointer/purple
+/obj/item/laser_pointer/purple // CHOMPEdit - Removal of obj/item/device
 	pointer_icon_state = "purple_laser"
 
-/obj/item/device/laser_pointer/New()
+/obj/item/laser_pointer/New() // CHOMPEdit - Removal of obj/item/device
 	..()
 	diode = new(src)
 	if(!pointer_icon_state)
 		pointer_icon_state = pick("red_laser","green_laser","blue_laser","purple_laser")
 
-/obj/item/device/laser_pointer/upgraded/New()
+/obj/item/laser_pointer/upgraded/New() // CHOMPEdit - Removal of obj/item/device
 	..()
-	diode = new /obj/item/weapon/stock_parts/micro_laser/ultra
+	diode = new /obj/item/stock_parts/micro_laser/ultra // CHOMPEdit - Removal of obj/item/weapon
 
 
 
-/obj/item/device/laser_pointer/attack(mob/living/M, mob/user)
+/obj/item/laser_pointer/attack(mob/living/M, mob/user) // CHOMPEdit - Removal of obj/item/device
 	laser_act(M, user)
 
-/obj/item/device/laser_pointer/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/stock_parts/micro_laser))
+/obj/item/laser_pointer/attackby(obj/item/W, mob/user) // CHOMPEdit - Removal of obj/item/device
+	if(istype(W, /obj/item/stock_parts/micro_laser)) // CHOMPEdit - Removal of obj/item/weapon
 		if(!diode)
 			user.drop_item()
 			W.loc = src
@@ -63,12 +63,12 @@
 		..()
 	return
 
-/obj/item/device/laser_pointer/afterattack(var/atom/target, var/mob/living/user, flag, params)
+/obj/item/laser_pointer/afterattack(var/atom/target, var/mob/living/user, flag, params) // CHOMPEdit - Removal of obj/item/device
 	if(flag)	//we're placing the object on a table or in backpack
 		return
 	laser_act(target, user)
 
-/obj/item/device/laser_pointer/proc/laser_act(var/atom/target, var/mob/living/user)
+/obj/item/laser_pointer/proc/laser_act(var/atom/target, var/mob/living/user) // CHOMPEdit - Removal of obj/item/device
 	if(!(user in (viewers(world.view,target))))
 		return
 	if(!(target in view(user, world.view)))
@@ -211,7 +211,7 @@
 	spawn(cooldown)
 		icon_state = "pointer"
 
-/obj/item/device/laser_pointer/process()
+/obj/item/laser_pointer/process() // CHOMPEdit - Removal of obj/item/device
 	if(prob(20 - recharge_locked*5))
 		energy += 1
 		if(energy >= max_energy)

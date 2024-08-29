@@ -145,7 +145,7 @@
 
 /area/survivalpod/superpose/XenoBotanySetup
 
-/obj/item/device/survivalcapsule/superpose
+/obj/item/survivalcapsule/superpose // CHOMPEdit - Removal of obj/item/device
 	name = "superposed surfluid shelter capsule"
 	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; use a pen to reach the reset button. There's a license for use printed on the bottom."
 	description_info = "The capsule contains pockets of compressed space in a super position stabilized by a miniscule supermatter crystal. \
@@ -155,14 +155,14 @@
 	var/pod_initialized = FALSE
 
 // Override since the parent proc has a sanity check to delete the capsule if no template is found, which doesn't exactly work with this item considering examining calls this proc.
-/obj/item/device/survivalcapsule/superpose/get_template()
+/obj/item/survivalcapsule/superpose/get_template() // CHOMPEdit - Removal of obj/item/device
 	if(template)
 		return
 	template = SSmapping.shelter_templates[template_id]
 	if(!template)
 		template = null
 
-/obj/item/device/survivalcapsule/superpose/attack_self()
+/obj/item/survivalcapsule/superpose/attack_self() // CHOMPEdit - Removal of obj/item/device
 	if(!pod_initialized) // Populate list after round start as map templates might not exist when this item is created.
 		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter))
 			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.superpose))) // Limits map templates to those marked for the superpose capsule.
@@ -181,8 +181,8 @@
 	..()
 
 // Allows resetting the capsule if the wrong template is chosen.
-/obj/item/device/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/pen) && !used)
+/obj/item/survivalcapsule/superpose/attackby(obj/item/W, mob/user) // CHOMPEdit - Removal of obj/item/device
+	if(istype(W, /obj/item/pen) && !used) // CHOMPEdit - Removal of obj/item/weapon
 		template_id = null
 		template = null // Important to reset both, otherwise the template cannot be reset once the pod has been deployed.
 		to_chat(user, "<span class='notice'>You reset the pod's selection.</span>")

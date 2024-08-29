@@ -23,6 +23,6 @@
 		color = material.icon_colour
 	return
 
-/obj/structure/table/rack/holorack/dismantle(obj/item/weapon/tool/wrench/W, mob/user)
+/obj/structure/table/rack/holorack/dismantle(obj/item/tool/wrench/W, mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	to_chat(user, "<span class='warning'>You cannot dismantle \the [src].</span>")
 	return

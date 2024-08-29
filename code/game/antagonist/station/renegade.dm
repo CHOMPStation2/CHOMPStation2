@@ -26,40 +26,40 @@ var/datum/antagonist/renegade/renegades
 	initial_spawn_target = 4
 
 	var/list/spawn_guns = list(
-		/obj/item/weapon/gun/energy/laser,
-		/obj/item/weapon/gun/energy/captain,
-		/obj/item/weapon/gun/energy/lasercannon,
-		/obj/item/weapon/gun/energy/xray,
-		/obj/item/weapon/gun/energy/gun,
-		/obj/item/weapon/gun/energy/gun/burst,
-		/obj/item/weapon/gun/energy/gun/nuclear,
-		/obj/item/weapon/gun/energy/crossbow,
-		/obj/item/weapon/gun/energy/crossbow/largecrossbow,
-		/obj/item/weapon/gun/projectile/automatic,
-		/obj/item/weapon/gun/projectile/automatic/mini_uzi,
-		/obj/item/weapon/gun/projectile/automatic/c20r,
-		/obj/item/weapon/gun/projectile/automatic/sts35,
-		/obj/item/weapon/gun/projectile/automatic/bullpup,
-		/obj/item/weapon/gun/projectile/automatic/wt550,
-		/obj/item/weapon/gun/projectile/automatic/z8,
-		/obj/item/weapon/gun/projectile/automatic/tommygun,
-		/obj/item/weapon/gun/projectile/colt/detective,
-		/obj/item/weapon/gun/projectile/sec/wood,
-		/obj/item/weapon/gun/projectile/silenced,
-		/obj/item/weapon/gun/projectile/pistol,
-		/obj/item/weapon/gun/projectile/p92x,
-		/obj/item/weapon/gun/projectile/revolver,
-		/obj/item/weapon/gun/projectile/derringer,
-		/obj/item/weapon/gun/projectile/shotgun/pump,
-		/obj/item/weapon/gun/projectile/shotgun/pump/rifle,
-		/obj/item/weapon/gun/projectile/shotgun/pump/combat,
-		/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
-		/obj/item/weapon/gun/projectile/revolver/judge,
-		/obj/item/weapon/gun/projectile/revolver/lemat,
-		list(/obj/item/weapon/gun/projectile/shotgun/doublebarrel/pellet, /obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn),
-		list(/obj/item/weapon/gun/projectile/deagle, /obj/item/weapon/gun/projectile/deagle/gold, /obj/item/weapon/gun/projectile/deagle/camo),
-		list(/obj/item/weapon/gun/projectile/revolver/detective, /obj/item/weapon/gun/projectile/revolver/deckard),
-		list(/obj/item/weapon/gun/projectile/luger,/obj/item/weapon/gun/projectile/luger/brown)
+		/obj/item/gun/energy/laser, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/captain, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/lasercannon, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/xray, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/gun/burst, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/gun/nuclear, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/crossbow, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/crossbow/largecrossbow, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/automatic, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/automatic/mini_uzi, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/automatic/c20r, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/automatic/sts35, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/automatic/bullpup, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/automatic/wt550, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/automatic/z8, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/automatic/tommygun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/colt/detective, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/sec/wood, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/silenced, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/pistol, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/p92x, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/revolver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/derringer, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/shotgun/pump, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/shotgun/pump/rifle, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/shotgun/pump/combat, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/shotgun/doublebarrel, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/revolver/judge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/revolver/lemat, // CHOMPEdit - Removal of obj/item/weapon
+		list(/obj/item/gun/projectile/shotgun/doublebarrel/pellet, /obj/item/gun/projectile/shotgun/doublebarrel/sawn), // CHOMPEdit - Removal of obj/item/weapon
+		list(/obj/item/gun/projectile/deagle, /obj/item/gun/projectile/deagle/gold, /obj/item/gun/projectile/deagle/camo), // CHOMPEdit - Removal of obj/item/weapon
+		list(/obj/item/gun/projectile/revolver/detective, /obj/item/gun/projectile/revolver/deckard), // CHOMPEdit - Removal of obj/item/weapon
+		list(/obj/item/gun/projectile/luger,/obj/item/gun/projectile/luger/brown) // CHOMPEdit - Removal of obj/item/weapon
 		)
 
 /datum/antagonist/renegade/New()

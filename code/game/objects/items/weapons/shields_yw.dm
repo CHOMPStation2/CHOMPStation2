@@ -1,4 +1,4 @@
-obj/item/weapon/shield/riot/stun
+obj/item/shield/riot/stun // CHOMPEdit - Removal of obj/item/weapon
 	name = "stun shield"
 	desc = "An advanced riot shield made of conductive materials on one side, that can be used to stun personnel."
 	icon = 'icons/obj/guns_yw.dmi'
@@ -11,13 +11,13 @@ obj/item/weapon/shield/riot/stun
 	w_class = ITEMSIZE_NORMAL
 	var/active = 0
 /*
-/obj/item/weapon/shield/energy/IsShield()
+/obj/item/shield/energy/IsShield() // CHOMPEdit - Removal of obj/item/weapon
 	if(active)
 		return 1
 	else
 		return 0
 */
-/obj/item/weapon/shield/riot/tele/attack_self(mob/living/user)
+/obj/item/shield/riot/tele/attack_self(mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	active = !active
 	icon_state = "teleriot[active]"
 	playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)

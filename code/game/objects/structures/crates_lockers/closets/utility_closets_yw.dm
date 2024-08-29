@@ -9,11 +9,11 @@
 	wall_mounted = 1
 
 	starts_with = list(
-		/obj/item/weapon/module/power_control,
-		/obj/item/weapon/storage/toolbox/mechanical ,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank/oxygen/red,
-		/obj/item/weapon/storage/briefcase/inflatable,
+		/obj/item/module/power_control, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/toolbox/mechanical , // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank/oxygen/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/briefcase/inflatable, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/helmet/space/emergency,
 		/obj/item/clothing/suit/space/emergency)
 

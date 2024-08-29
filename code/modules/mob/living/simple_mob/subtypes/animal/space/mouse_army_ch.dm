@@ -54,8 +54,8 @@
 
 	has_langs = list("Mouse")
 
-	holder_type = /obj/item/weapon/holder/mouse
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	holder_type = /obj/item/holder/mouse // CHOMPEdit - Removal of obj/item/weapon
+	meat_type = /obj/item/reagent_containers/food/snacks/meat // CHOMPEdit - Removal of obj/item/weapon
 
 	say_list_type = /datum/say_list/mouse
 

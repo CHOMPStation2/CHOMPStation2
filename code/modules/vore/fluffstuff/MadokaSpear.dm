@@ -16,30 +16,30 @@
 /*
  * Twohanded
  */
-/obj/item/weapon/oldtwohanded
+/obj/item/oldtwohanded // CHOMPEdit - Removal of obj/item/weapon
 	var/wielded = 0
 	var/force_wielded = 0
 	var/wieldsound = null
 	var/unwieldsound = null
 	var/base_icon
 
-/obj/item/weapon/oldtwohanded/proc/unwield()
+/obj/item/oldtwohanded/proc/unwield() // CHOMPEdit - Removal of obj/item/weapon
 	wielded = 0
 	force = initial(force)
 	name = "[initial(name)]"
 	update_icon()
 
-/obj/item/weapon/oldtwohanded/proc/wield()
+/obj/item/oldtwohanded/proc/wield() // CHOMPEdit - Removal of obj/item/weapon
 	wielded = 1
 	force = force_wielded
 	name = "[initial(name)] (Wielded)"
 	update_icon()
 
-/obj/item/weapon/oldtwohanded/New()
+/obj/item/oldtwohanded/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	update_icon()
 
-/obj/item/weapon/oldtwohanded/mob_can_equip(M as mob, slot, disable_warning = FALSE)
+/obj/item/oldtwohanded/mob_can_equip(M as mob, slot, disable_warning = FALSE) // CHOMPEdit - Removal of obj/item/weapon
 	//Cannot equip wielded items.
 	if(wielded)
 		to_chat(M, "<span class='warning'>Unwield the [initial(name)] first!</span>")
@@ -47,22 +47,22 @@
 
 	return ..()
 
-/obj/item/weapon/oldtwohanded/dropped(mob/user as mob)
+/obj/item/oldtwohanded/dropped(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	//handles unwielding a twohanded weapon when dropped as well as clearing up the offhand
 	if(user)
-		var/obj/item/weapon/oldtwohanded/O = user.get_inactive_hand()
+		var/obj/item/oldtwohanded/O = user.get_inactive_hand() // CHOMPEdit - Removal of obj/item/weapon
 		if(istype(O))
 			O.unwield()
 	return	unwield()
 
-/obj/item/weapon/oldtwohanded/update_icon()
+/obj/item/oldtwohanded/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	icon_state = "[base_icon][wielded]"
 	item_state = icon_state
 
-/obj/item/weapon/oldtwohanded/pickup(mob/user)
+/obj/item/oldtwohanded/pickup(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	unwield()
 
-/obj/item/weapon/oldtwohanded/attack_self(mob/user as mob)
+/obj/item/oldtwohanded/attack_self(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
 	if(wielded) //Trying to unwield it
@@ -71,7 +71,7 @@
 		if (src.unwieldsound)
 			playsound(src.loc, unwieldsound, 50, 1)
 
-		var/obj/item/weapon/oldtwohanded/offhand/O = user.get_inactive_hand()
+		var/obj/item/oldtwohanded/offhand/O = user.get_inactive_hand() // CHOMPEdit - Removal of obj/item/weapon
 		if(O && istype(O))
 			O.unwield()
 
@@ -84,7 +84,7 @@
 		if (src.wieldsound)
 			playsound(src.loc, wieldsound, 50, 1)
 
-		var/obj/item/weapon/oldtwohanded/offhand/O = new(user) ////Let's reserve his other hand~
+		var/obj/item/oldtwohanded/offhand/O = new(user) ////Let's reserve his other hand~ // CHOMPEdit - Removal of obj/item/weapon
 		O.name = "[initial(name)] - offhand"
 		O.desc = "Your second grip on the [initial(name)]"
 		user.put_in_inactive_hand(O)
@@ -97,22 +97,22 @@
 	return
 
 ///////////OFFHAND///////////////
-/obj/item/weapon/oldtwohanded/offhand
+/obj/item/oldtwohanded/offhand // CHOMPEdit - Removal of obj/item/weapon
 	w_class = 5.0
 	icon_state = "offhand"
 	name = "offhand"
 
-/obj/item/weapon/oldtwohanded/offhand/unwield()
+/obj/item/oldtwohanded/offhand/unwield() // CHOMPEdit - Removal of obj/item/weapon
 	qdel(src)
 
-/obj/item/weapon/oldtwohanded/offhand/wield()
+/obj/item/oldtwohanded/offhand/wield() // CHOMPEdit - Removal of obj/item/weapon
 	qdel(src)
 
-/obj/item/weapon/oldtwohanded/offhand/update_icon()
+/obj/item/oldtwohanded/offhand/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	return
 
 //spears, bay edition
-/obj/item/weapon/oldtwohanded/spear
+/obj/item/oldtwohanded/spear // CHOMPEdit - Removal of obj/item/weapon
 	icon_state = "spearglass0"
 	base_icon = "spearglass"
 	name = "spear"

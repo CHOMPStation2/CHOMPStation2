@@ -59,7 +59,7 @@
 	burn_mod =  1.35
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
-	holder_type = /obj/item/weapon/holder/micro //CHOMPEdit from holder/human to holder/micro
+	holder_type = /obj/item/holder/micro //CHOMPEdit from holder/human to holder/micro // CHOMPEdit - Removal of obj/item/weapon
 //	short_sighted = 1 CHOMPEdit: We're fine without near-sightedness for now.
 	gluttonous = 1
 	blood_volume = 400

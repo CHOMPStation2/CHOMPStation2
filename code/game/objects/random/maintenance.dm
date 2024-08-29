@@ -26,38 +26,38 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/clean/item_to_spawn()
 	return pick(prob(10);/obj/random/contraband,
-				prob(2);/obj/item/device/flashlight/flare,
-				prob(2);/obj/item/device/flashlight/glowstick,
-				prob(2);/obj/item/device/flashlight/glowstick/blue,
-				prob(1);/obj/item/device/flashlight/glowstick/orange,
-				prob(1);/obj/item/device/flashlight/glowstick/red,
-				prob(1);/obj/item/device/flashlight/glowstick/yellow,
-				prob(1);/obj/item/device/flashlight/pen,
-				prob(4);/obj/item/weapon/cell,
-				prob(4);/obj/item/weapon/cell/device,
-				prob(3);/obj/item/weapon/cell/high,
-				prob(2);/obj/item/weapon/cell/super,
+				prob(2);/obj/item/flashlight/flare, // CHOMPEdit - Removal of obj/item/device
+				prob(2);/obj/item/flashlight/glowstick, // CHOMPEdit - Removal of obj/item/device
+				prob(2);/obj/item/flashlight/glowstick/blue, // CHOMPEdit - Removal of obj/item/device
+				prob(1);/obj/item/flashlight/glowstick/orange, // CHOMPEdit - Removal of obj/item/device
+				prob(1);/obj/item/flashlight/glowstick/red, // CHOMPEdit - Removal of obj/item/device
+				prob(1);/obj/item/flashlight/glowstick/yellow, // CHOMPEdit - Removal of obj/item/device
+				prob(1);/obj/item/flashlight/pen, // CHOMPEdit - Removal of obj/item/device
+				prob(4);/obj/item/cell, // CHOMPEdit - Removal of obj/item/weapon
+				prob(4);/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/cell/high, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/cell/super, // CHOMPEdit - Removal of obj/item/weapon
 				prob(5);/obj/random/cigarettes,
 				prob(3);/obj/item/clothing/mask/gas,
 				prob(3);/obj/item/clothing/mask/gas/clear, //ChompAdd: Proper implementation of clear gasmasks
 				prob(2);/obj/item/clothing/mask/gas/half,
 				prob(4);/obj/item/clothing/mask/breath,
-				prob(2);/obj/item/weapon/reagent_containers/glass/rag,
-				prob(4);/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-				prob(2);/obj/item/weapon/storage/secure/briefcase,
-				prob(4);/obj/item/weapon/storage/briefcase,
-				prob(5);/obj/item/weapon/storage/backpack,
-				prob(5);/obj/item/weapon/storage/backpack/satchel/norm,
-				prob(4);/obj/item/weapon/storage/backpack/satchel,
-				prob(3);/obj/item/weapon/storage/backpack/dufflebag,
-				prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie,
-				prob(5);/obj/item/weapon/storage/box,
-				prob(3);/obj/item/weapon/storage/box/donkpockets,
-				prob(2);/obj/item/weapon/storage/box/sinpockets,
-				prob(1);/obj/item/weapon/storage/box/cups,
-				prob(3);/obj/item/weapon/storage/box/mousetraps,
-				prob(3);/obj/item/weapon/storage/wallet,
-				prob(1);/obj/item/device/paicard,
+				prob(2);/obj/item/reagent_containers/glass/rag, // CHOMPEdit - Removal of obj/item/weapon
+				prob(4);/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/secure/briefcase, // CHOMPEdit - Removal of obj/item/weapon
+				prob(4);/obj/item/storage/briefcase, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/satchel/norm, // CHOMPEdit - Removal of obj/item/weapon
+				prob(4);/obj/item/storage/backpack/satchel, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/backpack/dufflebag, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/backpack/dufflebag/syndie, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/box, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/box/donkpockets, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/box/sinpockets, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/box/cups, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/box/mousetraps, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/wallet, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/paicard, // CHOMPEdit - Removal of obj/item/device
 				prob(2);/obj/item/clothing/shoes/galoshes,
 				prob(1);/obj/item/clothing/shoes/syndigaloshes,
 				prob(4);/obj/item/clothing/shoes/black,
@@ -97,15 +97,15 @@ something, make sure it's not in one of the other lists.*/
 				prob(1);/obj/item/clothing/under/harness,
 				prob(1);/obj/item/clothing/under/tactical,
 				prob(3);/obj/item/clothing/accessory/storage/webbing,
-				prob(3);/obj/item/weapon/camera_assembly,
+				prob(3);/obj/item/camera_assembly, // CHOMPEdit - Removal of obj/item/weapon
 				prob(4);/obj/item/clothing/suit/caution,
 				prob(3);/obj/item/clothing/head/cone,
-				prob(1);/obj/item/weapon/card/emag_broken,
-				prob(2);/obj/item/device/camera,
-				prob(3);/obj/item/device/pda,
-				prob(3);/obj/item/device/radio/headset,
+				prob(1);/obj/item/card/emag_broken, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+				prob(3);/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+				prob(3);/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
 				/* VOREStation Edit Start */
-				prob(3);/obj/item/weapon/toy/monster_bait,
+				prob(3);/obj/item/toy/monster_bait, // CHOMPEdit - Removal of obj/item/weapon
 				prob(2);/obj/item/toy/tennis,
 				prob(2);/obj/item/toy/tennis/red,
 				prob(2);/obj/item/toy/tennis/yellow,
@@ -115,8 +115,8 @@ something, make sure it's not in one of the other lists.*/
 				prob(2);/obj/item/toy/tennis/purple,
 				prob(1);/obj/item/toy/baseball,
 				prob(1);/obj/item/pizzavoucher,
-				prob(5);/obj/item/weapon/material/fishing_net/butterfly_net,
-				prob(2);/obj/item/weapon/cracker,
+				prob(5);/obj/item/material/fishing_net/butterfly_net, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/cracker, // CHOMPEdit - Removal of obj/item/weapon
 				prob(5);/obj/random/mega_nukies
 				/* VOREStation Edit End */
 				)
@@ -129,24 +129,24 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/security/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(2);/obj/item/device/flashlight/maglight,
-				prob(2);/obj/item/device/flash,
-				prob(1);/obj/item/weapon/cell/device/weapon,
+				prob(2);/obj/item/flashlight/maglight, // CHOMPEdit - Removal of obj/item/device
+				prob(2);/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+				prob(1);/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
 				prob(1);/obj/item/clothing/mask/gas/swat,
 				prob(1);/obj/item/clothing/mask/gas/syndicate,
 				prob(2);/obj/item/clothing/mask/balaclava,
 				prob(1);/obj/item/clothing/mask/balaclava/tactical,
-				prob(3);/obj/item/weapon/storage/backpack/security,
-				prob(3);/obj/item/weapon/storage/backpack/satchel/sec,
-				prob(2);/obj/item/weapon/storage/backpack/messenger/sec,
-				prob(2);/obj/item/weapon/storage/backpack/dufflebag/sec,
-				prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo,
-				prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie/med,
-				prob(2);/obj/item/weapon/storage/box/swabs,
-				prob(2);/obj/item/weapon/storage/belt/security,
-				prob(1);/obj/item/weapon/grenade/flashbang,
-				prob(1);/obj/item/weapon/melee/baton,
-				prob(1);/obj/item/weapon/reagent_containers/spray/pepper,
+				prob(3);/obj/item/storage/backpack/security, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/backpack/satchel/sec, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/backpack/messenger/sec, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/backpack/dufflebag/sec, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/backpack/dufflebag/syndie/ammo, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/backpack/dufflebag/syndie/med, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/box/swabs, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/belt/security, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/grenade/flashbang, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
 				prob(3);/obj/item/clothing/shoes/boots/jackboots,
 				prob(1);/obj/item/clothing/shoes/boots/swat,
 				prob(1);/obj/item/clothing/shoes/boots/combat,
@@ -175,7 +175,7 @@ something, make sure it's not in one of the other lists.*/
 				prob(1);/obj/item/clothing/accessory/holster/waist,
 				prob(1);/obj/item/clothing/accessory/holster/armpit,
 				prob(2);/obj/item/clothing/ears/earmuffs,
-				prob(2);/obj/item/weapon/handcuffs,)
+				prob(2);/obj/item/handcuffs,) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/random/maintenance/medical
 /*Maintenance loot list. This one is for around medical areas*/
@@ -188,18 +188,18 @@ something, make sure it's not in one of the other lists.*/
 				prob(25);/obj/random/medical/lite,
 				prob(2);/obj/item/clothing/mask/breath/medical,
 				prob(2);/obj/item/clothing/mask/surgical,
-				prob(5);/obj/item/weapon/storage/backpack/medic,
-				prob(5);/obj/item/weapon/storage/backpack/satchel/med,
-				prob(5);/obj/item/weapon/storage/backpack/messenger/med,
-				prob(3);/obj/item/weapon/storage/backpack/dufflebag/med,
-				prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie/med,
-				prob(2);/obj/item/weapon/storage/box/autoinjectors,
-				prob(3);/obj/item/weapon/storage/box/beakers,
-				prob(2);/obj/item/weapon/storage/box/bodybags,
-				prob(3);/obj/item/weapon/storage/box/syringes,
-				prob(3);/obj/item/weapon/storage/box/gloves,
-				prob(2);/obj/item/weapon/storage/belt/medical/emt,
-				prob(2);/obj/item/weapon/storage/belt/medical,
+				prob(5);/obj/item/storage/backpack/medic, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/satchel/med, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/messenger/med, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/backpack/dufflebag/med, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/backpack/dufflebag/syndie/med, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/box/autoinjectors, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/box/beakers, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/box/bodybags, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/box/syringes, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/box/gloves, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/belt/medical/emt, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/belt/medical, // CHOMPEdit - Removal of obj/item/weapon
 				prob(1);/obj/item/clothing/shoes/boots/combat,
 				prob(3);/obj/item/clothing/shoes/white,
 				prob(2);/obj/item/clothing/gloves/sterile/nitrile,
@@ -224,17 +224,17 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/engineering/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(2);/obj/item/device/flashlight/maglight,
+				prob(2);/obj/item/flashlight/maglight, // CHOMPEdit - Removal of obj/item/device
 				prob(3);/obj/item/clothing/mask/gas/half,
 				prob(2);/obj/item/clothing/mask/balaclava,
-				prob(2);/obj/item/weapon/storage/briefcase/inflatable,
-				prob(5);/obj/item/weapon/storage/backpack/industrial,
-				prob(5);/obj/item/weapon/storage/backpack/satchel/eng,
-				prob(5);/obj/item/weapon/storage/backpack/messenger/engi,
-				prob(3);/obj/item/weapon/storage/backpack/dufflebag/eng,
-				prob(5);/obj/item/weapon/storage/box,
-				prob(2);/obj/item/weapon/storage/belt/utility/full,
-				prob(3);/obj/item/weapon/storage/belt/utility,
+				prob(2);/obj/item/storage/briefcase/inflatable, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/industrial, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/satchel/eng, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/messenger/engi, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/backpack/dufflebag/eng, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/box, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/belt/utility/full, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/belt/utility, // CHOMPEdit - Removal of obj/item/weapon
 				prob(3);/obj/item/clothing/head/beret/engineering,
 				prob(3);/obj/item/clothing/head/soft/yellow,
 				prob(2);/obj/item/clothing/head/orangebandana,
@@ -250,8 +250,8 @@ something, make sure it's not in one of the other lists.*/
 				prob(2);/obj/item/clothing/accessory/storage/brown_vest,
 				prob(1);/obj/item/clothing/accessory/storage/brown_drop_pouches,
 				prob(3);/obj/item/clothing/ears/earmuffs,
-				prob(1);/obj/item/weapon/beartrap,
-				prob(2);/obj/item/weapon/handcuffs)
+				prob(1);/obj/item/beartrap, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/handcuffs) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/random/maintenance/research
 /*Maintenance loot list. This one is for around medical areas*/
@@ -261,18 +261,18 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/research/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(3);/obj/item/device/analyzer/plant_analyzer,
-				prob(1);/obj/item/device/flash/synthetic,
-				prob(2);/obj/item/weapon/bucket_sensor,
-				prob(1);/obj/item/weapon/cell/device/weapon,
-				prob(5);/obj/item/weapon/storage/backpack/toxins,
-				prob(5);/obj/item/weapon/storage/backpack/satchel/tox,
-				prob(5);/obj/item/weapon/storage/backpack/messenger/tox,
-				prob(2);/obj/item/weapon/storage/excavation,
-				prob(1);/obj/item/weapon/storage/backpack/holding,
-				prob(3);/obj/item/weapon/storage/box/beakers,
-				prob(3);/obj/item/weapon/storage/box/syringes,
-				prob(3);/obj/item/weapon/storage/box/gloves,
+				prob(3);/obj/item/analyzer/plant_analyzer, // CHOMPEdit - Removal of obj/item/device
+				prob(1);/obj/item/flash/synthetic, // CHOMPEdit - Removal of obj/item/device
+				prob(2);/obj/item/bucket_sensor, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/toxins, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/satchel/tox, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/messenger/tox, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/excavation, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/backpack/holding, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/box/beakers, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/box/syringes, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/box/gloves, // CHOMPEdit - Removal of obj/item/weapon
 				prob(2);/obj/item/clothing/gloves/sterile/latex,
 				prob(4);/obj/item/clothing/glasses/science,
 				prob(3);/obj/item/clothing/glasses/material,
@@ -291,18 +291,18 @@ something, make sure it's not in one of the other lists.*/
 
 /obj/random/maintenance/cargo/item_to_spawn()
 	return pick(prob(320);/obj/random/maintenance/clean,
-				prob(3);/obj/item/device/flashlight/lantern,
-				prob(4);/obj/item/weapon/pickaxe,
-				prob(3);/obj/item/weapon/pickaxe/drill,
-				prob(5);/obj/item/weapon/storage/backpack/industrial,
-				prob(5);/obj/item/weapon/storage/backpack/satchel/norm,
-				prob(3);/obj/item/weapon/storage/backpack/dufflebag,
-				prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo,
-				prob(1);/obj/item/weapon/storage/toolbox/syndicate,
-				prob(1);/obj/item/weapon/storage/belt/utility/full,
-				prob(2);/obj/item/weapon/storage/belt/utility,
-				prob(4);/obj/item/device/toner,
-				prob(1);/obj/item/device/destTagger,
+				prob(3);/obj/item/flashlight/lantern, // CHOMPEdit - Removal of obj/item/device
+				prob(4);/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/pickaxe/drill, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/industrial, // CHOMPEdit - Removal of obj/item/weapon
+				prob(5);/obj/item/storage/backpack/satchel/norm, // CHOMPEdit - Removal of obj/item/weapon
+				prob(3);/obj/item/storage/backpack/dufflebag, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/backpack/dufflebag/syndie/ammo, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/toolbox/syndicate, // CHOMPEdit - Removal of obj/item/weapon
+				prob(1);/obj/item/storage/belt/utility/full, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/storage/belt/utility, // CHOMPEdit - Removal of obj/item/weapon
+				prob(4);/obj/item/toner, // CHOMPEdit - Removal of obj/item/device
+				prob(1);/obj/item/destTagger, // CHOMPEdit - Removal of obj/item/device
 				prob(3);/obj/item/clothing/glasses/material,
 				prob(3);/obj/item/clothing/head/soft/yellow,
 				prob(4);/obj/item/clothing/suit/storage/hazardvest,
@@ -313,5 +313,5 @@ something, make sure it's not in one of the other lists.*/
 				prob(2);/obj/item/clothing/accessory/storage/black_vest,
 				prob(2);/obj/item/clothing/accessory/storage/brown_vest,
 				prob(3);/obj/item/clothing/ears/earmuffs,
-				prob(1);/obj/item/weapon/beartrap,
-				prob(2);/obj/item/weapon/handcuffs,)
+				prob(1);/obj/item/beartrap, // CHOMPEdit - Removal of obj/item/weapon
+				prob(2);/obj/item/handcuffs,) // CHOMPEdit - Removal of obj/item/weapon

@@ -189,7 +189,7 @@
 	shuttle = "Salamander Wreckage"
 	known = FALSE
 
-/obj/item/weapon/paper/unity_notice
+/obj/item/paper/unity_notice // CHOMPEdit - Removal of obj/item/weapon
 	name = "hastily-scrawled missive"
 	info = {"<i>The writing on this scrap of paper is barely legible. Whoever wrote it was clearly in a hurry.</i><br>\
 <br>\

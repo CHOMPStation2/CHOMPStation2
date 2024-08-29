@@ -13,13 +13,13 @@
 
 #define isitem(D)		istype(D, /obj/item)
 
-#define isradio(A)		istype(A, /obj/item/device/radio)
+#define isradio(A)		istype(A, /obj/item/radio) // CHOMPEdit - Removal of obj/item/device
 
 #define isairlock(A)	istype(A, /obj/machinery/door/airlock)
 
 #define isorgan(A)		istype(A, /obj/item/organ/external)
 
-#define isstorage(A)	istype(A, /obj/item/weapon/storage)
+#define isstorage(A)	istype(A, /obj/item/storage) // CHOMPEdit - Removal of obj/item/weapon
 
 #define ismecha(A)      istype(A, /obj/mecha)
 

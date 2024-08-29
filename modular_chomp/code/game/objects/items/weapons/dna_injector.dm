@@ -1,16 +1,16 @@
 //Same as regular injector, but without the radiation
 //Using for events, set the block to the desired gene
 //Note, genetics code is incredibly scuffed, sometimes blocks just won't activate unless you do it multiple times????
-/obj/item/weapon/dnainjector/safe
+/obj/item/dnainjector/safe // CHOMPEdit - Removal of obj/item/weapon
 	desc = "A slightly safer DNA injector"
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/safe/New(var/block_type)
+/obj/item/dnainjector/safe/New(var/block_type) // CHOMPEdit - Removal of obj/item/weapon
 	block = block_type
 	..()
 
-/obj/item/weapon/dnainjector/safe/inject(mob/M as mob, mob/user as mob)
+/obj/item/dnainjector/safe/inject(mob/M as mob, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	/*
 	if (!(NOCLONE in M.mutations)) // prevents drained people from having their DNA changed
 		if (buf.types & DNA2_BUF_UI)

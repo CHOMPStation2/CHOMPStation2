@@ -4,7 +4,7 @@
 	name = "engine control console"
 	icon_keyboard = "tech_key"
 	icon_screen = "engines"
-	circuit = /obj/item/weapon/circuitboard/engine
+	circuit = /obj/item/circuitboard/engine // CHOMPEdit - Removal of obj/item/weapon
 
 // fancy sprite
 /obj/machinery/computer/ship/engines/adv

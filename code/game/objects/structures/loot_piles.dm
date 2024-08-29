@@ -140,29 +140,29 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	icon_states_to_use = list("junk_pile1", "junk_pile2", "junk_pile3", "junk_pile4", "junk_pile5")
 
 	common_loot = list(
-		/obj/item/device/flashlight/flare,
-		/obj/item/device/flashlight/glowstick,
-		/obj/item/device/flashlight/glowstick/blue,
-		/obj/item/device/flashlight/glowstick/orange,
-		/obj/item/device/flashlight/glowstick/red,
-		/obj/item/device/flashlight/glowstick/yellow,
-		/obj/item/device/flashlight/pen,
-		/obj/item/weapon/cell,
-		/obj/item/weapon/cell/device,
+		/obj/item/flashlight/flare, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/glowstick, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/glowstick/blue, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/glowstick/orange, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/glowstick/red, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/glowstick/yellow, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/pen, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/mask/gas,
 		/obj/item/clothing/mask/gas/clear, //Chompadd: Proper Implementation of clear gasmasks
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/mask/breath,
-		/obj/item/weapon/reagent_containers/glass/rag,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-		/obj/item/weapon/storage/secure/briefcase,
-		/obj/item/weapon/storage/briefcase,
-		/obj/item/weapon/storage/backpack,
-		/obj/item/weapon/storage/backpack/satchel/norm,
-		/obj/item/weapon/storage/backpack/satchel,
-		/obj/item/weapon/storage/backpack/dufflebag,
-		/obj/item/weapon/storage/box,
-		/obj/item/weapon/storage/wallet,
+		/obj/item/reagent_containers/glass/rag, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/secure/briefcase, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/briefcase, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/backpack, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/backpack/satchel/norm, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/backpack/satchel, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/backpack/dufflebag, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/wallet, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/shoes/galoshes,
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/shoes/laceup,
@@ -198,29 +198,29 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/clothing/under/pants/camo,
 		/obj/item/clothing/under/harness,
 		/obj/item/clothing/accessory/storage/webbing,
-		/obj/item/weapon/spacecash/c1,
-		/obj/item/weapon/spacecash/c5,
-		/obj/item/weapon/spacecash/c10,
-		/obj/item/weapon/spacecash/c20,
-		/obj/item/weapon/camera_assembly,
+		/obj/item/spacecash/c1, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c5, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c10, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/camera_assembly, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/suit/caution,
 		/obj/item/clothing/head/cone,
-		/obj/item/weapon/card/emag_broken,
-		/obj/item/device/camera,
-		/obj/item/device/pda,
-		/obj/item/device/radio/headset,
-		/obj/item/device/paicard,
-		/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose
+		/obj/item/card/emag_broken, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/paicard, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	uncommon_loot = list(
 		/obj/item/clothing/shoes/syndigaloshes,
 		/obj/item/clothing/gloves/yellow,
 		/obj/item/clothing/under/tactical,
-		/obj/item/weapon/beartrap,
+		/obj/item/beartrap, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/suit/storage/vest/press,
-		/obj/item/weapon/material/knife/tacknife,
-		/obj/item/weapon/material/butterfly/switchblade
+		/obj/item/material/knife/tacknife, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/butterfly/switchblade // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	rare_loot = list(
@@ -256,9 +256,9 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/trash/tray,
 		/obj/item/trash/unajerky,
 		/obj/item/trash/waffles,
-		/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat,
-		/obj/item/weapon/reagent_containers/food/snacks/mysterysoup,
-		/obj/item/weapon/reagent_containers/food/snacks/old/hotdog,
+		/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/mysterysoup, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/old/hotdog, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/pizzabox/old,
 		/obj/item/ammo_casing/spent,
 		/obj/item/stack/rods{amount = 5},
@@ -266,16 +266,16 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/stack/material/cardboard{amount = 5},
 		/obj/item/poster,
 		/obj/item/poster/custom,
-		/obj/item/weapon/newspaper,
-		/obj/item/weapon/paper/crumpled,
-		/obj/item/weapon/paper/crumpled/bloody
+		/obj/item/newspaper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/paper/crumpled, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/paper/crumpled/bloody // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	uncommon_loot = list(
-		/obj/item/weapon/reagent_containers/syringe/steroid,
-		/obj/item/weapon/storage/pill_bottle/zoom,
-		/obj/item/weapon/storage/pill_bottle/happy,
-		/obj/item/weapon/storage/pill_bottle/paracetamol //VOREStation Edit
+		/obj/item/reagent_containers/syringe/steroid, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/pill_bottle/zoom, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/pill_bottle/happy, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/pill_bottle/paracetamol //VOREStation Edit // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 // Contains loads of different types of boxes, which may have items inside!
@@ -286,44 +286,44 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	icon_states_to_use = list("boxfort")
 
 	common_loot = list(
-		/obj/item/weapon/storage/box,
-		/obj/item/weapon/storage/box/beakers,
-		/obj/item/weapon/storage/box/botanydisk,
-		/obj/item/weapon/storage/box/cups,
-		/obj/item/weapon/storage/box/disks,
-		/obj/item/weapon/storage/box/donkpockets,
-		/obj/item/weapon/storage/box/donut,
-		/obj/item/weapon/storage/box/donut/empty,
-		/obj/item/weapon/storage/box/evidence,
-		/obj/item/weapon/storage/box/lights/mixed,
-		/obj/item/weapon/storage/box/lights/tubes,
-		/obj/item/weapon/storage/box/lights/bulbs,
-		/obj/item/weapon/storage/box/injectors,
-		/obj/item/weapon/storage/box/masks,
-		/obj/item/weapon/storage/box/ids,
-		/obj/item/weapon/storage/box/mousetraps,
-		/obj/item/weapon/storage/box/syringes,
-		/obj/item/weapon/storage/box/survival,
-		/obj/item/weapon/storage/box/gloves,
-		/obj/item/weapon/storage/box/PDAs
+		/obj/item/storage/box, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/beakers, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/botanydisk, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/cups, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/disks, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/donkpockets, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/donut, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/donut/empty, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/evidence, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/lights/mixed, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/lights/tubes, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/lights/bulbs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/injectors, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/masks, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/ids, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/mousetraps, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/syringes, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/survival, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/gloves, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/PDAs // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	uncommon_loot = list(
-		/obj/item/weapon/storage/box/sinpockets,
+		/obj/item/storage/box/sinpockets, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/ammo_magazine/ammo_box/b12g/practice,
 		/obj/item/ammo_magazine/ammo_box/b12g/blank,
-		/obj/item/weapon/storage/box/smokes,
-		/obj/item/weapon/storage/box/metalfoam,
-		/obj/item/weapon/storage/box/handcuffs,
-		/obj/item/weapon/storage/box/seccarts
+		/obj/item/storage/box/smokes, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/metalfoam, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/handcuffs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/seccarts // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	rare_loot = list(
-		/obj/item/weapon/storage/box/flashbangs,
-		/obj/item/weapon/storage/box/empslite,
+		/obj/item/storage/box/flashbangs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/empslite, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/ammo_magazine/ammo_box/b12g/flash,
 		/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
-		/obj/item/weapon/storage/box/teargas
+		/obj/item/storage/box/teargas // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 // One of the more useful maint piles, contains electrical components.
@@ -334,60 +334,60 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	icon_states_to_use = list("technical_pile1", "technical_pile2", "technical_pile3")
 
 	common_loot = list(
-		/obj/item/weapon/stock_parts/gear,
-		/obj/item/weapon/stock_parts/console_screen,
-		/obj/item/weapon/stock_parts/spring,
-		/obj/item/weapon/stock_parts/capacitor,
-		/obj/item/weapon/stock_parts/capacitor/adv,
-		/obj/item/weapon/stock_parts/capacitor/super,
-		/obj/item/weapon/stock_parts/manipulator,
-		/obj/item/weapon/stock_parts/manipulator/nano,
-		/obj/item/weapon/stock_parts/manipulator/pico,
-		/obj/item/weapon/stock_parts/matter_bin,
-		/obj/item/weapon/stock_parts/matter_bin/adv,
-		/obj/item/weapon/stock_parts/matter_bin/super,
-		/obj/item/weapon/stock_parts/scanning_module,
-		/obj/item/weapon/stock_parts/scanning_module/adv,
-		/obj/item/weapon/stock_parts/scanning_module/phasic,
-		/obj/item/weapon/stock_parts/subspace/amplifier,
-		/obj/item/weapon/stock_parts/subspace/analyzer,
-		/obj/item/weapon/stock_parts/subspace/ansible,
-		/obj/item/weapon/stock_parts/subspace/crystal,
-		/obj/item/weapon/stock_parts/subspace/sub_filter,
-		/obj/item/weapon/stock_parts/subspace/transmitter,
-		/obj/item/weapon/stock_parts/subspace/treatment,
+		/obj/item/stock_parts/gear, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/console_screen, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/spring, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor/adv, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor/super, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator/nano, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator/pico, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin/adv, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin/super, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module/adv, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module/phasic, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/amplifier, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/analyzer, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/ansible, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/crystal, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/sub_filter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/transmitter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/treatment, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/frame,
 		/obj/item/broken_device/random,
 		/obj/item/borg/upgrade/utility/restart,
-		/obj/item/weapon/cell,
-		/obj/item/weapon/cell/high,
-		/obj/item/weapon/cell/device,
-		/obj/item/weapon/circuitboard/broken,
-		/obj/item/weapon/circuitboard/arcade,
-		/obj/item/weapon/circuitboard/autolathe,
-		/obj/item/weapon/circuitboard/atmos_alert,
-		/obj/item/weapon/circuitboard/airalarm,
-		/obj/item/weapon/circuitboard/fax,
-		/obj/item/weapon/circuitboard/jukebox,
-		/obj/item/weapon/circuitboard/batteryrack,
-		/obj/item/weapon/circuitboard/message_monitor,
-		/obj/item/weapon/circuitboard/rcon_console,
-		/obj/item/weapon/smes_coil,
-		/obj/item/weapon/cartridge/engineering,
-		/obj/item/device/analyzer,
-		/obj/item/device/healthanalyzer,
-		/obj/item/device/robotanalyzer,
-		/obj/item/device/lightreplacer,
-		/obj/item/device/radio,
-		/obj/item/device/hailer,
-		/obj/item/device/gps,
-		/obj/item/device/geiger,
-		/obj/item/device/mass_spectrometer,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/weapon/mining_scanner/advanced,
-		/obj/item/device/multitool,
+		/obj/item/cell, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/high, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/broken, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/arcade, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/autolathe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/atmos_alert, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/airalarm, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/fax, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/jukebox, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/batteryrack, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/message_monitor, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/rcon_console, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/smes_coil, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cartridge/engineering, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/analyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/robotanalyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/geiger, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/mass_spectrometer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/mining_scanner/advanced, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/mecha_parts/mecha_equipment/generator,
 		/obj/item/mecha_parts/mecha_equipment/tool/cable_layer,
 		/obj/item/mecha_parts/mecha_equipment/tool/drill,
@@ -404,18 +404,18 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	)
 
 	uncommon_loot = list(
-		/obj/item/weapon/cell/super,
-		/obj/item/weapon/cell/device/weapon,
-		/obj/item/weapon/circuitboard/security,
-		/obj/item/weapon/circuitboard/crew,
-		/obj/item/weapon/aiModule/reset,
-		/obj/item/weapon/smes_coil/super_capacity,
-		/obj/item/weapon/smes_coil/super_io,
-		/obj/item/weapon/cartridge/captain,
-		/obj/item/weapon/disk/integrated_circuit/upgrade/advanced,
-		/obj/item/device/tvcamera,
-		/obj/item/device/universal_translator,
-		/obj/item/device/aicard,
+		/obj/item/cell/super, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/security, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/circuitboard/crew, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/aiModule/reset, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/smes_coil/super_capacity, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/smes_coil/super_io, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cartridge/captain, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/disk/integrated_circuit/upgrade/advanced, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tvcamera, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/universal_translator, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/aicard, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/borg/upgrade/advanced/jetpack,
 		/obj/item/borg/upgrade/advanced/advhealth,
 		/obj/item/borg/upgrade/basic/vtec,
@@ -435,12 +435,12 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	)
 
 	rare_loot = list(
-		/obj/item/weapon/cell/hyper,
-		/obj/item/weapon/aiModule/freeform,
-		/obj/item/weapon/aiModule/asimov,
-		/obj/item/weapon/aiModule/paladin,
-		/obj/item/weapon/aiModule/safeguard,
-		/obj/item/weapon/disposable_teleporter,
+		/obj/item/cell/hyper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/aiModule/freeform, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/aiModule/asimov, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/aiModule/paladin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/aiModule/safeguard, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/disposable_teleporter, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay
 	)
 
@@ -467,44 +467,44 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 // May contain alien tools.
 /obj/structure/loot_pile/surface/alien/engineering
 	uncommon_loot = list(
-		/obj/item/device/multitool/alien,
+		/obj/item/multitool/alien, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/stack/cable_coil/alien,
-		/obj/item/weapon/tool/crowbar/alien,
-		/obj/item/weapon/tool/screwdriver/alien,
-		/obj/item/weapon/weldingtool/alien,
-		/obj/item/weapon/tool/wirecutters/alien,
-		/obj/item/weapon/tool/wrench/alien
+		/obj/item/tool/crowbar/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench/alien // CHOMPEdit - Removal of obj/item/weapon
 	)
 	rare_loot = list(
-		/obj/item/weapon/storage/belt/utility/alien/full
+		/obj/item/storage/belt/utility/alien/full // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 // May contain alien surgery equipment or powerful medication.
 /obj/structure/loot_pile/surface/alien/medical
 	uncommon_loot = list(
-		/obj/item/weapon/surgical/FixOVein/alien,
-		/obj/item/weapon/surgical/bone_clamp/alien,
-		/obj/item/weapon/surgical/cautery/alien,
-		/obj/item/weapon/surgical/circular_saw/alien,
-		/obj/item/weapon/surgical/hemostat/alien,
-		/obj/item/weapon/surgical/retractor/alien,
-		/obj/item/weapon/surgical/scalpel/alien,
-		/obj/item/weapon/surgical/surgicaldrill/alien
+		/obj/item/surgical/FixOVein/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/bone_clamp/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/cautery/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/circular_saw/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/hemostat/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/retractor/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/scalpel/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/surgicaldrill/alien // CHOMPEdit - Removal of obj/item/weapon
 	)
 	rare_loot = list(
-		/obj/item/weapon/storage/belt/medical/alien
+		/obj/item/storage/belt/medical/alien // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 // May contain powercells or alien weaponry.
 /obj/structure/loot_pile/surface/alien/security
 	uncommon_loot = list(
-		/obj/item/weapon/cell/device/weapon/recharge/alien,
+		/obj/item/cell/device/weapon/recharge/alien, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/suit/armor/alien,
 		/obj/item/clothing/head/helmet/alien
 	)
 	rare_loot = list(
 		/obj/item/clothing/suit/armor/alien/tank,
-		/obj/item/weapon/gun/energy/alien
+		/obj/item/gun/energy/alien // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 // The pile found at the very end, and as such has the best loot.
@@ -513,29 +513,29 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	chance_rare = 10
 
 	common_loot = list(
-		/obj/item/device/multitool/alien,
+		/obj/item/multitool/alien, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/stack/cable_coil/alien,
-		/obj/item/weapon/tool/crowbar/alien,
-		/obj/item/weapon/tool/screwdriver/alien,
-		/obj/item/weapon/weldingtool/alien,
-		/obj/item/weapon/tool/wirecutters/alien,
-		/obj/item/weapon/tool/wrench/alien,
-		/obj/item/weapon/surgical/FixOVein/alien,
-		/obj/item/weapon/surgical/bone_clamp/alien,
-		/obj/item/weapon/surgical/cautery/alien,
-		/obj/item/weapon/surgical/circular_saw/alien,
-		/obj/item/weapon/surgical/hemostat/alien,
-		/obj/item/weapon/surgical/retractor/alien,
-		/obj/item/weapon/surgical/scalpel/alien,
-		/obj/item/weapon/surgical/surgicaldrill/alien,
-		/obj/item/weapon/cell/device/weapon/recharge/alien,
+		/obj/item/tool/crowbar/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/FixOVein/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/bone_clamp/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/cautery/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/circular_saw/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/hemostat/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/retractor/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/scalpel/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/surgicaldrill/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device/weapon/recharge/alien, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/suit/armor/alien,
 		/obj/item/clothing/head/helmet/alien,
-		/obj/item/weapon/gun/energy/alien
+		/obj/item/gun/energy/alien // CHOMPEdit - Removal of obj/item/weapon
 	)
 	uncommon_loot = list(
-		/obj/item/weapon/storage/belt/medical/alien,
-		/obj/item/weapon/storage/belt/utility/alien/full,
+		/obj/item/storage/belt/medical/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/belt/utility/alien/full, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/suit/armor/alien/tank,
 		/obj/item/clothing/head/helmet/alien/tank,
 	)
@@ -548,26 +548,26 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
     delete_on_depletion = TRUE
 
     common_loot = list(
-        /obj/item/weapon/bone,
-        /obj/item/weapon/bone/skull,
-        /obj/item/weapon/bone/skull/tajaran,
-        /obj/item/weapon/bone/skull/unathi,
-        /obj/item/weapon/bone/skull/unknown,
-        /obj/item/weapon/bone/leg,
-        /obj/item/weapon/bone/arm,
-        /obj/item/weapon/bone/ribs,
+        /obj/item/bone, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/bone/skull, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/bone/skull/tajaran, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/bone/skull/unathi, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/bone/skull/unknown, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/bone/leg, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/bone/arm, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/bone/ribs, // CHOMPEdit - Removal of obj/item/weapon
     )
     uncommon_loot = list(
-        /obj/item/weapon/coin/gold,
-        /obj/item/weapon/coin/silver,
-        /obj/item/weapon/deck/tarot,
-        /obj/item/weapon/flame/lighter/zippo/gold,
-        /obj/item/weapon/flame/lighter/zippo/black,
-        /obj/item/weapon/material/knife/tacknife/survival,
-        /obj/item/weapon/material/knife/tacknife/combatknife,
-        /obj/item/weapon/material/knife/machete/hatchet,
-        /obj/item/weapon/material/knife/butch,
-        /obj/item/weapon/storage/wallet/random,
+        /obj/item/coin/gold, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/coin/silver, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/deck/tarot, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/flame/lighter/zippo/gold, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/flame/lighter/zippo/black, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/material/knife/tacknife/survival, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/material/knife/tacknife/combatknife, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/material/knife/machete/hatchet, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/material/knife/butch, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/storage/wallet/random, // CHOMPEdit - Removal of obj/item/weapon
         /obj/item/clothing/accessory/bracelet/material/gold,
         /obj/item/clothing/accessory/bracelet/material/silver,
         /obj/item/clothing/accessory/locket,
@@ -580,10 +580,10 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
         /obj/item/clothing/under/sl_suit
     )
     rare_loot = list(
-        /obj/item/weapon/storage/belt/utility/alien/full,
-        /obj/item/weapon/gun/projectile/revolver,
-        /obj/item/weapon/gun/projectile/sec,
-        /obj/item/weapon/gun/launcher/crossbow
+        /obj/item/storage/belt/utility/alien/full, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/gun/projectile/revolver, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/gun/projectile/sec, // CHOMPEdit - Removal of obj/item/weapon
+        /obj/item/gun/launcher/crossbow // CHOMPEdit - Removal of obj/item/weapon
     )
 
 // Subtype for mecha and mecha accessories. These might not always be on the surface.
@@ -651,9 +651,9 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/mecha_parts/part/ripley_right_arm,
 		/obj/item/mecha_parts/part/ripley_left_leg,
 		/obj/item/mecha_parts/part/ripley_right_leg,
-		/obj/item/device/kit/paint/ripley,
-		/obj/item/device/kit/paint/ripley/flames_red,
-		/obj/item/device/kit/paint/ripley/flames_blue
+		/obj/item/kit/paint/ripley, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/kit/paint/ripley/flames_red, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/kit/paint/ripley/flames_blue // CHOMPEdit - Removal of obj/item/device
 		)
 
 	uncommon_loot = list(
@@ -694,7 +694,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/mecha_parts/part/ripley_right_arm,
 		/obj/item/mecha_parts/part/ripley_left_leg,
 		/obj/item/mecha_parts/part/ripley_right_leg,
-		/obj/item/device/kit/paint/ripley/death
+		/obj/item/kit/paint/ripley/death // CHOMPEdit - Removal of obj/item/device
 		)
 
 	uncommon_loot = list(
@@ -781,9 +781,9 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade,
 		/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser,
 		/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser,
-		/obj/item/device/kit/paint/gygax,
-		/obj/item/device/kit/paint/gygax/darkgygax,
-		/obj/item/device/kit/paint/gygax/recitence
+		/obj/item/kit/paint/gygax, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/kit/paint/gygax/darkgygax, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/kit/paint/gygax/recitence // CHOMPEdit - Removal of obj/item/device
 		)
 
 	rare_loot = list(
@@ -834,9 +834,9 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade,
 		/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser,
 		/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
-		/obj/item/device/kit/paint/durand,
-		/obj/item/device/kit/paint/durand/seraph,
-		/obj/item/device/kit/paint/durand/phazon
+		/obj/item/kit/paint/durand, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/kit/paint/durand/seraph, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/kit/paint/durand/phazon // CHOMPEdit - Removal of obj/item/device
 		)
 
 	rare_loot = list(
@@ -868,7 +868,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	icon_state = "phazon-broken"
 
 	common_loot = list(
-		/obj/item/weapon/storage/toolbox/syndicate/powertools,
+		/obj/item/storage/toolbox/syndicate/powertools, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/material/plasteel{amount = 20},
 		/obj/item/stack/material/durasteel{amount = 10},
 		/obj/item/mecha_parts/chassis/phazon,
@@ -910,12 +910,12 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/stack/material/steel{amount = 25},
 		/obj/item/stack/material/glass{amount = 10},
 		/obj/item/stack/material/plasteel{amount = 5},
-		/obj/item/weapon/cell,
-		/obj/item/weapon/material/shard
+		/obj/item/cell, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/shard // CHOMPEdit - Removal of obj/item/weapon
 		)
 
 	uncommon_loot = list(
-		/obj/item/weapon/cell/high,
+		/obj/item/cell/high, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/robot_parts/robot_component/actuator,
 		/obj/item/robot_parts/robot_component/armour,
 		/obj/item/robot_parts/robot_component/binary_communication_device,
@@ -925,7 +925,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		)
 
 	rare_loot = list(
-		/obj/item/weapon/cell/super,
+		/obj/item/cell/super, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/borg/upgrade/utility/restart,
 		/obj/item/borg/upgrade/advanced/jetpack,
 		/obj/item/borg/upgrade/restricted/tasercooler,

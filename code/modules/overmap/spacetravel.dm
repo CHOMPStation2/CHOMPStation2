@@ -66,7 +66,7 @@
 
 	return TRUE
 
-/obj/item/device/uav/lost_in_space()
+/obj/item/uav/lost_in_space() // CHOMPEdit - Removal of obj/item/device
 	if(state == 1)
 		return FALSE
 	return ..()

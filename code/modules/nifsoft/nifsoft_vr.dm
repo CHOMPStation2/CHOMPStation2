@@ -1,5 +1,5 @@
 // Pilot Disk //
-/obj/item/weapon/disk/nifsoft/pilot
+/obj/item/disk/nifsoft/pilot // CHOMPEdit - Removal of obj/item/weapon
 	name = "NIFSoft Uploader - Pilot"
 	desc = "Contains free NIFSofts useful for pilot members.\n\
 	It has a small label: \n\
@@ -16,13 +16,13 @@
 /datum/nifsoft/package/pilot_synth
 	software = list(/datum/nifsoft/pressure,/datum/nifsoft/heatsinks)
 
-/obj/item/weapon/storage/box/nifsofts_pilot
+/obj/item/storage/box/nifsofts_pilot // CHOMPEdit - Removal of obj/item/weapon
 	name = "pilot nifsoft uploaders"
 	desc = "A box of free nifsofts for pilot employees."
 	icon = 'icons/obj/boxes_vr.dmi'
 	icon_state = "nifsoft_kit_pilot"
 
-/obj/item/weapon/storage/box/nifsofts_pilot/New()
+/obj/item/storage/box/nifsofts_pilot/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	for(var/i = 0 to 7)
-		new /obj/item/weapon/disk/nifsoft/pilot(src)
+		new /obj/item/disk/nifsoft/pilot(src) // CHOMPEdit - Removal of obj/item/weapon

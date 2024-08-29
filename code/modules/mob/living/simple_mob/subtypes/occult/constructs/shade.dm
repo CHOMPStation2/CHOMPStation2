@@ -30,11 +30,11 @@
 
 	universal_speak = 1
 
-	loot_list = list(/obj/item/weapon/ectoplasm = 100)
+	loot_list = list(/obj/item/ectoplasm = 100) // CHOMPEdit - Removal of obj/item/weapon
 
 /mob/living/simple_mob/construct/shade/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/device/soulstone))
-		var/obj/item/device/soulstone/S = O;
+	if(istype(O, /obj/item/soulstone)) // CHOMPEdit - Removal of obj/item/device
+		var/obj/item/soulstone/S = O; // CHOMPEdit - Removal of obj/item/device
 		S.transfer_soul("SHADE", src, user)
 		return
 	..()

@@ -6,7 +6,7 @@
 	var/name = "Prototype"
 	var/desc = "Contact a dev!"
 
-	var/obj/item/device/nif/nif	//The NIF that the software is stored in
+	var/obj/item/nif/nif	//The NIF that the software is stored in // CHOMPEdit - Removal of obj/item/device
 
 	var/list_pos				// List position in the nifsoft list
 
@@ -47,7 +47,7 @@
 	var/list/incompatible_with = null // List of NIFSofts that are disabled when this one is enabled
 
 //Constructor accepts the NIF it's being loaded into
-/datum/nifsoft/New(var/obj/item/device/nif/nif_load)
+/datum/nifsoft/New(var/obj/item/nif/nif_load) // CHOMPEdit - Removal of obj/item/device
 	ASSERT(nif_load)
 
 	nif = nif_load
@@ -166,7 +166,7 @@
 	wear = 0 //Packages don't cause wear themselves, the software does
 
 //Constructor accepts a NIF and loads all the software
-/datum/nifsoft/package/New(var/obj/item/device/nif/nif_load)
+/datum/nifsoft/package/New(var/obj/item/nif/nif_load) // CHOMPEdit - Removal of obj/item/device
 	ASSERT(nif_load)
 
 	for(var/P in software)
@@ -182,7 +182,7 @@
 
 /////////////////
 // A NIFSoft Uploader
-/obj/item/weapon/disk/nifsoft
+/obj/item/disk/nifsoft // CHOMPEdit - Removal of obj/item/weapon
 	name = "NIFSoft Uploader"
 	desc = "It has a small label: \n\
 	\"Portable NIFSoft Installation Media. \n\
@@ -198,7 +198,7 @@
 	var/datum/nifsoft/stored_organic = null
 	var/datum/nifsoft/stored_synthetic = null
 
-/obj/item/weapon/disk/nifsoft/afterattack(var/A, mob/user, flag, params)
+/obj/item/disk/nifsoft/afterattack(var/A, mob/user, flag, params) // CHOMPEdit - Removal of obj/item/weapon
 	if(!in_range(user, A))
 		return
 
@@ -240,12 +240,12 @@
 		update_icon()
 
 //So disks can pass fancier stuff.
-/obj/item/weapon/disk/nifsoft/proc/extra_params()
+/obj/item/disk/nifsoft/proc/extra_params() // CHOMPEdit - Removal of obj/item/weapon
 	return null
 
 
 // Compliance Disk //
-/obj/item/weapon/disk/nifsoft/compliance
+/obj/item/disk/nifsoft/compliance // CHOMPEdit - Removal of obj/item/weapon
 	name = "NIFSoft Uploader (Compliance)"
 	desc = "Wow, adding laws to people? That seems illegal. It probably is. Okay, it really is."
 	icon_state = "compliance"
@@ -258,7 +258,7 @@
 	stored_synthetic = /datum/nifsoft/compliance
 	var/laws
 
-/obj/item/weapon/disk/nifsoft/compliance/afterattack(var/A, mob/user, flag, params)
+/obj/item/disk/nifsoft/compliance/afterattack(var/A, mob/user, flag, params) // CHOMPEdit - Removal of obj/item/weapon
 	if(!ishuman(A))
 		return
 	if(!laws)
@@ -266,18 +266,18 @@
 		return
 	..(A,user,flag,params)
 
-/obj/item/weapon/disk/nifsoft/compliance/attack_self(mob/user)
+/obj/item/disk/nifsoft/compliance/attack_self(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	var/newlaws = tgui_input_text(user, "Please Input Laws", "Compliance Laws", laws, multiline = TRUE, prevent_enter = TRUE)
 	newlaws = sanitize(newlaws,2048)
 	if(newlaws)
 		to_chat(user,"<span class='filter_notice'>You set the laws to: <br><span class='notice'>[newlaws]</span></span>")
 		laws = newlaws
 
-/obj/item/weapon/disk/nifsoft/compliance/extra_params()
+/obj/item/disk/nifsoft/compliance/extra_params() // CHOMPEdit - Removal of obj/item/weapon
 	return laws
 
 // Security Disk //
-/obj/item/weapon/disk/nifsoft/security
+/obj/item/disk/nifsoft/security // CHOMPEdit - Removal of obj/item/weapon
 	name = "NIFSoft Uploader - Security"
 	desc = "Contains free NIFSofts useful for security members.\n\
 	It has a small label: \n\
@@ -291,19 +291,19 @@
 /datum/nifsoft/package/security
 	software = list(/datum/nifsoft/ar_sec,/datum/nifsoft/flashprot)
 
-/obj/item/weapon/storage/box/nifsofts_security
+/obj/item/storage/box/nifsofts_security // CHOMPEdit - Removal of obj/item/weapon
 	name = "security nifsoft uploaders"
 	desc = "A box of free nifsofts for security employees."
 	icon = 'icons/obj/boxes.dmi'
 	icon_state = "nifsoft_kit_sec"
 
-/obj/item/weapon/storage/box/nifsofts_security/New()
+/obj/item/storage/box/nifsofts_security/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	for(var/i = 0 to 7)
-		new /obj/item/weapon/disk/nifsoft/security(src)
+		new /obj/item/disk/nifsoft/security(src) // CHOMPEdit - Removal of obj/item/weapon
 
 // Engineering Disk //
-/obj/item/weapon/disk/nifsoft/engineering
+/obj/item/disk/nifsoft/engineering // CHOMPEdit - Removal of obj/item/weapon
 	name = "NIFSoft Uploader - Engineering"
 	desc = "Contains free NIFSofts useful for engineering members.\n\
 	It has a small label: \n\
@@ -317,19 +317,19 @@
 /datum/nifsoft/package/engineering
 	software = list(/datum/nifsoft/ar_eng,/datum/nifsoft/alarmmonitor,/datum/nifsoft/uvblocker)
 
-/obj/item/weapon/storage/box/nifsofts_engineering
+/obj/item/storage/box/nifsofts_engineering // CHOMPEdit - Removal of obj/item/weapon
 	name = "engineering nifsoft uploaders"
 	desc = "A box of free nifsofts for engineering employees."
 	icon = 'icons/obj/boxes.dmi'
 	icon_state = "nifsoft_kit_eng"
 
-/obj/item/weapon/storage/box/nifsofts_engineering/New()
+/obj/item/storage/box/nifsofts_engineering/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	for(var/i = 0 to 7)
-		new /obj/item/weapon/disk/nifsoft/engineering(src)
+		new /obj/item/disk/nifsoft/engineering(src) // CHOMPEdit - Removal of obj/item/weapon
 
 // Medical Disk //
-/obj/item/weapon/disk/nifsoft/medical
+/obj/item/disk/nifsoft/medical // CHOMPEdit - Removal of obj/item/weapon
 	name = "NIFSoft Uploader - Medical"
 	desc = "Contains free NIFSofts useful for medical members.\n\
 	It has a small label: \n\
@@ -342,19 +342,19 @@
 /datum/nifsoft/package/medical
 	software = list(/datum/nifsoft/ar_med,/datum/nifsoft/crewmonitor)
 
-/obj/item/weapon/storage/box/nifsofts_medical
+/obj/item/storage/box/nifsofts_medical // CHOMPEdit - Removal of obj/item/weapon
 	name = "medical nifsoft uploaders"
 	desc = "A box of free nifsofts for medical employees."
 	icon = 'icons/obj/boxes.dmi'
 	icon_state = "nifsoft_kit_med"
 
-/obj/item/weapon/storage/box/nifsofts_medical/New()
+/obj/item/storage/box/nifsofts_medical/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	for(var/i = 0 to 7)
-		new /obj/item/weapon/disk/nifsoft/medical(src)
+		new /obj/item/disk/nifsoft/medical(src) // CHOMPEdit - Removal of obj/item/weapon
 
 // Mining Disk //
-/obj/item/weapon/disk/nifsoft/mining
+/obj/item/disk/nifsoft/mining // CHOMPEdit - Removal of obj/item/weapon
 	name = "NIFSoft Uploader - Mining"
 	desc = "Contains free NIFSofts useful for mining members.\n\
 	It has a small label: \n\
@@ -371,19 +371,19 @@
 /datum/nifsoft/package/mining_synth
 	software = list(/datum/nifsoft/material,/datum/nifsoft/pressure,/datum/nifsoft/heatsinks)
 
-/obj/item/weapon/storage/box/nifsofts_mining
+/obj/item/storage/box/nifsofts_mining // CHOMPEdit - Removal of obj/item/weapon
 	name = "mining nifsoft uploaders"
 	desc = "A box of free nifsofts for mining employees."
 	icon = 'icons/obj/boxes.dmi'
 	icon_state = "nifsoft_kit_mining"
 
-/obj/item/weapon/storage/box/nifsofts_mining/New()
+/obj/item/storage/box/nifsofts_mining/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	for(var/i = 0 to 7)
-		new /obj/item/weapon/disk/nifsoft/mining(src)
+		new /obj/item/disk/nifsoft/mining(src) // CHOMPEdit - Removal of obj/item/weapon
 
 // Mass Alteration Disk //
-/obj/item/weapon/disk/nifsoft/sizechange
+/obj/item/disk/nifsoft/sizechange // CHOMPEdit - Removal of obj/item/weapon
 	name = "NIFSoft Uploader - Mass Alteration"
 	desc = "Contains free NIFSofts for special purposes.\n\
 	It has a small label: \n\
@@ -394,13 +394,13 @@
 	stored_organic = /datum/nifsoft/sizechange
 	stored_synthetic = /datum/nifsoft/sizechange
 
-/obj/item/weapon/storage/box/nifsofts_sizechange
+/obj/item/storage/box/nifsofts_sizechange // CHOMPEdit - Removal of obj/item/weapon
 	name = "mass alteration nifsoft uploaders"
 	desc = "A box of free nifsofts for special purposes."
 	icon = 'icons/obj/boxes.dmi'
 	icon_state = "nifsoft_kit_mining"
 
-/obj/item/weapon/storage/box/nifsofts_sizechange/New()
+/obj/item/storage/box/nifsofts_sizechange/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	for(var/i = 0 to 7)
-		new /obj/item/weapon/disk/nifsoft/sizechange(src)
+		new /obj/item/disk/nifsoft/sizechange(src) // CHOMPEdit - Removal of obj/item/weapon

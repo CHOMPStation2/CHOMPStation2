@@ -43,7 +43,7 @@ var/list/_cat_default_emotes = list(
 	response_disarm = "gently pushes aside"
 	response_harm   = "kicks"
 
-	holder_type = /obj/item/weapon/holder/cat
+	holder_type = /obj/item/holder/cat // CHOMPEdit - Removal of obj/item/weapon
 	mob_size = MOB_SMALL
 
 	has_langs = list(LANGUAGE_ANIMAL)
@@ -136,7 +136,7 @@ var/list/_cat_default_emotes = list(
 	icon_state = "cat"
 	item_state = "cat"
 	named = TRUE
-	holder_type = /obj/item/weapon/holder/cat/runtime
+	holder_type = /obj/item/holder/cat/runtime // CHOMPEdit - Removal of obj/item/weapon
 	makes_dirt = 0 //Vorestation Edit
 
 /mob/living/simple_mob/animal/passive/cat/kitten
@@ -145,7 +145,7 @@ var/list/_cat_default_emotes = list(
 	icon_state = "kitten"
 	item_state = "kitten"
 	gender = NEUTER
-	holder_type = /obj/item/weapon/holder/cat/kitten //VOREStation Edit
+	holder_type = /obj/item/holder/cat/kitten //VOREStation Edit // CHOMPEdit - Removal of obj/item/weapon
 
 /mob/living/simple_mob/animal/passive/cat/kitten/Initialize()
 	if(gender == NEUTER)
@@ -163,7 +163,7 @@ var/list/_cat_default_emotes = list(
 	icon_state = "cat3"
 	item_state = "cat3"
 	named = TRUE
-	holder_type = /obj/item/weapon/holder/cat/fluff/bones
+	holder_type = /obj/item/holder/cat/fluff/bones // CHOMPEdit - Removal of obj/item/weapon
 
 // SPARKLY
 /mob/living/simple_mob/animal/passive/cat/bluespace
@@ -175,7 +175,7 @@ var/list/_cat_default_emotes = list(
 	icon_rest = null
 	icon_dead = null
 	makes_dirt = 0
-	holder_type = /obj/item/weapon/holder/cat/bluespace
+	holder_type = /obj/item/holder/cat/bluespace // CHOMPEdit - Removal of obj/item/weapon
 
 /mob/living/simple_mob/animal/passive/cat/bluespace/death()
 	animate(src, alpha = 0, color = "#0000FF", time = 0.5 SECOND)
@@ -192,7 +192,7 @@ var/list/_cat_default_emotes = list(
 	icon_dead = "breadcat_dead"
 	//icon_sit = "breadcat_sit"
 	makes_dirt = 0
-	holder_type = /obj/item/weapon/holder/cat/breadcat
+	holder_type = /obj/item/holder/cat/breadcat // CHOMPEdit - Removal of obj/item/weapon
 
 /mob/living/simple_mob/animal/passive/cat/original
 	name = "original cat"
@@ -204,7 +204,7 @@ var/list/_cat_default_emotes = list(
 	icon_dead = "original_dead"
 	//icon_sit = "original_sit"
 	makes_dirt = 0
-	holder_type = /obj/item/weapon/holder/cat/original
+	holder_type = /obj/item/holder/cat/original // CHOMPEdit - Removal of obj/item/weapon
 
 /mob/living/simple_mob/animal/passive/cat/cak
 	name = "cak"
@@ -216,7 +216,7 @@ var/list/_cat_default_emotes = list(
 	icon_dead = "cak_dead"
 	//icon_sit = "cak_sit"
 	makes_dirt = 0
-	holder_type = /obj/item/weapon/holder/cat/cak
+	holder_type = /obj/item/holder/cat/cak // CHOMPEdit - Removal of obj/item/weapon
 
 /mob/living/simple_mob/animal/passive/cat/space
 	name = "space cat"
@@ -227,7 +227,7 @@ var/list/_cat_default_emotes = list(
 	icon_rest = "spacecat_rest"
 	icon_dead = "spacecat_dead"
 	//icon_sit = "spacecat_sit"
-	holder_type = /obj/item/weapon/holder/cat/spacecat
+	holder_type = /obj/item/holder/cat/spacecat // CHOMPEdit - Removal of obj/item/weapon
 	makes_dirt = 0
 
 	minbodytemp = 0				// Minimum "okay" temperature in kelvin
@@ -252,8 +252,8 @@ var/list/_cat_default_emotes = list(
 	say_maybe_target = list("Meow?","Mew?","Mao?")
 	say_got_target = list("MEOW!","HSSSS!","REEER!")
 
-/mob/living/simple_mob/animal/passive/cat/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/pen) || istype(W, /obj/item/device/flashlight/pen))
+/mob/living/simple_mob/animal/passive/cat/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W, /obj/item/pen) || istype(W, /obj/item/flashlight/pen)) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 		if(named)
 			to_chat(user, "<span class='notice'>\The [name] already has a name!</span>")
 		else
@@ -267,19 +267,19 @@ var/list/_cat_default_emotes = list(
 	else
 		..()
 
-/obj/item/weapon/cat_box
+/obj/item/cat_box // CHOMPEdit - Removal of obj/item/weapon
 	name = "faintly purring box"
 	desc = "This box is purring faintly. You're pretty sure there's a cat inside it."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "box"
 	var/cattype = /mob/living/simple_mob/animal/passive/cat
 
-/obj/item/weapon/cat_box/attack_self(var/mob/user)
+/obj/item/cat_box/attack_self(var/mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	var/turf/catturf = get_turf(src)
 	to_chat(user, "<span class='notice'>You peek into \the [name]-- and a cat jumps out!</span>")
 	new cattype(catturf)
 	new /obj/item/stack/material/cardboard(catturf) //if i fits i sits
 	qdel(src)
 
-/obj/item/weapon/cat_box/black
+/obj/item/cat_box/black // CHOMPEdit - Removal of obj/item/weapon
 	cattype = /mob/living/simple_mob/animal/passive/cat/black

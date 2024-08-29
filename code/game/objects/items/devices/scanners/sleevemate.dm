@@ -1,7 +1,7 @@
 var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 //SleeveMate!
-/obj/item/device/sleevemate
+/obj/item/sleevemate // CHOMPEdit - Removal of obj/item/device
 	name = "\improper SleeveMate 3700"
 	desc = "A hand-held sleeve management tool for performing one-time backups and managing mindstates."
 	icon = 'icons/obj/device_alt.dmi'
@@ -29,12 +29,12 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	var/db_key
 	var/datum/transcore_db/our_db // These persist all round and are never destroyed, just keep a hard ref
 
-/obj/item/device/sleevemate/Initialize()
+/obj/item/sleevemate/Initialize() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	our_db = SStranscore.db_by_key(db_key)
 
 //These don't perform any checks and need to be wrapped by checks
-/obj/item/device/sleevemate/proc/clear_mind()
+/obj/item/sleevemate/proc/clear_mind() // CHOMPEdit - Removal of obj/item/device
 	stored_mind = null
 	ooc_notes = null
 	ooc_notes_likes = null
@@ -46,7 +46,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	//CHOMPEdit End
 	update_icon()
 
-/obj/item/device/sleevemate/proc/get_mind(mob/living/M)
+/obj/item/sleevemate/proc/get_mind(mob/living/M) // CHOMPEdit - Removal of obj/item/device
 	ASSERT(M.mind)
 	ooc_notes = M.ooc_notes
 	ooc_notes_likes = M.ooc_notes_likes
@@ -61,7 +61,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	stored_mind.current = null
 	update_icon()
 
-/obj/item/device/sleevemate/proc/put_mind(mob/living/M)
+/obj/item/sleevemate/proc/put_mind(mob/living/M) // CHOMPEdit - Removal of obj/item/device
 	stored_mind.active = TRUE
 	stored_mind.transfer_to(M)
 	M.ooc_notes = ooc_notes
@@ -76,7 +76,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 
 
-/obj/item/device/sleevemate/attack(mob/living/M, mob/living/user)
+/obj/item/sleevemate/attack(mob/living/M, mob/living/user) // CHOMPEdit - Removal of obj/item/device
 	// Gather potential subtargets
 	var/list/choices = list(M)
 	if(istype(M))
@@ -95,7 +95,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	else
 		to_chat(user,"<span class='warning'>Not a compatible subject to work with!</span>")
 
-/obj/item/device/sleevemate/attack_self(mob/living/user)
+/obj/item/sleevemate/attack_self(mob/living/user) // CHOMPEdit - Removal of obj/item/device
 	if(!stored_mind)
 		to_chat(user,"<span class='warning'>No stored mind in \the [src].</span>")
 		return
@@ -113,7 +113,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		if("Cancel")
 			return
 
-/obj/item/device/sleevemate/proc/scan_mob(mob/living/carbon/human/H, mob/living/user)
+/obj/item/sleevemate/proc/scan_mob(mob/living/carbon/human/H, mob/living/user) // CHOMPEdit - Removal of obj/item/device
 	var/output = ""
 
 	output += "<br><br><span class='notice'><b>[src.name] Scan Results</b></span><br>"
@@ -183,7 +183,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 	to_chat(user,output)
 
-/obj/item/device/sleevemate/Topic(href, href_list)
+/obj/item/sleevemate/Topic(href, href_list) // CHOMPEdit - Removal of obj/item/device
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 
 	//Sanity checking/href-hacking checking
@@ -322,13 +322,13 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 				return
 		to_chat(usr,"<span class='notice'>Unable to find that mind in Soulcatcher!</span>")
 
-/obj/item/device/sleevemate/update_icon()
+/obj/item/sleevemate/update_icon() // CHOMPEdit - Removal of obj/item/device
 	if(stored_mind)
 		icon_state = "[initial(icon_state)]_on"
 	else
 		icon_state = initial(icon_state)
 
-/obj/item/device/sleevemate/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/sleevemate/emag_act(var/remaining_charges, var/mob/user) // CHOMPEdit - Removal of obj/item/device
 	//CHOMPEdit Start
 	var/list/choices = list("Body Snatcher","Mind Binder")
 	var/choice = tgui_input_list(user, "How would you like to modify the [src]?", "", choices)
@@ -345,9 +345,9 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	src.forceMove(get_turf(src))
 	//CHOMPEdit Start
 	if(choice == "Body Snatcher")
-		new /obj/item/device/bodysnatcher(src.loc)
+		new /obj/item/bodysnatcher(src.loc) // CHOMPEdit - Removal of obj/item/device
 	if(choice == "Mind Binder")
-		new /obj/item/device/mindbinder(src.loc)
+		new /obj/item/mindbinder(src.loc) // CHOMPEdit - Removal of obj/item/device
 	//CHOMPEdit End
 	qdel(src)
 	return 1

@@ -1,7 +1,7 @@
 /*
  * White CAH cards
  */
-/obj/item/weapon/deck/cah/var/list/card_text_list = list(
+/obj/item/deck/cah/var/list/card_text_list = list( // CHOMPEdit - Removal of obj/item/weapon
 	"Those motherfucking carp",
 	"Having sex in the maintenance tunnels",
 	"Space 'Nam",

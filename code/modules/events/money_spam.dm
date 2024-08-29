@@ -33,9 +33,9 @@
 	if(useMS)
 		if(prob(5))
 			// /obj/machinery/message_server/proc/send_pda_message(var/recipient = "",var/sender = "",var/message = "")
-			var/obj/item/device/pda/P
+			var/obj/item/pda/P // CHOMPEdit - Removal of obj/item/device
 			var/list/viables = list()
-			for(var/obj/item/device/pda/check_pda in sortAtom(PDAs))
+			for(var/obj/item/pda/check_pda in sortAtom(PDAs)) // CHOMPEdit - Removal of obj/item/device
 				if (!check_pda.owner || check_pda == src || check_pda.hidden)
 					continue
 

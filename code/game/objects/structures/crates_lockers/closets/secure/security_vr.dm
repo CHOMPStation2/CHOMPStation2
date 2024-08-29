@@ -30,10 +30,10 @@
 		/obj/item/clothing/suit/storage/vest/wardencoat/neo_armsco_trench,
 		/obj/item/clothing/head/helmet/HoS/hat/blue,
 		/obj/item/clothing/head/helmet/dermal,
-		/obj/item/device/radio/headset/heads/hos,
-		/obj/item/device/radio/headset/heads/hos/alt,
+		/obj/item/radio/headset/heads/hos, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/heads/hos/alt, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses/sunglasses/sechud,
-		/obj/item/weapon/storage/belt/security,
+		/obj/item/storage/belt/security, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/holster/waist,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
 //		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
@@ -50,29 +50,29 @@
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(
-		/obj/item/weapon/cartridge/hos,
+		/obj/item/cartridge/hos, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/taperoll/police,
-		/obj/item/weapon/shield/riot/tele,
-		/obj/item/weapon/storage/box/holobadge/hos,
+		/obj/item/shield/riot/tele, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/holobadge/hos, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/badge/holo/hos,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/tool/crowbar/red,
-		/obj/item/weapon/storage/box/flashbangs,
-		/obj/item/device/flash,
-		/obj/item/weapon/melee/baton/loaded,
-//		/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos,
+		/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/flashbangs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/melee/baton/loaded, // CHOMPEdit - Removal of obj/item/weapon
+//		/obj/item/storage/secure/briefcase/nsfw_pack_hos, // CHOMPEdit - Removal of obj/item/weapon
 //YW Removal,
-		/obj/item/weapon/gun/projectile/caseless/prototype/loaded, // CHOMPADD
+		/obj/item/gun/projectile/caseless/prototype/loaded, // CHOMPADD // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/ammo_magazine/m5mmcaseless, // CHOMPADD
-		/obj/item/weapon/gun/energy/x01,
-		/obj/item/weapon/cell/device/weapon,
-		/obj/item/weapon/melee/telebaton,
+		/obj/item/gun/energy/x01, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/telebaton, // CHOMPEdit - Removal of obj/item/weapon
 //		/obj/item/clothing/head/beret/sec/corporate/hos, //CHOMP Remove
 //		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
 //		/obj/item/clothing/shoes/boots/winter/security, //CHOMP Remove
-		/obj/item/device/ticket_printer, //CHOMP Add
-		/obj/item/weapon/gun/energy/taser, // CHOMPADD
-		/obj/item/device/flashlight/maglight)
+		/obj/item/ticket_printer, //CHOMP Add // CHOMPEdit - Removal of obj/item/device
+		/obj/item/gun/energy/taser, // CHOMPADD // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight/maglight) // CHOMPEdit - Removal of obj/item/device
 
 //Custom NT Security Lockers, Only found at central command
 /obj/structure/closet/secure_closet/nanotrasen_security
@@ -84,22 +84,22 @@
 	starts_with = list(
 		/obj/item/clothing/suit/storage/vest/nanotrasen,
 		/obj/item/clothing/head/helmet,
-		/obj/item/weapon/cartridge/security,
-		/obj/item/device/radio/headset/headset_sec,
-		/obj/item/device/radio/headset/headset_sec/alt,
-		/obj/item/weapon/storage/belt/security,
-		/obj/item/device/flash,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/grenade/flashbang,
-		/obj/item/weapon/melee/baton/loaded,
+		/obj/item/cartridge/security, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio/headset/headset_sec, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/headset_sec/alt, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage/belt/security, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade/flashbang, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/baton/loaded, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/taperoll/police,
-		/obj/item/device/hailer,
-		/obj/item/device/flashlight/flare,
+		/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/flare, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/accessory/storage/black_vest,
-		/obj/item/weapon/gun/energy/taser,
-		/obj/item/weapon/cell/device/weapon,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/gun/energy/taser, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight/maglight, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/head/soft/nanotrasen,
 		/obj/item/clothing/head/beret/nanotrasen,
 		/obj/item/clothing/under/nanotrasen/security,
@@ -109,11 +109,11 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_security/Initialize()
 	if(prob(25))
-		starts_with += /obj/item/weapon/storage/backpack/security
+		starts_with += /obj/item/storage/backpack/security // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/sec
+		starts_with += /obj/item/storage/backpack/satchel/sec // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(75))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/sec
+		starts_with += /obj/item/storage/backpack/dufflebag/sec // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /obj/structure/closet/secure_closet/nanotrasen_commander
@@ -130,27 +130,27 @@
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen,
 		/obj/item/clothing/suit/storage/vest/hoscoat,
 		/obj/item/clothing/head/helmet/dermal,
-		/obj/item/weapon/cartridge/hos,
-		/obj/item/device/radio/headset/heads/hos,
-		/obj/item/device/radio/headset/heads/hos/alt,
+		/obj/item/cartridge/hos, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio/headset/heads/hos, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/heads/hos/alt, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/taperoll/police,
-		/obj/item/weapon/shield/riot,
-		/obj/item/weapon/shield/riot/tele,
-		/obj/item/weapon/storage/box/holobadge/hos,
+		/obj/item/shield/riot, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/shield/riot/tele, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/holobadge/hos, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/badge/holo/hos,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/tool/crowbar/red,
-		/obj/item/weapon/storage/box/flashbangs,
-		/obj/item/weapon/storage/belt/security,
-		/obj/item/device/flash,
-		/obj/item/weapon/melee/baton/loaded,
-		/obj/item/weapon/gun/energy/gun,
-		/obj/item/weapon/cell/device/weapon,
+		/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/flashbangs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/belt/security, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/melee/baton/loaded, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/holster/waist,
-		/obj/item/weapon/melee/telebaton,
+		/obj/item/melee/telebaton, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/beret/sec/corporate/hos,
-		/obj/item/device/flashlight/maglight,
+		/obj/item/flashlight/maglight, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless,
@@ -158,11 +158,11 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_commander/Initialize()
 	if(prob(25))
-		starts_with += /obj/item/weapon/storage/backpack/security
+		starts_with += /obj/item/storage/backpack/security // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/sec
+		starts_with += /obj/item/storage/backpack/satchel/sec // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(75))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/sec
+		starts_with += /obj/item/storage/backpack/dufflebag/sec // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /obj/structure/closet/secure_closet/nanotrasen_warden
@@ -177,47 +177,47 @@
 		/obj/item/clothing/suit/storage/vest/wardencoat/alt,
 		/obj/item/clothing/suit/storage/vest/wardencoat/alt2,
 		/obj/item/clothing/head/helmet/warden,
-		/obj/item/weapon/cartridge/security,
-		/obj/item/device/radio/headset/headset_sec,
-		/obj/item/device/radio/headset/headset_sec/alt,
+		/obj/item/cartridge/security, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio/headset/headset_sec, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/headset_sec/alt, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/taperoll/police,
 		/obj/item/clothing/accessory/badge/holo/warden,
-		/obj/item/weapon/storage/box/flashbangs,
-		/obj/item/weapon/storage/belt/security,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/melee/baton/loaded,
-		/obj/item/weapon/gun/energy/gun,
-		/obj/item/weapon/cell/device/weapon,
-		/obj/item/weapon/storage/box/holobadge,
+		/obj/item/storage/box/flashbangs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/belt/security, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/baton/loaded, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/box/holobadge, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/beret/sec/corporate/warden,
-		/obj/item/device/flashlight/maglight,
-		/obj/item/device/megaphone,
+		/obj/item/flashlight/maglight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless)
 
 /obj/structure/closet/secure_closet/nanotrasen_warden/Initialize()
 	if(prob(25))
-		new /obj/item/weapon/storage/backpack/security(src)
+		new /obj/item/storage/backpack/security(src) // CHOMPEdit - Removal of obj/item/weapon
 	else
-		new /obj/item/weapon/storage/backpack/satchel/sec(src)
+		new /obj/item/storage/backpack/satchel/sec(src) // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(75))
-		new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
+		new /obj/item/storage/backpack/dufflebag/sec(src) // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 /obj/structure/closet/secure_closet/captains
 	starts_with = list(
-		/obj/item/weapon/storage/backpack/dufflebag/captain,
+		/obj/item/storage/backpack/dufflebag/captain, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/suit/storage/vest,
-		/obj/item/weapon/cartridge/captain,
-		/obj/item/weapon/storage/lockbox/medal,
-		/obj/item/device/radio/headset/heads/captain,
-		/obj/item/device/radio/headset/heads/captain/alt,
+		/obj/item/cartridge/captain, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/lockbox/medal, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio/headset/heads/captain, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/heads/captain/alt, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/gunbox/captain,
-		/obj/item/weapon/melee/telebaton,
-		/obj/item/device/flash,
-		/obj/item/weapon/storage/box/ids,
-		/obj/item/weapon/melee/rapier,
+		/obj/item/melee/telebaton, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage/box/ids, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/rapier, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/holster/machete/rapier)

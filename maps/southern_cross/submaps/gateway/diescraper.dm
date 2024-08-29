@@ -150,7 +150,7 @@
 	base_turf = /turf/simulated/floor/plating
 	name = "Away Mission - City Roof"
 
-/obj/item/weapon/card/id/diescrapergun
+/obj/item/card/id/diescrapergun // CHOMPEdit - Removal of obj/item/weapon
 	name = "Gunstore ID"
 	access = list(886)
 

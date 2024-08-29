@@ -32,7 +32,7 @@
 
 /datum/antagonist/proc/create_id(var/assignment, var/mob/living/carbon/human/player, var/equip = 1)
 
-	var/obj/item/weapon/card/id/W = new id_type(player)
+	var/obj/item/card/id/W = new id_type(player) // CHOMPEdit - Removal of obj/item/weapon
 	if(!W) return
 	W.access |= default_access
 	W.assignment = "[assignment]"
@@ -41,15 +41,15 @@
 	return W
 
 /datum/antagonist/proc/create_radio(var/freq, var/mob/living/carbon/human/player)
-	var/obj/item/device/radio/R
+	var/obj/item/radio/R // CHOMPEdit - Removal of obj/item/device
 
 	switch(freq)
 		if(SYND_FREQ)
-			R = new/obj/item/device/radio/headset/syndicate(player)
+			R = new/obj/item/radio/headset/syndicate(player) // CHOMPEdit - Removal of obj/item/device
 		if(RAID_FREQ)
-			R = new/obj/item/device/radio/headset/raider(player)
+			R = new/obj/item/radio/headset/raider(player) // CHOMPEdit - Removal of obj/item/device
 		else
-			R = new/obj/item/device/radio/headset(player)
+			R = new/obj/item/radio/headset(player) // CHOMPEdit - Removal of obj/item/device
 			R.set_frequency(freq)
 
 	player.equip_to_slot_or_del(R, slot_l_ear)
@@ -75,7 +75,7 @@
 
 		if(paper_spawn_loc)
 			// Create and pass on the bomb code paper.
-			var/obj/item/weapon/paper/P = new(paper_spawn_loc)
+			var/obj/item/paper/P = new(paper_spawn_loc) // CHOMPEdit - Removal of obj/item/weapon
 			P.info = "The nuclear authorization code is: <b>[code]</b>"
 			P.name = "nuclear bomb code"
 			if(leader && leader.current)

@@ -58,7 +58,7 @@
 	panel_open = FALSE // If it's been screwdrivered open.
 	var/aidisabled = 0
 	var/shorted = 0
-	circuit = /obj/item/weapon/circuitboard/airalarm
+	circuit = /obj/item/circuitboard/airalarm // CHOMPEdit - Removal of obj/item/weapon
 
 	var/datum/wires/alarm/wires
 
@@ -820,7 +820,7 @@
 	if(alarm_deconstruction_wirecutters(user, W))
 		return
 
-	if(istype(W, /obj/item/weapon/card/id) || istype(W, /obj/item/device/pda))// trying to unlock the interface with an ID card
+	if(istype(W, /obj/item/card/id) || istype(W, /obj/item/pda))// trying to unlock the interface with an ID card // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 		togglelock()
 	return ..()
 

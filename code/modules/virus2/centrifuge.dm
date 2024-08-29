@@ -6,7 +6,7 @@
 	var/curing
 	var/isolating
 
-	var/obj/item/weapon/reagent_containers/glass/beaker/vial/sample = null
+	var/obj/item/reagent_containers/glass/beaker/vial/sample = null // CHOMPEdit - Removal of obj/item/weapon
 	var/datum/disease2/disease/virus2 = null
 
 /obj/machinery/computer/centrifuge/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -16,7 +16,7 @@
 	if(default_unfasten_wrench(user, O, 20))
 		return
 
-	if(istype(O,/obj/item/weapon/reagent_containers/glass/beaker/vial))
+	if(istype(O,/obj/item/reagent_containers/glass/beaker/vial)) // CHOMPEdit - Removal of obj/item/weapon
 		if(sample)
 			to_chat(user, "\The [src] is already loaded.")
 			return
@@ -157,7 +157,7 @@
 
 /obj/machinery/computer/centrifuge/proc/isolate()
 	if(!sample) return
-	var/obj/item/weapon/virusdish/dish = new/obj/item/weapon/virusdish(loc)
+	var/obj/item/virusdish/dish = new/obj/item/virusdish(loc) // CHOMPEdit - Removal of obj/item/weapon
 	dish.virus2 = virus2
 	virus2 = null
 
@@ -166,7 +166,7 @@
 	ping("\The [src] pings, \"Pathogen isolated.\"")
 
 /obj/machinery/computer/centrifuge/proc/print(var/mob/user)
-	var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(loc)
+	var/obj/item/paper/P = new /obj/item/paper(loc) // CHOMPEdit - Removal of obj/item/weapon
 	P.name = "paper - Pathology Report"
 	P.info = {"
 		[virology_letterhead("Pathology Report")]

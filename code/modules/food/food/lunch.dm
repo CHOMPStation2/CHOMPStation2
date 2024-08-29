@@ -1,118 +1,118 @@
-var/list/lunchables_lunches_ = list(/obj/item/weapon/reagent_containers/food/snacks/sandwich,
-                                  /obj/item/weapon/reagent_containers/food/snacks/slice/meatbread/filled,
-                                  /obj/item/weapon/reagent_containers/food/snacks/slice/tofubread/filled,
-                                  /obj/item/weapon/reagent_containers/food/snacks/slice/creamcheesebread/filled,
-                                  /obj/item/weapon/reagent_containers/food/snacks/slice/margherita/filled,
-                                  /obj/item/weapon/reagent_containers/food/snacks/slice/meatpizza/filled,
-                                  /obj/item/weapon/reagent_containers/food/snacks/slice/mushroompizza/filled,
-                                  /obj/item/weapon/reagent_containers/food/snacks/slice/vegetablepizza/filled,
-                                  /obj/item/weapon/reagent_containers/food/snacks/pineappleslice/filled,
-                                  /obj/item/weapon/reagent_containers/food/snacks/tastybread,
-                                  /obj/item/weapon/reagent_containers/food/snacks/bagelplain,
-                                  /obj/item/weapon/reagent_containers/food/snacks/bagelsunflower,
-                                  /obj/item/weapon/reagent_containers/food/snacks/bagelcheese,
-                                  /obj/item/weapon/reagent_containers/food/snacks/bagelraisin,
-                                  /obj/item/weapon/reagent_containers/food/snacks/bagelpoppy,
-                                  /obj/item/weapon/reagent_containers/food/snacks/croissant,
-                                  /obj/item/weapon/reagent_containers/food/snacks/corn_dog,
-                                  /obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-                                  /obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-                                  /obj/item/weapon/reagent_containers/food/snacks/liquidvitamin,
-                                  /obj/item/weapon/reagent_containers/food/snacks/jellysandwich/cherry,
-                                  /obj/item/weapon/reagent_containers/food/snacks/tossedsalad,
-                                  /obj/item/weapon/reagent_containers/food/snacks/rosesalad,
-                                  /obj/item/weapon/reagent_containers/food/snacks/boiledegg,
-                                  /obj/item/weapon/reagent_containers/food/snacks/locust_cooked,
-                                  /obj/item/weapon/reagent_containers/food/snacks/spicedmeatbun,
-                                  /obj/item/weapon/reagent_containers/food/snacks/quicheslice/filled,
-                                  /obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,
-                                  /obj/item/weapon/reagent_containers/food/snacks/packaged/sausageroll,
-                                  /obj/item/weapon/reagent_containers/food/snacks/packaged/pasty,
-                                  /obj/item/weapon/reagent_containers/food/snacks/packaged/scotchegg,
-                                  /obj/item/weapon/reagent_containers/food/snacks/packaged/porkpie)
+var/list/lunchables_lunches_ = list(/obj/item/reagent_containers/food/snacks/sandwich, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/slice/meatbread/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/slice/tofubread/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/slice/creamcheesebread/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/slice/margherita/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/slice/meatpizza/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/slice/mushroompizza/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/slice/vegetablepizza/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/pineappleslice/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/tastybread, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/bagelplain, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/bagelsunflower, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/bagelcheese, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/bagelraisin, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/bagelpoppy, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/croissant, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/corn_dog, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/liquidprotein, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/liquidvitamin, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/jellysandwich/cherry, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/tossedsalad, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/rosesalad, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/boiledegg, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/locust_cooked, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/spicedmeatbun, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/quicheslice/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/packaged/sausageroll, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/packaged/pasty, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/packaged/scotchegg, // CHOMPEdit - Removal of obj/item/weapon
+                                  /obj/item/reagent_containers/food/snacks/packaged/porkpie) // CHOMPEdit - Removal of obj/item/weapon
 
-var/list/lunchables_snacks_ = list(/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly,
-                                   /obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly/cherryjelly,
-                                   /obj/item/weapon/reagent_containers/food/snacks/muffin,
-                                   /obj/item/weapon/reagent_containers/food/snacks/popcorn,
-                                   /obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-                                   /obj/item/weapon/reagent_containers/food/snacks/unajerky,
-                                   /obj/item/weapon/reagent_containers/food/snacks/no_raisin,
-                                   /obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie,
-                                   /obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers,
-                                   /obj/item/weapon/reagent_containers/food/snacks/poppypretzel,
-                                   /obj/item/weapon/reagent_containers/food/snacks/carrotfries,
-                                   /obj/item/weapon/reagent_containers/food/snacks/candiedapple,
-                                   /obj/item/weapon/reagent_containers/food/snacks/applepie,
-                                   /obj/item/weapon/reagent_containers/food/snacks/cherrypie,
-                                   /obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit,
-                                   /obj/item/weapon/reagent_containers/food/snacks/appletart,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/carrotcake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/cheesecake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/plaincake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/orangecake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/limecake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/lemoncake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/chocolatecake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/birthdaycake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/watermelonslice,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/applecake/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/slice/pumpkinpie/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/keylimepieslice/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/browniesslice/filled,
-                                   /obj/item/weapon/reagent_containers/food/snacks/skrellsnacks,
-                                   /obj/item/weapon/reagent_containers/food/snacks/mint/admints,
-                                   /obj/item/weapon/reagent_containers/food/snacks/roastedpeanuts,
-                                   /obj/item/weapon/reagent_containers/food/snacks/sugarcookie,
-                                   /obj/item/weapon/reagent_containers/food/snacks/eggroll,
-                                   /obj/item/weapon/reagent_containers/food/snacks/fruitsalad,
-                                   /obj/item/weapon/reagent_containers/food/snacks/honeybun,
-                                   /obj/item/weapon/reagent_containers/food/snacks/custardbun,
-                                   /obj/item/weapon/reagent_containers/food/snacks/honeytoast,
-                                   /obj/item/weapon/reagent_containers/food/snacks/cookie,
-                                   /obj/item/weapon/reagent_containers/food/snacks/fruitbar,
-                                   /obj/item/weapon/reagent_containers/food/snacks/semki,
-                                   /obj/item/weapon/reagent_containers/food/snacks/salo,
-                                   /obj/item/weapon/reagent_containers/food/snacks/weebonuts,
-                                   /obj/item/weapon/reagent_containers/food/snacks/ricecake,
-                                   /obj/item/weapon/reagent_containers/food/snacks/packaged/lunacake,
-                                   /obj/item/weapon/reagent_containers/food/snacks/packaged/darklunacake,
-                                   /obj/item/weapon/reagent_containers/food/snacks/packaged/mochicake,
-                                   /obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie,
-                                   /obj/item/weapon/storage/box/jaffacake,
-                                   /obj/item/weapon/storage/box/winegum,
-                                   /obj/item/weapon/storage/box/custardcream,
-                                   /obj/item/weapon/storage/box/bourbon
+var/list/lunchables_snacks_ = list(/obj/item/reagent_containers/food/snacks/donut/plain/jelly, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/donut/plain/jelly/cherryjelly, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/muffin, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/popcorn, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/sosjerky, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/unajerky, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/no_raisin, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/packaged/spacetwinkie, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/cheesiehonkers, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/poppypretzel, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/carrotfries, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/candiedapple, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/applepie, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/cherrypie, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/plumphelmetbiscuit, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/appletart, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/carrotcake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/cheesecake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/plaincake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/orangecake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/limecake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/lemoncake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/chocolatecake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/birthdaycake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/watermelonslice, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/applecake/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/slice/pumpkinpie/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/keylimepieslice/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/browniesslice/filled, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/skrellsnacks, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/mint/admints, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/roastedpeanuts, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/sugarcookie, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/eggroll, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/fruitsalad, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/honeybun, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/custardbun, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/honeytoast, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/cookie, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/fruitbar, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/semki, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/salo, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/weebonuts, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/ricecake, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/packaged/lunacake, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/packaged/darklunacake, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/packaged/mochicake, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/snacks/packaged/spacetwinkie, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/storage/box/jaffacake, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/storage/box/winegum, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/storage/box/custardcream, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/storage/box/bourbon // CHOMPEdit - Removal of obj/item/weapon
                                    )
 
-var/list/lunchables_drinks_ = list(/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/starkistdecaf,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/space_up,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/tonic,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/sodawater,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/gingerale,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/root_beer,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/sarsaparilla,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/apple_cola,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola,
-                                   /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_peach,
-					               /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_pear,
-					               /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_cherry,
-					               /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_melon,
-					               /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_banana,
-					               /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_rose,
-					               /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_lemon,
-					               /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_fruit
+var/list/lunchables_drinks_ = list(/obj/item/reagent_containers/food/drinks/cans/cola, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/waterbottle, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/decaf_cola, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/space_mountain_wind, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/dr_gibb, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/dr_gibb_diet, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/starkist, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/starkistdecaf, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/space_up, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/lemon_lime, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/iced_tea, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/grape_juice, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/tonic, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/sodawater, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/gingerale, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/root_beer, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/sarsaparilla, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/straw_cola, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/apple_cola, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/lemon_cola, // CHOMPEdit - Removal of obj/item/weapon
+                                   /obj/item/reagent_containers/food/drinks/cans/nukie_peach, // CHOMPEdit - Removal of obj/item/weapon
+					               /obj/item/reagent_containers/food/drinks/cans/nukie_pear, // CHOMPEdit - Removal of obj/item/weapon
+					               /obj/item/reagent_containers/food/drinks/cans/nukie_cherry, // CHOMPEdit - Removal of obj/item/weapon
+					               /obj/item/reagent_containers/food/drinks/cans/nukie_melon, // CHOMPEdit - Removal of obj/item/weapon
+					               /obj/item/reagent_containers/food/drinks/cans/nukie_banana, // CHOMPEdit - Removal of obj/item/weapon
+					               /obj/item/reagent_containers/food/drinks/cans/nukie_rose, // CHOMPEdit - Removal of obj/item/weapon
+					               /obj/item/reagent_containers/food/drinks/cans/nukie_lemon, // CHOMPEdit - Removal of obj/item/weapon
+					               /obj/item/reagent_containers/food/drinks/cans/nukie_fruit // CHOMPEdit - Removal of obj/item/weapon
                                    )
 
 // This default list is a bit different, it contains items we don't want

@@ -5,7 +5,7 @@
 	anchored = TRUE
 	density = FALSE
 	unacidable = TRUE
-	var/falling_type = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita
+	var/falling_type = /obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita // CHOMPEdit - Removal of obj/item/weapon
 	var/crushing = TRUE
 
 /obj/effect/falling_effect/Initialize(mapload, type)

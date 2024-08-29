@@ -1,4 +1,4 @@
-/obj/item/weapon/circuitboard/broken
+/obj/item/circuitboard/broken // CHOMPEdit - Removal of obj/item/weapon
 	name = "broken electronics"
 	icon = 'icons/obj/doors/door_assembly.dmi'
 	icon_state = "door_electronics_smoked"

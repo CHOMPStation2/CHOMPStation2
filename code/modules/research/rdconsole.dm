@@ -33,10 +33,10 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	icon_keyboard = "rd_key"
 	icon_screen = "rdcomp"
 	light_color = "#a97faa"
-	circuit = /obj/item/weapon/circuitboard/rdconsole
+	circuit = /obj/item/circuitboard/rdconsole // CHOMPEdit - Removal of obj/item/weapon
 	var/datum/research/files							//Stores all the collected research data.
-	var/obj/item/weapon/disk/tech_disk/t_disk = null	//Stores the technology disk.
-	var/obj/item/weapon/disk/design_disk/d_disk = null	//Stores the design disk.
+	var/obj/item/disk/tech_disk/t_disk = null	//Stores the technology disk. // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/disk/design_disk/d_disk = null	//Stores the design disk. // CHOMPEdit - Removal of obj/item/weapon
 
 	var/obj/machinery/r_n_d/destructive_analyzer/linked_destroy = null	//Linked Destructive Analyzer
 	var/obj/machinery/r_n_d/protolathe/linked_lathe = null				//Linked Protolathe
@@ -123,16 +123,16 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	SyncRDevices()
 	. = ..()
 
-/obj/machinery/computer/rdconsole/attackby(var/obj/item/weapon/D as obj, var/mob/user as mob)
+/obj/machinery/computer/rdconsole/attackby(var/obj/item/D as obj, var/mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	//Loading a disk into it.
-	if(istype(D, /obj/item/weapon/disk))
+	if(istype(D, /obj/item/disk)) // CHOMPEdit - Removal of obj/item/weapon
 		if(t_disk || d_disk)
 			to_chat(user, "<span class='filter_notice'>A disk is already loaded into the machine.</span>")
 			return
 
-		if(istype(D, /obj/item/weapon/disk/tech_disk))
+		if(istype(D, /obj/item/disk/tech_disk)) // CHOMPEdit - Removal of obj/item/weapon
 			t_disk = D
-		else if (istype(D, /obj/item/weapon/disk/design_disk))
+		else if (istype(D, /obj/item/disk/design_disk)) // CHOMPEdit - Removal of obj/item/weapon
 			d_disk = D
 		else
 			to_chat(user, "<span class='notice'>Machine cannot accept disks in that format.</span>")

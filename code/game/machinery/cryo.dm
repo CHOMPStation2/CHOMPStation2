@@ -21,7 +21,7 @@
 
 	var/temperature_archived
 	var/mob/living/carbon/occupant = null
-	var/obj/item/weapon/reagent_containers/glass/beaker = null
+	var/obj/item/reagent_containers/glass/beaker = null // CHOMPEdit - Removal of obj/item/weapon
 
 	var/current_heat_capacity = 50
 
@@ -165,8 +165,8 @@
 
 	add_fingerprint(usr)
 
-/obj/machinery/atmospherics/unary/cryo_cell/attackby(var/obj/item/weapon/G as obj, var/mob/user as mob)
-	if(istype(G, /obj/item/weapon/reagent_containers/glass))
+/obj/machinery/atmospherics/unary/cryo_cell/attackby(var/obj/item/G as obj, var/mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(G, /obj/item/reagent_containers/glass)) // CHOMPEdit - Removal of obj/item/weapon
 		if(beaker)
 			to_chat(user, "<span class='warning'>A beaker is already loaded into the machine.</span>")
 			return
@@ -177,8 +177,8 @@
 		user.visible_message("[user] adds \a [G] to \the [src]!", "You add \a [G] to \the [src]!")
 		SStgui.update_uis(src)
 		update_icon()
-	else if(istype(G, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/grab = G
+	else if(istype(G, /obj/item/grab)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/grab/grab = G // CHOMPEdit - Removal of obj/item/weapon
 		if(!ismob(grab.affecting))
 			return
 		if(occupant)

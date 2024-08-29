@@ -8,10 +8,10 @@
 	enhancement_desc = "Summoned entities will never harm their summoner."
 	spell_power_desc = "The strength and endurance of the summoned creature will be greater."
 	cost = 100
-	obj_path = /obj/item/weapon/spell/summon/summon_creature
+	obj_path = /obj/item/spell/summon/summon_creature // CHOMPEdit - Removal of obj/item/weapon
 	category = UTILITY_SPELLS
 
-/obj/item/weapon/spell/summon/summon_creature
+/obj/item/spell/summon/summon_creature // CHOMPEdit - Removal of obj/item/weapon
 	name = "summon creature"
 	desc = "Chitter chitter."
 	summoned_mob_type = null
@@ -37,7 +37,7 @@
 	instability_cost = 10
 	energy_cost = 1000
 
-/obj/item/weapon/spell/summon/summon_creature/on_summon(var/mob/living/simple_mob/summoned)
+/obj/item/spell/summon/summon_creature/on_summon(var/mob/living/simple_mob/summoned) // CHOMPEdit - Removal of obj/item/weapon
 	if(check_for_scepter())
 //		summoned.faction = "technomancer"
 		summoned.friends += owner

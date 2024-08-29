@@ -1,4 +1,4 @@
-/obj/item/weapon/material/butterflyconstruction
+/obj/item/material/butterflyconstruction // CHOMPEdit - Removal of obj/item/weapon
 	name = "unfinished concealed knife"
 	desc = "An unfinished concealed knife, it looks like the screws need to be tightened."
 	icon = 'icons/obj/buildingobject.dmi'
@@ -6,15 +6,15 @@
 	force_divisor = 0.1
 	thrown_force_divisor = 0.1
 
-/obj/item/weapon/material/butterflyconstruction/attackby(obj/item/W as obj, mob/user as mob)
+/obj/item/material/butterflyconstruction/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		to_chat(user, "You finish the concealed blade weapon.")
 		playsound(src, W.usesound, 50, 1)
-		new /obj/item/weapon/material/butterfly(user.loc, material.name)
+		new /obj/item/material/butterfly(user.loc, material.name) // CHOMPEdit - Removal of obj/item/weapon
 		qdel(src)
 		return
 
-/obj/item/weapon/material/butterflyblade
+/obj/item/material/butterflyblade // CHOMPEdit - Removal of obj/item/weapon
 	name = "knife blade"
 	desc = "A knife blade. Unusable as a weapon without a grip."
 	icon = 'icons/obj/buildingobject.dmi'
@@ -22,7 +22,7 @@
 	force_divisor = 0.1
 	thrown_force_divisor = 0.1
 
-/obj/item/weapon/material/butterflyhandle
+/obj/item/material/butterflyhandle // CHOMPEdit - Removal of obj/item/weapon
 	name = "concealed knife grip"
 	desc = "A plasteel grip with screw fittings for a blade."
 	icon = 'icons/obj/buildingobject.dmi'
@@ -30,11 +30,11 @@
 	force_divisor = 0.1
 	thrown_force_divisor = 0.1
 
-/obj/item/weapon/material/butterflyhandle/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/weapon/material/butterflyblade))
-		var/obj/item/weapon/material/butterflyblade/B = W
+/obj/item/material/butterflyhandle/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W,/obj/item/material/butterflyblade)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/material/butterflyblade/B = W // CHOMPEdit - Removal of obj/item/weapon
 		to_chat(user, "You attach the two concealed blade parts.")
-		new /obj/item/weapon/material/butterflyconstruction(user.loc, B.material.name)
+		new /obj/item/material/butterflyconstruction(user.loc, B.material.name) // CHOMPEdit - Removal of obj/item/weapon
 		qdel(W)
 		qdel(src)
 		return

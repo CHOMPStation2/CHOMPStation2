@@ -4,7 +4,7 @@
 
 //ChompEdit begins
 
-/obj/item/weapon/rig/breacher
+/obj/item/rig/breacher // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper NT breacher chassis control module"
 	desc = "A cheap NT knock-off of an Unathi battle-rig. Uses softer, but lighter, armour plating, producing a still-useful suit"
 	suit_type = "\improper NT breacher"
@@ -17,17 +17,17 @@
 	offline_vision_restriction = 2 //This actually serves as a good weakness for them, making them vulnerable to Ion weapons.
 	siemens_coefficient = 0.75
 	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank,
-		/obj/item/device/suit_cooling_unit,
-		/obj/item/weapon/storage
+		/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage // CHOMPEdit - Removal of obj/item/weapon
 		)
 	chest_type = /obj/item/clothing/suit/space/rig/breacher
 	helm_type = /obj/item/clothing/head/helmet/space/rig/breacher
 	boot_type = /obj/item/clothing/shoes/magboots/rig/breacher
 
-/obj/item/weapon/rig/breacher/fancy
+/obj/item/rig/breacher/fancy // CHOMPEdit - Removal of obj/item/weapon
 	name = "breacher chassis control module"
 	desc = "An authentic Unathi breacher chassis. Huge, bulky and absurdly heavy. It must be like wearing a tank."
 	suit_type = "breacher chassis"
@@ -54,7 +54,7 @@
  *	VOX
  */
 
-/obj/item/weapon/rig/vox	//Just to get the flags set up
+/obj/item/rig/vox	//Just to get the flags set up // CHOMPEdit - Removal of obj/item/weapon
 	name = "alien control module"
 	desc = "This metal box writhes and squirms as if it were alive..."
 	suit_type = "alien"
@@ -65,14 +65,14 @@
 	siemens_coefficient = 0.2
 	offline_slowdown = 2.5
 	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank,
-		/obj/item/device/suit_cooling_unit,
-		/obj/item/weapon/storage
+		/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage // CHOMPEdit - Removal of obj/item/weapon
 		)
 
-	air_type = /obj/item/weapon/tank/vox
+	air_type = /obj/item/tank/vox // CHOMPEdit - Removal of obj/item/weapon
 
 	helm_type = /obj/item/clothing/head/helmet/space/rig/vox
 	boot_type = /obj/item/clothing/shoes/magboots/rig/vox
@@ -100,7 +100,7 @@
 		SPECIES_VOX = 'icons/inventory/hands/mob_vox.dmi'
 		)
 
-/obj/item/weapon/rig/vox/carapace
+/obj/item/rig/vox/carapace // CHOMPEdit - Removal of obj/item/weapon
 	name = "dense alien control module"
 	suit_type = "dense alien"
 	armor = list(melee = 60, bullet = 50, laser = 40, energy = 15, bomb = 30, bio = 100, rad = 50)
@@ -108,7 +108,7 @@
 
 	req_access = list(access_syndicate)
 
-	cell_type =  /obj/item/weapon/cell/hyper
+	cell_type =  /obj/item/cell/hyper // CHOMPEdit - Removal of obj/item/weapon
 
 	initial_modules = list(
 		/obj/item/rig_module/mounted/energy_blade,
@@ -119,7 +119,7 @@
 		/obj/item/rig_module/self_destruct
 		)
 
-/obj/item/weapon/rig/vox/stealth
+/obj/item/rig/vox/stealth // CHOMPEdit - Removal of obj/item/weapon
 	name = "sinister alien control module"
 	suit_type = "sinister alien"
 	icon_state = "voxstealth_rig"
@@ -128,7 +128,7 @@
 
 	req_access = list(access_syndicate)
 
-	cell_type =  /obj/item/weapon/cell/hyper
+	cell_type =  /obj/item/cell/hyper // CHOMPEdit - Removal of obj/item/weapon
 
 	initial_modules = list(
 		/obj/item/rig_module/stealth_field,
@@ -138,7 +138,7 @@
 		/obj/item/rig_module/self_destruct
 		)
 
-/obj/item/weapon/rig/vox/civilian
+/obj/item/rig/vox/civilian // CHOMPEdit - Removal of obj/item/weapon
 	name = "matte alien control module"
 	suit_type = "sinister alien"
 	icon_state = "voxstealth_rig"
@@ -147,7 +147,7 @@
 
 	req_access = list()
 	req_one_access = list()
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage) //CHOMP Edit
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage) //CHOMP Edit // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 	offline_vision_restriction = 1
 
 	initial_modules = list(

@@ -102,13 +102,13 @@
 	set category = "Abilities.Lleill" //CHOMPEdit
 
 	var/list/transmute_list = list(
-		"Transparent Glamour" = /obj/item/weapon/potion_material/glamour_transparent,
-		"Shrinking Glamour" = /obj/item/weapon/potion_material/glamour_shrinking,
-		"Twinkling Glamour" = /obj/item/weapon/potion_material/glamour_twinkling,
-		"Glamour Shard" = /obj/item/weapon/potion_material/glamour_shard,
+		"Transparent Glamour" = /obj/item/potion_material/glamour_transparent, // CHOMPEdit - Removal of obj/item/weapon
+		"Shrinking Glamour" = /obj/item/potion_material/glamour_shrinking, // CHOMPEdit - Removal of obj/item/weapon
+		"Twinkling Glamour" = /obj/item/potion_material/glamour_twinkling, // CHOMPEdit - Removal of obj/item/weapon
+		"Glamour Shard" = /obj/item/potion_material/glamour_shard, // CHOMPEdit - Removal of obj/item/weapon
 		"Glamour Cell" = /obj/item/capture_crystal/glamour,
 		"Face of Glamour" = /obj/item/glamour_face,
-		"Speaking Glamour" = /obj/item/device/universal_translator/glamour,
+		"Speaking Glamour" = /obj/item/universal_translator/glamour, // CHOMPEdit - Removal of obj/item/device
 		"Glamour Bubble" = /obj/item/clothing/mask/gas/glamour,
 		"Pocket of Glamour" = /obj/item/clothing/under/permit/glamour
 		)
@@ -343,7 +343,7 @@
 		to_chat(src, "<span class='warning'>You can't go do that when weakened like this.</span>")
 		return
 
-	var/obj/item/weapon/potion_material/I = get_active_hand()
+	var/obj/item/potion_material/I = get_active_hand() // CHOMPEdit - Removal of obj/item/weapon
 	if(!I)
 		to_chat(src, "<span class='warning'>You have no item in your active hand.</span>")
 		return
@@ -351,7 +351,7 @@
 	if(!istype(I))
 		to_chat(src, "<span class='warning'>\The [I] is not a potion material.</span>")
 		return
-	var/obj/item/weapon/reagent_containers/glass/bottle/potion/transmute_product = I.product_potion
+	var/obj/item/reagent_containers/glass/bottle/potion/transmute_product = I.product_potion // CHOMPEdit - Removal of obj/item/weapon
 
 	if(!get_active_hand(I))
 		to_chat(src, "<span class='warning'>The item is no longer in your hands.</span>")

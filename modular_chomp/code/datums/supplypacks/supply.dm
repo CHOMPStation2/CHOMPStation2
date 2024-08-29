@@ -2,10 +2,10 @@
 	name = "Postal Service Supplies"
 	contains = list(
 		/obj/item/mail/blank = 10,
-		/obj/item/weapon/pen/fountain,
-		/obj/item/weapon/pen/multi,
-		/obj/item/device/destTagger,
-		/obj/item/weapon/storage/bag/mail
+		/obj/item/pen/fountain, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pen/multi, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/destTagger, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage/bag/mail // CHOMPEdit - Removal of obj/item/weapon
 	)
 	cost = 15
 	containertype = /obj/structure/closet/crate/nanotrasen

@@ -8,12 +8,12 @@
 	var/list/authorized = list(  )
 
 
-/obj/machinery/computer/shuttle/attackby(var/obj/item/weapon/card/W as obj, var/mob/user as mob)
+/obj/machinery/computer/shuttle/attackby(var/obj/item/card/W as obj, var/mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(stat & (BROKEN|NOPOWER))	return
-	if ((!( istype(W, /obj/item/weapon/card) ) || !( ticker ) || emergency_shuttle.location() || !( user )))	return
-	if (istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))
-		if (istype(W, /obj/item/device/pda))
-			var/obj/item/device/pda/pda = W
+	if ((!( istype(W, /obj/item/card) ) || !( ticker ) || emergency_shuttle.location() || !( user )))	return // CHOMPEdit - Removal of obj/item/weapon
+	if (istype(W, /obj/item/card/id)||istype(W, /obj/item/pda)) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
+		if (istype(W, /obj/item/pda)) // CHOMPEdit - Removal of obj/item/device
+			var/obj/item/pda/pda = W // CHOMPEdit - Removal of obj/item/device
 			W = pda.id
 		if (!W:access) //no access
 			to_chat(user, "The access level of [W:registered_name]\'s card is not high enough. ")
@@ -57,7 +57,7 @@
 				src.authorized.len = 0
 				src.authorized = list(  )
 
-	else if (istype(W, /obj/item/weapon/card/emag) && !emagged)
+	else if (istype(W, /obj/item/card/emag) && !emagged) // CHOMPEdit - Removal of obj/item/weapon
 		var/choice = tgui_alert(user, "Would you like to launch the shuttle?", "Shuttle control", list("Launch", "Cancel"))
 
 		if(!emagged && !emergency_shuttle.location() && user.get_active_hand() == W)

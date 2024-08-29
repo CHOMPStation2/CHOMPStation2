@@ -8,7 +8,7 @@
 #define SYRINGE_CAPPED 10
 
 
-/obj/item/weapon/reagent_containers/syringe
+/obj/item/reagent_containers/syringe // CHOMPEdit - Removal of obj/item/weapon
 	name = "syringe"
 	desc = "A syringe."
 	icon = 'icons/obj/syringe.dmi'
@@ -39,33 +39,33 @@
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 
 
-/obj/item/weapon/reagent_containers/syringe/Initialize()
+/obj/item/reagent_containers/syringe/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/Destroy()
+/obj/item/reagent_containers/syringe/Destroy() // CHOMPEdit - Removal of obj/item/weapon
 	QDEL_LIST_NULL(viruses)
 	LAZYCLEARLIST(targets)
 	return ..()
 
-/obj/item/weapon/reagent_containers/syringe/process()
+/obj/item/reagent_containers/syringe/process() // CHOMPEdit - Removal of obj/item/weapon
 	dirtiness = min(dirtiness + targets.len,75)
 	if(dirtiness >= 75)
 		STOP_PROCESSING(SSobj, src)
 	return 1
 
-/obj/item/weapon/reagent_containers/syringe/on_reagent_change()
+/obj/item/reagent_containers/syringe/on_reagent_change() // CHOMPEdit - Removal of obj/item/weapon
 	update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/pickup(mob/user)
+/obj/item/reagent_containers/syringe/pickup(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/dropped(mob/user)
+/obj/item/reagent_containers/syringe/dropped(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/attack_self(mob/user as mob)
+/obj/item/reagent_containers/syringe/attack_self(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	switch(mode)
 		if(SYRINGE_CAPPED)
 			mode = SYRINGE_DRAW
@@ -79,14 +79,14 @@
 			return
 	update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/attack_hand()
+/obj/item/reagent_containers/syringe/attack_hand() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/attackby(obj/item/I as obj, mob/user as mob)
+/obj/item/reagent_containers/syringe/attackby(obj/item/I as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	return
 
-/obj/item/weapon/reagent_containers/syringe/afterattack(obj/target, mob/user, proximity)
+/obj/item/reagent_containers/syringe/afterattack(obj/target, mob/user, proximity) // CHOMPEdit - Removal of obj/item/weapon
 	if(!proximity || !target.reagents)
 		return
 
@@ -165,7 +165,7 @@
 					to_chat(user, "<span class='notice'>[target] is empty.</span>")
 					return
 
-				if(!target.is_open_container() && !istype(target, /obj/structure/reagent_dispensers) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/weapon/reagent_containers/food))
+				if(!target.is_open_container() && !istype(target, /obj/structure/reagent_dispensers) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/reagent_containers/food)) // CHOMPEdit - Removal of obj/item/weapon
 					to_chat(user, "<span class='notice'>You cannot directly remove reagents from this object.</span>")
 					return
 
@@ -183,10 +183,10 @@
 				to_chat(user, "<span class='notice'>The syringe is empty.</span>")
 				mode = SYRINGE_DRAW
 				return
-			if(istype(target, /obj/item/weapon/implantcase/chem))
+			if(istype(target, /obj/item/implantcase/chem)) // CHOMPEdit - Removal of obj/item/weapon
 				return
 
-			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/weapon/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/weapon/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable)) // CHOMPEdit
+			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable)) // CHOMPEdit // CHOMPEdit - Removal of obj/item/weapon
 				to_chat(user, "<span class='notice'>You cannot directly fill this object.</span>")
 				return
 			if(!target.reagents.get_free_space())
@@ -260,7 +260,7 @@
 //		dirty(target,affected) //VOREStation Add -- Removed by Request
 	return
 
-/obj/item/weapon/reagent_containers/syringe/proc/syringestab(mob/living/carbon/target as mob, mob/living/carbon/user as mob)
+/obj/item/reagent_containers/syringe/proc/syringestab(mob/living/carbon/target as mob, mob/living/carbon/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(istype(target, /mob/living/carbon/human))
 
 		var/mob/living/carbon/human/H = target
@@ -308,7 +308,7 @@
 	if(!issilicon(user))
 		break_syringe(target, user)
 
-/obj/item/weapon/reagent_containers/syringe/proc/break_syringe(mob/living/carbon/target, mob/living/carbon/user)
+/obj/item/reagent_containers/syringe/proc/break_syringe(mob/living/carbon/target, mob/living/carbon/user) // CHOMPEdit - Removal of obj/item/weapon
 	desc += " It is broken."
 	mode = SYRINGE_BROKEN
 	if(target)
@@ -317,7 +317,7 @@
 		add_fingerprint(user)
 	update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/ld50_syringe
+/obj/item/reagent_containers/syringe/ld50_syringe // CHOMPEdit - Removal of obj/item/weapon
 	name = "Lethal Injection Syringe"
 	desc = "A syringe used for lethal injections."
 	amount_per_transfer_from_this = 50
@@ -325,7 +325,7 @@
 	visible_name = "a giant syringe"
 	time = 300
 
-/obj/item/weapon/reagent_containers/syringe/ld50_syringe/afterattack(obj/target, mob/user, flag)
+/obj/item/reagent_containers/syringe/ld50_syringe/afterattack(obj/target, mob/user, flag) // CHOMPEdit - Removal of obj/item/weapon
 	if(mode == SYRINGE_DRAW && ismob(target)) // No drawing 50 units of blood at once
 		to_chat(user, "<span class='notice'>This needle isn't designed for drawing blood.</span>")
 		return
@@ -337,41 +337,41 @@
 /// Syringes. END
 ////////////////////////////////////////////////////////////////////////////////
 
-/obj/item/weapon/reagent_containers/syringe/inaprovaline
+/obj/item/reagent_containers/syringe/inaprovaline // CHOMPEdit - Removal of obj/item/weapon
 	name = "Syringe (inaprovaline)"
 	desc = "Contains inaprovaline - used to stabilize patients."
 
-/obj/item/weapon/reagent_containers/syringe/inaprovaline/Initialize()
+/obj/item/reagent_containers/syringe/inaprovaline/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("inaprovaline", 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/antitoxin
+/obj/item/reagent_containers/syringe/antitoxin // CHOMPEdit - Removal of obj/item/weapon
 	name = "Syringe (anti-toxin)"
 	desc = "Contains anti-toxins."
 
-/obj/item/weapon/reagent_containers/syringe/antitoxin/Initialize()
+/obj/item/reagent_containers/syringe/antitoxin/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("anti_toxin", 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/antiviral
+/obj/item/reagent_containers/syringe/antiviral // CHOMPEdit - Removal of obj/item/weapon
 	name = "Syringe (spaceacillin)"
 	desc = "Contains antiviral agents."
 
-/obj/item/weapon/reagent_containers/syringe/antiviral/Initialize()
+/obj/item/reagent_containers/syringe/antiviral/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("spaceacillin", 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/drugs
+/obj/item/reagent_containers/syringe/drugs // CHOMPEdit - Removal of obj/item/weapon
 	name = "Syringe (drugs)"
 	desc = "Contains aggressive drugs meant for torture."
 
-/obj/item/weapon/reagent_containers/syringe/drugs/Initialize()
+/obj/item/reagent_containers/syringe/drugs/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("bliss",  5)
 	reagents.add_reagent("mindbreaker",  5)
@@ -379,22 +379,22 @@
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral/Initialize()
+/obj/item/reagent_containers/syringe/ld50_syringe/choral/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("chloralhydrate", 50)
 	mode = SYRINGE_INJECT
 	update_icon()
 
-/obj/item/weapon/reagent_containers/syringe/steroid
+/obj/item/reagent_containers/syringe/steroid // CHOMPEdit - Removal of obj/item/weapon
 	name = "Syringe (anabolic steroids)"
 	desc = "Contains drugs for muscle growth."
 
-/obj/item/weapon/reagent_containers/syringe/steroid/Initialize()
+/obj/item/reagent_containers/syringe/steroid/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	//reagents.add_reagent("adrenaline",5) //VOREStation Edit - No thanks.
 	reagents.add_reagent("hyperzine",10)
 
-/obj/item/weapon/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, var/obj/item/organ/external/eo)
+/obj/item/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, var/obj/item/organ/external/eo) // CHOMPEdit - Removal of obj/item/weapon
 	if(!ishuman(loc))
 		return //Avoid borg syringe problems.
 	LAZYINITLIST(targets)
@@ -432,7 +432,7 @@
 	if(!used)
 		START_PROCESSING(SSobj, src)
 
-/obj/item/weapon/reagent_containers/syringe/proc/infect_limb(var/obj/item/organ/external/eo)
+/obj/item/reagent_containers/syringe/proc/infect_limb(var/obj/item/organ/external/eo) // CHOMPEdit - Removal of obj/item/weapon
 	src = null
 	var/datum/weakref/limb_ref = WEAKREF(eo)
 	spawn(rand(5 MINUTES,10 MINUTES))
@@ -443,7 +443,7 @@
 //Allow for capped syringe mode
 
 //Allow for capped syringes
-/obj/item/weapon/reagent_containers/syringe/update_icon()
+/obj/item/reagent_containers/syringe/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	cut_overlays()
 
 	var/matrix/tf = matrix()

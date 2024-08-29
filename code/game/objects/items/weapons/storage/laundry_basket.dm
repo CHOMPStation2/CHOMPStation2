@@ -3,7 +3,7 @@
 // -----------------------------
 // An item designed for hauling the belongings of a character.
 // So this cannot be abused for other uses, we make it two-handed and inable to have its storage looked into.
-/obj/item/weapon/storage/laundry_basket
+/obj/item/storage/laundry_basket // CHOMPEdit - Removal of obj/item/weapon
 	name = "laundry basket"
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "laundry-empty"
@@ -21,7 +21,7 @@
 	var/linked
 
 
-/obj/item/weapon/storage/laundry_basket/attack_hand(mob/living/user as mob)
+/obj/item/storage/laundry_basket/attack_hand(mob/living/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.get_organ("r_hand")
@@ -36,13 +36,13 @@
 		return
 	return ..()
 
-/obj/item/weapon/storage/laundry_basket/attack_self(mob/user as mob)
+/obj/item/storage/laundry_basket/attack_self(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	var/turf/T = get_turf(user)
 	to_chat(user, "<span class='notice'>You dump the [src]'s contents onto \the [T].</span>")
 	return ..()
 
-/obj/item/weapon/storage/laundry_basket/pickup(mob/user)
-	var/obj/item/weapon/storage/laundry_basket/offhand/O = new(user)
+/obj/item/storage/laundry_basket/pickup(mob/user) // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/storage/laundry_basket/offhand/O = new(user) // CHOMPEdit - Removal of obj/item/weapon
 	O.name = "[name] - second hand"
 	O.desc = "Your second grip on the [name]."
 	O.linked = src
@@ -50,7 +50,7 @@
 	linked = O
 	return
 
-/obj/item/weapon/storage/laundry_basket/update_icon()
+/obj/item/storage/laundry_basket/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	if(contents.len)
 		icon_state = "laundry-full"
 	else
@@ -58,31 +58,31 @@
 	return
 
 
-/obj/item/weapon/storage/laundry_basket/MouseDrop(obj/over_object as obj)
+/obj/item/storage/laundry_basket/MouseDrop(obj/over_object as obj) // CHOMPEdit - Removal of obj/item/weapon
 	if(over_object == usr)
 		return
 	else
 		return ..()
 
-/obj/item/weapon/storage/laundry_basket/dropped(mob/user as mob)
+/obj/item/storage/laundry_basket/dropped(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(linked)
 		QDEL_NULL(linked)
 	return ..()
 
-/obj/item/weapon/storage/laundry_basket/show_to(mob/user as mob)
+/obj/item/storage/laundry_basket/show_to(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	return
 
-/obj/item/weapon/storage/laundry_basket/open(mob/user as mob)
+/obj/item/storage/laundry_basket/open(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 
 
 //Offhand
-/obj/item/weapon/storage/laundry_basket/offhand
+/obj/item/storage/laundry_basket/offhand // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "offhand"
 	name = "second hand"
 	use_to_pickup = FALSE
 
-/obj/item/weapon/storage/laundry_basket/offhand/dropped(mob/user as mob)
+/obj/item/storage/laundry_basket/offhand/dropped(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(user.isEquipped(linked))
 		user.drop_from_inventory(linked)
 	return

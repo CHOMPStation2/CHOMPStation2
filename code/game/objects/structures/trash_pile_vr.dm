@@ -18,14 +18,14 @@
 	//These are types that can only spawn once, and then will be removed from this list.
 	//Alpha and beta lists are in their respective procs.
 	var/global/list/unique_gamma = list(
-		/obj/item/device/perfect_tele,
-		/obj/item/weapon/bluespace_harpoon,
+		/obj/item/perfect_tele, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/bluespace_harpoon, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/glasses/thermal/syndi,
-		/obj/item/weapon/gun/energy/netgun,
-		/obj/item/weapon/gun/projectile/pirate, //CHOMP Add
-		/obj/item/weapon/gun/projectile/dartgun,
+		/obj/item/gun/energy/netgun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/pirate, //CHOMP Add // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/dartgun, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/gloves/black/bloodletter,
-		/obj/item/weapon/gun/energy/mouseray/metamorphosis
+		/obj/item/gun/energy/mouseray/metamorphosis // CHOMPEdit - Removal of obj/item/weapon
 		)
 
 	var/global/list/allocated_gamma = list()
@@ -186,9 +186,9 @@
 /obj/structure/trash_pile/proc/produce_alpha_item()
 	var/path = pick(prob(5);/obj/item/clothing/gloves/rainbow,
 					prob(5);/obj/item/clothing/gloves/white,
-					prob(5);/obj/item/weapon/storage/backpack,
-					prob(5);/obj/item/weapon/storage/backpack/satchel/norm,
-					prob(5);/obj/item/weapon/storage/box,
+					prob(5);/obj/item/storage/backpack, // CHOMPEdit - Removal of obj/item/weapon
+					prob(5);/obj/item/storage/backpack/satchel/norm, // CHOMPEdit - Removal of obj/item/weapon
+					prob(5);/obj/item/storage/box, // CHOMPEdit - Removal of obj/item/weapon
 				//	prob(5);/obj/random/cigarettes,
 					prob(4);/obj/item/broken_device/random,
 					prob(4);/obj/item/clothing/head/hardhat,
@@ -200,12 +200,12 @@
 					prob(4);/obj/item/clothing/suit/storage/hazardvest,
 					prob(4);/obj/item/clothing/under/color/grey,
 					prob(4);/obj/item/clothing/suit/caution,
-					prob(4);/obj/item/weapon/cell,
-					prob(4);/obj/item/weapon/cell/device,
-					prob(4);/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-					prob(4);/obj/item/weapon/spacecash/c1,
-					prob(4);/obj/item/weapon/storage/backpack/satchel,
-					prob(4);/obj/item/weapon/storage/briefcase,
+					prob(4);/obj/item/cell, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/spacecash/c1, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/storage/backpack/satchel, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/storage/briefcase, // CHOMPEdit - Removal of obj/item/weapon
 					prob(3);/obj/item/clothing/accessory/storage/webbing,
 					prob(3);/obj/item/clothing/glasses/meson,
 					prob(3);/obj/item/clothing/gloves/botanic_leather,
@@ -220,18 +220,18 @@
 					prob(3);/obj/item/clothing/suit/storage/toggle/hoodie/red,
 					prob(3);/obj/item/clothing/suit/storage/toggle/hoodie/yellow,
 					prob(3);/obj/item/clothing/suit/storage/toggle/leather_jacket,
-					prob(3);/obj/item/device/pda,
-					prob(3);/obj/item/device/radio/headset,
+					prob(3);/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+					prob(3);/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
 					prob(3);/obj/item/seeds/lustflower,
-					prob(3);/obj/item/weapon/camera_assembly,
+					prob(3);/obj/item/camera_assembly, // CHOMPEdit - Removal of obj/item/weapon
 					prob(3);/obj/item/clothing/head/cone,
-					prob(3);/obj/item/weapon/cell/high,
-					prob(3);/obj/item/weapon/spacecash/c10,
-					prob(3);/obj/item/weapon/spacecash/c20,
-					prob(3);/obj/item/weapon/storage/backpack/dufflebag,
-					prob(3);/obj/item/weapon/storage/box/donkpockets,
-					prob(3);/obj/item/weapon/storage/box/mousetraps,
-					prob(3);/obj/item/weapon/storage/wallet,
+					prob(3);/obj/item/cell/high, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/spacecash/c10, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/spacecash/c20, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/backpack/dufflebag, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/box/donkpockets, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/box/mousetraps, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/wallet, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/clothing/glasses/meson/prescription,
 					prob(2);/obj/item/clothing/gloves/fyellow,
 					prob(2);/obj/item/clothing/gloves/sterile/latex,
@@ -241,16 +241,16 @@
 					prob(2);/obj/item/clothing/under/pants/camo,
 					prob(2);/obj/item/clothing/under/syndicate/tacticool,
 					prob(2);/obj/item/clothing/under/hyperfiber,
-					prob(2);/obj/item/device/camera,
-					prob(2);/obj/item/device/flashlight/flare,
-					prob(2);/obj/item/device/flashlight/glowstick,
-					prob(2);/obj/item/device/flashlight/glowstick/blue,
-					prob(2);/obj/item/weapon/card/emag_broken,
-					prob(2);/obj/item/weapon/cell/super,
+					prob(2);/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+					prob(2);/obj/item/flashlight/flare, // CHOMPEdit - Removal of obj/item/device
+					prob(2);/obj/item/flashlight/glowstick, // CHOMPEdit - Removal of obj/item/device
+					prob(2);/obj/item/flashlight/glowstick/blue, // CHOMPEdit - Removal of obj/item/device
+					prob(2);/obj/item/card/emag_broken, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/cell/super, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/poster,
-					prob(2);/obj/item/weapon/reagent_containers/glass/rag,
-					prob(2);/obj/item/weapon/storage/box/sinpockets,
-					prob(2);/obj/item/weapon/storage/secure/briefcase,
+					prob(2);/obj/item/reagent_containers/glass/rag, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/storage/box/sinpockets, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/storage/secure/briefcase, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/clothing/under/fluff/latexmaid,
 					prob(2);/obj/item/toy/tennis,
 					prob(2);/obj/item/toy/tennis/red,
@@ -260,8 +260,8 @@
 					prob(2);/obj/item/toy/tennis/blue,
 					prob(2);/obj/item/toy/tennis/purple,
 					prob(1);/obj/item/toy/baseball,
-					prob(1);/obj/item/weapon/storage/box/brainzsnax,
-					prob(1);/obj/item/weapon/storage/box/brainzsnax/red,
+					prob(1);/obj/item/storage/box/brainzsnax, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/storage/box/brainzsnax/red, // CHOMPEdit - Removal of obj/item/weapon
 					prob(1);/obj/item/clothing/glasses/sunglasses,
 					prob(1);/obj/item/clothing/glasses/sunglasses/bigshot,
 					prob(1);/obj/item/clothing/glasses/welding,
@@ -274,68 +274,68 @@
 					prob(1);/obj/item/clothing/under/harness,
 					prob(1);/obj/item/clothing/under/tactical,
 					prob(1);/obj/item/clothing/suit/armor/material/makeshift,
-					prob(1);/obj/item/device/flashlight/glowstick/orange,
-					prob(1);/obj/item/device/flashlight/glowstick/red,
-					prob(1);/obj/item/device/flashlight/glowstick/yellow,
-					prob(1);/obj/item/device/flashlight/pen,
-					prob(1);/obj/item/device/paicard,
-					prob(1);/obj/item/weapon/card/emag, //CHOMP Add
+					prob(1);/obj/item/flashlight/glowstick/orange, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/flashlight/glowstick/red, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/flashlight/glowstick/yellow, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/flashlight/pen, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/paicard, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/card/emag, //CHOMP Add // CHOMPEdit - Removal of obj/item/weapon
 					prob(1);/obj/item/clothing/accessory/permit/gun,
 					prob(1);/obj/item/clothing/mask/gas/voice,
-					prob(1);/obj/item/weapon/spacecash/c100,
-					prob(1);/obj/item/weapon/spacecash/c50,
-					prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie,
-					prob(1);/obj/item/weapon/storage/box/cups,
+					prob(1);/obj/item/spacecash/c100, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/spacecash/c50, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/storage/backpack/dufflebag/syndie, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/storage/box/cups, // CHOMPEdit - Removal of obj/item/weapon
 					prob(1);/obj/item/pizzavoucher,
-					prob(1);/obj/item/weapon/grenade/spawnergrenade/clustaur)// CHOMPStation edit
+					prob(1);/obj/item/grenade/spawnergrenade/clustaur)// CHOMPStation edit // CHOMPEdit - Removal of obj/item/weapon
 
 	var/obj/item/I = new path()
 	return I
 
 /obj/structure/trash_pile/proc/produce_beta_item()
-	var/path = pick(prob(6);/obj/item/weapon/storage/pill_bottle/paracetamol,
-					prob(4);/obj/item/weapon/storage/pill_bottle/happy,
-					prob(4);/obj/item/weapon/storage/pill_bottle/zoom,
+	var/path = pick(prob(6);/obj/item/storage/pill_bottle/paracetamol, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/storage/pill_bottle/happy, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/storage/pill_bottle/zoom, // CHOMPEdit - Removal of obj/item/weapon
 					prob(4);/obj/item/seeds/ambrosiavulgarisseed,
-					prob(4);/obj/item/weapon/gun/energy/sizegun,
-					prob(4);/obj/item/device/slow_sizegun,
+					prob(4);/obj/item/gun/energy/sizegun, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/slow_sizegun, // CHOMPEdit - Removal of obj/item/device
 					prob(4);/obj/item/clothing/accessory/collar/shock/bluespace,
-					prob(3);/obj/item/weapon/cracker,
-					prob(3);/obj/item/weapon/material/butterfly,
-					prob(3);/obj/item/weapon/material/butterfly/switchblade,
+					prob(3);/obj/item/cracker, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/material/butterfly, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/material/butterfly/switchblade, // CHOMPEdit - Removal of obj/item/weapon
 					prob(3);/obj/item/clothing/gloves/knuckledusters,
 					prob(3);/obj/item/clothing/gloves/heavy_engineer,
-					prob(3);/obj/item/weapon/reagent_containers/syringe/drugs,
-					prob(2);/obj/item/weapon/implanter/sizecontrol,
-					prob(2);/obj/item/weapon/handcuffs/fuzzy,
-					prob(2);/obj/item/weapon/handcuffs/legcuffs/fuzzy,
-					prob(2);/obj/item/weapon/storage/box/syndie_kit/spy,
-					prob(2);/obj/item/weapon/grenade/anti_photon,
+					prob(3);/obj/item/reagent_containers/syringe/drugs, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/implanter/sizecontrol, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/handcuffs/fuzzy, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/handcuffs/legcuffs/fuzzy, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/storage/box/syndie_kit/spy, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/grenade/anti_photon, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/clothing/under/hyperfiber/bluespace,
 					prob(2);/obj/item/selectable_item/chemistrykit/size,
 					prob(2);/obj/item/selectable_item/chemistrykit/gender,
 					prob(2);/obj/item/clothing/gloves/bluespace/emagged,
 					prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
-					prob(1);/obj/item/device/nif/bad,
-					prob(1);/obj/item/device/radio_jammer,
-					prob(1);/obj/item/device/sleevemate,
-					prob(1);/obj/item/device/bodysnatcher,
-					prob(1);/obj/item/device/mindbinder,	//CHOMPAdd
-					prob(1);/obj/item/weapon/beartrap,
-					prob(1);/obj/item/weapon/cell/hyper/empty,
-					prob(1);/obj/item/weapon/disk/nifsoft/compliance,
-					prob(1);/obj/item/weapon/implanter/compliance,
-					prob(1);/obj/item/weapon/material/knife/tacknife,
-					prob(1);/obj/item/weapon/storage/box/survival/space,
-					prob(1);/obj/item/weapon/storage/secure/briefcase/trashmoney,
-					prob(1);/obj/item/device/survivalcapsule/popcabin,
-					prob(1);/obj/item/weapon/reagent_containers/syringe/steroid,
+					prob(1);/obj/item/nif/bad, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/radio_jammer, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/sleevemate, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/bodysnatcher, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/mindbinder,	//CHOMPAdd // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/beartrap, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/cell/hyper/empty, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/disk/nifsoft/compliance, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/implanter/compliance, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/material/knife/tacknife, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/storage/box/survival/space, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/storage/secure/briefcase/trashmoney, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/survivalcapsule/popcabin, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/reagent_containers/syringe/steroid, // CHOMPEdit - Removal of obj/item/weapon
 					prob(1);/obj/item/capture_crystal,
-					prob(1);/obj/item/device/perfect_tele/one_beacon,
+					prob(1);/obj/item/perfect_tele/one_beacon, // CHOMPEdit - Removal of obj/item/device
 					prob(1);/obj/item/clothing/gloves/bluespace,
-					prob(1);/obj/item/weapon/gun/energy/mouseray,
+					prob(1);/obj/item/gun/energy/mouseray, // CHOMPEdit - Removal of obj/item/weapon
 					prob(1);/obj/item/clothing/accessory/collar/shock/bluespace/modified,
-					prob(1);/obj/item/weapon/gun/energy/sizegun/backfire)
+					prob(1);/obj/item/gun/energy/sizegun/backfire) // CHOMPEdit - Removal of obj/item/weapon
 
 	var/obj/item/I = new path()
 	return I

@@ -143,9 +143,9 @@ var/global/list/all_objectives = list()
 
 /datum/objective/anti_revolution/demote/check_completion()
 	if(target && target.current && istype(target,/mob/living/carbon/human))
-		var/obj/item/weapon/card/id/I = target.current:wear_id
-		if(istype(I, /obj/item/device/pda))
-			var/obj/item/device/pda/P = I
+		var/obj/item/card/id/I = target.current:wear_id // CHOMPEdit - Removal of obj/item/weapon
+		if(istype(I, /obj/item/pda)) // CHOMPEdit - Removal of obj/item/device
+			var/obj/item/pda/P = I // CHOMPEdit - Removal of obj/item/device
 			I = P.id
 
 		if(!istype(I)) return 1
@@ -424,34 +424,34 @@ var/global/list/all_objectives = list()
 	var/target_name
 
 	var/global/possible_items[] = list(
-		"the Site Manager's antique laser gun" = /obj/item/weapon/gun/energy/captain,
-		"a hand teleporter" = /obj/item/weapon/hand_tele,
-		"an RCD" = /obj/item/weapon/rcd,
-		"a jetpack" = /obj/item/weapon/tank/jetpack,
+		"the Site Manager's antique laser gun" = /obj/item/gun/energy/captain, // CHOMPEdit - Removal of obj/item/weapon
+		"a hand teleporter" = /obj/item/hand_tele, // CHOMPEdit - Removal of obj/item/weapon
+		"an RCD" = /obj/item/rcd, // CHOMPEdit - Removal of obj/item/weapon
+		"a jetpack" = /obj/item/tank/jetpack, // CHOMPEdit - Removal of obj/item/weapon
 		"a site manager's jumpsuit" = /obj/item/clothing/under/rank/captain,
-		"a functional AI" = /obj/item/device/aicard,
+		"a functional AI" = /obj/item/aicard, // CHOMPEdit - Removal of obj/item/device
 		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
 		"the station blueprints" = /obj/item/areaeditor/blueprints,
 		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,
-		"28 moles of phoron (full tank)" = /obj/item/weapon/tank,
+		"28 moles of phoron (full tank)" = /obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
 		"a sample of slime extract" = /obj/item/slime_extract,
-		"a piece of corgi meat" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
+		"a piece of corgi meat" = /obj/item/reagent_containers/food/snacks/meat/corgi, // CHOMPEdit - Removal of obj/item/weapon
 		"a research director's jumpsuit" = /obj/item/clothing/under/rank/research_director,
 		"a chief engineer's jumpsuit" = /obj/item/clothing/under/rank/chief_engineer,
 		"a chief medical officer's jumpsuit" = /obj/item/clothing/under/rank/chief_medical_officer,
 		"a head of security's jumpsuit" = /obj/item/clothing/under/rank/head_of_security,
 		"a head of personnel's jumpsuit" = /obj/item/clothing/under/rank/head_of_personnel,
-		"the hypospray" = /obj/item/weapon/reagent_containers/hypospray/vial,
-		"the site manager's pinpointer" = /obj/item/weapon/pinpointer,
+		"the hypospray" = /obj/item/reagent_containers/hypospray/vial, // CHOMPEdit - Removal of obj/item/weapon
+		"the site manager's pinpointer" = /obj/item/pinpointer, // CHOMPEdit - Removal of obj/item/weapon
 		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,
 	)
 
 	var/global/possible_items_special[] = list(
-		/*"nuclear authentication disk" = /obj/item/weapon/disk/nuclear,*///Broken with the change to nuke disk making it respawn on z level change.
-		"nuclear gun" = /obj/item/weapon/gun/energy/gun/nuclear,
-		"diamond drill" = /obj/item/weapon/pickaxe/diamonddrill,
-		"bag of holding" = /obj/item/weapon/storage/backpack/holding,
-		"hyper-capacity cell" = /obj/item/weapon/cell/hyper,
+		/*"nuclear authentication disk" = /obj/item/disk/nuclear,*///Broken with the change to nuke disk making it respawn on z level change. // CHOMPEdit - Removal of obj/item/weapon
+		"nuclear gun" = /obj/item/gun/energy/gun/nuclear, // CHOMPEdit - Removal of obj/item/weapon
+		"diamond drill" = /obj/item/pickaxe/diamonddrill, // CHOMPEdit - Removal of obj/item/weapon
+		"bag of holding" = /obj/item/storage/backpack/holding, // CHOMPEdit - Removal of obj/item/weapon
+		"hyper-capacity cell" = /obj/item/cell/hyper, // CHOMPEdit - Removal of obj/item/weapon
 		"10 diamonds" = /obj/item/stack/material/diamond,
 		"50 gold bars" = /obj/item/stack/material/gold,
 		"25 refined uranium bars" = /obj/item/stack/material/uranium,
@@ -505,18 +505,18 @@ var/global/list/all_objectives = list()
 			return found_amount>=target_amount
 
 		if("50 coins (in bag)")
-			var/obj/item/weapon/moneybag/B = locate() in all_items
+			var/obj/item/moneybag/B = locate() in all_items // CHOMPEdit - Removal of obj/item/weapon
 
 			if(B)
 				var/target = text2num(target_name)
 				var/found_amount = 0.0
-				for(var/obj/item/weapon/coin/C in B)
+				for(var/obj/item/coin/C in B) // CHOMPEdit - Removal of obj/item/weapon
 					found_amount++
 				return found_amount>=target
 
 		if("a functional AI")
 
-			for(var/obj/item/device/aicard/C in all_items) //Check for ai card
+			for(var/obj/item/aicard/C in all_items) //Check for ai card // CHOMPEdit - Removal of obj/item/device
 				for(var/mob/living/silicon/ai/M in C)
 					if(istype(M, /mob/living/silicon/ai) && M.stat != 2) //See if any AI's are alive inside that card.
 						return 1
@@ -557,7 +557,7 @@ var/global/list/all_objectives = list()
 		return 0
 
 	var/current_amount
-	var/obj/item/weapon/rig/S
+	var/obj/item/rig/S // CHOMPEdit - Removal of obj/item/weapon
 	if(istype(owner.current,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = owner.current
 		S = H.back
@@ -695,19 +695,19 @@ var/global/list/all_objectives = list()
 			target_amount = 1
 			loot = "a nuclear bomb"
 		if(5)
-			target = /obj/item/weapon/gun
+			target = /obj/item/gun // CHOMPEdit - Removal of obj/item/weapon
 			target_amount = 6
 			loot = "six guns"
 		if(6)
-			target = /obj/item/weapon/gun/energy
+			target = /obj/item/gun/energy // CHOMPEdit - Removal of obj/item/weapon
 			target_amount = 4
 			loot = "four energy guns"
 		if(7)
-			target = /obj/item/weapon/gun/energy/laser
+			target = /obj/item/gun/energy/laser // CHOMPEdit - Removal of obj/item/weapon
 			target_amount = 2
 			loot = "two laser guns"
 		if(8)
-			target = /obj/item/weapon/gun/energy/ionrifle
+			target = /obj/item/gun/energy/ionrifle // CHOMPEdit - Removal of obj/item/weapon
 			target_amount = 1
 			loot = "an ion gun"
 

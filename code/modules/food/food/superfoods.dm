@@ -4,10 +4,10 @@
 	reagents = list("flour" = 30,"milk" = 20, "sugar" = 10, "egg" = 9)
 	fruit = list("poisonberries" = 2, "cherries" =  2)
 	items = list(
-			/obj/item/weapon/reagent_containers/food/snacks/meat/,
-			/obj/item/weapon/reagent_containers/food/snacks/meat/,
-			/obj/item/weapon/reagent_containers/food/snacks/meat/,
-			/obj/item/weapon/reagent_containers/food/snacks/meat/
+			/obj/item/reagent_containers/food/snacks/meat/, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/meat/, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/meat/, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/meat/ // CHOMPEdit - Removal of obj/item/weapon
 		)
 	result = /obj/structure/chaoscake
 
@@ -15,77 +15,77 @@
 	reagents = list("flour" = 30, "milk" = 20, "sugar" = 10, "egg" = 9, )
 	fruit = list("vanilla" =  2, "banana" = 2)
 	items = list(
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough // CHOMPEdit - Removal of obj/item/weapon
 		)
-	result = /obj/item/weapon/chaoscake_layer
+	result = /obj/item/chaoscake_layer // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/recipe/chaoscake_layerthree
 	reagents = list("flour" = 25, "milk" = 15, "sugar" = 10, "egg" = 6, "deathbell" = 10)
 	fruit = list("grapes" = 3)
 	items = list(
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough // CHOMPEdit - Removal of obj/item/weapon
 		)
-	result = /obj/item/weapon/chaoscake_layer/three
+	result = /obj/item/chaoscake_layer/three // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/recipe/chaoscake_layerfour
 	reagents = list("flour" = 25, "milk" = 15, "sugar" = 10, "egg" = 6, "milkshake" = 30)
 	fruit = list("rice" = 3)
 	items = list(
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough // CHOMPEdit - Removal of obj/item/weapon
 		)
-	result = /obj/item/weapon/chaoscake_layer/four
+	result = /obj/item/chaoscake_layer/four // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/recipe/chaoscake_layerfive
 	reagents = list("flour" = 20, "milk" = 10, "sugar" = 10, "egg" = 6, "blood" = 30)
 	fruit = list("tomato" = 2)
 	items = list() //supposed to be made with lobster, still has to be ported.
-	result = /obj/item/weapon/chaoscake_layer/five
+	result = /obj/item/chaoscake_layer/five // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/recipe/chaoscake_layersix
 	reagents = list("flour" = 20, "milk" = 10, "sugar" = 10, "egg" = 6, "sprinkles" = 5)
 	fruit = list("apple" = 2)
 	items = list(
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-			/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-			/obj/item/weapon/reagent_containers/food/snacks/chocolatebar
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/chocolatebar, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/chocolatebar, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/chocolatebar // CHOMPEdit - Removal of obj/item/weapon
 		)
-	result = /obj/item/weapon/chaoscake_layer/six
+	result = /obj/item/chaoscake_layer/six // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/recipe/chaoscake_layerseven
 	reagents = list("flour" = 15, "milk" = 10, "sugar" = 5, "egg" = 3, "devilskiss" = 20)
 	fruit = list("potato" = 1)
 	items = list(
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough // CHOMPEdit - Removal of obj/item/weapon
 		)
-	result = /obj/item/weapon/chaoscake_layer/seven
+	result = /obj/item/chaoscake_layer/seven // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/recipe/chaoscake_layereight
 	reagents = list("flour" = 15, "milk" = 10, "sugar" = 5, "egg" = 3, "cream" = 20)
 	fruit = list("lemon" = 1)
 	items = list(
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough,
-			/obj/item/weapon/reagent_containers/food/snacks/dough
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/dough // CHOMPEdit - Removal of obj/item/weapon
 		)
-	result = /obj/item/weapon/chaoscake_layer/eight
+	result = /obj/item/chaoscake_layer/eight // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/recipe/chaoscake_layernine
 	reagents = list("water" = 10, "blood" = 10)
 	fruit = list("goldapple" = 1)
 	items = list()
-	result = /obj/item/weapon/chaoscake_layer/nine
+	result = /obj/item/chaoscake_layer/nine // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/structure/chaoscake
 	name = "An unfinished cake"
@@ -116,44 +116,44 @@
 			"A chaos cake. Both a creation of dark and light, the two cakes are kept in a careful balance by that mystical coin in the middle. It's said its effects would dissipate if the balance is ever tipped in favour of one side too much, so both sides much be cut equally."
 		)
 
-/obj/item/weapon/chaoscake_layer
+/obj/item/chaoscake_layer // CHOMPEdit - Removal of obj/item/weapon
 	name = "A layer of cake"
 	desc = "a layer of cake, it is made out of colourful cream."
 	icon = 'icons/obj/food.dmi'
 	icon_state = "chaoscake_layer-2"
 	var/layer_stage = 1
 
-/obj/item/weapon/chaoscake_layer/three
+/obj/item/chaoscake_layer/three // CHOMPEdit - Removal of obj/item/weapon
 	desc = "a layer of cake, glazed in purple."
 	icon_state = "chaoscake_layer-3"
 	layer_stage = 2
 
-/obj/item/weapon/chaoscake_layer/four
+/obj/item/chaoscake_layer/four // CHOMPEdit - Removal of obj/item/weapon
 	desc = "a layer of cake, reminding you of a colouring book."
 	icon_state = "chaoscake_layer-4"
 	layer_stage = 3
 
-/obj/item/weapon/chaoscake_layer/five
+/obj/item/chaoscake_layer/five // CHOMPEdit - Removal of obj/item/weapon
 	desc = "A layer of cake, smells like copper."
 	icon_state = "chaoscake_layer-5"
 	layer_stage = 4
 
-/obj/item/weapon/chaoscake_layer/six
+/obj/item/chaoscake_layer/six // CHOMPEdit - Removal of obj/item/weapon
 	desc = "A layer of cake, featuring colourful sprinkles."
 	icon_state = "chaoscake_layer-6"
 	layer_stage = 5
 
-/obj/item/weapon/chaoscake_layer/seven
+/obj/item/chaoscake_layer/seven // CHOMPEdit - Removal of obj/item/weapon
 	desc = "A triplet of evil cake parts."
 	icon_state = "chaoscake_layer-7"
 	layer_stage = 6
 
-/obj/item/weapon/chaoscake_layer/eight
+/obj/item/chaoscake_layer/eight // CHOMPEdit - Removal of obj/item/weapon
 	desc = "A triplet of good cake parts."
 	icon_state = "chaoscake_layer-8"
 	layer_stage = 7
 
-/obj/item/weapon/chaoscake_layer/nine
+/obj/item/chaoscake_layer/nine // CHOMPEdit - Removal of obj/item/weapon
 	name = "A coin of balance"
 	desc = "A very peculiar coin, it seems to stabilise the air around it."
 	icon_state = "chaoscake_layer-9"
@@ -171,7 +171,7 @@
 	else
 		return
 
-/obj/item/weapon/reagent_containers/food/snacks/chaoscakeslice
+/obj/item/reagent_containers/food/snacks/chaoscakeslice // CHOMPEdit - Removal of obj/item/weapon
 	name = "The Chaos Cake Slice"
 	desc = "A slice from The Chaos Cake, it pulses weirdly, as if angry to be separated from the whole"
 	icon_state = "chaoscake_slice-1"
@@ -182,7 +182,7 @@
 	nutriment_amt = 4
 	volume = 80
 
-/obj/item/weapon/reagent_containers/food/snacks/chaoscakeslice/Initialize()
+/obj/item/reagent_containers/food/snacks/chaoscakeslice/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	var/i = rand(1,6)
 	icon_state = "chaoscake_slice-[i]"
@@ -241,8 +241,8 @@
 			reagents.add_reagent("kelotane", 2)
 			bitesize = 4
 
-/obj/structure/chaoscake/attackby(var/obj/item/weapon/W, var/mob/living/user)
-	if(istype(W,/obj/item/weapon/material/knife))
+/obj/structure/chaoscake/attackby(var/obj/item/W, var/mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W,/obj/item/material/knife)) // CHOMPEdit - Removal of obj/item/weapon
 		if(edible == 1)
 			HasSliceMissing()
 			if(slices <= 0)
@@ -252,13 +252,13 @@
 				to_chat(user, "You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!")
 				slices = slices - 1
 				icon_state = "chaoscake-[slices]"
-				new /obj/item/weapon/reagent_containers/food/snacks/chaoscakeslice(src.loc)
+				new /obj/item/reagent_containers/food/snacks/chaoscakeslice(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 
 		else
 			to_chat(user, "<span class='notice'>It looks so good... But it feels so wrong to eat it before it's finished...</span>")
 			return
-	if(istype(W,/obj/item/weapon/chaoscake_layer))
-		var/obj/item/weapon/chaoscake_layer/C = W
+	if(istype(W,/obj/item/chaoscake_layer)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/chaoscake_layer/C = W // CHOMPEdit - Removal of obj/item/weapon
 		if(C.layer_stage == 8)
 			to_chat(user, "Finally! The coin on the top, the almighty chaos cake is complete!")
 			qdel(W)
@@ -292,14 +292,14 @@
 
 	var/slicetime = 15 SECONDS
 
-	var/slicelist = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita/bigslice,
-						 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/pineapple/bigslice,
-						 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza/bigslice,
-						 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice,
-						 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice)
+	var/slicelist = list(/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita/bigslice, // CHOMPEdit - Removal of obj/item/weapon
+						 /obj/item/reagent_containers/food/snacks/sliceable/pizza/pineapple/bigslice, // CHOMPEdit - Removal of obj/item/weapon
+						 /obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza/bigslice, // CHOMPEdit - Removal of obj/item/weapon
+						 /obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice, // CHOMPEdit - Removal of obj/item/weapon
+						 /obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/structure/theonepizza/attackby(var/obj/item/weapon/W, var/mob/living/user)
-	if(istype(W,/obj/item/weapon/material/knife))
+/obj/structure/theonepizza/attackby(var/obj/item/W, var/mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W,/obj/item/material/knife)) // CHOMPEdit - Removal of obj/item/weapon
 		user.visible_message("<b>\The [user]</b> starts to slowly cut through The One Pizza.", "<span class='notice'>You start to slowly cut through The One Pizza.</span>")
 		if(do_after(user, slicetime, exclusive = TASK_USER_EXCLUSIVE))
 			if(!src)
@@ -309,27 +309,27 @@
 				new slicetype(src.loc)
 			qdel(src)
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita/bigslice
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita/bigslice // CHOMPEdit - Removal of obj/item/weapon
 	name = "Giant Margherita slice"
 	desc = "Big enough to be a sign at a pizzeria."
 	icon_state = "big_cheese_slice"
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/pineapple/bigslice
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/pineapple/bigslice // CHOMPEdit - Removal of obj/item/weapon
 	name = "Giant ham & pineapple pizza slice"
 	desc = "This thing probably constitutes an italian warcrime."
 	icon_state = "big_pineapple_slice"
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza/bigslice
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza/bigslice // CHOMPEdit - Removal of obj/item/weapon
 	name = "Giant meatpizza slice"
 	desc = "A Meat Feast fit for a king."
 	icon_state = "big_meat_slice"
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice // CHOMPEdit - Removal of obj/item/weapon
 	name = "Giant mushroompizza slice"
 	desc = "Practically a honey mushroom at this scale."
 	icon_state = "big_mushroom_slice"
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice // CHOMPEdit - Removal of obj/item/weapon
 	name = "Giant vegetable pizza slice"
 	desc = "So healthy it'll give you a heart attack."
 	icon_state = "big_veggie_slice"
@@ -337,23 +337,23 @@
 /datum/recipe/theonepizza
 	fruit = list("tomato" = 5, "mushroom" = 5, "eggplant" = 1, "carrot" = 1, "corn" = 1)
 	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
-		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
-		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
-		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
-		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge,
-		/obj/item/weapon/reagent_containers/food/snacks/meat,
-		/obj/item/weapon/reagent_containers/food/snacks/meat,
-		/obj/item/weapon/reagent_containers/food/snacks/meat,
-		/obj/item/weapon/reagent_containers/food/snacks/pineapple_ring,
-		/obj/item/weapon/reagent_containers/food/snacks/pineapple_ring
+		/obj/item/reagent_containers/food/snacks/sliceable/flatdough, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/sliceable/flatdough, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/sliceable/flatdough, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/sliceable/flatdough, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/sliceable/flatdough, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/cheesewedge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/cheesewedge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/cheesewedge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/cheesewedge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/cheesewedge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/cheesewedge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/cheesewedge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/cheesewedge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/meat, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/meat, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/meat, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/pineapple_ring, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/pineapple_ring // CHOMPEdit - Removal of obj/item/weapon
 	)
 	result = /obj/structure/theonepizza

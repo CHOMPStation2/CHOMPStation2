@@ -1,7 +1,7 @@
 /*
  * Black CAH cards
  */
-/obj/item/weapon/deck/cah/black/card_text_list = list(
+/obj/item/deck/cah/black/card_text_list = list( // CHOMPEdit - Removal of obj/item/weapon
 	"Why am I itchy?",
 	"Today, Security shot ____.",
 	"The Chaplain this shift is worshiping _____.",

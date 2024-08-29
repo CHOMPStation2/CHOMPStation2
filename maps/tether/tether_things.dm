@@ -292,9 +292,9 @@
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
 //
-/obj/item/device/radio/intercom
+/obj/item/radio/intercom // CHOMPEdit - Removal of obj/item/device
 	layer = ABOVE_WINDOW_LAYER
-/obj/item/weapon/storage/secure/safe
+/obj/item/storage/secure/safe // CHOMPEdit - Removal of obj/item/weapon
 	layer = ABOVE_WINDOW_LAYER
 /obj/machinery/airlock_sensor
 	layer = ABOVE_WINDOW_LAYER

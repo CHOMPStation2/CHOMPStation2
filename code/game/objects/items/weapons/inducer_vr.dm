@@ -1,4 +1,4 @@
-/obj/item/weapon/inducer
+/obj/item/inducer // CHOMPEdit - Removal of obj/item/weapon
 	name = "industrial inducer"
 	desc = "A tool for inductively charging internal power cells."
 	icon = 'icons/obj/tools_vr.dmi'
@@ -11,45 +11,45 @@
 	force = 7
 
 	var/powertransfer = 1000 //Transfer per time when charging something
-	var/cell_type = /obj/item/weapon/cell/high //Type of cell to spawn in it
+	var/cell_type = /obj/item/cell/high //Type of cell to spawn in it // CHOMPEdit - Removal of obj/item/weapon
 	var/charge_guns = FALSE //Can it charge guns?
 
 	var/datum/effect/effect/system/spark_spread/spark_system
-	var/obj/item/weapon/cell/cell
+	var/obj/item/cell/cell // CHOMPEdit - Removal of obj/item/weapon
 	var/recharging = FALSE
 	var/opened = FALSE
 
-/obj/item/weapon/inducer/unloaded
+/obj/item/inducer/unloaded // CHOMPEdit - Removal of obj/item/weapon
 	cell_type = null
 	opened = TRUE
 
-/obj/item/weapon/inducer/Initialize()
+/obj/item/inducer/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(!cell && cell_type)
 		cell = new cell_type
 
-/obj/item/weapon/inducer/proc/induce(var/obj/item/weapon/cell/target, coefficient)
+/obj/item/inducer/proc/induce(var/obj/item/cell/target, coefficient) // CHOMPEdit - Removal of obj/item/weapon
 	var/totransfer = min(cell.charge,(powertransfer * coefficient))
 	var/transferred = target.give(totransfer)
 	cell.use(transferred)
 	cell.update_icon()
 	target.update_icon()
 
-/obj/item/weapon/inducer/get_cell()
+/obj/item/inducer/get_cell() // CHOMPEdit - Removal of obj/item/weapon
 	return cell
 
-/obj/item/weapon/inducer/emp_act(severity)
+/obj/item/inducer/emp_act(severity) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(cell)
 		cell.emp_act(severity)
 
-/obj/item/weapon/inducer/attack(mob/living/M, mob/living/user)
+/obj/item/inducer/attack(mob/living/M, mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(user.a_intent == I_HURT)
 		return ..()
 	else
 		return 0 //No accidental bludgeons!
 
-/obj/item/weapon/inducer/afterattack(atom/A, mob/living/carbon/user, proximity)
+/obj/item/inducer/afterattack(atom/A, mob/living/carbon/user, proximity) // CHOMPEdit - Removal of obj/item/weapon
 	if(user.a_intent == I_HURT)
 		return ..()
 
@@ -61,7 +61,7 @@
 
 	return ..()
 
-/obj/item/weapon/inducer/proc/cantbeused(mob/user)
+/obj/item/inducer/proc/cantbeused(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to use [src]!</span>")
 		return TRUE
@@ -76,7 +76,7 @@
 	return FALSE
 
 
-/obj/item/weapon/inducer/attackby(obj/item/W, mob/user)
+/obj/item/inducer/attackby(obj/item/W, mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		playsound(src, W.usesound, 50, 1)
 		if(!opened)
@@ -89,7 +89,7 @@
 			opened = FALSE
 			update_icon()
 			return
-	if(istype(W, /obj/item/weapon/cell))
+	if(istype(W, /obj/item/cell)) // CHOMPEdit - Removal of obj/item/weapon
 		if(opened)
 			if(!cell)
 				user.drop_from_inventory(W)
@@ -110,7 +110,7 @@
 
 	return ..()
 
-/obj/item/weapon/inducer/proc/recharge(atom/movable/A, mob/user)
+/obj/item/inducer/proc/recharge(atom/movable/A, mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!isturf(A) && user.loc == A)
 		return FALSE
 	if(recharging)
@@ -118,19 +118,19 @@
 	else
 		recharging = TRUE
 
-	if(istype(A, /obj/item/weapon/gun/energy) && !charge_guns)
+	if(istype(A, /obj/item/gun/energy) && !charge_guns) // CHOMPEdit - Removal of obj/item/weapon
 		to_chat(user, "<span class='alert'>Error: Device is unable to interface with weapons.</span>")
 		recharging = FALSE
 		return FALSE
 
 	//The cell we hopefully eventually find
-	var/obj/item/weapon/cell/C
+	var/obj/item/cell/C // CHOMPEdit - Removal of obj/item/weapon
 
 	//Synthetic humanoids
 	if(ishuman(A))
 		var/mob/living/carbon/human/H = A
 		if(H.isSynthetic())
-			C = new /obj/item/weapon/cell/standin(null, H) // o o f
+			C = new /obj/item/cell/standin(null, H) // o o f // CHOMPEdit - Removal of obj/item/weapon
 
 	//Borg frienbs
 	else if(isrobot(A))
@@ -188,7 +188,7 @@
 
 	recharging = FALSE
 
-/obj/item/weapon/inducer/attack_self(mob/user)
+/obj/item/inducer/attack_self(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(opened && cell)
 		user.visible_message("<span class='notice'>[user] removes [cell] from [src]!</span>", "<span class='notice'>You remove [cell].</span>")
 		cell.update_icon()
@@ -196,7 +196,7 @@
 		cell = null
 		update_icon()
 
-/obj/item/weapon/inducer/examine(mob/living/M)
+/obj/item/inducer/examine(mob/living/M) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(cell)
 		. += "<span class='notice'>Its display shows: [round(cell.charge)] / [cell.maxcharge].</span>"
@@ -205,7 +205,7 @@
 	if(opened)
 		. += "<span class='notice'>Its battery compartment is open.</span>"
 
-/obj/item/weapon/inducer/update_icon()
+/obj/item/inducer/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	cut_overlays()
 	if(opened)
@@ -215,7 +215,7 @@
 			add_overlay("inducer-bat")
 
 //////// Variants
-/obj/item/weapon/inducer/sci
+/obj/item/inducer/sci // CHOMPEdit - Removal of obj/item/weapon
 	name = "inducer"
 	desc = "A tool for inductively charging internal power cells. This one has a science color scheme, and is less potent than its engineering counterpart."
 	icon_state = "inducer-sci"
@@ -224,31 +224,31 @@
 	powertransfer = 500
 	opened = TRUE
 
-/obj/item/weapon/inducer/sci/Initialize()
+/obj/item/inducer/sci/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	update_icon() //To get the 'open' state applied
 
-/obj/item/weapon/inducer/syndicate
+/obj/item/inducer/syndicate // CHOMPEdit - Removal of obj/item/weapon
 	name = "suspicious inducer"
 	desc = "A tool for inductively charging internal power cells. This one has a suspicious colour scheme, and seems to be rigged to transfer charge at a much faster rate."
 	icon_state = "inducer-syndi"
 	item_state = "inducer-syndi"
 	powertransfer = 2000
-	cell_type = /obj/item/weapon/cell/super
+	cell_type = /obj/item/cell/super // CHOMPEdit - Removal of obj/item/weapon
 	charge_guns = TRUE
 
-/obj/item/weapon/inducer/hybrid
+/obj/item/inducer/hybrid // CHOMPEdit - Removal of obj/item/weapon
 	name = "hybrid-tech inducer"
 	desc = "A tool for inductively charging internal power cells. This one has some flashy bits and recharges devices slower, but seems to recharge itself between uses."
 	icon_state = "inducer-hybrid"
 	item_state = "inducer-hybrid"
 	powertransfer = 250
-	cell_type = /obj/item/weapon/cell/void
+	cell_type = /obj/item/cell/void // CHOMPEdit - Removal of obj/item/weapon
 	charge_guns = TRUE
 
 // A 'human stand-in' cell for recharging 'nutrition' on synthetic humans (wow this is terrible! \o/)
 #define NUTRITION_COEFF 0.05 // 1000 charge = 50 nutrition at 0.05
-/obj/item/weapon/cell/standin
+/obj/item/cell/standin // CHOMPEdit - Removal of obj/item/weapon
 	name = "don't spawn this"
 	desc = "this is for weird code use, don't spawn it!!!"
 
@@ -257,7 +257,7 @@
 
 	var/mob/living/carbon/human/hume
 
-/obj/item/weapon/cell/standin/New(newloc, var/mob/living/carbon/human/H)
+/obj/item/cell/standin/New(newloc, var/mob/living/carbon/human/H) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	if(istype(H, /mob/living/carbon/human))//ChompEDIT - fix a runtime
 		hume = H
@@ -267,7 +267,7 @@
 	QDEL_IN(src, 20 SECONDS)
 
 
-/obj/item/weapon/cell/standin/give(var/amount)
+/obj/item/cell/standin/give(var/amount) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..(amount * NUTRITION_COEFF) //Shrink amount to store
 	hume.adjust_nutrition(.) //Add the amount we really stored
 	. /= NUTRITION_COEFF //Inflate amount to take from the giver

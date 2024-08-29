@@ -7,7 +7,7 @@
 	icon_state = "ai"
 
 /obj/structure/prop/fake_ai/attackby(obj/O, mob/user)
-	if(istype(O, /obj/item/device/aicard)) // People trying to card the fake AI will get told its impossible.
+	if(istype(O, /obj/item/aicard)) // People trying to card the fake AI will get told its impossible. // CHOMPEdit - Removal of obj/item/device
 		to_chat(user, span("warning", "This core does not appear to have a suitable port to use \the [O] on..."))
 		return TRUE
 	return ..()

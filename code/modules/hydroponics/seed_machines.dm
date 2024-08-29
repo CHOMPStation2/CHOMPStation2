@@ -1,4 +1,4 @@
-/obj/item/weapon/disk/botany
+/obj/item/disk/botany // CHOMPEdit - Removal of obj/item/weapon
 	name = "flora data disk"
 	desc = "A small disk used for carrying data on plant genetics."
 	icon = 'icons/obj/hydroponics_machines.dmi'
@@ -8,12 +8,12 @@
 	var/list/genes = list()
 	var/genesource = "unknown"
 
-/obj/item/weapon/disk/botany/New()
+/obj/item/disk/botany/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	pixel_x = rand(-5,5)
 	pixel_y = rand(-5,5)
 
-/obj/item/weapon/disk/botany/attack_self(var/mob/user as mob)
+/obj/item/disk/botany/attack_self(var/mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(genes.len)
 		var/choice = tgui_alert(user, "Are you sure you want to wipe the disk?", "Xenobotany Data", list("No", "Yes"))
 		if(src && user && genes && choice && choice == "Yes" && user.Adjacent(get_turf(src)))
@@ -23,14 +23,14 @@
 			genes = list()
 			genesource = "unknown"
 
-/obj/item/weapon/storage/box/botanydisk
+/obj/item/storage/box/botanydisk // CHOMPEdit - Removal of obj/item/weapon
 	name = "flora disk box"
 	desc = "A box of flora data disks, apparently."
 
-/obj/item/weapon/storage/box/botanydisk/New()
+/obj/item/storage/box/botanydisk/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	for(var/i = 0;i<7;i++)
-		new /obj/item/weapon/disk/botany(src)
+		new /obj/item/disk/botany(src) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/machinery/botany
 	icon = 'icons/obj/hydroponics_machines_vr.dmi' //VOREStation Edit
@@ -40,7 +40,7 @@
 	use_power = USE_POWER_IDLE
 
 	var/obj/item/seeds/seed // Currently loaded seed packet.
-	var/obj/item/weapon/disk/botany/loaded_disk //Currently loaded data disk.
+	var/obj/item/disk/botany/loaded_disk //Currently loaded data disk. // CHOMPEdit - Removal of obj/item/weapon
 
 	var/open = 0
 	var/active = 0
@@ -79,7 +79,7 @@
 			visible_message("<span class='filter_notice'>[icon2html(src,viewers(src))] [src] beeps and spits out [loaded_disk].</span>")
 			loaded_disk = null
 
-/obj/machinery/botany/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/botany/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(istype(W,/obj/item/seeds))
 		if(seed)
 			to_chat(user, "<span class='filter_notice'>There is already a seed loaded.</span>")
@@ -103,12 +103,12 @@
 		return
 //	if(default_deconstruction_crowbar(user, W))	//No circuit boards to give.
 //		return
-	if(istype(W,/obj/item/weapon/disk/botany))
+	if(istype(W,/obj/item/disk/botany)) // CHOMPEdit - Removal of obj/item/weapon
 		if(loaded_disk)
 			to_chat(user, "<span class='filter_notice'>There is already a data disk loaded.</span>")
 			return
 		else
-			var/obj/item/weapon/disk/botany/B = W
+			var/obj/item/disk/botany/B = W // CHOMPEdit - Removal of obj/item/weapon
 
 			if(B.genes && B.genes.len)
 				if(!disk_needs_genes)

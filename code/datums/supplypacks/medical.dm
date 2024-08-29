@@ -10,16 +10,16 @@
 /datum/supply_pack/med/medical
 	name = "Medical crate"
 	contains = list(
-			/obj/item/weapon/storage/firstaid/regular,
-			/obj/item/weapon/storage/firstaid/fire,
-			/obj/item/weapon/storage/firstaid/toxin,
-			/obj/item/weapon/storage/firstaid/o2,
-			/obj/item/weapon/storage/firstaid/adv,
-			/obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
-			/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline,
-			/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
-			/obj/item/weapon/storage/box/syringes,
-			/obj/item/weapon/storage/box/autoinjectors
+			/obj/item/storage/firstaid/regular, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/firstaid/fire, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/firstaid/toxin, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/firstaid/o2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/firstaid/adv, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/glass/bottle/antitoxin, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/glass/bottle/inaprovaline, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/glass/bottle/stoxin, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/syringes, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/autoinjectors // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 15
 	containertype = /obj/structure/closet/crate/zenghu
@@ -27,21 +27,21 @@
 
 /datum/supply_pack/med/bloodpack
 	name = "BloodPack crate"
-	contains = list(/obj/item/weapon/storage/box/bloodpacks = 3)
+	contains = list(/obj/item/storage/box/bloodpacks = 3) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 10
 	containertype = /obj/structure/closet/crate/nanomed
 	containername = "BloodPack crate"
 
 /datum/supply_pack/med/synthplas
 	name = "BloodPack (Synthplas) crate"
-	contains = list(/obj/item/weapon/reagent_containers/blood/synthplas = 6)
+	contains = list(/obj/item/reagent_containers/blood/synthplas = 6) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 80
 	containertype = /obj/structure/closet/crate/nanomed
 	containername = "SynthPlas crate"
 
 /datum/supply_pack/med/bodybag
 	name = "Body bag crate"
-	contains = list(/obj/item/weapon/storage/box/bodybags = 3)
+	contains = list(/obj/item/storage/box/bodybags = 3) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 10
 	containertype = /obj/structure/closet/crate/nanomed
 	containername = "Body bag crate"
@@ -56,17 +56,17 @@
 /datum/supply_pack/med/surgery
 	name = "Surgery crate"
 	contains = list(
-			/obj/item/weapon/surgical/cautery,
-			/obj/item/weapon/surgical/surgicaldrill,
+			/obj/item/surgical/cautery, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/surgicaldrill, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/mask/breath/medical,
-			/obj/item/weapon/tank/anesthetic,
-			/obj/item/weapon/surgical/FixOVein,
-			/obj/item/weapon/surgical/hemostat,
-			/obj/item/weapon/surgical/scalpel,
-			/obj/item/weapon/surgical/bonegel,
-			/obj/item/weapon/surgical/retractor,
-			/obj/item/weapon/surgical/bonesetter,
-			/obj/item/weapon/surgical/circular_saw
+			/obj/item/tank/anesthetic, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/FixOVein, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/hemostat, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/scalpel, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/bonegel, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/retractor, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/bonesetter, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/circular_saw // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/veymed
@@ -76,8 +76,8 @@
 /datum/supply_pack/med/deathalarm
 	name = "Death Alarm crate"
 	contains = list(
-			/obj/item/weapon/storage/box/cdeathalarm_kit,
-			/obj/item/weapon/storage/box/cdeathalarm_kit
+			/obj/item/storage/box/cdeathalarm_kit, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/cdeathalarm_kit // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/ward
@@ -87,7 +87,7 @@
 /datum/supply_pack/med/clotting
 	name = "Clotting Medicine crate"
 	contains = list(
-			/obj/item/weapon/storage/firstaid/clotting
+			/obj/item/storage/firstaid/clotting // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/zenghu
@@ -99,9 +99,9 @@
 	contains = list(
 			/obj/item/clothing/under/rank/medical/scrubs/green = 2,
 			/obj/item/clothing/head/surgery/green = 2,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves,
-			/obj/item/weapon/storage/belt/medical = 3
+			/obj/item/storage/box/masks, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/gloves, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/belt/medical = 3 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/veymed
@@ -110,9 +110,9 @@
 /datum/supply_pack/med/extragear
 	name = "Medical surplus equipment"
 	contains = list(
-			/obj/item/weapon/storage/belt/medical = 3,
+			/obj/item/storage/belt/medical = 3, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/glasses/hud/health = 3,
-			/obj/item/device/radio/headset/headset_med/alt = 3,
+			/obj/item/radio/headset/headset_med/alt = 3, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/suit/storage/hooded/wintercoat/medical = 3
 			)
 	cost = 10
@@ -123,21 +123,21 @@
 /datum/supply_pack/med/cmogear
 	name = "Chief medical officer equipment"
 	contains = list(
-			/obj/item/weapon/storage/belt/medical,
-			/obj/item/device/radio/headset/heads/cmo,
+			/obj/item/storage/belt/medical, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/radio/headset/heads/cmo, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/under/rank/chief_medical_officer,
-			/obj/item/weapon/reagent_containers/hypospray/vial,
+			/obj/item/reagent_containers/hypospray/vial, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/accessory/stethoscope,
 			/obj/item/clothing/glasses/hud/health,
 			/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
 			/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
 			/obj/item/clothing/mask/surgical,
 			/obj/item/clothing/shoes/white,
-			/obj/item/weapon/cartridge/cmo,
+			/obj/item/cartridge/cmo, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/gloves/sterile/latex,
-			/obj/item/device/healthanalyzer,
-			/obj/item/device/flashlight/pen,
-			/obj/item/weapon/reagent_containers/syringe
+			/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/flashlight/pen, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/reagent_containers/syringe // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -147,20 +147,20 @@
 /datum/supply_pack/med/doctorgear
 	name = "Medical Doctor equipment"
 	contains = list(
-			/obj/item/weapon/storage/belt/medical,
-			/obj/item/device/radio/headset/headset_med,
+			/obj/item/storage/belt/medical, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/radio/headset/headset_med, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/under/rank/medical,
 			/obj/item/clothing/accessory/stethoscope,
 			/obj/item/clothing/glasses/hud/health,
 			/obj/item/clothing/suit/storage/toggle/labcoat,
 			/obj/item/clothing/mask/surgical,
-			/obj/item/weapon/storage/firstaid/adv,
+			/obj/item/storage/firstaid/adv, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/shoes/white,
-			/obj/item/weapon/cartridge/medical,
+			/obj/item/cartridge/medical, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/gloves/sterile/latex,
-			/obj/item/device/healthanalyzer,
-			/obj/item/device/flashlight/pen,
-			/obj/item/weapon/reagent_containers/syringe
+			/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/flashlight/pen, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/reagent_containers/syringe // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -170,20 +170,20 @@
 /datum/supply_pack/med/chemistgear
 	name = "Chemist equipment"
 	contains = list(
-			/obj/item/weapon/storage/box/beakers,
-			/obj/item/device/radio/headset/headset_med,
-			/obj/item/weapon/storage/box/autoinjectors,
+			/obj/item/storage/box/beakers, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/radio/headset/headset_med, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/box/autoinjectors, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/under/rank/chemist,
 			/obj/item/clothing/glasses/science,
 			/obj/item/clothing/suit/storage/toggle/labcoat/chemist,
 			/obj/item/clothing/mask/surgical,
 			/obj/item/clothing/shoes/white,
-			/obj/item/weapon/cartridge/chemistry,
+			/obj/item/cartridge/chemistry, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/gloves/sterile/latex,
-			/obj/item/weapon/reagent_containers/dropper,
-			/obj/item/device/healthanalyzer,
-			/obj/item/weapon/storage/box/pillbottles,
-			/obj/item/weapon/reagent_containers/syringe
+			/obj/item/reagent_containers/dropper, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/box/pillbottles, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/syringe // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -193,8 +193,8 @@
 /datum/supply_pack/med/paramedicgear
 	name = "Paramedic equipment"
 	contains = list(
-			/obj/item/weapon/storage/belt/medical/emt,
-			/obj/item/device/radio/headset/headset_med,
+			/obj/item/storage/belt/medical/emt, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/radio/headset/headset_med, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/under/rank/medical/scrubs/black,
 			/obj/item/clothing/accessory/armband/medblue,
 			/obj/item/clothing/glasses/hud/health,
@@ -204,13 +204,13 @@
 			/obj/item/clothing/mask/gas,
 			/obj/item/clothing/under/rank/medical/paramedic_alt,
 			/obj/item/clothing/accessory/stethoscope,
-			/obj/item/weapon/storage/firstaid/adv,
+			/obj/item/storage/firstaid/adv, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/shoes/boots/jackboots,
 			/obj/item/clothing/gloves/sterile/latex,
-			/obj/item/device/healthanalyzer,
-			/obj/item/weapon/cartridge/medical,
-			/obj/item/device/flashlight/pen,
-			/obj/item/weapon/reagent_containers/syringe,
+			/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/cartridge/medical, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flashlight/pen, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/reagent_containers/syringe, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/accessory/storage/white_vest
 			)
 	cost = 20
@@ -222,15 +222,15 @@
 	name = "Psychiatrist equipment"
 	contains = list(
 			/obj/item/clothing/under/rank/psych,
-			/obj/item/device/radio/headset/headset_med,
+			/obj/item/radio/headset/headset_med, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/under/rank/psych/turtleneck,
 			/obj/item/clothing/shoes/laceup,
 			/obj/item/clothing/suit/storage/toggle/labcoat,
 			/obj/item/clothing/shoes/white,
-			/obj/item/weapon/clipboard,
-			/obj/item/weapon/folder/white,
-			/obj/item/weapon/pen,
-			/obj/item/weapon/cartridge/medical
+			/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/folder/white, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/pen, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/cartridge/medical // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -250,8 +250,8 @@
 			/obj/item/clothing/head/surgery/blue = 3,
 			/obj/item/clothing/head/surgery/green = 3,
 			/obj/item/clothing/head/surgery/black = 3,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves
+			/obj/item/storage/box/masks, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/gloves // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -261,14 +261,14 @@
 /datum/supply_pack/med/autopsy
 	name = "Autopsy equipment"
 	contains = list(
-			/obj/item/weapon/folder/white,
-			/obj/item/device/camera,
-			/obj/item/device/camera_film = 2,
-			/obj/item/weapon/autopsy_scanner,
-			/obj/item/weapon/surgical/scalpel,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves,
-			/obj/item/weapon/pen
+			/obj/item/folder/white, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/camera_film = 2, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/autopsy_scanner, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/surgical/scalpel, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/masks, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/gloves, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/pen // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/veymed
@@ -294,8 +294,8 @@
 			/obj/item/clothing/suit/storage/toggle/labcoat/genetics,
 			/obj/item/clothing/suit/storage/toggle/labcoat/virologist,
 			/obj/item/clothing/suit/storage/toggle/labcoat/chemist,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves
+			/obj/item/storage/box/masks, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/gloves // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -311,9 +311,9 @@
 			/obj/item/clothing/suit/bio_suit/cmo,
 			/obj/item/clothing/head/bio_hood/cmo,
 			/obj/item/clothing/mask/gas/clear = 5, //ChompEdit: Proper implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 5,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves
+			/obj/item/tank/oxygen = 5, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/masks, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/gloves // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -322,7 +322,7 @@
 
 /datum/supply_pack/med/portablefreezers
 	name = "Portable freezers crate"
-	contains = list(/obj/item/weapon/storage/box/freezer = 7)
+	contains = list(/obj/item/storage/box/freezer = 7) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/veymed
 	containername = "Portable freezers"
@@ -330,7 +330,7 @@
 
 /datum/supply_pack/med/virus
 	name = "Virus sample crate"
-	contains = list(/obj/item/weapon/virusdish/random = 4)
+	contains = list(/obj/item/virusdish/random = 4) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/zenghu
 	containername = "Virus sample crate"
@@ -338,7 +338,7 @@
 
 /datum/supply_pack/med/defib
 	name = "Defibrillator crate"
-	contains = list(/obj/item/device/defib_kit = 2)
+	contains = list(/obj/item/defib_kit = 2) // CHOMPEdit - Removal of obj/item/device
 	cost = 30
 	containertype = /obj/structure/closet/crate/veymed
 	containername = "Defibrillator crate"
@@ -388,9 +388,9 @@
 			/obj/item/clothing/head/bio_hood/cmo,
 			/obj/item/clothing/shoes/white = 7,
 			/obj/item/clothing/mask/gas/clear = 7, //ChompEdit: Proper implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 7,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves
+			/obj/item/tank/oxygen = 7, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/masks, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/gloves // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 40
 
@@ -400,9 +400,9 @@
 			/obj/item/clothing/suit/bio_suit/virology = 3,
 			/obj/item/clothing/head/bio_hood/virology = 3,
 			/obj/item/clothing/mask/gas/clear = 3, //ChompEdit: Proper implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 3,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves
+			/obj/item/tank/oxygen = 3, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/masks, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/gloves // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure
@@ -411,7 +411,7 @@
 
 /datum/supply_pack/med/virus
 	name = "Virus sample crate"
-	contains = list(/obj/item/weapon/virusdish/random = 4)
+	contains = list(/obj/item/virusdish/random = 4) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Virus sample crate"
@@ -423,7 +423,7 @@
 
 /datum/supply_pack/med/compactdefib
 	name = "Compact Defibrillator crate"
-	contains = list(/obj/item/device/defib_kit/compact = 1)
+	contains = list(/obj/item/defib_kit/compact = 1) // CHOMPEdit - Removal of obj/item/device
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Compact Defibrillator crate"

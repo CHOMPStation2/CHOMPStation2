@@ -3,123 +3,123 @@
 #endif
 #define T_BOARD_MECHA(name)	"exosuit module circuit board (" + (name) + ")"
 
-/obj/item/weapon/circuitboard/mecha
+/obj/item/circuitboard/mecha // CHOMPEdit - Removal of obj/item/weapon
 	name = "exosuit circuit board"
 	icon = 'icons/obj/module.dmi'
 	icon_state = "std_mod"
 	board_type = "other"
 
-/obj/item/weapon/circuitboard/mecha/ripley
+/obj/item/circuitboard/mecha/ripley // CHOMPEdit - Removal of obj/item/weapon
 		origin_tech = list(TECH_DATA = 3)
 
-/obj/item/weapon/circuitboard/mecha/ripley/peripherals
+/obj/item/circuitboard/mecha/ripley/peripherals // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Ripley peripherals control")
 		icon_state = "mcontroller"
 
-/obj/item/weapon/circuitboard/mecha/ripley/main
+/obj/item/circuitboard/mecha/ripley/main // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Ripley central control")
 		icon_state = "mainboard"
 
-/obj/item/weapon/circuitboard/mecha/gygax
+/obj/item/circuitboard/mecha/gygax // CHOMPEdit - Removal of obj/item/weapon
 		origin_tech = list(TECH_DATA = 4)
 
-/obj/item/weapon/circuitboard/mecha/gygax/peripherals
+/obj/item/circuitboard/mecha/gygax/peripherals // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Gygax peripherals control")
 		icon_state = "mcontroller"
 
-/obj/item/weapon/circuitboard/mecha/gygax/targeting
+/obj/item/circuitboard/mecha/gygax/targeting // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Gygax weapon control and targeting")
 		icon_state = "mcontroller"
 		origin_tech = list(TECH_DATA = 4, TECH_COMBAT = 4)
 
-/obj/item/weapon/circuitboard/mecha/gygax/medical
+/obj/item/circuitboard/mecha/gygax/medical // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Serenity medical control")
 		icon_state = "mcontroller"
 		origin_tech = list(TECH_DATA = 4, TECH_BIO = 4)
 
-/obj/item/weapon/circuitboard/mecha/gygax/main
+/obj/item/circuitboard/mecha/gygax/main // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Gygax central control")
 		icon_state = "mainboard"
 
-/obj/item/weapon/circuitboard/mecha/durand
+/obj/item/circuitboard/mecha/durand // CHOMPEdit - Removal of obj/item/weapon
 		origin_tech = list(TECH_DATA = 4)
 
-/obj/item/weapon/circuitboard/mecha/durand/peripherals
+/obj/item/circuitboard/mecha/durand/peripherals // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Durand peripherals control")
 		icon_state = "mcontroller"
 
-/obj/item/weapon/circuitboard/mecha/durand/targeting
+/obj/item/circuitboard/mecha/durand/targeting // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Durand weapon control and targeting")
 		icon_state = "mcontroller"
 		origin_tech = list(TECH_DATA = 4, TECH_COMBAT = 4)
 
-/obj/item/weapon/circuitboard/mecha/durand/main
+/obj/item/circuitboard/mecha/durand/main // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Durand central control")
 		icon_state = "mainboard"
 
-/obj/item/weapon/circuitboard/mecha/phazon
+/obj/item/circuitboard/mecha/phazon // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/circuitboard/mecha/phazon/peripherals
+/obj/item/circuitboard/mecha/phazon/peripherals // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Phazon peripherals control")
 		icon_state = "mcontroller"
 		origin_tech = list(TECH_DATA = 6, TECH_ILLEGAL = 6)
 
-/obj/item/weapon/circuitboard/mecha/phazon/targeting
+/obj/item/circuitboard/mecha/phazon/targeting // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Phazon weapon control and targeting")
 		icon_state = "mcontroller"
 		origin_tech = list(TECH_DATA = 6, TECH_COMBAT = 7)
 
-/obj/item/weapon/circuitboard/mecha/phazon/main
+/obj/item/circuitboard/mecha/phazon/main // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Phazon central control")
 		origin_tech = list(TECH_DATA = 6, TECH_BLUESPACE = 5)
 		icon_state = "mainboard"
 
-/obj/item/weapon/circuitboard/mecha/honker
+/obj/item/circuitboard/mecha/honker // CHOMPEdit - Removal of obj/item/weapon
 		origin_tech = list(TECH_DATA = 4)
 
-/obj/item/weapon/circuitboard/mecha/honker/peripherals
+/obj/item/circuitboard/mecha/honker/peripherals // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("H.O.N.K peripherals control")
 		icon_state = "mcontroller"
 
-/obj/item/weapon/circuitboard/mecha/honker/targeting
+/obj/item/circuitboard/mecha/honker/targeting // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("H.O.N.K weapon control and targeting")
 		icon_state = "mcontroller"
 
-/obj/item/weapon/circuitboard/mecha/honker/main
+/obj/item/circuitboard/mecha/honker/main // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("H.O.N.K central control")
 		icon_state = "mainboard"
 
 
-/obj/item/weapon/circuitboard/mecha/odysseus
+/obj/item/circuitboard/mecha/odysseus // CHOMPEdit - Removal of obj/item/weapon
 		origin_tech = list(TECH_DATA = 3)
 
-/obj/item/weapon/circuitboard/mecha/odysseus/peripherals
+/obj/item/circuitboard/mecha/odysseus/peripherals // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Odysseus peripherals control")
 		icon_state = "mcontroller"
 
-/obj/item/weapon/circuitboard/mecha/odysseus/main
+/obj/item/circuitboard/mecha/odysseus/main // CHOMPEdit - Removal of obj/item/weapon
 		name = T_BOARD_MECHA("Odysseus central control")
 		icon_state = "mainboard"
 
-/obj/item/weapon/circuitboard/mecha/imperion
+/obj/item/circuitboard/mecha/imperion // CHOMPEdit - Removal of obj/item/weapon
 		name = "Alien Circuit"
 		origin_tech = list(TECH_DATA = 5, TECH_BLUESPACE = 3, TECH_PRECURSOR = 1)
 		icon = 'icons/obj/abductor.dmi'
 		icon_state = "circuit"
 
-/obj/item/weapon/circuitboard/mecha/imperion/main
+/obj/item/circuitboard/mecha/imperion/main // CHOMPEdit - Removal of obj/item/weapon
 		desc = "It is marked with a <span class='alien'>strange glyph</span>."
 
-/obj/item/weapon/circuitboard/mecha/imperion/peripherals
+/obj/item/circuitboard/mecha/imperion/peripherals // CHOMPEdit - Removal of obj/item/weapon
 		desc = "It is marked with a <span class='alien'>pulsing glyph</span>."
 
-/obj/item/weapon/circuitboard/mecha/imperion/targeting
+/obj/item/circuitboard/mecha/imperion/targeting // CHOMPEdit - Removal of obj/item/weapon
 		desc = "It is marked with an <span class='alien'>ominous glyph</span>."
 
-/obj/item/weapon/circuitboard/mecha/imperion/phasing
+/obj/item/circuitboard/mecha/imperion/phasing // CHOMPEdit - Removal of obj/item/weapon
 		desc = "It is marked with a <span class='alien'>disturbing glyph</span>."
 
-/obj/item/weapon/circuitboard/mecha/imperion/damaged
+/obj/item/circuitboard/mecha/imperion/damaged // CHOMPEdit - Removal of obj/item/weapon
 		name = "Damaged Alien Circuit"
 		desc = "It is marked with a <span class='alien'>constantly shifting glyph</span>."
 		origin_tech = list(TECH_DATA = 3, TECH_BLUESPACE = 1, TECH_PRECURSOR = 2)

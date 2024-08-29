@@ -91,11 +91,11 @@
 
 	return FALSE
 
-/obj/machinery/turretid/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/turretid/attackby(obj/item/W, mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(stat & BROKEN)
 		return
 
-	if(istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))
+	if(istype(W, /obj/item/card/id)||istype(W, /obj/item/pda)) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 		if(allowed(usr))
 			if(emagged)
 				to_chat(user, "<span class='notice'>The turret control is unresponsive.</span>")

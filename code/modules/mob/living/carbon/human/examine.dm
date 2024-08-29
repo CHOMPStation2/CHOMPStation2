@@ -194,7 +194,7 @@
 
 	//handcuffed?
 	if(handcuffed && handcuffed.show_examine)
-		if(istype(handcuffed, /obj/item/weapon/handcuffs/cable))
+		if(istype(handcuffed, /obj/item/handcuffs/cable)) // CHOMPEdit - Removal of obj/item/weapon
 			msg += "<span class='warning'>[T.He] [T.is] [icon2html(handcuffed,user.client)] restrained with cable!</span>"
 		else
 			msg += "<span class='warning'>[T.He] [T.is] [icon2html(handcuffed,user.client)] handcuffed!</span>"
@@ -222,7 +222,7 @@
 	//mask
 	if(wear_mask && !(skip_gear & EXAMINE_SKIPMASK) && wear_mask.show_examine)
 		var/descriptor = "on [T.his] face"
-		if(istype(wear_mask, /obj/item/weapon/grenade) && check_has_mouth())
+		if(istype(wear_mask, /obj/item/grenade) && check_has_mouth()) // CHOMPEdit - Removal of obj/item/weapon
 			descriptor = "in [T.his] mouth"
 
 		if(wear_mask.blood_DNA)
@@ -392,11 +392,11 @@
 		var/criminal = "None"
 
 		if(wear_id)
-			if(istype(wear_id, /obj/item/weapon/card/id))
-				var/obj/item/weapon/card/id/I = wear_id
+			if(istype(wear_id, /obj/item/card/id)) // CHOMPEdit - Removal of obj/item/weapon
+				var/obj/item/card/id/I = wear_id // CHOMPEdit - Removal of obj/item/weapon
 				perpname = I.registered_name
-			else if(istype(wear_id, /obj/item/device/pda))
-				var/obj/item/device/pda/P = wear_id
+			else if(istype(wear_id, /obj/item/pda)) // CHOMPEdit - Removal of obj/item/device
+				var/obj/item/pda/P = wear_id // CHOMPEdit - Removal of obj/item/device
 				perpname = P.owner
 
 		for (var/datum/data/record/R in data_core.security)
@@ -411,11 +411,11 @@
 		var/medical = "None"
 
 		if(wear_id)
-			if(istype(wear_id, /obj/item/weapon/card/id))
-				var/obj/item/weapon/card/id/I = wear_id
+			if(istype(wear_id, /obj/item/card/id)) // CHOMPEdit - Removal of obj/item/weapon
+				var/obj/item/card/id/I = wear_id // CHOMPEdit - Removal of obj/item/weapon
 				perpname = I.registered_name
-			else if(istype(wear_id, /obj/item/device/pda))
-				var/obj/item/device/pda/P = wear_id
+			else if(istype(wear_id, /obj/item/pda)) // CHOMPEdit - Removal of obj/item/device
+				var/obj/item/pda/P = wear_id // CHOMPEdit - Removal of obj/item/device
 				perpname = P.owner
 
 		for (var/datum/data/record/R in data_core.medical)

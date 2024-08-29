@@ -2,7 +2,7 @@
 // thanks silicons
 
 /*********************Mining Hammer****************/
-/obj/item/weapon/kinetic_crusher
+/obj/item/kinetic_crusher // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/mining_vr.dmi'
 	icon_state = "crusher"
 	item_state = "crusher0"
@@ -55,55 +55,55 @@
 	/// do we update item state?
 	var/update_item_state = FALSE
 
-/obj/item/weapon/kinetic_crusher/cyborg //probably give this a unique sprite later
+/obj/item/kinetic_crusher/cyborg //probably give this a unique sprite later // CHOMPEdit - Removal of obj/item/weapon
 	desc = "An integrated version of the standard kinetic crusher with a grinded down axe head to dissuade mis-use against crewmen. Deals damage equal to the standard crusher against creatures, however."
 	force = 10 //wouldn't want to give a borg a 20 brute melee weapon unemagged now would we
 	detonation_damage = 60
 	wielded = 1
 
-/obj/item/weapon/kinetic_crusher/Initialize(mapload)
+/obj/item/kinetic_crusher/Initialize(mapload) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	AddElement(/datum/element/conflict_checking, CONFLICT_ELEMENT_CRUSHER)
 
 /*
-/obj/item/weapon/kinetic_crusher/Initialize()
+/obj/item/kinetic_crusher/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(requires_Wield)
 		RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
 		RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 
-/obj/item/weapon/kinetic_crusher/ComponentInitialize()
+/obj/item/kinetic_crusher/ComponentInitialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(requires_wield)
 		AddComponent(/datum/component/butchering, 60, 110) //technically it's huge and bulky, but this provides an incentive to use it
 		AddComponent(/datum/component/two_handed, force_unwielded=0, force_wielded=20)
 */
 
-/obj/item/weapon/kinetic_crusher/Destroy()
+/obj/item/kinetic_crusher/Destroy() // CHOMPEdit - Removal of obj/item/weapon
 	// QDEL_LIST(trophies)
 	return ..()
 
-/obj/item/weapon/kinetic_crusher/emag_act()
+/obj/item/kinetic_crusher/emag_act() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(emagged)
 		return
 	emagged = TRUE
 	desc = desc + " The destabilizer module occasionally sparks and glows a menacing red."
 
-/obj/item/weapon/kinetic_crusher/proc/can_mark(mob/living/victim)
+/obj/item/kinetic_crusher/proc/can_mark(mob/living/victim) // CHOMPEdit - Removal of obj/item/weapon
 	if(emagged)
 		return TRUE
 	return !ishuman(victim) && !issilicon(victim)
 
 /// triggered on wield of two handed item
-/obj/item/weapon/kinetic_crusher/proc/on_wield(obj/item/source, mob/user)
+/obj/item/kinetic_crusher/proc/on_wield(obj/item/source, mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	wielded = TRUE
 
 /// triggered on unwield of two handed item
-/obj/item/weapon/kinetic_crusher/proc/on_unwield(obj/item/source, mob/user)
+/obj/item/kinetic_crusher/proc/on_unwield(obj/item/source, mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	wielded = FALSE
 
-/obj/item/weapon/kinetic_crusher/examine(mob/living/user)
+/obj/item/kinetic_crusher/examine(mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	. += "<span class='notice'>Mark a[emagged ? "nything": " creature"] with the destabilizing force, then hit them in melee to do <b>[force + detonation_damage]</b> damage.</span>"
 	. += "<span class='notice'>Does <b>[force + detonation_damage + backstab_bonus]</b> damage if the target is backstabbed, instead of <b>[force + detonation_damage]</b>.</span>"
@@ -114,7 +114,7 @@
 */
 
 /*
-/obj/item/weapon/kinetic_crusher/attackby(obj/item/I, mob/living/user)
+/obj/item/kinetic_crusher/attackby(obj/item/I, mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(I.tool_behaviour == TOOL_CROWBAR)
 		if(LAZYLEN(trophies))
 			to_chat(user, "<span class='notice'>You remove [src]'s trophies.</span>")
@@ -131,13 +131,13 @@
 		return ..()
 */
 
-/obj/item/weapon/kinetic_crusher/attack(mob/living/target, mob/living/carbon/user)
+/obj/item/kinetic_crusher/attack(mob/living/target, mob/living/carbon/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!wielded && requires_wield)
 		to_chat(user, "<span class='warning'>[src] is too heavy to use with one hand.</span>")
 		return
 	..()
 
-/obj/item/weapon/kinetic_crusher/afterattack(atom/target, mob/living/user, proximity_flag, clickparams)
+/obj/item/kinetic_crusher/afterattack(atom/target, mob/living/user, proximity_flag, clickparams) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 /*
 	if(istype(target, /obj/item/crusher_trophy))
@@ -169,7 +169,7 @@
 	if(proximity_flag && isliving(target))
 		detonate(target, user)
 
-/obj/item/weapon/kinetic_crusher/proc/detonate(mob/living/L, mob/living/user, thrown = FALSE)
+/obj/item/kinetic_crusher/proc/detonate(mob/living/L, mob/living/user, thrown = FALSE) // CHOMPEdit - Removal of obj/item/weapon
 	var/datum/modifier/crusher_mark/CM = L.get_modifier_of_type(/datum/modifier/crusher_mark)
 	if(!CM || CM.hammer_synced != src)
 		return
@@ -187,7 +187,7 @@
 		else
 			L.apply_damage(detonation_damage + thrown_bonus, BRUTE, blocked = def_check)
 
-/obj/item/weapon/kinetic_crusher/throw_impact(atom/hit_atom, speed)
+/obj/item/kinetic_crusher/throw_impact(atom/hit_atom, speed) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(!isliving(hit_atom))
 		return
@@ -195,25 +195,25 @@
 	if(L.has_modifier_of_type(/datum/modifier/crusher_mark))
 		detonate(L, thrower, TRUE)
 
-/obj/item/weapon/kinetic_crusher/proc/Recharge()
+/obj/item/kinetic_crusher/proc/Recharge() // CHOMPEdit - Removal of obj/item/weapon
 	if(!charged)
 		charged = TRUE
 		update_icon()
 		playsound(src.loc, 'sound/weapons/kenetic_reload.ogg', 60, 1)
 
-/obj/item/weapon/kinetic_crusher/ui_action_click(mob/user, actiontype)
+/obj/item/kinetic_crusher/ui_action_click(mob/user, actiontype) // CHOMPEdit - Removal of obj/item/weapon
 	integ_light_on = !integ_light_on
 	playsound(src, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_brightness(user)
 	update_icon()
 
-/obj/item/weapon/kinetic_crusher/proc/update_brightness(mob/user = null)
+/obj/item/kinetic_crusher/proc/update_brightness(mob/user = null) // CHOMPEdit - Removal of obj/item/weapon
 	if(integ_light_on)
 		set_light(brightness_on)
 	else
 		set_light(0)
 
-/obj/item/weapon/kinetic_crusher/update_icon()
+/obj/item/kinetic_crusher/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	cut_overlay("[icon_state]_uncharged")
 	cut_overlay("[icon_state]_lit")
@@ -225,7 +225,7 @@
 			add_overlay("[icon_state]_lit")
 
 /*
-/obj/item/weapon/kinetic_crusher/glaive
+/obj/item/kinetic_crusher/glaive // CHOMPEdit - Removal of obj/item/weapon
 	name = "proto-kinetic glaive"
 	desc = "A modified design of a proto-kinetic crusher, it is still little more of a combination of various mining tools cobbled together \
 	and kit-bashed into a high-tech cleaver on a stick - with a handguard and a goliath hide grip. While it is still of little use to any \
@@ -236,7 +236,7 @@
 */
 
 
-/obj/item/weapon/kinetic_crusher/machete
+/obj/item/kinetic_crusher/machete // CHOMPEdit - Removal of obj/item/weapon
 	// general purpose. cleaves though
 	name = "proto-kinetic machete"
 	desc = "A scaled down version of a proto-kinetic crusher, used by people who don't want to lug around an axe-hammer."
@@ -261,7 +261,7 @@
 
 
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets
+/obj/item/kinetic_crusher/machete/gauntlets // CHOMPEdit - Removal of obj/item/weapon
 	// did someone say single target damage
 	name = "\improper proto-kinetic gear"
 	desc = "A pair of scaled-down proto-kinetic crusher destabilizer modules shoved into gauntlets and greaves, used by those who wish to spit in the eyes of God."
@@ -280,29 +280,29 @@
 	var/obj/item/offhand/crushergauntlets/offhand
 	slot_flags = null
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/equipped()
+/obj/item/kinetic_crusher/machete/gauntlets/equipped() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	START_PROCESSING(SSprocessing, src)
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/dropped(mob/user)
+/obj/item/kinetic_crusher/machete/gauntlets/dropped(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	ready_toggle(TRUE)
 	STOP_PROCESSING(SSprocessing, src)
 	. = ..()
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/Destroy()
+/obj/item/kinetic_crusher/machete/gauntlets/Destroy() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	STOP_PROCESSING(SSprocessing, src)
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/attack_self(mob/user)
+/obj/item/kinetic_crusher/machete/gauntlets/attack_self(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	ready_toggle()
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/process()
+/obj/item/kinetic_crusher/machete/gauntlets/process() // CHOMPEdit - Removal of obj/item/weapon
 	if(wielded) // are we supposed to be wielded
 		if(!offhand) // does our offhand exist
 			ready_toggle(TRUE) // no? well, shit
 
 /// toggles twohand. if forced is true, forces an unready state
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/proc/ready_toggle(var/forced = 0)
+/obj/item/kinetic_crusher/machete/gauntlets/proc/ready_toggle(var/forced = 0) // CHOMPEdit - Removal of obj/item/weapon
 	var/mob/living/M = loc
 	if(istype(M) && forced == 0)
 		if(M.can_wield_item(src) && src.is_held_twohanded(M))
@@ -312,7 +312,7 @@
 	else
 		unwield(M)
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/proc/wield(var/mob/living/M)
+/obj/item/kinetic_crusher/machete/gauntlets/proc/wield(var/mob/living/M) // CHOMPEdit - Removal of obj/item/weapon
 	name = initial(name)
 	wielded = TRUE
 	to_chat(M, "<span class ='notice'>You ready [src].</span>")
@@ -323,7 +323,7 @@
 	M.put_in_inactive_hand(O)
 	offhand = O
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/proc/unwield(var/mob/living/M)
+/obj/item/kinetic_crusher/machete/gauntlets/proc/unwield(var/mob/living/M) // CHOMPEdit - Removal of obj/item/weapon
 	to_chat(M, "<span class ='notice'>You unready [src].</span>")
 	name = "[initial(name)] (unreadied)"
 	wielded = FALSE
@@ -339,17 +339,17 @@
 	// man i really should try porting the twohand component this is hacky and Sucks
 
 /obj/item/offhand/crushergauntlets
-	var/obj/item/weapon/kinetic_crusher/machete/gauntlets/linked
+	var/obj/item/kinetic_crusher/machete/gauntlets/linked // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/item/offhand/crushergauntlets/dropped(mob/user as mob)
 	if(linked.wielded)
 		linked.ready_toggle(TRUE)
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/rig
+/obj/item/kinetic_crusher/machete/gauntlets/rig // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper mounted proto-kinetic gear"
 	var/obj/item/rig_module/gauntlets/storing_module
 
-/obj/item/weapon/kinetic_crusher/machete/gauntlets/rig/dropped(mob/user)
+/obj/item/kinetic_crusher/machete/gauntlets/rig/dropped(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(storing_module)
 		src.forceMove(storing_module)
@@ -365,7 +365,7 @@
 		QDEL_NULL(src)
 
 // gimmicky backup for throwing
-/obj/item/weapon/kinetic_crusher/machete/dagger
+/obj/item/kinetic_crusher/machete/dagger // CHOMPEdit - Removal of obj/item/weapon
 	name = "proto-kinetic dagger"
 	desc = "A scaled down version of a proto-kinetic machete, usually used in a last ditch scenario."
 	icon_state = "glaive-dagger"
@@ -397,7 +397,7 @@
 	range = 6
 	accuracy = INFINITY	// NO.
 	// log_override = TRUE
-	var/obj/item/weapon/kinetic_crusher/hammer_synced
+	var/obj/item/kinetic_crusher/hammer_synced // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/item/projectile/destabilizer/Destroy()
 	hammer_synced = null

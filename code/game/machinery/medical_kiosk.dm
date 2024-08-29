@@ -14,7 +14,7 @@
 	icon_state = "kiosk_off"
 	idle_power_usage = 5
 	active_power_usage = 200
-	circuit = /obj/item/weapon/circuitboard/medical_kiosk
+	circuit = /obj/item/circuitboard/medical_kiosk // CHOMPEdit - Removal of obj/item/weapon
 	anchored = TRUE
 	density = TRUE
 

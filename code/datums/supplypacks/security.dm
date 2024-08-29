@@ -253,12 +253,12 @@
 /datum/supply_pack/security/riot_gear
 	name = "Gear - Riot"
 	contains = list(
-			/obj/item/weapon/melee/baton = 3,
-			/obj/item/weapon/shield/riot = 3,
-			/obj/item/weapon/handcuffs = 3,
-			/obj/item/weapon/storage/box/flashbangs,
+			/obj/item/melee/baton = 3, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/shield/riot = 3, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/handcuffs = 3, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/flashbangs, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-			/obj/item/weapon/storage/box/handcuffs
+			/obj/item/storage/box/handcuffs // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/lawson
@@ -292,7 +292,7 @@
 /datum/supply_pack/security/riot_sprayer
 	name = "Gear - Riot sprayer"
 	contains = list(
-			/obj/item/weapon/watertank/pepperspray
+			/obj/item/watertank/pepperspray // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/lawson
@@ -373,7 +373,7 @@
 			/obj/item/clothing/head/helmet/tactical,
 			/obj/item/clothing/mask/balaclava/tactical,
 			/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-			/obj/item/weapon/storage/belt/security/tactical,
+			/obj/item/storage/belt/security/tactical, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/shoes/boots/jackboots,
 			/obj/item/clothing/gloves/black,
 			/obj/item/clothing/under/tactical,
@@ -381,7 +381,7 @@
 			/obj/item/clothing/head/helmet/tactical,
 			/obj/item/clothing/mask/balaclava/tactical,
 			/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-			/obj/item/weapon/storage/belt/security/tactical,
+			/obj/item/storage/belt/security/tactical, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/shoes/boots/jackboots,
 			/obj/item/clothing/gloves/black
 			)
@@ -400,14 +400,14 @@
 				/obj/item/clothing/gloves/arm_guard/flexitac,
 				/obj/item/clothing/mask/balaclava/tactical,
 				/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-				/obj/item/weapon/storage/belt/security/tactical,
+				/obj/item/storage/belt/security/tactical, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/suit/storage/vest/heavy/flexitac,
 				/obj/item/clothing/head/helmet/flexitac,
 				/obj/item/clothing/shoes/leg_guard/flexitac,
 				/obj/item/clothing/gloves/arm_guard/flexitac,
 				/obj/item/clothing/mask/balaclava/tactical,
 				/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-				/obj/item/weapon/storage/belt/security/tactical
+				/obj/item/storage/belt/security/tactical // CHOMPEdit - Removal of obj/item/weapon
 				)
 
 /datum/supply_pack/security/securitybarriers
@@ -442,9 +442,9 @@
 /datum/supply_pack/security/extragear
 	name = "Gear - Security surplus equipment"
 	contains = list(
-			/obj/item/weapon/storage/belt/security = 3,
+			/obj/item/storage/belt/security = 3, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/glasses/sunglasses/sechud = 3,
-			/obj/item/device/radio/headset/headset_sec/alt = 3,
+			/obj/item/radio/headset/headset_sec/alt = 3, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/suit/storage/hooded/wintercoat/security = 3,
 			/obj/item/clothing/glasses/sunglasses/sechud/tactical_sec_vis = 3
 			)
@@ -455,25 +455,25 @@
 /datum/supply_pack/security/detectivegear
 	name = "Forensic - Investigation equipment"
 	contains = list(
-			/obj/item/weapon/storage/box/evidence = 2,
+			/obj/item/storage/box/evidence = 2, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/suit/storage/vest/detective,
-			/obj/item/weapon/cartridge/detective,
-			/obj/item/device/radio/headset/headset_sec,
+			/obj/item/cartridge/detective, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/radio/headset/headset_sec, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/taperoll/police,
 			/obj/item/clothing/glasses/sunglasses,
-			/obj/item/device/camera,
-			/obj/item/weapon/folder/red,
-			/obj/item/weapon/folder/blue,
-			/obj/item/weapon/storage/belt/detective,
+			/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/folder/red, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/folder/blue, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/belt/detective, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/gloves/black,
-			/obj/item/device/taperecorder,
-			/obj/item/device/mass_spectrometer,
-			/obj/item/device/camera_film = 2,
-			/obj/item/weapon/storage/photo_album,
-			/obj/item/device/reagent_scanner,
-			/obj/item/device/flashlight/maglight,
-			/obj/item/weapon/storage/briefcase/crimekit,
-			/obj/item/weapon/storage/bag/detective
+			/obj/item/taperecorder, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/mass_spectrometer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/camera_film = 2, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/photo_album, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_scanner, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/flashlight/maglight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/briefcase/crimekit, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/bag/detective // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -483,10 +483,10 @@
 /datum/supply_pack/security/detectivescan
 	name = "Forensic - Scanning Equipment"
 	contains = list(
-			/obj/item/device/mass_spectrometer,
-			/obj/item/device/reagent_scanner,
-			/obj/item/weapon/storage/briefcase/crimekit,
-			/obj/item/device/detective_scanner
+			/obj/item/mass_spectrometer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/reagent_scanner, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/briefcase/crimekit, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/detective_scanner // CHOMPEdit - Removal of obj/item/device
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/ward
@@ -520,25 +520,25 @@
 	contains = list(
 			/obj/item/clothing/suit/storage/vest/officer,
 			/obj/item/clothing/head/helmet,
-			/obj/item/weapon/cartridge/security,
+			/obj/item/cartridge/security, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/accessory/badge/holo,
 			/obj/item/clothing/accessory/badge/holo/cord,
-			/obj/item/device/radio/headset/headset_sec,
-			/obj/item/weapon/storage/belt/security,
-			/obj/item/device/flash,
-			/obj/item/weapon/reagent_containers/spray/pepper,
-			/obj/item/weapon/grenade/flashbang,
-			/obj/item/weapon/melee/baton/loaded,
+			/obj/item/radio/headset/headset_sec, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/belt/security, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/grenade/flashbang, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/melee/baton/loaded, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/glasses/sunglasses/sechud,
 			/obj/item/taperoll/police,
 			/obj/item/clothing/gloves/black,
-			/obj/item/device/hailer,
-			/obj/item/device/flashlight/flare,
+			/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/flashlight/flare, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/accessory/storage/black_vest,
 			/obj/item/clothing/head/soft/sec/corp,
 			/obj/item/clothing/under/rank/security/corp,
-			/obj/item/weapon/gun/energy/taser,
-			/obj/item/device/flashlight/maglight
+			/obj/item/gun/energy/taser, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flashlight/maglight // CHOMPEdit - Removal of obj/item/device
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -555,19 +555,19 @@
 			/obj/item/clothing/suit/storage/vest/wardencoat/alt,
 			/obj/item/clothing/suit/storage/vest/wardencoat/alt2, //VOREStation Add,
 			/obj/item/clothing/head/helmet/warden,
-			/obj/item/weapon/cartridge/security,
-			/obj/item/device/radio/headset/headset_sec,
+			/obj/item/cartridge/security, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/radio/headset/headset_sec, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/glasses/sunglasses/sechud,
 			/obj/item/taperoll/police,
-			/obj/item/device/hailer,
+			/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/accessory/badge/holo/warden,
-			/obj/item/weapon/storage/box/flashbangs,
-			/obj/item/weapon/storage/belt/security,
-			/obj/item/weapon/reagent_containers/spray/pepper,
-			/obj/item/weapon/melee/baton/loaded,
-			/obj/item/weapon/storage/box/holobadge,
+			/obj/item/storage/box/flashbangs, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/belt/security, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/melee/baton/loaded, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/holobadge, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/head/beret/sec/corporate/warden,
-			/obj/item/device/flashlight/maglight
+			/obj/item/flashlight/maglight // CHOMPEdit - Removal of obj/item/device
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -583,18 +583,18 @@
 			/obj/item/clothing/suit/storage/vest/hoscoat,
 			/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt, //VOREStation Add,
 			/obj/item/clothing/head/helmet/dermal,
-			/obj/item/weapon/cartridge/hos,
-			/obj/item/device/radio/headset/heads/hos,
+			/obj/item/cartridge/hos, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/radio/headset/heads/hos, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/glasses/sunglasses/sechud,
-			/obj/item/weapon/storage/belt/security,
-			/obj/item/device/flash,
-			/obj/item/device/hailer,
+			/obj/item/storage/belt/security, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/accessory/badge/holo/hos,
 			/obj/item/clothing/accessory/holster/waist,
-			/obj/item/weapon/melee/telebaton,
-			/obj/item/weapon/shield/riot/tele,
+			/obj/item/melee/telebaton, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/shield/riot/tele, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/head/beret/sec/corporate/hos,
-			/obj/item/device/flashlight/maglight
+			/obj/item/flashlight/maglight // CHOMPEdit - Removal of obj/item/device
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -604,8 +604,8 @@
 /datum/supply_pack/security/securityclothing
 	name = "Misc - Security uniform red"
 	contains = list(
-			/obj/item/weapon/storage/backpack/satchel/sec = 2,
-			/obj/item/weapon/storage/backpack/security = 2,
+			/obj/item/storage/backpack/satchel/sec = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/backpack/security = 2, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/accessory/armband = 4,
 			/obj/item/clothing/under/rank/security = 4,
 			/obj/item/clothing/under/rank/security2 = 4,
@@ -613,7 +613,7 @@
 			/obj/item/clothing/under/rank/head_of_security,
 			/obj/item/clothing/head/soft/sec = 4,
 			/obj/item/clothing/gloves/black = 4,
-			/obj/item/weapon/storage/box/holobadge
+			/obj/item/storage/box/holobadge // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -622,8 +622,8 @@
 /datum/supply_pack/security/navybluesecurityclothing
 	name = "Misc - Security uniform navy blue"
 	contains = list(
-			/obj/item/weapon/storage/backpack/satchel/sec = 2,
-			/obj/item/weapon/storage/backpack/security = 2,
+			/obj/item/storage/backpack/satchel/sec = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/backpack/security = 2, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/under/rank/security/navyblue = 4,
 			/obj/item/clothing/suit/security/navyofficer = 4,
 			/obj/item/clothing/under/rank/warden/navyblue,
@@ -634,7 +634,7 @@
 			/obj/item/clothing/head/beret/sec/navy/warden,
 			/obj/item/clothing/head/beret/sec/navy/hos,
 			/obj/item/clothing/gloves/black = 4,
-			/obj/item/weapon/storage/box/holobadge
+			/obj/item/storage/box/holobadge // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -643,8 +643,8 @@
 /datum/supply_pack/security/corporatesecurityclothing
 	name = "Misc - Security uniform corporate"
 	contains = list(
-			/obj/item/weapon/storage/backpack/satchel/sec = 2,
-			/obj/item/weapon/storage/backpack/security = 2,
+			/obj/item/storage/backpack/satchel/sec = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/backpack/security = 2, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/under/rank/security/corp = 4,
 			/obj/item/clothing/head/soft/sec/corp = 4,
 			/obj/item/clothing/under/rank/warden/corp,
@@ -654,7 +654,7 @@
 			/obj/item/clothing/head/beret/sec/corporate/hos,
 			/obj/item/clothing/under/det/corporate = 2,
 			/obj/item/clothing/gloves/black = 4,
-			/obj/item/weapon/storage/box/holobadge
+			/obj/item/storage/box/holobadge // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -668,9 +668,9 @@
 			/obj/item/clothing/suit/bio_suit/security = 3,
 			/obj/item/clothing/shoes/white = 3,
 			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 3,
+			/obj/item/tank/oxygen = 3, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/gloves/sterile/latex,
-			/obj/item/weapon/storage/box/gloves
+			/obj/item/storage/box/gloves // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -716,16 +716,16 @@
 			/obj/item/clothing/suit/bio_suit/security = 3,
 			/obj/item/clothing/shoes/white = 3,
 			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: Implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 3,
+			/obj/item/tank/oxygen = 3, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/gloves/sterile/latex,
-			/obj/item/weapon/storage/box/gloves
+			/obj/item/storage/box/gloves // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 40
 
 /datum/supply_pack/security/trackingimplant
 	name = "Implants - Tracking"
 	contains = list(
-			/obj/item/weapon/storage/box/trackimp = 1
+			/obj/item/storage/box/trackimp = 1 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure
@@ -735,7 +735,7 @@
 /datum/supply_pack/security/chemicalimplant
 	name = "Implants - Chemical"
 	contains = list(
-			/obj/item/weapon/storage/box/chemimp = 1
+			/obj/item/storage/box/chemimp = 1 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure

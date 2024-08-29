@@ -78,13 +78,13 @@
 /datum/reagent/drink/hot_coco
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/drinks/coffee
+/obj/item/reagent_containers/food/drinks/coffee // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/drinks/tea
+/obj/item/reagent_containers/food/drinks/tea // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/drinks/h_chocolate
+/obj/item/reagent_containers/food/drinks/h_chocolate // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
 
@@ -378,31 +378,31 @@
 
 // From the machine //
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola
+/obj/item/reagent_containers/food/drinks/cans/cola // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind
+/obj/item/reagent_containers/food/drinks/cans/space_mountain_wind // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb
+/obj/item/reagent_containers/food/drinks/cans/dr_gibb // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/starkist
+/obj/item/reagent_containers/food/drinks/cans/starkist // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle
+/obj/item/reagent_containers/food/drinks/cans/waterbottle // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_up
+/obj/item/reagent_containers/food/drinks/cans/space_up // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea
+/obj/item/reagent_containers/food/drinks/cans/iced_tea // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice
+/obj/item/reagent_containers/food/drinks/cans/grape_juice // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale
+/obj/item/reagent_containers/food/drinks/cans/gingerale // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
 //***************//
@@ -411,103 +411,103 @@
 
 // Juices, soda and similar //
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cola
+/obj/item/reagent_containers/food/drinks/bottle/cola // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 6
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/space_up
+/obj/item/reagent_containers/food/drinks/bottle/space_up // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 6
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/space_mountain_wind
+/obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 6
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice
+/obj/item/reagent_containers/food/drinks/bottle/orangejuice // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 6
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/applejuice
+/obj/item/reagent_containers/food/drinks/bottle/applejuice // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 6
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream
+/obj/item/reagent_containers/food/drinks/bottle/cream // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 6
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/tomatojuice
+/obj/item/reagent_containers/food/drinks/bottle/tomatojuice // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 6
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/limejuice
+/obj/item/reagent_containers/food/drinks/bottle/limejuice // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 6
 
 
 // Beer //
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer
+/obj/item/reagent_containers/food/drinks/bottle/small/beer // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale
+/obj/item/reagent_containers/food/drinks/bottle/small/ale // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
 
 // Spirituous Liquors //
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe
+/obj/item/reagent_containers/food/drinks/bottle/absinthe // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao
+/obj/item/reagent_containers/food/drinks/bottle/bluecuracao // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/gin
+/obj/item/reagent_containers/food/drinks/bottle/gin // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua
+/obj/item/reagent_containers/food/drinks/bottle/kahlua // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/melonliquor
+/obj/item/reagent_containers/food/drinks/bottle/melonliquor // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum
+/obj/item/reagent_containers/food/drinks/bottle/rum // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla
+/obj/item/reagent_containers/food/drinks/bottle/tequilla // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka
+/obj/item/reagent_containers/food/drinks/bottle/vodka // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey
+/obj/item/reagent_containers/food/drinks/bottle/whiskey // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/patron
+/obj/item/reagent_containers/food/drinks/bottle/patron // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager
+/obj/item/reagent_containers/food/drinks/bottle/goldschlager // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing
+/obj/item/reagent_containers/food/drinks/bottle/bottleofnothing // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/grenadine
+/obj/item/reagent_containers/food/drinks/bottle/grenadine // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
 
 // Wines //
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine
+/obj/item/reagent_containers/food/drinks/bottle/wine // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 25
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac
+/obj/item/reagent_containers/food/drinks/bottle/cognac // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 25
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth
+/obj/item/reagent_containers/food/drinks/bottle/vermouth // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 25
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine
+/obj/item/reagent_containers/food/drinks/bottle/pwine // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 25
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake
+/obj/item/reagent_containers/food/drinks/bottle/sake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 25
 
-/obj/item/weapon/reagent_containers/food/drinks/bottle/jager
+/obj/item/reagent_containers/food/drinks/bottle/jager // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 25
 
 //***************//
@@ -516,471 +516,471 @@
 
 // Snacks //
 
-/obj/item/weapon/reagent_containers/food/snacks/candy
+/obj/item/reagent_containers/food/snacks/candy // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky
+/obj/item/reagent_containers/food/snacks/sosjerky // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/unajerky
+/obj/item/reagent_containers/food/snacks/unajerky // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 12
 
-/obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers
+/obj/item/reagent_containers/food/snacks/cheesiehonkers // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/tastybread
+/obj/item/reagent_containers/food/snacks/tastybread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/no_raisin
+/obj/item/reagent_containers/food/snacks/no_raisin // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie
+/obj/item/reagent_containers/food/snacks/packaged/spacetwinkie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/skrellsnacks
+/obj/item/reagent_containers/food/snacks/skrellsnacks // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/chips
+/obj/item/reagent_containers/food/snacks/chips // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/drinks/dry_ramen
+/obj/item/reagent_containers/food/drinks/dry_ramen // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
 
 // Burger //
 
-/obj/item/weapon/reagent_containers/food/snacks/brainburger
+/obj/item/reagent_containers/food/snacks/brainburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/ghostburger
+/obj/item/reagent_containers/food/snacks/ghostburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/human/burger
+/obj/item/reagent_containers/food/snacks/human/burger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburger
+/obj/item/reagent_containers/food/snacks/cheeseburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/monkeyburger
+/obj/item/reagent_containers/food/snacks/monkeyburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/fishburger
+/obj/item/reagent_containers/food/snacks/fishburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/tofuburger
+/obj/item/reagent_containers/food/snacks/tofuburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/roburger
+/obj/item/reagent_containers/food/snacks/roburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/roburgerbig
+/obj/item/reagent_containers/food/snacks/roburgerbig // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/xenoburger
+/obj/item/reagent_containers/food/snacks/xenoburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/clownburger
+/obj/item/reagent_containers/food/snacks/clownburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/mimeburger
+/obj/item/reagent_containers/food/snacks/mimeburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/spellburger
+/obj/item/reagent_containers/food/snacks/spellburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/jellyburger
+/obj/item/reagent_containers/food/snacks/jellyburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/bigbiteburger
+/obj/item/reagent_containers/food/snacks/bigbiteburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/superbiteburger
+/obj/item/reagent_containers/food/snacks/superbiteburger // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 8
 
 
 // Sandwiches //
 
-/obj/item/weapon/reagent_containers/food/snacks/sandwich
+/obj/item/reagent_containers/food/snacks/sandwich // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/toastedsandwich
+/obj/item/reagent_containers/food/snacks/toastedsandwich // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/grilledcheese
+/obj/item/reagent_containers/food/snacks/grilledcheese // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/jellysandwich
+/obj/item/reagent_containers/food/snacks/jellysandwich // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
 
 // Cookies and Candies //
 
-/obj/item/weapon/reagent_containers/food/snacks/cookie
+/obj/item/reagent_containers/food/snacks/cookie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/chocolatebar
+/obj/item/reagent_containers/food/snacks/chocolatebar // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/chocolateegg
+/obj/item/reagent_containers/food/snacks/chocolateegg // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn
+/obj/item/reagent_containers/food/snacks/candy_corn // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/donut
+/obj/item/reagent_containers/food/snacks/donut // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/donut/chaos
+/obj/item/reagent_containers/food/snacks/donut/chaos // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/popcorn
+/obj/item/reagent_containers/food/snacks/popcorn // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/fortunecookie
+/obj/item/reagent_containers/food/snacks/fortunecookie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/candiedapple
+/obj/item/reagent_containers/food/snacks/candiedapple // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit
+/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/chawanmushi
+/obj/item/reagent_containers/food/snacks/chawanmushi // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/cracker
+/obj/item/reagent_containers/food/snacks/cracker // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
 
 // Full meals //
 
-/obj/item/weapon/reagent_containers/food/snacks/friedegg
+/obj/item/reagent_containers/food/snacks/friedegg // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/tofurkey
+/obj/item/reagent_containers/food/snacks/tofurkey // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat
+/obj/item/reagent_containers/food/snacks/carpmeat // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/fishfingers
+/obj/item/reagent_containers/food/snacks/fishfingers // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/omelette
+/obj/item/reagent_containers/food/snacks/omelette // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/berryclafoutis
+/obj/item/reagent_containers/food/snacks/berryclafoutis // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/waffles
+/obj/item/reagent_containers/food/snacks/waffles // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/eggplantparm
+/obj/item/reagent_containers/food/snacks/eggplantparm // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/soylentgreen
+/obj/item/reagent_containers/food/snacks/soylentgreen // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/soylenviridians
+/obj/item/reagent_containers/food/snacks/soylenviridians // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/wingfangchu
+/obj/item/reagent_containers/food/snacks/wingfangchu // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/monkeykabob
+/obj/item/reagent_containers/food/snacks/monkeykabob // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/tofukabob
+/obj/item/reagent_containers/food/snacks/tofukabob // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/cubancarp
+/obj/item/reagent_containers/food/snacks/cubancarp // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/loadedbakedpotato
+/obj/item/reagent_containers/food/snacks/loadedbakedpotato // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/fries
+/obj/item/reagent_containers/food/snacks/fries // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/spagetti
+/obj/item/reagent_containers/food/snacks/spagetti // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/cheesyfries
+/obj/item/reagent_containers/food/snacks/cheesyfries // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/enchiladas
+/obj/item/reagent_containers/food/snacks/enchiladas // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/taco
+/obj/item/reagent_containers/food/snacks/taco // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/monkeysdelight
+/obj/item/reagent_containers/food/snacks/monkeysdelight // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/fishandchips
+/obj/item/reagent_containers/food/snacks/fishandchips // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/rofflewaffles
+/obj/item/reagent_containers/food/snacks/rofflewaffles // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/stew
+/obj/item/reagent_containers/food/snacks/stew // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/stewedsoymeat
+/obj/item/reagent_containers/food/snacks/stewedsoymeat // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/boiledspagetti
+/obj/item/reagent_containers/food/snacks/boiledspagetti // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/boiledrice
+/obj/item/reagent_containers/food/snacks/boiledrice // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/ricepudding
+/obj/item/reagent_containers/food/snacks/ricepudding // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/pastatomato
+/obj/item/reagent_containers/food/snacks/pastatomato // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/meatballspagetti
+/obj/item/reagent_containers/food/snacks/meatballspagetti // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/spesslaw
+/obj/item/reagent_containers/food/snacks/spesslaw // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/carrotfries
+/obj/item/reagent_containers/food/snacks/carrotfries // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/appletart
+/obj/item/reagent_containers/food/snacks/appletart // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza
+/obj/item/reagent_containers/food/snacks/sliceable/pizza // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/margherita
+/obj/item/reagent_containers/food/snacks/slice/margherita // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/meatpizza
+/obj/item/reagent_containers/food/snacks/slice/meatpizza // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/mushroompizza
+/obj/item/reagent_containers/food/snacks/slice/mushroompizza // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/vegetablepizza
+/obj/item/reagent_containers/food/snacks/slice/vegetablepizza // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/
+/obj/item/reagent_containers/food/snacks/ // CHOMPEdit - Removal of obj/item/weapon
 
 
 // Baked Goods //
 
-/obj/item/weapon/reagent_containers/food/snacks/poppypretzel
+/obj/item/reagent_containers/food/snacks/poppypretzel // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/baguette
+/obj/item/reagent_containers/food/snacks/baguette // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/jelliedtoast
+/obj/item/reagent_containers/food/snacks/jelliedtoast // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/twobread
+/obj/item/reagent_containers/food/snacks/twobread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/meatbread
+/obj/item/reagent_containers/food/snacks/sliceable/meatbread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/meatbread
+/obj/item/reagent_containers/food/snacks/slice/meatbread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/xenomeatbread
+/obj/item/reagent_containers/food/snacks/sliceable/xenomeatbread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/xenomeatbread
+/obj/item/reagent_containers/food/snacks/slice/xenomeatbread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/bananabread
+/obj/item/reagent_containers/food/snacks/sliceable/bananabread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/bananabread
+/obj/item/reagent_containers/food/snacks/slice/bananabread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/tofubread
+/obj/item/reagent_containers/food/snacks/sliceable/tofubread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/tofubread
+/obj/item/reagent_containers/food/snacks/slice/tofubread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/bread
+/obj/item/reagent_containers/food/snacks/sliceable/bread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/bread
+/obj/item/reagent_containers/food/snacks/slice/bread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/creamcheesebread
+/obj/item/reagent_containers/food/snacks/sliceable/creamcheesebread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/creamcheesebread
+/obj/item/reagent_containers/food/snacks/slice/creamcheesebread // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
 
 // Soups //
 
-/obj/item/weapon/reagent_containers/food/snacks/meatballsoup
+/obj/item/reagent_containers/food/snacks/meatballsoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/slimesoup
+/obj/item/reagent_containers/food/snacks/slimesoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/bloodsoup
+/obj/item/reagent_containers/food/snacks/bloodsoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/clownstears
+/obj/item/reagent_containers/food/snacks/clownstears // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/vegetablesoup
+/obj/item/reagent_containers/food/snacks/vegetablesoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/nettlesoup
+/obj/item/reagent_containers/food/snacks/nettlesoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/mysterysoup
+/obj/item/reagent_containers/food/snacks/mysterysoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/wishsoup
+/obj/item/reagent_containers/food/snacks/wishsoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/hotchili
+/obj/item/reagent_containers/food/snacks/hotchili // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/coldchili
+/obj/item/reagent_containers/food/snacks/coldchili // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/tomatosoup
+/obj/item/reagent_containers/food/snacks/tomatosoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/milosoup
+/obj/item/reagent_containers/food/snacks/milosoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/mushroomsoup
+/obj/item/reagent_containers/food/snacks/mushroomsoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/beetsoup
+/obj/item/reagent_containers/food/snacks/beetsoup // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 3
 
 
 // Pies //
 
-/obj/item/weapon/reagent_containers/food/snacks/pie
+/obj/item/reagent_containers/food/snacks/pie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/meatpie
+/obj/item/reagent_containers/food/snacks/meatpie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/tofupie
+/obj/item/reagent_containers/food/snacks/tofupie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/plump_pie
+/obj/item/reagent_containers/food/snacks/plump_pie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/xemeatpie
+/obj/item/reagent_containers/food/snacks/xemeatpie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/applepie
+/obj/item/reagent_containers/food/snacks/applepie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
-/obj/item/weapon/reagent_containers/food/snacks/cherrypie
+/obj/item/reagent_containers/food/snacks/cherrypie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 4
 
 
 // Cakes //
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake
+/obj/item/reagent_containers/food/snacks/sliceable/carrotcake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/carrotcake
+/obj/item/reagent_containers/food/snacks/slice/carrotcake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/braincake
+/obj/item/reagent_containers/food/snacks/sliceable/braincake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/braincake
+/obj/item/reagent_containers/food/snacks/slice/braincake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesecake
+/obj/item/reagent_containers/food/snacks/sliceable/cheesecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/cheesecake
+/obj/item/reagent_containers/food/snacks/slice/cheesecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/plaincake
+/obj/item/reagent_containers/food/snacks/sliceable/plaincake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/plaincake
+/obj/item/reagent_containers/food/snacks/slice/plaincake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/orangecake
+/obj/item/reagent_containers/food/snacks/sliceable/orangecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/orangecake
+/obj/item/reagent_containers/food/snacks/slice/orangecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/limecake
+/obj/item/reagent_containers/food/snacks/sliceable/limecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/limecake
+/obj/item/reagent_containers/food/snacks/slice/limecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/lemoncake
+/obj/item/reagent_containers/food/snacks/sliceable/lemoncake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/lemoncake
+/obj/item/reagent_containers/food/snacks/slice/lemoncake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/chocolatecake
+/obj/item/reagent_containers/food/snacks/sliceable/chocolatecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/chocolatecake
+/obj/item/reagent_containers/food/snacks/slice/chocolatecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/birthdaycake
+/obj/item/reagent_containers/food/snacks/sliceable/birthdaycake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/birthdaycake
+/obj/item/reagent_containers/food/snacks/slice/birthdaycake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/applecake
+/obj/item/reagent_containers/food/snacks/sliceable/applecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/applecake
+/obj/item/reagent_containers/food/snacks/slice/applecake // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pumpkinpie
+/obj/item/reagent_containers/food/snacks/sliceable/pumpkinpie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
-/obj/item/weapon/reagent_containers/food/snacks/slice/pumpkinpie
+/obj/item/reagent_containers/food/snacks/slice/pumpkinpie // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
 
 // Misc //
 
-/obj/item/weapon/reagent_containers/food/snacks/boiledegg
+/obj/item/reagent_containers/food/snacks/boiledegg // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/donkpocket
+/obj/item/reagent_containers/food/snacks/donkpocket // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/sausage
+/obj/item/reagent_containers/food/snacks/sausage // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/muffin
+/obj/item/reagent_containers/food/snacks/muffin // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/tossedsalad
+/obj/item/reagent_containers/food/snacks/tossedsalad // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/validsalad
+/obj/item/reagent_containers/food/snacks/validsalad // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/dionaroast
+/obj/item/reagent_containers/food/snacks/dionaroast // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 25
 
 /obj/item/pizzabox/get_item_cost()
@@ -991,34 +991,34 @@
 //----Smokes-----//
 //***************//
 
-/obj/item/weapon/storage/fancy/cigarettes
+/obj/item/storage/fancy/cigarettes // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 15
 
-/obj/item/weapon/storage/fancy/cigarettes/luckystars
+/obj/item/storage/fancy/cigarettes/luckystars // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 17
 
-/obj/item/weapon/storage/fancy/cigarettes/jerichos
+/obj/item/storage/fancy/cigarettes/jerichos // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 22
 
-/obj/item/weapon/storage/fancy/cigarettes/menthols
+/obj/item/storage/fancy/cigarettes/menthols // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 18
 
-/obj/item/weapon/storage/fancy/cigar
+/obj/item/storage/fancy/cigar // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 27
 
-/obj/item/weapon/storage/fancy/cigarettes/carcinomas
+/obj/item/storage/fancy/cigarettes/carcinomas // CHOMPEdit - Removal of obj/item/weapon
 	price_tag  = 23
 
-/obj/item/weapon/storage/fancy/cigarettes/professionals
+/obj/item/storage/fancy/cigarettes/professionals // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 25
 
-/obj/item/weapon/storage/box/matches
+/obj/item/storage/box/matches // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 1
 
-/obj/item/weapon/flame/lighter
+/obj/item/flame/lighter // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 2
 
-/obj/item/weapon/flame/lighter/zippo
+/obj/item/flame/lighter/zippo // CHOMPEdit - Removal of obj/item/weapon
 	price_tag = 5
 
 //******************************//

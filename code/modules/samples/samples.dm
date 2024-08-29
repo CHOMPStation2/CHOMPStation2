@@ -1,4 +1,4 @@
-/obj/item/weapon/research_sample
+/obj/item/research_sample // CHOMPEdit - Removal of obj/item/weapon
 	name = "research sample"
 	desc = "A curious sample of unknown material. Perhaps a scientist could tell you more about it?<br/><span class='warning'>It looks dangerous to handle without heavy gloves or other protective equipment.</span>"
 	icon = 'icons/obj/samples.dmi'
@@ -21,9 +21,9 @@
 	//resource returns when crunched; a small amount of OK stuff by default
 	var/min_ore			= 3
 	var/max_ore			= 5
-	var/list/resource_list	=	list(/obj/item/weapon/ore/glass,/obj/item/weapon/ore/coal,/obj/item/weapon/ore/iron,/obj/item/weapon/ore/lead,/obj/item/weapon/ore/marble,/obj/item/weapon/ore/phoron,/obj/item/weapon/ore/silver,/obj/item/weapon/ore/gold)
+	var/list/resource_list	=	list(/obj/item/ore/glass,/obj/item/ore/coal,/obj/item/ore/iron,/obj/item/ore/lead,/obj/item/ore/marble,/obj/item/ore/phoron,/obj/item/ore/silver,/obj/item/ore/gold) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/research_sample/New()
+/obj/item/research_sample/New() // CHOMPEdit - Removal of obj/item/weapon
 	var/tech_mod = rand(0,rand_level)
 	var/tech_value = tech_level+tech_mod
 	if(fixed_tech)
@@ -61,7 +61,7 @@
 		rand_tech = pick(valid_techs)	//assign techs last
 		origin_tech.Add(list("[rand_tech]" = tech_value))
 
-/obj/item/weapon/research_sample/attack_hand(mob/user)
+/obj/item/research_sample/attack_hand(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	var/mob/living/M = user
 	if(!istype(M))
@@ -87,7 +87,7 @@
 	if(burn_user)
 		M.apply_damage(rand(min_damage,max_damage), BURN, null, used_weapon="Anomalous Material")
 
-/obj/item/weapon/research_sample/attack_self(mob/user)
+/obj/item/research_sample/attack_self(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	var/mob/living/M = user
 	if(!istype(M))
 		return
@@ -122,27 +122,27 @@
 	if(burn_user)
 		M.apply_damage(rand(min_damage,max_damage), BURN, null, used_weapon="Anomalous Material")
 
-/obj/item/weapon/research_sample/attackby(obj/item/weapon/P as obj, mob/user as mob)
+/obj/item/research_sample/attackby(obj/item/P as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
-	if(istype(P, /obj/item/weapon/storage/sample_container))
-		var/obj/item/weapon/storage/sample_container/SC = P
+	if(istype(P, /obj/item/storage/sample_container)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/storage/sample_container/SC = P // CHOMPEdit - Removal of obj/item/weapon
 		src.loc = SC
 		SC.update_icon()
 		to_chat(user, "<span class='notice'>You store \the [src] in \the [SC].</span>")
 
-	if(istype(P, /obj/item/device/cataloguer))
+	if(istype(P, /obj/item/cataloguer)) // CHOMPEdit - Removal of obj/item/device
 		to_chat(user, "<span class='notice'>You start to scan \the [src] with \the [P]...</span>")
 		if(do_after(user, 2 SECONDS))
 			to_chat(user, "<span class='notice'>\The [src] seems to have [origin_tech[1]] properties?</span>")
 
-/obj/item/weapon/research_sample/common
+/obj/item/research_sample/common // CHOMPEdit - Removal of obj/item/weapon
 	tech_level = 2 //2~3
 	rand_level = 1
 	valid_techs = list(TECH_COMBAT,TECH_MAGNET,TECH_POWER,TECH_BIO,TECH_DATA,TECH_ENGINEERING,TECH_PHORON,TECH_MATERIAL)
 	catalogue_data = list(/datum/category_item/catalogue/information/research_sample/common)
 
-/obj/item/weapon/research_sample/uncommon
+/obj/item/research_sample/uncommon // CHOMPEdit - Removal of obj/item/weapon
 	tech_level = 4 //4~6
 	rand_level = 2
 	valid_techs = list(TECH_COMBAT,TECH_MAGNET,TECH_POWER,TECH_BIO,TECH_DATA,TECH_ENGINEERING,TECH_PHORON,TECH_MATERIAL,TECH_BLUESPACE,TECH_ILLEGAL)
@@ -155,9 +155,9 @@
 	//modest amount of decent stuff
 	min_ore			= 4
 	max_ore			= 6
-	resource_list	= list(/obj/item/weapon/ore/phoron,/obj/item/weapon/ore/silver,/obj/item/weapon/ore/gold,/obj/item/weapon/ore/osmium,/obj/item/weapon/ore/diamond)
+	resource_list	= list(/obj/item/ore/phoron,/obj/item/ore/silver,/obj/item/ore/gold,/obj/item/ore/osmium,/obj/item/ore/diamond) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/research_sample/rare
+/obj/item/research_sample/rare // CHOMPEdit - Removal of obj/item/weapon
 	tech_level = 6 //6~8
 	rand_level = 2
 	valid_techs = list(TECH_COMBAT,TECH_MAGNET,TECH_POWER,TECH_BIO,TECH_DATA,TECH_ENGINEERING,TECH_PHORON,TECH_MATERIAL,TECH_BLUESPACE,TECH_ILLEGAL,TECH_ARCANE,TECH_PRECURSOR)
@@ -170,9 +170,9 @@
 	//a decent amount of rare stuff only
 	min_ore			= 8
 	max_ore			= 10
-	resource_list	=	list(/obj/item/weapon/ore/osmium,/obj/item/weapon/ore/uranium,/obj/item/weapon/ore/hydrogen,/obj/item/weapon/ore/diamond,/obj/item/weapon/ore/verdantium)
+	resource_list	=	list(/obj/item/ore/osmium,/obj/item/ore/uranium,/obj/item/ore/hydrogen,/obj/item/ore/diamond,/obj/item/ore/verdantium) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/research_sample/bluespace
+/obj/item/research_sample/bluespace // CHOMPEdit - Removal of obj/item/weapon
 	name = "bluespace anomaly"
 	desc = "A small, solidified fragment of bluespace? It shimmers in and out of phase with reality, flickering ominously."
 	icon_state = "sample_bluespace"
@@ -189,9 +189,9 @@
 	//a single bluespace crystal
 	min_ore			= 1
 	max_ore			= 1
-	resource_list	=	list(/obj/item/weapon/bluespace_crystal)
+	resource_list	=	list(/obj/item/bluespace_crystal) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/research_sample/bluespace/New()
+/obj/item/research_sample/bluespace/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	set_light(1, 3, lightcolor)
 
@@ -238,9 +238,9 @@
 	icon_state = "sample_spawner1"
 
 /obj/random/research_sample_type1/item_to_spawn()
-	return pick(prob(50);/obj/item/weapon/research_sample/common,
-				prob(35);/obj/item/weapon/research_sample/uncommon,
-				prob(15);/obj/item/weapon/research_sample/rare)
+	return pick(prob(50);/obj/item/research_sample/common, // CHOMPEdit - Removal of obj/item/weapon
+				prob(35);/obj/item/research_sample/uncommon, // CHOMPEdit - Removal of obj/item/weapon
+				prob(15);/obj/item/research_sample/rare) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/random/research_sample_type2
 	name = "Random Common/Uncommon Research Sample"
@@ -249,8 +249,8 @@
 	icon_state = "sample_spawner2"
 
 /obj/random/research_sample_type2/item_to_spawn()
-	return pick(prob(70);/obj/item/weapon/research_sample/common,
-				prob(30);/obj/item/weapon/research_sample/uncommon)
+	return pick(prob(70);/obj/item/research_sample/common, // CHOMPEdit - Removal of obj/item/weapon
+				prob(30);/obj/item/research_sample/uncommon) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/random/research_sample_type3
 	name = "Random Uncommon/Rare Research Sample"
@@ -259,5 +259,5 @@
 	icon_state = "sample_spawner3"
 
 /obj/random/research_sample_type3/item_to_spawn()
-	return pick(prob(70);/obj/item/weapon/research_sample/uncommon,
-				prob(30);/obj/item/weapon/research_sample/rare)
+	return pick(prob(70);/obj/item/research_sample/uncommon, // CHOMPEdit - Removal of obj/item/weapon
+				prob(30);/obj/item/research_sample/rare) // CHOMPEdit - Removal of obj/item/weapon

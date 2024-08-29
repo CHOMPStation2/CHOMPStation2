@@ -39,8 +39,8 @@
 		BB = null
 		BB = new projectile_type
 		// TGMC Ammo HUD - Update the HUD every time we expend/fire, given the Curabitur's method of handling firing.
-		if(istype(loc, /obj/item/weapon/gun/projectile/multi_cannon))
-			var/obj/item/weapon/gun/projectile/multi_cannon = loc
+		if(istype(loc, /obj/item/gun/projectile/multi_cannon)) // CHOMPEdit - Removal of obj/item/weapon
+			var/obj/item/gun/projectile/multi_cannon = loc // CHOMPEdit - Removal of obj/item/weapon
 			var/mob/living/user = multi_cannon.loc
 			if(istype(user))
 				user?.hud_used.update_ammo_hud(user, multi_cannon)
@@ -56,12 +56,12 @@
 			BB = new projectile_type
 	if(charge >= max_charge)
 		STOP_PROCESSING(SSobj, src)
-	if(istype(loc,/obj/item/weapon/gun/projectile/multi_cannon))
+	if(istype(loc,/obj/item/gun/projectile/multi_cannon)) // CHOMPEdit - Removal of obj/item/weapon
 		loc.update_icon()
 
 	// TGMC Ammo HUD - Update the HUD every time we're called to recharge.
-	if(istype(loc, /obj/item/weapon/gun/projectile/multi_cannon))
-		var/obj/item/weapon/gun/projectile/multi_cannon = loc
+	if(istype(loc, /obj/item/gun/projectile/multi_cannon)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/gun/projectile/multi_cannon = loc // CHOMPEdit - Removal of obj/item/weapon
 		var/mob/living/user = multi_cannon.loc
 		if(istype(user))
 			user?.hud_used.update_ammo_hud(user, multi_cannon)

@@ -1,5 +1,5 @@
 //Ice pick, mountain axe, or ice axe.YW Creation.
-/obj/item/weapon/ice_pick
+/obj/item/ice_pick // CHOMPEdit - Removal of obj/item/weapon
 	name = "ice axe"
 	desc = "A sharp tool for climbers and hikers to break up ice and keep themselves from slipping on a steep slope."
 	icon = 'icons/obj/items_yw.dmi'

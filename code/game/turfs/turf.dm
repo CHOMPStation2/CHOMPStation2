@@ -122,15 +122,15 @@
 		step(user.pulling, get_dir(user.pulling.loc, src))
 	return 1
 
-/turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = W
+/turf/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W, /obj/item/storage)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/storage/S = W // CHOMPEdit - Removal of obj/item/weapon
 		if(S.use_to_pickup && S.collection_mode)
 			S.gather_all(src, user)
 	return ..()
 
 // Hits a mob on the tile.
-/turf/proc/attack_tile(obj/item/weapon/W, mob/living/user)
+/turf/proc/attack_tile(obj/item/W, mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!istype(W))
 		return FALSE
 
@@ -394,7 +394,7 @@
 // This is all the way up here since its the common ancestor for things that need to get replaced with a floor when an RCD is used on them.
 // More specialized turfs like walls should instead override this.
 // The code for applying lattices/floor tiles onto lattices could also utilize something similar in the future.
-/turf/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode) // CHOMPEdit - Removal of obj/item/weapon
 	if(density || !can_build_into_floor)
 		return FALSE
 	if(passed_mode == RCD_FLOORWALL)
@@ -409,7 +409,7 @@
 			)
 	return FALSE
 
-/turf/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode) // CHOMPEdit - Removal of obj/item/weapon
 	if(passed_mode == RCD_FLOORWALL)
 		to_chat(user, span("notice", "You build a floor."))
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)

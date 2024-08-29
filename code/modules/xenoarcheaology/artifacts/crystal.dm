@@ -19,17 +19,17 @@
 /obj/structure/crystal/Destroy()
 	src.visible_message(span_red("<b>[src] shatters!</b>"))
 	if(prob(75))
-		new /obj/item/weapon/material/shard/phoron(src.loc)
+		new /obj/item/material/shard/phoron(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(50))
-		new /obj/item/weapon/material/shard/phoron(src.loc)
+		new /obj/item/material/shard/phoron(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(25))
-		new /obj/item/weapon/material/shard/phoron(src.loc)
+		new /obj/item/material/shard/phoron(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(75))
-		new /obj/item/weapon/material/shard(src.loc)
+		new /obj/item/material/shard(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(50))
-		new /obj/item/weapon/material/shard(src.loc)
+		new /obj/item/material/shard(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(25))
-		new /obj/item/weapon/material/shard(src.loc)
+		new /obj/item/material/shard(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
 //todo: laser_act

@@ -1,4 +1,4 @@
-/obj/item/weapon/kinetic_crusher/glaive
+/obj/item/kinetic_crusher/glaive // CHOMPEdit - Removal of obj/item/weapon
 	name = "kinetic glaive"
 	icon_state = "crusher-glaive"
 	force = 20
@@ -9,7 +9,7 @@
 	w_class = ITEMSIZE_NORMAL
 	requires_wield = FALSE
 
-/obj/item/weapon/pickaxe/anamolous
+/obj/item/pickaxe/anamolous // CHOMPEdit - Removal of obj/item/weapon
 	name = "strange pickaxe"
 	icon_state = "ppickaxe"
 	item_state = "ppickaxe"
@@ -19,5 +19,5 @@
 	desc = "This oddly lightweight pickaxe seems rather sturdy."
 
 
-/obj/item/weapon/kinetic_crusher
+/obj/item/kinetic_crusher // CHOMPEdit - Removal of obj/item/weapon
 	requires_wield = FALSE

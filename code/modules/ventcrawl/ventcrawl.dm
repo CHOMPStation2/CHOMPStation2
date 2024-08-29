@@ -5,10 +5,10 @@ var/list/ventcrawl_machinery = list(
 
 // Vent crawling whitelisted items, whoo
 /mob/living/var/list/can_enter_vent_with = list(
-	/obj/item/weapon/implant,
-	/obj/item/device/radio/borg,
-	/obj/item/device/radio/headset/mob_headset,
-	/obj/item/weapon/holder,
+	/obj/item/implant, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/radio/borg, // CHOMPEdit - Removal of obj/item/device
+	/obj/item/radio/headset/mob_headset, // CHOMPEdit - Removal of obj/item/device
+	/obj/item/holder, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/machinery/camera,
 	/obj/belly,
 	/obj/soulgem, // CHOMPAdd

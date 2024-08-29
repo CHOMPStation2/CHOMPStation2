@@ -227,7 +227,7 @@
 				/obj/item/clothing/suit/space/void/refurb/pilot,
 				/obj/item/clothing/head/helmet/space/void/refurb/pilot
 			),
-			
+
 			prob(10);list(
 				/obj/item/clothing/suit/space/void/refurb/pilot,
 				/obj/item/clothing/head/helmet/space/void/refurb/pilot/alt
@@ -255,14 +255,15 @@
 	desc = "This is a random rigsuit."
 	icon = 'icons/obj/rig_modules.dmi'
 	icon_state = "generic"
-
+// CHOMPEdit Start - Removal of obj/item/weapon
 /obj/random/rigsuit/item_to_spawn()
-	return pick(prob(4);/obj/item/weapon/rig/light/hacker,
-				prob(5);/obj/item/weapon/rig/industrial,
-				prob(5);/obj/item/weapon/rig/eva,
-				prob(4);/obj/item/weapon/rig/light/stealth,
-				prob(3);/obj/item/weapon/rig/hazard,
-				prob(1);/obj/item/weapon/rig/merc/empty)
+	return pick(prob(4);/obj/item/rig/light/hacker,
+				prob(5);/obj/item/rig/industrial,
+				prob(5);/obj/item/rig/eva,
+				prob(4);/obj/item/rig/light/stealth,
+				prob(3);/obj/item/rig/hazard,
+				prob(1);/obj/item/rig/merc/empty)
+// CHOMPEdit End
 //VOREStation Add Start
 /obj/random/rigsuit/chancetofail
 	spawn_nothing_percentage = 50

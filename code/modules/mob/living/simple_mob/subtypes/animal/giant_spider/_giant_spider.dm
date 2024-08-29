@@ -99,14 +99,14 @@
 	speak_emote = list("chitters")
 
 	meat_amount = 5
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat
+	meat_type = /obj/item/reagent_containers/food/snacks/xenomeat/spidermeat // CHOMPEdit - Removal of obj/item/weapon
 
 	say_list_type = /datum/say_list/spider
 
 	tame_items = list(
-	/obj/item/weapon/reagent_containers/food/snacks/xenomeat = 10,
-	/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 40,
-	/obj/item/weapon/reagent_containers/food/snacks/meat = 20
+	/obj/item/reagent_containers/food/snacks/xenomeat = 10, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/crabmeat = 40, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/meat = 20 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	var/poison_type = "spidertoxin"	// The reagent that gets injected when it attacks.

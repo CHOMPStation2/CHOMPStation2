@@ -1,13 +1,13 @@
 /*
  * Spaceball collectable cards
  */
-/obj/item/weapon/pack/spaceball
+/obj/item/pack/spaceball // CHOMPEdit - Removal of obj/item/weapon
 	name = "spaceball booster pack"
 	desc = "Officially licensed to take your money."
 	icon_state = "card_pack_spaceball"
 	parentdeck = "spaceball"
 
-/obj/item/weapon/pack/spaceball/New()
+/obj/item/pack/spaceball/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	var/datum/playingcard/P
 	var/i

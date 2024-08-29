@@ -1,7 +1,7 @@
 /*
  proteans
 */
-/obj/item/weapon/rig/protean
+/obj/item/rig/protean // CHOMPEdit - Removal of obj/item/weapon
 	name = "nanosuit control cluster"
 	suit_type = "nanomachine"
 	icon = 'icons/obj/rig_modules_ch.dmi'
@@ -22,30 +22,30 @@
 	protean = 1
 	offline_vision_restriction = 0
 	open = 1
-	cell_type =  /obj/item/weapon/cell/protean
+	cell_type =  /obj/item/cell/protean // CHOMPEdit - Removal of obj/item/weapon
 	var/dead = 0
 	//interface_path = "RIGSuit_protean"
 	//ai_interface_path = "RIGSuit_protean"
 	var/sealed = 0
 	var/assimilated_rig
 
-/obj/item/weapon/rig/protean/relaymove(mob/user, var/direction)
+/obj/item/rig/protean/relaymove(mob/user, var/direction) // CHOMPEdit - Removal of obj/item/weapon
 	if(user.stat || user.stunned)
 		return
 	forced_move(direction, user, 0)
 
-/obj/item/weapon/rig/protean/check_suit_access(mob/living/user)
+/obj/item/rig/protean/check_suit_access(mob/living/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(user == myprotean)
 		return 1
 	return ..()
 
-/obj/item/weapon/rig/protean/digest_act(atom/movable/item_storage = null)
+/obj/item/rig/protean/digest_act(atom/movable/item_storage = null) // CHOMPEdit - Removal of obj/item/weapon
 	return 0
 
-/obj/item/weapon/rig/protean/ex_act(severity)
+/obj/item/rig/protean/ex_act(severity) // CHOMPEdit - Removal of obj/item/weapon
 	return
 
-/obj/item/weapon/rig/protean/New(var/newloc, var/mob/living/carbon/human/P)
+/obj/item/rig/protean/New(var/newloc, var/mob/living/carbon/human/P) // CHOMPEdit - Removal of obj/item/weapon
 	if(P)
 		var/datum/species/protean/S = P.species
 		S.OurRig = src
@@ -56,7 +56,7 @@
 			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
 	..(newloc)
 
-/obj/item/weapon/rig/protean/Destroy()
+/obj/item/rig/protean/Destroy() // CHOMPEdit - Removal of obj/item/weapon
 	if(myprotean)
 		var/mob/living/carbon/human/P = myprotean
 		var/datum/species/protean/S = P?.species
@@ -65,8 +65,8 @@
 	. = ..()
 
 
-/obj/item/weapon/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/weapon/storage/backpack/B)
-	if(istype(B,/obj/item/weapon/storage/backpack))
+/obj/item/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, var/obj/item/storage/backpack/B) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(B,/obj/item/storage/backpack)) // CHOMPEdit - Removal of obj/item/weapon
 		if(spawned)
 			B = P.back
 			P.unEquip(P.back)
@@ -82,7 +82,7 @@
 	else
 		to_chat(P,"<span class ='warning'>Your rigsuit can only assimilate a backpack into itself. If you are seeing this message, and you do not have a rigsuit, tell a coder.</span>")
 
-/obj/item/weapon/rig/protean/verb/RemoveBag()
+/obj/item/rig/protean/verb/RemoveBag() // CHOMPEdit - Removal of obj/item/weapon
 	set name = "Remove Stored Bag"
 	set category = "Object"
 
@@ -92,7 +92,7 @@
 	else
 		to_chat(usr, "This Rig does not have a bag installed. Use a bag on it to install one.")
 
-/obj/item/weapon/rig/protean/attack_hand(mob/user as mob)
+/obj/item/rig/protean/attack_hand(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if (src.loc == user)
 		if(rig_storage)
 			src.rig_storage.open(user)
@@ -216,12 +216,12 @@
 	can_breach = 0
 	species_restricted = list(SPECIES_PROTEAN, SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJ, SPECIES_UNATHI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_PROMETHEAN, SPECIES_XENOHYBRID, SPECIES_VOX, SPECIES_TESHARI, SPECIES_VASILISSAN, SPECIES_XENOMORPH_HYBRID)
 	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank,
-		/obj/item/device/suit_cooling_unit,
-		/obj/item/weapon/melee/baton,
-		/obj/item/weapon/storage/backpack,
+		/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/backpack, // CHOMPEdit - Removal of obj/item/weapon
 		)
 	sprite_sheets = list(
 		SPECIES_TESHARI 		 = 'modular_chomp/icons/mob/species/teshari/suit_ch.dmi',
@@ -234,7 +234,7 @@
 	default_worn_icon = 'modular_chomp/icons/mob/spacesuit_ch.dmi'
 
 //Copy pasted most of this proc from base because I don't feel like rewriting the base proc with a shit load of exceptions
-/obj/item/weapon/rig/protean/attackby(obj/item/W as obj, mob/living/user as mob)
+/obj/item/rig/protean/attackby(obj/item/W as obj, mob/living/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(!istype(user))
 		return 0
 	if(dead)
@@ -247,7 +247,7 @@
 						dead +=1
 				return
 			if(2)
-				if(istype(W, /obj/item/device/protean_reboot))//placeholder
+				if(istype(W, /obj/item/protean_reboot))//placeholder // CHOMPEdit - Removal of obj/item/device
 					if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
 						playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 						to_chat(user, "<span class='notice'>You carefully slot [W] in the [src].</span>")
@@ -263,7 +263,7 @@
 						W?:use(1)
 				return
 			if(4)
-				if(istype(W, /obj/item/weapon/shockpaddles))
+				if(istype(W, /obj/item/shockpaddles)) // CHOMPEdit - Removal of obj/item/weapon
 					if(W?:can_use(user))
 						to_chat(user, "<span class='notice'>You hook up the [W] to the contact points in the maintenance assembly</span>")
 						if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
@@ -275,10 +275,10 @@
 								src.atom_say("Contact received! Reassembly nanites calibrated. Estimated time to resucitation: 1 minute 30 seconds")
 								addtimer(CALLBACK(src, PROC_REF(make_alive), myprotean?:humanform), 900)
 				return
-	if(istype(W,/obj/item/weapon/rig))
+	if(istype(W,/obj/item/rig)) // CHOMPEdit - Removal of obj/item/weapon
 		if(!assimilated_rig)
 			AssimilateRig(user,W)
-	if(istype(W,/obj/item/weapon/tank)) //Todo, some kind of check for suits without integrated air supplies.
+	if(istype(W,/obj/item/tank)) //Todo, some kind of check for suits without integrated air supplies. // CHOMPEdit - Removal of obj/item/weapon
 		if(air_supply)
 			to_chat(user, "\The [src] already has a tank installed.")
 			return
@@ -353,15 +353,15 @@
 		if(module.accepts_item(W,user)) //Item is handled in this proc
 			return
 	if(rig_storage)
-		var/obj/item/weapon/storage/backpack = rig_storage
+		var/obj/item/storage/backpack = rig_storage // CHOMPEdit - Removal of obj/item/weapon
 		if(backpack.can_be_inserted(W, 1))
 			backpack.handle_item_insertion(W)
 	else
-		if(istype(W,/obj/item/weapon/storage/backpack))
+		if(istype(W,/obj/item/storage/backpack)) // CHOMPEdit - Removal of obj/item/weapon
 			AssimilateBag(user,0,W)
 	..()
 
-/obj/item/weapon/rig/protean/proc/make_alive(var/mob/living/carbon/human/H, var/partial)
+/obj/item/rig/protean/proc/make_alive(var/mob/living/carbon/human/H, var/partial) // CHOMPEdit - Removal of obj/item/weapon
 	if(H)
 		H.setToxLoss(0)
 		H.setOxyLoss(0)
@@ -402,39 +402,39 @@
 				playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
 		dead = 0
 
-/obj/item/weapon/rig/protean/take_hit(damage, source, is_emp=0)
+/obj/item/rig/protean/take_hit(damage, source, is_emp=0) // CHOMPEdit - Removal of obj/item/weapon
 	return	//We don't do that here
 
-/obj/item/weapon/rig/protean/emp_act(severity_class)
+/obj/item/rig/protean/emp_act(severity_class) // CHOMPEdit - Removal of obj/item/weapon
 	return	//Same here
 
-/obj/item/weapon/rig/protean/cut_suit()
+/obj/item/rig/protean/cut_suit() // CHOMPEdit - Removal of obj/item/weapon
 	return	//nope
 
-/obj/item/weapon/rig/protean/force_rest(var/mob/user)
+/obj/item/rig/protean/force_rest(var/mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	wearer.lay_down()
 	to_chat(user, "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>")
 
-/obj/item/weapon/cell/protean
+/obj/item/cell/protean // CHOMPEdit - Removal of obj/item/weapon
 	name = "Protean power cell"
 	desc = "Something terrible must have happened if you're managing to see this."
 	maxcharge = 10000
 	charge_amount = 100
 	var/mob/living/carbon/human/charger
 
-/obj/item/weapon/cell/protean/Initialize() //ChompEDIT New --> Initialize
+/obj/item/cell/protean/Initialize() //ChompEDIT New --> Initialize // CHOMPEdit - Removal of obj/item/weapon
 	charge = maxcharge
 	update_icon()
 	addtimer(CALLBACK(src, PROC_REF(search_for_protean)), 60)
 
-/obj/item/weapon/cell/protean/proc/search_for_protean()
-	if(istype(src.loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = src.loc
+/obj/item/cell/protean/proc/search_for_protean() // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(src.loc, /obj/item/rig/protean)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/rig/protean/prig = src.loc // CHOMPEdit - Removal of obj/item/weapon
 		charger = prig.wearer
 	if(charger)
 		START_PROCESSING(SSobj, src)
 
-/obj/item/weapon/cell/protean/process()
+/obj/item/cell/protean/process() // CHOMPEdit - Removal of obj/item/weapon
 	var/C = charge
 	if(charger)
 		if((world.time >= last_use + charge_delay) && charger.nutrition > 100)
@@ -444,14 +444,14 @@
 		return PROCESS_KILL
 
 
-/obj/item/weapon/rig/protean/equipped(mob/living/carbon/human/M)
+/obj/item/rig/protean/equipped(mob/living/carbon/human/M) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	if(dead)
 		canremove = 1
 	else
 		canremove = 0
 
-/obj/item/weapon/rig/protean/ai_can_move_suit(mob/user, check_user_module = 0, check_for_ai = 0)
+/obj/item/rig/protean/ai_can_move_suit(mob/user, check_user_module = 0, check_for_ai = 0) // CHOMPEdit - Removal of obj/item/weapon
 	if(check_for_ai)
 		return 0	//We don't do that here.
 	if(offline || !cell || !cell.charge || locked_down)
@@ -464,19 +464,19 @@
 		return 0
 	return 1
 
-/obj/item/weapon/rig/protean/toggle_seals(mob/living/carbon/human/M, instant)
+/obj/item/rig/protean/toggle_seals(mob/living/carbon/human/M, instant) // CHOMPEdit - Removal of obj/item/weapon
 	M = src.wearer
 	..()
 
-/obj/item/weapon/rig/protean/toggle_cooling(mob/user)
+/obj/item/rig/protean/toggle_cooling(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	user = src.wearer
 	..()
 
-/obj/item/weapon/rig/protean/toggle_piece(piece, mob/living/carbon/human/H, deploy_mode, forced)
+/obj/item/rig/protean/toggle_piece(piece, mob/living/carbon/human/H, deploy_mode, forced) // CHOMPEdit - Removal of obj/item/weapon
 	H = src.wearer
 	..()
 
-/obj/item/weapon/rig/protean/get_description_interaction()
+/obj/item/rig/protean/get_description_interaction() // CHOMPEdit - Removal of obj/item/weapon
 	if(dead)
 		var/list/results = list()
 		switch(dead)
@@ -491,10 +491,10 @@
 		return results
 
 //Effectively a round about way of letting a Protean wear other rigs.
-/obj/item/weapon/rig/protean/proc/AssimilateRig(mob/user, var/obj/item/weapon/rig/R)
+/obj/item/rig/protean/proc/AssimilateRig(mob/user, var/obj/item/rig/R) // CHOMPEdit - Removal of obj/item/weapon
 	if(!R || assimilated_rig)
 		return
-	if(istype(R, /obj/item/weapon/rig/protean))
+	if(istype(R, /obj/item/rig/protean)) // CHOMPEdit - Removal of obj/item/weapon
 		to_chat(user, "<span class='warning'>The world is not ready for such a technological singularity.</span>")
 		return
 	to_chat(user, "<span class='notice'>You assimilate the [R] into the [src]. Mimicking its stats and appearance.</span>")
@@ -538,7 +538,7 @@
 	slowdown = (initial(R.slowdown) *0.5)
 	offline_slowdown = slowdown
 
-/obj/item/weapon/rig/protean/verb/RemoveRig()
+/obj/item/rig/protean/verb/RemoveRig() // CHOMPEdit - Removal of obj/item/weapon
 	set name = "Remove Assimilated Rig"
 	set category = "Object"
 
@@ -554,7 +554,7 @@
 		//Byond at this time does not support initial() on lists
 		//So we have to create a new rig, just so we can copy the lists we're after
 		//If someone figures out a smarter way to do this, please tell me
-		var/obj/item/weapon/rig/tempRig = new /obj/item/weapon/rig/protean()
+		var/obj/item/rig/tempRig = new /obj/item/rig/protean() // CHOMPEdit - Removal of obj/item/weapon
 		gloves.sprite_sheets = tempRig.gloves.sprite_sheets.Copy()
 		gloves.sprite_sheets_obj = tempRig.gloves.sprite_sheets.Copy()
 		helmet.sprite_sheets = tempRig.helmet.sprite_sheets.Copy()
@@ -575,7 +575,7 @@
 	else
 		to_chat(usr, "[src] has not assimilated a RIG. Use one on it to assimilate.")
 
-/obj/item/weapon/rig/protean/MouseDrop(obj/over_object as obj)
+/obj/item/rig/protean/MouseDrop(obj/over_object as obj) // CHOMPEdit - Removal of obj/item/weapon
 	if(!canremove)
 		return
 

@@ -3,29 +3,29 @@
  */
 
 //Crowbar
-/obj/item/weapon/tool/crowbar/brass
+/obj/item/tool/crowbar/brass // CHOMPEdit - Removal of obj/item/weapon
 	icon_state = "crowbar_brass"
 	item_state = "crowbar"
 
 //Cutters
-/obj/item/weapon/tool/wirecutters/brass
+/obj/item/tool/wirecutters/brass // CHOMPEdit - Removal of obj/item/weapon
 	icon_state = "cutters_brass"
 	item_state = "cutters_yellow"
 	random_color = FALSE // CHOMPFix, no more not-brass brass tools.
 
 //Screwdriver
-/obj/item/weapon/tool/screwdriver/brass
+/obj/item/tool/screwdriver/brass // CHOMPEdit - Removal of obj/item/weapon
 	icon_state = "screwdriver_brass"
 	item_state = "screwdriver_black"
 	random_color = FALSE // CHOMPFix, no more not-brass brass tools.
 
 //Wrench
-/obj/item/weapon/tool/wrench/brass
+/obj/item/tool/wrench/brass // CHOMPEdit - Removal of obj/item/weapon
 	icon_state = "wrench_brass"
 	item_state = "wrench_brass"
 
 //Welder
-/obj/item/weapon/weldingtool/brass
+/obj/item/weldingtool/brass // CHOMPEdit - Removal of obj/item/weapon
 	name = "brass welding tool"
 	desc = "A welder made from brass fittings."
 	icon_state = "brasswelder"

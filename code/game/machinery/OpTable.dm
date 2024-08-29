@@ -117,9 +117,9 @@
 
 	take_victim(user, user)
 
-/obj/machinery/optable/attackby(obj/item/weapon/W, mob/living/carbon/user)
-	if(istype(W, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/G = W
+/obj/machinery/optable/attackby(obj/item/W, mob/living/carbon/user) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W, /obj/item/grab)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/grab/G = W // CHOMPEdit - Removal of obj/item/weapon
 		if(iscarbon(G.affecting) && check_table(G.affecting, user))
 			take_victim(G.affecting, user)
 			qdel(W)

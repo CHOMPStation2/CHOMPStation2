@@ -3,20 +3,20 @@
 	desc = "Restores integrity to external robotic components."
 	spell_power_desc = "Healing amount increased."
 	cost = 50
-	obj_path = /obj/item/weapon/spell/insert/mend_metal
+	obj_path = /obj/item/spell/insert/mend_metal // CHOMPEdit - Removal of obj/item/weapon
 	ability_icon_state = "tech_mendwounds"
 	category = SUPPORT_SPELLS
 
-/obj/item/weapon/spell/insert/mend_metal
+/obj/item/spell/insert/mend_metal // CHOMPEdit - Removal of obj/item/weapon
 	name = "mend metal"
 	desc = "A roboticist is now obsolete."
 	icon_state = "mend_wounds"
 	cast_methods = CAST_MELEE
 	aspect = ASPECT_BIOMED
 	light_color = "#FF5C5C"
-	inserting = /obj/item/weapon/inserted_spell/mend_metal
+	inserting = /obj/item/inserted_spell/mend_metal // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/inserted_spell/mend_metal/on_insert()
+/obj/item/inserted_spell/mend_metal/on_insert() // CHOMPEdit - Removal of obj/item/weapon
 	spawn(1)
 		if(ishuman(host))
 			var/mob/living/carbon/human/H = host

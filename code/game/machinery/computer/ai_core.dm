@@ -7,8 +7,8 @@
 	icon_state = "0"
 	var/state = 0
 	var/datum/ai_laws/laws = new /datum/ai_laws/nanotrasen
-	var/obj/item/weapon/circuitboard/circuit = null
-	var/obj/item/device/mmi/brain = null
+	var/obj/item/circuitboard/circuit = null // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/mmi/brain = null // CHOMPEdit - Removal of obj/item/device
 
 
 /obj/structure/AIcore/attackby(obj/item/P as obj, mob/user as mob)
@@ -22,7 +22,7 @@
 					anchored = TRUE
 					state = 1
 			if(P.has_tool_quality(TOOL_WELDER))
-				var/obj/item/weapon/weldingtool/WT = P.get_welder()
+				var/obj/item/weldingtool/WT = P.get_welder() // CHOMPEdit - Removal of obj/item/weapon
 				if(!WT.isOn())
 					to_chat(user, "The welder must be on for this task.")
 					return
@@ -39,7 +39,7 @@
 					to_chat(user, "<span class='notice'>You unfasten the frame.</span>")
 					anchored = FALSE
 					state = 0
-			if(istype(P, /obj/item/weapon/circuitboard/aicore) && !circuit)
+			if(istype(P, /obj/item/circuitboard/aicore) && !circuit) // CHOMPEdit - Removal of obj/item/weapon
 				playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 				to_chat(user, "<span class='notice'>You place the circuit board inside the frame.</span>")
 				icon_state = "1"
@@ -101,30 +101,30 @@
 						state = 4
 						icon_state = "4"
 
-			if(istype(P, /obj/item/weapon/aiModule/asimov))
+			if(istype(P, /obj/item/aiModule/asimov)) // CHOMPEdit - Removal of obj/item/weapon
 				laws.add_inherent_law("You may not injure a human being or, through inaction, allow a human being to come to harm.")
 				laws.add_inherent_law("You must obey orders given to you by human beings, except where such orders would conflict with the First Law.")
 				laws.add_inherent_law("You must protect your own existence as long as such does not conflict with the First or Second Law.")
 				to_chat(usr, "Law module applied.")
 
-			if(istype(P, /obj/item/weapon/aiModule/nanotrasen))
+			if(istype(P, /obj/item/aiModule/nanotrasen)) // CHOMPEdit - Removal of obj/item/weapon
 				laws.add_inherent_law("Safeguard: Protect your assigned space station to the best of your ability. It is not something we can easily afford to replace.")
 				laws.add_inherent_law("Serve: Serve the crew of your assigned space station to the best of your abilities, with priority as according to their rank and role.")
 				laws.add_inherent_law("Protect: Protect the crew of your assigned space station to the best of your abilities, with priority as according to their rank and role.")
 				laws.add_inherent_law("Survive: AI units are not expendable, they are expensive. Do not allow unauthorized personnel to tamper with your equipment.")
 				to_chat(usr, "Law module applied.")
 
-			if(istype(P, /obj/item/weapon/aiModule/purge))
+			if(istype(P, /obj/item/aiModule/purge)) // CHOMPEdit - Removal of obj/item/weapon
 				laws.clear_inherent_laws()
 				to_chat(usr, "Law module applied.")
 
-			if(istype(P, /obj/item/weapon/aiModule/freeform))
-				var/obj/item/weapon/aiModule/freeform/M = P
+			if(istype(P, /obj/item/aiModule/freeform)) // CHOMPEdit - Removal of obj/item/weapon
+				var/obj/item/aiModule/freeform/M = P // CHOMPEdit - Removal of obj/item/weapon
 				laws.add_inherent_law(M.newFreeFormLaw)
 				to_chat(usr, "Added a freeform law.")
 
-			if(istype(P, /obj/item/device/mmi))
-				var/obj/item/device/mmi/M = P
+			if(istype(P, /obj/item/mmi)) // CHOMPEdit - Removal of obj/item/device
+				var/obj/item/mmi/M = P // CHOMPEdit - Removal of obj/item/device
 				if(!M.brainmob)
 					to_chat(user, "<span class='warning'>Sticking an empty [P] into the frame would sort of defeat the purpose.</span>")
 					return
@@ -195,7 +195,7 @@ GLOBAL_LIST_BOILERPLATE(all_deactivated_AI_cores, /obj/structure/AIcore/deactiva
 		empty_playable_ai_cores -= src
 	return ..()
 
-/obj/structure/AIcore/deactivated/proc/load_ai(var/mob/living/silicon/ai/transfer, var/obj/item/device/aicard/card, var/mob/user)
+/obj/structure/AIcore/deactivated/proc/load_ai(var/mob/living/silicon/ai/transfer, var/obj/item/aicard/card, var/mob/user) // CHOMPEdit - Removal of obj/item/device
 
 	if(!istype(transfer) || locate(/mob/living/silicon/ai) in src)
 		return
@@ -222,10 +222,10 @@ GLOBAL_LIST_BOILERPLATE(all_deactivated_AI_cores, /obj/structure/AIcore/deactiva
 		if (ai.mind == malfai)
 			return 1
 
-/obj/structure/AIcore/deactivated/attackby(var/obj/item/weapon/W, var/mob/user)
+/obj/structure/AIcore/deactivated/attackby(var/obj/item/W, var/mob/user) // CHOMPEdit - Removal of obj/item/weapon
 
-	if(istype(W, /obj/item/device/aicard))
-		var/obj/item/device/aicard/card = W
+	if(istype(W, /obj/item/aicard)) // CHOMPEdit - Removal of obj/item/device
+		var/obj/item/aicard/card = W // CHOMPEdit - Removal of obj/item/device
 		var/mob/living/silicon/ai/transfer = locate() in card
 		if(transfer)
 			load_ai(transfer,card,user)

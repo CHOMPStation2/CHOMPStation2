@@ -1,5 +1,5 @@
 //Hardsuits
-/obj/item/weapon/rig/ch //Some blank bs
+/obj/item/rig/ch //Some blank bs // CHOMPEdit - Removal of obj/item/weapon
 	desc = "This is a dev item and should not be spawned."
 	default_mob_icon = 'modular_chomp/icons/mob/rig_back_ch.dmi'
 	chest_type = /obj/item/clothing/suit/space/rig/ch
@@ -22,7 +22,7 @@
 
 
 //A second security suit. Comes with a grenade launcher that only accepts flashbangs and adds a new sprinter and flash modules.
-/obj/item/weapon/rig/ch/pursuit
+/obj/item/rig/ch/pursuit // CHOMPEdit - Removal of obj/item/weapon
 	name = "pursuit hardsuit control module"
 	icon = 'icons/obj/rig_modules_ch.dmi'
 	icon_state = "pursuit_rig"
@@ -36,18 +36,18 @@
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ch/pursuit
 
 	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank,
-		/obj/item/device/suit_cooling_unit,
-		/obj/item/weapon/melee/baton,
-		/obj/item/weapon/storage/backpack,
+		/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/backpack, // CHOMPEdit - Removal of obj/item/weapon
 		)
 
 	req_access = list(access_hos)
 	req_one_access = list()
 
-/obj/item/weapon/rig/ch/pursuit/equipped
+/obj/item/rig/ch/pursuit/equipped // CHOMPEdit - Removal of obj/item/weapon
 
 	initial_modules = list(
 		/obj/item/rig_module/maneuvering_jets,

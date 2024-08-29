@@ -240,7 +240,7 @@
 			log_debug("polymorph human")
 			for(var/obj/item/W in M)
 				log_debug("polymorph items")
-				if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
+				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 					log_debug("polymorph implants")
 					continue
 				M.drop_from_inventory(W)

@@ -103,7 +103,7 @@
 
 	set_AI_busy(FALSE)
 
-//		var/obj/item/weapon/grab/G = new(src, victim)
+//		var/obj/item/grab/G = new(src, victim) // CHOMPEdit - Removal of obj/item/weapon
 //		put_in_active_hand(G)
 
 //		G.synch()

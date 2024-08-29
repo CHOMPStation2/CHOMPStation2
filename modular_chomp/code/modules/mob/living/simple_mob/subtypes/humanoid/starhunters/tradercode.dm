@@ -22,7 +22,7 @@
 	var/list/refill	= list() // For each, use the following pattern:
 	// Enables refilling with appropriate cartridges
 	var/refillable = TRUE
-	var/obj/item/weapon/coin/coin
+	var/obj/item/coin/coin // CHOMPEdit - Removal of obj/item/weapon
 	var/list/log = list()
 	var/has_logs = 0
 	var/list/product_records = list()
@@ -64,13 +64,13 @@
 	all_products.Cut()
 
 
-/mob/living/simple_mob/humanoid/starhunter/trader/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	var/obj/item/weapon/card/id/I = W.GetID()
+/mob/living/simple_mob/humanoid/starhunter/trader/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/card/id/I = W.GetID() // CHOMPEdit - Removal of obj/item/weapon
 
-	if(I || istype(W, /obj/item/weapon/spacecash))
+	if(I || istype(W, /obj/item/spacecash)) // CHOMPEdit - Removal of obj/item/weapon
 		attack_hand(user)
 		return
-	else if(istype(W, /obj/item/weapon/coin) && has_premium)
+	else if(istype(W, /obj/item/coin) && has_premium) // CHOMPEdit - Removal of obj/item/weapon
 		user.drop_item()
 		W.forceMove(src)
 		coin = W
@@ -87,7 +87,7 @@
 		..()
 
 
-/mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_cash(var/obj/item/weapon/spacecash/cashmoney, mob/user)
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_cash(var/obj/item/spacecash/cashmoney, mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(currently_vending.price > cashmoney.worth)
 
 		// This is not a status display message, since it's something the character
@@ -95,7 +95,7 @@
 		to_chat(usr, "[icon2html(cashmoney,user.client)] <span class='warning'>That is not enough money.</span>")
 		return 0
 
-	if(istype(cashmoney, /obj/item/weapon/spacecash))
+	if(istype(cashmoney, /obj/item/spacecash)) // CHOMPEdit - Removal of obj/item/weapon
 
 		visible_message("<span class='info'>\The [usr] inserts some cash into \the [src].</span>")
 		cashmoney.worth -= currently_vending.price
@@ -147,7 +147,7 @@
 		data["actively_vending"] = null
 
 	var/mob/living/carbon/human/H
-	var/obj/item/weapon/card/id/C
+	var/obj/item/card/id/C // CHOMPEdit - Removal of obj/item/weapon
 
 	data["guestNotice"] = "Please present cash.";
 	data["userMoney"] = 0
@@ -155,7 +155,7 @@
 	if(ishuman(user))
 		H = user
 		C = H.GetIdCard()
-		var/obj/item/weapon/spacecash/S = H.get_active_hand()
+		var/obj/item/spacecash/S = H.get_active_hand() // CHOMPEdit - Removal of obj/item/weapon
 		if(istype(S))
 			data["userMoney"] = S.worth
 			data["guestNotice"] = "Accepting [S.initial_name]. You have: [S.worth]₮."
@@ -226,7 +226,7 @@
 			vend_ready = FALSE // From this point onwards, vendor is locked to performing this transaction only, until it is resolved.
 
 			var/mob/living/carbon/human/H = usr
-			var/obj/item/weapon/card/id/C = H.GetIdCard()
+			var/obj/item/card/id/C = H.GetIdCard() // CHOMPEdit - Removal of obj/item/weapon
 
 			if(!vendor_account || vendor_account.suspended)
 				to_chat(usr, "<span class='filter_notice'>Vendor account offline. Unable to process transaction.</span>")
@@ -238,13 +238,13 @@
 
 			var/paid = FALSE
 
-			if(istype(usr.get_active_hand(), /obj/item/weapon/spacecash))
-				var/obj/item/weapon/spacecash/cash = usr.get_active_hand()
+			if(istype(usr.get_active_hand(), /obj/item/spacecash)) // CHOMPEdit - Removal of obj/item/weapon
+				var/obj/item/spacecash/cash = usr.get_active_hand() // CHOMPEdit - Removal of obj/item/weapon
 				paid = pay_with_cash(cash, usr)
-			else if(istype(usr.get_active_hand(), /obj/item/weapon/spacecash/ewallet))
-				var/obj/item/weapon/spacecash/ewallet/wallet = usr.get_active_hand()
+			else if(istype(usr.get_active_hand(), /obj/item/spacecash/ewallet)) // CHOMPEdit - Removal of obj/item/weapon
+				var/obj/item/spacecash/ewallet/wallet = usr.get_active_hand() // CHOMPEdit - Removal of obj/item/weapon
 				paid = pay_with_ewallet(wallet)
-			else if(istype(C, /obj/item/weapon/card))
+			else if(istype(C, /obj/item/card)) // CHOMPEdit - Removal of obj/item/weapon
 				paid = pay_with_card(C, usr)
 			/*else if(usr.can_advanced_admin_interact())
 				to_chat(usr, "<span class='notice'>Vending object due to admin interaction.</span>")
@@ -296,7 +296,7 @@
 	currently_vending = null
 	SStgui.update_uis(src)
 
-/mob/living/simple_mob/humanoid/starhunter/trader/proc/stock(obj/item/weapon/W, var/datum/stored_item/vending_product/R, var/mob/user)
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/stock(obj/item/W, var/datum/stored_item/vending_product/R, var/mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!user.unEquip(W))
 		return
 
@@ -307,7 +307,7 @@
 
 	SStgui.update_uis(src)
 
-/mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_ewallet(var/obj/item/weapon/spacecash/ewallet/wallet)
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_ewallet(var/obj/item/spacecash/ewallet/wallet) // CHOMPEdit - Removal of obj/item/weapon
 	visible_message("<span class='info'>\The [usr] swipes \the [wallet] through \the [src].</span>")
 	playsound(src, 'sound/machines/id_swipe.ogg', 50, 1)
 	if(currently_vending.price > wallet.worth)
@@ -324,7 +324,7 @@
  * Takes payment for whatever is the currently_vending item. Returns 1 if
  * successful, 0 if failed
  */
-/mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_card(obj/item/weapon/card/id/I, mob/M)
+/mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_card(obj/item/card/id/I, mob/M) // CHOMPEdit - Removal of obj/item/weapon
 	visible_message("<span class='info'>[M] swipes a card through [src].</span>")
 	playsound(src, 'sound/machines/id_swipe.ogg', 50, 1)
 
@@ -377,7 +377,7 @@
 
 /mob/living/simple_mob/humanoid/starhunter/trader/proc/do_logging(datum/stored_item/vending_product/R, mob/user, var/vending = 0)
 	if(user.GetIdCard())
-		var/obj/item/weapon/card/id/tempid = user.GetIdCard()
+		var/obj/item/card/id/tempid = user.GetIdCard() // CHOMPEdit - Removal of obj/item/weapon
 		var/list/list_item = list()
 		if(vending)
 			list_item += "vend"

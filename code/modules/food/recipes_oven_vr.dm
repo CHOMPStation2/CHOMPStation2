@@ -2,6 +2,6 @@
 	appliance = OVEN
 	reagents = list("sodiumchloride" = 1)
 	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/scorpion
+		/obj/item/reagent_containers/food/snacks/scorpion // CHOMPEdit - Removal of obj/item/weapon
 	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/scorpion_cooked
+	result = /obj/item/reagent_containers/food/snacks/scorpion_cooked // CHOMPEdit - Removal of obj/item/weapon

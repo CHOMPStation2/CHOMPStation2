@@ -1,17 +1,17 @@
-/obj/item/weapon/storage/box/casino
+/obj/item/storage/box/casino // CHOMPEdit - Removal of obj/item/weapon
 	name = "prize box"
 	desc = "It's a lovely golden tinted cardboard box, maybe there's something valuable inside?"
 	icon = 'icons/obj/casino.dmi'
 	icon_state = "casino_box"
 
-/obj/item/weapon/storage/box/casino/costume_marine
+/obj/item/storage/box/casino/costume_marine // CHOMPEdit - Removal of obj/item/weapon
 	name = "ruin marine costume"
 	starts_with = list(
 	/obj/item/clothing/head/marine,
 	/obj/item/clothing/suit/marine
 	)
 
-/obj/item/weapon/storage/box/casino/costume_pirate
+/obj/item/storage/box/casino/costume_pirate // CHOMPEdit - Removal of obj/item/weapon
 	name = "pirate costume"
 	starts_with = list(
 	/obj/item/clothing/under/pirate,
@@ -20,29 +20,29 @@
 	/obj/item/clothing/glasses/eyepatch
 	)
 
-/obj/item/weapon/storage/box/casino/costume_commie
+/obj/item/storage/box/casino/costume_commie // CHOMPEdit - Removal of obj/item/weapon
 	name = "communist costume"
 	starts_with = list(
 	/obj/item/clothing/under/soviet,
 	/obj/item/clothing/head/ushanka
 	)
 
-/obj/item/weapon/storage/box/casino/costume_wizard
+/obj/item/storage/box/casino/costume_wizard // CHOMPEdit - Removal of obj/item/weapon
 	name = "wizard costume"
 	starts_with = list(
 	/obj/item/clothing/suit/wizrobe/fake,
 	/obj/item/clothing/head/wizard/fake,
-	/obj/item/weapon/staff
+	/obj/item/staff // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/box/casino/costume_plaguedoctor
+/obj/item/storage/box/casino/costume_plaguedoctor // CHOMPEdit - Removal of obj/item/weapon
 	name = "plague doctor costume"
 	starts_with = list(
 	/obj/item/clothing/suit/bio_suit/plaguedoctorsuit,
 	/obj/item/clothing/head/plaguedoctorhat
 	)
 
-/obj/item/weapon/storage/box/casino/costume_cowboy
+/obj/item/storage/box/casino/costume_cowboy // CHOMPEdit - Removal of obj/item/weapon
 	name = "cowboy costume"
 	starts_with = list(
 	/obj/item/clothing/under/cowboy,
@@ -51,7 +51,7 @@
 	/obj/item/clothing/shoes/boots/cowboy/brown
 	)
 
-/obj/item/weapon/storage/box/roulette_balls_normal
+/obj/item/storage/box/roulette_balls_normal // CHOMPEdit - Removal of obj/item/weapon
 	name = "roulette ball box"
 	desc = "A box of spare roulette balls."
 	icon_state = "balls"
@@ -60,7 +60,7 @@
 		/obj/item/roulette_ball = 7,
 		/obj/item/roulette_ball/hollow = 2)
 
-/obj/item/weapon/storage/box/roulette_balls_fancy
+/obj/item/storage/box/roulette_balls_fancy // CHOMPEdit - Removal of obj/item/weapon
 	name = "fancy roulette ball box"
 	desc = "A box of extra-pretty roulette balls."
 	icon_state = "balls"
@@ -78,7 +78,7 @@
 		/obj/item/roulette_ball/planet,
 		/obj/item/roulette_ball/gold)
 
-/obj/item/weapon/storage/box/roulette_balls_cheat
+/obj/item/storage/box/roulette_balls_cheat // CHOMPEdit - Removal of obj/item/weapon
 	name = "special roulette ball box"
 	desc = "A box of 'special' roulette balls."
 	icon_state = "balls"

@@ -44,22 +44,22 @@
 	var/max_damage = 100		// Damage level at which the computer breaks apart.
 
 	// Important hardware (must be installed for computer to work)
-	var/obj/item/weapon/computer_hardware/processor_unit/processor_unit				// CPU. Without it the computer won't run. Better CPUs can run more programs at once.
-	var/obj/item/weapon/computer_hardware/network_card/network_card					// Network Card component of this computer. Allows connection to NTNet
-	var/obj/item/weapon/computer_hardware/hard_drive/hard_drive						// Hard Drive component of this computer. Stores programs and files.
+	var/obj/item/computer_hardware/processor_unit/processor_unit				// CPU. Without it the computer won't run. Better CPUs can run more programs at once. // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/computer_hardware/network_card/network_card					// Network Card component of this computer. Allows connection to NTNet // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/computer_hardware/hard_drive/hard_drive						// Hard Drive component of this computer. Stores programs and files. // CHOMPEdit - Removal of obj/item/weapon
 
 	// Optional hardware (improves functionality, but is not critical for computer to work in most cases)
-	var/obj/item/weapon/computer_hardware/battery_module/battery_module				// An internal power source for this computer. Can be recharged.
-	var/obj/item/weapon/computer_hardware/card_slot/card_slot						// ID Card slot component of this computer. Mostly for HoP modification console that needs ID slot for modification.
-	var/obj/item/weapon/computer_hardware/nano_printer/nano_printer					// Nano Printer component of this computer, for your everyday paperwork needs.
-	var/obj/item/weapon/computer_hardware/hard_drive/portable/portable_drive		// Portable data storage
-	var/obj/item/weapon/computer_hardware/ai_slot/ai_slot							// AI slot, an intellicard housing that allows modifications of AIs.
-	var/obj/item/weapon/computer_hardware/tesla_link/tesla_link						// Tesla Link, Allows remote charging from nearest APC.
+	var/obj/item/computer_hardware/battery_module/battery_module				// An internal power source for this computer. Can be recharged. // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/computer_hardware/card_slot/card_slot						// ID Card slot component of this computer. Mostly for HoP modification console that needs ID slot for modification. // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/computer_hardware/nano_printer/nano_printer					// Nano Printer component of this computer, for your everyday paperwork needs. // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/computer_hardware/hard_drive/portable/portable_drive		// Portable data storage // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/computer_hardware/ai_slot/ai_slot							// AI slot, an intellicard housing that allows modifications of AIs. // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/computer_hardware/tesla_link/tesla_link						// Tesla Link, Allows remote charging from nearest APC. // CHOMPEdit - Removal of obj/item/weapon
 
 	var/modifiable = TRUE	// can't be modified or damaged if false
 
 	var/stores_pen = FALSE
-	var/obj/item/weapon/pen/stored_pen
+	var/obj/item/pen/stored_pen // CHOMPEdit - Removal of obj/item/weapon
 
 	var/interact_sounds
 	var/interact_sound_volume = 40

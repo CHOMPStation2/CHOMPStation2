@@ -8,7 +8,7 @@
 
 /mob/proc/movement_delay(oldloc, direct)
 	. = 0
-	if(locate(/obj/item/weapon/grab) in src)
+	if(locate(/obj/item/grab) in src) // CHOMPEdit - Removal of obj/item/weapon
 		. += 5
 
 	// CHOMPAdd Start - When crawling, move slow.
@@ -349,11 +349,11 @@
 					my_mob.other_mobs = null
 
 	// Update all the grabs!
-	for (var/obj/item/weapon/grab/G in my_mob)
+	for (var/obj/item/grab/G in my_mob) // CHOMPEdit - Removal of obj/item/weapon
 		if (G.state == GRAB_NECK)
 			mob.set_dir(reverse_dir[direct])
 		G.adjust_position()
-	for (var/obj/item/weapon/grab/G in my_mob.grabbed_by)
+	for (var/obj/item/grab/G in my_mob.grabbed_by) // CHOMPEdit - Removal of obj/item/weapon
 		G.adjust_position()
 
 	// We're not in the middle of a move anymore

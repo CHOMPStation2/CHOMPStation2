@@ -8,19 +8,19 @@
 
 /obj/item/contraband/attack_self(mob/user)
 	var/contraband = pick(
-		/obj/item/weapon/reagent_containers/glass/beaker/vial/macrocillin,
-		/obj/item/weapon/reagent_containers/glass/beaker/vial/microcillin,
-		/obj/item/weapon/gun/energy/sizegun/not_advanced,
+		/obj/item/reagent_containers/glass/beaker/vial/macrocillin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/beaker/vial/microcillin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/sizegun/not_advanced, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/mask/muzzle,
-		/obj/item/device/pda/clown,
-		/obj/item/device/pda/mime,
-		/obj/item/weapon/storage/fancy/cigar/havana,
-		/obj/item/weapon/card/emag_broken,
-		/obj/item/device/sleevemate,
-		/obj/item/weapon/disk/nifsoft/compliance,
+		/obj/item/pda/clown, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pda/mime, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage/fancy/cigar/havana, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/card/emag_broken, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/sleevemate, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/disk/nifsoft/compliance, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/seeds/ambrosiadeusseed,
 		/obj/item/seeds/ambrosiavulgarisseed,
-		/obj/item/device/bodysnatcher)
+		/obj/item/bodysnatcher) // CHOMPEdit - Removal of obj/item/device
 
 	user.put_in_hands(new contraband(usr.loc))
 	to_chat(user, "You unwrap the package.")

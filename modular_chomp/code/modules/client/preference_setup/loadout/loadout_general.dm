@@ -10,17 +10,17 @@
 	display_name = "medication selection"
 	description = "Varying medications that might've been prescribed, gotten illicitly, or otherwise acquired."
 	cost = 2
-	path = /obj/item/weapon/storage/pill_bottle/citalopram
+	path = /obj/item/storage/pill_bottle/citalopram // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/gear/medication/New()
 	..()
 	var/list/medications = list(
-	"Pill Bottle (Citalopram)" = /obj/item/weapon/storage/pill_bottle/citalopram,
-	"Pill Bottle (Methylphenidate)" = /obj/item/weapon/storage/pill_bottle/methylphenidate,
-	"Pill Bottle (Paroxetine)" = /obj/item/weapon/storage/pill_bottle/paroxetine,
-	"Pill Bottle (Paracetamol)" = /obj/item/weapon/storage/pill_bottle/paracetamol,
-	"Pill Bottle (Adranol)" = /obj/item/weapon/storage/pill_bottle/adranol,
-	"Pill Bottle (Bliss)" = /obj/item/weapon/storage/pill_bottle/happy,
-	"Pill Bottle (Aphrodisiac)" = /obj/item/weapon/storage/pill_bottle/aphrodisiac
+	"Pill Bottle (Citalopram)" = /obj/item/storage/pill_bottle/citalopram, // CHOMPEdit - Removal of obj/item/weapon
+	"Pill Bottle (Methylphenidate)" = /obj/item/storage/pill_bottle/methylphenidate, // CHOMPEdit - Removal of obj/item/weapon
+	"Pill Bottle (Paroxetine)" = /obj/item/storage/pill_bottle/paroxetine, // CHOMPEdit - Removal of obj/item/weapon
+	"Pill Bottle (Paracetamol)" = /obj/item/storage/pill_bottle/paracetamol, // CHOMPEdit - Removal of obj/item/weapon
+	"Pill Bottle (Adranol)" = /obj/item/storage/pill_bottle/adranol, // CHOMPEdit - Removal of obj/item/weapon
+	"Pill Bottle (Bliss)" = /obj/item/storage/pill_bottle/happy, // CHOMPEdit - Removal of obj/item/weapon
+	"Pill Bottle (Aphrodisiac)" = /obj/item/storage/pill_bottle/aphrodisiac // CHOMPEdit - Removal of obj/item/weapon
 	)
 	gear_tweaks += new/datum/gear_tweak/path(medications)

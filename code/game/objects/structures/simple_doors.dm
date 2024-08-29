@@ -154,10 +154,10 @@
 	else
 		icon_state = material.door_icon_base
 
-/obj/structure/simple_door/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/simple_door/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	if(istype(W,/obj/item/weapon/simple_key))
-		var/obj/item/weapon/simple_key/key = W
+	if(istype(W,/obj/item/simple_key)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/simple_key/key = W // CHOMPEdit - Removal of obj/item/weapon
 		if(state)
 			to_chat(user,"<span class='notice'>\The [src] must be closed in order for you to lock it.</span>")
 		else if(key.key_id != src.lock_id)
@@ -167,13 +167,13 @@
 			locked = !locked
 			playsound(src, keysound,100, 1)
 		return
-	if(istype(W,/obj/item/weapon/pickaxe) && breakable)
-		var/obj/item/weapon/pickaxe/digTool = W
+	if(istype(W,/obj/item/pickaxe) && breakable) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/pickaxe/digTool = W // CHOMPEdit - Removal of obj/item/weapon
 		visible_message("<span class='danger'>[user] starts digging [src]!</span>")
 		if(do_after(user,digTool.digspeed*hardness) && src)
 			visible_message("<span class='danger'>[user] finished digging [src]!</span>")
 			Dismantle()
-	else if(istype(W,/obj/item/weapon) && breakable) //not sure, can't not just weapons get passed to this proc?
+	else if(istype(W,/obj/item) && breakable) //not sure, can't not just weapons get passed to this proc? // CHOMPEdit - Removal of obj/item/weapon
 		hardness -= W.force/10
 		visible_message("<span class='danger'>[user] hits [src] with [W]!</span>")
 		if(material == get_material_by_name("resin"))
@@ -184,7 +184,7 @@
 			playsound(src, 'sound/weapons/smash.ogg', 50, 1)
 		CheckHardness()
 	else if(W.has_tool_quality(TOOL_WELDER) && breakable)
-		var/obj/item/weapon/weldingtool/WT = W.get_welder()
+		var/obj/item/weldingtool/WT = W.get_welder() // CHOMPEdit - Removal of obj/item/weapon
 		if(material.ignition_point && WT.remove_fuel(0, user))
 			TemperatureAct(150)
 	else

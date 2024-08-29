@@ -32,7 +32,7 @@
 	return ..()
 
 // We're expecting 1 to be a target, 2 to be an old move loc, and 3 to be a new move loc.
-/datum/blob_type/reactive_spines/chunk_unique(obj/item/weapon/blobcore_chunk/B, var/list/extra_data = null)
+/datum/blob_type/reactive_spines/chunk_unique(obj/item/blobcore_chunk/B, var/list/extra_data = null) // CHOMPEdit - Removal of obj/item/weapon
 	if(!LAZYLEN(extra_data))
 		return
 
@@ -54,8 +54,8 @@
 
 	return
 
-/datum/blob_type/reactive_spines/chunk_setup(obj/item/weapon/blobcore_chunk/B)
-	B.RegisterSignal(SSmobs, COMSIG_OBSERVER_GLOBALMOVED, /obj/item/weapon/blobcore_chunk/proc/call_chunk_unique)
+/datum/blob_type/reactive_spines/chunk_setup(obj/item/blobcore_chunk/B) // CHOMPEdit - Removal of obj/item/weapon
+	B.RegisterSignal(SSmobs, COMSIG_OBSERVER_GLOBALMOVED, /obj/item/blobcore_chunk/proc/call_chunk_unique) // CHOMPEdit - Removal of obj/item/weapon
 	return
 
 //I'm putting this here so everybody knows that it's this shitty code that is why that comsig exists.

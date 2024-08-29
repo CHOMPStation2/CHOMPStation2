@@ -39,7 +39,7 @@
 	cold_damage_per_tick = 3
 
 	meat_amount = 7
-	holder_type = /obj/item/weapon/holder/armadillo
+	holder_type = /obj/item/holder/armadillo // CHOMPEdit - Removal of obj/item/weapon
 	ai_holder_type = /datum/ai_holder/simple_mob/armadillo
 
 	speak_emote = list("rumbles", "chirr?", "churr")

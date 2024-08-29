@@ -202,13 +202,13 @@
 				var/list/mob_contents = list() //Things which are actually drained as a result of the above not being null.
 				mob_contents |= L // The recursive check below does not add the object being checked to its list.
 				mob_contents |= recursive_content_check(L, mob_contents, recursion_limit = 3, client_check = 0, sight_check = 0, include_mobs = 1, include_objects = 1, ignore_show_messages = 1)
-				for(var/obj/item/weapon/holder/I in mob_contents)
-					var/obj/item/weapon/holder/H = I
+				for(var/obj/item/holder/I in mob_contents) // CHOMPEdit - Removal of obj/item/weapon
+					var/obj/item/holder/H = I // CHOMPEdit - Removal of obj/item/weapon
 					var/mob/living/MI = H.held_mob
 					MI.forceMove(get_turf(H))
 					if(!issilicon(MI)) //Don't drop borg modules...
 						for(var/obj/item/II in MI)
-							if(istype(II,/obj/item/weapon/implant) || istype(II,/obj/item/device/nif))
+							if(istype(II,/obj/item/implant) || istype(II,/obj/item/nif)) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 								continue
 							MI.drop_from_inventory(II, dest.loc)
 					var/obj/effect/landmark/finaldest = pick(awayabductors)
@@ -218,7 +218,7 @@
 					MI << 'sound/effects/bamf.ogg'
 					to_chat(MI,"<span class='warning'>You're starting to come to. You feel like you've been out for a few minutes, at least...</span>")
 				for(var/obj/item/I in L)
-					if(istype(I,/obj/item/weapon/implant) || istype(I,/obj/item/device/nif))
+					if(istype(I,/obj/item/implant) || istype(I,/obj/item/nif)) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 						continue
 					L.drop_from_inventory(I, dest.loc)
 			var/obj/effect/landmark/finaldest = pick(awayabductors)

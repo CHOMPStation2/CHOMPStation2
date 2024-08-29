@@ -1,4 +1,4 @@
-/obj/item/weapon/storage/belt
+/obj/item/storage/belt // CHOMPEdit - Removal of obj/item/weapon
 	name = "belt"
 	desc = "Can hold various things."
 	icon = 'icons/inventory/belt/item.dmi'
@@ -15,7 +15,7 @@
 
 	var/show_above_suit = 0
 
-/obj/item/weapon/storage/belt/verb/toggle_layer()
+/obj/item/storage/belt/verb/toggle_layer() // CHOMPEdit - Removal of obj/item/weapon
 	set name = "Switch Belt Layer"
 	set category = "Object"
 
@@ -26,7 +26,7 @@
 	update_icon()
 
 //Some belts have sprites to show icons
-/obj/item/weapon/storage/belt/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0,var/icon/clip_mask = null)
+/obj/item/storage/belt/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0,var/icon/clip_mask = null) // CHOMPEdit - Removal of obj/item/weapon
 	var/image/standing = ..()
 	if(!inhands && contents.len)
 		for(var/obj/item/i in contents)
@@ -38,350 +38,350 @@
 			standing.add_overlay(add_icon)
 	return standing
 
-/obj/item/weapon/storage/update_icon()
+/obj/item/storage/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	if (ismob(src.loc))
 		var/mob/M = src.loc
 		M.update_inv_belt()
 
-/obj/item/weapon/storage/belt/utility
+/obj/item/storage/belt/utility // CHOMPEdit - Removal of obj/item/weapon
 	name = "tool-belt" //Carn: utility belt is nicer, but it bamboozles the text parsing.
 	desc = "Can hold various tools."
 	icon_state = "utility"
 	can_hold = list(
-		///obj/item/weapon/combitool,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/tool/transforming/powerdrill,
-		/obj/item/weapon/tool/transforming/jawsoflife,
-		/obj/item/device/multitool,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
+		///obj/item/combitool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/powerdrill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/jawsoflife, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil,
-		/obj/item/device/t_scanner,
-		/obj/item/device/analyzer,
+		/obj/item/t_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/analyzer, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses,
 		/obj/item/clothing/gloves,
-		/obj/item/device/pda,
-		/obj/item/device/megaphone,
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/taperoll,
-		/obj/item/device/radio/headset,
-		/obj/item/device/robotanalyzer,
-		/obj/item/weapon/material/minihoe,
-		/obj/item/weapon/material/knife/machete/hatchet,
-		/obj/item/device/analyzer/plant_analyzer,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/tape_roll,
-		/obj/item/device/integrated_electronics/wirer,
-		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
-		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
-		/obj/item/weapon/rcd, //CHOMPAdd
-		/obj/item/device/integrated_electronics/debugger, //Vorestation edit adding debugger to toolbelt can hold list
-		/obj/item/weapon/shovel/spade, //VOREStation edit. If it can hold minihoes and hatchers, why not the gardening spade?
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/robotanalyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/material/minihoe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/knife/machete/hatchet, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/analyzer/plant_analyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/extinguisher/mini, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tape_roll, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/integrated_electronics/wirer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pipe_dispenser, //CHOMPAdd // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/holosign_creator/combifan, //CHOMPAdd // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rcd, //CHOMPAdd // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/integrated_electronics/debugger, //Vorestation edit adding debugger to toolbelt can hold list // CHOMPEdit - Removal of obj/item/device
+		/obj/item/shovel/spade, //VOREStation edit. If it can hold minihoes and hatchers, why not the gardening spade? // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/nanopaste, //VOREStation edit. Think of it as a tube of superglue. Belts hold that all the time.
-		/obj/item/device/geiger //VOREStation edit. Engineers work with rad-slinging stuff sometimes too
+		/obj/item/geiger //VOREStation edit. Engineers work with rad-slinging stuff sometimes too // CHOMPEdit - Removal of obj/item/device
 		)
 
-/obj/item/weapon/storage/belt/utility/full
+/obj/item/storage/belt/utility/full // CHOMPEdit - Removal of obj/item/weapon
 	starts_with = list(
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/wirecutters,
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil/random_belt
 	)
 
-/obj/item/weapon/storage/belt/utility/full/multitool
+/obj/item/storage/belt/utility/full/multitool // CHOMPEdit - Removal of obj/item/weapon
 	starts_with = list(
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/wirecutters,
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil/random_belt,
-		/obj/item/device/multitool
+		/obj/item/multitool // CHOMPEdit - Removal of obj/item/device
 	)
 
-/obj/item/weapon/storage/belt/utility/atmostech
+/obj/item/storage/belt/utility/atmostech // CHOMPEdit - Removal of obj/item/weapon
 	starts_with = list(
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/device/analyzer, //Vorestation edit. Gives atmos techs a few extra tools fitting their job from the start
-		/obj/item/weapon/extinguisher/mini //Vorestation edit. As above, the mini's much more handy to have rather than lugging a big one around
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/analyzer, //Vorestation edit. Gives atmos techs a few extra tools fitting their job from the start // CHOMPEdit - Removal of obj/item/device
+		/obj/item/extinguisher/mini //Vorestation edit. As above, the mini's much more handy to have rather than lugging a big one around // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/belt/utility/chief
+/obj/item/storage/belt/utility/chief // CHOMPEdit - Removal of obj/item/weapon
 	name = "chief engineer's toolbelt"
 	desc = "Holds tools, looks snazzy."
 	icon_state = "utilitybelt_ce"
 	item_state = "utility_ce"
 	storage_slots = 8	//If they get better everything-else, why not the belt too?
 	can_hold = list(
-		/obj/item/weapon/rcd,	//They've given one from the get-go, it's hard to imagine they wouldn't be given something that can store it neater than a bag
-		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
-		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/tool/transforming/powerdrill,
-		/obj/item/weapon/tool/transforming/jawsoflife,
-		/obj/item/device/multitool,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
+		/obj/item/rcd,	//They've given one from the get-go, it's hard to imagine they wouldn't be given something that can store it neater than a bag // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pipe_dispenser, //CHOMPAdd // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/holosign_creator/combifan, //CHOMPAdd // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/powerdrill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/jawsoflife, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil,
-		/obj/item/device/t_scanner,
-		/obj/item/device/analyzer,
+		/obj/item/t_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/analyzer, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses,
 		/obj/item/clothing/gloves,
-		/obj/item/device/pda,
-		/obj/item/device/megaphone,
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/taperoll,
-		/obj/item/device/radio/headset,
-		/obj/item/device/robotanalyzer,
-		/obj/item/weapon/material/minihoe,
-		/obj/item/weapon/material/knife/machete/hatchet,
-		/obj/item/device/analyzer/plant_analyzer,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/tape_roll,
-		/obj/item/device/integrated_electronics/wirer,
-		/obj/item/device/integrated_electronics/debugger,
-		/obj/item/weapon/shovel/spade,
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/robotanalyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/material/minihoe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/knife/machete/hatchet, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/analyzer/plant_analyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/extinguisher/mini, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tape_roll, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/integrated_electronics/wirer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/integrated_electronics/debugger, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/shovel/spade, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/nanopaste,
-		/obj/item/device/geiger,
+		/obj/item/geiger, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/areaeditor/blueprints,	//It's a bunch of paper that could prolly be rolled up & slipped into the belt, not to mention CE only, see the RCD's thing above
 		/obj/item/wire_reader	//As above
 		)
 
-/obj/item/weapon/storage/belt/utility/chief/full
+/obj/item/storage/belt/utility/chief/full // CHOMPEdit - Removal of obj/item/weapon
 	starts_with = list(
-		/obj/item/weapon/tool/transforming/powerdrill,
-		/obj/item/weapon/tool/transforming/jawsoflife,
-		/obj/item/weapon/weldingtool/experimental,
-		/obj/item/device/multitool,
+		/obj/item/tool/transforming/powerdrill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/jawsoflife, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool/experimental, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/stack/cable_coil/random_belt,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/device/analyzer
+		/obj/item/extinguisher/mini, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/analyzer // CHOMPEdit - Removal of obj/item/device
 	)
 
-/obj/item/weapon/storage/belt/utility/holding
+/obj/item/storage/belt/utility/holding // CHOMPEdit - Removal of obj/item/weapon
 	name = "tool-belt of holding"
 	desc = "A belt that uses localized bluespace pockets to hold more items than expected!"
 	icon_state = "utility_holding"
 	storage_slots = 14 //twice the amount as a normal belt
 	max_storage_space = ITEMSIZE_COST_NORMAL * 14
 	can_hold = list(
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/tool/transforming/powerdrill,
-		/obj/item/weapon/tool/transforming/jawsoflife,
-		/obj/item/device/multitool,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/powerdrill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/jawsoflife, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil,
-		/obj/item/device/t_scanner,
-		/obj/item/device/analyzer,
+		/obj/item/t_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/analyzer, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses,
 		/obj/item/clothing/gloves,
-		/obj/item/device/pda,
-		/obj/item/device/megaphone,
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/taperoll,
-		/obj/item/device/radio/headset,
-		/obj/item/device/robotanalyzer,
-		/obj/item/weapon/material/minihoe,
-		/obj/item/weapon/material/knife/machete/hatchet,
-		/obj/item/device/analyzer/plant_analyzer,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/tape_roll,
-		/obj/item/device/integrated_electronics/wirer,
-		/obj/item/device/integrated_electronics/debugger,
-		/obj/item/weapon/shovel/spade,
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/robotanalyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/material/minihoe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/knife/machete/hatchet, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/analyzer/plant_analyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/extinguisher/mini, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tape_roll, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/integrated_electronics/wirer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/integrated_electronics/debugger, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/shovel/spade, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/nanopaste,
-		/obj/item/weapon/cell, //this is a bigger belt, might as well make it hold bigger cells too
-		/obj/item/weapon/pipe_dispenser, //bigger belt for bigger tools
-		/obj/item/weapon/rcd, //see above
-		/obj/item/device/quantum_pad_booster,
-		/obj/item/weapon/inducer,
+		/obj/item/cell, //this is a bigger belt, might as well make it hold bigger cells too // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pipe_dispenser, //bigger belt for bigger tools // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/rcd, //see above // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/quantum_pad_booster, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/inducer, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/material/steel,
 		/obj/item/stack/material/glass,
-		/obj/item/device/lightreplacer,
-		/obj/item/weapon/pickaxe/plasmacutter
+		/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pickaxe/plasmacutter // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 
-/obj/item/weapon/storage/belt/medical
+/obj/item/storage/belt/medical // CHOMPEdit - Removal of obj/item/weapon
 	name = "medical belt"
 	desc = "Can hold various medical equipment."
 	icon_state = "medical"
 	can_hold = list(
-		/obj/item/device/healthanalyzer,
-		/obj/item/weapon/dnainjector,
-		/obj/item/weapon/reagent_containers/dropper,
-		/obj/item/weapon/reagent_containers/glass/beaker,
-		/obj/item/weapon/reagent_containers/glass/bottle,
-		/obj/item/weapon/reagent_containers/pill,
-		/obj/item/weapon/reagent_containers/syringe,
-		/obj/item/weapon/storage/quickdraw/syringe_case, //VOREStation Addition - Adds syringe cases,
-		/obj/item/weapon/flame/lighter/zippo,
-		/obj/item/weapon/storage/fancy/cigarettes,
-		/obj/item/weapon/storage/pill_bottle,
+		/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/dnainjector, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/dropper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/beaker, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/bottle, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/pill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/syringe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/quickdraw/syringe_case, //VOREStation Addition - Adds syringe cases, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flame/lighter/zippo, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/fancy/cigarettes, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/pill_bottle, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/medical,
-		/obj/item/device/radio/headset,
-		/obj/item/device/pda,
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/taperoll,
-		/obj/item/device/megaphone,
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/mask/surgical,
 		/obj/item/clothing/head/surgery,
 		/obj/item/clothing/gloves,
-		/obj/item/weapon/reagent_containers/hypospray,
+		/obj/item/reagent_containers/hypospray, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/glasses,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/storage/quickdraw/syringe_case,
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher/mini, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/quickdraw/syringe_case, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/ammo_casing/macrobattery // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
 		)
 
-/obj/item/weapon/storage/belt/medical/emt
+/obj/item/storage/belt/medical/emt // CHOMPEdit - Removal of obj/item/weapon
 	name = "EMT utility belt"
 	desc = "A sturdy black webbing belt with attached pouches."
 	icon_state = "ems"
 
-/obj/item/weapon/storage/belt/medical/holding
+/obj/item/storage/belt/medical/holding // CHOMPEdit - Removal of obj/item/weapon
 	name = "medical belt of holding"
 	desc = "A belt that uses localized bluespace pockets to hold more items than expected!"
 	icon_state = "med_holding"
 	storage_slots = 14 //twice the amount as a normal belt
 	max_storage_space = ITEMSIZE_COST_NORMAL * 14
 
-/obj/item/weapon/storage/belt/security
+/obj/item/storage/belt/security // CHOMPEdit - Removal of obj/item/weapon
 	name = "security belt"
 	desc = "Can hold security gear like handcuffs and flashes."
 	icon_state = "security"
 	max_w_class = ITEMSIZE_NORMAL
 	can_hold = list(
-		/obj/item/weapon/grenade,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/handcuffs,
-		/obj/item/device/flash,
+		/obj/item/grenade, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/handcuffs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses,
 		/obj/item/ammo_casing/a12g,
 		/obj/item/ammo_magazine,
-		/obj/item/weapon/cell/device,
-		/obj/item/weapon/reagent_containers/food/snacks/donut/,
-		/obj/item/weapon/melee/baton,
-		/obj/item/weapon/gun/energy/taser,
-		/obj/item/weapon/gun/energy/stunrevolver,
-		/obj/item/weapon/gun/energy/stunrevolver/vintage,
-		/obj/item/weapon/gun/magnetic/railgun/heater/pistol,
-		/obj/item/weapon/gun/energy/gun,
-		/obj/item/weapon/flame/lighter,
-		/obj/item/device/flashlight,
-		/obj/item/device/taperecorder,
-		/obj/item/device/tape,
-		/obj/item/device/pda,
-		/obj/item/device/radio/headset,
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donut/, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/taser, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/stunrevolver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/stunrevolver/vintage, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/magnetic/railgun/heater/pistol, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flame/lighter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/taperecorder, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tape, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/gloves,
-		/obj/item/device/hailer,
-		/obj/item/device/megaphone,
-		/obj/item/weapon/melee,
+		/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/melee, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/badge,
-		/obj/item/weapon/gun/projectile/sec,
-		/obj/item/weapon/gun/projectile/p92x,
+		/obj/item/gun/projectile/sec, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/projectile/p92x, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/taperoll,
-		/obj/item/weapon/gun/projectile/colt/detective,
-		/obj/item/device/holowarrant,
-		/obj/item/device/ticket_printer	//VOREStation Edit
+		/obj/item/gun/projectile/colt/detective, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/holowarrant, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/ticket_printer	//VOREStation Edit // CHOMPEdit - Removal of obj/item/device
 		)
 
-/obj/item/weapon/storage/belt/detective
+/obj/item/storage/belt/detective // CHOMPEdit - Removal of obj/item/weapon
 	name = "forensic utility belt"
 	desc = "A belt for holding forensics equipment."
 	icon_state = "security"
 	storage_slots = 7
 	max_w_class = ITEMSIZE_NORMAL
 	can_hold = list(
-		/obj/item/device/taperecorder,
-		/obj/item/device/tape,
+		/obj/item/taperecorder, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tape, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
-		/obj/item/weapon/reagent_containers/spray/luminol,
-		/obj/item/weapon/sample,
-		/obj/item/weapon/forensics/sample_kit/powder,
-		/obj/item/weapon/forensics/swab,
-		/obj/item/device/uv_light,
-		/obj/item/weapon/forensics/sample_kit,
-		/obj/item/weapon/photo,
-		/obj/item/device/camera_film,
-		/obj/item/device/camera,
-		/obj/item/weapon/autopsy_scanner,
-		/obj/item/device/mass_spectrometer,
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/spray/luminol, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/sample, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/forensics/sample_kit/powder, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/forensics/swab, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/uv_light, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/forensics/sample_kit, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/photo, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/camera_film, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/autopsy_scanner, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/mass_spectrometer, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/accessory/badge,
-		/obj/item/device/reagent_scanner,
-		/obj/item/weapon/reagent_containers/dropper,
-		/obj/item/weapon/reagent_containers/syringe,
-		/obj/item/device/pda,
-		/obj/item/device/hailer,
-		/obj/item/device/megaphone,
-		/obj/item/device/radio/headset,
+		/obj/item/reagent_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/reagent_containers/dropper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/syringe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/gloves,
 		/obj/item/taperoll,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/handcuffs,
-		/obj/item/device/flash,
-		/obj/item/weapon/flame/lighter,
-		/obj/item/weapon/reagent_containers/food/snacks/donut/,
+		/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/handcuffs, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flame/lighter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donut/, // CHOMPEdit - Removal of obj/item/weapon
 		///obj/item/ammo_magazine,	//Detectives don't get projectile weapons as standard here
-		///obj/item/weapon/gun/projectile/colt/detective,	//Detectives don't get projectile weapons as standard here
-		/obj/item/weapon/gun/energy/stunrevolver/detective,	//In keeping with the same vein as above, they can store their special one
-		/obj/item/device/holowarrant,
-		/obj/item/weapon/reagent_containers/food/drinks/flask,
-		/obj/item/device/ticket_printer	//VOREStation Edit
+		///obj/item/gun/projectile/colt/detective,	//Detectives don't get projectile weapons as standard here // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun/energy/stunrevolver/detective,	//In keeping with the same vein as above, they can store their special one // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/holowarrant, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/reagent_containers/food/drinks/flask, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/ticket_printer	//VOREStation Edit // CHOMPEdit - Removal of obj/item/device
 		)
 
-/obj/item/weapon/storage/belt/soulstone
+/obj/item/storage/belt/soulstone // CHOMPEdit - Removal of obj/item/weapon
 	name = "soul stone belt"
 	desc = "Designed for ease of access to the shards during a fight, as to not let a single enemy spirit slip away"
 	icon_state = "soulstone"
 	storage_slots = 6
 	can_hold = list(
-		/obj/item/device/soulstone
+		/obj/item/soulstone // CHOMPEdit - Removal of obj/item/device
 		)
 
-/obj/item/weapon/storage/belt/soulstone/full
-	starts_with = list(/obj/item/device/soulstone = 6)
+/obj/item/storage/belt/soulstone/full // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/soulstone = 6) // CHOMPEdit - Removal of obj/item/device
 
-/obj/item/weapon/storage/belt/utility/alien
+/obj/item/storage/belt/utility/alien // CHOMPEdit - Removal of obj/item/weapon
 	name = "alien belt"
 	desc = "A belt(?) that can hold things."
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "belt"
 	item_state = "security"
 
-/obj/item/weapon/storage/belt/utility/alien/full
+/obj/item/storage/belt/utility/alien/full // CHOMPEdit - Removal of obj/item/weapon
 	starts_with = list(
-		/obj/item/weapon/tool/screwdriver/alien,
-		/obj/item/weapon/tool/wrench/alien,
-		/obj/item/weapon/weldingtool/alien,
-		/obj/item/weapon/tool/crowbar/alien,
-		/obj/item/weapon/tool/wirecutters/alien,
-		/obj/item/device/multitool/alien,
+		/obj/item/tool/screwdriver/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool/alien, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/stack/cable_coil/alien
 	)
 
-/obj/item/weapon/storage/belt/medical/alien
+/obj/item/storage/belt/medical/alien // CHOMPEdit - Removal of obj/item/weapon
 	name = "alien belt"
 	desc = "A belt(?) that can hold things."
 	icon = 'icons/obj/abductor.dmi'
@@ -389,46 +389,46 @@
 	item_state = "security"
 	storage_slots = 8
 	can_hold = list(
-		/obj/item/device/healthanalyzer,
-		/obj/item/weapon/dnainjector,
-		/obj/item/weapon/reagent_containers/dropper,
-		/obj/item/weapon/reagent_containers/glass/beaker,
-		/obj/item/weapon/reagent_containers/glass/bottle,
-		/obj/item/weapon/reagent_containers/pill,
-		/obj/item/weapon/reagent_containers/syringe,
-		/obj/item/weapon/flame/lighter/zippo,
-		/obj/item/weapon/storage/fancy/cigarettes,
-		/obj/item/weapon/storage/pill_bottle,
+		/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/dnainjector, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/dropper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/beaker, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/bottle, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/pill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/syringe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flame/lighter/zippo, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/fancy/cigarettes, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/pill_bottle, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/medical,
-		/obj/item/device/radio/headset,
-		/obj/item/device/pda,
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/taperoll,
-		/obj/item/device/megaphone,
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/mask/surgical,
 		/obj/item/clothing/head/surgery,
 		/obj/item/clothing/gloves,
-		/obj/item/weapon/reagent_containers/hypospray,
+		/obj/item/reagent_containers/hypospray, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/glasses,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/surgical
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher/mini, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical // CHOMPEdit - Removal of obj/item/weapon
 		)
 
-/obj/item/weapon/storage/belt/medical/alien
+/obj/item/storage/belt/medical/alien // CHOMPEdit - Removal of obj/item/weapon
 	starts_with = list(
-		/obj/item/weapon/surgical/scalpel/alien,
-		/obj/item/weapon/surgical/hemostat/alien,
-		/obj/item/weapon/surgical/retractor/alien,
-		/obj/item/weapon/surgical/circular_saw/alien,
-		/obj/item/weapon/surgical/FixOVein/alien,
-		/obj/item/weapon/surgical/bone_clamp/alien,
-		/obj/item/weapon/surgical/cautery/alien,
-		/obj/item/weapon/surgical/surgicaldrill/alien
+		/obj/item/surgical/scalpel/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/hemostat/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/retractor/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/circular_saw/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/FixOVein/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/bone_clamp/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/cautery/alien, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/surgical/surgicaldrill/alien // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/belt/champion
+/obj/item/storage/belt/champion // CHOMPEdit - Removal of obj/item/weapon
 	name = "championship belt"
 	desc = "Proves to the world that you are the strongest!"
 	icon_state = "champion"
@@ -437,7 +437,7 @@
 		"/obj/item/clothing/mask/luchador"
 		)
 
-/obj/item/weapon/storage/belt/security/tactical
+/obj/item/storage/belt/security/tactical // CHOMPEdit - Removal of obj/item/weapon
 	name = "combat belt"
 	desc = "Can hold security gear like handcuffs and flashes, with more pouches for more storage."
 	icon_state = "swat"
@@ -445,7 +445,7 @@
 	max_w_class = ITEMSIZE_NORMAL
 	max_storage_space = ITEMSIZE_COST_NORMAL * 7
 
-/obj/item/weapon/storage/belt/bandolier
+/obj/item/storage/belt/bandolier // CHOMPEdit - Removal of obj/item/weapon
 	name = "shotgun bandolier"
 	desc = "Designed to hold shotgun shells. Can't really hold more than that."
 	icon_state = "bandolier1"
@@ -463,12 +463,12 @@
 		/obj/item/ammo_casing/a12g/flechette
 		)
 
-/obj/item/weapon/storage/belt/security/tactical/bandolier
+/obj/item/storage/belt/security/tactical/bandolier // CHOMPEdit - Removal of obj/item/weapon
 	name = "combat bandolier"
 	desc = "Can hold security gear like handcuffs and flashes, with more pouches for more storage."
 	icon_state = "bandolier2"
 
-/obj/item/weapon/storage/belt/janitor
+/obj/item/storage/belt/janitor // CHOMPEdit - Removal of obj/item/weapon
 	name = "janitorial belt"
 	desc = "A belt used to hold most janitorial supplies."
 	icon_state = "janitor"
@@ -476,61 +476,61 @@
 	max_w_class = ITEMSIZE_NORMAL
 	can_hold = list(
 		/obj/item/clothing/glasses,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
-		/obj/item/weapon/grenade,
-		/obj/item/device/pda,
-		/obj/item/device/radio/headset,
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/grenade, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/gloves,
 		/obj/item/clothing/mask/surgical, //sterile mask,
-		/obj/item/device/assembly/mousetrap,
-		/obj/item/weapon/light/bulb,
-		/obj/item/weapon/light/tube,
-		/obj/item/weapon/flame/lighter,
-		/obj/item/device/megaphone,
+		/obj/item/assembly/mousetrap, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/light/bulb, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/light/tube, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flame/lighter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/taperoll,
-		/obj/item/weapon/reagent_containers/spray,
-		/obj/item/weapon/soap,
-		/obj/item/weapon/holosign_creator, //CHOMPAdd
-		/obj/item/device/lightreplacer,
+		/obj/item/reagent_containers/spray, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/soap, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/holosign_creator, //CHOMPAdd // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses/hud/janitor
 		)
 
-/obj/item/weapon/storage/belt/archaeology
+/obj/item/storage/belt/archaeology // CHOMPEdit - Removal of obj/item/weapon
 	name = "excavation gear-belt"
 	desc = "Can hold various excavation gear."
 	icon_state = "gear"
 	can_hold = list(
-		/obj/item/weapon/storage/box/samplebags,
-		/obj/item/device/core_sampler,
-		/obj/item/device/beacon_locator,
-		/obj/item/device/radio/beacon,
-		/obj/item/device/gps,
-		/obj/item/device/measuring_tape,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
-		/obj/item/weapon/pickaxe,
-		/obj/item/device/depth_scanner,
-		/obj/item/device/camera,
-		/obj/item/weapon/paper,
-		/obj/item/weapon/photo,
-		/obj/item/weapon/folder,
-		/obj/item/weapon/pen,
-		/obj/item/weapon/folder,
-		/obj/item/weapon/clipboard,
-		/obj/item/weapon/anodevice,
+		/obj/item/storage/box/samplebags, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/core_sampler, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/beacon_locator, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/measuring_tape, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cell/device, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/depth_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/camera, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/paper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/photo, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/folder, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pen, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/folder, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/anodevice, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/glasses,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/tool/transforming/powerdrill,
-		/obj/item/weapon/storage/excavation,
-		/obj/item/weapon/anobattery,
-		/obj/item/device/ano_scanner,
-		/obj/item/weapon/pickaxe/hand,
-		/obj/item/device/xenoarch_multi_tool,
-		/obj/item/weapon/pickaxe/excavationdrill
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/powerdrill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/excavation, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/anobattery, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/ano_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pickaxe/hand, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/xenoarch_multi_tool, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pickaxe/excavationdrill // CHOMPEdit - Removal of obj/item/weapon
 		)
 
-/obj/item/weapon/storage/belt/fannypack
+/obj/item/storage/belt/fannypack // CHOMPEdit - Removal of obj/item/weapon
 	name = "leather fannypack"
 	desc = "A dorky fannypack for keeping small items in."
 	icon_state = "fannypack_leather"
@@ -539,58 +539,58 @@
 	storage_slots = null
 	max_storage_space = ITEMSIZE_COST_NORMAL * 2
 
-/obj/item/weapon/storage/belt/fannypack/black
+/obj/item/storage/belt/fannypack/black // CHOMPEdit - Removal of obj/item/weapon
  	name = "black fannypack"
  	icon_state = "fannypack_black"
  	item_state = "fannypack_black"
 
-/obj/item/weapon/storage/belt/fannypack/blue
+/obj/item/storage/belt/fannypack/blue // CHOMPEdit - Removal of obj/item/weapon
  	name = "blue fannypack"
  	icon_state = "fannypack_blue"
  	item_state = "fannypack_blue"
 
-/obj/item/weapon/storage/belt/fannypack/cyan
+/obj/item/storage/belt/fannypack/cyan // CHOMPEdit - Removal of obj/item/weapon
  	name = "cyan fannypack"
  	icon_state = "fannypack_cyan"
  	item_state = "fannypack_cyan"
 
-/obj/item/weapon/storage/belt/fannypack/green
+/obj/item/storage/belt/fannypack/green // CHOMPEdit - Removal of obj/item/weapon
  	name = "green fannypack"
  	icon_state = "fannypack_green"
  	item_state = "fannypack_green"
 
-/obj/item/weapon/storage/belt/fannypack/orange
+/obj/item/storage/belt/fannypack/orange // CHOMPEdit - Removal of obj/item/weapon
  	name = "orange fannypack"
  	icon_state = "fannypack_orange"
  	item_state = "fannypack_orange"
 
-/obj/item/weapon/storage/belt/fannypack/purple
+/obj/item/storage/belt/fannypack/purple // CHOMPEdit - Removal of obj/item/weapon
  	name = "purple fannypack"
  	icon_state = "fannypack_purple"
  	item_state = "fannypack_purple"
 
-/obj/item/weapon/storage/belt/fannypack/red
+/obj/item/storage/belt/fannypack/red // CHOMPEdit - Removal of obj/item/weapon
  	name = "red fannypack"
  	icon_state = "fannypack_red"
  	item_state = "fannypack_red"
 
-/obj/item/weapon/storage/belt/fannypack/white
+/obj/item/storage/belt/fannypack/white // CHOMPEdit - Removal of obj/item/weapon
  	name = "white fannypack"
  	icon_state = "fannypack_white"
  	item_state = "fannypack_white"
 
-/obj/item/weapon/storage/belt/fannypack/yellow
+/obj/item/storage/belt/fannypack/yellow // CHOMPEdit - Removal of obj/item/weapon
  	name = "yellow fannypack"
  	icon_state = "fannypack_yellow"
  	item_state = "fannypack_yellow"
 
-/obj/item/weapon/storage/belt/ranger
+/obj/item/storage/belt/ranger // CHOMPEdit - Removal of obj/item/weapon
 	name = "ranger belt"
 	desc = "The fancy utility-belt holding the tools, cuffs and gadgets of the Go Go ERT-Rangers. The belt buckle is not real phoron, but it is still surprisingly comfortable to wear."
 	icon = 'icons/obj/clothing/ranger.dmi'
 	icon_state = "ranger_belt"
 
-/obj/item/weapon/storage/belt/dbandolier
+/obj/item/storage/belt/dbandolier // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Donk-Soft bandolier"
 	desc = "A Donk-Soft bandolier! Carry your spare darts anywhere! Ages 8 and up."
 	icon_state = "dbandolier"

@@ -37,47 +37,47 @@ SUBSYSTEM_DEF(circuit)
 		var/list/category_list = circuit_fabricator_recipe_list[category]
 		category_list += IC // Populating the fabricator categories
 
-	for(var/obj/item/device/electronic_assembly/A as anything in typesof(/obj/item/device/electronic_assembly))
+	for(var/obj/item/electronic_assembly/A as anything in typesof(/obj/item/electronic_assembly)) // CHOMPEdit - Removal of obj/item/device
 		var/path = A
 		all_assemblies[initial(A.name)] = path
 		cached_assemblies[path] = new path
 
 
 	circuit_fabricator_recipe_list["Assemblies"] = list(
-		/obj/item/device/electronic_assembly/default,
-		/obj/item/device/electronic_assembly/calc,
-		/obj/item/device/electronic_assembly/clam,
-		/obj/item/device/electronic_assembly/simple,
-		/obj/item/device/electronic_assembly/hook,
-		/obj/item/device/electronic_assembly/pda,
-		/obj/item/device/electronic_assembly/tiny/default,
-		/obj/item/device/electronic_assembly/tiny/cylinder,
-		/obj/item/device/electronic_assembly/tiny/scanner,
-		/obj/item/device/electronic_assembly/tiny/hook,
-		/obj/item/device/electronic_assembly/tiny/box,
-		/obj/item/device/electronic_assembly/medium/default,
-		/obj/item/device/electronic_assembly/medium/box,
-		/obj/item/device/electronic_assembly/medium/clam,
-		/obj/item/device/electronic_assembly/medium/medical,
-		/obj/item/device/electronic_assembly/medium/gun,
-		/obj/item/device/electronic_assembly/medium/radio,
-		/obj/item/device/electronic_assembly/large/default,
-		/obj/item/device/electronic_assembly/large/scope,
-		/obj/item/device/electronic_assembly/large/terminal,
-		/obj/item/device/electronic_assembly/large/arm,
-		/obj/item/device/electronic_assembly/large/tall,
-		/obj/item/device/electronic_assembly/large/industrial,
-		/obj/item/device/electronic_assembly/drone/default,
-		/obj/item/device/electronic_assembly/drone/arms,
-		/obj/item/device/electronic_assembly/drone/secbot,
-		/obj/item/device/electronic_assembly/drone/medbot,
-		/obj/item/device/electronic_assembly/drone/genbot,
-		/obj/item/device/electronic_assembly/drone/android,
-		/obj/item/device/electronic_assembly/wallmount/tiny,
-		/obj/item/device/electronic_assembly/wallmount/light,
-		/obj/item/device/electronic_assembly/wallmount,
-		/obj/item/device/electronic_assembly/wallmount/heavy,
-		/obj/item/weapon/implant/integrated_circuit,
+		/obj/item/electronic_assembly/default, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/calc, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/clam, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/simple, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/hook, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/pda, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/tiny/default, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/tiny/cylinder, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/tiny/scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/tiny/hook, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/tiny/box, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/medium/default, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/medium/box, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/medium/clam, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/medium/medical, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/medium/gun, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/medium/radio, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/large/default, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/large/scope, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/large/terminal, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/large/arm, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/large/tall, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/large/industrial, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/drone/default, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/drone/arms, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/drone/secbot, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/drone/medbot, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/drone/genbot, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/drone/android, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/wallmount/tiny, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/wallmount/light, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/wallmount, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/electronic_assembly/wallmount/heavy, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/implant/integrated_circuit, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/under/circuitry,
 		/obj/item/clothing/gloves/circuitry,
 		/obj/item/clothing/glasses/circuitry,
@@ -88,7 +88,7 @@ SUBSYSTEM_DEF(circuit)
 		)
 
 	circuit_fabricator_recipe_list["Tools"] = list(
-		/obj/item/device/integrated_electronics/wirer,
-		/obj/item/device/integrated_electronics/debugger,
-		/obj/item/device/integrated_electronics/detailer
+		/obj/item/integrated_electronics/wirer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/integrated_electronics/debugger, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/integrated_electronics/detailer // CHOMPEdit - Removal of obj/item/device
 		)

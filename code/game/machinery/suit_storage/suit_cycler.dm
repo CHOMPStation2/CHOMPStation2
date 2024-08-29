@@ -141,13 +141,13 @@ GLOBAL_LIST_EMPTY(suit_cycler_typecache)
 			return
 
 	//Hacking init.
-	if(istype(I, /obj/item/device/multitool) || I.has_tool_quality(TOOL_WIRECUTTER))
+	if(istype(I, /obj/item/multitool) || I.has_tool_quality(TOOL_WIRECUTTER)) // CHOMPEdit - Removal of obj/item/device
 		if(panel_open)
 			attack_hand(user)
 		return
 	//Other interface stuff.
-	if(istype(I, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/G = I
+	if(istype(I, /obj/item/grab)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/grab/G = I // CHOMPEdit - Removal of obj/item/weapon
 
 		if(!(ismob(G.affecting)))
 			return

@@ -1,4 +1,4 @@
-/obj/item/device/healthanalyzer/verb/toggle_guide()
+/obj/item/healthanalyzer/verb/toggle_guide() // CHOMPEdit - Removal of obj/item/device
 	set name = "Toggle Guidance"
 	set desc = "Toggles whether or not \the [src] will provide guidance and instruction in addition to scanning."
 	set category = "Object"
@@ -6,17 +6,17 @@
 	to_chat(usr, "<span class='notice'>You toggle \the [src]'s guidance system [guide ? "on" : "off"].</span>")
 
 
-/obj/item/device/healthanalyzer/guide
+/obj/item/healthanalyzer/guide // CHOMPEdit - Removal of obj/item/device
 	name = "Instructional health analyzer"
 	desc = "A hand-held body scanner able to distinguish vital signs of the subject. It shows extra information to medical personnel!"
 	guide = TRUE
 	icon_state = "health-g"
 
-/obj/item/device/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user)
+/obj/item/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user) // CHOMPEdit - Removal of obj/item/device
 
 /* CHOMPedit remove: Anyone can get this info. *
 
-	var/obj/item/weapon/card/id/ourid = user?.GetIdCard()
+	var/obj/item/card/id/ourid = user?.GetIdCard() // CHOMPEdit - Removal of obj/item/weapon
 	if(!ourid)
 		return
 	if(access_change_ids in ourid.access)

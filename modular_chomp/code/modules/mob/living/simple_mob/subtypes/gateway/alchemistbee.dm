@@ -33,11 +33,11 @@
 
 	loot_list = list(/obj/item/clothing/head/vrwizard = 60,
 			/obj/item/clothing/suit/vrwizard = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/frost = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/poison = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/nuclear = 100,
+			/obj/item/gun/magic/firestaff/vrwizard/fire = 60, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/magic/firestaff/vrwizard/frost = 60, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/magic/firestaff/vrwizard/poison = 60, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/magic/firestaff/vrwizard/lighting = 60, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/magic/firestaff/vrwizard/nuclear = 100, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/clothing/head/darkvrwizard = 100,
 			/obj/item/clothing/suit/darkvrwizard = 100
 			)

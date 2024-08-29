@@ -14,20 +14,20 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
 		/obj/item/clothing/suit/storage/toggle/labcoat/modern/cmo,
-		/obj/item/weapon/cartridge/cmo,
+		/obj/item/cartridge/cmo, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/gloves/sterile/latex,
 		/obj/item/clothing/shoes/brown,
-		/obj/item/device/radio/headset/heads/cmo,
+		/obj/item/radio/headset/heads/cmo, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical,
 		/obj/item/clothing/shoes/white)
 
 /obj/structure/closet/secure_closet/CMO_wardrobe/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/medic
+		starts_with += /obj/item/storage/backpack/medic // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/med
+		starts_with += /obj/item/storage/backpack/satchel/med // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/med
+		starts_with += /obj/item/storage/backpack/dufflebag/med // CHOMPEdit - Removal of obj/item/weapon
 	switch(pick("blue", "green", "purple", "black", "navyblue"))
 		if ("blue")
 			starts_with += /obj/item/clothing/under/rank/medical/scrubs

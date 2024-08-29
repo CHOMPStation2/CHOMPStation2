@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/food/drinks/cup
+/obj/item/reagent_containers/food/drinks/cup // CHOMPEdit - Removal of obj/item/weapon
 	name = "coffee cup"
 	desc = "The container of oriental luxuries."
 	icon_state = "cup_empty"
@@ -7,7 +7,7 @@
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 
-/obj/item/weapon/reagent_containers/food/drinks/cup/on_reagent_change()
+/obj/item/reagent_containers/food/drinks/cup/on_reagent_change() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	if (reagents.reagent_list.len > 0)
 		var/datum/reagent/R = reagents.get_master_reagent()

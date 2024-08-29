@@ -21,14 +21,14 @@
 				explode()
 
 /datum/wires/explosive/c4
-	holder_type = /obj/item/weapon/plastique
+	holder_type = /obj/item/plastique // CHOMPEdit - Removal of obj/item/weapon
 
 /datum/wires/explosive/c4/interactable(mob/user)
-	var/obj/item/weapon/plastique/P = holder
+	var/obj/item/plastique/P = holder // CHOMPEdit - Removal of obj/item/weapon
 	if(P.open_panel)
 		return TRUE
 	return FALSE
 
 /datum/wires/explosive/c4/explode()
-	var/obj/item/weapon/plastique/P = holder
+	var/obj/item/plastique/P = holder // CHOMPEdit - Removal of obj/item/weapon
 	P.explode(get_turf(P))

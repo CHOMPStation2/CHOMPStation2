@@ -7,22 +7,22 @@
 
 /datum/uplink_item/item/ammo/cell/box
 	name = "Weapon cell box"
-	path = /obj/item/weapon/storage/box/weapon_cells
+	path = /obj/item/storage/box/weapon_cells // CHOMPEdit - Removal of obj/item/weapon
 	item_cost = 70
 
 /datum/uplink_item/item/ammo/highcell
 	name = "High capacity cell"
-	path = /obj/item/weapon/cell/high
+	path = /obj/item/cell/high // CHOMPEdit - Removal of obj/item/weapon
 	item_cost = 15
 
 /datum/uplink_item/item/ammo/supercell
 	name = "Super capacity cell"
-	path = /obj/item/weapon/cell/super
+	path = /obj/item/cell/super // CHOMPEdit - Removal of obj/item/weapon
 	item_cost = 30
 
 /datum/uplink_item/item/ammo/voidcell
 	name = "Void cell"
-	path = /obj/item/weapon/cell/device/weapon/recharge/alien/hybrid
+	path = /obj/item/cell/device/weapon/recharge/alien/hybrid // CHOMPEdit - Removal of obj/item/weapon
 	item_cost = DEFAULT_TELECRYSTAL_AMOUNT * 1.5
 	antag_roles = list("ert")
 	blacklisted = 1

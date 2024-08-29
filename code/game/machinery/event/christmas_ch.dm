@@ -64,7 +64,7 @@
 		to_chat(usr, span("warning", "This one already got a present!"))
 		return
 
-	new /obj/item/weapon/a_gift/advanced(src.loc)
+	new /obj/item/a_gift/advanced(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 	for(var/mob/O in view(src, null))
 		O.show_message("<span class='warning'>Santa pulls out a present for [T.name]! \"Merry Christmas!</span>",1)
 

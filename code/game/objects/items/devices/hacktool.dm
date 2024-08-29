@@ -1,4 +1,4 @@
-/obj/item/device/multitool/hacktool
+/obj/item/multitool/hacktool // CHOMPEdit - Removal of obj/item/device
 	var/is_hacking = 0
 	var/max_known_targets
 	var/hackspeed = 1
@@ -10,19 +10,19 @@
 	var/list/supported_types
 	var/datum/tgui_state/default/must_hack/hack_state
 
-/obj/item/device/multitool/hacktool/override
+/obj/item/multitool/hacktool/override // CHOMPEdit - Removal of obj/item/device
 	hackspeed = 0.75
 	max_level = 5
 	full_override = TRUE
 
-/obj/item/device/multitool/hacktool/New()
+/obj/item/multitool/hacktool/New() // CHOMPEdit - Removal of obj/item/device
 	..()
 	known_targets = list()
 	max_known_targets = 5 + rand(1,3)
 	supported_types = list(/obj/machinery/door/airlock)
 	hack_state = new(src)
 
-/obj/item/device/multitool/hacktool/Destroy()
+/obj/item/multitool/hacktool/Destroy() // CHOMPEdit - Removal of obj/item/device
 	for(var/atom/target as anything in known_targets)
 		target.unregister(OBSERVER_EVENT_DESTROY, src)
 	known_targets.Cut()
@@ -30,14 +30,14 @@
 	hack_state = null
 	return ..()
 
-/obj/item/device/multitool/hacktool/attackby(var/obj/item/W, var/mob/user)
+/obj/item/multitool/hacktool/attackby(var/obj/item/W, var/mob/user) // CHOMPEdit - Removal of obj/item/device
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		in_hack_mode = !in_hack_mode
 		playsound(src, W.usesound, 50, 1)
 	else
 		..()
 
-/obj/item/device/multitool/hacktool/afterattack(atom/A, mob/user)
+/obj/item/multitool/hacktool/afterattack(atom/A, mob/user) // CHOMPEdit - Removal of obj/item/device
 	sanity_check()
 
 	if(!in_hack_mode)
@@ -66,7 +66,7 @@
 			D.close()
 	return 1
 
-/obj/item/device/multitool/hacktool/proc/attempt_hack(var/mob/user, var/atom/target)
+/obj/item/multitool/hacktool/proc/attempt_hack(var/mob/user, var/atom/target) // CHOMPEdit - Removal of obj/item/device
 	if(is_hacking)
 		to_chat(user, "<span class='warning'>You are already hacking!</span>")
 		return 0
@@ -98,10 +98,10 @@
 		return 0
 
 	known_targets.Insert(1, D)	// Insert the newly hacked target first,
-	D.register(OBSERVER_EVENT_DESTROY, src, /obj/item/device/multitool/hacktool/proc/on_target_destroy)
+	D.register(OBSERVER_EVENT_DESTROY, src, /obj/item/multitool/hacktool/proc/on_target_destroy) // CHOMPEdit - Removal of obj/item/device
 	return 1
 
-/obj/item/device/multitool/hacktool/proc/sanity_check()
+/obj/item/multitool/hacktool/proc/sanity_check() // CHOMPEdit - Removal of obj/item/device
 	if(max_known_targets < 1) max_known_targets = 1
 	// Cut away the oldest items if the capacity has been reached
 	if(known_targets.len > max_known_targets)
@@ -110,11 +110,11 @@
 			A.unregister(OBSERVER_EVENT_DESTROY, src)
 		known_targets.Cut(max_known_targets + 1)
 
-/obj/item/device/multitool/hacktool/proc/on_target_destroy(var/target)
+/obj/item/multitool/hacktool/proc/on_target_destroy(var/target) // CHOMPEdit - Removal of obj/item/device
 	known_targets -= target
 
 /datum/tgui_state/default/must_hack
-	var/obj/item/device/multitool/hacktool/hacktool
+	var/obj/item/multitool/hacktool/hacktool // CHOMPEdit - Removal of obj/item/device
 
 /datum/tgui_state/default/must_hack/New(var/hacktool)
 	src.hacktool = hacktool

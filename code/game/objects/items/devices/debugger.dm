@@ -4,7 +4,7 @@
  *
  */
 
-/obj/item/device/debugger
+/obj/item/debugger // CHOMPEdit - Removal of obj/item/device
 	name = "debugger"
 	desc = "Used to debug electronic equipment."
 	icon = 'icons/obj/hacktool.dmi'
@@ -21,7 +21,7 @@
 	origin_tech = list(TECH_MAGNET = 1, TECH_ENGINEERING = 1)
 	var/obj/machinery/telecomms/buffer // simple machine buffer for device linkage
 
-/obj/item/device/debugger/is_used_on(obj/O, mob/user)
+/obj/item/debugger/is_used_on(obj/O, mob/user) // CHOMPEdit - Removal of obj/item/device
 	if(istype(O, /obj/machinery/power/apc))
 		var/obj/machinery/power/apc/A = O
 		if(A.emagged || A.hacker)

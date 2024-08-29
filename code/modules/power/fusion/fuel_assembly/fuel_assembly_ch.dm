@@ -1,13 +1,13 @@
-/obj/item/weapon/fuel_assembly/blitz
+/obj/item/fuel_assembly/blitz // CHOMPEdit - Removal of obj/item/weapon
 	name = "blitz rod"
 	desc = "A highly unstable mixture of supermatter and phoron. It's probably not a good idea to try to use this in a reactor..."
 	fuel_colour = "#FCE300"
 	fuel_type = "blitz"
 
-/obj/item/weapon/fuel_assembly/blitz/New(var/newloc)
+/obj/item/fuel_assembly/blitz/New(var/newloc) // CHOMPEdit - Removal of obj/item/weapon
 	..(newloc, "blitz")
 
-/obj/item/weapon/fuel_assembly/blitz/unshielded/Initialize()
+/obj/item/fuel_assembly/blitz/unshielded/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	name = "unshielded blitz rod"
 	desc = "An extremely unstable, raw rod of compressed supermatter and phoron. This seems like a terrible idea."
@@ -21,26 +21,26 @@
 	SSradiation.flat_radiate(src,20,5,respect_maint = FALSE)
 	set_light(3, 3, "#FCE300")
 
-/obj/item/weapon/fuel_assembly/blitz/throw_impact(atom/hit_atom)
+/obj/item/fuel_assembly/blitz/throw_impact(atom/hit_atom) // CHOMPEdit - Removal of obj/item/weapon
 	if(!..())
 		visible_message("<span class='warning'>\The [src] loses stability and shatters in a violent explosion!</span>")
 		explosion(src.loc, 1, 2, 4, 6)
 		qdel(src)
 
-/obj/item/weapon/fuel_assembly/blitz/unshielded/attackby(var/obj/item/I, mob/user as mob)
+/obj/item/fuel_assembly/blitz/unshielded/attackby(var/obj/item/I, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	var/obj/item/stack/material/lead/M = I
 	if(istype(M))
 		if(M.get_amount() > 5)
 			to_chat(user,"<span class='notice'>You add a lead shell to the blitz rod.</span>")
 			qdel(src)
-			var/obj/item/weapon/fuel_assembly/blitz/shielded/rod = new(get_turf(user))
+			var/obj/item/fuel_assembly/blitz/shielded/rod = new(get_turf(user)) // CHOMPEdit - Removal of obj/item/weapon
 			user.put_in_hands(rod)
 			return
 		else
 			to_chat(user,"<span class='warning'>You need at least five sheets of lead to add shielding!</span>")
 
-/obj/item/weapon/fuel_assembly/blitz/unshielded/attack_hand(mob/user)
+/obj/item/fuel_assembly/blitz/unshielded/attack_hand(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 
 	SSradiation.radiate(src, 5)
@@ -62,10 +62,10 @@
 			H.drop_from_inventory(src, get_turf(H))
 			return
 
-/obj/item/weapon/fuel_assembly/blitz/shielded
+/obj/item/fuel_assembly/blitz/shielded // CHOMPEdit - Removal of obj/item/weapon
 	name = "blitz rod"
 
-/obj/item/weapon/fuel_assembly/blitz/shielded/Initialize()
+/obj/item/fuel_assembly/blitz/shielded/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	name = "blitz rod"
 	desc = "A highly unstable, and highly explosive supermatter and phoron fuel rod with a lead shell, created by someone of questionable sanity. This thing has to violate at least a few intergalactic regulations."

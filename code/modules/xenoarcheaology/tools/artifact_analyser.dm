@@ -121,12 +121,12 @@
 			results = get_scan_info(scanned_object)
 
 		atom_say("Scanning complete.")
-		var/obj/item/weapon/paper/P = new(src.loc)
+		var/obj/item/paper/P = new(src.loc) // CHOMPEdit - Removal of obj/item/weapon
 		P.name = "[src] report #[++report_num]"
 		P.info = "<b>[src] analysis report #[report_num]</b><br>"
 		P.info += "<br>"
 		P.info += "[bicon(scanned_object)] [results]"
-		P.stamped = list(/obj/item/weapon/stamp)
+		P.stamped = list(/obj/item/stamp) // CHOMPEdit - Removal of obj/item/weapon
 		P.add_overlay("paper_stamped")
 
 		if(scanned_object && istype(scanned_object, /obj/machinery/artifact))

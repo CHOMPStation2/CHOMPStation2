@@ -15,7 +15,7 @@
 	braintype = "Drone"
 	lawupdate = 0
 	density = TRUE
-	idcard_type = /obj/item/weapon/card/id/syndicate
+	idcard_type = /obj/item/card/id/syndicate // CHOMPEdit - Removal of obj/item/weapon
 	req_access = list(999)
 	integrated_light_power = 3
 	local_transmit = 0
@@ -35,7 +35,7 @@
 	mob_size = MOB_LARGE
 
 	law_type = /datum/ai_laws/swarm_drone
-	module_type = /obj/item/weapon/robot_module/drone/swarm
+	module_type = /obj/item/robot_module/drone/swarm // CHOMPEdit - Removal of obj/item/weapon
 
 	hat_x_offset = 0
 	hat_y_offset = -10
@@ -43,7 +43,7 @@
 	foreign_droid = TRUE
 	scrambledcodes = TRUE
 
-	holder_type = /obj/item/weapon/holder/drone
+	holder_type = /obj/item/holder/drone // CHOMPEdit - Removal of obj/item/weapon
 
 	can_be_antagged = TRUE
 
@@ -83,7 +83,7 @@
 	speed = 4
 
 	law_type = /datum/ai_laws/swarm_drone/soldier
-	module_type = /obj/item/weapon/robot_module/drone/swarm/ranged
+	module_type = /obj/item/robot_module/drone/swarm/ranged // CHOMPEdit - Removal of obj/item/weapon
 
 	spell_setup = list(
 		/spell/aoe_turf/conjure/swarmer,
@@ -104,7 +104,7 @@
 	speed = 2
 
 	law_type = /datum/ai_laws/swarm_drone/soldier
-	module_type = /obj/item/weapon/robot_module/drone/swarm/melee
+	module_type = /obj/item/robot_module/drone/swarm/melee // CHOMPEdit - Removal of obj/item/weapon
 
 	spell_setup = list(
 		/spell/aoe_turf/conjure/swarmer,

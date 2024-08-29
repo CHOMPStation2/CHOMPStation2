@@ -31,10 +31,10 @@
 /datum/surgery_step/generic/cut_open
 	surgery_name = "Create Incision"
 	allowed_tools = list(
-		/obj/item/weapon/surgical/scalpel = 100,		\
-		/obj/item/weapon/material/knife = 75,	\
-		/obj/item/weapon/material/shard = 50, 		\
-	)
+		/obj/item/surgical/scalpel = 100,		\
+		/obj/item/material/knife = 75,	\
+		/obj/item/material/shard = 50, 		\
+	)  // CHOMPEdit - Removal of obj/item/weapon
 	req_open = 0
 
 	min_duration = 40 //CHOMPedit
@@ -79,10 +79,10 @@
 /datum/surgery_step/generic/cut_with_laser
 	surgery_name = "Create Bloodless Incision"
 	allowed_tools = list(
-		/obj/item/weapon/surgical/scalpel/laser3 = 100, \
-		/obj/item/weapon/surgical/scalpel/laser2 = 100, \
-		/obj/item/weapon/surgical/scalpel/laser1 = 100, \
-		/obj/item/weapon/melee/energy/sword = 5
+		/obj/item/surgical/scalpel/laser3 = 100, \
+		/obj/item/surgical/scalpel/laser2 = 100, \
+		/obj/item/surgical/scalpel/laser1 = 100, \
+		/obj/item/melee/energy/sword = 5 // CHOMPEdit - Removal of obj/item/weapon
 	)
 	priority = 2
 	req_open = 0
@@ -109,11 +109,11 @@
 
 	affected.createwound(CUT, 1)
 	var/clamp_chance = 0 //I hate this. Make all laser scalpels a /laser subtype and give them a clamp_chance var???
-	if(istype(tool,/obj/item/weapon/surgical/scalpel/laser1))
+	if(istype(tool,/obj/item/surgical/scalpel/laser1)) // CHOMPEdit - Removal of obj/item/weapon
 		clamp_chance = 75
-	if(istype(tool,/obj/item/weapon/surgical/scalpel/laser2))
+	if(istype(tool,/obj/item/surgical/scalpel/laser2)) // CHOMPEdit - Removal of obj/item/weapon
 		clamp_chance = 85
-	if(istype(tool,/obj/item/weapon/surgical/scalpel/laser3))
+	if(istype(tool,/obj/item/surgical/scalpel/laser3)) // CHOMPEdit - Removal of obj/item/weapon
 		clamp_chance = 95
 	if(clamp_chance)
 		affected.organ_clamp()
@@ -143,7 +143,7 @@
 /datum/surgery_step/generic/incision_manager
 	surgery_name = "Create Prepared Incision"
 	allowed_tools = list(
-		/obj/item/weapon/surgical/scalpel/manager = 100
+		/obj/item/surgical/scalpel/manager = 100 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	priority = 2
@@ -194,9 +194,9 @@
 /datum/surgery_step/generic/clamp_bleeders
 	surgery_name = "Clamp Bleeders"
 	allowed_tools = list(
-		/obj/item/weapon/surgical/hemostat = 100,	\
+		/obj/item/surgical/hemostat = 100,	\
 		/obj/item/stack/cable_coil = 75, 	\
-		/obj/item/device/assembly/mousetrap = 20
+		/obj/item/assembly/mousetrap = 20 // CHOMPEdit - Removal of obj/item/device
 	)
 
 	min_duration = 30 //CHOMPedit
@@ -237,8 +237,8 @@
 /datum/surgery_step/generic/retract_skin
 	surgery_name = "Retract Skin"
 	allowed_tools = list(
-		/obj/item/weapon/surgical/retractor = 100,	\
-		/obj/item/weapon/material/kitchen/utensil/fork = 50
+		/obj/item/surgical/retractor = 100, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/kitchen/utensil/fork = 50 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	allowed_procs = list(IS_CROWBAR = 75)
@@ -318,10 +318,10 @@
 /datum/surgery_step/generic/cauterize
 	surgery_name = "Cauterize Incision"
 	allowed_tools = list(
-		/obj/item/weapon/surgical/cautery = 100,			\
+		/obj/item/surgical/cautery = 100,			\
 		/obj/item/clothing/mask/smokable/cigarette = 75,	\
-		/obj/item/weapon/flame/lighter = 50,			\
-		/obj/item/weapon/weldingtool = 25
+		/obj/item/flame/lighter = 50,			\
+		/obj/item/weldingtool = 25 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	min_duration = 30 //CHOMPedit
@@ -363,8 +363,8 @@
 /datum/surgery_step/generic/amputate
 	surgery_name = "Amputate Limb"
 	allowed_tools = list(
-		/obj/item/weapon/surgical/circular_saw = 100, \
-		/obj/item/weapon/material/knife/machete/hatchet = 75
+		/obj/item/surgical/circular_saw = 100, \
+		/obj/item/material/knife/machete/hatchet = 75 // CHOMPEdit - Removal of obj/item/weapon
 	)
 	req_open = 0
 

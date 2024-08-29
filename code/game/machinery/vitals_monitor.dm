@@ -1,11 +1,11 @@
-/obj/item/weapon/circuitboard/machine/vitals_monitor
+/obj/item/circuitboard/machine/vitals_monitor // CHOMPEdit - Removal of obj/item/weapon
 	name = "circuit board (vitals monitor)"
 	build_path = /obj/machinery/vitals_monitor
 	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_DATA = 3, TECH_BIO = 4, TECH_ENGINEERING = 2)
 	req_components = list(
-		/obj/item/weapon/stock_parts/console_screen = 1,
-		/obj/item/weapon/cell/high = 1
+		/obj/item/stock_parts/console_screen = 1, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/cell/high = 1 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/machinery/vitals_monitor

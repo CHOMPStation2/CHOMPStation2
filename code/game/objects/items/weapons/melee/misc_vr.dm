@@ -1,4 +1,4 @@
-/obj/item/weapon/melee/rapier
+/obj/item/melee/rapier // CHOMPEdit - Removal of obj/item/weapon
 	name = "rapier"
 	desc = "A gleaming steel blade with a gold handguard and inlayed with an outstanding red gem."
 	icon = 'icons/obj/weapons_vr.dmi'

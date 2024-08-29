@@ -1,4 +1,4 @@
-/obj/item/device/suit_cooling_unit
+/obj/item/suit_cooling_unit // CHOMPEdit - Removal of obj/item/device
 	name = "portable suit cooling unit"
 	desc = "A portable heat sink and liquid cooled radiator that can be hooked up to a space suit's existing temperature controls to provide industrial levels of cooling."
 	w_class = ITEMSIZE_LARGE
@@ -19,26 +19,26 @@
 
 	var/on = 0				//is it turned on?
 	var/cover_open = 0		//is the cover open?
-	var/obj/item/weapon/cell/cell = /obj/item/weapon/cell/high
+	var/obj/item/cell/cell = /obj/item/cell/high // CHOMPEdit - Removal of obj/item/weapon
 	var/max_cooling = 15				// in degrees per second - probably don't need to mess with heat capacity here
 	var/charge_consumption = 3			// charge per second at max_cooling
 	var/thermostat = T20C
 
 	//TODO: make it heat up the surroundings when not in space
 
-/obj/item/device/suit_cooling_unit/ui_action_click()
+/obj/item/suit_cooling_unit/ui_action_click() // CHOMPEdit - Removal of obj/item/device
 	toggle(usr)
 
-/obj/item/device/suit_cooling_unit/Initialize()
+/obj/item/suit_cooling_unit/Initialize() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	if(ispath(cell))
 		cell = new cell(src)
 
-/obj/item/device/suit_cooling_unit/Destroy()
+/obj/item/suit_cooling_unit/Destroy() // CHOMPEdit - Removal of obj/item/device
 	qdel_null(cell)
 	return ..()
 
-/obj/item/device/suit_cooling_unit/process()
+/obj/item/suit_cooling_unit/process() // CHOMPEdit - Removal of obj/item/device
 	if (!on || !cell)
 		return PROCESS_KILL
 
@@ -74,7 +74,7 @@
 	if(cell.charge <= 0)
 		turn_off(1)
 
-/obj/item/device/suit_cooling_unit/proc/get_environment_temperature()
+/obj/item/suit_cooling_unit/proc/get_environment_temperature() // CHOMPEdit - Removal of obj/item/device
 	if (ishuman(loc))
 		var/mob/living/carbon/human/H = loc
 		if(istype(H.loc, /obj/mecha))
@@ -94,7 +94,7 @@
 
 	return environment.temperature
 
-/obj/item/device/suit_cooling_unit/proc/attached_to_suit(mob/M)
+/obj/item/suit_cooling_unit/proc/attached_to_suit(mob/M) // CHOMPEdit - Removal of obj/item/device
 	if (!ishuman(M))
 		return 0
 
@@ -105,7 +105,7 @@
 
 	return 1
 
-/obj/item/device/suit_cooling_unit/proc/turn_on()
+/obj/item/suit_cooling_unit/proc/turn_on() // CHOMPEdit - Removal of obj/item/device
 	if(!cell)
 		return
 	if(cell.charge <= 0)
@@ -115,13 +115,13 @@
 	START_PROCESSING(SSobj, src)
 	update_icon()
 
-/obj/item/device/suit_cooling_unit/proc/turn_off(var/failed)
+/obj/item/suit_cooling_unit/proc/turn_off(var/failed) // CHOMPEdit - Removal of obj/item/device
 	if(failed) visible_message("\The [src] clicks and whines as it powers down.")
 	on = 0
 	STOP_PROCESSING(SSobj, src)
 	update_icon()
 
-/obj/item/device/suit_cooling_unit/attack_self(var/mob/user)
+/obj/item/suit_cooling_unit/attack_self(var/mob/user) // CHOMPEdit - Removal of obj/item/device
 	if(cover_open && cell)
 		if(ishuman(user))
 			user.put_in_hands(cell)
@@ -138,14 +138,14 @@
 
 	toggle(user)
 
-/obj/item/device/suit_cooling_unit/proc/toggle(var/mob/user)
+/obj/item/suit_cooling_unit/proc/toggle(var/mob/user) // CHOMPEdit - Removal of obj/item/device
 	if(on)
 		turn_off()
 	else
 		turn_on()
 	to_chat(user, "<span class='notice'>You switch \the [src] [on ? "on" : "off"].</span>")
 
-/obj/item/device/suit_cooling_unit/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/suit_cooling_unit/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 	if (W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(cover_open)
 			cover_open = 0
@@ -157,7 +157,7 @@
 		update_icon()
 		return
 
-	if (istype(W, /obj/item/weapon/cell))
+	if (istype(W, /obj/item/cell)) // CHOMPEdit - Removal of obj/item/weapon
 		if(cover_open)
 			if(cell)
 				to_chat(user, "There is a [cell] already installed here.")
@@ -171,7 +171,7 @@
 
 	return ..()
 
-/obj/item/device/suit_cooling_unit/update_icon()
+/obj/item/suit_cooling_unit/update_icon() // CHOMPEdit - Removal of obj/item/device
 	cut_overlays()
 	if(cover_open)
 		if(cell)
@@ -199,7 +199,7 @@
 		if(-INFINITY to 17)
 			add_overlay("battery-5")
 
-/obj/item/device/suit_cooling_unit/examine(mob/user)
+/obj/item/suit_cooling_unit/examine(mob/user) // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 
 	if(Adjacent(user))
@@ -223,20 +223,20 @@
 		else
 			. += "It doesn't have a power cell installed."
 
-/obj/item/device/suit_cooling_unit/emergency
+/obj/item/suit_cooling_unit/emergency // CHOMPEdit - Removal of obj/item/device
 	icon_state = "esuitcooler"
-	cell = /obj/item/weapon/cell
+	cell = /obj/item/cell // CHOMPEdit - Removal of obj/item/weapon
 	w_class = ITEMSIZE_NORMAL
 
-/obj/item/device/suit_cooling_unit/emergency/update_icon()
+/obj/item/suit_cooling_unit/emergency/update_icon() // CHOMPEdit - Removal of obj/item/device
 	return
 
-/obj/item/device/suit_cooling_unit/emergency/get_cell()
+/obj/item/suit_cooling_unit/emergency/get_cell() // CHOMPEdit - Removal of obj/item/device
 	if(on)
 		return null // Don't let recharging happen while we're on
 	return cell
 
-/obj/item/device/suit_cooling_unit/emergency/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/suit_cooling_unit/emergency/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 	if (W.has_tool_quality(TOOL_SCREWDRIVER))
 		to_chat(user, "<span class='warning'>This cooler's cell is permanently installed!</span>")
 		return

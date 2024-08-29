@@ -151,7 +151,7 @@
 		return
 
 /mob/observer/dead/attackby(obj/item/W, mob/user)
-	if(istype(W,/obj/item/weapon/book/tome))
+	if(istype(W,/obj/item/book/tome)) // CHOMPEdit - Removal of obj/item/weapon
 		var/mob/observer/dead/M = src
 		M.manifest(user)
 
@@ -1032,8 +1032,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(choice == "Yes")
 			paiController.recruitWindow(usr)
 		var/count = 0
-		for(var/obj/item/device/paicard/p in GLOB.all_pai_cards)
-			var/obj/item/device/paicard/PP = p
+		for(var/obj/item/paicard/p in GLOB.all_pai_cards) // CHOMPEdit - Removal of obj/item/device
+			var/obj/item/paicard/PP = p // CHOMPEdit - Removal of obj/item/device
 			if(PP.pai == null)
 				count++
 				PP.add_overlay("pai-ghostalert")

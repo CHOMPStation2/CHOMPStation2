@@ -1,5 +1,5 @@
 // Interface for humans.
-/obj/item/weapon/rig/verb/hardsuit_interface()
+/obj/item/rig/verb/hardsuit_interface() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Open Hardsuit Interface"
 	set desc = "Open the hardsuit system interface."
@@ -10,11 +10,11 @@
 		tgui_interact(usr)
 
 // So the UI button clicks come here
-/obj/item/weapon/rig/ui_action_click()
+/obj/item/rig/ui_action_click() // CHOMPEdit - Removal of obj/item/weapon
 	if(usr == wearer && (wearer.back == src || wearer.belt == src))
 		tgui_interact(usr)
 
-/obj/item/weapon/rig/verb/toggle_vision()
+/obj/item/rig/verb/toggle_vision() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Toggle Visor"
 	set desc = "Turns your rig visor off or on."
@@ -44,7 +44,7 @@
 	else
 		visor.deactivate()
 
-/obj/item/weapon/rig/proc/toggle_helmet()
+/obj/item/rig/proc/toggle_helmet() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Toggle Helmet"
 	set desc = "Deploys or retracts your helmet."
@@ -60,7 +60,7 @@
 
 	toggle_piece("helmet",wearer)
 
-/obj/item/weapon/rig/proc/toggle_chest()
+/obj/item/rig/proc/toggle_chest() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Toggle Chestpiece"
 	set desc = "Deploys or retracts your chestpiece."
@@ -72,7 +72,7 @@
 
 	toggle_piece("chest",wearer)
 
-/obj/item/weapon/rig/proc/toggle_gauntlets()
+/obj/item/rig/proc/toggle_gauntlets() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Toggle Gauntlets"
 	set desc = "Deploys or retracts your gauntlets."
@@ -88,7 +88,7 @@
 
 	toggle_piece("gauntlets",wearer)
 
-/obj/item/weapon/rig/proc/toggle_boots()
+/obj/item/rig/proc/toggle_boots() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Toggle Boots"
 	set desc = "Deploys or retracts your boots."
@@ -104,7 +104,7 @@
 
 	toggle_piece("boots",wearer)
 
-/obj/item/weapon/rig/verb/deploy_suit()
+/obj/item/rig/verb/deploy_suit() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Deploy Hardsuit"
 	set desc = "Deploys helmet, gloves and boots."
@@ -123,7 +123,7 @@
 
 	deploy(wearer)
 
-/obj/item/weapon/rig/verb/toggle_seals_verb()
+/obj/item/rig/verb/toggle_seals_verb() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Toggle Hardsuit"
 	set desc = "Activates or deactivates your rig."
@@ -139,7 +139,7 @@
 
 	toggle_seals(wearer)
 
-/obj/item/weapon/rig/verb/switch_vision_mode()
+/obj/item/rig/verb/switch_vision_mode() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Switch Vision Mode"
 	set desc = "Switches between available vision modes."
@@ -169,7 +169,7 @@
 
 	visor.engage()
 
-/obj/item/weapon/rig/verb/alter_voice()
+/obj/item/rig/verb/alter_voice() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Configure Voice Synthesiser"
 	set desc = "Toggles or configures your voice synthesizer."
@@ -193,7 +193,7 @@
 
 	speech.engage()
 
-/obj/item/weapon/rig/verb/select_module()
+/obj/item/rig/verb/select_module() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Select Module"
 	set desc = "Selects a module as your primary system."
@@ -229,7 +229,7 @@
 	selected_module = module
 	to_chat(usr, span_blue("<b>Primary system is now: [selected_module.interface_name].</b>"))
 
-/obj/item/weapon/rig/verb/toggle_module()
+/obj/item/rig/verb/toggle_module() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Toggle Module"
 	set desc = "Toggle a system module."
@@ -267,7 +267,7 @@
 		to_chat(usr, span_blue("<b>You attempt to activate \the [module.interface_name].</b>"))
 		module.activate()
 
-/obj/item/weapon/rig/verb/engage_module()
+/obj/item/rig/verb/engage_module() // CHOMPEdit - Removal of obj/item/weapon
 
 	set name = "Engage Module"
 	set desc = "Engages a system module."

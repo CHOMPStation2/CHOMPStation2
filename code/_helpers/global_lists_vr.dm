@@ -51,14 +51,14 @@ var/global/list/vantag_choices_list = list(
 
 //Blacklist to exclude items from object ingestion. Digestion blacklist located in digest_act_vr.dm
 var/global/list/item_vore_blacklist = list(
-		/obj/item/weapon/hand_tele,
-		/obj/item/weapon/card/id/gold/captain/spare,
-		/obj/item/weapon/gun,
-		/obj/item/weapon/pinpointer,
+		/obj/item/hand_tele, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/card/id/gold/captain/spare, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pinpointer, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/shoes/magboots,
 		/obj/item/areaeditor/blueprints,
 		/obj/item/clothing/head/helmet/space,
-		/obj/item/weapon/disk/nuclear,
+		/obj/item/disk/nuclear, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz)
 
 //Classic Vore sounds
@@ -163,104 +163,104 @@ var/global/list/global_vore_egg_types = list(
 	"Spotted Pink")
 
 var/global/list/tf_vore_egg_types = list(
-	"Unathi" 		= /obj/item/weapon/storage/vore_egg/unathi,
-	"Tajara" 		= /obj/item/weapon/storage/vore_egg/tajaran,
-	"Akula" 		= /obj/item/weapon/storage/vore_egg/shark,
-	"Skrell" 		= /obj/item/weapon/storage/vore_egg/skrell,
-	"Sergal"		= /obj/item/weapon/storage/vore_egg/sergal,
-	"Nevrean"		= /obj/item/weapon/storage/vore_egg/nevrean,
-	"Human"			= /obj/item/weapon/storage/vore_egg/human,
-	"Slime"			= /obj/item/weapon/storage/vore_egg/slime,
-	"Egg"			= /obj/item/weapon/storage/vore_egg,
-	"Xenochimera"	= /obj/item/weapon/storage/vore_egg/scree,
-	"Xenomorph"		= /obj/item/weapon/storage/vore_egg/xenomorph,
-	"Chocolate"		= /obj/item/weapon/storage/vore_egg/chocolate,
-	"Boney"			= /obj/item/weapon/storage/vore_egg/owlpellet,
-	"Slime Glob"	= /obj/item/weapon/storage/vore_egg/slimeglob,
-	"Chicken"		= /obj/item/weapon/storage/vore_egg/chicken,
-	"Synthetic"		= /obj/item/weapon/storage/vore_egg/synthetic,
-	"Bluespace Floppy"	= /obj/item/weapon/storage/vore_egg/floppy,
-	"Bluespace Compressed File"	= /obj/item/weapon/storage/vore_egg/file,
-	"Bluespace CD"	= /obj/item/weapon/storage/vore_egg/cd,
-	"Escape Pod"	= /obj/item/weapon/storage/vore_egg/escapepod,
-	"Cooking Error"	= /obj/item/weapon/storage/vore_egg/badrecipe,
-	"Web Cocoon"	= /obj/item/weapon/storage/vore_egg/cocoon,
-	"Honeycomb"	= /obj/item/weapon/storage/vore_egg/honeycomb,
-	"Bug Cocoon"	= /obj/item/weapon/storage/vore_egg/bugcocoon,
-	"Rock"			= /obj/item/weapon/storage/vore_egg/rock,
-	"Yellow"		= /obj/item/weapon/storage/vore_egg/yellow,
-	"Blue"			= /obj/item/weapon/storage/vore_egg/blue,
-	"Green"			= /obj/item/weapon/storage/vore_egg/green,
-	"Orange"		= /obj/item/weapon/storage/vore_egg/orange,
-	"Purple"		= /obj/item/weapon/storage/vore_egg/purple,
-	"Red"			= /obj/item/weapon/storage/vore_egg/red,
-	"Rainbow"		= /obj/item/weapon/storage/vore_egg/rainbow,
-	"Spotted Pink"	= /obj/item/weapon/storage/vore_egg/pinkspots)
+	"Unathi" 		= /obj/item/storage/vore_egg/unathi, // CHOMPEdit - Removal of obj/item/weapon
+	"Tajara" 		= /obj/item/storage/vore_egg/tajaran, // CHOMPEdit - Removal of obj/item/weapon
+	"Akula" 		= /obj/item/storage/vore_egg/shark, // CHOMPEdit - Removal of obj/item/weapon
+	"Skrell" 		= /obj/item/storage/vore_egg/skrell, // CHOMPEdit - Removal of obj/item/weapon
+	"Sergal"		= /obj/item/storage/vore_egg/sergal, // CHOMPEdit - Removal of obj/item/weapon
+	"Nevrean"		= /obj/item/storage/vore_egg/nevrean, // CHOMPEdit - Removal of obj/item/weapon
+	"Human"			= /obj/item/storage/vore_egg/human, // CHOMPEdit - Removal of obj/item/weapon
+	"Slime"			= /obj/item/storage/vore_egg/slime, // CHOMPEdit - Removal of obj/item/weapon
+	"Egg"			= /obj/item/storage/vore_egg, // CHOMPEdit - Removal of obj/item/weapon
+	"Xenochimera"	= /obj/item/storage/vore_egg/scree, // CHOMPEdit - Removal of obj/item/weapon
+	"Xenomorph"		= /obj/item/storage/vore_egg/xenomorph, // CHOMPEdit - Removal of obj/item/weapon
+	"Chocolate"		= /obj/item/storage/vore_egg/chocolate, // CHOMPEdit - Removal of obj/item/weapon
+	"Boney"			= /obj/item/storage/vore_egg/owlpellet, // CHOMPEdit - Removal of obj/item/weapon
+	"Slime Glob"	= /obj/item/storage/vore_egg/slimeglob, // CHOMPEdit - Removal of obj/item/weapon
+	"Chicken"		= /obj/item/storage/vore_egg/chicken, // CHOMPEdit - Removal of obj/item/weapon
+	"Synthetic"		= /obj/item/storage/vore_egg/synthetic, // CHOMPEdit - Removal of obj/item/weapon
+	"Bluespace Floppy"	= /obj/item/storage/vore_egg/floppy, // CHOMPEdit - Removal of obj/item/weapon
+	"Bluespace Compressed File"	= /obj/item/storage/vore_egg/file, // CHOMPEdit - Removal of obj/item/weapon
+	"Bluespace CD"	= /obj/item/storage/vore_egg/cd, // CHOMPEdit - Removal of obj/item/weapon
+	"Escape Pod"	= /obj/item/storage/vore_egg/escapepod, // CHOMPEdit - Removal of obj/item/weapon
+	"Cooking Error"	= /obj/item/storage/vore_egg/badrecipe, // CHOMPEdit - Removal of obj/item/weapon
+	"Web Cocoon"	= /obj/item/storage/vore_egg/cocoon, // CHOMPEdit - Removal of obj/item/weapon
+	"Honeycomb"	= /obj/item/storage/vore_egg/honeycomb, // CHOMPEdit - Removal of obj/item/weapon
+	"Bug Cocoon"	= /obj/item/storage/vore_egg/bugcocoon, // CHOMPEdit - Removal of obj/item/weapon
+	"Rock"			= /obj/item/storage/vore_egg/rock, // CHOMPEdit - Removal of obj/item/weapon
+	"Yellow"		= /obj/item/storage/vore_egg/yellow, // CHOMPEdit - Removal of obj/item/weapon
+	"Blue"			= /obj/item/storage/vore_egg/blue, // CHOMPEdit - Removal of obj/item/weapon
+	"Green"			= /obj/item/storage/vore_egg/green, // CHOMPEdit - Removal of obj/item/weapon
+	"Orange"		= /obj/item/storage/vore_egg/orange, // CHOMPEdit - Removal of obj/item/weapon
+	"Purple"		= /obj/item/storage/vore_egg/purple, // CHOMPEdit - Removal of obj/item/weapon
+	"Red"			= /obj/item/storage/vore_egg/red, // CHOMPEdit - Removal of obj/item/weapon
+	"Rainbow"		= /obj/item/storage/vore_egg/rainbow, // CHOMPEdit - Removal of obj/item/weapon
+	"Spotted Pink"	= /obj/item/storage/vore_egg/pinkspots) // CHOMPEdit - Removal of obj/item/weapon
 
 var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/clothing/accessory/collar,
-				/obj/item/device/communicator,
+				/obj/item/communicator, // CHOMPEdit - Removal of obj/item/device
 				/obj/item/clothing/mask,
 				/obj/item/clothing/glasses,
 				/obj/item/clothing/gloves,
 				/obj/item/clothing/head,
 				/obj/item/clothing/shoes,
-				/obj/item/device/aicard,
-				/obj/item/device/flashlight,
-				/obj/item/device/mmi/digital/posibrain,
-				/obj/item/device/paicard,
-				/obj/item/device/pda,
-				/obj/item/device/radio/headset,
-				/obj/item/device/starcaster_news, //chompstation addition
+				/obj/item/aicard, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/mmi/digital/posibrain, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/paicard, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/pda, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/radio/headset, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/starcaster_news, //chompstation addition // CHOMPEdit - Removal of obj/item/device
 				/obj/item/inflatable/torn,
 				/obj/item/organ,
 				/obj/item/stack/material/cardboard,
 				/obj/item/toy,
 				/obj/item/trash,
-				/obj/item/weapon/digestion_remains,
-				/obj/item/weapon/bananapeel,
-				/obj/item/weapon/book,
-				/obj/item/weapon/bone,
-				/obj/item/weapon/broken_bottle,
-				/obj/item/weapon/card/emag_broken,
+				/obj/item/digestion_remains, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/bananapeel, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/book, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/bone, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/broken_bottle, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/card/emag_broken, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/trash/cigbutt,
-				/obj/item/weapon/circuitboard/broken,
-				/obj/item/weapon/clipboard,
-				/obj/item/weapon/corncob,
-				/obj/item/weapon/dice,
-				/obj/item/weapon/flame,
-				/obj/item/weapon/light,
-				/obj/item/weapon/lipstick,
-				/obj/item/weapon/material/shard,
-				/obj/item/weapon/newspaper,
-				/obj/item/weapon/paper,
-				/obj/item/weapon/paperplane,
-				/obj/item/weapon/pen,
-				/obj/item/weapon/photo,
-				/obj/item/weapon/reagent_containers/food,
-				/obj/item/weapon/reagent_containers/glass/rag,
-				/obj/item/weapon/soap,
-				/obj/item/weapon/spacecash,
-				/obj/item/weapon/storage/box/khcrystal,
-				/obj/item/weapon/storage/box/matches,
-				/obj/item/weapon/storage/box/wings,
-				/obj/item/weapon/storage/fancy/candle_box,
-				/obj/item/weapon/storage/fancy/cigarettes,
-				/obj/item/weapon/storage/fancy/crayons,
-				/obj/item/weapon/storage/fancy/egg_box,
-				/obj/item/weapon/storage/wallet,
-				/obj/item/weapon/storage/vore_egg,
-				/obj/item/weapon/bikehorn/tinytether,
-				/obj/item/weapon/entrepreneur,
+				/obj/item/circuitboard/broken, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/corncob, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/dice, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/flame, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/light, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/lipstick, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/material/shard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/newspaper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/paper, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/paperplane, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/pen, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/photo, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/food, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/reagent_containers/glass/rag, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/soap, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/spacecash, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/khcrystal, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/matches, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/box/wings, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/fancy/candle_box, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/fancy/cigarettes, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/fancy/crayons, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/fancy/egg_box, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/wallet, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/vore_egg, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/bikehorn/tinytether, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/entrepreneur, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/capture_crystal,
-				/obj/item/weapon/material/kitchen, //chompstation addition start
-				/obj/item/weapon/storage/mre,
-				/obj/item/weapon/storage/mrebag,
-				/obj/item/weapon/storage/fancy/crackers,
-				/obj/item/weapon/storage/fancy/heartbox,
+				/obj/item/material/kitchen, //chompstation addition start // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/mre, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/mrebag, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/fancy/heartbox, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/pizzavoucher,
 				/obj/item/pizzabox,
-				/obj/item/weapon/toy,
+				/obj/item/toy, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/seeds,
 				/obj/item/clothing/accessory/choker,
 				/obj/item/clothing/accessory/medal,
@@ -268,13 +268,13 @@ var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/clothing/accessory/scarf,
 				/obj/item/clothing/accessory/bracelet,
 				/obj/item/clothing/accessory/locket,
-				/obj/item/weapon/storage/bible,
-				/obj/item/weapon/bikehorn,
+				/obj/item/storage/bible, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/bikehorn, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/inflatable/door/torn,
-				/obj/item/weapon/towel,
-				/obj/item/weapon/folder,
-				/obj/item/weapon/clipboard,
-				/obj/item/weapon/coin,
+				/obj/item/towel, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/folder, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/coin, // CHOMPEdit - Removal of obj/item/weapon
 				/obj/item/clothing/ears, //chompstation addition end
 				/obj/item/roulette_ball,
 				/obj/item/pizzabox

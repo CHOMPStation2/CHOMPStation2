@@ -180,112 +180,112 @@
 /datum/gear_disp/casino_buried_reward
 	name = "Buried treasure"
 	to_spawn = list(
-					/obj/item/weapon/gun/energy/kinetic_accelerator/premiumka,
-					/obj/item/device/personal_shield_generator/belt/mining/loaded,
-					/obj/item/device/personal_shield_generator/belt/mining/loaded,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c1000
+					/obj/item/gun/energy/kinetic_accelerator/premiumka, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/personal_shield_generator/belt/mining/loaded, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/personal_shield_generator/belt/mining/loaded, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_disposals_reward
 	name = "Disposals maze"
 	to_spawn = list(
-					/obj/item/weapon/storage/backpack/holding/duffle,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c1000
+					/obj/item/storage/backpack/holding/duffle, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_engineer_loadout
 	name = "Engineer gear"
 	to_spawn = list(
-					/obj/item/weapon/card/id/casino,
-					/obj/item/weapon/casino_platinum_chip,
-					/obj/item/device/radio/headset/casino,
-					/obj/item/device/pda/bar,
-					/obj/item/weapon/book/codex/casino,
-					/obj/item/weapon/storage/wallet/casino,
-					/obj/item/device/flash,
+					/obj/item/card/id/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/casino_platinum_chip, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/radio/headset/casino, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/pda/bar, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/book/codex/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/storage/wallet/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
 					/obj/item/clothing/accessory/armband/engine,
-					/obj/item/weapon/rcd/advanced/loaded,
-					/obj/item/weapon/rcd_ammo/large,
-					/obj/item/weapon/rcd_ammo/large,
-					/obj/item/weapon/storage/belt/utility/chief/full,
-					/obj/item/weapon/spacecasinocash/c1000,
-					/obj/item/weapon/spacecasinocash/c500,
+					/obj/item/rcd/advanced/loaded, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/rcd_ammo/large, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/rcd_ammo/large, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/storage/belt/utility/chief/full, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c500, // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_gosling_loadout
 	name = "Gosling gear"
 	to_spawn = list(
-					/obj/item/weapon/card/id/casino,
-					/obj/item/weapon/casino_platinum_chip,
-					/obj/item/device/radio/headset/casino,
-					/obj/item/device/pda/bar,
-					/obj/item/weapon/book/codex/casino,
-					/obj/item/weapon/storage/wallet/casino,
-					/obj/item/device/flash,
+					/obj/item/card/id/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/casino_platinum_chip, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/radio/headset/casino, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/pda/bar, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/book/codex/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/storage/wallet/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
 					/obj/item/modular_computer/tablet/preset/custom_loadout/hybrid,
-					/obj/item/weapon/spacecasinocash/c1000,
-					/obj/item/weapon/spacecasinocash/c500
+					/obj/item/spacecasinocash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c500 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_ice_reward
 	name = "Ice maze"
 	to_spawn = list(
-					/obj/item/device/flashlight/slime,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c500
+					/obj/item/flashlight/slime, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c500 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_kururak_reward
 	name = "Kururak"
 	to_spawn = list(
-					/obj/item/weapon/reagent_containers/pill/healing_nanites,
+					/obj/item/reagent_containers/pill/healing_nanites, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/item/stack/nanopaste/advanced,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c200
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c200 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_medical_loadout
 	name = "Medical gear"
 	to_spawn = list(
-					/obj/item/weapon/card/id/casino,
-					/obj/item/weapon/casino_platinum_chip,
-					/obj/item/device/radio/headset/casino,
-					/obj/item/device/pda/bar,
-					/obj/item/weapon/book/codex/casino,
-					/obj/item/weapon/storage/wallet/casino,
-					/obj/item/device/flash,
+					/obj/item/card/id/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/casino_platinum_chip, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/radio/headset/casino, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/pda/bar, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/book/codex/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/storage/wallet/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
 					/obj/item/clothing/accessory/armband/medblue,
 					/obj/item/clothing/accessory/holster/hip,
-					/obj/item/weapon/gun/projectile/cell_loaded/medical,
+					/obj/item/gun/projectile/cell_loaded/medical, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/item/ammo_magazine/cell_mag/medical/advanced,
-					/obj/item/weapon/storage/belt/medical/holding,
-					/obj/item/weapon/spacecasinocash/c1000,
-					/obj/item/weapon/spacecasinocash/c500
+					/obj/item/storage/belt/medical/holding, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c500 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_otie_reward
 	name = "Otie"
 	to_spawn = list(
-					/obj/item/weapon/grenade/spawnergrenade/casino/otie,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c500,
-					/obj/item/weapon/spacecash/c200
+					/obj/item/grenade/spawnergrenade/casino/otie, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c500, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c200 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_patron_loadout
 	name = "Patron gear"
 	to_spawn = list(
-					/obj/item/weapon/book/codex/casino,
-					/obj/item/weapon/storage/wallet/casino,
-					/obj/item/weapon/spacecasinocash/c1,
+					/obj/item/book/codex/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/storage/wallet/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c1, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/structure/event/present,
 					/obj/item/toy/nanotrasenballoon,
-					/obj/item/weapon/pen/chameleon,
-					/obj/item/device/chameleon,
+					/obj/item/pen/chameleon, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/chameleon, // CHOMPEdit - Removal of obj/item/device
 					/obj/item/capture_crystal/basic
 					)
 
@@ -293,65 +293,65 @@
 	name = "Predator gear"
 	to_spawn = list(
 					/obj/item/clothing/shoes/boots/speed,
-					/obj/item/weapon/gun/energy/netgun,
+					/obj/item/gun/energy/netgun, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/item/clothing/accessory/poncho/thermal/red,
 					/obj/item/clothing/suit/space/void/autolok,
-					/obj/item/weapon/storage/pill_bottle/healing_nanites,
-					/obj/item/weapon/tank/emergency/oxygen/double,
-					/obj/item/device/perfect_tele/frontier/unknown/one,
-					/obj/item/weapon/cell/device/weapon/recharge
+					/obj/item/storage/pill_bottle/healing_nanites, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/tank/emergency/oxygen/double, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/perfect_tele/frontier/unknown/one, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/cell/device/weapon/recharge // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_reception_loadout
 	name = "Reception gear"
 	to_spawn = list(
-					/obj/item/weapon/card/id/casino/both,
-					/obj/item/weapon/casino_platinum_chip,
-					/obj/item/device/radio/headset/casino,
-					/obj/item/device/pda/bar,
-					/obj/item/weapon/book/codex/casino,
-					/obj/item/weapon/storage/wallet/casino,
-					/obj/item/device/flash,
+					/obj/item/card/id/casino/both, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/casino_platinum_chip, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/radio/headset/casino, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/pda/bar, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/book/codex/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/storage/wallet/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
 					/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
-					/obj/item/weapon/spacecasinocash/c1000,
-					/obj/item/weapon/spacecasinocash/c500
+					/obj/item/spacecasinocash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c500 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_sand_reward
 	name = "Sand maze"
 	to_spawn = list(
 					/obj/item/clothing/shoes/bhop,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c1000
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_security_loadout
 	name = "Security gear"
 	to_spawn = list(
-					/obj/item/weapon/card/id/casino,
-					/obj/item/weapon/casino_platinum_chip,
-					/obj/item/device/radio/headset/casino,
-					/obj/item/device/pda/bar,
-					/obj/item/weapon/book/codex/casino,
-					/obj/item/weapon/storage/wallet/casino,
-					/obj/item/device/flash,
+					/obj/item/card/id/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/casino_platinum_chip, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/radio/headset/casino, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/pda/bar, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/book/codex/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/storage/wallet/casino, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
 					/obj/item/clothing/accessory/armband,
 					/obj/item/clothing/accessory/holster/hip/black,
-					/obj/item/weapon/gun/projectile/cell_loaded/combat/prototype,
+					/obj/item/gun/projectile/cell_loaded/combat/prototype, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/item/ammo_magazine/cell_mag/advanced,
-					/obj/item/weapon/storage/belt/security/tactical,
-					/obj/item/weapon/spacecasinocash/c1000,
-					/obj/item/weapon/spacecasinocash/c500
+					/obj/item/storage/belt/security/tactical, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecasinocash/c500 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_spider_reward
 	name = "Spider"
 	to_spawn = list(
-					/obj/item/device/mapping_unit,
+					/obj/item/mapping_unit, // CHOMPEdit - Removal of obj/item/device
 					/obj/item/clothing/gloves/ring/buzzer/toy,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c500
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c500 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 
@@ -360,17 +360,17 @@
 	to_spawn = list(
 					/obj/item/organ/internal/stomach,
 					/obj/item/clothing/accessory/pride/vore,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c1000
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 /datum/gear_disp/casino_wizard_reward
 	name = "Wizard"
 	to_spawn = list(
-					/obj/item/weapon/spellbook/oneuse/smoke,
-					/obj/item/weapon/spacecash/c1000,
-					/obj/item/weapon/spacecash/c500,
-					/obj/item/weapon/spacecash/c200
+					/obj/item/spellbook/oneuse/smoke, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c1000, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c500, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/spacecash/c200 // CHOMPEdit - Removal of obj/item/weapon
 					)
 
 // Gear dispensers

@@ -53,13 +53,13 @@
 	icon_override = 'icons/vore/axisrus_yw.dmi'
 	item_state = "soldiersuit_mob"
 	blood_overlay_type = "coat"
-	allowed = list(/obj/item/weapon/gun/energy,
-					/obj/item/weapon/reagent_containers/spray/pepper,
-					/obj/item/weapon/gun/projectile,
+	allowed = list(/obj/item/gun/energy, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/gun/projectile, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/item/ammo_magazine,
 					/obj/item/ammo_casing,
-					/obj/item/weapon/melee/baton,
-					/obj/item/weapon/handcuffs)
+					/obj/item/melee/baton, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/handcuffs) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/item/clothing/suit/storage/labcoat/fluff/zeke_vincir_3/axis/officer
 	name = "Officer's Waffenrock"

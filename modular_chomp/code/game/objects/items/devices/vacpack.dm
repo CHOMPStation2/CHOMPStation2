@@ -1,5 +1,5 @@
 //Vac attachment
-/obj/item/device/vac_attachment
+/obj/item/vac_attachment // CHOMPEdit - Removal of obj/item/device
 	name = "\improper Vac-Pack attachment"
 	desc = "Useful for slurping mess off the floors. Even things and stuff depending on settings. Can be connected to a trash bag or vore belly. On-mob sprites can be toggled via verb in Objects tab."
 	icon = 'modular_chomp/icons/mob/vacpack.dmi'
@@ -22,11 +22,11 @@
 			)
 	var/vac_owner = null
 
-/obj/item/device/vac_attachment/New()
+/obj/item/vac_attachment/New() // CHOMPEdit - Removal of obj/item/device
 	..()
 	flags |= NOBLUDGEON //No more attack messages
 
-/obj/item/device/vac_attachment/attack_self(mob/living/user)
+/obj/item/vac_attachment/attack_self(mob/living/user) // CHOMPEdit - Removal of obj/item/device
 	var/set_input = null
 	if(!output_dest)
 		set_input = "output destination"
@@ -45,8 +45,8 @@
 				if("Borg Belly")
 					if(isrobot(user))
 						var/mob/living/silicon/robot/R = user
-						var/obj/item/weapon/robot_module/M = R.module
-						for(var/obj/item/device/dogborg/sleeper/S in M.modules)
+						var/obj/item/robot_module/M = R.module // CHOMPEdit - Removal of obj/item/weapon
+						for(var/obj/item/dogborg/sleeper/S in M.modules) // CHOMPEdit - Removal of obj/item/device
 							if(istype(S))
 								output_dest = S
 								return
@@ -54,12 +54,12 @@
 				if("Trash Bag")
 					if(isrobot(user))
 						var/mob/living/silicon/robot/R = user
-						var/obj/item/weapon/robot_module/M = R.module
-						for(var/obj/item/weapon/storage/bag/trash/T in M.modules)
+						var/obj/item/robot_module/M = R.module // CHOMPEdit - Removal of obj/item/weapon
+						for(var/obj/item/storage/bag/trash/T in M.modules) // CHOMPEdit - Removal of obj/item/weapon
 							if(istype(T))
 								output_dest = T
 								return
-					for(var/obj/item/weapon/storage/bag/trash/T in user.contents)
+					for(var/obj/item/storage/bag/trash/T in user.contents) // CHOMPEdit - Removal of obj/item/weapon
 						if(istype(T))
 							output_dest = T
 							return
@@ -72,26 +72,26 @@
 			vac_power = vac_settings[set_input]
 			icon_state = "sucker-[vac_power]"
 
-/obj/item/device/vac_attachment/afterattack(atom/target, mob/living/user, proximity)
+/obj/item/vac_attachment/afterattack(atom/target, mob/living/user, proximity) // CHOMPEdit - Removal of obj/item/device
 	if(vac_power < 1)
 		return
 	if(!proximity)
 		return
 	if(!output_dest)
 		return
-	if(istype(output_dest,/obj/item/weapon/storage/bag/trash))
+	if(istype(output_dest,/obj/item/storage/bag/trash)) // CHOMPEdit - Removal of obj/item/weapon
 		if(get_turf(output_dest) != get_turf(user))
 			vac_power = 0
 			icon_state = "sucker-0"
 			output_dest = null
 			to_chat(user, "<span class='warning'>Trash bag not found. Shutting down.</span>")
 			return
-		var/obj/item/weapon/storage/bag/trash/B = output_dest
+		var/obj/item/storage/bag/trash/B = output_dest // CHOMPEdit - Removal of obj/item/weapon
 		if(LAZYLEN(B.contents) >= B.max_storage_space) //A bit more lenient than the w_class system to avoid complicated spaghetti.
 			to_chat(user, "<span class='warning'>Trash bag full. Empty trash bag contents to continue.</span>")
 			return
-	if(istype(output_dest,/obj/item/device/dogborg/sleeper))
-		var/obj/item/device/dogborg/sleeper/B = output_dest
+	if(istype(output_dest,/obj/item/dogborg/sleeper)) // CHOMPEdit - Removal of obj/item/device
+		var/obj/item/dogborg/sleeper/B = output_dest // CHOMPEdit - Removal of obj/item/device
 		if(LAZYLEN(B.contents) >= B.max_item_count)
 			to_chat(user, "<span class='warning'>[B.name] full. Empty or process contents to continue.</span>")
 			return
@@ -181,8 +181,8 @@
 						B.owner_adjust_nutrition(1)
 					qdel(F)
 					continue
-				if(istype(output_dest,/obj/item/weapon/storage/bag/trash))
-					var/obj/item/weapon/storage/bag/trash/B = output_dest
+				if(istype(output_dest,/obj/item/storage/bag/trash)) // CHOMPEdit - Removal of obj/item/weapon
+					var/obj/item/storage/bag/trash/B = output_dest // CHOMPEdit - Removal of obj/item/weapon
 					if(LAZYLEN(B.contents) >= B.max_storage_space)
 						to_chat(user, "<span class='warning'>Trash bag full. Empty trash bag contents to continue.</span>")
 						return
@@ -256,25 +256,25 @@
 				L.forceMove(output_dest)
 	return
 
-/obj/item/device/vac_attachment/resolve_attackby(atom/A, mob/user, var/attack_modifier = 1, var/click_parameters)
+/obj/item/vac_attachment/resolve_attackby(atom/A, mob/user, var/attack_modifier = 1, var/click_parameters) // CHOMPEdit - Removal of obj/item/device
 	if(istype(A,/obj/structure) && vac_power > 0)
 		afterattack(A.loc, user, click_parameters)
 		return TRUE
 	return ..()
 
-/obj/item/device/vac_attachment/pickup(mob/user)
+/obj/item/vac_attachment/pickup(mob/user) // CHOMPEdit - Removal of obj/item/device
 	.=..()
 	icon_state = "sucker-[vac_power]"
 
-/obj/item/device/vac_attachment/equipped()
+/obj/item/vac_attachment/equipped() // CHOMPEdit - Removal of obj/item/device
 	.=..()
 	icon_state = "sucker-[vac_power]"
 
-/obj/item/device/vac_attachment/dropped(mob/user as mob)
+/obj/item/vac_attachment/dropped(mob/user as mob) // CHOMPEdit - Removal of obj/item/device
 	.=..()
 	icon_state = "sucker_drop"
 
-/obj/item/device/vac_attachment/verb/hide_pack()
+/obj/item/vac_attachment/verb/hide_pack() // CHOMPEdit - Removal of obj/item/device
 	set name = "Toggle Vac-Pack Sprites"
 	set desc = "Toggle Vac-Pack sprite visibility"
 	set category = "Object"
@@ -288,9 +288,9 @@
 	usr.update_inv_r_hand()
 	usr.update_inv_l_hand()
 
-/obj/item/weapon/storage/Entered(atom/movable/thing, atom/OldLoc) //Holder the mob so they don't get stuck in trashbags etc.
+/obj/item/storage/Entered(atom/movable/thing, atom/OldLoc) //Holder the mob so they don't get stuck in trashbags etc. // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(isliving(thing))
 		var/mob/living/L = thing
-		var/mob_holder_type = L.holder_type || /obj/item/weapon/holder
+		var/mob_holder_type = L.holder_type || /obj/item/holder // CHOMPEdit - Removal of obj/item/weapon
 		new mob_holder_type(src, L)

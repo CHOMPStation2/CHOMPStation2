@@ -286,7 +286,7 @@
 	var/client_missing = 0		//How long the client has been missing
 	universal_understand = TRUE
 
-	var/obj/item/device/nif/nif
+	var/obj/item/nif/nif // CHOMPEdit - Removal of obj/item/device
 	var/datum/nifsoft/soulcatcher/soulcatcher
 	var/identifying_gender
 

@@ -1,7 +1,7 @@
 var/list/holder_mob_icon_cache = list()
 
 //Helper object for picking dionaea (and other creatures) up.
-/obj/item/weapon/holder
+/obj/item/holder // CHOMPEdit - Removal of obj/item/weapon
 	name = "holder"
 	desc = "You shouldn't ever see this."
 	icon = 'icons/obj/objects.dmi'
@@ -26,7 +26,7 @@ var/list/holder_mob_icon_cache = list()
 	var/matrix/original_transform
 	var/original_vis_flags = NONE
 
-/obj/item/weapon/holder/Initialize(mapload, mob/held)
+/obj/item/holder/Initialize(mapload, mob/held) // CHOMPEdit - Removal of obj/item/weapon
 	ASSERT(ismob(held))
 	. = ..()
 	held.forceMove(src)
@@ -36,9 +36,9 @@ var/list/holder_mob_icon_cache = list()
 //CHOMPEdit Start - Add status so that you can see where you are...
 /mob/living/get_status_tab_items()
 	. = ..()
-	if(. && istype(loc, /obj/item/weapon/holder))
+	if(. && istype(loc, /obj/item/holder)) // CHOMPEdit - Removal of obj/item/weapon
 		var/location = ""
-		var/obj/item/weapon/holder/H = loc
+		var/obj/item/holder/H = loc // CHOMPEdit - Removal of obj/item/weapon
 		if(ishuman(H.loc))
 			var/mob/living/carbon/human/HH = H.loc
 			if(HH.l_hand == H)
@@ -70,7 +70,7 @@ var/list/holder_mob_icon_cache = list()
 			. += "Location: [location]"
 //CHOMPEdit End
 
-/obj/item/weapon/holder/Entered(mob/held, atom/OldLoc)
+/obj/item/holder/Entered(mob/held, atom/OldLoc) // CHOMPEdit - Removal of obj/item/weapon
 	if(held_mob)
 		held.forceMove(get_turf(src))
 		held.reset_view(null)
@@ -85,7 +85,7 @@ var/list/holder_mob_icon_cache = list()
 	original_transform = held.transform
 	held.transform = null
 
-/obj/item/weapon/holder/Exited(atom/movable/thing, atom/OldLoc)
+/obj/item/holder/Exited(atom/movable/thing, atom/OldLoc) // CHOMPEdit - Removal of obj/item/weapon
 	if(thing == held_mob)
 		held_mob.transform = original_transform
 		held_mob.update_transform() //VOREStation edit
@@ -93,7 +93,7 @@ var/list/holder_mob_icon_cache = list()
 		held_mob = null
 	..()
 
-/obj/item/weapon/holder/Destroy()
+/obj/item/holder/Destroy() // CHOMPEdit - Removal of obj/item/weapon
 	STOP_PROCESSING(SSobj, src)
 	if(held_mob)
 		dump_mob()
@@ -102,11 +102,11 @@ var/list/holder_mob_icon_cache = list()
 		M.drop_from_inventory(src, get_turf(src))
 	return ..()
 
-/obj/item/weapon/holder/process()
+/obj/item/holder/process() // CHOMPEdit - Removal of obj/item/weapon
 	if(held_mob?.loc != src || isturf(loc))
 		qdel(src)
 
-/obj/item/weapon/holder/proc/dump_mob()
+/obj/item/holder/proc/dump_mob() // CHOMPEdit - Removal of obj/item/weapon
 	if(!held_mob)
 		return
 	if (held_mob.loc == src || isnull(held_mob.loc)) //VOREStation edit
@@ -118,7 +118,7 @@ var/list/holder_mob_icon_cache = list()
 		held_mob = null
 	invisibility = INVISIBILITY_ABSTRACT //VOREStation edit
 
-/obj/item/weapon/holder/throw_at(atom/target, range, speed, thrower)
+/obj/item/holder/throw_at(atom/target, range, speed, thrower) // CHOMPEdit - Removal of obj/item/weapon
 	if(held_mob)
 		var/mob/localref = held_mob
 		dump_mob()
@@ -129,14 +129,14 @@ var/list/holder_mob_icon_cache = list()
 		var/mob_range = round(range * min(thrower_mob_size / localref.mob_size, 1))
 		localref.throw_at(target, mob_range, speed, thrower)
 
-/obj/item/weapon/holder/GetID()
+/obj/item/holder/GetID() // CHOMPEdit - Removal of obj/item/weapon
 	return held_mob?.GetIdCard()
 
-/obj/item/weapon/holder/GetAccess()
+/obj/item/holder/GetAccess() // CHOMPEdit - Removal of obj/item/weapon
 	var/obj/item/I = GetID()
 	return I?.GetAccess() || ..()
 
-/obj/item/weapon/holder/container_resist(mob/living/held)
+/obj/item/holder/container_resist(mob/living/held) // CHOMPEdit - Removal of obj/item/weapon
 	if(ismob(loc))
 		var/mob/M = loc
 		M.drop_from_inventory(src) // If it's another item, we can just continue existing, or if it's a turf we'll qdel() in Moved()
@@ -158,27 +158,27 @@ var/list/holder_mob_icon_cache = list()
 			I.on_holder_escape(src)
 
 //Mob specific holders.
-/obj/item/weapon/holder/diona
+/obj/item/holder/diona // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 5)
 	slot_flags = SLOT_HEAD | SLOT_OCLOTHING | SLOT_HOLSTER
 	item_state = "diona"
 
-/obj/item/weapon/holder/drone
+/obj/item/holder/drone // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 5)
 	item_state = "repairbot"
 
-/obj/item/weapon/holder/drone/swarm
+/obj/item/holder/drone/swarm // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_MAGNET = 6, TECH_ENGINEERING = 7, TECH_PRECURSOR = 2, TECH_ARCANE = 1)
 	item_state = "constructiondrone"
 
-/obj/item/weapon/holder/pai
+/obj/item/holder/pai // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_DATA = 2)
 
-/obj/item/weapon/holder/pai/Initialize(mapload, mob/held)
+/obj/item/holder/pai/Initialize(mapload, mob/held) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	item_state = held.icon_state
 
-/obj/item/weapon/holder/mouse
+/obj/item/holder/mouse // CHOMPEdit - Removal of obj/item/weapon
 	name = "mouse"
 	desc = "It's a small rodent."
 	item_state = "mouse_gray"
@@ -186,144 +186,144 @@ var/list/holder_mob_icon_cache = list()
 	origin_tech = list(TECH_BIO = 2)
 	w_class = ITEMSIZE_TINY
 
-/obj/item/weapon/holder/mouse/white
+/obj/item/holder/mouse/white // CHOMPEdit - Removal of obj/item/weapon
 	item_state = "mouse_white"
 
-/obj/item/weapon/holder/mouse/gray
+/obj/item/holder/mouse/gray // CHOMPEdit - Removal of obj/item/weapon
 	item_state = "mouse_gray"
 
-/obj/item/weapon/holder/mouse/brown
+/obj/item/holder/mouse/brown // CHOMPEdit - Removal of obj/item/weapon
 	item_state = "mouse_brown"
 
-/obj/item/weapon/holder/mouse/black
+/obj/item/holder/mouse/black // CHOMPEdit - Removal of obj/item/weapon
 	item_state = "mouse_black"
 
-/obj/item/weapon/holder/mouse/operative
+/obj/item/holder/mouse/operative // CHOMPEdit - Removal of obj/item/weapon
 	item_state = "mouse_operative"
 
-/obj/item/weapon/holder/mouse/rat
+/obj/item/holder/mouse/rat // CHOMPEdit - Removal of obj/item/weapon
 	item_state = "mouse_rat"
 
-/obj/item/weapon/holder/possum
+/obj/item/holder/possum // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "possum"
 
-/obj/item/weapon/holder/possum/poppy
+/obj/item/holder/possum/poppy // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 4)
 	item_state = "poppy"
 
-/obj/item/weapon/holder/cat
+/obj/item/holder/cat // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "cat"
 
-/obj/item/weapon/holder/cat/runtime
+/obj/item/holder/cat/runtime // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/holder/fennec
+/obj/item/holder/fennec // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 
-/obj/item/weapon/holder/cat/runtime
+/obj/item/holder/cat/runtime // CHOMPEdit - Removal of obj/item/weapon
 
 	origin_tech = list(TECH_BIO = 2, TECH_DATA = 4)
 
-/obj/item/weapon/holder/cat/cak
+/obj/item/holder/cat/cak // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "cak"
 
-/obj/item/weapon/holder/cat/bluespace
+/obj/item/holder/cat/bluespace // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2, TECH_BLUESPACE = 6)
 	item_state = "bscat"
 
-/obj/item/weapon/holder/cat/spacecat
+/obj/item/holder/cat/spacecat // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2, TECH_MATERIAL = 4)
 	item_state = "spacecat"
 
-/obj/item/weapon/holder/cat/original
+/obj/item/holder/cat/original // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2, TECH_BLUESPACE = 4)
 	item_state = "original"
 
-/obj/item/weapon/holder/cat/breadcat
+/obj/item/holder/cat/breadcat // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "breadcat"
 
-/obj/item/weapon/holder/corgi
+/obj/item/holder/corgi // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "corgi"
 
-/obj/item/weapon/holder/lisa
+/obj/item/holder/lisa // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "lisa"
 
-/obj/item/weapon/holder/old_corgi
+/obj/item/holder/old_corgi // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "old_corgi"
 
-/obj/item/weapon/holder/void_puppy
+/obj/item/holder/void_puppy // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2, TECH_BLUESPACE = 3)
 	item_state = "void_puppy"
 
-/obj/item/weapon/holder/narsian
+/obj/item/holder/narsian // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2, TECH_ILLEGAL = 3)
 	item_state = "narsian"
 
-/obj/item/weapon/holder/bullterrier
+/obj/item/holder/bullterrier // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "bullterrier"
 
-/obj/item/weapon/holder/fox
+/obj/item/holder/fox // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "fox"
 
-/obj/item/weapon/holder/pug
+/obj/item/holder/pug // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "pug"
 
-/obj/item/weapon/holder/sloth
+/obj/item/holder/sloth // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 2)
 	item_state = "sloth"
 
-/obj/item/weapon/holder/borer
+/obj/item/holder/borer // CHOMPEdit - Removal of obj/item/weapon
 	origin_tech = list(TECH_BIO = 6)
 	item_state = "brainslug"
 
-/obj/item/weapon/holder/leech
+/obj/item/holder/leech // CHOMPEdit - Removal of obj/item/weapon
 	color = "#003366"
 	origin_tech = list(TECH_BIO = 5, TECH_PHORON = 2)
 
-/obj/item/weapon/holder/cat/fluff/tabiranth
+/obj/item/holder/cat/fluff/tabiranth // CHOMPEdit - Removal of obj/item/weapon
 	name = "Spirit"
 	desc = "A small, inquisitive feline, who constantly seems to investigate his surroundings."
 	gender = MALE
 	icon_state = "kitten"
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/weapon/holder/cat/kitten
+/obj/item/holder/cat/kitten // CHOMPEdit - Removal of obj/item/weapon
 	icon_state = "kitten"
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/weapon/holder/cat/fluff/bones
+/obj/item/holder/cat/fluff/bones // CHOMPEdit - Removal of obj/item/weapon
 	name = "Bones"
 	desc = "It's Bones! Meow."
 	gender = MALE
 	icon_state = "cat3"
 
-/obj/item/weapon/holder/bird
+/obj/item/holder/bird // CHOMPEdit - Removal of obj/item/weapon
 	name = "bird"
 	desc = "It's a bird!"
 	icon_state = null
 	item_icons = null
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/weapon/holder/bird/Initialize()
+/obj/item/holder/bird/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	held_mob?.lay_down()
 
-/obj/item/weapon/holder/fish
+/obj/item/holder/fish // CHOMPEdit - Removal of obj/item/weapon
 	attack_verb = list("fished", "disrespected", "smacked", "smackereled")
 	hitsound = 'sound/effects/slime_squish.ogg'
 	slot_flags = SLOT_HOLSTER
 	origin_tech = list(TECH_BIO = 3)
 
-/obj/item/weapon/holder/fish/afterattack(var/atom/target, var/mob/living/user, proximity)
+/obj/item/holder/fish/afterattack(var/atom/target, var/mob/living/user, proximity) // CHOMPEdit - Removal of obj/item/weapon
 	if(!target)
 		return
 	if(!proximity)
@@ -333,7 +333,7 @@ var/list/holder_mob_icon_cache = list()
 		if(prob(10))
 			L.Stun(2)
 
-/obj/item/weapon/holder/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/holder/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	//CHOMPADDITION: MicroHandCrush
 	if(W == src && user.a_intent == I_HURT)
 		for(var/mob/living/M in src.contents)
@@ -378,7 +378,7 @@ var/list/holder_mob_icon_cache = list()
 		return
 	//end YW edit
 
-	var/obj/item/weapon/holder/H = new holder_type(get_turf(src), src)
+	var/obj/item/holder/H = new holder_type(get_turf(src), src) // CHOMPEdit - Removal of obj/item/weapon
 	H.sync(src)	//CHOMPEdit - See modular_chomp/code/modules/mob/holder.dm for what this does
 	grabber.put_in_hands(H)
 
@@ -393,7 +393,7 @@ var/list/holder_mob_icon_cache = list()
 	add_attack_logs(grabber, H.held_mob, "Scooped up", FALSE) // Not important enough to notify admins, but still helpful.
 	return H
 
-/obj/item/weapon/holder/human
+/obj/item/holder/human // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/mob/holder_complex.dmi'
 	var/list/generate_for_slots = list(slot_l_hand_str, slot_r_hand_str, slot_back_str)
 	slot_flags = SLOT_BACK

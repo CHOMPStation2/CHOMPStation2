@@ -19,8 +19,8 @@
 	if(!ispath(critter, /mob/living/simple_mob))
 		return INITIALIZE_HINT_QDEL
 
-	var/obj/item/weapon/holder/critter_holder = initial(critter.holder_type)
-	if(!ispath(critter_holder, /obj/item/weapon/holder))
+	var/obj/item/holder/critter_holder = initial(critter.holder_type) // CHOMPEdit - Removal of obj/item/weapon
+	if(!ispath(critter_holder, /obj/item/holder)) // CHOMPEdit - Removal of obj/item/weapon
 		return INITIALIZE_HINT_QDEL
 
 	var/mob/M = loc
@@ -132,7 +132,7 @@
 	maxbodytemp = 323
 	universal_speak = FALSE
 	universal_understand = TRUE
-	holder_type = /obj/item/weapon/holder/possum
+	holder_type = /obj/item/holder/possum // CHOMPEdit - Removal of obj/item/weapon
 	mob_size = MOB_SMALL
 	can_pull_size = 2
 	can_pull_mobs = MOB_PULL_SMALLER
@@ -198,7 +198,7 @@
 	icon_rest = "poppy_dead"
 	tt_desc = "Didelphis astrum salutem"
 	organ_names = /decl/mob_organ_names/poppy
-	holder_type = /obj/item/weapon/holder/possum/poppy
+	holder_type = /obj/item/holder/possum/poppy // CHOMPEdit - Removal of obj/item/weapon
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/possum/poppy
 
 /decl/mob_organ_names/possum

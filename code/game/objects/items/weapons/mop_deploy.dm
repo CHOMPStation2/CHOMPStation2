@@ -1,4 +1,4 @@
-/obj/item/weapon/mop_deploy
+/obj/item/mop_deploy // CHOMPEdit - Removal of obj/item/weapon
 	name = "mop"
 	desc = "Deployable mop."
 	icon = 'icons/obj/janitor.dmi'
@@ -15,7 +15,7 @@
 	var/mopcount = 0
 
 
-/obj/item/weapon/mop_deploy/New()
+/obj/item/mop_deploy/New() // CHOMPEdit - Removal of obj/item/weapon
 	create_reagents(5)
 	START_PROCESSING(SSobj, src)
 
@@ -32,7 +32,7 @@
 	source.reagents.reaction(src, TOUCH, 10)	//10 is the multiplier for the reaction effect. probably needed to wet the floor properly.
 	source.reagents.remove_any(1)				//reaction() doesn't use up the reagents
 */
-/obj/item/weapon/mop_deploy/afterattack(atom/A, mob/user, proximity)
+/obj/item/mop_deploy/afterattack(atom/A, mob/user, proximity) // CHOMPEdit - Removal of obj/item/weapon
 	if(!proximity) return
 	if(istype(A, /turf) || istype(A, /obj/effect/decal/cleanable) || istype(A, /obj/effect/overlay) || istype(A, /obj/effect/rune))
 		user.visible_message("<span class='warning'>[user] begins to clean \the [get_turf(A)].</span>")
@@ -44,22 +44,22 @@
 			to_chat(user, "<span class='notice'>You have finished mopping!</span>")
 
 /obj/effect/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/weapon/mop_deploy) || istype(I, /obj/item/weapon/soap))
+	if(istype(I, /obj/item/mop_deploy) || istype(I, /obj/item/soap)) // CHOMPEdit - Removal of obj/item/weapon
 		return
 	..()
 
-/obj/item/weapon/mop_deploy/Destroy()
+/obj/item/mop_deploy/Destroy() // CHOMPEdit - Removal of obj/item/weapon
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
-/obj/item/weapon/mop_deploy/attack_self(mob/user as mob)
+/obj/item/mop_deploy/attack_self(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	user.drop_from_inventory(src)
 	spawn(1) if(!QDELETED(src)) qdel(src)
 
-/obj/item/weapon/mop_deploy/dropped()
+/obj/item/mop_deploy/dropped() // CHOMPEdit - Removal of obj/item/weapon
 	spawn(1) if(!QDELETED(src)) qdel(src)
 
-/obj/item/weapon/mop_deploy/process()
+/obj/item/mop_deploy/process() // CHOMPEdit - Removal of obj/item/weapon
 	if(!creator || loc != creator || !creator.item_is_in_hands(src))
 		// Tidy up a bit.
 		if(istype(loc,/mob/living))

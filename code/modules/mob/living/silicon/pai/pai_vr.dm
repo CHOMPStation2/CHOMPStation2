@@ -526,8 +526,8 @@
 		if(b.owner.client)
 			to_chat(b.owner, "<span class='filter_say cult'>[src.name]'s screen prints, \"[message]\"</span>")
 		else return
-	else if(istype(card.loc, /obj/item/device/pda))
-		var/obj/item/device/pda/p = card.loc
+	else if(istype(card.loc, /obj/item/pda)) // CHOMPEdit - Removal of obj/item/device
+		var/obj/item/pda/p = card.loc // CHOMPEdit - Removal of obj/item/device
 		if(isliving(p.loc))
 			var/mob/living/L = p.loc
 			if(L.client)

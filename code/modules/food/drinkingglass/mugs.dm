@@ -10,7 +10,7 @@
 /*
  * Britcup
  */
-/obj/item/weapon/reagent_containers/food/drinks/britcup
+/obj/item/reagent_containers/food/drinks/britcup // CHOMPEdit - Removal of obj/item/weapon
 	name = "cup"
 	desc = "A cup with the British flag emblazoned on it."
 	icon_state = "britcup"
@@ -18,13 +18,13 @@
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
 
-/obj/item/weapon/reagent_containers/food/drinks/britcup/on_reagent_change()
+/obj/item/reagent_containers/food/drinks/britcup/on_reagent_change() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
 /*
  * Text Mug
  */
-/obj/item/weapon/reagent_containers/food/drinks/textmug
+/obj/item/reagent_containers/food/drinks/textmug // CHOMPEdit - Removal of obj/item/weapon
 	name = "mug with text"
 	desc = "A mug with something written on it."
 	icon = 'icons/obj/drinks_vr.dmi'
@@ -36,7 +36,7 @@
 /*
  * Coffee Mugs
  */
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug // CHOMPEdit - Removal of obj/item/weapon
 	name = "coffee mug"
 	base_name = "mug"
 	desc = "A plain white coffee mug."
@@ -45,7 +45,7 @@
 	volume = 30
 	var/fillsource = "coffeecup"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/update_icon()
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	cut_overlays()
 
 	if(reagents.total_volume)
@@ -62,151 +62,151 @@
 		add_overlay(filling)
 
 // Government
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/sol
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/sol // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper SCG coffee mug"
 	desc = "A blue coffee mug emblazoned with the crest of the Solar Confederate Government."
 	base_icon = "coffeecup_sol"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/fleet
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/fleet // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper SCG Fleet coffee cup"
 	desc = "A coffee mug imprinted with the emblem of the Solar Confederate Fleet."
 	base_icon = "coffeecup_fleet"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/fivearrows
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/fivearrows // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Five Arrows coffee mug"
 	desc = "A coffee mug with the flag of the Five Arrows proudly displayed on it."
 	base_icon = "coffeecup_fivearrows"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/alma
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/alma // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Almach Association coffee cup"
 	desc = "A grey coffee cup emblazoned with the star of the Almach Association."
 	base_icon = "coffeecup_alma"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/almp
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/almp // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Almach Protectorate coffee cup"
 	desc = "A purple coffee cup emblazoned with the star of the Almach Protectorate."
 	base_icon = "coffeecup_almp"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/psc
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/psc // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Pearlshield coffee mug"
 	desc = "A coffee mug bearing the symbol of the Pearlshield Coalition."
 	base_icon = "coffeecup_psc"
 
 // Corporations
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/nt // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper NT coffee mug"
 	desc = "A blue NanoTrasen coffee mug."
 	base_icon = "coffeecup_NT"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/metal/wulf
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/metal/wulf // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Wulf Aeronautics coffee mug"
 	desc = "A metal coffee mug bearing the livery of Wulf Aeronautics."
 	base_icon = "coffeecup_wulf"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/gilthari
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/gilthari // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Gilthari Exports coffee mug"
 	desc = "A coffee mug bearing golden G of Gilthari Exports."
 	base_icon = "coffeecup_gilth"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/wt
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/wt // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Ward-Takahashi coffee mug"
 	desc = "A coffee mug in a geometric Ward-Takahashi design."
 	base_icon = "coffeecup_wt"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/aether
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/aether // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Aether Atmospherics coffee mug"
 	desc = "A coffee mug in Aether Atmospherics colours."
 	base_icon = "coffeecup_aether"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/zeng
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/zeng // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Zeng-Hu coffee cup"
 	desc = "A coffee cup bearing the Zeng-Hu logo."
 	base_icon = "coffeecup_zeng"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/bishop
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/bishop // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Bishop coffee mug"
 	desc = "A black coffee mug adorned with Bishop's logo."
 	base_icon = "coffeecup_bishop"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/oculum
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/oculum // CHOMPEdit - Removal of obj/item/weapon
 	name = "pawn coffee mug"
 	desc = "A black and blue coffee mug decorated with the logo of Oculum Broadcast."
 	base_icon = "coffeecup_oculum"
 
 /* //CHOMPedit
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/talon
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/talon // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Talon coffee mug"
 	desc = "A teal colored coffee mug with the Talon star logo on its face."
 	base_icon = "coffeecup_talon"
 */
 
 // Symbols, markings
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/one
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/one // CHOMPEdit - Removal of obj/item/weapon
 	name = "#1 coffee mug"
 	desc = "A white coffee mug, prominently featuring a #1."
 	base_icon = "coffeecup_one"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/puni
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/puni // CHOMPEdit - Removal of obj/item/weapon
 	name = "#1 monkey coffee mug"
 	desc = "A white coffee mug, prominently featuring a \"#1 monkey\" decal."
 	base_icon = "coffeecup_puni"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/heart
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/heart // CHOMPEdit - Removal of obj/item/weapon
 	name = "heart coffee mug"
 	desc = "A white coffee mug, it prominently features a red heart."
 	base_icon = "coffeecup_heart"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/pawn
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/pawn // CHOMPEdit - Removal of obj/item/weapon
 	name = "pawn coffee mug"
 	desc = "A black coffee mug adorned with the image of a red chess pawn."
 	base_icon = "coffeecup_pawn"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/diona
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/diona // CHOMPEdit - Removal of obj/item/weapon
 	name = "diona nymph coffee mug"
 	desc = "A green coffee mug featuring the image of a diona nymph."
 	base_icon = "coffeecup_diona"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/britcup
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/britcup // CHOMPEdit - Removal of obj/item/weapon
 	name = "british coffee mug"
 	desc = "A coffee mug with the British flag emblazoned on it."
 	base_icon = "coffeecup_brit"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/flame
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/flame // CHOMPEdit - Removal of obj/item/weapon
 	name = "flame coffee cup"
 	desc = "A coffee cup with the a flame emblazoned on it."
 	base_icon = "coffeecup_flame"
 
 // Pure colors & other
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/black
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/black // CHOMPEdit - Removal of obj/item/weapon
 	name = "black coffee mug"
 	desc = "A sleek black coffee mug."
 	base_icon = "coffeecup_black"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/green
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/green // CHOMPEdit - Removal of obj/item/weapon
 	name = "green coffee mug"
 	desc = "A pale green and pink coffee mug."
 	base_icon = "coffeecup_green"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/green/dark
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/green/dark // CHOMPEdit - Removal of obj/item/weapon
 	desc = "A dark green coffee mug."
 	base_icon = "coffeecup_corp"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/blue
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/blue // CHOMPEdit - Removal of obj/item/weapon
 	name = "blue coffee mug"
 	desc = "A blue coffee mug."
 	base_icon = "coffeecup_blue"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/rainbow
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/rainbow // CHOMPEdit - Removal of obj/item/weapon
 	name = "rainbow coffee mug"
 	desc = "A rainbow coffee mug. The colors are almost as blinding as a welder."
 	base_icon = "coffeecup_rainbow"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/metal
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/metal // CHOMPEdit - Removal of obj/item/weapon
 	name = "metal coffee mug"
 	desc = "A metal coffee mug. You're not sure which metal."
 	base_icon = "coffeecup_metal"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/glass
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/glass // CHOMPEdit - Removal of obj/item/weapon
 	name = "glass coffee mug"
 	desc = "A glass coffee mug, using space age technology to keep it cool for use."
 	base_icon = "glasscoffeecup"
@@ -215,7 +215,7 @@
 /*
  * Tall Mugs
  */
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/tall
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/tall // CHOMPEdit - Removal of obj/item/weapon
 	name = "tall coffee mug"
 	desc = "An unreasonably tall coffee mug, for when you really need to wake up in the morning."
 	icon = 'icons/obj/drinks_mugs_tall.dmi'
@@ -223,7 +223,7 @@
 	fillsource = "coffeecup_tall"
 	volume = 60
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/tall/update_icon()
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/tall/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	cut_overlays()
 
 	if(reagents.total_volume)
@@ -239,17 +239,17 @@
 		filling.color = reagents.get_color()
 		add_overlay(filling)
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/tall/black
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/tall/black // CHOMPEdit - Removal of obj/item/weapon
 	name = "tall black coffee mug"
 	desc = "An unreasonably tall coffee mug, for when you really need to wake up in the morning. This one is black."
 	base_icon = "coffeecup_tall_black"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/tall/metal
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/tall/metal // CHOMPEdit - Removal of obj/item/weapon
 	name = "tall metal coffee mug"
 	desc = "An unreasonably tall coffee mug, for when you really need to wake up in the morning. This one is made of metal."
 	base_icon = "coffeecup_tall_metal"
 
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/tall/rainbow
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/tall/rainbow // CHOMPEdit - Removal of obj/item/weapon
 	name = "tall rainbow coffee mug"
 	desc = "An unreasonably tall coffee mug, for when you really need to wake up in the morning. This one is rainbow colored."
 	base_icon = "coffeecup_tall_rainbow"

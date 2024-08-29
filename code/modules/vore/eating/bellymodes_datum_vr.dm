@@ -244,8 +244,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	for(var/E in touchable_atoms)
 		if(istype(E, /mob/observer))
 			continue
-		if(istype(E, /obj/item/weapon/storage/vore_egg)) // Don't egg other eggs.
-			var/obj/item/weapon/storage/vore_egg/EG = E
+		if(istype(E, /obj/item/storage/vore_egg)) // Don't egg other eggs. // CHOMPEdit - Removal of obj/item/weapon
+			var/obj/item/storage/vore_egg/EG = E // CHOMPEdit - Removal of obj/item/weapon
 			if(EG.egg_name != B.egg_name)
 				if(!B.egg_name)
 					EG.egg_name = null
@@ -292,11 +292,11 @@ GLOBAL_LIST_INIT(digest_modes, list())
 				I.forceMove(B.ownegg)
 			if(isliving(C))
 				var/mob/living/M = C
-				var/mob_holder_type = M.holder_type || /obj/item/weapon/holder
+				var/mob_holder_type = M.holder_type || /obj/item/holder // CHOMPEdit - Removal of obj/item/weapon
 				B.ownegg.w_class += M.size_multiplier * 4 //Egg size and weight scaled to match occupant.
 				if(M.size_multiplier > scale_clamp)
 					scale_clamp = M.size_multiplier
-				var/obj/item/weapon/holder/H = new mob_holder_type(B.ownegg, M)
+				var/obj/item/holder/H = new mob_holder_type(B.ownegg, M) // CHOMPEdit - Removal of obj/item/weapon
 				B.ownegg.max_storage_space = H.w_class
 				//B.ownegg.icon_scale_x = 0.25 * B.ownegg.w_class
 				//B.ownegg.icon_scale_y = 0.25 * B.ownegg.w_class

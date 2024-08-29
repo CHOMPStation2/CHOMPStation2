@@ -30,14 +30,14 @@ GLOBAL_LIST_INIT(generic_fishing_junk_list, list(
 		))
 
 GLOBAL_LIST_INIT(generic_fishing_pool_list, list(
-		/obj/item/weapon/bikehorn/rubberducky = 5,
+		/obj/item/bikehorn/rubberducky = 5, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/toy/plushie/carp = 20,
 		/obj/random/junk = 80,
 		/obj/random/trash = 80,
-		/obj/item/weapon/spacecash/c1 = 10,
-		/obj/item/weapon/spacecash/c5 = 3,
-		/obj/item/weapon/spacecash/c10 = 2,
-		/obj/item/weapon/spacecash/c100 = 1
+		/obj/item/spacecash/c1 = 10, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c5 = 3, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c10 = 2, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c100 = 1 // CHOMPEdit - Removal of obj/item/weapon
 		))
 
 #define FISHING_RARE     "rare"
@@ -119,10 +119,10 @@ GLOBAL_LIST_INIT(generic_fishing_chance_list, list(FISHING_RARE = 5, FISHING_UNC
 	else
 		fish_type = null
 
-/turf/simulated/floor/water/attackby(obj/item/weapon/P as obj, mob/user as mob)
+/turf/simulated/floor/water/attackby(obj/item/P as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 //If you use a fishing rod on an open body of water that var/has_fish enabled
-	if(istype(P, /obj/item/weapon/material/fishing_rod) && !being_fished)
-		var/obj/item/weapon/material/fishing_rod/R = P
+	if(istype(P, /obj/item/material/fishing_rod) && !being_fished) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/material/fishing_rod/R = P // CHOMPEdit - Removal of obj/item/weapon
 		if(!R.strung)
 			to_chat(user, "<span class='notice'>It is hard to go fishing without any line!</span>")
 			return

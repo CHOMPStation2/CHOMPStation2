@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/energy/particle //base gun, similar stats to an egun
+/obj/item/gun/energy/particle //base gun, similar stats to an egun // CHOMPEdit - Removal of obj/item/weapon
 	name = "Anti-particle projector pistol"
 	icon = 'icons/obj/gun.dmi' // CHOMPStation Edit: Override back to base gun.dmi
 	icon_state = "ppistol"
@@ -24,7 +24,7 @@
 	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
 
-/obj/item/weapon/gun/energy/particle/advanced //particle equivalent of AEG
+/obj/item/gun/energy/particle/advanced //particle equivalent of AEG // CHOMPEdit - Removal of obj/item/weapon
 	name = "Advanced anti-particle rifle"
 	icon_state = "particle"
 	item_state = "particle"
@@ -40,7 +40,7 @@
 	recharge_time = 6 // every 6 ticks, recharge 2 shots. Slightly slower than AEG.
 	charge_delay = 10 //Starts recharging faster after firing than an AEG though.
 
-/obj/item/weapon/gun/energy/particle/cannon //particle version of laser cannon
+/obj/item/gun/energy/particle/cannon //particle version of laser cannon // CHOMPEdit - Removal of obj/item/weapon
 	name = "Anti-particle cannon"
 	desc = "A giant beast of an antimatter gun, packed with an internal reactor to allow for extreme longevity on remote mining expeditions."
 	icon_state = "heavyparticle"
@@ -62,7 +62,7 @@
 
 //special behaviours for particle guns below
 
-/obj/item/weapon/gun/energy/particle/special_check(var/mob/user)
+/obj/item/gun/energy/particle/special_check(var/mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if (..())
 		var/turf/T = get_turf(src)
 		var/datum/gas_mixture/environment = T ? T.return_air() : null
@@ -84,7 +84,7 @@
 		return 1
 	return 0
 
-/obj/item/weapon/gun/energy/particle/proc/pressuremalfunction(severity, var/mob/user, var/turf/T)
+/obj/item/gun/energy/particle/proc/pressuremalfunction(severity, var/mob/user, var/turf/T) // CHOMPEdit - Removal of obj/item/weapon
 	if (severity <= 10) // just doesn't fire. 10% chance in 100 atmo.
 		user.visible_message("<span class='warning'>*click*</span>", "<span class='danger'>\The [src] jams.</span>")
 		playsound(src, 'sound/weapons/empty.ogg', 100, 1)
@@ -126,11 +126,11 @@
 		explosion(T, -1, 1, 2, 2)
 		qdel(src)
 
-/obj/item/weapon/gun/energy/particle/cannon/pressuremalfunction(severity, user, T)
+/obj/item/gun/energy/particle/cannon/pressuremalfunction(severity, user, T) // CHOMPEdit - Removal of obj/item/weapon
 	..(severity*2, user, T)
 
 
-/obj/item/weapon/gun/energy/particle/attackby(var/obj/item/A as obj, mob/user as mob)
+/obj/item/gun/energy/particle/attackby(var/obj/item/A as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(istype(A, /obj/item/pressurelock))
 		if(safetycatch)
 			to_chat(user, "<span class='notice'>\The [src] already has a [attached_safety].</span>")
@@ -142,7 +142,7 @@
 		safetycatch = 1
 		return
 
-	if(istype(A, /obj/item/weapon/tool/screwdriver))
+	if(istype(A, /obj/item/tool/screwdriver)) // CHOMPEdit - Removal of obj/item/weapon
 		if(safetycatch && attached_safety)
 			to_chat(user, "<span class='notice'>You begin removing \the [attached_safety] from \the [src].</span>")
 			if(do_after(user, 25))

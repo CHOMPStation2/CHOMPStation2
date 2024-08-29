@@ -1,10 +1,10 @@
 //Vorestation universal translator implant.
 
-/obj/item/weapon/implanter/vrlanguage
+/obj/item/implanter/vrlanguage // CHOMPEdit - Removal of obj/item/weapon
 	name = "implanter-language"
 
-/obj/item/weapon/implanter/vrlanguage/New()
-	src.imp = new /obj/item/weapon/implant/vrlanguage( src )
+/obj/item/implanter/vrlanguage/New() // CHOMPEdit - Removal of obj/item/weapon
+	src.imp = new /obj/item/implant/vrlanguage( src ) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	update()
 	return

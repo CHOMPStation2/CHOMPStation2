@@ -7,7 +7,7 @@
 	cost = 0
 /*
 /datum/gear/fluff/testhorn
-	path = /obj/item/weapon/bikehorn
+	path = /obj/item/bikehorn // CHOMPEdit - Removal of obj/item/weapon
 	display_name = "Airhorn - Example Item"
 	description = "An example item that you probably shouldn't see!"
 	ckeywhitelist = list("mewchild")

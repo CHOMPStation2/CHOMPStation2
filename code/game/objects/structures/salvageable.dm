@@ -35,25 +35,25 @@
 	name = "broken machine"
 	icon_state = "machine1"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 80,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40,
-		/obj/item/weapon/stock_parts/manipulator = 40,
-		/obj/item/weapon/stock_parts/manipulator = 40,
-		/obj/item/weapon/stock_parts/micro_laser = 40,
-		/obj/item/weapon/stock_parts/micro_laser = 40,
-		/obj/item/weapon/stock_parts/matter_bin = 40,
-		/obj/item/weapon/stock_parts/matter_bin = 40,
-		/obj/item/weapon/stock_parts/capacitor/adv = 20,
-		/obj/item/weapon/stock_parts/scanning_module/adv = 20,
-		/obj/item/weapon/stock_parts/manipulator/nano = 20,
-		/obj/item/weapon/stock_parts/micro_laser/high = 20,
-		/obj/item/weapon/stock_parts/matter_bin/adv = 20
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor/adv = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module/adv = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator/nano = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser/high = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin/adv = 20 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/machine/Initialize()
@@ -64,21 +64,21 @@
 	name = "broken computer"
 	icon_state = "computer0"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/computer_hardware/network_card = 40,
-		/obj/item/weapon/computer_hardware/network_card = 40,
-		/obj/item/weapon/computer_hardware/processor_unit = 40,
-		/obj/item/weapon/computer_hardware/processor_unit = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/stock_parts/capacitor/adv = 30,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 20
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor/adv = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 20 // CHOMPEdit - Removal of obj/item/weapon
 	)
 /obj/structure/salvageable/computer/Initialize()
 	. = ..()
@@ -88,25 +88,25 @@
 	name = "broken autolathe"
 	icon_state = "autolathe"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 80,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40,
-		/obj/item/weapon/stock_parts/manipulator = 40,
-		/obj/item/weapon/stock_parts/micro_laser = 40,
-		/obj/item/weapon/stock_parts/micro_laser = 40,
-		/obj/item/weapon/stock_parts/micro_laser = 40,
-		/obj/item/weapon/stock_parts/matter_bin = 40,
-		/obj/item/weapon/stock_parts/matter_bin = 40,
-		/obj/item/weapon/stock_parts/matter_bin = 40,
-		/obj/item/weapon/stock_parts/matter_bin = 40,
-		/obj/item/weapon/stock_parts/capacitor/adv = 20,
-		/obj/item/weapon/stock_parts/micro_laser/high = 20,
-		/obj/item/weapon/stock_parts/micro_laser/high = 20,
-		/obj/item/weapon/stock_parts/matter_bin/adv = 20,
-		/obj/item/weapon/stock_parts/matter_bin/adv = 20,
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor/adv = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser/high = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser/high = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin/adv = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin/adv = 20, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/material/steel{amount = 20} = 40,
 		/obj/item/stack/material/glass{amount = 20} = 40,
 		/obj/item/stack/material/plastic{amount = 20} = 40,
@@ -120,17 +120,17 @@
 	name = "old container"
 	icon_state = "implant_container0"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 80,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/implant/death_alarm = 15,
-		/obj/item/weapon/implant/explosive = 10,
-		/obj/item/weapon/implant/freedom = 5,
-		/obj/item/weapon/implant/tracking = 10,
-		/obj/item/weapon/implant/chem = 10,
-		/obj/item/weapon/implantcase = 30,
-		/obj/item/weapon/implanter = 30,
+		/obj/item/implant/death_alarm = 15, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implant/explosive = 10, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implant/freedom = 5, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implant/tracking = 10, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implant/chem = 10, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implanter = 30, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/material/steel{amount = 10} = 30,
 		/obj/item/stack/material/glass{amount = 10} = 30,
 		/obj/item/stack/material/silver{amount = 10} = 30
@@ -144,24 +144,24 @@
 	name = "broken data storage"
 	icon_state = "data0"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/computer_hardware/network_card = 40,
-		/obj/item/weapon/computer_hardware/network_card = 40,
-		/obj/item/weapon/computer_hardware/processor_unit = 40,
-		/obj/item/weapon/computer_hardware/processor_unit = 40,
-		/obj/item/weapon/computer_hardware/hard_drive = 50,
-		/obj/item/weapon/computer_hardware/hard_drive = 50,
-		/obj/item/weapon/computer_hardware/hard_drive = 50,
-		/obj/item/weapon/computer_hardware/hard_drive = 50,
-		/obj/item/weapon/computer_hardware/hard_drive = 50,
-		/obj/item/weapon/computer_hardware/hard_drive = 50,
-		/obj/item/weapon/computer_hardware/hard_drive/advanced = 30,
-		/obj/item/weapon/computer_hardware/hard_drive/advanced = 30,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 20
+		/obj/item/computer_hardware/network_card = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive/advanced = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive/advanced = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 20 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/data/Initialize()
@@ -172,26 +172,26 @@
 	name = "broken server"
 	icon_state = "server0"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/computer_hardware/network_card = 40,
-		/obj/item/weapon/computer_hardware/network_card = 40,
-		/obj/item/weapon/computer_hardware/processor_unit = 40,
-		/obj/item/weapon/computer_hardware/processor_unit = 40,
-		/obj/item/weapon/stock_parts/subspace/amplifier = 40,
-		/obj/item/weapon/stock_parts/subspace/amplifier = 40,
-		/obj/item/weapon/stock_parts/subspace/analyzer = 40,
-		/obj/item/weapon/stock_parts/subspace/analyzer = 40,
-		/obj/item/weapon/stock_parts/subspace/ansible = 40,
-		/obj/item/weapon/stock_parts/subspace/ansible = 40,
-		/obj/item/weapon/stock_parts/subspace/transmitter = 40,
-		/obj/item/weapon/stock_parts/subspace/transmitter = 40,
-		/obj/item/weapon/stock_parts/subspace/crystal = 30,
-		/obj/item/weapon/stock_parts/subspace/crystal = 30,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 20
+		/obj/item/computer_hardware/network_card = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/amplifier = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/amplifier = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/analyzer = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/analyzer = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/ansible = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/ansible = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/transmitter = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/transmitter = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/crystal = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/crystal = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 20 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/server/Initialize()
@@ -202,21 +202,21 @@
 	name = "personal terminal"
 	icon_state = "personal0"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 90,
+		/obj/item/stock_parts/console_screen = 90, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 70,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/computer_hardware/network_card = 60,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 40,
-		/obj/item/weapon/computer_hardware/network_card/wired = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/computer_hardware/processor_unit = 60,
-		/obj/item/weapon/computer_hardware/processor_unit/small = 50,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic/small = 30,
-		/obj/item/weapon/computer_hardware/hard_drive = 60,
-		/obj/item/weapon/computer_hardware/hard_drive/advanced = 40
+		/obj/item/computer_hardware/network_card = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/wired = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/small = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/photonic = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/photonic/small = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive/advanced = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/personal/Initialize()
@@ -228,10 +228,10 @@
 	name = "strange terminal"
 	icon_state = "bliss0"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 90,
+		/obj/item/stock_parts/console_screen = 90, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic = 60,
-		/obj/item/weapon/computer_hardware/hard_drive/cluster = 50
+		/obj/item/computer_hardware/processor_unit/photonic = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive/cluster = 50 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/bliss/Initialize()
@@ -254,10 +254,10 @@
 		/obj/item/stack/material/glass{amount = 5} = 70,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/personal/Initialize()
@@ -272,10 +272,10 @@
 		/obj/item/stack/material/glass{amount = 5} = 70,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 //////////////////
@@ -286,88 +286,88 @@
 	name = "broken machine"
 	icon_state = "os-machine"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 80,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/capacitor = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40,
-		/obj/item/weapon/stock_parts/scanning_module = 40,
-		/obj/item/weapon/stock_parts/manipulator = 40,
-		/obj/item/weapon/stock_parts/manipulator = 40,
-		/obj/item/weapon/stock_parts/micro_laser = 40,
-		/obj/item/weapon/stock_parts/micro_laser = 40,
-		/obj/item/weapon/stock_parts/matter_bin = 40,
-		/obj/item/weapon/stock_parts/matter_bin = 40
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/scanning_module = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/manipulator = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/micro_laser = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/matter_bin = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/computer_os
 	name = "broken computer"
 	icon_state = "os-computer"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/photonic = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/photonic = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/implant_container_os
 	name = "old container"
 	icon_state = "os-container"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 80,
-		/obj/item/weapon/implant/death_alarm = 30,
-		/obj/item/weapon/implant/explosive = 20,
-		/obj/item/weapon/implant/freedom = 20,
-		/obj/item/weapon/implant/tracking = 30,
-		/obj/item/weapon/implant/chem = 30,
-		/obj/item/weapon/implantcase = 30,
-		/obj/item/weapon/implanter = 30
+		/obj/item/implant/death_alarm = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implant/explosive = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implant/freedom = 20, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implant/tracking = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implant/chem = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implantcase = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implanter = 30 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/data_os
 	name = "broken data storage"
 	icon_state = "os-data"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 90,
+		/obj/item/stock_parts/console_screen = 90, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
-		/obj/item/weapon/computer_hardware/processor_unit/small = 60,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic = 50,
-		/obj/item/weapon/computer_hardware/hard_drive/super = 50,
-		/obj/item/weapon/computer_hardware/hard_drive/super = 50,
-		/obj/item/weapon/computer_hardware/hard_drive/cluster = 50,
-		/obj/item/weapon/computer_hardware/network_card/wired = 40
+		/obj/item/computer_hardware/processor_unit/small = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/photonic = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive/super = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive/super = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/hard_drive/cluster = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/wired = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/server_os
 	name = "broken server"
 	icon_state = "os-server"
 	salvageable_parts = list(
-		/obj/item/weapon/stock_parts/console_screen = 80,
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
-		/obj/item/weapon/computer_hardware/network_card/wired = 40,
-		/obj/item/weapon/computer_hardware/network_card/wired = 40,
-		/obj/item/weapon/computer_hardware/processor_unit = 40,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
-		/obj/item/weapon/stock_parts/subspace/amplifier = 40,
-		/obj/item/weapon/stock_parts/subspace/amplifier = 40,
-		/obj/item/weapon/stock_parts/subspace/analyzer = 40,
-		/obj/item/weapon/stock_parts/subspace/analyzer = 40,
-		/obj/item/weapon/stock_parts/subspace/ansible = 40,
-		/obj/item/weapon/stock_parts/subspace/ansible = 40,
-		/obj/item/weapon/stock_parts/subspace/transmitter = 40,
-		/obj/item/weapon/stock_parts/subspace/transmitter = 40,
-		/obj/item/weapon/stock_parts/subspace/crystal = 30,
-		/obj/item/weapon/stock_parts/subspace/crystal = 30,
-		/obj/item/weapon/computer_hardware/network_card/wired = 20
+		/obj/item/computer_hardware/network_card/wired = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/wired = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/photonic = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/amplifier = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/amplifier = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/analyzer = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/analyzer = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/ansible = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/ansible = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/transmitter = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/transmitter = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/crystal = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/subspace/crystal = 30, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/wired = 20 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/console_os
@@ -376,14 +376,14 @@
 	icon_state = "os_console"
 	salvageable_parts = list(
 		/obj/item/stack/cable_coil{amount = 5} = 90,
-		/obj/item/weapon/stock_parts/console_screen = 80,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/computer_hardware/processor_unit/small = 40,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/small = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/photonic = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/console_broken_os
@@ -391,14 +391,14 @@
 	icon_state = "os_console_broken"
 	salvageable_parts = list(
 		/obj/item/stack/cable_coil{amount = 5} = 90,
-		/obj/item/weapon/stock_parts/console_screen = 80,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/computer_hardware/processor_unit = 40,
-		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		/obj/item/stock_parts/console_screen = 80, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/processor_unit/photonic = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/card_slot = 40, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/slotmachine1
@@ -406,12 +406,12 @@
 	icon_state = "slot1"
 	salvageable_parts = list(
 		/obj/item/stack/cable_coil{amount = 5} = 90,
-		/obj/item/weapon/stock_parts/console_screen = 90,
+		/obj/item/stock_parts/console_screen = 90, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /obj/structure/salvageable/slotmachine2
@@ -419,10 +419,10 @@
 	icon_state = "slot2"
 	salvageable_parts = list(
 		/obj/item/stack/cable_coil{amount = 5} = 90,
-		/obj/item/weapon/stock_parts/console_screen = 90,
+		/obj/item/stock_parts/console_screen = 90, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stock_parts/capacitor = 60, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/computer_hardware/network_card/advanced = 40 // CHOMPEdit - Removal of obj/item/weapon
 	)

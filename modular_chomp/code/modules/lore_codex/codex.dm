@@ -1,4 +1,4 @@
-/obj/item/weapon/book/codex/chef_recipes
+/obj/item/book/codex/chef_recipes // CHOMPEdit - Removal of obj/item/weapon
 	name = "Chef Recipes Ultramatus Edition"
 	color = "#585a5e"
 	icon = 'icons/obj/library_ch.dmi'

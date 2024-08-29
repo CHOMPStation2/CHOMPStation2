@@ -1,7 +1,7 @@
 /*
  *	Toolboxes
  */
-/obj/item/weapon/storage/toolbox
+/obj/item/storage/toolbox // CHOMPEdit - Removal of obj/item/weapon
 	name = "toolbox"
 	desc = "A metal toolbox with remarkably robust construction."
 	icon = 'icons/obj/storage_vr.dmi'
@@ -23,53 +23,53 @@
 	pickup_sound = 'sound/items/pickup/toolbox.ogg'
 
 //Emergency
-/obj/item/weapon/storage/toolbox/emergency
+/obj/item/storage/toolbox/emergency // CHOMPEdit - Removal of obj/item/weapon
 	name = "emergency toolbox"
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "red"
 	item_state_slots = list(slot_r_hand_str = "toolbox_red", slot_l_hand_str = "toolbox_red")
 	starts_with = list(
-		/obj/item/weapon/tool/crowbar/red,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/device/radio
+		/obj/item/tool/crowbar/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher/mini, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio // CHOMPEdit - Removal of obj/item/device
 	)
-/obj/item/weapon/storage/toolbox/emergency/Initialize()
+/obj/item/storage/toolbox/emergency/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	if(prob(50))
-		new /obj/item/device/flashlight(src)
+		new /obj/item/flashlight(src) // CHOMPEdit - Removal of obj/item/device
 	else
-		new /obj/item/device/flashlight/flare(src)
+		new /obj/item/flashlight/flare(src) // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 
 //Mechanical
-/obj/item/weapon/storage/toolbox/mechanical
+/obj/item/storage/toolbox/mechanical // CHOMPEdit - Removal of obj/item/weapon
 	name = "mechanical toolbox"
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "blue"
 	item_state_slots = list(slot_r_hand_str = "toolbox_blue", slot_l_hand_str = "toolbox_blue")
 	starts_with = list(
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/device/analyzer,
-		/obj/item/weapon/tool/wirecutters
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/analyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tool/wirecutters // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 //Electrical
-/obj/item/weapon/storage/toolbox/electrical
+/obj/item/storage/toolbox/electrical // CHOMPEdit - Removal of obj/item/weapon
 	name = "electrical toolbox"
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "yellow"
 	item_state_slots = list(slot_r_hand_str = "toolbox_yellow", slot_l_hand_str = "toolbox_yellow")
 	starts_with = list(
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/device/t_scanner,
-		/obj/item/weapon/tool/crowbar,
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/t_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stack/cable_coil/random_belt,
 		/obj/item/stack/cable_coil/random_belt
 	)
-/obj/item/weapon/storage/toolbox/electrical/Initialize()
+/obj/item/storage/toolbox/electrical/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(prob(5))
 		new /obj/item/clothing/gloves/yellow(src)
@@ -78,7 +78,7 @@
 	calibrate_size()
 
 //Syndicate
-/obj/item/weapon/storage/toolbox/syndicate
+/obj/item/storage/toolbox/syndicate // CHOMPEdit - Removal of obj/item/weapon
 	name = "black and red toolbox"
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "syndicate"
@@ -87,59 +87,59 @@
 	force = 14
 	starts_with = list(
 		/obj/item/clothing/gloves/yellow,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/device/multitool
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool // CHOMPEdit - Removal of obj/item/device
 	)
 
-/obj/item/weapon/storage/toolbox/syndicate/powertools
+/obj/item/storage/toolbox/syndicate/powertools // CHOMPEdit - Removal of obj/item/weapon
 	starts_with = list(
 		/obj/item/clothing/gloves/yellow,
-		/obj/item/weapon/tool/transforming/powerdrill,
-		/obj/item/weapon/weldingtool/experimental,
-		/obj/item/weapon/tool/transforming/jawsoflife,
-		/obj/item/device/multitool,
+		/obj/item/tool/transforming/powerdrill, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool/experimental, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/transforming/jawsoflife, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/multitool, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/stack/cable_coil/random_belt,
-		/obj/item/device/analyzer
+		/obj/item/analyzer // CHOMPEdit - Removal of obj/item/device
 	)
 
 //Brass
-/obj/item/weapon/storage/toolbox/brass
+/obj/item/storage/toolbox/brass // CHOMPEdit - Removal of obj/item/weapon
 	name = "brass toolbox"
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "brass"
 	item_state_slots = list(slot_r_hand_str = "toolbox_yellow", slot_l_hand_str = "toolbox_yellow")
 	starts_with = list(
-		/obj/item/weapon/tool/crowbar/brass,
-		/obj/item/weapon/tool/wirecutters/brass,
-		/obj/item/weapon/tool/screwdriver/brass,
-		/obj/item/weapon/tool/wrench/brass,
-		/obj/item/weapon/weldingtool/brass
+		/obj/item/tool/crowbar/brass, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters/brass, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver/brass, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wrench/brass, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/weldingtool/brass // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 //Hydro
-/obj/item/weapon/storage/toolbox/hydro
+/obj/item/storage/toolbox/hydro // CHOMPEdit - Removal of obj/item/weapon
 	name = "hydroponic toolbox"
 	icon = 'icons/obj/storage_vr.dmi'
 	icon_state = "green"
 	item_state_slots = list(slot_r_hand_str = "toolbox_green", slot_l_hand_str = "toolbox_green")
 	starts_with = list(
-		/obj/item/device/analyzer/plant_analyzer,
-		/obj/item/weapon/material/minihoe,
-		/obj/item/weapon/material/knife/machete/hatchet,
-		/obj/item/weapon/tool/wirecutters/clippers/trimmers,
-		/obj/item/weapon/reagent_containers/spray/plantbgone,
-		/obj/item/weapon/reagent_containers/glass/beaker
+		/obj/item/analyzer/plant_analyzer, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/material/minihoe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/material/knife/machete/hatchet, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/wirecutters/clippers/trimmers, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/spray/plantbgone, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/glass/beaker // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 /*
  *	Lunchboxes
  */
 
-/obj/item/weapon/storage/toolbox/lunchbox
+/obj/item/storage/toolbox/lunchbox // CHOMPEdit - Removal of obj/item/weapon
 	max_storage_space = ITEMSIZE_COST_SMALL * 4 //slightly smaller than a toolbox
 	name = "rainbow lunchbox"
 	icon = 'icons/obj/storage.dmi'
@@ -151,7 +151,7 @@
 	var/filled = FALSE
 	attack_verb = list("lunched")
 
-/obj/item/weapon/storage/toolbox/lunchbox/Initialize()
+/obj/item/storage/toolbox/lunchbox/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	if(filled)
 		var/list/lunches = lunchables_lunches()
 		var/lunch = lunches[pick(lunches)]
@@ -166,75 +166,75 @@
 		new drink(src)
 	. = ..()
 
-/obj/item/weapon/storage/toolbox/lunchbox/filled
+/obj/item/storage/toolbox/lunchbox/filled // CHOMPEdit - Removal of obj/item/weapon
 	filled = TRUE
 
-/obj/item/weapon/storage/toolbox/lunchbox/heart
+/obj/item/storage/toolbox/lunchbox/heart // CHOMPEdit - Removal of obj/item/weapon
 	name = "heart lunchbox"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "lunchbox_lovelyhearts"
 	item_state_slots = list(slot_r_hand_str = "toolbox_pink", slot_l_hand_str = "toolbox_pink")
 	desc = "A little lunchbox. This one has cute little hearts on it!"
 
-/obj/item/weapon/storage/toolbox/lunchbox/heart/filled
+/obj/item/storage/toolbox/lunchbox/heart/filled // CHOMPEdit - Removal of obj/item/weapon
 	filled = TRUE
 
-/obj/item/weapon/storage/toolbox/lunchbox/cat
+/obj/item/storage/toolbox/lunchbox/cat // CHOMPEdit - Removal of obj/item/weapon
 	name = "cat lunchbox"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "lunchbox_sciencecatshow"
 	item_state_slots = list(slot_r_hand_str = "toolbox_green", slot_l_hand_str = "toolbox_green")
 	desc = "A little lunchbox. This one has a cute little science cat from a popular show on it!"
 
-/obj/item/weapon/storage/toolbox/lunchbox/cat/filled
+/obj/item/storage/toolbox/lunchbox/cat/filled // CHOMPEdit - Removal of obj/item/weapon
 	filled = TRUE
 
-/obj/item/weapon/storage/toolbox/lunchbox/nt
+/obj/item/storage/toolbox/lunchbox/nt // CHOMPEdit - Removal of obj/item/weapon
 	name = "NanoTrasen brand lunchbox"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "lunchbox_nanotrasen"
 	item_state_slots = list(slot_r_hand_str = "toolbox_blue", slot_l_hand_str = "toolbox_blue")
 	desc = "A little lunchbox. This one is branded with the NanoTrasen logo!"
 
-/obj/item/weapon/storage/toolbox/lunchbox/nt/filled
+/obj/item/storage/toolbox/lunchbox/nt/filled // CHOMPEdit - Removal of obj/item/weapon
 	filled = TRUE
 
-/obj/item/weapon/storage/toolbox/lunchbox/mars
+/obj/item/storage/toolbox/lunchbox/mars // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Mojave university lunchbox"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "lunchbox_marsuniversity"
 	item_state_slots = list(slot_r_hand_str = "toolbox_red", slot_l_hand_str = "toolbox_red")
 	desc = "A little lunchbox. This one is branded with the Mojave university logo!"
 
-/obj/item/weapon/storage/toolbox/lunchbox/mars/filled
+/obj/item/storage/toolbox/lunchbox/mars/filled // CHOMPEdit - Removal of obj/item/weapon
 	filled = TRUE
 
-/obj/item/weapon/storage/toolbox/lunchbox/cti
+/obj/item/storage/toolbox/lunchbox/cti // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper CTI lunchbox"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "lunchbox_cti"
 	item_state_slots = list(slot_r_hand_str = "toolbox_blue", slot_l_hand_str = "toolbox_blue")
 	desc = "A little lunchbox. This one is branded with the CTI logo!"
 
-/obj/item/weapon/storage/toolbox/lunchbox/cti/filled
+/obj/item/storage/toolbox/lunchbox/cti/filled // CHOMPEdit - Removal of obj/item/weapon
 	filled = TRUE
 
-/obj/item/weapon/storage/toolbox/lunchbox/nymph
+/obj/item/storage/toolbox/lunchbox/nymph // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper Diona nymph lunchbox"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "lunchbox_dionanymph"
 	item_state_slots = list(slot_r_hand_str = "toolbox_yellow", slot_l_hand_str = "toolbox_yellow")
 	desc = "A little lunchbox. This one is an adorable Diona nymph on the side!"
 
-/obj/item/weapon/storage/toolbox/lunchbox/nymph/filled
+/obj/item/storage/toolbox/lunchbox/nymph/filled // CHOMPEdit - Removal of obj/item/weapon
 	filled = TRUE
 
-/obj/item/weapon/storage/toolbox/lunchbox/syndicate
+/obj/item/storage/toolbox/lunchbox/syndicate // CHOMPEdit - Removal of obj/item/weapon
 	name = "black and red lunchbox"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "lunchbox_syndie"
 	item_state_slots = list(slot_r_hand_str = "toolbox_syndi", slot_l_hand_str = "toolbox_syndi")
 	desc = "A little lunchbox. This one is a sleek black and red, made of a durable steel!"
 
-/obj/item/weapon/storage/toolbox/lunchbox/syndicate/filled
+/obj/item/storage/toolbox/lunchbox/syndicate/filled // CHOMPEdit - Removal of obj/item/weapon
 	filled = TRUE

@@ -1,4 +1,4 @@
-/obj/item/device/assembly_holder
+/obj/item/assembly_holder // CHOMPEdit - Removal of obj/item/device
 	name = "Assembly"
 	icon = 'icons/obj/assemblies/new_assemblies.dmi'
 	icon_state = "holder"
@@ -9,11 +9,11 @@
 	throw_range = 10
 
 	var/secured = 0
-	var/obj/item/device/assembly/a_left = null
-	var/obj/item/device/assembly/a_right = null
+	var/obj/item/assembly/a_left = null // CHOMPEdit - Removal of obj/item/device
+	var/obj/item/assembly/a_right = null // CHOMPEdit - Removal of obj/item/device
 	var/obj/special_assembly = null
 
-/obj/item/device/assembly_holder/proc/attach(var/obj/item/device/assembly/D, var/obj/item/device/assembly/D2, var/mob/user)
+/obj/item/assembly_holder/proc/attach(var/obj/item/assembly/D, var/obj/item/assembly/D2, var/mob/user) // CHOMPEdit - Removal of obj/item/device
 	if(!D || !D2)
 		return FALSE
 
@@ -39,10 +39,10 @@
 
 	return TRUE
 
-/obj/item/device/assembly_holder/proc/detached()
+/obj/item/assembly_holder/proc/detached() // CHOMPEdit - Removal of obj/item/device
 	return
 
-/obj/item/device/assembly_holder/update_icon()
+/obj/item/assembly_holder/update_icon() // CHOMPEdit - Removal of obj/item/device
 	cut_overlays()
 	if(a_left)
 		add_overlay("[a_left.icon_state]_left")
@@ -55,7 +55,7 @@
 	if(master)
 		master.update_icon()
 
-/obj/item/device/assembly_holder/examine(mob/user)
+/obj/item/assembly_holder/examine(mob/user) // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	if ((in_range(src, user) || src.loc == user))
 		if (src.secured)
@@ -63,7 +63,7 @@
 		else
 			. += "\The [src] can be attached!"
 
-/obj/item/device/assembly_holder/Moved(atom/old_loc, direction, forced = FALSE)
+/obj/item/assembly_holder/Moved(atom/old_loc, direction, forced = FALSE) // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	if(isturf(old_loc))
 		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
@@ -71,7 +71,7 @@
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 // CHOMPEdit Start
-/obj/item/device/assembly_holder/HasProximity(turf/T, datum/weakref/WF, old_loc)
+/obj/item/assembly_holder/HasProximity(turf/T, datum/weakref/WF, old_loc) // CHOMPEdit - Removal of obj/item/device
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
@@ -85,7 +85,7 @@
 	if(a_right)
 		a_right.HasProximity(T, AM, old_loc)
 
-/obj/item/device/assembly_holder/Crossed(atom/movable/AM as mob|obj)
+/obj/item/assembly_holder/Crossed(atom/movable/AM as mob|obj) // CHOMPEdit - Removal of obj/item/device
 	if(AM.is_incorporeal())
 		return
 	if(a_left)
@@ -93,25 +93,25 @@
 	if(a_right)
 		a_right.Crossed(AM)
 
-/obj/item/device/assembly_holder/on_found(mob/finder as mob)
+/obj/item/assembly_holder/on_found(mob/finder as mob) // CHOMPEdit - Removal of obj/item/device
 	if(a_left)
 		a_left.on_found(finder)
 	if(a_right)
 		a_right.on_found(finder)
 
-/obj/item/device/assembly_holder/Moved(atom/old_loc, direction, forced = FALSE)
+/obj/item/assembly_holder/Moved(atom/old_loc, direction, forced = FALSE) // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	if(a_left && a_right)
 		a_left.holder_movement()
 		a_right.holder_movement()
 
-/obj/item/device/assembly_holder/attack_hand()//Perhapse this should be a holder_pickup proc instead, can add if needbe I guess
+/obj/item/assembly_holder/attack_hand()//Perhapse this should be a holder_pickup proc instead, can add if needbe I guess // CHOMPEdit - Removal of obj/item/device
 	if(a_left && a_right)
 		a_left.holder_movement()
 		a_right.holder_movement()
 	..()
 
-/obj/item/device/assembly_holder/attackby(var/obj/item/weapon/W, var/mob/user)
+/obj/item/assembly_holder/attackby(var/obj/item/W, var/mob/user) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(!a_left || !a_right)
 			to_chat(user, "<span class='warning'> BUG:Assembly part missing, please report this!</span>")
@@ -128,7 +128,7 @@
 	else
 		..()
 
-/obj/item/device/assembly_holder/attack_self(var/mob/user)
+/obj/item/assembly_holder/attack_self(var/mob/user) // CHOMPEdit - Removal of obj/item/device
 	src.add_fingerprint(user)
 	if(src.secured)
 		if(!a_left || !a_right)
@@ -140,9 +140,9 @@
 				if("Right")	a_right.attack_self(user)
 			return
 		else
-			if(!istype(a_left,/obj/item/device/assembly/igniter))
+			if(!istype(a_left,/obj/item/assembly/igniter)) // CHOMPEdit - Removal of obj/item/device
 				a_left.attack_self(user)
-			if(!istype(a_right,/obj/item/device/assembly/igniter))
+			if(!istype(a_right,/obj/item/assembly/igniter)) // CHOMPEdit - Removal of obj/item/device
 				a_right.attack_self(user)
 	else
 		var/turf/T = get_turf(src)
@@ -156,7 +156,7 @@
 			a_right.forceMove(T)
 		qdel(src)
 
-/obj/item/device/assembly_holder/proc/process_activation(var/obj/D, var/normal = 1)
+/obj/item/assembly_holder/proc/process_activation(var/obj/D, var/normal = 1) // CHOMPEdit - Removal of obj/item/device
 	if(!D)
 		return 0
 	if(!secured)
@@ -170,23 +170,23 @@
 		master.receive_signal()
 	return 1
 
-/obj/item/device/assembly_holder/hear_talk(mob/M, list/message_pieces, verb)
+/obj/item/assembly_holder/hear_talk(mob/M, list/message_pieces, verb) // CHOMPEdit - Removal of obj/item/device
 	if(a_right)
 		a_right.hear_talk(M, message_pieces, verb)
 	if(a_left)
 		a_left.hear_talk(M, message_pieces, verb)
 
-/obj/item/device/assembly_holder/timer_igniter
+/obj/item/assembly_holder/timer_igniter // CHOMPEdit - Removal of obj/item/device
 	name = "timer-igniter assembly"
 
-/obj/item/device/assembly_holder/timer_igniter/Initialize() //ChompEDIT New --> Initialize
+/obj/item/assembly_holder/timer_igniter/Initialize() //ChompEDIT New --> Initialize // CHOMPEdit - Removal of obj/item/device
 	..()
 
-	var/obj/item/device/assembly/igniter/ign = new(src)
+	var/obj/item/assembly/igniter/ign = new(src) // CHOMPEdit - Removal of obj/item/device
 	ign.secured = 1
 	ign.holder = src
 
-	var/obj/item/device/assembly/timer/tmr = new(src)
+	var/obj/item/assembly/timer/tmr = new(src) // CHOMPEdit - Removal of obj/item/device
 	tmr.time = 5
 	tmr.secured = 1
 	tmr.holder = src
@@ -197,26 +197,26 @@
 	update_icon()
 	name = initial(name) + " ([tmr.time] secs)"
 
-	loc.verbs += /obj/item/device/assembly_holder/timer_igniter/verb/configure
+	loc.verbs += /obj/item/assembly_holder/timer_igniter/verb/configure // CHOMPEdit - Removal of obj/item/device
 
-/obj/item/device/assembly_holder/timer_igniter/detached()
-	loc.verbs -= /obj/item/device/assembly_holder/timer_igniter/verb/configure
+/obj/item/assembly_holder/timer_igniter/detached() // CHOMPEdit - Removal of obj/item/device
+	loc.verbs -= /obj/item/assembly_holder/timer_igniter/verb/configure // CHOMPEdit - Removal of obj/item/device
 	..()
 
-/obj/item/device/assembly_holder/timer_igniter/verb/configure()
+/obj/item/assembly_holder/timer_igniter/verb/configure() // CHOMPEdit - Removal of obj/item/device
 	set name = "Set Timer"
 	set category = "Object"
 	set src in usr
 
 	if ( !(usr.stat || usr.restrained()) )
-		var/obj/item/device/assembly_holder/holder
-		if(istype(src,/obj/item/weapon/grenade/chem_grenade))
-			var/obj/item/weapon/grenade/chem_grenade/gren = src
+		var/obj/item/assembly_holder/holder // CHOMPEdit - Removal of obj/item/device
+		if(istype(src,/obj/item/grenade/chem_grenade)) // CHOMPEdit - Removal of obj/item/weapon
+			var/obj/item/grenade/chem_grenade/gren = src // CHOMPEdit - Removal of obj/item/weapon
 			holder=gren.detonator
-		var/obj/item/device/assembly/timer/tmr = holder.a_left
-		if(!istype(tmr,/obj/item/device/assembly/timer))
+		var/obj/item/assembly/timer/tmr = holder.a_left // CHOMPEdit - Removal of obj/item/device
+		if(!istype(tmr,/obj/item/assembly/timer)) // CHOMPEdit - Removal of obj/item/device
 			tmr = holder.a_right
-		if(!istype(tmr,/obj/item/device/assembly/timer))
+		if(!istype(tmr,/obj/item/assembly/timer)) // CHOMPEdit - Removal of obj/item/device
 			to_chat(usr, "<span class='notice'>This detonator has no timer.</span>")
 			return
 

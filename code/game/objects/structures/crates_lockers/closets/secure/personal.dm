@@ -6,15 +6,15 @@
 
 	/* //VOREStation Removal
 	starts_with = list(
-		/obj/item/device/radio/headset)
+		/obj/item/radio/headset) // CHOMPEdit - Removal of obj/item/device
 	*/
 
 /obj/structure/closet/secure_closet/personal/Initialize()
 	/* //VOREStation Removal
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack
+		starts_with += /obj/item/storage/backpack // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
+		starts_with += /obj/item/storage/backpack/satchel/norm // CHOMPEdit - Removal of obj/item/weapon
 	*/
 	return ..()
 
@@ -35,16 +35,16 @@
 	close_sound = 'sound/effects/wooden_closet_close.ogg'
 
 	starts_with = list(
-		/obj/item/weapon/storage/backpack/satchel/withwallet,
-		/obj/item/device/radio/headset
+		/obj/item/storage/backpack/satchel/withwallet, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio/headset // CHOMPEdit - Removal of obj/item/device
 		)
 
-/obj/structure/closet/secure_closet/personal/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/closet/secure_closet/personal/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if (src.opened)
-		if(istype(W, /obj/item/weapon/storage/laundry_basket))
+		if(istype(W, /obj/item/storage/laundry_basket)) // CHOMPEdit - Removal of obj/item/weapon
 			return ..(W,user)
-		if(istype(W, /obj/item/weapon/grab))
-			var/obj/item/weapon/grab/G = W
+		if(istype(W, /obj/item/grab)) // CHOMPEdit - Removal of obj/item/weapon
+			var/obj/item/grab/G = W // CHOMPEdit - Removal of obj/item/weapon
 			if(large)
 				MouseDrop_T(G.affecting, user)	//act like they were dragged onto the closet
 			else
@@ -57,7 +57,7 @@
 		if(W)
 			W.forceMove(loc)
 	else if(W.GetID())
-		var/obj/item/weapon/card/id/I = W.GetID()
+		var/obj/item/card/id/I = W.GetID() // CHOMPEdit - Removal of obj/item/weapon
 
 		if(src.broken)
 			to_chat(user, "<span class='warning'>It appears to be broken.</span>")
@@ -72,7 +72,7 @@
 				src.desc = "Owned by [I.registered_name]."
 		else
 			to_chat(user, "<span class='warning'>Access Denied</span>")
-	else if(istype(W, /obj/item/weapon/melee/energy/blade))
+	else if(istype(W, /obj/item/melee/energy/blade)) // CHOMPEdit - Removal of obj/item/weapon
 		if(emag_act(INFINITY, user, "The locker has been sliced open by [user] with \an [W]!", "You hear metal being sliced and sparks flying."))
 			var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 			spark_system.set_up(5, 0, src.loc)

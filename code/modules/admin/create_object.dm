@@ -21,13 +21,13 @@
 	var/list/choices = list("/obj",
 	"/obj/structure",
 	"/obj/item",
-	"/obj/item/device",
-	"/obj/item/weapon",
-	"/obj/item/weapon/gun",
-	"/obj/item/weapon/reagent_containers",
-	"/obj/item/weapon/reagent_containers/food",
+	"/obj/item", // CHOMPEdit - Removal of obj/item/device
+	"/obj/item", // CHOMPEdit - Removal of obj/item/weapon
+	"/obj/item/gun", // CHOMPEdit - Removal of obj/item/weapon
+	"/obj/item/reagent_containers", // CHOMPEdit - Removal of obj/item/weapon
+	"/obj/item/reagent_containers/food", // CHOMPEdit - Removal of obj/item/weapon
 	"/obj/item/clothing",
-	"/obj/item/weapon/storage/box/fluff", //VOREStation Edit,
+	"/obj/item/storage/box/fluff", //VOREStation Edit, // CHOMPEdit - Removal of obj/item/weapon
 	"/obj/machinery",
 	"/obj/mecha",
 	"/obj/item/mecha_parts",

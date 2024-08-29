@@ -645,9 +645,9 @@
 
 /datum/species/diona/equip_survival_gear(var/mob/living/carbon/human/H)
 	if(H.backbag == 1)
-		H.equip_to_slot_or_del(new /obj/item/device/flashlight/flare(H), slot_r_hand)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H), slot_r_hand) // CHOMPEdit - Removal of obj/item/device
 	else
-		H.equip_to_slot_or_del(new /obj/item/device/flashlight/flare(H.back), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H.back), slot_in_backpack) // CHOMPEdit - Removal of obj/item/device
 
 /datum/species/diona/handle_post_spawn(var/mob/living/carbon/human/H)
 	H.gender = NEUTER

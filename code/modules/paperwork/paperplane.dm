@@ -1,5 +1,5 @@
 // Ported from TG. Known issue: Throw hit can possibly double-proc. Seems to be throw code.
-/obj/item/weapon/paperplane
+/obj/item/paperplane // CHOMPEdit - Removal of obj/item/weapon
 	name = "paper plane"
 	desc = "Paper folded into the shape of a plane."
 	icon = 'icons/obj/bureaucracy.dmi'
@@ -9,9 +9,9 @@
 	throwforce = 0
 	w_class = ITEMSIZE_TINY
 
-	var/obj/item/weapon/paper/internalPaper
+	var/obj/item/paper/internalPaper // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/paperplane/Initialize(loc, obj/item/weapon/paper/newPaper) //ChompEDIT New --> Initialize
+/obj/item/paperplane/Initialize(loc, obj/item/paper/newPaper) //ChompEDIT New --> Initialize // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)
@@ -20,31 +20,31 @@
 		flags = newPaper.flags
 		color = newPaper.color
 		if(isstorage(newPaper.loc))
-			var/obj/item/weapon/storage/S = newPaper.loc
+			var/obj/item/storage/S = newPaper.loc // CHOMPEdit - Removal of obj/item/weapon
 			S.remove_from_storage(newPaper, src)
 		else
 			newPaper.forceMove(src)
 	else
-		internalPaper = new /obj/item/weapon/paper(src)
+		internalPaper = new /obj/item/paper(src) // CHOMPEdit - Removal of obj/item/weapon
 	update_icon()
 
-/obj/item/weapon/paperplane/Destroy()
+/obj/item/paperplane/Destroy() // CHOMPEdit - Removal of obj/item/weapon
 	if(internalPaper)
 		qdel(internalPaper)
 		internalPaper = null
 	return ..()
 
-/obj/item/weapon/paperplane/update_icon()
+/obj/item/paperplane/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	cut_overlays()
 	var/list/stamped = internalPaper.stamped
 	if(!stamped)
 		stamped = new
 	else if(stamped)
-		for(var/obj/item/weapon/stamp/stamp as anything in stamped)
+		for(var/obj/item/stamp/stamp as anything in stamped) // CHOMPEdit - Removal of obj/item/weapon
 			var/image/stampoverlay = image('icons/obj/bureaucracy.dmi', "paperplane_[initial(stamp.icon_state)]")
 			add_overlay(stampoverlay)
 
-/obj/item/weapon/paperplane/attack_self(mob/user)
+/obj/item/paperplane/attack_self(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	to_chat(user, "<span class='notice'>You unfold [src].</span>")
 	var/atom/movable/internal_paper_tmp = internalPaper
 	internal_paper_tmp.forceMove(loc)
@@ -52,13 +52,13 @@
 	qdel(src)
 	user.put_in_hands(internal_paper_tmp)
 
-/obj/item/weapon/paperplane/attackby(obj/item/P, mob/living/carbon/human/user, params)
+/obj/item/paperplane/attackby(obj/item/P, mob/living/carbon/human/user, params) // CHOMPEdit - Removal of obj/item/weapon
 	..()
-	if(istype(P, /obj/item/weapon/pen))
+	if(istype(P, /obj/item/pen)) // CHOMPEdit - Removal of obj/item/weapon
 		to_chat(user, "<span class='notice'>You should unfold [src] before changing it.</span>")
 		return
 
-	else if(istype(P, /obj/item/weapon/stamp)) 	//we don't randomize stamps on a paperplane
+	else if(istype(P, /obj/item/stamp)) 	//we don't randomize stamps on a paperplane // CHOMPEdit - Removal of obj/item/weapon
 		internalPaper.attackby(P, user) //spoofed attack to update internal paper.
 		update_icon()
 
@@ -79,7 +79,7 @@
 
 	add_fingerprint(user)
 
-/obj/item/weapon/paperplane/throw_impact(atom/hit_atom)
+/obj/item/paperplane/throw_impact(atom/hit_atom) // CHOMPEdit - Removal of obj/item/weapon
 	if(..() || !ishuman(hit_atom))//if the plane is caught or it hits a nonhuman
 		return
 	var/mob/living/carbon/human/H = hit_atom
@@ -93,13 +93,13 @@
 			E.damage += 2.5
 		H.emote("scream")
 
-/obj/item/weapon/paper/AltClick(mob/living/carbon/user, obj/item/I)
+/obj/item/paper/AltClick(mob/living/carbon/user, obj/item/I) // CHOMPEdit - Removal of obj/item/weapon
 	if ( istype(user) )
 		if( (!in_range(src, user)) || user.stat || user.restrained() )
 			return
 		to_chat(user, "<span class='notice'>You fold [src] into the shape of a plane!</span>")
 		user.unEquip(src)
-		I = new /obj/item/weapon/paperplane(user, src)
+		I = new /obj/item/paperplane(user, src) // CHOMPEdit - Removal of obj/item/weapon
 		user.put_in_hands(I)
 	else
 		to_chat(user, "<span class='notice'> You lack the dexterity to fold \the [src]. </span>")

@@ -8,7 +8,7 @@
 	food_color = "#A34719"
 	can_burn_food = TRUE
 	var/datum/looping_sound/oven/oven_loop
-	circuit = /obj/item/weapon/circuitboard/oven
+	circuit = /obj/item/circuitboard/oven // CHOMPEdit - Removal of obj/item/weapon
 	active_power_usage = 6 KILOWATTS
 	heating_power = 6 KILOWATTS
 	//Based on a double deck electric convection oven
@@ -21,22 +21,22 @@
 	light_x = 3
 	light_y = 4
 	max_contents = 5
-	container_type = /obj/item/weapon/reagent_containers/cooking_container/oven
+	container_type = /obj/item/reagent_containers/cooking_container/oven // CHOMPEdit - Removal of obj/item/weapon
 
 	stat = POWEROFF	//Starts turned off
 
 	var/open = FALSE // Start closed just so people don't try to preheat with it open, lol.
 
 	output_options = list(
-		"Pizza" = /obj/item/weapon/reagent_containers/food/snacks/variable/pizza,
-		"Bread" = /obj/item/weapon/reagent_containers/food/snacks/variable/bread,
-		"Pie" = /obj/item/weapon/reagent_containers/food/snacks/variable/pie,
-		"Cake" = /obj/item/weapon/reagent_containers/food/snacks/variable/cake,
-		"Hot Pocket" = /obj/item/weapon/reagent_containers/food/snacks/variable/pocket,
-		"Kebab" = /obj/item/weapon/reagent_containers/food/snacks/variable/kebab,
-		"Waffles" = /obj/item/weapon/reagent_containers/food/snacks/variable/waffles,
-		"Cookie" = /obj/item/weapon/reagent_containers/food/snacks/variable/cookie,
-		"Donut" = /obj/item/weapon/reagent_containers/food/snacks/variable/donut,
+		"Pizza" = /obj/item/reagent_containers/food/snacks/variable/pizza, // CHOMPEdit - Removal of obj/item/weapon
+		"Bread" = /obj/item/reagent_containers/food/snacks/variable/bread, // CHOMPEdit - Removal of obj/item/weapon
+		"Pie" = /obj/item/reagent_containers/food/snacks/variable/pie, // CHOMPEdit - Removal of obj/item/weapon
+		"Cake" = /obj/item/reagent_containers/food/snacks/variable/cake, // CHOMPEdit - Removal of obj/item/weapon
+		"Hot Pocket" = /obj/item/reagent_containers/food/snacks/variable/pocket, // CHOMPEdit - Removal of obj/item/weapon
+		"Kebab" = /obj/item/reagent_containers/food/snacks/variable/kebab, // CHOMPEdit - Removal of obj/item/weapon
+		"Waffles" = /obj/item/reagent_containers/food/snacks/variable/waffles, // CHOMPEdit - Removal of obj/item/weapon
+		"Cookie" = /obj/item/reagent_containers/food/snacks/variable/cookie, // CHOMPEdit - Removal of obj/item/weapon
+		"Donut" = /obj/item/reagent_containers/food/snacks/variable/donut, // CHOMPEdit - Removal of obj/item/weapon
 		)
 
 /obj/machinery/appliance/cooker/oven/Initialize()
@@ -110,7 +110,7 @@
 /obj/machinery/appliance/cooker/oven/proc/manip(var/obj/item/I)
 	// check if someone's trying to manipulate the machine
 
-	if(I.has_tool_quality(TOOL_CROWBAR) || I.has_tool_quality(TOOL_SCREWDRIVER) || istype(I, /obj/item/weapon/storage/part_replacer))
+	if(I.has_tool_quality(TOOL_CROWBAR) || I.has_tool_quality(TOOL_SCREWDRIVER) || istype(I, /obj/item/storage/part_replacer)) // CHOMPEdit - Removal of obj/item/weapon
 		return TRUE
 	else
 		return FALSE

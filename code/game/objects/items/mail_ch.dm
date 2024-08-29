@@ -17,17 +17,17 @@
 	// Goodies which can be given to anyone.
 	// Weight sum will be 1000
 	var/list/generic_goodies = list(
-		/obj/item/weapon/spacecash/c50 = 145,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 130,
-		/obj/item/weapon/reagent_containers/food/snacks/chips = 130,
-		/obj/item/weapon/reagent_containers/food/drinks/coffee = 125,
-		/obj/item/weapon/reagent_containers/food/drinks/tea = 125,
-		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 100,
-		/obj/item/weapon/spacecash/c100 = 75,
-		/obj/item/weapon/spacecash/c200 = 50,
-		/obj/item/weapon/spacecash/c500 = 25,
-		/obj/item/weapon/spacecash/c1000 = 10,
-		/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee = 5
+		/obj/item/spacecash/c50 = 145, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/drinks/cans/cola = 130, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/chips = 130, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/drinks/coffee = 125, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/drinks/tea = 125, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/drinks/glass2/coffeemug/nt = 100, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c100 = 75, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c200 = 50, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c500 = 25, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecash/c1000 = 10, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/drinks/bluespace_coffee = 5 // CHOMPEdit - Removal of obj/item/weapon
 	)
 	// Overlays (pure fluff)
 	// Does the letter have the postmark overlay?
@@ -82,7 +82,7 @@
 
 /obj/item/mail/blank/attackby(obj/item/W, mob/user)
 	..()
-	if(istype(W, /obj/item/weapon/pen) && sealed && !set_recipient)
+	if(istype(W, /obj/item/pen) && sealed && !set_recipient) // CHOMPEdit - Removal of obj/item/weapon
 		if(setRecipient(user))
 			set_recipient = TRUE
 		add_fingerprint(user)
@@ -166,8 +166,8 @@
 /obj/item/mail/attackby(obj/item/W as obj, mob/user as mob)
 	. = ..()
 	// Destination tagging
-	if(istype(W, /obj/item/device/destTagger))
-		var/obj/item/device/destTagger/O = W
+	if(istype(W, /obj/item/destTagger)) // CHOMPEdit - Removal of obj/item/device
+		var/obj/item/destTagger/O = W // CHOMPEdit - Removal of obj/item/device
 		if(O.currTag)
 			if(src.sortTag != O.currTag)
 				balloon_alert(user, "You have labeled the destination as [O.currTag].")
@@ -320,7 +320,7 @@
 			new_mail.junk_mail()
 
 // Mailbag
-/obj/item/weapon/storage/bag/mail
+/obj/item/storage/bag/mail // CHOMPEdit - Removal of obj/item/weapon
 	name = "mail bag"
 	desc = "A bag for letters, envelopes and other postage."
 	icon = 'modular_chomp/icons/obj/bureaucracy.dmi'
@@ -335,7 +335,7 @@
 	can_hold = list(
 		/obj/item/mail,
 		/obj/item/smallDelivery,
-		/obj/item/weapon/paper,
+		/obj/item/paper, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/stolenpackage,
 		/obj/item/contraband
 	)
@@ -410,43 +410,43 @@
 
 /obj/item/mail/proc/junk_mail()
 
-	var/obj/junk = /obj/item/weapon/paper/fluff/junkmail_generic
+	var/obj/junk = /obj/item/paper/fluff/junkmail_generic // CHOMPEdit - Removal of obj/item/weapon
 	var/special_name = FALSE
 
 	if(prob(20))
 		special_name = TRUE
 		junk = pick(list(
-			/obj/item/weapon/paper/pamphlet/gateway,
-			/obj/item/weapon/paper/pamphlet/violent_video_games,
-			/obj/item/weapon/paper/pamphlet/radstorm,
-			/obj/item/weapon/paper/fluff/junkmail_redpill,
+			/obj/item/paper/pamphlet/gateway, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/paper/pamphlet/violent_video_games, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/paper/pamphlet/radstorm, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/paper/fluff/junkmail_redpill, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/effect/decal/cleanable/ash,
-			/obj/item/weapon/paper/fluff/love_letter,
-			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/berry,
-			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/dankpocket,
-			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/gondola,
-			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/honk,
-			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza,
-			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy,
-			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki,
+			/obj/item/paper/fluff/love_letter, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/donkpocket/berry, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/donkpocket/dankpocket, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/donkpocket/gondola, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/donkpocket/honk, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/donkpocket/pizza, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/donkpocket/spicy, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/donkpocket/teriyaki, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/toy/figure,
 			/obj/item/contraband
 		))
 
 	var/list/junk_names = list(
-		/obj/item/weapon/paper/pamphlet/gateway = "[initial(name)] for BRAVE adventurers",
-		/obj/item/weapon/paper/pamphlet/violent_video_games = "[initial(name)] for the truth about the arcade CentComm doesn't want to hear",
-		/obj/item/weapon/paper/pamphlet/radstorm = "[initial(name)] for the threats in space",
-		/obj/item/weapon/paper/fluff/junkmail_redpill = "[initial(name)] for those feeling tired working at Nanotrasen",
+		/obj/item/paper/pamphlet/gateway = "[initial(name)] for BRAVE adventurers", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/paper/pamphlet/violent_video_games = "[initial(name)] for the truth about the arcade CentComm doesn't want to hear", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/paper/pamphlet/radstorm = "[initial(name)] for the threats in space", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/paper/fluff/junkmail_redpill = "[initial(name)] for those feeling tired working at Nanotrasen", // CHOMPEdit - Removal of obj/item/weapon
 		/obj/effect/decal/cleanable/ash = "[initial(name)] with INCREDIBLY IMPORTANT ARTIFACT- DELIVER TO SCIENCE DIVISION. HANDLE WITH CARE.",
-		/obj/item/weapon/paper/fluff/love_letter = "[initial(name)] for STUPID CARGO MAILMEN.",
-		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/berry = "[initial(name)] with NEW BERRY-POCKET.",
-		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/dankpocket = "[initial(name)] with NEW DANK-POCKET.",
-		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/gondola = "[initial(name)] with NEW GONDOLA-POCKET.",
-		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/honk = "[initial(name)] with NEW HONK-POCKET.",
-		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/pizza = "[initial(name)] with NEW PIZZA-POCKET.",
-		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
-		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
+		/obj/item/paper/fluff/love_letter = "[initial(name)] for STUPID CARGO MAILMEN.", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donkpocket/berry = "[initial(name)] with NEW BERRY-POCKET.", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donkpocket/dankpocket = "[initial(name)] with NEW DANK-POCKET.", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donkpocket/gondola = "[initial(name)] with NEW GONDOLA-POCKET.", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donkpocket/honk = "[initial(name)] with NEW HONK-POCKET.", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donkpocket/pizza = "[initial(name)] with NEW PIZZA-POCKET.", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.", // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.", // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC",
 		/obj/item/contraband = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]"
 	)
@@ -457,7 +457,7 @@
 	update_icon()
 	return TRUE
 
-/obj/item/weapon/paper/fluff/junkmail_generic/Initialize()
+/obj/item/paper/fluff/junkmail_generic/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	info = pick(
 		prob(5);"Hello! I am executive at Nanotrasen Nigel Takall. Due to accounting error all of my salary is stored in an account unreachable. In order to withdraw I am required to utilize your account to make a deposit to confirm my reality situation. In exchange for a temporary deposit I will give you a payment 1000 credits. All I need is access to your account. Will you be assistant please?",
@@ -476,22 +476,22 @@
 		prob(5);"i WAS A NORMAL BOY AND I CAME HOME FROM SCHOOL AND I WANTED TO PLAY SOME ORION TRAIL WHICH IS A VERY FUN GAME BUT WHEN WENT TO ARCADE MACHINE SOMETHING WAS WEIRD TEH LOGO HASD BLOD IN IT AND I BECAME VERY SCARE AND I CHECK OPTIONS AND TEHRES ONLY 1 \"GO BACK\" I CKLICK IT AND I SEE CHAT  SI EMPTY THERE'S ONLY ONE CHARACTER CALLED \"CLOSE TEH GAME  \" AND I GO TO ANOTHER MACHINE AND PLAY THERE BUT WHEN I PLAY GAME IS FULL OF BLOOD AND DEAD BODIES FROM SPACEMAN LOOK CLOSER AND SEE CLOWN AND CLOWN COMES CLOSER AND LOOKS AT ME AND SAYS \"DON'T SAY I DIKDNT' WWARN YOU\" AND CLOWN CLOSEUP APPEARS WITH BLOOD-RED HYPERREALISTIC EYES AND HE TELLS ME \"YOU WILL BE THE NEXT ONE\" AND ARCADE MACHINE POWER SHUT OFF AND THAT NITE CLOWN APPEAR AT MY WINDOW AND KILL ME AT 3 AM AND NOW IM DEAD AND YOU WILL BE TRHNE NEXT OEN UNLESS YOU PASTE THIS STORY TO 10 NTNET FRIENDS",
 		)
 
-/obj/item/weapon/paper/fluff/junkmail_redpill
+/obj/item/paper/fluff/junkmail_redpill // CHOMPEdit - Removal of obj/item/weapon
 	name = "smudged paper"
 	icon_state = "scrap"
 
-/obj/item/weapon/paper/fluff/junkmail_redpill/Initialize()
+/obj/item/paper/fluff/junkmail_redpill/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	info = "You need to escape the simulation. Don't forget the numbers, they help you remember: '[rand(0,9)]*[rand(0,9)][rand(0,9)]...'"
 
-/obj/item/weapon/paper/fluff/love_letter
+/obj/item/paper/fluff/love_letter // CHOMPEdit - Removal of obj/item/weapon
 	name = "love letter"
 	icon_state = "paper_words"
 
-/obj/item/weapon/paper/fluff/love_letter/Initialize()
+/obj/item/paper/fluff/love_letter/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	info = "I HATE CARGO MAIL\n\"GRAA LEMME BREAK YOUR DOORS DOWN I GOTTA GIVE YOU MAIL\nREE YOU GOTTA GET YOUR MAIL I SORTED IT\nYOU'RE WASTIN YOUR TIME IF YOU DONT GET MAIL YOU NEED TO GET YOUR MAIL NOW\nWHY ARENT YO UGETTING YOUR MAIL RAAA\""
 
-/obj/item/weapon/paper/fluff/junkmail_generic
+/obj/item/paper/fluff/junkmail_generic // CHOMPEdit - Removal of obj/item/weapon
 	name = "important document"
 	icon_state = "paper_words"

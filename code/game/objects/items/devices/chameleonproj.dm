@@ -1,4 +1,4 @@
-/obj/item/device/chameleon
+/obj/item/chameleon // CHOMPEdit - Removal of obj/item/device
 	name = "chameleon projector"
 	icon_state = "shield0"
 	slot_flags = SLOT_BELT
@@ -15,22 +15,22 @@
 	var/saved_icon_state = "cigbutt"
 	var/saved_overlays
 
-/obj/item/device/chameleon/dropped()
+/obj/item/chameleon/dropped() // CHOMPEdit - Removal of obj/item/device
 	disrupt()
 	..()
 
-/obj/item/device/chameleon/equipped()
+/obj/item/chameleon/equipped() // CHOMPEdit - Removal of obj/item/device
 	..()
 	disrupt()
 	..()
 
-/obj/item/device/chameleon/attack_self()
+/obj/item/chameleon/attack_self() // CHOMPEdit - Removal of obj/item/device
 	toggle()
 
-/obj/item/device/chameleon/afterattack(atom/target, mob/user , proximity)
+/obj/item/chameleon/afterattack(atom/target, mob/user , proximity) // CHOMPEdit - Removal of obj/item/device
 	if(!proximity) return
 	if(!active_dummy)
-		if(istype(target,/obj/item) && !istype(target, /obj/item/weapon/disk/nuclear))
+		if(istype(target,/obj/item) && !istype(target, /obj/item/disk/nuclear)) // CHOMPEdit - Removal of obj/item/weapon
 			playsound(src, 'sound/weapons/flash.ogg', 100, 1, -6)
 			to_chat(user, "<span class='notice'>Scanned [target].</span>")
 			saved_item = target.type
@@ -38,7 +38,7 @@
 			saved_icon_state = target.icon_state
 			saved_overlays = target.overlays
 
-/obj/item/device/chameleon/proc/toggle()
+/obj/item/chameleon/proc/toggle() // CHOMPEdit - Removal of obj/item/device
 	if(!can_use || !saved_item) return
 	if(active_dummy)
 		eject_all()
@@ -63,7 +63,7 @@
 		flick("emppulse",T)
 		spawn(8) qdel(T)
 
-/obj/item/device/chameleon/proc/disrupt(var/delete_dummy = 1)
+/obj/item/chameleon/proc/disrupt(var/delete_dummy = 1) // CHOMPEdit - Removal of obj/item/device
 	if(active_dummy)
 		var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread
 		spark_system.set_up(5, 0, src)
@@ -76,7 +76,7 @@
 		can_use = 0
 		spawn(50) can_use = 1
 
-/obj/item/device/chameleon/proc/eject_all()
+/obj/item/chameleon/proc/eject_all() // CHOMPEdit - Removal of obj/item/device
 	for(var/atom/movable/A in active_dummy)
 		A.loc = active_dummy.loc
 		if(ismob(A))
@@ -89,9 +89,9 @@
 	density = FALSE
 	anchored = TRUE
 	var/can_move = 1
-	var/obj/item/device/chameleon/master = null
+	var/obj/item/chameleon/master = null // CHOMPEdit - Removal of obj/item/device
 
-/obj/effect/dummy/chameleon/proc/activate(var/obj/O, var/mob/M, new_icon, new_iconstate, new_overlays, var/obj/item/device/chameleon/C)
+/obj/effect/dummy/chameleon/proc/activate(var/obj/O, var/mob/M, new_icon, new_iconstate, new_overlays, var/obj/item/chameleon/C) // CHOMPEdit - Removal of obj/item/device
 	name = O.name
 	desc = O.desc
 	icon = new_icon

@@ -2,15 +2,15 @@
 
 
 //endless reagents!
-/obj/item/weapon/reagent_containers/glass/replenishing
+/obj/item/reagent_containers/glass/replenishing // CHOMPEdit - Removal of obj/item/weapon
 	var/spawning_id
 
-/obj/item/weapon/reagent_containers/glass/replenishing/Initialize()
+/obj/item/reagent_containers/glass/replenishing/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	START_PROCESSING(SSobj, src)
 	spawning_id = pick("blood","holywater","lube","stoxin","ethanol","ice","glycerol","fuel","cleaner")
 
-/obj/item/weapon/reagent_containers/glass/replenishing/process()
+/obj/item/reagent_containers/glass/replenishing/process() // CHOMPEdit - Removal of obj/item/weapon
 	reagents.add_reagent(spawning_id, 0.3)
 
 
@@ -41,7 +41,7 @@
 
 //a vampiric statuette
 //todo: cult integration
-/obj/item/weapon/vampiric
+/obj/item/vampiric // CHOMPEdit - Removal of obj/item/weapon
 	name = "statuette"
 	icon_state = "statuette"
 	icon = 'icons/obj/xenoarchaeology.dmi'
@@ -54,11 +54,11 @@
 	var/wight_check_index = 1
 	var/list/shadow_wights = list()
 
-/obj/item/weapon/vampiric/New()
+/obj/item/vampiric/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	START_PROCESSING(SSobj, src)
 
-/obj/item/weapon/vampiric/process()
+/obj/item/vampiric/process() // CHOMPEdit - Removal of obj/item/weapon
 	//see if we've identified anyone nearby
 	if(world.time - last_bloodcall > bloodcall_interval && nearby_mobs.len)
 		var/mob/living/carbon/human/M = pop(nearby_mobs)
@@ -116,12 +116,12 @@
 		else if(get_dist(W, src) > 10)
 			shadow_wights.Remove(wight_check_index)
 
-/obj/item/weapon/vampiric/hear_talk(mob/M, list/message_pieces, verb)
+/obj/item/vampiric/hear_talk(mob/M, list/message_pieces, verb) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	if(world.time - last_bloodcall >= bloodcall_interval && (M in view(7, src)))
 		bloodcall(M)
 
-/obj/item/weapon/vampiric/proc/bloodcall(var/mob/living/carbon/human/M)
+/obj/item/vampiric/proc/bloodcall(var/mob/living/carbon/human/M) // CHOMPEdit - Removal of obj/item/weapon
 	last_bloodcall = world.time
 	if(istype(M))
 		playsound(src, pick('sound/hallucinations/wail.ogg','sound/hallucinations/veryfar_noise.ogg','sound/hallucinations/far_noise.ogg'), 50, 1, -3)

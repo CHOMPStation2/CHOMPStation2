@@ -391,8 +391,8 @@
 		to_chat(user, span_blue("You [panelopen ? "open up" : "close"] the unit's maintenance panel."))
 		updateUsrDialog()
 		return
-	if(istype(I, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/G = I
+	if(istype(I, /obj/item/grab)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/grab/G = I // CHOMPEdit - Removal of obj/item/weapon
 		if(!(ismob(G.affecting)))
 			return
 		if(!isopen)

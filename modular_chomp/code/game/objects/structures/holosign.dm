@@ -2,7 +2,7 @@
 	name = "holo sign"
 	icon = 'icons/effects/effects_ch.dmi'
 	anchored = TRUE
-	var/obj/item/weapon/holosign_creator/projector
+	var/obj/item/holosign_creator/projector // CHOMPEdit - Removal of obj/item/weapon
 	var/health = 10
 	explosion_resistance = 1
 

@@ -6,10 +6,10 @@
 	icon_state = "mixer0b"
 	use_power = 1
 	idle_power_usage = 20
-	var/obj/item/weapon/reagent_containers/stored = null
+	var/obj/item/reagent_containers/stored = null // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/machinery/phoroanalyzer/attackby(var/obj/item/weapon/B as obj, var/mob/user as mob)
-	if(istype(B, /obj/item/weapon/reagent_containers))
+/obj/machinery/phoroanalyzer/attackby(var/obj/item/B as obj, var/mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(B, /obj/item/reagent_containers)) // CHOMPEdit - Removal of obj/item/weapon
 		stored = B
 		if(stored.reagents.reagent_list.len > 1)
 			state("Error: Multiple reagents detected")

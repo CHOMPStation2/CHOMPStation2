@@ -99,7 +99,7 @@
 		)
 
 	rare_loot = list(
-		/obj/item/weapon/gun/projectile/gyropistol,
+		/obj/item/gun/projectile/gyropistol, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/mecha_parts/mecha_equipment/generator/nuclear
 		)
 

@@ -12,12 +12,12 @@
 /datum/supply_pack/munitions/weapons
 	name = "Weapons - Security basic equipment"
 	contains = list(
-			/obj/item/device/flash = 2,
-			/obj/item/weapon/reagent_containers/spray/pepper = 2,
-			/obj/item/weapon/melee/baton/loaded = 2,
-			/obj/item/weapon/gun/energy/taser = 2,
-			/obj/item/weapon/gun/projectile/colt/detective = 2,
-			/obj/item/weapon/storage/box/flashbangs = 2
+			/obj/item/flash = 2, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/reagent_containers/spray/pepper = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/melee/baton/loaded = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/energy/taser = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/projectile/colt/detective = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/flashbangs = 2 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/lawson
@@ -26,7 +26,7 @@
 
 /datum/supply_pack/munitions/egunpistol
 	name = "Weapons - Energy sidearms"
-	contains = list(/obj/item/weapon/gun/energy/gun = 2)
+	contains = list(/obj/item/gun/energy/gun = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/lawson
 	containername = "Energy sidearms crate"
@@ -35,9 +35,9 @@
 /datum/supply_pack/munitions/flareguns
 	name = "Weapons - Flare guns"
 	contains = list(
-			/obj/item/weapon/gun/projectile/sec/flash,
+			/obj/item/gun/projectile/sec/flash, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/ammo_magazine/m45/flash,
-			/obj/item/weapon/gun/projectile/shotgun/doublebarrel/flare,
+			/obj/item/gun/projectile/shotgun/doublebarrel/flare, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/ammo_magazine/ammo_box/b12g/flash
 			)
 	cost = 25
@@ -48,8 +48,8 @@
 /datum/supply_pack/munitions/eweapons
 	name = "Weapons - Experimental weapons crate"
 	contains = list(
-			/obj/item/weapon/gun/energy/xray = 2,
-			/obj/item/weapon/shield/energy = 2)
+			/obj/item/gun/energy/xray = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/shield/energy = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/science
 	containername = "Experimental weapons crate"
@@ -57,7 +57,7 @@
 
 /datum/supply_pack/munitions/energyweapons
 	name = "Weapons - Laser rifle crate"
-	contains = list(/obj/item/weapon/gun/energy/laser = 2) //VOREStation Edit - Made to be consistent with the energy guns crate.
+	contains = list(/obj/item/gun/energy/laser = 2) //VOREStation Edit - Made to be consistent with the energy guns crate. // CHOMPEdit - Removal of obj/item/weapon
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Energy weapons crate"
@@ -68,7 +68,7 @@
 	contains = list(
 			/obj/item/ammo_magazine/ammo_box/b12g,
 			/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-			/obj/item/weapon/gun/projectile/shotgun/pump/combat = 2
+			/obj/item/gun/projectile/shotgun/pump/combat = 2 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon
@@ -81,7 +81,7 @@
 	contains = list(
 			/obj/item/ammo_magazine/ammo_box/b12g,
 			/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-			/obj/item/weapon/gun/projectile/shotgun/semi = 2
+			/obj/item/gun/projectile/shotgun/semi = 2 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/weapon
@@ -90,7 +90,7 @@
 
 /datum/supply_pack/munitions/erifle
 	name = "Weapons - Energy marksman"
-	contains = list(/obj/item/weapon/gun/energy/sniperrifle = 2)
+	contains = list(/obj/item/gun/energy/sniperrifle = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Energy marksman crate"
@@ -98,7 +98,7 @@
 
 /datum/supply_pack/munitions/burstlaser
 	name = "Weapons - Burst laser"
-	contains = list(/obj/item/weapon/gun/energy/gun/burst = 2)
+	contains = list(/obj/item/gun/energy/gun/burst = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/lawson
 	containername = "Burst laser crate"
@@ -107,8 +107,8 @@
 /datum/supply_pack/munitions/ionweapons
 	name = "Weapons - Electromagnetic Rifles"
 	contains = list(
-			/obj/item/weapon/gun/energy/ionrifle = 2,
-			/obj/item/weapon/storage/box/empslite
+			/obj/item/gun/energy/ionrifle = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/empslite // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/ward
@@ -118,8 +118,8 @@
 /datum/supply_pack/munitions/ionpistols
 	name = "Weapons - Electromagnetic pistols"
 	contains = list(
-			/obj/item/weapon/gun/energy/ionrifle/pistol = 2,
-			/obj/item/weapon/storage/box/empslite
+			/obj/item/gun/energy/ionrifle/pistol = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/box/empslite // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/ward
@@ -128,7 +128,7 @@
 
 /datum/supply_pack/munitions/bsmg
 	name = "Weapons - Ballistic SMGs"
-	contains = list(/obj/item/weapon/gun/projectile/automatic/wt550 = 2)
+	contains = list(/obj/item/gun/projectile/automatic/wt550 = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/ward
 	containername = "Ballistic weapon crate"
@@ -136,7 +136,7 @@
 
 /datum/supply_pack/munitions/brifle
 	name = "Weapons - Ballistic Rifles"
-	contains = list(/obj/item/weapon/gun/projectile/automatic/z8 = 2)
+	contains = list(/obj/item/gun/projectile/automatic/z8 = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 80
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Ballistic weapon crate"
@@ -145,7 +145,7 @@
 /datum/supply_pack/munitions/bolt_rifles_lethal
  	name = "Weapons - Bolt-Action Rifles"
  	contains = list(
- 			/obj/item/weapon/gun/projectile/shotgun/pump/rifle = 2,
+ 			/obj/item/gun/projectile/shotgun/pump/rifle = 2, // CHOMPEdit - Removal of obj/item/weapon
  			/obj/item/ammo_magazine/ammo_box/b762 = 4,
  			)
  	cost = 60
@@ -156,8 +156,8 @@
 /datum/supply_pack/munitions/bolt_rifles_competitive
  	name = "Weapons - Competitive shooting rifles"
  	contains = list(
- 			/obj/item/device/assembly/timer,
- 			/obj/item/weapon/gun/projectile/shotgun/pump/rifle/practice = 2,
+ 			/obj/item/assembly/timer, // CHOMPEdit - Removal of obj/item/device
+ 			/obj/item/gun/projectile/shotgun/pump/rifle/practice = 2, // CHOMPEdit - Removal of obj/item/weapon
  			/obj/item/ammo_magazine/clip/c762/practice = 4,
  			/obj/item/target = 2,
  			/obj/item/target/alien = 2,
@@ -171,7 +171,7 @@
 /datum/supply_pack/munitions/caseless
 	name = "Weapons - Prototype Caseless Rifle"
 	contains = list(
-			/obj/item/weapon/gun/projectile/caseless/prototype,
+			/obj/item/gun/projectile/caseless/prototype, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/ammo_magazine/m5mmcaseless = 3
 			)
 	cost = 60
@@ -181,7 +181,7 @@
 
 /datum/supply_pack/munitions/mrifle
 	name = "Weapons - Magnetic Rifles"
-	contains = list(/obj/item/weapon/gun/magnetic/railgun/heater = 2)
+	contains = list(/obj/item/gun/magnetic/railgun/heater = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 120
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Magnetic weapon crate"
@@ -189,7 +189,7 @@
 
 /datum/supply_pack/munitions/mpistol
 	name = "Weapons - Magnetic Pistols"
-	contains = list(/obj/item/weapon/gun/magnetic/railgun/heater/pistol = 2)
+	contains = list(/obj/item/gun/magnetic/railgun/heater/pistol = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 200
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Magnetic weapon crate"
@@ -197,7 +197,7 @@
 
 /datum/supply_pack/munitions/mcarbine
 	name = "Weapons - Magnetic Carbines"
-	contains = list(/obj/item/weapon/gun/magnetic/railgun/flechette/sif = 2)
+	contains = list(/obj/item/gun/magnetic/railgun/flechette/sif = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 130
 	containertype = /obj/structure/closet/crate/secure/lawson
 	containername = "Magnetic weapon crate"
@@ -205,7 +205,7 @@
 
 /datum/supply_pack/munitions/mshells
 	name = "Weapons - Magnetic Shells"
-	contains = list(/obj/item/weapon/magnetic_ammo = 3)
+	contains = list(/obj/item/magnetic_ammo = 3) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Magnetic ammunition crate"
@@ -213,7 +213,7 @@
 
 /datum/supply_pack/munitions/claymore
 	name = "Weapons - Melee - Claymores"
-	contains = list(/obj/item/weapon/material/sword = 2)
+	contains = list(/obj/item/material/sword = 2) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Claymore crate"
@@ -264,7 +264,7 @@
 
 /datum/supply_pack/munitions/pcellammo
 	name = "Ammunition - Power cell"
-	contains = list(/obj/item/weapon/cell/device/weapon = 3)
+	contains = list(/obj/item/cell/device/weapon = 3) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Energy ammunition crate"
@@ -277,12 +277,12 @@
 	name = "Revolver Crate"
 	num_contained = 2
 	contains = list(
-			/obj/item/weapon/gun/projectile/revolver/cerberus,
-			/obj/item/weapon/gun/projectile/revolver/nova,
-			/obj/item/weapon/gun/projectile/revolver/detective,
-			/obj/item/weapon/gun/projectile/revolver/deckard,
-		    /obj/item/weapon/gun/projectile/revolver/mateba,
-			/obj/item/weapon/gun/projectile/derringer
+			/obj/item/gun/projectile/revolver/cerberus, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/projectile/revolver/nova, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/projectile/revolver/detective, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/projectile/revolver/deckard, // CHOMPEdit - Removal of obj/item/weapon
+		    /obj/item/gun/projectile/revolver/mateba, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/projectile/derringer // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
@@ -293,9 +293,9 @@
 	name = "Assault rifle crate"
 	num_contained = 2
 	contains = list(
-			/obj/item/weapon/gun/projectile/automatic/tommygun,
-			/obj/item/weapon/gun/projectile/automatic/c20r,
-			/obj/item/weapon/gun/projectile/automatic/sts35
+			/obj/item/gun/projectile/automatic/tommygun, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/projectile/automatic/c20r, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/projectile/automatic/sts35 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure
@@ -306,8 +306,8 @@
 	name = "Smg crate"
 	num_contained = 2
 	contains = list(
-			/obj/item/weapon/gun/projectile/automatic/c20r,
-			/obj/item/weapon/gun/projectile/automatic/pdw
+			/obj/item/gun/projectile/automatic/c20r, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/projectile/automatic/pdw // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure
@@ -316,7 +316,7 @@
 
 /datum/supply_pack/munitions/munitions/yw_mg
 	name = "Light machine gun crate"
-	contains = list(/obj/item/weapon/gun/projectile/automatic/l6_saw = 1)
+	contains = list(/obj/item/gun/projectile/automatic/l6_saw = 1) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 500
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Light machine gun crate"
@@ -324,9 +324,9 @@
 /datum/supply_pack/munitions/expeditionguns //CHOMP Edit begin: Re-appropriating this whole block. Changing frontier phasers to phaseguns.
 	name = "Exploration phasegun (station-locked) crate"
 	contains = list(
-			/obj/item/weapon/gun/energy/locked/phasegun/pistol = 2,
-			/obj/item/weapon/gun/energy/locked/phasegun/rifle = 2,
-			/obj/item/weapon/gun/energy/locked/phasegun =  2
+			/obj/item/gun/energy/locked/phasegun/pistol = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/energy/locked/phasegun/rifle = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gun/energy/locked/phasegun =  2 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure
@@ -336,7 +336,7 @@
 /datum/supply_pack/munitions/expeditioncannon
 	name = "Exploration phasecannon (station-locked) crate"
 	contains = list(
-			/obj/item/weapon/gun/energy/locked/phasegun/cannon = 1
+			/obj/item/gun/energy/locked/phasegun/cannon = 1 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure
@@ -387,7 +387,7 @@
 /datum/supply_pack/munitions/longsword
 	name = "Weapons - Melee -Longsword (Steel)"
 	contains = list(
-			/obj/item/weapon/material/twohanded/longsword=2
+			/obj/item/material/twohanded/longsword=2 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure

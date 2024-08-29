@@ -14,7 +14,7 @@
 	clearance_range = rand(4, 12)
 	dissonance_spread = rand(1500, 2500) / 100
 
-/obj/item/weapon/strangerock
+/obj/item/strangerock // CHOMPEdit - Removal of obj/item/weapon
 	name = "Strange rock"
 	desc = "Seems to have some unusal strata evident throughout it."
 	icon = 'icons/obj/xenoarchaeology.dmi'
@@ -23,15 +23,15 @@
 	origin_tech = list(TECH_MATERIAL = 5)
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/weapon/strangerock/New(loc, var/inside_item_type = 0)
+/obj/item/strangerock/New(loc, var/inside_item_type = 0) // CHOMPEdit - Removal of obj/item/weapon
 	pixel_x = rand(0,16)-8
 	pixel_y = rand(0,8)-8
 
 	if(inside_item_type)
-		new /obj/item/weapon/archaeological_find(src, new_item_type = inside_item_type)
+		new /obj/item/archaeological_find(src, new_item_type = inside_item_type) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/strangerock/attackby(var/obj/item/I, var/mob/user)
-	if(istype(I, /obj/item/weapon/pickaxe/brush))
+/obj/item/strangerock/attackby(var/obj/item/I, var/mob/user) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(I, /obj/item/pickaxe/brush)) // CHOMPEdit - Removal of obj/item/weapon
 		var/obj/item/inside = locate() in src
 		if(inside)
 			inside.loc = get_turf(src)
@@ -42,7 +42,7 @@
 		return
 
 	if(I.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/W = I.get_welder()
+		var/obj/item/weldingtool/W = I.get_welder() // CHOMPEdit - Removal of obj/item/weapon
 		if(W.isOn())
 			if(W.get_fuel() >= 2)
 				var/obj/item/inside = locate() in src
@@ -58,8 +58,8 @@
 				W.remove_fuel(1)
 			return
 
-	else if(istype(I, /obj/item/device/core_sampler))
-		var/obj/item/device/core_sampler/S = I
+	else if(istype(I, /obj/item/core_sampler)) // CHOMPEdit - Removal of obj/item/device
+		var/obj/item/core_sampler/S = I // CHOMPEdit - Removal of obj/item/device
 		S.sample_item(src, user)
 		return
 

@@ -60,15 +60,15 @@
 			return activators[pin_number]
 	return null
 
-/obj/item/integrated_circuit/proc/handle_wire(var/datum/integrated_io/pin, var/obj/item/device/integrated_electronics/tool)
-	if(istype(tool, /obj/item/device/integrated_electronics/wirer))
-		var/obj/item/device/integrated_electronics/wirer/wirer = tool
+/obj/item/integrated_circuit/proc/handle_wire(var/datum/integrated_io/pin, var/obj/item/integrated_electronics/tool) // CHOMPEdit - Removal of obj/item/device
+	if(istype(tool, /obj/item/integrated_electronics/wirer)) // CHOMPEdit - Removal of obj/item/device
+		var/obj/item/integrated_electronics/wirer/wirer = tool // CHOMPEdit - Removal of obj/item/device
 		if(pin)
 			wirer.wire(pin, usr)
 			return 1
 
-	else if(istype(tool, /obj/item/device/integrated_electronics/debugger))
-		var/obj/item/device/integrated_electronics/debugger/debugger = tool
+	else if(istype(tool, /obj/item/integrated_electronics/debugger)) // CHOMPEdit - Removal of obj/item/device
+		var/obj/item/integrated_electronics/debugger/debugger = tool // CHOMPEdit - Removal of obj/item/device
 		if(pin)
 			debugger.write_data(pin, usr)
 			return 1

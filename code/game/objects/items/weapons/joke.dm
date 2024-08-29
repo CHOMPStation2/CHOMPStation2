@@ -1,4 +1,4 @@
-/obj/item/weapon/squishhammer
+/obj/item/squishhammer // CHOMPEdit - Removal of obj/item/weapon
 	name = "The Short Stacker"
 	desc = "Wield the power of this weapon with responsibility (God knows you won't)."
 	icon = 'icons/obj/items.dmi'
@@ -8,7 +8,7 @@
 	throwforce = 0
 
 // Attack mob
-/obj/item/weapon/squishhammer/attack(mob/M as mob, mob/user as mob)
+/obj/item/squishhammer/attack(mob/M as mob, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	var/is_squished = M.tf_scale_x || M.tf_scale_y
 	playsound(src, 'sound/items/hooh.ogg', 50, 1)
 	if(!is_squished)

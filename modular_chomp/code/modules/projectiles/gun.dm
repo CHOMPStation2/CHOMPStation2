@@ -1,6 +1,6 @@
 // prevent gun activation when stealth swimming. The low alpha hides you from NPC AI, which allows you to cheese mobs.
 //Just adding onto this code for funny net gun
-/obj/item/weapon/gun/special_check(var/mob/user)
+/obj/item/gun/special_check(var/mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	var/mob/living/L = user
 	if(istype(L))
 		if(L.has_modifier_of_type(/datum/modifier/underwater_stealth))

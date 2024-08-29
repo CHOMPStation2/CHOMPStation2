@@ -1,4 +1,4 @@
-/obj/item/device/dogborg/sleeper/exploration
+/obj/item/dogborg/sleeper/exploration // CHOMPEdit - Removal of obj/item/device
 	name = "Store-Belly"
 	desc = "Equipment for a ExploreHound unit. A mounted portable-storage device that holds supplies/person."
 	icon_state = "sleeperlost"

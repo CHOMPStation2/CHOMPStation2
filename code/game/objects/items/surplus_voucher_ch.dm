@@ -14,28 +14,28 @@
 	spawn_item(get_turf(src))
 
 /obj/item/surplus_voucher/com/proc/spawn_item(var/turf/T)
-	var/path = pick(prob(6);/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,
-					prob(3);/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
-					prob(3);/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-					prob(3);/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla,
-					prob(3);/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-					prob(3);/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager,
-					prob(3);/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-					prob(3);/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac,
-					prob(3);/obj/item/weapon/reagent_containers/food/drinks/bottle/wine,
-					prob(3);/obj/item/weapon/spacecash/c50,
-					prob(3);/obj/item/weapon/spacecash/c100,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/bigbiteburger,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/cheeseburger,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/fries,
+	var/path = pick(prob(6);/obj/item/reagent_containers/food/drinks/bottle/whiskey, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/vodka, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/tequilla, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/rum, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/goldschlager, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/vermouth, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/cognac, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/wine, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/spacecash/c50, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/spacecash/c100, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/snacks/bigbiteburger, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/snacks/cheeseburger, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/snacks/fries, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/pizzabox/meat,
 					prob(2);/obj/item/pizzabox/vegetable,
 					prob(1);/obj/item/pizzabox/pineapple,
 					prob(2);/obj/item/pizzabox/margherita,
 					prob(2);/obj/item/pizzabox/mushroom,
 					prob(3);/obj/item/toy/bouquet,
-					prob(5);/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
-					prob(3);/obj/item/weapon/storage/box/snappops,
+					prob(5);/obj/item/reagent_containers/food/drinks/bottle/small/beer, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/box/snappops, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/clothing/under/syndicate/tacticool,
 					prob(3);/obj/item/clothing/head/cowboy/small,
 					prob(3);/obj/item/toy/sword,
@@ -53,16 +53,16 @@
 
 /obj/item/surplus_voucher/eng/proc/spawn_item(var/turf/T)
 	var/path = pick(prob(2);/datum/design/item/powercell/high,
-					prob(2);/obj/item/weapon/storage/briefcase/inflatable,
+					prob(2);/obj/item/storage/briefcase/inflatable, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/clamp,
-					prob(3);/obj/item/weapon/extinguisher,
-					prob(3);/obj/item/weapon/weldingtool/largetank,
-					prob(2);/obj/item/weapon/tool/wirecutters,
-					prob(3);/obj/item/weapon/tool/wrench,
-					prob(3);/obj/item/weapon/tool/screwdriver,
-					prob(3);/obj/item/device/analyzer,
-					prob(3);/obj/item/device/t_scanner,
-					prob(2);/obj/item/weapon/grenade/chem_grenade/metalfoam,
+					prob(3);/obj/item/extinguisher, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/weldingtool/largetank, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/tool/wirecutters, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/tool/wrench, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/analyzer, // CHOMPEdit - Removal of obj/item/device
+					prob(3);/obj/item/t_scanner, // CHOMPEdit - Removal of obj/item/device
+					prob(2);/obj/item/grenade/chem_grenade/metalfoam, // CHOMPEdit - Removal of obj/item/weapon
 					prob(1);/obj/item/toy/figure/engineer)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
 	new path(T)
@@ -77,24 +77,24 @@
 	spawn_item(get_turf(src))
 
 /obj/item/surplus_voucher/med/proc/spawn_item(var/turf/T)
-	var/path = pick(prob(6);/obj/item/weapon/storage/firstaid/regular,
-					prob(6);/obj/item/weapon/storage/firstaid/fire,
-					prob(6);/obj/item/weapon/storage/firstaid/toxin,
-					prob(6);/obj/item/weapon/storage/firstaid/o2,
-					prob(6);/obj/item/weapon/storage/firstaid/adv,
-					prob(3);/obj/item/weapon/storage/pill_bottle/antitox,
-					prob(3);/obj/item/weapon/storage/pill_bottle/bicaridine,
-					prob(2);/obj/item/weapon/storage/pill_bottle/dexalin_plus,
-					prob(3);/obj/item/weapon/storage/pill_bottle/dylovene,
-					prob(3);/obj/item/weapon/storage/pill_bottle/inaprovaline,
-					prob(3);/obj/item/weapon/storage/pill_bottle/kelotane,
-					prob(3);/obj/item/weapon/storage/pill_bottle/dermaline,
-					prob(3);/obj/item/weapon/storage/pill_bottle/spaceacillin,
-					prob(3);/obj/item/weapon/storage/pill_bottle/tramadol,
-					prob(3);/obj/item/weapon/storage/pill_bottle/carbon,
-					prob(3);/obj/item/weapon/storage/pill_bottle/iron,
-					prob(4);/obj/item/weapon/storage/pill_bottle/assorted,
-					prob(4);/obj/item/weapon/backup_implanter,
+	var/path = pick(prob(6);/obj/item/storage/firstaid/regular, // CHOMPEdit - Removal of obj/item/weapon
+					prob(6);/obj/item/storage/firstaid/fire, // CHOMPEdit - Removal of obj/item/weapon
+					prob(6);/obj/item/storage/firstaid/toxin, // CHOMPEdit - Removal of obj/item/weapon
+					prob(6);/obj/item/storage/firstaid/o2, // CHOMPEdit - Removal of obj/item/weapon
+					prob(6);/obj/item/storage/firstaid/adv, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/antitox, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/bicaridine, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/storage/pill_bottle/dexalin_plus, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/dylovene, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/inaprovaline, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/kelotane, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/dermaline, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/spaceacillin, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/tramadol, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/carbon, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/pill_bottle/iron, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/storage/pill_bottle/assorted, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/backup_implanter, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/toy/plushie/borgplushie/medihound)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
 	new path(T)
@@ -107,24 +107,24 @@
 	spawn_item(get_turf(src))
 
 /obj/item/surplus_voucher/sci/proc/spawn_item(var/turf/T)
-	var/path = pick(prob(1);/obj/item/device/kit/paint/ripley,
-					prob(1);/obj/item/device/kit/paint/ripley/death,
-					prob(1);/obj/item/device/kit/paint/ripley/flames_red,
-					prob(1);/obj/item/device/kit/paint/ripley/flames_blue,
-					prob(1);/obj/item/device/kit/paint/durand,
-					prob(1);/obj/item/device/kit/paint/gygax/darkgygax,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/monkeycube,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/monkeycube/sobakacube,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/monkeycube/sarucube,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/monkeycube/sparracube,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wolpincube,
-					prob(2);/obj/item/weapon/storage/part_replacer,
-					prob(2);/obj/item/device/integrated_circuit_printer,
-					prob(1);/obj/item/weapon/disk/integrated_circuit/upgrade/advanced,
+	var/path = pick(prob(1);/obj/item/kit/paint/ripley, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/kit/paint/ripley/death, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/kit/paint/ripley/flames_red, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/kit/paint/ripley/flames_blue, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/kit/paint/durand, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/kit/paint/gygax/darkgygax, // CHOMPEdit - Removal of obj/item/device
+					prob(3);/obj/item/reagent_containers/food/snacks/monkeycube, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/snacks/monkeycube/sobakacube, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/snacks/monkeycube/sarucube, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/snacks/monkeycube/sparracube, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/snacks/monkeycube/wolpincube, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/storage/part_replacer, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/integrated_circuit_printer, // CHOMPEdit - Removal of obj/item/device
+					prob(1);/obj/item/disk/integrated_circuit/upgrade/advanced, // CHOMPEdit - Removal of obj/item/weapon
 					prob(3);/obj/item/stack/nanopaste,
-					prob(3);/obj/item/weapon/melee/baton/slime,
-					prob(3);/obj/item/weapon/gun/energy/taser/xeno,
-					prob(3);/obj/item/weapon/storage/box/monkeycubes,
+					prob(3);/obj/item/melee/baton/slime, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/gun/energy/taser/xeno, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/storage/box/monkeycubes, // CHOMPEdit - Removal of obj/item/weapon
 					prob(1);/obj/item/toy/figure/borg)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
 	new path(T)
@@ -137,17 +137,17 @@
 	spawn_item(get_turf(src))
 
 /obj/item/surplus_voucher/sec/proc/spawn_item(var/turf/T)
-	var/path = pick(prob(2);/obj/item/weapon/storage/box/flashbangs,
-					prob(4);/obj/item/weapon/storage/box/flare,
-					prob(5);/obj/item/weapon/storage/box/donut,
-					prob(4);/obj/item/weapon/storage/box/handcuffs,
-					prob(3);/obj/item/weapon/reagent_containers/spray/pepper,
-					prob(3);/obj/item/weapon/melee/baton/loaded,
+	var/path = pick(prob(2);/obj/item/storage/box/flashbangs, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/storage/box/flare, // CHOMPEdit - Removal of obj/item/weapon
+					prob(5);/obj/item/storage/box/donut, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/storage/box/handcuffs, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/spray/pepper, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/melee/baton/loaded, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 					prob(2);/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
 					prob(2);/obj/item/ammo_magazine/m45/rubber,
 					prob(2);/obj/item/ammo_magazine/m9mmt/rubber,
-                    prob(2);/obj/item/weapon/cell/device/weapon,
+                    prob(2);/obj/item/cell/device/weapon, // CHOMPEdit - Removal of obj/item/weapon
 					prob(1);/obj/item/toy/plushie/borgplushie)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
 	new path(T)
@@ -160,15 +160,15 @@
 	spawn_item(get_turf(src))
 
 /obj/item/surplus_voucher/ser/proc/spawn_item(var/turf/T)
-	var/path = pick(prob(4);/obj/item/weapon/reagent_containers/food/drinks/milk,
-					prob(4);/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-					prob(4);/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-					prob(4);/obj/item/weapon/storage/fancy/egg_box,
-					prob(3);/obj/item/weapon/reagent_containers/food/snacks/meat,
-					prob(3);/obj/item/weapon/reagent_containers/spray/cleaner,
-					prob(2);/obj/item/weapon/grenade/chem_grenade/cleaner,
-					prob(1);/obj/item/weapon/storage/box/monkeycubes,
-					prob(3);/obj/item/weapon/reagent_containers/spray/plantbgone,
+	var/path = pick(prob(4);/obj/item/reagent_containers/food/drinks/milk, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/reagent_containers/food/condiment/carton/flour, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/reagent_containers/food/drinks/soymilk, // CHOMPEdit - Removal of obj/item/weapon
+					prob(4);/obj/item/storage/fancy/egg_box, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/food/snacks/meat, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/spray/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+					prob(2);/obj/item/grenade/chem_grenade/cleaner, // CHOMPEdit - Removal of obj/item/weapon
+					prob(1);/obj/item/storage/box/monkeycubes, // CHOMPEdit - Removal of obj/item/weapon
+					prob(3);/obj/item/reagent_containers/spray/plantbgone, // CHOMPEdit - Removal of obj/item/weapon
 					prob(2);/obj/item/seeds/sunflowerseed,
 					prob(2);/obj/item/seeds/cornseed,
 					prob(2);/obj/item/seeds/berryseed,

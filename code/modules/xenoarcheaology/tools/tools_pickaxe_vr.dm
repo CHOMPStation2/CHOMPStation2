@@ -1,23 +1,23 @@
-/obj/item/weapon/pickaxe/brush
+/obj/item/pickaxe/brush // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/xenoarchaeology_vr.dmi'
 
-/obj/item/weapon/pickaxe/one_pick
+/obj/item/pickaxe/one_pick // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/xenoarchaeology_vr.dmi'
 
-/obj/item/weapon/pickaxe/two_pick
+/obj/item/pickaxe/two_pick // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/xenoarchaeology_vr.dmi'
 
-/obj/item/weapon/pickaxe/three_pick
+/obj/item/pickaxe/three_pick // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/xenoarchaeology_vr.dmi'
 
-/obj/item/weapon/pickaxe/four_pick
+/obj/item/pickaxe/four_pick // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/xenoarchaeology_vr.dmi'
 
-/obj/item/weapon/pickaxe/five_pick
+/obj/item/pickaxe/five_pick // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/xenoarchaeology_vr.dmi'
 
-/obj/item/weapon/pickaxe/six_pick
+/obj/item/pickaxe/six_pick // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/xenoarchaeology_vr.dmi'
 
-/obj/item/weapon/pickaxe/hand
+/obj/item/pickaxe/hand // CHOMPEdit - Removal of obj/item/weapon
 	icon = 'icons/obj/xenoarchaeology_vr.dmi'

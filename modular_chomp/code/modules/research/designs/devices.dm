@@ -2,7 +2,7 @@
 	id = "floor_painter"
 	req_tech = list(TECH_ENGINEERING = 2)
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 500)
-	build_path = /obj/item/device/floor_painter
+	build_path = /obj/item/floor_painter // CHOMPEdit - Removal of obj/item/device
 	sort_string = "TADAA"
 	department = LATHE_ALL | LATHE_SERVICE
 
@@ -10,7 +10,7 @@
 	id = "medical_holosign"
 	req_tech = list(TECH_BIO = 2)
 	materials = list(MAT_STEEL = 1000, MAT_GLASS = 500)
-	build_path = /obj/item/weapon/holosign_creator/medical
+	build_path = /obj/item/holosign_creator/medical // CHOMPEdit - Removal of obj/item/weapon
 	sort_string = "TADAB"
 	department = LATHE_ALL | LATHE_MEDICAL
 
@@ -18,7 +18,7 @@
 	id = "atmos_holosign"
 	req_tech = list(TECH_ENGINEERING = 2)
 	materials = list(MAT_STEEL = 1000, MAT_GLASS = 500)
-	build_path = /obj/item/weapon/holosign_creator/combifan
+	build_path = /obj/item/holosign_creator/combifan // CHOMPEdit - Removal of obj/item/weapon
 	sort_string = "TADAC"
 	department = LATHE_ALL | LATHE_ENGINEERING
 

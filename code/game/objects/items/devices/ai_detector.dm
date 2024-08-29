@@ -7,24 +7,24 @@
 
 // This is another syndie-multitool, except this one detects when the AI and/or Security is peeping on the holder.
 
-/obj/item/device/multitool/ai_detector
+/obj/item/multitool/ai_detector // CHOMPEdit - Removal of obj/item/device
 	var/range_alert = 7			// Will turn red if the AI can observe its holder.
 	var/range_warning = 14		// Will turn yellow if the AI's eye is near the holder.
 	var/detect_state = PROXIMITY_NONE
 	origin_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 2, TECH_ILLEGAL = 2)
 
-/obj/item/device/multitool/ai_detector/New()
+/obj/item/multitool/ai_detector/New() // CHOMPEdit - Removal of obj/item/device
 	// It's really really unlikely for the view range to change.  But why not be futureproof anyways?
 	range_alert = world.view
 	range_warning = world.view * 2
 	START_PROCESSING(SSobj, src)
 	..()
 
-/obj/item/device/multitool/ai_detector/Destroy()
+/obj/item/multitool/ai_detector/Destroy() // CHOMPEdit - Removal of obj/item/device
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/device/multitool/ai_detector/process()
+/obj/item/multitool/ai_detector/process() // CHOMPEdit - Removal of obj/item/device
 	var/old_detect_state = detect_state
 	var/new_detect_state = detect_ai()
 	detect_state = new_detect_state
@@ -33,7 +33,7 @@
 	return
 
 // This also detects security using cameras.
-/obj/item/device/multitool/ai_detector/proc/detect_ai()
+/obj/item/multitool/ai_detector/proc/detect_ai() // CHOMPEdit - Removal of obj/item/device
 	var/mob/living/carrier = isliving(loc) ? loc : null
 
 	// First, let's check if any AIs are actively tracking them.
@@ -81,10 +81,10 @@
 	// If we reach this point, AI or sec isn't near us.
 	return PROXIMITY_NONE
 
-/obj/item/device/multitool/ai_detector/update_icon()
+/obj/item/multitool/ai_detector/update_icon() // CHOMPEdit - Removal of obj/item/device
 	icon_state = "[initial(icon_state)][detect_state]"
 
-/obj/item/device/multitool/ai_detector/proc/update_warning(var/old_state, var/new_state)
+/obj/item/multitool/ai_detector/proc/update_warning(var/old_state, var/new_state) // CHOMPEdit - Removal of obj/item/device
 	var/mob/living/carrier = isliving(loc) ? loc : null
 
 	// Now to warn our holder, if the state changes.

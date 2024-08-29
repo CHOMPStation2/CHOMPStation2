@@ -109,19 +109,19 @@
 
 //UAV definition
 
-/obj/item/device/uav/Initialize()
+/obj/item/uav/Initialize() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	hearer = AddComponent(/datum/component/hearer)
 
 //AIcard definition
 
-/obj/item/device/aicard/Initialize()
+/obj/item/aicard/Initialize() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	hearer = AddComponent(/datum/component/hearer)
 
 //Tape recorder definition
 
-/obj/item/device/taperecorder/Initialize()
+/obj/item/taperecorder/Initialize() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	hearer = AddComponent(/datum/component/hearer)
 
@@ -133,10 +133,10 @@
 
 //Communicator definition
 
-/obj/item/device/communicator/Initialize()
+/obj/item/communicator/Initialize() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	hearer = AddComponent(/datum/component/hearer)
 
-/obj/item/device/paicard/Initialize()
+/obj/item/paicard/Initialize() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	hearer = AddComponent(/datum/component/hearer)

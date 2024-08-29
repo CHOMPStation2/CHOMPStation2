@@ -7,17 +7,17 @@
 		/obj/item/clothing/under/rank/scientist,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
-		/obj/item/device/radio/headset/headset_sci,
-		/obj/item/weapon/tank/air,
+		/obj/item/radio/headset/headset_sci, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank/air, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/mask/gas,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/science,
 		/obj/item/clothing/shoes/boots/winter/science)
 
 /obj/structure/closet/secure_closet/scientist/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/sci
+		starts_with += /obj/item/storage/backpack/dufflebag/sci // CHOMPEdit - Removal of obj/item/weapon
 	else
-		starts_with += /obj/item/weapon/storage/backpack/toxins
+		starts_with += /obj/item/storage/backpack/toxins // CHOMPEdit - Removal of obj/item/weapon
 	return ..()
 
 
@@ -40,20 +40,20 @@
 		/obj/item/clothing/under/rank/neo_rd_suit,
 		/obj/item/clothing/under/rank/neo_rd_suit_skirt,
 		/obj/item/clothing/under/rank/neo_rd_gorka,
-		/obj/item/weapon/cartridge/rd,
+		/obj/item/cartridge/rd, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/shoes/white,
 		/obj/item/clothing/shoes/laceup/brown,
 		/obj/item/clothing/gloves/sterile/latex,
-		/obj/item/device/radio/headset/heads/rd,
-		/obj/item/device/radio/headset/heads/rd/alt,
-		/obj/item/weapon/tank/air,
+		/obj/item/radio/headset/heads/rd, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/headset/heads/rd/alt, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank/air, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/mask/gas,
-		/obj/item/device/flash,
+		/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/suit/storage/hooded/wintercoat/science,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/science/rd,
 		/obj/item/clothing/shoes/boots/winter/science,
 		/obj/item/clothing/head/beret/science/rd,
-		/obj/item/weapon/bluespace_harpoon) //VOREStation Add
+		/obj/item/bluespace_harpoon) //VOREStation Add // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/structure/closet/secure_closet/xenoarchaeologist
 	name = "Xenoarchaeologist Locker"
@@ -65,29 +65,29 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/suit/storage/toggle/labcoat/modern,
 		/obj/item/clothing/shoes/white,
-		/obj/item/weapon/melee/umbrella,
+		/obj/item/melee/umbrella, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/glasses/science,
-		/obj/item/device/radio/headset/headset_sci,
-		/obj/item/weapon/storage/belt/archaeology,
-		/obj/item/weapon/storage/excavation)
+		/obj/item/radio/headset/headset_sci, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/storage/belt/archaeology, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/excavation) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/structure/closet/excavation
 	name = "Excavation tools"
 	closet_appearance = /decl/closet_appearance/secure_closet/engineering/tools/xenoarch
 
 	starts_with = list(
-		/obj/item/weapon/storage/belt/archaeology,
-		/obj/item/weapon/storage/excavation,
-		/obj/item/device/flashlight/lantern,
-		/obj/item/device/ano_scanner,
-		/obj/item/device/depth_scanner,
-		/obj/item/device/core_sampler,
-		/obj/item/device/gps,
-		/obj/item/device/beacon_locator,
-		/obj/item/device/radio/beacon,
+		/obj/item/storage/belt/archaeology, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/excavation, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flashlight/lantern, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/ano_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/depth_scanner, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/core_sampler, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/beacon_locator, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/clothing/glasses/meson,
-		/obj/item/weapon/pickaxe,
-		/obj/item/device/measuring_tape,
-		/obj/item/weapon/pickaxe/hand,
-		/obj/item/weapon/storage/bag/fossils,
-		/obj/item/weapon/hand_labeler)
+		/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/measuring_tape, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/pickaxe/hand, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/bag/fossils, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/hand_labeler) // CHOMPEdit - Removal of obj/item/weapon

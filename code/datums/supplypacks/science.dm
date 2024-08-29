@@ -15,13 +15,13 @@
 /datum/supply_pack/sci/phoron
 	name = "Phoron research crate"
 	contains = list(
-			/obj/item/weapon/tank/phoron = 3,
-			/obj/item/weapon/tank/oxygen = 3,
-			/obj/item/device/assembly/igniter = 3,
-			/obj/item/device/assembly/prox_sensor = 3,
-			/obj/item/device/assembly/timer = 3,
-			/obj/item/device/assembly/signaler = 3,
-			/obj/item/device/transfer_valve = 3
+			/obj/item/tank/phoron = 3, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/tank/oxygen = 3, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/assembly/igniter = 3, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/assembly/prox_sensor = 3, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/assembly/timer = 3, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/assembly/signaler = 3, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/transfer_valve = 3 // CHOMPEdit - Removal of obj/item/device
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/phoron
@@ -45,14 +45,14 @@
 
 /datum/supply_pack/sci/integrated_circuit_printer
 	name = "Integrated circuit printer"
-	contains = list(/obj/item/device/integrated_circuit_printer = 2)
+	contains = list(/obj/item/integrated_circuit_printer = 2) // CHOMPEdit - Removal of obj/item/device
 	cost = 15
 	containertype = /obj/structure/closet/crate/ward
 	containername = "Integrated circuit crate"
 
 /datum/supply_pack/sci/integrated_circuit_printer_upgrade
 	name = "Integrated circuit printer upgrade - advanced designs"
-	contains = list(/obj/item/weapon/disk/integrated_circuit/upgrade/advanced)
+	contains = list(/obj/item/disk/integrated_circuit/upgrade/advanced) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 30
 	containertype = /obj/structure/closet/crate/ward
 	containername = "Integrated circuit crate"
@@ -60,20 +60,20 @@
 /datum/supply_pack/sci/xenoarch
 	name = "Xenoarchaeology Tech crate"
 	contains = list(
-				/obj/item/weapon/pickaxe/excavationdrill,
-				/obj/item/device/xenoarch_multi_tool,
+				/obj/item/pickaxe/excavationdrill, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/xenoarch_multi_tool, // CHOMPEdit - Removal of obj/item/device
 				/obj/item/clothing/suit/space/anomaly,
 				/obj/item/clothing/head/helmet/space/anomaly,
-				/obj/item/weapon/storage/belt/archaeology,
-				/obj/item/device/flashlight/lantern,
-				/obj/item/device/core_sampler,
-				/obj/item/device/gps,
-				/obj/item/device/beacon_locator,
-				/obj/item/device/radio/beacon,
+				/obj/item/storage/belt/archaeology, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/flashlight/lantern, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/core_sampler, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/beacon_locator, // CHOMPEdit - Removal of obj/item/device
+				/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
 				/obj/item/clothing/glasses/meson,
-				/obj/item/weapon/pickaxe,
-				/obj/item/weapon/storage/bag/fossils,
-				/obj/item/weapon/hand_labeler)
+				/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/storage/bag/fossils, // CHOMPEdit - Removal of obj/item/weapon
+				/obj/item/hand_labeler) // CHOMPEdit - Removal of obj/item/weapon
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/xion
 	containername = "Xenoarchaeology Tech crate"

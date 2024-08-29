@@ -2,37 +2,37 @@
 
 // Small assemblies.
 
-/obj/item/device/electronic_assembly/default
+/obj/item/electronic_assembly/default // CHOMPEdit - Removal of obj/item/device
 	name = "type-a electronic assembly"
 
-/obj/item/device/electronic_assembly/calc
+/obj/item/electronic_assembly/calc // CHOMPEdit - Removal of obj/item/device
 	name = "type-b electronic assembly"
 	icon_state = "setup_small_calc"
 	desc = "It's a case, for building small electronics with. This one resembles a pocket calculator."
 
-/obj/item/device/electronic_assembly/clam
+/obj/item/electronic_assembly/clam // CHOMPEdit - Removal of obj/item/device
 	name = "type-c electronic assembly"
 	icon_state = "setup_small_clam"
 	desc = "It's a case, for building small electronics with. This one has a clamshell design."
 
-/obj/item/device/electronic_assembly/simple
+/obj/item/electronic_assembly/simple // CHOMPEdit - Removal of obj/item/device
 	name = "type-d electronic assembly"
 	icon_state = "setup_small_simple"
 	desc = "It's a case, for building small electronics with. This one has a simple design."
 
-/obj/item/device/electronic_assembly/hook
+/obj/item/electronic_assembly/hook // CHOMPEdit - Removal of obj/item/device
 	name = "type-e electronic assembly"
 	icon_state = "setup_small_hook"
 	desc = "It's a case, for building small electronics with. This one looks like it has a belt clip, but it's purely decorative."
 
-/obj/item/device/electronic_assembly/pda
+/obj/item/electronic_assembly/pda // CHOMPEdit - Removal of obj/item/device
 	name = "type-f electronic assembly"
 	icon_state = "setup_small_pda"
 	desc = "It's a case, for building small electronics with. This one resembles a PDA."
 
 // Tiny assemblies.
 
-/obj/item/device/electronic_assembly/tiny
+/obj/item/electronic_assembly/tiny // CHOMPEdit - Removal of obj/item/device
 	name = "electronic device"
 	icon_state = "setup_device"
 	desc = "It's a case, for building tiny-sized electronics with."
@@ -40,32 +40,32 @@
 	max_components = IC_COMPONENTS_BASE / 2
 	max_complexity = IC_COMPLEXITY_BASE / 2
 
-/obj/item/device/electronic_assembly/tiny/default
+/obj/item/electronic_assembly/tiny/default // CHOMPEdit - Removal of obj/item/device
 	name = "type-a electronic device"
 
-/obj/item/device/electronic_assembly/tiny/cylinder
+/obj/item/electronic_assembly/tiny/cylinder // CHOMPEdit - Removal of obj/item/device
 	name = "type-b electronic device"
 	icon_state = "setup_device_cylinder"
 	desc = "It's a case, for building tiny-sized electronics with. This one has a cylindrical design."
 
-/obj/item/device/electronic_assembly/tiny/scanner
+/obj/item/electronic_assembly/tiny/scanner // CHOMPEdit - Removal of obj/item/device
 	name = "type-c electronic device"
 	icon_state = "setup_device_scanner"
 	desc = "It's a case, for building tiny-sized electronics with. This one has a scanner-like design."
 
-/obj/item/device/electronic_assembly/tiny/hook
+/obj/item/electronic_assembly/tiny/hook // CHOMPEdit - Removal of obj/item/device
 	name = "type-d electronic device"
 	icon_state = "setup_device_hook"
 	desc = "It's a case, for building tiny-sized electronics with. This one looks like it has a belt clip, but it's purely decorative."
 
-/obj/item/device/electronic_assembly/tiny/box
+/obj/item/electronic_assembly/tiny/box // CHOMPEdit - Removal of obj/item/device
 	name = "type-e electronic device"
 	icon_state = "setup_device_box"
 	desc = "It's a case, for building tiny-sized electronics with. This one has a boxy design."
 
 // Medium assemblies.
 
-/obj/item/device/electronic_assembly/medium
+/obj/item/electronic_assembly/medium // CHOMPEdit - Removal of obj/item/device
 	name = "electronic mechanism"
 	icon_state = "setup_medium"
 	desc = "It's a case, for building medium-sized electronics with."
@@ -73,25 +73,25 @@
 	max_components = IC_COMPONENTS_BASE * 2
 	max_complexity = IC_COMPLEXITY_BASE * 2
 
-/obj/item/device/electronic_assembly/medium/default
+/obj/item/electronic_assembly/medium/default // CHOMPEdit - Removal of obj/item/device
 	name = "type-a electronic mechanism"
 
-/obj/item/device/electronic_assembly/medium/box
+/obj/item/electronic_assembly/medium/box // CHOMPEdit - Removal of obj/item/device
 	name = "type-b electronic mechanism"
 	icon_state = "setup_medium_box"
 	desc = "It's a case, for building medium-sized electronics with. This one has a boxy design."
 
-/obj/item/device/electronic_assembly/medium/clam
+/obj/item/electronic_assembly/medium/clam // CHOMPEdit - Removal of obj/item/device
 	name = "type-c electronic mechanism"
 	icon_state = "setup_medium_clam"
 	desc = "It's a case, for building medium-sized electronics with. This one has a clamshell design."
 
-/obj/item/device/electronic_assembly/medium/medical
+/obj/item/electronic_assembly/medium/medical // CHOMPEdit - Removal of obj/item/device
 	name = "type-d electronic mechanism"
 	icon_state = "setup_medium_med"
 	desc = "It's a case, for building medium-sized electronics with. This one resembles some type of medical apparatus."
 
-/obj/item/device/electronic_assembly/medium/gun
+/obj/item/electronic_assembly/medium/gun // CHOMPEdit - Removal of obj/item/device
 	name = "type-e electronic mechanism"
 	icon_state = "setup_medium_gun"
 	item_state = "circuitgun"
@@ -103,14 +103,14 @@
 		slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi',
 		)
 
-/obj/item/device/electronic_assembly/medium/radio
+/obj/item/electronic_assembly/medium/radio // CHOMPEdit - Removal of obj/item/device
 	name = "type-f electronic mechanism"
 	icon_state = "setup_medium_radio"
 	desc = "It's a case, for building medium-sized electronics with. This one resembles an old radio."
 
 // Large assemblies.
 
-/obj/item/device/electronic_assembly/large
+/obj/item/electronic_assembly/large // CHOMPEdit - Removal of obj/item/device
 	name = "electronic machine"
 	icon_state = "setup_large"
 	desc = "It's a case, for building large electronics with."
@@ -119,37 +119,37 @@
 	max_complexity = IC_COMPLEXITY_BASE * 4
 	can_anchor = TRUE
 
-/obj/item/device/electronic_assembly/large/default
+/obj/item/electronic_assembly/large/default // CHOMPEdit - Removal of obj/item/device
 	name = "type-a electronic machine"
 
-/obj/item/device/electronic_assembly/large/scope
+/obj/item/electronic_assembly/large/scope // CHOMPEdit - Removal of obj/item/device
 	name = "type-b electronic machine"
 	icon_state = "setup_large_scope"
 	desc = "It's a case, for building large electronics with. This one resembles an oscilloscope."
 
-/obj/item/device/electronic_assembly/large/terminal
+/obj/item/electronic_assembly/large/terminal // CHOMPEdit - Removal of obj/item/device
 	name = "type-c electronic machine"
 	icon_state = "setup_large_terminal"
 	desc = "It's a case, for building large electronics with. This one resembles a computer terminal."
 
-/obj/item/device/electronic_assembly/large/arm
+/obj/item/electronic_assembly/large/arm // CHOMPEdit - Removal of obj/item/device
 	name = "type-d electronic machine"
 	icon_state = "setup_large_arm"
 	desc = "It's a case, for building large electronics with. This one resembles a robotic arm."
 
-/obj/item/device/electronic_assembly/large/tall
+/obj/item/electronic_assembly/large/tall // CHOMPEdit - Removal of obj/item/device
 	name = "type-e electronic machine"
 	icon_state = "setup_large_tall"
 	desc = "It's a case, for building large electronics with. This one has a tall design."
 
-/obj/item/device/electronic_assembly/large/industrial
+/obj/item/electronic_assembly/large/industrial // CHOMPEdit - Removal of obj/item/device
 	name = "type-f electronic machine"
 	icon_state = "setup_large_industrial"
 	desc = "It's a case, for building large electronics with. This one resembles some kind of industrial machinery."
 
 // Drone assemblies, which can move with the locomotion circuit.
 
-/obj/item/device/electronic_assembly/drone
+/obj/item/electronic_assembly/drone // CHOMPEdit - Removal of obj/item/device
 	name = "electronic drone"
 	icon_state = "setup_drone"
 	desc = "It's a case, for building mobile electronics with."
@@ -158,40 +158,40 @@
 	max_complexity = IC_COMPLEXITY_BASE * 3 //CHOMP Edit ;Changing this to be 3 instead because as it stands its worthless
 	can_anchor = FALSE
 
-/obj/item/device/electronic_assembly/drone/can_move()
+/obj/item/electronic_assembly/drone/can_move() // CHOMPEdit - Removal of obj/item/device
 	return TRUE
 
-/obj/item/device/electronic_assembly/drone/default
+/obj/item/electronic_assembly/drone/default // CHOMPEdit - Removal of obj/item/device
 	name = "type-a electronic drone"
 
-/obj/item/device/electronic_assembly/drone/arms
+/obj/item/electronic_assembly/drone/arms // CHOMPEdit - Removal of obj/item/device
 	name = "type-b electronic drone"
 	icon_state = "setup_drone_arms"
 	desc = "It's a case, for building mobile electronics with. This one is armed and dangerous."
 
-/obj/item/device/electronic_assembly/drone/secbot
+/obj/item/electronic_assembly/drone/secbot // CHOMPEdit - Removal of obj/item/device
 	name = "type-c electronic drone"
 	icon_state = "setup_drone_secbot"
 	desc = "It's a case, for building mobile electronics with. This one resembles a Securitron."
 
-/obj/item/device/electronic_assembly/drone/medbot
+/obj/item/electronic_assembly/drone/medbot // CHOMPEdit - Removal of obj/item/device
 	name = "type-d electronic drone"
 	icon_state = "setup_drone_medbot"
 	desc = "It's a case, for building mobile electronics with. This one resembles a Medibot."
 
-/obj/item/device/electronic_assembly/drone/genbot
+/obj/item/electronic_assembly/drone/genbot // CHOMPEdit - Removal of obj/item/device
 	name = "type-e electronic drone"
 	icon_state = "setup_drone_genbot"
 	desc = "It's a case, for building mobile electronics with. This one has a generic bot design."
 
-/obj/item/device/electronic_assembly/drone/android
+/obj/item/electronic_assembly/drone/android // CHOMPEdit - Removal of obj/item/device
 	name = "type-f electronic drone"
 	icon_state = "setup_drone_android"
 	desc = "It's a case, for building mobile electronics with. This one has a hominoid design."
 
 // Wall mounted assemblies.
 
-/obj/item/device/electronic_assembly/wallmount
+/obj/item/electronic_assembly/wallmount // CHOMPEdit - Removal of obj/item/device
 	name = "wall-mounted electronic assembly"
 	icon_state = "setup_wallmount_medium"
 	desc = "It's a case, for building medium-sized electronics with. It has a magnetized \
@@ -201,7 +201,7 @@
 	max_complexity = IC_COMPLEXITY_BASE * 2
 	can_anchor = TRUE
 
-/obj/item/device/electronic_assembly/wallmount/proc/mount_assembly(turf/on_wall, mob/user)
+/obj/item/electronic_assembly/wallmount/proc/mount_assembly(turf/on_wall, mob/user) // CHOMPEdit - Removal of obj/item/device
 	if(get_dist(on_wall,user) > 1)
 		return
 	var/ndir = get_dir(on_wall, user)
@@ -230,12 +230,12 @@
 		if(WEST)
 			pixel_x = 31
 
-/obj/item/device/electronic_assembly/wallmount/on_unanchored()
+/obj/item/electronic_assembly/wallmount/on_unanchored() // CHOMPEdit - Removal of obj/item/device
 	pixel_x = 0
 	pixel_y = 0
 	..()
 
-/obj/item/device/electronic_assembly/wallmount/heavy
+/obj/item/electronic_assembly/wallmount/heavy // CHOMPEdit - Removal of obj/item/device
 	name = "heavy wall-mounted electronic assembly"
 	icon_state = "setup_wallmount_large"
 	desc = "It's a case, for building large electronics with. It has a magnetized backing \
@@ -244,7 +244,7 @@
 	max_components = IC_COMPONENTS_BASE * 4
 	max_complexity = IC_COMPLEXITY_BASE * 4
 
-/obj/item/device/electronic_assembly/wallmount/light
+/obj/item/electronic_assembly/wallmount/light // CHOMPEdit - Removal of obj/item/device
 	name = "light wall-mounted electronic assembly"
 	icon_state = "setup_wallmount_small"
 	desc = "It's a case, for building small electronics with. It has a magnetized backing \
@@ -253,7 +253,7 @@
 	max_components = IC_COMPONENTS_BASE
 	max_complexity = IC_COMPLEXITY_BASE
 
-/obj/item/device/electronic_assembly/wallmount/tiny
+/obj/item/electronic_assembly/wallmount/tiny // CHOMPEdit - Removal of obj/item/device
 	name = "tiny wall-mounted electronic assembly"
 	icon_state = "setup_wallmount_tiny"
 	desc = "It's a case, for building tiny electronics with. It has a magnetized backing \

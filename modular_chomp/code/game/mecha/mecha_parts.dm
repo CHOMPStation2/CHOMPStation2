@@ -36,11 +36,11 @@
 	icon_state = "janus_r_leg"
 	origin_tech = list(TECH_MATERIAL = 5, TECH_BLUESPACE = 3, TECH_MAGNET = 3, TECH_ARCANE = 1)
 
-/obj/item/weapon/circuitboard/mecha/hades/targeting
+/obj/item/circuitboard/mecha/hades/targeting // CHOMPEdit - Removal of obj/item/weapon
 	name = "stange targeting circuit"
 
-/obj/item/weapon/circuitboard/mecha/hades/peripherals
+/obj/item/circuitboard/mecha/hades/peripherals // CHOMPEdit - Removal of obj/item/weapon
 	name = "stange peripheral circuit"
 
-/obj/item/weapon/circuitboard/mecha/hades/main
+/obj/item/circuitboard/mecha/hades/main // CHOMPEdit - Removal of obj/item/weapon
 	name = "stange control circuit"

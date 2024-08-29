@@ -5,7 +5,7 @@
 //
 //Casino Manual - NEEDS EDITING
 //
-/obj/item/weapon/book/manual/casino
+/obj/item/book/manual/casino // CHOMPEdit - Removal of obj/item/weapon
 	name = "A dummy guide to losing your thalers"
 	icon = 'icons/obj/casino.dmi'
 	icon_state ="casinomanual"

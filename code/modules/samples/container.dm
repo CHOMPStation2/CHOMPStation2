@@ -1,4 +1,4 @@
-/obj/item/weapon/storage/sample_container
+/obj/item/storage/sample_container // CHOMPEdit - Removal of obj/item/weapon
 	name = "sample container"
 	desc = "A small containment device used to safely collect and carry up to eight research samples. Has a loop for attaching to belts."
 	description_info = "You can use the sample container directly on a sample to quickly scoop it up, or on a tile to scoop up all samples on that tile. This negates the risk of hurting yourself if you don't have thick enough gloves to safely handle the samples!"
@@ -15,9 +15,9 @@
 	drop_sound = 'sound/items/drop/gascan.ogg'
 	pickup_sound = 'sound/items/pickup/gascan.ogg'
 
-	can_hold = list(/obj/item/weapon/research_sample)
+	can_hold = list(/obj/item/research_sample) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/sample_container/update_icon()
+/obj/item/storage/sample_container/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	icon_state = "sample_container_[contents.len]"
 	if(contents.len > 0)
@@ -25,38 +25,38 @@
 	else
 		set_light(0)
 
-/obj/item/weapon/storage/sample_container/afterattack(turf/T as turf, mob/user as mob)
-	for(var/obj/item/weapon/research_sample/S in T)
+/obj/item/storage/sample_container/afterattack(turf/T as turf, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	for(var/obj/item/research_sample/S in T) // CHOMPEdit - Removal of obj/item/weapon
 		S.loc = src
 		update_icon()
 		to_chat(user, "<span class='notice'>You scoop \the [S] into \the [src].</span>")
 
 //Splice research sample containers into the list of valid items for these belts *without* overriding the lists entirely
-/obj/item/weapon/storage/belt/explorer/New()
+/obj/item/storage/belt/explorer/New() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
-	can_hold.Add(/obj/item/weapon/storage/sample_container)
+	can_hold.Add(/obj/item/storage/sample_container) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/belt/miner/New()
+/obj/item/storage/belt/miner/New() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
-	can_hold.Add(/obj/item/weapon/storage/sample_container)
+	can_hold.Add(/obj/item/storage/sample_container) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/belt/archaeology/New()
+/obj/item/storage/belt/archaeology/New() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
-	can_hold.Add(/obj/item/weapon/storage/sample_container)
+	can_hold.Add(/obj/item/storage/sample_container) // CHOMPEdit - Removal of obj/item/weapon
 
 //ditto, lockers and redemption machines
 /obj/structure/closet/secure_closet/miner/Initialize()
 	. = ..()
-	starts_with += /obj/item/weapon/storage/sample_container
+	starts_with += /obj/item/storage/sample_container // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/structure/closet/secure_closet/xenoarchaeologist/Initialize()
 	. = ..()
-	starts_with += /obj/item/weapon/storage/sample_container
+	starts_with += /obj/item/storage/sample_container // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/machinery/mineral/equipment_vendor/Initialize(mapload)
 	. = ..()
-	prize_list["Gear"] += list(EQUIPMENT("Exotic Sample Container",				/obj/item/weapon/storage/sample_container,									100))
+	prize_list["Gear"] += list(EQUIPMENT("Exotic Sample Container",				/obj/item/storage/sample_container,									100)) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/machinery/mineral/equipment_vendor/survey/Initialize(mapload)
 	. = ..()
-	prize_list["Gear"] += list(EQUIPMENT("Survey Tools - Exotic Sample Container",				/obj/item/weapon/storage/sample_container,									100))
+	prize_list["Gear"] += list(EQUIPMENT("Survey Tools - Exotic Sample Container",				/obj/item/storage/sample_container,									100)) // CHOMPEdit - Removal of obj/item/weapon

@@ -100,7 +100,7 @@
 
 /decl/chemical_reaction/instant/slime/grey_monkey/on_reaction(var/datum/reagents/holder)
 	for(var/i = 1 to 5) //CHOMPedit  Increased number of monkey cubes from 4 to 5
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
+		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom)) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
 
@@ -470,7 +470,7 @@
 	required = /obj/item/slime_extract/yellow
 
 /decl/chemical_reaction/instant/slime/yellow_flashlight/on_reaction(var/datum/reagents/holder)
-	new /obj/item/device/flashlight/slime(get_turf(holder.my_atom))
+	new /obj/item/flashlight/slime(get_turf(holder.my_atom)) // CHOMPEdit - Removal of obj/item/device
 	..()
 
 
@@ -500,7 +500,7 @@
 	required = /obj/item/slime_extract/yellow
 
 /decl/chemical_reaction/instant/slime/yellow_battery/on_reaction(var/datum/reagents/holder)
-	new /obj/item/weapon/cell/slime(get_turf(holder.my_atom))
+	new /obj/item/cell/slime(get_turf(holder.my_atom)) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
 // ***************
@@ -1119,7 +1119,7 @@
 	required = /obj/item/slime_extract/bluespace
 
 /decl/chemical_reaction/instant/slime/bluespace_pouch/on_reaction(var/datum/reagents/holder)
-	new /obj/item/weapon/storage/backpack/holding/slime(get_turf(holder.my_atom))
+	new /obj/item/storage/backpack/holding/slime(get_turf(holder.my_atom)) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
 
@@ -1156,7 +1156,7 @@
 	required = /obj/item/slime_extract/bluespace
 
 /decl/chemical_reaction/instant/slime/bluespace_teleporter/on_reaction(var/datum/reagents/holder)
-	new /obj/item/weapon/disposable_teleporter/slime(get_turf(holder.my_atom))
+	new /obj/item/disposable_teleporter/slime(get_turf(holder.my_atom)) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
 // *******************
@@ -1252,7 +1252,7 @@
 	required = /obj/item/slime_extract/amber
 
 /decl/chemical_reaction/instant/slime/amber_random_food/on_reaction(var/datum/reagents/holder)
-	var/list/edibles = subtypesof(/obj/item/weapon/reagent_containers/food/snacks)
+	var/list/edibles = subtypesof(/obj/item/reagent_containers/food/snacks) // CHOMPEdit - Removal of obj/item/weapon
 
 	playsound(holder.my_atom, 'sound/effects/phasein.ogg', 100, 1)
 
@@ -1276,7 +1276,7 @@
 
 /decl/chemical_reaction/instant/slime/amber_snack/on_reaction(var/datum/reagents/holder)
 	for(var/i = 1 to rand(3, 5))
-		new /obj/item/weapon/reagent_containers/food/snacks/slime(get_turf(holder.my_atom))
+		new /obj/item/reagent_containers/food/snacks/slime(get_turf(holder.my_atom)) // CHOMPEdit - Removal of obj/item/weapon
 	..()
 
 

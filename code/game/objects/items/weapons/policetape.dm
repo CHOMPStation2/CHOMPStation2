@@ -328,7 +328,7 @@ var/list/tape_roll_applications = list()
 			crumple()
 	return ..()
 
-/obj/item/tape/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/tape/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	breaktape(user)
 
 /obj/item/tape/attack_hand(mob/user as mob)

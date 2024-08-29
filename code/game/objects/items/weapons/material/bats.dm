@@ -1,4 +1,4 @@
-/obj/item/weapon/material/twohanded/baseballbat
+/obj/item/material/twohanded/baseballbat // CHOMPEdit - Removal of obj/item/weapon
 	name = "bat"
 	desc = "HOME RUN!"
 	icon_state = "metalbat0"
@@ -13,17 +13,17 @@
 	slot_flags = SLOT_BACK
 
 //Predefined materials go here.
-/obj/item/weapon/material/twohanded/baseballbat/metal/New(var/newloc)
+/obj/item/material/twohanded/baseballbat/metal/New(var/newloc) // CHOMPEdit - Removal of obj/item/weapon
 	..(newloc,"steel")
 
-/obj/item/weapon/material/twohanded/baseballbat/uranium/New(var/newloc)
+/obj/item/material/twohanded/baseballbat/uranium/New(var/newloc) // CHOMPEdit - Removal of obj/item/weapon
 	..(newloc,"uranium")
 
-/obj/item/weapon/material/twohanded/baseballbat/gold/New(var/newloc)
+/obj/item/material/twohanded/baseballbat/gold/New(var/newloc) // CHOMPEdit - Removal of obj/item/weapon
 	..(newloc,"gold")
 
-/obj/item/weapon/material/twohanded/baseballbat/platinum/New(var/newloc)
+/obj/item/material/twohanded/baseballbat/platinum/New(var/newloc) // CHOMPEdit - Removal of obj/item/weapon
 	..(newloc,"platinum")
 
-/obj/item/weapon/material/twohanded/baseballbat/diamond/New(var/newloc)
+/obj/item/material/twohanded/baseballbat/diamond/New(var/newloc) // CHOMPEdit - Removal of obj/item/weapon
 	..(newloc,"diamond")

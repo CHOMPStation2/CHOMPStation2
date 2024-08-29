@@ -1,47 +1,47 @@
-/obj/item/weapon/storage/wallet/casino
+/obj/item/storage/wallet/casino // CHOMPEdit - Removal of obj/item/weapon
 	name = "casino wallet"
 	desc = "A fancy casino wallet with flashy lights, oooh~"
 	icon = 'icons/obj/casino_ch.dmi'
 	icon_state = "casinowallet_black"
 	can_hold = list(
-		/obj/item/weapon/spacecash,
-		/obj/item/weapon/card,
+		/obj/item/spacecash, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/card, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/mask/smokable/cigarette/,
-		/obj/item/device/flashlight/pen,
-		/obj/item/device/tape,
-		/obj/item/weapon/cartridge,
-		/obj/item/device/encryptionkey,
+		/obj/item/flashlight/pen, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tape, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/cartridge, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/encryptionkey, // CHOMPEdit - Removal of obj/item/device
 		/obj/item/seeds,
 		/obj/item/stack/medical,
-		/obj/item/weapon/coin,
-		/obj/item/weapon/dice,
-		/obj/item/weapon/disk,
-		/obj/item/weapon/implanter,
-		/obj/item/weapon/flame/lighter,
-		/obj/item/weapon/flame/match,
-		/obj/item/weapon/forensics,
-		/obj/item/weapon/glass_extra,
-		/obj/item/weapon/haircomb,
-		/obj/item/weapon/hand,
-		/obj/item/weapon/key,
-		/obj/item/weapon/lipstick,
-		/obj/item/weapon/paper,
-		/obj/item/weapon/pen,
-		/obj/item/weapon/photo,
-		/obj/item/weapon/reagent_containers/dropper,
-		/obj/item/weapon/sample,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/stamp,
+		/obj/item/coin, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/dice, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/disk, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/implanter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flame/lighter, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/flame/match, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/forensics, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/glass_extra, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/haircomb, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/hand, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/key, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/lipstick, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/paper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/pen, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/photo, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/reagent_containers/dropper, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/sample, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/tool/screwdriver, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/stamp, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/accessory/permit,
 		/obj/item/clothing/accessory/badge,
-		/obj/item/weapon/makeover,
-		/obj/item/weapon/spacecasinocash,
-		/obj/item/weapon/casino_platinum_chip,
-		/obj/item/weapon/deck,
-		/obj/item/weapon/book/codex/casino
+		/obj/item/makeover, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/spacecasinocash, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/casino_platinum_chip, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/deck, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/book/codex/casino // CHOMPEdit - Removal of obj/item/weapon
 		)
 
-/obj/item/weapon/storage/wallet/casino/verb/toggle_design()
+/obj/item/storage/wallet/casino/verb/toggle_design() // CHOMPEdit - Removal of obj/item/weapon
 	set category = "Object"
 	set name = "Toggle design"
 	set src in usr

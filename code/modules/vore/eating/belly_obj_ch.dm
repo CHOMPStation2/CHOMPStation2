@@ -581,10 +581,10 @@
 	w_class = ITEMSIZE_SMALL
 
 /obj/belly/proc/recycle(var/obj/item/O)
-	if(!recycling || (!LAZYLEN(O.matter) && !istype(O, /obj/item/weapon/ore)))
+	if(!recycling || (!LAZYLEN(O.matter) && !istype(O, /obj/item/ore))) // CHOMPEdit - Removal of obj/item/weapon
 		return FALSE
-	if(istype(O, /obj/item/weapon/ore))
-		var/obj/item/weapon/ore/ore = O
+	if(istype(O, /obj/item/ore)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/ore/ore = O // CHOMPEdit - Removal of obj/item/weapon
 		for(var/obj/item/ore_chunk/C in contents)
 			if(istype(C))
 				C.stored_ore[ore.material]++
@@ -628,17 +628,17 @@
 
 /obj/belly/proc/owner_adjust_nutrition(var/amount = 0)
 	if(storing_nutrition && amount > 0)
-		for(var/obj/item/weapon/reagent_containers/food/rawnutrition/R in contents)
+		for(var/obj/item/reagent_containers/food/rawnutrition/R in contents) // CHOMPEdit - Removal of obj/item/weapon
 			if(istype(R))
 				R.stored_nutrition += amount
 				return
-		var/obj/item/weapon/reagent_containers/food/rawnutrition/NR = new /obj/item/weapon/reagent_containers/food/rawnutrition(src)
+		var/obj/item/reagent_containers/food/rawnutrition/NR = new /obj/item/reagent_containers/food/rawnutrition(src) // CHOMPEdit - Removal of obj/item/weapon
 		NR.stored_nutrition += amount
 		return
 	else
 		owner.adjust_nutrition(amount)
 
-/obj/item/weapon/reagent_containers/food/rawnutrition
+/obj/item/reagent_containers/food/rawnutrition // CHOMPEdit - Removal of obj/item/weapon
 	name = "raw nutrition"
 	desc = "A nutritious pile of converted mass ready for consumption."
 	icon = 'icons/obj/recycling.dmi'
@@ -647,7 +647,7 @@
 	w_class = ITEMSIZE_SMALL
 	var/stored_nutrition = 0
 
-/obj/item/weapon/reagent_containers/food/rawnutrition/standard_feed_mob(var/mob/user, var/mob/target)
+/obj/item/reagent_containers/food/rawnutrition/standard_feed_mob(var/mob/user, var/mob/target) // CHOMPEdit - Removal of obj/item/weapon
 	if(isliving(target))
 		var/mob/living/L = target
 		L.nutrition += stored_nutrition

@@ -18,14 +18,14 @@
 	icon_state = "rig-vintagecrew"
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuitTG", slot_l_hand_str = "sec_voidsuitTG")
 	armor = list(melee = 30, bullet = 15, laser = 15,energy = 5, bomb = 20, bio = 100, rad = 50)
-	allowed = list(/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/weapon/storage/briefcase/inflatable,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
-			/obj/item/weapon/pickaxe,
-			/obj/item/weapon/shovel
+	allowed = list(/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/briefcase/inflatable, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/shovel // CHOMPEdit - Removal of obj/item/weapon
 			)
 
 //Engineering Crewsuit (ORANGE, RING)
@@ -52,25 +52,25 @@
 	max_pressure_protection = 15 * ONE_ATMOSPHERE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE+10000
 	breach_threshold = 14 //These are kinda thicc
-	allowed = list(/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/device/t_scanner,
-			/obj/item/weapon/rcd,
-			/obj/item/weapon/rcd_ammo,
-			/obj/item/weapon/storage/toolbox,
-			/obj/item/weapon/storage/briefcase/inflatable,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
-			/obj/item/device/robotanalyzer,
-			/obj/item/device/geiger,
-			/obj/item/weapon/tool,
-			/obj/item/weapon/weldingtool,
-			/obj/item/weapon/cell,
-			/obj/item/weapon/pickaxe,
-			/obj/item/device/measuring_tape,
-			/obj/item/device/lightreplacer,
-			/obj/item/weapon/shovel
+	allowed = list(/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/t_scanner, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/rcd, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/rcd_ammo, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/toolbox, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/briefcase/inflatable, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/robotanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/geiger, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tool, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/weldingtool, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/cell, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/measuring_tape, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/shovel // CHOMPEdit - Removal of obj/item/weapon
 			)
 
 //Medical Crewsuit (GREEN, CROSS)
@@ -94,18 +94,18 @@
 	icon_state = "rig-vintagemedic"
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuitTG", slot_l_hand_str = "sec_voidsuitTG")
 	armor = list(melee = 30, bullet = 15, laser = 15, energy = 5, bomb = 25, bio = 100, rad = 75)
-	allowed = list(/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/weapon/storage/firstaid,
-			/obj/item/device/healthanalyzer,
-			/obj/item/device/robotanalyzer,
-			/obj/item/device/mass_spectrometer,
-			/obj/item/device/halogen_counter,
+	allowed = list(/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/firstaid, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/robotanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/mass_spectrometer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/halogen_counter, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/stack/medical,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
-			/obj/item/weapon/cell
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/cell // CHOMPEdit - Removal of obj/item/weapon
 			)
 
 //Marine Crewsuit (BLUE, SHIELD)
@@ -128,21 +128,21 @@
 	breach_threshold = 14 //These are kinda thicc
 	resilience = 0.15 //Armored
 	siemens_coefficient = 0.8
-	allowed = list(/obj/item/weapon/gun,
-			/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/weapon/melee,
-			/obj/item/weapon/grenade,
-			/obj/item/device/flash,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
-			/obj/item/weapon/handcuffs,
-			/obj/item/device/hailer,
-			/obj/item/device/holowarrant,
-			/obj/item/device/megaphone,
+	allowed = list(/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/melee, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/grenade, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/handcuffs, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/holowarrant, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/ammo_magazine,
-			/obj/item/weapon/cell
+			/obj/item/cell // CHOMPEdit - Removal of obj/item/weapon
 			)
 
 //Officer Crewsuit (GOLD, X)
@@ -166,21 +166,21 @@
 	breach_threshold = 16 //Extra Thicc
 	resilience = 0.1 //Heavily Armored
 	siemens_coefficient = 0.7
-	allowed = list(/obj/item/weapon/gun,
-			/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/weapon/melee,
-			/obj/item/weapon/grenade,
-			/obj/item/device/flash,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
-			/obj/item/weapon/handcuffs,
-			/obj/item/device/hailer,
-			/obj/item/device/holowarrant,
-			/obj/item/device/megaphone,
+	allowed = list(/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/melee, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/grenade, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/handcuffs, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/holowarrant, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/ammo_magazine,
-			/obj/item/weapon/cell
+			/obj/item/cell // CHOMPEdit - Removal of obj/item/weapon
 			)
 
 //Pilot Crewsuit (ROYAL BLUE, I)
@@ -207,12 +207,12 @@
 	slowdown = 0
 	armor = list(melee = 25, bullet = 20, laser = 20, energy = 5, bomb = 20, bio = 100, rad = 50)
 	siemens_coefficient = 0.9
-	allowed = list(/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/weapon/storage/briefcase/inflatable,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
+	allowed = list(/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/briefcase/inflatable, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
 			)
 			
 //Scientist Crewsuit (PURPLE, O)
@@ -237,27 +237,27 @@
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuitTG", slot_l_hand_str = "sec_voidsuitTG")
 	armor = list(melee = 25, bullet = 10, laser = 10, energy = 50, bomb = 10, bio = 100, rad = 100)
 	siemens_coefficient = 0.8
-	allowed = list(/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/weapon/storage/firstaid,
-			/obj/item/device/healthanalyzer,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
-			/obj/item/device/ano_scanner,
-			/obj/item/device/depth_scanner,
-			/obj/item/device/xenoarch_multi_tool,
-			/obj/item/device/measuring_tape,
-			/obj/item/device/reagent_scanner,
-			/obj/item/device/robotanalyzer,
-			/obj/item/device/analyzer,
-			/obj/item/device/cataloguer,
-			/obj/item/device/universal_translator,
-			/obj/item/weapon/tool/crowbar,
+	allowed = list(/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/firstaid, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/healthanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/ano_scanner, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/depth_scanner, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/xenoarch_multi_tool, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/measuring_tape, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/reagent_scanner, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/robotanalyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/analyzer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/cataloguer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/universal_translator, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tool/crowbar, // CHOMPEdit - Removal of obj/item/weapon
 			/obj/item/stack/marker_beacon,
 			/obj/item/stack/flag,
-			/obj/item/weapon/clipboard,
-			/obj/item/weapon/cell
+			/obj/item/clipboard, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/cell // CHOMPEdit - Removal of obj/item/weapon
 			)
 
 //Miner's Crewsuit (BROWN)
@@ -276,14 +276,14 @@
 	icon_state = "rig-vintageminer"
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuitTG", slot_l_hand_str = "sec_voidsuitTG")
 	armor = list(melee = 30, bullet = 15, laser = 15,energy = 5, bomb = 20, bio = 100, rad = 50)
-	allowed = list(/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/weapon/storage/briefcase/inflatable,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
-			/obj/item/weapon/pickaxe,
-			/obj/item/weapon/shovel
+	allowed = list(/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/storage/briefcase/inflatable, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/pickaxe, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/shovel // CHOMPEdit - Removal of obj/item/weapon
 			)
 
 //Mercenary Crewsuit (RED, CROSS)
@@ -306,22 +306,22 @@
 	breach_threshold = 16 //Extra Thicc
 	resilience = 0.05 //Military Armor
 	siemens_coefficient = 0.6
-	allowed = list(/obj/item/weapon/gun,
-			/obj/item/device/flashlight,
-			/obj/item/weapon/tank,
-			/obj/item/device/suit_cooling_unit,
-			/obj/item/weapon/melee,
-			/obj/item/weapon/grenade,
-			/obj/item/device/flash,
-			/obj/item/device/gps,
-			/obj/item/device/radio/beacon,
-			/obj/item/weapon/handcuffs,
-			/obj/item/device/hailer,
-			/obj/item/device/holowarrant,
-			/obj/item/device/megaphone,
+	allowed = list(/obj/item/gun, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/tank, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/suit_cooling_unit, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/melee, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/grenade, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/flash, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio/beacon, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/handcuffs, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/hailer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/holowarrant, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/megaphone, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/ammo_magazine,
-			/obj/item/device/spaceflare,
-			/obj/item/device/powersink,
-			/obj/item/device/radio_jammer,
-			/obj/item/weapon/cell
+			/obj/item/spaceflare, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/powersink, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/radio_jammer, // CHOMPEdit - Removal of obj/item/device
+			/obj/item/cell // CHOMPEdit - Removal of obj/item/weapon
 			)

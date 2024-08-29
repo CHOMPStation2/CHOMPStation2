@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/food/snacks/meat
+/obj/item/reagent_containers/food/snacks/meat // CHOMPEdit - Removal of obj/item/weapon
 	name = "meat"
 	desc = "A slab of meat."
 	icon_state = "meat"
@@ -7,13 +7,13 @@
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/Initialize()
+/obj/item/reagent_containers/food/snacks/meat/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("protein", 6)
 	reagents.add_reagent("triglyceride", 2)
 	src.bitesize = 1.5
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/cook()
+/obj/item/reagent_containers/food/snacks/meat/cook() // CHOMPEdit - Removal of obj/item/weapon
 
 	if (!isnull(cooked_icon))
 		icon_state = cooked_icon
@@ -23,53 +23,53 @@
 	if (name == initial(name))
 		name = "cooked [name]"
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/weapon/material/knife))
-		new /obj/item/weapon/reagent_containers/food/snacks/rawcutlet(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/rawcutlet(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/rawcutlet(src)
+/obj/item/reagent_containers/food/snacks/meat/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W,/obj/item/material/knife)) // CHOMPEdit - Removal of obj/item/weapon
+		new /obj/item/reagent_containers/food/snacks/rawcutlet(src) // CHOMPEdit - Removal of obj/item/weapon
+		new /obj/item/reagent_containers/food/snacks/rawcutlet(src) // CHOMPEdit - Removal of obj/item/weapon
+		new /obj/item/reagent_containers/food/snacks/rawcutlet(src) // CHOMPEdit - Removal of obj/item/weapon
 		to_chat(user, "You cut the meat into thin strips.")
 		qdel(src)
 	else
 		..()
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh // CHOMPEdit - Removal of obj/item/weapon
 	name = "synthetic meat"
 	desc = "A synthetic slab of flesh."
 
 // Seperate definitions because some food likes to know if it's human.
 // TODO: rewrite kitchen code to check a var on the meat item so we can remove
 // all these sybtypes.
-/obj/item/weapon/reagent_containers/food/snacks/meat/human
-/obj/item/weapon/reagent_containers/food/snacks/meat/monkey
+/obj/item/reagent_containers/food/snacks/meat/human // CHOMPEdit - Removal of obj/item/weapon
+/obj/item/reagent_containers/food/snacks/meat/monkey // CHOMPEdit - Removal of obj/item/weapon
 	//same as plain meat
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/corgi
+/obj/item/reagent_containers/food/snacks/meat/corgi // CHOMPEdit - Removal of obj/item/weapon
 	name = "dogmeat"
 	desc = "Tastes like... well, you know."
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken
+/obj/item/reagent_containers/food/snacks/meat/chicken // CHOMPEdit - Removal of obj/item/weapon
 	name = "poultry"
 	icon_state = "chickenbreast"
 	cooked_icon = "chickensteak"
 	filling_color = "#BBBBAA"
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken/Initialize()
+/obj/item/reagent_containers/food/snacks/meat/chicken/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.remove_reagent("triglyceride", INFINITY)
 	//Chicken is low fat. Less total calories than other meats
 
-/obj/item/weapon/reagent_containers/food/snacks/crabmeat
+/obj/item/reagent_containers/food/snacks/crabmeat // CHOMPEdit - Removal of obj/item/weapon
 	name = "crustacean legs"
 	desc = "... Coffee? Is that you?"
 	icon_state = "crabmeat"
 	bitesize = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/crabmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/crabmeat/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("seafood", 2)
 
-/obj/item/weapon/reagent_containers/food/snacks/hugemushroomslice
+/obj/item/reagent_containers/food/snacks/hugemushroomslice // CHOMPEdit - Removal of obj/item/weapon
 	name = "fungus slice"
 	desc = "A slice from a huge mushroom."
 	icon_state = "hugemushroomslice"
@@ -80,11 +80,11 @@
 	nutriment_desc = list("raw" = 2, "mushroom" = 2)
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/hugemushroomslice/Initialize()
+/obj/item/reagent_containers/food/snacks/hugemushroomslice/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("psilocybin", 3)
 
-/obj/item/weapon/reagent_containers/food/snacks/tomatomeat
+/obj/item/reagent_containers/food/snacks/tomatomeat // CHOMPEdit - Removal of obj/item/weapon
 	name = "tomato slice"
 	desc = "A slice from a huge tomato"
 	icon_state = "tomatomeat"
@@ -95,7 +95,7 @@
 	nutriment_desc = list("raw" = 2, "tomato" = 3)
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/bearmeat
+/obj/item/reagent_containers/food/snacks/bearmeat // CHOMPEdit - Removal of obj/item/weapon
 	name = "bearmeat"
 	desc = "A very manly slab of meat."
 	icon_state = "bearmeat"
@@ -104,12 +104,12 @@
 	center_of_mass_y= 10 //CHOMPEdit
 	bitesize = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/bearmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/bearmeat/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("protein", 12)
 	reagents.add_reagent("hyperzine", 5)
 
-/obj/item/weapon/reagent_containers/food/snacks/xenomeat
+/obj/item/reagent_containers/food/snacks/xenomeat // CHOMPEdit - Removal of obj/item/weapon
 	name = "xenomeat"
 	desc = "A slab of green meat. Smells like acid."
 	icon_state = "xenomeat"
@@ -118,12 +118,12 @@
 	center_of_mass_y= 10 //CHOMPEdit
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/xenomeat/Initialize()
+/obj/item/reagent_containers/food/snacks/xenomeat/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("protein", 6)
 	reagents.add_reagent("pacid",6)
 
-/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat // Substitute for recipes requiring xeno meat.
+/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat // Substitute for recipes requiring xeno meat. // CHOMPEdit - Removal of obj/item/weapon
 	name = "insect meat"
 	desc = "A slab of green meat."
 	icon_state = "xenomeat"
@@ -132,16 +132,16 @@
 	center_of_mass_y= 10 //CHOMPEdit
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat/Initialize()
+/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("spidertoxin",6)
 	reagents.remove_reagent("pacid",6)
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/fox
+/obj/item/reagent_containers/food/snacks/meat/fox // CHOMPEdit - Removal of obj/item/weapon
 	name = "foxmeat"
 	desc = "The fox doesn't say a goddamn thing, now."
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
+/obj/item/reagent_containers/food/snacks/meat/grubmeat // CHOMPEdit - Removal of obj/item/weapon
 	name = "grubmeat"
 	desc = "A slab of grub meat, it gives a gentle shock if you touch it"
 	icon = 'icons/obj/food.dmi'
@@ -149,13 +149,13 @@
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/meat/grubmeat/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("protein", 1)
 	reagents.add_reagent("shockchem", 6)
 	bitesize = 6
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/worm
+/obj/item/reagent_containers/food/snacks/meat/worm // CHOMPEdit - Removal of obj/item/weapon
 	name = "weird meat"
 	desc = "A chunk of pulsating meat."
 	icon_state = "wormmeat"
@@ -164,15 +164,15 @@
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/worm/Initialize()
+/obj/item/reagent_containers/food/snacks/meat/worm/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	reagents.add_reagent("protein", 6)
 	reagents.add_reagent("phoron", 3)
 	reagents.add_reagent("myelamine", 3)
 	src.bitesize = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/worm/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/weapon/material/knife))
+/obj/item/reagent_containers/food/snacks/meat/worm/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
+	if(istype(W,/obj/item/material/knife)) // CHOMPEdit - Removal of obj/item/weapon
 		var/to_spawn = pickweight(/obj/random/junk = 30,
 		/obj/random/trash = 30,
 		/obj/random/maintenance/clean = 15,
@@ -181,8 +181,8 @@
 		/obj/random/bomb_supply = 7,
 		/obj/random/contraband = 3,
 		/obj/random/unidentified_medicine/old_medicine = 7,
-		/obj/item/weapon/strangerock = 3,
-		/obj/item/weapon/ore/phoron = 7,
+		/obj/item/strangerock = 3, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/ore/phoron = 7, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/random/handgun = 1,
 		/obj/random/toolbox = 4,
 		/obj/random/drinkbottle = 5

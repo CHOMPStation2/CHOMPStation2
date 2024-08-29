@@ -19,7 +19,7 @@
 /obj/structure/closet/walllocker/emerglocker
 	name = "emergency locker"
 	desc = "A wall mounted locker with emergency supplies."
-	var/list/spawnitems = list(/obj/item/weapon/tank/emergency/oxygen,/obj/item/clothing/mask/breath,/obj/item/weapon/tool/crowbar/red,/obj/item/device/flashlight/flare,)
+	var/list/spawnitems = list(/obj/item/tank/emergency/oxygen,/obj/item/clothing/mask/breath,/obj/item/tool/crowbar/red,/obj/item/flashlight/flare,) // CHOMPEdit - Removal of obj/item/weapon // CHOMPEdit - Removal of obj/item/device
 	var/amount = 2 // spawns each items X times.
 	closet_appearance = /decl/closet_appearance/wall/emergency
 
@@ -27,7 +27,7 @@
 	src.attack_hand(user)
 	return
 
-/obj/structure/closet/walllocker/emerglocker/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/closet/walllocker/emerglocker/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	return
 
 /obj/structure/closet/walllocker/emerglocker/attack_hand(mob/user as mob)
@@ -187,9 +187,9 @@
 
 	starts_with = list(
 		/obj/item/clothing/mask/breath = 2,
-		/obj/item/weapon/tank/emergency/oxygen/engi = 2,
-		/obj/item/weapon/storage/briefcase/inflatable,
-		/obj/item/device/radio = 3)
+		/obj/item/tank/emergency/oxygen/engi = 2, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/storage/briefcase/inflatable, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/radio = 3) // CHOMPEdit - Removal of obj/item/device
 
 /obj/structure/closet/walllocker_double/emergency_engi/north
 	pixel_y = 32
@@ -215,9 +215,9 @@
 	starts_with = list(
 		/obj/item/clothing/suit/fire,
 		/obj/item/clothing/mask/gas,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank/oxygen/red,
-		/obj/item/weapon/extinguisher,
+		/obj/item/flashlight, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/tank/oxygen/red, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/extinguisher, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/item/clothing/head/hardhat/red)
 
 /obj/structure/closet/walllocker_double/hydrant/north
@@ -252,14 +252,14 @@
 		/obj/item/clothing/suit/space/emergency,
 		/obj/item/clothing/head/helmet/space/emergency,
 		/obj/item/clothing/mask/breath,
-		/obj/item/weapon/tank/oxygen,
-		/obj/item/device/suit_cooling_unit/emergency,
-		/obj/item/device/gps,
-		/obj/item/weapon/material/knife/tacknife/survival,
+		/obj/item/tank/oxygen, // CHOMPEdit - Removal of obj/item/weapon
+		/obj/item/suit_cooling_unit/emergency, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/gps, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/material/knife/tacknife/survival, // CHOMPEdit - Removal of obj/item/weapon
 		/obj/random/mre,
-		/obj/item/device/flashlight/color/yellow,
-		/obj/item/device/flashlight/flare,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle)
+		/obj/item/flashlight/color/yellow, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/flashlight/flare, // CHOMPEdit - Removal of obj/item/device
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle) // CHOMPEdit - Removal of obj/item/weapon
 
 /obj/structure/closet/walllocker_double/survival/north
 	pixel_y = 32

@@ -125,8 +125,8 @@
 	allowed_tools = list(
 	/obj/item/stack/nanopaste = 100,
 	/obj/item/stack/cable_coil = 75,
-	/obj/item/weapon/tool/wrench = 50,
-	/obj/item/weapon/storage/toolbox = 10 	//Percussive Maintenance
+	/obj/item/tool/wrench = 50, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/toolbox = 10 	//Percussive Maintenance // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	min_duration = 60 //CHOMPedit
@@ -201,10 +201,10 @@
 	surgery_name = "Detach Organ"
 
 	allowed_tools = list(
-	/obj/item/weapon/surgical/scalpel = 100,		\
-	/obj/item/weapon/material/knife = 75,	\
-	/obj/item/weapon/material/shard = 50, 		\
-	)
+	/obj/item/surgical/scalpel = 100,		\
+	/obj/item/material/knife = 75,	\
+	/obj/item/material/shard = 50, 		\
+	)  // CHOMPEdit - Removal of obj/item/weapon
 
 	min_duration = 60 //CHOMPedit
 	max_duration = 60 //CHOMPedit
@@ -270,8 +270,8 @@
 	surgery_name = "Remove Organ"
 
 	allowed_tools = list(
-	/obj/item/weapon/surgical/hemostat = 100,	\
-	/obj/item/weapon/material/kitchen/utensil/fork = 20
+	/obj/item/surgical/hemostat = 100,	\
+	/obj/item/material/kitchen/utensil/fork = 20 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	allowed_procs = list(IS_WIRECUTTER = 100) //FBP code also uses this, so let's be nice. Roboticists won't know to use hemostats.
@@ -438,8 +438,8 @@
 /datum/surgery_step/internal/attach_organ
 	surgery_name = "Attach Organ"
 	allowed_tools = list(
-	/obj/item/weapon/surgical/FixOVein = 100, \
-	/obj/item/stack/cable_coil = 75
+	/obj/item/surgical/FixOVein = 100, \
+	/obj/item/stack/cable_coil = 75 // CHOMPEdit - Removal of obj/item/weapon
 	)
 
 	min_duration = 40 //CHOMPedit

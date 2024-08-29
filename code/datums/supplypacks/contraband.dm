@@ -8,9 +8,9 @@
 	num_contained = 5
 	contains = list(
 			/obj/item/seeds/bloodtomatoseed,
-			/obj/item/weapon/storage/pill_bottle/zoom,
-			/obj/item/weapon/storage/pill_bottle/happy,
-			/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine
+			/obj/item/storage/pill_bottle/zoom, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/storage/pill_bottle/happy, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/drinks/bottle/pwine // CHOMPEdit - Removal of obj/item/weapon
 			)
 
 	name = "Contraband crate"
@@ -23,9 +23,9 @@
 /datum/supply_pack/security/specialops
 	name = "Special Ops supplies"
 	contains = list(
-			/obj/item/weapon/storage/box/emps,
-			/obj/item/weapon/grenade/smokebomb = 4,
-			/obj/item/weapon/grenade/chem_grenade/incendiary
+			/obj/item/storage/box/emps, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/grenade/smokebomb = 4, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/grenade/chem_grenade/incendiary // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 25
 	containertype = /obj/structure/closet/crate/weapon
@@ -35,8 +35,8 @@
 /datum/supply_pack/supply/moghes
 	name = "Moghes imports"
 	contains = list(
-			/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew = 2,
-			/obj/item/weapon/reagent_containers/food/snacks/unajerky = 4
+			/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew = 2, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/food/snacks/unajerky = 4 // CHOMPEdit - Removal of obj/item/weapon
 			)
 	cost = 25
 	containertype = /obj/structure/closet/crate/unathi
@@ -46,7 +46,7 @@
 /datum/supply_pack/munitions/bolt_rifles_militia
  	name = "Weapon - Surplus militia rifles"
  	contains = list(
- 			/obj/item/weapon/gun/projectile/shotgun/pump/rifle = 3,
+ 			/obj/item/gun/projectile/shotgun/pump/rifle = 3, // CHOMPEdit - Removal of obj/item/weapon
  			/obj/item/ammo_magazine/clip/c762 = 6
  			)
  	cost = 1000
@@ -61,35 +61,35 @@
 			list( //the operator,
 					/obj/item/clothing/suit/storage/vest/heavy/merc,
 					/obj/item/clothing/glasses/night,
-					/obj/item/weapon/storage/box/anti_photons
+					/obj/item/storage/box/anti_photons // CHOMPEdit - Removal of obj/item/weapon
 					),
 			list( //the indian,
-					/obj/item/weapon/gun/projectile/dartgun,
+					/obj/item/gun/projectile/dartgun, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/item/ammo_magazine/chemdart
 					),
 
 			list( //the doc,
-					/obj/item/weapon/storage/firstaid/combat,
-					/obj/item/weapon/reagent_containers/hypospray
+					/obj/item/storage/firstaid/combat, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/reagent_containers/hypospray // CHOMPEdit - Removal of obj/item/weapon
 					),
 
 			list( //the sapper,
-					/obj/item/weapon/melee/energy/sword/ionic_rapier,
-					/obj/item/weapon/storage/box/syndie_kit/space, //doesn't matter what species you are,
-					/obj/item/device/multitool/ai_detector,
-					/obj/item/weapon/storage/toolbox/syndicate/powertools
+					/obj/item/melee/energy/sword/ionic_rapier, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/storage/box/syndie_kit/space, //doesn't matter what species you are, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/multitool/ai_detector, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/storage/toolbox/syndicate/powertools // CHOMPEdit - Removal of obj/item/weapon
 					),
 			list( //the infiltrator,
-					/obj/item/device/chameleon,
-					/obj/item/weapon/storage/box/syndie_kit/chameleon,
-					/obj/item/device/encryptionkey/syndicate,
-					/obj/item/weapon/card/id/syndicate,
+					/obj/item/chameleon, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/storage/box/syndie_kit/chameleon, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/encryptionkey/syndicate, // CHOMPEdit - Removal of obj/item/device
+					/obj/item/card/id/syndicate, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/item/clothing/mask/gas/voice,
-					/obj/item/weapon/makeover
+					/obj/item/makeover // CHOMPEdit - Removal of obj/item/weapon
 					),
 			list( //the professional,
-					/obj/item/weapon/gun/energy/ionrifle/pistol,
-					/obj/item/weapon/material/knife/tacknife/combatknife,
+					/obj/item/gun/energy/ionrifle/pistol, // CHOMPEdit - Removal of obj/item/weapon
+					/obj/item/material/knife/tacknife/combatknife, // CHOMPEdit - Removal of obj/item/weapon
 					/obj/item/clothing/mask/balaclava
 					)
 			)

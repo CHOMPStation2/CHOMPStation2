@@ -93,7 +93,7 @@
 			update_icon()
 	return ..()
 
-/obj/structure/generic_structure/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/generic_structure/attackby(obj/item/W as obj, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(wrenchable && W.has_tool_quality(TOOL_WRENCH))
 		add_fingerprint(user)
 		anchored = !anchored

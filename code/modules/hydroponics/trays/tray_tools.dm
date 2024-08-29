@@ -1,27 +1,27 @@
 //Analyzer, pestkillers, weedkillers, nutrients, hatchets, cutters.
 
-/obj/item/weapon/tool/wirecutters/clippers
+/obj/item/tool/wirecutters/clippers // CHOMPEdit - Removal of obj/item/weapon
 	name = "plant clippers"
 	desc = "A tool used to take samples from plants."
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "clippers"
 	random_color = FALSE
 
-/obj/item/weapon/tool/wirecutters/clippers/trimmers
+/obj/item/tool/wirecutters/clippers/trimmers // CHOMPEdit - Removal of obj/item/weapon
     name = "hedgetrimmers"
     desc = "An old pair of trimmers with a pretty dull blade. You would probably have a hard time cutting anything but plants with it."
     icon_state = "hedget"
     item_state = "hedget"
     force = 7 //One point extra than standard wire cutters.
 
-/obj/item/weapon/tool/wirecutters/clippers/trimmers/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
+/obj/item/tool/wirecutters/clippers/trimmers/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity) // CHOMPEdit - Removal of obj/item/weapon
 	if(!proximity) return
 	..()
 	if(A && istype(A,/obj/effect/plant))
 		var/obj/effect/plant/P = A
 		P.die_off()
 
-/obj/item/device/analyzer/plant_analyzer
+/obj/item/analyzer/plant_analyzer // CHOMPEdit - Removal of obj/item/device
 	name = "plant analyzer"
 	icon = 'icons/obj/device.dmi'
 	icon_state = "hydro"
@@ -29,23 +29,23 @@
 	var/datum/seed/last_seed
 	var/list/last_reagents
 
-/obj/item/device/analyzer/plant_analyzer/Destroy()
+/obj/item/analyzer/plant_analyzer/Destroy() // CHOMPEdit - Removal of obj/item/device
 	. = ..()
 	QDEL_NULL(last_seed)
 
-/obj/item/device/analyzer/plant_analyzer/attack_self(mob/user)
+/obj/item/analyzer/plant_analyzer/attack_self(mob/user) // CHOMPEdit - Removal of obj/item/device
 	tgui_interact(user)
 
-/obj/item/device/analyzer/plant_analyzer/tgui_interact(mob/user, datum/tgui/ui)
+/obj/item/analyzer/plant_analyzer/tgui_interact(mob/user, datum/tgui/ui) // CHOMPEdit - Removal of obj/item/device
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "PlantAnalyzer", name)
 		ui.open()
 
-/obj/item/device/analyzer/plant_analyzer/tgui_state(mob/user)
+/obj/item/analyzer/plant_analyzer/tgui_state(mob/user) // CHOMPEdit - Removal of obj/item/device
 	return GLOB.tgui_inventory_state
 
-/obj/item/device/analyzer/plant_analyzer/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
+/obj/item/analyzer/plant_analyzer/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state) // CHOMPEdit - Removal of obj/item/device
 	var/list/data = ..()
 
 	var/datum/seed/grown_seed = last_seed
@@ -58,7 +58,7 @@
 
 	return data
 
-/obj/item/device/analyzer/plant_analyzer/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
+/obj/item/analyzer/plant_analyzer/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state) // CHOMPEdit - Removal of obj/item/device
 	if(..())
 		return TRUE
 
@@ -71,7 +71,7 @@
 			last_reagents = null
 			return TRUE
 
-/obj/item/device/analyzer/plant_analyzer/afterattack(obj/target, mob/user, flag)
+/obj/item/analyzer/plant_analyzer/afterattack(obj/target, mob/user, flag) // CHOMPEdit - Removal of obj/item/device
 	if(!flag)
 		return
 
@@ -79,15 +79,15 @@
 	var/datum/reagents/grown_reagents
 	if(istype(target,/obj/structure/table))
 		return ..()
-	else if(istype(target,/obj/item/weapon/reagent_containers/food/snacks/grown))
+	else if(istype(target,/obj/item/reagent_containers/food/snacks/grown)) // CHOMPEdit - Removal of obj/item/weapon
 
-		var/obj/item/weapon/reagent_containers/food/snacks/grown/G = target
+		var/obj/item/reagent_containers/food/snacks/grown/G = target // CHOMPEdit - Removal of obj/item/weapon
 		grown_seed = SSplants.seeds[G.plantname]
 		grown_reagents = G.reagents
 
-	else if(istype(target,/obj/item/weapon/grown))
+	else if(istype(target,/obj/item/grown)) // CHOMPEdit - Removal of obj/item/weapon
 
-		var/obj/item/weapon/grown/G = target
+		var/obj/item/grown/G = target // CHOMPEdit - Removal of obj/item/weapon
 		grown_seed = SSplants.seeds[G.plantname]
 		grown_reagents = G.reagents
 
@@ -125,7 +125,7 @@
 
 	tgui_interact(user)
 
-/obj/item/device/analyzer/plant_analyzer/proc/print_report_verb()
+/obj/item/analyzer/plant_analyzer/proc/print_report_verb() // CHOMPEdit - Removal of obj/item/device
 	set name = "Print Plant Report"
 	set category = "Object"
 	set src = usr
@@ -134,7 +134,7 @@
 		return
 	print_report(usr)
 
-/obj/item/device/analyzer/plant_analyzer/proc/print_report(var/mob/living/user)
+/obj/item/analyzer/plant_analyzer/proc/print_report(var/mob/living/user) // CHOMPEdit - Removal of obj/item/device
 	var/datum/seed/grown_seed = last_seed
 	if(!istype(grown_seed))
 		to_chat(user, "<span class='warning'>There is no scan data to print.</span>")
@@ -163,7 +163,7 @@
 
 	dat += jointext(tgui_data["trait_info"], "<br>\n")
 
-	var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(get_turf(src))
+	var/obj/item/paper/P = new /obj/item/paper(get_turf(src)) // CHOMPEdit - Removal of obj/item/weapon
 	P.name = "paper - [form_title]"
 	P.info = "[dat]"
 	if(istype(user,/mob/living/carbon/human))

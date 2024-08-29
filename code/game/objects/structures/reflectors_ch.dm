@@ -119,8 +119,8 @@
 		if(buildstackamount)
 			new buildstacktype(drop_location(), buildstackamount)
 		qdel(src)
-	else if(istype(W, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/I = W
+	else if(istype(W, /obj/item/weldingtool)) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/weldingtool/I = W // CHOMPEdit - Removal of obj/item/weapon
 		if(!anchored)
 			if(!I.remove_fuel(1,user))
 				return

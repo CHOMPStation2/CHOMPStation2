@@ -12,10 +12,10 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 	climbable = TRUE
 	//copypaste sorry
 	var/amount_per_transfer_from_this = 5 //shit I dunno, adding this so syringes stop runtime erroring. --NeoFite
-	var/obj/item/weapon/storage/bag/trash/mybag	= null
-	var/obj/item/weapon/mop/mymop = null
-	var/obj/item/weapon/reagent_containers/spray/myspray = null
-	var/obj/item/device/lightreplacer/myreplacer = null
+	var/obj/item/storage/bag/trash/mybag	= null // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/mop/mymop = null // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/reagent_containers/spray/myspray = null // CHOMPEdit - Removal of obj/item/weapon
+	var/obj/item/lightreplacer/myreplacer = null // CHOMPEdit - Removal of obj/item/device
 	var/obj/structure/mopbucket/mybucket = null
 	var/has_items = FALSE
 	var/dismantled = TRUE
@@ -27,10 +27,10 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 /obj/structure/janitorialcart/proc/equip_janicart_item(mob/user, obj/item/I)
 	if(!equippable_item_whitelist)
 		equippable_item_whitelist = typecacheof(list(
-			/obj/item/weapon/storage/bag/trash,
-			/obj/item/weapon/mop,
-			/obj/item/weapon/reagent_containers/spray,
-			/obj/item/device/lightreplacer,
+			/obj/item/storage/bag/trash, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/mop, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/reagent_containers/spray, // CHOMPEdit - Removal of obj/item/weapon
+			/obj/item/lightreplacer, // CHOMPEdit - Removal of obj/item/device
 			/obj/item/clothing/suit/caution,
 		))
 
@@ -42,28 +42,28 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 		to_chat(user, "<span class='warning'>[I] is stuck to your hand.</span>")
 		return FALSE
 
-	if(istype(I, /obj/item/weapon/storage/bag/trash))
+	if(istype(I, /obj/item/storage/bag/trash)) // CHOMPEdit - Removal of obj/item/weapon
 		if(mybag)
 			to_chat(user, "<span class='warning'>[src] already has \an [I].</span>")
 			return FALSE
 		mybag = I
 		setTguiIcon("mybag", mybag)
 
-	else if(istype(I, /obj/item/weapon/mop))
+	else if(istype(I, /obj/item/mop)) // CHOMPEdit - Removal of obj/item/weapon
 		if(mymop)
 			to_chat(user, "<span class='warning'>[src] already has \an [I].</span>")
 			return FALSE
 		mymop = I
 		setTguiIcon("mymop", mymop)
 
-	else if(istype(I, /obj/item/weapon/reagent_containers/spray))
+	else if(istype(I, /obj/item/reagent_containers/spray)) // CHOMPEdit - Removal of obj/item/weapon
 		if(myspray)
 			to_chat(user, "<span class='warning'>[src] already has \an [I].</span>")
 			return FALSE
 		myspray = I
 		setTguiIcon("myspray", myspray)
 
-	else if(istype(I, /obj/item/device/lightreplacer))
+	else if(istype(I, /obj/item/lightreplacer)) // CHOMPEdit - Removal of obj/item/device
 		if(myreplacer)
 			to_chat(user, "<span class='warning'>[src] already has \an [I].</span>")
 			return FALSE
@@ -134,7 +134,7 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 		..()
 
 /obj/structure/janitorialcart/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/weapon/mop) || istype(I, /obj/item/weapon/reagent_containers/glass/rag) || istype(I, /obj/item/weapon/soap))
+	if(istype(I, /obj/item/mop) || istype(I, /obj/item/reagent_containers/glass/rag) || istype(I, /obj/item/soap)) // CHOMPEdit - Removal of obj/item/weapon
 		if (mybucket)
 			if(I.reagents.total_volume < I.reagents.maximum_volume)
 				if(mybucket.reagents.total_volume < 1)
@@ -149,20 +149,20 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 			to_chat(user, "<span class='notice'>There is no bucket mounted here to dip [I] into!</span>")
 		return 1
 
-	else if (istype(I, /obj/item/weapon/reagent_containers/glass/bucket) && mybucket)
+	else if (istype(I, /obj/item/reagent_containers/glass/bucket) && mybucket) // CHOMPEdit - Removal of obj/item/weapon
 		I.afterattack(mybucket, usr, 1)
 		update_icon()
 		return 1
 
-	else if(istype(I, /obj/item/weapon/reagent_containers/spray) && !myspray)
+	else if(istype(I, /obj/item/reagent_containers/spray) && !myspray) // CHOMPEdit - Removal of obj/item/weapon
 		equip_janicart_item(user, I)
 		return 1
 
-	else if(istype(I, /obj/item/device/lightreplacer) && !myreplacer)
+	else if(istype(I, /obj/item/lightreplacer) && !myreplacer) // CHOMPEdit - Removal of obj/item/device
 		equip_janicart_item(user, I)
 		return 1
 
-	else if(istype(I, /obj/item/weapon/storage/bag/trash) && !mybag)
+	else if(istype(I, /obj/item/storage/bag/trash) && !mybag) // CHOMPEdit - Removal of obj/item/weapon
 		equip_janicart_item(user, I)
 		return 1
 
@@ -189,10 +189,10 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 /obj/structure/janitorialcart/AltClick(mob/living/user)
 	if(user.incapacitated() || !Adjacent(user))	return
 	var/obj/I = usr.get_active_hand()
-	if(istype(I, /obj/item/weapon/mop))
+	if(istype(I, /obj/item/mop)) // CHOMPEdit - Removal of obj/item/weapon
 		equip_janicart_item(user, I)
-	else if(istype(I, /obj/item/weapon/reagent_containers) && mybucket)
-		var/obj/item/weapon/reagent_containers/C = I
+	else if(istype(I, /obj/item/reagent_containers) && mybucket) // CHOMPEdit - Removal of obj/item/weapon
+		var/obj/item/reagent_containers/C = I // CHOMPEdit - Removal of obj/item/weapon
 		C.afterattack(mybucket, usr, 1)
 		update_icon()
 
@@ -380,7 +380,7 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 	flags = OPENCONTAINER
 	//copypaste sorry
 	var/amount_per_transfer_from_this = 5 //shit I dunno, adding this so syringes stop runtime erroring. --NeoFite
-	var/obj/item/weapon/storage/bag/trash/mybag	= null
+	var/obj/item/storage/bag/trash/mybag	= null // CHOMPEdit - Removal of obj/item/weapon
 	var/callme = "pimpin' ride"	//how do people refer to it?
 
 
@@ -398,7 +398,7 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 
 
 /obj/structure/bed/chair/janicart/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/weapon/mop))
+	if(istype(I, /obj/item/mop)) // CHOMPEdit - Removal of obj/item/weapon
 		if(reagents.total_volume > 1)
 			reagents.trans_to_obj(I, 2)
 			to_chat(user, "<span class='notice'>You wet [I] in the [callme].</span>")
@@ -407,7 +407,7 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 			to_chat(user, "<span class='notice'>This [callme] is out of water!</span>")
 	else if(istype(I, /obj/item/key))
 		to_chat(user, "Hold [I] in one of your hands while you drive this [callme].")
-	else if(istype(I, /obj/item/weapon/storage/bag/trash))
+	else if(istype(I, /obj/item/storage/bag/trash)) // CHOMPEdit - Removal of obj/item/weapon
 		to_chat(user, "<span class='notice'>You hook the trashbag onto the [callme].</span>")
 		user.drop_item()
 		I.loc = src

@@ -1,4 +1,4 @@
-/obj/item/weapon/book/manual/resleeving
+/obj/item/book/manual/resleeving // CHOMPEdit - Removal of obj/item/weapon
 	name = "Resleeving, the New Cloning?"
 	icon_state = "stasis"
 	author = "Dnar Koshi"

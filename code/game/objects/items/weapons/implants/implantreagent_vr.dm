@@ -1,4 +1,4 @@
-/obj/item/weapon/implant/reagent_generator
+/obj/item/implant/reagent_generator // CHOMPEdit - Removal of obj/item/weapon
 	name = "reagent generator implant"
 	desc = "This is an implant that has attached storage and generates a reagent."
 	implant_color = "r"
@@ -17,26 +17,26 @@
 	var/verb_name = "Transfer From Reagent Implant"
 	var/verb_desc = "Remove reagents from an internal reagent into a container"
 
-/obj/item/weapon/implant/reagent_generator/New()
+/obj/item/implant/reagent_generator/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	create_reagents(usable_volume)
 
-/obj/item/weapon/implanter/reagent_generator
-	var/implant_type = /obj/item/weapon/implant/reagent_generator
+/obj/item/implanter/reagent_generator // CHOMPEdit - Removal of obj/item/weapon
+	var/implant_type = /obj/item/implant/reagent_generator // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/implanter/reagent_generator/New()
+/obj/item/implanter/reagent_generator/New() // CHOMPEdit - Removal of obj/item/weapon
 	..()
 	imp = new implant_type(src)
 	update()
 	return
 
-/obj/item/weapon/implant/reagent_generator/post_implant(mob/living/carbon/source)
+/obj/item/implant/reagent_generator/post_implant(mob/living/carbon/source) // CHOMPEdit - Removal of obj/item/weapon
 	START_PROCESSING(SSobj, src)
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
 	assigned_proc = new assigned_proc(source, verb_name, verb_desc)
 	return 1
 
-/obj/item/weapon/implant/reagent_generator/process()
+/obj/item/implant/reagent_generator/process() // CHOMPEdit - Removal of obj/item/weapon
 	var/before_gen
 	if(isliving(imp_in) && generated_reagents)
 		before_gen = reagents.total_volume
@@ -56,7 +56,7 @@
 		else if(reagents.total_volume == reagents.maximum_volume && before_gen < reagents.maximum_volume)
 			to_chat(imp_in, "<span class='warning'>[pick(full_message)]</span>")
 
-/obj/item/weapon/implant/reagent_generator/proc/do_generation(var/mob/living/L)
+/obj/item/implant/reagent_generator/proc/do_generation(var/mob/living/L) // CHOMPEdit - Removal of obj/item/weapon
 	L.adjust_nutrition(-gen_cost)
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent])
@@ -76,16 +76,16 @@
 	if(user.incapacitated() || user.stat > CONSCIOUS)
 		return
 
-	var/obj/item/weapon/reagent_containers/container = user.get_active_hand()
+	var/obj/item/reagent_containers/container = user.get_active_hand() // CHOMPEdit - Removal of obj/item/weapon
 	if(!container)
 		to_chat(user,"<span class='notice'>You need an open container to do this!</span>")
 		return
 
 
-	var/obj/item/weapon/implant/reagent_generator/rimplant
+	var/obj/item/implant/reagent_generator/rimplant // CHOMPEdit - Removal of obj/item/weapon
 	for(var/obj/item/organ/external/E in organs)
-		for(var/obj/item/weapon/implant/I in E.implants)
-			if(istype(I, /obj/item/weapon/implant/reagent_generator))
+		for(var/obj/item/implant/I in E.implants) // CHOMPEdit - Removal of obj/item/weapon
+			if(istype(I, /obj/item/implant/reagent_generator)) // CHOMPEdit - Removal of obj/item/weapon
 				rimplant = I
 				break
 	if(rimplant)

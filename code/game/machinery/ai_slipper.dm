@@ -33,7 +33,7 @@
 	uses = uses
 	power_change()
 
-/obj/machinery/ai_slipper/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/ai_slipper/attackby(obj/item/W, mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(stat & (NOPOWER|BROKEN))
 		return
 	if(istype(user, /mob/living/silicon))

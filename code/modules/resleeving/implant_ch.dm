@@ -28,7 +28,7 @@
             if(user && src)                
 
                 //Create the actual implant.
-                var/obj/item/weapon/implant/backup/imp = new(src.contents)
+                var/obj/item/implant/backup/imp = new(src.contents) // CHOMPEdit - Removal of obj/item/weapon
                 imp.germ_level = 0
 
                 //Implant the implant.

@@ -1,4 +1,4 @@
-/obj/item/weapon/deadringer/process()
+/obj/item/deadringer/process() // CHOMPEdit - Removal of obj/item/weapon
 	if(activated)
 		if (ismob(src.loc))
 			var/mob/living/carbon/human/H = src.loc

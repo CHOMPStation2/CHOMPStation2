@@ -2,7 +2,7 @@
 	name = "paper"
 	entries_expire_at = 50
 	has_admin_data = TRUE
-	var/paper_type = /obj/item/weapon/paper
+	var/paper_type = /obj/item/paper // CHOMPEdit - Removal of obj/item/weapon
 	var/requires_noticeboard = TRUE
 
 /datum/persistent/paper/CheckTurfContents(var/turf/T, var/list/token)
@@ -14,7 +14,7 @@
 	var/obj/structure/noticeboard/board = locate() in creating
 	if(requires_noticeboard && LAZYLEN(board.notices) >= board.max_notices)
 		return
-	var/obj/item/weapon/paper/paper = new paper_type(creating)
+	var/obj/item/paper/paper = new paper_type(creating) // CHOMPEdit - Removal of obj/item/weapon
 	paper.info = token["message"]
 	paper.name = token["title"]
 	if(!paper.name)
@@ -28,18 +28,18 @@
 	return paper
 
 /datum/persistent/paper/GetEntryAge(var/atom/entry)
-	var/obj/item/weapon/paper/paper = entry
+	var/obj/item/paper/paper = entry // CHOMPEdit - Removal of obj/item/weapon
 	return paper.age
 
 /datum/persistent/paper/CompileEntry(var/atom/entry, var/write_file)
 	. = ..()
-	var/obj/item/weapon/paper/paper = entry
+	var/obj/item/paper/paper = entry // CHOMPEdit - Removal of obj/item/weapon
 	LAZYADDASSOC(., "author", "[paper.last_modified_ckey ? paper.last_modified_ckey : "unknown"]")
 	LAZYADDASSOC(., "message", "[paper.info]")
 	LAZYADDASSOC(., "name", "[paper.name]")
 
 /datum/persistent/paper/GetAdminDataStringFor(var/thing, var/can_modify, var/mob/user)
-	var/obj/item/weapon/paper/paper = thing
+	var/obj/item/paper/paper = thing // CHOMPEdit - Removal of obj/item/weapon
 	if(can_modify)
 		. = "<td style='background-color:[paper.color]'>[paper.info]</td><td>[paper.name]</td><td>[paper.last_modified_ckey]</td><td><a href='byond://?src=\ref[src];[HrefToken()];caller=\ref[user];remove_entry=\ref[thing]'>Destroy</a></td>"
 	else

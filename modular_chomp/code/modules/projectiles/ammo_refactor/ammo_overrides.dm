@@ -6,464 +6,464 @@ Small Weapons
 
 
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/repeater
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/repeater // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/brushgun
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/brushgun // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/trailgun
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/trailgun // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/revolver
+/obj/item/gun/projectile/revolver // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/lemat
+/obj/item/gun/projectile/revolver/lemat // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/a38
 
-/obj/item/weapon/gun/projectile/revolver/stainless
+/obj/item/gun/projectile/revolver/stainless // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/detective
+/obj/item/gun/projectile/revolver/detective // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/a38
 
-/obj/item/weapon/gun/projectile/revolver/detective45
+/obj/item/gun/projectile/revolver/detective45 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small/rubber
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 
-/obj/item/weapon/gun/projectile/revolver/lombardi
+/obj/item/gun/projectile/revolver/lombardi // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/lombardi/panther
+/obj/item/gun/projectile/revolver/lombardi/panther // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/lombardi/gold
+/obj/item/gun/projectile/revolver/lombardi/gold // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/cappeacekeeper
+/obj/item/gun/projectile/revolver/cappeacekeeper // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/mateba
+/obj/item/gun/projectile/revolver/mateba // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/deckard
+/obj/item/gun/projectile/revolver/deckard // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/a38
 
-/obj/item/weapon/gun/projectile/revolver/deckard/emp
+/obj/item/gun/projectile/revolver/deckard/emp // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/ion/small
 
-/obj/item/weapon/gun/projectile/revolver/webley
+/obj/item/gun/projectile/revolver/webley // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/consul
+/obj/item/gun/projectile/revolver/consul // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber/strong
 
-/obj/item/weapon/gun/projectile/revolver/nova
+/obj/item/gun/projectile/revolver/nova // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/cerberus
+/obj/item/gun/projectile/revolver/cerberus // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/nagant
+/obj/item/gun/projectile/revolver/nagant // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/nagant/skinned
+/obj/item/gun/projectile/revolver/nagant/skinned // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/revolver/saa
+/obj/item/gun/projectile/revolver/saa // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/rifle/a45lc
 
-/obj/item/weapon/gun/projectile/pistol
+/obj/item/gun/projectile/pistol // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/pistol/flash
+/obj/item/gun/projectile/pistol/flash // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol/flash
 
-/obj/item/weapon/gun/projectile/automatic/advanced_smg
+/obj/item/gun/projectile/automatic/advanced_smg // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/smg,/obj/item/ammo_magazine/pistol)
 	magazine_type = /obj/item/ammo_magazine/smg/empty
 
-/obj/item/weapon/gun/projectile/automatic/advanced_smg/loaded
+/obj/item/gun/projectile/automatic/advanced_smg/loaded // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/smg,/obj/item/ammo_magazine/pistol)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/pdw
+/obj/item/gun/projectile/automatic/pdw // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/wt550
+/obj/item/gun/projectile/automatic/wt550 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg/rubber
 
-/obj/item/weapon/gun/projectile/automatic/wt550/lethal
+/obj/item/gun/projectile/automatic/wt550/lethal // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/mini_uzi
+/obj/item/gun/projectile/automatic/mini_uzi // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/tommygun
+/obj/item/gun/projectile/automatic/tommygun // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/smg,/obj/item/ammo_magazine/smg_drum)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/combatsmg
+/obj/item/gun/projectile/automatic/combatsmg // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/c20r
+/obj/item/gun/projectile/automatic/c20r // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/c20r/rubber
+/obj/item/gun/projectile/automatic/c20r/rubber // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg/rubber
 
-/obj/item/weapon/gun/projectile/automatic/c20r/empty
+/obj/item/gun/projectile/automatic/c20r/empty // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg/empty
 
-/obj/item/weapon/gun/projectile/automatic/sol
+/obj/item/gun/projectile/automatic/sol // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/automatic/glock
+/obj/item/gun/projectile/automatic/glock // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/automatic/cballistic
+/obj/item/gun/projectile/automatic/cballistic // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol
 
-/obj/item/weapon/gun/projectile/automatic/cballistic/mp5a5
+/obj/item/gun/projectile/automatic/cballistic/mp5a5 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/serdy
+/obj/item/gun/projectile/automatic/serdy // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol
 
-/obj/item/weapon/gun/projectile/automatic/serdy/ppsh
+/obj/item/gun/projectile/automatic/serdy/ppsh // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a762x25
 	allowed_magazines = list(/obj/item/ammo_magazine/smg_drum)
 	magazine_type = /obj/item/ammo_magazine/smg_drum
 
-/obj/item/weapon/gun/projectile/automatic/serdy/mp5
+/obj/item/gun/projectile/automatic/serdy/mp5 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/serdy/pitchgun
+/obj/item/gun/projectile/automatic/serdy/pitchgun // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/serdy/vityaz
+/obj/item/gun/projectile/automatic/serdy/vityaz // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/serdy/vityazb
+/obj/item/gun/projectile/automatic/serdy/vityazb // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/smg)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/automatic/serdy/ssp4_silenced
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/contender
+/obj/item/gun/projectile/contender // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/contender/tacticool
+/obj/item/gun/projectile/contender/tacticool // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/colt
+/obj/item/gun/projectile/colt // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/colt/detective
+/obj/item/gun/projectile/colt/detective // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol/rubber
 
-/obj/item/weapon/gun/projectile/sec
+/obj/item/gun/projectile/sec // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol/rubber
 
-/obj/item/weapon/gun/projectile/sec/flash
+/obj/item/gun/projectile/sec/flash // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol/flash
 
-/obj/item/weapon/gun/projectile/sec/wood
+/obj/item/gun/projectile/sec/wood // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol/rubber
 
-/obj/item/weapon/gun/projectile/silenced
+/obj/item/gun/projectile/silenced // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/silenced/empty
+/obj/item/gun/projectile/silenced/empty // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol/empty
 
-/obj/item/weapon/gun/projectile/deagle
+/obj/item/gun/projectile/deagle // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/aps
+/obj/item/gun/projectile/aps // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/derringer
+/obj/item/gun/projectile/derringer // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/weapon/gun/projectile/luger
+/obj/item/gun/projectile/luger // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/p92x
+/obj/item/gun/projectile/p92x // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/p92x/rubber
+/obj/item/gun/projectile/p92x/rubber // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol/rubber
 
-/obj/item/weapon/gun/projectile/p92x/large
+/obj/item/gun/projectile/p92x/large // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol_large
 
-/obj/item/weapon/gun/projectile/p92x/large/preban
+/obj/item/gun/projectile/p92x/large/preban // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol_large
 
-/obj/item/weapon/gun/projectile/p92x/large/preban/hp
+/obj/item/gun/projectile/p92x/large/preban/hp // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol_large/hp
 
-/obj/item/weapon/gun/projectile/giskard
+/obj/item/gun/projectile/giskard // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/makarov
+/obj/item/gun/projectile/makarov // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/n99
+/obj/item/gun/projectile/n99 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/ecureuil
+/obj/item/gun/projectile/ecureuil // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/ecureuil/tac
+/obj/item/gun/projectile/ecureuil/tac // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/ecureuil/tac2
+/obj/item/gun/projectile/ecureuil/tac2 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/lamia
+/obj/item/gun/projectile/lamia // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/ppk
+/obj/item/gun/projectile/ppk // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/m2024
+/obj/item/gun/projectile/m2024 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/fluff/m1911
+/obj/item/gun/projectile/fluff/m1911 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/revolvingrifle
+/obj/item/gun/projectile/revolvingrifle // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/rifle/a44rifle
 
-/obj/item/weapon/gun/projectile/revolvingrifle/vintage
+/obj/item/gun/projectile/revolvingrifle/vintage // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
 	projectile_type = /obj/item/projectile/bullet/rifle/a44rifle
 
-/obj/item/weapon/gun/projectile/serdy_pistols/ssp4
+/obj/item/gun/projectile/serdy_pistols/ssp4 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/serdy_pistols/makarov
+/obj/item/gun/projectile/serdy_pistols/makarov // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/a9x18
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/serdy_pistols/vp70m
+/obj/item/gun/projectile/serdy_pistols/vp70m // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/smg
 
-/obj/item/weapon/gun/projectile/serdy_pistols/glock71
+/obj/item/gun/projectile/serdy_pistols/glock71 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol,/obj/item/ammo_magazine/pistol_large)
 	magazine_type = /obj/item/ammo_magazine/pistol_large
 
-/obj/item/weapon/gun/projectile/serdy_pistols/tp23s
+/obj/item/gun/projectile/serdy_pistols/tp23s // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol)
 	magazine_type = /obj/item/ammo_magazine/pistol
 
-/obj/item/weapon/gun/projectile/serdy_pistols/tp23
+/obj/item/gun/projectile/serdy_pistols/tp23 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "small"
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	allowed_magazines = list(/obj/item/ammo_magazine/pistol)
@@ -479,318 +479,318 @@ Medium Weapons
 
 
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle
+/obj/item/gun/projectile/shotgun/pump/rifle // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/practice
+/obj/item/gun/projectile/shotgun/pump/rifle/practice // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/practice
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/moistnugget
+/obj/item/gun/projectile/shotgun/pump/rifle/moistnugget // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/ceremonial
+/obj/item/gun/projectile/shotgun/pump/rifle/ceremonial // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/blank
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped
+/obj/item/gun/projectile/shotgun/pump/rifle/scoped // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/vox_hunting
+/obj/item/gun/projectile/shotgun/pump/rifle/vox_hunting // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever
+/obj/item/gun/projectile/shotgun/pump/rifle/lever // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/vintage
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/vintage // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/shotgun/pump/surplus
+/obj/item/gun/projectile/shotgun/pump/surplus // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/automatic/sts35
+/obj/item/gun/projectile/automatic/sts35 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/z8
+/obj/item/gun/projectile/automatic/z8 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium_small
 
-/obj/item/weapon/gun/projectile/automatic/z8/empty
+/obj/item/gun/projectile/automatic/z8/empty // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium/empty
 
-/obj/item/weapon/gun/projectile/automatic/l6_saw
+/obj/item/gun/projectile/automatic/l6_saw // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box,/obj/item/ammo_magazine/medium)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
-/obj/item/weapon/gun/projectile/automatic/bullpup
+/obj/item/gun/projectile/automatic/bullpup // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/fal
+/obj/item/gun/projectile/automatic/fal // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium_small
 
-/obj/item/weapon/gun/projectile/automatic/battlerifle
+/obj/item/gun/projectile/automatic/battlerifle // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a95
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/stg
+/obj/item/gun/projectile/automatic/stg // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/mg42
+/obj/item/gun/projectile/automatic/mg42 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762/lmg
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
-/obj/item/weapon/gun/projectile/automatic/serdy/asval
+/obj/item/gun/projectile/automatic/serdy/asval // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a9x39
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/krinkov
+/obj/item/gun/projectile/automatic/serdy/krinkov // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/akm
+/obj/item/gun/projectile/automatic/serdy/akm // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/scrapak
+/obj/item/gun/projectile/automatic/serdy/scrapak // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/ak74
+/obj/item/gun/projectile/automatic/serdy/ak74 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/ak74/variantu
+/obj/item/gun/projectile/automatic/serdy/ak74/variantu // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/ak74/variantun
+/obj/item/gun/projectile/automatic/serdy/ak74/variantun // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/ak74/variantm
+/obj/item/gun/projectile/automatic/serdy/ak74/variantm // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/hunter
+/obj/item/gun/projectile/automatic/serdy/hunter // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium_small/hunter
 
-/obj/item/weapon/gun/projectile/automatic/serdy/m16a2
+/obj/item/gun/projectile/automatic/serdy/m16a2 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/m4a1
+/obj/item/gun/projectile/automatic/serdy/m4a1 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/patriot
+/obj/item/gun/projectile/automatic/serdy/patriot // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium_drum
 
-/obj/item/weapon/gun/projectile/automatic/serdy/ar10
+/obj/item/gun/projectile/automatic/serdy/ar10 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/fal
+/obj/item/gun/projectile/automatic/serdy/fal // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium_small
 
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec
+/obj/item/gun/projectile/automatic/serdy/keltec // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a556
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/keltec/survival
+/obj/item/gun/projectile/automatic/serdy/keltec/survival // CHOMPEdit - Removal of obj/item/weapon
 	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is OD green. Additionally, it can only accept low capacity magazines."
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium_small
 
-/obj/item/weapon/gun/projectile/automatic/serdy/sks
+/obj/item/gun/projectile/automatic/serdy/sks // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762/sniper
 
-/obj/item/weapon/gun/projectile/automatic/serdy/mosin
+/obj/item/gun/projectile/automatic/serdy/mosin // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/automatic/serdy/mosin/scoped
+/obj/item/gun/projectile/automatic/serdy/mosin/scoped // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 
-/obj/item/weapon/gun/projectile/automatic/serdy/type901
+/obj/item/gun/projectile/automatic/serdy/type901 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/type901/carbine
+/obj/item/gun/projectile/automatic/serdy/type901/carbine // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/memegun
+/obj/item/gun/projectile/automatic/serdy/memegun // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/tkb408
+/obj/item/gun/projectile/automatic/serdy/tkb408 // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/groza
+/obj/item/gun/projectile/automatic/serdy/groza // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/plamya
+/obj/item/gun/projectile/automatic/serdy/plamya // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a9x39
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_drum)
 	magazine_type = /obj/item/ammo_magazine/medium_drum
 
-/obj/item/weapon/gun/projectile/automatic/serdy/molniya
+/obj/item/gun/projectile/automatic/serdy/molniya // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
-/obj/item/weapon/gun/projectile/automatic/serdy/pkm
+/obj/item/gun/projectile/automatic/serdy/pkm // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
-/obj/item/weapon/gun/projectile/automatic/serdy/rpd
+/obj/item/gun/projectile/automatic/serdy/rpd // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
-/obj/item/weapon/gun/projectile/automatic/serdy/rpk
+/obj/item/gun/projectile/automatic/serdy/rpk // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_drum)
 	magazine_type = /obj/item/ammo_magazine/medium_drum
 
-/obj/item/weapon/gun/projectile/automatic/serdy/sr25c
+/obj/item/gun/projectile/automatic/serdy/sr25c // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/altevian
+/obj/item/gun/projectile/altevian // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/sam48
 	allowed_magazines = list(/obj/item/ammo_magazine/clip/medium)
 	magazine_type = /obj/item/ammo_magazine/clip/medium
 
-/obj/item/weapon/gun/projectile/caseless/prototype
+/obj/item/gun/projectile/caseless/prototype // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium/empty
 
-/obj/item/weapon/gun/projectile/caseless/prototype/loaded
+/obj/item/gun/projectile/caseless/prototype/loaded // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/pistol
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/garand
+/obj/item/gun/projectile/garand // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/clip/medium)
 	magazine_type = /obj/item/ammo_magazine/clip/medium
 
-/obj/item/weapon/gun/projectile/SVD
+/obj/item/gun/projectile/SVD // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium_small
 
-/obj/item/weapon/gun/projectile/automatic/serdy/m41ab
+/obj/item/gun/projectile/automatic/serdy/m41ab // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium)
 	magazine_type = /obj/item/ammo_magazine/medium
 
-/obj/item/weapon/gun/projectile/automatic/serdy/m41a
+/obj/item/gun/projectile/automatic/serdy/m41a // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium)
@@ -805,34 +805,34 @@ Large Weapons
 
 
 /* These are superheavy weapons, and the overrides dont even work on them anyway, 14.5 ammo will be its own seperate 'superheavy' ammo
-/obj/item/weapon/gun/projectile/heavysniper
+/obj/item/gun/projectile/heavysniper // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "14.5"
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
-/obj/item/weapon/gun/projectile/heavysniper/collapsible
+/obj/item/gun/projectile/heavysniper/collapsible // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "large"
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
-/obj/item/weapon/gun/projectile/revolver/slab
+/obj/item/gun/projectile/revolver/slab // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "14.5" ////Editing these back to 14.5 bullets, these are extremely damaging and shouldnt be as free as 'large bullets'
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 */
-/obj/item/weapon/gun/projectile/automatic/serdy/awp
+/obj/item/gun/projectile/automatic/serdy/awp // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "large"
 	projectile_type = /obj/item/projectile/bullet/rifle/a338
 	allowed_magazines = list(/obj/item/ammo_magazine/large)
 	magazine_type = /obj/item/ammo_magazine/large
 
-/obj/item/weapon/gun/projectile/automatic/serdy/hectate
+/obj/item/gun/projectile/automatic/serdy/hectate // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "large"
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 	allowed_magazines = list(/obj/item/ammo_magazine/large)
 	magazine_type = /obj/item/ammo_magazine/large
 
-/obj/item/weapon/gun/projectile/automatic/serdy/kord
+/obj/item/gun/projectile/automatic/serdy/kord // CHOMPEdit - Removal of obj/item/weapon
 	caliber = "large"
 	projectile_type = /obj/item/projectile/bullet/rifle/a127x108
 	allowed_magazines = list(/obj/item/ammo_magazine/large_box)

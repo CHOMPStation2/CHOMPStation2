@@ -1,4 +1,4 @@
-/obj/item/weapon/dnainjector
+/obj/item/dnainjector // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector"
 	desc = "This injects the person with DNA."
 	icon = 'icons/obj/items.dmi'
@@ -19,7 +19,7 @@
 	var/datatype=0
 	var/value=0
 
-/obj/item/weapon/dnainjector/New()
+/obj/item/dnainjector/New() // CHOMPEdit - Removal of obj/item/weapon
 	if(datatype && block)
 		buf=new
 		buf.dna=new
@@ -29,41 +29,41 @@
 		SetValue(src.value)
 		//testing("[name]: DNA2 SE blocks after SetValue: [english_list(buf.dna.SE)]")
 
-/obj/item/weapon/dnainjector/proc/GetRealBlock(var/selblock)
+/obj/item/dnainjector/proc/GetRealBlock(var/selblock) // CHOMPEdit - Removal of obj/item/weapon
 	if(selblock==0)
 		return block
 	else
 		return selblock
 
-/obj/item/weapon/dnainjector/proc/GetState(var/selblock=0)
+/obj/item/dnainjector/proc/GetState(var/selblock=0) // CHOMPEdit - Removal of obj/item/weapon
 	var/real_block=GetRealBlock(selblock)
 	if(buf.types&DNA2_BUF_SE)
 		return buf.dna.GetSEState(real_block)
 	else
 		return buf.dna.GetUIState(real_block)
 
-/obj/item/weapon/dnainjector/proc/SetState(var/on, var/selblock=0)
+/obj/item/dnainjector/proc/SetState(var/on, var/selblock=0) // CHOMPEdit - Removal of obj/item/weapon
 	var/real_block=GetRealBlock(selblock)
 	if(buf.types&DNA2_BUF_SE)
 		return buf.dna.SetSEState(real_block,on)
 	else
 		return buf.dna.SetUIState(real_block,on)
 
-/obj/item/weapon/dnainjector/proc/GetValue(var/selblock=0)
+/obj/item/dnainjector/proc/GetValue(var/selblock=0) // CHOMPEdit - Removal of obj/item/weapon
 	var/real_block=GetRealBlock(selblock)
 	if(buf.types&DNA2_BUF_SE)
 		return buf.dna.GetSEValue(real_block)
 	else
 		return buf.dna.GetUIValue(real_block)
 
-/obj/item/weapon/dnainjector/proc/SetValue(var/val,var/selblock=0)
+/obj/item/dnainjector/proc/SetValue(var/val,var/selblock=0) // CHOMPEdit - Removal of obj/item/weapon
 	var/real_block=GetRealBlock(selblock)
 	if(buf.types&DNA2_BUF_SE)
 		return buf.dna.SetSEValue(real_block,val)
 	else
 		return buf.dna.SetUIValue(real_block,val)
 
-/obj/item/weapon/dnainjector/proc/inject(mob/M as mob, mob/user as mob)
+/obj/item/dnainjector/proc/inject(mob/M as mob, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if(istype(M,/mob/living))
 		var/mob/living/L = M
 		L.apply_effect(rand(5,20), IRRADIATE, check_protection = 0)
@@ -98,7 +98,7 @@
 		qdel(src)
 	return uses
 
-/obj/item/weapon/dnainjector/attack(mob/M as mob, mob/user as mob)
+/obj/item/dnainjector/attack(mob/M as mob, mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	if (!istype(M, /mob))
 		return
 	if (!usr.IsAdvancedToolUser())
@@ -136,443 +136,443 @@
 	inject(M, user)
 	return
 
-/obj/item/weapon/dnainjector/hulkmut
+/obj/item/dnainjector/hulkmut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Hulk)"
 	desc = "This will make you big and strong, but give you a bad skin condition."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/hulkmut/New()
+/obj/item/dnainjector/hulkmut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = HULKBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antihulk
+/obj/item/dnainjector/antihulk // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Hulk)"
 	desc = "Cures green skin."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antihulk/New()
+/obj/item/dnainjector/antihulk/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = HULKBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/xraymut
+/obj/item/dnainjector/xraymut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Xray)"
 	desc = "Finally you can see what the Site Manager does."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/xraymut/New()
+/obj/item/dnainjector/xraymut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = XRAYBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antixray
+/obj/item/dnainjector/antixray // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Xray)"
 	desc = "It will make you see harder."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antixray/New()
+/obj/item/dnainjector/antixray/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = XRAYBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/firemut
+/obj/item/dnainjector/firemut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Fire)"
 	desc = "Gives you fire."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/firemut/New()
+/obj/item/dnainjector/firemut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = FIREBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antifire
+/obj/item/dnainjector/antifire // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Fire)"
 	desc = "Cures fire."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antifire/New()
+/obj/item/dnainjector/antifire/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = FIREBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/telemut
+/obj/item/dnainjector/telemut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Tele.)"
 	desc = "Super brain man!"
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/telemut/New()
+/obj/item/dnainjector/telemut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = TELEBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antitele
+/obj/item/dnainjector/antitele // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Tele.)"
 	desc = "Will make you not able to control your mind."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antitele/New()
+/obj/item/dnainjector/antitele/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = TELEBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/nobreath
+/obj/item/dnainjector/nobreath // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (No Breath)"
 	desc = "Hold your breath and count to infinity."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/nobreath/New()
+/obj/item/dnainjector/nobreath/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = NOBREATHBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antinobreath
+/obj/item/dnainjector/antinobreath // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-No Breath)"
 	desc = "Hold your breath and count to 100."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antinobreath/New()
+/obj/item/dnainjector/antinobreath/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = NOBREATHBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/remoteview
+/obj/item/dnainjector/remoteview // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Remote View)"
 	desc = "Stare into the distance for a reason."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/remoteview/New()
+/obj/item/dnainjector/remoteview/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = REMOTEVIEWBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antiremoteview
+/obj/item/dnainjector/antiremoteview // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Remote View)"
 	desc = "Cures green skin."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antiremoteview/New()
+/obj/item/dnainjector/antiremoteview/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = REMOTEVIEWBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/regenerate
+/obj/item/dnainjector/regenerate // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Regeneration)"
 	desc = "Healthy but hungry."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/regenerate/New()
+/obj/item/dnainjector/regenerate/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = REGENERATEBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antiregenerate
+/obj/item/dnainjector/antiregenerate // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Regeneration)"
 	desc = "Sickly but sated."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antiregenerate/New()
+/obj/item/dnainjector/antiregenerate/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = REGENERATEBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/runfast
+/obj/item/dnainjector/runfast // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Increase Run)"
 	desc = "Running Man."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/runfast/New()
+/obj/item/dnainjector/runfast/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = INCREASERUNBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antirunfast
+/obj/item/dnainjector/antirunfast // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Increase Run)"
 	desc = "Walking Man."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antirunfast/New()
+/obj/item/dnainjector/antirunfast/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = INCREASERUNBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/morph
+/obj/item/dnainjector/morph // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Morph)"
 	desc = "A total makeover."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/morph/New()
+/obj/item/dnainjector/morph/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = MORPHBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antimorph
+/obj/item/dnainjector/antimorph // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Morph)"
 	desc = "Cures identity crisis."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antimorph/New()
+/obj/item/dnainjector/antimorph/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = MORPHBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/noprints
+/obj/item/dnainjector/noprints // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (No Prints)"
 	desc = "Better than a pair of budget insulated gloves."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/noprints/New()
+/obj/item/dnainjector/noprints/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = NOPRINTSBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antinoprints
+/obj/item/dnainjector/antinoprints // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-No Prints)"
 	desc = "Not quite as good as a pair of budget insulated gloves."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antinoprints/New()
+/obj/item/dnainjector/antinoprints/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = NOPRINTSBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/insulation
+/obj/item/dnainjector/insulation // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Shock Immunity)"
 	desc = "Better than a pair of real insulated gloves."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/insulation/New()
+/obj/item/dnainjector/insulation/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = SHOCKIMMUNITYBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antiinsulation
+/obj/item/dnainjector/antiinsulation // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Shock Immunity)"
 	desc = "Not quite as good as a pair of real insulated gloves."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antiinsulation/New()
+/obj/item/dnainjector/antiinsulation/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = SHOCKIMMUNITYBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/midgit
+/obj/item/dnainjector/midgit // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Small Size)"
 	desc = "Makes you shrink."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/midgit/New()
+/obj/item/dnainjector/midgit/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = SMALLSIZEBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antimidgit
+/obj/item/dnainjector/antimidgit // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Small Size)"
 	desc = "Makes you grow. But not too much."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antimidgit/New()
+/obj/item/dnainjector/antimidgit/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = SMALLSIZEBLOCK
 	..()
 
 /////////////////////////////////////
-/obj/item/weapon/dnainjector/antiglasses
+/obj/item/dnainjector/antiglasses // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Glasses)"
 	desc = "Toss away those glasses!"
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antiglasses/New()
+/obj/item/dnainjector/antiglasses/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = GLASSESBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/glassesmut
+/obj/item/dnainjector/glassesmut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Glasses)"
 	desc = "Will make you need dorkish glasses."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/glassesmut/New()
+/obj/item/dnainjector/glassesmut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = GLASSESBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/epimut
+/obj/item/dnainjector/epimut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Epi.)"
 	desc = "Shake shake shake the room!"
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/epimut/New()
+/obj/item/dnainjector/epimut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = HEADACHEBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antiepi
+/obj/item/dnainjector/antiepi // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Epi.)"
 	desc = "Will fix you up from shaking the room."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antiepi/New()
+/obj/item/dnainjector/antiepi/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = HEADACHEBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/anticough
+/obj/item/dnainjector/anticough // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Cough)"
 	desc = "Will stop that awful noise."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/anticough/New()
+/obj/item/dnainjector/anticough/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = COUGHBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/coughmut
+/obj/item/dnainjector/coughmut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Cough)"
 	desc = "Will bring forth a sound of horror from your throat."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/coughmut/New()
+/obj/item/dnainjector/coughmut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = COUGHBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/clumsymut
+/obj/item/dnainjector/clumsymut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Clumsy)"
 	desc = "Makes clumsy minions."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/clumsymut/New()
+/obj/item/dnainjector/clumsymut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = CLUMSYBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/anticlumsy
+/obj/item/dnainjector/anticlumsy // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Clumy)"
 	desc = "Cleans up confusion."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/anticlumsy/New()
+/obj/item/dnainjector/anticlumsy/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = CLUMSYBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antitour
+/obj/item/dnainjector/antitour // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Tour.)"
 	desc = "Will cure tourrets."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antitour/New()
+/obj/item/dnainjector/antitour/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = TWITCHBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/tourmut
+/obj/item/dnainjector/tourmut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Tour.)"
 	desc = "Gives you a nasty case off tourrets."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/tourmut/New()
+/obj/item/dnainjector/tourmut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = TWITCHBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/stuttmut
+/obj/item/dnainjector/stuttmut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Stutt.)"
 	desc = "Makes you s-s-stuttterrr"
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/stuttmut/New()
+/obj/item/dnainjector/stuttmut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = NERVOUSBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antistutt
+/obj/item/dnainjector/antistutt // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Stutt.)"
 	desc = "Fixes that speaking impairment."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antistutt/New()
+/obj/item/dnainjector/antistutt/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = NERVOUSBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/blindmut
+/obj/item/dnainjector/blindmut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Blind)"
 	desc = "Makes you not see anything."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/blindmut/New()
+/obj/item/dnainjector/blindmut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = BLINDBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antiblind
+/obj/item/dnainjector/antiblind // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Blind)"
 	desc = "ITS A MIRACLE!!!"
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antiblind/New()
+/obj/item/dnainjector/antiblind/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = BLINDBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/deafmut
+/obj/item/dnainjector/deafmut // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Deaf)"
 	desc = "Sorry, what did you say?"
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/deafmut/New()
+/obj/item/dnainjector/deafmut/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = DEAFBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antideaf
+/obj/item/dnainjector/antideaf // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Deaf)"
 	desc = "Will make you hear once more."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antideaf/New()
+/obj/item/dnainjector/antideaf/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = DEAFBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/hallucination
+/obj/item/dnainjector/hallucination // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Halluctination)"
 	desc = "What you see isn't always what you get."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/hallucination/New()
+/obj/item/dnainjector/hallucination/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = HALLUCINATIONBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/antihallucination
+/obj/item/dnainjector/antihallucination // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Anti-Hallucination)"
 	desc = "What you see is what you get."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/antihallucination/New()
+/obj/item/dnainjector/antihallucination/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = HALLUCINATIONBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/h2m
+/obj/item/dnainjector/h2m // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Human > Monkey)"
 	desc = "Will make you a flea bag."
 	datatype = DNA2_BUF_SE
 	value = 0xFFF
 
-/obj/item/weapon/dnainjector/h2m/New()
+/obj/item/dnainjector/h2m/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = MONKEYBLOCK
 	..()
 
-/obj/item/weapon/dnainjector/m2h
+/obj/item/dnainjector/m2h // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper DNA injector (Monkey > Human)"
 	desc = "Will make you...less hairy."
 	datatype = DNA2_BUF_SE
 	value = 0x001
 
-/obj/item/weapon/dnainjector/m2h/New()
+/obj/item/dnainjector/m2h/New() // CHOMPEdit - Removal of obj/item/weapon
 	block = MONKEYBLOCK
 	..()

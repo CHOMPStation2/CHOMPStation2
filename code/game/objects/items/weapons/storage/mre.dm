@@ -2,7 +2,7 @@
 MRE Stuff
  */
 
-/obj/item/weapon/storage/mre
+/obj/item/storage/mre // CHOMPEdit - Removal of obj/item/weapon
 	name = "standard MRE"
 	desc = "A vacuum-sealed bag containing a day's worth of nutrients for an adult in strenuous situations. There is no visible expiration date on the package."
 	icon = 'icons/obj/food.dmi'
@@ -12,207 +12,207 @@ MRE Stuff
 	var/opened = FALSE
 	var/meal_desc = "This one is menu 1, meat pizza."
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/examine(mob/user)
+/obj/item/storage/mre/examine(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	. += meal_desc
 
-/obj/item/weapon/storage/mre/update_icon()
+/obj/item/storage/mre/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	if(opened)
 		icon_state = "[initial(icon_state)][opened]"
 	. = ..()
 
-/obj/item/weapon/storage/mre/attack_self(mob/user)
+/obj/item/storage/mre/attack_self(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	open(user)
 
-/obj/item/weapon/storage/mre/open(mob/user)
+/obj/item/storage/mre/open(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!opened)
 		to_chat(usr, "<span class='notice'>You tear open the bag, breaking the vacuum seal.</span>")
 		opened = 1
 		update_icon()
 	. = ..()
 
-/obj/item/weapon/storage/mre/menu2
+/obj/item/storage/mre/menu2 // CHOMPEdit - Removal of obj/item/weapon
 	meal_desc = "This one is menu 2, margherita."
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu2,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/menu2, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu3
+/obj/item/storage/mre/menu3 // CHOMPEdit - Removal of obj/item/weapon
 	meal_desc = "This one is menu 3, vegetable pizza."
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu3,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/menu3, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu4
+/obj/item/storage/mre/menu4 // CHOMPEdit - Removal of obj/item/weapon
 	meal_desc = "This one is menu 4, hamburger."
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu4,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/menu4, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu5
+/obj/item/storage/mre/menu5 // CHOMPEdit - Removal of obj/item/weapon
 	meal_desc = "This one is menu 5, taco."
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu5,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/menu5, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu6
+/obj/item/storage/mre/menu6 // CHOMPEdit - Removal of obj/item/weapon
 	meal_desc = "This one is menu 6, meatbread."
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu6,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/menu6, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu7
+/obj/item/storage/mre/menu7 // CHOMPEdit - Removal of obj/item/weapon
 	meal_desc = "This one is menu 7, salad."
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu7,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/menu7, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu8
+/obj/item/storage/mre/menu8 // CHOMPEdit - Removal of obj/item/weapon
 	meal_desc = " This one is menu 8, hot chili."
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu8,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/menu8, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu9
+/obj/item/storage/mre/menu9 // CHOMPEdit - Removal of obj/item/weapon
 	name = "vegan MRE"
 	meal_desc = "This one is menu 9, boiled rice (skrell-safe)."
 	icon_state = "vegmre"
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu9,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert/menu9,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/menu9, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert/menu9, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread/vegan,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce/vegan,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu10
+/obj/item/storage/mre/menu10 // CHOMPEdit - Removal of obj/item/weapon
 	name = "protein MRE"
 	meal_desc = "This one is menu 10, protein."
 	icon_state = "meatmre"
 	starts_with = list(
-	/obj/item/weapon/storage/mrebag/menu10,
-	/obj/item/weapon/storage/mrebag/menu10,
-	/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,
-	/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein,
+	/obj/item/storage/mrebag/menu10, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/menu10, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/candy/proteinbar, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/condiment/small/packet/protein, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/sauce/sugarfree,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu11
+/obj/item/storage/mre/menu11 // CHOMPEdit - Removal of obj/item/weapon
 	name = "emergency MRE"
 	meal_desc = "This one is menu 11, nutriment paste. Only for emergencies."
 	icon_state = "crayonmre"
 	starts_with = list(
-	/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-	/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-	/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-	/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-	/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-	/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
+	/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/liquidfood, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/liquidprotein, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/liquidprotein, // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/menu12
+/obj/item/storage/mre/menu12 // CHOMPEdit - Removal of obj/item/weapon
 	name = "crayon MRE"
 	meal_desc = "This one doesn't have a menu listing. How very odd."
 	icon_state = "crayonmre"
 	starts_with = list(
-	/obj/item/weapon/storage/fancy/crayons,
-	/obj/item/weapon/storage/mrebag/dessert/menu11,
+	/obj/item/storage/fancy/crayons, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert/menu11, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/sauce/crayon,
 	/obj/random/mre/sauce/crayon,
 	/obj/random/mre/sauce/crayon
 	)
 
-/obj/item/weapon/storage/mre/menu13
+/obj/item/storage/mre/menu13 // CHOMPEdit - Removal of obj/item/weapon
 	name = "medical MRE"
 	meal_desc = "This one is menu 13, vitamin paste & dessert. Only for emergencies."
 	icon_state = "crayonmre"
 	starts_with = list(
-	/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin,
-	/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin,
-	/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin,
-	/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
+	/obj/item/reagent_containers/food/snacks/liquidvitamin, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/liquidvitamin, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/liquidvitamin, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/reagent_containers/food/snacks/liquidprotein, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/drink,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mre/random
+/obj/item/storage/mre/random // CHOMPEdit - Removal of obj/item/weapon
 	meal_desc = "The menu label is faded out."
 	starts_with = list(
 	/obj/random/mre/main,
-	/obj/item/weapon/storage/mrebag/side,
-	/obj/item/weapon/storage/mrebag/dessert,
-	/obj/item/weapon/storage/fancy/crackers,
+	/obj/item/storage/mrebag/side, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/mrebag/dessert, // CHOMPEdit - Removal of obj/item/weapon
+	/obj/item/storage/fancy/crackers, // CHOMPEdit - Removal of obj/item/weapon
 	/obj/random/mre/spread,
 	/obj/random/mre/drink,
 	/obj/random/mre/sauce,
-	/obj/item/weapon/material/kitchen/utensil/spoon/plastic
+	/obj/item/material/kitchen/utensil/spoon/plastic // CHOMPEdit - Removal of obj/item/weapon
 	)
 
-/obj/item/weapon/storage/mrebag
+/obj/item/storage/mrebag // CHOMPEdit - Removal of obj/item/weapon
 	name = "main course"
 	desc = "A vacuum-sealed bag containing the MRE's main course. Self-heats when opened."
 	icon = 'icons/obj/food.dmi'
@@ -221,76 +221,76 @@ MRE Stuff
 	w_class = ITEMSIZE_SMALL
 	max_w_class = ITEMSIZE_SMALL
 	var/opened = FALSE
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/slice/meatpizza/filled)
+	starts_with = list(/obj/item/reagent_containers/food/snacks/slice/meatpizza/filled) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/Initialize()
+/obj/item/storage/mrebag/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 
-/obj/item/weapon/storage/mrebag/update_icon()
+/obj/item/storage/mrebag/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	if(opened)
 		icon_state = "[initial(icon_state)][opened]"
 	. = ..()
 
-/obj/item/weapon/storage/mrebag/attack_self(mob/user)
+/obj/item/storage/mrebag/attack_self(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	open(user)
 
-/obj/item/weapon/storage/mrebag/open(mob/user)
+/obj/item/storage/mrebag/open(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	if(!opened && !isobserver(user))
 		to_chat(usr, "<span class='notice'>The pouch heats up as you break the vacuum seal.</span>")
 		opened = 1
 		update_icon()
 	. = ..()
 
-/obj/item/weapon/storage/mrebag/menu2
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/slice/margherita/filled)
+/obj/item/storage/mrebag/menu2 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/slice/margherita/filled) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/menu3
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/slice/vegetablepizza/filled)
+/obj/item/storage/mrebag/menu3 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/slice/vegetablepizza/filled) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/menu4
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/monkeyburger)
+/obj/item/storage/mrebag/menu4 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/monkeyburger) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/menu5
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/taco)
+/obj/item/storage/mrebag/menu5 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/taco) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/menu6
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/slice/meatbread/filled)
+/obj/item/storage/mrebag/menu6 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/slice/meatbread/filled) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/menu7
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/tossedsalad)
+/obj/item/storage/mrebag/menu7 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/tossedsalad) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/menu8
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/hotchili)
+/obj/item/storage/mrebag/menu8 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/hotchili) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/menu9
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/boiledrice)
+/obj/item/storage/mrebag/menu9 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/boiledrice) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/menu10
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/meatcube)
+/obj/item/storage/mrebag/menu10 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/meatcube) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/side
+/obj/item/storage/mrebag/side // CHOMPEdit - Removal of obj/item/weapon
 	name = "side dish"
 	desc = "A vacuum-sealed bag containing the MRE's side dish. Self-heats when opened."
 	icon_state = "pouch_small"
 	starts_with = list(/obj/random/mre/side)
 
-/obj/item/weapon/storage/mrebag/side/menu10
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/meatcube)
+/obj/item/storage/mrebag/side/menu10 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/meatcube) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/dessert
+/obj/item/storage/mrebag/dessert // CHOMPEdit - Removal of obj/item/weapon
 	name = "dessert"
 	desc = "A vacuum-sealed bag containing the MRE's dessert."
 	icon_state = "pouch_small"
 	starts_with = list(/obj/random/mre/dessert)
 
-/obj/item/weapon/storage/mrebag/dessert/menu9
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit)
+/obj/item/storage/mrebag/dessert/menu9 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit) // CHOMPEdit - Removal of obj/item/weapon
 
-/obj/item/weapon/storage/mrebag/dessert/menu11
-	starts_with = list(/obj/item/weapon/pen/crayon/rainbow)
+/obj/item/storage/mrebag/dessert/menu11 // CHOMPEdit - Removal of obj/item/weapon
+	starts_with = list(/obj/item/pen/crayon/rainbow) // CHOMPEdit - Removal of obj/item/weapon
 
 // TGMC MREs - Smaller, less trash
-/obj/item/weapon/storage/box/tgmc_mre
+/obj/item/storage/box/tgmc_mre // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper CRS MRE"
 	desc = "Meal Ready-to-Eat, meant to be consumed in the field, prepared by the Commonwealth Ration Service. It says it's government property..."
 	icon = 'icons/obj/food.dmi'
@@ -302,17 +302,17 @@ MRE Stuff
 	foldable = null
 	var/isopened = 0
 
-/obj/item/weapon/storage/box/tgmc_mre/Initialize()
+/obj/item/storage/box/tgmc_mre/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	pickflavor()
 
-/obj/item/weapon/storage/box/tgmc_mre/Destroy()
+/obj/item/storage/box/tgmc_mre/Destroy() // CHOMPEdit - Removal of obj/item/weapon
 	var/turf/T = get_turf(src)
 	if(T)
 		new /obj/item/trash/tgmc_mre(T)
 	return ..()
 
-/obj/item/weapon/storage/box/tgmc_mre/proc/pickflavor()
+/obj/item/storage/box/tgmc_mre/proc/pickflavor() // CHOMPEdit - Removal of obj/item/weapon
 	var/entree = pick("boneless pork ribs", "grilled chicken", "pizza square", "spaghetti", "chicken tenders")
 	var/side = pick("meatballs", "cheese spread", "beef turnover", "mashed potatoes")
 	var/snack = pick("biscuit", "pretzels", "peanuts", "cracker")
@@ -320,41 +320,41 @@ MRE Stuff
 
 	name = "[initial(name)] ([entree])"
 
-	new /obj/item/weapon/reagent_containers/food/snacks/tgmc_mre_component(src, entree)
-	new /obj/item/weapon/reagent_containers/food/snacks/tgmc_mre_component(src, side)
-	new /obj/item/weapon/reagent_containers/food/snacks/tgmc_mre_component(src, snack)
-	new /obj/item/weapon/reagent_containers/food/snacks/tgmc_mre_component(src, desert)
+	new /obj/item/reagent_containers/food/snacks/tgmc_mre_component(src, entree) // CHOMPEdit - Removal of obj/item/weapon
+	new /obj/item/reagent_containers/food/snacks/tgmc_mre_component(src, side) // CHOMPEdit - Removal of obj/item/weapon
+	new /obj/item/reagent_containers/food/snacks/tgmc_mre_component(src, snack) // CHOMPEdit - Removal of obj/item/weapon
+	new /obj/item/reagent_containers/food/snacks/tgmc_mre_component(src, desert) // CHOMPEdit - Removal of obj/item/weapon
 	new /obj/random/mre/drink(src)
 
-/obj/item/weapon/storage/box/tgmc_mre/remove_from_storage()
+/obj/item/storage/box/tgmc_mre/remove_from_storage() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	if(. && !contents.len && !gc_destroyed)
 		qdel(src)
 
-/obj/item/weapon/storage/box/tgmc_mre/update_icon()
+/obj/item/storage/box/tgmc_mre/update_icon() // CHOMPEdit - Removal of obj/item/weapon
 	if(!isopened)
 		isopened = 1
 		icon_state = "tgmc_mre_opened"
 
 // The sneaky food-looks-like-a-package items
-/obj/item/weapon/reagent_containers/food/snacks/tgmc_mre_component
+/obj/item/reagent_containers/food/snacks/tgmc_mre_component // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper MRE component"
 	package = TRUE
 	bitesize = 1
 	icon_state = "tgmcmre_entree"
 	var/flavor = "boneless pork ribs"
 
-/obj/item/weapon/reagent_containers/food/snacks/tgmc_mre_component/Initialize(mapload, newflavor)
+/obj/item/reagent_containers/food/snacks/tgmc_mre_component/Initialize(mapload, newflavor) // CHOMPEdit - Removal of obj/item/weapon
 	determinetype(newflavor)
 	desc = "A packaged [flavor] from a Meal Ready-to-Eat, there is a lengthy list of [pick("obscure", "arcane", "unintelligible", "revolutionary", "sophisticated", "unspellable")] ingredients and addictives printed on the back."
 	. = ..()
 
-/obj/item/weapon/reagent_containers/food/snacks/tgmc_mre_component/unpackage(mob/user as mob)
+/obj/item/reagent_containers/food/snacks/tgmc_mre_component/unpackage(mob/user as mob) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	name = "\improper" + flavor
 	desc = "The contents of a standard issue CRS MRE. This one is " + flavor + "."
 
-/obj/item/weapon/reagent_containers/food/snacks/tgmc_mre_component/proc/determinetype(newflavor)
+/obj/item/reagent_containers/food/snacks/tgmc_mre_component/proc/determinetype(newflavor) // CHOMPEdit - Removal of obj/item/weapon
 	name = "\improper MRE component" + " (" + newflavor + ")"
 	flavor = newflavor
 	var/static/tastes = list("something scrumptious","nothing","the usual grub","something mediocre","hell","heaven","tentalization","disgust","dog food","cat food","fish food","recycled pizza","junk","trash","rubbish","sawdust","nutraloafs","gourmand food","gourmet food","moistness","squalidness","old grub","actually good food","bleach","soap","sand","synthetic grub","blandness","prison food","Discount Dan's","Discount Dan's Special","Discount Dan's leftovers","yesterday leftovers","microwaved leftovers","leftovers","UPP rations","uncooked grub","overcooked grub","not-so-bad grub","pinapple pizza flavored grub","mystery food","burnt food","frozen food","lukewarm food","rancidness","processed grub","crunchiness","faux meat","something false","low-calorie food","high-carb food","transfat-free food","gluten-free food","delictableness","acid","mintiness","sauciness","saltiness","extreme saltiness","spiced grub","crispness","questionable grub","something untastable","bitterness","savoriness","sourness","sweetness","umami","chewing gum","shoe polish","the jungle","indigestion","oldberries","butter","lard","oil","grass","cough syrup","water","iron","rubber","lead","bronze","wood","paper","plastic","kevlar","cloth","buckshot","gunpowder","black powder","petroleum","gasoline","diesel","biofuel","paint","jelly","slime","sludge","tofu","dietetic food","counterfeit food","grossness","dryness","tartiness","cryogenic juice","the secret ingredient","the ninth element","compressed matter","deep-fried food","double-fried food","a culinary apocalypse","experimental post-modern cuisine","a disaster","muckiness","mustard","mordant","citruses","crayon dust")

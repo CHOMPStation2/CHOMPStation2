@@ -1,5 +1,5 @@
-/obj/item/weapon/rig/combat
+/obj/item/rig/combat // CHOMPEdit - Removal of obj/item/weapon
 	armor = list(melee = 80, bullet = 70, laser = 60, energy = 15, bomb = 80, bio = 100, rad = 60)
 
-/obj/item/weapon/rig/military
+/obj/item/rig/military // CHOMPEdit - Removal of obj/item/weapon
 	armor = list(melee = 80, bullet = 75, laser = 65, energy = 15, bomb = 80, bio = 100, rad = 40)

@@ -1,10 +1,10 @@
-/obj/item/weapon/card/emag/examine(mob/user)
+/obj/item/card/emag/examine(mob/user) // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	. += "[uses] uses remaining."
 
-/obj/item/weapon/card/emag/used
+/obj/item/card/emag/used // CHOMPEdit - Removal of obj/item/weapon
 	uses = 1
 
-/obj/item/weapon/card/emag/used/Initialize()
+/obj/item/card/emag/used/Initialize() // CHOMPEdit - Removal of obj/item/weapon
 	. = ..()
 	uses = rand(1, 5)
