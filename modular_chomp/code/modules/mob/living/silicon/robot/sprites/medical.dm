@@ -102,18 +102,18 @@
 	has_dead_sprite = TRUE
 
 
-/datum/robot_sprite/dogborg/tall/dullahan
+/datum/robot_sprite/dogborg/tall/crisis/dullahan
 	module_type = "Crisis"
 	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_med.dmi'
 	pixel_x = 0
-/datum/robot_sprite/dogborg/tall/dullahan/crisis
+/datum/robot_sprite/dogborg/tall/crisis/dullahan/crisis
 	name = "Dullahan"
 	sprite_icon_state = "dullahanmed"
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 
-/datum/robot_sprite/dogborg/tall/dullahan/crisisalt
+/datum/robot_sprite/dogborg/tall/crisis/dullahan/crisisalt
 	name = "Dullahan v2"
 	sprite_icon_state = "dullahanmed_alt"
 	has_eye_light_sprites = TRUE
