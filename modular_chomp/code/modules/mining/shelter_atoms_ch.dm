@@ -181,18 +181,18 @@
 	..()
 
 // Allows resetting the capsule if the wrong template is chosen.
-/obj/item/survivalcapsule/superpose/attackby(obj/item/W, mob/user) // CHOMPEdit - Removal of obj/item/device
-	if(istype(W, /obj/item/pen) && !used) // CHOMPEdit - Removal of obj/item/weapon
+/obj/item/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/pen) && !used)
 		template_id = null
 		template = null // Important to reset both, otherwise the template cannot be reset once the pod has been deployed.
 		to_chat(user, "<span class='notice'>You reset the pod's selection.</span>")
 	..()
 
-/obj/item/device/survivalcapsule/superpose/shuttle
+/obj/item/survivalcapsule/superpose/shuttle
 	name = "superposed surfluid shuttle capsule"
 	is_ship = TRUE //So you cant just make holes in planets
 
-/obj/item/device/survivalcapsule/superpose/shuttle/attack_self()
+/obj/item/survivalcapsule/superpose/shuttle/attack_self()
 	if(!pod_initialized)
 		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter/))
 			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.shuttle)))
@@ -209,8 +209,8 @@
 			return
 	..()
 
-/obj/item/device/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/pen) && !used)
+/obj/item/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/pen) && !used)
 		template_id = null
 		unique_id = null
 		template = null
