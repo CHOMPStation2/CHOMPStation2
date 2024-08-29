@@ -1006,7 +1006,7 @@
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/red,
 /obj/item/clothing/under/color/red,
-/obj/item/weapon/holo/esword/red,
+/obj/item/holo/esword/red,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
@@ -1162,7 +1162,7 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_meetinghall)
 "eM" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_beach)
 "eO" = (
@@ -1242,7 +1242,7 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
 "fa" = (
-/obj/item/weapon/beach_ball/holoball,
+/obj/item/beach_ball/holoball,
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
@@ -1255,7 +1255,7 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
 "fc" = (
-/obj/item/weapon/inflatable_duck,
+/obj/item/inflatable_duck,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_beach)
 "fd" = (
@@ -1293,7 +1293,7 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_gym)
 "fm" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /turf/simulated/floor/holofloor/tiled{
@@ -1421,7 +1421,7 @@
 /area/holodeck/source_beach)
 "fN" = (
 /obj/structure/table/woodentable/holotable,
-/obj/item/weapon/dice/d8,
+/obj/item/dice/d8,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "fO" = (
@@ -1489,7 +1489,7 @@
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/green,
 /obj/item/clothing/under/color/green,
-/obj/item/weapon/holo/esword/green,
+/obj/item/holo/esword/green,
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
@@ -1578,21 +1578,21 @@
 /area/beach)
 "gm" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "gn" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "go" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "gp" = (
@@ -1707,7 +1707,7 @@
 /area/space)
 "ml" = (
 /obj/structure/table/holotable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
@@ -1747,8 +1747,8 @@
 /area/holodeck/source_gym)
 "ov" = (
 /obj/structure/table/woodentable/holotable,
-/obj/item/weapon/dice/d12,
-/obj/item/weapon/dice/d10,
+/obj/item/dice/d12,
+/obj/item/dice/d10,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "oJ" = (
@@ -1807,7 +1807,7 @@
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
 "rD" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue{
@@ -1836,7 +1836,7 @@
 /turf/unsimulated/wall,
 /area/ai_multicam_room)
 "tR" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue/full{
@@ -1966,8 +1966,8 @@
 /area/holodeck/source_patient_ward)
 "BR" = (
 /obj/structure/table/woodentable/holotable,
-/obj/item/weapon/dice/d100,
-/obj/item/weapon/dice/d20,
+/obj/item/dice/d100,
+/obj/item/dice/d20,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "BU" = (
@@ -2021,7 +2021,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "Eq" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue{
@@ -2121,7 +2121,7 @@
 	},
 /area/holodeck/source_patient_ward)
 "Lt" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue/full{
@@ -2157,8 +2157,8 @@
 /area/holodeck/source_gym)
 "Nj" = (
 /obj/structure/table/woodentable/holotable,
-/obj/item/weapon/dice,
-/obj/item/weapon/dice/d4,
+/obj/item/dice,
+/obj/item/dice/d4,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "NT" = (
@@ -2212,7 +2212,7 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_game_room)
 "SJ" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue{

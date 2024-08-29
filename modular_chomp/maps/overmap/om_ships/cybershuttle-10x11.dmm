@@ -11,8 +11,8 @@
 "d" = (
 /obj/structure/table/survival_pod,
 /obj/fruitspawner/watermelon,
-/obj/item/device/gps/explorer,
-/obj/item/device/gps/explorer,
+/obj/item/gps/explorer,
+/obj/item/gps/explorer,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "e" = (

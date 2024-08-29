@@ -16,7 +16,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers2)
 "u" = (
-/obj/item/device/flashlight/color/red,
+/obj/item/flashlight/color/red,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers2)
 "v" = (
@@ -34,7 +34,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers2)
 "F" = (
-/obj/item/device/radio/off,
+/obj/item/radio/off,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers2)
 "I" = (
@@ -47,7 +47,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers2)
 "W" = (
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/brushgun,
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/brushgun,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers2)
 

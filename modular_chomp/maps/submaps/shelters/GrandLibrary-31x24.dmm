@@ -47,20 +47,20 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "bc" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
 /obj/structure/mopbucket,
-/obj/item/weapon/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/mop,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "be" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/reference,
+/obj/item/book/custom_library/reference,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "bs" = (
@@ -74,35 +74,35 @@
 /area/survivalpod/superpose/GrandLibrary)
 "bz" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/custom_library/fiction,
-/obj/item/weapon/book/custom_library/fiction,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/custom_library/fiction,
+/obj/item/book/custom_library/fiction,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "bG" = (
 /obj/structure/bookcase/manuals/xenoarchaeology,
-/obj/item/weapon/book/custom_library/reference,
+/obj/item/book/custom_library/reference,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "cd" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
 /obj/structure/bookcase/manuals/medical,
-/obj/item/weapon/book/custom_library/reference,
+/obj/item/book/custom_library/reference,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "ck" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/reference,
+/obj/item/book/custom_library/reference,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "cG" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "dm" = (
@@ -111,37 +111,37 @@
 /area/survivalpod/superpose/GrandLibrary)
 "es" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/condiment/carton/flour{
 	pixel_x = -5;
 	pixel_y = -2
 	},
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+/obj/item/reagent_containers/food/condiment/carton/flour{
 	pixel_x = -5;
 	pixel_y = -2
 	},
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+/obj/item/reagent_containers/food/condiment/carton/flour{
 	pixel_x = -5;
 	pixel_y = -2
 	},
-/obj/item/weapon/reagent_containers/food/condiment/sugar{
+/obj/item/reagent_containers/food/condiment/sugar{
 	pixel_x = 10;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/food/condiment/sugar{
+/obj/item/reagent_containers/food/condiment/sugar{
 	pixel_x = 10;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/food/condiment/sugar{
+/obj/item/reagent_containers/food/condiment/sugar{
 	pixel_x = 10;
 	pixel_y = 2
 	},
@@ -159,8 +159,8 @@
 /area/survivalpod/superpose/GrandLibrary)
 "gO" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/custom_library/fiction,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/custom_library/fiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "gX" = (
@@ -173,10 +173,10 @@
 /area/survivalpod/superpose/GrandLibrary)
 "hf" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_y = 3
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_y = 3
 	},
 /turf/simulated/floor/wood,
@@ -212,8 +212,8 @@
 /area/survivalpod/superpose/GrandLibrary)
 "ja" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/book/custom_library/reference,
+/obj/item/book/custom_library/nonfiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "jd" = (
@@ -223,9 +223,9 @@
 /area/survivalpod/superpose/GrandLibrary)
 "jk" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "jA" = (
@@ -243,7 +243,7 @@
 /area/template_noop)
 "kZ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra{
+/obj/item/flame/candle/candelabra{
 	pixel_y = 5
 	},
 /turf/simulated/floor/wood,
@@ -262,7 +262,7 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
 "nq" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -282,23 +282,23 @@
 /area/survivalpod/superpose/GrandLibrary)
 "nV" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 1;
 	pixel_y = 4
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = -1
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/survivalpod/superpose/GrandLibrary)
 "on" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/custom_library/nonfiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "oD" = (
@@ -307,20 +307,20 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "oF" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = 32
 	},
 /obj/structure/bookcase/manuals/engineering,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/book/custom_library/reference,
+/obj/item/book/custom_library/nonfiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "oJ" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
 	},
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = -32
 	},
@@ -328,20 +328,20 @@
 /area/survivalpod/superpose/GrandLibrary)
 "oX" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/book/custom_library/reference/fistfulofd6splayersguide,
+/obj/item/book/custom_library/reference/fistfulofd6splayersguide,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "pn" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/hand_labeler{
+/obj/item/hand_labeler{
 	pixel_x = -7;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	pixel_y = 6;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/survivalpod/superpose/GrandLibrary)
 "pT" = (
@@ -365,11 +365,11 @@
 /turf/simulated/wall/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "qX" = (
-/obj/item/weapon/reagent_containers/food/drinks/shaker{
+/obj/item/reagent_containers/food/drinks/shaker{
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/teapot{
+/obj/item/reagent_containers/food/drinks/teapot{
 	pixel_x = -5;
 	pixel_y = 1
 	},
@@ -390,15 +390,15 @@
 /area/survivalpod/superpose/GrandLibrary)
 "rw" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 1;
 	pixel_y = 4
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = -1
 	},
 /obj/machinery/light/floortube,
@@ -415,13 +415,13 @@
 /area/survivalpod/superpose/GrandLibrary)
 "rG" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/custom_library/fiction,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/custom_library/fiction,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "sa" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = -32
 	},
@@ -438,19 +438,19 @@
 /area/survivalpod/superpose/GrandLibrary)
 "sm" = (
 /obj/structure/bookcase/manuals/engineering,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/fiction,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/fiction,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "st" = (
 /obj/structure/bookcase,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = 32
 	},
-/obj/item/weapon/book/custom_library/religious,
+/obj/item/book/custom_library/religious,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "sE" = (
@@ -469,8 +469,8 @@
 /area/survivalpod/superpose/GrandLibrary)
 "tg" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/reference,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "tN" = (
@@ -484,9 +484,9 @@
 /area/survivalpod/superpose/GrandLibrary)
 "uY" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "vi" = (
@@ -518,7 +518,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "wg" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "wr" = (
@@ -556,22 +556,22 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
 "xs" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 1;
 	pixel_y = 4
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = -1
 	},
 /obj/machinery/light/floortube,
@@ -579,7 +579,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "xx" = (
 /obj/structure/bookcase/manuals/research_and_development,
-/obj/item/weapon/book/custom_library/reference,
+/obj/item/book/custom_library/reference,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "xC" = (
@@ -597,64 +597,64 @@
 /area/survivalpod/superpose/GrandLibrary)
 "xJ" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/fiction,
+/obj/item/book/custom_library/fiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "xY" = (
 /obj/structure/bookcase/manuals/xenoarchaeology,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/nonfiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "yc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = -6
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
 "yz" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/religious,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "yH" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_y = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 1;
 	pixel_y = 4
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = -1
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/carpet/blue2,
 /area/survivalpod/superpose/GrandLibrary)
 "yJ" = (
-/obj/item/weapon/storage/box/glasses/coffeecup,
-/obj/item/weapon/storage/box/glasses/coffeecup,
-/obj/item/weapon/storage/box/glasses/coffeecup,
-/obj/item/weapon/storage/box/glasses/coffeecup,
-/obj/item/weapon/storage/box/glasses/coffeecup,
+/obj/item/storage/box/glasses/coffeecup,
+/obj/item/storage/box/glasses/coffeecup,
+/obj/item/storage/box/glasses/coffeecup,
+/obj/item/storage/box/glasses/coffeecup,
+/obj/item/storage/box/glasses/coffeecup,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/box/glass_extras/straws,
-/obj/item/weapon/storage/box/glass_extras/straws,
-/obj/item/weapon/storage/box/buns{
+/obj/item/storage/box/glass_extras/straws,
+/obj/item/storage/box/glass_extras/straws,
+/obj/item/storage/box/buns{
 	pixel_y = 12
 	},
-/obj/item/weapon/storage/box/buns{
+/obj/item/storage/box/buns{
 	pixel_y = 12
 	},
-/obj/item/weapon/storage/box/buns{
+/obj/item/storage/box/buns{
 	pixel_y = 12
 	},
 /turf/simulated/floor/tiled/eris/cafe,
@@ -664,7 +664,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "zG" = (
 /obj/structure/flora/pottedplant/large,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = 32
 	},
@@ -703,7 +703,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = -32
 	},
@@ -711,7 +711,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "BJ" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/book/custom_library/nonfiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Cx" = (
@@ -740,10 +740,10 @@
 /area/survivalpod/superpose/GrandLibrary)
 "CZ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_y = 3
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_y = 3
 	},
 /turf/simulated/floor/wood,
@@ -801,11 +801,11 @@
 /area/survivalpod/superpose/GrandLibrary)
 "FU" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "FW" = (
@@ -827,7 +827,7 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
 "GC" = (
-/obj/item/weapon/gun/projectile/revolver/nagant{
+/obj/item/gun/projectile/revolver/nagant{
 	pixel_x = 10;
 	pixel_y = 7
 	},
@@ -847,21 +847,21 @@
 /area/survivalpod/superpose/GrandLibrary)
 "GM" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/nonfiction,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/nonfiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "GX" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/religious,
+/obj/item/book/custom_library/religious,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Ha" = (
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	pixel_y = 7
 	},
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
@@ -901,11 +901,11 @@
 /area/survivalpod/superpose/GrandLibrary)
 "IH" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = 32
 	},
-/obj/item/device/starcaster_news,
+/obj/item/starcaster_news,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "IK" = (
@@ -925,14 +925,14 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Je" = (
 /obj/structure/table/woodentable,
-/obj/item/device/starcaster_news,
+/obj/item/starcaster_news,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Jv" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
@@ -961,13 +961,13 @@
 /area/survivalpod/superpose/GrandLibrary)
 "KE" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 3
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/survivalpod/superpose/GrandLibrary)
 "LG" = (
-/obj/item/weapon/tool/wrench{
+/obj/item/tool/wrench{
 	pixel_x = 10;
 	pixel_y = 4
 	},
@@ -994,7 +994,7 @@
 /obj/machinery/reagentgrinder{
 	pixel_y = 8
 	},
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
@@ -1003,7 +1003,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Mr" = (
 /obj/structure/bed/chair/wood,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = -32
 	},
@@ -1015,8 +1015,8 @@
 /area/template_noop)
 "Mx" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/fiction,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/fiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "My" = (
@@ -1032,12 +1032,12 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
 "Na" = (
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_x = 3;
 	pixel_y = -4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_x = 3;
 	pixel_y = 11
 	},
@@ -1079,10 +1079,10 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Ob" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/reference,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Ok" = (
@@ -1096,13 +1096,13 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Oq" = (
 /obj/structure/bookcase,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = -32
 	},
-/obj/item/weapon/book/custom_library/religious,
-/obj/item/weapon/book/custom_library/nonfiction,
-/obj/item/weapon/book/custom_library/fiction,
+/obj/item/book/custom_library/religious,
+/obj/item/book/custom_library/nonfiction,
+/obj/item/book/custom_library/fiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "OL" = (
@@ -1110,7 +1110,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "OO" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
@@ -1125,7 +1125,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Qr" = (
 /obj/structure/fans,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
@@ -1140,7 +1140,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/cee{
 	dir = 8
 	},
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = -32
 	},
@@ -1152,7 +1152,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "RE" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
@@ -1168,13 +1168,13 @@
 /area/survivalpod/superpose/GrandLibrary)
 "RG" = (
 /obj/structure/bookcase/manuals/medical,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/reference,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "RM" = (
 /obj/structure/bookcase/manuals/engineering,
-/obj/item/weapon/book/custom_library/religious,
+/obj/item/book/custom_library/religious,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Sd" = (
@@ -1198,7 +1198,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "SP" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/stock_parts/spring{
+/obj/item/stock_parts/spring{
 	pixel_x = 5;
 	pixel_y = 8
 	},
@@ -1210,7 +1210,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Ts" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/tool/screwdriver{
+/obj/item/tool/screwdriver{
 	pixel_x = -8;
 	pixel_y = 4
 	},
@@ -1218,7 +1218,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Tv" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = -32
 	},
@@ -1227,13 +1227,13 @@
 /area/survivalpod/superpose/GrandLibrary)
 "TR" = (
 /obj/structure/bookcase/manuals/research_and_development,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/reference,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Uk" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = -32
 	},
@@ -1246,12 +1246,12 @@
 /area/survivalpod/superpose/GrandLibrary)
 "VM" = (
 /obj/structure/bookcase/manuals/engineering,
-/obj/item/weapon/book/custom_library/reference,
+/obj/item/book/custom_library/reference,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Wg" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/book/custom_library/reference/fistfulofd6splayersguide,
+/obj/item/book/custom_library/reference/fistfulofd6splayersguide,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Wi" = (
@@ -1266,7 +1266,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "WN" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 7
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1275,7 +1275,7 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
 "Xd" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = 32
 	},
@@ -1283,12 +1283,12 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Xg" = (
 /obj/structure/bookcase,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/reference,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Xi" = (
@@ -1303,7 +1303,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Xt" = (
 /obj/structure/flora/pottedplant/minitree,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_y = 32
 	},
@@ -1311,26 +1311,26 @@
 /area/survivalpod/superpose/GrandLibrary)
 "XJ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_y = 5
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 1;
 	pixel_y = 4
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = -1
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "XN" = (
 /obj/structure/bookcase/manuals/xenoarchaeology,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/manual,
+/obj/item/book/custom_library/reference,
+/obj/item/book/manual,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "XS" = (
@@ -1356,7 +1356,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "YE" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = -6
 	},
 /turf/simulated/floor/wood,
@@ -1374,16 +1374,16 @@
 /area/survivalpod/superpose/GrandLibrary)
 "Zc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/briefcase/bookbag,
-/obj/item/weapon/storage/briefcase/bookbag,
-/obj/item/weapon/storage/briefcase/bookbag,
-/obj/item/weapon/storage/briefcase/bookbag,
-/obj/item/weapon/storage/briefcase/bookbag,
+/obj/item/storage/briefcase/bookbag,
+/obj/item/storage/briefcase/bookbag,
+/obj/item/storage/briefcase/bookbag,
+/obj/item/storage/briefcase/bookbag,
+/obj/item/storage/briefcase/bookbag,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "Zn" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/stock_parts/gear{
+/obj/item/stock_parts/gear{
 	pixel_x = -8;
 	pixel_y = 3
 	},
@@ -1396,47 +1396,47 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
 "ZA" = (
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
 /obj/structure/closet/crate/wooden,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol/unlocked,
+/obj/item/gun/energy/locked/phasegun/pistol/unlocked,
 /obj/structure/cable/green,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
@@ -1452,7 +1452,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "ZR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	anchored = 1;
 	pixel_x = 32
 	},
@@ -1460,8 +1460,8 @@
 /area/survivalpod/superpose/GrandLibrary)
 "ZT" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/custom_library/reference,
-/obj/item/weapon/book/custom_library/fiction,
+/obj/item/book/custom_library/reference,
+/obj/item/book/custom_library/fiction,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "ZY" = (

@@ -339,7 +339,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /obj/structure/table/borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)
@@ -385,7 +385,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/adminshuttle)
 "gs" = (
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/structure/table/borosilicate,
 /turf/simulated/floor/tiled/white,
 /area/ship/adminships/medbay)
@@ -425,7 +425,7 @@
 /area/ship/adminships/bridge)
 "hs" = (
 /obj/structure/janitorialcart,
-/obj/item/weapon/mop,
+/obj/item/mop,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/corridor)
 "ht" = (
@@ -507,8 +507,8 @@
 /area/ship/adminships/main_corridor)
 "ih" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/pen/blade/fountain,
-/obj/item/weapon/paper_bin,
+/obj/item/pen/blade/fountain,
+/obj/item/paper_bin,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
@@ -564,7 +564,7 @@
 /area/ship/adminships/bridge)
 "jq" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/ship/adminships/room1)
 "jr" = (
@@ -641,8 +641,8 @@
 /area/ship/adminships/engine_bay)
 "jR" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/pen/blade/fountain,
-/obj/item/weapon/paper_bin,
+/obj/item/pen/blade/fountain,
+/obj/item/paper_bin,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4;
 	icon_state = "map_scrubber_on"
@@ -679,14 +679,14 @@
 /area/ship/adminships/kitchen_dining)
 "kI" = (
 /obj/structure/closet/secure_closet/medical3,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/storage/firstaid/adv,
-/obj/item/weapon/storage/firstaid/bonemed,
-/obj/item/weapon/storage/firstaid/clotting,
-/obj/item/weapon/storage/firstaid/combat,
-/obj/item/weapon/storage/quickdraw/syringe_case,
-/obj/item/weapon/storage/pill_bottle,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/bonemed,
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/quickdraw/syringe_case,
+/obj/item/storage/pill_bottle,
 /turf/simulated/floor/tiled/white,
 /area/ship/adminships/medbay)
 "kS" = (
@@ -873,11 +873,11 @@
 /area/ship/adminships/sec)
 "oe" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/empslite{
+/obj/item/storage/box/empslite{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/storage/box/flashbangs{
+/obj/item/storage/box/flashbangs{
 	pixel_x = -2;
 	pixel_y = -2
 	},
@@ -1042,8 +1042,8 @@
 /area/shuttle/adminshuttle)
 "rR" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
 /turf/simulated/floor/tiled/white,
 /area/ship/adminships/kitchen_dining)
 "rX" = (
@@ -1137,7 +1137,7 @@
 "tl" = (
 /obj/structure/table/borosilicate,
 /obj/machinery/chemical_dispenser/ert,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/tiled/white,
 /area/ship/adminships/medbay)
 "tu" = (
@@ -1313,8 +1313,8 @@
 	icon_state = "0-2"
 	},
 /obj/structure/table/rack,
-/obj/item/weapon/rig/pmc/security/grey/equipped,
-/obj/item/weapon/rig/pmc/security/grey/equipped,
+/obj/item/rig/pmc/security/grey/equipped,
+/obj/item/rig/pmc/security/grey/equipped,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/sec)
 "wG" = (
@@ -1374,8 +1374,8 @@
 	dir = 8;
 	icon_state = "tube1"
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/combat,
-/obj/item/weapon/gun/projectile/shotgun/pump/combat,
+/obj/item/gun/projectile/shotgun/pump/combat,
+/obj/item/gun/projectile/shotgun/pump/combat,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/sec)
 "yj" = (
@@ -1404,7 +1404,7 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/ship/adminships/room1)
 "yt" = (
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /obj/structure/table/borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)
@@ -1506,7 +1506,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/sec)
 "Ab" = (
-/obj/item/device/lightreplacer,
+/obj/item/lightreplacer,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/corridor)
 "Ad" = (
@@ -1614,8 +1614,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)
 "BK" = (
-/obj/item/weapon/phone,
-/obj/item/device/bluespaceradio/cryogaia_prelinked,
+/obj/item/phone,
+/obj/item/bluespaceradio/cryogaia_prelinked,
 /obj/structure/table/borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/bridge)
@@ -1889,7 +1889,7 @@
 /turf/space,
 /area/space)
 "Hn" = (
-/obj/item/weapon/phone,
+/obj/item/phone,
 /obj/structure/table/borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/bridge)
@@ -1942,7 +1942,7 @@
 	dir = 4;
 	icon_state = "map_vent_out"
 	},
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/ship/adminships/room1)
 "HM" = (
@@ -2100,11 +2100,11 @@
 /area/ship/adminships/engine_bay)
 "KT" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/reagent_containers/food/condiment/small/sugar,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/soysauce,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8;
 	icon_state = "map_scrubber_on"
@@ -2416,10 +2416,10 @@
 /area/ship/adminships/kitchen_dining)
 "OK" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
 /obj/machinery/alarm/alarms_hidden{
 	pixel_y = 30
 	},
@@ -2427,7 +2427,7 @@
 /area/ship/adminships/kitchen_dining)
 "OU" = (
 /obj/structure/closet/wardrobe/tactical,
-/obj/item/weapon/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/sec)
 "Pa" = (
@@ -2483,9 +2483,9 @@
 /area/ship/adminships/engine_bay)
 "PS" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunammo,
+/obj/item/storage/box/shotgunshells,
+/obj/item/storage/box/shotgunshells,
+/obj/item/storage/box/shotgunammo,
 /obj/item/ammo_magazine/m45/ap,
 /obj/item/ammo_magazine/m45/ap,
 /obj/item/ammo_magazine/m45/ap,
@@ -2571,8 +2571,8 @@
 /area/ship/adminships/engine_bay)
 "Rc" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8;
 	icon_state = "map_vent_out"
@@ -2818,9 +2818,9 @@
 	dir = 8;
 	icon_state = "map_vent_out"
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/clonexadone,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/chem_disp_cartridge/clonexadone,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
 /turf/simulated/floor/tiled/white,
 /area/ship/adminships/medbay)
 "Wd" = (
@@ -2846,7 +2846,7 @@
 	icon_state = "bordercolor"
 	},
 /obj/structure/closet/emcloset,
-/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/tank/jetpack/carbondioxide,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)
 "Xt" = (
@@ -2921,7 +2921,7 @@
 /area/ship/adminships/corridor)
 "Ze" = (
 /obj/structure/closet/wardrobe/tactical,
-/obj/item/weapon/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
@@ -2947,7 +2947,7 @@
 	dir = 1;
 	icon_state = "bordercolor"
 	},
-/obj/item/weapon/pipe_dispenser,
+/obj/item/pipe_dispenser,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)
 "ZK" = (
@@ -2956,7 +2956,7 @@
 /area/shuttle/adminshuttle)
 "ZO" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/captaindouble,
+/obj/item/bedsheet/captaindouble,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/ship/adminships/room2)
 "ZR" = (

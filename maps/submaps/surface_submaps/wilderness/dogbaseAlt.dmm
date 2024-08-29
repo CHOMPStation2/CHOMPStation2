@@ -101,13 +101,13 @@
 /obj/effect/decal/cleanable/filth,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /obj/random/maintenance/research,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "eQ" = (
 /obj/structure/janitorialcart,
-/obj/item/weapon/storage/bag/trash,
+/obj/item/storage/bag/trash,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -169,7 +169,7 @@
 "hV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone/leg,
+/obj/item/bone/leg,
 /mob/living/simple_mob/animal/giant_spider/nurse{
 	faction = "syndicate";
 	name = "trained giant spider"
@@ -183,7 +183,7 @@
 /area/submap/DogBase)
 "ir" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/gun/projectile/pistol,
+/obj/item/gun/projectile/pistol,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "iW" = (
@@ -241,7 +241,7 @@
 /area/submap/DogBase)
 "lJ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "md" = (
@@ -276,7 +276,7 @@
 /area/submap/DogBase)
 "oa" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -322,7 +322,7 @@
 /obj/effect/decal/cleanable/filth,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -415,7 +415,7 @@
 /obj/structure/dogbed,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -436,7 +436,7 @@
 /area/submap/DogBase)
 "yS" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -548,13 +548,13 @@
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
 "GP" = (
-/obj/item/weapon/storage/belt/janitor,
+/obj/item/storage/belt/janitor,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Hh" = (
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
+	cell_type = /obj/item/cell/super;
 	dir = 8;
 	name = "Unknown APC";
 	pixel_x = -24
@@ -633,7 +633,7 @@
 /area/submap/DogBase)
 "LV" = (
 /obj/structure/table/woodentable,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -641,7 +641,7 @@
 /obj/structure/dogbed,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/random/contraband/nofail,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -684,7 +684,7 @@
 /area/submap/DogBase)
 "PI" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -905,7 +905,7 @@
 /area/submap/DogBase)
 "Zn" = (
 /obj/structure/table/woodentable,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "ZC" = (

@@ -90,13 +90,13 @@
 	pixel_y = -7
 	},
 /obj/item/stack/cable_coil,
-/obj/item/weapon/airlock_electronics,
-/obj/item/weapon/airlock_electronics,
+/obj/item/airlock_electronics,
+/obj/item/airlock_electronics,
 /turf/simulated/floor/plating,
 /area/awaymission/labs/cave)
 "au" = (
 /obj/structure/table/standard,
-/obj/item/weapon/folder/yellow,
+/obj/item/folder/yellow,
 /obj/item/clothing/ears/earmuffs{
 	pixel_x = -3;
 	pixel_y = -2
@@ -105,7 +105,7 @@
 /area/awaymission/labs/cave)
 "av" = (
 /obj/structure/table/standard,
-/obj/item/weapon/camera_assembly,
+/obj/item/camera_assembly,
 /turf/simulated/floor/plating,
 /area/awaymission/labs/cave)
 "aw" = (
@@ -148,9 +148,9 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/weapon/storage/belt/utility,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/weldingtool,
+/obj/item/storage/belt/utility,
+/obj/item/tool/wrench,
+/obj/item/weldingtool,
 /obj/item/clothing/head/welding{
 	pixel_x = -3;
 	pixel_y = 5
@@ -163,7 +163,7 @@
 	layer = 2.9
 	},
 /obj/item/clothing/gloves/yellow,
-/obj/item/weapon/storage/belt/utility,
+/obj/item/storage/belt/utility,
 /turf/simulated/floor/plating,
 /area/awaymission/labs/cave)
 "aF" = (
@@ -213,14 +213,14 @@
 /area/awaymission/labs/cave)
 "aM" = (
 /obj/structure/table/standard,
-/obj/item/weapon/airlock_electronics,
-/obj/item/weapon/airlock_electronics,
-/obj/item/weapon/module/power_control,
-/obj/item/weapon/cell/high{
+/obj/item/airlock_electronics,
+/obj/item/airlock_electronics,
+/obj/item/module/power_control,
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000
 	},
@@ -263,7 +263,7 @@
 /turf/unsimulated/desert,
 /area/awaymission/labs/cave)
 "aW" = (
-/obj/item/weapon/rack_parts,
+/obj/item/rack_parts,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -280,7 +280,7 @@
 	},
 /area/awaymission/labs/cave)
 "aZ" = (
-/obj/item/weapon/weldingtool,
+/obj/item/weldingtool,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -311,7 +311,7 @@
 /area/awaymission/labs/cave)
 "be" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -326,7 +326,7 @@
 /area/awaymission/labs/cave)
 "bg" = (
 /obj/structure/table/standard,
-/obj/item/weapon/camera_assembly,
+/obj/item/camera_assembly,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor{
 	icon_state = "white"
@@ -354,7 +354,7 @@
 	pixel_x = -1;
 	pixel_y = 7
 	},
-/obj/item/weapon/circuitboard/autolathe,
+/obj/item/circuitboard/autolathe,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -605,7 +605,7 @@
 	},
 /area/awaymission/labs/researchdivision)
 "bX" = (
-/obj/item/weapon/storage/lightbox/mixed{
+/obj/item/storage/lightbox/mixed{
 	pixel_x = 21;
 	pixel_y = 14
 	},
@@ -614,7 +614,7 @@
 	},
 /area/awaymission/labs/cave)
 "bY" = (
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -658,8 +658,8 @@
 /area/awaymission/labs/researchdivision)
 "ce" = (
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight/lamp,
-/obj/item/weapon/paper{
+/obj/item/flashlight/lamp,
+/obj/item/paper{
 	icon_state = "paper_words";
 	info = "One of the commandos was brought in earlier with the most peculiar growth on his arm. He had complained to their physician about it a few days ago, but it has mutated signifcantly since then. That was the arm he was injected with the nanoaugmentation, so they simply cannot be coincidence. This mutation is nothing like anything we've ever seen. The flesh appears to be reshaping itself, repurposing his arm in some way. His cell structure, bone structure, everything is changing rapidly into something totally unknown. He will be kept here for further study.";
 	name = "Mutation"
@@ -693,9 +693,9 @@
 /area/awaymission/labs/cave)
 "ci" = (
 /obj/structure/table/reinforced,
-/obj/item/device/antibody_scanner,
-/obj/item/device/flash,
-/obj/item/weapon/paper_bin,
+/obj/item/antibody_scanner,
+/obj/item/flash,
+/obj/item/paper_bin,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -789,7 +789,7 @@
 /area/awaymission/labs/researchdivision)
 "cu" = (
 /obj/structure/table/reinforced,
-/obj/item/device/mass_spectrometer,
+/obj/item/mass_spectrometer,
 /turf/simulated/floor{
 	 icon_state = "vault";
 	dir = 5
@@ -844,7 +844,7 @@
 /area/awaymission/labs/researchdivision)
 "cB" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor{
 	icon_state = "white"
@@ -856,8 +856,8 @@
 /area/awaymission/labs/researchdivision)
 "cD" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/spray/cleaner,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -868,8 +868,8 @@
 /area/awaymission/labs/researchdivision)
 "cE" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/blood/empty,
-/obj/item/weapon/storage/body_bag_box,
+/obj/item/reagent_containers/blood/empty,
+/obj/item/storage/body_bag_box,
 /turf/simulated/floor{
 	 icon_state = "vault";
 	dir = 5
@@ -877,7 +877,7 @@
 /area/awaymission/labs/researchdivision)
 "cF" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/hypospray,
+/obj/item/reagent_containers/hypospray,
 /turf/simulated/floor{
 	 icon_state = "vault";
 	dir = 5
@@ -885,8 +885,8 @@
 /area/awaymission/labs/researchdivision)
 "cG" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/FixOVein,
-/obj/item/weapon/retractor,
+/obj/item/FixOVein,
+/obj/item/retractor,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -900,8 +900,8 @@
 /area/awaymission/labs/researchdivision)
 "cI" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/bonesetter,
-/obj/item/weapon/bonegel,
+/obj/item/bonesetter,
+/obj/item/bonegel,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -915,7 +915,7 @@
 /area/awaymission/labs/researchdivision)
 "cK" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -983,8 +983,8 @@
 /area/awaymission/labs/researchdivision)
 "cR" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/circular_saw,
-/obj/item/weapon/scalpel,
+/obj/item/circular_saw,
+/obj/item/scalpel,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -992,7 +992,7 @@
 "cS" = (
 /obj/structure/table/reinforced,
 /obj/item/bodybag,
-/obj/item/weapon/cautery,
+/obj/item/cautery,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -1188,7 +1188,7 @@
 /area/awaymission/labs/researchdivision)
 "dj" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8;
 	on = 1
@@ -1270,15 +1270,15 @@
 /area/awaymission/labs/researchdivision)
 "dr" = (
 /obj/structure/table/standard,
-/obj/item/weapon/implanter/nanoaug/strength,
+/obj/item/implanter/nanoaug/strength,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
 /area/awaymission/labs/researchdivision)
 "ds" = (
 /obj/structure/table/standard,
-/obj/item/weapon/clipboard,
-/obj/item/weapon/paper{
+/obj/item/clipboard,
+/obj/item/paper{
 	icon_state = "paper_words";
 	info = "Study of the Soghun genome has proven successful. Using their blood as a base, we have managed to develop a series of nanoaugmentations that operate on a biological basis. With it, we can supply our commandos with implants that would give them the strength of at least ten Soghun, or the combat skills of many more. Further research is required to develop safer solutions, but the soldiers seem receptive to the current batch of test implants. They are to be kept under watch at all times in their quarters.";
 	name = "Research Notes";
@@ -1743,7 +1743,7 @@
 /area/awaymission/labs/gateway)
 "eA" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper/pamphlet,
+/obj/item/paper/pamphlet,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1754,7 +1754,7 @@
 /area/awaymission/labs/gateway)
 "eB" = (
 /obj/structure/table/standard,
-/obj/item/weapon/phone,
+/obj/item/phone,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1818,7 +1818,7 @@
 /area/awaymission/labs/militarydivision)
 "eH" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/syringe{
+/obj/item/gun/syringe{
 	pixel_x = 1;
 	pixel_y = 4
 	},
@@ -2137,7 +2137,7 @@
 /area/awaymission/labs/researchdivision)
 "fv" = (
 /obj/structure/table/reinforced,
-/obj/item/device/camera_film,
+/obj/item/camera_film,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -2284,7 +2284,7 @@
 /area/awaymission/labs/gateway)
 "fK" = (
 /obj/structure/table/reinforced,
-/obj/item/device/camera,
+/obj/item/camera,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -2301,7 +2301,7 @@
 /area/awaymission/labs/researchdivision)
 "fM" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/spray/chemsprayer,
+/obj/item/reagent_containers/spray/chemsprayer,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -2350,7 +2350,7 @@
 /area/awaymission/labs/militarydivision)
 "fR" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	icon_state = "paper_words";
 	info = "As per your request, Director, I have documented my findings on the odd mutation growing from Commander Karl's arm. First of all, in this state he cannot go on any kind of missions. The alien flesh is incredibly painful to him and he can barely hold a rifle properly, no less fit into a tight hardsuit. Early analysis of the tissue shows a DNA structure unlike anything I've seen in my fourty-some odd years of medical practice. It's neither human nor Soghun, I can tell you that much. It has a quality you would expect from the lining of internal organs and is incredibly sensitive. Yet, it is also very resilient. It took me about five tries before I was able to stick a syringe through it. And even then I got just enough blood for a test, not a drop more. The wound healed quickly afterwards, as well. Whatever you boys in science are doing, you've stumbled across something, that's for sure.";
 	name = "Unfinished Form"
@@ -2442,7 +2442,7 @@
 /area/awaymission/labs/gateway)
 "ga" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -2;
 	pixel_y = 7
 	},
@@ -2464,7 +2464,7 @@
 /area/awaymission/labs/researchdivision)
 "gc" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/energy/xray,
+/obj/item/gun/energy/xray,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -2513,11 +2513,11 @@
 /area/awaymission/labs/militarydivision)
 "gi" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_x = 0;
 	pixel_y = 0
 	},
@@ -3231,7 +3231,7 @@
 	icon_state = "4-8";
 	pixel_x = 0
 	},
-/obj/item/weapon/cell/hyper,
+/obj/item/cell/hyper,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
@@ -3243,7 +3243,7 @@
 /area/awaymission/labs/researchdivision)
 "hN" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/hand_labeler,
+/obj/item/hand_labeler,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -3490,11 +3490,11 @@
 /area/awaymission/labs/solars)
 "ip" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -2;
 	pixel_y = 7
 	},
-/obj/item/weapon/stamp{
+/obj/item/stamp{
 	pixel_x = 8;
 	pixel_y = -2
 	},
@@ -3510,7 +3510,7 @@
 /area/awaymission/labs/militarydivision)
 "ir" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/melee/classic_baton,
+/obj/item/melee/classic_baton,
 /turf/simulated/floor{
 	icon_state = "wood"
 	},
@@ -3646,12 +3646,12 @@
 /turf/simulated/floor,
 /area/awaymission/labs/researchdivision)
 "iK" = (
-/obj/item/weapon/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/matter_bin,
-/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -3659,7 +3659,7 @@
 "iL" = (
 /obj/structure/table/reinforced,
 /obj/item/metroid_core,
-/obj/item/weapon/camera_assembly{
+/obj/item/camera_assembly{
 	pixel_x = 2;
 	pixel_y = 8
 	},
@@ -3816,7 +3816,7 @@
 /area/awaymission/labs/researchdivision)
 "jc" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/book/manual/research_and_development{
+/obj/item/book/manual/research_and_development{
 	pixel_x = -1;
 	pixel_y = 4
 	},
@@ -3855,7 +3855,7 @@
 /area/awaymission/labs/solars)
 "jg" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/plating,
 /area/awaymission/labs/solars)
 "jh" = (
@@ -3941,7 +3941,7 @@
 /area/awaymission/labs/militarydivision)
 "jo" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/folder/blue,
+/obj/item/folder/blue,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -4005,7 +4005,7 @@
 /area/awaymission/labs/militarydivision)
 "jt" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	icon_state = "paper_words";
 	info = "We got back from another ship-out today. Those idiots on the NSV Icarus somehow managed to land themselves in the middle of a fleet of pirates. Frigates were downed easily, and they boarded with the intent to take the artillery cannon. Thankfully, those implants the doctors gave us worked like a charm. I think they made me sick, though, I've got this terrible rash on my arm that is a pain to scratch. Making my skin look all pink and nasty. Gonna go see Doc Brown in the monring, I need some rest after all we've been through.";
 	name = "Journal Page"
@@ -4030,7 +4030,7 @@
 /area/awaymission/labs/militarydivision)
 "jw" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/hos,
+/obj/item/bedsheet/hos,
 /turf/simulated/floor,
 /area/awaymission/labs/militarydivision)
 "jx" = (
@@ -4121,11 +4121,11 @@
 /area/awaymission/labs/researchdivision)
 "jG" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -2;
 	pixel_y = 7
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -4136,14 +4136,14 @@
 "jH" = (
 /obj/structure/table/reinforced,
 /obj/item/borg/upgrade/vtec,
-/obj/item/weapon/cell/hyper/empty,
+/obj/item/cell/hyper/empty,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
 /area/awaymission/labs/researchdivision)
 "jI" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/backpack/holding{
+/obj/item/storage/backpack/holding{
 	pixel_y = 4
 	},
 /turf/simulated/floor{
@@ -4152,7 +4152,7 @@
 /area/awaymission/labs/researchdivision)
 "jJ" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/talkingcrystal{
+/obj/item/talkingcrystal{
 	pixel_y = 9
 	},
 /turf/simulated/floor{
@@ -4191,10 +4191,10 @@
 /area/awaymission/labs/militarydivision)
 "jO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/butch{
+/obj/item/butch{
 	pixel_y = 3
 	},
-/obj/item/weapon/kitchenknife{
+/obj/item/kitchenknife{
 	pixel_x = -4;
 	pixel_y = 4
 	},
@@ -4212,7 +4212,7 @@
 "jQ" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/landmark/corpse/officer,
-/obj/item/weapon/gun/projectile/silenced/sc_silenced{
+/obj/item/gun/projectile/silenced/sc_silenced{
 	desc = "A sidearm commonly favored by terrestrial security forces.";
 	icon_state = "g115 Pistol";
 	name = "Pistol";
@@ -4222,7 +4222,7 @@
 /area/awaymission/labs/militarydivision)
 "jR" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/hos,
+/obj/item/bedsheet/hos,
 /obj/machinery/camera{
 	c_tag = "Central Hallway South-West";
 	dir = 8
@@ -4299,7 +4299,7 @@
 	},
 /area/awaymission/labs/militarydivision)
 "kb" = (
-/obj/item/device/violin,
+/obj/item/violin,
 /turf/simulated/floor,
 /area/awaymission/labs/militarydivision)
 "kc" = (
@@ -4519,7 +4519,7 @@
 /area/awaymission/labs/command)
 "kC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -2;
 	pixel_y = 7
 	},
@@ -5320,7 +5320,7 @@
 /area/awaymission/labs/solars)
 "lM" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/plating,
 /area/awaymission/labs/solars)
 "lN" = (
@@ -5482,7 +5482,7 @@
 /area/awaymission/labs/solars)
 "lV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/plating,
 /area/awaymission/labs/solars)
 "lW" = (
@@ -5705,9 +5705,9 @@
 /area/awaymission/labs/cargo)
 "mw" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor,
 /area/awaymission/labs/cargo)
 "mx" = (
@@ -5870,7 +5870,7 @@
 	name = "pipe"
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/book/manual/chef_recipes,
 /turf/simulated/floor{
 	 icon_state = "cafeteria";
 	dir = 5
@@ -6063,11 +6063,11 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/weapon/storage/PDAbox{
+/obj/item/storage/PDAbox{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/id_kit,
+/obj/item/storage/id_kit,
 /turf/simulated/floor{
 	icon_state = "red"
 	},
@@ -6077,7 +6077,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/secstorage/sbriefcase,
+/obj/item/secstorage/sbriefcase,
 /turf/simulated/floor{
 	icon_state = "blue";
 	dir = 4
@@ -6154,19 +6154,19 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/wrapping_paper,
+/obj/item/wrapping_paper,
 /turf/simulated/floor,
 /area/awaymission/labs/cargo)
 "nz" = (
 /obj/structure/closet/crate/secure/bin{
 	name = "Valuable Ores"
 	},
-/obj/item/weapon/ore/diamond,
-/obj/item/weapon/ore/diamond,
-/obj/item/weapon/ore/uranium,
-/obj/item/weapon/ore/uranium,
-/obj/item/weapon/ore/uranium,
-/obj/item/weapon/ore/clown,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/uranium,
+/obj/item/ore/uranium,
+/obj/item/ore/uranium,
+/obj/item/ore/clown,
 /turf/simulated/floor,
 /area/awaymission/labs/cargo)
 "nA" = (
@@ -6406,7 +6406,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor,
 /area/awaymission/labs/cargo)
 "oa" = (
@@ -6443,7 +6443,7 @@
 /area/awaymission/labs/civilian)
 "oe" = (
 /obj/structure/table/standard,
-/obj/item/weapon/kitchen/rollingpin,
+/obj/item/kitchen/rollingpin,
 /turf/simulated/floor{
 	 icon_state = "cafeteria";
 	dir = 5
@@ -6499,7 +6499,7 @@
 	icon_state = "tube1";
 	dir = 8
 	},
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor{
 	icon_state = "red";
 	dir = 9
@@ -6513,15 +6513,15 @@
 	},
 /area/awaymission/labs/command)
 "om" = (
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/wrench,
 /obj/structure/table/reinforced,
 /obj/machinery/camera{
 	c_tag = "Bridge West";
 	dir = 2
 	},
-/obj/item/device/assembly/timer,
-/obj/item/device/assembly/signaler,
-/obj/item/device/assembly/signaler,
+/obj/item/assembly/timer,
+/obj/item/assembly/signaler,
+/obj/item/assembly/signaler,
 /turf/simulated/floor{
 	icon_state = "red";
 	dir = 1
@@ -6545,7 +6545,7 @@
 	c_tag = "Bridge East";
 	dir = 2
 	},
-/obj/item/weapon/storage/fancy/donut_box,
+/obj/item/storage/fancy/donut_box,
 /turf/simulated/floor{
 	icon_state = "whitehall";
 	dir = 1
@@ -6564,7 +6564,7 @@
 	icon_state = "tube1";
 	dir = 4
 	},
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor{
 	icon_state = "whitehall";
 	dir = 5
@@ -6629,7 +6629,7 @@
 /area/awaymission/labs/civilian)
 "oB" = (
 /obj/structure/table/standard,
-/obj/item/weapon/butch{
+/obj/item/butch{
 	pixel_y = 3
 	},
 /obj/machinery/light{
@@ -7137,7 +7137,7 @@
 /area/awaymission/labs/civilian)
 "pH" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/tray{
+/obj/item/tray{
 	pixel_y = 6
 	},
 /obj/structure/cable{
@@ -7230,19 +7230,19 @@
 /area/awaymission/labs/command)
 "pP" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /turf/simulated/floor{
 	icon_state = "wood"
 	},
 /area/awaymission/labs/command)
 "pQ" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/gun/energy/pulse_rifle/M1911,
+/obj/item/gun/energy/pulse_rifle/M1911,
 /obj/item/clothing/tie/medal/gold/heroism,
 /obj/item/clothing/under/rank/navyhead_of_security,
 /obj/item/clothing/tie/holster/armpit,
 /obj/item/clothing/suit/armor/hosnavycoat,
-/obj/item/weapon/disk/nuclear,
+/obj/item/disk/nuclear,
 /turf/simulated/floor{
 	icon_state = "wood"
 	},
@@ -7299,11 +7299,11 @@
 /area/awaymission/labs/command)
 "pZ" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/matchbox,
+/obj/item/storage/matchbox,
 /turf/simulated/floor{
 	icon_state = "wood"
 	},
@@ -7360,7 +7360,7 @@
 /area/awaymission/labs/command)
 "qh" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/katana{
+/obj/item/katana{
 	desc = "A well-weathered sword meant to be kept at the side of an officer. It is not meant for real combat.";
 	force = 15;
 	name = "Officer's Sword"
@@ -7505,7 +7505,7 @@
 /area/awaymission/labs/civilian)
 "qw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/kitchen/utensil/fork,
+/obj/item/kitchen/utensil/fork,
 /turf/simulated/floor{
 	icon_state = "bar"
 	},
@@ -7550,7 +7550,7 @@
 /area/awaymission/labs/command)
 "qC" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	icon_state = "paper_words";
 	info = "<center><u>Research Weekly Report</u></center><br><br>As of this day (Dec 26, 2556), the research division of Outpost Zeta has made signifcant strides in the development of safe-to-use nanoaugmentations based upon Soghun genetic structure. Though the unfortunate death of Commander Karl was a result of an earlier, more potent batch, his passing has brought great wisdom to our division and through his dead, infected tissue, we are very close to isolating the gene responsible for the fatal abnormal mutation.<br><br>Should current schedules and effort remain steady, we are expected to produce a far safer serum in no less than seven days. All data has been saved and uploaded to the main company development server via the nearby telecommunications satellite.<br><br>In our firearms department, development of a weapon that fires x-ray beams has proved successful. The weapon is not to be confused with a laser weapon - lasers are primitive tools that simply burn flesh. This weapon is capable of firing toxic beams that poison and harm the target's biological functions, much more painful than a laser burn. Similarly, even after the firefight is over with, or in the event of a retreat, the harmful toxins will remain in the affected individual's bloodstream and cause great discomfort. Your signature and stamp will be required for field tests with the emergency response commandos, Overseer.<br><br>End report.<br><br>-Doctor Jenkins";
 	name = "Report"
@@ -7658,7 +7658,7 @@
 /area/awaymission/labs/command)
 "qP" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/book/manual/security_space_law,
+/obj/item/book/manual/security_space_law,
 /turf/simulated/floor{
 	icon_state = "wood"
 	},
@@ -7695,8 +7695,8 @@
 	pixel_x = 1;
 	pixel_y = -2
 	},
-/obj/item/weapon/storage/belt/champion,
-/obj/item/weapon/cell/infinite,
+/obj/item/storage/belt/champion,
+/obj/item/cell/infinite,
 /turf/simulated/floor{
 	 icon_state = "vault";
 	dir = 1
@@ -7712,23 +7712,23 @@
 	},
 /area/awaymission/labs/command)
 "qU" = (
-/obj/item/weapon/coin/silver{
+/obj/item/coin/silver{
 	pixel_x = 7;
 	pixel_y = 12
 	},
-/obj/item/weapon/coin/silver{
+/obj/item/coin/silver{
 	pixel_x = 12;
 	pixel_y = 7
 	},
-/obj/item/weapon/coin/silver{
+/obj/item/coin/silver{
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/item/weapon/coin/silver{
+/obj/item/coin/silver{
 	pixel_x = -6;
 	pixel_y = 5
 	},
-/obj/item/weapon/coin/silver{
+/obj/item/coin/silver{
 	pixel_x = 5;
 	pixel_y = -8
 	},
@@ -7746,7 +7746,7 @@
 /area/awaymission/labs/cave)
 "qW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/kitchen/utensil/fork,
+/obj/item/kitchen/utensil/fork,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -7769,7 +7769,7 @@
 /turf/simulated/floor,
 /area/awaymission/labs/command)
 "qZ" = (
-/obj/item/weapon/coin/silver{
+/obj/item/coin/silver{
 	pixel_x = 12;
 	pixel_y = 11
 	},
@@ -8205,7 +8205,7 @@
 /area/awaymission/labs/civilian)
 "sc" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	icon_state = "paper_words";
 	info = "<center><u>Memo to all Personnel</u></center><br><br>Greetings,<br><br>I have recently heard of rumors amongst our workers that we 'kidnap' some in their sleep and drag them off to the high-security laboratories. This has caused enough stir in our ranks that I personally am writing to you to denounce these naysayings. We at NanoTrasen would never do such things to harm our personnel, especially ones who put their lives on the line in dangerous caverns and extreme temperatures to excavate century-old artifacts. Rest assured, the laboratories in the high-security section are for nothing but the studying of the artifacts that you bring back to us.<br><br>Now that that is out of the way, allow me to personally give my congratulations to our Head of Excavation, S'rrsa Unoyo, who is celebrating her twenty-seventh birthday today. Celebrations will be held in the mess hall after work hours, and all staff are invited.<br><br>As always, please have a productive shift, and do not listen to the fearmongering of certain individuals. You are safe here, with us, at NanoTrasen.<br><br>-Overseer McDonald";
 	name = "Personnel Memo"
@@ -8214,7 +8214,7 @@
 /area/awaymission/labs/civilian)
 "sd" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor,
 /area/awaymission/labs/civilian)
 "se" = (
@@ -8234,7 +8234,7 @@
 /turf/simulated/floor,
 /area/awaymission/labs/civilian)
 "si" = (
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -8304,7 +8304,7 @@
 /area/awaymission/labs/civilian)
 "sr" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	icon_state = "paper_words";
 	info = "Hey, Carlos, when you get this, get down into the sewers and fix the damn piping, will you? That nasty fleshy shit's been growing again. Blocked off half the pipes and it's stil clogging the vents. Has to be coming from the high security section, that's the only pipe I hadn't tried to seal yet. Dunno what those freaks in research are doing but tell them to fucking knock it off. I'm not paid enough to scrape that crap off the walls down there. It's starting to get into the air as well, smells terrible. Yell at the head egghead or something.";
 	name = "Note"
@@ -8403,7 +8403,7 @@
 /area/awaymission/labs/medical)
 "sF" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -8420,7 +8420,7 @@
 /area/awaymission/labs/medical)
 "sH" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/beakerbox,
+/obj/item/storage/beakerbox,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -8513,7 +8513,7 @@
 /area/awaymission/labs/security)
 "sV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/security_space_law,
+/obj/item/book/manual/security_space_law,
 /turf/simulated/floor,
 /area/awaymission/labs/security)
 "sW" = (
@@ -8705,7 +8705,7 @@
 /area/awaymission/labs/medical)
 "to" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -8726,7 +8726,7 @@
 /area/awaymission/labs/medical)
 "tq" = (
 /obj/structure/table/standard,
-/obj/item/weapon/folder/white,
+/obj/item/folder/white,
 /obj/item/clothing/tie/stethoscope,
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -8772,7 +8772,7 @@
 /area/awaymission/labs/security)
 "tv" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/orange,
+/obj/item/bedsheet/orange,
 /turf/simulated/floor,
 /area/awaymission/labs/security)
 "tw" = (
@@ -8830,7 +8830,7 @@
 	},
 /area/awaymission/labs/medical)
 "tE" = (
-/obj/item/weapon/gun/syringe/rapidsyringe,
+/obj/item/gun/syringe/rapidsyringe,
 /obj/structure/table/standard,
 /turf/simulated/floor{
 	icon_state = "white"
@@ -8868,7 +8868,7 @@
 /area/awaymission/labs/medical)
 "tI" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
@@ -8917,7 +8917,7 @@
 /area/awaymission/labs/medical)
 "tO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/pill_bottle,
+/obj/item/storage/pill_bottle,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -8941,7 +8941,7 @@
 /area/awaymission/labs/security)
 "tS" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/projectile/shotgun/pump/sc_pump,
+/obj/item/gun/projectile/shotgun/pump/sc_pump,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -8953,8 +8953,8 @@
 "tT" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/armor/riot,
-/obj/item/weapon/melee/baton,
-/obj/item/weapon/shield/riot,
+/obj/item/melee/baton,
+/obj/item/shield/riot,
 /obj/item/clothing/head/helmet/riot,
 /turf/simulated/floor{
 	 icon_state = "vault";
@@ -9072,7 +9072,7 @@
 "uk" = (
 /obj/structure/rack,
 /obj/item/ammo_magazine/c45,
-/obj/item/weapon/gun/projectile/silenced/sc_silenced{
+/obj/item/gun/projectile/silenced/sc_silenced{
 	desc = "A sidearm commonly favored by terrestrial security forces.";
 	icon_state = "g115 Pistol";
 	name = "Pistol";
@@ -9085,7 +9085,7 @@
 /area/awaymission/labs/security)
 "ul" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/backpack/satchel/med,
+/obj/item/storage/backpack/satchel/med,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -9104,22 +9104,22 @@
 /area/awaymission/labs/security)
 "uo" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/syringe/rapidsyringe,
+/obj/item/gun/syringe/rapidsyringe,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
 /area/awaymission/labs/medical)
 "up" = (
 /obj/structure/table/standard,
-/obj/item/weapon/scalpel,
-/obj/item/weapon/retractor,
+/obj/item/scalpel,
+/obj/item/retractor,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
 /area/awaymission/labs/medical)
 "uq" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgicaldrill,
+/obj/item/surgicaldrill,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -9151,21 +9151,21 @@
 /area/awaymission/labs/medical)
 "uu" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
 /area/awaymission/labs/medical)
 "uv" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
 /area/awaymission/labs/medical)
 "uw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -9184,7 +9184,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/westright,
 /obj/machinery/door/window/eastright,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	icon_state = "paper_words";
 	info = "<center><u>Incident Report</u></center><br><br>Arresting Officer: Meyers<br><br>Suspect: Laborer #24<br><br>Charge: Assault<br><br>Description of events: Damn fool clocked another lizard upside the head with his wrench, started screaming about how the voices in his head wanted him to bring bodies to research to 'feed the mother' or something. Probably spent too much time down in those caves. Give him a good couple of days in the brig, he'll snap out of it quick enough.";
 	name = "Incident Report"
@@ -9246,8 +9246,8 @@
 /area/awaymission/labs/security)
 "uI" = (
 /obj/structure/table/standard,
-/obj/item/weapon/folder/red,
-/obj/item/weapon/book/manual/security_space_law{
+/obj/item/folder/red,
+/obj/item/book/manual/security_space_law{
 	pixel_x = -3;
 	pixel_y = 5
 	},
@@ -9285,7 +9285,7 @@
 "uO" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
-/obj/item/weapon/gun/energy/stunrevolver{
+/obj/item/gun/energy/stunrevolver{
 	pixel_y = 6
 	},
 /turf/simulated/floor{

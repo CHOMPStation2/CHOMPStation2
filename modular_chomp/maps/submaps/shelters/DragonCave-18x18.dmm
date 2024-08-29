@@ -3,39 +3,39 @@
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "aL" = (
-/obj/item/weapon/bone/skull/tajaran,
+/obj/item/bone/skull/tajaran,
 /obj/item/clothing/accessory/collar/gold,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "bV" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/storage/box/flare,
+/obj/item/cell/high,
+/obj/item/storage/box/flare,
 /obj/random/soap,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/device/flashlight,
-/obj/item/device/threadneedle,
-/obj/item/device/radio,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/toolbox/hydro,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/toolbox/emergency,
+/obj/item/flashlight,
+/obj/item/threadneedle,
+/obj/item/radio,
+/obj/item/extinguisher/mini,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/toolbox/hydro,
 /obj/fiftyspawner/log/sif,
-/obj/item/weapon/material/knife/machete/hatchet/stone/bone,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/knife/machete/hatchet/stone/bone,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "cY" = (
-/obj/item/weapon/material/sword/katana,
+/obj/item/material/sword/katana,
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "db" = (
@@ -68,7 +68,7 @@
 "fK" = (
 /obj/item/clothing/shoes/tribalwear,
 /obj/item/clothing/under/tribalwear/hunter,
-/obj/item/weapon/material/twohanded/spear,
+/obj/item/material/twohanded/spear,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "fN" = (
@@ -82,7 +82,7 @@
 /turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/DragonCave)
 "gJ" = (
-/obj/item/weapon/material/twohanded/longsword,
+/obj/item/material/twohanded/longsword,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
@@ -108,13 +108,13 @@
 /turf/simulated/floor/water/hotspring,
 /area/survivalpod/superpose/DragonCave)
 "mh" = (
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "mV" = (
-/obj/item/weapon/bone/skull/tajaran,
+/obj/item/bone/skull/tajaran,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "na" = (
@@ -157,11 +157,11 @@
 /turf/simulated/floor/water/hotspring,
 /area/survivalpod/superpose/DragonCave)
 "qj" = (
-/obj/item/weapon/reagent_containers/glass/bucket/wood{
+/obj/item/reagent_containers/glass/bucket/wood{
 	pixel_x = 8;
 	pixel_y = 7
 	},
-/obj/item/weapon/reagent_containers/glass/bucket/wood{
+/obj/item/reagent_containers/glass/bucket/wood{
 	pixel_x = -7;
 	pixel_y = -6
 	},
@@ -177,14 +177,14 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "rj" = (
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "sB" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "sW" = (
@@ -208,12 +208,12 @@
 "wn" = (
 /obj/item/clothing/under/tribalwear/common1,
 /obj/item/clothing/shoes/tribalwear,
-/obj/item/weapon/material/twohanded/spear,
+/obj/item/material/twohanded/spear,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "wt" = (
-/obj/item/weapon/bone/skull/tajaran,
+/obj/item/bone/skull/tajaran,
 /obj/item/clothing/accessory/collar/silver,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/outdoors/dirt,
@@ -229,7 +229,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "xc" = (
-/obj/item/weapon/ore/gold{
+/obj/item/ore/gold{
 	pixel_x = 8;
 	pixel_y = -9
 	},
@@ -258,15 +258,15 @@
 /obj/effect/decal/cleanable/blood/splatter{
 	color = "red"
 	},
-/obj/item/weapon/coin/gold,
+/obj/item/coin/gold,
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "yE" = (
-/obj/item/weapon/coin/gold,
+/obj/item/coin/gold,
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "zh" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "zp" = (
@@ -294,7 +294,7 @@
 "Bi" = (
 /obj/item/clothing/shoes/tribalwear,
 /obj/item/clothing/under/tribalwear/common2,
-/obj/item/weapon/material/twohanded/spear,
+/obj/item/material/twohanded/spear,
 /obj/structure/dogbed,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
@@ -321,7 +321,7 @@
 "Er" = (
 /obj/fiftyspawner/gold,
 /obj/item/slime_extract/gold,
-/obj/item/weapon/flame/lighter/zippo/gold{
+/obj/item/flame/lighter/zippo/gold{
 	pixel_x = 11;
 	pixel_y = -5
 	},
@@ -334,7 +334,7 @@
 /turf/simulated/wall/wood,
 /area/survivalpod/superpose/DragonCave)
 "Hn" = (
-/obj/item/weapon/potion_material/golden_scale{
+/obj/item/potion_material/golden_scale{
 	pixel_x = 7;
 	pixel_y = -9
 	},
@@ -383,15 +383,15 @@
 "Ph" = (
 /obj/item/clothing/gloves/ring/material/gold,
 /obj/item/clothing/ears/earring/stud/gold,
-/obj/item/weapon/gun/projectile/deagle/gold{
+/obj/item/gun/projectile/deagle/gold{
 	pixel_x = -11;
 	pixel_y = -22
 	},
-/obj/item/weapon/coin/gold{
+/obj/item/coin/gold{
 	pixel_x = -7;
 	pixel_y = -2
 	},
-/obj/item/weapon/coin/gold{
+/obj/item/coin/gold{
 	pixel_x = 5;
 	pixel_y = 7
 	},
@@ -406,7 +406,7 @@
 /obj/item/instrument/violin/golden{
 	pixel_x = 7
 	},
-/obj/item/weapon/flame/lighter/zippo/gold,
+/obj/item/flame/lighter/zippo/gold,
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "Qa" = (
@@ -419,30 +419,30 @@
 /turf/simulated/mineral/ignore_mapgen,
 /area/survivalpod/superpose/DragonCave)
 "RS" = (
-/obj/item/weapon/flame/lighter/zippo/gold{
+/obj/item/flame/lighter/zippo/gold{
 	pixel_x = -6;
 	pixel_y = -8
 	},
-/obj/item/weapon/coin/gold,
+/obj/item/coin/gold,
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "Sp" = (
 /obj/item/clothing/shoes/tribalwear,
 /obj/item/clothing/under/tribalwear/shaman,
-/obj/item/weapon/material/twohanded/spear,
+/obj/item/material/twohanded/spear,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "SM" = (
-/obj/item/weapon/material/twohanded/spear/flint,
-/obj/item/weapon/coin/gold{
+/obj/item/material/twohanded/spear/flint,
+/obj/item/coin/gold{
 	pixel_x = -14;
 	pixel_y = 8
 	},
-/obj/item/weapon/coin/gold{
+/obj/item/coin/gold{
 	pixel_x = 4;
 	pixel_y = 7
 	},
-/obj/item/weapon/coin/gold{
+/obj/item/coin/gold{
 	pixel_x = -13;
 	pixel_y = -6
 	},
@@ -451,11 +451,11 @@
 /area/survivalpod/superpose/DragonCave)
 "Tz" = (
 /obj/item/clothing/accessory/medal/solgov/gold/sun,
-/obj/item/weapon/pickaxe/gold{
+/obj/item/pickaxe/gold{
 	pixel_x = -12;
 	pixel_y = 9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/golden_cup{
+/obj/item/reagent_containers/food/drinks/golden_cup{
 	pixel_x = -10;
 	pixel_y = -5
 	},
@@ -487,9 +487,9 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/survivalpod/superpose/DragonCave)
 "Wd" = (
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)

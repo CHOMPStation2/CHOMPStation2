@@ -390,7 +390,7 @@
 /area/submap/carriershuttle)
 "BN" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/orange,
+/obj/item/bedsheet/orange,
 /obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)

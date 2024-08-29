@@ -37,7 +37,7 @@
 /area/submap/frostlake)
 "K" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/frost,
-/obj/item/weapon/telecube/randomized/mated,
+/obj/item/telecube/randomized/mated,
 /turf/simulated/floor/water/hotspring,
 /area/submap/frostlake)
 "L" = (

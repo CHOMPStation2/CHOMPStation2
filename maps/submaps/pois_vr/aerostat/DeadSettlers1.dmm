@@ -3,7 +3,7 @@
 /turf/template_noop,
 /area/template_noop)
 "d" = (
-/obj/item/device/flashlight/flare,
+/obj/item/flashlight/flare,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers1)
 "e" = (
@@ -18,7 +18,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers1)
 "o" = (
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/trailgun,
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/trailgun,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers1)
 "p" = (
@@ -34,7 +34,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers1)
 "B" = (
-/obj/item/device/radio/off,
+/obj/item/radio/off,
 /turf/simulated/mineral/floor/ignore_mapgen/virgo2,
 /area/submap/virgo2/DeadSettlers1)
 "K" = (

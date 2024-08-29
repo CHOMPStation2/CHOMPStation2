@@ -42,7 +42,7 @@
 /area/submap/eclipselava)
 "bB" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/projectile/automatic/sol,
+/obj/item/gun/projectile/automatic/sol,
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/contraband,
@@ -95,7 +95,7 @@
 /area/submap/eclipselava)
 "dB" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/energy/gun/rifle,
+/obj/item/gun/energy/gun/rifle,
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/contraband,
@@ -152,7 +152,7 @@
 /area/submap/eclipselava)
 "gt" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian,
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "gu" = (
@@ -351,7 +351,7 @@
 /area/submap/eclipselava)
 "oc" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "pb" = (
@@ -404,7 +404,7 @@
 /area/submap/eclipselava)
 "pX" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "qb" = (
@@ -419,7 +419,7 @@
 	},
 /area/submap/eclipselava)
 "qq" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "qy" = (
@@ -560,7 +560,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "wt" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -632,7 +632,7 @@
 "yr" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "yt" = (
@@ -743,7 +743,7 @@
 "Du" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "DS" = (
@@ -778,7 +778,7 @@
 /area/submap/eclipselava)
 "El" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien,
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/contraband,
@@ -962,7 +962,7 @@
 	},
 /area/submap/eclipselava)
 "Js" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -996,7 +996,7 @@
 /turf/simulated/floor/lava,
 /area/submap/eclipselava)
 "Kr" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -1030,7 +1030,7 @@
 	},
 /area/submap/eclipselava)
 "LC" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -1043,7 +1043,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Me" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -1067,10 +1067,10 @@
 /area/submap/eclipselava)
 "Ov" = (
 /obj/structure/table/rack,
-/obj/item/weapon/cell/slime,
-/obj/item/weapon/cell/slime,
-/obj/item/weapon/cell/slime,
-/obj/item/weapon/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
 /turf/simulated/floor/reinforced/carbon_dioxide{
 	carbon_dioxide = 100
 	},
@@ -1220,12 +1220,12 @@
 /area/submap/eclipselava)
 "Tb" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/grenade/explosive,
-/obj/item/weapon/grenade/explosive,
-/obj/item/weapon/grenade/explosive,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/explosive,
+/obj/item/grenade/explosive,
+/obj/item/grenade/explosive,
 /obj/random/grenade/lethal,
 /obj/random/grenade/lethal,
 /obj/random/grenade/lethal,
@@ -1235,7 +1235,7 @@
 /obj/random/grenade/box,
 /obj/random/grenade/box,
 /obj/random/grenade/box,
-/obj/item/weapon/grenade/spawnergrenade/spider/briefcase,
+/obj/item/grenade/spawnergrenade/spider/briefcase,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Tc" = (
@@ -1332,7 +1332,7 @@
 /obj/structure/table/steel,
 /obj/random/contraband,
 /obj/random/maintenance/research,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "The extreme heat of the lava and dragons, along side of the energy of the emitter still are unable to replicate the effects of the solar flare project. The dragons have been gorging themselves on wild life, and bandits seem highly keen for the slime core. Stealth is no longer an option, although our position is heavily fortified. We highly recommend for the Head Admiral to relocate resources and attempts for recreation of the solar project off planet.";
 	name = "Status Report"
 	},

@@ -13,11 +13,11 @@
 /area/submap/crashedexplo)
 "am" = (
 /obj/structure/table/glass,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/structure/closet/walllocker_double/medical/south,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/surgery,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/surgery,
+/obj/item/storage/firstaid/adv,
 /obj/item/selectable_item/chemistrykit/gender,
 /obj/item/selectable_item/chemistrykit/size,
 /turf/simulated/shuttle/floor/white,
@@ -60,14 +60,14 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "cI" = (
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard/titaniumglass,
-/obj/item/weapon/material/shard/titaniumglass,
+/obj/item/material/shard/titaniumglass,
+/obj/item/material/shard/titaniumglass,
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "dv" = (
@@ -106,7 +106,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/circuitboard/pacman/mrs,
+/obj/item/circuitboard/pacman/mrs,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "hi" = (
@@ -151,7 +151,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/item/weapon/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/micro_laser/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "jc" = (
@@ -181,16 +181,16 @@
 /obj/structure/closet/crate/engineering,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/device/multitool,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/device/geiger,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/multitool,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/geiger,
 /obj/item/clothing/glasses/goggles,
 /obj/item/clothing/glasses/goggles,
-/obj/item/device/t_scanner,
+/obj/item/t_scanner,
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/gloves/yellow,
 /obj/item/stack/material/tritium{
@@ -217,7 +217,7 @@
 	dir = 8
 	},
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
-/obj/item/weapon/circuitboard/sleeper,
+/obj/item/circuitboard/sleeper,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "nS" = (
@@ -301,7 +301,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/circuitboard/recharge_station,
+/obj/item/circuitboard/recharge_station,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "up" = (
@@ -323,19 +323,19 @@
 	dir = 4
 	},
 /obj/machinery/space_heater,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
@@ -350,7 +350,7 @@
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
 /area/submap/crashedexplo)
 "vH" = (
-/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
 /mob/living/simple_mob/animal/giant_spider/lurker,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
@@ -527,7 +527,7 @@
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "DH" = (
-/obj/item/weapon/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/matter_bin/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "DJ" = (
@@ -536,19 +536,19 @@
 /area/submap/crashedexplo)
 "DQ" = (
 /obj/structure/table/reinforced,
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/structure/closet/walllocker_double/kitchen/east,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "Ft" = (
@@ -624,7 +624,7 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "LY" = (
@@ -633,7 +633,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/scanning_module/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "MU" = (
@@ -725,8 +725,8 @@
 /area/submap/crashedexplo)
 "RE" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard/titaniumglass,
-/obj/item/weapon/material/shard/titaniumglass,
+/obj/item/material/shard/titaniumglass,
+/obj/item/material/shard/titaniumglass,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -869,7 +869,7 @@
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/scanning_module/omni,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/crashedexplo)
 "VE" = (
@@ -911,7 +911,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "Yq" = (
@@ -922,7 +922,7 @@
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
 /area/submap/crashedexplo)
 "Yr" = (
-/obj/item/weapon/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "YK" = (

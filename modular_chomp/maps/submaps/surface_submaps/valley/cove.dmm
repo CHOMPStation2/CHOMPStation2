@@ -48,8 +48,8 @@
 /area/submap/cove)
 "eO" = (
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/corophizine,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/moonshine,
+/obj/item/reagent_containers/chem_disp_cartridge/corophizine,
+/obj/item/reagent_containers/chem_disp_cartridge/moonshine,
 /obj/random/gun/random,
 /obj/random/energy/highend,
 /obj/random/maintenance/morestuff,
@@ -201,8 +201,8 @@
 /area/submap/cove)
 "vN" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/revolvershotgun,
-/obj/item/weapon/paper{
+/obj/item/gun/projectile/revolvershotgun,
+/obj/item/paper{
 	info = "The Eclipse bastards are really getting in the way of business. Every raid is becoming a battle on two fronts, and they just keep coming. Fortantly I have rainy day money, and got some of my bois backing me up. Narsch is the least offensive, so dead or alive for 100 thosuand thalers. I want to do the deed myself on Virrzzur, so alive for 150 thousand. Not sure what to do about the head admiral dude, since we have no name or face. I think they're made up.";
 	name = "Work in progress bounty"
 	},
@@ -229,8 +229,8 @@
 /area/submap/cove)
 "xN" = (
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/dexalin,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/nuka_cola,
+/obj/item/reagent_containers/chem_disp_cartridge/dexalin,
+/obj/item/reagent_containers/chem_disp_cartridge/nuka_cola,
 /obj/random/gun/random,
 /obj/random/energy/highend,
 /obj/random/maintenance/morestuff,
@@ -285,8 +285,8 @@
 /area/submap/cove)
 "Hu" = (
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sleeptox,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/oxycodone,
+/obj/item/reagent_containers/chem_disp_cartridge/sleeptox,
+/obj/item/reagent_containers/chem_disp_cartridge/oxycodone,
 /obj/random/gun/random,
 /obj/random/energy/highend,
 /obj/random/maintenance/morestuff,
@@ -434,7 +434,7 @@
 /area/submap/cove)
 "XJ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/machinery/light/poi{
 	dir = 1
 	},

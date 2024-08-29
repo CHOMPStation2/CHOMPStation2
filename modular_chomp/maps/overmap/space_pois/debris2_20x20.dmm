@@ -87,7 +87,7 @@
 /area/submap/debris2)
 "A" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris2)
 "C" = (
@@ -105,14 +105,14 @@
 /area/submap/debris2)
 "G" = (
 /obj/structure/safe,
-/obj/item/weapon/dnainjector/xraymut,
-/obj/item/weapon/dnainjector/runfast,
-/obj/item/weapon/dnainjector/antistutt,
+/obj/item/dnainjector/xraymut,
+/obj/item/dnainjector/runfast,
+/obj/item/dnainjector/antistutt,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris2)
 "H" = (
 /obj/structure/table,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/tiled/airless,
@@ -126,7 +126,7 @@
 /turf/template_noop,
 /area/submap/debris2)
 "L" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/submap/debris2)
 "M" = (
@@ -137,7 +137,7 @@
 /turf/template_noop,
 /area/submap/debris2)
 "O" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/template_noop,
@@ -155,7 +155,7 @@
 /turf/template_noop,
 /area/submap/debris2)
 "S" = (
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/template_noop,
 /area/submap/debris2)
 "T" = (

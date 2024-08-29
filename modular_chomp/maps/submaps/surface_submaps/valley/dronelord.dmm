@@ -57,8 +57,8 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/dronelord)
 "dw" = (
-/obj/item/weapon/gun/projectile/heavysniper,
-/obj/item/weapon/tank/jetpack/oxygen,
+/obj/item/gun/projectile/heavysniper,
+/obj/item/tank/jetpack/oxygen,
 /turf/simulated/shuttle/floor/black,
 /area/submap/dronelord)
 "ec" = (
@@ -111,7 +111,7 @@
 /area/submap/dronelord)
 "jy" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
 /turf/simulated/shuttle/floor/white,
 /area/submap/dronelord)
 "ko" = (
@@ -170,7 +170,7 @@
 /area/submap/dronelord)
 "sV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/telecube/randomized,
+/obj/item/telecube/randomized,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/dronelord)
 "tK" = (
@@ -191,7 +191,7 @@
 /area/submap/dronelord)
 "xz" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/shuttle/floor/white,
 /area/submap/dronelord)
 "yh" = (
@@ -211,9 +211,9 @@
 /area/submap/dronelord)
 "En" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/projectile/giskard/olivaw,
-/obj/item/weapon/gun/energy/lasershotgun,
-/obj/item/weapon/gun/energy/particle/cannon,
+/obj/item/gun/projectile/giskard/olivaw,
+/obj/item/gun/energy/lasershotgun,
+/obj/item/gun/energy/particle/cannon,
 /turf/simulated/shuttle/floor/red,
 /area/submap/dronelord)
 "Fc" = (
@@ -313,8 +313,8 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/dronelord)
 "RI" = (
-/obj/item/weapon/tank/jetpack/oxygen,
-/obj/item/weapon/gun/projectile/automatic/sts35,
+/obj/item/tank/jetpack/oxygen,
+/obj/item/gun/projectile/automatic/sts35,
 /turf/simulated/shuttle/floor/black,
 /area/submap/dronelord)
 "RV" = (
@@ -335,7 +335,7 @@
 /area/submap/dronelord)
 "Ul" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/projectile/multi_cannon,
+/obj/item/gun/projectile/multi_cannon,
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -346,7 +346,7 @@
 /area/submap/dronelord)
 "Uz" = (
 /obj/structure/table/standard,
-/obj/item/weapon/card/emag/used,
+/obj/item/card/emag/used,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/dronelord)
@@ -355,9 +355,9 @@
 /area/submap/dronelord)
 "WO" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/magnetic/matfed,
-/obj/item/weapon/gun/energy/ionrifle,
-/obj/item/weapon/gun/energy/sickshot,
+/obj/item/gun/magnetic/matfed,
+/obj/item/gun/energy/ionrifle,
+/obj/item/gun/energy/sickshot,
 /turf/simulated/shuttle/floor/red,
 /area/submap/dronelord)
 "YR" = (

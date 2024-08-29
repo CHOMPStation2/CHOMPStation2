@@ -18,24 +18,24 @@
 /area/survivalpod/superpose/Farm)
 "cz" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/yellowdouble,
+/obj/item/bedsheet/yellowdouble,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
 "db" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
 "dx" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
 "dJ" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/Farm)
 "dM" = (
-/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
 /turf/simulated/floor/outdoors/mud{
 	outdoors = 0
 	},
@@ -111,7 +111,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "kd" = (
-/obj/item/weapon/material/fishing_rod/modern/strong,
+/obj/item/material/fishing_rod/modern/strong,
 /turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/Farm)
 "my" = (
@@ -318,7 +318,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "GQ" = (
-/obj/item/weapon/storage/box/wormcan/deluxe,
+/obj/item/storage/box/wormcan/deluxe,
 /turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/Farm)
 "GX" = (
@@ -338,7 +338,7 @@
 /area/survivalpod/superpose/Farm)
 "If" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/hydroponics_pod_people,
+/obj/item/book/manual/hydroponics_pod_people,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
 "Ip" = (
@@ -401,10 +401,10 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
 "Ir" = (
@@ -417,51 +417,51 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/Farm)
 "Iw" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/closet/crate,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
@@ -471,7 +471,7 @@
 /area/survivalpod/superpose/Farm)
 "Ju" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
 "JM" = (
@@ -501,8 +501,8 @@
 /area/survivalpod/superpose/Farm)
 "On" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/matches,
-/obj/item/weapon/flame/match,
+/obj/item/storage/box/matches,
+/obj/item/flame/match,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
 "Ox" = (
@@ -624,7 +624,7 @@
 /area/survivalpod/superpose/Farm)
 "Xe" = (
 /obj/structure/bonfire/permanent/sifwood,
-/obj/item/weapon/reagent_containers/cooking_container/grill,
+/obj/item/reagent_containers/cooking_container/grill,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/survivalpod/superpose/Farm)
 "Yq" = (

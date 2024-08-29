@@ -29,7 +29,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/gloves/yellow,
 /obj/item/stack/cable_coil,
-/obj/item/weapon/cell/super/empty,
+/obj/item/cell/super/empty,
 /turf/simulated/floor/plating/external,
 /area/submap/abandonedtele)
 "j" = (
@@ -62,7 +62,7 @@
 /area/submap/abandonedtele)
 "q" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/radio/beacon,
+/obj/item/radio/beacon,
 /turf/simulated/floor/plating/external,
 /area/submap/abandonedtele)
 "r" = (
@@ -91,20 +91,20 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/obj/item/weapon/circuitboard/teleporter,
+/obj/item/circuitboard/teleporter,
 /obj/item/frame/apc,
 /turf/simulated/floor/plating/external,
 /area/submap/abandonedtele)
 "x" = (
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/plating/external,
 /area/submap/abandonedtele)
 "y" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/circuitboard/teleporter,
-/obj/item/device/aicard,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/device/multitool,
+/obj/item/circuitboard/teleporter,
+/obj/item/aicard,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/multitool,
 /turf/simulated/floor/plating/external,
 /area/submap/abandonedtele)
 "z" = (
@@ -123,11 +123,11 @@
 /turf/simulated/wall/r_wall,
 /area/submap/abandonedtele)
 "O" = (
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor/plating/external,
 /area/submap/abandonedtele)
 "P" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/plating/external,
