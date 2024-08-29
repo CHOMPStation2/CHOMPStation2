@@ -1,0 +1,5 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "self transfer not allowing to jump into nearby soulcatchers"
+  - bugfix: "macro inputs not working for the SC's chat verbs"
