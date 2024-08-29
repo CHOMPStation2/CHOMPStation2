@@ -24,9 +24,9 @@
 	name = OUTFIT_JOB_NAME("Spacefarer")
 	uniform = /obj/item/clothing/under/rank/pilot2
 	shoes = /obj/item/clothing/shoes/boots/jackboots/
-	r_pocket = /obj/item/weapon/spacecash/ewallet
-	l_pocket = /obj/item/device/survivalcapsule/superpose/shuttle
-	l_hand = /obj/item/weapon/tank/jetpack/oxygen //OUTFIT_HAS_JETPACK doesnt seem to work.
+	r_pocket = /obj/item//spacecash/ewallet
+	l_pocket = /obj/item/survivalcapsule/superpose/shuttle
+	l_hand = /obj/item//tank/jetpack/oxygen //OUTFIT_HAS_JETPACK doesnt seem to work.
 
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
