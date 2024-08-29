@@ -415,10 +415,15 @@
 	if(!valid_objects || !valid_objects.len)
 		return
 	var/obj/target = tgui_input_list(owner, "Select where you want to store the mind into.", "Mind Transfer Target", valid_objects)
+	transfer_mob_selector(selected_soul, target)
+
+// Transfer selector proc
+/obj/soulgem/proc/transfer_mob_selector(var/mob/M, var/obj/target)
+	if(!M || !target) return
 	if(istype(target, /obj/soulgem))
-		transfer_mob_soulcatcher(selected_soul, target)
+		transfer_mob_soulcatcher(M, target)
 		return
-	transfer_mob(selected_soul, target)
+	transfer_mob(M, target)
 
 // Transfers a captured soul to a valid object (sleevemate, mmi)
 /obj/soulgem/proc/transfer_mob(var/mob/M, var/obj/target)

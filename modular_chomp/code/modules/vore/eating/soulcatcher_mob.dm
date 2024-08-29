@@ -217,13 +217,9 @@
 	if(!valid_objects || !valid_objects.len)
 		return
 
-	var/obj/item/target = tgui_input_list(src, "Select where you want to store your own mind into.", "Mind Transfer Target", valid_objects)
+	var/obj/target = tgui_input_list(src, "Select where you want to store your own mind into.", "Mind Transfer Target", valid_objects)
 
-	if(istype(target, /obj/soulgem))
-		gem.transfer_mob_soulcatcher(src, target)
-		return
-
-	gem.transfer_mob(src, target)
+	gem.transfer_mob_selector(src, target)
 
 // Allows the owner to reenter the body after being caught or having given away control
 /mob/living/carbon/brain/caught_soul/vore/proc/reenter_body()
