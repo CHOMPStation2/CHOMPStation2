@@ -187,3 +187,32 @@
 		template = null // Important to reset both, otherwise the template cannot be reset once the pod has been deployed.
 		to_chat(user, "<span class='notice'>You reset the pod's selection.</span>")
 	..()
+
+/obj/item/device/survivalcapsule/superpose/shuttle
+	name = "superposed surfluid shuttle capsule"
+	is_ship = TRUE //So you cant just make holes in planets
+
+/obj/item/device/survivalcapsule/superpose/shuttle/attack_self()
+	if(!pod_initialized)
+		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter/))
+			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.shuttle)))
+				continue
+			template_ids += initial(shelter_type.shelter_id)
+		pod_initialized = TRUE
+	if(!template_id)
+		var/answer = tgui_input_list(usr, "Which template would you like to load?","Available Templates", template_ids)
+		if(!answer)
+			return
+		else
+			template_id = answer
+			unique_id = answer
+			return
+	..()
+
+/obj/item/device/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/weapon/pen) && !used)
+		template_id = null
+		unique_id = null
+		template = null
+		to_chat(user, SPAN_NOTICE("You reset the pod's selection."))
+	..()
