@@ -54,7 +54,11 @@
 		for(var/datum/trait/T as anything in megalist)
 			var/cost = traits_costs[T]
 
+<<<<<<< HEAD
 			if(cost > 0) //CHOMPEdit
+=======
+			if(cost)
+>>>>>>> 8e8b46b228... Revert "Removed negative trait limit (#16214)" (#16231)
 				traits_left--
 
 			//A trait was removed from the game
@@ -69,6 +73,7 @@
 			if((pref_synth && !(take_flags & SYNTHETICS)) || (pref_meat && !(take_flags & ORGANICS)))
 				pass = FALSE
 				to_chat(src, "<span class='warning'>Some of your traits are not usable by your character type (synthetic traits on organic, or vice versa).</span>")
+<<<<<<< HEAD
 
 		//Went into negatives
 		if(points_left < 0 || traits_left < 0)
@@ -94,6 +99,13 @@
 				pass = FALSE
 				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.</span>")
 	//CHOMP Addition End
+=======
+
+		//Went into negatives
+		if(points_left < 0 || traits_left < 0)
+			pass = FALSE
+			to_chat(src,"<span class='warning'>Your custom species is not playable. Reconfigure your traits on the VORE tab.</span>")
+>>>>>>> 8e8b46b228... Revert "Removed negative trait limit (#16214)" (#16231)
 
 	//Final popup notice
 	if (!pass)
