@@ -254,3 +254,8 @@
   tacoguy7765093:
   - rscadd: 'New outsider alt-title, space farer: Currently only 2 shuttles'
   - maptweak: Added outsider shuttles, the pizzashuttle, and the cyber shuttle.
+2024-08-30:
+  Kashargul:
+  - code_imp: fix some dullahan borg sprites not showing
+  - bugfix: self transfer not allowing to jump into nearby soulcatchers
+  - bugfix: macro inputs not working for the SC's chat verbs
