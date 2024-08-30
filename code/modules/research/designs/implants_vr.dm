@@ -5,6 +5,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
 	build_path = /obj/item/weapon/implantcase/backup
 	sort_string = "MFAVA"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/implant/sizecontrol
 	name = "Size control implant"
@@ -13,3 +14,4 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000)
 	build_path = /obj/item/weapon/implanter/sizecontrol
 	sort_string = "MFAVB"
+	department = LATHE_ALL | LATHE_MEDICAL | LATHE_PUBLIC // CHOMPAdd

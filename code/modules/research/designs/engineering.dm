@@ -12,6 +12,7 @@
 	materials = list(MAT_STEEL = 70, MAT_GLASS = 120, MAT_PHORON = 100)
 	build_path = /obj/item/weapon/weldingtool/experimental
 	sort_string = "NAAAA"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/tool/hand_drill
 	name = "Hand drill"
@@ -21,6 +22,7 @@
 	materials = list(MAT_STEEL = 300, MAT_SILVER = 100)
 	build_path = /obj/item/weapon/tool/transforming/powerdrill
 	sort_string = "NAAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/tool/jaws_life
 	name = "Jaws of life"
@@ -30,6 +32,7 @@
 	materials = list(MAT_STEEL = 300, MAT_SILVER = 100)
 	build_path = /obj/item/weapon/tool/transforming/jawsoflife
 	sort_string = "NAAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 // YW addition begins
 /datum/design/item/tool/rpd
 	name = "Rapid Piping Device (RPD)"
@@ -39,6 +42,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 300, "silver" = 100, "diamond" = 500)
 	build_path = /obj/item/weapon/pipe_dispenser
 	sort_string = "NAAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/tool/rms
 	name = "Rapid Material Synthesizer (RMS)"
@@ -48,6 +52,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 500, "silver" = 300, "phoron" = 300, "diamond" = 500) //Probably change the price in the future just put something for now
 	build_path = /obj/item/weapon/rms
 	sort_string = "NAAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 // YW addition end
 
 /datum/design/item/tool/rpd
@@ -58,6 +63,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 2000)
 	build_path = /obj/item/weapon/pipe_dispenser
 	sort_string = "NAAAD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/tool/qpad_booster
 	name = "Quantum Pad Particle Booster"
@@ -67,6 +73,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_GOLD = 2000, MAT_VERDANTIUM = 1000)
 	build_path = /obj/item/device/quantum_pad_booster
 	sort_string = "NAAAF"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 // Other devices
 
@@ -91,6 +98,7 @@
 	materials = list(MAT_STEEL = 500, MAT_PHORON = 150)
 	build_path = /obj/item/device/t_scanner/upgraded
 	sort_string = "NBAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/engineering/t_scanner_adv
 	name = "Advanced T-ray Scanner"
@@ -100,6 +108,7 @@
 	materials = list(MAT_STEEL = 1250, MAT_PHORON = 500, MAT_SILVER = 50)
 	build_path = /obj/item/device/t_scanner/advanced
 	sort_string = "NBAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/engineering/atmosanalyzer
 	name = "Analyzer"
@@ -109,3 +118,4 @@
 	materials = list(MAT_STEEL = 200, MAT_GLASS = 100)
 	build_path = /obj/item/device/analyzer
 	sort_string = "NBABA"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

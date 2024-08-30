@@ -74,6 +74,11 @@
 	icon_state = "teppi"
 	pokephrase = "Gyooooooooh!"
 
+/obj/item/toy/plushie/teppi/alt
+	name = "teppi plush"
+	desc = "No teppi were harmed in the creation of this plushie."
+	icon_state = "teppialt"
+
 /obj/item/toy/plushie/teppi/attack_self(mob/user as mob)
 	if(user.a_intent == I_HURT || user.a_intent == I_GRAB)
 		playsound(user, 'sound/voice/teppi/roar.ogg', 10, 0)

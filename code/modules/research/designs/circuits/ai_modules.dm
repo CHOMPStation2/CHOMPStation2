@@ -1,6 +1,7 @@
 /datum/design/aimodule
 	build_type = IMPRINTER
 	materials = list(MAT_GLASS = 2000, MAT_GOLD = 100)
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/aimodule/AssembleDesignName()
 	name = "AI module design ([name])"

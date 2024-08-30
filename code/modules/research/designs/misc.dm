@@ -11,6 +11,7 @@
 	materials = list(MAT_STEEL = 500, MAT_GLASS = 500)
 	build_path = /obj/item/device/communicator
 	sort_string = "TAAAA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/laserpointer
 	name = "laser pointer"
@@ -20,6 +21,7 @@
 	materials = list(MAT_STEEL = 100, MAT_GLASS = 50)
 	build_path = /obj/item/device/laser_pointer
 	sort_string = "TAABA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/translator
 	name = "handheld translator"
@@ -28,6 +30,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 3000)
 	build_path = /obj/item/device/universal_translator
 	sort_string = "TAACA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/ear_translator
 	name = "earpiece translator"
@@ -36,6 +39,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 2000, MAT_GOLD = 1000)
 	build_path = /obj/item/device/universal_translator/ear
 	sort_string = "TAACB"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/light_replacer
 	name = "Light replacer"
@@ -45,6 +49,7 @@
 	materials = list(MAT_STEEL = 1500, MAT_SILVER = 150, MAT_GLASS = 3000)
 	build_path = /obj/item/device/lightreplacer
 	sort_string = "TAADA"
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
 
 /datum/design/item/general/binaryencrypt
 	name = "Binary encryption key"
@@ -90,3 +95,4 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 2000, MAT_GOLD = 1000)
 	build_path = /obj/item/weapon/mop/advanced
 	sort_string = "TBAAE"
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd

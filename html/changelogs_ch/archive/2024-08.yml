@@ -197,3 +197,65 @@
   - bugfix: 7.62 weapons now point to the right projectile path.
   - bugfix: The detectives .45 revolver now wont TF real bullets to rubber bullets
       if loaded with such.
+2024-08-24:
+  FluffMedic:
+  - bugfix: Weather beasts have their stats adjusted
+  - qol: The heavy fog weather beast has more of a tell to their attacks.
+  TheCaramelion:
+  - rscadd: Teppi plushies are obtainable in the vending machines now
+  tacoguy7765093:
+  - bugfix: Fixed in-hand sprites for the m4 and m6
+  - sound: Modified all of the gun sounds.
+  - balance: Mech armor has been nerfed.
+2024-08-27:
+  CHOMPStation2:
+  - rscadd: added research samples, for research. collect them using special sample
+      containers, then analyze them or reduce them into useful resources! or just
+      put them on a table and use them as a conversation piece.
+  MeepleMuncher:
+  - rscadd: Alternate teppi plushie
+  TheCaramelion:
+  - rscadd: Departamental Lathes for each department
+  - rscdel: Removed night shift voice lines
+  - config: Night shift depends now on Sif
+  - bugfix: Fixed Protolathe consoles not syncing with the research server
+  - rscadd: Designs for all the departmental protolathes
+  - bugfix: Fixed departmental lathes changing to omni lathes
+  - bugfix: Engineering console has the right name now
+  - bugfix: Departamental lathes can sync with R&D's server.
+2024-08-28:
+  FluffMedic:
+  - rscadd: Frontier shotgun is added to the game, and exploration vendor.
+  - bugfix: Frontier Marksmen Rifle not starting with the correct firing speed
+  - bugfix: overide left on a projectile has been switched off.
+  - bugfix: Needing extra pumps on full power frontier shotgun mode to end the sequence.
+  - rscadd: Lesser lightweight
+  Kashargul:
+  - bugfix: security console not being linked to the RD server
+2024-08-29:
+  CHOMPStation2:
+  - rscadd: added "random corporate supply" and contraband "special corporate supply"
+      crates to cargo terminals; the former mostly has harmless stuff, whilst the
+      latter can spawn all sorts of stuff from the random pool but can also include
+      weapons (rarely).
+  - qol: refactored the supply spawning behaviour slightly, so crates are no longer
+      mandatory. imagine the manifest comes stickytaped to the item, or whatever
+  - qol: supply consoles start tracking orders at 0 (so the first order is order 1,
+      etc.) rather than a random number between 1 and 9000
+  - bugfix: the random pizza pack crate now comes with the pizza delivery outfit and
+      visor, deleting a duplicate pizza supply pack that was inaccessible anyway due
+      to not having a defined name or container
+  - rscdel: merged all _vr supplypacks into the main supplypack files
+  - rscadd: new "full lid" 'decal' option for crates
+  - qol: added desatti catering, nukies energy drinks, and coyote salvage corp suit
+      crates to random spawners
+  TheCaramelion:
+  - rscadd: You can now stick micros to lollipops
+  tacoguy7765093:
+  - rscadd: 'New outsider alt-title, space farer: Currently only 2 shuttles'
+  - maptweak: Added outsider shuttles, the pizzashuttle, and the cyber shuttle.
+2024-08-30:
+  Kashargul:
+  - code_imp: fix some dullahan borg sprites not showing
+  - bugfix: self transfer not allowing to jump into nearby soulcatchers
+  - bugfix: macro inputs not working for the SC's chat verbs

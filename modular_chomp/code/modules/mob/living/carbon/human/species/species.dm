@@ -16,6 +16,7 @@
 	var/waking_speed = 1
 	var/mudking = FALSE
 	var/vanity_base_fit //when shapeshifting using vanity_copy_to, this allows you to have add something so they can go back to their original species fit
+	var/lightweight_light = 0
 
 // Handles non-standard eyes when using a species that utilizes a custom base icon set.
 // Eye data is stored in the head organ, and this needs to be handled specially.

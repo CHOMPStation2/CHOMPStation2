@@ -34,6 +34,8 @@
 	add_verb(src,/mob/living/proc/vore_bellyrub) //CHOMPEdit TGPanel //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
 	add_verb(src,/mob/proc/nsay_vore) //CHOMPAdd
 	add_verb(src,/mob/proc/nme_vore) //CHOMPAdd
+	add_verb(src,/mob/proc/nsay_vore_ch) //CHOMPAdd
+	add_verb(src,/mob/proc/nme_vore_ch) //CHOMPAdd
 	add_verb(src,/mob/proc/enter_soulcatcher) //CHOMPAdd
 
 	//VOREStation Add Start

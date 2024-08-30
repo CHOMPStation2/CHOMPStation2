@@ -19,8 +19,12 @@
 	req_tech = list(TECH_MATERIAL = 4, TECH_BLUESPACE = 3, TECH_MAGNET = 4, TECH_PHORON = 2, TECH_ARCANE = 2)
 	build_path = /obj/item/weapon/beartrap/hunting
 	sort_string = "ZAAAA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 // Precursor
+
+/datum/design/item/precursor // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE
 
 /datum/design/item/precursor/AssembleDesignName()
 	..()

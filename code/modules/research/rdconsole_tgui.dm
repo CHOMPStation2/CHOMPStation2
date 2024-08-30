@@ -230,6 +230,8 @@
 		//CHOMPAdd Start, Locked Designs
 		if(is_type_in_list(D, LockedLatheDesigns))
 			continue
+		if(!D.department || !(D.department & P.req_category))
+			continue
 		//CHOMPAdd End, Locked Designs
 
 		var/list/mat_list = list()

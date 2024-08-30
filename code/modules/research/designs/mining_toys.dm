@@ -10,6 +10,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 500) //expensive, but no need for miners.
 	build_path = /obj/item/weapon/pickaxe/drill
 	sort_string = "FAAAA"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/weapon/mining/advdrill
 	id = "advanced_drill"
@@ -17,6 +18,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 1000) //expensive, but no need for miners.
 	build_path = /obj/item/weapon/pickaxe/advdrill
 	sort_string = "FAAAB"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/weapon/mining/jackhammer
 	id = "jackhammer"
@@ -24,6 +26,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 500, MAT_SILVER = 500)
 	build_path = /obj/item/weapon/pickaxe/jackhammer
 	sort_string = "FAAAC"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/weapon/mining/plasmacutter
 	id = "plasmacutter"
@@ -31,6 +34,7 @@
 	materials = list(MAT_STEEL = 1500, MAT_GLASS = 500, MAT_GOLD = 500, MAT_PHORON = 500)
 	build_path = /obj/item/weapon/pickaxe/plasmacutter
 	sort_string = "FAAAD"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/weapon/mining/pick_diamond
 	id = "pick_diamond"
@@ -38,6 +42,7 @@
 	materials = list(MAT_DIAMOND = 3000)
 	build_path = /obj/item/weapon/pickaxe/diamond
 	sort_string = "FAAAE"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/weapon/mining/drill_diamond
 	id = "drill_diamond"
@@ -45,6 +50,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 1000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/weapon/pickaxe/diamonddrill
 	sort_string = "FAAAF"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 // Mining other equipment
 
@@ -55,6 +61,7 @@
 	materials = list(MAT_STEEL = 1000,MAT_GLASS = 1000)
 	build_path = /obj/item/device/depth_scanner
 	sort_string = "FBAAA"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/weapon/mining/upgradeAOE
 	name = "Mining Explosion Upgrade"
@@ -64,3 +71,4 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 5000, MAT_SILVER = 500, MAT_GOLD = 500, MAT_URANIUM = 2000, MAT_PHORON = 2000)
 	build_path = /obj/item/borg/upgrade/modkit/aoe/turfs
 	sort_string = "FAAF"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
