@@ -101,3 +101,8 @@
 		if(H.species)
 			P.accuracy += H.species.gun_accuracy_mod
 			P.dispersion = max(P.dispersion + H.species.gun_accuracy_dispersion_mod, 0)
+<<<<<<< HEAD
+=======
+		if(H.fear > 30)
+			P.accuracy -= 35
+>>>>>>> 069f2e1b1b... Fear and Phobias (#16220)

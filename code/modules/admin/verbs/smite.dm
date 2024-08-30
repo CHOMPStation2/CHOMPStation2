@@ -9,8 +9,12 @@
 		return
 
 	var/list/smite_types = list(SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT,
+<<<<<<< HEAD
 								SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE,
 								SMITE_PIE, SMITE_SPICE, SMITE_HOTDOG) //CHOMP Add pie, spicy air and hot dog
+=======
+								SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE,SMITE_TERROR)
+>>>>>>> 069f2e1b1b... Fear and Phobias (#16220)
 
 	var/smite_choice = tgui_input_list(usr, "Select the type of SMITE for [target]","SMITE Type Choice", smite_types)
 	if(!smite_choice)
@@ -159,6 +163,7 @@
 			if(target.client)
 				target.client.create_fake_ad_popup_multiple(/obj/screen/popup/default, 15)
 
+<<<<<<< HEAD
 		if(SMITE_PIE) //CHOMP Add
 			new/obj/effect/decal/cleanable/pie_smudge(get_turf(target))
 			playsound(target, 'sound/effects/slime_squish.ogg', 100, 1, get_rand_frequency(), falloff = 5)
@@ -189,6 +194,12 @@
 				sleep(5 SECONDS)
 				qdel(suit)
 				qdel(hood)
+=======
+		if(SMITE_TERROR)
+			if(ishuman(target))
+				target.fear = 200
+
+>>>>>>> 069f2e1b1b... Fear and Phobias (#16220)
 		else
 			return //Injection? Don't print any messages.
 
