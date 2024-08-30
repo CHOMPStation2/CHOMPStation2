@@ -45,34 +45,35 @@
 			pass = FALSE
 			to_chat(src,"<span class='warning'>You have to name your custom species. Do this on the VORE tab in character setup.</span>")
 
-		//Check traits/costs
-		var/list/megalist = client.prefs.pos_traits + client.prefs.neu_traits + client.prefs.neg_traits
-		var/points_left = client.prefs.starting_trait_points
-		var/traits_left = client.prefs.max_traits
-		var/pref_synth = client.prefs.dirty_synth
-		var/pref_meat = client.prefs.gross_meatbag
-		for(var/datum/trait/T as anything in megalist)
-			var/cost = traits_costs[T]
+	//Check traits/costs
+	var/list/megalist = client.prefs.pos_traits + client.prefs.neu_traits + client.prefs.neg_traits
+	var/points_left = client.prefs.starting_trait_points
+	var/traits_left = client.prefs.max_traits
+	var/pref_synth = client.prefs.dirty_synth
+	var/pref_meat = client.prefs.gross_meatbag
+	for(var/datum/trait/T as anything in megalist)
+		var/cost = traits_costs[T]
 
+<<<<<<< HEAD
 			if(cost > 0) //CHOMPEdit
 				traits_left--
+=======
+		if(T.category == TRAIT_TYPE_POSITIVE)
+			traits_left--
+>>>>>>> 041abec5b6... Removed negative trait limit (#16214)
 
-			//A trait was removed from the game
-			if(isnull(cost))
-				pass = FALSE
-				to_chat(src,"<span class='warning'>Your custom species is not playable. One or more traits appear to have been removed from the game or renamed. Enter character setup to correct this.</span>")
-				break
-			else
-				points_left -= traits_costs[T]
-
-			var/take_flags = initial(T.can_take)
-			if((pref_synth && !(take_flags & SYNTHETICS)) || (pref_meat && !(take_flags & ORGANICS)))
-				pass = FALSE
-				to_chat(src, "<span class='warning'>Some of your traits are not usable by your character type (synthetic traits on organic, or vice versa).</span>")
-
-		//Went into negatives
-		if(points_left < 0 || traits_left < 0)
+		//A trait was removed from the game
+		if(isnull(cost))
 			pass = FALSE
+			to_chat(src,"<span class='warning'>Your species is not playable. One or more traits appear to have been removed from the game or renamed. Enter character setup to correct this.</span>")
+			break
+		else
+			points_left -= traits_costs[T]
+
+		var/take_flags = initial(T.can_take)
+		if((pref_synth && !(take_flags & SYNTHETICS)) || (pref_meat && !(take_flags & ORGANICS)))
+			pass = FALSE
+<<<<<<< HEAD
 			to_chat(src,"<span class='warning'>Your custom species is not playable. Reconfigure your traits on the VORE tab.</span>")
 //CHOMPadd start
 	if(J.camp_protection && round_duration_in_ds < CONFIG_GET(number/job_camp_time_limit))
@@ -94,6 +95,14 @@
 				pass = FALSE
 				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.</span>")
 	//CHOMP Addition End
+=======
+			to_chat(src, "<span class='warning'>Some of your traits are not usable by your character type (synthetic traits on organic, or vice versa).</span>")
+
+	//Went into negatives
+	if(points_left < 0 || traits_left < 0)
+		pass = FALSE
+		to_chat(src,"<span class='warning'>Your species is not playable. Reconfigure your traits on the VORE tab. Trait points: [points_left]. Traits left: [traits_left].</span>")
+>>>>>>> 041abec5b6... Removed negative trait limit (#16214)
 
 	//Final popup notice
 	if (!pass)
