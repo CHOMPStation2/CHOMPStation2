@@ -46,7 +46,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/template_noop)
+/area/shuttle/cybershuttle)
 "g" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -61,7 +61,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/template_noop)
+/area/shuttle/cybershuttle)
 "k" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/portables_connector{
@@ -166,6 +166,14 @@
 	},
 /obj/item/weapon/dice/d20,
 /obj/item/weapon/deck/tarot,
+/obj/item/weapon/material/sword/katana{
+	pixel_y = -4;
+	pixel_x = 5
+	},
+/obj/item/clothing/head/fedora{
+	pixel_x = -4;
+	pixel_y = 10
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "D" = (
@@ -198,9 +206,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
-"P" = (
-/turf/simulated/wall/rthull,
-/area/template_noop)
 "Q" = (
 /obj/machinery/ion_engine{
 	dir = 1
@@ -209,7 +214,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/template_noop)
+/area/shuttle/cybershuttle)
 "R" = (
 /obj/effect/shuttle_landmark/shuttle_initializer/cybershuttle,
 /obj/structure/cable/yellow{
@@ -331,7 +336,7 @@ g
 C
 h
 l
-P
+l
 "}
 (5,1,1) = {"
 a
@@ -370,7 +375,7 @@ R
 w
 l
 l
-P
+l
 "}
 (8,1,1) = {"
 a
