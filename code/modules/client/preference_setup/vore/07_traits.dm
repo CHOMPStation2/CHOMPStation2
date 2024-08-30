@@ -300,8 +300,13 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 
 	for(var/T in pref.pos_traits + pref.neg_traits) // CHOMPEdit: Only Positive traits cost slots now.
 		points_left -= traits_costs[T]
+<<<<<<< HEAD
 	for(var/T in pref.pos_traits)
 		traits_left--
+=======
+		if(T in pref.pos_traits)
+			traits_left--
+>>>>>>> 4991c2edf8... Revert "Revert "Removed negative trait limit (#16214)" (#16231)" (#16232)
 	. += "<b>Traits Left:</b> [traits_left]<br>"
 	. += "<b>Points Left:</b> [points_left]<br>"
 	if(points_left < 0 || traits_left < 0 || (!pref.custom_species && pref.species == SPECIES_CUSTOM))
