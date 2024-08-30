@@ -27,7 +27,11 @@
 	say_list_type = /datum/say_list/fennix
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
 
+<<<<<<< HEAD
 	allow_mind_transfer = TRUE //CHOMPAdd
+=======
+	allow_mind_transfer = TRUE
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 /datum/say_list/fennix
 	speak = list("SQUEL!","SQEL?","Skree.")

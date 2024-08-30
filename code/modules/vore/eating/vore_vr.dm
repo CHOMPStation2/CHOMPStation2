@@ -81,6 +81,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/strip_pref = FALSE
 	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+<<<<<<< HEAD
 	var/no_latejoin_vore_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_prey_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_vore_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
@@ -91,6 +92,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/soulcatcher_pref_flags = 0
 	var/list/soulcatcher_prefs = list()
 	//CHOMP stuff end
+=======
+	var/allow_mind_transfer = FALSE
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 	var/list/belly_prefs = list()
 	var/vore_taste = "nothing in particular"
@@ -233,6 +237,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	apply_reagents = json_from_file["apply_reagents"]
 	autotransferable = json_from_file["autotransferable"]
 	vore_sprite_color = json_from_file["vore_sprite_color"]
+<<<<<<< HEAD
 	vore_sprite_multiply = json_from_file["vore_sprite_multiply"]
 	strip_pref = json_from_file["strip_pref"]
 
@@ -249,6 +254,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	soulcatcher_prefs = json_from_file["soulcatcher_prefs"]
 	//CHOMP stuff End
 
+=======
+	allow_mind_transfer = json_from_file["allow_mind_transfer"]
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 	//Quick sanitize
 	if(isnull(digestable))
@@ -355,6 +363,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		autotransferable = TRUE
 	if(isnull(vore_sprite_color))
 		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+<<<<<<< HEAD
 	if(isnull(vore_sprite_multiply))
 		vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	if(isnull(strip_pref))
@@ -377,6 +386,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		soulcatcher_prefs = list()
 	//CHOMP stuff End
 
+=======
+	if(isnull(allow_mind_transfer))
+		allow_mind_transfer = FALSE
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 	return TRUE
 
 /datum/vore_preferences/proc/save_vore()
@@ -416,8 +429,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
 			"throw_vore" 			= throw_vore,
+<<<<<<< HEAD
 			"allow_mind_transfer"	= allow_mind_transfer, //CHOMPedit
 			"phase_vore" 			= phase_vore, //CHOMPedit
+=======
+			"allow_mind_transfer"	= allow_mind_transfer,
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 			"food_vore" 			= food_vore,
 			"digest_pain"			= digest_pain,
 			"nutrition_message_visible"	= nutrition_message_visible,

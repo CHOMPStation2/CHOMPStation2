@@ -25,11 +25,17 @@
 			to_chat(usr,"<span class='warning'>A warning pops up on the device, informing you that [M] appears braindead.</span>")
 			return
 
+<<<<<<< HEAD
 		//CHOMPAdd Start
 		if(!M.allow_mind_transfer)
 			to_chat(usr,"<span class='danger'>The target's mind is too complex to be affected!</span>")
 			return
 		//CHOMPAdd End
+=======
+		if(!M.allow_mind_transfer)
+			to_chat(usr,"<span class='danger'>The target's mind is too complex to be affected!</span>")
+			return
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 		if(M.stat == DEAD) //Are they dead?
 			to_chat(usr,"<span class='warning'>A warning pops up on the device, informing you that [M] is dead, and, as such, the mind transfer can not be done.</span>")

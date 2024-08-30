@@ -224,9 +224,18 @@
 		to_chat(prey, "<span class='warning'>You cannot do that in your current state.</span>")
 		return
 
+<<<<<<< HEAD
 	//CHOMPAdd Start Mind transfer pref
 	if(!pred.allow_mind_transfer)
 		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
+=======
+	if(!pred.allow_mind_transfer)
+		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
+		return
+
+	if(!pred.ckey)
+		to_chat(prey, "<span class='notice'>\The [pred] isn't able to be dominated.</span>")
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 		return
 	//CHOMPAdd End
 
@@ -405,6 +414,7 @@
 	if(!input)
 		return
 	var/mob/living/M = input
+<<<<<<< HEAD
 	//CHOMPEdit Start - Let dominate prey work on grabbed people
 	if(!istype(M))
 		to_chat(src, "<span class='warning'>You must have a tighter grip to dominate this creature.</span>")
@@ -413,6 +423,11 @@
 		to_chat(src, "<span class='warning'>[M] is unable to be dominated.</span>")
 		return
 	//CHOMPEdit End
+=======
+	if(!M.allow_mind_transfer) //check if the dominated mob pref is enabled
+		to_chat(src, "<span class='warning'>[M] is unable to be dominated.</span>")
+		return
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 	if(tgui_alert(src, "You selected [M] to attempt to dominate. Are you sure?", "Dominate Prey",list("No","Yes")) != "Yes")
 		return
 	log_admin("[key_name_admin(src)] offered to use dominate prey on [M] ([M.ckey]).")

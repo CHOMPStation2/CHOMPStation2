@@ -529,6 +529,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"pickup_mechanics_active" = host.pickup_pref,
 		"strip_mechanics_active" = host.strip_pref, //CHOMPedit
 		"noisy" = host.noisy,
+<<<<<<< HEAD
 		//CHOMPedit start, liquid belly prefs
 		"liq_rec" = host.receive_reagents,
 		"liq_giv" = host.give_reagents,
@@ -538,6 +539,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"selective_active" = host.selective_preference, //Reveal active selective mode in prefs
 		"allow_mind_transfer" = host.allow_mind_transfer,
 		//CHOMPedit end
+=======
+		"allow_mind_transfer" = host.allow_mind_transfer,
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 		"drop_vore" = host.drop_vore,
 		"slip_vore" = host.slip_vore,
 		"stumble_vore" = host.stumble_vore,
@@ -1981,6 +1985,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.pickup_pref = host.pickup_pref
 			unsaved_changes = TRUE
 			return TRUE
+<<<<<<< HEAD
 		//CHOMPEdit Start
 		if("toggle_strippref")
 			host.strip_pref = !host.strip_pref
@@ -1988,13 +1993,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.strip_pref = host.strip_pref
 			unsaved_changes = TRUE
 			return TRUE
+=======
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 		if("toggle_allow_mind_transfer")
 			host.allow_mind_transfer = !host.allow_mind_transfer
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.allow_mind_transfer = host.allow_mind_transfer
 			unsaved_changes = TRUE
 			return TRUE
+<<<<<<< HEAD
 		//CHOMPEdit End
+=======
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 		if("toggle_healbelly")
 			host.permit_healbelly = !host.permit_healbelly
 			if(host.client.prefs_vr)

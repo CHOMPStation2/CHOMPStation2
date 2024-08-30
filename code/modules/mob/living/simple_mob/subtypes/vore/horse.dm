@@ -35,8 +35,12 @@
 	say_list_type = /datum/say_list/horse
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
 	allow_mind_transfer = TRUE //CHOMPAdd
+=======
+	allow_mind_transfer = TRUE
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 /mob/living/simple_mob/vore/horse/big
 	name = "horse"

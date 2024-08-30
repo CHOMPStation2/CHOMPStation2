@@ -39,8 +39,12 @@
 	max_n2 = 0
 	minbodytemp = 0
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
 	allow_mind_transfer = TRUE //CHOMPAdd
+=======
+	allow_mind_transfer = TRUE
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 // Activate Noms!
 /mob/living/simple_mob/vore/aggressive/dino

@@ -42,8 +42,12 @@
 	var/frustration = 0
 	var/max_frustration = 0
 
+<<<<<<< HEAD
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
 	allow_mind_transfer = TRUE //CHOMPAdd
+=======
+	allow_mind_transfer = TRUE
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 /mob/living/bot/New()
 	..()

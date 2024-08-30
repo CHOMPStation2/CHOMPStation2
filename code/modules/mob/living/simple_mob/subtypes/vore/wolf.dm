@@ -33,6 +33,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 	catalogue_data = list(/datum/category_item/catalogue/fauna/wolf)
 
+<<<<<<< HEAD
 	// CHOMPAdd Start :c
 	can_be_drop_prey = FALSE
 	allow_mind_transfer = TRUE
@@ -41,6 +42,9 @@
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 	// CHOMPAdd End
 
+=======
+	allow_mind_transfer = TRUE
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 // Activate Noms!
 /mob/living/simple_mob/vore/wolf

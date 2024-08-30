@@ -54,6 +54,8 @@
 
 	allow_mind_transfer = TRUE //CHOMPAdd
 
+	allow_mind_transfer = TRUE
+
 /////////////////////////////////////// Vore stuff///////////////////////////////////////////
 
 	swallowTime = 4 SECONDS

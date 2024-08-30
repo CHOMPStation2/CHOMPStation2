@@ -43,7 +43,11 @@
 	vore_default_mode = DM_HOLD
 	vore_icons = SA_ICON_LIVING
 
+<<<<<<< HEAD
 	allow_mind_transfer = TRUE //CHOMPAdd
+=======
+	allow_mind_transfer = TRUE
+>>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 	var/body_color 				//brown, black and white, leave blank for random
 
