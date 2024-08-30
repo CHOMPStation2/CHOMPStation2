@@ -17,6 +17,7 @@
 	var/job_talon_low = 0
 
 //Why weren't these in game toggles already?
+<<<<<<< HEAD
 /client/verb/toggle_eating_noises()
 	set name = "Toggle Eating Noises"
 	set category = "Preferences.Sounds" //CHOMPEdit
@@ -108,6 +109,8 @@
 
 	feedback_add_details("admin_verb","TGhostSeeWhisSubtle") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+=======
+>>>>>>> faac97e352... /tg/ pref datums (part 1) (#16219)
 /client/verb/toggle_capture_crystal()
 	set name = "Toggle Catchable"
 	set category = "Preferences.Character" //CHOMPEdit
@@ -126,6 +129,7 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TCaptureCrystal") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+<<<<<<< HEAD
 
 /client/verb/toggle_mentorhelp_ping()
 	set name = "Toggle Mentorhelp Ping"
@@ -178,3 +182,5 @@
 	toggle_preference(pref_path)
 
 	to_chat(src, "You will [ (is_preference_enabled(pref_path)) ? "now" : "not"] be automatically marked as AFK if you are idle for ten minutes or more.")
+=======
+>>>>>>> faac97e352... /tg/ pref datums (part 1) (#16219)
