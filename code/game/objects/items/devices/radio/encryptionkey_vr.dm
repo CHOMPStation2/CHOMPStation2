@@ -7,12 +7,12 @@
 	name = "ai integrated encryption key"
 	desc = "Integrated encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "AI Private" = 1, "Away Team" = 1)
+	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "AI Private" = 1, "Explorer" = 1) //CHOMP explo keep
 
 /obj/item/device/encryptionkey/heads/captain
 	name = "site manager's encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Away Team" = 1)
+	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Explorer" = 1) //CHOMP explo keep
 
 /obj/item/device/encryptionkey/heads/rd
 	name = "research director's encryption key"

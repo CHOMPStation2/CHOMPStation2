@@ -72,14 +72,20 @@
 		soulgem.catch_mob(src, to_use_custom_name)
 
 // Speak to the captured souls within the own soulcatcher
-/mob/proc/nsay_vore()
+/mob/proc/nsay_vore(message as message)
 	set name = "NSay Vore"
+	set desc = "Speak into your Soulcatcher."
+
+	src.nsay_vore_act(message)
+
+/mob/proc/nsay_vore_ch()
+	set name = "NSay Vore CH"
 	set desc = "Speak into your Soulcatcher."
 	set category = "IC.Vore"
 
 	src.nsay_vore_act()
 
-/mob/proc/nsay_vore_act()
+/mob/proc/nsay_vore_act(var/message)
 	if(stat != CONSCIOUS)
 		to_chat(src, span_warning("You can't use NSay Vore while unconscious."))
 		return
@@ -89,20 +95,28 @@
 	if(!gem.brainmobs.len)
 		to_chat(src, span_warning("You need a devoured soul to use NSay Vore."))
 		return
-	var/message = tgui_input_text(usr, "Type a message to say.","Speak into Soulcatcher", multiline=TRUE)
+
+	if(!message)
+		message = tgui_input_text(usr, "Type a message to say.","Speak into Soulcatcher", multiline=TRUE)
 	if(message)
 		var/sane_message = sanitize(message)
 		gem.use_speech(sane_message, src)
 
 // Emote to the captured souls within the soulcatcher
-/mob/proc/nme_vore()
+/mob/proc/nme_vore(message as message)
 	set name = "NMe Vore"
+	set desc = "Emote into your Soulcatcher."
+
+	src.nme_vore_act(message)
+
+/mob/proc/nme_vore_ch()
+	set name = "NMe Vore CH"
 	set desc = "Emote into your Soulcatcher."
 	set category = "IC.Vore"
 
 	src.nme_vore_act()
 
-/mob/proc/nme_vore_act()
+/mob/proc/nme_vore_act(var/message)
 	if(stat != CONSCIOUS)
 		to_chat(src, span_warning("You can't use NMe Vore while unconscious."))
 		return
@@ -113,7 +127,8 @@
 		to_chat(src, span_warning("You need a devoured soul to use NMe Vore."))
 		return
 
-	var/message = tgui_input_text(usr, "Type an action to perform.","Emote into Soulcatcher", multiline=TRUE)
+	if(!message)
+		message = tgui_input_text(usr, "Type an action to perform.","Emote into Soulcatcher", multiline=TRUE)
 	if(message)
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
@@ -201,8 +216,10 @@
 	var/list/valid_objects = gem.find_transfer_objects()
 	if(!valid_objects || !valid_objects.len)
 		return
-	var/obj/item/target = tgui_input_list(src, "Select where you want to store your own mind into.", "Mind Transfer Target", valid_objects)
-	gem.transfer_mob(src, target)
+
+	var/obj/target = tgui_input_list(src, "Select where you want to store your own mind into.", "Mind Transfer Target", valid_objects)
+
+	gem.transfer_mob_selector(src, target)
 
 // Allows the owner to reenter the body after being caught or having given away control
 /mob/living/carbon/brain/caught_soul/vore/proc/reenter_body()

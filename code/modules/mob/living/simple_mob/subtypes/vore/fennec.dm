@@ -50,8 +50,9 @@
 	say_list_type = /datum/say_list/fennec
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
-	// CHOMPAdd: Start :c
 	allow_mind_transfer = TRUE
+
+	// CHOMPAdd: Start :c
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 	species_sounds = "Vulpine"

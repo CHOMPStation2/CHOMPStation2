@@ -1,6 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - rscadd: "Designs for all the departmental protolathes"
-  - bugfix: "Fixed departmental lathes changing to omni lathes"
-  - bugfix: "Engineering console has the right name now"

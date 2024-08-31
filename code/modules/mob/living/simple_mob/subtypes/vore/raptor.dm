@@ -48,7 +48,7 @@
 		"raptorwhite"
 	)
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/raptor
 

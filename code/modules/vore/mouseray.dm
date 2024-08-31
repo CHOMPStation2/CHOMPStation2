@@ -287,9 +287,9 @@
 	new_mob.allow_spontaneous_tf = allow_spontaneous_tf
 	new_mob.eating_privacy_global = eating_privacy_global
 	new_mob.text_warnings = text_warnings
+	new_mob.allow_mind_transfer = allow_mind_transfer
 
 	//CHOMP stuff Start
-	new_mob.allow_mind_transfer = allow_mind_transfer
 	new_mob.phase_vore = phase_vore
 	new_mob.latejoin_vore = latejoin_vore
 	new_mob.latejoin_prey = latejoin_prey

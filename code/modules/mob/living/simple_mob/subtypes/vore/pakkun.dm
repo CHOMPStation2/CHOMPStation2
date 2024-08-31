@@ -58,7 +58,7 @@
 	maxHealth = 100
 	health = 100
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/pakkun/Life()
 	. = ..()
