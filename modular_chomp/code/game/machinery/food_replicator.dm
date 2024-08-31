@@ -9,7 +9,7 @@
 	idle_power_usage = 20
 	active_power_usage = 200
 
-	var/print_delay = 100
+	var/print_delay = 150
 	var/print_cost = 40
 
 	var/efficiency = 3
