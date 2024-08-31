@@ -27,7 +27,7 @@
 	say_list_type = /datum/say_list/fennix
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /datum/say_list/fennix
 	speak = list("SQUEL!","SQEL?","Skree.")

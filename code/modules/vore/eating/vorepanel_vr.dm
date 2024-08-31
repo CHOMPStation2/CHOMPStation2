@@ -536,8 +536,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"autotransferable" = host.autotransferable,
 		"noisy_full" = host.noisy_full, //Belching while full
 		"selective_active" = host.selective_preference, //Reveal active selective mode in prefs
-		"allow_mind_transfer" = host.allow_mind_transfer,
 		//CHOMPedit end
+		"allow_mind_transfer" = host.allow_mind_transfer,
 		"drop_vore" = host.drop_vore,
 		"slip_vore" = host.slip_vore,
 		"stumble_vore" = host.stumble_vore,
@@ -1988,13 +1988,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.strip_pref = host.strip_pref
 			unsaved_changes = TRUE
 			return TRUE
+		//CHOMPEdit End
 		if("toggle_allow_mind_transfer")
 			host.allow_mind_transfer = !host.allow_mind_transfer
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.allow_mind_transfer = host.allow_mind_transfer
 			unsaved_changes = TRUE
 			return TRUE
-		//CHOMPEdit End
 		if("toggle_healbelly")
 			host.permit_healbelly = !host.permit_healbelly
 			if(host.client.prefs_vr)

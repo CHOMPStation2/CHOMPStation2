@@ -43,7 +43,7 @@
 	vore_default_mode = DM_HOLD
 	vore_icons = SA_ICON_LIVING
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 	var/body_color 				//brown, black and white, leave blank for random
 

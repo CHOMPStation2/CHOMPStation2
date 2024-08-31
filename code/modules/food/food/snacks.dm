@@ -5136,7 +5136,7 @@
 
 /mob/living/simple_mob/slime
 	composition_reagent = "slimejelly"
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob
 	var/kitchen_tag = "animal" //Used for cooking with animals

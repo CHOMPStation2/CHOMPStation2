@@ -67,9 +67,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/show_vore_fx = TRUE
 	var/step_mechanics_pref = FALSE
 	var/pickup_pref = TRUE
+	var/allow_mind_transfer = FALSE
 
 	//CHOMP stuff
-	var/allow_mind_transfer = FALSE
 	var/phase_vore = TRUE
 	var/noisy_full = FALSE
 	var/receive_reagents = FALSE
@@ -220,10 +220,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	weight_message_visible = json_from_file["weight_message_visible"]
 	weight_messages = json_from_file["weight_messages"]
 	eating_privacy_global = json_from_file["eating_privacy_global"]
-
+	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 
 	//CHOMP stuff Start
-	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 	phase_vore = json_from_file["phase_vore"]
 	latejoin_vore = json_from_file["latejoin_vore"]
 	latejoin_prey = json_from_file["latejoin_prey"]
@@ -248,7 +247,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	soulcatcher_pref_flags = json_from_file["soulcatcher_pref_flags"]
 	soulcatcher_prefs = json_from_file["soulcatcher_prefs"]
 	//CHOMP stuff End
-
 
 	//Quick sanitize
 	if(isnull(digestable))
@@ -333,10 +331,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	else if(weight_messages.len < 10)
 		while(weight_messages.len < 10)
 			weight_messages.Add("")
-
-	//CHOMP stuff Start
 	if(isnull(allow_mind_transfer))
 		allow_mind_transfer = FALSE
+
+	//CHOMP stuff Start
 	if(isnull(phase_vore))
 		phase_vore = TRUE
 	if(isnull(latejoin_vore))
@@ -416,7 +414,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
 			"throw_vore" 			= throw_vore,
-			"allow_mind_transfer"	= allow_mind_transfer, //CHOMPedit
+			"allow_mind_transfer"	= allow_mind_transfer,
 			"phase_vore" 			= phase_vore, //CHOMPedit
 			"food_vore" 			= food_vore,
 			"digest_pain"			= digest_pain,

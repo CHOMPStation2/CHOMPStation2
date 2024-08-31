@@ -274,9 +274,9 @@
 	P.nutrition_messages = src.nutrition_messages
 	P.weight_message_visible = src.weight_message_visible
 	P.weight_messages = src.weight_messages
+	P.allow_mind_transfer = src.allow_mind_transfer
 
 	//CHOMP stuff Start
-	P.allow_mind_transfer = src.allow_mind_transfer
 	P.phase_vore = src.phase_vore
 	P.noisy_full = src.noisy_full
 	P.latejoin_vore = src.latejoin_vore
@@ -348,9 +348,9 @@
 	nutrition_messages = P.nutrition_messages
 	weight_message_visible = P.weight_message_visible
 	weight_messages = P.weight_messages
+	allow_mind_transfer = P.allow_mind_transfer
 
 	//CHOMP stuff
-	allow_mind_transfer = P.allow_mind_transfer
 	phase_vore = P.phase_vore
 	noisy_full = P.noisy_full
 	latejoin_vore = P.latejoin_vore
