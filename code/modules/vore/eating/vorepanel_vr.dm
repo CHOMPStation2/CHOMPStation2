@@ -983,69 +983,69 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.set_messages(new_absorb_chance_messages_owner,"stmoao", limit = MAX_MESSAGE_LEN / 4)
 
 				if(islist(belly_data["examine_messages"]))
-					var/new_examine_messages = sanitize(jointext(belly_data["examine_messages"],"\n\n"),MAX_MESSAGE_LEN / 2,0,0,0)
+					var/new_examine_messages = sanitize(jointext(belly_data["examine_messages"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_examine_messages)
 						new_belly.set_messages(new_examine_messages,"em", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["examine_messages_absorbed"]))
-					var/new_examine_messages_absorbed = sanitize(jointext(belly_data["examine_messages_absorbed"],"\n\n"),MAX_MESSAGE_LEN / 2,0,0,0)
+					var/new_examine_messages_absorbed = sanitize(jointext(belly_data["examine_messages_absorbed"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_examine_messages_absorbed)
 						new_belly.set_messages(new_examine_messages_absorbed,"ema", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_digest"]))
 					var/new_emotes_digest = sanitize(jointext(belly_data["emotes_digest"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_digest)
-						new_belly.set_messages(new_emotes_digest,"im_digest", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_digest,"im_digest", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_hold"]))
 					var/new_emotes_hold = sanitize(jointext(belly_data["emotes_hold"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_hold)
-						new_belly.set_messages(new_emotes_hold,"im_hold", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_hold,"im_hold", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_holdabsorbed"]))
 					var/new_emotes_holdabsorbed = sanitize(jointext(belly_data["emotes_holdabsorbed"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_holdabsorbed)
-						new_belly.set_messages(new_emotes_holdabsorbed,"im_holdabsorbed", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_holdabsorbed,"im_holdabsorbed", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_absorb"]))
 					var/new_emotes_absorb = sanitize(jointext(belly_data["emotes_absorb"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_absorb)
-						new_belly.set_messages(new_emotes_absorb,"im_absorb", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_absorb,"im_absorb", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_heal"]))
 					var/new_emotes_heal = sanitize(jointext(belly_data["emotes_heal"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_heal)
-						new_belly.set_messages(new_emotes_heal,"im_heal", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_heal,"im_heal", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_drain"]))
 					var/new_emotes_drain = sanitize(jointext(belly_data["emotes_drain"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_drain)
-						new_belly.set_messages(new_emotes_drain,"im_drain", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_drain,"im_drain", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_steal"]))
 					var/new_emotes_steal = sanitize(jointext(belly_data["emotes_steal"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_steal)
-						new_belly.set_messages(new_emotes_steal,"im_steal", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_steal,"im_steal", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_egg"]))
 					var/new_emotes_egg = sanitize(jointext(belly_data["emotes_egg"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_egg)
-						new_belly.set_messages(new_emotes_egg,"im_egg", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_egg,"im_egg", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_shrink"]))
 					var/new_emotes_shrink = sanitize(jointext(belly_data["emotes_shrink"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_shrink)
-						new_belly.set_messages(new_emotes_shrink,"im_shrink", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_shrink,"im_shrink", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_grow"]))
 					var/new_emotes_grow = sanitize(jointext(belly_data["emotes_grow"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_grow)
-						new_belly.set_messages(new_emotes_grow,"im_grow", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_grow,"im_grow", limit = MAX_MESSAGE_LEN / 2)
 
 				if(islist(belly_data["emotes_unabsorb"]))
 					var/new_emotes_unabsorb = sanitize(jointext(belly_data["emotes_unabsorb"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_emotes_unabsorb)
-						new_belly.set_messages(new_emotes_unabsorb,"im_unabsorb", limit = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_emotes_unabsorb,"im_unabsorb", limit = MAX_MESSAGE_LEN / 2)
 
 				// Options
 				if(isnum(belly_data["can_taste"]))
@@ -3185,12 +3185,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"stmoao", limit = MAX_MESSAGE_LEN / 4)
 				if("em")
-					var/new_message = sanitize(tgui_input_text(user,"These are sent to people who examine you when this belly has contents. Write them in 3rd person ('Their %belly is bulging')."+help,"Examine Message (when full)",host.vore_selected.get_messages("em"), MAX_MESSAGE_LEN / 2, TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN / 2,0,0,0)
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to people who examine you when this belly has contents. Write them in 3rd person ('Their %belly is bulging')."+help,"Examine Message (when full)",host.vore_selected.get_messages("em"), MAX_MESSAGE_LEN * 1.5, TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"em", limit = MAX_MESSAGE_LEN / 2)
 
 				if("ema")
-					var/new_message = sanitize(tgui_input_text(user,"These are sent to people who examine you when this belly has absorbed victims. Write them in 3rd person ('Their %belly is larger'). %count will not work for this type, and %countprey will only count absorbed victims."+help,"Examine Message (with absorbed victims)",host.vore_selected.get_messages("ema"), MAX_MESSAGE_LEN / 2, TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN / 2,0,0,0)
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to people who examine you when this belly has absorbed victims. Write them in 3rd person ('Their %belly is larger'). %count will not work for this type, and %countprey will only count absorbed victims."+help,"Examine Message (with absorbed victims)",host.vore_selected.get_messages("ema"), MAX_MESSAGE_LEN * 1.5, TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"ema", limit = MAX_MESSAGE_LEN / 2)
 
