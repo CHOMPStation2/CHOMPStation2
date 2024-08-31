@@ -44,11 +44,7 @@
 	var/poison_chance = 10			// Chance for injection to occur.
 	var/poison_per_bite = 1			// Amount added per injection.
 
-<<<<<<< HEAD
-	allow_mind_transfer = TRUE //CHOMPAdd
-=======
 	allow_mind_transfer = TRUE
->>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 /mob/living/simple_mob/vore/bee/Process_Spacemove(var/check_drift = 0)
 	return 1	//No drifting in space for space bee!

@@ -47,18 +47,14 @@
 	var/tamed = 0
 	var/tame_chance = 50 //It's a fiddy-fiddy default you may get a buddy pal or you may get mauled and ate. Win-win!
 
-<<<<<<< HEAD
+	allow_mind_transfer = TRUE
+
 	// CHOMPAdd Start :c
 	can_be_drop_prey = FALSE
-	allow_mind_transfer = TRUE
 	species_sounds = "Canine"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 	// CHOMPAdd End
-
-=======
-	allow_mind_transfer = TRUE
->>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 // Activate Noms!
 

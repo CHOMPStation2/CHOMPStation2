@@ -50,16 +50,13 @@
 	say_list_type = /datum/say_list/fennec
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
-<<<<<<< HEAD
-	// CHOMPAdd: Start :c
 	allow_mind_transfer = TRUE
+
+	// CHOMPAdd: Start :c
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 	species_sounds = "Vulpine"
 	//CHOMPAdd End
-=======
-	allow_mind_transfer = TRUE
->>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 // Activate Noms!
 /mob/living/simple_mob/vore/fennec

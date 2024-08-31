@@ -31,12 +31,8 @@
 
 	has_hands = 1
 
-<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
-=======
 	allow_mind_transfer = TRUE
->>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 // Nomnomn
 /mob/living/simple_mob/vore/weretiger

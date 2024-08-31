@@ -27,12 +27,8 @@
 
 	say_list_type = /datum/say_list/bear
 
-<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
-=======
 	allow_mind_transfer = TRUE
->>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 /datum/say_list/bear
 	speak = list("RAWR!","Rawr!","GRR!","Growl!")

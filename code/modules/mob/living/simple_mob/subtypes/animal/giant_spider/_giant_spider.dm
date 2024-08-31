@@ -117,15 +117,11 @@
 		/obj/item/stack/material/chitin = 1\
 		)
 
-<<<<<<< HEAD
+	allow_mind_transfer = TRUE
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
 	species_sounds = "Spider"
 	pain_emote_1p = list("chitter", "click") //CHOMP Add
 	pain_emote_3p = list("chitters", "clicks") //CHOMP Add
-=======
-	allow_mind_transfer = TRUE
->>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 /mob/living/simple_mob/animal/giant_spider/apply_melee_effects(var/atom/A)
 	if(isliving(A))

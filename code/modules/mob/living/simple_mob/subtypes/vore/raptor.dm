@@ -48,11 +48,7 @@
 		"raptorwhite"
 	)
 
-<<<<<<< HEAD
-	allow_mind_transfer = TRUE //CHOMPAdd
-=======
 	allow_mind_transfer = TRUE
->>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 /mob/living/simple_mob/vore/raptor
 

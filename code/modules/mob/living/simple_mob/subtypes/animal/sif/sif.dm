@@ -3,11 +3,7 @@
 	minbodytemp = 175
 	cold_resist = 0.75
 	heat_resist = -0.5
-<<<<<<< HEAD
-	allow_mind_transfer = TRUE //CHOMPAdd
-=======
 	allow_mind_transfer = TRUE
->>>>>>> 10637da2f4... ports mind transfer pref from chomp (#16225)
 
 	tame_items = list(
 	/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 20,
