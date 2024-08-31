@@ -58,11 +58,9 @@
 	var/obj/item/clothing/head/hat = null // Scughat.
 	var/can_wear_hat = TRUE				  // Some have inbuilt hats
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
-
-	allow_mind_transfer = TRUE
 
 	can_enter_vent_with = list(
 		/obj/item/weapon/implant,
