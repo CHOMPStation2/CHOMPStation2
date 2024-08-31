@@ -1,5 +1,6 @@
 /datum/design/item/biotech
 	materials = list(MAT_STEEL = 30, MAT_GLASS = 20)
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/AssembleDesignName()
 	..()
@@ -42,6 +43,7 @@
 	materials = list(MAT_STEEL = 500, MAT_GLASS = 200)
 	build_path = /obj/item/device/robotanalyzer
 	sort_string = "JAACA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/biotech/nanopaste
 	desc = "A tube of paste containing swarms of repair nanites. Very effective in repairing robotic machinery."
@@ -50,6 +52,7 @@
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 7000)
 	build_path = /obj/item/stack/nanopaste
 	sort_string = "JAACB"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/biotech/plant_analyzer
 	desc = "A device capable of quickly scanning all relevant data about a plant."
@@ -58,4 +61,4 @@
 	materials = list(MAT_STEEL = 500, MAT_GLASS = 500)
 	build_path = /obj/item/device/analyzer/plant_analyzer
 	sort_string = "JAADA"
-
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd

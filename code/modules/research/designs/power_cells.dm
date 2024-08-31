@@ -24,6 +24,7 @@
 	build_path = /obj/item/weapon/cell
 	category = list("Misc")
 	sort_string = "BAAAA"
+	department = LATHE_ALL | LATHE_ENGINEERING | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/powercell/high
 	name = "high-capacity"
@@ -33,6 +34,7 @@
 	build_path = /obj/item/weapon/cell/high
 	category = list("Misc")
 	sort_string = "BAAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/powercell/super
 	name = "super-capacity"
@@ -42,6 +44,7 @@
 	build_path = /obj/item/weapon/cell/super
 	category = list("Misc")
 	sort_string = "BAAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/powercell/hyper
 	name = "hyper-capacity"
@@ -51,6 +54,7 @@
 	build_path = /obj/item/weapon/cell/hyper
 	category = list("Misc")
 	sort_string = "BAAAD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/powercell/device
 	name = "device"
@@ -60,6 +64,7 @@
 	build_path = /obj/item/weapon/cell/device
 	category = list("Misc")
 	sort_string = "BAABA"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 //Yawn changes
 /datum/design/item/powercell/advance_device
@@ -70,6 +75,7 @@
 	build_path = /obj/item/weapon/cell/device/weapon
 	category = list("Misc")
 	sort_string = "BAABB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/powercell/super_device
 	name = "device, super"
@@ -79,6 +85,7 @@
 	build_path = /obj/item/weapon/cell/device/super
 	category = list("Misc")
 	sort_string = "BAABC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/powercell/hype_device
 	name = "device, hyper"
@@ -88,6 +95,7 @@
 	build_path = /obj/item/weapon/cell/device/hyper
 	category = list("Misc")
 	sort_string = "BAABD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/powercell/omni_device
 	name = "device, omni"
@@ -98,6 +106,7 @@
 	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
 	category = list("Misc")
 	sort_string = "BAABE"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 //End of Yawn add
 
 /datum/design/item/powercell/mecha/high

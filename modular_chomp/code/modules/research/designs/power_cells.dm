@@ -26,6 +26,7 @@
 	build_path = /obj/item/weapon/cell
 	category = list("Misc")
 	sort_string = "BAAAA"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/high
 	name = "high-capacity"
@@ -35,6 +36,7 @@
 	build_path = /obj/item/weapon/cell/high
 	category = list("Misc")
 	sort_string = "BAAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/super
 	name = "super-capacity"
@@ -44,6 +46,7 @@
 	build_path = /obj/item/weapon/cell/super
 	category = list("Misc")
 	sort_string = "BAAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/hyper
 	name = "hyper-capacity"
@@ -53,6 +56,7 @@
 	build_path = /obj/item/weapon/cell/hyper
 	category = list("Misc")
 	sort_string = "BAAAD"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/giga
 	name = "giga-capacity"
@@ -62,6 +66,7 @@
 	build_path = /obj/item/weapon/cell/giga
 	category = list("Misc")
 	sort_string = "BAAAE"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/potato
 	name = "potato cell"
@@ -70,6 +75,7 @@
 	build_path = /obj/item/weapon/cell/potato
 	category = list("Misc")
 	sort_string = "BAAAF"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /*
 //Device Cells
@@ -82,6 +88,7 @@
 	build_path = /obj/item/weapon/cell/device
 	category = list("Misc")
 	sort_string = "BAABA"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/device_empproof
 	name = "device, empproof"
@@ -91,6 +98,7 @@
 	build_path = /obj/item/weapon/cell/device/empproof
 	category = list("Misc")
 	sort_string = "BAABB"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/advance_device
 	name = "device, advanced"
@@ -100,6 +108,7 @@
 	build_path = /obj/item/weapon/cell/device/weapon
 	category = list("Misc")
 	sort_string = "BAABC"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/advance_device_empproof
 	name = "device, advanced empproof"
@@ -109,7 +118,8 @@
 	build_path = /obj/item/weapon/cell/device/weapon/empproof
 	category = list("Misc")
 	sort_string = "BAABD"
-	
+	department = LATHE_ALL | LATHE_ENGINEERING
+
 /datum/design/item/powercell/advance_device_recharge
 	name = "device, advanced recharging"
 	id = "recharging_advanced_device"
@@ -118,6 +128,7 @@
 	build_path = /obj/item/weapon/cell/device/weapon/recharge
 	category = list("Misc")
 	sort_string = "BAABE"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/super_device
 	name = "device, super"
@@ -127,6 +138,7 @@
 	build_path = /obj/item/weapon/cell/device/super
 	category = list("Misc")
 	sort_string = "BAABF"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/hype_device
 	name = "device, hyper"
@@ -136,6 +148,7 @@
 	build_path = /obj/item/weapon/cell/device/hyper
 	category = list("Misc")
 	sort_string = "BAABG"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/giga_device
 	name = "device, giga"
@@ -145,6 +158,7 @@
 	build_path = /obj/item/weapon/cell/device/giga
 	category = list("Misc")
 	sort_string = "BAAAH"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /datum/design/item/powercell/omni_device
 	name = "device, omni"
@@ -155,6 +169,7 @@
 	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
 	category = list("Misc")
 	sort_string = "BAABI"
+	department = LATHE_ALL | LATHE_ENGINEERING
 
 /*
 //Mecha Cells

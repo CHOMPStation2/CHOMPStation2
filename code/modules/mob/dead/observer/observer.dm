@@ -807,11 +807,20 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		W.add_hiddenprint(src)
 		W.visible_message("<span class='filter_notice'>[span_red("Invisible fingers crudely paint something in blood on [T]...")]</span>")
 
+// CHOMPEdit Start - Point Refactor
+/*
 /mob/observer/dead/pointed(atom/A as mob|obj|turf in view())
 	if(!..())
 		return 0
 	usr.visible_message("<span class='deadsay'><b>[src]</b> points to [A].</span>")
 	return 1
+*/
+
+/mob/observer/dead/_pointed(atom/pointed_at)
+	if(!..())
+		return FALSE
+
+	visible_message(span_deadsay("<b>[src]</b> points to [pointed_at]."))
 
 /mob/observer/dead/proc/manifest(mob/user)
 	is_manifest = TRUE

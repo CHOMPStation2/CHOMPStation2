@@ -40,6 +40,8 @@ export const generateBellyString = (belly: Belly, index: number) => {
     emote_time,
     shrink_grow_size,
     vorespawn_blacklist,
+    vorespawn_whitelist,
+    vorespawn_absorbed,
     egg_type,
     egg_name,
     selective_preference,
@@ -633,6 +635,8 @@ export const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Idle Emote Delay: ' + emote_time + ' seconds</li>';
   result += '<li class="list-group-item">Shrink/Grow Size: ' + shrink_grow_size * 100 + '%</li>';
   result += '<li class="list-group-item">Vore Spawn Blacklist: ' + (vorespawn_blacklist ? '<span style="color: green;">Yes' : '<span style="color: red;">No') + '</li>';
+  result += '<li class="list-group-item">Vore Spawn Whitelist: ' + (vorespawn_whitelist.length ? vorespawn_whitelist.join(', ') : 'Anyone!') + '</li>';
+  result += '<li class="list-group-item">Vore Spawn Absorbed: ' + (vorespawn_absorbed === 0 ? '<span style="color: red;">No' : vorespawn_absorbed === 1 ? '<span style="color: green;">Yes' : '<span style="color: orange;">Prey Choice') + '</li>';
   result += '<li class="list-group-item">Egg Type: ' + egg_type + '</li>';
   result += '<li class="list-group-item">Selective Mode Preference: ' + selective_preference + '</li>';
   result += '</ul>';

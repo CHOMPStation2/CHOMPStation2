@@ -132,6 +132,9 @@
 		asset_cache_preload_data(href_list["asset_cache_preload_data"])
 		return
 
+	if(href_list["commandbar_typing"])
+		handle_commandbar_typing(href_list)
+
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
 		if("mentorholder")	hsrc = (check_rights(R_ADMIN, 0) ? holder : mentorholder)
@@ -204,6 +207,8 @@
 	stat_panel.subscribe(src, .proc/on_stat_panel_message)
 
 	// Instantiate tgui panel
+	tgui_say = new(src, "tgui_say")
+	initialize_commandbar_spy()
 	tgui_panel = new(src, "browseroutput")
 
 	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
@@ -243,6 +248,7 @@
 	addtimer(CALLBACK(src, PROC_REF(check_panel_loaded)), 30 SECONDS)
 
 	// Initialize tgui panel
+	tgui_say.initialize()
 	tgui_panel.initialize()
 
 	connection_time = world.time
@@ -631,6 +637,16 @@
 		winset(usr, "mainwindow", "can-resize=true")
 		winset(usr, "mainwindow", "is-maximized=false")
 		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport") // The attempt_auto_fit_viewport() proc is not implemented yet
+
+/*CHOMPRemove Start, we use TGPanel
+/client/verb/toggle_verb_panel()
+	set name = "Toggle Verbs"
+	set category = "OOC.Client Settings" //CHOMPEdit
+
+	show_verb_panel = !show_verb_panel
+
+	to_chat(usr, "Your verbs are now [show_verb_panel ? "on" : "off. To turn them back on, type 'toggle-verbs' into the command bar."].")
+*///CHOMPRemove End
 
 /*
 /client/verb/toggle_status_bar()

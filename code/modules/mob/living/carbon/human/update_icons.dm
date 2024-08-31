@@ -174,9 +174,9 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		else
 			M.Scale(desired_scale_x, desired_scale_y)
-			if(isnull(resting_dir))
-				resting_dir = pick(FALSE, TRUE)
-			if(resting_dir)
+			if(isnull(rest_dir))
+				rest_dir = pick(FALSE, TRUE)
+			if(rest_dir)
 				M.Translate((1 / desired_scale_x * -4) + (desired_scale_x * cent_offset), 0)
 				M.Turn(-90)
 			else
@@ -1114,7 +1114,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		apply_layer(tail_layer)
 		return
 
-	var/species_tail = species.get_tail(src) // Species tail icon_state prefix.
+	var/species_tail = species?.get_tail(src) // Species tail icon_state prefix.
 
 	//This one is actually not that bad I guess.
 	if(species_tail && !(wear_suit && wear_suit.flags_inv & HIDETAIL))
@@ -1397,7 +1397,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		if(tail_style.extra_overlay)
 			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay) //CHOMPEdit
 			if(wagging && tail_style.ani_state)
-				overlay = new/icon("icon" = tail_style.icon, "icon_state" = tail_style.extra_overlay_w)
+				overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay_w)	//RS EDIT
 				overlay.Blend(rgb(src.r_tail2, src.g_tail2, src.b_tail2), tail_style.color_blend_mode)
 				tail_s.Blend(overlay, ICON_OVERLAY)
 				qdel(overlay)
@@ -1409,7 +1409,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		if(tail_style.extra_overlay2)
 			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2) //CHOMPEdit
 			if(wagging && tail_style.ani_state)
-				overlay = new/icon("icon" = tail_style.icon, "icon_state" = tail_style.extra_overlay2_w)
+				overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2_w)	//RS EDIT
 				overlay.Blend(rgb(src.r_tail3, src.g_tail3, src.b_tail3), tail_style.color_blend_mode)
 				tail_s.Blend(overlay, ICON_OVERLAY)
 				qdel(overlay)

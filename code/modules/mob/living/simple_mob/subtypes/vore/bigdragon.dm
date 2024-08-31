@@ -60,6 +60,8 @@ I think I covered everything.
 	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
 	meat_amount = 40
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	pixel_x = -48 //CHOMPEdit
+	default_pixel_x = -48 //CHOMPEdit
 	old_x = -48
 	old_y = 0
 	vis_height = 92
@@ -324,6 +326,7 @@ I think I covered everything.
 ///
 
 /mob/living/simple_mob/vore/bigdragon/update_icon()
+	..()
 	update_fullness()
 	build_icons()
 
@@ -343,9 +346,10 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/build_icons(var/random)
 	cut_overlays()
 	if(stat == DEAD)
-		icon_state = "dragon-dead"
 		plane = MOB_LAYER
 		return
+	else
+		plane = ABOVE_MOB_PLANE
 	if(random)
 		var/list/bodycolors = list("#1E1E1E","#3F3F3F","#545454","#969696","#DBDBDB","#ABBBD8","#3D0B00","#3A221D","#77554F","#281D1B","#631F00","#964421","#936B24","#381313","#380000","#682121","#700E00","#44525B","#283035","#29353D","#353E44","#281000","#38261A","#302F3D","#322E3A","#262738")
 		under = pick(underbelly_styles)
@@ -362,55 +366,55 @@ I think I covered everything.
 		eyes = pick(eye_styles)
 		overlay_colors["Eyes"] = "#[get_random_colour(1)]"
 
-	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -48)
+	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]") //CHOMPEdit
 	I.color = overlay_colors["Underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_body[body][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_body[body][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Body"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_ears[ears][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_ears[ears][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Ears"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_mane[mane][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_mane[mane][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Mane"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_horns[horns][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_horns[horns][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Horns"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_eyes[eyes][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_eyes[eyes][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Eyes"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = PLANE_LIGHTING_ABOVE
 	add_overlay(I)
 
 	if(enraged)
-		I = image(icon, "dragon_rage", pixel_x = -48)
+		I = image(icon, "dragon_rage") //CHOMPEdit
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = MOB_PLANE
 		I.layer = MOB_LAYER
 		add_overlay(I)
 	if(flames)
-		I = image(icon, "dragon_flame[resting? "-rest" : null]", pixel_x = -48)
+		I = image(icon, "dragon_flame[resting? "-rest" : null]") //CHOMPEdit
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = PLANE_LIGHTING_ABOVE
 		add_overlay(I)

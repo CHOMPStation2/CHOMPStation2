@@ -48,7 +48,7 @@
 								  "Chubby Mutated Otie" = /mob/living/simple_mob/vore/otie/feral/chubby,//CHOMPedit: more mobs
 								  "Red Otie" = /mob/living/simple_mob/vore/otie/red,
 								  "Chubby Red Otie" = /mob/living/simple_mob/vore/otie/red/chubby,//CHOMPedit: more mobs
-								  "Zorgoia" = /mob/living/simple_mob/vore/otie/zorgoia,//CHOMPedit: more mobs
+								  "Zorgoia" = /mob/living/simple_mob/vore/zorgoia,//CHOMPedit: more mobs
 								  "Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 								  "Corrupt Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
 								  "Hunter Giant Spider" = /mob/living/simple_mob/animal/giant_spider/hunter,

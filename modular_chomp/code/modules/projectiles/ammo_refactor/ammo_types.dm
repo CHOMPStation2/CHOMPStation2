@@ -38,6 +38,7 @@
 		var/obj/item/projectile/P = new projectile_type_real(src.loc)
 		P.agony = round(P.damage * AMMO_RUBBER_AGONY_MULT) //In exchange for agony proportional to damage
 		P.damage = round(P.damage * AMMO_RUBBER_DAMAGE_MULT) //Severely reduced damage
+		P.sharp = FALSE //Rubber shot shouldnt bleed you
 		qdel(src)
 		return P.launch_from_gun(target, target_zone, user, params, angle_override, forced_spread, launcher)
 	if(ammo_flags & AMMO_FLAG_HUNTER)
@@ -76,7 +77,6 @@
 	desc = "A medium bullet casing, probably fit for a rifle"
 	caliber = "medium"
 	icon_state = "rifle-casing"
-	projectile_type = /obj/item/projectile/bullet/rifle/a545
 	matter = list(MAT_STEEL = 180)
 	ammo_flags = AMMO_FLAG_MEDIUM
 
@@ -84,7 +84,6 @@
 	desc = "A large bullet casing, probably fit for a sniper."
 	icon_state = "lcasing"
 	caliber = "large"
-	projectile_type = /obj/item/projectile/bullet/rifle/a338
 	matter = list(MAT_STEEL = 800)
 	ammo_flags = AMMO_FLAG_LARGE
 

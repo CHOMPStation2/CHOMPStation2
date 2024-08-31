@@ -87,16 +87,26 @@
 	return
 
 //mob verbs are faster than object verbs. See above.
-/mob/living/pointed(atom/A as mob|obj|turf in view())
+// CHOMPEdit Start - Point refactor
+/mob/living/pointed(atom/A as mob|obj|turf in view(client.view, src))
 	if(src.stat || src.restrained())
-		return 0
+		return FALSE
 	if(src.status_flags & FAKEDEATH)
-		return 0
+		return FALSE
+	/*
 	if(!..())
 		return 0
 
 	usr.visible_message("<span class='filter_notice'><b>[src]</b> points to [A].</span>")
-	return 1
+*/
+	return ..()
+
+/mob/living/_pointed(atom/pointing_at)
+	if(!..())
+		return FALSE
+
+	visible_message(span_info("<b>[src]</b> points at [pointing_at]."), span_info("You point at [pointing_at]."))
+// CHOMPEdit End
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"
@@ -1400,10 +1410,3 @@
 	to_chat(src, SPAN_NOTICE("You are [toggled_sleeping ? "now sleeping. Use the Sleep verb again to wake up" : "no longer sleeping"]."))
 	if(toggled_sleeping)
 		Sleeping(1)
-
-// CHOMPAdd - Everyone starts as a human, augh.
-/mob/living/proc/set_footsteps(footstep_sounds = FOOTSTEP_MOB_HUMAN)
-	AddElement(/datum/element/footstep, footstep_sounds, 1, -6)
-
-/mob/living/proc/set_slosh()
-	AddElement(/datum/element/slosh)

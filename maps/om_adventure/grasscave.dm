@@ -16,16 +16,26 @@
 #include "pois/shuttlewreck2.dmm"
 #include "pois/shuttlewreck3.dmm"
 #include "pois/shuttlewreck4.dmm"
+#include "pois/darktear_sample.dmm"
+#include "pois/fleshtear_samples.dmm"
 #endif
 
 
 /obj/effect/shuttle_landmark/premade/om_adventure/grasscave/center
-	name = "Anomaly - Center"
+	name = "Anomaly - Center Alpha"
 	landmark_tag = "om-grasscave-center"
 
+/obj/effect/shuttle_landmark/premade/om_adventure/grasscave/center_alt
+	name = "Anomaly - Center Beta"
+	landmark_tag = "om-grasscave-center2"
+
 /obj/effect/shuttle_landmark/premade/om_adventure/grasscave/southeast
-	name = "Anomaly - Southeast"
+	name = "Anomaly - Southeast Alpha"
 	landmark_tag = "om-grasscave-southeast"
+
+/obj/effect/shuttle_landmark/premade/om_adventure/grasscave/southeast_alt
+	name = "Anomaly - Southeast Beta"
+	landmark_tag = "om-grasscave-southeast2"
 
 
 /area/om_adventure/grasscave
@@ -46,7 +56,7 @@
 /area/om_adventure/grasscave/rocks
 
 /obj/effect/overmap/visitable/simplemob/spacewhale/grasscave
-	initial_generic_waypoints = list("om-grasscave-center", "om-grasscave-southeast")
+	initial_generic_waypoints = list("om-grasscave-center", "om-grasscave-center2", "om-grasscave-southeast", "om-grasscave-southeast2")
 
 /turf/simulated/mineral/omadventure/make_ore(var/rare_ore)
 	if(mineral)
@@ -140,6 +150,15 @@
 	mappath = 'pois/darktear4.dmm'
 	cost = 5
 
+/area/om_adventure/poi/darktear_sample
+	name = "POI - Darktear Scientific"
+
+/datum/map_template/om_adventure/cave/darktear_sample
+	name = "darktear (Samples)"	//1 uncommon-or-rare sample
+	desc = "Ooh, spooky"
+	mappath = 'pois/darktear_sample.dmm'
+	cost = 5
+
 /area/om_adventure/poi/fleshtear1
 	name = "POI - Fleshtear 1"
 
@@ -174,6 +193,15 @@
 	name = "fleshtear4"
 	desc = "Wow gross!"
 	mappath = 'pois/fleshtear4.dmm'
+	cost = 5
+
+/area/om_adventure/poi/fleshtear_samples
+	name = "POI - Fleshtear Scientific"
+
+/datum/map_template/om_adventure/cave/fleshtear_samples
+	name = "fleshtear (Samples)"	//3 common/uncommon samples
+	desc = "Ooh, meaty"
+	mappath = 'pois/fleshtear_samples.dmm'
 	cost = 5
 
 /area/om_adventure/poi/cabin1

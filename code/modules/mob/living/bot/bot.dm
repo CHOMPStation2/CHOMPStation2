@@ -43,13 +43,13 @@
 	var/max_frustration = 0
 
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/bot/New()
 	..()
-	update_icons()
+	//update_icons() //VOREstation edit: moved to Init
 
-	default_language = GLOB.all_languages[LANGUAGE_GALCOM]
+	//default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit: moved to Init
 
 	botcard = new /obj/item/weapon/card/id(src)
 	botcard.access = botcard_access.Copy()
@@ -66,6 +66,8 @@
 	. = ..()
 	if(on)
 		turn_on() // Update lights and other stuff
+	update_icons() //VOREstation edit - overlay runtime fix
+	default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit - runtime fix
 
 /mob/living/bot/Life()
 	..()
@@ -591,9 +593,7 @@
 	return ..()
 
 /mob/living/bot/Logout()
-	no_vore = TRUE // ROBOT VORE
 	release_vore_contents()
-	init_vore() // ROBOT VORE
 	remove_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	no_vore = TRUE
 	devourable = FALSE

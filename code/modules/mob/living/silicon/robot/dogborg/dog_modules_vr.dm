@@ -571,3 +571,28 @@
 	if(prob(75)) //75% chance to stun for 5 seconds, really only going to be 4 bcus click cooldown+animation.
 		T.apply_effect(5, STUN, armor_block)
 		T.drop_both_hands() //CHOMPEdit Stuns no longer drop items
+
+/obj/item/weapon/reagent_containers/glass/beaker/large/borg
+	var/mob/living/silicon/robot/R
+	var/last_robot_loc
+
+/obj/item/weapon/reagent_containers/glass/beaker/large/borg/Initialize()
+	. = ..()
+	R = loc.loc
+	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
+
+/obj/item/weapon/reagent_containers/glass/beaker/large/borg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
+	if(old_loc == R || old_loc == R.module)
+		last_robot_loc = old_loc
+	if(!istype(loc, /obj/machinery) && loc != R && loc != R.module)
+		if(last_robot_loc)
+			forceMove(last_robot_loc)
+			last_robot_loc = null
+		else
+			forceMove(R)
+		if(loc == R)
+			hud_layerise()
+
+/obj/item/weapon/reagent_containers/glass/beaker/large/borg/Destroy()
+	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
+	..()

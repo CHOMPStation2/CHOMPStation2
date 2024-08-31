@@ -244,7 +244,7 @@
 	return pick(prob(10);/obj/item/weapon/storage/firstaid/regular,
 				prob(8);/obj/item/weapon/storage/firstaid/toxin,
 				prob(8);/obj/item/weapon/storage/firstaid/o2,
-				prob(6);/obj/item/weapon/storage/firstaid/adv,
+				prob(4);/obj/item/weapon/storage/firstaid/adv, //VOREStation Edit: 6 to 4
 				prob(8);/obj/item/weapon/storage/firstaid/fire,
 				prob(1);/obj/item/device/denecrotizer/medical, //VOREStation Add,
 				prob(1);/obj/item/weapon/storage/firstaid/combat,
@@ -789,7 +789,9 @@
 				/obj/item/toy/plushie/white_eastdragon,
 				/obj/item/toy/plushie/red_eastdragon,
 				/obj/item/toy/plushie/green_eastdragon,
-				/obj/item/toy/plushie/gold_eastdragon)
+				/obj/item/toy/plushie/gold_eastdragon,
+				/obj/item/toy/plushie/teppi,
+				/obj/item/toy/plushie/teppi/alt)
 				//CHOMPStation Add End
 
 /obj/random/plushielarge

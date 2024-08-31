@@ -664,6 +664,7 @@
 				//CHOMPAdd Start
 				if(T.reagents)
 					volume = T.reagents.total_volume
+				var/is_trash = istype(T, /obj/item/trash)
 				//CHOMPAdd End
 				var/digested = T.digest_act(item_storage = src)
 				if(!digested)
@@ -693,7 +694,12 @@
 									plastic.add_charge(total_material)
 								if(material == "wood" && wood)
 									wood.add_charge(total_material)
-					hound.nutrition += 5 * digested //drain(-50 * digested) //CHOMPEdit
+					//CHOMPEdit Start
+					if(is_trash)
+						hound.nutrition += digested
+					else
+						hound.nutrition += 5 * digested //drain(-50 * digested)
+					//CHOMPEdit End
 			else if(istype(target,/obj/effect/decal/remains))
 				qdel(target)
 				hound.nutrition += 10 //drain(-100) //CHOMPEdit

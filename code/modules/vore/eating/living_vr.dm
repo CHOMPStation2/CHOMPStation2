@@ -47,7 +47,7 @@
 
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
-		if(M)
+		if(!QDELETED(M))
 			M.init_vore()
 
 	//return TRUE to hook-caller
@@ -55,6 +55,7 @@
 
 /mob/proc/init_vore()
 	//Something else made organs, meanwhile.
+	AddElement(/datum/element/slosh) // CHOMPEdit - Sloshy element
 	if(LAZYLEN(vore_organs))
 		//CHOMPAdd Start
 		if(!soulgem)
@@ -89,6 +90,11 @@
 			soulgem = new(src)
 		return TRUE
 		//CHOMPAdd End
+
+/mob/living/init_vore()
+	if(no_vore)
+		return FALSE
+	return ..()
 
 //
 // Hide vore organs in contents
@@ -268,9 +274,9 @@
 	P.nutrition_messages = src.nutrition_messages
 	P.weight_message_visible = src.weight_message_visible
 	P.weight_messages = src.weight_messages
+	P.allow_mind_transfer = src.allow_mind_transfer
 
 	//CHOMP stuff Start
-	P.allow_mind_transfer = src.allow_mind_transfer
 	P.phase_vore = src.phase_vore
 	P.noisy_full = src.noisy_full
 	P.latejoin_vore = src.latejoin_vore
@@ -342,9 +348,9 @@
 	nutrition_messages = P.nutrition_messages
 	weight_message_visible = P.weight_message_visible
 	weight_messages = P.weight_messages
+	allow_mind_transfer = P.allow_mind_transfer
 
 	//CHOMP stuff
-	allow_mind_transfer = P.allow_mind_transfer
 	phase_vore = P.phase_vore
 	noisy_full = P.noisy_full
 	latejoin_vore = P.latejoin_vore
@@ -373,13 +379,15 @@
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
 
-	if(soulgem)
-		src.soulgem.release_mobs()
-		QDEL_NULL(soulgem)
-	if(P.soulcatcher_prefs.len)
-		soulgem = list_to_object(P.soulcatcher_prefs, src)
-	else
-		soulgem = new(src)
+		//CHOMPAdd Start
+		if(soulgem)
+			src.soulgem.release_mobs()
+			QDEL_NULL(soulgem)
+		if(P.soulcatcher_prefs.len)
+			soulgem = list_to_object(P.soulcatcher_prefs, src)
+		else
+			soulgem = new(src)
+		//CHMPAdd End
 
 	return TRUE
 

@@ -230,7 +230,7 @@
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
 		return TRUE
-
+/* CHOMPEdit - Moved to modular_chomp/modules/point/point.dm
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
 	set name = "Point To"
 	set category = "Object"
@@ -260,7 +260,7 @@
 
 	face_atom(A)
 	return 1
-
+*/
 
 /mob/proc/ret_grab(list/L, flag)
 	return
@@ -750,11 +750,11 @@
 					stat(null)
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
-
-			// CHOMPedit - Ticket System
-			//if(statpanel("Tickets"))
-				//GLOB.ahelp_tickets.stat_entry()
-
+			/* CHOMPedit - Ticket System
+			if(statpanel("Tickets"))
+				if(check_rights(R_ADMIN|R_SERVER,FALSE)) //Prevents non-staff from opening the list of ahelp tickets
+					GLOB.ahelp_tickets.stat_entry()
+			*/
 
 			if(length(GLOB.sdql2_queries))
 				if(statpanel("SDQL2"))
@@ -1217,20 +1217,11 @@
 
 /mob/proc/throw_mode_off()
 	src.in_throw_mode = 0
-	if(client)
-		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help intent
-			src.visible_message("<span class='notice'>[src] relaxes from their ready stance.</span>","<span class='notice'>You relax from your ready stance.</span>")
 	if(src.throw_icon && !issilicon(src)) //in case we don't have the HUD and we use the hotkey. Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_off"
 
 /mob/proc/throw_mode_on()
 	src.in_throw_mode = 1
-	if(client)
-		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help
-			if(src.get_active_hand())
-				src.visible_message("<span class='warning'>[src] winds up to throw [get_active_hand()]!</span>","<span class='notice'>You wind up to throw [get_active_hand()].</span>")
-			else
-				src.visible_message("<span class='warning'>[src] looks ready to catch anything thrown at them!</span>","<span class='notice'>You get ready to catch anything thrown at you.</span>")
 	if(src.throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_on"
 

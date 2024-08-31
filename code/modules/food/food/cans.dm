@@ -14,7 +14,7 @@
 	description_fluff = "The 'Space' branding was originally added to the 'Alpha Cola' product line in order to justify selling cans for 50% higher prices to 'off-world' retailers. Despite being chemically identical, Space Cola proved so popular that Centauri Provisions eventually applied the name to the entire product line - price hike and all."
 	icon_state = "cola"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/cola/Initialize()
 	. = ..()
@@ -26,7 +26,7 @@
 	description_fluff = "The 'Space' branding was originally added to the 'Alpha Cola' product line in order to justify selling cans for 50% higher prices to 'off-world' retailers. Despite being chemically identical, Space Cola proved so popular that Centauri Provisions eventually applied the name to the entire product line - price hike and all."
 	icon_state = "decafcola"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola/Initialize()
 	. = ..()
@@ -37,7 +37,7 @@
 	desc = "Ice cold and utterly tasteless, this 'all-natural' mineral water comes 'fresh' from one of NanoTrasen's heavy-duty bottling plants in the Sivian poles."
 	icon_state = "waterbottle"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	drop_sound = 'sound/items/drop/disk.ogg'
 	pickup_sound = 'sound/items/pickup/disk.ogg'
 	cant_chance = 0
@@ -52,7 +52,7 @@
 	description_fluff = "The 'Space' branding was originally added to the 'Alpha Cola' product line in order to justify selling cans for 50% higher prices to 'off-world' retailers. Despite being chemically identical, Space Cola proved so popular that Centauri Provisions eventually applied the name to the entire product line - price hike and all."
 	icon_state = "space_mountain_wind"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind/Initialize()
 	. = ..()
@@ -63,7 +63,7 @@
 	desc = "The Vir Health Board has advised consumers that consumption of Thirteen Loko may result in seizures, blindness, drunkenness, or even death. Please Drink Responsibly."
 	icon_state = "thirteen_loko"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko/Initialize()
 	. = ..()
@@ -75,7 +75,7 @@
 	description_fluff = "Following a 2490 lawsuit and a spate of deaths, Gilthari Exports reminds customers that the 'Dr.' legally stands for 'Drink'."
 	icon_state = "dr_gibb"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb/Initialize()
 		..()
@@ -87,7 +87,7 @@
 	description_fluff = "Following a 2490 lawsuit and a spate of deaths, Gilthari Exports reminds customers that the 'Dr.' legally stands for 'Drink'."
 	icon_state = "dr_gibb_diet"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet/Initialize()
 		..()
@@ -99,7 +99,7 @@
 	description_fluff = "Brought back by popular demand in 2515 after a limited-run release in 2510, the cult success of this bizarre tasting soda has never truly been accounted for by economists."
 	icon_state = "starkist"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/starkist/Initialize()
 	. = ..()
@@ -111,7 +111,7 @@
 	description_fluff = "A special variant of the Starkist brand soda introduced after popular outcry following a reformulation of the basic drink decades ago. This decaffineated variant outsells 'New' Starkist in many markets."
 	icon_state = "decafstarkist"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/starkistdecaf/Initialize()
 	. = ..()
@@ -123,7 +123,7 @@
 	description_fluff = "The 'Space' branding was originally added to the 'Alpha Cola' product line in order to justify selling cans for 50% higher prices to 'off-world' retailers. Despite being chemically identical, Space Cola proved so popular that Centauri Provisions eventually applied the name to the entire product line - price hike and all."
 	icon_state = "space-up"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/space_up/Initialize()
 	. = ..()
@@ -135,7 +135,7 @@
 	description_fluff = "Not to be confused with 'lemon & lime soda', Lemon-Lime is specially formulated using the highly propriatary Lemon-Lime Fruit. Growing the Lemon-Lime without a license is punishable by fines or jail time. Accept no immitations."
 	icon_state = "lemon-lime"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime/Initialize()
 	. = ..()
@@ -147,7 +147,7 @@
 	description_fluff = "Produced exclusively on the planet Oasis, Vrisk Serket Iced Tea is not sold outside of the Golden Crescent, let alone Earth."
 	icon_state = "ice_tea_can"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea/Initialize()
 	. = ..()
@@ -159,7 +159,7 @@
 	description_fluff = "Strangely, this unassuming grape soda is a product of Hephaestus Industries."
 	icon_state = "purple_can"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice/Initialize()
 	. = ..()
@@ -171,7 +171,7 @@
 	description_fluff = "Due to its technically medicinal properties and the complexities of chemical copyright law, T-Borg's Tonic Water is a rare product of Zeng-Hu's 'LifeWater' refreshments division."
 	icon_state = "tonic"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/tonic/Initialize()
 	. = ..()
@@ -182,7 +182,7 @@
 	desc = "A can of soda water. Still water's more refreshing cousin."
 	icon_state = "sodawater"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/sodawater/Initialize()
 	. = ..()
@@ -194,7 +194,7 @@
 	description_fluff = "'Classic' beverages is a registered trademark of the Centauri Provisions corporation."
 	icon_state = "gingerale"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/gingerale/Initialize()
 	. = ..()
@@ -206,7 +206,7 @@
 	description_fluff = "Despite centuries of humanity's expansion, this particular soda is still produced almost exclusively on Earth, in North America."
 	icon_state = "root_beer"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/root_beer/Initialize()
 	. = ..()
@@ -220,7 +220,7 @@
 	description_fluff = "A classic Slavic beverage which many space-faring Slavs still enjoy to this day. Fun fact, it is actually considered a weak beer by non-Russians."
 	icon_state = "kvass"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/kvass/Initialize()
 	. = ..()
@@ -232,7 +232,7 @@
 	description_fluff = "A sweet and fruity beverage that was traditionally used to preserve fruits in harsh Russian winters that is now available for widespread consumption."
 	icon_state = "kompot"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/kompot/Initialize()
 	. = ..()
@@ -243,7 +243,7 @@
 	desc = "State regulated soda beverage. Enjoy comrades."
 	icon_state = "boda"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/boda/Initialize()
 	. = ..()
@@ -254,7 +254,7 @@
 	desc = "State regulated soda beverage, now with added surplus flavoring. Enjoy comrades."
 	icon_state = "bodaplus"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/bodaplus/Initialize()
 	. = ..()
@@ -274,7 +274,7 @@
 	desc = "A taste of what keeps our glorious nation running! Served as Space Commissariat Stahlin prefers it! Luke warm."
 	icon_state = "red_army"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/redarmy/Initialize()
 	. = ..()
@@ -286,7 +286,7 @@
 	desc = "Just what any bureaucrat needs to get through the day. Keep stamping those papers!"
 	icon_state = "arst_bru"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/arstbru/Initialize()
 	. = ..()
@@ -298,7 +298,7 @@
 	description_fluff = "A can of the only soft drink state approved for the benefit of the people. Served at room temperature regardless of ambient temperatures thanks to innovative Terran insulation technology."
 	icon_state = "terra_cola"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola/Initialize()
 	. = ..()
@@ -312,7 +312,7 @@
 	desc = "Feel superior above all with Superior Strawberry!"
 	icon_state = "strawcoke"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola/Initialize()
 	. = ..()
@@ -323,7 +323,7 @@
 	desc = "Look to the stars and prepare to explore with Andromeda Apple!"
 	icon_state = "applecoke"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/apple_cola/Initialize()
 	. = ..()
@@ -334,7 +334,7 @@
 	desc = "Feel back at home on the Lunar Colonies with this classic beverage straight from the source!"
 	icon_state = "lemoncoke"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola/Initialize()
 	. = ..()
@@ -345,7 +345,7 @@
 	desc = "Take off and shoot for the stars with this classic cowboy cola!"
 	icon_state = "sarsaparilla"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/sarsaparilla/Initialize()
 	. = ..()
@@ -356,7 +356,7 @@
 	desc = "Get down with Newton's favorite carbonated science experiment!"
 	icon_state = "grapesoda"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/grape_cola/Initialize()
 	. = ..()
@@ -367,7 +367,7 @@
 	desc = "Take a taste-tastic trip to Orion's Belt with Orion Orange!"
 	icon_state = "orangesoda"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/orange_cola/Initialize()
 	. = ..()
@@ -378,7 +378,7 @@
 	desc = "Taste something out of this world with Bacon Soda!"
 	icon_state = "porkcoke"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/baconsoda/Initialize()
 	. = ..()
@@ -393,7 +393,7 @@
 	icon = 'icons/obj/drinks_vr.dmi'
 	icon_state = "bepis"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/bepis/Initialize()
 	. = ..()
@@ -405,7 +405,7 @@
 	icon = 'icons/obj/drinks_vr.dmi'
 	icon_state = "watercan"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/astrodew/Initialize()
 	. = ..()
@@ -422,7 +422,7 @@
 	icon = 'icons/obj/drinks_vr.dmi'
 	icon_state = "coffeecan"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/icecoffee/Initialize()
 	. = ..()
@@ -434,7 +434,7 @@
 	icon = 'icons/obj/drinks_vr.dmi'
 	icon_state = "buzzfuzz"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/buzz/Initialize()
 	. = ..()
@@ -446,7 +446,7 @@
 	icon = 'icons/obj/drinks_vr.dmi'
 	icon_state = "shambler"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/shambler/Initialize()
 	. = ..()
@@ -458,7 +458,7 @@
 	icon = 'icons/obj/drinks_vr.dmi'
 	icon_state = "cranberry"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_y = 10 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/cranberry/Initialize()
 	. = ..()
@@ -471,7 +471,7 @@
 	desc = "Beat the heat with this refreshing brewed beverage."
 	icon_state = "beercan"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/beercan/Initialize()
 	. = ..()
@@ -482,7 +482,7 @@
 	desc = "A delicious IPA that's canned for your pleasure. Drink up!"
 	icon_state = "alecan"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/alecan/Initialize()
 	. = ..()
@@ -495,7 +495,7 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_peach"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_peach/Initialize()
@@ -507,7 +507,7 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_pear"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_pear/Initialize()
@@ -519,7 +519,7 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_cherry"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_cherry/Initialize()
@@ -531,7 +531,7 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_melon"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_melon/Initialize()
@@ -543,7 +543,7 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_banana"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_banana/Initialize()
@@ -555,7 +555,7 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_rose"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_rose/Initialize()
@@ -567,7 +567,7 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_lemon"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_lemon/Initialize()
@@ -579,7 +579,7 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_fruit"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_fruit/Initialize()
@@ -591,9 +591,108 @@
 	desc = "Harness the power of the atom with this over-caffinated energy drink."
 	icon_state = "nukie_special"
 	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
 	volume = 60
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/nukie_special/Initialize()
 	. = ..()
 	reagents.add_reagent("nukie_special", 60)
+
+/////////////////////////MEGA NUKIES/////////////////////////
+//Rare loot energy drinks with special properties, for the funnies.
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_sight
+	name = "\improper Nukies Mega - Plum Peeper"
+	desc = "Harness the power of the atom with this illegal, unfit for organic consumption and absolutely not regulator approved energy drink."
+	icon_state = "nukie_mega_sight"
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
+	volume = 60
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_sight/Initialize()
+	. = ..()
+	reagents.add_reagent("nukie_mega_sight", 60)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_heart
+	name = "\improper Nukies Mega - Juice Pumper"
+	desc = "Harness the power of the atom with this illegal, unfit for organic consumption and absolutely not regulator approved energy drink."
+	icon_state = "nukie_mega_heart"
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
+	volume = 60
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_heart/Initialize()
+	. = ..()
+	reagents.add_reagent("nukie_mega_heart", 60)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_sleep
+	name = "\improper Nukies Nega - Vibrating Nights"
+	desc = "Harness the power of the atom with this illegal, unfit for organic consumption and absolutely not regulator approved energy drink."
+	icon_state = "nukie_mega_sleep"
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
+	volume = 60
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_sleep/Initialize()
+	. = ..()
+	reagents.add_reagent("nukie_mega_sleep", 60)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_shock
+	name = "\improper Nukies Mega - Jolt Railer"
+	desc = "Harness the power of the atom with this illegal, unfit for organic consumption and absolutely not regulator approved energy drink."
+	icon_state = "nukie_mega_strong"
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
+	volume = 60
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_shock/Initialize()
+	. = ..()
+	reagents.add_reagent("nukie_mega_shock", 60)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_fast
+	name = "\improper Nukies Mega - Rapid Rager"
+	desc = "Harness the power of the atom with this illegal, unfit for organic consumption and absolutely not regulator approved energy drink."
+	icon_state = "nukie_mega_fast"
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
+	volume = 60
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_fast/Initialize()
+	. = ..()
+	reagents.add_reagent("nukie_mega_fast", 60)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_high
+	name = "\improper Nukies Mega - Diamond Sky"
+	desc = "Harness the power of the atom with this illegal, unfit for organic consumption and absolutely not regulator approved energy drink."
+	icon_state = "nukie_mega_high"
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
+	volume = 60
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_high/Initialize()
+	. = ..()
+	reagents.add_reagent("nukie_mega_high", 60)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_shrink
+	name = "\improper Nukies Mega - Shrinking Flower"
+	desc = "Harness the power of the atom with this illegal, unfit for organic consumption and absolutely not regulator approved energy drink."
+	icon_state = "nukie_mega_shrink"
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
+	volume = 60
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_shrink/Initialize()
+	. = ..()
+	reagents.add_reagent("nukie_mega_shrink", 60)
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_grow
+	name = "\improper Nukies Mega - Growing Geyser"
+	desc = "Harness the power of the atom with this illegal, unfit for organic consumption and absolutely not regulator approved energy drink."
+	icon_state = "nukie_mega_grow"
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y = 8 //CHOMPEdit
+	volume = 60
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_mega_grow/Initialize()
+	. = ..()
+	reagents.add_reagent("nukie_mega_growth", 60)

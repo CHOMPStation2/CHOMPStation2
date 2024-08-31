@@ -37,7 +37,7 @@
 	init_id()
 	init_subsystems()
 
-	set_slosh() // CHOMPAdd - Slosh element, for VORE
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPAdd
 
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src

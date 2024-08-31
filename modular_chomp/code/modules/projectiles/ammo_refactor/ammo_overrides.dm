@@ -24,7 +24,7 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/lemat
 	caliber = "small"
@@ -34,7 +34,7 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver/stainless
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/detective
 	caliber = "small"
@@ -43,23 +43,23 @@ Small Weapons
 
 /obj/item/weapon/gun/projectile/revolver/detective45
 	caliber = "small"
-	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/pistol/rubber
+	ammo_type = /obj/item/ammo_casing/simple/small/rubber
+	projectile_type = /obj/item/projectile/bullet/pistol/medium
 
 /obj/item/weapon/gun/projectile/revolver/lombardi
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/lombardi/panther
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/lombardi/gold
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/cappeacekeeper
 	caliber = "small"
@@ -69,7 +69,7 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver/mateba
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/deckard
 	caliber = "small"
@@ -94,22 +94,22 @@ Small Weapons
 /obj/item/weapon/gun/projectile/revolver/nova
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/cerberus
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/nagant
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/nagant/skinned
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/saa
 	caliber = "small"
@@ -261,12 +261,12 @@ Small Weapons
 /obj/item/weapon/gun/projectile/contender
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/contender/tacticool
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/colt
 	caliber = "small"
@@ -325,7 +325,7 @@ Small Weapons
 /obj/item/weapon/gun/projectile/derringer
 	caliber = "small"
 	ammo_type = /obj/item/ammo_casing/simple/small
-	projectile_type = /obj/item/projectile/bullet/a357
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/luger
 	caliber = "small"
@@ -586,19 +586,19 @@ Medium Weapons
 
 /obj/item/weapon/gun/projectile/automatic/serdy/krinkov
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/akm
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/scrapak
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
@@ -676,7 +676,7 @@ Medium Weapons
 /obj/item/weapon/gun/projectile/automatic/serdy/sks
 	caliber = "medium"
 	ammo_type = /obj/item/ammo_casing/simple/medium
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762/sniper
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mosin
 	caliber = "medium"
@@ -702,19 +702,19 @@ Medium Weapons
 
 /obj/item/weapon/gun/projectile/automatic/serdy/memegun
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/tkb408
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
 /obj/item/weapon/gun/projectile/automatic/serdy/groza
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
@@ -738,13 +738,13 @@ Medium Weapons
 
 /obj/item/weapon/gun/projectile/automatic/serdy/rpd
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium_box)
 	magazine_type = /obj/item/ammo_magazine/medium_box
 
 /obj/item/weapon/gun/projectile/automatic/serdy/rpk
 	caliber = "medium"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x39
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_drum)
 	magazine_type = /obj/item/ammo_magazine/medium_drum
 
@@ -804,9 +804,9 @@ Large Weapons
 */
 
 
-
+/* These are superheavy weapons, and the overrides dont even work on them anyway, 14.5 ammo will be its own seperate 'superheavy' ammo
 /obj/item/weapon/gun/projectile/heavysniper
-	caliber = "large"
+	caliber = "14.5"
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
@@ -816,10 +816,10 @@ Large Weapons
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 
 /obj/item/weapon/gun/projectile/revolver/slab
-	caliber = "large"
+	caliber = "14.5" ////Editing these back to 14.5 bullets, these are extremely damaging and shouldnt be as free as 'large bullets'
 	ammo_type = /obj/item/ammo_casing/simple/large
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
-
+*/
 /obj/item/weapon/gun/projectile/automatic/serdy/awp
 	caliber = "large"
 	projectile_type = /obj/item/projectile/bullet/rifle/a338

@@ -451,7 +451,7 @@
 	desc = "Whose smart idea was it to use toys as crowd control? Ages 18 and up."
 	damage = 0 // It's a damn toy.
 	embed_chance = 0
-	agony = 50 // The riot part of the riot dart
+	agony = 20 // The riot part of the riot dart //CHOMPedit, nerf this >:3 old 50
 	nodamage = TRUE
 	sharp = FALSE
 	damage_type = HALLOSS

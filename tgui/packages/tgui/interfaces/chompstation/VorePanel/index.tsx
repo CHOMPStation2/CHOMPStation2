@@ -157,6 +157,7 @@ export const VorePanel = () => {
     our_bellies,
     selected,
     soulcatcher,
+    abilities,
     prefs,
     show_pictures,
     icon_overflow,
@@ -177,7 +178,11 @@ export const VorePanel = () => {
     />
   );
   tabs[1] = (
-    <VoreSoulcatcher our_bellies={our_bellies} soulcatcher={soulcatcher} />
+    <VoreSoulcatcher
+      our_bellies={our_bellies}
+      soulcatcher={soulcatcher}
+      abilities={abilities}
+    />
   );
   tabs[2] = (
     <VoreUserPreferences

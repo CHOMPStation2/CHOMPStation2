@@ -1,4 +1,6 @@
 // Integrated circuits stuff
+/datum/design/item/integrated_circuitry  // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE | LATHE_ENGINEERING
 
 /datum/design/item/integrated_circuitry/AssembleDesignName()
 	..()

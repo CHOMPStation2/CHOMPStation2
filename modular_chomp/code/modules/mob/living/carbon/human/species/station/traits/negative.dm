@@ -12,7 +12,6 @@
 	var_changes = list("minimum_breath_pressure" = 18)
 	excludes = list(/datum/trait/positive/light_breather)
 
-
 /datum/trait/negative/thick_digits
 	name = "Thick Digits"
 	desc = "Your hands are not shaped in a way that allows useage of guns."
@@ -66,7 +65,6 @@
 	var_changes = list("flags" = NO_SCAN)
 	excludes = list(/datum/trait/negative/nodefib) //No, just, no
 
-
 /datum/trait/negative/meltable
 	name = "Water Weakness"
 	desc = "Due to your biology, water is harmful to you."
@@ -90,3 +88,11 @@
 	custom_only = TRUE
 	var_changes = list("flags" = NO_SCAN, NO_DEFIB)
 	excludes = list(/datum/trait/negative/nodefib, /datum/trait/negative/noresleeve)
+
+/datum/trait/negative/lightweight_light
+	name = "Lesser Lightweight"
+	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping if you are unprepared)"
+	cost = -1
+	var_changes = list("lightweight_light" = 1)
+	excludes = list(/datum/trait/negative/lightweight)
+	custom_only = FALSE

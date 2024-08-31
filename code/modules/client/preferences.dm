@@ -32,7 +32,6 @@ var/list/preferences_datums = list()
 	var/obfuscate_key = FALSE
 	var/obfuscate_job = FALSE
 	var/chat_timestamp = FALSE
-	var/throwmode_loud = FALSE
 
 	//character preferences
 	var/real_name						//our character's name
@@ -290,7 +289,7 @@ var/list/preferences_datums = list()
 	popup.open(FALSE) // Skip registring onclose on the browser pane
 	onclose(user, "preferences_window", src) // We want to register on the window itself
 
-/*datum/preferences/proc/update_character_previews(mutable_appearance/MA) //CHOMPEdit _ch override.
+/datum/preferences/proc/update_character_previews(var/mob/living/carbon/human/mannequin)
 	if(!client)
 		return
 
@@ -319,9 +318,12 @@ var/list/preferences_datums = list()
 			O.pref = src
 			LAZYSET(char_render_holders, "[D]", O)
 			client.screen |= O
+		mannequin.set_dir(D)
+		mannequin.update_tail_showing()
+		mannequin.ImmediateOverlayUpdate()
+		var/mutable_appearance/MA = new(mannequin)
 		O.appearance = MA
-		O.dir = D
-		O.screen_loc = preview_screen_locs["[D]"]*/
+		O.screen_loc = preview_screen_locs["[D]"]
 
 /datum/preferences/proc/show_character_previews()
 	if(!client || !char_render_holders)
@@ -492,6 +494,10 @@ var/list/preferences_datums = list()
 		error("Player picked [choice] slot to copy to, but that wasn't one we sent.")
 		return
 
-	overwrite_character(slotnum)
-	sanitize_preferences()
-	ShowChoices(user)
+	if(tgui_alert(user, "Are you sure you want to override slot [slotnum], [name][nickname ? " ([nickname])" : ""]'s savedata?", "Confirm Override", list("No", "Yes")) == "Yes")
+		overwrite_character(slotnum)
+		sanitize_preferences()
+		save_preferences()
+		save_character()
+		attempt_vr(user.client?.prefs_vr,"load_vore","")
+		ShowChoices(user)
