@@ -233,7 +233,7 @@
 /area/shuttle/metawhiteship/engi)
 "jW" = (
 /obj/machinery/embedded_controller/radio/docking_port_multi{
-	child_names_txt = "Port Airlock Control;Starboard Airlock Control";
+	child_names_txt = "Port Airlock Control;Starboard Airlock Control;Aft Airlock Control";
 	child_tags_txt = "whiteship_docking_port;whiteship_docking_star";
 	dir = 8;
 	id_tag = "metawhiteship_docker";
@@ -759,6 +759,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/engi)
+"xP" = (
+/turf/template_noop,
+/area/template_noop)
 "yd" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
@@ -918,10 +921,6 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/metawhiteship/food)
 "EC" = (
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	pixel_y = -26;
-	id_tag = "metawhiteshipaft"
-	},
 /obj/machinery/airlock_sensor{
 	pixel_y = 24
 	},
@@ -930,6 +929,13 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+	dir = 1;
+	id_tag = "whiteship_docking_aft";
+	name = "Aft Airlock Control";
+	frequency = 1380;
+	pixel_y = -23
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/metawhiteship/engi)
 "ED" = (
@@ -1624,70 +1630,70 @@
 /area/shuttle/metawhiteship/food)
 
 (1,1,1) = {"
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
 "}
 (2,1,1) = {"
-kG
-kG
+xP
+xP
 HE
 Pp
 Pp
 HE
-kG
-kG
-kG
-kG
-kG
-kG
-kG
+xP
+xP
+xP
+xP
+xP
+xP
+xP
 HE
 Pp
 Pp
 HE
-kG
-kG
+xP
+xP
 "}
 (3,1,1) = {"
-kG
+xP
 HE
 HE
 Sa
 Sa
 HE
 HE
-kG
-kG
-kG
-kG
-kG
+xP
+xP
+xP
+xP
+xP
 HE
 HE
 Sa
 Sa
 HE
 HE
-kG
+xP
 "}
 (4,1,1) = {"
-kG
+xP
 HE
 yT
 Iu
@@ -1698,17 +1704,17 @@ OH
 HE
 qz
 HE
-kG
+xP
 HE
 qX
 Da
 Gd
 fr
 HE
-kG
+xP
 "}
 (5,1,1) = {"
-kG
+xP
 GN
 CD
 ED
@@ -1726,10 +1732,10 @@ HM
 HM
 jQ
 HE
-kG
+xP
 "}
 (6,1,1) = {"
-kG
+xP
 HE
 HE
 PE
@@ -1747,11 +1753,11 @@ HM
 MD
 HE
 HE
-kG
+xP
 "}
 (7,1,1) = {"
-kG
-kG
+xP
+xP
 HE
 dF
 lW
@@ -1767,12 +1773,12 @@ fy
 rH
 oQ
 GN
-kG
-kG
+xP
+xP
 "}
 (8,1,1) = {"
-kG
-kG
+xP
+xP
 HE
 HE
 jI
@@ -1788,11 +1794,11 @@ HE
 jI
 HE
 HE
-kG
-kG
+xP
+xP
 "}
 (9,1,1) = {"
-kG
+xP
 Tt
 Tt
 iu
@@ -1810,10 +1816,10 @@ xk
 PJ
 Tt
 Tt
-kG
+xP
 "}
 (10,1,1) = {"
-kG
+xP
 sG
 iS
 ZP
@@ -1831,10 +1837,10 @@ SB
 nd
 qN
 cQ
-kG
+xP
 "}
 (11,1,1) = {"
-kG
+xP
 sG
 WB
 WB
@@ -1852,10 +1858,10 @@ QF
 WB
 WB
 cQ
-kG
+xP
 "}
 (12,1,1) = {"
-kG
+xP
 sG
 ws
 WB
@@ -1873,10 +1879,10 @@ io
 WB
 WB
 cQ
-kG
+xP
 "}
 (13,1,1) = {"
-kG
+xP
 sG
 ws
 WB
@@ -1894,10 +1900,10 @@ QF
 WB
 kH
 cQ
-kG
+xP
 "}
 (14,1,1) = {"
-kG
+xP
 sG
 zJ
 Jj
@@ -1915,10 +1921,10 @@ QF
 lg
 Jj
 cQ
-kG
+xP
 "}
 (15,1,1) = {"
-kG
+xP
 Tt
 Tt
 Tf
@@ -1936,10 +1942,10 @@ QF
 mi
 Tt
 Tt
-kG
+xP
 "}
 (16,1,1) = {"
-kG
+xP
 kG
 Yv
 Yv
@@ -1956,11 +1962,11 @@ Yv
 NF
 Yv
 Yv
-kG
-kG
+xP
+xP
 "}
 (17,1,1) = {"
-kG
+xP
 kG
 oA
 vZ
@@ -1977,11 +1983,11 @@ ql
 Dn
 vZ
 oA
-kG
-kG
+xP
+xP
 "}
 (18,1,1) = {"
-kG
+xP
 Yv
 Yv
 Yv
@@ -1999,10 +2005,10 @@ EN
 Yv
 Yv
 Yv
-kG
+xP
 "}
 (19,1,1) = {"
-kG
+xP
 qH
 UX
 MR
@@ -2020,10 +2026,10 @@ vo
 ID
 Hf
 aS
-kG
+xP
 "}
 (20,1,1) = {"
-kG
+xP
 Lz
 Lz
 Lz
@@ -2041,10 +2047,10 @@ nG
 Yv
 Yv
 Yv
-kG
+xP
 "}
 (21,1,1) = {"
-kG
+xP
 Lz
 BD
 Lz
@@ -2062,10 +2068,10 @@ WH
 fJ
 LQ
 Yv
-kG
+xP
 "}
 (22,1,1) = {"
-kG
+xP
 HS
 Fa
 Ek
@@ -2083,10 +2089,10 @@ Wb
 Sr
 UL
 oA
-kG
+xP
 "}
 (23,1,1) = {"
-kG
+xP
 Lz
 Lz
 Lz
@@ -2104,10 +2110,10 @@ ZV
 YL
 Yv
 Yv
-kG
+xP
 "}
 (24,1,1) = {"
-kG
+xP
 HS
 uX
 Ek
@@ -2125,10 +2131,10 @@ VM
 SI
 wG
 oA
-kG
+xP
 "}
 (25,1,1) = {"
-kG
+xP
 Lz
 BD
 Lz
@@ -2146,68 +2152,68 @@ Mw
 jn
 Qn
 Yv
-kG
+xP
 "}
 (26,1,1) = {"
-kG
+xP
 Lz
 Lz
 Lz
 nh
 Lz
 Lz
-kG
-kG
-kG
-kG
-kG
+xP
+xP
+xP
+xP
+xP
 Yv
 Yv
 DM
 DM
 Yv
 Yv
-kG
+xP
 "}
 (27,1,1) = {"
-kG
-kG
+xP
+xP
 Lz
 Lz
 Lz
 Lz
-kG
-kG
-kG
-kG
-kG
-kG
-kG
+xP
+xP
+xP
+xP
+xP
+xP
+xP
 Yv
 Yv
 Yv
 Yv
-kG
-kG
+xP
+xP
 "}
 (28,1,1) = {"
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
-kG
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
+xP
 "}
