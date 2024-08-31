@@ -1491,7 +1491,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		vore_tail_image.layer = BODY_LAYER+VORE_TAIL_LAYER
 		overlays_standing[VORE_TAIL_LAYER] = vore_tail_image
 		vore_tail_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
-		vore_belly_image.appearance_flags = appearance_flags
+		vore_tail_image.appearance_flags = appearance_flags
 
 	apply_layer(VORE_TAIL_LAYER)
 
