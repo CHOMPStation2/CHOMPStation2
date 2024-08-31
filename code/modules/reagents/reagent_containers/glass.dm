@@ -50,7 +50,8 @@
 		/obj/machinery/radiocarbon_spectrometer,
 		/obj/machinery/portable_atmospherics/powered/reagent_distillery,
 		/obj/machinery/feeder,
-		/obj/machinery/chemical_synthesizer //CHOMPedit,
+		/obj/machinery/chemical_synthesizer, //CHOMPedit,
+		/obj/machinery/food_replicator // CHOMPAdd
 		)
 //CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 

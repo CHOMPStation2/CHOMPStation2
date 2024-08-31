@@ -22,18 +22,18 @@
 /obj/item/weapon/circuitboard/food_replicator
 	name = T_BOARD("food replicator")
 	build_path = /obj/machinery/food_replicator
+	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_ENGINEERING = 2, TECH_BIO = 2)
 	req_components = list(
-		/obj/item/weapon/stock_parts/matter_bin = 1,
-		/obj/item/weapon/stock_parts/manipulator = 2,
-		/obj/item/weapon/stock_parts/console_screen = 1,
-		/obj/item/weapon/reagent_containers/glass/beaker = 1
+		/obj/item/weapon/stock_parts/capacitor = 3,
+		/obj/item/weapon/stock_parts/matter_bin = 2,
+		/obj/item/weapon/stock_parts/manipulator = 1,
+		/obj/item/weapon/stock_parts/motor = 1,
+		/obj/item/stack/cable_coil = 5,
 	)
 
 /obj/machinery/food_replicator/Initialize()
 	. = ..()
-
-	container = new /obj/item/weapon/reagent_containers/glass/beaker(src)
 
 	default_apply_parts()
 	RefreshParts()
@@ -44,6 +44,7 @@
 		if(container)
 			container.forceMove(T)
 			container = null
+	QDEL_NULL_LIST(products)
 	return ..()
 
 /obj/machinery/food_replicator/attack_hand(mob/user as mob)
@@ -62,33 +63,39 @@
 
 /obj/machinery/food_replicator/interact(mob/user)
 	if(!isemptylist(products))
-		var/choice = tgui_input_list(user, "What would you like to print?", "Pring a dish", products)
+		var/choice = tgui_input_list(user, "What would you like to print?", "Print a dish", products)
 
 		if(!choice || printing || (stat & (BROKEN|NOPOWER)))
 			return
 
-		if(container.reagents.has_reagent("nutriment", (print_cost*efficiency)))
-			playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
-			to_chat(user, SPAN_WARNING("Not enough nutriment available!"))
-			return
+		if(container && container.reagents)
+			if(!container.reagents.has_reagent("nutriment", (print_cost*efficiency)))
+				playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
+				to_chat(user, SPAN_WARNING("Not enough nutriment available!"))
+				return
 
-		container.reagents.remove_reagent("nutriment")
-		update_use_power(USE_POWER_ACTIVE)
-		printing = TRUE
-		update_icon()
+			container.reagents.remove_reagent("nutriment", (print_cost*efficiency))
 
-		visible_message(SPAN_NOTICE("\The [src] begins to shape a nutriment slurry."))
+			var/product_path = products[choice]
 
-		sleep(print_delay / speed)
+			update_use_power(USE_POWER_ACTIVE)
+			printing = TRUE
+			update_icon()
 
-		update_use_power(USE_POWER_IDLE)
-		printing = FALSE
-		update_icon()
+			visible_message(SPAN_NOTICE("\The [src] begins to shape a nutriment slurry."))
 
-		if(!src || (stat & (BROKEN|NOPOWER)))
-			return
+			sleep(print_delay/speed)
 
-		new choice(get_turf(src))
+			ping()
+			update_use_power(USE_POWER_IDLE)
+			printing = FALSE
+			update_icon()
+
+			if(!src || (stat & (BROKEN|NOPOWER)))
+				return
+
+			if(product_path)
+				new product_path(get_turf(src))
 
 	else
 		to_chat(user, SPAN_WARNING("There is no food to replicate!"))
@@ -99,10 +106,25 @@
 		return
 	if(default_deconstruction_crowbar(user, O))
 		return
+	if(default_unfasten_wrench(user, O))
+		return
 	if(default_part_replacement(user, O))
 		return
 	if(istype(O, /obj/item/weapon/reagent_containers/food))
+		balloon_alert(user, "Scanning...")
+		if(!do_after(user, 10))
+			return
 		foodcheck(O)
+		return
+	if(istype(O, /obj/item/weapon/reagent_containers/glass))
+		if(!isnull(container))
+			to_chat(user, SPAN_WARNING("There is already a reagent container inserted!"))
+			return
+
+		user.drop_item()
+		O.loc = src
+		container = O
+		balloon_alert(user, "Placed \the [O] in \the [src]")
 		return
 
 	return ..()
@@ -112,13 +134,17 @@
 	if(mob)
 		playsound(src, "sound/machines/buzz-two.ogg", 25, 0)
 		return
-	else if(products.Find(food))
-		playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
-		return
-	else
+
+	var/food_name = food.name
+	var/path = food.type
+
+	if(!products[food_name])
+		products[food_name] = path
 		playsound(src, "sound/machines/ping.ogg", 25, 0)
-		products.Add(food)
-		return
+	else
+		playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
+
+	return
 
 /obj/machinery/food_replicator/update_icon()
 	cut_overlays()
@@ -143,16 +169,19 @@
 		use_power = USE_POWER_IDLE
 
 /obj/machinery/food_replicator/RefreshParts()
-	var/mm_rating = 0
-	var/sc_rating = 0
+	var/cap_rating = 0
+	var/man_rating = 0
 
+	for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)
+		cap_rating += C.rating
 	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
-		mm_rating += M.rating
-	for(var/obj/item/weapon/stock_parts/scanning_module/SC in component_parts)
-		sc_rating += SC.rating
+		man_rating += M.rating
 
-	efficiency = 6 / mm_rating
-	speed = sc_rating / 2
+	if(man_rating > 0)
+		efficiency = 6 / man_rating
+	else
+		efficiency = 3
+	speed = cap_rating / 2
 
 /obj/machinery/food_replicator/verb/eject_beaker()
 	set name = "Eject Beaker"
