@@ -3151,7 +3151,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						host.vore_selected.set_messages(new_message,"atrnspp", limit = MAX_MESSAGE_LEN / 4)
 
 				if("atrnspo")
-					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey is automatically transferred into your primary destination. Write them in 2nd person ('X slid into your Y'). Use %dest to refer to the target location in this type."+help,"Primary Auto-Transfer Message (to you)",host.vore_selected.get_messages("atrnspo"), MAX_MESSAGE_LEN * 1.5, TRUE prevent_enter = TRUE),MAX_MESSAGE_LEN * 1.5,0,0,0)
+					var/new_message = sanitize(tgui_input_text(user,"These are sent to you when prey is automatically transferred into your primary destination. Write them in 2nd person ('X slid into your Y'). Use %dest to refer to the target location in this type."+help,"Primary Auto-Transfer Message (to you)",host.vore_selected.get_messages("atrnspo"), MAX_MESSAGE_LEN * 1.5, TRUE, prevent_enter = TRUE),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_message)
 						host.vore_selected.set_messages(new_message,"atrnspo", limit = MAX_MESSAGE_LEN / 4)
 
