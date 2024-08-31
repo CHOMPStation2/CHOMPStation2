@@ -835,7 +835,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(islist(belly_data["absorbed_struggle_messages_inside"]))
 					var/new_absorbed_struggle_messages_inside = sanitize(jointext(belly_data["absorbed_struggle_messages_inside"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_absorbed_struggle_messages_inside)
-						new_belly.set_messages(new_absorbed_struggle_messages_inside,"asmi", MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_absorbed_struggle_messages_inside,"asmi", limit = MAX_MESSAGE_LEN / 4)
 
 				if(islist(belly_data["escape_attempt_messages_prey"]))
 					var/new_escape_attempt_messages_prey = sanitize(jointext(belly_data["escape_attempt_messages_prey"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
