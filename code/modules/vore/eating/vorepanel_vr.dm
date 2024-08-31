@@ -875,7 +875,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(islist(belly_data["escape_item_messages_outside"]))
 					var/new_escape_item_messages_outside = sanitize(jointext(belly_data["escape_item_messages_outside"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_escape_item_messages_outside)
-						new_belly.set_messages(new_escape_item_messages_outside,"esciout", MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_escape_item_messages_outside,"esciout", limit = MAX_MESSAGE_LEN / 4)
 
 				if(islist(belly_data["escape_fail_messages_prey"]))
 					var/new_escape_fail_messages_prey = sanitize(jointext(belly_data["escape_fail_messages_prey"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
@@ -885,7 +885,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(islist(belly_data["escape_fail_messages_owner"]))
 					var/new_escape_fail_messages_owner = sanitize(jointext(belly_data["escape_fail_messages_owner"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_escape_fail_messages_owner)
-						new_belly.set_messages(new_escape_fail_messages_owner,"escfo", limiz = MAX_MESSAGE_LEN / 4)
+						new_belly.set_messages(new_escape_fail_messages_owner,"escfo", limit = MAX_MESSAGE_LEN / 4)
 
 				if(islist(belly_data["escape_attempt_absorbed_messages_prey"]))
 					var/new_escape_attempt_absorbed_messages_prey = sanitize(jointext(belly_data["escape_attempt_absorbed_messages_prey"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
