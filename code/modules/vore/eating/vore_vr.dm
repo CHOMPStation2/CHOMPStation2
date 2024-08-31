@@ -335,8 +335,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		allow_mind_transfer = FALSE
 
 	//CHOMP stuff Start
-	if(isnull(allow_mind_transfer))
-		allow_mind_transfer = FALSE
 	if(isnull(phase_vore))
 		phase_vore = TRUE
 	if(isnull(latejoin_vore))

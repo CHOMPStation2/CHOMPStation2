@@ -18,7 +18,6 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/jelly
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
 
 	min_oxy = 0
 	max_oxy = 0

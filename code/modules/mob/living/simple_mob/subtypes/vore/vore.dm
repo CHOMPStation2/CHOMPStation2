@@ -54,7 +54,6 @@
 	allow_mind_transfer = client.prefs_vr.allow_mind_transfer
 
 	//CHOMP Stuff Start
-	allow_mind_transfer = client.prefs_vr.allow_mind_transfer
 	phase_vore = client.prefs_vr.phase_vore
 	latejoin_vore = client.prefs_vr.latejoin_vore
 	latejoin_prey = client.prefs_vr.latejoin_prey
