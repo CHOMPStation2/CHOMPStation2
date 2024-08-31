@@ -291,9 +291,10 @@
 /mob/living/simple_mob/vore/zorgoia/update_icon()
 	..()
 	if(stat == DEAD)
-		icon_state = "zorgoia-death"
 		plane = MOB_LAYER
 		return
+	else
+		plane = ABOVE_MOB_PLANE
 	cut_overlays()
 	icon = 'modular_chomp/icons/mob/zorgoia64x32.dmi'
 	vore_capacity = 3
