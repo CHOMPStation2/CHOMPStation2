@@ -95,9 +95,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["hair_red"]			>> pref.r_hair
 	S["hair_green"]			>> pref.g_hair
 	S["hair_blue"]			>> pref.b_hair
+<<<<<<< HEAD
 	S["grad_red"]			>> pref.r_grad
 	S["grad_green"]			>> pref.g_grad
 	S["grad_blue"]			>> pref.b_grad
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	S["facial_red"]			>> pref.r_facial
 	S["grad_red"]			>> pref.r_grad
 	S["grad_green"]			>> pref.g_grad
@@ -109,7 +112,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["skin_green"]			>> pref.g_skin
 	S["skin_blue"]			>> pref.b_skin
 	S["hair_style_name"]	>> pref.h_style
+<<<<<<< HEAD
 	S["grad_style_name"]	>> pref.grad_style
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	S["facial_style_name"]	>> pref.f_style
 	S["grad_style_name"]	>> pref.grad_style
 	S["eyes_red"]			>> pref.r_eyes
@@ -127,11 +133,14 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		>> pref.synth_markings
 	S["bgstate"]			>> pref.bgstate
 	S["body_descriptors"]	>> pref.body_descriptors
+<<<<<<< HEAD
 	S["Wingdings"]			>> pref.wingdings //YWadd start
 	S["colorblind_mono"]	>> pref.colorblind_mono
 	S["colorblind_vulp"]	>> pref.colorblind_vulp
 	S["colorblind_taj"] 	>> pref.colorblind_taj
 	S["haemophilia"]        >> pref.haemophilia //YWadd end
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	S["ear_style"]		>> pref.ear_style
 	S["r_ears"]			>> pref.r_ears
 	S["g_ears"]			>> pref.g_ears
@@ -180,7 +189,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["skin_green"]			<< pref.g_skin
 	S["skin_blue"]			<< pref.b_skin
 	S["hair_style_name"]	<< pref.h_style
+<<<<<<< HEAD
 	S["grad_style_name"]	<< pref.grad_style
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	S["facial_style_name"]	<< pref.f_style
 	S["grad_style_name"]	<< pref.grad_style
 	S["eyes_red"]			<< pref.r_eyes
@@ -198,11 +210,14 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		<< pref.synth_markings
 	S["bgstate"]			<< pref.bgstate
 	S["body_descriptors"]	<< pref.body_descriptors
+<<<<<<< HEAD
 	S["Wingdings"]          << pref.wingdings //YWadd start
 	S["colorblind_mono"]	<< pref.colorblind_mono
 	S["colorblind_vulp"]	<< pref.colorblind_vulp
 	S["colorblind_taj"] 	<< pref.colorblind_taj
 	S["haemophilia"]        << pref.haemophilia //YWadd end
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	S["ear_style"]		<< pref.ear_style
 	S["r_ears"]			<< pref.r_ears
 	S["g_ears"]			<< pref.g_ears

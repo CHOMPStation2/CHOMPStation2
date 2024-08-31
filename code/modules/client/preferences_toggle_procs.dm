@@ -1,7 +1,11 @@
 //Toggles for preferences, normal clients
 /client/verb/toggle_ghost_ears()
 	set name = "Toggle Ghost Ears"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles between seeing all mob speech and only nearby mob speech as an observer."
 
 	var/pref_path = /datum/client_preference/ghost_ears
@@ -16,7 +20,11 @@
 
 /client/verb/toggle_ghost_vision()
 	set name = "Toggle Ghost Sight"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles between seeing all mob emotes and only nearby mob emotes as an observer."
 
 	var/pref_path = /datum/client_preference/ghost_sight
@@ -31,7 +39,11 @@
 
 /client/verb/toggle_ghost_radio()
 	set name = "Toggle Ghost Radio"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles between seeing all radio chat and only nearby radio chatter as an observer."
 
 	var/pref_path = /datum/client_preference/ghost_radio
@@ -46,7 +58,11 @@
 
 /client/verb/toggle_deadchat()
 	set name = "Toggle Deadchat"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles visibility of dead chat."
 
 	var/pref_path = /datum/client_preference/show_dsay
@@ -61,7 +77,11 @@
 
 /client/verb/toggle_ooc()
 	set name = "Toggle OOC"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles visibility of global out of character chat."
 
 	var/pref_path = /datum/client_preference/show_ooc
@@ -76,7 +96,11 @@
 
 /client/verb/toggle_looc()
 	set name = "Toggle LOOC"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles visibility of local out of character chat."
 
 	var/pref_path = /datum/client_preference/show_looc
@@ -91,7 +115,11 @@
 
 /client/verb/toggle_precision_placement()
 	set name = "Toggle Precision Placement"
+<<<<<<< HEAD
 	set category = "Preferences.Game" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles whether objects placed on table will be on cursor position or centered."
 
 	var/pref_path = /datum/client_preference/precision_placement
@@ -106,7 +134,11 @@
 
 /client/verb/toggle_typing()
 	set name = "Toggle Typing Indicator"
+<<<<<<< HEAD
 	set category = "Preferences.Game" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles you having the speech bubble typing indicator."
 
 	var/pref_path = /datum/client_preference/show_typing_indicator
@@ -121,7 +153,11 @@
 
 /client/verb/toggle_ahelp_sound()
 	set name = "Toggle Admin Help Sound"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear a noise broadcasted when you get an admin message."
 
 	var/pref_path = /datum/client_preference/holder/play_adminhelp_ping
@@ -136,7 +172,11 @@
 
 /client/verb/toggle_lobby_music()
 	set name = "Toggle Lobby Music"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear the music in the lobby."
 
 	var/pref_path = /datum/client_preference/play_lobby_music
@@ -151,7 +191,11 @@
 
 /client/verb/toggle_admin_midis()
 	set name = "Toggle Admin Music"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear music played by admins."
 
 	var/pref_path = /datum/client_preference/play_admin_midis
@@ -166,7 +210,11 @@
 
 /client/verb/toggle_ambience()
 	set name = "Toggle Ambience"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear local ambience."
 
 	var/pref_path = /datum/client_preference/play_ambiance
@@ -181,7 +229,11 @@
 
 /client/verb/toggle_weather_sounds()
 	set name = "Toggle Weather Sounds"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear weather sounds while on a planet."
 
 	var/pref_path = /datum/client_preference/weather_sounds
@@ -196,7 +248,11 @@
 
 /client/verb/toggle_supermatter_hum()
 	set name = "Toggle SM Hum" // Avoiding using the full 'Supermatter' name to not conflict with the Setup-Supermatter adminverb.
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear supermatter hums."
 
 	var/pref_path = /datum/client_preference/supermatter_hum
@@ -211,7 +267,11 @@
 
 /client/verb/toggle_jukebox()
 	set name = "Toggle Jukebox"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear jukebox music."
 
 	var/pref_path = /datum/client_preference/play_jukebox
@@ -241,7 +301,11 @@
 
 /client/verb/toggle_air_pump_hum()
 	set name = "Toggle Air Vent Noise"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear air vent humming."
 
 	var/pref_path = /datum/client_preference/air_pump_noise
@@ -255,8 +319,13 @@
 	feedback_add_details("admin_verb","TAirPumpNoise")
 
 /client/verb/toggle_old_door_sounds()
+<<<<<<< HEAD
 	set name = "Toggle Door: Old Sounds"
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set name = "Toggle Old Door Sounds"
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles door sounds between old and new."
 
 	var/pref_path = /datum/client_preference/old_door_sounds
@@ -270,8 +339,13 @@
 	feedback_add_details("admin_verb","TOldDoorSounds")
 
 /client/verb/toggle_department_door_sounds()
+<<<<<<< HEAD
 	set name = "Toggle Door: Department Sounds"
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set name = "Toggle Department Door Sounds"
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles hearing of department-specific door sounds."
 
 	var/pref_path = /datum/client_preference/department_door_sounds
@@ -285,8 +359,13 @@
 	feedback_add_details("admin_verb","TDepartmentDoorSounds")
 
 /client/verb/toggle_pickup_sounds()
+<<<<<<< HEAD
 	set name = "Toggle Item: Picked up Sounds"
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set name = "Toggle Picked Up Item Sounds"
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear sounds when items are picked up."
 
 	var/pref_path = /datum/client_preference/pickup_sounds
@@ -300,8 +379,13 @@
 	feedback_add_details("admin_verb", "TPickupSounds")
 
 /client/verb/toggle_drop_sounds()
+<<<<<<< HEAD
 	set name = "Toggle Item: Dropped Sounds"
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set name = "Toggle Dropped Item Sounds"
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear sounds when items are dropped or thrown."
 
 	var/pref_path = /datum/client_preference/drop_sounds
@@ -316,7 +400,11 @@
 
 /client/verb/toggle_safe_firing()
 	set name = "Toggle Gun Firing Intent Requirement"
+<<<<<<< HEAD
 	set category = "Preferences.Game" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles between safe and dangerous firing. Safe requires a non-help intent to fire, dangerous can be fired on help intent."
 
 	var/pref_path = /datum/client_preference/safefiring
@@ -329,7 +417,11 @@
 
 /client/verb/toggle_mob_tooltips()
 	set name = "Toggle Mob Tooltips"
+<<<<<<< HEAD
 	set category = "Preferences.Game" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles displaying name/species over mobs when they are moused over."
 
 	var/pref_path = /datum/client_preference/mob_tooltips
@@ -342,7 +434,11 @@
 
 /client/verb/toggle_inv_tooltips()
 	set name = "Toggle Item Tooltips"
+<<<<<<< HEAD
 	set category = "Preferences.Game" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles displaying name/desc over items when they are moused over (only applies in inventory)."
 
 	var/pref_path = /datum/client_preference/inv_tooltips
@@ -355,7 +451,11 @@
 
 /client/verb/toggle_hear_instruments()
 	set name = "Toggle Hear/Ignore Instruments"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the ability to hear instruments playing."
 
 	var/pref_path = /datum/client_preference/instrument_toggle
@@ -368,7 +468,11 @@
 
 /client/verb/toggle_vchat()
 	set name = "Toggle TGChat"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles TGChat. Reloading TGChat and/or reconnecting required to affect changes."
 
 	var/pref_path = /datum/client_preference/vchat_enable
@@ -391,7 +495,11 @@
 
 /client/verb/toggle_status_indicators()
 	set name = "Toggle Status Indicators"
+<<<<<<< HEAD
 	set category = "Preferences.Game" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles seeing status indicators over peoples' heads."
 
 	var/pref_path = /datum/client_preference/status_indicators
@@ -405,7 +513,11 @@
 
 /client/verb/toggle_radio_sounds()
 	set name = "Toggle Radio Sounds"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggle hearing a sound when somebody speaks over your headset."
 
 	var/pref_path = /datum/client_preference/radio_sounds
@@ -417,9 +529,15 @@
 	feedback_add_details("admin_verb","TRadioSounds")
 
 /client/verb/toggle_say_sounds()
+<<<<<<< HEAD
 	set name = "Toggle Voice Sounds"	//CHOMPEdit - changed name to one that doesn't interfere with say autofill
 	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks or emotes."
+=======
+	set name = "Sound-Toggle-Say"
+	set category = "Preferences"
+	set desc = "Toggle hearing a sound when somebody speaks using say."
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 
 	var/pref_path = /datum/client_preference/say_sounds
 	toggle_preference(pref_path)
@@ -428,12 +546,19 @@
 	to_chat(src, "You will now [(is_preference_enabled(/datum/client_preference/say_sounds)) ? "hear" : "not hear"] say sounds.")
 
 	feedback_add_details("admin_verb","TSaySounds")
+<<<<<<< HEAD
 /*
 CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra length to babyproof prefs wasn't necessary and got in the way of quick whisper/say autofill.
 
 /client/verb/toggle_emote_sounds()
 	set name = "Sound-Toggle-Me"
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+
+/client/verb/toggle_emote_sounds()
+	set name = "Sound-Toggle-Me"
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggle hearing a sound when somebody speaks using me ."
 
 	var/pref_path = /datum/client_preference/emote_sounds
@@ -446,7 +571,11 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_whisper_sounds()
 	set name = "Sound-Toggle-Whisper"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggle hearing a sound when somebody speaks using whisper."
 
 	var/pref_path = /datum/client_preference/whisper_sounds
@@ -459,7 +588,11 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_subtle_sounds()
 	set name = "Sound-Toggle-Subtle"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggle hearing a sound when somebody uses subtle."
 
 	var/pref_path = /datum/client_preference/subtle_sounds
@@ -469,11 +602,18 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 	to_chat(src, "You will now [(is_preference_enabled(/datum/client_preference/subtle_sounds)) ? "hear" : "not hear"] subtle sounds.")
 
 	feedback_add_details("admin_verb","TSubtleSounds")
+<<<<<<< HEAD
 */
 
 /client/verb/toggle_vore_health_bars()
 	set name = "Toggle Vore Health Bars"
 	set category = "Preferences.Vore" //CHOMPEdit
+=======
+
+/client/verb/toggle_vore_health_bars()
+	set name = "Toggle Vore Health Bars"
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggle the display of vore related health bars"
 
 	var/pref_path = /datum/client_preference/vore_health_bars
@@ -525,7 +665,11 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/proc/toggle_debug_logs()
 	set name = "Toggle Debug Logs"
+<<<<<<< HEAD
 	set category = "Preferences.Admin" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles seeing debug logs."
 
 	var/pref_path = /datum/client_preference/debug/show_debug_logs
@@ -540,7 +684,11 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 //Mods
 /client/proc/toggle_attack_logs()
 	set name = "Toggle Attack Logs"
+<<<<<<< HEAD
 	set category = "Preferences.Admin" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles seeing attack logs."
 
 	var/pref_path = /datum/client_preference/mod/show_attack_logs
@@ -555,7 +703,11 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 //General
 /client/proc/toggle_admin_global_looc()
 	set name = "Toggle Admin Global LOOC Visibility"
+<<<<<<< HEAD
 	set category = "Preferences.Admin" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles seeing LOOC messages outside your actual LOOC range."
 
 	var/pref_path = /datum/client_preference/holder/show_rlooc
@@ -569,7 +721,11 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/proc/toggle_admin_deadchat()
 	set name = "Toggle Admin Living Deadchat"
+<<<<<<< HEAD
 	set category = "Preferences.Admin" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles seeing deadchat while not observing."
 
 	var/pref_path = /datum/client_preference/holder/show_staff_dsay

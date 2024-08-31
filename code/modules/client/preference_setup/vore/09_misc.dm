@@ -5,26 +5,40 @@
 /datum/category_item/player_setup_item/vore/misc/load_character(var/savefile/S)
 	S["show_in_directory"]		>> pref.show_in_directory
 	S["directory_tag"]			>> pref.directory_tag
+<<<<<<< HEAD
 	S["directory_gendertag"]	>> pref.directory_gendertag // CHOMPStation Edit: Character Directory Update
 	S["directory_sexualitytag"]	>> pref.directory_sexualitytag // CHOMPStation Edit: Character Directory Update
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	S["directory_erptag"]		>> pref.directory_erptag
 	S["directory_ad"]			>> pref.directory_ad
 	S["sensorpref"]				>> pref.sensorpref
 	S["capture_crystal"]		>> pref.capture_crystal
 	S["auto_backup_implant"]	>> pref.auto_backup_implant
 	S["borg_petting"]			>> pref.borg_petting
+<<<<<<< HEAD
+=======
+	S["stomach_vision"]			>> pref.stomach_vision
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 
 /datum/category_item/player_setup_item/vore/misc/save_character(var/savefile/S)
 	S["show_in_directory"]		<< pref.show_in_directory
 	S["directory_tag"]			<< pref.directory_tag
+<<<<<<< HEAD
 	S["directory_gendertag"]	<< pref.directory_gendertag // CHOMPStation Edit: Character Directory Update
 	S["directory_sexualitytag"]	<< pref.directory_sexualitytag // CHOMPStation Edit: Character Directory Update
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	S["directory_erptag"]		<< pref.directory_erptag
 	S["directory_ad"]			<< pref.directory_ad
 	S["sensorpref"]				<< pref.sensorpref
 	S["capture_crystal"]		<< pref.capture_crystal
 	S["auto_backup_implant"]	<< pref.auto_backup_implant
 	S["borg_petting"]			<< pref.borg_petting
+<<<<<<< HEAD
+=======
+	S["stomach_vision"]			<< pref.stomach_vision
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 
 /datum/category_item/player_setup_item/vore/misc/copy_to_mob(var/mob/living/carbon/human/character)
 	if(pref.sensorpref > 5 || pref.sensorpref < 1)

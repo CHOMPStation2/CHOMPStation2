@@ -12,8 +12,13 @@
 	S["backbag"]	>> pref.backbag
 	S["pdachoice"]	>> pref.pdachoice
 	S["communicator_visibility"]	>> pref.communicator_visibility
+<<<<<<< HEAD
 	S["ttone"]	>> pref.ringtone // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//S["shoe_hater"] >> pref.shoe_hater	//RS ADD //CHOMPRemove, remove RS No shoes
+=======
+	S["ringtone"]	>> pref.ringtone
+	S["shoe_hater"] >> pref.shoe_hater	//RS ADD
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 
 /datum/category_item/player_setup_item/general/equipment/save_character(var/savefile/S)
 	S["all_underwear"] << pref.all_underwear
@@ -21,8 +26,13 @@
 	S["backbag"]	<< pref.backbag
 	S["pdachoice"]	<< pref.pdachoice
 	S["communicator_visibility"]	<< pref.communicator_visibility
+<<<<<<< HEAD
 	S["ttone"]	<< pref.ringtone  // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//S["shoe_hater"] << pref.shoe_hater	//RS ADD //CHOMPRemove, remove RS No shoes
+=======
+	S["ringtone"]	<< pref.ringtone
+	S["shoe_hater"] << pref.shoe_hater	//RS ADD
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 
 var/global/list/valid_ringtones = list(
 		"beep",

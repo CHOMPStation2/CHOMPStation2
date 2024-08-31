@@ -1308,6 +1308,30 @@
 			if(tiredness >= 100)
 				Sleeping(5)
 
+<<<<<<< HEAD
+=======
+		if(fear)
+			fear = (fear - 1)
+			if(fear >= 80 && is_preference_enabled(/datum/client_preference/play_ambiance))
+				if(last_fear_sound + 51 SECONDS <= world.time)
+					src << sound('sound/effects/Heart Beat.ogg',0,0,0,25)
+					last_fear_sound = world.time
+			if(fear >= 80 && !isSynthetic())
+				if(prob(1) && get_active_hand())
+					var/stuff_to_drop = get_active_hand()
+					drop_item()
+					visible_message("<span class='notice'>\The [src] suddenly drops their [stuff_to_drop].</span>","<span class='warning'>You drop your [stuff_to_drop]!</span>")
+				if(prob(5))
+					var/fear_self = pick(fear_message_self)
+					var/fear_other = pick(fear_message_other)
+					visible_message("<span class='notice'>\The [src][fear_other]</span>","<span class='warning'>[fear_self]</span>")
+			else if(fear >= 30 && !isSynthetic())
+				if(prob(2))
+					var/fear_self = pick(fear_message_self)
+					var/fear_other = pick(fear_message_other)
+					visible_message("<span class='notice'>\The [src][fear_other]</span>","<span class='warning'>[fear_self]</span>")
+
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 		if(paralysis || sleeping)
 			blinded = 1
 			set_stat(UNCONSCIOUS)

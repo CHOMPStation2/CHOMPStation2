@@ -30,6 +30,7 @@
 			continue
 		//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
 
+<<<<<<< HEAD
 		//CHOMPEdit Begin
 
 		if(!T || T.z != turf_source.z) //^ +1
@@ -41,6 +42,8 @@
 
 		M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
 
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 /mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, channel = 0, pressure_affected = TRUE, sound/S, preference, volume_channel = null)
 	if(!client || ear_deaf > 0)
 		return

@@ -429,7 +429,11 @@ var/list/preferences_datums = list()
 	var/nickname //vorestation edit - This set appends nicknames to the save slot
 	var/list/charlist = list()
 	var/default //VOREStation edit
+<<<<<<< HEAD
 	for(var/i = 1, i <= CONFIG_GET(number/character_slots), i++) // CHOMPEdit
+=======
+	for(var/i=1, i<= config.character_slots, i++)
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 		S.cd = "/character[i]"
 		S["real_name"] >> name
 		S["nickname"] >> nickname //vorestation edit
@@ -471,7 +475,11 @@ var/list/preferences_datums = list()
 	var/name
 	var/nickname //vorestation edit - This set appends nicknames to the save slot
 	var/list/charlist = list()
+<<<<<<< HEAD
 	for(var/i = 1, i <= CONFIG_GET(number/character_slots), i++) // CHOMPEdit
+=======
+	for(var/i=1, i<= config.character_slots, i++)
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 		S.cd = "/character[i]"
 		S["real_name"] >> name
 		S["nickname"] >> nickname //vorestation edit

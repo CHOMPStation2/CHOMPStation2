@@ -101,7 +101,10 @@ var/list/_client_preferences_by_type
 	key = "BELCH_NOISES"
 	enabled_description = "Noisy"
 	disabled_description = "Silent"
+<<<<<<< HEAD
 	enabled_by_default = FALSE //CHOMPedit
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 
 /datum/client_preference/emote_noises
 	description = "Emote Noises" //MERP
@@ -164,6 +167,7 @@ var/list/_client_preferences_by_type
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 
+<<<<<<< HEAD
 /datum/client_preference/looping_alarms // CHOMPStation Add: Looping Alarms
 	description ="Looping Alarm Sounds"
 	key = "SOUND_ALARMLOOP"
@@ -176,12 +180,17 @@ var/list/_client_preferences_by_type
 	enabled_description = "Audible"
 	disabled_description = "Silent"
 
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 /datum/client_preference/old_door_sounds
 	description ="Old Door Sounds"
 	key = "SOUND_OLDDOORS"
 	enabled_description = "Old"
 	disabled_description = "New"
+<<<<<<< HEAD
 	enabled_by_default = FALSE
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 
 /datum/client_preference/department_door_sounds
 	description ="Department-Specific Door Sounds"
@@ -230,7 +239,11 @@ var/list/_client_preferences_by_type
 	key = "HUD_HOTKEYS"
 	enabled_description = "Enabled"
 	disabled_description = "Disabled"
+<<<<<<< HEAD
 	enabled_by_default = TRUE // Backwards compatibility //CHOMP Edit: It's 2020, use your WASD keys by default. Flipped to True.
+=======
+	enabled_by_default = FALSE // Backwards compatibility
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 
 /datum/client_preference/show_typing_indicator
 	description ="Typing indicator"
@@ -414,6 +427,7 @@ var/list/_client_preferences_by_type
 	enabled_description = "Extended"
 	disabled_description = "Default"
 
+<<<<<<< HEAD
 // CHOMPAdd
 /datum/client_preference/sleep_music
 	description = "Sleeping Music"
@@ -422,6 +436,8 @@ var/list/_client_preferences_by_type
 	disabled_description = "Silent"
 // CHOMPAdd End
 
+=======
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 /datum/client_preference/auto_afk
 	description = "Automatic AFK Status"
 	key = "AUTO_AFK"

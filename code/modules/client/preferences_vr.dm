@@ -19,7 +19,11 @@
 //Why weren't these in game toggles already?
 /client/verb/toggle_eating_noises()
 	set name = "Toggle Eating Noises"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles hearing Vore Eating noises."
 
 	var/pref_path = /datum/client_preference/eating_noises
@@ -35,7 +39,11 @@
 
 /client/verb/toggle_digestion_noises()
 	set name = "Toggle Digestion Noises"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles hearing Vore Digestion noises."
 
 	var/pref_path = /datum/client_preference/digestion_noises
@@ -50,7 +58,11 @@
 
 /client/verb/toggle_belch_noises()
 	set name = "Toggle Audible Belching"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles hearing audible belches."
 
 	var/pref_path = /datum/client_preference/belch_noises
@@ -65,7 +77,11 @@
 
 /client/verb/toggle_emote_noises()
 	set name = "Toggle Emote Noises"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles hearing emote noises."
 
 	var/pref_path = /datum/client_preference/emote_noises
@@ -80,7 +96,11 @@
 
 /client/verb/toggle_ghost_quiets()
 	set name = "Toggle Ghost Privacy"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles ghosts being able to see your subtles/whispers."
 
 	var/pref_path = /datum/client_preference/whisubtle_vis
@@ -95,7 +115,11 @@
 
 /client/verb/toggle_ghost_privacyvision()
 	set name = "Toggle Ghost Private Eyes/ears"
+<<<<<<< HEAD
 	set category = "Preferences.Admin" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles your ability to see subtles/whispers. Overrides admin status. Respects Ghost Privacy"
 
 	var/pref_path = /datum/client_preference/ghost_see_whisubtle
@@ -129,7 +153,11 @@
 
 /client/verb/toggle_mentorhelp_ping()
 	set name = "Toggle Mentorhelp Ping"
+<<<<<<< HEAD
 	set category = "Preferences.Admin" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "Toggles the mentorhelp ping"
 
 	var/pref_path = /datum/client_preference/play_mentorhelp_ping
@@ -144,7 +172,11 @@
 
 /client/verb/toggle_player_tips()
 	set name = "Toggle Receiving Player Tips"
+<<<<<<< HEAD
 	set category = "Preferences.Chat" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "When toggled on, you receive tips periodically on roleplay and gameplay."
 
 	var/pref_path = /datum/client_preference/player_tips
@@ -159,7 +191,11 @@
 
 /client/verb/toggle_pain_frequency()
 	set name = "Toggle Pain Frequency"
+<<<<<<< HEAD
 	set category = "Preferences.Game" //CHOMPEdit
+=======
+	set category = "Preferences"
+>>>>>>> 885171f985... Merge pull request #16240 from ShadowLarkens/revert
 	set desc = "When toggled on, increases the cooldown of pain messages sent to chat for minor injuries"
 
 	var/pref_path = /datum/client_preference/pain_frequency
