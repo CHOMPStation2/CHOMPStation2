@@ -788,12 +788,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						new_belly.release_verb = new_release_verb
 
 				if(islist(belly_data["digest_messages_prey"]))
-					var/new_digest_messages_prey = sanitize(jointext(belly_data["digest_messages_prey"],"\n\n"),MAX_MESSAGE_LE * 1.5,0,0,0)
+					var/new_digest_messages_prey = sanitize(jointext(belly_data["digest_messages_prey"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_digest_messages_prey)
 						new_belly.set_messages(new_digest_messages_prey,"dmp")
 
 				if(islist(belly_data["digest_messages_owner"]))
-					var/new_digest_messages_owner = sanitize(jointext(belly_data["digest_messages_owner"],"\n\n"),MAX_MESSAGE_LE * 1.5,0,0,0)
+					var/new_digest_messages_owner = sanitize(jointext(belly_data["digest_messages_owner"],"\n\n"),MAX_MESSAGE_LEN * 1.5,0,0,0)
 					if(new_digest_messages_owner)
 						new_belly.set_messages(new_digest_messages_owner,"dmo")
 
