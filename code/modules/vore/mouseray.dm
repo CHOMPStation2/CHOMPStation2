@@ -290,7 +290,6 @@
 	new_mob.allow_mind_transfer = allow_mind_transfer
 
 	//CHOMP stuff Start
-	new_mob.allow_mind_transfer = allow_mind_transfer
 	new_mob.phase_vore = phase_vore
 	new_mob.latejoin_vore = latejoin_vore
 	new_mob.latejoin_prey = latejoin_prey
