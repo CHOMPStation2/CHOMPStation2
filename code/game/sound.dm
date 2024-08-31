@@ -32,12 +32,20 @@
 
 		//CHOMPEdit Begin
 
+<<<<<<< HEAD
 		if(!T || T.z != turf_source.z) //^ +1
 			continue
 		if(get_dist(T, turf_source) > maxdistance)
 			continue
 		if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
 			continue
+=======
+	for(var/p in preference)
+		// Ignore nulls
+		if(p)
+			if(!read_preference(p))
+				return FALSE
+>>>>>>> 1601f3089f... Merge pull request #16236 from ShadowLarkens/fix_sound_pref
 
 		M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
 
