@@ -90,6 +90,9 @@
 /obj/structure/closet/crate/freezer/rations,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/cargo)
+"eS" = (
+/turf/template_noop,
+/area/template_noop)
 "fr" = (
 /obj/structure/cable/yellow,
 /turf/simulated/floor/plating,
@@ -327,7 +330,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
-/obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/shuttle/metawhiteship/engi)
 "lg" = (
@@ -759,9 +761,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/engi)
-"xP" = (
-/turf/template_noop,
-/area/template_noop)
 "yd" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
@@ -1060,6 +1059,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
+/obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/shuttle/metawhiteship/engi)
 "ID" = (
@@ -1630,70 +1630,70 @@
 /area/shuttle/metawhiteship/food)
 
 (1,1,1) = {"
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
 "}
 (2,1,1) = {"
-xP
-xP
+eS
+eS
 HE
 Pp
 Pp
 HE
-xP
-xP
-xP
-xP
-xP
-xP
-xP
+eS
+eS
+eS
+eS
+eS
+eS
+eS
 HE
 Pp
 Pp
 HE
-xP
-xP
+eS
+eS
 "}
 (3,1,1) = {"
-xP
+eS
 HE
 HE
 Sa
 Sa
 HE
 HE
-xP
-xP
-xP
-xP
-xP
+eS
+eS
+eS
+eS
+eS
 HE
 HE
 Sa
 Sa
 HE
 HE
-xP
+eS
 "}
 (4,1,1) = {"
-xP
+eS
 HE
 yT
 Iu
@@ -1704,17 +1704,17 @@ OH
 HE
 qz
 HE
-xP
+eS
 HE
 qX
 Da
 Gd
 fr
 HE
-xP
+eS
 "}
 (5,1,1) = {"
-xP
+eS
 GN
 CD
 ED
@@ -1732,10 +1732,10 @@ HM
 HM
 jQ
 HE
-xP
+eS
 "}
 (6,1,1) = {"
-xP
+eS
 HE
 HE
 PE
@@ -1753,11 +1753,11 @@ HM
 MD
 HE
 HE
-xP
+eS
 "}
 (7,1,1) = {"
-xP
-xP
+eS
+eS
 HE
 dF
 lW
@@ -1773,12 +1773,12 @@ fy
 rH
 oQ
 GN
-xP
-xP
+eS
+eS
 "}
 (8,1,1) = {"
-xP
-xP
+eS
+eS
 HE
 HE
 jI
@@ -1794,11 +1794,11 @@ HE
 jI
 HE
 HE
-xP
-xP
+eS
+eS
 "}
 (9,1,1) = {"
-xP
+eS
 Tt
 Tt
 iu
@@ -1816,10 +1816,10 @@ xk
 PJ
 Tt
 Tt
-xP
+eS
 "}
 (10,1,1) = {"
-xP
+eS
 sG
 iS
 ZP
@@ -1837,10 +1837,10 @@ SB
 nd
 qN
 cQ
-xP
+eS
 "}
 (11,1,1) = {"
-xP
+eS
 sG
 WB
 WB
@@ -1858,10 +1858,10 @@ QF
 WB
 WB
 cQ
-xP
+eS
 "}
 (12,1,1) = {"
-xP
+eS
 sG
 ws
 WB
@@ -1879,10 +1879,10 @@ io
 WB
 WB
 cQ
-xP
+eS
 "}
 (13,1,1) = {"
-xP
+eS
 sG
 ws
 WB
@@ -1900,10 +1900,10 @@ QF
 WB
 kH
 cQ
-xP
+eS
 "}
 (14,1,1) = {"
-xP
+eS
 sG
 zJ
 Jj
@@ -1921,10 +1921,10 @@ QF
 lg
 Jj
 cQ
-xP
+eS
 "}
 (15,1,1) = {"
-xP
+eS
 Tt
 Tt
 Tf
@@ -1942,10 +1942,10 @@ QF
 mi
 Tt
 Tt
-xP
+eS
 "}
 (16,1,1) = {"
-xP
+eS
 kG
 Yv
 Yv
@@ -1962,11 +1962,11 @@ Yv
 NF
 Yv
 Yv
-xP
-xP
+eS
+eS
 "}
 (17,1,1) = {"
-xP
+eS
 kG
 oA
 vZ
@@ -1983,11 +1983,11 @@ ql
 Dn
 vZ
 oA
-xP
-xP
+eS
+eS
 "}
 (18,1,1) = {"
-xP
+eS
 Yv
 Yv
 Yv
@@ -2005,10 +2005,10 @@ EN
 Yv
 Yv
 Yv
-xP
+eS
 "}
 (19,1,1) = {"
-xP
+eS
 qH
 UX
 MR
@@ -2026,10 +2026,10 @@ vo
 ID
 Hf
 aS
-xP
+eS
 "}
 (20,1,1) = {"
-xP
+eS
 Lz
 Lz
 Lz
@@ -2047,10 +2047,10 @@ nG
 Yv
 Yv
 Yv
-xP
+eS
 "}
 (21,1,1) = {"
-xP
+eS
 Lz
 BD
 Lz
@@ -2068,10 +2068,10 @@ WH
 fJ
 LQ
 Yv
-xP
+eS
 "}
 (22,1,1) = {"
-xP
+eS
 HS
 Fa
 Ek
@@ -2089,10 +2089,10 @@ Wb
 Sr
 UL
 oA
-xP
+eS
 "}
 (23,1,1) = {"
-xP
+eS
 Lz
 Lz
 Lz
@@ -2110,10 +2110,10 @@ ZV
 YL
 Yv
 Yv
-xP
+eS
 "}
 (24,1,1) = {"
-xP
+eS
 HS
 uX
 Ek
@@ -2131,10 +2131,10 @@ VM
 SI
 wG
 oA
-xP
+eS
 "}
 (25,1,1) = {"
-xP
+eS
 Lz
 BD
 Lz
@@ -2152,68 +2152,68 @@ Mw
 jn
 Qn
 Yv
-xP
+eS
 "}
 (26,1,1) = {"
-xP
+eS
 Lz
 Lz
 Lz
 nh
 Lz
 Lz
-xP
-xP
-xP
-xP
-xP
+eS
+eS
+eS
+eS
+eS
 Yv
 Yv
 DM
 DM
 Yv
 Yv
-xP
+eS
 "}
 (27,1,1) = {"
-xP
-xP
+eS
+eS
 Lz
 Lz
 Lz
 Lz
-xP
-xP
-xP
-xP
-xP
-xP
-xP
+eS
+eS
+eS
+eS
+eS
+eS
+eS
 Yv
 Yv
 Yv
 Yv
-xP
-xP
+eS
+eS
 "}
 (28,1,1) = {"
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
-xP
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
 "}
