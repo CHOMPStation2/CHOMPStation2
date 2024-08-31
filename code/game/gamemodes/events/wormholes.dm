@@ -83,5 +83,6 @@
 	P.failchance = 0
 	P.icon_state = "bhole3" // CHOMPEdit - Better icon as well
 	P.name = "wormhole"
+	P.event = TRUE // CHOMPAdd
 	spawn(rand(min_duration,max_duration))
 		qdel(P)
