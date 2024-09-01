@@ -75,7 +75,7 @@
 
 	if(self_bind)
 		var/choice = tgui_alert(usr,"This will bind YOUR mind to the target! You may not be able to go back without help. Continue?","Confirmation",list("Continue","Cancel"))
-		if(choice == "Cancel") return
+		if(!choice || choice == "Cancel") return
 		choice = tgui_alert(usr,"No really. You cannot OOC Escape this. Are you sure?","Confirmation",list("Yes I'm sure","Cancel"))
 		if(choice == "Yes I'm sure" && usr.get_active_hand() == src && usr.Adjacent(target))
 			usr.visible_message("<span class='warning'>[usr] presses [src] against [target]. The device beginning to let out a series of beeps!</span>","<span class='notice'>You begin to bind yourself into [target]!</span>")
@@ -119,7 +119,7 @@
 
 	if(self_bind)
 		var/choice = tgui_alert(usr,"This will bind YOUR mind to the target! You will not be able to go back without help. Continue?","Confirmation",list("Continue","Cancel"))
-		if(choice == "Cancel") return
+		if(!choice || choice == "Cancel") return
 		choice = tgui_alert(usr,"No really. You cannot OOC Escape this. Are you sure?","Confirmation",list("Yes I'm sure","Cancel"))
 		if(choice == "Yes I'm sure" && usr.get_active_hand() == src && usr.Adjacent(item))
 			log_and_message_admins("attempted to bind themselves to \an [item] with a Mind Binder.")

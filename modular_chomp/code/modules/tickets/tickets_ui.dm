@@ -132,7 +132,10 @@
 
 			feedback_add_details("admin_verb","Admincreatedticket") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 			if(player.current_ticket)
-				if(tgui_alert(usr, "The player already has a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No")) != "No")
+				var/input = tgui_alert(usr, "The player already has a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No"))
+				if(!input)
+					return
+				if(input == "Yes")
 					if(player.current_ticket)
 						player.current_ticket.MessageNoRecipient(ticket_text)
 						to_chat(usr, "<span class='adminnotice'>PM to-<b>Admins</b>: [ticket_text]</span>")
