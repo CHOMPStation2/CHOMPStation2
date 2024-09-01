@@ -283,7 +283,7 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 	var/choice = tgui_alert(usr, "[question_text] improve response time from staff when sending to discord. \
 	Renaming it changes its preview in staff chat.", \
 	"Default name detected", list("Change Title","Continue", "Cancel"))
-	if(choice == "Cancel")
+	if(!choice || choice == "Cancel")
 		return TRUE
 	else if(choice == "Change Title")
 		var/new_name = tgui_input_text(usr, "Enter new fax title", "This will show up in the preview for staff chat on discord when sending \
@@ -514,4 +514,8 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 			query_string += "&color=[url_encode(font_colour)]"
 			query_string += "&reason=[url_encode(reason)]"
 			query_string += "&job=[url_encode(jobname)]"
+<<<<<<< HEAD
 			world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
+=======
+			world.Export("[config.chat_webhook_url]?[query_string]")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)

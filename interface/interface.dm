@@ -20,8 +20,13 @@
 	set name = "forum"
 	set desc = "Visit the forum."
 	set hidden = 1
+<<<<<<< HEAD
 	if(CONFIG_GET(string/forumurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the forum in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+=======
+	if( config.forumurl )
+		if(tgui_alert(usr, "This will open the forum in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 			return
 		src << link(CONFIG_GET(string/forumurl)) // CHOMPEdit
 	else
@@ -33,8 +38,13 @@
 	set desc = "Show Server Rules."
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/rulesurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the rules in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+=======
+	if(config.rulesurl)
+		if(tgui_alert(usr, "This will open the rules in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 			return
 		src << link(CONFIG_GET(string/rulesurl)) // CHOMPEdit
 	else
@@ -46,8 +56,13 @@
 	set desc = "See the map."
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/mapurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the map in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+=======
+	if(config.mapurl)
+		if(tgui_alert(usr, "This will open the map in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 			return
 		src << link(CONFIG_GET(string/mapurl)) // CHOMPEdit
 	else
@@ -59,8 +74,13 @@
 	set desc = "Visit the GitHub"
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/githuburl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the GitHub in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+=======
+	if(config.githuburl)
+		if(tgui_alert(usr, "This will open the GitHub in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 			return
 		src << link(CONFIG_GET(string/githuburl)) // CHOMPEdit
 	else
@@ -72,8 +92,13 @@
 	set desc = "Visit the discord"
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/discordurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the Discord in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+=======
+	if(config.discordurl)
+		if(tgui_alert(usr, "This will open the Discord in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 			return
 		src << link(CONFIG_GET(string/discordurl)) // CHOMPEdit
 	else
@@ -85,8 +110,13 @@
 	set desc = "Visit the patreon"
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/patreonurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the Patreon in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+=======
+	if(config.patreonurl)
+		if(tgui_alert(usr, "This will open the Patreon in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 			return
 		src << link(CONFIG_GET(string/patreonurl)) // CHOMPEdit
 	else

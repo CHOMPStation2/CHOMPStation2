@@ -3819,8 +3819,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
 			. = TRUE
 		if("b_del")
+<<<<<<< HEAD
 			var/alert = tgui_alert(user, "Are you sure you want to delete your [lowertext(host.vore_selected.name)]?","Confirmation",list("Cancel","Delete")) //ChompEDIT - user, not usr
 			if(!(alert == "Delete"))
+=======
+			var/alert = tgui_alert(usr, "Are you sure you want to delete your [lowertext(host.vore_selected.name)]?","Confirmation",list("Cancel","Delete"))
+			if(alert != "Delete")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 				return FALSE
 
 			var/failure_msg = ""

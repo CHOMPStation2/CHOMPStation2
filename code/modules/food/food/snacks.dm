@@ -346,9 +346,14 @@
 			if (W.w_class >= src.w_class || is_robot_module(W) || istype(W, /obj/item/weapon/holder))
 				return
 
+<<<<<<< HEAD
 			if(tgui_alert(user,"You can't slice \the [src] here. Would you like to hide \the [W] inside it instead?","No Cutting Surface!",list("Yes","No")) == "No")
 				to_chat(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.")
 				balloon_alert(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.") // CHOMPEdit
+=======
+			if(tgui_alert(user,"You can't slice \the [src] here. Would you like to hide \the [W] inside it instead?","No Cutting Surface!",list("Yes","No")) != "Yes")
+				to_chat(user, "<span class='warning'>You cannot slice \the [src] here! You need a table or at least a tray to do it.</span>")
+>>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 				return
 			else
 				to_chat(user, "Slipped \the [W] inside \the [src].")
