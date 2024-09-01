@@ -514,8 +514,4 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 			query_string += "&color=[url_encode(font_colour)]"
 			query_string += "&reason=[url_encode(reason)]"
 			query_string += "&job=[url_encode(jobname)]"
-<<<<<<< HEAD
 			world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
-=======
-			world.Export("[config.chat_webhook_url]?[query_string]")
->>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)

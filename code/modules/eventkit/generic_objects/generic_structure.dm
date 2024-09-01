@@ -335,8 +335,4 @@
 		result = matches[1]
 	else
 		result = tgui_input_list(usr, "Select an atom type", "Spawn Atom", matches, strict_modern = TRUE)
-<<<<<<< HEAD
 	return result
-=======
-	return result
->>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)

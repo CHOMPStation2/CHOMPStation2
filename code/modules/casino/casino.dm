@@ -612,19 +612,15 @@
 					to_chat(user, "<span class='warning'>The SPASM beeps in an upset manner, you already have a collar!</span>")
 					return
 				var/confirm = tgui_alert(usr, "Are you sure you want to become a sentient prize?", "Confirm Sentient Prize", list("Yes", "No"))
-<<<<<<< HEAD
 				if(confirm == "Yes")
 					to_chat(user, "<span class='warning'>You are now a prize!</span>")
 				//CHOMPAdd Start
+				if(!confirm)
+					return
 				if(confirm == "No")
 					to_chat(user, "<span class='warning'>The SPASM beeps in a sad manner at your impolite decline..</span>")
 					return
 				//CHOMPAdd End
-=======
-				if(confirm != "Yes")
-					return
-				to_chat(user, "<span class='warning'>You are now a prize!</span>")
->>>>>>> 2f19f66cc5... default tgui alert input handling (#16241)
 				if(safety_ckey in sentientprizes_ckeys_list)
 					to_chat(user, "<span class='warning'>The SPASM beeps in an upset manner, you already have a collar!</span>")
 					return
