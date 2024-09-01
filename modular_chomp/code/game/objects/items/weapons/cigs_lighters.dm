@@ -182,7 +182,7 @@
 		var/i = rand(1, 100)
 		switch(i)
 			if(1 to 22)
-				to_chat("<span class='rose'>[user] safely reveals the supermatter shard within the [src]!</span>")
+				to_chat(user, "<span class='rose'>[user] safely reveals the supermatter shard within the [src]!</span>")
 				user.visible_message("<span class='rose'>You safely revealed the supermatter shard within the [src]!</span>")
 				if (user.get_left_hand() == src)
 					user.apply_damage(1, IRRADIATE, "l_hand")

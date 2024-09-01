@@ -48,7 +48,7 @@
 		var/obj/item/weapon/weldingtool/WT = W.get_welder()
 
 		if(can_weld == FALSE)
-			to_chat("You can't reform these into their original components.")
+			to_chat(user, "You can't reform these into their original components.")
 			return
 
 		if(get_amount() < 4)
@@ -97,7 +97,7 @@
 	name = "sivian overgrowth tile"
 	singular_name = "sivian overgrowth floor tile"
 	desc = "A patch of dark overgrowth like those that decorate the plains of Sif."
-	
+
 /obj/item/stack/tile/grass/sif/forest
 	name = "sivian overgrowth tile"
 	singular_name = "sivian overgrowth floor tile"
