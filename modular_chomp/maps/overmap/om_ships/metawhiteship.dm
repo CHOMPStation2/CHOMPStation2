@@ -16,33 +16,28 @@
 	name = "\improper MetaMaterial Salvage Ship"
 	ambience = AMBIENCE_HANGAR
 	icon_state = "shuttle2"
-	requires_power = 1
+	requires_power = TRUE
+	has_gravity = TRUE
 
 /area/shuttle/metawhiteship/gen
 	name = "\improper MetaMaterial Salvage Ship - Living Quarters"
 	icon_state = "shuttle2"
-	requires_power = 1
-
 /area/shuttle/metawhiteship/eng
 	name = "\improper MetaMaterial Salvage Ship - Engineering"
 	icon_state = "shuttle2"
-	requires_power = 1
 
 /area/shuttle/metawhiteship/cargo
 	name = "\improper MetaMaterial Salvage Ship - Cargo Bay"
 	icon_state = "shuttle2"
-	requires_power = 1
 
 /area/shuttle/metawhiteship/food
 	name = "\improper MetaMaterial Salvage Ship - Recreational Lounge"
 	icon_state = "shuttle2"
-	requires_power = 1
 
 /area/shuttle/metawhiteship/bridge
 	name = "\improper MetaMaterial Salvage Ship - Bridge"
 	ambience = AMBIENCE_HIGHSEC
 	icon_state = "shuttle2"
-	requires_power = 1
 // The shuttle's 'shuttle' computer
 /obj/machinery/computer/shuttle_control/explore/metawhiteship
 	name = "short jump console"
