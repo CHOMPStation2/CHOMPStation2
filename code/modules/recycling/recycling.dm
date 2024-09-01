@@ -29,7 +29,7 @@
 		return
 
 	if(working)
-		to_chat("<span class='warning'>\The [src] is busy! Wait until it's idle.</span>")
+		to_chat(user, "<span class='warning'>\The [src] is busy! Wait until it's idle.</span>")
 		return
 
 	if(default_deconstruction_screwdriver(user, O))
@@ -38,8 +38,12 @@
 		return
 	if(default_part_replacement(user, O))
 		return
+<<<<<<< HEAD
 	if(!hand_fed) //CHOMPAdd
 		return
+=======
+
+>>>>>>> c1d8c225c0... Merge pull request #16246 from Kashargul/toChatFixes
 	var/mob/living/M = user
 	if(can_accept_item(O))
 		M.drop_from_inventory(O)
