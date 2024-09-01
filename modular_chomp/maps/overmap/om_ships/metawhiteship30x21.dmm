@@ -789,9 +789,8 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/food)
 "yT" = (
-/obj/machinery/atmospherics/pipe/tank/air/full{
-	start_pressure = 10000
-	},
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/plating,
 /area/shuttle/metawhiteship/eng)
 "zJ" = (
@@ -835,8 +834,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/gen)
 "CD" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/atmospherics/pipe/tank/air/full{
+	start_pressure = 10000
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/metawhiteship/eng)
 "Da" = (
@@ -1644,14 +1644,12 @@ eS
 eS
 eS
 eS
+eS
+eS
 "}
 (2,1,1) = {"
 eS
 eS
-HE
-Pp
-Pp
-HE
 eS
 eS
 eS
@@ -1659,38 +1657,70 @@ eS
 eS
 eS
 eS
-HE
-Pp
-Pp
-HE
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
 eS
 eS
 "}
 (3,1,1) = {"
 eS
+eS
+eS
 HE
-HE
-Sa
-Sa
-HE
+Pp
+Pp
 HE
 eS
 eS
 eS
 eS
 eS
+eS
+eS
 HE
+Pp
+Pp
 HE
-Sa
-Sa
-HE
-HE
+eS
+eS
 eS
 "}
 (4,1,1) = {"
 eS
+eS
 HE
-yT
+HE
+Sa
+Sa
+HE
+HE
+eS
+eS
+eS
+eS
+eS
+HE
+HE
+Sa
+Sa
+HE
+HE
+eS
+eS
+"}
+(5,1,1) = {"
+eS
+eS
+HE
+CD
 Iu
 Qt
 nF
@@ -1707,11 +1737,13 @@ Gd
 fr
 HE
 eS
+eS
 "}
-(5,1,1) = {"
+(6,1,1) = {"
+eS
 eS
 GN
-CD
+yT
 ED
 KR
 Bo
@@ -1728,8 +1760,10 @@ HM
 jQ
 HE
 eS
+eS
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+eS
 eS
 HE
 HE
@@ -1749,8 +1783,10 @@ MD
 HE
 HE
 eS
+eS
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+eS
 eS
 eS
 HE
@@ -1770,8 +1806,10 @@ oQ
 GN
 eS
 eS
+eS
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+eS
 eS
 eS
 HE
@@ -1791,8 +1829,10 @@ HE
 HE
 eS
 eS
+eS
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+eS
 eS
 Tt
 Tt
@@ -1812,8 +1852,10 @@ PJ
 Tt
 Tt
 eS
+eS
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+eS
 eS
 sG
 iS
@@ -1833,8 +1875,10 @@ nd
 qN
 cQ
 eS
+eS
 "}
-(11,1,1) = {"
+(12,1,1) = {"
+eS
 eS
 sG
 WB
@@ -1854,8 +1898,10 @@ WB
 WB
 cQ
 eS
+eS
 "}
-(12,1,1) = {"
+(13,1,1) = {"
+eS
 eS
 sG
 ws
@@ -1875,8 +1921,10 @@ WB
 WB
 cQ
 eS
+eS
 "}
-(13,1,1) = {"
+(14,1,1) = {"
+eS
 eS
 sG
 ws
@@ -1896,8 +1944,10 @@ WB
 kH
 cQ
 eS
+eS
 "}
-(14,1,1) = {"
+(15,1,1) = {"
+eS
 eS
 sG
 zJ
@@ -1917,8 +1967,10 @@ lg
 Jj
 cQ
 eS
+eS
 "}
-(15,1,1) = {"
+(16,1,1) = {"
+eS
 eS
 Tt
 Tt
@@ -1938,8 +1990,10 @@ mi
 Tt
 Tt
 eS
+eS
 "}
-(16,1,1) = {"
+(17,1,1) = {"
+eS
 eS
 eS
 Yv
@@ -1959,8 +2013,10 @@ Yv
 Yv
 eS
 eS
+eS
 "}
-(17,1,1) = {"
+(18,1,1) = {"
+eS
 eS
 eS
 oA
@@ -1980,8 +2036,10 @@ vZ
 oA
 eS
 eS
+eS
 "}
-(18,1,1) = {"
+(19,1,1) = {"
+eS
 eS
 Yv
 Yv
@@ -2001,8 +2059,10 @@ Yv
 Yv
 Yv
 eS
+eS
 "}
-(19,1,1) = {"
+(20,1,1) = {"
+eS
 eS
 qH
 UX
@@ -2022,8 +2082,10 @@ ID
 Hf
 aS
 eS
+eS
 "}
-(20,1,1) = {"
+(21,1,1) = {"
+eS
 eS
 Lz
 Lz
@@ -2043,8 +2105,10 @@ Yv
 Yv
 Yv
 eS
+eS
 "}
-(21,1,1) = {"
+(22,1,1) = {"
+eS
 eS
 Lz
 BD
@@ -2064,8 +2128,10 @@ fJ
 LQ
 Yv
 eS
+eS
 "}
-(22,1,1) = {"
+(23,1,1) = {"
+eS
 eS
 HS
 Fa
@@ -2085,8 +2151,10 @@ Sr
 UL
 oA
 eS
+eS
 "}
-(23,1,1) = {"
+(24,1,1) = {"
+eS
 eS
 Lz
 Lz
@@ -2106,8 +2174,10 @@ YL
 Yv
 Yv
 eS
+eS
 "}
-(24,1,1) = {"
+(25,1,1) = {"
+eS
 eS
 HS
 uX
@@ -2127,8 +2197,10 @@ SI
 wG
 oA
 eS
+eS
 "}
-(25,1,1) = {"
+(26,1,1) = {"
+eS
 eS
 Lz
 BD
@@ -2148,8 +2220,10 @@ jn
 Qn
 Yv
 eS
+eS
 "}
-(26,1,1) = {"
+(27,1,1) = {"
+eS
 eS
 Lz
 Lz
@@ -2169,29 +2243,57 @@ DM
 Yv
 Yv
 eS
-"}
-(27,1,1) = {"
-eS
-eS
-Lz
-Lz
-Lz
-Lz
-eS
-eS
-eS
-eS
-eS
-eS
-eS
-Yv
-Yv
-Yv
-Yv
-eS
 eS
 "}
 (28,1,1) = {"
+eS
+eS
+eS
+Lz
+Lz
+Lz
+Lz
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+Yv
+Yv
+Yv
+Yv
+eS
+eS
+eS
+"}
+(29,1,1) = {"
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+"}
+(30,1,1) = {"
+eS
+eS
 eS
 eS
 eS

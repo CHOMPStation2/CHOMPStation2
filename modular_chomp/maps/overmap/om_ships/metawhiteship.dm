@@ -1,13 +1,13 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
 #if MAP_TEST
-#include "metawhiteship28x19.dmm"
+#include "metawhiteship30x21.dmm"
 #endif
 
 // Map template for spawning the shuttle
 /datum/map_template/om_ships/metawhiteship
 	name = "OM Ship - Meta White Ship"
 	desc = "A small privately-owned vessel."
-	mappath = 'metawhiteship28x19.dmm'
+	mappath = 'metawhiteship30x21.dmm'
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -62,8 +62,7 @@
 	name = "MetaMaterial Salvage Ship" //These names must match
 	current_location = "omship_spawn_metawhiteship"
 	docking_controller_tag = "metawhiteship_docker" //This is the only thing you map in and var edit, use the map helpers to designate doors and pumps
-	shuttle_area = list(	/area/shuttle/metawhiteship,
-					/area/shuttle/metawhiteship/gen,
+	shuttle_area = list(	/area/shuttle/metawhiteship/gen,
 					/area/shuttle/metawhiteship/cargo,
 					/area/shuttle/metawhiteship/food,
 					/area/shuttle/metawhiteship/bridge,
@@ -85,7 +84,7 @@
 
 /datum/map_template/shelter/superpose/metawhiteship
 	shelter_id = "MetaWhiteShip"
-	mappath = 'metawhiteship28x19.dmm'
+	mappath = 'metawhiteship30x21.dmm'
 	name = "MetaMaterial Salvage Ship"
 	description = "A medium size salvage whiteship"
 	superpose = FALSE
