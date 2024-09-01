@@ -31,6 +31,12 @@
 		pref.sensorpref = 5
 	character.sensorpref = pref.sensorpref
 	character.capture_crystal = pref.capture_crystal
+<<<<<<< HEAD
+=======
+	//Vore Stomach Sprite Preference
+	character.stomach_vision = pref.stomach_vision
+	character.recalculate_vis()
+>>>>>>> 65bf1fe4de... prefs and scaling (#16251)
 
 /datum/category_item/player_setup_item/vore/misc/sanitize_character()
 	pref.show_in_directory		= sanitize_integer(pref.show_in_directory, 0, 1, initial(pref.show_in_directory))
