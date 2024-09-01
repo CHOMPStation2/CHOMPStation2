@@ -76,6 +76,7 @@
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "MetaMaterial Salvage Ship" //These names must match
 	fore_dir = EAST
+	known = FALSE
 
 /datum/map_template/shelter/superpose/metawhiteship
 	shelter_id = "MetaWhiteShip"
