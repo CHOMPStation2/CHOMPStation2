@@ -23,7 +23,7 @@
 	icon_state = "shuttle2"
 	requires_power = 1
 
-/area/shuttle/metawhiteship/engi
+/area/shuttle/metawhiteship/eng
 	name = "\improper MetaMaterial Salvage Ship - Engineering"
 	icon_state = "shuttle2"
 	requires_power = 1
@@ -62,7 +62,13 @@
 	name = "MetaMaterial Salvage Ship" //These names must match
 	current_location = "omship_spawn_metawhiteship"
 	docking_controller_tag = "metawhiteship_docker" //This is the only thing you map in and var edit, use the map helpers to designate doors and pumps
-	shuttle_area = list(/area/shuttle/metawhiteship, /area/shuttle/metawhiteship/gen, /area/shuttle/metawhiteship/engi, /area/shuttle/metawhiteship/cargo, /area/shuttle/metawhiteship/food, /area/shuttle/metawhiteship/bridge)
+	shuttle_area = list(	/area/shuttle/metawhiteship,
+					/area/shuttle/metawhiteship/gen,
+					/area/shuttle/metawhiteship/cargo,
+					/area/shuttle/metawhiteship/food,
+					/area/shuttle/metawhiteship/bridge,
+					/area/shuttle/metawhiteship/eng
+					)
 	defer_initialisation = TRUE //We're not loaded until an admin does it
 
 // The 'ship'

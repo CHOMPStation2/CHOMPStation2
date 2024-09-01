@@ -74,7 +74,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "et" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/belt/utility/full/multitool,
@@ -96,7 +96,7 @@
 "fr" = (
 /obj/structure/cable/yellow,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "fy" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -112,7 +112,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "fJ" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/standard,
@@ -200,7 +200,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "iS" = (
 /obj/effect/floor_decal/industrial/bot_outline/corner{
 	dir = 1
@@ -227,13 +227,13 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "jQ" = (
 /obj/structure/fuel_port/heavy{
 	pixel_y = -30
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "jW" = (
 /obj/machinery/embedded_controller/radio/docking_port_multi{
 	child_names_txt = "Port Airlock Control;Starboard Airlock Control;Aft Airlock Control";
@@ -264,7 +264,7 @@
 "kj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall/thull,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "kp" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/table/rack,
@@ -294,9 +294,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/cargo)
-"kG" = (
-/turf/template_noop,
-/area/space)
 "kH" = (
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled/dark,
@@ -325,13 +322,13 @@
 	},
 /obj/item/stack/cable_coil/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "lf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "lg" = (
 /obj/effect/floor_decal/industrial/bot_outline/corner{
 	dir = 4
@@ -343,7 +340,7 @@
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/dark,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "lM" = (
 /obj/machinery/door/airlock/glass_external/public,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -366,7 +363,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "mf" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -400,7 +397,7 @@
 "nF" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "nG" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -454,7 +451,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "oZ" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -503,7 +500,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "qz" = (
 /obj/machinery/door/airlock/glass_external/public,
 /obj/machinery/airlock_sensor/airlock_exterior{
@@ -514,7 +511,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "qH" = (
 /obj/machinery/door/airlock/glass_external/public,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
@@ -559,7 +556,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "rf" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -573,7 +570,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "rH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -589,7 +586,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "rN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
@@ -598,7 +595,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "so" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -651,7 +648,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "tI" = (
 /obj/effect/floor_decal/industrial/arrows{
 	dir = 4
@@ -704,7 +701,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "vZ" = (
 /obj/effect/floor_decal/industrial/hatch,
 /obj/machinery/suit_storage_unit/standard_unit,
@@ -760,7 +757,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "yd" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
@@ -796,7 +793,7 @@
 	start_pressure = 10000
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "zJ" = (
 /obj/effect/floor_decal/industrial/bot_outline/corner{
 	dir = 4
@@ -809,7 +806,7 @@
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Az" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
@@ -827,13 +824,13 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Bo" = (
 /obj/structure/table/steel,
 /obj/item/weapon/storage/toolbox/mechanical,
 /obj/item/device/flashlight,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "BD" = (
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/gen)
@@ -841,7 +838,7 @@
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Da" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -851,7 +848,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Dn" = (
 /obj/effect/floor_decal/industrial/warning/color{
 	dir = 10
@@ -936,13 +933,13 @@
 	pixel_y = -23
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "ED" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "EN" = (
 /obj/effect/floor_decal/industrial/warning/color,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -989,7 +986,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Gn" = (
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 4;
@@ -1003,12 +1000,12 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "GN" = (
 /obj/structure/grille,
 /obj/structure/window/titanium/full,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Hf" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	dir = 4;
@@ -1046,10 +1043,10 @@
 /area/shuttle/metawhiteship/food)
 "HE" = (
 /turf/simulated/wall/thull,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "HM" = (
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "HS" = (
 /obj/structure/grille,
 /obj/structure/window/titanium/full,
@@ -1061,7 +1058,7 @@
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "ID" = (
 /obj/machinery/door/airlock/glass_external/public,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -1094,19 +1091,19 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "KF" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/dark,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "KR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "KZ" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
@@ -1174,7 +1171,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "MR" = (
 /obj/machinery/door/airlock/glass_external/public,
 /obj/machinery/airlock_sensor{
@@ -1217,7 +1214,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "NF" = (
 /obj/machinery/door/airlock/glass_external/public,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1236,20 +1233,20 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Om" = (
 /obj/structure/table/steel,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/rods,
 /turf/simulated/floor/tiled/dark,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "OH" = (
 /obj/machinery/shipsensors{
 	dir = 8
 	},
 /turf/simulated/floor/plating/external,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Pk" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1263,7 +1260,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Pr" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1278,7 +1275,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/firecloset/full,
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "PJ" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/reagent_dispensers/watertank,
@@ -1344,7 +1341,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "QF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -1369,7 +1366,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/metawhiteship/engi)
+/area/shuttle/metawhiteship/eng)
 "Se" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1501,13 +1498,6 @@
 /area/shuttle/metawhiteship/cargo)
 "UX" = (
 /obj/effect/shuttle_landmark/shuttle_initializer/metawhiteship,
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	dir = 4;
-	id_tag = "whiteship_docking_port";
-	name = "Port Airlock Control";
-	pixel_x = -22;
-	frequency = 1380
-	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
 	pixel_x = 24;
@@ -1519,6 +1509,11 @@
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/overmap/visitable/ship/landable/metawhiteship,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	id_tag = "metawhiteship_docker";
+	pixel_x = -24;
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/metawhiteship/food)
 "VM" = (
@@ -1946,7 +1941,7 @@ eS
 "}
 (16,1,1) = {"
 eS
-kG
+eS
 Yv
 Yv
 lM
@@ -1967,7 +1962,7 @@ eS
 "}
 (17,1,1) = {"
 eS
-kG
+eS
 oA
 vZ
 Ut
