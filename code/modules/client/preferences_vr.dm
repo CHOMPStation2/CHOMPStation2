@@ -171,7 +171,7 @@
 
 /client/verb/toggle_automatic_afk()
 	set name = "Toggle Automatic AFK"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "When enabled, causes you to be automatically marked as AFK if you are idle for too long."
 
 	var/pref_path = /datum/client_preference/auto_afk
