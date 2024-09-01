@@ -27,7 +27,10 @@
 
 	feedback_add_details("admin_verb","Mentorhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)
-		if(tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No")) != "No")
+		var/input = tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No"))
+		if(!input)
+			return
+		if(input == "Yes")
 			if(current_ticket)
 				log_admin("Mentorhelp: [key_name(src)]: [msg]")
 				current_ticket.MessageNoRecipient(msg)
@@ -95,7 +98,10 @@
 
 	feedback_add_details("admin_verb","Adminhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)
-		if(tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No")) != "No")
+		var/input = tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No"))
+		if(!input)
+			return
+		if(input == "Yes")
 			if(current_ticket)
 				current_ticket.MessageNoRecipient(msg)
 				to_chat(usr, "<span class='adminnotice'>PM to-<b>Admins</b>: [msg]</span>")
@@ -159,7 +165,7 @@
 		to_chat(usr, "<span class='danger'>Error: You cannot request spice (muted from adminhelps).</span>")
 		return
 
-	if(tgui_alert(usr, "Are you sure you want to request the admins spice things up for you? You accept the consequences if you do.","Spicy!",list("Yes","No")) != "No")
+	if(tgui_alert(usr, "Are you sure you want to request the admins spice things up for you? You accept the consequences if you do.","Spicy!",list("Yes","No")) == "Yes")
 		message_admins("[ADMIN_FULLMONTY(usr)] has requested the round be spiced up a little.")
 		to_chat(usr, "<span class='notice'>You have requested some more spice in your round.</span>")
 	else
