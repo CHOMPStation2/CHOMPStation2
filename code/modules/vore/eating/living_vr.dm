@@ -420,7 +420,7 @@
 	var/nickname //vorestation edit - This set appends nicknames to the save slot
 	var/list/charlist = list()
 	var/default //VOREStation edit
-	for(var/i=1, i<= config.character_slots, i++)
+	for(var/i=1, i<= CONFIG_GET(number/character_slots), i++) //CHOMPEdit
 		S.cd = "/character[i]"
 		S["real_name"] >> name
 		S["nickname"] >> nickname //vorestation edit
