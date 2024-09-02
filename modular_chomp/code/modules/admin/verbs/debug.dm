@@ -1,5 +1,5 @@
 /client/proc/reload_configuration()
-	set category = "Debug"
+	set category = "Debug.Server"
 	set name = "Reload Configuration"
 	set desc = "Force config reload to world default"
 	if(!check_rights(R_DEBUG))

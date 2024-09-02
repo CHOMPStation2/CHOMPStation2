@@ -61,7 +61,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 	var/tracked = FALSE
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 	glow_override = TRUE
 
 /datum/say_list/solargrub

@@ -52,7 +52,7 @@
 	var/do_seasons = TRUE
 	picked_color = FALSE //CHOMPedit: removed "var/" since we already have this defined for all simple_mobs.
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /////////////////////////////////////// Vore stuff///////////////////////////////////////////
 

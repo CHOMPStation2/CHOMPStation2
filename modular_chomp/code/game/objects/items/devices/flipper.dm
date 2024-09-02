@@ -194,7 +194,7 @@
 			return
 
 	var/choice = tgui_alert(user, "You sure you want to inhabit this PAI, or submit yourself to being recruited?", "Confirmation", list("Inhabit", "Recruit", "Cancel"))
-	if(choice == "Cancel")
+	if(!choice || choice == "Cancel")
 		return ..()
 	if(choice == "Recruit")
 		paiController.recruitWindow(user)

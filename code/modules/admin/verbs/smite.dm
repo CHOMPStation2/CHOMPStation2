@@ -8,13 +8,9 @@
 	if(!istype(target))
 		return
 
-<<<<<<< HEAD
 	var/list/smite_types = list(SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT,
-								SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE,
+								SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE,SMITE_SPICEREQUEST,SMITE_PEPPERNADE,SMITE_TERROR,
 								SMITE_PIE, SMITE_SPICE, SMITE_HOTDOG) //CHOMP Add pie, spicy air and hot dog
-=======
-	var/list/smite_types = list(SMITE_BREAKLEGS,SMITE_BLUESPACEARTILLERY,SMITE_SPONTANEOUSCOMBUSTION,SMITE_LIGHTNINGBOLT,SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_AD_SPAM,SMITE_REDSPACE_ABDUCT,SMITE_AUTOSAVE,SMITE_AUTOSAVE_WIDE,SMITE_SPICEREQUEST,SMITE_PEPPERNADE,SMITE_TERROR)
->>>>>>> f56e9699f3... spice smites (#16221)
 
 	var/smite_choice = tgui_input_list(usr, "Select the type of SMITE for [target]","SMITE Type Choice", smite_types)
 	if(!smite_choice)
@@ -109,7 +105,7 @@
 			kin_type = kin_types[kin_type]
 
 			var/myself = tgui_alert(usr, "Control the shadekin yourself or delete pred and prey after?","Control Shadekin?",list("Control","Cancel","Delete"))
-			if(myself == "Cancel" || !target)
+			if(!myself || myself == "Cancel" || !target)
 				return
 
 			var/turf/Tt = get_turf(target)
@@ -163,7 +159,21 @@
 			if(target.client)
 				target.client.create_fake_ad_popup_multiple(/obj/screen/popup/default, 15)
 
-<<<<<<< HEAD
+		if(SMITE_TERROR)
+			if(ishuman(target))
+				target.fear = 200
+
+		if(SMITE_PEPPERNADE)
+			var/obj/item/weapon/grenade/chem_grenade/teargas/grenade = new /obj/item/weapon/grenade/chem_grenade/teargas
+			grenade.loc = target.loc
+			to_chat(target,"<span class='warning'>GRENADE?!</span>")
+			grenade.detonate()
+
+		if(SMITE_SPICEREQUEST)
+			var/obj/item/weapon/reagent_containers/food/condiment/spacespice/spice = new /obj/item/weapon/reagent_containers/food/condiment/spacespice
+			spice.loc = target.loc
+			to_chat(target,"A bottle of spices appears at your feet... be careful what you wish for!")
+
 		if(SMITE_PIE) //CHOMP Add
 			new/obj/effect/decal/cleanable/pie_smudge(get_turf(target))
 			playsound(target, 'sound/effects/slime_squish.ogg', 100, 1, get_rand_frequency(), falloff = 5)
@@ -182,20 +192,6 @@
 			playsound(target, 'sound/effects/whistle.ogg', 50, 1, get_rand_frequency(), falloff = 5)
 			sleep(2 SECONDS)
 			target.Stun(10)
-=======
-		if(SMITE_PEPPERNADE)
-			var/obj/item/weapon/grenade/chem_grenade/teargas/grenade = new /obj/item/weapon/grenade/chem_grenade/teargas
-			grenade.loc = target.loc
-			to_chat(target,"<span class='warning'>GRENADE?!</span>")
-			grenade.detonate()
-
-		if(SMITE_SPICEREQUEST)
-			var/obj/item/weapon/reagent_containers/food/condiment/spacespice/spice = new /obj/item/weapon/reagent_containers/food/condiment/spacespice
-			spice.loc = target.loc
-			to_chat(target,"A bottle of spices appears at your feet... be careful what you wish for!")
-
-		if(SMITE_TERROR)
->>>>>>> f56e9699f3... spice smites (#16221)
 			if(ishuman(target))
 				if(target.head)
 					target.unEquip(target.head)

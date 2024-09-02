@@ -67,9 +67,6 @@
 "cu" = (
 /obj/item/weapon/towel/random,
 /obj/item/weapon/towel/random,
-/obj/machinery/door/airlock/glass_science{
-	id_tag = "stop_opening_this_you_idiots"
-	},
 /turf/simulated/floor/wood,
 /area/shuttle/whiteshipOM2)
 "cw" = (
@@ -87,7 +84,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/machinery/airlock_sensor{
-	pixel_y = 25
+	pixel_y = 25;
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
@@ -229,7 +227,7 @@
 	pixel_y = -25
 	},
 /turf/template_noop,
-/area/shuttle/whiteshipOM2)
+/area/template_noop)
 "iQ" = (
 /obj/structure/table/wooden_reinforced,
 /obj/structure/flora/pottedplant/smallcactus{
@@ -294,7 +292,8 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	id_tag = "whiteship_docker2";
-	pixel_y = 25
+	pixel_y = 25;
+	frequency = 1380
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -441,9 +440,6 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/whiteshipOM2)
-"oX" = (
-/turf/template_noop,
 /area/shuttle/whiteshipOM2)
 "pk" = (
 /obj/machinery/atmospherics/binary/pump,
@@ -1204,7 +1200,7 @@
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
-	dir = 6;
+	dir = 4;
 	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
@@ -1638,7 +1634,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/power/emitter{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/whiteshipOM2)
@@ -1720,7 +1716,8 @@
 	pixel_y = 13;
 	req_access = null;
 	pixel_x = -24;
-	dir = 4
+	dir = 4;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/whiteshipOM2)
@@ -1938,7 +1935,8 @@
 	},
 /obj/machinery/airlock_sensor{
 	frequency = 1380;
-	pixel_y = -28
+	pixel_y = -28;
+	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -2927,15 +2925,15 @@ Eq
 (22,1,1) = {"
 Eq
 sH
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
 iv
 sH
 sH
@@ -2946,16 +2944,16 @@ sH
 WL
 sH
 sH
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
 sH
 Eq
 "}

@@ -1,13 +1,14 @@
 import { classes } from 'common/react';
-
-import { useBackend } from '../../../../backend';
+import { useBackend } from 'tgui/backend';
 import {
   Box,
   Button,
   Flex,
   LabeledList,
   Section,
-} from '../../../../components';
+  Stack,
+} from 'tgui/components';
+
 import { FeatureColorInput } from '../FeatureColorInput';
 import { selectedData } from '../types';
 
@@ -254,7 +255,7 @@ export const VoreSelectedBellyVisuals = (props: { belly: selectedData }) => {
         </Flex>
       </Section>
       <Section title="Belly Fullscreens Preview and Coloring">
-        <Flex direction="row">
+        <Stack align="center">
           <FeatureColorInput
             action_name="b_fullscreen_color"
             value_of={null}
@@ -285,36 +286,40 @@ export const VoreSelectedBellyVisuals = (props: { belly: selectedData }) => {
             back_color="#FFFFFF"
             name_of="Alpha"
           />
-        </Flex>
-        <LabeledList.Item label="Enable Coloration">
-          <Button
-            onClick={() =>
-              act('set_attribute', { attribute: 'b_colorization_enabled' })
-            }
-            icon={colorization_enabled ? 'toggle-on' : 'toggle-off'}
-            selected={colorization_enabled}
-          >
-            {colorization_enabled ? 'Yes' : 'No'}
-          </Button>
-        </LabeledList.Item>
-        <LabeledList.Item label="Preview Belly">
-          <Button
-            onClick={() =>
-              act('set_attribute', { attribute: 'b_preview_belly' })
-            }
-          >
-            Preview
-          </Button>
-        </LabeledList.Item>
-        <LabeledList.Item label="Clear Preview">
-          <Button
-            onClick={() =>
-              act('set_attribute', { attribute: 'b_clear_preview' })
-            }
-          >
-            Clear
-          </Button>
-        </LabeledList.Item>
+        </Stack>
+        <Box mt={1}>
+          <LabeledList>
+            <LabeledList.Item label="Enable Coloration">
+              <Button
+                onClick={() =>
+                  act('set_attribute', { attribute: 'b_colorization_enabled' })
+                }
+                icon={colorization_enabled ? 'toggle-on' : 'toggle-off'}
+                selected={colorization_enabled}
+              >
+                {colorization_enabled ? 'Yes' : 'No'}
+              </Button>
+            </LabeledList.Item>
+            <LabeledList.Item label="Preview Belly">
+              <Button
+                onClick={() =>
+                  act('set_attribute', { attribute: 'b_preview_belly' })
+                }
+              >
+                Preview
+              </Button>
+            </LabeledList.Item>
+            <LabeledList.Item label="Clear Preview">
+              <Button
+                onClick={() =>
+                  act('set_attribute', { attribute: 'b_clear_preview' })
+                }
+              >
+                Clear
+              </Button>
+            </LabeledList.Item>
+          </LabeledList>
+        </Box>
       </Section>
       <Section>
         <Section title="Vore FX">

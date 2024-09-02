@@ -40,7 +40,7 @@
 	minbodytemp = 0
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 // Activate Noms!
 /mob/living/simple_mob/vore/aggressive/dino
