@@ -11,6 +11,7 @@
 	var/capture_crystal = 1	//Whether or not someone is able to be caught with capture crystals
 	var/auto_backup_implant = FALSE //Whether someone starts with a backup implant or not.
 	var/borg_petting = TRUE //Whether someone can be petted as a borg or not.
+	var/stomach_vision = TRUE //Whether or not someone can view stomach sprites
 
 	var/job_talon_high = 0
 	var/job_talon_med = 0
@@ -170,7 +171,7 @@
 
 /client/verb/toggle_automatic_afk()
 	set name = "Toggle Automatic AFK"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "When enabled, causes you to be automatically marked as AFK if you are idle for too long."
 
 	var/pref_path = /datum/client_preference/auto_afk

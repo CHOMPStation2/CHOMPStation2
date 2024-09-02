@@ -67,6 +67,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/show_vore_fx = TRUE
 	var/step_mechanics_pref = FALSE
 	var/pickup_pref = TRUE
+	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 	var/allow_mind_transfer = FALSE
 
 	//CHOMP stuff
@@ -80,7 +81,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/autotransferable = TRUE
 	var/strip_pref = FALSE
 	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
-	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 	var/no_latejoin_vore_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_prey_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_vore_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
@@ -220,6 +220,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	weight_message_visible = json_from_file["weight_message_visible"]
 	weight_messages = json_from_file["weight_messages"]
 	eating_privacy_global = json_from_file["eating_privacy_global"]
+	vore_sprite_color = json_from_file["vore_sprite_color"]
 	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 
 	//CHOMP stuff Start
@@ -231,7 +232,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	give_reagents = json_from_file["give_reagents"]
 	apply_reagents = json_from_file["apply_reagents"]
 	autotransferable = json_from_file["autotransferable"]
-	vore_sprite_color = json_from_file["vore_sprite_color"]
 	vore_sprite_multiply = json_from_file["vore_sprite_multiply"]
 	strip_pref = json_from_file["strip_pref"]
 
@@ -331,6 +331,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	else if(weight_messages.len < 10)
 		while(weight_messages.len < 10)
 			weight_messages.Add("")
+	if(isnull(vore_sprite_color))
+		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 	if(isnull(allow_mind_transfer))
 		allow_mind_transfer = FALSE
 
@@ -351,8 +353,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		noisy_full = FALSE
 	if(isnull(autotransferable))
 		autotransferable = TRUE
-	if(isnull(vore_sprite_color))
-		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 	if(isnull(vore_sprite_multiply))
 		vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	if(isnull(strip_pref))
@@ -423,7 +423,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"weight_message_visible"	= weight_message_visible,
 			"weight_messages"			= weight_messages,
 			"eating_privacy_global"		= eating_privacy_global,
-			"vore_sprite_color"			= vore_sprite_color, //CHOMPEdit
+			"vore_sprite_color"			= vore_sprite_color,
 			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
 			"strip_pref" 			= strip_pref, //CHOMPEdit
 			"no_latejoin_vore_warning"		= no_latejoin_vore_warning, //CHOMPEdit

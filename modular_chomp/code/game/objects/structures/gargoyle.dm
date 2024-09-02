@@ -246,7 +246,7 @@
 			return ..()
 		playsound(src, W.usesound, 50, 1)
 		if (do_after(user, (2 SECONDS) * W.toolspeed, target = src))
-			to_chat("<span class='notice'>You [anchored ? "un" : ""]anchor the [src].</span>")
+			to_chat(user, "<span class='notice'>You [anchored ? "un" : ""]anchor the [src].</span>")
 			anchored = !anchored
 	else if(!isrobot(user) && gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
 		if(istype(W,/obj/item/weapon/grab || /obj/item/weapon/holder))

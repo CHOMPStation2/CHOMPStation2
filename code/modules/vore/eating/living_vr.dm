@@ -274,6 +274,7 @@
 	P.nutrition_messages = src.nutrition_messages
 	P.weight_message_visible = src.weight_message_visible
 	P.weight_messages = src.weight_messages
+	P.vore_sprite_color = src.vore_sprite_color // CHOMPEdit
 	P.allow_mind_transfer = src.allow_mind_transfer
 
 	//CHOMP stuff Start
@@ -286,7 +287,6 @@
 	P.apply_reagents = src.apply_reagents
 	P.autotransferable = src.autotransferable
 	P.strip_pref = src.strip_pref
-	P.vore_sprite_color = src.vore_sprite_color
 	P.vore_sprite_multiply = src.vore_sprite_multiply
 	P.no_latejoin_vore_warning = src.no_latejoin_vore_warning
 	P.no_latejoin_prey_warning = src.no_latejoin_prey_warning
@@ -348,6 +348,7 @@
 	nutrition_messages = P.nutrition_messages
 	weight_message_visible = P.weight_message_visible
 	weight_messages = P.weight_messages
+	vore_sprite_color = P.vore_sprite_color //CHOMPEdit
 	allow_mind_transfer = P.allow_mind_transfer
 
 	//CHOMP stuff
@@ -360,7 +361,6 @@
 	apply_reagents = P.apply_reagents
 	autotransferable = P.autotransferable
 	strip_pref = P.strip_pref
-	vore_sprite_color = P.vore_sprite_color
 	vore_sprite_multiply = P.vore_sprite_multiply
 	no_latejoin_vore_warning = P.no_latejoin_vore_warning
 	no_latejoin_prey_warning = P.no_latejoin_prey_warning
@@ -1294,7 +1294,7 @@
 		dispvoreprefs += "<b>Late join prey auto accept:</b> [no_latejoin_prey_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Global Vore Privacy is:</b> [eating_privacy_global ? "<font color='green'>Subtle</font>" : "<font color='red'>Loud</font>"]<br>"
 	dispvoreprefs += "<b>Current active belly:</b> [vore_selected ? vore_selected.name : "None"]<br>"
-	dispvoreprefs += "<b>Current active belly:</b> [belly_rub_target ? belly_rub_target : vore_selected.name]<br>"
+	dispvoreprefs += "<b>Current active belly:</b> [belly_rub_target ? belly_rub_target : (vore_selected ? vore_selected.name : "None")]<br>"
 	//CHOMPEdit End
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=300x400;can_resize=1;can_minimize=0")
 	onclose(user, "[name]")
