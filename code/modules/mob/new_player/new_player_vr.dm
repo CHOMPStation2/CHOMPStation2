@@ -68,7 +68,7 @@
 		if((pref_synth && !(take_flags & SYNTHETICS)) || (pref_meat && !(take_flags & ORGANICS)))
 			pass = FALSE
 			to_chat(src, "<span class='warning'>Some of your traits are not usable by your character type (synthetic traits on organic, or vice versa).</span>")
-//CHOMPadd start
+	//CHOMPadd start
 	if(J.camp_protection && round_duration_in_ds < CONFIG_GET(number/job_camp_time_limit))
 		if(SSjob.restricted_keys.len)
 			var/list/check = SSjob.restricted_keys[J.title]
