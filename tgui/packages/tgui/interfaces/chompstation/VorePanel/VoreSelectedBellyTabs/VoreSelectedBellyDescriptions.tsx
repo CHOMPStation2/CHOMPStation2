@@ -142,18 +142,18 @@ export const VoreSelectedBellyDescriptions = (props: {
         ) : (
           ''
         )}
-      {message_mode ||
-      (escapable &&
-        (!!interacts.transferlocation ||
-          !!interacts.transferlocation_secondary)) ||
-      (autotransfer_enabled &&
-        (!!autotransfer.autotransferlocation ||
-          !!autotransfer.autotransferlocation_secondary)) ? (
-        <VoreSelectedBellyDescriptionsTransfer
-          message_mode={message_mode}
-          interacts={interacts}
-          autotransfer={autotransfer}
-        />
+        {message_mode ||
+        (escapable &&
+          (!!interacts.transferlocation ||
+        !!interacts.transferlocation_secondary)) ||
+        (autotransfer_enabled &&
+          (!!autotransfer.autotransferlocation ||
+            !!autotransfer.autotransferlocation_secondary)) ? (
+          <VoreSelectedBellyDescriptionsTransfer
+            message_mode={message_mode}
+            interacts={interacts}
+            autotransfer={autotransfer}
+          />
         ) : (
           ''
         )}
