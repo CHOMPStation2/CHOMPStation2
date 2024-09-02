@@ -1851,9 +1851,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(alert != "Load")
 				return FALSE
 			if(!host.load_vore_prefs_from_slot())
-				tgui_alert_async(usr, "ERROR: Virgo-specific preferences failed to apply!","Error")
+				tgui_alert_async(usr, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
 			else
-				to_chat(usr,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
+				to_chat(usr,"<span class='notice'>Vore-specific preferences applied from active slot!</span>") //CHOMPEdit
 				unsaved_changes = TRUE
 			return TRUE
 		//CHOMPEdit - "Belly HTML Export Earlyport"
