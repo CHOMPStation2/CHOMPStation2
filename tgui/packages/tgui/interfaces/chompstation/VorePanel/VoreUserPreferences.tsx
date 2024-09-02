@@ -728,14 +728,23 @@ export const VoreUserPreferences = (props: {
       <Divider />
       <Section>
         <Flex spacing={1}>
-          <Flex.Item basis="50%">
+          <Flex.Item basis="33%">
             <Button fluid icon="save" onClick={() => act('saveprefs')}>
               Save Prefs
             </Button>
           </Flex.Item>
-          <Flex.Item basis="50%" grow={1}>
+          <Flex.Item basis="33%" grow={1}>
             <Button fluid icon="undo" onClick={() => act('reloadprefs')}>
               Reload Prefs
+            </Button>
+          </Flex.Item>
+          <Flex.Item basis="33%">
+            <Button
+              fluid
+              icon="people-arrows"
+              onClick={() => act('loadprefsfromslot')}
+            >
+              Load Prefs From Slot
             </Button>
           </Flex.Item>
         </Flex>

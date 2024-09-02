@@ -1846,9 +1846,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
 				unsaved_changes = FALSE
 			return TRUE
-<<<<<<< HEAD
-		//CHOMPEdit - "Belly HTML Export Earlyport"
-=======
 		if("loadprefsfromslot")
 			var/alert = tgui_alert(usr, "Are you sure you want to load another character slot's preferences? This will remove your current vore organs and eject their contents. This will not be immediately saved to your character slot, and you will need to save manually to overwrite your current bellies and preferences.","Confirmation",list("Load","Cancel"))
 			if(alert != "Load")
@@ -1859,7 +1856,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				to_chat(usr,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
 				unsaved_changes = TRUE
 			return TRUE
->>>>>>> abe1575420... Load Prefs From Slot (#16226)
+		//CHOMPEdit - "Belly HTML Export Earlyport"
 		if("exportpanel")
 			var/mob/living/user = usr
 			if(!user)
