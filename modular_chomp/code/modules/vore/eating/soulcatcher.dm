@@ -459,11 +459,12 @@
 	if(is_taken_over()) return
 	if(!istype(M) || !gem) return
 	if(!gem.owner) return
-	if((tgui_alert(gem.owner, "Do you want to allow [owner] to transfer [selected_soul] to your soulcatcher?", "Allow Transfer", list("No", "Yes")) == "Yes"))
-		if(!in_range(gem.owner, owner))
-			return
-		if(!(gem.owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER))
-			return
+	if((tgui_alert(gem.owner, "Do you want to allow [owner] to transfer [selected_soul] to your soulcatcher?", "Allow Transfer", list("No", "Yes")) != "Yes"))
+		return
+	if(!in_range(gem.owner, owner))
+		return
+	if(!(gem.owner.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER))
+		return
 	if(M.mind == own_mind)
 		own_mind = null
 	brainmobs -= M

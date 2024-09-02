@@ -8,10 +8,12 @@
 	var/mob_wanted = tgui_input_list(user, "Which Mob do you want to spawn?", "Mob spawn", vr_mob_spawner_options)
 	if(!mob_wanted)
 		return
-	QDEL_NULL(mobspawned)
 	var/neutral = FALSE
 	var/mobtype = vr_mob_spawner_options[mob_wanted]
 	var/faction = tgui_alert(user, "Do you want the mob's faction to remain the same or be passive?","Faction",list("Normal","Neutral"))
+	if(!faction)
+		return
+	QDEL_NULL(mobspawned)
 	if(faction == "Neutral")
 		neutral = TRUE
 	mobspawned = new mobtype(get_turf(GLOB.button_mob_spawner_landmark[link]))

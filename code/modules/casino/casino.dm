@@ -615,6 +615,8 @@
 				if(confirm == "Yes")
 					to_chat(user, "<span class='warning'>You are now a prize!</span>")
 				//CHOMPAdd Start
+				if(!confirm)
+					return
 				if(confirm == "No")
 					to_chat(user, "<span class='warning'>The SPASM beeps in a sad manner at your impolite decline..</span>")
 					return

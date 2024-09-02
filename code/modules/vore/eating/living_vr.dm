@@ -1319,6 +1319,8 @@
 	set desc = "Print out your vorebelly messages into chat for copypasting."
 
 	var/result = tgui_alert(src, "Would you rather open the export panel?", "Selected Belly Export", list("Open Panel", "Print to Chat"))
+	if(!result)
+		return
 	if(result == "Open Panel")
 		var/mob/living/user = usr
 		if(!user)

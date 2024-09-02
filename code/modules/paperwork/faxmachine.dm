@@ -283,7 +283,7 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 	var/choice = tgui_alert(usr, "[question_text] improve response time from staff when sending to discord. \
 	Renaming it changes its preview in staff chat.", \
 	"Default name detected", list("Change Title","Continue", "Cancel"))
-	if(choice == "Cancel")
+	if(!choice || choice == "Cancel")
 		return TRUE
 	else if(choice == "Change Title")
 		var/new_name = tgui_input_text(usr, "Enter new fax title", "This will show up in the preview for staff chat on discord when sending \
