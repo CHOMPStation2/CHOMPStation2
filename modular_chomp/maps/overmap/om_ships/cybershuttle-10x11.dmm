@@ -4,7 +4,7 @@
 /area/template_noop)
 "c" = (
 /obj/machinery/computer/ship/helm{
-	req_one_access = newlist()
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -13,6 +13,12 @@
 /obj/fruitspawner/watermelon,
 /obj/item/device/gps/explorer,
 /obj/item/device/gps/explorer,
+/obj/structure/closet/walllocker_double/east,
+/obj/item/weapon/gun/projectile/garand,
+/obj/item/ammo_magazine/clip/medium,
+/obj/item/ammo_magazine/clip/medium,
+/obj/item/ammo_magazine/clip/medium,
+/obj/item/weapon/storage/firstaid/regular,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "e" = (
@@ -26,18 +32,27 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
-	dir = 6;
+	dir = 4;
 	pixel_y = 25
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/plating,
+/area/shuttle/cybershuttle)
+"f" = (
+/obj/machinery/ion_engine{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/cybershuttle)
 "g" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "h" = (
 /obj/machinery/computer/ship/engines{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -45,28 +60,24 @@
 /obj/machinery/ion_engine{
 	dir = 1
 	},
-/obj/structure/window/plastitanium{
-	dir = 8
-	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/cybershuttle)
 "k" = (
 /obj/machinery/light,
-/obj/machinery/atmospherics/pipe/tank/air/full{
-	start_pressure = 10000
+/obj/machinery/atmospherics/portables_connector{
+	dir = 2
 	},
+/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "l" = (
 /turf/simulated/wall/rthull,
 /area/shuttle/cybershuttle)
 "m" = (
-/obj/machinery/power/terminal{
-	dir = 2
-	},
 /obj/structure/cable/yellow{
+	d1 = 2;
 	d2 = 4;
-	icon_state = "0-4"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -81,6 +92,10 @@
 /area/shuttle/cybershuttle)
 "q" = (
 /obj/machinery/computer/shuttle_control/explore/cybershuttle,
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "r" = (
@@ -139,6 +154,28 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
+"C" = (
+/obj/structure/table/survival_pod,
+/obj/item/glass_jar{
+	pixel_y = 13;
+	pixel_x = 6
+	},
+/obj/random/action_figure{
+	pixel_y = -4;
+	pixel_x = -9
+	},
+/obj/item/weapon/dice/d20,
+/obj/item/weapon/deck/tarot,
+/obj/item/weapon/material/sword/katana{
+	pixel_y = -4;
+	pixel_x = 5
+	},
+/obj/item/clothing/head/fedora{
+	pixel_x = -4;
+	pixel_y = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
 "D" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/grille/rustic{
@@ -169,18 +206,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
-"P" = (
+"Q" = (
 /obj/machinery/ion_engine{
 	dir = 1
 	},
 /obj/structure/window/plastitanium{
-	dir = 4
-	},
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/cybershuttle)
-"Q" = (
-/obj/machinery/ion_engine{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/cybershuttle)
@@ -247,6 +278,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
+"Z" = (
+/obj/machinery/power/terminal{
+	dir = 2
+	},
+/obj/structure/cable/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
 
 (1,1,1) = {"
 a
@@ -269,10 +307,10 @@ a
 a
 a
 a
+a
 T
 l
-j
-a
+Q
 "}
 (3,1,1) = {"
 a
@@ -284,8 +322,8 @@ l
 W
 l
 l
-Q
-a
+l
+j
 "}
 (4,1,1) = {"
 a
@@ -295,10 +333,10 @@ J
 g
 F
 g
+C
 h
 l
 l
-a
 "}
 (5,1,1) = {"
 a
@@ -309,9 +347,9 @@ g
 g
 g
 m
+Z
 o
-Q
-a
+j
 "}
 (6,1,1) = {"
 a
@@ -322,9 +360,9 @@ g
 S
 t
 r
+g
 z
-Q
-a
+j
 "}
 (7,1,1) = {"
 a
@@ -337,7 +375,7 @@ R
 w
 l
 l
-a
+l
 "}
 (8,1,1) = {"
 a
@@ -349,8 +387,8 @@ l
 e
 l
 l
-Q
-a
+l
+j
 "}
 (9,1,1) = {"
 a
@@ -360,10 +398,10 @@ a
 a
 a
 a
+a
 y
 l
-P
-a
+f
 "}
 (10,1,1) = {"
 a
