@@ -142,7 +142,7 @@ export const VoreSelectedBellyDescriptions = (props: {
         ) : (
           ''
         )}
-        {message_mode ||
+      {message_mode ||
       (escapable &&
         (!!interacts.transferlocation ||
           !!interacts.transferlocation_secondary)) ||
