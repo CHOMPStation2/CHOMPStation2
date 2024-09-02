@@ -53,14 +53,8 @@
 	var/pref_meat = client.prefs.gross_meatbag
 	for(var/datum/trait/T as anything in megalist)
 		var/cost = traits_costs[T]
-
-<<<<<<< HEAD
-			if(cost > 0) //CHOMPEdit
-				traits_left--
-=======
 		if(T.category == TRAIT_TYPE_POSITIVE)
 			traits_left--
->>>>>>> 4991c2edf8... Revert "Revert "Removed negative trait limit (#16214)" (#16231)" (#16232)
 
 		//A trait was removed from the game
 		if(isnull(cost))
@@ -73,8 +67,7 @@
 		var/take_flags = initial(T.can_take)
 		if((pref_synth && !(take_flags & SYNTHETICS)) || (pref_meat && !(take_flags & ORGANICS)))
 			pass = FALSE
-<<<<<<< HEAD
-			to_chat(src,"<span class='warning'>Your custom species is not playable. Reconfigure your traits on the VORE tab.</span>")
+			to_chat(src, "<span class='warning'>Some of your traits are not usable by your character type (synthetic traits on organic, or vice versa).</span>")
 //CHOMPadd start
 	if(J.camp_protection && round_duration_in_ds < CONFIG_GET(number/job_camp_time_limit))
 		if(SSjob.restricted_keys.len)
@@ -95,14 +88,11 @@
 				pass = FALSE
 				to_chat(src,"<span class='warning'>One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again.</span>")
 	//CHOMP Addition End
-=======
-			to_chat(src, "<span class='warning'>Some of your traits are not usable by your character type (synthetic traits on organic, or vice versa).</span>")
 
 	//Went into negatives
 	if(points_left < 0 || traits_left < 0)
 		pass = FALSE
 		to_chat(src,"<span class='warning'>Your species is not playable. Reconfigure your traits on the VORE tab. Trait points: [points_left]. Traits left: [traits_left].</span>")
->>>>>>> 4991c2edf8... Revert "Revert "Removed negative trait limit (#16214)" (#16231)" (#16232)
 
 	//Final popup notice
 	if (!pass)
