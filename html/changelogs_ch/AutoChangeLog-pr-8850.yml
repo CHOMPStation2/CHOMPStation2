@@ -1,8 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - rscadd: "Adds a new spawnpoint for outsiders to spawn in the fuel depot. Spacefarer subjob highly recommended."
-  - maptweak: "Fixed docking the whiteship II"
-  - maptweak: "Overhauled the fuel depot and made it spawn randomly in the OM"
-  - maptweak: "Fixed broken door bolts on whiteship II, removed stray door."
-  - maptweak: "Cybershuttle access fix"

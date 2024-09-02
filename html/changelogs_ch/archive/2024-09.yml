@@ -1,3 +1,13 @@
 2024-09-01:
   Hunter-Dovetail:
   - rscadd: VBO_22
+2024-09-02:
+  Kashargul:
+  - bugfix: pred spawn leading to a null as selected belly
+  tacoguy7765093:
+  - rscadd: Adds a new spawnpoint for outsiders to spawn in the fuel depot. Spacefarer
+      subjob highly recommended.
+  - maptweak: Fixed docking the whiteship II
+  - maptweak: Overhauled the fuel depot and made it spawn randomly in the OM
+  - maptweak: Fixed broken door bolts on whiteship II, removed stray door.
+  - maptweak: Cybershuttle access fix
