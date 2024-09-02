@@ -18,7 +18,7 @@
 	mappath = 'sdf_corvette_wreck.dmm'
 	annihilate = TRUE
 
-/datum/map_template/om_ships/sdf_corvette
+/datum/map_template/om_ships/sdf_corvette_wreck
 	name = "OM Ship - SDF Cutter (new Z)"
 	desc = "A small SDF cutter, outfitted with an ORB/OFD."
 	mappath = 'sdf_cutter.dmm'

@@ -32,8 +32,10 @@
 
 /datum/persistent/storage/smartfridge/sheet_storage/lossy
 	name = "sheet storage lossy"
-	min_storage = 20	//if the amount is at or below this, don't cull
-	max_storage = 500	//if the amount is above this, cull it to this amount THEN do math
+	min_retained = 50 //CHOMPedit: Altering how many items can be held between rounds.
+	max_retained = 50 //CHOMPedit: Altering how many items can be held between rounds.
+	min_storage = 1	//if the amount is at or below this, don't cull //CHOMPedit: Altering how many items can be held between rounds.
+	max_storage = 2500	//if the amount is above this, cull it to this amount THEN do math //CHOMPedit: Altering how many items can be held between rounds.
 	stacks_go_missing = TRUE
 	minimum_storage_reserve = TRUE
 

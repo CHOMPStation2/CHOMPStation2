@@ -1,6 +1,5 @@
 /datum/species
 	var/crit_mod = 1
-	var/vore_belly_default_variant = "H"
 	var/list/env_traits = list()
 	var/dirtslip = FALSE
 	var/photosynthesizing = FALSE

@@ -29,7 +29,7 @@
 		return
 
 	if(working)
-		to_chat("<span class='warning'>\The [src] is busy! Wait until it's idle.</span>")
+		to_chat(user, "<span class='warning'>\The [src] is busy! Wait until it's idle.</span>")
 		return
 
 	if(default_deconstruction_screwdriver(user, O))

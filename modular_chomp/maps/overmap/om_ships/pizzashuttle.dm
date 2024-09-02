@@ -48,6 +48,7 @@
 	vessel_mass = 900 //YEET
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Pizza Gut" //These names must match
+	known = FALSE
 
 /datum/map_template/shelter/superpose/pizzashuttle
 	shelter_id = "PizzaShuttle"

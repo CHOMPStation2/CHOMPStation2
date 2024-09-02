@@ -511,7 +511,7 @@
 					if(radio)
 						radio.recalculateChannels()
 					return
-				if("Cancel")
+				if("Cancel", null)
 					return
 		else if (istype(W, /obj/item/weapon/card/id) && idaccessible == 0)
 			to_chat(user, "<span class='notice'>[src] is not accepting access modifications at this time.</span>")		// CHOMPEDIT : purdev (spelling fix)

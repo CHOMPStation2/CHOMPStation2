@@ -1,3 +1,10 @@
+/datum/sprite_accessory/tail
+    var/vore_tail_sprite_variant = ""
+    var/belly_variant_when_loaf = FALSE
+    var/fullness_icons = 0
+    var/struggle_anim = FALSE
+    var/bellies_icon_path = 'modular_chomp/icons/mob/vore/Taur_Bellies.dmi' //CHOMPEdit
+
 /datum/riding/taur
 	keytype = /obj/item/weapon/material/twohanded/riding_crop // Crack!
 	nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.

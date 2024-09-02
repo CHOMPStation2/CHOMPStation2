@@ -51,9 +51,9 @@
 	show_vore_fx = client.prefs_vr.show_vore_fx
 	step_mechanics_pref = client.prefs_vr.step_mechanics_pref
 	pickup_pref = client.prefs_vr.pickup_pref
+	allow_mind_transfer = client.prefs_vr.allow_mind_transfer
 
 	//CHOMP Stuff Start
-	allow_mind_transfer = client.prefs_vr.allow_mind_transfer
 	phase_vore = client.prefs_vr.phase_vore
 	latejoin_vore = client.prefs_vr.latejoin_vore
 	latejoin_prey = client.prefs_vr.latejoin_prey
