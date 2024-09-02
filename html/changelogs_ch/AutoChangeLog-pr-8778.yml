@@ -1,0 +1,6 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - balance: "culling of materials happens at 2500 instead of the previous 500"
+  - balance: "material loss is 50% instead of the roughly 22% average of before."
+  - balance: "material loss can happen until a single material remains."
