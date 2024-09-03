@@ -1,172 +1,194 @@
-/* eslint react/no-danger: "off" */
-import { KEY } from 'common/keys';
-import { round, toFixed } from 'common/math';
-import { useState } from 'react';
+/**
+ * @file
+ * @copyright 2020 Aleksej Komarov
+ * @license MIT
+ */
 
-import { useBackend } from '../../backend';
-import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  Input,
-  LabeledList,
-  Section,
-} from '../../components';
-import { Window } from '../../layouts';
+import { isEscape, KEY } from 'common/keys';
+import { classes } from 'common/react';
+import { debounce } from 'common/timer';
+import { KeyboardEvent, SyntheticEvent, useEffect, useRef } from 'react';
 
-const Level = {
-  0: 'Adminhelp',
-  1: 'Mentorhelp',
-  2: 'GM Request',
-};
+import { Box, BoxProps } from './Box';
 
-const LevelColor = {
-  0: 'red',
-  1: 'green',
-  2: 'pink',
-};
+type ConditionalProps =
+  | {
+      /**
+       * Mark this if you want to debounce onInput.
+       *
+       * This is useful for expensive filters, large lists etc.
+       *
+       * Requires `onInput` to be set.
+       */
+      expensive?: boolean;
+      /**
+       * Fires on each key press / value change. Used for searching.
+       *
+       * If it's a large list, consider using `expensive` prop.
+       */
+      onInput: (event: SyntheticEvent<HTMLInputElement>, value: string) => void;
+    }
+  | {
+      /** This prop requires onInput to be set */
+      expensive?: never;
+      onInput?: never;
+    };
 
-const Tag = {
-  example: 'Example',
-};
+type OptionalProps = Partial<{
+  /** Automatically focuses the input on mount */
+  autoFocus: boolean;
+  /** Automatically selects the input value on focus */
+  autoSelect: boolean;
+  /** The class name of the input */
+  className: string;
+  /** Disables the input */
+  disabled: boolean;
+  /** Mark this if you want the input to be as wide as possible */
+  fluid: boolean;
+  /** The maximum length of the input value */
+  maxLength: number;
+  /** Mark this if you want to use a monospace font */
+  monospace: boolean;
+  /** Fires when user is 'done typing': Clicked out, blur, enter key */
+  onChange: (event: SyntheticEvent<HTMLInputElement>, value: string) => void;
+  /** Fires once the enter key is pressed */
+  onEnter?: (event: SyntheticEvent<HTMLInputElement>, value: string) => void;
+  /** Fires once the escape key is pressed */
+  onEscape: (event: SyntheticEvent<HTMLInputElement>) => void;
+  /** The placeholder text when everything is cleared */
+  placeholder: string;
+  /** Clears the input value on enter */
+  selfClear: boolean;
+  /** The state variable of the input. */
+  value: string | number;
+}>;
 
-const State = {
-  open: 'Open',
-  resolved: 'Resolved',
-  closed: 'Closed',
-  unknown: 'Unknown',
-};
+type Props = OptionalProps & ConditionalProps & BoxProps;
 
-type Data = {
-  id: number;
-  title: string;
-  name: string;
-  ticket_ref: string;
-  state: string;
-  level: number;
-  handler: string;
-  opened_at: number;
-  closed_at: number;
-  opened_at_date: string;
-  closed_at_date: string;
-  actions: string;
-  log: string[];
-};
+export function toInputValue(value: string | number | undefined) {
+  return typeof value !== 'number' && typeof value !== 'string'
+    ? ''
+    : String(value);
+}
 
-window.addEventListener('keydown', (event) => {
-  console.log(event);
-});
+const inputDebounce = debounce((onInput: () => void) => onInput(), 250);
 
-export const Ticket = (props) => {
-  const { act, data } = useBackend<Data>();
-  const [ticketChat, setTicketChat] = useState('');
+/**
+ * ### Input
+ * A basic text input which allow users to enter text into a UI.
+ * > Input does not support custom font size and height due to the way
+ * > it's implemented in CSS. Eventually, this needs to be fixed.
+ */
+export function Input(props: Props) {
   const {
-    id,
-    name,
-    ticket_ref,
-    state,
-    level,
-    handler,
-    opened_at,
-    closed_at,
-    opened_at_date,
-    closed_at_date,
-    actions,
-    log,
-  } = data;
+    autoFocus,
+    autoSelect,
+    className,
+    disabled,
+    expensive,
+    fluid,
+    maxLength,
+    monospace,
+    onChange,
+    onEnter,
+    onEscape,
+    onInput,
+    placeholder,
+    selfClear,
+    value,
+    ...rest
+  } = props;
+
+  // The ref to the input field
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  let editing = false;
+
+  function handleInput(event: SyntheticEvent<HTMLInputElement>) {
+    if (!onInput) return;
+    editing = true;
+
+    const value = event.currentTarget?.value;
+
+    if (expensive) {
+      inputDebounce(() => onInput(event, value));
+    } else {
+      onInput(event, value);
+    }
+  }
+
+  function handleKeyDown(event: KeyboardEvent<HTMLInputElement>) {
+    if (event.key === KEY.Enter) {
+      onEnter?.(event, event.currentTarget.value);
+      if (selfClear) {
+        event.currentTarget.value = '';
+      } else {
+        event.currentTarget.blur();
+        onChange?.(event, event.currentTarget.value);
+      }
+
+      return;
+    }
+
+    if (isEscape(event.key)) {
+      onEscape?.(event);
+
+      event.currentTarget.value = toInputValue(value);
+      event.currentTarget.blur();
+    }
+  }
+
+  /** Focuses the input on mount */
+  useEffect(() => {
+    const input = inputRef.current;
+    if (!input) return;
+
+    const newValue = toInputValue(value);
+
+    if (input.value !== newValue) input.value = newValue;
+
+    if (!autoFocus && !autoSelect) return;
+
+    setTimeout(() => {
+      input.focus();
+      editing = true;
+
+      if (autoSelect) {
+        input.select();
+      }
+    }, 1);
+  }, []);
+
+  useEffect(() => {
+    const input = inputRef.current;
+    if (!input || editing) return;
+
+    const newValue = toInputValue(value);
+
+    if (input.value !== newValue) input.value = newValue;
+  });
+
   return (
-    <Window width={900} height={600}>
-      <Window.Content scrollable>
-        <Section
-          title={'Ticket #' + id}
-          buttons={
-            <Box nowrap>
-              <Button icon="pen" onClick={() => act('retitle')}>
-                Rename Ticket
-              </Button>
-              <Button onClick={() => act('legacy')}>Legacy UI</Button>
-              <Button color={LevelColor[level]}>{Level[level]}</Button>
-            </Box>
-          }
-        >
-          <LabeledList>
-            <LabeledList.Item label="Ticket ID">
-              #{id}: <div dangerouslySetInnerHTML={{ __html: name }} />
-            </LabeledList.Item>
-            <LabeledList.Item label="Type">{Level[level]}</LabeledList.Item>
-            <LabeledList.Item label="State">{State[state]}</LabeledList.Item>
-            <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
-            {State[state] === State.open ? (
-              <LabeledList.Item label="Opened At">
-                {opened_at_date +
-                  ' (' +
-                  toFixed(round((opened_at / 600) * 10, 0) / 10, 1) +
-                  ' minutes ago.)'}
-              </LabeledList.Item>
-            ) : (
-              <LabeledList.Item label="Closed At">
-                {closed_at_date +
-                  ' (' +
-                  toFixed(round((closed_at / 600) * 10, 0) / 10, 1) +
-                  ' minutes ago.)'}
-                <Button onClick={() => act('reopen')}>Reopen</Button>
-              </LabeledList.Item>
-            )}
-            <LabeledList.Item label="Actions">
-              <div dangerouslySetInnerHTML={{ __html: actions }} />
-            </LabeledList.Item>
-            <LabeledList.Item label="Log" />
-          </LabeledList>
-          <Divider />
-          <Flex direction="column">
-            <Flex.Item>
-              {Object.keys(log)
-                .slice(0)
-                .map((L, i) => (
-                  <div key={i} dangerouslySetInnerHTML={{ __html: log[L] }} />
-                ))}
-            </Flex.Item>
-            <Divider />
-            <Flex.Item>
-              <Flex>
-                <Flex.Item grow>
-                  <Input
-                    autoFocus
-                    autoSelect
-                    fluid
-                    placeholder="Enter a message..."
-                    value={ticketChat}
-                    onInput={(e, value: string) => setTicketChat(value)}
-                    onKeyDown={(e) => {
-                      if (KEY.Enter === e.key) {
-                        act('send_msg', {
-                          msg: ticketChat,
-                          ticket_ref: ticket_ref,
-                        });
-                        setTicketChat('');
-                      }
-                    }}
-                  />
-                </Flex.Item>
-                <Flex.Item>
-                  <Button
-                    onClick={() => {
-                      act('send_msg', {
-                        msg: ticketChat,
-                        ticket_ref: ticket_ref,
-                      });
-                      setTicketChat('');
-                    }}
-                  >
-                    Send
-                  </Button>
-                </Flex.Item>
-              </Flex>
-            </Flex.Item>
-          </Flex>
-        </Section>
-      </Window.Content>
-    </Window>
+    <Box
+      className={classes([
+        'Input',
+        fluid && 'Input--fluid',
+        monospace && 'Input--monospace',
+        className,
+      ])}
+      {...rest}
+    >
+      <div className="Input__baseline">.</div>
+      <input
+        className="Input__input"
+        disabled={disabled}
+        maxLength={maxLength}
+        onBlur={(event) => onChange?.(event, event.target.value)}
+        onChange={handleInput}
+        onKeyDown={handleKeyDown}
+        placeholder={placeholder}
+        ref={inputRef}
+      />
+    </Box>
   );
-};
+}
