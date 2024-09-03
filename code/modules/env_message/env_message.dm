@@ -113,8 +113,6 @@ var/global/list/env_messages = list()
 		var/answer = tgui_alert(src, "Do you want to remove your env message?", "Env Message", list("Yes", "No"))
 		if(answer == "Yes")
 			clear_env_message(src.ckey)
-<<<<<<< HEAD
-=======
 
 //GM tool version
 
@@ -126,7 +124,7 @@ var/global/list/env_messages = list()
 /client/proc/create_gm_message()
 	set name = "Map Message - Create"
 	set desc = "Create an ooc message in the environment for other players to see."
-	set category = "EventKit"
+	set category = "Fun.Event Kit" //CHOMPEdit
 
 	if(!check_rights(R_FUN))
 		return
@@ -180,4 +178,3 @@ var/global/list/env_messages = list()
 		if(EM.combined_message == chosen_message)
 			qdel(EM)
 			log_game("[key_name(src)] deleted an Env Message that contained other players' entries at ([EM.x], [EM.y], [EM.z])")
->>>>>>> 61b7a18cc6... Merge pull request #16256 from SatinIsle/gm-messages
