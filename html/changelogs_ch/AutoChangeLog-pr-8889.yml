@@ -1,5 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - qol: "hacktools can now be found in a new NULL contraband crate set"
-  - qol: "hacktools can now hack secure crates and lockers open (but not relock them)"

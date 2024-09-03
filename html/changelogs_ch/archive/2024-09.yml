@@ -11,3 +11,18 @@
   - maptweak: Overhauled the fuel depot and made it spawn randomly in the OM
   - maptweak: Fixed broken door bolts on whiteship II, removed stray door.
   - maptweak: Cybershuttle access fix
+2024-09-03:
+  CHOMPStation2:
+  - qol: hacktools can now be found in a new NULL contraband crate set
+  - qol: hacktools can now hack secure crates and lockers open (but not relock them)
+  - rscadd: added two spice smites; one harmless, one extra spicy
+  FluffMedic:
+  - balance: culling of materials happens at 2500 instead of the previous 500
+  - balance: material loss is 50% instead of the roughly 22% average of before.
+  - balance: material loss can happen until a single material remains.
+  - balance: Illell have normal pain and burn mods
+  TheCaramelion:
+  - rscadd: Re-Enabled wormhole event
+  - rscadd: Wormholes have a chance to pick a belly as an exit
+  - qol: Wormholes won't throw you into Sif anymore
+  - rscadd: Phobia traits actually make you fear

@@ -1,6 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - rscadd: "Re-Enabled wormhole event"
-  - rscadd: "Wormholes have a chance to pick a belly as an exit"
-  - qol: "Wormholes won't throw you into Sif anymore"
