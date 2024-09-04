@@ -48,6 +48,7 @@
 	return ..()
 
 /obj/machinery/food_replicator/attack_hand(mob/user as mob)
+	add_fingerprint(user)
 	if(stat & (BROKEN|NOPOWER))
 		return
 
@@ -68,6 +69,10 @@
 		if(!choice || printing || (stat & (BROKEN|NOPOWER)))
 			return
 
+		if(!container)
+			to_chat(user, SPAN_WARNING("There is no container!"))
+			return
+
 		if(container && container.reagents)
 			if(!container.reagents.has_reagent("nutriment", (print_cost*efficiency)))
 				playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
@@ -81,6 +86,9 @@
 			update_use_power(USE_POWER_ACTIVE)
 			printing = TRUE
 			update_icon()
+
+			if(product_path == /obj/item/weapon/reagent_containers/food/snacks/donkpocket/ascended)
+				self_destruct()
 
 			visible_message(SPAN_NOTICE("\The [src] begins to shape a nutriment slurry."))
 
@@ -151,9 +159,11 @@
 
 	icon_state = initial(icon_state)
 
+	if(stat & BROKEN)
+		icon_state = "destroyed"
 	if(panel_open)
 		add_overlay("panel_open")
-	if(stat & NOPOWER)
+	if(stat & NOPOWER|EMPED)
 		add_overlay("poweroff")
 	if(printing)
 		add_overlay("printing")
@@ -169,19 +179,17 @@
 		use_power = USE_POWER_IDLE
 
 /obj/machinery/food_replicator/RefreshParts()
-	var/cap_rating = 0
-	var/man_rating = 0
+    var/cap_rating = 0
+    var/man_rating = 0
 
-	for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)
-		cap_rating += C.rating
-	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
-		man_rating += M.rating
+    for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)
+        cap_rating += C.rating
+    for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+        man_rating += M.rating
 
-	if(man_rating > 0)
-		efficiency = 6 / man_rating
-	else
-		efficiency = 3
-	speed = cap_rating / 2
+    efficiency = (man_rating > 0) ? 6 / man_rating : 3
+    speed = cap_rating / 2
+
 
 /obj/machinery/food_replicator/verb/eject_beaker()
 	set name = "Eject Beaker"
@@ -201,3 +209,16 @@
 		container = null
 		return TRUE
 	return FALSE
+
+/obj/machinery/food_replicator/proc/self_destruct()
+	visible_message(SPAN_WARNING("Whirrs and spouts, starting to heat up!"))
+	playsound(src, pick('sound/effects/Glassbr1.ogg', 'sound/effects/Glassbr2.ogg', 'sound/effects/Glassbr3.ogg'), 50, 1)
+
+	message_admins("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]")
+	log_game("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)", 1)
+
+	sleep(6 SECONDS) // GET OUT, GET OUT
+	stat = BROKEN
+	update_icon()
+	explosion(src, 0, 0, 2)
+	return
