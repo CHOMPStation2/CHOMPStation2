@@ -26,3 +26,10 @@
   - rscadd: Wormholes have a chance to pick a belly as an exit
   - qol: Wormholes won't throw you into Sif anymore
   - rscadd: Phobia traits actually make you fear
+2024-09-04:
+  CHOMPStation2:
+  - qol: filled in the public teleporter sprite with an alpha layer to make it easier
+      to use them
+  - qol: samples have a more useful description, and are now safer to handle (container
+      still advised) with voidsuits but can have other effects besides just burning
+      your hands

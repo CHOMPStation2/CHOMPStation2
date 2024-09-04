@@ -1,4 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - qol: "filled in the public teleporter sprite with an alpha layer to make it easier to use them"

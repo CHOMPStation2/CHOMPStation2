@@ -1,4 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - qol: "samples have a more useful description, and are now safer to handle (container still advised) with voidsuits but can have other effects besides just burning your hands"
