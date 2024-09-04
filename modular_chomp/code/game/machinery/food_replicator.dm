@@ -82,13 +82,21 @@
 			container.reagents.remove_reagent("nutriment", (print_cost*efficiency))
 
 			var/product_path = products[choice]
+			var/obj/item/weapon/reagent_containers/foodItem
 
 			update_use_power(USE_POWER_ACTIVE)
 			printing = TRUE
 			update_icon()
 
-			if(product_path == /obj/item/weapon/reagent_containers/food/snacks/donkpocket/ascended)
-				self_destruct()
+			if(product_path)
+				foodItem = new product_path(src)
+
+				if(istype(foodItem, /obj/item/weapon/reagent_containers/food/snacks/donkpocket))
+					var/obj/item/weapon/reagent_containers/food/snacks/donkpocket/donkp = foodItem
+					donkp.heat()
+
+				if(foodItem.reagents.has_reagent("supermatter"))
+					self_destruct()
 
 			visible_message(SPAN_NOTICE("\The [src] begins to shape a nutriment slurry."))
 
@@ -102,8 +110,8 @@
 			if(!src || (stat & (BROKEN|NOPOWER)))
 				return
 
-			if(product_path)
-				new product_path(get_turf(src))
+			if(foodItem)
+				foodItem.forceMove(get_turf(src))
 
 	else
 		to_chat(user, SPAN_WARNING("There is no food to replicate!"))
