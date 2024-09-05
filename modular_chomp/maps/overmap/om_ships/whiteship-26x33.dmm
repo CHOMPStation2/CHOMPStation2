@@ -1774,10 +1774,6 @@
 /area/shuttle/whiteshipOM2)
 "RV" = (
 /obj/structure/table/steel_reinforced,
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/structure/cable/green,
 /obj/random/maintenance,
 /obj/random/maintenance,
@@ -1791,6 +1787,12 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green,
+/obj/machinery/power/apc/hyper{
+	dir = 4;
+	pixel_y = 0;
+	pixel_x = 26;
+	locked = 0
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/whiteshipOM2)
 "St" = (
