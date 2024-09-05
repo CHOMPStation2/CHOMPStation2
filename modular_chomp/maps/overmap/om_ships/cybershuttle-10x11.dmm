@@ -206,6 +206,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
+"M" = (
+/obj/machinery/photocopier/faxmachine{
+	department = "CyberShuttle"
+	},
+/obj/structure/table/survival_pod,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
 "Q" = (
 /obj/machinery/ion_engine{
 	dir = 1
@@ -368,7 +375,7 @@ j
 a
 D
 d
-g
+M
 k
 V
 R

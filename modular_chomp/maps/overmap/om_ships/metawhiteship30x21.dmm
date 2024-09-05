@@ -682,6 +682,9 @@
 /obj/item/weapon/pen,
 /obj/item/device/camera,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/photocopier/faxmachine{
+	department = "Metamaterial White Ship"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/bridge)
 "qX" = (
@@ -1263,7 +1266,7 @@
 "Gd" = (
 /obj/structure/cable/yellow,
 /obj/item/weapon/tool/wrench,
-/obj/machinery/power/port_gen/pacman,
+/obj/machinery/power/port_gen/pacman/super,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 6
 	},
@@ -1531,6 +1534,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
+	},
+/obj/item/stack/material/uranium{
+	amount = 25
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/metawhiteship/eng)
