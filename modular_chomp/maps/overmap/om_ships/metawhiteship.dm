@@ -64,6 +64,7 @@
 					/area/shuttle/metawhiteship/eng
 					)
 	defer_initialisation = TRUE //We're not loaded until an admin does it
+	fuel_consumption = 1.5
 
 // The 'ship'
 /obj/effect/overmap/visitable/ship/landable/metawhiteship

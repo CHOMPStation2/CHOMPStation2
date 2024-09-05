@@ -337,7 +337,8 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/machinery/power/apc/super{
 	dir = 4;
-	pixel_x = 26
+	pixel_x = 26;
+	locked = 0
 	},
 /obj/structure/cable/blue,
 /turf/simulated/floor/tiled/old_tile/red,

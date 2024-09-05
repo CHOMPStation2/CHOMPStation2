@@ -1185,6 +1185,21 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/shuttle/plating/airless,
 /area/sc_away/fueldepot)
+"da" = (
+/obj/structure/cryofeed,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006;
+	req_access = list(5)
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/sc_away/fueldepotspawn)
 "ec" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
@@ -1262,7 +1277,9 @@
 /turf/space,
 /area/sc_away/fueldepot)
 "iF" = (
-/turf/simulated/floor/tiled/techmaint,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/sc_away/fueldepotspawn)
 "ja" = (
@@ -1453,6 +1470,10 @@
 /obj/effect/landmark{
 	name = "JoinLateFuelDepot"
 	},
+/obj/machinery/computer/cryopod{
+	pixel_x = 32;
+	pixel_y = 0
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/sc_away/fueldepotspawn)
 "AT" = (
@@ -1490,15 +1511,18 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/sc_away/fueldepotspawn)
 "BI" = (
-/obj/structure/bed/padded,
-/obj/effect/landmark{
-	name = "JoinLateFuelDepot"
+/obj/machinery/cryopod{
+	quiet = 1
 	},
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
 	},
-/turf/simulated/floor/tiled/techmaint,
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec/raised,
 /area/sc_away/fueldepotspawn)
 "DC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -1666,7 +1690,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/sc_away/fueldepotspawn)
 "LN" = (
-/obj/machinery/gear_dispenser/suit/autolok,
+/obj/machinery/gear_dispenser/suit_fancy/autolok,
 /turf/simulated/floor/tiled/techmaint,
 /area/sc_away/fueldepotspawn)
 "MO" = (
@@ -1704,6 +1728,9 @@
 "QT" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/effect/landmark{
+	name = "JoinLateFuelDepot"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/sc_away/fueldepotspawn)
@@ -12972,7 +12999,7 @@ rV
 Ho
 rV
 rV
-rV
+da
 rV
 aa
 ay

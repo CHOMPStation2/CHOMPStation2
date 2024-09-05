@@ -602,6 +602,8 @@
 	dir = 8
 	},
 /obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/device/xenoarch_multi_tool,
+/obj/item/weapon/pickaxe/excavationdrill,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/whiteshipOM2)
 "tb" = (
@@ -1290,6 +1292,9 @@
 /obj/machinery/chem_master{
 	pixel_x = -7
 	},
+/obj/machinery/photocopier/faxmachine{
+	department = "CyberShuttle"
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/whiteshipOM2)
 "Ij" = (
@@ -1335,6 +1340,9 @@
 /obj/item/weapon/pen{
 	pixel_x = 4;
 	pixel_y = 4
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "White Ship Mk II"
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/whiteshipOM2)
@@ -1671,7 +1679,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 8
 	},
-/obj/machinery/suspension_gen,
+/obj/machinery/suspension_gen{
+	req_access = null
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/whiteshipOM2)
 "QC" = (
@@ -1764,10 +1774,6 @@
 /area/shuttle/whiteshipOM2)
 "RV" = (
 /obj/structure/table/steel_reinforced,
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/structure/cable/green,
 /obj/random/maintenance,
 /obj/random/maintenance,
@@ -1781,6 +1787,12 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green,
+/obj/machinery/power/apc/hyper{
+	dir = 4;
+	pixel_y = 0;
+	pixel_x = 26;
+	locked = 0
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/whiteshipOM2)
 "St" = (

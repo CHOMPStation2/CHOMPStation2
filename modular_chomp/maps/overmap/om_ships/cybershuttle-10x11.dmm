@@ -150,7 +150,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	locked = 0
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
@@ -204,6 +205,13 @@
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 1
 	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"M" = (
+/obj/machinery/photocopier/faxmachine{
+	department = "CyberShuttle"
+	},
+/obj/structure/table/survival_pod,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "Q" = (
@@ -368,7 +376,7 @@ j
 a
 D
 d
-g
+M
 k
 V
 R
