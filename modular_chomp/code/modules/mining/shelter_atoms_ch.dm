@@ -185,9 +185,10 @@
 	set name = "Reset Active Pod"
 	set desc = "Resets the pod back to factory settings."
 	set category = "Object"
-	template_id = null
-	template = null // Important to reset both, otherwise the template cannot be reset once the pod has been deployed.
-	to_chat(usr, span_notice("The pod settings have been reset."))
+	if(!used)
+		template_id = null
+		template = null // Important to reset both, otherwise the template cannot be reset once the pod has been deployed.
+		to_chat(usr, span_notice("You reset the pod's selection."))
 
 /obj/item/device/survivalcapsule/superpose/shuttle
 	name = "superposed surfluid shuttle capsule"
@@ -208,12 +209,4 @@
 			template_id = answer
 			unique_id = answer
 			return
-	..()
-
-/obj/item/device/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/pen) && !used)
-		template_id = null
-		unique_id = null
-		template = null
-		to_chat(user, SPAN_NOTICE("You reset the pod's selection."))
 	..()
