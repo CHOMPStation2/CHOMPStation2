@@ -1,0 +1,7 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - qol: "Superposed pods can be rightclicked to be reset now instead of needing a pen"
+  - balance: "Buffed the metawhiteship's generator to be a superpacman"
+  - balance: "Added a fuel cost to the superposed ship's short jumps"
+  - maptweak: "Fixed a wiring issue in the fuel depot"
