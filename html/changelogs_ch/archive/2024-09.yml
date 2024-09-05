@@ -33,3 +33,6 @@
   - qol: samples have a more useful description, and are now safer to handle (container
       still advised) with voidsuits but can have other effects besides just burning
       your hands
+2024-09-05:
+  Kashargul:
+  - bugfix: description label of the bellyrub target in examine
