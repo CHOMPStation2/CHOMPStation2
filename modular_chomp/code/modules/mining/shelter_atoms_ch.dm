@@ -188,6 +188,7 @@
 	if(!used)
 		template_id = null
 		template = null // Important to reset both, otherwise the template cannot be reset once the pod has been deployed.
+		unique_id = null
 		to_chat(usr, span_notice("You reset the pod's selection."))
 
 /obj/item/device/survivalcapsule/superpose/shuttle
