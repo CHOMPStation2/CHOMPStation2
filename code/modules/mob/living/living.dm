@@ -1403,7 +1403,16 @@
 
 /mob/living/verb/mob_sleep()
 	set name = "Sleep"
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC"
+
+	if(istype(src, /mob/living/simple_mob))
+		to_chat(src, SPAN_NOTICE("Sleeping is currently disabled on simple mobs due to a bug."))
+		return
+
+>>>>>>> cd305417dd... Merge pull request #16271 from SatinIsle/no-sleep-for-u
 	if(!toggled_sleeping && alert(src, "Are you sure you wish to go to sleep? You will snooze until you use the Sleep verb again.", "Sleepy Time", "No", "Yes") == "No")
 		return
 	toggled_sleeping = !toggled_sleeping
