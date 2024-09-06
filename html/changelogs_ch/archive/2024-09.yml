@@ -36,3 +36,10 @@
 2024-09-05:
   Kashargul:
   - bugfix: description label of the bellyrub target in examine
+2024-09-06:
+  tacoguy7765093:
+  - qol: Superposed pods can be rightclicked to be reset now instead of needing a
+      pen
+  - balance: Buffed the metawhiteship's generator to be a superpacman
+  - balance: Added a fuel cost to the superposed ship's short jumps
+  - maptweak: Fixed a wiring issue in the fuel depot
