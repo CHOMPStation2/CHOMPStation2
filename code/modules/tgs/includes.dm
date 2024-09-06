@@ -14,7 +14,7 @@
 
 #include "v5\_defines.dm"
 #include "v5\api.dm"
-//# include "v5\api_vgs.dm" //VOREStation Edit - Vgs //CHOMPRemove
+#include "v5\api_vgs.dm" //VOREStation Edit - Vgs
 #include "v5\bridge.dm"
 #include "v5\chunking.dm"
 #include "v5\commands.dm"
