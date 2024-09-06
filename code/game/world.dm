@@ -678,7 +678,13 @@ var/failed_old_db_connections = 0
 	//CHOMPEdit End
 	return 1
 
+<<<<<<< HEAD
 /*/proc/setup_database_connection() CHOMPEdit TGSQL
+=======
+/proc/setup_database_connection()
+	if(!config.sql_enabled)
+		return 0
+>>>>>>> 87dea05235... Merge pull request #16212 from ShadowLarkens/fuck_sql
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
@@ -726,7 +732,13 @@ var/failed_old_db_connections = 0
 	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
+<<<<<<< HEAD
 /*/proc/setup_old_database_connection() //CHOMPStation TGSQL
+=======
+/proc/setup_old_database_connection()
+	if(!config.sql_enabled)
+		return 0
+>>>>>>> 87dea05235... Merge pull request #16212 from ShadowLarkens/fuck_sql
 
 	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
