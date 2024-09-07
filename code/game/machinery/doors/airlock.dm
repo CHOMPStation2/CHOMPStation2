@@ -1014,9 +1014,22 @@ About the new airlock wires panel:
 		if(icon_state == "door_closed" && arePowerSystemsOn())
 			flick("door_deny", src)
 		playsound(src, knock_hammer_sound, 50, 0, 3)
+<<<<<<< HEAD
 	else if(arePowerSystemsOn()) //ChompEDIT - removed intent check
 		src.visible_message("[user] presses the door bell on \the [src].", "\The [src]'s bell rings.")
 		src.add_fingerprint(user)
+=======
+	else if(arePowerSystemsOn() && user.a_intent == I_HELP)
+		if(isElectrified())
+			src.visible_message("[user] presses the door bell on \the [src], making it violently spark!", "\The [src] sparks!")
+			src.add_fingerprint(user)
+			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+			s.set_up(5, 1, src)
+			s.start()
+		else
+			src.visible_message("[user] presses the door bell on \the [src].", "\The [src]'s bell rings.")
+			src.add_fingerprint(user)
+>>>>>>> 38f1703110... Merge pull request #16257 from Darlantanis/Aug2024Fixes2
 		if(icon_state == "door_closed")
 			flick("door_deny", src)
 		playsound(src, knock_sound, 50, 0, 3)
