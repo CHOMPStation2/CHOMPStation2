@@ -64,12 +64,18 @@
 	if(!ishuman(src.loc))				//CHOMP Addition, this IF block.
 		return ..(freq, level)		//CHOMP Addition end
 	if (aiOverride)
+<<<<<<< HEAD
 		playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
+=======
+>>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 		return ..(freq, level)
 	if(ishuman(src.loc))
 		var/mob/living/carbon/human/H = src.loc
 		if(H.l_ear == src || H.r_ear == src)
+<<<<<<< HEAD
 			playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
+=======
+>>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 			return ..(freq, level)
 	return -1
 

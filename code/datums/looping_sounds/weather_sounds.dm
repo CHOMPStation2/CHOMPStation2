@@ -1,6 +1,10 @@
 /datum/looping_sound/weather
+<<<<<<< HEAD
 	pref_check = /datum/client_preference/weather_sounds
 	volume_chan = VOLUME_CHANNEL_WEATHER // CHOMPEdit - Weather Volume Channel
+=======
+	pref_check = /datum/preference/toggle/weather_sounds
+>>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 
 // CHOMPEdit: Blanket replace all wind with this, for now, in lieue of a snowstorm-specific wind
 /datum/looping_sound/weather/outside_blizzard
@@ -113,6 +117,7 @@
 		'sound/effects/weather/downpour/rainheavy.ogg' = 1,
 		'sound/effects/weather/downpour/rainheavy2.ogg' = 1
 		)
+<<<<<<< HEAD
 	mid_length = 35 SECONDS
 
 /datum/looping_sound/weather/rainextreme
@@ -124,3 +129,13 @@
 	mid_sounds = 'sound/effects/weather/downpour/rainindoors.ogg'
 	mid_length = 24 SECONDS
 //CHOMPEDIT end
+=======
+	mid_length = 15 SECONDS
+	start_sound = 'sound/effects/weather/indoorrain_start.ogg'
+	start_length = 13 SECONDS
+	end_sound = 'sound/effects/weather/indoorrain_end.ogg'
+	volume = 20 //Sound is already quieter in file
+
+/datum/looping_sound/weather/rain/indoors/heavy
+	volume = 40
+>>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
