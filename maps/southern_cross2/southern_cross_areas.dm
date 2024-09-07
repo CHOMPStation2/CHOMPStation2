@@ -2776,8 +2776,17 @@ End Chompstation Edit*/
     name = "\improper Quantum Pad Checkpoint"
     icon_state = "security"
 
+/area/SouthernCrossV2/Security/Quantum_Pad_Storage
+    name = "\improper Quantum Pad Storage"
+    icon_state = "security"
+
 /area/SouthernCrossV2/Security/Exploration_Ship_Bay
     name = "\improper Exploration Ship Bay"
+    icon_state = "security"
+    ambience = AMBIENCE_HANGAR
+
+/area/SouthernCrossV2/Security/Exploration_Sling_Shuttle
+    name = "\improper Station Shuttle to Exploration Carrier"
     icon_state = "security"
     ambience = AMBIENCE_HANGAR
 
