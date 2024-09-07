@@ -735,6 +735,22 @@
 /obj/item/weapon/towel/random,
 /turf/simulated/floor/wood,
 /area/shuttle/whiteshipOM2)
+"vN" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM2)
 "wp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/firedoor/glass,
@@ -1292,9 +1308,6 @@
 /obj/machinery/chem_master{
 	pixel_x = -7
 	},
-/obj/machinery/photocopier/faxmachine{
-	department = "CyberShuttle"
-	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/whiteshipOM2)
 "Ij" = (
@@ -1406,6 +1419,11 @@
 	},
 /obj/effect/shuttle_landmark/shuttle_initializer/whiteship2,
 /obj/effect/overmap/visitable/ship/landable/whiteship2,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
 "Jm" = (
@@ -1421,6 +1439,11 @@
 	open_layer = 2
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
 "JG" = (
@@ -1564,6 +1587,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
 "MR" = (
@@ -1655,6 +1683,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/whiteshipOM2)
 "Qp" = (
@@ -1695,6 +1728,11 @@
 	name = "remote blast shielding control";
 	pixel_x = -1;
 	pixel_y = -26
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/wood,
 /area/shuttle/whiteshipOM2)
@@ -2020,6 +2058,11 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
 "VY" = (
@@ -2845,7 +2888,7 @@ sH
 yt
 Pz
 Cm
-Cm
+vN
 VJ
 RV
 EN
