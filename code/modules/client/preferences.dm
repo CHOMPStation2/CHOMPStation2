@@ -459,19 +459,11 @@ var/list/preferences_datums = list()
 
 	var/default
 	var/list/charlist = list()
-<<<<<<< HEAD
-	var/default //VOREStation edit
-	for(var/i = 1, i <= CONFIG_GET(number/character_slots), i++) // CHOMPEdit
-		S.cd = "/character[i]"
-		S["real_name"] >> name
-		S["nickname"] >> nickname //vorestation edit
-=======
 
 	for(var/i in 1 to config.character_slots)
 		var/list/save_data = savefile.get_entry("character[i]", list())
 		var/name = save_data["real_name"]
 		var/nickname = save_data["nickname"]
->>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 		if(!name)
 			name = "[i] - \[Unused Slot\]"
 		else if(i == default_slot)
@@ -506,19 +498,12 @@ var/list/preferences_datums = list()
 		return
 
 	var/list/charlist = list()
-<<<<<<< HEAD
-	for(var/i = 1, i <= CONFIG_GET(number/character_slots), i++) // CHOMPEdit
-		S.cd = "/character[i]"
-		S["real_name"] >> name
-		S["nickname"] >> nickname //vorestation edit
-=======
 
 	for(var/i in 1 to config.character_slots)
 		var/list/save_data = savefile.get_entry("character[i]", list())
 		var/name = save_data["real_name"]
 		var/nickname = save_data["nickname"]
 
->>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 		if(!name)
 			name = "[i] - \[Unused Slot\]"
 		else if(i == default_slot)
