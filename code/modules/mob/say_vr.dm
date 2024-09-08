@@ -203,14 +203,14 @@
 				continue
 			if(src.client && M && !(get_z(src) == get_z(M)))
 				message = "<span class='multizsay'>[message]</span>"
-			if(isobserver(M) && (!(iM.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || (isbelly(M.loc) && src == M.loc:owner)) || \
+			if(isobserver(M) && (!(M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || (isbelly(M.loc) && src == M.loc:owner)) || \
 			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else
 				spawn(0)
 					M.show_message(message, 2)
-					if(M.Adjacent(src) && M.read_preference(/datum/preference/toggle/subtle_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
+					if(M.Adjacent(src) && M.is_preference_enabled(/datum/preference/toggle/subtle_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
 						if(voice_sounds_list)	//CHOMPEdit, changes to subtle emotes to use mob voice instead
 							M << sound(pick(voice_sounds_list), volume = 25)
 
@@ -292,22 +292,16 @@
 		else
 			pb = db.pred_body
 			to_chat(pb, "<span class='psay'>The captive mind of \the [M] thinks, \"[message]\"</span>")	//To our pred if dominated brain
-<<<<<<< HEAD
-			if(pb.read_preference(/datum/preference/toggle/subtle_sounds)
+			if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					pb << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
 	else if(M.absorbed && isbelly(M.loc))
 		pb = M.loc.loc
 		to_chat(pb, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")	//To our pred if absorbed
-<<<<<<< HEAD
-		if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+		if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
 			if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 				pb << sound(pick(voice_sounds_list), volume = 25)
-=======
-		if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
-			pb << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 		f = TRUE
 
 	if(pb)	//We are prey, let's do the prey thing.
@@ -316,27 +310,17 @@
 			if(istype(I, /mob/living/dominated_brain) && I != M)
 				var/mob/living/dominated_brain/db = I
 				to_chat(db, "<span class='psay'>The captive mind of \the [M] thinks, \"[message]\"</span>")	//To any dominated brains in the pred
-<<<<<<< HEAD
-				if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(db.read_preference(/datum/preference/toggle/subtle_sounds))
 					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 						db << sound(pick(voice_sounds_list), volume = 25)
-=======
-				if(db.read_preference(/datum/preference/toggle/subtle_sounds))
-					db << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 				f = TRUE
 		for(var/B in pb.vore_organs)
 			for(var/mob/living/L in B)
 				if(L.absorbed && L != M && L.ckey)
 					to_chat(L, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")	//To any absorbed people in the pred
-<<<<<<< HEAD
-					if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(L.read_preference(/datum/preference/toggle/subtle_sounds))
 						if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 							L << sound(pick(voice_sounds_list), volume = 25)
-=======
-					if(L.read_preference(/datum/preference/toggle/subtle_sounds))
-						L << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 					f = TRUE
 
 	//Let's also check and see if there's anyone inside of us to send the message to.
@@ -344,61 +328,36 @@
 		if(istype(I, /mob/living/dominated_brain))
 			var/mob/living/dominated_brain/db = I
 			to_chat(db, "<span class='psay'><b>\The [M] thinks, \"[message]\"</b></span>")	//To any dominated brains inside us
-<<<<<<< HEAD
-			if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(db.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					db << sound(pick(voice_sounds_list), volume = 25)
-=======
-			if(db.read_preference(/datum/preference/toggle/subtle_sounds))
-				db << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 			f = TRUE
 	for(var/B in M.vore_organs)
 		for(var/mob/living/L in B)
 			if(L.absorbed)
 				to_chat(L, "<span class='psay'><b>\The [M] thinks, \"[message]\"</b></span>")	//To any absorbed people inside us
-<<<<<<< HEAD
-				if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(L.read_preference(/datum/preference/toggle/subtle_sounds))
 					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 						L << sound(pick(voice_sounds_list), volume = 25)
-=======
-				if(L.read_preference(/datum/preference/toggle/subtle_sounds))
-					L << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 				f = TRUE
 
 	if(f)	//We found someone to send the message to
 		if(pb)
 			to_chat(M, "<span class='psay'>You think \"[message]\"</span>")	//To us if we are the prey
-<<<<<<< HEAD
-			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		else
 			to_chat(M, "<span class='psay'><b>You think \"[message]\"</b></span>")	//To us if we are the pred
-			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
-			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears) && \
-			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle))
-				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
-=======
-			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
-				M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
-		else
-			to_chat(M, "<span class='psay'><b>You think \"[message]\"</b></span>")	//To us if we are the pred
-			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
-				M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
-		for (var/mob/G in player_list)
-			if (istype(G, /mob/new_player))
-				continue
-			else if(isobserver(G) &&  G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears && \
-			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle)))
+			else if(isobserver(G) &&  G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
+			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))
 				if(client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) || G.client.holder)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 					to_chat(G, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")
 		log_say(message,M)
 	else		//There wasn't anyone to send the message to, pred or prey, so let's just say it instead and correct our psay just in case.
@@ -438,27 +397,17 @@
 		else
 			pb = db.pred_body
 			to_chat(pb, "<span class='pemote'>\The [M] [message]</span>")	//To our pred if dominated brain
-<<<<<<< HEAD
-			if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					pb << sound(pick(voice_sounds_list), volume = 25)
-=======
-			if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
-				pb << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 			f = TRUE
 
 	else if(M.absorbed && isbelly(M.loc))
 		pb = M.loc.loc
 		to_chat(pb, "<span class='pemote'>\The [M] [message]</span>")	//To our pred if absorbed
-<<<<<<< HEAD
-		if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+		if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
 			if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 				pb << sound(pick(voice_sounds_list), volume = 25)
-=======
-		if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
-			pb << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 		f = TRUE
 
 	if(pb)	//We are prey, let's do the prey thing.
@@ -467,27 +416,17 @@
 			if(istype(I, /mob/living/dominated_brain) && I != M)
 				var/mob/living/dominated_brain/db = I
 				to_chat(db, "<span class='pemote'>\The [M] [message]</span>")	//To any dominated brains in the pred
-<<<<<<< HEAD
-				if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(db.read_preference(/datum/preference/toggle/subtle_sounds))
 					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 						pb << sound(pick(voice_sounds_list), volume = 25)
-=======
-				if(db.read_preference(/datum/preference/toggle/subtle_sounds))
-					db << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 				f = TRUE
 		for(var/B in pb.vore_organs)
 			for(var/mob/living/L in B)
 				if(L.absorbed && L != M && L.ckey)
 					to_chat(L, "<span class='pemote'>\The [M] [message]</span>")	//To any absorbed people in the pred
-<<<<<<< HEAD
-					if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(L.read_preference(/datum/preference/toggle/subtle_sounds))
 						if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 							L << sound(pick(voice_sounds_list), volume = 25)
-=======
-					if(L.read_preference(/datum/preference/toggle/subtle_sounds))
-						L << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 					f = TRUE
 
 	//Let's also check and see if there's anyone inside of us to send the message to.
@@ -495,49 +434,30 @@
 		if(istype(I, /mob/living/dominated_brain))
 			var/mob/living/dominated_brain/db = I
 			to_chat(db, "<span class='pemote'><b>\The [M] [message]</b></span>")	//To any dominated brains inside us
-<<<<<<< HEAD
-			if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(db.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					db << sound(pick(voice_sounds_list), volume = 25)
-=======
-			if(db.read_preference(/datum/preference/toggle/subtle_sounds))
-				db << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 			f = TRUE
 	for(var/B in M.vore_organs)
 		for(var/mob/living/L in B)
 			if(L.absorbed)
 				to_chat(L, "<span class='pemote'><b>\The [M] [message]</b></span>")	//To any absorbed people inside us
-<<<<<<< HEAD
-				if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(L.read_preference(/datum/preference/toggle/subtle_sounds))
 					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 						L << sound(pick(voice_sounds_list), volume = 25)
-=======
-				if(L.read_preference(/datum/preference/toggle/subtle_sounds))
-					L << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 				f = TRUE
 
 	if(f)	//We found someone to send the message to
 		if(pb)
 			to_chat(M, "<span class='pemote'>\The [M] [message]</span>")	//To us if we are the prey
-<<<<<<< HEAD
-			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		else
 			to_chat(M, "<span class='pemote'><b>\The [M] [message]</b></span>")	//To us if we are the pred
-			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
-=======
-			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
-				M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
-		else
-			to_chat(M, "<span class='pemote'><b>\The [M] [message]</b></span>")	//To us if we are the pred
-			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
-				M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
