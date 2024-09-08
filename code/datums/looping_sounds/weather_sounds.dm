@@ -1,10 +1,6 @@
 /datum/looping_sound/weather
-<<<<<<< HEAD
-	pref_check = /datum/client_preference/weather_sounds
-	volume_chan = VOLUME_CHANNEL_WEATHER // CHOMPEdit - Weather Volume Channel
-=======
 	pref_check = /datum/preference/toggle/weather_sounds
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
+	volume_chan = VOLUME_CHANNEL_WEATHER // CHOMPEdit - Weather Volume Channel
 
 // CHOMPEdit: Blanket replace all wind with this, for now, in lieue of a snowstorm-specific wind
 /datum/looping_sound/weather/outside_blizzard

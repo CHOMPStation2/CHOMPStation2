@@ -168,13 +168,8 @@
 
 	// Admins with RLOOC displayed who weren't already in
 	for(var/client/admin in GLOB.admins)
-<<<<<<< HEAD
-		if(!(admin in receivers) && admin.is_preference_enabled(/datum/client_preference/holder/show_rlooc))
-			if(check_rights(R_ADMIN|R_SERVER, FALSE, admin)) //Stop rLOOC showing for retired staff //CHOMPEdit, admins should see LOOC
-=======
 		if(!(admin in receivers) && admin.prefs?.read_preference(/datum/preference/toggle/holder/show_rlooc))
-			if(check_rights(R_SERVER, FALSE, admin)) //Stop rLOOC showing for retired staff
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
+			if(check_rights(R_ADMIN|R_SERVER, FALSE, admin)) //Stop rLOOC showing for retired staff //CHOMPEdit, admins should see LOOC
 				r_receivers |= admin
 
 	msg = GLOB.is_valid_url.Replace(msg,"<span class='linkify'>$1</span>")
