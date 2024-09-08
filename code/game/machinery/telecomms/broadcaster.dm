@@ -420,7 +420,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 
 		// ChompEDIT START - Ghost blacklist for certain spammy radio channels
 		var/list/ghostradio_freq_blacklist = list(ENT_FREQ, BDCM_FREQ)
-		if(istype(R, /mob/observer/dead) && R.is_preference_enabled(/datum/client_preference/ghost_radio) && (connection.frequency in ghostradio_freq_blacklist))
+		if(istype(R, /mob/observer/dead) && R.client?.prefs?.read_preference(/datum/preference/toggle/ghost_radio) && (connection.frequency in ghostradio_freq_blacklist))
 			continue
 		// ChompEDIT END
 
