@@ -133,7 +133,7 @@
 /datum/preference/toggle/belch_noises // Belching noises - pref toggle for 'em
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "BELCH_NOISES"
-	default_value = TRUE
+	default_value = FALSE //CHOMPEdit
 	savefile_identifier = PREFERENCE_PLAYER
 
 /datum/preference/toggle/eating_noises
