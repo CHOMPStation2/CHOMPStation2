@@ -297,8 +297,13 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	//send this msg to all admins
 
 	for(var/client/X in GLOB.admins)
+<<<<<<< HEAD
 //		if(!check_rights(R_ADMIN, 0, X)) //CHOMP Remove let everyone hear the ahelp
 //			continue //CHOMP Remove let everyone hear the ahelp
+=======
+		if(!check_rights(R_ADMIN, 0, X))
+			continue
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 		if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
 			X << 'sound/effects/adminhelp.ogg'
 		window_flash(X)

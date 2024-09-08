@@ -19,11 +19,14 @@
 	S["job_talon_high"]		>> pref.job_talon_high
 	//VOREStation Add End
 	S["player_alt_titles"]	>> pref.player_alt_titles
+<<<<<<< HEAD
 	//CHOMPStation Add
 	S["job_other_low"]		>> pref.job_other_low
 	S["job_other_med"]		>> pref.job_other_med
 	S["job_other_high"]		>> pref.job_other_high
 	//CHOMPStation Add End
+=======
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 
 /datum/category_item/player_setup_item/occupation/save_character(var/savefile/S)
 	S["alternate_option"]	<< pref.alternate_option
@@ -42,11 +45,14 @@
 	S["job_talon_high"]		<< pref.job_talon_high
 	//VOREStation Add End
 	S["player_alt_titles"]	<< pref.player_alt_titles
+<<<<<<< HEAD
 	//CHOMPStation Add
 	S["job_other_low"]		<< pref.job_other_low
 	S["job_other_med"]		<< pref.job_other_med
 	S["job_other_high"]		<< pref.job_other_high
 	//CHOMPStation Add End
+=======
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 
 /datum/category_item/player_setup_item/occupation/sanitize_character()
 	pref.alternate_option	= sanitize_integer(pref.alternate_option, 0, 2, initial(pref.alternate_option))

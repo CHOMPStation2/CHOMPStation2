@@ -25,11 +25,14 @@
 	S["OOC_Notes"]				>> pref.metadata
 	S["OOC_Notes_Likes"]		>> pref.metadata_likes
 	S["OOC_Notes_Disikes"]		>> pref.metadata_dislikes
+<<<<<<< HEAD
 	//CHOMPEdit Start
 	S["OOC_Notes_Maybes"]		>> pref.metadata_maybes
 	S["OOC_Notes_Favs"]			>> pref.metadata_favs
 	S["OOC_Notes_System"]		>> pref.matadata_ooc_style
 	//CHOMPEdit End
+=======
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 
 /datum/category_item/player_setup_item/general/basic/save_character(var/savefile/S)
 	S["real_name"]				<< pref.real_name
@@ -46,11 +49,14 @@
 	S["OOC_Notes"]				<< pref.metadata
 	S["OOC_Notes_Likes"]		<< pref.metadata_likes
 	S["OOC_Notes_Disikes"]		<< pref.metadata_dislikes
+<<<<<<< HEAD
 	//CHOMPEdit Start
 	S["OOC_Notes_Favs"]			<< pref.metadata_favs
 	S["OOC_Notes_Maybes"]		<< pref.metadata_maybes
 	S["OOC_Notes_System"]		<< pref.matadata_ooc_style
 	//CHOMPEdit End
+=======
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 
 /datum/category_item/player_setup_item/general/basic/sanitize_character()
 	pref.age                = sanitize_integer(pref.age, get_min_age(), get_max_age(), initial(pref.age))

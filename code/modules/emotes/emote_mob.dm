@@ -212,6 +212,11 @@
 		var/turf/T = get_turf(src)
 
 		if(!T) return
+<<<<<<< HEAD
+=======
+		if(client)
+			playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/client_preference/emote_sounds)
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 
 		if(client)
 			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/client_preference/say_sounds) //CHOMPEdit - use say prefs instead //ChompEDIT - also ignore walls

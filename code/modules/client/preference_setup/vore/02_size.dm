@@ -34,6 +34,7 @@
 	S["voice_freq"]			>> pref.voice_freq
 	S["voice_sound"]		>> pref.voice_sound
 	S["custom_speech_bubble"]		>> pref.custom_speech_bubble
+<<<<<<< HEAD
 	S["custom_footstep"]	>> pref.custom_footstep // CHOMPEdit
 	S["species_sound"]		>> pref.species_sound  // CHOMPEdit
 
@@ -50,6 +51,19 @@
 	S["custom_footstep"]	<< pref.custom_footstep // CHOMPEdit
 	S["species_sound"]		<< pref.species_sound // CHOMPEdit
 
+=======
+
+/datum/category_item/player_setup_item/vore/size/save_character(var/savefile/S)
+	S["size_multiplier"]	<< pref.size_multiplier
+	S["weight_vr"]			<< pref.weight_vr
+	S["weight_gain"]		<< pref.weight_gain
+	S["weight_loss"]		<< pref.weight_loss
+	S["fuzzy"]				<< pref.fuzzy
+	S["offset_override"]	<< pref.offset_override
+	S["voice_freq"]			<< pref.voice_freq
+	S["voice_sound"]		<< pref.voice_sound
+	S["custom_speech_bubble"]		<< pref.custom_speech_bubble
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 
 /datum/category_item/player_setup_item/vore/size/sanitize_character()
 	pref.weight_vr			= sanitize_integer(pref.weight_vr, WEIGHT_MIN, WEIGHT_MAX, initial(pref.weight_vr))

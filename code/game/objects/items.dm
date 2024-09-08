@@ -366,6 +366,7 @@
 	if(user.client)	user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
 	if(("[slot]" in slot_flags_enumeration) && (slot_flags & slot_flags_enumeration["[slot]"]))
+<<<<<<< HEAD
 		if(equip_sound && !muffled_by_belly(user)) //ChompEDIT
 			playsound(src, equip_sound, 20, preference = /datum/client_preference/pickup_sounds)
 		else if(!muffled_by_belly(user)) //ChompEDIT
@@ -373,6 +374,14 @@
 	else if(slot == slot_l_hand || slot == slot_r_hand)
 		if(!muffled_by_belly(user)) //ChompEDIT
 			playsound(src, pickup_sound, 20, preference = /datum/client_preference/pickup_sounds)
+=======
+		if(equip_sound)
+			playsound(src, equip_sound, 20, preference = /datum/client_preference/pickup_sounds)
+		else
+			playsound(src, drop_sound, 20, preference = /datum/client_preference/pickup_sounds)
+	else if(slot == slot_l_hand || slot == slot_r_hand)
+		playsound(src, pickup_sound, 20, preference = /datum/client_preference/pickup_sounds)
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 	return
 
 // As above but for items being equipped to an active module on a robot.

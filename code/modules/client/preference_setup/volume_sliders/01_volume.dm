@@ -74,7 +74,7 @@
 /datum/volume_panel/tgui_data(mob/user)
 	if(!user.client || !user.client.prefs)
 		return list("error" = TRUE)
-
+	
 	var/list/data = ..()
 	data["volume_channels"] = user.client.prefs.volume_channels
 	return data

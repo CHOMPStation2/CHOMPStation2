@@ -5,8 +5,11 @@
 /datum/category_item/player_setup_item/vore/misc/load_character(var/savefile/S)
 	S["show_in_directory"]		>> pref.show_in_directory
 	S["directory_tag"]			>> pref.directory_tag
+<<<<<<< HEAD
 	S["directory_gendertag"]	>> pref.directory_gendertag // CHOMPStation Edit: Character Directory Update
 	S["directory_sexualitytag"]	>> pref.directory_sexualitytag // CHOMPStation Edit: Character Directory Update
+=======
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 	S["directory_erptag"]		>> pref.directory_erptag
 	S["directory_ad"]			>> pref.directory_ad
 	S["sensorpref"]				>> pref.sensorpref
@@ -18,8 +21,11 @@
 /datum/category_item/player_setup_item/vore/misc/save_character(var/savefile/S)
 	S["show_in_directory"]		<< pref.show_in_directory
 	S["directory_tag"]			<< pref.directory_tag
+<<<<<<< HEAD
 	S["directory_gendertag"]	<< pref.directory_gendertag // CHOMPStation Edit: Character Directory Update
 	S["directory_sexualitytag"]	<< pref.directory_sexualitytag // CHOMPStation Edit: Character Directory Update
+=======
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 	S["directory_erptag"]		<< pref.directory_erptag
 	S["directory_ad"]			<< pref.directory_ad
 	S["sensorpref"]				<< pref.sensorpref

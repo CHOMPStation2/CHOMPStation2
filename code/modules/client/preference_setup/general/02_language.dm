@@ -13,9 +13,12 @@
 	if(islist(pref.alternate_languages))			// Because aparently it may not be?
 		testing("LANGSANI: Loaded from [pref.client]'s character [pref.real_name || "-name not yet loaded-"] savefile: [english_list(pref.alternate_languages || list())]")
 	S["language_prefixes"]	>> pref.language_prefixes
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	S["species"]			>> pref.species
 	//CHOMPEdit End
+=======
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 	//VORE Edit Begin
 	S["preflang"]			>> pref.preferred_language
 	//VORE Edit End

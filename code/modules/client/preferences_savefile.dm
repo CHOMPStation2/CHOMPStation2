@@ -68,7 +68,11 @@
 	S.cd = "/"
 	if(!slot)	slot = default_slot
 	if(slot != SAVE_RESET) // SAVE_RESET will reset the slot as though it does not exist, but keep the current slot for saving purposes.
+<<<<<<< HEAD
 		slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot)) // CHOMPEdit
+=======
+		slot = sanitize_integer(slot, 1, config.character_slots, initial(default_slot))
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 		if(slot != default_slot)
 			default_slot = slot
 			S["default_slot"] << slot
@@ -102,7 +106,11 @@
 	if(!S)					return 0
 	if(!slot)	slot = default_slot
 	if(slot != SAVE_RESET)
+<<<<<<< HEAD
 		slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot)) // CHOMPEdit
+=======
+		slot = sanitize_integer(slot, 1, config.character_slots, initial(default_slot))
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 		if(slot != default_slot)
 			default_slot = slot
 			nif_path = nif_durability = nif_savedata = null //VOREStation Add - Don't copy NIF

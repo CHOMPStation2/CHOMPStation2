@@ -414,11 +414,14 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 
 		// Ghosts hearing all radio chat don't want to hear syndicate intercepts, they're duplicates
 		if(data == DATA_ANTAG && istype(R, /mob/observer/dead) && R.is_preference_enabled(/datum/client_preference/ghost_radio))
+<<<<<<< HEAD
 			continue
 
 		// ChompEDIT START - Ghost blacklist for certain spammy radio channels
 		var/list/ghostradio_freq_blacklist = list(ENT_FREQ, BDCM_FREQ)
 		if(istype(R, /mob/observer/dead) && R.is_preference_enabled(/datum/client_preference/ghost_radio) && (connection.frequency in ghostradio_freq_blacklist))
+=======
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 			continue
 		// ChompEDIT END
 

@@ -303,7 +303,11 @@
 		if(alert)
 			for(var/client/X in GLOB.admins)
 				if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+<<<<<<< HEAD
 					X << 'sound/voice/bcriminal.ogg' //ChompEDIT - back to beepsky
+=======
+					X << 'sound/effects/tones/newplayerping.ogg'
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 				window_flash(X)
 		//VOREStation Edit end.
 

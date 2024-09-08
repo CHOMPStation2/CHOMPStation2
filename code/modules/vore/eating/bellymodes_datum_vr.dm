@@ -29,6 +29,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 	//Person just died in guts!
 	if(L.stat == DEAD)
+<<<<<<< HEAD
 		if(!L.digestion_in_progress) //CHOMPEdit Start
 			if(L.is_preference_enabled(/datum/client_preference/digestion_noises))
 				if(!B.fancy_vore)
@@ -36,6 +37,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 				else
 					SEND_SOUND(L, sound(get_sfx("fancy_death_prey")))
 			B.handle_digestion_death(L)
+=======
+		if(L.is_preference_enabled(/datum/client_preference/digestion_noises))
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 			if(!B.fancy_vore)
 				return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
 			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))

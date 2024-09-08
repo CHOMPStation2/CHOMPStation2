@@ -51,7 +51,11 @@
 
 	pref.lastchangelog	= sanitize_text(pref.lastchangelog, initial(pref.lastchangelog))
 	pref.lastnews		= sanitize_text(pref.lastnews, initial(pref.lastnews))
+<<<<<<< HEAD
 	pref.default_slot	= sanitize_integer(pref.default_slot, 1, CONFIG_GET(number/character_slots), initial(pref.default_slot)) // CHOMPEdit
+=======
+	pref.default_slot	= sanitize_integer(pref.default_slot, 1, config.character_slots, initial(pref.default_slot))
+>>>>>>> c45b3eb4bc... Merge pull request #16279 from ShadowLarkens/revert-16253-reprefs
 
 /datum/category_item/player_setup_item/player_global/settings/content(var/mob/user)
 	. = list()
