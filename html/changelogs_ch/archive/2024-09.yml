@@ -43,3 +43,23 @@
   - balance: Buffed the metawhiteship's generator to be a superpacman
   - balance: Added a fuel cost to the superposed ship's short jumps
   - maptweak: Fixed a wiring issue in the fuel depot
+2024-09-08:
+  CHOMPStation2:
+  - rscadd: New pAI chassis
+  - bugfix: Vox can take shaved beards
+  - rscadd: Vox dino muzzle
+  - rscadd: Allows prometheans to use teshari and vox icon bases
+  - bugfix: AI default laws use the mapset default laws
+  - qol: You can't run yourself over by pulling a vehicle
+  - qol: Buffs space cleaner to match other cleaning methods
+  - bugfix: Formats greatwolf mode_flags correctly
+  - rscadd: Allows more medical equipment to be stored in the medical toolbelt
+  - qol: Climb crates with mouse drag
+  - qol: Check airlock electrification with the doorbell
+  - qol: Med scanners can detect husking
+  - rscadd: Players can spawn with a one-time mindscan
+  tacoguy7765093:
+  - image: Added a new tail, the feathered raptor tail
+  - maptweak: Whiteship mk2 rewiring plus duplicate fax removal
+  - code_imp: Fax machine inits instead of new now, fixes superposed pod fax machines
+      not updating the list.
