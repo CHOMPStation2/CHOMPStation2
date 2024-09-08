@@ -10,49 +10,6 @@
 	name = "Basic"
 	sort_order = 1
 
-<<<<<<< HEAD
-/datum/category_item/player_setup_item/general/basic/load_character(var/savefile/S)
-	S["real_name"]				>> pref.real_name
-	S["nickname"]				>> pref.nickname
-	S["name_is_always_random"]	>> pref.be_random_name
-	S["gender"]					>> pref.biological_gender
-	S["id_gender"]				>> pref.identifying_gender
-	S["age"]					>> pref.age
-	S["bday_month"]				>> pref.bday_month
-	S["bday_day"]				>> pref.bday_day
-	S["last_bday_note"]			>> pref.last_birthday_notification
-	S["bday_announce"]			>> pref.bday_announce
-	S["spawnpoint"]				>> pref.spawnpoint
-	S["OOC_Notes"]				>> pref.metadata
-	S["OOC_Notes_Likes"]		>> pref.metadata_likes
-	S["OOC_Notes_Disikes"]		>> pref.metadata_dislikes
-	//CHOMPEdit Start
-	S["OOC_Notes_Maybes"]		>> pref.metadata_maybes
-	S["OOC_Notes_Favs"]			>> pref.metadata_favs
-	S["OOC_Notes_System"]		>> pref.matadata_ooc_style
-	//CHOMPEdit End
-
-/datum/category_item/player_setup_item/general/basic/save_character(var/savefile/S)
-	S["real_name"]				<< pref.real_name
-	S["nickname"]				<< pref.nickname
-	S["name_is_always_random"]	<< pref.be_random_name
-	S["gender"]					<< pref.biological_gender
-	S["id_gender"]				<< pref.identifying_gender
-	S["age"]					<< pref.age
-	S["bday_month"]				<< pref.bday_month
-	S["bday_day"]				<< pref.bday_day
-	S["last_bday_note"]			<< pref.last_birthday_notification
-	S["bday_announce"]			<< pref.bday_announce
-	S["spawnpoint"]				<< pref.spawnpoint
-	S["OOC_Notes"]				<< pref.metadata
-	S["OOC_Notes_Likes"]		<< pref.metadata_likes
-	S["OOC_Notes_Disikes"]		<< pref.metadata_dislikes
-	//CHOMPEdit Start
-	S["OOC_Notes_Favs"]			<< pref.metadata_favs
-	S["OOC_Notes_Maybes"]		<< pref.metadata_maybes
-	S["OOC_Notes_System"]		<< pref.matadata_ooc_style
-	//CHOMPEdit End
-=======
 /datum/category_item/player_setup_item/general/basic/load_character(list/save_data)
 	pref.real_name						= save_data["real_name"]
 	pref.nickname						= save_data["nickname"]
@@ -68,6 +25,11 @@
 	pref.metadata						= save_data["OOC_Notes"]
 	pref.metadata_likes					= save_data["OOC_Notes_Likes"]
 	pref.metadata_dislikes				= save_data["OOC_Notes_Disikes"]
+	//CHOMPAdd Start
+	pref.metadata_maybes				= save_data["OOC_Notes_Maybes"]
+	pref.metadata_favs					= save_data["OOC_Notes_Favs"]
+	pref.matadata_ooc_style				= save_data["OOC_Notes_System"]
+	//CHOMPAdd End
 
 /datum/category_item/player_setup_item/general/basic/save_character(list/save_data)
 	save_data["real_name"]				= pref.real_name
@@ -84,7 +46,11 @@
 	save_data["OOC_Notes"]				= pref.metadata
 	save_data["OOC_Notes_Likes"]		= pref.metadata_likes
 	save_data["OOC_Notes_Disikes"]		= pref.metadata_dislikes
->>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
+	//CHOMPAdd Start
+	save_data["OOC_Notes_Maybes"]		= pref.metadata_maybes
+	save_data["OOC_Notes_Favs"]			= pref.metadata_favs
+	save_data["OOC_Notes_System"]		= pref.matadata_ooc_style
+	//CHOMPAdd End
 
 /datum/category_item/player_setup_item/general/basic/sanitize_character()
 	pref.age                = sanitize_integer(pref.age, get_min_age(), get_max_age(), initial(pref.age))
