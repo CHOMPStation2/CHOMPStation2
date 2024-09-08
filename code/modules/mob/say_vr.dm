@@ -355,9 +355,15 @@
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
+<<<<<<< HEAD
 			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears) && \
 			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle))
 				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
+=======
+			else if(isobserver(G) &&  G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
+			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))
+				if(client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) || G.client.holder)
+>>>>>>> 5e7f3912f1... Merge pull request #16283 from Kashargul/prevFail
 					to_chat(G, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")
 		log_say(message,M)
 	else		//There wasn't anyone to send the message to, pred or prey, so let's just say it instead and correct our psay just in case.
@@ -461,9 +467,15 @@
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
+<<<<<<< HEAD
 			else if(isobserver(G) && G.is_preference_enabled(/datum/client_preference/ghost_ears && \
 			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle)))
 				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
+=======
+			else if(isobserver(G) && G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
+			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))
+				if(client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) || G.client.holder)
+>>>>>>> 5e7f3912f1... Merge pull request #16283 from Kashargul/prevFail
 					to_chat(G, "<span class='pemote'>\The [M] [message]</span>")
 		log_say(message,M)
 	else	//There wasn't anyone to send the message to, pred or prey, so let's just emote it instead and correct our psay just in case.
