@@ -378,6 +378,13 @@
 		QDEL_LIST(vore_organs) // CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
+		if(!vore_organs.len)
+			var/obj/belly/B = new /obj/belly(src)
+			vore_selected = B
+			B.immutable = TRUE
+			B.name = "Stomach"
+			B.desc = "It appears to be rather warm and wet. Makes sense, considering it's inside \the [name]."
+			B.can_taste = TRUE
 
 		//CHOMPAdd Start
 		if(soulgem)
