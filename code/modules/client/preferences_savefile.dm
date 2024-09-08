@@ -190,26 +190,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	return TRUE
 
 /datum/preferences/proc/load_character(slot)
-<<<<<<< HEAD
-	if(!path)				return 0
-	if(!fexists(path))		return 0
-	var/savefile/S = new /savefile(path)
-	if(!S)					return 0
-	S.cd = "/"
-	if(!slot)	slot = default_slot
-	if(slot != SAVE_RESET) // SAVE_RESET will reset the slot as though it does not exist, but keep the current slot for saving purposes.
-		slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot)) // CHOMPEdit
-		if(slot != default_slot)
-			default_slot = slot
-			S["default_slot"] << slot
-	else
-		S["default_slot"] << default_slot
-=======
 	SHOULD_NOT_SLEEP(TRUE)
 	if(!slot)
 		slot = default_slot
 
-	slot = sanitize_integer(slot, 1, config.character_slots, initial(default_slot))
+	slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot)) // CHOMPEdit
 	if(slot != default_slot)
 		default_slot = slot
 		savefile.set_entry("default_slot", slot)
@@ -219,7 +204,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	var/needs_update = save_data_needs_update(save_data)
 	if(needs_update == -2) //fatal, can't load any data
 		return FALSE
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 
 	// Read everything into cache (pre-migrations, as migrations should have access to deserialized data)
 	// Uses priority order as some values may rely on others for creating default values
@@ -260,24 +244,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	return TRUE
 
 /datum/preferences/proc/overwrite_character(slot)
-<<<<<<< HEAD
-	if(!path)				return 0
-	if(!fexists(path))		return 0
-	var/savefile/S = new /savefile(path)
-	if(!S)					return 0
-	if(!slot)	slot = default_slot
-	if(slot != SAVE_RESET)
-		slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot)) // CHOMPEdit
-		if(slot != default_slot)
-			default_slot = slot
-			nif_path = nif_durability = nif_savedata = null //VOREStation Add - Don't copy NIF
-			S["default_slot"] << slot
-=======
 	if(!savefile)
 		return FALSE
 	if(!slot)
 		slot = default_slot
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 
 	// This basically just changes default_slot without loading the correct data, so the next save call will overwrite
 	// the slot

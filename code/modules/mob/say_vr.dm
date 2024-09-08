@@ -203,26 +203,16 @@
 				continue
 			if(src.client && M && !(get_z(src) == get_z(M)))
 				message = "<span class='multizsay'>[message]</span>"
-<<<<<<< HEAD
-			if(isobserver(M) && (!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) || \
-			!is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
-=======
-			if(isobserver(M) && (!M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || \
-			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder))
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
+			if(isobserver(M) && (!(iM.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || (isbelly(M.loc) && src == M.loc:owner)) || \
+			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else
 				spawn(0)
 					M.show_message(message, 2)
-<<<<<<< HEAD
-					if(M.Adjacent(src) && M.is_preference_enabled(/datum/client_preference/say_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
+					if(M.Adjacent(src) && M.read_preference(/datum/preference/toggle/subtle_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
 						if(voice_sounds_list)	//CHOMPEdit, changes to subtle emotes to use mob voice instead
 							M << sound(pick(voice_sounds_list), volume = 25)
-=======
-					if(M.read_preference(/datum/preference/toggle/subtle_sounds))
-						M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 
 		for(var/obj/O as anything in vis_objs)
 			spawn(0)
@@ -303,13 +293,9 @@
 			pb = db.pred_body
 			to_chat(pb, "<span class='psay'>The captive mind of \the [M] thinks, \"[message]\"</span>")	//To our pred if dominated brain
 <<<<<<< HEAD
-			if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(pb.read_preference(/datum/preference/toggle/subtle_sounds)
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					pb << sound(pick(voice_sounds_list), volume = 25)
-=======
-			if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
-				pb << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
 			f = TRUE
 	else if(M.absorbed && isbelly(M.loc))
 		pb = M.loc.loc
@@ -595,11 +581,7 @@
 		ourfreq = voice_freq
 
 	if(client)
-<<<<<<< HEAD
-		playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = TRUE, preference = /datum/client_preference/emote_sounds) //ChompEDIT - ignore walls
-=======
-		playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/preference/toggle/emote_sounds)
->>>>>>> e805391751... Merge pull request #16253 from ShadowLarkens/reprefs
+		playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds) //ChompEDIT - ignore walls
 
 	var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,2,remote_ghosts = client ? TRUE : FALSE)
 	var/list/m_viewers = in_range["mobs"]
