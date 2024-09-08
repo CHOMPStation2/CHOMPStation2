@@ -90,154 +90,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	name = "Body"
 	sort_order = 3
 
-<<<<<<< HEAD
-/datum/category_item/player_setup_item/general/body/load_character(var/savefile/S)
-	S["species"]			>> pref.species
-	S["hair_red"]			>> pref.r_hair
-	S["hair_green"]			>> pref.g_hair
-	S["hair_blue"]			>> pref.b_hair
-	S["grad_red"]			>> pref.r_grad
-	S["grad_green"]			>> pref.g_grad
-	S["grad_blue"]			>> pref.b_grad
-	S["facial_red"]			>> pref.r_facial
-	S["grad_red"]			>> pref.r_grad
-	S["grad_green"]			>> pref.g_grad
-	S["grad_blue"]			>> pref.b_grad
-	S["facial_green"]		>> pref.g_facial
-	S["facial_blue"]		>> pref.b_facial
-	S["skin_tone"]			>> pref.s_tone
-	S["skin_red"]			>> pref.r_skin
-	S["skin_green"]			>> pref.g_skin
-	S["skin_blue"]			>> pref.b_skin
-	S["hair_style_name"]	>> pref.h_style
-	S["grad_style_name"]	>> pref.grad_style
-	S["facial_style_name"]	>> pref.f_style
-	S["grad_style_name"]	>> pref.grad_style
-	S["eyes_red"]			>> pref.r_eyes
-	S["eyes_green"]			>> pref.g_eyes
-	S["eyes_blue"]			>> pref.b_eyes
-	S["b_type"]				>> pref.b_type
-	S["disabilities"]		>> pref.disabilities
-	S["organ_data"]			>> pref.organ_data
-	S["rlimb_data"]			>> pref.rlimb_data
-	S["body_markings"]		>> pref.body_markings
-	S["synth_color"]		>> pref.synth_color
-	S["synth_red"]			>> pref.r_synth
-	S["synth_green"]		>> pref.g_synth
-	S["synth_blue"]			>> pref.b_synth
-	S["synth_markings"]		>> pref.synth_markings
-	S["bgstate"]			>> pref.bgstate
-	S["body_descriptors"]	>> pref.body_descriptors
-	S["Wingdings"]			>> pref.wingdings //YWadd start
-	S["colorblind_mono"]	>> pref.colorblind_mono
-	S["colorblind_vulp"]	>> pref.colorblind_vulp
-	S["colorblind_taj"] 	>> pref.colorblind_taj
-	S["haemophilia"]        >> pref.haemophilia //YWadd end
-	S["ear_style"]		>> pref.ear_style
-	S["r_ears"]			>> pref.r_ears
-	S["g_ears"]			>> pref.g_ears
-	S["b_ears"]			>> pref.b_ears
-	S["r_ears2"]		>> pref.r_ears2
-	S["g_ears2"]		>> pref.g_ears2
-	S["b_ears2"]		>> pref.b_ears2
-	S["r_ears3"]		>> pref.r_ears3
-	S["g_ears3"]		>> pref.g_ears3
-	S["b_ears3"]		>> pref.b_ears3
-	S["tail_style"]		>> pref.tail_style
-	S["r_tail"]			>> pref.r_tail
-	S["g_tail"]			>> pref.g_tail
-	S["b_tail"]			>> pref.b_tail
-	S["r_tail2"]		>> pref.r_tail2
-	S["g_tail2"]		>> pref.g_tail2
-	S["b_tail2"]		>> pref.b_tail2
-	S["r_tail3"]		>> pref.r_tail3
-	S["g_tail3"]		>> pref.g_tail3
-	S["b_tail3"]		>> pref.b_tail3
-	S["wing_style"]		>> pref.wing_style
-	S["r_wing"]			>> pref.r_wing
-	S["g_wing"]			>> pref.g_wing
-	S["b_wing"]			>> pref.b_wing
-	S["r_wing2"]		>> pref.r_wing2
-	S["g_wing2"]		>> pref.g_wing2
-	S["b_wing2"]		>> pref.b_wing2
-	S["r_wing3"]		>> pref.r_wing3
-	S["g_wing3"]		>> pref.g_wing3
-	S["b_wing3"]		>> pref.b_wing3
-	S["digitigrade"] 	>> pref.digitigrade
-
-/datum/category_item/player_setup_item/general/body/save_character(var/savefile/S)
-	S["species"]			<< pref.species
-	S["hair_red"]			<< pref.r_hair
-	S["hair_green"]			<< pref.g_hair
-	S["hair_blue"]			<< pref.b_hair
-	S["grad_red"]			<< pref.r_grad
-	S["grad_green"]			<< pref.g_grad
-	S["grad_blue"]			<< pref.b_grad
-	S["facial_red"]			<< pref.r_facial
-	S["facial_green"]		<< pref.g_facial
-	S["facial_blue"]		<< pref.b_facial
-	S["skin_tone"]			<< pref.s_tone
-	S["skin_red"]			<< pref.r_skin
-	S["skin_green"]			<< pref.g_skin
-	S["skin_blue"]			<< pref.b_skin
-	S["hair_style_name"]	<< pref.h_style
-	S["grad_style_name"]	<< pref.grad_style
-	S["facial_style_name"]	<< pref.f_style
-	S["grad_style_name"]	<< pref.grad_style
-	S["eyes_red"]			<< pref.r_eyes
-	S["eyes_green"]			<< pref.g_eyes
-	S["eyes_blue"]			<< pref.b_eyes
-	S["b_type"]				<< pref.b_type
-	S["disabilities"]		<< pref.disabilities
-	S["organ_data"]			<< pref.organ_data
-	S["rlimb_data"]			<< pref.rlimb_data
-	S["body_markings"]		<< pref.body_markings
-	S["synth_color"]		<< pref.synth_color
-	S["synth_red"]			<< pref.r_synth
-	S["synth_green"]		<< pref.g_synth
-	S["synth_blue"]			<< pref.b_synth
-	S["synth_markings"]		<< pref.synth_markings
-	S["bgstate"]			<< pref.bgstate
-	S["body_descriptors"]	<< pref.body_descriptors
-	S["Wingdings"]          << pref.wingdings //YWadd start
-	S["colorblind_mono"]	<< pref.colorblind_mono
-	S["colorblind_vulp"]	<< pref.colorblind_vulp
-	S["colorblind_taj"] 	<< pref.colorblind_taj
-	S["haemophilia"]        << pref.haemophilia //YWadd end
-	S["ear_style"]		<< pref.ear_style
-	S["r_ears"]			<< pref.r_ears
-	S["g_ears"]			<< pref.g_ears
-	S["b_ears"]			<< pref.b_ears
-	S["r_ears2"]		<< pref.r_ears2
-	S["g_ears2"]		<< pref.g_ears2
-	S["b_ears2"]		<< pref.b_ears2
-	S["r_ears3"]		<< pref.r_ears3
-	S["g_ears3"]		<< pref.g_ears3
-	S["b_ears3"]		<< pref.b_ears3
-	S["tail_style"]		<< pref.tail_style
-	S["r_tail"]			<< pref.r_tail
-	S["g_tail"]			<< pref.g_tail
-	S["b_tail"]			<< pref.b_tail
-	S["r_tail2"]		<< pref.r_tail2
-	S["g_tail2"]		<< pref.g_tail2
-	S["b_tail2"]		<< pref.b_tail2
-	S["r_tail3"]		<< pref.r_tail3
-	S["g_tail3"]		<< pref.g_tail3
-	S["b_tail3"]		<< pref.b_tail3
-	S["wing_style"]		<< pref.wing_style
-	S["r_wing"]			<< pref.r_wing
-	S["g_wing"]			<< pref.g_wing
-	S["b_wing"]			<< pref.b_wing
-	S["r_wing2"]		<< pref.r_wing2
-	S["g_wing2"]		<< pref.g_wing2
-	S["b_wing2"]		<< pref.b_wing2
-	S["r_wing3"]		<< pref.r_wing3
-	S["g_wing3"]		<< pref.g_wing3
-	S["b_wing3"]		<< pref.b_wing3
-	S["digitigrade"]	<< pref.digitigrade
-
-/datum/category_item/player_setup_item/general/body/sanitize_character(var/savefile/S)
-=======
 /datum/category_item/player_setup_item/general/body/load_character(list/save_data)
 	pref.species			= save_data["species"]
 	pref.r_hair				= save_data["hair_red"]
@@ -271,6 +123,13 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.synth_markings		= save_data["synth_markings"]
 	pref.bgstate			= save_data["bgstate"]
 	pref.body_descriptors	= save_data["body_descriptors"]
+	//YWadd start
+	pref.wingdings			= save_data["Wingdings"]
+	pref.colorblind_mono	= save_data["colorblind_mono"]
+	pref.colorblind_vulp	= save_data["colorblind_vulp"]
+	pref.colorblind_taj		= save_data["colorblind_taj"]
+	pref.haemophilia		= save_data["haemophilia"]
+	//YWadd end
 	pref.ear_style			= save_data["ear_style"]
 	pref.r_ears				= save_data["r_ears"]
 	pref.g_ears				= save_data["g_ears"]
@@ -336,6 +195,13 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	save_data["synth_markings"]		= pref.synth_markings
 	save_data["bgstate"]			= pref.bgstate
 	save_data["body_descriptors"]	= pref.body_descriptors
+	//YWadd start
+	save_data["Wingdings"]			= pref.wingdings
+	save_data["colorblind_mono"]	= pref.colorblind_mono
+	save_data["colorblind_vulp"]	= pref.colorblind_vulp
+	save_data["colorblind_taj"]		= pref.colorblind_taj
+	save_data["haemophilia"]		= pref.haemophilia
+	//YWadd end
 	save_data["ear_style"]			= pref.ear_style
 	save_data["r_ears"]				= pref.r_ears
 	save_data["g_ears"]				= pref.g_ears
@@ -369,7 +235,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	save_data["digitigrade"]		= pref.digitigrade
 
 /datum/category_item/player_setup_item/general/body/sanitize_character()
->>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 	if(!pref.species || !(pref.species in GLOB.playable_species))
 		pref.species = SPECIES_HUMAN
 	pref.r_hair			= sanitize_integer(pref.r_hair, 0, 255, initial(pref.r_hair))
