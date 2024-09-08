@@ -111,7 +111,7 @@
 			soundfile = pick('sound/vore/shortgurgles/gurgle_M1.ogg', 'sound/vore/shortgurgles/gurgle_M2.ogg', 'sound/vore/shortgurgles/gurgle_M3.ogg')
 		else
 			soundfile = pick('sound/vore/shortgurgles/gurgle_S1.ogg', 'sound/vore/shortgurgles/gurgle_S2.ogg', 'sound/vore/shortgurgles/gurgle_S3.ogg')
-		playsound(src, soundfile, vol = g_sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+		playsound(src, soundfile, vol = g_sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		//CHOMPEdit Start - Allow those turned into items to become the recycled item
 		var/recycled = B.recycle(src)
 		if(!recycled)

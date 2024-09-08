@@ -124,7 +124,7 @@
 	mid_length = 60
 	volume = 10
 	extra_range = -1 // Short-range
-	pref_check = /datum/client_preference/fridge_hum
+	pref_check = /datum/preference/toggle/fridge_hum
 	volume_chan = VOLUME_CHANNEL_MACHINERY_IDLE
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

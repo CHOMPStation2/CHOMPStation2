@@ -569,7 +569,7 @@
 		// var/turf/simulated/T = owner.loc // CHOMPEdit
 		var/S = pick(GLOB.slosh) //ChompEDIT
 		if(S)
-			playsound(owner.loc, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/client_preference/digestion_noises) //CHOMPEdit
+			playsound(owner.loc, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises) //CHOMPEdit
 			cycle_sloshed = TRUE
 	thing.belly_cycles = 0 //reset cycle count
 	if(istype(thing, /mob/observer)) //Ports CHOMPStation PR#3072

@@ -372,7 +372,7 @@
 			playsound(src, drop_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
 	else if(slot == slot_l_hand || slot == slot_r_hand)
 		if(!muffled_by_belly(user)) //ChompEDIT
-		playsound(src, pickup_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
+			playsound(src, pickup_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
 	return
 
 // As above but for items being equipped to an active module on a robot.
