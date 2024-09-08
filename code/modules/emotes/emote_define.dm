@@ -190,7 +190,7 @@ var/global/list/emotes_by_key
 		//CHOMPEdit Add - Preference for variable pitch + Extra range argument
 		if(istype(user, /mob))
 			var/mob/u = user
-			playsound(user.loc, sound_to_play, use_sound["vol"], u.is_preference_enabled(/datum/client_preference/random_emote_pitch) && sound_vary, extrarange = use_sound["exr"], frequency = u.voice_freq, preference = sound_preferences, volume_channel = use_sound["volchannel"]) //CHOMPEdit
+			playsound(user.loc, sound_to_play, use_sound["vol"], u.read_preference(/datum/preference/toggle/random_emote_pitchh) && sound_vary, extrarange = use_sound["exr"], frequency = u.voice_freq, preference = sound_preferences, volume_channel = use_sound["volchannel"]) //CHOMPEdit
 		else
 			playsound(user.loc, sound_to_play, use_sound["vol"], sound_vary, extrarange = use_sound["exr"], frequency = null, preference = sound_preferences, volume_channel = use_sound["volchannel"]) //VOREStation Add - Preference // CHOMPEdit: volume channel + range
 		//CHOMPEdit End - Previous line used to be outside an if/else before the edit.

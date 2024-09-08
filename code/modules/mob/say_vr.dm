@@ -210,7 +210,7 @@
 			else
 				spawn(0)
 					M.show_message(message, 2)
-					if(M.Adjacent(src) && M.is_preference_enabled(/datum/preference/toggle/subtle_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
+					if(M.Adjacent(src) && M.read_preference(/datum/preference/toggle/subtle_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
 						if(voice_sounds_list)	//CHOMPEdit, changes to subtle emotes to use mob voice instead
 							M << sound(pick(voice_sounds_list), volume = 25)
 
