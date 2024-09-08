@@ -1,4 +1,5 @@
 //Toggles for preferences, normal clients
+<<<<<<< HEAD
 /client/verb/toggle_ghost_ears()
 	set name = "Toggle Ghost Ears"
 	set category = "Preferences.Chat" //CHOMPEdit
@@ -224,6 +225,8 @@
 
 	feedback_add_details("admin_verb","TJukebox") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+=======
+>>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 /client/verb/toggle_be_special(role in be_special_flags)
 	set name = "Toggle Special Role Candidacy"
 	set category = "Preferences.Character" //CHOMPEdit
@@ -239,6 +242,7 @@
 
 	feedback_add_details("admin_verb","TBeSpecial") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+<<<<<<< HEAD
 /client/verb/toggle_air_pump_hum()
 	set name = "Toggle Air Vent Noise"
 	set category = "Preferences.Sounds" //CHOMPEdit
@@ -379,6 +383,8 @@
 		You will have to reload TGChat and/or reconnect to the server for these changes to take place. \
 		TGChat message persistence is not guaranteed if you change this again before the start of the next round.")
 
+=======
+>>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 /client/verb/toggle_chat_timestamps()
 	set name = "Toggle Chat Timestamps"
 	set category = "Preferences.Chat" //CHOMPEdit
@@ -389,6 +395,7 @@
 
 	to_chat(src, span_notice("You have toggled chat timestamps: [prefs.chat_timestamp ? "ON" : "OFF"]."))
 
+<<<<<<< HEAD
 /client/verb/toggle_status_indicators()
 	set name = "Toggle Status Indicators"
 	set category = "Preferences.Game" //CHOMPEdit
@@ -484,6 +491,8 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 	feedback_add_details("admin_verb","TVoreHealthBars")
 
+=======
+>>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 // Not attached to a pref datum because those are strict binary toggles
 /client/verb/toggle_examine_mode()
 	set name = "Toggle Examine Mode"
@@ -518,6 +527,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 			to_chat(src, "<span class='filter_system'>Multilingual parsing will enforce the a language delimiter after the delimiter-key combination (,0,galcom -2 still galcom). The extra delimiter will be consumed by the pattern-matching.</span>")
 		if(MULTILINGUAL_OFF)
 			to_chat(src, "<span class='filter_system'>Multilingual parsing is now disabled. Entire messages will be in the language specified at the start of the message.</span>")
+<<<<<<< HEAD
 
 
 //Toggles for Staff
@@ -580,3 +590,5 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 		SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TADeadchat") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+=======
+>>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs

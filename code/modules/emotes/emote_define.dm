@@ -43,7 +43,11 @@ var/global/list/emotes_by_key
 	var/conscious = TRUE                                // Do we need to be awake to emote this?
 	var/emote_range = 0                                 // If >0, restricts emote visibility to viewers within range.
 
+<<<<<<< HEAD
 	var/sound_preferences = list(/datum/client_preference/emote_noises) // Default emote sound_preferences is just emote_noises. Belch emote overrides this list for pref-checks.
+=======
+	var/sound_preferences = list(/datum/preference/toggle/emote_noises) // Default emote sound_preferences is just emote_noises. Belch emote overrides this list for pref-checks.
+>>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 	var/sound_vary = FALSE
 
 /decl/emote/Initialize()

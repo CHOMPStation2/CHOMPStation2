@@ -10,6 +10,7 @@
 	name = "Basic"
 	sort_order = 1
 
+<<<<<<< HEAD
 /datum/category_item/player_setup_item/general/basic/load_character(var/savefile/S)
 	S["real_name"]				>> pref.real_name
 	S["nickname"]				>> pref.nickname
@@ -51,6 +52,39 @@
 	S["OOC_Notes_Maybes"]		<< pref.metadata_maybes
 	S["OOC_Notes_System"]		<< pref.matadata_ooc_style
 	//CHOMPEdit End
+=======
+/datum/category_item/player_setup_item/general/basic/load_character(list/save_data)
+	pref.real_name						= save_data["real_name"]
+	pref.nickname						= save_data["nickname"]
+	pref.be_random_name					= save_data["name_is_always_random"]
+	pref.biological_gender				= save_data["gender"]
+	pref.identifying_gender				= save_data["id_gender"]
+	pref.age							= save_data["age"]
+	pref.bday_month						= save_data["bday_month"]
+	pref.bday_day						= save_data["bday_day"]
+	pref.last_birthday_notification		= save_data["last_bday_note"]
+	pref.bday_announce					= save_data["bday_announce"]
+	pref.spawnpoint						= save_data["spawnpoint"]
+	pref.metadata						= save_data["OOC_Notes"]
+	pref.metadata_likes					= save_data["OOC_Notes_Likes"]
+	pref.metadata_dislikes				= save_data["OOC_Notes_Disikes"]
+
+/datum/category_item/player_setup_item/general/basic/save_character(list/save_data)
+	save_data["real_name"]				= pref.real_name
+	save_data["nickname"]				= pref.nickname
+	save_data["name_is_always_random"]	= pref.be_random_name
+	save_data["gender"]					= pref.biological_gender
+	save_data["id_gender"]				= pref.identifying_gender
+	save_data["age"]					= pref.age
+	save_data["bday_month"]				= pref.bday_month
+	save_data["bday_day"]				= pref.bday_day
+	save_data["last_bday_note"]			= pref.last_birthday_notification
+	save_data["bday_announce"]			= pref.bday_announce
+	save_data["spawnpoint"]				= pref.spawnpoint
+	save_data["OOC_Notes"]				= pref.metadata
+	save_data["OOC_Notes_Likes"]		= pref.metadata_likes
+	save_data["OOC_Notes_Disikes"]		= pref.metadata_dislikes
+>>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 
 /datum/category_item/player_setup_item/general/basic/sanitize_character()
 	pref.age                = sanitize_integer(pref.age, get_min_age(), get_max_age(), initial(pref.age))

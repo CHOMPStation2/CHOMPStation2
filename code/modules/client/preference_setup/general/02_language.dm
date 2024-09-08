@@ -7,6 +7,7 @@
 	sort_order = 2
 	var/static/list/forbidden_prefixes = list(";", ":", ".", "!", "*", "^", "-")
 
+<<<<<<< HEAD
 /datum/category_item/player_setup_item/general/language/load_character(var/savefile/S)
 	S["language"]			>> pref.alternate_languages
 	S["extra_languages"]	>> pref.extra_languages
@@ -29,6 +30,21 @@
 	S["language_prefixes"]	<< pref.language_prefixes
 	S["language_custom_keys"]	<< pref.language_custom_keys
 	S["preflang"]			<< pref.preferred_language // VOREStation Edit
+=======
+/datum/category_item/player_setup_item/general/language/load_character(list/save_data)
+	pref.alternate_languages	= save_data["language"]
+	pref.extra_languages		= save_data["extra_languages"]
+	pref.language_prefixes		= save_data["language_prefixes"]
+	pref.preferred_language		= save_data["preflang"]
+	pref.language_custom_keys	= save_data["language_custom_keys"]
+
+/datum/category_item/player_setup_item/general/language/save_character(list/save_data)
+	save_data["language"]				= pref.alternate_languages
+	save_data["extra_languages"]		= pref.extra_languages
+	save_data["language_prefixes"]		= pref.language_prefixes
+	save_data["language_custom_keys"]	= pref.language_custom_keys
+	save_data["preflang"]				= pref.preferred_language
+>>>>>>> c0580212dd... Merge pull request #16281 from ShadowLarkens/revert-16279-revert-16253-reprefs
 
 /datum/category_item/player_setup_item/general/language/sanitize_character()
 	if(!islist(pref.alternate_languages))	pref.alternate_languages = list()
