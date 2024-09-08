@@ -22,13 +22,13 @@ for (const key of requireFeature.keys()) {
 
 // CHOMPAdd start for modularity
 const requireAdditions = require.context(
-  '../../../PreferencesMenu/preferences/features',
+  '../../../chompstation/PreferencesMenu/preferences/features',
   true,
   /.tsx$/,
 );
 
 for (const key of requireAdditions.keys()) {
-  for (const [featureKey, feature] of Object.entries(requireFeature(key))) {
+  for (const [featureKey, feature] of Object.entries(requireAdditions(key))) {
     features[featureKey] = feature as Feature<unknown>;
   }
 }
