@@ -1,0 +1,1128 @@
+[2024-04-04 00:04:49.426] START: Starting up data/logs/2024/04-April/03-Wednesday/round-20-05-07.
+[2024-04-04 00:04:50.878] ADMIN: Loading jobban_rank
+[2024-04-04 00:04:50.878] ADMIN: jobban_keylist was empty
+[2024-04-04 00:04:50.882] ADMIN: Loading Banlist
+[2024-04-04 00:04:59.209] GAME: The Killer Rabbit loaded at at 37,76,5
+[2024-04-04 00:04:59.233] GAME: Ore-Rich Geyser loaded at at 9,116,5
+[2024-04-04 00:04:59.410] GAME: Abandoned Temple loaded at at 28,100,5
+[2024-04-04 00:04:59.627] GAME: Abandoned Mineshaft 1 loaded at at 65,47,5
+[2024-04-04 00:04:59.739] GAME: Dig Site loaded at at 179,77,5
+[2024-04-04 00:04:59.867] GAME: Rocky Base 1 loaded at at 167,21,5
+[2024-04-04 00:05:00.133] GAME: Crashed Cargo Shuttle loaded at at 18,28,5
+[2024-04-04 00:05:00.301] GAME: Crashed Med Shuttle loaded at at 123,39,5
+[2024-04-04 00:05:00.318] GAME: Mine Vault 3 loaded at at 182,67,5
+[2024-04-04 00:05:00.441] GAME: Crystal Cave 3 loaded at at 141,100,5
+[2024-04-04 00:05:00.663] GAME: spatial anomaly loaded at at 10,159,5
+[2024-04-04 00:05:00.695] GAME: Lone Kururak Den loaded at at 84,108,4
+[2024-04-04 00:05:00.739] GAME: Emergency Pod loaded at at 208,55,4
+[2024-04-04 00:05:00.775] GAME: Snow 2 loaded at at 51,107,4
+[2024-04-04 00:05:00.804] GAME: Merchant Stand loaded at at 122,104,4
+[2024-04-04 00:05:00.941] GAME: Mechpit loaded at at 156,30,4
+[2024-04-04 00:05:00.950] GAME: Buried Treasure loaded at at 125,60,4
+[2024-04-04 00:05:01.014] GAME: Ruptured Canister loaded at at 193,14,4
+[2024-04-04 00:05:01.232] GAME: Old Hotel loaded at at 39,175,4
+[2024-04-04 00:05:01.513] GAME: Pooled Rocks loaded at at 49,78,4
+[2024-04-04 00:05:01.629] GAME: Thieves' Cave loaded at at 29,10,4
+[2024-04-04 00:05:03.567] GAME: Boathouse loaded at at 65,8,4
+[2024-04-04 00:05:03.689] GAME: Pride Rock loaded at at 210,152,4
+[2024-04-04 00:05:03.733] GAME: Snow 5 loaded at at 105,51,4
+[2024-04-04 00:05:03.819] GAME: Shakden loaded at at 13,89,4
+[2024-04-04 00:05:03.884] GAME: Camp Site loaded at at 55,38,4
+[2024-04-04 00:05:04.089] GAME: Hot Spring loaded at at 46,205,4
+[2024-04-04 00:05:04.107] GAME: Irradiated Manhole Cover loaded at at 103,75,4
+[2024-04-04 00:05:04.123] GAME: Old Supply Drop loaded at at 19,61,4
+[2024-04-04 00:05:04.193] GAME: Construction Site loaded at at 191,68,4
+[2024-04-04 00:05:04.213] GAME: Snow 4 loaded at at 33,125,4
+[2024-04-04 00:05:04.467] GAME: Demon Pool loaded at at 18,85,9
+[2024-04-04 00:05:04.528] GAME: Mudpit loaded at at 200,73,9
+[2024-04-04 00:05:04.677] GAME: Cragzone 1 loaded at at 58,61,9
+[2024-04-04 00:05:04.747] GAME: Spider Nest 1 loaded at at 46,92,9
+[2024-04-04 00:05:04.969] GAME: Forest Lake loaded at at 171,34,9
+[2024-04-04 00:05:05.000] GAME: Butcher Shack loaded at at 113,35,9
+[2024-04-04 00:05:05.173] GAME: Cragzone 1 loaded at at 131,57,9
+[2024-04-04 00:05:05.421] GAME: Drug Den loaded at at 32,53,9
+[2024-04-04 00:05:05.501] GAME: Shelter 1 loaded at at 82,23,9
+[2024-04-04 00:05:05.541] GAME: Shack 1 loaded at at 45,15,9
+[2024-04-04 00:05:05.739] GAME: Chasm loaded at at 10,49,9
+[2024-04-04 00:05:05.867] GAME: Rocky 2 loaded at at 125,32,9
+[2024-04-04 00:05:05.888] GAME: Spider Nest 1 loaded at at 64,49,9
+[2024-04-04 00:05:06.194] GAME: Military Camp 1 loaded at at 99,52,9
+[2024-04-04 00:05:06.313] GAME: Spider Nest 1 loaded at at 106,15,9
+[2024-04-04 00:05:06.361] GAME: Empty Cabin loaded at at 202,25,9
+[2024-04-04 00:05:06.386] GAME: Spider Nest 1 loaded at at 132,91,9
+[2024-04-04 00:05:06.472] GAME: Rocky 3 loaded at at 29,30,9
+[2024-04-04 00:05:06.518] GAME: Government Patrol loaded at at 98,84,9
+[2024-04-04 00:05:06.564] GAME: Kururak Den loaded at at 9,23,9
+[2024-04-04 00:05:06.595] GAME: Smol 1 loaded at at 209,48,9
+[2024-04-04 00:05:06.840] GAME: Rocky 4 loaded at at 179,54,9
+[2024-04-04 00:05:06.887] GAME: Wolf Den loaded at at 191,70,9
+[2024-04-04 00:05:06.955] GAME: Musk loaded at at 91,39,9
+[2024-04-04 00:05:07.015] GAME: Emergency Pod 4 loaded at at 123,12,9
+[2024-04-04 00:05:08.691] GAME: Frost Oasis loaded at at 61,18,9
+[2024-04-04 00:05:08.769] GAME: Frostfly Nest loaded at at 81,35,9
+[2024-04-04 00:05:08.897] GAME: Lab 1 loaded at at 23,9,9
+[2024-04-04 00:05:11.774] GAME: Snowrock 1 loaded at at 165,71,9
+[2024-04-04 00:05:11.906] GAME: Spider Nest 1 loaded at at 71,97,9
+[2024-04-04 00:05:12.150] GAME: Burning Hadzard Zone loaded at at 80,173,9
+[2024-04-04 00:05:12.610] GAME: Rocky Base loaded at at 17,159,9
+[2024-04-04 00:05:12.657] GAME: Lone Wolf loaded at at 151,133,9
+[2024-04-04 00:05:13.256] GAME: Dragon Plateu loaded at at 81,131,9
+[2024-04-04 00:05:13.900] GAME: Cliff lake Base loaded at at 160,197,9
+[2024-04-04 00:05:14.186] GAME: Abandoned Lab loaded at at 124,185,9
+[2024-04-04 00:05:14.246] GAME: Syndi Drone loaded at at 235,180,9
+[2024-04-04 00:05:17.334] GAME: DoomP loaded at at 168,131,9
+[2024-04-04 00:05:17.592] GAME: Great Wolf Den loaded at at 44,214,9
+[2024-04-04 00:05:17.948] GAME: Nanite Lab loaded at at 95,210,9
+[2024-04-04 00:05:18.652] GAME: Cliff Base loaded at at 119,144,9
+[2024-04-04 00:05:18.792] GAME: Leopardmander Den loaded at at 133,218,9
+[2024-04-04 00:05:18.946] GAME: Frost Lake loaded at at 107,20,10
+[2024-04-04 00:05:19.126] GAME: Drone Overlords loaded at at 215,45,10
+[2024-04-04 00:05:19.676] GAME: Vault loaded at at 135,198,10
+[2024-04-04 00:05:19.889] GAME: Phoron Den loaded at at 137,23,10
+[2024-04-04 00:05:20.077] GAME: Maus HQ loaded at at 185,14,10
+[2024-04-04 00:05:20.225] GAME: Leppy Den loaded at at 111,223,10
+[2024-04-04 00:05:20.729] GAME: Eclipse Base Dig loaded at at 82,205,10
+[2024-04-04 00:05:20.901] GAME: Solar Pond loaded at at 176,45,10
+[2024-04-04 00:05:21.345] GAME: Cult Bar loaded at at 137,151,10
+[2024-04-04 00:05:21.448] GAME: Spider Explo loaded at at 90,160,10
+[2024-04-04 00:05:21.723] GAME: Vox Pirates loaded at at 186,92,10
+[2024-04-04 00:05:21.917] GAME: Mouse Takeover loaded at at 190,68,10
+[2024-04-04 00:05:22.362] GAME: Red Shuttle Down loaded at at 92,67,10
+[2024-04-04 00:05:22.816] GAME: Frozen Lab loaded at at 138,76,10
+[2024-04-04 00:05:23.498] GAME: Pirate Vessel loaded at at 189,153,10
+[2024-04-04 00:05:25.151] GAME: Eclipse Xenobio Lab loaded at at 219,83,10
+[2024-04-04 00:05:27.225] GAME: Blood Citadal loaded at at 10,112,10
+[2024-04-04 00:06:17.347] GAME: Z-level VR World loaded at at 1,1,11
+[2024-04-04 00:06:17.875] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2024-04-04 00:06:29.496] GAME: Z-level Thor Surface loaded at at 1,1,13
+[2024-04-04 00:06:41.835] GAME: Z-level Maddness Lab loaded at at 1,1,14
+[2024-04-04 00:07:12.860] MISC: a the gibber didn't find an input plate.
+[2024-04-04 00:07:16.009] MISC: a the gibber didn't find an input plate.
+[2024-04-04 00:12:29.201] GAME: TIDI: 8.83333;2.65;0.53;0.053
+[2024-04-04 00:13:29.200] GAME: TIDI: 0;1.855;0.795;0.1272
+[2024-04-04 00:14:29.202] GAME: TIDI: 0;1.2985;0.8957;0.20405
+[2024-04-04 00:14:43.756] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 00:14:45.786] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:14:56.519] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:15:10.537] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:15:30.687] GAME: TIDI: 2.33333;1.60895;1.03835;0.28748
+[2024-04-04 00:15:36.551] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:16:06.580] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:16:30.736] GAME: TIDI: 0.166667;1.17626;1.06593;0.365325
+[2024-04-04 00:17:35.681] GAME: TIDI: 8.16667;3.27339;1.50742;0.479535
+[2024-04-04 00:17:44.317] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:18:25.491] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:18:41.189] GAME: TIDI: 9.16667;5.04137;2.21421;0.653003
+[2024-04-04 00:18:49.243] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:19:17.255] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 00:19:25.265] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 00:19:27.265] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 00:19:39.272] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:19:41.401] GAME: TIDI: 0.5;3.67896;2.50716;0.838419
+[2024-04-04 00:19:49.261] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:20:23.007] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:20:43.014] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:20:43.139] GAME: TIDI: 2.83333;3.42527;2.69078;1.02366
+[2024-04-04 00:21:01.008] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 00:21:43.164] GAME: TIDI: 0;2.39769;2.63217;1.18451
+[2024-04-04 00:22:01.169] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:22:43.332] GAME: TIDI: 0.333333;1.77838;2.46141;1.3122
+[2024-04-04 00:22:55.211] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 00:23:05.218] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:23:31.236] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:23:39.240] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:23:43.382] GAME: TIDI: 0;1.24487;2.2181;1.40279
+[2024-04-04 00:23:49.243] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:24:01.255] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:24:43.270] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 00:24:43.408] GAME: TIDI: 0.166667;0.921408;1.95876;1.45838
+[2024-04-04 00:24:56.285] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:24:58.283] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:25:26.295] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:25:44.436] GAME: TIDI: 1.66667;1.14499;1.79601;1.49215
+[2024-04-04 00:25:52.306] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:26:26.319] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:26:44.468] GAME: TIDI: 0;0.80149;1.5971;1.50264
+[2024-04-04 00:26:48.332] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:27:24.346] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:27:26.349] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:27:44.493] GAME: TIDI: 0;0.561043;1.38989;1.49137
+[2024-04-04 00:28:28.376] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:28:44.525] GAME: TIDI: 0.166667;0.44273;1.20046;1.46228
+[2024-04-04 00:29:32.417] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:29:44.546] GAME: TIDI: 0;0.309911;1.02235;1.41828
+[2024-04-04 00:30:22.422] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 00:30:44.560] GAME: TIDI: 0;0.216938;0.861267;1.36258
+[2024-04-04 00:31:18.456] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:31:28.467] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:31:44.611] GAME: TIDI: 0.166667;0.201856;0.729385;1.29926
+[2024-04-04 00:32:12.486] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:32:42.511] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:32:44.648] GAME: TIDI: 0;0.141299;0.611768;1.23051
+[2024-04-04 00:32:58.521] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:33:38.549] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:33:44.689] GAME: TIDI: 0;0.0989096;0.509196;1.15838
+[2024-04-04 00:34:28.565] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:34:36.568] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:34:44.708] GAME: TIDI: 0.166667;0.119237;0.431204;1.08566
+[2024-04-04 00:35:20.604] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:35:42.615] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:35:44.752] GAME: TIDI: 0;0.0834657;0.361657;1.01326
+[2024-04-04 00:36:06.632] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:36:38.642] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 00:36:44.785] GAME: TIDI: 0;0.058426;0.30101;0.942037
+[2024-04-04 00:37:08.663] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:37:44.814] GAME: TIDI: 0.166667;0.0908982;0.258988;0.873732
+[2024-04-04 00:38:44.838] GAME: TIDI: 0;0.0636287;0.219916;0.808351
+[2024-04-04 00:39:06.783] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:39:10.786] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:39:16.787] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:39:18.786] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:39:44.944] GAME: TIDI: 0.166667;0.0945401;0.194841;0.747
+[2024-04-04 00:40:40.821] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:40:44.958] GAME: TIDI: 0;0.0661781;0.169108;0.689211
+[2024-04-04 00:41:45.058] GAME: TIDI: 0.166667;0.0963247;0.154552;0.635745
+[2024-04-04 00:42:16.941] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:42:42.961] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 00:42:45.095] GAME: TIDI: 0;0.0674273;0.137127;0.585883
+[2024-04-04 00:43:22.965] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:43:30.972] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:43:34.971] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:43:45.117] GAME: TIDI: 0.166667;0.0971991;0.129141;0.540209
+[2024-04-04 00:44:45.144] GAME: TIDI: 0;0.0680394;0.116921;0.49788
+[2024-04-04 00:45:45.163] GAME: TIDI: 0;0.0476275;0.103062;0.458398
+[2024-04-04 00:45:49.035] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:46:21.046] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:46:31.047] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 00:46:33.047] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:46:39.053] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:46:43.065] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:46:45.055] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:46:45.190] GAME: TIDI: 0;0.0333393;0.0891176;0.42147
+[2024-04-04 00:46:51.054] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:47:09.065] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:47:11.067] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:47:45.226] GAME: TIDI: 0.166667;0.0733375;0.0859616;0.387919
+[2024-04-04 00:47:55.101] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:48:11.095] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:48:15.106] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:48:17.103] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:48:19.106] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:48:45.269] GAME: TIDI: 0;0.0513363;0.0790365;0.357031
+[2024-04-04 00:49:25.161] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:49:43.162] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:49:45.292] GAME: TIDI: 0;0.0359354;0.0704163;0.328369
+[2024-04-04 00:49:47.164] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:50:45.320] GAME: TIDI: 0.166667;0.0751548;0.071364;0.302669
+[2024-04-04 00:50:47.185] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:51:07.195] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:51:19.195] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:51:21.198] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:51:27.209] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 00:51:45.352] GAME: TIDI: 0;0.0526083;0.0676129;0.279163
+[2024-04-04 00:51:53.216] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:52:09.225] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 00:52:45.366] GAME: TIDI: 0;0.0368258;0.0614555;0.257392
+[2024-04-04 00:52:53.229] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:53:41.312] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:53:45.450] GAME: TIDI: 0.166667;0.0757781;0.06432;0.238085
+[2024-04-04 00:53:57.322] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:54:13.332] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:54:45.476] GAME: TIDI: 0;0.0530447;0.0620649;0.220483
+[2024-04-04 00:55:01.346] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:55:09.355] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:55:13.367] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:55:15.368] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 00:55:27.371] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:55:33.368] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:55:45.513] GAME: TIDI: 0.166667;0.0871313;0.0670782;0.205143
+[2024-04-04 00:55:59.383] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 00:56:45.534] GAME: TIDI: 0;0.0609919;0.0658609;0.191214
+[2024-04-04 00:57:27.417] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:57:45.563] GAME: TIDI: 0;0.0426943;0.0612276;0.178216
+[2024-04-04 00:58:45.583] GAME: TIDI: 0;0.029886;0.0549593;0.16589
+[2024-04-04 00:58:55.453] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:59:21.459] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 00:59:37.477] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 00:59:45.614] GAME: TIDI: 0.166667;0.0709202;0.0581515;0.155116
+[2024-04-04 00:59:47.477] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:00:11.481] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:00:15.491] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:00:45.501] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:00:45.636] GAME: TIDI: 0;0.0496442;0.05645;0.14525
+[2024-04-04 01:01:11.508] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:01:23.512] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:01:35.516] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:01:45.652] GAME: TIDI: 0;0.0347509;0.0521102;0.135936
+[2024-04-04 01:02:09.594] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:02:45.746] GAME: TIDI: 0.166667;0.0743256;0.0565533;0.127997
+[2024-04-04 01:03:33.623] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:03:45.770] GAME: TIDI: 0;0.0520279;0.0556482;0.120763
+[2024-04-04 01:03:55.654] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 01:04:21.671] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:04:27.675] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 01:04:45.816] GAME: TIDI: 0.166667;0.0864196;0.0618025;0.114867
+[2024-04-04 01:05:05.695] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:05:23.706] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:05:45.856] GAME: TIDI: 0;0.0604937;0.0615407;0.109534
+[2024-04-04 01:06:15.734] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:06:23.737] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:06:46.021] GAME: TIDI: 0.333333;0.142346;0.0777017;0.106351
+[2024-04-04 01:06:53.890] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:06:59.012] GAME: TESLA(17,185,9) Shocked INVALID/(crystal-feather duck) for 52dmg.
+[2024-04-04 01:06:59.016] GAME: TESLA(20,189,9) Shocked INVALID/(viscerator) for 13dmg.
+[2024-04-04 01:07:13.930] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 01:07:46.085] GAME: TIDI: 0;0.0996419;0.0820897;0.103925
+[2024-04-04 01:08:03.966] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 01:08:25.974] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:08:41.996] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 01:08:46.123] GAME: TIDI: 0.166667;0.119749;0.0896217;0.102494
+[2024-04-04 01:09:03.993] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:09:09.995] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:09:40.058] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 01:09:46.192] GAME: TIDI: 0;0.0838245;0.0884622;0.101091
+[2024-04-04 01:10:08.138] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:10:08.140] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:10:14.132] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:10:26.152] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 01:10:46.294] GAME: TIDI: 0.166667;0.108677;0.0925052;0.100233
+[2024-04-04 01:11:28.175] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:11:46.328] GAME: TIDI: 0.166667;0.126074;0.099219;0.100131
+[2024-04-04 01:12:46.814] GAME: TIDI: 0.833333;0.338252;0.147026;0.104821
+[2024-04-04 01:13:10.695] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 01:13:16.695] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:13:46.851] GAME: TIDI: 0;0.236776;0.164976;0.110836
+[2024-04-04 01:14:36.744] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:14:46.878] GAME: TIDI: 0;0.165743;0.165129;0.116265
+[2024-04-04 01:14:48.742] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:15:24.756] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:15:46.903] GAME: TIDI: 0.166667;0.16602;0.165307;0.12117
+[2024-04-04 01:16:40.803] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:16:46.940] GAME: TIDI: 0;0.116214;0.155489;0.124602
+[2024-04-04 01:17:02.813] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:17:46.828] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 01:17:46.964] GAME: TIDI: 0;0.08135;0.140661;0.126208
+[2024-04-04 01:18:47.008] GAME: TIDI: 0.166667;0.106945;0.133918;0.126979
+[2024-04-04 01:19:47.041] GAME: TIDI: 0;0.0748615;0.122107;0.126491
+[2024-04-04 01:19:52.902] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:19:52.904] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:20:08.908] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:20:16.925] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:20:47.080] GAME: TIDI: 0;0.052403;0.108166;0.124659
+[2024-04-04 01:21:00.960] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:21:04.957] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:21:06.960] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:21:47.108] GAME: TIDI: 0.166667;0.0866821;0.103869;0.12258
+[2024-04-04 01:22:00.984] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:22:47.157] GAME: TIDI: 0;0.0606775;0.0952308;0.119845
+[2024-04-04 01:23:11.046] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:23:37.069] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:23:39.076] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:23:47.210] GAME: TIDI: 0.166667;0.0924743;0.0946795;0.117328
+[2024-04-04 01:23:59.074] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 01:24:19.086] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:24:47.232] GAME: TIDI: 0;0.064732;0.08869;0.114465
+[2024-04-04 01:25:47.296] GAME: TIDI: 0;0.0453124;0.0800145;0.11102
+[2024-04-04 01:26:13.175] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:26:29.179] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:26:47.323] GAME: TIDI: 0.166667;0.0817187;0.0803553;0.107953
+[2024-04-04 01:26:49.189] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 01:27:07.266] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 01:27:45.295] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 01:27:47.429] GAME: TIDI: 0.166667;0.107203;0.0857249;0.10573
+[2024-04-04 01:28:03.305] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:28:11.305] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:28:15.306] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:28:45.329] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:28:47.459] GAME: TIDI: 0;0.0750421;0.0835883;0.103516
+[2024-04-04 01:29:43.367] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:29:47.503] GAME: TIDI: 0.166667;0.10253;0.0873766;0.101902
+[2024-04-04 01:30:47.548] GAME: TIDI: 0;0.0717707;0.0842554;0.100137
+[2024-04-04 01:31:05.416] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:31:47.581] GAME: TIDI: 0;0.0502395;0.0774522;0.0978689
+[2024-04-04 01:31:51.445] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:32:15.474] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:32:29.482] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:32:47.492] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:32:47.628] GAME: TIDI: 0.166667;0.0851676;0.0789953;0.0959816
+[2024-04-04 01:33:25.527] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:33:47.692] GAME: TIDI: 0;0.0596173;0.0751197;0.0938954
+[2024-04-04 01:34:47.764] GAME: TIDI: 0.166667;0.0917321;0.0784422;0.0923501
+[2024-04-04 01:35:29.670] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:35:43.678] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:35:45.684] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:35:47.819] GAME: TIDI: 0.166667;0.114213;0.0855963;0.0916747
+[2024-04-04 01:35:53.684] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:36:23.782] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:36:47.981] GAME: TIDI: 0.166667;0.129949;0.0944668;0.0919539
+[2024-04-04 01:37:41.880] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:37:48.016] GAME: TIDI: 0.166667;0.140964;0.103766;0.0931351
+[2024-04-04 01:38:37.898] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 01:38:48.055] GAME: TIDI: 0;0.0986749;0.102748;0.0940964
+[2024-04-04 01:39:03.925] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:39:29.953] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:39:48.102] GAME: TIDI: 0.166667;0.119072;0.106013;0.095288
+[2024-04-04 01:39:53.964] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:39:55.967] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 01:40:37.989] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:40:48.136] GAME: TIDI: 0;0.0833507;0.10148;0.0959073
+[2024-04-04 01:41:14.008] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 01:41:28.025] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:41:42.033] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:41:44.033] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:41:48.170] GAME: TIDI: 0;0.0583455;0.0928534;0.0956019
+[2024-04-04 01:41:50.034] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:42:24.115] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:42:44.123] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:42:48.123] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:42:48.262] GAME: TIDI: 0.166667;0.0908418;0.0924511;0.0952868
+[2024-04-04 01:43:32.154] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:43:48.286] GAME: TIDI: 0;0.0635893;0.0866788;0.094426
+[2024-04-04 01:43:52.148] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:44:48.313] GAME: TIDI: 0.166667;0.0945125;0.0882455;0.093808
+[2024-04-04 01:44:56.184] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:45:04.192] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:45:26.199] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:45:48.339] GAME: TIDI: 0;0.0661588;0.0838282;0.09281
+[2024-04-04 01:45:50.210] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 01:46:14.219] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:46:26.225] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:46:48.365] GAME: TIDI: 0;0.0463111;0.0763248;0.0911615
+[2024-04-04 01:47:00.248] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:47:12.250] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:47:28.254] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:47:48.401] GAME: TIDI: 0.166667;0.0824178;0.0775434;0.0897996
+[2024-04-04 01:48:08.268] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:48:46.288] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:48:48.422] GAME: TIDI: 0;0.0576925;0.0735732;0.088177
+[2024-04-04 01:49:12.306] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 01:49:24.316] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:49:48.465] GAME: TIDI: 0;0.0403847;0.0669355;0.0860528
+[2024-04-04 01:49:50.325] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:50:36.350] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:50:48.498] GAME: TIDI: 0;0.0282693;0.0592023;0.0833678
+[2024-04-04 01:50:56.359] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:51:24.364] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:51:28.369] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:51:34.378] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:51:48.515] GAME: TIDI: 0.166667;0.0697885;0.0613195;0.0811629
+[2024-04-04 01:52:22.397] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:52:24.396] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:52:48.534] GAME: TIDI: 0;0.048852;0.058826;0.0789292
+[2024-04-04 01:53:48.565] GAME: TIDI: 0;0.0341964;0.0539001;0.0764263
+[2024-04-04 01:53:54.430] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:54:24.442] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 01:54:48.596] GAME: TIDI: 0;0.0239375;0.0479076;0.0735744
+[2024-04-04 01:54:50.460] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:55:22.472] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:55:26.472] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:55:48.621] GAME: TIDI: 0.166667;0.0667562;0.0516773;0.0713847
+[2024-04-04 01:55:50.485] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 01:55:52.484] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:55:56.485] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:56:32.519] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 01:56:48.655] GAME: TIDI: 0;0.0467294;0.0506877;0.069315
+[2024-04-04 01:57:16.542] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:57:24.540] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 01:57:36.544] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:57:48.687] GAME: TIDI: 0;0.0327105;0.0470923;0.0670927
+[2024-04-04 01:58:20.569] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:58:48.713] GAME: TIDI: 0.166667;0.0728974;0.0522533;0.0656088
+[2024-04-04 01:59:06.589] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:59:20.601] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 01:59:48.763] GAME: TIDI: 0;0.0510282;0.0520083;0.0642487
+[2024-04-04 02:00:18.632] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:00:48.796] GAME: TIDI: 0;0.0357197;0.0487506;0.0626989
+[2024-04-04 02:00:50.662] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:00:54.664] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:01:16.670] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:01:32.676] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:01:48.822] GAME: TIDI: 0.166667;0.0750038;0.0540012;0.0618292
+[2024-04-04 02:01:50.696] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:02:48.851] GAME: TIDI: 0;0.0525027;0.0537015;0.0610164
+[2024-04-04 02:03:48.754] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:03:48.887] GAME: TIDI: 0;0.0367519;0.0503116;0.0599459
+[2024-04-04 02:03:50.754] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:04:14.760] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:04:20.765] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:04:26.762] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:04:44.772] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:04:48.906] GAME: TIDI: 0.166667;0.0757263;0.0553945;0.0594908
+[2024-04-04 02:05:18.797] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:05:48.807] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:05:48.943] GAME: TIDI: 0;0.0530084;0.0549173;0.0590334
+[2024-04-04 02:05:54.813] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 02:06:02.813] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:06:48.979] GAME: TIDI: 0;0.0371059;0.051355;0.0582656
+[2024-04-04 02:07:02.859] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:07:49.004] GAME: TIDI: 0.166667;0.0759741;0.0562788;0.0580669
+[2024-04-04 02:08:24.882] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:08:28.880] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 02:08:49.025] GAME: TIDI: 0;0.0531819;0.0556595;0.0578262
+[2024-04-04 02:09:16.914] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:09:24.922] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:09:44.917] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 02:09:49.054] GAME: TIDI: 0;0.0372273;0.051973;0.0572408
+[2024-04-04 02:10:06.930] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:10:08.924] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:10:46.947] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:10:49.077] GAME: TIDI: 0;0.0260591;0.0467902;0.0561958
+[2024-04-04 02:10:54.947] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:11:18.951] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:11:38.953] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 02:11:49.095] GAME: TIDI: 0;0.0182414;0.0410805;0.0546843
+[2024-04-04 02:12:49.155] GAME: TIDI: 0.166667;0.062769;0.0454182;0.0537576
+[2024-04-04 02:13:19.154] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:13:25.151] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:13:49.292] GAME: TIDI: 0.166667;0.0939383;0.0551222;0.0538941
+[2024-04-04 02:14:49.306] GAME: TIDI: 0.166667;0.115757;0.0672491;0.0552296
+[2024-04-04 02:15:49.328] GAME: TIDI: 0;0.0810298;0.0700053;0.0567072
+[2024-04-04 02:15:59.192] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:16:21.217] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 02:16:49.365] GAME: TIDI: 0;0.0567208;0.0673484;0.0577713
+[2024-04-04 02:17:03.240] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:17:23.254] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:17:49.397] GAME: TIDI: 0;0.0397046;0.0618196;0.0581761
+[2024-04-04 02:17:53.265] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:18:07.269] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:18:13.277] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:18:23.275] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:18:49.434] GAME: TIDI: 0.166667;0.0777932;0.0650143;0.0588599
+[2024-04-04 02:19:07.309] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 02:19:37.329] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:19:43.332] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:19:49.476] GAME: TIDI: 0;0.0544552;0.0629025;0.0592642
+[2024-04-04 02:20:03.345] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 02:20:05.353] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:20:49.500] GAME: TIDI: 0.166667;0.0881187;0.0679457;0.0601323
+[2024-04-04 02:21:17.440] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:21:49.579] GAME: TIDI: 0;0.0616831;0.0666932;0.0607884
+[2024-04-04 02:22:09.460] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 02:22:49.611] GAME: TIDI: 0.166667;0.0931782;0.0719902;0.0619086
+[2024-04-04 02:23:43.506] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:23:45.506] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:23:49.644] GAME: TIDI: 0;0.0652247;0.0706371;0.0627815
+[2024-04-04 02:23:59.516] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:24:49.673] GAME: TIDI: 0;0.0456573;0.0656411;0.0630674
+[2024-04-04 02:25:49.698] GAME: TIDI: 0;0.0319601;0.0589049;0.0626512
+[2024-04-04 02:25:51.566] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:25:51.570] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:26:29.651] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 02:26:33.647] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:26:43.650] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:26:49.788] GAME: TIDI: 0.166667;0.0723721;0.0615984;0.0625459
+[2024-04-04 02:26:59.661] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:27:49.807] GAME: TIDI: 0.166667;0.10066;0.0694108;0.0632324
+[2024-04-04 02:28:15.676] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:28:29.685] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:28:43.682] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:28:49.817] GAME: TIDI: 0;0.0704623;0.0696211;0.0638712
+[2024-04-04 02:29:45.709] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:29:49.845] GAME: TIDI: 0;0.0493236;0.0655616;0.0640403
+[2024-04-04 02:30:01.710] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:30:37.733] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:30:49.875] GAME: TIDI: 0;0.0345265;0.0593546;0.0635717
+[2024-04-04 02:30:51.738] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:30:59.754] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:31:03.756] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:31:49.905] GAME: TIDI: 0.166667;0.0741686;0.0623174;0.0634463
+[2024-04-04 02:32:03.768] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:32:49.923] GAME: TIDI: 0;0.051918;0.0602375;0.0631254
+[2024-04-04 02:33:13.800] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:33:29.815] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:33:47.819] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:33:49.954] GAME: TIDI: 0;0.0363426;0.0554585;0.0623587
+[2024-04-04 02:34:13.853] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:34:27.860] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:34:29.864] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:34:50.007] GAME: TIDI: 0.166667;0.0754398;0.0594548;0.0620683
+[2024-04-04 02:35:05.881] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:35:43.883] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:35:50.023] GAME: TIDI: 0;0.0528079;0.0581254;0.061674
+[2024-04-04 02:36:13.906] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:36:19.910] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 02:36:29.906] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:36:50.053] GAME: TIDI: 0;0.0369655;0.0538934;0.060896
+[2024-04-04 02:36:55.926] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:37:50.087] GAME: TIDI: 0;0.0258759;0.0482899;0.0596354
+[2024-04-04 02:38:48.150] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:38:50.289] GAME: TIDI: 0.333333;0.118113;0.0622546;0.0598973
+[2024-04-04 02:39:22.187] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:39:38.195] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:39:50.340] GAME: TIDI: 0.166667;0.132679;0.0763395;0.0615415
+[2024-04-04 02:40:26.221] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:40:38.225] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:40:50.367] GAME: TIDI: 0;0.0928754;0.0796467;0.063352
+[2024-04-04 02:41:00.234] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:41:18.249] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:41:34.257] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 02:41:40.258] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:41:50.388] GAME: TIDI: 0;0.0650128;0.0767199;0.0646888
+[2024-04-04 02:42:02.264] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:42:02.265] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:42:06.266] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:42:50.440] GAME: TIDI: 0.166667;0.095509;0.0804777;0.0662677
+[2024-04-04 02:42:54.308] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:43:04.309] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:43:40.330] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:43:50.468] GAME: TIDI: 0;0.0668563;0.0777534;0.0674163
+[2024-04-04 02:44:04.332] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:44:30.346] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:44:50.492] GAME: TIDI: 0;0.0467994;0.0715626;0.0678309
+[2024-04-04 02:44:54.358] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:44:56.355] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:45:02.358] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:45:50.519] GAME: TIDI: 0.166667;0.0827596;0.073802;0.068428
+[2024-04-04 02:46:18.396] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:46:50.562] GAME: TIDI: 0;0.0579317;0.070628;0.068648
+[2024-04-04 02:47:18.440] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:47:44.447] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:47:50.590] GAME: TIDI: 0;0.0405522;0.0646128;0.0682445
+[2024-04-04 02:48:26.462] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:48:50.605] GAME: TIDI: 0.166667;0.0783865;0.0673675;0.0681568
+[2024-04-04 02:49:12.551] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:49:32.555] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:49:34.557] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:49:50.697] GAME: TIDI: 0;0.0548706;0.0648682;0.0678279
+[2024-04-04 02:50:02.566] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:50:14.580] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:50:24.585] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:50:48.592] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:50:50.729] GAME: TIDI: 0.166667;0.0884094;0.0695764;0.0680028
+[2024-04-04 02:51:02.596] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:51:16.607] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 02:51:44.628] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 02:51:50.626] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:51:50.764] GAME: TIDI: 0;0.0618866;0.0680384;0.0680063
+[2024-04-04 02:52:04.638] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:52:16.639] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:52:50.784] GAME: TIDI: 0;0.0433206;0.0630949;0.0675152
+[2024-04-04 02:53:30.670] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:53:44.684] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:53:50.819] GAME: TIDI: 0.166667;0.0803244;0.0665408;0.0674177
+[2024-04-04 02:54:24.742] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:54:26.747] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:54:50.898] GAME: TIDI: 0;0.0562271;0.0644781;0.0671238
+[2024-04-04 02:54:58.760] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 02:55:50.923] GAME: TIDI: 0.166667;0.089359;0.0694542;0.0673568
+[2024-04-04 02:56:16.798] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:56:18.791] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:56:34.803] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:56:50.944] GAME: TIDI: 0;0.0625513;0.0680736;0.0674285
+[2024-04-04 02:57:24.892] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:57:30.892] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:57:44.908] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:57:51.041] GAME: TIDI: 0.166667;0.0937859;0.0732161;0.0680073
+[2024-04-04 02:57:54.914] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 02:58:00.908] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:58:06.907] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 02:58:42.918] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 02:58:51.067] GAME: TIDI: 0;0.0656501;0.0717029;0.0683768
+[2024-04-04 02:59:00.943] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 02:59:51.105] GAME: TIDI: 0.166667;0.0959551;0.0765533;0.0691945
+[2024-04-04 03:00:34.990] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:00:44.991] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:00:51.129] GAME: TIDI: 0;0.0671686;0.0746764;0.0697427
+[2024-04-04 03:01:05.005] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 03:01:09.008] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:01:21.012] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:01:37.019] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:01:51.153] GAME: TIDI: 0;0.047018;0.0691447;0.0696829
+[2024-04-04 03:01:57.031] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 03:02:51.190] GAME: TIDI: 0;0.0329126;0.0618983;0.0689044
+[2024-04-04 03:03:39.061] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:03:45.064] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 03:03:51.066] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:03:51.203] GAME: TIDI: 0.166667;0.0730388;0.0641264;0.0684266
+[2024-04-04 03:04:07.078] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 03:04:09.077] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:04:19.083] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:04:37.098] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:04:51.232] GAME: TIDI: 0;0.0511272;0.0615266;0.0677366
+[2024-04-04 03:05:11.117] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:05:19.114] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:05:35.116] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:05:51.255] GAME: TIDI: 0;0.035789;0.0563791;0.0666008
+[2024-04-04 03:05:53.120] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:05:59.131] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:06:51.280] GAME: TIDI: 0;0.0250523;0.0501137;0.0649521
+[2024-04-04 03:06:55.150] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:07:27.159] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:07:41.165] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:07:51.307] GAME: TIDI: 0.166667;0.0675366;0.0535983;0.0638167
+[2024-04-04 03:08:09.183] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:08:37.211] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 03:08:45.209] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:08:51.352] GAME: TIDI: 0;0.0472756;0.0523338;0.0626684
+[2024-04-04 03:08:53.219] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:09:49.259] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:09:51.395] GAME: TIDI: 0;0.0330929;0.0484856;0.0612502
+[2024-04-04 03:10:03.266] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:10:13.277] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 03:10:51.418] GAME: TIDI: 0.166667;0.0731651;0.0534215;0.0604673
+[2024-04-04 03:10:53.285] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 03:11:19.296] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:11:51.449] GAME: TIDI: 0;0.0512155;0.0529803;0.0597186
+[2024-04-04 03:12:35.339] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:12:51.478] GAME: TIDI: 0;0.0358509;0.0495544;0.0587022
+[2024-04-04 03:13:05.340] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:13:51.486] GAME: TIDI: 0;0.0250956;0.0446627;0.0572982
+[2024-04-04 03:14:19.361] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:14:35.368] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:14:41.370] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:14:51.379] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:14:51.514] GAME: TIDI: 0.166667;0.0675669;0.0492435;0.0564927
+[2024-04-04 03:15:51.537] GAME: TIDI: 0;0.0472969;0.0488542;0.0557289
+[2024-04-04 03:16:41.445] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:16:45.443] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:16:51.581] GAME: TIDI: 0;0.0331078;0.0457049;0.0547265
+[2024-04-04 03:17:13.466] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:17:21.467] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:17:41.472] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:17:51.612] GAME: TIDI: 0.166667;0.0731755;0.051199;0.0543737
+[2024-04-04 03:17:57.477] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:18:25.492] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:18:31.494] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:18:47.514] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:18:51.649] GAME: TIDI: 0;0.0512228;0.0512038;0.0540567
+[2024-04-04 03:19:41.537] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:19:51.683] GAME: TIDI: 0;0.035856;0.0481342;0.0534645
+[2024-04-04 03:20:51.726] GAME: TIDI: 0.166667;0.0750992;0.0535272;0.0534708
+[2024-04-04 03:20:53.595] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 03:21:49.630] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:21:51.765] GAME: TIDI: 0;0.0525694;0.0533357;0.0534572
+[2024-04-04 03:22:23.641] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:22:27.641] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:22:49.657] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:22:51.785] GAME: TIDI: 0;0.0367986;0.0500283;0.0531144
+[2024-04-04 03:22:57.653] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 03:22:59.650] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:23:27.651] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:23:45.669] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 03:23:47.669] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:23:51.804] GAME: TIDI: 0.166667;0.075759;0.0551744;0.0533204
+[2024-04-04 03:23:55.668] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:24:05.672] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 03:24:09.673] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:24:11.671] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:24:17.673] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:24:51.820] GAME: TIDI: 0;0.0530313;0.0547458;0.0534629
+[2024-04-04 03:25:15.696] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:25:27.701] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:25:31.710] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 03:25:33.700] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:25:45.708] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:25:49.710] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:25:51.843] GAME: TIDI: 0;0.0371219;0.051221;0.0532387
+[2024-04-04 03:26:19.734] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:26:25.748] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 03:26:27.735] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:26:39.746] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:26:51.912] GAME: TIDI: 0.166667;0.0759853;0.0561739;0.0535322
+[2024-04-04 03:27:09.782] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:27:13.781] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:27:21.790] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:27:23.789] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:27:29.795] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 03:27:31.794] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:27:45.810] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:27:51.949] GAME: TIDI: 0;0.0531897;0.0555771;0.0537367
+[2024-04-04 03:27:57.815] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:28:07.878] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:28:29.887] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:28:31.893] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:28:45.889] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:28:52.026] GAME: TIDI: 0.166667;0.0872328;0.0619082;0.0545539
+[2024-04-04 03:28:57.897] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:29:23.916] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:29:52.062] GAME: TIDI: 0;0.061063;0.0617392;0.0552724
+[2024-04-04 03:30:11.936] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:30:27.951] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:30:31.956] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:30:52.096] GAME: TIDI: 0;0.0427441;0.0579402;0.0555392
+[2024-04-04 03:31:07.976] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:31:25.987] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:31:52.149] GAME: TIDI: 0.166667;0.0799209;0.0623363;0.0562189
+[2024-04-04 03:32:02.011] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 03:32:14.019] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 03:32:32.029] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:32:52.165] GAME: TIDI: 0;0.0559446;0.061058;0.0567028
+[2024-04-04 03:33:52.174] GAME: TIDI: 0;0.0391612;0.0566786;0.0567004
+[2024-04-04 03:34:40.066] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:34:52.204] GAME: TIDI: 0.166667;0.0774129;0.0608255;0.0571129
+[2024-04-04 03:34:54.065] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:35:16.073] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:35:46.096] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:35:52.232] GAME: TIDI: 0;0.054189;0.0594982;0.0573514
+[2024-04-04 03:36:02.103] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:36:20.103] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:36:22.100] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:36:52.238] GAME: TIDI: 0;0.0379323;0.055185;0.0571348
+[2024-04-04 03:37:08.114] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 03:37:12.114] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:37:52.263] GAME: TIDI: 0;0.0265526;0.0494585;0.0563671
+[2024-04-04 03:37:56.126] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:38:46.222] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:38:52.357] GAME: TIDI: 0.166667;0.0685868;0.0532842;0.0560588
+[2024-04-04 03:39:06.227] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:39:24.231] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:39:52.379] GAME: TIDI: 0;0.0480108;0.0522295;0.0556759
+[2024-04-04 03:40:08.247] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:40:12.244] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:40:18.252] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:40:32.264] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 03:40:52.405] GAME: TIDI: 0.166667;0.0836075;0.0585051;0.0559588
+[2024-04-04 03:41:32.292] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:41:44.303] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:41:52.301] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:41:52.432] GAME: TIDI: 0;0.0585253;0.0585091;0.0562139
+[2024-04-04 03:42:08.303] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:42:16.315] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 03:42:22.318] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 03:42:28.320] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 03:42:52.474] GAME: TIDI: 0;0.0409677;0.0550009;0.0560926
+[2024-04-04 03:43:30.419] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:43:52.557] GAME: TIDI: 0.166667;0.0786774;0.0597362;0.0564569
+[2024-04-04 03:44:00.421] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:44:20.424] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:44:52.574] GAME: TIDI: 0;0.0550742;0.0588038;0.0566916
+[2024-04-04 03:44:58.443] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 03:45:26.447] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:45:40.451] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:45:52.588] GAME: TIDI: 0;0.0385519;0.0547534;0.0564978
+[2024-04-04 03:46:40.469] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 03:46:50.482] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:46:52.611] GAME: TIDI: 0.166667;0.0769864;0.0592;0.056768
+[2024-04-04 03:47:20.529] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:47:28.549] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 03:47:42.550] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:47:52.698] GAME: TIDI: 0;0.0538904;0.0581381;0.056905
+[2024-04-04 03:48:02.567] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:48:06.574] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:48:42.592] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:48:52.742] GAME: TIDI: 0.166667;0.0877233;0.0640551;0.05762
+[2024-04-04 03:49:30.634] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:49:46.638] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:49:52.774] GAME: TIDI: 0;0.0614063;0.0635254;0.0582105
+[2024-04-04 03:50:50.670] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:50:52.808] GAME: TIDI: 0.166667;0.0929844;0.0694172;0.0593312
+[2024-04-04 03:50:56.672] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:50:58.674] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:51:12.673] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:51:14.676] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:51:24.688] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:51:42.695] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:51:52.842] GAME: TIDI: 0;0.0650891;0.0685516;0.0602532
+[2024-04-04 03:52:52.854] GAME: TIDI: 0;0.0455624;0.0639537;0.0606233
+[2024-04-04 03:53:10.725] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:53:52.868] GAME: TIDI: 0;0.0318937;0.0575417;0.0603151
+[2024-04-04 03:54:02.742] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:54:36.757] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:54:52.905] GAME: TIDI: 0.166667;0.0723256;0.0604985;0.0603335
+[2024-04-04 03:55:04.772] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:55:52.914] GAME: TIDI: 0;0.0506279;0.0585244;0.0601526
+[2024-04-04 03:56:48.793] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 03:56:52.930] GAME: TIDI: 0;0.0354395;0.0539074;0.059528
+[2024-04-04 03:57:32.803] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:57:34.805] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:57:36.809] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:57:52.948] GAME: TIDI: 0;0.0248077;0.0480875;0.058384
+[2024-04-04 03:58:06.820] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 03:58:34.834] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 03:58:52.969] GAME: TIDI: 0;0.0173654;0.041943;0.0567399
+[2024-04-04 03:59:52.982] GAME: TIDI: 0;0.0121558;0.0359856;0.0546645
+[2024-04-04 04:00:24.854] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:00:32.849] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:00:42.855] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:00:46.856] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 04:00:52.994] GAME: TIDI: 0;0.00850903;0.0304903;0.052247
+[2024-04-04 04:00:58.858] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:01:00.858] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:01:04.857] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:01:53.007] GAME: TIDI: 0.166667;0.0559563;0.0355835;0.0505807
+[2024-04-04 04:02:53.032] GAME: TIDI: 0;0.0391694;0.0363007;0.0491527
+[2024-04-04 04:03:04.903] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 04:03:16.901] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:03:24.899] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:03:32.901] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:03:53.042] GAME: TIDI: 0;0.0274186;0.0345243;0.0476898
+[2024-04-04 04:04:53.132] GAME: TIDI: 0.166667;0.069193;0.041458;0.0470667
+[2024-04-04 04:05:21.003] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:05:23.011] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:05:33.019] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:05:53.160] GAME: TIDI: 0;0.0484351;0.0428534;0.0466453
+[2024-04-04 04:06:07.023] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:06:51.036] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 04:06:53.170] GAME: TIDI: 0;0.0339046;0.0410637;0.0460872
+[2024-04-04 04:06:57.042] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:07:39.058] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:07:53.212] GAME: TIDI: 0.166667;0.0737332;0.0475976;0.0462382
+[2024-04-04 04:07:59.080] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:08:21.087] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:08:53.230] GAME: TIDI: 0;0.0516132;0.0484007;0.0464545
+[2024-04-04 04:08:55.102] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:09:35.115] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:09:51.114] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:09:53.251] GAME: TIDI: 0;0.0361293;0.0459464;0.0464037
+[2024-04-04 04:10:47.142] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:10:53.276] GAME: TIDI: 0;0.0252905;0.0418152;0.0459448
+[2024-04-04 04:11:15.142] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:11:53.155] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:11:53.291] GAME: TIDI: 0;0.0177033;0.0369929;0.0450496
+[2024-04-04 04:12:07.155] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:12:53.306] GAME: TIDI: 0.166667;0.0623923;0.0420728;0.0447519
+[2024-04-04 04:13:41.184] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 04:13:53.319] GAME: TIDI: 0;0.0436746;0.0423931;0.044516
+[2024-04-04 04:13:59.195] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:14:53.350] GAME: TIDI: 0;0.0305722;0.040029;0.0440673
+[2024-04-04 04:15:25.234] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:15:53.386] GAME: TIDI: 0;0.0214006;0.0363033;0.0432909
+[2024-04-04 04:16:29.380] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:16:53.524] GAME: TIDI: 0.333333;0.11498;0.0520387;0.0441657
+[2024-04-04 04:17:13.395] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:17:15.394] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:17:15.396] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 04:17:53.551] GAME: TIDI: 0;0.0804863;0.0577282;0.045522
+[2024-04-04 04:18:19.423] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:18:31.434] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:18:47.433] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:18:53.569] GAME: TIDI: 0;0.0563404;0.0574507;0.0467148
+[2024-04-04 04:18:57.439] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:19:53.611] GAME: TIDI: 0.166667;0.0894383;0.0638482;0.0484282
+[2024-04-04 04:20:03.480] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:20:09.486] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:20:17.481] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:20:29.481] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:20:39.484] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:20:53.623] GAME: TIDI: 0;0.0626068;0.0635999;0.0499453
+[2024-04-04 04:21:29.499] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:21:51.496] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:21:53.634] GAME: TIDI: 0;0.0438248;0.0596449;0.0509153
+[2024-04-04 04:21:55.501] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 04:22:09.495] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:22:51.507] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:22:53.635] GAME: TIDI: 0;0.0306773;0.0538514;0.0512089
+[2024-04-04 04:23:37.520] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:23:53.669] GAME: TIDI: 0;0.0214741;0.0473759;0.0508256
+[2024-04-04 04:24:11.534] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:24:33.547] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:24:51.549] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:24:53.686] GAME: TIDI: 0;0.0150319;0.0409071;0.0498337
+[2024-04-04 04:25:03.567] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:25:53.762] GAME: TIDI: 0.166667;0.0605223;0.0448302;0.0493334
+[2024-04-04 04:26:53.786] GAME: TIDI: 0;0.0423656;0.0443373;0.0488338
+[2024-04-04 04:27:33.668] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:27:53.802] GAME: TIDI: 0.166667;0.0796559;0.051401;0.0490905
+[2024-04-04 04:27:55.665] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:28:53.822] GAME: TIDI: 0;0.0557592;0.0522726;0.0494087
+[2024-04-04 04:29:43.709] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:29:53.847] GAME: TIDI: 0;0.0390314;0.0496244;0.0494303
+[2024-04-04 04:30:11.721] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:30:53.888] GAME: TIDI: 0;0.027322;0.0451639;0.0490036
+[2024-04-04 04:31:11.759] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 04:31:53.901] GAME: TIDI: 0.166667;0.0691254;0.0499562;0.0490989
+[2024-04-04 04:32:53.912] GAME: TIDI: 0;0.0483878;0.0496425;0.0491532
+[2024-04-04 04:33:53.928] GAME: TIDI: 0;0.0338714;0.0464883;0.0488868
+[2024-04-04 04:33:57.805] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 04:34:53.954] GAME: TIDI: 0;0.02371;0.0419326;0.0481913
+[2024-04-04 04:35:19.824] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 04:35:35.822] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:35:53.959] GAME: TIDI: 0;0.016597;0.0368655;0.0470588
+[2024-04-04 04:36:21.838] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:36:33.835] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:36:53.972] GAME: TIDI: 0;0.0116179;0.031816;0.0455345
+[2024-04-04 04:37:11.839] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 04:37:21.837] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:37:53.987] GAME: TIDI: 0;0.00813253;0.0270793;0.043689
+[2024-04-04 04:38:07.859] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:38:49.875] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:38:53.879] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 04:38:54.011] GAME: TIDI: 0.166667;0.0556928;0.032802;0.0426003
+[2024-04-04 04:38:59.876] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 04:39:47.901] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:39:53.907] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 04:39:54.042] GAME: TIDI: 0;0.0389849;0.0340386;0.0417441
+[2024-04-04 04:40:54.061] GAME: TIDI: 0;0.0272895;0.0326888;0.0408386
+[2024-04-04 04:41:29.944] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:41:47.959] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:41:53.959] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:41:54.093] GAME: TIDI: 0;0.0191026;0.0299715;0.0397519
+[2024-04-04 04:42:01.962] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:42:15.961] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:42:25.959] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:42:43.961] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:42:45.971] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 04:42:47.965] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:42:54.103] GAME: TIDI: 0.166667;0.0633718;0.0366516;0.0394418
+[2024-04-04 04:42:55.970] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 04:43:15.970] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:43:21.969] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 04:43:54.116] GAME: TIDI: 0;0.0443603;0.0381933;0.039317
+[2024-04-04 04:44:03.985] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:44:19.990] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:44:54.141] GAME: TIDI: 0;0.0310522;0.0367651;0.0390618
+[2024-04-04 04:45:14.024] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:45:44.033] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:45:54.167] GAME: TIDI: 0;0.0217365;0.0337594;0.0385315
+[2024-04-04 04:46:18.103] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 04:46:30.108] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:46:54.245] GAME: TIDI: 0.166667;0.0652156;0.0400506;0.0386835
+[2024-04-04 04:47:02.113] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:47:06.116] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:47:10.120] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:47:12.119] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 04:47:42.123] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 04:47:54.264] GAME: TIDI: 0;0.0456509;0.0411707;0.0389322
+[2024-04-04 04:48:12.129] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:48:24.136] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:48:34.135] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:48:40.147] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:48:54.277] GAME: TIDI: 0;0.0319556;0.0393277;0.0389717
+[2024-04-04 04:49:54.288] GAME: TIDI: 0;0.0223689;0.0359359;0.0386681
+[2024-04-04 04:50:08.156] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:50:10.163] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:50:28.170] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:50:46.176] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:50:54.306] GAME: TIDI: 0.166667;0.0656583;0.0418804;0.0389894
+[2024-04-04 04:51:00.172] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:51:12.169] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:51:16.172] SAY: INVALID/(Medibot) (59,168,9): There's always a catch, and it's the best there is.
+[2024-04-04 04:51:54.497] GAME: TIDI: 0.166667;0.0959608;0.0526965;0.0403601
+[2024-04-04 04:51:56.359] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:52:02.359] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:52:46.440] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:52:54.574] GAME: TIDI: 0.166667;0.117173;0.0655917;0.0428832
+[2024-04-04 04:53:20.442] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 04:53:54.580] GAME: TIDI: 0;0.0820208;0.0688775;0.0454827
+[2024-04-04 04:54:04.453] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:54:24.453] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:54:32.452] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:54:46.455] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:54:54.596] GAME: TIDI: 0;0.0574146;0.0665849;0.0475929
+[2024-04-04 04:55:24.461] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:55:34.469] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:55:54.615] GAME: TIDI: 0.166667;0.0901902;0.071306;0.0499642
+[2024-04-04 04:55:58.481] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:56:08.482] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:56:44.496] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:56:54.496] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:56:54.631] GAME: TIDI: 0;0.0631331;0.0696714;0.0519349
+[2024-04-04 04:57:36.506] SAY: INVALID/(Medibot) (59,168,9): Delicious!
+[2024-04-04 04:57:54.504] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:57:54.639] GAME: TIDI: 0;0.0441932;0.0645758;0.053199
+[2024-04-04 04:57:56.503] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:58:48.517] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 04:58:54.652] GAME: TIDI: 0;0.0309352;0.0578477;0.0536639
+[2024-04-04 04:58:58.517] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:59:06.517] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:59:32.523] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 04:59:52.534] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 04:59:54.672] GAME: TIDI: 0;0.0216547;0.0506091;0.0533584
+[2024-04-04 05:00:20.542] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:00:24.551] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:00:24.552] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:00:54.683] GAME: TIDI: 0;0.0151583;0.0435189;0.0523744
+[2024-04-04 05:00:58.556] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:01:08.546] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:01:28.572] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:01:30.574] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:01:38.574] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:01:54.710] GAME: TIDI: 0.166667;0.0606108;0.0469373;0.0518307
+[2024-04-04 05:01:56.573] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:02:14.640] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:02:28.646] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:02:32.641] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:02:54.790] GAME: TIDI: 0;0.0424276;0.0460353;0.0512512
+[2024-04-04 05:03:54.800] GAME: TIDI: 0.166667;0.0796993;0.0527681;0.0514029
+[2024-04-04 05:04:08.674] SAY: INVALID/(Medibot) (59,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-04-04 05:04:54.830] GAME: TIDI: 0;0.0557895;0.0533724;0.0515998
+[2024-04-04 05:05:32.704] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:05:40.706] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:05:42.705] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:05:54.840] GAME: TIDI: 0;0.0390527;0.0505085;0.0514907
+[2024-04-04 05:06:00.715] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:06:14.716] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:06:34.721] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:06:54.865] GAME: TIDI: 0;0.0273369;0.0458741;0.050929
+[2024-04-04 05:07:06.732] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:07:54.818] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:07:54.953] GAME: TIDI: 0.166667;0.0691358;0.0505265;0.0508888
+[2024-04-04 05:08:42.928] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:08:55.066] GAME: TIDI: 0.166667;0.0983951;0.0601002;0.0518099
+[2024-04-04 05:09:42.943] SAY: INVALID/(Medibot) (59,168,9): I knew it, I should've been a plastic surgeon.
+[2024-04-04 05:09:55.077] GAME: TIDI: 0;0.0688765;0.0618555;0.0528145
+[2024-04-04 05:10:55.105] GAME: TIDI: 0.166667;0.0982136;0.0691271;0.0544457
+[2024-04-04 05:11:04.986] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 05:11:06.986] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:11:19.012] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:11:25.010] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:11:33.009] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:11:37.017] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:11:55.155] GAME: TIDI: 0;0.0687495;0.0690516;0.0559063
+[2024-04-04 05:12:15.103] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:12:55.253] GAME: TIDI: 0.166667;0.0981247;0.0748662;0.0578023
+[2024-04-04 05:13:36.438] GAME: Autotransfer has called the shuttle.
+[2024-04-04 05:13:41.253] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:13:55.394] GAME: TIDI: 0.166667;0.118687;0.0836304;0.0603851
+[2024-04-04 05:14:13.265] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:14:33.278] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:14:55.415] GAME: TIDI: 0.166667;0.133081;0.0935205;0.0636986
+[2024-04-04 05:15:47.284] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:15:55.427] GAME: TIDI: 0;0.0931568;0.0934478;0.0666736
+[2024-04-04 05:16:55.429] GAME: TIDI: 0;0.0652097;0.0878002;0.0687862
+[2024-04-04 05:16:59.292] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:17:27.298] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:17:55.440] GAME: TIDI: 0;0.0456468;0.0793695;0.0698445
+[2024-04-04 05:18:55.593] GAME: TIDI: 0.166667;0.0819528;0.0798862;0.0708487
+[2024-04-04 05:18:57.454] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:18:59.471] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:19:35.472] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:19:55.624] GAME: TIDI: 0.166667;0.107367;0.0853823;0.0723021
+[2024-04-04 05:20:17.490] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:20:21.495] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:20:23.495] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:20:55.643] GAME: TIDI: 0;0.0751569;0.0833372;0.0734056
+[2024-04-04 05:20:59.506] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:21:19.509] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:21:41.535] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:21:47.533] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:21:55.675] GAME: TIDI: 0;0.0526098;0.0771917;0.0737842
+[2024-04-04 05:22:27.552] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:22:39.553] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:22:51.554] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:22:55.694] GAME: TIDI: 0;0.0368269;0.0691188;0.0733176
+[2024-04-04 05:22:59.556] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:23:29.577] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:23:53.772] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:23:55.771] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:23:55.907] GAME: TIDI: 0.5;0.175779;0.0904508;0.075031
+[2024-04-04 05:24:05.811] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:24:05.813] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:24:56.041] GAME: TIDI: 0.166667;0.173045;0.10697;0.0782248
+[2024-04-04 05:25:56.089] GAME: TIDI: 0;0.121132;0.109802;0.0813825
+[2024-04-04 05:26:55.978] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:26:56.112] GAME: TIDI: 0.166667;0.134792;0.1148;0.0847243
+[2024-04-04 05:27:01.985] SAY: INVALID/(Medibot) (59,168,9): Radar, put a mask on!
+[2024-04-04 05:27:19.996] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:27:42.235] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:27:56.364] GAME: TIDI: 0.333333;0.194354;0.130711;0.089323
+[2024-04-04 05:28:28.232] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:28:38.233] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:28:40.233] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:28:56.369] GAME: TIDI: 0;0.136048;0.131778;0.0935685
+[2024-04-04 05:29:04.244] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:29:21.130] GAME: Antagonists at round end were...
+[2024-04-04 05:29:56.546] GAME: TIDI: 0.333333;0.195234;0.144469;0.0986586
+[2024-04-04 05:30:14.428] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:30:56.589] GAME: TIDI: 0;0.136664;0.142908;0.103084
+[2024-04-04 05:31:12.465] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:31:34.493] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:31:40.504] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:31:42.505] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:31:56.654] GAME: TIDI: 0.166667;0.145665;0.14346;0.107121
+[2024-04-04 05:32:10.524] EMOTE: INVALID/(Cleanbot) (44,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-04 05:32:12.533] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:32:18.524] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!
+[2024-04-04 05:32:56.678] GAME: TIDI: 0;0.101965;0.135161;0.109925
+[2024-04-04 05:33:12.538] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-04 05:33:20.540] EMOTE: INVALID/(Fitz) (200,161,9): <B>Fitz</B> makes an excited booping sound!

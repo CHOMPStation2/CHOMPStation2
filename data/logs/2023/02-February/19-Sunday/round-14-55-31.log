@@ -1,0 +1,317 @@
+[2023-02-19T14:55:45] START: Starting up data/logs/2023/02-February/19-Sunday/round-14-55-31.
+[2023-02-19T14:55:46] ADMIN: Loading jobban_rank
+[2023-02-19T14:55:46] ADMIN: jobban_keylist was empty
+[2023-02-19T14:55:46] ADMIN: Loading Banlist
+[2023-02-19T14:55:47] GAME: Ore-Rich Geyser loaded at at 186,92,5
+[2023-02-19T14:55:47] GAME: Ore-Topped Cliff loaded at at 79,8,5
+[2023-02-19T14:55:47] GAME: Supply Drop 1 loaded at at 229,48,5
+[2023-02-19T14:55:50] GAME: Cursed Sword Cave loaded at at 145,81,5
+[2023-02-19T14:55:50] GAME: Crystal Cave 3 loaded at at 8,104,5
+[2023-02-19T14:55:50] GAME: Spider Cave 1 loaded at at 36,75,5
+[2023-02-19T14:55:50] GAME: Abandoned Relay loaded at at 30,40,5
+[2023-02-19T14:55:51] GAME: Mine Vault 5 loaded at at 192,15,5
+[2023-02-19T14:55:51] GAME: Abandoned Temple loaded at at 82,16,5
+[2023-02-19T14:55:51] GAME: Ice Cave 1C loaded at at 201,13,5
+[2023-02-19T14:55:51] GAME: Speakeasy loaded at at 68,97,5
+[2023-02-19T14:55:51] GAME: Crystal Cave 1 loaded at at 12,66,5
+[2023-02-19T14:55:51] GAME: Abandoned Mineshaft 1 loaded at at 164,19,5
+[2023-02-19T14:55:51] GAME: spatial anomaly loaded at at 186,163,5
+[2023-02-19T14:55:51] GAME: Snow loaded at at 32,190,4
+[2023-02-19T14:55:51] GAME: Snow 2 loaded at at 195,66,4
+[2023-02-19T14:55:51] GAME: Old Library loaded at at 157,35,4
+[2023-02-19T14:55:52] GAME: Farm loaded at at 22,55,4
+[2023-02-19T14:55:52] GAME: Merchant Stand loaded at at 170,25,4
+[2023-02-19T14:55:52] GAME: Field loaded at at 185,15,4
+[2023-02-19T14:55:52] GAME: Camp Site loaded at at 37,112,4
+[2023-02-19T14:55:52] GAME: Diner loaded at at 68,23,4
+[2023-02-19T14:55:52] GAME: Snow 3 loaded at at 202,150,4
+[2023-02-19T14:55:52] GAME: Buried Treasure loaded at at 104,40,4
+[2023-02-19T14:55:52] GAME: Shakden loaded at at 20,164,4
+[2023-02-19T14:55:52] GAME: Pride Rock loaded at at 46,106,4
+[2023-02-19T14:55:52] GAME: Wrecked Shelter loaded at at 178,74,4
+[2023-02-19T14:55:52] GAME: Construction Site loaded at at 51,137,4
+[2023-02-19T14:55:52] GAME: Snow 5 loaded at at 115,76,4
+[2023-02-19T14:55:52] GAME: Old Supply Drop loaded at at 155,24,4
+[2023-02-19T14:55:53] GAME: Meth Lab loaded at at 75,101,4
+[2023-02-19T14:55:53] GAME: Ruptured Canister loaded at at 178,130,4
+[2023-02-19T14:55:53] GAME: Rocky Outcrop loaded at at 204,71,4
+[2023-02-19T14:55:53] GAME: Rocky 2 loaded at at 109,22,9
+[2023-02-19T14:55:53] GAME: Emergency Pod 4 loaded at at 85,30,9
+[2023-02-19T14:55:53] GAME: Military Camp 1 loaded at at 165,62,9
+[2023-02-19T14:55:53] GAME: Rocky 3 loaded at at 191,54,9
+[2023-02-19T14:55:53] GAME: Lab 1 loaded at at 184,71,9
+[2023-02-19T14:55:53] GAME: Shack 1 loaded at at 40,89,9
+[2023-02-19T14:55:53] GAME: Musk loaded at at 71,37,9
+[2023-02-19T14:55:53] GAME: Mudpit loaded at at 137,42,9
+[2023-02-19T14:55:53] GAME: Drug Den loaded at at 191,29,9
+[2023-02-19T14:55:53] GAME: Smol 1 loaded at at 180,19,9
+[2023-02-19T14:55:53] GAME: Demon Pool loaded at at 100,75,9
+[2023-02-19T14:55:53] GAME: Frostfly Nest loaded at at 138,69,9
+[2023-02-19T14:55:53] GAME: Wolf Den loaded at at 18,55,9
+[2023-02-19T14:55:53] GAME: Kururak Den loaded at at 47,36,9
+[2023-02-19T14:55:53] GAME: Snowrock 1 loaded at at 60,48,9
+[2023-02-19T14:55:54] GAME: Rocky 4 loaded at at 156,33,9
+[2023-02-19T14:55:54] GAME: Rocky 1 loaded at at 75,73,9
+[2023-02-19T14:55:54] GAME: Rocky 2 loaded at at 8,30,9
+[2023-02-19T14:55:54] GAME: Forest Lake loaded at at 9,88,9
+[2023-02-19T14:55:54] GAME: Empty Cabin loaded at at 63,82,9
+[2023-02-19T14:55:54] GAME: Government Patrol loaded at at 174,48,9
+[2023-02-19T14:55:54] GAME: Frost Oasis loaded at at 105,48,9
+[2023-02-19T14:55:54] GAME: Rocky 2 loaded at at 59,8,9
+[2023-02-19T14:55:55] GAME: Chasm loaded at at 27,65,9
+[2023-02-19T14:55:55] ACCESS IN: RiotScopez/(RiotScopez) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T14:55:55] GAME: Shelter 1 loaded at at 151,47,9
+[2023-02-19T14:55:56] GAME: Spider Nest 1 loaded at at 37,31,9
+[2023-02-19T14:55:56] GAME: Butcher Shack loaded at at 16,9,9
+[2023-02-19T14:55:56] GAME: Spider Nest 1 loaded at at 34,49,9
+[2023-02-19T14:56:00] GAME: Spider Nest 1 loaded at at 134,82,9
+[2023-02-19T14:56:00] GAME: Spider Nest 1 loaded at at 221,60,9
+[2023-02-19T14:56:00] GAME: Emergency Pod 3 loaded at at 195,159,9
+[2023-02-19T14:56:01] GAME: Derelict Engine loaded at at 40,145,9
+[2023-02-19T14:56:02] GAME: Raided Mech Hanger loaded at at 148,208,9
+[2023-02-19T14:56:02] GAME: DJOutpost 4 loaded at at 218,199,9
+[2023-02-19T14:56:04] GAME: Cliff Base loaded at at 108,184,9
+[2023-02-19T14:56:04] GAME: Black Shuttle Down loaded at at 150,123,9
+[2023-02-19T14:56:04] GAME: Cult Bar loaded at at 181,174,9
+[2023-02-19T14:56:04] GAME: Death Den loaded at at 206,217,9
+[2023-02-19T14:56:06] GAME: Dragon Plateu loaded at at 35,198,9
+[2023-02-19T14:56:06] GAME: Chapel 1 loaded at at 82,122,9
+[2023-02-19T14:56:06] GAME: Otie Shelter loaded at at 117,163,9
+[2023-02-19T14:56:09] GAME: Manor 1 loaded at at 190,112,9
+[2023-02-19T14:56:09] GAME: Syndi Sniper loaded at at 50,120,9
+[2023-02-19T14:56:59] GAME: Z-level VR World loaded at at 1,1,11
+[2023-02-19T14:57:00] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2023-02-19T14:57:04] GAME: Z-level Kara Aerostat - Z1 Aerostat loaded at at 1,1,13
+[2023-02-19T14:57:12] GAME: Z-level Kara - Z1 Northern Star loaded at at 1,1,14
+[2023-02-19T14:57:56] GAME: Z-level Snow Field loaded at at 1,1,15
+[2023-02-19T14:58:32] MISC: a the gibber didn't find an input plate.
+[2023-02-19T14:59:08] MISC: a the gibber didn't find an input plate.
+[2023-02-19T15:03:42] ADMIN: EVENT Error: /mob/living/simple_mob/animal/giant_spider/broodling([0x30002fb]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T15:03:43] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2023-02-19T15:04:00] GAME: TRAITS riotscopez/(KI-RA V2.49) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:04:04] ADMIN: EVENT Error: /icon([0x21014f87]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-19T15:04:28] GAME: TRAITS riotscopez/(KI-RA V2.49) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:04:54] GAME: TIDI: 21.6667;6.5;1.3;0.13
+[2023-02-19T15:04:59] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:05:09] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:05:09] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:05:10] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:05:11] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:05:45] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:06:10] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:06:16] GAME: TIDI: 36.5;15.5;4.14;0.531
+[2023-02-19T15:06:20] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:06:27] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:06:38] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:06:45] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:06:54] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:07:04] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/melee([0x2100989a]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T15:07:29] GAME: TIDI: 20.8333;17.1;6.732;1.1511
+[2023-02-19T15:07:29] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:07:31] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:07:32] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:07:33] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:07:48] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:08:32] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:08:33] GAME: TIDI: 6.66667;13.97;8.1796;1.85395
+[2023-02-19T15:08:45] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:08:58] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:11] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:12] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:14] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:15] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:23] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:35] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:36] GAME: TIDI: 6.5;11.729;8.88948;2.5575
+[2023-02-19T15:09:45] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:51] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:09:59] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:10:01] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:10:09] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:10:17] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:10:40] GAME: TIDI: 5.66667;9.9103;9.09364;3.21112
+[2023-02-19T15:10:43] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:11:10] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:11:15] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:11:21] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:11:42] GAME: TIDI: 3.5;7.98721;8.87236;3.77724
+[2023-02-19T15:11:47] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:11:52] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:11:57] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:12:00] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:12:06] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:12:18] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:12:24] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:12:42] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:12:46] GAME: TIDI: 7.33333;7.79105;8.65609;4.26513
+[2023-02-19T15:12:57] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:13:03] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:13:04] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:13:07] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:13:22] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:13:27] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:13:50] GAME: TIDI: 5.33333;7.05373;8.33562;4.67218
+[2023-02-19T15:14:03] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:14:14] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:14:23] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:14:52] GAME: TIDI: 3.33333;5.93761;7.85602;4.99056
+[2023-02-19T15:15:21] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:15:29] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:15:55] ADMIN: RiotScopez/(RiotScopez) has started the game.
+[2023-02-19T15:15:56] GAME: TIDI: 7;6.25633;7.53608;5.24511
+[2023-02-19T15:15:57] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T15:15:57] ACCESS OUT: INVALID/(RiotScopez) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T15:15:57] ACCESS IN: RiotScopez/(Aura) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T15:16:01] GAME: JOINED RiotScopez/(Aura) as "Medical Doctor"
+[2023-02-19T15:16:01] GAME: SPECIES RiotScopez/(Aura) is a: "Custom Species"
+[2023-02-19T15:16:09] ADMIN: RiotScopez/(Aura) has changed RiotScopez/(Aura)'s size multiplier to 4.
+[2023-02-19T15:16:14] ADMIN: EVENT Error: /mob/living/simple_mob/humanoid/merc/ranged/ionrifle([0x30000c5]) took longer than 0.5 seconds to delete (took 0.7 seconds to delete)
+[2023-02-19T15:16:18] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-19T15:16:18] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-19T15:16:19] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-19T15:16:19] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-19T15:16:21] ADMIN: EVENT Error: /mob/living/simple_mob/humanoid/merc/ranged([0x30000bf]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-19T15:16:29] ATTACK: RiotScopez/(Aura) against RiotScopez/(Aura): Implanted backup implant
+[2023-02-19T15:17:05] GAME: TIDI: 15.0708;8.90066;7.809;5.5015
+[2023-02-19T15:18:06] GAME: TIDI: 1.16667;6.58046;7.56329;5.70768
+[2023-02-19T15:18:35] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/merc/ranged([0x2100917f]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-19T15:18:55] ADMIN: RiotScopez/(Aura) created 1 /obj/item/weapon/reagent_containers/glass/bottle/bicaridine
+[2023-02-19T15:19:03] ADMIN: RiotScopez/(Aura) created 1 /obj/item/weapon/reagent_containers/glass/bottle/keloderm
+[2023-02-19T15:19:07] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-02-19T15:19:08] GAME: TIDI: 3.5;5.65632;7.1819;5.8551
+[2023-02-19T15:19:15] ADMIN: RiotScopez/(Aura) created 1 /obj/item/weapon/reagent_containers/glass/bottle/carthatoline
+[2023-02-19T15:19:37] ADMIN: RiotScopez/(Aura) created 1 /obj/item/weapon/reagent_containers/glass/bottle/dexalinp
+[2023-02-19T15:19:47] ADMIN: RiotScopez/(Aura) created 1 /obj/item/weapon/reagent_containers/glass/bottle/hyronalin
+[2023-02-19T15:20:08] GAME: TIDI: 1;4.25943;6.5974;5.92933
+[2023-02-19T15:20:09] ADMIN: RiotScopez/(Aura) created 1 /obj/item/weapon/reagent_containers/glass/bottle/inaprovaline
+[2023-02-19T15:20:24] ADMIN: RiotScopez/(Aura) created 1 /obj/item/weapon/reagent_containers/glass/bottle/peridaxon
+[2023-02-19T15:21:09] GAME: TIDI: 0.833333;3.2316;5.92424;5.92882
+[2023-02-19T15:22:09] GAME: TIDI: 1.16667;2.61212;5.26182;5.86212
+[2023-02-19T15:23:10] GAME: TIDI: 1.16667;2.17848;4.64515;5.74043
+[2023-02-19T15:24:11] GAME: TIDI: 1.16667;1.87494;4.09111;5.57549
+[2023-02-19T15:25:11] GAME: TIDI: 0.5;1.46246;3.56538;5.37448
+[2023-02-19T15:25:21] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> chases their tail.
+[2023-02-19T15:26:11] GAME: TIDI: 0.5;1.17372;3.08705;5.14574
+[2023-02-19T15:27:12] GAME: TIDI: 1.66667;1.3216;2.73396;4.90456
+[2023-02-19T15:27:32] ADMIN: RiotScopez/(Aura) modified Aura's nutrition from 247.369 to 1000
+[2023-02-19T15:28:13] GAME: TIDI: 1;1.22512;2.43219;4.65732
+[2023-02-19T15:29:13] GAME: TIDI: 0.666667;1.05759;2.15727;4.40732
+[2023-02-19T15:30:14] GAME: TIDI: 0.666667;0.94031;1.91388;4.15797
+[2023-02-19T15:31:14] GAME: TIDI: 0.666667;0.858217;1.70275;3.91245
+[2023-02-19T15:32:15] GAME: TIDI: 0.833333;0.850752;1.53235;3.67444
+[2023-02-19T15:33:04] EMOTE: INVALID/(Ian) (135,133,2): <B>Ian</B> dances around.
+[2023-02-19T15:33:15] GAME: TIDI: 0.666667;0.795526;1.38498;3.44549
+[2023-02-19T15:34:16] GAME: TIDI: 0.666667;0.756868;1.25936;3.22688
+[2023-02-19T15:35:17] GAME: TIDI: 3.16667;1.47981;1.30345;3.03454
+[2023-02-19T15:36:19] GAME: TIDI: 1.83333;1.58587;1.35993;2.86708
+[2023-02-19T15:37:19] GAME: TIDI: 0.666667;1.31011;1.34997;2.71537
+[2023-02-19T15:38:19] GAME: TIDI: 0.666667;1.11707;1.30339;2.57417
+[2023-02-19T15:39:20] GAME: TIDI: 0.666667;0.981952;1.2391;2.44066
+[2023-02-19T15:40:20] GAME: TIDI: 0.666667;0.887366;1.16875;2.31347
+[2023-02-19T15:41:21] GAME: TIDI: 1.16667;0.971156;1.12923;2.19505
+[2023-02-19T15:42:21] GAME: TIDI: 0.666667;0.879809;1.07935;2.08348
+[2023-02-19T15:43:22] GAME: TIDI: 0.5;0.765867;1.01665;1.97679
+[2023-02-19T15:44:22] GAME: TIDI: 0.666667;0.736107;0.960544;1.87517
+[2023-02-19T15:45:03] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> chases their tail.
+[2023-02-19T15:45:22] GAME: TIDI: 0.666667;0.715275;0.91149;1.7788
+[2023-02-19T15:46:23] GAME: TIDI: 0.5;0.650692;0.859331;1.68685
+[2023-02-19T15:46:48] EMOTE: INVALID/(Ian) (135,134,2): <B>Ian</B> chases their tail.
+[2023-02-19T15:47:06] EMOTE: INVALID/(Ian) (136,134,2): <B>Ian</B> dances around.
+[2023-02-19T15:47:14] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> dances around.
+[2023-02-19T15:47:23] GAME: TIDI: 0.666667;0.655485;0.818561;1.60003
+[2023-02-19T15:47:26] EMOTE: INVALID/(Ian) (136,134,2): <B>Ian</B> dances around.
+[2023-02-19T15:48:23] GAME: TIDI: 0.5;0.608839;0.776617;1.51768
+[2023-02-19T15:48:45] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> chases their tail.
+[2023-02-19T15:49:40] GAME: TIDI: 27.8333;8.77619;2.37653;1.60357
+[2023-02-19T15:50:41] GAME: TIDI: 2.33333;6.84333;3.26989;1.7702
+[2023-02-19T15:51:42] GAME: TIDI: 0.166667;4.84033;3.58398;1.95158
+[2023-02-19T15:52:42] GAME: TIDI: 0.166667;3.43823;3.55483;2.1119
+[2023-02-19T15:53:42] GAME: TIDI: 0.166667;2.45676;3.33522;2.23424
+[2023-02-19T15:54:35] EMOTE: INVALID/(Ian) (137,132,2): <B>Ian</B> dances around.
+[2023-02-19T15:54:42] GAME: TIDI: 0.166667;1.76973;3.02212;2.31302
+[2023-02-19T15:55:42] GAME: TIDI: 0.166667;1.28881;2.67546;2.34927
+[2023-02-19T15:56:42] GAME: TIDI: 0.333333;1.00217;2.3408;2.34842
+[2023-02-19T15:57:42] GAME: TIDI: 0.166667;0.751519;2.02294;2.31587
+[2023-02-19T15:58:22] EMOTE: INVALID/(Ian) (138,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T15:58:42] GAME: TIDI: 0.166667;0.576063;1.73357;2.25764
+[2023-02-19T15:59:43] GAME: TIDI: 0.166667;0.453244;1.4775;2.17963
+[2023-02-19T16:00:43] GAME: TIDI: 0.333333;0.417271;1.26546;2.08821
+[2023-02-19T16:01:43] GAME: TIDI: 0.166667;0.34209;1.08078;1.98747
+[2023-02-19T16:02:43] GAME: TIDI: 0.333333;0.339463;0.932519;1.88197
+[2023-02-19T16:03:43] GAME: TIDI: 0.166667;0.287624;0.80354;1.77413
+[2023-02-19T16:04:43] GAME: TIDI: 0.333333;0.301337;0.7031;1.66703
+[2023-02-19T16:05:43] GAME: TIDI: 0.166667;0.260936;0.614667;1.56179
+[2023-02-19T16:05:45] EMOTE: INVALID/(Ian) (135,133,2): <B>Ian</B> chases their tail.
+[2023-02-19T16:06:50] GAME: TIDI: 10.6667;3.38266;1.16826;1.52244
+[2023-02-19T16:07:50] GAME: TIDI: 0.166667;2.41786;1.41818;1.51201
+[2023-02-19T16:08:54] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> dances around.
+[2023-02-19T16:08:54] GAME: TIDI: 7.66667;3.9925;1.93305;1.55412
+[2023-02-19T16:09:55] GAME: TIDI: 0.666667;2.99475;2.14539;1.61324
+[2023-02-19T16:10:55] GAME: TIDI: 0.166667;2.14633;2.14558;1.66648
+[2023-02-19T16:11:55] GAME: TIDI: 0.333333;1.60243;2.03695;1.70352
+[2023-02-19T16:12:55] GAME: TIDI: 0.333333;1.2217;1.8739;1.72056
+[2023-02-19T16:13:55] GAME: TIDI: 0.166667;0.90519;1.68016;1.71652
+[2023-02-19T16:14:56] GAME: TIDI: 0.166667;0.683633;1.48085;1.69295
+[2023-02-19T16:15:37] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> chases their tail.
+[2023-02-19T16:15:56] GAME: TIDI: 0.166667;0.528543;1.29039;1.6527
+[2023-02-19T16:16:56] GAME: TIDI: 0.333333;0.46998;1.12631;1.60006
+[2023-02-19T16:17:56] GAME: TIDI: 0.333333;0.428986;0.986843;1.53874
+[2023-02-19T16:18:56] GAME: TIDI: 0.166667;0.35029;0.859533;1.47082
+[2023-02-19T16:19:56] GAME: TIDI: 0.166667;0.295203;0.746667;1.3984
+[2023-02-19T16:20:56] GAME: TIDI: 0.333333;0.306642;0.658662;1.32443
+[2023-02-19T16:21:28] EMOTE: INVALID/(Ian) (137,132,2): <B>Ian</B> dances around.
+[2023-02-19T16:21:57] GAME: TIDI: 0.166667;0.26465;0.579859;1.24997
+[2023-02-19T16:22:57] GAME: TIDI: 0.333333;0.285255;0.520939;1.17707
+[2023-02-19T16:23:57] GAME: TIDI: 0.166667;0.249678;0.466686;1.10603
+[2023-02-19T16:24:57] GAME: TIDI: 0.166667;0.224775;0.418304;1.03726
+[2023-02-19T16:25:57] GAME: TIDI: 0.333333;0.257342;0.386112;0.972142
+[2023-02-19T16:26:57] GAME: TIDI: 0.166667;0.23014;0.354917;0.910419
+[2023-02-19T16:27:57] GAME: TIDI: 0.166667;0.211098;0.326153;0.851993
+[2023-02-19T16:28:57] GAME: TIDI: 0.166667;0.197768;0.300476;0.796841
+[2023-02-19T16:29:31] EMOTE: INVALID/(Ian) (138,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T16:29:58] GAME: TIDI: 0.333333;0.238438;0.288069;0.745964
+[2023-02-19T16:30:58] GAME: TIDI: 0.166667;0.216907;0.273836;0.698751
+[2023-02-19T16:31:58] GAME: TIDI: 0.166667;0.201835;0.259436;0.654819
+[2023-02-19T16:32:58] GAME: TIDI: 0.333333;0.241284;0.255806;0.614918
+[2023-02-19T16:32:59] EMOTE: INVALID/(Ian) (136,132,2): <B>Ian</B> chases their tail.
+[2023-02-19T16:33:58] GAME: TIDI: 0.166667;0.218899;0.248424;0.578269
+[2023-02-19T16:34:58] GAME: TIDI: 0.333333;0.253229;0.249385;0.54538
+[2023-02-19T16:35:58] GAME: TIDI: 0.166667;0.22726;0.24496;0.515338
+[2023-02-19T16:36:59] GAME: TIDI: 0.166667;0.209082;0.237785;0.487583
+[2023-02-19T16:37:59] GAME: TIDI: 0.166667;0.196358;0.229499;0.461775
+[2023-02-19T16:38:59] GAME: TIDI: 0.166667;0.18745;0.22109;0.437706
+[2023-02-19T16:39:59] GAME: TIDI: 0.333333;0.231215;0.223115;0.416247
+[2023-02-19T16:40:44] EMOTE: INVALID/(Ian) (137,134,2): <B>Ian</B> chases their tail.
+[2023-02-19T16:40:59] GAME: TIDI: 0.166667;0.211851;0.220862;0.396708
+[2023-02-19T16:41:59] GAME: TIDI: 0.333333;0.248295;0.226349;0.379672
+[2023-02-19T16:42:59] GAME: TIDI: 0.166667;0.223807;0.22584;0.364289
+[2023-02-19T16:43:59] GAME: TIDI: 0.166667;0.206665;0.222005;0.350061
+[2023-02-19T16:44:13] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> dances around.
+[2023-02-19T16:45:00] GAME: TIDI: 0.333333;0.244665;0.226537;0.337708
+[2023-02-19T16:45:55] EMOTE: INVALID/(Ian) (135,134,2): <B>Ian</B> chases their tail.
+[2023-02-19T16:46:00] GAME: TIDI: 0.166667;0.221266;0.225483;0.326486
+[2023-02-19T16:47:00] GAME: TIDI: 0.166667;0.204886;0.221364;0.315974
+[2023-02-19T16:47:09] EMOTE: INVALID/(Ian) (137,134,2): <B>Ian</B> chases their tail.
+[2023-02-19T16:48:00] GAME: TIDI: 0.166667;0.19342;0.215775;0.305954
+[2023-02-19T16:49:00] GAME: TIDI: 0.333333;0.235394;0.219699;0.297328
+[2023-02-19T16:49:57] EMOTE: INVALID/(Ian) (136,134,2): <B>Ian</B> dances around.
+[2023-02-19T16:50:00] GAME: TIDI: 0.166667;0.214776;0.218714;0.289467
+[2023-02-19T16:51:00] GAME: TIDI: 0.333333;0.250343;0.22504;0.283024
+[2023-02-19T16:52:01] GAME: TIDI: 0.166667;0.22524;0.22508;0.27723
+[2023-02-19T16:53:01] GAME: TIDI: 0.166667;0.207668;0.221598;0.271666
+[2023-02-19T16:54:01] GAME: TIDI: 0.166667;0.195368;0.216352;0.266135
+[2023-02-19T16:55:01] GAME: TIDI: 0.166667;0.186757;0.210433;0.260565
+[2023-02-19T16:55:18] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> chases their tail.
+[2023-02-19T16:56:01] GAME: TIDI: 0.166667;0.18073;0.204492;0.254958
+[2023-02-19T16:57:01] GAME: TIDI: 0.166667;0.176511;0.198896;0.249351
+[2023-02-19T16:58:01] GAME: TIDI: 0.166667;0.173558;0.193828;0.243799
+[2023-02-19T16:59:01] GAME: TIDI: 0.166667;0.17149;0.189361;0.238355
+[2023-02-19T17:00:01] GAME: TIDI: 0.333333;0.220043;0.195497;0.234069
+[2023-02-19T17:01:02] GAME: TIDI: 0.166667;0.20403;0.197204;0.230383
+[2023-02-19T17:02:02] GAME: TIDI: 0.166667;0.192821;0.196327;0.226977
+[2023-02-19T17:03:02] GAME: TIDI: 0.166667;0.184975;0.194057;0.223685
+[2023-02-19T17:04:02] GAME: TIDI: 0.333333;0.229482;0.201142;0.221431
+[2023-02-19T17:05:02] GAME: TIDI: 0.166667;0.210638;0.203041;0.219592
+[2023-02-19T17:05:29] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> dances around.
+[2023-02-19T17:06:02] GAME: TIDI: 0.166667;0.197446;0.201922;0.217825
+[2023-02-19T17:07:02] GAME: TIDI: 0.333333;0.238212;0.20918;0.216961

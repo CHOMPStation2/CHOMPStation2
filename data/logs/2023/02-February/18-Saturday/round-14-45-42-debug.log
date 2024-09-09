@@ -1,0 +1,178 @@
+[2023-02-18T14:45:34] START: Starting up data/logs/2023/02-February/18-Saturday/round-14-45-42.
+[2023-02-18T14:45:35] DEBUG: Rebuilding Master Controller
+[2023-02-18T14:45:48] DEBUG: VChat: RiotScopez got: VChat Loaded!
+[2023-02-18T14:46:34] DEBUG: Load: Could not find news channel Vir News Network to populate news articles.
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Stargazer (/datum/shuttle/autodock/overmap/stargazer)
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Baby_mammoth (/datum/shuttle/autodock/overmap/baby_mammoth)
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Ursula (/datum/shuttle/autodock/overmap/ursula)
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Needle (/datum/shuttle/autodock/overmap/needle)
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Echidna (/datum/shuttle/autodock/overmap/echidna)
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod1)
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod2)
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Escape Pod 3 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod3)
+[2023-02-18T14:50:59] DEBUG: Initialized shuttle Escape Pod 4 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod4)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Escape Pod 5 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod5)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Escape Pod 6 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod6)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Escape Pod 7 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod7)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Escape Pod 8 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod8)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Cryostorage Shuttle (/datum/shuttle/autodock/ferry/escape_pod/escape_pod_cryo)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Large Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod1)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Large Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod2)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Arrivals (/datum/shuttle/autodock/ferry/arrivals/southern_cross)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Escape (/datum/shuttle/autodock/ferry/emergency/centcom)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Supply (/datum/shuttle/autodock/ferry/supply/cargo)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Exploration (/datum/shuttle/autodock/ferry/exploration)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Administration Shuttle (/datum/shuttle/autodock/multi/administration)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Centcom Transport Shuttle (/datum/shuttle/autodock/multi/centcom)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Merchant (/datum/shuttle/autodock/multi/merchant)
+[2023-02-18T14:51:00] DEBUG: &lt;span class=&#39;danger&#39;&gt;warning: shuttle Skipjack can&#39;t find its controller with tag skipjack_shuttle!&lt;/span&gt;
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Skipjack (/datum/shuttle/autodock/multi/heist)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Mercenary Ship (/datum/shuttle/autodock/multi/syndicate)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Ninja Shuttle (/datum/shuttle/autodock/multi/ninja)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Response Operations Shuttle (/datum/shuttle/autodock/multi/ert)
+[2023-02-18T14:51:00] DEBUG: Initialized shuttle Shuttle 3 (/datum/shuttle/autodock/web_shuttle/shuttle3)
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-18T14:51:00] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-18T14:52:41] DEBUG: TiDi Starting Log
+[2023-02-18T14:53:05] DEBUG: Next event of severity Mundane in 45.572 minutes.
+[2023-02-18T14:53:05] DEBUG: Next event of severity Moderate in 30 minutes.
+[2023-02-18T14:53:05] DEBUG: Next event of severity Major in 100 minutes.
+[2023-02-18T14:53:05] DEBUG: Sif&#39;s weather is now clear, with a temperature of 268.15&amp;deg;K (-5&amp;deg;C | 23&amp;deg;F).
+[2023-02-18T14:53:05] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then rain&#39;.
+[2023-02-18T15:00:32] DEBUG: Sif&#39;s weather is now clear, with a temperature of 268.15&amp;deg;K (-5&amp;deg;C | 23&amp;deg;F).
+[2023-02-18T15:00:32] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, rain,  then storm&#39;.
+[2023-02-18T15:04:05] DEBUG: Runtime in mob_spawner_vr.dm,60: Undefined variable /obj/structure/closet/crate/mimic/var/nest
+[2023-02-18T15:04:05]  &lt;A HREF=&#39;?src=[0x210068ff];admin_token=885798123010142378283494989932106;viewruntime=[0x210068ff]&#39;&gt;[view]&lt;/A&gt;
+[2023-02-18T15:07:39] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 268.15&amp;deg;K (-5&amp;deg;C | 23&amp;deg;F).
+[2023-02-18T15:07:39] DEBUG: Sif&#39;s weather forecast is now &#39;rain, storm,  then storm&#39;.
+[2023-02-18T15:14:42] DEBUG: Sif&#39;s weather is now rain, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2023-02-18T15:14:42] DEBUG: Sif&#39;s weather forecast is now &#39;storm, storm,  then hail&#39;.
+[2023-02-18T15:19:51] DEBUG: Sif&#39;s weather is now storm, with a temperature of 235.025&amp;deg;K (-38.125&amp;deg;C | -36.625&amp;deg;F).
+[2023-02-18T15:19:51] DEBUG: Sif&#39;s weather forecast is now &#39;storm, hail,  then hail&#39;.
+[2023-02-18T15:24:54] DEBUG: Sif&#39;s weather is now storm, with a temperature of 235.025&amp;deg;K (-38.125&amp;deg;C | -36.625&amp;deg;F).
+[2023-02-18T15:24:54] DEBUG: Sif&#39;s weather forecast is now &#39;hail, hail,  then hail&#39;.
+[2023-02-18T15:34:00] DEBUG: Sif&#39;s weather is now hail, with a temperature of 248.775&amp;deg;K (-24.375&amp;deg;C | -11.875&amp;deg;F).
+[2023-02-18T15:34:00] DEBUG: Sif&#39;s weather forecast is now &#39;hail, hail,  then rain&#39;.
+[2023-02-18T15:39:03] DEBUG: Sif&#39;s weather is now hail, with a temperature of 248.775&amp;deg;K (-24.375&amp;deg;C | -11.875&amp;deg;F).
+[2023-02-18T15:39:03] DEBUG: Sif&#39;s weather forecast is now &#39;hail, rain,  then rain&#39;.
+[2023-02-18T15:42:04] DEBUG: Sif&#39;s weather is now hail, with a temperature of 248.775&amp;deg;K (-24.375&amp;deg;C | -11.875&amp;deg;F).
+[2023-02-18T15:42:04] DEBUG: Sif&#39;s weather forecast is now &#39;rain, rain,  then overcast&#39;.
+[2023-02-18T15:44:06] DEBUG: Sif&#39;s weather is now rain, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2023-02-18T15:44:06] DEBUG: Sif&#39;s weather forecast is now &#39;rain, overcast,  then clear&#39;.
+[2023-02-18T15:50:09] DEBUG: Sif&#39;s weather is now rain, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2023-02-18T15:50:09] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then overcast&#39;.
+[2023-02-18T15:57:14] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2023-02-18T15:57:14] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then clear&#39;.
+[2023-02-18T16:02:16] DEBUG: Sif&#39;s weather is now clear, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:02:16] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then clear&#39;.
+[2023-02-18T16:08:19] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:08:19] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then overcast&#39;.
+[2023-02-18T16:15:23] DEBUG: Sif&#39;s weather is now clear, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:15:23] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then clear&#39;.
+[2023-02-18T16:21:26] DEBUG: Sif&#39;s weather is now clear, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:21:26] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then overcast&#39;.
+[2023-02-18T16:27:28] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:27:28] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then clear&#39;.
+[2023-02-18T16:32:30] DEBUG: Sif&#39;s weather is now clear, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:32:30] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then clear&#39;.
+[2023-02-18T16:42:35] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:42:35] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then overcast&#39;.
+[2023-02-18T16:50:39] DEBUG: Sif&#39;s weather is now clear, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:50:39] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then overcast&#39;.
+[2023-02-18T16:59:43] DEBUG: Sif&#39;s weather is now clear, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T16:59:43] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, overcast,  then clear&#39;.
+[2023-02-18T17:08:46] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2023-02-18T17:08:46] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then clear&#39;.
+[2023-02-18T17:13:49] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T17:13:49] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then clear&#39;.
+[2023-02-18T17:23:52] DEBUG: Sif&#39;s weather is now clear, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T17:23:52] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then overcast&#39;.
+[2023-02-18T17:30:55] DEBUG: Sif&#39;s weather is now clear, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T17:30:55] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then hail&#39;.
+[2023-02-18T17:40:58] DEBUG: Sif&#39;s weather is now clear, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T17:40:58] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, hail,  then storm&#39;.
+[2023-02-18T17:51:06] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T17:51:06] DEBUG: Sif&#39;s weather forecast is now &#39;hail, storm,  then rain&#39;.
+[2023-02-18T17:52:03] DEBUG: The server has called a crew transfer vote.
+[2023-02-18T18:00:14] DEBUG: Sif&#39;s weather is now hail, with a temperature of 245.025&amp;deg;K (-28.125&amp;deg;C | -18.625&amp;deg;F).
+[2023-02-18T18:00:14] DEBUG: Sif&#39;s weather forecast is now &#39;storm, rain,  then overcast&#39;.
+[2023-02-18T18:02:15] DEBUG: Sif&#39;s weather is now storm, with a temperature of 233.15&amp;deg;K (-40&amp;deg;C | -40&amp;deg;F).
+[2023-02-18T18:02:15] DEBUG: Sif&#39;s weather forecast is now &#39;rain, overcast,  then clear&#39;.
+[2023-02-18T18:11:25] DEBUG: Sif&#39;s weather is now rain, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T18:11:25] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then clear&#39;.
+[2023-02-18T18:17:33] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T18:17:33] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then clear&#39;.
+[2023-02-18T18:27:40] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T18:27:40] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then clear&#39;.
+[2023-02-18T18:36:45] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T18:36:45] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then clear&#39;.
+[2023-02-18T18:43:48] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T18:43:48] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then clear&#39;.
+[2023-02-18T18:52:03] DEBUG: The server has called a crew transfer vote.
+[2023-02-18T18:52:52] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T18:52:52] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then overcast&#39;.
+[2023-02-18T18:58:54] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T18:58:54] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then rain&#39;.
+[2023-02-18T19:03:56] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T19:03:56] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, rain,  then storm&#39;.
+[2023-02-18T19:08:58] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2023-02-18T19:08:58] DEBUG: Sif&#39;s weather forecast is now &#39;rain, storm,  then storm&#39;.
+[2023-02-18T19:14:00] DEBUG: Sif&#39;s weather is now rain, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T19:14:00] DEBUG: Sif&#39;s weather forecast is now &#39;storm, storm,  then storm&#39;.
+[2023-02-18T19:22:03] DEBUG: Sif&#39;s weather is now storm, with a temperature of 233.775&amp;deg;K (-39.375&amp;deg;C | -38.875&amp;deg;F).
+[2023-02-18T19:22:03] DEBUG: Sif&#39;s weather forecast is now &#39;storm, storm,  then rain&#39;.
+[2023-02-18T19:32:09] DEBUG: Sif&#39;s weather is now storm, with a temperature of 233.775&amp;deg;K (-39.375&amp;deg;C | -38.875&amp;deg;F).
+[2023-02-18T19:32:09] DEBUG: Sif&#39;s weather forecast is now &#39;storm, rain,  then rain&#39;.
+[2023-02-18T19:37:11] DEBUG: Sif&#39;s weather is now storm, with a temperature of 233.775&amp;deg;K (-39.375&amp;deg;C | -38.875&amp;deg;F).
+[2023-02-18T19:37:11] DEBUG: Sif&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2023-02-18T19:46:14] DEBUG: Sif&#39;s weather is now rain, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T19:46:14] DEBUG: Sif&#39;s weather forecast is now &#39;rain, rain,  then storm&#39;.
+[2023-02-18T19:54:18] DEBUG: Sif&#39;s weather is now rain, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T19:54:18] DEBUG: Sif&#39;s weather forecast is now &#39;rain, storm,  then rain&#39;.
+[2023-02-18T20:00:20] DEBUG: Sif&#39;s weather is now rain, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2023-02-18T20:00:20] DEBUG: Sif&#39;s weather forecast is now &#39;storm, rain,  then rain&#39;.
+[2023-02-18T20:08:00] DEBUG: Stopping all playing media...
+[2023-02-18T20:08:23] DEBUG: Sif&#39;s weather is now storm, with a temperature of 233.775&amp;deg;K (-39.375&amp;deg;C | -38.875&amp;deg;F).
+[2023-02-18T20:08:23] DEBUG: Sif&#39;s weather forecast is now &#39;rain, rain,  then overcast&#39;.

@@ -1,0 +1,132 @@
+Path : /mob/living/simple_mob/vore/bigdragon 
+- Didn't return an Initialize hint
+Path : /mob/living/simple_mob/metroid/juvenile/baby 
+- Didn't return an Initialize hint
+Path : /mob/living/simple_mob/metroid/juvenile/alpha 
+- Didn't return an Initialize hint
+Path : /mob/living/simple_mob/metroid/juvenile/super 
+- Didn't return an Initialize hint
+Path : /mob/living/simple_mob/metroid/juvenile/gamma 
+- Didn't return an Initialize hint
+Path : /mob/living/simple_mob/metroid/juvenile/zeta 
+- Didn't return an Initialize hint
+Path : /mob/living/simple_mob/metroid/juvenile/omega 
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/storage/bag/circuits/basic 
+- Slept during Initialize()
+Path : /obj/structure/mirror 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/golden_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/space_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/syndie 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/red_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/nanotrasen 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/green_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/purple_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/structure/simple_door/wood 
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/brown_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/rainbow_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/pink_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/orange_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/yellow_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/deluxe 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/white_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/diamond_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/water_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/uranium_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/fire_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/structure/catwalk 
+- Qdel'd in New()
+Path : /obj/item/weapon/soap/silver_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/cyan_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/blue_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/structure/simple_door/sifwood 
+- Didn't return an Initialize hint
+Path : /obj/structure/mirror/raider 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/structure/simple_door/sandstone 
+- Didn't return an Initialize hint
+Path : /obj/item/broken_device/random 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/structure/simple_door/cult 
+- Didn't return an Initialize hint
+Path : /obj/structure/simple_door/iron 
+- Didn't return an Initialize hint
+Path : /obj/effect/decal/cleanable/dirt 
+- Qdel'd in New()
+Path : /obj/structure/simple_door/resin 
+- Didn't return an Initialize hint
+Path : /obj/item/clothing/head/fishing 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/structure/prop/machine/nt_pod 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+- Slept during Initialize()
+Path : /obj/item/weapon/reagent_containers/syringe/steroid 
+- Didn't return an Initialize hint
+Path : /obj/effect/simple_portal/linked 
+- Slept during Initialize()
+Path : /obj/item/weapon/reagent_containers/food/snacks/pandenata 
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/reagent_containers/food/snacks/tocino 
+- Didn't return an Initialize hint
+Path : /obj/item/weapon/soap/grey_soap 
+- Didn't call atom/Initialize()
+- Didn't return an Initialize hint
+Path : /obj/effect/decal/cleanable/blood/gibs/limb 
+- Qdel'd in New()
+Path : /turf/simulated/floor/outdoors/ice 
+- Slept during Initialize()
+Path : /mob/observer/dead 
+- Slept during Initialize()
+
