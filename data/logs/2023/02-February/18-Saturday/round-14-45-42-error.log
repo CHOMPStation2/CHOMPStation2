@@ -1,0 +1,14 @@
+[2023-02-18T14:45:34] START: Starting up data/logs/2023/02-February/18-Saturday/round-14-45-42.
+[2023-02-18T15:04:05] RUNTIME: [2023-02-18T15:04:05] Runtime in mob_spawner_vr.dm,60: Undefined variable /obj/structure/closet/crate/mimic/var/nest
+[2023-02-18T15:04:05] 
+[2023-02-18T15:04:05] RUNTIME:   proc name: do spawn (/obj/structure/mob_spawner/proc/do_spawn)
+[2023-02-18T15:04:05] RUNTIME:   src: Mining Lazy Spawner (/obj/structure/mob_spawner/scanner/mining_animals)
+[2023-02-18T15:04:05] RUNTIME:   src.loc: the rock (59,29,5) (/turf/simulated/mineral/sif)
+[2023-02-18T15:04:05] RUNTIME:   call stack:
+[2023-02-18T15:04:05] RUNTIME:   Mining Lazy Spawner (/obj/structure/mob_spawner/scanner/mining_animals): do spawn(/obj/structure/closet/crate/mi... (/obj/structure/closet/crate/mimic))
+[2023-02-18T15:04:05] RUNTIME:   Mining Lazy Spawner (/obj/structure/mob_spawner/scanner/mining_animals): process(20)
+[2023-02-18T15:04:05] RUNTIME:   Objects (/datum/controller/subsystem/processing/obj): fire(1)
+[2023-02-18T15:04:05] RUNTIME:   Objects (/datum/controller/subsystem/processing/obj): ignite(1)
+[2023-02-18T15:04:05] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-18T15:04:05] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-18T15:04:05] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)

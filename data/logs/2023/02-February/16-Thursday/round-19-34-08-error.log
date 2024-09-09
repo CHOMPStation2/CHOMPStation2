@@ -1,0 +1,174 @@
+[2023-02-16T19:33:58] START: Starting up data/logs/2023/02-February/16-Thursday/round-19-34-08.
+[2023-02-16T19:50:03] RUNTIME: [2023-02-16T19:50:03] Runtime in health.dm,56: Cannot read null.bodytemperature
+[2023-02-16T19:50:03] RUNTIME:   proc name: scan mob (/obj/item/device/healthanalyzer/proc/scan_mob)
+[2023-02-16T19:50:03] RUNTIME:   usr: Mia (/mob/living/silicon/robot) @ (the floor) (134,146,3) (/turf/simulated/floor/tiled/techfloor) (ckey=riotscopez)
+[2023-02-16T19:50:03] RUNTIME:   usr.loc: (the floor) (134,146,3) (/turf/simulated/floor/tiled/techfloor)
+[2023-02-16T19:50:03] RUNTIME:   src: the health analyzer (/obj/item/device/healthanalyzer)
+[2023-02-16T19:50:03] RUNTIME:   src.loc: null
+[2023-02-16T19:50:03] RUNTIME:   call stack:
+[2023-02-16T19:50:03] RUNTIME:   the health analyzer (/obj/item/device/healthanalyzer): scan mob(null, Mia (/mob/living/silicon/robot))
+[2023-02-16T19:50:03] RUNTIME:   Bluespace Filing Belly (/obj/item/device/dogborg/sleeper/command): Topic("src=\[0x2030f0a];analyze=1", /list (/list))
+[2023-02-16T19:50:03] RUNTIME:   RiotScopez (/client): Topic("src=\[0x2030f0a];analyze=1", /list (/list), Bluespace Filing Belly (/obj/item/device/dogborg/sleeper/command))
+[2023-02-16T20:09:15] RUNTIME: [2023-02-16T20:09:15] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:09:15] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:09:15] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:09:15] RUNTIME:   call stack:
+[2023-02-16T20:09:15] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:09:15] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:09:15] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:09:15] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:09:15] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:09:15] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:09:18] RUNTIME: [2023-02-16T20:09:18] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:09:18] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:09:18] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:09:18] RUNTIME:   call stack:
+[2023-02-16T20:09:18] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:09:18] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:09:18] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:09:18] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:09:18] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:09:18] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:09:24] RUNTIME: [2023-02-16T20:09:24] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:09:24] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:09:24] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:09:24] RUNTIME:   call stack:
+[2023-02-16T20:09:24] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:09:24] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:09:24] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:09:24] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:09:24] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:09:25] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:09:28] RUNTIME: [2023-02-16T20:09:28] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:09:28] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:09:28] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:09:28] RUNTIME:   call stack:
+[2023-02-16T20:09:28] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:09:28] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:09:28] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:09:28] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:09:28] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:09:28] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:09:28] RUNTIME: [2023-02-16T20:09:28] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:09:28] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:09:28] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:09:28] RUNTIME:   call stack:
+[2023-02-16T20:09:28] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:09:28] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:09:28] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:09:28] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:09:28] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:09:28] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:09:36] RUNTIME: [2023-02-16T20:09:36] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:09:36] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:09:36] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:09:36] RUNTIME:   call stack:
+[2023-02-16T20:09:36] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:09:36] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:09:36] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:09:36] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:09:36] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:09:36] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:09:41] RUNTIME: [2023-02-16T20:09:41] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:09:41] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:09:41] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:09:41] RUNTIME:   call stack:
+[2023-02-16T20:09:41] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:09:41] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:09:41] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:09:41] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:09:41] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:09:41] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:09:45] RUNTIME: [2023-02-16T20:09:45] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:09:45] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:09:45] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:09:45] RUNTIME:   call stack:
+[2023-02-16T20:09:45] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:09:45] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:09:45] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:09:45] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:09:45] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:09:45] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:10:07] RUNTIME: [2023-02-16T20:10:07] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:10:07] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:10:07] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:10:07] RUNTIME:   call stack:
+[2023-02-16T20:10:07] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:10:07] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:10:07] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:10:07] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:10:07] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:10:07] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:10:11] RUNTIME: [2023-02-16T20:10:11] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-16T20:10:11] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-16T20:10:11] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-16T20:10:11] RUNTIME:   call stack:
+[2023-02-16T20:10:11] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-16T20:10:11] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-16T20:10:11] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-16T20:10:11] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:10:11] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-16T20:10:11] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:10:11] RUNTIME:   (This error will now be silenced for 10 minutes)
+[2023-02-16T20:11:02] RUNTIME: [2023-02-16T20:11:02] Runtime in pellets.dm,29: Cannot read null.lying
+[2023-02-16T20:11:02] RUNTIME:   proc name: attack mob (/obj/item/projectile/bullet/pellet/attack_mob)
+[2023-02-16T20:11:02] RUNTIME:   src: the shrapnel (/obj/item/projectile/bullet/pellet/fragment)
+[2023-02-16T20:11:02] RUNTIME:   src.loc: the voidcraft tiles (93,157,9) (/turf/simulated/shuttle/floor/voidcraft)
+[2023-02-16T20:11:02] RUNTIME:   call stack:
+[2023-02-16T20:11:02] RUNTIME:   the shrapnel (/obj/item/projectile/bullet/pellet/fragment): attack mob(null, -1, null)
+[2023-02-16T20:11:02] RUNTIME:   the shrapnel (/obj/item/projectile/bullet/pellet/fragment): Bump(null)
+[2023-02-16T20:11:02] RUNTIME:   the voidcraft tiles (92,157,9) (/turf/simulated/shuttle/floor/voidcraft): Enter(the shrapnel (/obj/item/projectile/bullet/pellet/fragment), the voidcraft tiles (93,157,9) (/turf/simulated/shuttle/floor/voidcraft))
+[2023-02-16T20:11:02] RUNTIME:   the voidcraft tiles (92,157,9) (/turf/simulated/shuttle/floor/voidcraft): Enter(the shrapnel (/obj/item/projectile/bullet/pellet/fragment), the voidcraft tiles (93,157,9) (/turf/simulated/shuttle/floor/voidcraft))
+[2023-02-16T20:11:02] RUNTIME:   the shrapnel (/obj/item/projectile/bullet/pellet/fragment): Move(the voidcraft tiles (92,157,9) (/turf/simulated/shuttle/floor/voidcraft), 8, null)
+[2023-02-16T20:11:03] RUNTIME:   the shrapnel (/obj/item/projectile/bullet/pellet/fragment): Move(the voidcraft tiles (92,157,9) (/turf/simulated/shuttle/floor/voidcraft), 8)
+[2023-02-16T20:11:03] RUNTIME:   the shrapnel (/obj/item/projectile/bullet/pellet/fragment): pixel move(1, 0)
+[2023-02-16T20:11:03] RUNTIME:   the shrapnel (/obj/item/projectile/bullet/pellet/fragment): fire(null, null)
+[2023-02-16T20:11:03] RUNTIME:   the fragmentation shot (/obj/item/projectile/arc/fragmentation): fragmentate(the voidcraft tiles (93,157,9) (/turf/simulated/shuttle/floor/voidcraft), 63, 7, /list (/list))
+[2023-02-16T20:11:03] RUNTIME: [2023-02-16T20:11:03] Runtime in projectile.dm,818: Cannot read null.pixel_x
+[2023-02-16T20:11:03] RUNTIME:   proc name: impact visuals (/obj/item/projectile/proc/impact_visuals)
+[2023-02-16T20:11:03] RUNTIME:   src: the ion bolt (/obj/item/projectile/ion)
+[2023-02-16T20:11:03] RUNTIME:   src.loc: the rocks (150,136,9) (/turf/simulated/floor/outdoors/rocks/sif/planetuse)
+[2023-02-16T20:11:03] RUNTIME:   call stack:
+[2023-02-16T20:11:03] RUNTIME:   the ion bolt (/obj/item/projectile/ion): impact visuals(null, null, null)
+[2023-02-16T20:11:03] RUNTIME:   the ion bolt (/obj/item/projectile/ion): on impact(null)
+[2023-02-16T20:11:03] RUNTIME:   the ion bolt (/obj/item/projectile/ion): on impact(null)
+[2023-02-16T20:11:03] RUNTIME:   the ion bolt (/obj/item/projectile/ion): Bump(null)
+[2023-02-16T20:11:03] RUNTIME:   the thick growth (150,135,9) (/turf/simulated/floor/outdoors/grass/sif/forest/planetuse): Enter(the ion bolt (/obj/item/projectile/ion), the rocks (150,136,9) (/turf/simulated/floor/outdoors/rocks/sif/planetuse))
+[2023-02-16T20:11:03] RUNTIME:   the thick growth (150,135,9) (/turf/simulated/floor/outdoors/grass/sif/forest/planetuse): Enter(the ion bolt (/obj/item/projectile/ion), the rocks (150,136,9) (/turf/simulated/floor/outdoors/rocks/sif/planetuse))
+[2023-02-16T20:11:03] RUNTIME:   the ion bolt (/obj/item/projectile/ion): Move(the thick growth (150,135,9) (/turf/simulated/floor/outdoors/grass/sif/forest/planetuse), 2, null)
+[2023-02-16T20:11:03] RUNTIME:   the ion bolt (/obj/item/projectile/ion): pixel move(1, 0)
+[2023-02-16T20:11:03] RUNTIME:   the ion bolt (/obj/item/projectile/ion): fire(null, null)
+[2023-02-16T20:11:03] RUNTIME:   the ion bolt (/obj/item/projectile/ion): launch projectile(null, null, the mercenary anti-technical (/mob/living/simple_mob/humanoid/merc/ranged/ionrifle), null, null, 0)
+[2023-02-16T20:11:03] RUNTIME:   ...
+[2023-02-16T20:11:03] RUNTIME:   the mercenary anti-technical (/mob/living/simple_mob/humanoid/merc/ranged/ionrifle): IRangedAttack(null)
+[2023-02-16T20:11:03] RUNTIME:   /datum/ai_holder/simple_mob/me... (/datum/ai_holder/simple_mob/merc/ranged): ranged attack(null)
+[2023-02-16T20:11:03] RUNTIME:   /datum/ai_holder/simple_mob/me... (/datum/ai_holder/simple_mob/merc/ranged): engage target()
+[2023-02-16T20:11:03] RUNTIME:   /datum/ai_holder/simple_mob/me... (/datum/ai_holder/simple_mob/merc/ranged): handle stance tactical()
+[2023-02-16T20:11:03] RUNTIME:   /datum/ai_holder/simple_mob/me... (/datum/ai_holder/simple_mob/merc/ranged): handle tactics()
+[2023-02-16T20:11:03] RUNTIME:   AI (Fast) (/datum/controller/subsystem/aifast): fire(1)
+[2023-02-16T20:11:03] RUNTIME:   AI (Fast) (/datum/controller/subsystem/aifast): ignite(1)
+[2023-02-16T20:11:03] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-16T20:11:03] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-16T20:11:57] RUNTIME: [2023-02-16T20:11:57] Runtime in holder2.dm,147: No client for HrefToken()!
+[2023-02-16T20:11:57] RUNTIME:   proc name: RawHrefToken (/proc/RawHrefToken)
+[2023-02-16T20:11:57] RUNTIME:   usr: The crystal-feather duck (/mob/living/simple_mob/animal/sif/duck) @ (the thick growth) (206,213,9) (/turf/simulated/floor/outdoors/grass/sif/forest) (ckey=)
+[2023-02-16T20:11:57] RUNTIME:   usr.loc: (the thick growth) (206,213,9) (/turf/simulated/floor/outdoors/grass/sif/forest)
+[2023-02-16T20:11:57] RUNTIME:   src: null
+[2023-02-16T20:11:57] RUNTIME:   call stack:
+[2023-02-16T20:11:57] RUNTIME:   RawHrefToken(0)
+[2023-02-16T20:11:57] RUNTIME:   HrefToken(0)
+[2023-02-16T20:11:57] RUNTIME:   explosion(the thick growth (206,213,9) (/turf/simulated/floor/outdoors/grass/sif/forest), 0, 2, 3, 4, 1, 48, null)
+[2023-02-16T20:12:05] RUNTIME: [2023-02-16T20:12:05] Runtime in holder2.dm,147: No client for HrefToken()!
+[2023-02-16T20:12:05] RUNTIME:   proc name: RawHrefToken (/proc/RawHrefToken)
+[2023-02-16T20:12:05] RUNTIME:   usr: The mercenary (/mob/living/simple_mob/humanoid/merc/melee/sword) @ (the thick growth) (141,179,9) (/turf/simulated/floor/outdoors/grass/sif/forest/planetuse) (ckey=)
+[2023-02-16T20:12:05] RUNTIME:   usr.loc: (the thick growth) (141,179,9) (/turf/simulated/floor/outdoors/grass/sif/forest/planetuse)
+[2023-02-16T20:12:05] RUNTIME:   src: null
+[2023-02-16T20:12:05] RUNTIME:   call stack:
+[2023-02-16T20:12:05] RUNTIME:   RawHrefToken(0)
+[2023-02-16T20:12:05] RUNTIME:   HrefToken(0)
+[2023-02-16T20:12:05] RUNTIME:   explosion(the thick growth (142,179,9) (/turf/simulated/floor/outdoors/grass/sif/forest/planetuse), 0, 2, 3, 4, 1, 48, null)
+[2023-02-16T20:13:43] RUNTIME: [2023-02-16T20:13:43] Runtime in holder2.dm,147: No client for HrefToken()!
+[2023-02-16T20:13:43] RUNTIME:   proc name: RawHrefToken (/proc/RawHrefToken)
+[2023-02-16T20:13:43] RUNTIME:   usr: The mercenary (/mob/living/simple_mob/humanoid/merc/melee/poi) @ (the rocks) (145,195,9) (/turf/simulated/floor/outdoors/rocks) (ckey=)
+[2023-02-16T20:13:43] RUNTIME:   usr.loc: (the rocks) (145,195,9) (/turf/simulated/floor/outdoors/rocks)
+[2023-02-16T20:21:02] RUNTIME: [2023-02-16T20:21:02] Skipped 7 runtimes in lighting_source.dm,250.
