@@ -43,6 +43,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/item/stack/material/phoron{
+	amount = 50
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "dv" = (
@@ -129,7 +132,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "hy" = (
-/obj/machinery/power/smes/buildable/power_shuttle,
+/obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
@@ -695,10 +698,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/obj/item/weapon/storage/firstaid{
-	pixel_x = 2;
-	pixel_y = 2
-	},
+/obj/item/weapon/storage/firstaid/adv,
 /obj/item/weapon/storage/firstaid/o2{
 	pixel_x = -2;
 	pixel_y = -2
@@ -814,9 +814,6 @@
 	},
 /obj/machinery/power/port_gen/pacman{
 	anchored = 1
-	},
-/obj/item/stack/material/phoron{
-	amount = 50
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)

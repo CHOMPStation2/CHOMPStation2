@@ -281,6 +281,13 @@
 	},
 /turf/simulated/floor/tiled/old_tile/red,
 /area/shuttle/pizza_shuttle)
+"D" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/item/weapon/tank/phoron,
+/obj/structure/closet/crate,
+/obj/item/weapon/storage/toolbox/mechanical,
+/turf/simulated/floor/tiled/old_tile/red,
+/area/shuttle/pizza_shuttle)
 "F" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -341,6 +348,7 @@
 	locked = 0
 	},
 /obj/structure/cable/blue,
+/obj/structure/fuel_port,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/shuttle/pizza_shuttle)
 "L" = (
@@ -660,7 +668,7 @@ a
 a
 j
 s
-Y
+D
 X
 x
 K
