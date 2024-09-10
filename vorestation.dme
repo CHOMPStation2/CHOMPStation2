@@ -4752,6 +4752,7 @@
 #include "modular_chomp\code\game\objects\items\weapons\capture_crystal.dm"
 #include "modular_chomp\code\game\objects\items\weapons\cigs_lighters.dm"
 #include "modular_chomp\code\game\objects\items\weapons\dna_injector.dm"
+#include "modular_chomp\code\game\objects\items\weapons\id_cards.dm"
 #include "modular_chomp\code\game\objects\items\weapons\RCD.dm"
 #include "modular_chomp\code\game\objects\items\weapons\circutboards\computer\research.dm"
 #include "modular_chomp\code\game\objects\items\weapons\melee\shock_maul.dm"

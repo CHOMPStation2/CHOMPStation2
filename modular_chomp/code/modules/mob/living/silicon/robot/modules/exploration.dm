@@ -36,6 +36,7 @@
 	src.modules += new /obj/item/shield_projector/line/exploborg(src)
 	src.modules += new /obj/item/roller_holder(src)
 	src.modules += new /obj/item/device/self_repair_system(src)
+	src.modules += new /obj/item/weapon/card/id/exploration/borg(src)
 
 	src.emag += new /obj/item/weapon/melee/dogborg/jaws/big/explojaws(src)
 
