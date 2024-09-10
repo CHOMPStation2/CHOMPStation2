@@ -13,12 +13,49 @@ alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
 crossexonar - Protean
+<<<<<<< HEAD
+=======
+cryohydra - Protean
+ctrz - Protean
+cubejackal - Black-Eyed Shadekin
+detectivegoogle - Protean
+digi5 - Protean
+digi5 - Black-Eyed Shadekin
+digitalsquirrel95 - Black-Eyed Shadekin
+digitalsquirrel95 - Protean
+digitalsquirrel95 - Hanner
+draycu - Vox
+draykenthedragon - Xenochimera
+draykenthedragon - Protean
+durandaal - Teppi
+essbie - Black-Eyed Shadekin
+exgame - Vox
+falloutdog3 - Black-Eyed Shadekin
+flaktual - Vox
+flurriee - Protean
+foxfire53 - Xenochimera
+foxglovepurpur - Diona
+>>>>>>> 73937e2340... Merge pull request #16291 from SatinIsle/whitelist_updates
 funnyman2003 - Xenochimera
 flurriee - Protean
 hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
+<<<<<<< HEAD
+=======
+joltze - Black-Eyed Shadekin
+juney7 - Hanner
+kered2 - Protean
+khanivore - Protean
+killjaden - Protean
+kira72 - Xenochimera
+kira72 - Protean
+kiraalitruss - Teppi
+kitchifox - Black-Eyed Shadekin
+konner1055 - Black-Eyed Shadekin
+konner1055 - Protean
+>>>>>>> 73937e2340... Merge pull request #16291 from SatinIsle/whitelist_updates
 ktccd - Diona
 khanivore - Protean
 mewchild - Diona
@@ -31,10 +68,29 @@ oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
+<<<<<<< HEAD
 rapidvalj - Vox
 rapidvalj - Common Skrellian
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
+=======
+pontifexminimus - Black-Eyed Shadekin
+pontifexminimus - Protean
+pontifexminimus - Xenochimera
+pontifexminimus - Hanner
+pugly43 - Protean
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+rainbyplays - Protean
+ramomisama - Protean
+residentcody - Black-Eyed Shadekin
+residentcody - Protean
+revolvereloise - Protean
+rikaru19xjenkins - Xenochimera
+rixunie - Diona
+romanatcolgate - Hanner
+rubyflamewing - Protean
+>>>>>>> 73937e2340... Merge pull request #16291 from SatinIsle/whitelist_updates
 rykkastormheart - Xenochimera
 rubyflamewing - Protean
 radiantaurora - Protean
