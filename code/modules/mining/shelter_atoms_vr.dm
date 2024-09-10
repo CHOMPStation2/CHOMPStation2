@@ -124,6 +124,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	desc = "A cozy cabin; crammed into a survival capsule."
 	template_id = "shelter_cab"
 
+//CHOMPKeep Start
 /obj/item/device/survivalcapsule/dropship
 	name = "dropship surfluid shelter capsule"
 	desc = "A military dropship in a capsule. Contains everything an assault squad would need, minus the squad itself. This capsule is significantly larger than most. There's a license for use printed on the bottom."
@@ -131,6 +132,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	unique_id = "shelter_6"
 	is_ship = TRUE
 	w_class = ITEMSIZE_SMALL
+//CHOMPKeep End
 
 //Custom Shelter Capsules
 /obj/item/device/survivalcapsule/tabiranth
