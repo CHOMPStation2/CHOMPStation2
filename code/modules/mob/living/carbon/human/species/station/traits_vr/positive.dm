@@ -148,13 +148,9 @@
 /datum/trait/positive/hardfeet
 	name = "Hard Feet"
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
-<<<<<<< HEAD
 	cost = 1 //CHOMP Edit
-=======
-	cost = 0
 	allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner
 	custom_only = FALSE
->>>>>>> 06b2b1af74... Merge pull request #16292 from SatinIsle/hanner-update
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
 */
 
