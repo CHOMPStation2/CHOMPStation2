@@ -22,6 +22,10 @@
 		if(loc == R)
 			hud_layerise()
 
+/obj/item/weapon/card/id/exploration/borg/GetAccess()
+	return R?.idcard?.GetAccess()
+
+
 /obj/item/weapon/card/id/exploration/borg/Destroy()
 	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
 	..()
