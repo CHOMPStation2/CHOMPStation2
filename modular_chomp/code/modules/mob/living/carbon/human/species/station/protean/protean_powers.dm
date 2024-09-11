@@ -706,27 +706,27 @@
 
 #undef PER_LIMB_STEEL_COST
 
-/mob/living/carbon/human/proc/Limb_transparency_toggle()
-	set name = "Toggle transparency for limbs"
+/mob/living/carbon/human/proc/chest_transparency_toggle()
+	set name = "transparency toggle (chest only)"
 	set category = "Abilities.Protean"
 	if(stat || world.time < last_special)
 		return
 	last_special = world.time + 50
 	var/temporgans = src.organs
 	for(var/obj/item/organ/external/proteanlimbs as anything in temporgans)
-		if(proteanlimbs.organ_tag == BP_TORSO)
+		if(proteanlimbs.organ_tag != BP_TORSO)
 			continue
 		proteanlimbs.transparent = !proteanlimbs.transparent
 	visible_message("<span class='notice'>\The [src]'s internal composition seems to change.</span>")
 	update_icons_body()
 	update_hair()
 
-/obj/effect/protean_ability/limb_transparency
-	ability_name = "transparency toggle for limbs, exluding your chest"
-	desc = "Makes your limbs transparent, minus your chest."
+/obj/effect/protean_ability/chest_transparency
+	ability_name = "transparency toggle (chest only)"
+	desc = "Makes your chest transparent."
 	icon = 'modular_chomp/icons/obj/slimeborg/slimecore.dmi'
 	icon_state = "core"
-	to_call = /mob/living/carbon/human/proc/Limb_transparency_toggle()
+	to_call = /mob/living/carbon/human/proc/chest_transparency_toggle
 
 /mob/living/carbon/human/proc/transparency_toggle()
 	set name = "Toggle Transparency"
@@ -742,7 +742,7 @@
 	update_hair()
 
 /obj/effect/protean_ability/transparency_for_entire_body
-	ability_name = "transparency toggle for your entire body."
+	ability_name = "Toggle Transparency"
 	desc = "transparency toggle for your entire body"
 	icon = 'modular_chomp/icons/obj/slimeborg/slimecore.dmi'
 	icon_state = "core"
