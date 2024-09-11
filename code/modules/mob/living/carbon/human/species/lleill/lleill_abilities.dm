@@ -382,7 +382,7 @@
 /mob/living/carbon/human/proc/lleill_beast_form()
 	set name = "Beast Form (100)"
 	set desc = "Take the form of a non-humanoid creature."
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 	if(!ishuman(src))
 		return //If you're not a human you don't have permission to do this.
 
@@ -535,7 +535,7 @@
 /mob/living/proc/revert_beast_form()
 	set name = "Revert Beast Form"
 	set desc = "Return to your humanoid form."
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 
 	if(stat)
 		to_chat(src, "<span class='warning'>You can't do that in your condition.</span>")
@@ -560,7 +560,7 @@
 /mob/living/carbon/human/proc/hanner_beast_form()
 	set name = "Beast Form (100)"
 	set desc = "Take the form of a non-humanoid creature."
-	set category = "Abilities"
+	set category = "Abilities.Lleill" //CHOMPEdit
 	if(!ishuman(src))
 		return //If you're not a human you don't have permission to do this.
 
