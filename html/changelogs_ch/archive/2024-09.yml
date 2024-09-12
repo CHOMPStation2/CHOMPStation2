@@ -63,3 +63,9 @@
   - maptweak: Whiteship mk2 rewiring plus duplicate fax removal
   - code_imp: Fax machine inits instead of new now, fixes superposed pod fax machines
       not updating the list.
+2024-09-12:
+  CHOMPStation2:
+  - rscadd: You can now hold spacebar to throw items.
+  Kashargul:
+  - rscadd: Id card to exploration borg to transfer points from the cataloguer and
+      use on the vendor
