@@ -6,12 +6,8 @@
 			if(!src.client)	. += "It appears to be in stand-by mode." //afk
 		if(UNCONSCIOUS)		. += "<span class='warning'>It doesn't seem to be responding.</span>"
 		if(DEAD)			. += "<span class='deadsay'>It looks completely unsalvageable.</span>"
-<<<<<<< HEAD
 	. += attempt_vr(src,"examine_reagent_bellies",args) //CHOMP reagent bellies
 	
-=======
-
->>>>>>> 0b52ad0944... Merge pull request #16293 from ShadowLarkens/examine
 	// VOREStation Edit: Start
 	. += attempt_vr(src,"examine_bellies",args) //VOREStation Edit
 	if(print_flavor_text()) . += "\n[print_flavor_text()]\n"
