@@ -293,7 +293,11 @@ GLOBAL_LIST_EMPTY(mannequins)
 
 	// Custom species icon bases
 	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN) //VOREStation Edit
+<<<<<<< HEAD
 	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID,SPECIES_TESHARI,SPECIES_VOX,SPECIES_SHADEKIN) //CHOMPedit
+=======
+	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID,SPECIES_VOX) //VOREStation Edit
+>>>>>>> 97be2b0dcc... Merge pull request #16306 from Kashargul/dupliTesh
 	for(var/species_name in GLOB.playable_species)
 		if(species_name in blacklisted_icons)
 			continue
