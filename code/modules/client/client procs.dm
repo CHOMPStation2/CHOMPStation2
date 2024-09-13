@@ -306,6 +306,8 @@
 					X << 'sound/voice/bcriminal.ogg' //ChompEDIT - back to beepsky
 				window_flash(X)
 		//VOREStation Edit end.
+	fully_created = TRUE
+	attempt_auto_fit_viewport()
 
 	//////////////
 	//DISCONNECT//
@@ -637,6 +639,7 @@
 		winset(usr, "mainwindow", "can-resize=true")
 		winset(usr, "mainwindow", "is-maximized=false")
 		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport") // The attempt_auto_fit_viewport() proc is not implemented yet
+	attempt_auto_fit_viewport()
 
 /*CHOMPRemove Start, we use TGPanel
 /client/verb/toggle_verb_panel()
