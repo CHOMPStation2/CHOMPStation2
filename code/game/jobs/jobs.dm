@@ -33,6 +33,7 @@ var/const/EXPLORER 			=(1<<12)
 var/const/SAR 				=(1<<13)
 var/const/XENOBOTANIST		=(1<<14)
 var/const/PILOT 			=(1<<15) //ChompEDIT - ours is with the other explo jobs.
+var/const/BRIGPHYS 			=(1<<15) // CHOMPAdd - Brig Physician
 
 var/const/CIVILIAN			=(1<<2)
 
@@ -99,7 +100,8 @@ var/list/medical_positions = list(
 	"Geneticist",
 	"Psychiatrist",
 	"Chemist",
-	"Paramedic"
+	"Paramedic",
+	"Brig Physician" // CHOMPAdd - Both Med and Sec
 )
 
 
@@ -136,7 +138,8 @@ var/list/security_positions = list(
 	"Head of Security",
 	"Warden",
 	"Detective",
-	"Security Officer"
+	"Security Officer",
+	"Brig Physician" // CHOMPAdd - Both Med and Sec
 )
 
 
