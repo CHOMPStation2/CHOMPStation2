@@ -14,3 +14,4 @@
 #include "pizzashuttle.dm"
 #include "cybershuttle.dm"
 #include "metawhiteship.dm"
+#include "lonehomeship.dm"
