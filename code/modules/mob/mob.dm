@@ -1204,6 +1204,7 @@
 /mob/proc/set_viewsize(var/new_view = world.view)
 	if (client && new_view != client.view)
 		client.view = new_view
+		client.attempt_auto_fit_viewport()
 		return TRUE
 	return FALSE
 
@@ -1224,7 +1225,7 @@
 	src.in_throw_mode = 1
 	if(src.throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_on"
-
+/* CHOMPedit removal begin
 /mob/verb/spacebar_throw_on()
 	set name = ".throwon"
 	set hidden = TRUE
@@ -1236,7 +1237,7 @@
 	set hidden = TRUE
 	set instant = TRUE
 	throw_mode_off()
-
+ChompEdit removal end*/
 /mob/proc/isSynthetic()
 	return 0
 
@@ -1328,20 +1329,18 @@
 	return TRUE
 
 /mob/MouseEntered(location, control, params)
-	if(usr != src && usr.is_preference_enabled(/datum/client_preference/mob_tooltips) && src.will_show_tooltip())
-		openToolTip(user = usr, tip_src = src, params = params, title = get_nametag_name(usr), content = get_nametag_desc(usr))
-
-	..()
+	if(usr != src && will_show_tooltip())
+		if(usr?.read_preference(/datum/preference/toggle/mob_tooltips))
+			openToolTip(usr, src, params, title = get_nametag_name(usr), content = get_nametag_desc(usr))
+	. = ..()
 
 /mob/MouseDown()
 	closeToolTip(usr) //No reason not to, really
-
-	..()
+	. = ..()
 
 /mob/MouseExited()
 	closeToolTip(usr) //No reason not to, really
-
-	..()
+	. = ..()
 
 // Manages a global list of mobs with clients attached, indexed by z-level.
 /mob/proc/update_client_z(new_z) // +1 to register, null to unregister.
