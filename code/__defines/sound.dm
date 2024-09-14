@@ -164,11 +164,11 @@
 	'sound/ambience/ai/ai3.ogg'\
 	)
 
-// Peaceful sounds when floating in the void.
+// Peaceful sounds when floating in the void. //CHOMPedit, added title2, my nostalgia okay?
 #define AMBIENCE_SPACE list(\
 	'sound/ambience/space/space_serithi.ogg',\
 	'sound/ambience/space/space1.ogg',\
-	'sound/music/title2.ogg'\ //CHOMPedit, my nostalga, okay?
+	'sound/music/title2.ogg'\
 	)
 
 // Vaguely spooky sounds when around dead things.
