@@ -1,5 +1,5 @@
 /datum/looping_sound/weather
-	pref_check = /datum/client_preference/weather_sounds
+	pref_check = /datum/preference/toggle/weather_sounds
 	volume_chan = VOLUME_CHANNEL_WEATHER // CHOMPEdit - Weather Volume Channel
 
 // CHOMPEdit: Blanket replace all wind with this, for now, in lieue of a snowstorm-specific wind
@@ -124,3 +124,6 @@
 	mid_sounds = 'sound/effects/weather/downpour/rainindoors.ogg'
 	mid_length = 24 SECONDS
 //CHOMPEDIT end
+
+/datum/looping_sound/weather/rain/indoors/heavy
+	volume = 40
