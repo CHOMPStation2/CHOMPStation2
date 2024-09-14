@@ -195,19 +195,17 @@
 	if(eyeobj)
 		return eyeobj
 	return src
-<<<<<<< HEAD
+
 //CHOMPEdit Begin
 /client/verb/fix_stat_panel()
 	set name = "Fix Stat Panel"
 	set hidden = TRUE
 
 	init_verbs()
-//CHOMPEdit End
-=======
 
 /client/verb/fit_viewport()
 	set name = "Fit Viewport"
-	set category = "OOC"
+	set category = "OOC.Client Settings"
 	set desc = "Fit the width of the map window to match the viewport"
 
 	// Fetch aspect ratio
@@ -284,4 +282,3 @@
 		INVOKE_ASYNC(src, VERB_REF(fit_viewport))
 	else //Delayed to avoid wingets from Login calls.
 		addtimer(CALLBACK(src, VERB_REF(fit_viewport), 1 SECONDS))
->>>>>>> 131240ddfc... Merge pull request #16302 from ShadowLarkens/fit_viewport
