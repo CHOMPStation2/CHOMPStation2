@@ -184,7 +184,7 @@
 /datum/map_template/shelter/superpose/sdf_corvette
 	shelter_id = "SDFCorvette"
 	mappath = 'sdf_corvette-10x17.dmm'
-	name = "SDF Corvette"
+	name = "SDF Corvette Civilian"
 	description = "A small size civilian class armed transfort ship."
 	superpose = FALSE
 	shuttle = TRUE
