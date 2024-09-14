@@ -167,7 +167,7 @@
 // Peaceful sounds when floating in the void.
 #define AMBIENCE_SPACE list(\
 	'sound/ambience/space/space_serithi.ogg',\
-	'sound/ambience/space/space1.ogg'\
+	'sound/ambience/space/space1.ogg',\
 	'sound/music/title2.ogg'\ //CHOMPedit, my nostalga, okay?
 	)
 
