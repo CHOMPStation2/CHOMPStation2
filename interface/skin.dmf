@@ -792,14 +792,12 @@ macro "hotkeymode"
 	elem
 		name = "CTRL+SHIFT+SUBTRACT"
 		command = "planedown"
-/* CHOMPedit Removal Begin
-	elem
-		name = "Space"
-		command = ".throwon"
-	elem
-		name = "Space+UP"
-		command = ".throwoff"
-CHOMPedit Removal End*/
+//	elem	// CHOMPREMOVE Start
+//		name = "Space"
+//		command = ".throwon"
+//	elem
+//		name = "Space+UP"
+//		command = ".throwoff" // CHOMPREMOVE End
 macro "borgmacro"
 	elem
 		name = "TAB"
