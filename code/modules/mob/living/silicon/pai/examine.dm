@@ -12,7 +12,7 @@
 	. += attempt_vr(src,"examine_bellies",args) //VOREStation Edit
 	if(print_flavor_text()) . += "\n[print_flavor_text()]\n"
 	// VOREStation Edit: End
-	. += "*---------*"
+	. += ""
 	if (pose)
 		if(!findtext(pose, regex("\[.?!]$"))) // Will be zero if the last character is not a member of [.?!]
 			pose = addtext(pose,".") //Makes sure all emotes end with a period.

@@ -375,15 +375,15 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 
 	if(level == 1)
 		for (var/client/C in GLOB.mentors)
-			if (C.is_preference_enabled(/datum/client_preference/play_mentorhelp_ping))
+			if (C.prefs?.read_preference(/datum/preference/toggle/play_mentorhelp_ping))
 				C << 'sound/effects/mentorhelp.mp3'
 		for (var/client/C in GLOB.admins)
-			if (C.is_preference_enabled(/datum/client_preference/play_mentorhelp_ping))
+			if (C.prefs?.read_preference(/datum/preference/toggle/play_mentorhelp_ping))
 				C << 'sound/effects/mentorhelp.mp3'
 		message_mentors(chat_msg)
 	else if(level == 0)
 		for(var/client/X in GLOB.admins)
-			if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+			if(X.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 				X << 'sound/effects/adminhelp.ogg'
 			window_flash(X)
 			to_chat(X, chat_msg)
@@ -515,7 +515,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 		return
 
 	if(initiator)
-		if(initiator.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+		if(initiator.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 			initiator << 'sound/effects/adminhelp.ogg'
 
 		to_chat(initiator, "<span class='filter_pm'>[span_red("<font size='4'><b>- AdminHelp Rejected! -</b></font>")]<br>\

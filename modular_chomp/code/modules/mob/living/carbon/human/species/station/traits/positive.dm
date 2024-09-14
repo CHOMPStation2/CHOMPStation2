@@ -55,4 +55,5 @@
 	H.add_modifier(/datum/modifier/trait/empresistb)
 
 /datum/trait/positive/weaver
+	allowed_species = null
 	custom_only = FALSE //Let species use the webs for wierd stuff like metal webs, slime creations, etc.

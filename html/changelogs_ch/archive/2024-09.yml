@@ -69,3 +69,6 @@
   Kashargul:
   - rscadd: Id card to exploration borg to transfer points from the cataloguer and
       use on the vendor
+2024-09-14:
+  CHOMPStation2:
+  - rscadd: Examining a mob now puts their description in a box. It's pretty.
