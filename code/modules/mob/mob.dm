@@ -1224,7 +1224,7 @@
 	src.in_throw_mode = 1
 	if(src.throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_on"
-
+/* CHOMPedit removal begin
 /mob/verb/spacebar_throw_on()
 	set name = ".throwon"
 	set hidden = TRUE
@@ -1236,7 +1236,7 @@
 	set hidden = TRUE
 	set instant = TRUE
 	throw_mode_off()
-
+ChompEdit removal end*/
 /mob/proc/isSynthetic()
 	return 0
 
