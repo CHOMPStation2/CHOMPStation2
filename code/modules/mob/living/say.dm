@@ -4,13 +4,14 @@ var/list/department_radio_keys = list(
 	":i" = "intercom",	".i" = "intercom",
 	":h" = "department",	".h" = "department",
 	":+" = "special",		".+" = "special", //activate radio-specific special functions
-	":c" = "Command",		".c" = "Command",
-	":n" = "Science",		".n" = "Science",
-	":m" = "Medical",		".m" = "Medical",
-	":e" = "Engineering", ".e" = "Engineering",
-	":k" = "Response Team",	".k" = "Response Team",
-	":s" = "Security",	".s" = "Security",
+	":c" = CHANNEL_COMMAND,		".c" = CHANNEL_COMMAND,
+	":n" = CHANNEL_SCIENCE,		".n" = CHANNEL_SCIENCE,
+	":m" = CHANNEL_MEDICAL,		".m" = CHANNEL_MEDICAL,
+	":e" = CHANNEL_ENGINEERING, ".e" = CHANNEL_ENGINEERING,
+	":k" = CHANNEL_RESPONSE_TEAM,	".k" = CHANNEL_RESPONSE_TEAM,
+	":s" = CHANNEL_SECURITY,	".s" = CHANNEL_SECURITY,
 	":w" = "whisper",		".w" = "whisper",
+<<<<<<< HEAD
 	":t" = "Mercenary",	".t" = "Mercenary",
 	":x" = "Raider",		".x" = "Raider",
 	":u" = "Supply",		".u" = "Supply",
@@ -19,18 +20,29 @@ var/list/department_radio_keys = list(
 	":y" = "Explorer",	".y" = "Explorer",	//VOREStation Edit //CHOMP keep explo
 	":a" = "Talon",		".a" = "Talon", //VOREStation Add, //CHOMP keep explo
 	":g" = "Casino",	".g" = "Casino",
+=======
+	":t" = CHANNEL_MERCENARY,	".t" = CHANNEL_MERCENARY,
+	":x" = CHANNEL_RAIDER,		".x" = CHANNEL_RAIDER,
+	":u" = CHANNEL_SUPPLY,		".u" = CHANNEL_SUPPLY,
+	":v" = CHANNEL_SERVICE,		".v" = CHANNEL_SERVICE,
+	":p" = CHANNEL_AI_PRIVATE,	".p" = CHANNEL_AI_PRIVATE,
+	":a" = CHANNEL_EXPLORATION,	".a" = CHANNEL_EXPLORATION,	//VOREStation Edit
+	":y" = CHANNEL_TALON,		".y" = CHANNEL_TALON, //VOREStation Add,
+	":g" = CHANNEL_CASINO,	".g" = CHANNEL_CASINO,
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 	":R" = "right ear",	".R" = "right ear",
 	":L" = "left ear",	".L" = "left ear",
 	":I" = "intercom",	".I" = "intercom",
 	":H" = "department",	".H" = "department",
-	":C" = "Command",		".C" = "Command",
-	":N" = "Science",		".N" = "Science",
-	":M" = "Medical",		".M" = "Medical",
-	":E" = "Engineering",	".E" = "Engineering",
-	":k" = "Response Team",	".k" = "Response Team",
-	":S" = "Security",	".S" = "Security",
+	":C" = CHANNEL_COMMAND,		".C" = CHANNEL_COMMAND,
+	":N" = CHANNEL_SCIENCE,		".N" = CHANNEL_SCIENCE,
+	":M" = CHANNEL_MEDICAL,		".M" = CHANNEL_MEDICAL,
+	":E" = CHANNEL_ENGINEERING,	".E" = CHANNEL_ENGINEERING,
+	":k" = CHANNEL_RESPONSE_TEAM,	".k" = CHANNEL_RESPONSE_TEAM,
+	":S" = CHANNEL_SECURITY,	".S" = CHANNEL_SECURITY,
 	":W" = "whisper",		".W" = "whisper",
+<<<<<<< HEAD
 	":T" = "Mercenary",	".T" = "Mercenary",
 	":X" = "Raider",		".X" = "Raider",
 	":U" = "Supply",		".U" = "Supply",
@@ -39,6 +51,16 @@ var/list/department_radio_keys = list(
 	":Y" = "Explorer",	".Y" = "Explorer", //CHOMP keep explo
 	":A" = "Talon",		".A" = "Talon", //VOREStation Add, //CHOMP keep explo
 	":G" = "Casino",	".G" = "Casino",
+=======
+	":T" = CHANNEL_MERCENARY,	".T" = CHANNEL_MERCENARY,
+	":X" = CHANNEL_RAIDER,		".X" = CHANNEL_RAIDER,
+	":U" = CHANNEL_SUPPLY,		".U" = CHANNEL_SUPPLY,
+	":V" = CHANNEL_SERVICE,		".V" = CHANNEL_SERVICE,
+	":P" = CHANNEL_AI_PRIVATE,	".P" = CHANNEL_AI_PRIVATE,
+	":A" = CHANNEL_EXPLORATION,	".A" = CHANNEL_EXPLORATION,
+	":Y" = CHANNEL_TALON,		".Y" = CHANNEL_TALON, //VOREStation Add,
+	":G" = CHANNEL_CASINO,	".G" = CHANNEL_CASINO,
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 	// Cyrillic characters on the same keys on the Russian QWERTY (phonetic) layout
 	":к" = "right ear",    ".к" = "right ear",
@@ -46,13 +68,14 @@ var/list/department_radio_keys = list(
 	":ш" = "intercom",    ".ш" = "intercom",
 	":р" = "department",    ".р" = "department",
 	":+" = "special",        ".+" = "special", //activate radio-specific special functions
-	":с" = "Command",        ".с" = "Command",
-	":т" = "Science",        ".т" = "Science",
-	":ь" = "Medical",        ".ь" = "Medical",
-	":у" = "Engineering", ".у" = "Engineering",
-	":л" = "Response Team",    ".л" = "Response Team",
-	":ы" = "Security",    ".ы" = "Security",
+	":с" = CHANNEL_COMMAND,        ".с" = CHANNEL_COMMAND,
+	":т" = CHANNEL_SCIENCE,        ".т" = CHANNEL_SCIENCE,
+	":ь" = CHANNEL_MEDICAL,        ".ь" = CHANNEL_MEDICAL,
+	":у" = CHANNEL_ENGINEERING, ".у" = CHANNEL_ENGINEERING,
+	":л" = CHANNEL_RESPONSE_TEAM,    ".л" = CHANNEL_RESPONSE_TEAM,
+	":ы" = CHANNEL_SECURITY,    ".ы" = CHANNEL_SECURITY,
 	":ц" = "whisper",        ".ц" = "whisper",
+<<<<<<< HEAD
 	":е" = "Mercenary",    ".е" = "Mercenary",
 	":ч" = "Raider",        ".ч" = "Raider",
 	":г" = "Supply",        ".г" = "Supply",
@@ -61,6 +84,16 @@ var/list/department_radio_keys = list(
 	":н" = "Explorer",    ".н" = "Explorer", //CHOMP keep explo
 	":ф" = "Talon",        ".ф" = "Talon", //VOREStation Add //CHOMP keep explo
 	":п" = "Casino",	".п" = "Casino",
+=======
+	":е" = CHANNEL_MERCENARY,    ".е" = CHANNEL_MERCENARY,
+	":ч" = CHANNEL_RAIDER,        ".ч" = CHANNEL_RAIDER,
+	":г" = CHANNEL_SUPPLY,        ".г" = CHANNEL_SUPPLY,
+	":м" = CHANNEL_SERVICE,        ".м" = CHANNEL_SERVICE,
+	":з" = CHANNEL_AI_PRIVATE,    ".з" = CHANNEL_AI_PRIVATE,
+	":ф" = CHANNEL_EXPLORATION,    ".ф" = CHANNEL_EXPLORATION,
+	":н" = CHANNEL_TALON,        ".н" = CHANNEL_TALON, //VOREStation Add
+	":п" = CHANNEL_CASINO,	".п" = CHANNEL_CASINO,
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 )
 
 

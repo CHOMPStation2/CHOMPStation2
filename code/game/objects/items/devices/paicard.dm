@@ -1,4 +1,5 @@
 var/global/list/radio_channels_by_freq = list(
+<<<<<<< HEAD
 	num2text(PUB_FREQ) = "Common",
 	num2text(AI_FREQ)  = "AI Private",
 	num2text(ENT_FREQ) = "Entertainment",
@@ -15,6 +16,22 @@ var/global/list/radio_channels_by_freq = list(
 	num2text(SUP_FREQ) = "Supply",
 	num2text(SRV_FREQ) = "Service",
 	num2text(EXP_FREQ) = "Explorer" //CHOMP explo keep
+=======
+	num2text(PUB_FREQ) = CHANNEL_COMMON,
+	num2text(AI_FREQ)  = CHANNEL_AI_PRIVATE,
+	num2text(ENT_FREQ) = CHANNEL_ENTERTAINMENT,
+	num2text(ERT_FREQ) = CHANNEL_RESPONSE_TEAM,
+	num2text(COMM_FREQ)= CHANNEL_COMMAND,
+	num2text(ENG_FREQ) = CHANNEL_ENGINEERING,
+	num2text(MED_FREQ) = CHANNEL_MEDICAL,
+	num2text(MED_I_FREQ)=CHANNEL_MEDICAL_1,
+	num2text(SEC_FREQ) = CHANNEL_SECURITY,
+	num2text(SEC_I_FREQ)=CHANNEL_SECURITY_1,
+	num2text(SCI_FREQ) = CHANNEL_SCIENCE,
+	num2text(SUP_FREQ) = CHANNEL_SUPPLY,
+	num2text(SRV_FREQ) = CHANNEL_SERVICE,
+	num2text(EXP_FREQ) = CHANNEL_EXPLORATION
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	)
 
 GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
@@ -69,7 +86,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 	else if(time_till_respawn) // Nonzero time to respawn
 		to_chat(usr, "<span class='warning'>You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes.</span>")
 		return
-	if(jobban_isbanned(usr, "pAI"))
+	if(jobban_isbanned(usr, JOB_PAI))
 		to_chat(usr,"<span class='warning'>You cannot join a pAI card when you are banned from playing as a pAI.</span>")
 		return
 

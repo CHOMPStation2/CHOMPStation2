@@ -118,7 +118,7 @@
 	containername = "EFTPOS crate"
 
 /datum/supply_pack/misc/chaplaingear
-	name = "Chaplain equipment"
+	name = JOB_CHAPLAIN + " equipment"
 	contains = list(
 			/obj/item/clothing/under/rank/chaplain,
 			/obj/item/clothing/shoes/black,
@@ -133,7 +133,7 @@
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/gilthari
-	containername = "Chaplain equipment crate"
+	containername = JOB_CHAPLAIN + " equipment crate"
 
 /datum/supply_pack/misc/hoverpod
 	name = "Hoverpod Shipment"
@@ -252,7 +252,11 @@
 	one_access = TRUE
 
 /datum/supply_pack/randomised/misc/explorer_shield
+<<<<<<< HEAD
 	name = "Explorer shield" //CHOMP explo keep
+=======
+	name = JOB_EXPLORER + " shield"
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	num_contained = 2
 	contains = list(
 			/obj/item/weapon/shield/riot/explorer,

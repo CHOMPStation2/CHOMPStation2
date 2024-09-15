@@ -32,7 +32,11 @@
 
 	attacktext = list("mauled")
 
+<<<<<<< HEAD
 	faction = "awaymission" //makes away mobs fuckin' be on the same side.
+=======
+	faction = FACTION_DEATHCLAW
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 	maxHealth = 200
 	health = 200

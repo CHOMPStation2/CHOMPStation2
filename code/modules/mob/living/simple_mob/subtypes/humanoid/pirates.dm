@@ -7,7 +7,7 @@
 	icon_living = "piratemelee"
 	icon_dead = "piratemelee_dead"
 
-	faction = "pirate"
+	faction = FACTION_PIRATE
 
 	response_help = "pushes"
 	response_disarm = "shoves"
@@ -39,5 +39,8 @@
 	loot_list = list(/obj/item/weapon/gun/energy/laser = 100)
 
 	corpse = /obj/effect/landmark/mobcorpse/pirate/ranged
+<<<<<<< HEAD
 
 */
+=======
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix

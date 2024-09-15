@@ -89,7 +89,7 @@
 			dismantle()
 		return
 	else if(istype(I, /obj/item/weapon/paper) || istype(I, /obj/item/weapon/photo))
-		if(jobban_isbanned(user, "Graffiti"))
+		if(jobban_isbanned(user, JOB_GRAFFITI))
 			to_chat(user, "<span class='warning'>You are banned from leaving persistent information across rounds.</span>")
 		else
 			if(LAZYLEN(notices) < max_notices && user.unEquip(I, src))
@@ -214,4 +214,7 @@
 	P.stamped = list(/obj/item/weapon/stamp/rd)
 	P.add_overlay("paper_stamped_rd")
 	contents += P
+<<<<<<< HEAD
 	. = ..() //ChompEDIT New --> Initialize
+=======
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix

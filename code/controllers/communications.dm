@@ -131,6 +131,7 @@ var/const/CSN_FREQ = 1365 //VOREStation Add
 var/const/OUT_FREQ = 1367 //CHOMPstation Add
 
 var/list/radiochannels = list(
+<<<<<<< HEAD
 	"Common"		= PUB_FREQ,
 	"Science"		= SCI_FREQ,
 	"Command"		= COMM_FREQ,
@@ -152,6 +153,27 @@ var/list/radiochannels = list(
 	"Talon"			= TALON_FREQ, //VOREStation Add
 	"Casino" 		= CSN_FREQ,
 	"Outsider" 		= OUT_FREQ //CHOMPstation Add
+=======
+	CHANNEL_COMMON			= PUB_FREQ,
+	CHANNEL_SCIENCE			= SCI_FREQ,
+	CHANNEL_COMMAND			= COMM_FREQ,
+	CHANNEL_MEDICAL			= MED_FREQ,
+	CHANNEL_ENGINEERING		= ENG_FREQ,
+	CHANNEL_SECURITY		= SEC_FREQ,
+	CHANNEL_RESPONSE_TEAM	= ERT_FREQ,
+	CHANNEL_SPECIAL_OPS		= DTH_FREQ,
+	CHANNEL_MERCENARY		= SYND_FREQ,
+	CHANNEL_RAIDER			= RAID_FREQ,
+	CHANNEL_SUPPLY	 		= SUP_FREQ,
+	CHANNEL_SERVICE 		= SRV_FREQ,
+	CHANNEL_EXPLORATION		= EXP_FREQ,
+	CHANNEL_AI_PRIVATE		= AI_FREQ,
+	CHANNEL_ENTERTAINMENT	= ENT_FREQ,
+	CHANNEL_MEDICAL_1		= MED_I_FREQ,
+	CHANNEL_SECURITY_1		= SEC_I_FREQ,
+	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
+	CHANNEL_CASINO			= CSN_FREQ,
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 )
 
 // Hey, if anyone ever needs to update tgui/packages/tgui/constants.js with new radio channels

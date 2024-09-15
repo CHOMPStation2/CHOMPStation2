@@ -158,7 +158,11 @@
 	cost = 15
 
 /datum/supply_pack/explorergear
+<<<<<<< HEAD
 	name="Explorer gear" //CHOMP explo keep
+=======
+	name= JOB_EXPLORER + " gear"
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	contains = list (
 					/obj/item/device/cataloguer,
 					/obj/item/device/geiger,
@@ -180,11 +184,16 @@
 					)
 	cost=25
 	containertype = /obj/structure/closet/crate/secure/xion
+<<<<<<< HEAD
 	containername = "Explorer equipment" //CHOMP explo keep
 	access = access_explorer //CHOMP explo keep
+=======
+	containername = JOB_EXPLORER + " equipment"
+	access = list(access_eva, access_explorer)
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 /datum/supply_pack/pilotgear
-	name= "Pilot gear"
+	name= JOB_PILOT + " gear"
 	contains = list (
 					/obj/item/weapon/storage/backpack/parachute,
 					/obj/item/device/radio/headset/pilot,
@@ -206,7 +215,7 @@
 					)
 	cost=20
 	containertype = /obj/structure/closet/crate/secure/xion
-	containername = "Pilot equipment"
+	containername =  JOB_PILOT + " equipment"
 	access = access_pilot
 
 /datum/supply_pack/supply/foodcubes
@@ -218,7 +227,11 @@
 	containername = "food cubes"
 
 /datum/supply_pack/pathfindergear
+<<<<<<< HEAD
 	name="Explorer Leader gear" //CHOMPEdit Keep Explo
+=======
+	name= JOB_PATHFINDER + " gear"
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	contains = list (
 					/obj/item/device/cataloguer/compact/pathfinder,
 					/obj/item/device/geiger,
@@ -242,5 +255,9 @@
 					)
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/xion
+<<<<<<< HEAD
 	containername = "Explorer Leader equipment" //CHOMPEdit Keep Explo
+=======
+	containername = JOB_PATHFINDER + " equipment"
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	access = list(access_explorer)

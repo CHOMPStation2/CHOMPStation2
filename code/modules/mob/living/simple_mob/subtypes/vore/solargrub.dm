@@ -26,6 +26,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 	icon_living = "solargrub"
 	icon_dead = "solargrub-dead"
 
+<<<<<<< HEAD
 	// CHOMPEDIT Start, Rykka waz here. *pawstamp*
 	var/charge = null // CHOMPEDIT The amount of power we sucked off, in K as in THOUSANDS.
 	var/can_evolve = 1 // CHOMPEDIT VAR to decide whether this subspecies is allowed to become a queen
@@ -33,6 +34,9 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 	// CHOMPEDIT End, Rykka waz here. *pawstamp*
 
 	faction = "grubs"
+=======
+	faction = FACTION_GRUBS
+>>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	maxHealth = 50 //grubs can take a lot of harm
 	health = 50
 
