@@ -1,0 +1,7 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - balance: "energy shield life 35 -> 90"
+  - balance: "energy shield regen 10 -> 25"
+  - balance: "combat spear damage 25 -> 45 damage"
+  - balance: "explo jaws: 40 -> 60 damage"
