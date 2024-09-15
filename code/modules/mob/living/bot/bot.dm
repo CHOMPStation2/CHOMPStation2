@@ -369,7 +369,7 @@
 	return
 
 /mob/living/bot/proc/calcTargetPath()
-	target_path = SSpathfinder.default_bot_pathfinding(src, get_turf(target), 1) //CHOMPEdit
+	target_path = SSpathfinder.default_bot_pathfinding(src, get_turf(target), 0) //CHOMPEdit
 	if(!target_path)
 		if(target && target.loc)
 			ignore_list |= target
