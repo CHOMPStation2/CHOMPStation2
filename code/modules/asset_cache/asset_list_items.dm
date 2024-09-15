@@ -365,6 +365,7 @@
 		if(ispath(item, /obj/item/weapon/melee/shock_maul))
 			icon_state += "0"
 		//CHOMPadd end
+
 		var/icon/I
 
 		var/icon_states_list = icon_states(icon_file)
