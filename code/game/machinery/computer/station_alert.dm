@@ -19,7 +19,7 @@
 
 /obj/machinery/computer/station_alert/Initialize()
 	alarm_monitor = new monitor_type(src)
-	alarm_monitor.register_alarm(src, "update_icon")
+	alarm_monitor.register_alarm(src, "update_console_icon")
 	. = ..()
 
 /obj/machinery/computer/station_alert/Destroy()
@@ -44,13 +44,19 @@
 /obj/machinery/computer/station_alert/tgui_interact(mob/user)
 	alarm_monitor.tgui_interact(user)
 
-/obj/machinery/computer/station_alert/update_icon()
+/obj/machinery/computer/station_alert/proc/update_console_icon()
 	if(!(stat & (BROKEN|NOPOWER)))
+		var/last_icon = icon_screen
 		var/list/alarms = alarm_monitor ? alarm_monitor.major_alarms() : list()
 		if(alarms.len)
 			icon_screen = "alert:2"
 			playsound(src, 'modular_chomp/sound/effects/comp_alert_major.ogg', 70, 1) // CHOMPEdit: Alarm notifications
 		else
 			icon_screen = initial(icon_screen)
+<<<<<<< HEAD
 			playsound(src, 'modular_chomp/sound/effects/comp_alert_clear.ogg', 50, 1)  // CHOMPEdit: Alarm notifications
 	..()
+=======
+		if(last_icon != icon_screen)
+			update_icon()
+>>>>>>> 6b5d749981... Merge pull request #16307 from Kashargul/alarmIcon
