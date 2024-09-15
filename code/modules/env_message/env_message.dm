@@ -154,7 +154,7 @@ var/global/list/env_messages = list()
 /client/proc/remove_gm_message()
 	set name = "Map Message - Remove"
 	set desc = "Remove any env/map message."
-	set category = "EventKit"
+	set category =  "Fun.Event Kit" //CHOMPEdit
 
 	if(!istype(src) || !src.ckey)
 		return
