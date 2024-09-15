@@ -69,7 +69,7 @@
 	update_icon()
 	..()
 
-/obj/item/weapon/melee/shock_maul/New()
+/obj/item/weapon/melee/shock_maul/Initialize() //CHOMPedit
 	..()
 	update_held_icon()
 	return
