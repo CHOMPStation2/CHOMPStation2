@@ -53,10 +53,6 @@
 			playsound(src, 'modular_chomp/sound/effects/comp_alert_major.ogg', 70, 1) // CHOMPEdit: Alarm notifications
 		else
 			icon_screen = initial(icon_screen)
-<<<<<<< HEAD
 			playsound(src, 'modular_chomp/sound/effects/comp_alert_clear.ogg', 50, 1)  // CHOMPEdit: Alarm notifications
-	..()
-=======
 		if(last_icon != icon_screen)
 			update_icon()
->>>>>>> 6b5d749981... Merge pull request #16307 from Kashargul/alarmIcon
