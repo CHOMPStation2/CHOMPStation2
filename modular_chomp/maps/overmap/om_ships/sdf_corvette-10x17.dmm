@@ -143,7 +143,7 @@
 /obj/structure/handrail,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	id_tag = "sdfc_dock_con";
+	id_tag = "sdfc_dock_con2";
 	pixel_y = 24;
 	frequency = 1380
 	},
@@ -352,23 +352,14 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = null
 	},
-/obj/item/weapon/gun/projectile/automatic/serdy/m4a1,
-/obj/item/ammo_magazine/medium,
-/obj/item/ammo_magazine/medium,
-/obj/item/ammo_magazine/medium,
-/obj/item/ammo_magazine/medium,
-/obj/item/ammo_magazine/medium,
-/obj/item/clothing/suit/armor/pcarrier/medium,
-/obj/item/clothing/suit/armor/pcarrier/medium,
-/obj/item/clothing/suit/armor/pcarrier/medium,
-/obj/item/weapon/gun/projectile/automatic/serdy/m4a1,
-/obj/item/weapon/gun/projectile/automatic/serdy/m4a1,
-/obj/item/ammo_magazine/medium,
-/obj/item/ammo_magazine/medium,
-/obj/item/ammo_magazine/medium,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/suit/armor/pcarrier/light,
+/obj/item/clothing/head/helmet,
+/obj/item/weapon/gun/projectile/automatic/p90,
+/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/a57p90,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "tt" = (
@@ -801,8 +792,9 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/power/apc/super{
-	pixel_y = -24
+/obj/machinery/power/apc/alarms_hidden{
+	pixel_y = -24;
+	locked = 0
 	},
 /obj/structure/table/steel_reinforced,
 /obj/machinery/photocopier/faxmachine{
