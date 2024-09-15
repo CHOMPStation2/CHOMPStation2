@@ -1,5 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - rscadd: "Fit Viewport verb to automatically remove letterboxing around the map"
-  - rscadd: "Auto fit viewport preference to do Fit Viewport on login/when view size changes"

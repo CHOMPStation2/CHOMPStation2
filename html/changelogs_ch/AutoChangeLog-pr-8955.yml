@@ -1,4 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - qol: " A non-existent list and a non-existent list are apparently two different things. Anyway, reverted to Weaver to how it was before upstream changes, aka open to all species."

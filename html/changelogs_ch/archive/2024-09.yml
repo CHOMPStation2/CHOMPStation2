@@ -72,3 +72,17 @@
 2024-09-14:
   CHOMPStation2:
   - rscadd: Examining a mob now puts their description in a box. It's pretty.
+2024-09-15:
+  CHOMPStation2:
+  - rscadd: Fit Viewport verb to automatically remove letterboxing around the map
+  - rscadd: Auto fit viewport preference to do Fit Viewport on login/when view size
+      changes
+  FluffMedic:
+  - qol: ' Broke Cocoon Spinner out of prison, aka everyone acce'
+  - qol: spacebar no longers triggers throw
+  - qol: lets proteans do weaver things again
+  - qol: ' A non-existent list and a non-existent list are apparently two different
+      things. Anyway, reverted to Weaver to how it was before upstream changes, aka
+      open to all species.'
+  Kashargul:
+  - bugfix: liquid belly examine setting not saving
