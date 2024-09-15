@@ -1607,7 +1607,7 @@
 /area/maintenance/abmedical)
 "ge" = (
 /obj/effect/decal/cleanable/confetti,
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "gf" = (
 /obj/structure/cable{
@@ -1647,7 +1647,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/engineering/gravgen)
 "gk" = (
-/turf/unsimulated/floor/carpet/gaycarpet,
+/turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/zerobar)
 "gl" = (
 /obj/machinery/power/apc{
@@ -1887,7 +1887,7 @@
 /obj/structure/bed/chair/oldsofa/right{
 	dir = 8
 	},
-/turf/unsimulated/floor/carpet/gaycarpet,
+/turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/zerobar)
 "hl" = (
 /obj/machinery/door/firedoor/border_only,
@@ -2488,7 +2488,7 @@
 	},
 /obj/random/action_figure,
 /obj/effect/decal/cleanable/cobweb2,
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "jF" = (
 /obj/structure/flora/pottedplant/bamboo,
@@ -2926,6 +2926,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "ls" = (
@@ -3909,7 +3910,7 @@
 /area/maintenance/zerobar)
 "pe" = (
 /obj/random/trash,
-/turf/unsimulated/floor/carpet/gaycarpet,
+/turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/zerobar)
 "pf" = (
 /obj/effect/floor_decal/rust,
@@ -4681,7 +4682,7 @@
 /area/maintenance/zeroaft)
 "sf" = (
 /obj/effect/decal/cleanable/fruit_smudge,
-/turf/unsimulated/floor/carpet/gaycarpet,
+/turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/zerobar)
 "sh" = (
 /obj/item/weapon/storage/firstaid/regular{
@@ -5041,7 +5042,7 @@
 /area/maintenance/ragecage)
 "tD" = (
 /obj/structure/barricade/cutout/clown,
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "tF" = (
 /obj/machinery/light/small{
@@ -5469,6 +5470,9 @@
 	},
 /obj/random/obstruction,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -6159,7 +6163,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/unsimulated/floor/carpet/gaycarpet,
+/turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/zerobar)
 "yo" = (
 /turf/simulated/wall/r_wall/turfpack/station,
@@ -6693,7 +6697,7 @@
 /area/maintenance/ragecage)
 "AN" = (
 /obj/random/toy,
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "AO" = (
 /obj/structure/table/woodentable,
@@ -6857,7 +6861,7 @@
 /area/maintenance/thrift)
 "Bx" = (
 /obj/structure/ladder/up,
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "Bz" = (
 /obj/structure/cable{
@@ -8897,7 +8901,7 @@
 /area/maintenance/janitoral)
 "JD" = (
 /obj/structure/curtain/bed,
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "JG" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -9635,7 +9639,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/abhydroponicssupp)
 "MT" = (
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "MZ" = (
 /obj/structure/cable{
@@ -10174,7 +10178,7 @@
 /area/maintenance/abcargo)
 "Pa" = (
 /obj/item/weapon/stamp/clown,
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "Pb" = (
 /turf/simulated/wall,
@@ -11308,7 +11312,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/unsimulated/floor/carpet/retro/turfpack/station,
+/turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "Ug" = (
 /obj/structure/cable{
@@ -11475,13 +11479,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/backuppowerlobby)
-"UW" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/engineering/gravgen)
 "UY" = (
 /obj/random/obstruction,
 /obj/structure/cable{
@@ -11873,7 +11870,7 @@
 /obj/structure/bed/chair/oldsofa/left{
 	dir = 8
 	},
-/turf/unsimulated/floor/carpet/gaycarpet,
+/turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/zerobar)
 "Wt" = (
 /obj/structure/flora/pottedplant/subterranean,
@@ -12375,6 +12372,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -12884,7 +12884,7 @@
 /area/maintenance/abfirstaid)
 "ZJ" = (
 /obj/structure/bed/chair/oldsofa/right,
-/turf/unsimulated/floor/carpet/gaycarpet,
+/turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/zerobar)
 "ZK" = (
 /obj/machinery/portable_atmospherics/canister/air,
@@ -37848,8 +37848,8 @@ gk
 wq
 Ye
 lr
-UW
-UW
+Qf
+Qf
 vy
 Pb
 Fo
