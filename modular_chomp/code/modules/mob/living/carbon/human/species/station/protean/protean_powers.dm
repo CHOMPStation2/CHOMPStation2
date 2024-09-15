@@ -712,8 +712,7 @@
 	if(stat || world.time < last_special)
 		return
 	last_special = world.time + 50
-	var/temporgans = src.organs
-	for(var/obj/item/organ/external/proteanlimbs as anything in temporgans)
+	for(var/obj/item/organ/external/proteanlimbs as anything in src.organs)
 		if(proteanlimbs.organ_tag != BP_TORSO)
 			continue
 		proteanlimbs.transparent = !proteanlimbs.transparent
