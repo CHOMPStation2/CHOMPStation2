@@ -16,26 +16,15 @@
 	access = list()			//See /datum/job/intern/get_access()
 	minimal_access = list()	//See /datum/job/intern/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/assistant/intern
-<<<<<<< HEAD
-	alt_titles = list("Apprentice Engineer" = /datum/alt_title/intern_eng,
-					  "Medical Intern" = /datum/alt_title/intern_med,
-					  "Lab Assistant" = /datum/alt_title/intern_sci, //CHOMPEdit
-					  "Security Cadet" = /datum/alt_title/intern_sec,
-					  "Jr. Cargo Tech" = /datum/alt_title/intern_crg,
-					  "Jr. Explorer" = /datum/alt_title/intern_exp, //CHOMP Explo keep
-					  "Server" = /datum/alt_title/server,
-					  "Assistant" = /datum/alt_title/assistant)
-	job_description = "An Intern does whatever is requested of them, often doing so in process of learning \
-=======
 	alt_titles = list(JOB_ALT_APPRENTICE_ENGINEER = /datum/alt_title/intern_eng,
 					  JOB_ALT_MEDICAL_INTERN = /datum/alt_title/intern_med,
-					  JOB_ALT_RESEARCH_INTERN = /datum/alt_title/intern_sci,
+					  JOB_ALT_LAB_ASSISTANT = /datum/alt_title/intern_sci, //CHOMPEdit
 					  JOB_ALT_SECURITY_CADET = /datum/alt_title/intern_sec,
 					  JOB_ALT_JR_CARGO_TECH = /datum/alt_title/intern_crg,
+					  JOB_ALT_JR_EXPLORER = /datum/alt_title/intern_exp, //CHOMP Explo keep
 					  JOB_ALT_SERVER = /datum/alt_title/server,
 					  JOB_ALT_ASSISTANT = /datum/alt_title/assistant)
 	job_description = "An " + JOB_INTERN + " does whatever is requested of them, often doing so in process of learning \
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 						another job. Though they are part of the crew, they have no real authority."
 	timeoff_factor = 0 // Interns, noh
 	requestable = FALSE
@@ -53,15 +42,9 @@
 	title_outfit = /decl/hierarchy/outfit/job/assistant/medic
 
 /datum/alt_title/intern_sci
-<<<<<<< HEAD
-	title = "Lab Assistant" //CHOMPEdit
-	title_blurb = "A Lab Assistant attempts to provide whatever the Research department needs. They are not proper Scientists, and are \
-					often in training to become a Scientist. A Lab Assistant has no real authority."		     //CHOMPEdit
-=======
-	title = JOB_ALT_RESEARCH_INTERN
-	title_blurb = "A " + JOB_ALT_RESEARCH_INTERN + " attempts to provide whatever the Research department needs. They are not proper " + JOB_SCIENTIST + "s, and are \
-					often in training to become a " + JOB_SCIENTIST + ". A " + JOB_ALT_RESEARCH_INTERN + " has no real authority."
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	title = JOB_ALT_LAB_ASSISTANT //CHOMPEdit
+	title_blurb = "A " + JOB_ALT_LAB_ASSISTANT + " attempts to provide whatever the Research department needs. They are not proper " + JOB_SCIENTIST + "s, and are \
+					often in training to become a " + JOB_SCIENTIST + ". A " + JOB_ALT_LAB_ASSISTANT + " has no real authority." //CHOMPEdit
 	title_outfit = /decl/hierarchy/outfit/job/assistant/scientist
 
 /datum/alt_title/intern_sec

@@ -53,7 +53,7 @@
 	#define JOB_ALT_LOGISTICS_MANAGER "Logistics Manager"
 	#define JOB_ALT_CARGO_SUPERVISOR "Cargo Supervisor"
 
-#define JOB_PATHFINDER "Away Team Leader" // was Pathfinder
+#define JOB_PATHFINDER "Pathfinder" // was Pathfinder  //CHOMP explo keep
 	// Pathfinder alt titles
 	#define JOB_ALT_EXPEDITION_LEAD "Expedition Lead"
 	#define JOB_ALT_EXPLORATION_MANAGER "Exploration Manager"
@@ -67,6 +67,7 @@
 	#define JOB_ALT_RESEARCH_INTERN "Research Intern"
 	#define JOB_ALT_SECURITY_CADET "Security Cadet"
 	#define JOB_ALT_JR_CARGO_TECH "Jr. Cargo Tech"
+	#define JOB_ALT_JR_EXPLORER "Jr. Explorer" //CHOMP explo keep
 	#define JOB_ALT_SERVER "Server"
 	#define JOB_ALT_ASSISTANT "Assistant"
 		//Assistant/Visitor/Whatever
@@ -211,14 +212,14 @@
 
 
 // Station Away Team / Explorer jobs
-#define JOB_EXPLORER "Away Team" // was Explorer
+#define JOB_EXPLORER "Explorer" // was Explorer //CHOMP explo keep
 	// Explorer alt titles
 	#define JOB_ALT_SURVEYOR "Surveyor"
 	#define JOB_ALT_OFFSITE_SCOUT "Offsite Scout"
 	#define JOB_ALT_EXPLORER_MEDIC "Explorer Medic" // Unused
 	#define JOB_ALT_EXPLORERE_TECHNICIAN "Explorer Technician" // Unused
 
-#define JOB_FIELD_MEDIC "Away Team Medic" // was Field Medic
+#define JOB_FIELD_MEDIC "Field Medic" // was Field Medic //CHOMP explo keep
 	// Field Medic alt titles
 	#define JOB_ALT_EXPEDITION_MEDIC "Expedition Medic"
 	#define JOB_ALT_OFFSITE_MEDIC "Offsite Medic"

@@ -131,35 +131,13 @@ var/const/CSN_FREQ = 1365 //VOREStation Add
 var/const/OUT_FREQ = 1367 //CHOMPstation Add
 
 var/list/radiochannels = list(
-<<<<<<< HEAD
-	"Common"		= PUB_FREQ,
-	"Science"		= SCI_FREQ,
-	"Command"		= COMM_FREQ,
-	"Medical"		= MED_FREQ,
-	"Engineering"	= ENG_FREQ,
-	"Security" 		= SEC_FREQ,
-	"Bodycam"		= BDCM_FREQ, // CHOMPEdit
-	"Response Team" = ERT_FREQ,
-	"Special Ops" 	= DTH_FREQ,
-	"Mercenary" 	= SYND_FREQ,
-	"Raider"		= RAID_FREQ,
-	"Supply" 		= SUP_FREQ,
-	"Service" 		= SRV_FREQ,
-	"Explorer"		= EXP_FREQ, //CHOMP explo keep
-	"AI Private"	= AI_FREQ,
-	"Entertainment" = ENT_FREQ,
-	"Medical(I)"	= MED_I_FREQ,
-	"Security(I)"	= SEC_I_FREQ,
-	"Talon"			= TALON_FREQ, //VOREStation Add
-	"Casino" 		= CSN_FREQ,
-	"Outsider" 		= OUT_FREQ //CHOMPstation Add
-=======
 	CHANNEL_COMMON			= PUB_FREQ,
 	CHANNEL_SCIENCE			= SCI_FREQ,
 	CHANNEL_COMMAND			= COMM_FREQ,
 	CHANNEL_MEDICAL			= MED_FREQ,
 	CHANNEL_ENGINEERING		= ENG_FREQ,
 	CHANNEL_SECURITY		= SEC_FREQ,
+	CHANNEL_BODYCAM			= BDCM_FREQ, // CHOMPEdit
 	CHANNEL_RESPONSE_TEAM	= ERT_FREQ,
 	CHANNEL_SPECIAL_OPS		= DTH_FREQ,
 	CHANNEL_MERCENARY		= SYND_FREQ,
@@ -173,7 +151,7 @@ var/list/radiochannels = list(
 	CHANNEL_SECURITY_1		= SEC_I_FREQ,
 	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
 	CHANNEL_CASINO			= CSN_FREQ,
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	CHANNEL_OUTSIDER		= OUT_FREQ //CHOMPstation Add
 )
 
 // Hey, if anyone ever needs to update tgui/packages/tgui/constants.js with new radio channels

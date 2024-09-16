@@ -184,16 +184,6 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/proc/handle_shell(var/mob/living/silicon/robot/R)
 	if(R.braintype == BORG_BRAINTYPE_AI_SHELL)
 		channels = list(
-<<<<<<< HEAD
-			"Medical" = 1,
-			"Engineering" = 1,
-			"Security" = 1,
-			"Service" = 1,
-			"Supply" = 1,
-			"Science" = 1,
-			"Command" = 1,
-			"Explorer" = 1 //CHOMP keep explo
-=======
 			CHANNEL_MEDICAL = 1,
 			CHANNEL_ENGINEERING = 1,
 			CHANNEL_SECURITY = 1,
@@ -202,7 +192,6 @@ var/global/list/robot_modules = list(
 			CHANNEL_SCIENCE = 1,
 			CHANNEL_COMMAND = 1,
 			CHANNEL_EXPLORATION = 1
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 			)
 
 /obj/item/weapon/robot_module/robot/New(var/mob/living/silicon/robot/R)

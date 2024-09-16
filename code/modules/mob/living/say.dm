@@ -11,25 +11,14 @@ var/list/department_radio_keys = list(
 	":k" = CHANNEL_RESPONSE_TEAM,	".k" = CHANNEL_RESPONSE_TEAM,
 	":s" = CHANNEL_SECURITY,	".s" = CHANNEL_SECURITY,
 	":w" = "whisper",		".w" = "whisper",
-<<<<<<< HEAD
-	":t" = "Mercenary",	".t" = "Mercenary",
-	":x" = "Raider",		".x" = "Raider",
-	":u" = "Supply",		".u" = "Supply",
-	":v" = "Service",		".v" = "Service",
-	":p" = "AI Private",	".p" = "AI Private",
-	":y" = "Explorer",	".y" = "Explorer",	//VOREStation Edit //CHOMP keep explo
-	":a" = "Talon",		".a" = "Talon", //VOREStation Add, //CHOMP keep explo
-	":g" = "Casino",	".g" = "Casino",
-=======
 	":t" = CHANNEL_MERCENARY,	".t" = CHANNEL_MERCENARY,
 	":x" = CHANNEL_RAIDER,		".x" = CHANNEL_RAIDER,
 	":u" = CHANNEL_SUPPLY,		".u" = CHANNEL_SUPPLY,
 	":v" = CHANNEL_SERVICE,		".v" = CHANNEL_SERVICE,
 	":p" = CHANNEL_AI_PRIVATE,	".p" = CHANNEL_AI_PRIVATE,
-	":a" = CHANNEL_EXPLORATION,	".a" = CHANNEL_EXPLORATION,	//VOREStation Edit
-	":y" = CHANNEL_TALON,		".y" = CHANNEL_TALON, //VOREStation Add,
+	":y" = CHANNEL_EXPLORATION,	".y" = CHANNEL_EXPLORATION,	//VOREStation Edit //CHOMP keep explo
+	":a" = CHANNEL_TALON,		".a" = CHANNEL_TALON, //VOREStation Add, //CHOMP keep explo
 	":g" = CHANNEL_CASINO,	".g" = CHANNEL_CASINO,
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 	":R" = "right ear",	".R" = "right ear",
 	":L" = "left ear",	".L" = "left ear",
@@ -42,25 +31,14 @@ var/list/department_radio_keys = list(
 	":k" = CHANNEL_RESPONSE_TEAM,	".k" = CHANNEL_RESPONSE_TEAM,
 	":S" = CHANNEL_SECURITY,	".S" = CHANNEL_SECURITY,
 	":W" = "whisper",		".W" = "whisper",
-<<<<<<< HEAD
-	":T" = "Mercenary",	".T" = "Mercenary",
-	":X" = "Raider",		".X" = "Raider",
-	":U" = "Supply",		".U" = "Supply",
-	":V" = "Service",		".V" = "Service",
-	":P" = "AI Private",	".P" = "AI Private",
-	":Y" = "Explorer",	".Y" = "Explorer", //CHOMP keep explo
-	":A" = "Talon",		".A" = "Talon", //VOREStation Add, //CHOMP keep explo
-	":G" = "Casino",	".G" = "Casino",
-=======
 	":T" = CHANNEL_MERCENARY,	".T" = CHANNEL_MERCENARY,
 	":X" = CHANNEL_RAIDER,		".X" = CHANNEL_RAIDER,
 	":U" = CHANNEL_SUPPLY,		".U" = CHANNEL_SUPPLY,
 	":V" = CHANNEL_SERVICE,		".V" = CHANNEL_SERVICE,
 	":P" = CHANNEL_AI_PRIVATE,	".P" = CHANNEL_AI_PRIVATE,
-	":A" = CHANNEL_EXPLORATION,	".A" = CHANNEL_EXPLORATION,
-	":Y" = CHANNEL_TALON,		".Y" = CHANNEL_TALON, //VOREStation Add,
+	":Y" = CHANNEL_EXPLORATION,	".Y" = CHANNEL_EXPLORATION, //CHOMP keep explo
+	":A" = CHANNEL_TALON,		".A" = CHANNEL_TALON, //VOREStation Add, //CHOMP keep explo
 	":G" = CHANNEL_CASINO,	".G" = CHANNEL_CASINO,
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 	// Cyrillic characters on the same keys on the Russian QWERTY (phonetic) layout
 	":к" = "right ear",    ".к" = "right ear",
@@ -75,25 +53,14 @@ var/list/department_radio_keys = list(
 	":л" = CHANNEL_RESPONSE_TEAM,    ".л" = CHANNEL_RESPONSE_TEAM,
 	":ы" = CHANNEL_SECURITY,    ".ы" = CHANNEL_SECURITY,
 	":ц" = "whisper",        ".ц" = "whisper",
-<<<<<<< HEAD
-	":е" = "Mercenary",    ".е" = "Mercenary",
-	":ч" = "Raider",        ".ч" = "Raider",
-	":г" = "Supply",        ".г" = "Supply",
-	":м" = "Service",        ".м" = "Service",
-	":з" = "AI Private",    ".з" = "AI Private",
-	":н" = "Explorer",    ".н" = "Explorer", //CHOMP keep explo
-	":ф" = "Talon",        ".ф" = "Talon", //VOREStation Add //CHOMP keep explo
-	":п" = "Casino",	".п" = "Casino",
-=======
 	":е" = CHANNEL_MERCENARY,    ".е" = CHANNEL_MERCENARY,
 	":ч" = CHANNEL_RAIDER,        ".ч" = CHANNEL_RAIDER,
 	":г" = CHANNEL_SUPPLY,        ".г" = CHANNEL_SUPPLY,
 	":м" = CHANNEL_SERVICE,        ".м" = CHANNEL_SERVICE,
 	":з" = CHANNEL_AI_PRIVATE,    ".з" = CHANNEL_AI_PRIVATE,
-	":ф" = CHANNEL_EXPLORATION,    ".ф" = CHANNEL_EXPLORATION,
-	":н" = CHANNEL_TALON,        ".н" = CHANNEL_TALON, //VOREStation Add
+	":н" = CHANNEL_EXPLORATION,    ".н" = CHANNEL_EXPLORATION, //CHOMP keep explo
+	":ф" = CHANNEL_TALON,        ".ф" = CHANNEL_TALON, //VOREStation Add //CHOMP keep explo
 	":п" = CHANNEL_CASINO,	".п" = CHANNEL_CASINO,
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 )
 
 

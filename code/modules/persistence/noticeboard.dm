@@ -214,7 +214,4 @@
 	P.stamped = list(/obj/item/weapon/stamp/rd)
 	P.add_overlay("paper_stamped_rd")
 	contents += P
-<<<<<<< HEAD
 	. = ..() //ChompEDIT New --> Initialize
-=======
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
