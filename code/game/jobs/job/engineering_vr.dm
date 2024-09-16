@@ -50,7 +50,6 @@
 /datum/job/atmos
 	spawn_positions = 3
 	pto_type = PTO_ENGINEERING
-<<<<<<< HEAD
 	alt_titles = list(JOB_ALT_ATMOSPHERIC_ENGINEER = /datum/alt_title/atmos_engi, JOB_ALT_ATMOSPHERIC_MAINTAINER = /datum/alt_title/atmos_maint, /*CHOMPEdit JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech*/
 						JOB_ALT_FUEL_TECHNICIAN = /datum/alt_title/refuel_tech)
 

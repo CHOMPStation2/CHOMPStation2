@@ -92,7 +92,7 @@
 
 /* //CHOMPedit: Commented out because this is an actual job here
 /datum/alt_title/sar
-	title = "JOB_ALT_SEARCH_AND_RESCUE
+	title = "JOB_SEARCH_AND_RESCUE // CHOMPEdit
 */
 
 /datum/job/paramedic/get_request_reasons()

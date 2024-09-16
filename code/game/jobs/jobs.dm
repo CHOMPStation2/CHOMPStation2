@@ -127,7 +127,7 @@ var/list/civilian_positions = list(
 	JOB_LIBRARIAN,
 	JOB_ENTREPRENEUR,
 	JOB_CHAPLAIN,
-	USELESS_JOB, //VOREStation Edit - Visitor not Assistant
+	JOB_ALT_VISITOR, //VOREStation Edit - Visitor not Assistant
 	JOB_INTERN //VOREStation Edit - Intern
 )
 
