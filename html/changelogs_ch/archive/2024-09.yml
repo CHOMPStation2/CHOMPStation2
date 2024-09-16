@@ -86,3 +86,25 @@
       open to all species.'
   Kashargul:
   - bugfix: liquid belly examine setting not saving
+2024-09-16:
+  Asher-42:
+  - rscadd: Two abilities for protean that makes either their entire body transparent
+      or just the chest.
+  Kashargul:
+  - balance: energy shield life 35 -> 90
+  - balance: energy shield regen 10 -> 25
+  - balance: combat spear damage 25 -> 45 damage
+  - balance: 'explo jaws: 40 -> 60 damage'
+  - bugfix: cleanbot not reaching dirty turfs
+  Missile597:
+  - bugfix: Fixed the broken chain of scrubber pipes near the elevator to be connected
+      now as intended
+  - maptweak: Replaced the cursed unsimulated carpet tiles with proper carpet that
+      can actually be removed
+  tacoguy7765093:
+  - rscadd: Added more shuttles for spacefarers
+  - code_imp: Added documentation to generic_shuttle.dm on how to make your own OM
+      ship
+  - rscadd: SDF Corvette adjustments
+  - rscadd: Daedelus adjustments.
+  - rscadd: Fixes the shockmaul being a missing texture.

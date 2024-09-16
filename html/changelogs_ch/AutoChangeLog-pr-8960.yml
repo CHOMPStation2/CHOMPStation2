@@ -1,5 +1,0 @@
-author: "Missile597"
-delete-after: True
-changes:
-  - bugfix: "Fixed the broken chain of scrubber pipes near the elevator to be connected now as intended"
-  - maptweak: "Replaced the cursed unsimulated carpet tiles with proper carpet that can actually be removed"
