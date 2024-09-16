@@ -105,7 +105,7 @@
 	#define JOB_ALT_FLORIST "Florist"
 	#define JOB_ALT_RANCHER "Rancher"
 
-#define 	 "Cargo Technician"
+#define JOB_CARGO_TECHNICIAN "Cargo Technician"
 	// Cargo Technician alt titles
 	#define JOB_ALT_CARGO_LOADER "Cargo Loader"
 	#define JOB_ALT_CARGO_HANDLER "Cargo Handler"
