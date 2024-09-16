@@ -3,6 +3,7 @@
 	var/mob/living/silicon/robot/R
 	var/last_robot_loc
 	name = "Robot Exploration ID"
+	rank = JOB_EXPLORER
 
 /obj/item/weapon/card/id/exploration/borg/Initialize()
 	. = ..()
