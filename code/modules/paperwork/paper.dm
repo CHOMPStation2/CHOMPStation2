@@ -542,11 +542,7 @@
 /obj/item/weapon/paper/attackby(obj/item/weapon/P as obj, mob/user as mob)
 	..()
 	var/clown = 0
-<<<<<<< HEAD
-	if(user.mind && ((user.mind.role_alt_title == "Clown") || (user.mind.role_alt_title == "Jester") || (user.mind.role_alt_title == "Fool"))) // CHOMPStation Edit - Let clows/fools/jesters use clown stamps
-=======
-	if(user.mind && (user.mind.assigned_role == JOB_CLOWN))
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	if(user.mind && ((user.mind.role_alt_title == JOB_CLOWN) || (user.mind.role_alt_title == JOB_ALT_JESTER) || (user.mind.role_alt_title == JOB_ALT_FOOL))) // CHOMPStation Edit - Let clows/fools/jesters use clown stamps
 		clown = 1
 
 	if(istype(P, /obj/item/weapon/tape_roll))

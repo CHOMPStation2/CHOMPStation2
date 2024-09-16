@@ -9,19 +9,19 @@ var/const/access_explorer = 43
 
 /datum/access/pilot
 	id = access_pilot
-	desc = "Pilot"
+	desc = JOB_PILOT
 	region = ACCESS_REGION_SUPPLY
 
 /datum/access/explorer
 	id = access_explorer
-	desc = "Explorer"
+	desc = JOB_EXPLORER
 	region = ACCESS_REGION_GENERAL
 
 //SC Jobs
 
 /*
 
-//Will see about getting working later.
+//Will see about getting working later. //CHOMPNote, do not use this
 
 /datum/job/captain
 	title = "Station Director"
@@ -51,9 +51,9 @@ var/const/access_explorer = 43
 */
 
 /datum/job/pilot
-	title = "Pilot"
+	title = JOB_PILOT
 	flag = PILOT
-	department = "Civilian"
+	department = DEPARTMENT_CIVILIAN
 	department_flag = CIVILIAN
 	faction = FACTION_STATION
 	total_positions = 2
@@ -66,17 +66,11 @@ var/const/access_explorer = 43
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 
 /datum/job/explorer
-	title = "Explorer"
+	title = JOB_EXPLORER
 	flag = EXPLORER
-<<<<<<< HEAD
-	department = "Civilian"
+	department = DEPARTMENT_CIVILIAN
 	department_flag = CIVILIAN
-	faction = "Station"
-=======
-	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_PLANET)
-	department_flag = MEDSCI
 	faction = FACTION_STATION
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the explorer leader and the head of personnel"
@@ -94,9 +88,9 @@ var/const/access_explorer = 43
 */
 
 /datum/job/sar
-	title = "Search and Rescue"
+	title = JOB_SEARCH_AND_RESCUE
 	flag = SAR
-	department = "Medical"
+	department = DEPARTMENT_MEDICAL
 	department_flag = MEDSCI
 	faction = FACTION_STATION
 	total_positions = 2
@@ -109,4 +103,4 @@ var/const/access_explorer = 43
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
-	job_description = "A Search and Rescue operative recovers individuals who are injured or dead on the surface of Sif."
+	job_description = "A " + JOB_SEARCH_AND_RESCUE + " operative recovers individuals who are injured or dead on the surface of Sif."

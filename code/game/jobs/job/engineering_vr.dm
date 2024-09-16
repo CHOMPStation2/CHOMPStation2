@@ -51,11 +51,8 @@
 	spawn_positions = 3
 	pto_type = PTO_ENGINEERING
 <<<<<<< HEAD
-	alt_titles = list("Atmospheric Engineer" = /datum/alt_title/atmos_engi, "Atmospheric Maintainer" = /datum/alt_title/atmos_maint, /*CHOMPEdit "Disposals Technician" = /datum/alt_title/disposals_tech*/)
-=======
-	alt_titles = list(JOB_ALT_ATMOSPHERIC_ENGINEER = /datum/alt_title/atmos_engi, JOB_ALT_ATMOSPHERIC_MAINTAINER = /datum/alt_title/atmos_maint, JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech,
+	alt_titles = list(JOB_ALT_ATMOSPHERIC_ENGINEER = /datum/alt_title/atmos_engi, JOB_ALT_ATMOSPHERIC_MAINTAINER = /datum/alt_title/atmos_maint, /*CHOMPEdit JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech*/
 						JOB_ALT_FUEL_TECHNICIAN = /datum/alt_title/refuel_tech)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 /datum/alt_title/atmos_maint
 	title = JOB_ALT_ATMOSPHERIC_MAINTAINER
@@ -67,11 +64,8 @@
 	title = JOB_ALT_DISPOSALS_TECHNICIAN
 	title_blurb = "A " + JOB_ALT_DISPOSALS_TECHNICIAN + " is an " + JOB_ATMOSPHERIC_TECHNICIAN + " still and can fulfill all the same duties, although specializes more in disposals delivery system's operations and configurations."
 
-<<<<<<< HEAD
-=======
 /datum/alt_title/refuel_tech
 	title = JOB_ALT_FUEL_TECHNICIAN
 
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 /datum/job/atmos/get_request_reasons()
 	return list("Construction project", "Repairs necessary", "Assembling expedition team")

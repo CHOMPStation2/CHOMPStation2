@@ -104,15 +104,9 @@
 	flag = CLOWN
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC
-<<<<<<< HEAD
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
-=======
-	faction = FACTION_STATION
-	total_positions = 1
-	spawn_positions = 1
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	supervisors = "the spirit of laughter"
 	selection_color = "#515151"
 	economic_modifier = 1
@@ -141,15 +135,9 @@
 	flag = MIME
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC
-<<<<<<< HEAD
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
-=======
-	faction = FACTION_STATION
-	total_positions = 1
-	spawn_positions = 1
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	supervisors = "the spirit of performance"
 	selection_color = "#515151"
 	economic_modifier = 1

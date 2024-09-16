@@ -43,25 +43,15 @@
 /obj/effect/landmark/start/cargo
 	name = JOB_CARGO_TECHNICIAN
 /obj/effect/landmark/start/miner
-<<<<<<< HEAD
-	name = "Shaft Miner"
- //CHOMP explo keep removed wide comment field
-=======
 	name = JOB_SHAFT_MINER
-/* //VOREStation Removal
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+ //CHOMP explo keep removed wide comment field
 /obj/effect/landmark/start/pf
 	name = JOB_PATHFINDER
 /obj/effect/landmark/start/explorer
 	name = JOB_EXPLORER
 /obj/effect/landmark/start/fieldmedic
-<<<<<<< HEAD
-	name = "Field Medic"
- //CHOMP explo keep removed wide comment field end
-=======
 	name = JOB_FIELD_MEDIC
-*/
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+ //CHOMP explo keep removed wide comment field end
 /obj/effect/landmark/start/bartender
 	name = JOB_BARTENDER
 /obj/effect/landmark/start/botanist
@@ -106,3 +96,7 @@
 	name = JOB_TALON_PILOT
 /obj/effect/landmark/start/talonminer
 	name = JOB_TALON_MINER
+/obj/effect/landmark/start/outsider
+	name = JOB_OUTSIDER
+/obj/effect/landmark/start/anomaly
+	name = JOB_ANOMALY

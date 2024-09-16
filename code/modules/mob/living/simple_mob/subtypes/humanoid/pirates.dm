@@ -39,8 +39,5 @@
 	loot_list = list(/obj/item/weapon/gun/energy/laser = 100)
 
 	corpse = /obj/effect/landmark/mobcorpse/pirate/ranged
-<<<<<<< HEAD
 
 */
-=======
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix

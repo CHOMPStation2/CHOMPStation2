@@ -8,17 +8,10 @@
 			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks, access_teleporter) //CHOMP Edit: Restores what access is given in security.dm.
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
-<<<<<<< HEAD
 			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
 			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks, access_teleporter) //CHOMP Edit: Restores what access is given in security.dm.
-	alt_titles = list("Security Commander" = /datum/alt_title/sec_commander, "Chief of Security" = /datum/alt_title/sec_chief, "Security Manager" = /datum/alt_title/security_manager)
-=======
-						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
-						access_construction,
-						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks)
 	alt_titles = list(JOB_ALT_SECURITY_COMMANDER = /datum/alt_title/sec_commander, JOB_ALT_CHIEF_OF_SECURITY = /datum/alt_title/sec_chief, JOB_ALT_SECURITY_MANAGER = /datum/alt_title/security_manager)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 /datum/alt_title/security_manager
 	title = JOB_ALT_SECURITY_MANAGER
@@ -30,11 +23,7 @@
 /datum/job/warden
 	pto_type = PTO_SECURITY
 	dept_time_required = 20
-<<<<<<< HEAD
-	alt_titles = list("Brig Sentry" = /datum/alt_title/brig_sentry, "Armory Superintendent" = /datum/alt_title/armory_superintendent)
-=======
 	alt_titles = list(JOB_ALT_BRIG_SENTRY = /datum/alt_title/brig_sentry, JOB_ALT_ARMORY_SUPERINTENDENT = /datum/alt_title/armory_superintendent, JOB_ALT_MASTERATARMS = /datum/alt_title/master_at_arms)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 /datum/alt_title/brig_sentry
 	title = JOB_ALT_BRIG_SENTRY
@@ -42,12 +31,9 @@
 /datum/alt_title/armory_superintendent
 	title = JOB_ALT_ARMORY_SUPERINTENDENT
 
-<<<<<<< HEAD
-=======
 /datum/alt_title/master_at_arms
 	title = JOB_ALT_MASTERATARMS
 
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 /datum/job/warden/get_request_reasons()
 	return list("Wildlife management")
 

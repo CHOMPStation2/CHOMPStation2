@@ -69,21 +69,12 @@
 	total_positions = 3
 	spawn_positions = 3
 	pto_type = PTO_CARGO
-<<<<<<< HEAD
-	alt_titles = list("Cargo Loader" = /datum/alt_title/cargo_loader, "Cargo Handler" = /datum/alt_title/cargo_handler, "Supply Courier" = /datum/alt_title/supply_courier,
-					"Disposals Sorter" = /datum/alt_title/disposal_sorter, "Mailman" = /datum/alt_title/mailman) // CHOMPEdit: Adds Mailman title.
-
-/datum/alt_title/supply_courier
-	title = "Supply Courier"
-	title_blurb = "A Supply Courier is usually tasked with delivering packages or cargo directly to whoever requires it." // CHOMPEdit: Fixes a typo.
-=======
 	alt_titles = list(JOB_ALT_CARGO_LOADER = /datum/alt_title/cargo_loader, JOB_ALT_CARGO_HANDLER = /datum/alt_title/cargo_handler, JOB_ALT_SUPPLY_COURIER = /datum/alt_title/supply_courier,
-					JOB_ALT_DISPOSALS_SORTER = /datum/alt_title/disposal_sorter)
+					JOB_ALT_DISPOSALS_SORTER = /datum/alt_title/disposal_sorter, JOB_ALT_MAILMAN = /datum/alt_title/mailman) // CHOMPEdit: Adds Mailman title.
 
 /datum/alt_title/supply_courier
 	title = JOB_ALT_SUPPLY_COURIER
-	title_blurb = "A " + JOB_ALT_SUPPLY_COURIER + " is usually tasked with devlivering packages or cargo directly to whoever requires it."
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	title_blurb = "A " + JOB_ALT_SUPPLY_COURIER + " is usually tasked with delivering packages or cargo directly to whoever requires it."
 
 /datum/alt_title/cargo_loader
 	title = JOB_ALT_CARGO_LOADER
@@ -97,18 +88,12 @@
 	title = JOB_ALT_DISPOSALS_SORTER
 	title_blurb = "A " + JOB_ALT_DISPOSALS_SORTER + " is usually tasked with operating disposals delivery system, sorting the trash and tagging parcels for delivery."
 
-
 /datum/job/mining
 	total_positions = 4
 	spawn_positions = 4
 	pto_type = PTO_CARGO
-<<<<<<< HEAD
-	alt_titles = list(/*CHOMPEdit Removal "Deep Space Miner" = /datum/alt_title/deep_space_miner*/, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector,
-						"Excavator" = /datum/alt_title/excavator)
-=======
-	alt_titles = list(JOB_ALT_DEEP_SPACE_MINER = /datum/alt_title/deep_space_miner, JOB_ALT_DRILL_TECHNICIAN = /datum/alt_title/drill_tech, JOB_ALT_PROSPECTOR = /datum/alt_title/prospector,
+	alt_titles = list(/*CHOMPEdit Removal JOB_ALT_DEEP_SPACE_MINER = /datum/alt_title/deep_space_miner*/, JOB_ALT_DRILL_TECHNICIAN = /datum/alt_title/drill_tech, JOB_ALT_PROSPECTOR = /datum/alt_title/prospector,
 						JOB_ALT_EXCAVATOR = /datum/alt_title/excavator)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 /datum/alt_title/deep_space_miner
 	title = JOB_ALT_DEEP_SPACE_MINER
@@ -230,17 +215,10 @@
 	flag = PILOT
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
-<<<<<<< HEAD
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = 5 //CHOMP explo keep
 	spawn_positions = 5 //CHOMP explo keep
-	supervisors = "the Head of Personnel"
-=======
-	faction = FACTION_STATION
-	total_positions = 2
-	spawn_positions = 2
 	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	selection_color = "#515151"
 	economic_modifier = 5
 	minimal_player_age = 3
@@ -259,12 +237,8 @@
 	title = JOB_ALT_NAVIGATOR
 
 /datum/alt_title/helmsman
-<<<<<<< HEAD
-	title = "Helmsman"
-*/ //CHOMP Remove end
-=======
 	title = JOB_ALT_HELMSMAN
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+*/ //CHOMP Remove end
 
 /datum/job/pilot/get_request_reasons()
 	return list("Assembling expedition team")
@@ -288,21 +262,13 @@
 	pto_type = PTO_CIVILIAN
 
 	outfit_type = /decl/hierarchy/outfit/job/assistant/entertainer
-<<<<<<< HEAD
-	job_description = "An entertainer does just that, entertains! Put on plays, play music, sing songs, tell stories, or read your favorite fanfic."
-	alt_titles = list("Performer" = /datum/alt_title/performer, "Musician" = /datum/alt_title/musician, "Stagehand" = /datum/alt_title/stagehand,
-						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
-						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
-						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
-						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
-						"Artist" = /datum/alt_title/artist, "Fitness Instructor" = /datum/alt_title/fitnessinstructor, "Game Master" = /datum/alt_title/game_master)
-=======
 	job_description = "An " + JOB_ENTERTAINER + " does just that, entertains! Put on plays, play music, sing songs, tell stories, or read your favorite fanfic."
 	alt_titles = list(JOB_ALT_PERFORMER = /datum/alt_title/performer, JOB_ALT_MUSICIAN = /datum/alt_title/musician, JOB_ALT_STAGEHAND = /datum/alt_title/stagehand,
 						JOB_ALT_ACTOR = /datum/alt_title/actor, JOB_ALT_DANCER = /datum/alt_title/dancer, JOB_ALT_SINGER = /datum/alt_title/singer,
 						JOB_ALT_MAGICIAN = /datum/alt_title/magician, JOB_ALT_COMEDIAN = /datum/alt_title/comedian, JOB_ALT_ARTIST = /datum/alt_title/tragedian,
-						JOB_ALT_ARTIST = /datum/alt_title/artist, JOB_ALT_GAME_MASTER = /datum/alt_title/game_master)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+						JOB_CLOWN = /datum/alt_title/clown, JOB_ALT_JESTER = /datum/alt_title/clown/jester,JOB_ALT_FOOL = /datum/alt_title/clown/fool,
+						JOB_MIME= /datum/alt_title/mime,JOB_ALT_PASEUR= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
+						JOB_ALT_ARTIST = /datum/alt_title/artist, JOB_ALT_FITNESS_INSTRUCTOR = /datum/alt_title/fitnessinstructor, JOB_ALT_GAME_MASTER = /datum/alt_title/game_master)
 
 // Entertainer Alt Titles
 /datum/alt_title/actor
@@ -464,7 +430,7 @@
 
 // ChompADD
 /datum/alt_title/fitnessinstructor
-	title = "Fitness Instructor"
-	title_blurb = "A Fitness Instructor dedicates themselves to improving the health of the crew through physical activity, and boy, do they need the help."
+	title = JOB_ALT_FITNESS_INSTRUCTOR
+	title_blurb = "A " + JOB_ALT_FITNESS_INSTRUCTOR + " dedicates themselves to improving the health of the crew through physical activity, and boy, do they need the help."
 
 // ChompADD END

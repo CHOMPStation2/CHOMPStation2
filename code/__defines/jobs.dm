@@ -10,10 +10,11 @@
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
 	// Head of Personnel alt titles
 	#define JOB_ALT_CREW_RESOURCE_OFFICER "Crew Resources Officer"
-	#define JOB_ALT_DEPUTY_MANAGER "Deputy Manager"
+	#define JOB_ALT_DEPUTY_MANAGER "Deputy Director" // CHOMPEdit
 	#define JOB_ALT_STAFF_MANAGER "Staff Manager"
 	#define JOB_ALT_FACILITY_STEWARD "Facility Steward"
 	#define JOB_ALT_FIRST_MATE "First Mate"
+	#define JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR "Performance Management Supervisor"
 
 #define JOB_COMMAND_SECRETARY "Command Secretary"
 	// Command Secretary alt titles
@@ -22,6 +23,7 @@
 	#define JOB_ALT_COMMAND_INTERN "Command Intern"
 	#define JOB_ALT_BRIDGE_SECRETARY "Bridge Secretary"
 	#define JOB_ALT_BRIDGE_ASSISTANT "Bridge Assistant"
+	#define JOB_ALT_BRIDGE_OFFICER "Bridge Officer" // CHOMPAdd
 
 #define JOB_HEAD_OF_SECURITY "Head of Security"
 	// Head of Security alt titles
@@ -103,12 +105,13 @@
 	#define JOB_ALT_FLORIST "Florist"
 	#define JOB_ALT_RANCHER "Rancher"
 
-#define JOB_CARGO_TECHNICIAN "Cargo Technician"
+#define 	 "Cargo Technician"
 	// Cargo Technician alt titles
 	#define JOB_ALT_CARGO_LOADER "Cargo Loader"
 	#define JOB_ALT_CARGO_HANDLER "Cargo Handler"
 	#define JOB_ALT_SUPPLY_COURIER "Supply Courier"
 	#define JOB_ALT_DISPOSALS_SORTER "Disposals Sorter"
+	#define JOB_ALT_MAILMAN "Mailman" // CHOMPAdd
 
 #define JOB_SHAFT_MINER "Shaft Miner"
 	// Shaft Miner alt titles
@@ -254,7 +257,8 @@
 	// Paramedic alt titles
 	#define JOB_ALT_EMERGENCY_MEDICAL_TECHNICIAN "Emergency Medical Technician"
 	#define JOB_ALT_MEDICAL_RESPONDER "Medical Responder"
-	#define JOB_ALT_SEARCH_AND_RESCUE "Search and Rescue" // CHOMPNotice, actual JOB here, do not use
+
+#define JOB_SEARCH_AND_RESCUE "Search and Rescue" // CHOMPEdit, actual JOB here
 
 #define JOB_GENETICIST "Geneticist" //Disabled atm
 //___________________________________________________________
@@ -335,7 +339,7 @@
 //___________________________________________________________
 
 
-// Station Sepcial jobs
+// Station Sepcial jobs	//CHOMPNotice, all of those are used as JOB_ENTERTAINER alts
 #define JOB_CLOWN "Clown"
 	// Clown alt titles
 	#define JOB_ALT_JESTER "Jester"
@@ -375,10 +379,11 @@
 //___________________________________________________________
 
 
-// Blueshield jobs CHOMPAdd Start
+//  CHOMPAdd Start
+//  Blueshield jobs
 #define JOB_BLUESHIELD_GUARD "Blueshield Guard"
 #define JOB_SECURITY_PILOT "Security Pilot"
-// Blueshield jobs CHOMPAdd End
+// CHOMPAdd End
 
 // Mind jobs
 #define JOB_SLIME "slime"

@@ -192,12 +192,8 @@
 	messenger_bag = /obj/item/weapon/storage/backpack/messenger/talon
 
 /decl/hierarchy/outfit/job/talon_pilot
-<<<<<<< HEAD
-	name = OUTFIT_JOB_NAME("Talon Pilot")
-	id_pda_assignment = "Pilot"
-=======
 	name = OUTFIT_JOB_NAME(JOB_TALON_PILOT)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	id_pda_assignment = JOB_TALON_PILOT
 
 	id_type = /obj/item/weapon/card/id/talon/pilot
 	id_slot = slot_wear_id

@@ -6,11 +6,7 @@
 /obj/item/device/encryptionkey/explorer
 	name = "explorer radio encryption key"
 	icon_state = "com_cypherkey"
-<<<<<<< HEAD
-	channels = list("Explorer" = 1)
-=======
-	channels = list(CHANNEL_EXPLORATION = 1, CHANNEL_SCIENCE = 1)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	channels = list(CHANNEL_EXPLORATION = 1) // CHOMPEdit
 
 /obj/item/device/encryptionkey/sar
 	name = "sar's encryption key"
