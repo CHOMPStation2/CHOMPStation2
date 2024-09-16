@@ -736,6 +736,7 @@
 				if(O.status & ORGAN_BROKEN)
 					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
 					H.custom_pain("You feel a terrible agony tear through your bones!",60)
+					H.adjustHalLoss(60)
 					H.AdjustStunned(1)		//Bones being regrown will knock you over - CHOMPEdit - Crawling made this trivial, get stunned
 		//CHOMPEdit End
 
