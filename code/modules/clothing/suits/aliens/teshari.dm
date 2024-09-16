@@ -197,11 +197,7 @@
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/hos
 	name = "head of security cloak"
-<<<<<<< HEAD
-	desc = "A soft Teshari cloak made for the Head of Security. This one is made with stronger fibers." //CHOMPedot
-=======
-	desc = "A soft Teshari cloak made for the " + JOB_HEAD_OF_SECURITY
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	desc = "A soft Teshari cloak made for the " + JOB_HEAD_OF_SECURITY + ". This one is made with stronger fibers." //CHOMPedot
 	icon_state = "tesh_cloak_hos"
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
@@ -718,11 +714,7 @@
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/hos
 	name = "security chief belted cloak"
-<<<<<<< HEAD
-	desc = "A soft Teshari cloak made for the Head of Security. This one is made with stronger fibers." //CHOMPedit
-=======
-	desc = "A soft Teshari cloak made for the " + JOB_HEAD_OF_SECURITY
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	desc = "A soft Teshari cloak made for the " + JOB_HEAD_OF_SECURITY + ". This one is made with stronger fibers." //CHOMPedit
 	icon_state = "tesh_beltcloak_hos"
 	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO

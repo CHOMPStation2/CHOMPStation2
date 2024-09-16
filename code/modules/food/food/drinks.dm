@@ -540,9 +540,5 @@
 	desc = "Keeping your drinks at the perfect temperature since 1892."
 	icon_state = "vacuumflask"
 	volume = 60
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 4 //CHOMPEdit
-=======
-	center_of_mass = list("x"=15, "y"=4)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix

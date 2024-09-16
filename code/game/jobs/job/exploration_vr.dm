@@ -38,11 +38,7 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-<<<<<<< HEAD
-	supervisors = "the Research Director" //CHOMPedit
-=======
-	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	supervisors = "the " + JOB_RESEARCH_DIRECTOR //CHOMPedit
 	selection_color = "#d6d05c"
 	economic_modifier = 8
 	minimal_player_age = 7
@@ -103,11 +99,7 @@
 	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 3
-<<<<<<< HEAD
-	supervisors = "the Pathfinder" //CHOMPedit
-=======
-	supervisors = "the " + JOB_PATHFINDER + " and the " + JOB_HEAD_OF_PERSONNEL
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	supervisors = "the " + JOB_PATHFINDER //CHOMPedit
 	selection_color = "#999440"
 	economic_modifier = 6
 	pto_type = PTO_EXPLORATION
@@ -134,11 +126,7 @@
 	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
-<<<<<<< HEAD
-	supervisors = "the Pathfinder" //CHOMPedit
-=======
-	supervisors = "the " + JOB_PATHFINDER + " and the " + JOB_CHIEF_MEDICAL_OFFICER
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	supervisors = "the " + JOB_PATHFINDER //CHOMPedit
 	selection_color = "#999440"
 	economic_modifier = 6
 	minimal_player_age = 3
@@ -153,11 +141,7 @@
 	title = JOB_ALT_EXPEDITION_MEDIC
 
 /datum/alt_title/offsite_medic
-<<<<<<< HEAD
-	title = "Offsite Medic"
+	title = JOB_ALT_OFFSITE_MEDIC
 
 /datum/job/sar/get_request_reasons()
 	return list("Assembling expedition team")
-=======
-	title = JOB_ALT_OFFSITE_MEDIC
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix

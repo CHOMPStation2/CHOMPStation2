@@ -43,13 +43,8 @@
 		"stripe" =          "#52b8b8"
 	)
 	channels = list(
-<<<<<<< HEAD
-		"Science" = 1,
-		"Explorer" = 1
-=======
 		CHANNEL_SCIENCE = 1,
 		CHANNEL_EXPLORATION = 1
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	)
 
 /obj/item/weapon/robot_module/robot/platform/explorer/create_equipment(var/mob/living/silicon/robot/robot)

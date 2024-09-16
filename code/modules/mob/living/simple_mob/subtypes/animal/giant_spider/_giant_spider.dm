@@ -68,13 +68,8 @@
 	icon_living = "guard"
 	icon_dead = "guard_dead"
 	has_eye_glow = TRUE
-<<<<<<< HEAD
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-	faction = "awaymission" //yw edit, Makes away mobs be on the same fuckin' side.
-=======
-
-	faction = FACTION_SPIDERS
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	faction = FACTION_AWAYMISSION //yw edit, Makes away mobs be on the same fuckin' side.
 	maxHealth = 200
 	health = 200
 	pass_flags = PASSTABLE

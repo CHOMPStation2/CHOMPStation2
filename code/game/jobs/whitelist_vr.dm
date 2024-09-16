@@ -30,7 +30,7 @@ GLOBAL_LIST_EMPTY(job_whitelist) // CHOMPEdit - Managed Globals
 				return 1
 			if(findtext(s,"[M.ckey] - All"))
 				return 1
-<<<<<<< HEAD
+	return 0
 
 //ChompEDIT START - admin reload buttons
 /client/proc/reload_jobwhitelist()
@@ -43,6 +43,3 @@ GLOBAL_LIST_EMPTY(job_whitelist) // CHOMPEdit - Managed Globals
 	load_jobwhitelist()
 	log_and_message_admins("reloaded the job whitelist")
 //ChompEDIT End
-=======
-	return 0
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix

@@ -696,46 +696,26 @@
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"
-<<<<<<< HEAD
-	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Search and Rescue")
-=======
-	path = /obj/item/clothing/suit/storage/snowsuit/medical
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical // CHOMPEdit
 	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_ALT_SEARCH_AND_RESCUE)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/science
 	display_name = "snowsuit, science"
-<<<<<<< HEAD
-	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/science
-	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist")
-=======
-	path = /obj/item/clothing/suit/storage/snowsuit/science
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/science // CHOMPEdit
 	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "snowsuit, engineering"
-<<<<<<< HEAD
-	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering
-	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
-=======
-	path = /obj/item/clothing/suit/storage/snowsuit/engineering
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering // CHOMPEdit
 	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN, JOB_ENGINEER)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/cargo
 	display_name = "snowsuit, supply"
-<<<<<<< HEAD
-	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/cargo
-	allowed_roles = list("Quartermaster","Shaft Miner","Cargo Technician","Head of Personnel")
-=======
-	path = /obj/item/clothing/suit/storage/snowsuit/cargo
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/cargo // CHOMPEdit
 	allowed_roles = list(JOB_QUARTERMASTER,JOB_SHAFT_MINER,JOB_CARGO_TECHNICIAN,JOB_HEAD_OF_PERSONNEL)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	show_roles = FALSE
 
 /datum/gear/suit/miscellaneous/cardigan

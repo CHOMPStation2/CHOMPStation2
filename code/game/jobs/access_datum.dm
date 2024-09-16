@@ -262,17 +262,10 @@
 	desc = "Station Network"
 	region = ACCESS_REGION_RESEARCH
 
-<<<<<<< HEAD
-var/const/access_explorer = 43 //CHOMP explo keep
-/datum/access/explorer //CHOMP explo keep
-	id = access_explorer //CHOMP explo keep
-	desc = "Explorer" //CHOMP explo keep
-=======
 var/const/access_explorer = 43
 /datum/access/explorer
 	id = access_explorer
 	desc = JOB_EXPLORER
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	region = ACCESS_REGION_GENERAL
  //CHOMP explo keep removed a wide comment field on this line
 /var/const/access_pathfinder = 44

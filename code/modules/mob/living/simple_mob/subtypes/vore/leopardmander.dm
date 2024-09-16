@@ -7,12 +7,8 @@
 	icon_dead = "leopardmander-dead"
 	icon_living = "leopardmander"
 	icon_state = "leopardmander"
-<<<<<<< HEAD
-	faction = "neutral"
-=======
 	icon_rest = "leopardmander-rest"
 	faction = FACTION_NEUTRAL
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	meat_amount = 40 //I mean...
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48

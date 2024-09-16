@@ -113,3 +113,7 @@
 #define FACTION_PLANTS "plants"
 
 #define FACTION_MATH "MATH"
+
+//CHOMPAdd Start factions
+#define FACTION_AWAYMISSION "awaymission"
+//CHOMPAdd End

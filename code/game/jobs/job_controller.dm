@@ -512,11 +512,7 @@ var/global/datum/controller/occupations/job_master
 			return H
 
 		// TWEET PEEP
-<<<<<<< HEAD
-		if(rank == "Site Manager" && announce)
-=======
-		if(rank == JOB_SITE_MANAGER)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+		if(rank == JOB_SITE_MANAGER && announce)
 			var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP) ? null : sound('sound/misc/boatswain.ogg', volume=20)
 			captain_announcement.Announce("All hands, [alt_title ? alt_title : JOB_SITE_MANAGER] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
 

@@ -277,11 +277,7 @@
 //ChompEdit End
 
 /datum/supply_pack/voidsuits/explorer
-<<<<<<< HEAD
-	name = "Exploration voidsuits" //CHOMP explo keep
-=======
 	name = JOB_EXPLORER + " voidsuits"
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	contains = list(
 			/obj/item/clothing/suit/space/void/exploration = 2,
 			/obj/item/clothing/head/helmet/space/void/exploration = 2,
@@ -291,19 +287,11 @@
 			)
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
-	containername = "Exploration voidsuit crate" //CHOMP explo keep
-	access = access_explorer //CHOMP explo keep
-
-/datum/supply_pack/voidsuits/explorer_medic
-	name = "Expedition Medic voidsuits" //CHOMP explo keep
-=======
 	containername = JOB_EXPLORER + "voidsuit crate"
-	access = list(access_eva, access_explorer)
+	access = access_explorer //CHOMP explo keep
 
 /datum/supply_pack/voidsuits/explorer_medic
 	name = JOB_FIELD_MEDIC + " voidsuits"
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	contains = list(
 			/obj/item/clothing/suit/space/void/exploration = 2,
 			/obj/item/clothing/head/helmet/space/void/exploration = 2,
@@ -313,13 +301,8 @@
 			)
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
-	containername = "Expedition Medic voidsuit crate" //CHOMP explo keep
-	access = access_explorer //CHOMP explo keep
-=======
 	containername = JOB_FIELD_MEDIC + " voidsuit crate"
 	access = access_medical
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 /datum/supply_pack/voidsuits/pilot
 	name = JOB_PILOT + " voidsuits"

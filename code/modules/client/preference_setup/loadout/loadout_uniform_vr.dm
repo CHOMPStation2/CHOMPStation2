@@ -33,12 +33,8 @@
 /datum/gear/suit/job_fed/eng
 	display_name = "fed uniform, eng"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
-<<<<<<< HEAD
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer")
-
-=======
 	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ENGINEER)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+
 //DS9
 
 /datum/gear/suit/job_trek/ds9_coat

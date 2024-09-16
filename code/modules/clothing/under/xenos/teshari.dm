@@ -237,11 +237,7 @@
 
 /obj/item/clothing/under/teshari/undercoat/jobs/hos
 	name = "head of security undercoat"
-<<<<<<< HEAD
-	desc = "A traditional Teshari garb made for the Head of Security. Made with slightly sturdier materials." //CHOMPedit
-=======
-	desc = "A traditional Teshari garb made for the " + JOB_HEAD_OF_SECURITY
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	desc = "A traditional Teshari garb made for the " + JOB_HEAD_OF_SECURITY + ". Made with slightly sturdier materials." //CHOMPedit
 	icon_state = "tesh_uniform_hos"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) //CHOMPedit start
 	siemens_coefficient = 0.9

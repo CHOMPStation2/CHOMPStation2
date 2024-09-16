@@ -165,14 +165,10 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	pda_slot = slot_l_store
 	pda_type = /obj/item/device/pda/pathfinder
 	id_type = /obj/item/weapon/card/id/exploration/head
-<<<<<<< HEAD
-	id_pda_assignment = "Pathfinder"
+	id_pda_assignment = JOB_PATHFINDER
 	backpack = /obj/item/weapon/storage/backpack/explorer //CHOMPADD
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/explorer //CHOMPADD
 	messenger_bag = /obj/item/weapon/storage/backpack/messenger/explorer //CHOMPADD
-=======
-	id_pda_assignment = JOB_PATHFINDER
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
 /decl/hierarchy/outfit/job/assistant/explorer
