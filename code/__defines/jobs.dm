@@ -5,6 +5,7 @@
 	#define JOB_ALT_FACILITY_DIRECTOR "Facility Director"
 	#define JOB_ALT_CHIEF_SUPERVISOR "Chief Supervisor"
 	#define JOB_ALT_CAPTAIN "Captain"
+	#define JOB_ALT_COLONY_DIRECTOR "Colony Director" //CHOMPAdd
 
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
 	// Head of Personnel alt titles
@@ -253,7 +254,7 @@
 	// Paramedic alt titles
 	#define JOB_ALT_EMERGENCY_MEDICAL_TECHNICIAN "Emergency Medical Technician"
 	#define JOB_ALT_MEDICAL_RESPONDER "Medical Responder"
-	#define JOB_ALT_SEARCH_AND_RESCUE "Search and Rescue"
+	#define JOB_ALT_SEARCH_AND_RESCUE "Search and Rescue" // CHOMPNotice, actual JOB here, do not use
 
 #define JOB_GENETICIST "Geneticist" //Disabled atm
 //___________________________________________________________
@@ -346,7 +347,7 @@
 //___________________________________________________________
 
 
-// Talom jobs
+// Talon jobs
 #define JOB_TALON_CAPTAIN "Talon Captain"
 	// Talon Captain alt titles
 	#define JOB_ALT_TALON_COMMANDER "Talon Commander"
@@ -362,6 +363,7 @@
 #define JOB_TALON_GUARD "Talon Guard"
 	// Talon Guard alt titles
 	#define JOB_ALT_TALON_SECURITY "Talon Security"
+	#define JOB_ALT_TALON_MARINE "Talon Marine" //CHOMPAdd
 
 #define JOB_TALON_PILOT "Talon Pilot"
 	// Talon Pilot alt titles
@@ -372,6 +374,11 @@
 	#define JOB_ALT_TALON_EXCAVATOR "Talon Excavator"
 //___________________________________________________________
 
+
+// Blueshield jobs CHOMPAdd Start
+#define JOB_BLUESHIELD_GUARD "Blueshield Guard"
+#define JOB_SECURITY_PILOT "Security Pilot"
+// Blueshield jobs CHOMPAdd End
 
 // Mind jobs
 #define JOB_SLIME "slime"

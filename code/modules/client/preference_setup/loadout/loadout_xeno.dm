@@ -214,11 +214,7 @@
 /datum/gear/uniform/dept/undercoat/security
 	display_name = "security undercoat (Teshari)"
 	path = /obj/item/clothing/under/teshari/undercoat/jobs/sec
-<<<<<<< HEAD
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Security Pilot")//YW ADDITIONS
-=======
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/uniform/dept/undercoat/service
 	display_name = "service undercoat (Teshari)"
@@ -375,11 +371,7 @@
 /datum/gear/suit/dept/cloak/security
 	display_name = "security cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs/sec
-<<<<<<< HEAD
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer","Security Pilot")//YW ADDITIONS
-=======
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/suit/dept/cloak/security/New()
 	..()

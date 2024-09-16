@@ -412,11 +412,7 @@
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-<<<<<<< HEAD
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
-=======
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIV, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/security/hos
@@ -428,21 +424,13 @@
 /datum/gear/suit/wintercoat/medical
 	display_name = "winter coat, medical"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical
-<<<<<<< HEAD
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic") //CHOMP keep explo
-=======
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_FIELD_MEDIC) //CHOMP keep explo
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/medical/alt
 	display_name = "winter coat, medical alt"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical/alt
-<<<<<<< HEAD
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist","Field Medic") //CHOMP keep explo
-=======
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_FIELD_MEDIC) //CHOMP keep explo
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/medical/viro
@@ -472,11 +460,7 @@
 /datum/gear/suit/wintercoat/medical/sar
 	display_name = "winter coat, search and rescue"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar
-<<<<<<< HEAD
-	allowed_roles = list("Chief Medical Officer", "Paramedic", "Field Medic") //CHOMP keep explo
-=======
-	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_PARAMEDIC)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_PARAMEDIC,JOB_FIELD_MEDIC) //CHOMP keep explo
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/science
@@ -674,24 +658,14 @@
 
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
-<<<<<<< HEAD
-	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command
-	allowed_roles = list("Site Manager","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard") //YW ADDITIONS
-=======
-	path = /obj/item/clothing/suit/storage/snowsuit/command
-	allowed_roles = list(JOB_SITE_MANAGER,JOB_RESEARCH_DIRECTOR,JOB_HEAD_OF_PERSONNEL,JOB_HEAD_OF_SECURITY,JOB_CHIEF_ENGINEER,JOB_COMMAND_SECRETARY)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command // CHOMPEdit
+	allowed_roles = list(JOB_SITE_MANAGER,JOB_RESEARCH_DIRECTOR,JOB_HEAD_OF_PERSONNEL,JOB_HEAD_OF_SECURITY,JOB_CHIEF_ENGINEER,JOB_COMMAND_SECRETARY,JOB_BLUESHIELD_GUARD) //YW ADDITIONS
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
-<<<<<<< HEAD
-	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
-=======
-	path = /obj/item/clothing/suit/storage/snowsuit/security
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security // CHOMPEdit
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/medical

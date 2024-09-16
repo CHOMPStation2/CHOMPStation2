@@ -71,11 +71,7 @@
 	display_name = "Security HUD selector"
 	description = "Select from a range of Security HUD eyepieces that can display the ID status and security records of people in line of sight."
 	path = /obj/item/clothing/glasses/hud/security
-<<<<<<< HEAD
-	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
-=======
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN, JOB_DETECTIVE)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN, JOB_DETECTIVE, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/eyes/security/New()
 	..()
@@ -151,11 +147,7 @@
 	display_name = "functional sunglasses selector"
 	description = "Select from a range of polarized sunglasses that can block flashes whilst still looking classy."
 	path = /obj/item/clothing/glasses/sunglasses
-<<<<<<< HEAD
-	allowed_roles = list("Security Officer","Head of Security","Warden","Site Manager","Head of Personnel","Quartermaster","Internal Affairs Agent","Detective", "Blueshield Guard","Security Pilot") //YW ADDITIONS
-=======
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_QUARTERMASTER,JOB_INTERNAL_AFFAIRS_AGENT,JOB_DETECTIVE)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_QUARTERMASTER,JOB_INTERNAL_AFFAIRS_AGENT,JOB_DETECTIVE,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/eyes/sun/New()
 	..()

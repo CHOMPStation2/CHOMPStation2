@@ -10,11 +10,7 @@
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,//CHOMPEdit
 			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
-<<<<<<< HEAD
-	alt_titles = list("Chief Physician" = /datum/alt_title/chief_physician, "Medical Director" = /datum/alt_title/medical_director, /*CHOMPEdit Removal"Healthcare Manager" = /datum/alt_title/healthcare_manager*/)
-=======
-	alt_titles = list(JOB_ALT_CHIEF_PHYSICIAN = /datum/alt_title/chief_physician, JOB_ALT_MEDICAL_DIRECTOR = /datum/alt_title/medical_director, JOB_ALT_HEALTHCARE_MANAGER = /datum/alt_title/healthcare_manager)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	alt_titles = list(JOB_ALT_CHIEF_PHYSICIAN = /datum/alt_title/chief_physician, JOB_ALT_MEDICAL_DIRECTOR = /datum/alt_title/medical_director, /*CHOMPEdit RemovalJOB_ALT_HEALTHCARE_MANAGER = /datum/alt_title/healthcare_manager*/)
 
 /datum/alt_title/chief_physician
 	title = JOB_ALT_CHIEF_PHYSICIAN
@@ -84,15 +80,9 @@
 
 /datum/job/paramedic
 	pto_type = PTO_MEDICAL
-<<<<<<< HEAD
-	alt_titles = list("Emergency Medical Technician" = /datum/alt_title/emt, "Medical Responder" = /datum/alt_title/medical_responder) //CHOMPedit: Removed SAR because that's an actual job here
+	alt_titles = list(JOB_ALT_EMERGENCY_MEDICAL_TECHNICIAN = /datum/alt_title/emt, JOB_ALT_MEDICAL_RESPONDER = /datum/alt_title/medical_responder) //CHOMPedit: Removed SAR because that's an actual job here
 //	total_positions = 3 //CHOMP Remove these two lines were added by the Virgo Explo Removal, because I guess they wanted more station paramedics because no more field medics on their code
 //	spawn_positions = 3 //CHOMP Remove ^
-=======
-	alt_titles = list(JOB_ALT_EMERGENCY_MEDICAL_TECHNICIAN = /datum/alt_title/emt, JOB_ALT_MEDICAL_RESPONDER = /datum/alt_title/medical_responder, JOB_ALT_SEARCH_AND_RESCUE = /datum/alt_title/sar)
-	total_positions = 3
-	spawn_positions = 3
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 /datum/alt_title/medical_responder
 	title = JOB_ALT_MEDICAL_RESPONDER
@@ -102,12 +92,8 @@
 
 /* //CHOMPedit: Commented out because this is an actual job here
 /datum/alt_title/sar
-<<<<<<< HEAD
-	title = "Search and Rescue"
+	title = "JOB_ALT_SEARCH_AND_RESCUE
 */
-=======
-	title = JOB_ALT_SEARCH_AND_RESCUE
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 
 /datum/job/paramedic/get_request_reasons()
 	return list("Assembling expedition team")

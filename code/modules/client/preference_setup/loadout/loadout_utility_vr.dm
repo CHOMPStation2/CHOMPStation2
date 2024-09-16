@@ -42,15 +42,9 @@
 	path = /obj/item/weapon/storage/backpack/dufflebag/emt
 
 /datum/gear/utility/dufflebag/sec
-<<<<<<< HEAD
     display_name = "security Dufflebag"
     path = /obj/item/weapon/storage/backpack/dufflebag/sec
-    allowed_roles = list("Head of Security","Warden","Detective","Security Officer","Blueshield Guard","Security Pilot")//YW ADDITIONS
-=======
-	display_name = "security Dufflebag"
-	path = /obj/item/weapon/storage/backpack/dufflebag/sec
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/utility/dufflebag/eng
 	display_name = "engineering dufflebag"

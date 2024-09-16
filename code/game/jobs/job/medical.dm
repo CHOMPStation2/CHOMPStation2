@@ -128,17 +128,10 @@
 	flag = GENETICIST
 	departments = list(DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
-<<<<<<< HEAD
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Chief Medical Officer and Research Director"
-=======
-	faction = FACTION_STATION
-	total_positions = 0
-	spawn_positions = 0
 	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER + " and " + JOB_RESEARCH_DIRECTOR
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
 	selection_color = "#013D3B"
 	economic_modifier = 7
 	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_research)

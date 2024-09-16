@@ -138,17 +138,15 @@
 	timeoff_factor = 1
 	access = list(access_talon)
 	minimal_access = list(access_talon)
-<<<<<<< HEAD
-	alt_titles = list("Talon Security" = /datum/alt_title/talon_security, "Talon Marine" = /datum/alt_title/talon_marine)
-=======
-	alt_titles = list(JOB_ALT_TALON_SECURITY = /datum/alt_title/talon_security)
->>>>>>> 828a405fc4... Merge pull request #16301 from Kashargul/robotMiningIDfix
+	alt_titles = list(JOB_ALT_TALON_SECURITY = /datum/alt_title/talon_security, JOB_ALT_TALON_MARINE = /datum/alt_title/talon_marine) // CHOMPEdit
 
 /datum/alt_title/talon_security
 	title = JOB_ALT_TALON_SECURITY
 
+// CHOMPAdd Start
 /datum/alt_title/talon_marine
-	title = "Talon Marine"
+	title = JOB_ALT_TALON_MARINE
+// CHOMPAdd End
 
 /datum/job/talon_miner
 	title = JOB_TALON_MINER
