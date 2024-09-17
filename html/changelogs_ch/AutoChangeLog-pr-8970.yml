@@ -1,5 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - rscadd: "PDAs will now display image embeds for cdn.discordapp.com and i.imgur.com links."
-  - rscadd: "Preference to turn off image embedding completely."

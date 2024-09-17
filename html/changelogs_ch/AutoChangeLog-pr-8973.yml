@@ -1,5 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - balance: "Osteo/Milk effect: Weakened to Stun"
-  - code_imp: "custom_pain proc actually hurts you now"
