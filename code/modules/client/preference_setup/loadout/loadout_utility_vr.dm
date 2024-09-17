@@ -59,7 +59,7 @@
 /datum/gear/utility/dufflebag/explorer
 	display_name = "explorer dufflebag" //CHOMP explo keep
 	path = /obj/item/weapon/storage/backpack/dufflebag/explorer
-	allowed_roles = list("Pathfinder","Explorer") //CHOMP explo keep
+	allowed_roles = list(JOB_PATHFINDER,JOB_EXPLORER) //CHOMP explo keep
 
 /datum/gear/utility/dufflebag/talon
 	display_name = "Talon dufflebag"

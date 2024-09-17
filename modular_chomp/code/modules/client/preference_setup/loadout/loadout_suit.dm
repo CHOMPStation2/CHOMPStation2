@@ -1,7 +1,7 @@
 /datum/gear/suit/pcarrier // No protection until inserted with plates, purely for cosmetic purposes.
 	display_name = "Plate Carrier selection"
 	path = /obj/item/clothing/suit/armor/pcarrier
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer", "Pathfinder", "Field Medic", "Pilot", "Explorer")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER, JOB_PATHFINDER, JOB_FIELD_MEDIC, JOB_PILOT, JOB_EXPLORER)
 	cost = 2
 
 /datum/gear/suit/pcarrier/New()
