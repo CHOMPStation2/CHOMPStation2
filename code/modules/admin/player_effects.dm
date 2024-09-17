@@ -686,5 +686,5 @@
 		if("stop-orbits")
 			//CHOMPEdit Start
 			if(target.orbiters)
-				target.orbiters.stop_all()
+				qdel(target.orbiters)
 			//CHOMPEdit End
