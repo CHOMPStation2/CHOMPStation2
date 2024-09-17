@@ -1,0 +1,974 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ak" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"an" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"cp" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"cz" = (
+/obj/structure/bed/padded,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/weapon/bedsheet/brown,
+/obj/machinery/button/remote/airlock{
+	id = "lonehomeshuttle1";
+	name = "Door Lock Control";
+	pixel_y = 25;
+	specialfunctions = 4;
+	pixel_x = -25
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/shuttle/lonehomeship)
+"dM" = (
+/obj/structure/undies_wardrobe,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/blue,
+/area/shuttle/lonehomeship)
+"dZ" = (
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "loneshuttledorms1"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"eb" = (
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/brown,
+/obj/machinery/button/remote/airlock{
+	id = "lonehomeshuttle1";
+	name = "Door Lock Control";
+	pixel_y = 25;
+	specialfunctions = 4;
+	pixel_x = -25
+	},
+/turf/simulated/floor/carpet/blue,
+/area/shuttle/lonehomeship)
+"eV" = (
+/obj/machinery/door/airlock/glass_external,
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	pixel_x = -24;
+	pixel_y = 10;
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"eY" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/lonehomeship)
+"fe" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"fj" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"fO" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood/broken,
+/area/shuttle/lonehomeship)
+"gj" = (
+/obj/structure/bed/pillowpile/white,
+/obj/item/toy/plushie/otter,
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"gq" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/item/weapon/stool/padded{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"hi" = (
+/obj/machinery/computer/ship/helm{
+	req_one_access = null;
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/shuttle/lonehomeship)
+"hS" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/turf/simulated/wall/shull,
+/area/shuttle/lonehomeship)
+"hV" = (
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"iU" = (
+/turf/template_noop,
+/area/space)
+"ja" = (
+/obj/structure/cable/green,
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"je" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/shuttle/lonehomeship)
+"jT" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/barricade,
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"km" = (
+/turf/simulated/floor/carpet/retro_red,
+/area/shuttle/lonehomeship)
+"kS" = (
+/obj/machinery/computer/shuttle_control/explore/lonehomeship{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/shuttle/lonehomeship)
+"mC" = (
+/obj/machinery/computer/arcade/orion_trail,
+/turf/simulated/floor/carpet/retro_red,
+/area/shuttle/lonehomeship)
+"np" = (
+/obj/structure/fuel_port{
+	pixel_y = 30
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/obj/structure/closet/crate,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"nw" = (
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"nX" = (
+/obj/effect/shuttle_landmark/shuttle_initializer/lonehomeship,
+/obj/effect/overmap/visitable/ship/landable/lonehomeship,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 2;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"oy" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/item/weapon/stool/padded{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"px" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 2;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "lonehomeship_docker";
+	pixel_y = 28;
+	pixel_x = 7
+	},
+/obj/machinery/airlock_sensor{
+	pixel_y = 28;
+	pixel_x = -4
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"pY" = (
+/obj/machinery/power/apc/hyper{
+	pixel_y = -24;
+	locked = 0
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"qH" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/tank/air/full{
+	start_pressure = 10000;
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"rw" = (
+/obj/item/weapon/stool/padded,
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"rT" = (
+/obj/structure/bed/pillowpile/orange,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/item/toy/plushie/marble_fox,
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"tP" = (
+/obj/machinery/door/airlock{
+	id_tag = "lonehomeshuttle1"
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/shuttle/lonehomeship)
+"ua" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"uk" = (
+/obj/item/toy/plushie/mouse{
+	pixel_x = -9;
+	pixel_y = -2
+	},
+/obj/item/device/mindbinder{
+	pixel_y = 3;
+	pixel_x = -4
+	},
+/obj/item/toy/plushie/purple_dragon{
+	pixel_y = 6;
+	pixel_x = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"vg" = (
+/obj/item/toy/plushie/slimeplushie,
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"wY" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp,
+/turf/simulated/floor/carpet/blue,
+/area/shuttle/lonehomeship)
+"xH" = (
+/obj/structure/undies_wardrobe,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/shuttle/lonehomeship)
+"xI" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window/eastleft{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/lonehomeship)
+"xQ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"xW" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"yl" = (
+/obj/machinery/door/airlock/glass_external,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/airlock_sensor{
+	dir = 2;
+	id_tag = null;
+	pixel_x = 25;
+	pixel_y = -9
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"yQ" = (
+/obj/machinery/computer/ship/engines{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/shuttle/lonehomeship)
+"yZ" = (
+/obj/structure/bed/pillowpile/green,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"zN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 9
+	},
+/turf/simulated/wall/shull,
+/area/shuttle/lonehomeship)
+"Cu" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/machinery/button/windowtint{
+	id = "loneshuttledorms1";
+	pixel_x = 8;
+	pixel_y = -24
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/shuttle/lonehomeship)
+"Fb" = (
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/retro_red,
+/area/shuttle/lonehomeship)
+"Fx" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/dropper{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
+	pixel_x = 6;
+	pixel_y = 13
+	},
+/obj/item/weapon/reagent_containers/glass/rag{
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"FZ" = (
+/obj/structure/table/marble,
+/obj/structure/sink/countertop{
+	pixel_y = 4;
+	dir = 4;
+	pixel_x = -6
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"Hd" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/shuttle/lonehomeship)
+"Hk" = (
+/turf/simulated/wall/shull,
+/area/shuttle/lonehomeship)
+"HD" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/item/toy/plushie/susred,
+/obj/machinery/button/windowtint{
+	id = "loneshuttledorms2";
+	pixel_x = 8;
+	pixel_y = -24
+	},
+/turf/simulated/floor/carpet/blue,
+/area/shuttle/lonehomeship)
+"HI" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"JA" = (
+/obj/structure/bed/pillowpile/teal,
+/obj/item/toy/plushie/kitten,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"JB" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp/clown,
+/turf/simulated/floor/carpet/purcarpet,
+/area/shuttle/lonehomeship)
+"JZ" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/storage/fancy/egg_box,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"Ln" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"Lp" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/retro_red,
+/area/shuttle/lonehomeship)
+"Lt" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/knife/butch,
+/obj/item/weapon/material/kitchen/rollingpin{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/machinery/microwave{
+	pixel_y = 19
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"Na" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/mech_toy,
+/obj/random/toy,
+/obj/random/toy,
+/turf/simulated/floor/carpet/retro_red,
+/area/shuttle/lonehomeship)
+"No" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/turf/simulated/wall/shull,
+/area/shuttle/lonehomeship)
+"NI" = (
+/obj/machinery/door/airlock{
+	name = "Bathroom"
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"Oj" = (
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "loneshuttledorms2"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"Om" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"OW" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/shuttle/lonehomeship)
+"QC" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/obj/item/weapon/disk/nifsoft/compliance,
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"QT" = (
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"Rf" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/shuttle/lonehomeship)
+"RL" = (
+/obj/machinery/computer/arcade/battle,
+/turf/simulated/floor/carpet/retro_red,
+/area/shuttle/lonehomeship)
+"Sl" = (
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"Ti" = (
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	locked = 0
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/shuttle/lonehomeship)
+"TV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/wall/shull,
+/area/shuttle/lonehomeship)
+"Uf" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/obj/item/toy/plushie/teshari/y_yw,
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable,
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"Uu" = (
+/turf/simulated/floor/wood/broken,
+/area/shuttle/lonehomeship)
+"Uy" = (
+/obj/machinery/light/floortube{
+	nightshift_enabled = 1;
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/shuttle/lonehomeship)
+"UH" = (
+/obj/structure/bed/pillowpile/yellow,
+/obj/item/toy/plushie/teshari/b_yw,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/floortube{
+	dir = 4;
+	nightshift_enabled = 1;
+	pixel_x = -6;
+	pixel_y = 0
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"Vy" = (
+/obj/machinery/door/airlock{
+	id_tag = "lonehomeshuttle2"
+	},
+/turf/simulated/floor/carpet/blue,
+/area/shuttle/lonehomeship)
+"VK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/simulated/wall/shull,
+/area/shuttle/lonehomeship)
+"VY" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/wall/shull,
+/area/shuttle/lonehomeship)
+"Xp" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/pastatomato,
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"XQ" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/turf/simulated/floor/carpet/oracarpet,
+/area/shuttle/lonehomeship)
+"Zv" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/photocopier/faxmachine{
+	department = "Personal Home Ship"
+	},
+/obj/item/weapon/gun/projectile/shotgun/pump/empty,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/shuttle/lonehomeship)
+"ZO" = (
+/obj/machinery/shipsensors/weak{
+	dir = 4
+	},
+/turf/simulated/floor/plating/external,
+/area/space)
+
+(1,1,1) = {"
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+"}
+(2,1,1) = {"
+iU
+iU
+iU
+iU
+eY
+iU
+eY
+eY
+iU
+eY
+iU
+iU
+iU
+"}
+(3,1,1) = {"
+iU
+iU
+iU
+Hk
+hS
+VK
+No
+No
+VK
+zN
+Hk
+iU
+iU
+"}
+(4,1,1) = {"
+iU
+Hk
+HI
+Hk
+np
+an
+xI
+Hk
+xH
+Cu
+Hk
+iU
+iU
+"}
+(5,1,1) = {"
+iU
+eV
+nX
+yl
+fe
+nw
+Uu
+tP
+cz
+JB
+dZ
+iU
+iU
+"}
+(6,1,1) = {"
+iU
+Hk
+px
+VY
+cp
+fO
+pY
+Hk
+Hk
+Hk
+Hk
+iU
+iU
+"}
+(7,1,1) = {"
+iU
+Hk
+HI
+TV
+qH
+fj
+nw
+Hk
+dM
+HD
+Hk
+iU
+iU
+"}
+(8,1,1) = {"
+iU
+Hk
+Ti
+FZ
+ua
+Om
+QT
+Vy
+eb
+wY
+Oj
+iU
+iU
+"}
+(9,1,1) = {"
+iU
+Hk
+JZ
+hV
+uk
+rT
+vg
+Hk
+Hk
+Hk
+Hk
+iU
+iU
+"}
+(10,1,1) = {"
+iU
+Hk
+Sl
+hV
+yZ
+JA
+QT
+NI
+Ln
+xW
+Hk
+iU
+iU
+"}
+(11,1,1) = {"
+iU
+OW
+Fx
+hV
+ua
+UH
+gj
+Hk
+Hk
+Hk
+Hk
+iU
+iU
+"}
+(12,1,1) = {"
+iU
+HI
+Lt
+hV
+oy
+gq
+ak
+ak
+ak
+ja
+Hk
+iU
+iU
+"}
+(13,1,1) = {"
+iU
+Hk
+Hk
+Hk
+XQ
+Xp
+xQ
+xQ
+xQ
+Uf
+HI
+iU
+iU
+"}
+(14,1,1) = {"
+iU
+iU
+iU
+OW
+Na
+km
+nw
+nw
+QT
+QT
+Hk
+iU
+iU
+"}
+(15,1,1) = {"
+iU
+iU
+iU
+OW
+RL
+Fb
+Uu
+nw
+QT
+QC
+jT
+iU
+iU
+"}
+(16,1,1) = {"
+iU
+iU
+iU
+HI
+mC
+Lp
+rw
+Zv
+Hd
+yQ
+Hk
+iU
+iU
+"}
+(17,1,1) = {"
+iU
+iU
+iU
+Hk
+Hk
+Hk
+Hk
+Uy
+Rf
+Uy
+Hk
+iU
+iU
+"}
+(18,1,1) = {"
+iU
+iU
+iU
+iU
+iU
+ZO
+HI
+kS
+hi
+je
+HI
+iU
+iU
+"}
+(19,1,1) = {"
+iU
+iU
+iU
+iU
+iU
+iU
+HI
+HI
+HI
+HI
+HI
+iU
+iU
+"}
+(20,1,1) = {"
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+iU
+"}

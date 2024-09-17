@@ -64,12 +64,12 @@
 	if(!ishuman(src.loc))				//CHOMP Addition, this IF block.
 		return ..(freq, level)		//CHOMP Addition end
 	if (aiOverride)
-		playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
+		playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/preference/toggle/radio_sounds) //CHOMPAdd
 		return ..(freq, level)
 	if(ishuman(src.loc))
 		var/mob/living/carbon/human/H = src.loc
 		if(H.l_ear == src || H.r_ear == src)
-			playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/client_preference/radio_sounds)
+			playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/preference/toggle/radio_sounds) //CHOMPAdd
 			return ..(freq, level)
 	return -1
 
@@ -262,13 +262,13 @@
 
 /obj/item/device/radio/headset/heads/hop
 	name = "head of personnel's headset"
-	desc = "The headset of the poor fool who will one day be Site Manager."
+	desc = "The headset of the poor fool who will one day be " + JOB_SITE_MANAGER + "."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/hop
 
 /obj/item/device/radio/headset/heads/hop/alt
 	name = "head of personnel's bowman headset"
-	desc = "The headset of the poor fool who will one day be Site Manager."
+	desc = "The headset of the poor fool who will one day be " + JOB_SITE_MANAGER + "."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/heads/hop
 

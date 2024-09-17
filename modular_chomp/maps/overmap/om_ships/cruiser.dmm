@@ -1643,7 +1643,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/porta_turret/industrial/teleport_defense{
 	auto_repair = 1;
-	check_access = 0;
 	check_weapons = 1;
 	name = "anti-boarding turret";
 	req_one_access = list(101)
@@ -3174,7 +3173,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/porta_turret/industrial/teleport_defense{
 	auto_repair = 1;
-	check_access = 0;
 	check_weapons = 1;
 	name = "anti-boarding turret";
 	req_one_access = list(101)
@@ -5635,7 +5633,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/porta_turret/industrial/teleport_defense{
 	auto_repair = 1;
-	check_access = 0;
 	check_weapons = 1;
 	name = "anti-boarding turret";
 	req_one_access = list(101)
@@ -5879,7 +5876,7 @@
 /area/mothership/bridge)
 "ms" = (
 /obj/machinery/computer/ship/helm{
-	req_one_access = list()
+	req_one_access = list(101)
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/mothership/bridge)
@@ -6828,7 +6825,6 @@
 	pixel_y = -32
 	},
 /obj/machinery/turretid/stun{
-	check_access = 0;
 	check_records = 0;
 	check_weapons = 1;
 	control_area = /area/mothership/hallway;
@@ -7045,7 +7041,6 @@
 	},
 /obj/machinery/porta_turret/industrial/teleport_defense{
 	auto_repair = 1;
-	check_access = 0;
 	check_weapons = 1;
 	name = "anti-boarding turret";
 	req_one_access = list(101)
@@ -7071,7 +7066,6 @@
 	},
 /obj/machinery/porta_turret/industrial/teleport_defense{
 	auto_repair = 1;
-	check_access = 0;
 	check_weapons = 1;
 	name = "anti-boarding turret";
 	req_one_access = list(101)

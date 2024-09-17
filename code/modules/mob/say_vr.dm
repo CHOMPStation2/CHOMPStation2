@@ -203,14 +203,14 @@
 				continue
 			if(src.client && M && !(get_z(src) == get_z(M)))
 				message = "<span class='multizsay'>[message]</span>"
-			if(isobserver(M) && (!(is_preference_enabled(/datum/client_preference/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) || \
-			!is_preference_enabled(/datum/client_preference/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
+			if(isobserver(M) && (!(M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || (isbelly(M.loc) && src == M.loc:owner)) || \
+			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else
 				spawn(0)
 					M.show_message(message, 2)
-					if(M.Adjacent(src) && M.is_preference_enabled(/datum/client_preference/say_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
+					if(M.Adjacent(src) && M.read_preference(/datum/preference/toggle/subtle_sounds)) //CHOMPEdit - makes it so the sounds only play for ghosts when adjacent to the person making them
 						if(voice_sounds_list)	//CHOMPEdit, changes to subtle emotes to use mob voice instead
 							M << sound(pick(voice_sounds_list), volume = 25)
 
@@ -292,14 +292,14 @@
 		else
 			pb = db.pred_body
 			to_chat(pb, "<span class='psay'>The captive mind of \the [M] thinks, \"[message]\"</span>")	//To our pred if dominated brain
-			if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					pb << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
 	else if(M.absorbed && isbelly(M.loc))
 		pb = M.loc.loc
 		to_chat(pb, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")	//To our pred if absorbed
-		if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+		if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
 			if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 				pb << sound(pick(voice_sounds_list), volume = 25)
 		f = TRUE
@@ -310,7 +310,7 @@
 			if(istype(I, /mob/living/dominated_brain) && I != M)
 				var/mob/living/dominated_brain/db = I
 				to_chat(db, "<span class='psay'>The captive mind of \the [M] thinks, \"[message]\"</span>")	//To any dominated brains in the pred
-				if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(db.read_preference(/datum/preference/toggle/subtle_sounds))
 					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 						db << sound(pick(voice_sounds_list), volume = 25)
 				f = TRUE
@@ -318,7 +318,7 @@
 			for(var/mob/living/L in B)
 				if(L.absorbed && L != M && L.ckey)
 					to_chat(L, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")	//To any absorbed people in the pred
-					if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(L.read_preference(/datum/preference/toggle/subtle_sounds))
 						if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 							L << sound(pick(voice_sounds_list), volume = 25)
 					f = TRUE
@@ -328,7 +328,7 @@
 		if(istype(I, /mob/living/dominated_brain))
 			var/mob/living/dominated_brain/db = I
 			to_chat(db, "<span class='psay'><b>\The [M] thinks, \"[message]\"</b></span>")	//To any dominated brains inside us
-			if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(db.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					db << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
@@ -336,7 +336,7 @@
 		for(var/mob/living/L in B)
 			if(L.absorbed)
 				to_chat(L, "<span class='psay'><b>\The [M] thinks, \"[message]\"</b></span>")	//To any absorbed people inside us
-				if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(L.read_preference(/datum/preference/toggle/subtle_sounds))
 					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 						L << sound(pick(voice_sounds_list), volume = 25)
 				f = TRUE
@@ -344,20 +344,20 @@
 	if(f)	//We found someone to send the message to
 		if(pb)
 			to_chat(M, "<span class='psay'>You think \"[message]\"</span>")	//To us if we are the prey
-			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		else
 			to_chat(M, "<span class='psay'><b>You think \"[message]\"</b></span>")	//To us if we are the pred
-			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
-			else if(isobserver(G) &&  G.is_preference_enabled(/datum/client_preference/ghost_ears) && \
-			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle))
-				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
+			else if(isobserver(G) &&  G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
+			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))
+				if(client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) || G.client.holder)
 					to_chat(G, "<span class='psay'>\The [M] thinks, \"[message]\"</span>")
 		log_say(message,M)
 	else		//There wasn't anyone to send the message to, pred or prey, so let's just say it instead and correct our psay just in case.
@@ -397,7 +397,7 @@
 		else
 			pb = db.pred_body
 			to_chat(pb, "<span class='pemote'>\The [M] [message]</span>")	//To our pred if dominated brain
-			if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					pb << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
@@ -405,7 +405,7 @@
 	else if(M.absorbed && isbelly(M.loc))
 		pb = M.loc.loc
 		to_chat(pb, "<span class='pemote'>\The [M] [message]</span>")	//To our pred if absorbed
-		if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+		if(pb.read_preference(/datum/preference/toggle/subtle_sounds))
 			if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 				pb << sound(pick(voice_sounds_list), volume = 25)
 		f = TRUE
@@ -416,7 +416,7 @@
 			if(istype(I, /mob/living/dominated_brain) && I != M)
 				var/mob/living/dominated_brain/db = I
 				to_chat(db, "<span class='pemote'>\The [M] [message]</span>")	//To any dominated brains in the pred
-				if(pb.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(db.read_preference(/datum/preference/toggle/subtle_sounds))
 					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 						pb << sound(pick(voice_sounds_list), volume = 25)
 				f = TRUE
@@ -424,7 +424,7 @@
 			for(var/mob/living/L in B)
 				if(L.absorbed && L != M && L.ckey)
 					to_chat(L, "<span class='pemote'>\The [M] [message]</span>")	//To any absorbed people in the pred
-					if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+					if(L.read_preference(/datum/preference/toggle/subtle_sounds))
 						if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 							L << sound(pick(voice_sounds_list), volume = 25)
 					f = TRUE
@@ -434,7 +434,7 @@
 		if(istype(I, /mob/living/dominated_brain))
 			var/mob/living/dominated_brain/db = I
 			to_chat(db, "<span class='pemote'><b>\The [M] [message]</b></span>")	//To any dominated brains inside us
-			if(db.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(db.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					db << sound(pick(voice_sounds_list), volume = 25)
 			f = TRUE
@@ -442,7 +442,7 @@
 		for(var/mob/living/L in B)
 			if(L.absorbed)
 				to_chat(L, "<span class='pemote'><b>\The [M] [message]</b></span>")	//To any absorbed people inside us
-				if(L.is_preference_enabled(/datum/client_preference/say_sounds))
+				if(L.read_preference(/datum/preference/toggle/subtle_sounds))
 					if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 						L << sound(pick(voice_sounds_list), volume = 25)
 				f = TRUE
@@ -450,20 +450,20 @@
 	if(f)	//We found someone to send the message to
 		if(pb)
 			to_chat(M, "<span class='pemote'>\The [M] [message]</span>")	//To us if we are the prey
-			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		else
 			to_chat(M, "<span class='pemote'><b>\The [M] [message]</b></span>")	//To us if we are the pred
-			if(M.is_preference_enabled(/datum/client_preference/say_sounds))
+			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
-			else if(isobserver(G) && G.is_preference_enabled(/datum/client_preference/ghost_ears && \
-			G.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle)))
-				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
+			else if(isobserver(G) && G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
+			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))
+				if(client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) || G.client.holder)
 					to_chat(G, "<span class='pemote'>\The [M] [message]</span>")
 		log_say(message,M)
 	else	//There wasn't anyone to send the message to, pred or prey, so let's just emote it instead and correct our psay just in case.
@@ -501,7 +501,7 @@
 		ourfreq = voice_freq
 
 	if(client)
-		playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = TRUE, preference = /datum/client_preference/emote_sounds) //ChompEDIT - ignore walls
+		playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds) //ChompEDIT - ignore walls
 
 	var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,2,remote_ghosts = client ? TRUE : FALSE)
 	var/list/m_viewers = in_range["mobs"]

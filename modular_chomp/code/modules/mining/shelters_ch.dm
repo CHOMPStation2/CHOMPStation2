@@ -168,7 +168,7 @@
 
 /datum/map_template/shelter/superpose/SurvivalDIYlite_11x11
 	shelter_id = "SurvivalDIY_11x11lite"
-	mappath = "modular_chomp/maps/submaps/shelters/SurvivalDIY-11x11lite.dmm"
+	mappath = "modular_chomp/maps/submaps/shelters/SurvivalDIYlite-11x11.dmm"
 	name = "Survival DIY large. (Lite version)"
 	description = "NT patented Do-it-yourself survival pod, a much more stripped down of the existing large pod for more construction freedom."
 

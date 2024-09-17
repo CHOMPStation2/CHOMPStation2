@@ -51,7 +51,7 @@
 		for(var/mob/target in players)
 			to_chat(target, finalized_announcement)
 			//if(play_sound && target.client?.prefs.read_preference(/datum/preference/toggle/sound_announcements))
-			if(play_sound && target.client?.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+			if(play_sound && target.client?.prefs.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 				SEND_SOUND(target, sound(sound_override))
 	else
 		to_chat(world, finalized_announcement)
@@ -61,7 +61,7 @@
 
 		for(var/mob/player in player_list)
 			//if(player.client?.prefs.read_preference(/datum/preference/toggle/sound_announcements))
-			if(player.client?.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+			if(player.client?.prefs.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 				SEND_SOUND(player, sound(sound_override))
 
 /**
