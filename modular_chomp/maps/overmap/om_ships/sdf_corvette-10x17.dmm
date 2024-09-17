@@ -4,7 +4,7 @@
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8
 	},
-/obj/effect/map_helper/airlock/atmos/pump_out_internal,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/structure/closet/walllocker_double/emergency_engi/north,
 /obj/fiftyspawner/steel/hull,
 /obj/fiftyspawner/rglass,
@@ -63,8 +63,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "dQ" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/item/weapon/storage/toolbox/electrical,
@@ -124,8 +126,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "hn" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/light,
@@ -168,8 +172,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "lI" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techfloor,
@@ -337,10 +343,12 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
 	},
-/obj/effect/map_helper/airlock/atmos/pump_out_internal,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "tg" = (
@@ -374,7 +382,7 @@
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8
 	},
-/obj/effect/map_helper/airlock/atmos/pump_out_internal,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/shuttle_landmark/shuttle_initializer/sdf_corvette,
 /obj/effect/overmap/visitable/ship/landable/sdf_corvette,
 /obj/machinery/light,
@@ -404,12 +412,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "wl" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 8
-	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
@@ -520,10 +530,12 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
 	},
-/obj/effect/map_helper/airlock/atmos/pump_out_internal,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette)
 "Cq" = (
@@ -616,10 +628,10 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/voidcraft/vertical,
-/obj/machinery/airlock_sensor/airlock_exterior{
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 4;
-	pixel_x = 10;
-	pixel_y = 25
+	pixel_y = 25;
+	pixel_x = 7
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/tiled/techfloor,
