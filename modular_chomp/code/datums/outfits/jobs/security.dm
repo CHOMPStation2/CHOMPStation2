@@ -1,5 +1,5 @@
 /decl/hierarchy/outfit/job/security/brigphysician
-	name = OUTFIT_JOB_NAME("Brig Physician")
+	name = OUTFIT_JOB_NAME(JOB_SECURITY_BRIGPHYS)
 	uniform = /obj/item/clothing/under/rank/brigphys
 	l_ear = /obj/item/device/radio/headset/headset_medsec
 	id_type = /obj/item/weapon/card/id/security/brigphysician
