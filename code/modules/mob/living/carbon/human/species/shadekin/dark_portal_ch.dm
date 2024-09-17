@@ -125,7 +125,7 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 		return
 	else if(istype(user, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
-		if(H.job && H.job != "Outsider" && LAZYLEN(destination_station_areas))
+		if(H.job && H.job != JOB_OUTSIDER && LAZYLEN(destination_station_areas))
 			var/list/floors = list()
 			var/area/picked_area = pick(destination_station_areas)
 			for(var/turf/simulated/floor/floor in get_area_turfs(picked_area))

@@ -75,94 +75,94 @@ var/list/assistant_occupations = list(
 
 
 var/list/command_positions = list(
-	"Site Manager",
-	"Head of Personnel",
-	"Head of Security",
-	"Chief Engineer",
-	"Research Director",
-	"Chief Medical Officer",
-	"Command Secretary",
-	"Blueshield Guard" // YW Edit
+	JOB_SITE_MANAGER,
+	JOB_HEAD_OF_PERSONNEL,
+	JOB_HEAD_OF_SECURITY,
+	JOB_CHIEF_ENGINEER,
+	JOB_RESEARCH_DIRECTOR,
+	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_COMMAND_SECRETARY,
+	JOB_BLUESHIELD_GUARD // YW Edit
 )
 
 
 var/list/engineering_positions = list(
-	"Chief Engineer",
-	"Station Engineer",
-	"Atmospheric Technician"
+	JOB_CHIEF_ENGINEER,
+	JOB_ENGINEER,
+	JOB_ATMOSPHERIC_TECHNICIAN
 )
 
 
 var/list/medical_positions = list(
-	"Chief Medical Officer",
-	"Medical Doctor",
-	"Geneticist",
-	"Psychiatrist",
-	"Chemist",
-	"Paramedic"
+	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_MEDICAL_DOCTOR,
+	JOB_GENETICIST,
+	JOB_PSYCHIATRIST,
+	JOB_CHEMIST,
+	JOB_PARAMEDIC
 )
 
 
 var/list/science_positions = list(
-	"Research Director",
-	"Scientist",
-	"Geneticist",	//Part of both medical and science
-	"Roboticist",
-	"Xenobiologist"
+	JOB_RESEARCH_DIRECTOR,
+	JOB_SCIENTIST,
+	JOB_GENETICIST,	//Part of both medical and science
+	JOB_ROBOTICIST,
+	JOB_XENOBIOLOGIST
 )
 
 //BS12 EDIT
 var/list/cargo_positions = list(
-	"Quartermaster",
-	"Cargo Technician",
-	"Shaft Miner"
+	JOB_QUARTERMASTER,
+	JOB_CARGO_TECHNICIAN,
+	JOB_SHAFT_MINER
 )
 
 var/list/civilian_positions = list(
-	"Head of Personnel",
-	"Bartender",
-	"Botanist",
-	"Chef",
-	"Janitor",
-	"Librarian",
-	"Lawyer",
-	"Chaplain",
-	USELESS_JOB, //VOREStation Edit - Visitor not Assistant
-	"Intern" //VOREStation Edit - Intern
+	JOB_HEAD_OF_PERSONNEL,
+	JOB_BARTENDER,
+	JOB_BOTANIST,
+	JOB_CHEF,
+	JOB_JANITOR,
+	JOB_LIBRARIAN,
+	JOB_ENTREPRENEUR,
+	JOB_CHAPLAIN,
+	JOB_ALT_VISITOR, //VOREStation Edit - Visitor not Assistant
+	JOB_INTERN //VOREStation Edit - Intern
 )
 
 
 var/list/security_positions = list(
-	"Head of Security",
-	"Warden",
-	"Detective",
-	"Security Officer"
+	JOB_HEAD_OF_SECURITY,
+	JOB_WARDEN,
+	JOB_DETECTIVE,
+	JOB_SECURITY_OFFICER
 )
 
 
 var/list/planet_positions = list(
-	"Pathfinder", // VOREStation Edit - Added Pathfinder
-	"Explorer",
-	"Pilot",
-	"Field Medic" // VOREStation Edit - Field Medic
+	JOB_PATHFINDER, // VOREStation Edit - Added Pathfinder
+	JOB_EXPLORER,
+	JOB_PILOT,
+	JOB_FIELD_MEDIC // VOREStation Edit - Field Medic
 )
 
 
 var/list/nonhuman_positions = list(
-	"AI",
-	"Cyborg",
-	"pAI"
+	JOB_AI,
+	JOB_CYBORG,
+	JOB_PAI
 )
 
 var/list/whitelisted_positions = list(
-	"Site Manager",
-	"Head of Personnel",
-	"Head of Security",
-	"Chief Engineer",
-	"Research Director",
-	"Chief Medical Officer",
-	"Internal Affairs Agent",
-	"AI"
+	JOB_SITE_MANAGER,
+	JOB_HEAD_OF_PERSONNEL,
+	JOB_HEAD_OF_SECURITY,
+	JOB_CHIEF_ENGINEER,
+	JOB_RESEARCH_DIRECTOR,
+	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_INTERNAL_AFFAIRS_AGENT,
+	JOB_AI
 ) //CHOMPEdit: end
 
 /proc/guest_jobbans(var/job)

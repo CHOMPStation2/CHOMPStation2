@@ -228,7 +228,7 @@
 		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
 		return
 
-	if(isrobot(pred) && jobban_isbanned(prey, "Cyborg"))
+	if(isrobot(pred) && jobban_isbanned(prey, JOB_CYBORG))
 		to_chat(prey, "<span class='warning'>Forces beyond your comprehension forbid you from taking control of [pred].</span>")
 		return
 	if(prey.prey_controlled)
@@ -530,7 +530,7 @@
 	if(!prey.ckey)
 		to_chat(pred, "<span class='notice'>\The [prey] cannot take control.</span>")
 		return
-	if(isrobot(pred) && jobban_isbanned(prey, "Cyborg"))
+	if(isrobot(pred) && jobban_isbanned(prey, JOB_CYBORG))
 		to_chat(pred, "<span class='warning'>Forces beyond your comprehension prevent you from giving [prey] control.</span>")
 		return
 	if(prey.prey_controlled)

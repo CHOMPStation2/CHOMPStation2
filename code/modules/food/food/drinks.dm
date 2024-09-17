@@ -499,8 +499,8 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/flask
-	name = "\improper Site Manager's flask"
-	desc = "A metal flask belonging to the Site Manager"
+	name = "\improper " + JOB_SITE_MANAGER + "'s flask"
+	desc = "A metal flask belonging to the " + JOB_SITE_MANAGER
 	icon_state = "flask"
 	volume = 60
 	center_of_mass_x = 17 //CHOMPEdit
@@ -520,7 +520,7 @@
 	icon_state = "lithiumflask"
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/detflask
-	name = "\improper Detective's flask"
+	name = "\improper " + JOB_DETECTIVE + "'s flask"
 	desc = "A metal flask with a leather band and golden badge belonging to the detective."
 	icon_state = "detflask"
 	volume = 60

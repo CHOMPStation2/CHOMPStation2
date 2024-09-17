@@ -333,7 +333,7 @@
 	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE
 
-	if(jobban_isbanned(vandal, "Graffiti"))
+	if(jobban_isbanned(vandal, JOB_GRAFFITI))
 		to_chat(vandal, SPAN_WARNING("You are banned from leaving persistent information across rounds."))
 		return
 

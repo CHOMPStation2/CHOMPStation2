@@ -2,7 +2,7 @@
 	title = "CentCom Officer"
 	departments = list("Central Command")
 	department_accounts = list(DEPARTMENT_COMMAND, DEPARTMENT_ENGINEERING, DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH, DEPARTMENT_SECURITY, DEPARTMENT_CARGO, DEPARTMENT_PLANET, DEPARTMENT_CIVILIAN)
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 1
 	supervisors = "company officials and Corporate Regulations"
@@ -77,7 +77,7 @@
 	title = "Emergency Responder"
 	departments = list("Central Command")
 	department_accounts = list(DEPARTMENT_COMMAND, DEPARTMENT_ENGINEERING, DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH, DEPARTMENT_SECURITY, DEPARTMENT_CARGO, DEPARTMENT_PLANET, DEPARTMENT_CIVILIAN)
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 1
 	supervisors = "company officials and Corporate Regulations"
@@ -100,29 +100,29 @@
 	return get_all_accesses().Copy()
 /* CHOMPEDIT: Removing Clown/Mime job from being initialized at all (These are alt titles of Entertainer on our codebase)
 /datum/job/clown
-	title = "Clown"
+	title = JOB_CLOWN
 	flag = CLOWN
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	supervisors = "the spirit of laughter"
 	selection_color = "#515151"
 	economic_modifier = 1
-	job_description = "A Clown is there to entertain the crew and keep high morale using various harmless pranks and ridiculous jokes!"
+	job_description = "A " + JOB_CLOWN + " is there to entertain the crew and keep high morale using various harmless pranks and ridiculous jokes!"
 	whitelist_only = 1
 	latejoin_only = 0
 	requestable = FALSE
 	outfit_type = /decl/hierarchy/outfit/job/clown
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Jester" = /datum/alt_title/jester, "Fool" = /datum/alt_title/fool)
+	alt_titles = list(JOB_ALT_JESTER = /datum/alt_title/jester, JOB_ALT_FOOL = /datum/alt_title/fool)
 
 /datum/alt_title/jester
-	title = "Jester"
+	title = JOB_ALT_JESTER
 
 /datum/alt_title/fool
-	title = "Fool"
+	title = JOB_ALT_FOOL
 
 /datum/job/clown/get_access()
 	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
@@ -131,18 +131,18 @@
 		return list(access_entertainment, access_clown, access_tomfoolery)
 
 /datum/job/mime
-	title = "Mime"
+	title = JOB_MIME
 	flag = MIME
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	spawn_positions = -1 //CHOMP Edit: Disable. Change to + integer to enable.
 	supervisors = "the spirit of performance"
 	selection_color = "#515151"
 	economic_modifier = 1
-	job_description = "A Mime is there to entertain the crew and keep high morale using unbelievable performances and acting skills!"
-	alt_titles = list("Poseur" = /datum/alt_title/poseur)
+	job_description = "A " + JOB_MIME + " is there to entertain the crew and keep high morale using unbelievable performances and acting skills!"
+	alt_titles = list(JOB_ALT_PASEUR = /datum/alt_title/poseur)
 	whitelist_only = 1
 	latejoin_only = 0
 	requestable = FALSE
@@ -150,7 +150,7 @@
 	pto_type = PTO_CIVILIAN
 
 /datum/alt_title/poseur
-	title = "Poseur"
+	title = JOB_ALT_PASEUR
 
 /datum/job/mime/get_access()
 	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit

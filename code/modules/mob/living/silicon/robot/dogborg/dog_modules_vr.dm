@@ -597,4 +597,6 @@
 
 /obj/item/weapon/reagent_containers/glass/beaker/large/borg/Destroy()
 	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
+	R = null
+	last_robot_loc = null
 	..()

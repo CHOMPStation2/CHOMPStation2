@@ -246,7 +246,7 @@
 	if(!voremob_loaded)
 		return
 	. = ..()
-	var/safe = (faction == "neutral")
+	var/safe = (faction == FACTION_NEUTRAL)
 	for(var/obj/belly/B as anything in vore_organs)
 		B.digest_mode = safe ? DM_HOLD : vore_default_mode
 
@@ -256,4 +256,4 @@
 		B.digest_mode = safe ? DM_HOLD : vore_default_mode
 
 /mob/living/simple_mob/animal/passive/mouse
-	faction = "mouse" //Giving mice a faction so certain mobs can get along with them.
+	faction = FACTION_MOUSE //Giving mice a faction so certain mobs can get along with them.

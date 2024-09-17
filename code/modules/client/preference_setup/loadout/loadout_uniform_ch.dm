@@ -1,7 +1,7 @@
 /datum/gear/uniform/job_sec/flightsuit
 	display_name = "security flight suit"
 	path = /obj/item/clothing/under/sec_flight_suit
-	allowed_roles = list("Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
 
 
 // Trekie things
@@ -9,31 +9,31 @@
 /datum/gear/uniform/job_trek/sec/tos
 	display_name = "TOS uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec
-	allowed_roles = list("Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
 
 //TNG
 /datum/gear/uniform/job_trek/sec/tng
 	display_name = "TNG uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec/next
-	allowed_roles = list("Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
 
 //VOY
 /datum/gear/uniform/job_trek/sec/voy
 	display_name = "VOY uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec/voy
-	allowed_roles = list("Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
 
 //DS9
 /datum/gear/uniform/job_trek/sec/ds9
 	display_name = "DS9 uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec/ds9
-	allowed_roles = list("Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
 
 //ENT
 /datum/gear/uniform/job_trek/sec/ent
 	display_name = "ENT uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec/ent
-	allowed_roles = list("Warden","Detective","Security Officer","Head of Security","Blueshield Guard")
+	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
 
 
 //Nullsuits (Zero Suits)
@@ -44,52 +44,52 @@
 /datum/gear/uniform/job_nullsuit/cmd
 	display_name = "nullsuit, cmd"
 	path = /obj/item/clothing/under/rank/nullsuit/cmd
-	allowed_roles = list("Head of Security","Site Manager","Head of Personnel","Chief Engineer","Research Director","Chief Medical Officer","Blueshield Guard")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_CHIEF_ENGINEER,JOB_RESEARCH_DIRECTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_BLUESHIELD_GUARD)
 
 /datum/gear/uniform/job_nullsuit/sec
 	display_name = "nullsuit, sec"
 	path = /obj/item/clothing/under/rank/nullsuit/sec
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD)
 
 /datum/gear/uniform/job_nullsuit/sec/hos
 	display_name = "nullsuit, head of security"
 	path = /obj/item/clothing/under/rank/nullsuit/sec/hos
-	allowed_roles = list("Head of Security")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY)
 
 /datum/gear/uniform/job_nullsuit/med
 	display_name = "nullsuit, med"
 	path = /obj/item/clothing/under/rank/nullsuit/med
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Field Medic")
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_MEDICAL_DOCTOR,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,JOB_FIELD_MEDIC)
 
 /datum/gear/uniform/job_nullsuit/med/cmo
 	display_name = "nullsuit, chief medical officer"
 	path = /obj/item/clothing/under/rank/nullsuit/med/cmo
-	allowed_roles = list("Chief Medical Officer")
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER)
 
 /datum/gear/uniform/job_nullsuit/eng
 	display_name = "nullsuit, eng"
 	path = /obj/item/clothing/under/rank/nullsuit/eng
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Station Engineer")
+	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ENGINEER)
 
 /datum/gear/uniform/job_nullsuit/eng/ce
 	display_name = "nullsuit, chief engineer"
 	path = /obj/item/clothing/under/rank/nullsuit/eng/ce
-	allowed_roles = list("Chief Engineer")
+	allowed_roles = list(JOB_CHIEF_ENGINEER)
 
 /datum/gear/uniform/job_nullsuit/sci
 	display_name = "nullsuit, sci"
 	path = /obj/item/clothing/under/rank/nullsuit/sci
-	allowed_roles = list("Research Director", "Scientist", "Roboticist", "Xenobiologist", "Pathfinder", "Explorer")
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_PATHFINDER, JOB_EXPLORER)
 
 /datum/gear/uniform/job_nullsuit/sci/rd
 	display_name = "nullsuit, research director"
 	path = /obj/item/clothing/under/rank/nullsuit/sci/rd
-	allowed_roles = list("Research Director")
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR)
 
 /datum/gear/uniform/job_nullsuit/cargo
 	display_name = "nullsuit, cargo"
 	path = /obj/item/clothing/under/rank/nullsuit/cargo
-	allowed_roles = list("Quartermaster","Shaft Miner","Cargo Technician","Head of Personnel")
+	allowed_roles = list(JOB_QUARTERMASTER,JOB_SHAFT_MINER,JOB_CARGO_TECHNICIAN,JOB_HEAD_OF_PERSONNEL)
 
 
 //VR Suit
