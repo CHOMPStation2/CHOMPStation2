@@ -328,7 +328,7 @@
 	#define JOB_ALT_SECURITY_CONTRACTOR "Security Contractor"
 
 // CHOMPAdd
-#define JOB_SECURITY_BRIGPHYS "Brig Physician"
+#define JOB_BRIG_PHYSICIAN "Brig Physician"
 	// Brig Physician alt titles
 	#define JOB_ALT_SECURITY_MEDIC "Security Medic"
 	#define JOB_ALT_SECURITY_MEDIC_CARE "Security Medic Care Unit"

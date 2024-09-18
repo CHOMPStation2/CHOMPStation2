@@ -92,7 +92,7 @@
 	name = "outsider radio encryption key"
 	icon_state = "sec_cypherkey"
 
-	channels = list("Outsider" = 1)
+	channels = list(CHANNEL_OUTSIDER = 1)
 
 /obj/item/device/radio/headset/headset_medsec
 	name = "medical security radio headset"

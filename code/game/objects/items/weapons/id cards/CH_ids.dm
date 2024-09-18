@@ -38,5 +38,5 @@
 	access = list(160, 200, 201, 202, 203, 300)
 
 /obj/item/weapon/card/id/security/brigphysician
-	name = "Brig Physician's ID"
+	name = JOB_BRIG_PHYSICIAN + "'s ID"
 	initial_sprite_stack = list("base-stamp", "top-red", "stamp-n", "pips-medblu", "stripe-white")

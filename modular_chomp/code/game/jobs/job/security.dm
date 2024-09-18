@@ -1,5 +1,5 @@
 /datum/job/brigphysician
-	title = JOB_SECURITY_BRIGPHYS
+	title = JOB_BRIG_PHYSICIAN
 	flag = BRIGPHYS
 	departments = list(DEPARTMENT_SECURITY, DEPARTMENT_MEDICAL)
 	department_flag = ENGSEC
@@ -13,7 +13,7 @@
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_virology, access_security, access_sec_doors, access_brig, access_eva)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/brigphysician
-	job_description = "The " + JOB_SECURITY_BRIGPHYS + " is a doctor that helps security staff with medical issues. They have minimum access to Security, but they are not officers and should not conduct arrests."
+	job_description = "The " + JOB_BRIG_PHYSICIAN + " is a doctor that helps security staff with medical issues. They have minimum access to Security, but they are not officers and should not conduct arrests."
 	alt_titles = list(
 		JOB_ALT_SECURITY_MEDIC = /datum/alt_title/security_medic,
 		JOB_ALT_SECURITY_MEDIC_CARE = /datum/alt_title/sec_med_supp,
