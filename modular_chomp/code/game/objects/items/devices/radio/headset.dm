@@ -96,6 +96,6 @@
 
 /obj/item/device/radio/headset/headset_medsec
 	name = "medical security radio headset"
-	desc = "A headset that is a result of the mating between medical and security."
+	desc = "A headset with combined medical and security functionality."
 	icon_state = "med_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_medsec

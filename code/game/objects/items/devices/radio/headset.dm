@@ -162,7 +162,7 @@
 
 /obj/item/device/radio/headset/headset_medsci
 	name = "medical research radio headset"
-	desc = "A headset that is a result of the mating between medical and science."
+	desc = "A headset with combined medical and science functionality." // CHOMPEdit - Less mating
 	icon_state = "med_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_medsci
 
