@@ -33,6 +33,7 @@ var/const/EXPLORER 			=(1<<12)
 var/const/SAR 				=(1<<13)
 var/const/XENOBOTANIST		=(1<<14)
 var/const/PILOT 			=(1<<15) //ChompEDIT - ours is with the other explo jobs.
+var/const/BRIGPHYS 			=(1<<16) // CHOMPAdd - Brig Physician
 
 var/const/CIVILIAN			=(1<<2)
 
