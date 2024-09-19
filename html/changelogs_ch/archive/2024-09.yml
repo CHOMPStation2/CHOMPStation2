@@ -123,3 +123,7 @@
   tacoguy7765093:
   - maptweak: SDF Corvette not cycling airlocks properly
   - bugfix: SurvivalDIY11x11 lite works now
+2024-09-19:
+  TheCaramelion:
+  - rscadd: Brig Physician role
+  - bugfix: Geneticists start with their right headset now
