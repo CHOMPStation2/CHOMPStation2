@@ -2567,6 +2567,7 @@ End Chompstation Edit*/
 /area/SouthernCrossV2/Bridge/Deck3_Corridor
     name = "\improper 3 Deck Corridor"
     icon_state = "bridge"
+    lightswitch = 1
 
 /area/SouthernCrossV2/Bridge/HoP_Quarters
     name = "\improper HoP Quarters"
@@ -2775,6 +2776,7 @@ End Chompstation Edit*/
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint
     name = "\improper Quantum Pad Checkpoint"
     icon_state = "security"
+    lightswitch = 1
 
 /area/SouthernCrossV2/Security/Quantum_Pad_Storage
     name = "\improper Quantum Pad Storage"
@@ -2789,6 +2791,10 @@ End Chompstation Edit*/
     name = "\improper Station Shuttle to Exploration Carrier"
     icon_state = "security"
     ambience = AMBIENCE_HANGAR
+
+/area/SouthernCrossV2/Security/Transit_Turrets
+    name = "\improper Transit Turrets"
+    icon_state = "security"
 
 //MEDICAL AREAS
 
@@ -3254,6 +3260,10 @@ End Chompstation Edit*/
     name = "\improper Engine Tech Storage"
     icon_state = "engineering"
 
+/area/SouthernCrossV2/Engineering/Breakroom
+    name = "\improper Engineering Breakroom"
+    icon_state = "engineering"
+
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort
     name = "\improper Solar Control ForPort"
     icon_state = "engineering"
@@ -3397,6 +3407,10 @@ End Chompstation Edit*/
     name = "\improper Mail Room"
     icon_state = "quart"
 
+/area/SouthernCrossV2/Cargo/Breakroom
+    name = "\improper Cargo Breakroom"
+    icon_state = "quart"
+
 //DOMICILE AREAS
 
 /area/SouthernCrossV2/Domicile
@@ -3517,11 +3531,13 @@ End Chompstation Edit*/
     name = "\improper Chomp Dinner 1"
     icon_state = "gaming"
     flags = RAD_SHIELDED
+    lightswitch = 1
 
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2
     name = "\improper Chomp Dinner 2"
     icon_state = "gaming"
     flags = RAD_SHIELDED
+    lightswitch = 1
 
 /area/SouthernCrossV2/Domicile/Chomp_Lounge
     name = "\improper Chomp Lounge"
@@ -3674,22 +3690,27 @@ End Chompstation Edit*/
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_1
     name = "\improper Dorm Corridor 1"
     icon_state = "gaming"
+    lightswitch = 1
 
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_2
     name = "\improper Dorm Corridor 2"
     icon_state = "gaming"
+    lightswitch = 1
 
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_3
     name = "\improper Dorm Corridor 3"
     icon_state = "gaming"
+    lightswitch = 1
 
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_4
     name = "\improper Dorm Corridor 4"
     icon_state = "gaming"
+    lightswitch = 1
 
 /area/SouthernCrossV2/Domicile/Dorm_Foyer
     name = "\improper Dorm Foyer"
     icon_state = "gaming"
+    lightswitch = 1
 
 /area/SouthernCrossV2/Domicile/Public_Gateway
     name = "\improper Public Gateway"

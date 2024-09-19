@@ -3284,7 +3284,7 @@
 /area/shadekin)
 "cxI" = (
 /obj/structure/prop/desert_rock/rock,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "cxK" = (
 /obj/structure/table/standard,
@@ -5628,7 +5628,7 @@
 /area/centcom/medical)
 "eDj" = (
 /obj/structure/prop/desert_planet160x160/tallboulder,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "eDl" = (
 /turf/unsimulated/floor{
@@ -6104,7 +6104,7 @@
 /area/centcom/security)
 "eZM" = (
 /obj/structure/flora/desert_planet/shrubber,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "faE" = (
 /obj/machinery/vending/donksoft,
@@ -6117,6 +6117,10 @@
 	icon_state = "wood"
 	},
 /area/skipjack_station)
+"fbo" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/outdoors/desert_planet/deep_sand/turfpack/station,
+/area/holodeck/source_desert)
 "fby" = (
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/holofloor/carpet,
@@ -7186,7 +7190,7 @@
 /area/shadekin)
 "ggj" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "ggK" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -7504,7 +7508,7 @@
 /area/centcom/specops)
 "gsI" = (
 /obj/structure/prop/desert_planet64x64/lrock4,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/deep_sand/turfpack/station,
 /area/holodeck/source_desert)
 "guJ" = (
 /obj/machinery/light{
@@ -8607,7 +8611,7 @@
 /area/shadekin)
 "hmc" = (
 /obj/structure/prop/desert_planet64x64/lribs,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "hmv" = (
 /turf/unsimulated/beach/sand{
@@ -8870,6 +8874,10 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
+"hul" = (
+/obj/structure/prop/desert_rock/pebble,
+/turf/simulated/floor/outdoors/desert_planet/deep_sand/turfpack/station,
+/area/holodeck/source_desert)
 "huo" = (
 /obj/machinery/computer/shuttle_control/emergency,
 /turf/simulated/shuttle/floor/white,
@@ -8955,7 +8963,7 @@
 /area/holodeck/source_theatre)
 "hyO" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "hzc" = (
 /obj/structure/window/reinforced,
@@ -10665,7 +10673,7 @@
 /area/shadekin)
 "iVs" = (
 /obj/structure/prop/desert_rock/pebble,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "iVu" = (
 /obj/machinery/door/airlock/centcom{
@@ -12159,7 +12167,7 @@
 "kiA" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/desert_planet/lbarrelcacti,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "kiH" = (
 /obj/effect/floor_decal/milspec/color/black,
@@ -14329,7 +14337,7 @@
 "lXu" = (
 /obj/structure/prop/desert_planet160x160/lcactus2,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/deep_sand/turfpack/station,
 /area/holodeck/source_desert)
 "lXX" = (
 /obj/structure/lattice,
@@ -18087,7 +18095,7 @@
 "pyj" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/prop/desert_planet160x160/boulder,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "pyl" = (
 /obj/structure/table/steel,
@@ -18130,7 +18138,7 @@
 /area/centcom/medical)
 "pAY" = (
 /obj/structure/prop/desert_planet64x64/lskull,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "pBc" = (
 /obj/structure/closet/emcloset/legacy,
@@ -18620,13 +18628,6 @@
 /obj/machinery/door/airlock/angled_tgmc/maintenance,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"qcm" = (
-/obj/structure/flora/tree/fur/wall{
-	color = "#c69c85"
-	},
-/obj/structure/auto_flesh_door,
-/turf/simulated/floor/outdoors/fur/woof/no_trees/turfpack/station,
-/area/holodeck/the_uwu_zone)
 "qcH" = (
 /obj/structure/curtain/open/shower,
 /obj/structure/window/basic{
@@ -19550,7 +19551,7 @@
 /area/shuttle/syndicate)
 "qYP" = (
 /obj/structure/prop/desert_planet64x64/lribs1,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "qZL" = (
 /obj/structure/prop/esoteric/nt_pedestal0_old{
@@ -20556,6 +20557,10 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/centcom/evac)
+"rMv" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/turf/simulated/floor/outdoors/desert_planet/deep_sand/turfpack/station,
+/area/holodeck/source_desert)
 "rMD" = (
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/wood/sif,
@@ -21395,6 +21400,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/shadekin)
+"sun" = (
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
+/area/holodeck/source_desert)
 "suN" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/unsimulated/floor{
@@ -21648,7 +21656,7 @@
 /area/shuttle/administration)
 "sJf" = (
 /obj/structure/flora/desert_planet/barrelcacti,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "sJt" = (
 /turf/unsimulated/floor{
@@ -24834,7 +24842,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "vwm" = (
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/deep_sand/turfpack/station,
 /area/holodeck/source_desert)
 "vwu" = (
 /obj/effect/floor_decal/corner/green/full{
@@ -25010,7 +25018,7 @@
 "vGb" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/desert_planet/shrubber,
-/turf/simulated/floor/holofloor/desert,
+/turf/simulated/floor/outdoors/desert_planet/sand/turfpack/station,
 /area/holodeck/source_desert)
 "vHH" = (
 /obj/structure/flora/ausbushes/ppflowers,
@@ -80859,9 +80867,9 @@ dfN
 dfN
 mSQ
 mSQ
-qcm
+lRR
 eEz
-qcm
+lRR
 mSQ
 dfN
 dfN
@@ -86788,9 +86796,9 @@ vFi
 vFi
 vFi
 dtV
-vwm
+sun
 eDj
-vwm
+sun
 vwm
 vwm
 vwm
@@ -87046,18 +87054,18 @@ vFi
 vFi
 vFi
 dtV
-vwm
-vwm
-vwm
+sun
+sun
+sun
 cxI
 sJf
 vwm
-iVs
+hul
 vwm
 vwm
 vwm
 lXu
-hyO
+rMv
 vwm
 dtV
 nPG
@@ -87304,17 +87312,17 @@ vFi
 vFi
 vFi
 dtV
-vwm
-vwm
-vwm
+sun
+sun
+sun
 sJf
+sun
+sun
+sun
+sun
 vwm
 vwm
-vwm
-vwm
-vwm
-vwm
-ggj
+fbo
 vwm
 vwm
 dtV
@@ -87562,14 +87570,14 @@ vFi
 vFi
 vFi
 dtV
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
+sun
+sun
+sun
+sun
+sun
+sun
+sun
+sun
 ggj
 vwm
 vwm
@@ -87820,16 +87828,16 @@ dLV
 dLV
 vFi
 dtV
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-iVs
+sun
+sun
+sun
+sun
+sun
+sun
+sun
+sun
+sun
+hul
 vwm
 vwm
 vwm
@@ -88078,16 +88086,16 @@ jRZ
 dLV
 vFi
 dtV
-vwm
-vwm
+sun
+sun
 pAY
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
+sun
+sun
+sun
+sun
+sun
+sun
+sun
 vwm
 vwm
 vwm
@@ -88336,18 +88344,18 @@ dLV
 dLV
 vFi
 dtV
-vwm
-vwm
-vwm
-vwm
-vwm
+sun
+sun
+sun
+sun
+sun
 iVs
+sun
+sun
+sun
+sun
 vwm
-vwm
-vwm
-vwm
-vwm
-iVs
+hul
 vwm
 dtV
 nPG
@@ -88594,17 +88602,17 @@ vaF
 dLV
 vFi
 dtV
-vwm
+sun
 qYP
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
+sun
+sun
+sun
+sun
+sun
+sun
+sun
+sun
+sun
 vwm
 vwm
 dtV
@@ -88853,16 +88861,16 @@ dLV
 vFi
 dtV
 hmc
-vwm
-vwm
+sun
+sun
 iVs
-vwm
-vwm
-vwm
-vwm
-vwm
+sun
+sun
+sun
+sun
+sun
 cxI
-vwm
+sun
 vGb
 vwm
 dtV
@@ -89110,17 +89118,17 @@ gjw
 dLV
 vFi
 dtV
-vwm
-vwm
+sun
+sun
 ggj
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
+sun
+sun
+sun
+sun
+sun
+sun
+sun
+sun
 pyj
 vwm
 dtV
@@ -89368,18 +89376,18 @@ dLV
 dLV
 vFi
 dtV
-vwm
-vwm
-vwm
+sun
+sun
+sun
 ggj
-vwm
-vwm
-vwm
-vwm
+sun
+sun
+sun
+sun
 iVs
 ggj
-vwm
-vwm
+sun
+sun
 ggj
 dtV
 rYr
@@ -89626,19 +89634,19 @@ vFi
 vFi
 vFi
 dtV
-vwm
+sun
 kiA
 hyO
-vwm
-vwm
-vwm
+sun
+sun
+sun
 iVs
-vwm
+sun
 hyO
 eZM
-vwm
-vwm
-vwm
+sun
+sun
+sun
 dtV
 hlJ
 hlJ
@@ -89884,19 +89892,19 @@ dtV
 mcF
 vFi
 dtV
-vwm
-vwm
+sun
+sun
 kiA
-vwm
+sun
 iVs
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
-vwm
+sun
+sun
+sun
+sun
+sun
+sun
+sun
+sun
 dtV
 hlJ
 hlJ
