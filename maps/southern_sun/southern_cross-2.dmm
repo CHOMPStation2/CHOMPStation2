@@ -71483,8 +71483,7 @@
 "kaM" = (
 /obj/item/device/radio/beacon,
 /obj/machinery/light/spot{
-	dir = 4;
-	tag = "icon-tube1 (EAST)"
+	dir = 4
 	},
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Science/Testing_Chamber)

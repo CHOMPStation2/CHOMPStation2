@@ -95,11 +95,6 @@
 /turf/space/internal_edge/bottomright,
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint)
 "aas" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
 	},
@@ -26480,6 +26475,11 @@
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Corridor1)
 "gUu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/wall/rthull,
 /area/shuttle/spacebus)
 "gUz" = (
@@ -34329,7 +34329,6 @@
 	locked = 0;
 	pixel_y = -24
 	},
-/obj/structure/cable/green,
 /obj/structure/cable/green,
 /turf/simulated/floor,
 /area/shuttle/ursula)
@@ -44765,6 +44764,11 @@
 "nCl" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green,
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/spacebus)
 "nCB" = (
@@ -46243,12 +46247,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/For_Restroom)
@@ -61557,6 +61555,11 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/spacebus)
 "thU" = (
@@ -69149,11 +69152,6 @@
 	name = "interior access button";
 	pixel_y = 26
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;
@@ -72089,22 +72087,12 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock4)
 "wPF" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
-	},
-/obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/structure/cable/blue{
 	d1 = 4;
