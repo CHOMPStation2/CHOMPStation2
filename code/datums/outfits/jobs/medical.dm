@@ -71,6 +71,7 @@
 
 /decl/hierarchy/outfit/job/medical/geneticist
 	name = OUTFIT_JOB_NAME(JOB_GENETICIST)
+	l_ear = /obj/item/device/radio/headset/headset_medsci // CHOMPAdd - Geneticists get their cool headset
 	uniform = /obj/item/clothing/under/rank/geneticist
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	backpack = /obj/item/weapon/storage/backpack/genetics

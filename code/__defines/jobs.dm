@@ -326,6 +326,16 @@
 	#define JOB_ALT_SECURITY_DEPUTY "Security Deputy"
 	#define JOB_ALT_JUNIOR_OFFICER "Junior Officer"
 	#define JOB_ALT_SECURITY_CONTRACTOR "Security Contractor"
+
+// CHOMPAdd
+#define JOB_BRIG_PHYSICIAN "Brig Physician"
+	// Brig Physician alt titles
+	#define JOB_ALT_SECURITY_MEDIC "Security Medic"
+	#define JOB_ALT_SECURITY_MEDIC_CARE "Security Medic Care Unit"
+	#define JOB_ALT_SECURITY_PENITENTIARY_MED "Penitentiary Medical Care Unit"
+	#define JOB_ALT_JUNIOR_BRIGPHYS "Junior Brig Physician"
+	#define JOB_ALT_DETENTION_HEALTH_OFFICER "Detention Health Officer"
+// CHOMPAdd End
 //___________________________________________________________
 
 
