@@ -37,6 +37,11 @@
 	icon_state = "dark"
 	lightswitch = FALSE
 
+/area/sc_away/fueldepotspawn
+    name = "Away Mission - Fuel Depot Sleeping Quarters"
+    icon = 'icons/turf/areas_vr.dmi'
+    icon_state = "dark"
+    lightswitch = TRUE
 
 // -- Landmarks -- //
 

@@ -454,9 +454,7 @@
 /turf/simulated/wall/solidrock,
 /area/surface/outside/wilderness/mountains)
 "ca" = (
-/obj/structure/bed/chair/bay/comfy/blue{
-	dir = 2
-	},
+/obj/structure/bed/chair/bay/comfy/blue,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "cr" = (
@@ -857,8 +855,7 @@
 	dir = 4;
 	id = "wilderness_shelter_2nd_floor_2";
 	name = "Wilderness Shelter Shutters";
-	pixel_x = -26;
-	req_one_access = null
+	pixel_x = -26
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
@@ -1107,17 +1104,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/wilderness)
-"xx" = (
-/obj/effect/map_effect/portal/master/side_a/wilderness_to_valley{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "xA" = (
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
@@ -1207,15 +1193,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
-"AX" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "AY" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1262,17 +1239,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
-"BF" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "BY" = (
 /obj/structure/simple_door/sifwood,
 /obj/structure/cable{
@@ -1316,8 +1282,7 @@
 	dir = 8;
 	id = "wilderness_shelter_2nd_floor";
 	name = "Wilderness Shelter Shutters";
-	pixel_x = 26;
-	req_one_access = null
+	pixel_x = 26
 	},
 /obj/structure/cable{
 	d1 = 2;
@@ -1451,7 +1416,6 @@
 "KU" = (
 /obj/machinery/light/small,
 /obj/structure/closet/secure_closet/guncabinet{
-	anchored = 1;
 	req_one_access = list(1,3,43,67)
 	},
 /obj/item/weapon/storage/box/syndie_kit{
@@ -1494,13 +1458,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/water,
-/area/surface/outside/river/svartan)
-"Mg" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/railing,
-/turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
 "Mk" = (
 /obj/structure/simple_door/sifwood,
@@ -2048,12 +2005,12 @@ ad
 ab
 XD
 XD
-BF
-BF
-AX
-Mg
-BF
-xx
+As
+As
+Qz
+sC
+As
+As
 kh
 kh
 ab
