@@ -46,14 +46,16 @@
 		#include "southern_cross-2.dmm" //Deck 2 z2
 		#include "southern_cross-3.dmm" //Deck 3 z3
 		#include "southern_cross-4.dmm" //Sif outpost z4
-//		#include "southern_cross-5.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.
-		#include "southern_cross-6.dmm" //Sif mine z5
-		#include "southern_cross-7.dmm" //Carrier z6
-		#include "southern_cross-8.dmm" //Centcom z7
-		#include "southern_cross-9.dmm" //Transit z8
-		#include "southern_cross-10.dmm" //Sif wilds z9
+		#include "southern_cross-5.dmm" //Sif mine z5
+		#include "southern_cross-6.dmm" //Carrier z6
+		#include "southern_cross-7.dmm" //Centcom z7
+		#include "southern_cross-8.dmm" //Transit z8
+		#include "southern_cross-9.dmm" //Sif wilds z9
+//		#include "southern_cross-10.dmm" //Valley z10 seemingly. For stranger critters and POIs. //Removed for an event.
 //		#include "southern_cross-12.dmm" //Skylands z10 //Remove due to lack of use
 //		#include "southern_cross-13.dmm" //Valley z10 seemingly. For stranger critters and POIs. //Removed for an event.
+//		#include "southern_cross-15.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.
+
 	#endif
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 

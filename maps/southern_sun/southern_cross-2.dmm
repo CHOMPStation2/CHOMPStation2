@@ -9643,13 +9643,6 @@
 	},
 /turf/simulated/floor/boxing/gym,
 /area/SouthernCrossV2/Domicile/Gym)
-"aBS" = (
-/obj/structure/bed/chair/wood/wings{
-	color = "#004b9a";
-	dir = 8
-	},
-/turf/simulated/floor/wood/sif,
-/area/SouthernCrossV2/Domicile/Midnight_Bar)
 "aBV" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/door/firedoor/border_only,
@@ -19923,12 +19916,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "bhM" = (
-/obj/machinery/mineral/equipment_vendor,
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/wall,
-/area/SouthernCrossV2/Cargo/Reception)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2)
 "bhN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -59063,6 +59058,27 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Boardroom)
+"gMU" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_2)
 "gNj" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -71838,6 +71854,15 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftStarChamber1)
+"kfy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_1)
 "kfA" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -78832,15 +78857,6 @@
 /obj/structure/bed/pillowpile/red,
 /turf/simulated/floor/wood,
 /area/SouthernCrossV2/Maints/ab_TeshDen)
-"lZK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2)
 "lZV" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -80199,6 +80215,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
+"mxO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1)
 "myd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -84663,6 +84688,13 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Rec_Lounge)
+"nNA" = (
+/obj/structure/bed/chair/wood/wings{
+	color = "#004b9a";
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/SouthernCrossV2/Domicile/Midnight_Bar)
 "nNC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -90940,27 +90972,6 @@
 /obj/effect/floor_decal/corner/white/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
-"pvB" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2)
 "pvD" = (
 /obj/structure/table/glass,
 /obj/machinery/power/apc{
@@ -92066,6 +92077,10 @@
 	color = "#5aa660"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
+"pKB" = (
+/obj/structure/table/sifwoodentable,
+/turf/simulated/floor/wood/sif,
+/area/SouthernCrossV2/Domicile/Midnight_Bar)
 "pKD" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -92915,27 +92930,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1)
-"pVY" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_2)
 "pVZ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -95816,6 +95810,15 @@
 	color = "#5aa660"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
+"qLt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Maints/Deck2_Engineering_ForStarCorridor1)
 "qLx" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftCorridor1)
@@ -99554,6 +99557,27 @@
 	name = "yoga mat"
 	},
 /area/SouthernCrossV2/Domicile/Gym)
+"rFp" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2)
 "rGf" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -103737,15 +103761,6 @@
 /obj/item/mail/blank,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Breakroom)
-"sJP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/SouthernCrossV2/Maints/Deck2_Engineering_ForStarCorridor1)
 "sJR" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -112824,15 +112839,6 @@
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/carpet/purcarpet,
 /area/SouthernCrossV2/Domicile/Midnight_Bar)
-"vrm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/wall,
-/area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_1)
 "vrx" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -119739,10 +119745,6 @@
 /obj/structure/sign/warning/vent_port,
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Cargo/Waste_Disposals)
-"xkW" = (
-/obj/structure/table/sifwoodentable,
-/turf/simulated/floor/wood/sif,
-/area/SouthernCrossV2/Domicile/Midnight_Bar)
 "xkX" = (
 /obj/machinery/vending/sovietvend,
 /obj/effect/floor_decal/borderfloor{
@@ -120598,15 +120600,6 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Security/Wardens_Office)
-"xxb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/wall,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1)
 "xxw" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
@@ -140421,7 +140414,7 @@ baH
 bcw
 bei
 bei
-bhM
+tWG
 aSQ
 oEk
 aSQ
@@ -142958,7 +142951,7 @@ gHA
 rnt
 phy
 bAQ
-pVY
+gMU
 gfx
 dlR
 iLQ
@@ -143216,7 +143209,7 @@ wJW
 cFU
 bkt
 bvO
-sJP
+qLt
 aaT
 aaT
 aaT
@@ -143286,7 +143279,7 @@ apL
 gpG
 apL
 apL
-vrm
+kfy
 qBg
 tSe
 fPa
@@ -153383,7 +153376,7 @@ gVl
 qXc
 bXA
 yic
-xkW
+pKB
 nnG
 aMR
 tRq
@@ -153641,7 +153634,7 @@ cux
 qXc
 cjy
 fyL
-aBS
+nNA
 nnG
 aMR
 aMR
@@ -163340,7 +163333,7 @@ cCd
 biG
 msv
 bFM
-lZK
+bhM
 crJ
 crJ
 crJ
@@ -163410,7 +163403,7 @@ igH
 igH
 igH
 igH
-xxb
+mxO
 cfF
 tvD
 ttJ
@@ -163598,7 +163591,7 @@ dSe
 oDt
 dLz
 eIY
-pvB
+rFp
 vUb
 kQH
 ecb

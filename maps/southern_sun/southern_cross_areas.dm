@@ -3044,72 +3044,6 @@ End Chompstation Edit*/
     sound_env = LARGE_ENCLOSED
     lightswitch = 0
 
-/area/SouthernCrossV2/Engineering/Research_Substation
-    name = "\improper Research Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Medical_Substation
-    name = "\improper Medical Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Dorms_Substation
-    name = "\improper Dorms Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Domicile_Substation
-    name = "\improper Domicile Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Harbor_Substation
-    name = "\improper Harbor Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Telecomms_Substation
-    name = "\improper Telecomms Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Security_Substation
-    name = "\improper Security Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Bridge_Substation
-    name = "\improper Bridge Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/AI_Substation
-    name = "\improper AI Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Cargo_Substation
-    name = "\improper Cargo Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
-/area/SouthernCrossV2/Engineering/Engineering_Substation
-    name = "\improper Engineering Substation"
-    icon_state = "engineering"
-    ambience = AMBIENCE_SUBSTATION
-    lightswitch = 1
-
 /area/SouthernCrossV2/Engineering/Central_Engineering_Post
     name = "\improper Central Engineering Post"
     icon_state = "engineering"
@@ -3307,22 +3241,6 @@ End Chompstation Edit*/
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
     dynamic_lighting = 0
-
-/area/SouthernCrossV2/Engineering/Distro_Central
-    name = "\improper Distro Central"
-    icon_state = "engineering"
-    ambience = AMBIENCE_ATMOS
-
-/area/SouthernCrossV2/Engineering/Distro_Harbor
-    name = "\improper Distro Harbor"
-    icon_state = "engineering"
-    ambience = AMBIENCE_ATMOS
-
-/area/SouthernCrossV2/Engineering/Distro_Civilian
-    name = "\improper Distro Civilian"
-    icon_state = "engineering"
-    ambience = AMBIENCE_ATMOS
-
 
 //CARGO AREAS
 
@@ -4886,6 +4804,86 @@ End Chompstation Edit*/
     name = "\improper Deck3 Center Port"
     icon_state = "fsmaint"
 
+/area/SouthernCrossV2/Maints/Distro_Central
+    name = "\improper Distro Central"
+    icon_state = "engineering"
+    ambience = AMBIENCE_ATMOS
+
+/area/SouthernCrossV2/Maints/Distro_Harbor
+    name = "\improper Distro Harbor"
+    icon_state = "engineering"
+    ambience = AMBIENCE_ATMOS
+
+/area/SouthernCrossV2/Maints/Distro_Civilian
+    name = "\improper Distro Civilian"
+    icon_state = "engineering"
+    ambience = AMBIENCE_ATMOS
+
+/area/SouthernCrossV2/Maints/Research_Substation
+    name = "\improper Research Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Medical_Substation
+    name = "\improper Medical Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Dorms_Substation
+    name = "\improper Dorms Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Domicile_Substation
+    name = "\improper Domicile Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Harbor_Substation
+    name = "\improper Harbor Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Telecomms_Substation
+    name = "\improper Telecomms Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Security_Substation
+    name = "\improper Security Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Bridge_Substation
+    name = "\improper Bridge Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/AI_Substation
+    name = "\improper AI Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Cargo_Substation
+    name = "\improper Cargo Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
+
+/area/SouthernCrossV2/Maints/Engineering_Substation
+    name = "\improper Engineering Substation"
+    icon_state = "engineering"
+    ambience = AMBIENCE_SUBSTATION
+    lightswitch = 1
 
 //Temp Testing areas
 /area/SouthernCrossV2/Maints/Room_01
