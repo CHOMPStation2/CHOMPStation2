@@ -30299,13 +30299,13 @@
 /obj/random/maintenance/clean,
 /obj/random/maintenance/security,
 /obj/random/maintenance/misc,
-/obj/random/single,
 /obj/random/trash,
 /obj/random/trash,
 /obj/random/flashlight,
 /obj/random/drinksoft,
 /obj/random/drinksoft,
 /obj/random/fishing_junk,
+/obj/random/snack,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "jFq" = (
@@ -45773,7 +45773,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "orM" = (

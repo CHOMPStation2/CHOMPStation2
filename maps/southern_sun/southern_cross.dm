@@ -45,8 +45,8 @@
 		#include "southern_cross-1.dmm" //Deck 1 z1
 		#include "southern_cross-2.dmm" //Deck 2 z2
 		#include "southern_cross-3.dmm" //Deck 3 z3
-//		#include "southern_cross-4.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.
-		#include "southern_cross-5.dmm" //Sif outpost z4
+		#include "southern_cross-4.dmm" //Sif outpost z4
+//		#include "southern_cross-5.dmm" //Empty space CHOMPedit: Disabling empty space map because the overmap now generates empty space on its own for space transit.
 		#include "southern_cross-6.dmm" //Sif mine z5
 		#include "southern_cross-7.dmm" //Carrier z6
 		#include "southern_cross-8.dmm" //Centcom z7

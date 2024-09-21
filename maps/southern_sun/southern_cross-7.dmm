@@ -210,6 +210,14 @@
 "ajQ" = (
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
+"ajT" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "ajU" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/hopdouble,
@@ -356,6 +364,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/rndlobby)
+"aqe" = (
+/obj/machinery/door/airlock/glass_centcom{
+	req_one_access = list(67)
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "aqD" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -986,6 +1005,13 @@
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/explodorm2)
+"aQH" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "aRl" = (
 /obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/white,
@@ -1148,6 +1174,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
+"aYN" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "aZm" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
@@ -1185,6 +1217,24 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/medbaylobby)
+"baz" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "baU" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
@@ -1246,6 +1296,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/portfuelstorage)
+"bei" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
+/obj/structure/sign/nanotrasen,
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "bep" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1368,6 +1425,23 @@
 "bhq" = (
 /turf/simulated/floor/grass2,
 /area/expoutpost/slingcarrierdock)
+"bhE" = (
+/obj/structure/table/reinforced,
+/obj/item/device/gps{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/device/gps,
+/obj/structure/closet/walllocker_double/kitchen/east,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/obj/item/weapon/storage/mre/random,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "bie" = (
 /turf/simulated/wall/r_wall,
 /area/expoutpost/secoffice)
@@ -1383,6 +1457,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
+"bjL" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "baby_mammoth_pump"
+	},
+/obj/structure/closet/emcloset,
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "bjT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1839,6 +1925,21 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/starboardbowairlock)
+"bHd" = (
+/obj/structure/table/glass,
+/obj/item/device/defib_kit/loaded,
+/obj/structure/closet/walllocker_double/medical/south,
+/obj/item/weapon/storage/firstaid/fire,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/weapon/storage/firstaid/toxin{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/firstaid/o2,
+/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/weapon/storage/firstaid/adv,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/baby_mammoth)
 "bHp" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2035,6 +2136,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"bOU" = (
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_x = -32;
+	pixel_y = -5
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "bPp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2197,6 +2309,18 @@
 "bYa" = (
 /turf/simulated/floor/reinforced,
 /area/expoutpost/hangarthree)
+"bYm" = (
+/obj/machinery/sleeper{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/baby_mammoth)
+"bZt" = (
+/obj/machinery/shuttle_sensor{
+	id_tag = "shuttle4sens_exp_psg"
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "bZy" = (
 /obj/machinery/light{
 	dir = 4
@@ -2455,6 +2579,29 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
+"cje" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "stargazer_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "cjD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -3091,6 +3238,19 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/expoutpost/portsternairlock)
+"cOX" = (
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/mech_recharger,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "cPd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -3119,6 +3279,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
+"cRI" = (
+/obj/machinery/light,
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "cRL" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3459,6 +3626,15 @@
 /obj/structure/cable/yellow,
 /turf/simulated/floor,
 /area/expoutpost/engstorage)
+"dgM" = (
+/obj/machinery/computer/ship/engines{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "dhO" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -3963,6 +4139,9 @@
 /obj/item/clothing/head/helmet/space/void/security,
 /turf/simulated/floor/tiled,
 /area/expoutpost/secoffice)
+"dHJ" = (
+/turf/simulated/floor/tiled/white,
+/area/shuttle/baby_mammoth)
 "dIm" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -4069,6 +4248,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/techstorage)
+"dKS" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "dLo" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -4196,6 +4384,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"dRL" = (
+/obj/machinery/computer/ship/navigation,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "dRX" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/green,
@@ -4273,6 +4465,13 @@
 "dWr" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/telecomms)
+"dWQ" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "dWS" = (
 /obj/structure/railing/overhang/waterless/grey{
 	dir = 4
@@ -4288,6 +4487,10 @@
 /obj/fiftyspawner/steel,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"dXo" = (
+/obj/effect/overmap/visitable/ship/landable/baby_mammoth,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "dXB" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -4385,6 +4588,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/surgical1)
+"eez" = (
+/obj/machinery/power/apc/hyper{
+	coverlocked = 0;
+	locked = 0;
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "eeZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -4897,6 +5112,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor,
 /area/expoutpost/lowersternhallway)
+"exn" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible,
+/obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "eyg" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5502,6 +5730,19 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor,
 /area/expoutpost/hangarone)
+"eSn" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "eSq" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -5841,6 +6082,12 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
+"fhr" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "fhv" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6628,6 +6875,25 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/midsternhallway)
+"fTM" = (
+/obj/structure/fuel_port{
+	pixel_y = -28
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/baby_mammoth)
 "fVa" = (
 /turf/simulated/wall/rshull,
 /area/shuttle/stargazer)
@@ -7264,6 +7530,15 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/stargazer)
+"gzp" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 25
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "gzy" = (
 /turf/simulated/wall/r_wall,
 /area/expoutpost/aicore)
@@ -7598,6 +7873,21 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
+"gNM" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "gNV" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -7691,6 +7981,25 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
+"gTg" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "stargazer_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "gTB" = (
 /obj/machinery/recharge_station,
 /obj/machinery/firealarm{
@@ -7737,6 +8046,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
+"gVH" = (
+/obj/machinery/vending/wallmed1{
+	dir = 4;
+	pixel_x = -23
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/baby_mammoth)
 "gWs" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
@@ -8413,6 +8732,12 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/telecomms)
+"hxm" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "hxp" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -9541,6 +9866,12 @@
 "itM" = (
 /turf/simulated/wall/r_wall,
 /area/expoutpost/slingcarrierdock)
+"itS" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "iup" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -9566,6 +9897,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
+"ivg" = (
+/obj/machinery/shuttle_sensor{
+	dir = 5;
+	id_tag = "baby_mammoth_sensor"
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "ivr" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/orange/bordercorner,
@@ -9601,7 +9939,7 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
-	id_tag = "echidna_dock";
+	id_tag = "carrier_echidna_dock";
 	name = "shuttle bay controller";
 	pixel_x = -29
 	},
@@ -9767,6 +10105,10 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/slingcarrierdock)
+"iEQ" = (
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "iFh" = (
 /obj/machinery/mech_recharger,
 /obj/machinery/alarm{
@@ -9818,6 +10160,9 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
+"iIE" = (
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "iJc" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -10232,6 +10577,22 @@
 /obj/random/trash_pile,
 /turf/simulated/floor,
 /area/expoutpost/portlowermaint)
+"jaP" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "stargazer_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "jbk" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10404,6 +10765,25 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secoffice)
+"jjN" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "stargazer_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "jjP" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10839,6 +11219,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
+"jBv" = (
+/obj/machinery/power/smes/buildable/point_of_interest{
+	input_attempt = 1
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "jCe" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -11325,6 +11718,13 @@
 /obj/structure/sign/signnew/radiation,
 /turf/simulated/wall/r_wall,
 /area/expoutpost/engstorage)
+"jSZ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "jTc" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -11650,6 +12050,29 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
+"kjV" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "baby_mammoth_pump"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "baby_mammoth";
+	pixel_y = 26;
+	tag_airpump = "baby_mammoth_pump";
+	tag_chamber_sensor = "baby_mammoth_sensor";
+	tag_exterior_door = "baby_mammoth_outer";
+	tag_interior_door = "baby_mammoth_inner"
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "kkt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -12908,6 +13331,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"lqq" = (
+/obj/machinery/door/airlock/glass_centcom,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/baby_mammoth)
 "lqy" = (
 /obj/structure/railing/overhang/waterless/grey{
 	dir = 8
@@ -13029,6 +13456,13 @@
 /obj/effect/overmap/visitable/planet/kara,
 /turf/space,
 /area/space)
+"ltX" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "lvx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13878,6 +14312,26 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/portqpadjunction)
+"mbw" = (
+/obj/machinery/power/shield_generator/charged{
+	field_radius = 8;
+	initial_shield_modes = 2153;
+	target_radius = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "mbU" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -14178,6 +14632,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
+"moo" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "mop" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -14404,6 +14866,30 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"mwG" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "stargazer_blast";
+	name = "window blast shield"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "mxb" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -14745,6 +15231,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"mNh" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 10
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "mNp" = (
 /obj/effect/catwalk_plated/techfloor,
 /obj/structure/cable/green{
@@ -15429,6 +15921,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor,
 /area/expoutpost/starboardbowairlock)
+"noy" = (
+/obj/structure/sign/nanotrasen,
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "noT" = (
 /obj/machinery/light{
 	dir = 8
@@ -16226,6 +16722,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/slingcarrierdock)
+"nUN" = (
+/obj/structure/sign/redcross,
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "nVw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -16339,6 +16839,30 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/janitorial)
+"nZZ" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1380;
+	master_tag = "baby_mammoth";
+	name = "interior access button";
+	pixel_y = 26
+	},
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = 1380;
+	id_tag = "baby_mammoth_inner";
+	locked = 1;
+	name = "Internal Access"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "oac" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5
@@ -16392,7 +16916,7 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
-	id_tag = "ursula_dock";
+	id_tag = "carrier_ursula_dock";
 	name = "shuttle bay controller";
 	pixel_x = 29
 	},
@@ -17230,6 +17754,11 @@
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite1)
+"oJC" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "oKo" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
@@ -17430,6 +17959,13 @@
 /obj/structure/closet/crate,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
+"oUO" = (
+/obj/machinery/sleep_console,
+/obj/structure/sign/nosmoking_1{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/baby_mammoth)
 "oVi" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
@@ -17556,6 +18092,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medicalbay)
+"pah" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "paY" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/structure/catwalk,
@@ -17832,6 +18372,27 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/portbowairlock)
+"pvt" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/obj/effect/shuttle_landmark{
+	base_area = /area/expoutpost/hangartwo;
+	base_turf = /turf/simulated/floor/reinforced;
+	landmark_tag = "baby_mammoth_dock";
+	name = "Baby Mammoth Dock";
+	docking_controller = "baby_mammoth_dock"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "pwx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 6
@@ -17914,6 +18475,19 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
+"pyU" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/atmospherics/portables_connector,
+/obj/structure/sign/poster/nanotrasen{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "pzz" = (
 /turf/simulated/wall/r_wall,
 /area/expoutpost/starsciencemaint)
@@ -18336,6 +18910,15 @@
 "pQN" = (
 /turf/simulated/floor/tiled,
 /area/expoutpost/staginghangar)
+"pSb" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "pSN" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -18891,6 +19474,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
+"qoR" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/crate/engineering,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/tank/phoron,
+/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/device/multitool,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/device/geiger,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/glasses/goggles,
+/obj/item/device/t_scanner,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/gloves/yellow,
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "qpa" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -19080,6 +19682,33 @@
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
+"qvK" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/space_heater,
+/obj/item/device/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/device/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/device/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/device/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/structure/closet/walllocker_double/hydrant/east,
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "qvR" = (
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
@@ -19208,6 +19837,32 @@
 /obj/mecha/combat/fighter/pinnace/loaded,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/starboardbowairlock)
+"qAY" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	icon_state = "door_locked";
+	id_tag = "expshuttle4_door_L";
+	locked = 1;
+	name = "shuttle side hatch"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/button/remote/airlock{
+	id = "expshuttle4_door_L";
+	name = "Side Hatch Control";
+	pixel_y = -26;
+	specialfunctions = 4
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "stargazer_blast";
+	layer = 2.5;
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "qBj" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -19856,6 +20511,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/uppersternhallway)
+"rfj" = (
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/baby_mammoth)
 "rfk" = (
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/suite1)
@@ -20540,6 +21199,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/techstorage)
+"rBC" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "rBJ" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -21010,6 +21676,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/disposals)
+"rQZ" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "rRc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -21053,6 +21726,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangartwo)
+"rSW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "rTW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -22185,6 +22870,16 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/shuttle3/start)
+"sUB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/shuttle,
+/obj/structure/sign/poster/nanotrasen{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "sUH" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -22262,6 +22957,26 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
+"sYQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 5
+	},
+/obj/machinery/power/terminal,
+/obj/structure/cable/blue{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/baby_mammoth)
 "sYT" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -22346,6 +23061,20 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
+"taL" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/baby_mammoth)
 "taQ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -22514,6 +23243,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
+"tgZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "tha" = (
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/carpet,
@@ -22630,6 +23365,17 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/expoutpost/starqpadjunction)
+"tnV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "stargazer_blast";
+	layer = 2.5;
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "too" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -23207,6 +23953,12 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/portfuelstorage)
+"tLx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "tLJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -23345,6 +24097,12 @@
 /obj/machinery/vending/boozeomat,
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/bar)
+"tTl" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "tTX" = (
 /obj/structure/flora/pottedplant/aquatic,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -23906,6 +24664,10 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/engstorage)
+"uoZ" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "upj" = (
 /obj/machinery/vending/cigarette,
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -24098,6 +24860,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/midsternhallway)
+"uxp" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = -32
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "uxs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -24332,6 +25105,37 @@
 /obj/machinery/door/airlock/maintenance/engi,
 /turf/simulated/floor,
 /area/expoutpost/portfuelstorage)
+"uHM" = (
+/obj/structure/closet/secure_closet/guncabinet/phase{
+	req_one_access = null
+	},
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/clothing/accessory/holster/waist,
+/obj/item/clothing/accessory/holster/waist,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/item/weapon/gun/energy/locked/phasegun/rifle,
+/obj/item/weapon/gun/energy/locked/phasegun/rifle,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/item/weapon/cell/device/weapon,
+/obj/structure/panic_button{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/red,
+/area/shuttle/baby_mammoth)
 "uIT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -24964,6 +25768,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
+"vey" = (
+/obj/machinery/computer/ship/helm,
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "stargazer_blast";
+	name = "remote blast shielding control";
+	pixel_x = -26;
+	pixel_y = -1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "veB" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/gatewayeva)
@@ -25281,7 +26096,7 @@
 	frequency = 1380;
 	name = "shuttle bay controller";
 	pixel_x = 29;
-	id_tag = "needle_dock"
+	id_tag = "carrier_needle_dock"
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
@@ -25344,6 +26159,14 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/expoutpost/botany)
+"vwb" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "vwf" = (
 /obj/machinery/recharger,
 /obj/machinery/light{
@@ -25427,6 +26250,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/suite2)
+"vzz" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/baby_mammoth)
 "vAE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -26284,6 +27113,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/portbowhallway)
+"wfc" = (
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "wfK" = (
 /obj/structure/table/rack,
 /obj/random/maintenance,
@@ -26456,6 +27288,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medicalbay)
+"wlb" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "baby_mammoth_pump"
+	},
+/obj/machinery/light,
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "wlg" = (
 /obj/machinery/power/thermoregulator,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -26957,6 +27801,33 @@
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite1)
+"wKW" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	frequency = 1380;
+	id_tag = "baby_mammoth_outer";
+	locked = 1;
+	name = "External Access"
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1380;
+	master_tag = "baby_mammoth";
+	name = "exterior access button";
+	pixel_y = 26
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "stargazer_blast";
+	layer = 2.5;
+	name = "window blast shield"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "wLS" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -27088,6 +27959,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medicalbay)
+"wQp" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/computer/shuttle_control/explore/baby_mammoth{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "wQA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -27332,6 +28212,15 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/expoutpost/techstorage)
+"xcq" = (
+/obj/machinery/door/airlock/glass_centcom,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "xcO" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -27395,6 +28284,10 @@
 /obj/structure/window/reinforced,
 /turf/simulated/shuttle/plating,
 /area/shuttle/shuttle3/start)
+"xeR" = (
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "xfg" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/portables_connector{
@@ -27408,6 +28301,19 @@
 /obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
+"xfV" = (
+/obj/machinery/computer/ship/sensors,
+/obj/machinery/button/remote/airlock{
+	desiredstate = 1;
+	dir = 8;
+	id = "expshuttle4_door_cargo";
+	name = "Rear Hatch Control";
+	pixel_x = 26;
+	req_access = list(67);
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/baby_mammoth)
 "xfY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -27676,6 +28582,21 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/shuttle3/start)
+"xor" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "baby_mammoth_pump"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "baby_mammoth_sensor";
+	pixel_y = 28
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "xoH" = (
 /obj/structure/railing{
 	dir = 4
@@ -28311,6 +29232,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
+"xLL" = (
+/obj/machinery/shipsensors,
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "xLO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -28334,6 +29260,29 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
+"xNL" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/machinery/button/remote/airlock{
+	desiredstate = 1;
+	dir = 4;
+	id = "expshuttle4_door_cargo";
+	name = "Rear Hatch Control";
+	pixel_x = -26;
+	req_access = list(67);
+	specialfunctions = 4
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "stargazer_blast";
+	layer = 2.5;
+	name = "window blast shield"
+	},
+/obj/machinery/door/airlock/multi_tile/metal/mait{
+	icon_state = "door_locked";
+	id_tag = "expshuttle4_door_cargo";
+	locked = 1
+	},
+/turf/simulated/floor,
+/area/shuttle/baby_mammoth)
 "xOk" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -28808,6 +29757,12 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/disposals)
+"yez" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/wall/rpshull,
+/area/shuttle/baby_mammoth)
 "yeN" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -65631,16 +66586,16 @@ pmD
 pmD
 pmD
 pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+wfc
+cje
+wfc
+cje
+noy
+wfc
+qAY
+wfc
+wfc
+wfc
 aIg
 gUm
 adT
@@ -65888,17 +66843,17 @@ sNH
 pmD
 pmD
 pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+wfc
+wfc
+bYm
+gVH
+bHd
+wfc
+oJC
+sYQ
+jBv
+rQZ
+vzz
 aIg
 swx
 hVa
@@ -66144,19 +67099,19 @@ gXs
 vQf
 sNH
 pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+wfc
+cje
+wfc
+wfc
+oUO
+dHJ
+rfj
+wfc
+pyU
+taL
+mbw
+jSZ
+vzz
 aIg
 hKc
 hVa
@@ -66401,20 +67356,20 @@ kLn
 gXs
 vQf
 sNH
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+wfc
+wfc
+wQp
+uHM
+wfc
+nUN
+lqq
+wfc
+wfc
+eSn
+fTM
+yez
+ltX
+vzz
 aIg
 sgO
 hVa
@@ -66659,19 +67614,19 @@ kLn
 gXs
 vQf
 sNH
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+jjN
+vey
+fhr
+eez
+wfc
+pah
+iIE
+bOU
+wfc
+cOX
+gNM
+tLx
+xLL
 pmD
 aIg
 sgO
@@ -66917,19 +67872,19 @@ kLn
 gXs
 czY
 sNH
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+jaP
+dRL
+dXo
+vwb
+aqe
+ajT
+ajT
+ajT
+xcq
+moo
+rSW
+xNL
+iEQ
 pmD
 aIg
 sgO
@@ -67175,19 +68130,19 @@ kLn
 gXs
 vQf
 sNH
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+gTg
+xfV
+fhr
+iIE
+baz
+xeR
+iIE
+hxm
+baz
+qoR
+dKS
+tnV
+iEQ
 pmD
 aIg
 sgO
@@ -67433,20 +68388,20 @@ akr
 gXs
 vQf
 sNH
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+wfc
+wfc
+dgM
+bhE
+bZt
+aQH
+iIE
+cRI
+itS
+uoZ
+nZZ
+tgZ
+rBC
+vzz
 aIg
 sgO
 hVa
@@ -67692,19 +68647,19 @@ gXs
 vQf
 sNH
 pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+wfc
+cje
+wfc
+wfc
+sUB
+aYN
+pSb
+tTl
+kjV
+exn
+wlb
+jSZ
+vzz
 aIg
 sgO
 hVa
@@ -67952,17 +68907,17 @@ sNH
 pmD
 pmD
 pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+wfc
+wfc
+gzp
+qvK
+uxp
+tTl
+xor
+pvt
+bjL
+dWQ
+vzz
 aIg
 hKc
 hVa
@@ -68211,16 +69166,16 @@ pmD
 pmD
 pmD
 pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
-pmD
+wfc
+cje
+mNh
+mwG
+bei
+wfc
+wKW
+ivg
+wfc
+wfc
 aIg
 sgO
 hVa

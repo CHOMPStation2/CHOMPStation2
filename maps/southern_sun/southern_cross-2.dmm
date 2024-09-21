@@ -571,6 +571,12 @@
 	d2 = 4;
 	icon_state = "32-4"
 	},
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down/supply{
+	dir = 8
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Engineering_ForStarCorridor1)
 "aaW" = (
@@ -9637,6 +9643,13 @@
 	},
 /turf/simulated/floor/boxing/gym,
 /area/SouthernCrossV2/Domicile/Gym)
+"aBS" = (
+/obj/structure/bed/chair/wood/wings{
+	color = "#004b9a";
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/SouthernCrossV2/Domicile/Midnight_Bar)
 "aBV" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/door/firedoor/border_only,
@@ -18207,14 +18220,18 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_1)
@@ -27999,6 +28016,12 @@
 	icon_state = "32-8"
 	},
 /obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down/supply{
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Science_ForPort_Corridor)
 "bLg" = (
@@ -52928,6 +52951,12 @@
 	d2 = 8;
 	icon_state = "32-8"
 	},
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down/supply{
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftPortCorridor1)
 "foG" = (
@@ -73280,14 +73309,18 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1)
@@ -78799,6 +78832,15 @@
 /obj/structure/bed/pillowpile/red,
 /turf/simulated/floor/wood,
 /area/SouthernCrossV2/Maints/ab_TeshDen)
+"lZK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2)
 "lZV" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -90898,6 +90940,27 @@
 /obj/effect/floor_decal/corner/white/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
+"pvB" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2)
 "pvD" = (
 /obj/structure/table/glass,
 /obj/machinery/power/apc{
@@ -92852,6 +92915,27 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1)
+"pVY" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_2)
 "pVZ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -103653,6 +103737,15 @@
 /obj/item/mail/blank,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Breakroom)
+"sJP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Maints/Deck2_Engineering_ForStarCorridor1)
 "sJR" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -109875,6 +109968,12 @@
 	icon_state = "32-4"
 	},
 /obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down/supply{
+	dir = 8
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Cargo_AftStarCorridor1)
 "uye" = (
@@ -112725,6 +112824,15 @@
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/carpet/purcarpet,
 /area/SouthernCrossV2/Domicile/Midnight_Bar)
+"vrm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_1)
 "vrx" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -119631,6 +119739,10 @@
 /obj/structure/sign/warning/vent_port,
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Cargo/Waste_Disposals)
+"xkW" = (
+/obj/structure/table/sifwoodentable,
+/turf/simulated/floor/wood/sif,
+/area/SouthernCrossV2/Domicile/Midnight_Bar)
 "xkX" = (
 /obj/machinery/vending/sovietvend,
 /obj/effect/floor_decal/borderfloor{
@@ -120486,6 +120598,15 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Security/Wardens_Office)
+"xxb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1)
 "xxw" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
@@ -142837,7 +142958,7 @@ gHA
 rnt
 phy
 bAQ
-dlR
+pVY
 gfx
 dlR
 iLQ
@@ -143095,7 +143216,7 @@ wJW
 cFU
 bkt
 bvO
-aaT
+sJP
 aaT
 aaT
 aaT
@@ -143165,7 +143286,7 @@ apL
 gpG
 apL
 apL
-apL
+vrm
 qBg
 tSe
 fPa
@@ -153004,8 +153125,8 @@ ctK
 mZV
 mnK
 kRq
-aMR
-aMR
+mnK
+nnG
 aMR
 aMR
 aMR
@@ -153262,8 +153383,8 @@ gVl
 qXc
 bXA
 yic
-aMR
-aMR
+xkW
+nnG
 aMR
 tRq
 aMR
@@ -153520,8 +153641,8 @@ cux
 qXc
 cjy
 fyL
-aMR
-aMR
+aBS
+nnG
 aMR
 aMR
 aMR
@@ -163219,7 +163340,7 @@ cCd
 biG
 msv
 bFM
-crJ
+lZK
 crJ
 crJ
 crJ
@@ -163289,7 +163410,7 @@ igH
 igH
 igH
 igH
-igH
+xxb
 cfF
 tvD
 ttJ
@@ -163477,7 +163598,7 @@ dSe
 oDt
 dLz
 eIY
-kQH
+pvB
 vUb
 kQH
 ecb
