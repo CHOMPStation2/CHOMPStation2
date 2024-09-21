@@ -60697,6 +60697,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
+"hjn" = (
+/obj/machinery/status_display/supply_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/glass,
+/area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "hjo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -93887,6 +93893,9 @@
 	dir = 2
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/status_display/supply_display{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Cargo/Warehouse)
 "qjZ" = (
@@ -140413,7 +140422,7 @@ tFJ
 baH
 bcw
 bei
-bei
+hjn
 tWG
 aSQ
 oEk

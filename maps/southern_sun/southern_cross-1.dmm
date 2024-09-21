@@ -5013,15 +5013,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint)
 "aDR" = (
-/obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "sc-GCcargobay";
-	name = "Shuttle Bay Entrance";
-	req_one_access = list(47);
-	pixel_y = -24
-	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "cargo_bay";
+	name = "cargo bay hatch controller";
+	req_one_access = list(13,31);
+	tag_door = "cargo_bay_door";
+	pixel_y = -24;
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "aDT" = (
@@ -6291,6 +6293,10 @@
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 10
+	},
+/obj/machinery/ai_status_display{
+	name = "1S-AI display";
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
@@ -9531,15 +9537,15 @@
 	pixel_x = -5;
 	pixel_y = 2
 	},
-/obj/item/device/radio/intercom{
-	name = "1S-Station Intercom (General)";
-	pixel_y = -22
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 6
+	},
+/obj/machinery/status_display{
+	pixel_y = -32;
+	name = "S-status display"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
@@ -10548,10 +10554,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/ai_status_display{
-	name = "1E-AI display";
-	pixel_x = 32
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
@@ -10561,6 +10563,9 @@
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
+	},
+/obj/machinery/status_display/supply_display{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
@@ -22262,12 +22267,20 @@
 /turf/simulated/floor,
 /area/shuttle/needle)
 "fxY" = (
-/obj/structure/closet/emcloset,
-/obj/machinery/status_display{
-	pixel_y = -32;
-	name = "S-status display"
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 8;
+	id = "sc-GCcargobay";
+	name = "Shuttle Bay Entrance";
+	req_one_access = list(47);
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "fyf" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
@@ -22391,6 +22404,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
+"fAe" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/alarm{
+	dir = 8;
+	name = "E-alarm";
+	pixel_x = 25
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "fAx" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -52510,13 +52532,12 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock5)
 "qgf" = (
-/obj/machinery/alarm{
-	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
-	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
+/obj/item/device/radio/intercom{
+	name = "1S-Station Intercom (General)";
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "qgk" = (
@@ -70075,7 +70096,7 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
-	id_tag = "echidna_dock";
+	id_tag = "ursula_dock";
 	name = "shuttle bay controller";
 	pixel_y = 24
 	},
@@ -87779,7 +87800,7 @@ vbS
 yeg
 xXs
 fQj
-fQj
+fxY
 aLo
 jgE
 aaa
@@ -89840,8 +89861,8 @@ bSu
 fJP
 dQu
 oVm
+fAe
 qwH
-fxY
 ani
 eQD
 fFB
