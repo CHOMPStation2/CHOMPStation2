@@ -9,12 +9,12 @@ var/const/access_explorer = 43
 
 /datum/access/pilot
 	id = access_pilot
-	desc = "Pilot"
+	desc = JOB_PILOT
 	region = ACCESS_REGION_SUPPLY
 
 /datum/access/explorer
 	id = access_explorer
-	desc = "Explorer"
+	desc = JOB_EXPLORER
 	region = ACCESS_REGION_GENERAL
 
 //SC Jobs
@@ -51,14 +51,14 @@ var/const/access_explorer = 43
 */
 
 /datum/job/pilot
-	title = "Pilot"
+	title = JOB_PILOT
 	flag = PILOT
 	department = "Civilian"
 	department_flag = CIVILIAN
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the head of personnel"
+	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
 	selection_color = "#515151"
 	economic_modifier = 4
 	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_cargo, access_mining, access_mining_station)
@@ -66,14 +66,14 @@ var/const/access_explorer = 43
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 
 /datum/job/explorer
-	title = "Explorer"
+	title = JOB_EXPLORER
 	flag = EXPLORER
 	department = "Civilian"
 	department_flag = CIVILIAN
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the explorer leader and the head of personnel"
+	supervisors = "the " + JOB_PATHFINDER + " and the " + JOB_HEAD_OF_PERSONNEL
 	selection_color = "#515151"
 	economic_modifier = 4
 	access = list(access_explorer, access_research)
@@ -83,19 +83,19 @@ var/const/access_explorer = 43
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
 /*
 	alt_titles = list(
-		"Explorer Technician" = /decl/hierarchy/outfit/job/explorer2/technician,
-		"Explorer Medic" = /decl/hierarchy/outfit/job/explorer2/medic)
+		JOB_ALT_EXPLORERE_TECHNICIAN = /decl/hierarchy/outfit/job/explorer2/technician,
+		JOB_ALT_EXPLORER_MEDIC = /decl/hierarchy/outfit/job/explorer2/medic)
 */
 
 /datum/job/sar
-	title = "Search and Rescue"
+	title = JOB_SEARCH_AND_RESCUE
 	flag = SAR
 	department = "Medical"
 	department_flag = MEDSCI
-	faction = "Station"
+	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the chief medical officer"
+	supervisors = "the " * JOB_CHIEF_MEDICAL_OFFICER
 	selection_color = "#515151"
 	economic_modifier = 4
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_eva, access_maint_tunnels, access_external_airlocks, access_psychiatrist, access_explorer)
@@ -103,4 +103,4 @@ var/const/access_explorer = 43
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
-	job_description = "A Search and Rescue operative recovers individuals who are injured or dead on the surface of Sif."
+	job_description = "A " + JOB_SEARCH_AND_RESCUE + " operative recovers individuals who are injured or dead on the surface of Sif."

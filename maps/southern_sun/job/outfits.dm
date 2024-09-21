@@ -7,7 +7,7 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 
 
 /decl/hierarchy/outfit/job/explorer2
-	name = OUTFIT_JOB_NAME("Explorer")
+	name = OUTFIT_JOB_NAME(JOB_EXPLORER)
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer
 	uniform = /obj/item/clothing/under/explorer
 	l_ear = /obj/item/device/radio/headset/explorer
@@ -15,7 +15,7 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	pda_slot = slot_l_store
 	pda_type = /obj/item/device/pda/explorer //VORESTation Edit - Better Brown
 	id_type = /obj/item/weapon/card/id/exploration //CHOMPedit: fix conflicts with citrp ID port
-	id_pda_assignment = "Explorer"
+	id_pda_assignment = JOB_EXPLORER
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL
 	backpack_contents = list(/obj/item/clothing/accessory/permit/gun/planetside = 1)
 
@@ -25,19 +25,19 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 		permit.set_name(H.real_name)
 
 /decl/hierarchy/outfit/job/explorer2/technician
-	name = OUTFIT_JOB_NAME("Explorer Technician")
+	name = OUTFIT_JOB_NAME(JOB_ALT_EXPLORERE_TECHNICIAN)
 	belt = /obj/item/weapon/storage/belt/utility/full
 	pda_slot = slot_l_store
-	id_pda_assignment = "Explorer Technician"
+	id_pda_assignment = JOB_ALT_EXPLORERE_TECHNICIAN
 
 /decl/hierarchy/outfit/job/explorer2/medic
-	name = OUTFIT_JOB_NAME("Explorer Medic")
+	name = OUTFIT_JOB_NAME(JOB_ALT_EXPLORER_MEDIC)
 	l_hand = /obj/item/weapon/storage/firstaid/regular
 	pda_slot = slot_l_store
-	id_pda_assignment = "Explorer Medic"
+	id_pda_assignment = JOB_ALT_EXPLORER_MEDIC
 
 /decl/hierarchy/outfit/job/pilot
-	name = OUTFIT_JOB_NAME("Pilot")
+	name = OUTFIT_JOB_NAME(JOB_PILOT)
 	shoes = /obj/item/clothing/shoes/black
 	uniform = /obj/item/clothing/under/rank/pilot1/no_webbing
 	suit = /obj/item/clothing/suit/storage/toggle/bomber/pilot
@@ -49,11 +49,11 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	pda_slot = slot_belt
 	pda_type = /obj/item/device/pda //VOREStation Edit - Civilian
 	id_type = /obj/item/weapon/card/id/civilian/pilot
-	id_pda_assignment = "Pilot"
+	id_pda_assignment = JOB_PILOT
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL
 
 /decl/hierarchy/outfit/job/medical/sar
-	name = OUTFIT_JOB_NAME("Field Medic") //VOREStation Edit
+	name = OUTFIT_JOB_NAME(JOB_FIELD_MEDIC) //VOREStation Edit
 	uniform = /obj/item/clothing/under/utility/blue
 	//suit = /obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar //VOREStation Edit
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer
@@ -63,5 +63,5 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	pda_slot = slot_l_store
 	id_type = /obj/item/weapon/card/id/medical/sar
 	pda_type = /obj/item/device/pda/sar //VOREStation Add
-	id_pda_assignment = "Field Medic" //VOREStation Edit
+	id_pda_assignment = JOB_FIELD_MEDIC //VOREStation Edit
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
