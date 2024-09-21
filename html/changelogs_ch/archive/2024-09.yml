@@ -127,3 +127,7 @@
   TheCaramelion:
   - rscadd: Brig Physician role
   - bugfix: Geneticists start with their right headset now
+2024-09-21:
+  TheCaramelion:
+  - bugfix: Brig Physician is now selectable
+  - bugfix: Fixed onelife trait runtimes
