@@ -107,11 +107,7 @@ but they don't actually change anything about the load order
 	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway", "Sif plains")
 	default_skybox = /datum/skybox_settings/southern_cross
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja)
-	unit_test_exempt_from_atmos = list(
-						/area/tcomm/chamber,
-						/area/SouthernCrossV2/Maints,
-						/area/SouthernCrossV2/Security/Transit_Turrets
-					)
+	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
 	planet_datums_to_make = list(/datum/planet/sif,/datum/planet/thor) //This must be added to load maps at round start otherwise they will have weather or sun.
 
