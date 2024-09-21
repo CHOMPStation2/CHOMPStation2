@@ -974,7 +974,7 @@
 	if(alien == IS_SLIME && water_based)
 		M.adjustToxLoss(removed * 2)
 	*/ //VOREStation Removal End
-	
+
 /datum/reagent/drink/overdose(var/mob/living/carbon/M, var/alien) //Add special interactions here in the future if desired.
 	..()
 
@@ -1243,7 +1243,8 @@
 			if(O.status & ORGAN_BROKEN)
 				O.mend_fracture()
 				H.custom_pain("You feel the agonizing power of calcium mending your bones!",60)
-				H.AdjustWeakened(1)
+				H.adjustHalLoss(60) // CHOMPAdd - Get hallos damaged
+				H.AdjustStunned(1) // CHOMPEdit - Crawling again, weakened to stunned
 				break // Only mend one bone, whichever comes first in the list
 	//VOREStation Edit End
 
@@ -3117,7 +3118,7 @@
 /datum/reagent/ethanol/bananahonk
 	name = "Banana Mama"
 	id = "bananahonk"
-	description = "A drink from Clown Heaven."
+	description = "A drink from " + JOB_CLOWN + " Heaven."
 	taste_description = "bananas and sugar"
 	nutriment_factor = 1
 	color = "#FFFF91"
@@ -3252,7 +3253,7 @@
 	glass_desc = "Damn, the bartender even stirred it, not shook it."
 
 	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit) and vermouth(fruit)
-  
+
 /datum/reagent/ethanol/cuba_libre
 	name = "Cuba Libre"
 	id = "cubalibre"
@@ -3643,7 +3644,7 @@
 /datum/reagent/ethanol/silencer
 	name = "Silencer"
 	id = "silencer"
-	description = "A drink from Mime Heaven."
+	description = "A drink from " + JOB_MIME + " Heaven."
 	taste_description = "a pencil eraser"
 	taste_mult = 1.2
 	nutriment_factor = 1

@@ -714,15 +714,15 @@
  //Strix Hades
 
 /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix
- 	name = "Colony Director Coat"
- 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+ 	name = JOB_ALT_COLONY_DIRECTOR + " Coat"
+ 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the " + JOB_ALT_COLONY_DIRECTOR + "'s colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cd"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
  	item_state = "tesh_cloak_cd"
 
 /obj/item/clothing/under/teshari/undercoat/fluff/strix
-	name = "Colony Director Undercoat"
+	name = JOB_ALT_COLONY_DIRECTOR + " Undercoat"
 	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'

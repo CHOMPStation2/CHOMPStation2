@@ -629,6 +629,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 			var/new_name = html_encode(tgui_input_text(usr,"New belly's name:","New Belly"))
 
+			if(!new_name)
+				return FALSE
+
 			var/failure_msg
 			if(length(new_name) > BELLIES_NAME_MAX || length(new_name) < BELLIES_NAME_MIN)
 				failure_msg = "Entered belly name length invalid (must be longer than [BELLIES_NAME_MIN], no more than than [BELLIES_NAME_MAX])."
@@ -1845,6 +1848,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
 				unsaved_changes = FALSE
 			return TRUE
+		if("loadprefsfromslot")
+			var/alert = tgui_alert(usr, "Are you sure you want to load another character slot's preferences? This will remove your current vore organs and eject their contents. This will not be immediately saved to your character slot, and you will need to save manually to overwrite your current bellies and preferences.","Confirmation",list("Load","Cancel"))
+			if(alert != "Load")
+				return FALSE
+			if(!host.load_vore_prefs_from_slot())
+				tgui_alert_async(usr, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
+			else
+				to_chat(usr,"<span class='notice'>Vore-specific preferences applied from active slot!</span>") //CHOMPEdit
+				unsaved_changes = TRUE
+			return TRUE
 		//CHOMPEdit - "Belly HTML Export Earlyport"
 		if("exportpanel")
 			var/mob/living/user = usr
@@ -2778,7 +2791,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						l.adjust_nutrition(thismuch)
 					ourtarget.death()		// To make sure all on-death procs get properly called
 					if(ourtarget)
-						if(ourtarget.is_preference_enabled(/datum/client_preference/digestion_noises))
+						if(ourtarget.check_sound_preference(/datum/preference/toggle/digestion_noises))
 							if(!b.fancy_vore)
 								SEND_SOUND(ourtarget, sound(get_sfx("classic_death_sounds")))
 							else

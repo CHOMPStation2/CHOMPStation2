@@ -378,6 +378,13 @@
 		QDEL_LIST(vore_organs) // CHOMPedit
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
+		if(!vore_organs.len)
+			var/obj/belly/B = new /obj/belly(src)
+			vore_selected = B
+			B.immutable = TRUE
+			B.name = "Stomach"
+			B.desc = "It appears to be rather warm and wet. Makes sense, considering it's inside \the [name]."
+			B.can_taste = TRUE
 
 		//CHOMPAdd Start
 		if(soulgem)
@@ -390,6 +397,71 @@
 		//CHMPAdd End
 
 	return TRUE
+
+/mob/proc/load_vore_prefs_from_slot()
+
+	var/datum/preferences/P = client.prefs
+
+	var/remembered_default = P.load_vore_prefs_from_client(src) //Loads the preferences of a chosen slot
+	if(!remembered_default)
+		return
+
+	apply_vore_prefs() //Applies the vore preferences of said slot
+
+	if(remembered_default)
+		P.return_to_character_slot(src, remembered_default) //sets you back to the original default slot
+
+	return TRUE
+
+
+/datum/preferences/proc/load_vore_prefs_from_client(mob/user)
+	if(selecting_slots)
+		to_chat(user, "<span class='warning'>You already have a slot selection dialog open!</span>")
+		return
+	if(!savefile)
+		return
+
+	var/list/charlist = list()
+
+	var/default
+	for(var/i in 1 to CONFIG_GET(number/character_slots)) //CHOMPEdit
+		var/list/save_data = savefile.get_entry("character[i]", list())
+		var/name = save_data["real_name"]
+		var/nickname = save_data["nickname"]
+
+		if(!name)
+			name = "[i] - \[Unused Slot\]"
+		else if(i == default_slot)
+			name = "►[i] - [name]"
+			default = "[name][nickname ? " ([nickname])" : ""]"
+		else
+			name = "[i] - [name]"
+
+		charlist["[name][nickname ? " ([nickname])" : ""]"] = i
+
+	var/remember_default = default_slot
+
+	selecting_slots = TRUE
+	var/choice = tgui_input_list(user, "Select a character to load:", "Load Slot", charlist, default)
+	selecting_slots = FALSE
+	if(!choice)
+		return
+
+	var/slotnum = charlist[choice]
+	if(!slotnum)
+		error("Player picked [choice] slot to load, but that wasn't one we sent.")
+		return
+
+	load_character(slotnum)
+	attempt_vr(user.client?.prefs_vr,"load_vore","") //VOREStation Edit
+	sanitize_preferences()
+
+	return remember_default
+
+/datum/preferences/proc/return_to_character_slot(mob/user, var/remembered_default)
+	load_character(remembered_default)
+	attempt_vr(user.client?.prefs_vr,"load_vore","") //VOREStation Edit
+	sanitize_preferences()
 
 //
 // Release everything in every vore organ
@@ -1252,11 +1324,10 @@
 	if(!user)
 		CRASH("display_voreprefs() was called without an associated user.")
 	var/dispvoreprefs = "<b>[src]'s vore preferences</b><br><br><br>"
-	if(client && client.prefs)
-		if("CHAT_OOC" in client.prefs.preferences_disabled)
-			dispvoreprefs += "<font color='red'><b>OOC DISABLED</b></font><br>"
-		if("CHAT_LOOC" in client.prefs.preferences_disabled)
-			dispvoreprefs += "<font color='red'><b>LOOC DISABLED</b></font><br>"
+	if(!client?.prefs?.read_preference(/datum/preference/toggle/show_ooc))
+		dispvoreprefs += "<font color='red'><b>OOC DISABLED</b></font><br>"
+	if(!client?.prefs?.read_preference(/datum/preference/toggle/show_looc))
+		dispvoreprefs += "<font color='red'><b>LOOC DISABLED</b></font><br>"
 	//CHOMPEdit Start
 	dispvoreprefs += "<b>Devourable:</b> [devourable ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	if(devourable)
@@ -1294,7 +1365,7 @@
 		dispvoreprefs += "<b>Late join prey auto accept:</b> [no_latejoin_prey_warning ? "<font color='green'>Enabled</font>" : "<font color='red'>Disabled</font>"]<br>"
 	dispvoreprefs += "<b>Global Vore Privacy is:</b> [eating_privacy_global ? "<font color='green'>Subtle</font>" : "<font color='red'>Loud</font>"]<br>"
 	dispvoreprefs += "<b>Current active belly:</b> [vore_selected ? vore_selected.name : "None"]<br>"
-	dispvoreprefs += "<b>Current active belly:</b> [belly_rub_target ? belly_rub_target : (vore_selected ? vore_selected.name : "None")]<br>"
+	dispvoreprefs += "<b>Belly rub target:</b> [belly_rub_target ? belly_rub_target : (vore_selected ? vore_selected.name : "None")]<br>"
 	//CHOMPEdit End
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=300x400;can_resize=1;can_minimize=0")
 	onclose(user, "[name]")

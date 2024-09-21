@@ -203,8 +203,8 @@
 	ckey = candidate.ckey
 
 	if(mind)
-		mind.assigned_role = "Cortical Borer"
-		mind.special_role = "Cortical Borer"
+		mind.assigned_role = JOB_CORTICAL_BORER
+		mind.special_role = JOB_CORTICAL_BORER
 
 	to_chat(src, span("notice", "You are a cortical borer! You are a brain slug that worms its way \
 	into the head of its victim. Use stealth, persuasion and your powers of mind control to keep you, \
@@ -268,7 +268,7 @@
 	for(var/mob/M in player_list)
 		if(istype(M, /mob/new_player))
 			continue
-		else if(M.stat == DEAD && M.is_preference_enabled(/datum/client_preference/ghost_ears))
+		else if(M.stat == DEAD && M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears))
 			to_chat(M, "[src.true_name] whispers to [host], \"[message]\"")
 
 

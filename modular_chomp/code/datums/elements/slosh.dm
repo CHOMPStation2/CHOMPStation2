@@ -89,5 +89,5 @@
 	if(!has_gravity(source) && prob(75))
 		return
 
-	playsound(source.loc, S, volume, FALSE, preference = /datum/client_preference/digestion_noises)
+	playsound(source.loc, S, volume, FALSE, preference = /datum/preference/toggle/digestion_noises)
 	return

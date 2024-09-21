@@ -28,7 +28,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	var/destination = null // the department we're sending to
 	var/talon = 0 // So that the talon can access their own crew roles for the request
 
-/obj/machinery/photocopier/faxmachine/New()
+/obj/machinery/photocopier/faxmachine/Initialize() //CHOMPedit, so new fax machines can update its list mid-round
 	allfaxes += src
 	if(!destination) destination = "[using_map.boss_name]"
 	if( !(("[department]" in alldepartments) || ("[department]" in admin_departments)) )
@@ -201,7 +201,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 					rank = scan.assignment
 			else if(login_type == LOGIN_TYPE_AI && isAI(usr))
 				authenticated = usr.name
-				rank = "AI"
+				rank = JOB_AI
 			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(usr))
 				authenticated = usr.name
 				var/mob/living/silicon/robot/R = usr

@@ -77,7 +77,7 @@
 	display_name = "holster selection"
 	description = "Select from a number of general-purpose handgun holsters, or a baton lanyard."
 	path = /obj/item/clothing/accessory/holster
-	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective","Talon Captain","Talon Guard", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_TALON_CAPTAIN,JOB_TALON_GUARD,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/accessory/holster/New()
 	..()
@@ -250,7 +250,7 @@
 /datum/gear/accessory/stethoscope
 	display_name = "stethoscope"
 	path = /obj/item/clothing/accessory/stethoscope
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic","Talon Doctor")
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_MEDICAL_DOCTOR,JOB_CHEMIST,JOB_PSYCHIATRIST,JOB_PARAMEDIC,JOB_TALON_DOCTOR)
 
 /datum/gear/accessory/locket
 	display_name = "locket"
@@ -335,12 +335,12 @@
 /datum/gear/accessory/badge
 	display_name = "sheriff badge (Security)"
 	path = /obj/item/clothing/accessory/badge/holo/sheriff
-	allowed_roles = list("Security Officer","Detective","Head of Security","Warden")
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_DETECTIVE,JOB_HEAD_OF_SECURITY,JOB_WARDEN)
 
 /datum/gear/accessory/corpbadge
 	display_name = "investigator holobadge (IAA)"
 	path = /obj/item/clothing/accessory/badge/holo/investigator
-	allowed_roles = list("Internal Affairs Agent")
+	allowed_roles = list(JOB_INTERNAL_AFFAIRS_AGENT)
 
 /datum/gear/accessory/pressbadge
 	display_name = "corporate press pass"
@@ -370,7 +370,8 @@
 	"Red and Orange" = /obj/item/clothing/accessory/wristbandcollection/les,
 	"White, Pink and Blue" = /obj/item/clothing/accessory/wristbandcollection/trans,
 	"Blue, Purple and Pink" = /obj/item/clothing/accessory/wristbandcollection/bi,
-	"Black, White and Grey" = /obj/item/clothing/accessory/wristbandcollection/ace
+	"Black, White and Grey" = /obj/item/clothing/accessory/wristbandcollection/ace,
+	"Spiked" = /obj/item/clothing/accessory/wristband_spiked
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
 
@@ -553,3 +554,61 @@ Talon pin
 	"Service - Echelons" = /obj/item/clothing/accessory/solgov/department/service/army
 	)
 	gear_tweaks += new/datum/gear_tweak/path(insignia)
+
+/datum/gear/accessory/plushie
+	display_name = "Plushie Selection"
+	description = "A single plushie of your selection!"
+	path = /obj/item/toy/plushie/nymph
+
+/datum/gear/accessory/plushie/New()
+	..()
+	var/plushie = list(
+		"Nymph" = /obj/item/toy/plushie/nymph,
+		"Mouse" = /obj/item/toy/plushie/mouse,
+		"Kitten" = /obj/item/toy/plushie/kitten,
+		"Lizard" = /obj/item/toy/plushie/lizard,
+		"Black cat" = /obj/item/toy/plushie/black_cat,
+		"Black fox" = /obj/item/toy/plushie/black_fox,
+		"Blue fox" = /obj/item/toy/plushie/blue_fox,
+		"Carp plushie" = /obj/random/carp_plushie,
+		"Coffee fox" = /obj/item/toy/plushie/coffee_fox,
+		"Corgi" = /obj/item/toy/plushie/corgi,
+		"Crimson fox" = /obj/item/toy/plushie/crimson_fox,
+		"Deer" = /obj/item/toy/plushie/deer,
+		"Girly corgi" = /obj/item/toy/plushie/girly_corgi,
+		"Grey cat" = /obj/item/toy/plushie/grey_cat,
+		"Marble fox" = /obj/item/toy/plushie/marble_fox,
+		"Octopus" = /obj/item/toy/plushie/octopus,
+		"Orange cat" = /obj/item/toy/plushie/orange_cat,
+		"Orange fox" = /obj/item/toy/plushie/orange_fox,
+		"Pink fox" = /obj/item/toy/plushie/pink_fox,
+		"Purple fox" = /obj/item/toy/plushie/purple_fox,
+		"Red fox" = /obj/item/toy/plushie/red_fox,
+		"Robo corgi" = /obj/item/toy/plushie/robo_corgi,
+		"Siamese cat" = /obj/item/toy/plushie/siamese_cat,
+		"Spider" = /obj/item/toy/plushie/spider,
+		"Tabby cat" = /obj/item/toy/plushie/tabby_cat,
+		"Tuxedo cat" = /obj/item/toy/plushie/tuxedo_cat,
+		"White cat" = /obj/item/toy/plushie/white_cat,
+		"Lizard" = /obj/item/toy/plushie/lizardplushie,
+		"Kobold" = /obj/item/toy/plushie/lizardplushie/kobold,
+		//"Resh" = /obj/item/toy/plushie/lizardplushie/resh, // CHOMPRemove, upstream player ref
+		"Slime" = /obj/item/toy/plushie/slimeplushie,
+		"Box" = /obj/item/toy/plushie/box,
+		"Robot" = /obj/item/toy/plushie/borgplushie,
+		"Medihound" = /obj/item/toy/plushie/borgplushie/medihound,
+		"Scrubpuppy" = /obj/item/toy/plushie/borgplushie/scrubpuppy,
+		"Foxbear" = /obj/item/toy/plushie/foxbear,
+		"Operative" = /obj/item/toy/plushie/nukeplushie,
+		"Otter" = /obj/item/toy/plushie/otter,
+		"Vox" = /obj/item/toy/plushie/vox,
+		"Shark" = /obj/item/toy/plushie/shark,
+		"Sec Drake" = /obj/item/toy/plushie/borgplushie/drake/sec,
+		"Med Drake" = /obj/item/toy/plushie/borgplushie/drake/med,
+		"Sci Drake" = /obj/item/toy/plushie/borgplushie/drake/sci,
+		"Jani Drake" = /obj/item/toy/plushie/borgplushie/drake/jani,
+		"Eng Drake" = /obj/item/toy/plushie/borgplushie/drake/eng,
+		"Mine Drake" = /obj/item/toy/plushie/borgplushie/drake/mine,
+		"Trauma Drake" = /obj/item/toy/plushie/borgplushie/drake/trauma,
+	)
+	gear_tweaks += new/datum/gear_tweak/path(plushie)

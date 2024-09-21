@@ -164,10 +164,11 @@
 	'sound/ambience/ai/ai3.ogg'\
 	)
 
-// Peaceful sounds when floating in the void.
+// Peaceful sounds when floating in the void. //CHOMPedit, added title2, my nostalgia okay?
 #define AMBIENCE_SPACE list(\
 	'sound/ambience/space/space_serithi.ogg',\
-	'sound/ambience/space/space1.ogg'\
+	'sound/ambience/space/space1.ogg',\
+	'sound/music/title2.ogg'\
 	)
 
 // Vaguely spooky sounds when around dead things.
@@ -212,7 +213,7 @@
 	'sound/ambience/expoutpost/expoutpost3.ogg',\
 	'sound/ambience/expoutpost/expoutpost4.ogg'\
 	)
-	
+
 //CHOMP Edit Sounds for Substation rooms. Just electrical sounds, really.
 #define AMBIENCE_SUBSTATION list(\
 	'sound/ambience/substation/substation1.ogg',\
@@ -224,7 +225,7 @@
 	'sound/ambience/substation/substation7.ogg',\
 	'sound/ambience/substation/substation8.ogg'\
 	)
-	
+
 #define AMBIENCE_HANGAR list(\
 	'sound/ambience/hangar/hangar1.ogg',\
 	'sound/ambience/hangar/hangar2.ogg',\

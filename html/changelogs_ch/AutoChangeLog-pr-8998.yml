@@ -1,0 +1,5 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "Line tool and paint bucket tool to Canvases."
+  - rscadd: "Click-and-drag brush in Canvas."

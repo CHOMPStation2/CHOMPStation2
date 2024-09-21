@@ -32,7 +32,7 @@
 
 	attacktext = list("mauled")
 
-	faction = "awaymission" //makes away mobs fuckin' be on the same side.
+	faction = FACTION_AWAYMISSION //makes away mobs fuckin' be on the same side.
 
 	maxHealth = 200
 	health = 200

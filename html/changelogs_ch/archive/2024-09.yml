@@ -11,3 +11,123 @@
   - maptweak: Overhauled the fuel depot and made it spawn randomly in the OM
   - maptweak: Fixed broken door bolts on whiteship II, removed stray door.
   - maptweak: Cybershuttle access fix
+2024-09-03:
+  CHOMPStation2:
+  - qol: hacktools can now be found in a new NULL contraband crate set
+  - qol: hacktools can now hack secure crates and lockers open (but not relock them)
+  - rscadd: added two spice smites; one harmless, one extra spicy
+  FluffMedic:
+  - balance: culling of materials happens at 2500 instead of the previous 500
+  - balance: material loss is 50% instead of the roughly 22% average of before.
+  - balance: material loss can happen until a single material remains.
+  - balance: Illell have normal pain and burn mods
+  TheCaramelion:
+  - rscadd: Re-Enabled wormhole event
+  - rscadd: Wormholes have a chance to pick a belly as an exit
+  - qol: Wormholes won't throw you into Sif anymore
+  - rscadd: Phobia traits actually make you fear
+2024-09-04:
+  CHOMPStation2:
+  - qol: filled in the public teleporter sprite with an alpha layer to make it easier
+      to use them
+  - qol: samples have a more useful description, and are now safer to handle (container
+      still advised) with voidsuits but can have other effects besides just burning
+      your hands
+2024-09-05:
+  Kashargul:
+  - bugfix: description label of the bellyrub target in examine
+2024-09-06:
+  tacoguy7765093:
+  - qol: Superposed pods can be rightclicked to be reset now instead of needing a
+      pen
+  - balance: Buffed the metawhiteship's generator to be a superpacman
+  - balance: Added a fuel cost to the superposed ship's short jumps
+  - maptweak: Fixed a wiring issue in the fuel depot
+2024-09-08:
+  CHOMPStation2:
+  - rscadd: New pAI chassis
+  - bugfix: Vox can take shaved beards
+  - rscadd: Vox dino muzzle
+  - rscadd: Allows prometheans to use teshari and vox icon bases
+  - bugfix: AI default laws use the mapset default laws
+  - qol: You can't run yourself over by pulling a vehicle
+  - qol: Buffs space cleaner to match other cleaning methods
+  - bugfix: Formats greatwolf mode_flags correctly
+  - rscadd: Allows more medical equipment to be stored in the medical toolbelt
+  - qol: Climb crates with mouse drag
+  - qol: Check airlock electrification with the doorbell
+  - qol: Med scanners can detect husking
+  - rscadd: Players can spawn with a one-time mindscan
+  tacoguy7765093:
+  - image: Added a new tail, the feathered raptor tail
+  - maptweak: Whiteship mk2 rewiring plus duplicate fax removal
+  - code_imp: Fax machine inits instead of new now, fixes superposed pod fax machines
+      not updating the list.
+2024-09-12:
+  CHOMPStation2:
+  - rscadd: You can now hold spacebar to throw items.
+  Kashargul:
+  - rscadd: Id card to exploration borg to transfer points from the cataloguer and
+      use on the vendor
+2024-09-14:
+  CHOMPStation2:
+  - rscadd: Examining a mob now puts their description in a box. It's pretty.
+2024-09-15:
+  CHOMPStation2:
+  - rscadd: Fit Viewport verb to automatically remove letterboxing around the map
+  - rscadd: Auto fit viewport preference to do Fit Viewport on login/when view size
+      changes
+  FluffMedic:
+  - qol: ' Broke Cocoon Spinner out of prison, aka everyone acce'
+  - qol: spacebar no longers triggers throw
+  - qol: lets proteans do weaver things again
+  - qol: ' A non-existent list and a non-existent list are apparently two different
+      things. Anyway, reverted to Weaver to how it was before upstream changes, aka
+      open to all species.'
+  Kashargul:
+  - bugfix: liquid belly examine setting not saving
+2024-09-16:
+  Asher-42:
+  - rscadd: Two abilities for protean that makes either their entire body transparent
+      or just the chest.
+  Kashargul:
+  - balance: energy shield life 35 -> 90
+  - balance: energy shield regen 10 -> 25
+  - balance: combat spear damage 25 -> 45 damage
+  - balance: 'explo jaws: 40 -> 60 damage'
+  - bugfix: cleanbot not reaching dirty turfs
+  Missile597:
+  - bugfix: Fixed the broken chain of scrubber pipes near the elevator to be connected
+      now as intended
+  - maptweak: Replaced the cursed unsimulated carpet tiles with proper carpet that
+      can actually be removed
+  tacoguy7765093:
+  - rscadd: Added more shuttles for spacefarers
+  - code_imp: Added documentation to generic_shuttle.dm on how to make your own OM
+      ship
+  - rscadd: SDF Corvette adjustments
+  - rscadd: Daedelus adjustments.
+  - rscadd: Fixes the shockmaul being a missing texture.
+2024-09-17:
+  CHOMPStation2:
+  - rscadd: PDAs will now display image embeds for cdn.discordapp.com and i.imgur.com
+      links.
+  - rscadd: Preference to turn off image embedding completely.
+  TheCaramelion:
+  - balance: 'Osteo/Milk effect: Weakened to Stun'
+  - code_imp: custom_pain proc actually hurts you now
+  - bugfix: Only osteodaxon/milk makes you be in pain now
+2024-09-18:
+  Kashargul:
+  - balance: patches will apply touch again
+  tacoguy7765093:
+  - maptweak: SDF Corvette not cycling airlocks properly
+  - bugfix: SurvivalDIY11x11 lite works now
+2024-09-19:
+  TheCaramelion:
+  - rscadd: Brig Physician role
+  - bugfix: Geneticists start with their right headset now
+2024-09-21:
+  TheCaramelion:
+  - bugfix: Brig Physician is now selectable
+  - bugfix: Fixed onelife trait runtimes

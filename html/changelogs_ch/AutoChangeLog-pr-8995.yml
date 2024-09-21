@@ -1,0 +1,5 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - bugfix: "tweaks mouse holes to not iterate over world contents"
+  - bugfix: "prevents micros from teleporting out of your hand if removed from a mouse hole"

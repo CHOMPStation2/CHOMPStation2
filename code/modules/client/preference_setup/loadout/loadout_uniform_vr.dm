@@ -15,27 +15,27 @@
 /datum/gear/suit/job_fed/sec
 	display_name = "fed uniform, sec"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer","Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/suit/job_fed/medsci
 	display_name = "fed uniform, med/sci"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat/fedblue
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist","Research Director","Scientist", "Roboticist", "Xenobiologist","Xenobotanist", "Field Medic") //CHOMP keep explo
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_MEDICAL_DOCTOR,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST,JOB_XENOBOTANIST, JOB_FIELD_MEDIC) //CHOMP keep explo
 
 /datum/gear/suit/job_fed/eng
 	display_name = "fed uniform, eng"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
-	allowed_roles = list("Chief Engineer","Atmospheric Technician","Engineer")
-
+	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ENGINEER)
 //DS9
 
 /datum/gear/suit/job_trek/ds9_coat
 	display_name = "DS9 Overcoat (use uniform)"
 	path = /obj/item/clothing/suit/storage/trek/ds9
-	allowed_roles = list("Head of Security","Site Manager","Head of Personnel","Chief Engineer","Research Director",
-						"Chief Medical Officer","Medical Doctor","Chemist","Paramedic","Geneticist",
-						"Scientist","Roboticist","Xenobiologist","Xenobotanist","Atmospheric Technician",
-						"Engineer","Warden","Detective","Security Officer", "Pathfinder", "Explorer", "Field Medic", "Blueshield Guard","Security Pilot") //YW ADDITIONS  //CHOMP keep explo
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_CHIEF_ENGINEER,JOB_RESEARCH_DIRECTOR,
+						JOB_CHIEF_MEDICAL_OFFICER,JOB_MEDICAL_DOCTOR,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,
+						JOB_SCIENTIST,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST,JOB_ATMOSPHERIC_TECHNICIAN,
+						JOB_ENGINEER,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,
+						JOB_PATHFINDER,JOB_EXPLORER,JOB_FIELD_MEDIC,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS  //CHOMP keep explo
 
 /*
 Swimsuits
