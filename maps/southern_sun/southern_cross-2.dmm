@@ -2059,7 +2059,7 @@
 	pixel_x = 25
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "aeb" = (
 /obj/item/modular_computer/console/preset/medical{
 	dir = 8
@@ -3611,7 +3611,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ahr" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
@@ -3640,7 +3640,7 @@
 /area/SouthernCrossV2/Security/Internal_Affairs_Office)
 "ahz" = (
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ahC" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -3793,7 +3793,7 @@
 	pixel_x = 7
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ahZ" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -3957,7 +3957,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aiA" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -4600,7 +4600,7 @@
 	pixel_x = -7
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ajQ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/skills{
@@ -4614,7 +4614,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ajX" = (
 /obj/random/tech_supply,
 /obj/random/tech_supply,
@@ -4682,7 +4682,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "akd" = (
 /obj/machinery/light{
 	dir = 1;
@@ -5212,7 +5212,7 @@
 	name = "Engineering Substation"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "alU" = (
 /obj/machinery/smartfridge/drinks/showcase,
 /obj/machinery/firealarm{
@@ -5640,7 +5640,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "anT" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -7008,7 +7008,7 @@
 "ati" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "atk" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/weapon/storage/box/seccarts{
@@ -8065,7 +8065,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "awh" = (
 /obj/item/weapon/paper_bin{
 	pixel_x = 5
@@ -8694,7 +8694,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ayC" = (
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Aft_Tool_Storage)
@@ -9635,7 +9635,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "aBL" = (
 /obj/structure/fitness/weightlifter,
 /obj/effect/floor_decal/spline/plain{
@@ -10875,7 +10875,7 @@
 	pixel_x = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "aFG" = (
 /obj/structure/sign/securearea{
 	icon_state = "radiation_small";
@@ -11083,7 +11083,7 @@
 /area/SouthernCrossV2/Maints/ab_Chapel)
 "aGw" = (
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "aGz" = (
 /obj/machinery/vending/dinnerware,
 /turf/simulated/wall,
@@ -11966,7 +11966,7 @@
 	desc = "Sign of some important station compartment."
 	},
 /turf/simulated/wall/r_wall,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aJb" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark,
@@ -12114,7 +12114,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aJv" = (
 /obj/structure/bed/chair/backed_grey{
 	color = "grey";
@@ -12674,7 +12674,7 @@
 /area/SouthernCrossV2/Security/Deck2_2_Corridor)
 "aLe" = (
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "aLf" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger{
@@ -14102,7 +14102,7 @@
 	req_one_access = list(1,11,24)
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "aPz" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
 /turf/simulated/floor/tiled/steel_grid,
@@ -14135,7 +14135,7 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aPK" = (
 /obj/machinery/lapvend,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -14726,7 +14726,7 @@
 	},
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aRw" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/grille,
@@ -14743,7 +14743,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aRz" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -14759,7 +14759,7 @@
 "aRC" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aRE" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -15530,7 +15530,7 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "aTT" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/borderfloorblack,
@@ -16256,7 +16256,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "aVL" = (
 /obj/machinery/requests_console{
 	pixel_y = -22;
@@ -16568,7 +16568,7 @@
 /area/SouthernCrossV2/Science/Toxins_Storage)
 "aWH" = (
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aWJ" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/shield_diffuser,
@@ -17048,7 +17048,7 @@
 /obj/machinery/power/smes/batteryrack,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "aYA" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -17999,7 +17999,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "bbZ" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
@@ -18300,7 +18300,7 @@
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "bcH" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/structure/cable{
@@ -19195,7 +19195,7 @@
 	},
 /obj/machinery/shield_gen/external,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "bfG" = (
 /obj/structure/cable/white{
 	d1 = 4;
@@ -20334,7 +20334,7 @@
 /area/SouthernCrossV2/Engineering/CE_Office)
 "biZ" = (
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "bjc" = (
 /obj/machinery/photocopier,
 /obj/machinery/light{
@@ -21642,7 +21642,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "bnG" = (
 /obj/structure/stairs/spawner/east,
 /turf/simulated/floor/tiled,
@@ -21735,7 +21735,7 @@
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "bnW" = (
 /obj/item/weapon/stool/padded{
 	dir = 1
@@ -22424,7 +22424,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "bpP" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
@@ -22543,7 +22543,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "bqR" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck2_Security_AftStarCorridor2)
@@ -24318,7 +24318,7 @@
 	dir = 1
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "bwY" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/effect/floor_decal/industrial/arrows/red{
@@ -27573,7 +27573,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "bJc" = (
 /obj/effect/floor_decal/industrial/stand_clear/blue{
 	dir = 4
@@ -30016,7 +30016,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "bSd" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 8
@@ -30604,7 +30604,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "bUo" = (
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Security_AftPortCorridor2)
@@ -32107,7 +32107,7 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "bZi" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
@@ -32983,7 +32983,7 @@
 /obj/machinery/suit_cycler/engineering,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "ccm" = (
 /obj/machinery/camera/network/security{
 	dir = 8;
@@ -34357,7 +34357,7 @@
 /obj/machinery/atmospherics/pipe/tank/air/full,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "cgA" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -37118,7 +37118,7 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "cpW" = (
 /obj/structure/table/steel,
 /obj/item/weapon/hand_labeler{
@@ -37246,7 +37246,7 @@
 /obj/random/trash,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "cqt" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -37667,7 +37667,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "crZ" = (
 /obj/effect/floor_decal/industrial/arrows/yellow,
 /obj/effect/floor_decal/industrial/arrows/yellow{
@@ -38678,7 +38678,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "cur" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -38686,7 +38686,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "cus" = (
 /obj/machinery/shield_capacitor{
 	dir = 1
@@ -38697,7 +38697,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "cuu" = (
 /obj/structure/flora/pottedplant/thinbush{
 	pixel_y = 11;
@@ -39015,7 +39015,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "cvk" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
@@ -39212,7 +39212,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "cwa" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/door/firedoor/border_only,
@@ -40717,7 +40717,7 @@
 "cBu" = (
 /obj/structure/sign/electricshock,
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "cBw" = (
 /obj/structure/railing{
 	dir = 1
@@ -40987,7 +40987,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "cCv" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
@@ -41564,7 +41564,7 @@
 /area/SouthernCrossV2/Harbor/For_Shuttlebay)
 "cDX" = (
 /turf/simulated/wall/r_wall,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "cEa" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
@@ -43057,7 +43057,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "cPz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -43161,7 +43161,7 @@
 	pixel_y = 9
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "cRb" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -43474,7 +43474,7 @@
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "cVi" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
@@ -43711,7 +43711,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "dar" = (
 /obj/structure/table/reinforced,
 /obj/item/modular_computer/laptop/preset/custom_loadout/advanced{
@@ -43830,7 +43830,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "dbx" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -44010,14 +44010,14 @@
 	pixel_x = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "dcl" = (
 /obj/structure/table/steel,
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "dcC" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -44578,7 +44578,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "dkH" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -44602,7 +44602,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "dld" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -44839,7 +44839,7 @@
 	network = list("engineering")
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "doz" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -45971,7 +45971,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "dDU" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -46120,7 +46120,7 @@
 	desc = "Sign of some important station compartment."
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "dFR" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -46434,7 +46434,7 @@
 	unlocked = 1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "dIY" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable{
@@ -46709,7 +46709,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "dMl" = (
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Testing_Lab)
@@ -47062,7 +47062,7 @@
 "dRD" = (
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "dRH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -47462,7 +47462,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "dVT" = (
 /obj/structure/bed/chair/backed_grey{
 	color = "grey";
@@ -47706,7 +47706,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "dZD" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -47726,7 +47726,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "dZM" = (
 /obj/item/toy/cat_toy/rod,
 /obj/effect/floor_decal/spline/fancy,
@@ -47855,7 +47855,7 @@
 	dir = 1
 	},
 /turf/simulated/open,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "eaR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -48528,7 +48528,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "ekh" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -48615,7 +48615,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "eli" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -49165,7 +49165,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "euk" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -49595,7 +49595,7 @@
 "ezo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "ezu" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloorblack,
@@ -49884,7 +49884,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "eEy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -51245,7 +51245,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "eSB" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -52348,7 +52348,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "fho" = (
 /obj/machinery/holoposter{
 	dir = 1;
@@ -53046,7 +53046,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "fpt" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -53269,7 +53269,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "frT" = (
 /obj/structure/sign/department/rnd{
 	desc = "Sign of some important station compartment."
@@ -53304,7 +53304,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "fst" = (
 /obj/structure/table,
 /obj/item/weapon/storage/mre/random,
@@ -53801,7 +53801,7 @@
 	},
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "fyL" = (
 /obj/structure/bed/chair/wood/wings{
 	color = "#004b9a";
@@ -54011,7 +54011,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "fBz" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 8
@@ -54155,7 +54155,7 @@
 /obj/machinery/power/smes/batteryrack/mapped,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "fDI" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -56073,7 +56073,7 @@
 	pixel_y = -1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "fZr" = (
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Packaging_Room)
@@ -56197,7 +56197,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "gbH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -56218,7 +56218,7 @@
 	name = "Lockdown Gate"
 	},
 /turf/simulated/open,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "gbW" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
@@ -56606,7 +56606,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ggO" = (
 /obj/machinery/alarm{
 	pixel_y = 25;
@@ -56808,7 +56808,7 @@
 "giU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "giY" = (
 /obj/structure/cable/white{
 	d1 = 1;
@@ -56889,7 +56889,7 @@
 	pixel_x = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "gjr" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
@@ -56995,7 +56995,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "gjW" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -57113,7 +57113,7 @@
 	},
 /obj/machinery/shield_gen/external,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "glF" = (
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/carpet,
@@ -57202,7 +57202,7 @@
 	network = list("engineering")
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "gnm" = (
 /obj/machinery/alarm{
 	name = "E-alarm";
@@ -57632,7 +57632,7 @@
 "gtm" = (
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "gto" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -57920,7 +57920,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "gzh" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
@@ -58219,7 +58219,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "gCj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -58332,7 +58332,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "gCS" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -58400,7 +58400,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "gDA" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
 /obj/machinery/camera/network/security{
@@ -58720,7 +58720,7 @@
 /obj/machinery/power/thermoregulator,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "gIJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -58773,7 +58773,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "gJr" = (
 /obj/structure/bed/chair/sofa/corner/blue,
 /obj/structure/window/titanium{
@@ -59033,7 +59033,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "gMN" = (
 /obj/machinery/light_construct{
 	dir = 4
@@ -59140,7 +59140,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "gOr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -59539,7 +59539,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "gTx" = (
 /obj/machinery/alarm{
 	pixel_y = -25;
@@ -60411,7 +60411,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "hfJ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
@@ -60542,7 +60542,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "hhi" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -61029,7 +61029,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "hmH" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
@@ -61450,7 +61450,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "hsE" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -61768,7 +61768,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "hxx" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -61797,7 +61797,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "hxN" = (
 /obj/structure/filingcabinet/chestdrawer{
 	dir = 1
@@ -61846,7 +61846,7 @@
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "hyh" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -61974,7 +61974,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "hzQ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -62519,7 +62519,7 @@
 	pixel_x = -4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "hJz" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
@@ -62615,7 +62615,7 @@
 	name = "1E-light fixture"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "hLX" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -62704,7 +62704,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "hNv" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1
@@ -62721,7 +62721,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "hNK" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 8
@@ -62791,7 +62791,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "hOu" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/door/firedoor/border_only,
@@ -62997,7 +62997,7 @@
 /area/SouthernCrossV2/Maints/Deck2_Civilian_PortChamber2)
 "hPZ" = (
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "hQq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -64069,7 +64069,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "iew" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -64766,7 +64766,7 @@
 /obj/structure/cable/green,
 /obj/machinery/shield_gen/external,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "ilT" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -64972,7 +64972,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ios" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -65352,7 +65352,7 @@
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "iuj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -65691,7 +65691,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "ixE" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -66162,7 +66162,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "iEt" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -67277,7 +67277,7 @@
 "iSj" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "iSq" = (
 /obj/structure/bed/chair/office/light,
 /obj/effect/floor_decal/borderfloorblack,
@@ -67403,7 +67403,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "iVi" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -67860,7 +67860,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "iZV" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -67983,7 +67983,7 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "jbI" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -68103,7 +68103,7 @@
 	name = "Domicile Air Distribution"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "jdZ" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -68134,7 +68134,7 @@
 /area/SouthernCrossV2/Maints/Deck2_AftPort_Corridor)
 "jew" = (
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "jeH" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/power/smes/buildable{
@@ -68152,10 +68152,10 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "jeI" = (
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "jeP" = (
 /obj/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -68164,7 +68164,7 @@
 	pixel_x = -4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "jfo" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -68465,7 +68465,7 @@
 	},
 /obj/machinery/atmospherics/valve/digital/open,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "jiD" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -68949,7 +68949,7 @@
 /obj/structure/cable,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "jod" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -69464,7 +69464,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "jvE" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
@@ -69606,14 +69606,14 @@
 	req_one_access = list(11,24,50)
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "jyK" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Cargo Substation Bypass"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "jzf" = (
 /obj/structure/table/rack/steel,
 /obj/fiftyspawner/plastic{
@@ -69747,7 +69747,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "jAY" = (
 /obj/machinery/light{
 	dir = 8;
@@ -69882,7 +69882,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "jDi" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/shuttle/blue{
@@ -70293,7 +70293,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "jJH" = (
 /obj/structure/table/woodentable,
 /obj/item/device/communicator,
@@ -70748,7 +70748,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "jPx" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
@@ -72468,7 +72468,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "kmK" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
@@ -72938,7 +72938,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "kuR" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -73411,7 +73411,7 @@
 /area/SouthernCrossV2/Security/Evidence_Storage)
 "kCx" = (
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "kCJ" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -73424,7 +73424,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "kCO" = (
 /obj/structure/sign/directions/ladderwell,
 /turf/simulated/wall,
@@ -74031,7 +74031,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "kKF" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/oracarpet,
@@ -74248,7 +74248,7 @@
 	network = list("engineering")
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "kMX" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -74392,7 +74392,7 @@
 	pixel_x = -11
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "kPs" = (
 /obj/structure/bed/chair/oldsofa,
 /turf/simulated/floor/carpet/brown,
@@ -74909,7 +74909,7 @@
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "kVL" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -75227,7 +75227,7 @@
 	name = "Lockdown Gate"
 	},
 /turf/simulated/open,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "lbm" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/camera/network/security{
@@ -75263,7 +75263,7 @@
 	name = "Lockdown Gate"
 	},
 /turf/simulated/open,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "lbB" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -75339,7 +75339,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "lbP" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2,
 /turf/simulated/floor/tiled,
@@ -75537,7 +75537,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "ldz" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -75971,7 +75971,7 @@
 	pixel_y = -6
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "llb" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable{
@@ -76349,7 +76349,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "lrb" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -76488,7 +76488,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ltH" = (
 /turf/simulated/floor/carpet,
 /area/SouthernCrossV2/Maints/ab_Chapel)
@@ -76594,7 +76594,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "lvx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -76888,7 +76888,7 @@
 	pixel_x = -4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "lAh" = (
 /obj/structure/bed/chair/oldsofa{
 	dir = 1
@@ -77138,7 +77138,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "lDK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -77340,7 +77340,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "lGf" = (
 /obj/structure/bed/chair/sofa/right/blue,
 /turf/simulated/floor/carpet/green,
@@ -78351,7 +78351,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "lUn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -78628,7 +78628,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "lWX" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -78672,7 +78672,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "lXu" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark,
@@ -79503,7 +79503,7 @@
 /obj/machinery/suit_cycler/engineering,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "mma" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -79933,7 +79933,7 @@
 "mrU" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "msv" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -80344,7 +80344,7 @@
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "mzl" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -80579,7 +80579,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "mCl" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -80640,7 +80640,7 @@
 	dir = 1
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "mDc" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -80942,7 +80942,7 @@
 	name = "1N-lighting fixture"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "mHG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloorblack{
@@ -81235,7 +81235,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "mLP" = (
 /obj/structure/lattice,
 /obj/machinery/light/small/neon/generic_blue,
@@ -82457,7 +82457,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "nbT" = (
 /obj/structure/sign/directions/medical{
 	dir = 4;
@@ -82513,7 +82513,7 @@
 /obj/random/trash,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ncm" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4
@@ -82591,7 +82591,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "ndY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -82869,7 +82869,7 @@
 	pixel_x = 7
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "niK" = (
 /obj/machinery/alarm{
 	pixel_y = -25;
@@ -82899,7 +82899,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "njh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -83196,7 +83196,7 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "nqk" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/steel_ridged{
@@ -83442,7 +83442,7 @@
 	network = list("engineering")
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "nsT" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor3)
@@ -83592,7 +83592,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "nuH" = (
 /obj/machinery/bodyscanner{
 	dir = 8
@@ -84456,7 +84456,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "nJS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -84742,7 +84742,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "nOv" = (
 /obj/structure/bed/chair/sofa/right,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -85439,7 +85439,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "nXR" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/purple/border,
@@ -85541,7 +85541,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "nYH" = (
 /obj/effect/floor_decal/industrial/arrows/blue,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -86177,7 +86177,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "ogF" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light/small,
@@ -86501,7 +86501,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "okt" = (
 /obj/item/weapon/paper_bin{
 	pixel_x = 5
@@ -86773,7 +86773,7 @@
 	dir = 1
 	},
 /turf/simulated/open,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "oqB" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 8
@@ -87031,7 +87031,7 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "ovb" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -88309,7 +88309,7 @@
 "oMQ" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "oMV" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -88380,7 +88380,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "oOp" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -88581,7 +88581,7 @@
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "oRM" = (
 /obj/structure/bed/chair/sofa/right/brown{
 	dir = 1;
@@ -89112,7 +89112,7 @@
 	pixel_x = 6
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "oYz" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -90791,7 +90791,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "ptm" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/catwalk_plated,
@@ -91142,7 +91142,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "pxj" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/research,
@@ -91177,7 +91177,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "pxL" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/shuttle/blue{
@@ -91347,7 +91347,7 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "pzW" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -91990,7 +91990,7 @@
 	name = "1W-light fixture"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "pIS" = (
 /obj/machinery/photocopier,
 /obj/machinery/alarm{
@@ -92162,7 +92162,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "pMa" = (
 /obj/machinery/light_construct{
 	dir = 8
@@ -93049,7 +93049,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "pXi" = (
 /obj/structure/closet/wardrobe/detective,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -93184,7 +93184,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "pYU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -93856,7 +93856,7 @@
 	network = list("engineering")
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "qjA" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -93871,7 +93871,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "qjH" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -93960,7 +93960,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "qkK" = (
 /obj/structure/railing{
 	dir = 8
@@ -94439,7 +94439,7 @@
 /obj/machinery/power/terminal,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "qqq" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -95192,7 +95192,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "qBp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -95219,7 +95219,7 @@
 	unlocked = 1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "qBO" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -95286,7 +95286,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "qCK" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -95296,7 +95296,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "qCP" = (
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/airless,
@@ -95348,7 +95348,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "qDK" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -95358,7 +95358,7 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "qDM" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -95569,7 +95569,7 @@
 "qHW" = (
 /obj/structure/sign/examroom,
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "qIl" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -95585,7 +95585,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "qIm" = (
 /obj/effect/floor_decal/industrial/arrows/red{
 	dir = 4
@@ -95763,7 +95763,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "qKV" = (
 /obj/item/weapon/pack/cardemon,
 /obj/structure/table,
@@ -95777,7 +95777,7 @@
 /obj/structure/cable/green,
 /obj/machinery/light,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "qLg" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -96148,7 +96148,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "qPt" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Gym)
@@ -96415,7 +96415,7 @@
 "qTb" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/r_wall,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "qTx" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/r_wall,
@@ -97005,7 +97005,7 @@
 	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "rck" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -97201,7 +97201,7 @@
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "rek" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4
@@ -97639,7 +97639,7 @@
 /obj/structure/cable/green,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "rkd" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -97650,7 +97650,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "rkf" = (
 /obj/effect/floor_decal/industrial/arrows{
 	dir = 4
@@ -97696,7 +97696,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "rkt" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -98011,7 +98011,7 @@
 	pixel_x = 25
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "roc" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -98162,7 +98162,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "rrO" = (
 /obj/structure/bed/chair/sofa/right/sif_ora{
 	dir = 4
@@ -98229,7 +98229,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "rsF" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
@@ -98301,7 +98301,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "rtr" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -98336,7 +98336,7 @@
 "rts" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "rtw" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -98662,7 +98662,7 @@
 "rxH" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "rxI" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/box/cups{
@@ -98810,7 +98810,7 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ryI" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -99473,7 +99473,7 @@
 	name = "W-fire alarm"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "rEM" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -100029,7 +100029,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "rMM" = (
 /obj/item/clothing/suit/space/void/atmos{
 	pixel_x = -6
@@ -100154,7 +100154,7 @@
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "rNz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -100252,7 +100252,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "rPz" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -100279,7 +100279,7 @@
 "rPP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "rPT" = (
 /obj/item/weapon/grenade/confetti/party_ball,
 /obj/random/tool,
@@ -100522,7 +100522,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "rUI" = (
 /obj/structure/toilet{
 	dir = 4
@@ -100850,7 +100850,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "rYm" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -101127,7 +101127,7 @@
 	pixel_x = -25
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "sbZ" = (
 /obj/effect/floor_decal/industrial/arrows/blue{
 	dir = 4
@@ -101728,7 +101728,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "skp" = (
 /obj/structure/window/titanium{
 	dir = 8
@@ -101811,7 +101811,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "slC" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -102654,7 +102654,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "sxa" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -102989,7 +102989,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "sBl" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -103283,7 +103283,7 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "sDJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -103358,7 +103358,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "sFu" = (
 /obj/structure/table/fancyblack,
 /obj/item/clothing/mask/muzzle/ballgag{
@@ -103373,7 +103373,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "sFE" = (
 /obj/item/clothing/suit/storage/apron{
 	pixel_x = -5
@@ -103506,7 +103506,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "sGr" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -103530,7 +103530,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "sHa" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
@@ -103612,7 +103612,7 @@
 	pixel_y = -1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "sIp" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -104541,7 +104541,7 @@
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "sWi" = (
 /obj/machinery/pointdefense{
 	id_tag = "PD Primary"
@@ -104637,7 +104637,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "sXo" = (
 /turf/simulated/floor/glass,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
@@ -104782,7 +104782,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "sZh" = (
 /obj/effect/landmark{
 	name = "lightsout"
@@ -104937,7 +104937,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "tce" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/gloves{
@@ -105713,7 +105713,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "tnv" = (
 /obj/effect/floor_decal/industrial/stand_clear/blue{
 	dir = 1
@@ -105739,7 +105739,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "tnO" = (
 /obj/machinery/light{
 	dir = 1;
@@ -105896,7 +105896,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "tpB" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -106088,7 +106088,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "tuk" = (
 /obj/machinery/light/small,
 /obj/structure/table/steel,
@@ -106109,7 +106109,7 @@
 	dir = 4
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "tut" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -106124,7 +106124,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "tuw" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -106449,7 +106449,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "tyQ" = (
 /obj/structure/railing/grey{
 	color = "yellow";
@@ -107430,7 +107430,7 @@
 	network = list("engineering")
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "tNZ" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -107488,11 +107488,11 @@
 	pixel_y = -1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "tOv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "tOE" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor,
@@ -107609,7 +107609,7 @@
 	pixel_x = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "tQg" = (
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
@@ -107741,7 +107741,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "tRL" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -107790,7 +107790,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "tSe" = (
 /obj/machinery/light{
 	dir = 1;
@@ -107823,7 +107823,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "tSo" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -107986,7 +107986,7 @@
 /obj/machinery/atmospherics/valve/digital/open,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "tUc" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -108138,7 +108138,7 @@
 "tWO" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "tWZ" = (
 /obj/machinery/light/floortube{
 	dir = 4;
@@ -109080,7 +109080,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "uiD" = (
 /obj/machinery/photocopier,
 /obj/machinery/light{
@@ -109121,7 +109121,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "ujx" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -109298,7 +109298,7 @@
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "ums" = (
 /obj/structure/sign/directions/evac{
 	dir = 8
@@ -110050,7 +110050,7 @@
 	name = "1S-light fixture"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "uzD" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -110185,7 +110185,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "uCk" = (
 /obj/machinery/alarm{
 	name = "W-alarm";
@@ -110327,7 +110327,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "uFe" = (
 /obj/structure/sign/directions/security/brig{
 	dir = 9
@@ -110435,14 +110435,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "uHv" = (
 /obj/machinery/atmospherics/valve/shutoff{
 	name = "Cargo automatic shutoff valve"
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "uHU" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck2_Security_ForPortChamber1)
@@ -110455,7 +110455,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "uIg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -110678,7 +110678,7 @@
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "uMC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -110734,7 +110734,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "uNd" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -111133,7 +111133,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "uST" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8;
@@ -111222,7 +111222,7 @@
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "uTK" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -111896,7 +111896,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "vbX" = (
 /obj/machinery/alarm{
 	name = "E-alarm";
@@ -112538,7 +112538,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "vnx" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
@@ -112645,7 +112645,7 @@
 "vpe" = (
 /obj/machinery/atmospherics/valve/digital/open,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "vpj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -113161,7 +113161,7 @@
 	pixel_y = 9
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "vvY" = (
 /obj/machinery/alarm{
 	name = "N-alarm";
@@ -113326,7 +113326,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "vyn" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
@@ -113410,7 +113410,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "vzs" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
@@ -113746,7 +113746,7 @@
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "vEN" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/paper_bin{
@@ -113790,7 +113790,7 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "vFq" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -114469,7 +114469,7 @@
 	desc = "Sign of some important station compartment."
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "vSs" = (
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
@@ -114653,7 +114653,7 @@
 /obj/machinery/suit_cycler/engineering,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "vUv" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/brown,
@@ -114808,7 +114808,7 @@
 /area/SouthernCrossV2/Maints/Deck2_Science_StarCorridor1)
 "vWx" = (
 /turf/simulated/wall/r_wall,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "vWB" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/stack/cable_coil/random{
@@ -115434,7 +115434,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "weA" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -115497,7 +115497,7 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "wff" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -116368,7 +116368,7 @@
 	name = "Science automatic shutoff valve"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "wpe" = (
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
@@ -116431,7 +116431,7 @@
 "wpP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "wqc" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/catwalk_plated/white,
@@ -118320,7 +118320,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "wQu" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -118883,7 +118883,7 @@
 "wXx" = (
 /obj/structure/sign/nosmoking_2,
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "wXR" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	frequency = 1380;
@@ -118912,7 +118912,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "wYS" = (
 /obj/structure/loot_pile/maint/technical,
 /obj/random/junk,
@@ -118928,7 +118928,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "wZj" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -119180,7 +119180,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "xcQ" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -120123,7 +120123,7 @@
 	name = "Lockdown Gate"
 	},
 /turf/simulated/open,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "xpR" = (
 /obj/structure/table/rack,
 /obj/random/maintenance/clean,
@@ -120536,7 +120536,7 @@
 /area/SouthernCrossV2/Security/Shuttlebay_Storage)
 "xvF" = (
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Domicile_Substation)
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "xvJ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -120639,7 +120639,7 @@
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "xyj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
@@ -120785,7 +120785,7 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/atmospherics/pipe/tank/air/full,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "xAm" = (
 /obj/effect/landmark{
 	name = "blobstart"
@@ -120980,7 +120980,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "xCF" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -121379,7 +121379,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Research_Substation)
+/area/SouthernCrossV2/Maints/Research_Substation)
 "xIB" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -121403,7 +121403,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Cargo_Substation)
+/area/SouthernCrossV2/Maints/Cargo_Substation)
 "xJa" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
@@ -121682,7 +121682,7 @@
 	pixel_x = 6
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "xOT" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -121841,7 +121841,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "xQQ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -121887,7 +121887,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 "xSl" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -122602,7 +122602,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Civilian)
+/area/SouthernCrossV2/Maints/Distro_Civilian)
 "yaI" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -122651,7 +122651,7 @@
 	name = "Medical automatic shutoff valve"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "ybA" = (
 /obj/structure/closet/emcloset,
 /obj/item/weapon/storage/box/survival/synth{
@@ -122733,7 +122733,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engineering_Substation)
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "yck" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -122871,7 +122871,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Medical_Substation)
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "ydX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -123519,7 +123519,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Security_Substation)
+/area/SouthernCrossV2/Maints/Security_Substation)
 
 (1,1,1) = {"
 aaa
