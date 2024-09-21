@@ -2686,10 +2686,10 @@ var/list/the_station_areas = list (
 
 // CHOMPAdd Start new Map
 /area/SouthernCrossV2/Maints
-    name = "\improper Evac"
-    icon_state = "fsmaint"
+	name = "\improper Evac"
+	icon_state = "fsmaint"
 
 /area/SouthernCrossV2/Evac
-    name = "\improper Evac"
-    icon_state = "shuttle2"
+	name = "\improper Evac"
+	icon_state = "shuttle2"
 // CHOMPAdd End new Map
