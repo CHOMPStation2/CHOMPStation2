@@ -592,7 +592,7 @@ Talon pin
 		"White cat" = /obj/item/toy/plushie/white_cat,
 		"Lizard" = /obj/item/toy/plushie/lizardplushie,
 		"Kobold" = /obj/item/toy/plushie/lizardplushie/kobold,
-		"Resh" = /obj/item/toy/plushie/lizardplushie/resh,
+		//"Resh" = /obj/item/toy/plushie/lizardplushie/resh, // CHOMPRemove, upstream player ref
 		"Slime" = /obj/item/toy/plushie/slimeplushie,
 		"Box" = /obj/item/toy/plushie/box,
 		"Robot" = /obj/item/toy/plushie/borgplushie,
