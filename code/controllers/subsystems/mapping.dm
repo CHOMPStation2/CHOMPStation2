@@ -76,7 +76,7 @@ SUBSYSTEM_DEF(mapping)
 // VOREStation Edit Start: Enable This
 /datum/controller/subsystem/mapping/proc/loadLateMaps()
 	var/list/deffo_load = using_map.lateload_z_levels
-	var/list/maybe_load = using_map.lateload_gateway
+	var/list/maybe_load = null
 	var/list/also_load = using_map.lateload_overmap
 	var/list/redgate_load = using_map.lateload_redgate
 
