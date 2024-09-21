@@ -938,7 +938,7 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "aez" = (
 /obj/structure/closet/l3closet/janitor,
 /obj/effect/floor_decal/borderfloorblack{
@@ -3106,7 +3106,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "aqD" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/door/firedoor/border_only,
@@ -3360,7 +3360,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "arX" = (
 /obj/structure/table/rack/shelf,
 /obj/item/weapon/bluespace_crystal/artificial{
@@ -7560,7 +7560,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "aVS" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/ab_StripBar)
@@ -8244,7 +8244,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "bfs" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -11479,7 +11479,7 @@
 	pixel_y = -1
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "clj" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/northleft{
@@ -11612,7 +11612,7 @@
 	sort_tag = "cum"
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "cmI" = (
 /obj/machinery/pointdefense{
 	id_tag = "PD Primary"
@@ -11877,7 +11877,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "crj" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -12113,7 +12113,7 @@
 "cwL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "cxg" = (
 /obj/structure/ladder/up,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -13770,7 +13770,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "daQ" = (
 /obj/machinery/holoposter,
 /turf/simulated/wall/r_wall,
@@ -14339,7 +14339,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "djE" = (
 /obj/structure/table/rack,
 /obj/random/maintenance/clean,
@@ -18488,7 +18488,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "eeh" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -21931,7 +21931,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "fqr" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
@@ -23872,7 +23872,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "fZP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable{
@@ -25630,7 +25630,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "gJP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27050,7 +27050,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "hkK" = (
 /obj/machinery/camera/network/security{
 	dir = 9;
@@ -27923,7 +27923,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "hCh" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
@@ -28033,7 +28033,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "hEt" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/red{
@@ -28861,7 +28861,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "hWg" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -29438,7 +29438,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "igv" = (
 /obj/structure/closet/crate,
 /obj/random/maintenance/clean,
@@ -29512,7 +29512,7 @@
 	name = "1E-light fixture"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "iid" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -31577,7 +31577,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "jaH" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -32120,7 +32120,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "jlt" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/effect/floor_decal/borderfloorwhite,
@@ -37976,10 +37976,10 @@
 	name = "1W-light fixture"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "lpM" = (
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "lqh" = (
 /obj/item/toy/plushie/black_fox,
 /obj/item/toy/plushie/carp/pink{
@@ -38709,7 +38709,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "lEE" = (
 /obj/machinery/camera/network/security{
 	dir = 4;
@@ -39004,7 +39004,7 @@
 /obj/machinery/atmospherics/valve/digital/open,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "lLT" = (
 /obj/structure/curtain/black{
 	name = "privacy curtain";
@@ -39529,7 +39529,7 @@
 	target_pressure = 200
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "lTc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -39702,7 +39702,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "lVd" = (
 /obj/structure/table/rack/shelf,
 /obj/random/maintenance,
@@ -40176,7 +40176,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "mdb" = (
 /obj/machinery/light{
 	dir = 4
@@ -40377,7 +40377,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "mhI" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/shuttle/blue{
@@ -41676,7 +41676,7 @@
 "mBN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "mDa" = (
 /obj/structure/stairs/spawner/north,
 /obj/structure/railing{
@@ -44522,7 +44522,7 @@
 "nEl" = (
 /obj/random/crate,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "nEs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -45586,7 +45586,7 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "nWh" = (
 /obj/machinery/smartfridge/secure{
 	req_access = list(47)
@@ -48975,7 +48975,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "pcg" = (
 /obj/structure/cable/white{
 	d1 = 1;
@@ -49268,7 +49268,7 @@
 "pgq" = (
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "pgv" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Deck1_Science_AftCorridor1)
@@ -51575,7 +51575,7 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "pQF" = (
 /obj/machinery/cell_charger{
 	pixel_y = 11
@@ -53985,7 +53985,7 @@
 "qIT" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "qJd" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -55566,7 +55566,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "rfS" = (
 /obj/structure/fuel_port{
 	pixel_y = -28
@@ -55990,7 +55990,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "rpf" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable{
@@ -57208,7 +57208,7 @@
 "rLA" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "rLJ" = (
 /obj/machinery/alarm{
 	name = "N-alarm";
@@ -57984,7 +57984,7 @@
 "sbu" = (
 /obj/effect/floor_decal/industrial/bot_outline/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "sbE" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
@@ -58742,7 +58742,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "spT" = (
 /obj/machinery/atmospherics/unary/freezer{
 	dir = 8;
@@ -59026,7 +59026,7 @@
 /obj/random/contraband,
 /obj/random/cargopod,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "sxG" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
@@ -64258,7 +64258,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "unu" = (
 /obj/machinery/portable_atmospherics/canister/empty/oxygen,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -64580,7 +64580,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "uue" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -65225,7 +65225,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "uHI" = (
 /obj/structure/table/darkglass,
 /obj/item/weapon/digestion_remains/variant1{
@@ -65604,7 +65604,7 @@
 	network = list("Engineering")
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "uNe" = (
 /obj/structure/table/steel,
 /obj/item/weapon/paper/petrification_notes,
@@ -66301,7 +66301,7 @@
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "vaz" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -66778,7 +66778,7 @@
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "vih" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -67806,7 +67806,7 @@
 	pixel_x = 6
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "vxY" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/cargo,
@@ -72015,7 +72015,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "wYz" = (
 /obj/machinery/camera/network/security{
 	dir = 8;
@@ -73623,7 +73623,7 @@
 	scrub_id = "SC-Harbor"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "xCJ" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Deck1_Science_ForCorridor1)
@@ -73662,7 +73662,7 @@
 /obj/machinery/suit_cycler/engineering,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "xDv" = (
 /obj/machinery/status_display,
 /turf/simulated/wall,
@@ -73834,7 +73834,7 @@
 /area/SouthernCrossV2/Domicile/For_Restroom)
 "xHx" = (
 /turf/simulated/wall,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "xHz" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/effect/floor_decal/industrial/arrows/blue,
@@ -74428,7 +74428,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Distro_Harbor)
+/area/SouthernCrossV2/Maints/Distro_Harbor)
 "xTD" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
