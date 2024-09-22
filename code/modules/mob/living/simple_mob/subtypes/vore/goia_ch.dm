@@ -65,7 +65,7 @@
 		"zorgoia_ears" = "#FFFFFF",
 		"zorgoia_spots" = "#FFFFFF",
 		"zorgoia_claws" = "#FFFFFF",
-		"zorgoia_spikes" = "#FFFFFF",
+		"zorgoia_spines" = "#FFFFFF",
 		"zorgoia_fluff" = "#FFFFFF",
 		"zorgoia_underbelly" = "#FFFFFF",
 		"zorgoia_eyes" = "#FFFFFF",
@@ -74,9 +74,6 @@
 
 	var/list/belly_styles = list(
 		"zorgoia_belly"
-	)
-	var/list/spiky_styles = list(
-		"zorgoia_spike"
 	)
 	var/list/ear_styles = list(
 		"null",
@@ -107,15 +104,18 @@
 	var/list/eyes_styles = list(
 		"zorgoia_eyes"
 	)
+	var/list/spiky_styles = list(
+		"zorgoia_spike"
+	)
 
 /mob/living/simple_mob/vore/zorgoia/proc/recolor() //Base sprite wont need a radical menu selection
 	set name = "Change Color"
 	set desc = "Change your main color."
 	set category = "Abilities.General"
-	var/new_color = input("Pick new colors:","Color", goia_overlays[2]) as null|color
+	var/new_color = input("Pick new colors:","Color", goia_overlays["zorgoia_main"]) as null|color
 	if(!new_color)
 		return 0
-	goia_overlays[goia_overlays[2]] = new_color
+	goia_overlays["zorgoia_main"] = new_color
 	update_icon()
 
 /mob/living/simple_mob/vore/zorgoia/proc/appearance_switch() //This is just copypastas of the radial menu code, each block of code is the options for each bit of customisation... all 9 of them
@@ -139,28 +139,12 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick belly color:","Belly Color", goia_overlays[1]) as null|color
+			var/new_color = input("Pick belly color:","Belly Color", goia_overlays["zorgoia_belly"]) as null|color
 			if(!new_color)
 				return 0
-			goia_overlays[1] = choice
-			goia_overlays[goia_overlays[1]] = new_color
+			goia_overlays["belly"] = choice
+			goia_overlays["zorgoia_belly"] = new_color
 			update_icon()
-
-		if("Spike")
-			options = spiky_styles
-			for(var/option in options)
-				var/image/I = image('modular_chomp/icons/mob/zorgoia64x32.dmi', option, dir = 4)
-				LAZYSET(options, option, I)
-			choice = show_radial_menu(src, src, options, radius = 90)
-			if(!choice || QDELETED(src) || src.incapacitated())
-				return 0
-			var/new_color = input("Pick tail spike color:","Tail Color", goia_overlays[10]) as null|color //This is overlay 10, not 2, swapped with main body, im not rewriting this array
-			if(!new_color)
-				return 0
-			goia_overlays[10] = choice
-			goia_overlays[goia_overlays[10]] = new_color
-			update_icon()
-
 
 		if("Ears")
 			options = ear_styles
@@ -170,11 +154,11 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick ears spike color:","Ears Color", goia_overlays[3]) as null|color
+			var/new_color = input("Pick ears spike color:","Ears Color", goia_overlays["zorgoia_ears"]) as null|color
 			if(!new_color)
 				return 0
-			goia_overlays[3] = choice
-			goia_overlays[goia_overlays[3]] = new_color
+			goia_overlays["ears"] = choice
+			goia_overlays["zorgoia_ears"] = new_color
 			update_icon()
 
 		if("Spots")
@@ -185,11 +169,11 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick spot colors:","Spots Color", goia_overlays[4]) as null|color
+			var/new_color = input("Pick spot colors:","Spots Color", goia_overlays["zorgoia_spots"]) as null|color
 			if(!new_color)
 				return 0
-			goia_overlays[4] = choice
-			goia_overlays[goia_overlays[4]] = new_color
+			goia_overlays["spots"] = choice
+			goia_overlays["zorgoia_spots"] = new_color
 			update_icon()
 
 		if("Claws")
@@ -200,11 +184,11 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick claw colors:","Claws Color", goia_overlays[5]) as null|color
+			var/new_color = input("Pick claw colors:","Claws Color", goia_overlays["zorgoia_claws"]) as null|color
 			if(!new_color)
 				return 0
-			goia_overlays[5] = choice
-			goia_overlays[goia_overlays[5]] = new_color
+			goia_overlays["claws"] = choice
+			goia_overlays["zorgoia_claws"] = new_color
 			update_icon()
 
 		if("Spines")
@@ -215,11 +199,11 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick spines colors:","Spines Color", goia_overlays[6]) as null|color
+			var/new_color = input("Pick spines colors:","Spines Color", goia_overlays["zorgoia_spines"]) as null|color
 			if(!new_color)
 				return 0
-			goia_overlays[6] = choice
-			goia_overlays[goia_overlays[6]] = new_color
+			goia_overlays["spines"] = choice
+			goia_overlays["zorgoia_spines"] = new_color
 			update_icon()
 
 		if("Fluff")
@@ -230,11 +214,11 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick fluff colors:","Fluff Color", goia_overlays[7]) as null|color
+			var/new_color = input("Pick fluff colors:","Fluff Color", goia_overlays["zorgoia_fluff"]) as null|color
 			if(!new_color)
 				return 0
-			goia_overlays[7] = choice
-			goia_overlays[goia_overlays[7]] = new_color
+			goia_overlays["fluff"] = choice
+			goia_overlays["zorgoia_fluff"] = new_color
 			update_icon()
 
 		if("Underbelly")
@@ -245,11 +229,11 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick underbelly colors:","Underbelly Color", goia_overlays[4]) as null|color
+			var/new_color = input("Pick underbelly colors:","Underbelly Color", goia_overlays["zorgoia_underbelly"]) as null|color
 			if(!new_color)
 				return 0
-			goia_overlays[8] = choice
-			goia_overlays[goia_overlays[8]] = new_color
+			goia_overlays["underbelly"] = choice
+			goia_overlays["zorgoia_underbelly"] = new_color
 			update_icon()
 
 		if("Eyes")
@@ -260,11 +244,26 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick eye color:","Eye Color", goia_overlays[9]) as null|color
+			var/new_color = input("Pick eye color:","Eye Color", goia_overlays["zorgoia_eyes"]) as null|color
 			if(!new_color)
 				return 0
-			goia_overlays[9] = choice
-			goia_overlays[goia_overlays[9]] = new_color
+			goia_overlays["eyes"] = choice
+			goia_overlays["zorgoia_eyes"] = new_color
+			update_icon()
+
+		if("Spike")
+			options = spiky_styles
+			for(var/option in options)
+				var/image/I = image('modular_chomp/icons/mob/zorgoia64x32.dmi', option, dir = 4)
+				LAZYSET(options, option, I)
+			choice = show_radial_menu(src, src, options, radius = 90)
+			if(!choice || QDELETED(src) || src.incapacitated())
+				return 0
+			var/new_color = input("Pick tail spike color:","Tail Color", goia_overlays["zorgoia_spike"]) as null|color //This is overlay 10, not 2, swapped with main body, im not rewriting this array
+			if(!new_color)
+				return 0
+			goia_overlays["spike"] = choice
+			goia_overlays["zorgoia_spike"] = new_color
 			update_icon()
 		else
 
@@ -276,6 +275,8 @@
 	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/appearance_switch)
 	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/recolor)
 	add_verb(src,/mob/living/proc/injection) //Poison sting c:
+	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/export_style)
+	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/import_style)
 	src.trait_injection_reagents += "microcillin"		// get small
 	src.trait_injection_reagents += "macrocillin"		// get BIG
 	src.trait_injection_reagents += "normalcillin"	// normal
@@ -289,6 +290,28 @@
 	src.trait_injection_reagents += "painenzyme"		// Pain INCREASER
 	src.trait_injection_reagents += "aphrodisiac"		// Horni
 
+	var/bodycolor = "#[get_random_colour(0,0,255)]"
+	var/spines = "#[get_random_colour(0,0,255)]"
+	goia_overlays["belly"] = pick(belly_styles)
+	goia_overlays["zorgoia_belly"] = bodycolor
+	goia_overlays["ears"] = pick(ear_styles)
+	goia_overlays["zorgoia_ears"] = bodycolor
+	goia_overlays["spots"] = pick(spots_styles)
+	goia_overlays["zorgoia_spots"] = "#[get_random_colour(0,0,255)]"
+	goia_overlays["claws"] = pick(claws_styles)
+	goia_overlays["zorgoia_claws"] = spines
+	goia_overlays["spines"] = pick(spines_styles)
+	goia_overlays["zorgoia_spines"] = spines
+	goia_overlays["fluff"] = pick(fluff_styles)
+	goia_overlays["zorgoia_fluff"] = bodycolor
+	goia_overlays["underbelly"] = pick(underbelly_styles)
+	goia_overlays["zorgoia_underbelly"] = bodycolor
+	goia_overlays["eyes"] = pick(eyes_styles)
+	goia_overlays["zorgoia_eyes"] = "#[get_random_colour(1)]"
+	goia_overlays["spike"] = pick(spiky_styles)
+	goia_overlays["zorgoia_spike"] = "#[get_random_colour(0,0,255)]"
+	update_icon()
+
 /mob/living/simple_mob/vore/zorgoia/update_icon()
 	..()
 	if(stat == DEAD)
@@ -300,80 +323,79 @@
 	icon = 'modular_chomp/icons/mob/zorgoia64x32.dmi'
 	vore_capacity = 3
 	//Heads up, the order of these overlays stacking on top of each other is different from the array order. So goia_overlay[1] is the belly, but rendering on top of everything at the end instead
-
-	var/image/I = image(icon, "[goia_overlays[2]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[2]]
+	var/image/I = image(icon, "[goia_overlays["belly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16) //todo, check kasscs resting sprite
+	I.color = goia_overlays["zorgoia_belly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[3]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[3]]
+	I = image(icon, "[goia_overlays["main"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_main"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[4]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[4]]
+	I = image(icon, "[goia_overlays["ears"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_ears"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[5]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[5]]
+	I = image(icon, "[goia_overlays["spots"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_spots"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[6]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[6]]
+	I = image(icon, "[goia_overlays["claws"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_claws"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[7]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[7]]
+	I = image(icon, "[goia_overlays["spines"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_spines"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[8]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[8]]
+	I = image(icon, "[goia_overlays["fluff"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_fluff"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[9]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[9]]
+	I = image(icon, "[goia_overlays["underbelly"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_underbelly"]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = MOB_PLANE
+	I.layer = MOB_LAYER
+	add_overlay(I)
+	qdel(I)
+
+	I = image(icon, "[goia_overlays["eyes"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_eyes"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = PLANE_LIGHTING_ABOVE
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays[10]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays[goia_overlays[10]]
-	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
-	I.plane = MOB_PLANE
-	I.layer = MOB_LAYER
-	add_overlay(I)
-	qdel(I)
-
-	I = image(icon, "[goia_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16) //todo, check kasscs resting sprite
-	I.color = goia_overlays[goia_overlays[1]]
+	I = image(icon, "[goia_overlays["spike"]][resting? "-rest" : null]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_spike"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
@@ -444,24 +466,25 @@
 	set category = "Abilities.Settings"
 	var/output_style = jointext(list(
 		goia_overlays["zorgoia_belly"],
-		belly_styles,
+		goia_overlays["belly"],
 		goia_overlays["zorgoia_main"],
-		spiky_styles,
+		goia_overlays["main"], // No styles for it currently
 		goia_overlays["zorgoia_ears"],
-		ear_styles,
+		goia_overlays["ears"],
 		goia_overlays["zorgoia_spots"],
-		spots_styles,
+		goia_overlays["spots"],
 		goia_overlays["zorgoia_claws"],
-		claws_styles,
-		goia_overlays["zorgoia_spikes"],
-		spines_styles,
+		goia_overlays["claws"],
+		goia_overlays["zorgoia_spines"],
+		goia_overlays["spines"],
 		goia_overlays["zorgoia_fluff"],
-		fluff_styles,
+		goia_overlays["fluff"],
 		goia_overlays["zorgoia_underbelly"],
-		underbelly_styles,
+		goia_overlays["underbelly"],
 		goia_overlays["zorgoia_eyes"],
-		eyes_styles,
-		goia_overlays["zorgoia_spike"]), ";")
+		goia_overlays["eyes"],
+		goia_overlays["zorgoia_spike"],
+		goia_overlays["spike"]), ";")
 	to_chat(src, "<span class='notice'>Exported style string is \" [output_style] \". Use this to get the same style in the future with import style</span>")
 
 /mob/living/simple_mob/vore/zorgoia/proc/import_style()
@@ -472,7 +495,10 @@
 	input_style = sanitizeSafe(input(src,"Paste the style string you exported with Export Style.", "Style loading","") as text, MAX_MESSAGE_LEN)
 	if(input_style)
 		var/list/input_style_list = splittext(input_style, ";")
-		if((LAZYLEN(input_style_list) == 19) && (input_style_list[2] in belly_styles) && (input_style_list[4] in spiky_styles) && (input_style_list[6] in ear_styles) && (input_style_list[8] in spots_styles) && (input_style_list[10] in claws_styles) && (input_style_list[12] in spines_styles) && (input_style_list[14] in fluff_styles) && (input_style_list[16] in underbelly_styles) && (input_style_list[18] in eyes_styles))
+		if((LAZYLEN(input_style_list) == 20) && (input_style_list[2] in belly_styles) /* && (input_style_list[4] in main_styles) None yet*/ \
+					&& (input_style_list[6] in ear_styles) && (input_style_list[8] in spots_styles) && (input_style_list[10] in claws_styles) \
+					&& (input_style_list[12] in spines_styles) && (input_style_list[14] in fluff_styles) && (input_style_list[16] in underbelly_styles) \
+					&& (input_style_list[18] in eyes_styles) && (input_style_list[18] in spiky_styles))
 			try
 				if(rgb2num(input_style_list[1]))
 					goia_overlays["zorgoia_belly"] = input_style_list[1]
@@ -482,7 +508,7 @@
 				if(rgb2num(input_style_list[3]))
 					goia_overlays["zorgoia_main"] = input_style_list[3]
 			catch
-			spiky_styles = input_style_list[4]
+			// main_styles = input_style_list[4] // None yet
 			try
 				if(rgb2num(input_style_list[5]))
 					goia_overlays["zorgoia_ears"] = input_style_list[5]
@@ -500,7 +526,7 @@
 			claws_styles = input_style_list[10]
 			try
 				if(rgb2num(input_style_list[11]))
-					goia_overlays["zorgoia_spikes"] = input_style_list[11]
+					goia_overlays["zorgoia_spines"] = input_style_list[11]
 			catch
 			spines_styles = input_style_list[12]
 			try
@@ -522,4 +548,5 @@
 				if(rgb2num(input_style_list[19]))
 					goia_overlays["zorgoia_spike"] = input_style_list[19]
 			catch
+			spiky_styles = input_style_list[20]
 			update_icon()
