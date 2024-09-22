@@ -72,28 +72,6 @@
 		"zorgoia_spike" = "#FFFFFF"
 	)
 
-/mob/living/simple_mob/vore/zorgoia/proc/recolor() //Base sprite wont need a radical menu selection
-	set name = "Change Color"
-	set desc = "Change your main color."
-	set category = "Abilities.General"
-	var/new_color = input("Pick new colors:","Color", goia_overlays[2]) as null|color
-	if(!new_color)
-		return 0
-	goia_overlays[goia_overlays[2]] = new_color
-	update_icon()
-
-/mob/living/simple_mob/vore/zorgoia/proc/appearance_switch() //This is just copypastas of the radial menu code, each block of code is the options for each bit of customisation... all 9 of them
-	set name = "Adjust Mob Markings"
-	set desc = "Change your markings and mob colors."
-	set category = "Abilities.General"
-
-	var/list/options = list("Belly","Spike","Ears","Spots","Claws","Spines","Fluff","Underbelly","Eyes")
-	for(var/option in options)
-		LAZYSET(options, option, image('modular_chomp/icons/effects/goia_labels.dmi', option))
-	var/choice = show_radial_menu(src, src, options, radius = 60)
-	if(!choice || QDELETED(src) || src.incapacitated())
-		return FALSE
-	. = TRUE
 	var/list/belly_styles = list(
 		"zorgoia_belly"
 	)
@@ -129,6 +107,29 @@
 	var/list/eyes_styles = list(
 		"zorgoia_eyes"
 	)
+
+/mob/living/simple_mob/vore/zorgoia/proc/recolor() //Base sprite wont need a radical menu selection
+	set name = "Change Color"
+	set desc = "Change your main color."
+	set category = "Abilities.General"
+	var/new_color = input("Pick new colors:","Color", goia_overlays[2]) as null|color
+	if(!new_color)
+		return 0
+	goia_overlays[goia_overlays[2]] = new_color
+	update_icon()
+
+/mob/living/simple_mob/vore/zorgoia/proc/appearance_switch() //This is just copypastas of the radial menu code, each block of code is the options for each bit of customisation... all 9 of them
+	set name = "Adjust Mob Markings"
+	set desc = "Change your markings and mob colors."
+	set category = "Abilities.General"
+
+	var/list/options = list("Belly","Spike","Ears","Spots","Claws","Spines","Fluff","Underbelly","Eyes")
+	for(var/option in options)
+		LAZYSET(options, option, image('modular_chomp/icons/effects/goia_labels.dmi', option))
+	var/choice = show_radial_menu(src, src, options, radius = 60)
+	if(!choice || QDELETED(src) || src.incapacitated())
+		return FALSE
+	. = TRUE
 	switch(choice)
 		if("Belly")
 			options = belly_styles
@@ -437,3 +438,88 @@
 	.=..()
 	if(new_holder.tamed)
 		hostile = FALSE
+
+/mob/living/simple_mob/vore/zorgoia/proc/export_style()
+	set desc = "Export a string of text that can be used to instantly get the current style back using the import style verb"
+	set category = "Abilities.Settings"
+	var/output_style = jointext(list(
+		goia_overlays["zorgoia_belly"],
+		belly_styles,
+		goia_overlays["zorgoia_main"],
+		spiky_styles,
+		goia_overlays["zorgoia_ears"],
+		ear_styles,
+		goia_overlays["zorgoia_spots"],
+		spots_styles,
+		goia_overlays["zorgoia_claws"],
+		claws_styles,
+		goia_overlays["zorgoia_spikes"],
+		spines_styles,
+		goia_overlays["zorgoia_fluff"],
+		fluff_styles,
+		goia_overlays["zorgoia_underbelly"],
+		underbelly_styles,
+		goia_overlays["zorgoia_eyes"],
+		eyes_styles,
+		goia_overlays["zorgoia_spike"]), ";")
+	to_chat(src, "<span class='notice'>Exported style string is \" [output_style] \". Use this to get the same style in the future with import style</span>")
+
+/mob/living/simple_mob/vore/zorgoia/proc/import_style()
+	set name = "Import style string"
+	set desc = "Import a string of text that was made using the import style verb to get back that style"
+	set category = "Abilities.Settings"
+	var/input_style
+	input_style = sanitizeSafe(input(src,"Paste the style string you exported with Export Style.", "Style loading","") as text, MAX_MESSAGE_LEN)
+	if(input_style)
+		var/list/input_style_list = splittext(input_style, ";")
+		if((LAZYLEN(input_style_list) == 19) && (input_style_list[2] in belly_styles) && (input_style_list[4] in spiky_styles) && (input_style_list[6] in ear_styles) && (input_style_list[8] in spots_styles) && (input_style_list[10] in claws_styles) && (input_style_list[12] in spines_styles) && (input_style_list[14] in fluff_styles) && (input_style_list[16] in underbelly_styles) && (input_style_list[18] in eyes_styles))
+			try
+				if(rgb2num(input_style_list[1]))
+					goia_overlays["zorgoia_belly"] = input_style_list[1]
+			catch
+			belly_styles = input_style_list[2]
+			try
+				if(rgb2num(input_style_list[3]))
+					goia_overlays["zorgoia_main"] = input_style_list[3]
+			catch
+			spiky_styles = input_style_list[4]
+			try
+				if(rgb2num(input_style_list[5]))
+					goia_overlays["zorgoia_ears"] = input_style_list[5]
+			catch
+			ear_styles = input_style_list[6]
+			try
+				if(rgb2num(input_style_list[7]))
+					goia_overlays["zorgoia_spots"] = input_style_list[7]
+			catch
+			spots_styles = input_style_list[8]
+			try
+				if(rgb2num(input_style_list[9]))
+					goia_overlays["zorgoia_claws"] = input_style_list[9]
+			catch
+			claws_styles = input_style_list[10]
+			try
+				if(rgb2num(input_style_list[11]))
+					goia_overlays["zorgoia_spikes"] = input_style_list[11]
+			catch
+			spines_styles = input_style_list[12]
+			try
+				if(rgb2num(input_style_list[13]))
+					goia_overlays["zorgoia_fluff"] = input_style_list[13]
+			catch
+			fluff_styles = input_style_list[14]
+			try
+				if(rgb2num(input_style_list[15]))
+					goia_overlays["zorgoia_underbelly"] = input_style_list[15]
+			catch
+			underbelly_styles = input_style_list[16]
+			try
+				if(rgb2num(input_style_list[17]))
+					goia_overlays["zorgoia_eyes"] = input_style_list[17]
+			catch
+			eyes_styles = input_style_list[18]
+			try
+				if(rgb2num(input_style_list[19]))
+					goia_overlays["zorgoia_spike"] = input_style_list[19]
+			catch
+			update_icon()
