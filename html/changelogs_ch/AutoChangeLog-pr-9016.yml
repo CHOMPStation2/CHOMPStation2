@@ -1,0 +1,5 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - qol: "Zorgoia simplemobs now can have their style exported and imported for later!"
+  - qol: "Zorgoia simplemobs now spawn with random colors and markings."
