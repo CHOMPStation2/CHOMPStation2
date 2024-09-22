@@ -25,6 +25,33 @@
 			"label": "Build All"
 		},
 		{
+<<<<<<< HEAD
+=======
+			"type": "process",
+			"command": "tools/build/build",
+			"args": ["-DLOWMEMORYMODE"],
+			"windows": {
+				"command": ".\\tools\\build\\build.bat",
+				"args": ["-DLOWMEMORYMODE"]
+			},
+			"options": {
+				"env": {
+					"DM_EXE": "${config:dreammaker.byondPath}"
+				}
+			},
+			"problemMatcher": [
+				"$dreammaker",
+				"$tsc",
+				"$eslint-stylish"
+			],
+			"group": {
+				"kind": "build"
+			},
+			"dependsOn": "dm: reparse",
+			"label": "Build All (low memory mode)"
+		},
+		{
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 			"type": "dreammaker",
 			"dme": "vorestation.dme",
 			"problemMatcher": [
@@ -32,6 +59,11 @@
 			],
 			"group": "build",
 			"label": "dm: build - vorestation.dme"
+		},
+		{
+			"command": "${command:dreammaker.reparse}",
+			"group": "build",
+			"label": "dm: reparse"
 		},
 		{
 			"type": "shell",

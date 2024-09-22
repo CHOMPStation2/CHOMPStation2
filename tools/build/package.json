@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
     "private": true,
     "type": "module"
+=======
+  "private": true,
+  "type": "module"
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 }

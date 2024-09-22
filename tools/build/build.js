@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 /**
+<<<<<<< HEAD
  * Build script for CHOMPStation codebase.
+=======
+ * Build script for /tg/station 13 codebase.
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
  *
  * This script uses Juke Build, read the docs here:
  * https://github.com/stylemistake/juke-build
@@ -35,11 +39,18 @@ Juke.setup({ file: import.meta.url }).then((code) => {
 });
 
 const DME_NAME = 'vorestation';
+<<<<<<< HEAD
 const CUTTER_SUFFIX = '.png.toml'
 
 // Stores the contents of _build_dependencies.sh as a key value pair
 // Best way I could figure to get ahold of this stuff
 const dependencies = fs.readFileSync('_build_dependencies.sh', 'utf8')
+=======
+
+// Stores the contents of dependencies.sh as a key value pair
+// Best way I could figure to get ahold of this stuff
+const dependencies = fs.readFileSync('dependencies.sh', 'utf8')
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
   .split("\n")
   .map((statement) => statement.replace("export", "").trim())
   .filter((value) => !(value == "" || value.startsWith("#")))
@@ -77,7 +88,16 @@ export const CiParameter = new Juke.Parameter({ type: 'boolean' });
 
 export const ForceRecutParameter = new Juke.Parameter({
   type: 'boolean',
+<<<<<<< HEAD
   name: "force_recut",
+=======
+  name: "force-recut",
+});
+
+export const SkipIconCutter = new Juke.Parameter({
+  type: 'boolean',
+  name: "skip-icon-cutter",
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 });
 
 export const WarningParameter = new Juke.Parameter({
@@ -87,7 +107,11 @@ export const WarningParameter = new Juke.Parameter({
 
 export const NoWarningParameter = new Juke.Parameter({
   type: 'string[]',
+<<<<<<< HEAD
   alias: 'NW',
+=======
+  alias: 'I',
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 });
 
 export const CutterTarget = new Juke.Target({
@@ -148,16 +172,38 @@ export const IconCutterTarget = new Juke.Target({
   dependsOn: () => [
     CutterTarget,
   ],
+<<<<<<< HEAD
   inputs: [
     'icons/**/*.png',
     `icons/**/*${CUTTER_SUFFIX}`,
     `cutter_templates/**/*${CUTTER_SUFFIX}`,
     cutter_path,
   ],
+=======
+  inputs: ({ get }) => {
+    const standard_inputs = [
+      `icons/**/*.png.toml`,
+      `icons/**/*.dmi.toml`,
+      `cutter_templates/**/*.toml`,
+      cutter_path,
+    ]
+    // Alright we're gonna search out any existing toml files and convert
+    // them to their matching .dmi or .png file
+    const existing_configs = [
+      ...Juke.glob(`icons/**/*.png.toml`),
+      ...Juke.glob(`icons/**/*.dmi.toml`),
+    ];
+    return [
+      ...standard_inputs,
+      ...existing_configs.map((file) => file.replace('.toml', '')),
+    ]
+  },
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
   outputs: ({ get }) => {
     if(get(ForceRecutParameter))
       return [];
     const folders = [
+<<<<<<< HEAD
       ...Juke.glob(`icons/**/*${CUTTER_SUFFIX}`),
     ];
     return folders
@@ -170,12 +216,30 @@ export const IconCutterTarget = new Juke.Target({
       'cutter_templates',
       'icons',
     ]);
+=======
+      ...Juke.glob(`icons/**/*.png.toml`),
+      ...Juke.glob(`icons/**/*.dmi.toml`),
+    ];
+    return folders
+      .map((file) => file.replace(`.png.toml`, '.dmi'))
+      .map((file) => file.replace(`.dmi.toml`, '.png'));
+  },
+  executes: async () => {
+    // Don't run icon cutter, we don't use it and it's not compiled for ubuntu 20.04
+    // await Juke.exec(cutter_path, [
+    //   '--dont-wait',
+    //   '--templates',
+    //   'cutter_templates',
+    //   'icons',
+    // ]);
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
   },
 });
 
 export const DmMapsIncludeTarget = new Juke.Target({
   executes: async () => {
     const folders = [
+<<<<<<< HEAD
       //...Juke.glob('_maps/map_files/**/modular_pieces/*.dmm'),
       //...Juke.glob('_maps/RandomRuins/**/*.dmm'),
       //...Juke.glob('_maps/RandomZLevels/**/*.dmm'),
@@ -184,6 +248,13 @@ export const DmMapsIncludeTarget = new Juke.Target({
       ...Juke.glob('maps/southern_cross/**/*.dmm'),
       ...Juke.glob('maps/submap/**/*.dmm'),
 
+=======
+      ...Juke.glob('_maps/map_files/**/modular_pieces/*.dmm'),
+      ...Juke.glob('_maps/RandomRuins/**/*.dmm'),
+      ...Juke.glob('_maps/RandomZLevels/**/*.dmm'),
+      ...Juke.glob('_maps/shuttles/**/*.dmm'),
+      ...Juke.glob('_maps/templates/**/*.dmm'),
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
     ];
     const content = folders
       .map((file) => file.replace('_maps/', ''))
@@ -194,22 +265,36 @@ export const DmMapsIncludeTarget = new Juke.Target({
 });
 
 export const DmTarget = new Juke.Target({
+<<<<<<< HEAD
   parameters: [DefineParameter, DmVersionParameter, WarningParameter, NoWarningParameter],
   dependsOn: ({ get }) => [
     get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
     IconCutterTarget,
+=======
+  parameters: [DefineParameter, DmVersionParameter, WarningParameter, NoWarningParameter, SkipIconCutter],
+  dependsOn: ({ get }) => [
+    get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
+    !get(SkipIconCutter) && IconCutterTarget,
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
   ],
   inputs: [
     '_maps/map_files/generic/**',
     'maps/**/*.dm',
+<<<<<<< HEAD
     'maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
     'maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
+=======
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
     'code/**',
     'html/**',
     'icons/**',
     'interface/**',
+<<<<<<< HEAD
     'modular_chomp/code/**',
     'modular_chomp/icons/**',
+=======
+    'sound/**',
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
@@ -253,7 +338,11 @@ export const DmTestTarget = new Juke.Target({
     }
     await DreamDaemon(
       options,
+<<<<<<< HEAD
       '-close', '-trusted', '-verbose', '-invisible',
+=======
+      '-close', '-trusted', '-verbose',
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
       '-params', 'log-directory=ci'
     );
     Juke.rm('*.test.*');
@@ -268,7 +357,10 @@ export const DmTestTarget = new Juke.Target({
   },
 });
 
+<<<<<<< HEAD
 /* We don't have Autowiki
+=======
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 export const AutowikiTarget = new Juke.Target({
   parameters: [DefineParameter, DmVersionParameter, WarningParameter, NoWarningParameter],
   dependsOn: ({ get }) => [
@@ -296,7 +388,11 @@ export const AutowikiTarget = new Juke.Target({
     }
     await DreamDaemon(
       options,
+<<<<<<< HEAD
       '-close', '-trusted', '-invisible', '-verbose',
+=======
+      '-close', '-trusted', '-verbose',
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
       '-params', 'log-directory=ci',
     );
     Juke.rm('*.test.*');
@@ -306,7 +402,10 @@ export const AutowikiTarget = new Juke.Target({
     }
   },
 })
+<<<<<<< HEAD
 */
+=======
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 
 export const YarnTarget = new Juke.Target({
   parameters: [CiParameter],
@@ -354,8 +453,13 @@ export const TguiTarget = new Juke.Target({
     'tgui/public/tgui.bundle.js',
     'tgui/public/tgui-panel.bundle.css',
     'tgui/public/tgui-panel.bundle.js',
+<<<<<<< HEAD
     //'tgui/public/tgui-say.bundle.css',
     //'tgui/public/tgui-say.bundle.js',
+=======
+    'tgui/public/tgui-say.bundle.css',
+    'tgui/public/tgui-say.bundle.js',
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
   ],
   executes: () => yarn('tgui:build'),
 });
@@ -427,7 +531,11 @@ export const ServerTarget = new Juke.Target({
       dmbFile: `${DME_NAME}.dmb`,
       namedDmVersion: get(DmVersionParameter),
     }
+<<<<<<< HEAD
     await DreamDaemon(options, port, '-trusted -invisible');
+=======
+    await DreamDaemon(options, port, '-trusted');
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
   },
 });
 

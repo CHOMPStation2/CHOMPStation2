@@ -7,6 +7,7 @@ export RUST_G_VERSION=3.1.0
 
 # byond version
 export BYOND_MAJOR=515
+<<<<<<< HEAD
 export BYOND_MINOR=1633
 export MACRO_COUNT=4
 
@@ -25,3 +26,9 @@ export CUTTER_REPO=actioninja/hypnagogic
 
 #hypnagogic git tag
 export CUTTER_VERSION=v3.0.1
+=======
+# Byond Minor
+export BYOND_MINOR=1637
+# Macro Count
+export MACRO_COUNT=8
+>>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
