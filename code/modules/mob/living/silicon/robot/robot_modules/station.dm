@@ -792,7 +792,7 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/security/combat
 	name = "combat robot module"
 	hide_on_manifest = TRUE
-	channels = list(CHANNEL_SECURITY = 1, CHANNEL_RESPONSE_TEAM = 1)
+	channels = list(CHANNEL_SECURITY = 1, CHANNEL_RESPONSE_TEAM = 1) // CHOMPAdd
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
 /obj/item/weapon/robot_module/robot/security/combat/create_equipment(var/mob/living/silicon/robot/robot)
@@ -811,7 +811,7 @@ var/global/list/robot_modules = list(
 
 	src.modules += new /obj/item/device/dogborg/sleeper/K9/ert(src)
 	src.modules += new /obj/item/weapon/dogborg/pounce(src)
-	robot.radio.centComm = 1
+	robot.radio.centComm = 1 // CHOMPAdd
 
 
 /* Drones */
