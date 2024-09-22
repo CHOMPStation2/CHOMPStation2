@@ -554,6 +554,7 @@ Talon pin
 	"Service - Echelons" = /obj/item/clothing/accessory/solgov/department/service/army
 	)
 	gear_tweaks += new/datum/gear_tweak/path(insignia)
+<<<<<<< HEAD
 
 /datum/gear/accessory/plushie
 	display_name = "Plushie Selection"
@@ -612,3 +613,5 @@ Talon pin
 		"Trauma Drake" = /obj/item/toy/plushie/borgplushie/drake/trauma,
 	)
 	gear_tweaks += new/datum/gear_tweak/path(plushie)
+=======
+>>>>>>> fb31c86364... Merge pull request #16340 from ShadowLarkens/revert-16328-blahaj
