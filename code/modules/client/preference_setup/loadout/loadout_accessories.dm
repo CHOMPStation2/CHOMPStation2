@@ -555,6 +555,7 @@ Talon pin
 	)
 	gear_tweaks += new/datum/gear_tweak/path(insignia)
 
+<<<<<<< HEAD
 /datum/gear/accessory/plushie
 	display_name = "Plushie Selection"
 	description = "A single plushie of your selection!"
@@ -612,3 +613,19 @@ Talon pin
 		"Trauma Drake" = /obj/item/toy/plushie/borgplushie/drake/trauma,
 	)
 	gear_tweaks += new/datum/gear_tweak/path(plushie)
+=======
+/datum/gear/accessory/belt_selection
+	display_name = "belts (selection, colorable)"
+	path = /obj/item/clothing/accessory/belt
+
+/datum/gear/accessory/belt_selection/New()
+	..()
+	var/list/wristband_lists = list(
+	"Thin Belt" = /obj/item/clothing/accessory/belt,
+	"Thick Belt" = /obj/item/clothing/accessory/belt/thick,
+	"Strap Belt" = /obj/item/clothing/accessory/belt/strap,
+	"Studded Belt" = /obj/item/clothing/accessory/belt/studded
+	)
+	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
+	gear_tweaks += gear_tweak_free_color_choice
+>>>>>>> d17843de11... Merge pull request #16323 from SatinIsle/shirts
