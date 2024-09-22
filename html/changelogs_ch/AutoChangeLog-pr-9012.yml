@@ -1,0 +1,4 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "Closing a beaker and clicking on venomous animals/people with it will allow you to express their venom into the beaker once every 30 seconds."
