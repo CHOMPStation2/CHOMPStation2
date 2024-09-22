@@ -3441,7 +3441,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Planetside_Equipment)
 "asG" = (
-/obj/machinery/suit_cycler/engineering,
+/obj/machinery/suit_cycler/engineering{
+	req_one_access = list(11,24);
+	req_access = null
+	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/light{
 	dir = 8;
@@ -8210,20 +8213,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
-"beL" = (
-/obj/effect/floor_decal/shuttle/loading,
-/obj/structure/railing/grey{
-	color = "yellow"
-	},
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 2
-	},
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Harbor/Ship_Bay3)
 "beP" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/clean,
@@ -9472,13 +9461,6 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/SouthernCrossV2/Science/Xenobotany_Lab)
-"bBq" = (
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 2
-	},
-/obj/effect/catwalk_plated/white,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Harbor/Ship_Bay4)
 "bBx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -11614,6 +11596,19 @@
 /obj/random/flashlight,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1)
+"cmm" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/SouthernCrossV2/Harbor/Ship_Bay3)
 "cmq" = (
 /obj/structure/grille/rustic,
 /turf/simulated/floor/plating,
@@ -11635,7 +11630,7 @@
 /area/SouthernCrossV2/Maints/Deck1_Star_Corridor)
 "cmF" = (
 /obj/structure/disposalpipe/tagger{
-	sort_tag = "cum"
+	sort_tag = "transit_crew"
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Distro_Harbor)
@@ -18845,6 +18840,42 @@
 "ekA" = (
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Harbor/Ship_Bay1)
+"ekC" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/arrows/red,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	layer = 2.9
+	},
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "SC-ALCvirology";
+	name = "Virology Access Button";
+	pixel_y = 24;
+	req_access = list(39)
+	},
+/obj/machinery/door/airlock/angled_bay/standard/glass/medical{
+	dir = 4;
+	frequency = 1379;
+	id_tag = "SC-ALIvirology";
+	name = "Virology Internal Airlock";
+	req_access = list(39);
+	req_one_access = list(5);
+	locked = 1
+	},
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
 "ekI" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Custodial_Office)
@@ -18899,6 +18930,10 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Telecomms_Control_Room)
+"emm" = (
+/obj/structure/sign/biohazard,
+/turf/simulated/wall/r_wall,
+/area/space)
 "emw" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/lustflower{
@@ -20973,11 +21008,11 @@
 	name = "ED_CLN";
 	faction = "nanotrasen"
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/effect/floor_decal/corner/mauve/diagonal{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Custodial_Office)
 "eYq" = (
@@ -21887,6 +21922,14 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Medical)
+"foB" = (
+/obj/machinery/camera/network/research{
+	c_tag = "D3-Med-Virology1";
+	dir = 8;
+	network = list("Medical")
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/space)
 "foQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor/tiled/milspec,
@@ -23102,6 +23145,25 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Aft_1_Deck_Stairwell)
+"fOQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/borderfloorwhite/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/borderfloorwhite/corner2{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/white/bordercorner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/white/bordercorner2{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/space)
 "fOR" = (
 /obj/structure/toilet,
 /obj/structure/closet/emergsuit_wall{
@@ -23341,6 +23403,47 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
+"fSF" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/arrows/red,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	layer = 2.9
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "SC-ALCvirology";
+	name = "Virology Access Button";
+	pixel_y = -24;
+	req_access = list(39)
+	},
+/obj/machinery/door/airlock/angled_bay/standard/glass/medical{
+	dir = 4;
+	frequency = 1379;
+	id_tag = "SC-ALEvirology";
+	name = "Virology Exterior Airlock";
+	req_access = list(39);
+	req_one_access = list(5);
+	locked = 1
+	},
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
 "fSQ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -25333,14 +25436,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Chamber2)
-"gBQ" = (
-/obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/space)
 "gBT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26495,42 +26590,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
-"gYf" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows/red{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/arrows/red,
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	layer = 2.9
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "SC-ALCvirology";
-	name = "Virology Access Button";
-	pixel_y = 24;
-	req_access = list(39)
-	},
-/obj/machinery/door/airlock/angled_bay/standard/glass/medical{
-	dir = 4;
-	frequency = 1379;
-	id_tag = "SC-ALIvirology";
-	name = "Virology Internal Airlock";
-	req_access = list(39);
-	req_one_access = list(5);
-	locked = 1
-	},
-/obj/effect/floor_decal/industrial/hatch/red,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
 "gYk" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
@@ -26605,6 +26664,20 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor3)
+"gZH" = (
+/obj/effect/floor_decal/shuttle/loading,
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Harbor/Ship_Bay4)
 "gZS" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
@@ -26743,6 +26816,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Ship_Bay4)
+"hbO" = (
+/obj/effect/floor_decal/shuttle/loading,
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Harbor/Ship_Bay3)
 "hcd" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/lights/bulbs{
@@ -27210,6 +27297,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/AftPort_1_Deck_Observatory)
+"hne" = (
+/obj/structure/sign/directions/evac{
+	dir = 1;
+	pixel_y = 9
+	},
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Harbor/Port_Docking_Foyer)
 "hnJ" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/deck/tarot,
@@ -27691,6 +27785,22 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/ForPort_1_Deck_Observatory)
+"hwj" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Harbor/Ship_Bay3)
 "hwu" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Science/Observation_Hall)
@@ -28631,6 +28741,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_Kitchen)
+"hOO" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Harbor/Ship_Bay3)
 "hOT" = (
 /obj/structure/sign/department/dock{
 	name = "SHIP DOCKS";
@@ -29009,22 +29126,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
-"hWL" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/black/border{
-	dir = 4
-	},
-/obj/structure/railing/grey{
-	color = "yellow"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/SouthernCrossV2/Harbor/Ship_Bay4)
 "hWP" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
@@ -29088,6 +29189,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
+"hXO" = (
+/obj/structure/sign/directions/evac{
+	dir = 1;
+	pixel_y = 9
+	},
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Harbor/Star_Docking_Foyer)
 "hXX" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -30455,6 +30563,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Telecomms_Foyer)
+"iwk" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/SouthernCrossV2/Harbor/Ship_Bay4)
 "iwx" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/plating,
@@ -30572,6 +30693,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/structure/window/titanium{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -30864,13 +30988,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor3)
-"iEV" = (
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 2
-	},
-/obj/effect/catwalk_plated/white,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Harbor/Ship_Bay3)
 "iFa" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
@@ -31112,10 +31229,6 @@
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor3)
-"iMl" = (
-/obj/structure/sign/biohazard,
-/turf/simulated/wall/r_wall,
-/area/space)
 "iMu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -31311,6 +31424,19 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck1_Star_Corridor)
+"iRv" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 1
+	},
+/obj/machinery/station_map{
+	pixel_y = 32;
+	name = "1N-station holomap"
+	},
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "iRz" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor1)
@@ -32323,19 +32449,6 @@
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Surgery)
-"jma" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/SouthernCrossV2/Harbor/Ship_Bay3)
 "jml" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -32937,6 +33050,9 @@
 "jyw" = (
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/SouthernCrossV2/Domicile/For_Restroom)
+"jyy" = (
+/turf/simulated/floor/tiled/kafel_full/blue,
+/area/space)
 "jyz" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -33176,6 +33292,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Deck1_Corridor)
+"jDs" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/machinery/light_switch{
+	pixel_x = -27;
+	pixel_y = 12;
+	name = "W-light switch";
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/space)
 "jDw" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/junk,
@@ -33190,32 +33324,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Star_Docking_Foyer)
-"jDI" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/space)
 "jDS" = (
 /obj/structure/foodcart,
 /turf/simulated/floor/plating,
@@ -33652,7 +33760,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "jJo" = (
-/turf/simulated/wall,
+/turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "jJJ" = (
 /obj/structure/sign/warning/lethal_turrets,
@@ -40492,13 +40600,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Market_Stall_2)
-"mgJ" = (
-/obj/structure/sign/directions/evac{
-	dir = 1;
-	pixel_y = 9
-	},
-/turf/simulated/wall/r_wall,
-/area/SouthernCrossV2/Harbor/Star_Docking_Foyer)
 "mgN" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -43646,6 +43747,32 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarChamber1)
+"nkh" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite/corner2{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorwhite/corner2{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/white/bordercorner2{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/white/bordercorner2{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/space)
 "nko" = (
 /obj/structure/cable/yellow{
 	d2 = 4;
@@ -43809,6 +43936,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Deck1_Corridor)
+"nou" = (
+/turf/simulated/wall/r_wall,
+/area/space)
 "noF" = (
 /obj/machinery/light{
 	dir = 1;
@@ -44332,7 +44462,7 @@
 /area/SouthernCrossV2/Commons/Stairwell_Star)
 "nyh" = (
 /obj/structure/disposalpipe/tagger{
-	sort_tag = "cum"
+	sort_tag = "transit_crew"
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
@@ -44358,6 +44488,15 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Commons/Aft_1_Deck_Stairwell)
+"nyG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/blue,
+/area/space)
 "nyJ" = (
 /obj/structure/urinal{
 	pixel_y = 28
@@ -44936,47 +45075,6 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_SportsField)
-"nJd" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows/red{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/arrows/red,
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	layer = 2.9
-	},
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "SC-ALCvirology";
-	name = "Virology Access Button";
-	pixel_y = -24;
-	req_access = list(39)
-	},
-/obj/machinery/door/airlock/angled_bay/standard/glass/medical{
-	dir = 4;
-	frequency = 1379;
-	id_tag = "SC-ALEvirology";
-	name = "Virology Exterior Airlock";
-	req_access = list(39);
-	req_one_access = list(5);
-	locked = 1
-	},
-/obj/effect/floor_decal/industrial/hatch/red,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
 "nJj" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
@@ -47510,6 +47608,22 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet/turfpack/station,
 /area/SouthernCrossV2/Commons/Cryostorage_Lounge)
+"ozk" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Harbor/Ship_Bay4)
 "ozr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -48787,9 +48901,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Public_EVA)
-"oUE" = (
-/turf/simulated/wall/r_wall,
-/area/space)
 "oVg" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable{
@@ -52513,19 +52624,6 @@
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Cargo/Depot1)
-"qbr" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/SouthernCrossV2/Harbor/Ship_Bay4)
 "qbv" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4
@@ -53675,22 +53773,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
-"qzR" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/black/border{
-	dir = 8
-	},
-/obj/structure/railing/grey{
-	color = "yellow"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/SouthernCrossV2/Harbor/Ship_Bay3)
 "qzT" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hazardvest{
@@ -53805,20 +53887,6 @@
 "qCx" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Science/Xenobotany_Isolation_Chamber)
-"qCE" = (
-/obj/effect/floor_decal/shuttle/loading,
-/obj/structure/railing/grey{
-	color = "yellow"
-	},
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 2
-	},
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Harbor/Ship_Bay4)
 "qCN" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hazardvest{
@@ -54162,25 +54230,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Corridor1)
-"qIa" = (
-/obj/machinery/light{
-	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "SC-ALCvirology";
-	name = "Virology Access Console";
-	pixel_x = -26;
-	tag_exterior_door = "SC-ALEvirology";
-	tag_interior_door = "SC-ALIvirology";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/space)
 "qId" = (
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/plating,
@@ -54794,6 +54843,14 @@
 	dir = 4
 	},
 /turf/space,
+/area/space)
+"qSo" = (
+/obj/machinery/light{
+	dir = 4;
+	name = "1E-light fixture"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/kafel_full/white,
 /area/space)
 "qSB" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -56218,19 +56275,24 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock2)
 "roi" = (
-/obj/structure/sign/directions/dock{
-	dir = 6;
-	pixel_y = 9
+/obj/machinery/light{
+	dir = 8;
+	layer = 3;
+	name = "1W-light fixture"
 	},
-/obj/structure/sign/directions/dock{
-	dir = 10;
-	pixel_y = -9
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
-/obj/structure/sign/levels/dock{
-	dir = 5
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "SC-ALCvirology";
+	name = "Virology Access Console";
+	pixel_x = -26;
+	tag_exterior_door = "SC-ALEvirology";
+	tag_interior_door = "SC-ALIvirology";
+	dir = 4
 	},
-/turf/simulated/wall,
-/area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/space)
 "ros" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -57624,9 +57686,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Science/Observation_Hall)
-"rPU" = (
-/turf/simulated/floor/tiled/kafel_full/blue,
-/area/space)
 "rPV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -58093,24 +58152,6 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor2)
-"rYV" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/machinery/light_switch{
-	pixel_x = -27;
-	pixel_y = 12;
-	name = "W-light switch";
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/space)
 "rZa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -60054,6 +60095,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
+"sHR" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/structure/window/titanium,
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "sHV" = (
 /obj/structure/closet/cabinet,
 /obj/item/weapon/storage/box/capguntoy{
@@ -61529,7 +61576,7 @@
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "tkn" = (
 /obj/structure/disposalpipe/tagger{
-	sort_tag = "cum"
+	sort_tag = "transit_crew"
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/ab_Surgery)
@@ -62090,15 +62137,6 @@
 	dir = 8
 	},
 /turf/space,
-/area/space)
-"ttA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/kafel_full/blue,
 /area/space)
 "ttQ" = (
 /turf/simulated/floor/plating,
@@ -66112,10 +66150,6 @@
 /obj/item/weapon/laserdome_flag/red,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_SportsField)
-"uRp" = (
-/obj/machinery/smartfridge/sheets/mining/persistent_lossy,
-/turf/simulated/wall,
-/area/SouthernCrossV2/Cargo/Mining_Ship_Bay)
 "uRD" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -70533,7 +70567,7 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "wpY" = (
 /obj/structure/disposalpipe/tagger{
-	sort_tag = "cum"
+	sort_tag = "transit_crew"
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/ab_Kitchen)
@@ -70716,14 +70750,6 @@
 /obj/structure/window/titanium,
 /turf/simulated/floor/airless,
 /area/shuttle/escape_pod4/station)
-"wsN" = (
-/obj/machinery/camera/network/research{
-	c_tag = "D3-Med-Virology1";
-	dir = 8;
-	network = list("Medical")
-	},
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/space)
 "wsS" = (
 /obj/structure/toilet,
 /obj/structure/closet/emergsuit_wall{
@@ -71239,6 +71265,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
+"wEj" = (
+/obj/machinery/smartfridge/sheets/mining/persistent_lossy,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Cargo/Mining_Ship_Bay)
 "wEm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -71731,15 +71761,12 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Stairwell_Star)
 "wNS" = (
-/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/obj/machinery/station_map{
-	pixel_y = 32;
-	name = "1N-station holomap"
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
 	},
-/turf/simulated/floor/tiled/monotile{
-	color = "#989898"
-	},
-/area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Harbor/Ship_Bay4)
 "wOk" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Harbor/Dock4)
@@ -73330,13 +73357,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Star_Docking_Foyer)
-"xoQ" = (
-/obj/structure/sign/directions/evac{
-	dir = 1;
-	pixel_y = 9
-	},
-/turf/simulated/wall/r_wall,
-/area/SouthernCrossV2/Harbor/Port_Docking_Foyer)
 "xoW" = (
 /obj/structure/table/standard,
 /obj/item/stack/cable_coil/random{
@@ -73984,7 +74004,10 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint)
 "xDq" = (
-/obj/machinery/suit_cycler/engineering,
+/obj/machinery/suit_cycler/engineering{
+	req_one_access = list(11,24);
+	req_access = null
+	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Distro_Harbor)
@@ -75066,25 +75089,6 @@
 "xYR" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/ab_StripBar)
-"xYY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 5
-	},
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/kafel_full/white,
-/area/space)
 "xZg" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -90409,7 +90413,7 @@ jfe
 jWx
 nZu
 aUf
-uRp
+wEj
 itQ
 aiB
 nma
@@ -100027,7 +100031,7 @@ fFD
 aDi
 yjc
 yjc
-xoQ
+hne
 jCD
 lXk
 aDi
@@ -100280,12 +100284,12 @@ doi
 doi
 doi
 doi
-qzR
+hwj
 qCc
 ukU
 qCc
 qCc
-iEV
+hOO
 hbs
 sHa
 aYK
@@ -100539,11 +100543,11 @@ kOR
 kOR
 kOR
 cyO
-jma
-jma
-jma
+cmm
+cmm
+cmm
 eaI
-beL
+hbO
 hbs
 dZJ
 kOh
@@ -105427,11 +105431,11 @@ ooB
 aWw
 rnA
 ctH
-atu
+jJo
 bqo
 gDz
 vMw
-atu
+jJo
 cxr
 sFm
 mga
@@ -105684,12 +105688,12 @@ sZu
 frW
 xes
 rnA
-sFm
-jJo
-wNS
+sHR
+atu
+niO
 aRj
 niO
-roi
+atu
 izk
 xiR
 tcS
@@ -105943,11 +105947,11 @@ aTl
 aWw
 rnA
 ctH
-atu
+jJo
 esS
 gDz
 gyD
-atu
+jJo
 cxr
 sFm
 ffZ
@@ -106973,7 +106977,7 @@ hMY
 hMY
 ugL
 qyi
-izk
+iRv
 iKa
 qpx
 bdc
@@ -110859,11 +110863,11 @@ acv
 acv
 acv
 oWJ
-qbr
-qbr
-qbr
+iwk
+iwk
+iwk
 hWZ
-qCE
+gZH
 pTA
 iEc
 aNe
@@ -111116,12 +111120,12 @@ aTZ
 aTZ
 aTZ
 aTZ
-hWL
+ozk
 iam
 dsz
 iam
 iam
-bBq
+wNS
 pTA
 mUC
 tiK
@@ -111379,7 +111383,7 @@ xGs
 cof
 ptP
 ptP
-mgJ
+hXO
 jDD
 xgm
 eab
@@ -128335,9 +128339,9 @@ aaa
 aaa
 aaa
 vuJ
-oUE
-nJd
-oUE
+nou
+fSF
+nou
 aaa
 aaa
 aaa
@@ -128593,9 +128597,9 @@ aaa
 aaa
 aaa
 aaa
-rYV
-jDI
-qIa
+jDs
+nkh
+roi
 aaa
 ixO
 ixO
@@ -128851,9 +128855,9 @@ aaa
 aaa
 aaa
 aaa
-rPU
-ttA
-rPU
+jyy
+nyG
+jyy
 aaa
 aaa
 aaa
@@ -129109,9 +129113,9 @@ aaa
 aaa
 aaa
 aaa
-gBQ
-xYY
-wsN
+qSo
+fOQ
+foB
 aaa
 aaa
 aaa
@@ -129367,9 +129371,9 @@ aaa
 aaa
 aaa
 aaa
-oUE
-gYf
-iMl
+nou
+ekC
+emm
 aaa
 aaa
 aaa
