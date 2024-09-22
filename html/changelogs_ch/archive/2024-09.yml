@@ -131,3 +131,13 @@
   TheCaramelion:
   - bugfix: Brig Physician is now selectable
   - bugfix: Fixed onelife trait runtimes
+2024-09-22:
+  CHOMPStation2:
+  - rscadd: added HYPER binder underwear
+  - bugfix: tweaks mouse holes to not iterate over world contents
+  - bugfix: prevents micros from teleporting out of your hand if removed from a mouse
+      hole
+  - rscadd: Line tool and paint bucket tool to Canvases.
+  - rscadd: Click-and-drag brush in Canvas.
+  - rscadd: You can now select 1 of 47 different plushies to bring with you from loadout
+      accessories~!
