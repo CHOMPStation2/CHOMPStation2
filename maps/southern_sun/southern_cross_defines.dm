@@ -7,7 +7,7 @@ so those just need to be updated every time someone rearranges the level load or
 but they don't actually change anything about the load order
 */
 //TO DO: Reorganize all #include for z-levels into one file
-//#define Z_LEVEL_STATION_MAINTS			1 (Removed for new map. KAS)
+
 #define Z_LEVEL_STATION_ONE				1
 #define Z_LEVEL_STATION_TWO				2
 #define Z_LEVEL_STATION_THREE			3
@@ -18,11 +18,12 @@ but they don't actually change anything about the load order
 #define Z_LEVEL_TRANSIT					8
 #define Z_LEVEL_SURFACE_WILD			9
 #define Z_LEVEL_SURFACE_VALLEY 			10
-#define Z_LEVEL_VR_REALM                11
+#define Z_LEVEL_JUNGLE					11
 #define Z_LEVEL_FUELDEPOT				12
-#define Z_LEVEL_JUNGLE					13
+#define Z_LEVEL_VR_REALM                13
 #define Z_LEVEL_GATEWAY					14
 
+//#define Z_LEVEL_STATION_MAINTS		//CHOMPedit Deck 0 maints removal due to new station.
 //#define Z_LEVEL_SURFACE_SKYLANDS		//Sky islands removal due to lack of use
 //#define Z_LEVEL_AEROSTAT			//Disabled due to lack of use
 //#define Z_LEVEL_NS_MINE				//Disabled due to lack of use

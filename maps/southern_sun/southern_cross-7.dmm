@@ -6967,7 +6967,7 @@
 "fUa" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "QMLoad"
+	id = "SC-CBcargobay2"
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/supply)
@@ -12469,7 +12469,7 @@
 "ktL" = (
 /obj/machinery/conveyor{
 	dir = 4;
-	id = "QMLoad2"
+	id = "SC-CBcargobay1"
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/supply)
@@ -14156,10 +14156,6 @@
 /turf/simulated/floor/holofloor/desert,
 /area/holodeck/source_picnicarea)
 "lPJ" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "QMLoad"
-	},
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
 	icon_state = "door_locked";
@@ -14167,6 +14163,10 @@
 	locked = 1;
 	name = "Shuttle Hatch";
 	req_access = list(13)
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "SC-CBcargobay2"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/supply)
@@ -26321,10 +26321,6 @@
 	},
 /area/centcom/creed)
 "wRG" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "QMLoad2"
-	},
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
 	icon_state = "door_locked";
@@ -26332,6 +26328,10 @@
 	locked = 1;
 	name = "Shuttle Hatch";
 	req_access = list(13)
+	},
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "SC-CBcargobay1"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/supply)
