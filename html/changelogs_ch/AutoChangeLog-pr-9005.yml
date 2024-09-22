@@ -1,0 +1,4 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - qol: "med/sec records and ids no longer out you as a hanner (useful for characters who are unaware of their own status)"

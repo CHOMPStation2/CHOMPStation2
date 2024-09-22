@@ -1,0 +1,5 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "PDAs now show a little animation when opening apps."
+  - rscadd: "The PDA flashlight button is now highlighted."

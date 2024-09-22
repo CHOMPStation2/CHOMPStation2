@@ -569,4 +569,3 @@ Talon pin
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
 	gear_tweaks += gear_tweak_free_color_choice
->>>>>>> d17843de11... Merge pull request #16323 from SatinIsle/shirts
