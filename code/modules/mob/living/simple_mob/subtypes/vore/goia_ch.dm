@@ -466,6 +466,7 @@
 		hostile = FALSE
 
 /mob/living/simple_mob/vore/zorgoia/proc/export_style()
+	set name = "Export style string"
 	set desc = "Export a string of text that can be used to instantly get the current style back using the import style verb"
 	set category = "Abilities.Settings"
 	var/output_style = jointext(list(
