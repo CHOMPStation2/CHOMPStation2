@@ -1380,7 +1380,7 @@
 /obj/item/accessory/fluff/kettek_collar/New()
 	..()
 	verbs |= /obj/item/accessory/fluff/kettek_collar/proc/change_color
-	color = "#"+get_random_colour()
+	color = get_random_colour()
 	update_icon()
 
 /obj/item/accessory/fluff/kettek_collar/proc/change_color()
