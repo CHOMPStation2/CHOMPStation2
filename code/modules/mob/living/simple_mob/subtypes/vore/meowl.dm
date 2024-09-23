@@ -8,7 +8,7 @@
 	icon_living = "meowl"
 	icon_state = "meowl"
 	icon_rest = "meowl_rest"
-	faction = "meowl"
+	faction = FACTION_MEOWL
 	friendly = list("nudges", "sniffs on", "rumbles softly at", "nuzzles")
 	response_help = "pets"
 	response_disarm = "shoves"
@@ -137,6 +137,8 @@
 
 /datum/ai_holder/simple_mob/vore/meowl
 	var/last_friend_time = 0
+	violent_breakthrough = FALSE
+	destructive = FALSE
 
 /datum/ai_holder/simple_mob/vore/meowl/engage_target()
 	ai_log("engage_target() : Entering.", AI_LOG_DEBUG)

@@ -62,7 +62,7 @@
 
 	avatar.regenerate_icons()
 	avatar.update_transform()
-	job_master.EquipRank(avatar,"VR Avatar", 1, FALSE)
+	job_master.EquipRank(avatar,JOB_VR, 1, FALSE)  //CHOMPEdit
 	add_verb(avatar,/mob/living/carbon/human/proc/fake_exit_vr)  //CHOMPEdit
 	add_verb(avatar,/mob/living/carbon/human/proc/vr_transform_into_mob)  //CHOMPEdit
 	add_verb(avatar,/mob/living/proc/set_size) //CHOMPEdit TGPanel // Introducing NeosVR

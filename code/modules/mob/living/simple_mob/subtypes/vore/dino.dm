@@ -49,4 +49,4 @@
 	vore_icons = SA_ICON_LIVING
 
 /mob/living/simple_mob/vore/aggressive/dino/virgo3b
-	faction = "virgo3b"
+	faction = FACTION_VIRGO3B

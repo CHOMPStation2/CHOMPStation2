@@ -67,7 +67,7 @@
 			nif_savedata = M.nif.save_data.Copy()
 
 	//CHOMPEdit Start - Preference for Automatic transcore notifications
-	if(istype(M,/mob) && !M.is_preference_enabled(/datum/client_preference/autotranscore))
+	if(istype(M,/mob) && !M.read_preference(/datum/preference/toggle/autotranscore))
 		do_notify = FALSE
 	//CHOMPEdit End
 

@@ -1,5 +1,5 @@
 /decl/hierarchy/outfit/job/blueshield
-	name = OUTFIT_JOB_NAME("Blueshield Guard")
+	name = OUTFIT_JOB_NAME(JOB_BLUESHIELD_GUARD)
 	uniform = /obj/item/clothing/under/yw/blueshield
 	l_ear = /obj/item/device/radio/headset/heads/blueshield
 	shoes = /obj/item/clothing/shoes/laceup

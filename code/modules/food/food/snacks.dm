@@ -1434,7 +1434,7 @@
 	reagents.add_reagent("protein", 8)
 
 /obj/item/weapon/reagent_containers/food/snacks/clownburger
-	name = "Clown Burger"
+	name = JOB_CLOWN + " Burger"
 	desc = "This tastes funny..."
 	icon_state = "clownburger"
 	filling_color = "#FF00FF"
@@ -1446,7 +1446,7 @@
 
 
 /obj/item/weapon/reagent_containers/food/snacks/mimeburger
-	name = "Mime Burger"
+	name = JOB_MIME + " Burger"
 	desc = "Its taste defies language."
 	icon_state = "mimeburger"
 	filling_color = "#FFFFFF"
@@ -2615,7 +2615,7 @@
 	reagents.add_reagent("water", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/clownstears
-	name = "Clown's Tears"
+	name = JOB_CLOWN + "'s Tears"
 	desc = "Not very funny."
 	icon_state = "clownstears"
 	filling_color = "#C4FBFF"
@@ -5998,7 +5998,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/burrito_hell
 	name = "el diablo"
-	desc = "Meat and an insane amount of chillis packed in a flour tortilla. The Chaplain will see you now."
+	desc = "Meat and an insane amount of chillis packed in a flour tortilla. The " + JOB_CHAPLAIN + " will see you now."
 	icon_state = "hellfireburrito"
 	bitesize = 4
 	center_of_mass_x = 16 //CHOMPEdit

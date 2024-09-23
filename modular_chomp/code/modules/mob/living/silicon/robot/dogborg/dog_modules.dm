@@ -17,16 +17,16 @@
 	description_info = "This creates a shield in a straight line perpendicular to the direction where the user was facing when it was activated. \
 	The shield allows projectiles to leave from inside but blocks projectiles from outside.  Everything else can pass through the shield freely, \
 	including other people and thrown objects.  The shield also cannot block certain effects which take place over an area, such as flashbangs or explosions."
-	shield_health = 35
-	max_shield_health = 35
-	shield_regen_amount = 10
+	shield_health = 90
+	max_shield_health = 90
+	shield_regen_amount = 25
 	line_length = 7			// How long the line is.  Recommended to be an odd number.
 	offset_from_center = 2	// How far from the projector will the line's center be.
 
 /obj/item/weapon/melee/combat_borgblade/explotailspear
 	name = "energy tail"
 	desc = "A glowing tail spear with a moderate range. It appears to be extremely sharp."
-	force = 25
+	force = 45
 	armor_penetration = 25 //30 to try and make it not useless against armored mobs but not fully nullify it.
 	reach = 3
 	projectile_parry_chance = 15.
@@ -34,7 +34,7 @@
 /obj/item/weapon/melee/dogborg/jaws/big/explojaws
 	name = "explo jaws"
 	desc = "Highly lethal jaws for close range combat."
-	force = 40
+	force = 60
 	armor_penetration = 25 //To try and make it not useless against armored mobs but not fully nullify it
 	projectile_parry_chance = 15
 

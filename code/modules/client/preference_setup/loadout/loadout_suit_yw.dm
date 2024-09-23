@@ -1,7 +1,7 @@
 /datum/gear/suit/roles/poncho/cloak/blueshield
 	display_name = "cloak, blueshield"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/blueshield
-	allowed_roles = list("Blueshield Guard")
+	allowed_roles = list(JOB_BLUESHIELD_GUARD)
 	show_roles = FALSE
 
 /datum/gear/suit/victailcoat
@@ -19,7 +19,7 @@
 /datum/gear/suit/roles/medical/ems_jacket
 	display_name = "first responder jacket"
 	path = /obj/item/clothing/suit/storage/toggle/fr_jacket
-	allowed_roles = list("Chief Medical Officer","Paramedic","Medical Doctor")
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_PARAMEDIC,JOB_MEDICAL_DOCTOR)
 
 /datum/gear/suit/roles/medical/ems_jacket/alt
 	display_name = "first responder jacket, alt."
