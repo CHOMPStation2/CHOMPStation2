@@ -1383,7 +1383,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "axW" = (
@@ -2704,7 +2704,7 @@
 	name = "1S-inset disposal unit"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "aVB" = (
@@ -3032,7 +3032,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "bbU" = (
@@ -4402,7 +4402,7 @@
 "bCC" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1)
 "bCG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
@@ -6288,7 +6288,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "cjx" = (
@@ -7117,7 +7117,7 @@
 "cwT" = (
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "cwY" = (
@@ -7717,7 +7717,7 @@
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/green,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "cGR" = (
@@ -8352,7 +8352,7 @@
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "cPX" = (
@@ -10016,7 +10016,7 @@
 "dyt" = (
 /obj/machinery/light/small,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1)
 "dyy" = (
 /obj/structure/ladder{
@@ -10659,7 +10659,7 @@
 /obj/structure/table/glass,
 /obj/item/weapon/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "dHa" = (
@@ -12377,7 +12377,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "efv" = (
@@ -12853,7 +12853,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "enc" = (
@@ -13654,7 +13654,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "eBQ" = (
@@ -13739,7 +13739,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "eDk" = (
@@ -14425,7 +14425,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "eNJ" = (
@@ -14807,7 +14807,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "eRQ" = (
@@ -15843,7 +15843,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "fcW" = (
@@ -17412,7 +17412,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "fyp" = (
@@ -17544,7 +17544,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Morgue)
 "fAa" = (
@@ -18988,7 +18988,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "fVU" = (
@@ -19369,7 +19369,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "gci" = (
@@ -19757,7 +19757,7 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "giJ" = (
@@ -21959,7 +21959,7 @@
 	name = "1W-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "gTB" = (
@@ -23293,7 +23293,7 @@
 	pixel_x = -5
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "hvi" = (
@@ -23802,7 +23802,7 @@
 "hDe" = (
 /obj/machinery/transhuman/resleever,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "hDi" = (
@@ -25430,7 +25430,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "idA" = (
@@ -26077,7 +26077,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "iom" = (
@@ -26539,7 +26539,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "ixG" = (
@@ -26906,7 +26906,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "iCa" = (
@@ -26969,7 +26969,7 @@
 /area/SouthernCrossV2/Commons/Stairwell_Port)
 "iCX" = (
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "iDp" = (
@@ -27170,7 +27170,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "iGD" = (
@@ -27632,7 +27632,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_StarCorridor1)
 "iNK" = (
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "iNZ" = (
@@ -28910,7 +28910,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "jiN" = (
@@ -29357,7 +29357,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Morgue)
 "jqn" = (
@@ -29758,7 +29758,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "jwY" = (
@@ -30130,7 +30130,7 @@
 	pixel_x = 3
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "jDD" = (
@@ -31007,7 +31007,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "jQL" = (
@@ -31518,7 +31518,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "jZG" = (
@@ -31740,7 +31740,7 @@
 "ket" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "kew" = (
@@ -32717,7 +32717,7 @@
 	pixel_y = 7
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Morgue)
 "ksm" = (
@@ -32915,7 +32915,7 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "kws" = (
@@ -33914,7 +33914,7 @@
 	},
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "kNR" = (
@@ -35273,7 +35273,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "ljQ" = (
@@ -36078,7 +36078,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "lyu" = (
@@ -36123,7 +36123,7 @@
 	name = "Geneticist"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "lyY" = (
@@ -36238,7 +36238,7 @@
 	req_one_access = list(5,47)
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "lAi" = (
@@ -36289,7 +36289,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "lBs" = (
@@ -36422,7 +36422,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "lDo" = (
@@ -36685,7 +36685,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "lHf" = (
@@ -36893,7 +36893,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "lLg" = (
@@ -37682,7 +37682,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "lVC" = (
@@ -38396,7 +38396,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "mfp" = (
@@ -38910,7 +38910,7 @@
 	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "mlm" = (
@@ -38995,7 +38995,7 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_PortCorridor1)
 "mlX" = (
-/obj/machinery/suit_cycler,
+/obj/machinery/suit_cycler/refit_only,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/For_3_Deck_Airlock_Access_1)
@@ -39375,7 +39375,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "mrm" = (
@@ -40072,7 +40072,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3)
 "mDM" = (
-/obj/machinery/suit_cycler,
+/obj/machinery/suit_cycler/refit_only,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/For_3_Deck_Airlock_Access_2)
@@ -40283,7 +40283,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "mIm" = (
@@ -40818,7 +40818,7 @@
 /obj/structure/bed/double,
 /obj/item/weapon/bedsheet/greendouble,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "mSQ" = (
@@ -42075,7 +42075,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "nmK" = (
@@ -42867,7 +42867,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "nAO" = (
@@ -43660,7 +43660,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "nMq" = (
@@ -44509,7 +44509,7 @@
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "oaL" = (
@@ -45082,7 +45082,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "ois" = (
@@ -45603,7 +45603,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "oql" = (
@@ -46615,7 +46615,7 @@
 	},
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "oHP" = (
@@ -46741,7 +46741,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "oJn" = (
@@ -46956,7 +46956,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "oLa" = (
@@ -47032,7 +47032,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "oLW" = (
@@ -47428,7 +47428,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "oTJ" = (
@@ -47580,7 +47580,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "oWw" = (
@@ -48596,7 +48596,7 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "pos" = (
@@ -48623,7 +48623,7 @@
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "ppD" = (
@@ -49459,7 +49459,7 @@
 "pBm" = (
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "pBz" = (
@@ -49689,7 +49689,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "pGm" = (
@@ -50254,7 +50254,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "pPN" = (
@@ -51155,7 +51155,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "qgn" = (
@@ -51195,7 +51195,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "qgS" = (
@@ -51973,7 +51973,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "qrB" = (
@@ -52523,7 +52523,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "qAk" = (
@@ -52699,7 +52699,7 @@
 	name = "Geneticist"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "qDy" = (
@@ -53625,7 +53625,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "qTV" = (
@@ -53753,7 +53753,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "qVX" = (
@@ -54011,7 +54011,7 @@
 	name = "1S-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "rbp" = (
@@ -55241,7 +55241,7 @@
 	name = "O- Blood Locker"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "rtU" = (
@@ -55570,7 +55570,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "rxL" = (
@@ -56035,7 +56035,7 @@
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "rHJ" = (
@@ -56356,7 +56356,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "rMZ" = (
@@ -56459,7 +56459,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "rOA" = (
@@ -56510,10 +56510,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Dormitory_05)
-"rQE" = (
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1)
 "rQJ" = (
 /obj/random/trash,
 /turf/simulated/floor,
@@ -58138,7 +58134,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "sqw" = (
@@ -61931,7 +61927,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "tBh" = (
@@ -62410,7 +62406,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "tKm" = (
@@ -63184,7 +63180,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "tXL" = (
@@ -63474,7 +63470,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "udu" = (
@@ -64564,7 +64560,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "utP" = (
@@ -64606,7 +64602,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "uur" = (
@@ -64631,7 +64627,7 @@
 	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "uuD" = (
@@ -64656,14 +64652,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "uuP" = (
 /obj/machinery/iv_drip,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "uvG" = (
@@ -65566,7 +65562,7 @@
 "uKF" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/junk,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1)
 "uKX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -66660,7 +66656,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "uYz" = (
@@ -68083,7 +68079,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "vvN" = (
@@ -69576,7 +69572,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "vSi" = (
@@ -69945,11 +69941,11 @@
 "vXP" = (
 /obj/machinery/clonepod/transhuman/full,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "vXU" = (
-/obj/machinery/suit_cycler,
+/obj/machinery/suit_cycler/refit_only,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
@@ -70177,7 +70173,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "wce" = (
@@ -71236,7 +71232,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "wtj" = (
@@ -72079,7 +72075,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "wIK" = (
@@ -74915,7 +74911,7 @@
 	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "xvk" = (
@@ -75158,7 +75154,7 @@
 /obj/structure/table/glass,
 /obj/item/weapon/storage/box/monkeycubes/farwacubes,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "xyW" = (
@@ -75907,7 +75903,7 @@
 	name = "W-status display"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "xJC" = (
@@ -77160,7 +77156,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "ycB" = (
@@ -118536,9 +118532,9 @@ blM
 ixY
 iMd
 hIh
-rQE
-rQE
-rQE
+qsY
+qsY
+qsY
 hsc
 fdT
 pEj
@@ -118794,8 +118790,8 @@ rvp
 juv
 wLU
 hIh
-rQE
-rQE
+qsY
+qsY
 uKF
 hsc
 fCX
@@ -119052,9 +119048,9 @@ aIV
 wfT
 qXC
 hIh
-rQE
+qsY
 bCC
-rQE
+qsY
 hsc
 rRF
 rRF
@@ -119310,8 +119306,8 @@ aIV
 wfT
 pML
 hIh
-rQE
-rQE
+qsY
+qsY
 dyt
 hsc
 hsc
@@ -119569,8 +119565,8 @@ wfT
 jfX
 hIh
 uKF
-rQE
-rQE
+qsY
+qsY
 hsc
 bCU
 bCU
@@ -119826,9 +119822,9 @@ aIV
 wfT
 oSC
 hIh
-rQE
-rQE
-rQE
+qsY
+qsY
+qsY
 hsc
 qaj
 pEj
@@ -120084,9 +120080,9 @@ aIV
 wfT
 kge
 hIh
-rQE
+qsY
 bCC
-rQE
+qsY
 hsc
 lwr
 gDl

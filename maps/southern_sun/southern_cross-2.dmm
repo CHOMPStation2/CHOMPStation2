@@ -1026,7 +1026,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "abC" = (
@@ -1035,7 +1035,7 @@
 	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "abD" = (
@@ -2066,7 +2066,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "aec" = (
@@ -2166,7 +2166,7 @@
 /obj/item/extraction_pack,
 /obj/item/fulton_core,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "aeo" = (
@@ -3435,7 +3435,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "agX" = (
@@ -5321,7 +5321,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "amG" = (
@@ -5593,7 +5593,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "anM" = (
@@ -5625,7 +5625,7 @@
 	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "anR" = (
@@ -6479,7 +6479,7 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "arf" = (
@@ -7718,7 +7718,7 @@
 /obj/item/extraction_pack,
 /obj/item/fulton_core,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "avu" = (
@@ -8998,7 +8998,7 @@
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "azp" = (
@@ -9769,7 +9769,7 @@
 	name = "1N-lighting fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "aCg" = (
@@ -10214,7 +10214,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "aDz" = (
-/obj/machinery/suit_cycler,
+/obj/machinery/suit_cycler/refit_only,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Star_2_Deck_Airlock_Access)
@@ -10951,7 +10951,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "aFN" = (
@@ -11551,7 +11551,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "aHy" = (
@@ -11756,7 +11756,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_1)
 "aIv" = (
@@ -11964,7 +11964,7 @@
 	name = "Chemist"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "aIZ" = (
@@ -13107,12 +13107,12 @@
 	name = "1W-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "aMn" = (
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "aMo" = (
@@ -13154,7 +13154,7 @@
 	pixel_x = -6
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Distillery)
 "aMr" = (
@@ -14605,7 +14605,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "aRh" = (
@@ -14642,7 +14642,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "aRi" = (
@@ -15285,7 +15285,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "aTf" = (
@@ -16712,7 +16712,7 @@
 "aXf" = (
 /obj/structure/closet/radiation,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Distillery)
 "aXh" = (
@@ -17176,7 +17176,7 @@
 	pixel_x = 9
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "aYE" = (
@@ -17499,7 +17499,7 @@
 	req_access = list(5)
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "aZV" = (
@@ -17955,7 +17955,7 @@
 	name = "Paramedic"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "bbK" = (
@@ -18406,7 +18406,7 @@
 	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "bcS" = (
@@ -18915,7 +18915,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "bfb" = (
@@ -19259,7 +19259,7 @@
 	pixel_x = -7
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "bfI" = (
@@ -19267,7 +19267,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_1)
 "bfJ" = (
@@ -19324,7 +19324,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "bfQ" = (
@@ -19879,7 +19879,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "bhr" = (
@@ -20723,13 +20723,13 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "bke" = (
 /obj/machinery/chemical_synthesizer,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "bkf" = (
@@ -20739,7 +20739,7 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "bki" = (
@@ -20783,7 +20783,7 @@
 	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "bkl" = (
@@ -21210,7 +21210,7 @@
 	dir = 2
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "blR" = (
@@ -21489,7 +21489,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "bnf" = (
@@ -22053,7 +22053,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "bpb" = (
@@ -22083,7 +22083,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "bpc" = (
@@ -22102,7 +22102,7 @@
 	},
 /obj/item/weapon/hand_labeler,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "bph" = (
@@ -22494,7 +22494,7 @@
 	name = "1S-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "bqh" = (
@@ -22556,7 +22556,7 @@
 "bqz" = (
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "bqC" = (
@@ -23159,7 +23159,7 @@
 	name = "1W-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "bsY" = (
@@ -23748,7 +23748,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "buL" = (
@@ -24203,7 +24203,7 @@
 	name = "W-fire alarm"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "bwu" = (
@@ -24725,7 +24725,7 @@
 	name = "Paramedic"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "byc" = (
@@ -24769,7 +24769,7 @@
 	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "byd" = (
@@ -24942,9 +24942,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Medical/Chemistry)
 "byv" = (
-/obj/machinery/suit_cycler{
-	req_access = null
-	},
+/obj/machinery/suit_cycler/refit_only,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Aft_2_Deck_Airlock_Access)
@@ -25127,7 +25125,7 @@
 	pixel_y = -2
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "byK" = (
@@ -25495,7 +25493,7 @@
 	layer = 2.6
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "bAc" = (
@@ -25948,7 +25946,7 @@
 "bBL" = (
 /obj/machinery/sleeper,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "bBN" = (
@@ -26389,7 +26387,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "bDQ" = (
@@ -26799,7 +26797,7 @@
 	name = "1E-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "bFR" = (
@@ -27525,7 +27523,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "bIM" = (
@@ -27537,7 +27535,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "bIQ" = (
@@ -27876,7 +27874,8 @@
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "bKm" = (
 /obj/machinery/sleep_console{
-	dir = 1
+	dir = 1;
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -27885,7 +27884,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "bKn" = (
@@ -27916,7 +27915,7 @@
 /area/SouthernCrossV2/Commons/Stairwell_Port)
 "bKt" = (
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "bKu" = (
@@ -29038,7 +29037,7 @@
 	},
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "bOd" = (
@@ -29179,7 +29178,7 @@
 	pixel_y = -2
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "bOH" = (
@@ -30129,7 +30128,7 @@
 /area/SouthernCrossV2/Domicile/Rec_Lounge)
 "bSq" = (
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_2)
 "bSt" = (
@@ -30148,7 +30147,7 @@
 	},
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Deck2_Corridor)
 "bSv" = (
@@ -30188,7 +30187,7 @@
 	pixel_x = -2
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "bSB" = (
@@ -30451,7 +30450,7 @@
 /area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1)
 "bTz" = (
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_1)
 "bTD" = (
@@ -30488,7 +30487,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_2)
 "bTO" = (
@@ -30498,7 +30497,7 @@
 	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_2)
 "bTQ" = (
@@ -31123,7 +31122,7 @@
 	},
 /obj/item/device/mass_spectrometer,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "bVP" = (
@@ -31343,7 +31342,7 @@
 	name = "1S-AI display"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "bWr" = (
@@ -32410,7 +32409,7 @@
 "caa" = (
 /obj/structure/closet/secure_closet/medical1,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "cad" = (
@@ -33758,7 +33757,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "ceC" = (
@@ -34368,7 +34367,7 @@
 	name = "1N-station intercom (Medbay)"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "cgc" = (
@@ -34750,7 +34749,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "chy" = (
@@ -36406,7 +36405,7 @@
 	name = "1N-lighting fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "cms" = (
@@ -37356,7 +37355,7 @@
 	name = "O- Blood Locker"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "cqv" = (
@@ -37381,7 +37380,7 @@
 	name = "1W-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "cqC" = (
@@ -37530,7 +37529,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "cra" = (
@@ -37998,21 +37997,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Bridge/Vault)
 "csE" = (
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
 /obj/structure/closet/crate/secure/large/reinforced,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -38020,6 +38004,9 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
 	},
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Cargo/Aft_Tool_Storage)
 "csF" = (
@@ -38608,7 +38595,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "cuc" = (
@@ -38722,7 +38709,7 @@
 	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "cuo" = (
@@ -40332,7 +40319,7 @@
 	color = "grey"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "czY" = (
@@ -40838,7 +40825,7 @@
 /obj/item/device/defib_kit/loaded,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "cBM" = (
@@ -43788,7 +43775,7 @@
 	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Distillery)
 "daD" = (
@@ -47365,7 +47352,7 @@
 "dTH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "dTN" = (
@@ -48980,7 +48967,7 @@
 	name = "1E-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "eqG" = (
@@ -49105,7 +49092,7 @@
 	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "esB" = (
@@ -49352,7 +49339,7 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "evS" = (
@@ -49574,7 +49561,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "eyn" = (
@@ -49810,7 +49797,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Distillery)
 "eDg" = (
@@ -50009,7 +49996,7 @@
 	pixel_x = -6
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "eFm" = (
@@ -50200,7 +50187,7 @@
 "eHX" = (
 /obj/machinery/chem_master,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "eIc" = (
@@ -50747,7 +50734,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "eMv" = (
@@ -51176,7 +51163,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "eRd" = (
@@ -51199,7 +51186,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "eRl" = (
@@ -52821,7 +52808,7 @@
 "fma" = (
 /obj/machinery/chem_master,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "fmi" = (
@@ -52953,7 +52940,7 @@
 "fnG" = (
 /obj/machinery/vitals_monitor,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "fnO" = (
@@ -54379,7 +54366,7 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "fFD" = (
@@ -54660,7 +54647,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_1)
 "fIW" = (
@@ -54868,7 +54855,7 @@
 	name = "Pill cabinet"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "fLG" = (
@@ -55251,7 +55238,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "fQa" = (
@@ -55684,7 +55671,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_2)
 "fVp" = (
@@ -57015,7 +57002,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "gju" = (
@@ -58854,7 +58841,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "gJk" = (
@@ -59559,7 +59546,7 @@
 	pixel_x = -7
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "gSv" = (
@@ -60416,7 +60403,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "heC" = (
@@ -61708,7 +61695,7 @@
 	name = "1N-lighting fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "hul" = (
@@ -61745,7 +61732,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "huu" = (
@@ -63595,7 +63582,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "hWW" = (
@@ -64328,7 +64315,7 @@
 "ihh" = (
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Deck2_Corridor)
 "ihl" = (
@@ -64355,7 +64342,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "ihv" = (
@@ -64364,7 +64351,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "ihz" = (
@@ -64478,7 +64465,7 @@
 	name = "Pill cabinet"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "iip" = (
@@ -64624,7 +64611,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_2)
 "ijR" = (
@@ -67029,7 +67016,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "iLQ" = (
@@ -67072,7 +67059,7 @@
 	pixel_x = 12
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "iNb" = (
@@ -67648,7 +67635,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Distillery)
 "iVJ" = (
@@ -69615,7 +69602,7 @@
 "jwD" = (
 /obj/machinery/chemical_analyzer,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "jwJ" = (
@@ -69723,7 +69710,7 @@
 "jyb" = (
 /obj/structure/closet/firecloset/full/atmos,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "jyC" = (
@@ -70096,7 +70083,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "jDF" = (
@@ -71478,7 +71465,7 @@
 	name = "1W-station intercom (Medbay)"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "jYt" = (
@@ -75875,7 +75862,7 @@
 	name = "1W-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "lhe" = (
@@ -76444,7 +76431,7 @@
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "lpw" = (
@@ -76798,7 +76785,7 @@
 	},
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Deck2_Corridor)
 "lwa" = (
@@ -78231,7 +78218,7 @@
 "lQC" = (
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "lQJ" = (
@@ -78534,7 +78521,7 @@
 	name = "1E-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "lUL" = (
@@ -79882,13 +79869,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "sc-GCchemistry";
-	name = "Chemistry Shutters Control";
-	req_access = list(28);
-	pixel_x = 24
-	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftCorridor1)
 "mox" = (
@@ -80536,7 +80516,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "mzG" = (
@@ -81848,7 +81828,7 @@
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "mRi" = (
@@ -82287,23 +82267,11 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "mXs" = (
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
 /obj/structure/closet/crate/secure/large/reinforced,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Cargo/Star_Tool_Storage)
 "mXA" = (
@@ -82515,7 +82483,7 @@
 "nai" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "naj" = (
@@ -82531,7 +82499,7 @@
 "naz" = (
 /obj/structure/closet/wardrobe/medic_white,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "naC" = (
@@ -83374,7 +83342,7 @@
 "nql" = (
 /obj/machinery/organ_printer/flesh/full,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "nqn" = (
@@ -83770,7 +83738,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "nuJ" = (
@@ -84282,7 +84250,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "nDR" = (
@@ -86138,7 +86106,7 @@
 "odi" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "odm" = (
@@ -86363,7 +86331,7 @@
 	},
 /obj/machinery/vitals_monitor,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "ogJ" = (
@@ -86873,7 +86841,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "opg" = (
@@ -86931,7 +86899,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "oqz" = (
@@ -87013,7 +86981,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "orP" = (
@@ -87833,7 +87801,7 @@
 /obj/machinery/iv_drip,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "oEb" = (
@@ -89787,7 +89755,7 @@
 	pixel_x = 5
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "pex" = (
@@ -90269,7 +90237,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "pkP" = (
@@ -90370,7 +90338,7 @@
 	name = "S-status display"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "pmv" = (
@@ -90581,7 +90549,7 @@
 	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_1)
 "poL" = (
@@ -92211,7 +92179,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "pJt" = (
@@ -92253,7 +92221,7 @@
 "pKf" = (
 /obj/structure/closet/wardrobe/medic_gown,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "pKB" = (
@@ -92402,7 +92370,7 @@
 	name = "1N-station intercom (Medbay)"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "pMR" = (
@@ -92589,7 +92557,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "pPq" = (
@@ -92614,7 +92582,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "pPG" = (
@@ -92682,7 +92650,7 @@
 	name = "1S-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "pQe" = (
@@ -94566,7 +94534,7 @@
 "qoZ" = (
 /obj/structure/closet/secure_closet/medical1,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "qpl" = (
@@ -94823,7 +94791,7 @@
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "qtf" = (
@@ -95995,7 +95963,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "qLt" = (
@@ -96717,7 +96685,7 @@
 "qWb" = (
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "qWg" = (
@@ -97444,7 +97412,7 @@
 /area/SouthernCrossV2/Domicile/Gym_Sauna)
 "reJ" = (
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "rfd" = (
@@ -97819,7 +97787,7 @@
 /obj/machinery/sleeper,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "rkb" = (
@@ -98575,7 +98543,7 @@
 	pixel_x = -7
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "rtA" = (
@@ -99433,7 +99401,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "rCC" = (
@@ -99591,7 +99559,7 @@
 "rEl" = (
 /obj/structure/closet/secure_closet/medical2,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "rEq" = (
@@ -99805,7 +99773,7 @@
 /area/SouthernCrossV2/Security/Visitation_Room)
 "rGT" = (
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "rGV" = (
@@ -100088,7 +100056,7 @@
 	},
 /obj/structure/closet/secure_closet/sar,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "rIT" = (
@@ -102231,21 +102199,6 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Engineering/Reception)
 "soA" = (
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
 /obj/structure/closet/crate/secure/large/reinforced,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/camera/network/security{
@@ -102253,6 +102206,9 @@
 	c_tag = "D2-Car-Tools For1";
 	network = list("Cargo")
 	},
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Cargo/For_Tool_Storage)
 "soH" = (
@@ -102450,7 +102406,7 @@
 	},
 /obj/item/weapon/storage/backpack/dufflebag/emt,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "srH" = (
@@ -102611,7 +102567,7 @@
 "stu" = (
 /obj/structure/closet/wardrobe/chemistry_white,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "stv" = (
@@ -102628,7 +102584,7 @@
 	},
 /obj/structure/closet/secure_closet/psych,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "stW" = (
@@ -103437,7 +103393,7 @@
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "sDr" = (
@@ -103985,7 +103941,7 @@
 "sKp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "sKq" = (
@@ -103993,7 +103949,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "sKG" = (
@@ -104991,7 +104947,7 @@
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "sZx" = (
@@ -105379,7 +105335,7 @@
 	},
 /obj/structure/closet/walllocker_double/medical/south,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "tfi" = (
@@ -105572,7 +105528,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "thu" = (
@@ -106404,7 +106360,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "twc" = (
@@ -106442,7 +106398,7 @@
 	pixel_x = -3
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "twl" = (
@@ -106576,7 +106532,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_2)
 "tyl" = (
@@ -107199,7 +107155,7 @@
 	pixel_x = -5
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "tHe" = (
@@ -107236,7 +107192,7 @@
 	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "tHl" = (
@@ -108418,7 +108374,7 @@
 	pixel_y = 11
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "tYF" = (
@@ -108753,7 +108709,7 @@
 	pixel_x = 9
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "uaB" = (
@@ -109042,7 +108998,7 @@
 	pixel_x = 9
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "ufe" = (
@@ -109071,7 +109027,7 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "ufk" = (
@@ -109083,7 +109039,7 @@
 	name = "1N-lighting fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Reception)
 "ufA" = (
@@ -114296,7 +114252,7 @@
 "vKy" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "vKA" = (
@@ -114689,7 +114645,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "vRU" = (
@@ -115029,7 +114985,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "vVV" = (
@@ -115597,7 +115553,7 @@
 	pixel_x = -1
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Chemistry)
 "wdA" = (
@@ -115634,7 +115590,7 @@
 "wdI" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "wdS" = (
@@ -115720,7 +115676,7 @@
 /obj/machinery/iv_drip,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "weY" = (
@@ -115782,7 +115738,7 @@
 	pixel_x = -32;
 	name = "W-status display"
 	},
-/obj/machinery/suit_cycler,
+/obj/machinery/suit_cycler/refit_only,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Science/Toxins_Viewing_Port)
@@ -115888,7 +115844,7 @@
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "whh" = (
@@ -116475,7 +116431,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Surgery_Room_1)
 "wnv" = (
@@ -116611,21 +116567,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Research_Substation)
 "wpe" = (
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
-/obj/fiftyspawner/plastic,
 /obj/structure/closet/crate/secure/large/reinforced,
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -116633,6 +116574,9 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 10
 	},
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Cargo/Aft_Tool_Storage)
 "wpq" = (
@@ -116774,7 +116718,7 @@
 	name = "1W-light fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/For_Medical_Post)
 "wrf" = (
@@ -116821,7 +116765,7 @@
 	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "wrK" = (
@@ -117126,7 +117070,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "wvX" = (
@@ -117636,7 +117580,7 @@
 	layer = 2.6
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "wDo" = (
@@ -117697,7 +117641,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "wES" = (
@@ -118197,7 +118141,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Distillery)
 "wKX" = (
@@ -118423,7 +118367,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "wNx" = (
@@ -118644,7 +118588,7 @@
 	network = list("Medical")
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "wQT" = (
@@ -118864,7 +118808,7 @@
 	name = "1N-lighting fixture"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "wUp" = (
@@ -119114,7 +119058,7 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "wXh" = (
@@ -119486,7 +119430,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "xdy" = (
@@ -119801,7 +119745,7 @@
 	pixel_x = 3
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "xhn" = (
@@ -121316,7 +121260,7 @@
 	name = "S-status display"
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Locker_Room)
 "xDR" = (
@@ -122299,7 +122243,7 @@
 	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Dressing_Room)
 "xTX" = (
@@ -122321,7 +122265,7 @@
 	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "xUc" = (
@@ -122476,7 +122420,7 @@
 	},
 /obj/item/weapon/bedsheet/medical,
 /turf/simulated/floor/tiled/white{
-	color = "#5aa660"
+	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "xXo" = (
