@@ -99,14 +99,13 @@ if [ $retVal -ne 0 ]; then
 fi
 
 part "html tag matching"
-#Checking for missed tags
-echo -e "${RED}DISABLED"
-# python tools/TagMatcher/tag-matcher.py ../..
-# retVal=$?
-# if [ $retVal -ne 0 ]; then
-#   echo -e "${RED}Some HTML tags are missing their opening/closing partners. Please correct this.${NC}"
-#   FAILED=1
-# fi
+Checking for missed tags
+python tools/TagMatcher/tag-matcher.py ../..
+retVal=$?
+if [ $retVal -ne 0 ]; then
+  echo -e "${RED}Some HTML tags are missing their opening/closing partners. Please correct this.${NC}"
+  FAILED=1
+fi
 
 if [ "$pcre2_support" -eq 1 ]; then
 	section "regexes requiring PCRE2"
