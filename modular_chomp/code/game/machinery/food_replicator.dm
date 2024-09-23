@@ -10,9 +10,9 @@
 	active_power_usage = 200
 
 	var/print_delay = 150
-	var/print_cost = 40
+	var/print_cost
 
-	var/efficiency = 3
+	var/efficiency = 1.35
 	var/speed = 1
 
 	var/obj/item/weapon/reagent_containers/container = null
@@ -69,20 +69,22 @@
 		if(!choice || printing || (stat & (BROKEN|NOPOWER)))
 			return
 
+		var/product_path = products[choice]
+		var/obj/item/weapon/reagent_containers/foodItem = new product_path
+
+		var/total = clamp(foodItem.reagents.get_free_space()-foodItem.reagents.total_volume, 1, 300)
+
 		if(!container)
 			to_chat(user, SPAN_WARNING("There is no container!"))
 			return
 
 		if(container && container.reagents)
-			if(!container.reagents.has_reagent("nutriment", (print_cost*efficiency)))
+			if(!container.reagents.has_reagent("nutriment", (total*efficiency)))
 				playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
 				to_chat(user, SPAN_WARNING("Not enough nutriment available!"))
 				return
 
-			container.reagents.remove_reagent("nutriment", (print_cost*efficiency))
-
-			var/product_path = products[choice]
-			var/obj/item/weapon/reagent_containers/foodItem
+			container.reagents.remove_reagent("nutriment", (total*efficiency))
 
 			update_use_power(USE_POWER_ACTIVE)
 			printing = TRUE
