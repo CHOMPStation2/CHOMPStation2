@@ -1,0 +1,13 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - maptweak: "Removed floating button in medbay maints"
+  - maptweak: "Reduced steel/glass in all 4 tool staroages having more material then engineering"
+  - maptweak: "Replaced chemistry roof catwalks with plating, as players could 'climb down through' catwalks"
+  - maptweak: "Removed ERT level hardsuits for janitors (Why do janitors have hardsuits in the first place??)"
+  - maptweak: "Replaces SPACE STON 13 with generic NT logo for now"
+  - maptweak: "Makes 'public suit cyclers' actually public"
+  - maptweak: "Makes medbay less G R E E N"
+  - maptweak: "Removed floating medbay chunk"
+  - maptweak: "Xenobio airlocks work now"
+  - bugfix: "Fixes radio being broadcasted twice"
