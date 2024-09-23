@@ -82,7 +82,7 @@ echo -e "${RED}DISABLED"
 
 part "changelog"
 #Checking for a change to html/changelogs/example.yml
-md5sum -c - <<< "ea467b7b75774b41ecdf35e07091d96f *html/changelogs/example.yml"
+md5sum -c - <<< "0c56937110d88f750a32d9075ddaab8b *html/changelogs_ch/example.yml" # CHOMPedit - Better changelogs
 retVal=$?
 if [ $retVal -ne 0 ]; then
   echo -e "${RED}Do not modify the example.yml changelog file.${NC}"
