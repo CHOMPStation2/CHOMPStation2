@@ -39234,7 +39234,7 @@
 /obj/machinery/access_button{
 	command = "cycle_exterior";
 	frequency = 1379;
-	master_tag = "SC-ALCxeno";
+	master_tag = "SC-ALCxenobiology";
 	name = "Xenobiology Access Button";
 	req_access = list(55);
 	pixel_y = 24
@@ -51494,7 +51494,7 @@
 /obj/machinery/access_button{
 	command = "cycle_interior";
 	frequency = 1379;
-	master_tag = "SC-ALCxeno";
+	master_tag = "SC-ALCxenobiology";
 	name = "Xenobiology Access Button";
 	pixel_y = -26;
 	req_access = list(55)
