@@ -141,3 +141,16 @@
   - rscadd: Click-and-drag brush in Canvas.
   - rscadd: You can now select 1 of 47 different plushies to bring with you from loadout
       accessories~!
+2024-09-23:
+  CHOMPStation2:
+  - rscadd: PDAs now show a little animation when opening apps.
+  - rscadd: The PDA flashlight button is now highlighted.
+  - qol: med/sec records and ids no longer out you as a hanner (useful for characters
+      who are unaware of their own status)
+  - rscadd: Closing a beaker and clicking on venomous animals/people with it will
+      allow you to express their venom into the beaker once every 30 seconds.
+  Kashargul:
+  - bugfix: turrets properly target simple mobs and xenos/aliens again
+  tacoguy7765093:
+  - qol: Zorgoia simplemobs now can have their style exported and imported for later!
+  - qol: Zorgoia simplemobs now spawn with random colors and markings.
