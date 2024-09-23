@@ -6,7 +6,6 @@
 # byond version
 export BYOND_MAJOR=515
 export BYOND_MINOR=1637
-export MACRO_COUNT=4 #CHHOMPAdd
 
 #rust_g git tag
 export RUST_G_VERSION=3.3.0
