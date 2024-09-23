@@ -6,9 +6,10 @@
 # byond version
 export BYOND_MAJOR=515
 export BYOND_MINOR=1637
+export MACRO_COUNT=4
 
 #rust_g git tag
-export RUST_G_VERSION=3.3.0
+export RUST_G_VERSION=3.4.0
 
 #node version
 export NODE_VERSION_LTS=20.13.0
@@ -19,7 +20,7 @@ export NODE_VERSION_COMPAT=20.2.0
 export SPACEMAN_DMM_VERSION=suite-1.8
 
 # Python version for mapmerge and other tools
-export PYTHON_VERSION=3.8.10
+export PYTHON_VERSION=3.9.0
 
 #dreamluau repo
 export DREAMLUAU_REPO="tgstation/dreamluau"

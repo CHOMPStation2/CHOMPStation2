@@ -4,7 +4,7 @@ set -euo pipefail
 source dependencies.sh
 
 source ~/.nvm/nvm.sh
-nvm use $NODE_VERSION
+nvm use $NODE_VERSION_LTS
 cd tgui
 chmod +x bin/tgui
 bin/tgui --lint
