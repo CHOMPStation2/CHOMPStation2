@@ -32,22 +32,13 @@ If you were already familiar with an older, Ractive-based tgui, and want to tran
 ## Pre-requisites
 
 If you are using the tooling provided in this repo, everything is included! Feel free to skip this step.
-<<<<<<< HEAD
-
-However, if you want finer control over the installation or build process, you will need these:
-=======
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 
 However, if you want finer control over the installation or build process, you will need these:
 
 - [Node v20.2+](https://nodejs.org/en/download/)
   - **LTS** release is recommended instead of latest
   - **DO NOT install Chocolatey if Node installer asks you to!**
-<<<<<<< HEAD
-- [Yarn v1.22.4+](https://yarnpkg.com/getting-started/install)
-=======
 - [Yarn v4.1.1+](https://yarnpkg.com/getting-started/install)
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
   - You can run `npm install -g yarn` to install it.
 
 ## Usage
@@ -79,10 +70,6 @@ However, if you want finer control over the installation or build process, you w
 - `tools/build/build tgui-clean` - Clean up tgui folder.
 
 > With Juke Build, you can run multiple targets together, e.g.:
-<<<<<<< HEAD
-=======
->
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 > ```
 > tools/build/build tgui tgui-lint tgui-tsc tgui-test
 > ```
@@ -190,11 +177,7 @@ so you'll need to restart it if it disconnects from the window.
 
 ## License
 
-<<<<<<< HEAD
 Source code is covered by CHOMPStation's parent license - **AGPL-3.0** (see the main [README](../README.md)), unless otherwise indicated.
-=======
-Source code is covered by /tg/station's parent license - **AGPL-3.0** (see the main [README](../README.md)), unless otherwise indicated.
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 
 Some files are annotated with a copyright header, which explicitly states the copyright holder and license of the file. Most of the core tgui source code is available under the **MIT** license.
 

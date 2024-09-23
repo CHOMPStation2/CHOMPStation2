@@ -69,12 +69,6 @@ def hash_file(path):
 
     return (md5.hexdigest(), None, None)
 
-<<<<<<< HEAD
-pass_count = 0
-fail_count = 0
-output_hash = {}
-for cutter_template in glob.glob("..\\..\\icons\\**\*.toml", recursive = True):
-=======
 path_to_us = os.path.realpath(os.path.dirname(__file__))
 pass_count = 0
 fail_count = 0
@@ -85,7 +79,6 @@ if platform.system() == "Windows":
 else:
     files = glob.glob(f"{path_to_us}/../../icons/**/*.toml", recursive = True)
 for cutter_template in files:
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
     resource_name = re.sub(chop_extension, r"\1", cutter_template, count = 1)
     if not os.path.isfile(resource_name):
         print(f"::error template={cutter_template} exists but lacks a matching resource file ({resource_name})")
@@ -102,15 +95,9 @@ for cutter_template in files:
 
 # Execute cutter
 if platform.system() == "Windows":
-<<<<<<< HEAD
-    subprocess.run("..\\build\\build.bat --force-recut --ci icon-cutter")
-else:
-    subprocess.run("../build/build --force-recut --ci icon-cutter", shell = True)
-=======
     subprocess.run(f"{path_to_us}\..\\build\\build.bat --force-recut --ci icon-cutter")
 else:
     subprocess.run(f"{path_to_us}/../build/build --force-recut --ci icon-cutter", shell = True)
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 
 for output_name in output_hash:
     old_hash, old_metadata, old_icon_hash = output_hash[output_name]

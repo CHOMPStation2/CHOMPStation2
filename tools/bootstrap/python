@@ -18,11 +18,7 @@ if [ "$TG_BOOTSTRAP_CACHE" ]; then
 fi
 OldPWD="$PWD"
 cd "$Bootstrap/../.."
-<<<<<<< HEAD
-. ./_build_dependencies.sh  # sets PYTHON_VERSION
-=======
 . ./dependencies.sh  # sets PYTHON_VERSION
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 cd "$OldPWD"
 PythonVersion="$PYTHON_VERSION"
 PythonDir="$Cache/python-$PythonVersion"

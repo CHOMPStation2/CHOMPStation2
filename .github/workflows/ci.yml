@@ -8,7 +8,6 @@ env:
   BASENAME: "vorestation"
 
 jobs:
-<<<<<<< HEAD
   run_linters:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Run Linters
@@ -28,74 +27,14 @@ jobs:
           key: ${{ runner.os }}-spacemandmm-${{ hashFiles('_dependencies.sh') }}
           restore-keys: |
             ${{ runner.os }}-spacemandmm-
-=======
-
-  run_linters:
-    name: Run Linters
-    runs-on: ubuntu-20.04
-
-    steps:
-      - uses: actions/checkout@v4
-      # Caches
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
       - name: Restore Yarn cache
         uses: actions/cache@v4
         with:
           path: tgui/.yarn/cache
           key: ${{ runner.os }}-yarn-${{ hashFiles('tgui/yarn.lock') }}
-<<<<<<< HEAD
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Restore Node cache
-=======
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Restore Node cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.nvm
-          key: ${{ runner.os }}-node-${{ hashFiles('dependencies.sh') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Restore Bootstrap cache
-        uses: actions/cache@v4
-        with:
-          path: tools/bootstrap/.cache
-          key: ${{ runner.os }}-bootstrap-${{ hashFiles('tools/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-bootstrap-
-      - name: Restore Rust cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.cargo
-          key: ${{ runner.os }}-rust-${{ hashFiles('tools/ci/ci_dependencies.sh')}}
-          restore-keys: |
-            ${{ runner.os }}-rust-
-      - name: Restore Cutter cache
-        uses: actions/cache@v4
-        with:
-          path: tools/icon_cutter/cache
-          key: ${{ runner.os }}-cutter-${{ hashFiles('dependencies.sh') }}
-      # End Caches
-      - name: Install Tools
-        run: |
-          pip3 install setuptools
-          bash tools/ci/install_node.sh
-          bash tools/ci/install_ripgrep.sh
-          tools/bootstrap/python -c ''
-      - name: Run Grep Checks
-        run: tools/ci/validate_files.sh
-      - name: Run TGUI Checks
-        run: tools/build/build --ci lint tgui-test
-
-  dreamchecker:
-    name: DreamChecker
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Cache SpacemanDMM
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
         uses: actions/cache@v4
         with:
           path: ~/.nvm
@@ -134,11 +73,7 @@ jobs:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
     # needs: ['run_linters', 'dreamchecker']
-<<<<<<< HEAD
     runs-on: ubuntu-22.04
-=======
-    runs-on: ubuntu-20.04
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
     steps:
       - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
@@ -184,11 +119,7 @@ jobs:
   tests_successful:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
-<<<<<<< HEAD
     needs: ['run_linters', 'unit_tests']
-=======
-    needs: ['run_linters', 'dreamchecker', 'unit_tests']
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
     runs-on: ubuntu-20.04
     steps:
       - name: Report Success

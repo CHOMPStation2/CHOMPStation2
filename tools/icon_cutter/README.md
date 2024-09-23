@@ -2,11 +2,7 @@
 
 ## What is this?
 
-<<<<<<< HEAD
-This folder holds a set of cached versions of hypnagogic, our icon cutter.
-=======
 This folder will hold a set of cached versions of hypnagogic, our icon cutter. We autodownload the tagged version from github on build.
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 
 ## How is it used?
 

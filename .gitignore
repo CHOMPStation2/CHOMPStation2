@@ -155,12 +155,7 @@ temp.dmi
 **/node_modules
 package-lock.json
 
-<<<<<<< HEAD
 # named byond versions config
 /tools/build/dm_versions.json
 
 config/jobwhitelist.txt
-=======
-# CBT Things
-.cache
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt

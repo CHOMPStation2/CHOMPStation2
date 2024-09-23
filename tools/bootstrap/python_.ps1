@@ -31,11 +31,7 @@ $Cache = "$Bootstrap/.cache"
 if ($Env:TG_BOOTSTRAP_CACHE) {
 	$Cache = $Env:TG_BOOTSTRAP_CACHE
 }
-<<<<<<< HEAD
-$PythonVersion = ExtractVersion -Path "$Bootstrap/../../_build_dependencies.sh" -Key "PYTHON_VERSION"
-=======
 $PythonVersion = ExtractVersion -Path "$Bootstrap/../../dependencies.sh" -Key "PYTHON_VERSION"
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 $PythonDir = "$Cache/python-$PythonVersion"
 $PythonExe = "$PythonDir/python.exe"
 $Log = "$Cache/last-command.log"

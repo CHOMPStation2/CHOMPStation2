@@ -1,10 +1,6 @@
 pygit2==1.7.2
 bidict==0.22.0
-<<<<<<< HEAD
 Pillow==10.3.0
-=======
-Pillow==9.3.0
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 
 # changelogs
 PyYaml==6.0.1
@@ -14,8 +10,4 @@ beautifulsoup4==4.9.3
 mysql-connector-python==8.0.33
 
 # icon cutter
-<<<<<<< HEAD
 numpy==1.26.0
-=======
-numpy==1.24.4
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt

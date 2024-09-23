@@ -4,16 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-<<<<<<< HEAD
-        {
-            "type": "byond",
-            "request": "launch",
-            "name": "Launch DreamDaemon",
-            "preLaunchTask": "Build All",
-            "dmb": "${workspaceFolder}/${command:CurrentDMB}",
-            "dreamDaemon": true
-        }
-=======
 		{
 			"type": "byond",
 			"request": "launch",
@@ -68,6 +58,5 @@
 			],
 			"preLaunchTask": "Build All (low memory mode)"
 		}
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
     ]
 }

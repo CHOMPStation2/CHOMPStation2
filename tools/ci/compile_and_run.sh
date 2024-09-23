@@ -25,12 +25,7 @@ elif grep -q '#include[[:space:]]\"maps\\groundbase\\groundbase.dm\"' $BASENAME.
 fi
 
 # Compile a copy of the codebase, and print errors as Github Actions annotations
-<<<<<<< HEAD
-tools/build/build --ci tgui tg-font # compile tgui bundle
-DreamMaker $BASENAME.dme > compile.log
-=======
 tools/build/build --ci dm -DCIBUILDING -DCITESTING
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 exitVal=$?
 # if [ $exitVal -gt 0 ]; then
 # 	sed -E -n 's/^(.+?\.dm):([0-9]+):(error|warning): (.+)$/::\3 file=\1,line=\2::\4/gp'

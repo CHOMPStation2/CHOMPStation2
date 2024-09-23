@@ -30,9 +30,6 @@ $Cache = "$BaseDir\.cache"
 if ($Env:TG_BOOTSTRAP_CACHE) {
 	$Cache = $Env:TG_BOOTSTRAP_CACHE
 }
-<<<<<<< HEAD
-$NodeVersion = Extract-Variable -Path "$BaseDir\..\..\_build_dependencies.sh" -Key "NODE_VERSION_PRECISE"
-=======
 
 # Get OS version
 [int]$OSMajor = (Get-WmiObject -Class Win32_OperatingSystem).Version.Split(".")[0]
@@ -46,7 +43,6 @@ else {
 	$NodeVersion = Extract-Variable -Path "$BaseDir\..\..\dependencies.sh" -Key "NODE_VERSION_LTS"
 }
 
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 $NodeSource = "https://nodejs.org/download/release/v$NodeVersion/win-x64/node.exe"
 $NodeTargetDir = "$Cache\node-v$NodeVersion-x64"
 $NodeTarget = "$NodeTargetDir\node.exe"

@@ -16,15 +16,9 @@ if [ "$TG_BOOTSTRAP_CACHE" ]; then
 fi
 OldPWD="$PWD"
 cd "$Bootstrap/../.."
-<<<<<<< HEAD
-. ./_build_dependencies.sh  # sets NODE_VERSION_PRECISE
-cd "$OldPWD"
-NodeVersion="$NODE_VERSION_PRECISE"
-=======
-. ./dependencies.sh  # sets NODE_VERSION_LTS
+. ./dependencies.sh  # sets NODE_VERSION_PRECISE
 cd "$OldPWD"
 NodeVersion="$NODE_VERSION_LTS"
->>>>>>> c721de923f... Merge pull request #16325 from ShadowLarkens/cbt
 NodeFullVersion="node-v$NodeVersion-win-x64"
 NodeDir="$Cache/$NodeFullVersion"
 NodeExe="$NodeDir/node.exe"
