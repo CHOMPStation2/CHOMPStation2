@@ -3117,6 +3117,7 @@
 	pixel_x = -7
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
+/obj/effect/floor_decal/corner/lightorange/bordercorner,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Locker_Room)
 "agr" = (
@@ -15466,6 +15467,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -43386,14 +43390,15 @@
 /obj/effect/floor_decal/industrial/loading{
 	dir = 1
 	},
-/obj/structure/plasticflaps{
-	opacity = 1
-	},
 /obj/machinery/navbeacon/delivery/north{
 	location = "Security"
 	},
 /obj/machinery/door/window/survival_pod{
-	dir = 1
+	dir = 1;
+	req_one_access = list(1)
+	},
+/obj/structure/plasticflaps{
+	opacity = 1
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/SouthernCrossV2/Security/Shuttlebay_Storage)
@@ -50729,6 +50734,9 @@
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/lightorange/bordercorner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Locker_Room)
 "eMp" = (
@@ -57850,11 +57858,11 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "gwJ" = (
-/obj/structure/sign/directions/science/xenoarch{
-	dir = 8
-	},
 /obj/structure/sign/directions/science/xenobiology{
 	pixel_y = 9;
+	dir = 8
+	},
+/obj/structure/sign/directions/science/xenoarch{
 	dir = 8
 	},
 /obj/structure/sign/directions/science/xenoflora{
@@ -73588,7 +73596,10 @@
 	check_down = 0;
 	check_weapons = 1;
 	lethal_is_configurable = 0;
-	name = "transit turret control panel"
+	name = "transit turret control panel";
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0
 	},
 /obj/machinery/power/apc/hyper{
 	name = "east bump";
@@ -73600,7 +73611,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Security/Transit_Turrets)
+/area/SouthernCrossV2/Commons/For_2_Deck_Stairwell)
 "kDd" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/structure/cable{
@@ -92805,10 +92816,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central5{
-	dir = 4
+/obj/effect/floor_decal/borderfloorwhite/corner2{
+	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/borderfloorwhite/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/white/bordercorner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/white/bordercorner2{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Port_Medical_Post)
 "pRq" = (
 /obj/structure/cable/green{
@@ -98651,10 +98671,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Aft_Tool_Storage)
-"ruS" = (
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
-/turf/simulated/wall,
-/area/SouthernCrossV2/Cargo/Star_Tool_Storage)
 "rvc" = (
 /obj/random/trash,
 /obj/structure/table/rack,
@@ -99099,6 +99115,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -120368,9 +120387,6 @@
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 8
 	},
-/obj/structure/plasticflaps{
-	opacity = 1
-	},
 /obj/machinery/navbeacon/delivery/east{
 	location = "Medical"
 	},
@@ -120380,7 +120396,12 @@
 	name = "Lockdown Gate";
 	desc = "A heavily reinforced gate, sector lockdown!"
 	},
-/obj/machinery/door/window/survival_pod,
+/obj/machinery/door/window/survival_pod{
+	req_one_access = list(5)
+	},
+/obj/structure/plasticflaps{
+	opacity = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "xqp" = (
@@ -169534,8 +169555,8 @@ aJx
 qNb
 kft
 aJx
-aJx
 gwJ
+aJx
 aJx
 uOd
 tHA
@@ -174440,7 +174461,7 @@ cuT
 cuT
 cuT
 wjT
-ruS
+cuT
 aql
 aql
 aql

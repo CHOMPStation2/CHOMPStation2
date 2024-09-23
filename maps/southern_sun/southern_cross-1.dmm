@@ -3392,7 +3392,8 @@
 /area/SouthernCrossV2/Cargo/Deck1_Corridor)
 "asl" = (
 /mob/living/simple_mob/animal/passive/fish/solarfish{
-	name = "Sol"
+	name = "Sol";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/water/deep/indoors,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
@@ -23930,7 +23931,8 @@
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor3)
 "fYQ" = (
 /mob/living/simple_mob/animal/passive/fish/rockfish{
-	name = "Pon"
+	name = "Pon";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/water/deep/indoors,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
@@ -27835,7 +27837,8 @@
 	dir = 1
 	},
 /mob/living/simple_mob/animal/passive/fish/pike{
-	name = "Spike"
+	name = "Spike";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/water/deep/indoors,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
@@ -33887,7 +33890,8 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "jLh" = (
 /mob/living/simple_mob/animal/passive/fish/rockfish{
-	name = "Bon"
+	name = "Bon";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/water/deep/indoors,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
@@ -40927,7 +40931,8 @@
 /area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "mnE" = (
 /mob/living/simple_mob/animal/passive/fish/koi{
-	name = "Pancrasia"
+	name = "Pancrasia";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/water/deep/indoors,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
@@ -71093,7 +71098,8 @@
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
 "wzV" = (
 /mob/living/simple_mob/animal/passive/fish/icebass{
-	name = "Eliz"
+	name = "Eliz";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/water/deep/indoors,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
@@ -71528,7 +71534,8 @@
 "wJT" = (
 /mob/living/simple_mob/animal/passive/fish/solarfish{
 	name = "Luna";
-	color = "#6457f7"
+	color = "#6457f7";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/water/deep/indoors,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
@@ -74429,7 +74436,8 @@
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint)
 "xNM" = (
 /mob/living/simple_mob/animal/passive/fish/koi{
-	name = "Chayote"
+	name = "Chayote";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/water/deep/indoors,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
