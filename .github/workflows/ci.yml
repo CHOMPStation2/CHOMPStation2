@@ -13,6 +13,9 @@ jobs:
   run_linters:
     name: Run Linters
     runs-on: ubuntu-22.04
+    concurrency:
+      group: run_linters-${{ github.head_ref || github.run_id }}
+      cancel-in-progress: true
 
     steps:
       - uses: actions/checkout@v4
