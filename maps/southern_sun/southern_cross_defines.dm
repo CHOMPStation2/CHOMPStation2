@@ -36,7 +36,7 @@ but they don't actually change anything about the load order
 /datum/map/southern_cross
 	name = "Southern Cross"
 	full_name = "Southern Cross"
-	path = "southern_sun"
+	path = "southern_cross"
 
 	lobby_icon = 'icons/misc/CHOMPSTATION.gif'	//CHOMPStation Edit
 	lobby_screens = list() //CHOMPStation Edit - CHOMPStation image
