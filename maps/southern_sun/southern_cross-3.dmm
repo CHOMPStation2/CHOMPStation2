@@ -546,9 +546,6 @@
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance/medical{
-	id_tag = "Med Lockdown"
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -560,6 +557,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
 "agy" = (
@@ -6796,6 +6794,9 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "crM" = (
@@ -9223,7 +9224,6 @@
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance/medical,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -9238,6 +9238,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor2)
 "dgt" = (
@@ -25804,7 +25805,8 @@
 "ijw" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /mob/living/simple_mob/animal/passive/pillbug{
-	name = "Conchambruda"
+	name = "Conchambruda";
+	faction = "nanotrasen"
 	},
 /turf/simulated/floor/grass2,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
@@ -28517,6 +28519,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Medical/Restrooms)
+"jbU" = (
+/obj/machinery/vending/medical,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Medical/Patient_1)
 "jce" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows{
@@ -46178,7 +46184,7 @@
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance/common{
+/obj/machinery/door/airlock/maintenance/medical{
 	id_tag = "Med Lockdown"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -61615,6 +61621,14 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
+"ttJ" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central5,
+/obj/structure/noticeboard{
+	pixel_x = -27;
+	dir = 4
+	},
+/turf/simulated/floor/glass,
+/area/SouthernCrossV2/Bridge/Control_Atrium)
 "tvd" = (
 /obj/structure/bed/chair/bay/chair/padded/red/smallnest,
 /obj/item/weapon/digestion_remains/skull/teshari,
@@ -61628,6 +61642,31 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
+"tvI" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/arrows/yellow,
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 1
+	},
+/obj/machinery/door/airlock/maintenance/medical{
+	name = "Genetics Access"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor2)
 "tvK" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -63367,17 +63406,26 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "uct" = (
-/obj/structure/noticeboard{
-	pixel_y = 27
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/machinery/turretid/stun{
+	pixel_y = 26;
+	req_access = list(29);
+	check_access = 0;
+	check_down = 0;
+	check_weapons = 1;
+	lethal_is_configurable = 0;
+	name = "transit turret control panel";
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0
+	},
 /turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Bridge/Control_Atrium)
+/area/SouthernCrossV2/Security/Transit_Turrets)
 "ucy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -64464,6 +64512,10 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_StarCorridor2)
+"usH" = (
+/obj/machinery/smartfridge/produce/persistent_lossy,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "usM" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 4
@@ -105829,7 +105881,7 @@ niI
 iGW
 fJR
 fJR
-fJR
+usH
 fJR
 fJR
 fJR
@@ -107342,7 +107394,7 @@ dVZ
 lic
 fLj
 fLj
-qJy
+ttJ
 kMO
 oqA
 eup
@@ -123658,7 +123710,7 @@ pcf
 eQA
 eQA
 eQA
-eQA
+jbU
 bKx
 bzX
 bzX
@@ -125965,7 +126017,7 @@ iSn
 qMb
 onu
 onu
-dgd
+tvI
 rcB
 rcB
 rcB
