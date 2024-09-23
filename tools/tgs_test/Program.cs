@@ -197,8 +197,6 @@ try
 		{
 			Origin = new Uri($"http://github.com/{repoSlug}"),
 			UpdateSubmodules = true,
-			AccessUser = "Testing",
-			AccessToken = gitHubToken
 		},
 		default);
 
