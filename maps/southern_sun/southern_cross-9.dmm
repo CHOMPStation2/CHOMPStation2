@@ -658,6 +658,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
+"hw" = (
+/turf/simulated/mineral/sif,
+/area/surface/outside/river/svartan)
 "hX" = (
 /obj/effect/zone_divider,
 /obj/item/stack/marker_beacon,
@@ -720,8 +723,9 @@
 	},
 /area/surface/outside/wilderness/deep)
 "kh" = (
-/turf/simulated/wall/solidrock,
-/area/surface/outside/wilderness/normal)
+/obj/structure/boulder,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/surface/outside/river/svartan)
 "kU" = (
 /obj/effect/shuttle_landmark{
 	landmark_tag = "wilderness_se";
@@ -913,6 +917,15 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
+"ru" = (
+/obj/structure/boulder,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15;
+	outdoors = 1
+	},
+/area/surface/outside/river/svartan)
 "rv" = (
 /obj/machinery/bluespace_beacon{
 	alpha = 0;
@@ -1469,6 +1482,18 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
+"MC" = (
+/obj/effect/decal/remains/human{
+	desc = "They look like human remains. They have a strange aura about them, an aura of a former valley explorer"
+	},
+/obj/item/clothing/suit/armor/pcarrier/explorer,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15;
+	outdoors = 1
+	},
+/area/surface/outside/river/svartan)
 "No" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/deep/ocean,
@@ -1533,9 +1558,7 @@
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "Qz" = (
-/obj/structure/railing{
-	dir = 1
-	},
+/obj/structure/boulder,
 /turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
 "Rc" = (
@@ -2005,14 +2028,14 @@ ad
 ab
 XD
 XD
-As
-As
-Qz
-sC
-As
-As
-kh
-kh
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 ab
 ab
 ab
@@ -2263,14 +2286,14 @@ ak
 ac
 Za
 Za
-As
-As
+ac
+ac
 Qz
-sC
-As
-As
-IZ
-IZ
+kh
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -2520,15 +2543,15 @@ ac
 ak
 ah
 ah
-ah
-As
-As
-Qz
-sC
-As
-As
-ap
-ap
+Za
+ac
+kh
+an
+an
+hw
+ru
+IZ
+IZ
 ap
 ap
 ac
@@ -2779,11 +2802,11 @@ aw
 ah
 ah
 ah
-As
-As
-Qz
+kh
+MC
+an
 sC
-As
+ru
 As
 ap
 ap

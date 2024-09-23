@@ -90,12 +90,12 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 	listening_level = Z_LEVEL_SURFACE_SKYLANDS
 	autolinkers = list("sky_relay")
 */
-
-/obj/machinery/telecomms/relay/preset/southerncross/valley
+/*
+/obj/machinery/telecomms/relay/preset/southerncross/valley //CHOMPedit, add back if you want valley
 	id = "Valley Relay"
 	listening_level = Z_LEVEL_SURFACE_VALLEY
 	autolinkers = list("valley_relay")
-
+*/
 //Temp Removal TFF 15/2/20
 /*
 /obj/machinery/telecomms/relay/preset/belt_outpost // CHOMPedit: Tcomms relay for Belt Outpost
