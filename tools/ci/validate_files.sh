@@ -71,18 +71,17 @@ fi
 section "code issues"
 
 part "indentation"
-echo -e "${RED}DISABLED"
 #Check for weird indentation in any .dm files
-# awk -f tools/indentation.awk $code_files
-# retVal=$?
-# if [ $retVal -ne 0 ]; then
-#   echo -e "${RED}Indention testing failed. Please see results and fix indentation.${NC}"
-#   FAILED=1
-# fi
+awk -f tools/indentation.awk $code_files
+retVal=$?
+if [ $retVal -ne 0 ]; then
+  echo -e "${RED}Indention testing failed. Please see results and fix indentation.${NC}"
+  FAILED=1
+fi
 
 part "changelog"
 #Checking for a change to html/changelogs/example.yml
-md5sum -c - <<< "ea467b7b75774b41ecdf35e07091d96f *html/changelogs/example.yml"
+md5sum -c - <<< "0c56937110d88f750a32d9075ddaab8b *html/changelogs_ch/example.yml" # CHOMPedit - Better changelogs
 retVal=$?
 if [ $retVal -ne 0 ]; then
   echo -e "${RED}Do not modify the example.yml changelog file.${NC}"
