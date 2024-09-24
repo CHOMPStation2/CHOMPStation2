@@ -10,16 +10,24 @@ env:
 jobs:
   run_linters:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
-
     name: Run Linters
     runs-on: ubuntu-22.04
     concurrency:
       group: run_linters-${{ github.head_ref || github.run_id }}
       cancel-in-progress: true
-
     steps:
       - uses: actions/checkout@v4
       # Caches
+      - name: Ensure +x on CI directory
+        run: |
+          chmod -R +x ./tools/ci
+      - name: Restore SpacemanDMM cache
+        uses: actions/cache@v4
+        with:
+          path: ~/SpacemanDMM
+          key: ${{ runner.os }}-spacemandmm-${{ hashFiles('dependencies.sh') }}
+          restore-keys: |
+            ${{ runner.os }}-spacemandmm-
       - name: Restore Yarn cache
         uses: actions/cache@v4
         with:
@@ -57,41 +65,18 @@ jobs:
       - name: Install Tools
         run: |
           pip3 install setuptools
-          bash tools/ci/install_node.sh
+          bash tools/ci/install_build_deps.sh
           bash tools/ci/install_ripgrep.sh
+          bash tools/ci/install_spaceman_dmm.sh dreamchecker
           tools/bootstrap/python -c ''
-      - name: Run Grep Checks
-        run: tools/ci/validate_files.sh
+      - name: Run Tests
+        run: |
+          tools/ci/validate_files.sh
+      - name: Run DreamChecker
+        shell: bash
+        run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
       - name: Run TGUI Checks
         run: tools/build/build --ci lint tgui-test
-
-  dreamchecker:
-    name: DreamChecker
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Cache SpacemanDMM
-        uses: actions/cache@v4
-        with:
-          path: ~/SpacemanDMM
-          key: ${{ runner.os }}-dreamchecker-${{ hashFiles('dependencies.sh')}}
-          restore-keys: ${{ runner.os }}-dreamchecker
-
-      - name: Install Dependencies
-        run: |
-          tools/ci/install_spaceman_dmm.sh dreamchecker
-
-      - name: Run Linter
-        id: linter
-        run: |
-          ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
-
-      - name: Annotate Linter
-        uses: yogstation13/DreamAnnotate@v2
-        if: always()
-        with:
-          outputFile: output-annotations.txt
 
   unit_tests:
     timeout-minutes: 30
@@ -117,6 +102,7 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update || true
+          sudo apt install gcc-multilib
           sudo apt install zlib1g-dev:i386 libssl-dev:i386
           ldd librust_g.so
       - name: Unit Tests
@@ -153,7 +139,7 @@ jobs:
   tests_successful:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
-    needs: ['run_linters', 'dreamchecker', 'unit_tests']
+    needs: ['run_linters', 'unit_tests']
     runs-on: ubuntu-20.04
     steps:
       - name: Report Success
