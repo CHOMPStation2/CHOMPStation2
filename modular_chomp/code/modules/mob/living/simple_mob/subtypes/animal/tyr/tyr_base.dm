@@ -1,5 +1,3 @@
-#define FACTION_TYR "tyr"
-
 /mob/living/simple_mob/animal/tyr
 	minbodytemp = 175
 	maxbodytemp = 500
