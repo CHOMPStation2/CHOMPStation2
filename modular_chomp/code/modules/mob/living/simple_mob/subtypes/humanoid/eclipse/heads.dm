@@ -194,7 +194,7 @@
 
 
 /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse
-	faction = "eclipse"
+	faction = FACTION_ECLIPSE
 
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain
@@ -368,7 +368,7 @@
 		bomb_range -= T
 
 /mob/living/simple_mob/mechanical/combat_drone/artillery
-	faction = "eclipse"
+	faction = FACTION_ECLIPSE
 	projectiletype = /obj/item/projectile/arc/blue_energy
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead
