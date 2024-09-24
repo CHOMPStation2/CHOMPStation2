@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	//Person just died in guts!
 	if(L.stat == DEAD)
 		if(!L.digestion_in_progress) //CHOMPEdit Start
-			if(L.is_preference_enabled(/datum/client_preference/digestion_noises))
+			if(L.check_sound_preference(/datum/preference/toggle/digestion_noises))
 				if(!B.fancy_vore)
 					SEND_SOUND(L, sound(get_sfx("classic_death_sounds")))
 				else
@@ -88,9 +88,10 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
 
-	consider_healthbar(L, old_health, B.owner)
 	if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+
+	consider_healthbar(L, old_health, B.owner)
 	/*if(isrobot(B.owner)) //CHOMPEdit: Borgos can now use nutrition too
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			var/mob/living/silicon/robot/R = B.owner

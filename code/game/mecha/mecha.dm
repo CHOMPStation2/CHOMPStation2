@@ -1101,20 +1101,20 @@
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
 
 	var/temp_deflect_chance = deflect_chance
-	var/temp_damage_minimum = damage_minimum
-	var/temp_minimum_penetration = minimum_penetration
+	//var/temp_damage_minimum = damage_minimum //CHOMPremove
+	//var/temp_minimum_penetration = minimum_penetration //CHOMPremove
 	var/temp_fail_penetration_value = fail_penetration_value
 
 	if(!ArmC)
 		temp_deflect_chance = 0
-		temp_damage_minimum = 0
-		temp_minimum_penetration = 0
+		//temp_damage_minimum = 0 //CHOMPremove
+		//temp_minimum_penetration = 0
 		temp_fail_penetration_value = 1
 
 	else
 		temp_deflect_chance = round(ArmC.get_efficiency() * ArmC.deflect_chance + (defence_mode ? 25 : 0))
-		temp_damage_minimum = round(ArmC.get_efficiency() * ArmC.damage_minimum)
-		temp_minimum_penetration = round(ArmC.get_efficiency() * ArmC.minimum_penetration)
+		//temp_damage_minimum = round(ArmC.get_efficiency() * ArmC.damage_minimum) //CHOMPremove
+		//temp_minimum_penetration = round(ArmC.get_efficiency() * ArmC.minimum_penetration) //CHOMPremove
 		temp_fail_penetration_value = round(ArmC.get_efficiency() * ArmC.fail_penetration_value)
 
 	if(istype(A, /obj/item/mecha_parts/mecha_tracking))
@@ -1134,12 +1134,12 @@
 
 			var/pass_damage = O.throwforce
 			var/pass_damage_reduc_mod
-			if(pass_damage <= temp_damage_minimum)//Too little to go through.
+			if(pass_damage <= damage_minimum)//Too little to go through. //CHOMPedit temp_damage_mininum -> damage_minimum
 				src.occupant_message("<span class='notice'>\The [A] bounces off the armor.</span>")
 				src.visible_message("\The [A] bounces off \the [src] armor")
 				return
 
-			else if(O.armor_penetration < temp_minimum_penetration)	//If you don't have enough pen, you won't do full damage
+			else if(O.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage //CHOMPedit, temp_minimum_penetration -> minimum_penetration
 				src.occupant_message("<span class='notice'>\The [A] struggles to bypass \the [src] armor.</span>")
 				src.visible_message("\The [A] struggles to bypass \the [src] armor")
 				pass_damage_reduc_mod = temp_fail_penetration_value	//This will apply to reduce damage to 2/3 or 66% by default
@@ -1175,20 +1175,20 @@
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
 
 	var/temp_deflect_chance = deflect_chance
-	var/temp_damage_minimum = damage_minimum
-	var/temp_minimum_penetration = minimum_penetration
+	//var/temp_damage_minimum = damage_minimum //CHOMPremove
+	//var/temp_minimum_penetration = minimum_penetration //CHOMPremove
 	var/temp_fail_penetration_value = fail_penetration_value
 
 	if(!ArmC)
 		temp_deflect_chance = 0
-		temp_damage_minimum = 0
-		temp_minimum_penetration = 0
+		//temp_damage_minimum = 0 //CHOMPremove
+		//temp_minimum_penetration = 0 //CHOMPremove
 		temp_fail_penetration_value = 1
 
 	else
 		temp_deflect_chance = round(ArmC.get_efficiency() * ArmC.deflect_chance + (defence_mode ? 25 : 0))
-		temp_damage_minimum = round(ArmC.get_efficiency() * ArmC.damage_minimum)
-		temp_minimum_penetration = round(ArmC.get_efficiency() * ArmC.minimum_penetration)
+		//temp_damage_minimum = round(ArmC.get_efficiency() * ArmC.damage_minimum) //CHOMPremove
+		//temp_minimum_penetration = round(ArmC.get_efficiency() * ArmC.minimum_penetration) //CHOMPremove
 		temp_fail_penetration_value = round(ArmC.get_efficiency() * ArmC.fail_penetration_value)
 
 	if(prob(temp_deflect_chance))
@@ -1210,12 +1210,12 @@
 		for(var/obj/item/mecha_parts/mecha_equipment/ME in equipment)
 			pass_damage = ME.handle_projectile_contact(Proj, pass_damage)
 
-		if(pass_damage < temp_damage_minimum)//too pathetic to really damage you.
+		if(pass_damage < damage_minimum)//too pathetic to really damage you. //CHOMPedit temp_damage_minimum -> damage_minimum
 			src.occupant_message("<span class='notice'>The armor deflects incoming projectile.</span>")
 			src.visible_message("The [src.name] armor deflects\the [Proj]")
 			return
 
-		else if(Proj.armor_penetration < temp_minimum_penetration)	//If you don't have enough pen, you won't do full damage
+		else if(Proj.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage //CHOMPedit temp_minimum_penetration -> damage_minimum
 			src.occupant_message("<span class='notice'>\The [Proj] struggles to pierce \the [src] armor.</span>")
 			src.visible_message("\The [Proj] struggles to pierce \the [src] armor")
 			pass_damage_reduc_mod = temp_fail_penetration_value	//This will apply to reduce damage to 2/3 or 66% by default
@@ -1333,20 +1333,20 @@
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
 
 	var/temp_deflect_chance = deflect_chance
-	var/temp_damage_minimum = damage_minimum
-	var/temp_minimum_penetration = minimum_penetration
+	//var/temp_damage_minimum = damage_minimum //CHOMPremove
+	//var/temp_minimum_penetration = minimum_penetration	//CHOMPremove
 	var/temp_fail_penetration_value = fail_penetration_value
 
 	if(!ArmC)
 		temp_deflect_chance = 0
-		temp_damage_minimum = 0
-		temp_minimum_penetration = 0
+		//temp_damage_minimum = 0 //CHOMPremove
+		//temp_minimum_penetration = 0 //CHOMPremove
 		temp_fail_penetration_value = 1
 
 	else
 		temp_deflect_chance = round(ArmC.get_efficiency() * ArmC.deflect_chance + (defence_mode ? 25 : 0))
-		temp_damage_minimum = round(ArmC.get_efficiency() * ArmC.damage_minimum)
-		temp_minimum_penetration = round(ArmC.get_efficiency() * ArmC.minimum_penetration)
+		//temp_damage_minimum = round(ArmC.get_efficiency() * ArmC.damage_minimum) //CHOMPremove
+		//temp_minimum_penetration = round(ArmC.get_efficiency() * ArmC.minimum_penetration) //CHOMPremove
 		temp_fail_penetration_value = round(ArmC.get_efficiency() * ArmC.fail_penetration_value)
 
 	if(prob(temp_deflect_chance))		//Does your attack get deflected outright.
@@ -1354,12 +1354,12 @@
 		to_chat(user, "<span class='danger'>\The [W] bounces off [src.name].</span>")
 		src.log_append_to_last("Armor saved.")
 
-	else if(W.force < temp_damage_minimum)	//Is your attack too PATHETIC to do anything. 3 damage to a person shouldn't do anything to a mech.
+	else if(W.force < damage_minimum)	//Is your attack too PATHETIC to do anything. 3 damage to a person shouldn't do anything to a mech. //CHOMPedit temp_damage_minimum -> damage_minumum
 		src.occupant_message("<span class='notice'>\The [W] bounces off the armor.</span>")
 		src.visible_message("\The [W] bounces off \the [src] armor")
 		return
 
-	else if(W.armor_penetration < temp_minimum_penetration)	//If you don't have enough pen, you won't do full damage
+	else if(W.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage ////CHOMPedit temp_minimum_penetration -> minimum_penetration
 		src.occupant_message("<span class='notice'>\The [W] struggles to bypass \the [src] armor.</span>")
 		src.visible_message("\The [W] struggles to bypass \the [src] armor")
 		pass_damage_reduc_mod = temp_fail_penetration_value	//This will apply to reduce damage to 2/3 or 66% by default
@@ -2143,15 +2143,15 @@
 	if(istype(I, /obj/item/device/pda))
 		var/obj/item/device/pda/pda = I
 		I = pda.id
-	if(!istype(I) || !I.access) //not ID or no access
+	if(!istype(I) || !I.GetAccess()) //not ID or no access
 		return 0
 	if(access_list==src.operation_req_access)
 		for(var/req in access_list)
-			if(!(req in I.access)) //doesn't have this access
+			if(!(req in I.GetAccess())) //doesn't have this access
 				return 0
 	else if(access_list==src.internals_req_access)
 		for(var/req in access_list)
-			if(req in I.access)
+			if(req in I.GetAccess())
 				return 1
 	return 1
 
@@ -2385,7 +2385,7 @@
 	for(var/a in operation_req_access)
 		output += "[get_access_desc(a)] - <a href='?src=\ref[src];del_req_access=[a];user=\ref[user];id_card=\ref[id_card]'>Delete</a><br>"
 	output += "<hr><h1>Following keycodes were detected on portable device:</h1>"
-	for(var/a in id_card.access)
+	for(var/a in id_card.GetAccess())
 		if(a in operation_req_access) continue
 		var/a_name = get_access_desc(a)
 		if(!a_name) continue //there's some strange access without a name
@@ -2763,15 +2763,15 @@
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
 
 	var/temp_deflect_chance = deflect_chance
-	var/temp_damage_minimum = damage_minimum
+	//var/temp_damage_minimum = damage_minimum //CHOMPremove
 
 	if(!ArmC)
 		temp_deflect_chance = 1
-		temp_damage_minimum = 0
+		//temp_damage_minimum = 0 //CHOMPremove
 
 	else
 		temp_deflect_chance = round(ArmC.get_efficiency() * ArmC.deflect_chance + (defence_mode ? 25 : 0))
-		temp_damage_minimum = round(ArmC.get_efficiency() * ArmC.damage_minimum)
+		//temp_damage_minimum = round(ArmC.get_efficiency() * ArmC.damage_minimum) CHOMPremove
 
 	user.setClickCooldown(user.get_attack_speed())
 	if(!damage)
@@ -2787,7 +2787,7 @@
 		user.attack_log += text("\[[time_stamp()]\] [span_red("attacked [src.name]")]")
 		playsound(src, 'sound/weapons/slash.ogg', 50, 1, -1)
 
-	else if(damage < temp_damage_minimum)//Pathetic damage levels just don't harm MECH.
+	else if(damage < damage_minimum)//Pathetic damage levels just don't harm MECH. //CHOMPedit temp_damage_minimum -> damage_minimum
 		src.occupant_message("<span class='notice'>\The [user]'s doesn't dent \the [src] paint.</span>")
 		src.visible_message("\The [user]'s attack doesn't dent \the [src] armor")
 		src.log_append_to_last("Armor saved.")

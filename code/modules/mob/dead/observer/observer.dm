@@ -329,12 +329,12 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!CONFIG_GET(flag/antag_hud_allowed) && !client.holder) // CHOMPEdit
 		to_chat(src, "<span class='filter_notice'>[span_red("Admins have disabled this for this round.")]</span>")
 		return
-	if(jobban_isbanned(src, "AntagHUD"))
+	if(jobban_isbanned(src, JOB_ANTAGHUD))
 		to_chat(src, "<span class='filter_notice'>[span_red("<B>You have been banned from using this feature</B>")]</span>")
 		return
 	if(CONFIG_GET(flag/antag_hud_restricted) && !has_enabled_antagHUD && !client.holder) // CHOMPEdit
 		var/response = tgui_alert(src, "If you turn this on, you will not be able to take any part in the round.","Are you sure you want to turn this feature on?",list("Yes","No"))
-		if(response == "No") return
+		if(response != "Yes") return
 		can_reenter_corpse = FALSE
 		set_respawn_timer(-1) // Foreeeever
 	if(!has_enabled_antagHUD && !client.holder)
@@ -668,7 +668,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 
 	//VOREStation Add Start
-	if(jobban_isbanned(src, "GhostRoles"))
+	if(jobban_isbanned(src, JOB_GHOSTROLES))
 		to_chat(src, "<span class='warning'>You cannot become a mouse because you are banned from playing ghost roles.</span>")
 		return
 	//VOREStation Add End
@@ -807,11 +807,20 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		W.add_hiddenprint(src)
 		W.visible_message("<span class='filter_notice'>[span_red("Invisible fingers crudely paint something in blood on [T]...")]</span>")
 
+// CHOMPEdit Start - Point Refactor
+/*
 /mob/observer/dead/pointed(atom/A as mob|obj|turf in view())
 	if(!..())
 		return 0
 	usr.visible_message("<span class='deadsay'><b>[src]</b> points to [A].</span>")
 	return 1
+*/
+
+/mob/observer/dead/_pointed(atom/pointed_at)
+	if(!..())
+		return FALSE
+
+	visible_message(span_deadsay("<b>[src]</b> points to [pointed_at]."))
 
 /mob/observer/dead/proc/manifest(mob/user)
 	is_manifest = TRUE
@@ -993,7 +1002,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 			ghost_sprite = possible_ghost_sprites[choice]
 
-			if(finalized == "No")
+			if(!finalized || finalized == "No")
 				icon_state = previous_state
 
 /mob/observer/dead/is_blind()
@@ -1020,6 +1029,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	if(usr.client.prefs?.be_special & BE_PAI)
 		var/choice = tgui_alert(usr, "Would you like to submit yourself to the recruitment list too?", "Confirmation", list("No", "Yes"))
+		if(!choice)
+			return
 		if(choice == "Yes")
 			paiController.recruitWindow(usr)
 		var/count = 0

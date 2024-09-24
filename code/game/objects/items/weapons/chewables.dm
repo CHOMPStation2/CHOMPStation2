@@ -255,11 +255,83 @@
 	icon_state = "lollipop"
 	item_state = "lollipop"
 	wrapped = TRUE
+	var/list/victims = null // CHOMPAdd
 
 /obj/item/clothing/mask/chewable/candy/lolli/process()
 	chew()
 	if(chewtime < 1)
 		spitout(0)
+
+// CHOMPAdd Start
+
+/obj/item/clothing/mask/chewable/candy/lolli/container_resist(mob/living/M)
+	if(istype(M, /mob/living/voice)) return
+	if(victims)
+		victims -= M
+	to_chat(M, SPAN_WARNING("You manage to pull yourself free of \the [src]."))
+	M.forceMove(get_turf(src))
+
+/obj/item/clothing/mask/chewable/candy/lolli/chew()
+	if(victims && victims.len && prob(2))
+		for(var/mob/living/F in victims)
+			var/message = pick(
+				"The tongue swishes you around and presses you against the candy!",
+				"You get tossed about in the mouth, between candy and tongue!",
+				"The sweet drool of your captor permeates you...",
+				"The candy sticks to you, not allowing you to leave the mouth at all!",
+				"You get squeezed under the candy, against the tongue!")
+			to_chat(F, SPAN_NOTICE(message))
+	return ..()
+
+/obj/item/clothing/mask/chewable/candy/lolli/spitout()
+	if(victims && victims.len)
+		var/mob/living/M = loc
+		if(M.can_be_drop_pred && M.food_vore && M.vore_selected)
+			for(var/mob/living/F in victims)
+				if(!F.can_be_drop_prey || !F.food_vore)
+					to_chat(F, SPAN_WARNING("You manage to pull yourself free of \the [src] at the last second!"))
+					to_chat(M, SPAN_NOTICE("[F] barely escapes from your mouth!"))
+					F.forceMove(get_turf(src))
+				else
+					F.forceMove(M.vore_selected)
+				victims -= F
+	return ..()
+
+/obj/item/clothing/mask/chewable/candy/lolli/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/weapon/holder))
+		if(!(istype(W, /obj/item/weapon/holder/micro) || istype(W, /obj/item/weapon/holder/mouse)))
+			. = ..()
+			return
+
+		if(wrapped)
+			to_chat(user, SPAN_WARNING("You cannot stick [W] to \the [src] without unwrapping it!"))
+			return
+
+		var/obj/item/weapon/holder/H = W
+
+		if(!victims)
+			victims = list()
+
+		var/mob/living/M = H.held_mob
+
+		M.forceMove(src)
+		H.held_mob = null
+		user.drop_from_inventory(H)
+		qdel(H)
+
+		victims += M
+
+		to_chat(user, SPAN_NOTICE("You stick [M] to \the [src]."))
+		to_chat(M, SPAN_WARNING("[user] sticks you to \the [src]!"))
+		return
+
+/obj/item/clothing/mask/chewable/candy/lolli/examine(mob/user)
+	. = ..()
+	if(Adjacent(user))
+		if(victims && victims.len)
+			. += SPAN_NOTICE("It has [english_list(victims)] stuck on it.")
+
+// CHOMPAdd End
 
 /obj/item/clothing/mask/chewable/candy/lolli/Initialize()
 	. = ..()

@@ -19,7 +19,7 @@
 	icon = 'icons/mob/alienanimals_x32.dmi'
 	color = "#76462c"
 
-	faction = "animal"
+	faction = FACTION_ANIMAL
 	maxHealth = 40
 	health = 40
 	movement_cooldown = -1
@@ -52,7 +52,7 @@
 	var/do_seasons = TRUE
 	picked_color = FALSE //CHOMPedit: removed "var/" since we already have this defined for all simple_mobs.
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /////////////////////////////////////// Vore stuff///////////////////////////////////////////
 

@@ -1,3 +1,8 @@
+/obj/item/weapon/gun/energy/floragun
+	charge_cost = 80
+
+/*
+//Combat refactor walk-back
 /obj/item/weapon/gun/energy
 	charge_cost = 80
 
@@ -91,3 +96,4 @@
 		list(mode_name="laser", fire_delay = 8, projectile_type=/obj/item/projectile/beam, modifystate="x01laser", fire_sound='sound/weapons/Laser.ogg', charge_cost = 160),
 		list(mode_name="gauss", fire_delay=15, projectile_type=/obj/item/projectile/energy/gauss, modifystate="x01gauss", fire_sound='sound/weapons/gauss_shoot.ogg', charge_cost = 120)
 		)
+*/

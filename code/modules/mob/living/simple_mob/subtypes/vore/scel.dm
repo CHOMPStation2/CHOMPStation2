@@ -11,7 +11,7 @@
 	icon_living = "scel_orange"
 	icon_state = "scel_orange"
 	icon_rest = "scel_orange-rest"
-	faction = "scel"
+	faction = FACTION_SCEL
 	old_x = -48
 	old_y = 0
 	vis_height = 92
@@ -56,7 +56,7 @@
 		"scel_green"
 	)
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/scel/New()
 	..()
@@ -77,7 +77,7 @@
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 	vore_capacity = 1
 	swallowTime = 50
-	vore_ignores_undigestable = TRUE
+	vore_ignores_undigestable = FALSE
 	vore_default_mode = DM_SELECT
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to devour"

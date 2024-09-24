@@ -290,6 +290,8 @@
 			belly_data["emote_time"] = B.emote_time
 			belly_data["shrink_grow_size"] = B.shrink_grow_size
 			belly_data["vorespawn_blacklist"] = B.vorespawn_blacklist
+			belly_data["vorespawn_whitelist"] = B.vorespawn_whitelist
+			belly_data["vorespawn_absorbed"] = B.vorespawn_absorbed
 			belly_data["egg_type"] = B.egg_type
 			belly_data["egg_name"] = B.egg_name
 			belly_data["egg_size"] = B.egg_size
@@ -367,9 +369,11 @@
 			belly_data["autotransferchance"] = B.autotransferchance
 			belly_data["autotransferwait"] = B.autotransferwait/10
 			belly_data["autotransferlocation"] = B.autotransferlocation
+			belly_data["autotransferextralocation"] = B.autotransferextralocation
 			belly_data["autotransfer_enabled"] = B.autotransfer_enabled
 			belly_data["autotransferchance_secondary"] = B.autotransferchance_secondary
 			belly_data["autotransferlocation_secondary"] = B.autotransferlocation_secondary
+			belly_data["autotransferextralocation_secondary"] = B.autotransferextralocation_secondary
 			belly_data["autotransfer_min_amount"] = B.autotransfer_min_amount
 			belly_data["autotransfer_max_amount"] = B.autotransfer_max_amount
 			var/list/at_whitelist = list()

@@ -41,8 +41,8 @@
 
 	var/movement_cost = 0       // How much the turf slows down movement, if any.
 
-	var/list/footstep_sounds = null
-	var/list/vorefootstep_sounds = null	//CHOMPstation edit
+	// var/list/footstep_sounds = null CHOMPEdit - Better footstep sounds
+	// var/list/vorefootstep_sounds = null	//CHOMPstation edit
 
 	var/block_tele = FALSE      // If true, most forms of teleporting to or from this turf tile will fail.
 	var/can_build_into_floor = FALSE // Used for things like RCDs (and maybe lattices/floor tiles in the future), to see if a floor should replace it.
@@ -328,12 +328,12 @@
 /turf/proc/can_engrave()
 	return FALSE
 
-/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool)
+/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool, click_parameters) // CHOMPEdt - click_parameters
 
 	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE
 
-	if(jobban_isbanned(vandal, "Graffiti"))
+	if(jobban_isbanned(vandal, JOB_GRAFFITI))
 		to_chat(vandal, SPAN_WARNING("You are banned from leaving persistent information across rounds."))
 		return
 
@@ -360,6 +360,20 @@
 	var/obj/effect/decal/writing/graffiti = new(src)
 	graffiti.message = message
 	graffiti.author = vandal.ckey
+
+	// CHOMPAdd - Cooler graffitis
+	if(click_parameters)
+		var/list/mouse_control = params2list(click_parameters)
+		var/p_x = 0
+		var/p_y = 0
+		if(mouse_control["icon-x"])
+			p_x = text2num(mouse_control["icon-x"]) - 16
+		if(mouse_control["icon-y"])
+			p_y = text2num(mouse_control["icon-y"]) - 16
+
+		graffiti.pixel_x = p_x
+		graffiti.pixel_y = p_y
+	// CHOMPAdd End
 
 	if(lowertext(message) == "elbereth")
 		to_chat(vandal, "<span class='notice'>You feel much safer.</span>")

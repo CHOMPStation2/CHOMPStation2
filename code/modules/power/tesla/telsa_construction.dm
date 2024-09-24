@@ -17,6 +17,7 @@
 	build_path = /obj/item/weapon/circuitboard/tesla_coil
 	req_tech = list(TECH_MAGNET = 2, TECH_POWER = 4)
 	sort_string = "MAAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 // Grounding rods can be built as machines using a circuit made in an autolathe.
 /obj/item/weapon/circuitboard/grounding_rod

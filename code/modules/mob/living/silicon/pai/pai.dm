@@ -57,7 +57,8 @@
 		"Catslug" = "catslug",
 		"Car" = "car",
 		"Type One" = "typeone",
-		"Type Thirteen" = "13"
+		"Type Thirteen" = "13",
+		"Protogen Dog" = "pai-protodog"
 		//VOREStation Addition End
 		)
 
@@ -498,7 +499,7 @@
 		if (idaccessible == 1)
 			switch(tgui_alert(user, "Do you wish to add access to [src] or remove access from [src]?","Access Modify",list("Add Access","Remove Access", "Cancel")))
 				if("Add Access")
-					idcard.access |= ID.access
+					idcard.access |= ID.GetAccess()
 					to_chat(user, "<span class='notice'>You add the access from the [W] to [src].</span>")
 					to_chat(src, "<span class='notice'>\The [user] swipes the [W] over you. You copy the access codes.</span>")
 					if(radio)
@@ -511,7 +512,7 @@
 					if(radio)
 						radio.recalculateChannels()
 					return
-				if("Cancel")
+				if("Cancel", null)
 					return
 		else if (istype(W, /obj/item/weapon/card/id) && idaccessible == 0)
 			to_chat(user, "<span class='notice'>[src] is not accepting access modifications at this time.</span>")		// CHOMPEDIT : purdev (spelling fix)

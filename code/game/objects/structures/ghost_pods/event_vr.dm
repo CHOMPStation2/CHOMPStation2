@@ -48,7 +48,7 @@
 								  "Chubby Mutated Otie" = /mob/living/simple_mob/vore/otie/feral/chubby,//CHOMPedit: more mobs
 								  "Red Otie" = /mob/living/simple_mob/vore/otie/red,
 								  "Chubby Red Otie" = /mob/living/simple_mob/vore/otie/red/chubby,//CHOMPedit: more mobs
-								  "Zorgoia" = /mob/living/simple_mob/vore/otie/zorgoia,//CHOMPedit: more mobs
+								  "Zorgoia" = /mob/living/simple_mob/vore/zorgoia,//CHOMPedit: more mobs
 								  "Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 								  "Corrupt Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
 								  "Hunter Giant Spider" = /mob/living/simple_mob/animal/giant_spider/hunter,
@@ -92,7 +92,7 @@
 	var/choice
 	var/finalized = "No"
 
-	if(jobban_isbanned(M, "GhostRoles"))
+	if(jobban_isbanned(M, JOB_GHOSTROLES))
 		to_chat(M, "<span class='warning'>You cannot inhabit this creature because you are banned from playing ghost roles.</span>")
 		reset_ghostpod()
 		return
@@ -101,7 +101,7 @@
 	if (not_has_ooc_text(M))
 		return
 
-	while(finalized == "No" && M.client)
+	while(finalized != "Yes" && M.client)
 		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", possible_mobs)
 		if(!choice)	//We probably pushed the cancel button on the mob selection. Let's just put the ghost pod back in the list.
 			to_chat(M, "<span class='notice'>No mob selected, cancelling.</span>")

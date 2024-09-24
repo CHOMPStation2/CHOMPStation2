@@ -6,6 +6,7 @@
 	materials = list(MAT_STEEL = 5000)
 	build_path = /obj/item/trash/rkibble
 	sort_string = "KIBBB"
+	department = LATHE_ALL | LATHE_SCIENCE
 
 /datum/design/item/general/mindbinder
 	name = "Mind Binder"
@@ -14,3 +15,4 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
 	build_path = /obj/item/device/mindbinder
 	sort_string = "TBVAB"
+	department = LATHE_ALL | LATHE_MEDICAL

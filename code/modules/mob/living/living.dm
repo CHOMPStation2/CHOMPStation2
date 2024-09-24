@@ -87,16 +87,26 @@
 	return
 
 //mob verbs are faster than object verbs. See above.
-/mob/living/pointed(atom/A as mob|obj|turf in view())
+// CHOMPEdit Start - Point refactor
+/mob/living/pointed(atom/A as mob|obj|turf in view(client.view, src))
 	if(src.stat || src.restrained())
-		return 0
+		return FALSE
 	if(src.status_flags & FAKEDEATH)
-		return 0
+		return FALSE
+	/*
 	if(!..())
 		return 0
 
 	usr.visible_message("<span class='filter_notice'><b>[src]</b> points to [A].</span>")
-	return 1
+*/
+	return ..()
+
+/mob/living/_pointed(atom/pointing_at)
+	if(!..())
+		return FALSE
+
+	visible_message(span_info("<b>[src]</b> points at [pointing_at]."), span_info("You point at [pointing_at]."))
+// CHOMPEdit End
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"
@@ -112,7 +122,7 @@
 	else
 		if(stat == DEAD)
 			to_chat(src, span_blue("As much as you'd like, you can't die when already dead"))
-		else if(confirm1 == "No" || confirm2 == "No")
+		else if(!confirm1 || confirm1 == "No" || !confirm2 || confirm2 == "No")
 			to_chat(src, span_blue("You chose to live another day."))
 		else
 			to_chat(src, span_blue("You are not injured enough to succumb to death!"))

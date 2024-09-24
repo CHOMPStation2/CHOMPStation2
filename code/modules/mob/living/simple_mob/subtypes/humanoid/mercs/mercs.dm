@@ -12,7 +12,7 @@
 	icon_dead = "syndicate_dead"
 	icon_gib = "syndicate_gib"
 
-	faction = "syndicate"
+	faction = FACTION_SYNDICATE
 	movement_cooldown = 1
 
 	status_flags = 0
@@ -167,6 +167,7 @@
 /mob/living/simple_mob/humanoid/merc/ranged/smg
 	icon_state = "syndicateranged_smg"
 	icon_living = "syndicateranged_smg"
+	projectiletype = /obj/item/projectile/bullet/a10mm //CHOMPedit, 20 instead of 35, SMG
 
 	loot_list = list(/obj/item/weapon/gun/projectile/automatic/c20r = 100)
 

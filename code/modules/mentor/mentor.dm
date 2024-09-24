@@ -181,6 +181,8 @@ var/list/mentor_verbs_default = list(
 	set hidden = 1
 
 	var/mhelp = tgui_alert(usr, "Select the help you need.","Request for Help",list("Adminhelp","Mentorhelp")) == "Mentorhelp"
+	if(!mhelp)
+		return
 	var/msg = tgui_input_text(usr, "Input your request for help.", "Request for Help", multiline = TRUE)
 
 	if (mhelp)
@@ -267,7 +269,7 @@ var/list/mentor_verbs_default = list(
 
 	log_admin("[key_name(src)]->[key_name(recipient)]: [msg]")
 
-	if(recipient.is_preference_enabled(/datum/client_preference/play_mentorhelp_ping))
+	if(recipient.prefs?.read_preference(/datum/preference/toggle/play_mentorhelp_ping))
 		recipient << 'sound/effects/mentorhelp.mp3'
 
 	for(var/client/C in GLOB.mentors)

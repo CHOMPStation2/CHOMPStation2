@@ -1,3 +1,5 @@
+//CHOMPEdit this file is unticked, see arms_ch.dm
+
 /datum/category_item/autolathe/arms/syringegun_ammo
 	name = "syringe gun cartridge"
 	path =/obj/item/weapon/syringe_cartridge

@@ -465,6 +465,11 @@
 	item_state = "skirt_pleated"
 	worn_state = "skirt_pleated"
 
+/obj/item/clothing/under/skirt/colorable/pleated/alt
+	icon_state = "skirt_pleated_alt"
+	item_state = "skirt_pleated_alt"
+	worn_state = "skirt_pleated_alt"
+
 /obj/item/clothing/under/skirt/colorable/pencil
 	name = "pencil skirt"
 	desc = "A short skirt that's almost as thin as a pencil. Almost."
@@ -518,6 +523,20 @@
 	icon_state = "skirt_jumperdress"
 	item_state = "skirt_jumperdress"
 	worn_state = "skirt_jumperdress"
+
+/obj/item/clothing/under/skirt/colorable/short
+	name = "short skirt"
+	desc = "A far too short pleated skirt."
+	icon_state = "skirt_short"
+	item_state = "skirt_short"
+	worn_state = "skirt_short"
+
+/obj/item/clothing/under/skirt/colorable/short_split
+	name = "short skirt (split)"
+	desc = "A far too short pleated skirt with an open split down one side."
+	icon_state = "skirt_short_split"
+	item_state = "skirt_short_split"
+	worn_state = "skirt_short_split"
 
 // Gwen Beedell's clown outfit
 

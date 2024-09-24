@@ -108,7 +108,7 @@
 	if(W.loc != user) // This should stop mounted modules ending up outside the module.
 		return
 
-	if(can_place_items() && user.unEquip(W, 0, src.loc) && user.is_preference_enabled(/datum/client_preference/precision_placement))
+	if(can_place_items() && user.unEquip(W, 0, src.loc) && user.client?.prefs?.read_preference(/datum/preference/toggle/precision_placement))
 		auto_align(W, click_parameters)
 		return 1
 
@@ -133,7 +133,7 @@
 	if(istype(O, /obj/structure/window))
 		var/obj/structure/window/W = O
 		if(Adjacent(W) && !W.anchored)
-			to_chat("<span class='notice'>You hoist [W] up onto [src].</span>")
+			to_chat(user, "<span class='notice'>You hoist [W] up onto [src].</span>")
 			W.forceMove(loc)
 			return
 	if(isrobot(user))

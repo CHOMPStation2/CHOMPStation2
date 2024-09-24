@@ -46,6 +46,10 @@
 			GLOB.latejoin_plainspath += loc
 			delete_me = 1
 			return
+		if("JoinLateFuelDepot")
+			GLOB.latejoin_fueldepot += loc
+			delete_me = 1
+			return
 		//CHOMPEdit End
 		if("JoinLateElevator")
 			latejoin_elevator += loc

@@ -12,6 +12,8 @@
 	name = "optical sensor"
 	innate_flash_protection = FLASH_PROTECTION_MAJOR // CHOMPedit: So synths can repair brute damage on themselves without needing eye protection, like many other servers. QOL.
 	verbs |= /obj/item/organ/internal/eyes/proc/change_eye_color
+	organ_verbs = list(/obj/item/organ/internal/eyes/proc/change_eye_color) //CHOMPAdd
+	handle_organ_mod_special() //CHOMPAdd
 
 /obj/item/organ/internal/eyes/robot
 	name = "optical sensor"

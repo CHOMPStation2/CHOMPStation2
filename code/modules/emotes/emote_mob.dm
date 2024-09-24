@@ -61,7 +61,7 @@
 			if(!message)
 				return
 			if (!m_type)
-				if(tgui_alert(src, "Is this an audible emote?", "Emote", list("Yes", "No")) == "No")
+				if(tgui_alert(src, "Is this an audible emote?", "Emote", list("Yes", "No")) != "Yes")
 					m_type = VISIBLE_MESSAGE
 				else
 					m_type = AUDIBLE_MESSAGE
@@ -214,7 +214,7 @@
 		if(!T) return
 
 		if(client)
-			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/client_preference/say_sounds) //CHOMPEdit - use say prefs instead //ChompEDIT - also ignore walls
+			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds) //CHOMPEdit - use say prefs instead //ChompEDIT - also ignore walls
 		var/list/in_range = get_mobs_and_objs_in_view_fast(T,range,2,remote_ghosts = client ? TRUE : FALSE)
 		var/list/m_viewers = in_range["mobs"]
 		var/list/o_viewers = in_range["objs"]

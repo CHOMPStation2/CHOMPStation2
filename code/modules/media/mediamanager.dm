@@ -59,7 +59,7 @@
 	set_new_volume(usr)
 
 /client/proc/set_new_volume(var/mob/user)
-	if(!QDELETED(src.media) || !istype(src.media))
+	if(QDELETED(src.media) || !istype(src.media))
 		to_chat(user, "<span class='warning'>You have no media datum to change, if you're not in the lobby tell an admin.</span>")
 		return
 	var/value = input(usr, "Choose your Jukebox volume.", "Jukebox volume", media.volume)
@@ -137,9 +137,9 @@
 
 // Tell the player to play something via JS.
 /datum/media_manager/proc/send_update()
-	if(!(owner.prefs))
+	if(!owner.prefs)
 		return
-	if(!owner.is_preference_enabled(/datum/client_preference/play_jukebox) && url != "")
+	if(!owner.prefs.read_preference(/datum/preference/toggle/play_jukebox) && url != "")
 		return // Don't send anything other than a cancel to people with SOUND_STREAMING pref disabled
 	MP_DEBUG("<span class='good'>Sending update to mediapanel ([url], [(world.time - start_time) / 10], [volume * source_volume])...</span>")
 	owner << output(list2params(list(url, (world.time - start_time) / 10, volume * source_volume)), "[WINDOW_ID]:SetMusic")

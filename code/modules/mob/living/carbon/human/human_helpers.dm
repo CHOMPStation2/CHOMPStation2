@@ -175,6 +175,9 @@
 	var/list/slots = list(slot_glasses,slot_head)
 	var/list/compiled_vis = list()
 
+	if(CE_DARKSIGHT in chem_effects) //Putting this near the beginning so it can be overwritten by equipment
+		compiled_vis += VIS_FULLBRIGHT
+
 	for(var/slot in slots)
 		var/obj/item/clothing/O = get_equipped_item(slot) //Change this type if you move the vision stuff to item or something.
 		if(istype(O) && O.enables_planes && (slot in O.plane_slots))
@@ -195,6 +198,11 @@
 	if(vantag_hud)
 		compiled_vis |= VIS_CH_VANTAG
 	//VOREStation Add End
+
+	//Vore Stomach addition start. This goes here.
+	if(stomach_vision)
+		compiled_vis += VIS_CH_STOMACH
+	//Vore Stomach addition end
 
 	if(!compiled_vis.len && !vis_enabled.len)
 		return //Nothin' doin'.

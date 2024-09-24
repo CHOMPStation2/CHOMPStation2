@@ -9,6 +9,7 @@
 	min_pressure_protection = 0  * ONE_ATMOSPHERE
 	max_pressure_protection = 15 * ONE_ATMOSPHERE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE+5000
+	camera_networks = list(NETWORK_ENGINEERING)
 
 /obj/item/clothing/suit/space/void/engineering
 	name = "engineering voidsuit"
@@ -110,6 +111,7 @@
 	item_state_slots = list(slot_r_hand_str = "mining_helm", slot_l_hand_str = "mining_helm")
 	armor = list(melee = 50, bullet = 15, laser = 25, energy = 15, bomb = 55, bio = 100, rad = 50)
 	light_overlay = "helmet_light_dual"
+	camera_networks = list(NETWORK_CARGO)
 
 /obj/item/clothing/suit/space/void/mining
 	name = "mining voidsuit"
@@ -142,6 +144,7 @@
 	icon_state = "rig0-medical"
 	item_state_slots = list(slot_r_hand_str = "medical_helm", slot_l_hand_str = "medical_helm")
 	armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 25, bio = 100, rad = 80)
+	camera_networks = list(NETWORK_MEDICAL)
 
 /obj/item/clothing/suit/space/void/medical
 	name = "medical voidsuit"
@@ -274,6 +277,7 @@
 	armor = list(melee = 50, bullet = 25, laser = 25, energy = 15, bomb = 45, bio = 100, rad = 10)
 	siemens_coefficient = 0.7
 	light_overlay = "helmet_light_dual"
+	camera_networks = list(NETWORK_SECURITY)
 
 /obj/item/clothing/suit/space/void/security
 	name = "security voidsuit"
@@ -332,6 +336,7 @@
 	light_overlay = "helmet_light_dual"
 	min_pressure_protection = 0 * ONE_ATMOSPHERE
 	max_pressure_protection = 20* ONE_ATMOSPHERE
+	camera_networks = list(NETWORK_ENGINEERING)
 
 /obj/item/clothing/suit/space/void/atmos
 	name = "atmos voidsuit"
@@ -374,7 +379,7 @@
 
 /obj/item/clothing/suit/space/void/exploration
 	name = "exploration voidsuit"
-	desc = "A hazard and radiation resistant voidsuit, featuring the Explorer emblem on its chest plate. Designed for exploring unknown planetary environments."
+	desc = "A hazard and radiation resistant voidsuit, featuring the " + JOB_EXPLORER + " emblem on its chest plate. Designed for exploring unknown planetary environments."
 	icon_state = "void_explorer"
 	item_state_slots = list(slot_r_hand_str = "skrell_suit_black", slot_l_hand_str = "skrell_suit_black")
 	armor = list(melee = 50, bullet = 15, laser = 35, energy = 25, bomb = 30, bio = 100, rad = 70)
@@ -396,7 +401,7 @@
 
 /obj/item/clothing/suit/space/void/expedition_medical
 	name = "field medic voidsuit"
-	desc = "A hazard and radiation resistant voidsuit, featuring the Explorer emblem and a green cross on its chest plate. Seems to be a little lighter and more flexible than the regular explorer issue."
+	desc = "A hazard and radiation resistant voidsuit, featuring the " + JOB_EXPLORER + " emblem and a green cross on its chest plate. Seems to be a little lighter and more flexible than the regular explorer issue."
 	icon_state = "void_exp_medic"
 	item_state_slots = list(slot_r_hand_str = "skrell_suit_black", slot_l_hand_str = "skrell_suit_black")
 	armor = list(melee = 50, bullet = 15, laser = 25, energy = 15, bomb = 30, bio = 100, rad = 90)
@@ -426,6 +431,7 @@
 	item_state_slots = list(slot_r_hand_str = "atmos_helm", slot_l_hand_str = "atmos_helm")
 	armor = list(melee = 40, bullet = 10, laser = 25, energy = 15, bomb = 25, bio = 100, rad = 60)
 	light_overlay = "helmet_light_dual"
+	camera_networks = list(NETWORK_CIVILIAN)
 
 /obj/item/clothing/suit/space/void/pilot
 	desc = "An atmos resistant voidsuit for space and planet exploration."

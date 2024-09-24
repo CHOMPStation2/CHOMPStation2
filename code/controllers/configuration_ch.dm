@@ -33,6 +33,7 @@
 	var/discord_ahelps_disabled = 0		//Turn this off if you don't want the TGS bot sending you messages whenever an ahelp ticket is created.
 	var/discord_ahelps_all = 0			//Turn this on if you want all admin-PMs to go to be sent to discord, and not only the first message of a ticket.
 
+
 	var/list/ip_whitelist = list()
 
 /hook/startup/proc/read_ch_config()
@@ -102,6 +103,8 @@
 				config.role_request_id_expedition = value
 			if ("role_request_id_silicon")
 				config.role_request_id_silicon = value
+			if("job_camp_time_limit")
+				config.job_camp_time_limit = value MINUTES
 
 
 	var/list/ip_whitelist_lines = file2list("config/ip_whitelist.txt")

@@ -24,8 +24,8 @@
 
 /turf/simulated/floor/water/Initialize()
 	. = ..()
-	var/decl/flooring/F = get_flooring_data(/decl/flooring/water)
-	footstep_sounds = F?.footstep_sounds
+	// var/decl/flooring/F = get_flooring_data(/decl/flooring/water) - CHOMPEdit
+	// footstep_sounds = F?.footstep_sounds CHOMPEdit - Footsteps
 	update_icon()
 	handle_fish()
 	// soundloop = new(list(src), FALSE) // CHOMPEdit: Removing soundloop for now.
@@ -82,7 +82,7 @@
 			water_breath.adjust_gas(gasid, BREATH_MOLES) // They have no oxygen, but non-zero moles and temp
 			water_breath.temperature = above_air.temperature
 			return water_breath
-	if(L && L.is_bad_swimmer() && depth >= 2 && !L.buckled())
+	if(L && L.is_bad_swimmer() && depth >= 2 && !L.buckled() && !L.flying)
 		if(prob(10))
 			L.visible_message("<span class='notice'>[L] splashes wildly.</span>","<span class='warning'>You struggle to keep your head above the water!</span>")
 		if(L.can_breathe_water())
@@ -278,3 +278,14 @@ var/list/shoreline_icon_cache = list()
 			to_chat(L, "<span class='warning'>You get drenched in blood from entering \the [src]!</span>")
 	AM.water_act(5)
 	..()
+
+/turf/simulated/floor/water/glamour
+	name = "glamour"
+	desc = "A body of glamour.  It seems shallow enough to walk through, if needed."
+	icon = 'icons/turf/flooring/glamour.dmi'
+	icon_state = "water"
+	water_icon = 'icons/turf/flooring/glamour.dmi'
+	water_state = "water"
+	under_state = "glamour"
+	reagent_type = "water"
+

@@ -2,43 +2,41 @@
 	name = "UI"
 	sort_order = 1
 
-/datum/category_item/player_setup_item/player_global/ui/load_preferences(var/savefile/S)
-	S["UI_style"]				>> pref.UI_style
-	S["UI_style_color"]			>> pref.UI_style_color
-	S["UI_style_alpha"]			>> pref.UI_style_alpha
-	S["ooccolor"]				>> pref.ooccolor
-	S["tooltipstyle"]			>> pref.tooltipstyle
-	S["client_fps"]				>> pref.client_fps
-	S["ambience_freq"]			>> pref.ambience_freq
-	S["ambience_chance"] 		>> pref.ambience_chance
-	S["tgui_fancy"]				>> pref.tgui_fancy
-	S["tgui_lock"]				>> pref.tgui_lock
-	S["tgui_input_mode"]		>> pref.tgui_input_mode
-	S["tgui_large_buttons"]		>> pref.tgui_large_buttons
-	S["tgui_swapped_buttons"]	>> pref.tgui_swapped_buttons
-	S["obfuscate_key"]			>> pref.obfuscate_key
-	S["obfuscate_job"]			>> pref.obfuscate_job
-	S["chat_timestamp"]			>> pref.chat_timestamp
-	S["throwmode_loud"]			>> pref.throwmode_loud
+/datum/category_item/player_setup_item/player_global/ui/load_preferences(datum/json_savefile/savefile)
+	pref.UI_style			= savefile.get_entry("UI_style")
+	pref.UI_style_color		= savefile.get_entry("UI_style_color")
+	pref.UI_style_alpha		= savefile.get_entry("UI_style_alpha")
+	pref.ooccolor			= savefile.get_entry("ooccolor")
+	pref.tooltipstyle		= savefile.get_entry("tooltipstyle")
+	pref.client_fps			= savefile.get_entry("client_fps")
+	pref.ambience_freq		= savefile.get_entry("ambience_freq")
+	pref.ambience_chance	= savefile.get_entry("ambience_chance")
+	pref.tgui_fancy			= savefile.get_entry("tgui_fancy")
+	pref.tgui_lock			= savefile.get_entry("tgui_lock")
+	pref.tgui_input_mode	= savefile.get_entry("tgui_input_mode")
+	pref.tgui_large_buttons		= savefile.get_entry("tgui_large_buttons")
+	pref.tgui_swapped_buttons	= savefile.get_entry("tgui_swapped_buttons")
+	pref.obfuscate_key		= savefile.get_entry("obfuscate_key")
+	pref.obfuscate_job		= savefile.get_entry("obfuscate_job")
+	pref.chat_timestamp		= savefile.get_entry("chat_timestamp")
 
-/datum/category_item/player_setup_item/player_global/ui/save_preferences(var/savefile/S)
-	S["UI_style"]				<< pref.UI_style
-	S["UI_style_color"]			<< pref.UI_style_color
-	S["UI_style_alpha"]			<< pref.UI_style_alpha
-	S["ooccolor"]				<< pref.ooccolor
-	S["tooltipstyle"]			<< pref.tooltipstyle
-	S["client_fps"]				<< pref.client_fps
-	S["ambience_freq"]			<< pref.ambience_freq
-	S["ambience_chance"] 		<< pref.ambience_chance
-	S["tgui_fancy"]				<< pref.tgui_fancy
-	S["tgui_lock"]				<< pref.tgui_lock
-	S["tgui_input_mode"]		<< pref.tgui_input_mode
-	S["tgui_large_buttons"]		<< pref.tgui_large_buttons
-	S["tgui_swapped_buttons"]	<< pref.tgui_swapped_buttons
-	S["obfuscate_key"]			<< pref.obfuscate_key
-	S["obfuscate_job"]			<< pref.obfuscate_job
-	S["chat_timestamp"]			<< pref.chat_timestamp
-	S["throwmode_loud"]			<< pref.throwmode_loud
+/datum/category_item/player_setup_item/player_global/ui/save_preferences(datum/json_savefile/savefile)
+	savefile.set_entry("UI_style",			pref.UI_style)
+	savefile.set_entry("UI_style_color",	pref.UI_style_color)
+	savefile.set_entry("UI_style_alpha",	pref.UI_style_alpha)
+	savefile.set_entry("ooccolor",			pref.ooccolor)
+	savefile.set_entry("tooltipstyle",		pref.tooltipstyle)
+	savefile.set_entry("client_fps",		pref.client_fps)
+	savefile.set_entry("ambience_freq",		pref.ambience_freq)
+	savefile.set_entry("ambience_chance",	pref.ambience_chance)
+	savefile.set_entry("tgui_fancy",		pref.tgui_fancy)
+	savefile.set_entry("tgui_lock",			pref.tgui_lock)
+	savefile.set_entry("tgui_input_mode",	pref.tgui_input_mode)
+	savefile.set_entry("tgui_large_buttons",	pref.tgui_large_buttons)
+	savefile.set_entry("tgui_swapped_buttons",	pref.tgui_swapped_buttons)
+	savefile.set_entry("obfuscate_key",		pref.obfuscate_key)
+	savefile.set_entry("obfuscate_job",		pref.obfuscate_job)
+	savefile.set_entry("chat_timestamp",	pref.chat_timestamp)
 
 /datum/category_item/player_setup_item/player_global/ui/sanitize_preferences()
 	pref.UI_style			= sanitize_inlist(pref.UI_style, all_ui_styles, initial(pref.UI_style))
@@ -57,7 +55,6 @@
 	pref.obfuscate_key		= sanitize_integer(pref.obfuscate_key, 0, 1, initial(pref.obfuscate_key))
 	pref.obfuscate_job		= sanitize_integer(pref.obfuscate_job, 0, 1, initial(pref.obfuscate_job))
 	pref.chat_timestamp		= sanitize_integer(pref.chat_timestamp, 0, 1, initial(pref.chat_timestamp))
-	pref.throwmode_loud		= sanitize_integer(pref.throwmode_loud, 0, 1, initial(pref.throwmode_loud))
 
 /datum/category_item/player_setup_item/player_global/ui/content(var/mob/user)
 	. = "<b>UI Style:</b> <a href='?src=\ref[src];select_style=1'><b>[pref.UI_style]</b></a><br>"
@@ -76,7 +73,6 @@
 	. += "<b>Obfuscate Ckey:</b> <a href='?src=\ref[src];obfuscate_key=1'><b>[(pref.obfuscate_key) ? "Enabled" : "Disabled (default)"]</b></a><br>"
 	. += "<b>Obfuscate Job:</b> <a href='?src=\ref[src];obfuscate_job=1'><b>[(pref.obfuscate_job) ? "Enabled" : "Disabled (default)"]</b></a><br>"
 	. += "<b>Chat Timestamps:</b> <a href='?src=\ref[src];chat_timestamps=1'><b>[(pref.chat_timestamp) ? "Enabled" : "Disabled (default)"]</b></a><br>"
-	. += "<b>Throw Mode Messages:</b> <a href='?src=\ref[src];throwmode_loudness=1'><b>[(pref.throwmode_loud) ? "Loud" : "Quiet (default)"]</b></a><br>"
 	if(can_select_ooc_color(user))
 		. += "<b>OOC Color:</b>"
 		if(pref.ooccolor == initial(pref.ooccolor))
@@ -168,10 +164,6 @@
 
 	else if(href_list["chat_timestamps"])
 		pref.chat_timestamp = !pref.chat_timestamp
-		return TOPIC_REFRESH
-
-	else if(href_list["throwmode_loudness"])
-		pref.throwmode_loud = !pref.throwmode_loud
 		return TOPIC_REFRESH
 
 	else if(href_list["reset"])

@@ -980,13 +980,13 @@
 
 /obj/item/clothing/accessory/poncho/roles/cloak/mantle/hop
 	name = "head of personnel mantle"
-	desc = "A shoulder mantle bearing the colors of the Head of Personnel's uniform, featuring the typical royal blue contrasted by authoritative red."
+	desc = "A shoulder mantle bearing the colors of the " + JOB_HEAD_OF_PERSONNEL + "'s uniform, featuring the typical royal blue contrasted by authoritative red."
 	icon_state = "hopmantle"
 	item_state = "hopmantle"
 
 /obj/item/clothing/accessory/poncho/roles/cloak/mantle/cap
 	name = "site manager mantle"
-	desc = "A shoulder mantle bearing the colors usually found on a Site Manager, a commanding blue with regal gold inlay."
+	desc = "A shoulder mantle bearing the colors usually found on a " + JOB_SITE_MANAGER + ", a commanding blue with regal gold inlay."
 	icon_state = "capmantle"
 	item_state = "capmantle"
 
@@ -1172,3 +1172,59 @@
 	desc = "Barely more than a pair of long stirrup sleeves joined by a turtleneck. Has decorative red accents."
 	icon_state = "gestaltjacket"
 	item_state = "gestaltjacket"
+
+//Neo Ranger Poncho
+
+/obj/item/clothing/accessory/poncho/roles/neo_ranger
+	name = "ranger poncho"
+	desc = "Aim for the Heart, Ramon."
+	icon_state = "neo_ranger"
+	item_state = "neo_ranger"
+	action_button_name = "Adjust Poncho"
+
+/obj/item/clothing/accessory/poncho/roles/neo_ranger/update_clothing_icon()
+	. = ..()
+	if(ismob(src.loc))
+		var/mob/M = src.loc
+		M.update_inv_wear_suit()
+
+/obj/item/clothing/accessory/poncho/roles/neo_ranger/attack_self(mob/user as mob)
+	if(src.icon_state == initial(icon_state))
+		src.icon_state = "[icon_state]_open"
+		src.item_state = "[item_state]_open"
+		flags_inv = HIDETIE|HIDEHOLSTER
+		to_chat(user, "You adjust your poncho.")
+	else
+		src.icon_state = initial(icon_state)
+		src.item_state = initial(item_state)
+		flags_inv = HIDEHOLSTER
+		to_chat(user, "You adjust your poncho.")
+	update_clothing_icon()
+
+/obj/item/clothing/accessory/belt
+	name = "Thin Belt"
+	desc = "A thin belt for holding your pants up."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_override = 'icons/inventory/accessory/mob.dmi'
+	icon_state = "belt_thin"
+	item_state = "belt_thin"
+	slot_flags = SLOT_TIE | SLOT_BELT
+	slot = ACCESSORY_SLOT_DECOR
+
+/obj/item/clothing/accessory/belt/thick
+	name = "Thick Belt"
+	desc = "A thick belt for holding your pants up."
+	icon_state = "belt_thick"
+	item_state = "belt_thick"
+
+/obj/item/clothing/accessory/belt/strap
+	name = "Strap Belt"
+	desc = "A belt with no bucklet for holding your pants up."
+	icon_state = "belt_strap"
+	item_state = "belt_strap"
+
+/obj/item/clothing/accessory/belt/studded
+	name = "Studded Belt"
+	desc = "A studded belt for holding your pants up and looking cool."
+	icon_state = "belt_studded"
+	item_state = "belt_studded"

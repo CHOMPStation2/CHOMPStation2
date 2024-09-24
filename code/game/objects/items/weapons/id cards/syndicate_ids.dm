@@ -29,7 +29,7 @@
 	if(!proximity) return
 	if(istype(O, /obj/item/weapon/card/id))
 		var/obj/item/weapon/card/id/I = O
-		src.access |= I.access
+		src.access |= I.GetAccess()
 		if(player_is_antag(user.mind) || registered_user == user)
 			to_chat(user, "<span class='notice'>The microscanner activates as you pass it over the ID, copying its access.</span>")
 
@@ -38,7 +38,9 @@
 	if(!registered_user && register_user(user))
 		to_chat(user, "<span class='notice'>The microscanner marks you as its owner, preventing others from accessing its internals.</span>")
 	if(registered_user == user)
-		switch(tgui_alert(usr, "Would you like edit the ID, or show it?","Show or Edit?", list("Edit","Show")))
+		switch(tgui_alert(usr, "Would you like to edit the ID, or show it?","Show or Edit?", list("Edit","Show")))
+			if(null)
+				return
 			if("Edit")
 				agentcard_module.tgui_interact(user)
 			if("Show")

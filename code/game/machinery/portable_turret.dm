@@ -124,7 +124,7 @@
 	req_one_access = list(access_syndicate)
 	enabled = TRUE
 	check_all = TRUE
-	faction = "syndicate" // Make sure this equals the faction that the mobs in the POI have or they will fight each other.
+	faction = FACTION_SYNDICATE // Make sure this equals the faction that the mobs in the POI have or they will fight each other.
 
 /obj/machinery/porta_turret/ai_defense
 	name = "defense turret"
@@ -707,7 +707,7 @@
 	if(faction && L.faction == faction)
 		return TURRET_NOT_TARGET
 
-	if((!emagged && siliconaccess(L) && check_all == FALSE) || (!check_access && !check_all))	// Don't target silica, unless told to neutralize everything. //CHOMPEdit no more free pass for borg...
+	if((!emagged && siliconaccess(L) && check_all == FALSE) || (issilicon(L) && !check_access && !check_all))	// Don't target silica, unless told to neutralize everything. //CHOMPEdit no more free pass for borg...
 		return TURRET_NOT_TARGET
 
 	if(L.stat == DEAD && !emagged)		//if the perp is dead, no need to bother really

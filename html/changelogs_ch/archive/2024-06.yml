@@ -62,3 +62,91 @@
 2024-06-14:
   tacoguy7765093:
   - bugfix: Reconstituting as a teshari xeno chimera should no longer break vore sprites.
+2024-06-15:
+  FluffMedic:
+  - rscadd: Strange weather
+  - balance: Nif vendors have logs now. Sec can check them
+  - balance: Paradox gen requires to be wired like an emitter
+  - balance: Paradox gen requires 1/20th of the power now. Loot pool is adjusted
+  Kashargul:
+  - balance: Shadekin now drop all shrapnels, NIFs and most implants on phase shifting.
+      Size and Compliance implants are whitelisted from this.
+  - qol: linearizes the anomaly limit
+  Verkister:
+  - bugfix: Fixed synths not getting the verb to change eye color.
+  tacoguy7765093:
+  - balance: 75% reduction in blood loss from burns
+  theXDkidoflol:
+  - rscadd: Certain medications are now available as loadout items
+2024-06-17:
+  tacoguy7765093:
+  - bugfix: fixes blood cleaning on objects.
+2024-06-18:
+  MeepleMuncher:
+  - rscadd: plug tail big leggies
+2024-06-19:
+  Missile597:
+  - maptweak: Moved and removed some vending machines in the dark which were unnecessary
+      or gave shadekin loot they shouldn't be using
+2024-06-20:
+  Kashargul:
+  - server: move the asset cache dir in the same way TG did
+2024-06-26:
+  cadyn:
+  - rscadd: you can now transfer ammo between magazines and boxes of ammo
+  - rscadd: guns now tell you what magazines they accept
+  - refactor: ammo simplified drastically
+2024-06-28:
+  CHOMPStation2:
+  - qol: made patches transfer their reagents straight into blood, so you can use
+      them for anything
+  - qol: refactored alcohol traits
+  - qol: expanded feedback when you drink from a glass
+  FluffMedic:
+  - qol: Weaver is useable by all species
+  - qol: anom weathers are a smidge less spicy
+  - bugfix: missing weather names
+  - qol: ' Diona ar now the speed of lizards.'
+  - balance: Diona now have a value of 0.5 slowdown compared to their previous 5
+  Kashargul:
+  - balance: halves pink slime brute / burn heal
+  Raeschen:
+  - bugfix: Drop Overmap dynamic Z levels from 3 to 2
+  SpringSkipper:
+  - qol: digestion damage types can be set higher; the max total damage is still the
+      same.
+  chizzy376:
+  - rscadd: Added a new outsider pod "Dragon Cave"
+  tacoguy7765093:
+  - rscadd: Added a new gateway map called Diescraper. Dont fall!
+  - rscadd: Added single use for mapping purposes.
+  - maptweak: Fixes slab IDs in Downtown city
+2024-06-29:
+  FluffMedic:
+  - qol: New snowish looking bushes have been added to sif grass spawn pool. They
+      can give six fiber used in primal stuff
+  - qol: Sandstone and marble bricks can be manually created at a cost of 4 to 1,
+      and 10 seconds.
+  Hunter-Dovetail:
+  - rscadd: VBOanim_synthbelly1
+  - rscadd: VBOanim_taurbelly1
+  - rscadd: VBOanim_belly4
+  - rscadd: VBOanim_belly5
+  - rscadd: VBOanim_belly6
+  - rscadd: VBOanim_belly7
+  - rscadd: VBO_maw18
+  - rscadd: Kasssc's VBOanim_belly1
+  - rscadd: VBOanim_intestine2
+  - rscadd: Cleans up some of the previous maw visuals by erasing cutout scratches
+      (well not really this PR... but, I'm working on it!)
+  Raeschen:
+  - bugfix: Increase the main menu window height to kill the scrollbar on default
+      load
+  TheCaramelion:
+  - rscadd: Footstep and slosh elements
+  - code_imp: No more lists in every single turf in existance with footstep sounds
+2024-06-30:
+  TheCaramelion:
+  - code_imp: Deleted some now unused files
+  - code_imp: Slosh sounds moved to global_lists_ch
+  - code_imp: Exterminated the last list from all the turfs

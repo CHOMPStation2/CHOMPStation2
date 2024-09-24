@@ -818,7 +818,9 @@
 					/obj/item/toy/plushie/green_dragon = 1,
 					/obj/item/toy/plushie/red_eastdragon = 1,
 					/obj/item/toy/plushie/green_eastdragon = 1,
-					/obj/item/toy/plushie/gold_eastdragon = 1
+					/obj/item/toy/plushie/gold_eastdragon = 1,
+					/obj/item/toy/plushie/teppi = 1,
+					/obj/item/toy/plushie/teppi/alt = 1
 					//CHOMPStation Add End
 					)
 	premium = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 1,
@@ -875,7 +877,9 @@
 					/obj/item/toy/plushie/green_dragon = 50,
 					/obj/item/toy/plushie/red_eastdragon = 50,
 					/obj/item/toy/plushie/green_eastdragon = 50,
-					/obj/item/toy/plushie/gold_eastdragon = 500
+					/obj/item/toy/plushie/gold_eastdragon = 500,
+					/obj/item/toy/plushie/teppi = 50,
+					/obj/item/toy/plushie/teppi/alt = 50
 					//CHOMPStation Add End
 					)
 
@@ -1284,10 +1288,14 @@
 		/obj/item/clothing/accessory/armband = 5,
 		/obj/item/clothing/glasses/sunglasses/sechud/tactical_sec_vis = 5, //VoreStation edit - cool visor!!!
 		/obj/item/clothing/glasses/hud/security/eyepatch2 = 5, //VoreStation edit - cool eyepatch!
-		/obj/item/clothing/accessory/holster/armpit = 2,	//VOREStation edit - gives some variety of available holsters for those who forgot to bring their own
-		/obj/item/clothing/accessory/holster/waist = 2,	//VOREStation edit - But also reduces the number per type, so there's 8 overall rather than like, 20
-		/obj/item/clothing/accessory/holster/hip = 2,	//VOREStation edit
-		/obj/item/clothing/accessory/holster/leg = 2	//VOREStation edit
+		/obj/item/clothing/accessory/holster/armpit = 2,
+		/obj/item/clothing/accessory/holster/armpit/black = 2,
+		/obj/item/clothing/accessory/holster/waist = 2,
+		/obj/item/clothing/accessory/holster/waist/black = 2,
+		/obj/item/clothing/accessory/holster/hip = 2,
+		/obj/item/clothing/accessory/holster/hip/black = 2,
+		/obj/item/clothing/accessory/holster/leg = 2,
+		/obj/item/clothing/accessory/holster/leg/black = 2
 	)
 	req_log_access = access_hop
 	has_logs = 1
@@ -1532,6 +1540,7 @@
 		/obj/item/clothing/under/rank/neo_engi = 5,
 		/obj/item/clothing/under/rank/neo_engi_skirt = 5,
 		/obj/item/clothing/under/rank/neo_engi_gorka = 5,
+		/obj/item/clothing/accessory/armband/engine = 5,
 		/obj/item/clothing/suit/storage/toggle/labcoat/neo_engi_dep = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering = 5,
 		/obj/item/clothing/shoes/boots/winter/engineering = 5,
@@ -1555,6 +1564,7 @@
 		/obj/item/clothing/mask/bandana/gold = 5,
 		/obj/item/clothing/under/rank/neo_atmos = 5,
 		/obj/item/clothing/under/rank/neo_atmos_skirt = 5,
+		/obj/item/clothing/accessory/armband/engine = 5,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos = 5,
 		/obj/item/clothing/shoes/boots/winter/atmos = 5
 	)

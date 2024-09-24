@@ -5,7 +5,6 @@
 	var/latejoin_vore = FALSE				//If enabled, latejoiners can spawn into this, assuming they have a client
 	var/latejoin_prey = FALSE				//If enabled, latejoiners can spawn ontop of and instantly eat the victim
 	var/noisy_full = FALSE					//Enables belching when a mob has overeaten
-	var/allow_mind_transfer = FALSE			//Allows ones mind to be taken over or swapped
 	var/phase_vore = TRUE					//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/strip_pref = TRUE					//Enables the ability for worn items to be stripped
 	var/no_latejoin_vore_warning = FALSE	//Auto accepts pred spwan notifications (roundbased / saveable)
@@ -15,6 +14,7 @@
 	var/no_latejoin_vore_warning_persists = FALSE	//Do we save it?
 	var/no_latejoin_prey_warning_persists = FALSE	//Do we save it?
 	var/belly_rub_target = null
+	var/soulcatcher_pref_flags = 0			//Default disabled
 
 	// CHOMP vore icons refactor (Now on mob)
 	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
@@ -28,3 +28,5 @@
 	var/list/vore_icon_bellies = list("stomach")
 	var/updating_fullness = FALSE
 	var/obj/belly/previewing_belly
+
+	var/obj/soulgem/soulgem

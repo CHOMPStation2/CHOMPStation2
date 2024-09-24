@@ -30,6 +30,8 @@ var/list/sounds_cache = list()
 	sounds_cache += S
 
 	var/res = tgui_alert(usr, "Show the title of this song ([S]) to the players?\nOptions 'Yes' and 'No' will play the sound.",, list("Yes", "No", "Cancel"))
+	if(!res)
+		return
 	switch(res)
 		if("Yes")
 			to_chat(world, "<span class='boldannounce'>An admin played: [S]</span>", confidential = TRUE)
@@ -40,7 +42,7 @@ var/list/sounds_cache = list()
 	message_admins("[key_name_admin(src)] played sound [S]", 1)
 
 	for(var/mob/M in player_list)
-		if(M.is_preference_enabled(/datum/client_preference/play_admin_midis))
+		if(M.read_preference(/datum/preference/toggle/play_admin_midis))
 			admin_sound.volume = vol * M.client.admin_music_volume
 			SEND_SOUND(M, admin_sound)
 			admin_sound.volume = vol
@@ -83,13 +85,13 @@ var/list/sounds_cache = list()
 
 	sounds_cache += S
 
-	if(tgui_alert(usr, "Do you ready?\nSong: [S]\nNow you can also play this sound using \"Play Server Sound\".", "Confirmation request", list("Play","Cancel")) == "Cancel")
+	if(tgui_alert(usr, "Do you ready?\nSong: [S]\nNow you can also play this sound using \"Play Server Sound\".", "Confirmation request", list("Play","Cancel")) != "Play")
 		return
 
 	log_admin("[key_name(src)] played sound [S] on Z[target_z]")
 	message_admins("[key_name_admin(src)] played sound [S] on Z[target_z]", 1)
 	for(var/mob/M in player_list)
-		if(M.is_preference_enabled(/datum/client_preference/play_admin_midis) && M.z == target_z)
+		if(M.read_preference(/datum/preference/toggle/play_admin_midis) && M.z == target_z)
 			M << uploaded_sound
 
 	feedback_add_details("admin_verb", "Play Z Sound") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -202,7 +204,7 @@ var/list/sounds_cache = list()
 		for(var/m in player_list)
 			var/mob/M = m
 			var/client/C = M.client
-			if(C.is_preference_enabled(/datum/client_preference/play_admin_midis))
+			if(C.prefs?.read_preference(/datum/preference/toggle/play_admin_midis))
 				if(!stop_web_sounds)
 					C.tgui_panel?.play_music(web_sound_url, music_extra_data)
 				else

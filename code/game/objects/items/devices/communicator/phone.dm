@@ -105,7 +105,7 @@
 	to_chat(new_voice, "<b>If you want to end the call, use the 'Hang Up' verb.  The other person can also hang up at any time.</b>")
 	to_chat(new_voice, "<b>Remember, your character does not know anything you've learned from observing!</b>")
 	if(new_voice.mind)
-		new_voice.mind.assigned_role = "Disembodied Voice"
+		new_voice.mind.assigned_role = JOB_DISEMBODIED_VOICE
 	if(user)
 		to_chat(user, "<span class='notice'>[icon2html(src,new_voice.client)] Your communicator is now connected to [candidate]'s communicator.</span>")
 
@@ -287,7 +287,7 @@
 		return //something is terribly wrong
 
 	var/confirm = tgui_alert(src, "Would you like to talk as [src.client.prefs.real_name], over a communicator? This will reset your respawn timer, if someone answers.", "Join as Voice?", list("Yes","No"))
-	if(confirm == "No")
+	if(confirm != "Yes")
 		return
 
 	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1) // CHOMPEdit

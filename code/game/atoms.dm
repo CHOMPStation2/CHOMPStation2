@@ -151,7 +151,8 @@
 
 // Used to be for the PROXMOVE flag, but that was terrible, so instead it's just here as a stub for
 // all the atoms that still have the proc, but get events other ways.
-/atom/proc/HasProximity(turf/T, atom/movable/AM, old_loc)
+/atom/proc/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	SIGNAL_HANDLER // CHOMPAdd
 	return
 
 //Register listeners on turfs in a certain range
@@ -493,6 +494,7 @@
 	if(istype(blood_DNA, /list))
 		blood_DNA = null
 		return TRUE
+	blood_color = null //chompfixy, cleaning objects saved its future blood color no matter what
 
 /atom/proc/on_rag_wipe(var/obj/item/weapon/reagent_containers/glass/rag/R)
 	clean_blood()

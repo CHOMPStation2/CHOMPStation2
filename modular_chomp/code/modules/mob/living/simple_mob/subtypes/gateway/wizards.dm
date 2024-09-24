@@ -18,16 +18,16 @@
 
 	faction = "vr"
 
-	maxHealth = 40
-	health = 40
+	maxHealth = 100 //Old 50
+	health = 100
 	movement_cooldown = 1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard
 	melee_attack_delay = 4 SECOND
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
 
-	melee_damage_lower = 8
-	melee_damage_upper = 15
+	melee_damage_lower = 15
+	melee_damage_upper = 25
 	size_multiplier = 1.50
 
 	loot_list = list(/obj/item/clothing/head/vrwizard = 10,

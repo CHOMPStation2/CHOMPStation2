@@ -15,6 +15,7 @@
 	if(!istype(src,/mob/observer)) //CHOMPEdit
 		ghostize() //CHOMPEdit
 	//ChompEDIT start - fix hard qdels
+	QDEL_NULL(soulgem) //CHOMPAdd
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)
 	for(var/key in alerts) //clear out alerts
@@ -229,7 +230,7 @@
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
 		return TRUE
-
+/* CHOMPEdit - Moved to modular_chomp/modules/point/point.dm
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
 	set name = "Point To"
 	set category = "Object"
@@ -259,7 +260,7 @@
 
 	face_atom(A)
 	return 1
-
+*/
 
 /mob/proc/ret_grab(list/L, flag)
 	return
@@ -389,7 +390,7 @@
 	// Final chance to abort "respawning"
 	if(mind && timeofdeath) // They had spawned before
 		var/choice = tgui_alert(usr, "Returning to the menu will prevent your character from being revived in-round. Are you sure?", "Confirmation", list("No, wait", "Yes, leave"))
-		if(choice == "No, wait")
+		if(!choice || choice == "No, wait")
 			return
 		else if(mind.assigned_role)
 			var/extra_check = tgui_alert(usr, "Do you want to Quit This Round before you return to lobby?\
@@ -674,7 +675,7 @@
 	return stat == DEAD
 
 /mob/proc/is_mechanical()
-	if(mind && (mind.assigned_role == "Cyborg" || mind.assigned_role == "AI"))
+	if(mind && (mind.assigned_role == JOB_CYBORG || mind.assigned_role == JOB_AI))
 		return 1
 	return istype(src, /mob/living/silicon) || get_species() == "Machine"
 
@@ -749,11 +750,11 @@
 					stat(null)
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
-
-			// CHOMPedit - Ticket System
-			//if(statpanel("Tickets"))
-				//GLOB.ahelp_tickets.stat_entry()
-
+			/* CHOMPedit - Ticket System
+			if(statpanel("Tickets"))
+				if(check_rights(R_ADMIN|R_SERVER,FALSE)) //Prevents non-staff from opening the list of ahelp tickets
+					GLOB.ahelp_tickets.stat_entry()
+			*/
 
 			if(length(GLOB.sdql2_queries))
 				if(statpanel("SDQL2"))
@@ -1203,6 +1204,7 @@
 /mob/proc/set_viewsize(var/new_view = world.view)
 	if (client && new_view != client.view)
 		client.view = new_view
+		client.attempt_auto_fit_viewport()
 		return TRUE
 	return FALSE
 
@@ -1216,23 +1218,26 @@
 
 /mob/proc/throw_mode_off()
 	src.in_throw_mode = 0
-	if(client)
-		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help intent
-			src.visible_message("<span class='notice'>[src] relaxes from their ready stance.</span>","<span class='notice'>You relax from your ready stance.</span>")
 	if(src.throw_icon && !issilicon(src)) //in case we don't have the HUD and we use the hotkey. Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_off"
 
 /mob/proc/throw_mode_on()
 	src.in_throw_mode = 1
-	if(client)
-		if(client.prefs.throwmode_loud) //CHOMPEdit: Throw notices are based on prefs, and dont ignore said prefs if you're on help
-			if(src.get_active_hand())
-				src.visible_message("<span class='warning'>[src] winds up to throw [get_active_hand()]!</span>","<span class='notice'>You wind up to throw [get_active_hand()].</span>")
-			else
-				src.visible_message("<span class='warning'>[src] looks ready to catch anything thrown at them!</span>","<span class='notice'>You get ready to catch anything thrown at you.</span>")
 	if(src.throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		src.throw_icon.icon_state = "act_throw_on"
+/* CHOMPedit removal begin
+/mob/verb/spacebar_throw_on()
+	set name = ".throwon"
+	set hidden = TRUE
+	set instant = TRUE
+	throw_mode_on()
 
+/mob/verb/spacebar_throw_off()
+	set name = ".throwoff"
+	set hidden = TRUE
+	set instant = TRUE
+	throw_mode_off()
+ChompEdit removal end*/
 /mob/proc/isSynthetic()
 	return 0
 
@@ -1324,20 +1329,18 @@
 	return TRUE
 
 /mob/MouseEntered(location, control, params)
-	if(usr != src && usr.is_preference_enabled(/datum/client_preference/mob_tooltips) && src.will_show_tooltip())
-		openToolTip(user = usr, tip_src = src, params = params, title = get_nametag_name(usr), content = get_nametag_desc(usr))
-
-	..()
+	if(usr != src && will_show_tooltip())
+		if(usr?.read_preference(/datum/preference/toggle/mob_tooltips))
+			openToolTip(usr, src, params, title = get_nametag_name(usr), content = get_nametag_desc(usr))
+	. = ..()
 
 /mob/MouseDown()
 	closeToolTip(usr) //No reason not to, really
-
-	..()
+	. = ..()
 
 /mob/MouseExited()
 	closeToolTip(usr) //No reason not to, really
-
-	..()
+	. = ..()
 
 // Manages a global list of mobs with clients attached, indexed by z-level.
 /mob/proc/update_client_z(new_z) // +1 to register, null to unregister.

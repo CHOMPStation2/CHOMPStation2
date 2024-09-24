@@ -52,9 +52,9 @@
 	cost = 3
 
 /datum/gear/gloves/forensic
-	display_name = "gloves, forensic (Detective)"
+	display_name = "gloves, forensic"
 	path = /obj/item/clothing/gloves/forensic
-	allowed_roles = list("Detective")
+	allowed_roles = list(JOB_DETECTIVE)
 
 /datum/gear/gloves/fingerless
 	display_name = "fingerless gloves"
@@ -65,6 +65,7 @@
 	..()
 	var/list/selector_uniforms = list(
 		"black"=/obj/item/clothing/gloves/fingerless,
+		"black, alt" =/obj/item/clothing/gloves/fingerless/alt,
 		"recolourable white"=/obj/item/clothing/gloves/fingerless_recolourable
 	)
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_uniforms))

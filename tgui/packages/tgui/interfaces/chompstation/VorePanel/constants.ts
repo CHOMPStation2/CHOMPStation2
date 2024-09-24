@@ -1,8 +1,14 @@
-export const stats = [null, 'average', 'bad'];
+export const stats: (string | undefined)[] = [undefined, 'average', 'bad'];
+export const vorespawnAbsorbedText: string[] = ['No', 'Yes', 'Prey Choice'];
+export const vorespawnAbsorbedColor: (string | undefined)[] = [
+  undefined,
+  'green',
+  'orange',
+];
 
 export const digestModeToColor = {
-  Default: null,
-  Hold: null,
+  Default: undefined,
+  Hold: undefined,
   Digest: 'red',
   Absorb: 'purple',
   Unabsorb: 'purple',
@@ -16,15 +22,15 @@ export const digestModeToColor = {
 };
 
 export const reagentToColor = {
-  Water: null,
-  Milk: null,
-  Cream: null,
+  Water: undefined,
+  Milk: undefined,
+  Cream: undefined,
   Honey: 'teal',
   'Cherry Jelly': 'teal',
   'Digestive acid': 'red',
   'Diluted digestive acid': 'red',
-  'Space cleaner': null,
-  Lube: null,
+  'Space cleaner': undefined,
+  Lube: undefined,
   Biomass: 'teal',
   'Concentrated Radium': 'orange',
   Tricordrazine: 'green',
@@ -42,4 +48,11 @@ export const digestModeToPreyMode = {
   'Size Steal': 'having your size stolen.',
   Heal: 'being healed.',
   'Encase In Egg': 'being encased in an egg.',
+};
+
+export const SYNTAX_REGEX = /%belly|%pred|%prey/g;
+export const SYNTAX_COLOR = {
+  '%belly': 'average',
+  '%pred': 'bad',
+  '%prey': 'good',
 };

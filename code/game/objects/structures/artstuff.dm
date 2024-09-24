@@ -103,7 +103,7 @@
 /obj/item/canvas/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/paint_palette))
 		var/choice = tgui_alert(user, "Adjusting the base color of this canvas will replace ALL pixels with the selected color. Are you sure?", "Confirm Color Fill", list("Yes", "No"))
-		if(choice == "No")
+		if(choice != "Yes")
 			return
 		var/basecolor = input(user, "Select a base color for the canvas:", "Base Color", canvas_color) as null|color
 		if(basecolor && Adjacent(user) && user.get_active_hand() == I)
@@ -352,7 +352,7 @@
 	desc_with_canvas = "A masterpiece hand-picked by the librarian, supposedly."
 	persistence_id = "library"
 	req_one_access = list(access_library)
-	curator = "Librarian"
+	curator = JOB_LIBRARIAN
 
 /obj/structure/sign/painting/chapel_secure
 	name = "\improper Religious Painting Exhibit mounting"
@@ -360,7 +360,7 @@
 	desc_with_canvas = "A masterpiece hand-picked by the chaplain, supposedly."
 	persistence_id = "chapel"
 	req_one_access = list(access_chapel_office)
-	curator = "Chaplain"
+	curator = JOB_CHAPLAIN
 
 /obj/structure/sign/painting/library_private // keep your smut away from prying eyes, or non-librarians at least
 	name = "\improper Private Painting Exhibit mounting"
@@ -368,7 +368,7 @@
 	desc_with_canvas = "A painting hung away from lesser minds."
 	persistence_id = "library_private"
 	req_one_access = list(access_library)
-	curator = "Librarian"
+	curator = JOB_LIBRARIAN
 
 /obj/structure/sign/painting/away_areas // for very hard-to-get-to areas
 	name = "\improper Remote Painting Exhibit mounting"
@@ -551,7 +551,7 @@
 		Author's Name: [author_name]. \n \
 		Author's CKey: [author_ckey]"))
 		if(tgui_alert(usr, "Check your chat log (if filtering for notices, check where you don't) for painting details.",
-		"Is this the painting you want?", list("Yes", "No")) == "No")
+		"Is this the painting you want?", list("Yes", "No")) != "Yes")
 			return 0
 		if(!fexists("data/persistent/paintings/[persistence_id]/[painting["md5"]].png"))
 			to_chat(usr, span_warning("Chosen painting could not be loaded! Incident was logged, but no action taken at this time"))
@@ -590,7 +590,7 @@
 
 		if(tgui_alert(usr, "No painting list ID was given. You may obtain such by debugging SSPersistence and checking the all_paintings entry. \
 		If you do not wish to do that, you may request a list to be generated of painting titles. This might be resource intensive. \
-		Proceed? It will likely have over 500 entries", "Generate list?", list("Proceed!", "Cancel")) == "Cancel")
+		Proceed? It will likely have over 500 entries", "Generate list?", list("Proceed!", "Cancel")) != "Proceed!")
 			return
 
 		log_debug("[usr] generated list of paintings from SSPersistence")

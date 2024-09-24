@@ -336,6 +336,7 @@
 	muzzle_velocity = 910
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/m41a.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/patriot
 	name = "Patriot"
@@ -522,6 +523,7 @@
 	bolt_name = "bolt"
 	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
 	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
+	fire_sound = "sound/weapons/serdy/sks.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mosin/scoped
 	name = "Scoped Mosin Nagant"
@@ -600,6 +602,7 @@
 	bolt_name = "bolt"
 	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
 	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
+	fire_sound = "sound/weapons/serdy/sks.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/awp/ui_action_click()
 	scope()
@@ -636,6 +639,7 @@
 	bolt_name = "bolt"
 	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
 	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
+	fire_sound = "sound/weapons/serdy/sks.ogg"
 
 
 /obj/item/weapon/gun/projectile/automatic/serdy/hectate/ui_action_click()
@@ -671,6 +675,7 @@
 	muzzle_velocity = 715
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 40
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/tkb408
 	name = "TKB-408"
@@ -689,6 +694,7 @@
 	muzzle_velocity = 750
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 60
+	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/groza
 	name = "OTs-14"
@@ -768,6 +774,7 @@
 	muzzle_velocity = 470
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
+	fire_sound = "sound/weapons/serdy/strela.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/spas35
 	name = "Spas-35"
@@ -816,6 +823,7 @@
 	auto_loading_type = OPEN_BOLT
 	load_method = MAGAZINE
 	muzzle_velocity = 488
+	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/mp5
 	name = "MP5"
@@ -838,6 +846,7 @@
 	load_method = MAGAZINE
 	muzzle_velocity = 400
 	is_long = FALSE
+	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 /obj/item/weapon/gun/projectile/automatic/serdy/pitchgun
 	name = "Pitch-gun"
@@ -1005,6 +1014,7 @@
 	auto_loading_type = OPEN_BOLT
 	muzzle_velocity = 860
 	one_handed_penalty = 90
+	fire_sound = 'sound/weapons/serdy/strela.ogg'
 
 //commented this out because it seems to be breaking the Kord -- Ocelot
 /*
@@ -1217,7 +1227,7 @@
 /obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "c20r-[round(ammo_magazine.stored_ammo.len,4)]"
+		icon_state = "c20r-[round(CLAMP(ammo_magazine.stored_ammo.len*2/3,0,20),4)]"
 	else
 		icon_state = "c20r"
 	return
@@ -1278,7 +1288,7 @@
 /obj/item/weapon/gun/projectile/automatic/z8/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "carbine-[round(ammo_magazine.stored_ammo.len,2)]"
+		icon_state = "carbine-[round(CLAMP(ammo_magazine.stored_ammo.len/2,0,10),2)]"
 	else
 		icon_state = "carbine-e"
 	return

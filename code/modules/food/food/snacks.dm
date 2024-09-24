@@ -346,7 +346,7 @@
 			if (W.w_class >= src.w_class || is_robot_module(W) || istype(W, /obj/item/weapon/holder))
 				return
 
-			if(tgui_alert(user,"You can't slice \the [src] here. Would you like to hide \the [W] inside it instead?","No Cutting Surface!",list("Yes","No")) == "No")
+			if(tgui_alert(user,"You can't slice \the [src] here. Would you like to hide \the [W] inside it instead?","No Cutting Surface!",list("Yes","No")) != "Yes")
 				to_chat(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.")
 				balloon_alert(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.") // CHOMPEdit
 				return
@@ -1434,7 +1434,7 @@
 	reagents.add_reagent("protein", 8)
 
 /obj/item/weapon/reagent_containers/food/snacks/clownburger
-	name = "Clown Burger"
+	name = JOB_CLOWN + " Burger"
 	desc = "This tastes funny..."
 	icon_state = "clownburger"
 	filling_color = "#FF00FF"
@@ -1446,7 +1446,7 @@
 
 
 /obj/item/weapon/reagent_containers/food/snacks/mimeburger
-	name = "Mime Burger"
+	name = JOB_MIME + " Burger"
 	desc = "Its taste defies language."
 	icon_state = "mimeburger"
 	filling_color = "#FFFFFF"
@@ -2615,7 +2615,7 @@
 	reagents.add_reagent("water", 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/clownstears
-	name = "Clown's Tears"
+	name = JOB_CLOWN + "'s Tears"
 	desc = "Not very funny."
 	icon_state = "clownstears"
 	filling_color = "#C4FBFF"
@@ -5027,7 +5027,7 @@
 		return 0
 
 	if (C.volume < req)
-		to_chat("<span class='warning'>There's not enough [C.name] to coat the [src]!</span>")
+		to_chat(user, "<span class='warning'>There's not enough [C.name] to coat the [src]!</span>")
 		return 0
 
 	var/id = C.id
@@ -5136,7 +5136,7 @@
 
 /mob/living/simple_mob/slime
 	composition_reagent = "slimejelly"
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob
 	var/kitchen_tag = "animal" //Used for cooking with animals
@@ -5998,7 +5998,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/burrito_hell
 	name = "el diablo"
-	desc = "Meat and an insane amount of chillis packed in a flour tortilla. The Chaplain will see you now."
+	desc = "Meat and an insane amount of chillis packed in a flour tortilla. The " + JOB_CHAPLAIN + " will see you now."
 	icon_state = "hellfireburrito"
 	bitesize = 4
 	center_of_mass_x = 16 //CHOMPEdit

@@ -87,6 +87,14 @@
 					/obj/item/clothing/mask/gas/voice,
 					/obj/item/weapon/makeover
 					),
+			list( //the hacker,
+					/obj/item/weapon/gun/projectile/silenced,
+					/obj/item/weapon/gun/energy/ionrifle/pistol,
+					/obj/item/clothing/glasses/thermal/syndi,
+					/obj/item/ammo_magazine/m45/ap,
+					/obj/item/weapon/material/knife/tacknife/combatknife,
+					/obj/item/device/multitool/hacktool
+					),
 			list( //the professional,
 					/obj/item/weapon/gun/energy/ionrifle/pistol,
 					/obj/item/weapon/material/knife/tacknife/combatknife,
@@ -97,3 +105,38 @@
 	contraband = 1
 	containertype = /obj/structure/closet/crate/large
 	containername = "Suspicious crate"
+
+/datum/supply_pack/supply/stolen
+	name = "Stolen supply crate"
+	contains = list(/obj/item/stolenpackage = 1)
+	cost = 1000 //YW edit
+	containertype = /obj/structure/closet/crate
+	containername = "Stolen crate"
+	contraband = 1
+
+/datum/supply_pack/supply/wolfgirl
+	name = "Wolfgirl Crate"
+	cost = 200 //I mean, it's a whole wolfgirl
+	containertype = /obj/structure/largecrate/animal/wolfgirl
+	containername = "Wolfgirl crate"
+	contraband = 1
+
+/datum/supply_pack/supply/catgirl
+	name = "Catgirl Crate"
+	cost = 200 //I mean, it's a whole catgirl
+	containertype = /obj/structure/largecrate/animal/catgirl
+	containername = "Catgirl crate"
+	contraband = 1
+
+/datum/supply_pack/randomised/hospitality/pizzavouchers //WE ALWAYS DELIVER WE ALWAYS DELIVER WE ALWAYS DELIVER WE ALWAYS DELIVER WE ALWAYS DELIVER
+	num_contained = 3
+	contains = list(
+			/obj/item/pizzavoucher,
+			/obj/item/pizzavoucher,
+			/obj/item/pizzavoucher
+			)
+	name = "FANTASTIC PIZZA PIE VOUCHER CRATE!"
+	cost = 60
+	containertype = /obj/structure/closet/crate
+	containername = "WE ALWAYS DELIVER!"
+	contraband = 1

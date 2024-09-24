@@ -1,6 +1,3 @@
-/datum/species/teshari
-    vore_belly_default_variant = "T"
-
 // allow teshari to always be scooped, as long as pref is enabled
 /mob/living/MouseDrop(var/atom/over_object)
 	// make sure src (The dragged) is human

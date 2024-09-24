@@ -31,7 +31,7 @@ var/list/_slime_default_emotes = list(
 	glow_intensity = 2
 	gender = NEUTER
 
-	faction = "slime" // Note that slimes are hostile to other slimes of different color regardless of faction (unless Unified).
+	faction = FACTION_SLIME // Note that slimes are hostile to other slimes of different color regardless of faction (unless Unified).
 	maxHealth = 150
 	movement_cooldown = -1
 	pass_flags = PASSTABLE
@@ -80,7 +80,9 @@ var/list/_slime_default_emotes = list(
 	var/injection_amount = 5 // This determines how much.
 	var/mood = ":3" // Icon to use to display 'mood', as an overlay.
 
-	can_enter_vent_with = list(/obj/item/clothing/head)
+	can_enter_vent_with = list(/obj/item/clothing/head,
+			/obj/soulgem // CHOMPAdd
+		)
 
 	can_be_drop_prey = FALSE //CHOMP Add
 

@@ -49,6 +49,8 @@
 	breath_heat_level_2 = 510	//Default 450
 	breath_heat_level_3 = 1200	//Default 1250
 
+/datum/species/diona
+	slowdown = 0.5
 
 /datum/species/xenomorph_hybrid
 	name = SPECIES_XENOMORPH_HYBRID

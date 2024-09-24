@@ -13,6 +13,8 @@
 
 /area/survivalpod/superpose/Dinner
 
+/area/survivalpod/superpose/DragonCave
+
 /area/survivalpod/superpose/ExplorerHome
 
 /area/survivalpod/superpose/Farm
@@ -27,6 +29,8 @@
 
 /area/survivalpod/superpose/LoneHome
 
+/area/survivalpod/superpose/LoneHomeclean
+
 /area/survivalpod/superpose/MechFabShip
 
 /area/survivalpod/superpose/MechStorageFab
@@ -36,6 +40,8 @@
 /area/survivalpod/superpose/MethLab
 
 /area/survivalpod/superpose/OldHotel
+
+/area/survivalpod/superpose/NewHotel
 
 /area/survivalpod/superpose/ScienceShip
 
@@ -48,6 +54,8 @@
 	requires_power = FALSE
 
 /area/survivalpod/superpose/SurvivalDIY_11x11
+
+/area/survivalpod/superpose/SurvivalDIY_11x11lite
 
 /area/survivalpod/superpose/SurvivalDIY_7x7
 
@@ -131,9 +139,15 @@
 
 /area/survivalpod/superpose/GrandLibrary
 
+/area/survivalpod/superpose/logcabin
+
+/area/survivalpod/superpose/hotel
+
+/area/survivalpod/superpose/XenoBotanySetup
+
 /obj/item/device/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"
-	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; use a pen to reach the reset button. There's a license for use printed on the bottom."
+	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; right-click to reset the pod. There's a license for use printed on the bottom."
 	description_info = "The capsule contains pockets of compressed space in a super position stabilized by a miniscule supermatter crystal. \
 	NanoTrasen stresses the safety of this model over previous prototypes but assumes no liability for sub-kiloton explosions."
 	template_id = null
@@ -167,9 +181,33 @@
 	..()
 
 // Allows resetting the capsule if the wrong template is chosen.
-/obj/item/device/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/pen) && !used)
+/obj/item/device/survivalcapsule/superpose/verb/resetpod()
+	set name = "Reset Active Pod"
+	set desc = "Resets the pod back to factory settings."
+	set category = "Object"
+	if(!used)
 		template_id = null
 		template = null // Important to reset both, otherwise the template cannot be reset once the pod has been deployed.
-		to_chat(user, "<span class='notice'>You reset the pod's selection.</span>")
+		unique_id = null
+		to_chat(usr, span_notice("You reset the pod's selection."))
+
+/obj/item/device/survivalcapsule/superpose/shuttle
+	name = "superposed surfluid shuttle capsule"
+	is_ship = TRUE //So you cant just make holes in planets
+
+/obj/item/device/survivalcapsule/superpose/shuttle/attack_self()
+	if(!pod_initialized)
+		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter/))
+			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.shuttle)))
+				continue
+			template_ids += initial(shelter_type.shelter_id)
+		pod_initialized = TRUE
+	if(!template_id)
+		var/answer = tgui_input_list(usr, "Which template would you like to load?","Available Templates", template_ids)
+		if(!answer)
+			return
+		else
+			template_id = answer
+			unique_id = answer
+			return
 	..()

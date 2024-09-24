@@ -224,13 +224,11 @@
 		to_chat(prey, "<span class='warning'>You cannot do that in your current state.</span>")
 		return
 
-	//CHOMPAdd Start Mind transfer pref
 	if(!pred.allow_mind_transfer)
 		to_chat(prey, "<span class='warning'>[pred] is unable to be dominated.</span>")
 		return
-	//CHOMPAdd End
 
-	if(isrobot(pred) && jobban_isbanned(prey, "Cyborg"))
+	if(isrobot(pred) && jobban_isbanned(prey, JOB_CYBORG))
 		to_chat(prey, "<span class='warning'>Forces beyond your comprehension forbid you from taking control of [pred].</span>")
 		return
 	if(prey.prey_controlled)
@@ -409,10 +407,10 @@
 	if(!istype(M))
 		to_chat(src, "<span class='warning'>You must have a tighter grip to dominate this creature.</span>")
 		return
+	//CHOMPEdit End
 	if(!M.allow_mind_transfer) //check if the dominated mob pref is enabled
 		to_chat(src, "<span class='warning'>[M] is unable to be dominated.</span>")
 		return
-	//CHOMPEdit End
 	if(tgui_alert(src, "You selected [M] to attempt to dominate. Are you sure?", "Dominate Prey",list("No","Yes")) != "Yes")
 		return
 	log_admin("[key_name_admin(src)] offered to use dominate prey on [M] ([M.ckey]).")
@@ -532,7 +530,7 @@
 	if(!prey.ckey)
 		to_chat(pred, "<span class='notice'>\The [prey] cannot take control.</span>")
 		return
-	if(isrobot(pred) && jobban_isbanned(prey, "Cyborg"))
+	if(isrobot(pred) && jobban_isbanned(prey, JOB_CYBORG))
 		to_chat(pred, "<span class='warning'>Forces beyond your comprehension prevent you from giving [prey] control.</span>")
 		return
 	if(prey.prey_controlled)

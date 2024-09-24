@@ -6,7 +6,7 @@
 	density = TRUE
 	anchored = TRUE
 	var/equip_body = FALSE				//If true, this will spawn the person with equipment
-	var/default_job = USELESS_JOB		//The job that will be assigned if equip_body is true and the ghost doesn't have a job
+	var/default_job = JOB_ALT_VISITOR		//The job that will be assigned if equip_body is true and the ghost doesn't have a job
 	var/ghost_spawns = FALSE			//If true, allows ghosts who haven't been spawned yet to spawn
 	var/vore_respawn = 5 MINUTES		//The time to wait if you died from vore
 	var/respawn = 30 MINUTES			//The time to wait if you didn't die from vore
@@ -133,7 +133,7 @@
 			spawn_slots --
 			return
 
-	if(tgui_alert(ghost, "Would you like to be resleeved?", "Resleeve", list("No","Yes")) == "No")
+	if(tgui_alert(ghost, "Would you like to be resleeved?", "Resleeve", list("No","Yes")) != "Yes")
 		return
 	var/mob/living/carbon/human/new_character
 	new_character = new(spawnloc)

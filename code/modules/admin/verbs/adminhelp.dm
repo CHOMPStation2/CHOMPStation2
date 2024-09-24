@@ -73,6 +73,8 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 //opens the ticket listings for one of the 3 states
 /datum/admin_help_tickets/proc/BrowseTickets(state)
+	if(!check_rights(R_ADMIN|R_SERVER)) //Prevents non-staff from opening the list of ahelp tickets
+		return
 	var/list/l2b
 	var/title
 	switch(state)
@@ -297,7 +299,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	for(var/client/X in GLOB.admins)
 //		if(!check_rights(R_ADMIN, 0, X)) //CHOMP Remove let everyone hear the ahelp
 //			continue //CHOMP Remove let everyone hear the ahelp
-		if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+		if(X.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 			X << 'sound/effects/adminhelp.ogg'
 		window_flash(X)
 		to_chat(X, chat_msg)
@@ -408,7 +410,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		return
 
 	if(initiator)
-		if(initiator.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+		if(initiator.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 			initiator << 'sound/effects/adminhelp.ogg'
 
 		to_chat(initiator, "<span class='filter_pm'>[span_red("<font size='4'><b>- AdminHelp Rejected! -</b></font>")]<br>\
@@ -658,7 +660,10 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 
 	feedback_add_details("admin_verb","Adminhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)
-		if(tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No")) != "No")
+		var/input = tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No"))
+		if(!input)
+			return
+		if(input == "Yes")
 			if(current_ticket)
 				current_ticket.MessageNoRecipient(msg)
 				to_chat(usr, "<span class='pm adminnotice'>PM to-<b>Admins</b>: [msg]</span>")

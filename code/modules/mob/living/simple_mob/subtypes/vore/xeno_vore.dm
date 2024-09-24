@@ -24,7 +24,7 @@
 	icon = 'icons/mob/vore64x64.dmi'
 	vis_height = 64
 
-	faction = "xeno"
+	faction = FACTION_XENO
 	maxHealth = 150
 	health = 150
 	see_in_dark = 10
@@ -64,7 +64,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 	say_list_type = /datum/say_list/xeno_defanged
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /datum/say_list/xeno_defanged
 	say_got_target = list("hisses angrily!")

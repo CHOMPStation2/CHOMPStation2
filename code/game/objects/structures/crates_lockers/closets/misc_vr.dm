@@ -199,7 +199,7 @@
 		/obj/item/weapon/material/knife/tacknife/survival,
 		/obj/item/weapon/gun/energy/locked/frontier/holdout, //CHOMP explo keep
 		/obj/item/clothing/head/pilot_vr,
-		/obj/item/clothing/under/rank/pilot1,
+		/obj/item/clothing/under/rank/pilot1/no_webbing,
 		/obj/item/clothing/suit/storage/toggle/bomber/pilot,
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/mask/gas/half,
@@ -217,7 +217,10 @@
 		/obj/item/device/gps/explorer,
 		/obj/item/device/cataloguer/compact, //CHOMP edit
 	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
-		/obj/item/clothing/gloves/watch/survival
+		/obj/item/clothing/gloves/watch/survival,
+		/obj/item/clothing/accessory/storage/webbing/pilot1,
+		/obj/item/clothing/accessory/storage/webbing/pilot2,
+		/obj/item/device/emergency_beacon
 		)
 
 /obj/structure/closet/secure_closet/pilot/Initialize()

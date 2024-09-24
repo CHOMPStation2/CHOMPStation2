@@ -55,6 +55,38 @@
 							/obj/item/weapon/stock_parts/manipulator = 2,
 							/obj/item/weapon/reagent_containers/glass/beaker = 2)
 
+// CHOMPAdd - Departmental Lathes
+
+/obj/item/weapon/circuitboard/protolathe/science
+	name = T_BOARD("science protolathe")
+	build_path = /obj/machinery/r_n_d/protolathe/science
+
+/obj/item/weapon/circuitboard/protolathe/engineering
+	name = T_BOARD("engineering protolathe")
+	build_path = /obj/machinery/r_n_d/protolathe/engineering
+
+/obj/item/weapon/circuitboard/protolathe/medical
+	name = T_BOARD("medical protolathe")
+	build_path = /obj/machinery/r_n_d/protolathe/medical
+
+/obj/item/weapon/circuitboard/protolathe/cargo
+	name = T_BOARD("cargo protolathe")
+	build_path = /obj/machinery/r_n_d/protolathe/cargo
+
+/obj/item/weapon/circuitboard/protolathe/service
+	name = T_BOARD("service protolathe")
+	build_path = /obj/machinery/r_n_d/protolathe/service
+
+/obj/item/weapon/circuitboard/protolathe/security
+	name = T_BOARD("security protolathe")
+	build_path = /obj/machinery/r_n_d/protolathe/security
+
+/obj/item/weapon/circuitboard/protolathe/public
+	name = T_BOARD("public protolathe")
+	build_path = /obj/machinery/r_n_d/protolathe/public
+
+// CHOMPAdd End
+
 /obj/item/weapon/circuitboard/circuit_imprinter
 	name = T_BOARD("circuit imprinter")
 	build_path = /obj/machinery/r_n_d/circuit_imprinter

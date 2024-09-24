@@ -7,7 +7,7 @@
 	icon_dead = "bear_dead"
 	icon_gib = "bear_gib"
 
-	faction = "russian"
+	faction = FACTION_RUSSIAN
 
 	maxHealth = 125
 	health = 125
@@ -28,7 +28,7 @@
 	say_list_type = /datum/say_list/bear
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /datum/say_list/bear
 	speak = list("RAWR!","Rawr!","GRR!","Growl!")

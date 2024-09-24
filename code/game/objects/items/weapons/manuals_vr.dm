@@ -6,7 +6,7 @@
 	author = "NanoTrasen"
 	title = "Standard Operating Procedure"
 
-/obj/item/weapon/book/manual/standard_operating_procedure/New()
+/obj/item/weapon/book/manual/standard_operating_procedure/Initialize() // CHOMPEdit
 	..()
 	dat = {"
 
@@ -29,7 +29,7 @@
 	author = "Jeremiah Acacius"
 	title = "Corporate Regulations"
 
-/obj/item/weapon/book/manual/command_guide/New()
+/obj/item/weapon/book/manual/command_guide/Initialize() // CHOMPEdit
 	..()
 	dat = {"
 

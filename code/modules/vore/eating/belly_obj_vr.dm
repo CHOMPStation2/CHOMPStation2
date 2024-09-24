@@ -8,6 +8,12 @@
 //
 // Parent type of all the various "belly" varieties.
 //
+
+// # define DM_FLAG_VORESPRITE_TAIL     0x2 //CHOMPRemove
+// # define DM_FLAG_VORESPRITE_MARKING  0x4 //CHOMPRemove
+// # define DM_FLAG_VORESPRITE_ARTICLE	0x8 //CHOMPRemove
+
+
 /obj/belly
 	name = "belly"							// Name of this location
 	desc = "It's a belly! You're in it!"	// Flavor text description of inside sight/sound/smells/feels.
@@ -18,6 +24,7 @@
 	var/human_prey_swallow_time = 100		// Time in deciseconds to swallow /mob/living/carbon/human
 	var/nonhuman_prey_swallow_time = 30		// Time in deciseconds to swallow anything else
 	var/nutrition_percent = 100				// Nutritional percentage per tick in digestion mode
+	var/digest_max = 36						// CHOMPEdit; maximum total damage across all types
 	var/digest_brute = 0.5					// Brute damage per tick in digestion mode
 	var/digest_burn = 0.5					// Burn damage per tick in digestion mode
 	var/digest_oxy = 0						// Oxy damage per tick in digestion mode
@@ -26,6 +33,7 @@
 	var/immutable = FALSE					// Prevents this belly from being deleted
 	var/escapable = FALSE					// Belly can be resisted out of at any time
 	var/escapetime = 10 SECONDS				// Deciseconds, how long to escape this belly
+	var/selectchance = 0					// % Chance of stomach switching to selective mode if prey struggles
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
@@ -41,6 +49,7 @@
 	var/shrink_grow_size = 1				// This horribly named variable determines the minimum/maximum size it will shrink/grow prey to.
 	var/transferlocation					// Location that the prey is released if they struggle and get dropped off.
 	var/transferlocation_secondary			// Secondary location that prey is released to.
+	var/transferlocation_absorb				// Location that prey is moved to if they get absorbed.
 	var/release_sound = "Splatter"			// Sound for letting someone out. Replaced from True/false
 	var/mode_flags = 0						// Stripping, numbing, etc.
 	var/fancy_vore = FALSE					// Using the new sounds?
@@ -64,16 +73,42 @@
 	var/belly_overall_mult = 1	//Multiplier applied ontop of any other specific multipliers
 	var/private_struggle = FALSE			// If struggles are made public or not //CHOMPAdd
 
+
+	var/vore_sprite_flags = DM_FLAG_VORESPRITE_BELLY //CHOMPEdit
+	var/tmp/static/list/vore_sprite_flag_list= list(
+		"Normal Belly Sprite" = DM_FLAG_VORESPRITE_BELLY, //CHOMPEdit
+		//"Tail adjustment" = DM_FLAG_VORESPRITE_TAIL,
+		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
+		"Undergarment addition" = DM_FLAG_VORESPRITE_ARTICLE, //CHOMPAdd
+		)
+	var/affects_vore_sprites = FALSE
+	var/count_absorbed_prey_for_sprite = TRUE
+	var/absorbed_multiplier = 1
+	var/count_liquid_for_sprite = FALSE
+	var/liquid_multiplier = 1
+	var/count_items_for_sprite = FALSE
+	var/item_multiplier = 1
+	var/health_impacts_size = TRUE
+	var/resist_triggers_animation = TRUE
+	var/size_factor_for_sprite = 1
+	var/belly_sprite_to_affect = "stomach"
+	var/datum/sprite_accessory/tail/tail_to_change_to = FALSE
+	var/tail_extra_overlay = FALSE
+	var/tail_extra_overlay2 = FALSE
+	var/undergarment_chosen = "Underwear, bottom"
+
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
 	var/autotransferwait = 10 				// Time between trying to transfer.
 	var/autotransferlocation				// Place to send them
+	var/autotransferextralocation = list()	// List of extra places this could go //CHOMPAdd
 	var/autotransfer_whitelist = 0			// Flags for what can be transferred to the primary location //CHOMPAdd
 	var/autotransfer_blacklist = 2			// Flags for what can not be transferred to the primary location, defaults to Absorbed //CHOMPAdd
 	var/autotransfer_whitelist_items = 0	// Flags for what can be transferred to the primary location //CHOMPAdd
 	var/autotransfer_blacklist_items = 0	// Flags for what can not be transferred to the primary location //CHOMPAdd
 	var/autotransferchance_secondary = 0 	// % Chance of prey being autotransferred to secondary transfer location //CHOMPAdd
 	var/autotransferlocation_secondary		// Second place to send them //CHOMPAdd
+	var/autotransferextralocation_secondary = list()	// List of extra places the secondary transfer could go //CHOMPAdd
 	var/autotransfer_secondary_whitelist = 0// Flags for what can be transferred to the secondary location //CHOMPAdd
 	var/autotransfer_secondary_blacklist = 2// Flags for what can not be transferred to the secondary location, defaults to Absorbed //CHOMPAdd
 	var/autotransfer_secondary_whitelist_items = 0// Flags for what can be transferred to the secondary location //CHOMPAdd
@@ -224,6 +259,12 @@
 
 	var/list/absorb_chance_messages_prey = list(
 		"In response to your struggling, %pred's %belly begins to cling more tightly...")
+
+	var/list/select_chance_messages_owner = list(
+		"You feel your %belly beginning to become active!")
+
+	var/list/select_chance_messages_prey = list(
+		"In response to your struggling, %pred's %belly begins to get more active...")
 
 	var/list/digest_messages_owner = list(
 		"You feel %prey's body succumb to your digestive system, which breaks it apart into soft slurry.",
@@ -427,26 +468,21 @@
 	"fullness4_messages",
 	"fullness5_messages",
 	"vorespawn_blacklist",
-	"vore_sprite_flags",
-	"affects_vore_sprites",
-	"count_absorbed_prey_for_sprite",
+	"vorespawn_whitelist",
+	"vorespawn_absorbed",
 	"absorbed_multiplier",
 	"count_liquid_for_sprite",
 	"liquid_multiplier",
-	"count_items_for_sprite",
-	"item_multiplier",
-	"health_impacts_size",
-	"resist_triggers_animation",
-	"size_factor_for_sprite",
-	"belly_sprite_to_affect",
 	"undergarment_chosen",
 	"undergarment_if_none",
 	"undergarment_color",
 	"autotransferchance",
 	"autotransferwait",
 	"autotransferlocation",
+	"autotransferextralocation",
 	"autotransfer_enabled",
 	"autotransferchance_secondary",
+	"autotransferextralocation_secondary",
 	"autotransferlocation_secondary",
 	"autotransfer_secondary_whitelist",
 	"autotransfer_secondary_blacklist",
@@ -470,7 +506,9 @@
 	"entrance_logs",
 	"noise_freq",
 	"private_struggle",
-	"item_digest_logs", //CHOMP end of variables from CHOMP
+	"item_digest_logs",
+	"show_fullness_messages",
+	"digest_max", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
 	"eating_privacy_local",
@@ -479,6 +517,15 @@
 	"belly_item_mult",
 	"belly_overall_mult",
 	"drainmode",
+	"vore_sprite_flags",
+	"affects_vore_sprites",
+	"count_absorbed_prey_for_sprite",
+	"resist_triggers_animation",
+	"size_factor_for_sprite",
+	"belly_sprite_to_affect",
+	"health_impacts_size",
+	"count_items_for_sprite",
+	"item_multiplier"
 	)
 
 	if (save_digest_mode == 1)
@@ -520,10 +567,10 @@
 		return
 	thing.enter_belly(src) // Atom movable proc, does nothing by default. Overridden in children for special behavior.
 	if(owner && istype(owner.loc,/turf/simulated) && !cycle_sloshed && reagents.total_volume > 0)
-		var/turf/simulated/T = owner.loc
-		var/S = pick(T.base_vorefootstep_sounds["human"]) //ChompEDIT
+		// var/turf/simulated/T = owner.loc // CHOMPEdit
+		var/S = pick(GLOB.slosh) //ChompEDIT
 		if(S)
-			playsound(T, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/client_preference/digestion_noises) //CHOMPEdit
+			playsound(owner.loc, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises) //CHOMPEdit
 			cycle_sloshed = TRUE
 	thing.belly_cycles = 0 //reset cycle count
 	if(istype(thing, /mob/observer)) //Ports CHOMPStation PR#3072
@@ -556,7 +603,7 @@
 		if(special_entrance_sound) //CHOMPEdit: Custom sound set by mob's init_vore or ingame varedits.
 			soundfile = special_entrance_sound
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
 	if(reagents.total_volume >= 5 && !isliving(thing) && (item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL)) //CHOMPAdd
@@ -1072,7 +1119,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 
 	return count
 
@@ -1160,7 +1207,7 @@
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 	//Should fix your view not following you out of mobs sometimes!
 	if(ismob(M))
 		var/mob/ourmob = M
@@ -1382,28 +1429,39 @@
 // The next function sets the messages on the belly, from human-readable var
 // replacement strings and linebreaks as delimiters (two \n\n by default).
 // They also sanitize the messages.
-/obj/belly/proc/set_messages(raw_text, type, delim = "\n\n")
+// Give them a limit for each type...
+/obj/belly/proc/set_messages(raw_text, type, delim = "\n\n", limit)
+	if(!limit)
+		CRASH("[src] set message called without limit!")
 	ASSERT(type == "smo" || type == "smi" || type == "asmo" || type == "asmi" || type == "escao" || type == "escap" || type == "escp" || type == "esco" || type == "escout" || type == "escip" || type == "escio" || type == "esciout" || type == "escfp" || type == "escfo" || type == "aescao" || type == "aescap" || type == "aescp" || type == "aesco" || type == "aescout" || type == "aescfp" || type == "aescfo" || type == "trnspp" || type == "trnspo" || type == "trnssp" || type == "trnsso" || type == "atrnspp" || type == "atrnspo" || type == "atrnssp" || type == "atrnsso" || type == "stmodp" || type == "stmodo" || type == "stmoap" || type == "stmoao" || type == "dmo" || type == "dmp" || type == "amo" || type == "amp" || type == "uamo" || type == "uamp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") //CHOMPEdit
 
-	var/list/raw_list = splittext(html_encode(raw_text),delim)
+	var/list/raw_list
+
+	if(findtext(raw_text, delim))
+		raw_list = splittext(html_encode(raw_text), delim)
+	else
+		raw_list = list(raw_text)
+	for(var/i = 1, i <= raw_list.len, i++)
+		if(!length(raw_list[i]))
+			raw_list.Cut(i, i + 1)
+			i--
 	if(raw_list.len > 10)
 		raw_list.Cut(11)
 		log_debug("[owner] tried to set [lowertext(name)] with 11+ messages")
 
+	var/realIndex = 0
 	for(var/i = 1, i <= raw_list.len, i++)
-		if((length(raw_list[i]) > 160 || length(raw_list[i]) < 10) && !(type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb")) //160 is fudged value due to htmlencoding increasing the size
-			raw_list.Cut(i,i)
-			log_debug("[owner] tried to set [lowertext(name)] with >121 or <10 char message")
-		else if((type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") && (length(raw_list[i]) > 510 || length(raw_list[i]) < 10))
-			raw_list.Cut(i,i)
-			log_debug("[owner] tried to set [lowertext(name)] idle message with >501 or <10 char message")
-		else if((type == "em" || type == "ema") && (length(raw_list[i]) > 260 || length(raw_list[i]) < 10))
-			raw_list.Cut(i,i)
-			log_debug("[owner] tried to set [lowertext(name)] examine message with >260 or <10 char message")
-		else
-			raw_list[i] = readd_quotes(raw_list[i])
-			//Also fix % sign for var replacement
-			raw_list[i] = replacetext(raw_list[i],"&#37;","%")
+		realIndex++
+		raw_list[i] = readd_quotes(raw_list[i])
+		//Also fix % sign for var replacement
+		raw_list[i] = replacetext(raw_list[i],"&#37;","%")
+		if(length(raw_list[i]) > limit || length(raw_list[i]) < 10)
+			to_chat(owner, span_warning("One of the message for [lowertext(name)] exceeded the limit of [limit] characters or has been below the lower limit of 10 characters and has been removed. Actual length: [length(raw_list[i])]"))
+			//Reflect message to the player so that they don't just lose it
+			to_chat(owner, span_warning("Message [realIndex]: [raw_list[i]]"))
+			log_debug("[owner] tried to set [lowertext(name)] [type] message with >[limit] or <10 characters")
+			raw_list.Cut(i, i + 1)
+			i--
 
 	ASSERT(raw_list.len <= 10) //Sanity
 
@@ -1517,6 +1575,24 @@
 
 	return
 
+//CHOMPEdit Start - new procs for handling digestion damage as a total rather than per-type
+// Returns the current total digestion damage per tick of a belly.
+/obj/belly/proc/get_total_digestion_damage()
+	return (digest_brute + digest_burn + digest_oxy + digest_tox + digest_clone)
+
+// Returns the remaining 'budget' of digestion damage between the current and the maximum.
+/obj/belly/proc/get_unused_digestion_damage()
+	return max(digest_max - get_total_digestion_damage(), 0)
+
+/obj/belly/proc/set_zero_digestion_damage()
+	digest_brute = 0
+	digest_burn = 0
+	digest_oxy = 0
+	digest_tox = 0
+	digest_clone = 0
+	return
+// CHOMPEdit End
+
 // Handle the death of a mob via digestion.
 // Called from the process_Life() methods of bellies that digest prey.
 // Default implementation calls M.death() and removes from internal contents.
@@ -1597,17 +1673,20 @@
 	if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
 		if(R.mmi && R.mind && R.mmi.brainmob)
-			R.mmi.loc = src
-			items_preserved += R.mmi
-			var/obj/item/weapon/robot_module/MB = locate() in R.contents
-			if(MB)
-				R.mmi.brainmob.languages = MB.original_languages
+			if((R.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && owner.soulgem && owner.soulgem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS, TRUE))
+				owner.soulgem.catch_mob(R, R.name)
 			else
-				R.mmi.brainmob.languages = R.languages
-			R.mmi.brainmob.remove_language("Robot Talk")
-			hasMMI = R.mmi
-			M.mind.transfer_to(hasMMI.brainmob)
-			R.mmi = null
+				R.mmi.loc = src
+				items_preserved += R.mmi
+				var/obj/item/weapon/robot_module/MB = locate() in R.contents
+				if(MB)
+					R.mmi.brainmob.languages = MB.original_languages
+				else
+					R.mmi.brainmob.languages = R.languages
+				R.mmi.brainmob.remove_language("Robot Talk")
+				hasMMI = R.mmi
+				M.mind.transfer_to(hasMMI.brainmob)
+				R.mmi = null
 		else if(!R.shell) // Shells don't have brainmobs in their MMIs.
 			to_chat(R, "<span class='danger'>Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug.</span>")
 		if(R.shell) // Let the standard procedure for shells handle this.
@@ -1697,7 +1776,6 @@
 			if(Mm.absorbed)
 				absorb_living(Mm)
 
-
 	if(absorbed_desc)
 		//Replace placeholder vars
 		var/formatted_abs_desc
@@ -1711,6 +1789,19 @@
 	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(isanimal(owner))
 		owner.update_icon()
+	// Finally, if they're to be sent to a special pudge belly, send them there
+	if(transferlocation_absorb)
+		var/obj/belly/dest_belly
+		for(var/obj/belly/B as anything in owner.vore_organs)
+			if(B.name == transferlocation_absorb)
+				dest_belly = B
+				break
+		if(!dest_belly)
+			to_chat(owner, "<span class='vwarning'>Something went wrong with your belly transfer settings. Your <b>[lowertext(name)]</b> has had its transfer location cleared as a precaution.</span>")
+			transferlocation_absorb = null
+			return
+
+		transfer_contents(M, dest_belly)
 
 // Handle a mob being unabsorbed
 /obj/belly/proc/unabsorb_living(mob/living/M)
@@ -1885,7 +1976,7 @@
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
 
 	//CHOMPEdit Start - vore sprites struggle animation
-	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1) && !private_struggle)
+	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1) && !private_struggle && resist_triggers_animation && affects_vore_sprites)
 		owner.vs_animate(belly_sprite_to_affect)
 	//CHOMPEdit End
 
@@ -1896,9 +1987,9 @@
 				struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
 			else
 				struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
-			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		else
-			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 	//CHOMPEdit End
 
 	if(escapable) //If the stomach has escapable enabled.
@@ -2092,7 +2183,7 @@
 			digest_mode = DM_ABSORB
 			return
 
-		else if(prob(digestchance) && digest_mode != DM_DIGEST) //Finally, let's see if it should run the digest chance.
+		else if(prob(digestchance) && digest_mode != DM_DIGEST) //Then, let's see if it should run the digest chance.
 			var/digest_chance_owner_message = pick(digest_chance_messages_owner)
 			var/digest_chance_prey_message = pick(digest_chance_messages_prey)
 
@@ -2115,6 +2206,28 @@
 			to_chat(owner, digest_chance_owner_message)
 			digest_mode = DM_DIGEST
 			return
+		else if(prob(selectchance) && digest_mode != DM_SELECT) //Finally, let's see if it should run the selective mode chance.
+			var/select_chance_owner_message = pick(select_chance_messages_owner)
+			var/select_chance_prey_message = pick(select_chance_messages_prey)
+
+			select_chance_owner_message = replacetext(select_chance_owner_message, "%pred", owner)
+			select_chance_owner_message = replacetext(select_chance_owner_message, "%prey", R)
+			select_chance_owner_message = replacetext(select_chance_owner_message, "%belly", lowertext(name))
+			select_chance_owner_message = replacetext(select_chance_owner_message, "%countprey", living_count)
+			select_chance_owner_message = replacetext(select_chance_owner_message, "%count", contents.len)
+
+			select_chance_prey_message = replacetext(select_chance_prey_message, "%pred", owner)
+			select_chance_prey_message = replacetext(select_chance_prey_message, "%prey", R)
+			select_chance_prey_message = replacetext(select_chance_prey_message, "%belly", lowertext(name))
+			select_chance_prey_message = replacetext(select_chance_prey_message, "%countprey", living_count)
+			select_chance_prey_message = replacetext(select_chance_prey_message, "%count", contents.len)
+
+			select_chance_owner_message = "<span class='vwarning'>[select_chance_owner_message]</span>"
+			select_chance_prey_message = "<span class='vwarning'>[select_chance_prey_message]</span>"
+
+			to_chat(R, select_chance_prey_message)
+			to_chat(owner, select_chance_owner_message)
+			digest_mode = DM_SELECT
 
 		else //Nothing interesting happened.
 			to_chat(R, struggle_user_message)
@@ -2167,9 +2280,9 @@
 				struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
 			else
 				struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
-			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		else
-			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 	//CHOMPEdit End
 
 	//absorb resists
@@ -2308,14 +2421,14 @@
 	var/dest_belly_name
 	if(autotransferlocation_secondary && prob(autotransferchance_secondary))
 		if(ismob(prey) && autotransfer_filter(prey, autotransfer_secondary_whitelist, autotransfer_secondary_blacklist))
-			dest_belly_name = autotransferlocation_secondary
+			dest_belly_name = pick(autotransferextralocation_secondary + autotransferlocation_secondary)
 		if(isitem(prey) && autotransfer_filter(prey, autotransfer_secondary_whitelist_items, autotransfer_secondary_blacklist_items))
-			dest_belly_name = autotransferlocation_secondary
+			dest_belly_name = pick(autotransferextralocation_secondary + autotransferlocation_secondary)
 	if(autotransferlocation && prob(autotransferchance))
 		if(ismob(prey) && autotransfer_filter(prey, autotransfer_whitelist, autotransfer_blacklist))
-			dest_belly_name = autotransferlocation
+			dest_belly_name = pick(autotransferextralocation + autotransferlocation)
 		if(isitem(prey) && autotransfer_filter(prey, autotransfer_whitelist_items, autotransfer_blacklist_items))
-			dest_belly_name = autotransferlocation
+			dest_belly_name = pick(autotransferextralocation + autotransferlocation)
 	if(!dest_belly_name) // Didn't transfer, so wait before retrying
 		prey.belly_cycles = 0
 		return
@@ -2559,18 +2672,11 @@
 	dupe.reagent_transfer_verb = reagent_transfer_verb
 	dupe.custom_max_volume = custom_max_volume
 	dupe.vorespawn_blacklist = vorespawn_blacklist
-	dupe.vore_sprite_flags = vore_sprite_flags
-	dupe.affects_vore_sprites = affects_vore_sprites
-	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.vorespawn_whitelist = vorespawn_whitelist
+	dupe.vorespawn_absorbed = vorespawn_absorbed
 	dupe.absorbed_multiplier = absorbed_multiplier
 	dupe.count_liquid_for_sprite = count_liquid_for_sprite
 	dupe.liquid_multiplier = liquid_multiplier
-	dupe.count_items_for_sprite = count_items_for_sprite
-	dupe.item_multiplier = item_multiplier
-	dupe.health_impacts_size = health_impacts_size
-	dupe.resist_triggers_animation = resist_triggers_animation
-	dupe.size_factor_for_sprite = size_factor_for_sprite
-	dupe.belly_sprite_to_affect = belly_sprite_to_affect
 	dupe.undergarment_chosen = undergarment_chosen
 	dupe.undergarment_if_none = undergarment_if_none
 	dupe.undergarment_color = undergarment_color
@@ -2592,7 +2698,9 @@
 	dupe.is_feedable = is_feedable
 	dupe.entrance_logs = entrance_logs
 	dupe.noise_freq = noise_freq
-	dupe.item_digest_logs = item_digest_logs //CHOMP end of variables from CHOMP
+	dupe.item_digest_logs = item_digest_logs
+	dupe.show_fullness_messages = show_fullness_messages
+	dupe.digest_max = digest_max //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
 	dupe.disable_hud = disable_hud
@@ -2610,6 +2718,15 @@
 	dupe.belly_mob_mult = belly_mob_mult
 	dupe.belly_item_mult = belly_item_mult
 	dupe.belly_overall_mult	= belly_overall_mult
+	dupe.vore_sprite_flags = vore_sprite_flags
+	dupe.affects_vore_sprites = affects_vore_sprites
+	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.resist_triggers_animation = resist_triggers_animation
+	dupe.size_factor_for_sprite = size_factor_for_sprite
+	dupe.belly_sprite_to_affect = belly_sprite_to_affect
+	dupe.health_impacts_size = health_impacts_size
+	dupe.count_items_for_sprite = count_items_for_sprite
+	dupe.item_multiplier = item_multiplier
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings
@@ -2845,3 +2962,44 @@
 
 /obj/belly/container_resist(mob/M)
 	return relay_resist(M)
+
+/obj/belly/proc/GetFullnessFromBelly()
+	if(!affects_vore_sprites)
+		return 0
+	var/belly_fullness = 0
+	for(var/mob/living/M in src)
+		if(count_absorbed_prey_for_sprite || !M.absorbed)
+			var/fullness_to_add = M.size_multiplier
+			fullness_to_add *= M.mob_size / 20
+			if(M.absorbed)
+				fullness_to_add *= absorbed_multiplier
+			if(health_impacts_size)
+			//CHOMPEdit Start
+				if(ishuman(M))
+					fullness_to_add *= (M.health + 100) / (M.getMaxHealth() + 100)
+				else
+					fullness_to_add *= M.health / M.getMaxHealth()
+			if(fullness_to_add > 0)
+				belly_fullness += fullness_to_add
+			//CHOMPEdit End
+	if(count_liquid_for_sprite)
+		belly_fullness += (reagents.total_volume / 100) * liquid_multiplier
+	if(count_items_for_sprite)
+		for(var/obj/item/I in src)
+			var/fullness_to_add = 0
+			if(I.w_class == ITEMSIZE_TINY)
+				fullness_to_add = ITEMSIZE_COST_TINY
+			else if(I.w_class == ITEMSIZE_SMALL)
+				fullness_to_add = ITEMSIZE_COST_SMALL
+			else if(I.w_class == ITEMSIZE_NORMAL)
+				fullness_to_add = ITEMSIZE_COST_NORMAL
+			else if(I.w_class == ITEMSIZE_LARGE)
+				fullness_to_add = ITEMSIZE_COST_LARGE
+			else if(I.w_class == ITEMSIZE_HUGE)
+				fullness_to_add = ITEMSIZE_COST_HUGE
+			else
+				fullness_to_add = I.w_class //CHOMPEdit
+			fullness_to_add /= 32
+			belly_fullness += fullness_to_add * item_multiplier
+	belly_fullness *= size_factor_for_sprite
+	return belly_fullness

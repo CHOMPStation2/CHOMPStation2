@@ -60,6 +60,8 @@ I think I covered everything.
 	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
 	meat_amount = 40
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	pixel_x = -48 //CHOMPEdit
+	default_pixel_x = -48 //CHOMPEdit
 	old_x = -48
 	old_y = 0
 	vis_height = 92
@@ -94,7 +96,7 @@ I think I covered everything.
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
 	icon_dead = "dragon-dead"
-	faction = "dragon"
+	faction = FACTION_DRAGON
 	glow_range = 7
 	glow_intensity = 3
 	glow_color = "#ED9200"
@@ -187,7 +189,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/friendly
 	ai_holder_type = /datum/ai_holder/simple_mob/healbelly/retaliate/dragon
 	desc = "A large, intimidating creature reminiscent of the traditional idea of medieval fire breathing lizards. This one seems particularly relaxed and jovial."
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	player_msg = "You're a variant of the large dragon stripped of its firebreath attack (harm intent). You can still charge (disarm) and tail sweep (grab). Rest to heal slowly. Check your abilities tab for functions."
 	norange = 1
 	noenrage = 1
@@ -247,7 +249,7 @@ I think I covered everything.
 	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle) //CHOMPEdit TGPanel
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 
 /mob/living/simple_mob/vore/bigdragon/Initialize()
 	..()
@@ -324,6 +326,7 @@ I think I covered everything.
 ///
 
 /mob/living/simple_mob/vore/bigdragon/update_icon()
+	..()
 	update_fullness()
 	build_icons()
 
@@ -343,9 +346,10 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/build_icons(var/random)
 	cut_overlays()
 	if(stat == DEAD)
-		icon_state = "dragon-dead"
 		plane = MOB_LAYER
 		return
+	else
+		plane = ABOVE_MOB_PLANE
 	if(random)
 		var/list/bodycolors = list("#1E1E1E","#3F3F3F","#545454","#969696","#DBDBDB","#ABBBD8","#3D0B00","#3A221D","#77554F","#281D1B","#631F00","#964421","#936B24","#381313","#380000","#682121","#700E00","#44525B","#283035","#29353D","#353E44","#281000","#38261A","#302F3D","#322E3A","#262738")
 		under = pick(underbelly_styles)
@@ -362,55 +366,55 @@ I think I covered everything.
 		eyes = pick(eye_styles)
 		overlay_colors["Eyes"] = "#[get_random_colour(1)]"
 
-	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -48)
+	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]") //CHOMPEdit
 	I.color = overlay_colors["Underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_body[body][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_body[body][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Body"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_ears[ears][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_ears[ears][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Ears"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_mane[mane][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_mane[mane][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Mane"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_horns[horns][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_horns[horns][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Horns"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-	I = image(icon, "dragon_eyes[eyes][resting? "-rest" : null]", pixel_x = -48)
+	I = image(icon, "dragon_eyes[eyes][resting? "-rest" : null]") //CHOMPEdit
 	I.color = overlay_colors["Eyes"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = PLANE_LIGHTING_ABOVE
 	add_overlay(I)
 
 	if(enraged)
-		I = image(icon, "dragon_rage", pixel_x = -48)
+		I = image(icon, "dragon_rage") //CHOMPEdit
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = MOB_PLANE
 		I.layer = MOB_LAYER
 		add_overlay(I)
 	if(flames)
-		I = image(icon, "dragon_flame[resting? "-rest" : null]", pixel_x = -48)
+		I = image(icon, "dragon_flame[resting? "-rest" : null]") //CHOMPEdit
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = PLANE_LIGHTING_ABOVE
 		add_overlay(I)
@@ -901,7 +905,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/do_tame(var/obj/O, var/mob/user)
 	if(!user)
 		return
-	if(faction == "neutral")
+	if(faction == FACTION_NEUTRAL)
 		return	//We're already friendly
 	if(enraged || notame)
 		say("NO FORGIVENESS")
@@ -910,7 +914,7 @@ I think I covered everything.
 	handle_tame_item(O, user)
 
 	qdel(ai_holder)	//Dragon goes to therapy
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	norange = 1		//Don't start fires while friendly
 	vore_selected = gut2 //Just incase it eats someone right after being tamed
 	ai_holder = new /datum/ai_holder/simple_mob/healbelly/retaliate/dragon(src)
@@ -1052,7 +1056,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/enrage(var/atom/movable/attacker)
 	enraged = 1
 	norange = 0
-	faction = "dragon"
+	faction = FACTION_DRAGON
 	say("HAVE IT YOUR WAY THEN")
 	qdel(ai_holder)
 	var/datum/ai_holder/simple_mob/intentional/dragon/D = new /datum/ai_holder/simple_mob/intentional/dragon(src)

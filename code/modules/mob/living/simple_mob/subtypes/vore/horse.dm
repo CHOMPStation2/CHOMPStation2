@@ -8,7 +8,7 @@
 	icon_dead = "horse-dead"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "horse"
+	faction = FACTION_HORSE
 	maxHealth = 60
 	health = 60
 
@@ -36,7 +36,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/horse/big
 	name = "horse"

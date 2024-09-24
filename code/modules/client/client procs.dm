@@ -132,6 +132,9 @@
 		asset_cache_preload_data(href_list["asset_cache_preload_data"])
 		return
 
+	if(href_list["commandbar_typing"])
+		handle_commandbar_typing(href_list)
+
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
 		if("mentorholder")	hsrc = (check_rights(R_ADMIN, 0) ? holder : mentorholder)
@@ -204,6 +207,8 @@
 	stat_panel.subscribe(src, .proc/on_stat_panel_message)
 
 	// Instantiate tgui panel
+	tgui_say = new(src, "tgui_say")
+	initialize_commandbar_spy()
 	tgui_panel = new(src, "browseroutput")
 
 	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
@@ -220,12 +225,15 @@
 
 	//preferences datum - also holds some persistant data for the client (because we may as well keep these datums to a minimum)
 	prefs = preferences_datums[ckey]
-	if(!prefs)
+	if(prefs)
+		prefs.client = src
+		prefs.load_savefile() // just to make sure we have the latest data
+		prefs.apply_all_client_preferences()
+	else
 		prefs = new /datum/preferences(src)
 		preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
-	prefs.client = src // Only relevant if we reloaded it from the global list, otherwise prefs/New sets it
 
 	hook_vr("client_new",list(src)) //VOREStation Code. For now this only loads vore prefs, so better put before mob.Login() call but after normal prefs are loaded.
 
@@ -243,6 +251,7 @@
 	addtimer(CALLBACK(src, PROC_REF(check_panel_loaded)), 30 SECONDS)
 
 	// Initialize tgui panel
+	tgui_say.initialize()
 	tgui_panel.initialize()
 
 	connection_time = world.time
@@ -296,10 +305,12 @@
 			alert = TRUE
 		if(alert)
 			for(var/client/X in GLOB.admins)
-				if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+				if(X.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 					X << 'sound/voice/bcriminal.ogg' //ChompEDIT - back to beepsky
 				window_flash(X)
 		//VOREStation Edit end.
+	fully_created = TRUE
+	attempt_auto_fit_viewport()
 
 	//////////////
 	//DISCONNECT//
@@ -516,6 +527,12 @@
 	if(prefs)
 		prefs.ShowChoices(usr)
 
+/client/verb/game_options()
+	set name = "Game Options"
+	set category = "Preferences"
+	if(prefs)
+		prefs.tgui_interact(usr)
+
 /client/proc/findJoinDate()
 	var/list/http = world.Export("http://byond.com/members/[ckey]?format=text")
 	if(!http)
@@ -631,6 +648,17 @@
 		winset(usr, "mainwindow", "can-resize=true")
 		winset(usr, "mainwindow", "is-maximized=false")
 		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport") // The attempt_auto_fit_viewport() proc is not implemented yet
+	attempt_auto_fit_viewport()
+
+/*CHOMPRemove Start, we use TGPanel
+/client/verb/toggle_verb_panel()
+	set name = "Toggle Verbs"
+	set category = "OOC.Client Settings" //CHOMPEdit
+
+	show_verb_panel = !show_verb_panel
+
+	to_chat(usr, "Your verbs are now [show_verb_panel ? "on" : "off. To turn them back on, type 'toggle-verbs' into the command bar."].")
+*///CHOMPRemove End
 
 /*
 /client/verb/toggle_status_bar()

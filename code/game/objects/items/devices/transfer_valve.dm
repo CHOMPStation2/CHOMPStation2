@@ -55,16 +55,23 @@
 		SStgui.update_uis(src) // update all UIs attached to src
 	return
 
-
-/obj/item/device/transfer_valve/HasProximity(turf/T, atom/movable/AM, old_loc)
-	attached_device?.HasProximity(T, AM, old_loc)
+// CHOMPEdit Start
+/obj/item/device/transfer_valve/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	SIGNAL_HANDLER
+	if(isnull(WF))
+		return
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
+		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+	attached_device?.HasProximity(T, WEAKREF(AM), old_loc)
+// CHOMPEdit End
 
 /obj/item/device/transfer_valve/Moved(old_loc, direction, forced)
 	. = ..()
 	if(isturf(old_loc))
-		unsense_proximity(callback = /atom/proc/HasProximity, center = old_loc)
+		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
 	if(isturf(loc))
-		sense_proximity(callback = /atom/proc/HasProximity)
+		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 /obj/item/device/transfer_valve/attack_self(mob/user)
 	tgui_interact(user)

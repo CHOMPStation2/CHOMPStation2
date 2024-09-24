@@ -7,7 +7,7 @@
 	icon_living = "raptorpurple"
 	icon_state = "raptorpurple"
 	icon_rest = "raptorpurple"
-	faction = "raptor"
+	faction = FACTION_RAPTOR
 	meat_amount = 40 //Big dog, lots of meat
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	old_x = -48
@@ -48,7 +48,7 @@
 		"raptorwhite"
 	)
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/raptor
 

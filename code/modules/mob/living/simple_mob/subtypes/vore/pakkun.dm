@@ -24,7 +24,7 @@
 	icon_rest = "pakkun-rest"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "pakkun"
+	faction = FACTION_PAKKUN
 
 	movement_cooldown = 2
 	can_be_drop_pred = 1 //They can tongue vore.
@@ -58,7 +58,7 @@
 	maxHealth = 100
 	health = 100
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/pakkun/Life()
 	. = ..()

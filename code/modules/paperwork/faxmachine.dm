@@ -28,7 +28,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	var/destination = null // the department we're sending to
 	var/talon = 0 // So that the talon can access their own crew roles for the request
 
-/obj/machinery/photocopier/faxmachine/New()
+/obj/machinery/photocopier/faxmachine/Initialize() //CHOMPedit, so new fax machines can update its list mid-round
 	allfaxes += src
 	if(!destination) destination = "[using_map.boss_name]"
 	if( !(("[department]" in alldepartments) || ("[department]" in admin_departments)) )
@@ -38,8 +38,8 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 /obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob) // CH edit begins here; this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 	user.set_machine(src)
 
-	if(issilicon(usr))
-		authenticated = 1
+	if(issilicon(user))
+		authenticated = user.name
 		tgui_interact(user)
 	else
 		tgui_interact(user)
@@ -201,7 +201,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 					rank = scan.assignment
 			else if(login_type == LOGIN_TYPE_AI && isAI(usr))
 				authenticated = usr.name
-				rank = "AI"
+				rank = JOB_AI
 			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(usr))
 				authenticated = usr.name
 				var/mob/living/silicon/robot/R = usr
@@ -283,7 +283,7 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 	var/choice = tgui_alert(usr, "[question_text] improve response time from staff when sending to discord. \
 	Renaming it changes its preview in staff chat.", \
 	"Default name detected", list("Change Title","Continue", "Cancel"))
-	if(choice == "Cancel")
+	if(!choice || choice == "Cancel")
 		return TRUE
 	else if(choice == "Change Title")
 		var/new_name = tgui_input_text(usr, "Enter new fax title", "This will show up in the preview for staff chat on discord when sending \

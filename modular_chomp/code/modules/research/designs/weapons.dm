@@ -6,6 +6,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 3000)
 	build_path = /obj/item/weapon/gun/launcher/confetti_cannon
 	sort_string = "MAAVD"
+	department = LATHE_ALL | LATHE_SERVICE
 
 /datum/design/item/weapon/energy/metamorphosisray
 	name = "metamorphosis ray"
@@ -22,6 +23,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 500)
 	build_path = /obj/item/weapon/gun/energy/locked/phasegun/pistol
 	sort_string = "MACAA"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/phase/phase_carbine
 	id = "phasecarbine"
@@ -29,6 +31,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 500)
 	build_path = /obj/item/weapon/gun/energy/locked/phasegun
 	sort_string = "MACAB"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/phase/phase_rifle
 	id = "phaserifle"
@@ -36,6 +39,7 @@
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 500, MAT_SILVER = 500)
 	build_path = /obj/item/weapon/gun/energy/locked/phasegun/rifle
 	sort_string = "MACAC"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/phase/phase_cannon
 	id = "phasecannon"
@@ -43,6 +47,7 @@
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_DIAMOND = 750)
 	build_path = /obj/item/weapon/gun/energy/locked/phasegun/cannon
 	sort_string = "MACAD"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/phase/frontier_holdout
 	id = "holdout frontier phaser"
@@ -50,6 +55,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 100, MAT_PHORON = 1000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier/holdout
 	sort_string = "MACAE"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/phase/frontier_phaser
 	id = "frontier phaser"
@@ -57,6 +63,7 @@
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 2000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier
 	sort_string = "MACAF"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/phase/frontier_carbine
 	id = "carbine frontier phaser"
@@ -64,6 +71,7 @@
 	materials = list(MAT_STEEL = 6500, MAT_GLASS = 900, MAT_DURASTEEL = 150, MAT_VERDANTIUM = 200, MAT_PHORON = 4000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier/carbine
 	sort_string = "MACAG"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/phase/frontier_rifle
 	id = "marksman rifle frontier phaser"
@@ -71,6 +79,7 @@
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 900, MAT_DURASTEEL = 200, MAT_VERDANTIUM = 250, MAT_PHORON = 2000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier/rifle
 	sort_string = "MACAH"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/phase/frontier_handbow
 	id = "handbow frontier phaser"
@@ -78,6 +87,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 1000)
 	build_path = /obj/item/weapon/gun/energy/locked/frontier/handbow
 	sort_string = "MACAI"
+	department = LATHE_ALL | LATHE_SECURITY
 
 //Leathals And any new CHOMP weapons.
 /datum/design/item/weapon/gun/projectile/caseless/prototype
@@ -86,6 +96,7 @@
 	materials = list(MAT_STEEL = 7000, MAT_TITANIUM = 4000)
 	build_path = /obj/item/weapon/gun/projectile/caseless/prototype
 	sort_string = "MACBA"
+	department = LATHE_ALL | LATHE_SECURITY
 
 /datum/design/item/weapon/energy/lasercannon
 	desc = "The lasing medium of this prototype is enclosed in a tube lined with uranium-235 and subjected to high neutron flux in a nuclear reactor core."
@@ -94,6 +105,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 1000, MAT_DIAMOND = 2000, MAT_TITANIUM = 4000, MAT_LEAD = 4000, MAT_URANIUM = 5000)
 	build_path = /obj/item/weapon/gun/energy/lasercannon
 	sort_string = "MAAAD"
+	department = LATHE_ALL | LATHE_SECURITY
 
 //Wierd weapon time
 /datum/design/item/weapon/energy/cyrogun
@@ -103,3 +115,4 @@
 	materials = list(MAT_GLASS = 3000, MAT_MORPHIUM = 4000, MAT_DURASTEEL = 6000, MAT_LEAD = 6000, MAT_METALHYDROGEN = 3000)
 	build_path = /obj/item/weapon/gun/energy/freezegun
 	sort_string = "MAAAD"
+	department = LATHE_ALL | LATHE_SECURITY

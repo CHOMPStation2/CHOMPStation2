@@ -1410,8 +1410,8 @@
 	},
 /area/centcom/bar)
 "aQp" = (
-/obj/machinery/vending/loadout/gadget,
 /obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/vending/cigarette,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "aQu" = (
@@ -1793,8 +1793,8 @@
 /area/centcom/bar)
 "bfZ" = (
 /obj/machinery/vending/boozeomat{
-	pixel_y = 16;
-	req_log_access = null
+	req_access = null;
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/milspec/color/silver,
 /turf/simulated/floor/tiled/techmaint,
@@ -2412,10 +2412,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "bIF" = (
-/obj/machinery/vending/hydroseeds,
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
+/obj/machinery/vending/weeb,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "bIK" = (
@@ -11215,15 +11212,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"jQF" = (
-/obj/machinery/vending/boozeomat{
-	req_access = null
-	},
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "jQU" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -12624,9 +12612,11 @@
 	},
 /area/centcom/bar)
 "kVf" = (
-/obj/machinery/vending/tool,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
+	},
+/obj/machinery/vending/blood{
+	req_access = null
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
@@ -15288,13 +15278,6 @@
 /obj/structure/flight_right,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
-"nzI" = (
-/obj/machinery/vending/engineering{
-	req_access = null
-	},
-/obj/effect/floor_decal/techfloor/orange,
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "nAe" = (
 /obj/machinery/door/window/westright{
 	name = "Storefront";
@@ -15548,13 +15531,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/creed)
-"nLo" = (
-/obj/machinery/vending/weeb,
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 9
-	},
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "nMG" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
@@ -16150,10 +16126,6 @@
 /obj/structure/window/reinforced/survival_pod,
 /turf/simulated/floor,
 /area/shadekin)
-"orQ" = (
-/obj/machinery/vending/dinnerware,
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "osb" = (
 /obj/machinery/computer/cloning,
 /turf/unsimulated/floor{
@@ -16634,13 +16606,6 @@
 	icon_state = "wood"
 	},
 /area/centcom/bar)
-"pbJ" = (
-/obj/machinery/vending/cigarette,
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 10
-	},
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "pcd" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/paper_bin,
@@ -16815,12 +16780,10 @@
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/supply)
 "pkK" = (
-/obj/machinery/vending/engivend{
-	req_access = null
-	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/machinery/vending/bepis,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "plX" = (
@@ -20486,15 +20449,6 @@
 /obj/machinery/floodlight,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
-"sPq" = (
-/obj/machinery/vending/blood{
-	req_access = null
-	},
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "sQM" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -22925,13 +22879,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"vdq" = (
-/obj/machinery/vending/bepis,
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
-/area/shadekin)
 "vdG" = (
 /obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/holofloor/tiled,
@@ -61563,12 +61510,12 @@ wRY
 wKW
 pyc
 wKW
-nLo
-vdq
-sPq
-jQF
-bIF
-pbJ
+oSi
+owZ
+owZ
+owZ
+owZ
+wRY
 dRZ
 bMy
 oTO
@@ -62082,9 +62029,9 @@ wKW
 kzy
 wee
 ifb
-orQ
 faE
-nzI
+rtJ
+qhK
 qfC
 bMy
 vvS
@@ -62599,7 +62546,7 @@ pkK
 eAT
 sYR
 bST
-eAT
+bIF
 aQp
 eay
 bMy

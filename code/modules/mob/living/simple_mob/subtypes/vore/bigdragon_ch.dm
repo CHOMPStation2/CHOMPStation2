@@ -344,6 +344,7 @@ I think I covered everything.
 ///
 
 /mob/living/simple_mob/vore/bigdragon/update_icon()
+	..()
 	update_fullness()
 	build_icons()
 
@@ -362,9 +363,10 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/build_icons(var/random)
 	cut_overlays()
 	if(stat == DEAD)
-		icon_state = "dragon-dead"
 		plane = MOB_LAYER
 		return
+	else
+		plane = ABOVE_MOB_PLANE
 	if(random)
 		var/list/bodycolors = list("#1E1E1E","#3F3F3F","#545454","#969696","#DBDBDB","#ABBBD8","#3D0B00","#3A221D","#77554F","#281D1B","#631F00","#964421","#936B24","#381313","#380000","#682121","#700E00","#44525B","#283035","#29353D","#353E44","#281000","#38261A","#302F3D","#322E3A","#262738")
 		under = pick(underbelly_styles)
@@ -372,14 +374,14 @@ I think I covered everything.
 		body = pick(body_styles)
 		overlay_colors["Body"] = pick(bodycolors)
 		ears = pick(ear_styles)
-		overlay_colors["Ears"] = "#[get_random_colour(0, 100, 150)]"
+		overlay_colors["Ears"] = get_random_colour(0, 100, 150)
 		mane = pick(mane_styles)
 		overlay_colors["Mane"] = pick(bodycolors)
 		horns = pick(horn_styles)
 		var/list/horncolors = list("#000000","#151515","#303030","#606060","#808080","#AAAAAA","#CCCCCC","#EEEEEE","#FFFFFF")
 		overlay_colors["Horns"] = pick(horncolors)
 		eyes = pick(eye_styles)
-		overlay_colors["Eyes"] = "#[get_random_colour(1)]"
+		overlay_colors["Eyes"] = get_random_colour(1)
 
 	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -48)
 	I.color = overlay_colors["Underbelly"]

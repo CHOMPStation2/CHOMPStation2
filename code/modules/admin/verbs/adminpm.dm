@@ -165,7 +165,7 @@
 				to_chat(src, "<span class='pm notice'>PM to-<b>Admins</b>: [msg]</span>")
 
 			//play the recieving admin the adminhelp sound (if they have them enabled)
-			if(recipient.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
+			if(recipient.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 				recipient << 'sound/effects/adminhelp.ogg'
 
 		else
@@ -203,11 +203,15 @@
 	if(irc)
 		log_admin("PM: [key_name(src)]->IRC: [rawmsg]")
 		for(var/client/X in GLOB.admins)
+			if(!check_rights(R_ADMIN|R_SERVER, 0, X)) //CHOMPEdit
+				continue
 			to_chat(X, "<span class='pm notice'><B>PM: [key_name(src, X, 0)]-&gt;IRC:</B> [keywordparsedmsg]</span>")
 	else
 		log_admin("PM: [key_name(src)]->[key_name(recipient)]: [rawmsg]")
 		//we don't use message_admins here because the sender/receiver might get it too
 		for(var/client/X in GLOB.admins)
+			if(!check_rights(R_ADMIN|R_SERVER, 0, X)) //CHOMPEdit
+				continue
 			if(X.key!=key && X.key!=recipient.key)	//check client/X is an admin and isn't the sender or recipient
 				to_chat(X, "<span class='pm notice'><B>PM: [key_name(src, X, 0)]-&gt;[key_name(recipient, X, 0)]:</B> [keywordparsedmsg]</span>" )
 

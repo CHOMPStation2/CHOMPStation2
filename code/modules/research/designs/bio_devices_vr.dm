@@ -5,6 +5,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 8000, MAT_URANIUM = 6000, MAT_DIAMOND = 6000)
 	build_path = /obj/item/device/nif
 	sort_string = "JVAAA"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/nifbio
 	name = "bioadaptive NIF"
@@ -13,6 +14,7 @@
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 15000, MAT_URANIUM = 10000, MAT_DIAMOND = 10000)
 	build_path = /obj/item/device/nif/bioadap
 	sort_string = "JVAAB"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/biotech/nifrepairtool
 	name = "adv. NIF repair tool"

@@ -136,7 +136,7 @@
 
 			if(length_char(t) >= MUSIC_MAXLINES * MUSIC_MAXLINECHARS)
 				var/cont = tgui_alert(usr, "Your message is too long! Would you like to continue editing it?", "Too long!", list("Yes", "No"))
-				if(cont == "No")
+				if(cont != "Yes")
 					break
 		while(length_char(t) > MUSIC_MAXLINES * MUSIC_MAXLINECHARS)
 		ParseSong(t)
@@ -191,7 +191,7 @@
 		stop_playing()
 
 	else if(href_list["setlinearfalloff"])
-		var/amount = tgui_input_number(usr, "Set linear sustain duration in seconds", "Linear Sustain Duration")
+		var/amount = tgui_input_number(usr, "Set linear sustain duration in seconds", "Linear Sustain Duration", round_value=FALSE)
 		if(!isnull(amount))
 			set_linear_falloff_duration(round(amount * 10, world.tick_lag))
 

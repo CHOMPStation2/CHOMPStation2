@@ -43,13 +43,13 @@
 	var/max_frustration = 0
 
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/bot/New()
 	..()
-	update_icons()
+	//update_icons() //VOREstation edit: moved to Init
 
-	default_language = GLOB.all_languages[LANGUAGE_GALCOM]
+	//default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit: moved to Init
 
 	botcard = new /obj/item/weapon/card/id(src)
 	botcard.access = botcard_access.Copy()
@@ -66,6 +66,8 @@
 	. = ..()
 	if(on)
 		turn_on() // Update lights and other stuff
+	update_icons() //VOREstation edit - overlay runtime fix
+	default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit - runtime fix
 
 /mob/living/bot/Life()
 	..()
@@ -367,7 +369,7 @@
 	return
 
 /mob/living/bot/proc/calcTargetPath()
-	target_path = SSpathfinder.default_bot_pathfinding(src, get_turf(target), 1) //CHOMPEdit
+	target_path = SSpathfinder.default_bot_pathfinding(src, get_turf(target), 0) //CHOMPEdit
 	if(!target_path)
 		if(target && target.loc)
 			ignore_list |= target
@@ -543,8 +545,8 @@
 	ooc_notes_style = AI.ooc_notes_style
 	//CHOMPEdit End
 	to_chat(src, span_notice("You feel a tingle in your circuits as your systems interface with \the [initial(src.name)]."))
-	if(AI.idcard.access)
-		botcard.access	|= AI.idcard.access
+	if(AI.idcard.GetAccess())
+		botcard.access	|= AI.idcard.GetAccess()
 
 /mob/living/bot/proc/ejectpai(mob/user)
 	if(paicard)
@@ -591,9 +593,7 @@
 	return ..()
 
 /mob/living/bot/Logout()
-	no_vore = TRUE // ROBOT VORE
 	release_vore_contents()
-	init_vore() // ROBOT VORE
 	remove_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	no_vore = TRUE
 	devourable = FALSE

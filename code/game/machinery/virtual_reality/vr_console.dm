@@ -173,19 +173,25 @@
 			M.client.perspective = EYE_PERSPECTIVE
 			M.client.eye = src
 		M.loc = src
-		update_use_power(USE_POWER_ACTIVE)
+		// update_use_power(USE_POWER_ACTIVE) //VOREstation edit: borer VR crash fix
 		occupant = M
 
 		update_icon()
 
-		enter_vr()
+		//VOREstation edit - crashes borers
+		if(!M.has_brain_worms())
+			update_use_power(USE_POWER_ACTIVE)
+			enter_vr()
+		else
+			to_chat(user, "<span class='warning'>\The [src] rejects [M] with a sharp beep.</span>")
+		//VOREstation edit end
 	return
 
 /obj/machinery/vr_sleeper/proc/go_out(var/forced = TRUE)
 	if(!occupant)
 		return
 
-	if(!forced && avatar && tgui_alert(avatar, "Someone wants to remove you from virtual reality. Do you want to leave?", "Leave VR?", list("Yes", "No")) == "No")
+	if(!forced && avatar && tgui_alert(avatar, "Someone wants to remove you from virtual reality. Do you want to leave?", "Leave VR?", list("Yes", "No")) != "Yes")
 		return
 
 	if(avatar)
@@ -222,7 +228,7 @@
 
 	avatar = occupant.vr_link
 	// If they've already enterred VR, and are reconnecting, prompt if they want a new body
-	if(avatar && tgui_alert(occupant, "You already have a [avatar.stat == DEAD ? "" : "deceased "]Virtual Reality avatar. Would you like to use it?", "New avatar", list("Yes", "No")) == "No")
+	if(avatar && tgui_alert(occupant, "You already have a [avatar.stat == DEAD ? "" : "deceased "]Virtual Reality avatar. Would you like to use it?", "New avatar", list("Yes", "No")) != "Yes")
 		// Delink the mob
 		occupant.vr_link = null
 		avatar = null

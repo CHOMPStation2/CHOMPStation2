@@ -28,7 +28,7 @@
 	icon_living = "rous"
 	icon_dead = "rous-dead"
 	icon_rest = "rous_rest"
-	faction = "mouse"
+	faction = FACTION_MOUSE
 	icon = 'icons/mob/vore64x32.dmi'
 
 	maxHealth = 150
@@ -71,7 +71,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/rat
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/aggressive/rat/init_vore()
 	if(!voremob_loaded)

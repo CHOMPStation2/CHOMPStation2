@@ -227,6 +227,12 @@
 			continue
 		if(search && !findtext(D.name, search))
 			continue
+		//CHOMPAdd Start, Locked Designs
+		if(is_type_in_list(D, LockedLatheDesigns))
+			continue
+		if(!D.department || !(D.department & P.req_category))
+			continue
+		//CHOMPAdd End, Locked Designs
 
 		var/list/mat_list = list()
 		for(var/M in D.materials)
@@ -265,6 +271,10 @@
 			continue
 		if(search && !findtext(D.name, search))
 			continue
+		//CHOMPAdd Start, Locked Designs
+		if(is_type_in_list(D, LockedPrinterDesigns))
+			continue
+		//CHOMPAdd End, Locked Designs
 
 		var/list/mat_list = list()
 		for(var/M in D.materials)
@@ -411,7 +421,7 @@
 				to_chat(usr, "<span class='notice'>The destructive analyzer is busy at the moment.</span>")
 				return
 
-			if(tgui_alert(usr, "Proceeding will destroy loaded item. Continue?", "Destructive analyzer confirmation", list("Yes", "No")) == "No" || !linked_destroy)
+			if(tgui_alert(usr, "Proceeding will destroy loaded item. Continue?", "Destructive analyzer confirmation", list("Yes", "No")) != "Yes" || !linked_destroy)
 				return
 			linked_destroy.busy = 1
 			busy_msg = "Processing and Updating Database..."

@@ -199,10 +199,10 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	var/chat_msg = "<span class='notice'>(<A HREF='?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=escalate'>ESCALATE</A>) Ticket [TicketHref("#[id]", ref_src)]<b>: [LinkedReplyName(ref_src)]:</b> [msg]</span>"
 	AddInteraction("<font color='red'>[LinkedReplyName(ref_src)]: [msg]</font>")
 	for (var/client/C in GLOB.mentors)
-		if (C.is_preference_enabled(/datum/client_preference/play_mentorhelp_ping))
+		if (C.prefs?.read_preference(/datum/preference/toggle/play_mentorhelp_ping))
 			C << 'sound/effects/mentorhelp.mp3'
 	for (var/client/C in GLOB.admins)
-		if (C.is_preference_enabled(/datum/client_preference/play_mentorhelp_ping))
+		if (C.prefs?.read_preference(/datum/preference/toggle/play_mentorhelp_ping))
 			C << 'sound/effects/mentorhelp.mp3'
 	message_mentors(chat_msg)
 
@@ -448,7 +448,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 			spawn(1200)
 				add_verb(src,/client/verb/mentorhelp ) // 2 minute cd to prevent abusing this to spam admins. //CHOMPEdit
 			return
-		else if(choice == "Cancel")
+		else if(!choice || choice == "Cancel")
 			return
 
 
@@ -460,7 +460,10 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 
 	feedback_add_details("admin_verb","Mentorhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_mentorhelp)
-		if(tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No")) != "No")
+		var/input = tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No"))
+		if(!input)
+			return
+		if(input == "Yes")
 			if(current_mentorhelp)
 				log_admin("Mentorhelp: [key_name(src)]: [msg]")
 				current_mentorhelp.MessageNoRecipient(msg)

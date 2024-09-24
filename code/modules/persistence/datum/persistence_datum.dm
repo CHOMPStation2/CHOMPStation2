@@ -104,7 +104,7 @@
 /datum/persistent/proc/Shutdown()
 	if(fexists(filename))
 		fdel(filename)
-	
+
 	var/list/to_store = list()
 	for(var/thing in SSpersistence.tracking_values[type])
 		if(!IsValidEntry(thing))
@@ -121,12 +121,16 @@
 	var/list/my_tracks = SSpersistence.tracking_values[type]
 	if(!my_tracks?.len)
 		return
-	
+
 	. = list("<tr><td colspan = 4><b>[capitalize(name)]</b></td></tr>")
 	. += "<tr><td colspan = 4><hr></td></tr>"
-	
+
 	for(var/thing in my_tracks)
-		. += "<tr>[GetAdminDataStringFor(thing, can_modify, user)]</tr>"
+	// CHOMPAdd
+		var/data = GetAdminDataStringFor(thing, can_modify, user)
+		if(!isnull(data))
+			. += "<tr>[GetAdminDataStringFor(thing, can_modify, user)]</tr>"
+	// CHOMPAdd End
 	. += "<tr><td colspan = 4><hr></td></tr>"
 
 

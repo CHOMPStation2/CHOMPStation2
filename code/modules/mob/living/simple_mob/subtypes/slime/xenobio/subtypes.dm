@@ -582,10 +582,10 @@
 		var/mob/living/carbon/human/H = holder
 		for(var/obj/item/organ/external/E in H.organs)
 			var/obj/item/organ/external/O = E
-			O.heal_damage(2, 2, 0, 1)
+			O.heal_damage(1, 1, 0, 1) //CHOMPEdit, heal halved
 	else
-		holder.adjustBruteLoss(-2)
-		holder.adjustFireLoss(-2)
+		holder.adjustBruteLoss(-1) //CHOMPEdit, heal halved
+		holder.adjustFireLoss(-1) //CHOMPEdit, heal halved
 
 	holder.adjustToxLoss(-2)
 	holder.adjustOxyLoss(-2)
@@ -779,7 +779,7 @@
 // The RD's pet slime.
 /mob/living/simple_mob/slime/xenobio/rainbow/kendrick
 	name = "Kendrick"
-	desc = "The Research Director's pet slime.  It shifts colors constantly."
+	desc = "The " + JOB_RESEARCH_DIRECTOR + "'s pet slime.  It shifts colors constantly."
 	rainbow_core_candidate = FALSE
 	// Doing pacify() in initialize() won't actually pacify the AI due to the ai_holder not existing due to parent initialize() not being called yet.
 	// Instead lets just give them an ai_holder that does that for us.

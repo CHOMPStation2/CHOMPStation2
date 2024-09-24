@@ -153,7 +153,7 @@
 
 	var/voice_name = "unidentifiable voice"
 
-	var/faction = "neutral" //Used for checking whether hostile simple animals will attack you, possibly more stuff later
+	var/faction = FACTION_NEUTRAL //Used for checking whether hostile simple animals will attack you, possibly more stuff later
 
 	var/can_be_antagged = FALSE // To prevent pAIs/mice/etc from getting antag in autotraitor and future auto- modes. Uses inheritance instead of a bunch of typechecks.
 	var/away_from_keyboard = FALSE	//are we at, or away, from our keyboard?
@@ -219,10 +219,6 @@
 
 	var/get_rig_stats = 0 //Moved from computer.dm
 
-	var/typing
-	var/obj/effect/decal/typing_indicator
-	var/obj/effect/decal/typing_indicator_active
-	var/cur_typing_indicator
 	var/custom_speech_bubble = "default"
 
 	var/low_priority = FALSE //Skip processing life() if there's just no players on this Z-level
@@ -240,3 +236,5 @@
 	var/list/progressbars = null //VOREStation Edit
 
 	var/datum/focus //What receives our keyboard inputs. src by default
+
+	var/custom_footstep = FOOTSTEP_MOB_SHOE // CHOMPEdit

@@ -89,7 +89,7 @@
 		return
 
 	//VOREStation Add Start
-	if(jobban_isbanned(user, "GhostRoles"))
+	if(jobban_isbanned(user, JOB_GHOSTROLES))
 		to_chat(user, "<span class='warning'>You cannot become a mouse because you are banned from playing ghost roles.</span>")
 		return
 	//VOREStation Add End
@@ -158,6 +158,14 @@
 					I = produce_beta_item()
 				else if(luck <= chance_alpha+chance_beta+chance_gamma)
 					I = produce_gamma_item()
+
+				//VOREstation edit - Randomized map objects were put in loot piles, so handle them...
+				if(istype(I,/obj/random))
+					var/obj/random/randy = I
+					var/new_I = randy.spawn_item()
+					qdel(I)
+					I = new_I // swap it
+				//VOREstation edit end
 
 				//We either have an item to hand over or we don't, at this point!
 				if(I)
@@ -292,6 +300,7 @@
 					prob(4);/obj/item/weapon/gun/energy/sizegun,
 					prob(4);/obj/item/device/slow_sizegun,
 					prob(4);/obj/item/clothing/accessory/collar/shock/bluespace,
+					prob(3);/obj/item/weapon/cracker,
 					prob(3);/obj/item/weapon/material/butterfly,
 					prob(3);/obj/item/weapon/material/butterfly/switchblade,
 					prob(3);/obj/item/clothing/gloves/knuckledusters,
@@ -325,7 +334,8 @@
 					prob(1);/obj/item/device/perfect_tele/one_beacon,
 					prob(1);/obj/item/clothing/gloves/bluespace,
 					prob(1);/obj/item/weapon/gun/energy/mouseray,
-					prob(1);/obj/item/clothing/accessory/collar/shock/bluespace/modified)
+					prob(1);/obj/item/clothing/accessory/collar/shock/bluespace/modified,
+					prob(1);/obj/item/weapon/gun/energy/sizegun/backfire)
 
 	var/obj/item/I = new path()
 	return I

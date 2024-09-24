@@ -212,7 +212,7 @@
 		return
 	if(istype(target,/obj/item))
 		var/obj/item/I = target
-		if(is_type_in_list(I,item_vore_blacklist))
+		if(is_type_in_list(I,item_vore_blacklist) || I.w_class >= ITEMSIZE_HUGE)
 			return
 		if(vac_power > I.w_class)
 			if(vac_power == 7)

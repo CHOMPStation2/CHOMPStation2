@@ -23,7 +23,7 @@
 	icon_rest = "catslug_rest"
 	icon = 'icons/mob/alienanimals_x32.dmi'
 
-	faction = "catslug"
+	faction = FACTION_CATSLUG
 	maxHealth = 50
 	health = 50
 	movement_cooldown = -1
@@ -58,7 +58,7 @@
 	var/obj/item/clothing/head/hat = null // Scughat.
 	var/can_wear_hat = TRUE				  // Some have inbuilt hats
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
 
@@ -68,6 +68,7 @@
 		/obj/item/weapon/holder,
 		/obj/machinery/camera,
 		/obj/belly,
+		/obj/soulgem, // CHOMPAdd
 		/obj/screen,
 		/atom/movable/emissive_blocker,
 		/obj/item/weapon/material,
@@ -752,7 +753,7 @@
 	icon_living = "capslug"
 	icon_rest = "capslug_rest"
 	icon_dead = "capslug_dead"
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/capslug)
 	holder_type = /obj/item/weapon/holder/catslug/custom/capslug
 	say_list_type = /datum/say_list/catslug/custom/capslug
@@ -826,7 +827,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug)
 	say_list_type = /datum/say_list/catslug
 	myid_access = list(access_maint_tunnels, access_syndicate, access_external_airlocks)
-	faction = "syndicate"
+	faction = FACTION_SYNDICATE
 	maxHealth = 100		//Tough noodles
 	health = 100
 	taser_kill = 0

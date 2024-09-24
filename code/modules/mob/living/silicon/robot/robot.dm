@@ -2,8 +2,8 @@
 
 
 /mob/living/silicon/robot
-	name = "Cyborg"
-	real_name = "Cyborg"
+	name = JOB_CYBORG
+	real_name = JOB_CYBORG
 	icon = 'icons/mob/robots.dmi'
 	icon_state = "robot"
 	maxHealth = 200
@@ -103,7 +103,7 @@
 	var/speed = 0 //Cause sec borgs gotta go fast //No they dont!
 	var/scrambledcodes = 0 // Used to determine if a borg shows up on the robotics console. Setting to one hides them.
 	var/tracking_entities = 0 //The number of known entities currently accessing the internal camera
-	var/braintype = "Cyborg"
+	var/braintype = JOB_CYBORG
 
 	var/obj/item/weapon/implant/restrainingbolt/bolt	// The restraining bolt installed into the cyborg.
 
@@ -239,7 +239,7 @@
 
 /mob/living/silicon/robot/proc/init()
 	aiCamera = new/obj/item/device/camera/siliconcam/robot_camera(src)
-	laws = new /datum/ai_laws/nanotrasen()
+	laws = new global.using_map.default_law_type // VOREstation edit: use map's default
 	additional_law_channels["Binary"] = "#b"
 	var/new_ai = select_active_ai_with_fewest_borgs()
 	if(new_ai)
@@ -441,7 +441,7 @@
 	set category = "Abilities.Settings" //ChompEDIT - TGPanel
 
 	if(custom_name)
-		to_chat(usr, "You can't pick another custom name. Go ask for a name change.")
+		to_chat(usr, "You can't pick another custom name. [isshell(src) ? "" : "Go ask for a name change."]")
 		return 0
 
 	spawn(0)
@@ -928,7 +928,7 @@
 					if(is_vore_predator(H) && H.devourable && src.feeding && src.devourable)
 						var/switchy = tgui_alert(H, "Do you wish to eat [src] or feed yourself to them?", "Feed or Eat",list("Nevermind!", "Eat","Feed"))
 						switch(switchy)
-							if("Nevermind!")
+							if("Nevermind!", null)
 								return
 							if("Eat")
 								feed_grabbed_to_self(H, src)
@@ -988,8 +988,8 @@
 		return
 
 	cut_overlays()
-	if(typing) //CHOMPAdd, needed as we don't have priority overlays anymore
-		add_overlay(typing_indicator, TRUE) //CHOMPAdd, needed as we don't have priority overlays anymore
+	add_overlay(active_thinking_indicator)
+	add_overlay(active_typing_indicator)
 	handle_status_indicators() //CHOMPAdd, needed as we don't have priority overlays anymore
 
 	icon			= sprite_datum.sprite_icon

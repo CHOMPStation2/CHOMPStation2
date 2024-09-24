@@ -8,7 +8,7 @@
 	icon_dead = "fennix_dead"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "fennec" // Will protec other fenfens
+	faction = FACTION_FENNEC // Will protec other fenfens
 	maxHealth = 60
 	health = 60
 
@@ -27,7 +27,7 @@
 	say_list_type = /datum/say_list/fennix
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /datum/say_list/fennix
 	speak = list("SQUEL!","SQEL?","Skree.")

@@ -10,7 +10,7 @@ var/global/datum/controller/occupations/job_master
 		//Cache of icons for job info window
 	var/list/job_icons = list()
 
-/datum/controller/occupations/proc/SetupOccupations(var/faction = "Station")
+/datum/controller/occupations/proc/SetupOccupations(var/faction = FACTION_STATION)
 	occupations = list()
 	//var/list/all_jobs = typesof(/datum/job)
 	var/list/all_jobs = list(/datum/job/assistant) | using_map.allowed_jobs
@@ -72,6 +72,10 @@ var/global/datum/controller/occupations/job_master
 			player.mind.role_alt_title = GetPlayerAltTitle(player, rank)
 			unassigned -= player
 			job.current_positions++
+			//CHOMPadd START
+			if(job.camp_protection && round_duration_in_ds < transfer_controller.shift_hard_end - 30 MINUTES)
+				job.register_shift_key(player.client.ckey)
+			//CHOMPadd END
 			return 1
 	Debug("AR has failed, Player: [player], Rank: [rank]")
 	return 0
@@ -136,7 +140,7 @@ var/global/datum/controller/occupations/job_master
 		if(job.is_species_banned(player.client.prefs.species, player.client.prefs.organ_data["brain"]) == TRUE)
 			continue
 
-		if(istype(job, GetJob(USELESS_JOB))) // We don't want to give him assistant, that's boring! //VOREStation Edit - Visitor not Assistant
+		if(istype(job, GetJob(JOB_ALT_VISITOR))) // We don't want to give him assistant, that's boring! //VOREStation Edit - Visitor not Assistant
 			continue
 
 		if(SSjob.is_job_in_department(job.title, DEPARTMENT_COMMAND)) //If you want a command position, select it!
@@ -238,7 +242,7 @@ var/global/datum/controller/occupations/job_master
 	//Holder for Triumvirate is stored in the ticker, this just processes it
 	if(ticker && ticker.triai)
 		for(var/datum/job/A in occupations)
-			if(A.title == "AI")
+			if(A.title == JOB_AI)
 				A.spawn_positions = 3
 				break
 
@@ -262,7 +266,7 @@ var/global/datum/controller/occupations/job_master
 	Debug("AC1, Candidates: [assistant_candidates.len]")
 	for(var/mob/new_player/player in assistant_candidates)
 		Debug("AC1 pass, Player: [player]")
-		AssignRole(player, USELESS_JOB) //VOREStation Edit - Visitor not Assistant
+		AssignRole(player, JOB_ALT_VISITOR) //VOREStation Edit - Visitor not Assistant
 		assistant_candidates -= player
 	Debug("DO, AC1 end")
 
@@ -349,7 +353,7 @@ var/global/datum/controller/occupations/job_master
 	for(var/mob/new_player/player in unassigned)
 		if(player.client.prefs.alternate_option == BE_ASSISTANT)
 			Debug("AC2 Assistant located, Player: [player]")
-			AssignRole(player, USELESS_JOB) //VOREStation Edit - Visitor not Assistant
+			AssignRole(player, JOB_ALT_VISITOR) //VOREStation Edit - Visitor not Assistant
 
 	//For ones returning to lobby
 	for(var/mob/new_player/player in unassigned)
@@ -508,9 +512,9 @@ var/global/datum/controller/occupations/job_master
 			return H
 
 		// TWEET PEEP
-		if(rank == "Site Manager" && announce)
+		if(rank == JOB_SITE_MANAGER && announce)
 			var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP) ? null : sound('sound/misc/boatswain.ogg', volume=20)
-			captain_announcement.Announce("All hands, [alt_title ? alt_title : "Site Manager"] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
+			captain_announcement.Announce("All hands, [alt_title ? alt_title : JOB_SITE_MANAGER] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
 
 		//Deferred item spawning.
 		if(spawn_in_storage && spawn_in_storage.len)
@@ -669,6 +673,7 @@ var/global/datum/controller/occupations/job_master
 	var/datum/spawnpoint/spawnpos
 	var/fail_deadly = FALSE
 	var/obj/belly/vore_spawn_gut
+	var/absorb_choice = FALSE //CHOMPAdd - Ability to start absorbed with vorespawn
 	var/mob/living/prey_to_nomph
 	var/obj/item/item_to_be //CHOMPEdit - Item TF spawning
 	var/mob/living/item_carrier //CHOMPEdit - Capture crystal spawning
@@ -685,7 +690,7 @@ var/global/datum/controller/occupations/job_master
 				if(!isliving(V.mob))
 					continue
 				var/mob/living/M = V.mob
-				if(M.stat == UNCONSCIOUS || M.stat == DEAD || M.client.is_afk(10 MINUTES))
+				if(M.stat == UNCONSCIOUS || M.stat == DEAD || (M.client.is_afk(10 MINUTES) && !M.no_latejoin_vore_warning)) //CHOMPEdit
 					continue
 				if(!M.latejoin_vore)
 					continue
@@ -704,6 +709,10 @@ var/global/datum/controller/occupations/job_master
 				for(var/obj/belly/Y in pred.vore_organs)
 					if(Y.vorespawn_blacklist)
 						continue
+					//CHOMPAdd Start
+					if(LAZYLEN(Y.vorespawn_whitelist) && !(C.ckey in Y.vorespawn_whitelist))
+						continue
+					//CHOMPAdd End
 					available_bellies += Y
 				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
 				if(backup == "Yes")
@@ -711,6 +720,15 @@ var/global/datum/controller/occupations/job_master
 				vore_spawn_gut = input(C, "Choose a Belly.", "Belly Spawnpoint") as null|anything in available_bellies
 				if(!vore_spawn_gut)
 					return
+				//CHOMPAdd Start
+				if(vore_spawn_gut.vorespawn_absorbed & VS_FLAG_ABSORB_YES)
+					absorb_choice = TRUE
+					if(vore_spawn_gut.vorespawn_absorbed & VS_FLAG_ABSORB_PREY)
+						if(alert(C, "Do you want to start absorbed into [pred]'s [vore_spawn_gut]?", "Confirm", "Yes", "No") != "Yes")
+							absorb_choice = FALSE
+					else if(alert(C, "[pred]'s [vore_spawn_gut] will start with you absorbed. Continue?", "Confirm", "Yes", "No") != "Yes")
+						return
+				//CHOMPAdd End
 				to_chat(C, "<b><span class='warning'>[pred] has received your spawn request. Please wait.</span></b>")
 				log_admin("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
 				message_admins("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
@@ -718,11 +736,21 @@ var/global/datum/controller/occupations/job_master
 				var/confirm
 				if(pred.no_latejoin_vore_warning)
 					if(pred.no_latejoin_vore_warning_time > 0)
-						confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), pred.no_latejoin_vore_warning_time SECONDS)
+						//CHOMPEdit Start
+						if(absorb_choice)
+							confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn absorbed as your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), pred.no_latejoin_vore_warning_time SECONDS)
+						else
+							confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), pred.no_latejoin_vore_warning_time SECONDS)
+						//CHOMPEdit End
 					if(!confirm)
 						confirm = "Yes"
 				else
-					confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+					//CHOMPEdit Start
+					if(absorb_choice)
+						confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn absorbed as your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+					else
+						confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+					//CHOMPEdit End
 				if(confirm != "Yes")
 					to_chat(C, "<span class='warning'>[pred] has declined your spawn request.</span>")
 					var/message = sanitizeSafe(input(pred,"Do you want to leave them a message?")as text|null)
@@ -745,7 +773,8 @@ var/global/datum/controller/occupations/job_master
 				log_admin("[key_name(C)] has vore spawned into [key_name(pred)]")
 				message_admins("[key_name(C)] has vore spawned into [key_name(pred)]")
 				to_chat(C, "<span class='notice'>You have been spawned via vore. You are free to roleplay how you got there as you please, such as teleportation or having had already been there.</span>")
-				to_chat(pred, "<span class='notice'>Your prey has spawned via vore. You are free to roleplay this how you please, such as teleportation or having had already been there.</span>")
+				if(vore_spawn_gut.entrance_logs) //CHOMPEdit
+					to_chat(pred, "<span class='notice'>Your prey has spawned via vore. You are free to roleplay this how you please, such as teleportation or having had already been there.</span>")
 			else
 				to_chat(C, "<span class='warning'>No predators were available to accept you.</span>")
 				return
@@ -757,7 +786,7 @@ var/global/datum/controller/occupations/job_master
 				if(!isliving(V.mob))
 					continue
 				var/mob/living/M = V.mob
-				if(M.stat == UNCONSCIOUS || M.stat == DEAD || M.client.is_afk(10 MINUTES))
+				if(M.stat == UNCONSCIOUS || M.stat == DEAD || (M.client.is_afk(10 MINUTES) && !M.no_latejoin_prey_warning)) //CHOMPEdit
 					continue
 				if(!M.latejoin_prey)
 					continue
@@ -779,6 +808,10 @@ var/global/datum/controller/occupations/job_master
 				vore_spawn_gut = input(C, "Choose your Belly.", "Belly Spawnpoint") as null|anything in available_bellies
 				if(!vore_spawn_gut)
 					return
+				//CHOMPAdd Start
+				if(alert(C, "Do you want to instantly absorb them?", "Confirm", "Yes", "No") == "Yes")
+					absorb_choice = TRUE
+				//CHOMPAdd End
 				to_chat(C, "<b><span class='warning'>[prey] has received your spawn request. Please wait.</span></b>")
 				log_admin("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
 				message_admins("[key_name(C)] has requested to pred spawn onto [key_name(prey)]")
@@ -786,11 +819,21 @@ var/global/datum/controller/occupations/job_master
 				var/confirm
 				if(prey.no_latejoin_prey_warning)
 					if(prey.no_latejoin_prey_warning_time > 0)
-						confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), prey.no_latejoin_prey_warning_time SECONDS)
+						//CHOMPEdit Start
+						if(absorb_choice)
+							confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore and instantly absorb you with their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), prey.no_latejoin_prey_warning_time SECONDS)
+						else
+							confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"), prey.no_latejoin_prey_warning_time SECONDS)
+						//CHOMPEdit End
 					if(!confirm)
 						confirm = "Yes"
 				else
-					confirm = alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+					//CHOMPEdit Start
+					if(absorb_choice)
+						confirm = alert(prey, "[C.prefs.real_name] is attempting to televore and instantly absorb you with their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+					else
+						confirm = alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+					//CHOMPEdit End
 				if(confirm != "Yes")
 					to_chat(C, "<span class='warning'>[prey] has declined your spawn request.</span>")
 					var/message = sanitizeSafe(input(prey,"Do you want to leave them a message?")as text|null)
@@ -927,6 +970,7 @@ var/global/datum/controller/occupations/job_master
 	. = list("turf","msg", "voreny", "prey", "itemtf", "vorgans", "carrier") //CHOMPEdit - Item TF spawnpoints, spawn as mob
 	if(vore_spawn_gut)
 		.["voreny"] = vore_spawn_gut
+		.["absorb"] = absorb_choice //CHOMPAdd
 	if(prey_to_nomph)
 		.["prey"] = prey_to_nomph	//We pass this on later to reverse the vorespawn in new_player.dm
 	//CHOMPEdit Start - Item TF spawnpoints

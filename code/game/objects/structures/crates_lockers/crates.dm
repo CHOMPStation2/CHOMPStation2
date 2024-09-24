@@ -69,6 +69,14 @@
 	update_icon()
 	return 1
 
+/obj/structure/closet/crate/MouseDrop_T(mob/target, mob/user)
+	// Adds climbing from drag, You can't put yourself in crates with a drag anyway... Nore anyone else actually.
+	var/mob/living/H = user
+	if(istype(H) && can_climb(H) && target == user)
+		do_climb(target)
+	else
+		return ..()
+
 /obj/structure/closet/crate/verb/rotate_clockwise()
 	set name = "Rotate Crate Clockwise"
 	set category = "Object"
@@ -96,6 +104,8 @@
 		if(isrobot(user))
 			return
 		if(W.loc != user) // This should stop mounted modules ending up outside the module.
+			return
+		if(istype(W, /obj/item/weapon/grab)) //VOREstation edit: we don't want to drop grabs into the crate
 			return
 		user.drop_item()
 		if(W)
@@ -443,6 +453,18 @@
 /obj/structure/closet/crate/zenghu
 	desc = "A sterile crate marked with the logo of Zeng-Hu Pharmaceuticals."
 	closet_appearance = /decl/closet_appearance/crate/zenghu
+
+/obj/structure/closet/crate/coyote_salvage
+	desc = "A supply crate marked with Coyote Salvage Corp colours."
+	closet_appearance = /decl/closet_appearance/crate/coyotesalvage
+
+/obj/structure/closet/crate/nukies
+	desc = "A luridly-coloured supply crate with Nukies! branding. Is it legal to have this here?"
+	closet_appearance = /decl/closet_appearance/crate/nukies
+
+/obj/structure/closet/crate/desatti
+	desc = "A strikingly-coloured supply crate with Desatti Catering branding."
+	closet_appearance = /decl/closet_appearance/crate/desatti
 
 // Brands/subsidiaries
 

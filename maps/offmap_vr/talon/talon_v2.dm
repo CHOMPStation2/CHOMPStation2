@@ -11,7 +11,7 @@ var/global/list/latejoin_talon = list()
 
 /datum/spawnpoint/talon
 	display_name = "ITV Talon Cryo"
-	restrict_job = list("Talon Captain", "Talon Pilot", "Talon Engineer", "Talon Doctor", "Talon Guard", "Talon Miner")
+	restrict_job = list(JOB_TALON_CAPTAIN, JOB_TALON_PILOT, JOB_TALON_ENGINEER, JOB_TALON_DOCTOR, JOB_TALON_GUARD, JOB_TALON_MINER)
 	msg = "has come out of cryostasis"
 	announce_channel = "Talon"
 
@@ -898,7 +898,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 				/obj/structure/closet/crate/xion //XION SUIT
 			),
 			prob(10);list(
-				/obj/random/firstaid,
+				/obj/random/tetheraid,
 				/obj/random/medical,
 				/obj/random/medical,
 				/obj/random/medical,
@@ -907,10 +907,10 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 				/obj/structure/closet/crate/freezer/veymed //VM GRABBAG
 			),
 			prob(10);list(
-				/obj/random/firstaid,
-				/obj/random/firstaid,
-				/obj/random/firstaid,
-				/obj/random/firstaid,
+				/obj/random/tetheraid,
+				/obj/random/tetheraid,
+				/obj/random/tetheraid,
+				/obj/random/tetheraid,
 				/obj/random/unidentified_medicine/fresh_medicine,
 				/obj/random/unidentified_medicine/fresh_medicine,
 				/obj/structure/closet/crate/freezer/veymed //VM FAKS
@@ -931,7 +931,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 				/obj/structure/closet/crate/xion //XION SUPPLY
 			),
 			prob(10);list(
-				/obj/random/firstaid,
+				/obj/random/tetheraid,
 				/obj/random/medical,
 				/obj/random/medical/pillbottle,
 				/obj/random/medical/pillbottle,

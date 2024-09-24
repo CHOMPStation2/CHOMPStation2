@@ -9,7 +9,7 @@
 	icon_rest = "wah_rest"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "redpanda" //stop naming stuff vaguely
+	faction = FACTION_REDPANDA //stop naming stuff vaguely
 	maxHealth = 30
 	health = 30
 
@@ -28,7 +28,7 @@
 	say_list_type = /datum/say_list/redpanda
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 // Activate Noms!
 /mob/living/simple_mob/vore/redpanda

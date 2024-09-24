@@ -109,6 +109,7 @@
 			prefs.size_multiplier = H.size_multiplier
 
 	prefs.save_character()
+	prefs.save_preferences()
 
 // Saves mob's current coloration state to prefs
 // This basically needs to be the reverse of /datum/category_item/player_setup_item/general/body/copy_to_mob() ~Leshana
@@ -133,15 +134,41 @@
 	prefs.f_style	= character.f_style
 	prefs.b_type	= character.b_type
 
-// Saves mob's current custom species, ears, and tail state to prefs
+// Saves mob's current custom species, ears, tail, wings and digitigrade legs state to prefs
 // This basically needs to be the reverse of /datum/category_item/player_setup_item/vore/ears/copy_to_mob() ~Leshana
 /proc/apply_ears_to_prefs(var/mob/living/carbon/human/character, var/datum/preferences/prefs)
-	if(character.ear_style) prefs.ear_style = character.ear_style.type
-	if(character.tail_style) prefs.tail_style = character.tail_style.type
+	if(character.ear_style) prefs.ear_style = character.ear_style.name
+	if(character.tail_style) prefs.tail_style = character.tail_style.name
+	if(character.wing_style) prefs.wing_style = character.wing_style.name
+	prefs.r_ears			= character.r_ears
+	prefs.g_ears			= character.g_ears
+	prefs.b_ears			= character.b_ears
+	prefs.r_ears2			= character.r_ears2
+	prefs.g_ears2			= character.g_ears2
+	prefs.b_ears2			= character.b_ears2
+	prefs.r_ears3			= character.r_ears3
+	prefs.g_ears3			= character.g_ears3
+	prefs.b_ears3			= character.b_ears3
 	prefs.r_tail			= character.r_tail
 	prefs.b_tail			= character.b_tail
 	prefs.g_tail			= character.g_tail
+	prefs.r_tail2			= character.r_tail2
+	prefs.b_tail2			= character.b_tail2
+	prefs.g_tail2			= character.g_tail2
+	prefs.r_tail3			= character.r_tail3
+	prefs.b_tail3			= character.b_tail3
+	prefs.g_tail3			= character.g_tail3
+	prefs.r_wing			= character.r_wing
+	prefs.b_wing			= character.b_wing
+	prefs.g_wing			= character.g_wing
+	prefs.r_wing2			= character.r_wing2
+	prefs.b_wing2			= character.b_wing2
+	prefs.g_wing2			= character.g_wing2
+	prefs.r_wing3			= character.r_wing3
+	prefs.b_wing3			= character.b_wing3
+	prefs.g_wing3			= character.g_wing3
 	prefs.custom_species	= character.custom_species
+	prefs.digitigrade		= character.digitigrade
 
 // Saves mob's current organ state to prefs.
 // This basically needs to be the reverse of /datum/category_item/player_setup_item/general/body/copy_to_mob() ~Leshana
@@ -207,16 +234,9 @@
 * towards future shenanigans such as upgradable NIFs or different types or things of that nature,
 * without invoking the need for a bunch of different save file variables.
 */
-/proc/persist_nif_data(var/mob/living/carbon/human/H,var/datum/preferences/prefs)
+/proc/persist_nif_data(mob/living/carbon/human/H)
 	if(!istype(H))
 		stack_trace("Persist (NIF): Given a nonhuman: [H]")
-		return
-
-	if(!prefs)
-		prefs = prep_for_persist(H)
-
-	if(!prefs)
-		warning("Persist (NIF): [H] has no prefs datum, skipping")
 		return
 
 	var/obj/item/device/nif/nif = H.nif
@@ -224,23 +244,39 @@
 	if(nif && H.ckey != nif.owner_key)
 		return
 
+	var/slot = H?.mind?.loaded_from_slot
+	if(isnull(slot))
+		warning("Persist (NIF): [H] has no mind slot, skipping")
+		return
+
+	var/datum/json_savefile/savefile = new /datum/json_savefile(nif_savefile_path(H.ckey))
+	var/list/save_data = savefile.get_entry("character[slot]", list())
+
 	//If they have one, and if it's not installing without an owner, because
 	//Someone who joins and immediately leaves again (wrong job choice, maybe)
 	//should keep it even though it was probably doing the quick-calibrate, and their
 	//owner will have been pre-set during the constructor.
+	var/nif_path
+	var/nif_durability
+	var/nif_savedata
 	if(nif && !(nif.stat == NIF_INSTALLING && !nif.owner))
-		prefs.nif_path = nif.type
-		prefs.nif_durability = nif.durability
-		prefs.nif_savedata = nif.save_data.Copy()
+		nif_path = nif.type
+		nif_durability = nif.durability
+		nif_savedata = nif.save_data.Copy()
 	else
-		prefs.nif_path = null
-		prefs.nif_durability = null
-		prefs.nif_savedata = null
+		nif_path = null
+		nif_durability = null
+		nif_savedata = null
 
-	var/datum/category_group/player_setup_category/vore_cat = prefs.player_setup.categories_by_name["VORE"]
-	var/datum/category_item/player_setup_item/vore/nif/nif_prefs = vore_cat.items_by_name["NIF Data"]
+	save_data["nif_path"] = nif_path
+	save_data["nif_durability"] = nif_durability
+	save_data["nif_savedata"] = nif_savedata
 
-	var/savefile/S = new /savefile(prefs.path)
-	if(!S) warning("Persist (NIF): Couldn't load NIF save savefile? [prefs.real_name]")
-	S.cd = "/character[prefs.default_slot]"
-	nif_prefs.save_character(S)
+	savefile.set_entry("character[slot]", save_data)
+	savefile.save()
+
+	// If they still have the same character loaded, update prefs
+	if(H?.client?.prefs?.default_slot == slot)
+		var/datum/category_group/player_setup_category/vore_cat = H.client.prefs.player_setup.categories_by_name["VORE"]
+		var/datum/category_item/player_setup_item/vore/nif/nif_prefs = vore_cat.items_by_name["NIF Data"]
+		nif_prefs.load_character()

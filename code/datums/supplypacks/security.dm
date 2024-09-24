@@ -31,6 +31,7 @@
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Armor crate"
+	access = access_armory
 
 /datum/supply_pack/security/carriersblack
 	name = "Armor - Black modular armor"
@@ -545,7 +546,7 @@
 	access = access_brig
 
 /datum/supply_pack/security/wardengear
-	name = "Gear - Warden equipment"
+	name = "Gear - " + JOB_WARDEN + " equipment"
 	contains = list(
 			/obj/item/clothing/suit/storage/vest/warden,
 			/obj/item/clothing/under/rank/warden,
@@ -570,11 +571,11 @@
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
-	containername = "Warden equipment"
+	containername = JOB_WARDEN + " equipment"
 	access = access_armory
 
 /datum/supply_pack/security/headofsecgear
-	name = "Gear - Head of security equipment"
+	name = "Gear - " + JOB_HEAD_OF_SECURITY + " equipment"
 	contains = list(
 			/obj/item/clothing/head/helmet/HoS,
 			/obj/item/clothing/suit/storage/vest/hos,
@@ -597,7 +598,7 @@
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
-	containername = "Head of security equipment"
+	containername = JOB_HEAD_OF_SECURITY + " equipment"
 	access = access_hos
 
 /datum/supply_pack/security/securityclothing
@@ -685,3 +686,58 @@
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
 	containername = "Morale Posters"
 	access = access_maint_tunnels
+
+//CHOMPEdit Start, enable this
+/datum/supply_pack/security/guardbeast
+	name = "VARMAcorp autoNOMous security solution"
+	cost = 150
+	containertype = /obj/structure/largecrate/animal/guardbeast
+	containername = "VARMAcorp autoNOMous security solution crate"
+	access = list(
+			access_security,
+			access_xenobiology)
+	one_access = TRUE
+
+/datum/supply_pack/security/guardmutant
+	name = "VARMAcorp autoNOMous security solution for hostile environments"
+	cost = 250
+	containertype = /obj/structure/largecrate/animal/guardmutant
+	containername = "VARMAcorp autoNOMous security phoron-proof solution crate"
+	access = list(
+			access_security,
+			access_xenobiology)
+	one_access = TRUE
+//CHOMPEdit End
+
+/datum/supply_pack/security/biosuit
+	contains = list(
+			/obj/item/clothing/head/bio_hood/security = 3,
+			/obj/item/clothing/under/rank/security = 3,
+			/obj/item/clothing/suit/bio_suit/security = 3,
+			/obj/item/clothing/shoes/white = 3,
+			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: Implementation of clear gas masks
+			/obj/item/weapon/tank/oxygen = 3,
+			/obj/item/clothing/gloves/sterile/latex,
+			/obj/item/weapon/storage/box/gloves
+			)
+	cost = 40
+
+/datum/supply_pack/security/trackingimplant
+	name = "Implants - Tracking"
+	contains = list(
+			/obj/item/weapon/storage/box/trackimp = 1
+			)
+	cost = 25
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Tracking implants"
+	access = access_security
+
+/datum/supply_pack/security/chemicalimplant
+	name = "Implants - Chemical"
+	contains = list(
+			/obj/item/weapon/storage/box/chemimp = 1
+			)
+	cost = 25
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Chemical implants"
+	access = access_security

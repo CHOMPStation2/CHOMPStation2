@@ -205,6 +205,11 @@
 		occupantData["bodyTempF"] = (((H.bodytemperature-T0C) * 1.8) + 32)
 
 		occupantData["hasBorer"] = H.has_brain_worms()
+		occupantData["colourblind"] = null
+		for(var/datum/modifier/M in H.modifiers)
+			if(!isnull(M.wire_colors_replace))
+				occupantData["colourblind"] = LAZYLEN(M.wire_colors_replace)
+				break
 
 		var/bloodData[0]
 		if(H.vessel)
@@ -329,6 +334,7 @@
 
 		occupantData["blind"] = (H.sdisabilities & BLIND)
 		occupantData["nearsighted"] = (H.disabilities & NEARSIGHTED)
+		occupantData["husked"] = (HUSK in H.mutations) // VOREstation edit
 		occupantData = attempt_vr(src, "get_occupant_data_vr", list(occupantData, H)) //VOREStation Insert
 	data["occupant"] = occupantData
 
@@ -532,6 +538,8 @@
 			dat += "<font color='red'>Cataracts detected.</font><BR>"
 		if(occupant.disabilities & NEARSIGHTED)
 			dat += "<font color='red'>Retinal misalignment detected.</font><BR>"
+		if(HUSK in occupant.mutations) // VOREstation edit
+			dat += "<font color='red'>Anatomical structure lost, resuscitation not possible!</font><BR>"
 	else
 		dat += "\The [src] is empty."
 
