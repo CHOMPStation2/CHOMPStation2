@@ -549,7 +549,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"weight_message_visible" = host.weight_message_visible,
 		"weight_messages" = host.weight_messages,
 		"eating_privacy_global" = host.eating_privacy_global,
-<<<<<<< HEAD
+		"allow_mimicry" = host.allow_mimicry,
 		//CHOMPEdit start, vore sprites
 		"belly_rub_target" = host.belly_rub_target,
 		"vore_sprite_color" = host.vore_sprite_color,
@@ -595,9 +595,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"minimum_size" = host.has_large_resize_bounds() ? RESIZE_MINIMUM_DORMS : RESIZE_MINIMUM,
 		"maximum_size" = host.has_large_resize_bounds() ? RESIZE_MAXIMUM_DORMS : RESIZE_MAXIMUM,
 		"resize_cost" = VORE_RESIZE_COST
-=======
-		"allow_mimicry" = host.allow_mimicry,
->>>>>>> 0ce5f9ef63... Merge pull request #16326 from ShadowLarkens/scanlock
 	)
 	//CHOMPAdd End, Soulcatcher
 

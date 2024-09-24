@@ -427,8 +427,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"weight_message_visible"	= weight_message_visible,
 			"weight_messages"			= weight_messages,
 			"eating_privacy_global"		= eating_privacy_global,
-<<<<<<< HEAD
 			"vore_sprite_color"			= vore_sprite_color,
+			"allow_mimicry"				= allow_mimicry,
 			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
 			"strip_pref" 			= strip_pref, //CHOMPEdit
 			"no_latejoin_vore_warning"		= no_latejoin_vore_warning, //CHOMPEdit
@@ -440,10 +440,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"belly_rub_target" = belly_rub_target, //CHOMPEdit
 			"soulcatcher_pref_flags" = soulcatcher_pref_flags, //CHOMPAdd
 			"soulcatcher_prefs"			= soulcatcher_prefs //CHOMPAdd
-=======
-			"allow_mimicry"				= allow_mimicry,
-			"vore_sprite_color"		= vore_sprite_color,
->>>>>>> 0ce5f9ef63... Merge pull request #16326 from ShadowLarkens/scanlock
 		)
 
 	//List to JSON

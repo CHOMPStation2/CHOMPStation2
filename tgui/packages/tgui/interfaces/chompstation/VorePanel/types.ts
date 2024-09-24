@@ -283,6 +283,7 @@ export type prefData = {
   weight_message_visible: BooleanLike;
   weight_messages: string[];
   eating_privacy_global: BooleanLike;
+  allow_mimicry: BooleanLike;
   belly_rub_target: string | null;
   vore_sprite_color: { stomach: string; 'taur belly': string };
   vore_sprite_multiply: { stomach: BooleanLike; 'taur belly': BooleanLike };
@@ -347,6 +348,7 @@ export type localPrefs = {
   examine_weight: preferenceData;
   strippref: preferenceData;
   eating_privacy_global: preferenceData;
+  allow_mimicry: preferenceData;
   autotransferable: preferenceData;
   liquid_receive: preferenceData;
   liquid_give: preferenceData;
