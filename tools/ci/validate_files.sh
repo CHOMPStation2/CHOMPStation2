@@ -99,7 +99,7 @@ if [ $retVal -ne 0 ]; then
 fi
 
 part "html tag matching"
-Checking for missed tags
+#Checking for missed tags
 python tools/TagMatcher/tag-matcher.py ../..
 retVal=$?
 if [ $retVal -ne 0 ]; then
