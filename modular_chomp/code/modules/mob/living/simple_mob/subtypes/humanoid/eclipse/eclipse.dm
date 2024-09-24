@@ -14,7 +14,7 @@
 	icon_gib = "syndicate_gib"
 	taser_kill = 0
 
-	faction = "eclipse"
+	faction = FACTION_ECLIPSE
 	movement_cooldown = 0
 
 	status_flags = 0

@@ -306,7 +306,7 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/quartz,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/painite,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/builder)
-	faction = "mineral ant"
+	faction = FACTION_TYR
 
 /obj/effect/ant_structure/webbarrier
 	name = "weblike barrier"

@@ -10,7 +10,7 @@
 
 	icon = 'modular_chomp/icons/mob/tyr.dmi'
 
-	faction = "tyr"
+	faction = FACTION_TYR
 
 	can_be_drop_prey = FALSE
 	can_be_drop_pred = TRUE

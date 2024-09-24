@@ -1,7 +1,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse
 	health = 875
 	maxHealth = 875
-	faction = "eclipse"
+	faction = FACTION_ECLIPSE
 	icon = 'modular_chomp/icons/mob/eclipse.dmi'
 	has_repair_droid = TRUE
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases
