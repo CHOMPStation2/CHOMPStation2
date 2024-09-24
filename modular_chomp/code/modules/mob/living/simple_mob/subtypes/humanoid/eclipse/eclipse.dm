@@ -900,7 +900,7 @@
 	var/D = src
 	var/mob/living/carbon/human/H = A
 	H.throw_at(D, 2, 4) // Just yoinked.
-	visible_message((span_danger("The [src]'s armor glows silver, pulling \[A] closer!</span>")))
+	visible_message(span_danger("The [src]'s armor glows silver, pulling \[A] closer!</span>"))
 
 //The Precursor intative big folks
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit
