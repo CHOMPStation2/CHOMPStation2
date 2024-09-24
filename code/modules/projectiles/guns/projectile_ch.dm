@@ -204,7 +204,7 @@
 		if(istype(H))
 			if(!H.gloves)
 				H.gunshot_residue = chambered.caliber
-			else
+			else if (istype(H.gloves, /obj/item/clothing))
 				var/obj/item/clothing/G = H.gloves
 				G.gunshot_residue = chambered.caliber
 
