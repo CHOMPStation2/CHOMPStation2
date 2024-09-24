@@ -2,7 +2,7 @@ name: Update TGS DMAPI
 
 on:
   schedule:
-  - cron: "0 0 * * *"
+  - cron: "0 0 1 */2 *"
   workflow_dispatch:
 
 
@@ -24,7 +24,7 @@ jobs:
       uses: tgstation/tgs-dmapi-updater@v2
       id: dmapi-update
       with:
-        header-path: 'code/__DEFINES/tgs.dm'
+        header-path: 'code/__defines/tgs.dm'
         library-path: 'code/modules/tgs'
 
     - name: Commit and Push
