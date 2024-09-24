@@ -24,7 +24,7 @@ jobs:
         run: |
           chmod -R +x ./tools/ci
       - name: Restore SpacemanDMM cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/SpacemanDMM
           key: ${{ runner.os }}-spacemandmm
@@ -66,6 +66,7 @@ jobs:
         run: |
           pip3 install setuptools
           bash tools/ci/install_build_deps.sh
+          bash tools/ci/install_ripgrep.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
           tools/bootstrap/python -c ''
       - name: Run Tests
