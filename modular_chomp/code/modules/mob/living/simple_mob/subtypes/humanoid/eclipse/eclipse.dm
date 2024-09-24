@@ -804,7 +804,7 @@
 	projectiletype = /obj/item/projectile/energy/electrode
 
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A)
-	visible_message(span("alien","\The [src] pulls out a flash!"))
+	visible_message(span_critical("\The [src] pulls out a flash!"))
 	if(isliving(A))
 		var/mob/living/L = A
 		if(iscarbon(L))
@@ -817,7 +817,7 @@
 						var/mob/living/carbon/human/H = C
 						flash_strength *= H.species.flash_mod
 						if(flash_strength > 0)
-							to_chat(H, span("alien","You are disoriented by \the [src]!"))
+							to_chat(H, span_critical("You are disoriented by \the [src]!"))
 							H.eye_blurry = max(H.eye_blurry, flash_strength + 5)
 							H.flash_eyes()
 							H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0, "Photon burns")
@@ -827,7 +827,7 @@
 				var/flashfail = FALSE
 				var/mob/living/silicon/robot/R = L
 				if(!flashfail)
-					to_chat(R, span("alien","Your optics are scrambled by \the [src]!"))
+					to_chat(R, span_critical("Your optics are scrambled by \the [src]!"))
 					R.Confuse(10)
 					R.flash_eyes()
 
@@ -849,7 +849,7 @@
 	special_attack_max_range = 7
 
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A) //I am bringing back the netgun attack. 4 seconds
-	visible_message(span("warning", "\The [src] begins to create an energy net!"))
+	visible_message(span_warning("\The [src] begins to create an energy net!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
 	sleep(40)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
@@ -878,7 +878,7 @@
 	H.drop_item()
 	if(I)
 		I.throw_at(src, 2, 4) // Just yoinked.
-		src.visible_message("<span class='danger'>The [name] heaves, pulling \the [A]'s weapon from their hands!</span>")
+		src.visible_message(span_danger("The [name] heaves, pulling \the [A]'s weapon from their hands!</span>"))
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter
 	name = "Lunar Eclipse Experimenter"
@@ -900,7 +900,7 @@
 	var/D = src
 	var/mob/living/carbon/human/H = A
 	H.throw_at(D, 2, 4) // Just yoinked.
-	visible_message("<span class='danger'>The [src]'s armor glows silver, pulling \[A] closer!</span>")
+	visible_message((span_danger("The [src]'s armor glows silver, pulling \[A] closer!</span>"))
 
 //The Precursor intative big folks
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit
@@ -926,8 +926,8 @@
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 		else
-			to_chat(L, span("warning", "\The [src] hits you with incredible force, but you remain in place."))
-			visible_message(span("danger", "\The [src] hits \the [L] with incredible force, to no visible effect!"))
+			to_chat(L, span_warning("\The [src] hits you with incredible force, but you remain in place."))
+			visible_message(span_danger("\The [src] hits \the [L] with incredible force, to no visible effect!"))
 			playsound(src, "punch", 50, 1)
 
 
@@ -947,7 +947,7 @@
 	rad_power = 25
 
 /mob/living/simple_mob/humanoid/eclipse/solar/nuclear/do_special_attack(atom/A)
-	visible_message(span("warning", "\The [src] begins to glow green!"))
+	visible_message(span_warning("\The [src] begins to glow green!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
 	sleep(20)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
@@ -1006,12 +1006,12 @@
 	s2.set_up(5, 1, target_turf)
 
 
-	T.visible_message(span("notice", "\The [src] vanishes!"))
+	T.visible_message(span_warning("\The [src] vanishes!"))
 	s1.start()
 
 	forceMove(target_turf)
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
 	target_turf.visible_message(span("warning", "\The [src] appears!"))
 	s2.start()
@@ -1027,7 +1027,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
 	var/mob/living/L = A
-	visible_message(span("danger","\The [src] begins to mess with a wrist mounted device."))
+	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
 	sleep(20)
 	if(isliving(A))
 		if(iscarbon(L))
@@ -1037,5 +1037,5 @@
 				L.Weaken(10)
 	else if(istype(A, /obj/mecha))
 		var/obj/mecha/M = A
-		visible_message(span("critical","\The [M] is remotly hacked and ejects [M.occupant]!"))
+		visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
 		M.go_out()
