@@ -34089,10 +34089,6 @@
 	pixel_y = -27;
 	name = "1S-extinguisher cabinet"
 	},
-/obj/machinery/chemical_dispenser/bar_soft/full{
-	dir = 8;
-	pixel_x = 13
-	},
 /obj/structure/table/marble,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
