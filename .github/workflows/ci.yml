@@ -66,6 +66,7 @@ jobs:
         run: |
           pip3 install setuptools
           bash tools/ci/install_build_deps.sh
+          bash tools/ci/install_ripgrep.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
           tools/bootstrap/python -c ''
       - name: Run Tests
