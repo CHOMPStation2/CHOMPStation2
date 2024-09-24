@@ -79539,26 +79539,6 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Security_Substation)
-"mma" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows/yellow,
-/obj/effect/floor_decal/industrial/arrows/yellow{
-	dir = 1
-	},
-/obj/machinery/door/airlock/maintenance/command{
-	req_access = list(30);
-	name = "RD's Office";
-	id_tag = "Science Lockdown"
-	},
-/obj/machinery/door/blast/regular/open{
-	layer = 3.5;
-	id = "Star Lockdown";
-	name = "Lockdown Gate";
-	desc = "A heavily reinforced gate, sector lockdown!";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Science/RD_Office)
 "mmn" = (
 /obj/structure/railing/grey{
 	color = "yellow";
@@ -173687,7 +173667,7 @@ iKJ
 cGJ
 cGJ
 yiq
-mma
+cBg
 okZ
 iJz
 usD
