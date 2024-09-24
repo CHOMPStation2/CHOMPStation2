@@ -10672,6 +10672,14 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/light/small,
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Outpost Reactor Power Input";
+	name_tag = "Outpost Reactor Input"
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/storage)
 "tG" = (
@@ -25139,8 +25147,8 @@
 /area/surface/outside/plains/normal)
 "UQ" = (
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Outpost Reactor Power";
-	name_tag = "Outpost Reactor Power"
+	name = "Powernet Sensor - Outpost Reactor Power Output";
+	name_tag = "Outpost Reactor Power Output"
 	},
 /obj/structure/cable/yellow{
 	d2 = 8;

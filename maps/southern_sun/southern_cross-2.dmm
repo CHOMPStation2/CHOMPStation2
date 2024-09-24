@@ -2087,12 +2087,12 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Aft_2_Deck_Airlock_Access)
 "aee" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Science/Toxins_Mixing_Room)
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor2)
 "aeg" = (
 /obj/machinery/papershredder,
 /obj/machinery/ai_status_display{
@@ -13386,12 +13386,16 @@
 	},
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "aNw" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 8
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 1
 	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor2)
+/obj/effect/floor_decal/corner/lightorange/border{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Engineering/Canister_Storage)
 "aNB" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -18698,16 +18702,16 @@
 /turf/simulated/floor/carpet/blue,
 /area/SouthernCrossV2/Domicile/Midnight_Bar)
 "bee" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/effect/floor_decal/borderfloorblack{
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightorange/border{
-	dir = 1
-	},
-/obj/machinery/portable_atmospherics/canister/phoron,
-/turf/simulated/floor/tiled/dark,
-/area/SouthernCrossV2/Engineering/Canister_Storage)
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck2_Engineering_PortChamber2)
 "bei" = (
 /turf/simulated/floor/glass,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
@@ -53373,6 +53377,17 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor1)
+"ftQ" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck2_Security_AftPortCorridor2)
 "fub" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/door/firedoor/border_only,
@@ -61005,16 +61020,12 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Science/Locker_Room)
 "hmv" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 1
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
 	},
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 8
-	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck2_Security_AftPortCorridor2)
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Science/Toxins_Mixing_Room)
 "hmF" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -65356,13 +65367,9 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
+	d1 = 1;
 	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/green,
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - Engineering Subgrid";
-	name_tag = "Engineering Subgrid"
+	icon_state = "1-4"
 	},
 /obj/item/weapon/paper{
 	info = "The big blue box recently installed in here is a 'grid checker' which will shut off the power if a dangerous power spike from the engine erupts into the powernet.  Shutting everything down protects everything from electrical damage, however the outages can be disruptive to colony operations, so it is designed to restore power after a somewhat significant delay, up to ten minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
@@ -86485,19 +86492,18 @@
 	name_tag = "Security Subgrid"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "0-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Security_Substation)
 "okt" = (
@@ -87373,16 +87379,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Star_Corridor)
-"ozh" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 4
-	},
-/obj/structure/railing/grey{
-	color = "yellow"
-	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck2_Engineering_PortChamber2)
 "ozj" = (
 /obj/effect/floor_decal/chapel{
 	dir = 4
@@ -105569,8 +105565,7 @@
 	dir = 4
 	},
 /obj/structure/railing/grey{
-	color = "yellow";
-	dir = 1
+	color = "yellow"
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Engineering_PortChamber2)
@@ -131899,9 +131894,9 @@ cHe
 cAC
 jfz
 voG
-ozh
-eXs
 tls
+eXs
+bee
 tTp
 vfn
 vfn
@@ -134193,7 +134188,7 @@ aaa
 aaa
 aaa
 dEZ
-bee
+aNw
 ctS
 bGt
 btr
@@ -146833,7 +146828,7 @@ bwW
 bBx
 bJd
 hPJ
-hmv
+ftQ
 bUo
 ame
 ctj
@@ -157623,7 +157618,7 @@ ohC
 ohC
 uli
 apY
-aNw
+aee
 brA
 brA
 acy
@@ -171865,8 +171860,8 @@ gQv
 bMW
 blw
 gYm
-aee
-aee
+hmv
+hmv
 mgI
 rmc
 nIW
@@ -173159,7 +173154,7 @@ wBK
 cDw
 xIB
 vav
-aee
+hmv
 dkb
 cxe
 rMw

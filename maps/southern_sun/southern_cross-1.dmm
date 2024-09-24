@@ -43106,11 +43106,11 @@
 	name_tag = "Exploration Subgrid"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
 	d2 = 2;
-	icon_state = "1-2"
+	icon_state = "0-2"
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor2)
 "naS" = (
