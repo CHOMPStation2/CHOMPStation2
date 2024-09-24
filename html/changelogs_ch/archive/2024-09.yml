@@ -154,3 +154,90 @@
   tacoguy7765093:
   - qol: Zorgoia simplemobs now can have their style exported and imported for later!
   - qol: Zorgoia simplemobs now spawn with random colors and markings.
+2024-09-24:
+  Missile597:
+  - rscadd: Added railings to many areas in maintenance which were missing them causing
+      easy fall risk, especially around ladders. Maints is now 90% more Space OSHA
+      approved!
+  - rscadd: Added lattices above the dock areas where maints trash exists. Hopefully
+      this should keep the mice and raccoons safe.
+  - rscadd: Gave the AI a light switch so they don't have to live in a dark basement
+  - rscdel: Deleted the signs on deck 3 for a transit tube that did not exist, and
+      filled in the missing emergency shutter
+  - rscdel: Deleted the APC in the abandoned chapel. Area doesn't need power anyway
+      and if someone wants to power it they can build their own APC. It wasn't wired
+      up anyway.
+  - rscdel: Removed the AI entertainment monitors. AI doesn't like TV anyway and they
+      were blocking intercoms
+  - rscdel: Removed the nitrous anaesthetic from Robotics
+  - qol: The command office request consoles are now allowed to make station announcements
+  - qol: Gave the kitchen their booze back
+  - qol: Gives engineering a light replacer tool
+  - qol: Added plating under the catwalks on the tesla platform so borgs can go for
+      a space walk
+  - bugfix: Fixed a couple of bypass breakers with wires underneath still, bypassing
+      the bypass.
+  - bugfix: Fixed a disposals bin above the botanical kitchen that wasn't connected
+      to the network
+  - bugfix: Added a missing connector for the airlock tanks on the secondary engine
+      airlock
+  - bugfix: Replaced airless plating in toxins lab with some breathable air.
+  - bugfix: Fixed the air alarm naming conventions
+  - bugfix: Hopefully fixed persistent storages (though can't test this). Locations
+      of storages are up for debate but given the location of the qpad, I think cargo
+      could benefit from a transit tube in future updates
+  - bugfix: 'Fixed the terrain below medical that was having shields generated on
+      it (lost the Sif look for now)
+
+      fix; Fixed the AI chamber wiring being back to front and causing the AI to die
+      at round start'
+  - bugfix: Fixed some powernet sensors that weren't connected to the subgrids properly
+      and added a distinction for outpost R-UST Input and Output grids. Deleted a
+      doubled up engineering sensor.
+  - maptweak: Remapped the supermatter cold loop to be a bit more beginner-friendly
+      for modifications as well as making it flow better normally. Feel free to play
+      with the setup in-round though!
+  - maptweak: Replaced two Nitrogen canisters with phoron canisters in the supermatter
+      gas storage (4 nitrogen 4 phoron to 2 nitrogen 6 phoron). Nitrogen gets used
+      a lot more rarely and surprisingly few phoron canisters about. This should be
+      a better QoL change for SM engines.
+  - maptweak: Replaced engineering's advanced shield equipment with basic ones, so
+      cargo still had one more reason to exist.
+  - maptweak: Recoloured the secondary engine output wires from pink to yellow to
+      differentiate it from the primary engine. This will be particularly useful later
+      with plans I have for shield gens at some point-. Also recoloured the coils
+      left for setup to cyan and yellow to match the wires in use in that area.
+  - maptweak: Closed off a few drop vore spots that allowed too easy access to restricted
+      areas with glass. You can still see and break in to eat people but no easy dropping
+      in and printing whatever you want off the protolathe. Some less secure spots
+      are left unprotected and have some lattices to allow escape, and I did the same
+      with the public area spots as well.
+  - maptweak: Rewired the solar APCs to run off mains so they don't shut down the
+      airlocks when solars aren't working. Added an extra coil to the Eastern SMES
+      to allow them to cope with the additional load from the extra arrays.
+  - maptweak: Gave the bar pretty see-through shutters so it looks less industrial
+      while closed
+  - maptweak: Replaced the SM doors and blast doors with ones that shouldn't melt
+      so easy this time. Also the doors should be obvious that they're bolted now.
+  - maptweak: Set the secondary engine power supply SMES output to off at round start
+      so it doesn't drain all it's power before the second engine can be set up.
+  TheCaramelion:
+  - rscadd: Food replicator machine
+  - qol: Graffitis will take your mouse position now
+  Verkister:
+  - qol: Disabled bellysprite vis plane separation until a less destructive method
+      for hiding other people's bellysprites is available.
+  tacoguy7765093:
+  - maptweak: Removed floating button in medbay maints
+  - maptweak: Reduced steel/glass in all 4 tool staroages having more material then
+      engineering
+  - maptweak: Replaced chemistry roof catwalks with plating, as players could 'climb
+      down through' catwalks
+  - maptweak: Removed ERT level hardsuits for janitors (Why do janitors have hardsuits
+      in the first place??)
+  - maptweak: Replaces SPACE STON 13 with generic NT logo for now
+  - maptweak: Makes 'public suit cyclers' actually public
+  - maptweak: Makes medbay less G R E E N
+  - maptweak: Removed floating medbay chunk
+  - maptweak: Xenobio airlocks work now
+  - bugfix: Fixes radio being broadcasted twice

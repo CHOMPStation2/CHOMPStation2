@@ -1,4 +1,0 @@
-author: "Verkister"
-delete-after: True
-changes:
-  - qol: "Disabled bellysprite vis plane separation until a less destructive method for hiding other people's bellysprites is available."
