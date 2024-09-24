@@ -1236,7 +1236,7 @@
 	attackcycle = 3
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cyclethree(atom/target) //turns out the horde is meant to be a shield for the next attack.
-	visible_message(span("warning", "\The [src] begins to repair itself!"))
+	visible_message(span_warning("\The [src] begins to repair itself!"))
 	sleep(20)
 	adjustBruteLoss(-5)
 	adjustFireLoss(-5)

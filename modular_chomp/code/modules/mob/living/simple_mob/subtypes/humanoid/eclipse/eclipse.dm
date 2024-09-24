@@ -231,7 +231,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
@@ -290,7 +290,7 @@
 		..()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
+	to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
 	.=..()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner //wuff with shotgun
@@ -333,7 +333,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
@@ -489,7 +489,7 @@
 // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(L, span_warning("You feel a tiny prick."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger/apply_melee_effects(var/atom/A)
@@ -503,7 +503,7 @@
 // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(L, span_warning("You feel a tiny prick."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 
@@ -562,7 +562,7 @@
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 			s.set_up(5, 1, L)
 			s.start()
-			visible_message("<span class='danger'>The pummler releases a powerful shock!</span>")
+			visible_message(span_danger("The pummler releases a powerful shock!"))
 		else
 			return
 
@@ -600,7 +600,7 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster/death()
-	visible_message(span("critical", "\The [src]'s body begins to rupture!"))
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
 	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
 	spawn(0)
 		// Flash black and red as a warning.
@@ -614,7 +614,7 @@
 	spawn(delay)
 		// The actual boom.
 		if(src && !exploded)
-			visible_message(span("danger", "\The [src]'s body detonates!"))
+			visible_message(span_danger("\The [src]'s body detonates!"))
 			exploded = TRUE
 			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
 	return ..()
@@ -646,7 +646,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
@@ -878,7 +878,7 @@
 	H.drop_item()
 	if(I)
 		I.throw_at(src, 2, 4) // Just yoinked.
-		src.visible_message(span_danger("The [name] heaves, pulling \the [A]'s weapon from their hands!</span>"))
+		src.visible_message(span_danger("The [name] heaves, pulling \the [A]'s weapon from their hands!"))
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter
 	name = "Lunar Eclipse Experimenter"
@@ -900,7 +900,7 @@
 	var/D = src
 	var/mob/living/carbon/human/H = A
 	H.throw_at(D, 2, 4) // Just yoinked.
-	visible_message(span_danger("The [src]'s armor glows silver, pulling \[A] closer!</span>"))
+	visible_message(span_danger("The [src]'s armor glows silver, pulling [A] closer!"))
 
 //The Precursor intative big folks
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit
@@ -920,7 +920,7 @@
 		var/mob/living/L = A
 		L.add_modifier(/datum/modifier/deep_wounds, 10 SECONDS)
 		if(L.mob_size <= MOB_MEDIUM)
-			visible_message(span("danger", "\The [src] sends \the [L] flying with the impact!"))
+			visible_message(span_danger("\The [src] sends \the [L] flying with the impact!"))
 			playsound(src, "punch", 50, 1)
 			L.Weaken(1)
 			var/throwdir = get_dir(src, L)
@@ -976,7 +976,7 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker/do_special_attack(atom/A)
 	// Teleport attack.
 	if(!A)
-		to_chat(src, span("warning", "There's nothing to teleport to."))
+		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
 	var/list/nearby_things = range(4, A)
@@ -994,7 +994,7 @@
 			valid_turfs.Add(potential_turf)
 
 	if(!(valid_turfs.len))
-		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
 		return FALSE
 
 	var/turf/target_turf = pick(valid_turfs)
@@ -1013,7 +1013,7 @@
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
 	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver
