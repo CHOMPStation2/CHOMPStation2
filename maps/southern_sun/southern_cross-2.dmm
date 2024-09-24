@@ -5223,10 +5223,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
 "alU" = (
-/obj/machinery/smartfridge/drinks/showcase,
-/obj/machinery/firealarm{
-	pixel_y = -25;
-	name = "S-fire alarm";
+/obj/machinery/light{
+	name = "1S-light fixture"
+	},
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 1
 	},
 /turf/simulated/floor/wood/alt/tile,
@@ -17821,6 +17822,12 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/toy/figure/bartender{
+	pixel_y = 1;
+	pixel_x = -7
+	},
+/obj/item/weapon/packageWrap,
 /turf/simulated/floor/carpet/purcarpet,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "baZ" = (
@@ -33194,6 +33201,15 @@
 	color = "#989898"
 	},
 /area/SouthernCrossV2/Commons/AftPort_2_Deck_Observatory)
+"ccK" = (
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
+/obj/effect/landmark/start{
+	name = "Bartender"
+	},
+/turf/simulated/floor/wood/alt/tile,
+/area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "ccM" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -33401,14 +33417,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/EMT_Bay)
 "cdC" = (
-/obj/structure/table/marble,
+/obj/structure/disposalpipe/segment,
 /obj/machinery/cash_register/civilian,
+/obj/structure/table/marble,
 /obj/machinery/door/blast/shutters{
 	id = "sc-GCmidnightbar";
 	layer = 3.1;
 	name = "Bar Shutters"
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "cdG" = (
@@ -35303,30 +35319,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Security/Armory)
 "ciN" = (
-/obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/glass/rag,
 /obj/machinery/light{
 	name = "1S-light fixture"
 	},
-/obj/item/weapon/flame/lighter/zippo/skull{
-	pixel_y = 2;
-	pixel_x = -7
-	},
-/obj/item/clothing/head/that{
-	pixel_x = -8;
-	pixel_y = 11
-	},
-/obj/item/weapon/book/codex/chef_recipes{
-	pixel_y = 4;
-	pixel_x = 9
-	},
-/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask{
-	pixel_y = 5;
-	pixel_x = 3
-	},
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask{
-	pixel_y = -2;
-	pixel_x = 6
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	dir = 1
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -39390,14 +39388,8 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Science/Server_Room)
 "cwE" = (
-/obj/structure/reagent_dispensers/beerkeg,
-/obj/item/weapon/storage/box/mixedglasses{
-	pixel_y = 14
-	},
-/obj/machinery/camera/network/security{
-	dir = 4;
-	c_tag = "D2-Dmc-Midnight Bar3";
-	network = list("Domicile")
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -41481,68 +41473,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Engineering_Workshop)
 "cDS" = (
-/obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/box/donkpockets{
-	pixel_x = 7;
-	pixel_y = -7
-	},
-/obj/item/weapon/storage/box/donkpockets/berry{
-	pixel_x = 7;
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/box/donkpockets/gondola{
-	pixel_x = -9;
-	pixel_y = -7
-	},
-/obj/item/weapon/storage/box/donkpockets/honk{
-	pixel_x = -9;
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/box/donkpockets/pizza{
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/item/weapon/storage/box/donkpockets/spicy{
-	pixel_x = -9;
-	pixel_y = 1
-	},
-/obj/item/weapon/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/box/donkpockets{
-	pixel_x = 7;
-	pixel_y = -7
-	},
-/obj/item/weapon/storage/box/donkpockets/gondola{
-	pixel_x = -9;
-	pixel_y = -7
-	},
-/obj/item/weapon/storage/box/donkpockets/berry{
-	pixel_x = 7;
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/box/donkpockets/honk{
-	pixel_x = -9;
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/box/donkpockets/pizza{
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/item/weapon/storage/box/donkpockets/spicy{
-	pixel_x = -9;
-	pixel_y = 1
-	},
-/obj/item/weapon/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/machinery/smartfridge/drinks/showcase,
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "cDW" = (
@@ -71487,16 +71422,67 @@
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/packageWrap,
-/obj/item/toy/figure/bartender{
-	pixel_y = 1;
-	pixel_x = -7
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/item/weapon/storage/box/donkpockets/pizza{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/item/weapon/storage/box/donkpockets/spicy{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/obj/item/weapon/storage/box/donkpockets/berry{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/item/weapon/storage/box/donkpockets/honk{
+	pixel_x = -9;
+	pixel_y = -3
+	},
+/obj/item/weapon/storage/box/donkpockets/teriyaki{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/box/donkpockets/teriyaki{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/box/donkpockets/teriyaki{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/box/donkpockets/pizza{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/item/weapon/storage/box/donkpockets/spicy{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/obj/item/weapon/storage/box/donkpockets{
+	pixel_x = 7;
+	pixel_y = -7
+	},
+/obj/item/weapon/storage/box/donkpockets/gondola{
+	pixel_x = -9;
+	pixel_y = -7
+	},
+/obj/item/weapon/storage/box/donkpockets/berry{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/item/weapon/storage/box/donkpockets/honk{
+	pixel_x = -9;
+	pixel_y = -3
+	},
+/obj/item/weapon/storage/box/donkpockets{
+	pixel_x = 7;
+	pixel_y = -7
+	},
+/obj/item/weapon/storage/box/donkpockets/gondola{
+	pixel_x = -9;
+	pixel_y = -7
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -74906,12 +74892,28 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "kVy" = (
-/obj/structure/table/marble,
-/obj/machinery/chemical_dispenser/bar_alc/full{
-	pixel_x = -13;
-	pixel_y = 1;
-	dir = 4
+/obj/item/weapon/flame/lighter/zippo/skull{
+	pixel_y = 2;
+	pixel_x = -7
 	},
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/drinks/flask/barflask{
+	pixel_y = -2;
+	pixel_x = 6
+	},
+/obj/item/weapon/book/codex/chef_recipes{
+	pixel_y = 4;
+	pixel_x = 9
+	},
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask{
+	pixel_y = 5;
+	pixel_x = 3
+	},
+/obj/item/clothing/head/that{
+	pixel_x = -8;
+	pixel_y = 11
+	},
+/obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "kVB" = (
@@ -75754,6 +75756,10 @@
 "lhe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "lhg" = (
@@ -78804,10 +78810,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Engineering_Workshop)
 "lYV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt/tile,
@@ -79696,13 +79699,11 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_Chapel)
 "mnU" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/tile,
+/turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "mnY" = (
 /obj/structure/disposalpipe/segment{
@@ -98430,13 +98431,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Gym)
 "rue" = (
-/obj/item/weapon/stool/padded{
-	dir = 1
-	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/landmark/start{
-	name = "Bartender"
-	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "ruq" = (
@@ -100710,10 +100705,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "rXg" = (
@@ -109017,7 +109009,14 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Security/Armory)
 "uhF" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/light{
+	name = "1S-light fixture"
+	},
+/obj/structure/table/marble,
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	dir = 1
+	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "uhK" = (
@@ -116805,14 +116804,11 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_StarChamber1)
 "wuI" = (
-/obj/machinery/disposal,
+/obj/machinery/vending/boozeomat,
 /obj/item/device/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -121057,7 +121053,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "xDJ" = (
-/obj/structure/table/marble,
 /obj/machinery/microwave{
 	pixel_y = 18
 	},
@@ -121068,6 +121063,7 @@
 	pixel_y = 1;
 	pixel_x = -6
 	},
+/obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "xDM" = (
@@ -123362,21 +123358,28 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "yjc" = (
-/obj/structure/table/marble,
-/obj/structure/sink/countertop{
-	dir = 4;
-	pixel_x = -9;
-	pixel_y = 4
-	},
-/obj/item/weapon/reagent_containers/glass/rag{
-	pixel_x = 7;
-	pixel_y = 9
-	},
 /obj/structure/sign/securearea{
 	icon_state = "radiation_small";
 	name = "\improper RAD SAFE";
 	desc = "A warning sign which reads 'RADIATION SHIELDING IN THIS AREA'.";
 	pixel_x = -32
+	},
+/obj/structure/sink/countertop{
+	dir = 4;
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/structure/table/marble{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/weapon/storage/box/mixedglasses{
+	pixel_y = 14
+	},
+/obj/structure/reagent_dispensers/beerkeg,
+/obj/item/weapon/reagent_containers/glass/rag{
+	pixel_x = 7;
+	pixel_y = 9
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -151844,7 +151847,7 @@ iKC
 gPC
 gPC
 gPC
-gPC
+mnU
 gPC
 gPC
 gPC
@@ -152358,9 +152361,9 @@ ssH
 nnG
 pEH
 uQN
+ccK
 plF
-mnU
-plF
+cwE
 alU
 gPC
 fCA
@@ -152618,7 +152621,7 @@ pEH
 cyF
 plF
 lYV
-plF
+cwE
 ciN
 dgU
 bRu
