@@ -179,7 +179,7 @@
 		special_attack_cooldown = 5 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/head/scientist/do_special_attack(atom/A)
-	visible_message(span("warning", "\The [src] begins to fabricate drones!"))
+	visible_message(span_warning("\The [src] begins to fabricate drones!"))
 	sleep(3)
 	if(vore_fullness == 1)
 		new /mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse (src.loc)
@@ -301,7 +301,7 @@
 		bomb_range -= T
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokecargo(atom/A)
-	visible_message(span("warning", "\The [src] calls for their help on radio!"))
+	visible_message(span_warning("\The [src] calls for their help on radio!"))
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokeengi(atom/A) //place holdery
 	var/obj/item/projectile/P = new /obj/item/projectile/temp(get_turf(src))
@@ -310,14 +310,14 @@
 	P2.launch_projectile(A, BP_TORSO, src)
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokesci(atom/A)
-	visible_message(span("warning", "\The [src] begins to fabricate drones!"))
+	visible_message(span_warning("\The [src] begins to fabricate drones!"))
 	sleep(3)
 	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokemedical(atom/A)
-	visible_message(span("warning", "\The [src] begins to tend to their wounds!"))
+	visible_message(span_warning("\The [src] begins to tend to their wounds!"))
 	sleep(3)
 	adjustBruteLoss(-12)
 	adjustFireLoss(-12)
@@ -431,7 +431,7 @@
 		L.forceMove(belly_dest)
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/fullsummon(atom/target) //Summons a wall whilst the boss tries to enjoy their meal
-	visible_message(span("warning", "\The [src] calls in drone support!"))
+	visible_message(span_warning("\The [src] calls in drone support!"))
 	new /mob/living/simple_mob/mechanical/combat_drone/artillery (src.loc)
 	sleep(30)
 	new /mob/living/simple_mob/mechanical/combat_drone/artillery (src.loc)
@@ -440,7 +440,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/mech_two(atom/target) //Forces the mecha user in a strange dance, being forced out, likly dodging one projectile and getting back in
 	var/obj/mecha/M = target
-	visible_message(span("critical","\The [M] is remotly hacked and ejects [M.occupant]!"))
+	visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
 	M.go_out()
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/mech_one(atom/target) //might alter this one to a machine gun esque ion fire
@@ -460,7 +460,7 @@
 	P.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/phase_one(atom/target) //Simply tries to disable you
-	visible_message(span("alien","\The [src] pulls out a flash!"))
+	visible_message(span_alien("\The [src] pulls out a flash!"))
 	if(isliving(target))
 		var/mob/living/L = target
 		if(iscarbon(L))
@@ -473,7 +473,7 @@
 						var/mob/living/carbon/human/H = C
 						flash_strength *= H.species.flash_mod
 						if(flash_strength > 0)
-							to_chat(H, span("alien","You are disoriented by \the [src]!"))
+							to_chat(H, span_alien("You are disoriented by \the [src]!"))
 							H.eye_blurry = max(H.eye_blurry, flash_strength + 5)
 							H.flash_eyes()
 							H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0, "Photon burns")
@@ -483,13 +483,13 @@
 				var/flashfail = FALSE
 				var/mob/living/silicon/robot/R = L
 				if(!flashfail)
-					to_chat(R, span("alien","Your optics are scrambled by \the [src]!"))
+					to_chat(R, span_alien("Your optics are scrambled by \the [src]!"))
 					R.Confuse(10)
 					R.flash_eyes()
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/phase_two(atom/target)
 	if(!target)
-		to_chat(src, span("warning", "There's nothing to teleport to."))
+		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
 	var/list/nearby_things = range(1, target)
@@ -507,7 +507,7 @@
 			valid_turfs.Add(potential_turf)
 
 	if(!(valid_turfs.len))
-		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
 		return FALSE
 
 	var/turf/target_turf = pick(valid_turfs)
@@ -519,14 +519,14 @@
 	s2.set_up(5, 1, target_turf)
 
 
-	T.visible_message(span("notice", "\The [src] vanishes!"))
+	T.visible_message(span_notice("\The [src] vanishes!"))
 	s1.start()
 
 	forceMove(target_turf)
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/phase_three(atom/target) //This might friendly fire itself, but funny and final phase
@@ -542,14 +542,14 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/shield_two(atom/target)
 	if(prob(50))
-		visible_message(span("alien","\The [src] begins to bandage their wounds."))
+		visible_message(span_alien("\The [src] begins to bandage their wounds."))
 		sleep(30)
 		adjustBruteLoss(-25.0)
-		visible_message(span("alien","\The [src] begins to salve their burns."))
+		visible_message(span_alien("\The [src] begins to salve their burns."))
 		sleep(30)
 		adjustFireLoss(-25.0)
 	else
-		visible_message(span("alien","\The [src] consumes an odd pill."))
+		visible_message(span_alien("\The [src] consumes an odd pill."))
 		add_modifier(/datum/modifier/aura/slime_heal, 15, src)
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/shield_three(atom/target)

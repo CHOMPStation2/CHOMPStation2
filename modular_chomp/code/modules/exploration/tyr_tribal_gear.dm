@@ -219,7 +219,7 @@
 
 /obj/item/clothing/suit/armor/tyrtribalcloak/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(block_chance))
-		user.visible_message("<span class='danger'>\The [src] completely deflects [attack_text]!</span>")
+		user.visible_message(span_danger("\The [src] completely deflects [attack_text]!"))
 		return TRUE
 	return FALSE
 
