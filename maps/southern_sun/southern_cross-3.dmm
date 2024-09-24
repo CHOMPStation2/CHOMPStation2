@@ -151,8 +151,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
@@ -359,8 +358,7 @@
 "adI" = (
 /obj/structure/transit_tube/station,
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -971,9 +969,8 @@
 /area/SouthernCrossV2/Bridge/Leisure_Room)
 "apA" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/plating,
@@ -1053,8 +1050,7 @@
 /obj/item/weapon/bedsheet/mimedouble,
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/purcarpet,
@@ -1185,8 +1181,7 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "auu" = (
-/obj/structure/lattice,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
 "auR" = (
 /obj/machinery/newscaster{
@@ -1430,14 +1425,10 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
 "ayO" = (
-/obj/effect/catwalk_plated/techfloor,
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/redgrid/animated,
-/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
+/obj/machinery/atmospherics/pipe/manifold/visible/green,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "ayQ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1455,8 +1446,7 @@
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "azb" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -1847,7 +1837,7 @@
 	color = "yellow";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "aES" = (
 /obj/structure/cable/green{
@@ -1902,14 +1892,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForStar)
 "aFT" = (
 /obj/machinery/iv_drip,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "D3-Med-Patient2";
@@ -2048,17 +2042,19 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/arrows/red,
-/obj/machinery/door/airlock/angled_bay/secure{
-	dir = 4;
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
 	id_tag = "SC-engine_access_hatch";
-	name = "Airtight Hatch";
 	locked = 1;
-	req_access = list(11);
-	req_one_access = list(12)
+	req_access = list(11)
 	},
-/obj/machinery/door/blast/radproof/open{
+/obj/machinery/door/blast/regular{
 	id = "SC-GCemitterview";
-	layer = 3.5
+	layer = 3.3;
+	name = "Reactor Blast Door";
+	icon_state = "pdoor0";
+	density = 0;
+	opacity = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
@@ -2187,10 +2183,12 @@
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
 "aLj" = (
 /obj/effect/catwalk_plated/techfloor,
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/greengrid,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -2538,8 +2536,7 @@
 /obj/structure/bed/chair/sofa/left/yellow,
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
@@ -2569,8 +2566,7 @@
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
 "aTK" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -2779,7 +2775,7 @@
 /area/SouthernCrossV2/Medical/Psych_Room_2)
 "aWE" = (
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "aWW" = (
 /obj/structure/cable/green{
@@ -2834,9 +2830,8 @@
 "aXC" = (
 /obj/structure/girder/reinforced,
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor2)
@@ -2876,9 +2871,8 @@
 	pixel_x = -7
 	},
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Bridge/HoP_Office)
@@ -3001,10 +2995,11 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/machinery/door/blast/radproof{
-	dir = 4;
+/obj/machinery/door/blast/regular{
+	dir = 8;
 	id = "SC-GCreactor";
-	layer = 3.5
+	layer = 3.3;
+	name = "Reactor Blast Door"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
@@ -3388,8 +3383,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "biX" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3451,9 +3445,8 @@
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "bjF" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
@@ -3465,8 +3458,7 @@
 "bjX" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber2)
@@ -3579,11 +3571,6 @@
 	dir = 4;
 	name = "1E-light fixture"
 	},
-/obj/structure/cable/white{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "blw" = (
@@ -3591,8 +3578,7 @@
 /area/space)
 "blD" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
@@ -4224,12 +4210,7 @@
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Atmos Substation Bypass"
 	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForCorridor1)
 "bzr" = (
@@ -4321,8 +4302,7 @@
 /obj/structure/table/standard,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/Virology)
@@ -4402,7 +4382,7 @@
 "bCC" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1)
 "bCG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
@@ -4491,8 +4471,7 @@
 /obj/structure/table/steel,
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4775,8 +4754,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForPort_Corridor2)
 "bJK" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
@@ -4798,7 +4776,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "bJT" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
@@ -4939,7 +4917,8 @@
 	RCon_tag = "Solar - AftStar";
 	input_attempt = 1;
 	input_level = 150000;
-	output_level = 100000
+	output_level = 100000;
+	cur_coils = 2
 	},
 /obj/structure/cable,
 /obj/structure/sign/warning/high_voltage{
@@ -5061,9 +5040,8 @@
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "bNg" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
@@ -5074,9 +5052,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -5175,16 +5152,16 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "bPl" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -5231,6 +5208,10 @@
 	color = "yellow"
 	},
 /obj/structure/disposalpipe/down,
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
 "bQP" = (
@@ -5282,8 +5263,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Waste_Handling)
@@ -5448,8 +5428,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
@@ -5457,13 +5436,14 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/SouthernCrossV2/Domicile/Dormitory_01)
 "bUf" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 4
+/obj/effect/catwalk_plated/white,
+/obj/machinery/light_switch{
+	name = "N-light switch";
+	pixel_x = 12;
+	pixel_y = 27
 	},
-/obj/structure/lattice,
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
+/turf/simulated/floor/glass/turfpack/airless,
+/area/space)
 "bUF" = (
 /obj/machinery/atmospherics/binary/pump{
 	name = "Air Mix to Connector"
@@ -5591,7 +5571,7 @@
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "bXz" = (
 /obj/structure/cable/green{
@@ -5771,8 +5751,7 @@
 "bZQ" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber1)
@@ -5798,8 +5777,7 @@
 /area/SouthernCrossV2/Domicile/Public_Garden)
 "caz" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Dormitory_12)
@@ -5915,7 +5893,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Dorms_StarCorridor1)
 "ccv" = (
 /obj/effect/catwalk_plated/white,
-/turf/simulated/floor/glass,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "ccx" = (
 /obj/machinery/door/firedoor/glass,
@@ -6165,6 +6143,11 @@
 /area/SouthernCrossV2/Bridge/HoP_Office)
 "chr" = (
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForStar)
 "cih" = (
@@ -6270,8 +6253,7 @@
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_3)
 "cji" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3)
@@ -6440,8 +6422,7 @@
 "clj" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
@@ -6502,8 +6483,7 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -6750,8 +6730,16 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_Breakroom)
 "cqo" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
 /turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber2)
 "cqp" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2)
@@ -6880,8 +6868,7 @@
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "csA" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber2)
@@ -7122,11 +7109,14 @@
 /area/SouthernCrossV2/Medical/Virology)
 "cwY" = (
 /obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/obj/structure/railing/grey{
 	color = "yellow"
 	},
-/obj/structure/lattice,
 /turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
+/area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "cxj" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -7341,7 +7331,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
 "cBg" = (
 /obj/structure/cable/green{
@@ -7498,9 +7488,8 @@
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "cDM" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
@@ -7536,9 +7525,8 @@
 /area/SouthernCrossV2/Domicile/Dormitory_12)
 "cEp" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -7846,8 +7834,7 @@
 "cHG" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -7883,8 +7870,7 @@
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
 "cIT" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -8249,7 +8235,7 @@
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "cOH" = (
 /obj/machinery/light_construct,
@@ -8646,8 +8632,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
@@ -8733,8 +8718,7 @@
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
 "cXq" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
@@ -8775,8 +8759,7 @@
 "cXW" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/table/bench/marble,
 /obj/structure/flora/pottedplant/bamboo,
@@ -8784,7 +8767,7 @@
 /area/SouthernCrossV2/Domicile/Dormitory_02)
 "cYb" = (
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "cYU" = (
 /obj/machinery/light{
@@ -8896,6 +8879,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftPort)
 "cZW" = (
@@ -8974,8 +8962,7 @@
 /area/SouthernCrossV2/Maints/Bridge_Substation)
 "dbm" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -9388,6 +9375,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
+"djU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "djV" = (
 /obj/machinery/particle_accelerator/control_box,
 /obj/effect/floor_decal/techfloor/orange{
@@ -9424,7 +9425,7 @@
 	color = "yellow";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "dkU" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -9462,8 +9463,7 @@
 "dlA" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9518,24 +9518,23 @@
 /area/SouthernCrossV2/Domicile/Dormitory_03)
 "dmt" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/table/standard,
 /obj/random/maintenance/morestuff,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftCorridor2)
 "dmx" = (
-/obj/structure/cable/pink{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	color = "#989898";
@@ -9610,14 +9609,13 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Engineering/Deck3_1_Corridor)
 "doG" = (
-/obj/item/modular_computer/console/preset/sysadmin{
+/obj/item/modular_computer/console/preset/security{
 	dir = 1
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -9678,7 +9676,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2)
 "dpO" = (
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -9813,8 +9811,7 @@
 "dtC" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
@@ -9897,8 +9894,7 @@
 /obj/structure/undies_wardrobe,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/item/device/threadneedle{
 	pixel_y = 11;
@@ -10016,7 +10012,7 @@
 "dyt" = (
 /obj/machinery/light/small,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1)
 "dyy" = (
 /obj/structure/ladder{
@@ -10028,17 +10024,15 @@
 "dyJ" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber1)
 "dyU" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/bluegrid,
@@ -10123,8 +10117,7 @@
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "dzC" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2)
@@ -10408,9 +10401,8 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Medical/Autoresleeving)
@@ -10857,6 +10849,9 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "dLu" = (
@@ -11032,7 +11027,7 @@
 "dOz" = (
 /obj/random/trash,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "dOD" = (
 /obj/machinery/door/firedoor/border_only,
@@ -11126,6 +11121,10 @@
 /area/SouthernCrossV2/Bridge/Conference_Room)
 "dQv" = (
 /obj/machinery/power/smes/batteryrack/mapped,
+/obj/structure/cable/white{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "dRb" = (
@@ -11199,6 +11198,19 @@
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Observation_Lounge)
+"dRW" = (
+/obj/effect/catwalk_plated/techmaint,
+/obj/random/junk,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Solar_Control_AftPort)
 "dSf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11376,8 +11388,7 @@
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "dTD" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
@@ -11460,8 +11471,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/carpet/sblucarpet,
@@ -11583,8 +11593,7 @@
 "dVO" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -11615,6 +11624,11 @@
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "dWa" = (
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
 "dWg" = (
@@ -11644,15 +11658,14 @@
 /obj/structure/cable/yellow,
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftStar)
 "dWD" = (
 /obj/random/junk,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "dWR" = (
 /obj/structure/cable/green{
@@ -11682,8 +11695,7 @@
 /obj/structure/undies_wardrobe,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/item/device/threadneedle{
 	pixel_y = 11;
@@ -11872,7 +11884,7 @@
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "dYY" = (
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -12260,9 +12272,15 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "edc" = (
-/obj/structure/lattice,
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
 /turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
+/area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "ede" = (
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
@@ -12317,8 +12335,7 @@
 /area/SouthernCrossV2/Medical/Restrooms)
 "edU" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftPortCorridor1)
@@ -12372,9 +12389,8 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
@@ -12413,6 +12429,10 @@
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 1
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Bridge_Substation)
@@ -12487,6 +12507,7 @@
 "ehe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "ehj" = (
@@ -12917,8 +12938,7 @@
 "eog" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
@@ -13080,10 +13100,23 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Star_3_Deck_Airlock_Access)
 "esF" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/portable_atmospherics/canister/nitrogen,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/SouthernCrossV2/Engineering/Engine2_Canister_Storage)
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white,
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/hatch/red,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "esI" = (
 /obj/structure/table/marble,
 /obj/item/weapon/material/kitchen/rollingpin{
@@ -13460,8 +13493,7 @@
 /area/SouthernCrossV2/Commons/Port_Breakroom)
 "ezA" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/structure/loot_pile/maint/technical,
 /obj/random/trash,
@@ -13490,6 +13522,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Observation_Lounge)
+"ezC" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor2)
 "ezD" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/durasteel,
@@ -13545,11 +13585,11 @@
 "eAz" = (
 /obj/structure/table/marble,
 /obj/item/toy/chewtoy,
-/obj/machinery/door/blast/shutters{
-	dir = 4;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
@@ -14054,6 +14094,9 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "eIE" = (
@@ -14273,9 +14316,8 @@
 "eMl" = (
 /obj/machinery/vending/wardrobe/hydrobe,
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -14343,8 +14385,7 @@
 "eMQ" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -14379,13 +14420,23 @@
 	req_access = list(11);
 	req_one_access = list(10)
 	},
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Engine1_Substation)
+"eNh" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_StarChamber1)
 "eNk" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/structure/sign/poster{
@@ -14445,8 +14496,7 @@
 "eNQ" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber1)
@@ -14507,8 +14557,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for the engine radiator viewport shutters.";
@@ -14759,8 +14808,7 @@
 "eRh" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/item/frame,
 /turf/simulated/floor/plating,
@@ -14955,6 +15003,13 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Commons/Star_Breakroom)
+"eTy" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "eTA" = (
 /obj/machinery/light{
 	dir = 4;
@@ -15149,9 +15204,8 @@
 /area/SouthernCrossV2/Bridge/Deck3_Corridor)
 "eUM" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
@@ -15345,8 +15399,7 @@
 "eWG" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -15474,9 +15527,8 @@
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "eYV" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/machinery/shield_capacitor{
 	dir = 4
@@ -15570,8 +15622,7 @@
 	color = "yellow";
 	dir = 1
 	},
-/obj/structure/lattice,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "fal" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -15666,9 +15717,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Dorms_StarChamber1)
 "fbn" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -15719,7 +15769,7 @@
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
 "fbT" = (
 /obj/structure/cable/yellow{
@@ -15853,13 +15903,18 @@
 	name = "Christmas Spirit"
 	},
 /obj/structure/table/bench/glass,
-/obj/structure/cable/cyan{
+/obj/structure/cable/white{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/super{
 	pixel_y = 24;
 	dir = 1
+	},
+/obj/machinery/light_switch{
+	name = "N-light switch";
+	pixel_x = 12;
+	pixel_y = 27
 	},
 /turf/simulated/floor/greengrid,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -15928,6 +15983,10 @@
 	color = "yellow";
 	dir = 4
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarChamber1)
 "fdN" = (
@@ -15954,7 +16013,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "fey" = (
 /obj/machinery/light{
@@ -16119,14 +16178,8 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "ffT" = (
-/obj/effect/catwalk_plated/techfloor,
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/redgrid/animated,
-/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
+/turf/simulated/floor/glass/reinforced,
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "fgb" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -16288,8 +16341,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
@@ -16705,7 +16757,7 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "fnn" = (
 /obj/structure/sign/flag/sol/left,
@@ -16776,8 +16828,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
 "fod" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -16978,9 +17029,8 @@
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
 "frh" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightorange/border,
@@ -17062,19 +17112,14 @@
 /turf/simulated/floor/tiled/hydro,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
 "frX" = (
-/obj/structure/cable/yellow{
+/obj/effect/catwalk_plated/techfloor,
+/obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
+/turf/simulated/floor/greengrid,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "fsh" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/misc,
@@ -17220,13 +17265,12 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "fvh" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -17257,6 +17301,10 @@
 /obj/structure/railing/grey{
 	color = "yellow";
 	dir = 8
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Medical_StarCorridor1)
@@ -17469,9 +17517,8 @@
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "fzy" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/glass,
 /area/SouthernCrossV2/Medical/Stairwell)
@@ -17944,8 +17991,7 @@
 "fGa" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -18060,15 +18106,13 @@
 	pixel_y = -1
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber2)
 "fHm" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -18192,9 +18236,8 @@
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "fIG" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -18362,8 +18405,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/item/device/threadneedle{
 	pixel_y = 11;
@@ -18461,8 +18503,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
@@ -18516,13 +18557,26 @@
 "fNe" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/beige/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_2)
+"fNg" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_StarChamber1)
 "fNB" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -18590,11 +18644,11 @@
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "fPf" = (
 /obj/structure/table/marble,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
@@ -18718,8 +18772,7 @@
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "fRd" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/structure/girder/reinforced{
 	default_material = "lead"
@@ -18876,7 +18929,7 @@
 /area/SouthernCrossV2/Medical/Restrooms)
 "fTK" = (
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Corridor1)
 "fTX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -18892,8 +18945,7 @@
 "fUa" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/glass,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Stairwell)
@@ -18955,6 +19007,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/wood/alt/panel,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "fUN" = (
@@ -19373,7 +19426,7 @@
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "gci" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -19440,8 +19493,7 @@
 "gcY" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -19603,8 +19655,7 @@
 /area/SouthernCrossV2/Engineering/Engine_Tech_Storage)
 "gfN" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
@@ -19729,9 +19780,8 @@
 /area/SouthernCrossV2/Bridge/CE_Quarters)
 "gir" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
@@ -19753,8 +19803,7 @@
 /obj/machinery/clonepod/transhuman/full,
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
@@ -19791,19 +19840,12 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "gjw" = (
-/obj/machinery/alarm{
-	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/For_3_Deck_Stairwell)
+/turf/simulated/floor/glass/reinforced,
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "gjA" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -19843,8 +19885,7 @@
 /obj/structure/undies_wardrobe,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle/wataur{
 	pixel_y = 18;
@@ -19995,7 +20036,7 @@
 	dir = 1;
 	name = "1N-lighting fixture"
 	},
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Engineering/Engine2_Canister_Storage)
 "gmD" = (
@@ -20260,9 +20301,8 @@
 /area/SouthernCrossV2/Bridge/AI_Upload_Hall)
 "gqf" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/random/crate,
 /turf/simulated/floor/plating,
@@ -20311,8 +20351,7 @@
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "gqI" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/open,
@@ -20342,6 +20381,9 @@
 /obj/structure/sign/small/warning/emerg_only{
 	desc = "Ladder for emergency use only";
 	pixel_y = 32
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
@@ -20470,7 +20512,7 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Medical/Stairwell)
 "gun" = (
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "guM" = (
 /obj/structure/cable/green{
@@ -20593,21 +20635,16 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "gxf" = (
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "gxt" = (
-/obj/effect/floor_decal/industrial/loading/blue{
-	dir = 8
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/valve/digital{
+	dir = 4;
+	name = "secondary TEG valve"
 	},
-/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/obj/structure/sign/department/conference_room{
-	name = "DOMICILE Department";
-	desc = "A sign indicating the location for Domicile department. Use the nearby chute for quick access."
-	},
-/turf/simulated/floor/tiled/monotile{
-	color = "#989898"
-	},
-/area/SouthernCrossV2/Bridge/Deck3_Corridor)
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "gxC" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -20681,13 +20718,14 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Commons/Port_Breakroom)
 "gzl" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 8
+/obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/structure/lattice,
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
+/turf/simulated/floor/glass/reinforced,
+/area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
 "gzB" = (
 /obj/structure/railing/grey{
 	color = "yellow";
@@ -21096,7 +21134,7 @@
 /obj/structure/window/titanium{
 	dir = 8
 	},
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -21149,10 +21187,6 @@
 	},
 /obj/effect/landmark{
 	name = "tripai"
-	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = -36;
-	name = "1S-entertainment monitor"
 	},
 /turf/simulated/floor/greengrid,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -21443,10 +21477,10 @@
 	pixel_y = -24
 	},
 /obj/effect/catwalk_plated/techfloor,
-/obj/structure/cable/cyan{
+/obj/structure/cable/white{
 	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/greengrid,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -21527,8 +21561,7 @@
 "gLQ" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -21762,8 +21795,7 @@
 "gPw" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber1)
@@ -22144,8 +22176,7 @@
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Array_AftPort)
 "gWK" = (
-/obj/structure/lattice,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
 "gWO" = (
 /obj/machinery/light{
@@ -22319,8 +22350,7 @@
 /obj/structure/undies_wardrobe,
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/item/device/threadneedle{
 	pixel_y = 11;
@@ -22471,11 +22501,11 @@
 	nutriment_desc = list("sweet    bread" = 3, "tamarind" = 2, "gummy" = 1);
 	pixel_y = 10
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 8;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
@@ -22545,8 +22575,7 @@
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "hfj" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/glass,
 /area/SouthernCrossV2/Commons/Star_3_Deck_Stairwell)
@@ -22585,12 +22614,11 @@
 /turf/simulated/floor/carpet/blue2,
 /area/SouthernCrossV2/Domicile/Dormitory_06)
 "hgu" = (
-/obj/structure/lattice,
 /obj/structure/railing/grey{
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
 "hgw" = (
 /obj/structure/bed/chair/sofa/left/blue,
@@ -22626,7 +22654,7 @@
 /area/SouthernCrossV2/Maints/Bridge_Substation)
 "hgE" = (
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber1)
 "hgN" = (
 /turf/simulated/wall,
@@ -22916,9 +22944,8 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/SouthernCrossV2/Bridge/Secretary_Quarters)
@@ -23092,12 +23119,13 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "hpR" = (
-/obj/structure/cable/cyan{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/white{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "hqk" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -23642,8 +23670,7 @@
 "hAK" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
@@ -23680,8 +23707,7 @@
 /area/space)
 "hBG" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -23790,8 +23816,7 @@
 	name = "1E-emergency suit storage"
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/item/weapon/storage/box/admints,
 /obj/effect/floor_decal/techfloor/orange{
@@ -23893,6 +23918,16 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/SouthernCrossV2/Commons/Star_Breakroom)
+"hEy" = (
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "hEz" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 4
@@ -23958,9 +23993,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "hGg" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -24104,8 +24138,7 @@
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "hJs" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/landmark/event_spawn/morphspawn,
 /turf/simulated/floor/plating,
@@ -24301,8 +24334,7 @@
 /area/SouthernCrossV2/Engineering/Engine3_Control_Room)
 "hLS" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_StarCorridor1)
@@ -24472,10 +24504,18 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftStar)
 "hOk" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/visible/green,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engine2_Chamber)
+/obj/structure/cable/white{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "hOs" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -24499,9 +24539,8 @@
 /area/SouthernCrossV2/Medical/Virology)
 "hOT" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -24615,9 +24654,8 @@
 /obj/machinery/vending/wardrobe/genedrobe,
 /obj/effect/floor_decal/borderfloorblack/full,
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Star_Breakroom)
@@ -24893,9 +24931,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "hVq" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -24918,8 +24955,7 @@
 /obj/structure/table/marble,
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/item/weapon/storage/box/donut{
 	pixel_x = 4;
@@ -24948,8 +24984,7 @@
 "hVL" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/beige/bordercorner,
@@ -25171,6 +25206,10 @@
 	desc = "Ladder for emergency use only";
 	pixel_x = -32
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftCorridor2)
 "hZZ" = (
@@ -25217,7 +25256,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "iaG" = (
 /obj/structure/table/marble,
-/obj/machinery/chemical_dispenser/bar_alc{
+/obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 1;
 	pixel_y = -10
 	},
@@ -25539,6 +25578,17 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Dormitory_03)
+"ier" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/turf/simulated/floor/glass/reinforced,
+/area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "ieB" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/kafel_full/green,
@@ -25577,8 +25627,7 @@
 "ifa" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -25590,11 +25639,6 @@
 /area/SouthernCrossV2/Bridge/Leisure_Room)
 "ifx" = (
 /obj/effect/catwalk_plated/techfloor,
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/item/toy/mistletoe{
 	pixel_y = 17
 	},
@@ -25683,7 +25727,7 @@
 	input_level = 200000;
 	output_level = 200000
 	},
-/obj/structure/cable/green{
+/obj/structure/cable/white{
 	d2 = 4;
 	icon_state = "0-4"
 	},
@@ -25765,6 +25809,10 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 1
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForCorridor1)
 "iiF" = (
@@ -25819,8 +25867,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
 "ijR" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -25857,8 +25904,7 @@
 "ikG" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -25909,6 +25955,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Medical/Deck3_Corridor)
+"ikV" = (
+/obj/effect/catwalk_plated/techmaint,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Solar_Control_ForStar)
 "ilN" = (
 /obj/machinery/vending/wardrobe/atmosdrobe,
 /obj/effect/floor_decal/borderfloorblack/full,
@@ -26066,9 +26124,8 @@
 /area/SouthernCrossV2/Commons/For_3_Deck_Stairwell)
 "inY" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Chamber1)
@@ -26087,8 +26144,7 @@
 "ios" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/machinery/field_generator{
 	anchored = 1;
@@ -26189,6 +26245,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Medical/Patient_4)
+"ipU" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "ipX" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Medical/Deck3_Corridor)
@@ -26224,6 +26287,11 @@
 "irl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/ai_slipper,
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "irr" = (
@@ -26232,9 +26300,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
 "irZ" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -26458,13 +26525,15 @@
 	color = "yellow";
 	dir = 4
 	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "ivH" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
@@ -26811,9 +26880,8 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/SouthernCrossV2/Bridge/Captain_Quarters)
@@ -27019,13 +27087,16 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Corridor1)
 "iDQ" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/machinery/light/small,
 /obj/structure/girder/reinforced{
@@ -28091,6 +28162,11 @@
 "iVn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/ai_slipper,
+/obj/structure/cable/white{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "iVs" = (
@@ -28321,6 +28397,9 @@
 	desc = "Ladder for emergency use only";
 	pixel_y = 32
 	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Engineering/Atmospherics_Substation)
 "iYf" = (
@@ -28396,9 +28475,8 @@
 /area/SouthernCrossV2/Commons/Stairwell_For)
 "iZX" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Star_3_Deck_Airlock_Access)
@@ -29039,7 +29117,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "jjY" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
@@ -29087,9 +29165,8 @@
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
 "jkP" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/machinery/light{
 	dir = 8;
@@ -29125,8 +29202,7 @@
 /area/SouthernCrossV2/Bridge/Captain_Quarters)
 "jlt" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -29441,7 +29517,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Dormitory_10)
 "jra" = (
-/obj/item/modular_computer/console/preset/security{
+/obj/item/modular_computer/console/preset/sysadmin{
 	dir = 1
 	},
 /obj/structure/window/reinforced,
@@ -29885,9 +29961,8 @@
 /area/SouthernCrossV2/Domicile/Dormitory_08)
 "jyH" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2)
@@ -30053,16 +30128,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "jCo" = (
 /obj/structure/bed/chair/sofa/corner/black{
 	dir = 1
 	},
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/carpet,
 /area/SouthernCrossV2/Bridge/HoS_Quarters)
@@ -30080,9 +30154,8 @@
 	pixel_x = 6
 	},
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -30206,11 +30279,11 @@
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "jET" = (
 /obj/structure/table/marble,
-/obj/machinery/door/blast/shutters{
-	dir = 4;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
@@ -30282,9 +30355,8 @@
 /area/SouthernCrossV2/Maints/Bridge_Substation)
 "jFL" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -30355,9 +30427,8 @@
 /area/SouthernCrossV2/Engineering/Atmospherics_Substation)
 "jGo" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor2)
@@ -30431,7 +30502,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "jGz" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
@@ -30621,9 +30692,9 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Stairwell_Port)
 "jIY" = (
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -30903,6 +30974,11 @@
 	icon_state = "1-8"
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForStar)
 "jOy" = (
@@ -31194,8 +31270,7 @@
 "jUZ" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
@@ -31313,8 +31388,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -31614,8 +31688,7 @@
 /obj/structure/bed/chair/sofa/right/yellow,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
@@ -31771,7 +31844,7 @@
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "keW" = (
 /obj/machinery/door/firedoor/glass,
@@ -31925,9 +31998,8 @@
 /area/SouthernCrossV2/Engineering/Engine2_Canister_Storage)
 "kgr" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -32282,8 +32354,7 @@
 "knU" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber1)
@@ -32581,8 +32652,7 @@
 	pixel_x = -4
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Construction_Area)
@@ -32645,14 +32715,13 @@
 "krb" = (
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d2 = 2;
 	icon_state = "0-2"
 	},
@@ -32678,6 +32747,7 @@
 "krr" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "krt" = (
@@ -32776,15 +32846,15 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_PortCorridor1)
 "ktl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "ktn" = (
@@ -32843,11 +32913,12 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/For_3_Deck_Airlock_Access_2)
 "kut" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 10
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
 	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engine2_Chamber)
+/turf/simulated/floor/glass/reinforced,
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "kuy" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -33021,8 +33092,7 @@
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "kyx" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -33628,9 +33698,8 @@
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "kIW" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Substation)
@@ -34223,9 +34292,8 @@
 /area/SouthernCrossV2/Commons/Stairwell_For)
 "kSR" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
@@ -34235,11 +34303,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
 	},
 /obj/random/junk,
 /obj/effect/catwalk_plated/techmaint,
@@ -34331,8 +34394,7 @@
 /area/SouthernCrossV2/Domicile/Public_Garden)
 "kUj" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -34535,7 +34597,7 @@
 	color = "yellow";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "kXf" = (
 /obj/structure/railing/grey{
@@ -34551,9 +34613,8 @@
 /area/SouthernCrossV2/Bridge/Deck3_Corridor)
 "kXz" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/glass,
 /area/SouthernCrossV2/Medical/Stairwell)
@@ -34607,6 +34668,15 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Bridge/Conference_Room)
+"kYk" = (
+/obj/effect/catwalk_plated/techfloor,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/redgrid/animated,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "kYm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -34658,12 +34728,12 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "laf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "laj" = (
@@ -34772,7 +34842,7 @@
 /obj/structure/table/steel,
 /obj/random/soap,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "lby" = (
 /obj/machinery/door/firedoor/border_only,
@@ -34811,7 +34881,7 @@
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d2 = 8;
 	icon_state = "0-8"
 	},
@@ -35924,6 +35994,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftStar)
 "lwD" = (
@@ -36009,20 +36084,17 @@
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "lxJ" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "lxK" = (
-/obj/effect/floor_decal/industrial/stand_clear/blue{
+/obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/monotile{
-	color = "#989898"
-	},
+/turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Bridge/Deck3_Corridor)
 "lxL" = (
 /obj/structure/bed/chair/office/dark{
@@ -36411,9 +36483,8 @@
 	pixel_x = 2
 	},
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -36501,9 +36572,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForCorridor1)
 "lEX" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -36766,8 +36836,7 @@
 /obj/structure/undies_wardrobe,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/item/device/threadneedle{
 	pixel_y = 11;
@@ -36851,6 +36920,9 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
 "lKg" = (
@@ -36915,8 +36987,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber1)
 "lLm" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -36992,7 +37063,7 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "lMi" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
@@ -37298,9 +37369,8 @@
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "lQu" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
@@ -37403,12 +37473,30 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "lSj" = (
-/obj/structure/railing/grey{
-	color = "yellow";
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/arrows/red{
 	dir = 1
 	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
+/obj/effect/floor_decal/industrial/arrows/red,
+/obj/machinery/flasher{
+	id = "testthis";
+	name = "Doorframe mounted flash";
+	layer = 2.5
+	},
+/obj/machinery/door/airlock/angled_bay/vault{
+	name = "AI Core";
+	req_access = list(16);
+	req_one_access = list(16);
+	dir = 8;
+	locked = 1
+	},
+/obj/structure/cable/white{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "lSr" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -37497,6 +37585,17 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Commons/Port_Breakroom)
+"lUf" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2)
 "lUl" = (
 /obj/structure/railing{
 	dir = 1
@@ -38002,8 +38101,7 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/grass2,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
@@ -38067,8 +38165,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -38156,7 +38253,7 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "mbu" = (
 /obj/structure/cable/green{
@@ -38207,8 +38304,7 @@
 /area/SouthernCrossV2/Domicile/Dormitory_10)
 "mbS" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Corridor1)
@@ -38367,13 +38463,12 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2)
 "meA" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/machinery/light{
 	dir = 4;
@@ -38427,8 +38522,7 @@
 "mgv" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
@@ -38513,8 +38607,7 @@
 /obj/machinery/light,
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/grass2,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
@@ -38558,7 +38651,7 @@
 /turf/simulated/floor/grass2,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
 "mhK" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
@@ -38637,8 +38730,7 @@
 /obj/structure/undies_wardrobe,
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle/wataur{
 	pixel_y = 18;
@@ -38691,8 +38783,7 @@
 "mji" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -38711,8 +38802,7 @@
 	name = "1E-emergency suit storage"
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/item/weapon/storage/box/admints,
 /obj/effect/floor_decal/techfloor/orange{
@@ -38731,9 +38821,8 @@
 /area/SouthernCrossV2/Bridge/Secretary_Quarters)
 "mjz" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_PortCorridor1)
@@ -38762,7 +38851,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "mjJ" = (
 /obj/structure/table/steel,
@@ -39011,7 +39100,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "mmh" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
@@ -39026,6 +39115,7 @@
 	dir = 9
 	},
 /obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "mmp" = (
@@ -39055,9 +39145,8 @@
 /area/SouthernCrossV2/Engineering/Construction_Area)
 "mmK" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/machinery/icecream_vat,
 /turf/simulated/floor/plating,
@@ -39231,6 +39320,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3)
 "moT" = (
@@ -39532,6 +39622,10 @@
 	color = "yellow";
 	dir = 4
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "mtz" = (
@@ -39656,8 +39750,7 @@
 "mwU" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -39940,8 +40033,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/SouthernCrossV2/Domicile/Dormitory_06)
@@ -40040,8 +40132,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber3)
 "mDu" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
@@ -40122,6 +40213,10 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 8
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_StarChamber1)
 "mEC" = (
@@ -40141,6 +40236,10 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/down,
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Engineering/Atmospherics_Substation)
 "mFn" = (
@@ -40430,8 +40529,7 @@
 /area/SouthernCrossV2/Bridge/CE_Quarters)
 "mKx" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
@@ -40918,14 +41016,13 @@
 /obj/structure/closet/secure_closet/personal/patient,
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Medical/Patient_4)
 "mVB" = (
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "mVO" = (
 /obj/structure/cable{
@@ -40934,8 +41031,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4
@@ -41200,6 +41296,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
+"nai" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2)
 "naj" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -41809,7 +41915,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber1)
 "niI" = (
 /obj/machinery/vending/foodveggie,
@@ -42105,9 +42211,8 @@
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "nnf" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Dormitory_11)
@@ -42213,15 +42318,19 @@
 /obj/structure/disposalpipe/down{
 	dir = 1
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber1)
 "nqE" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
@@ -42253,9 +42362,8 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Bridge/Embassy)
@@ -42433,8 +42541,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "nts" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
@@ -42623,15 +42730,14 @@
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "nxS" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/bed/chair{
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "nxY" = (
 /obj/structure/cable/yellow{
@@ -43757,7 +43863,7 @@
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "nOi" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -44131,9 +44237,8 @@
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "nUL" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Primary Engine Power";
@@ -44146,6 +44251,10 @@
 	dir = 8
 	},
 /obj/effect/catwalk_plated,
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "nUX" = (
@@ -44198,6 +44307,16 @@
 /obj/effect/floor_decal/corner/lightorange/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+"nVH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/visible/green,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "nVI" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/floor_decal/spline/plain{
@@ -44222,9 +44341,9 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "nVM" = (
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -44723,7 +44842,7 @@
 	color = "yellow";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "odR" = (
 /obj/machinery/suit_storage_unit/engineering,
@@ -44806,7 +44925,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "oeX" = (
 /obj/structure/cable/cyan{
@@ -45134,9 +45253,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "ojz" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
@@ -45148,8 +45266,7 @@
 /area/SouthernCrossV2/Domicile/Observation_Lounge)
 "ojN" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/structure/loot_pile/maint/trash,
 /obj/random/trash,
@@ -45164,8 +45281,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/item/device/geiger/wall/south,
 /obj/effect/floor_decal/borderfloorblack,
@@ -45620,9 +45736,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
@@ -45687,7 +45802,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "orM" = (
 /obj/effect/floor_decal/industrial/hatch/red,
@@ -45791,9 +45906,8 @@
 "osR" = (
 /obj/structure/table/sifwoodentable,
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Bridge/RD_Quarters)
@@ -45827,7 +45941,10 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "otX" = (
-/obj/structure/cable/yellow,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -46112,7 +46229,7 @@
 	dir = 8
 	},
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "oxk" = (
 /obj/machinery/light{
@@ -46273,8 +46390,7 @@
 "ozX" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/cable/white{
 	d1 = 4;
@@ -46368,6 +46484,10 @@
 /obj/structure/railing/grey{
 	color = "yellow";
 	dir = 4
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Engineering/Construction_Area)
@@ -46697,8 +46817,7 @@
 "oIQ" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -46752,8 +46871,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "oJs" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/plating,
@@ -46891,8 +47009,7 @@
 /obj/structure/bed/chair/comfy/orange,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
@@ -47166,7 +47283,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -47210,9 +47327,8 @@
 /area/SouthernCrossV2/Harbor/For_3_Deck_Airlock_Access_2)
 "oPl" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/plating,
@@ -47255,8 +47371,7 @@
 "oPW" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
@@ -47346,6 +47461,16 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber2)
+"oSc" = (
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2)
 "oSB" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -47380,7 +47505,7 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "oTc" = (
 /obj/machinery/power/apc{
@@ -47437,6 +47562,11 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_StarCorridor1)
 "oTP" = (
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftPort)
 "oUd" = (
@@ -47444,7 +47574,7 @@
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "oUk" = (
 /obj/machinery/atmospherics/pipe/tank/air{
@@ -47953,8 +48083,7 @@
 	color = "yellow";
 	dir = 1
 	},
-/obj/structure/lattice,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
 "pdb" = (
 /obj/random/junk,
@@ -48133,8 +48262,7 @@
 	name = "Hot Loop Waste Gas pump"
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Waste_Handling)
@@ -48180,7 +48308,8 @@
 	RCon_tag = "Solar - ForStar";
 	input_attempt = 1;
 	input_level = 150000;
-	output_level = 100000
+	output_level = 100000;
+	cur_coils = 2
 	},
 /obj/structure/cable{
 	d2 = 2;
@@ -48218,19 +48347,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Deck3_Corridor)
 "pgQ" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/catwalk_plated/techmaint,
+/obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Solar_Control_AftPort)
+/area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "phb" = (
 /obj/structure/lattice,
 /obj/structure/grille/rustic{
@@ -48424,15 +48544,13 @@
 /area/SouthernCrossV2/Bridge/RD_Quarters)
 "pld" = (
 /obj/structure/table/steel,
-/obj/item/stack/cable_coil/pink,
-/obj/item/stack/cable_coil/pink{
-	pixel_y = 4;
-	pixel_x = -2
+/obj/item/stack/cable_coil/yellow{
+	pixel_x = -7
 	},
-/obj/item/stack/cable_coil/pink{
-	pixel_y = 8;
-	pixel_x = -5
+/obj/item/stack/cable_coil/yellow{
+	pixel_y = 4
 	},
+/obj/item/stack/cable_coil/yellow,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
 "plL" = (
@@ -49038,6 +49156,10 @@
 	desc = "A heavily reinforced gate, sector lockdown!";
 	name = "Lockdown Gate"
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
 "pwP" = (
@@ -49127,7 +49249,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/structure/cable/white{
+/obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -49442,7 +49564,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Engine1_Control_Room)
 "pAU" = (
-/obj/item/modular_computer/console/preset/civilian,
+/obj/item/modular_computer/console/preset/research,
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -25;
@@ -49901,8 +50023,7 @@
 "pJf" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -50079,12 +50200,16 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Dormitory_10)
 "pMu" = (
-/obj/machinery/atmospherics/binary/pump/high_power{
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engine2_Chamber)
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber2)
 "pMy" = (
 /obj/structure/sign/levels/engineering/solars{
 	dir = 4;
@@ -50104,7 +50229,7 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "pMH" = (
-/obj/item/modular_computer/console/preset/ert,
+/obj/item/modular_computer/console/preset/engineering,
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
 	},
@@ -50178,7 +50303,10 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "pOt" = (
-/obj/structure/cable/yellow,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -50410,7 +50538,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Airlock_Access)
 "pSa" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -50653,9 +50781,8 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
@@ -51485,7 +51612,7 @@
 	color = "yellow";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "qjy" = (
 /obj/structure/sign/flag/vir/right,
@@ -51558,8 +51685,7 @@
 "qkC" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -51640,8 +51766,7 @@
 "qlY" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -51954,8 +52079,7 @@
 "qrz" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/structure/table/glass,
 /obj/item/roller{
@@ -52057,8 +52181,7 @@
 "qtS" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
@@ -52066,6 +52189,10 @@
 "qtU" = (
 /obj/structure/railing/grey{
 	color = "yellow"
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 4
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
@@ -52140,13 +52267,16 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "qvB" = (
-/obj/machinery/atmospherics/binary/pump/high_power{
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	color = "yellow";
 	dir = 4
 	},
-/obj/effect/engine_setup/pump_max,
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engine2_Chamber)
+/turf/simulated/floor/glass/reinforced,
+/area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "qvE" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -52299,8 +52429,7 @@
 "qys" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -52527,7 +52656,7 @@
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "qAk" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
@@ -52575,9 +52704,8 @@
 /area/SouthernCrossV2/Commons/Star_Breakroom)
 "qBq" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/light/small{
@@ -52585,6 +52713,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_PortChamber1)
+"qBK" = (
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarChamber1)
 "qBN" = (
 /obj/machinery/atmospherics/unary/cryo_cell,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -52791,9 +52925,8 @@
 /area/SouthernCrossV2/Engineering/Engine2_Waste_Handling)
 "qFG" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
@@ -52858,8 +52991,7 @@
 /area/SouthernCrossV2/Bridge/CMO_Quarters)
 "qHV" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -52977,6 +53109,7 @@
 	dir = 9
 	},
 /obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "qIy" = (
@@ -53039,6 +53172,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor2)
 "qJs" = (
@@ -53341,7 +53475,7 @@
 "qMF" = (
 /obj/random/trash,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "qMP" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -53575,8 +53709,7 @@
 "qTc" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_PortChamber1)
@@ -53674,9 +53807,8 @@
 /area/SouthernCrossV2/Engineering/Deck3_2_Corridor)
 "qUs" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -53798,8 +53930,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftCorridor2)
 "qXt" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -53836,9 +53967,13 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/machinery/door/blast/radproof/open{
+/obj/machinery/door/blast/regular{
 	id = "SC-GCemitterview";
-	layer = 3.5
+	layer = 3.3;
+	name = "Reactor Blast Door";
+	icon_state = "pdoor0";
+	density = 0;
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
@@ -54140,12 +54275,11 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Medical/Psych_Room_2)
 "rcO" = (
-/obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+/obj/structure/railing/grey{
+	color = "yellow"
 	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber2)
+/turf/simulated/floor/glass/reinforced,
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "rcT" = (
 /obj/structure/table/bench/sifwooden,
 /obj/item/device/flashlight/lamp/green{
@@ -54208,7 +54342,7 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "rem" = (
 /obj/structure/cable{
@@ -54217,6 +54351,11 @@
 	icon_state = "2-4"
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftPort)
 "reI" = (
@@ -54236,7 +54375,7 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "reO" = (
 /obj/structure/cable/green{
@@ -54344,8 +54483,7 @@
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "rfX" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
@@ -55153,8 +55291,7 @@
 	name = "1E-emergency suit storage"
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/item/weapon/storage/box/admints,
 /obj/effect/floor_decal/techfloor/orange{
@@ -55167,7 +55304,7 @@
 	color = "yellow";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "rrK" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -55178,8 +55315,7 @@
 /area/SouthernCrossV2/Domicile/Public_Garden)
 "rsx" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -55213,6 +55349,11 @@
 	icon_state = "1-4"
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
 "rtM" = (
@@ -55382,9 +55523,8 @@
 	id = "sc-WTmental01"
 	},
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/carpet/sblucarpet,
@@ -55402,8 +55542,7 @@
 "rvv" = (
 /obj/structure/bed/chair/sofa/left/sif_ora,
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -55574,19 +55713,16 @@
 	},
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "rxL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
 	},
-/obj/structure/cable/white{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
 	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "rxM" = (
 /obj/effect/floor_decal/industrial/warning/color{
 	dir = 9
@@ -55609,8 +55745,9 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/SouthernCrossV2/Domicile/Dormitory_02)
 "rys" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -55711,11 +55848,11 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 8;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
@@ -55727,8 +55864,7 @@
 "rzD" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/structure/table/standard,
 /obj/random/maintenance/misc,
@@ -55817,8 +55953,7 @@
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "rCN" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
@@ -56020,8 +56155,7 @@
 "rHD" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Domicile/Dormitory_03)
@@ -56307,8 +56441,7 @@
 "rMh" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/beige/border,
@@ -56441,8 +56574,7 @@
 "rNS" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Dormitory_11)
@@ -56533,7 +56665,7 @@
 /obj/structure/table/steel,
 /obj/random/coin/sometimes,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "rQW" = (
 /obj/structure/table/rack/steel,
@@ -56583,9 +56715,8 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 4
@@ -56869,20 +57000,25 @@
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
 "rXM" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarChamber1)
 "rXN" = (
-/obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 8
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Engine2_Chamber)
+/obj/structure/cable/white{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "rXO" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -56935,6 +57071,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Bridge/RD_Quarters)
 "rYu" = (
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3)
 "rYI" = (
@@ -57017,6 +57154,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
+"rZq" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/SouthernCrossV2/Engineering/Engine2_Canister_Storage)
 "rZr" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/toy/figure/captain,
@@ -57085,8 +57227,7 @@
 "saw" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/glass,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
@@ -57101,7 +57242,7 @@
 /obj/random/trash,
 /obj/structure/table/steel,
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "sbr" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -57433,6 +57574,15 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
+"sgc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/white{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "sgm" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 8
@@ -57550,9 +57700,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
 "siU" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -58361,7 +58510,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber1)
 "suJ" = (
 /obj/effect/floor_decal/industrial/arrows/blue,
@@ -58517,8 +58666,7 @@
 "sxg" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/beige/bordercorner,
@@ -58583,9 +58731,8 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
@@ -58673,6 +58820,11 @@
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3)
 "szK" = (
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftStar)
 "sAc" = (
@@ -59148,8 +59300,7 @@
 "sIi" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -59264,9 +59415,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber3)
 "sJb" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
@@ -59486,9 +59636,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "sMO" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -59765,8 +59914,7 @@
 /area/SouthernCrossV2/Medical/Surgery_Storage)
 "sQc" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/structure/cable/green{
 	d1 = 2;
@@ -60093,9 +60241,8 @@
 /area/SouthernCrossV2/Bridge/AI_Upload_Hall)
 "sWi" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Secondary Engine Power";
@@ -60104,6 +60251,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
@@ -60367,13 +60518,13 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/techfloor,
-/obj/structure/cable/cyan{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/cable/white{
+/obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/greengrid,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -60419,6 +60570,11 @@
 	icon_state = "2-8"
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftStar)
 "tbC" = (
@@ -60440,7 +60596,7 @@
 	color = "yellow";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "tbQ" = (
 /obj/effect/floor_decal/industrial/hatch,
@@ -60882,6 +61038,7 @@
 	color = "yellow";
 	dir = 1
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3)
 "thx" = (
@@ -60890,8 +61047,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -61131,11 +61287,11 @@
 	pixel_x = 32;
 	pixel_y = -4
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 4;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 4
 	},
 /obj/machinery/light{
 	dir = 4;
@@ -61234,9 +61390,8 @@
 /area/SouthernCrossV2/Harbor/For_3_Deck_Airlock_Access_2)
 "tln" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
@@ -61418,8 +61573,7 @@
 	color = "yellow";
 	dir = 1
 	},
-/obj/structure/lattice,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "toX" = (
 /obj/structure/railing/grey{
@@ -61431,6 +61585,10 @@
 	icon_state = "32-1"
 	},
 /obj/structure/lattice,
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "toY" = (
@@ -61600,8 +61758,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -61895,7 +62052,7 @@
 	color = "yellow";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "tAO" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
@@ -62013,8 +62170,7 @@
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_2)
 "tCO" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Port_3_Deck_Airlock_Access)
@@ -62023,9 +62179,8 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
@@ -62063,7 +62218,7 @@
 	color = "yellow";
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
 "tDY" = (
 /obj/machinery/door/firedoor/border_only,
@@ -62097,9 +62252,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber1)
 "tEM" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber1)
@@ -62648,8 +62802,7 @@
 /obj/structure/undies_wardrobe,
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/item/device/threadneedle{
 	pixel_y = 11;
@@ -62680,8 +62833,7 @@
 "tOx" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -62883,6 +63035,11 @@
 "tSp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
+	},
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -63093,9 +63250,11 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Dormitory_05)
 "tWL" = (
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2)
+/obj/random/trash,
+/obj/machinery/atmospherics/binary/pump/high_power,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "tWS" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -63291,6 +63450,7 @@
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
 "tZh" = (
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "tZj" = (
@@ -63373,8 +63533,7 @@
 /area/SouthernCrossV2/Engineering/Construction_Area)
 "ubW" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
@@ -63636,11 +63795,11 @@
 /obj/machinery/cash_register/civilian{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 8;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
@@ -63914,8 +64073,7 @@
 "uiX" = (
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -64133,6 +64291,15 @@
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
+"umX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "uni" = (
 /obj/structure/sign/department/atmos{
 	layer = 3.5;
@@ -64375,6 +64542,10 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftStarChamber1)
 "urv" = (
@@ -64444,8 +64615,7 @@
 /area/space)
 "use" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -64528,9 +64698,8 @@
 /area/SouthernCrossV2/Bridge/AI_Upload_Hall)
 "ute" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
@@ -64622,9 +64791,8 @@
 	},
 /obj/structure/table/glass,
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
@@ -64633,8 +64801,7 @@
 "uuD" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/table/glass,
 /obj/item/roller{
@@ -64922,8 +65089,7 @@
 /area/SouthernCrossV2/Bridge/CMO_Quarters)
 "uzx" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -65233,6 +65399,10 @@
 	dir = 8
 	},
 /obj/machinery/light/small,
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 1
+	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2)
 "uDO" = (
@@ -65257,8 +65427,7 @@
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "uDZ" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -65359,9 +65528,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber1)
 "uFm" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -65562,7 +65730,7 @@
 "uKF" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/junk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1)
 "uKX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -65673,9 +65841,8 @@
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
 "uMh" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Stairwell)
@@ -65746,8 +65913,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/item/device/threadneedle{
 	pixel_y = 11;
@@ -65945,8 +66111,7 @@
 /obj/structure/table/bench/marble,
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Dormitory_10)
@@ -66034,6 +66199,12 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
+"uRh" = (
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2)
 "uRl" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 8
@@ -66278,6 +66449,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
 "uUN" = (
@@ -66458,30 +66634,16 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Star_3_Deck_Airlock_Access)
 "uWK" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows/red{
+/obj/structure/railing/grey{
+	color = "yellow";
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/arrows/red,
-/obj/machinery/flasher{
-	id = "testthis";
-	name = "Doorframe mounted flash";
-	layer = 2.5
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
 	},
-/obj/machinery/door/airlock/angled_bay/vault{
-	name = "AI Core";
-	req_access = list(16);
-	req_one_access = list(16);
-	dir = 8;
-	locked = 1
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Bridge/AI_Core_Chamber)
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_AftCorridor1)
 "uWM" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -67013,8 +67175,7 @@
 /area/SouthernCrossV2/Medical/Deck3_Corridor)
 "veg" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
@@ -67117,8 +67278,7 @@
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_1)
 "vfS" = (
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber1)
@@ -67238,9 +67398,8 @@
 /area/SouthernCrossV2/Bridge/Deck3_Corridor)
 "vht" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -67462,16 +67621,14 @@
 "vlA" = (
 /obj/item/weapon/tool/wirecutters/brass,
 /obj/structure/table/steel,
-/obj/item/stack/cable_coil/white{
-	pixel_x = 4
-	},
-/obj/item/stack/cable_coil/white{
-	pixel_y = 5;
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan{
+	pixel_y = 10;
 	pixel_x = 1
 	},
-/obj/item/stack/cable_coil/white{
-	pixel_y = 9;
-	pixel_x = -1
+/obj/item/stack/cable_coil/cyan{
+	pixel_y = 4;
+	pixel_x = -6
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
@@ -67934,8 +68091,7 @@
 /area/SouthernCrossV2/Domicile/Dormitory_05)
 "vtd" = (
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -68186,11 +68342,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Bridge/Deck3_Corridor)
 "vxI" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 4
-	},
-/turf/simulated/open,
+/turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftStarChamber1)
 "vxP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -68625,9 +68777,8 @@
 /area/SouthernCrossV2/Bridge/Deck3_Corridor)
 "vDz" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Bridge/Captain_Office)
@@ -68699,9 +68850,8 @@
 /area/SouthernCrossV2/Bridge/Breakroom)
 "vEw" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForPort_Chamber1)
@@ -68870,7 +69020,7 @@
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "vHp" = (
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -69124,7 +69274,8 @@
 	charge = 2e+006;
 	input_attempt = 1;
 	input_level = 100000;
-	output_level = 200000
+	output_level = 200000;
+	output_attempt = 0
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -69138,8 +69289,7 @@
 "vJZ" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Medical/Patient_1)
@@ -69352,17 +69502,19 @@
 /obj/effect/floor_decal/industrial/arrows/red{
 	dir = 1
 	},
-/obj/machinery/door/airlock/angled_bay/secure{
-	dir = 4;
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
 	id_tag = "SC-engine_access_hatch";
-	name = "Airtight Hatch";
 	locked = 1;
-	req_access = list(11);
-	req_one_access = list(12)
+	req_access = list(11)
 	},
-/obj/machinery/door/blast/radproof/open{
+/obj/machinery/door/blast/regular{
 	id = "SC-GCemitterview";
-	layer = 3.5
+	layer = 3.3;
+	name = "Reactor Blast Door";
+	icon_state = "pdoor0";
+	density = 0;
+	opacity = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -69824,8 +69976,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForStar)
@@ -69894,18 +70045,9 @@
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Dormitory_05)
 "vXz" = (
-/obj/effect/floor_decal/industrial/loading/blue{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/obj/structure/sign/department/dock{
-	name = "HARBOR department";
-	desc = "A sign indicating the location for Harbor department. Use the nearby chute for quick access."
-	},
-/turf/simulated/floor/tiled/monotile{
-	color = "#989898"
-	},
-/area/SouthernCrossV2/Commons/For_3_Deck_Stairwell)
+/obj/effect/catwalk_plated/techmaint,
+/turf/simulated/floor/glass/reinforced,
+/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1)
 "vXB" = (
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Chamber1)
@@ -69970,7 +70112,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber1)
 "vYr" = (
 /obj/structure/cable{
@@ -70610,8 +70752,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/machinery/button/windowtint{
 	name = "S-window tint control";
@@ -70722,8 +70863,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/SouthernCrossV2/Domicile/Dormitory_04)
@@ -70744,8 +70884,7 @@
 "wlX" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -70761,9 +70900,8 @@
 /area/SouthernCrossV2/Domicile/Dormitory_05)
 "wma" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -71481,6 +71619,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
 "wxE" = (
@@ -71692,11 +71835,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForStar)
@@ -71803,8 +71941,7 @@
 /obj/structure/dispenser/phoron,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/lightorange/border,
@@ -72590,7 +72727,7 @@
 	color = "yellow";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
 "wPv" = (
 /obj/structure/fitness/weightlifter,
@@ -72921,8 +73058,7 @@
 "wTa" = (
 /obj/structure/table/marble,
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /obj/item/weapon/packageWrap{
 	pixel_x = 3;
@@ -73341,7 +73477,7 @@
 	color = "yellow";
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "wZe" = (
 /obj/structure/cable/green{
@@ -73405,7 +73541,7 @@
 /area/SouthernCrossV2/Medical/Virology)
 "wZN" = (
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1)
 "xab" = (
 /obj/structure/railing/grey{
@@ -73641,11 +73777,11 @@
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_4)
 "xcP" = (
 /obj/structure/table/marble,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -73845,7 +73981,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "xfg" = (
 /obj/machinery/portable_atmospherics/canister/air,
@@ -73995,8 +74131,7 @@
 	dir = 6
 	},
 /obj/machinery/alarm{
-	name = "N-alarm";
-	pixel_y = 25
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
@@ -74024,8 +74159,7 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
@@ -74112,7 +74246,7 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Bridge/CE_Quarters)
 "xjG" = (
-/obj/item/modular_computer/console/preset/research,
+/obj/item/modular_computer/console/preset/civilian,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -74284,8 +74418,7 @@
 /obj/structure/undies_wardrobe,
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/item/device/threadneedle{
 	pixel_y = 11;
@@ -74477,7 +74610,7 @@
 	dir = 1
 	},
 /obj/machinery/light/small,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "xoy" = (
 /obj/machinery/cell_charger{
@@ -74780,9 +74913,8 @@
 /area/SouthernCrossV2/Bridge/Leisure_Room)
 "xsF" = (
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -74817,9 +74949,8 @@
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
 "xsY" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber2)
@@ -74906,9 +75037,8 @@
 "xvg" = (
 /obj/structure/table/glass,
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
@@ -75020,7 +75150,7 @@
 /area/SouthernCrossV2/Bridge/RD_Quarters)
 "xwQ" = (
 /obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -75368,8 +75498,7 @@
 /obj/structure/cable/yellow,
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftPort)
@@ -75453,11 +75582,11 @@
 /obj/machinery/cash_register/civilian{
 	dir = 4
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 4;
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
 	layer = 3.3;
-	name = "Kitchen Shutters"
+	name = "Kitchen Shutters";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Chomp_Kitchen)
@@ -75510,7 +75639,7 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Domicile/Public_Garden)
 "xEA" = (
-/obj/structure/cable/green{
+/obj/structure/cable/white{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -75593,8 +75722,7 @@
 "xFU" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -75773,8 +75901,7 @@
 "xIq" = (
 /obj/machinery/alarm{
 	dir = 4;
-	name = "W-alarm";
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -75924,9 +76051,8 @@
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
 "xJH" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/SouthernCrossV2/Bridge/Captain_Office)
@@ -76047,8 +76173,7 @@
 "xLu" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/alarm{
-	pixel_y = 25;
-	name = "N-alarm"
+	pixel_y = 22
 	},
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Bridge/Breakroom)
@@ -76459,9 +76584,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_StarChamber1)
@@ -76472,8 +76596,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	name = "E-alarm";
-	pixel_x = 25
+	pixel_x = 22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -76576,9 +76699,8 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	pixel_y = -25;
-	name = "S-alarm";
-	dir = 1
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/bluegrid,
 /area/SouthernCrossV2/Bridge/Cyborg_Station)
@@ -76732,7 +76854,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/cable/pink{
+/obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -77046,9 +77168,8 @@
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "yaw" = (
 /obj/machinery/alarm{
-	name = "E-alarm";
 	dir = 8;
-	pixel_x = 25
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForPort_Corridor2)
@@ -77062,6 +77183,9 @@
 /obj/structure/railing/grey{
 	color = "yellow";
 	dir = 8
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Engineering/Construction_Area)
@@ -77234,9 +77358,8 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 8
@@ -77612,9 +77735,8 @@
 /area/SouthernCrossV2/Medical/Virology)
 "yjc" = (
 /obj/machinery/alarm{
-	name = "W-alarm";
 	dir = 4;
-	pixel_x = -25
+	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
@@ -77742,6 +77864,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftStar)
 "ykl" = (
@@ -77770,8 +77897,7 @@
 "ykt" = (
 /obj/machinery/alarm{
 	dir = 1;
-	name = "S-alarm";
-	pixel_y = -25
+	pixel_y = -22
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber3)
@@ -77875,7 +78001,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
 "ylV" = (
-/obj/item/modular_computer/console/preset/engineering,
+/obj/item/modular_computer/console/preset/ert,
 /obj/machinery/light{
 	dir = 1;
 	name = "1N-lighting fixture"
@@ -84185,7 +84311,7 @@ hjD
 ava
 dXG
 ava
-ava
+gci
 ava
 ccv
 ccv
@@ -89905,16 +90031,16 @@ mzY
 eHd
 xFr
 dLl
-xpL
+nVH
 qIw
 ehe
 ehe
 mml
-jXK
-jXK
-jXK
-jXK
-gjd
+pgQ
+pgQ
+pgQ
+pgQ
+ayO
 fHn
 jtv
 dHa
@@ -90162,7 +90288,7 @@ jqa
 hpy
 vmW
 fCr
-ary
+eTy
 uqb
 ary
 ary
@@ -90420,7 +90546,7 @@ xvN
 hZk
 gwJ
 pfq
-gwJ
+ipU
 kde
 mFO
 vly
@@ -90678,7 +90804,7 @@ dAz
 hZk
 ija
 njj
-puR
+dFh
 puR
 ocL
 gnG
@@ -90924,8 +91050,8 @@ sZu
 eHp
 kgk
 oOx
-esF
-esF
+oQZ
+oQZ
 wHS
 kXZ
 oOx
@@ -90936,15 +91062,15 @@ wPJ
 mwZ
 nlI
 nhg
-puR
+dFh
 puR
 oFF
 wPJ
-pbI
-hOk
-csy
-twp
-tZQ
+puR
+gtE
+nhg
+puR
+dFh
 puR
 gjd
 tfI
@@ -91183,7 +91309,7 @@ vxq
 fey
 oOx
 gmz
-oQZ
+rZq
 moy
 dNq
 oOx
@@ -91194,11 +91320,11 @@ wPJ
 uAL
 cnv
 odf
-twp
+ghY
 sKt
 ciH
 cwb
-eQJ
+pbI
 vTu
 wuj
 twp
@@ -91456,11 +91582,11 @@ twp
 epU
 xBe
 wPJ
-pMu
+dFh
 puR
 nhg
 puR
-rXN
+dFh
 puR
 gjd
 uBR
@@ -92227,14 +92353,14 @@ eQJ
 cnv
 xRB
 twp
-tZQ
-puR
-ocL
-eQJ
+msq
+pbI
+tWL
+ghY
 vTu
 xDk
 twp
-tZQ
+msq
 puR
 gjd
 fHn
@@ -92472,7 +92598,7 @@ cHp
 uDZ
 ufa
 eaY
-jqn
+hEy
 aPD
 joW
 sOE
@@ -92485,14 +92611,14 @@ lkB
 puR
 puR
 puR
-qvB
+puR
+gxt
 puR
 puR
-kut
-twp
-twp
-twp
-msq
+puR
+puR
+puR
+puR
 puR
 vSq
 eQx
@@ -92743,8 +92869,8 @@ lzN
 twp
 twp
 twp
-ghY
 twp
+ghY
 pXp
 twp
 twp
@@ -96291,7 +96417,7 @@ apc
 dHa
 elu
 lLJ
-frX
+cik
 pOt
 clB
 clB
@@ -96379,7 +96505,7 @@ qRA
 qRA
 qRA
 nVM
-pgQ
+heQ
 qBZ
 xyE
 dHa
@@ -96636,7 +96762,7 @@ uHI
 udu
 muz
 qRA
-fxW
+dRW
 liY
 oKg
 xyE
@@ -97632,7 +97758,7 @@ qTm
 qTm
 tNr
 qCG
-qCG
+ezC
 tcw
 eUk
 bBZ
@@ -98137,7 +98263,7 @@ cni
 pbh
 orE
 mjG
-wYU
+qvB
 oAF
 rbQ
 kmO
@@ -98653,7 +98779,7 @@ hwu
 gam
 aWE
 jCc
-wYU
+ier
 oAF
 hJs
 aVT
@@ -98919,7 +99045,7 @@ gbu
 xKv
 pKJ
 wOf
-gbu
+lGS
 oAF
 cji
 szC
@@ -103285,7 +103411,7 @@ aoa
 apc
 hbN
 hbN
-mtj
+edc
 jGw
 mqp
 yjc
@@ -104556,7 +104682,7 @@ idA
 pAl
 ylV
 iIX
-oDR
+avO
 dad
 pWH
 rvz
@@ -104814,7 +104940,7 @@ tWG
 bXW
 pMH
 erg
-avO
+oDR
 hIz
 blQ
 hcQ
@@ -105190,7 +105316,7 @@ xvd
 fke
 uXD
 xNK
-uBy
+iSZ
 xWY
 dHa
 dHa
@@ -105447,7 +105573,7 @@ xso
 tja
 kWj
 ihy
-iSZ
+uWK
 uBy
 xWY
 dHa
@@ -105533,7 +105659,7 @@ aqj
 kqq
 hjD
 hjD
-hjD
+bUf
 mJP
 oaL
 oaL
@@ -105798,7 +105924,7 @@ hag
 cNm
 cNm
 cNm
-cNm
+esF
 tTr
 qGo
 gGw
@@ -106080,13 +106206,13 @@ sdA
 sdA
 sdA
 rjS
-gjw
+sMO
 vni
 sdA
 qIf
-vXz
+sdA
 lxK
-gxt
+aaM
 pdW
 wUP
 wUP
@@ -106568,11 +106694,11 @@ hjD
 oaL
 rZz
 uLN
-pQl
+hOk
 tSp
 irl
-cKn
-cKn
+hpR
+umX
 cKn
 cKn
 cSs
@@ -106828,10 +106954,10 @@ bqN
 iUS
 xGf
 xGf
-ayO
-hpR
-hpR
-ffT
+euR
+xGf
+xEA
+euR
 pLe
 oHc
 mZV
@@ -107086,7 +107212,7 @@ bqN
 cLD
 xGf
 ezD
-uWK
+sHc
 ezD
 dQv
 aLj
@@ -107347,7 +107473,7 @@ tTr
 ifx
 tTr
 tTr
-aLj
+frX
 wvZ
 wvZ
 mGv
@@ -107860,10 +107986,10 @@ eOx
 cLD
 tTr
 tTr
-cLD
-tTr
-tTr
 nTn
+tTr
+tTr
+frX
 wvZ
 wvZ
 rTI
@@ -108118,7 +108244,7 @@ bqN
 cLD
 xGf
 ezD
-sHc
+lSj
 ezD
 ihn
 tbb
@@ -108376,13 +108502,13 @@ bqN
 iUS
 xGf
 xGf
-euR
+yhJ
 xGf
 xEA
-yhJ
+kYk
 pLe
 oHc
-rTI
+djU
 pQQ
 oZK
 eiK
@@ -108636,8 +108762,8 @@ lBH
 nPP
 iVn
 rvL
+sgc
 ouO
-rxL
 laf
 ktl
 bPl
@@ -108892,9 +109018,9 @@ qED
 vmy
 jRl
 dhi
+rXN
 uLN
-uLN
-uLN
+pQl
 blt
 lBH
 kYN
@@ -109410,7 +109536,7 @@ vfq
 cNm
 cNm
 cNm
-cNm
+esF
 tTr
 qGo
 gGw
@@ -110092,7 +110218,7 @@ mnR
 lsX
 nUd
 aPi
-gRp
+det
 hKY
 dHa
 dHa
@@ -111735,7 +111861,7 @@ dHa
 dHa
 dHa
 gEV
-evx
+qBK
 bHz
 gTB
 gTB
@@ -112089,7 +112215,7 @@ rFD
 rFD
 xGM
 mtz
-iwG
+rxL
 eXY
 eXY
 apc
@@ -112341,7 +112467,7 @@ hxM
 eXY
 iwG
 iwG
-iwG
+cwY
 bNg
 ntp
 umB
@@ -112369,7 +112495,7 @@ lmX
 sOH
 xmc
 iAN
-iAN
+oSc
 lkh
 uDF
 tYA
@@ -112627,9 +112753,9 @@ lmX
 sOH
 xmc
 aVj
-aVj
+uRh
 vll
-aVj
+sVX
 tYA
 fGE
 oMy
@@ -112885,9 +113011,9 @@ lmX
 lmX
 xmc
 xIE
-xIE
+nai
 lkh
-xIE
+lUf
 tYA
 uwA
 jga
@@ -113427,7 +113553,7 @@ uYL
 qMf
 msL
 tZq
-fbj
+eNh
 gwf
 gbc
 fbj
@@ -113686,7 +113812,7 @@ qMf
 phH
 mmM
 xtq
-qSC
+fNg
 gbc
 gms
 uER
@@ -116472,7 +116598,7 @@ feh
 oSW
 tMD
 bXe
-gzl
+dYS
 dYS
 dpB
 mwU
@@ -116709,10 +116835,10 @@ kcG
 pZA
 hsw
 axl
-tWL
-tWL
-tWL
-tWL
+ayA
+ayA
+ayA
+ayA
 rFQ
 wro
 gvN
@@ -116730,7 +116856,7 @@ gxf
 mbm
 tKz
 wPn
-bUf
+tAE
 tAE
 dpB
 tbD
@@ -116958,7 +117084,7 @@ rPo
 kcG
 kcG
 keO
-pei
+kut
 pZA
 cXq
 kcG
@@ -116967,10 +117093,10 @@ vwH
 ulO
 ayA
 ayA
-tWL
-tWL
-tWL
-tWL
+ayA
+ayA
+ayA
+ayA
 rFQ
 rFQ
 maN
@@ -116984,8 +117110,8 @@ fnZ
 kAF
 wMD
 gSg
-edc
-cwY
+gxf
+mbm
 gaI
 eaJ
 eaJ
@@ -117216,29 +117342,29 @@ kfL
 kcG
 mfp
 toW
-uNb
+ffT
 pZA
-pei
+kut
 nNW
 kcG
 vwH
 pZA
 aWm
 aWm
-tWL
-tWL
-tWL
-tWL
-tWL
+ayA
+ayA
+ayA
+ayA
+ayA
 rFQ
 jiV
 sYA
 sYA
 sYA
 qII
-sYA
-sYA
-sYA
+gzl
+gzl
+gzl
 cAA
 wZN
 gSg
@@ -117474,38 +117600,38 @@ jhv
 kcG
 tcM
 toW
-uNb
+ffT
 pZA
-uNb
-kfL
+ffT
+rcO
 kcG
 vwH
 pZA
 aWm
 aWm
-tWL
-tWL
-tWL
-tWL
-tWL
+ayA
+ayA
+ayA
+ayA
+ayA
 rFQ
 qHV
 qht
 gYn
 xlY
 rFQ
-gYn
-gYn
 hgu
-gYn
-gYn
+hgu
+hgu
+hgu
+hgu
 gSg
 gxf
 mbm
 tMD
 faj
-edc
-edc
+gxf
+gxf
 dpB
 xgV
 tbD
@@ -117732,34 +117858,34 @@ kfL
 kcG
 kcG
 aEE
-fiE
+gjw
 pZA
-fiE
+gjw
 tbM
 kcG
 hZh
 pZA
 dzC
 hum
-tWL
-tWL
-tWL
-tWL
-tWL
+ayA
+ayA
+ayA
+ayA
+ayA
 rFQ
 kxl
 xSt
 iTY
 iTY
 rFQ
-iTY
-iTY
 gWK
-iTY
-iTY
+gWK
+gWK
+gWK
+gWK
 gSg
-edc
-cwY
+gxf
+mbm
 tMD
 oeW
 gxf
@@ -118248,7 +118374,7 @@ kcG
 kcG
 clj
 dkH
-pei
+kut
 pZA
 hHO
 kcG
@@ -118532,9 +118658,9 @@ blM
 ixY
 iMd
 hIh
-qsY
-qsY
-qsY
+vXz
+vXz
+vXz
 hsc
 fdT
 pEj
@@ -118738,7 +118864,7 @@ dHa
 dbu
 fCm
 wam
-kfl
+ikV
 bDN
 wrm
 whP
@@ -118790,8 +118916,8 @@ rvp
 juv
 wLU
 hIh
-qsY
-qsY
+vXz
+vXz
 uKF
 hsc
 fCX
@@ -119048,9 +119174,9 @@ aIV
 wfT
 qXC
 hIh
-qsY
+vXz
 bCC
-qsY
+vXz
 hsc
 rRF
 rRF
@@ -119306,8 +119432,8 @@ aIV
 wfT
 pML
 hIh
-qsY
-qsY
+vXz
+vXz
 dyt
 hsc
 hsc
@@ -119565,8 +119691,8 @@ wfT
 jfX
 hIh
 uKF
-qsY
-qsY
+vXz
+vXz
 hsc
 bCU
 bCU
@@ -119822,9 +119948,9 @@ aIV
 wfT
 oSC
 hIh
-qsY
-qsY
-qsY
+vXz
+vXz
+vXz
 hsc
 qaj
 pEj
@@ -120080,9 +120206,9 @@ aIV
 wfT
 kge
 hIh
-qsY
+vXz
 bCC
-qsY
+vXz
 hsc
 lwr
 gDl
@@ -122403,8 +122529,8 @@ pAE
 kzp
 hBX
 nTH
-lSj
-cqo
+pcM
+auu
 hHB
 ufx
 fVy
@@ -123418,7 +123544,7 @@ xgk
 xRu
 xVM
 cbr
-dBo
+pMu
 lOH
 gnf
 moL
@@ -128050,7 +128176,7 @@ dHa
 boE
 boE
 boE
-rcO
+csA
 dEw
 toJ
 wBn
@@ -128311,7 +128437,7 @@ boE
 jah
 boE
 pjr
-xFd
+cqo
 xFd
 isJ
 wLV
