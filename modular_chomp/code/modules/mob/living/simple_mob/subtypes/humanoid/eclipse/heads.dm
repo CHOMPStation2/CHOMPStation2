@@ -384,16 +384,16 @@
 	if(fullshield > 0)
 		fullshield--
 		if(fullshield > 0)
-			visible_message(span_orange("<B>[P] is absorbed by the shield!.</B>"))
+			visible_message(span_warning(span_orange("<B>[P] is absorbed by the shield!.</B>")))
 		else
-			visible_message(span_orange("<B>[P] breaks the shield!!.</B>"))
+			visible_message(span_warning(span_orange("<B>[P] breaks the shield!!.</B>")))
 	else
 		..()
 		shieldrage--
 		if(shieldrage == 0)
 			shieldrage = 6
 			fullshield = 6
-			visible_message(span_orange("<B>The shield reactivates!!.</B>"))
+			visible_message(span_warning(span_orange("<B>The shield reactivates!!.</B>")))
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/do_special_attack(atom/A)
 	if(vore_fullness > 2) //If they nompf someone already
