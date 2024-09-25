@@ -103,13 +103,13 @@
 	if(W)
 		return FALSE // Already got webs here.
 
-	visible_message(span("notice", "\The [src] begins to secrete a sticky substance.") )
+	visible_message(span_notice("\The [src] begins to secrete a sticky substance."))
 	// Get our AI to stay still.
 	set_AI_busy(TRUE)
 
 	if(!do_mob(src, T, 5 SECONDS))
 		set_AI_busy(FALSE)
-		to_chat(src, span("warning", "You need to stay still to spin a web on \the [T]."))
+		to_chat(src, span_warning("You need to stay still to spin a web on \the [T]."))
 		return FALSE
 
 	W = locate() in T
@@ -149,13 +149,13 @@
 	if(W)
 		return FALSE // Already got webs here.
 
-	visible_message(span("notice", "\The [src] begins to secrete a sticky substance.") )
+	visible_message(span_notice("\The [src] begins to secrete a sticky substance."))
 	// Get our AI to stay still.
 	set_AI_busy(TRUE)
 
 	if(!do_mob(src, T, 5 SECONDS))
 		set_AI_busy(FALSE)
-		to_chat(src, span("warning", "You need to stay still to spin a web on \the [T]."))
+		to_chat(src, span_warning("You need to stay still to spin a web on \the [T]."))
 		return FALSE
 
 	W = locate() in T
@@ -209,9 +209,9 @@ ANT STRUCTURES
 	user.setClickCooldown(user.get_attack_speed(W))
 
 	if(LAZYLEN(W.attack_verb))
-		visible_message("<span class='warning'>\The [src] has been [pick(W.attack_verb)] with \the [W][(user ? " by [user]." : ".")]</span>")
+		visible_message(span_warning("\The [src] has been [pick(W.attack_verb)] with \the [W][(user ? " by [user]." : ".")]"))
 	else
-		visible_message("<span class='warning'>\The [src] has been attacked with \the [W][(user ? " by [user]." : ".")]</span>")
+		visible_message(span_warning("\The [src] has been attacked with \the [W][(user ? " by [user]." : ".")]"))
 
 	var/damage = W.force / 4.0
 
@@ -250,8 +250,8 @@ ANT STRUCTURES
 			return
 		else if(L.m_intent == "run")
 			L.visible_message(
-				"<span class='danger'>[L] steps in \the [src].</span>",
-				"<span class='danger'>You step in \the [src]!</span>",
+				span_danger("[L] steps in \the [src]."),
+				span_danger("You step in \the [src]!"),
 				"<b>You hear a strange rustling!</b>"
 				)
 			attack_mob(L)
