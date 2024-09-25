@@ -50,7 +50,7 @@
 		return
 	to_chat(user, "You push on the [src].")
 	if(P.weather_holder == weather_requirment)
-		visible_message(span_orange("<B>The [src] slowly opens!.</B>"))
+		visible_message(span_warning(span_orange("<B>The [src] slowly opens!.</B>")))
 		density = FALSE
 		icon_state = "open_door"
 
