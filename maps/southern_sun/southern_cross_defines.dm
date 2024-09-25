@@ -111,7 +111,7 @@ but they don't actually change anything about the load order
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja)
 	unit_test_exempt_from_atmos = list(/area/SouthernCrossV2/Engineering/Telecomms_Network, /area/SouthernCrossV2/Security/Transit_Turrets)
 
-	planet_datums_to_make = list(/datum/planet/sif,/datum/planet/thor) //This must be added to load maps at round start otherwise they will have weather or sun.
+	planet_datums_to_make = list(/datum/planet/sif,/datum/planet/thor, /datum/planet/tyr) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 	map_levels = list(
 			//Z_LEVEL_STATION_MAINTS, (Removed for new map. KAS)
