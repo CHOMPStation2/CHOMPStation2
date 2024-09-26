@@ -329,7 +329,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!CONFIG_GET(flag/antag_hud_allowed) && !client.holder) // CHOMPEdit
 		to_chat(src, "<span class='filter_notice'>[span_red("Admins have disabled this for this round.")]</span>")
 		return
-	if(jobban_isbanned(src, "AntagHUD"))
+	if(jobban_isbanned(src, JOB_ANTAGHUD))
 		to_chat(src, "<span class='filter_notice'>[span_red("<B>You have been banned from using this feature</B>")]</span>")
 		return
 	if(CONFIG_GET(flag/antag_hud_restricted) && !has_enabled_antagHUD && !client.holder) // CHOMPEdit
@@ -668,7 +668,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 
 	//VOREStation Add Start
-	if(jobban_isbanned(src, "GhostRoles"))
+	if(jobban_isbanned(src, JOB_GHOSTROLES))
 		to_chat(src, "<span class='warning'>You cannot become a mouse because you are banned from playing ghost roles.</span>")
 		return
 	//VOREStation Add End

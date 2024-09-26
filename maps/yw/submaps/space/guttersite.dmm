@@ -6178,7 +6178,6 @@
 	pixel_x = -5;
 	pixel_y = -26;
 	req_one_access = list();
-	step_x = 0
 	},
 /turf/simulated/floor/plating/eris/under/airless,
 /area/tether_away/guttersite/docking)

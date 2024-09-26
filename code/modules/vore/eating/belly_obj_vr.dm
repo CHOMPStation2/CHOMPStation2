@@ -507,6 +507,7 @@
 	"noise_freq",
 	"private_struggle",
 	"item_digest_logs",
+	"show_fullness_messages",
 	"digest_max", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
@@ -2698,6 +2699,7 @@
 	dupe.entrance_logs = entrance_logs
 	dupe.noise_freq = noise_freq
 	dupe.item_digest_logs = item_digest_logs
+	dupe.show_fullness_messages = show_fullness_messages
 	dupe.digest_max = digest_max //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen

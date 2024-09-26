@@ -138,10 +138,11 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 //Dissasociate ticket
 /datum/tickets/proc/ClientLogout(client/C)
 	if(C.current_ticket)
-		C.current_ticket.AddInteraction("Client disconnected.")
-		// C.current_ticket.initiator.mob.clear_alert("open ticket") // Uncomment this line to enable player-side ticket ui
-		C.current_ticket.initiator = null
-		C.current_ticket = null
+		var/datum/ticket/T = C.current_ticket
+		T.AddInteraction("Client disconnected.")
+		// T.initiator.mob.clear_alert("open ticket") // Uncomment this line to enable player-side ticket ui
+		T.initiator = null
+		T = null
 
 //Get a ticket given a ckey
 /datum/tickets/proc/CKey2ActiveTicket(ckey)

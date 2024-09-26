@@ -16,8 +16,8 @@ replace=${REPLACE}
 if grep -q '#include[[:space:]]\"maps\\tether\\tether.dm\"' $BASENAME.dme && $replace; then
   sed -i 's/#include[[:space:]]\"maps\\tether\\tether.dm\"/#include\ \"maps\\'${MAP}'\\'${MAP}'.dm\"/g' $BASENAME.dme
   replace=false
-elif grep -q '#include[[:space:]]\"maps\\stellardelight\\stellar_delight.dm\"' $BASENAME.dme && $replace; then
-  sed -i 's/#include[[:space:]]\"maps\\stellardelight\\stellar_delight.dm\"/#include\ \"maps\\'${MAP}'\\'${MAP}'.dm\"/g' $BASENAME.dme
+elif grep -q '#include[[:space:]]\"maps\\stellar_delight\\stellar_delight.dm\"' $BASENAME.dme && $replace; then
+  sed -i 's/#include[[:space:]]\"maps\\stellar_delight\\stellar_delight.dm\"/#include\ \"maps\\'${MAP}'\\'${MAP}'.dm\"/g' $BASENAME.dme
   replace=false
 elif grep -q '#include[[:space:]]\"maps\\groundbase\\groundbase.dm\"' $BASENAME.dme && $replace; then
   sed -i 's/#include[[:space:]]\"maps\\groundbase\\groundbase.dm\"/#include\ \"maps\\'${MAP}'\\'${MAP}'.dm\"/g' $BASENAME.dme
@@ -25,13 +25,11 @@ elif grep -q '#include[[:space:]]\"maps\\groundbase\\groundbase.dm\"' $BASENAME.
 fi
 
 # Compile a copy of the codebase, and print errors as Github Actions annotations
-tools/build/build --ci tgui tg-font # compile tgui bundle
-DreamMaker $BASENAME.dme > compile.log
+tools/build/build --ci dm -DCIBUILDING -DCITESTING
 exitVal=$?
-cat compile.log
-if [ $exitVal -gt 0 ]; then
-	sed -E -n 's/^(.+?\.dm):([0-9]+):(error|warning): (.+)$/::\3 file=\1,line=\2::\4/gp' < compile.log
-fi
+# if [ $exitVal -gt 0 ]; then
+# 	sed -E -n 's/^(.+?\.dm):([0-9]+):(error|warning): (.+)$/::\3 file=\1,line=\2::\4/gp'
+# fi
 
 # Compile failed on map_test
 if [ $exitVal -gt 0 ] && [ $TEST_DEFINE = "MAP_TEST" ]; then
