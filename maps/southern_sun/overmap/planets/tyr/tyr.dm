@@ -137,6 +137,12 @@
 /area/surface/tyr/precursorruins/northwest
 	name = "Perception Training Chamber"
 
+/area/surface/tyr/precursorruins/cliffchamber
+
+/area/surface/tyr/precursorruins/airmaze
+
+/area/surface/tyr/precursorruins/spotthediffrence
+
 /turf/unsimulated/wall/planetary/normal/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
