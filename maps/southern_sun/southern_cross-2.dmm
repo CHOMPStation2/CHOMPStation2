@@ -3559,7 +3559,8 @@
 	id = "sc-GCsecurityreception";
 	name = "Reception Shutters Control";
 	pixel_x = -24;
-	req_access = list(28)
+	req_access = list(28);
+	pixel_y = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -3569,6 +3570,15 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the brig foyer.";
+	id = "SC-ODsecurityfoyer";
+	name = "Brig Foyer Doors";
+	req_access = list(63);
+	dir = 4;
+	pixel_y = -5;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Security/Reception)
@@ -3945,11 +3955,6 @@
 /area/SouthernCrossV2/Security/HoS_Office)
 "aiz" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
@@ -3960,7 +3965,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
 "aiA" = (
@@ -4861,6 +4865,11 @@
 "akI" = (
 /obj/random/junk,
 /obj/structure/table/steel,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_StarCorridor1)
 "akJ" = (
@@ -5223,11 +5232,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
 "alU" = (
-/obj/machinery/smartfridge/drinks/showcase,
-/obj/machinery/firealarm{
-	pixel_y = -25;
-	name = "S-fire alarm";
-	dir = 1
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	dir = 1;
+	pixel_y = -13
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -6851,6 +6859,11 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/engineering,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_StarCorridor1)
 "ass" = (
@@ -9472,6 +9485,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "aAZ" = (
@@ -10192,10 +10210,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Prison_Wing)
 "aDy" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -10205,6 +10219,11 @@
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
+	},
+/obj/machinery/computer/guestpass{
+	dir = 4;
+	pixel_x = -19;
+	name = "1W-guest pass terminal"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
@@ -12119,10 +12138,8 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Storage)
 "aJt" = (
-/obj/machinery/shield_capacitor{
-	dir = 8
-	},
-/obj/structure/cable/green{
+/obj/machinery/shield_capacitor,
+/obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
 	},
@@ -15659,6 +15676,11 @@
 /obj/machinery/light{
 	dir = 1;
 	name = "1N-lighting fixture"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
@@ -19223,11 +19245,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Medical/Treatment_Hall)
 "bfF" = (
-/obj/structure/cable/green{
+/obj/machinery/shield_gen/external,
+/obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/machinery/shield_gen/external,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
 "bfG" = (
@@ -19831,26 +19853,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Emergency_EVA)
 "bhm" = (
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the brig foyer.";
-	id = "SC-ODsecurityfoyer";
-	name = "Brig Foyer Doors";
-	req_access = list(63);
-	dir = 1;
-	pixel_y = -31;
-	pixel_x = -4
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the brig foyer.";
-	id = "BrigFoyer";
-	name = "Brig Foyer Doors";
-	req_access = list(63);
-	dir = 1;
-	pixel_y = -31;
-	pixel_x = 5
-	},
-/turf/simulated/floor/glass/reinforced,
-/area/SouthernCrossV2/Security/Reception)
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck2_Civilian_StarCorridor1)
 "bho" = (
 /obj/structure/railing/grey{
 	color = "yellow";
@@ -21738,7 +21747,6 @@
 /turf/simulated/floor/carpet,
 /area/SouthernCrossV2/Cargo/QM_Office)
 "bnP" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "bnQ" = (
@@ -21867,8 +21875,8 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/button/remote/driver{
 	id = "SC-MSdisposals";
-	name = "Chapel Mass Driver";
-	pixel_x = -24
+	pixel_x = -24;
+	name = "trash mass driver button"
 	},
 /turf/simulated/floor,
 /area/SouthernCrossV2/Cargo/Waste_Disposals)
@@ -27862,8 +27870,7 @@
 /area/SouthernCrossV2/Medical/FirstAid_Storage)
 "bKm" = (
 /obj/machinery/sleep_console{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -29934,6 +29941,11 @@
 /obj/machinery/door/airlock/maintenance/int{
 	name = "Gym Access"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Gym)
 "bRA" = (
@@ -30631,7 +30643,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Security/Armory)
 "bUn" = (
-/obj/structure/cable/green{
+/obj/structure/cable{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
@@ -30983,9 +30995,8 @@
 	},
 /obj/machinery/door/airlock/angled_bay/double/glass/command{
 	dir = 8;
-	req_one_access = list(18);
 	req_access = null;
-	name = "E.V.A."
+	name = "Vault Lobby"
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -31557,6 +31568,11 @@
 	name = "Chapel Access"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_ForStarCorridor2)
 "bWZ" = (
@@ -32081,7 +32097,6 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Cargo/For_Tool_Storage)
 "bYV" = (
-/obj/machinery/vending/foodmeat,
 /obj/machinery/light{
 	dir = 4;
 	name = "1E-light fixture"
@@ -34068,21 +34083,41 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Library)
 "cfo" = (
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/storage/box/donkpockets{
+	pixel_x = 7;
+	pixel_y = -7
+	},
+/obj/item/weapon/storage/box/donkpockets/berry{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/item/weapon/storage/box/donkpockets/gondola{
+	pixel_x = -9;
+	pixel_y = -7
+	},
+/obj/item/weapon/storage/box/donkpockets/honk{
+	pixel_x = -9;
+	pixel_y = -3
+	},
+/obj/item/weapon/storage/box/donkpockets/pizza{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/item/weapon/storage/box/donkpockets/spicy{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/obj/item/weapon/storage/box/donkpockets/teriyaki{
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/box/donkpockets/teriyaki{
+	pixel_y = 5
+	},
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
 	pixel_y = -27;
 	name = "1S-extinguisher cabinet"
-	},
-/obj/machinery/chemical_dispenser/bar_soft/full{
-	dir = 8;
-	pixel_x = 13
-	},
-/obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
-	pixel_x = -3
-	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
-	pixel_x = 3
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -35303,31 +35338,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Security/Armory)
 "ciN" = (
-/obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/glass/rag,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
-/obj/item/weapon/flame/lighter/zippo/skull{
-	pixel_y = 2;
-	pixel_x = -7
-	},
-/obj/item/clothing/head/that{
-	pixel_x = -8;
-	pixel_y = 11
-	},
-/obj/item/weapon/book/codex/chef_recipes{
-	pixel_y = 4;
-	pixel_x = 9
-	},
-/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask{
-	pixel_y = 5;
-	pixel_x = 3
-	},
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask{
-	pixel_y = -2;
-	pixel_x = 6
-	},
+/obj/machinery/smartfridge/drinks/showcase,
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "ciO" = (
@@ -35345,6 +35356,11 @@
 	},
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 9
+	},
+/obj/machinery/computer/guestpass{
+	dir = 8;
+	pixel_x = 19;
+	name = "1E-guest pass terminal"
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
@@ -35729,7 +35745,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "ckg" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Lobby)
 "ckj" = (
@@ -36458,6 +36473,11 @@
 	icon_state = "restroom";
 	desc = "A warning sign which reads 'Restroom'."
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "cmF" = (
@@ -36884,6 +36904,11 @@
 /obj/structure/curtain/black{
 	name = "privacy curtain"
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "cou" = (
@@ -37255,11 +37280,6 @@
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "cqs" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
@@ -37271,7 +37291,6 @@
 	dir = 4
 	},
 /obj/random/trash,
-/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
 "cqt" = (
@@ -38625,6 +38644,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
+"cul" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Domicile/Aft_Restroom)
 "cum" = (
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor2)
@@ -38683,28 +38710,23 @@
 /turf/simulated/floor/tiled/airless,
 /area/SouthernCrossV2/Science/Testing_Chamber)
 "cuq" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Domicile_Substation)
 "cur" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Domicile_Substation)
 "cus" = (
 /obj/machinery/shield_capacitor{
-	dir = 1
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/green{
+/obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
 	},
@@ -39390,10 +39412,6 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Science/Server_Room)
 "cwE" = (
-/obj/structure/reagent_dispensers/beerkeg,
-/obj/item/weapon/storage/box/mixedglasses{
-	pixel_y = 14
-	},
 /obj/machinery/camera/network/security{
 	dir = 4;
 	c_tag = "D2-Dmc-Midnight Bar3";
@@ -40387,6 +40405,11 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Lobby)
 "cAu" = (
@@ -41481,67 +41504,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Engineering_Workshop)
 "cDS" = (
-/obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/box/donkpockets{
-	pixel_x = 7;
-	pixel_y = -7
-	},
-/obj/item/weapon/storage/box/donkpockets/berry{
-	pixel_x = 7;
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/box/donkpockets/gondola{
-	pixel_x = -9;
-	pixel_y = -7
-	},
-/obj/item/weapon/storage/box/donkpockets/honk{
-	pixel_x = -9;
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/box/donkpockets/pizza{
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/item/weapon/storage/box/donkpockets/spicy{
-	pixel_x = -9;
-	pixel_y = 1
-	},
-/obj/item/weapon/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
-/obj/item/weapon/storage/box/donkpockets{
-	pixel_x = 7;
-	pixel_y = -7
-	},
-/obj/item/weapon/storage/box/donkpockets/gondola{
-	pixel_x = -9;
-	pixel_y = -7
-	},
-/obj/item/weapon/storage/box/donkpockets/berry{
-	pixel_x = 7;
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/box/donkpockets/honk{
-	pixel_x = -9;
-	pixel_y = -3
-	},
-/obj/item/weapon/storage/box/donkpockets/pizza{
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/item/weapon/storage/box/donkpockets/spicy{
-	pixel_x = -9;
-	pixel_y = 1
-	},
-/obj/item/weapon/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
+	},
+/obj/structure/reagent_dispensers/beerkeg,
+/obj/item/weapon/storage/box/mixedglasses{
+	pixel_y = 14
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -42550,6 +42519,11 @@
 	pixel_y = -30;
 	name = "1S-newscaster"
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "cGL" = (
@@ -43510,6 +43484,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Locker_Room)
+"cWa" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor2)
 "cWj" = (
 /obj/structure/sign/painting/public{
 	pixel_y = 32
@@ -45975,6 +45953,11 @@
 /obj/effect/floor_decal/corner/black/bordercorner{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "dEh" = (
@@ -46403,14 +46386,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/ab_Theater)
 "dIT" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/machinery/atmospherics/binary/passive_gate{
 	regulate_mode = 0;
 	unlocked = 1
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
@@ -47036,6 +47019,10 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Science_StarCorridor1)
+"dRp" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "dRD" = (
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/plating,
@@ -48767,6 +48754,25 @@
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Corridor_1)
+"enP" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "enQ" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -50077,6 +50083,11 @@
 "eHz" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/black/bordercorner,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "eHK" = (
@@ -51210,10 +51221,10 @@
 /area/SouthernCrossV2/Medical/Surgery_Viewing)
 "eSw" = (
 /obj/machinery/shield_capacitor{
-	dir = 8
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/green,
+/obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
 "eSB" = (
@@ -51685,6 +51696,11 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Gym)
@@ -53546,10 +53562,6 @@
 /area/SouthernCrossV2/Security/Boardroom)
 "fva" = (
 /obj/structure/table/standard,
-/obj/item/device/t_scanner/advanced{
-	pixel_y = 3;
-	pixel_x = 10
-	},
 /obj/item/device/measuring_tape{
 	pixel_y = 6;
 	pixel_x = -4
@@ -53571,6 +53583,10 @@
 /obj/structure/cable/green,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/item/device/t_scanner{
+	pixel_y = 4;
+	pixel_x = 9
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Science/Locker_Room)
 "fvk" = (
@@ -54982,6 +54998,11 @@
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "fOY" = (
@@ -56192,16 +56213,6 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Security/Brig)
 "gbG" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Domicile_Substation)
 "gbH" = (
@@ -57102,15 +57113,15 @@
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "glE" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/machinery/light{
 	dir = 4;
 	name = "1E-light fixture"
 	},
 /obj/machinery/shield_gen/external,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Domicile_Substation)
 "glF" = (
@@ -58495,6 +58506,19 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+"gFa" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "gFB" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 4
@@ -59651,10 +59675,6 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Stairwell)
 "gVl" = (
-/obj/structure/fireaxecabinet{
-	name = "1S-fire axe cabinet";
-	pixel_y = -29
-	},
 /obj/machinery/camera/network/security{
 	c_tag = "D2-Com-Aft Stairwell1";
 	network = list("Commons");
@@ -61305,7 +61325,6 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Stairwell)
 "hqA" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Security/Lobby)
 "hqB" = (
@@ -61971,20 +61990,15 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Science/Toxins_Storage)
 "hzO" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
+/obj/structure/cable{
+	d1 = 2;
 	d2 = 8;
-	icon_state = "1-8"
+	icon_state = "2-8"
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
@@ -64792,8 +64806,8 @@
 /area/SouthernCrossV2/Science/Testing_Lab)
 "ilR" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/green,
 /obj/machinery/shield_gen/external,
+/obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
 "ilT" = (
@@ -64821,6 +64835,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Security_AftStarCorridor2)
+"imz" = (
+/obj/machinery/vending/boozeomat,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "imD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -65066,7 +65084,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "ipx" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "ipA" = (
@@ -66073,9 +66090,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/SouthernCrossV2/Security/Firing_Range)
 "iCs" = (
-/obj/machinery/vending/foodveggie,
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/obj/structure/grille/rustic,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Maints/Deck2_Medical_AftCorridor1)
 "iCL" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -66952,6 +66969,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Aft_Corridor)
+"iMU" = (
+/obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck2_Civilian_StarCorridor1)
 "iNa" = (
 /obj/structure/sink/kitchen{
 	dir = 4;
@@ -67112,6 +67138,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Patient_Ward)
+"iPo" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "iPq" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -67977,6 +68007,11 @@
 /area/SouthernCrossV2/Security/Forensics_Office)
 "jbg" = (
 /obj/machinery/light/small,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_ForStarCorridor2)
 "jbo" = (
@@ -70722,6 +70757,14 @@
 /obj/machinery/light/small/neon/nif2,
 /turf/space,
 /area/SouthernCrossV2/Harbor/Port_Shuttlebay)
+"jPa" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/SouthernCrossV2/Domicile/Gym)
 "jPf" = (
 /obj/structure/table/standard,
 /obj/item/stack/cable_coil/random{
@@ -72441,6 +72484,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Lobby)
 "kmz" = (
@@ -73461,27 +73509,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
-/obj/machinery/turretid/stun{
-	pixel_y = 26;
-	req_access = list(29);
-	check_access = 0;
-	check_down = 0;
-	check_weapons = 1;
-	lethal_is_configurable = 0;
-	name = "transit turret control panel";
-	check_anomalies = 0;
-	check_arrest = 0;
-	check_records = 0
-	},
-/obj/machinery/power/apc/hyper{
-	name = "east bump";
-	pixel_x = 24;
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Stairwell)
 "kDd" = (
@@ -73668,6 +73695,11 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "kFL" = (
@@ -73755,6 +73787,11 @@
 "kHj" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
@@ -74588,6 +74625,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Gym)
 "kRC" = (
@@ -74875,6 +74917,18 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Security/Boardroom)
+"kUY" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor1)
 "kVa" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -74907,10 +74961,19 @@
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "kVy" = (
 /obj/structure/table/marble,
-/obj/machinery/chemical_dispenser/bar_alc/full{
-	pixel_x = -13;
-	pixel_y = 1;
-	dir = 4
+/obj/item/weapon/reagent_containers/food/drinks/flask/barflask{
+	pixel_y = 16;
+	pixel_x = 6
+	},
+/obj/item/weapon/book/codex/chef_recipes{
+	pixel_y = 10;
+	pixel_x = -7
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -75116,7 +75179,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Lobby)
 "kYA" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "kYN" = (
@@ -76501,10 +76563,15 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Shuttlebay_Corridor)
 "lte" = (
-/obj/structure/cable/green{
+/obj/structure/cable{
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
@@ -76871,6 +76938,11 @@
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Lobby)
@@ -77828,6 +77900,14 @@
 	name = "yoga mat"
 	},
 /area/SouthernCrossV2/Domicile/Gym)
+"lNg" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "lNq" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -78148,6 +78228,10 @@
 	id = "sc-GCmidnightbar";
 	layer = 3.1;
 	name = "Bar Shutters"
+	},
+/obj/machinery/light{
+	dir = 8;
+	name = "1E-light fixture"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -78538,7 +78622,7 @@
 	req_one_access = list(50)
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Cargo/Breakroom)
+/area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor1)
 "lVM" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -78893,6 +78977,13 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_ForStarCorridor1)
+"maA" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/SouthernCrossV2/Domicile/Gym)
 "maC" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows,
@@ -79079,6 +79170,10 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
+"mdu" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "mdY" = (
 /obj/structure/cable/green{
@@ -79646,6 +79741,15 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftPortCorridor1)
+"mnn" = (
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Medical_Substation)
 "mno" = (
 /obj/effect/decal/remains/tajaran,
 /obj/effect/decal/cleanable/greenglow,
@@ -83437,16 +83541,18 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2)
 "nsS" = (
-/obj/machinery/shield_capacitor,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
+/obj/machinery/shield_capacitor{
+	dir = 8
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/camera/network/security{
 	dir = 8;
 	c_tag = "D2-Eng-Substation Domicile1";
 	network = list("engineering")
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Domicile_Substation)
@@ -83712,6 +83818,11 @@
 	pixel_y = 11;
 	pixel_x = -7
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "nws" = (
@@ -83759,6 +83870,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Warehouse)
+"nxz" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Security/Forensics_Office)
 "nxC" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Bridge/HoP_Office)
@@ -84575,6 +84690,11 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Lobby)
@@ -85546,6 +85666,11 @@
 	icon_state = "1-4"
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Domicile_Substation)
 "nYH" = (
@@ -87228,6 +87353,15 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck2_Cargo_StarChamber1)
+"oxz" = (
+/obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck2_Civilian_StarCorridor1)
 "oxE" = (
 /obj/machinery/disposal/wall/cleaner{
 	name = "1W-Resleeving lost & found bin";
@@ -88706,11 +88840,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Stairwell)
 "oTP" = (
@@ -89592,6 +89721,11 @@
 /obj/machinery/door/airlock/maintenance/int{
 	name = "Chapel Access"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "pes" = (
@@ -89697,6 +89831,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Engineering/Locker_Room)
+"pfb" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "pft" = (
 /obj/effect/floor_decal/industrial/arrows/red{
 	dir = 1
@@ -91537,6 +91679,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor2)
+"pCj" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Domicile_Substation)
 "pCJ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -91699,6 +91854,10 @@
 /obj/item/weapon/stool/baystool/padded,
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Midnight_Bar)
+"pFk" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "pFy" = (
 /obj/structure/table/woodentable,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -92358,6 +92517,11 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Gym)
@@ -93060,8 +93224,8 @@
 "pWZ" = (
 /obj/structure/cable/green{
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
@@ -93472,6 +93636,11 @@
 /obj/effect/floor_decal/shuttle/blue{
 	pixel_x = -1;
 	pixel_y = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
@@ -95784,11 +95953,11 @@
 /area/SouthernCrossV2/Maints/ab_TeshDen)
 "qKX" = (
 /obj/machinery/shield_capacitor{
-	dir = 4
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/green,
 /obj/machinery/light,
+/obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
 "qLg" = (
@@ -95864,7 +96033,6 @@
 /turf/simulated/floor/tiled/airless,
 /area/SouthernCrossV2/Science/Testing_Chamber)
 "qLD" = (
-/obj/structure/grille/rustic,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -96004,6 +96172,20 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Commons/Stairwell_Star)
+"qNd" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor1)
 "qNz" = (
 /obj/item/stack/material/cardboard{
 	amount = 25
@@ -96159,6 +96341,11 @@
 	icon_state = "0-8"
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
 "qPt" = (
@@ -96717,6 +96904,11 @@
 	dir = 1;
 	pixel_y = -28
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "qYs" = (
@@ -96846,6 +97038,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/SouthernCrossV2/Security/Firing_Range)
 "rae" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "raf" = (
@@ -98228,11 +98425,6 @@
 "rsu" = (
 /obj/structure/cable/green{
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
 	},
@@ -98628,6 +98820,11 @@
 	pixel_x = 25;
 	name = "E-fire alarm"
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "rxm" = (
@@ -98664,6 +98861,16 @@
 /area/SouthernCrossV2/Engineering/Storage)
 "rxH" = (
 /obj/random/junk,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
 "rxI" = (
@@ -99655,6 +99862,11 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 8
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Lobby)
 "rHb" = (
@@ -99986,6 +100198,14 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
+"rLh" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Domicile/Chapel_Lobby)
 "rLy" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -101132,16 +101352,14 @@
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Midnight_Bar)
 "sbL" = (
-/obj/machinery/shield_capacitor{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
+/obj/machinery/shield_capacitor,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
@@ -101321,6 +101539,19 @@
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/wood/alt/panel,
 /area/SouthernCrossV2/Maints/ab_Theater)
+"sed" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "sex" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -103135,7 +103366,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_AftPortCorridor1)
 "sCt" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "sCB" = (
@@ -103717,6 +103947,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 6
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "sJF" = (
@@ -104000,6 +104235,25 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Domicile/Library)
+"sNK" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Domicile/Gym)
 "sNL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -105513,6 +105767,11 @@
 "tkC" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Lobby)
 "tkH" = (
@@ -106483,6 +106742,11 @@
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "tzj" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "tzm" = (
@@ -109017,7 +109281,19 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Security/Armory)
 "uhF" = (
-/obj/machinery/vending/boozeomat,
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	pixel_y = -13;
+	dir = 1
+	},
+/obj/item/weapon/flame/lighter/zippo/skull{
+	pixel_y = 2;
+	pixel_x = -7
+	},
+/obj/item/clothing/head/that{
+	pixel_x = -8;
+	pixel_y = 11
+	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
 "uhK" = (
@@ -109867,6 +110143,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/RD_Office)
+"usM" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Maints/Research_Substation)
 "usY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -112583,6 +112863,10 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Testing_Lab)
+"vnH" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Domicile/Aft_Restroom)
 "vnP" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable{
@@ -113336,17 +113620,17 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Science/Toxins_Mixing_Room)
 "vyg" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/random/trash,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Medical_Substation)
 "vyn" = (
@@ -113798,6 +114082,14 @@
 	},
 /turf/simulated/floor/carpet,
 /area/SouthernCrossV2/Domicile/Library_Office)
+"vES" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck2_Civilian_StarCorridor1)
 "vET" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -115013,6 +115305,19 @@
 "vZc" = (
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod3/station)
+"vZp" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "vZs" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -117826,6 +118131,20 @@
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
+"wJo" = (
+/obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck2_Civilian_StarCorridor1)
 "wJt" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -120041,6 +120360,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "xoK" = (
@@ -121453,6 +121777,16 @@
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
+"xJI" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck2_Civilian_ForStarCorridor2)
 "xJK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -123377,6 +123711,10 @@
 	name = "\improper RAD SAFE";
 	desc = "A warning sign which reads 'RADIATION SHIELDING IN THIS AREA'.";
 	pixel_x = -32
+	},
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask{
+	pixel_y = 5;
+	pixel_x = 3
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Domicile/Midnight_Kitchen)
@@ -136272,7 +136610,7 @@ sBS
 kCb
 ahz
 sbL
-lte
+pfb
 aiz
 dbv
 lUc
@@ -136571,8 +136909,8 @@ wCI
 cSJ
 uZD
 alH
-bQr
-twl
+kUY
+qNd
 tXg
 bug
 aaa
@@ -136788,9 +137126,9 @@ fCI
 bmk
 ahz
 aJt
-lte
-dZD
-bSc
+vZp
+enP
+sed
 bSc
 bSc
 ahz
@@ -137600,13 +137938,13 @@ jhR
 wsk
 evp
 wCI
-snR
-snR
+wCI
+wCI
 lVA
-snR
-snR
-snR
-iOV
+wCI
+wCI
+wCI
+bug
 aaa
 aaa
 aaa
@@ -138598,7 +138936,7 @@ gDr
 ayB
 jnX
 ahz
-ahz
+dRp
 cQN
 mNU
 iiA
@@ -138612,7 +138950,7 @@ tAt
 okh
 vVx
 wAv
-wAv
+cWa
 aEG
 bnM
 bkO
@@ -151310,9 +151648,9 @@ xvF
 jeH
 uiW
 nYE
-cur
-cur
-cur
+gFa
+pCj
+pCj
 cur
 mga
 qfA
@@ -151462,7 +151800,7 @@ aAw
 aJg
 vNX
 aQG
-aTm
+nxz
 hqA
 bdj
 biV
@@ -151502,16 +151840,16 @@ pgb
 atZ
 end
 oma
-tkH
+pFk
 ilk
 chj
 bjJ
-tkH
+pFk
 aOO
 nDR
 xCF
 oWb
-apO
+mdu
 apO
 fpT
 nZi
@@ -152540,7 +152878,7 @@ aej
 aej
 fZP
 qQk
-sMt
+iPo
 bbp
 wbB
 vTN
@@ -153263,7 +153601,7 @@ aeQ
 iSG
 aeQ
 aeQ
-bhm
+aeQ
 ahl
 clq
 aJm
@@ -153390,7 +153728,7 @@ aMR
 aMR
 bMw
 nQK
-aGz
+imz
 atA
 gPC
 gPC
@@ -153913,7 +154251,7 @@ baY
 gPC
 gPC
 yjo
-gPC
+aGz
 gPC
 wct
 vdc
@@ -155108,7 +155446,7 @@ vxj
 vxj
 vxj
 xPc
-iCs
+vxj
 jAh
 cvf
 hYU
@@ -155164,7 +155502,7 @@ jWR
 sCC
 iLA
 ckg
-bOk
+vnH
 ckQ
 blg
 nVW
@@ -156975,7 +157313,7 @@ cmH
 hPt
 bOk
 vRq
-bOk
+cul
 bOk
 uCD
 wdf
@@ -157491,7 +157829,7 @@ cmH
 nrK
 xde
 uNL
-xde
+xJI
 bWY
 nMi
 lzt
@@ -157752,7 +158090,7 @@ rvV
 hPt
 gNy
 cnL
-rir
+rLh
 nDn
 bVT
 rir
@@ -158010,7 +158348,7 @@ rvV
 eff
 gNy
 cnM
-rir
+rLh
 ozj
 hwH
 dJS
@@ -160084,10 +160422,10 @@ xGd
 xGd
 xGd
 ieU
-uQd
+oxz
 bRz
 kRv
-pOX
+sNK
 pOX
 pOX
 pOX
@@ -160342,15 +160680,15 @@ uhC
 cnP
 tIV
 ieU
-rfR
+bhm
 qPt
 kWB
-acD
+jPa
 acD
 ydd
 ydd
 acD
-acD
+jPa
 acD
 xXo
 kxM
@@ -160603,12 +160941,12 @@ ieU
 aso
 qPt
 cvg
-acD
+maA
 byp
 ydd
 ydd
 acD
-acD
+maA
 cdv
 xXo
 uqj
@@ -161106,7 +161444,7 @@ cpH
 wHC
 cnP
 ggu
-rae
+lNg
 eHz
 dEa
 kHj
@@ -161114,9 +161452,9 @@ fOV
 kHj
 sJp
 pdX
-uQd
-ieU
-rfR
+iMU
+wJo
+vES
 gWZ
 gWZ
 gWZ
@@ -168010,7 +168348,7 @@ cgs
 xCE
 rkm
 jeI
-jeI
+usM
 jeI
 tdm
 hku
@@ -168024,7 +168362,7 @@ ukV
 sBX
 nYU
 uPY
-qLx
+iCs
 kXd
 ufJ
 cwr
@@ -169832,7 +170170,7 @@ eBL
 hPZ
 lWU
 gME
-rPP
+mnn
 dIT
 ybs
 qiY
