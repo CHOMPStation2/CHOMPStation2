@@ -8,7 +8,7 @@ var/datum/planet/tyr/planet_tyr = null
 	desc = "Tyr, a hot planet." //rewrite me
 	current_time = new /datum/time/tyr()
 //	expected_z_levels = list(1) // This is defined elsewhere.
-	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/tyr
+	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/thor
 
 /datum/planet/tyr/New()
 	..()
