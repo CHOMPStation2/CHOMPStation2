@@ -26,9 +26,9 @@
 	scanner_desc = @{"[i]Stellar Body[/i]: Tyr"}
 
 	map_z = list(Z_LEVEL_DEATH_VALLEY)
-	initial_generic_waypoints = list("valley_e")
-	start_x  = 5
-	start_y  = 3
+	initial_generic_waypoints = list("valley_e", "valley_w")
+	start_x  = 15
+	start_y  = 12
 	known = TRUE
 	skybox_offset_x = 128
 	skybox_offset_y = 128

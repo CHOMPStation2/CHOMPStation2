@@ -8,12 +8,12 @@ var/datum/planet/tyr/planet_tyr = null
 	desc = "Tyr, a hot planet." //rewrite me
 	current_time = new /datum/time/tyr()
 //	expected_z_levels = list(1) // This is defined elsewhere.
-	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/thor
+	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/tyr
 
 /datum/planet/tyr/New()
 	..()
 	planet_thor = src
-	weather_holder = new /datum/weather_holder/thor(src)
+	weather_holder = new /datum/weather_holder/tyr(src)
 
 /datum/planet/tyr/update_sun()
 	..()
