@@ -1,3 +1,4 @@
+/*
 /datum/crafting_recipe/arrow_agate
 	name = "Wood arrow (agate tip)"
 	result = /obj/item/weapon/arrow/standard
@@ -25,7 +26,7 @@
 
 /datum/crafting_recipe/agate_spear
 	name = "agate spear"
-	result = /obj/item/weapon/melee/agate_hammer
+	result = /obj/item/weapon/melee/agate_spear
 	reqs = list(list(/obj/item/stack/material/wood = 3),
 		list(/obj/item/stack/material/weathered_agate = 3))
 	time = 40
@@ -86,3 +87,4 @@
 		)
 	time = 40
 	category = CAT_WEAPONRY
+*/
