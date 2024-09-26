@@ -241,3 +241,6 @@
   - maptweak: Removed floating medbay chunk
   - maptweak: Xenobio airlocks work now
   - bugfix: Fixes radio being broadcasted twice
+2024-09-26:
+  Kashargul:
+  - bugfix: some runtimes
