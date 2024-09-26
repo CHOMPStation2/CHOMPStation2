@@ -372,8 +372,8 @@
 	projectiletype = /obj/item/projectile/arc/blue_energy
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead
-	name = "Eclipse Precursor Captian"
-	icon_state = "captian"
+	name = "Eclipse Precursor Overseer"
+	icon_state = "overseer"
 	health = 300
 	maxHealth = 300
 	grab_resist = 100
