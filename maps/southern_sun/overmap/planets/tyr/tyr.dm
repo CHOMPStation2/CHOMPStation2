@@ -124,6 +124,19 @@
 
 /area/surface/tyr/eclipse_stronghold/sectorfinale
 
+/area/surface/tyr/precursorruins
+	icon_state = "bluenew"
+	requires_power = FALSE
+
+/area/surface/tyr/precursorruins/finale
+	name = "Training Final Assesment Chamber"
+
+/area/surface/tyr/precursorruins/southeast
+	name = "Relax Training Chamber"
+
+/area/surface/tyr/precursorruins/northwest
+	name = "Perception Training Chamber"
+
 /turf/unsimulated/wall/planetary/normal/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
