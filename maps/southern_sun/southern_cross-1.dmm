@@ -3689,7 +3689,8 @@
 	name = "S-window tint control";
 	pixel_x = -12;
 	pixel_y = -26;
-	id = "sc-WTcustodian"
+	id = "sc-WTcustodian";
+	range = 10
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/borderfloorwhite,
@@ -9354,6 +9355,11 @@
 /area/SouthernCrossV2/Engineering/Telecomms_Control_Room)
 "bzS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "bzT" = (
@@ -12456,7 +12462,8 @@
 	id = "sc-GCxenoflora";
 	name = "Reception Shutters Control";
 	pixel_y = -24;
-	req_access = list(28)
+	req_access = list(55);
+	req_one_access = list(47)
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -13293,6 +13300,11 @@
 /obj/effect/floor_decal/techfloor/orange,
 /obj/effect/floor_decal/techfloor/hole/right,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "cSV" = (
@@ -15842,6 +15854,10 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Security/Exploration_Ship_Bay)
+"dLd" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "dLu" = (
 /obj/machinery/firealarm{
 	pixel_y = 25;
@@ -15995,7 +16011,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "dMY" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "dNp" = (
@@ -20237,6 +20252,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Market_Stall_5)
+"eNj" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "eNk" = (
 /obj/machinery/ai_status_display{
 	name = "1E-AI display";
@@ -24799,6 +24818,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4;
 	color = "#989898"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
@@ -30311,6 +30335,11 @@
 /obj/effect/floor_decal/techfloor/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
@@ -37662,6 +37691,11 @@
 	dir = 4;
 	color = "#989898"
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "llQ" = (
@@ -41803,6 +41837,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "mEB" = (
@@ -44188,7 +44227,6 @@
 /turf/simulated/floor/grass,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "nzv" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "nzy" = (
@@ -45814,6 +45852,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1)
+"oaQ" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "oaR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -51345,10 +51387,7 @@
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 6
 	},
-/obj/structure/table/steel{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/structure/table/steel,
 /obj/item/device/lightreplacer,
 /obj/item/device/lightreplacer,
 /turf/simulated/floor/tiled/dark,
@@ -54679,7 +54718,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarChamber2)
 "qVj" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "qVn" = (
@@ -57028,8 +57066,10 @@
 	dir = 5
 	},
 /obj/machinery/power/emitter/antique{
-	dir = 4
+	dir = 4;
+	anchored = 1
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "rKl" = (
@@ -61500,6 +61540,11 @@
 "trg" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/purple,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "tri" = (
@@ -64216,6 +64261,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "uqm" = (
@@ -65201,7 +65251,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_SportsField)
 "uIl" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "uIn" = (
@@ -67597,6 +67646,14 @@
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Telecomms_Foyer)
+"vxE" = (
+/obj/machinery/door/airlock/angled_bay/standard/color/security{
+	dir = 4;
+	req_one_access = list(19,1);
+	req_access = null
+	},
+/turf/simulated/wall,
+/area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor2)
 "vxR" = (
 /obj/machinery/telecomms/server/presets/medical,
 /obj/effect/catwalk_plated/dark,
@@ -71871,6 +71928,11 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "wZg" = (
@@ -72491,6 +72553,10 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
+"xiB" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "xiM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1
@@ -91184,7 +91250,7 @@ vjR
 jbI
 arO
 ezl
-aaM
+oaQ
 dMY
 pYC
 lOW
@@ -103308,7 +103374,7 @@ jYA
 mNn
 fgr
 jYA
-jYP
+eNj
 jYP
 oJV
 abF
@@ -106607,7 +106673,7 @@ rjC
 rjC
 rjC
 rjC
-rjC
+vxE
 vIN
 amq
 vBS
@@ -106869,7 +106935,7 @@ iAD
 emE
 saS
 emE
-cnK
+dLd
 qVj
 jfT
 tFa
@@ -119048,7 +119114,7 @@ lxD
 nse
 uBF
 qFn
-qFn
+xiB
 nzv
 wax
 sHO
