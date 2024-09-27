@@ -121,9 +121,9 @@ var/datum/planet/tyr/planet_tyr = null
 /datum/weather/tyr/clear
 	name = "clear"
 	transition_chances = list(
-		WEATHER_FIRESTART = 35,
-		WEATHER_CLEAR = 30,
-		WEATHER_SANDSTORM = 35
+		WEATHER_FIRESTART = 25,
+		WEATHER_CLEAR = 305
+		WEATHER_SANDSTORM = 40
 		)
 	transition_messages = list(
 		"The sky clears up.",
@@ -170,7 +170,7 @@ var/datum/planet/tyr/planet_tyr = null
 			var/amount_blocked = H.run_armor_check(target_zone, "bio")
 			var/amount_soaked = H.get_armor_soak(target_zone, "bio")
 
-			var/damage = rand(7,7)
+			var/damage = rand(1,1)
 
 			if(amount_blocked >= 40)
 				continue
@@ -186,10 +186,10 @@ var/datum/planet/tyr/planet_tyr = null
 	name = "sandstorm"
 	icon_state = "sandstorm"
 	transition_chances = list(
-		WEATHER_FIRESTART = 25,
-		WEATHER_CLEAR = 25,
-		WEATHER_SANDSTORM = 25,
-		WEATHER_HEAVYSANDSTORM = 25)
+		WEATHER_FIRESTART = 15,
+		WEATHER_CLEAR = 55,
+		WEATHER_SANDSTORM = 15,
+		WEATHER_HEAVYSANDSTORM = 15)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)
@@ -225,10 +225,10 @@ var/datum/planet/tyr/planet_tyr = null
 	name = "fierce sandstorm"
 	icon_state = "sandstorm"
 	transition_chances = list(
-		WEATHER_FIRESTART = 25,
-		WEATHER_CLEAR = 25,
-		WEATHER_SANDSTORM = 25,
-		WEATHER_HEAVYSANDSTORM = 25)
+		WEATHER_FIRESTART = 15,
+		WEATHER_CLEAR = 55,
+		WEATHER_SANDSTORM = 15,
+		WEATHER_HEAVYSANDSTORM = 15)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)
