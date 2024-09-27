@@ -346,6 +346,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src)
 // CHOMPedit end: Combining Surgeon and Crisis.
 	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
+	src.modules += new /obj/item/weapon/holosign_creator/medical(src) //CHOMPAdd
 	var/obj/item/weapon/reagent_containers/spray/PS = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag += PS
 	PS.reagents.add_reagent("pacid", 250)
