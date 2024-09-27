@@ -62,13 +62,27 @@ export const GlobalSettings = (props: {
           icon="street-view"
           tooltip={
             (ar_projecting ? 'Allow' : 'Disallow') +
-            ' your captured souls to AR project themselves.'
+            ' your captured souls to SR project themselves.'
           }
           tooltipPosition="bottom"
           color={ar_projecting ? 'green' : 'red'}
-          onClick={() => act('toggle_ar_projecting')}
+          onClick={() => act('toggle_sr_projecting')}
         >
-          AR Projecting
+          SR Projecting
+        </Button>
+        <Button
+          icon="eye-low-vision"
+          tooltip={
+            (ar_projecting ? 'Enable' : 'Disable') +
+            ' SR vision to ' +
+            (ar_projecting ? 'see' : 'hide') +
+            ' projecting souls.'
+          }
+          tooltipPosition="bottom"
+          color={ar_projecting ? 'green' : 'red'}
+          onClick={() => act('toggle_sr_vision')}
+        >
+          SR Vision
         </Button>
         <Button
           icon={show_vore_sfx ? 'circle-play' : 'circle-pause'}

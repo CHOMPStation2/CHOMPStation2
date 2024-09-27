@@ -300,6 +300,7 @@ export type soulcatcherData = {
   selected_soul: string;
   interior_design: string;
   catch_self: BooleanLike;
+  taken_over: BooleanLike;
   catch_prey: BooleanLike;
   catch_drain: BooleanLike;
   catch_ghost: BooleanLike;
@@ -308,7 +309,7 @@ export type soulcatcherData = {
   mind_backups: BooleanLike;
   ar_projecting: BooleanLike;
   show_vore_sfx: BooleanLike;
-  taken_over: BooleanLike;
+  see_souls: BooleanLike;
 };
 
 export type DropdownEntry = {

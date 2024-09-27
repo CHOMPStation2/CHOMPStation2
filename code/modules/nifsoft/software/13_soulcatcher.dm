@@ -293,6 +293,7 @@
 /mob/living/carbon/brain/caught_soul/Login()
 	..()
 	plane_holder.set_vis(VIS_AUGMENTED, TRUE)
+	plane_holder.set_vis(VIS_SOULCATCHER, TRUE) //CHOMPAdd
 	identifying_gender = client.prefs.identifying_gender
 
 /mob/living/carbon/brain/caught_soul/Destroy()
