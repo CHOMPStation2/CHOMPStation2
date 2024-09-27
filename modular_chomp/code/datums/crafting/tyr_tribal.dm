@@ -15,6 +15,7 @@
 		list(/obj/item/stack/material/weathered_agate = 6))
 	time = 40
 	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/agate_hammer
 	name = "agate hammer"
@@ -23,6 +24,7 @@
 		list(/obj/item/stack/material/weathered_agate = 2))
 	time = 40
 	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/agate_spear
 	name = "agate spear"
@@ -31,6 +33,7 @@
 		list(/obj/item/stack/material/weathered_agate = 3))
 	time = 40
 	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/tyr_leaf_cloak
 	name = "tyr leaf cloak"
@@ -54,6 +57,7 @@
 		)
 	time = 40
 	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/prototype_engine
 	name = "prototype engine"
@@ -65,6 +69,7 @@
 		)
 	time = 40
 	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/prototype_core
 	name = "prototype core"
@@ -76,6 +81,7 @@
 		)
 	time = 40
 	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
 
 /datum/crafting_recipe/prototype_crystal
 	name = "prototype crystal"
@@ -87,4 +93,5 @@
 		)
 	time = 40
 	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
 */
