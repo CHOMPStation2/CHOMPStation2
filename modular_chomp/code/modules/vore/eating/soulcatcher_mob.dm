@@ -139,7 +139,7 @@
 
 // SR project as captured soul
 /mob/living/carbon/brain/caught_soul/vore/ar_project()
-	set name = "SR Project"
+	set name = "AR/SR Project"
 	set desc = "Project your form into Augmented Reality for those around your predator with the appearance of your loaded character."
 	set category = "Soulcatcher"
 
