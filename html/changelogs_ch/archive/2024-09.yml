@@ -244,3 +244,6 @@
 2024-09-26:
   Kashargul:
   - bugfix: some runtimes
+2024-09-27:
+  TheCaramelion:
+  - bugfix: Food replicator will use the right amount of nutriment

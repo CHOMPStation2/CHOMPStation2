@@ -1,4 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - bugfix: "Food replicator will use the right amount of nutriment"
