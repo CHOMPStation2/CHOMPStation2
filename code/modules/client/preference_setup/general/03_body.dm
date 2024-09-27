@@ -126,8 +126,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.b_synth			= save_data["synth_blue"]
 	pref.synth_markings		= save_data["synth_markings"]
 	pref.bgstate			= save_data["bgstate"]
-<<<<<<< HEAD
-	pref.body_descriptors	= save_data["body_descriptors"]
+	pref.body_descriptors	= check_list_copy(save_data["body_descriptors"])
 	//YWadd start
 	pref.wingdings			= save_data["Wingdings"]
 	pref.colorblind_mono	= save_data["colorblind_mono"]
@@ -135,9 +134,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.colorblind_taj		= save_data["colorblind_taj"]
 	pref.haemophilia		= save_data["haemophilia"]
 	//YWadd end
-=======
-	pref.body_descriptors	= check_list_copy(save_data["body_descriptors"])
->>>>>>> f88820729f... Merge pull request #16369 from Kashargul/loadout_fix
 	pref.ear_style			= save_data["ear_style"]
 	pref.r_ears				= save_data["r_ears"]
 	pref.g_ears				= save_data["g_ears"]
@@ -207,8 +203,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	save_data["synth_blue"]			= pref.b_synth
 	save_data["synth_markings"]		= pref.synth_markings
 	save_data["bgstate"]			= pref.bgstate
-<<<<<<< HEAD
-	save_data["body_descriptors"]	= pref.body_descriptors
+	save_data["body_descriptors"]	= check_list_copy(pref.body_descriptors)
 	//YWadd start
 	save_data["Wingdings"]			= pref.wingdings
 	save_data["colorblind_mono"]	= pref.colorblind_mono
@@ -216,9 +211,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	save_data["colorblind_taj"]		= pref.colorblind_taj
 	save_data["haemophilia"]		= pref.haemophilia
 	//YWadd end
-=======
-	save_data["body_descriptors"]	= check_list_copy(pref.body_descriptors)
->>>>>>> f88820729f... Merge pull request #16369 from Kashargul/loadout_fix
 	save_data["ear_style"]			= pref.ear_style
 	save_data["r_ears"]				= pref.r_ears
 	save_data["g_ears"]				= pref.g_ears

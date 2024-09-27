@@ -11,11 +11,7 @@
 	pref.alternate_languages	= check_list_copy(save_data["language"])
 	pref.extra_languages		= save_data["extra_languages"]
 	pref.language_prefixes		= save_data["language_prefixes"]
-<<<<<<< HEAD
-	pref.species				= save_data["species"] //CHOMPAdd
-=======
 	pref.species				= save_data["species"]
->>>>>>> f88820729f... Merge pull request #16369 from Kashargul/loadout_fix
 	pref.preferred_language		= save_data["preflang"]
 	pref.language_custom_keys	= check_list_copy(save_data["language_custom_keys"])
 

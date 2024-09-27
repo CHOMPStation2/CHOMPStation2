@@ -607,8 +607,6 @@
 		if(!isnull(path))
 			. += path
 
-<<<<<<< HEAD
-=======
 /proc/path2text_list(list/L)
 	. = list()
 	for(var/key in L)
@@ -627,4 +625,3 @@
 		var/list/l = i
 		return l.Copy()
 	return i
->>>>>>> f88820729f... Merge pull request #16369 from Kashargul/loadout_fix
