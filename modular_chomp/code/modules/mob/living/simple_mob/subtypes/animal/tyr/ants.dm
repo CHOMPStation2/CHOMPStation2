@@ -21,6 +21,8 @@
 
 	tame_items = list(/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 20)
 
+	faction = FACTION_TYR_ANT
+
 	butchery_loot = list(\
 		/obj/item/stack/material/steel = 6\
 		)

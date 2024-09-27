@@ -108,10 +108,12 @@
 /area/surface/tyr/north_caverns
 	name = "Tyr Caverns"
 	icon_state = "away"
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/south_caverns
 	name = "Tyr Caverns"
 	icon_state = "away"
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/eclipse_stronghold
 	name = "Base Neon"

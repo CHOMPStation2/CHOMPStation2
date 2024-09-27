@@ -1,21 +1,3 @@
-/mob/living/simple_mob/animal/tyr/hunter_insect
-	name = "flying hunter"
-	desc = "A large insect."
-	icon_state = "hornet_mantis"
-	maxHealth = 40 //three hits with an agate sword. 4 with spear.
-	health = 40
-	pass_flags = PASSTABLE //flying bug
-	movement_cooldown = 1
-
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
-
-	see_in_dark = 3 //stealth action time?
-	melee_damage_lower = 12 //Kills you 8ish if unarmored, or 10ish if wearing the tribal armor
-	melee_damage_upper = 12 //Rng numbers are wierd
-
-	hovering = TRUE
-
-
 /mob/living/simple_mob/animal/tyr/rainbow_fly
 	name = "chromatic fly"
 	desc = "A strange insect."
@@ -26,7 +8,7 @@
 	pass_flags = PASSTABLE
 	movement_cooldown = 1
 
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
+	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
 	glow_color = "#FF3300"
 	light_color = "#FF3300"
@@ -91,7 +73,7 @@
 	B.mode_flags = DM_FLAG_THICKBELLY
 	B.wet_loop = 0 //As nice as the fancy internal sounds are this is a plant.
 	B.digestchance = 20
-	B.escapechance = 0
+	B.escapechance = 20
 	B.fancy_vore = 1
 	B.vore_sound = "Squish2"
 	B.release_sound = "Pred Escape"
@@ -115,50 +97,109 @@
 		"It's cramped and dark, the air thick and heavy. Your limbs feel like lead.",
 		"Strength drains from your frame. The cramped chamber feels easier to settle into with each passing moment.")
 
-//More things
-/mob/living/simple_mob/animal/tyr/rollyinsect
-	name = "metallido"
-	desc = "A large mutant looking armadillo."
-	icon_state = "armadillo"
-	icon_dead = "armadillo_dead"
-	maxHealth = 70 //Highest health of all tyr natural wildlife. 7 hits?
-	health = 70
-	movement_cooldown = 0
+//Preadtory Things
+/obj/structure/mob_spawner/beetle_hill
+	name = "beetle tunnel"
+	desc = "An entrance to the nest of metallic ants."
+	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
+	icon_state = "hole"
+	anchored = TRUE
 
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/rollyinsect
+	spawn_delay = 10 MINUTES
 
-	melee_damage_lower = 15
-	melee_damage_upper = 15
+	spawn_types = list(
+	/mob/living/simple_mob/animal/tyr/electronic_beetle = 1,
+	/mob/living/simple_mob/animal/tyr/explode_beetle = 1,
+	)
 
-/mob/living/simple_mob/animal/tyr/rollyinsect/IIsAlly(mob/living/L) //Will attack silicons, and wildlife but will leave unarmed folks alone
-	. = ..()
-	if(!.)
-		if(issilicon(L))
-			return FALSE
-		if(ishuman(L))
-			var/mob/living/carbon/human/H = L
-			if(H.get_active_hand())
-				var/obj/item/I = H.get_active_hand()
-				if(I.force <= 1 * melee_damage_upper)
-					return TRUE
-		else if(istype(L, /mob/living/simple_mob))
-			var/mob/living/simple_mob/S = L
-			if(S.melee_damage_upper > 1 * melee_damage_upper)
-				return TRUE
+	simultaneous_spawns = 2
 
-/datum/ai_holder/simple_mob/intentional/rollyinsect
-	hostile = TRUE
-	retaliate = TRUE
-	cooperative = TRUE
-	can_flee = TRUE
-	flee_when_dying = TRUE
-	var/random_follow = TRUE // Turn off if you want to bus with crabs.
+	destructible = 1
+	health = 50
 
-/datum/ai_holder/simple_mob/intentional/rollyinsect/handle_stance_strategical() //You may obtain a temporary friend.
+/mob/living/simple_mob/animal/tyr/electronic_beetle
+	name = "charged beetle"
+	desc = "A large insect."
+	icon_state = "lighting_beetle"
+	maxHealth = 40
+	health = 40
+	pass_flags = PASSTABLE //flying bug
+	movement_cooldown = 1
+
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
+	meat_amount = 2
+
+	butchery_loot = list(\
+		/obj/item/stack/material/chitin = 1\
+		)
+
+	var/emp_heavy = 1
+	var/emp_med = 2
+	var/emp_light = 3
+	var/emp_long = 4
+
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+
+	see_in_dark = 3
+	melee_damage_lower = 12 //Kills you 8ish if unarmored, or 10ish if wearing the tribal armor
+	melee_damage_upper = 12 //Rng numbers are wierd
+
+/mob/living/simple_mob/animal/tyr/electronic_beetle/proc/explode()
+	if(empulse(src, emp_heavy, emp_med, emp_light, emp_long))
+		qdel(src)
+	return
+
+/mob/living/simple_mob/animal/tyr/electronic_beetle/death()
+	explode()
 	..()
-	if(random_follow && stance == STANCE_IDLE && !leader)
-		if(prob(10))
-			for(var/mob/living/L in hearers(holder))
-				if(!istype(L, holder))
-					holder.visible_message("<b>\The [holder]</b> starts to follow \the [L].")
-					set_follow(L, rand(20 SECONDS, 40 SECONDS))
+
+/mob/living/simple_mob/animal/tyr/explode_beetle
+	name = "charged beetle"
+	desc = "A large insect."
+	icon_state = "fire_beetle"
+	maxHealth = 40
+	health = 40
+	pass_flags = PASSTABLE //flying bug
+	movement_cooldown = 1
+
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+
+	meat_type = /obj/item/weapon/reagent_containers/food/snacks/carpmeat
+	meat_amount = 2
+
+	butchery_loot = list(\
+		/obj/item/stack/material/chitin = 1\
+		)
+
+	see_in_dark = 3
+	melee_damage_lower = 12 //Kills you 8ish if unarmored, or 10ish if wearing the tribal armor
+	melee_damage_upper = 12 //Rng numbers are wierd
+
+	var/exploded = FALSE
+	var/explosion_dev_range		= 0
+	var/explosion_heavy_range	= 1
+	var/explosion_light_range	= 2
+	var/explosion_flash_range	= 3 // This doesn't do anything iirc.
+
+	var/explosion_delay_lower	= 1 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 2 SECONDS	// Upper bound.
+
+/mob/living/simple_mob/animal/tyr/explode_beetle/death()
+	visible_message(span("critical", "\The [src]'s body begins to rupture!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	spawn(0)
+		// Flash black and red as a warning.
+		for(var/i = 1 to delay)
+			if(i % 2 == 0)
+				color = "#000000"
+			else
+				color = "#FF0000"
+			sleep(1)
+
+	spawn(delay)
+		// The actual boom.
+		if(src && !exploded)
+			visible_message(span("danger", "\The [src]'s body detonates!"))
+			exploded = TRUE
+			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
+	return ..()

@@ -121,9 +121,9 @@ var/datum/planet/tyr/planet_tyr = null
 /datum/weather/tyr/clear
 	name = "clear"
 	transition_chances = list(
-		WEATHER_FIRESTART = 25,
-		WEATHER_CLEAR = 305
-		WEATHER_SANDSTORM = 40
+		WEATHER_FIRESTART = 20,
+		WEATHER_CLEAR = 45,
+		WEATHER_SANDSTORM = 30
 		)
 	transition_messages = list(
 		"The sky clears up.",
@@ -136,6 +136,7 @@ var/datum/planet/tyr/planet_tyr = null
 
 /datum/weather/tyr/firestart
 	name = "warm winds"
+	icon_state = "ashfall_light"
 	transition_chances = list(
 		WEATHER_FIRESTART = 50,
 		WEATHER_FLAMESTORM = 50)

@@ -106,6 +106,7 @@
 #define FACTION_SWARMER "swarmer"
 #define FACTION_TEPPI "teppi"
 #define FACTION_TYR "tyr" //CHOMPadd
+#define FACTION_TYR_ANT "tyr_ants" //CHOMPadd
 #define FACTION_TUNNELCLOWN "tunnelclown"
 #define FACTION_WILD_ANIMAL "wild animal"
 #define FACTION_WOLFGIRL "wolfgirl"
