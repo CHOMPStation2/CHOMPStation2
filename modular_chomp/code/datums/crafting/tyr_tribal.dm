@@ -1,4 +1,3 @@
-/*
 /datum/crafting_recipe/arrow_agate
 	name = "Wood arrow (agate tip)"
 	result = /obj/item/weapon/arrow/standard
@@ -87,4 +86,3 @@
 		)
 	time = 40
 	category = CAT_WEAPONRY
-*/
