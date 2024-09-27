@@ -18,12 +18,16 @@
 	pref.job_talon_med		= save_data["job_talon_med"]
 	pref.job_talon_high		= save_data["job_talon_high"]
 	//VOREStation Add End
+<<<<<<< HEAD
 	pref.player_alt_titles	= save_data["player_alt_titles"]
 	//CHOMPStation Add
 	pref.job_other_low	= save_data["job_other_low"]
 	pref.job_other_med	= save_data["job_other_med"]
 	pref.job_other_high	= save_data["job_other_high"]
 	//CHOMPStation Add End
+=======
+	pref.player_alt_titles	= check_list_copy(save_data["player_alt_titles"])
+>>>>>>> f88820729f... Merge pull request #16369 from Kashargul/loadout_fix
 
 /datum/category_item/player_setup_item/occupation/save_character(list/save_data)
 	save_data["alternate_option"]	= pref.alternate_option
@@ -41,12 +45,16 @@
 	save_data["job_talon_med"]		= pref.job_talon_med
 	save_data["job_talon_high"]		= pref.job_talon_high
 	//VOREStation Add End
+<<<<<<< HEAD
 	save_data["player_alt_titles"]	= pref.player_alt_titles
 	//CHOMPStation Add
 	save_data["job_other_low"]	= pref.job_other_low
 	save_data["job_other_med"]	= pref.job_other_med
 	save_data["job_other_high"]	= pref.job_other_high
 	//CHOMPStation Add Endarkens/revert-16279-revert-16253-reprefs
+=======
+	save_data["player_alt_titles"]	= check_list_copy(pref.player_alt_titles)
+>>>>>>> f88820729f... Merge pull request #16369 from Kashargul/loadout_fix
 
 /datum/category_item/player_setup_item/occupation/sanitize_character()
 	pref.alternate_option	= sanitize_integer(pref.alternate_option, 0, 2, initial(pref.alternate_option))
