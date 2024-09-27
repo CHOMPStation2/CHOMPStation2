@@ -59,22 +59,27 @@
 /area/surface/tyr/town
 	name = "Lost Town"
 	icon_state = "green"
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/medical_center
 	name = "Lost Toww Medical Center"
 	icon_state = "away"
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/mining_depot
 	name = "Lost Town Mining Depot"
 	icon_state = "away"
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/town_hall
 	name = "Lost Town Grand Hall"
 	icon_state = "away"
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/huntery
 	name = "Lost Town Hunter Lodge"
 	icon_state = "away"
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/northern_wilderness
 	name = "Tyr Wilderness"
@@ -92,6 +97,7 @@
 	name = "Ancient Ruins"
 	icon_state = "red"
 	requires_power = FALSE
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/ancient_ruins/puzzlea
 
@@ -111,6 +117,7 @@
 	name = "Base Neon"
 	icon_state = "bluenew"
 	requires_power = FALSE //note to self, remove when I figure out how engineering works
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/eclipse_stronghold/sectora
 
@@ -127,6 +134,7 @@
 /area/surface/tyr/precursorruins
 	icon_state = "bluenew"
 	requires_power = FALSE
+	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/precursorruins/finale
 	name = "Training Final Assesment Chamber"
