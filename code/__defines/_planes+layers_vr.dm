@@ -1,5 +1,4 @@
 // "Character HUDs", aka HUDs, but not the game's UI. Things like medhuds.
-#define PLANE_SOULCATCHER			25 //CHOMPAdd Soulcatcher
 #define PLANE_CH_HEALTH_VR			26 //Hidden healthbar when at full health
 #define PLANE_CH_STATUS_R			27 //Right-side status icon
 #define PLANE_CH_BACKUP				28 //Backup implant
@@ -7,3 +6,4 @@
 #define PLANE_CH_STOMACH			-11 //Stomach Plane
 
 #define PLANE_AUGMENTED				40 //Augmented-reality plane
+#define PLANE_SOULCATCHER			41 //CHOMPAdd Soulcatcher
