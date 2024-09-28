@@ -17,10 +17,12 @@
 	var/list/choices = list()
 	// Assoc list of [ckeys => choice] who have voted. We don't want to hold clients refs.___callbackvarset(list_or_datum, var_name, var_value)
 	var/list/voted = list()
+	// For how long will it be up
+	var/vote_time = 60
 
 /datum/vote/New(var/_initiator, var/_question, list/_choices, var/_is_custom = FALSE)
 	if(SSvote.active_vote)
-		CRASH("Attemptd to start another vote with one already in progress!")
+		CRASH("Attempted to start another vote with one already in progress!")
 
 	if(_initiator)
 		initiator = _initiator
@@ -115,9 +117,8 @@
 
     return null
 
-/datum/vote/proc/announce(start_text, var/time = 60)
-    var/id = "[src]"
-    to_chat(world, span_lightpurple("<a href='byond://?src=[id];vote=open'>Click here or type <code>Vote</code> to place your vote.</a><br>\
+/datum/vote/proc/announce(start_text, var/time = vote_time)
+    to_chat(world, span_lightpurple("Type <b>vote</b> or click <a href='?src=\ref[src];[HrefToken()];vote=open'>here</a> to place your vote. \
         You have [time] seconds to vote."))
     world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3)
 
