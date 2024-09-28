@@ -197,4 +197,4 @@
 			if(params["target"] in choices)
 				voted[usr.ckey] = params["target"]
 			else
-				message_admins(SPAN_WARNING("User [key_name_admin(usr)] spoofed a vote in the vote panel!"))
+				message_admins(span_warning("User [key_name_admin(usr)] spoofed a vote in the vote panel!"))

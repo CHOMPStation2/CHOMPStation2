@@ -17,6 +17,7 @@
 
 	if(SSvote.active_vote)
 		to_chat(usr, "A vote is already in progress")
+		return
 
 	var/vote_types = subtypesof(/datum/vote)
 	vote_types |= "\[CUSTOM]"
