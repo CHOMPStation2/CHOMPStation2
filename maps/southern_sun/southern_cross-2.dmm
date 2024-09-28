@@ -472,7 +472,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -1525,7 +1525,7 @@
 	dir = 4;
 	pixel_x = 2
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -2983,7 +2983,7 @@
 /obj/machinery/vending/snack,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_1)
 "agc" = (
@@ -3710,7 +3710,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -5840,12 +5840,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_For_Corridor)
 "aoG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "aoK" = (
@@ -6239,7 +6233,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -6922,10 +6916,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
@@ -7308,7 +7299,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "atR" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -8752,7 +8743,6 @@
 /area/SouthernCrossV2/Cargo/Aft_Tool_Storage)
 "ayD" = (
 /obj/effect/floor_decal/industrial/stand_clear/blue,
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
 	},
@@ -8764,6 +8754,7 @@
 	name = "SCIENCE Department";
 	desc = "A sign indicating the location for Science department. Use the nearby chute for quick access."
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
 	},
@@ -9634,7 +9625,7 @@
 	network = list("Commons")
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "aBA" = (
@@ -9884,7 +9875,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -10073,7 +10064,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -10112,7 +10103,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -10648,7 +10639,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -12195,7 +12186,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "aJK" = (
@@ -12674,7 +12665,7 @@
 	dir = 1;
 	pixel_y = 2
 	},
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "aKZ" = (
@@ -13034,7 +13025,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_1)
 "aMc" = (
@@ -13807,7 +13798,7 @@
 	name = "1S-station holomap"
 	},
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "aOD" = (
@@ -13980,7 +13971,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "aPd" = (
 /obj/structure/table/rack{
@@ -14865,7 +14856,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -15146,7 +15137,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -15720,13 +15711,13 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/holoposter{
 	dir = 4;
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
@@ -16029,7 +16020,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -17281,7 +17272,7 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
-/turf/simulated/floor/glass,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "aZj" = (
 /obj/structure/closet/secure_closet/hos2,
@@ -17358,7 +17349,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "aZD" = (
@@ -18208,7 +18199,7 @@
 	network = list("Commons")
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Stairwell)
 "bcp" = (
@@ -18232,7 +18223,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+/obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -18543,7 +18534,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Security/Lobby)
 "bdk" = (
 /obj/structure/bed/double,
@@ -18938,17 +18929,17 @@
 	dir = 8
 	},
 /obj/structure/table/reinforced,
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	layer = 3.5;
-	name = "Medical Reception Shutters";
-	id = "sc-GCmedicalreception"
-	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
 	id = "Med Lockdown";
 	name = "Lockdown Gate";
 	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	layer = 3.5;
+	name = "Medical Reception Shutters";
+	id = "sc-GCmedicalreception"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Reception)
@@ -19326,7 +19317,7 @@
 	dir = 8;
 	color = "#00B8B2"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "bfP" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -19403,7 +19394,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
@@ -20422,15 +20413,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Security/Deck2_2_Corridor)
-"bjr" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "bjt" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/borderfloorblack{
@@ -22105,7 +22087,7 @@
 	dir = 8;
 	color = "#00B8B2"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "bpj" = (
 /obj/structure/table/rack,
@@ -22214,7 +22196,7 @@
 	network = list("Commons")
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_1)
 "bps" = (
@@ -22282,13 +22264,13 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/holoposter{
 	dir = 4;
 	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
@@ -24630,10 +24612,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Security/Visitation_Room)
 "bxv" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "bxD" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -24849,6 +24832,10 @@
 /area/SouthernCrossV2/Cargo/Waste_Disposals)
 "byp" = (
 /obj/machinery/power/rtg/reg/c,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Domicile/Gym)
 "byq" = (
@@ -25760,13 +25747,13 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/holoposter{
 	dir = 4;
 	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
@@ -26611,13 +26598,13 @@
 	dir = 8;
 	pixel_x = -3
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/holoposter{
 	dir = 4;
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
@@ -28482,26 +28469,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
-"bMR" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "bMS" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -29697,7 +29664,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -30944,7 +30911,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_2)
 "bVy" = (
@@ -31492,7 +31459,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -32064,7 +32031,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -33337,6 +33304,10 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -36;
 	name = "1S-entertainment monitor"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Domicile/Gym)
@@ -36790,17 +36761,17 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	layer = 3.5;
-	name = "Medical Reception Shutters";
-	id = "sc-GCmedicalreception"
-	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
 	id = "Med Lockdown";
 	name = "Lockdown Gate";
 	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	layer = 3.5;
+	name = "Medical Reception Shutters";
+	id = "sc-GCmedicalreception"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Reception)
@@ -37101,10 +37072,10 @@
 "cpO" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+	dir = 10
 	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
@@ -39994,7 +39965,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "cyD" = (
@@ -43443,7 +43414,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Locker_Room)
 "cWa" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor2)
 "cWj" = (
@@ -43453,7 +43424,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -44062,14 +44033,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Emergency_EVA)
-"deB" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "deQ" = (
 /obj/structure/table/steel,
 /obj/item/device/analyzer/plant_analyzer,
@@ -44349,19 +44312,20 @@
 	},
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/westright{
-	layer = 2.9
-	},
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	layer = 3.5;
-	name = "Medical Reception Shutters";
-	id = "sc-GCmedicalreception"
+	layer = 2.9;
+	req_access = list(5)
 	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
 	id = "Med Lockdown";
 	name = "Lockdown Gate";
 	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	layer = 3.5;
+	name = "Medical Reception Shutters";
+	id = "sc-GCmedicalreception"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Reception)
@@ -44387,23 +44351,6 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Engineering_PortCorridor2)
-"dix" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Stairwell)
 "diW" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -44912,7 +44859,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -45003,7 +44950,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "drh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -45512,10 +45459,10 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/white/border{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "dyX" = (
@@ -46802,7 +46749,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "dOx" = (
 /obj/structure/cable/green{
@@ -46978,7 +46925,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Science_StarCorridor1)
 "dRp" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
 "dRD" = (
@@ -47224,7 +47171,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -47371,7 +47318,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -47606,7 +47553,7 @@
 /obj/machinery/light/floortube{
 	pixel_y = -2
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -47877,7 +47824,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -48626,18 +48573,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Science/Toxins_Viewing_Port)
-"emW" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "emX" = (
 /obj/machinery/alarm{
 	pixel_y = 25
@@ -49190,20 +49125,6 @@
 	},
 /turf/simulated/floor/lino,
 /area/SouthernCrossV2/Security/Forensics_Office)
-"evl" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "evp" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -49346,7 +49267,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -49624,7 +49545,7 @@
 	network = list("Commons")
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell)
 "eBR" = (
@@ -49688,15 +49609,6 @@
 	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Distillery)
-"eDg" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_2)
 "eDi" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -49998,7 +49910,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -50350,7 +50262,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -50446,7 +50358,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /obj/machinery/holoposter{
@@ -50948,7 +50860,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -51026,16 +50938,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Armory)
-"eQH" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "eQK" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
@@ -51654,8 +51556,8 @@
 	},
 /obj/structure/cable{
 	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Gym)
@@ -51872,7 +51774,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -52001,7 +51903,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -52151,7 +52053,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -52316,7 +52218,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -52731,11 +52633,11 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
@@ -52778,7 +52680,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -53662,6 +53564,7 @@
 	name = "CARGO Department";
 	desc = "A sign indicating the location for Cargo department. Use the nearby chute for quick access."
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
 	},
@@ -54039,18 +53942,6 @@
 	},
 /turf/simulated/floor,
 /area/SouthernCrossV2/Cargo/Waste_Disposals)
-"fBN" = (
-/obj/structure/sign/painting/public{
-	pixel_y = 32
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "fBW" = (
 /obj/structure/bed/chair/backed_grey{
 	color = "grey";
@@ -54512,7 +54403,6 @@
 /area/SouthernCrossV2/Security/Equipment_Storage)
 "fIe" = (
 /obj/effect/floor_decal/industrial/stand_clear/blue,
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
 	},
@@ -54735,7 +54625,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /obj/machinery/holoposter{
@@ -56380,7 +56270,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -56705,7 +56595,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -57013,7 +56903,7 @@
 /obj/machinery/light{
 	name = "1S-light fixture"
 	},
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "gjY" = (
@@ -57290,7 +57180,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -57496,7 +57386,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
@@ -57733,7 +57623,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -57809,7 +57699,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "gxT" = (
@@ -58995,7 +58885,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -59577,7 +59467,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -59667,7 +59557,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Stairwell)
 "gVl" = (
@@ -60616,7 +60506,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -60923,7 +60813,7 @@
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Stairwell)
 "hlT" = (
@@ -61884,7 +61774,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -62173,7 +62063,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_2)
 "hCW" = (
@@ -64662,7 +64552,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Stairwell)
 "ikF" = (
@@ -65070,6 +64960,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "ipx" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "ipA" = (
@@ -65307,7 +65198,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "itp" = (
@@ -65796,7 +65687,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -66077,7 +65968,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/SouthernCrossV2/Security/Firing_Range)
 "iCs" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftCorridor1)
 "iCL" = (
@@ -66904,7 +66795,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Lobby)
 "iLD" = (
 /obj/structure/cable{
@@ -67029,7 +66920,6 @@
 /obj/structure/closet{
 	name = "welding equipment"
 	},
-/obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
@@ -67126,7 +67016,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Patient_Ward)
 "iPo" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "iPq" = (
@@ -67653,6 +67543,7 @@
 	desc = "A sign indicating the location for Command department. Use the nearby chute for quick access.";
 	name = "COMMAND department"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
 	},
@@ -68293,7 +68184,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -69168,7 +69059,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -69186,11 +69077,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Stairwell)
-"jrb" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "jrc" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -69444,7 +69330,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -70539,17 +70425,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Library_Office)
-"jMc" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "jMe" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -71607,14 +71482,11 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/structure/sign/poster/nanotrasen{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
 "kbN" = (
@@ -72894,7 +72766,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -74265,7 +74137,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "kMN" = (
@@ -74623,7 +74495,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -75011,7 +74883,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -75109,7 +74981,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "kXw" = (
 /obj/effect/catwalk_plated/white,
@@ -75438,7 +75310,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -75696,7 +75568,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /obj/structure/sign/poster/custom{
@@ -76636,7 +76508,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -76762,7 +76634,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
@@ -77113,7 +76985,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell)
 "lCA" = (
@@ -77454,7 +77326,7 @@
 	dir = 1;
 	pixel_y = 2
 	},
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "lGX" = (
@@ -77732,7 +77604,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -77747,7 +77619,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -77777,9 +77649,6 @@
 	dir = 8;
 	pixel_x = -3
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
 "lKC" = (
@@ -77788,7 +77657,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -77956,7 +77825,7 @@
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell)
 "lNS" = (
@@ -78698,7 +78567,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -78953,13 +78822,6 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_ForStarCorridor1)
-"maA" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/SouthernCrossV2/Domicile/Gym)
 "maC" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows,
@@ -79148,7 +79010,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "mdu" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "mdY" = (
@@ -79223,7 +79085,7 @@
 	c_tag = "D2-Com-Aft Corridor4";
 	network = list("Commons")
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -79261,7 +79123,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /obj/machinery/light/floortube{
@@ -79698,15 +79560,6 @@
 /obj/item/weapon/bikehorn/rubberducky,
 /turf/simulated/floor/wood/alt/panel,
 /area/SouthernCrossV2/Domicile/Gym_Sauna)
-"mnb" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_2)
 "mnd" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -79911,11 +79764,11 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
@@ -80151,7 +80004,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -80226,7 +80079,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -80271,18 +80124,6 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
-"mxh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "mxw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -80317,7 +80158,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -81194,7 +81035,7 @@
 /area/SouthernCrossV2/Cargo/Star_Tool_Storage)
 "mJJ" = (
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "mJK" = (
@@ -81793,14 +81634,14 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
 /obj/structure/sign/poster/nanotrasen{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "mRj" = (
@@ -82096,7 +81937,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Stairwell)
 "mVR" = (
@@ -82462,12 +82303,12 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 1
-	},
 /obj/machinery/firealarm{
 	pixel_y = 25;
 	name = "N-fire alarm"
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell)
@@ -83103,7 +82944,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
@@ -83847,7 +83688,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Warehouse)
 "nxz" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Security/Forensics_Office)
 "nxC" = (
@@ -83989,7 +83830,7 @@
 	c_tag = "D2-Com-Aft Corridor3";
 	network = list("Commons")
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -84236,7 +84077,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -84523,7 +84364,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_2)
 "nIW" = (
@@ -84691,11 +84532,11 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "nMn" = (
@@ -85437,7 +85278,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "nWN" = (
@@ -85514,7 +85355,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -85704,11 +85545,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "nZj" = (
@@ -85796,17 +85637,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Cargo/Warehouse)
-"nZF" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
 "nZM" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -86660,15 +86490,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftPortCorridor1)
-"okL" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "okO" = (
 /obj/structure/urinal{
 	dir = 8;
@@ -87662,14 +87483,14 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_1)
 "oDf" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -87764,7 +87585,7 @@
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "oDE" = (
@@ -87924,15 +87745,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Engineering/Storage)
-"oFm" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "oFM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -88042,7 +87854,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "oHb" = (
 /obj/structure/lattice,
@@ -89790,7 +89602,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -89846,23 +89658,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Engineering/Mech_Bay)
-"pfD" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "pfK" = (
 /obj/structure/table/steel,
 /obj/random/mainttoyloot,
@@ -89932,20 +89727,6 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Chomp_Hydroponics)
-"pgk" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "pgq" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/clean,
@@ -89985,22 +89766,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/AftPort_2_Deck_Observatory)
-"phm" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "pho" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Deck2_Science_StarChamber1)
@@ -90231,15 +89996,6 @@
 	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Treatment_Hall)
-"pkP" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "pkU" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -90350,20 +90106,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
-"pmJ" = (
-/obj/machinery/station_map{
-	dir = 8;
-	pixel_x = 32;
-	name = "1E-station holomap"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "pmL" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
@@ -90417,23 +90159,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/SouthernCrossV2/Harbor/For_Shuttlebay)
-"pnQ" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "pog" = (
 /obj/machinery/disposal/deliveryChute,
 /obj/structure/disposalpipe/trunk{
@@ -90553,7 +90278,7 @@
 /area/SouthernCrossV2/Domicile/Chapel_Morgue)
 "poO" = (
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell)
 "poR" = (
@@ -90803,7 +90528,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/light/floortube{
 	dir = 1;
 	pixel_y = 2
@@ -91097,7 +90822,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "pvD" = (
@@ -91491,7 +91216,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -91834,7 +91559,7 @@
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Midnight_Bar)
 "pFk" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "pFy" = (
@@ -92534,7 +92259,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -92967,7 +92692,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -93817,17 +93542,24 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Holodeck)
 "qfC" = (
-/obj/structure/disposalpipe/segment{
+/obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
+/area/SouthernCrossV2/Domicile/Gym)
 "qfL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -95211,22 +94943,6 @@
 "qyM" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor3)
-"qzq" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_Transit_Foyer)
 "qzu" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
@@ -95252,7 +94968,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -96016,6 +95732,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "qLU" = (
@@ -96614,7 +96331,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -97918,7 +97635,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -98096,14 +97813,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Star_Corridor)
-"rny" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "rnH" = (
 /obj/structure/sign/directions/dock{
 	layer = 3.5;
@@ -98120,7 +97829,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "rnR" = (
@@ -100591,7 +100300,7 @@
 /obj/machinery/light/floortube{
 	pixel_y = -2
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -101459,7 +101168,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -101687,7 +101396,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -102846,7 +102555,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -102961,7 +102670,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "syd" = (
@@ -103348,6 +103057,9 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_AftPortCorridor1)
 "sCt" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "sCB" = (
@@ -104217,25 +103929,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Domicile/Library)
-"sNK" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Domicile/Gym)
 "sNL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -104644,7 +104337,7 @@
 	pixel_y = 2
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "sTC" = (
@@ -104656,15 +104349,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Science_ForPort_Chamber)
-"sTI" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2)
 "sTS" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -104990,7 +104674,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -105573,7 +105257,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -105954,9 +105638,6 @@
 /area/SouthernCrossV2/Maints/Research_Substation)
 "tnv" = (
 /obj/effect/floor_decal/industrial/stand_clear/blue{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile{
@@ -106565,6 +106246,11 @@
 /area/SouthernCrossV2/Harbor/Port_Shuttlebay)
 "txi" = (
 /obj/structure/closet/emcloset,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/SouthernCrossV2/Domicile/Gym)
 "txr" = (
@@ -106745,10 +106431,10 @@
 /area/SouthernCrossV2/Cargo/Packaging_Room)
 "tzZ" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/holoposter{
 	pixel_y = -32
 	},
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell)
 "tAa" = (
@@ -106820,7 +106506,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -107341,7 +107027,7 @@
 /area/SouthernCrossV2/Security/Shuttlebay_Storage)
 "tHA" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell)
 "tHE" = (
@@ -107412,7 +107098,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /obj/structure/sign/poster/custom{
@@ -107651,14 +107337,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_For_Corridor)
-"tNA" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "tNJ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /turf/simulated/floor/tiled,
@@ -107777,16 +107455,6 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
-"tPF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "tPR" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/SouthernCrossV2/Domicile/Gym)
@@ -108622,20 +108290,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Cargo/Warehouse)
-"tZu" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "tZC" = (
 /obj/machinery/status_display{
 	name = "W-status display";
@@ -108649,7 +108303,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -110008,15 +109662,15 @@
 "uqB" = (
 /obj/effect/floor_decal/industrial/loading/blue,
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/structure/sign/department/conference_room{
 	name = "DOMICILE Department";
 	desc = "A sign indicating the location for Domicile department. Use the nearby chute for quick access."
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
@@ -110126,7 +109780,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/RD_Office)
 "usM" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Research_Substation)
 "usY" = (
@@ -110285,14 +109939,6 @@
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Cargo_AftStarCorridor1)
-"uye" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "uyu" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -111687,7 +111333,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -111701,7 +111347,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /obj/structure/sign/poster/custom{
@@ -112243,7 +111889,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "vcT" = (
@@ -112587,7 +112233,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -112660,12 +112306,12 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 8
-	},
 /obj/machinery/light/floortube{
 	dir = 1;
 	pixel_y = 2
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
@@ -112852,7 +112498,7 @@
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Testing_Lab)
 "vnH" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Domicile/Aft_Restroom)
 "vnP" = (
@@ -113365,7 +113011,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -113539,7 +113185,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -113750,15 +113396,6 @@
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_StarChamber1)
-"vAi" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "vAk" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1
@@ -113809,7 +113446,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -114272,15 +113909,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/SouthernCrossV2/Security/Firing_Range)
-"vHL" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
 "vIg" = (
 /obj/machinery/shield_diffuser,
 /obj/structure/cable/white{
@@ -114409,7 +114037,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -114536,7 +114164,7 @@
 "vNh" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "vNi" = (
@@ -114821,7 +114449,7 @@
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftStarChamber1)
 "vTv" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_2)
 "vTx" = (
@@ -115244,18 +114872,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Engineering/Engineering_EVA)
-"vXS" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "vXT" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -115438,7 +115054,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -115587,6 +115203,9 @@
 	name = "HARBOR department";
 	desc = "A sign indicating the location for Harbor department. Use the nearby chute for quick access."
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
 	},
@@ -115663,11 +115282,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chapel_Lobby)
-"wdo" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Port_Transit_Foyer)
 "wdx" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chemical_dispenser/full{
@@ -115905,7 +115519,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -116037,6 +115651,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 6
 	},
+/obj/item/weapon/storage/bag/chemistry,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Chemistry)
 "whH" = (
@@ -116242,7 +115857,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -117642,7 +117257,7 @@
 	pixel_y = 2
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "wCT" = (
@@ -118049,20 +117664,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Security_AftStarCorridor1)
-"wIt" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "wIu" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -119753,7 +119354,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -119935,7 +119536,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -120233,7 +119834,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/white/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -120315,12 +119916,12 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Stairwell)
@@ -120366,11 +119967,14 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/structure/sign/poster/nanotrasen{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1)
 "xoR" = (
@@ -120974,7 +120578,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -121227,26 +120831,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Security/HoS_Office)
-"xBK" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "xBP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -121765,7 +121349,7 @@
 	network = list("Commons")
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_2_Deck_Hall)
 "xJI" = (
@@ -122579,7 +122163,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -122801,7 +122385,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell)
 "xYU" = (
@@ -123364,7 +122948,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -123787,7 +123371,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -139954,7 +139538,7 @@ mCN
 tYN
 alt
 aMT
-wdo
+uca
 aoR
 apW
 aYE
@@ -139962,7 +139546,7 @@ rcV
 rXg
 syM
 aoR
-bjr
+hCx
 fbX
 alt
 lOx
@@ -140215,9 +139799,9 @@ nmp
 sDr
 aIJ
 pYA
-phm
+pYA
 aTB
-pfD
+ppw
 ppw
 tEP
 lkA
@@ -145629,7 +145213,7 @@ vMz
 aOK
 kDd
 lbB
-evl
+lbB
 vwr
 aJJ
 efV
@@ -145888,7 +145472,7 @@ aGK
 axD
 ifk
 hHg
-vAi
+fjG
 oJc
 aQe
 sdq
@@ -146147,13 +145731,13 @@ aIm
 aJL
 aLD
 noZ
-jrb
+oJc
 czR
 sdq
 asa
 sdq
 czR
-vAi
+fjG
 bbe
 wKN
 bPN
@@ -146404,7 +145988,7 @@ sQG
 kDj
 ltX
 aLF
-vAi
+fjG
 oJc
 czR
 aVn
@@ -146412,7 +145996,7 @@ wcN
 aVn
 czR
 fjG
-jrb
+oJc
 wKN
 aCh
 bxl
@@ -147697,9 +147281,9 @@ vVP
 ldf
 aSh
 aSh
-tNA
+nHH
 drh
-vXS
+nXE
 aSh
 aSh
 pkU
@@ -148213,9 +147797,9 @@ vVP
 iwf
 aSh
 aSh
-tNA
+nHH
 jrC
-vXS
+nXE
 aSh
 aSh
 aNs
@@ -148729,9 +148313,9 @@ iis
 eKz
 aSh
 aSh
-tNA
+nHH
 qWX
-vXS
+nXE
 aSh
 aSh
 lGq
@@ -149765,7 +149349,7 @@ iWN
 apN
 gel
 pfU
-aSh
+vcv
 oJc
 aQr
 aAT
@@ -150024,7 +149608,7 @@ gqc
 seI
 czR
 aZh
-jrb
+oJc
 aAT
 wNa
 dYe
@@ -150281,7 +149865,7 @@ aSm
 koC
 pjM
 czR
-aSh
+vcv
 vfz
 aAT
 aCm
@@ -150539,7 +150123,7 @@ avr
 llb
 rSd
 czR
-aSh
+vcv
 kMF
 aAT
 aCo
@@ -151565,7 +151149,7 @@ ajE
 kcp
 aaW
 aOg
-pmJ
+jlP
 jlP
 cui
 hkd
@@ -152085,14 +151669,14 @@ ipx
 ayE
 cpO
 fxe
-ipx
+bxv
 jmx
 ubU
 dAt
 uqB
 sCt
 apO
-bMR
+fpT
 lUL
 aAT
 lIk
@@ -152400,7 +151984,7 @@ xhy
 pQr
 qzG
 toC
-dix
+pQr
 uQa
 xnA
 muv
@@ -152613,9 +152197,9 @@ rkJ
 eKL
 tZC
 eKL
-wIt
+eKL
 rYA
-tPF
+vVl
 vVl
 gBt
 tpx
@@ -152629,17 +152213,17 @@ bbR
 jCa
 gTy
 jCa
-vHL
+jCa
 jCa
 gpk
 bIl
 bbR
 jCa
-vHL
 jCa
-vHL
 jCa
-vHL
+jCa
+jCa
+jCa
 wWN
 hzt
 lhB
@@ -152874,7 +152458,7 @@ bIq
 bIq
 pvv
 abz
-pkP
+xBw
 hOL
 pre
 dtL
@@ -152888,7 +152472,7 @@ xoN
 shL
 aUf
 nJX
-nZF
+kbs
 sPr
 lcc
 nhM
@@ -153340,7 +152924,7 @@ brQ
 rtf
 bye
 bye
-eDg
+xcl
 aTk
 tKH
 cBN
@@ -153388,7 +152972,7 @@ bIq
 bIq
 bIq
 bIq
-eQH
+bcI
 isp
 bCf
 qef
@@ -153856,7 +153440,7 @@ brQ
 rtf
 bye
 bye
-eDg
+xcl
 aTk
 gzv
 cBN
@@ -153930,7 +153514,7 @@ oNV
 oqA
 cDX
 cDX
-fBN
+fLQ
 cgk
 qZr
 gPr
@@ -154156,7 +153740,7 @@ bbr
 aVG
 byy
 bgB
-xBK
+vHv
 bIq
 bIq
 bIq
@@ -154412,7 +153996,7 @@ vTf
 sMt
 wRN
 aVG
-uye
+rtA
 lKa
 vHv
 bIq
@@ -154438,7 +154022,7 @@ bpE
 eXN
 dyS
 ooM
-jMc
+nMm
 wBO
 nzV
 rOP
@@ -154636,13 +154220,13 @@ hCV
 mDc
 cml
 cxx
-mnb
+mDc
 goH
 bAf
 edc
 cqV
 fxq
-mnb
+mDc
 leW
 fbP
 cml
@@ -154693,9 +154277,9 @@ wJe
 upj
 eGP
 upj
-sTI
 upj
-emW
+upj
+rHr
 upj
 wJe
 upj
@@ -154703,9 +154287,9 @@ ebL
 kLR
 wTh
 obp
-sTI
+upj
 rHr
-sTI
+upj
 ate
 cil
 dYu
@@ -155185,10 +154769,10 @@ mJJ
 twz
 hyh
 xBw
-pkP
+xBw
 gMg
 bgB
-tZu
+igu
 oDD
 ipq
 aWO
@@ -155702,7 +155286,7 @@ vAC
 sAN
 kWi
 eKL
-wIt
+eKL
 eKL
 aET
 dTF
@@ -155961,7 +155545,7 @@ bps
 qoA
 yfQ
 egQ
-pgk
+egQ
 kIS
 fti
 ipq
@@ -156216,7 +155800,7 @@ bdd
 dcV
 plL
 aVG
-eQH
+bcI
 wWC
 bdg
 bdg
@@ -156731,7 +156315,7 @@ qLY
 rnx
 gMa
 eUr
-aZE
+wCT
 itl
 bdg
 bgF
@@ -156989,7 +156573,7 @@ qdI
 jYg
 aTu
 eUr
-aZE
+wCT
 mgx
 bdg
 aCt
@@ -157247,7 +156831,7 @@ sHA
 wvX
 brw
 eUr
-aZE
+wCT
 itl
 bdg
 beK
@@ -157505,7 +157089,7 @@ lXn
 upF
 mBr
 dxM
-aZE
+wCT
 bwJ
 ipq
 beL
@@ -157763,7 +157347,7 @@ bcY
 fNr
 fVJ
 dKG
-aZE
+wCT
 gjW
 bdg
 bzL
@@ -158533,9 +158117,9 @@ kLW
 vUU
 aZE
 aZE
-deB
+bcY
 aON
-qfC
+fVJ
 aZE
 aZE
 gOr
@@ -159304,7 +158888,7 @@ ctj
 ctj
 ctj
 mKm
-mxh
+eJn
 aZE
 aZE
 bcY
@@ -159312,7 +158896,7 @@ rzn
 fVJ
 aZE
 aZE
-rny
+bmX
 bOQ
 ctj
 ctj
@@ -159565,9 +159149,9 @@ mKm
 nBh
 aZE
 aZE
-deB
+bcY
 dpQ
-qfC
+fVJ
 aZE
 aZE
 hYZ
@@ -160081,9 +159665,9 @@ asV
 nFa
 nFa
 hzV
-deB
+bcY
 rNz
-qfC
+fVJ
 hzV
 nFa
 nFa
@@ -160408,8 +159992,8 @@ ieU
 oxz
 bRz
 kRv
-sNK
 pOX
+qfC
 pOX
 pOX
 pOX
@@ -160666,13 +160250,13 @@ ieU
 bhm
 qPt
 kWB
-jPa
 acD
+jPa
 ydd
 ydd
 acD
-jPa
 acD
+jPa
 xXo
 kxM
 xXo
@@ -160852,7 +160436,7 @@ mbf
 bfr
 cDk
 asV
-oFm
+moX
 vTA
 eUr
 dmB
@@ -160924,12 +160508,12 @@ ieU
 aso
 qPt
 cvg
-maA
+acD
 byp
 ydd
 ydd
 acD
-maA
+acD
 cdv
 xXo
 uqj
@@ -161111,13 +160695,13 @@ bEx
 rEq
 asV
 nDH
-bxv
+peQ
 wKg
 soe
 cDx
 lAk
 lXn
-okL
+nDH
 voE
 aut
 wDm
@@ -167047,9 +166631,9 @@ xWD
 nVx
 oVk
 lRJ
-pnQ
+lRJ
 tHJ
-qzq
+ivB
 ivB
 btf
 vtu

@@ -2439,11 +2439,6 @@
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "aRR" = (
 /obj/effect/catwalk_plated,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -4544,7 +4539,12 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Resleeving)
 "bFI" = (
-/turf/simulated/floor/tiled,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Engine1_Control_Room)
 "bFR" = (
 /obj/effect/floor_decal/industrial/warning/color,
@@ -5489,11 +5489,6 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Domicile/Observation_Atrium)
 "bWy" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -5507,6 +5502,11 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Engineering/Atmospherics_Control_Room)
@@ -6528,11 +6528,6 @@
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Bridge/HoS_Quarters)
 "cnW" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -10852,12 +10847,12 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber1)
 "dNc" = (
-/obj/machinery/vending/cola/soft,
 /obj/machinery/camera/network/research{
 	c_tag = "D3-Med-Lounge2";
 	dir = 8;
 	network = list("Medical")
 	},
+/obj/machinery/vending/medical,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Medical/Lounge)
 "dNd" = (
@@ -13516,13 +13511,9 @@
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Array_ForPort)
 "eBc" = (
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/space)
+/obj/machinery/vending/hydronutrients,
+/turf/simulated/floor/tiled/hydro,
+/area/SouthernCrossV2/Domicile/Public_Hydroponics)
 "eBi" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/effect/floor_decal/industrial/arrows/blue,
@@ -20103,18 +20094,18 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "gpX" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Atmospherics_Control_Room)
 "gqa" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -21171,11 +21162,6 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -21851,11 +21837,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Port_Breakroom)
 "gUn" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
@@ -23485,7 +23466,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "hAE" = (
 /obj/machinery/light{
@@ -28396,9 +28377,16 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Medical/Restrooms)
 "jbU" = (
-/obj/machinery/vending/medical,
-/turf/simulated/wall,
-/area/SouthernCrossV2/Medical/Patient_1)
+/obj/structure/lattice,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/space,
+/area/space)
 "jce" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows{
@@ -33560,16 +33548,6 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -33581,6 +33559,11 @@
 	},
 /obj/effect/landmark/start{
 	name = "Atmospheric Technician"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Engineering/Atmospherics_Control_Room)
@@ -44099,6 +44082,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "nWV" = (
@@ -45261,14 +45249,18 @@
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Dormitory_07)
 "oot" = (
-/obj/effect/catwalk_plated,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
+/obj/machinery/camera/network/security{
+	c_tag = "D3-Eng-1st Engine3";
+	network = list("engineering","Engine");
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "oou" = (
 /turf/simulated/floor/plating,
 /area/space)
@@ -46190,24 +46182,16 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber3)
 "oDo" = (
-/obj/effect/catwalk_plated,
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
 	},
-/obj/machinery/light_switch{
-	pixel_x = -27;
-	pixel_y = 12;
-	name = "W-light switch";
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Engineering/Deck3_2_Corridor)
 "oDt" = (
 /obj/structure/window/basic{
 	dir = 8
@@ -46941,7 +46925,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "oOx" = (
 /turf/simulated/wall/r_wall,
@@ -46997,7 +46981,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "oPO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -48244,11 +48228,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "pmu" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -49760,6 +49739,10 @@
 "pKN" = (
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftStarChamber1)
+"pKT" = (
+/mob/living/bot/farmbot,
+/turf/simulated/floor/tiled/kafel_full/green,
+/area/SouthernCrossV2/Domicile/Public_Hydroponics)
 "pLe" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
@@ -50177,7 +50160,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "pSm" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -55921,11 +55904,6 @@
 	req_one_access = list(24);
 	dir = 4
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -55934,6 +55912,11 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Atmospherics_Control_Room)
@@ -55972,7 +55955,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Engine3_Control_Room)
 "rKJ" = (
 /obj/structure/cable/green{
@@ -61261,11 +61249,6 @@
 /area/SouthernCrossV2/Maints/Bridge_Substation)
 "tpQ" = (
 /obj/effect/catwalk_plated,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -62989,7 +62972,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "tYr" = (
 /obj/item/toy/plushie/teshari/w_yw,
@@ -63063,6 +63046,17 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	name = "S-light switch";
+	pixel_x = 11;
+	pixel_y = -27
+	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "tZq" = (
@@ -66673,11 +66667,6 @@
 	name = "Atmospherics Monitoring Room";
 	req_one_access = list(24);
 	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -71364,11 +71353,6 @@
 /area/SouthernCrossV2/Engineering/Solar_Control_ForStar)
 "wBQ" = (
 /obj/effect/catwalk_plated,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -72050,7 +72034,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Engine2_Access_Hall)
 "wMD" = (
 /obj/structure/table/standard,
@@ -72179,6 +72168,19 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Bridge/Captain_Office)
+"wOb" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
 "wOf" = (
 /obj/structure/ladder{
 	pixel_y = 3
@@ -73768,11 +73770,6 @@
 /area/SouthernCrossV2/Commons/Port_Breakroom)
 "xkb" = (
 /obj/effect/catwalk_plated,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -80153,9 +80150,6 @@ apc
 apc
 apc
 apc
-aqj
-aqj
-aqj
 apc
 apc
 apc
@@ -80163,9 +80157,12 @@ apc
 apc
 apc
 apc
-aqj
-aqj
-aqj
+apc
+apc
+apc
+apc
+apc
+apc
 apc
 apc
 apc
@@ -80405,31 +80402,31 @@ apc
 apc
 apc
 apc
-phb
-phb
-phb
-phb
-phb
-phb
-phb
-xFs
-phb
-phb
-phb
-phb
-phb
-phb
-phb
-phb
-phb
-xFs
-phb
-phb
-phb
-phb
-phb
-phb
-phb
+apc
+apc
+apc
+apc
+apc
+apc
+aqj
+aqj
+aqj
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+aqj
+aqj
+aqj
+apc
+apc
+apc
+apc
+apc
+apc
 apc
 apc
 apc
@@ -80664,6 +80661,264 @@ apc
 apc
 apc
 phb
+phb
+phb
+phb
+phb
+phb
+phb
+xFs
+phb
+phb
+phb
+phb
+phb
+phb
+phb
+phb
+phb
+xFs
+phb
+phb
+phb
+phb
+phb
+phb
+phb
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+"}
+(14,1,1) = {"
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+phb
 apc
 saz
 jub
@@ -80836,7 +81091,7 @@ apc
 apc
 apc
 "}
-(14,1,1) = {"
+(15,1,1) = {"
 apc
 apc
 apc
@@ -81094,7 +81349,7 @@ apc
 apc
 apc
 "}
-(15,1,1) = {"
+(16,1,1) = {"
 apc
 apc
 apc
@@ -81352,7 +81607,7 @@ apc
 apc
 apc
 "}
-(16,1,1) = {"
+(17,1,1) = {"
 apc
 apc
 apc
@@ -81459,264 +81714,6 @@ ava
 ava
 wCi
 bDd
-hjD
-hXb
-phb
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-"}
-(17,1,1) = {"
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-phb
-qpl
-hjD
-ava
-dXG
-ava
-ava
-ava
-ccv
-ccv
-ccv
-ccv
-ccv
-ccv
-ccv
-ccv
-ccv
-ava
-ava
-ava
-dXG
-ava
 hjD
 hXb
 phb
@@ -82480,6 +82477,264 @@ ava
 ccv
 ccv
 ccv
+ccv
+ccv
+ccv
+ccv
+ccv
+ccv
+ava
+ava
+ava
+dXG
+ava
+hjD
+hXb
+phb
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+"}
+(21,1,1) = {"
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+apc
+phb
+qpl
+hjD
+ava
+dXG
+ava
+ava
+ava
+ccv
+ccv
+ccv
 ava
 ava
 ava
@@ -82642,7 +82897,7 @@ apc
 apc
 apc
 "}
-(21,1,1) = {"
+(22,1,1) = {"
 apc
 apc
 apc
@@ -82900,264 +83155,6 @@ apc
 apc
 apc
 "}
-(22,1,1) = {"
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-phb
-qpl
-hjD
-ava
-dXG
-ava
-ava
-ava
-ccv
-ccv
-ccv
-ava
-ava
-ava
-ccv
-ccv
-ccv
-ava
-ava
-ava
-dXG
-ava
-hjD
-hXb
-phb
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-apc
-"}
 (23,1,1) = {"
 apc
 apc
@@ -83254,9 +83251,9 @@ ava
 ccv
 ccv
 ccv
-ccv
-ccv
-ccv
+ava
+ava
+ava
 ccv
 ccv
 ccv
@@ -83765,7 +83762,7 @@ hjD
 ava
 dXG
 ava
-gci
+ava
 ava
 ccv
 ccv
@@ -83777,7 +83774,7 @@ ccv
 ccv
 ccv
 ava
-gci
+ava
 ava
 dXG
 ava
@@ -84025,24 +84022,24 @@ dXG
 ava
 gci
 ava
-ava
-ava
-ava
-ava
-ava
-ava
-ava
-ava
-ava
+ccv
+ccv
+ccv
+ccv
+ccv
+ccv
+ccv
+ccv
+ccv
 ava
 gci
 ava
 dXG
 ava
 hjD
-hXb
-phb
-qpl
+bde
+jbU
+poc
 xes
 kaL
 kaL
@@ -84287,16 +84284,16 @@ nqE
 mhK
 mhK
 mhK
-mhK
+wOb
 mhK
 mhK
 mhK
 mhK
 mhK
 qAk
-dHa
-eBc
-dHa
+ava
+dXG
+ava
 gXS
 kaL
 kaL
@@ -84545,7 +84542,7 @@ oOk
 tYn
 tYn
 tYn
-tYn
+oot
 tYn
 tYn
 tYn
@@ -84554,7 +84551,7 @@ tYn
 tYn
 tYn
 pSf
-dHa
+ava
 dHa
 dHa
 dHa
@@ -88932,7 +88929,7 @@ lhX
 lhX
 rFL
 wiE
-oDo
+jme
 ouY
 jux
 mVO
@@ -89190,7 +89187,7 @@ iOb
 pOf
 oQl
 jme
-oot
+jme
 ouY
 vZr
 fqD
@@ -89465,7 +89462,7 @@ hsa
 iPk
 iPk
 iPk
-iPk
+oDo
 iPk
 iPk
 fnk
@@ -105474,7 +105471,7 @@ oxp
 uBr
 jkH
 nVa
-kiZ
+pKT
 joM
 cgg
 len
@@ -107023,7 +107020,7 @@ jOD
 rdD
 jLi
 kpC
-jkH
+eBc
 jkH
 jkH
 mgv
@@ -123286,7 +123283,7 @@ pcf
 eQA
 eQA
 eQA
-jbU
+eQA
 bKx
 bzX
 bzX
