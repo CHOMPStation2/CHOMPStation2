@@ -35,6 +35,7 @@
 	. = ..()
 	if(ismob(loc))
 		owner = loc
+		owner.recalculate_vis()
 
 // Store the vars_to_save into the save file
 /obj/soulgem/deserialize(list/data)
@@ -236,6 +237,8 @@
 		soulgem_sight()
 	if(flag & NIF_SC_PROJECTING)
 		soulgem_projecting()
+	if(flag & SOULGEM_SEE_SR_SOULS)
+		owner.recalculate_vis()
 
 // Checks a single flag, or if all combined flags are true
 /obj/soulgem/proc/flag_check(var/flag, var/match_all = FALSE)
@@ -526,11 +529,3 @@
 	ghost.abandon_mob()
 	qdel(M)
 	return TRUE
-
-/obj/soulgem/proc/toggle_sr_vision()
-	if(VIS_SOULCATCHER in owner.vis_enabled)
-		owner.plane_holder.set_vis(VIS_SOULCATCHER, FALSE)
-		owner.vis_enabled -= VIS_SOULCATCHER
-	else
-		owner.plane_holder.set_vis(VIS_SOULCATCHER, TRUE)
-		owner.vis_enabled += VIS_SOULCATCHER
