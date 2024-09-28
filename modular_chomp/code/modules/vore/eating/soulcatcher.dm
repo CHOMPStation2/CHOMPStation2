@@ -526,3 +526,11 @@
 	ghost.abandon_mob()
 	qdel(M)
 	return TRUE
+
+/obj/soulgem/proc/toggle_sr_vision()
+	if(VIS_SOULCATCHER in owner.vis_enabled)
+		owner.plane_holder.set_vis(VIS_SOULCATCHER, FALSE)
+		owner.vis_enabled -= VIS_SOULCATCHER
+	else
+		owner.plane_holder.set_vis(VIS_SOULCATCHER, TRUE)
+		owner.vis_enabled += VIS_SOULCATCHER

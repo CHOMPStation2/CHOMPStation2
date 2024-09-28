@@ -582,8 +582,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		data["soulcatcher"]["ext_hearing"] = host.soulgem.flag_check(NIF_SC_ALLOW_EARS)
 		data["soulcatcher"]["ext_vision"] = host.soulgem.flag_check(NIF_SC_ALLOW_EYES)
 		data["soulcatcher"]["mind_backups"] = host.soulgem.flag_check(NIF_SC_BACKUPS)
-		data["soulcatcher"]["ar_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
+		data["soulcatcher"]["sr_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
 		data["soulcatcher"]["show_vore_sfx"] = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
+		data["soulcatcher"]["see_sr_projecting"] = (VIS_SOULCATCHER in host.vis_enabled)
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
 		var/mob/living/H = host
@@ -2305,12 +2306,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.soulgem.toggle_setting(NIF_SC_BACKUPS)
 			unsaved_changes = TRUE
 			return TRUE
-		if("toggle_ar_projecting")
+		if("toggle_sr_projecting")
 			host.soulgem.toggle_setting(NIF_SC_PROJECTING)
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_vore_sfx")
 			host.soulgem.toggle_setting(SOULGEM_SHOW_VORE_SFX)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_sr_vision")
+			host.soulgem.toggle_sr_vision()
 			unsaved_changes = TRUE
 			return TRUE
 		if("soulcatcher_rename")
