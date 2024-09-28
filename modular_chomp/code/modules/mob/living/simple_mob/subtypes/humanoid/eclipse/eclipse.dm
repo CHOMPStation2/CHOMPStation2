@@ -909,6 +909,7 @@
 	maxHealth = 120
 	desc = "A strange being with resistance to brunt force trauma."
 	icon_state = "eclipse_titan"
+	icon_living = "eclipse_titan"
 	melee_damage_lower = 20
 	melee_damage_upper = 20
 	attack_armor_pen = 20
@@ -949,7 +950,7 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/nuclear/do_special_attack(atom/A)
 	visible_message(span_warning("\The [src] begins to glow green!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
-	sleep(20)
+	sleep(30)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
 	P.launch_projectile(A, BP_TORSO, src)
 
@@ -1028,10 +1029,10 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
 	var/mob/living/L = A
 	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
-	sleep(20)
+	sleep(30)
 	if(isliving(A))
 		if(iscarbon(L))
-			L.add_modifier(/datum/modifier/fire, 10 SECONDS)
+			return
 		else if(issilicon(L))
 			if(isrobot(L))
 				L.Weaken(10)
