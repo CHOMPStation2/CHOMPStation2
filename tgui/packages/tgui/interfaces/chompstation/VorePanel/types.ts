@@ -307,9 +307,9 @@ export type soulcatcherData = {
   ext_hearing: BooleanLike;
   ext_vision: BooleanLike;
   mind_backups: BooleanLike;
-  ar_projecting: BooleanLike;
+  sr_projecting: BooleanLike;
   show_vore_sfx: BooleanLike;
-  see_souls: BooleanLike;
+  see_sr_projecting: BooleanLike;
 };
 
 export type DropdownEntry = {

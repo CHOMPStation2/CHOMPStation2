@@ -61,7 +61,8 @@ const VoreSoulcatcherSection = (props: {
     ext_hearing,
     ext_vision,
     mind_backups,
-    ar_projecting,
+    sr_projecting,
+    see_sr_projecting,
     selected_sfx,
     show_vore_sfx,
     taken_over,
@@ -125,7 +126,8 @@ const VoreSoulcatcherSection = (props: {
             ext_hearing={ext_hearing}
             ext_vision={ext_vision}
             mind_backups={mind_backups}
-            ar_projecting={ar_projecting}
+            sr_projecting={sr_projecting}
+            see_sr_projecting={see_sr_projecting}
             show_vore_sfx={show_vore_sfx}
           />
           <LabeledList.Item
