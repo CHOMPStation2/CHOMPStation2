@@ -1200,7 +1200,7 @@
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "GravityGen lethal turret control";
 	pixel_y = 29;
-	req_access = list(17,11,24);
+	req_access = list(10);
 	check_records = 0;
 	req_one_access = list(17,11,24)
 	},
@@ -3555,7 +3555,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Public_EVA)
 "atu" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "atD" = (
@@ -4270,7 +4270,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Observation_Hall)
 "aye" = (
-/turf/simulated/floor/tiled,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Security/Exploration_Sling_Shuttle)
 "ayf" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -12124,6 +12129,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Stairwell_Port)
+"cxF" = (
+/obj/structure/closet/crate/mimic/closet/cointoss,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "cxK" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -15845,7 +15854,7 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Security/Exploration_Ship_Bay)
 "dLd" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "dLu" = (
@@ -16056,6 +16065,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/camera/network/security{
+	dir = 6;
+	c_tag = "D1-Sec-forlockeroom1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/For_Locker_Room)
 "dOW" = (
@@ -19442,7 +19455,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "ezj" = (
 /obj/machinery/atmospherics/binary/pump,
@@ -22811,6 +22824,10 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarChamber2)
+"fKp" = (
+/obj/random/crate,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "fKF" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
@@ -22887,7 +22904,6 @@
 "fMi" = (
 /obj/machinery/turretid/lethal{
 	ailock = 1;
-	check_synth = 1;
 	control_area = "\improper Telecomms Control Room";
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "Telecoms Control Room Turret Control";
@@ -31891,7 +31907,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "jge" = (
 /obj/machinery/door/firedoor/border_only,
@@ -39314,7 +39330,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "lQi" = (
 /obj/structure/cable/green{
@@ -39703,6 +39719,11 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Distro_Harbor)
+"lUC" = (
+/obj/random/trash_pile,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "lVd" = (
 /obj/structure/table/rack/shelf,
 /obj/random/maintenance,
@@ -43935,6 +43956,10 @@
 /obj/effect/floor_decal/corner/pink/bordercorner{
 	dir = 1
 	},
+/obj/machinery/camera/network/security{
+	dir = 5;
+	c_tag = "D1-Sec-explorationsling1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Exploration_Sling_Shuttle)
 "nui" = (
@@ -44173,7 +44198,7 @@
 	control_area = "\improper Telecomms Foyer";
 	name = "Telecomms Teleporter turret control";
 	pixel_x = 28;
-	req_access = list(17,11,24);
+	req_access = list(10);
 	req_one_access = list(17,11,24)
 	},
 /obj/machinery/camera/network/security{
@@ -45721,6 +45746,10 @@
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
+"nZp" = (
+/obj/structure/closet/crate/mimic/closet/cointoss,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "nZu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -45827,7 +45856,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1)
 "oaQ" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "oaR" = (
@@ -46551,6 +46580,7 @@
 /area/SouthernCrossV2/Maints/Market_Stall_3)
 "ool" = (
 /obj/structure/loot_pile/maint/technical,
+/obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "oov" = (
@@ -51196,7 +51226,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "pML" = (
-/obj/structure/closet/crate/mimic/closet/dangerous,
+/obj/structure/closet/crate/mimic/closet/safe,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "pNX" = (
@@ -52078,7 +52108,7 @@
 	layer = 3;
 	name = "1W-light fixture"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "pYM" = (
 /obj/structure/cable/green{
@@ -66160,7 +66190,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "vba" = (
 /obj/structure/loot_pile/maint/technical,
@@ -67568,13 +67598,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Telecomms_Foyer)
 "vxE" = (
-/obj/machinery/door/airlock/angled_bay/standard/color/security{
-	dir = 4;
-	req_one_access = list(19,1);
-	req_access = null
-	},
-/turf/simulated/wall,
-/area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor2)
+/obj/random/trash_pile,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "vxR" = (
 /obj/machinery/telecomms/server/presets/medical,
 /obj/effect/catwalk_plated/dark,
@@ -69334,7 +69361,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "way" = (
 /obj/structure/cable/green{
@@ -71455,6 +71482,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Science_AftCorridor1)
+"wRG" = (
+/obj/structure/loot_pile/maint/junk,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "wRK" = (
 /obj/machinery/disposal,
 /obj/structure/window/reinforced,
@@ -72475,7 +72507,7 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
 "xiB" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "xiM" = (
@@ -99705,9 +99737,9 @@ amv
 bEi
 rFW
 clF
-rFW
+fKp
 iEM
-bEi
+vxE
 clF
 nfT
 bEi
@@ -100217,15 +100249,15 @@ viJ
 auk
 egX
 clF
-bEi
+nZp
 bEi
 skE
 clF
 lpr
 bEi
-bEi
+vxE
 clF
-rFW
+fKp
 bEi
 amv
 clF
@@ -100737,7 +100769,7 @@ eoU
 neE
 neE
 lZZ
-neE
+lUC
 neE
 urf
 lZZ
@@ -101255,9 +101287,9 @@ neE
 lZZ
 iBa
 hrD
-xjZ
+wRG
 lZZ
-neE
+cxF
 eJN
 urf
 lZZ
@@ -106594,7 +106626,7 @@ rjC
 rjC
 rjC
 rjC
-vxE
+rjC
 vIN
 amq
 vBS
