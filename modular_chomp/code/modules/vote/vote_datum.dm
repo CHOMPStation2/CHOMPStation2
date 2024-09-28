@@ -122,6 +122,13 @@
         You have [time] seconds to vote."))
     world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3)
 
+/datum/vote/Topic(href, list/href_list)
+    if(href_list["vote"] == "open")
+        if(src)
+            tgui_interact(usr)
+        else
+            to_chat(usr, "There is no active vote to participate in.")
+
 /datum/vote/proc/tick()
 	if(remaining() == 0)
 		var/result = calculate_result()
