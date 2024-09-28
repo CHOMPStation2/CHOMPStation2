@@ -1,6 +1,6 @@
-import { useBackend } from '../backend';
-import { Box, Button, Section } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from '../../backend';
+import { Box, Button, Section } from '../../components';
+import { Window } from '../../layouts';
 
 type Data = {
   remaining: number;
