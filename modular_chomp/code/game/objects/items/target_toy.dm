@@ -9,4 +9,4 @@
 	name = "target notice"
 
 /obj/item/weapon/paper/target/New()
-	info = {"<i>Your target is <b>[random_name(pick(MALE,FEMALE))]</b>. Make sure they don't get out of there alive."}
+	info = {"Your target is <b>[random_name(pick(MALE,FEMALE))]</b>. Make sure they don't get out of there alive."}
