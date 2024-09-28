@@ -105,6 +105,8 @@
 
 /area/surface/tyr/ancient_ruins/puzzlec
 
+/area/surface/tyr/ancient_ruins/puzzled
+
 /area/surface/tyr/north_caverns
 	name = "Tyr Caverns"
 	icon_state = "away"
@@ -116,22 +118,28 @@
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/eclipse_stronghold
-	name = "Base Neon"
+	name = "Base Neon - Hallways"
 	icon_state = "bluenew"
 	requires_power = FALSE //note to self, remove when I figure out how engineering works
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/eclipse_stronghold/sectora
+name = "Base Neon - Docks"
 
 /area/surface/tyr/eclipse_stronghold/sectorb
+	name = "Base Neon - Security"
 
 /area/surface/tyr/eclipse_stronghold/sectorc
+	name = "Base Neon - Power Generator"
 
 /area/surface/tyr/eclipse_stronghold/sectord
+	name = "Base Neon - Dorms"
 
 /area/surface/tyr/eclipse_stronghold/sectore
+	name = "Base Neon - Dining Hall"
 
 /area/surface/tyr/eclipse_stronghold/sectorfinale
+	name = "Precursor Ruins"
 
 /area/surface/tyr/precursorruins
 	icon_state = "bluenew"
