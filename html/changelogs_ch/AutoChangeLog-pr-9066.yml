@@ -1,4 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - bugfix: "Conveyors no longer move jan hud objects"
