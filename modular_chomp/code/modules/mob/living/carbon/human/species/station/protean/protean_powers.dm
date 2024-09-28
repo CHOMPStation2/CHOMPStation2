@@ -713,7 +713,7 @@
 		return
 	last_special = world.time + 50
 	for(var/obj/item/organ/external/proteanlimbs as anything in src.organs)
-		if(proteanlimbs.organ_tag != BP_TORSO)
+		if(proteanlimbs.organ_tag == BP_HEAD)
 			continue
 		proteanlimbs.transparent = !proteanlimbs.transparent
 	visible_message("<span class='notice'>\The [src]'s internal composition seems to change.</span>")
@@ -721,8 +721,8 @@
 	update_hair()
 
 /obj/effect/protean_ability/chest_transparency
-	ability_name = "transparency toggle (chest only)"
-	desc = "Makes your chest transparent."
+	ability_name = "body transparency toggle (All but head)"
+	desc = "Makes everything but your head transparent!"
 	icon = 'modular_chomp/icons/obj/slimeborg/slimecore.dmi'
 	icon_state = "core"
 	to_call = /mob/living/carbon/human/proc/chest_transparency_toggle
