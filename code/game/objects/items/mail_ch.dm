@@ -340,6 +340,8 @@
 		/obj/item/weapon/paper,
 		/obj/item/stolenpackage,
 		/obj/item/contraband,
+		/obj/item/mail_scanner,
+		/obj/item/weapon/pen
 	)
 
 // Mail Scanner
