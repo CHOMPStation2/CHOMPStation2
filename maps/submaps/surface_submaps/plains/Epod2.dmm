@@ -92,7 +92,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/empty,
+/obj/item/reagent_containers/hypospray/autoinjector/empty,
 /turf/simulated/shuttle/floor,
 /area/submap/epod2)
 =======

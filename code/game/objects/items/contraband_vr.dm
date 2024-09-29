@@ -58,19 +58,11 @@
 					/obj/fiftyspawner/platinum,
 					/obj/item/toy/nanotrasenballoon,
 					/obj/item/toy/syndicateballoon,
-<<<<<<< HEAD
-					/obj/item/weapon/aiModule/syndicate,
-					/obj/item/weapon/book/manual/wiki/engineering_hacking, // CHOMPEdit
-					/obj/item/weapon/card/emag,
-					/obj/item/weapon/card/emag_broken,
-					/obj/item/weapon/card/id/syndicate,
-=======
 					/obj/item/aiModule/syndicate,
-					/obj/item/book/manual/engineering_hacking,
+					/obj/item/book/manual/wiki/engineering_hacking, // CHOMPEdit
 					/obj/item/card/emag,
 					/obj/item/card/emag_broken,
 					/obj/item/card/id/syndicate,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					/obj/item/poster,
 					/obj/item/disposable_teleporter,
 					/obj/item/grenade/flashbang/clusterbang,

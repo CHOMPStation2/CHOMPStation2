@@ -19,12 +19,8 @@
 /*
  * Advanced SMG
  */
-<<<<<<< HEAD
 
-/obj/item/weapon/gun/projectile/automatic/advanced_smg
-=======
 /obj/item/gun/projectile/automatic/advanced_smg
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "advanced SMG"
 	desc = "An advanced submachine gun with a reflective laser optic that makes burst fire less inaccurate than other SMGs. Uses 9mm rounds."
 	icon = 'icons/obj/gun.dmi'
@@ -56,14 +52,10 @@
 /*
  * C-20r
  */
-<<<<<<< HEAD
 
  /* CHOMPedit remove: Moved to automatic_ch.dm. *
 
-/obj/item/weapon/gun/projectile/automatic/c20r
-=======
 /obj/item/gun/projectile/automatic/c20r
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "submachine gun"
 	desc = "The C-20r is a lightweight and rapid firing SMG, for when you REALLY need someone dead. It has 'Scarborough Arms - Per falcis, per pravitas', inscribed on the stock. Uses 10mm rounds."
 	description_fluff = "The C-20r is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
@@ -435,29 +427,28 @@
 	else
 		icon_state = "mini-uzi-empty"
 
-<<<<<<< HEAD
 // CHOMPEdit: Uzi tilting
-/obj/item/weapon/gun/projectile/automatic/mini_uzi/Initialize()
+/obj/item/gun/projectile/automatic/mini_uzi/Initialize()
 	. = ..()
 	if(is64x32)
 		update_transform()
 
-/obj/item/weapon/gun/projectile/automatic/mini_uzi/equipped()
+/obj/item/gun/projectile/automatic/mini_uzi/equipped()
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/weapon/gun/projectile/automatic/mini_uzi/pickup()
+/obj/item/gun/projectile/automatic/mini_uzi/pickup()
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/weapon/gun/projectile/automatic/mini_uzi/dropped()
+/obj/item/gun/projectile/automatic/mini_uzi/dropped()
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
 
-/obj/item/weapon/gun/projectile/automatic/mini_uzi/update_transform()
+/obj/item/gun/projectile/automatic/mini_uzi/update_transform()
 	. = ..()
 	if(is64x32)
 		if(is_picked_up)
@@ -466,13 +457,7 @@
 // CHOMPEdit end: Uzi tilting
 
 /* CHOMPEDIT Commented out, moved to automatic_ch.dm *
-/obj/item/weapon/gun/projectile/automatic/p90
-=======
-/*
- * P90 (H90K)
- */
 /obj/item/gun/projectile/automatic/p90
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "personal defense weapon"
 	desc = "The H90K is a compact, large capacity submachine gun produced by MarsTech. Despite its fierce reputation, it still manages to feel like a toy. Uses 9mm rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."

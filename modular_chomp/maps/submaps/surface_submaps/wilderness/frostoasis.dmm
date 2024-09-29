@@ -8,7 +8,7 @@
 /obj/structure/closet/cabinet,
 /obj/item/stolenpackage,
 /obj/item/stolenpackage,
-/obj/item/weapon/storage/belt/holding,
+/obj/item/storage/belt/holding,
 /turf/simulated/floor/wood,
 /area/submap/FrostOasis)
 "cm" = (
@@ -48,7 +48,7 @@
 /area/submap/FrostOasis)
 "iC" = (
 /obj/structure/table/bench/sifwooden,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 7
 	},
 /turf/simulated/floor/wood/broken,
@@ -61,7 +61,7 @@
 /turf/simulated/floor/outdoors/snow,
 /area/submap/FrostOasis)
 "kr" = (
-/obj/item/weapon/a_gift,
+/obj/item/a_gift,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/FrostOasis)
@@ -78,8 +78,8 @@
 /area/submap/FrostOasis)
 "ls" = (
 /obj/structure/table/standard,
-/obj/item/weapon/a_gift,
-/obj/item/weapon/a_gift,
+/obj/item/a_gift,
+/obj/item/a_gift,
 /turf/simulated/floor/wood,
 /area/submap/FrostOasis)
 "me" = (
@@ -149,7 +149,7 @@
 /turf/simulated/floor/outdoors/snow,
 /area/submap/FrostOasis)
 "tv" = (
-/obj/item/weapon/a_gift,
+/obj/item/a_gift,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/broken,
 /area/submap/FrostOasis)
@@ -165,12 +165,12 @@
 /area/submap/FrostOasis)
 "vb" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /obj/effect/spresent,
 /turf/simulated/floor/wood,
 /area/submap/FrostOasis)
 "vK" = (
-/obj/item/weapon/a_gift,
+/obj/item/a_gift,
 /obj/item/clothing/ears/earring/dangle/glass,
 /turf/simulated/floor/wood,
 /area/submap/FrostOasis)
@@ -206,14 +206,14 @@
 /area/submap/FrostOasis)
 "EW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gift,
-/obj/item/weapon/gun/energy/temperature,
+/obj/item/gift,
+/obj/item/gun/energy/temperature,
 /turf/simulated/floor/wood/broken,
 /area/submap/FrostOasis)
 "Fl" = (
 /obj/structure/curtain/open/bed,
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/fancy/blackcandle_box,
+/obj/item/storage/fancy/blackcandle_box,
 /obj/random/tetheraid,
 /obj/random/soap,
 /obj/random/maintenance,
@@ -237,7 +237,7 @@
 /turf/simulated/floor/water/deep/ocean,
 /area/submap/FrostOasis)
 "Ji" = (
-/obj/item/weapon/a_gift,
+/obj/item/a_gift,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,

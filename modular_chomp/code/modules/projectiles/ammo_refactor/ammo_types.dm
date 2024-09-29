@@ -4,7 +4,7 @@
 	desc = "You shouldn't be able to read this!"
 	var/ammo_flags = 0
 
-/obj/item/projectile/simple_bullet/launch_from_gun(atom/target, target_zone, mob/user, params, angle_override, forced_spread, obj/item/weapon/gun/launcher)
+/obj/item/projectile/simple_bullet/launch_from_gun(atom/target, target_zone, mob/user, params, angle_override, forced_spread, obj/item/gun/launcher)
 	//We aren't actually going to launch! We're just a convenient placeholder. Spawn whatever projectile type the gun uses!
 	var/obj/item/projectile/projectile_type_real = launcher.projectile_type
 	var/damage = projectile_type_real::damage

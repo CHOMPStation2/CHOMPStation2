@@ -90,13 +90,8 @@
 /datum/gear/textmug
 	display_name = "mug with text"
 	description = "A mug with something written on it."
-<<<<<<< HEAD
-	path = /obj/item/weapon/reagent_containers/food/drinks/textmug
-	
-=======
 	path = /obj/item/reagent_containers/food/drinks/textmug
 
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /datum/gear/schnapsen
 	display_name = "schnapsen playing cards"
 	description = "An ancient Austro-Hungarian suit of cards!"

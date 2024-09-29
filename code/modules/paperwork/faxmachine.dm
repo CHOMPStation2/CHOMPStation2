@@ -461,31 +461,18 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 	if (istype(fax, /obj/item/paper))
 		var/obj/item/paper/P = fax
 		var/text = "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>";
-<<<<<<< HEAD
 		file("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") << text; // CHOMPEdit
-	else if (istype(fax, /obj/item/weapon/photo))
-		var/obj/item/weapon/photo/H = fax
-		fcopy(H.img, "[CONFIG_GET(string/fax_export_dir)]/photo_[faxid].png") // CHOMPEdit
-=======
-		file("[config.fax_export_dir]/fax_[faxid].html") << text;
 	else if (istype(fax, /obj/item/photo))
 		var/obj/item/photo/H = fax
-		fcopy(H.img, "[config.fax_export_dir]/photo_[faxid].png")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		fcopy(H.img, "[CONFIG_GET(string/fax_export_dir)]/photo_[faxid].png") // CHOMPEdit
 		var/text = "<html><head><title>[H.name]</title></head>" \
 			+ "<body style='overflow:hidden;margin:0;text-align:center'>" \
 			+ "<img src='photo_[faxid].png'>" \
 			+ "[H.scribble ? "<br>Written on the back:<br><i>[H.scribble]</i>" : ""]"\
 			+ "</body></html>"
-<<<<<<< HEAD
 		file("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") << text // CHOMPEdit
-	else if (istype(fax, /obj/item/weapon/paper_bundle))
-		var/obj/item/weapon/paper_bundle/B = fax
-=======
-		file("[config.fax_export_dir]/fax_[faxid].html") << text
 	else if (istype(fax, /obj/item/paper_bundle))
 		var/obj/item/paper_bundle/B = fax
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		var/data = ""
 		for (var/page = 1, page <= B.pages.len, page++)
 			var/obj/pageobj = B.pages[page]

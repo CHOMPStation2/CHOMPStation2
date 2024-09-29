@@ -43,13 +43,8 @@
 
 
 // The Pack //
-<<<<<<< HEAD
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack
-	name = "\improper HI-102b \'NSCW\' gun kit"
-=======
 /obj/item/storage/secure/briefcase/nsfw_pack
-	name = "\improper KHI-102b \'NSFW\' gun kit"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	name = "\improper HI-102b \'NSCW\' gun kit"
 	desc = "A storage case for a multi-purpose handgun. Variety hour!"
 	w_class = ITEMSIZE_NORMAL
 	max_w_class = ITEMSIZE_NORMAL
@@ -62,13 +57,8 @@
 	for(var/path in subtypesof(/obj/item/ammo_casing/microbattery/combat))
 		new path(src)
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos
-	name = "\improper HI-102b \'NSCW\' gun kit"
-=======
 /obj/item/storage/secure/briefcase/nsfw_pack_hos
-	name = "\improper KHI-102b \'NSFW\' gun kit"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	name = "\improper HI-102b \'NSCW\' gun kit"
 	desc = "A storage case for a multi-purpose handgun. Variety hour!"
 	w_class = ITEMSIZE_NORMAL
 	max_w_class = ITEMSIZE_NORMAL

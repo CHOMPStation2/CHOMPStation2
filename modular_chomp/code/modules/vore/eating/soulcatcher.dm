@@ -381,13 +381,13 @@
 // Returns nearby,valid transfer locations as a list
 /obj/soulgem/proc/find_transfer_objects()
 	var/list/valid_trasfer_objects = list(
-		/obj/item/device/sleevemate,
-		/obj/item/device/mmi
+		/obj/item/sleevemate,
+		/obj/item/mmi
 	)
 	var/list/valid_objects = list()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
-		if(istype(R.module_active, /obj/item/device/sleevemate))
+		if(istype(R.module_active, /obj/item/sleevemate))
 			valid_objects += R.module_active
 	if(ishuman(owner))
 		var/mob/living/carbon/human/H = owner
@@ -432,16 +432,16 @@
 /obj/soulgem/proc/transfer_mob(var/mob/M, var/obj/target)
 	if(is_taken_over()) return
 	if(!M || !target) return
-	if(istype(target, /obj/item/device/sleevemate))
-		var/obj/item/device/sleevemate/mate = target
+	if(istype(target, /obj/item/sleevemate))
+		var/obj/item/sleevemate/mate = target
 		if(!mate.stored_mind)
 			to_chat(owner, span_notice("You scan yourself to transfer the soul into the [target]!"))
 			to_chat(M, span_notice("[transfer_message]"))
 			if(M.mind == own_mind)
 				own_mind = null
 			mate.get_mind(M)
-	else if(istype(target, /obj/item/device/mmi))
-		var/obj/item/device/mmi/mm = target
+	else if(istype(target, /obj/item/mmi))
+		var/obj/item/mmi/mm = target
 		if(!mm.brainmob || !mm.brainmob.mind)
 			if(M.mind == own_mind)
 				own_mind = null

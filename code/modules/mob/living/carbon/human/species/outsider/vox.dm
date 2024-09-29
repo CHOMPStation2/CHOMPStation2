@@ -109,17 +109,10 @@
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 	if(H.backbag == 1)
-<<<<<<< HEAD
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_back) //CHOMPedit
+		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_back) //CHOMPedit
 		H.internal = H.back
 	else
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_r_hand) //CHOMPedit
-=======
-		H.equip_to_slot_or_del(new /obj/item/tank/vox(H), slot_back)
-		H.internal = H.back
-	else
-		H.equip_to_slot_or_del(new /obj/item/tank/vox(H), slot_r_hand)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_r_hand) //CHOMPedit
 		H.internal = H.r_hand
 	H.internal = locate(/obj/item/tank) in H.contents
 	if(istype(H.internal,/obj/item/tank) && H.internals)

@@ -84,7 +84,7 @@
 /area/submap/debrisfield/mining_outpost)
 "p" = (
 <<<<<<< HEAD
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 =======
 /obj/item/material/shard,
 /mob/living/simple_mob/mechanical/mining_drone/scavenger,

@@ -184,13 +184,8 @@
 	force = 5.0
 	throwforce = 7.0
 	w_class = ITEMSIZE_SMALL
-<<<<<<< HEAD
-	
-/obj/item/weapon/shovel/wood
-=======
 
 /obj/item/shovel/wood
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "wooden shovel"
 	desc = "An improvised tool for digging and moving dirt."
 	icon = 'icons/obj/items.dmi'
@@ -343,8 +338,3 @@
 	newlightpole.icon_state = "[newlightpole.base_state]_on"
 	newlightpole.visible_message("<b>[user]</b> plants [newlightpole] firmly in the ground.")
 	src.use(1)
-
-
-
-
-

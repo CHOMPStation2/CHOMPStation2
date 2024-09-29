@@ -1,6 +1,6 @@
 //Badmin piece of clothing that applies a few effects to a mob, used specifically for events with "hunters"
 //This just helps me equip the hunters a little easier
-/obj/item/device/radio/headset/event
+/obj/item/radio/headset/event
 	name = "totally normal headset"
 	desc = "A headset with numerous toolkits appended to it, applying a wide variety of effects to its wearer set as per its manufacturer."
 	icon_state = "cent_headset_alt"
@@ -24,7 +24,7 @@
 	var/teley = 16
 	var/telez = 0	//Set this in-round if you want a return point with fake health
 
-/obj/item/device/radio/headset/event/equipped(var/mob/living/carbon/human/H)
+/obj/item/radio/headset/event/equipped(var/mob/living/carbon/human/H)
 	if(H && ((H.l_ear == src) || (H.r_ear == src)))
 		wearer = H
 		if(light_power)
@@ -46,7 +46,7 @@
 			H.species.slowdown = slowdown_to_set
 			H.species.item_slowdown_mod = 0
 
-/obj/item/device/radio/headset/event/dropped(var/mob/living/carbon/human/H)
+/obj/item/radio/headset/event/dropped(var/mob/living/carbon/human/H)
 	..()
 	if(wearer)
 		wearer = null
@@ -62,7 +62,7 @@
 			H.species.slowdown = slowdown_reset
 			H.species.item_slowdown_mod = item_slowdown_reset
 
-/obj/item/device/radio/headset/event/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/radio/headset/event/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(!telez)
 		return FALSE
 	tele_threshold -= damage
@@ -79,23 +79,23 @@
 
 
 
-/obj/item/device/radio/headset/outsider
+/obj/item/radio/headset/outsider
 	name = "generic headset"
 	desc = "Headset used by those upon the planet, or in other words, outsiders."
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 
-	ks1type = /obj/item/device/encryptionkey/headset_outsider
+	ks1type = /obj/item/encryptionkey/headset_outsider
 
 
-/obj/item/device/encryptionkey/headset_outsider
+/obj/item/encryptionkey/headset_outsider
 	name = "outsider radio encryption key"
 	icon_state = "sec_cypherkey"
 
 	channels = list(CHANNEL_OUTSIDER = 1)
 
-/obj/item/device/radio/headset/headset_medsec
+/obj/item/radio/headset/headset_medsec
 	name = "medical security radio headset"
 	desc = "A headset with combined medical and security functionality."
 	icon_state = "med_headset"
-	ks2type = /obj/item/device/encryptionkey/headset_medsec
+	ks2type = /obj/item/encryptionkey/headset_medsec

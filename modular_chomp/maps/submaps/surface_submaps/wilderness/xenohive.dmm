@@ -309,7 +309,7 @@
 /obj/random/maintenance/security,
 /obj/item/organ/internal/brain/alraune,
 /obj/item/organ/internal/eyes/replicant,
-/obj/item/weapon/gun/energy/gun/fluff/dominator,
+/obj/item/gun/energy/gun/fluff/dominator,
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "CR" = (
@@ -372,7 +372,7 @@
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "Hx" = (
-/obj/item/weapon/portable_destructive_analyzer,
+/obj/item/portable_destructive_analyzer,
 /obj/effect/alien/weeds,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
@@ -401,7 +401,7 @@
 /obj/structure/table,
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/storage/backpack/holding,
+/obj/item/storage/backpack/holding,
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "Ir" = (
@@ -540,7 +540,7 @@
 /obj/effect/alien/weeds,
 /obj/structure/prop/transmitter,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/gps/internal/poi,
+/obj/item/gps/internal/poi,
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "Vj" = (

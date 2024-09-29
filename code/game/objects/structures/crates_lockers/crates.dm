@@ -307,7 +307,7 @@
 	name = "Cooper's Stache"
 
 	starts_with = list(
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge = 6,
+		/obj/item/reagent_containers/food/snacks/cheesewedge = 6,
 		/obj/item/stack/material/gold = 1)
 /obj/structure/closet/crate/freezer
 	name = "freezer"

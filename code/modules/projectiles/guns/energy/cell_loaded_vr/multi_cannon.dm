@@ -59,13 +59,8 @@
 	.=..()
 	update_icon()
 	chambered = null
-<<<<<<< HEAD
 
-/obj/item/weapon/gun/projectile/multi_cannon/get_ammo_count() // Custom handling for the Curabitur.
-=======
-	
 /obj/item/gun/projectile/multi_cannon/get_ammo_count() // Custom handling for the Curabitur.
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(istype(chambered, /obj/item/ammo_casing/macrobattery))
 		var/obj/item/ammo_casing/macrobattery/battery = chambered
 		if(battery.charge) // Does the battery have charge?

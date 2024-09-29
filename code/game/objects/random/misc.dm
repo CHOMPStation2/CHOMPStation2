@@ -241,24 +241,14 @@
 	icon_state = "medicalkit"
 
 /obj/random/firstaid/item_to_spawn()
-<<<<<<< HEAD
-	return pick(prob(10);/obj/item/weapon/storage/firstaid/regular,
-				prob(8);/obj/item/weapon/storage/firstaid/toxin,
-				prob(8);/obj/item/weapon/storage/firstaid/o2,
-				prob(4);/obj/item/weapon/storage/firstaid/adv, //VOREStation Edit: 6 to 4
-				prob(8);/obj/item/weapon/storage/firstaid/fire,
-				prob(1);/obj/item/device/denecrotizer/medical, //VOREStation Add,
-				prob(1);/obj/item/weapon/storage/firstaid/combat,
-				prob(2);/obj/item/weapon/storage/firstaid/experimental) //CHOMPadd
-=======
 	return pick(prob(10);/obj/item/storage/firstaid/regular,
 				prob(8);/obj/item/storage/firstaid/toxin,
 				prob(8);/obj/item/storage/firstaid/o2,
 				prob(4);/obj/item/storage/firstaid/adv, //VOREStation Edit: 6 to 4
 				prob(8);/obj/item/storage/firstaid/fire,
 				prob(1);/obj/item/denecrotizer/medical, //VOREStation Add,
-				prob(1);/obj/item/storage/firstaid/combat)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+				prob(1);/obj/item/storage/firstaid/combat,
+				prob(2);/obj/item/storage/firstaid/experimental) //CHOMPadd
 
 /obj/random/contraband
 	name = "Random Illegal Item"
@@ -1095,36 +1085,6 @@
 	icon_state = "coffeecup_spawner"
 
 /obj/random/mug/item_to_spawn()
-<<<<<<< HEAD
-	return pick(/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/sol,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/fleet,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/fivearrows,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/psc,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/alma,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/almp,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/metal/wulf,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/gilthari,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/zeng,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/wt,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/aether,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/bishop,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/oculum,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/one,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/puni,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/heart,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/pawn,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/diona,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/britcup,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/flame,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/blue,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/black,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/green,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/green/dark,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/rainbow,
-			/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/metal) //CHOMPedit: deleted talon mug
-=======
 	return pick(/obj/item/reagent_containers/food/drinks/glass2/coffeemug,
 			/obj/item/reagent_containers/food/drinks/glass2/coffeemug/sol,
 			/obj/item/reagent_containers/food/drinks/glass2/coffeemug/fleet,
@@ -1152,9 +1112,7 @@
 			/obj/item/reagent_containers/food/drinks/glass2/coffeemug/green,
 			/obj/item/reagent_containers/food/drinks/glass2/coffeemug/green/dark,
 			/obj/item/reagent_containers/food/drinks/glass2/coffeemug/rainbow,
-			/obj/item/reagent_containers/food/drinks/glass2/coffeemug/metal,
-			/obj/item/reagent_containers/food/drinks/glass2/coffeemug/talon)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+			/obj/item/reagent_containers/food/drinks/glass2/coffeemug/metal) //CHOMPedit: deleted talon mug
 
 /obj/random/donkpocketbox
 	name = "Random Donk-pocket Box"
@@ -1198,17 +1156,6 @@
 		prob(10);/obj/item/bluespace_harpoon,
 		prob(10);/obj/item/bluespace_crystal,
 		prob(1);/obj/item/clothing/glasses/graviton,
-<<<<<<< HEAD
-		prob(10);/obj/item/weapon/cracker,
-		prob(1);/obj/item/weapon/cracker/shrinking,
-		prob(1);/obj/item/weapon/cracker/growing,
-		prob(1);/obj/item/weapon/cracker/invisibility,
-		prob(1);/obj/item/weapon/cracker/drugged,
-		prob(1);/obj/item/weapon/cracker/knockover,
-		prob(1);/obj/item/weapon/cracker/vore,
-		prob(1);/obj/item/weapon/cracker/money
-	)
-=======
 		prob(10);/obj/item/cracker,
 		prob(1);/obj/item/cracker/shrinking,
 		prob(1);/obj/item/cracker/growing,
@@ -1218,4 +1165,3 @@
 		prob(1);/obj/item/cracker/vore,
 		prob(1);/obj/item/cracker/money
 	)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

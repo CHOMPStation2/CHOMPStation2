@@ -33,13 +33,12 @@ var/list/holder_mob_icon_cache = list()
 	held.reset_view(src)
 	START_PROCESSING(SSobj, src)
 
-<<<<<<< HEAD
 //CHOMPEdit Start - Add status so that you can see where you are...
 /mob/living/get_status_tab_items()
 	. = ..()
-	if(. && istype(loc, /obj/item/weapon/holder))
+	if(. && istype(loc, /obj/item/holder))
 		var/location = ""
-		var/obj/item/weapon/holder/H = loc
+		var/obj/item/holder/H = loc
 		if(ishuman(H.loc))
 			var/mob/living/carbon/human/HH = H.loc
 			if(HH.l_hand == H)
@@ -71,10 +70,7 @@ var/list/holder_mob_icon_cache = list()
 			. += "Location: [location]"
 //CHOMPEdit End
 
-/obj/item/weapon/holder/Entered(mob/held, atom/OldLoc)
-=======
 /obj/item/holder/Entered(mob/held, atom/OldLoc)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(held_mob)
 		held.forceMove(get_turf(src))
 		held.reset_view(null)
@@ -337,8 +333,7 @@ var/list/holder_mob_icon_cache = list()
 		if(prob(10))
 			L.Stun(2)
 
-<<<<<<< HEAD
-/obj/item/weapon/holder/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/holder/attackby(obj/item/W as obj, mob/user as mob)
 	//CHOMPADDITION: MicroHandCrush
 	if(W == src && user.a_intent == I_HURT)
 		for(var/mob/living/M in src.contents)
@@ -349,9 +344,6 @@ var/list/holder_mob_icon_cache = list()
 				log_and_message_admins("[key_name(M)] has been harmsqueezed by [key_name(user)]")
 				M.apply_damage(dam)
 	//CHOMPADDITION: MicroHandCrush END
-=======
-/obj/item/holder/attackby(obj/item/W as obj, mob/user as mob)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	for(var/mob/M in src.contents)
 		M.attackby(W,user)
 
@@ -376,7 +368,6 @@ var/list/holder_mob_icon_cache = list()
 	else
 		if(grabber.incapacitated()) return
 
-<<<<<<< HEAD
 	//YW edit - size diff check
 	var/sizediff = grabber.size_multiplier - size_multiplier
 	if(sizediff < -0.5)
@@ -387,11 +378,8 @@ var/list/holder_mob_icon_cache = list()
 		return
 	//end YW edit
 
-	var/obj/item/weapon/holder/H = new holder_type(get_turf(src), src)
-	H.sync(src)	//CHOMPEdit - See modular_chomp/code/modules/mob/holder.dm for what this does
-=======
 	var/obj/item/holder/H = new holder_type(get_turf(src), src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	H.sync(src)	//CHOMPEdit - See modular_chomp/code/modules/mob/holder.dm for what this does
 	grabber.put_in_hands(H)
 
 	if(self_grab)

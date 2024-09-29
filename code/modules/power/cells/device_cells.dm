@@ -78,13 +78,13 @@
 	name = "weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry."
 
-/obj/item/weapon/cell/device/weapon/empty/Initialize()
+/obj/item/cell/device/weapon/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
 	
 //Yawn Changes
-/obj/item/weapon/cell/device/weapon //Aka adv
+/obj/item/cell/device/weapon //Aka adv
 	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
 	desc = "A small upgraded power cell designed to power handheld devices."
 	icon_state = "weapon_cell"
@@ -93,7 +93,7 @@
 	origin_tech = list(TECH_POWER = 2)
 
 <<<<<<< HEAD
-/obj/item/weapon/cell/device/super
+/obj/item/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
 	icon_state = "sc_weapon_cell" //CHOMP Add
@@ -101,7 +101,7 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 3)
 
-/obj/item/weapon/cell/device/super/empty/Initialize()
+/obj/item/cell/device/super/empty/Initialize()
 =======
 /obj/item/cell/device/weapon/empty/Initialize()
 >>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
@@ -109,7 +109,7 @@
 	charge = 0
 	update_icon()
 
-/obj/item/weapon/cell/device/hyper
+/obj/item/cell/device/hyper
 	name = "hyper device power cell"
 	desc = "A small upgraded power cell designed to hold much more power for handheld devices."
 	icon_state = "cap_weapon_cell" //CHOMP Add
@@ -117,14 +117,14 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
 	
-/obj/item/weapon/cell/device/hyper/empty/Initialize()
+/obj/item/cell/device/hyper/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
 //End of Yawn changes
 	
 //CHOMP Add begin
-/obj/item/weapon/cell/device/giga //CHOMP Add: Why not? Lets add a new one. Lets put the new sprites to use.
+/obj/item/cell/device/giga //CHOMP Add: Why not? Lets add a new one. Lets put the new sprites to use.
 	name = "giga device power cell"
 	desc = "A small power cell that holds a blistering amount of energy, constructed by clever scientists using secrets gleaned from alien technology."
 	icon_state = "cap_weapon_cell" 
@@ -132,7 +132,7 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
 
-/obj/item/weapon/cell/device/giga/empty/Initialize()
+/obj/item/cell/device/giga/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
@@ -202,11 +202,11 @@
 	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6)
 
 <<<<<<< HEAD
-/obj/item/weapon/cell/device/weapon/recharge/alien/update_icon()
+/obj/item/cell/device/weapon/recharge/alien/update_icon()
 	return // No overlays please.
 
 //YAWN Addtion
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni
+/obj/item/cell/device/weapon/recharge/alien/omni
 	name = "omni weapon power cell"
 	desc = "A mix between alien technology and phoron tech. Seems to fit in almost any cell slot..."
 	charge_amount = 90 // 5%.
@@ -214,7 +214,7 @@
 	charge_delay = 50 SECONDS
 	origin_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4, TECH_PHORON = 3)
 
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty/Initialize()
+/obj/item/cell/device/weapon/recharge/alien/omni/empty/Initialize()
 	. = ..()
 	charge = 0
 =======

@@ -47,7 +47,7 @@
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 <<<<<<< HEAD
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/outdoors/dirt,
 =======
 /obj/item/towel/random,
@@ -61,7 +61,7 @@
 "nG" = (
 /obj/structure/railing,
 <<<<<<< HEAD
-/obj/item/weapon/bone,
+/obj/item/bone,
 /turf/simulated/floor/outdoors/dirt,
 =======
 /obj/random/junk,
@@ -151,8 +151,8 @@
 /obj/random/junk,
 /obj/random/junk,
 /obj/random/junk,
-/obj/item/weapon/bone/ribs,
-/obj/item/weapon/bone/skull,
+/obj/item/bone/ribs,
+/obj/item/bone/skull,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/priderock)
 "As" = (
@@ -258,7 +258,7 @@
 /obj/random/junk,
 /obj/random/junk,
 <<<<<<< HEAD
-/obj/item/weapon/bone/skull/unathi,
+/obj/item/bone/skull/unathi,
 /turf/simulated/floor/outdoors/dirt,
 =======
 /obj/random/junk,
@@ -295,7 +295,7 @@
 /area/submap/priderock)
 "Pb" = (
 <<<<<<< HEAD
-/obj/item/weapon/storage/backpack/dufflebag/syndie/med,
+/obj/item/storage/backpack/dufflebag/syndie/med,
 /turf/simulated/floor/outdoors/dirt,
 =======
 /obj/item/storage/backpack/dufflebag/syndie/med,
@@ -381,7 +381,7 @@
 "XN" = (
 /obj/item/clothing/head/bearpelt,
 <<<<<<< HEAD
-/obj/item/device/binoculars/spyglass,
+/obj/item/binoculars/spyglass,
 /turf/simulated/floor/outdoors/rocks,
 =======
 /obj/item/binoculars/spyglass,

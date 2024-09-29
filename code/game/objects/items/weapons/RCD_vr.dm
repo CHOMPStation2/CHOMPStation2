@@ -64,16 +64,10 @@
 		qdel(effects[A])
 		effects -= A
 
-<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
-/obj/item/weapon/rcd/attackby(obj/item/weapon/W, mob/user)
-	if(istype(W, /obj/item/weapon/rcd_ammo))
-		var/obj/item/weapon/rcd_ammo/cartridge = W
-=======
 /obj/item/rcd/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/rcd_ammo))
 		var/obj/item/rcd_ammo/cartridge = W
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		var/can_store = min(max_stored_matter - stored_matter, cartridge.remaining)
 		if(can_store <= 0)
 			to_chat(user, span("warning", "There's either no space or \the [cartridge] is empty!"))
@@ -114,12 +108,8 @@
 
 	return TRUE
 
-<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
-/obj/item/weapon/rcd/attack_self(mob/living/user)
-=======
 /obj/item/rcd/attack_self(mob/living/user)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	..()
 	var/list/choices = list(
 		"Airlock" = radial_image_airlock,

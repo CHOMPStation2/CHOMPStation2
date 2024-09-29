@@ -167,24 +167,17 @@
 		/obj/item/clothing/head/beret/sec/corporate/warden,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
-<<<<<<< HEAD
-		/obj/item/device/flashlight/maglight,
-		/obj/item/device/megaphone,
+		/obj/item/flashlight/maglight,
+		/obj/item/megaphone,
 		/obj/item/clothing/mask/gas/sechailer/swat/warden, //CHOMP Edit
-		/obj/item/weapon/gun/projectile/revolvershotgun,
+		/obj/item/gun/projectile/revolvershotgun,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
-		/obj/item/device/ticket_printer,		//CHOMPStation addition
-		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
+		/obj/item/ticket_printer,		//CHOMPStation addition
+		/obj/item/retail_scanner/security,	//CHOMPStation addition
 		/obj/item/clothing/accessory/bodycam // CHOMPEdit
 
 		)
-=======
-		/obj/item/flashlight/maglight,
-		/obj/item/megaphone,
-		/obj/item/clothing/mask/gas/half,
-		/obj/item/clothing/mask/gas/sechailer/swat/warden)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/structure/closet/secure_closet/warden/Initialize()
 	if(prob(50))
@@ -203,17 +196,7 @@
 	starts_with = list(
 		/obj/item/clothing/suit/storage/vest/officer,
 		/obj/item/clothing/head/helmet,
-<<<<<<< HEAD
 		/obj/item/clothing/mask/gas/sechailer/swat/officer, //CHOMP ADD
-		/obj/item/weapon/cartridge/security,
-		/obj/item/device/radio/headset/headset_sec,
-		/obj/item/device/radio/headset/headset_sec/alt,
-		/obj/item/weapon/storage/belt/security,
-		/obj/item/device/flash,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/grenade/flashbang,
-		/obj/item/weapon/melee/baton/loaded,
-=======
 		/obj/item/cartridge/security,
 		/obj/item/radio/headset/headset_sec,
 		/obj/item/radio/headset/headset_sec/alt,
@@ -222,7 +205,6 @@
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/grenade/flashbang,
 		/obj/item/melee/baton/loaded,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/taperoll/police,
 		/obj/item/hailer,
@@ -230,28 +212,17 @@
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/head/soft/sec/corp,
 		/obj/item/clothing/under/rank/security/corp,
-<<<<<<< HEAD
 		/obj/item/ammo_magazine/m45/rubber, //VOREStation Removal, //CHOMP Edit it has been restored
-		/obj/item/weapon/gun/energy/taser,
-		/obj/item/weapon/cell/device/weapon,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
-		/obj/item/clothing/shoes/boots/winter/security,
-		/obj/item/device/flashlight/maglight,
-		/obj/item/device/holowarrant,				//CHOMPStation addition
-		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
-		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
-		/obj/item/device/ticket_printer,			//CHOMPStation addition
-		/obj/item/clothing/accessory/bodycam // CHOMPEdit
-
-		)
-=======
-		///obj/item/ammo_magazine/m45/rubber, //VOREStation Removal,
 		/obj/item/gun/energy/taser,
 		/obj/item/cell/device/weapon,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 		/obj/item/clothing/shoes/boots/winter/security,
-		/obj/item/flashlight/maglight)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		/obj/item/flashlight/maglight,
+		/obj/item/holowarrant,				//CHOMPStation addition
+		/obj/item/retail_scanner/security,	//CHOMPStation addition
+		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
+		/obj/item/ticket_printer,			//CHOMPStation addition
+		)
 
 /obj/structure/closet/secure_closet/security/Initialize()
 	if(prob(50))
@@ -305,24 +276,15 @@
 		/obj/item/clothing/suit/storage/vest/detective,
 		/obj/item/taperoll/police,
 		/obj/item/clothing/accessory/holster/armpit,
-<<<<<<< HEAD
-		/obj/item/device/flashlight/maglight,
-		/obj/item/weapon/reagent_containers/food/drinks/flask/detflask,
-		/obj/item/weapon/storage/briefcase/crimekit,
-		/obj/item/device/taperecorder,
-		/obj/item/weapon/storage/bag/detective,
-		/obj/item/device/tape/random = 3,
-		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
-		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
-		)
-=======
 		/obj/item/flashlight/maglight,
 		/obj/item/reagent_containers/food/drinks/flask/detflask,
 		/obj/item/storage/briefcase/crimekit,
 		/obj/item/taperecorder,
 		/obj/item/storage/bag/detective,
-		/obj/item/rectape/random = 3)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		/obj/item/rectape/random = 3,
+		/obj/item/retail_scanner/security,	//CHOMPStation addition
+		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
+		)
 
 /obj/structure/closet/secure_closet/injection
 	name = "lethal injections locker"

@@ -203,8 +203,8 @@
 /area/submap/clockwork)
 "S" = (
 /obj/structure/closet/grave,
-/obj/item/weapon/rig/ch/clockwork,
-/obj/item/weapon/gun/energy/clockwork,
+/obj/item/rig/ch/clockwork,
+/obj/item/gun/energy/clockwork,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/clockwork)
 "T" = (

@@ -64,11 +64,7 @@
 	modules += bandaid
 	synths += medicine
 
-<<<<<<< HEAD
-	var/obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg/phasegun = new(src)  //CHOMP Edit
-=======
-	var/obj/item/gun/energy/phasegun/mounted/cyborg/phasegun = new(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	var/obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg/phasegun = new(src)  //CHOMP Edit
 	modules += phasegun
 
 	emag += new /obj/item/chainsaw(src)

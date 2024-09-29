@@ -55,10 +55,5 @@
 	id = "s-transmitter"
 	req_tech = list(TECH_MAGNET = 5, TECH_MATERIAL = 5, TECH_BLUESPACE = 3)
 	materials = list(MAT_GLASS = 100, MAT_SILVER = 10, MAT_URANIUM = 15)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/stock_parts/subspace/transmitter
-	sort_string = "RAAAG"
-=======
 	build_path = /obj/item/stock_parts/subspace/transmitter
 	sort_string = "RAAAG"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

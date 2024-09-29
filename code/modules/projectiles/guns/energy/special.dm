@@ -54,12 +54,8 @@
 	battery_lock = 1
 
 	var/decl/plantgene/gene = null
-<<<<<<< HEAD
 	recoil_mode = 0 //CHOMP Addition
-	var/obj/item/weapon/stock_parts/micro_laser/emitter
-=======
 	var/obj/item/stock_parts/micro_laser/emitter
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	firemodes = list(
 		list(mode_name="induce mutations", projectile_type=/obj/item/projectile/energy/floramut, modifystate="floramut"),

@@ -102,13 +102,8 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/mine/explored/underdark)
-<<<<<<< HEAD
 "u" = (
-/obj/item/weapon/newspaper{
-=======
-"au" = (
 /obj/item/newspaper{
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
@@ -165,7 +160,7 @@
 /area/mine/explored/underdark)
 <<<<<<< HEAD
 "E" = (
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/wrench,
 =======
 "aE" = (
 /obj/item/tool/wrench,
@@ -213,11 +208,11 @@
 /area/mine/explored/underdark)
 <<<<<<< HEAD
 "R" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 /turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/mine/explored/underdark)
 "S" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 =======
 "aO" = (
 /obj/item/tool/wrench,
@@ -250,7 +245,7 @@
 /area/mine/explored/underdark)
 <<<<<<< HEAD
 "W" = (
-/obj/item/weapon/bone/skull,
+/obj/item/bone/skull,
 =======
 "aU" = (
 /obj/structure/cable/green{

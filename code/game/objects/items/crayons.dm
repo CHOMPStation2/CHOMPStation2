@@ -65,11 +65,7 @@
 	shadeColour = input(user, "Please select the shade colour.", "Crayon colour") as color
 	return
 
-<<<<<<< HEAD
-/obj/item/weapon/pen/crayon/afterattack(atom/target, mob/user as mob, proximity, click_parameters) // CHOMPEdit - Click parameters
-=======
-/obj/item/pen/crayon/afterattack(atom/target, mob/user as mob, proximity)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/pen/crayon/afterattack(atom/target, mob/user as mob, proximity, click_parameters) // CHOMPEdit - Click parameters
 	if(!proximity) return
 	if(istype(target,/turf/simulated/floor))
 		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow"))

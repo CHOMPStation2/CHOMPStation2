@@ -63,11 +63,7 @@
 	desc = "This storage pouch can be used to provide some additional storage for quick access. Can only hold ammunition, cells, explosives, and grenades."
 	icon_state = "ammo"
 	max_storage_space = INVENTORY_POUCH_SPACE
-<<<<<<< HEAD
-	can_hold = list(/obj/item/ammo_magazine, /obj/item/ammo_casing, /obj/item/weapon/cell/device, /obj/item/weapon/grenade, /obj/item/weapon/plastique) //Vorestation Add - make it more useful for non-sec/explo //Chompstation Edit - Adds more variety of device cells it can store
-=======
-	can_hold = list(/obj/item/ammo_magazine, /obj/item/ammo_casing, /obj/item/cell/device/weapon, /obj/item/grenade, /obj/item/plastique) //Vorestation Add - make it more useful for non-sec/explo
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	can_hold = list(/obj/item/ammo_magazine, /obj/item/ammo_casing, /obj/item/cell/device, /obj/item/grenade, /obj/item/plastique) //Vorestation Add - make it more useful for non-sec/explo //Chompstation Edit - Adds more variety of device cells it can store
 
 /obj/item/storage/pouch/eng_tool
 	name = "storage pouch (tools)"
@@ -171,22 +167,13 @@
 	name = "storage pouch (flares)"
 	desc = "This storage pouch can be used to provide some additional storage for quick access. Can only hold flares and glowsticks."
 	icon_state = "flare"
-<<<<<<< HEAD
 	storage_slots = 14 // CHOMPedit: Full box of flares.
 	remove_delay = 0 // CHOMPedit: Quick access to light sources.
-	can_hold = list(/obj/item/device/flashlight/flare, /obj/item/device/flashlight/glowstick)
-/obj/item/weapon/storage/pouch/flares/full_flare
-	starts_with = list(/obj/item/device/flashlight/flare = 14) // CHOMPedit: Full box of flares.
-/obj/item/weapon/storage/pouch/flares/full_glow
-	starts_with = list(/obj/item/device/flashlight/glowstick = 14) // CHOMPedit: Full box of glowsticks.
-=======
-	storage_slots = 5
 	can_hold = list(/obj/item/flashlight/flare, /obj/item/flashlight/glowstick)
 /obj/item/storage/pouch/flares/full_flare
-	starts_with = list(/obj/item/flashlight/flare = 5)
+	starts_with = list(/obj/item/flashlight/flare = 14) // CHOMPedit: Full box of flares.
 /obj/item/storage/pouch/flares/full_glow
-	starts_with = list(/obj/item/flashlight/glowstick = 5)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	starts_with = list(/obj/item/flashlight/glowstick = 14) // CHOMPedit: Full box of glowsticks.
 
 /obj/item/storage/pouch/flares/update_icon()
 	cut_overlays()

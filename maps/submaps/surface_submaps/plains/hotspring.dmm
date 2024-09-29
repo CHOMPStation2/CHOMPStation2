@@ -49,7 +49,7 @@
 	pixel_y = -6
 	},
 <<<<<<< HEAD
-/obj/item/weapon/wrapping_paper,
+/obj/item/wrapping_paper,
 /turf/simulated/floor/wood/sif,
 =======
 /obj/item/wrapping_paper,
@@ -79,7 +79,7 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/material/harpoon,
+/obj/item/material/harpoon,
 /turf/simulated/floor/wood/sif,
 =======
 /obj/item/material/harpoon,
@@ -117,7 +117,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/hotspring)
 "A" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/submap/hotspring)
 "D" = (
@@ -168,7 +168,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 4;
 	pixel_y = 7
 	},
@@ -180,7 +180,7 @@
 	health = 1e+006
 	},
 <<<<<<< HEAD
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 =======
 /obj/item/material/shard,
 /obj/structure/loot_pile/maint/trash,
@@ -207,8 +207,8 @@
 /turf/simulated/wall/log_sif,
 /area/submap/hotspring)
 "Z" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	pixel_x = 5
 	},
 /turf/template_noop,

@@ -6,7 +6,7 @@
 	plane = ABOVE_MOB_PLANE
 	chance_uncommon = 0
 	chance_rare = 0
-	common_loot = list(/obj/item/weapon/a_gift/advanced)
+	common_loot = list(/obj/item/a_gift/advanced)
 	pixel_x = -32
 	bound_width = 96
 	bound_height = 64

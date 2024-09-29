@@ -628,28 +628,18 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	durability = 10
 	starting_software = null
 
-<<<<<<< HEAD
-/obj/item/device/nif/authentic
+/obj/item/nif/authentic
 	name = "Authentic NIF"
 	desc = "A much more expensive, advanced prototype of the NIF technology. Not usually found in the frontier."
 	durability = 1000
 
-/obj/item/device/nif/authenticbio
+/obj/item/nif/authenticbio
 	name = "Bioadaptive Authentic NIF"
 	desc = "The cutting-edge of NIF technology, this is the strongest, most reliable, and most adaptive framework developed to date. Extremely expensive to produce."
 	durability = 1000
 	bioadap = TRUE
 
-/obj/item/device/nif/bioadap
-=======
-/obj/item/nif/authentic
-	name = "\improper Kitsuhana NIF"
-	desc = "An actual Kitsuhana working surface, in a box. From a society slightly less afraid \
-	of self-replicating nanotechnology. Basically just a high-endurance NIF."
-	durability = 1000
-
 /obj/item/nif/bioadap
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "bioadaptive NIF"
 	desc = "A NIF that goes out of it's way to accomidate strange body types. \
 	Will function in species where it normally wouldn't."

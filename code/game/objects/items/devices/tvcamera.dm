@@ -167,7 +167,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	var/channel = "Default Bodycamera Feed"
 	var/obj/machinery/camera/network/bodycamera/bcamera
-	var/obj/item/device/radio/bradio
+	var/obj/item/radio/bradio
 	var/datum/weakref/showing
 	var/showing_name
 

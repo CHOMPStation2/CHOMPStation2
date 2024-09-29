@@ -62,12 +62,8 @@
 
 /datum/category_item/autolathe/tools/rsf
 	name = "rapid service fabricator"
-<<<<<<< HEAD
-	path = /obj/item/weapon/rsf
-	
+	path = /obj/item/rsf
+
 /datum/category_item/autolathe/tools/cable_coil //CHOMPEdit  -- defaults to 1,5,10x with a 30x stack max, need to figure out 30x eventually
 	name = "cable coil"
 	path =/obj/item/stack/cable_coil
-=======
-	path = /obj/item/rsf
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

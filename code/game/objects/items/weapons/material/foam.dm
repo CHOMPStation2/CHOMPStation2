@@ -26,12 +26,7 @@
 	base_icon = "spear_mask"
 	icon_state = "spear_mask0"
 	unbreakable = 1
-<<<<<<< HEAD
-/obj/item/weapon/material/twohanded/spear/foam/New(var/newloc)
-=======
-
 /obj/item/material/twohanded/spear/foam/New(var/newloc)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	..(newloc,"foam")
 
 /obj/item/material/twohanded/fireaxe/foam

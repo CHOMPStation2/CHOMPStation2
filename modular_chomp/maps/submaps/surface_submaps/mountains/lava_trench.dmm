@@ -414,8 +414,8 @@
 /area/submap/cave/lava_trench)
 "bd" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/excavation,
-/obj/item/device/measuring_tape,
+/obj/item/storage/excavation,
+/obj/item/measuring_tape,
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 4;
 	icon_state = "corner_oldtile"
@@ -607,12 +607,12 @@
 /area/submap/cave/lava_trench/outpost)
 "bC" = (
 /obj/structure/table/rack,
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /obj/effect/floor_decal/corner_oldtile/purple/full{
 	dir = 1;
 	icon_state = "corner_oldtile_full"
 	},
-/obj/item/weapon/pickaxe/drill,
+/obj/item/pickaxe/drill,
 /turf/simulated/floor/tiled/old_tile,
 /area/submap/cave/lava_trench/outpost)
 "bD" = (
@@ -642,7 +642,7 @@
 "bG" = (
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/structure/table/steel,
-/obj/item/device/xenoarch_multi_tool,
+/obj/item/xenoarch_multi_tool,
 /turf/simulated/floor/tiled/old_tile,
 /area/submap/cave/lava_trench/outpost)
 "bH" = (
@@ -650,7 +650,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/submap/cave/lava_trench/outpost)
 "bI" = (
-/obj/item/device/gps/science{
+/obj/item/gps/science{
 	gps_tag = "CRYSTALS"
 	},
 /turf/simulated/floor/tiled/old_tile,
@@ -727,7 +727,7 @@
 	pixel_y = 28
 	},
 /obj/structure/table/standard,
-/obj/item/device/healthanalyzer/improved,
+/obj/item/healthanalyzer/improved,
 /turf/simulated/floor/tiled/old_tile,
 /area/submap/cave/lava_trench/outpost)
 "bT" = (
@@ -753,7 +753,7 @@
 	dir = 4;
 	icon_state = "corner_oldtile_full"
 	},
-/obj/item/weapon/storage/box/samplebags,
+/obj/item/storage/box/samplebags,
 /obj/structure/table/steel,
 /obj/item/stack/flag/red,
 /turf/simulated/floor/tiled/old_tile,
@@ -766,7 +766,7 @@
 /area/submap/cave/lava_trench)
 "bZ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/stock_parts/subspace/crystal,
+/obj/item/stock_parts/subspace/crystal,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 243.15
 	},
@@ -813,20 +813,20 @@
 	},
 /area/submap/cave/lava_trench)
 "cq" = (
-/obj/item/weapon/banner/nt,
+/obj/item/banner/nt,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 243.15
 	},
 /area/submap/cave/lava_trench)
 "cr" = (
 /obj/structure/table/steel,
-/obj/item/weapon/material/shard/phoron,
+/obj/item/material/shard/phoron,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 243.15
 	},
 /area/submap/cave/lava_trench)
 "cs" = (
-/obj/item/weapon/banner/nt,
+/obj/item/banner/nt,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/lava_trench)
 

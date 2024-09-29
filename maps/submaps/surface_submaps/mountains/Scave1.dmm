@@ -18,8 +18,8 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/Scave1)
 "f" = (
-/obj/item/weapon/spacecash/c100,
-/obj/item/weapon/spacecash/c100,
+/obj/item/spacecash/c100,
+/obj/item/spacecash/c100,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/Scave1)
 "g" = (
@@ -27,9 +27,9 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/Scave1)
 "h" = (
-/obj/item/weapon/spacecash/c100,
-/obj/item/weapon/spacecash/c100,
-/obj/item/weapon/spacecash/c100,
+/obj/item/spacecash/c100,
+/obj/item/spacecash/c100,
+/obj/item/spacecash/c100,
 /obj/effect/decal/remains,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/Scave1)
@@ -38,7 +38,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/Scave1)
 "j" = (
-/obj/item/weapon/grenade/spawnergrenade/spider,
+/obj/item/grenade/spawnergrenade/spider,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/Scave1)
 "k" = (
@@ -54,7 +54,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/Scave1)
 "n" = (
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/Scave1)
 "o" = (

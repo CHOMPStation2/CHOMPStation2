@@ -226,7 +226,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/weapon/gun/energy/floragun,
+/obj/item/gun/energy/floragun,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aH" = (
@@ -285,8 +285,8 @@
 /area/submap/abandonedzoo)
 "aN" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder/white_rd,
-/obj/item/weapon/pen/blade,
+/obj/item/folder/white_rd,
+/obj/item/pen/blade,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aO" = (
@@ -297,7 +297,7 @@
 "aP" = (
 /obj/structure/table/reinforced,
 /obj/item/slimepotion/enhancer,
-/obj/item/weapon/reagent_containers/dropper/industrial,
+/obj/item/reagent_containers/dropper/industrial,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aQ" = (
@@ -331,7 +331,7 @@
 	},
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/suit/space/rig/military,
-/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aU" = (
@@ -339,8 +339,8 @@
 	dir = 1
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/shield/riot,
-/obj/item/weapon/tool/crowbar/hybrid,
+/obj/item/shield/riot,
+/obj/item/tool/crowbar/hybrid,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aV" = (
@@ -362,15 +362,15 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/grenade/chem_grenade{
+/obj/item/grenade/chem_grenade{
 	pixel_x = 3;
 	pixel_y = 5
 	},
-/obj/item/weapon/grenade/chem_grenade{
+/obj/item/grenade/chem_grenade{
 	pixel_x = -4;
 	pixel_y = 5
 	},
-/obj/item/weapon/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aY" = (
@@ -378,13 +378,13 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
-/obj/item/weapon/gun/energy/temperature,
+/obj/item/gun/energy/temperature,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aZ" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/shovel,
-/obj/item/weapon/material/minihoe,
+/obj/item/shovel,
+/obj/item/material/minihoe,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "ba" = (
@@ -429,17 +429,17 @@
 /area/submap/abandonedzoo)
 "bi" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/bottle/mutagen,
-/obj/item/weapon/reagent_containers/dropper/industrial,
+/obj/item/reagent_containers/glass/bottle/mutagen,
+/obj/item/reagent_containers/dropper/industrial,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "bj" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light,
-/obj/item/weapon/surgical/circular_saw{
+/obj/item/surgical/circular_saw{
 	pixel_y = 8
 	},
-/obj/item/weapon/surgical/scalpel,
+/obj/item/surgical/scalpel,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "bk" = (
@@ -456,7 +456,7 @@
 /area/submap/abandonedzoo)
 "bn" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "bo" = (
@@ -628,12 +628,12 @@
 /area/submap/abandonedzoo)
 "bN" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "bO" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/plating,
@@ -675,7 +675,7 @@
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "bT" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -758,11 +758,11 @@
 	pixel_x = -24
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/weldingtool/experimental/hybrid,
-/obj/item/weapon/tool/wrench/hybrid,
-/obj/item/weapon/tool/wirecutters/hybrid,
-/obj/item/weapon/tool/screwdriver/hybrid,
-/obj/item/weapon/tool/crowbar/hybrid,
+/obj/item/weldingtool/experimental/hybrid,
+/obj/item/tool/wrench/hybrid,
+/obj/item/tool/wirecutters/hybrid,
+/obj/item/tool/screwdriver/hybrid,
+/obj/item/tool/crowbar/hybrid,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "gE" = (
@@ -801,7 +801,7 @@
 /area/submap/abandonedzoo)
 "hQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/card/emag,
+/obj/item/card/emag,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "hU" = (
@@ -822,10 +822,10 @@
 	name = "Containment Equipment"
 	},
 /obj/item/rig_module/fabricator/energy_net,
-/obj/item/weapon/gun/energy/kinetic_accelerator,
-/obj/item/weapon/gun/energy/netgun,
-/obj/item/weapon/gun/energy/netgun,
-/obj/item/weapon/gun/energy/netgun,
+/obj/item/gun/energy/kinetic_accelerator,
+/obj/item/gun/energy/netgun,
+/obj/item/gun/energy/netgun,
+/obj/item/gun/energy/netgun,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "iA" = (
@@ -891,7 +891,7 @@
 /area/submap/abandonedzoo)
 "li" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/projectile/pistol,
+/obj/item/gun/projectile/pistol,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "ly" = (
@@ -912,7 +912,7 @@
 /area/space)
 "mf" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/secure/briefcase/nerd_pack_med,
+/obj/item/storage/secure/briefcase/nerd_pack_med,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "mp" = (
@@ -962,7 +962,7 @@
 /area/submap/abandonedzoo)
 "oN" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/launcher/syringe/rapid,
+/obj/item/gun/launcher/syringe/rapid,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "oO" = (
@@ -1054,7 +1054,7 @@
 /area/submap/abandonedzoo)
 "tB" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "uA" = (
@@ -1191,7 +1191,7 @@
 	},
 /area/submap/abandonedzoo)
 "Ed" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "ER" = (
@@ -1240,11 +1240,11 @@
 /area/submap/abandonedzoo)
 "Fs" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Gm" = (
-/obj/item/weapon/tool/wirecutters,
+/obj/item/tool/wirecutters,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1281,7 +1281,7 @@
 /area/submap/abandonedzoo)
 "Ij" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/rig/medical/equipped,
+/obj/item/rig/medical/equipped,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Iq" = (
@@ -1333,7 +1333,7 @@
 /area/submap/abandonedzoo)
 "Lu" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Lw" = (
@@ -1472,7 +1472,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "PC" = (
-/obj/item/weapon/corncob,
+/obj/item/corncob,
 /turf/unsimulated/beach/sand,
 /area/submap/abandonedzoo)
 "PM" = (
@@ -1487,8 +1487,8 @@
 /area/submap/abandonedzoo)
 "Qg" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/folder/white{
+/obj/item/folder/white,
+/obj/item/folder/white{
 	pixel_x = 4;
 	pixel_y = 3
 	},
@@ -1579,7 +1579,7 @@
 /area/submap/abandonedzoo)
 "VY" = (
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Xc" = (
@@ -1610,8 +1610,8 @@
 /area/submap/abandonedzoo)
 "Xv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/energy/crossbow,
-/obj/item/weapon/holo/esword,
+/obj/item/gun/energy/crossbow,
+/obj/item/holo/esword,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "Xy" = (

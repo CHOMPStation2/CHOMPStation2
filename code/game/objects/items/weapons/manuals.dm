@@ -5,13 +5,8 @@
 	due_date = 0 // Game time in 1/10th seconds
 	unique = 1   // 0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified
 
-<<<<<<< HEAD
 /* CHOMPEdit Start
-/obj/item/weapon/book/manual/engineering_construction
-=======
-
 /obj/item/book/manual/engineering_construction
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Station Repairs and Construction"
 	icon_state ="bookEngineering"
 	item_state = "book3"
@@ -89,13 +84,8 @@
 	author = "Central Engineering Division"
 	title = "Supermatter Engine Operating Manual"
 
-<<<<<<< HEAD
-/obj/item/weapon/book/manual/supermatter_engine/New()
-	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
-=======
 /obj/item/book/manual/supermatter_engine/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
 	dat = {"<html>
 				<head>
 				<style>
@@ -243,11 +233,7 @@
 			</html>"}
 
 //R-UST port
-<<<<<<< HEAD
-/obj/item/weapon/book/manual/rust_engine	// CHOMPedit START : Updating the R-UST manual
-=======
-/obj/item/book/manual/rust_engine
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/book/manual/rust_engine	// CHOMPedit START : Updating the R-UST manual
 	name = "R-UST Operating Manual"
 	icon = 'icons/obj/library_ch.dmi'
 	icon_state = "bookRusty" 				// Chompedit : Changed this to a new unique R-UST manual icon rather than just re-using the Supermatter book cover sprite
@@ -255,12 +241,8 @@
 	author = "Central Engineering Division"
 	title = "R-UST Operating Manual"
 
-<<<<<<< HEAD
 //R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
-/obj/item/weapon/book/manual/rust_engine/New()
-=======
 /obj/item/book/manual/rust_engine/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	..()
 	dat = {"<html>
 				<head>
@@ -338,12 +320,8 @@
 				</body>
 			</html>"}			// CHOMPedit END : Updating the R-UST manual
 
-<<<<<<< HEAD
 /* CHOMPEdit Start
-/obj/item/weapon/book/manual/engineering_hacking
-=======
 /obj/item/book/manual/engineering_hacking
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Hacking"
 	icon_state ="bookHacking"
 	item_state = "book2"
@@ -458,13 +436,8 @@
 				"}
 
 
-<<<<<<< HEAD
-/obj/item/weapon/book/manual/medical_cloning
-	name = "Cloning Techniques of the 26th Century"
-=======
 /obj/item/book/manual/medical_cloning
-	name = "Cloning Techniques of the 24th Century"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	name = "Cloning Techniques of the 26th Century"
 	icon_state ="bookCloning"
 	item_state = "book9"
 	author = "Medical Journal, volume 3"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
@@ -704,12 +677,8 @@
 			</html>
 			"}
 
-<<<<<<< HEAD
 /* CHOMPEdit Start
-/obj/item/weapon/book/manual/robotics_manual
-=======
 /obj/item/book/manual/robotics_manual
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Guide to Robotics"
 	icon_state ="evabook"
 	item_state = "book3"
@@ -934,12 +903,8 @@
 		"}
 
 
-<<<<<<< HEAD
 /* CHOMPEdit Start
-/obj/item/weapon/book/manual/security_space_law
-=======
 /obj/item/book/manual/security_space_law
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Corporate Regulations"
 	desc = "A set of corporate guidelines for keeping law and order on privately-owned space stations."
 	icon_state = "bookSpaceLaw"

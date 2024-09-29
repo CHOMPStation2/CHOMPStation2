@@ -40,7 +40,7 @@
 	pixel_x = 28
 	},
 <<<<<<< HEAD
-/obj/item/weapon/weldingtool,
+/obj/item/weldingtool,
 /turf/simulated/shuttle/floor,
 /area/submap/epod)
 =======
@@ -75,8 +75,8 @@
 	pixel_y = 0
 	},
 <<<<<<< HEAD
-/obj/item/weapon/storage/backpack/satchel,
-/obj/item/weapon/spacecash/c100,
+/obj/item/storage/backpack/satchel,
+/obj/item/spacecash/c100,
 /turf/simulated/shuttle/floor,
 /area/submap/epod)
 =======

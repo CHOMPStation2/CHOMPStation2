@@ -105,10 +105,5 @@
 
 /datum/design/item/pda_cartridge/captain
 	id = "cart_captain"
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/cartridge/captain
-	sort_string = "WBAAP"
-=======
 	build_path = /obj/item/cartridge/captain
 	sort_string = "WBAAP"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

@@ -17,11 +17,7 @@
 /datum/supply_pack/munitions/phase_carbines_explorer
  	name = "Weapons - Surplus Phase Carbines"
  	contains = list(
-<<<<<<< HEAD
- 			/obj/item/weapon/gun/energy/locked/phasegun = 2,
-=======
- 			/obj/item/gun/energy/phasegun = 2,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+ 			/obj/item/gun/energy/locked/phasegun = 2,
  			)
  	cost = 25
  	containertype = /obj/structure/closet/crate/secure/ward
@@ -31,11 +27,7 @@
 /datum/supply_pack/munitions/phase_rifles_explorer
  	name = "Weapons - Phase Rifles"
  	contains = list(
-<<<<<<< HEAD
- 			/obj/item/weapon/gun/energy/locked/phasegun/rifle = 2,
-=======
- 			/obj/item/gun/energy/phasegun/rifle = 2,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+ 			/obj/item/gun/energy/locked/phasegun/rifle = 2,
  			)
  	cost = 50
  	containertype = /obj/structure/closet/crate/secure/ward

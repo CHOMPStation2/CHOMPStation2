@@ -269,9 +269,8 @@
 		return
 
 	if(loaded) //Safety.
-<<<<<<< HEAD
-		if(istype(loaded, /obj/item/weapon/fuel_assembly))
-			var/obj/item/weapon/fuel_assembly/rod = loaded
+		if(istype(loaded, /obj/item/fuel_assembly))
+			var/obj/item/fuel_assembly/rod = loaded
 			//CHOMPEdit Begin
 			switch(rod.fuel_type)
 				if("composite") //Safety check for rods spawned in without a fueltype.
@@ -288,29 +287,6 @@
 					spawn(5)
 						visible_message("<span class='danger'>\The [src] begins to rattle, its acceleration chamber collapsing in on itself!</span>")
 						removable_components = FALSE
-=======
-		if(istype(loaded, /obj/item/fuel_assembly))
-			var/obj/item/fuel_assembly/rod = loaded
-			if(rod.fuel_type == "composite" || rod.fuel_type == "deuterium") //Safety check for rods spawned in without a fueltype.
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-			else if(rod.fuel_type == "tritium")
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
-			else if(rod.fuel_type == "phoron")
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
-			else if(rod.fuel_type == "supermatter")
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
-				visible_message("<span class='danger'>The barrel of \the [src] glows a blinding white!</span>")
-				spawn(5)
-					visible_message("<span class='danger'>\The [src] begins to rattle, its acceleration chamber collapsing in on itself!</span>")
-					removable_components = FALSE
-					spawn(15)
-						audible_message("<span class='critical'>\The [src]'s power supply begins to overload as the device crumples!</span>", runemessage = "VWRRRRRRRR") //Why are you still holding this?
-						playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
-						var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
-						var/turf/T = get_turf(src)
-						sparks.set_up(2, 1, T)
-						sparks.start()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 						spawn(15)
 							audible_message("<span class='critical'>\The [src]'s power supply begins to overload as the device crumples!</span>", runemessage = "VWRRRRRRRR") //Why are you still holding this?
 							playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
@@ -352,8 +328,7 @@
 	else
 		return
 
-<<<<<<< HEAD
-/obj/item/weapon/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, var/mob/living/carbon/M, var/max_range, var/banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
+/obj/item/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, var/mob/living/carbon/M, var/max_range, var/banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
 	to_chat(M, "<span class='danger'>BANG</span>")						// Called during the loop that bangs people in lockers/containers and when banging
 	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
 
@@ -410,28 +385,21 @@
 		var/obj/item/organ/internal/eyes/E = H.internal_organs_by_name[O_EYES]
 		if (E && E.damage >= E.min_bruised_damage)
 			to_chat(M, "<span class='danger'>Your eyes start to burn badly!</span>")
-			if(!banglet && !(istype(src , /obj/item/weapon/grenade/flashbang/clusterbang)))
+			if(!banglet && !(istype(src , /obj/item/grenade/flashbang/clusterbang)))
 				if (E.damage >= E.min_broken_damage)
 					to_chat(M, "<span class='danger'>You can't see anything!</span>")
 	if (M.ear_damage >= 15)
 		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
-		if(!banglet && !(istype(src , /obj/item/weapon/grenade/flashbang/clusterbang)))
+		if(!banglet && !(istype(src , /obj/item/grenade/flashbang/clusterbang)))
 			if (prob(M.ear_damage - 10 + 5))
 				to_chat(M, "<span class='danger'>You can't hear anything!</span>")
 				M.sdisabilities |= DEAF
 	else if(M.ear_damage >= 5)
 		to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
 //CHOMPEdit End
-/obj/item/weapon/gun/magnetic/fuelrod/New()
-	cell = new /obj/item/weapon/cell/high
-	capacitor = new /obj/item/weapon/stock_parts/capacitor
-=======
-	return new projectile_type(src)
-
 /obj/item/gun/magnetic/fuelrod/New()
 	cell = new /obj/item/cell/high
 	capacitor = new /obj/item/stock_parts/capacitor
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	. = ..()
 
 #undef ICON_CELL

@@ -32,18 +32,13 @@
 	update_icon()
 	return secured
 
-<<<<<<< HEAD
 // CHOMPEdit Start
-/obj/item/device/assembly/prox_sensor/HasProximity(turf/T, datum/weakref/WF, old_loc)
+/obj/item/assembly/prox_sensor/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
-=======
-/obj/item/assembly/prox_sensor/HasProximity(turf/T, atom/movable/AM, old_loc)
-	if(!istype(AM))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
 // CHOMPEdit End

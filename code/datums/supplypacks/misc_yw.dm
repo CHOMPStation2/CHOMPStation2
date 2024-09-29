@@ -28,7 +28,7 @@
 /datum/supply_pack/misc/bluespaceradioyw
 	name = "Bluespace Radio Packs"
 	contains = list(
-			 /obj/item/device/bluespaceradio/cryogaia_prelinked = 2
+			 /obj/item/bluespaceradio/cryogaia_prelinked = 2
 			)
 	cost = 75
 	containertype = /obj/structure/closet/crate

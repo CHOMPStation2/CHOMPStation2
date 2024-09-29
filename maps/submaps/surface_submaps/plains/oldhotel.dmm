@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/cell/hyper,
+/obj/item/cell/hyper,
 /obj/random/coin,
 /obj/random/cash/huge,
 /turf/simulated/floor/wood,
@@ -21,7 +21,7 @@
 /obj/item/towel/random,
 /obj/structure/table/standard,
 <<<<<<< HEAD
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /turf/simulated/floor/tiled/asteroid_steel,
 =======
 /obj/item/storage/firstaid,
@@ -33,7 +33,7 @@
 	dir = 4
 	},
 <<<<<<< HEAD
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/wood,
 =======
 /obj/item/multitool,
@@ -69,7 +69,7 @@
 "dn" = (
 /obj/structure/table/woodentable,
 <<<<<<< HEAD
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 =======
 /obj/item/flame/candle/everburn,
@@ -183,12 +183,12 @@
 "lj" = (
 /obj/structure/table/wooden_reinforced,
 <<<<<<< HEAD
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
 "ly" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /turf/simulated/floor/wood,
 =======
 /obj/item/material/kitchen/rollingpin,
@@ -223,7 +223,7 @@
 /area/submap/oldhotel)
 "nG" = (
 <<<<<<< HEAD
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/outdoors/dirt,
 =======
 /obj/item/material/shard,
@@ -269,7 +269,7 @@
 /area/submap/oldhotel)
 "rb" = (
 <<<<<<< HEAD
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor/tiled/asteroid_steel,
 =======
 /obj/item/module/power_control,
@@ -307,7 +307,7 @@
 "tz" = (
 /obj/structure/bed/double/padded,
 <<<<<<< HEAD
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /turf/simulated/floor/wood,
 =======
 /obj/item/bedsheet/rddouble,
@@ -318,7 +318,7 @@
 /obj/structure/table/woodentable,
 /obj/random/coin,
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/carpet/blue,
 =======
 /obj/item/reagent_containers/glass/rag,
@@ -330,7 +330,7 @@
 	dir = 1
 	},
 <<<<<<< HEAD
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/wood,
 =======
 /obj/item/material/shard,
@@ -378,7 +378,7 @@
 "vR" = (
 /obj/structure/table/woodentable,
 <<<<<<< HEAD
-/obj/item/weapon/flame/candle/candelabra,
+/obj/item/flame/candle/candelabra,
 /turf/simulated/floor/carpet/blue,
 =======
 /obj/item/flame/candle/candelabra,
@@ -392,14 +392,14 @@
 /area/submap/oldhotel)
 "wK" = (
 <<<<<<< HEAD
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
 "wV" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
 "wX" = (
@@ -479,7 +479,7 @@
 "Ac" = (
 /obj/structure/table/wooden_reinforced,
 <<<<<<< HEAD
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/tiled/asteroid_steel,
 =======
 /obj/item/material/knife/butch,
@@ -493,7 +493,7 @@
 "AU" = (
 /obj/structure/table/woodentable,
 <<<<<<< HEAD
-/obj/item/device/tape,
+/obj/item/tape,
 /turf/simulated/floor/wood,
 =======
 /obj/item/rectape,
@@ -523,7 +523,7 @@
 /area/submap/oldhotel)
 "CS" = (
 <<<<<<< HEAD
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/wood,
 =======
 /obj/item/storage/toolbox/mechanical,
@@ -585,25 +585,25 @@
 "GV" = (
 /obj/structure/table/woodentable,
 <<<<<<< HEAD
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/flame/lighter/random,
+/obj/item/flame/lighter/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/wood,
 /area/submap/oldhotel)
 "Ha" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "This is a stupid tresure hunt task, that thing is not taking us anywhere. Go on and have fun finding a waste of time.";
 	name = "Wrinkled sheet of paper"
 	},
 /turf/simulated/floor/wood,
 /area/submap/oldhotel)
 "Ik" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled/asteroid_steel,
 =======
 /obj/item/storage/fancy/candle_box,
@@ -696,14 +696,14 @@
 "Qv" = (
 /obj/structure/table/woodentable,
 <<<<<<< HEAD
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
 /turf/simulated/floor/wood,
 /area/submap/oldhotel)
 "Qw" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/random/projectile/scrapped_shotgun,
 =======
 /obj/item/paper_bin,
@@ -735,7 +735,7 @@
 /area/submap/oldhotel)
 "Se" = (
 /obj/structure/closet/cabinet,
-/obj/item/device/binoculars/spyglass,
+/obj/item/binoculars/spyglass,
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/maintenance/medical,
@@ -750,7 +750,7 @@
 "Sf" = (
 /obj/structure/bed/double/padded,
 <<<<<<< HEAD
-/obj/item/weapon/bedsheet/yellowdouble,
+/obj/item/bedsheet/yellowdouble,
 /turf/simulated/floor/wood,
 =======
 /obj/item/bedsheet/yellowdouble,
@@ -766,9 +766,9 @@
 /area/submap/oldhotel)
 "SL" = (
 <<<<<<< HEAD
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard,
+/obj/item/material/shard{
 	pixel_x = 9
 =======
 /obj/item/material/shard,
@@ -795,13 +795,13 @@
 "Uw" = (
 /obj/structure/table/wooden_reinforced,
 <<<<<<< HEAD
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/book/manual/chef_recipes,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
 "UU" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/lighter/zippo/royal,
-/obj/item/weapon/lipstick/random,
+/obj/item/flame/lighter/zippo/royal,
+/obj/item/lipstick/random,
 /turf/simulated/floor/wood,
 =======
 /obj/item/book/manual/chef_recipes,

@@ -183,14 +183,9 @@
 									10;new /obj/item/clothing/under/rank/clown,
 									10;new /obj/item/clothing/shoes/clown_shoes,
 									10;new /obj/item/clothing/mask/gas/clown_hat,
-<<<<<<< HEAD
-									10;new /obj/item/device/pda/clown,
+									10;new /obj/item/pda/clown,
 									1;new /mob/living/simple_mob/vore/catgirl
 									)
-=======
-									10;new /obj/item/pda/clown,
-									1;new /mob/living/simple_mob/vore/catgirl)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					spark_system.start()
 	product.loc = get_turf(A)
 

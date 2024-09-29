@@ -350,7 +350,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
@@ -698,7 +698,7 @@
 /area/engineering/engine_room)
 "zl" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/book/manual/supermatter_engine,
+/obj/item/book/manual/supermatter_engine,
 /turf/template_noop,
 /area/template_noop)
 "zA" = (
@@ -711,7 +711,7 @@
 /area/engineering/engine_room)
 "zC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -1584,7 +1584,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/cap/visible,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21

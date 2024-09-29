@@ -90,28 +90,16 @@
 	desc = "A bowman headset used by pilots."
 	icon_state = "pilot_headset_alt"
 
-<<<<<<< HEAD
-/obj/item/device/radio/headset/explorer
+/obj/item/radio/headset/explorer
 	name = "explorer's headset" //CHOMP explo keep
 	desc = "Headset used by explorers for exploring. Access to the explorer channel." //CHOMP explo keep
-=======
-/obj/item/radio/headset/explorer
-	name = "away team member's headset"
-	desc = "Headset used by the away team for exploring. Access to the away team channel."
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/encryptionkey/explorer
 
-<<<<<<< HEAD
-/obj/item/device/radio/headset/explorer/alt
+/obj/item/radio/headset/explorer/alt
 	name = "explorer's bowman headset" //CHOMP explo keep
 	desc = "Bowman headset used by explorers for exploring. Access to the explorer channel." //CHOMP explo keep
-=======
-/obj/item/radio/headset/explorer/alt
-	name = "away team's bowman headset"
-	desc = "Bowman headset used by the away team for exploring. Access to the away team channel."
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	icon_state = "exp_headset_alt"
 
 /obj/item/radio/headset/sar
@@ -126,24 +114,14 @@
 	desc = "A bowman headset for field medics."
 	icon_state = "sar_headset_alt"
 
-<<<<<<< HEAD
  //CHOMP explo removed wide comment field
-/obj/item/device/radio/headset/volunteer
-=======
-/* //They're all volunteers now.
 /obj/item/radio/headset/volunteer
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "volunteer's headset"
 	desc = "A headset used by volunteers to expedition teams, has access to the exploration channel." //CHOMP explo keep
 	icon_state = "pilot_headset"
 	adhoc_fallback = TRUE
-<<<<<<< HEAD
-	ks2type = /obj/item/device/encryptionkey/explorer
- //CHOMP explo keep removed wide comment field end
-=======
 	ks2type = /obj/item/encryptionkey/explorer
-*/
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+ //CHOMP explo keep removed wide comment field end
 
 /obj/item/radio/headset/talon
 	name = "talon headset"

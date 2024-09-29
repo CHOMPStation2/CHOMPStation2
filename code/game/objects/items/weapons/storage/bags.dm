@@ -427,11 +427,7 @@
 	max_storage_space = 200
 	w_class = ITEMSIZE_LARGE
 	slowdown = 3
-<<<<<<< HEAD
-	can_hold = list(/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/glass/bottle, /obj/item/weapon/reagent_containers/hypospray/autoinjector/) // CHOMPEdit - Adds autoinjectors to the bag
-=======
-	can_hold = list(/obj/item/reagent_containers/pill,/obj/item/reagent_containers/glass/beaker,/obj/item/reagent_containers/glass/bottle)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	can_hold = list(/obj/item/reagent_containers/pill,/obj/item/reagent_containers/glass/beaker,/obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/hypospray/autoinjector/) // CHOMPEdit - Adds autoinjectors to the bag
 
 // -----------------------------
 //           Xeno Bag

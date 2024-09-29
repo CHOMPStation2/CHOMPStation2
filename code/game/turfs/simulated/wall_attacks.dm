@@ -127,11 +127,7 @@
 		return success_smash(user)
 	return fail_smash(user)
 
-<<<<<<< HEAD
-/turf/simulated/wall/attackby(var/obj/item/weapon/W, var/mob/user, attack_modifier, click_parameters) // CHOMPEdit - attack_modifier, click_parameters
-=======
-/turf/simulated/wall/attackby(var/obj/item/W, var/mob/user)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/turf/simulated/wall/attackby(var/obj/item/W, var/mob/user, attack_modifier, click_parameters) // CHOMPEdit - attack_modifier, click_parameters
 
 	user.setClickCooldown(user.get_attack_speed(W))
 

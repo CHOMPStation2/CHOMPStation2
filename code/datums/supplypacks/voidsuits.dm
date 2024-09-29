@@ -239,7 +239,7 @@
 //ChompEdit Start
 /datum/supply_pack/voidsuits/unathi_bs_NT
 	name = "NT Unathi breacher chassis"
-	contains = list(/obj/item/weapon/rig/breacher)
+	contains = list(/obj/item/rig/breacher)
 	cost = 200  //Crap breacher suit, shouldn't be as expensive.
 	containertype = /obj/structure/closet/crate/secure
 	containername = "NT Unathi breacher chassis crate"
@@ -247,7 +247,7 @@
 
 /datum/supply_pack/voidsuits/unathi_bs_Auth
 	name = "Authentic Unathi breacher chassis"
-	contains = list(/obj/item/weapon/rig/breacher/fancy)
+	contains = list(/obj/item/rig/breacher/fancy)
 	cost = 400  //Better, costs more.
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Authentic Unathi breacher chassis crate"
@@ -255,21 +255,21 @@
 
 /datum/supply_pack/voidsuits/voxciv
 	name = "Vox Civilian Hardsuit"
-	contains = list(/obj/item/weapon/rig/vox/civilian)
+	contains = list(/obj/item/rig/vox/civilian)
 	cost = 80
 	containertype = /obj/structure/closet/crate/oculum
 	containername = "Vox Civilian Hardsuit"
 
 /datum/supply_pack/voidsuits/voxeng
 	name = "Vox Engineering Hardsuit"
-	contains = list (/obj/item/weapon/rig/vox/engineering)
+	contains = list (/obj/item/rig/vox/engineering)
 	cost = 150
 	containertype = /obj/structure/closet/crate/oculum
 	containername = "Vox Engineering Hardsuit"
 
 /datum/supply_pack/voidsuits/voxsec
 	name = "Vox Security Hardsuit"
-	contains = list (/obj/item/weapon/rig/vox/security)
+	contains = list (/obj/item/rig/vox/security)
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Vox security Rigsuit Crate"

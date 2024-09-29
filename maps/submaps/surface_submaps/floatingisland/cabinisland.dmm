@@ -17,7 +17,7 @@
 /area/surface/outside/wilderness/skylands/empty)
 "g" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/wood/sif,
 /area/surface/outside/wilderness/skylands/empty)
 "i" = (
@@ -43,7 +43,7 @@
 /turf/simulated/floor/wood/sif,
 /area/surface/outside/wilderness/skylands/empty)
 "B" = (
-/obj/item/weapon/gun/launcher/crossbow/bow/hardlight,
+/obj/item/gun/launcher/crossbow/bow/hardlight,
 /obj/structure/table/rack,
 /turf/simulated/floor/wood/sif,
 /area/surface/outside/wilderness/skylands/empty)
@@ -76,7 +76,7 @@
 /area/surface/outside/wilderness/skylands/empty)
 "S" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/craftable,
+/obj/item/bedsheet/craftable,
 /turf/simulated/floor/wood/sif,
 /area/surface/outside/wilderness/skylands/empty)
 

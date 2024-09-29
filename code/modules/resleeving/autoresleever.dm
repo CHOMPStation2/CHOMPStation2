@@ -63,13 +63,8 @@
 		return
 	if(!istype(ghost,/mob/observer/dead))
 		return
-<<<<<<< HEAD
 	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD && ghost.mind.current.enabled == TRUE) //CHOMPEdit - Disabled body shouldn't block this.
-		if(istype(ghost.mind.current.loc, /obj/item/device/mmi))
-=======
-	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD)
 		if(istype(ghost.mind.current.loc, /obj/item/mmi))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			if(tgui_alert(ghost, "Your brain is still alive, using the auto-resleever will delete that brain. Are you sure?", "Delete Brain", list("No","Yes")) != "Yes")
 				return
 			if(istype(ghost.mind.current.loc, /obj/item/mmi))

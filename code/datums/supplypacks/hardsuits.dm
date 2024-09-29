@@ -77,11 +77,7 @@
 /datum/supply_pack/misc/solgov_medical_rig
 	name = "solgov medical hardsuit (loaded)"
 	contains = list(
-<<<<<<< HEAD
-			/obj/item/weapon/rig/baymed = 1
-=======
-			/obj/item/rig/baymed/equipped = 1
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+			/obj/item/rig/baymed = 1
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
@@ -91,11 +87,7 @@
 /datum/supply_pack/misc/solgov_engineering_rig
 	name = "solgov engineering hardsuit (loaded)"
 	contains = list(
-<<<<<<< HEAD
-			/obj/item/weapon/rig/bayeng = 1
-=======
-			/obj/item/rig/bayeng/equipped = 1
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+			/obj/item/rig/bayeng = 1
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear

@@ -3,19 +3,12 @@
 //return non-negative integer: Amount of nutrition/charge gained (scaled to nutrition, other end can multiply for charge scale).
 
 // Ye default implementation.
-<<<<<<< HEAD
 /obj/item/proc/digest_act(atom/movable/item_storage = null, touchable_amount, splashing = 0) //CHOMPEdit
 	if(!digestable) //CHOMPAdd
 		return FALSE //CHOMPAdd
-	if(istype(item_storage, /obj/item/device/dogborg/sleeper))
-		if(istype(src, /obj/item/device/pda))
-			var/obj/item/device/pda/P = src
-=======
-/obj/item/proc/digest_act(atom/movable/item_storage = null)
 	if(istype(item_storage, /obj/item/dogborg/sleeper))
 		if(istype(src, /obj/item/pda))
 			var/obj/item/pda/P = src
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			if(P.id)
 				P.id = null
 
@@ -141,14 +134,14 @@
 				S.use(1)
 				digest_stage = w_class
 		else
-			if(istype(src, /obj/item/weapon/reagent_containers/food))
+			if(istype(src, /obj/item/reagent_containers/food))
 				if(ishuman(B.owner) && reagents)
 					var/mob/living/carbon/human/H = B.owner
 					reagents.trans_to_holder(H.ingested, (reagents.total_volume), B.nutrition_percent / 100, 0)
 				else if(isliving(B.owner))
 					B.owner.nutrition += 15 * w_class * B.nutrition_percent / 100
-				if(istype(src,/obj/item/weapon/reagent_containers/food/snacks))
-					var/obj/item/weapon/reagent_containers/food/snacks/goodmeal = src //What a typecast
+				if(istype(src,/obj/item/reagent_containers/food/snacks))
+					var/obj/item/reagent_containers/food/snacks/goodmeal = src //What a typecast
 					//Drop the leftover garbage when the food melts
 					if(goodmeal.package_trash)
 						new goodmeal.package_trash(src)
@@ -198,11 +191,7 @@
 	update_icon()
 	return FALSE
 
-<<<<<<< HEAD
-/*obj/item/weapon/reagent_containers/food/digest_act(atom/movable/item_storage = null) //CHOMPEdit: Included in main proc above.
-=======
-/obj/item/reagent_containers/food/digest_act(atom/movable/item_storage = null)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/*obj/item/reagent_containers/food/digest_act(atom/movable/item_storage = null) //CHOMPEdit: Included in main proc above.
 	if(isbelly(item_storage))
 		var/obj/belly/B = item_storage
 		if(ishuman(B.owner) && reagents) //CHOMPEdit Start
@@ -249,7 +238,7 @@
 			return FALSE
 	. = ..()
 
-/obj/item/weapon/reagent_containers/food/rawnutrition/digest_act(atom/movable/item_storage = null) //CHOMPAdd
+/obj/item/reagent_containers/food/rawnutrition/digest_act(atom/movable/item_storage = null) //CHOMPAdd
 	if(isbelly(item_storage))
 		var/obj/belly/B = item_storage
 		if(istype(B) && B.storing_nutrition)

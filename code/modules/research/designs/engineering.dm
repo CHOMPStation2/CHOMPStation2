@@ -40,7 +40,7 @@
 	id = "RPD"
 	req_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2, TECH_BLUESPACE = 2)
 	materials = list(DEFAULT_WALL_MATERIAL = 300, "silver" = 100, "diamond" = 500)
-	build_path = /obj/item/weapon/pipe_dispenser
+	build_path = /obj/item/pipe_dispenser
 	sort_string = "NAAAB"
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
@@ -50,7 +50,7 @@
 	id = "RMS"
 	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 3, TECH_BLUESPACE = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 500, "silver" = 300, "phoron" = 300, "diamond" = 500) //Probably change the price in the future just put something for now
-	build_path = /obj/item/weapon/rms
+	build_path = /obj/item/rms
 	sort_string = "NAAAB"
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 // YW addition end
@@ -116,11 +116,6 @@
 	id = "atmosanalyzer"
 	req_tech = list(TECH_ENGINEERING = 2)
 	materials = list(MAT_STEEL = 200, MAT_GLASS = 100)
-<<<<<<< HEAD
-	build_path = /obj/item/device/analyzer
-	sort_string = "NBABA"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
-=======
 	build_path = /obj/item/analyzer
 	sort_string = "NBABA"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

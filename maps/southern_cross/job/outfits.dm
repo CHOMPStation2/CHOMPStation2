@@ -13,13 +13,8 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	l_ear = /obj/item/radio/headset/explorer
 	id_slot = slot_wear_id
 	pda_slot = slot_l_store
-<<<<<<< HEAD
-	pda_type = /obj/item/device/pda/explorer //VORESTation Edit - Better Brown
-	id_type = /obj/item/weapon/card/id/exploration //CHOMPedit: fix conflicts with citrp ID port
-=======
 	pda_type = /obj/item/pda/explorer //VORESTation Edit - Better Brown
-	id_type = /obj/item/card/id/science/explorer
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	id_type = /obj/item/card/id/exploration //CHOMPedit: fix conflicts with citrp ID port
 	id_pda_assignment = "Explorer"
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL
 	backpack_contents = list(/obj/item/clothing/accessory/permit/gun/planetside = 1)

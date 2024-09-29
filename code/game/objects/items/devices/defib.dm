@@ -23,11 +23,7 @@
 /obj/item/defib_kit/get_cell()
 	return bcell
 
-<<<<<<< HEAD
-/obj/item/device/defib_kit/Initialize() //starts without a cell for rnd //ChompEDIT New --> Initialize
-=======
-/obj/item/defib_kit/New() //starts without a cell for rnd
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/defib_kit/Initialize() //starts without a cell for rnd //ChompEDIT New --> Initialize
 	..()
 	if(ispath(paddles))
 		paddles = new paddles(src, src)
@@ -273,17 +269,12 @@
 	return 1
 
 //Checks for various conditions to see if the mob is revivable
-<<<<<<< HEAD
-/obj/item/weapon/shockpaddles/proc/can_defib(mob/living/carbon/human/H) //This is checked before doing the defib operation
+/obj/item/shockpaddles/proc/can_defib(mob/living/carbon/human/H) //This is checked before doing the defib operation
 	//CHOMPEdit Begin - Vox can be revived with jumper cables
 	if(H.get_species() == SPECIES_VOX && use_on_synthetic)
 		// Will silently continue to the other two checks.
 	//CHOMPEdit End - Edit included the else on the next line.
 	else if((H.species.flags & NO_DEFIB))
-=======
-/obj/item/shockpaddles/proc/can_defib(mob/living/carbon/human/H) //This is checked before doing the defib operation
-	if((H.species.flags & NO_DEFIB))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		return "buzzes, \"Incompatible physiology. Operation aborted.\""
 	else if(H.isSynthetic() && !use_on_synthetic)
 		return "buzzes, \"Synthetic Body. Operation aborted.\""

@@ -16,7 +16,7 @@
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/implantcase/chem,
+/obj/item/implantcase/chem,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "i" = (
@@ -59,8 +59,8 @@
 /area/submap/vault)
 "y" = (
 /obj/item/clothing/suit/armor/shield,
-/obj/item/weapon/implantcase/handblade,
-/obj/item/weapon/implantcase/dart,
+/obj/item/implantcase/handblade,
+/obj/item/implantcase/dart,
 /obj/item/clothing/head/technomancer/master,
 /obj/item/clothing/suit/armor/alien/tank,
 /turf/space,
@@ -102,7 +102,7 @@
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty,
+/obj/item/cell/device/weapon/recharge/alien/omni/empty,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "I" = (
@@ -121,7 +121,7 @@
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/implantcase/medkit,
+/obj/item/implantcase/medkit,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "N" = (
@@ -142,7 +142,7 @@
 /area/submap/vault)
 "R" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/gun/energy/alien,
+/obj/item/gun/energy/alien,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
 /turf/simulated/shuttle/floor/alienplating/blue,
@@ -166,7 +166,7 @@
 /area/submap/vault)
 "Z" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/gun/energy/alien,
+/obj/item/gun/energy/alien,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
 /obj/item/clothing/head/technomancer/apprentice,

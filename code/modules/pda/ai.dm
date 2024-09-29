@@ -21,13 +21,8 @@
 	name = newname + " (" + ownjob + ")"
 
 //AI verb and proc for sending PDA messages.
-<<<<<<< HEAD
-/obj/item/device/pda/ai/verb/cmd_pda_open_ui()
-	set category = "Abilities.AI" //ChompEDIT - TGPanel
-=======
 /obj/item/pda/ai/verb/cmd_pda_open_ui()
-	set category = "AI IM"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	set category = "Abilities.AI" //ChompEDIT - TGPanel
 	set name = "Use PDA"
 	set src in usr
 

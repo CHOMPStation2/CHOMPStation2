@@ -514,13 +514,8 @@
 					return
 				if("Cancel", null)
 					return
-<<<<<<< HEAD
-		else if (istype(W, /obj/item/weapon/card/id) && idaccessible == 0)
-			to_chat(user, "<span class='notice'>[src] is not accepting access modifications at this time.</span>")		// CHOMPEDIT : purdev (spelling fix)
-=======
 		else if (istype(W, /obj/item/card/id) && idaccessible == 0)
-			to_chat(user, "<span class='notice'>[src] is not accepting access modifcations at this time.</span>")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+			to_chat(user, "<span class='notice'>[src] is not accepting access modifications at this time.</span>")		// CHOMPEDIT : purdev (spelling fix)
 			return
 
 /mob/living/silicon/pai/verb/allowmodification()

@@ -14,13 +14,9 @@
 
 /obj/item/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user)
 
-<<<<<<< HEAD
 /* CHOMPedit remove: Anyone can get this info. *
 
-	var/obj/item/weapon/card/id/ourid = user?.GetIdCard()
-=======
 	var/obj/item/card/id/ourid = user?.GetIdCard()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(!ourid)
 		return
 	if(access_change_ids in ourid.GetAccess())

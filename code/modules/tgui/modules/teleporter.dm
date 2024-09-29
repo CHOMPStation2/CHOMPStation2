@@ -20,17 +20,13 @@
 /datum/tgui_module/teleport_control/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
-	
+
 	switch(action)
 		if("select_target")
 			var/list/L = list()
 			var/list/areaindex = list()
 
-<<<<<<< HEAD
-			for(var/obj/item/device/radio/beacon/R in GLOB.all_beacons)
-=======
-			for(var/obj/item/radio/beacon/R in all_beacons)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+			for(var/obj/item/radio/beacon/R in GLOB.all_beacons)
 				var/turf/T = get_turf(R)
 				if(!T)
 					continue
@@ -43,11 +39,7 @@
 					areaindex[tmpname] = 1
 				L[tmpname] = R
 
-<<<<<<< HEAD
-			for(var/obj/item/weapon/implant/tracking/I in GLOB.all_tracking_implants)
-=======
-			for(var/obj/item/implant/tracking/I in all_tracking_implants)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+			for(var/obj/item/implant/tracking/I in GLOB.all_tracking_implants)
 				if(!I.implanted || !ismob(I.loc))
 					continue
 				else
@@ -84,10 +76,10 @@
 		if("toggle_on")
 			if(!station)
 				return FALSE
-			
+
 			if(station.engaged)
 				station.disengage()
 			else
 				station.engage()
-			
+
 			return TRUE

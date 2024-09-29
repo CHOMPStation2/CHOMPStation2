@@ -70,9 +70,8 @@
 	if(isturf(loc))
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
-<<<<<<< HEAD
 // CHOMPEdit Start
-/obj/item/device/assembly_holder/HasProximity(turf/T, datum/weakref/WF, old_loc)
+/obj/item/assembly_holder/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
@@ -81,9 +80,6 @@
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
 // CHOMPEdit End
-=======
-/obj/item/assembly_holder/HasProximity(turf/T, atom/movable/AM, old_loc)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(a_left)
 		a_left.HasProximity(T, AM, old_loc)
 	if(a_right)
@@ -183,11 +179,7 @@
 /obj/item/assembly_holder/timer_igniter
 	name = "timer-igniter assembly"
 
-<<<<<<< HEAD
-/obj/item/device/assembly_holder/timer_igniter/Initialize() //ChompEDIT New --> Initialize
-=======
-/obj/item/assembly_holder/timer_igniter/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/assembly_holder/timer_igniter/Initialize() //ChompEDIT New --> Initialize
 	..()
 
 	var/obj/item/assembly/igniter/ign = new(src)

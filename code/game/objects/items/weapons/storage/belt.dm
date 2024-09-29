@@ -67,21 +67,6 @@
 		/obj/item/pda,
 		/obj/item/megaphone,
 		/obj/item/taperoll,
-<<<<<<< HEAD
-		/obj/item/device/radio/headset,
-		/obj/item/device/robotanalyzer,
-		/obj/item/weapon/material/minihoe,
-		/obj/item/weapon/material/knife/machete/hatchet,
-		/obj/item/device/analyzer/plant_analyzer,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/tape_roll,
-		/obj/item/device/integrated_electronics/wirer,
-		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
-		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
-		/obj/item/weapon/rcd, //CHOMPAdd
-		/obj/item/device/integrated_electronics/debugger, //Vorestation edit adding debugger to toolbelt can hold list
-		/obj/item/weapon/shovel/spade, //VOREStation edit. If it can hold minihoes and hatchers, why not the gardening spade?
-=======
 		/obj/item/radio/headset,
 		/obj/item/robotanalyzer,
 		/obj/item/material/minihoe,
@@ -90,9 +75,11 @@
 		/obj/item/extinguisher/mini,
 		/obj/item/tape_roll,
 		/obj/item/integrated_electronics/wirer,
+		/obj/item/pipe_dispenser, //CHOMPAdd
+		/obj/item/holosign_creator/combifan, //CHOMPAdd
+		/obj/item/rcd, //CHOMPAdd
 		/obj/item/integrated_electronics/debugger, //Vorestation edit adding debugger to toolbelt can hold list
 		/obj/item/shovel/spade, //VOREStation edit. If it can hold minihoes and hatchers, why not the gardening spade?
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		/obj/item/stack/nanopaste, //VOREStation edit. Think of it as a tube of superglue. Belts hold that all the time.
 		/obj/item/geiger //VOREStation edit. Engineers work with rad-slinging stuff sometimes too
 		)
@@ -136,22 +123,9 @@
 	item_state = "utility_ce"
 	storage_slots = 8	//If they get better everything-else, why not the belt too?
 	can_hold = list(
-<<<<<<< HEAD
-		/obj/item/weapon/rcd,	//They've given one from the get-go, it's hard to imagine they wouldn't be given something that can store it neater than a bag
-		/obj/item/weapon/pipe_dispenser, //CHOMPAdd
-		/obj/item/weapon/holosign_creator/combifan, //CHOMPAdd
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/tool/transforming/powerdrill,
-		/obj/item/weapon/tool/transforming/jawsoflife,
-		/obj/item/device/multitool,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
-=======
 		/obj/item/rcd,	//They've given one from the get-go, it's hard to imagine they wouldn't be given something that can store it neater than a bag
+		/obj/item/pipe_dispenser, //CHOMPAdd
+		/obj/item/holosign_creator/combifan, //CHOMPAdd
 		/obj/item/tool/crowbar,
 		/obj/item/tool/screwdriver,
 		/obj/item/weldingtool,
@@ -162,7 +136,6 @@
 		/obj/item/multitool,
 		/obj/item/flashlight,
 		/obj/item/cell/device,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		/obj/item/stack/cable_coil,
 		/obj/item/t_scanner,
 		/obj/item/analyzer,
@@ -272,26 +245,15 @@
 		/obj/item/clothing/gloves,
 		/obj/item/reagent_containers/hypospray,
 		/obj/item/clothing/glasses,
-<<<<<<< HEAD
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/cell/device,
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/ammo_casing/macrobattery, // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
-		/obj/item/device/antibody_scanner, // VOREstation edit start
-		/obj/item/device/sleevemate,
-		/obj/item/device/mass_spectrometer,
-		/obj/item/weapon/surgical,
-=======
 		/obj/item/tool/crowbar,
 		/obj/item/flashlight,
 		/obj/item/cell/device,
 		/obj/item/extinguisher/mini,
+		/obj/item/ammo_casing/macrobattery, // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
 		/obj/item/antibody_scanner, // VOREstation edit start
 		/obj/item/sleevemate,
 		/obj/item/mass_spectrometer,
 		/obj/item/surgical,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		/obj/item/clothing/mask/chewable/candy/lolli // VOREstation edit end
 		)
 
@@ -531,16 +493,10 @@
 		/obj/item/flame/lighter,
 		/obj/item/megaphone,
 		/obj/item/taperoll,
-<<<<<<< HEAD
-		/obj/item/weapon/reagent_containers/spray,
-		/obj/item/weapon/soap,
-		/obj/item/weapon/holosign_creator, //CHOMPAdd
-		/obj/item/device/lightreplacer,
-=======
 		/obj/item/reagent_containers/spray,
 		/obj/item/soap,
+		/obj/item/holosign_creator, //CHOMPAdd
 		/obj/item/lightreplacer,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		/obj/item/clothing/glasses/hud/janitor
 		)
 

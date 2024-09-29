@@ -137,16 +137,10 @@
 	reagents.add_reagent("healing_nanites", 30)
 	color = reagents.get_color()
 
-<<<<<<< HEAD
 /*CHOMPStation removal begin
-/obj/item/weapon/reagent_containers/pill/sleevingcure
+/obj/item/reagent_containers/pill/sleevingcure
 	name = "Vey-Med Resleeving Booster pill" //YW Edit
 	desc = "A rare medication provided by Vey-Med that helps counteract negative side effects of using resleeving machinery. Numb tongue before swallowing." //YW Edit
-=======
-/obj/item/reagent_containers/pill/sleevingcure
-	name = "Kitsuhanan Cure (1u)"
-	desc = "A rare cure provided by KHI that helps counteract negative side effects of using imperfect resleeving machinery."
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	icon_state = "pill3"
 
 /obj/item/reagent_containers/pill/sleevingcure/Initialize()

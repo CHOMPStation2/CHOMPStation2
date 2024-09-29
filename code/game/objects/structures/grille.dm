@@ -248,13 +248,8 @@
 /obj/structure/grille/broken/rustic
 	icon_state = "grillerustic-b"
 
-<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
-/obj/structure/grille/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
-=======
-
 /obj/structure/grille/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	switch(passed_mode)
 		if(RCD_WINDOWGRILLE)
 			// A full tile window costs 4 glass sheets.
@@ -292,4 +287,3 @@
 	health -= damage
 	spawn(1) healthcheck()
 	return 1
-

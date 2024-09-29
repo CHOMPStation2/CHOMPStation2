@@ -627,11 +627,11 @@
 "bZ" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced,
-/obj/item/weapon/storage/box/shotgunammo,
-/obj/item/weapon/storage/box/shotgunammo,
-/obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunshells,
+/obj/item/storage/box/shotgunammo,
+/obj/item/storage/box/shotgunammo,
+/obj/item/storage/box/shotgunshells,
+/obj/item/storage/box/shotgunshells,
+/obj/item/storage/box/shotgunshells,
 /turf/simulated/floor/tiled{
 	icon_state = "dark"
 	},
@@ -7276,14 +7276,14 @@
 /area/centcom/control)
 "Eq" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/box/stunshells/large,
-/obj/item/weapon/storage/box/stunshells/large,
-/obj/item/weapon/storage/box/stunshells/large,
-/obj/item/weapon/storage/box/stunshells/large,
-/obj/item/weapon/storage/box/stunshells/large,
-/obj/item/weapon/storage/box/stunshells/large,
-/obj/item/weapon/storage/box/stunshells/large,
-/obj/item/weapon/storage/box/stunshells/large,
+/obj/item/storage/box/stunshells/large,
+/obj/item/storage/box/stunshells/large,
+/obj/item/storage/box/stunshells/large,
+/obj/item/storage/box/stunshells/large,
+/obj/item/storage/box/stunshells/large,
+/obj/item/storage/box/stunshells/large,
+/obj/item/storage/box/stunshells/large,
+/obj/item/storage/box/stunshells/large,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
@@ -14461,14 +14461,14 @@
 	})
 "Wq" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
-/obj/item/weapon/storage/box/flashshells/large,
+/obj/item/storage/box/flashshells/large,
+/obj/item/storage/box/flashshells/large,
+/obj/item/storage/box/flashshells/large,
+/obj/item/storage/box/flashshells/large,
+/obj/item/storage/box/flashshells/large,
+/obj/item/storage/box/flashshells/large,
+/obj/item/storage/box/flashshells/large,
+/obj/item/storage/box/flashshells/large,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)

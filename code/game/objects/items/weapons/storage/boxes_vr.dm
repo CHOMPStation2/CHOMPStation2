@@ -1,11 +1,7 @@
 /obj/item/storage/box/explorerkeys
 	name = "box of volunteer headsets"
 	desc = "A box full of volunteer headsets, for issuing out to exploration volunteers."
-<<<<<<< HEAD
-	starts_with = list(/obj/item/device/radio/headset/volunteer = 7) //CHOMP explo keep
-=======
-	starts_with = list(/obj/item/radio/headset/explorer = 7)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	starts_with = list(/obj/item/radio/headset/volunteer = 7) //CHOMP explo keep
 
 /obj/item/storage/box/commandkeys
 	name = "box of command keys"

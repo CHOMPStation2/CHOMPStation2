@@ -692,12 +692,8 @@
 		return TRUE
 	. = ..()
 
-<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
-/obj/structure/window/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
-=======
 /obj/structure/window/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			return list(

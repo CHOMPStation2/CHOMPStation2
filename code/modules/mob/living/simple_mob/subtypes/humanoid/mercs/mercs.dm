@@ -36,12 +36,8 @@
 	say_list_type = /datum/say_list/merc
 
 	// Grenade special attack vars
-<<<<<<< HEAD
-	var/grenade_type = /obj/item/weapon/grenade/concussion
-	var/grenade_timer = 50	//CHOMPEdit
-=======
 	var/grenade_type = /obj/item/grenade/concussion
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	var/grenade_timer = 50	//CHOMPEdit
 	special_attack_cooldown = 45 SECONDS
 	special_attack_min_range = 2
 	special_attack_max_range = 7
@@ -205,13 +201,8 @@
 	reload_max = 30
 
 /mob/living/simple_mob/humanoid/merc/ranged/rifle/mag
-<<<<<<< HEAD
-	loot_list = list(/obj/item/weapon/gun/magnetic/railgun/flechette = 100)
-	projectiletype = /obj/item/projectile/bullet/magnetic/flechette/rapid // Who thought rapid fire 20 damage with 100% armor pen was a good idea? CH edit
-=======
 	loot_list = list(/obj/item/gun/magnetic/railgun/flechette = 100)
-	projectiletype = /obj/item/projectile/bullet/magnetic/flechette
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	projectiletype = /obj/item/projectile/bullet/magnetic/flechette/rapid // Who thought rapid fire 20 damage with 100% armor pen was a good idea? CH edit
 
 	projectilesound = 'sound/weapons/rapidslice.ogg'
 	projectile_dispersion = 5

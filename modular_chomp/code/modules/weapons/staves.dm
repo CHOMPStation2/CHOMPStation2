@@ -1,4 +1,4 @@
-/obj/item/weapon/holosign_creator/forcewand
+/obj/item/holosign_creator/forcewand
 	name = "wand of force"
 	desc = "A strange wand with odd bits of wires and circuits poking out."
 	icon = 'modular_chomp/icons/obj/guns/fakemagic.dmi'
@@ -7,7 +7,7 @@
 	creation_time = 5
 	max_signs = 3
 
-/obj/item/weapon/holosign_creator/smokewand
+/obj/item/holosign_creator/smokewand
 	name = "wand of smoke"
 	desc = "A strange wand with odd bits of wires and circuits poking out."
 	icon = 'modular_chomp/icons/obj/guns/fakemagic.dmi'
@@ -37,7 +37,7 @@
 
 //Maybe shock staff later
 
-/obj/item/weapon/gun/magic/firestaff/cultstaff
+/obj/item/gun/magic/firestaff/cultstaff
 	name = "cultist staff"
 	desc = "A strange staff, bits of lose wires and circuit poking out from the wooden handle."
 	icon = 'modular_chomp/icons/obj/guns/fakemagic.dmi'

@@ -23,15 +23,9 @@
 	name = OUTFIT_JOB_NAME(JOB_MEDICAL_DOCTOR)
 	uniform = /obj/item/clothing/under/rank/medical
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
-<<<<<<< HEAD
-	l_hand = /obj/item/weapon/storage/firstaid/adv //CHOMP Edit
-	r_pocket = /obj/item/device/flashlight/pen
-	id_type = /obj/item/weapon/card/id/medical
-=======
-	l_hand = /obj/item/storage/firstaid/regular
+	l_hand = /obj/item/storage/firstaid/adv //CHOMP Edit
 	r_pocket = /obj/item/flashlight/pen
 	id_type = /obj/item/card/id/medical
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /decl/hierarchy/outfit/job/medical/doctor/emergency_physician
 	name = OUTFIT_JOB_NAME(JOB_ALT_EMERGENCY_PHYSICIAN)
@@ -77,7 +71,7 @@
 
 /decl/hierarchy/outfit/job/medical/geneticist
 	name = OUTFIT_JOB_NAME(JOB_GENETICIST)
-	l_ear = /obj/item/device/radio/headset/headset_medsci // CHOMPAdd - Geneticists get their cool headset
+	l_ear = /obj/item/radio/headset/headset_medsci // CHOMPAdd - Geneticists get their cool headset
 	uniform = /obj/item/clothing/under/rank/geneticist
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	backpack = /obj/item/storage/backpack/genetics

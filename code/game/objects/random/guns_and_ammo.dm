@@ -276,13 +276,8 @@
 				/obj/item/ammo_magazine/m10mm
 			),
 			prob(1);list(
-<<<<<<< HEAD
-				/obj/item/weapon/gun/projectile/automatic/p90,
-				/obj/item/ammo_magazine/a57p90 //CHOMPedit: new P90 magazine.
-=======
 				/obj/item/gun/projectile/automatic/p90,
-				/obj/item/ammo_magazine/m9mmp90
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+				/obj/item/ammo_magazine/a57p90 //CHOMPedit: new P90 magazine.
 			),
 			prob(3);list(
 				/obj/item/gun/projectile/automatic/combatsmg,

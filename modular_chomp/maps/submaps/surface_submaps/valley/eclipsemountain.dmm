@@ -303,7 +303,7 @@
 /area/submap/eclipsemountain)
 "xO" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/eclipsemountain)
@@ -418,7 +418,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsemountain)
 "Ii" = (
-/obj/item/weapon/rig/robotics,
+/obj/item/rig/robotics,
 /turf/simulated/floor/bluegrid,
 /area/submap/eclipsemountain)
 "Il" = (
@@ -508,7 +508,7 @@
 /obj/random/projectile/random,
 /obj/random/gun/random,
 /obj/random/handgun,
-/obj/item/weapon/rig/merc,
+/obj/item/rig/merc,
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
 "MM" = (
@@ -610,7 +610,7 @@
 /obj/random/projectile/random,
 /obj/random/gun/random,
 /obj/random/handgun,
-/obj/item/weapon/rig/hephaestus/equipped,
+/obj/item/rig/hephaestus/equipped,
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
 "UA" = (
@@ -624,7 +624,7 @@
 /obj/random/ammo,
 /obj/random/maintenance/security,
 /obj/random/maintenance/research,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Our radio array is set up. Bits are pieces are unstable, although we remedied that by bouncing rare signals up to southern cross. They hopefully won't notice a few stray signals.";
 	name = "Status Report"
 	},

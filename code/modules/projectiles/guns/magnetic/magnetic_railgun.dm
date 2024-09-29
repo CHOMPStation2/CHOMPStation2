@@ -15,17 +15,10 @@
 	load_type = /obj/item/rcd_ammo
 	projectile_type = /obj/item/projectile/bullet/magnetic/slug
 
-<<<<<<< HEAD
-	cell = /obj/item/weapon/cell/device/weapon //CHOMP Edit.
-	capacitor = /obj/item/weapon/stock_parts/capacitor/adv
-	loaded = /obj/item/weapon/rcd_ammo/large
-	removable_components = TRUE //CHOMP Edit.
-=======
-	cell = /obj/item/cell/hyper
+	cell = /obj/item/cell/device/weapon //CHOMP Edit.
 	capacitor = /obj/item/stock_parts/capacitor/adv
 	loaded = /obj/item/rcd_ammo/large
-	removable_components = FALSE
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	removable_components = TRUE //CHOMP Edit.
 
 	var/slowdown_held = 2
 	var/slowdown_worn = 1
@@ -90,14 +83,9 @@
 	icon_state = "flechette_gun"
 	item_state = "z8carbine"
 
-<<<<<<< HEAD
-	cell = /obj/item/weapon/cell/device/weapon //CHOMP Edit.
-	capacitor = /obj/item/weapon/stock_parts/capacitor/adv
-	removable_components = TRUE //CHOMP Edit.
-=======
-	cell = /obj/item/cell/hyper
+	cell = /obj/item/cell/device/weapon //CHOMP Edit.
 	capacitor = /obj/item/stock_parts/capacitor/adv
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	removable_components = TRUE //CHOMP Edit.
 
 	fire_delay = 0
 
@@ -111,12 +99,8 @@
 	power_cost = 100
 	load_type = /obj/item/magnetic_ammo
 	projectile_type = /obj/item/projectile/bullet/magnetic/flechette
-<<<<<<< HEAD
-	loaded = /obj/item/weapon/magnetic_ammo
-	removable_components = TRUE //CHOMP Edit.
-=======
 	loaded = /obj/item/magnetic_ammo
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	removable_components = TRUE //CHOMP Edit.
 	empty_sound = 'sound/weapons/smg_empty_alarm.ogg'
 
 	firemodes = list(
@@ -133,14 +117,9 @@
 	item_state = "combatrevolver"
 	w_class = ITEMSIZE_SMALL
 
-<<<<<<< HEAD
-	cell = /obj/item/weapon/cell/device/weapon //CHOMP Edit.
-	capacitor = /obj/item/weapon/stock_parts/capacitor
-	removable_components = TRUE //CHOMPstation Edit
-=======
-	cell = /obj/item/cell/super
+	cell = /obj/item/cell/device/weapon //CHOMP Edit.
 	capacitor = /obj/item/stock_parts/capacitor
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	removable_components = TRUE //CHOMPstation Edit
 
 	fire_delay = 0
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
@@ -154,12 +133,7 @@
 	power_cost = 100
 	load_type = /obj/item/magnetic_ammo/pistol
 	projectile_type = /obj/item/projectile/bullet/magnetic/flechette/small
-<<<<<<< HEAD
-	loaded = /obj/item/weapon/magnetic_ammo/pistol
-=======
 	loaded = /obj/item/magnetic_ammo/pistol
-	removable_components = TRUE
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	empty_sound = 'sound/weapons/smg_empty_alarm.ogg'
 
 	firemodes = list(
@@ -175,16 +149,9 @@
 	icon_state = "railgun_sec"
 	item_state = "cshotgun"
 
-<<<<<<< HEAD
-	cell = /obj/item/weapon/cell/device/weapon
-	capacitor = /obj/item/weapon/stock_parts/capacitor
-	removable_components = TRUE //CHOMPstation Edit
-=======
-	removable_components = TRUE
-
 	cell = /obj/item/cell/device/weapon
 	capacitor = /obj/item/stock_parts/capacitor
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	removable_components = TRUE //CHOMPstation Edit
 
 	fire_delay = 8
 
@@ -218,14 +185,9 @@
 
 	slowdown_held = 0.1
 
-<<<<<<< HEAD
-	cell = /obj/item/weapon/cell/device/weapon
-	capacitor = /obj/item/weapon/stock_parts/capacitor
-	removable_components = TRUE //CHOMPstation Edit
-=======
 	cell = /obj/item/cell/device/weapon
 	capacitor = /obj/item/stock_parts/capacitor
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	removable_components = TRUE //CHOMPstation Edit
 
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 
@@ -253,14 +215,9 @@
 	icon_state = "railgun_sifguard"
 	item_state = "z8carbine"
 
-<<<<<<< HEAD
-	cell = /obj/item/weapon/cell/device/weapon //CHOMP Edit.
-	capacitor = /obj/item/weapon/stock_parts/capacitor/adv
-	removable_components = TRUE //CHOMPstation Edit.
-=======
-	cell = /obj/item/cell/high
+	cell = /obj/item/cell/device/weapon //CHOMP Edit.
 	capacitor = /obj/item/stock_parts/capacitor/adv
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	removable_components = TRUE //CHOMPstation Edit.
 
 	slot_flags = SLOT_BELT|SLOT_BACK //CHOMPstation Edit. This is a carbine.
 

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-/obj/item/device/radio/intercom
-	listening = 0 //CHOMP Edit: Temporary bandaid fix for comms lag.
-=======
 /obj/item/radio/intercom
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	listening = 0 //CHOMP Edit: Temporary bandaid fix for comms lag.
 	name = "station intercom (General)"
 	desc = "Talk through this."
 	icon = 'icons/obj/radio_vr.dmi' //VOREStation Edit - New Icon
@@ -47,7 +43,7 @@
 	broadcasting = 1 //yw edit starts
 	listening = 0
 
-/obj/item/device/radio/intercom/interrogation/observation
+/obj/item/radio/intercom/interrogation/observation
 	listening = 1
 	broadcasting = 0 //yw edit ends
 

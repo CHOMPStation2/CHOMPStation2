@@ -17,22 +17,13 @@
 		/obj/item/module/power_control,
 		/obj/item/stock_parts,
 		/obj/item/frame,
-<<<<<<< HEAD
-		/obj/item/weapon/camera_assembly,
-		/obj/item/weapon/tank,
-		/obj/item/weapon/circuitboard,
-		/obj/item/weapon/smes_coil,
-		/obj/item/weapon/fuel_assembly,
-		/obj/item/weapon/bluespace_crystal //Chomp EDIT
-		) // CHOMPEdit - Buffing the gripper to allow bluespace crystal use for telesci building.
-=======
 		/obj/item/camera_assembly,
 		/obj/item/tank,
 		/obj/item/circuitboard,
 		/obj/item/smes_coil,
-		/obj/item/fuel_assembly
-		)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		/obj/item/fuel_assembly,
+		/obj/item/bluespace_crystal //Chomp EDIT
+		) // CHOMPEdit - Buffing the gripper to allow bluespace crystal use for telesci building.
 
 	var/obj/item/wrapped = null // Item currently being held.
 
@@ -104,18 +95,11 @@
 	desc = "A simple grasping tool for medical work."
 
 	can_hold = list(
-<<<<<<< HEAD
-		/obj/item/weapon/reagent_containers/glass,
-		/obj/item/weapon/storage/pill_bottle,
-		/obj/item/weapon/reagent_containers/pill,
-		/obj/item/weapon/reagent_containers/blood,
-		/obj/item/device/nif,       //Chompedit Add Nif handling
-=======
 		/obj/item/reagent_containers/glass,
 		/obj/item/storage/pill_bottle,
 		/obj/item/reagent_containers/pill,
 		/obj/item/reagent_containers/blood,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		/obj/item/nif,       //Chompedit Add Nif handling
 		/obj/item/stack/material/phoron,
 		/obj/item/tank/anesthetic,
 		/obj/item/disk/body_record //Vorestation Edit: this lets you get an empty sleeve or help someone else

@@ -600,15 +600,9 @@ var/list/possible_cable_coil_colours = list(
 		w_class = ITEMSIZE_SMALL
 
 /obj/item/stack/cable_coil/attackby(obj/item/W, mob/user)
-<<<<<<< HEAD
-	if(istype(W, /obj/item/device/multitool))
+	if(istype(W, /obj/item/multitool))
 		var/selected_type = tgui_input_list(user, "Pick new colour.", "Cable Colour", possible_cable_coil_colours) //ChompEDIT usr --> user
 		set_cable_color(selected_type, user) //ChompEDIT usr --> user
-=======
-	if(istype(W, /obj/item/multitool))
-		var/selected_type = tgui_input_list(usr, "Pick new colour.", "Cable Colour", possible_cable_coil_colours)
-		set_cable_color(selected_type, usr)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		return
 	return ..()
 

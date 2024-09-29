@@ -59,14 +59,12 @@
 	num_contained = 1
 	contains = list(
 			list( //the operator,
-<<<<<<< HEAD
 					/obj/item/clothing/suit/storage/vest/heavy/merc,
 					/obj/item/clothing/glasses/night,
-					/obj/item/weapon/storage/box/anti_photons
+					/obj/item/storage/box/anti_photons
 					),
 			list( //the indian,
-					/obj/item/weapon/gun/projectile/dartgun,
-=======
+					/obj/item/gun/projectile/dartgun,
 					/obj/item/gun/projectile/shotgun/pump/combat,
 					/obj/item/clothing/suit/storage/vest/heavy/merc,
 					/obj/item/clothing/glasses/night,
@@ -80,28 +78,25 @@
 					/obj/item/reagent_containers/hypospray,
 					/obj/item/reagent_containers/glass/bottle/chloralhydrate,
 					/obj/item/reagent_containers/glass/bottle/cyanide,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					/obj/item/ammo_magazine/chemdart
 					),
 
 			list( //the doc,
-					/obj/item/weapon/storage/firstaid/combat,
-					/obj/item/weapon/reagent_containers/hypospray
+					/obj/item/storage/firstaid/combat,
+					/obj/item/reagent_containers/hypospray
 					),
 
 			list( //the sapper,
-<<<<<<< HEAD
-					/obj/item/weapon/melee/energy/sword/ionic_rapier,
-					/obj/item/weapon/storage/box/syndie_kit/space, //doesn't matter what species you are,
-					/obj/item/device/multitool/ai_detector,
-					/obj/item/weapon/storage/toolbox/syndicate/powertools
+					/obj/item/melee/energy/sword/ionic_rapier,
+					/obj/item/storage/box/syndie_kit/space, //doesn't matter what species you are,
+					/obj/item/multitool/ai_detector,
+					/obj/item/storage/toolbox/syndicate/powertools
 					),
 			list( //the infiltrator,
-					/obj/item/device/chameleon,
-					/obj/item/weapon/storage/box/syndie_kit/chameleon,
-					/obj/item/device/encryptionkey/syndicate,
-					/obj/item/weapon/card/id/syndicate,
-=======
+					/obj/item/chameleon,
+					/obj/item/storage/box/syndie_kit/chameleon,
+					/obj/item/encryptionkey/syndicate,
+					/obj/item/card/id/syndicate,
 					/obj/item/melee/energy/sword/ionic_rapier,
 					/obj/item/storage/box/syndie_kit/space, //doesn't matter what species you are,
 					/obj/item/storage/box/syndie_kit/demolitions,
@@ -115,7 +110,6 @@
 					/obj/item/storage/box/syndie_kit/chameleon,
 					/obj/item/encryptionkey/syndicate,
 					/obj/item/card/id/syndicate,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					/obj/item/clothing/mask/gas/voice,
 					/obj/item/makeover
 					),
@@ -128,17 +122,14 @@
 					/obj/item/multitool/hacktool
 					),
 			list( //the professional,
-<<<<<<< HEAD
-					/obj/item/weapon/gun/energy/ionrifle/pistol,
-					/obj/item/weapon/material/knife/tacknife/combatknife,
-=======
+					/obj/item/gun/energy/ionrifle/pistol,
+					/obj/item/material/knife/tacknife/combatknife,
 					/obj/item/gun/projectile/silenced,
 					/obj/item/gun/energy/ionrifle/pistol,
 					/obj/item/clothing/glasses/thermal/syndi,
 					/obj/item/card/emag,
 					/obj/item/ammo_magazine/m45/ap,
 					/obj/item/material/knife/tacknife/combatknife,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					/obj/item/clothing/mask/balaclava
 					)
 			)

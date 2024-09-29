@@ -188,10 +188,10 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	light_color = "#FFEEDB"
 	light_range_on = 2
 	network = list(NETWORK_BODYCAM)
-	circuit = /obj/item/weapon/circuitboard/security/telescreen/bodycamera
+	circuit = /obj/item/circuitboard/security/telescreen/bodycamera
 	camera_datum_type = /datum/tgui_module/camera/bigscreen
 
-	var/obj/item/device/radio/bradio = null
+	var/obj/item/radio/bradio = null
 	var/obj/effect/overlay/vis/bpinboard
 	var/datum/weakref/showing
 	var/datum/weakref/the_camera

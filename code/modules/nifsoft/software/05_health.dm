@@ -136,7 +136,7 @@
 					mode = 0
 					if(!isbelly(S.loc)) //Not notified in case of vore, for gameplay purposes.
 						var/turf/T = get_turf(S)
-						var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
+						var/obj/item/radio/headset/a = new /obj/item/radio/headset/heads/captain(null)
 						a.autosay("[S.real_name] is in critical condition, located at ([T.x],[T.y],[T.z])!", "[S.real_name]'s NIF", "Medical")
 						qdel(a)
 				// Chomp Edit End //

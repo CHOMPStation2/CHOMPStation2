@@ -301,7 +301,7 @@ var/global/list/grub_machine_overlays = list()
 				return
 	return ..()
 
-/obj/item/weapon/melee/baton/afterattack(obj/O, mob/user, proximity)
+/obj/item/melee/baton/afterattack(obj/O, mob/user, proximity)
 	if(proximity)
 		if(istype(O, /obj/machinery))
 			var/mob/living/simple_mob/animal/solargrub_larva/grub = locate() in O

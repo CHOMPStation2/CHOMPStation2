@@ -10,12 +10,12 @@ var/global/last_fax_role_request
  */
 /obj/machinery/photocopier/faxmachine/proc/export_fax(fax) //CHOMPEdit Begin
 	var faxid = "[num2text(world.realtime,12)]_[rand(9999)+1]"
-	if (istype(fax, /obj/item/weapon/paper))
-		var/obj/item/weapon/paper/P = fax
+	if (istype(fax, /obj/item/paper))
+		var/obj/item/paper/P = fax
 		var/text = "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>";
 		rustg_file_write(text, "[config.fax_export_dir]/fax_[faxid].html")
-	else if (istype(fax, /obj/item/weapon/photo))
-		var/obj/item/weapon/photo/H = fax
+	else if (istype(fax, /obj/item/photo))
+		var/obj/item/photo/H = fax
 		fcopy(H.img, "[config.fax_export_dir]/photo_[faxid].png")
 		var/text = "<html><head><title>[H.name]</title></head>" \
 			+ "<body style='overflow:hidden;margin:0;text-align:center'>" \
@@ -23,10 +23,10 @@ var/global/last_fax_role_request
 			+ "[H.scribble ? "<br>Written on the back:<br><i>[H.scribble]</i>" : ""]"\
 			+ "</body></html>"
 		rustg_file_write(text, "[config.fax_export_dir]/fax_[faxid].html")
-	else if (istype(fax, /obj/item/weapon/paper_bundle))
+	else if (istype(fax, /obj/item/paper_bundle))
 		var/def_faxid = faxid
 		faxid += "_0"
-		var/obj/item/weapon/paper_bundle/B = fax
+		var/obj/item/paper_bundle/B = fax
 		var/data = ""
 		for (var/page = 1, page <= B.pages.len, page++)
 			var/obj/pageobj = B.pages[page]
@@ -37,12 +37,12 @@ var/global/last_fax_role_request
 	return faxid
 
 /obj/machinery/photocopier/faxmachine/proc/export_fax_id(fax,faxid)
-	if (istype(fax, /obj/item/weapon/paper))
-		var/obj/item/weapon/paper/P = fax
+	if (istype(fax, /obj/item/paper))
+		var/obj/item/paper/P = fax
 		var/text = "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>";
 		rustg_file_write(text, "[config.fax_export_dir]/fax_[faxid].html")
-	else if (istype(fax, /obj/item/weapon/photo))
-		var/obj/item/weapon/photo/H = fax
+	else if (istype(fax, /obj/item/photo))
+		var/obj/item/photo/H = fax
 		fcopy(H.img, "[config.fax_export_dir]/photo_[faxid].png")
 		var/text = "<html><head><title>[H.name]</title></head>" \
 			+ "<body style='overflow:hidden;margin:0;text-align:center'>" \
@@ -70,8 +70,8 @@ var/global/last_fax_role_request
 			world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
 	//YW EDIT //CHOMPEdit also
 	var/idlen = length(faxid) + 1
-	if (istype(sent, /obj/item/weapon/paper_bundle))
-		var/obj/item/weapon/paper_bundle/B = sent
+	if (istype(sent, /obj/item/paper_bundle))
+		var/obj/item/paper_bundle/B = sent
 		faxid = copytext(faxid,1,idlen-2)
 		var/faxids = "FAXMULTIID: [faxid]_0"
 		var/contents = ""

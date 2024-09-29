@@ -77,17 +77,11 @@
 		/obj/item/clothing/head/beret/purple,
 		/obj/item/flashlight,
 		/obj/item/clothing/suit/caution = 4,
-<<<<<<< HEAD
-		/obj/item/device/lightreplacer,
-		/obj/item/weapon/storage/bag/trash,
-		/obj/item/weapon/storage/belt/janitor,
-		/obj/item/device/vac_attachment, //CHOMPAdd
-		/obj/item/weapon/holosign_creator, //CHOMPAdd
-=======
 		/obj/item/lightreplacer,
 		/obj/item/storage/bag/trash,
 		/obj/item/storage/belt/janitor,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		/obj/item/vac_attachment, //CHOMPAdd
+		/obj/item/holosign_creator, //CHOMPAdd
 		/obj/item/clothing/shoes/galoshes,
 		/obj/item/clothing/glasses/hud/janitor
 		)

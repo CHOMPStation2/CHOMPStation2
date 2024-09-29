@@ -206,13 +206,9 @@
 	reagent_ids = list("inaprovaline", "tricordrazine", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "tramadol", "adranol") // CHOMPedit: More chems for Medihound
 	var/datum/matter_synth/water = null
 
-<<<<<<< HEAD
 /* CHOMPedit start: Water requirement removal. *
 
-/obj/item/weapon/reagent_containers/borghypo/hound/process() //Recharges in smaller steps and uses the water reserves as well.
-=======
 /obj/item/reagent_containers/borghypo/hound/process() //Recharges in smaller steps and uses the water reserves as well.
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(isrobot(loc))
 		var/mob/living/silicon/robot/R = loc
 		if(R && R.cell)
@@ -223,13 +219,9 @@
 					reagent_volumes[T] = min(reagent_volumes[T] + 1, volume)
 	return 1
 
-<<<<<<< HEAD
 * CHOMPedit end: Water requirement removal. */
 
-/obj/item/weapon/reagent_containers/borghypo/hound/lost
-=======
 /obj/item/reagent_containers/borghypo/hound/lost
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Hound hypospray"
 	desc = "An advanced chemical synthesizer and injection system utilizing carrier's reserves."
 	reagent_ids = list("tricordrazine", "inaprovaline", "bicaridine", "dexalin", "anti_toxin", "tramadol", "spaceacillin")
@@ -322,7 +314,7 @@
 				water.use_charge(5)  //CHOMPAdd
 			busy = 0 //CHOMPAdd prevents abuse
 			return
-		if(istype(target,/obj/item/weapon/reagent_containers/food))
+		if(istype(target,/obj/item/reagent_containers/food))
 			user.visible_message("[user] nibbles away at \the [target.name].", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
 			busy = 1 //CHOMPAdd prevents abuse
 			if(do_after (user, 50))
@@ -553,7 +545,7 @@
 		T.hitby(src)
 	else
 		src.throw_at(get_step(get_turf(T),get_turf(src)), 4, 1, src)
-	*/ 
+	*/
 	src.throw_at(get_step(get_turf(T),get_turf(src)), 4, 1, src) //ChompEDIT - no bluespace pounce
 	//ChompEDIT END
 	playsound(src, 'sound/mecha/mechstep2.ogg', 50, 1)

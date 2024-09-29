@@ -15,20 +15,20 @@
 	var/efficiency = 1.35
 	var/speed = 1
 
-	var/obj/item/weapon/reagent_containers/container = null
+	var/obj/item/reagent_containers/container = null
 	var/printing = FALSE
 	var/list/products = list()
 
-/obj/item/weapon/circuitboard/food_replicator
+/obj/item/circuitboard/food_replicator
 	name = T_BOARD("food replicator")
 	build_path = /obj/machinery/food_replicator
 	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_ENGINEERING = 2, TECH_BIO = 2)
 	req_components = list(
-		/obj/item/weapon/stock_parts/capacitor = 3,
-		/obj/item/weapon/stock_parts/matter_bin = 2,
-		/obj/item/weapon/stock_parts/manipulator = 1,
-		/obj/item/weapon/stock_parts/motor = 1,
+		/obj/item/stock_parts/capacitor = 3,
+		/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stock_parts/manipulator = 1,
+		/obj/item/stock_parts/motor = 1,
 		/obj/item/stack/cable_coil = 5,
 	)
 
@@ -69,7 +69,7 @@
 			return
 
 		var/product_path = products[choice]
-		var/obj/item/weapon/reagent_containers/foodItem = new product_path
+		var/obj/item/reagent_containers/foodItem = new product_path
 
 		var/total = abs(foodItem.reagents.total_volume-foodItem.reagents.get_free_space())
 
@@ -92,8 +92,8 @@
 			if(product_path)
 				foodItem = new product_path(src)
 
-				if(istype(foodItem, /obj/item/weapon/reagent_containers/food/snacks/donkpocket))
-					var/obj/item/weapon/reagent_containers/food/snacks/donkpocket/donkp = foodItem
+				if(istype(foodItem, /obj/item/reagent_containers/food/snacks/donkpocket))
+					var/obj/item/reagent_containers/food/snacks/donkpocket/donkp = foodItem
 					donkp.heat()
 
 				if(foodItem.reagents.has_reagent("supermatter"))
@@ -127,13 +127,13 @@
 		return
 	if(default_part_replacement(user, O))
 		return
-	if(istype(O, /obj/item/weapon/reagent_containers/food))
+	if(istype(O, /obj/item/reagent_containers/food))
 		balloon_alert(user, "Scanning...")
 		if(!do_after(user, 10))
 			return
 		foodcheck(O)
 		return
-	if(istype(O, /obj/item/weapon/reagent_containers/glass))
+	if(istype(O, /obj/item/reagent_containers/glass))
 		if(!isnull(container))
 			to_chat(user, SPAN_WARNING("There is already a reagent container inserted!"))
 			return
@@ -146,7 +146,7 @@
 
 	return ..()
 
-/obj/machinery/food_replicator/proc/foodcheck(var/obj/item/weapon/reagent_containers/food)
+/obj/machinery/food_replicator/proc/foodcheck(var/obj/item/reagent_containers/food)
 	var/mob/living/mob = locate(/mob/living) in food
 	if(mob)
 		playsound(src, "sound/machines/buzz-two.ogg", 25, 0)
@@ -191,9 +191,9 @@
     var/cap_rating = 0
     var/man_rating = 0
 
-    for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)
+    for(var/obj/item/stock_parts/capacitor/C in component_parts)
         cap_rating += C.rating
-    for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+    for(var/obj/item/stock_parts/manipulator/M in component_parts)
         man_rating += M.rating
 
     efficiency = (man_rating > 0) ? 6 / man_rating : 3

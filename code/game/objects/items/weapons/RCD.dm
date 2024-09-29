@@ -31,7 +31,7 @@
 	var/make_rwalls = FALSE // If true, when building walls, they will be reinforced.
 /* VOREStation Removal - Unused
 <<<<<<< HEAD
-/obj/item/weapon/rcd/Initialize()
+/obj/item/rcd/Initialize()
 
 =======
 /obj/item/rcd/Initialize()

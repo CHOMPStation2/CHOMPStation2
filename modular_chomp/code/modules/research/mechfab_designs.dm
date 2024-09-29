@@ -134,4 +134,4 @@
 	time = 30
 	req_tech = list(TECH_MATERIAL = 9, TECH_ENGINEERING = 6, TECH_PHORON = 5, TECH_MAGNET = 6, TECH_POWER = 6, TECH_ILLEGAL = 8, TECH_PRECURSOR = 3)
 	materials = list(MAT_PLASTEEL = 12000, MAT_GOLD = 5000, MAT_GRAPHITE = 8000, MAT_OSMIUM = 3000, MAT_PLASTIC = 6000, MAT_VERDANTIUM = 7500, MAT_MORPHIUM = 20000)
-	build_path = /obj/item/weapon/rig/ch/precursor
+	build_path = /obj/item/rig/ch/precursor

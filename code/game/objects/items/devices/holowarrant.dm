@@ -116,11 +116,7 @@
 	name = "holowarrant devices"
 	desc = "A box of holowarrant displays for security use."
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/box/holowarrants/New() 
-=======
 /obj/item/storage/box/holowarrants/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	..()
 	for(var/i = 0 to 3)
 		new /obj/item/holowarrant(src) // VOREStation addition ends

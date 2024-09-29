@@ -55,12 +55,7 @@
 
 	stored_ore = list()
 
-<<<<<<< HEAD
-	for(var/obj/item/weapon/ore/O in contents)
-=======
 	for(var/obj/item/ore/O in contents)
-
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		if(stored_ore[O.name])
 			stored_ore[O.name]++
 		else

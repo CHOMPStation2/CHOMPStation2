@@ -575,26 +575,6 @@
 	spawn_nothing_percentage = 0
 
 /obj/random/mouseray/item_to_spawn()
-<<<<<<< HEAD
-	return pick(prob(300);/obj/item/weapon/gun/energy/mouseray,
-				prob(50);/obj/item/weapon/gun/energy/mouseray/corgi,
-				prob(50);/obj/item/weapon/gun/energy/mouseray/woof,
-				prob(50);/obj/item/weapon/gun/energy/mouseray/cat,
-				prob(50);/obj/item/weapon/gun/energy/mouseray/chicken,
-				prob(50);/obj/item/weapon/gun/energy/mouseray/lizard,
-				prob(50);/obj/item/weapon/gun/energy/mouseray/rabbit,
-				prob(50);/obj/item/weapon/gun/energy/mouseray/fennec,
-				prob(5);/obj/item/weapon/gun/energy/mouseray/monkey,
-				prob(5);/obj/item/weapon/gun/energy/mouseray/wolpin,
-				prob(5);/obj/item/weapon/gun/energy/mouseray/otie,
-				prob(5);/obj/item/weapon/gun/energy/mouseray/direwolf,
-				prob(5);/obj/item/weapon/gun/energy/mouseray/giantrat,
-				prob(50);/obj/item/weapon/gun/energy/mouseray/redpanda,
-				prob(5);/obj/item/weapon/gun/energy/mouseray/catslug,
-				prob(5);/obj/item/weapon/gun/energy/mouseray/teppi,
-				prob(1);/obj/item/weapon/gun/energy/mouseray/metamorphosis,
-				prob(1);/obj/item/weapon/gun/energy/mouseray/metamorphosis/advanced/random
-=======
 	return pick(prob(300);/obj/item/gun/energy/mouseray,
 				prob(50);/obj/item/gun/energy/mouseray/corgi,
 				prob(50);/obj/item/gun/energy/mouseray/woof,
@@ -610,7 +590,7 @@
 				prob(5);/obj/item/gun/energy/mouseray/giantrat,
 				prob(50);/obj/item/gun/energy/mouseray/redpanda,
 				prob(5);/obj/item/gun/energy/mouseray/catslug,
+				prob(5);/obj/item/gun/energy/mouseray/teppi,
 				prob(1);/obj/item/gun/energy/mouseray/metamorphosis,
 				prob(1);/obj/item/gun/energy/mouseray/metamorphosis/advanced/random
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 				)

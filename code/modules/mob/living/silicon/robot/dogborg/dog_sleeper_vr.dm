@@ -43,14 +43,10 @@
 	var/digest_multiplier = 1
 	var/recycles = FALSE
 	var/medsensor = TRUE //Does belly sprite come with patient ok/dead light?
-<<<<<<< HEAD
-	var/obj/item/device/healthanalyzer/med_analyzer = null
+	var/obj/item/healthanalyzer/med_analyzer = null
 	var/ore_storage = FALSE //CHOMPAdd
 	var/max_ore_storage = 500 //CHOMPAdd
 	var/current_capacity = 0 //CHOMPAdd
-=======
-	var/obj/item/healthanalyzer/med_analyzer = null
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/dogborg/sleeper/New()
 	..()
@@ -810,17 +806,17 @@
 		"rutile" = 0)
 	medsensor = FALSE
 
-/obj/item/device/dogborg/sleeper/compactor/supply/Entered(atom/movable/thing, atom/OldLoc)
+/obj/item/dogborg/sleeper/compactor/supply/Entered(atom/movable/thing, atom/OldLoc)
 	. = ..()
-	if(istype(thing, /obj/item/weapon/ore))
-		var/obj/item/weapon/ore/ore = thing
+	if(istype(thing, /obj/item/ore))
+		var/obj/item/ore/ore = thing
 		stored_ore[ore.material]++
 		current_capacity++
 		qdel(ore)
 
-/obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/device/dogborg/sleeper/compactor/supply))
-		var/obj/item/device/dogborg/sleeper/compactor/supply/S = W
+/obj/structure/ore_box/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/dogborg/sleeper/compactor/supply))
+		var/obj/item/dogborg/sleeper/compactor/supply/S = W
 		for(var/ore in S.stored_ore)
 			if(S.stored_ore[ore] > 0)
 				var/ore_amount = S.stored_ore[ore]	// How many ores does the satchel have?
@@ -832,7 +828,7 @@
 	..() //CHOMPEdit End
 
 //CHOMPAdd START
-/obj/item/device/dogborg/sleeper/command //Command borg belly //CHOMP addition
+/obj/item/dogborg/sleeper/command //Command borg belly //CHOMP addition
 	name = "Bluespace Filing Belly"
 	desc = "A mounted bluespace storage unit for carrying paperwork"
 	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
@@ -861,8 +857,7 @@
 	max_item_count = 10
 	recycles = FALSE
 
-<<<<<<< HEAD
-/obj/item/device/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem) //CHOMP Addition Start
+/obj/item/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem) //CHOMP Addition Start
 	if(patient && patient.reagents)
 		if(chem in injection_chems + "inaprovaline")
 			if(hound.cell.charge < 200) //This is so borgs don't kill themselves with it.
@@ -876,7 +871,7 @@
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, "<span class='notice'>Injecting [units] unit\s into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
 
-/obj/item/device/dogborg/sleeper/compactor/honkborg
+/obj/item/dogborg/sleeper/compactor/honkborg
 	name = "Jiggles Von Hungertron"
 	desc = "You've heard of Giggles Von Honkerton for the back, now get ready for Jiggles Von Hungertron for the front."
 	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
@@ -885,10 +880,7 @@
 
 //CHOMP Addition end
 
-/obj/item/device/dogborg/sleeper/K9/ert
-=======
 /obj/item/dogborg/sleeper/K9/ert
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Emergency Storage"
 	desc = "A mounted 'emergency containment cell'."
 	icon_state = "sleeperert"

@@ -32,13 +32,8 @@ var/global/list/stool_cache = list() //haha stool
 	force = round(material.get_blunt_damage()*0.4)
 	update_icon()
 
-<<<<<<< HEAD
-/obj/item/weapon/stool/padded/New(var/newloc, var/new_material)
-	..(newloc,"steel",MAT_CARPET) //CHOMPstation edit: New tile material system
-=======
 /obj/item/stool/padded/New(var/newloc, var/new_material)
-	..(newloc, "steel", "carpet")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	..(newloc,"steel",MAT_CARPET) //CHOMPstation edit: New tile material system
 
 /obj/item/stool/update_icon()
 	// Prep icon.

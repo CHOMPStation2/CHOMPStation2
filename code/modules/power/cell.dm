@@ -43,17 +43,13 @@
 	if(self_recharge)
 		START_PROCESSING(SSobj, src)
 
-<<<<<<< HEAD
 //CHOMPAdd Start
-/obj/item/weapon/cell/Initialize()
+/obj/item/cell/Initialize()
 	. = ..()
 	update_icon()
 //CHOMPAdd End
 
-/obj/item/weapon/cell/Destroy()
-=======
 /obj/item/cell/Destroy()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(self_recharge)
 		STOP_PROCESSING(SSobj, src)
 	return ..()

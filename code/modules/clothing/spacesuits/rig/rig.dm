@@ -542,7 +542,7 @@
 			offline = 0
 			if(istype(wearer) && !wearer.wearing_rig)
 				wearer.wearing_rig = src
-			if(!istype(src,/obj/item/weapon/rig/protean))	//CHOMPEdit - Stupid snowflake protean special check for rig assimilation code
+			if(!istype(src,/obj/item/rig/protean))	//CHOMPEdit - Stupid snowflake protean special check for rig assimilation code
 				slowdown = initial(slowdown)
 
 	if(offline)
@@ -919,11 +919,7 @@
 	wearer.lay_down()
 	to_chat(user, "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>")
 
-<<<<<<< HEAD
-/obj/item/weapon/rig/proc/forced_move(var/direction, var/mob/user, var/ai_moving = TRUE)
-=======
-/obj/item/rig/proc/forced_move(var/direction, var/mob/user)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/rig/proc/forced_move(var/direction, var/mob/user, var/ai_moving = TRUE)
 
 	// Why is all this shit in client/Move()? Who knows?
 	if(world.time < wearer_move_delay)

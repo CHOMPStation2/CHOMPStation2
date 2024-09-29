@@ -89,7 +89,7 @@
 	id = "assembly-drone-b"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
 	materials = list(MAT_STEEL = 30000)
-	build_path = /obj/item/device/electronic_assembly/drone/arms
+	build_path = /obj/item/electronic_assembly/drone/arms
 	sort_string = "UDAAD"
 
 /datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_c
@@ -98,7 +98,7 @@
 	id = "assembly-drone-c"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
 	materials = list(MAT_STEEL = 30000)
-	build_path = /obj/item/device/electronic_assembly/drone/secbot
+	build_path = /obj/item/electronic_assembly/drone/secbot
 	sort_string = "UDAAD"
 
 /datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_d
@@ -107,7 +107,7 @@
 	id = "assembly-drone-d"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
 	materials = list(MAT_STEEL = 30000)
-	build_path = /obj/item/device/electronic_assembly/drone/medbot
+	build_path = /obj/item/electronic_assembly/drone/medbot
 	sort_string = "UDAAD"
 
 /datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_e
@@ -116,7 +116,7 @@
 	id = "assembly-drone-e"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
 	materials = list(MAT_STEEL = 30000)
-	build_path = /obj/item/device/electronic_assembly/drone/genbot
+	build_path = /obj/item/electronic_assembly/drone/genbot
 	sort_string = "UDAAD"
 /datum/design/item/integrated_circuitry/assembly/custom_circuit_assembly_drone_f
 	name = "type-f electronic drone assembly"
@@ -124,7 +124,7 @@
 	id = "assembly-drone-f"
 	req_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 4, TECH_POWER = 4)
 	materials = list(MAT_STEEL = 30000)
-	build_path = /obj/item/device/electronic_assembly/drone/android
+	build_path = /obj/item/electronic_assembly/drone/android
 	sort_string = "UDAAD"
 // CHOMPStation Edit End
 
@@ -143,10 +143,5 @@
 	id = "assembly-implant"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 4, TECH_POWER = 3, TECH_BIO = 5)
 	materials = list(MAT_STEEL = 2000)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/implant/integrated_circuit
-	sort_string = "UDAAF"
-=======
 	build_path = /obj/item/implant/integrated_circuit
 	sort_string = "UDAAF"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

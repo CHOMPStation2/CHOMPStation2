@@ -159,11 +159,7 @@
 
 GLOBAL_LIST_BOILERPLATE(papers_dockingcode, /obj/item/paper/dockingcodes)
 /hook/roundstart/proc/populate_dockingcodes()
-<<<<<<< HEAD
-	for(var/obj/item/weapon/paper/dockingcodes/dcp as anything in GLOB.papers_dockingcode)
-=======
-	for(var/obj/item/paper/dockingcodes/dcp as anything in global.papers_dockingcode)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	for(var/obj/item/paper/dockingcodes/dcp as anything in GLOB.papers_dockingcode)
 		dcp.populate_info()
 	return TRUE
 

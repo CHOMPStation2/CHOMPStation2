@@ -296,11 +296,6 @@
 	id = "pbrped"
 	req_tech = list(TECH_ENGINEERING = 7, TECH_MATERIAL = 7, TECH_BLUESPACE = 5)
 	materials = list(MAT_STEEL = 30000, MAT_GLASS = 10000, MAT_SILVER = 5000, MAT_GOLD = 5000, MAT_DIAMOND = 1000)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/storage/part_replacer/adv/discount_bluespace
-	sort_string = "ABAAB"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
-=======
 	build_path = /obj/item/storage/part_replacer/adv/discount_bluespace
 	sort_string = "ABAAB"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

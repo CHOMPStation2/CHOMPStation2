@@ -26,7 +26,7 @@
 	var/stalled = FALSE  // Required for emergency stop to interrupt on-going recipes.
 	var/drug_substance = 1 // Controls which form medicine takes (bottle, pill, etc). 1 for bottle, 2 for pill, 3 for patch.
 	var/delay_modifier = 4 // This is multiplied by the volume of a step to determine how long each step takes. Bigger volume = slower.
-	var/obj/item/weapon/reagent_containers/glass/catalyst = null // This is where the user adds catalyst. Usually phoron.
+	var/obj/item/reagent_containers/glass/catalyst = null // This is where the user adds catalyst. Usually phoron.
 
 	var/bottle_icon = 4 // Determines icon states of bottles, pills, and patches.
 	var/pill_icon = 2
@@ -38,29 +38,29 @@
 	var/list/cartridges = list() // Associative, label -> cartridge
 
 	var/list/spawn_cartridges = list(
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/hydrogen,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lithium,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/carbon,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/nitrogen,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/oxygen,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/fluorine,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodium,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/aluminum,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/silicon,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/phosphorus,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sulfur,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/chlorine,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/potassium,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/iron,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/copper,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/mercury,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/radium,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/water,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sacid,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tungsten,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/calcium
+			/obj/item/reagent_containers/chem_disp_cartridge/hydrogen,
+			/obj/item/reagent_containers/chem_disp_cartridge/lithium,
+			/obj/item/reagent_containers/chem_disp_cartridge/carbon,
+			/obj/item/reagent_containers/chem_disp_cartridge/nitrogen,
+			/obj/item/reagent_containers/chem_disp_cartridge/oxygen,
+			/obj/item/reagent_containers/chem_disp_cartridge/fluorine,
+			/obj/item/reagent_containers/chem_disp_cartridge/sodium,
+			/obj/item/reagent_containers/chem_disp_cartridge/aluminum,
+			/obj/item/reagent_containers/chem_disp_cartridge/silicon,
+			/obj/item/reagent_containers/chem_disp_cartridge/phosphorus,
+			/obj/item/reagent_containers/chem_disp_cartridge/sulfur,
+			/obj/item/reagent_containers/chem_disp_cartridge/chlorine,
+			/obj/item/reagent_containers/chem_disp_cartridge/potassium,
+			/obj/item/reagent_containers/chem_disp_cartridge/iron,
+			/obj/item/reagent_containers/chem_disp_cartridge/copper,
+			/obj/item/reagent_containers/chem_disp_cartridge/mercury,
+			/obj/item/reagent_containers/chem_disp_cartridge/radium,
+			/obj/item/reagent_containers/chem_disp_cartridge/water,
+			/obj/item/reagent_containers/chem_disp_cartridge/ethanol,
+			/obj/item/reagent_containers/chem_disp_cartridge/sugar,
+			/obj/item/reagent_containers/chem_disp_cartridge/sacid,
+			/obj/item/reagent_containers/chem_disp_cartridge/tungsten,
+			/obj/item/reagent_containers/chem_disp_cartridge/calcium
 		)
 
 	var/_recharge_reagents = TRUE
@@ -75,14 +75,14 @@
 	. = ..()
 	// Create the reagents datum which will act as the machine's reaction vessel.
 	create_reagents(600)
-	catalyst = new /obj/item/weapon/reagent_containers/glass/beaker(src)
+	catalyst = new /obj/item/reagent_containers/glass/beaker(src)
 
 	if(spawn_cartridges)
 		for(var/type in spawn_cartridges)
 			add_cartridge(new type(src))
 		panel_open = FALSE
 
-	var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(get_turf(src))
+	var/obj/item/paper/P = new /obj/item/paper(get_turf(src))
 	P.name = "Synthesizer Instructions"
 	P.desc = "A photocopy of a handwritten note."
 	P.info = {"Hello there! This device is a new NanoTrasen product currently being shipped to select facilities \
@@ -148,7 +148,7 @@
 			ves_filling.color = src.reagents.get_color()
 			underlays += ves_filling
 
-/obj/machinery/chemical_synthesizer/proc/add_cartridge(obj/item/weapon/reagent_containers/chem_disp_cartridge/C, mob/user)
+/obj/machinery/chemical_synthesizer/proc/add_cartridge(obj/item/reagent_containers/chem_disp_cartridge/C, mob/user)
 	if(!panel_open)
 		if(user)
 			to_chat(user, "<span class='warning'>\The panel is locked!</span>")
@@ -188,12 +188,12 @@
 	cartridges -= label
 	SStgui.update_uis(src)
 
-/obj/machinery/chemical_synthesizer/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/chemical_synthesizer/attackby(obj/item/W, mob/user)
 	// Why do so many people code in wrenching when there's already a proc for it?
 	if(!busy && default_unfasten_wrench(user, W, 40))
 		return
 
-	if(istype(W, /obj/item/weapon/reagent_containers/chem_disp_cartridge))
+	if(istype(W, /obj/item/reagent_containers/chem_disp_cartridge))
 		add_cartridge(W, user)
 		return
 
@@ -202,7 +202,7 @@
 		var/label = tgui_input_list(user, "Which cartridge would you like to remove?", "Chemical Synthesizer", cartridges)
 		if(!label)
 			return
-		var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = remove_cartridge(label)
+		var/obj/item/reagent_containers/chem_disp_cartridge/C = remove_cartridge(label)
 		if(C)
 			to_chat(user, "<span class='notice'>You remove \the [C] from \the [src].</span>")
 			C.loc = loc
@@ -210,7 +210,7 @@
 			return
 
 	// We don't need a busy check here as the catalyst slot must be occupied for the machine to function.
-	if(istype(W, /obj/item/weapon/reagent_containers/glass))
+	if(istype(W, /obj/item/reagent_containers/glass))
 		if(catalyst)
 			to_chat(user, "<span class='warning'>There is already \a [catalyst] in \the [src] catalyst slot!</span>")
 			return
@@ -218,7 +218,7 @@
 			to_chat(user, "<span class='warning'>The clamp will not secure the catalyst while the machine is down!</span>")
 			return
 
-		var/obj/item/weapon/reagent_containers/RC = W
+		var/obj/item/reagent_containers/RC = W
 
 		if(!RC.is_open_container())
 			to_chat(user, "<span class='warning'>You don't see how \the [src] could extract reagents from \the [RC].</span>")
@@ -248,7 +248,7 @@
 				stack_trace("[src] at [x],[y],[z] failed to find reagent '[id]'!")
 				dispense_reagents -= id
 				continue
-			var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[R.name]
+			var/obj/item/reagent_containers/chem_disp_cartridge/C = cartridges[R.name]
 			if(C && C.reagents.total_volume < C.reagents.maximum_volume)
 				var/to_restore = min(C.reagents.maximum_volume - C.reagents.total_volume, 5)
 				use_power(to_restore * 500)
@@ -310,7 +310,7 @@
 
 	var/chemicals[0]
 	for(var/label in cartridges)
-		var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
+		var/obj/item/reagent_containers/chem_disp_cartridge/C = cartridges[label]
 		chemicals.Add(list(list("title" = label, "id" = label, "amount" = C.reagents.total_volume))) // list in a list because Byond merges the first list
 	data["chemicals"] = chemicals
 
@@ -635,7 +635,7 @@
 		return
 
 	// If there isn't enough reagent left for this step, try again in a minute.
-	var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
+	var/obj/item/reagent_containers/chem_disp_cartridge/C = cartridges[label]
 	if(quantity > C.reagents.total_volume)
 		visible_message("<span class='notice'>The [src] flashes an 'insufficient reagents' warning.</span>")
 		addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), 1 MINUTE)
@@ -680,7 +680,7 @@
 	switch(drug_substance)
 		if(2) // Pills
 			while(reagents.total_volume)
-				var/obj/item/weapon/reagent_containers/pill/P= new(src.loc)
+				var/obj/item/reagent_containers/pill/P= new(src.loc)
 				P.name = "[r_id]"
 				P.pixel_x = rand(-7, 7) // random position
 				P.pixel_y = rand(-7, 7)
@@ -692,7 +692,7 @@
 
 		if(3) // Patches
 			while(reagents.total_volume)
-				var/obj/item/weapon/reagent_containers/pill/patch/P= new(src.loc)
+				var/obj/item/reagent_containers/pill/patch/P= new(src.loc)
 				P.name = "[r_id]"
 				P.pixel_x = rand(-7, 7) // random position
 				P.pixel_y = rand(-7, 7)
@@ -704,7 +704,7 @@
 
 		else // Bottles. Official value is 1, but this works as a sanity check.
 			while(reagents.total_volume)
-				var/obj/item/weapon/reagent_containers/glass/bottle/B = new(src.loc)
+				var/obj/item/reagent_containers/glass/bottle/B = new(src.loc)
 				B.name = "[r_id] bottle"
 				B.pixel_x = rand(-7, 7) // random position
 				B.pixel_y = rand(-7, 7)

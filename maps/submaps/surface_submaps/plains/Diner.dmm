@@ -260,7 +260,7 @@
 /area/submap/diner)
 "aS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 "aT" = (
@@ -467,7 +467,7 @@
 /area/submap/diner)
 "Km" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/white,
 /area/submap/diner)
 

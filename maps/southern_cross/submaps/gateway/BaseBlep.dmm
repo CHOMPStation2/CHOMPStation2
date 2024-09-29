@@ -196,8 +196,8 @@
 /area/awaymission/baseblep/hivebotsphere)
 "gW" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/pill_bottle/nutriment,
-/obj/item/weapon/gun/projectile/cell_loaded/medical/cmo,
+/obj/item/storage/pill_bottle/nutriment,
+/obj/item/gun/projectile/cell_loaded/medical/cmo,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/baseblep/base)
 "gY" = (
@@ -415,9 +415,9 @@
 /area/awaymission/baseblep/base)
 "pf" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/shield/primitive,
-/obj/item/weapon/material/sword/katana,
-/obj/item/weapon/material/twohanded/sledgehammer,
+/obj/item/shield/primitive,
+/obj/item/material/sword/katana,
+/obj/item/material/twohanded/sledgehammer,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/baseblep/base)
 "ph" = (
@@ -464,7 +464,7 @@
 /area/awaymission/baseblep/hivebotsphere)
 "rZ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/pill_bottle/healing_nanites,
+/obj/item/storage/pill_bottle/healing_nanites,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/baseblep/base)
 "sN" = (
@@ -558,7 +558,7 @@
 /area/awaymission/baseblep/base)
 "xs" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/projectile/deagle/gold,
+/obj/item/gun/projectile/deagle/gold,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/baseblep/base)
 "xM" = (
@@ -588,23 +588,23 @@
 /area/awaymission/baseblep/base)
 "yq" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/projectile/heavysniper/collapsible,
-/obj/item/weapon/gun/projectile/heavysniper/collapsible,
-/obj/item/weapon/gun/projectile/revolvingrifle,
-/obj/item/weapon/gun/projectile/revolvingrifle,
-/obj/item/weapon/gun/projectile/shotgun/semi,
-/obj/item/weapon/gun/projectile/shotgun/semi,
-/obj/item/weapon/gun/energy/monorifle/combat,
-/obj/item/weapon/gun/energy/monorifle/combat,
-/obj/item/weapon/gun/energy/hooklauncher,
-/obj/item/weapon/gun/energy/hooklauncher,
-/obj/item/weapon/gun/energy/laser{
+/obj/item/gun/projectile/heavysniper/collapsible,
+/obj/item/gun/projectile/heavysniper/collapsible,
+/obj/item/gun/projectile/revolvingrifle,
+/obj/item/gun/projectile/revolvingrifle,
+/obj/item/gun/projectile/shotgun/semi,
+/obj/item/gun/projectile/shotgun/semi,
+/obj/item/gun/energy/monorifle/combat,
+/obj/item/gun/energy/monorifle/combat,
+/obj/item/gun/energy/hooklauncher,
+/obj/item/gun/energy/hooklauncher,
+/obj/item/gun/energy/laser{
 	icon = 'icons/obj/gun.dmi';
 	icon_state = "pulse";
 	name = "Expirmental Pulse Rifle";
 	firemodes = list(list("mode_name" = "normal", "fire_delay" = 8, "projectile_type" = /obj/item/projectile/beam/midlaser, "charge_cost" = 120),list("mode_name" = "suppressive", "fire_delay" = 5, "projectile_type" = /obj/item/projectile/beam/weaklaser, "charge_cost" = 30))
 	},
-/obj/item/weapon/gun/energy/laser{
+/obj/item/gun/energy/laser{
 	icon = 'icons/obj/gun.dmi';
 	icon_state = "pulse";
 	name = "Expirmental Pulse Rifle";
@@ -719,7 +719,7 @@
 /area/awaymission/baseblep/base)
 "Dt" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/storage/pill_bottle/dice_nerd,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/baseblep/base)
 "DE" = (
@@ -830,7 +830,7 @@
 /area/awaymission/baseblep/base)
 "Hw" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/projectile/automatic/sol,
+/obj/item/gun/projectile/automatic/sol,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/baseblep/base)
 "HP" = (
@@ -954,7 +954,7 @@
 /area/awaymission/baseblep/base)
 "MQ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/energy/gun/compact/dazzle,
+/obj/item/gun/energy/gun/compact/dazzle,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/baseblep/base)
 "Nm" = (
@@ -966,7 +966,7 @@
 "NK" = (
 /obj/machinery/porta_turret/alien{
 	active_power_usage = 0;
-	installation = /obj/item/weapon/gun/energy/crossbow/largecrossbow;
+	installation = /obj/item/gun/energy/crossbow/largecrossbow;
 	auto_repair = 1
 	},
 /turf/simulated/shuttle/floor/darkred,
@@ -979,10 +979,10 @@
 /area/awaymission/baseblep/base)
 "ON" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/material/twohanded/fireaxe,
-/obj/item/weapon/whetstone,
-/obj/item/weapon/material/twohanded/fireaxe,
-/obj/item/weapon/whetstone,
+/obj/item/material/twohanded/fireaxe,
+/obj/item/whetstone,
+/obj/item/material/twohanded/fireaxe,
+/obj/item/whetstone,
 /obj/item/stack/material/plasteel{
 	amount = 30
 	},
@@ -1175,7 +1175,7 @@
 /area/awaymission/baseblep/base)
 "Uh" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/energy/gun/burst/mg42,
+/obj/item/gun/energy/gun/burst/mg42,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/baseblep/base)
 "Ul" = (

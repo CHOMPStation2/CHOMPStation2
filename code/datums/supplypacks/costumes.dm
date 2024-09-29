@@ -536,18 +536,12 @@
 /datum/supply_pack/costumes/taurbags
 	name = "Saddlebags crate"
 	contains = list(
-<<<<<<< HEAD
-			/obj/item/weapon/storage/backpack/saddlebag_common,
-			/obj/item/weapon/storage/backpack/saddlebag_common/robust,
-			/obj/item/weapon/storage/backpack/saddlebag_common/robust/lightweight,	//CHOMPEdit
-			/obj/item/weapon/storage/backpack/saddlebag_common/vest/heavy,	//CHOMPEdit
-			/obj/item/weapon/storage/backpack/saddlebag_common/lightweight,	//CHOMPEdit
-			/obj/item/weapon/storage/backpack/saddlebag_common/vest
-=======
 			/obj/item/storage/backpack/saddlebag_common,
 			/obj/item/storage/backpack/saddlebag_common/robust,
+			/obj/item/storage/backpack/saddlebag_common/robust/lightweight,	//CHOMPEdit
+			/obj/item/storage/backpack/saddlebag_common/vest/heavy,	//CHOMPEdit
+			/obj/item/storage/backpack/saddlebag_common/lightweight,	//CHOMPEdit
 			/obj/item/storage/backpack/saddlebag_common/vest
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate

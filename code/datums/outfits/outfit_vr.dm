@@ -60,13 +60,8 @@
 	l_hand = /obj/item/clipboard
 
 /decl/hierarchy/outfit/solcom/representative/equip_id(mob/living/carbon/human/H)
-<<<<<<< HEAD
-	var/obj/item/weapon/card/id/C = ..()
-	C.name = "[H.real_name]'s SolGov ID Card" //YW EDIT: SolGov
-=======
 	var/obj/item/card/id/C = ..()
-	C.name = "[H.real_name]'s SolCom ID Card"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	C.name = "[H.real_name]'s SolGov ID Card" //YW EDIT: SolGov
 	C.icon_state = "lifetime"
 	C.access = get_all_station_access()
 	C.access += get_all_centcom_access()
@@ -171,9 +166,9 @@ Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead go
 	pda_type = /obj/item/pda/pathfinder
 	id_type = /obj/item/card/id/exploration/head
 	id_pda_assignment = JOB_PATHFINDER
-	backpack = /obj/item/weapon/storage/backpack/explorer //CHOMPADD
-	satchel_one = /obj/item/weapon/storage/backpack/satchel/explorer //CHOMPADD
-	messenger_bag = /obj/item/weapon/storage/backpack/messenger/explorer //CHOMPADD
+	backpack = /obj/item/storage/backpack/explorer //CHOMPADD
+	satchel_one = /obj/item/storage/backpack/satchel/explorer //CHOMPADD
+	messenger_bag = /obj/item/storage/backpack/messenger/explorer //CHOMPADD
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 
 /decl/hierarchy/outfit/job/assistant/explorer

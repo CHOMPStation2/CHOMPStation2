@@ -142,19 +142,13 @@
 
 	user.drop_item()
 	if(I)
-<<<<<<< HEAD
-		if(istype(I, /obj/item/weapon/holder/micro))
+		if(istype(I, /obj/item/holder/micro))
 			log_and_message_admins("placed [I.name] inside \the [src]", user)
-			var/obj/item/weapon/holder/H = I
+			var/obj/item/holder/H = I
 			H.held_mob.forceMove(src)
 			qdel(I)
 		else
 			I.forceMove(src)
-=======
-		if(istype(I, /obj/item/holder/micro))
-			log_and_message_admins("placed [I.name]  inside \the [src]", user)
-		I.forceMove(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	to_chat(user, "You place \the [I] into the [src].")
 	for(var/mob/M in viewers(src))
@@ -541,13 +535,8 @@
 	//CHOMPEdit: fixes thrown disposal dunking with mobs~ - Reo
 	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
-<<<<<<< HEAD
-=======
-			if(istype(AM, /obj/item/holder/micro))
-				log_and_message_admins("[AM] was thrown into \the [src]")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			AM.forceMove(src)
-			if(istype(AM, /obj/item/weapon/holder/micro) || istype(AM, /mob/living))
+			if(istype(AM, /obj/item/holder/micro) || istype(AM, /mob/living))
 				log_and_message_admins("[AM] was thrown into \the [src]")
 				visible_message("\The [AM] lands in \the [src]!")
 				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse

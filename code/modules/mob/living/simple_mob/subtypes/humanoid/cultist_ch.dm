@@ -519,7 +519,7 @@
 /mob/living/simple_mob/humanoid/cultist/elite/death()
 	new /obj/effect/decal/remains/human (src.loc)
 	new /obj/effect/decal/cleanable/blood/gibs (src.loc)
-	new /obj/item/weapon/material/shard (src.loc)
+	new /obj/item/material/shard (src.loc)
 	..(null,"shatters into bone and blood like pieces like the now shattered mirror.")
 	playsound(src, 'sound/effects/Glassbr2.ogg', 100, 1)
 	ghostize()
@@ -643,7 +643,7 @@
 
 	base_attack_cooldown = 7.5
 
-	loot_list = list(/obj/item/weapon/material/butterfly/saw = 100, /obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn/alt = 100)
+	loot_list = list(/obj/item/material/butterfly/saw = 100, /obj/item/gun/projectile/shotgun/doublebarrel/sawn/alt = 100)
 
 	needs_reload = TRUE
 	reload_max = 2

@@ -17,19 +17,10 @@
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt,
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen,
 		/obj/item/clothing/suit/storage/vest/hoscoat,
-<<<<<<< HEAD
-		/obj/item/weapon/cartridge/hos,
-		/obj/item/clothing/head/helmet/dermal,
-		/obj/item/device/radio/headset/heads/hos,
-		/obj/item/device/radio/headset/heads/hos/alt,
-=======
 		/obj/item/cartridge/hos,
+		/obj/item/clothing/head/helmet/dermal,
 		/obj/item/radio/headset/heads/hos,
-		/obj/item/clothing/glasses/sunglasses/sechud,
-		/obj/item/storage/box/holobadge/hos,
-		/obj/item/clothing/accessory/badge/holo/hos,
-		/obj/item/clothing/accessory/holster/waist,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		/obj/item/radio/headset/heads/hos/alt,
 		/obj/item/clothing/head/beret/sec/corporate/hos,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security/hos,
 		/obj/item/clothing/mask/gas/half)

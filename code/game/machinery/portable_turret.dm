@@ -173,11 +173,7 @@
 	desc = "This variant appears to be much more rugged."
 	req_one_access = list(access_heads)
 	icon_state = "turret_cover_industrial"
-<<<<<<< HEAD
-	installation = /obj/item/weapon/gun/energy/locked/phasegun/unlocked
-=======
-	installation = /obj/item/gun/energy/phasegun
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	installation = /obj/item/gun/energy/locked/phasegun/unlocked
 	health = 200
 	maxhealth = 200
 	turret_type = "industrial"
@@ -356,11 +352,7 @@
 			lethal_shot_sound = 'sound/weapons/Laser.ogg'
 			shot_delay = 1 SECOND
 
-<<<<<<< HEAD
-		if(/obj/item/weapon/gun/energy/locked/phasegun/unlocked)
-=======
-		if(/obj/item/gun/energy/phasegun)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		if(/obj/item/gun/energy/locked/phasegun/unlocked)
 			icon_color = "orange"
 			lethal_icon_color = "orange"
 			lethal_projectile = /obj/item/projectile/energy/phase/heavy

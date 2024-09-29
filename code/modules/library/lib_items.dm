@@ -130,17 +130,10 @@ Book Cart End
 
 /obj/structure/bookcase/manuals/medical/New()
 	..()
-<<<<<<< HEAD
-	new /obj/item/weapon/book/manual/medical_cloning(src)
-	new /obj/item/weapon/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
-	new /obj/item/weapon/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
-	new /obj/item/weapon/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
-=======
 	new /obj/item/book/manual/medical_cloning(src)
-	new /obj/item/book/manual/medical_diagnostics_manual(src)
-	new /obj/item/book/manual/medical_diagnostics_manual(src)
-	new /obj/item/book/manual/medical_diagnostics_manual(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
+	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
+	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
 	update_icon()
 
 
@@ -149,23 +142,13 @@ Book Cart End
 
 /obj/structure/bookcase/manuals/engineering/New()
 	..()
-<<<<<<< HEAD
-	new /obj/item/weapon/book/manual/wiki/engineering_construction(src) // CHOMPEdit
-	new /obj/item/weapon/book/manual/engineering_particle_accelerator(src)
-	new /obj/item/weapon/book/manual/wiki/engineering_hacking(src) // CHOMPEdit
-	new /obj/item/weapon/book/manual/wiki/engineering_guide(src) // CHOMPEdit
-	new /obj/item/weapon/book/manual/atmospipes(src)
-	new /obj/item/weapon/book/manual/engineering_singularity_safety(src)
-	new /obj/item/weapon/book/manual/evaguide(src)
-=======
-	new /obj/item/book/manual/engineering_construction(src)
+	new /obj/item/book/manual/wiki/engineering_construction(src) // CHOMPEdit
 	new /obj/item/book/manual/engineering_particle_accelerator(src)
-	new /obj/item/book/manual/engineering_hacking(src)
-	new /obj/item/book/manual/engineering_guide(src)
+	new /obj/item/book/manual/wiki/engineering_hacking(src) // CHOMPEdit
+	new /obj/item/book/manual/wiki/engineering_guide(src) // CHOMPEdit
 	new /obj/item/book/manual/atmospipes(src)
 	new /obj/item/book/manual/engineering_singularity_safety(src)
 	new /obj/item/book/manual/evaguide(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	update_icon()
 
 /obj/structure/bookcase/manuals/research_and_development
@@ -224,17 +207,13 @@ Book Cart End
 	else
 		to_chat(user, "This book is completely blank!")
 
-<<<<<<< HEAD
 // CHOMPEdit Start
 /// Proc that handles sending the book information to the user, as well as some housekeeping stuff.
-/obj/item/weapon/book/proc/display_content(mob/living/user)
+/obj/item/book/proc/display_content(mob/living/user)
 	user << browse("<TT><I>Penned by [author].</I></TT> <BR>" + "[dat]", "window=book")
 // CHOMPEdit End
 
-/obj/item/weapon/book/attackby(obj/item/weapon/W as obj, mob/user as mob)
-=======
 /obj/item/book/attackby(obj/item/W as obj, mob/user as mob)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(carved)
 		if(!store)
 			if(W.w_class < ITEMSIZE_LARGE)

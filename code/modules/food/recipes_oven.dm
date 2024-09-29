@@ -699,10 +699,5 @@
 		/obj/item/reagent_containers/food/snacks/doughslice
 	)
 	reagent_mix = RECIPE_REAGENT_REPLACE //Get that water outta here
-<<<<<<< HEAD
-	result = /obj/item/weapon/reagent_containers/food/snacks/veggiemomo
-	result_quantity = 2
-=======
 	result = /obj/item/reagent_containers/food/snacks/veggiemomo
 	result_quantity = 2
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

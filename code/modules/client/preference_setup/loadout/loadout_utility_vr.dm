@@ -34,28 +34,17 @@
 
 /datum/gear/utility/dufflebag/med
 	display_name = "medical dufflebag"
-<<<<<<< HEAD
-	path = /obj/item/weapon/storage/backpack/dufflebag/med
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,JOB_PSYCHIATRIST,JOB_FIELD_MEDIC) //CHOMP explo keep
-=======
 	path = /obj/item/storage/backpack/dufflebag/med
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,JOB_PSYCHIATRIST)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,JOB_PSYCHIATRIST,JOB_FIELD_MEDIC) //CHOMP explo keep
 
 /datum/gear/utility/dufflebag/med/emt
 	display_name = "EMT dufflebag"
 	path = /obj/item/storage/backpack/dufflebag/emt
 
 /datum/gear/utility/dufflebag/sec
-<<<<<<< HEAD
     display_name = "security Dufflebag"
-    path = /obj/item/weapon/storage/backpack/dufflebag/sec
+    path = /obj/item/storage/backpack/dufflebag/sec
     allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
-=======
-	display_name = "security Dufflebag"
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER)
-	path = /obj/item/storage/backpack/dufflebag/sec
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /datum/gear/utility/dufflebag/eng
 	display_name = "engineering dufflebag"
@@ -68,14 +57,9 @@
 	path = /obj/item/storage/backpack/dufflebag/sci
 
 /datum/gear/utility/dufflebag/explorer
-<<<<<<< HEAD
 	display_name = "explorer dufflebag" //CHOMP explo keep
-	path = /obj/item/weapon/storage/backpack/dufflebag/explorer
-	allowed_roles = list(JOB_PATHFINDER,JOB_EXPLORER) //CHOMP explo keep
-=======
-	display_name = "away team dufflebag"
 	path = /obj/item/storage/backpack/dufflebag/explorer
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	allowed_roles = list(JOB_PATHFINDER,JOB_EXPLORER) //CHOMP explo keep
 
 /datum/gear/utility/dufflebag/talon
 	display_name = "Talon dufflebag"

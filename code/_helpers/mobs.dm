@@ -351,7 +351,7 @@ Proc for attack log creation, because really why not
 	for(var/mob/living/L in viewers)
 		living += L
 		if(count_held)
-			for(var/obj/item/weapon/holder/H in L.contents)
+			for(var/obj/item/holder/H in L.contents)
 				if(istype(H.held_mob, /mob/living))
 					living += H.held_mob //CHOMPEdit End
 	return living

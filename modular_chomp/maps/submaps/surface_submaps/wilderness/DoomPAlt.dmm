@@ -56,7 +56,7 @@
 /turf/simulated/floor/plating,
 /area/submap/DoomP)
 "ch" = (
-/obj/item/weapon/mine/dnascramble,
+/obj/item/mine/dnascramble,
 /turf/simulated/floor/wood{
 	outdoors = 1
 	},
@@ -78,13 +78,13 @@
 "et" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
-/obj/item/weapon/tool/screwdriver{
+/obj/item/tool/screwdriver{
 	pixel_y = 15
 	},
-/obj/item/weapon/melee/baton/loaded,
-/obj/item/device/multitool,
+/obj/item/melee/baton/loaded,
+/obj/item/multitool,
 /obj/effect/floor_decal/borderfloorwhite,
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/item/clothing/gloves/sterile/latex,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
@@ -128,10 +128,10 @@
 /area/submap/DoomP)
 "gg" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/projectile/contender,
+/obj/item/gun/projectile/contender,
 /obj/item/ammo_magazine/s357,
 /obj/item/ammo_magazine/s357,
-/obj/item/weapon/gun/projectile/contender,
+/obj/item/gun/projectile/contender,
 /obj/item/ammo_magazine/s357,
 /obj/item/ammo_magazine/s357,
 /obj/random/projectile/random,
@@ -144,12 +144,12 @@
 /area/submap/DoomP)
 "hC" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/mecha/imperion/main,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/circuitboard/mecha/imperion/main,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "iw" = (
@@ -213,7 +213,7 @@
 /area/submap/DoomP)
 "mQ" = (
 /obj/structure/table/rack,
-/obj/item/weapon/rig/combat/empty,
+/obj/item/rig/combat/empty,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "nf" = (
@@ -274,7 +274,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "pO" = (
-/obj/item/weapon/mine/emp,
+/obj/item/mine/emp,
 /turf/simulated/floor/outdoors/grass/sif/forest,
 /area/submap/DoomP)
 "qo" = (
@@ -323,7 +323,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "tB" = (
-/obj/item/weapon/mine/stun,
+/obj/item/mine/stun,
 /turf/simulated/floor/wood{
 	outdoors = 1
 	},
@@ -361,7 +361,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/DoomP)
 "tX" = (
-/obj/item/weapon/mine/phoron,
+/obj/item/mine/phoron,
 /turf/simulated/floor/wood{
 	outdoors = 1
 	},
@@ -447,12 +447,12 @@
 "zK" = (
 /obj/structure/table/standard,
 /obj/item/clothing/head/welding,
-/obj/item/weapon/weldingtool,
+/obj/item/weldingtool,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
 	},
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
 "zO" = (
@@ -462,7 +462,7 @@
 /area/submap/DoomP)
 "zT" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/pancakes/berry,
+/obj/item/reagent_containers/food/snacks/pancakes/berry,
 /obj/effect/floor_decal/corner/lime/border,
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
@@ -517,8 +517,8 @@
 /area/template_noop)
 "Br" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper,
-/obj/item/weapon/pen,
+/obj/item/paper,
+/obj/item/pen,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -546,7 +546,7 @@
 /turf/simulated/floor/plating,
 /area/submap/DoomP)
 "BS" = (
-/obj/item/weapon/mine/frag,
+/obj/item/mine/frag,
 /turf/simulated/floor/outdoors/grass/sif/forest,
 /area/submap/DoomP)
 "CT" = (
@@ -603,11 +603,11 @@
 /area/submap/DoomP)
 "Gm" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/mecha/imperion/targeting,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/circuitboard/mecha/imperion/targeting,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "Gz" = (
@@ -625,7 +625,7 @@
 /area/submap/DoomP)
 "GG" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
@@ -658,7 +658,7 @@
 /area/submap/DoomP)
 "HJ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
@@ -697,10 +697,10 @@
 "JY" = (
 /obj/structure/table/rack,
 /obj/item/stack/material/morphium,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/item/capture_crystal,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
@@ -725,11 +725,11 @@
 "LR" = (
 /obj/structure/table/rack,
 /obj/item/stack/material/morphium,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/item/capture_crystal/cheap,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
@@ -743,7 +743,7 @@
 /area/submap/DoomP)
 "Ny" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/gun/energy/imperial,
+/obj/item/gun/energy/imperial,
 /obj/item/clothing/suit/armor/swat/officer,
 /obj/item/clothing/glasses/graviton/medgravpatch,
 /obj/item/clothing/head/psy_crown/wrath,
@@ -784,14 +784,14 @@
 /area/submap/DoomP)
 "OH" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/corner/lime/full,
 /obj/item/toy/plushie/basset,
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "OR" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/item/toy/plushie/spider,
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 8
@@ -805,8 +805,8 @@
 /area/submap/DoomP)
 "Pr" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/binoculars,
+/obj/item/storage/mre/random,
+/obj/item/binoculars,
 /turf/simulated/floor/plating,
 /area/submap/DoomP)
 "Pu" = (
@@ -910,13 +910,13 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/DoomP)
 "TX" = (
-/obj/item/weapon/mine/incendiary,
+/obj/item/mine/incendiary,
 /turf/simulated/floor/wood{
 	outdoors = 1
 	},
 /area/submap/DoomP)
 "TZ" = (
-/obj/item/weapon/mine/emp,
+/obj/item/mine/emp,
 /turf/simulated/floor/wood{
 	outdoors = 1
 	},
@@ -996,10 +996,10 @@
 /area/submap/DoomP)
 "Ya" = (
 /obj/structure/table/rack,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /obj/random/energy,
 /obj/random/energy,
 /obj/random/energy/highend,
@@ -1041,7 +1041,7 @@
 /area/submap/DoomP)
 "ZG" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
 	},

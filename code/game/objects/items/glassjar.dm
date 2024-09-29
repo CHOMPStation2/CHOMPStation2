@@ -91,7 +91,7 @@
 		S.loc = src
 		update_icon()
 	//CHOMPDDITION: your god can not help you
-	if(istype(W,/obj/item/weapon/holder/micro))
+	if(istype(W,/obj/item/holder/micro))
 		var/full = 0
 		for(var/mob/M in src)
 			if(istype(M,/mob/living/voice)) //Don't count voices as people!
@@ -100,7 +100,7 @@
 		if(full >= 2)
 			to_chat(user, "<span class='warning'>You can't fit anyone else into \the [src]!</span>")
 		else
-			var/obj/item/weapon/holder/micro/holder = W
+			var/obj/item/holder/micro/holder = W
 			if(holder.held_mob && (holder.held_mob in holder))
 				var/mob/living/M = holder.held_mob
 				holder.dump_mob()

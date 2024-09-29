@@ -16,13 +16,8 @@
 /*
  * Twohanded
  */
-<<<<<<< HEAD
-/obj/item/weapon/material/twohanded
-	w_class = ITEMSIZE_HUGE //CHOMP Edit
-=======
 /obj/item/material/twohanded
-	w_class = ITEMSIZE_LARGE
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	w_class = ITEMSIZE_HUGE //CHOMP Edit
 	var/wielded = 0
 	var/force_wielded = 0
 	var/force_unwielded
@@ -194,10 +189,5 @@
 	icon_state = "riding_crop0"
 	attack_verb = list("cropped","spanked","swatted","smacked","peppered")
 
-<<<<<<< HEAD
-/obj/item/weapon/material/twohanded/spear/flint
-	default_material = MAT_FLINT 
-=======
 /obj/item/material/twohanded/spear/flint
 	default_material = MAT_FLINT
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

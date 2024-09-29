@@ -83,21 +83,12 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/abductor/interior)
 "fQ" = (
-<<<<<<< HEAD
-/obj/item/weapon/storage/box/flashbangs,
-/obj/item/weapon/storage/box/teargas,
-/obj/item/weapon/grenade/flashbang/clusterbang,
-/obj/item/weapon/grenade/flashbang/clusterbang,
-/obj/item/weapon/storage/box/metalfoam,
-/obj/item/clothing/mask/gas,
-=======
 /obj/item/storage/box/flashbangs,
 /obj/item/storage/box/teargas,
 /obj/item/grenade/flashbang/clusterbang,
 /obj/item/grenade/flashbang/clusterbang,
 /obj/item/storage/box/metalfoam,
-/obj/item/clothing/mask/gas/wwii,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/structure/closet/alien,
 /turf/simulated/shuttle/floor/alienplating,

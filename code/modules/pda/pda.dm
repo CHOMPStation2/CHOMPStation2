@@ -181,17 +181,13 @@ var/global/list/obj/item/pda/PDAs = list()
 	//add_overlay("pda-pen") //ChompEDIT no icon ops on New
 	start_program(find_program(/datum/data/pda/app/main_menu))
 
-<<<<<<< HEAD
 //ChompEDIT START - move icon ops to initialize
-/obj/item/device/pda/Initialize()
+/obj/item/pda/Initialize()
 	. = ..()
 	add_overlay("pda-pen")
 //ChompEDIT END
 
-/obj/item/device/pda/proc/can_use(mob/user)
-=======
 /obj/item/pda/proc/can_use(mob/user)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	return (tgui_status(user, GLOB.tgui_inventory_state) == STATUS_INTERACTIVE)
 
 /obj/item/pda/GetAccess()

@@ -35,7 +35,7 @@
 	water_resist = 1.0
 	taser_kill = 0
 	var/evolve = "/mob/living/simple_mob/vore/solarray/galaxyray"
-	var/feed = "/obj/item/weapon/ore/phoron"
+	var/feed = "/obj/item/ore/phoron"
 	var/evolvekey = "/obj/item/stack/material/tritium"
 	var/copy = "/mob/living/simple_mob/vore/solarray"
 
@@ -83,7 +83,7 @@
 	var/heating_power = 50000
 
 	evolve = "/mob/living/simple_mob/vore/solarray/galaxyray"
-	feed = "/obj/item/weapon/ore/phoron"
+	feed = "/obj/item/ore/phoron"
 	evolvekey = "/obj/item/stack/material/tritium"
 	copy = "/mob/living/simple_mob/vore/spacecritter/solarray"
 
@@ -141,7 +141,7 @@
 
 	evolve = "/mob/living/simple_mob/vore/spacecritter/livingice/iceberg"
 	feed = "/obj/item/stack/material/snow"
-	evolvekey = "/obj/item/weapon/reagent_containers/food/snacks/coldchili"
+	evolvekey = "/obj/item/reagent_containers/food/snacks/coldchili"
 	copy = "/mob/living/simple_mob/vore/spacecritter/livingice"
 
 	var/chilltemp = -20
@@ -183,7 +183,7 @@
 	attack_armor_pen = 100			// How much armor pen this attack has.
 	var/rads = 50
 	evolve = "/mob/living/simple_mob/vore/spacecritter/radcrab/supermattercrab"
-	feed = "/obj/item/weapon/ore/uranium"
+	feed = "/obj/item/ore/uranium"
 	evolvekey = "/obj/item/stack/material/uranium"
 	copy = "/mob/living/simple_mob/vore/spacecritter/radcrab"
 
@@ -216,7 +216,7 @@
 	attacktext = list("bitten") // "You are [attacktext] by the mob!"
 	var/artifact_master = /datum/component/artifact_master/dreameel
 	evolve = "/mob/living/simple_mob/vore/spacecritter/dreameel/nightmare"
-	feed = "/obj/item/weapon/reagent_containers/food/snacks/carpmeat"
+	feed = "/obj/item/reagent_containers/food/snacks/carpmeat"
 	evolvekey = "/obj/item/stack/material/phoron"
 	copy = "/mob/living/simple_mob/vore/spacecritter/dreameel"
 
@@ -327,7 +327,7 @@
 
 
 /mob/living/simple_mob/vore/spacecritter/solarray
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/raymeat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/raymeat
 	meat_amount = 8
 
 	tame_items = list(
@@ -338,7 +338,7 @@
 		/obj/item/stack/material/wisp = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/weldingtool
+	harvest_tool = /obj/item/weldingtool
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0
@@ -360,7 +360,7 @@
 		/obj/item/stack/material/frostscale = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/tool/wirecutters
+	harvest_tool = /obj/item/tool/wirecutters
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0
@@ -371,18 +371,18 @@
 		)
 
 /mob/living/simple_mob/vore/spacecritter/radcrab
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/crabmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/crabmeat
 	meat_amount = 8
 
 	tame_items = list(
-	/obj/item/weapon/ore/uranium = 50
+	/obj/item/ore/uranium = 50
 	)
 
 	butchery_loot = list(\
 		/obj/item/stack/material/crystalscale = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/tool/crowbar
+	harvest_tool = /obj/item/tool/crowbar
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0
@@ -393,18 +393,18 @@
 		)
 
 /mob/living/simple_mob/vore/spacecritter/dreameel
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/eelmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/eelmeat
 	meat_amount = 2
 
 	tame_items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/meat/gravityshell = 40
+		/obj/item/reagent_containers/food/snacks/meat/gravityshell = 40
 	)
 
 	butchery_loot = list(\
 		/obj/item/stack/material/dreamscale = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/tool/wirecutters
+	harvest_tool = /obj/item/tool/wirecutters
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0
@@ -415,18 +415,18 @@
 		)
 
 /mob/living/simple_mob/vore/spacecritter/gravityshell
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/gravityshell
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/gravityshell
 	meat_amount = 8
 
 	tame_items = list(
-	/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 50
+	/obj/item/reagent_containers/food/snacks/crabmeat = 50
 	)
 
 	butchery_loot = list(\
 		/obj/item/stack/material/shellchitin = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/tool/crowbar
+	harvest_tool = /obj/item/tool/crowbar
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0

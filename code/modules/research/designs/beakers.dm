@@ -19,11 +19,6 @@
 	id = "bluespacebeaker"
 	req_tech = list(TECH_BLUESPACE = 2, TECH_MATERIAL = 6)
 	materials = list(MAT_STEEL = 3000, MAT_PHORON = 3000, MAT_DIAMOND = 500)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/reagent_containers/glass/beaker/bluespace
-	sort_string = "IAAAB"
-	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
-=======
 	build_path = /obj/item/reagent_containers/glass/beaker/bluespace
 	sort_string = "IAAAB"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd

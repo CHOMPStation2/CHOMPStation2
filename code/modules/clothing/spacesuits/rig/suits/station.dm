@@ -144,13 +144,8 @@
 		/obj/item/rig_module/vision/meson
 		)
 
-<<<<<<< HEAD
 //Chief Engineer's rig. This is sort of a halfway point between the old hardsuits (voidsuits) and the rig class. //CHOMPEDIT: if its a mechanized suit its a hardsuit
-/obj/item/weapon/rig/ce
-=======
-//Chief Engineer's rig. This is sort of a halfway point between the old hardsuits (voidsuits) and the rig class.
 /obj/item/rig/ce
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	name = "advanced hardsuit control module" //CHOMPEDIT: Hardsuit
 	suit_type = "advanced hardsuit" //CHOMPEDIT: Hardsuit
@@ -236,7 +231,6 @@
 	req_access = list()
 	req_one_access = list()
 
-<<<<<<< HEAD
 //ywadd start
 /obj/item/clothing/gloves/gauntlets/rig/hazmat
 	icon_override = 'icons/vore/rig_yw/rigs_gauntlets_onmob.dmi'
@@ -246,10 +240,7 @@
 	icon_override = 'icons/vore/rig_yw/rigs_shoes_onmob.dmi'
 //ywadd end
 
-/obj/item/weapon/rig/hazmat/equipped
-=======
 /obj/item/rig/hazmat/equipped
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	req_access = list(access_rd)
 

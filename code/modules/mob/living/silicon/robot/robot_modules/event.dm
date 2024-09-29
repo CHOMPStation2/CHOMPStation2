@@ -76,31 +76,30 @@
 	var/obj/item/stack/material/cyborg/wood/W = new (src)
 	W.synths = list(wood)
 	src.modules += W
-	
-	// For uwu
-<<<<<<< HEAD
-	src.modules += new /obj/item/device/dogborg/sleeper/compactor/generic(src)
-	src.emag += new /obj/item/weapon/dogborg/pounce(src)
-	
-	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
-	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
-	src.modules += new /obj/item/device/multitool(src)
-	src.modules += new /obj/item/weapon/soap/nanotrasen(src)
-	src.modules += new /obj/item/weapon/storage/bag/trash(src)
-	src.modules += new /obj/item/weapon/mop(src)
-	src.modules += new /obj/item/device/lightreplacer(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
-	src.modules += new /obj/item/weapon/gripper(src)
-	src.modules += new /obj/item/weapon/pickaxe(src)
-	src.modules += new /obj/item/device/floor_painter(src)
-	src.modules += new /obj/item/weapon/pen/robopen(src)
-	src.modules += new /obj/item/weapon/form_printer(src)
-	src.modules += new /obj/item/weapon/gripper/paperwork(src)
-	src.modules += new /obj/item/weapon/hand_labeler(src)
-	src.modules += new /obj/item/weapon/stamp(src)
-	src.modules += new /obj/item/weapon/stamp/denied(src)
 
-	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
+	// For uwu
+	src.modules += new /obj/item/dogborg/sleeper/compactor/generic(src)
+	src.emag += new /obj/item/dogborg/pounce(src)
+
+	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
+	src.modules += new /obj/item/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
+	src.modules += new /obj/item/multitool(src)
+	src.modules += new /obj/item/soap/nanotrasen(src)
+	src.modules += new /obj/item/storage/bag/trash(src)
+	src.modules += new /obj/item/mop(src)
+	src.modules += new /obj/item/lightreplacer(src)
+	src.modules += new /obj/item/gripper/no_use/loader(src)
+	src.modules += new /obj/item/gripper(src)
+	src.modules += new /obj/item/pickaxe(src)
+	src.modules += new /obj/item/floor_painter(src)
+	src.modules += new /obj/item/pen/robopen(src)
+	src.modules += new /obj/item/form_printer(src)
+	src.modules += new /obj/item/gripper/paperwork(src)
+	src.modules += new /obj/item/hand_labeler(src)
+	src.modules += new /obj/item/stamp(src)
+	src.modules += new /obj/item/stamp/denied(src)
+
+	var/obj/item/flame/lighter/zippo/L = new /obj/item/flame/lighter/zippo(src)
 	L.lit = 1
 	src.modules += L
 
@@ -115,7 +114,7 @@
 	synths += plastic
 	synths += wire
 
-	var/obj/item/weapon/matter_decompiler/MD = new /obj/item/weapon/matter_decompiler(src)
+	var/obj/item/matter_decompiler/MD = new /obj/item/matter_decompiler(src)
 	MD.metal = metal
 	MD.glass = glass
 	src.modules += MD
@@ -159,7 +158,3 @@
 	var/obj/item/stack/material/cyborg/plastic/PL = new (src)
 	PL.synths = list(plastic)
 	src.modules += PL //CHOMEdit End
-=======
-	src.modules += new /obj/item/dogborg/sleeper/compactor/generic(src)
-	src.emag += new /obj/item/dogborg/pounce(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

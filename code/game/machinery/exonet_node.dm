@@ -16,14 +16,10 @@
 
 	var/list/logs = list() // Gets written to by exonet's send_message() function.
 
-<<<<<<< HEAD
-	circuit = /obj/item/weapon/circuitboard/telecomms/exonet_node
+	circuit = /obj/item/circuitboard/telecomms/exonet_node
 
 	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
 	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
-=======
-	circuit = /obj/item/circuitboard/telecomms/exonet_node
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 // Proc: New()
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.

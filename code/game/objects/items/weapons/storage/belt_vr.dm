@@ -36,24 +36,6 @@
 		/obj/item/storage/pill_bottle,
 		/obj/item/stack/medical,
 		/obj/item/stack/marker_beacon,
-<<<<<<< HEAD
-		/obj/item/weapon/extinguisher/mini,
-		/obj/item/weapon/storage/quickdraw/syringe_case,
-		/obj/item/weapon/photo,
-		/obj/item/device/camera_film,
-		/obj/item/device/camera,
-		/obj/item/device/taperecorder,
-		/obj/item/device/tape,
-		/obj/item/device/geiger,
-		/obj/item/device/gps,
-		/obj/item/device/ano_scanner,
-		/obj/item/device/cataloguer,
-		/obj/item/device/radio,
-		/obj/item/device/mapping_unit,
-		/obj/item/device/binoculars, //CHOMPADD
-		/obj/item/weapon/kinetic_crusher,
-		/obj/item/device/analyzer
-=======
 		/obj/item/extinguisher/mini,
 		/obj/item/storage/quickdraw/syringe_case,
 		/obj/item/photo,
@@ -67,9 +49,9 @@
 		/obj/item/cataloguer,
 		/obj/item/radio,
 		/obj/item/mapping_unit,
+		/obj/item/binoculars, //CHOMPADD
 		/obj/item/kinetic_crusher,
 		/obj/item/analyzer
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		)
 
 /obj/item/storage/belt/explorer/pathfinder

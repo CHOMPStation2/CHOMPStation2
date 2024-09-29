@@ -121,13 +121,13 @@
 		if(!other) //CHOMPEdit - Fixes seeing non-verbal languages while being held
 			return FALSE
 		//CHOMPEdit Start - Fixes seeing non-verbal languages while being held
-		if(istype(other.loc, /obj/item/weapon/holder))
-			if(istype(src.loc, /obj/item/weapon/holder))
+		if(istype(other.loc, /obj/item/holder))
+			if(istype(src.loc, /obj/item/holder))
 				if(!(other.loc in view(src.loc.loc)))
 					return FALSE
 			else if(!(other.loc in view(src)))
 				return FALSE
-		else if(istype(src.loc, /obj/item/weapon/holder))
+		else if(istype(src.loc, /obj/item/holder))
 			if((!other) in view(src.loc.loc))
 				return FALSE
 		else if((!other) in view(src))

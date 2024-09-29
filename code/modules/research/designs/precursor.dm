@@ -93,10 +93,5 @@
 	sort_string = "ZBBAA"
 
 /datum/design/item/precursor/janusmodule/Fabricate(var/newloc, var/fabricator)
-<<<<<<< HEAD
-	var/type_to_spawn = pick(subtypesof(/obj/item/weapon/circuitboard/mecha/imperion))
-	return new type_to_spawn(newloc)
-=======
 	var/type_to_spawn = pick(subtypesof(/obj/item/circuitboard/mecha/imperion))
 	return new type_to_spawn(newloc)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

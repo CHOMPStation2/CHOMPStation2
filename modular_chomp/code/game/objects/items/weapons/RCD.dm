@@ -1,4 +1,4 @@
-/obj/item/weapon/rcd
+/obj/item/rcd
 	allow_concurrent_building = 1
 	var/airlock_glass = FALSE // So the floor's rcd_act knows how much ammo to use
 	var/advanced_airlock_setting = 1 //Set to 1 if you want more paintjobs available
@@ -21,7 +21,7 @@
 	var/static/image/radial_image_conveyor = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "conveyor")
 	var/static/image/radial_image_turret = image(icon = 'modular_chomp/icons/mob/radial.dmi', icon_state = "turret")
 
-/obj/item/weapon/rcd/advanced
+/obj/item/rcd/advanced
 	can_remove_rwalls = 1
 /*
 Material values
@@ -35,17 +35,17 @@ borosilicate = 9
 rborosilicate = 12
 */
 
-/obj/item/weapon/rcd/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/rcd/emag_act(var/remaining_charges, var/mob/user)
 	..()
 	if(!emagged)
 		emagged = 1
 		to_chat(user, span("warning","You short out the safeties on \the [src]'s construction limiter"))
 		return TRUE
 
-/obj/item/weapon/rcd/attackby(obj/item/W, mob/user)
+/obj/item/rcd/attackby(obj/item/W, mob/user)
 	var/loaded = 0
-	if(istype(W, /obj/item/weapon/rcd_ammo))
-		var/obj/item/weapon/rcd_ammo/cartridge = W
+	if(istype(W, /obj/item/rcd_ammo))
+		var/obj/item/rcd_ammo/cartridge = W
 		var/can_store = min(max_stored_matter - stored_matter, cartridge.remaining)
 		if(can_store <= 0)
 			to_chat(user, span("warning", "There's either no space or \the [cartridge] is empty!"))
@@ -81,7 +81,7 @@ rborosilicate = 12
 		to_chat(user, span("notice", "The RCD now holds [stored_matter]/[max_stored_matter] matter-units."))
 	return ..()
 
-/obj/item/weapon/rcd/proc/loadwithsheets(obj/item/stack/S, value, mob/user)
+/obj/item/rcd/proc/loadwithsheets(obj/item/stack/S, value, mob/user)
 	var/maxsheets = round((max_stored_matter-stored_matter)/value)    //calculate the max number of sheets that will fit in RCD
 	if(maxsheets > 0)
 		var/amount_to_use = min(S.amount, maxsheets)
@@ -92,7 +92,7 @@ rborosilicate = 12
 	to_chat(user, "<span class='warning'>You can't insert any more [S.name] sheets into [src]!</span>")
 	return 0
 
-/obj/item/weapon/rcd/attack_self(mob/living/user)
+/obj/item/rcd/attack_self(mob/living/user)
 	..()
 	var/list/choices = list(
 		"Floors & Walls" = radial_image_floorwall,
@@ -196,11 +196,11 @@ rborosilicate = 12
 				if("Guest Pass Terminal")
 					wall_frame_type = /obj/machinery/computer/guestpass
 				if("Intercom")
-					wall_frame_type = /obj/item/device/radio/intercom
+					wall_frame_type = /obj/item/radio/intercom
 				if("Keycard Authenticator")
 					wall_frame_type = /obj/machinery/keycard_auth
 				if("Geiger Counter")
-					wall_frame_type = /obj/item/device/geiger/wall
+					wall_frame_type = /obj/item/geiger/wall
 				if("Electrochromic Window Button")
 					wall_frame_type = /obj/machinery/button/windowtint
 				if("ID Restoration Terminal")
@@ -244,7 +244,7 @@ rborosilicate = 12
 	playsound(src, 'sound/effects/pop.ogg', 50, FALSE)
 	to_chat(user, "<span class='notice'>You change RCD's mode to '[choice]'.</span>")
 
-/obj/item/weapon/rcd/proc/get_airlock_image(airlock_type)
+/obj/item/rcd/proc/get_airlock_image(airlock_type)
 	var/obj/machinery/door/airlock/proto = airlock_type
 	var/ic = initial(proto.icon)
 	var/mutable_appearance/MA = mutable_appearance(ic, "door_closed")
@@ -253,7 +253,7 @@ rborosilicate = 12
 	//Not scaling these down to button size because they look horrible then, instead just bumping up radius.
 	return MA
 
-/obj/item/weapon/rcd/proc/change_airlock_setting(mob/user)
+/obj/item/rcd/proc/change_airlock_setting(mob/user)
 	if(!user)
 		return
 
@@ -369,7 +369,7 @@ rborosilicate = 12
 			airlock_type = /obj/machinery/door/airlock
 			airlock_glass = FALSE
 
-/obj/item/weapon/rcd/proc/change_airlock_access(mob/user)
+/obj/item/rcd/proc/change_airlock_access(mob/user)
 
 	if (!ishuman(user) && !istype(user,/mob/living/silicon/robot))
 		return
@@ -409,7 +409,7 @@ rborosilicate = 12
 	popup.set_content(t1)
 	popup.open()
 
-/obj/item/weapon/rcd/Topic(href, href_list)
+/obj/item/rcd/Topic(href, href_list)
 	..()
 	if (usr.stat || usr.restrained())
 		return
@@ -421,7 +421,7 @@ rborosilicate = 12
 		toggle_access(href_list["access"])
 		change_airlock_access(usr)
 
-/obj/item/weapon/rcd/proc/toggle_access(acc)
+/obj/item/rcd/proc/toggle_access(acc)
 	if (acc == "all")
 		conf_access = null
 	else if(acc == "one")
@@ -445,7 +445,7 @@ rborosilicate = 12
 //////////////////////////////////////
 ///////////////TURF///////////////////
 //////////////////////////////////////
-/turf/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(density || !can_build_into_floor)
 		return FALSE
 	if(passed_mode == RCD_FLOORWALL)
@@ -460,7 +460,7 @@ rborosilicate = 12
 			)
 	return FALSE
 
-/turf/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_FLOORWALL)
 		to_chat(user, span("notice", "You build a floor."))
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)
@@ -470,7 +470,7 @@ rborosilicate = 12
 //////////////////////////////////////
 ///////////////FLOOR//////////////////
 //////////////////////////////////////
-/turf/simulated/floor/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/simulated/floor/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
 			var/obj/structure/girder/G = locate() in src
@@ -541,7 +541,7 @@ rborosilicate = 12
 	return FALSE
 
 
-/turf/simulated/floor/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/simulated/floor/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
 			to_chat(user, span("notice", "You build a girder."))
@@ -552,7 +552,7 @@ rborosilicate = 12
 				return FALSE // No more airlock stacking.
 			to_chat(user, span("notice", "You build an airlock."))
 			var/obj/machinery/door/airlock/A = new the_rcd.airlock_type(src)
-			A.electronics = new/obj/item/weapon/airlock_electronics(A)
+			A.electronics = new/obj/item/airlock_electronics(A)
 			A.electronics.req_access = null
 			A.electronics.req_one_access = null
 			A.electronics.one_access = null
@@ -607,7 +607,7 @@ rborosilicate = 12
 			if(selected_windoor_type == "secure")
 				A.health = 300.0
 				A.maxhealth =300
-			A.electronics = new/obj/item/weapon/airlock_electronics(A)
+			A.electronics = new/obj/item/airlock_electronics(A)
 			A.electronics.req_access = null
 			A.electronics.req_one_access = null
 			A.electronics.one_access = null
@@ -704,7 +704,7 @@ rborosilicate = 12
 //////////////////////////////////////
 //////////////WALL////////////////////
 //////////////////////////////////////
-/turf/simulated/wall/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/simulated/wall/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			if(material.integrity > 1000) // Don't decon things like elevatorium.
@@ -727,7 +727,7 @@ rborosilicate = 12
 				)
 	return FALSE
 
-/turf/simulated/wall/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/simulated/wall/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
@@ -785,7 +785,7 @@ rborosilicate = 12
 //////////////////////////////////////
 //////////////GIRDER//////////////////
 //////////////////////////////////////
-/obj/structure/girder/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/girder/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	var/turf/simulated/T = get_turf(src)
 	if(!istype(T) || T.density)
 		return FALSE
@@ -810,7 +810,7 @@ rborosilicate = 12
 			)
 	return FALSE
 
-/obj/structure/girder/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/girder/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	var/turf/simulated/T = get_turf(src)
 	if(!istype(T) || T.density) // Should stop future bugs of people bringing girders to centcom and RCDing them, or somehow putting a girder on a durasteel wall and deconning it.
 		return FALSE
@@ -837,7 +837,7 @@ rborosilicate = 12
 //////////////////////////////////////
 /////////////WINDOW///////////////////
 //////////////////////////////////////
-/obj/structure/window/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/window/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			return list(
@@ -849,7 +849,7 @@ rborosilicate = 12
 			the_rcd.use_rcd(get_turf(src), user)
 			return 1
 
-/obj/structure/window/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/window/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
@@ -860,7 +860,7 @@ rborosilicate = 12
 //////////////////////////////////////
 //////////////GRILLE//////////////////
 //////////////////////////////////////
-/obj/structure/grille/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/grille/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_WINDOWGRILLE)
 			var/construct_cost = 4
@@ -895,7 +895,7 @@ rborosilicate = 12
 			)
 	return FALSE
 
-/obj/structure/grille/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/grille/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
@@ -950,7 +950,7 @@ rborosilicate = 12
 //////////////////////////////////////
 ////////////AIRLOCK///////////////////
 //////////////////////////////////////
-/obj/machinery/door/airlock/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/door/airlock/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			//6 deconstructs per full RCD
@@ -964,7 +964,7 @@ rborosilicate = 12
 			return 1
 	return FALSE
 
-/obj/machinery/door/airlock/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/door/airlock/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			to_chat(user, span("notice", "You deconstruct \the [src]."))
@@ -975,7 +975,7 @@ rborosilicate = 12
 //////////////////////////////////////
 /////////////FIRELOCK/////////////////
 //////////////////////////////////////
-/obj/machinery/door/firedoor/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/door/firedoor/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -984,7 +984,7 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/door/firedoor/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/door/firedoor/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
@@ -993,7 +993,7 @@ rborosilicate = 12
 //////////////////////////////////////
 ////////////WALL FRAMES///////////////
 //////////////////////////////////////
-/obj/machinery/computer/security/telescreen/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/computer/security/telescreen/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1002,14 +1002,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/computer/security/telescreen/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/computer/security/telescreen/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/doorbell_chime/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/doorbell_chime/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1018,14 +1018,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/doorbell_chime/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/doorbell_chime/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/status_display/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/status_display/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1034,14 +1034,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/status_display/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/status_display/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/requests_console/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/requests_console/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1050,14 +1050,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/requests_console/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/requests_console/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/atm/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/atm/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1066,14 +1066,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/atm/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/atm/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/newscaster/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/newscaster/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1082,14 +1082,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/newscaster/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/newscaster/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/recharger/wallcharger/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/recharger/wallcharger/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1098,14 +1098,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/recharger/wallcharger/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/recharger/wallcharger/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/firealarm/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/firealarm/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1114,14 +1114,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/firealarm/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/firealarm/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/alarm/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/alarm/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1130,14 +1130,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/alarm/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/alarm/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/computer/guestpass/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/computer/guestpass/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1146,14 +1146,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/computer/guestpass/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/computer/guestpass/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/item/device/radio/intercom/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/item/radio/intercom/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1162,14 +1162,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/item/device/radio/intercom/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/item/radio/intercom/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/keycard_auth/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/keycard_auth/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1178,14 +1178,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/keycard_auth/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/keycard_auth/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/item/device/geiger/wall/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/item/geiger/wall/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1194,14 +1194,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/item/device/geiger/wall/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/item/geiger/wall/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/button/windowtint/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/button/windowtint/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1210,14 +1210,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/button/windowtint/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/button/windowtint/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/computer/id_restorer/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/computer/id_restorer/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1226,14 +1226,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/computer/id_restorer/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/computer/id_restorer/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/computer/timeclock/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/computer/timeclock/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1242,14 +1242,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/computer/timeclock/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/computer/timeclock/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/station_map/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/station_map/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1258,14 +1258,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/station_map/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/station_map/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/structure/trash_pile/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/trash_pile/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1274,14 +1274,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/structure/trash_pile/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/trash_pile/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/structure/loot_pile/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/loot_pile/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1290,14 +1290,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/structure/loot_pile/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/loot_pile/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/structure/frame/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/frame/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1306,14 +1306,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/structure/frame/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/frame/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/ai_status_display/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/ai_status_display/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1322,14 +1322,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/ai_status_display/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/ai_status_display/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/light/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/light/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1338,14 +1338,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/light/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/light/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/hologram/holopad/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/hologram/holopad/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1354,14 +1354,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/hologram/holopad/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/hologram/holopad/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/light_switch/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/light_switch/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1370,14 +1370,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/light_switch/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/light_switch/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/structure/table/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/table/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1386,14 +1386,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/structure/table/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/table/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/conveyor/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/conveyor/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1402,14 +1402,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/conveyor/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/conveyor/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/door/window/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/door/window/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1418,14 +1418,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/door/window/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/door/window/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/structure/firedoor_assembly/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/firedoor_assembly/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1434,14 +1434,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/structure/firedoor_assembly/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/firedoor_assembly/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/structure/door_assembly/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/door_assembly/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1450,14 +1450,14 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/structure/door_assembly/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/door_assembly/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
 
-/obj/machinery/button/doorbell/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/button/doorbell/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		return list(
 			RCD_VALUE_MODE = RCD_DECONSTRUCT,
@@ -1466,7 +1466,7 @@ rborosilicate = 12
 		)
 	return FALSE
 
-/obj/machinery/button/doorbell/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/machinery/button/doorbell/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
 		to_chat(user, span("notice", "You deconstruct \the [src]."))
 		qdel(src)

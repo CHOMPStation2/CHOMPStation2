@@ -1,5 +1,5 @@
 // This proc turns the BSC or arti-BSC into a phased-creature mine.
-/obj/item/weapon/bluespace_crystal/Crossed(atom/movable/M)
+/obj/item/bluespace_crystal/Crossed(atom/movable/M)
 	. = ..()
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
@@ -15,7 +15,7 @@
 
 
 // This proc is the 'Dephase grenade' check. range is changeable. 0=self, 1=3x3, 2=5x5, 3=7x7...
-/obj/item/weapon/bluespace_crystal/proc/dephase_shadekin()
+/obj/item/bluespace_crystal/proc/dephase_shadekin()
 	var/turf/T = get_turf(src)
 	for(var/thing in range(3, T))
 		if(istype(thing, /mob/living/carbon/human))

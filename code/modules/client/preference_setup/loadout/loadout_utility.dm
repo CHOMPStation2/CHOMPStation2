@@ -10,13 +10,8 @@
 
 /datum/gear/utility/tts_device
 	display_name = "text to speech device"
-<<<<<<< HEAD
-	path = /obj/item/device/text_to_speech
-	cost = 0 //Not extremely expensive, but it's useful for mute chracters. //CHOMPEDIT: 3 points is pretty high for a pure fluff piece, make it 0
-=======
 	path = /obj/item/text_to_speech
-	cost = 3 //Not extremely expensive, but it's useful for mute chracters.
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	cost = 0 //Not extremely expensive, but it's useful for mute chracters. //CHOMPEDIT: 3 points is pretty high for a pure fluff piece, make it 0
 
 /datum/gear/utility/communicator
 	display_name = "communicator selection"
@@ -35,13 +30,8 @@
 	path = /obj/item/camera
 
 /datum/gear/utility/codex
-<<<<<<< HEAD
 	display_name = "the traveler's guide to borealis" //YW Edit
-	path = /obj/item/weapon/book/codex //VOREStation Edit
-=======
-	display_name = "the traveler's guide to Virgo-Erigone"
 	path = /obj/item/book/codex //VOREStation Edit
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	cost = 0
 
 /datum/gear/utility/news

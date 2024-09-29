@@ -37,13 +37,8 @@
 	desc = "A banner that flies for the pride of the hegemony."
 	//catalogue_data = list(/datum/category_item/catalogue/information/organization/altevian_hegemony) // TODO?
 
-<<<<<<< HEAD
 //VOREStation Removal //CHOMP re-addition. Seriously? You commented this out for your lore? What's wrong with JUST NOT SPAWNING IT or something.
-/obj/item/weapon/banner/virgov
-=======
-/* //VOREStation Removal
 /obj/item/banner/virgov
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "\improper VirGov banner"
 	icon_state = "banner-virgov"
 	desc = "A banner with the symbol of the local government, the Vir Governmental Authority, also known as VirGov."

@@ -27,10 +27,10 @@
 			return S
 
 	//CHOMPedit - protean rigsuit integrated backpack, behold, jank!
-	if(istype(src.back,/obj/item/weapon/rig))	//This would be much cooler if we had componentized storage datums
-		var/obj/item/weapon/rig/R = src.back
+	if(istype(src.back,/obj/item/rig))	//This would be much cooler if we had componentized storage datums
+		var/obj/item/rig/R = src.back
 		if(R.rig_storage)
-			var/obj/item/weapon/storage/backpack = R.rig_storage
+			var/obj/item/storage/backpack = R.rig_storage
 			if(backpack.can_be_inserted(newitem, 1))
 				if(user_initiated)
 					backpack.handle_item_insertion(newitem)

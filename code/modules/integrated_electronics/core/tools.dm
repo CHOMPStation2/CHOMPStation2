@@ -267,56 +267,24 @@
 	display_contents_with_number = 0
 	can_hold = list(
 		/obj/item/integrated_circuit,
-<<<<<<< HEAD
-		/obj/item/weapon/storage/bag/circuits/mini,
-		/obj/item/device/electronic_assembly,
-		/obj/item/device/integrated_electronics,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/device/multitool,
-		/obj/item/device/integrated_electronics/wirer, //CHOMP Edit,
-		/obj/item/device/integrated_electronics/debugger, //CHOMP Edit,
-		/obj/item/device/integrated_electronics/detailer, //CHOMP Edit,
-		)
-
-//CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
-//Which is enough to trigger byond's recursion level protection
-/obj/item/weapon/storage/bag/circuits/emp_act()
-	return	//No
-
-/obj/item/weapon/storage/bag/circuits/basic/Initialize()
-	//. = ..() CHOMPEdit
-	new /obj/item/weapon/storage/bag/circuits/mini/arithmetic(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/trig(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/input(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/output(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/memory(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/logic(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/time(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/reagents(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/transfer(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/converter(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/power(src)
-	new /obj/item/device/electronic_assembly(src)
-	new /obj/item/device/assembly/electronic_assembly(src)
-	new /obj/item/device/assembly/electronic_assembly(src)
-	new /obj/item/device/multitool(src)
-	new /obj/item/weapon/tool/screwdriver(src)
-	new /obj/item/weapon/tool/crowbar(src)
-	new /obj/item/device/integrated_electronics/wirer(src) //CHOMPEdit
-	new /obj/item/device/integrated_electronics/debugger(src) //CHOMPEdit
-	new /obj/item/device/integrated_electronics/detailer(src) //CHOMPEdit
-=======
 		/obj/item/storage/bag/circuits/mini,
 		/obj/item/electronic_assembly,
 		/obj/item/integrated_electronics,
 		/obj/item/tool/crowbar,
 		/obj/item/tool/screwdriver,
-		/obj/item/multitool
+		/obj/item/multitool,
+		/obj/item/integrated_electronics/wirer, //CHOMP Edit,
+		/obj/item/integrated_electronics/debugger, //CHOMP Edit,
+		/obj/item/integrated_electronics/detailer, //CHOMP Edit,
 		)
 
+//CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
+//Which is enough to trigger byond's recursion level protection
+/obj/item/storage/bag/circuits/emp_act()
+	return	//No
+
 /obj/item/storage/bag/circuits/basic/Initialize()
-	. = ..()
+	//. = ..() CHOMPEdit
 	new /obj/item/storage/bag/circuits/mini/arithmetic(src)
 	new /obj/item/storage/bag/circuits/mini/trig(src)
 	new /obj/item/storage/bag/circuits/mini/input(src)
@@ -334,38 +302,14 @@
 	new /obj/item/multitool(src)
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/crowbar(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	new /obj/item/integrated_electronics/wirer(src) //CHOMPEdit
+	new /obj/item/integrated_electronics/debugger(src) //CHOMPEdit
+	new /obj/item/integrated_electronics/detailer(src) //CHOMPEdit
 	make_exact_fit()
 	. = ..() //CHOMPEdit
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/all/Initialize()
-	//. = ..() CHOMPEdit
-	new /obj/item/weapon/storage/bag/circuits/mini/arithmetic/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/trig/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/input/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/output/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/memory/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/logic/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/smart/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/manipulation/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/time/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/reagents/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/transfer/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/converter/all(src)
-	new /obj/item/weapon/storage/bag/circuits/mini/power/all(src)
-
-	new /obj/item/device/electronic_assembly(src)
-	new /obj/item/device/electronic_assembly/medium(src)
-	new /obj/item/device/electronic_assembly/large(src)
-	new /obj/item/device/electronic_assembly/drone(src)
-	new /obj/item/device/integrated_electronics/wirer(src)
-	new /obj/item/device/integrated_electronics/debugger(src)
-	new /obj/item/device/integrated_electronics/detailer(src) //CHOMPEdit
-	new /obj/item/weapon/tool/crowbar(src)
-=======
 /obj/item/storage/bag/circuits/all/Initialize()
-	. = ..()
+	//. = ..() CHOMPEdit
 	new /obj/item/storage/bag/circuits/mini/arithmetic/all(src)
 	new /obj/item/storage/bag/circuits/mini/trig/all(src)
 	new /obj/item/storage/bag/circuits/mini/input/all(src)
@@ -386,8 +330,8 @@
 	new /obj/item/electronic_assembly/drone(src)
 	new /obj/item/integrated_electronics/wirer(src)
 	new /obj/item/integrated_electronics/debugger(src)
+	new /obj/item/integrated_electronics/detailer(src) //CHOMPEdit
 	new /obj/item/tool/crowbar(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	make_exact_fit()
 	. = ..() //CHOMPEdit
 
@@ -407,12 +351,7 @@
 /obj/item/storage/bag/circuits/mini/arithmetic/all // Don't believe this will ever be needed.
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/arithmetic/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/arithmetic/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/arithmetic/Initialize()
 	for(var/obj/item/integrated_circuit/arithmetic/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -429,12 +368,7 @@
 /obj/item/storage/bag/circuits/mini/trig/all // Ditto
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/trig/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/trig/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/trig/Initialize()
 	for(var/obj/item/integrated_circuit/trig/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -451,12 +385,7 @@
 /obj/item/storage/bag/circuits/mini/input/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/input/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/input/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/input/Initialize()
 	for(var/obj/item/integrated_circuit/input/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -473,12 +402,7 @@
 /obj/item/storage/bag/circuits/mini/output/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/output/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/output/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/output/Initialize()
 	for(var/obj/item/integrated_circuit/output/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -495,12 +419,7 @@
 /obj/item/storage/bag/circuits/mini/memory/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/memory/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/memory/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/memory/Initialize()
 	for(var/obj/item/integrated_circuit/memory/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -517,12 +436,7 @@
 /obj/item/storage/bag/circuits/mini/logic/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/logic/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/logic/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/logic/Initialize()
 	for(var/obj/item/integrated_circuit/logic/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -539,12 +453,7 @@
 /obj/item/storage/bag/circuits/mini/time/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/time/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/time/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/time/Initialize()
 	for(var/obj/item/integrated_circuit/time/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -561,12 +470,7 @@
 /obj/item/storage/bag/circuits/mini/reagents/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/reagents/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/reagents/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/reagents/Initialize()
 	for(var/obj/item/integrated_circuit/reagent/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -583,12 +487,7 @@
 /obj/item/storage/bag/circuits/mini/transfer/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/transfer/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/transfer/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/transfer/Initialize()
 	for(var/obj/item/integrated_circuit/transfer/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -605,12 +504,7 @@
 /obj/item/storage/bag/circuits/mini/converter/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/converter/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/converter/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/converter/Initialize()
 	for(var/obj/item/integrated_circuit/converter/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -626,12 +520,7 @@
 /obj/item/storage/bag/circuits/mini/smart/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/smart/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/smart/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/smart/Initialize()
 	for(var/obj/item/integrated_circuit/smart/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -647,12 +536,7 @@
 /obj/item/storage/bag/circuits/mini/manipulation/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/manipulation/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/manipulation/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/manipulation/Initialize()
 	for(var/obj/item/integrated_circuit/manipulation/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)
@@ -669,12 +553,7 @@
 /obj/item/storage/bag/circuits/mini/power/all
 	spawn_flags_to_use = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
-<<<<<<< HEAD
-/obj/item/weapon/storage/bag/circuits/mini/power/Initialize()
-=======
-/obj/item/storage/bag/circuits/mini/power/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/storage/bag/circuits/mini/power/Initialize()
 	for(var/obj/item/integrated_circuit/passive/power/IC in all_integrated_circuits)
 		if(IC.spawn_flags & spawn_flags_to_use)
 			for(var/i = 1 to 4)

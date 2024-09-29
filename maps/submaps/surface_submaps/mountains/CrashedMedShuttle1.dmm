@@ -30,13 +30,13 @@
 /turf/simulated/shuttle/wall,
 /area/submap/cave/CrashedMedShuttle)
 "ah" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/CrashedMedShuttle)
 "ai" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/effect/decal/cleanable/blood/oil,
@@ -58,7 +58,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "al" = (
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -77,7 +77,7 @@
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/cave/CrashedMedShuttle)
 "ao" = (
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /obj/structure/door_assembly/door_assembly_ext,
 /turf/simulated/shuttle/plating,
 /area/submap/cave/CrashedMedShuttle)
@@ -102,7 +102,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "at" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/lattice,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/cave/CrashedMedShuttle)
@@ -131,7 +131,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "az" = (
 /obj/effect/decal/cleanable/blood/gibs/robot,
-/obj/item/weapon/firstaid_arm_assembly,
+/obj/item/firstaid_arm_assembly,
 /mob/living/simple_mob/animal/giant_spider/frost,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
@@ -146,7 +146,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "aC" = (
 /obj/effect/decal/cleanable/blood/oil,
-/obj/item/weapon/firstaid_arm_assembly,
+/obj/item/firstaid_arm_assembly,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "aD" = (
@@ -183,7 +183,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "aK" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/effect/spider/stickyweb,
@@ -191,14 +191,14 @@
 /area/submap/cave/CrashedMedShuttle)
 "aL" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/item/stack/rods,
 /turf/simulated/shuttle/plating,
 /area/submap/cave/CrashedMedShuttle)
 "aM" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/cave/CrashedMedShuttle)
 "aN" = (
@@ -206,7 +206,7 @@
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/cave/CrashedMedShuttle)
 "aO" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/effect/spider/stickyweb,
@@ -238,7 +238,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "aU" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/random/medical,
@@ -273,7 +273,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/CrashedMedShuttle)
 "bc" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/outdoors/rocks,
@@ -298,7 +298,7 @@
 	pixel_x = -32
 	},
 /obj/structure/lattice,
-/obj/item/device/gps/internal/poi,
+/obj/item/gps/internal/poi,
 /obj/structure/flora/tree/sif,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/cave/CrashedMedShuttle)
@@ -311,7 +311,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "bh" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/outdoors/rocks,
@@ -322,9 +322,9 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/CrashedMedShuttle)
 "bj" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/beartrap{
+/obj/item/beartrap{
 	anchored = 1;
 	deployed = 1;
 	icon_state = "beartrap1"
@@ -339,7 +339,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "bl" = (
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "bm" = (
@@ -365,7 +365,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "br" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/cave/CrashedMedShuttle)
 "bs" = (
@@ -380,7 +380,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "bu" = (
 /obj/effect/decal/remains/tajaran,
-/obj/item/weapon/surgical/circular_saw,
+/obj/item/surgical/circular_saw,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/cave/CrashedMedShuttle)
 "bv" = (
@@ -389,7 +389,7 @@
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/cave/CrashedMedShuttle)
 "bw" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/loot_pile/maint/technical,
 /obj/structure/lattice,
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -401,7 +401,7 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/cave/CrashedMedShuttle)
 "by" = (
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "bz" = (
@@ -431,7 +431,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "bD" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/cave/CrashedMedShuttle)
 "bE" = (
@@ -445,7 +445,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "bG" = (
 /obj/structure/table/standard,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "bH" = (
@@ -455,7 +455,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "bI" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "bJ" = (
@@ -466,11 +466,11 @@
 /area/submap/cave/CrashedMedShuttle)
 "bK" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/retractor,
+/obj/item/surgical/retractor,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "bL" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/grille,
 /turf/simulated/shuttle/plating,
 /area/submap/cave/CrashedMedShuttle)
@@ -495,7 +495,7 @@
 /obj/structure/closet/secure_closet/medical_wall/anesthetics{
 	pixel_x = 32
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/shuttle/floor/white,
@@ -515,11 +515,11 @@
 "bR" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/surgical/surgicaldrill,
+/obj/item/surgical/surgicaldrill,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "bS" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/structure/grille,
@@ -527,12 +527,12 @@
 /area/submap/cave/CrashedMedShuttle)
 "bT" = (
 /obj/structure/table/standard,
-/obj/item/device/reagent_scanner/adv,
+/obj/item/reagent_scanner/adv,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/cave/CrashedMedShuttle)
 "bU" = (
 /obj/machinery/iv_drip,
-/obj/item/weapon/reagent_containers/blood/empty,
+/obj/item/reagent_containers/blood/empty,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "bV" = (
@@ -541,7 +541,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "bW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/masks,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "bX" = (
@@ -551,7 +551,7 @@
 /area/submap/cave/CrashedMedShuttle)
 "bY" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/backpack/medic,
+/obj/item/storage/backpack/medic,
 /obj/random/medical/lite,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
@@ -574,8 +574,8 @@
 /obj/structure/sign/periodic{
 	pixel_y = -32
 	},
-/obj/item/weapon/surgical/bonesetter,
-/obj/item/weapon/surgical/scalpel,
+/obj/item/surgical/bonesetter,
+/obj/item/surgical/scalpel,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "cd" = (
@@ -586,8 +586,8 @@
 /area/submap/cave/CrashedMedShuttle)
 "ce" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/bonegel,
-/obj/item/weapon/surgical/FixOVein,
+/obj/item/surgical/bonegel,
+/obj/item/surgical/FixOVein,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "cf" = (
@@ -604,12 +604,12 @@
 /area/submap/cave/CrashedMedShuttle)
 "cg" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
 /turf/simulated/shuttle/floor/white,
 /area/submap/cave/CrashedMedShuttle)
 "ch" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/syringes,
+/obj/item/storage/box/syringes,
 /obj/effect/spider/stickyweb,
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/white,

@@ -242,21 +242,12 @@
 				/obj/item/gun/projectile,
 				/obj/item/ammo_magazine,
 				/obj/item/ammo_casing,
-<<<<<<< HEAD
-//				/obj/item/weapon/storage/fancy/shotgun_ammo,
-				/obj/item/weapon/melee/baton,
-				/obj/item/weapon/handcuffs,
-//				/obj/item/device/detective_scanner,
-				/obj/item/device/taperecorder)
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
-=======
 //				/obj/item/storage/fancy/shotgun_ammo,
 				/obj/item/melee/baton,
 				/obj/item/handcuffs,
 //				/obj/item/detective_scanner,
 				/obj/item/taperecorder)
-	armor = list(melee = 50, bullet = 15, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 	var/unbuttoned = 0
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/verb/toggle()
@@ -321,21 +312,12 @@
 				/obj/item/gun/projectile,
 				/obj/item/ammo_magazine,
 				/obj/item/ammo_casing,
-<<<<<<< HEAD
-//				/obj/item/weapon/storage/fancy/shotgun_ammo,
-				/obj/item/weapon/melee/baton,
-				/obj/item/weapon/handcuffs,
-//				/obj/item/device/detective_scanner,
-				/obj/item/device/taperecorder)
-	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
-=======
 //				/obj/item/storage/fancy/shotgun_ammo,
 				/obj/item/melee/baton,
 				/obj/item/handcuffs,
 //				/obj/item/detective_scanner,
 				/obj/item/taperecorder)
-	armor = list(melee = 50, bullet = 15, laser = 25, energy = 10, bomb = 0, bio = 0, rad = 0)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0) //CHOMPEdit: No armor, just fluff item.
 
 	//Variants
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedblue
@@ -832,13 +814,8 @@
 		var/mob/living/carbon/human/H = user
 		if(H.head == src)
 			H.update_inv_head()
-<<<<<<< HEAD
 /*
-/obj/item/weapon/rig/light/hacker/fluff/aronai
-=======
-
 /obj/item/rig/light/hacker/fluff/aronai
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "KHI-99-AAR suit module"
 	suit_type = "nano"
 	desc = "A thin collapsable spacesuit for synths from Kitsuhana Heavy Industries."
@@ -1232,7 +1209,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_command"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // Considering only staff heads get to pick it
 
-/obj/item/clothing/under/rank/trek/eng //CHOMPEdit: Engineering only 
+/obj/item/clothing/under/rank/trek/eng //CHOMPEdit: Engineering only
 	name = "Operations Uniform"
 	desc = "The uniform worn by operations officers of the mid 2260s. You feel strangely vulnerable just seeing this..."
 	icon_state = "trek_engsec"
@@ -2471,7 +2448,7 @@ Departamental Swimsuits, for general use
 				H.update_inv_wear_suit()
 	else
 		RemoveHood_evelyn()
-		
+
 //Uncle_Fruit_VEVO - Bradley Khatibi
 /obj/item/clothing/shoes/fluff/airjordans
     name = "A pair of Air Jordan 1 Mid 'Black Gym Red's"
@@ -2493,8 +2470,8 @@ Departamental Swimsuits, for general use
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "foxflightsuit_mob"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS 
-	
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+
 //Shalax: Cerise Duelliste
 /obj/item/storage/belt/security/fluff/cerise
 	name = "champion's belt"
@@ -2706,7 +2683,7 @@ End CHOMP Removal*/
 /obj/item/clothing/suit/storage/toggle/labcoat/fluff/parrizjacket
 	name = "pink crop bomber"
 	desc = "A pink crop bomber jacket that is just barely able to zip up at the front. It has a small Virgo Orbital Research Establishment patch on each shoulder."
-	icon_state = "parriz_jacket" 
+	icon_state = "parriz_jacket"
 
 //verysoft: Casey Brown
 /obj/item/clothing/glasses/big_round

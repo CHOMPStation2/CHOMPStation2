@@ -12,11 +12,7 @@
 	var/obj/item/toppaper	//The topmost piece of paper.
 	slot_flags = SLOT_BELT
 
-<<<<<<< HEAD
-/obj/item/weapon/clipboard/Initialize() //ChompEDIT New --> Initialize
-=======
-/obj/item/clipboard/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/clipboard/Initialize() //ChompEDIT New --> Initialize
 	update_icon()
 
 /obj/item/clipboard/MouseDrop(obj/over_object as obj) //Quick clipboard fix. -Agouri

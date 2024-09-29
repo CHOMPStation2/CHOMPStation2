@@ -135,7 +135,7 @@
 	// Loop through some slots, and add up their slowdowns.
 	// Includes slots which can provide armor, the back slot, and suit storage.
 	for(var/obj/item/I in list(wear_suit, w_uniform, back, gloves, head, s_store))
-		if(istype(I,/obj/item/weapon/rig)) //CHOMPAdd
+		if(istype(I,/obj/item/rig)) //CHOMPAdd
 			for(var/obj/item/II in I.contents)
 				. += II.slowdown
 		. += I.slowdown

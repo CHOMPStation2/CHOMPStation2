@@ -71,8 +71,8 @@
 	if(!istype(held) || is_robot_module(held))
 		stripping = TRUE
 		//CHOMPEdit Start - Let borg grippers put stuff on.
-		if(is_robot_module(held) && istype(held, /obj/item/weapon/gripper))
-			var/obj/item/weapon/gripper/G = held
+		if(is_robot_module(held) && istype(held, /obj/item/gripper))
+			var/obj/item/gripper/G = held
 			if(istype(G.wrapped))
 				stripping = FALSE
 		//CHOMPEdit End
@@ -92,20 +92,15 @@
 			to_chat(user, "<span class='warning'>You cannot remove \the [src]'s [target_slot.name].</span>")
 			return
 		visible_message("<span class='danger'>\The [user] is trying to remove \the [src]'s [target_slot.name]!</span>")
-<<<<<<< HEAD
-	else if(!istype(held, /obj/item/weapon/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
-		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/weapon/grenade))
-=======
-	else
+	else if(!istype(held, /obj/item/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
 		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/grenade))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			visible_message("<span class='danger'>\The [user] is trying to put \a [held] in \the [src]'s mouth!</span>")
 		else
 			visible_message("<span class='danger'>\The [user] is trying to put \a [held] on \the [src]!</span>")
 	//CHOMPEdit Start - Let borg grippers put stuff on.
 	else
-		var/obj/item/weapon/gripper/G = held
-		if(slot_to_strip == slot_wear_mask && istype(G.wrapped, /obj/item/weapon/grenade))
+		var/obj/item/gripper/G = held
+		if(slot_to_strip == slot_wear_mask && istype(G.wrapped, /obj/item/grenade))
 			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] in \the [src]'s mouth!</span>")
 		else
 			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] on \the [src]!</span>")
@@ -126,8 +121,8 @@
 		add_attack_logs(user,src,"Removed equipment from slot [target_slot]")
 		unEquip(target_slot)
 	//CHOMPEdit Start - Let borg grippers put stuff on.
-	else if(is_robot_module(held) && istype(held, /obj/item/weapon/gripper))
-		var/obj/item/weapon/gripper/G = held
+	else if(is_robot_module(held) && istype(held, /obj/item/gripper))
+		var/obj/item/gripper/G = held
 		var/obj/item/wrapped = G.wrapped
 		if(istype(wrapped))
 			G.drop_item_nm()

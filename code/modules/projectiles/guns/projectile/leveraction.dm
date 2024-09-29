@@ -8,11 +8,7 @@
 	the same time having a rather respectable firing rate due to it's mechanism. It is very probable \
 	this is a replica instead of a museum piece, but rifles of this pattern still see usage as \
 	colonist guns in some far off regions. Uses 7.62mm rounds."
-<<<<<<< HEAD
 	description_fluff = "The frontier’s largest home-grown firearms manufacturer, the Weissen \
-=======
-	description_fluff = "The frontier�s largest home-grown firearms manufacturer, the Weissen \
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	Company offers a range of high-quality, high-cost hunting rifles and shotguns designed with \
 	the wild frontier wilderness - and its wildlife - in mind. The company operates just one \
 	production plant in the Mytis system, but their weapons have found popularity on garden \
@@ -35,11 +31,7 @@
 	the same time having a rather respectable firing rate due to it's mechanism. It is very probable \
 	this is a replica instead of a museum piece, but rifles of this pattern still see usage as \
 	colonist guns in some far off regions. Uses 7.62mm rounds."
-<<<<<<< HEAD
 	description_fluff = "The frontier’s largest home-grown firearms manufacturer, the Weissen \
-=======
-	description_fluff = "The frontier�s largest home-grown firearms manufacturer, the Weissen \
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	Company offers a range of high-quality, high-cost hunting rifles and shotguns designed with \
 	the wild frontier wilderness - and its wildlife - in mind. The company operates just one \
 	production plant in the Mytis system, but their weapons have found popularity on garden \
@@ -55,11 +47,7 @@
 	name = "repeater"
 	desc = "The Weissen Company's answer to varmint shooting on frontier ranches, the T-7 Boone \
 	gives ranchers and farmers alike a perfect rider rifle for protecting the fenceline. Uses .357 rounds."
-<<<<<<< HEAD
 	description_fluff = "The frontier’s largest home-grown firearms manufacturer, \
-=======
-	description_fluff = "The frontier�s largest home-grown firearms manufacturer, \
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	the Weissen Arms Company are the leading manufacturer of - not only quality - \
 	but affordable rifles for the average frontiersman looking to protect his \
 	claim. The company operates just one production plant in the Mytis system, \
@@ -79,11 +67,7 @@
 	name = "brushgun"
 	desc = "Weissen Company's newest budget caravan rifle for those that want a light yet effective rifle, \
 	the T-10 Cassidy Uses .44 rounds."
-<<<<<<< HEAD
 	description_fluff = "The frontier’s largest home-grown firearms manufacturer, \
-=======
-	description_fluff = "The frontier�s largest home-grown firearms manufacturer, \
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	the Weissen Arms Company are the leading manufacturer of - not only quality - \
 	but affordable rifles for the average frontiersman looking to protect his \
 	claim. The company operates just one production plant in the Mytis system, \
@@ -103,11 +87,7 @@
 	name = "brushgun"
 	desc = "Weissen Company's newest budget caravan rifle for those that want a light yet effective rifle, \
 	the T-10 Cassidy Uses .44 rounds."
-<<<<<<< HEAD
 	description_fluff = "The frontier’s largest home-grown firearms manufacturer, \
-=======
-	description_fluff = "The frontier�s largest home-grown firearms manufacturer, \
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	the Weissen Arms Company are the leading manufacturer of - not only quality - \
 	but affordable rifles for the average frontiersman looking to protect his \
 	claim. The company operates just one production plant in the Mytis system, \

@@ -97,11 +97,7 @@
 	if(canned && !user.incapacitated())
 		uncan(user)
 
-<<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/living/user as mob, def_zone) //CHOMPEdit
-=======
-/obj/item/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/user as mob, def_zone)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/living/user as mob, def_zone) //CHOMPEdit
 	if(reagents && !reagents.total_volume)
 		// to_chat(user, "<span class='danger'>None of [src] left!</span>")
 		balloon_alert(user, "None of [src] left!") // CHOMPEdit - Changed to balloon alert
@@ -2979,14 +2975,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#FF7575"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/meatbread
-=======
-	center_of_mass = list("x"=16, "y"=16)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/meatbread
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/meatbread/filled
 	filled = TRUE
@@ -3014,14 +3005,9 @@
 	icon_state = "xenobreadslice"
 	filling_color = "#8AFF75"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/xenomeatbread
-=======
-	center_of_mass = list("x"=16, "y"=13)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/xenomeatbread
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 
 /obj/item/reagent_containers/food/snacks/slice/xenomeatbread/filled
@@ -3050,14 +3036,9 @@
 	icon_state = "bananabreadslice"
 	filling_color = "#EDE5AD"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 8 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/bananabread
-=======
-	center_of_mass = list("x"=16, "y"=8)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/bananabread
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/bananabread/filled
 	filled = TRUE
@@ -3081,14 +3062,9 @@
 	icon_state = "tofubreadslice"
 	filling_color = "#F7FFE0"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/tofubread
-=======
-	center_of_mass = list("x"=16, "y"=13)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/tofubread
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/tofubread/filled
 	filled = TRUE
@@ -3100,14 +3076,9 @@
 	icon_state = "breadslice"
 	filling_color = "#D27332"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 4 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/bread
-=======
-	center_of_mass = list("x"=16, "y"=4)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/bread
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/bread/filled
 	filled = TRUE
@@ -3136,14 +3107,9 @@
 	icon_state = "creamcheesebreadslice"
 	filling_color = "#FFF896"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/creamcheesebread
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/creamcheesebread
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/creamcheesebread/filled
 	filled = TRUE
@@ -3172,14 +3138,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#FFD675"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/carrotcake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/carrotcake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/carrotcake/filled
 	filled = TRUE
@@ -3209,14 +3170,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#E6AEDB"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 12 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/braincake
-=======
-	center_of_mass = list("x"=16, "y"=12)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/braincake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/braincake/filled
 	filled = TRUE
@@ -3245,14 +3201,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#FAF7AF"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesecake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/cheesecake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/cheesecake/filled
 	filled = TRUE
@@ -3281,14 +3232,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#4F3500"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/peanutcake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/peanutcake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/peanutcake/filled
 	filled = TRUE
@@ -3312,14 +3258,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#F7EDD5"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/plaincake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/plaincake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/plaincake/filled
 	filled = TRUE
@@ -3343,14 +3284,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#FADA8E"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/orangecake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/orangecake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/orangecake/filled
 	filled = TRUE
@@ -3374,14 +3310,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#CBFA8E"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/limecake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/limecake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/limecake/filled
 	filled = TRUE
@@ -3406,14 +3337,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#FAFA8E"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/lemoncake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/lemoncake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/lemoncake/filled
 	filled = TRUE
@@ -3437,14 +3363,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#805930"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/chocolatecake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/chocolatecake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/chocolatecake/filled
 	filled = TRUE
@@ -3499,14 +3420,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#FFD6D6"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/birthdaycake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/birthdaycake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/birthdaycake/filled
 	filled = TRUE
@@ -3552,14 +3468,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#EBF5B8"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/applecake
-=======
-	center_of_mass = list("x"=16, "y"=14)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/applecake
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/applecake/filled
 	filled = TRUE
@@ -3583,14 +3494,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#F5B951"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 12 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pumpkinpie
-=======
-	center_of_mass = list("x"=16, "y"=12)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/pumpkinpie
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/pumpkinpie/filled
 	filled = TRUE
@@ -3935,14 +3841,9 @@
 	icon_state = "pizzamargheritaslice"
 	filling_color = "#BAA14C"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita
-=======
-	center_of_mass = list("x"=16, "y"=13)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/margherita/filled
 	filled = TRUE
@@ -4001,14 +3902,9 @@
 	icon_state = "meatpizzaslice"
 	filling_color = "#BAA14C"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza
-=======
-	center_of_mass = list("x"=16, "y"=13)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/meatpizza/filled
 	filled = TRUE
@@ -4035,14 +3931,9 @@
 	icon_state = "mushroompizzaslice"
 	filling_color = "#BAA14C"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza
-=======
-	center_of_mass = list("x"=16, "y"=13)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/mushroompizza/filled
 	filled = TRUE
@@ -4071,14 +3962,9 @@
 	icon_state = "vegetablepizzaslice"
 	filling_color = "#BAA14C"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza
-=======
-	center_of_mass = list("x"=16, "y"=13)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/food/snacks/slice/vegetablepizza/filled
 	filled = TRUE
@@ -4128,14 +4014,9 @@
 	icon_state = "oldpizzaslice"								// CHOMP EDIT For some reason this was set to old_pizza, which isn't a thing in the dmi (I guess nobody ever tried slicing it so nobody ever knew?)
 	filling_color = "#BAA14C"
 	bitesize = 2
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
-	whole_path = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/oldpizza
-=======
-	center_of_mass = list("x"=16, "y"=13)
 	whole_path = /obj/item/reagent_containers/food/snacks/sliceable/pizza/oldpizza
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/pizzabox
 	name = "pizza box"

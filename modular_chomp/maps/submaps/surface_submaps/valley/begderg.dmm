@@ -19,7 +19,7 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "q" = (
-/obj/item/weapon/flame/lighter/zippo/gold,
+/obj/item/flame/lighter/zippo/gold,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "s" = (
@@ -27,11 +27,11 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "v" = (
-/obj/item/weapon/gun/projectile/deagle/gold,
+/obj/item/gun/projectile/deagle/gold,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "w" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager,
+/obj/item/reagent_containers/food/drinks/bottle/goldschlager,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "z" = (
@@ -39,7 +39,7 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "A" = (
-/obj/item/weapon/card/id/gold/captain/spare/fakespare,
+/obj/item/card/id/gold/captain/spare/fakespare,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "C" = (
@@ -75,7 +75,7 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/begderg)
 "X" = (
-/obj/item/weapon/pickaxe/gold{
+/obj/item/pickaxe/gold{
 	pixel_x = -12;
 	pixel_y = 9
 	},

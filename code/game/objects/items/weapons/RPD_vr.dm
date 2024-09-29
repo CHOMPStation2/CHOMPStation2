@@ -31,13 +31,8 @@
 	var/paint_color = "grey"	// Pipe color index for next pipe painted/built.
 	var/category = ATMOS_CATEGORY
 	var/piping_layer = PIPING_LAYER_DEFAULT
-<<<<<<< HEAD
-	var/obj/item/weapon/tool/wrench/tool
-	var/datum/pipe_recipe/recipe = null	// pipe recipie selected for display/construction //YW edit, added = null
-=======
 	var/obj/item/tool/wrench/tool
-	var/datum/pipe_recipe/recipe	// pipe recipie selected for display/construction
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	var/datum/pipe_recipe/recipe = null	// pipe recipie selected for display/construction //YW edit, added = null
 	var/static/datum/pipe_recipe/first_atmos
 	var/static/datum/pipe_recipe/first_disposal
 	var/mode = BUILD_MODE | DESTROY_MODE | WRENCH_MODE

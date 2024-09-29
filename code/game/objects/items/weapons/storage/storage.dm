@@ -727,13 +727,8 @@
 
 	while (cur_atom && !(cur_atom in container.contents))
 		if (isarea(cur_atom))
-<<<<<<< HEAD
 			return INFINITY // CHOMPedit
-		if (istype(cur_atom.loc, /obj/item/weapon/storage))
-=======
-			return -1
 		if (istype(cur_atom.loc, /obj/item/storage))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			depth++
 		cur_atom = cur_atom.loc
 
@@ -750,13 +745,8 @@
 
 	while (cur_atom && !isturf(cur_atom))
 		if (isarea(cur_atom))
-<<<<<<< HEAD
 			return INFINITY // CHOMPedit
-		if (istype(cur_atom.loc, /obj/item/weapon/storage))
-=======
-			return -1
 		if (istype(cur_atom.loc, /obj/item/storage))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			depth++
 		cur_atom = cur_atom.loc
 

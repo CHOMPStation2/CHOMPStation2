@@ -350,14 +350,9 @@
 	name = "cup of ice"
 	desc = "Careful, cold ice, do not chew."
 	icon_state = "ice"
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-/obj/item/weapon/reagent_containers/food/drinks/ice/Initialize()
-=======
-	center_of_mass = list("x"=15, "y"=10)
 /obj/item/reagent_containers/food/drinks/ice/Initialize()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	. = ..()
 	reagents.add_reagent("ice", 30)
 

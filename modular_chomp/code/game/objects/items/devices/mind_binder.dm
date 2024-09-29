@@ -1,5 +1,5 @@
 // Another illegal hack of the sleevemate similar to the Body Snatcher. This one lets you store and bind minds to items.
-/obj/item/device/mindbinder
+/obj/item/mindbinder
 	name = "\improper Mind Binder"
 	desc = "An extremely illegal tool modified from a SleeveMate. It allows the storing and transfer of minds, but can bind them to objects instead of just humanoids."
 	icon = 'icons/obj/device_alt.dmi'
@@ -12,18 +12,18 @@
 	possessed_voice = list()
 	var/self_bind = FALSE
 
-/obj/item/device/mindbinder/New()
+/obj/item/mindbinder/New()
 	..()
 	flags |= NOBLUDGEON //So borgs don't spark.
 
-/obj/item/device/mindbinder/attack(mob/living/M, mob/living/user)
+/obj/item/mindbinder/attack(mob/living/M, mob/living/user)
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	return
 
-/obj/item/device/mindbinder/attack_self(mob/living/user)
+/obj/item/mindbinder/attack_self(mob/living/user)
 	return
 
-/obj/item/device/mindbinder/proc/toggle_self_bind()
+/obj/item/mindbinder/proc/toggle_self_bind()
 	if(possessed_voice.len == 1)
 		to_chat(usr,"<span class='warning'>The device beeps a warning that there is already a mind loaded!</span>")
 		return
@@ -34,12 +34,12 @@
 		to_chat(usr,"<span class='notice'>You disable the device from using your mind.</span>")
 	update_icon()
 
-/obj/item/device/mindbinder/pre_attack(atom/A)
+/obj/item/mindbinder/pre_attack(atom/A)
 	if(istype(A, /obj/structure/gargoyle))
 		var/obj/structure/gargoyle/G = A
 		A = G.gargoyle
-	if(istype(A, /obj/item/weapon/holder))
-		var/obj/item/weapon/holder/H = A
+	if(istype(A, /obj/item/holder))
+		var/obj/item/holder/H = A
 		A = H.held_mob
 	if(istype(A, /mob/living))
 		var/mob/living/M = A
@@ -64,7 +64,7 @@
 	return
 
 // Handle placing a mind into a mob
-/obj/item/device/mindbinder/proc/bind_mob(mob/living/target)
+/obj/item/mindbinder/proc/bind_mob(mob/living/target)
 	if(possessed_voice.len == 0 && !self_bind)
 		to_chat(usr,"<span class='warning'>The device beeps a warning that it doesn't contain a mind to bind!</span>")
 		return
@@ -104,7 +104,7 @@
 	update_icon()
 
 // Handle placing a mind into an item
-/obj/item/device/mindbinder/proc/bind_item(obj/item/item)
+/obj/item/mindbinder/proc/bind_item(obj/item/item)
 	if(possessed_voice.len == 0 && !self_bind)
 		to_chat(usr,"<span class='warning'>The device beeps a warning that it doesn't contain a mind to bind!</span>")
 		return
@@ -144,7 +144,7 @@
 	update_icon()
 
 // Handle taking a mind out of a mob
-/obj/item/device/mindbinder/proc/store_mob(mob/living/target)
+/obj/item/mindbinder/proc/store_mob(mob/living/target)
 	if(possessed_voice.len != 0)
 		to_chat(usr,"<span class='warning'>The device beeps a warning that there is already a mind loaded!</span>")
 		return
@@ -168,7 +168,7 @@
 	update_icon()
 
 // Handle taking a mind out of an item
-/obj/item/device/mindbinder/proc/store_item(obj/item/item)
+/obj/item/mindbinder/proc/store_item(obj/item/item)
 	if(possessed_voice.len != 0)
 		to_chat(usr,"<span class='warning'>The device beeps a warning that there is already a mind loaded!</span>")
 		return
@@ -189,7 +189,7 @@
 
 	update_icon()
 
-/obj/item/device/mindbinder/update_icon()
+/obj/item/mindbinder/update_icon()
 	if((possessed_voice && possessed_voice.len > 0) || self_bind)
 		icon_state = "[initial(icon_state)]_on"
 	else

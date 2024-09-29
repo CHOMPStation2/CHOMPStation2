@@ -28,10 +28,5 @@
 	id = "slime_scanner"
 	req_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 	materials = list(MAT_STEEL = 500, MAT_GLASS = 500)
-<<<<<<< HEAD
-	build_path = /obj/item/device/slime_scanner
-	sort_string = "HBAAA"
-=======
 	build_path = /obj/item/slime_scanner
 	sort_string = "HBAAA"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

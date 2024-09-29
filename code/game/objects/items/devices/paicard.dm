@@ -44,11 +44,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 	if(istype(rig))
 		rig.forced_move(direction, user)
 
-<<<<<<< HEAD
-/obj/item/device/paicard/Initialize() //ChompEDIT New --> Initialize
-=======
-/obj/item/paicard/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/paicard/Initialize() //ChompEDIT New --> Initialize
 	..()
 	add_overlay("pai-off")
 

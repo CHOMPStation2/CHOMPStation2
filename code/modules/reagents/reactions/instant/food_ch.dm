@@ -11,7 +11,7 @@
 /decl/chemical_reaction/instant/cube/sagaru/on_reaction(var/datum/reagents/holder, var/created_volume)
 	var/location = get_turf(holder.my_atom)
 	for(var/i = 1, i <= created_volume, i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/sarucube(location)
+		new /obj/item/reagent_containers/food/snacks/monkeycube/sarucube(location)
 	return
 
 /decl/chemical_reaction/instant/food/blondiemix

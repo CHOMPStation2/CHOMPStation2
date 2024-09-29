@@ -13,7 +13,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "aV" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -21,13 +21,13 @@
 /area/submap/eclipseaqua)
 "ca" = (
 /obj/structure/table/rack,
-/obj/item/weapon/rig/combat/equipped,
+/obj/item/rig/combat/equipped,
 /obj/item/rig_module/vision/nvg,
 /obj/random/energy/highend,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "cC" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -91,7 +91,7 @@
 "jR" = (
 /obj/machinery/light,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "kd" = (
@@ -100,7 +100,7 @@
 /area/submap/eclipseaqua)
 "lS" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/ambrosiadeus,
+/obj/item/storage/box/ambrosiadeus,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "mi" = (
@@ -326,7 +326,7 @@
 /area/submap/eclipseaqua)
 "IY" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/glass/bottle/left4zed,
+/obj/item/reagent_containers/glass/bottle/left4zed,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -334,7 +334,7 @@
 /area/submap/eclipseaqua)
 "JQ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Kh" = (
@@ -445,7 +445,7 @@
 /area/submap/eclipseaqua)
 "TA" = (
 /obj/structure/table/rack,
-/obj/item/weapon/rig/breacher,
+/obj/item/rig/breacher,
 /obj/item/rig_module/pat_module,
 /obj/random/energy/highend,
 /turf/simulated/floor/tiled/dark,
@@ -501,7 +501,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Vg" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Vn" = (
@@ -513,7 +513,7 @@
 /area/submap/eclipseaqua)
 "WG" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/iandouble,
+/obj/item/bedsheet/iandouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "WS" = (
