@@ -416,7 +416,6 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/device/analyzer(src)
 	src.modules += new /obj/item/device/geiger(src)
 	src.modules += new /obj/item/taperoll/engineering(src)
-<<<<<<< HEAD
 	src.modules += new /obj/item/weapon/gripper(src)
 	src.modules += new /obj/item/weapon/gripper/circuit(src)
 	src.modules += new /obj/item/device/lightreplacer(src)
@@ -428,21 +427,8 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)
 	src.modules += new /obj/item/weapon/pickaxe/plasmacutter/borg(src)
 	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
-	src.modules += new /obj/item/weapon/holosign_creator/combifan(src) //CHOMPAdd
-=======
-	src.modules += new /obj/item/gripper(src)
-	src.modules += new /obj/item/gripper/circuit(src)
-	src.modules += new /obj/item/lightreplacer(src)
-	src.modules += new /obj/item/pipe_dispenser(src)
-	src.modules += new /obj/item/floor_painter(src)
-	src.modules += new /obj/item/rms(src)
-	src.modules += new /obj/item/inflatable_dispenser/robot(src)
-	src.emag += new /obj/item/melee/baton/robot/arm(src)
-	src.modules += new /obj/item/rcd/electric/mounted/borg(src)
-	src.modules += new /obj/item/pickaxe/plasmacutter/borg(src)
-	src.modules += new /obj/item/gripper/no_use/loader(src)
 	src.modules += new /obj/item/dogborg/stasis_clamp(src)
->>>>>>> 5c0c16e9f3... Merge pull request #16379 from Kashargul/EngiborgStasis
+	src.modules += new /obj/item/weapon/holosign_creator/combifan(src) //CHOMPAdd
 
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(40000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(40000)
