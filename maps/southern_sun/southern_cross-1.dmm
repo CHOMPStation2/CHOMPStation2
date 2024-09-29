@@ -561,6 +561,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock2)
 "acK" = (
@@ -1975,6 +1976,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock4)
 "ajD" = (
@@ -7209,8 +7211,7 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "SC-BDxenobiodivider1";
-	name = "Containment Divider Doors";
-	opacity = 0
+	name = "Containment Divider Doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
@@ -8701,6 +8702,7 @@
 	},
 /obj/machinery/door/airlock/angled_bay/external/glass/red,
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock5)
 "boC" = (
@@ -10145,6 +10147,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock3)
 "bMw" = (
@@ -10167,8 +10170,7 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/blast/regular{
 	id = "SC-BDxenobiovent3";
-	name = "Containment Vent Doors";
-	opacity = 0
+	name = "Containment Vent Doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
@@ -11716,6 +11718,7 @@
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock1)
 "cop" = (
@@ -17691,6 +17694,7 @@
 /obj/machinery/door/airlock/angled_bay/external/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock4)
 "dZl" = (
@@ -18346,8 +18350,7 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "SC-BDxenobiodivider2";
-	name = "Containment Divider Doors";
-	opacity = 0
+	name = "Containment Divider Doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
@@ -18425,6 +18428,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock1)
 "edU" = (
@@ -20430,6 +20434,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock4)
 "eQS" = (
@@ -21538,8 +21543,7 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/blast/regular{
 	id = "SC-BDxenobiovent4";
-	name = "Containment Vent Doors";
-	opacity = 0
+	name = "Containment Vent Doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
@@ -23377,6 +23381,7 @@
 	},
 /obj/machinery/door/airlock/angled_bay/external/glass/red,
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock4)
 "fUe" = (
@@ -25009,6 +25014,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock1)
 "gwX" = (
@@ -27851,6 +27857,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock4)
 "hAv" = (
@@ -30817,6 +30824,11 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Aft_1_Deck_Stairwell)
+"iFw" = (
+/obj/structure/lattice,
+/obj/machinery/shield_diffuser,
+/turf/space,
+/area/space)
 "iFL" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable{
@@ -33133,6 +33145,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock5)
 "jEl" = (
@@ -35586,6 +35599,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock2)
 "kyc" = (
@@ -37122,6 +37136,7 @@
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock2)
 "lbQ" = (
@@ -40614,6 +40629,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock5)
 "mma" = (
@@ -42535,6 +42551,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock5)
 "mPC" = (
@@ -43031,8 +43048,7 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/blast/regular{
 	id = "SC-BDxenobiovent2";
-	name = "Containment Vent Doors";
-	opacity = 0
+	name = "Containment Vent Doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
@@ -43271,6 +43287,7 @@
 	},
 /obj/machinery/door/airlock/angled_bay/external/glass/red,
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock3)
 "neh" = (
@@ -44327,6 +44344,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock1)
 "nBH" = (
@@ -44464,6 +44482,7 @@
 	pixel_y = -14
 	},
 /obj/machinery/door/airlock/angled_bay/external/glass,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock2)
 "nDP" = (
@@ -49230,6 +49249,7 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/angled_bay/external/glass,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock2)
 "pgb" = (
@@ -52694,6 +52714,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock3)
 "qlf" = (
@@ -60768,6 +60789,7 @@
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock4)
 "tdK" = (
@@ -62759,6 +62781,7 @@
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock3)
 "tOb" = (
@@ -63203,6 +63226,7 @@
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock1)
 "tXo" = (
@@ -66902,6 +66926,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock4)
 "vlb" = (
@@ -66996,6 +67021,7 @@
 /obj/effect/map_helper/airlock/button/ext_button{
 	pixel_y = -14
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock3)
 "vnD" = (
@@ -70170,8 +70196,7 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "SC-BDxenobiodivider3";
-	name = "Containment Divider Doors";
-	opacity = 0
+	name = "Containment Divider Doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
@@ -70795,8 +70820,7 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/blast/regular{
 	id = "SC-BDxenobiovent1";
-	name = "Containment Vent Doors";
-	opacity = 0
+	name = "Containment Vent Doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
@@ -71809,6 +71833,7 @@
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock5)
 "wXu" = (
@@ -84265,7 +84290,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -84524,7 +84549,7 @@ aaa
 aaa
 svz
 cVn
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -85234,7 +85259,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -85491,7 +85516,7 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 aCB
 otU
 aaa
@@ -87911,7 +87936,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aBe
 gwU
@@ -87950,7 +87975,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -88168,7 +88193,7 @@ aaa
 vuJ
 aaa
 aaa
-aaf
+iFw
 cmI
 aaf
 aBe
@@ -88207,9 +88232,9 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 cmI
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -94142,7 +94167,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -94399,9 +94424,9 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 cmI
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -96463,9 +96488,9 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 htS
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -96722,7 +96747,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -102720,7 +102745,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -102977,7 +103002,7 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 aCB
 eLm
 dKC
@@ -103236,7 +103261,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aHq
 adN
@@ -103948,7 +103973,7 @@ jLb
 wHM
 agL
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -104207,7 +104232,7 @@ xiM
 agL
 jlA
 fZW
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -106271,7 +106296,7 @@ xiM
 agL
 jlA
 deu
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -106528,7 +106553,7 @@ viE
 oSV
 agL
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -106848,7 +106873,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aHq
 adN
@@ -107105,7 +107130,7 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 aCB
 eLm
 dKC
@@ -107364,7 +107389,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -113750,7 +113775,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -114007,9 +114032,9 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 cmI
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -116071,9 +116096,9 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 htS
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -116330,7 +116355,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -121419,7 +121444,7 @@ kkp
 aaa
 qrA
 jhX
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -121676,7 +121701,7 @@ dWT
 lXX
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
@@ -122224,7 +122249,7 @@ aaa
 vuJ
 aaa
 aaa
-aaf
+iFw
 htS
 aaf
 oAw
@@ -122263,9 +122288,9 @@ aaa
 aaa
 aaa
 aaa
-aaf
+iFw
 din
-aaf
+iFw
 aaa
 aaa
 aaa
@@ -122483,7 +122508,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 cNg
 oAw
 vkS
@@ -122522,7 +122547,7 @@ aaa
 aaa
 aaa
 aaf
-aaf
+iFw
 aaf
 aaa
 aaa
