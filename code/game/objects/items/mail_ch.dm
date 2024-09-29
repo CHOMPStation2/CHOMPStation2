@@ -17,16 +17,16 @@
 	// Goodies which can be given to anyone.
 	// Weight sum will be 1000
 	var/list/generic_goodies = list(
-		/obj/item/weapon/spacecash/c50 = 145,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 130,
-		/obj/item/weapon/reagent_containers/food/snacks/chips = 130,
-		/obj/item/weapon/reagent_containers/food/drinks/coffee = 125,
-		/obj/item/weapon/reagent_containers/food/drinks/tea = 125,
-		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 100,
-		/obj/item/weapon/spacecash/c100 = 75,
-		/obj/item/weapon/spacecash/c200 = 50,
-		/obj/item/weapon/spacecash/c500 = 25,
-		/obj/item/weapon/spacecash/c1000 = 10,
+		/obj/item/weapon/spacecash/c50 = 75,
+		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 75,
+		/obj/item/weapon/reagent_containers/food/snacks/chips = 75,
+		/obj/item/weapon/reagent_containers/food/drinks/coffee = 75,
+		/obj/item/weapon/reagent_containers/food/drinks/tea = 75,
+		/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/nt = 50,
+		/obj/item/weapon/spacecash/c100 = 40,
+		/obj/item/weapon/spacecash/c200 = 25,
+		/obj/item/weapon/spacecash/c500 = 15,
+		/obj/item/weapon/spacecash/c1000 = 5,
 		/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee = 5
 	)
 	// Overlays (pure fluff)
@@ -339,7 +339,9 @@
 		/obj/item/smallDelivery,
 		/obj/item/weapon/paper,
 		/obj/item/stolenpackage,
-		/obj/item/contraband
+		/obj/item/contraband,
+		/obj/item/mail_scanner,
+		/obj/item/weapon/pen
 	)
 
 // Mail Scanner
@@ -415,7 +417,7 @@
 	var/obj/junk = /obj/item/weapon/paper/fluff/junkmail_generic
 	var/special_name = FALSE
 
-	if(prob(20))
+	if(prob(25))
 		special_name = TRUE
 		junk = pick(list(
 			/obj/item/weapon/paper/pamphlet/gateway,
@@ -432,7 +434,10 @@
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy,
 			/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki,
 			/obj/item/toy/figure,
-			/obj/item/contraband
+			/obj/item/contraband,
+			/obj/item/weapon/,
+			/obj/item/weapon/tool/screwdriver/sdriver,
+			/obj/item/weapon/storage/briefcase/target_toy
 		))
 
 	var/list/junk_names = list(
@@ -450,7 +455,9 @@
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
 		/obj/item/weapon/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
 		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC",
-		/obj/item/contraband = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]"
+		/obj/item/contraband = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]",
+		/obj/item/weapon/tool/screwdriver/sdriver = "[initial(name)] for Proffesor Who",
+		/obj/item/weapon/storage/briefcase/target_toy = "[initial(name)] for SIMPATHY, SUCCESS, MANHATTAN, BELIEFS"
 	)
 
 	name = special_name ? junk_names[junk] : "important [initial(name)]"

@@ -221,6 +221,11 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	if(!amt)
 		return 0
 
+	//CHOMNPAdd Start, deathbringers for example delete those before the fire damage is calculated
+	if(!vessel)
+		return 0
+	//CHOMPAdd End
+
 	var/current_blood = vessel.get_reagent_amount("blood")
 	if(current_blood < BLOOD_MINIMUM_STOP_PROCESS)
 		return 0 //We stop processing under 3 units of blood because apparently weird shit can make it overflowrandomly.

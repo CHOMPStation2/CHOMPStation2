@@ -1074,15 +1074,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "afY" = (
-/obj/effect/catwalk_plated/techmaint,
-/obj/machinery/porta_turret/crescent{
-	check_down = 0;
-	check_access = 0;
-	req_one_access = list(19);
-	desc = "A light weight energy turret design to be non-lethal, a deterrence against rowdy crew and deadly targets";
-	name = "Disabler turret";
-	faction = "nanotrasen"
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -1097,8 +1088,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Security/Transit_Turrets)
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "aga" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -1205,12 +1196,12 @@
 "agy" = (
 /obj/machinery/turretid/lethal{
 	ailock = 1;
-	check_synth = 1;
 	control_area = "\improper GravGen Room";
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "GravityGen lethal turret control";
 	pixel_y = 29;
-	req_access = null;
+	req_access = list(10);
+	check_records = 0;
 	req_one_access = list(17,11,24)
 	},
 /obj/structure/cable/green{
@@ -3564,7 +3555,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Public_EVA)
 "atu" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "atD" = (
@@ -3689,7 +3680,8 @@
 	name = "S-window tint control";
 	pixel_x = -12;
 	pixel_y = -26;
-	id = "sc-WTcustodian"
+	id = "sc-WTcustodian";
+	range = 10
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/borderfloorwhite,
@@ -4278,7 +4270,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Observation_Hall)
 "aye" = (
-/turf/simulated/floor/tiled,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Security/Exploration_Sling_Shuttle)
 "ayf" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -6123,17 +6120,16 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "aMv" = (
-/obj/effect/catwalk_plated/techmaint,
-/obj/machinery/porta_turret/crescent{
-	check_down = 0;
-	check_access = 0;
-	req_one_access = list(19);
-	desc = "A light weight energy turret design to be non-lethal, a deterrence against rowdy crew and deadly targets";
-	name = "Disabler turret";
-	faction = "nanotrasen"
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Security/Transit_Turrets)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Harbor/Dock2)
 "aMD" = (
 /obj/item/device/radio/intercom{
 	dir = 8;
@@ -9354,6 +9350,11 @@
 /area/SouthernCrossV2/Engineering/Telecomms_Control_Room)
 "bzS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "bzT" = (
@@ -11492,10 +11493,6 @@
 	pixel_y = 9;
 	pixel_x = -7
 	},
-/obj/item/device/t_scanner/advanced{
-	pixel_y = 4;
-	pixel_x = 1
-	},
 /obj/item/clothing/mask/gas{
 	pixel_y = -5;
 	pixel_x = 6
@@ -11524,6 +11521,10 @@
 	},
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
+	},
+/obj/item/device/t_scanner{
+	pixel_y = 5;
+	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Harbor/Fueling_Storage)
@@ -12128,6 +12129,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Stairwell_Port)
+"cxF" = (
+/obj/structure/closet/crate/mimic/closet/cointoss,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "cxK" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -12456,7 +12461,8 @@
 	id = "sc-GCxenoflora";
 	name = "Reception Shutters Control";
 	pixel_y = -24;
-	req_access = list(28)
+	req_access = list(55);
+	req_one_access = list(47)
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -13293,6 +13299,11 @@
 /obj/effect/floor_decal/techfloor/orange,
 /obj/effect/floor_decal/techfloor/hole/right,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "cSV" = (
@@ -15842,6 +15853,10 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Security/Exploration_Ship_Bay)
+"dLd" = (
+/obj/structure/inflatable,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "dLu" = (
 /obj/machinery/firealarm{
 	pixel_y = 25;
@@ -15995,7 +16010,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "dMY" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "dNp" = (
@@ -16051,6 +16065,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/camera/network/security{
+	dir = 6;
+	c_tag = "D1-Sec-forlockeroom1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/For_Locker_Room)
 "dOW" = (
@@ -19437,7 +19455,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "ezj" = (
 /obj/machinery/atmospherics/binary/pump,
@@ -20237,6 +20255,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Market_Stall_5)
+"eNj" = (
+/obj/structure/grille/rustic,
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "eNk" = (
 /obj/machinery/ai_status_display{
 	name = "1E-AI display";
@@ -22802,6 +22824,10 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarChamber2)
+"fKp" = (
+/obj/random/crate,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "fKF" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
@@ -22878,7 +22904,6 @@
 "fMi" = (
 /obj/machinery/turretid/lethal{
 	ailock = 1;
-	check_synth = 1;
 	control_area = "\improper Telecomms Control Room";
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "Telecoms Control Room Turret Control";
@@ -24799,6 +24824,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4;
 	color = "#989898"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
@@ -29180,17 +29210,10 @@
 /turf/simulated/floor/airless,
 /area/shuttle/escape_pod8/station)
 "icV" = (
-/obj/machinery/porta_turret/crescent{
-	check_down = 0;
-	check_access = 0;
-	req_one_access = list(19);
-	desc = "A light weight energy turret design to be non-lethal, a deterrence against rowdy crew and deadly targets";
-	name = "Disabler turret";
-	faction = "nanotrasen"
-	},
-/obj/effect/catwalk_plated/techmaint,
+/obj/random/trash,
+/obj/random/junk,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Security/Transit_Turrets)
+/area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1)
 "idc" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 28;
@@ -30311,6 +30334,11 @@
 /obj/effect/floor_decal/techfloor/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
@@ -31879,7 +31907,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "jge" = (
 /obj/machinery/door/firedoor/border_only,
@@ -37662,6 +37690,11 @@
 	dir = 4;
 	color = "#989898"
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "llQ" = (
@@ -38524,17 +38557,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/porta_turret/crescent{
-	check_down = 0;
-	check_access = 0;
-	req_one_access = list(19);
-	desc = "A light weight energy turret design to be non-lethal, a deterrence against rowdy crew and deadly targets";
-	name = "Disabler turret";
-	faction = "nanotrasen"
-	},
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Security/Transit_Turrets)
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Security/Exploration_Sling_Shuttle)
 "lBJ" = (
 /obj/structure/railing/grey,
 /obj/random/junk,
@@ -39306,7 +39330,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "lQi" = (
 /obj/structure/cable/green{
@@ -39695,6 +39719,11 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Distro_Harbor)
+"lUC" = (
+/obj/random/trash_pile,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "lVd" = (
 /obj/structure/table/rack/shelf,
 /obj/random/maintenance,
@@ -41802,6 +41831,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
@@ -43922,6 +43956,10 @@
 /obj/effect/floor_decal/corner/pink/bordercorner{
 	dir = 1
 	},
+/obj/machinery/camera/network/security{
+	dir = 5;
+	c_tag = "D1-Sec-explorationsling1"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Exploration_Sling_Shuttle)
 "nui" = (
@@ -44160,7 +44198,7 @@
 	control_area = "\improper Telecomms Foyer";
 	name = "Telecomms Teleporter turret control";
 	pixel_x = 28;
-	req_access = null;
+	req_access = list(10);
 	req_one_access = list(17,11,24)
 	},
 /obj/machinery/camera/network/security{
@@ -44188,7 +44226,6 @@
 /turf/simulated/floor/grass,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "nzv" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "nzy" = (
@@ -45709,6 +45746,10 @@
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
+"nZp" = (
+/obj/structure/closet/crate/mimic/closet/cointoss,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "nZu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -45814,6 +45855,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1)
+"oaQ" = (
+/obj/structure/inflatable,
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "oaR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -46535,6 +46580,7 @@
 /area/SouthernCrossV2/Maints/Market_Stall_3)
 "ool" = (
 /obj/structure/loot_pile/maint/technical,
+/obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "oov" = (
@@ -50446,21 +50492,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/grass2,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
-"pzH" = (
-/obj/effect/catwalk_plated/techmaint,
-/obj/machinery/porta_turret/crescent{
-	check_down = 0;
-	check_access = 0;
-	req_one_access = list(19);
-	desc = "A light weight energy turret design to be non-lethal, a deterrence against rowdy crew and deadly targets";
-	name = "Disabler turret";
-	faction = "nanotrasen"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Security/Transit_Turrets)
 "pzK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -50797,6 +50828,7 @@
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "pFA" = (
 /obj/structure/loot_pile/maint/technical,
+/obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1)
 "pFH" = (
@@ -51194,7 +51226,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "pML" = (
-/obj/structure/closet/crate/mimic/closet/dangerous,
+/obj/structure/closet/crate/mimic/closet/safe,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "pNX" = (
@@ -51345,10 +51377,7 @@
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 6
 	},
-/obj/structure/table/steel{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/structure/table/steel,
 /obj/item/device/lightreplacer,
 /obj/item/device/lightreplacer,
 /turf/simulated/floor/tiled/dark,
@@ -52079,7 +52108,7 @@
 	layer = 3;
 	name = "1W-light fixture"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "pYM" = (
 /obj/structure/cable/green{
@@ -52364,17 +52393,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/porta_turret/crescent{
-	check_down = 0;
-	check_access = 0;
-	req_one_access = list(19);
-	desc = "A light weight energy turret design to be non-lethal, a deterrence against rowdy crew and deadly targets";
-	name = "Disabler turret";
-	faction = "nanotrasen"
-	},
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Security/Transit_Turrets)
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Harbor/Dock3)
 "qfl" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -54679,7 +54699,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarChamber2)
 "qVj" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "qVn" = (
@@ -57028,8 +57047,10 @@
 	dir = 5
 	},
 /obj/machinery/power/emitter/antique{
-	dir = 4
+	dir = 4;
+	anchored = 1
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "rKl" = (
@@ -59613,17 +59634,8 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/effect/catwalk_plated/techmaint,
-/obj/machinery/porta_turret/crescent{
-	check_down = 0;
-	check_access = 0;
-	req_one_access = list(19);
-	desc = "A light weight energy turret design to be non-lethal, a deterrence against rowdy crew and deadly targets";
-	name = "Disabler turret";
-	faction = "nanotrasen"
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Security/Transit_Turrets)
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Harbor/Dock5)
 "sHO" = (
 /obj/structure/disposalpipe/trunk,
 /obj/structure/disposalpipe/segment{
@@ -60536,31 +60548,10 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock5)
 "sZu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/catwalk_plated/techmaint,
-/obj/machinery/porta_turret/crescent{
-	check_down = 0;
-	check_access = 0;
-	req_one_access = list(19);
-	desc = "A light weight energy turret design to be non-lethal, a deterrence against rowdy crew and deadly targets";
-	name = "Disabler turret";
-	faction = "nanotrasen"
-	},
+/obj/random/trash_pile,
+/obj/random/trash,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Security/Transit_Turrets)
+/area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1)
 "sZx" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -61500,6 +61491,11 @@
 "trg" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/purple,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "tri" = (
@@ -64216,6 +64212,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "uqm" = (
@@ -65201,7 +65202,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_SportsField)
 "uIl" = (
-/obj/structure/grille/rustic,
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "uIn" = (
@@ -66190,7 +66190,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "vba" = (
 /obj/structure/loot_pile/maint/technical,
@@ -66622,10 +66622,10 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor1)
 "vig" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Distro_Harbor)
@@ -67597,6 +67597,11 @@
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Telecomms_Foyer)
+"vxE" = (
+/obj/random/trash_pile,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "vxR" = (
 /obj/machinery/telecomms/server/presets/medical,
 /obj/effect/catwalk_plated/dark,
@@ -67627,10 +67632,6 @@
 	pixel_y = 9;
 	pixel_x = -7
 	},
-/obj/item/device/t_scanner/advanced{
-	pixel_y = 4;
-	pixel_x = 1
-	},
 /obj/item/clothing/mask/gas{
 	pixel_y = -5;
 	pixel_x = 6
@@ -67650,6 +67651,10 @@
 /obj/item/taperoll/atmos{
 	pixel_y = 14;
 	pixel_x = 6
+	},
+/obj/item/device/t_scanner{
+	pixel_y = 5;
+	pixel_x = 2
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Distro_Harbor)
@@ -69356,7 +69361,7 @@
 	color = "#00B8B2"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "way" = (
 /obj/structure/cable/green{
@@ -71477,6 +71482,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Science_AftCorridor1)
+"wRG" = (
+/obj/structure/loot_pile/maint/junk,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "wRK" = (
 /obj/machinery/disposal,
 /obj/structure/window/reinforced,
@@ -71870,6 +71880,11 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
@@ -72491,6 +72506,10 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
+"xiB" = (
+/obj/structure/inflatable,
+/turf/simulated/wall/r_wall,
+/area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "xiM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1
@@ -74244,7 +74263,7 @@
 	},
 /area/SouthernCrossV2/Science/Observation_Hall)
 "xTt" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
 /turf/simulated/floor/plating,
@@ -91184,7 +91203,7 @@ vjR
 jbI
 arO
 ezl
-aaM
+oaQ
 dMY
 pYC
 lOW
@@ -91697,7 +91716,7 @@ dFh
 pfi
 bCu
 trr
-pzH
+fxn
 trr
 fxn
 oZp
@@ -92796,7 +92815,7 @@ cfp
 tXo
 eJf
 tZf
-icV
+azD
 gkN
 azD
 jEl
@@ -96668,7 +96687,7 @@ vGQ
 dDr
 akk
 vDr
-qfh
+aMv
 lQq
 act
 aaa
@@ -99718,9 +99737,9 @@ amv
 bEi
 rFW
 clF
-rFW
+fKp
 iEM
-bEi
+vxE
 clF
 nfT
 bEi
@@ -100230,15 +100249,15 @@ viJ
 auk
 egX
 clF
-bEi
+nZp
 bEi
 skE
 clF
 lpr
 bEi
-bEi
+vxE
 clF
-rFW
+fKp
 bEi
 amv
 clF
@@ -100750,7 +100769,7 @@ eoU
 neE
 neE
 lZZ
-neE
+lUC
 neE
 urf
 lZZ
@@ -101268,9 +101287,9 @@ neE
 lZZ
 iBa
 hrD
-xjZ
+wRG
 lZZ
-neE
+cxF
 eJN
 urf
 lZZ
@@ -103118,7 +103137,7 @@ hbs
 dZJ
 kOh
 aMb
-aMv
+aMb
 aMb
 aMb
 qoL
@@ -103308,7 +103327,7 @@ jYA
 mNn
 fgr
 jYA
-jYP
+eNj
 jYP
 oJV
 abF
@@ -103529,7 +103548,7 @@ fMw
 fHV
 mwb
 nIQ
-icV
+xVH
 qsy
 eZh
 lok
@@ -103766,7 +103785,7 @@ bhd
 tqg
 mFe
 aQY
-aMv
+aQY
 aQY
 qSB
 tpj
@@ -105154,7 +105173,7 @@ uHz
 qyi
 dYv
 aTh
-sZu
+aVg
 frW
 xes
 rnA
@@ -106869,7 +106888,7 @@ iAD
 emE
 saS
 emE
-cnK
+dLd
 qVj
 jfT
 tFa
@@ -107246,7 +107265,7 @@ pTA
 iEc
 aNe
 qOv
-aMv
+qOv
 qOv
 qOv
 qgY
@@ -115192,11 +115211,11 @@ wHn
 ayY
 azQ
 oIK
-pgz
-oIK
+icV
+icV
 dem
-oIK
-oIK
+dem
+icV
 pgz
 mkY
 oIK
@@ -115449,10 +115468,10 @@ xQV
 tBL
 dqQ
 mkY
-oIK
-oIK
+sZu
+sZu
 pFA
-pgz
+icV
 kNJ
 fXm
 hNA
@@ -117564,7 +117583,7 @@ wOk
 aVp
 nME
 wPB
-icV
+eKQ
 gAk
 eKQ
 bCX
@@ -118529,7 +118548,7 @@ lKt
 kSY
 kZc
 wya
-pzH
+kZc
 fTv
 kZc
 lAG
@@ -119048,7 +119067,7 @@ lxD
 nse
 uBF
 qFn
-qFn
+xiB
 nzv
 wax
 sHO

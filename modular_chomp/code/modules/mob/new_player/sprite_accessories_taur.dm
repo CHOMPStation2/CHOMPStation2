@@ -83,6 +83,7 @@
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
 	fullness_icons = 3
+	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/ch/sergal/fatwheaties
 	name = "Fat Sergal (Taur)"
@@ -90,6 +91,7 @@
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
 	fullness_icons = 3
+	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/ch/sergal/wheaties_2c
 	name = "Sergal (Taur, dual-color)"
@@ -98,6 +100,7 @@
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
 	fullness_icons = 3
+	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/ch/sergal/fatwheaties_2c
 	name = "Fat Sergal (Taur, dual-color)"
@@ -106,6 +109,7 @@
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
 	fullness_icons = 3
+	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/ch/longvirus
 	name = "Long Virus (Taur)"
@@ -131,6 +135,7 @@
 	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
 	vore_tail_sprite_variant = "SectDrone"
 	belly_variant_when_loaf = TRUE
+	struggle_anim = TRUE
 	loaf_offset = 3
 	fullness_icons = 3
 

@@ -35,10 +35,11 @@
 	var/icon/mainOverlay = new/icon('icons/effects/crayondecal.dmi',"[art_type]",2.1)
 	var/icon/shadeOverlay = new/icon('icons/effects/crayondecal.dmi',"[art_type]s",2.1)
 
-	mainOverlay.Blend(art_color,ICON_ADD)
-	shadeOverlay.Blend(art_shade,ICON_ADD)
+	if(mainOverlay && shadeOverlay)
+		mainOverlay.Blend(art_color,ICON_ADD)
+		shadeOverlay.Blend(art_shade,ICON_ADD)
 
-	add_overlay(mainOverlay)
-	add_overlay(shadeOverlay)
+		add_overlay(mainOverlay)
+		add_overlay(shadeOverlay)
 	return
 // CHOMPEdit End

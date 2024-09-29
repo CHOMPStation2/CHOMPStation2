@@ -241,3 +241,26 @@
   - maptweak: Removed floating medbay chunk
   - maptweak: Xenobio airlocks work now
   - bugfix: Fixes radio being broadcasted twice
+2024-09-26:
+  Kashargul:
+  - bugfix: some runtimes
+2024-09-27:
+  TheCaramelion:
+  - bugfix: Food replicator will use the right amount of nutriment
+2024-09-28:
+  CHOMPStation2:
+  - bugfix: Conveyors no longer move jan hud objects
+  - rscadd: You can now dissipate AI holograms by attacking them.
+  - qol: laserdome now has holoprojectors to provide some info about the location
+      and the two arenas, also added floor markings and touched up the stores and
+      restaurant, plus some other touchups
+  Kashargul:
+  - bugfix: PA crates will only check for either CE or science access
+  TheCaramelion:
+  - code_imp: Graffitis make sure there's an icon before attempting to Blend()
+2024-09-29:
+  Kashargul:
+  - qol: moves captured soul projections to a new plane
+  - bugfix: soulcatcher SR vision
+  - rscadd: ATMOS holo-combifan projector to engiborgs
+  - rscadd: PENLITE barrier projector to crisisborgs

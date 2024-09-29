@@ -8,8 +8,9 @@
 #define VIS_AUGMENTED		32
 
 #define VIS_CH_STOMACH		33
+#define VIS_SOULCATCHER		34 // CHOMPAdd
 
-#define VIS_COUNT			33
+#define VIS_COUNT			34
 
 //Protean organs
 #define O_ORCH		"orchestrator"
