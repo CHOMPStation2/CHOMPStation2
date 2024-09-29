@@ -742,18 +742,13 @@
 			log_and_message_admins("[key_name(target)] replied to [user]'s message: [reply].")
 
 		if("stop-orbits")
-<<<<<<< HEAD
 			//CHOMPEdit Start
 			if(target.orbiters)
 				qdel(target.orbiters)
 			//CHOMPEdit End
-=======
-			for(var/datum/orbit/X in target.orbiters)
-				X.orbiter.stop_orbit()
 
 		if("revert-mob-tf")
 			var/mob/living/Tar = target
 			if(!istype(Tar))
 				return
 			Tar.revert_mob_tf()
->>>>>>> 4322c13c2f... Merge pull request #16373 from SatinIsle/Mob-TF-smite
