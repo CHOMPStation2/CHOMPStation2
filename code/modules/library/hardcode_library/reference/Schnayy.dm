@@ -49,11 +49,7 @@ CATEGORY: Reference
 					<br>
 					Phoron research and study is a vital subject of research -- it has been a pillar of humanity's progress, a staple of the technology that has shaped our society. To work on expanding our knowledge and shape our future in the cosmos is a noble cause, but it should be done with caution.
 					<br><br>
-<<<<<<< HEAD
 					This is not to speak on safety in your lab, but the consequences of action. Many times has man created the unthinkable, and many times we have not been prepared for such discoveries. We should not censor ourselves from advancement, but we should shape the world to be ready for what comes with it – and know that it is an invariable consequence there will be those who seek to abuse it.
-=======
-					This is not to speak on safety in your lab, but the consequences of action. Many times has man created the unthinkable, and many times we have not been prepared for such discoveries. We should not censor ourselves from advancement, but we should shape the world to be ready for what comes with it � and know that it is an invariable consequence there will be those who seek to abuse it.
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					<br><br>
 					You cannot take back what you give to the world.
 					</div>

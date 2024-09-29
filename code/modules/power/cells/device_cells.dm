@@ -82,7 +82,7 @@
 	. = ..()
 	charge = 0
 	update_icon()
-	
+
 //Yawn Changes
 /obj/item/cell/device/weapon //Aka adv
 	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
@@ -92,7 +92,6 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 2)
 
-<<<<<<< HEAD
 /obj/item/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
@@ -102,9 +101,6 @@
 	origin_tech = list(TECH_POWER = 3)
 
 /obj/item/cell/device/super/empty/Initialize()
-=======
-/obj/item/cell/device/weapon/empty/Initialize()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	. = ..()
 	charge = 0
 	update_icon()
@@ -116,18 +112,18 @@
 	maxcharge = 4800
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
-	
+
 /obj/item/cell/device/hyper/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
 //End of Yawn changes
-	
+
 //CHOMP Add begin
 /obj/item/cell/device/giga //CHOMP Add: Why not? Lets add a new one. Lets put the new sprites to use.
 	name = "giga device power cell"
 	desc = "A small power cell that holds a blistering amount of energy, constructed by clever scientists using secrets gleaned from alien technology."
-	icon_state = "cap_weapon_cell" 
+	icon_state = "cap_weapon_cell"
 	maxcharge = 6000
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
@@ -201,7 +197,6 @@
 	charge_delay = 50 // Every five seconds, bit faster than the default.
 	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6)
 
-<<<<<<< HEAD
 /obj/item/cell/device/weapon/recharge/alien/update_icon()
 	return // No overlays please.
 
@@ -217,7 +212,3 @@
 /obj/item/cell/device/weapon/recharge/alien/omni/empty/Initialize()
 	. = ..()
 	charge = 0
-=======
-/obj/item/cell/device/weapon/recharge/alien/update_icon()
-	return // No overlays please.
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

@@ -125,8 +125,6 @@
 	ckeywhitelist = list("arokha")
 	character_name = list("Aronai Sieyes")
 
-<<<<<<< HEAD
-=======
 /datum/gear/fluff/astra_ritualknife
 	path = /obj/item/material/knife/ritual/fluff/astra
 	display_name = "Polished Ritual Knife"
@@ -146,7 +144,6 @@
 	ckeywhitelist = list("astraether")
 	character_name = list("Astra Ether")
 
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /datum/gear/fluff/collar/azura
 	path = /obj/item/clothing/accessory/collar/azura
 	display_name = "collar, Azura"
@@ -402,15 +399,12 @@
 	ckeywhitelist = list("erikthedog")
 	character_name = list("Erik Ramadwood")
 
-<<<<<<< HEAD
-=======
 /datum/gear/fluff/salvage_id
 	path = /obj/item/card/id/event/polymorphic/itg
 	display_name = "Salvage's ITG-ID card"
 	ckeywhitelist = list("essbie")
 	character_name = list("Savage")
 
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 //  F CKEYS
 /datum/gear/fluff/yikatihaki_armor
 	path = /obj/item/clothing/suit/armor/vox_scrap

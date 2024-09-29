@@ -91,13 +91,8 @@
 	required = /obj/item/slime_extract/grey
 
 /decl/chemical_reaction/instant/slime/grey_monkey/on_reaction(var/datum/reagents/holder)
-<<<<<<< HEAD
 	for(var/i = 1 to 5) //CHOMPedit  Increased number of monkey cubes from 4 to 5
 		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
-=======
-	for(var/i = 1 to 4)
-		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	..()
 
 /decl/chemical_reaction/instant/slime/grey_slimejelly

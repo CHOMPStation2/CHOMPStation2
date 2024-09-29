@@ -65,7 +65,6 @@
 	darkness = 1-brightness //Invert
 
 	var/watcher = 0
-<<<<<<< HEAD
 	//Chompedit start - Nerf to phasing
 	for(var/thing in orange(7, src))
 		if(istype(thing, /mob/living/carbon/human))
@@ -85,12 +84,6 @@
 					watcher++	//The camera is watching us!
 	//CHOMPedit end
 
-=======
-	for(var/mob/living/carbon/human/watchers in oview(7,src ))	// If we can see them...
-		if(watchers in oviewers(7,src))	// And they can see us...
-			if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/holder))	// And they are alive and not being held by someone...
-				watcher++	// They are watching us!
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	ability_cost = CLAMP(ability_cost/(0.01+darkness*2),50, 80)//This allows for 1 watcher in full light
 	if(watcher>0)

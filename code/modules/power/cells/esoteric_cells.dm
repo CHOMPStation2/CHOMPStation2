@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 //CHOMP Disabled in DME in favor of modular_chomp folder
 /obj/item/cell/spike
-=======
-
-/obj/item/cell/spike
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "modified power cell"
 	desc = "A modified power cell sitting in a highly conductive chassis."
 	origin_tech = list(TECH_POWER = 2)

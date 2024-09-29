@@ -31,8 +31,6 @@
 /hook/clone
 
 /**
-<<<<<<< HEAD
-=======
  * Debrained hook.
  * Called in brain_item.dm when someone gets debrained.
  * Parameters: var/obj/item/organ/brain
@@ -89,7 +87,6 @@
 /hook/sell_crate
 
 /**
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
  * Supply Shuttle sold hook.
  * Called in supplyshuttle.dm when the shuttle contents are sold.
  * This hook is called _before_ the crates are processed for normal
