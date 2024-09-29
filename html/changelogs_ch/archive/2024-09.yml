@@ -258,3 +258,9 @@
   - bugfix: PA crates will only check for either CE or science access
   TheCaramelion:
   - code_imp: Graffitis make sure there's an icon before attempting to Blend()
+2024-09-29:
+  Kashargul:
+  - qol: moves captured soul projections to a new plane
+  - bugfix: soulcatcher SR vision
+  - rscadd: ATMOS holo-combifan projector to engiborgs
+  - rscadd: PENLITE barrier projector to crisisborgs
