@@ -277,9 +277,10 @@
 
 /obj/item/weapon/card/id/cargo/miner/borg/Initialize()
 	. = ..()
-	R = loc.loc
-	registered_name = R.braintype
-	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
+	if(isrobot(loc?.loc))
+		R = loc.loc
+		registered_name = R.braintype
+		RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
 
 /obj/item/weapon/card/id/cargo/miner/borg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
 	if(old_loc == R || old_loc == R.module)
@@ -293,8 +294,16 @@
 		if(loc == R)
 			hud_layerise()
 
+<<<<<<< HEAD
 /obj/item/weapon/card/id/cargo/miner/borg/Destroy()
 	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
 	R = null
 	last_robot_loc = null
+=======
+/obj/item/card/id/cargo/miner/borg/Destroy()
+	if(R)
+		UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
+		R = null
+		last_robot_loc = null
+>>>>>>> 29b6373436... Merge pull request #16382 from Kashargul/agentIdRuntime
 	..()
