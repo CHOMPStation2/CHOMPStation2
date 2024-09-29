@@ -27,12 +27,12 @@
 	"}
 
 // A book that links to the wiki
-/obj/item/weapon/book/manual/wiki
+/obj/item/book/manual/wiki
 	dat = "Nanotrasen presently does not have any resources on this topic. If you would like to know more, contact your local Central Command representative." // safety
 	/// The ending URL of the page that we link to.
 	var/page_link = ""
 
-/obj/item/weapon/book/manual/wiki/display_content(mob/living/user)
+/obj/item/book/manual/wiki/display_content(mob/living/user)
 	var/wiki_url = CONFIG_GET(string/wikiurl)
 	if(!wiki_url)
 		//user.balloon_alert(user, "this book is empty!")
@@ -42,7 +42,7 @@
 	//credit_book_to_reader(user)
 	DIRECT_OUTPUT(user, browse(WIKI_PAGE_IFRAME(wiki_url, page_link), "window=manual;size=[BOOK_WINDOW_BROWSE_SIZE]")) // if you change this GUARANTEE that it works.
 
-/obj/item/weapon/book/manual/wiki/engineering_construction
+/obj/item/book/manual/wiki/engineering_construction
 	name = "Station Repairs and Construction"
 	icon_state ="bookEngineering"
 	item_state = "book3"
@@ -51,7 +51,7 @@
 
 	page_link = "Guide_to_Construction"
 
-/obj/item/weapon/book/manual/wiki/engineering_hacking
+/obj/item/book/manual/wiki/engineering_hacking
 	name = "Hacking"
 	icon_state ="bookHacking"
 	item_state = "book2"
@@ -60,7 +60,7 @@
 
 	page_link = "Hacking"
 
-/obj/item/weapon/book/manual/wiki/robotics_manual
+/obj/item/book/manual/wiki/robotics_manual
 	name = "Guide to Robotics"
 	icon_state ="evabook"
 	item_state = "book3"
@@ -69,7 +69,7 @@
 
 	page_link = "Guide_to_Robotics"
 
-/obj/item/weapon/book/manual/wiki/security_space_law
+/obj/item/book/manual/wiki/security_space_law
 	name = "Corporate Regulations"
 	desc = "A set of corporate guidelines for keeping law and order on privately-owned space stations."
 	icon_state = "bookSpaceLaw"
@@ -79,7 +79,7 @@
 
 	page_link = "Corporate_Regulations"
 
-/obj/item/weapon/book/manual/wiki/medical_diagnostics_manual
+/obj/item/book/manual/wiki/medical_diagnostics_manual
 	name = "Medical Diagnostics Manual"
 	desc = "First, do no harm. A detailed medical practitioner's guide."
 	icon_state = "bookMedical"
@@ -87,7 +87,7 @@
 	author = "Medical Department"
 	title = "Medical Diagnostics Manual"
 
-/obj/item/weapon/book/manual/wiki/medical_diagnostics_manual/display_content(mob/living/user)
+/obj/item/book/manual/wiki/medical_diagnostics_manual/display_content(mob/living/user)
 	var/wiki_url = CONFIG_GET(string/wikiurl)
 	if(!wiki_url)
 		//user.balloon_alert(user, "this book is empty!")
@@ -135,7 +135,7 @@
 	//credit_book_to_reader(user)
 	DIRECT_OUTPUT(user, browse(dat, "window=manual;size=[BOOK_WINDOW_BROWSE_SIZE]")) // if you change this GUARANTEE that it works.
 
-/obj/item/weapon/book/manual/wiki/engineering_guide
+/obj/item/book/manual/wiki/engineering_guide
 	name = "Engineering Textbook"
 	icon_state ="bookEngineering2"
 	item_state = "book3"

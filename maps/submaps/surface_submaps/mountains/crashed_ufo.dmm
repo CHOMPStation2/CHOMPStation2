@@ -42,7 +42,7 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "al" = (
-/obj/item/weapon/tool/wrench/alien,
+/obj/item/tool/wrench/alien,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "am" = (
@@ -67,7 +67,7 @@
 /area/submap/cave/crashed_ufo)
 "ar" = (
 /obj/structure/table/alien,
-/obj/item/weapon/paper/alien{
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
@@ -87,7 +87,7 @@
 /area/submap/cave/crashed_ufo)
 "av" = (
 /obj/structure/table/alien,
-/obj/item/weapon/paper/alien{
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
@@ -122,11 +122,11 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aB" = (
-/obj/item/weapon/tool/screwdriver/alien,
+/obj/item/tool/screwdriver/alien,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aC" = (
-/obj/item/weapon/tool/wirecutters/alien,
+/obj/item/tool/wirecutters/alien,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aD" = (
@@ -134,7 +134,7 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aE" = (
-/obj/item/device/multitool/alien,
+/obj/item/multitool/alien,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aF" = (
@@ -166,7 +166,7 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aK" = (
-/obj/item/weapon/tool/crowbar/alien,
+/obj/item/tool/crowbar/alien,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aL" = (
@@ -180,11 +180,11 @@
 /area/submap/cave/crashed_ufo)
 "aN" = (
 /obj/structure/table/alien,
-/obj/item/weapon/paper/alien{
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
-/obj/item/device/gps/internal/poi,
+/obj/item/gps/internal/poi,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aO" = (
@@ -201,7 +201,7 @@
 /area/submap/cave/crashed_ufo)
 "aQ" = (
 /obj/structure/table/alien,
-/obj/item/weapon/weldingtool/alien,
+/obj/item/weldingtool/alien,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "aR" = (
@@ -214,7 +214,7 @@
 /area/submap/cave/crashed_ufo)
 "aT" = (
 /obj/structure/closet/alien,
-/obj/item/weapon/paper/alien,
+/obj/item/paper/alien,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/cave/crashed_ufo)
 "aU" = (
@@ -228,21 +228,21 @@
 /area/submap/cave/crashed_ufo)
 "aW" = (
 /obj/structure/table/alien,
-/obj/item/weapon/surgical/circular_saw/alien,
+/obj/item/surgical/circular_saw/alien,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/cave/crashed_ufo)
 "aX" = (
 /obj/structure/table/alien,
-/obj/item/weapon/surgical/FixOVein/alien,
+/obj/item/surgical/FixOVein/alien,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/cave/crashed_ufo)
 "aY" = (
 /obj/structure/table/alien,
-/obj/item/weapon/surgical/scalpel/alien,
+/obj/item/surgical/scalpel/alien,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/cave/crashed_ufo)
 "aZ" = (
-/obj/item/weapon/surgical/hemostat/alien,
+/obj/item/surgical/hemostat/alien,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/cave/crashed_ufo)
 "ba" = (
@@ -259,7 +259,7 @@
 /area/submap/cave/crashed_ufo)
 "bd" = (
 /obj/structure/table/alien,
-/obj/item/weapon/surgical/bone_clamp/alien,
+/obj/item/surgical/bone_clamp/alien,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/cave/crashed_ufo)
 "be" = (
@@ -293,7 +293,7 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bk" = (
-/obj/item/weapon/cell/device/weapon/empty,
+/obj/item/cell/device/weapon/empty,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bl" = (
@@ -304,21 +304,21 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bm" = (
-/obj/item/weapon/gun/energy/retro/empty,
+/obj/item/gun/energy/retro/empty,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bn" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	gps_tag = "COMDOM1"
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bo" = (
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/used,
+/obj/item/reagent_containers/hypospray/autoinjector/used,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bp" = (
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/burn,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/burn,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bq" = (
@@ -332,8 +332,8 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bs" = (
-/obj/item/weapon/storage/belt/utility/full,
-/obj/item/device/multitool,
+/obj/item/storage/belt/utility/full,
+/obj/item/multitool,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/cave/crashed_ufo)
 "bt" = (

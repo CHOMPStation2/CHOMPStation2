@@ -34,9 +34,9 @@
 "w" = (
 /obj/structure/table/sifwooden_reinforced,
 <<<<<<< HEAD
-/obj/item/device/bluespaceradio/southerncross_prelinked,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/binoculars,
+/obj/item/bluespaceradio/southerncross_prelinked,
+/obj/item/storage/mre/random,
+/obj/item/binoculars,
 =======
 /obj/item/storage/mre/random,
 /obj/item/binoculars,

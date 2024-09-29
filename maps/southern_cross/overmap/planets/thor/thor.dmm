@@ -132,7 +132,7 @@
 /turf/simulated/floor/lino,
 /area/surface/thor/abandonedhouse)
 "br" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 5;
 	pixel_y = 3
 	},
@@ -210,12 +210,12 @@
 /area/surface/outside/thor/pool)
 "bZ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/shovel,
-/obj/item/weapon/shovel,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/shovel,
+/obj/item/shovel,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
 "ci" = (
@@ -313,7 +313,7 @@
 /area/surface/thor/abandonedhouse)
 "dx" = (
 /obj/structure/girder,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
 	},
@@ -326,7 +326,7 @@
 	},
 /area/surface/outside/thor/jungle)
 "dB" = (
-/obj/item/device/binoculars/spyglass,
+/obj/item/binoculars/spyglass,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
 "dE" = (
@@ -366,7 +366,7 @@
 	},
 /area/surface/thor/commstower)
 "dL" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/wood{
 	temperature = 313;
 	nitrogen = 63.4124;
@@ -408,7 +408,7 @@
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
 "ek" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /obj/structure/railing,
@@ -473,7 +473,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/reagent_containers/glass/beaker/measuring_cup,
 /turf/simulated/floor/tiled/white,
 /area/surface/thor/kitchen)
 "eV" = (
@@ -485,7 +485,7 @@
 /turf/simulated/floor/outdoors/grass/forest/thor,
 /area/surface/outside/thor/jungle)
 "fa" = (
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /obj/machinery/button/remote/airlock{
 	id = "thorpool2";
 	name = "Door Bolt Control";
@@ -519,7 +519,7 @@
 /area/surface/outside/thor/jungle)
 "fx" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/clown,
+/obj/item/flashlight/lamp/clown,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor{
 	outdoors = 0
 	},
@@ -661,9 +661,9 @@
 /area/surface/outside/thor/jungle)
 "hk" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/reagent_containers/glass/rag,
-/obj/item/weapon/book/manual/barman_recipes,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/book/manual/barman_recipes,
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
 "hp" = (
@@ -759,7 +759,7 @@
 /area/surface/outside/thor/ocean)
 "id" = (
 /obj/structure/prop/desert_planet64x64/lribs,
-/obj/item/weapon/bone/leg,
+/obj/item/bone/leg,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "ih" = (
@@ -831,7 +831,7 @@
 /area/surface/outside/thor/landingpad)
 "iL" = (
 /obj/structure/prop/desert_planet64x64/lribs,
-/obj/item/weapon/bone/skull/unathi,
+/obj/item/bone/skull/unathi,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "iM" = (
@@ -860,27 +860,27 @@
 /area/surface/outside/thor/pool)
 "jj" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/jager{
+/obj/item/reagent_containers/food/drinks/bottle/jager{
 	pixel_y = 11;
 	pixel_x = 16
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/gin{
+/obj/item/reagent_containers/food/drinks/bottle/gin{
 	pixel_y = 3;
 	pixel_x = 13
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac{
+/obj/item/reagent_containers/food/drinks/bottle/cognac{
 	pixel_y = 7;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/patron{
+/obj/item/reagent_containers/food/drinks/bottle/patron{
 	pixel_y = 11;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao{
+/obj/item/reagent_containers/food/drinks/bottle/bluecuracao{
 	pixel_y = 1;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine{
+/obj/item/reagent_containers/food/drinks/bottle/whitewine{
 	pixel_y = 2;
 	pixel_x = 6
 	},
@@ -892,7 +892,7 @@
 /area/surface/outside/thor/outpost)
 "jt" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /turf/simulated/floor/lino{
 	oxygen = 34.1451;
 	nitrogen = 63.4124;
@@ -980,8 +980,8 @@
 	},
 /area/surface/outside/thor/pool)
 "kn" = (
-/obj/item/weapon/bone,
-/obj/item/weapon/digestion_remains/skull/tajaran,
+/obj/item/bone,
+/obj/item/digestion_remains/skull/tajaran,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "ku" = (
@@ -1018,7 +1018,7 @@
 	},
 /area/surface/outside/thor/ocean)
 "kL" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "kQ" = (
@@ -1050,13 +1050,13 @@
 /obj/structure/closet/crate{
 	name = "survival supplies"
 	},
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
 "lc" = (
@@ -1105,7 +1105,7 @@
 /area/surface/outside/thor/jungle)
 "lH" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/mop,
+/obj/item/mop,
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
@@ -1175,10 +1175,10 @@
 /area/surface/outside/thor/jungle)
 "mv" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/fishing_rod/modern/strong,
-/obj/item/weapon/material/fishing_rod/modern/strong,
-/obj/item/weapon/material/fishing_rod/modern/strong,
-/obj/item/weapon/material/fishing_rod/modern/strong,
+/obj/item/material/fishing_rod/modern/strong,
+/obj/item/material/fishing_rod/modern/strong,
+/obj/item/material/fishing_rod/modern/strong,
+/obj/item/material/fishing_rod/modern/strong,
 /turf/simulated/floor/outdoors/grass/forest/thor{
 	tree_chance = 0;
 	grass_chance = 2
@@ -1195,30 +1195,30 @@
 /turf/simulated/wall/wood,
 /area/surface/thor/med)
 "mF" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey{
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey{
 	pixel_y = 8;
 	pixel_x = 10
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_y = 13
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
+/obj/item/reagent_containers/food/drinks/bottle/wine{
 	pixel_y = 2;
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_y = 1;
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 3;
 	pixel_x = 14
 	},
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
 "mH" = (
-/obj/item/weapon/bedsheet/rainbow,
+/obj/item/bedsheet/rainbow,
 /obj/machinery/button/remote/airlock{
 	id = "thorpool1";
 	name = "Door Bolt Control";
@@ -1292,7 +1292,7 @@
 	pixel_x = -26
 	},
 /obj/structure/table/rack/steel,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /obj/random/soap,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/janitor)
@@ -1357,8 +1357,8 @@
 	amount = 50;
 	color = "#824B28"
 	},
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
 /turf/simulated/floor/concrete,
 /area/surface/thor/abandonedhouse)
 "nK" = (
@@ -1415,7 +1415,7 @@
 /area/surface/thor/caves)
 "oh" = (
 /obj/item/clothing/head/fedora/brown,
-/obj/item/weapon/melee/chainofcommand/curator_whip,
+/obj/item/melee/chainofcommand/curator_whip,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/caves)
 "oq" = (
@@ -1583,7 +1583,7 @@
 "pq" = (
 /obj/structure/table/marble,
 /obj/machinery/reagentgrinder,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -1613,7 +1613,7 @@
 /turf/simulated/floor/lava,
 /area/surface/thor/caves)
 "pE" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -1698,7 +1698,7 @@
 /obj/structure/frame{
 	anchored = 1
 	},
-/obj/item/weapon/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
 	},
@@ -1732,7 +1732,7 @@
 "qL" = (
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/carpet/green,
 /area/surface/thor/kitchen)
 "qP" = (
@@ -1818,7 +1818,7 @@
 	},
 /area/surface/outside/thor/jungle/deep)
 "rq" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 8
 	},
 /turf/simulated/floor/wood{
@@ -1866,7 +1866,7 @@
 	},
 /area/surface/outside/thor/ocean)
 "rI" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/tiled/thor/planetuse,
@@ -1929,8 +1929,8 @@
 /turf/simulated/floor/concrete,
 /area/surface/thor/abandonedhouse)
 "sE" = (
-/obj/item/weapon/bone/arm,
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/arm,
+/obj/item/bone/ribs,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "sF" = (
@@ -2017,7 +2017,7 @@
 	},
 /area/surface/outside/thor/jungle)
 "ts" = (
-/obj/item/weapon/bone/skull/unknown,
+/obj/item/bone/skull/unknown,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "tv" = (
@@ -2082,7 +2082,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/weapon/stock_parts/subspace/sub_filter,
+/obj/item/stock_parts/subspace/sub_filter,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
 	},
@@ -2096,7 +2096,7 @@
 	dir = 8
 	},
 /obj/structure/grille,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/structure/window/reinforced,
@@ -2104,7 +2104,7 @@
 /area/shuttle/junker)
 "uy" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
 "uA" = (
@@ -2126,7 +2126,7 @@
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
 "uZ" = (
-/obj/item/weapon/oar,
+/obj/item/oar,
 /turf/simulated/floor/beach/sand/desert/outdoors/thor,
 /area/surface/outside/thor/beach)
 "ve" = (
@@ -2160,10 +2160,10 @@
 /obj/structure/closet/crate{
 	name = "survival supplies"
 	},
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 8;
@@ -2176,10 +2176,10 @@
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
 /area/surface/thor/abandonedhouse)
 "vW" = (
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/material/minihoe,
+/obj/item/material/knife/machete/hatchet,
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/thor/kitchen)
 "vX" = (
@@ -2319,7 +2319,7 @@
 "xj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/woodentable,
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor/lino,
 /area/surface/thor/abandonedhouse)
 "xs" = (
@@ -2330,12 +2330,12 @@
 /area/surface/thor/bar)
 "xy" = (
 /obj/structure/table/glass,
-/obj/item/device/radio{
+/obj/item/radio{
 	frequency = 1487;
 	icon_state = "med_walkietalkie";
 	name = "Medbay Emergency Radio Link"
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	frequency = 1487;
 	icon_state = "med_walkietalkie";
 	name = "Medbay Emergency Radio Link"
@@ -2368,10 +2368,10 @@
 /area/surface/outside/thor/pool)
 "xP" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
@@ -2427,7 +2427,7 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/thor/abandonedhouse)
 "yS" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 6
 	},
 /turf/simulated/floor/outdoors/grass/heavy/thor,
@@ -2461,16 +2461,16 @@
 /area/surface/outside/thor/outpost)
 "zf" = (
 /obj/structure/table/glass,
-/obj/item/weapon/backup_implanter{
+/obj/item/backup_implanter{
 	pixel_y = 9
 	},
-/obj/item/weapon/backup_implanter{
+/obj/item/backup_implanter{
 	pixel_y = 2
 	},
-/obj/item/weapon/backup_implanter{
+/obj/item/backup_implanter{
 	pixel_y = -5
 	},
-/obj/item/weapon/backup_implanter{
+/obj/item/backup_implanter{
 	pixel_y = -12
 	},
 /obj/machinery/light/small{
@@ -2502,7 +2502,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/surface/thor/abandonedhouse)
 "zt" = (
-/obj/item/weapon/digestion_remains/variant3,
+/obj/item/digestion_remains/variant3,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "zv" = (
@@ -2575,8 +2575,8 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/plating/thor/planetuse{
@@ -2592,7 +2592,7 @@
 	},
 /area/surface/outside/thor/beach)
 "Az" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "AB" = (
@@ -2600,7 +2600,7 @@
 /turf/simulated/floor/outdoors/mud/thor/planetuse,
 /area/surface/outside/thor/jungle)
 "AD" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -2609,7 +2609,7 @@
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
 "AF" = (
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle)
 "AH" = (
@@ -2670,9 +2670,9 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
 "Bz" = (
@@ -2684,7 +2684,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/plating/thor/planetuse{
@@ -2705,11 +2705,11 @@
 "BI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey{
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey{
 	pixel_y = 0;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 0;
 	pixel_x = 5
 	},
@@ -2796,7 +2796,7 @@
 /area/surface/thor/med)
 "CG" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/lino{
 	oxygen = 34.1451;
 	nitrogen = 63.4124;
@@ -2820,7 +2820,7 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
 "CQ" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/lino{
 	oxygen = 34.1451;
 	nitrogen = 63.4124;
@@ -2886,7 +2886,7 @@
 	amount = 25
 	},
 /obj/structure/table/woodentable,
-/obj/item/weapon/bone/skull/tajaran,
+/obj/item/bone/skull/tajaran,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
 	},
@@ -3046,7 +3046,7 @@
 	name = "defibrillator closet";
 	pixel_x = -31
 	},
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
@@ -3098,7 +3098,7 @@
 	},
 /area/surface/thor/caves)
 "EM" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 6
 	},
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
@@ -3131,7 +3131,7 @@
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
 /area/surface/outside/thor/jungle)
 "Fl" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/lino{
@@ -3287,7 +3287,7 @@
 /area/surface/outside/thor/jungle)
 "Hm" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/janitor)
 "Ho" = (
@@ -3328,7 +3328,7 @@
 	dir = 1
 	},
 /obj/random/plushie,
-/obj/item/weapon/reagent_containers/food/snacks/pastatomato,
+/obj/item/reagent_containers/food/snacks/pastatomato,
 /turf/simulated/floor/wood,
 /area/surface/thor/dorms/pool2)
 "HI" = (
@@ -3343,7 +3343,7 @@
 "HQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/glasses/coffeecup,
+/obj/item/storage/box/glasses/coffeecup,
 /turf/simulated/floor/wood,
 /area/surface/thor/abandonedhouse)
 "HS" = (
@@ -3361,7 +3361,7 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/thor/abandonedhouse)
 "HV" = (
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /obj/machinery/button/remote/airlock{
 	id = "thorpool3";
 	name = "Door Bolt Control";
@@ -3519,15 +3519,15 @@
 /area/surface/outside/thor/ocean)
 "Jg" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/pill_bottle/spaceacillin{
+/obj/item/storage/pill_bottle/spaceacillin{
 	pixel_y = 6;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/pill_bottle/spaceacillin{
+/obj/item/storage/pill_bottle/spaceacillin{
 	pixel_y = -4;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/pill_bottle/spaceacillin{
+/obj/item/storage/pill_bottle/spaceacillin{
 	pixel_y = 1;
 	pixel_x = -7
 	},
@@ -3564,9 +3564,9 @@
 "JI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/smes/batteryrack,
-/obj/item/weapon/cell/high/empty,
-/obj/item/weapon/cell/high/empty,
-/obj/item/weapon/cell/high/empty,
+/obj/item/cell/high/empty,
+/obj/item/cell/high/empty,
+/obj/item/cell/high/empty,
 /obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
@@ -3586,9 +3586,9 @@
 	anchored = 1;
 	opened = 1
 	},
-/obj/item/weapon/material/fishing_rod/modern/strong,
-/obj/item/weapon/material/fishing_rod/modern/strong,
-/obj/item/weapon/material/fishing_rod/modern/strong,
+/obj/item/material/fishing_rod/modern/strong,
+/obj/item/material/fishing_rod/modern/strong,
+/obj/item/material/fishing_rod/modern/strong,
 /turf/simulated/floor/outdoors/grass/heavy/thor{
 	grass_chance = 5;
 	tree_chance = 0
@@ -3606,7 +3606,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/plating/external/thor{
@@ -3642,7 +3642,7 @@
 /turf/simulated/floor/outdoors/grass/forest/thor,
 /area/surface/outside/thor/jungle/deep)
 "Kl" = (
-/obj/item/weapon/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
 	},
@@ -3698,12 +3698,12 @@
 /area/surface/outside/thor/ocean)
 "Lg" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/circuitboard/airalarm,
-/obj/item/weapon/circuitboard/airalarm,
-/obj/item/weapon/module/power_control,
-/obj/item/weapon/module/power_control,
-/obj/item/weapon/module/power_control,
-/obj/item/weapon/module/power_control,
+/obj/item/circuitboard/airalarm,
+/obj/item/circuitboard/airalarm,
+/obj/item/module/power_control,
+/obj/item/module/power_control,
+/obj/item/module/power_control,
+/obj/item/module/power_control,
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/plating,
@@ -3726,7 +3726,7 @@
 	},
 /area/surface/thor/abandonedhouse)
 "Lq" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 8
 	},
 /obj/structure/railing{
@@ -3756,10 +3756,10 @@
 /area/surface/outside/thor/beach)
 "Ma" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
 "Me" = (
@@ -3791,7 +3791,7 @@
 	},
 /area/surface/thor/caves)
 "MB" = (
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
 "MJ" = (
@@ -3831,7 +3831,7 @@
 	},
 /area/surface/outside/thor/outpost)
 "Nk" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/grille/rustic,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
@@ -3920,25 +3920,25 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 5;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = 5
 	},
-/obj/item/weapon/flame/candle/candelabra{
+/obj/item/flame/candle/candelabra{
 	pixel_y = -10
 	},
 /turf/simulated/floor/carpet/green,
 /area/surface/thor/kitchen)
 "NW" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/pill_bottle/paracetamol{
+/obj/item/storage/pill_bottle/paracetamol{
 	pixel_y = -4;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/pill_bottle/phenethylamine{
+/obj/item/storage/pill_bottle/phenethylamine{
 	pixel_y = 4;
 	pixel_x = 9
 	},
@@ -4052,7 +4052,7 @@
 /area/surface/outside/thor/pool)
 "Pg" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/yellow,
 /area/surface/thor/abandonedhouse)
 "Pj" = (
@@ -4075,7 +4075,7 @@
 /area/surface/outside/thor/outpost)
 "Pz" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/lino,
 /area/surface/thor/abandonedhouse)
 "PA" = (
@@ -4127,9 +4127,9 @@
 /area/surface/thor/kitchen)
 "PK" = (
 /obj/structure/table/marble,
-/obj/item/weapon/whetstone,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/whetstone,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -4152,7 +4152,7 @@
 /turf/simulated/floor/wood,
 /area/surface/thor/dorms/pool1)
 "Qa" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/outdoors/grass/heavy/thor,
@@ -4184,8 +4184,8 @@
 /obj/item/roller,
 /obj/item/roller,
 /obj/structure/closet/crate/medical,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
@@ -4325,20 +4325,20 @@
 /area/surface/outside/thor/jungle/deep)
 "Ri" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_y = -8;
 	pixel_x = -4
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_y = -8;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_y = -1;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_y = -1;
 	pixel_x = -5
 	},
@@ -4393,7 +4393,7 @@
 /area/surface/outside/thor/jungle/deep)
 "RS" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /obj/random/medical/lite,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
@@ -4412,7 +4412,7 @@
 	dir = 1
 	},
 /obj/random/plushie,
-/obj/item/weapon/reagent_containers/food/snacks/pastatomato,
+/obj/item/reagent_containers/food/snacks/pastatomato,
 /turf/simulated/floor/wood,
 /area/surface/thor/dorms/pool3)
 "Sk" = (
@@ -4454,7 +4454,7 @@
 	},
 /area/surface/outside/thor/pool)
 "SN" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
 "SP" = (
@@ -4479,7 +4479,7 @@
 /area/surface/thor/dorms/pool2)
 "Tf" = (
 /obj/structure/prop/desert_planet64x64/lribs,
-/obj/item/weapon/digestion_remains/variant1,
+/obj/item/digestion_remains/variant1,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "Tn" = (
@@ -4498,7 +4498,7 @@
 	},
 /area/surface/outside/thor/pool)
 "Tv" = (
-/obj/item/weapon/stock_parts/subspace/sub_filter,
+/obj/item/stock_parts/subspace/sub_filter,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/thor{
 	tree_chance = 0;
@@ -4523,7 +4523,7 @@
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
 "TQ" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /turf/simulated/floor/wood{
@@ -4552,7 +4552,7 @@
 "Ud" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/rack,
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
@@ -4636,7 +4636,7 @@
 /turf/simulated/floor/lino,
 /area/surface/thor/abandonedhouse)
 "UV" = (
-/obj/item/weapon/digestion_remains/variant2,
+/obj/item/digestion_remains/variant2,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "UW" = (
@@ -4665,11 +4665,11 @@
 /area/surface/thor/kitchen)
 "Vf" = (
 /obj/structure/prop/desert_planet64x64/lribs,
-/obj/item/weapon/bone/skull,
+/obj/item/bone/skull,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "Vk" = (
-/obj/item/weapon/bone/skull,
+/obj/item/bone/skull,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "Vo" = (
@@ -4679,7 +4679,7 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/thor/kitchen)
 "Vx" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/structure/railing{
 	dir = 1
 	},
@@ -4710,7 +4710,7 @@
 	},
 /area/surface/thor/caves)
 "VG" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 4
 	},
 /turf/simulated/floor/wood{
@@ -4722,23 +4722,23 @@
 /area/surface/thor/kitchen)
 "VM" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 14;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua{
+/obj/item/reagent_containers/food/drinks/bottle/kahlua{
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/lemonadeschnapps{
+/obj/item/reagent_containers/food/drinks/bottle/lemonadeschnapps{
 	pixel_y = 5;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager{
+/obj/item/reagent_containers/food/drinks/bottle/goldschlager{
 	pixel_y = 13;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe{
+/obj/item/reagent_containers/food/drinks/bottle/absinthe{
 	pixel_y = 3;
 	pixel_x = -8
 	},
@@ -4797,10 +4797,10 @@
 	pixel_y = 24
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical{
 	pixel_y = -3
 	},
 /turf/simulated/floor/plating,
@@ -4868,14 +4868,14 @@
 /area/surface/outside/thor/jungle)
 "Xa" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+/obj/item/reagent_containers/food/condiment/enzyme{
 	layer = 5;
 	pixel_x = 10
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -4994,9 +4994,9 @@
 /area/surface/outside/thor/jungle)
 "YJ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/storage/box/matches,
+/obj/item/pen,
+/obj/item/paper_bin,
+/obj/item/storage/box/matches,
 /turf/simulated/floor/wood/alt,
 /area/surface/thor/kitchen)
 "YN" = (
@@ -5005,7 +5005,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/item/weapon/circuitboard/telecomms/relay,
+/obj/item/circuitboard/telecomms/relay,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
 	},
@@ -5023,7 +5023,7 @@
 /area/surface/outside/thor/jungle)
 "YS" = (
 /obj/structure/grille/rustic,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/plating/thor/planetuse{
@@ -5036,28 +5036,28 @@
 /area/surface/outside/thor/jungle)
 "YX" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_x = -2
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_x = -11
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_x = -8
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_x = -5
 	},
-/obj/item/weapon/material/knife{
+/obj/item/material/knife{
 	pixel_x = 3
 	},
-/obj/item/weapon/material/knife{
+/obj/item/material/knife{
 	pixel_x = 12
 	},
-/obj/item/weapon/material/knife{
+/obj/item/material/knife{
 	pixel_x = 9
 	},
-/obj/item/weapon/material/knife{
+/obj/item/material/knife{
 	pixel_x = 6
 	},
 /turf/simulated/floor/wood/alt,

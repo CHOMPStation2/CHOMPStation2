@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 //CHOMP Disabled in DME in favor of modular_chomp folder
-/obj/item/weapon/cell/spike
+/obj/item/cell/spike
 =======
 
 /obj/item/cell/spike

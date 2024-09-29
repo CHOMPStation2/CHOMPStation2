@@ -1,15 +1,9 @@
 // -------------- Protector -------------
-<<<<<<< HEAD
-/obj/item/weapon/gun/energy/gun/protector
+/obj/item/gun/energy/gun/protector
 	name = "small energy gun"
 	desc = "The WT-98a 'Protector' is a common sidearm developed by Ward-Takahashi GMC. It features a powerful stun mode, and \
 	an alert-level-locked lethal mode, only usable when the connected jurisdiction allows. It also features an integrated flashlight!"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/ward_takahashi)
-=======
-/obj/item/gun/energy/gun/protector
-	name = "secure small energy gun"
-	desc = "The LAEP95 'Protector' is another firearm from Lawson Arms and "+TSC_HEPH+", unlike the Perun this is designed for issue to non-security staff. It contains a detachable cell, and an alert-level-locked lethal mode, only usable on code blue and higher. It also features an integrated flashlight!"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	description_info = "This gun can only be fired in lethal mode while on higher security alert levels. It is legal for sec to carry for this reason, since it cannot be used for lethal force until SOP allows it, in essence."
 	description_fluff = "One of the few sidearms developed by Ward-Takahashi, this gun has a wireless connection to the computer's datacore to ensure it can't be used without authorization from heads of staff who have raised the alert level. Until then, *click*!"

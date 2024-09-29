@@ -55,43 +55,39 @@
 							/obj/item/stock_parts/manipulator = 2,
 							/obj/item/reagent_containers/glass/beaker = 2)
 
-<<<<<<< HEAD
 // CHOMPAdd - Departmental Lathes
 
-/obj/item/weapon/circuitboard/protolathe/science
+/obj/item/circuitboard/protolathe/science
 	name = T_BOARD("science protolathe")
 	build_path = /obj/machinery/r_n_d/protolathe/science
 
-/obj/item/weapon/circuitboard/protolathe/engineering
+/obj/item/circuitboard/protolathe/engineering
 	name = T_BOARD("engineering protolathe")
 	build_path = /obj/machinery/r_n_d/protolathe/engineering
 
-/obj/item/weapon/circuitboard/protolathe/medical
+/obj/item/circuitboard/protolathe/medical
 	name = T_BOARD("medical protolathe")
 	build_path = /obj/machinery/r_n_d/protolathe/medical
 
-/obj/item/weapon/circuitboard/protolathe/cargo
+/obj/item/circuitboard/protolathe/cargo
 	name = T_BOARD("cargo protolathe")
 	build_path = /obj/machinery/r_n_d/protolathe/cargo
 
-/obj/item/weapon/circuitboard/protolathe/service
+/obj/item/circuitboard/protolathe/service
 	name = T_BOARD("service protolathe")
 	build_path = /obj/machinery/r_n_d/protolathe/service
 
-/obj/item/weapon/circuitboard/protolathe/security
+/obj/item/circuitboard/protolathe/security
 	name = T_BOARD("security protolathe")
 	build_path = /obj/machinery/r_n_d/protolathe/security
 
-/obj/item/weapon/circuitboard/protolathe/public
+/obj/item/circuitboard/protolathe/public
 	name = T_BOARD("public protolathe")
 	build_path = /obj/machinery/r_n_d/protolathe/public
 
 // CHOMPAdd End
 
-/obj/item/weapon/circuitboard/circuit_imprinter
-=======
 /obj/item/circuitboard/circuit_imprinter
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = T_BOARD("circuit imprinter")
 	build_path = /obj/machinery/r_n_d/circuit_imprinter
 	board_type = new /datum/frame/frame_types/machine

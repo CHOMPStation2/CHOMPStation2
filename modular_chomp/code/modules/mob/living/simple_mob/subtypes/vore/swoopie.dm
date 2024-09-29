@@ -50,14 +50,14 @@
 	var/static/list/pest_creatures = list(	/mob/living/simple_mob/animal/passive/mouse,
 											/mob/living/simple_mob/animal/passive/lizard,
 											/mob/living/simple_mob/animal/passive/cockroach)
-	var/obj/item/device/vac_attachment/swoopie/Vac
+	var/obj/item/vac_attachment/swoopie/Vac
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize()
 	. = ..()
 	if(!voremob_loaded)
 		voremob_loaded = TRUE
 		init_vore()
-	Vac = new /obj/item/device/vac_attachment/swoopie(src)
+	Vac = new /obj/item/vac_attachment/swoopie(src)
 	if(istype(Vac))
 		Vac.output_dest = vore_selected
 		Vac.vac_power = 3
@@ -235,7 +235,7 @@
 		return ..()
 	if(stat) //Cant suck if we're not able to...
 		return ..()
-	if(istype(A, /obj/item/weapon/storage)) //Dont put the nossle in bags
+	if(istype(A, /obj/item/storage)) //Dont put the nossle in bags
 		return ..()
 	if(istype(Vac) && A.Adjacent(src))
 		face_atom(A)
@@ -329,13 +329,13 @@
 	verbs -= /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/change_settings //Controlled swoopies dont need their settings changed externally
 
 //Special Swoopie vaccum so it can be handled better than a vareditted vacpack.
-/obj/item/device/vac_attachment/swoopie
+/obj/item/vac_attachment/swoopie
 	name = "Swoopie Vac-Beak"
 	desc = "Useful for slurping mess off the floors. Even dirt and pests depending on settings. This vaccum seems to be permanantly attached to the swoopie's rumbling rubber trashbag."
 	icon = 'modular_chomp/icons/mob/vacpack_swoop.dmi'
 	item_state = null
 
-/obj/item/device/vac_attachment/swoopie/dropped(mob/user) //This should fix it sitting on the ground until the next life() tick
+/obj/item/vac_attachment/swoopie/dropped(mob/user) //This should fix it sitting on the ground until the next life() tick
 	. = ..()
 	if(!vac_owner)
 		return

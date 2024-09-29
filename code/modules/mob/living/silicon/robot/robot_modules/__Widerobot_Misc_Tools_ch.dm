@@ -3,6 +3,6 @@
 //This file is offset in compilation to run before any of the station files.
 
 //TFF 5/1/20 - Add Ore Scanner for mining drones
-/obj/item/weapon/robot_module/drone/mining/create_equipment()
+/obj/item/robot_module/drone/mining/create_equipment()
 	..()
-	src.modules |= new /obj/item/weapon/mining_scanner(src)
+	src.modules |= new /obj/item/mining_scanner(src)

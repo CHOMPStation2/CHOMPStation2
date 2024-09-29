@@ -206,10 +206,5 @@
 /decl/chemical_reaction/instant/food/butter/on_reaction(var/datum/reagents/holder, var/created_volume)
 	var/location = get_turf(holder.my_atom)
 	for(var/i = 1, i <= created_volume, i++)
-<<<<<<< HEAD
-		new /obj/item/weapon/reagent_containers/food/snacks/spreads/butter(location)
-	return
-=======
 		new /obj/item/reagent_containers/food/snacks/spreads/butter(location)
 	return
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

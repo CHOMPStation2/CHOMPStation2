@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-/obj/item/weapon/holder/dropped(mob/user)
+/obj/item/holder/dropped(mob/user)
 	..()
 	spawn(1)
 		if(!throwing && isturf(loc))
 			qdel(src)
-=======
-/obj/item/holder/dropped(mob/user)
-	if (held_mob?.loc != src || isturf(loc))
-		var/held = held_mob
-		dump_mob()
-		held_mob = held
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/holder/attack_hand(mob/living/user as mob) //straight up just copypasted from objects/items.dm with a few things changed (doesn't called dropped unless +actually dropped+)
 	if (!user) return

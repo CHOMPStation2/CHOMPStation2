@@ -31,22 +31,13 @@
 	suit = /obj/item/clothing/suit/storage/det_trench
 	l_pocket = /obj/item/flame/lighter/zippo
 	shoes = /obj/item/clothing/shoes/laceup
-<<<<<<< HEAD
-	r_hand = /obj/item/weapon/storage/briefcase/crimekit
-	id_type = /obj/item/weapon/card/id/security/detective
-	pda_type = /obj/item/device/pda/detective
-	backpack = /obj/item/weapon/storage/backpack
-	satchel_one = /obj/item/weapon/storage/backpack/satchel/norm
-	backpack_contents = list(/obj/item/weapon/storage/box/evidence = 1)
-	gloves = /obj/item/clothing/gloves/forensic //CHOMP Addition
-=======
 	r_hand = /obj/item/storage/briefcase/crimekit
 	id_type = /obj/item/card/id/security/detective
 	pda_type = /obj/item/pda/detective
 	backpack = /obj/item/storage/backpack
 	satchel_one = /obj/item/storage/backpack/satchel/norm
 	backpack_contents = list(/obj/item/storage/box/evidence = 1)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	gloves = /obj/item/clothing/gloves/forensic //CHOMP Addition
 
 //VOREStation Edit - More cyberpunky
 /decl/hierarchy/outfit/job/security/detective/forensic

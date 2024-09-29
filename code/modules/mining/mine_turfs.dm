@@ -454,15 +454,9 @@ var/list/mining_overlay_cache = list()
 			if(!istype(user.loc, /turf))
 				return
 
-<<<<<<< HEAD
-			var/obj/item/weapon/melee/shock_maul/S = W
+			var/obj/item/melee/shock_maul/S = W
 			if(!S.wielded)	//CHOMPEdit - slight maul buff
 				to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands to be used for mining!</span>")	//CHOMPEdit - fixed improper name
-=======
-			var/obj/item/melee/shock_maul/S = W
-			if(!S.wielded || !S.status)	//if we're not wielded OR not powered up, do nothing
-				to_chat(user, "<span class='warning'>\The [src] must be wielded in two hands and powered on to be used for mining!</span>")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 				return
 
 			var/newDepth = excavation_level + S.excavation_amount // Used commonly below
@@ -608,12 +602,8 @@ var/list/mining_overlay_cache = list()
 	if(!mineral)
 		return
 	clear_ore_effects()
-<<<<<<< HEAD
 	geologic_data = new /datum/geosample(src) //CHOMPEdit
-	var/obj/item/weapon/ore/O = new mineral.ore (src)
-=======
 	var/obj/item/ore/O = new mineral.ore (src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(istype(O))
 		geologic_data.UpdateNearbyArtifactInfo(src)
 		O.geologic_data = geologic_data
@@ -686,12 +676,8 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/proc/excavate_find(var/is_clean = 0, var/datum/find/F)
 	//with skill and luck, players can cleanly extract finds
 	//otherwise, they come out inside a chunk of rock
-<<<<<<< HEAD
 	geologic_data = new /datum/geosample(src) //CHOMPEdit
-	var/obj/item/weapon/X
-=======
 	var/obj/item/X
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(is_clean)
 		X = new /obj/item/archaeological_find(src, new_item_type = F.find_type)
 	else

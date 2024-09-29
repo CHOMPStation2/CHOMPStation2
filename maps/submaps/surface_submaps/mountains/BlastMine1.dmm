@@ -12,7 +12,7 @@
 /area/submap/cave/BlastMine1)
 "d" = (
 /obj/structure/table/rack,
-/obj/item/weapon/syndie/c4explosive,
+/obj/item/syndie/c4explosive,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/BlastMine1)
 "e" = (
@@ -30,7 +30,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/BlastMine1)
 "h" = (
-/obj/item/device/gps/internal/poi{
+/obj/item/gps/internal/poi{
 	gps_tag = "Unidentified Signal"
 	},
 /turf/simulated/wall/sandstone,
@@ -41,7 +41,7 @@
 /area/submap/cave/BlastMine1)
 "j" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/flame/lighter/zippo/c4detonator{
+/obj/item/flame/lighter/zippo/c4detonator{
 	detonator_mode = 1
 	},
 /turf/simulated/mineral/floor/ignore_mapgen,

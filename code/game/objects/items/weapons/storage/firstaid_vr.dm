@@ -14,7 +14,7 @@
 
 /obj/item/storage/firstaid/regular
 	starts_with = list(
-		/obj/item/device/healthanalyzer, /*YW EDIT*/
+		/obj/item/healthanalyzer, /*YW EDIT*/
 		/obj/item/stack/medical/bruise_pack,
 		/obj/item/stack/medical/bruise_pack,
 		/obj/item/stack/medical/bruise_pack,
@@ -233,25 +233,15 @@
 	desc = "Miniature medical robots that swiftly restore bodily damage."
 	starts_with = list(/obj/item/reagent_containers/pill/healing_nanites = 14)
 
-<<<<<<< HEAD
 /*CHOMPStation removal begin
-/obj/item/weapon/storage/pill_bottle/sleevingcure
+/obj/item/storage/pill_bottle/sleevingcure
 	name = "pill bottle (Vey-Med Resleeving Booster)"
 	desc = "A rare medication sold by Vey-Med that helps counteract negative side effects of using resleeving machinery." //Bye, KHI! Get lost.
-	starts_with = list(/obj/item/weapon/reagent_containers/pill/sleevingcure = 7)
-
-/obj/item/weapon/storage/pill_bottle/sleevingcure/full
-	starts_with = list(/obj/item/weapon/reagent_containers/pill/sleevingcure = 14)
-*/ //CHOMPStation removal end
-=======
-/obj/item/storage/pill_bottle/sleevingcure
-	name = "pill bottle (Kitsuhanan Cure)"
-	desc = "A rare cure provided by KHI that helps counteract negative side effects of using imperfect resleeving machinery."
 	starts_with = list(/obj/item/reagent_containers/pill/sleevingcure = 7)
 
 /obj/item/storage/pill_bottle/sleevingcure/full
 	starts_with = list(/obj/item/reagent_containers/pill/sleevingcure = 14)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+*/ //CHOMPStation removal end
 
 /obj/item/storage/mrebag/pill
 	name = "vacuum-sealed pill"
@@ -260,19 +250,12 @@
 	max_w_class = ITEMSIZE_TINY
 	can_hold = list(/obj/item/reagent_containers/pill)
 
-<<<<<<< HEAD
 /*CHOMPStation removal begin
-/obj/item/weapon/storage/mrebag/pill/sleevingcure
+/obj/item/storage/mrebag/pill/sleevingcure
 	name = "vacuum-sealed pill (Vey-Med Resleeving Booster)"
 	desc = "A small vacuum-sealed package containing a singular pill. For emergencies only."
-	starts_with = list(/obj/item/weapon/reagent_containers/pill/sleevingcure)
-*/ //CHOMPStation removal end
-=======
-/obj/item/storage/mrebag/pill/sleevingcure
-	name = "vacuum-sealed pill (Kitsuhanan Cure)"
-	desc = "A small vacuum-sealed package containing a singular pill. For emergencies only."
 	starts_with = list(/obj/item/reagent_containers/pill/sleevingcure)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+*/ //CHOMPStation removal end
 
 /obj/item/storage/pill_bottle/paracetamol
 	name = "pill bottle (Paracetamol)"

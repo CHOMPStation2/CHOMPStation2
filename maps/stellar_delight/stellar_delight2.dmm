@@ -5285,14 +5285,9 @@
 "lg" = (
 /obj/structure/closet/secure_closet/captains,
 /obj/item/clothing/glasses/omnihud/all,
-<<<<<<< HEAD
-/obj/item/weapon/disk/nuclear,
-/obj/item/weapon/paper/dockingcodes/sd,
-/obj/item/device/retail_scanner/command,
-=======
 /obj/item/disk/nuclear,
+/obj/item/paper/dockingcodes/sd,
 /obj/item/retail_scanner/command,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "lh" = (

@@ -22,59 +22,38 @@
 	//CHOMPEdit Block Start - Modified List
 		if ("small")
 			starts_with = list(
-<<<<<<< HEAD
-				/obj/item/weapon/storage/toolbox/emergency,
-				/obj/item/weapon/tank/emergency/oxygen = 2,
-=======
+				/obj/item/storage/toolbox/emergency,
 				/obj/item/tank/emergency/oxygen = 2,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 				/obj/item/clothing/mask/breath = 2,
 				/obj/item/clothing/suit/space/emergency = 2,
 				/obj/item/clothing/head/helmet/space/emergency = 2,
-				/obj/item/device/suit_cooling_unit/emergency = 2)
+				/obj/item/suit_cooling_unit/emergency = 2)
 		if ("aid")
 			starts_with = list(
-<<<<<<< HEAD
-				/obj/item/weapon/storage/toolbox/emergency,
-				/obj/item/weapon/storage/firstaid/o2,
-				/obj/item/weapon/tank/emergency/oxygen/engi = 2,
-				/obj/item/clothing/mask/breath = 2,
-				/obj/item/clothing/suit/space/emergency = 2,
-				/obj/item/clothing/head/helmet/space/emergency = 2,
-				/obj/item/device/suit_cooling_unit/emergency = 2)
-		if ("tank")
-			starts_with = list(
-				/obj/item/weapon/storage/toolbox/emergency,
-				/obj/item/weapon/tank/emergency/oxygen/double = 2,
-=======
-				/obj/item/tank/emergency/oxygen,
-				/obj/item/storage/toolbox/emergency,
-				/obj/item/clothing/mask/breath,
-				/obj/item/clothing/suit/space/emergency,
-				/obj/item/clothing/head/helmet/space/emergency)
-		if ("tank")
-			starts_with = list(
-				/obj/item/tank/emergency/oxygen/engi = 2,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
-				/obj/item/clothing/mask/breath = 2,
-				/obj/item/clothing/suit/space/emergency = 2,
-				/obj/item/clothing/head/helmet/space/emergency = 2,
-				/obj/item/device/suit_cooling_unit = 2)
-		if ("both")
-			starts_with = list(
-<<<<<<< HEAD
-				/obj/item/weapon/storage/toolbox/emergency,
-				/obj/item/weapon/storage/firstaid/o2,
-				/obj/item/weapon/tank/emergency/oxygen/double = 2,
-=======
 				/obj/item/storage/toolbox/emergency,
 				/obj/item/storage/firstaid/o2,
 				/obj/item/tank/emergency/oxygen/engi = 2,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 				/obj/item/clothing/mask/breath = 2,
 				/obj/item/clothing/suit/space/emergency = 2,
 				/obj/item/clothing/head/helmet/space/emergency = 2,
-				/obj/item/device/suit_cooling_unit = 2)
+				/obj/item/suit_cooling_unit/emergency = 2)
+		if ("tank")
+			starts_with = list(
+				/obj/item/storage/toolbox/emergency,
+				/obj/item/tank/emergency/oxygen/double = 2,
+				/obj/item/clothing/mask/breath = 2,
+				/obj/item/clothing/suit/space/emergency = 2,
+				/obj/item/clothing/head/helmet/space/emergency = 2,
+				/obj/item/suit_cooling_unit = 2)
+		if ("both")
+			starts_with = list(
+				/obj/item/storage/toolbox/emergency,
+				/obj/item/storage/firstaid/o2,
+				/obj/item/tank/emergency/oxygen/double = 2,
+				/obj/item/clothing/mask/breath = 2,
+				/obj/item/clothing/suit/space/emergency = 2,
+				/obj/item/clothing/head/helmet/space/emergency = 2,
+				/obj/item/suit_cooling_unit = 2)
 	//CHOMPEdit Block End
 
 	return ..()

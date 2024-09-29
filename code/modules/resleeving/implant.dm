@@ -154,13 +154,8 @@
 		new /obj/item/implantcase/backup(src)
 	new /obj/item/implanter(src)
 
-<<<<<<< HEAD
 /*
-/obj/item/weapon/implant/backup/full
-=======
-//Purely for fluff
 /obj/item/implant/backup/full
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "khi backup implant"
 	desc = "A normal KHI wireless cortical stack with neutrino and QE transmission for constant-stream consciousness upload."
 */

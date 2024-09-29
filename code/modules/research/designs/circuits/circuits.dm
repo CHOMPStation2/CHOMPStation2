@@ -223,43 +223,43 @@ CIRCUITS BELOW
 /datum/design/circuit/protolathe/science
 	name = "science protolathe"
 	id = "science_protolathe"
-	build_path = /obj/item/weapon/circuitboard/protolathe/science
+	build_path = /obj/item/circuitboard/protolathe/science
 	sort_string = "HADAA"
 
 /datum/design/circuit/protolathe/engineering
 	name = "engineering protolathe"
 	id = "engineering_protolathe"
-	build_path = /obj/item/weapon/circuitboard/protolathe/engineering
+	build_path = /obj/item/circuitboard/protolathe/engineering
 	sort_string = "HADAB"
 
 /datum/design/circuit/protolathe/medical
 	name = "medical protolathe"
 	id = "medical_protolathe"
-	build_path = /obj/item/weapon/circuitboard/protolathe/medical
+	build_path = /obj/item/circuitboard/protolathe/medical
 	sort_string = "HADAC"
 
 /datum/design/circuit/protolathe/cargo
 	name = "cargo protolathe"
 	id = "cargo_protolathe"
-	build_path = /obj/item/weapon/circuitboard/protolathe/cargo
+	build_path = /obj/item/circuitboard/protolathe/cargo
 	sort_string = "HADAD"
 
 /datum/design/circuit/protolathe/service
 	name = "service protolathe"
 	id = "service_protolathe"
-	build_path = /obj/item/weapon/circuitboard/protolathe/service
+	build_path = /obj/item/circuitboard/protolathe/service
 	sort_string = "HADAE"
 
 /datum/design/circuit/protolathe/security
 	name = "security protolathe"
 	id = "security_protolathe"
-	build_path = /obj/item/weapon/circuitboard/protolathe/security
+	build_path = /obj/item/circuitboard/protolathe/security
 	sort_string = "HADAF"
 
 /datum/design/circuit/protolathe/public
 	name = "public protolathe"
 	id = "public_protolathe"
-	build_path = /obj/item/weapon/circuitboard/protolathe/public
+	build_path = /obj/item/circuitboard/protolathe/public
 	sort_string = "HADAG"
 
 // CHOMPEdit End
@@ -790,7 +790,7 @@ CIRCUITS BELOW
 	name = "point defense battery"
 	id = "pointdefense"
 	req_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 3, TECH_COMBAT = 4)
-	build_path = /obj/item/weapon/circuitboard/pointdefense
+	build_path = /obj/item/circuitboard/pointdefense
 	sort_string = "OAABA"
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
@@ -798,7 +798,7 @@ CIRCUITS BELOW
 	name = "point defense control"
 	id = "pointdefense_control"
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_COMBAT = 2)
-	build_path = /obj/item/weapon/circuitboard/pointdefense_control
+	build_path = /obj/item/circuitboard/pointdefense_control
 	sort_string = "OAABB"
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 

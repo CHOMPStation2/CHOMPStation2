@@ -172,8 +172,8 @@
 /area/awaymission/hiddeneclipse/precursortemple)
 "cY" = (
 /obj/structure/table/rack,
-/obj/item/weapon/syndie/c4explosive/heavy,
-/obj/item/weapon/flame/lighter/zippo/c4detonator,
+/obj/item/syndie/c4explosive/heavy,
+/obj/item/flame/lighter/zippo/c4detonator,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzoneb)
 "da" = (
@@ -242,9 +242,9 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier)
 "dQ" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/shield_gen_ex,
-/obj/item/device/perfect_tele/alien,
-/obj/item/weapon/storage/belt/medical/alien,
+/obj/item/circuitboard/shield_gen_ex,
+/obj/item/perfect_tele/alien,
+/obj/item/storage/belt/medical/alien,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/theabyss)
 "dR" = (
@@ -275,7 +275,7 @@
 /turf/simulated/wall/plastihull,
 /area/awaymission/hiddeneclipse/eclipsecarrier/dorms)
 "eN" = (
-/obj/item/weapon/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
 /turf/simulated/floor/outdoors/lavaland/basalt{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -396,9 +396,9 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "hv" = (
 /obj/structure/table/steel,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzonea)
 "hE" = (
@@ -410,7 +410,7 @@
 /turf/unsimulated/floor/dark,
 /area/awaymission/hiddeneclipse/theabyss)
 "hF" = (
-/obj/item/weapon/pickaxe/anamolous,
+/obj/item/pickaxe/anamolous,
 /turf/simulated/floor/outdoors/lavaland/basalt{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -418,7 +418,7 @@
 	},
 /area/awaymission/hiddeneclipse/miningzonea)
 "hG" = (
-/obj/item/weapon/melee/energy/sword/red,
+/obj/item/melee/energy/sword/red,
 /turf/simulated/shuttle/floor/white,
 /area/awaymission/hiddeneclipse)
 "hK" = (
@@ -449,7 +449,7 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier)
 "iU" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/energy/kinetic_accelerator/premiumka,
+/obj/item/gun/energy/kinetic_accelerator/premiumka,
 /obj/item/borg/upgrade/modkit/resonator_blasts,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzoneb)
@@ -538,14 +538,14 @@
 /area/awaymission/hiddeneclipse)
 "lG" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/energy/flamegun,
+/obj/item/gun/energy/flamegun,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/hiddeneclipse/eclipsecarrier/armory)
 "lJ" = (
-/obj/item/weapon/stock_parts/matter_bin/hyper,
+/obj/item/stock_parts/matter_bin/hyper,
 /turf/simulated/floor/outdoors/lavaland/basalt{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -562,7 +562,7 @@
 /area/awaymission/hiddeneclipse/miningzonea)
 "me" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/gun/energy/kinetic_accelerator/premiumka,
+/obj/item/gun/energy/kinetic_accelerator/premiumka,
 /obj/item/borg/upgrade/modkit/cooldown/repeater,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzoneb)
@@ -577,7 +577,7 @@
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/awaymission/hiddeneclipse/precursortemple)
 "mB" = (
-/obj/item/weapon/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzonea)
 "mD" = (
@@ -633,7 +633,7 @@
 /turf/simulated/floor/tiled/red,
 /area/awaymission/hiddeneclipse/eclipsecarrier)
 "nA" = (
-/obj/item/weapon/melee/cursedblade,
+/obj/item/melee/cursedblade,
 /turf/simulated/shuttle/floor/white,
 /area/awaymission/hiddeneclipse)
 "nD" = (
@@ -680,7 +680,7 @@
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/awaymission/hiddeneclipse/eclipsecarrier/enginemonitoring)
 "ol" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -688,7 +688,7 @@
 "om" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/hosdouble,
+/obj/item/bedsheet/hosdouble,
 /obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
@@ -707,7 +707,7 @@
 /turf/simulated/floor/cult,
 /area/awaymission/hiddeneclipse/theabyss)
 "oy" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -761,7 +761,7 @@
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/awaymission/hiddeneclipse/eclipsecarrier/engine)
 "pO" = (
-/obj/item/weapon/circuitboard/pacman,
+/obj/item/circuitboard/pacman,
 /turf/simulated/floor/outdoors/lavaland/basalt{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -797,7 +797,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/lightorange,
-/obj/item/weapon/melee/energy/spear,
+/obj/item/melee/energy/spear,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/awaymission/hiddeneclipse/eclipsecarrier/prison)
 "qi" = (
@@ -808,7 +808,7 @@
 /turf/simulated/floor/concrete,
 /area/awaymission/hiddeneclipse/theabyss)
 "qj" = (
-/obj/item/weapon/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
 /turf/simulated/floor/outdoors/lavaland/basalt{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -918,8 +918,8 @@
 "sx" = (
 /obj/structure/table/rack,
 /obj/item/clothing/glasses/material,
-/obj/item/weapon/pickaxe/gold,
-/obj/item/weapon/pickaxe/plasmacutter,
+/obj/item/pickaxe/gold,
+/obj/item/pickaxe/plasmacutter,
 /obj/item/clothing/shoes/magboots,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzonea)
@@ -1000,7 +1000,7 @@
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "uT" = (
-/obj/item/weapon/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/scanning_module/hyper,
 /turf/simulated/floor/outdoors/lavaland/basalt{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -1034,7 +1034,7 @@
 /turf/simulated/shuttle/floor/alien,
 /area/awaymission/hiddeneclipse/precursortemple)
 "vx" = (
-/obj/item/weapon/pickaxe/anamolous,
+/obj/item/pickaxe/anamolous,
 /turf/simulated/mineral/floor{
 	temperature = 293.15
 	},
@@ -1050,7 +1050,7 @@
 /turf/simulated/floor/outdoors/ice/dark_smooth,
 /area/awaymission/hiddeneclipse/theabyss)
 "vK" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /turf/simulated/floor/wood,
 /area/awaymission/hiddeneclipse/miningzoneb)
@@ -1232,7 +1232,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/awaymission/hiddeneclipse)
 "zp" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -1355,7 +1355,7 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "Bo" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/energy/elementalray,
+/obj/item/gun/energy/elementalray,
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1";
@@ -1809,8 +1809,8 @@
 	},
 /area/awaymission/hiddeneclipse)
 "IH" = (
-/obj/item/weapon/bedsheet,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet,
+/obj/item/bedsheet/purple,
 /obj/structure/bed/padded,
 /turf/simulated/floor/wood,
 /area/awaymission/hiddeneclipse/eclipsecarrier/dorms)
@@ -1829,7 +1829,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/awaymission/hiddeneclipse/eclipsecarrier/helm)
 "IW" = (
-/obj/item/weapon/gun/energy/kinetic_accelerator/premiumka,
+/obj/item/gun/energy/kinetic_accelerator/premiumka,
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/borg/upgrade/modkit/damage,
 /obj/item/borg/upgrade/modkit/heater,
@@ -1837,7 +1837,7 @@
 /area/awaymission/hiddeneclipse/miningzonea)
 "IX" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/weapon/kinetic_crusher/glaive,
+/obj/item/kinetic_crusher/glaive,
 /obj/item/borg/upgrade/modkit/range,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzoneb)
@@ -1952,12 +1952,12 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/cafe)
 "KG" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/shield_gen_ex,
-/obj/item/weapon/rcd/shipwright/loaded,
+/obj/item/circuitboard/shield_gen_ex,
+/obj/item/rcd/shipwright/loaded,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/theabyss)
 "KK" = (
-/obj/item/weapon/gun/energy/mininglaser,
+/obj/item/gun/energy/mininglaser,
 /turf/simulated/mineral/floor{
 	temperature = 293.15
 	},
@@ -2090,7 +2090,7 @@
 "Ni" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/steel,
-/obj/item/weapon/melee/baton/slime/loaded,
+/obj/item/melee/baton/slime/loaded,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "Nl" = (
@@ -2240,7 +2240,7 @@
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/awaymission/hiddeneclipse/eclipsecarrier/engine)
 "PA" = (
-/obj/item/weapon/gun/projectile/cell_loaded/medical/cmo,
+/obj/item/gun/projectile/cell_loaded/medical/cmo,
 /obj/item/ammo_casing/microbattery/medical/burn3,
 /turf/simulated/shuttle/floor/white,
 /area/awaymission/hiddeneclipse)
@@ -2299,9 +2299,9 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/cargobay)
 "QE" = (
 /obj/structure/table/rack,
-/obj/item/weapon/plastique/seismic/locked,
-/obj/item/weapon/plastique/seismic/locked,
-/obj/item/weapon/plastique/seismic/locked,
+/obj/item/plastique/seismic/locked,
+/obj/item/plastique/seismic/locked,
+/obj/item/plastique/seismic/locked,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzoneb)
 "QI" = (
@@ -2328,7 +2328,7 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/prison)
 "Re" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/energy/elementalray,
+/obj/item/gun/energy/elementalray,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
@@ -2341,7 +2341,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzoneb)
 "RG" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -2378,8 +2378,8 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/science)
 "Sb" = (
 /obj/structure/table/rack,
-/obj/item/weapon/syndie/c4explosive/heavy/super_heavy,
-/obj/item/weapon/flame/lighter/zippo/c4detonator,
+/obj/item/syndie/c4explosive/heavy/super_heavy,
+/obj/item/flame/lighter/zippo/c4detonator,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/hiddeneclipse/miningzoneb)
 "Sc" = (
@@ -2390,7 +2390,7 @@
 	},
 /area/awaymission/hiddeneclipse/miningzonea)
 "Sm" = (
-/obj/item/weapon/melee/energy/sword/blue,
+/obj/item/melee/energy/sword/blue,
 /turf/simulated/shuttle/floor/white,
 /area/awaymission/hiddeneclipse)
 "Su" = (
@@ -2492,7 +2492,7 @@
 	},
 /area/awaymission/hiddeneclipse)
 "Ur" = (
-/obj/item/weapon/bedsheet/hopdouble,
+/obj/item/bedsheet/hopdouble,
 /obj/structure/bed/double,
 /turf/simulated/floor/wood/sif,
 /area/awaymission/hiddeneclipse/eclipsecarrier/dorms)
@@ -2779,9 +2779,9 @@
 /area/awaymission/hiddeneclipse/eclipsecarrier/prison)
 "Zu" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/paradoxrift,
+/obj/item/circuitboard/paradoxrift,
 /obj/item/clothing/glasses/omni,
-/obj/item/weapon/storage/belt/utility/alien/full,
+/obj/item/storage/belt/utility/alien/full,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/theabyss)
 "ZK" = (
@@ -2792,7 +2792,7 @@
 /turf/simulated/floor/grass,
 /area/awaymission/hiddeneclipse/theabyss)
 "ZP" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/awaymission/hiddeneclipse/eclipsecarrier/cafe)

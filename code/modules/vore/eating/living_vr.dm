@@ -690,7 +690,7 @@
 		forceMove(get_turf(src))
 		log_and_message_admins("[key_name(src)] used the OOC escape button to escape from of a pair of shoes. [ADMIN_FLW(src)] - Shoes [ADMIN_VV(S)]")
 
-	else if(istype(loc, /obj/item/weapon/holder/micro) && (istype(loc.loc, /obj/machinery/microwave)))
+	else if(istype(loc, /obj/item/holder/micro) && (istype(loc.loc, /obj/machinery/microwave)))
 		forceMove(get_turf(src))
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a microwave.")
 
@@ -1046,11 +1046,7 @@
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of bureaucracy.</span>")
 		else if(istype(I,/obj/item/book))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of knowledge.</span>")
-<<<<<<< HEAD
-		else if(istype(I,/obj/item/weapon/dice)) //CHOMPedit: Removed roulette ball because that's not active here.
-=======
-		else if(istype(I,/obj/item/dice) || istype(I,/obj/item/roulette_ball))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		else if(istype(I,/obj/item/dice)) //CHOMPedit: Removed roulette ball because that's not active here.
 			to_chat(src, "<span class='notice'>You can taste the bitter flavor of cheating.</span>")
 		else if(istype(I,/obj/item/lipstick))
 			to_chat(src, "<span class='notice'>You can taste the flavor of couture and style. Toddler at the make-up bag style.</span>")
@@ -1092,26 +1088,26 @@
 					//to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>") //CHOMPedit: moved to modular_chomp capture_crystal.dm
 					to_chat(src, "<span class='notice'>You can taste the the power of command.</span>")
 		// CHOMPedit begin
-		else if(istype(I,/obj/item/device/starcaster_news))
+		else if(istype(I,/obj/item/starcaster_news))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of digital garbage, oh wait its just the news.</span>")
-		else if(istype(I,/obj/item/weapon/newspaper))
+		else if(istype(I,/obj/item/newspaper))
 			to_chat(src, "<span class='notice'>You can taste the dry flavor of garbage, oh wait its just the news.</span>")
-		else if (istype(I,/obj/item/weapon/cell))
+		else if (istype(I,/obj/item/cell))
 			visible_message("<span class='warning'>[src] sates their electric appetite with a [I]!</span>")
 			to_chat(src, "<span class='notice'>You can taste the spicy flavor of electrolytes, yum.</span>")
-		else if (istype(I,/obj/item/device/walkpod))
+		else if (istype(I,/obj/item/walkpod))
 			visible_message("<span class='warning'>[src] sates their musical appetite with a [I]!</span>")
 			to_chat(src, "<span class='notice'>You can taste the jazzy flavor of music.</span>")
 		else if (istype(I,/obj/item/mail/junkmail))
 			visible_message("<span class='warning'>[src] devours the [I]!</span>")
 			to_chat(src, "<span class='notice'>You can taste the flavor of the galactic postal service.</span>")
-		else if (istype(I,/obj/item/weapon/gun/energy/sizegun))
+		else if (istype(I,/obj/item/gun/energy/sizegun))
 			visible_message("<span class='warning'>[src] devours the [I]!</span>")
 			to_chat(src, "<span class='notice'>You didn't read the warning label, did you?</span>")
-		else if (istype(I,/obj/item/device/slow_sizegun))
+		else if (istype(I,/obj/item/slow_sizegun))
 			visible_message("<span class='warning'>[src] devours the [I]!</span>")
 			to_chat(src, "<span class='notice'>You taste the flavor of sunday driver bluespace.</span>")
-		else if (istype(I,/obj/item/device/laser_pointer))
+		else if (istype(I,/obj/item/laser_pointer))
 			visible_message("<span class='warning'>[src] devours the [I]!</span>")
 			to_chat(src, "<span class='notice'>You taste the flavor of a laser.</span>")
 		else if (istype(I,/obj/item/canvas))

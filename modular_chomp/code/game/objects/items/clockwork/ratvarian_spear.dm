@@ -1,5 +1,5 @@
 //Ratvarian spear: A relatively fragile spear from the Celestial Derelict. Deals extreme damage to silicons and enemy cultists, but doesn't last long when summoned.
-/obj/item/weapon/ratvarian_spear
+/obj/item/ratvarian_spear
 	name = "ratvarian spear"
 	desc = "A razor-sharp spear made of brass. It thrums with barely-contained energy."
 	icon = 'modular_chomp/icons/obj/clockwork_objects.dmi'

@@ -137,13 +137,8 @@
 /datum/uplink_item/item/visible_weapons/combatshotgun
 	name = "Combat Shotgun"
 	item_cost = 75
-<<<<<<< HEAD
-	path = /obj/item/weapon/gun/projectile/shotgun/pump/combat
-
-=======
 	path = /obj/item/gun/projectile/shotgun/pump/combat
-	
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+
 /datum/uplink_item/item/visible_weapons/semishotgun
 	name = "Semi-Automatic Shotgun"
 	item_cost = 100

@@ -258,13 +258,9 @@
 			if(prob(25))
 				new /obj/item/storage/firstaid/combat(C)
 			if(prob(25))
-<<<<<<< HEAD
-				new /obj/item/weapon/storage/firstaid/adv(C)
-			if(prob(25))
-				new /obj/item/weapon/storage/firstaid/experimental(C) //CHOMP Add
-=======
 				new /obj/item/storage/firstaid/adv(C)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+			if(prob(25))
+				new /obj/item/storage/firstaid/experimental(C) //CHOMP Add
 		if("snacks")
 			//you're come so far, you must be in need of refreshment
 			var/obj/structure/closet/crate/freezer/C = new(src.loc)

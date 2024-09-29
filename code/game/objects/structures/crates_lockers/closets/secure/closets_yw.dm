@@ -5,14 +5,14 @@
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(
-		/obj/item/weapon/storage/briefcase,
-		/obj/item/weapon/storage/firstaid/adv,
-		/obj/item/weapon/storage/belt/security,
-		/obj/item/weapon/grenade/flashbang,
-		/obj/item/device/flash,
-		/obj/item/weapon/reagent_containers/spray/pepper,
-		/obj/item/weapon/handcuffs,
-		/obj/item/weapon/melee/baton/loaded,
+		/obj/item/storage/briefcase,
+		/obj/item/storage/firstaid/adv,
+		/obj/item/storage/belt/security,
+		/obj/item/grenade/flashbang,
+		/obj/item/flash,
+		/obj/item/reagent_containers/spray/pepper,
+		/obj/item/handcuffs,
+		/obj/item/melee/baton/loaded,
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/clothing/glasses/sunglasses/medhud,
 		/obj/item/clothing/head/beret/blueshield,
@@ -37,34 +37,34 @@
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(
-		/obj/item/weapon/storage/backpack/parachute,
-		/obj/item/weapon/material/knife/tacknife/survival,
+		/obj/item/storage/backpack/parachute,
+		/obj/item/material/knife/tacknife/survival,
 		/obj/item/clothing/head/pilot/alt,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/suit/storage/toggle/yw/secjacket,
 		/obj/item/clothing/under/rank/khi/sec/pilot,
 		/obj/item/clothing/gloves/fingerless,
-		/obj/item/weapon/cartridge/security,
-		/obj/item/device/radio/headset/headset_sec/alt,
-		/obj/item/weapon/storage/belt/security,
+		/obj/item/cartridge/security,
+		/obj/item/radio/headset/headset_sec/alt,
+		/obj/item/storage/belt/security,
 		/obj/item/clothing/glasses/sunglasses/sechud,
-		/obj/item/weapon/storage/box/flare,
+		/obj/item/storage/box/flare,
 		/obj/item/clothing/accessory/storage/webbing/combatpilot,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+		/obj/item/reagent_containers/food/snacks/liquidfood,
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle,
 		/obj/item/clothing/head/soft/sec/corp,
 		/obj/item/clothing/accessory/holster/armpit,
-		/obj/item/weapon/gun/energy/taser,
-		/obj/item/weapon/melee/baton/loaded,
-		/obj/item/weapon/cell/device/weapon,
-		/obj/item/device/flashlight/maglight,
-		/obj/item/device/radio
+		/obj/item/gun/energy/taser,
+		/obj/item/melee/baton/loaded,
+		/obj/item/cell/device/weapon,
+		/obj/item/flashlight/maglight,
+		/obj/item/radio
 		)
 
 /obj/structure/closet/secure_closet/personal/volunteer
 	closet_appearance = /decl/closet_appearance/cabinet/secure
 
 	starts_with = list(
-		/obj/item/device/radio/off,
-		/obj/item/device/gps
+		/obj/item/radio/off,
+		/obj/item/gps
 		)

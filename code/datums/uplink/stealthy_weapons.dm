@@ -11,13 +11,8 @@
 
 /datum/uplink_item/item/stealthy_weapons/concealed_cane
 	name = "Concealed Cane Sword"
-<<<<<<< HEAD
 	item_cost = 10
-	path = /obj/item/weapon/cane/concealed
-=======
-	item_cost = 40
 	path = /obj/item/cane/concealed
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /datum/uplink_item/item/stealthy_weapons/detomatix
 	name = "Detomatix PDA Cartridge"

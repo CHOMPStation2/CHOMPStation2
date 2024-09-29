@@ -297,9 +297,9 @@
 				victims -= F
 	return ..()
 
-/obj/item/clothing/mask/chewable/candy/lolli/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/holder))
-		if(!(istype(W, /obj/item/weapon/holder/micro) || istype(W, /obj/item/weapon/holder/mouse)))
+/obj/item/clothing/mask/chewable/candy/lolli/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/holder))
+		if(!(istype(W, /obj/item/holder/micro) || istype(W, /obj/item/holder/mouse)))
 			. = ..()
 			return
 
@@ -307,7 +307,7 @@
 			to_chat(user, SPAN_WARNING("You cannot stick [W] to \the [src] without unwrapping it!"))
 			return
 
-		var/obj/item/weapon/holder/H = W
+		var/obj/item/holder/H = W
 
 		if(!victims)
 			victims = list()

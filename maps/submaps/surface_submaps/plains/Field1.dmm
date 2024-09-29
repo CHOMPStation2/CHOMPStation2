@@ -18,7 +18,7 @@
 /area/submap/Field1)
 "f" = (
 <<<<<<< HEAD
-/obj/item/device/radio,
+/obj/item/radio,
 /turf/simulated/floor/outdoors/dirt,
 =======
 /obj/item/radio,
@@ -35,7 +35,7 @@
 /area/submap/Field1)
 "i" = (
 <<<<<<< HEAD
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/outdoors/dirt,
 =======
 /obj/item/flashlight,

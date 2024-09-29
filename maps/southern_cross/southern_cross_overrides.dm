@@ -4,10 +4,10 @@
 /mob/living/silicon/robot/platform/cargo
 	req_access = list(access_cargo_bot)
 
-/obj/item/card/id/platform/Initialize()
+/obj/item/weapon/card/id/platform/Initialize()
 	. = ..()
-	access |= access_explorer
-	access |= access_pilot
+	// access |= access_explorer
+	// access |= access_pilot
 
 /obj/structure/dark_portal/hub
 	destination_station_areas = list(/area/hallway/primary/firstdeck/elevator)

@@ -69,11 +69,7 @@
 	update_icon()
 	..()
 
-<<<<<<< HEAD
-/obj/item/weapon/melee/shock_maul/Initialize() //CHOMPedit
-=======
-/obj/item/melee/shock_maul/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/melee/shock_maul/Initialize() //CHOMPedit
 	..()
 	update_held_icon()
 	return

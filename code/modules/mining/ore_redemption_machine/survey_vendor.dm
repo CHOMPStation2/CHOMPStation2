@@ -37,19 +37,11 @@
 		new /datum/data/mining_equipment("Injector (L) - Panacea",/obj/item/reagent_containers/hypospray/autoinjector/biginjector/purity,	30),
 		new /datum/data/mining_equipment("Injector (L) - Trauma",/obj/item/reagent_containers/hypospray/autoinjector/biginjector/brute,	50),
 		new /datum/data/mining_equipment("Nanopaste Tube",				/obj/item/stack/nanopaste,											50),
-<<<<<<< HEAD
-		new /datum/data/mining_equipment("Defense Equipment - Phase Pistol",/obj/item/weapon/gun/energy/locked/phasegun/pistol,					15), //CHOMPedit
-		new /datum/data/mining_equipment("Defense Equipment - Smoke Bomb",/obj/item/weapon/grenade/smokebomb,								50),
-		new /datum/data/mining_equipment("Defense Equipment - Razor Drone Deployer",/obj/item/weapon/grenade/spawnergrenade/manhacks/station,	50),
-		new /datum/data/mining_equipment("Defense Equipment - Sentry Drone Deployer",/obj/item/weapon/grenade/spawnergrenade/ward,			100),
-		new /datum/data/mining_equipment("Defense Equipment - Steel Machete",	/obj/item/weapon/material/knife/machete,					50),
-=======
-		new /datum/data/mining_equipment("Defense Equipment - Phase Pistol",/obj/item/gun/energy/phasegun/pistol,					15),
+		new /datum/data/mining_equipment("Defense Equipment - Phase Pistol",/obj/item/gun/energy/locked/phasegun/pistol,					15), //CHOMPedit
 		new /datum/data/mining_equipment("Defense Equipment - Smoke Bomb",/obj/item/grenade/smokebomb,								50),
 		new /datum/data/mining_equipment("Defense Equipment - Razor Drone Deployer",/obj/item/grenade/spawnergrenade/manhacks/station,	50),
 		new /datum/data/mining_equipment("Defense Equipment - Sentry Drone Deployer",/obj/item/grenade/spawnergrenade/ward,			100),
 		new /datum/data/mining_equipment("Defense Equipment - Steel Machete",	/obj/item/material/knife/machete,					50),
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		new /datum/data/mining_equipment("Survival Equipment - Insulated Poncho",	/obj/random/thermalponcho,								75)
 		)
 
@@ -58,47 +50,28 @@
 	//VOREStation Edit Start - Heavily modified list
 	prize_list = list()
 	prize_list["Gear"] = list(
-<<<<<<< HEAD
-		EQUIPMENT("Defense Equipment - Smoke Bomb",				/obj/item/weapon/grenade/smokebomb,									10),
-		EQUIPMENT("Defense Equipment - Plasteel Machete",		/obj/item/weapon/material/knife/machete,							50),
-		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/manhacks/station/locked,	100),
-		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/weapon/grenade/spawnergrenade/ward,						150),
-		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/rifle,				800), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Frontier Shotgun", 	/obj/item/weapon/gun/energy/locked/frontier/shotgun,				800), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/weapon/gun/energy/locked/frontier/carbine,				800), //CHOMPEDIT
-		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/weapon/gun/energy/locked/frontier,					600), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/weapon/gun/energy/locked/frontier/holdout,				300), //CHOMPADD
-		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/weapon/kinetic_crusher/machete/dagger,					75),
-		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/weapon/kinetic_crusher/machete,							250),
-		EQUIPMENT("Fishing Net",								/obj/item/weapon/material/fishing_net,								50),
-		EQUIPMENT("Titanium Fishing Rod",						/obj/item/weapon/material/fishing_rod/modern,						100),
-		EQUIPMENT("Durasteel Fishing Rod",						/obj/item/weapon/material/fishing_rod/modern/strong,				750),
-=======
 		EQUIPMENT("Defense Equipment - Smoke Bomb",				/obj/item/grenade/smokebomb,									10),
 		EQUIPMENT("Defense Equipment - Plasteel Machete",		/obj/item/material/knife/machete,							50),
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/grenade/spawnergrenade/manhacks/station/locked,	100),
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/grenade/spawnergrenade/ward,						150),
-//		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/gun/energy/locked/frontier/carbine,				750), //VOREStation removal
+		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/rifle,				800), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Frontier Shotgun", 	/obj/item/gun/energy/locked/frontier/shotgun,				800), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/gun/energy/locked/frontier/carbine,				800), //CHOMPEDIT
+		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/gun/energy/locked/frontier,					600), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/holdout,				300), //CHOMPADD
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/kinetic_crusher/machete/dagger,					75),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/kinetic_crusher/machete,							250),
 		EQUIPMENT("Fishing Net",								/obj/item/material/fishing_net,								50),
 		EQUIPMENT("Titanium Fishing Rod",						/obj/item/material/fishing_rod/modern,						100),
 		EQUIPMENT("Durasteel Fishing Rod",						/obj/item/material/fishing_rod/modern/strong,				750),
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		EQUIPMENT("Fulton Beacon",								/obj/item/fulton_core,												300),
 		EQUIPMENT("Geiger Counter",								/obj/item/geiger,											75),
 		EQUIPMENT("GPS Device",									/obj/item/gps/mining,										10),
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,										250),
-<<<<<<< HEAD
-		EQUIPMENT("Mini-Translocator",							/obj/item/device/perfect_tele/one_beacon,							120),
-		EQUIPMENT("Survey Tools - Mapping Unit",				/obj/item/device/mapping_unit,										150),
-		EQUIPMENT("Survey Tools - Mapping Beacon",				/obj/item/device/holomap_beacon,									25),
-		EQUIPMENT("Survey Tools - Advanced Cataloguer",			/obj/item/device/cataloguer/advanced,								300), //CHOMPADD
-=======
 		EQUIPMENT("Mini-Translocator",							/obj/item/perfect_tele/one_beacon,							120),
 		EQUIPMENT("Survey Tools - Mapping Unit",				/obj/item/mapping_unit,										150),
 		EQUIPMENT("Survey Tools - Mapping Beacon",				/obj/item/holomap_beacon,									25),
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		EQUIPMENT("Survey Tools - Advanced Cataloguer",			/obj/item/cataloguer/advanced,								300), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,											75),
 		EQUIPMENT("Survival Equipment - Glowstick", 			/obj/item/flashlight/glowstick,								5),
 		EQUIPMENT("Survival Equipment - Flare", 				/obj/item/flashlight/flare,									5),
@@ -108,10 +81,10 @@
 		EQUIPMENT("Survival Equipment - Exploration Plate",		/obj/item/clothing/accessory/armor/armorplate/explorer,			50), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Exploration Arm Guards",		/obj/item/clothing/accessory/armor/armguards/explorer,		50), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Exploration Leg Guards",		/obj/item/clothing/accessory/armor/legguards/explorer,		50), //CHOMPADD
-		EQUIPMENT("Survival Equipment - Exploration Riot shield",	/obj/item/weapon/shield/riot/explorer,					75), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Exploration Riot shield",	/obj/item/shield/riot/explorer,					75), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/green,				10), //CHOMPADD
 		EQUIPMENT("Survival Equipment - Large Storage Pouch",		/obj/item/clothing/accessory/storage/pouches/large/green,		25), //CHOMPADD
-		EQUIPMENT("Survival Equipment - Pathfinder Belt",		/obj/item/weapon/storage/belt/explorer/pathfinder,					200), //CHOMPADD
+		EQUIPMENT("Survival Equipment - Pathfinder Belt",		/obj/item/storage/belt/explorer/pathfinder,					200), //CHOMPADD
 	)
 	prize_list["Consumables"] = list(
 		EQUIPMENT("1 Marker Beacon",		/obj/item/stack/marker_beacon,													1),
@@ -146,23 +119,15 @@
 		EQUIPMENT("Luxury Shelter Capsule",		/obj/item/survivalcapsule/luxury,							310),
 		EQUIPMENT("Bar Shelter Capsule",		/obj/item/survivalcapsule/luxurybar,							1000),
 		EQUIPMENT("Plush Toy",					/obj/random/plushie,												30),
-<<<<<<< HEAD
-		EQUIPMENT("Soap",						/obj/item/weapon/soap/nanotrasen,									20),
-		EQUIPMENT("Thalers - 100",				/obj/item/weapon/spacecash/c100,									100),
-		EQUIPMENT("Umbrella",					/obj/item/weapon/melee/umbrella/random,								20),
-		EQUIPMENT("UAV - Recon Skimmer",		/obj/item/device/uav,												40),
-	//CHOMPedit Start
-	    EQUIPMENT("Mining-Grade PSG",			/obj/item/device/personal_shield_generator/belt/mining/loaded,		100),
-	    EQUIPMENT("Security-Grade PSG",			/obj/item/device/personal_shield_generator/belt/security/loaded,	200),
-	    EQUIPMENT("PSG Variant-P",			    /obj/item/device/personal_shield_generator/belt/parry,	            250),
-	//CHOMPedit End
-=======
 		EQUIPMENT("Soap",						/obj/item/soap/nanotrasen,									20),
 		EQUIPMENT("Thalers - 100",				/obj/item/spacecash/c100,									100),
 		EQUIPMENT("Umbrella",					/obj/item/melee/umbrella/random,								20),
 		EQUIPMENT("UAV - Recon Skimmer",		/obj/item/uav,												40),
-
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	//CHOMPedit Start
+	    EQUIPMENT("Mining-Grade PSG",			/obj/item/personal_shield_generator/belt/mining/loaded,		100),
+	    EQUIPMENT("Security-Grade PSG",			/obj/item/personal_shield_generator/belt/security/loaded,	200),
+	    EQUIPMENT("PSG Variant-P",			    /obj/item/personal_shield_generator/belt/parry,	            250),
+	//CHOMPedit End
 	)
 	//VOREStation Edit End
 
@@ -171,10 +136,5 @@
 		return 0
 	return target.survey_points
 
-<<<<<<< HEAD
-/obj/machinery/mineral/equipment_vendor/survey/remove_points(obj/item/weapon/card/id/target, amt)
-	target.survey_points -= amt
-=======
 /obj/machinery/mineral/equipment_vendor/survey/remove_points(obj/item/card/id/target, amt)
 	target.survey_points -= amt
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

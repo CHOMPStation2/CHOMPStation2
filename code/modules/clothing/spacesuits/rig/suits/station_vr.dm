@@ -16,72 +16,27 @@
 	armor = list(melee = 50, bullet = 10, laser = 20, energy = 15, bomb = 30, bio = 100, rad = 50)
 
 //Area allowing backpacks to be placed on rigsuits.
-<<<<<<< HEAD
-/obj/item/weapon/rig/vox
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/backpack, /obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/combat
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/melee/baton,/obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/ert
-	allowed = list(/obj/item/device/flashlight, /obj/item/weapon/tank, /obj/item/device/t_scanner, /obj/item/weapon/rcd, /obj/item/weapon/tool/crowbar, \
-	/obj/item/weapon/tool/screwdriver, /obj/item/weapon/weldingtool, /obj/item/weapon/tool/wirecutters, /obj/item/weapon/tool/wrench, /obj/item/device/multitool, \
-	/obj/item/device/radio, /obj/item/device/analyzer,/obj/item/weapon/storage/briefcase/inflatable, /obj/item/weapon/melee/baton, /obj/item/weapon/gun, \
-	/obj/item/weapon/storage/firstaid, /obj/item/weapon/reagent_containers/hypospray, /obj/item/roller, /obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/light/ninja
-	allowed = list(/obj/item/weapon/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/cell, /obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/merc
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/melee/energy/sword,/obj/item/weapon/handcuffs, /obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/ce
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd,/obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/medical
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical,/obj/item/roller,/obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/hazmat
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/stack/flag,/obj/item/weapon/storage/excavation,/obj/item/weapon/pickaxe,/obj/item/device/healthanalyzer,/obj/item/device/measuring_tape,/obj/item/device/ano_scanner,/obj/item/device/depth_scanner,/obj/item/device/core_sampler,/obj/item/device/gps,/obj/item/device/beacon_locator,/obj/item/device/radio/beacon,/obj/item/weapon/pickaxe/hand,/obj/item/weapon/storage/bag/fossils,/obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/hazard
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/melee/baton,/obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/industrial
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd,/obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-
-/obj/item/weapon/rig/military
-	allowed = list(/obj/item/device/flashlight, /obj/item/weapon/tank,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/handcuffs, \
-	/obj/item/device/t_scanner, /obj/item/weapon/rcd, /obj/item/weapon/weldingtool, /obj/item/weapon/tool, /obj/item/device/multitool, \
-	/obj/item/device/radio, /obj/item/device/analyzer,/obj/item/weapon/storage/briefcase/inflatable, /obj/item/weapon/melee/baton, /obj/item/weapon/gun, \
-	/obj/item/weapon/storage/firstaid, /obj/item/weapon/reagent_containers/hypospray, /obj/item/roller, /obj/item/device/suit_cooling_unit, /obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-/obj/item/weapon/rig/pmc
-	allowed = list(/obj/item/device/flashlight, /obj/item/weapon/tank, /obj/item/device/t_scanner, /obj/item/weapon/rcd, /obj/item/weapon/tool/crowbar, \
-	/obj/item/weapon/tool/screwdriver, /obj/item/weapon/weldingtool, /obj/item/weapon/tool/wirecutters, /obj/item/weapon/tool/wrench, /obj/item/device/multitool, \
-	/obj/item/device/radio, /obj/item/device/analyzer,/obj/item/weapon/storage/briefcase/inflatable, /obj/item/weapon/melee/baton, /obj/item/weapon/gun, \
-	/obj/item/weapon/storage/firstaid, /obj/item/weapon/reagent_containers/hypospray, /obj/item/roller, /obj/item/weapon/storage/backpack,/obj/item/device/bluespaceradio, /obj/item/device/defib_kit)
-=======
 /obj/item/rig/vox
 	allowed = list(/obj/item/gun,/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/backpack, /obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/combat
 	allowed = list(/obj/item/gun,/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/melee/baton,/obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/ert
 	allowed = list(/obj/item/flashlight, /obj/item/tank, /obj/item/t_scanner, /obj/item/rcd, /obj/item/tool/crowbar, \
 	/obj/item/tool/screwdriver, /obj/item/weldingtool, /obj/item/tool/wirecutters, /obj/item/tool/wrench, /obj/item/multitool, \
 	/obj/item/radio, /obj/item/analyzer,/obj/item/storage/briefcase/inflatable, /obj/item/melee/baton, /obj/item/gun, \
 	/obj/item/storage/firstaid, /obj/item/reagent_containers/hypospray, /obj/item/roller, /obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/light/ninja
 	allowed = list(/obj/item/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/cell, /obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/merc
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/melee/energy/sword,/obj/item/handcuffs, /obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/ce
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/bag/ore,/obj/item/t_scanner,/obj/item/pickaxe, /obj/item/rcd,/obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/medical
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/firstaid,/obj/item/healthanalyzer,/obj/item/stack/medical,/obj/item/roller,/obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/hazmat
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/stack/flag,/obj/item/storage/excavation,/obj/item/pickaxe,/obj/item/healthanalyzer,/obj/item/measuring_tape,/obj/item/ano_scanner,/obj/item/depth_scanner,/obj/item/core_sampler,/obj/item/gps,/obj/item/beacon_locator,/obj/item/radio/beacon,/obj/item/pickaxe/hand,/obj/item/storage/bag/fossils,/obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/hazard
 	allowed = list(/obj/item/gun,/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/melee/baton,/obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/industrial
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/bag/ore,/obj/item/t_scanner,/obj/item/pickaxe, /obj/item/rcd,/obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
 
@@ -90,13 +45,11 @@
 	/obj/item/t_scanner, /obj/item/rcd, /obj/item/weldingtool, /obj/item/tool, /obj/item/multitool, \
 	/obj/item/radio, /obj/item/analyzer,/obj/item/storage/briefcase/inflatable, /obj/item/melee/baton, /obj/item/gun, \
 	/obj/item/storage/firstaid, /obj/item/reagent_containers/hypospray, /obj/item/roller, /obj/item/suit_cooling_unit, /obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
-
 /obj/item/rig/pmc
 	allowed = list(/obj/item/flashlight, /obj/item/tank, /obj/item/t_scanner, /obj/item/rcd, /obj/item/tool/crowbar, \
 	/obj/item/tool/screwdriver, /obj/item/weldingtool, /obj/item/tool/wirecutters, /obj/item/tool/wrench, /obj/item/multitool, \
 	/obj/item/radio, /obj/item/analyzer,/obj/item/storage/briefcase/inflatable, /obj/item/melee/baton, /obj/item/gun, \
 	/obj/item/storage/firstaid, /obj/item/reagent_containers/hypospray, /obj/item/roller, /obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/rig/robotics
 	allowed = list(/obj/item/flashlight, /obj/item/storage/box, /obj/item/storage/belt, /obj/item/defib_kit/compact)
@@ -105,7 +58,7 @@
 /obj/item/rig/focalpoint
 	name = "\improper F.P.E. hardsuit control module"
 	desc = "A high-end hardsuit produced by Focal Point Energistics, focused around repair and construction."
-	
+
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
 	icon_state = "techno_rig"
@@ -121,11 +74,7 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE // so it's like a rig firesuit
 	armor = list("melee" = 40, "bullet" = 10, "laser" = 30, "energy" = 55, "bomb" = 70, "bio" = 100, "rad" = 100)
-<<<<<<< HEAD
-=======
-	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/backpack)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
-	
+
 	chest_type = /obj/item/clothing/suit/space/rig/focalpoint
 	helm_type = /obj/item/clothing/head/helmet/space/rig/focalpoint
 	boot_type = /obj/item/clothing/shoes/magboots/rig/focalpoint
@@ -176,23 +125,15 @@
 /obj/item/rig/hephaestus
 	name = "\improper Hephaestus hardsuit control module"
 	desc = "A high-end hardsuit produced by Hephaestus Industries, focused on destroying the competition. Literally."
-	
+
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
 	icon_state = "ihs_rig"
 	suit_type = "\improper Hephaestus hardsuit"
-<<<<<<< HEAD
-	cell_type = /obj/item/weapon/cell/super
-=======
 	cell_type = /obj/item/cell/super
-	allowed = list(/obj/item/flashlight, /obj/item/tank,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/handcuffs, \
-	/obj/item/t_scanner, /obj/item/rcd, /obj/item/weldingtool, /obj/item/tool, /obj/item/multitool, \
-	/obj/item/radio, /obj/item/analyzer,/obj/item/storage/briefcase/inflatable, /obj/item/melee/baton, /obj/item/gun, \
-	/obj/item/storage/firstaid, /obj/item/reagent_containers/hypospray, /obj/item/roller, /obj/item/suit_cooling_unit, /obj/item/storage/backpack,/obj/item/bluespaceradio, /obj/item/defib_kit)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	armor = list("melee" = 70, "bullet" = 70, "laser" = 70, "energy" = 50, "bomb" = 60, "bio" = 100, "rad" = 20)
-	
+
 	chest_type = /obj/item/clothing/suit/space/rig/hephaestus
 	helm_type = /obj/item/clothing/head/helmet/space/rig/hephaestus
 	boot_type = /obj/item/clothing/shoes/magboots/rig/hephaestus
@@ -242,7 +183,7 @@
 /obj/item/rig/zero
 	name = "null hardsuit control module"
 	desc = "A very lightweight suit designed to allow use inside mechs and starfighters. It feels like you're wearing nothing at all."
-	
+
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
 	icon_state = "null_rig"
@@ -253,12 +194,7 @@
 	helm_type = /obj/item/clothing/head/helmet/space/rig/zero
 	boot_type = null
 	glove_type = null
-<<<<<<< HEAD
-=======
 
-	allowed = list(/obj/item/gun,/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/backpack, /obj/item/bluespaceradio, /obj/item/defib_kit)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
-	
 	slowdown = 0
 	offline_slowdown = 1
 	offline_vision_restriction = 2
@@ -288,17 +224,11 @@
 	slowdown = 0
 
 // Medical rig from bay
-<<<<<<< HEAD
 // CHOMPEdit: Commonwealth -> Solgov.
-/obj/item/weapon/rig/baymed
+/obj/item/rig/baymed
 	name = "\improper Solgov medical hardsuit control module"
 	desc = "A lightweight first responder hardsuit from Solgov. Not suitable for combat use, but advanced myomer fibers can push the user to incredible speeds."
-=======
-/obj/item/rig/baymed
-	name = "\improper Commonwealth medical hardsuit control module"
-	desc = "A lightweight first responder hardsuit from the Commonwealth. Not suitable for combat use, but advanced myomer fibers can push the user to incredible speeds."
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
-	
+
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
 	icon_state = "medical_rig_bay"
@@ -311,31 +241,13 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/baymed
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/baymed
 
-<<<<<<< HEAD
-=======
-	allowed = list(
-		/obj/item/flashlight,
-		/obj/item/tank,
-		/obj/item/suit_cooling_unit,
-		/obj/item/healthanalyzer,
-		/obj/item/stack/medical,
-		/obj/item/roller,
-		/obj/item/storage/backpack,
-		/obj/item/bluespaceradio,
-		/obj/item/defib_kit)
-
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	// speedy paper
 	slowdown = -0.5
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 10, "energy" = 5, "bomb" = 25, "bio" = 100, "rad" = 20)
 
-<<<<<<< HEAD
-/obj/item/weapon/rig/baymed/equipped
-	req_access = list(access_medical)
-=======
 /obj/item/rig/baymed/equipped
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
-	
+	req_access = list(access_medical)
+
 	initial_modules = list(
 		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/sprinter,
@@ -376,17 +288,11 @@
 	sprite_sheets_obj = null
 
 // Engineering/'Industrial' rig from bay
-<<<<<<< HEAD
 // CHOMPEdit: Commonwealth -> Solgov.
-/obj/item/weapon/rig/bayeng
-	name = "\improper Solgov engineering hardsuit control module" 
-	desc = "An advanced construction hardsuit from Solgov. Built like a tank. Don't expect to be taking any tight corners while running."
-=======
 /obj/item/rig/bayeng
-	name = "\improper Commonwealth engineering hardsuit control module"
-	desc = "An advanced construction hardsuit from the Commonwealth. Built like a tank. Don't expect to be taking any tight corners while running."
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
-	
+	name = "\improper Solgov engineering hardsuit control module"
+	desc = "An advanced construction hardsuit from Solgov. Built like a tank. Don't expect to be taking any tight corners while running."
+
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
 	icon_state = "engineering_rig_bay"
@@ -399,31 +305,11 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/bayeng
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/bayeng
 
-<<<<<<< HEAD
 	slowdown = 1
 	offline_slowdown = 5 // very bulky
 	armor = list(melee = 60, bullet = 50, laser = 30, energy = 15, bomb = 30, bio = 100, rad = 50)
 
-/obj/item/weapon/rig/bayeng//equipped
-=======
-	allowed = list(
-		/obj/item/flashlight,
-		/obj/item/tank,
-		/obj/item/suit_cooling_unit,
-		/obj/item/t_scanner,
-		/obj/item/pickaxe,
-		/obj/item/rcd,
-		/obj/item/storage/backpack,
-		/obj/item/bluespaceradio,
-		/obj/item/defib_kit
-		)
-
-	slowdown = 0
-	offline_slowdown = 5 // very bulky
-	armor = list(melee = 60, bullet = 50, laser = 30, energy = 15, bomb = 30, bio = 100, rad = 50)
-
-/obj/item/rig/bayeng/equipped
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/rig/bayeng//equipped
 	initial_modules = list(
 		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/device/rcd,
@@ -466,17 +352,11 @@
 	siemens_coefficient = 0 // insulated
 
 // Pathfinder rig from bay - event/reward stuff here
-<<<<<<< HEAD
 // CHOMPEdit: Commonwealth -> Solgov.
-/obj/item/weapon/rig/pathfinder
+/obj/item/rig/pathfinder
 	name = "\improper Solgov pathfinder hardsuit control module"
 	desc = "A Solgov pathfinder hardsuit is hard to come by... how'd this end up on the frontier?"
-=======
-/obj/item/rig/pathfinder
-	name = "\improper Commonwealth pathfinder hardsuit control module"
-	desc = "A Commonwealth pathfinder hardsuit is hard to come by... how'd this end up on the frontier?"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
-	
+
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
 	icon_state = "pathfinder_rig_bay"

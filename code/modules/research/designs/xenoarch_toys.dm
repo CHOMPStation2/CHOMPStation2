@@ -30,10 +30,5 @@
 	req_tech = list(TECH_MATERIAL = 3, TECH_POWER = 2, TECH_ENGINEERING = 2, TECH_BLUESPACE = 3)
 	build_type = PROTOLATHE
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/pickaxe/excavationdrill
-	sort_string = "GAAAC"
-=======
 	build_path = /obj/item/pickaxe/excavationdrill
 	sort_string = "GAAAC"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

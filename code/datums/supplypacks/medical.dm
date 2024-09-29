@@ -310,17 +310,10 @@
 			/obj/item/clothing/head/bio_hood/virology = 2,
 			/obj/item/clothing/suit/bio_suit/cmo,
 			/obj/item/clothing/head/bio_hood/cmo,
-<<<<<<< HEAD
 			/obj/item/clothing/mask/gas/clear = 5, //ChompEdit: Proper implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 5,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves
-=======
-			/obj/item/clothing/mask/gas = 5,
 			/obj/item/tank/oxygen = 5,
 			/obj/item/storage/box/masks,
 			/obj/item/storage/box/gloves
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -394,17 +387,10 @@
 			/obj/item/clothing/suit/bio_suit/cmo,
 			/obj/item/clothing/head/bio_hood/cmo,
 			/obj/item/clothing/shoes/white = 7,
-<<<<<<< HEAD
 			/obj/item/clothing/mask/gas/clear = 7, //ChompEdit: Proper implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 7,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves
-=======
-			/obj/item/clothing/mask/gas = 7,
 			/obj/item/tank/oxygen = 7,
 			/obj/item/storage/box/masks,
 			/obj/item/storage/box/gloves
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			)
 	cost = 40
 
@@ -413,17 +399,10 @@
 	contains = list(
 			/obj/item/clothing/suit/bio_suit/virology = 3,
 			/obj/item/clothing/head/bio_hood/virology = 3,
-<<<<<<< HEAD
 			/obj/item/clothing/mask/gas/clear = 3, //ChompEdit: Proper implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 3,
-			/obj/item/weapon/storage/box/masks,
-			/obj/item/weapon/storage/box/gloves
-=======
-			/obj/item/clothing/mask/gas = 3,
 			/obj/item/tank/oxygen = 3,
 			/obj/item/storage/box/masks,
 			/obj/item/storage/box/gloves
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure

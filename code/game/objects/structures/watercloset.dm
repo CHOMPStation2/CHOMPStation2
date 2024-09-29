@@ -608,8 +608,8 @@
 	if(!I || !istype(I,/obj/item)) return
 
 	//CHOMPAdd Start
-	if(istype(I, /obj/item/device/robot_tongue) && isrobot(user))
-		var/obj/item/device/robot_tongue/J = I
+	if(istype(I, /obj/item/robot_tongue) && isrobot(user))
+		var/obj/item/robot_tongue/J = I
 		if(J.water.energy < J.water.max_energy) return
 	//CHOMPAdd End
 

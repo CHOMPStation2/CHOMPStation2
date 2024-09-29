@@ -1,4 +1,4 @@
-/obj/item/weapon/book/codex/casino
+/obj/item/book/codex/casino
 	name = "A Dummy Guide To Losing Your Thalers"
 	desc = "A pristine book with the detailed and golden framed card on the front of the leather covers. \ It's written by an an author you have never heard of before, 'Sleazy Serpent Saren' does sound pretty trustworthy!"
 	icon = 'icons/obj/casino_ch.dmi'

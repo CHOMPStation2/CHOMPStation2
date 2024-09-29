@@ -59,11 +59,7 @@ Frequency:
 			if (sr)
 				src.temp += "<B>Located Beacons:</B><BR>"
 
-<<<<<<< HEAD
-				for(var/obj/item/device/radio/beacon/W in GLOB.all_beacons)
-=======
-				for(var/obj/item/radio/beacon/W in all_beacons)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+				for(var/obj/item/radio/beacon/W in GLOB.all_beacons)
 					if (W.frequency == src.frequency)
 						var/turf/tr = get_turf(W)
 						if (tr.z == sr.z && tr)
@@ -81,11 +77,7 @@ Frequency:
 							src.temp += "[W.code]-[dir2text(get_dir(sr, tr))]-[direct]<BR>"
 
 				src.temp += "<B>Extraneous Signals:</B><BR>"
-<<<<<<< HEAD
-				for (var/obj/item/weapon/implant/tracking/W in GLOB.all_tracking_implants)
-=======
-				for (var/obj/item/implant/tracking/W in all_tracking_implants)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+				for (var/obj/item/implant/tracking/W in GLOB.all_tracking_implants)
 					if (!W.implanted || !(istype(W.loc,/obj/item/organ/external) || ismob(W.loc) || W.malfunction))
 						continue
 

@@ -15,9 +15,9 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/squid,
-/obj/item/weapon/reagent_containers/food/snacks/squid,
-/obj/item/weapon/reagent_containers/food/snacks/squid,
+/obj/item/reagent_containers/food/snacks/squid,
+/obj/item/reagent_containers/food/snacks/squid,
+/obj/item/reagent_containers/food/snacks/squid,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
@@ -30,7 +30,7 @@
 /obj/structure/janitorialcart{
 	dir = 4
 	},
-/obj/item/weapon/mop,
+/obj/item/mop,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/submap/spaceseveneleven)
 "bz" = (
@@ -62,15 +62,15 @@
 	pixel_x = 5;
 	pixel_y = -15
 	},
-/obj/item/weapon/storage/pill_bottle/paracetamol{
+/obj/item/storage/pill_bottle/paracetamol{
 	pixel_y = -1;
 	pixel_x = -3
 	},
-/obj/item/weapon/storage/pill_bottle/paracetamol{
+/obj/item/storage/pill_bottle/paracetamol{
 	pixel_y = -1;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/glass/bottle/lube,
+/obj/item/reagent_containers/glass/bottle/lube,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "bB" = (
@@ -101,13 +101,13 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_y = -6
 	},
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_y = -1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -134,23 +134,23 @@
 /obj/machinery/door/window/northright{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburger{
+/obj/item/reagent_containers/food/snacks/cheeseburger{
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburger{
+/obj/item/reagent_containers/food/snacks/cheeseburger{
 	pixel_x = 6;
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburger{
+/obj/item/reagent_containers/food/snacks/cheeseburger{
 	pixel_x = 6;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheesenachos{
+/obj/item/reagent_containers/food/snacks/cheesenachos{
 	pixel_y = 5;
 	pixel_x = -1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheesenachos{
+/obj/item/reagent_containers/food/snacks/cheesenachos{
 	pixel_y = -2;
 	pixel_x = -1
 	},
@@ -205,19 +205,19 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_y = 6
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_y = -10
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_y = -7
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_y = -3
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -308,9 +308,9 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
+/obj/item/reagent_containers/food/snacks/candy/gummy,
+/obj/item/reagent_containers/food/snacks/candy/gummy,
+/obj/item/reagent_containers/food/snacks/candy/gummy,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "ie" = (
@@ -332,7 +332,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/glass/bottle/cinnamonpowder,
+/obj/item/reagent_containers/glass/bottle/cinnamonpowder,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "iX" = (
@@ -357,7 +357,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "jJ" = (
@@ -374,12 +374,12 @@
 /area/submap/spaceseveneleven)
 "kb" = (
 /obj/structure/closet/crate/large,
-/obj/item/weapon/material/snow/snowball,
-/obj/item/weapon/material/snow/snowball,
-/obj/item/weapon/material/snow/snowball,
-/obj/item/weapon/material/snow/snowball,
-/obj/item/weapon/material/snow/snowball,
-/obj/item/weapon/material/snow/snowball,
+/obj/item/material/snow/snowball,
+/obj/item/material/snow/snowball,
+/obj/item/material/snow/snowball,
+/obj/item/material/snow/snowball,
+/obj/item/material/snow/snowball,
+/obj/item/material/snow/snowball,
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
 	oxygen = 0;
 	nitrogen = 0
@@ -390,7 +390,7 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine,
+/obj/item/reagent_containers/food/drinks/bottle/whitewine,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "ku" = (
@@ -433,13 +433,13 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_y = -1
 	},
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_y = -6
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -465,15 +465,15 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/cell/mech/super{
+/obj/item/cell/mech/super{
 	pixel_x = -3;
 	pixel_y = 6
 	},
-/obj/item/weapon/cell/mech/super{
+/obj/item/cell/mech/super{
 	pixel_x = -3;
 	pixel_y = -6
 	},
-/obj/item/weapon/cell/mech/super{
+/obj/item/cell/mech/super{
 	pixel_x = -3;
 	pixel_y = -1
 	},
@@ -484,22 +484,22 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/material/kitchen/utensil/fork/plastic,
-/obj/item/weapon/material/kitchen/utensil/fork/plastic,
-/obj/item/weapon/material/kitchen/utensil/fork/plastic,
-/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+/obj/item/material/kitchen/utensil/fork/plastic,
+/obj/item/material/kitchen/utensil/fork/plastic,
+/obj/item/material/kitchen/utensil/fork/plastic,
+/obj/item/material/kitchen/utensil/fork/plastic{
 	pixel_x = 3
 	},
-/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+/obj/item/material/kitchen/utensil/fork/plastic{
 	pixel_x = -1
 	},
-/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+/obj/item/material/kitchen/utensil/fork/plastic{
 	pixel_x = -4
 	},
-/obj/item/weapon/material/kitchen/utensil/fork/plastic{
+/obj/item/material/kitchen/utensil/fork/plastic{
 	pixel_x = -7
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+/obj/item/material/kitchen/utensil/spoon/plastic{
 	pixel_y = 0;
 	pixel_x = -3
 	},
@@ -508,47 +508,47 @@
 /area/submap/spaceseveneleven)
 "ns" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/fancy/cigarettes{
+/obj/item/storage/fancy/cigarettes{
 	pixel_y = 7;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes{
+/obj/item/storage/fancy/cigarettes{
 	pixel_y = -5;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes{
+/obj/item/storage/fancy/cigarettes{
 	pixel_y = -1;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes{
+/obj/item/storage/fancy/cigarettes{
 	pixel_y = 3;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/carcinomas{
+/obj/item/storage/fancy/cigarettes/carcinomas{
 	pixel_y = 7
 	},
-/obj/item/weapon/storage/fancy/cigarettes/carcinomas{
+/obj/item/storage/fancy/cigarettes/carcinomas{
 	pixel_y = -5
 	},
-/obj/item/weapon/storage/fancy/cigarettes/carcinomas{
+/obj/item/storage/fancy/cigarettes/carcinomas{
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/fancy/cigarettes/carcinomas{
+/obj/item/storage/fancy/cigarettes/carcinomas{
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/fancy/cigarettes/dromedaryco{
+/obj/item/storage/fancy/cigarettes/dromedaryco{
 	pixel_y = 7;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/dromedaryco{
+/obj/item/storage/fancy/cigarettes/dromedaryco{
 	pixel_y = -5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/dromedaryco{
+/obj/item/storage/fancy/cigarettes/dromedaryco{
 	pixel_y = 0;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/dromedaryco{
+/obj/item/storage/fancy/cigarettes/dromedaryco{
 	pixel_y = 3;
 	pixel_x = 6
 	},
@@ -584,41 +584,41 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11;
 	pixel_x = 10
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11;
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = 5
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -694,10 +694,10 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/cell/device/giga{
+/obj/item/cell/device/giga{
 	pixel_y = -3
 	},
-/obj/item/weapon/cell/device/giga{
+/obj/item/cell/device/giga{
 	pixel_y = -8
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -722,41 +722,41 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = 1;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = 1;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = 1;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = 1;
 	pixel_x = -1
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = 1;
 	pixel_x = -1
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = 1;
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/ketchup{
+/obj/item/reagent_containers/food/condiment/small/packet/ketchup{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/ketchup{
+/obj/item/reagent_containers/food/condiment/small/packet/ketchup{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/ketchup{
+/obj/item/reagent_containers/food/condiment/small/packet/ketchup{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/ketchup,
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/ketchup{
+/obj/item/reagent_containers/food/condiment/small/packet/ketchup,
+/obj/item/reagent_containers/food/condiment/small/packet/ketchup{
 	pixel_x = 3
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -767,25 +767,25 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla{
+/obj/item/reagent_containers/food/drinks/bottle/tequilla{
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla{
+/obj/item/reagent_containers/food/drinks/bottle/tequilla{
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla{
+/obj/item/reagent_containers/food/drinks/bottle/tequilla{
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew{
+/obj/item/reagent_containers/food/drinks/bottle/jager,
+/obj/item/reagent_containers/food/drinks/bottle/jager,
+/obj/item/reagent_containers/food/drinks/bottle/jager,
+/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew{
+/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew{
+/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew{
 	pixel_x = 6
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -795,10 +795,10 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -823,34 +823,34 @@
 /area/submap/spaceseveneleven)
 "sJ" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola{
+/obj/item/reagent_containers/food/drinks/cans/terra_cola{
 	pixel_y = 12;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola{
+/obj/item/reagent_containers/food/drinks/cans/terra_cola{
 	pixel_y = 12;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola{
+/obj/item/reagent_containers/food/drinks/cans/terra_cola{
 	pixel_y = 12;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola{
+/obj/item/reagent_containers/food/drinks/cans/terra_cola{
 	pixel_y = 12;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice{
+/obj/item/reagent_containers/food/drinks/bottle/orangejuice{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk{
+/obj/item/reagent_containers/food/drinks/bottle/milk{
 	pixel_y = -3;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk{
+/obj/item/reagent_containers/food/drinks/bottle/milk{
 	pixel_y = -3;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk{
+/obj/item/reagent_containers/food/drinks/bottle/milk{
 	pixel_y = -3;
 	pixel_x = -3
 	},
@@ -864,30 +864,30 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 0;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 0;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 0;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 1;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 1;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 1;
 	pixel_x = 6
 	},
@@ -899,31 +899,31 @@
 	dir = 1;
 	on = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/space_mountain_wind{
+/obj/item/reagent_containers/food/drinks/bottle/small/space_mountain_wind{
 	pixel_x = -10
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cola{
+/obj/item/reagent_containers/food/drinks/bottle/small/cola{
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cola{
+/obj/item/reagent_containers/food/drinks/bottle/small/cola{
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cola{
+/obj/item/reagent_containers/food/drinks/bottle/small/cola{
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/space_mountain_wind{
+/obj/item/reagent_containers/food/drinks/bottle/small/space_mountain_wind{
 	pixel_x = -10
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/space_mountain_wind{
+/obj/item/reagent_containers/food/drinks/bottle/small/space_mountain_wind{
 	pixel_x = -10
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/dr_gibb{
+/obj/item/reagent_containers/food/drinks/bottle/small/dr_gibb{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/dr_gibb{
+/obj/item/reagent_containers/food/drinks/bottle/small/dr_gibb{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/dr_gibb{
+/obj/item/reagent_containers/food/drinks/bottle/small/dr_gibb{
 	pixel_x = -6
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -933,9 +933,9 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/salo,
-/obj/item/weapon/reagent_containers/food/snacks/salo,
-/obj/item/weapon/reagent_containers/food/snacks/salo,
+/obj/item/reagent_containers/food/snacks/salo,
+/obj/item/reagent_containers/food/snacks/salo,
+/obj/item/reagent_containers/food/snacks/salo,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "tH" = (
@@ -956,8 +956,8 @@
 /obj/machinery/door/window/northright{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/pineapple{
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza,
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/pineapple{
 	pixel_y = 7
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -984,8 +984,8 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/storage/firstaid,
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
+/obj/item/storage/firstaid,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "vs" = (
@@ -1008,12 +1008,12 @@
 /area/submap/spaceseveneleven)
 "vx" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/cb10,
+/obj/item/reagent_containers/food/snacks/cb10,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "vB" = (
 /obj/structure/closet/crate/trashcart,
-/obj/item/weapon/material/kitchen/utensil/foon{
+/obj/item/material/kitchen/utensil/foon{
 	force = 30;
 	desc = "It's a foon. The forgotten cousin of the spork. Looks suspiciously sharp."
 	},
@@ -1034,19 +1034,19 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = 0;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = 0;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 0;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 0;
 	pixel_x = 6
 	},
@@ -1106,11 +1106,11 @@
 /area/submap/spaceseveneleven)
 "zc" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/cb05{
+/obj/item/reagent_containers/food/snacks/cb05{
 	pixel_y = -4;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb05{
+/obj/item/reagent_containers/food/snacks/cb05{
 	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -1150,30 +1150,30 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
+/obj/item/reagent_containers/food/snacks/candy/gummy,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "zY" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper{
+/obj/item/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper{
 	pixel_y = 0;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper{
+/obj/item/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper{
 	pixel_y = 0;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper{
+/obj/item/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper{
 	pixel_y = 0;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale{
+/obj/item/reagent_containers/food/drinks/bottle/small/ale{
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale{
+/obj/item/reagent_containers/food/drinks/bottle/small/ale{
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale{
+/obj/item/reagent_containers/food/drinks/bottle/small/ale{
 	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -1216,12 +1216,12 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "AT" = (
-/obj/item/weapon/cell/mech/super{
+/obj/item/cell/mech/super{
 	pixel_x = -3;
 	pixel_y = -4
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/cell/mech/super{
+/obj/item/cell/mech/super{
 	pixel_x = -3;
 	pixel_y = 6
 	},
@@ -1232,9 +1232,9 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/semki,
-/obj/item/weapon/reagent_containers/food/snacks/semki,
-/obj/item/weapon/reagent_containers/food/snacks/semki,
+/obj/item/reagent_containers/food/snacks/semki,
+/obj/item/reagent_containers/food/snacks/semki,
+/obj/item/reagent_containers/food/snacks/semki,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
@@ -1265,9 +1265,9 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/saturn,
-/obj/item/weapon/reagent_containers/food/snacks/saturn,
-/obj/item/weapon/reagent_containers/food/snacks/saturn,
+/obj/item/reagent_containers/food/snacks/saturn,
+/obj/item/reagent_containers/food/snacks/saturn,
+/obj/item/reagent_containers/food/snacks/saturn,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
@@ -1304,18 +1304,18 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth{
+/obj/item/reagent_containers/food/drinks/bottle/vermouth{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth{
+/obj/item/reagent_containers/food/drinks/bottle/vermouth{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth{
+/obj/item/reagent_containers/food/drinks/bottle/vermouth{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine,
+/obj/item/reagent_containers/food/drinks/bottle/whitewine,
+/obj/item/reagent_containers/food/drinks/bottle/whitewine,
+/obj/item/reagent_containers/food/drinks/bottle/whitewine,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "Dr" = (
@@ -1330,7 +1330,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "DL" = (
@@ -1338,13 +1338,13 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/cell/super{
+/obj/item/cell/super{
 	pixel_x = 1
 	},
-/obj/item/weapon/cell/super{
+/obj/item/cell/super{
 	pixel_x = -7
 	},
-/obj/item/weapon/cell/super{
+/obj/item/cell/super{
 	pixel_x = -3
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -1359,17 +1359,17 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar{
+/obj/item/reagent_containers/food/condiment/small/sugar{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar{
+/obj/item/reagent_containers/food/condiment/small/sugar,
+/obj/item/reagent_containers/food/condiment/small/sugar{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar{
+/obj/item/reagent_containers/food/condiment/small/sugar{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar{
+/obj/item/reagent_containers/food/condiment/small/sugar{
 	pixel_x = -3
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -1387,25 +1387,25 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -1434,9 +1434,9 @@
 /area/submap/spaceseveneleven)
 "FV" = (
 /obj/structure/closet/crate/large,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
 	oxygen = 0;
 	nitrogen = 0
@@ -1444,16 +1444,16 @@
 /area/submap/spaceseveneleven)
 "FY" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake{
+/obj/item/reagent_containers/food/snacks/syndicake{
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/syndicake{
+/obj/item/reagent_containers/food/snacks/syndicake{
 	pixel_y = -7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/syndicake{
+/obj/item/reagent_containers/food/snacks/syndicake{
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/syndicake{
+/obj/item/reagent_containers/food/snacks/syndicake{
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -1478,23 +1478,23 @@
 	dir = 1;
 	on = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/space_up{
+/obj/item/reagent_containers/food/drinks/bottle/space_up{
 	pixel_y = -3;
 	pixel_x = -12
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/space_mountain_wind{
+/obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind{
 	pixel_y = -3;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/dr_gibb{
+/obj/item/reagent_containers/food/drinks/bottle/dr_gibb{
 	pixel_y = -3;
 	pixel_x = -2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/decaf_cola{
+/obj/item/reagent_containers/food/drinks/bottle/decaf_cola{
 	pixel_y = -3;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cola{
+/obj/item/reagent_containers/food/drinks/bottle/cola{
 	pixel_y = -3;
 	pixel_x = 6
 	},
@@ -1527,10 +1527,10 @@
 	dir = 4
 	},
 /obj/machinery/chemical_dispenser/bar_soft/full,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "HD" = (
@@ -1565,7 +1565,7 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater,
+/obj/item/reagent_containers/food/drinks/bottle/holywater,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
@@ -1575,32 +1575,32 @@
 	dir = 1;
 	on = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -1611,19 +1611,19 @@
 /area/submap/spaceseveneleven)
 "IW" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/box/syndie_kit/cigarette{
+/obj/item/storage/box/syndie_kit/cigarette{
 	pixel_y = -6;
 	pixel_x = -5
 	},
-/obj/item/weapon/storage/fancy/cigarettes/yw/mauser{
+/obj/item/storage/fancy/cigarettes/yw/mauser{
 	pixel_y = 4;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/yw/mauser{
+/obj/item/storage/fancy/cigarettes/yw/mauser{
 	pixel_y = 0;
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/glass/bottle/cyanide,
+/obj/item/reagent_containers/glass/bottle/cyanide,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/spaceseveneleven)
 "Ja" = (
@@ -1633,29 +1633,29 @@
 /area/submap/spaceseveneleven)
 "JQ" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/cb01{
+/obj/item/reagent_containers/food/snacks/cb01{
 	pixel_y = 6;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb01{
+/obj/item/reagent_containers/food/snacks/cb01{
 	pixel_y = 6;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb01{
+/obj/item/reagent_containers/food/snacks/cb01{
 	pixel_y = 6;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb01{
+/obj/item/reagent_containers/food/snacks/cb01{
 	pixel_y = 6;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb08{
+/obj/item/reagent_containers/food/snacks/cb08{
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb08{
+/obj/item/reagent_containers/food/snacks/cb08{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb08{
+/obj/item/reagent_containers/food/snacks/cb08{
 	pixel_x = -1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -1686,51 +1686,51 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/canned/spinach,
-/obj/item/weapon/reagent_containers/food/snacks/canned/spinach,
-/obj/item/weapon/reagent_containers/food/snacks/canned/spinach,
+/obj/item/reagent_containers/food/snacks/canned/spinach,
+/obj/item/reagent_containers/food/snacks/canned/spinach,
+/obj/item/reagent_containers/food/snacks/canned/spinach,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "KK" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/fancy/cigarettes/jerichos{
+/obj/item/storage/fancy/cigarettes/jerichos{
 	pixel_y = 7;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/jerichos{
+/obj/item/storage/fancy/cigarettes/jerichos{
 	pixel_y = -5;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/jerichos{
+/obj/item/storage/fancy/cigarettes/jerichos{
 	pixel_y = -1;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/jerichos{
+/obj/item/storage/fancy/cigarettes/jerichos{
 	pixel_y = 3;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/luckystars{
+/obj/item/storage/fancy/cigarettes/luckystars{
 	pixel_y = 7;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/luckystars{
+/obj/item/storage/fancy/cigarettes/luckystars{
 	pixel_y = -5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/luckystars{
+/obj/item/storage/fancy/cigarettes/luckystars{
 	pixel_y = 1;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+/obj/item/storage/fancy/cigarettes/killthroat{
 	pixel_y = 7
 	},
-/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+/obj/item/storage/fancy/cigarettes/killthroat{
 	pixel_y = -5
 	},
-/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+/obj/item/storage/fancy/cigarettes/killthroat{
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+/obj/item/storage/fancy/cigarettes/killthroat{
 	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/old_tile/red,
@@ -1794,9 +1794,9 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/tastybread,
-/obj/item/weapon/reagent_containers/food/snacks/tastybread,
-/obj/item/weapon/reagent_containers/food/snacks/tastybread,
+/obj/item/reagent_containers/food/snacks/tastybread,
+/obj/item/reagent_containers/food/snacks/tastybread,
+/obj/item/reagent_containers/food/snacks/tastybread,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "MY" = (
@@ -1845,12 +1845,12 @@
 	},
 /area/submap/spaceseveneleven)
 "OS" = (
-/obj/item/weapon/cell/mech/super{
+/obj/item/cell/mech/super{
 	pixel_x = -3;
 	pixel_y = 6
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/cell/mech/super{
+/obj/item/cell/mech/super{
 	pixel_x = -3;
 	pixel_y = -4
 	},
@@ -1915,8 +1915,8 @@
 /area/submap/spaceseveneleven)
 "QB" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/cb02,
-/obj/item/weapon/reagent_containers/food/snacks/cb02{
+/obj/item/reagent_containers/food/snacks/cb02,
+/obj/item/reagent_containers/food/snacks/cb02{
 	pixel_x = 5;
 	pixel_y = -7
 	},
@@ -2074,49 +2074,49 @@
 	dir = 1;
 	on = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cider{
+/obj/item/reagent_containers/food/drinks/bottle/small/cider{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cider{
+/obj/item/reagent_containers/food/drinks/bottle/small/cider{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cider{
+/obj/item/reagent_containers/food/drinks/bottle/small/cider{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cider{
+/obj/item/reagent_containers/food/drinks/bottle/small/cider{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor{
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor{
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor{
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor{
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer{
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer{
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer{
 	pixel_x = 8
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -2142,10 +2142,10 @@
 /obj/machinery/door/window/northright{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza{
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza{
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita,
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "WS" = (
@@ -2160,9 +2160,9 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/canned/tomato,
-/obj/item/weapon/reagent_containers/food/snacks/canned/tomato,
-/obj/item/weapon/reagent_containers/food/snacks/canned/tomato,
+/obj/item/reagent_containers/food/snacks/canned/tomato,
+/obj/item/reagent_containers/food/snacks/canned/tomato,
+/obj/item/reagent_containers/food/snacks/canned/tomato,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
 "Xr" = (
@@ -2175,27 +2175,27 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+/obj/item/material/kitchen/utensil/spoon/plastic{
 	pixel_y = 0;
 	pixel_x = 4
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+/obj/item/material/kitchen/utensil/spoon/plastic{
 	pixel_y = 0;
 	pixel_x = -7
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+/obj/item/material/kitchen/utensil/spoon/plastic{
 	pixel_y = 0;
 	pixel_x = -5
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+/obj/item/material/kitchen/utensil/spoon/plastic{
 	pixel_y = 0;
 	pixel_x = -3
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+/obj/item/material/kitchen/utensil/spoon/plastic{
 	pixel_y = 0;
 	pixel_x = -3
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon/plastic{
+/obj/item/material/kitchen/utensil/spoon/plastic{
 	pixel_y = 0;
 	pixel_x = 1
 	},
@@ -2218,28 +2218,28 @@
 /area/template_noop)
 "XL" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/fancy/cigarettes/luckystars{
+/obj/item/storage/fancy/cigarettes/luckystars{
 	pixel_y = 1;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/menthols{
+/obj/item/storage/fancy/cigarettes/menthols{
 	pixel_y = -5;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/fancy/cigarettes/menthols{
+/obj/item/storage/fancy/cigarettes/menthols{
 	pixel_y = -5;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/fancy/cigarettes/professionals{
+/obj/item/storage/fancy/cigarettes/professionals{
 	pixel_y = 7
 	},
-/obj/item/weapon/storage/fancy/cigarettes/professionals{
+/obj/item/storage/fancy/cigarettes/professionals{
 	pixel_y = -6
 	},
-/obj/item/weapon/storage/fancy/cigarettes/professionals{
+/obj/item/storage/fancy/cigarettes/professionals{
 	pixel_y = -2
 	},
-/obj/item/weapon/storage/fancy/cigarettes/professionals{
+/obj/item/storage/fancy/cigarettes/professionals{
 	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/old_tile/red,

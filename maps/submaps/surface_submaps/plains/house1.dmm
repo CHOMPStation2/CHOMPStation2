@@ -66,12 +66,12 @@
 /area/submap/house1)
 "ap" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled,
 /area/submap/house1)
 "aq" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/tiled,
 /area/submap/house1)
 "ar" = (
@@ -84,9 +84,9 @@
 /area/submap/house1)
 "at" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/brute,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/burn,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/purity,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/brute,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/burn,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/purity,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/house1)
 "au" = (
@@ -99,13 +99,13 @@
 /turf/simulated/floor/tiled,
 /area/submap/house1)
 "aw" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/tiled,
 /area/submap/house1)
 "ax" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
-/obj/item/weapon/coin/phoron,
+/obj/item/coin/phoron,
 /turf/simulated/floor/wood,
 /area/submap/house1)
 "ay" = (
@@ -117,7 +117,7 @@
 /turf/simulated/floor/wood,
 /area/submap/house1)
 "az" = (
-/obj/item/weapon/material/harpoon,
+/obj/item/material/harpoon,
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/wood,
@@ -145,7 +145,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/house1)
 "aC" = (
-/obj/item/weapon/towel,
+/obj/item/towel,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/house1)
 "aD" = (
@@ -164,7 +164,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/house1)
 "aH" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/house1)
 "aI" = (
@@ -193,17 +193,17 @@
 /area/submap/house1)
 "aM" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/house1)
 "aN" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/binoculars/spyglass,
+/obj/item/binoculars/spyglass,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/house1)
 "aO" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/house1)
 "aP" = (
@@ -214,7 +214,7 @@
 /area/submap/house1)
 "aQ" = (
 /obj/structure/table/rack,
-/obj/item/device/gps/explorer,
+/obj/item/gps/explorer,
 /turf/simulated/floor/wood,
 /area/submap/house1)
 "aR" = (
@@ -231,13 +231,13 @@
 "aU" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/explorer,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
+/obj/item/cell/device,
+/obj/item/cell/device,
+/obj/item/cell/device,
 /turf/simulated/floor/wood,
 /area/submap/house1)
 "aV" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/wood,
 /area/submap/house1)
 "aW" = (
@@ -252,7 +252,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hooded/explorer,
 /obj/item/clothing/mask/gas/explorer,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
 /turf/simulated/floor/wood,
 /area/submap/house1)
 "aZ" = (
@@ -262,11 +262,11 @@
 "ba" = (
 /obj/structure/table/woodentable,
 /obj/random/action_figure,
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/house1)
 "bb" = (
-/obj/item/weapon/bedsheet/hopdouble,
+/obj/item/bedsheet/hopdouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/house1)

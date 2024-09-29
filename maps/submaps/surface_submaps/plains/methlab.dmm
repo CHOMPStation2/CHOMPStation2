@@ -25,7 +25,7 @@
 /area/submap/methlab)
 "bA" = (
 <<<<<<< HEAD
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/template_noop,
 =======
 /obj/item/cell/hyper,
@@ -69,7 +69,7 @@
 "dy" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/storage/bag/chemistry,
+/obj/item/storage/bag/chemistry,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "fr" = (
@@ -122,7 +122,7 @@
 "iN" = (
 /obj/structure/table/steel_reinforced,
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /obj/random/medical/pillbottle,
 =======
 /obj/item/reagent_containers/dropper,
@@ -180,7 +180,7 @@
 "mw" = (
 /obj/structure/table/steel_reinforced,
 <<<<<<< HEAD
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /obj/random/medical/pillbottle,
 =======
 /obj/item/storage/toolbox/syndicate,
@@ -233,7 +233,7 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/storage/bag/chemistry,
+/obj/item/storage/bag/chemistry,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "sW" = (
@@ -366,19 +366,19 @@
 "BT" = (
 /obj/structure/safe/floor,
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
 /obj/effect/floor_decal/industrial/outline/red,
-/obj/item/weapon/storage/bag/cash,
-/obj/item/weapon/storage/bag/cash,
+/obj/item/storage/bag/cash,
+/obj/item/storage/bag/cash,
 /turf/simulated/floor,
 =======
 /obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
@@ -513,7 +513,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "KR" = (
-/obj/item/weapon/cell/hyper,
+/obj/item/cell/hyper,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "Lh" = (
@@ -564,7 +564,7 @@
 "PO" = (
 /obj/structure/table/steel_reinforced,
 <<<<<<< HEAD
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /obj/random/medical/pillbottle,
 =======
 /obj/item/module/power_control,
@@ -628,19 +628,19 @@
 "TU" = (
 /obj/structure/safe/floor,
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
 /obj/effect/floor_decal/industrial/outline/red,
-/obj/item/weapon/storage/bag/cash,
-/obj/item/weapon/storage/bag/cash,
+/obj/item/storage/bag/cash,
+/obj/item/storage/bag/cash,
 /turf/simulated/floor,
 =======
 /obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
@@ -722,8 +722,8 @@
 	},
 <<<<<<< HEAD
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/extinguisher,
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/extinguisher,
+/obj/item/storage/box/lights/mixed,
 /turf/simulated/floor,
 =======
 /obj/item/extinguisher,

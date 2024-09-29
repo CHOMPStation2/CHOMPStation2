@@ -53,7 +53,7 @@
 	set desc = "Shrink/Grow someone nearby! (60 second cooldown)"
 	set popup_menu = FALSE // Stop licking by accident! //Yes this is from lick code, sue me.
 
-	var/obj/item/weapon/grab/G = src.get_active_hand()
+	var/obj/item/grab/G = src.get_active_hand()
 
 	if(!istype(G))
 		to_chat(src, "<span class='warning'>You must be grabbing a creature in your active hand to affect them.</span>")
@@ -95,7 +95,7 @@
 	set desc = "Inject mindbreaker into your grabbed prey!"
 	set popup_menu = FALSE // Stop licking by accident! //Yes this is from lick code, sue me.
 
-	var/obj/item/weapon/grab/G = src.get_active_hand()
+	var/obj/item/grab/G = src.get_active_hand()
 
 	if(!istype(G))
 		to_chat(src, "<span class='warning'>You must be grabbing a creature in your active hand to affect them.</span>")

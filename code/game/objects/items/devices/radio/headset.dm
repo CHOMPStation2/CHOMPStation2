@@ -60,13 +60,9 @@
 
 	return ..()
 
-<<<<<<< HEAD
-/obj/item/device/radio/headset/receive_range(freq, level, aiOverride = 0)
+/obj/item/radio/headset/receive_range(freq, level, aiOverride = 0)
 	if(!ishuman(src.loc))				//CHOMP Addition, this IF block.
 		return ..(freq, level)		//CHOMP Addition end
-=======
-/obj/item/radio/headset/receive_range(freq, level, aiOverride = 0)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if (aiOverride)
 		playsound(loc, 'sound/effects/radio_common.ogg', 20, 1, 1, preference = /datum/preference/toggle/radio_sounds) //CHOMPAdd
 		return ..(freq, level)

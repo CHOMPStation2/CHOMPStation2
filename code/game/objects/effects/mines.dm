@@ -398,12 +398,7 @@
 	allowed_gadgets = list(/obj/item/grenade, /obj/item/transfer_valve)
 
 // This tells AI mobs to not be dumb and step on mines willingly.
-<<<<<<< HEAD
-/obj/item/weapon/mine/is_safe_to_step(mob/living/L)
-	if(!L.hovering) //CHOMPedit: Let's not trivialize mines.
-=======
 /obj/item/mine/is_safe_to_step(mob/living/L)
-	if(!L.hovering || !L.flying)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	if(!L.hovering) //CHOMPedit: Let's not trivialize mines.
 		return FALSE
 	return ..()

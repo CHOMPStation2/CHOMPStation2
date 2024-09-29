@@ -13,10 +13,5 @@
 	id = "slime_grinder"
 	req_tech = list(TECH_MAGNET = 4, TECH_BIO = 7)
 	materials = list(MAT_STEEL = 500, MAT_GLASS = 500, MAT_DIAMOND = 500, MAT_MORPHIUM = 100)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/slime_grinder
-	sort_string = "HBBB"
-=======
 	build_path = /obj/item/slime_grinder
 	sort_string = "HBBB"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

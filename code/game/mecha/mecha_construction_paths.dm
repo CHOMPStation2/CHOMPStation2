@@ -1615,11 +1615,7 @@
 							"backkey"=IS_CROWBAR,
 							"desc"="Translocator is installed"),  //Chompedit, change hand tele to translocator
 					//8
-<<<<<<< HEAD
-					list("key"=/obj/item/device/perfect_tele,  //Chompedit, change hand tele to translocator
-=======
-					list("key"=/obj/item/hand_tele,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+					list("key"=/obj/item/perfect_tele,  //Chompedit, change hand tele to translocator
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="SMES coil is secured"),
 					//9

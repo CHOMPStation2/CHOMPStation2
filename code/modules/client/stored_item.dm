@@ -254,10 +254,5 @@
 	persist_storable = FALSE
 /obj/item/spacecasinocash
 	persist_storable = FALSE
-<<<<<<< HEAD
-/obj/item/device/personal_shield_generator
-	persist_storable = FALSE
-=======
 /obj/item/personal_shield_generator
 	persist_storable = FALSE
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

@@ -41,11 +41,7 @@
 	desc = "A white folder with RD markings."
 	icon_state = "folder_rd"
 
-<<<<<<< HEAD
-/obj/item/weapon/folder/white_rd/Initialize() //ChompEDIT New --> Initialize
-=======
-/obj/item/folder/white_rd/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/folder/white_rd/Initialize() //ChompEDIT New --> Initialize
 	//add some memos
 	var/obj/item/paper/P = new()
 	P.name = "Memo RE: proper analysis procedure"

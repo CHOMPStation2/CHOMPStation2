@@ -21,11 +21,11 @@
 /area/submap/Shakden)
 "f" = (
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/reagent_containers/food/snacks/meat,
@@ -40,9 +40,9 @@
 /area/submap/Shakden)
 "g" = (
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/reagent_containers/food/snacks/meat,
@@ -64,7 +64,7 @@
 /area/submap/Shakden)
 "j" = (
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/reagent_containers/food/snacks/meat,
@@ -75,11 +75,11 @@
 /area/submap/Shakden)
 "k" = (
 <<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/material/knife/hook,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/material/knife/hook,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/reagent_containers/food/snacks/meat,

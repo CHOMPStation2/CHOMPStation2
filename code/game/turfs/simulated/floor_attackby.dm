@@ -3,11 +3,7 @@
 	if(!C || !user)
 		return 0
 
-<<<<<<< HEAD
-	if(isliving(user) && istype(C, /obj/item/weapon)) //CHOMPEDIT START - Making engraving require disarm intent (and simplifying the proc)
-=======
-	if(isliving(user) && istype(C, /obj/item))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	if(isliving(user) && istype(C, /obj/item)) //CHOMPEDIT START - Making engraving require disarm intent (and simplifying the proc)
 		var/mob/living/L = user
 		if(L.a_intent != I_HELP)
 			if(L.a_intent == I_GRAB)

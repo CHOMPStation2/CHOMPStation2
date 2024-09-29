@@ -19,11 +19,6 @@
 	name = "freedom"
 	id = "implant_free"
 	req_tech = list(TECH_ILLEGAL = 2, TECH_BIO = 3)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/implantcase/freedom
-	sort_string = "MFAAB"
-	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
-=======
 	build_path = /obj/item/implantcase/freedom
 	sort_string = "MFAAB"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd

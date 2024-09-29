@@ -131,7 +131,7 @@
 	frequency = new_frequency
 	radio_connection = radio_controller.add_object(src, frequency, RADIO_CHAT)
 //CHOMPedit BEGIN re-adds stealth removal
-/obj/item/device/assembly/signaler/process()
+/obj/item/assembly/signaler/process()
 	if(!deadman)
 		STOP_PROCESSING(SSobj, src)
 	var/mob/M = src.loc
@@ -143,7 +143,7 @@
 	else if(prob(5))
 		M.visible_message("[M]'s finger twitches a bit over [src]'s signal button!")
 
-/obj/item/device/assembly/signaler/verb/deadman_it()
+/obj/item/assembly/signaler/verb/deadman_it()
 	set src in usr
 	set name = "Threaten to push the button!"
 	set desc = "BOOOOM!"

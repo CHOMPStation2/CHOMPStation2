@@ -4,19 +4,11 @@
 	uniform = /obj/item/clothing/under/rank/captain
 	l_ear = /obj/item/radio/headset/heads/captain
 	shoes = /obj/item/clothing/shoes/brown
-<<<<<<< HEAD
-	backpack = /obj/item/weapon/storage/backpack/captain
-	satchel_one = /obj/item/weapon/storage/backpack/satchel/cap
-	messenger_bag = /obj/item/weapon/storage/backpack/messenger/com
-	id_type = /obj/item/weapon/card/id/gold/captain // CHOMPFix, captain gets their two gold stripe drip back.
-	pda_type = /obj/item/device/pda/captain
-=======
 	backpack = /obj/item/storage/backpack/captain
 	satchel_one = /obj/item/storage/backpack/satchel/cap
 	messenger_bag = /obj/item/storage/backpack/messenger/com
-	id_type = /obj/item/card/id/gold
+	id_type = /obj/item/card/id/gold/captain // CHOMPFix, captain gets their two gold stripe drip back.
 	pda_type = /obj/item/pda/captain
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /decl/hierarchy/outfit/job/captain/post_equip(var/mob/living/carbon/human/H)
 	..()

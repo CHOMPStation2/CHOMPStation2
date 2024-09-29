@@ -125,7 +125,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	template_id = "shelter_cab"
 
 //CHOMPKeep Start
-/obj/item/device/survivalcapsule/dropship
+/obj/item/survivalcapsule/dropship
 	name = "dropship surfluid shelter capsule"
 	desc = "A military dropship in a capsule. Contains everything an assault squad would need, minus the squad itself. This capsule is significantly larger than most. There's a license for use printed on the bottom."
 	template_id = "shelter_zeta"

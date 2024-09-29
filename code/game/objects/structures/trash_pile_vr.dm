@@ -21,14 +21,9 @@
 		/obj/item/perfect_tele,
 		/obj/item/bluespace_harpoon,
 		/obj/item/clothing/glasses/thermal/syndi,
-<<<<<<< HEAD
-		/obj/item/weapon/gun/energy/netgun,
-		/obj/item/weapon/gun/projectile/pirate, //CHOMP Add
-		/obj/item/weapon/gun/projectile/dartgun,
-=======
 		/obj/item/gun/energy/netgun,
+		/obj/item/gun/projectile/pirate, //CHOMP Add
 		/obj/item/gun/projectile/dartgun,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		/obj/item/clothing/gloves/black/bloodletter,
 		/obj/item/gun/energy/mouseray/metamorphosis
 		)
@@ -225,16 +220,10 @@
 					prob(3);/obj/item/clothing/suit/storage/toggle/hoodie/red,
 					prob(3);/obj/item/clothing/suit/storage/toggle/hoodie/yellow,
 					prob(3);/obj/item/clothing/suit/storage/toggle/leather_jacket,
-<<<<<<< HEAD
-					prob(3);/obj/item/device/pda,
-					prob(3);/obj/item/device/radio/headset,
-					prob(3);/obj/item/seeds/lustflower,
-					prob(3);/obj/item/weapon/camera_assembly,
-=======
 					prob(3);/obj/item/pda,
 					prob(3);/obj/item/radio/headset,
+					prob(3);/obj/item/seeds/lustflower,
 					prob(3);/obj/item/camera_assembly,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					prob(3);/obj/item/clothing/head/cone,
 					prob(3);/obj/item/cell/high,
 					prob(3);/obj/item/spacecash/c10,
@@ -285,35 +274,20 @@
 					prob(1);/obj/item/clothing/under/harness,
 					prob(1);/obj/item/clothing/under/tactical,
 					prob(1);/obj/item/clothing/suit/armor/material/makeshift,
-<<<<<<< HEAD
-					prob(1);/obj/item/device/flashlight/glowstick/orange,
-					prob(1);/obj/item/device/flashlight/glowstick/red,
-					prob(1);/obj/item/device/flashlight/glowstick/yellow,
-					prob(1);/obj/item/device/flashlight/pen,
-					prob(1);/obj/item/device/paicard,
-					prob(1);/obj/item/weapon/card/emag, //CHOMP Add
-					prob(1);/obj/item/clothing/accessory/permit/gun,
-					prob(1);/obj/item/clothing/mask/gas/voice,
-					prob(1);/obj/item/weapon/spacecash/c100,
-					prob(1);/obj/item/weapon/spacecash/c50,
-					prob(1);/obj/item/weapon/storage/backpack/dufflebag/syndie,
-					prob(1);/obj/item/weapon/storage/box/cups,
-					prob(1);/obj/item/pizzavoucher,
-					prob(1);/obj/item/weapon/grenade/spawnergrenade/clustaur)// CHOMPStation edit
-=======
 					prob(1);/obj/item/flashlight/glowstick/orange,
 					prob(1);/obj/item/flashlight/glowstick/red,
 					prob(1);/obj/item/flashlight/glowstick/yellow,
 					prob(1);/obj/item/flashlight/pen,
 					prob(1);/obj/item/paicard,
+					prob(1);/obj/item/card/emag, //CHOMP Add
 					prob(1);/obj/item/clothing/accessory/permit/gun,
 					prob(1);/obj/item/clothing/mask/gas/voice,
 					prob(1);/obj/item/spacecash/c100,
 					prob(1);/obj/item/spacecash/c50,
 					prob(1);/obj/item/storage/backpack/dufflebag/syndie,
 					prob(1);/obj/item/storage/box/cups,
-					prob(1);/obj/item/pizzavoucher)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+					prob(1);/obj/item/pizzavoucher,
+					prob(1);/obj/item/grenade/spawnergrenade/clustaur)// CHOMPStation edit
 
 	var/obj/item/I = new path()
 	return I
@@ -342,26 +316,11 @@
 					prob(2);/obj/item/selectable_item/chemistrykit/gender,
 					prob(2);/obj/item/clothing/gloves/bluespace/emagged,
 					prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
-<<<<<<< HEAD
-					prob(1);/obj/item/device/nif/bad,
-					prob(1);/obj/item/device/radio_jammer,
-					prob(1);/obj/item/device/sleevemate,
-					prob(1);/obj/item/device/bodysnatcher,
-					prob(1);/obj/item/device/mindbinder,	//CHOMPAdd
-					prob(1);/obj/item/weapon/beartrap,
-					prob(1);/obj/item/weapon/cell/hyper/empty,
-					prob(1);/obj/item/weapon/disk/nifsoft/compliance,
-					prob(1);/obj/item/weapon/implanter/compliance,
-					prob(1);/obj/item/weapon/material/knife/tacknife,
-					prob(1);/obj/item/weapon/storage/box/survival/space,
-					prob(1);/obj/item/weapon/storage/secure/briefcase/trashmoney,
-					prob(1);/obj/item/device/survivalcapsule/popcabin,
-					prob(1);/obj/item/weapon/reagent_containers/syringe/steroid,
-=======
 					prob(1);/obj/item/nif/bad,
 					prob(1);/obj/item/radio_jammer,
 					prob(1);/obj/item/sleevemate,
 					prob(1);/obj/item/bodysnatcher,
+					prob(1);/obj/item/mindbinder,	//CHOMPAdd
 					prob(1);/obj/item/beartrap,
 					prob(1);/obj/item/cell/hyper/empty,
 					prob(1);/obj/item/disk/nifsoft/compliance,
@@ -371,7 +330,6 @@
 					prob(1);/obj/item/storage/secure/briefcase/trashmoney,
 					prob(1);/obj/item/survivalcapsule/popcabin,
 					prob(1);/obj/item/reagent_containers/syringe/steroid,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					prob(1);/obj/item/capture_crystal,
 					prob(1);/obj/item/perfect_tele/one_beacon,
 					prob(1);/obj/item/clothing/gloves/bluespace,

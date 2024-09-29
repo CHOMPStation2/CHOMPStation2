@@ -225,13 +225,8 @@
 
 /obj/item/storage/box/flare
 	name = "box of flares"
-<<<<<<< HEAD
 	desc = "A box containing 14 flares." // CHOMPedit: More flares.
-	starts_with = list(/obj/item/device/flashlight/flare = 14) // CHOMPedit: More flares.
-=======
-	desc = "A box containing 4 flares."
-	starts_with = list(/obj/item/flashlight/flare = 4)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	starts_with = list(/obj/item/flashlight/flare = 14) // CHOMPedit: More flares.
 
 /obj/item/storage/box/trackimp
 	name = "boxed tracking implant kit"

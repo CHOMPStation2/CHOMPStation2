@@ -55,9 +55,8 @@
 		SStgui.update_uis(src) // update all UIs attached to src
 	return
 
-<<<<<<< HEAD
 // CHOMPEdit Start
-/obj/item/device/transfer_valve/HasProximity(turf/T, datum/weakref/WF, old_loc)
+/obj/item/transfer_valve/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
@@ -66,11 +65,6 @@
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 	attached_device?.HasProximity(T, WEAKREF(AM), old_loc)
 // CHOMPEdit End
-=======
-
-/obj/item/transfer_valve/HasProximity(turf/T, atom/movable/AM, old_loc)
-	attached_device?.HasProximity(T, AM, old_loc)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/transfer_valve/Moved(old_loc, direction, forced)
 	. = ..()

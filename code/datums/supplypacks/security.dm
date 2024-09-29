@@ -667,13 +667,8 @@
 			/obj/item/clothing/under/rank/security = 3,
 			/obj/item/clothing/suit/bio_suit/security = 3,
 			/obj/item/clothing/shoes/white = 3,
-<<<<<<< HEAD
 			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 3,
-=======
-			/obj/item/clothing/mask/gas = 3,
 			/obj/item/tank/oxygen = 3,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			/obj/item/clothing/gloves/sterile/latex,
 			/obj/item/storage/box/gloves
 			)
@@ -720,13 +715,8 @@
 			/obj/item/clothing/under/rank/security = 3,
 			/obj/item/clothing/suit/bio_suit/security = 3,
 			/obj/item/clothing/shoes/white = 3,
-<<<<<<< HEAD
 			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: Implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 3,
-=======
-			/obj/item/clothing/mask/gas = 3,
 			/obj/item/tank/oxygen = 3,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			/obj/item/clothing/gloves/sterile/latex,
 			/obj/item/storage/box/gloves
 			)

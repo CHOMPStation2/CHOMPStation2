@@ -21,10 +21,5 @@
 	id = "anrt"
 	req_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_DATA = 5)
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 3000, MAT_URANIUM = 2000, MAT_DIAMOND = 2000)
-<<<<<<< HEAD
-	build_path = /obj/item/device/nifrepairer
-	sort_string = "JVABA"
-=======
 	build_path = /obj/item/nifrepairer
 	sort_string = "JVABA"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

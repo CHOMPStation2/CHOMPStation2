@@ -29,39 +29,39 @@
 	pixel_y = -14
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/tool/wrench,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/reagent_containers/food/drinks/cans/waterbottle{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/reagent_containers/food/drinks/cans/waterbottle{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/reagent_containers/food/drinks/cans/waterbottle{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 8
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 8
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 8
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 8
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 8
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 8
 	},
 /obj/item/clothing/shoes/footwraps,
@@ -74,10 +74,10 @@
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/gloves/boxing,
 /obj/item/clothing/gloves/boxing/blue,
-/obj/item/weapon/material/twohanded/baseballbat/foam,
-/obj/item/weapon/material/sword/foam,
-/obj/item/weapon/material/twohanded/fireaxe/foam,
-/obj/item/weapon/material/twohanded/spear/foam,
+/obj/item/material/twohanded/baseballbat/foam,
+/obj/item/material/sword/foam,
+/obj/item/material/twohanded/fireaxe/foam,
+/obj/item/material/twohanded/spear/foam,
 /obj/item/paint_palette{
 	pixel_x = 6;
 	pixel_y = 6
@@ -94,30 +94,30 @@
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/item/device/camera_film,
-/obj/item/device/camera_film,
-/obj/item/device/camera_film,
-/obj/item/device/camera_film,
-/obj/item/device/camera,
-/obj/item/device/camera,
-/obj/item/weapon/storage/photo_album,
-/obj/item/weapon/storage/fancy/crayons{
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera,
+/obj/item/camera,
+/obj/item/storage/photo_album,
+/obj/item/storage/fancy/crayons{
 	pixel_x = 11;
 	pixel_y = -3
 	},
-/obj/item/weapon/storage/fancy/crayons{
+/obj/item/storage/fancy/crayons{
 	pixel_x = 11;
 	pixel_y = -3
 	},
-/obj/item/weapon/storage/fancy/markers{
+/obj/item/storage/fancy/markers{
 	pixel_x = 11;
 	pixel_y = 6
 	},
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/hand_labeler,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
+/obj/item/tape_roll,
+/obj/item/tape_roll,
+/obj/item/hand_labeler,
+/obj/item/cell/device,
+/obj/item/cell/device,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalLeisure)
 "d" = (
@@ -157,7 +157,7 @@
 /turf/simulated/floor/boxing/gym,
 /area/survivalpod/superpose/SurvivalLeisure)
 "j" = (
-/obj/item/weapon/dice,
+/obj/item/dice,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/SurvivalLeisure)
@@ -177,7 +177,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalLeisure)
 "n" = (
-/obj/item/device/gps/computer{
+/obj/item/gps/computer{
 	pixel_y = -16
 	},
 /obj/structure/table/reinforced,
@@ -192,45 +192,45 @@
 /obj/machinery/smartfridge/survival_pod{
 	pixel_y = 12
 	},
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
 /obj/structure/table/reinforced,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalLeisure)
@@ -263,7 +263,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/item/device/starcaster_news,
+/obj/item/starcaster_news,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/SurvivalLeisure)
@@ -284,7 +284,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/item/weapon/dice/d20,
+/obj/item/dice/d20,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/SurvivalLeisure)
@@ -311,23 +311,23 @@
 /obj/structure/bookcase{
 	name = "bookcase (Reference)"
 	},
-/obj/item/weapon/book/codex/lore/robutt,
-/obj/item/weapon/book/bundle/custom_library/fiction/metalglen,
-/obj/item/weapon/book/bundle/custom_library/fiction/silence,
-/obj/item/weapon/book/bundle/custom_library/fiction/taleoftherainbowcat,
-/obj/item/weapon/book/bundle/custom_library/religious/zoroastrianism,
+/obj/item/book/codex/lore/robutt,
+/obj/item/book/bundle/custom_library/fiction/metalglen,
+/obj/item/book/bundle/custom_library/fiction/silence,
+/obj/item/book/bundle/custom_library/fiction/taleoftherainbowcat,
+/obj/item/book/bundle/custom_library/religious/zoroastrianism,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalLeisure)
 "A" = (
-/obj/item/weapon/deck/cah{
+/obj/item/deck/cah{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/deck/cah/black{
+/obj/item/deck/cah/black{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/weapon/deck/cards{
+/obj/item/deck/cards{
 	pixel_x = -4;
 	pixel_y = 5
 	},

@@ -36,6 +36,6 @@
 	if(!emag_items)
 		scramble_hardware(10)
 	if (churn_count == 5)
-		module.emag += new /obj/item/device/self_repair_system/advanced(module)
+		module.emag += new /obj/item/self_repair_system/advanced(module)
 		hud_used.update_robot_modules_display()
 //CHOMPAdd End

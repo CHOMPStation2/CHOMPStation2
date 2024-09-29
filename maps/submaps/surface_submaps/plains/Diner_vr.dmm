@@ -260,7 +260,7 @@
 /area/submap/Diner)
 "aS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor/tiled/white,
 /area/submap/Diner)
 "aT" = (

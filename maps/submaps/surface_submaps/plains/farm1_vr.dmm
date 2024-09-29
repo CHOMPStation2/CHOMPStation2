@@ -124,7 +124,7 @@
 /area/submap/farm1)
 "y" = (
 <<<<<<< HEAD
-/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
 /turf/simulated/floor/outdoors/mud{
 =======
 /obj/item/material/knife/machete/hatchet,

@@ -440,7 +440,7 @@
 	temporary_form = blob
 
 //ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.
-	var/obj/item/device/radio/R = null
+	var/obj/item/radio/R = null
 	if(isradio(l_ear))
 		R = l_ear
 	if(isradio(r_ear))

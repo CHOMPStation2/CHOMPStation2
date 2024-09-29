@@ -254,7 +254,7 @@
 /area/submap/eclipsemountain)
 "xO" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/eclipsemountain)
 "yy" = (
@@ -365,7 +365,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsemountain)
 "Ii" = (
-/obj/item/weapon/rig/robotics,
+/obj/item/rig/robotics,
 /turf/simulated/floor/bluegrid,
 /area/submap/eclipsemountain)
 "Il" = (
@@ -449,7 +449,7 @@
 /obj/random/projectile/random,
 /obj/random/gun/random,
 /obj/random/handgun,
-/obj/item/weapon/rig/merc,
+/obj/item/rig/merc,
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
 "MM" = (
@@ -547,7 +547,7 @@
 /obj/random/projectile/random,
 /obj/random/gun/random,
 /obj/random/handgun,
-/obj/item/weapon/rig/hephaestus/equipped,
+/obj/item/rig/hephaestus/equipped,
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipsemountain)
 "UA" = (

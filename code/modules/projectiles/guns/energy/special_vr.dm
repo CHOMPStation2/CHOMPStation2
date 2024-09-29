@@ -6,11 +6,7 @@
 /obj/item/gun/energy/ionrifle/weak
 	projectile_type = /obj/item/projectile/ion/small
 
-<<<<<<< HEAD
-/obj/item/weapon/gun/energy/medigun //Adminspawn/ERT etc // CH edit - Changes ML3M  to NERD
-=======
-/obj/item/gun/energy/medigun //Adminspawn/ERT etc
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/gun/energy/medigun //Adminspawn/ERT etc // CH edit - Changes ML3M  to NERD
 	name = "directed restoration system"
 	desc = "The BL-3 'Phoenix' is an adaptation on the NERD 'Medbeam' design that channels the power of the beam into a single healing laser. It is highly energy-inefficient, but its medical power cannot be denied."
 	force = 5

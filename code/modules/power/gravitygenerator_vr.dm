@@ -437,7 +437,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 
 // Misc
 // CHOMPEdit - Taking out the comments on this. It will be needed.
-/obj/item/weapon/paper/guide/gravity/
+/obj/item/paper/guide/gravity/
 	name = "paper- 'Generate your own gravity!'"
 	info = {"<h1>Gravity Generator Instructions For Dummies</h1>
 	<p>Surprisingly, gravity isn't that hard to make! All you have to do is inject deadly radioactive minerals into a ball of

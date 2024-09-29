@@ -130,15 +130,9 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	description_info = "Must have the same ident tag as a fire assist mainframe on the same facility. Use a multitool to set the ident tag."
 	density = TRUE
 	anchored = TRUE
-<<<<<<< HEAD
-	circuit = /obj/item/weapon/circuitboard/pointdefense
+	circuit = /obj/item/circuitboard/pointdefense
 	//idle_power_usage = 0.1 KILOWATTS // CHOMPStation Edit
 	//active_power_usage = 1 KILOWATTS // CHOMPStation Edit
-=======
-	circuit = /obj/item/circuitboard/pointdefense
-	idle_power_usage = 0.1 KILOWATTS
-	active_power_usage = 1 KILOWATTS
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	appearance_flags = PIXEL_SCALE
 	var/active = TRUE
 	var/charge_cooldown = 1 SECOND  //time between it can fire at different targets
@@ -168,28 +162,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	else
 		icon_state = initial(icon_state)
 
-<<<<<<< HEAD
 /obj/machinery/pointdefense/power_change()
-=======
-/obj/machinery/power/pointdefense/default_unfasten_wrench(var/mob/user, var/obj/item/W, var/time)
-	if((. = ..()))
-		src.transform = null // Reset rotation if we're anchored/unanchored
-
-////////// This machine is willing to take power from cables OR APCs.  Handle NOPOWER stat specially here! ////////
-
-/obj/machinery/power/pointdefense/connect_to_network()
-	if((. = ..()))
-		stat &= ~NOPOWER // We now ignore APC power
-		update_icon()
-
-/obj/machinery/power/pointdefense/disconnect_from_network()
-	if((. = ..()))
-		power_change() // We're back on APC power.
-
-/obj/machinery/power/pointdefense/power_change()
-	if(powernet)
-		return // We don't care, we are cable powered anyway
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	var/old_stat = stat
 	..()
 	if(old_stat != stat)
@@ -334,13 +307,8 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 	kill_range = 10 + 4 * killrange_multiplier
 
-<<<<<<< HEAD
-	var/rotation_divisor = total_component_rating_of_type(/obj/item/weapon/stock_parts/manipulator)
-	rotation_speed = 4.5 SECONDS / (rotation_divisor ? rotation_divisor : 1)
-=======
 	var/rotation_divisor = total_component_rating_of_type(/obj/item/stock_parts/manipulator)
-	rotation_speed = 0.5 SECONDS / (rotation_divisor ? rotation_divisor : 1)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	rotation_speed = 4.5 SECONDS / (rotation_divisor ? rotation_divisor : 1)
 
 /obj/machinery/pointdefense/proc/Activate()
 	if(active)

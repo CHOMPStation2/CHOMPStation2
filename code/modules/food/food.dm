@@ -38,13 +38,8 @@
 		src.pixel_x = rand(-6.0, 6) //Randomizes postion
 		src.pixel_y = rand(-6.0, 6)
 
-<<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/afterattack(atom/A, mob/user, proximity, params)
-	if((center_of_mass_x || center_of_mass_y) && proximity && params && istype(A, /obj/structure/table))
-=======
 /obj/item/reagent_containers/food/afterattack(atom/A, mob/user, proximity, params)
-	if(center_of_mass.len && proximity && params && istype(A, /obj/structure/table))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	if((center_of_mass_x || center_of_mass_y) && proximity && params && istype(A, /obj/structure/table))
 		//Places the item on a grid
 		var/list/mouse_control = params2list(params)
 
@@ -60,12 +55,8 @@
 		pixel_x = (CELLSIZE * (0.5 + cell_x)) - center_of_mass_x //CHOMPEdit
 		pixel_y = (CELLSIZE * (0.5 + cell_y)) - center_of_mass_y //CHOMPEdit
 
-<<<<<<< HEAD
-/obj/item/weapon/reagent_containers/food/container_resist(mob/living/M)
-	if(istype(M, /mob/living/voice)) return	// CHOMPAdd - Stops sentient food from astral projecting
-=======
 /obj/item/reagent_containers/food/container_resist(mob/living/M)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	if(istype(M, /mob/living/voice)) return	// CHOMPAdd - Stops sentient food from astral projecting
 	if(food_inserted_micros)
 		food_inserted_micros -= M
 	M.forceMove(get_turf(src))

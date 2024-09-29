@@ -291,7 +291,7 @@
 	var/explosion_delay_upper	= 1 SECONDS	// Upper bound.
 
 
-	loot_list = list(/obj/item/weapon/gun/projectile/automatic/serdy/type901 = 1)
+	loot_list = list(/obj/item/gun/projectile/automatic/serdy/type901 = 1)
 
 	projectiletype = /obj/item/projectile/bullet/rifle/a545
 	projectilesound = 'sound/weapons/serdy/type901.ogg'
@@ -364,7 +364,7 @@
 	icon_living = "synditaur_lmg"
 	icon_state = "synditaur_lmg"
 	icon_rest = "synditaur_lmg"
-	loot_list = list(/obj/item/weapon/gun/projectile/automatic/l6_saw = 1)
+	loot_list = list(/obj/item/gun/projectile/automatic/l6_saw = 1)
 	projectiletype = /obj/item/projectile/bullet/pistol
 	projectilesound = 'sound/weapons/ballistics/a545.ogg'
 	projectile_dispersion = 12
@@ -382,7 +382,7 @@
 	icon_living = "synditaur_smg"
 	icon_state = "synditaur_smg"
 	icon_rest = "synditaur_smg"
-	loot_list = list(/obj/item/weapon/gun/projectile/automatic/p90 = 15)
+	loot_list = list(/obj/item/gun/projectile/automatic/p90 = 15)
 	projectiletype = /obj/item/projectile/bullet/a57
 	projectilesound = 'sound/weapons/ballistics/a545.ogg'
 	projectile_dispersion = 1
@@ -400,7 +400,7 @@
 	icon_living = "synditaur_awp"
 	icon_state = "synditaur_awp"
 	icon_rest = "synditaur_awp"
-	loot_list = list(/obj/item/weapon/gun/projectile/automatic/serdy/awp = 1)
+	loot_list = list(/obj/item/gun/projectile/automatic/serdy/awp = 1)
 	projectiletype = /obj/item/projectile/bullet/rifle/a338
 	projectilesound = 'sound/weapons/ballistics/a762x54.ogg'
 	projectile_dispersion = 0

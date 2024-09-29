@@ -6,11 +6,7 @@
 	author = "NanoTrasen"
 	title = "Standard Operating Procedure"
 
-<<<<<<< HEAD
-/obj/item/weapon/book/manual/standard_operating_procedure/Initialize() // CHOMPEdit
-=======
-/obj/item/book/manual/standard_operating_procedure/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/book/manual/standard_operating_procedure/Initialize() // CHOMPEdit
 	..()
 	dat = {"
 
@@ -33,11 +29,7 @@
 	author = "Jeremiah Acacius"
 	title = "Corporate Regulations"
 
-<<<<<<< HEAD
-/obj/item/weapon/book/manual/command_guide/Initialize() // CHOMPEdit
-=======
-/obj/item/book/manual/command_guide/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/book/manual/command_guide/Initialize() // CHOMPEdit
 	..()
 	dat = {"
 
@@ -455,11 +447,7 @@
 	author = "Pontifex Publishing"
 	title = "Synthetics"
 
-<<<<<<< HEAD
-/obj/item/weapon/book/manual/synthetic_life/New() // CHOMPedit: Removed references to upstream factions which don't exist here.
-=======
-/obj/item/book/manual/synthetic_life/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/book/manual/synthetic_life/New() // CHOMPedit: Removed references to upstream factions which don't exist here.
 	..()
 	dat = {"
 <html lang="en">

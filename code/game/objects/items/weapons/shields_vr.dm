@@ -21,13 +21,8 @@
 	allowed = list(/obj/item/melee/fluffstuff/wolfgirlsword)
 
 
-<<<<<<< HEAD
-/obj/item/weapon/shield/riot/explorer
-	name = "green explorer shield" //CHOMP explo keep
-=======
 /obj/item/shield/riot/explorer
-	name = "green away team shield"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	name = "green explorer shield" //CHOMP explo keep
 	desc = "A shield issued to exploration teams to help protect them when advancing into the unknown. It is lighter and cheaper but less protective than some of its counterparts. It has a flashlight straight in the middle to help draw attention."
 	icon = 'icons/obj/weapons_vr.dmi'
 	icon_state = "explorer_shield"
@@ -78,13 +73,8 @@
 	else
 		icon_state = "explorer_shield"
 
-<<<<<<< HEAD
-/obj/item/weapon/shield/riot/explorer/purple
-	name = "purple explorer shield" //CHOMP explo keep
-=======
 /obj/item/shield/riot/explorer/purple
-	name = "purple away team shield"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	name = "purple explorer shield" //CHOMP explo keep
 	desc = "A shield issued to exploration teams to help protect them when advancing into the unknown. It is lighter and cheaper but less protective than some of its counterparts. It has a flashlight straight in the middle to help draw attention. This one is POURPEL"
 	icon_state = "explorer_shield_P"
 

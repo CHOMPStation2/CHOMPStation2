@@ -3,7 +3,7 @@
 	name = "biochemical manipulator"
 	desc = "A machine used to perform more specialized mutations on plant seeds. Careful not to put your face on the glass."
 	icon_state = "traitcopier"
-	var/obj/item/weapon/reagent_containers/glass/loaded_beaker //Currently held beaker
+	var/obj/item/reagent_containers/glass/loaded_beaker //Currently held beaker
 	var/screen_state = "main"
 	var/health = 2
 	//any other chems that should explicitly not be allowed to be grown from plants
@@ -43,9 +43,9 @@
 /obj/machinery/botany/precisioneditor/attack_hand(mob/user as mob)
 	tgui_interact(user)
 
-/obj/machinery/botany/precisioneditor/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/botany/precisioneditor/attackby(obj/item/W as obj, mob/user as mob)
   //Load a beaker into the machine, ensuring it's a beaker first
-  if(istype(W,/obj/item/weapon/reagent_containers/glass))
+  if(istype(W,/obj/item/reagent_containers/glass))
     if(loaded_beaker)
       to_chat(user, "There is already a beaker loaded.")
     else

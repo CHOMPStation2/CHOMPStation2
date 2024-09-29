@@ -101,14 +101,9 @@
 
 /obj/item/reagent_containers/pill/attackby(obj/item/W as obj, mob/user as mob)
 	if(is_sharp(W))
-<<<<<<< HEAD
-		var/obj/item/weapon/reagent_containers/powder/J = new /obj/item/weapon/reagent_containers/powder(src.loc)
+		var/obj/item/reagent_containers/powder/J = new /obj/item/reagent_containers/powder(src.loc)
 		// user.visible_message("<span class='warning'>[user] gently cuts up [src] with [W]!</span>")
 		balloon_alert_visible("[user] gently cuts up [src] with [W]!", "You gently cut up \the [src] with [W]") // CHOMPEdit - Changed to balloon alert
-=======
-		var/obj/item/reagent_containers/powder/J = new /obj/item/reagent_containers/powder(src.loc)
-		user.visible_message("<span class='warning'>[user] gently cuts up [src] with [W]!</span>")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		playsound(src.loc, 'sound/effects/chop.ogg', 50, 1)
 
 		if(reagents)
@@ -116,16 +111,10 @@
 		J.get_appearance()
 		qdel(src)
 
-<<<<<<< HEAD
-	if(istype(W, /obj/item/weapon/card/id))
-		var/obj/item/weapon/reagent_containers/powder/J = new /obj/item/weapon/reagent_containers/powder(src.loc)
-		// user.visible_message("<span class='warning'>[user] clumsily cuts up [src] with [W]!</span>")
-		balloon_alert_visible("[user] clumsily cuts up [src] with [W]!", "You clumsily cut up \the [src] with [W]") // CHOMPEdit - Changed to balloon alert
-=======
 	if(istype(W, /obj/item/card/id))
 		var/obj/item/reagent_containers/powder/J = new /obj/item/reagent_containers/powder(src.loc)
-		user.visible_message("<span class='warning'>[user] clumsily chops up [src] with [W]!</span>")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		// user.visible_message("<span class='warning'>[user] clumsily cuts up [src] with [W]!</span>")
+		balloon_alert_visible("[user] clumsily cuts up [src] with [W]!", "You clumsily cut up \the [src] with [W]") // CHOMPEdit - Changed to balloon alert
 		playsound(src.loc, 'sound/effects/chop.ogg', 50, 1)
 
 		if(reagents)

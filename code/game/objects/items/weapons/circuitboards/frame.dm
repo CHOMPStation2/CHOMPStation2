@@ -196,18 +196,12 @@
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 //CHOMPedit Balance
 	req_components = list(
-<<<<<<< HEAD
-							/obj/item/weapon/bluespace_crystal = 2,
-							/obj/item/weapon/stock_parts/capacitor = 2,
-							/obj/item/weapon/stock_parts/scanning_module = 2,
-							/obj/item/weapon/stock_parts/micro_laser =2,
+							/obj/item/bluespace_crystal = 2,
+							/obj/item/stock_parts/capacitor = 2,
+							/obj/item/stock_parts/scanning_module = 2,
+							/obj/item/stock_parts/micro_laser =2,
 							/obj/item/stack/cable_coil = 5)
 //End CHOMPedit
-=======
-							/obj/item/stock_parts/scanning_module = 4,
-							/obj/item/stock_parts/micro_laser = 4,
-							/obj/item/stack/cable_coil = 10)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/circuitboard/teleporter_station
 	name = T_BOARD("teleporter station")

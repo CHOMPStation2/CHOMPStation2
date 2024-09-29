@@ -8,13 +8,8 @@
 	gauge_cap = 3
 	volume = 12		// CHOMP EDIT double extended
 
-<<<<<<< HEAD
-/obj/item/weapon/tank/emergency/phoron/double/Initialize() //ChompEDIT New() -> Initialize()
+/obj/item/tank/emergency/phoron/double/Initialize() //ChompEDIT New() -> Initialize()
 	. = ..()
-=======
-/obj/item/tank/emergency/phoron/double/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	air_contents.adjust_gas("phoron", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
 //New icons

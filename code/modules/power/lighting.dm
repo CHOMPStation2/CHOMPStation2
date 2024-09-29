@@ -333,7 +333,7 @@ var/global/list/light_type_cache = list()
 	. =..()
 
 	if(start_with_cell && !no_emergency)
-		cell = new/obj/item/weapon/cell/emergency_light(src)
+		cell = new/obj/item/cell/emergency_light(src)
 	if(construct)
 		start_with_cell = FALSE
 		status = LIGHT_EMPTY

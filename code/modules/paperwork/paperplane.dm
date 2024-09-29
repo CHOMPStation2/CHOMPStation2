@@ -11,11 +11,7 @@
 
 	var/obj/item/paper/internalPaper
 
-<<<<<<< HEAD
-/obj/item/weapon/paperplane/Initialize(loc, obj/item/weapon/paper/newPaper) //ChompEDIT New --> Initialize
-=======
-/obj/item/paperplane/New(loc, obj/item/paper/newPaper)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/paperplane/Initialize(loc, obj/item/paper/newPaper) //ChompEDIT New --> Initialize
 	. = ..()
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)

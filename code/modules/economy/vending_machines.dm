@@ -40,78 +40,6 @@
 	name = "Booze-O-Mat"
 	desc = "A technological marvel, the ads would have you believe this is able to mix just the mixture you'd like to drink the moment you ask for one."
 	icon_state = "boozeomat"
-<<<<<<< HEAD
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/glass2/square = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/rocks = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/shake = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/cocktail = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/shot = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/pint = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/mug = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/carafe = 2,	//VOREStation Add - Carafes and Pitchers
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/pitcher = 2,	//VOREStation Add - Carafes and Pitchers
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/wine = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/grapejuice = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/metaglass = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint = 10,
-					/obj/item/weapon/reagent_containers/glass/beaker/stopperedbottle = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/gin = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/grenadine = 5,
-					/obj/item/weapon/reagent_containers/food/condiment/cookingoil = 5,
-					/obj/item/weapon/reagent_containers/food/condiment/cornoil = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/melonliquor = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/peppermintschnapps = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/peachschnapps = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/lemonadeschnapps = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/rum = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/sake = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/grapejuice = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/jager = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cider = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/cans/beercan = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/cans/alecan = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/tomatojuice = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/limejuice = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/lemonjuice = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/applejuice = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/milk = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/cream = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/cola = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/decaf_cola = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/space_up = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/space_mountain_wind = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/dr_gibb = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/cola = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/space_up = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/space_mountain_wind = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/bottle/small/dr_gibb = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/cans/tonic = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/flask/barflask = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask = 5,
-					/obj/item/weapon/reagent_containers/food/drinks/ice = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/tea = 15,
-					/obj/item/weapon/glass_extra/stick = 30,
-					/obj/item/weapon/glass_extra/straw = 30)
-=======
 	products = list(/obj/item/reagent_containers/food/drinks/glass2/square = 10,
 					/obj/item/reagent_containers/food/drinks/glass2/rocks = 10,
 					/obj/item/reagent_containers/food/drinks/glass2/shake = 10,
@@ -146,7 +74,7 @@
 					/obj/item/reagent_containers/food/drinks/bottle/vermouth = 5,
 					/obj/item/reagent_containers/food/drinks/bottle/vodka = 5,
 					/obj/item/reagent_containers/food/drinks/bottle/whiskey = 5,
-					/obj/item/reagent_containers/food/drinks/bottle/wine = 5,
+					/obj/item/reagent_containers/food/drinks/bottle/grapejuice = 5,
 					/obj/item/reagent_containers/food/drinks/bottle/jager = 5,
 					/obj/item/reagent_containers/food/drinks/bottle/small/ale = 15,
 					/obj/item/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper = 15,
@@ -182,7 +110,6 @@
 					/obj/item/reagent_containers/food/drinks/tea = 15,
 					/obj/item/glass_extra/stick = 30,
 					/obj/item/glass_extra/straw = 30)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	contraband = list()
 	vend_delay = 15
 	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
@@ -348,46 +275,6 @@
 	desc = "Fueled by your inner inadequacy!"
 	description_fluff = "Provided by NanoMed, SweatMAX promises solutions to all of your problems. Premium gains at premium prices. Resale of SweatMAX products is a violation of NanoTrasen guidelines."
 	icon_state = "fitness"
-<<<<<<< HEAD
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/smallmilk = 16,
-					/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk = 16,
-					/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 10,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake = 8,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask = 8,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder = 16,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder/vanilla = 16,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder/banana = 16,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder/chocolate = 16,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder/strawberry = 16,
-					/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar = 16,
-					/obj/item/weapon/reagent_containers/food/snacks/fruitbar = 16,
-					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 8,
-					/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin = 8,
-					/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 8,
-					/obj/item/weapon/reagent_containers/pill/diet = 8,
-					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,	//VOREStation Removal, //CHOMPedit nah
-					/obj/item/weapon/towel/random = 8,
-					/obj/item/toy/tennis = 4)
-
-	prices = list(/obj/item/weapon/reagent_containers/food/drinks/smallmilk = 3,
-					/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk = 3,
-					/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 2,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake = 15,
-					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask = 1,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder = 5,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder/vanilla = 5,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder/banana = 5,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder/chocolate = 5,
-					/obj/item/weapon/reagent_containers/food/condiment/small/packet/protein_powder/strawberry = 5,
-					/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar = 5,
-					/obj/item/weapon/reagent_containers/food/snacks/fruitbar = 5,
-					/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 5,
-					/obj/item/weapon/reagent_containers/food/snacks/liquidvitamin = 5,
-					/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 5,
-					/obj/item/weapon/reagent_containers/pill/diet = 25,
-					/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //CHOMPedit nah
-					/obj/item/weapon/towel/random = 20,
-=======
 	products = list(/obj/item/reagent_containers/food/drinks/smallmilk = 16,
 					/obj/item/reagent_containers/food/drinks/smallchocmilk = 16,
 					/obj/item/reagent_containers/food/drinks/cans/waterbottle = 10,
@@ -404,6 +291,7 @@
 					/obj/item/reagent_containers/food/snacks/liquidvitamin = 8,
 					/obj/item/reagent_containers/food/snacks/liquidprotein = 8,
 					/obj/item/reagent_containers/pill/diet = 8,
+					/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5,	//VOREStation Removal, //CHOMPedit nah
 					/obj/item/towel/random = 8,
 					/obj/item/toy/tennis = 4)
 
@@ -423,8 +311,8 @@
 					/obj/item/reagent_containers/food/snacks/liquidvitamin = 5,
 					/obj/item/reagent_containers/food/snacks/liquidprotein = 5,
 					/obj/item/reagent_containers/pill/diet = 25,
+					/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5, //CHOMPedit nah
 					/obj/item/towel/random = 20,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					/obj/item/toy/tennis = 15)
 
 	contraband = list(/obj/item/reagent_containers/syringe/steroid = 4,
@@ -597,22 +485,13 @@
 	product_ads = "Crack capitalist skulls!;Beat some heads in!;Don't forget - harm is good!;Your weapons are right here.;Handcuffs!;Freeze, scumbag!;Don't tase me bro!;Tase them, bro.;Why not have a donut?"
 	icon_state = "sec"
 	req_access = list(access_security)
-<<<<<<< HEAD
-	products = list(/obj/item/weapon/handcuffs = 8,
-					/obj/item/weapon/grenade/flashbang = 4,
-					/obj/item/device/flash = 5,
-					/obj/item/weapon/reagent_containers/food/snacks/donut/plain = 6,
-					/obj/item/weapon/reagent_containers/food/snacks/donut/plain/jelly = 6,
-					/obj/item/weapon/storage/box/evidence = 6, // CHOMPEdit
-					/obj/item/clothing/accessory/bodycam = 10) // CHOMPEdit
-=======
 	products = list(/obj/item/handcuffs = 8,
 					/obj/item/grenade/flashbang = 4,
 					/obj/item/flash = 5,
 					/obj/item/reagent_containers/food/snacks/donut/plain = 6,
 					/obj/item/reagent_containers/food/snacks/donut/plain/jelly = 6,
-					/obj/item/storage/box/evidence = 6)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+					/obj/item/storage/box/evidence = 6, // CHOMPEdit
+					/obj/item/clothing/accessory/bodycam = 10) // CHOMPEdit
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,
 					/obj/item/storage/box/donut = 2)
 	req_log_access = access_armory
@@ -928,7 +807,6 @@
 					/obj/item/toy/plushie/shark = 1,
 					/obj/item/toy/mistletoe = 1,
 					//VOREStation Add End
-<<<<<<< HEAD
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 1,
 					/obj/item/toy/plushie/teshari/w_yw = 1,
@@ -945,14 +823,9 @@
 					/obj/item/toy/plushie/teppi/alt = 1
 					//CHOMPStation Add End
 					)
-	premium = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/champagne = 1,
-					/obj/item/weapon/storage/trinketbox = 2)
-	prices = list(/obj/item/weapon/storage/fancy/heartbox = 15,
-=======
 	premium = list(/obj/item/reagent_containers/food/drinks/bottle/champagne = 1,
 					/obj/item/storage/trinketbox = 2)
 	prices = list(/obj/item/storage/fancy/heartbox = 15,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 					/obj/item/toy/bouquet = 10,
 					/obj/item/toy/bouquet/fake = 3,
 					/obj/item/paper/card/smile = 1,

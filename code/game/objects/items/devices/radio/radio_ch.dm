@@ -1,5 +1,5 @@
 #define CANBROADCAST_INNERBOX 0.7071067811865476    //This is sqrt(2)/2
-/obj/item/device/radio/proc/can_broadcast_to()
+/obj/item/radio/proc/can_broadcast_to()
     var/list/output = list()
     var/turf/T = get_turf(src)
     var/dnumber = canhear_range*CANBROADCAST_INNERBOX
@@ -15,10 +15,10 @@
                 output += cand_turf
                 continue
     return output
-/obj/item/device/radio/intercom
+/obj/item/radio/intercom
     var/list/broadcast_tiles
 
-/obj/item/device/radio/intercom/proc/update_broadcast_tiles()
+/obj/item/radio/intercom/proc/update_broadcast_tiles()
     var/list/output = list()
     var/turf/T = get_turf(src)
     if(!T)
@@ -37,21 +37,21 @@
                 continue
     broadcast_tiles = output
 
-/obj/item/device/radio/intercom/forceMove(atom/destination)
+/obj/item/radio/intercom/forceMove(atom/destination)
     . = ..()
     update_broadcast_tiles()
 
-/obj/item/device/radio/intercom/Initialize()
+/obj/item/radio/intercom/Initialize()
     . = ..()
     update_broadcast_tiles()
 
-/obj/item/device/radio/intercom/can_broadcast_to()
+/obj/item/radio/intercom/can_broadcast_to()
     if(!broadcast_tiles)
         update_broadcast_tiles()
     return broadcast_tiles
 
 //*Subspace Radio*//
-/obj/item/device/radio/subspace
+/obj/item/radio/subspace
 	adhoc_fallback = 1
 	canhear_range = 8
 	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware."
@@ -64,11 +64,11 @@
 	throw_speed = 1
 
 //* Bluespace Radio *//
-/obj/item/device/bluespaceradio/southerncross_prelinked
+/obj/item/bluespaceradio/southerncross_prelinked
 	name = "bluespace radio (southerncross)"
-	handset = /obj/item/device/radio/bluespacehandset/linked/southerncross_prelinked
+	handset = /obj/item/radio/bluespacehandset/linked/southerncross_prelinked
 
-/obj/item/device/radio/bluespacehandset/linked/southerncross_prelinked
+/obj/item/radio/bluespacehandset/linked/southerncross_prelinked
 	bs_tx_preload_id = "Receiver A" //Transmit to a receiver
 	bs_rx_preload_id = "Broadcaster A" //Recveive from a transmitter
 

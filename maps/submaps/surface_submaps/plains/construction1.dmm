@@ -38,7 +38,7 @@
 /area/submap/construction1)
 "k" = (
 <<<<<<< HEAD
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/wrench,
 /turf/simulated/floor/plating/external,
 =======
 /obj/item/tool/wrench,
@@ -54,7 +54,7 @@
 /area/submap/construction1)
 "n" = (
 <<<<<<< HEAD
-/obj/item/weapon/pickaxe/drill,
+/obj/item/pickaxe/drill,
 /turf/simulated/floor/outdoors/rocks,
 =======
 /obj/item/pickaxe/drill,
@@ -87,11 +87,11 @@
 /area/submap/construction1)
 "u" = (
 <<<<<<< HEAD
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/plating/external,
 /area/submap/construction1)
 "v" = (
-/obj/item/weapon/airlock_electronics,
+/obj/item/airlock_electronics,
 /turf/simulated/floor/tiled/external,
 =======
 /obj/item/storage/toolbox/electrical,
@@ -112,7 +112,7 @@
 /area/submap/construction1)
 "y" = (
 <<<<<<< HEAD
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/plating/external,
 =======
 /obj/item/storage/toolbox/mechanical,
@@ -125,19 +125,19 @@
 /area/submap/construction1)
 "A" = (
 <<<<<<< HEAD
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /turf/simulated/floor/plating/external,
 /area/submap/construction1)
 "B" = (
-/obj/item/weapon/airlock_electronics,
+/obj/item/airlock_electronics,
 /turf/simulated/floor/plating/external,
 /area/submap/construction1)
 "C" = (
-/obj/item/weapon/weldingtool/largetank,
+/obj/item/weldingtool/largetank,
 /turf/simulated/floor/tiled/external,
 /area/submap/construction1)
 "D" = (
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /turf/simulated/floor/plating/external,
 =======
 /obj/item/shovel,

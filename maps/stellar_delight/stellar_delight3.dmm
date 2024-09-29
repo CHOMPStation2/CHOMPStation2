@@ -2840,14 +2840,9 @@
 	},
 /obj/structure/closet/secure_closet/hop,
 /obj/item/clothing/glasses/omnihud,
-<<<<<<< HEAD
-/obj/item/weapon/paper/dockingcodes/sd,
-/obj/item/device/retail_scanner/command,
-/obj/item/weapon/storage/box/PDAs,
-=======
+/obj/item/paper/dockingcodes/sd,
 /obj/item/retail_scanner/command,
 /obj/item/storage/box/PDAs,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
 "kO" = (

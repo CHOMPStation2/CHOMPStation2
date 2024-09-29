@@ -10,11 +10,7 @@
 	active_power_usage = 40000	//40 kW
 	var/efficiency = 40000 //will provide the modified power rate when upgraded
 	var/obj/item/charging = null
-<<<<<<< HEAD
-	var/list/allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/melee/baton, /obj/item/modular_computer, /obj/item/weapon/computer_hardware/battery_module, /obj/item/weapon/cell, /obj/item/device/suit_cooling_unit/emergency, /obj/item/device/flashlight, /obj/item/device/electronic_assembly, /obj/item/weapon/weldingtool/electric, /obj/item/ammo_magazine/smart, /obj/item/device/flash, /obj/item/device/defib_kit, /obj/item/ammo_casing/microbattery, /obj/item/device/paicard, /obj/item/ammo_magazine/cell_mag, /obj/item/weapon/gun/projectile/cell_loaded, /obj/item/device/personal_shield_generator)  // CHOMPedit: medigun stuff
-=======
-	var/list/allowed_devices = list(/obj/item/gun/energy, /obj/item/melee/baton, /obj/item/modular_computer, /obj/item/computer_hardware/battery_module, /obj/item/cell, /obj/item/suit_cooling_unit/emergency, /obj/item/flashlight, /obj/item/electronic_assembly, /obj/item/weldingtool/electric, /obj/item/ammo_magazine/smart, /obj/item/flash, /obj/item/defib_kit, /obj/item/ammo_casing/microbattery, /obj/item/paicard, /obj/item/personal_shield_generator)  //VOREStation Add - NSFW Batteries
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	var/list/allowed_devices = list(/obj/item/gun/energy, /obj/item/melee/baton, /obj/item/modular_computer, /obj/item/computer_hardware/battery_module, /obj/item/cell, /obj/item/suit_cooling_unit/emergency, /obj/item/flashlight, /obj/item/electronic_assembly, /obj/item/weldingtool/electric, /obj/item/ammo_magazine/smart, /obj/item/flash, /obj/item/defib_kit, /obj/item/ammo_casing/microbattery, /obj/item/paicard, /obj/item/ammo_magazine/cell_mag, /obj/item/gun/projectile/cell_loaded, /obj/item/personal_shield_generator)  // CHOMPedit: medigun stuff
 	var/icon_state_charged = "recharger2"
 	var/icon_state_charging = "recharger1"
 	var/icon_state_idle = "recharger0" //also when unpowered
@@ -35,7 +31,6 @@
 			if(C)				// Sometimes we get things without cells in it.
 				. += "Current charge: [C.charge] / [C.maxcharge]"
 
-<<<<<<< HEAD
 //CHOMPEdit Start - Let borgs clickdrag things into chargers
 /obj/machinery/recharger/proc/do_allowed_checks(obj/item/G, mob/user)
 	. = FALSE
@@ -46,8 +41,8 @@
 	if(!powered())
 		to_chat(user, "<span class='warning'>\The [src] blinks red as you try to insert [G]!</span>")
 		return
-	if(istype(G, /obj/item/weapon/gun/energy))
-		var/obj/item/weapon/gun/energy/E = G
+	if(istype(G, /obj/item/gun/energy))
+		var/obj/item/gun/energy/E = G
 		if(E.self_recharge)
 			to_chat(user, "<span class='notice'>\The [E] has no recharge port.</span>")
 			return
@@ -56,18 +51,18 @@
 		if(!C.battery_module)
 			to_chat(user, "<span class='notice'>\The [C] does not have a battery installed. </span>")
 			return
-	if(istype(G, /obj/item/weapon/melee/baton))
-		var/obj/item/weapon/melee/baton/B = G
+	if(istype(G, /obj/item/melee/baton))
+		var/obj/item/melee/baton/B = G
 		if(B.use_external_power)
 			to_chat(user, "<span class='notice'>\The [B] has no recharge port.</span>")
 			return
-	if(istype(G, /obj/item/device/flash))
-		var/obj/item/device/flash/F = G
+	if(istype(G, /obj/item/flash))
+		var/obj/item/flash/F = G
 		if(F.use_external_power)
 			to_chat(user, "<span class='notice'>\The [F] has no recharge port.</span>")
 			return
-	if(istype(G, /obj/item/weapon/weldingtool/electric))
-		var/obj/item/weapon/weldingtool/electric/EW = G
+	if(istype(G, /obj/item/weldingtool/electric))
+		var/obj/item/weldingtool/electric/EW = G
 		if(EW.use_external_power)
 			to_chat(user, "<span class='notice'>\The [EW] has no recharge port.</span>")
 			return
@@ -76,8 +71,8 @@
 		if(maggy.stored_ammo.len < 1)
 			to_chat(user, "\The [G] does not have any cells installed.")
 			return
-	else if(istype(G, /obj/item/weapon/gun/projectile/cell_loaded))
-		var/obj/item/weapon/gun/projectile/cell_loaded/gunny = G
+	else if(istype(G, /obj/item/gun/projectile/cell_loaded))
+		var/obj/item/gun/projectile/cell_loaded/gunny = G
 		if(gunny.ammo_magazine)
 			var/obj/item/ammo_magazine/cell_mag/maggy = gunny.ammo_magazine
 			if(maggy.stored_ammo.len < 1)
@@ -85,8 +80,8 @@
 				return
 		else
 			to_chat(user, "\The [G] does not have a magazine installed..") // CHOMPedit end
-	if(istype(G, /obj/item/device/paicard))
-		var/obj/item/device/paicard/ourcard = G
+	if(istype(G, /obj/item/paicard))
+		var/obj/item/paicard/ourcard = G
 		if(ourcard.panel_open)
 			to_chat(user, "<span class='warning'>\The [ourcard] won't fit in the recharger with its panel open.</span>")
 			return
@@ -99,10 +94,7 @@
 			return
 	return TRUE
 
-/obj/machinery/recharger/MouseDrop_T(obj/item/weapon/G as obj, mob/user as mob)
-=======
-/obj/machinery/recharger/attackby(obj/item/G as obj, mob/user as mob)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/machinery/recharger/MouseDrop_T(obj/item/G as obj, mob/user as mob)
 	var/allowed = 0
 	for (var/allowed_type in allowed_devices)
 		if(istype(G, allowed_type)) allowed = 1
@@ -110,7 +102,6 @@
 	if(allowed)
 		if(!do_allowed_checks(G, user))
 			return
-<<<<<<< HEAD
 
 		G.loc = src
 		charging = G
@@ -118,7 +109,7 @@
 		user.visible_message("[user] inserts [charging] into [src].", "You insert [charging] into [src].")
 //CHOMPEdit End
 
-/obj/machinery/recharger/attackby(obj/item/weapon/G as obj, mob/user as mob)
+/obj/machinery/recharger/attackby(obj/item/G as obj, mob/user as mob)
 	var/allowed = 0
 	for (var/allowed_type in allowed_devices)
 		if(istype(G, allowed_type)) allowed = 1
@@ -128,52 +119,6 @@
 		if(!do_allowed_checks(G, user))
 			return
 		//CHOMPEdit End
-=======
-		// Checks to make sure he's not in space doing it, and that the area got proper power.
-		if(!powered())
-			to_chat(user, "<span class='warning'>\The [src] blinks red as you try to insert [G]!</span>")
-			return
-		if(istype(G, /obj/item/gun/energy))
-			var/obj/item/gun/energy/E = G
-			if(E.self_recharge)
-				to_chat(user, "<span class='notice'>\The [E] has no recharge port.</span>")
-				return
-		if(istype(G, /obj/item/modular_computer))
-			var/obj/item/modular_computer/C = G
-			if(!C.battery_module)
-				to_chat(user, "<span class='notice'>\The [C] does not have a battery installed. </span>")
-				return
-		if(istype(G, /obj/item/melee/baton))
-			var/obj/item/melee/baton/B = G
-			if(B.use_external_power)
-				to_chat(user, "<span class='notice'>\The [B] has no recharge port.</span>")
-				return
-		if(istype(G, /obj/item/flash))
-			var/obj/item/flash/F = G
-			if(F.use_external_power)
-				to_chat(user, "<span class='notice'>\The [F] has no recharge port.</span>")
-				return
-		if(istype(G, /obj/item/weldingtool/electric))
-			var/obj/item/weldingtool/electric/EW = G
-			if(EW.use_external_power)
-				to_chat(user, "<span class='notice'>\The [EW] has no recharge port.</span>")
-				return
-		if(!G.get_cell() && !istype(G, /obj/item/ammo_casing/microbattery) && !istype(G, /obj/item/paicard))	//VOREStation Edit: NSFW charging
-			to_chat(user, "\The [G] does not have a battery installed.")
-			return
-		if(istype(G, /obj/item/paicard))
-			var/obj/item/paicard/ourcard = G
-			if(ourcard.panel_open)
-				to_chat(user, "<span class='warning'>\The [ourcard] won't fit in the recharger with its panel open.</span>")
-				return
-			if(ourcard.pai)
-				if(ourcard.pai.stat == CONSCIOUS)
-					to_chat(user, "<span class='warning'>\The [ourcard] boops... it doesn't need to be recharged!</span>")
-					return
-			else
-				to_chat(user, "<span class='warning'>\The [ourcard] doesn't have a personality!</span>")
-				return
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 		user.drop_item()
 		G.loc = src
@@ -272,8 +217,8 @@
 		else if(istype(charging, /obj/item/ammo_magazine/cell_mag))
 			charge_mag(charging)
 
-		else if(istype(charging, /obj/item/weapon/gun/projectile/cell_loaded))
-			var/obj/item/weapon/gun/projectile/cell_loaded/gunny = charging
+		else if(istype(charging, /obj/item/gun/projectile/cell_loaded))
+			var/obj/item/gun/projectile/cell_loaded/gunny = charging
 			charge_mag(gunny.ammo_magazine)
 
 /obj/machinery/recharger/proc/charge_mag(var/obj/item/ammo_magazine/cell_mag/maggy)
@@ -322,11 +267,7 @@
 	layer = ABOVE_TURF_LAYER
 	active_power_usage = 60000	//60 kW , It's more specialized than the standalone recharger (guns, batons, and flashlights only) so make it more powerful
 	efficiency = 60000
-<<<<<<< HEAD
-	allowed_devices = list(/obj/item/weapon/gun/energy, /obj/item/weapon/gun/magnetic, /obj/item/weapon/melee/baton, /obj/item/device/flashlight, /obj/item/weapon/cell/device, /obj/item/ammo_casing/microbattery, /obj/item/ammo_magazine/cell_mag, /obj/item/weapon/gun/projectile/cell_loaded)
-=======
-	allowed_devices = list(/obj/item/gun/energy, /obj/item/gun/magnetic, /obj/item/melee/baton, /obj/item/flashlight, /obj/item/cell/device)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	allowed_devices = list(/obj/item/gun/energy, /obj/item/gun/magnetic, /obj/item/melee/baton, /obj/item/flashlight, /obj/item/cell/device, /obj/item/ammo_casing/microbattery, /obj/item/ammo_magazine/cell_mag, /obj/item/gun/projectile/cell_loaded)
 	icon_state_charged = "wrecharger2"
 	icon_state_charging = "wrecharger1"
 	icon_state_idle = "wrecharger0"

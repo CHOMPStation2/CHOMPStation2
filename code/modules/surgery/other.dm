@@ -358,12 +358,8 @@
 	if(istype(tool,/obj/item/surgical/bioregen))
 		user.visible_message("<span class='notice'>[user] begins to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].</span>", \
 	"<span class='notice'>You begin to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].</span>")
-<<<<<<< HEAD
 		user.balloon_alert_visible("Begins recreating blood vessels and filing gaps in [target]'s flesh", "Recreating blood vessels and filling gaps in the flesh") // CHOMPEdit
-	else if(istype(tool,/obj/item/weapon/surgical/FixOVein))
-=======
 	else if(istype(tool,/obj/item/surgical/FixOVein))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		user.visible_message("<span class='notice'>[user] attempts to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].</span>", \
 	"<span class='notice'>You attempt to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].</span>")
 		user.balloon_alert_visible("Attempts to recreate blood vessesl and fill the gaps in [target]'s flesh", "Attempting to recreate blood vessels and fill gaps in the flesh") // CHOMPEdit
@@ -384,12 +380,8 @@
 	if(istype(tool,/obj/item/surgical/bioregen))
 		user.visible_message("<span class='danger'>[user]'s hand slips, causing \the [tool] to scrape [target]'s body.</span>", \
 	"<span class='danger'>Your hand slips, causing \the [tool] to scrape [target]'s body.</span>")
-<<<<<<< HEAD
 		user.balloon_alert_visible("Slips, scraping [target]'s body", "You slip, scraping the body.") // CHOMPEdit
-	else if(istype(tool,/obj/item/weapon/surgical/FixOVein))
-=======
 	else if(istype(tool,/obj/item/surgical/FixOVein))
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		user.visible_message("<span class='danger'>[user] fails to finish the structure over the gaps in [target]'s flesh, doing more damage than good.</span>", \
 	"<span class='danger'>You fail to finish the structure over the gaps in [target]'s flesh, doing more damage than good.</span>")
 		user.balloon_alert_visible("Fails to finish the structure in [target]'s flesh, doing more damage", "You fail to finish the structur, doing more damage") // CHOMPEdit
@@ -401,15 +393,9 @@
 /datum/surgery_step/internal/detoxify
 	surgery_name = "Detoxify"
 	blood_level = 1
-<<<<<<< HEAD
-	allowed_tools = list(/obj/item/weapon/surgical/bioregen=100)
+	allowed_tools = list(/obj/item/surgical/bioregen=100)
 	min_duration = 40 //CHOMPedit
 	max_duration = 40 //CHOMPedit
-=======
-	allowed_tools = list(/obj/item/surgical/bioregen=100)
-	min_duration = 90
-	max_duration = 120
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /datum/surgery_step/internal/detoxify/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target_zone == BP_TORSO && (target.toxloss > 25 || target.oxyloss > 25)

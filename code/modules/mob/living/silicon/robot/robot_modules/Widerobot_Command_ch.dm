@@ -4,12 +4,12 @@
 
 //Add ourselves to the borg list
 /hook/startup/proc/Modular_Borg_init_Unity()
-	robot_modules["Command"] = /obj/item/weapon/robot_module/robot/chound //Add to module array
+	robot_modules["Command"] = /obj/item/robot_module/robot/chound //Add to module array
 	robot_module_types += "Command" //Add ourselves to global
 	return 1
 
 //Create our list of known languages.
-/obj/item/weapon/robot_module/robot/chound
+/obj/item/robot_module/robot/chound
 	languages = list(
 					LANGUAGE_SOL_COMMON	= 1,
 					LANGUAGE_TRADEBAND	= 1,
@@ -32,7 +32,7 @@
 					)
 
 //Build our Module
-/obj/item/weapon/robot_module/robot/chound
+/obj/item/robot_module/robot/chound
 	name = "command robot module"
 	channels = list(
 			"Medical" = 1,
@@ -47,17 +47,17 @@
 	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
-/obj/item/weapon/robot_module/robot/chound/create_equipment(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/weapon/pen/robopen(src)
-	src.modules += new /obj/item/weapon/form_printer(src)
-	src.modules += new /obj/item/weapon/gripper/paperwork(src)
-	src.modules += new /obj/item/weapon/hand_labeler(src)
-	src.modules += new /obj/item/weapon/stamp(src)
-	src.modules += new /obj/item/weapon/stamp/denied(src)
-	src.modules += new /obj/item/weapon/taskmanager(src)
-	src.emag += new /obj/item/weapon/stamp/chameleon(src)
-	src.emag += new /obj/item/weapon/pen/chameleon(src)
+/obj/item/robot_module/robot/chound/create_equipment(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/pen/robopen(src)
+	src.modules += new /obj/item/form_printer(src)
+	src.modules += new /obj/item/gripper/paperwork(src)
+	src.modules += new /obj/item/hand_labeler(src)
+	src.modules += new /obj/item/stamp(src)
+	src.modules += new /obj/item/stamp/denied(src)
+	src.modules += new /obj/item/taskmanager(src)
+	src.emag += new /obj/item/stamp/chameleon(src)
+	src.emag += new /obj/item/pen/chameleon(src)
 
-	src.modules += new /obj/item/device/dogborg/sleeper/command(src)
-	src.emag += new /obj/item/weapon/dogborg/pounce(src)
+	src.modules += new /obj/item/dogborg/sleeper/command(src)
+	src.emag += new /obj/item/dogborg/pounce(src)
 	..()

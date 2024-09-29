@@ -119,26 +119,16 @@ RSF
 			product = new glasstype()
 			used_energy = 50
 		if(3)
-<<<<<<< HEAD
-			product = new /obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint()	//YW Changes begin
+			product = new /obj/item/reagent_containers/food/drinks/metaglass/metapint()	//YW Changes begin
 			used_energy = 50
 		if(4)
-			product = new /obj/item/weapon/paper()
-			used_energy = 10
-		if(5)
-			product = new /obj/item/weapon/pen()
-			used_energy = 50
-		if(6) 																			//YW Changes end
-			product = new /obj/item/weapon/storage/pill_bottle/dice()
-=======
 			product = new /obj/item/paper()
 			used_energy = 10
-		if(4)
+		if(5)
 			product = new /obj/item/pen()
 			used_energy = 50
-		if(5)
+		if(6) 																			//YW Changes end
 			product = new /obj/item/storage/pill_bottle/dice()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 			used_energy = 200
 
 	to_chat(user,"<span class='notice'>Dispensing [product ? product : "product"]...</span>")

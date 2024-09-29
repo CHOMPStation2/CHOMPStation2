@@ -26,12 +26,8 @@
 */
 
 //For general use
-<<<<<<< HEAD
 //YW EDITS START: EXTENSIVELY MODIFIED -KK
-/obj/item/device/modkit_conversion
-=======
 /obj/item/modkit_conversion
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "modification kit"
 	desc = "A kit containing all the needed tools and parts to modify a suit and helmet."
 	icon = 'icons/vore/custom_items_vr.dmi'
@@ -579,15 +575,9 @@
 	icon_state = "[initial(icon_state)][tostate]"
 	update_icon()
 
-<<<<<<< HEAD
-/obj/item/weapon/paper/khcrystal_manual
+/obj/item/paper/khcrystal_manual
 	name = "NT-LC91-1 manual"
 	info = {"<h4>NT-LC91-1 Life Crystal</h4>
-=======
-/obj/item/paper/khcrystal_manual
-	name = "KH-LC91-1 manual"
-	info = {"<h4>KH-LC91-1 Life Crystal</h4>
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	<h5>Usage</h5>
 	<ol>
 		<li>Hold unlinked crystal in hand.</li>
@@ -1292,13 +1282,8 @@
 	name = initial(name)
 	desc = initial(desc)
 
-<<<<<<< HEAD
 /*Begin CHOMP Removal //Vitoras: Verie
-/obj/item/weapon/fluff/verie
-=======
-//Vitoras: Verie
 /obj/item/fluff/verie
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "glowy hairbrush"
 	desc = "A pulse of light periodically zips across the top of this blue brush. This... is not an ordinary hair care tool. \
 	A small inscription can be seen in one side of the brush: \"THIS DEVICE IS ONLY COMPATIBLE WITH MODEL <b>RI</b> \

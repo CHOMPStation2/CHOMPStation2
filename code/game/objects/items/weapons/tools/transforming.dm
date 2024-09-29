@@ -180,10 +180,5 @@
 				playsound(src,'sound/items/ratchet.ogg',50,1)
 				to_chat(user, "<span class='notice'>You reconfigure [src] into welding mode.</span>")
 
-<<<<<<< HEAD
-/obj/item/weapon/weldingtool/dummy/altevian
-	toolspeed = 0.25
-=======
 /obj/item/weldingtool/dummy/altevian
 	toolspeed = 0.25
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

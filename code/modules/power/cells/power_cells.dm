@@ -3,7 +3,7 @@
  * Empty
  */
 <<<<<<< HEAD
-/obj/item/weapon/cell/empty/Initialize() //ChompEDIT New --> Initialize
+/obj/item/cell/empty/Initialize() //ChompEDIT New --> Initialize
 =======
 /obj/item/cell/empty/New()
 >>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
@@ -26,7 +26,7 @@
 	return
 
 <<<<<<< HEAD
-/obj/item/weapon/cell/crap/empty/Initialize() //ChompEDIT New --> Initialize
+/obj/item/cell/crap/empty/Initialize() //ChompEDIT New --> Initialize
 =======
 /obj/item/cell/crap/empty/New()
 >>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
@@ -61,7 +61,7 @@
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 60)
 
 <<<<<<< HEAD
-/obj/item/weapon/cell/high/empty/Initialize() //ChompEDIT New --> Initialize
+/obj/item/cell/high/empty/Initialize() //ChompEDIT New --> Initialize
 =======
 /obj/item/cell/high/empty/New()
 >>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
@@ -80,7 +80,7 @@
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 70)
 
 <<<<<<< HEAD
-/obj/item/weapon/cell/super/empty/Initialize() //ChompEDIT New --> Initialize
+/obj/item/cell/super/empty/Initialize() //ChompEDIT New --> Initialize
 =======
 /obj/item/cell/super/empty/New()
 >>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
@@ -108,7 +108,7 @@
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 80)
 
 <<<<<<< HEAD
-/obj/item/weapon/cell/hyper/empty/Initialize() //ChompEDIT New --> Initialize
+/obj/item/cell/hyper/empty/Initialize() //ChompEDIT New --> Initialize
 =======
 /obj/item/cell/hyper/empty/New()
 >>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

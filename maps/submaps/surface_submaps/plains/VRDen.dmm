@@ -198,7 +198,7 @@
 	name = "Server"
 	},
 <<<<<<< HEAD
-/obj/item/device/gps/internal/poi,
+/obj/item/gps/internal/poi,
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
 =======

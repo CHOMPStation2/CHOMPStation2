@@ -1196,7 +1196,7 @@
 /area/engineering/engine_room)
 "de" = (
 <<<<<<< HEAD
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 2;
 =======
 /obj/item/radio/intercom{

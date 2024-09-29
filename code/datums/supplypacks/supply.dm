@@ -52,20 +52,12 @@
 			/obj/item/storage/belt/janitor,
 			/obj/item/clothing/shoes/galoshes,
 			/obj/item/clothing/suit/caution = 4,
-<<<<<<< HEAD
-			/obj/item/weapon/storage/bag/trash,
-			/obj/item/device/lightreplacer,
-			/obj/item/weapon/reagent_containers/spray/cleaner,
-			/obj/item/weapon/reagent_containers/glass/rag,
-			/obj/item/weapon/grenade/chem_grenade/cleaner = 3,
-			/obj/item/device/vac_attachment, //CHOMPAdd
-=======
 			/obj/item/storage/bag/trash,
 			/obj/item/lightreplacer,
 			/obj/item/reagent_containers/spray/cleaner,
 			/obj/item/reagent_containers/glass/rag,
 			/obj/item/grenade/chem_grenade/cleaner = 3,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+			/obj/item/vac_attachment, //CHOMPAdd
 			/obj/item/clothing/glasses/hud/janitor,
 			/obj/structure/mopbucket
 			)
@@ -202,7 +194,7 @@
 					/obj/item/stack/marker_beacon/thirty,
 					/obj/item/gps/explorer,
 					/obj/item/clothing/gloves/fingerless,
-					/obj/item/device/cataloguer/compact, //CHOMP explo keep
+					/obj/item/cataloguer/compact, //CHOMP explo keep
 					/obj/item/clothing/suit/storage/toggle/bomber/pilot,
 			 		/obj/item/clothing/shoes/boots/winter/explorer,
 					/obj/item/flashlight,

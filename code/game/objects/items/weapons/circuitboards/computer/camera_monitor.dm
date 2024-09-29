@@ -42,23 +42,19 @@
 	..()
 	network = NETWORK_THUNDER
 
-<<<<<<< HEAD
 // CHOMPEdit Begin - Bodycam
-/obj/item/weapon/circuitboard/security/telescreen/bodycamera
+/obj/item/circuitboard/security/telescreen/bodycamera
 	name = T_BOARD("security bodycamera monitor")
 	build_path = /obj/machinery/computer/security/telescreen/bodycamera
 	board_type = new /datum/frame/frame_types/display
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 
-/obj/item/weapon/circuitboard/security/telescreen/bodycamera/New()
+/obj/item/circuitboard/security/telescreen/bodycamera/New()
 	..()
 	network = NETWORK_BODYCAM
 // CHOMPEdit End
 
-/obj/item/weapon/circuitboard/security/construct(var/obj/machinery/computer/security/C)
-=======
 /obj/item/circuitboard/security/construct(var/obj/machinery/computer/security/C)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if (..(C))
 		C.set_network(network.Copy())
 

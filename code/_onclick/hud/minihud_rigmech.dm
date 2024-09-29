@@ -35,15 +35,9 @@
 	if(!owner_rig)
 		qdel(src)
 		return
-<<<<<<< HEAD
 
-	var/obj/item/weapon/cell/rigcell = owner_rig.cell
-	var/obj/item/weapon/tank/rigtank = owner_rig.air_supply
-=======
-	
 	var/obj/item/cell/rigcell = owner_rig.cell
 	var/obj/item/tank/rigtank = owner_rig.air_supply
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	var/charge_percentage = rigcell ? rigcell.charge / rigcell.maxcharge : 0
 	var/air_percentage = rigtank?.air_contents ? CLAMP(rigtank.air_contents.total_moles / 17.4693, 0, 1) : 0
@@ -90,13 +84,8 @@
 	if(!owner_mech)
 		qdel(src)
 		return
-<<<<<<< HEAD
 
-	var/obj/item/weapon/cell/mechcell = owner_mech.cell
-=======
-	
 	var/obj/item/cell/mechcell = owner_mech.cell
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	var/obj/machinery/portable_atmospherics/canister/mechtank = owner_mech.internal_tank
 
 	var/charge_percentage = mechcell ? mechcell.charge / mechcell.maxcharge : 0

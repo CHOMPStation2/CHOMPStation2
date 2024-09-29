@@ -37,15 +37,9 @@
 	icon = 'icons/vore/rover_vr.dmi'
 	icon_state = "dunebug"
 
-<<<<<<< HEAD
-/obj/item/weapon/key/rover
+/obj/item/key/rover
 	name = "\improper ignition key" //CHOMPedit: Name update
 	desc = "A universal electronic tri-key for starting most Nanotrasen vehicles." //CHOMPedit: Desc update
-=======
-/obj/item/key/rover
-	name = "The Rover key"
-	desc = "The Rover key used to start it."
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	icon = 'icons/obj/vehicles_vr.dmi'
 	icon_state = "securikey"
 	w_class = ITEMSIZE_TINY

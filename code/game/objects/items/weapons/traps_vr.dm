@@ -13,12 +13,6 @@
 			remove_verb(H,/mob/living/proc/shred_limb_temp) //CHOMPEdit TGPanel
 	..()
 
-<<<<<<< HEAD
-/obj/item/weapon/beartrap/dropped(var/mob/user)
+/obj/item/beartrap/dropped(var/mob/user)
 	remove_verb(user,/mob/living/proc/shred_limb_temp) //CHOMPEdit TGPanel
 	..()
-=======
-/obj/item/beartrap/dropped(var/mob/user)
-	user.verbs -= /mob/living/proc/shred_limb_temp
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

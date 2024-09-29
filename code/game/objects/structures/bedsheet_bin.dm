@@ -19,14 +19,10 @@ LINEN BINS
 	drop_sound = 'sound/items/drop/clothing.ogg'
 	pickup_sound = 'sound/items/pickup/clothing.ogg'
 
-<<<<<<< HEAD
 	/// Custom nouns to act as the subject of dreams
 	var/list/dream_messages = list("white")
 
-/obj/item/weapon/bedsheet/attack_self(mob/user as mob)
-=======
 /obj/item/bedsheet/attack_self(mob/user as mob)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	user.drop_item()
 	if(layer == initial(layer))
 		layer = ABOVE_MOB_LAYER
@@ -91,13 +87,9 @@ LINEN BINS
 	icon_state = "sheetrd"
 	dream_messages = list("authority", "a silvery ID", "a bomb", "a mech", "a facehugger", "maniacal laughter", "the research director")
 
-<<<<<<< HEAD
-/obj/item/weapon/bedsheet/medical
+/obj/item/bedsheet/medical
 	name = "medical blanket"
 	desc = "It's a sterilized* blanket commonly used in the Medbay.  *Sterilization is voided if a virologist is present onboard the station."
-=======
-/obj/item/bedsheet/medical
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	icon_state = "sheetmedical"
 	dream_messages = list("healing", "life", "surgery", "a doctor")
 

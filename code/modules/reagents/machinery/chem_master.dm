@@ -9,14 +9,9 @@
 	circuit = /obj/item/circuitboard/chem_master
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 20
-<<<<<<< HEAD
-	var/obj/item/weapon/reagent_containers/beaker = null
-	var/obj/item/weapon/storage/pill_bottle/loaded_pill_bottle = null
-	var/list/pill_bottle_wrappers = null //CHOMPEdit - Enable customizing pill bottle type
-=======
 	var/obj/item/reagent_containers/beaker = null
 	var/obj/item/storage/pill_bottle/loaded_pill_bottle = null
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	var/list/pill_bottle_wrappers = null //CHOMPEdit - Enable customizing pill bottle type
 	var/mode = 0
 	var/condi = 0
 	var/useramount = 15 // Last used amount

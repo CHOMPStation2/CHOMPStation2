@@ -661,9 +661,8 @@ var/list/global/tank_gauge_cache = list()
 		tank.update_icon()
 		tank.cut_overlay("bomb_assembly")
 
-<<<<<<< HEAD
 // CHOMPEdit Start
-/obj/item/device/tankassemblyproxy/HasProximity(turf/T, datum/weakref/WF, old_loc)
+/obj/item/tankassemblyproxy/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
@@ -673,13 +672,7 @@ var/list/global/tank_gauge_cache = list()
 		return
 	assembly?.HasProximity(T, WEAKREF(AM), old_loc)
 // CHOMPEdit End
-/obj/item/device/tankassemblyproxy/Moved(old_loc, direction, forced)
-=======
-/obj/item/tankassemblyproxy/HasProximity(turf/T, atom/movable/AM, old_loc)
-	assembly?.HasProximity(T, AM, old_loc)
-
 /obj/item/tankassemblyproxy/Moved(old_loc, direction, forced)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(isturf(old_loc))
 		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
 	if(isturf(loc))

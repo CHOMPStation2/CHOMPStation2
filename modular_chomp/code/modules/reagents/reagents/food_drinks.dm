@@ -585,7 +585,7 @@
 	glass_desc = "Induces magnetism in the imbiber. Started as a barroom prank but evolved to become popular with miners and scrappers. Metallic aftertaste."
 
 /datum/reagent/ethanol/fetching_fizz/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	for(var/obj/item/weapon/ore/O in orange(3, M))
+	for(var/obj/item/ore/O in orange(3, M))
 		step_towards(O, get_turf(M))
 
 /datum/reagent/ethanol/hearty_punch

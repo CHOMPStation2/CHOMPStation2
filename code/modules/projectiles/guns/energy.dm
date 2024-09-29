@@ -29,16 +29,11 @@
 	var/battery_lock = 0	//If set, weapon cannot switch batteries
 	var/random_start_ammo = FALSE	//if TRUE, the weapon will spawn with randomly-determined ammo
 
-<<<<<<< HEAD
-/obj/item/weapon/gun/energy/New()
+/obj/item/gun/energy/New()
 	//..() CHOMPEdit moved to bottom
 	var/static/list/gun_icons = icon_states('icons/obj/gun_ch.dmi')
 	if (icon == 'icons/obj/gun_ch.dmi' && !(icon_state in gun_icons))
 		icon = 'icons/obj/gun.dmi'
-=======
-/obj/item/gun/energy/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(self_recharge)
 		power_supply = new /obj/item/cell/device/weapon(src)
 		START_PROCESSING(SSobj, src)
@@ -54,7 +49,7 @@
 	..() //CHOMPEdit if you see this, it is a cry for help. Please tell people to stop putting ..() at the top of New() :(
 
 //CHOMPEdit Start
-/obj/item/weapon/gun/energy/Initialize()
+/obj/item/gun/energy/Initialize()
 	. = ..()
 	update_icon()
 //CHOMPEdit End

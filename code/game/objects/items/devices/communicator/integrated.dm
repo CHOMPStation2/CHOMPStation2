@@ -19,13 +19,8 @@
 // Verb: activate()
 // Parameters: None
 // Description: Lets synths use their communicators without hands.
-<<<<<<< HEAD
-/obj/item/device/communicator/integrated/verb/activate()
-	set category = "Abilities.AI" //ChompEDIT - TGPanel
-=======
 /obj/item/communicator/integrated/verb/activate()
-	set category = "AI IM"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	set category = "Abilities.AI" //ChompEDIT - TGPanel
 	set name = "Use Communicator"
 	set desc = "Utilizes your built-in communicator."
 	set src in usr

@@ -148,7 +148,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	..()
 	anchored = 0
 	if(fruit)
-		new /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit(get_turf(src))
+		new /obj/item/reagent_containers/food/snacks/pitcher_fruit(get_turf(src))
 		fruit = FALSE
 
 
@@ -177,7 +177,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	if(user.a_intent == I_HELP)
 		if(fruit)
 			to_chat(user, "You pick a fruit from \the [src].")
-			var/obj/F = new /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit(get_turf(user)) //Drops at the user's feet if put_in_hands fails
+			var/obj/F = new /obj/item/reagent_containers/food/snacks/pitcher_fruit(get_turf(user)) //Drops at the user's feet if put_in_hands fails
 			fruit = FALSE
 			user.put_in_hands(F)
 		else
@@ -191,7 +191,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		. += "A plump fruit glistens beneath \the [src]'s cap."
 
 /mob/living/simple_mob/vore/pitcher_plant/attackby(obj/item/O, mob/user)
-	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/meat))
+	if(istype(O, /obj/item/reagent_containers/food/snacks/meat))
 		if(meat > NUTRITION_FRUIT - NUTRITION_MEAT) //Can't exceed 250
 			to_chat(user, "The [src] is full!")
 			return
@@ -218,7 +218,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 					break //We need to terminate the loop after each outcome or this could loop through multiple bellies. Of course, there should only be one belly.
 		if(!N)
 			to_chat(user, "The pitcher is empty.")
-	if(istype(O, /obj/item/weapon/newspaper))
+	if(istype(O, /obj/item/newspaper))
 		return //Can't newspaper people to freedom.
 	..()
 
@@ -281,7 +281,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 /datum/ai_holder/simple_mob/passive/pitcher
 	wander = 0
 
-/obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit //As much as I want to tie hydroponics harvest code to the mob, this is simpler (albeit kinda hacky).
+/obj/item/reagent_containers/food/snacks/pitcher_fruit //As much as I want to tie hydroponics harvest code to the mob, this is simpler (albeit kinda hacky).
 	name = "squishy fruit"
 	desc = "A tender, fleshy fruit with a thin skin."
 	icon = 'icons/obj/hydroponics_products.dmi'
@@ -294,14 +294,14 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	var/datum/seed/seed = null
 	var/obj/item/seeds/pit = null
 
-/obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit/Initialize()
+/obj/item/reagent_containers/food/snacks/pitcher_fruit/Initialize()
 	. = ..()
 	reagents.add_reagent("pitcher_nectar", 5)
 	bitesize = 4
 	pit = new /obj/item/seeds/pitcherseed(src.contents)
 	seed = pit.seed
 
-/obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit/afterattack(obj/O as obj, mob/user as mob, proximity)
+/obj/item/reagent_containers/food/snacks/pitcher_fruit/afterattack(obj/O as obj, mob/user as mob, proximity)
 	if(istype(O,/obj/machinery/microwave))
 		return ..()
 	if(istype (O, /obj/machinery/seed_extractor))
@@ -315,7 +315,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	pit.loc = user.loc
 	qdel(src)
 
-/obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit/attack_self(mob/user)
+/obj/item/reagent_containers/food/snacks/pitcher_fruit/attack_self(mob/user)
 	to_chat(user, "<span class='notice'>You plant the fruit.</span>")
 	new /obj/machinery/portable_atmospherics/hydroponics/soil/invisible(get_turf(user),src.seed)
 	GLOB.seed_planted_shift_roundstat++

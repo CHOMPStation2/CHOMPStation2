@@ -40,13 +40,8 @@
 	icon_state = "cypherkey"
 	channels = list(CHANNEL_EXPLORATION = 1)
 
-<<<<<<< HEAD
-/obj/item/device/encryptionkey/explorer
-	name = "explorer's encryption key" //CHOMP explo keep
-=======
 /obj/item/encryptionkey/explorer
-	name = "away team's encryption key"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	name = "explorer's encryption key" //CHOMP explo keep
 	icon_state = "rob_cypherkey"
 	channels = list(CHANNEL_EXPLORATION = 1)
 

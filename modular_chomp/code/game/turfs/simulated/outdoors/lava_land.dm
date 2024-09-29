@@ -24,16 +24,16 @@
 	var/last_act = 0
 
 // Stolen from mineral turf code.
-/turf/simulated/floor/outdoors/lavaland/ashrock/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/turf/simulated/floor/outdoors/lavaland/ashrock/attackby(obj/item/W as obj, mob/user as mob)
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return
 
-	if(istype(W, /obj/item/weapon/pickaxe))
+	if(istype(W, /obj/item/pickaxe))
 		if(!istype(user.loc, /turf))
 			return
 
-		var/obj/item/weapon/pickaxe/P = W
+		var/obj/item/pickaxe/P = W
 		if(last_act + P.digspeed > world.time)//prevents message spam
 			return
 		last_act = world.time

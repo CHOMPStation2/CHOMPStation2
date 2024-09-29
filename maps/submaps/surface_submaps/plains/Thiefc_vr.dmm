@@ -11,11 +11,11 @@
 "d" = (
 /obj/structure/ore_box,
 <<<<<<< HEAD
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/ore/coal,
@@ -31,9 +31,9 @@
 "e" = (
 /obj/structure/closet/crate,
 <<<<<<< HEAD
-/obj/item/weapon/extinguisher,
-/obj/item/weapon/extinguisher,
-/obj/item/weapon/extinguisher,
+/obj/item/extinguisher,
+/obj/item/extinguisher,
+/obj/item/extinguisher,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/extinguisher,
@@ -52,14 +52,14 @@
 /area/submap/Thiefc)
 "g" = (
 <<<<<<< HEAD
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/ore/coal,
@@ -83,9 +83,9 @@
 "i" = (
 /obj/structure/closet/crate,
 <<<<<<< HEAD
-/obj/item/weapon/lipstick,
-/obj/item/weapon/lipstick/black,
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick,
+/obj/item/lipstick/black,
+/obj/item/lipstick/random,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/lipstick,
@@ -99,8 +99,8 @@
 "j" = (
 /obj/structure/table/steel,
 <<<<<<< HEAD
-/obj/item/weapon/beartrap,
-/obj/item/device/survivalcapsule,
+/obj/item/beartrap,
+/obj/item/survivalcapsule,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/beartrap,
@@ -124,9 +124,9 @@
 "l" = (
 /obj/structure/closet/crate,
 <<<<<<< HEAD
-/obj/item/device/nif,
-/obj/item/device/nif/bad,
-/obj/item/device/nif/bad,
+/obj/item/nif,
+/obj/item/nif/bad,
+/obj/item/nif/bad,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/nif,
@@ -159,11 +159,11 @@
 "o" = (
 /obj/structure/closet/crate,
 <<<<<<< HEAD
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/device/perfect_tele/one_beacon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/perfect_tele/one_beacon,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/cell/device/weapon,
@@ -178,9 +178,9 @@
 /area/submap/Thiefc)
 "p" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/storage/box/shotgunammo,
-/obj/item/weapon/storage/box/practiceshells,
-/obj/item/weapon/grenade/spawnergrenade/manhacks/station,
+/obj/item/storage/box/shotgunammo,
+/obj/item/storage/box/practiceshells,
+/obj/item/grenade/spawnergrenade/manhacks/station,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},

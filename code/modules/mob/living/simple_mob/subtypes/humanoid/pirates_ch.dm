@@ -42,7 +42,7 @@
 	attacktext = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 
-	loot_list = list(/obj/item/weapon/material/knife/tacknife = 100)
+	loot_list = list(/obj/item/material/knife/tacknife = 100)
 
 	corpse = /obj/effect/landmark/mobcorpse/pirate
 
@@ -58,7 +58,7 @@
 	icon_living = "piratemelee-armor"
 	movement_cooldown = 4
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
-	loot_list = list(/obj/item/weapon/material/knife/tacknife = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
+	loot_list = list(/obj/item/material/knife/tacknife = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
 
 ///////////////////////////////
 //		Machete Priate
@@ -83,7 +83,7 @@
 	attacktext = list("slashed", "chopped", "gouged", "ripped", "cut")
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 
-	loot_list = list(/obj/item/weapon/material/knife/machete = 100)
+	loot_list = list(/obj/item/material/knife/machete = 100)
 
 	corpse = /obj/effect/landmark/mobcorpse/pirate
 
@@ -96,7 +96,7 @@
 	icon_living = "piratemelee-machete-armor"
 	movement_cooldown = 3
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
-	loot_list = list(/obj/item/weapon/material/knife/machete = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
+	loot_list = list(/obj/item/material/knife/machete = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
 
 ///////////////////////////////
 //		E-Sword Priate
@@ -117,7 +117,7 @@
 	attack_sound = 'sound/weapons/blade1.ogg'
 
 
-	loot_list = list(/obj/item/weapon/melee/energy/sword/pirate = 100)
+	loot_list = list(/obj/item/melee/energy/sword/pirate = 100)
 
 //Armored Variant
 /mob/living/simple_mob/humanoid/pirate/las/armored
@@ -127,7 +127,7 @@
 	icon_living = "piratemelee-las-armor"
 	movement_cooldown = 4
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
-	loot_list = list(/obj/item/weapon/melee/energy/sword/pirate = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
+	loot_list = list(/obj/item/melee/energy/sword/pirate = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
 
 
 ///////////////////////////////
@@ -171,7 +171,7 @@
 	icon_living = "piratemelee-shield-armor"
 	movement_cooldown = 3
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
-	loot_list = list(/obj/item/weapon/material/knife/tacknife = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
+	loot_list = list(/obj/item/material/knife/tacknife = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
 
 ///////////////////////////////
 //	Shield Machete Pirate
@@ -195,7 +195,7 @@
 	attacktext = list("slashed", "chopped", "gouged", "ripped", "cut")
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 
-	loot_list = list(/obj/item/weapon/material/knife/machete = 100)
+	loot_list = list(/obj/item/material/knife/machete = 100)
 
 // Armored Variant
 /mob/living/simple_mob/humanoid/pirate/shield/machete/armored
@@ -205,7 +205,7 @@
 	icon_living = "piratemelee-shield-machete-armor"
 	movement_cooldown = 4
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
-	loot_list = list(/obj/item/weapon/material/knife/machete = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
+	loot_list = list(/obj/item/material/knife/machete = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
 
 
 
@@ -229,7 +229,7 @@
 	projectiletype = /obj/item/projectile/bullet/shotgun
 	projectilesound = 'sound/weapons/weaponsounds_shotgunshot.ogg'
 
-	loot_list = list(/obj/item/weapon/gun/projectile/pirate = 100, /obj/item/weapon/material/knife/tacknife = 100)
+	loot_list = list(/obj/item/gun/projectile/pirate = 100, /obj/item/material/knife/tacknife = 100)
 
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged
 
@@ -242,7 +242,7 @@
 	icon_living = "pirateranged-armor"
 	movement_cooldown = 4
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
-	loot_list = list(/obj/item/weapon/material/knife/tacknife = 100, /obj/item/weapon/gun/projectile/pirate = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
+	loot_list = list(/obj/item/material/knife/tacknife = 100, /obj/item/gun/projectile/pirate = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
 
 ///////////////////////////////
 //		Pirate Blunderbuster
@@ -262,7 +262,7 @@
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun
 	projectilesound = 'sound/weapons/weaponsounds_shotgunshot.ogg'
 
-	loot_list = list(/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn = 100, /obj/item/weapon/material/knife/tacknife = 100)
+	loot_list = list(/obj/item/gun/projectile/shotgun/doublebarrel/sawn = 100, /obj/item/material/knife/tacknife = 100)
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive
 
@@ -274,7 +274,7 @@
 	icon_living = "pirateranged-blunder-armor"
 	movement_cooldown = 4
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
-	loot_list = list(/obj/item/weapon/material/knife/tacknife = 100, /obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
+	loot_list = list(/obj/item/material/knife/tacknife = 100, /obj/item/gun/projectile/shotgun/doublebarrel/sawn = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
 
 ///////////////////////////////
 //		Pirate Ziplas
@@ -294,7 +294,7 @@
 	projectiletype = /obj/item/projectile/beam/heavylaser
 	projectilesound = 'sound/weapons/weaponsounds_laserstrong.ogg'
 
-	loot_list = list(/obj/item/weapon/gun/energy/zip = 100, /obj/item/weapon/material/knife/tacknife = 100)
+	loot_list = list(/obj/item/gun/energy/zip = 100, /obj/item/material/knife/tacknife = 100)
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive
 
@@ -306,7 +306,7 @@
 	icon_living = "pirateranged-handcannon-armor"
 	movement_cooldown = 4
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
-	loot_list = list(/obj/item/weapon/material/knife/tacknife = 100, /obj/item/weapon/gun/energy/zip = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
+	loot_list = list(/obj/item/material/knife/tacknife = 100, /obj/item/gun/energy/zip = 100, /obj/item/clothing/suit/armor/material/makeshift = 100)
 
 ///////////////////////////////
 //		First Mate
@@ -327,7 +327,7 @@
 
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 5, bomb = 5, bio = 100, rad = 100)
 
-	loot_list = list(/obj/item/weapon/melee/energy/sword/pirate = 100, /obj/item/clothing/suit/pirate = 100)
+	loot_list = list(/obj/item/melee/energy/sword/pirate = 100, /obj/item/clothing/suit/pirate = 100)
 
 
 ///////////////////////////////
@@ -354,7 +354,7 @@
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	base_attack_cooldown = 10
 
-	loot_list = list(/obj/item/weapon/gun/energy/retro = 100, /obj/item/clothing/suit/pirate = 100)
+	loot_list = list(/obj/item/gun/energy/retro = 100, /obj/item/clothing/suit/pirate = 100)
 
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged
 
@@ -366,7 +366,7 @@
 	movement_cooldown = 3
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive/blood_hunter // This is for use in the Pirate Ripley Mecha
 
-	loot_list = list(/obj/item/weapon/gun/energy/retro = 100, /obj/item/clothing/head/welding = 100, /obj/item/clothing/suit/pirate = 100)
+	loot_list = list(/obj/item/gun/energy/retro = 100, /obj/item/clothing/head/welding = 100, /obj/item/clothing/suit/pirate = 100)
 
 ///////////////////////////////
 //		Mate Sweeper
@@ -392,7 +392,7 @@
 	projectilesound = 'sound/weapons/weaponsounds_shotgunshot.ogg'
 	base_attack_cooldown = 5
 
-	loot_list = list(/obj/item/weapon/gun/projectile/shotgun/doublebarrel/quad = 100, /obj/item/clothing/suit/pirate = 100)
+	loot_list = list(/obj/item/gun/projectile/shotgun/doublebarrel/quad = 100, /obj/item/clothing/suit/pirate = 100)
 
 ///////////////////////////////
 //		Mate Marksman
@@ -418,7 +418,7 @@
 	projectilesound = 'sound/weapons/weaponsounds_heavyrifleshot.ogg'
 	base_attack_cooldown = 10
 
-	loot_list = list(/obj/item/weapon/gun/projectile/shotgun/pump/rifle = 100, /obj/item/clothing/suit/pirate = 100)
+	loot_list = list(/obj/item/gun/projectile/shotgun/pump/rifle = 100, /obj/item/clothing/suit/pirate = 100)
 
 ///////////////////////////////
 //		Pirate Captain
@@ -439,7 +439,7 @@
 
 	corpse = /obj/effect/landmark/mobcorpse/pirate/ranged
 
-	loot_list = list(/obj/item/weapon/gun/energy/zip = 100, /obj/item/weapon/gun/energy/zip = 100, /obj/item/weapon/gun/energy/zip = 100, /obj/item/weapon/gun/energy/zip = 100) //Belt of pistols
+	loot_list = list(/obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100) //Belt of pistols
 
 	var/obj/item/shield_projector/shields = null
 

@@ -14,13 +14,8 @@
 	pixel_x = rand(-5, 5)
 	pixel_y = rand(-5, 5)
 
-<<<<<<< HEAD
-/obj/item/weapon/bluespace_crystal/attack_self(mob/user)
-	user.balloon_alert_visible("[user] crushes [src]!", "Crushed [src]!") // CHOMPEdit - Balloon alert
-=======
 /obj/item/bluespace_crystal/attack_self(mob/user)
-	user.visible_message("<span class='warning'>[user] crushes [src]!</span>", "<span class='danger'>You crush [src]!</span>")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	user.balloon_alert_visible("[user] crushes [src]!", "Crushed [src]!") // CHOMPEdit - Balloon alert
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(5, 1, get_turf(src))
 	s.start()

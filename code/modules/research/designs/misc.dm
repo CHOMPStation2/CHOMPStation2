@@ -93,11 +93,6 @@
 	id = "advmop"
 	req_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 5, TECH_BIO = 1)
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 2000, MAT_GOLD = 1000)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/mop/advanced
-	sort_string = "TBAAE"
-	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
-=======
 	build_path = /obj/item/mop/advanced
 	sort_string = "TBAAE"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd

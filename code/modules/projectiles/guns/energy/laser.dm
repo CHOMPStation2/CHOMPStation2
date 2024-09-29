@@ -94,22 +94,6 @@
 /*
  * Alien Pistol
  */
-<<<<<<< HEAD
-=======
-/obj/item/gun/energy/alien
-	name = "alien pistol"
-	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
-	icon_state = "alienpistol"
-	item_state = "alienpistol"
-	fire_delay = 10 // Handguns should be inferior to two-handed weapons. Even alien ones I suppose.
-	charge_cost = 480 // Five shots.
-
-	projectile_type = /obj/item/projectile/beam/cyan
-	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
-	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
-	modifystate = "alienpistol"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_pistol
 	name = "Precursor Alpha Weapon - Appendageheld Laser"
@@ -139,7 +123,7 @@
 	may have caused it to degrade, yet still remain functional at a reduced capability." //CHOMPedit changed description to be accurate with new projectile
 	value = CATALOGUER_REWARD_MEDIUM
 
-/obj/item/weapon/gun/energy/alien
+/obj/item/gun/energy/alien
 	name = "alien pistol"
 	desc = "A weapon that works very similarly to a traditional energy weapon. How this came to be will likely be a mystery for the ages."
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_pistol)
@@ -150,7 +134,7 @@
 	charge_cost = 380 // CHOMPedit changed from 480 to 380. Aka five shots to six shots.
 
 	projectile_type = /obj/item/projectile/beam/precursor //CHOMPedit changed beam type
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien // Self charges.
+	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
 	origin_tech = list(TECH_COMBAT = 8, TECH_MAGNET = 7)
 	modifystate = "alienpistol"
 	battery_lock = 1 //CHOMPedit adds battery lock.
@@ -348,7 +332,7 @@
 	action_button_name = "Use Scope"
 	//Begin CHOMPstation Edit for making this thing not trash
 	//battery_lock = 0
-	charge_cost = 360 
+	charge_cost = 360
 	fire_delay = 40
 	force = 10
 	w_class = ITEMSIZE_HUGE // So it can't fit in a backpack.

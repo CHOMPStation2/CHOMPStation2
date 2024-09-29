@@ -16431,7 +16431,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/suit/fire/firefighter,
 <<<<<<< HEAD
-/obj/item/weapon/tank/oxygen/red,
+/obj/item/tank/oxygen/red,
 /obj/item/clothing/mask/gas,
 =======
 /obj/item/tank/oxygen/red,
@@ -19419,11 +19419,7 @@
 /obj/random/action_figure,
 /obj/random/action_figure,
 /obj/structure/closet/wardrobe/grey{
-<<<<<<< HEAD
-	starts_with = list(/obj/structure/barricade/cutout/viva, /obj/item/clothing/under/color/grey = 3, /obj/item/clothing/shoes/black = 3, /obj/item/clothing/head/soft/grey = 3, /obj/item/clothing/mask/gas = 3, /obj/item/weapon/storage/toolbox/mechanical = 3, /obj/item/clothing/gloves/fyellow = 3, /obj/item/weapon/card/id/gold/captain/spare/fakespare = 3, /obj/item/weapon/soap/syndie = 3, /obj/item/weapon/storage/box/mousetraps = 3)
-=======
-	starts_with = list(/obj/structure/barricade/cutout/viva, /obj/item/clothing/under/color/grey = 3, /obj/item/clothing/shoes/black = 3, /obj/item/clothing/head/soft/grey = 3, /obj/item/clothing/mask/gas/wwii = 3, /obj/item/storage/toolbox/mechanical = 3, /obj/item/clothing/gloves/fyellow = 3, /obj/item/card/id/gold/captain/spare/fakespare = 3, /obj/item/soap/syndie = 3, /obj/item/storage/box/mousetraps = 3)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	starts_with = list(/obj/structure/barricade/cutout/viva, /obj/item/clothing/under/color/grey = 3, /obj/item/clothing/shoes/black = 3, /obj/item/clothing/head/soft/grey = 3, /obj/item/clothing/mask/gas = 3, /obj/item/storage/toolbox/mechanical = 3, /obj/item/clothing/gloves/fyellow = 3, /obj/item/card/id/gold/captain/spare/fakespare = 3, /obj/item/soap/syndie = 3, /obj/item/storage/box/mousetraps = 3)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
@@ -21073,7 +21069,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/suit/fire/firefighter,
 <<<<<<< HEAD
-/obj/item/weapon/tank/oxygen/red,
+/obj/item/tank/oxygen/red,
 /obj/item/clothing/mask/gas,
 =======
 /obj/item/tank/oxygen/red,

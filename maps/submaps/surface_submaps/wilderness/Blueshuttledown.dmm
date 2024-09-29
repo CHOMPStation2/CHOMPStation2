@@ -296,7 +296,7 @@
 	dir = 5
 	},
 /obj/item/clothing/head/helmet/space/pirate,
-/obj/item/weapon/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
 /turf/simulated/floor/tiled/red,
 /area/submap/Blackshuttledown)
 "aO" = (
@@ -353,7 +353,7 @@
 /area/submap/Blackshuttledown)
 "aV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10;
 	icon_state = "bordercolor"
@@ -362,7 +362,7 @@
 /area/submap/Blackshuttledown)
 "aW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
@@ -379,14 +379,14 @@
 /area/submap/Blackshuttledown)
 "aZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "ba" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/masks,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6;
 	icon_state = "bordercolor"
@@ -466,7 +466,7 @@
 /area/submap/Blackshuttledown)
 "bk" = (
 /obj/structure/table/steel,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /obj/effect/alien/weeds,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
@@ -533,7 +533,7 @@
 	dir = 8
 	},
 /obj/effect/alien/weeds,
-/obj/item/weapon/cell/super,
+/obj/item/cell/super,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bs" = (
@@ -560,7 +560,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bu" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/alien/weeds,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
@@ -783,7 +783,7 @@
 /area/submap/Blackshuttledown)
 "bY" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bZ" = (
@@ -826,7 +826,7 @@
 /area/submap/Blackshuttledown)
 "ce" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
@@ -885,7 +885,7 @@
 /area/submap/Blackshuttledown)
 "cm" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
@@ -949,7 +949,7 @@
 /obj/structure/table/steel,
 /obj/random/toolbox,
 /obj/effect/alien/weeds,
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "uQ" = (

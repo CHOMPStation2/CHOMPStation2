@@ -8,9 +8,9 @@
 	desc = "Fire a crippling beam to hold down your enemies or prey."
 
 	hud_state = "const_beam"
-	spell_obj = /obj/item/weapon/spell/construct/projectile/crippling_beam
+	spell_obj = /obj/item/spell/construct/projectile/crippling_beam
 
-/obj/item/weapon/spell/construct/projectile/crippling_beam
+/obj/item/spell/construct/projectile/crippling_beam
 	name = "Crippling Beam"
 	icon_state = "generic"
 	desc = "Your manipulators fire crippling beam of dense light."
@@ -71,9 +71,9 @@
 	desc = "Fire a searing beam of light, banishing unholy foes."
 
 	hud_state = "const_beam"
-	spell_obj = /obj/item/weapon/spell/construct/projectile/banishment
+	spell_obj = /obj/item/spell/construct/projectile/banishment
 
-/obj/item/weapon/spell/construct/projectile/banishment
+/obj/item/spell/construct/projectile/banishment
 	name = "banishment"
 	icon_state = "generic"
 	desc = "Your manipulators fire searing beams of light."
@@ -122,9 +122,9 @@
 	desc = "Fire a beam of kinetic energy to force back troublemakers."
 
 	hud_state = "const_beam"
-	spell_obj = /obj/item/weapon/spell/construct/projectile/force_beam
+	spell_obj = /obj/item/spell/construct/projectile/force_beam
 
-/obj/item/weapon/spell/construct/projectile/force_beam
+/obj/item/spell/construct/projectile/force_beam
 	name = "force_beam"
 	icon_state = "generic"
 	desc = "Your manipulators fire a condensed beam of kinetic energy."
@@ -166,19 +166,19 @@
 	charge_max = 100
 
 	hud_state = "const_harvest"
-	spell_obj = /obj/item/weapon/spell/construct/spawner/soothing_sphere
+	spell_obj = /obj/item/spell/construct/spawner/soothing_sphere
 
-/obj/item/weapon/spell/construct/spawner/soothing_sphere
+/obj/item/spell/construct/spawner/soothing_sphere
 	name = "sphere of soothing"
 	desc = "Call forth a portal to a dimension of soothing energies at your target."
 
 	spawner_type = /obj/effect/temporary_effect/pulse/soothing_sphere
 
-/obj/item/weapon/spell/construct/spawner/soothing_sphere/on_ranged_cast(atom/hit_atom, mob/user)
+/obj/item/spell/construct/spawner/soothing_sphere/on_ranged_cast(atom/hit_atom, mob/user)
 	if(within_range(hit_atom) && pay_energy(10))
 		..()
 
-/obj/item/weapon/spell/construct/spawner/soothing_sphere/on_throw_cast(atom/hit_atom, mob/user)
+/obj/item/spell/construct/spawner/soothing_sphere/on_throw_cast(atom/hit_atom, mob/user)
 	pay_energy(5)
 	if(isliving(hit_atom))
 		var/mob/living/L = hit_atom
@@ -234,9 +234,9 @@
 	charge_max = 100
 
 	hud_state = "const_mend"
-	spell_obj = /obj/item/weapon/spell/construct/mend_purity
+	spell_obj = /obj/item/spell/construct/mend_purity
 
-/obj/item/weapon/spell/construct/mend_purity
+/obj/item/spell/construct/mend_purity
 	name = "Mend Purity"
 	desc = "Mend the wounds of constructs or living beings overtime."
 	icon_state = "mend_wounds"
@@ -246,7 +246,7 @@
 	light_power = -2
 	light_on = TRUE
 
-/obj/item/weapon/spell/construct/mend_purity/on_melee_cast(atom/hit_atom, mob/living/user, def_zone)
+/obj/item/spell/construct/mend_purity/on_melee_cast(atom/hit_atom, mob/living/user, def_zone)
 	if(isliving(hit_atom))
 		var/mob/living/L = hit_atom
 		L.add_modifier(/datum/modifier/mend_purity, 150)

@@ -42,15 +42,9 @@
 	req_one_access = list(access_explorer,access_brig) //CHOMP explo keep
 
 	starts_with = list(
-<<<<<<< HEAD
-		/obj/item/weapon/gun/energy/locked/phasegun = 2,
-		/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-		/obj/item/weapon/cell/device/weapon = 2,
-=======
-		/obj/item/gun/energy/phasegun = 2,
-		/obj/item/gun/energy/phasegun/pistol,
+		/obj/item/gun/energy/locked/phasegun = 2,
+		/obj/item/gun/energy/locked/phasegun/pistol,
 		/obj/item/cell/device/weapon = 2,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		/obj/item/clothing/accessory/permit/gun/planetside)
 
 /*
@@ -133,17 +127,11 @@
 
 /obj/structure/closet/secure_closet/pathfinder/Initialize()
 	if(prob(50))
-<<<<<<< HEAD
-		starts_with += /obj/item/weapon/storage/backpack/explorer //CHOMPEDIT
+		starts_with += /obj/item/storage/backpack/explorer //CHOMPEDIT
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/explorer //CHOMPEDIT START
+		starts_with += /obj/item/storage/backpack/satchel/explorer //CHOMPEDIT START
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/explorer //CHOMPEDIT STOP
-=======
-		starts_with += /obj/item/storage/backpack
-	else
-		starts_with += /obj/item/storage/backpack/satchel/norm
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		starts_with += /obj/item/storage/backpack/dufflebag/explorer //CHOMPEDIT STOP
 	return ..()
 
 /*
@@ -207,14 +195,9 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pilot
 
 	starts_with = list(
-<<<<<<< HEAD
-		/obj/item/weapon/storage/backpack/parachute,
-		/obj/item/weapon/material/knife/tacknife/survival,
-		/obj/item/weapon/gun/energy/locked/frontier/holdout, //CHOMP explo keep
-=======
 		/obj/item/storage/backpack/parachute,
 		/obj/item/material/knife/tacknife/survival,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		/obj/item/gun/energy/locked/frontier/holdout, //CHOMP explo keep
 		/obj/item/clothing/head/pilot_vr,
 		/obj/item/clothing/under/rank/pilot1/no_webbing,
 		/obj/item/clothing/suit/storage/toggle/bomber/pilot,
@@ -222,20 +205,6 @@
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/gloves/fingerless,
-<<<<<<< HEAD
-		/obj/item/device/radio/headset/pilot,
-		/obj/item/device/radio/headset/pilot/alt,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-		/obj/item/weapon/storage/box/flare,
-		/obj/item/weapon/cell/device,
-		/obj/item/device/radio,
-		/obj/item/device/gps/explorer,
-		/obj/item/device/cataloguer/compact, //CHOMP edit
-	//	/obj/item/weapon/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
-=======
 		/obj/item/radio/headset/pilot,
 		/obj/item/radio/headset/pilot/alt,
 		/obj/item/flashlight,
@@ -246,8 +215,8 @@
 		/obj/item/cell/device,
 		/obj/item/radio,
 		/obj/item/gps/explorer,
-		/obj/item/gun/energy/gun/protector/pilotgun/locked,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		/obj/item/cataloguer/compact, //CHOMP edit
+	//	/obj/item/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
 		/obj/item/clothing/gloves/watch/survival,
 		/obj/item/clothing/accessory/storage/webbing/pilot1,
 		/obj/item/clothing/accessory/storage/webbing/pilot2,

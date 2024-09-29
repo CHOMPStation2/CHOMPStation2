@@ -293,10 +293,5 @@
 		target.taunt(user)
 
 // Borg version, for the lost module.
-<<<<<<< HEAD
-/obj/item/weapon/melee/baton/shocker/robot
-	use_external_power = TRUE
-=======
 /obj/item/melee/baton/shocker/robot
 	use_external_power = TRUE
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

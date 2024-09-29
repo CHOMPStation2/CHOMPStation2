@@ -144,13 +144,8 @@
 	power_use = 0
 	light_system = STATIC_LIGHT
 
-<<<<<<< HEAD
-/obj/item/device/flashlight/slime/Initialize()
+/obj/item/flashlight/slime/Initialize()
 	.=..()
-=======
-/obj/item/flashlight/slime/New()
-	..()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	set_light(light_range, light_power, light_color)
 
 /obj/item/flashlight/slime/update_brightness()

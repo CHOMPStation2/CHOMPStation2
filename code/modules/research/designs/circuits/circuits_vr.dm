@@ -83,13 +83,8 @@
 	name = "'Weasel' weapon control and targeting"
 	id = "weasel_targ"
 	req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
-<<<<<<< HEAD
-	build_path = /obj/item/weapon/circuitboard/mecha/weasel/targeting
-	sort_string = "NAAGC" */
-=======
 	build_path = /obj/item/circuitboard/mecha/weasel/targeting
-	sort_string = "NAAGC"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	sort_string = "NAAGC" */
 
 /datum/design/circuit/transhuman_clonepod
 	name = "grower pod"

@@ -51,7 +51,7 @@
 "an" = (
 /obj/structure/table/woodentable,
 <<<<<<< HEAD
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/wood,
 =======
 /obj/item/storage/toolbox/mechanical,
@@ -90,7 +90,7 @@
 /area/submap/Boathouse)
 "au" = (
 <<<<<<< HEAD
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/wood,
 /area/submap/Boathouse)
 "av" = (
@@ -164,8 +164,8 @@
 "aG" = (
 /obj/structure/table/woodentable,
 <<<<<<< HEAD
-/obj/item/weapon/oar,
-/obj/item/weapon/oar,
+/obj/item/oar,
+/obj/item/oar,
 /turf/simulated/floor/wood,
 /area/submap/Boathouse)
 "aH" = (

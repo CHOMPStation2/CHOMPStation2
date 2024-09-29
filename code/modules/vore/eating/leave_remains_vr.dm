@@ -23,29 +23,25 @@
 /datum/species/teshari
 	skull_type = /obj/item/digestion_remains/skull/teshari
 /datum/species/vox
-<<<<<<< HEAD
-	skull_type = /obj/item/weapon/digestion_remains/skull/vox
+	skull_type = /obj/item/digestion_remains/skull/vox
 //CHOMPadd start
 /datum/species/monkey
-	skull_type = /obj/item/weapon/digestion_remains/skull
+	skull_type = /obj/item/digestion_remains/skull
 /datum/species/monkey/tajaran
-	skull_type = /obj/item/weapon/digestion_remains/skull/tajaran
+	skull_type = /obj/item/digestion_remains/skull/tajaran
 /datum/species/monkey/unathi
-	skull_type = /obj/item/weapon/digestion_remains/skull/unathi
+	skull_type = /obj/item/digestion_remains/skull/unathi
 /datum/species/monkey/skrell
-	skull_type = /obj/item/weapon/digestion_remains/skull/skrell
+	skull_type = /obj/item/digestion_remains/skull/skrell
 /datum/species/monkey/shark
-	skull_type = /obj/item/weapon/digestion_remains/skull/akula
+	skull_type = /obj/item/digestion_remains/skull/akula
 /datum/species/monkey/sparra
-	skull_type = /obj/item/weapon/digestion_remains/skull/rapala
+	skull_type = /obj/item/digestion_remains/skull/rapala
 /datum/species/monkey/vulpkanin
-	skull_type = /obj/item/weapon/digestion_remains/skull/vulpkanin
+	skull_type = /obj/item/digestion_remains/skull/vulpkanin
 /datum/species/monkey/sergal
-	skull_type = /obj/item/weapon/digestion_remains/skull/sergal
+	skull_type = /obj/item/digestion_remains/skull/sergal
 //CHOMPadd end.
-=======
-	skull_type = /obj/item/digestion_remains/skull/vox
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/belly/proc/handle_remains_leaving(var/mob/living/M)
 	if(!ishuman(M) && !isrobot(M))	//Are we even humanoid or a borg?
@@ -101,21 +97,12 @@
 	if(skull_amount && H.species.selects_bodytype)
 		// We still haven't found correct skull...
 		if(H.species.base_species == SPECIES_HUMAN)
-<<<<<<< HEAD
-			new /obj/item/weapon/digestion_remains/skull/unknown(src, owner, H) //CHOMPEdit
+			new /obj/item/digestion_remains/skull/unknown(src, owner, H) //CHOMPEdit
 		else
-			new /obj/item/weapon/digestion_remains/skull/unknown/anthro(src, owner, H) //CHOMPEdit
+			new /obj/item/digestion_remains/skull/unknown/anthro(src, owner, H) //CHOMPEdit
 	else if(skull_amount)
 		// Something entirely different...
-		new /obj/item/weapon/digestion_remains/skull/unknown(src, owner, H) //CHOMPEdit
-=======
-			new /obj/item/digestion_remains/skull/unknown(src,owner)
-		else
-			new /obj/item/digestion_remains/skull/unknown/anthro(src,owner)
-	else if(skull_amount)
-		// Something entirely different...
-		new /obj/item/digestion_remains/skull/unknown(src,owner)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+		new /obj/item/digestion_remains/skull/unknown(src, owner, H) //CHOMPEdit
 
 
 /obj/item/digestion_remains
@@ -139,11 +126,7 @@
 	drop_sound = 'sound/items/drop/device.ogg'   //not organic bones, so they get different sounds
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
-<<<<<<< HEAD
-/obj/item/weapon/digestion_remains/Initialize(var/mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
-=======
-/obj/item/digestion_remains/Initialize(var/mapload, var/mob/living/pred)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/digestion_remains/Initialize(var/mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
 	. = ..()
 	if(!mapload)
 		pred_ckey = pred?.ckey

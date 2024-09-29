@@ -49,7 +49,7 @@
 // CHOMPEdit Begin - Bodycams
 /datum/category_item/autolathe/engineering/entertainment/bodycamera
 	name = "bodycamera monitor electronics"
-	path =/obj/item/weapon/circuitboard/security/telescreen/bodycamera
+	path =/obj/item/circuitboard/security/telescreen/bodycamera
 // CHOMPEdit End
 /datum/category_item/autolathe/engineering/keycard
 	name = "keycard authenticator electronics"
@@ -114,14 +114,10 @@
 
 /datum/category_item/autolathe/engineering/camera_assembly
 	name = "camera assembly"
-<<<<<<< HEAD
-	path =/obj/item/weapon/camera_assembly
+	path =/obj/item/camera_assembly
 
 //YW Addition Start
 /datum/category_item/autolathe/engineering/rpd
 	name = "rapid piping device"
-	path =/obj/item/weapon/pipe_dispenser
+	path =/obj/item/pipe_dispenser
 //YW Addtion End
-=======
-	path =/obj/item/camera_assembly
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

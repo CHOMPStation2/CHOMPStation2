@@ -42,11 +42,7 @@
 
 /obj/item/clothing/suit/space/rig
 	name = "chestpiece"
-<<<<<<< HEAD
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage) //ChompEdit: allows all suits to carry a backpack on their back unless otherwise specified.
-=======
-	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage) //ChompEdit: allows all suits to carry a backpack on their back unless otherwise specified.
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	heat_protection =	 UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	cold_protection =	 UPPER_TORSO|LOWER_TORSO|LEGS|ARMS

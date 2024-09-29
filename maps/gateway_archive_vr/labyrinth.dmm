@@ -1252,7 +1252,7 @@
 	},
 /area/awaymission/labyrinth/arrival)
 "dd" = (
-/obj/item/device/measuring_tape,
+/obj/item/measuring_tape,
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";

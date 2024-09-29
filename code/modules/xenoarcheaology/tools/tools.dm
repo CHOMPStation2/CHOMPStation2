@@ -259,11 +259,7 @@
 					if(datum_flags & DF_ISPROCESSING)
 						//scan radios in the world to try and find one
 						var/cur_dist = 999
-<<<<<<< HEAD
-						for(var/obj/item/device/radio/beacon/R in GLOB.all_beacons)
-=======
-						for(var/obj/item/radio/beacon/R in all_beacons)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+						for(var/obj/item/radio/beacon/R in GLOB.all_beacons)
 							if(R.z == src.z && R.frequency == src.frequency)
 								var/check_dist = get_dist(src,R)
 								if(check_dist < cur_dist)

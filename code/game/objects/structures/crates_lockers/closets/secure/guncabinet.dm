@@ -59,10 +59,5 @@
 	for(var/i = 1 to 2)
 		new /obj/item/gun/energy/locked/frontier(src)
 	for(var/i = 1 to 2)
-<<<<<<< HEAD
-		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
-//VOREStation Add End
-=======
 		new /obj/item/gun/energy/locked/frontier/holdout(src)
 //VOREStation Add End
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

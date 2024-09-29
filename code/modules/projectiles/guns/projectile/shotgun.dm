@@ -140,13 +140,8 @@
 
 /obj/item/gun/projectile/shotgun/doublebarrel/unload_ammo(user, allow_dump)
 	..(user, allow_dump=1)
-<<<<<<< HEAD
 /*CHOMP Remove start
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel/verb/rename_gun()
-=======
-
 /obj/item/gun/projectile/shotgun/doublebarrel/verb/rename_gun()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	set name = "Name Gun"
 	set category = "Object"
 	set desc = "Rename your gun."
@@ -185,13 +180,9 @@
 		return 1
 */ //CHOMP Remove end
 //this is largely hacky and bad :(	-Pete //less hacky and bad now :) -Ghost
-<<<<<<< HEAD
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
+/obj/item/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
 	if(istype(A, /obj/item/ammo_casing/a12g) || istype(A, /obj/item/ammo_magazine)) //CHOMPEdit: Trying to make sawn offs reload able
 		..()
-=======
-/obj/item/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	if(sawn_off)
 		to_chat(user, "<span class='warning'>The [src] is already shortened!</span>")
 		return
@@ -252,4 +243,3 @@
 	load_method = SINGLE_CASING
 	max_shells = 5
 	ammo_type = /obj/item/ammo_casing/a12g/beanbag
-

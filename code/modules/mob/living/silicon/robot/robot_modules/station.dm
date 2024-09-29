@@ -1,29 +1,11 @@
 var/global/list/robot_modules = list(
-<<<<<<< HEAD
-	"Standard"		= /obj/item/weapon/robot_module/robot/standard,
-	"Service" 		= /obj/item/weapon/robot_module/robot/clerical/butler,
-	"Clerical" 		= /obj/item/weapon/robot_module/robot/clerical/general,
-	"Research" 		= /obj/item/weapon/robot_module/robot/research,
-	"Miner" 		= /obj/item/weapon/robot_module/robot/miner,
-	"Crisis" 		= /obj/item/weapon/robot_module/robot/medical/crisis,
-//	"Surgeon" 		= /obj/item/weapon/robot_module/robot/medical/surgeon, // CHOMPedit: Surgeon module removal.
-	"Security" 		= /obj/item/weapon/robot_module/robot/security/general,
-	"Combat" 		= /obj/item/weapon/robot_module/robot/security/combat,
-	"Engineering"	= /obj/item/weapon/robot_module/robot/engineering,
-	"Janitor" 		= /obj/item/weapon/robot_module/robot/janitor,
-	"Gravekeeper"	= /obj/item/weapon/robot_module/robot/gravekeeper,
-	"Lost"			= /obj/item/weapon/robot_module/robot/lost,
-	"Protector" 	= /obj/item/weapon/robot_module/robot/syndicate/protector,
-	"Mechanist" 	= /obj/item/weapon/robot_module/robot/syndicate/mechanist,
-	"Combat Medic"	= /obj/item/weapon/robot_module/robot/syndicate/combat_medic
-=======
 	"Standard"		= /obj/item/robot_module/robot/standard,
 	"Service" 		= /obj/item/robot_module/robot/clerical/butler,
 	"Clerical" 		= /obj/item/robot_module/robot/clerical/general,
 	"Research" 		= /obj/item/robot_module/robot/research,
 	"Miner" 		= /obj/item/robot_module/robot/miner,
 	"Crisis" 		= /obj/item/robot_module/robot/medical/crisis,
-	"Surgeon" 		= /obj/item/robot_module/robot/medical/surgeon,
+//	"Surgeon" 		= /obj/item/robot_module/robot/medical/surgeon, // CHOMPedit: Surgeon module removal.
 	"Security" 		= /obj/item/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/robot_module/robot/security/combat,
 	"Engineering"	= /obj/item/robot_module/robot/engineering,
@@ -33,7 +15,6 @@ var/global/list/robot_modules = list(
 	"Protector" 	= /obj/item/robot_module/robot/syndicate/protector,
 	"Mechanist" 	= /obj/item/robot_module/robot/syndicate/mechanist,
 	"Combat Medic"	= /obj/item/robot_module/robot/syndicate/combat_medic
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	)
 
 /obj/item/robot_module
@@ -186,19 +167,11 @@ var/global/list/robot_modules = list(
 		R.camera.remove_networks(added_networks)
 	added_networks.Cut()
 
-<<<<<<< HEAD
-/obj/item/weapon/robot_module/proc/add_subsystems(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/proc/add_subsystems(var/mob/living/silicon/robot/R)
 	add_verb(R,subsystems) //CHOMPEdit TGPanel
 
-/obj/item/weapon/robot_module/proc/remove_subsystems(var/mob/living/silicon/robot/R)
-	remove_verb(R,subsystems)  //CHOMPEdit
-=======
-/obj/item/robot_module/proc/add_subsystems(var/mob/living/silicon/robot/R)
-	R.verbs |= subsystems
-
 /obj/item/robot_module/proc/remove_subsystems(var/mob/living/silicon/robot/R)
-	R.verbs -= subsystems
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	remove_verb(R,subsystems)  //CHOMPEdit
 
 /obj/item/robot_module/proc/apply_status_flags(var/mob/living/silicon/robot/R)
 	if(!can_be_pushed)
@@ -230,7 +203,6 @@ var/global/list/robot_modules = list(
 // Cyborgs (non-drones), default loadout. This will be given to every module.
 /obj/item/robot_module/robot/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
-<<<<<<< HEAD
 	//CHOMPEdit Start
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
@@ -238,28 +210,18 @@ var/global/list/robot_modules = list(
 	water.max_energy = 1000
 	robot.water_res = water
 	synths += water
-	var/obj/item/device/robot_tongue/T = new /obj/item/device/robot_tongue(src)
+	var/obj/item/robot_tongue/T = new /obj/item/robot_tongue(src)
 	T.water = water
 	src.modules += T
 	//CHOMPEdit End
-	src.modules += new /obj/item/device/gps/robot(src)
-	src.modules += new /obj/item/device/boop_module(src)
-	src.modules += new /obj/item/device/flash/robot(src)
-	src.modules += new /obj/item/weapon/extinguisher(src)
-	src.modules += new /obj/item/weapon/gripper/scene(src) //CHOMPEdit - Give all borgs a scene gripper
-	src.modules += new /obj/item/weapon/tool/crowbar/cyborg(src)
-
-/obj/item/weapon/robot_module/robot/standard
-=======
 	src.modules += new /obj/item/gps/robot(src)
 	src.modules += new /obj/item/boop_module(src)
-	src.modules += new /obj/item/robot_tongue(src)
 	src.modules += new /obj/item/flash/robot(src)
 	src.modules += new /obj/item/extinguisher(src)
+	src.modules += new /obj/item/gripper/scene(src) //CHOMPEdit - Give all borgs a scene gripper
 	src.modules += new /obj/item/tool/crowbar/cyborg(src)
 
 /obj/item/robot_module/robot/standard
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "standard robot module"
 	pto_type = PTO_CIVILIAN
 
@@ -281,42 +243,14 @@ var/global/list/robot_modules = list(
 	pto_type = PTO_MEDICAL
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
-<<<<<<< HEAD
 /* CHOMPedit start: Removal of Surgeon module. *
 
-/obj/item/weapon/robot_module/robot/medical/surgeon
-=======
 /obj/item/robot_module/robot/medical/surgeon
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "surgeon robot module"
 
 
 /obj/item/robot_module/robot/medical/surgeon/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
-<<<<<<< HEAD
-	src.modules += new /obj/item/device/healthanalyzer(src)
-	src.modules += new /obj/item/device/sleevemate(src)
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo/surgeon(src)
-	src.modules += new /obj/item/weapon/autopsy_scanner(src)
-	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/retractor/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/cautery/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bonegel/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/FixOVein/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
-	src.modules += new /obj/item/weapon/gripper/medical(src)
-	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
-	src.modules += new /obj/item/weapon/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
-	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
-
-	var/obj/item/weapon/reagent_containers/spray/PS = new /obj/item/weapon/reagent_containers/spray(src)
-
-=======
 	src.modules += new /obj/item/healthanalyzer(src)
 	src.modules += new /obj/item/sleevemate(src)
 	src.modules += new /obj/item/reagent_containers/borghypo/surgeon(src)
@@ -338,7 +272,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/reagent_containers/syringe(src)
 
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+
 	src.emag += PS
 	PS.reagents.add_reagent("pacid", 250)
 	PS.name = "Polyacid spray"
@@ -380,13 +314,9 @@ var/global/list/robot_modules = list(
 
 	..()
 
-<<<<<<< HEAD
 * CHOMPedit end: Removal of Surgeon module. */
 
-/obj/item/weapon/robot_module/robot/medical/crisis
-=======
 /obj/item/robot_module/robot/medical/crisis
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "crisis robot module"
 
 /obj/item/robot_module/robot/medical/crisis/create_equipment(var/mob/living/silicon/robot/robot)
@@ -395,31 +325,6 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/sleevemate(src)
 	src.modules += new /obj/item/reagent_scanner/adv(src)
 	src.modules += new /obj/item/roller_holder(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo/crisis(src)
-	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large/borg(src)
-	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
-	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/organ(src)
-	src.modules += new /obj/item/weapon/gripper/medical(src)
-	src.modules += new /obj/item/weapon/shockpaddles/robot(src)
-// CHOMPedit start: Combining Surgeon and Crisis.
-	src.modules += new /obj/item/weapon/autopsy_scanner(src)
-	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/retractor/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/cautery/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bonegel/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/FixOVein/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bonesetter/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/bioregen/cyborg(src)
-// CHOMPedit end: Combining Surgeon and Crisis.
-	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
-	src.modules += new /obj/item/weapon/holosign_creator/medical(src) //CHOMPAdd
-	var/obj/item/weapon/reagent_containers/spray/PS = new /obj/item/weapon/reagent_containers/spray(src)
-=======
 	src.modules += new /obj/item/reagent_containers/borghypo/crisis(src)
 	src.modules += new /obj/item/reagent_containers/glass/beaker/large/borg(src)
 	src.modules += new /obj/item/reagent_containers/dropper/industrial(src)
@@ -427,9 +332,22 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/gripper/no_use/organ(src)
 	src.modules += new /obj/item/gripper/medical(src)
 	src.modules += new /obj/item/shockpaddles/robot(src)
+// CHOMPedit start: Combining Surgeon and Crisis.
+	src.modules += new /obj/item/autopsy_scanner(src)
+	src.modules += new /obj/item/surgical/scalpel/cyborg(src)
+	src.modules += new /obj/item/surgical/hemostat/cyborg(src)
+	src.modules += new /obj/item/surgical/retractor/cyborg(src)
+	src.modules += new /obj/item/surgical/cautery/cyborg(src)
+	src.modules += new /obj/item/surgical/bonegel/cyborg(src)
+	src.modules += new /obj/item/surgical/FixOVein/cyborg(src)
+	src.modules += new /obj/item/surgical/bonesetter/cyborg(src)
+	src.modules += new /obj/item/surgical/circular_saw/cyborg(src)
+	src.modules += new /obj/item/surgical/surgicaldrill/cyborg(src)
+	src.modules += new /obj/item/surgical/bioregen/cyborg(src)
+// CHOMPedit end: Combining Surgeon and Crisis.
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
+	src.modules += new /obj/item/holosign_creator/medical(src) //CHOMPAdd
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	src.emag += PS
 	PS.reagents.add_reagent("pacid", 250)
 	PS.name = "Polyacid spray"
@@ -498,20 +416,6 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/analyzer(src)
 	src.modules += new /obj/item/geiger(src)
 	src.modules += new /obj/item/taperoll/engineering(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/weapon/gripper(src)
-	src.modules += new /obj/item/weapon/gripper/circuit(src)
-	src.modules += new /obj/item/device/lightreplacer(src)
-	src.modules += new /obj/item/weapon/pipe_dispenser(src)
-	src.modules += new /obj/item/device/floor_painter(src)
-	src.modules += new /obj/item/weapon/rms(src)
-	src.modules += new /obj/item/weapon/inflatable_dispenser/robot(src)
-	src.emag += new /obj/item/weapon/melee/baton/robot/arm(src)
-	src.modules += new /obj/item/weapon/rcd/electric/mounted/borg(src)
-	src.modules += new /obj/item/weapon/pickaxe/plasmacutter/borg(src)
-	src.modules += new /obj/item/weapon/gripper/no_use/loader(src)
-	src.modules += new /obj/item/weapon/holosign_creator/combifan(src) //CHOMPAdd
-=======
 	src.modules += new /obj/item/gripper(src)
 	src.modules += new /obj/item/gripper/circuit(src)
 	src.modules += new /obj/item/lightreplacer(src)
@@ -523,7 +427,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/rcd/electric/mounted/borg(src)
 	src.modules += new /obj/item/pickaxe/plasmacutter/borg(src)
 	src.modules += new /obj/item/gripper/no_use/loader(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	src.modules += new /obj/item/holosign_creator/combifan(src) //CHOMPAdd
 
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(40000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(40000)
@@ -614,18 +518,11 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/melee/baton/robot(src)
 	src.modules += new /obj/item/gun/energy/taser/mounted/cyborg(src)
 	src.modules += new /obj/item/taperoll/police(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/weapon/reagent_containers/spray/pepper(src)
-	src.modules += new /obj/item/weapon/gripper/security(src)
-	src.modules += new /obj/item/device/ticket_printer(src)	//VOREStation Add
-	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) // CHOMPedit: Phasegun for regular sec cyborg.
-	src.emag += new /obj/item/weapon/gun/energy/laser/mounted(src)
-=======
 	src.modules += new /obj/item/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/gripper/security(src)
 	src.modules += new /obj/item/ticket_printer(src)	//VOREStation Add
+	src.modules += new /obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) // CHOMPedit: Phasegun for regular sec cyborg.
 	src.emag += new /obj/item/gun/energy/laser/mounted(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	src.modules += new /obj/item/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
 	src.modules += new /obj/item/dogborg/pounce(src) //Pounce
@@ -656,12 +553,8 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/storage/bag/trash(src)
 	src.modules += new /obj/item/mop(src)
 	src.modules += new /obj/item/pupscrubber(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/device/lightreplacer(src)
-	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
-=======
 	src.modules += new /obj/item/lightreplacer(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+	src.modules += new /obj/item/vac_attachment(src) //CHOMPAdd
 	src.modules += new /obj/item/borg/sight/janitor(src)
 	var/obj/item/reagent_containers/spray/LS = new /obj/item/reagent_containers/spray(src)
 	src.emag += LS
@@ -820,24 +713,6 @@ var/global/list/robot_modules = list(
 /obj/item/robot_module/robot/miner/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/borg/sight/material(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
-	src.modules += new /obj/item/weapon/tool/screwdriver/cyborg(src)
-	src.modules += new /obj/item/weapon/storage/bag/ore(src)
-	src.modules += new /obj/item/weapon/pickaxe/borgdrill(src)
-	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
-	src.modules += new /obj/item/weapon/gripper/miner(src)
-	src.modules += new /obj/item/weapon/mining_scanner(src)
-	src.modules += new /obj/item/weapon/card/id/cargo/miner/borg(src)
-	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) //CHOMPedit: Phasegun for regular mining cyborg.
-	src.modules += new /obj/item/device/vac_attachment(src) //CHOMPAdd
-	src.emag += new /obj/item/weapon/kinetic_crusher/machete/dagger(src)
-
-	src.modules += new /obj/item/device/dogborg/sleeper/compactor/supply(src)
-	src.emag += new /obj/item/weapon/dogborg/pounce(src)
-
-/obj/item/weapon/robot_module/robot/research
-=======
 	src.modules += new /obj/item/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/tool/screwdriver/cyborg(src)
 	src.modules += new /obj/item/storage/bag/ore(src)
@@ -846,13 +721,14 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/gripper/miner(src)
 	src.modules += new /obj/item/mining_scanner(src)
 	src.modules += new /obj/item/card/id/cargo/miner/borg(src)
+	src.modules += new /obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) //CHOMPedit: Phasegun for regular mining cyborg.
+	src.modules += new /obj/item/vac_attachment(src) //CHOMPAdd
 	src.emag += new /obj/item/kinetic_crusher/machete/dagger(src)
 
 	src.modules += new /obj/item/dogborg/sleeper/compactor/supply(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
 
 /obj/item/robot_module/robot/research
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "research module"
 	channels = list(CHANNEL_SCIENCE = 1)
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/advrped)
@@ -1050,15 +926,8 @@ var/global/list/robot_modules = list(
 /obj/item/robot_module/drone/mining/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/borg/sight/material(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/weapon/pickaxe/borgdrill(src)
-	src.modules += new /obj/item/weapon/storage/bag/ore(src)
-	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
-	src.modules += new /obj/item/weapon/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit, makes the mining borg able to defend itself.
-	src.emag += new /obj/item/weapon/pickaxe/diamonddrill(src)
-=======
 	src.modules += new /obj/item/pickaxe/borgdrill(src)
 	src.modules += new /obj/item/storage/bag/ore(src)
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
+	src.modules += new /obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit, makes the mining borg able to defend itself.
 	src.emag += new /obj/item/pickaxe/diamonddrill(src)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal

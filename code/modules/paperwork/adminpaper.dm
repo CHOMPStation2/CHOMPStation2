@@ -16,11 +16,7 @@
 	var/footer = null
 	var/footerOn = FALSE
 
-<<<<<<< HEAD
-/obj/item/weapon/paper/admin/Initialize() //ChompEDIT New --> Initialize
-=======
-/obj/item/paper/admin/New()
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
+/obj/item/paper/admin/Initialize() //ChompEDIT New --> Initialize
 	..()
 	generateInteractions()
 

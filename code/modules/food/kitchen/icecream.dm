@@ -88,19 +88,14 @@
 	popup.open()
 
 /obj/machinery/icecream_vat/attackby(var/obj/item/O as obj, var/mob/user as mob)
-<<<<<<< HEAD
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
 		return
 	if(default_deconstruction_crowbar(user, O))
 		return
 	if(default_part_replacement(user, O))
 		return
-	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/icecream))
-		var/obj/item/weapon/reagent_containers/food/snacks/icecream/I = O
-=======
 	if(istype(O, /obj/item/reagent_containers/food/snacks/icecream))
 		var/obj/item/reagent_containers/food/snacks/icecream/I = O
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		if(!I.ice_creamed)
 			if(product_types[dispense_flavour] > 0)
 				src.visible_message("[icon2html(src,viewers(src))] <span class='info'>[user] scoops delicious [flavour_name] icecream into [I].</span>")

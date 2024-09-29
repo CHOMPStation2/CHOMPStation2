@@ -2,13 +2,9 @@
  *	UNATHI
  */
 
-<<<<<<< HEAD
 //ChompEdit begins
 
-/obj/item/weapon/rig/breacher
-=======
 /obj/item/rig/breacher
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "\improper NT breacher chassis control module"
 	desc = "A cheap NT knock-off of an Unathi battle-rig. Uses softer, but lighter, armour plating, producing a still-useful suit"
 	suit_type = "\improper NT breacher"
@@ -21,11 +17,11 @@
 	offline_vision_restriction = 2 //This actually serves as a good weakness for them, making them vulnerable to Ion weapons.
 	siemens_coefficient = 0.75
 	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank,
-		/obj/item/device/suit_cooling_unit,
-		/obj/item/weapon/storage
+		/obj/item/gun,
+		/obj/item/flashlight,
+		/obj/item/tank,
+		/obj/item/suit_cooling_unit,
+		/obj/item/storage
 		)
 	chest_type = /obj/item/clothing/suit/space/rig/breacher
 	helm_type = /obj/item/clothing/head/helmet/space/rig/breacher
@@ -142,7 +138,7 @@
 		/obj/item/rig_module/self_destruct
 		)
 
-/obj/item/weapon/rig/vox/civilian
+/obj/item/rig/vox/civilian
 	name = "matte alien control module"
 	suit_type = "sinister alien"
 	icon_state = "voxstealth_rig"
@@ -151,7 +147,7 @@
 
 	req_access = list()
 	req_one_access = list()
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage) //CHOMP Edit
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage) //CHOMP Edit
 	offline_vision_restriction = 1
 
 	initial_modules = list(

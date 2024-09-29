@@ -106,14 +106,9 @@
 		return 1
 	return ..()
 
-<<<<<<< HEAD
-/obj/item/weapon/reagent_containers/glass/self_feed_message(var/mob/user)
+/obj/item/reagent_containers/glass/self_feed_message(var/mob/user)
 	// to_chat(user, "<span class='notice'>You swallow a gulp from \the [src].</span>")
 	balloon_alert(user, "Swallowed from \the [src]") // CHOMPEdit - Changed to balloon alert
-=======
-/obj/item/reagent_containers/glass/self_feed_message(var/mob/user)
-	to_chat(user, "<span class='notice'>You swallow a gulp from \the [src].</span>")
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /obj/item/reagent_containers/glass/proc/attempt_snake_milking(mob/living/user, mob/living/target)
 	var/reagent
@@ -365,14 +360,9 @@
 				user.put_in_inactive_hand(B)
 			qdel(src)
 		else
-<<<<<<< HEAD
 			// to_chat(user, "<span class='warning'>You need one sheet of metal to arm the robot frame.</span>")
 			balloon_alert(user, "One sheet of metal is needed to arm the robot frame.") // CHOMPEdit - Changed to balloon alert
-	else if(istype(D, /obj/item/weapon/mop) || istype(D, /obj/item/weapon/soap) || istype(D, /obj/item/weapon/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
-=======
-			to_chat(user, "<span class='warning'>You need one sheet of metal to arm the robot frame.</span>")
 	else if(istype(D, /obj/item/mop) || istype(D, /obj/item/soap) || istype(D, /obj/item/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		if(reagents.total_volume < 1)
 			// to_chat(user, "<span class='warning'>\The [src] is empty!</span>")
 			balloon_alert(user, "\The [src] is empty!") // CHOMPEdit - Changed to balloon alert

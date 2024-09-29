@@ -18,7 +18,7 @@
 /area/submap/camp1)
 "e" = (
 <<<<<<< HEAD
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/outdoors/dirt{
 =======
 /obj/item/flashlight/lantern,
@@ -77,7 +77,7 @@
 /area/submap/camp1)
 "o" = (
 <<<<<<< HEAD
-/obj/item/weapon/flame/lighter,
+/obj/item/flame/lighter,
 /turf/simulated/floor/outdoors/dirt,
 =======
 /obj/item/flame/lighter,
