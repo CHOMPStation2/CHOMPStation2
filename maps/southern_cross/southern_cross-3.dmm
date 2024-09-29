@@ -272,6 +272,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/lattice,
 /turf/simulated/open,
 /area/maintenance/thirddeck/foreport)
@@ -279,6 +280,94 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/light{
 	dir = 1
+=======
+/turf/simulated/floor/plating,
+/area/surface/outpost/mining_main/exterior)
+"az" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/overlay/snow/floor,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outside/path/plains)
+"aA" = (
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/surface/outside/plains/mountains)
+"aB" = (
+/turf/simulated/floor/water,
+/area/surface/outside/plains/mountains)
+"aC" = (
+/turf/simulated/floor/water/shoreline/corner,
+/area/surface/outside/ocean)
+"aD" = (
+/turf/simulated/floor/water,
+/area/surface/outside/ocean)
+"aE" = (
+/turf/simulated/floor/water/shoreline/corner{
+	dir = 1;
+	icon_state = "shorelinecorner"
+	},
+/area/surface/outside/ocean)
+"aF" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outside/plains/outpost)
+"aG" = (
+/turf/simulated/floor/water/shoreline{
+	dir = 8;
+	icon_state = "shoreline"
+	},
+/area/surface/outside/ocean)
+"aH" = (
+/turf/simulated/floor/water/shoreline{
+	dir = 4;
+	icon_state = "shoreline"
+	},
+/area/surface/outside/ocean)
+"aI" = (
+/obj/item/banner/nt,
+/turf/simulated/floor/outdoors/snow/sif/planetuse,
+/area/surface/outside/plains/outpost)
+"aJ" = (
+/turf/simulated/floor/water/shoreline{
+	dir = 6;
+	icon_state = "shoreline"
+	},
+/area/surface/outside/ocean)
+"aK" = (
+/turf/simulated/floor/water/shoreline{
+	dir = 10;
+	icon_state = "shoreline"
+	},
+/area/surface/outside/ocean)
+"aL" = (
+/turf/simulated/floor/water/shoreline,
+/area/surface/outside/ocean)
+"aM" = (
+/turf/unsimulated/wall/planetary/sif,
+/area/surface/outside/ocean)
+"aN" = (
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/mining_main/storage)
+"aO" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/surface/outpost/mining_main/storage)
+"aP" = (
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/mining_main)
+"aQ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/surface/outpost/mining_main)
+"aR" = (
+/obj/structure/closet/crate,
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 8
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
@@ -293,10 +382,20 @@
 	layer = 3.3;
 	pixel_y = 26
 	},
+<<<<<<< HEAD
 /obj/random/coin,
 /obj/random/plushie,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main/storage)
+"aT" = (
+/obj/structure/table/steel,
+/obj/item/pickaxe,
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_1)
@@ -304,6 +403,7 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/bathrobe,
 /obj/item/clothing/under/bathrobe,
@@ -317,6 +417,16 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7,
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main/storage)
+"aU" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 1
@@ -347,6 +457,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/greengrid,
 /area/ai)
@@ -371,6 +482,41 @@
 /obj/machinery/flasher{
 	id = "AI";
 	pixel_y = -24
+=======
+/obj/item/clothing/head/hardhat/orange,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main/storage)
+"aW" = (
+/obj/structure/table/steel,
+/obj/item/storage/belt/utility,
+/obj/item/pickaxe,
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 8
+	},
+/obj/item/gps/mining,
+/obj/item/gps/mining,
+/obj/item/gps/mining,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main)
+"aX" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/structure/table/steel,
+/obj/item/tool/crowbar,
+/obj/item/tool/wrench,
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main)
+"aY" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/ai)
@@ -387,6 +533,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/crew_quarters/seconddeck/gym)
 "akk" = (
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -399,6 +546,16 @@
 "akK" = (
 /obj/machinery/ai_slipper{
 	icon_state = "motion0"
+=======
+/area/surface/outpost/mining_main)
+"ba" = (
+/obj/structure/table/steel,
+/obj/item/mining_scanner,
+/obj/item/mining_scanner,
+/obj/item/mining_scanner,
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -412,11 +569,18 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "anh" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
+=======
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/light{
 	dir = 1
@@ -778,6 +942,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_6)
 "aDE" = (
@@ -790,6 +955,29 @@
 "aDK" = (
 /obj/item/weapon/implanter/compliance{
 	pixel_y = 4
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main/storage)
+"bW" = (
+/obj/structure/table/rack,
+/obj/item/pickaxe,
+/obj/item/tool/wrench,
+/obj/item/tool/crowbar,
+/obj/item/shovel,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main/storage)
+"bX" = (
+/obj/structure/table/rack,
+/obj/item/pickaxe,
+/obj/item/tool/wrench,
+/obj/item/tool/crowbar,
+/obj/item/shovel,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/item/weapon/implanter/sizecontrol,
 /obj/structure/table/standard,
@@ -873,11 +1061,31 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+=======
+/obj/structure/closet/secure_closet/guncabinet/phase,
+/obj/item/clothing/accessory/holster/hip,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"cj" = (
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/structure/table/standard,
+/obj/item/book/codex/corp_regs,
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 5
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -893,12 +1101,62 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
+<<<<<<< HEAD
 /area/ai)
 "aFB" = (
 /obj/machinery/porta_turret/ai_defense,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
+=======
+/area/surface/outpost/main/gateway)
+"cn" = (
+/obj/machinery/gateway{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/main/gateway)
+"co" = (
+/obj/machinery/ai_status_display,
+/turf/simulated/wall,
+/area/surface/outpost/main/gateway)
+"cp" = (
+/obj/machinery/vending/wallmed1{
+	name = "NanoMed Wall";
+	pixel_x = 0;
+	pixel_y = 28
+	},
+/obj/structure/table/glass,
+/obj/machinery/recharger,
+/obj/item/tool/screwdriver,
+/obj/item/defib_kit/loaded,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/first_aid)
+"cq" = (
+/obj/machinery/sleep_console{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/first_aid)
+"cr" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -939,8 +1197,28 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 8
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main)
+"cz" = (
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/mining_main)
+"cA" = (
+/obj/item/tool/crowbar,
+/obj/item/tool/wrench,
+/obj/item/storage/toolbox/mechanical,
+/obj/structure/table/steel,
+/obj/machinery/light,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/newscaster{
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = -27
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
@@ -987,7 +1265,17 @@
 	pixel_x = 21;
 	pixel_y = -10
 	},
+<<<<<<< HEAD
 /obj/item/device/radio/intercom/custom{
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"cK" = (
+/turf/simulated/wall,
+/area/surface/outpost/main/gateway)
+"cL" = (
+/obj/item/radio/intercom{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 8;
 	pixel_x = -21;
 	pixel_y = -10
@@ -1058,6 +1346,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "aMZ" = (
@@ -1074,6 +1363,18 @@
 /area/maintenance/thirddeck/dormsatmos)
 "aNp" = (
 /obj/effect/floor_decal/spline/plain{
+=======
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/first_aid)
+"cT" = (
+/obj/structure/window/reinforced,
+/obj/structure/table/rack,
+/obj/item/bodybag/cryobag,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/firstaid/regular,
+/obj/random/medical/lite,
+/obj/effect/floor_decal/borderfloorwhite{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 5
 	},
 /turf/simulated/floor/boxing{
@@ -1106,7 +1407,18 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+=======
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/extinguisher,
+/obj/machinery/light/small{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -1197,8 +1509,20 @@
 	},
 /obj/machinery/light,
 /obj/machinery/alarm{
+<<<<<<< HEAD
 	dir = 4;
 	pixel_x = -23
+=======
+	pixel_y = 23
+	},
+/obj/structure/table/standard,
+/obj/item/storage/box/donut,
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 9
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
@@ -1335,6 +1659,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "bbV" = (
@@ -1350,6 +1675,13 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+=======
+/obj/structure/table/glass,
+/obj/item/tool/wrench,
+/obj/item/reagent_containers/glass/beaker/cryoxadone{
+	pixel_x = 7;
+	pixel_y = 1
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -1395,10 +1727,23 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/thirddeck/aftport)
 "bga" = (
 /obj/structure/table/bench/wooden,
 /obj/item/device/radio/intercom{
+=======
+/area/surface/outpost/mining_main/emergencystorage)
+"dz" = (
+/obj/item/t_scanner,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/structure/table/steel,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/machinery/power/apc{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -2142,6 +2487,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
@@ -2153,6 +2499,51 @@
 "bLU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+=======
+/obj/structure/table/reinforced,
+/obj/item/paper_bin{
+	pixel_x = 1;
+	pixel_y = 9
+	},
+/obj/item/flash,
+/obj/item/pen,
+/obj/item/tool/crowbar,
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"eR" = (
+/obj/structure/closet/crate,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"eS" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"eT" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/red/bordercorner,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"eU" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -2173,7 +2564,41 @@
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/grey/border{
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gateway)
+"eX" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gateway)
+"eY" = (
+/obj/structure/closet/emcloset,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/blue,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gateway)
+"eZ" = (
+/obj/structure/closet/l3closet/scientist,
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloorwhite/corner{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/purple{
@@ -2187,6 +2612,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
 	target_pressure = 200
@@ -2213,6 +2639,47 @@
 	name = "Fore Port Solar Access";
 	req_access = list();
 	req_one_access = list(11,24)
+=======
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/first_aid)
+"fb" = (
+/obj/structure/table/glass,
+/obj/item/tool/crowbar,
+/obj/item/bodybag,
+/obj/item/bodybag/cryobag,
+/obj/effect/floor_decal/borderfloorwhite/corner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/obj/item/bodybag/cryobag,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/first_aid)
+"fc" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/glass,
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/o2{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/main/first_aid)
+"fd" = (
+/obj/structure/table/glass,
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 0;
+	pixel_y = 0
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -2467,6 +2934,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "bZp" = (
@@ -2477,6 +2945,21 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+=======
+/obj/item/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"fz" = (
+/obj/machinery/door/window/northright,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"fA" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2526,8 +3009,23 @@
 	id = "forestarboardsolar";
 	name = "Fore-Starboard Solar Array"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
+=======
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"fB" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/glass{
+	name = "Gateway Access"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /area/solar/forestarboardsolar)
 "cbJ" = (
@@ -2782,7 +3280,25 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/disposal/wall{
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"gc" = (
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"gd" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"ge" = (
+/obj/machinery/camera/network/main_outpost{
+	c_tag = "MO - SAR Prep";
+	dir = 2
+	},
+/obj/item/radio/intercom{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 1;
 	pixel_y = -35
 	},
@@ -2794,6 +3310,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "cju" = (
@@ -2801,6 +3318,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "ckl" = (
+=======
+/obj/item/storage/pill_bottle/spaceacillin,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"gg" = (
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/structure/table/steel,
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
@@ -3149,7 +3672,25 @@
 	dir = 1;
 	pixel_y = -22
 	},
+<<<<<<< HEAD
 /obj/machinery/light/small,
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"gG" = (
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"gH" = (
+/obj/machinery/computer/crew,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"gI" = (
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/mining_main/gen_room)
+"gJ" = (
+/obj/random/obstruction,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
 "czh" = (
@@ -3241,6 +3782,7 @@
 /obj/machinery/alarm/alarms_hidden{
 	pixel_y = 19
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/white,
 /area/maintenance/thirddeck/hiddenkitchen)
 "cFp" = (
@@ -3248,6 +3790,11 @@
 	name = "AI core";
 	req_access = list(16);
 	req_one_access = list(16)
+=======
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/door/blast/regular{
 	id = "AICore";
@@ -3269,6 +3816,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
@@ -3280,6 +3828,20 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+=======
+/obj/item/gps/explorer{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/gps/explorer{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/item/gps,
+/obj/item/gps{
+	pixel_x = 3;
+	pixel_y = 3
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -3298,6 +3860,38 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/closet/secure_closet/explorer,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/obj/item/binoculars,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"he" = (
+/obj/structure/closet/secure_closet/explorer,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"hf" = (
+/obj/structure/closet/secure_closet/explorer,
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"hg" = (
+/obj/structure/closet/secure_closet/explorer,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 25
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/obj/item/pickaxe,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
@@ -3344,6 +3938,7 @@
 	pixel_y = -22
 	},
 /obj/structure/table/steel,
+<<<<<<< HEAD
 /obj/machinery/cell_charger,
 /obj/item/weapon/cell/high{
 	charge = 100;
@@ -3357,6 +3952,78 @@
 	},
 /obj/item/weapon/storage/box/lights/mixed{
 	pixel_y = 11
+=======
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/multitool,
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/first_aid)
+"hm" = (
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/first_aid)
+"hn" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/paleblue/border,
+/obj/effect/floor_decal/borderfloor/corner2,
+/obj/effect/floor_decal/corner/white/bordercorner2,
+/obj/structure/closet/secure_closet/medical_wall{
+	name = "O- Blood Locker";
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/empty,
+/obj/item/reagent_containers/blood/empty,
+/obj/machinery/iv_drip,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"ho" = (
+/obj/structure/closet/secure_closet/sar,
+/obj/machinery/light,
+/obj/item/storage/box/bodybags,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/item/roller/adv,
+/obj/item/storage/pill_bottle/spaceacillin,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"hp" = (
+/obj/structure/closet/secure_closet/sar,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/paleblue/border,
+/obj/item/roller/adv{
+	pixel_y = 5
+	},
+/obj/item/storage/pill_bottle/spaceacillin,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"hq" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/obj/machinery/status_display{
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/first_aid)
+"hr" = (
+/obj/structure/table/steel,
+/obj/item/gps/medical,
+/obj/item/gps/medical{
+	pixel_x = 3;
+	pixel_y = 3
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/dorms)
@@ -3652,8 +4319,58 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/item/device/radio/intercom{
 	dir = 8;
+<<<<<<< HEAD
 	name = "Station Intercom (General)";
 	pixel_x = -21
+=======
+	layer = 2.6
+	},
+/obj/machinery/light,
+/obj/machinery/status_display{
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/item/paicard,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/obj/item/hand_labeler,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/security)
+"hY" = (
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techmaint,
+/area/surface/outpost/main/teleporter)
+"hZ" = (
+/obj/machinery/teleport/station,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techmaint,
+/area/surface/outpost/main/teleporter)
+"ia" = (
+/obj/machinery/computer/teleporter,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techmaint,
+/area/surface/outpost/main/teleporter)
+"ib" = (
+/obj/machinery/ai_status_display,
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/main/teleporter)
+"ic" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
+"id" = (
+/obj/structure/table/steel,
+/obj/item/weldpack,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
+"ie" = (
+/obj/machinery/space_heater,
+/obj/machinery/alarm{
+	pixel_y = 23
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_7)
@@ -3662,6 +4379,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/open,
 /area/maintenance/thirddeck/forestarboard)
 "cUH" = (
@@ -3671,6 +4389,38 @@
 	id = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
+=======
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
+"ih" = (
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
+/obj/item/clothing/glasses/meson,
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/garage)
+"ii" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/garage)
+"ij" = (
+/obj/structure/table/steel,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/emergency{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/garage)
+"ik" = (
+/obj/structure/table/steel,
+/obj/random/tool,
+/obj/random/tool,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24;
+	pixel_y = 0
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -3792,10 +4542,19 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/thirddeck/forestarboard)
 "dbm" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
+=======
+/area/surface/outpost/mining_main/gen_room)
+"iw" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -3873,6 +4632,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
 "det" = (
@@ -3883,6 +4643,54 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
+=======
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main)
+"iF" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -25
+	},
+/obj/item/storage/box/lights/mixed,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
+"iG" = (
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/garage)
+"iH" = (
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/garage)
+"iI" = (
+/obj/structure/table/steel,
+/obj/item/weldingtool,
+/obj/item/floor_painter,
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/garage)
+"iJ" = (
+/obj/structure/table/steel,
+/obj/item/storage/toolbox/mechanical,
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_x = 0
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/mining_main/gen_room)
+"iK" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable/yellow{
+	d2 = 4;
+	icon_state = "0-4"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/plating,
@@ -3912,12 +4720,18 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/random/junk,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+=======
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -4007,10 +4821,22 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/landmark{
 	name = "lightsout"
+=======
+/turf/simulated/floor/tiled/techmaint,
+/area/surface/outpost/main/telecomms)
+"iX" = (
+/obj/structure/table/standard,
+/obj/item/tool/crowbar/red,
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "south bump";
+	pixel_y = -24
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload)
@@ -4028,7 +4854,20 @@
 	tag_exterior_door = "d3_port_dorms_outer";
 	tag_interior_door = "d3_port_dorms_inner"
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/industrial/warning{
+=======
+/obj/item/tool/crowbar/red,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/teleporter)
+"iY" = (
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/teleporter)
+"iZ" = (
+/obj/machinery/bluespace_beacon,
+/obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 10
 	},
 /turf/simulated/floor/plating,
@@ -4077,11 +4916,17 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
 "doL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+=======
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -4344,6 +5189,7 @@
 /obj/machinery/pointdefense_control{
 	id_tag = "PD Main"
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_server_room)
 "dAo" = (
@@ -4352,6 +5198,24 @@
 /obj/item/weapon/storage/box/lights/mixed,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
+=======
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/mining_main/gen_room)
+"jy" = (
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/sif/planetuse,
+/area/surface/outside/plains/outpost)
+"jz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outside/plains/outpost)
+"jA" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/obj/item/storage/box/lights/mixed,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "dAz" = (
@@ -5033,6 +5897,13 @@
 /obj/machinery/disposal/deliveryChute{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/table/steel,
+/obj/item/storage/toolbox/electrical,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "dUm" = (
@@ -5061,6 +5932,24 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+=======
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/garage)
+"kH" = (
+/obj/machinery/mech_recharger,
+/obj/effect/decal/mecha_wreckage/ripley,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/garage)
+"kI" = (
+/obj/item/inflatable/door/torn,
+/obj/item/tool/screwdriver,
+/turf/simulated/floor,
+/area/surface/outpost/main/garage)
+"kJ" = (
+/obj/structure/reagent_dispensers/watertank,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "dVb" = (
@@ -5369,6 +6258,7 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/thirddeck/dormsstarboard)
 "ecc" = (
 /obj/item/weapon/stool/baystool/padded,
@@ -5376,6 +6266,11 @@
 /area/maintenance/thirddeck/hiddenkitchen)
 "ecn" = (
 /obj/structure/reagent_dispensers/watertank,
+=======
+/area/surface/outpost/main/construction_area)
+"ly" = (
+/obj/item/stool,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "ecu" = (
@@ -5395,10 +6290,24 @@
 	dir = 4
 	},
 /turf/simulated/wall,
+<<<<<<< HEAD
 /area/crew_quarters/cafeteria)
 "eeA" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
+=======
+/area/surface/outpost/main/bar)
+"lD" = (
+/obj/structure/table/marble,
+/obj/machinery/alarm{
+	dir = 4;
+	icon_state = "alarm0";
+	pixel_x = -22
+	},
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/cmo/quarters)
 "eeU" = (
@@ -5408,10 +6317,17 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/crew_quarters/heads/sc/cmo/quarters)
 "efi" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
+=======
+/area/surface/outpost/main/bar)
+"lF" = (
+/obj/structure/table/marble,
+/obj/item/stool,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/hor/quarters)
 "efk" = (
@@ -5444,9 +6360,30 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/door/blast/radproof/open{
 	id = "PAShroud";
 	name = "Particle Accelerator Shroud"
+=======
+/obj/item/frame/extinguisher_cabinet,
+/obj/item/extinguisher,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/bar)
+"lJ" = (
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
+"lK" = (
+/obj/effect/overlay/snow/floor,
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main/corridor)
+"lL" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
@@ -5590,8 +6527,17 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/catwalk,
 /obj/random/trash,
+=======
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main)
+"mf" = (
+/obj/structure/closet/toolcloset,
+/obj/item/flashlight/maglight,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
 "elx" = (
@@ -5629,7 +6575,11 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/power/apc{
+=======
+/obj/item/radio/intercom{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 8;
 	name = "west bump";
 	pixel_x = -24
@@ -5663,7 +6613,15 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
+=======
+/obj/item/stool/padded,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/bar)
+"mn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering{
@@ -5680,10 +6638,25 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/cable{
 	d1 = 32;
 	d2 = 2;
 	icon_state = "32-2"
+=======
+/obj/item/stock_parts/motor,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/bar)
+"mq" = (
+/obj/structure/table,
+/obj/item/stack/material/wood,
+/obj/item/stack/material/wood,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/bar)
+"mr" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/railing,
 /obj/machinery/door/firedoor,
@@ -5752,6 +6725,7 @@
 /area/space)
 "epw" = (
 /obj/structure/table/standard,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/item/device/gps/medical/cmo,
 /turf/simulated/floor/carpet/blue,
@@ -5760,6 +6734,11 @@
 /obj/structure/table/standard,
 /obj/item/device/flashlight/lamp/green,
 /obj/item/device/radio/intercom{
+=======
+/obj/machinery/recharger,
+/obj/item/tool/wrench,
+/obj/machinery/light{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -5818,9 +6797,21 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/machinery/space_heater,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main)
+"mH" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/sleep/vistor_room_11)
@@ -5852,7 +6843,21 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden,
+=======
+/obj/effect/overlay/snow/floor,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outpost/main)
+"mK" = (
+/obj/structure/closet/crate,
+/obj/item/tool/crowbar/red,
+/obj/item/frame/light,
+/obj/item/storage/box/lights/mixed,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/construction_area)
+"mL" = (
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
 /obj/random/trash,
@@ -5879,6 +6884,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
 "euc" = (
@@ -5886,6 +6892,16 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+=======
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/bar)
+"mR" = (
+/obj/structure/table/woodentable,
+/obj/item/storage/box/donkpockets,
+/obj/machinery/camera/network/main_outpost{
+	c_tag = "MO - Bar East";
+	dir = 8
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -5930,10 +6946,28 @@
 "euY" = (
 /obj/machinery/light_construct/floortube,
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
 "evc" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
+=======
+/area/surface/outpost/main/corridor)
+"mW" = (
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gym)
+"mX" = (
+/obj/structure/fitness/weightlifter,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gym)
+"mY" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/regular,
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 22
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/cable/green{
 	d1 = 2;
@@ -5969,8 +7003,14 @@
 	name = "Powernet Sensor - Command Subgrid";
 	name_tag = "Command Subgrid"
 	},
+<<<<<<< HEAD
 /obj/machinery/light/small{
 	dir = 8
+=======
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -6179,6 +7219,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+<<<<<<< HEAD
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
@@ -6187,6 +7228,29 @@
 /obj/machinery/light_switch{
 	pixel_x = -36;
 	pixel_y = -6
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gym)
+"nA" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/cups,
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/obj/item/book/codex/lore/vir,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gym)
+"nB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/button/windowtint{
 	id = "cmoquarters";
@@ -6247,10 +7311,23 @@
 	pixel_x = -3;
 	pixel_y = 7
 	},
+<<<<<<< HEAD
 /obj/item/weapon/folder/white_rd,
 /obj/item/weapon/pen/multi,
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
+=======
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/restroom)
+"nH" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/construction_area)
+"nI" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hor/quarters)
@@ -6267,7 +7344,84 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/cable/green{
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/construction_area)
+"nK" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/construction_area)
+"nL" = (
+/turf/simulated/wall,
+/area/surface/outpost/main/construction_area)
+"nM" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/dorms)
+"nN" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/dorms)
+"nO" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/bar)
+"nP" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/bar)
+"nQ" = (
+/obj/machinery/door/airlock/mining{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "main4_airlock_interior";
+	locked = 1;
+	name = "Main Outpost Interior"
+	},
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "main4_airlock_control";
+	name = "Main Access Button";
+	pixel_x = 32;
+	pixel_y = 6;
+	req_access = null
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/corridor)
+"nR" = (
+/obj/structure/closet/athletic_mixed,
+/obj/machinery/newscaster{
+	layer = 3.3;
+	pixel_x = 0;
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gym)
+"nS" = (
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gym)
+"nT" = (
+/obj/structure/cable/blue{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
@@ -6281,7 +7435,15 @@
 	name = "east bump";
 	pixel_x = 24
 	},
+<<<<<<< HEAD
 /obj/structure/cable/green{
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/gym)
+"nV" = (
+/obj/item/stool/padded,
+/obj/structure/cable/blue{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	d2 = 8;
 	icon_state = "0-8"
 	},
@@ -6338,10 +7500,29 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/thirddeck/foreport)
 "eIM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+=======
+/area/surface/outpost/main/construction_area)
+"og" = (
+/obj/structure/table/standard,
+/obj/item/paicard,
+/obj/item/book/codex/lore/vir,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/dorms)
+"oh" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 28;
+	pixel_y = 0
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/alarm{
 	dir = 4;
@@ -6367,7 +7548,20 @@
 /obj/item/weapon/bedsheet/hop,
 /obj/machinery/firealarm{
 	dir = 4;
+<<<<<<< HEAD
 	pixel_x = 24
+=======
+	icon_state = "alarm0";
+	pixel_x = -22
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/button/remote/airlock{
 	id = "hopquarters";
@@ -25974,12 +27168,22 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
 "ukQ" = (
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
+=======
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel,
+/area/surface/outpost/main/dorms)
+"pZ" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/freezer,
@@ -25996,8 +27200,24 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/structure/closet/crate,
+/obj/item/bedsheet,
+/obj/item/bedsheet/blue,
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/green,
+/obj/item/bedsheet/orange,
+/obj/item/bedsheet/purple,
+/obj/item/bedsheet/red,
+/obj/item/bedsheet/yellow,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 9
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_2)
@@ -26252,6 +27472,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	d1 = 1;
@@ -26264,6 +27485,13 @@
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
+=======
+/obj/item/gps/internal/base,
+/turf/simulated/floor/tiled/techfloor,
+/area/surface/outpost/main/corridor)
+"qv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -26403,6 +27631,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/item/roller,
@@ -26413,6 +27642,14 @@
 /area/medical/first_aid_station/thirddeck)
 "uEW" = (
 /obj/item/device/radio/intercom{
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main)
+"qG" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/radio/intercom{
+	dir = 4;
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -26490,8 +27727,14 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/freezer,
+<<<<<<< HEAD
 /area/crew_quarters/toilet)
 "uIt" = (
+=======
+/area/surface/outpost/main/restroom)
+"qN" = (
+/obj/item/bikehorn/rubberducky,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -26627,11 +27870,47 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
 "uQd" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
+=======
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main)
+"qY" = (
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main)
+"qZ" = (
+/obj/item/tool/crowbar,
+/obj/item/tool/wrench,
+/obj/item/storage/toolbox/mechanical,
+/obj/structure/table/steel,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main)
+"ra" = (
+/obj/machinery/mech_recharger,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main)
+"rb" = (
+/turf/simulated/wall,
+/area/surface/outpost/main)
+"rc" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/item/device/radio/intercom{
 	dir = 8;
@@ -26665,8 +27944,37 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+=======
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/restroom)
+"ri" = (
+/obj/structure/table/standard,
+/obj/item/towel,
+/obj/item/towel,
+/obj/item/towel,
+/obj/item/towel,
+/obj/item/towel,
+/obj/item/towel,
+/obj/random/soap,
+/obj/random/soap,
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = -24
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
@@ -26692,6 +28000,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -26699,6 +28008,20 @@
 "uRe" = (
 /obj/structure/salvageable/personal{
 	pixel_y = 15
+=======
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/restroom)
+"rk" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/purpledouble,
+/turf/simulated/floor/carpet/purcarpet,
+/area/surface/outpost/main/dorms)
+"rl" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = 0;
+	pixel_y = 32
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -26781,9 +28104,20 @@
 	dir = 8;
 	health = 1e+006
 	},
+<<<<<<< HEAD
 /obj/structure/window/reinforced,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
+=======
+/turf/simulated/floor/carpet/bcarpet,
+/area/surface/outpost/main/dorms)
+"rs" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/green,
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -26792,8 +28126,19 @@
 /obj/machinery/photocopier/faxmachine{
 	department = "Dorms"
 	},
+<<<<<<< HEAD
 /obj/machinery/atm{
 	pixel_x = 30
+=======
+/turf/simulated/floor/carpet/bcarpet,
+/area/surface/outpost/main/dorms)
+"rt" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/yellow,
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -26890,8 +28235,22 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
+=======
+/turf/simulated/floor/carpet/blucarpet,
+/area/surface/outpost/main/dorms)
+"rz" = (
+/obj/item/bedsheet/bluedouble,
+/obj/structure/bed/double/padded,
+/turf/simulated/floor/carpet/blucarpet,
+/area/surface/outpost/main/dorms)
+"rA" = (
+/obj/structure/cable/blue{
+	d2 = 4;
+	icon_state = "0-4"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -26970,6 +28329,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsport{
 	name = "Third Deck Aft Port Maintenance"
@@ -26986,6 +28346,22 @@
 "uZX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+=======
+/turf/simulated/floor/carpet/purcarpet,
+/area/surface/outpost/main/dorms)
+"rK" = (
+/obj/item/stool,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/carpet/purcarpet,
+/area/surface/outpost/main/dorms)
+"rL" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -27041,8 +28417,15 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
+=======
+/obj/item/stool/padded,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
@@ -27073,12 +28456,32 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "vdi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+=======
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/corridor)
+"rQ" = (
+/obj/item/stool/padded,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/machinery/button/remote/airlock{
+	id = "modorm5";
+	name = "Door Bolt Control";
+	pixel_x = 25;
+	pixel_y = 0;
+	specialfunctions = 4
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
@@ -27087,6 +28490,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/hallway/primary/thirddeck/aftdoorm)
 "vdm" = (
 /obj/effect/floor_decal/corner_steel_grid{
@@ -27098,6 +28502,11 @@
 "veo" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
+=======
+/area/surface/outpost/main/dorms)
+"rS" = (
+/obj/item/radio/intercom{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
@@ -27115,10 +28524,19 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+=======
+/turf/simulated/floor/carpet/blucarpet,
+/area/surface/outpost/main/dorms)
+"rT" = (
+/obj/item/stool/padded,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/airless,
@@ -27127,8 +28545,14 @@
 /obj/machinery/camera/network/third_deck{
 	c_tag = "Third Deck - Aft Civ Dorms 6"
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
+=======
+/obj/item/gps{
+	pixel_x = 3;
+	pixel_y = 3
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/table/rack/shelf/steel,
 /obj/random/thermalponcho,
@@ -27230,9 +28654,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/station_map{
 	dir = 1;
 	pixel_y = -32
+=======
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sa" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -27469,6 +28903,7 @@
 /obj/effect/floor_decal/corner/brown/border,
 /obj/item/device/starcaster_news,
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/hallway/primary/thirddeck/aftdoorm)
 "vqf" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -27476,6 +28911,25 @@
 /area/crew_quarters/sleep/vistor_room_11)
 "vqW" = (
 /obj/structure/table/standard,
+=======
+/area/surface/outpost/main/corridor)
+"ss" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/pool)
+"st" = (
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"su" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sv" = (
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -27515,7 +28969,26 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+<<<<<<< HEAD
 	dir = 4
+=======
+	dir = 10
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sz" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sA" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/purple,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
@@ -27599,18 +29072,42 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+<<<<<<< HEAD
 	dir = 4
+=======
+	dir = 10
+	},
+/turf/simulated/floor/carpet,
+/area/surface/outpost/main/dorms)
+"sG" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/red,
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /obj/effect/floor_decal/corner/beige/border,
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
+=======
+/turf/simulated/floor/carpet,
+/area/surface/outpost/main/dorms)
+"sH" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/red,
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -27698,8 +29195,30 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/main/dorms)
+"sM" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/blue,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/surface/outpost/main/dorms)
+"sN" = (
+/obj/machinery/door/airlock/mining{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "main3_airlock_exterior";
+	locked = 1;
+	name = "Main Outpost Exterior"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -27707,8 +29226,33 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main/corridor)
+"sO" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/pool)
+"sP" = (
+/obj/structure/table/glass,
+/obj/item/paicard,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sR" = (
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sS" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_5)
@@ -27722,10 +29266,25 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "vwM" = (
 /obj/item/capture_crystal,
+=======
+/turf/simulated/floor/water/deep/pool,
+/area/surface/outpost/main/pool)
+"sW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sX" = (
+/obj/structure/table/glass,
+/obj/item/inflatable_duck,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"sY" = (
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/thirddeck/aftport)
@@ -27733,13 +29292,42 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/light,
+/turf/simulated/floor/carpet/purcarpet,
+/area/surface/outpost/main/dorms)
+"sZ" = (
+/obj/item/stool/padded,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/machinery/button/remote/airlock{
+	id = "modorm3";
+	name = "Door Bolt Control";
+	pixel_x = 25;
+	pixel_y = 0;
+	specialfunctions = 4
+	},
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+=======
+/turf/simulated/floor/carpet/purcarpet,
+/area/surface/outpost/main/dorms)
+"ta" = (
+/obj/item/stool/padded,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
@@ -27759,8 +29347,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/machinery/light,
+/turf/simulated/floor/carpet,
+/area/surface/outpost/main/dorms)
+"td" = (
+/obj/item/stool,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -27771,8 +29370,18 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/turf/simulated/floor/carpet,
+/area/surface/outpost/main/dorms)
+"te" = (
+/obj/item/stool/padded,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -27811,6 +29420,7 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 4
 	},
@@ -27829,6 +29439,108 @@
 "vAp" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+=======
+/obj/item/stool/padded,
+/obj/machinery/camera/network/main_outpost{
+	c_tag = "MO - Pool West";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/hologram/holopad,
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"to" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/obj/item/beach_ball,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tp" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tq" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad,
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"ts" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/obj/item/stool/padded,
+/obj/machinery/camera/network/main_outpost{
+	c_tag = "MO - Pool East";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tt" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/path/plains)
+"tu" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/overlay/snow/floor,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outside/plains/outpost)
+"tv" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/effect/zone_divider,
+/turf/simulated/floor/plating,
+/area/surface/outpost/main/pool)
+"tw" = (
+/obj/structure/table/glass,
+/obj/item/book/codex/lore/vir,
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/table/glass,
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"ty" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tz" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/pool,
+/area/surface/outpost/main/pool)
+"tA" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/pool,
+/area/surface/outpost/main/pool)
+"tB" = (
+/obj/effect/floor_decal/spline/plain{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment{
@@ -27864,6 +29576,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
@@ -27877,6 +29590,21 @@
 /obj/structure/bedsheetbin,
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
+=======
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tP" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tQ" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -27886,11 +29614,48 @@
 	dir = 1;
 	pixel_y = -22
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "vDk" = (
 /obj/structure/table/glass,
 /obj/item/device/radio/intercom{
+=======
+/turf/simulated/floor/water/deep/pool,
+/area/surface/outpost/main/pool)
+"tU" = (
+/obj/machinery/ai_status_display,
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/main/pool)
+"tV" = (
+/obj/structure/closet/emcloset,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tW" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/main/pool)
+"tX" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tY" = (
+/obj/machinery/light/spot,
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"tZ" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/surface/outpost/main/pool)
+"ua" = (
+/obj/item/radio/intercom{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -28143,11 +29908,27 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/hallway/primary/thirddeck/aftdoorm)
 "vJX" = (
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+=======
+/area/surface/outpost/research/xenoresearch)
+"uN" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoresearch)
+"uO" = (
+/turf/simulated/wall,
+/area/surface/outpost/research/xenoresearch)
+"uP" = (
+/obj/item/storage/toolbox/emergency,
+/obj/machinery/light/small{
+	dir = 1
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -28170,6 +29951,10 @@
 	frequency = 1379;
 	id_tag = "d3_starboard_pump"
 	},
+<<<<<<< HEAD
+=======
+/obj/item/storage/toolbox/mechanical,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "vKr" = (
@@ -28201,10 +29986,24 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/freezer,
+<<<<<<< HEAD
 /area/crew_quarters/sleep/vistor_room_1)
 "vMd" = (
 /obj/machinery/vending/nifsoft_shop{
 	dir = 1
+=======
+/area/surface/outpost/research/xenoresearch/restroom)
+"va" = (
+/obj/structure/table/standard,
+/obj/item/towel,
+/obj/item/towel,
+/obj/item/towel,
+/obj/random/soap,
+/obj/random/soap,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -28212,9 +30011,16 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/beige/diagonal,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -28233,6 +30039,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/hallway/primary/thirddeck/aftdoorm)
 "vMB" = (
 /obj/machinery/lapvend{
@@ -28244,13 +30051,55 @@
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
+=======
+/area/surface/outpost/research/xenoresearch)
+"vg" = (
+/obj/structure/closet/wardrobe/mixed,
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/machinery/light,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/tiled/steel_grid,
+/area/surface/outpost/main)
+"vh" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/paper_bin{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/pen,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/research/xenoresearch)
+"vi" = (
+/obj/structure/table/standard,
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "frame";
+	pixel_x = -32;
+	pixel_y = 0
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/beige/diagonal,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/machinery/light,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/carpet/bcarpet,
+/area/surface/outpost/main/dorms)
+"vj" = (
+/obj/machinery/microwave,
+/obj/structure/table/reinforced,
+/obj/machinery/status_display{
+	pixel_y = 32
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -28286,8 +30135,16 @@
 	req_access = null;
 	req_one_access = null
 	},
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
+=======
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/item/weldpack,
+/obj/structure/cable/green{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
@@ -28311,6 +30168,7 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/aftdoorm)
 "vRg" = (
@@ -28325,6 +30183,11 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
+=======
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/random/plushie,
 /turf/simulated/floor/wood,
@@ -28559,11 +30422,22 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 4
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 1
+=======
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/research/xenoresearch)
+"vZ" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -28898,6 +30772,7 @@
 /obj/structure/windoor_assembly{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft{
 	name = "Third Deck Aft Maintenance"
@@ -28909,6 +30784,9 @@
 "wiE" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
+=======
+/obj/item/radio/intercom{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
@@ -29077,9 +30955,15 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/firealarm{
 	layer = 3.3;
 	pixel_y = 26
+=======
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/random/maintenance/medical,
 /obj/structure/disposalpipe/segment{
@@ -29770,11 +31654,18 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/carpet/blucarpet,
 /area/crew_quarters/sleep/vistor_room_10)
 "wOi" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+=======
+/obj/item/radio{
+	frequency = 1487;
+	icon_state = "med_walkietalkie";
+	name = "Medbay Emergency Radio Link"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -29824,11 +31715,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "wPJ" = (
 /obj/structure/table/marble,
 /obj/machinery/alarm{
+=======
+/obj/item/radio/intercom{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 8;
 	pixel_x = 24
 	},
@@ -29868,6 +31763,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/steeldecal/steel_decals7,
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 4
@@ -29897,6 +31793,45 @@
 /obj/item/clamp,
 /obj/item/weapon/storage/briefcase/inflatable{
 	pixel_y = 3
+=======
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"xY" = (
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"xZ" = (
+/obj/structure/table/standard,
+/obj/item/folder/red{
+	pixel_y = 3
+	},
+/obj/item/folder/blue{
+	pixel_x = 5
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"ya" = (
+/obj/structure/table/standard,
+/obj/item/paper_bin{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/pen/blue{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/pen/red{
+	pixel_x = -1;
+	pixel_y = 3
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/item/clamp,
 /turf/simulated/floor/plating,
@@ -29907,12 +31842,24 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/thirddeck/dormsport{
 	name = "Third Deck Aft Port Maintenance"
 	})
 "wRm" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
+=======
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"yc" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/disposal/wall{
 	dir = 1;
@@ -29973,6 +31920,7 @@
 /area/crew_quarters/sleep/vistor_room_1)
 "wSI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_1)
@@ -29983,6 +31931,16 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+=======
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"yl" = (
+/obj/structure/table/glass,
+/obj/item/tape_roll,
+/obj/machinery/firealarm{
+	dir = 2;
+	pixel_y = 24
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -30011,11 +31969,26 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"yo" = (
+/obj/structure/table/glass,
+/obj/item/paper_bin{
+	pixel_x = 1;
+	pixel_y = 9
+	},
+/obj/item/pen,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 9;
+	icon_state = "intact"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -30032,6 +32005,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
@@ -30049,6 +32023,24 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+=======
+/obj/item/clipboard,
+/obj/item/folder/white,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"yq" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/extinguisher,
+/obj/item/extinguisher,
+/turf/simulated/floor/tiled/dark,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"yr" = (
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "wVH" = (
@@ -30062,11 +32054,31 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "wVM" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
+=======
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"yu" = (
+/obj/structure/table/standard,
+/obj/item/clipboard,
+/obj/item/folder,
+/obj/item/pen,
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"yv" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"yw" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/vending/wallmed1{
 	dir = 4;
@@ -30325,8 +32337,18 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/thirddeck/foreport)
 "xht" = (
+=======
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"yT" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/obj/item/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/hydro,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"yU" = (
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -30537,6 +32559,7 @@
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
@@ -30553,6 +32576,30 @@
 "xpO" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
+=======
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"zt" = (
+/obj/structure/table/glass,
+/obj/item/material/minihoe,
+/obj/item/material/knife/machete/hatchet,
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"zu" = (
+/obj/structure/table/glass,
+/obj/item/folder/white,
+/obj/item/pen,
+/obj/effect/floor_decal/corner/green/full,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"zv" = (
+/obj/structure/table/glass,
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -30714,8 +32761,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
+=======
+/obj/machinery/meter,
+/obj/item/tool/wrench,
+/turf/simulated/floor/tiled/hydro,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"zO" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible,
+/turf/simulated/floor/tiled/hydro,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"zP" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4;
+	name = "Isolation to Waste"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
@@ -30859,6 +32921,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/table/rack/shelf,
 /obj/random/soap,
 /obj/item/weapon/towel/random,
@@ -30869,6 +32932,25 @@
 "xAo" = (
 /obj/structure/toilet{
 	dir = 4
+=======
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/hydro,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"Ag" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/simulated/floor/tiled/hydro,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"Ah" = (
+/obj/structure/table/glass,
+/obj/item/storage/box/beakers{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_10)
@@ -30916,8 +32998,18 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
+<<<<<<< HEAD
 /area/hallway/primary/thirddeck/aftportcentral)
 "xDf" = (
+=======
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"Ap" = (
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"Aq" = (
+/obj/structure/table/standard,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -30928,8 +33020,18 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/trunk{
 	dir = 1
+=======
+/turf/simulated/floor/tiled,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"At" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/extinguisher,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/disposal/wall/cleaner{
 	dir = 8;
@@ -30958,6 +33060,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/table/rack/shelf,
 /obj/random/soap,
 /obj/item/weapon/towel/random,
@@ -30967,6 +33070,20 @@
 "xDN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
+=======
+/obj/item/extinguisher,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"Au" = (
+/obj/machinery/ai_status_display,
+/turf/simulated/wall,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"Av" = (
+/obj/machinery/door/blast/regular{
+	desc = "Blastdoor divider";
+	id = "xenobioout7";
+	name = "Containment Divider"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 4
@@ -30991,6 +33108,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -31015,6 +33133,14 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+=======
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"AB" = (
+/obj/item/stool/padded,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
@@ -31502,8 +33628,17 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
+=======
+/obj/item/tool/wrench,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"BD" = (
+/obj/effect/floor_decal/corner/green{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -31512,8 +33647,19 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 4
+=======
+/obj/structure/reagent_dispensers/watertank/high,
+/obj/item/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"BH" = (
+/obj/machinery/smartfridge/drying_rack,
+/obj/effect/floor_decal/corner/green{
+	dir = 5
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -31525,8 +33671,21 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
+=======
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"BJ" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/hydro,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"BK" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -31622,10 +33781,30 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
+<<<<<<< HEAD
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+=======
+/turf/simulated/floor/tiled/hydro,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"BX" = (
+/obj/structure/closet,
+/obj/item/toy/figure/scientist,
+/obj/item/clothing/accessory/armband/science,
+/obj/item/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/dark,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"BY" = (
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for a door to space.";
+	id = "xenobioout6";
+	name = "Containment Release Switch";
+	pixel_x = 0;
+	pixel_y = -28;
+	req_access = list(55)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -31754,11 +33933,42 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "ybj" = (
 /turf/simulated/wall,
+<<<<<<< HEAD
 /area/crew_quarters/sleep/vistor_room_11)
 "ybA" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/machinery/light/small{
 	dir = 1
+=======
+/area/surface/outside/path/plains)
+"Cw" = (
+/turf/simulated/floor/wood{
+	outdoors = 1
+	},
+/area/surface/outside/path/plains)
+"Cx" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/extinguisher,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/research/xenoresearch/xenobiology)
+"Cy" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "xenobio1";
+	name = "Containment Blast Doors";
+	opacity = 0
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/dorms)
@@ -31813,8 +34023,18 @@
 /area/hallway/primary/thirddeck/aftportcentral)
 "ydW" = (
 /obj/structure/table/standard,
+<<<<<<< HEAD
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
+=======
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"CG" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4;
+	icon_state = "warningcorner"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/item/pizzavoucher,
 /turf/simulated/floor/wood,
@@ -31964,6 +34184,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
+<<<<<<< HEAD
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
@@ -31973,6 +34194,15 @@
 	name = "Bolt Control";
 	pixel_y = 29;
 	specialfunctions = 4
+=======
+/turf/simulated/floor/tiled/hydro,
+/area/surface/outpost/research/xenoresearch/xenoflora)
+"Di" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -32043,6 +34273,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsport{
 	name = "Third Deck Aft Port Maintenance"
@@ -32059,6 +34290,87 @@
 "ykL" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
+=======
+/turf/simulated/floor/water,
+/area/surface/outside/river/faxalven)
+"DE" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outside/plains/normal)
+"DF" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water,
+/area/surface/outside/river/faxalven)
+"DG" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/plains/normal)
+"DH" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/area/surface/outside/plains/normal)
+"DI" = (
+/turf/simulated/floor/water/shoreline{
+	dir = 9;
+	icon_state = "shoreline"
+	},
+/area/surface/outside/ocean)
+"DJ" = (
+/turf/simulated/floor/water,
+/area/surface/outside/lake/romsele)
+"DK" = (
+/turf/simulated/floor/water/deep,
+/area/surface/outside/lake/romsele)
+"DL" = (
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/skipjack_station/planet)
+"DM" = (
+/turf/simulated/shuttle/floor/voidcraft/external,
+/area/surface/outpost/wall)
+"DN" = (
+/obj/item/banner/virgov,
+/turf/simulated/shuttle/floor/voidcraft/external,
+/area/surface/outpost/wall)
+"DO" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/voidcraft/external,
+/area/surface/outpost/wall)
+"DP" = (
+/obj/item/banner/nt,
+/turf/simulated/shuttle/floor/voidcraft/external,
+/area/surface/outpost/wall)
+"DQ" = (
+/turf/simulated/shuttle/wall/voidcraft,
+/area/surface/outpost/wall)
+"DR" = (
+/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/area/surface/outpost/wall)
+"DS" = (
+/turf/simulated/wall/dungeon{
+	icon = 'icons/obj/doors/shuttledoors.dmi';
+	icon_state = "door_locked";
+	name = "Wall Gate"
+	},
+/area/surface/outpost/wall)
+"DT" = (
+/obj/structure/sign/warning/caution{
+	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point.";
+	name = "\improper WARNING: NO ACCESS"
+	},
+/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/area/surface/outpost/wall)
+"DU" = (
+/obj/structure/sign/warning/caution{
+	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point.";
+	name = "\improper WARNING: NO ACCESS"
+	},
+/turf/simulated/shuttle/wall/voidcraft,
+/area/surface/outpost/wall)
+"DV" = (
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1"
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4

@@ -92,7 +92,7 @@
 /obj/structure/grille/attackby(obj/item/W as obj, mob/user as mob)
 	if(!istype(W))
 		return
-	if(istype(W, /obj/item/weapon/rcd)) // To stop us from hitting the grille when building windows, because grilles don't let parent handle it properly.
+	if(istype(W, /obj/item/rcd)) // To stop us from hitting the grille when building windows, because grilles don't let parent handle it properly.
 		return FALSE
 	else if(W.has_tool_quality(TOOL_WIRECUTTER))
 		if(!shock(user, 100))
@@ -248,8 +248,13 @@
 /obj/structure/grille/broken/rustic
 	icon_state = "grillerustic-b"
 
+<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /obj/structure/grille/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+=======
+
+/obj/structure/grille/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	switch(passed_mode)
 		if(RCD_WINDOWGRILLE)
 			// A full tile window costs 4 glass sheets.
@@ -267,7 +272,7 @@
 			)
 	return FALSE
 
-/obj/structure/grille/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/obj/structure/grille/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
 			to_chat(user, span("notice", "You deconstruct \the [src]."))

@@ -80,12 +80,12 @@
 		to_chat(user, "<span class='notice'>You shake [M] out of \the [src]!</span>")
 //CHOMPADD END
 /obj/item/glass_jar/attackby(var/obj/item/W, var/mob/user)
-	if(istype(W, /obj/item/weapon/spacecash))
+	if(istype(W, /obj/item/spacecash))
 		if(contains == JAR_NOTHING)
 			contains = JAR_MONEY
 		if(contains != JAR_MONEY)
 			return
-		var/obj/item/weapon/spacecash/S = W
+		var/obj/item/spacecash/S = W
 		user.visible_message("<span class='notice'>[user] puts [S.worth] [S.worth > 1 ? "thalers" : "thaler"] into \the [src].</span>")
 		user.drop_from_inventory(S)
 		S.loc = src
@@ -118,7 +118,7 @@
 		if(JAR_MONEY)
 			name = "tip jar"
 			desc = "A small jar with money inside."
-			for(var/obj/item/weapon/spacecash/S in src)
+			for(var/obj/item/spacecash/S in src)
 				var/image/money = image(S.icon, S.icon_state)
 				money.pixel_x = rand(-2, 3)
 				money.pixel_y = rand(-6, 6)
@@ -174,7 +174,7 @@
 		if(JAR_MONEY)
 			name = "tip tank"
 			desc = "A large [name] with money inside."
-			for(var/obj/item/weapon/spacecash/S in src)
+			for(var/obj/item/spacecash/S in src)
 				var/image/money = image(S.icon, S.icon_state)
 				money.pixel_x = rand(-2, 3)
 				money.pixel_y = rand(-6, 6)

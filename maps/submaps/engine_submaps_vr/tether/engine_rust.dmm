@@ -6,7 +6,7 @@
 /turf/space,
 /area/space)
 "ac" = (
-/obj/item/weapon/book/manual/rust_engine,
+/obj/item/book/manual/rust_engine,
 /turf/template_noop,
 /area/template_noop)
 "ad" = (
@@ -304,7 +304,7 @@
 /area/engineering/engine_room)
 "aV" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/book/manual/rust_engine,
+/obj/item/book/manual/rust_engine,
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "aW" = (
@@ -1195,8 +1195,12 @@
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "de" = (
+<<<<<<< HEAD
 /obj/item/device/radio/intercom{
 	dir = 2;
+=======
+/obj/item/radio/intercom{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	pixel_y = -24
 	},
 /turf/simulated/floor,

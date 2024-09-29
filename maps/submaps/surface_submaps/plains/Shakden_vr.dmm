@@ -20,20 +20,36 @@
 	},
 /area/submap/Shakden)
 "f" = (
+<<<<<<< HEAD
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/dirt{
+=======
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/outdoors/dirt/virgo3b{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	outdoors = 0
 	},
 /area/submap/Shakden)
 "g" = (
+<<<<<<< HEAD
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/dirt{
+=======
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/outdoors/dirt/virgo3b{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	outdoors = 0
 	},
 /area/submap/Shakden)
@@ -47,18 +63,32 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/Shakden)
 "j" = (
+<<<<<<< HEAD
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/outdoors/dirt{
+=======
+/obj/item/reagent_containers/food/snacks/meat,
+/turf/simulated/floor/outdoors/dirt/virgo3b{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	outdoors = 0
 	},
 /area/submap/Shakden)
 "k" = (
+<<<<<<< HEAD
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/reagent_containers/food/snacks/meat,
 /obj/item/weapon/material/knife/hook,
 /turf/simulated/floor/outdoors/dirt{
+=======
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/material/knife/hook,
+/turf/simulated/floor/outdoors/dirt/virgo3b{
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	outdoors = 0
 	},
 /area/submap/Shakden)

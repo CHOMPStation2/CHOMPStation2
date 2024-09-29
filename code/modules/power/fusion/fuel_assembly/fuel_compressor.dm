@@ -7,7 +7,7 @@
 	density = TRUE
 	anchored = TRUE
 
-	circuit = /obj/item/weapon/circuitboard/fusion_fuel_compressor
+	circuit = /obj/item/circuitboard/fusion_fuel_compressor
 
 /obj/machinery/fusion_fuel_compressor/Initialize()
 	. = ..()
@@ -29,12 +29,12 @@
 			return 1
 		var/datum/reagent/R = thing.reagents.reagent_list[1]
 		visible_message("<b>\The [src]</b> compresses the contents of \the [thing] into a new fuel assembly.")
-		var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), R.id, R.color)
+		var/obj/item/fuel_assembly/F = new(get_turf(src), R.id, R.color)
 		thing.reagents.remove_reagent(R.id, R.volume)
 		user.put_in_hands(F)
 
 	else if(istype(thing, /obj/machinery/power/supermatter))
-		var/obj/item/weapon/fuel_assembly/F = new(get_turf(src), "supermatter")
+		var/obj/item/fuel_assembly/F = new(get_turf(src), "supermatter")
 		visible_message("<b>\The [src]</b> compresses \the [thing] into a new fuel assembly.")
 		qdel(thing)
 		user.put_in_hands(F)
@@ -53,6 +53,7 @@
 	if(istype(thing, /obj/item/stack/material))
 		var/obj/item/stack/material/M = thing
 		var/datum/material/mat = M.get_material()
+<<<<<<< HEAD
 		if(!blitzprogress)
 			if(!mat.is_fusion_fuel)
 				to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
@@ -84,6 +85,18 @@
 			else
 				to_chat(user, "<span class='warning'>A blitz rod is currently in progress! Either add 25 phoron sheets to complete it, or eject the supermatter sheet!</span>")
 				return
+=======
+		if(!mat.is_fusion_fuel)
+			to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
+			return
+		if(M.get_amount() < FUSION_ROD_SHEET_AMT)
+			to_chat(user, "<span class='warning'>You need at least 25 [mat.sheet_plural_name] to make a fuel rod.</span>")
+			return
+		var/obj/item/fuel_assembly/F = new(get_turf(src), mat.name)
+		visible_message("<b>\The [src]</b> compresses the [mat.use_name] into a new fuel assembly.")
+		M.use(FUSION_ROD_SHEET_AMT)
+		user.put_in_hands(F)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	else if(do_special_fuel_compression(thing, user))
 		return

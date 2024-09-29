@@ -23,6 +23,7 @@
 /turf/simulated/floor/reinforced,
 /area/submap/SupplyDrop2)
 "h" = (
+<<<<<<< HEAD
 /obj/item/device/flashlight,
 /turf/simulated/floor/reinforced,
 /area/submap/SupplyDrop2)
@@ -32,6 +33,17 @@
 /obj/item/weapon/cell/device/weapon/empty,
 /obj/item/weapon/cell/device/weapon/empty,
 /turf/simulated/floor/plating,
+=======
+/obj/item/flashlight,
+/turf/simulated/floor/reinforced/virgo3b,
+/area/submap/SupplyDrop2)
+"i" = (
+/obj/structure/loot_pile/maint/technical,
+/obj/item/gps/internal/poi,
+/obj/item/cell/device/weapon/empty,
+/obj/item/cell/device/weapon/empty,
+/turf/simulated/floor/reinforced/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/SupplyDrop2)
 "j" = (
 /obj/structure/loot_pile/maint/technical,

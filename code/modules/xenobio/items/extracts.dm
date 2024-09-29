@@ -91,8 +91,13 @@
 	required = /obj/item/slime_extract/grey
 
 /decl/chemical_reaction/instant/slime/grey_monkey/on_reaction(var/datum/reagents/holder)
+<<<<<<< HEAD
 	for(var/i = 1 to 5) //CHOMPedit  Increased number of monkey cubes from 4 to 5
 		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
+=======
+	for(var/i = 1 to 4)
+		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(holder.my_atom))
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	..()
 
 /decl/chemical_reaction/instant/slime/grey_slimejelly
@@ -138,7 +143,7 @@
 	result_amount = REAGENTS_PER_SHEET * 2
 
 
-/obj/item/weapon/reagent_containers/glass/bottle/metamorphic
+/obj/item/reagent_containers/glass/bottle/metamorphic
 	name = "Metamorphic Metal Bottle"
 	desc = "A small bottle. Contains some really weird liquid metal."
 	icon = 'icons/obj/chemical.dmi'
@@ -209,7 +214,7 @@
 	color = "#666666"
 	strength = 20
 
-/obj/item/weapon/reagent_containers/glass/bottle/binding
+/obj/item/reagent_containers/glass/bottle/binding
 	name = "Binding Metal Bottle"
 	desc = "A small bottle. Contains some really weird liquid metal."
 	icon = 'icons/obj/chemical.dmi'
@@ -378,7 +383,7 @@
 	required = /obj/item/slime_extract/yellow
 
 /decl/chemical_reaction/instant/slime/yellow_battery/on_reaction(var/datum/reagents/holder)
-	new /obj/item/weapon/cell/slime(get_turf(holder.my_atom))
+	new /obj/item/cell/slime(get_turf(holder.my_atom))
 	..()
 
 
@@ -390,7 +395,7 @@
 	required = /obj/item/slime_extract/yellow
 
 /decl/chemical_reaction/instant/slime/yellow_flashlight/on_reaction(var/datum/reagents/holder)
-	new /obj/item/device/flashlight/slime(get_turf(holder.my_atom))
+	new /obj/item/flashlight/slime(get_turf(holder.my_atom))
 	..()
 
 // ***************
@@ -740,7 +745,7 @@
 	required = /obj/item/slime_extract/bluespace
 
 /decl/chemical_reaction/instant/slime/bluespace_greater/on_reaction(var/datum/reagents/holder)
-	new /obj/item/weapon/disposable_teleporter/slime(get_turf(holder.my_atom))
+	new /obj/item/disposable_teleporter/slime(get_turf(holder.my_atom))
 	..()
 
 // *******************
@@ -796,7 +801,7 @@
 	required = /obj/item/slime_extract/amber
 
 /decl/chemical_reaction/instant/slime/amber_peoplefood/on_reaction(var/datum/reagents/holder)
-	new /obj/item/weapon/reagent_containers/food/snacks/slime(get_turf(holder.my_atom))
+	new /obj/item/reagent_containers/food/snacks/slime(get_turf(holder.my_atom))
 	..()
 
 

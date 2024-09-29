@@ -37,8 +37,13 @@
 /turf/simulated/floor/tiled/external,
 /area/submap/construction1)
 "k" = (
+<<<<<<< HEAD
 /obj/item/weapon/tool/wrench,
 /turf/simulated/floor/plating/external,
+=======
+/obj/item/tool/wrench,
+/turf/simulated/floor/plating/external/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/construction1)
 "l" = (
 /turf/simulated/wall,
@@ -48,8 +53,13 @@
 /turf/simulated/floor/plating/external,
 /area/submap/construction1)
 "n" = (
+<<<<<<< HEAD
 /obj/item/weapon/pickaxe/drill,
 /turf/simulated/floor/outdoors/rocks,
+=======
+/obj/item/pickaxe/drill,
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/template_noop)
 "o" = (
 /obj/structure/girder,
@@ -76,12 +86,21 @@
 /turf/simulated/floor/plating/external,
 /area/submap/construction1)
 "u" = (
+<<<<<<< HEAD
 /obj/item/weapon/storage/toolbox/electrical,
 /turf/simulated/floor/plating/external,
 /area/submap/construction1)
 "v" = (
 /obj/item/weapon/airlock_electronics,
 /turf/simulated/floor/tiled/external,
+=======
+/obj/item/storage/toolbox/electrical,
+/turf/simulated/floor/plating/external/virgo3b,
+/area/submap/construction1)
+"v" = (
+/obj/item/airlock_electronics,
+/turf/simulated/floor/tiled/external/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/construction1)
 "w" = (
 /obj/item/clothing/suit/storage/hazardvest,
@@ -92,14 +111,20 @@
 /turf/simulated/floor/tiled/external,
 /area/submap/construction1)
 "y" = (
+<<<<<<< HEAD
 /obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/floor/plating/external,
+=======
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/plating/external/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/construction1)
 "z" = (
 /obj/structure/loot_pile/maint/technical,
 /turf/simulated/floor/tiled/external,
 /area/submap/construction1)
 "A" = (
+<<<<<<< HEAD
 /obj/item/weapon/shovel,
 /turf/simulated/floor/plating/external,
 /area/submap/construction1)
@@ -114,6 +139,22 @@
 "D" = (
 /obj/item/weapon/tool/crowbar,
 /turf/simulated/floor/plating/external,
+=======
+/obj/item/shovel,
+/turf/simulated/floor/plating/external/virgo3b,
+/area/submap/construction1)
+"B" = (
+/obj/item/airlock_electronics,
+/turf/simulated/floor/plating/external/virgo3b,
+/area/submap/construction1)
+"C" = (
+/obj/item/weldingtool/largetank,
+/turf/simulated/floor/tiled/external/virgo3b,
+/area/submap/construction1)
+"D" = (
+/obj/item/tool/crowbar,
+/turf/simulated/floor/plating/external/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/construction1)
 "E" = (
 /obj/item/clothing/glasses/welding,

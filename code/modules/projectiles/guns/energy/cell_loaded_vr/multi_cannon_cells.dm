@@ -39,8 +39,8 @@
 		BB = null
 		BB = new projectile_type
 		// TGMC Ammo HUD - Update the HUD every time we expend/fire, given the Curabitur's method of handling firing.
-		if(istype(loc, /obj/item/weapon/gun/projectile/multi_cannon))
-			var/obj/item/weapon/gun/projectile/multi_cannon = loc
+		if(istype(loc, /obj/item/gun/projectile/multi_cannon))
+			var/obj/item/gun/projectile/multi_cannon = loc
 			var/mob/living/user = multi_cannon.loc
 			if(istype(user))
 				user?.hud_used.update_ammo_hud(user, multi_cannon)
@@ -56,12 +56,18 @@
 			BB = new projectile_type
 	if(charge >= max_charge)
 		STOP_PROCESSING(SSobj, src)
+<<<<<<< HEAD
 	if(istype(loc,/obj/item/weapon/gun/projectile/multi_cannon))
 		loc.update_icon()
 
+=======
+	if(istype(loc,/obj/item/gun/projectile/multi_cannon))
+		loc.update_icon()	
+		
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	// TGMC Ammo HUD - Update the HUD every time we're called to recharge.
-	if(istype(loc, /obj/item/weapon/gun/projectile/multi_cannon))
-		var/obj/item/weapon/gun/projectile/multi_cannon = loc
+	if(istype(loc, /obj/item/gun/projectile/multi_cannon))
+		var/obj/item/gun/projectile/multi_cannon = loc
 		var/mob/living/user = multi_cannon.loc
 		if(istype(user))
 			user?.hud_used.update_ammo_hud(user, multi_cannon)

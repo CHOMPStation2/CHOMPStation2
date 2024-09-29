@@ -14,7 +14,7 @@
 	id = "protector"
 	req_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 2000, MAT_SILVER = 1000)
-	build_path = /obj/item/weapon/gun/energy/gun/protector
+	build_path = /obj/item/gun/energy/gun/protector
 	sort_string = "MAAVA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -23,7 +23,7 @@
 	id = "sickshot"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000)
-	build_path = /obj/item/weapon/gun/energy/sickshot
+	build_path = /obj/item/gun/energy/sickshot
 	sort_string = "MAAVB"
 	department = LATHE_ALL | LATHE_SECURITY | LATHE_MEDICAL // CHOMPAdd
 
@@ -32,7 +32,7 @@
 	id = "netgun"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_MAGNET = 3)
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 3000)
-	build_path = /obj/item/weapon/gun/energy/netgun
+	build_path = /obj/item/gun/energy/netgun
 	sort_string = "MAAVC"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -43,7 +43,7 @@
 	id = "pummeler"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_MAGNET = 5)
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 3000, MAT_URANIUM = 1000)
-	build_path = /obj/item/weapon/gun/energy/pummeler
+	build_path = /obj/item/gun/energy/pummeler
 	sort_string = "MADVA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -58,7 +58,7 @@
 	id = "advparticle"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 5, TECH_POWER = 3, TECH_MAGNET = 3)
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000, MAT_GOLD = 1000, MAT_URANIUM = 750)
-	build_path = /obj/item/weapon/gun/energy/particle/advanced
+	build_path = /obj/item/gun/energy/particle/advanced
 	sort_string = "MAAUA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -67,7 +67,7 @@
 	id = "particlecannon"
 	req_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 5, TECH_POWER = 4, TECH_MAGNET = 4)
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 1500, MAT_GOLD = 2000, MAT_URANIUM = 1000, MAT_DIAMOND = 2000)
-	build_path = /obj/item/weapon/gun/energy/particle/cannon
+	build_path = /obj/item/gun/energy/particle/cannon
 	sort_string = "MAAUB"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -91,7 +91,7 @@
 	id = "nsfw_prototype"
 	req_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 4, TECH_POWER = 4, TECH_COMBAT = 7)
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 6000, MAT_PHORON = 8000, MAT_URANIUM = 4000)
-	build_path = /obj/item/weapon/gun/projectile/cell_loaded/combat/prototype
+	build_path = /obj/item/gun/projectile/cell_loaded/combat/prototype
 	sort_string = "MAVAA"
 
 /datum/design/item/weapon/cell_based/prototype_nsfw_mag

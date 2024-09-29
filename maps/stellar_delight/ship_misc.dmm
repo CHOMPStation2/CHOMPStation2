@@ -649,6 +649,49 @@
 /obj/item/toy/chess/pawn_white,
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
+<<<<<<< HEAD
+=======
+"cn" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm1)
+"co" = (
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm1)
+"cp" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm1)
+"cq" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm1)
+"cr" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm2)
+"cs" = (
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm2)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "ct" = (
 /obj/effect/floor_decal/carpet{
 	dir = 8
@@ -706,6 +749,80 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_emptycourt)
+<<<<<<< HEAD
+=======
+"cC" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm2)
+"cD" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm2)
+"cE" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm3)
+"cF" = (
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm3)
+"cG" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm3)
+"cH" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm3)
+"cI" = (
+/obj/structure/table/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm1)
+"cJ" = (
+/obj/structure/table/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm2)
+"cK" = (
+/obj/structure/table/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm3)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "cL" = (
 /obj/structure/holostool{
 	dir = 8
@@ -718,6 +835,20 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_boxingcourt)
+<<<<<<< HEAD
+=======
+"cN" = (
+/obj/structure/closet/alien,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm1)
+"cO" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Unknown";
+	tele_network = "unkone"
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm1)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "cP" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -765,6 +896,34 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_courtroom)
+<<<<<<< HEAD
+=======
+"cV" = (
+/obj/item/bedsheet/rddouble,
+/obj/structure/bed/double/padded,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm1)
+"cW" = (
+/obj/structure/closet/alien,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm2)
+"cX" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Unknown";
+	tele_network = "unktwo"
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm2)
+"cY" = (
+/obj/item/bedsheet/rddouble,
+/obj/structure/bed/double/padded,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm2)
+"cZ" = (
+/obj/structure/closet/alien,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm3)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "da" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -773,6 +932,7 @@
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_picnicarea)
 "db" = (
+<<<<<<< HEAD
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
 	name = "thrower_throwdown";
@@ -783,6 +943,19 @@
 /turf/space,
 /turf/space/transit/north,
 /area/space)
+=======
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Unknown";
+	tele_network = "unkthree"
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm3)
+"dc" = (
+/obj/item/bedsheet/rddouble,
+/obj/structure/bed/double/padded,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm3)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "dd" = (
 /obj/effect/floor_decal/carpet{
 	dir = 8
@@ -1006,7 +1179,7 @@
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/red,
 /obj/item/clothing/under/color/red,
-/obj/item/weapon/holo/esword/red,
+/obj/item/holo/esword/red,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
@@ -1162,7 +1335,7 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_meetinghall)
 "eM" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_beach)
 "eO" = (
@@ -1242,7 +1415,7 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
 "fa" = (
-/obj/item/weapon/beach_ball/holoball,
+/obj/item/beach_ball/holoball,
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
@@ -1255,7 +1428,7 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
 "fc" = (
-/obj/item/weapon/inflatable_duck,
+/obj/item/inflatable_duck,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_beach)
 "fd" = (
@@ -1293,7 +1466,7 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_gym)
 "fm" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /turf/simulated/floor/holofloor/tiled{
@@ -1421,7 +1594,7 @@
 /area/holodeck/source_beach)
 "fN" = (
 /obj/structure/table/woodentable/holotable,
-/obj/item/weapon/dice/d8,
+/obj/item/dice/d8,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "fO" = (
@@ -1489,7 +1662,7 @@
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/green,
 /obj/item/clothing/under/color/green,
-/obj/item/weapon/holo/esword/green,
+/obj/item/holo/esword/green,
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
@@ -1578,21 +1751,21 @@
 /area/beach)
 "gm" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "gn" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "go" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "gp" = (
@@ -1635,6 +1808,116 @@
 "gy" = (
 /turf/unsimulated/beach/coastline,
 /area/beach)
+<<<<<<< HEAD
+=======
+"gz" = (
+/obj/machinery/door/airlock/alien/blue/public,
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm5)
+"gA" = (
+/obj/machinery/door/airlock/alien/blue/public,
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm6)
+"gB" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"gC" = (
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"gD" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"gE" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"gF" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"gG" = (
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"gH" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"gI" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"gJ" = (
+/obj/machinery/sleeper/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"gK" = (
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"gL" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"gM" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "gN" = (
 /turf/unsimulated/beach/water{
 	density = 1;
@@ -1644,6 +1927,196 @@
 "gO" = (
 /turf/unsimulated/beach/water,
 /area/beach)
+<<<<<<< HEAD
+=======
+"gP" = (
+/obj/structure/table/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"gQ" = (
+/obj/structure/table/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"gR" = (
+/obj/structure/table/survival_pod,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"gS" = (
+/obj/structure/closet/alien,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"gT" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Unknown";
+	tele_network = "unkfour"
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm4)
+"gU" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/hopdouble,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"gV" = (
+/obj/structure/closet/alien,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"gW" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Unknown";
+	tele_network = "unkfive"
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm5)
+"gX" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/hopdouble,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"gY" = (
+/obj/structure/closet/alien,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"gZ" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Unknown";
+	tele_network = "unksix"
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm6)
+"ha" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/hopdouble,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"hb" = (
+/obj/structure/prop/alien/computer/hybrid{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"hc" = (
+/obj/structure/prop/alien/dispenser,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"hd" = (
+/obj/structure/prop/alien/computer/hybrid{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"he" = (
+/obj/structure/prop/alien/dispenser,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"hf" = (
+/obj/structure/prop/alien/computer/hybrid{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"hg" = (
+/obj/structure/prop/alien/dispenser,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"hh" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"hi" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"hj" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"hk" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"hl" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"hm" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"hn" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"ho" = (
+/obj/structure/table/alien/blue,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm4)
+"hp" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"hq" = (
+/obj/structure/table/alien/blue,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm5)
+"hr" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"hs" = (
+/obj/structure/table/alien/blue,
+/turf/simulated/shuttle/floor/alien,
+/area/unknown/dorm6)
+"ht" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/teleport/hub,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/unknown/dorm4)
+"hu" = (
+/obj/machinery/teleport/station,
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm4)
+"hv" = (
+/obj/machinery/computer/teleporter{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm4)
+"hw" = (
+/obj/structure/prop/alien/power,
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm4)
+"hx" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/teleport/hub,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/unknown/dorm5)
+"hy" = (
+/obj/machinery/teleport/station,
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm5)
+"hz" = (
+/obj/machinery/computer/teleporter{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm5)
+"hA" = (
+/obj/structure/prop/alien/power,
+/turf/simulated/shuttle/floor/alienplating,
+/area/unknown/dorm5)
+"hB" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/teleport/hub,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/unknown/dorm6)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "hC" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -1707,7 +2180,7 @@
 /area/space)
 "ml" = (
 /obj/structure/table/holotable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
@@ -1747,8 +2220,8 @@
 /area/holodeck/source_gym)
 "ov" = (
 /obj/structure/table/woodentable/holotable,
-/obj/item/weapon/dice/d12,
-/obj/item/weapon/dice/d10,
+/obj/item/dice/d12,
+/obj/item/dice/d10,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "oJ" = (
@@ -1807,7 +2280,7 @@
 /turf/simulated/floor/holofloor/bmarble,
 /area/holodeck/source_chess)
 "rD" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue{
@@ -1836,7 +2309,7 @@
 /turf/unsimulated/wall,
 /area/ai_multicam_room)
 "tR" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue/full{
@@ -1966,8 +2439,8 @@
 /area/holodeck/source_patient_ward)
 "BR" = (
 /obj/structure/table/woodentable/holotable,
-/obj/item/weapon/dice/d100,
-/obj/item/weapon/dice/d20,
+/obj/item/dice/d100,
+/obj/item/dice/d20,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "BU" = (
@@ -2021,7 +2494,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "Eq" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue{
@@ -2121,7 +2594,7 @@
 	},
 /area/holodeck/source_patient_ward)
 "Lt" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue/full{
@@ -2157,8 +2630,8 @@
 /area/holodeck/source_gym)
 "Nj" = (
 /obj/structure/table/woodentable/holotable,
-/obj/item/weapon/dice,
-/obj/item/weapon/dice/d4,
+/obj/item/dice,
+/obj/item/dice/d4,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "NT" = (
@@ -2212,7 +2685,7 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_game_room)
 "SJ" = (
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/bed/padded,
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue{

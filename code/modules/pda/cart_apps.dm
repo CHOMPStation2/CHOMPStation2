@@ -264,7 +264,11 @@
 		JaniData["user_loc"] = list("x" = 0, "y" = 0)
 
 	var/MopData[0]
+<<<<<<< HEAD
 	for(var/obj/item/weapon/mop/M in GLOB.all_mops)//GLOB.janitorial_equipment)
+=======
+	for(var/obj/item/mop/M in all_mops)//GLOB.janitorial_equipment)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 		var/turf/ml = get_turf(M)
 		if(ml)
 			if(ml.z != cl.z)

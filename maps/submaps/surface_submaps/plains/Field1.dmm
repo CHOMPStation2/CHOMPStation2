@@ -17,8 +17,13 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/Field1)
 "f" = (
+<<<<<<< HEAD
 /obj/item/device/radio,
 /turf/simulated/floor/outdoors/dirt,
+=======
+/obj/item/radio,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/Field1)
 "g" = (
 /obj/vehicle/train/trolley,
@@ -29,8 +34,13 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/Field1)
 "i" = (
+<<<<<<< HEAD
 /obj/item/device/flashlight,
 /turf/simulated/floor/outdoors/dirt,
+=======
+/obj/item/flashlight,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/Field1)
 
 (1,1,1) = {"

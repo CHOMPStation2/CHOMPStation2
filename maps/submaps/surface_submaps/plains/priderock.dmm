@@ -1,7 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ae" = (
+<<<<<<< HEAD
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/dirt,
+=======
+/obj/structure/railing,
+/obj/item/bone,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/priderock)
 "cR" = (
 /obj/structure/bed/chair{
@@ -40,8 +46,13 @@
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
+<<<<<<< HEAD
 /obj/item/weapon/towel/random,
 /turf/simulated/floor/outdoors/dirt,
+=======
+/obj/item/towel/random,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/priderock)
 "md" = (
 /obj/random/trash,
@@ -49,8 +60,15 @@
 /area/submap/priderock)
 "nG" = (
 /obj/structure/railing,
+<<<<<<< HEAD
 /obj/item/weapon/bone,
 /turf/simulated/floor/outdoors/dirt,
+=======
+/obj/random/junk,
+/obj/item/bone/ribs,
+/obj/item/bone/skull,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/priderock)
 "nV" = (
 /obj/item/stack/material/log/sif,
@@ -239,8 +257,14 @@
 "Lm" = (
 /obj/random/junk,
 /obj/random/junk,
+<<<<<<< HEAD
 /obj/item/weapon/bone/skull/unathi,
 /turf/simulated/floor/outdoors/dirt,
+=======
+/obj/random/junk,
+/obj/item/bone/skull/tajaran,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/priderock)
 "Lo" = (
 /obj/structure/cliff/automatic{
@@ -270,8 +294,13 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/priderock)
 "Pb" = (
+<<<<<<< HEAD
 /obj/item/weapon/storage/backpack/dufflebag/syndie/med,
 /turf/simulated/floor/outdoors/dirt,
+=======
+/obj/item/storage/backpack/dufflebag/syndie/med,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/priderock)
 "Pn" = (
 /obj/structure/table/bench/wooden,
@@ -351,8 +380,13 @@
 /area/submap/priderock)
 "XN" = (
 /obj/item/clothing/head/bearpelt,
+<<<<<<< HEAD
 /obj/item/device/binoculars/spyglass,
 /turf/simulated/floor/outdoors/rocks,
+=======
+/obj/item/binoculars/spyglass,
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/priderock)
 "Yd" = (
 /obj/effect/decal/cleanable/dirt,

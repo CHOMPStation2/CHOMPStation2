@@ -219,12 +219,18 @@
 
 	return hear
 
+<<<<<<< HEAD
 //CHOMPEdit - entire proc changed basically to use recursive listening
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
+=======
+
+/proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	//set background = 1 //CHOMPEdit
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
+<<<<<<< HEAD
 	for(var/obj/item/device/radio/R as anything in radios)
 		if(get_turf(R))
 			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
@@ -237,6 +243,22 @@
 			. -= M
 	for (var/mob/observer/O in player_list)
 		. |= O
+=======
+	var/list/speaker_coverage = list()
+	for(var/obj/item/radio/R as anything in radios)
+		var/turf/speaker = get_turf(R)
+		if(speaker)
+			for(var/turf/T in hear(R.canhear_range,speaker))
+				speaker_coverage[T] = R
+
+
+	// Try to find all the players who can hear the message
+	for(var/i = 1; i <= player_list.len; i++)
+		var/mob/M = player_list[i]
+		if(M.can_hear_radio(speaker_coverage))
+			. += M
+	return .
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 /mob/proc/can_hear_radio(var/list/hearturfs)
 	return FALSE
@@ -246,7 +268,7 @@
 
 /mob/living/silicon/robot/can_hear_radio(var/list/hearturfs)
 	var/turf/T = get_turf(src)
-	var/obj/item/device/radio/borg/R = hearturfs[T] // this should be an assoc list of turf-to-radio
+	var/obj/item/radio/borg/R = hearturfs[T] // this should be an assoc list of turf-to-radio
 
 	// We heard it on our own radio? We use power for that.
 	if(istype(R) && R.myborg == src)

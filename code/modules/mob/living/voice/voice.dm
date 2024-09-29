@@ -3,8 +3,12 @@
 	name = "unknown person"
 	desc = "How are you examining me?"
 	see_invisible = SEE_INVISIBLE_LIVING
+<<<<<<< HEAD
 	var/obj/item/device/communicator/comm = null
 	var/item_tf = FALSE //CHOMPEdit
+=======
+	var/obj/item/communicator/comm = null
+>>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 
 	emote_type = 2 //This lets them emote through containers.  The communicator has a image feed of the person calling them so...
 
@@ -12,7 +16,7 @@
 	add_language(LANGUAGE_GALCOM)
 	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM]) //CHOMPEdit
 
-	if(istype(loc, /obj/item/device/communicator))
+	if(istype(loc, /obj/item/communicator))
 		comm = loc
 	. = ..()
 
