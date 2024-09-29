@@ -294,16 +294,9 @@
 		if(loc == R)
 			hud_layerise()
 
-<<<<<<< HEAD
 /obj/item/weapon/card/id/cargo/miner/borg/Destroy()
-	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
-	R = null
-	last_robot_loc = null
-=======
-/obj/item/card/id/cargo/miner/borg/Destroy()
 	if(R)
 		UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
 		R = null
 		last_robot_loc = null
->>>>>>> 29b6373436... Merge pull request #16382 from Kashargul/agentIdRuntime
 	..()
