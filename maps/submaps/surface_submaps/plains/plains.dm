@@ -1,7 +1,25 @@
 // This causes PoI maps to get 'checked' and compiled, when undergoing a unit test.
 // This is so CI can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 // When adding a new PoI, please add it to this list.
+<<<<<<< HEAD
 #if MAP_TEST
+=======
+#ifdef MAP_TEST
+#include "farm1.dmm"
+#include "construction1.dmm"
+#include "camp1.dmm"
+#include "house1.dmm"
+#include "beacons.dmm"
+#include "Epod.dmm"
+#include "Epod2.dmm"
+#include "PascalB.dmm"
+#include "bonfire.dmm"
+#include "Rocky5.dmm"
+#include "Field1.dmm"
+#include "Thiefc.dmm"
+#include "smol2.dmm"
+#include "Mechpt.dmm"
+>>>>>>> 5260e2cfda... Merge pull request #16360 from ShadowLarkens/mapci
 #include "Boathouse.dmm"
 #include "bonfire.dmm"
 #include "Buriedtreasure.dmm"
@@ -293,11 +311,28 @@
 	mappath = 'maps/submaps/surface_submaps/plains/peninsula.dmm'
 	cost = 10
 
+<<<<<<< HEAD
 /datum/map_template/surface/plains/beacons
 	name = "Collection of Marker Beacons"
 	desc = "A bunch of marker beacons, scattered in a strange pattern."
 	mappath = 'maps/submaps/surface_submaps/plains/beacons.dmm'
+=======
+/datum/map_template/surface/plains/syndisniper
+	name = "Syndi Sniper"
+	desc = "Syndicate watch tower, deadly but secluded"
+	mappath = 'maps/submaps/surface_submaps/plains/syndisniper.dmm'
+
+>>>>>>> 5260e2cfda... Merge pull request #16360 from ShadowLarkens/mapci
 	cost = 5
 	fixed_orientation = TRUE
 
+<<<<<<< HEAD
 */
+=======
+/datum/map_template/surface/plains/drgnplateu
+	name = "Dragon Plateu"
+	desc = "A dangerous plateu of cliffs home to a rampant gold hoarding dragon"
+	mappath = 'maps/submaps/surface_submaps/plains/drgnplateu.dmm'
+	cost = 15
+	allow_duplicates = FALSE
+>>>>>>> 5260e2cfda... Merge pull request #16360 from ShadowLarkens/mapci

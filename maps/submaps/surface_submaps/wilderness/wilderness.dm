@@ -1,6 +1,7 @@
 // This causes PoI maps to get 'checked' and compiled, when undergoing a unit test.
 // This is so CI can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 // When adding a new PoI, please add it to this list.
+<<<<<<< HEAD
 #if MAP_TEST
 #include "blackshuttledown.dmm"
 #include "blueshuttledown.dmm"
@@ -19,6 +20,24 @@
 #include "decoupledengine.dmm"
 #include "demonpool.dmm"
 #include "derelictengine.dmm"
+=======
+#ifdef MAP_TEST
+#include "spider1.dmm"
+#include "Flake.dmm"
+#include "MCamp1.dmm"
+#include "Rocky1.dmm"
+#include "Rocky2.dmm"
+#include "Rocky3.dmm"
+#include "Shack1.dmm"
+#include "Smol1.dmm"
+#include "Mudpit.dmm"
+#include "Snowrock1.dmm"
+#include "Boombase.dmm"
+#include "Blackshuttledown.dmm"
+#include "Blueshuttledown.dmm"
+#include "Lab1.dmm"
+#include "Rocky4.dmm"
+>>>>>>> 5260e2cfda... Merge pull request #16360 from ShadowLarkens/mapci
 #include "DJOutpost1.dmm"
 #include "DJOutpost2.dmm"
 #include "dogbase.dmm"
