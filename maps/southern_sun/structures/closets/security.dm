@@ -17,7 +17,7 @@
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt,
 		/obj/item/clothing/suit/storage/vest/hoscoat/jensen,
 		/obj/item/clothing/suit/storage/vest/hoscoat,
-		/obj/item/weapon/cartridge/hos,
+		/obj/item/cartridge/hos,
 		/obj/item/clothing/head/helmet/dermal,
 		/obj/item/device/radio/headset/heads/hos,
 		/obj/item/device/radio/headset/heads/hos/alt,
@@ -27,9 +27,9 @@
 
 /obj/structure/closet/secure_closet/hos_wardrobe/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/security
+		starts_with += /obj/item/storage/backpack/security
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/sec
+		starts_with += /obj/item/storage/backpack/satchel/sec
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag/sec
+		starts_with += /obj/item/storage/backpack/dufflebag/sec
 	return ..()
