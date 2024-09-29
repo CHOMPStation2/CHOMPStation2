@@ -155,7 +155,16 @@ temp.dmi
 **/node_modules
 package-lock.json
 
+<<<<<<< HEAD
 # named byond versions config
 /tools/build/dm_versions.json
 
 config/jobwhitelist.txt
+=======
+# CBT Things
+.cache
+
+#These get built by some automatic process
+tgui/public/tgui.bundle.css
+tgui/public/tgui.bundle.js
+>>>>>>> 30ba47b059... Merge pull request #16388 from VOREStation/gitignore
