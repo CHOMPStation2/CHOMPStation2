@@ -159,21 +159,21 @@ Remember that this is a kind of silly example, but this is one of the things tha
 
 ### Subtype Handling
 
-This is one of UpdatePaths' more recent features. It allows you to specify a generic base path that you've done a major refactor on, and then easily specify the gamut of subtypes you want to swap it to. Let's say you have a `/obj/item/big_chungus` base path that you want to refactor to `/obj/item/big_chungus`. However, you also have subtypes like `/obj/item/big_chungus/funny`, `/obj/item/big_chungus/really_large`, etc. You can do that by simply adding the following to your script:
+This is one of UpdatePaths' more recent features. It allows you to specify a generic base path that you've done a major refactor on, and then easily specify the gamut of subtypes you want to swap it to. Let's say you have a `/obj/item/weapon/big_chungus` base path that you want to refactor to `/obj/item/big_chungus`. However, you also have subtypes like `/obj/item/weapon/big_chungus/funny`, `/obj/item/weapon/big_chungus/really_large`, etc. You can do that by simply adding the following to your script:
 
 ```txt
-/obj/item/big_chungus/@SUBTYPES : /obj/item/big_chungus/@SUBTYPES{@OLD}
+/obj/item/weapon/big_chungus/@SUBTYPES : /obj/item/big_chungus/@SUBTYPES{@OLD}
 ```
 
 So, let's assume we have the following map file:
 
 ```dm
 "a" = (
-/obj/item/big_chungus,
-/obj/item/big_chungus/funny{
+/obj/item/weapon/big_chungus,
+/obj/item/weapon/big_chungus/funny{
 	name = "funny big chungus"
 	},
-/obj/item/big_chungus/really_large{
+/obj/item/weapon/big_chungus/really_large{
 	name = "really large big chungus"
 	},
 /turf/open/floor/iron,
