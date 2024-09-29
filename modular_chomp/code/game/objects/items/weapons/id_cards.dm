@@ -9,7 +9,7 @@
 	. = ..()
 	if(loc)
 		R = loc.loc
-		if(isytpe(R))
+		if(istype(R))
 			registered_name = R.braintype
 			RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
 
