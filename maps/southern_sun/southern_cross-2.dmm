@@ -8055,22 +8055,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Security/Reception)
-"avZ" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/terminal,
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Engineering_Substation)
 "awb" = (
 /obj/structure/cryofeed,
 /obj/structure/window/reinforced{
@@ -25836,12 +25820,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Security/Visitation_Room)
-"bBo" = (
-/obj/structure/sign/department/shield{
-	desc = "Sign of some important station compartment."
-	},
-/turf/simulated/wall,
-/area/SouthernCrossV2/Maints/Deck2_Medical_AftCorridor1)
 "bBq" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/firedoor/glass,
@@ -26173,6 +26151,12 @@
 /obj/item/weapon/storage/box/snappops,
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Security/Boardroom)
+"bCT" = (
+/obj/structure/sign/department/shield{
+	desc = "Sign of some important station compartment."
+	},
+/turf/simulated/wall,
+/area/SouthernCrossV2/Maints/Deck2_Medical_AftCorridor1)
 "bCU" = (
 /obj/structure/girder,
 /turf/simulated/floor/plating,
@@ -59667,6 +59651,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Science/Robotics_Lab)
+"gWp" = (
+/obj/machinery/shield_diffuser,
+/obj/structure/lattice,
+/turf/space,
+/area/space)
 "gWq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -66845,19 +66834,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_2)
-"iLW" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/power/smes/batteryrack,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Engineering_Substation)
 "iMs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -68361,6 +68337,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_Transit_Foyer)
+"jib" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "jil" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -69597,11 +69581,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Engineering_Workshop)
-"jzm" = (
-/obj/machinery/shield_diffuser,
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "jzq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -75426,19 +75405,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_1)
-"lcZ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "ldd" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/lights/bulbs{
@@ -76455,10 +76421,17 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_2_Deck_Shuttlebay_Corridor)
 "lte" = (
-/obj/structure/sign/department/shield{
-	desc = "Sign of some important station compartment."
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
-/turf/simulated/wall,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/power/smes/batteryrack,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
 "ltH" = (
 /turf/simulated/floor/carpet,
@@ -79778,6 +79751,19 @@
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/SouthernCrossV2/Domicile/Library_Cafe)
+"mpf" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/smes/batteryrack,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "mpo" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -82809,18 +82795,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Science_StarCorridor1)
-"nir" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/terminal,
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Engineering_Substation)
 "niD" = (
 /obj/item/weapon/storage/box/lights/mixed{
 	pixel_x = 8;
@@ -86539,14 +86513,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Maints/Deck2_Medical_AftPortCorridor1)
-"okK" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "okO" = (
 /obj/structure/urinal{
 	dir = 8;
@@ -86649,6 +86615,11 @@
 	},
 /turf/simulated/floor/lino,
 /area/SouthernCrossV2/Domicile/Chapel_Office)
+"onO" = (
+/obj/structure/lattice,
+/obj/machinery/shield_diffuser,
+/turf/space,
+/area/space)
 "oos" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -86738,6 +86709,19 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Central_Engineering_Post)
+"opB" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/power/smes/batteryrack,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "opU" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/medical,
@@ -88080,19 +88064,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
-"oIS" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/smes/batteryrack,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Engineering_Substation)
 "oIX" = (
 /obj/item/weapon/paper_bin{
 	pixel_x = 5
@@ -91109,6 +91080,14 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Holodeck)
+"pyb" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "pym" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -92823,10 +92802,21 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Star_2_Deck_Airlock_Access)
 "pUM" = (
-/obj/structure/lattice,
-/obj/machinery/shield_diffuser,
-/turf/space,
-/area/space)
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/terminal,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "pUX" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced,
@@ -96609,16 +96599,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2)
-"qXo" = (
-/obj/structure/disposalpipe/tagger{
-	dir = 4;
-	sort_tag = "transit_crew"
-	},
-/obj/structure/sign/department/shield{
-	desc = "Sign of some important station compartment."
-	},
-/turf/simulated/wall,
-/area/SouthernCrossV2/Domicile/Chomp_Hydroponics)
 "qXt" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -100910,14 +100890,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Security/Deck2_1_Corridor)
-"rZl" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "rZn" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -105466,6 +105438,16 @@
 	},
 /turf/simulated/floor/lino,
 /area/SouthernCrossV2/Domicile/Chapel_Office)
+"tiC" = (
+/obj/structure/disposalpipe/tagger{
+	dir = 4;
+	sort_tag = "transit_crew"
+	},
+/obj/structure/sign/department/shield{
+	desc = "Sign of some important station compartment."
+	},
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Chomp_Hydroponics)
 "tiT" = (
 /obj/structure/closet/toolcloset,
 /obj/item/weapon/storage/box/lights/mixed,
@@ -108110,6 +108092,14 @@
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1)
+"tWn" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "tWA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -111142,18 +111132,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Chomp_Hydroponics)
-"uSD" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/power/terminal,
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Engineering_Substation)
 "uSG" = (
 /obj/structure/table/woodentable,
 /obj/item/device/starcaster_news,
@@ -115743,6 +115721,12 @@
 /obj/item/weapon/storage/bag/chemistry,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Chemistry)
+"why" = (
+/obj/structure/sign/department/shield{
+	desc = "Sign of some important station compartment."
+	},
+/turf/simulated/wall,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "whH" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -118071,19 +118055,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2,
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Midnight_Bar)
-"wLY" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/power/smes/batteryrack,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Engineering_Substation)
 "wLZ" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
@@ -118692,7 +118663,7 @@
 	},
 /obj/item/weapon/storage/backpack/holding{
 	pixel_y = -4;
-	name = "EMERGECNY bag of holding"
+	name = "EMERGENCY bag of holding"
 	},
 /obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for engine core.";
@@ -119524,6 +119495,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Civilian_StarChamber2)
+"xgF" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/power/terminal,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "xgL" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/VR)
@@ -120035,6 +120018,18 @@
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/kafel_full,
 /area/SouthernCrossV2/Domicile/Gym)
+"xnW" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/terminal,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Engineering_Substation)
 "xof" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 28;
@@ -121862,6 +121857,11 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Engineering_Substation)
 "xQQ" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -136798,7 +136798,7 @@ aJt
 vZp
 enP
 sed
-uSD
+xgF
 bSc
 ahz
 tnm
@@ -137313,9 +137313,9 @@ ahz
 ahT
 wpP
 qBn
-wLY
+lte
 aYy
-iLW
+opB
 ahz
 tnm
 oFM
@@ -137571,10 +137571,10 @@ ahz
 dck
 aWH
 ycd
-oIS
-avZ
-oIS
-lte
+mpf
+pUM
+mpf
+why
 pJt
 pMS
 ayV
@@ -138083,7 +138083,7 @@ vvp
 cfS
 fCI
 dUK
-lte
+why
 fyJ
 xQF
 iUU
@@ -138316,7 +138316,7 @@ aaa
 aaa
 aaa
 aaa
-pUM
+onO
 aaf
 aaf
 mcs
@@ -138346,7 +138346,7 @@ ajO
 ekT
 weu
 fDG
-nir
+xnW
 fDG
 ahz
 cdH
@@ -138832,7 +138832,7 @@ aaa
 aaa
 aaa
 aaa
-pUM
+onO
 aaf
 aaf
 myY
@@ -139635,7 +139635,7 @@ ahz
 ahz
 ahq
 sXf
-lte
+why
 mCN
 tYN
 alt
@@ -144087,9 +144087,9 @@ aaa
 mLP
 aaa
 aaa
-pUM
+onO
 bTv
-pUM
+onO
 aaa
 aaa
 vbD
@@ -153056,7 +153056,7 @@ end
 end
 chy
 end
-qXo
+tiC
 vIQ
 aTa
 aTa
@@ -153313,7 +153313,7 @@ bpF
 jAh
 ckd
 rIv
-okK
+tWn
 aoL
 gVv
 aTa
@@ -153571,7 +153571,7 @@ pDo
 jAh
 alI
 rIv
-xQQ
+pyb
 aoM
 apJ
 aTa
@@ -153829,7 +153829,7 @@ aQW
 lOz
 aQw
 rIv
-lcZ
+xQQ
 aoO
 apJ
 aTa
@@ -154087,7 +154087,7 @@ aHe
 jAh
 tAa
 rIv
-xQQ
+pyb
 mCd
 fra
 pZR
@@ -154345,7 +154345,7 @@ svX
 jAh
 aIE
 cvo
-xQQ
+pyb
 aXj
 oSv
 aVG
@@ -154603,7 +154603,7 @@ vaL
 jAh
 alK
 rft
-rZl
+jib
 nqK
 oSv
 aUJ
@@ -162548,9 +162548,9 @@ aaa
 aow
 aaa
 aaa
-jzm
+gWp
 dTE
-jzm
+gWp
 aaa
 aaa
 aow
@@ -167730,7 +167730,7 @@ aaa
 aaa
 aaa
 aaa
-pUM
+onO
 aaf
 aaf
 pxs
@@ -168246,7 +168246,7 @@ aaa
 aaa
 aaa
 aaa
-pUM
+onO
 aaf
 aaf
 nZm
@@ -168810,7 +168810,7 @@ fmG
 tAn
 qxx
 lZV
-bBo
+bCT
 pGQ
 cNu
 wML
