@@ -5456,15 +5456,6 @@
 	},
 /turf/space,
 /area/space)
-"aIz" = (
-/obj/machinery/pda_multicaster/prebuilt,
-/obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/plating{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/SouthernCrossV2/Engineering/Telecomms_Network)
 "aIA" = (
 /turf/simulated/wall/rthull,
 /area/shuttle/escape_pod4/station)
@@ -20260,7 +20251,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Market_Stall_5)
 "eNj" = (
-/obj/structure/grille/rustic,
+/obj/structure/inflatable,
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "eNk" = (
@@ -105142,7 +105133,7 @@ aNq
 jYM
 qkX
 aTF
-aIz
+aTF
 iuI
 cjG
 cjG

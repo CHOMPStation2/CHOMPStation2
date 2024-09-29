@@ -13837,7 +13837,7 @@
 /obj/machinery/light{
 	name = "1S-light fixture"
 	},
-/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/lightorange/border,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -85601,6 +85601,7 @@
 	icon_state = "open";
 	id = "sc-GCeastshuttlebay"
 	},
+/obj/machinery/shield_diffuser,
 /turf/space,
 /area/SouthernCrossV2/Harbor/Star_Shuttlebay)
 "nZr" = (
@@ -121907,6 +121908,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Security_Substation)
+"xRY" = (
+/obj/structure/lattice,
+/obj/effect/catwalk_plated/white,
+/obj/machinery/shield_diffuser,
+/turf/space,
+/area/SouthernCrossV2/Harbor/Star_Shuttlebay)
 "xSl" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -167475,7 +167482,7 @@ aaa
 aaa
 aaa
 aaa
-pxs
+xRY
 slm
 pxs
 vqB
@@ -167733,7 +167740,7 @@ aaa
 onO
 aaf
 aaf
-pxs
+xRY
 slm
 pxs
 bOa
@@ -168507,7 +168514,7 @@ aaa
 aaa
 aaa
 aaa
-pxs
+xRY
 slm
 pxs
 hmH

@@ -22512,9 +22512,18 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Central_Restroom)
 "hgP" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
+/obj/machinery/atmospherics/unary/vent_pump{
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
 	frequency = 1441;
-	id = "SC-o2IN";
+	icon_state = "map_vent_in";
+	id_tag = "SC-o2OUT";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
 	use_power = 1
 	},
 /obj/machinery/light/small{
@@ -35909,12 +35918,16 @@
 	},
 /area/SouthernCrossV2/Bridge/Firstaid_Post)
 "lyu" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/machinery/atmospherics/valve{
+	name = "Bridge emergency air supply"
+	},
 /obj/machinery/camera/network/security{
 	dir = 8;
 	c_tag = "D3-Eng-Substation Bridge1";
 	network = list("engineering")
 	},
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Bridge_Substation)
 "lyD" = (
@@ -39411,18 +39424,9 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber1)
 "mtW" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
+/obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
-	icon_state = "map_vent_in";
-	id_tag = "SC-o2OUT";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
-	pump_direction = 0;
+	id = "SC-o2IN";
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/oxygen,
@@ -53044,11 +53048,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Engineering/Engine2_Access_Hall)
 "qLY" = (
-/obj/machinery/atmospherics/valve{
-	name = "Bridge emergency air supply"
-	},
-/obj/effect/floor_decal/industrial/danger/full,
-/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Bridge_Substation)
 "qMb" = (
