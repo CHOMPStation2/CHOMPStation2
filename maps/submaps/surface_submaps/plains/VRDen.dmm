@@ -197,15 +197,9 @@
 /obj/machinery/telecomms/server{
 	name = "Server"
 	},
-<<<<<<< HEAD
 /obj/item/gps/internal/poi,
 /turf/simulated/floor/tiled/steel,
 /area/submap/vrden)
-=======
-/obj/item/gps/internal/poi,
-/turf/simulated/floor/tiled/virgo3b,
-/area/submap/VRDen)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "F" = (
 /obj/item/integrated_circuit/logic/binary,
 /turf/simulated/floor/tiled/steel,

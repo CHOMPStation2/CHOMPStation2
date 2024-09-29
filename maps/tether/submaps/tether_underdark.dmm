@@ -158,13 +158,8 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/mine/explored/underdark)
-<<<<<<< HEAD
-"E" = (
-/obj/item/tool/wrench,
-=======
 "aE" = (
 /obj/item/tool/wrench,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/mine/explored/underdark)
 "F" = (
@@ -206,14 +201,6 @@
 /obj/effect/decal/remains/posi,
 /turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/mine/explored/underdark)
-<<<<<<< HEAD
-"R" = (
-/obj/item/bone,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
-/area/mine/explored/underdark)
-"S" = (
-/obj/item/bone,
-=======
 "aO" = (
 /obj/item/tool/wrench,
 /turf/simulated/floor/virgo3b,
@@ -234,7 +221,6 @@
 /area/mine/explored/underdark)
 "aS" = (
 /obj/item/bone,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/mineral/floor/virgo3b{
 	ignore_mapgen = 1
 	},
@@ -243,10 +229,6 @@
 /obj/effect/decal/remains/mouse,
 /turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/mine/explored/underdark)
-<<<<<<< HEAD
-"W" = (
-/obj/item/bone/skull,
-=======
 "aU" = (
 /obj/structure/cable/green{
 	icon_state = "1-5"
@@ -266,14 +248,10 @@
 /area/mine/explored/underdark)
 "aW" = (
 /obj/item/bone/skull,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/mineral/floor/virgo3b{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/underdark)
-<<<<<<< HEAD
-"Z" = (
-=======
 "aX" = (
 /obj/machinery/light/small{
 	icon_state = "bulb1";
@@ -294,7 +272,6 @@
 	},
 /area/mine/explored/underdark)
 "aZ" = (
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/effect/decal/remains/ribcage,
 /turf/simulated/mineral/floor/virgo3b{
 	ignore_mapgen = 1

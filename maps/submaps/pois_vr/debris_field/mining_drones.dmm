@@ -83,12 +83,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/debrisfield/mining_outpost)
 "p" = (
-<<<<<<< HEAD
 /obj/item/material/shard,
-=======
-/obj/item/material/shard,
-/mob/living/simple_mob/mechanical/mining_drone/scavenger,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/space,
 /area/space)
 "q" = (

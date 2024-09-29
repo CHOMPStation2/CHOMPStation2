@@ -18,18 +18,10 @@
 /area/submap/DemonPool)
 "ay" = (
 /obj/structure/girder/cult,
-<<<<<<< HEAD
 /turf/simulated/floor/cult,
 /area/submap/DemonPool)
 "bb" = (
 /obj/item/melee/cultblade,
-=======
-/obj/item/material/twohanded/fireaxe/scythe,
-/turf/simulated/floor/cult,
-/area/submap/DemonPool)
-"bb" = (
-/obj/item/melee/cursedblade,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/cult,
 /area/submap/DemonPool)
 "bh" = (
@@ -66,12 +58,7 @@
 /area/submap/DemonPool)
 "eM" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/book,
-=======
-/obj/item/book,
-/obj/item/spellbook/oneuse/forcewall,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor,
 /area/submap/DemonPool)
 "eR" = (
@@ -565,10 +552,6 @@
 /area/submap/DemonPool)
 "Qr" = (
 /obj/structure/closet/crate/secure/loot,
-<<<<<<< HEAD
-=======
-/obj/item/spellbook/oneuse/fireball,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/cult,
 /area/submap/DemonPool)
 "Qv" = (
@@ -664,12 +647,8 @@
 /area/submap/DemonPool)
 "YK" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/pen/fountain,
 /obj/item/stolenpackage,
-=======
-/obj/item/pen/fountain,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor,
 /area/submap/DemonPool)
 "Zc" = (

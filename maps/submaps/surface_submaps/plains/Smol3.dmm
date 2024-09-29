@@ -17,7 +17,6 @@
 /area/submap/Smol3)
 "f" = (
 /obj/structure/closet/crate/freezer,
-<<<<<<< HEAD
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/reagent_containers/food/snacks/meat,
@@ -38,28 +37,6 @@
 /obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /turf/simulated/floor/outdoors/dirt,
-=======
-/obj/item/reagent_containers/food/snacks/meat,
-/obj/item/reagent_containers/food/snacks/meat,
-/obj/item/reagent_containers/food/snacks/meat,
-/obj/item/reagent_containers/food/snacks/meat,
-/obj/item/reagent_containers/food/snacks/meat,
-/obj/item/reagent_containers/food/snacks/meat,
-/obj/item/reagent_containers/food/snacks/meat,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
-/area/submap/Smol3)
-"g" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/food/snacks/chips,
-/obj/item/reagent_containers/food/snacks/chips,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/Smol3)
 "h" = (
 /obj/structure/table/woodentable,
@@ -74,13 +51,8 @@
 /area/submap/Smol3)
 "j" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/spacecash/c200,
 /turf/simulated/floor/outdoors/dirt,
-=======
-/obj/item/spacecash/c200,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/Smol3)
 
 (1,1,1) = {"

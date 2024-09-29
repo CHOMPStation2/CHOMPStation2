@@ -39,15 +39,9 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = 28
 	},
-<<<<<<< HEAD
 /obj/item/weldingtool,
 /turf/simulated/shuttle/floor,
 /area/submap/epod)
-=======
-/obj/item/weldingtool,
-/turf/simulated/shuttle/floor/virgo3b,
-/area/submap/Epod1)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "j" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/epod)
@@ -74,17 +68,10 @@
 	pixel_x = -32;
 	pixel_y = 0
 	},
-<<<<<<< HEAD
 /obj/item/storage/backpack/satchel,
 /obj/item/spacecash/c100,
 /turf/simulated/shuttle/floor,
 /area/submap/epod)
-=======
-/obj/item/storage/backpack/satchel,
-/obj/item/spacecash/c100,
-/turf/simulated/shuttle/floor/virgo3b,
-/area/submap/Epod1)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "m" = (
 /obj/structure/shuttle/window,
 /obj/structure/grille,

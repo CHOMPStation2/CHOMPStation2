@@ -20,25 +20,15 @@
 /obj/item/towel/random,
 /obj/item/towel/random,
 /obj/structure/table/standard,
-<<<<<<< HEAD
 /obj/item/storage/firstaid,
 /turf/simulated/floor/tiled/asteroid_steel,
-=======
-/obj/item/storage/firstaid,
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "bb" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-<<<<<<< HEAD
 /obj/item/multitool,
 /turf/simulated/floor/wood,
-=======
-/obj/item/multitool,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "bQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -68,13 +58,8 @@
 /area/submap/oldhotel)
 "dn" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
-=======
-/obj/item/flame/candle/everburn,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "dr" = (
 /obj/item/stack/material/log/sif,
@@ -141,23 +126,6 @@
 /obj/random/junk,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/oldhotel)
-<<<<<<< HEAD
-=======
-"je" = (
-/obj/structure/closet/cabinet,
-/obj/item/binoculars/spyglass,
-/obj/random/contraband,
-/obj/random/contraband,
-/obj/random/maintenance/medical,
-/obj/random/cash,
-/obj/random/drinkbottle,
-/obj/random/junk,
-/obj/random/junk,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/turf/simulated/floor/wood/virgo3b,
-/area/submap/oldhotel)
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 "jO" = (
 /obj/structure/bed/chair/oldsofa,
 /turf/simulated/floor/carpet/blue,
@@ -182,7 +150,6 @@
 /area/submap/oldhotel)
 "lj" = (
 /obj/structure/table/wooden_reinforced,
-<<<<<<< HEAD
 /obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
@@ -190,29 +157,11 @@
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/piratedouble,
 /turf/simulated/floor/wood,
-=======
-/obj/item/material/kitchen/rollingpin,
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
-/area/submap/oldhotel)
-"ly" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/mimedouble,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "lZ" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/tray,
-<<<<<<< HEAD
 /turf/simulated/floor/carpet/blue,
-=======
-/turf/simulated/floor/carpet/sblucarpet/virgo3b,
-/area/submap/oldhotel)
-"mr" = (
-/obj/structure/table/woodentable,
-/obj/item/cell/hyper,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "mR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -222,13 +171,8 @@
 /turf/simulated/floor,
 /area/submap/oldhotel)
 "nG" = (
-<<<<<<< HEAD
 /obj/item/material/shard,
 /turf/simulated/floor/outdoors/dirt,
-=======
-/obj/item/material/shard,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "nZ" = (
 /obj/fiftyspawner/wood,
@@ -237,20 +181,7 @@
 "op" = (
 /obj/structure/table/woodentable,
 /obj/random/cigarettes,
-<<<<<<< HEAD
 /turf/simulated/floor/carpet/blue,
-=======
-/turf/simulated/floor/carpet/sblucarpet/virgo3b,
-/area/submap/oldhotel)
-"pi" = (
-/obj/item/material/shard,
-/obj/item/material/shard{
-	icon_state = "medium";
-	pixel_x = 12;
-	pixel_y = 7
-	},
-/turf/template_noop,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "pn" = (
 /obj/item/material/shard,
@@ -268,28 +199,13 @@
 /turf/simulated/floor/wood,
 /area/submap/oldhotel)
 "rb" = (
-<<<<<<< HEAD
 /obj/item/module/power_control,
 /turf/simulated/floor/tiled/asteroid_steel,
-=======
-/obj/item/module/power_control,
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "rK" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
-<<<<<<< HEAD
 /turf/simulated/floor/wood,
-=======
-/turf/simulated/floor/wood/virgo3b,
-/area/submap/oldhotel)
-"rZ" = (
-/obj/item/material/shard{
-	icon_state = "medium"
-	},
-/turf/template_noop,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "sd" = (
 /obj/structure/toilet,
@@ -306,36 +222,21 @@
 /area/submap/oldhotel)
 "tz" = (
 /obj/structure/bed/double/padded,
-<<<<<<< HEAD
 /obj/item/bedsheet/rddouble,
 /turf/simulated/floor/wood,
-=======
-/obj/item/bedsheet/rddouble,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "tE" = (
 /obj/structure/table/woodentable,
 /obj/random/coin,
-<<<<<<< HEAD
 /obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/carpet/blue,
-=======
-/obj/item/reagent_containers/glass/rag,
-/turf/simulated/floor/carpet/sblucarpet/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "tV" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
-<<<<<<< HEAD
 /obj/item/material/shard,
 /turf/simulated/floor/wood,
-=======
-/obj/item/material/shard,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "uF" = (
 /obj/fiftyspawner/steel,
@@ -377,13 +278,8 @@
 /area/submap/oldhotel)
 "vR" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/flame/candle/candelabra,
 /turf/simulated/floor/carpet/blue,
-=======
-/obj/item/flame/candle/candelabra,
-/turf/simulated/floor/carpet/sblucarpet/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "wm" = (
 /obj/random/trash,
@@ -391,7 +287,6 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/oldhotel)
 "wK" = (
-<<<<<<< HEAD
 /obj/item/material/shard,
 /obj/item/material/shard,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -405,31 +300,6 @@
 "wX" = (
 /obj/random/trash_pile,
 /turf/template_noop,
-=======
-/obj/item/material/shard,
-/obj/item/material/shard,
-/obj/item/material/shard{
-	icon_state = "medium";
-	pixel_x = 12;
-	pixel_y = 7
-	},
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
-/area/submap/oldhotel)
-"wV" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/reagent_containers/glass/beaker,
-/obj/item/reagent_containers/food/condiment/enzyme,
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
-/area/submap/oldhotel)
-"wX" = (
-/obj/item/material/shard,
-/obj/item/material/shard{
-	icon_state = "medium";
-	pixel_x = 12;
-	pixel_y = 7
-	},
-/turf/simulated/floor/outdoors/dirt/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "yj" = (
 /obj/random/mob/sif/peaceful,
@@ -448,7 +318,6 @@
 /obj/structure/noticeboard,
 /turf/simulated/wall/wood,
 /area/submap/oldhotel)
-<<<<<<< HEAD
 "zE" = (
 /obj/structure/closet/cabinet,
 /obj/random/maintenance/medical,
@@ -460,17 +329,6 @@
 /obj/random/junk,
 /obj/random/maintenance,
 /turf/simulated/floor/wood,
-=======
-"zO" = (
-/obj/item/material/shard,
-/obj/structure/grille/broken/rustic,
-/obj/item/material/shard{
-	icon_state = "medium";
-	pixel_x = 12;
-	pixel_y = 7
-	},
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "zP" = (
 /obj/random/plushie,
@@ -478,13 +336,8 @@
 /area/submap/oldhotel)
 "Ac" = (
 /obj/structure/table/wooden_reinforced,
-<<<<<<< HEAD
 /obj/item/material/knife/butch,
 /turf/simulated/floor/tiled/asteroid_steel,
-=======
-/obj/item/material/knife/butch,
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "AO" = (
 /obj/structure/railing,
@@ -492,22 +345,8 @@
 /area/submap/oldhotel)
 "AU" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/tape,
 /turf/simulated/floor/wood,
-=======
-/obj/item/rectape,
-/turf/simulated/floor/wood/virgo3b,
-/area/submap/oldhotel)
-"AZ" = (
-/obj/structure/table/woodentable,
-/obj/item/trash/candle,
-/obj/item/paper{
-	info = "This is a stupid tresure hunt task, that thing is not taking us anywhere. Go on and have fun finding a waste of time.";
-	name = "Wrinkled sheet of paper"
-	},
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "Bt" = (
 /obj/structure/closet/cabinet,
@@ -522,13 +361,8 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/oldhotel)
 "CS" = (
-<<<<<<< HEAD
 /obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/wood,
-=======
-/obj/item/storage/toolbox/mechanical,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "Di" = (
 /obj/structure/table/wooden_reinforced,
@@ -584,7 +418,6 @@
 /area/submap/oldhotel)
 "GV" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/storage/fancy/candle_box,
 /obj/item/storage/fancy/candle_box,
 /obj/item/storage/fancy/candle_box,
@@ -605,22 +438,6 @@
 "Ik" = (
 /obj/item/material/shard,
 /turf/simulated/floor/tiled/asteroid_steel,
-=======
-/obj/item/storage/fancy/candle_box,
-/obj/item/storage/fancy/candle_box,
-/obj/item/storage/fancy/candle_box,
-/obj/item/flame/lighter/random,
-/obj/item/flame/lighter/random,
-/obj/item/melee/umbrella/random,
-/turf/simulated/floor/wood/virgo3b,
-/area/submap/oldhotel)
-"Ik" = (
-/obj/item/material/shard,
-/obj/item/material/shard{
-	icon_state = "medium"
-	},
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "Il" = (
 /obj/structure/closet/secure_closet/freezer/kitchen{
@@ -642,19 +459,7 @@
 /area/submap/oldhotel)
 "JV" = (
 /obj/structure/table/bench/sifwooden,
-<<<<<<< HEAD
 /turf/simulated/floor/outdoors/dirt,
-=======
-/turf/simulated/floor/outdoors/dirt/virgo3b,
-/area/submap/oldhotel)
-"Lg" = (
-/obj/item/material/shard,
-/obj/structure/grille/broken/rustic,
-/obj/item/material/shard{
-	icon_state = "medium"
-	},
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "Mk" = (
 /obj/structure/closet/crate,
@@ -695,7 +500,6 @@
 /area/submap/oldhotel)
 "Qv" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/paper_bin,
 /obj/item/pen,
 /obj/item/pen,
@@ -705,16 +509,6 @@
 "Qw" = (
 /obj/item/stool,
 /obj/random/projectile/scrapped_shotgun,
-=======
-/obj/item/paper_bin,
-/obj/item/pen,
-/obj/item/pen,
-/obj/item/pen,
-/turf/simulated/floor/wood/virgo3b,
-/area/submap/oldhotel)
-"Qw" = (
-/obj/item/stool,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/random/cash,
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
@@ -749,13 +543,8 @@
 /area/submap/oldhotel)
 "Sf" = (
 /obj/structure/bed/double/padded,
-<<<<<<< HEAD
 /obj/item/bedsheet/yellowdouble,
 /turf/simulated/floor/wood,
-=======
-/obj/item/bedsheet/yellowdouble,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "Sy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -765,19 +554,10 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/oldhotel)
 "SL" = (
-<<<<<<< HEAD
 /obj/item/material/shard,
 /obj/item/material/shard,
 /obj/item/material/shard{
 	pixel_x = 9
-=======
-/obj/item/material/shard,
-/obj/item/material/shard,
-/obj/item/material/shard{
-	icon_state = "medium";
-	pixel_x = 12;
-	pixel_y = 7
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	},
 /turf/simulated/floor,
 /area/submap/oldhotel)
@@ -794,7 +574,6 @@
 /area/submap/oldhotel)
 "Uw" = (
 /obj/structure/table/wooden_reinforced,
-<<<<<<< HEAD
 /obj/item/book/manual/chef_recipes,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/oldhotel)
@@ -803,16 +582,6 @@
 /obj/item/flame/lighter/zippo/royal,
 /obj/item/lipstick/random,
 /turf/simulated/floor/wood,
-=======
-/obj/item/book/manual/chef_recipes,
-/turf/simulated/floor/tiled/old_tile/white/virgo3b,
-/area/submap/oldhotel)
-"UU" = (
-/obj/structure/table/woodentable,
-/obj/item/flame/lighter/zippo/royal,
-/obj/item/lipstick/random,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/oldhotel)
 "Vf" = (
 /obj/structure/window/reinforced/tinted{

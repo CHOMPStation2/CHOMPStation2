@@ -16430,13 +16430,8 @@
 	},
 /obj/structure/table/rack,
 /obj/item/clothing/suit/fire/firefighter,
-<<<<<<< HEAD
 /obj/item/tank/oxygen/red,
 /obj/item/clothing/mask/gas,
-=======
-/obj/item/tank/oxygen/red,
-/obj/item/clothing/mask/gas/wwii,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/item/clothing/head/hardhat/red,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/research)
@@ -21068,13 +21063,8 @@
 "aKh" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/fire/firefighter,
-<<<<<<< HEAD
 /obj/item/tank/oxygen/red,
 /obj/item/clothing/mask/gas,
-=======
-/obj/item/tank/oxygen/red,
-/obj/item/clothing/mask/gas/wwii,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /obj/item/clothing/head/hardhat/red,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/research)

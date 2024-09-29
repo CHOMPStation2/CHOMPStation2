@@ -669,7 +669,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 10;
 	icon_state = "intact";
-	
+
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
@@ -683,7 +683,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 8;
 	icon_state = "map";
-	
+
 	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
@@ -1139,7 +1139,7 @@
 	dir = 1;
 	icon_state = "extinguisher_closed";
 	pixel_y = 32;
-	
+
 	},
 /turf/simulated/floor,
 /area/engineering/engine_gas)
@@ -1195,12 +1195,8 @@
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "de" = (
-<<<<<<< HEAD
 /obj/item/radio/intercom{
 	dir = 2;
-=======
-/obj/item/radio/intercom{
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	pixel_y = -24
 	},
 /turf/simulated/floor,
