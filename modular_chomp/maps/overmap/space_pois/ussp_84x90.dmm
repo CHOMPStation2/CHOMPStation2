@@ -361,7 +361,7 @@
 "bO" = (
 /obj/structure/table/standard,
 /obj/item/taperecorder,
-/obj/item/tape/random,
+/obj/item/rectape/random,
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "bR" = (

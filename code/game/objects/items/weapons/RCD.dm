@@ -30,13 +30,8 @@
 	var/material_to_use = DEFAULT_WALL_MATERIAL // So badmins can make RCDs that print diamond walls.
 	var/make_rwalls = FALSE // If true, when building walls, they will be reinforced.
 /* VOREStation Removal - Unused
-<<<<<<< HEAD
 /obj/item/rcd/Initialize()
 
-=======
-/obj/item/rcd/Initialize()
-	
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	src.spark_system = new /datum/effect/effect/system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
