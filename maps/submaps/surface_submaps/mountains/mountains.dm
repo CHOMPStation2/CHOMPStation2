@@ -1,7 +1,6 @@
 // This causes PoI maps to get 'checked' and compiled, when undergoing a unit test.
 // This is so CI can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 // When adding a new PoI, please add it to this list.
-<<<<<<< HEAD
 #if MAP_TEST
 #include "BlastMine1.dmm"
 #include "CaveTrench.dmm"
@@ -9,14 +8,6 @@
 #include "Cliff1.dmm"
 #include "crashedcontainmentshuttle.dmm"
 #include "CrashedMedShuttle1.dmm"
-=======
-#ifdef MAP_TEST
-#include "deadBeacon.dmm"
-#include "prepper1.dmm"
-#include "quarantineshuttle.dmm"
-#include "Mineshaft1.dmm"
-#include "Scave1.dmm"
->>>>>>> 5260e2cfda... Merge pull request #16360 from ShadowLarkens/mapci
 #include "crashed_ufo.dmm"
 #include "crashed_ufo_frigate.dmm"
 #include "crystal1.dmm"
@@ -337,7 +328,7 @@
 	name = "spatial anomaly"
 	desc = "A strange section of the caves that seems twist and turn in ways that shouldn't be physically possible."
 	mappath = 'maps/submaps/surface_submaps/mountains/spatial_anomaly.dmm'
-	cost = 20
+	cost = 20 // CHOMPEdit
 	fixed_orientation = TRUE
 
 /datum/map_template/surface/mountains/normal/Speakeasy //VOREStation add
@@ -400,20 +391,4 @@
 	mappath = 'maps/submaps/surface_submaps/mountains/Cavelake.dmm'
 	cost = 20
 
-<<<<<<< HEAD
 */
-=======
-/datum/map_template/surface/mountains/deep/spatial_anomaly
-	name = "spatial anomaly"
-	desc = "A strange section of the caves that seems twist and turn in ways that shouldn't be physically possible."
-	mappath = 'maps/submaps/surface_submaps/mountains/spatial_anomaly.dmm'
-	cost = INFINITY /// Prevent spawning.
-	fixed_orientation = TRUE
-
-/datum/map_template/surface/mountains/normal/Speakeasy //VOREStation add
-	name = "Speakeasy"
-	desc = "A hidden underground bar to serve drinks in secret and in style."
-	mappath = 'maps/submaps/surface_submaps/mountains/speakeasy_vr.dmm'
-	cost = 10
-	allow_duplicates = FALSE
->>>>>>> 5260e2cfda... Merge pull request #16360 from ShadowLarkens/mapci

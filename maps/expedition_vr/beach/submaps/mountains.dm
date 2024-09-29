@@ -371,7 +371,3 @@
 	mappath = 'maps/submaps/surface_submaps/mountains/speakeasy_vr.dmm'
 	cost = 10
 	allow_duplicates = FALSE
-<<<<<<< HEAD
-	
-=======
->>>>>>> 5260e2cfda... Merge pull request #16360 from ShadowLarkens/mapci
