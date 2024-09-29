@@ -124,7 +124,7 @@
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/eclipse_stronghold/sectora
-name = "Base Neon - Docks"
+	name = "Base Neon - Docks"
 
 /area/surface/tyr/eclipse_stronghold/sectorb
 	name = "Base Neon - Security"
