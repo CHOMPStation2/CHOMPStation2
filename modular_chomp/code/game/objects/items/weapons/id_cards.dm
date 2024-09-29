@@ -7,9 +7,11 @@
 
 /obj/item/weapon/card/id/exploration/borg/Initialize()
 	. = ..()
-	R = loc.loc
-	registered_name = R.braintype
-	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
+	if(loc)
+		R = loc.loc
+		if(istype(R))
+			registered_name = R.braintype
+			RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
 
 /obj/item/weapon/card/id/exploration/borg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
 	if(old_loc == R || old_loc == R.module)
