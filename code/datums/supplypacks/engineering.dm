@@ -193,6 +193,7 @@
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Particle Accelerator crate"
 	access = list(access_ce, access_research) // CHOMPEdit
+	one_access = TRUE //CHOMPAdd
 
 /datum/supply_pack/eng/shield_gen
 	contains = list(/obj/item/weapon/circuitboard/shield_gen)
@@ -329,6 +330,13 @@
 	containername = "Fusion Fuel Compressor circuitry crate"
 	containertype = /obj/structure/closet/crate/einstein
 	contains = list(/obj/item/weapon/circuitboard/fusion_fuel_compressor)
+
+/datum/supply_pack/eng/deuterium
+	name = "Deuterium crate"
+	cost = 50
+	containername = "Deuterium crate"
+	containertype = /obj/structure/closet/crate/einstein
+	contains = list(/obj/fiftyspawner/deuterium)
 
 /datum/supply_pack/eng/tritium
 	name = "Tritium crate"

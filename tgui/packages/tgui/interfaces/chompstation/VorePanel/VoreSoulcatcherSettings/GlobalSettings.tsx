@@ -7,7 +7,8 @@ export const GlobalSettings = (props: {
   ext_hearing: BooleanLike;
   ext_vision: BooleanLike;
   mind_backups: BooleanLike;
-  ar_projecting: BooleanLike;
+  sr_projecting: BooleanLike;
+  see_sr_projecting: BooleanLike;
   show_vore_sfx: BooleanLike;
 }) => {
   const { act } = useBackend();
@@ -16,7 +17,8 @@ export const GlobalSettings = (props: {
     ext_hearing,
     ext_vision,
     mind_backups,
-    ar_projecting,
+    sr_projecting,
+    see_sr_projecting,
     show_vore_sfx,
   } = props;
 
@@ -61,14 +63,28 @@ export const GlobalSettings = (props: {
         <Button
           icon="street-view"
           tooltip={
-            (ar_projecting ? 'Allow' : 'Disallow') +
-            ' your captured souls to AR project themselves.'
+            (sr_projecting ? 'Allow' : 'Disallow') +
+            ' your captured souls to SR project themselves.'
           }
           tooltipPosition="bottom"
-          color={ar_projecting ? 'green' : 'red'}
-          onClick={() => act('toggle_ar_projecting')}
+          color={sr_projecting ? 'green' : 'red'}
+          onClick={() => act('toggle_sr_projecting')}
         >
-          AR Projecting
+          SR Projecting
+        </Button>
+        <Button
+          icon="eye-low-vision"
+          tooltip={
+            (see_sr_projecting ? 'Enable' : 'Disable') +
+            ' SR vision to ' +
+            (see_sr_projecting ? 'see' : 'hide') +
+            ' projecting souls.'
+          }
+          tooltipPosition="bottom"
+          color={see_sr_projecting ? 'green' : 'red'}
+          onClick={() => act('toggle_sr_vision')}
+        >
+          SR Vision
         </Button>
         <Button
           icon={show_vore_sfx ? 'circle-play' : 'circle-pause'}

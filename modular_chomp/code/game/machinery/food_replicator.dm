@@ -36,7 +36,6 @@
 	. = ..()
 
 	default_apply_parts()
-	RefreshParts()
 
 /obj/machinery/food_replicator/dismantle()
 	var/turf/T = get_turf(src)
@@ -72,7 +71,7 @@
 		var/product_path = products[choice]
 		var/obj/item/weapon/reagent_containers/foodItem = new product_path
 
-		var/total = clamp(foodItem.reagents.get_free_space()-foodItem.reagents.total_volume, 1, 300)
+		var/total = abs(foodItem.reagents.total_volume-foodItem.reagents.get_free_space())
 
 		if(!container)
 			to_chat(user, SPAN_WARNING("There is no container!"))

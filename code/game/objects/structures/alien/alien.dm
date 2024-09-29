@@ -75,13 +75,22 @@
 
 		// Aliens can get straight through these.
 		if(istype(usr,/mob/living/carbon))
-			if(user.a_intent == I_HURT)
+			if(user.a_intent == I_HURT) // CHOMPAdd
 				var/mob/living/carbon/M = usr
 				if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
 					visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
 					health = 0
 					healthcheck()
 					return
+				if(locate(/obj/item/organ/internal/xenos/resinspinner/replicant) in M.internal_organs)
+					if(!do_after(M, 3 SECONDS))
+						return
+					visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
+					health = 0
+					healthcheck()
+					return
+			visible_message("<span class='warning'>[usr] claws at the [name]!</span>")
+			health -= rand(5,10)
 	healthcheck()
 	return
 

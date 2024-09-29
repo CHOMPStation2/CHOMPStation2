@@ -18,7 +18,7 @@
 	pref.job_talon_med		= save_data["job_talon_med"]
 	pref.job_talon_high		= save_data["job_talon_high"]
 	//VOREStation Add End
-	pref.player_alt_titles	= save_data["player_alt_titles"]
+	pref.player_alt_titles	= check_list_copy(save_data["player_alt_titles"])
 	//CHOMPStation Add
 	pref.job_other_low	= save_data["job_other_low"]
 	pref.job_other_med	= save_data["job_other_med"]
@@ -41,7 +41,7 @@
 	save_data["job_talon_med"]		= pref.job_talon_med
 	save_data["job_talon_high"]		= pref.job_talon_high
 	//VOREStation Add End
-	save_data["player_alt_titles"]	= pref.player_alt_titles
+	save_data["player_alt_titles"]	= check_list_copy(pref.player_alt_titles)
 	//CHOMPStation Add
 	save_data["job_other_low"]	= pref.job_other_low
 	save_data["job_other_med"]	= pref.job_other_med
