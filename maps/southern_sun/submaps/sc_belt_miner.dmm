@@ -9,7 +9,7 @@
 /turf/space,
 /area/shuttle/beltferry/belt)
 "ad" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	pixel_y = 24;
 	req_access = list()
@@ -333,7 +333,7 @@
 /area/outpost/mining_main/belt_outpost/atmos)
 "aP" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	pixel_y = 24;
 	req_access = list()
@@ -2037,13 +2037,13 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/steel,
 /area/outpost/mining_main/belt_outpost/dorms)
 "dJ" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,

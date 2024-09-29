@@ -630,7 +630,7 @@
 /area/awaymission/snowfield/command/bridge)
 "aFI" = (
 /obj/item/material/ashtray/glass,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/front_desk)
@@ -819,9 +819,9 @@
 	corpseidaccess = "Syndicate";
 	corpseidjob = "N/A";
 	corpsemask = /obj/item/clothing/mask/balaclava;
-	corpsepocket1 = /obj/item/device/binoculars;
-	corpsepocket2 = /obj/item/device/camerabug/spy;
-	corpseradio = /obj/item/device/radio/headset;
+	corpsepocket1 = /obj/item/binoculars;
+	corpsepocket2 = /obj/item/camerabug/spy;
+	corpseradio = /obj/item/radio/headset;
 	corpseshoes = /obj/item/clothing/shoes/boots/combat;
 	corpsesuit = /obj/item/clothing/suit/armor/pcarrier/bulletproof/full;
 	corpseuniform = /obj/item/clothing/under/tactical;
@@ -1178,7 +1178,7 @@
 	},
 /obj/structure/closet/secure_closet/paramedic{
 	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/device/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/device/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/device/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
+	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
 	},
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/neutral,
@@ -1380,7 +1380,7 @@
 	armor = list("melee"=10,"bullet"=0,"laser"=0,"energy"=5,"bomb"=0,"bio"=0,"rad"=60);
 	desc = "Over a suit that protects against extreme fire and heat, this seems to be having a thin layer of coating underneath, providing additional protection against radiation."
 	},
-/obj/item/device/geiger,
+/obj/item/geiger,
 /obj/item/clothing/head/hardhat/firefighter/atmos,
 /obj/item/clothing/head/hardhat/firefighter/atmos,
 /obj/structure/window/reinforced,
@@ -2026,7 +2026,7 @@
 /area/awaymission/snowfield/security/security_cell)
 "bNA" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/seconddesk)
@@ -2232,7 +2232,7 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "bYP" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
@@ -2444,7 +2444,7 @@
 /area/awaymission/snowfield/engineering/engine)
 "ciR" = (
 /obj/structure/table/reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/engineering/monitor_room)
 "cji" = (
@@ -2927,7 +2927,7 @@
 /area/awaymission/snowfield/outside)
 "cDP" = (
 /obj/structure/closet/secure_closet/warden{
-	starts_with = list(/obj/item/clothing/gloves/combat,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/shield/riot,/obj/item/ammo_magazine/akm=2,/obj/item/gun/projectile/automatic/serdy/krinkov,/obj/item/clothing/head/beret/sec/corporate/warden,/obj/item/clothing/head/helmet/warden/hat,/obj/item/clothing/head/helmet/warden,/obj/item/clothing/suit/armor/swat/officer,/obj/item/device/radio/headset/heads/hos/alt,/obj/item/device/radio/headset/heads/hos,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant/skinned,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton)
+	starts_with = list(/obj/item/clothing/gloves/combat,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/shield/riot,/obj/item/ammo_magazine/akm=2,/obj/item/gun/projectile/automatic/serdy/krinkov,/obj/item/clothing/head/beret/sec/corporate/warden,/obj/item/clothing/head/helmet/warden/hat,/obj/item/clothing/head/helmet/warden,/obj/item/clothing/suit/armor/swat/officer,/obj/item/radio/headset/heads/hos/alt,/obj/item/radio/headset/heads/hos,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant/skinned,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
@@ -2938,7 +2938,7 @@
 /area/awaymission/snowfield/dorms/dorm2)
 "cEx" = (
 /obj/structure/closet/secure_closet/hydroponics,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
 	},
@@ -3063,7 +3063,7 @@
 /obj/machinery/cell_charger{
 	pixel_y = 5
 	},
-/obj/item/device/multitool,
+/obj/item/multitool,
 /obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000
@@ -3129,7 +3129,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
@@ -3288,11 +3288,11 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/service/cafeteria)
 "cYR" = (
-/obj/item/device/flashlight{
+/obj/item/flashlight{
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/obj/item/device/flashlight{
+/obj/item/flashlight{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -3416,7 +3416,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/bsa)
 "ddF" = (
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/machinery/light/flicker{
 	dir = 8
 	},
@@ -3489,7 +3489,7 @@
 /area/awaymission/snowfield/security/detective)
 "dgg" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/command/monitorroom)
 "dgr" = (
@@ -3742,14 +3742,14 @@
 /area/awaymission/snowfield/medical/hallway)
 "dsh" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = 6
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_x = -6;
 	pixel_y = 4
 	},
@@ -3758,8 +3758,8 @@
 /obj/effect/floor_decal/corner/lightgrey{
 	dir = 1
 	},
-/obj/item/device/radio/phone,
-/obj/item/device/radio/off,
+/obj/item/radio/phone,
+/obj/item/radio/off,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/locker_room)
 "dsB" = (
@@ -3998,7 +3998,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -4635,7 +4635,7 @@
 "dWX" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
@@ -5078,7 +5078,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -5271,7 +5271,7 @@
 /area/awaymission/snowfield/public/toolstroage2)
 "ewG" = (
 /obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/device/radio/headset/headset_eng,/obj/item/device/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
+	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -5498,12 +5498,12 @@
 "eJD" = (
 /obj/item/paper_bin,
 /obj/item/pen/multi,
-/obj/item/device/taperecorder{
+/obj/item/taperecorder{
 	pixel_x = 4;
 	pixel_y = 2
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
 "eKf" = (
@@ -6357,9 +6357,9 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/device/analyzer/plant_analyzer,
-/obj/item/device/analyzer,
-/obj/item/device/analyzer,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/analyzer,
+/obj/item/analyzer,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/tech_storage)
@@ -7340,7 +7340,7 @@
 "grk" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/lobby)
 "grt" = (
@@ -7361,7 +7361,7 @@
 /area/awaymission/snowfield/dorms/panicroom)
 "gsi" = (
 /obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/device/radio/headset/headset_eng,/obj/item/device/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
+	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -8186,8 +8186,8 @@
 /area/awaymission/snowfield/security/armory_entrance)
 "gZy" = (
 /obj/structure/table/reinforced,
-/obj/item/device/reagent_scanner,
-/obj/item/device/mass_spectrometer/adv,
+/obj/item/reagent_scanner,
+/obj/item/mass_spectrometer/adv,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snowfield/security/detective)
 "haz" = (
@@ -9255,7 +9255,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/tool/crowbar=5,/obj/item/weldingtool=3,/obj/item/tool/wirecutters=5,/obj/item/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/tool/crowbar=5,/obj/item/weldingtool=3,/obj/item/tool/wirecutters=5,/obj/item/tool/wrench=5,/obj/item/analyzer=5,/obj/item/tool/screwdriver=5,/obj/item/flashlight/glowstick=3,/obj/item/flashlight/glowstick/red=3,/obj/item/flashlight/glowstick/blue=3,/obj/item/flashlight/glowstick/orange=3,/obj/item/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
@@ -10000,7 +10000,7 @@
 /area/awaymission/snowfield/security/security_cell)
 "iDe" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/hallway/commandhallway)
 "iDi" = (
@@ -10866,7 +10866,7 @@
 /obj/machinery/vending/engivend{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/device/geiger=4,/obj/item/device/multitool=4,/obj/item/cell/high=10,/obj/item/airlock_electronics=10,/obj/item/module/power_control=10,/obj/item/circuitboard/airalarm=10,/obj/item/circuitboard/firealarm=10,/obj/item/circuitboard/status_display=2,/obj/item/circuitboard/ai_status_display=2,/obj/item/circuitboard/newscaster=2,/obj/item/circuitboard/intercom=4,/obj/item/circuitboard/security/telescreen/entertainment=4,/obj/item/stock_parts/motor=2,/obj/item/stock_parts/spring=2,/obj/item/stock_parts/gear=2,/obj/item/circuitboard/atm,/obj/item/circuitboard/guestpass,/obj/item/circuitboard/keycard_auth,/obj/item/circuitboard/geiger,/obj/item/circuitboard/photocopier,/obj/item/circuitboard/fax,/obj/item/circuitboard/request,/obj/item/circuitboard/microwave,/obj/item/circuitboard/washing)
+	products = list(/obj/item/geiger=4,/obj/item/multitool=4,/obj/item/cell/high=10,/obj/item/airlock_electronics=10,/obj/item/module/power_control=10,/obj/item/circuitboard/airalarm=10,/obj/item/circuitboard/firealarm=10,/obj/item/circuitboard/status_display=2,/obj/item/circuitboard/ai_status_display=2,/obj/item/circuitboard/newscaster=2,/obj/item/circuitboard/intercom=4,/obj/item/circuitboard/security/telescreen/entertainment=4,/obj/item/stock_parts/motor=2,/obj/item/stock_parts/spring=2,/obj/item/stock_parts/gear=2,/obj/item/circuitboard/atm,/obj/item/circuitboard/guestpass,/obj/item/circuitboard/keycard_auth,/obj/item/circuitboard/geiger,/obj/item/circuitboard/photocopier,/obj/item/circuitboard/fax,/obj/item/circuitboard/request,/obj/item/circuitboard/microwave,/obj/item/circuitboard/washing)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/locker_room)
@@ -11086,7 +11086,7 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "jtR" = (
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/window/reinforced,
@@ -11339,7 +11339,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/detective{
-	starts_with = list(/obj/item/clothing/gloves/forensic,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/fedora,/obj/item/clothing/head/fedora/brown,/obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey,/obj/item/clothing/suit/armor/bulletproof,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/under/soviet,/obj/item/melee/classic_baton,/obj/item/reagent_containers/spray/pepper,/obj/item/device/flash,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant)
+	starts_with = list(/obj/item/clothing/gloves/forensic,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/fedora,/obj/item/clothing/head/fedora/brown,/obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey,/obj/item/clothing/suit/armor/bulletproof,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/under/soviet,/obj/item/melee/classic_baton,/obj/item/reagent_containers/spray/pepper,/obj/item/flash,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant)
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
@@ -11454,7 +11454,7 @@
 "jIv" = (
 /obj/structure/cable/yellow,
 /obj/structure/table/standard,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "empty west bump";
@@ -11557,7 +11557,7 @@
 	dir = 4
 	},
 /obj/structure/table/woodentable,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
@@ -11777,7 +11777,7 @@
 /area/awaymission/snowfield/outside)
 "jVm" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/command/bridge)
 "jVo" = (
@@ -12292,7 +12292,7 @@
 /obj/item/soap,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -13062,7 +13062,7 @@
 "kZl" = (
 /obj/structure/catwalk,
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_cell)
 "kZp" = (
@@ -13077,12 +13077,12 @@
 "kZv" = (
 /obj/item/paper_bin,
 /obj/item/pen/multi,
-/obj/item/device/taperecorder{
+/obj/item/taperecorder{
 	pixel_x = -4;
 	pixel_y = 2
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
 "kZK" = (
@@ -13840,7 +13840,7 @@
 /area/awaymission/snowfield/medical/staff_room)
 "lDj" = (
 /obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/device/radio/headset/headset_eng,/obj/item/device/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
+	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -13911,7 +13911,7 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "lFR" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/carpet,
 /area/awaymission/snowfield/security/detective)
 "lFV" = (
@@ -14069,7 +14069,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /obj/item/soap,
 /turf/simulated/floor/tiled/neutral,
@@ -14123,7 +14123,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/firingrange)
 "lPD" = (
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
 "lPK" = (
@@ -14922,7 +14922,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/southhallway)
 "mDK" = (
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/medical/surgery)
@@ -16251,7 +16251,7 @@
 /area/awaymission/snowfield/security/armory)
 "nFz" = (
 /obj/structure/closet/secure_closet/hydroponics,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
 /obj/effect/floor_decal/corner/green{
@@ -16423,7 +16423,7 @@
 /obj/item/paper_bin{
 	pixel_y = -6
 	},
-/obj/item/device/camera{
+/obj/item/camera{
 	name = "Autopsy Camera";
 	pixel_x = -2;
 	pixel_y = 7
@@ -16595,10 +16595,10 @@
 /area/awaymission/snowfield/service/hydro)
 "nVw" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
+/obj/item/binoculars,
+/obj/item/binoculars,
+/obj/item/binoculars,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
@@ -16981,7 +16981,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/tool/crowbar=5,/obj/item/weldingtool=3,/obj/item/tool/wirecutters=5,/obj/item/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/tool/crowbar=5,/obj/item/weldingtool=3,/obj/item/tool/wirecutters=5,/obj/item/tool/wrench=5,/obj/item/analyzer=5,/obj/item/tool/screwdriver=5,/obj/item/flashlight/glowstick=3,/obj/item/flashlight/glowstick/red=3,/obj/item/flashlight/glowstick/blue=3,/obj/item/flashlight/glowstick/orange=3,/obj/item/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
@@ -17578,10 +17578,10 @@
 /area/awaymission/snowfield/security/security_lockerroom)
 "oQl" = (
 /obj/structure/table/steel,
-/obj/item/device/integrated_electronics/debugger{
+/obj/item/integrated_electronics/debugger{
 	pixel_x = -5
 	},
-/obj/item/device/integrated_electronics/wirer{
+/obj/item/integrated_electronics/wirer{
 	pixel_x = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -17615,8 +17615,8 @@
 /obj/item/hand_labeler,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
-/obj/item/device/mass_spectrometer/adv,
-/obj/item/device/mass_spectrometer/adv,
+/obj/item/mass_spectrometer/adv,
+/obj/item/mass_spectrometer/adv,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/chemistry)
@@ -18350,7 +18350,7 @@
 /area/awaymission/snowfield/command/server)
 "pyu" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
@@ -18420,8 +18420,8 @@
 /obj/machinery/light_construct/small{
 	dir = 4
 	},
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/plating,
 /area/awaymission/snowfield/checkpointunpowered)
 "pAp" = (
@@ -18807,7 +18807,7 @@
 /obj/structure/closet/chefcloset,
 /obj/item/glass_jar,
 /obj/item/soap/nanotrasen,
-/obj/item/device/destTagger{
+/obj/item/destTagger{
 	pixel_x = 4;
 	pixel_y = 3
 	},
@@ -19600,12 +19600,12 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/tool/wrench,
 /obj/item/tool/crowbar,
-/obj/item/device/radio/off,
-/obj/item/device/binoculars,
+/obj/item/radio/off,
+/obj/item/binoculars,
 /obj/machinery/light,
 /obj/effect/spider/stickyweb,
-/obj/item/device/megaphone,
-/obj/item/device/radio/off,
+/obj/item/megaphone,
+/obj/item/radio/off,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/warden)
 "quU" = (
@@ -19714,7 +19714,7 @@
 /obj/item/clothing/gloves/yellow,
 /obj/item/clothing/gloves/yellow,
 /obj/item/clothing/gloves/yellow,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/techfloor,
@@ -19954,7 +19954,7 @@
 	layer = 2.6
 	},
 /obj/item/storage/toolbox/mechanical,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /obj/effect/floor_decal/industrial/outline,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
@@ -20805,7 +20805,7 @@
 	corpseidjob = "Security Guard";
 	corpsemask = /obj/item/clothing/mask/balaclava;
 	corpsepocket1 = /obj/item/ammo_magazine/makarov;
-	corpseradio = /obj/item/device/radio/headset;
+	corpseradio = /obj/item/radio/headset;
 	corpseshoes = /obj/item/clothing/shoes/boots/combat;
 	corpsesuit = /obj/item/clothing/suit/armor/pcarrier/medium/sol;
 	corpseuniform = /obj/item/clothing/under/solgov/utility/army/security;
@@ -20879,7 +20879,7 @@
 	},
 /obj/structure/closet/secure_closet/paramedic{
 	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/device/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/device/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/device/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
+	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
 	},
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/light{
@@ -21316,7 +21316,7 @@
 /area/awaymission/snowfield/command/observatory)
 "sfp" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpointunpowered)
 "sgz" = (
@@ -21466,7 +21466,7 @@
 "spM" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/woodentable,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -21574,7 +21574,7 @@
 /area/awaymission/snowfield/command/bridge)
 "sxD" = (
 /obj/structure/table/standard,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -21920,7 +21920,7 @@
 /obj/machinery/door/window/southleft{
 	req_access = list(1)
 	},
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/structure/barricade/planks,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/snowfield/security/seconddesk)
@@ -22017,7 +22017,7 @@
 /area/awaymission/snowfield/checkpoint)
 "sTG" = (
 /obj/structure/table/reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/chemistry)
 "sTH" = (
@@ -22836,7 +22836,7 @@
 /area/awaymission/snowfield/engineering/staff_room)
 "tGB" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/wood,
 /area/awaymission/snowfield/checkpoint)
 "tGK" = (
@@ -22856,7 +22856,7 @@
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
 "tIi" = (
-/obj/item/device/aicard,
+/obj/item/aicard,
 /obj/item/aiModule/reset,
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
@@ -23150,7 +23150,7 @@
 	pixel_y = -23;
 	req_one_access = list(1,45)
 	},
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/surgery)
 "tSs" = (
@@ -23246,7 +23246,7 @@
 /obj/machinery/vending/tool{
 	dir = 8;
 	pixel_x = -5;
-	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/tool/crowbar=5,/obj/item/weldingtool=3,/obj/item/tool/wirecutters=5,/obj/item/tool/wrench=5,/obj/item/device/analyzer=5,/obj/item/tool/screwdriver=5,/obj/item/device/flashlight/glowstick=3,/obj/item/device/flashlight/glowstick/red=3,/obj/item/device/flashlight/glowstick/blue=3,/obj/item/device/flashlight/glowstick/orange=3,/obj/item/device/flashlight/glowstick/yellow=3)
+	products = list(/obj/item/stack/cable_coil/random=10,/obj/item/tool/crowbar=5,/obj/item/weldingtool=3,/obj/item/tool/wirecutters=5,/obj/item/tool/wrench=5,/obj/item/analyzer=5,/obj/item/tool/screwdriver=5,/obj/item/flashlight/glowstick=3,/obj/item/flashlight/glowstick/red=3,/obj/item/flashlight/glowstick/blue=3,/obj/item/flashlight/glowstick/orange=3,/obj/item/flashlight/glowstick/yellow=3)
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
@@ -23534,7 +23534,7 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/awaymission/snowfield/emergency_pathway/EP_powered)
 "uiq" = (
-/obj/item/device/radio/phone{
+/obj/item/radio/phone{
 	pixel_y = -10
 	},
 /turf/simulated/wall/r_wall,
@@ -23625,7 +23625,7 @@
 	dir = 8
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /obj/item/material/knife/tacknife/combatknife,
 /obj/item/material/knife/tacknife/combatknife,
 /turf/simulated/floor/tiled/steel_grid,
@@ -24059,7 +24059,7 @@
 	},
 /obj/structure/closet/secure_closet/paramedic{
 	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/device/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/device/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/device/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
+	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
 	},
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/neutral,
@@ -24200,7 +24200,7 @@
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/grey/bordercorner,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
@@ -24326,7 +24326,7 @@
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
 "uUm" = (
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves,
@@ -24451,7 +24451,7 @@
 "vaq" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/device/radio/headset/headset_sec/alt,/obj/item/device/radio/headset/headset_sec,/obj/item/device/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -24522,8 +24522,8 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "vdv" = (
 /obj/structure/table/reinforced,
-/obj/item/device/geiger,
-/obj/item/device/geiger,
+/obj/item/geiger,
+/obj/item/geiger,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
 "vdz" = (
@@ -24777,8 +24777,8 @@
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/clotting,
-/obj/item/device/defib_kit/compact/combat/loaded,
-/obj/item/device/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/heavy_armory)
 "vjJ" = (
@@ -25551,7 +25551,7 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "vQl" = (
 /obj/structure/table/standard,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/engine_checkpoint)
 "vRc" = (
@@ -25751,7 +25751,7 @@
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "waU" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -26126,7 +26126,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/device/radio/headset/headset_med,/obj/item/device/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -26471,7 +26471,7 @@
 /area/awaymission/snowfield/hallway/southhallway)
 "wKo" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/command/sub_chamber)
 "wKA" = (
@@ -27625,7 +27625,7 @@
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "xqP" = (
 /obj/structure/table/reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/engineering/engine)
 "xqQ" = (
@@ -27889,7 +27889,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/table/steel,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/apc{
 	name = "empty south bump";
@@ -27983,7 +27983,7 @@
 /area/awaymission/snowfield/command/sub_chamber)
 "xFs" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -28599,7 +28599,7 @@
 /area/awaymission/snowfield/command/testroom)
 "yih" = (
 /obj/structure/table/woodentable,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/awaymission/snowfield/security/observatory)

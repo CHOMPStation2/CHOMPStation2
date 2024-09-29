@@ -147,7 +147,7 @@
 	dir = 4
 	},
 /obj/structure/undies_wardrobe,
-/obj/item/device/mindbinder,
+/obj/item/mindbinder,
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/diescraper/indoors/floor9)
 "au" = (
@@ -240,7 +240,7 @@
 "aH" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/secure/briefcase/nerd_pack_med,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "aI" = (
@@ -548,7 +548,7 @@
 "bC" = (
 /obj/structure/table/reinforced,
 /obj/item/virusdish/random,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "bD" = (
@@ -691,7 +691,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/sky)
 "bV" = (
-/obj/item/device/radio/uplink,
+/obj/item/radio/uplink,
 /obj/item/clothing/under/suit_jacket/charcoal,
 /obj/item/clothing/accessory/jacket/charcoal,
 /obj/structure/table/standard,
@@ -729,19 +729,19 @@
 /area/awaymission/diescraper/indoors/floor7)
 "cc" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -4;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 4;
 	pixel_y = -4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 4;
 	pixel_y = 5
 	},
@@ -2850,7 +2850,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "iN" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/unsimulated/floor/wood/alt/parquet,
 /area/awaymission/diescraper/indoors/floor9)
 "iO" = (
@@ -3095,7 +3095,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "jy" = (
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 2
 	},
 /obj/structure/table/bench/sifwooden,
@@ -3182,7 +3182,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "jL" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "jM" = (
@@ -3529,7 +3529,7 @@
 	},
 /obj/item/storage/firstaid/surgery,
 /obj/item/storage/firstaid/surgery,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/random/contraband/nofail,
 /obj/item/organ/internal/augment/armmounted,
 /turf/simulated/floor/tiled/dark,
@@ -4743,7 +4743,7 @@
 /area/awaymission/diescraper/indoors/floor1)
 "od" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "oe" = (
@@ -5604,7 +5604,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "qA" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/clown{
+/obj/item/flashlight/lamp/clown{
 	pixel_y = 5
 	},
 /turf/unsimulated/floor/wood/alt/panel,
@@ -6485,12 +6485,12 @@
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/item/clothing/suit/space/void/exploration,
 /obj/item/clothing/head/helmet/space/void/exploration,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/item/tank/jetpack/carbondioxide,
 /obj/item/clothing/suit/space/void/exploration,
 /obj/item/clothing/head/helmet/space/void/exploration,
@@ -6870,7 +6870,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "ui" = (
 /obj/structure/table/borosilicate,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "uj" = (
@@ -9248,10 +9248,10 @@
 /area/awaymission/diescraper/indoors/floor9)
 "AM" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = 4
 	},
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = -5
 	},
 /turf/simulated/floor/tiled,
@@ -9547,7 +9547,7 @@
 /area/awaymission/diescraper/indoors/floor1)
 "BG" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/integrated_circuit_printer/all_upgrades,
+/obj/item/integrated_circuit_printer/all_upgrades,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor4)
 "BH" = (
@@ -9746,14 +9746,14 @@
 "Cf" = (
 /obj/structure/closet/crate,
 /obj/item/storage/box/lights/mixed,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/radio{
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/radio{
 	frequency = 1487;
 	icon_state = "med_walkietalkie";
 	name = "Medbay Emergency Radio Link"
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	frequency = 1487;
 	icon_state = "med_walkietalkie";
 	name = "Medbay Emergency Radio Link"
@@ -9838,12 +9838,12 @@
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/item/clothing/suit/space/void/pilot,
 /obj/item/clothing/head/helmet/space/void/pilot,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/item/tank/jetpack/carbondioxide,
 /obj/item/clothing/suit/space/void/pilot,
 /obj/item/clothing/head/helmet/space/void/pilot,
@@ -10356,7 +10356,7 @@
 /area/awaymission/diescraper/indoors/floor4)
 "DM" = (
 /obj/structure/table/reinforced,
-/obj/item/device/retail_scanner,
+/obj/item/retail_scanner,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor7)
 "DN" = (
@@ -10851,7 +10851,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Fj" = (
 /obj/structure/table/standard,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
@@ -11485,7 +11485,7 @@
 /area/awaymission/diescraper/indoors/floor7)
 "GT" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/flashlight/lamp/clown,
+/obj/item/flashlight/lamp/clown,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/diescraper/indoors/floor10)
 "GU" = (
@@ -12012,7 +12012,7 @@
 /area/awaymission/diescraper/indoors/floor5)
 "Iu" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "Iv" = (
@@ -12111,7 +12111,7 @@
 "IH" = (
 /obj/structure/railing,
 /obj/structure/table/hardwoodtable,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor1)
@@ -13284,7 +13284,7 @@
 /obj/item/paper_bin{
 	pixel_y = -6
 	},
-/obj/item/device/camera{
+/obj/item/camera{
 	name = "Autopsy Camera";
 	pixel_x = -2;
 	pixel_y = 7
@@ -13480,7 +13480,7 @@
 /area/awaymission/diescraper/indoors/floor3)
 "MC" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
 "MD" = (
@@ -13739,11 +13739,11 @@
 /area/awaymission/diescraper/indoors/floor6)
 "Ns" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 5
 	},
-/obj/item/device/flashlight/lamp/green,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green{
 	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/kafel_full/beige,
@@ -14117,7 +14117,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Ox" = (
 /obj/structure/table/standard,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "Oy" = (
@@ -14602,11 +14602,11 @@
 /area/awaymission/diescraper/indoors/floor1)
 "PW" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/beacon_locator{
+/obj/item/beacon_locator{
 	pixel_y = 4
 	},
-/obj/item/device/beacon_locator,
-/obj/item/device/beacon_locator{
+/obj/item/beacon_locator,
+/obj/item/beacon_locator{
 	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -14768,7 +14768,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -15204,7 +15204,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "RZ" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/diescraper/indoors/floor10)
 "Sa" = (
@@ -16941,7 +16941,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "WN" = (
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/item/device/camera,
+/obj/item/camera,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
 "WO" = (
@@ -17330,15 +17330,15 @@
 /area/awaymission/diescraper/indoors/floor2)
 "Yc" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/beacon{
+/obj/item/radio/beacon{
 	pixel_y = 4;
 	on = 0
 	},
-/obj/item/device/radio/beacon{
+/obj/item/radio/beacon{
 	pixel_y = 1;
 	on = 0
 	},
-/obj/item/device/radio/beacon{
+/obj/item/radio/beacon{
 	pixel_y = -2;
 	on = 0
 	},

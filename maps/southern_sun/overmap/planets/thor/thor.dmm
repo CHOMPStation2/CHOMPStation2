@@ -326,7 +326,7 @@
 	},
 /area/surface/outside/thor/jungle)
 "dB" = (
-/obj/item/device/binoculars/spyglass,
+/obj/item/binoculars/spyglass,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
 "dE" = (
@@ -519,7 +519,7 @@
 /area/surface/outside/thor/jungle)
 "fx" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/clown,
+/obj/item/flashlight/lamp/clown,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor{
 	outdoors = 0
 	},
@@ -1050,13 +1050,13 @@
 /obj/structure/closet/crate{
 	name = "survival supplies"
 	},
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
 "lc" = (
@@ -1732,7 +1732,7 @@
 "qL" = (
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/carpet/green,
 /area/surface/thor/kitchen)
 "qP" = (
@@ -2333,12 +2333,12 @@
 /area/surface/thor/bar)
 "xy" = (
 /obj/structure/table/glass,
-/obj/item/device/radio{
+/obj/item/radio{
 	frequency = 1487;
 	icon_state = "med_walkietalkie";
 	name = "Medbay Emergency Radio Link"
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	frequency = 1487;
 	icon_state = "med_walkietalkie";
 	name = "Medbay Emergency Radio Link"
@@ -2797,7 +2797,7 @@
 /area/surface/thor/med)
 "CG" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/lino{
 	oxygen = 34.1451;
 	nitrogen = 63.4124;
@@ -3047,7 +3047,7 @@
 	name = "defibrillator closet";
 	pixel_x = -31
 	},
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
@@ -4053,7 +4053,7 @@
 /area/surface/outside/thor/pool)
 "Pg" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/yellow,
 /area/surface/thor/abandonedhouse)
 "Pj" = (
@@ -4076,7 +4076,7 @@
 /area/surface/outside/thor/outpost)
 "Pz" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/lino,
 /area/surface/thor/abandonedhouse)
 "PA" = (

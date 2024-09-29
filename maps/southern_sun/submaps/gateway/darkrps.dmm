@@ -134,7 +134,7 @@
 /area/awaymission/darkrp/subpower)
 "ams" = (
 /obj/structure/table/standard,
-/obj/item/device/ticket_printer,
+/obj/item/ticket_printer,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/toll)
 "anm" = (
@@ -269,14 +269,14 @@
 	icon_state = "0-2"
 	},
 /obj/structure/table/standard,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "auB" = (
@@ -993,7 +993,7 @@
 /area/awaymission/darkrp/downtownwarehouse)
 "bpf" = (
 /obj/effect/landmark/corpse/engineer,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/milspec,
 /area/awaymission/darkrp/sewers)
 "bps" = (
@@ -1394,7 +1394,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
 "bPr" = (
@@ -2592,7 +2592,7 @@
 /area/awaymission/darkrp/downtownbar)
 "dmO" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/darkrp/warehouseshack)
 "dnh" = (
@@ -2889,7 +2889,7 @@
 "dCy" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/browndouble,
-/obj/item/device/radio/subspace{
+/obj/item/radio/subspace{
 	pixel_y = 0;
 	pixel_x = 6
 	},
@@ -3164,7 +3164,7 @@
 /area/awaymission/darkrp/downtownbar)
 "ebi" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet,
 /area/awaymission/darkrp/subhouse1)
 "ebr" = (
@@ -3790,7 +3790,7 @@
 	},
 /area/awaymission/darkrp/outside/suburbs)
 "eOy" = (
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/plating,
 /area/awaymission/darkrp/parkcondo)
 "ePh" = (
@@ -4617,7 +4617,7 @@
 /area/awaymission/darkrp/outside/plaza)
 "fMI" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -4671,7 +4671,7 @@
 /area/awaymission/darkrp/subapartments)
 "fQr" = (
 /obj/structure/table/standard,
-/obj/item/device/ticket_printer,
+/obj/item/ticket_printer,
 /obj/item/clothing/suit/armor/pcarrier/light,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/toll)
@@ -5416,7 +5416,7 @@
 /area/awaymission/darkrp/outside)
 "gMc" = (
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 2
 	},
 /turf/simulated/floor/tiled,
@@ -7761,7 +7761,7 @@
 /area/awaymission/darkrp/downtownempty)
 "jLo" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
 "jLr" = (
@@ -8044,7 +8044,7 @@
 /obj/structure/table/steel,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/storage/box/lights/mixed,
-/obj/item/device/lightreplacer,
+/obj/item/lightreplacer,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
 "kdD" = (
@@ -8142,8 +8142,8 @@
 /area/awaymission/darkrp/outside/suburbs)
 "kjj" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/camera_film,
-/obj/item/device/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
 /obj/item/tool/wirecutters,
 /obj/item/tool/wirecutters,
 /turf/simulated/floor/wood,
@@ -8355,8 +8355,8 @@
 /area/awaymission/darkrp/plazarecroom)
 "kAk" = (
 /obj/structure/table/bench/wooden,
-/obj/item/device/flashlight/lamp,
-/obj/item/device/flashlight,
+/obj/item/flashlight/lamp,
+/obj/item/flashlight,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
 "kAO" = (
@@ -9242,9 +9242,9 @@
 /obj/machinery/light/floortube,
 /obj/structure/table/rack/shelf/steel,
 /obj/item/storage/toolbox/mechanical,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "lCE" = (
@@ -9332,7 +9332,7 @@
 /area/awaymission/darkrp/downtownwarehouse)
 "lIf" = (
 /obj/structure/table/woodentable,
-/obj/item/device/camera,
+/obj/item/camera,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazashop)
 "lJQ" = (
@@ -9482,7 +9482,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "lQr" = (
-/obj/item/device/geiger,
+/obj/item/geiger,
 /turf/simulated/floor/outdoors/dirt{
 	temperature = 293.15
 	},
@@ -9767,7 +9767,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/sewers)
 "mkY" = (
-/obj/item/device/assembly/mousetrap/armed,
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -10207,7 +10207,7 @@
 /obj/structure/table/rack,
 /obj/item/cell/device,
 /obj/item/cell/device,
-/obj/item/device/flashlight/color/red,
+/obj/item/flashlight/color/red,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
 "mMi" = (
@@ -10564,7 +10564,7 @@
 	dir = 1
 	},
 /obj/structure/table/woodentable,
-/obj/item/device/taperecorder,
+/obj/item/taperecorder,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
 "nkx" = (
@@ -11474,7 +11474,7 @@
 /area/awaymission/darkrp/downtownresturaunt)
 "ogb" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/camera,
+/obj/item/camera,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownshop)
 "ogN" = (
@@ -12531,8 +12531,8 @@
 /area/awaymission/darkrp/subpower)
 "poj" = (
 /obj/item/hand_labeler,
-/obj/item/device/mass_spectrometer/adv,
-/obj/item/device/mass_spectrometer/adv,
+/obj/item/mass_spectrometer/adv,
+/obj/item/mass_spectrometer/adv,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -12972,9 +12972,9 @@
 /area/awaymission/darkrp/sewers)
 "pGR" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/camera,
-/obj/item/device/camera,
-/obj/item/device/camera,
+/obj/item/camera,
+/obj/item/camera,
+/obj/item/camera,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazashop)
 "pHk" = (
@@ -14189,7 +14189,7 @@
 /area/awaymission/darkrp/subpowermaint)
 "qZr" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/pen,
+/obj/item/flashlight/pen,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
 "qZA" = (
@@ -15256,7 +15256,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
 "srI" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/lino,
 /area/awaymission/darkrp/ghettoapartments)
 "ssa" = (
@@ -15286,7 +15286,7 @@
 /area/awaymission/darkrp/outside)
 "sui" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
@@ -15569,7 +15569,7 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/darkrp/downtownshop)
 "sNF" = (
-/obj/item/device/assembly/mousetrap/armed,
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/outdoors/grass/heavy{
 	temperature = 293.15
 	},
@@ -16032,7 +16032,7 @@
 	},
 /area/awaymission/darkrp/outside)
 "tmI" = (
-/obj/item/device/assembly/mousetrap/armed,
+/obj/item/assembly/mousetrap/armed,
 /obj/item/reagent_containers/food/snacks/cheesewedge,
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -16626,7 +16626,7 @@
 /area/awaymission/darkrp/subpower)
 "tSb" = (
 /obj/structure/table/rack,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/ghettohouse1)
 "tTP" = (
@@ -16684,7 +16684,7 @@
 /area/awaymission/darkrp/downtownbar)
 "tYN" = (
 /obj/item/material/ashtray/glass,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
@@ -16783,10 +16783,10 @@
 /area/awaymission/darkrp/downtowngunshop)
 "ucQ" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
 "udm" = (
@@ -17439,9 +17439,9 @@
 /area/awaymission/darkrp/outside/plaza)
 "uWG" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/healthanalyzer/phasic,
-/obj/item/device/healthanalyzer/phasic,
-/obj/item/device/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
 "uWN" = (
@@ -17606,7 +17606,7 @@
 /area/awaymission/darkrp/brokehouse)
 "veQ" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
 "vfQ" = (

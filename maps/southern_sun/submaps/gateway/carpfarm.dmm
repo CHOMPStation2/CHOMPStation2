@@ -202,7 +202,7 @@
 /obj/structure/closet/toolcloset,
 /obj/item/pickaxe/jackhammer,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/plating,
 /area/awaymission/carpfarm/base)
 "aM" = (
@@ -1192,8 +1192,8 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/carpfarm/hostilebase)
 "KQ" = (
-/obj/item/device/multitool,
-/obj/item/device/multitool,
+/obj/item/multitool,
+/obj/item/multitool,
 /obj/structure/table/rack,
 /turf/simulated/floor/plating,
 /area/awaymission/carpfarm/hostilebase)

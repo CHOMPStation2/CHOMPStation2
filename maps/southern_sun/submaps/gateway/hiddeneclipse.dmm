@@ -233,7 +233,7 @@
 "dQ" = (
 /obj/structure/table/rack,
 /obj/item/circuitboard/shield_gen_ex,
-/obj/item/device/perfect_tele/alien,
+/obj/item/perfect_tele/alien,
 /obj/item/storage/belt/medical/alien,
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/hiddeneclipse/theabyss)

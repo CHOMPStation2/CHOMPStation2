@@ -310,7 +310,7 @@
 /area/awaymission/mol/kitchen)
 "cd" = (
 /obj/structure/safe,
-/obj/item/device/encryptionkey/omni,
+/obj/item/encryptionkey/omni,
 /obj/item/clothing/glasses/omni,
 /obj/item/ammo_casing/microbattery/medical/omni3,
 /turf/simulated/floor/wood,
@@ -776,7 +776,7 @@
 /area/awaymission/mol/scraptunnels)
 "fk" = (
 /obj/structure/table/marble,
-/obj/item/device/flashlight/slime,
+/obj/item/flashlight/slime,
 /obj/item/reagent_containers/food/snacks/slime,
 /obj/item/reagent_containers/food/snacks/slime,
 /obj/item/reagent_containers/food/snacks/slime,
@@ -1215,8 +1215,8 @@
 /area/awaymission/mol/kitchen/chamberA)
 "ia" = (
 /obj/effect/floor_decal/corner/yellow/border,
-/obj/item/device/defib_kit/compact/combat/loaded,
-/obj/item/device/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
 /obj/structure/table/standard,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
@@ -5324,7 +5324,7 @@
 /area/awaymission/mol/kitchen)
 "Ho" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood/sif,
 /area/awaymission/mol/dorms)
 "Hr" = (
@@ -5579,7 +5579,7 @@
 /obj/structure/safe,
 /obj/item/gun/energy/vepr/plasma,
 /obj/item/stack/material/supermatter,
-/obj/item/device/perfect_tele/alien,
+/obj/item/perfect_tele/alien,
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
 "IV" = (

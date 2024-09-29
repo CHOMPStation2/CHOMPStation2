@@ -193,7 +193,7 @@
 /obj/structure/closet/toolcloset,
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /obj/item/storage/belt/utility/full/multitool,
 /obj/item/cell/high,
 /obj/item/cell/high,
@@ -474,8 +474,8 @@
 /area/vr/outdoors/powered)
 "aAp" = (
 /obj/structure/table/marble,
-/obj/item/device/mass_spectrometer/adv,
-/obj/item/device/mass_spectrometer/adv,
+/obj/item/mass_spectrometer/adv,
+/obj/item/mass_spectrometer/adv,
 /obj/item/clothing/glasses/science,
 /obj/item/clothing/glasses/science,
 /obj/machinery/light/floortube/flicker{
@@ -529,19 +529,19 @@
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -597,7 +597,7 @@
 /area/vr/powered/space/mechfactory)
 "aDw" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/green,
 /area/vr/powered/mall/dorms)
 "aDE" = (
@@ -648,7 +648,7 @@
 /area/vr/powered/armory)
 "aFR" = (
 /obj/structure/table/reinforced,
-/obj/item/device/gps/advanced/science,
+/obj/item/gps/advanced/science,
 /obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
 	name = "Chemistry Cleaner"
@@ -729,10 +729,10 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/black,
 /obj/item/clothing/shoes/black,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "aJP" = (
@@ -964,11 +964,11 @@
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -1026,10 +1026,10 @@
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/vr/powered/space/mechfactory)
 "aXq" = (
@@ -1400,7 +1400,7 @@
 /obj/machinery/chemical_dispenser/full{
 	pixel_y = 5
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	desc = "Talk... listen through this.";
 	name = "Station Intercom (Brig Radio)";
 	pixel_y = -21;
@@ -1661,8 +1661,8 @@
 /obj/item/clothing/head/helmet/combat/USDF,
 /obj/item/clothing/suit/armor/combat/USDF,
 /obj/item/clothing/suit/armor/combat/USDF,
-/obj/item/device/flash,
-/obj/item/device/flash,
+/obj/item/flash,
+/obj/item/flash,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/space/whiteship)
 "bBu" = (
@@ -2463,10 +2463,10 @@
 	},
 /area/vr/powered)
 "cjV" = (
-/obj/item/device/kit/paint/ripley/death,
-/obj/item/device/kit/paint/ripley/flames_blue,
-/obj/item/device/kit/paint/ripley/flames_red,
-/obj/item/device/kit/paint/ripley,
+/obj/item/kit/paint/ripley/death,
+/obj/item/kit/paint/ripley/flames_blue,
+/obj/item/kit/paint/ripley/flames_red,
+/obj/item/kit/paint/ripley,
 /obj/structure/table/rack/shelf/steel,
 /obj/machinery/button/remote/airlock{
 	desiredstate = 1;
@@ -2519,18 +2519,18 @@
 /area/vr/powered/mall)
 "ckJ" = (
 /obj/structure/table/steel,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "clt" = (
@@ -2639,7 +2639,7 @@
 "cpU" = (
 /obj/structure/table/glass,
 /obj/item/storage/backpack/dufflebag/med,
-/obj/item/device/flashlight/pen,
+/obj/item/flashlight/pen,
 /obj/item/clothing/accessory/stethoscope,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
@@ -2697,9 +2697,9 @@
 /area/vr/outdoors/powered)
 "crI" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/camera,
-/obj/item/device/camera,
-/obj/item/device/camera,
+/obj/item/camera,
+/obj/item/camera,
+/obj/item/camera,
 /turf/simulated/floor/wood,
 /area/vr/powered/art)
 "crL" = (
@@ -2895,10 +2895,10 @@
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
 "cDc" = (
@@ -3947,7 +3947,7 @@
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
 "dDg" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -3993,7 +3993,7 @@
 /area/vr/powered/cafe)
 "dFd" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/vr/powered/mall/dorms)
 "dFF" = (
@@ -4292,22 +4292,22 @@
 /obj/item/storage/mre/menu11,
 /obj/item/storage/mre/menu11,
 /obj/item/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
 /obj/item/storage/pill_bottle/dice_nerd,
 /obj/item/storage/pill_bottle/antitox,
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/regular,
 /obj/item/modular_computer/laptop/preset/custom_loadout/rugged,
 /obj/item/storage/box/survival/comp{
-	starts_with = list(/obj/item/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/device/flashlight/glowstick,/obj/item/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/tank/emergency/oxygen/engi)
+	starts_with = list(/obj/item/tool/prybar/red,/obj/item/clothing/glasses/goggles,/obj/item/reagent_containers/hypospray/autoinjector,/obj/item/stack/medical/bruise_pack,/obj/item/flashlight/glowstick,/obj/item/reagent_containers/food/snacks/candy/proteinbar,/obj/item/clothing/mask/breath,/obj/item/tank/emergency/oxygen/engi)
 	},
 /obj/item/storage/box/survival/space,
 /obj/item/extinguisher/mini,
-/obj/item/device/radio{
+/obj/item/radio{
 	icon_state = "walkietalkiebay";
 	name = "emergency radio"
 	},
@@ -4378,13 +4378,13 @@
 /obj/item/pizzabox/mushroom,
 /obj/item/pizzabox/vegetable,
 /obj/item/pizzabox/vegetable,
-/obj/item/device/survivalcapsule/luxurybar,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/tabiranth,
-/obj/item/device/survivalcapsule/tabiranth,
-/obj/item/device/survivalcapsule/luxury,
-/obj/item/device/survivalcapsule/luxury,
+/obj/item/survivalcapsule/luxurybar,
+/obj/item/survivalcapsule/luxury,
+/obj/item/survivalcapsule/luxury,
+/obj/item/survivalcapsule/tabiranth,
+/obj/item/survivalcapsule/tabiranth,
+/obj/item/survivalcapsule/luxury,
+/obj/item/survivalcapsule/luxury,
 /obj/item/soap/deluxe,
 /obj/item/soap/deluxe,
 /obj/item/storage/firstaid/combat{
@@ -4795,8 +4795,8 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/item/device/defib_kit/compact/combat/loaded,
-/obj/item/device/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
 /obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner";
@@ -5009,7 +5009,7 @@
 /area/vr/powered/mall/dorms)
 "erY" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/retro,
 /area/vr/powered/mall/dorms)
 "esR" = (
@@ -5533,7 +5533,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	desc = "Talk... listen through this.";
 	name = "Station Intercom (Brig Radio)";
 	pixel_y = -21;
@@ -5821,7 +5821,7 @@
 /obj/item/clothing/gloves/sterile/latex,
 /obj/item/storage/excavation,
 /obj/item/stack/flag/yellow,
-/obj/item/device/measuring_tape,
+/obj/item/measuring_tape,
 /obj/item/pickaxe/drill,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 8
@@ -6170,10 +6170,10 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/black,
 /obj/item/clothing/shoes/black,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
 "fpE" = (
@@ -6237,8 +6237,8 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 34
 	},
-/obj/item/device/defib_kit/loaded,
-/obj/item/device/defib_kit/jumper_kit/loaded,
+/obj/item/defib_kit/loaded,
+/obj/item/defib_kit/jumper_kit/loaded,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "fsD" = (
@@ -6367,7 +6367,7 @@
 /area/vr/powered)
 "fvt" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -7161,11 +7161,11 @@
 /obj/item/tank/phoron,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/storage/toolbox/electrical,
-/obj/item/device/multitool,
-/obj/item/device/geiger,
+/obj/item/multitool,
+/obj/item/geiger,
 /obj/item/clothing/glasses/goggles,
 /obj/item/clothing/glasses/goggles,
-/obj/item/device/t_scanner,
+/obj/item/t_scanner,
 /obj/item/clothing/glasses/welding,
 /obj/item/storage/briefcase/inflatable,
 /obj/item/storage/briefcase/inflatable,
@@ -7760,10 +7760,10 @@
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "gPX" = (
@@ -8228,7 +8228,7 @@
 /area/vr/powered/mall)
 "hpx" = (
 /obj/structure/table/woodentable,
-/obj/item/device/camera,
+/obj/item/camera,
 /turf/simulated/floor/wood,
 /area/vr/powered/art)
 "hpF" = (
@@ -8331,11 +8331,11 @@
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -9088,7 +9088,7 @@
 /area/vr/powered/mall)
 "ifd" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/oracarpet,
 /area/vr/powered/mall/dorms)
 "ifF" = (
@@ -9160,7 +9160,7 @@
 /obj/item/stack/cable_coil,
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/welding,
-/obj/item/device/bodysnatcher,
+/obj/item/bodysnatcher,
 /obj/item/card/emag,
 /obj/item/card/emag,
 /obj/item/cell/super,
@@ -9176,10 +9176,10 @@
 /obj/machinery/light/poi{
 	dir = 8
 	},
-/obj/item/device/flash/synthetic,
-/obj/item/device/flash/synthetic,
-/obj/item/device/flash/synthetic,
-/obj/item/device/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/sciship)
 "ifX" = (
@@ -9454,11 +9454,11 @@
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -9523,10 +9523,10 @@
 /obj/item/clothing/shoes/black,
 /obj/item/clothing/shoes/black,
 /obj/machinery/light,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "itJ" = (
@@ -9691,7 +9691,7 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -24
 	},
-/obj/item/device/denecrotizer/medical,
+/obj/item/denecrotizer/medical,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/building2)
 "iyK" = (
@@ -9750,9 +9750,9 @@
 /area/vr/powered/space/whiteship)
 "iDh" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/perfect_tele,
-/obj/item/device/perfect_tele,
-/obj/item/device/perfect_tele,
+/obj/item/perfect_tele,
+/obj/item/perfect_tele,
+/obj/item/perfect_tele,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/building2)
 "iDi" = (
@@ -10009,7 +10009,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/device/flash,
+/obj/item/flash,
 /turf/simulated/floor/wood,
 /area/vr/powered/space/whiteship)
 "iUa" = (
@@ -10080,7 +10080,7 @@
 /area/vr/outdoors/powered)
 "iXg" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/communicator,
+/obj/item/communicator,
 /turf/simulated/floor/wood/alt/tile,
 /area/vr/powered/mall)
 "iXv" = (
@@ -10623,11 +10623,11 @@
 /area/vr/powered/space/mechfactory)
 "jto" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/defib_kit/jumper_kit/loaded,
-/obj/item/device/defib_kit/jumper_kit/loaded,
-/obj/item/device/mmi,
-/obj/item/device/mmi,
-/obj/item/device/mmi,
+/obj/item/defib_kit/jumper_kit/loaded,
+/obj/item/defib_kit/jumper_kit/loaded,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/mmi,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -10687,7 +10687,7 @@
 /area/vr/powered/mall/dorms)
 "jxv" = (
 /obj/structure/table/standard,
-/obj/item/device/taperecorder,
+/obj/item/taperecorder,
 /obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 5
@@ -10741,10 +10741,10 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wood{
 	outdoors = 1;
 	temperature = 311
@@ -10824,14 +10824,14 @@
 /area/vr/powered/space/sciship)
 "jEw" = (
 /obj/structure/table/steel,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wood{
 	outdoors = 1;
 	temperature = 311
@@ -11209,13 +11209,13 @@
 /area/vr/powered/art)
 "jQY" = (
 /obj/structure/table/standard,
-/obj/item/device/healthanalyzer/phasic,
-/obj/item/device/healthanalyzer/phasic,
-/obj/item/device/healthanalyzer/phasic,
-/obj/item/device/healthanalyzer/phasic,
-/obj/item/device/robotanalyzer,
-/obj/item/device/robotanalyzer,
-/obj/item/device/robotanalyzer,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/item/robotanalyzer,
+/obj/item/robotanalyzer,
+/obj/item/robotanalyzer,
 /turf/simulated/shuttle/floor/black,
 /area/vr/powered/armory)
 "jRl" = (
@@ -11283,7 +11283,7 @@
 /area/vr/powered/dungeon)
 "jWv" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/ticket_printer/train,
+/obj/item/ticket_printer/train,
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
 "jXf" = (
@@ -11397,7 +11397,7 @@
 /area/vr/outdoors/powered)
 "kck" = (
 /obj/structure/window/phoronbasic,
-/obj/item/device/camerabug,
+/obj/item/camerabug,
 /obj/machinery/flasher{
 	pixel_y = -7
 	},
@@ -12360,7 +12360,7 @@
 /turf/unsimulated/wall,
 /area/vr/outdoors/powered)
 "kSG" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -12731,7 +12731,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
 "lkR" = (
@@ -13141,27 +13141,27 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 5
 	},
-/obj/item/device/soulstone{
+/obj/item/soulstone{
 	pixel_y = 9;
 	pixel_x = 5
 	},
-/obj/item/device/soulstone{
+/obj/item/soulstone{
 	pixel_y = 9;
 	pixel_x = -2
 	},
-/obj/item/device/soulstone{
+/obj/item/soulstone{
 	pixel_y = 3;
 	pixel_x = 5
 	},
-/obj/item/device/soulstone{
+/obj/item/soulstone{
 	pixel_y = 4;
 	pixel_x = -2
 	},
-/obj/item/device/soulstone{
+/obj/item/soulstone{
 	pixel_y = -3;
 	pixel_x = 5
 	},
-/obj/item/device/soulstone{
+/obj/item/soulstone{
 	pixel_y = -3;
 	pixel_x = -3
 	},
@@ -13177,7 +13177,7 @@
 "lxb" = (
 /obj/structure/table/glass,
 /obj/item/storage/firstaid/toxin,
-/obj/item/device/laser_pointer,
+/obj/item/laser_pointer,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
 "lxr" = (
@@ -13199,7 +13199,7 @@
 /obj/item/clothing/glasses/hud/health,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/clothing/glasses/hud/health,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
 "lyw" = (
@@ -13210,7 +13210,7 @@
 /area/vr/powered/motel)
 "lyS" = (
 /obj/structure/table/reinforced,
-/obj/item/device/retail_scanner,
+/obj/item/retail_scanner,
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
 "lyW" = (
@@ -13532,7 +13532,7 @@
 /area/vr/powered/space/sciship)
 "lNG" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/retail_scanner,
+/obj/item/retail_scanner,
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
 "lNJ" = (
@@ -13801,8 +13801,8 @@
 	pixel_y = -4
 	},
 /obj/item/mop,
-/obj/item/device/multitool,
-/obj/item/device/flashlight{
+/obj/item/multitool,
+/obj/item/flashlight{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -13888,9 +13888,9 @@
 "mca" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
 /turf/simulated/floor/tiled/yellow,
 /area/vr/powered/mall)
 "mcq" = (
@@ -14276,7 +14276,7 @@
 /obj/item/storage/firstaid/toxin,
 /obj/item/storage/firstaid/o2,
 /obj/item/roller,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/whiteship)
 "msn" = (
@@ -14788,25 +14788,25 @@
 /obj/item/reagent_containers/hypospray/autoinjector/oxy,
 /obj/item/flame/lighter/random,
 /obj/item/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/reagent_containers/pill/dylovene,
 /obj/item/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
 /obj/item/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
 /obj/item/storage/mre/menu11,
 /obj/item/storage/mre/menu11,
-/obj/item/device/starcaster_news,
+/obj/item/starcaster_news,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
 /obj/structure/closet{
 	name = "Survival closet"
 	},
@@ -15034,7 +15034,7 @@
 /area/vr/powered/dungeon)
 "nas" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/camera,
+/obj/item/camera,
 /turf/simulated/floor/wood,
 /area/vr/powered/shop)
 "naF" = (
@@ -15076,10 +15076,10 @@
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/serotrotium,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/serotrotium,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/serotrotium,
-/obj/item/device/reagent_scanner/adv,
-/obj/item/device/reagent_scanner/adv,
-/obj/item/device/healthanalyzer/phasic,
-/obj/item/device/healthanalyzer/phasic,
+/obj/item/reagent_scanner/adv,
+/obj/item/reagent_scanner/adv,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
 /obj/structure/table/alien/blue,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -15168,7 +15168,7 @@
 /area/vr/powered/rocks)
 "neC" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/turcarpet,
 /area/vr/powered/mall/dorms)
 "neM" = (
@@ -15495,7 +15495,7 @@
 /area/vr/powered)
 "nrY" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/clown,
+/obj/item/flashlight/lamp/clown,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/vr/powered/mall/dorms)
 "nsO" = (
@@ -15742,7 +15742,7 @@
 	set_temperature = 73;
 	use_power = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -15825,8 +15825,8 @@
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/device/robotanalyzer,
-/obj/item/device/robotanalyzer,
+/obj/item/robotanalyzer,
+/obj/item/robotanalyzer,
 /obj/item/cell/super,
 /obj/item/cell/super,
 /obj/item/cell/device/super,
@@ -16685,7 +16685,7 @@
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "okZ" = (
-/obj/item/device/tape,
+/obj/item/tape,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/vr/powered)
@@ -16878,10 +16878,10 @@
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/tiled,
 /area/vr/powered/conspawn)
 "orE" = (
@@ -17037,14 +17037,14 @@
 /area/vr/powered/mall/dorms)
 "oyk" = (
 /obj/structure/table/steel,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/outdoors/sidewalk/side{
 	movement_cost = 0;
 	temperature = 293.15
@@ -17059,14 +17059,14 @@
 /area/vr/powered/mall/vw)
 "oyJ" = (
 /obj/structure/table/steel,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/tiled/asteroid_steel{
 	outdoors = 1;
 	temperature = 293.15
@@ -17106,11 +17106,11 @@
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -17145,7 +17145,7 @@
 /area/vr/powered/mall/dorms)
 "oBi" = (
 /obj/structure/table/darkglass,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
 "oBA" = (
@@ -17332,10 +17332,10 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/black,
 /obj/item/clothing/shoes/black,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/tiled,
 /area/vr/powered/conspawn)
 "oHN" = (
@@ -17449,7 +17449,7 @@
 /obj/item/paper_bin,
 /obj/item/pen/fountain,
 /obj/item/pen/chameleon,
-/obj/item/device/gps/advanced/science,
+/obj/item/gps/advanced/science,
 /obj/machinery/button/remote/blast_door{
 	id = "estrella_blast";
 	name = "remote blast shielding control";
@@ -17668,10 +17668,10 @@
 /area/vr/powered/rocks)
 "pbq" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight,
+/obj/item/flashlight/glowstick/blue,
+/obj/item/flashlight/glowstick/blue,
+/obj/item/flashlight/glowstick/blue,
+/obj/item/flashlight,
 /turf/simulated/floor/plating,
 /area/vr/powered/vet)
 "pbr" = (
@@ -17695,7 +17695,7 @@
 /area/vr/powered/space/sciship)
 "pbs" = (
 /obj/structure/table/darkglass,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/vr/powered/cult)
 "pbB" = (
@@ -17883,10 +17883,10 @@
 /area/vr/outdoors/powered)
 "pjA" = (
 /obj/structure/table/steel,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
-/obj/item/device/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
+/obj/item/tvcamera,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	temperature = 293.15;
 	movement_cost = 0
@@ -18760,8 +18760,8 @@
 /area/vr/powered/space/whiteship)
 "pVA" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/bodysnatcher,
-/obj/item/device/bodysnatcher,
+/obj/item/bodysnatcher,
+/obj/item/bodysnatcher,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/building2)
 "pVR" = (
@@ -18773,8 +18773,8 @@
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/device/flashlight/pen,
-/obj/item/device/flashlight/pen,
+/obj/item/flashlight/pen,
+/obj/item/flashlight/pen,
 /obj/item/clothing/accessory/stethoscope,
 /obj/item/clothing/accessory/stethoscope,
 /obj/machinery/light/small{
@@ -19268,11 +19268,11 @@
 /turf/unsimulated/fake_space,
 /area/vr/powered/mall/backrooms)
 "qnG" = (
-/obj/item/device/kit/paint/gygax/darkgygax,
-/obj/item/device/kit/paint/gygax/recitence,
-/obj/item/device/kit/paint/durand,
-/obj/item/device/kit/paint/durand/phazon,
-/obj/item/device/kit/paint/durand/seraph,
+/obj/item/kit/paint/gygax/darkgygax,
+/obj/item/kit/paint/gygax/recitence,
+/obj/item/kit/paint/durand,
+/obj/item/kit/paint/durand/phazon,
+/obj/item/kit/paint/durand/seraph,
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/shuttle/floor/voidcraft/light,
@@ -19300,7 +19300,7 @@
 /area/vr/powered/mall)
 "qoW" = (
 /obj/structure/table/reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
 "qpQ" = (
@@ -20335,7 +20335,7 @@
 "rig" = (
 /obj/structure/table/glass,
 /obj/item/storage/firstaid/fire,
-/obj/item/device/denecrotizer/medical,
+/obj/item/denecrotizer/medical,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
 "rii" = (
@@ -21994,7 +21994,7 @@
 	opacity = 1
 	},
 /obj/structure/table/alien/blue,
-/obj/item/device/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/dungeon)
@@ -22149,10 +22149,10 @@
 /obj/item/stock_parts/manipulator/hyper,
 /obj/item/stock_parts/capacitor/adv,
 /obj/item/stock_parts/capacitor/adv,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/space/whiteship)
 "sNQ" = (
@@ -22582,7 +22582,7 @@
 /area/vr/powered)
 "tnb" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
 "tnm" = (
@@ -23559,10 +23559,10 @@
 /obj/item/clothing/under/color/grey,
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/vr/powered/space/sciship)
 "ubf" = (
@@ -23741,7 +23741,7 @@
 /area/vr/space)
 "uhu" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/clown,
+/obj/item/flashlight/lamp/clown,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/mall/dorms)
 "uhw" = (
@@ -23940,7 +23940,7 @@
 /area/vr/powered/rocks)
 "uqx" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/blue,
 /area/vr/powered/mall/dorms)
 "uqB" = (
@@ -23956,7 +23956,7 @@
 /area/vr/outdoors/powered)
 "uqE" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet,
 /area/vr/powered/mall/dorms)
 "urQ" = (
@@ -23997,7 +23997,7 @@
 /area/vr/outdoors/powered)
 "utS" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/purple,
 /area/vr/powered/mall/dorms)
 "uuc" = (
@@ -24040,7 +24040,7 @@
 /area/vr/powered/cult)
 "uxt" = (
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 2
 	},
 /turf/simulated/floor/tiled,
@@ -24799,10 +24799,10 @@
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "vdK" = (
@@ -25168,8 +25168,8 @@
 	pixel_y = 32
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/device/flash/synthetic,
-/obj/item/device/flash/synthetic{
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -25917,7 +25917,7 @@
 	},
 /area/vr/powered)
 "waX" = (
-/obj/item/device/flashlight{
+/obj/item/flashlight{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -25968,7 +25968,7 @@
 /area/vr/powered/dungeon)
 "wdn" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/mmi/inert/ai_remote,
+/obj/item/mmi/inert/ai_remote,
 /turf/simulated/shuttle/floor/yellow,
 /area/vr/powered/space/sciship)
 "wdV" = (
@@ -26283,7 +26283,7 @@
 /area/vr/outdoors/powered/mall)
 "wpA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
@@ -26438,7 +26438,7 @@
 /area/vr/powered/space/whiteship)
 "wAv" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall/dorms)
 "wAz" = (
@@ -26581,7 +26581,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
 "wFp" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/sciship)
 "wFF" = (
@@ -26787,10 +26787,10 @@
 /obj/item/storage/backpack/dufflebag/syndie,
 /obj/item/storage/backpack/dufflebag/syndie,
 /obj/item/storage/backpack/dufflebag/syndie,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
-/obj/item/device/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
+/obj/item/radio/headset,
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "wNJ" = (
@@ -27573,7 +27573,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/cult)
 "xun" = (
-/obj/item/device/flashlight/slime,
+/obj/item/flashlight/slime,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "xuz" = (
@@ -27704,8 +27704,8 @@
 /area/vr/powered)
 "xCl" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/camera_film,
-/obj/item/device/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
 /obj/item/tool/wirecutters,
 /obj/item/tool/wirecutters,
 /turf/simulated/floor/wood,
