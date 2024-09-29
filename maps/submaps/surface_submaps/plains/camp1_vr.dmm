@@ -17,13 +17,8 @@
 	},
 /area/submap/camp1)
 "e" = (
-<<<<<<< HEAD
 /obj/item/flashlight/lantern,
 /turf/simulated/floor/outdoors/dirt{
-=======
-/obj/item/flashlight/lantern,
-/turf/simulated/floor/outdoors/dirt/virgo3b{
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 	outdoors = 0
 	},
 /area/submap/camp1)
@@ -72,13 +67,8 @@
 /turf/template_noop,
 /area/template_noop)
 "n" = (
-<<<<<<< HEAD
 /obj/item/flame/lighter,
 /turf/simulated/floor/outdoors/dirt,
-=======
-/obj/item/flame/lighter,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/camp1)
 "y" = (
 /obj/machinery/portable_atmospherics/canister/air,

@@ -24,13 +24,8 @@
 /turf/template_noop,
 /area/submap/methlab)
 "bA" = (
-<<<<<<< HEAD
 /obj/item/multitool,
 /turf/template_noop,
-=======
-/obj/item/cell/hyper,
-/turf/simulated/floor/tiled/steel_dirty,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/methlab)
 "bJ" = (
 /obj/structure/sign/atmos_waste,
@@ -121,12 +116,8 @@
 /area/submap/methlab)
 "iN" = (
 /obj/structure/table/steel_reinforced,
-<<<<<<< HEAD
 /obj/item/reagent_containers/dropper,
 /obj/random/medical/pillbottle,
-=======
-/obj/item/reagent_containers/dropper,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "jm" = (
@@ -179,12 +170,8 @@
 /area/submap/methlab)
 "mw" = (
 /obj/structure/table/steel_reinforced,
-<<<<<<< HEAD
 /obj/item/storage/toolbox/syndicate,
 /obj/random/medical/pillbottle,
-=======
-/obj/item/storage/toolbox/syndicate,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "nq" = (
@@ -365,7 +352,6 @@
 /area/submap/methlab)
 "BT" = (
 /obj/structure/safe/floor,
-<<<<<<< HEAD
 /obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
 /obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
 /obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
@@ -380,21 +366,6 @@
 /obj/item/storage/bag/cash,
 /obj/item/storage/bag/cash,
 /turf/simulated/floor,
-=======
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/storage/bag/cash,
-/obj/item/storage/bag/cash,
-/turf/simulated/floor/plating/external/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/methlab)
 "CH" = (
 /obj/structure/table/rack/shelf/steel,
@@ -563,12 +534,8 @@
 /area/submap/methlab)
 "PO" = (
 /obj/structure/table/steel_reinforced,
-<<<<<<< HEAD
 /obj/item/module/power_control,
 /obj/random/medical/pillbottle,
-=======
-/obj/item/module/power_control,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "PZ" = (
@@ -627,7 +594,6 @@
 /area/submap/methlab)
 "TU" = (
 /obj/structure/safe/floor,
-<<<<<<< HEAD
 /obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
 /obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
 /obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
@@ -642,21 +608,6 @@
 /obj/item/storage/bag/cash,
 /obj/item/storage/bag/cash,
 /turf/simulated/floor,
-=======
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/storage/bag/cash,
-/obj/item/storage/bag/cash,
-/turf/simulated/floor/plating/external/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/methlab)
 "Uy" = (
 /obj/structure/fence/corner{
@@ -720,16 +671,10 @@
 /obj/item/stack/material/phoron{
 	amount = 5
 	},
-<<<<<<< HEAD
 /obj/structure/table/rack/shelf/steel,
 /obj/item/extinguisher,
 /obj/item/storage/box/lights/mixed,
 /turf/simulated/floor,
-=======
-/obj/item/extinguisher,
-/obj/item/storage/box/lights/mixed,
-/turf/simulated/floor/plating/external/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/methlab)
 "Yz" = (
 /obj/machinery/portable_atmospherics/hydroponics,

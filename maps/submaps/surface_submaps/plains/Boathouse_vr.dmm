@@ -50,13 +50,8 @@
 /area/submap/Boathouse)
 "an" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/wood,
-=======
-/obj/item/storage/toolbox/mechanical,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/Boathouse)
 "ao" = (
 /obj/structure/railing{
@@ -89,7 +84,6 @@
 /turf/simulated/floor/wood,
 /area/submap/Boathouse)
 "au" = (
-<<<<<<< HEAD
 /obj/item/stool,
 /turf/simulated/floor/wood,
 /area/submap/Boathouse)
@@ -97,10 +91,6 @@
 /turf/simulated/floor/wood{
 	icon_state = "wood_broken6"
 	},
-=======
-/obj/item/stool,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/Boathouse)
 "aw" = (
 /obj/structure/railing{
@@ -163,7 +153,6 @@
 /area/submap/Boathouse)
 "aG" = (
 /obj/structure/table/woodentable,
-<<<<<<< HEAD
 /obj/item/oar,
 /obj/item/oar,
 /turf/simulated/floor/wood,
@@ -174,11 +163,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/water,
-=======
-/obj/item/oar,
-/obj/item/oar,
-/turf/simulated/floor/wood/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/Boathouse)
 "aI" = (
 /obj/structure/table/woodentable,

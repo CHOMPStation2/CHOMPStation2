@@ -14,34 +14,20 @@
 /turf/template_noop,
 /area/submap/bonfire)
 "e" = (
-<<<<<<< HEAD
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bonfire)
 "f" = (
 /obj/item/stool/padded,
 /turf/simulated/floor/outdoors/dirt,
-=======
-/obj/item/reagent_containers/food/drinks/bottle/orangejuice,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
-/area/submap/bonfire)
-"f" = (
-/obj/item/stool/padded,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/bonfire)
 "g" = (
 /obj/structure/bonfire/sifwood,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bonfire)
 "h" = (
-<<<<<<< HEAD
 /obj/item/material/knife/machete,
 /turf/simulated/floor/outdoors/dirt,
-=======
-/obj/item/material/knife/machete,
-/turf/simulated/floor/outdoors/dirt/virgo3b,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /area/submap/bonfire)
 "i" = (
 /obj/item/clothing/head/helmet/material/makeshift,

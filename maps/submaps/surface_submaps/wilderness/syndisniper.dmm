@@ -33,15 +33,9 @@
 /area/submap/SyndiSniper)
 "w" = (
 /obj/structure/table/sifwooden_reinforced,
-<<<<<<< HEAD
 /obj/item/bluespaceradio/southerncross_prelinked,
 /obj/item/storage/mre/random,
 /obj/item/binoculars,
-=======
-/obj/item/storage/mre/random,
-/obj/item/binoculars,
-/obj/item/radio/bluespacehandset/linked/talon_prelinked,
->>>>>>> 55942407f2... Merge pull request #16327 from TheCaramelion/weapon-removal
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/SyndiSniper)
 "B" = (
