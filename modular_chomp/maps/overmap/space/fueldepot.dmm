@@ -1285,8 +1285,8 @@
 "ja" = (
 /obj/structure/catwalk,
 /obj/structure/table/rack/steel,
-/obj/item/weapon/tool/crowbar/red,
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/crowbar/red,
+/obj/item/tool/wrench,
 /turf/simulated/shuttle/plating/airless,
 /area/sc_away/fueldepot)
 "jm" = (
@@ -1547,22 +1547,22 @@
 /area/sc_away/fueldepotspawn)
 "EO" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/bluespaceradio/southerncross_prelinked{
+/obj/item/bluespaceradio/southerncross_prelinked{
 	pixel_x = -8
 	},
-/obj/item/device/spaceflare{
+/obj/item/spaceflare{
 	pixel_y = 12;
 	pixel_x = 4
 	},
-/obj/item/device/spaceflare{
+/obj/item/spaceflare{
 	pixel_y = 0;
 	pixel_x = 4
 	},
-/obj/item/device/spaceflare{
+/obj/item/spaceflare{
 	pixel_y = 4;
 	pixel_x = 4
 	},
-/obj/item/device/spaceflare{
+/obj/item/spaceflare{
 	pixel_y = 8;
 	pixel_x = 4
 	},
@@ -1708,7 +1708,7 @@
 /area/sc_away/fueldepot)
 "OG" = (
 /obj/structure/table/rack/steel,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/tiled/techmaint/airless,
 /area/sc_away/fueldepot)
 "Pr" = (
@@ -1722,7 +1722,7 @@
 /area/sc_away/fueldepot)
 "Qg" = (
 /obj/structure/table/rack/steel,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/techmaint/airless,
 /area/sc_away/fueldepot)
 "QT" = (
