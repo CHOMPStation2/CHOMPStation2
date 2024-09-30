@@ -161,9 +161,9 @@
 "aS" = (
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
+	outdoors = 1;
 	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
+	temperature = 243.15
 	},
 /area/surface/outside/path/wilderness)
 "aT" = (
@@ -273,12 +273,12 @@
 	name = "Wilderness Shelter subspace radio"
 	},
 /obj/item/spaceflare{
-	pixel_y = -10;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -10
 	},
 /obj/item/spaceflare{
-	pixel_y = -10;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -10
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -696,10 +696,10 @@
 /area/surface/outpost/shelter/utilityroom)
 "jf" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "wilderness_s";
-	name = "Wilderness Shelter";
 	base_area = /area/surface/outpost/shelter/exterior;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "wilderness_s";
+	name = "Wilderness Shelter"
 	},
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -711,6 +711,10 @@
 	tree_chance = 0
 	},
 /area/surface/outpost/shelter/exterior)
+"jz" = (
+/obj/structure/boulder,
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "jX" = (
 /obj/structure/table/rack/shelf,
 /obj/item/soap/nanotrasen,
@@ -730,10 +734,10 @@
 /area/surface/outside/wilderness/normal)
 "kU" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "wilderness_se";
-	name = "Southeast of Wilderness";
 	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "wilderness_se";
+	name = "Southeast of Wilderness"
 	},
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -945,10 +949,6 @@
 	tree_chance = 0
 	},
 /area/surface/outside/landing/wilderness)
-"sC" = (
-/obj/structure/railing,
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "sJ" = (
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
@@ -1128,17 +1128,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/wilderness)
-"xx" = (
-/obj/effect/map_effect/portal/master/side_a/wilderness_to_valley{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "xA" = (
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
@@ -1213,9 +1202,9 @@
 "As" = (
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
+	outdoors = 1;
 	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
+	temperature = 243.15
 	},
 /area/surface/outside/river/svartan)
 "AB" = (
@@ -1228,15 +1217,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
-"AX" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "AY" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1283,17 +1263,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
-"BF" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "BY" = (
 /obj/structure/simple_door/sifwood,
 /obj/structure/cable{
@@ -1520,17 +1489,16 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/surface/outpost/shelter/dorms)
 "LI" = (
-/obj/structure/railing{
-	dir = 8
+/obj/structure/boulder,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	outdoors = 1;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
-/turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
 "Mg" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/railing,
-/turf/simulated/floor/water/deep,
+/turf/simulated/wall/solidrock,
 /area/surface/outside/river/svartan)
 "Mk" = (
 /obj/structure/simple_door/sifwood,
@@ -1610,10 +1578,7 @@
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "Qz" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/deep,
+/turf/simulated/mineral/sif,
 /area/surface/outside/river/svartan)
 "Rc" = (
 /obj/machinery/light/small{
@@ -1732,10 +1697,10 @@
 "Us" = (
 /obj/effect/zone_divider,
 /obj/effect/shuttle_landmark/automatic/clearing{
-	name = "Northwest Outpost Perimiter";
 	base_area = /area/surface/outside/plains/normal;
 	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
-	landmark_tag = "outpost_nw"
+	landmark_tag = "outpost_nw";
+	name = "Northwest Outpost Perimiter"
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/normal)
@@ -1808,10 +1773,10 @@
 /area/surface/outpost/shelter)
 "WL" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "wilderness_w";
-	name = "West of Wilderness";
 	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "wilderness_w";
+	name = "West of Wilderness"
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse{
 	tree_chance = 0
@@ -1883,10 +1848,10 @@
 /area/surface/outside/wilderness/deep)
 "Zs" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "wilderness_n";
-	name = "North of Wilderness";
 	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "wilderness_n";
+	name = "North of Wilderness"
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse{
 	tree_chance = 0
@@ -2090,12 +2055,12 @@ ad
 ab
 XD
 XD
-BF
-BF
-AX
 Mg
-BF
-xx
+Mg
+Mg
+Mg
+Mg
+Mg
 kh
 kh
 ab
@@ -2348,12 +2313,12 @@ ak
 ac
 Za
 Za
-As
-As
 Qz
-sC
-As
-As
+Qz
+Qz
+Qz
+Qz
+Qz
 IZ
 IZ
 ac
@@ -2606,12 +2571,12 @@ ak
 ah
 ah
 ah
-As
-As
-Qz
-sC
-As
-As
+LI
+LI
+jz
+jz
+LI
+LI
 ap
 ap
 ap
@@ -2865,10 +2830,10 @@ ah
 ah
 ah
 As
-As
-Qz
-sC
-As
+LI
+jz
+jz
+LI
 As
 ap
 ap
@@ -3122,12 +3087,12 @@ aw
 ah
 ah
 ah
-LI
-LI
+am
+am
+jz
 an
-an
-LI
-LI
+am
+am
 am
 ap
 ap
