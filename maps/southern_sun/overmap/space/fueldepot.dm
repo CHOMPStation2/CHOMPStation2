@@ -4,7 +4,7 @@
 /datum/map_template/sc_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
 	desc = "An unmanned fuel depot floating in space."
-	mappath = 'maps/southern_cross/overmap/space/fueldepot.dmm' //This is where it is in our file system.
+	mappath = 'modular_chomp/maps/overmap/space/fueldepot.dmm' //Use the modular map file
 	associated_map_datum = /datum/map_z_level/sc_lateload/away_fueldepot
 
 /datum/map_z_level/sc_lateload/away_fueldepot

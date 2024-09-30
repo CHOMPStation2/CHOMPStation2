@@ -4692,7 +4692,6 @@
 #include "maps\southern_cross\structures\closets\misc.dm"
 #include "maps\southern_cross\structures\closets\research.dm"
 #include "maps\southern_cross\structures\closets\security.dm"
-#include "maps\southern_cross\submaps\virtual_reality\constructVR.dm"
 #include "maps\southern_cross\turfs\outdoors.dm"
 #include "maps\southern_sun\southern_cross.dm"
 #include "maps\submaps\_helpers.dm"
@@ -5122,4 +5121,5 @@
 #include "modular_chomp\maps\submaps\surface_submaps\valleyend\valleyend_areas.dm"
 #include "modular_chomp\maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "modular_chomp\maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
+#include "modular_chomp\maps\virtual_reality\constructVR.dm"
 // END_INCLUDE
