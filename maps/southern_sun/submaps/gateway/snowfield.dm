@@ -440,7 +440,7 @@
 
 //Gateway mission exclusive special loot
 
-/obj/item/weapon/gun/projectile/automatic/serdy/sr25c
+/obj/item/gun/projectile/automatic/serdy/sr25c
 	name = "SR-25 Carbine"
 	icon_state="m4"
 	desc = "Heavily modified, this gun uses 7.62mm rather than 5.54mm and still has its automated fire mode. Equipped with suppressor, telescopic sight and the red dot sight on its side, it has a capability of handling the CQC and both in long range combat, without making much noises. Multi-dozens of accessories provides the improvement on the recoil, too. An old terran flag stamp and a spec-ops mark on the receiver approves its authentic state. Unmodified, cheep slack-off can be found just about everywhere, but this versions are very hard to come by. Chambered in 7.62x51mm."
@@ -464,17 +464,17 @@
 	silenced = 1
 	recoil = 0.5
 
-/obj/item/weapon/gun/projectile/automatic/serdy/sr25c/ui_action_click()
+/obj/item/gun/projectile/automatic/serdy/sr25c/ui_action_click()
 	scope()
 
-/obj/item/weapon/gun/projectile/automatic/serdy/sr25c/verb/scope()
+/obj/item/gun/projectile/automatic/serdy/sr25c/verb/scope()
 	set category = "Object"
 	set name = "Use Scope"
 	set popup_menu = 1
 
 	toggle_scope(2.0)
 
-/obj/item/weapon/gun/launcher/scopedrocket
+/obj/item/gun/launcher/scopedrocket
 	name = "scoped rocket launcher"
 	desc = "Upon looking into the scope, you see the word on its center: MAGGOT."
 	icon_state = "rocket"
@@ -495,12 +495,12 @@
 	var/max_rockets = 1
 	var/list/rockets = new/list()
 
-/obj/item/weapon/gun/launcher/scopedrocket/examine(mob/user)
+/obj/item/gun/launcher/scopedrocket/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		. += "<font color='blue'>[rockets.len] / [max_rockets] rockets.</font>"
 
-/obj/item/weapon/gun/launcher/scopedrocket/attackby(obj/item/I as obj, mob/user as mob)
+/obj/item/gun/launcher/scopedrocket/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/ammo_casing/rocket))
 		if(rockets.len < max_rockets)
 			user.drop_item()
@@ -511,22 +511,22 @@
 		else
 			to_chat(usr, span_red("[src] cannot hold more rockets."))
 
-/obj/item/weapon/gun/launcher/scopedrocket/consume_next_projectile()
+/obj/item/gun/launcher/scopedrocket/consume_next_projectile()
 	if(rockets.len)
 		var/obj/item/ammo_casing/rocket/I = rockets[1]
 		rockets -= I
 		return new I.projectile_type(src)
 	return null
 
-/obj/item/weapon/gun/launcher/scopedrocket/handle_post_fire(mob/user, atom/target)
+/obj/item/gun/launcher/scopedrocket/handle_post_fire(mob/user, atom/target)
 	message_admins("[key_name_admin(user)] fired a rocket from a rocket launcher ([src.name]) at [target].")
 	log_game("[key_name_admin(user)] used a rocket launcher ([src.name]) at [target].")
 	..()
 
-/obj/item/weapon/gun/launcher/scopedrocket/ui_action_click()
+/obj/item/gun/launcher/scopedrocket/ui_action_click()
 	scope()
 
-/obj/item/weapon/gun/launcher/scopedrocket/verb/scope()
+/obj/item/gun/launcher/scopedrocket/verb/scope()
 	set category = "Object"
 	set name = "Use Scope"
 	set popup_menu = 1
@@ -535,7 +535,7 @@
 
 //Lore Notes
 
-/obj/item/weapon/paper/awaygate/snowfield/evacuation_order
+/obj/item/paper/awaygate/snowfield/evacuation_order
 	name = "Order Directives"
 	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
 	TO <B>ALL CLASS 1, 2, 3 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
@@ -544,7 +544,7 @@
 	maintain necessary items only. </B><BR><BR>Further directives and details shall be guided by <B>Class 4 \
 	or above personnel.</B>"
 
-/obj/item/weapon/paper/awaygate/snowfield/evacuation_order2
+/obj/item/paper/awaygate/snowfield/evacuation_order2
 	name = "Mid Command Order Directives"
 	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
 	TO <B>ALL CLASS 4 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
@@ -553,7 +553,7 @@
 	to operate 'Tunguska' and supplies for the crews who remains. 'Tunguska' Activation time at 0300, April 11, \
 	1979.</B><BR><BR>Further directives and details shall be guided by <B>Class 6 or above personnel.</B>"
 
-/obj/item/weapon/paper/awaygate/snowfield/evacuation_order3
+/obj/item/paper/awaygate/snowfield/evacuation_order3
 	name = "High Command Order Directives"
 	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
 	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
@@ -561,7 +561,7 @@
 	Chelyabinsk and empty the facility, excluding Class 3M, guided by Class 4 personnel. <BR>All Class 5, 6 must \
 	check the stabiity of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979.</B>"
 
-/obj/item/weapon/paper/awaygate/snowfield/activation_order
+/obj/item/paper/awaygate/snowfield/activation_order
 	name = "High Command Order Directives"
 	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
 	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 11, 1979</B>.</center> <BR><BR><BR>\
@@ -570,7 +570,7 @@
 	be terminated on the spot. Notify to nearest Class 4 and 6 personnel if necessary.</B><BR><BR>Further directives \
 	and details shall be guided by <B>Class 6 Personnel.</B>"
 
-/obj/item/weapon/paper/awaygate/snowfield/interrogation
+/obj/item/paper/awaygate/snowfield/interrogation
 	name = "Interrogation note"
 	info = "(Recording Start)<BR>(00:00) This is Yemelyan Fedoro, the Warden of Sector 108.<BR>(00:09) Time of the \
 	record... <BR>(00:14) Twenty one-Fourty.<BR>(00:17) Three months of interrogation is finally coming up with \
@@ -581,7 +581,7 @@
 	Punching bag, now. (00:59) Gosh, their screams are worser than my grandma. Who would know an overgrown lizard \
 	would sound like that..<BR>(01:07) Best to finish up, now. We can get more informations from'em. Yemelyan Fedoro, out."
 
-/obj/item/weapon/paper/awaygate/snowfield/note // Little easter egg for appreciation.
+/obj/item/paper/awaygate/snowfield/note // Little easter egg for appreciation.
 	desc = "A gift card with a heart on the cover. Hey, there's a scribble on its back..."
 	name = "letter"
 	icon_state = "greetingcard_heart"
@@ -594,7 +594,7 @@
 	<B>Map recovery helper (Curse you github, almost deleting the project):</B> BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
 	<B>Also, not to forget - Huge thank you to</B>:You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
 
-/obj/item/weapon/paper/awaygate/snowfield/diary
+/obj/item/paper/awaygate/snowfield/diary
 	desc = "A part of a ripped paper, likely from the book."
 	name = "diary, 18 of January, 1971"
 	info = "Dear diary.<BR><BR> This will be the last diary I write in this little outpost.<BR><BR> Militsiya \

@@ -55,9 +55,9 @@
 /obj/fiftyspawner/oracarpet,
 /obj/fiftyspawner/blucarpet,
 /obj/fiftyspawner/marble,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/fiftyspawner/cardboard,
 /obj/fiftyspawner/cardboard,
 /turf/simulated/floor/cult,
@@ -88,7 +88,7 @@
 /turf/simulated/floor/cult,
 /area/survivalpod/superpose/DemonPoolV2)
 "l" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /turf/simulated/floor/lava,
 /area/survivalpod/superpose/DemonPoolV2)
 "m" = (
@@ -134,7 +134,7 @@
 /area/survivalpod/superpose/DemonPoolV2)
 "x" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/DemonPoolV2)
 "y" = (
@@ -159,7 +159,7 @@
 /area/survivalpod/superpose/DemonPoolV2)
 "D" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 9
 	},
 /turf/simulated/floor/wood/alt{
@@ -206,8 +206,8 @@
 /obj/item/clothing/shoes/cult,
 /obj/item/clothing/suit/cultrobes/alt,
 /obj/item/clothing/head/helmet/space/cult,
-/obj/item/weapon/storage/backpack/cultpack,
-/obj/item/weapon/storage/backpack/cultpack,
+/obj/item/storage/backpack/cultpack,
+/obj/item/storage/backpack/cultpack,
 /obj/structure/closet/cabinet,
 /turf/simulated/floor/wood/alt{
 	color = "red"
@@ -219,39 +219,39 @@
 /area/survivalpod/superpose/DemonPoolV2)
 "N" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/DemonPoolV2)
 "O" = (
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/starcaster_news,
+/obj/item/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/starcaster_news,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
 /obj/structure/closet{
 	name = "Survival closet"
 	},
@@ -301,19 +301,19 @@
 /obj/structure/closet/cabinet,
 /obj/random/curseditem,
 /obj/random/curseditem,
-/obj/item/weapon/melee/cursedblade,
-/obj/item/weapon/melee/cultblade,
-/obj/item/weapon/beartrap/hunting,
-/obj/item/weapon/beartrap/hunting,
+/obj/item/melee/cursedblade,
+/obj/item/melee/cultblade,
+/obj/item/beartrap/hunting,
+/obj/item/beartrap/hunting,
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
-/obj/item/device/soulstone,
-/obj/item/device/soulstone,
-/obj/item/weapon/storage/belt/soulstone/full,
+/obj/item/soulstone,
+/obj/item/soulstone,
+/obj/item/storage/belt/soulstone/full,
 /turf/simulated/floor/wood/alt{
 	color = "red"
 	},
@@ -323,7 +323,7 @@
 /area/survivalpod/superpose/DemonPoolV2)
 "Z" = (
 /obj/effect/rune,
-/obj/item/weapon/cat_box/black,
+/obj/item/cat_box/black,
 /turf/simulated/floor/cult,
 /area/survivalpod/superpose/DemonPoolV2)
 

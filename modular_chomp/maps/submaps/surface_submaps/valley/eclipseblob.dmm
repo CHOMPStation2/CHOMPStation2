@@ -212,7 +212,7 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/black/diagonal,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Our facility is experiencing strange issues. The slimes appear to be evolving, or being changed by our experimentations. It is taking more failures to get slime units, and some of the creatures are attempting to merge together. I am unsure if we should explore this path or shut it all down.";
 	name = "Status Report"
 	},

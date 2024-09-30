@@ -57,19 +57,19 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "dV" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "ey" = (
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 7;
 	pixel_y = 8
 	},
@@ -78,7 +78,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "ez" = (
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 7;
 	pixel_y = 8
 	},
@@ -92,11 +92,11 @@
 "eS" = (
 /obj/structure/grille/rustic,
 /obj/structure/barricade,
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 1;
 	pixel_y = 6
 	},
@@ -157,14 +157,14 @@
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "hK" = (
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},
@@ -187,8 +187,8 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "iR" = (
-/obj/item/weapon/material/shard/plastitaniumglass,
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass,
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 7;
 	pixel_y = 8
 	},
@@ -198,7 +198,7 @@
 /turf/simulated/wall/cult,
 /area/submap/DeathDen)
 "ji" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -206,7 +206,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "kc" = (
-/obj/item/weapon/flame/lighter/zippo/gonzo,
+/obj/item/flame/lighter/zippo/gonzo,
 /obj/random/trash,
 /obj/random/junk,
 /turf/simulated/floor/wood/sif,
@@ -222,7 +222,7 @@
 /area/submap/DeathDen)
 "kn" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 10
 	},
 /obj/effect/floor_decal/carpet{
@@ -234,7 +234,7 @@
 /obj/effect/floor_decal/carpet{
 	dir = 5
 	},
-/obj/item/weapon/storage/bible,
+/obj/item/storage/bible,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/DeathDen)
 "kY" = (
@@ -245,7 +245,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/DeathDen)
 "la" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "lw" = (
@@ -255,7 +255,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "lP" = (
-/obj/item/weapon/gun/projectile/colt,
+/obj/item/gun/projectile/colt,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "mc" = (
@@ -301,7 +301,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/DeathDen)
 "nO" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -322,7 +322,7 @@
 /obj/effect/floor_decal/carpet{
 	dir = 4
 	},
-/obj/item/weapon/scrying,
+/obj/item/scrying,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/DeathDen)
 "oI" = (
@@ -336,7 +336,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/material/knife/machete,
+/obj/item/material/knife/machete,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -349,7 +349,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/material/knife/hook,
+/obj/item/material/knife/hook,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -358,8 +358,8 @@
 "oX" = (
 /obj/structure/barricade,
 /obj/structure/grille/broken/rustic,
-/obj/item/weapon/material/shard/plastitaniumglass,
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass,
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = -5;
 	pixel_y = -6
 	},
@@ -372,11 +372,11 @@
 "pu" = (
 /obj/structure/barricade,
 /obj/structure/grille/broken/rustic,
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 7;
 	pixel_y = 8
 	},
@@ -401,17 +401,17 @@
 /area/template_noop)
 "rQ" = (
 /obj/structure/barricade,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/template_noop,
 /area/submap/DeathDen)
 "sh" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -419,7 +419,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "sX" = (
-/obj/item/weapon/material/shard/plastitaniumglass,
+/obj/item/material/shard/plastitaniumglass,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
@@ -439,10 +439,10 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/DeathDen)
 "tY" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},
@@ -453,7 +453,7 @@
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "vd" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -466,7 +466,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/material/knife/ritual,
+/obj/item/material/knife/ritual,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -486,7 +486,7 @@
 /area/submap/DeathDen)
 "vD" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/shreddedp,
+/obj/item/shreddedp,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "wa" = (
@@ -501,11 +501,11 @@
 /turf/template_noop,
 /area/submap/DeathDen)
 "wv" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = -8
 	},
 /obj/random/maintenance/engineering,
@@ -514,8 +514,8 @@
 /area/submap/DeathDen)
 "wG" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/deadringer,
-/obj/item/weapon/reagent_containers/food/snacks/bearstew,
+/obj/item/deadringer,
+/obj/item/reagent_containers/food/snacks/bearstew,
 /obj/effect/floor_decal/carpet,
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -531,16 +531,16 @@
 	},
 /obj/structure/table/wooden_reinforced,
 /obj/random/soap,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "xN" = (
-/obj/item/weapon/material/shard/plastitaniumglass,
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass,
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 7;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "xS" = (
@@ -556,11 +556,11 @@
 /area/template_noop)
 "yL" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "yS" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -573,8 +573,8 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/DeathDen)
 "yZ" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
 /obj/effect/floor_decal/carpet,
@@ -584,7 +584,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/DeathDen)
 "zV" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
 /turf/simulated/floor/wood/sif,
@@ -626,7 +626,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "De" = (
@@ -636,11 +636,11 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn,
+/obj/item/gun/projectile/shotgun/doublebarrel/sawn,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "DH" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},
@@ -648,16 +648,16 @@
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "EF" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/item/weapon/gun/projectile/deagle,
+/obj/item/gun/projectile/deagle,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "EL" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},
@@ -673,7 +673,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "FR" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -686,11 +686,11 @@
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "GT" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},
@@ -699,19 +699,19 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "HR" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
 /turf/template_noop,
 /area/submap/DeathDen)
 "HT" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/DeathDen)
 "HZ" = (
@@ -719,11 +719,11 @@
 /turf/simulated/floor/plating,
 /area/submap/DeathDen)
 "Ic" = (
-/obj/item/weapon/material/shard/plastitaniumglass,
+/obj/item/material/shard/plastitaniumglass,
 /turf/template_noop,
 /area/template_noop)
 "IT" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
 /turf/template_noop,
@@ -763,7 +763,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "NS" = (
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 7;
 	pixel_y = 8
 	},
@@ -779,7 +779,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/ceremonial,
+/obj/item/gun/projectile/shotgun/pump/rifle/ceremonial,
 /turf/template_noop,
 /area/submap/DeathDen)
 "OZ" = (
@@ -793,7 +793,7 @@
 /area/submap/DeathDen)
 "Qb" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/shreddedp,
+/obj/item/shreddedp,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "Qe" = (
@@ -801,18 +801,18 @@
 /area/template_noop)
 "QK" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
 /obj/item/trash/plate,
 /obj/item/trash/plate,
-/obj/item/weapon/storage/box/cups,
-/obj/item/weapon/storage/box/donut,
+/obj/item/storage/box/cups,
+/obj/item/storage/box/donut,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "Rd" = (
@@ -845,7 +845,7 @@
 /turf/simulated/wall/sifwood,
 /area/submap/DeathDen)
 "TA" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},
@@ -855,14 +855,14 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "TL" = (
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 1;
 	pixel_y = 6
 	},
 /turf/template_noop,
 /area/template_noop)
 "Uj" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -877,7 +877,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "UR" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/item/clothing/suit/storage/fluff/techpriestrobes,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
@@ -894,7 +894,7 @@
 /turf/simulated/floor/plating,
 /area/submap/DeathDen)
 "Zb" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 5;
 	pixel_y = -8
 	},

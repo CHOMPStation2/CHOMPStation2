@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/obj/item/weapon/aliencoin{
+/obj/item/aliencoin{
 	name = "Very useful Collectable";
 	desc = "It will make a nice collection number go up, increasing your completion percentage."
 	},
@@ -54,7 +54,7 @@
 /area/awaymission/mol/kitchen/chamberA)
 "ar" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Help Me";
 	info = "It won't get out of my head. It won't let me leave. I changed the blast doors to try and seal it away, but it refuses to let me make it unreachable. No matter how many barriers I try, if it gets the hint of being sealed permeantly, it makes me undo it. Please, if you read this. just leave. Just go. Don't try to kill it, you'll just be claimed too."
 	},
@@ -127,7 +127,7 @@
 /area/awaymission/mol/vistortunnel/orange)
 "aS" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting,
+/obj/item/gun/magic/firestaff/vrwizard/lighting,
 /turf/simulated/mineral/floor/icey{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -157,7 +157,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/mol/realitycore)
 "bb" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Dev Notes Secert";
 	info = "I promised my nephew to put his level into this game. If you found it, uhh congrats. Didn't test it."
 	},
@@ -170,7 +170,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
 "bf" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /obj/machinery/light,
 /turf/simulated/floor/wood/sif,
@@ -184,7 +184,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "bh" = (
-/obj/item/weapon/aliencoin{
+/obj/item/aliencoin{
 	name = "Very useful Collectable";
 	desc = "It will make a nice collection number go up, increasing your completion percentage."
 	},
@@ -310,7 +310,7 @@
 /area/awaymission/mol/kitchen)
 "cd" = (
 /obj/structure/safe,
-/obj/item/device/encryptionkey/omni,
+/obj/item/encryptionkey/omni,
 /obj/item/clothing/glasses/omni,
 /obj/item/ammo_casing/microbattery/medical/omni3,
 /turf/simulated/floor/wood,
@@ -424,7 +424,7 @@
 /area/awaymission/mol/kitchen/chamberA)
 "cO" = (
 /obj/structure/closet/jcloset,
-/obj/item/weapon/soap/rainbow_soap,
+/obj/item/soap/rainbow_soap,
 /turf/simulated/floor/wood/sif,
 /area/awaymission/mol/dorms)
 "cQ" = (
@@ -476,7 +476,7 @@
 /area/awaymission/mol/medical)
 "di" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Notes";
 	info = "We just pulled a cultist from the void. They were sleeping so we just nudge them into their room and prayed."
 	},
@@ -488,11 +488,11 @@
 /area/awaymission/mol/vistortunnel)
 "dj" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
 /turf/simulated/floor,
 /area/awaymission/mol/hardlightentrance)
 "dk" = (
@@ -564,7 +564,7 @@
 /area/awaymission/mol/themaze)
 "dO" = (
 /obj/structure/closet/jcloset,
-/obj/item/weapon/soap/rainbow_soap,
+/obj/item/soap/rainbow_soap,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 9
 	},
@@ -661,7 +661,7 @@
 /area/awaymission/mol/entrancetunnel)
 "ei" = (
 /obj/structure/bonfire/permanent,
-/obj/item/weapon/material/sword,
+/obj/item/material/sword,
 /turf/simulated/floor/outdoors/dirt{
 	oxygen = 21.8366;
 	nitrogen = 82.1472;
@@ -741,7 +741,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "fa" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /mob/living/simple_mob/vore/candy/orangecabold,
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -764,8 +764,8 @@
 "fg" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/projectile/revolver/saa,
-/obj/item/weapon/gun/projectile/revolver/judge,
+/obj/item/gun/projectile/revolver/saa,
+/obj/item/gun/projectile/revolver/judge,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "fi" = (
@@ -776,10 +776,10 @@
 /area/awaymission/mol/scraptunnels)
 "fk" = (
 /obj/structure/table/marble,
-/obj/item/device/flashlight/slime,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
+/obj/item/flashlight/slime,
+/obj/item/reagent_containers/food/snacks/slime,
+/obj/item/reagent_containers/food/snacks/slime,
+/obj/item/reagent_containers/food/snacks/slime,
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/awaymission/mol/kitchen/ChamberD)
 "fm" = (
@@ -844,7 +844,7 @@
 /area/awaymission/mol/kitchen/chamberA)
 "fD" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Notes";
 	info = "Vistor Purple has the capability to manpulate light, turning itself seemingly invisible to the naked eye."
 	},
@@ -1027,7 +1027,7 @@
 /area/awaymission/mol/hardlightentrance)
 "hd" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/mol/vistortunnel/yellow)
 "he" = (
@@ -1042,14 +1042,14 @@
 /area/awaymission/mol/securitycheckpoint)
 "hf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/soap/rainbow_soap,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/soap/rainbow_soap,
 /obj/machinery/button/remote/blast_door{
 	id = "FinaleGate1"
 	},
@@ -1115,7 +1115,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/mines)
 "hz" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Good Bye";
 	info = "We have fallen. The ash fills our view. We can hear the creatures scurring in the dark. Dave has already given up, and while I try to keep him moving with promises of salvation, I know he's right. We're both dead down here. Once we fell off the lift, we were goners."
 	},
@@ -1215,8 +1215,8 @@
 /area/awaymission/mol/kitchen/chamberA)
 "ia" = (
 /obj/effect/floor_decal/corner/yellow/border,
-/obj/item/device/defib_kit/compact/combat/loaded,
-/obj/item/device/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
 /obj/structure/table/standard,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
@@ -1284,7 +1284,7 @@
 "it" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/material/twohanded/fireaxe/scythe,
+/obj/item/material/twohanded/fireaxe/scythe,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "iz" = (
@@ -1403,7 +1403,7 @@
 "jc" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/projectile/revolver/saa,
+/obj/item/gun/projectile/revolver/saa,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "jd" = (
@@ -1508,8 +1508,8 @@
 "jT" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/firstaid/experimental,
-/obj/item/weapon/storage/firstaid/clotting,
+/obj/item/storage/firstaid/experimental,
+/obj/item/storage/firstaid/clotting,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "jW" = (
@@ -1604,7 +1604,7 @@
 /area/awaymission/mol/vr/shattered)
 "kt" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/gun/magic/firestaff/vrwizard/frost,
+/obj/item/gun/magic/firestaff/vrwizard/frost,
 /turf/simulated/mineral/floor/icey{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -1628,7 +1628,7 @@
 "kC" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/energy/vepr/plasma,
+/obj/item/gun/energy/vepr/plasma,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "kF" = (
@@ -1794,7 +1794,7 @@
 /area/awaymission/mol/kitchen/ChamberD)
 "lt" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/wood/sif{
 	outdoors = 1
 	},
@@ -1856,9 +1856,9 @@
 "lM" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/material/twohanded/fireaxe/scythe,
-/obj/item/weapon/melee/energy/sword/imperial,
-/obj/item/weapon/shield/energy/imperial,
+/obj/item/material/twohanded/fireaxe/scythe,
+/obj/item/melee/energy/sword/imperial,
+/obj/item/shield/energy/imperial,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "lO" = (
@@ -1939,8 +1939,8 @@
 "mo" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/energy/vepr/plasma,
-/obj/item/weapon/gun/energy/imperial,
+/obj/item/gun/energy/vepr/plasma,
+/obj/item/gun/energy/imperial,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "mq" = (
@@ -2047,7 +2047,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
 "mS" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Dev Notes 6";
 	info = "We would have a boss here but we're a very low budget team. 1,000 k thalers barely let us set up shop. Jim is living out of his shuttle craft."
 	},
@@ -2084,7 +2084,7 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/crumblingmaze)
 "ng" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -2124,7 +2124,7 @@
 /area/awaymission/mol/headdorms)
 "nq" = (
 /obj/structure/table/gold,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Just Stop";
 	info = "Boss man is gone. I sent a syndi distress signal, and I hope they tear this place apart before anyone finds it. And if you get past them, and all our mistakes, you're not going to be able to use it. Just give up and go home."
 	},
@@ -2280,8 +2280,8 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/gun/energy/lasertag/blue,
-/obj/item/weapon/gun/energy/lasertag/blue,
+/obj/item/gun/energy/lasertag/blue,
+/obj/item/gun/energy/lasertag/blue,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/hardlightentrance)
 "oz" = (
@@ -2414,8 +2414,8 @@
 /area/awaymission/mol/themaze)
 "pr" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/melee/energy/sword/imperial,
-/obj/item/weapon/shield/energy/imperial,
+/obj/item/melee/energy/sword/imperial,
+/obj/item/shield/energy/imperial,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
@@ -2526,9 +2526,9 @@
 /area/awaymission/mol/headdorms)
 "qg" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
+/obj/item/reagent_containers/food/snacks/slime,
+/obj/item/reagent_containers/food/snacks/slime,
+/obj/item/reagent_containers/food/snacks/slime,
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/awaymission/mol/kitchen/ChamberD)
 "qj" = (
@@ -2677,8 +2677,8 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/gun/energy/lasertag/blue,
-/obj/item/weapon/gun/energy/lasertag/blue,
+/obj/item/gun/energy/lasertag/blue,
+/obj/item/gun/energy/lasertag/blue,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/hardlightentrance)
 "qZ" = (
@@ -2695,7 +2695,7 @@
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/awaymission/mol/kitchen/chamberB)
 "rb" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /mob/living/simple_mob/vore/candy/yellowcabold,
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -2766,7 +2766,7 @@
 /area/awaymission/mol/kitchen/chamberC)
 "rE" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/bluespace_harpoon,
+/obj/item/bluespace_harpoon,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/shattered)
 "rK" = (
@@ -2821,7 +2821,7 @@
 /turf/simulated/floor/tiled/kafel_full/red,
 /area/awaymission/mol/kitchen/chamberC)
 "rW" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Dev Notes 4";
 	info = "Now you see, the sea level is a tad harder then the forsest, but you also have less of the next area to clear. Unless you want to full clear but who wants to do that."
 	},
@@ -2955,11 +2955,11 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
 "sY" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -3039,11 +3039,11 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "tB" = (
-/obj/item/weapon/aliencoin{
+/obj/item/aliencoin{
 	name = "Very useful Collectable";
 	desc = "It will make a nice collection number go up, increasing your completion percentage."
 	},
@@ -3051,7 +3051,7 @@
 /area/awaymission/mol/vr/shattered)
 "tD" = (
 /obj/structure/flora/ausbushes/leafybush,
-/obj/item/weapon/aliencoin{
+/obj/item/aliencoin{
 	name = "Very useful Collectable";
 	desc = "It will make a nice collection number go up, increasing your completion percentage."
 	},
@@ -3063,7 +3063,7 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/mines)
 "tH" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /mob/living/simple_mob/vore/candy/marshmellowserpent,
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -3266,7 +3266,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observation)
 "uR" = (
-/obj/item/weapon/beartrap/hunting{
+/obj/item/beartrap/hunting{
 	anchored = 1;
 	deployed = 1
 	},
@@ -3617,8 +3617,8 @@
 /area/awaymission/mol/vistortunnel)
 "xi" = (
 /obj/structure/closet/toolcloset,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
 /obj/item/clothing/gloves/yellow,
 /obj/machinery/light,
 /turf/simulated/floor/bmarble,
@@ -3731,7 +3731,7 @@
 "xJ" = (
 /obj/structure/table/hardwoodtable,
 /obj/effect/spider/stickyweb/dark,
-/obj/item/weapon/card/id/syndicate_command,
+/obj/item/card/id/syndicate_command,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/awaymission/mol/headdorms)
 "xM" = (
@@ -3763,7 +3763,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/mol/vistortunnel/purple)
 "ya" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /obj/machinery/light{
 	dir = 1
@@ -3784,8 +3784,8 @@
 "ye" = (
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
 "yf" = (
@@ -3872,7 +3872,7 @@
 /area/awaymission/mol/kitchen/ChamberD)
 "yK" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/energy/imperial,
+/obj/item/gun/energy/imperial,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
@@ -4195,7 +4195,7 @@
 /area/awaymission/mol/kitchen)
 "AG" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /turf/simulated/floor/carpet/oracarpet,
 /area/awaymission/mol/mines)
 "AI" = (
@@ -4308,7 +4308,7 @@
 /area/awaymission/mol/kitchen)
 "Bt" = (
 /obj/item/clothing/accessory/poncho/roles/cloak/security,
-/obj/item/weapon/gun/projectile/gyropistol,
+/obj/item/gun/projectile/gyropistol,
 /obj/item/ammo_magazine/m75,
 /obj/item/ammo_magazine/m75,
 /obj/item/ammo_magazine/m75,
@@ -4318,7 +4318,7 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	name = "security cabinet"
 	},
-/obj/item/weapon/melee/baton,
+/obj/item/melee/baton,
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/conveyorcontrol)
@@ -4417,7 +4417,7 @@
 /area/awaymission/mol/dorms)
 "Cf" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/projectile/revolver/judge,
+/obj/item/gun/projectile/revolver/judge,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "Ch" = (
@@ -4495,7 +4495,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "CE" = (
@@ -4551,7 +4551,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
 "CY" = (
-/obj/item/weapon/beartrap/hunting{
+/obj/item/beartrap/hunting{
 	anchored = 1;
 	deployed = 1
 	},
@@ -4593,7 +4593,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -4653,7 +4653,7 @@
 /obj/machinery/porta_turret/poi{
 	faction = "syndicate";
 	check_weapons = 1;
-	installation = /obj/item/weapon/gun/energy/lasershotgun
+	installation = /obj/item/gun/energy/lasershotgun
 	},
 /obj/machinery/light{
 	dir = 1;
@@ -4720,7 +4720,7 @@
 /area/awaymission/mol/mines)
 "DP" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/firstaid/bonemed,
+/obj/item/storage/firstaid/bonemed,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
@@ -4736,7 +4736,7 @@
 /area/awaymission/mol/crumblingmaze)
 "DR" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Notes";
 	info = "I feel I may be drugged after seeing vistor orange."
 	},
@@ -4771,8 +4771,8 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/gun/energy/lasertag/red,
-/obj/item/weapon/gun/energy/lasertag/red,
+/obj/item/gun/energy/lasertag/red,
+/obj/item/gun/energy/lasertag/red,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/hardlightentrance)
 "DZ" = (
@@ -4883,7 +4883,7 @@
 /area/awaymission/mol/audiotorium)
 "EO" = (
 /obj/structure/closet/jcloset,
-/obj/item/weapon/soap/rainbow_soap,
+/obj/item/soap/rainbow_soap,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 5
 	},
@@ -4891,7 +4891,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
 "EP" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -5087,7 +5087,7 @@
 /area/awaymission/mol/mines)
 "FQ" = (
 /obj/machinery/light,
-/obj/item/weapon/beartrap/hunting{
+/obj/item/beartrap/hunting{
 	anchored = 1;
 	deployed = 1
 	},
@@ -5105,7 +5105,7 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "Gc" = (
@@ -5124,7 +5124,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room2)
 "Gi" = (
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/outdoors/dirt{
 	oxygen = 21.8366;
 	nitrogen = 82.1472;
@@ -5228,7 +5228,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/mol/vistortunnel/purple)
 "GJ" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /mob/living/simple_mob/vore/candy/purplecabold,
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -5264,7 +5264,7 @@
 "GX" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/marble,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Farewell";
 	info = "Farewell our strange form of garbage collection. No idea why we used metal eating beetles, and robot spiders that dragged the gear back out, but heh. Have fun with my slime plush and the button to boss."
 	},
@@ -5324,7 +5324,7 @@
 /area/awaymission/mol/kitchen)
 "Ho" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood/sif,
 /area/awaymission/mol/dorms)
 "Hr" = (
@@ -5403,10 +5403,10 @@
 /area/awaymission/mol/audiotorium)
 "HS" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/telecube/randomized{
+/obj/item/telecube/randomized{
 	name = "McGuffin"
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Dev Notes 7";
 	info = "And at the end of the dungeon, we would have an epic boss fight, the main plot would kick off with the discovery of this item. Oh and you unlock the massive multli player open world bit. Please fund us."
 	},
@@ -5538,7 +5538,7 @@
 /area/awaymission/mol/dorms)
 "IJ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/projectile/revolver/webley,
+/obj/item/gun/projectile/revolver/webley,
 /turf/simulated/floor,
 /area/awaymission/mol/headdorms)
 "IK" = (
@@ -5577,9 +5577,9 @@
 /area/awaymission/mol/crumblingmaze)
 "IT" = (
 /obj/structure/safe,
-/obj/item/weapon/gun/energy/vepr/plasma,
+/obj/item/gun/energy/vepr/plasma,
 /obj/item/stack/material/supermatter,
-/obj/item/device/perfect_tele/alien,
+/obj/item/perfect_tele/alien,
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
 "IV" = (
@@ -5632,8 +5632,8 @@
 /turf/simulated/floor,
 /area/awaymission/mol/crumblingmaze)
 "Jh" = (
-/obj/item/weapon/flame/candle/everburn,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/outdoors/dirt{
 	oxygen = 21.8366;
 	nitrogen = 82.1472;
@@ -5756,7 +5756,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
 "Kc" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
@@ -5808,7 +5808,7 @@
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/scraptunnels)
 "KG" = (
-/obj/item/weapon/beartrap/hunting{
+/obj/item/beartrap/hunting{
 	anchored = 1;
 	deployed = 1
 	},
@@ -5900,8 +5900,8 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/gun/energy/lasertag/red,
-/obj/item/weapon/gun/energy/lasertag/red,
+/obj/item/gun/energy/lasertag/red,
+/obj/item/gun/energy/lasertag/red,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/hardlightentrance)
 "Lj" = (
@@ -5915,8 +5915,8 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/storage/firstaid/bonemed,
-/obj/item/weapon/storage/firstaid/experimental,
+/obj/item/storage/firstaid/bonemed,
+/obj/item/storage/firstaid/experimental,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "Lm" = (
@@ -5959,7 +5959,7 @@
 /area/awaymission/mol/serverroom)
 "LK" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/mol/vistortunnel/red)
 "LM" = (
@@ -6005,7 +6005,7 @@
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "LV" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Dev Notes 5";
 	info = "After dealing with fog and limited vision, you're brought to this cavern with limited movement and vision. But don't worry, this is the best and maybe only entrance you can use to get all the goodies."
 	},
@@ -6017,7 +6017,7 @@
 /area/awaymission/mol/vistortunnel)
 "LY" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
@@ -6103,14 +6103,14 @@
 /area/awaymission/mol/vistortunnel)
 "MC" = (
 /obj/structure/table/standard,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/soap/rainbow_soap,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/soap/rainbow_soap,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
@@ -6253,8 +6253,8 @@
 /area/awaymission/mol/dorms)
 "Ny" = (
 /obj/structure/closet/toolcloset,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
 /obj/item/clothing/gloves/yellow,
 /obj/machinery/light{
 	dir = 1;
@@ -6267,7 +6267,7 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "NB" = (
@@ -6301,7 +6301,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/entrancetunnel)
 "NP" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Dev Notes 1";
 	info = "Alright, so we are running out of budget, hence this papers instead of proper NPCs, or more interactive voice acted way. But here we start the player with a bit of story and a choice of four weapons."
 	},
@@ -6338,7 +6338,7 @@
 /area/awaymission/mol/scraptunnels)
 "Oa" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/reagent_containers/pill/cyanide,
+/obj/item/reagent_containers/pill/cyanide,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/wood/sif{
 	outdoors = 1
@@ -6346,7 +6346,7 @@
 /area/awaymission/mol/vr/shattered)
 "Od" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/gun/magic/firestaff/vrwizard/fire,
+/obj/item/gun/magic/firestaff/vrwizard/fire,
 /turf/simulated/mineral/floor/icey{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -6424,7 +6424,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "Oz" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Dev Notes 3";
 	info = "Now here we give the player a choice, head to some islands, or a forest. Each with their own mechanics. Head to the forest and you need to deal with hefty foliage. Head to the sea and you need to be careful about waves and shifting tides. They also have their own side quests. Well on the planning board they do."
 	},
@@ -6488,7 +6488,7 @@
 /area/awaymission/mol/vistortunnel)
 "OT" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/mol/vistortunnel/blue)
 "OW" = (
@@ -6510,7 +6510,7 @@
 /area/awaymission/mol/vistortunnel/orange)
 "Pf" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/gun/magic/firestaff/vrwizard/poison,
+/obj/item/gun/magic/firestaff/vrwizard/poison,
 /turf/simulated/mineral/floor/icey{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -6623,7 +6623,7 @@
 /obj/machinery/porta_turret/poi{
 	faction = "syndicate";
 	check_weapons = 1;
-	installation = /obj/item/weapon/gun/energy/lasershotgun
+	installation = /obj/item/gun/energy/lasershotgun
 	},
 /obj/machinery/light,
 /turf/simulated/floor/bmarble,
@@ -6676,7 +6676,7 @@
 	dir = 5
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "Qd" = (
@@ -6706,7 +6706,7 @@
 /area/awaymission/mol/vr/shattered)
 "Qm" = (
 /obj/structure/closet/toolcloset,
-/obj/item/weapon/storage/toolbox/brass,
+/obj/item/storage/toolbox/brass,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -6721,7 +6721,7 @@
 /turf/simulated/floor/tiled/kafel_full/yellow,
 /area/awaymission/mol/kitchen/chamberC)
 "Qu" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Dev Notes 2";
 	info = "Now we start off the game with some story and a thrilling encounter. Due to time restraints and budget no cut scenes yet. But later, we promise."
 	},
@@ -6847,9 +6847,9 @@
 "Rz" = (
 /obj/structure/table/marble,
 /obj/item/slime_crystal,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
-/obj/item/weapon/reagent_containers/food/snacks/slime,
+/obj/item/reagent_containers/food/snacks/slime,
+/obj/item/reagent_containers/food/snacks/slime,
+/obj/item/reagent_containers/food/snacks/slime,
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/awaymission/mol/kitchen/ChamberD)
 "RB" = (
@@ -6979,8 +6979,8 @@
 /area/awaymission/mol/hardlightentrance)
 "Sl" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop/advanced,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop/advanced,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 6
 	},
@@ -7014,7 +7014,7 @@
 /area/awaymission/mol/kitchen/chamberB)
 "Sy" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Notes";
 	info = "Vistor from the green specturem is higly toxic, creating spores that create a mess in a large area."
 	},
@@ -7055,7 +7055,7 @@
 /area/awaymission/mol/crumblingmaze)
 "SJ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/carpet/brown,
 /area/awaymission/mol/vistortunnel/orange)
 "SK" = (
@@ -7217,7 +7217,7 @@
 /area/awaymission/mol/vr/observationroom)
 "TM" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/mol/vistortunnel/purple)
 "TN" = (
@@ -7349,7 +7349,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/mol/vistortunnel/yellow)
 "Uw" = (
-/obj/item/weapon/card/id/silver{
+/obj/item/card/id/silver{
 	access = list(200)
 	},
 /turf/simulated/floor,
@@ -7461,7 +7461,7 @@
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/mines)
 "Vc" = (
-/obj/item/weapon/aliencoin{
+/obj/item/aliencoin{
 	name = "Very useful Collectable";
 	desc = "It will make a nice collection number go up, increasing your completion percentage."
 	},
@@ -7495,7 +7495,7 @@
 "Vh" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/firstaid/experimental,
+/obj/item/storage/firstaid/experimental,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "Vj" = (
@@ -7554,7 +7554,7 @@
 	dir = 9
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "VD" = (
@@ -7597,7 +7597,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
 "VL" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -7614,7 +7614,7 @@
 /area/awaymission/mol/vistortunnel/blue)
 "VO" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/carpet/green,
 /area/awaymission/mol/vistortunnel/green)
 "VP" = (
@@ -7750,7 +7750,7 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "WD" = (
@@ -7820,7 +7820,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "Xb" = (
-/obj/item/weapon/aliencoin{
+/obj/item/aliencoin{
 	name = "Very useful Collectable";
 	desc = "It will make a nice collection number go up, increasing your completion percentage."
 	},
@@ -7850,7 +7850,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
 "Xn" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /mob/living/simple_mob/vore/candy/redcabold,
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -7968,7 +7968,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
 "XR" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -7997,12 +7997,12 @@
 /area/awaymission/mol/kitchen/ChamberD)
 "XX" = (
 /obj/effect/floor_decal/corner/yellow/border,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/structure/table/standard,
 /obj/item/clothing/gloves/sterile,
 /obj/item/clothing/gloves/sterile,
-/obj/item/weapon/storage/box/masks,
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/masks,
+/obj/item/storage/box/masks,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
 "Yb" = (
@@ -8060,7 +8060,7 @@
 /area/awaymission/mol/conveyorcontrol)
 "Yr" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Notes";
 	info = "The vistor from the blue region is quite spooked, and highly defensive. All projectile weaponry seems ineffective, however Bob was able to grab it and drag it into containment. Bob is currently undergoing medical treatment."
 	},
@@ -8120,8 +8120,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/gun/energy/vepr/plasma,
-/obj/item/weapon/gun/energy/imperial,
+/obj/item/gun/energy/vepr/plasma,
+/obj/item/gun/energy/imperial,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
 "YW" = (
@@ -8178,8 +8178,8 @@
 /area/awaymission/mol/dorms)
 "Zm" = (
 /obj/structure/closet/toolcloset,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
 /obj/item/clothing/gloves/yellow,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/engi)
@@ -8210,7 +8210,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/medical)
 "Zx" = (
@@ -8249,8 +8249,8 @@
 /area/awaymission/mol/vistortunnel)
 "ZN" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop/advanced,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop/advanced,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 3
 	},

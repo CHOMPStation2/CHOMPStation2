@@ -15,9 +15,9 @@
 /area/submap/eclipsecargo)
 "e" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/curtain/bed,
-/obj/item/weapon/gun/energy/clockwork,
+/obj/item/gun/energy/clockwork,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
 "g" = (
@@ -111,7 +111,7 @@
 /area/submap/eclipsecargo)
 "s" = (
 /obj/structure/table/glass,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "We have started to alter our shipping schedules. Attacks from pirates, mercs, and raiders have begun to increase at a rapid rate. Many more armored then some of our elite.";
 	name = "Shipping"
 	},
@@ -138,8 +138,8 @@
 /area/submap/eclipsecargo)
 "w" = (
 /obj/structure/closet/crate/secure/lootsafe/numberlock,
-/obj/item/weapon/rig/ch/clockwork,
-/obj/item/weapon/gun/energy/clockwork,
+/obj/item/rig/ch/clockwork,
+/obj/item/gun/energy/clockwork,
 /obj/item/stack/material/void_opal,
 /turf/simulated/shuttle/floor/red,
 /area/submap/eclipsecargo)
@@ -178,7 +178,7 @@
 /area/submap/eclipsecargo)
 "D" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/curtain/bed,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
@@ -256,9 +256,9 @@
 /area/submap/eclipsecargo)
 "O" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/curtain/bed,
-/obj/item/weapon/rig/ch/clockwork,
+/obj/item/rig/ch/clockwork,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
 "P" = (

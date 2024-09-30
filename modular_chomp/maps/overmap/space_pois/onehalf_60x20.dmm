@@ -49,11 +49,11 @@
 /area/submap/onehalf)
 "an" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/toxin{
+/obj/item/storage/firstaid/toxin{
 	pixel_x = 3;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "white";
 	tag = "icon-white"
@@ -61,7 +61,7 @@
 /area/submap/onehalf)
 "ao" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/submap/onehalf)
 "ap" = (
@@ -104,11 +104,11 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid{
+/obj/item/storage/firstaid{
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "white";
 	tag = "icon-white"
@@ -137,12 +137,12 @@
 /area/submap/onehalf)
 "aF" = (
 /obj/structure/disposalpipe/trunk,
-/obj/item/weapon/ore/diamond,
-/obj/item/weapon/ore/diamond,
-/obj/item/weapon/ore/diamond,
-/obj/item/weapon/ore/diamond,
-/obj/item/weapon/ore/diamond,
-/obj/item/weapon/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "aJ" = (
@@ -251,10 +251,10 @@
 	},
 /obj/structure/closet/crate/medical,
 /obj/item/clothing/accessory/stethoscope,
-/obj/item/device/healthanalyzer/improved,
-/obj/item/weapon/reagent_containers/blood/OPlus,
-/obj/item/weapon/reagent_containers/blood/OPlus,
-/obj/item/weapon/reagent_containers/blood/OPlus,
+/obj/item/healthanalyzer/improved,
+/obj/item/reagent_containers/blood/OPlus,
+/obj/item/reagent_containers/blood/OPlus,
+/obj/item/reagent_containers/blood/OPlus,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "white";
 	tag = "icon-white"
@@ -569,7 +569,7 @@
 	dir = 1;
 	tag = "icon-pipe-j1 (NORTH)"
 	},
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
 "ca" = (
@@ -582,13 +582,13 @@
 /area/submap/onehalf)
 "cd" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "ce" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper,
-/obj/item/weapon/pen,
+/obj/item/paper,
+/obj/item/pen,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "cf" = (
@@ -620,8 +620,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000{
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000{
 	pixel_y = 11
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -654,7 +654,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small";
 	tag = "icon-small"
 	},
@@ -674,7 +674,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "cq" = (
@@ -709,7 +709,7 @@
 	icon_state = "1-4"
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/flame/lighter/zippo/red,
+/obj/item/flame/lighter/zippo/red,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "cu" = (
@@ -742,7 +742,7 @@
 /area/submap/onehalf)
 "cy" = (
 /obj/structure/lattice,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium";
 	tag = "icon-medium"
 	},
@@ -820,15 +820,15 @@
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "cL" = (
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
 "cM" = (
 /obj/structure/safe/floor,
-/obj/item/weapon/tank/oxygen/red,
+/obj/item/tank/oxygen/red,
 /obj/item/clothing/mask/gas/syndicate,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
 /obj/random/material/precious,
 /obj/random/material/precious,
 /obj/random/material/precious,
@@ -880,7 +880,7 @@
 /area/submap/onehalf)
 "cX" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "cY" = (
@@ -909,12 +909,12 @@
 /area/submap/onehalf)
 "db" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "dc" = (
 /obj/structure/table/standard,
-/obj/item/weapon/coin/phoron,
+/obj/item/coin/phoron,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "dd" = (
@@ -924,7 +924,7 @@
 "de" = (
 /obj/machinery/light,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "df" = (
@@ -948,7 +948,7 @@
 /area/submap/onehalf)
 "dj" = (
 /obj/structure/grille,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
 "dk" = (
@@ -1013,7 +1013,7 @@
 	icon_state = "4-8";
 	tag = ""
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium";
 	tag = "icon-medium"
 	},

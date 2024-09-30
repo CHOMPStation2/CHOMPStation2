@@ -51,7 +51,7 @@
 	var/mount_offset_x = 5				// Horizontal riding offset.
 	var/mount_offset_y = 8				// Vertical riding offset
 
-	var/obj/item/device/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
+	var/obj/item/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 	can_be_drop_pred = TRUE				// Mobs are pred by default.
 	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
@@ -322,7 +322,7 @@
 
 // Riding
 /datum/riding/simple_mob
-	keytype = /obj/item/weapon/material/twohanded/riding_crop // Crack!
+	keytype = /obj/item/material/twohanded/riding_crop // Crack!
 	nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.
 	key_name = "a riding crop"		// What the 'keys' for the thing being rided on would be called.
 	only_one_driver = TRUE			// If true, only the person in 'front' (first on list of riding mobs) can drive.
@@ -412,15 +412,15 @@
 	//CHOMPEdit - This whole proc tbh
 	if(message_mode)
 		if(message_mode == "intercom")
-			for(var/obj/item/device/radio/intercom/I in view(1, null))
+			for(var/obj/item/radio/intercom/I in view(1, null))
 				I.talk_into(src,message,message_mode,verb,speaking)
 				used_radios += I
 		if(message_mode == "headset")
-			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+			if(mob_radio && istype(mob_radio,/obj/item/radio/headset))
 				mob_radio.talk_into(src,message,message_mode,verb,speaking)
 				used_radios += mob_radio
 		else
-			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+			if(mob_radio && istype(mob_radio,/obj/item/radio/headset))
 				if(mob_radio.channels[message_mode])
 					mob_radio.talk_into(src,message,message_mode,verb,speaking)
 					used_radios += mob_radio

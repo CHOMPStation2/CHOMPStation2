@@ -18,7 +18,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/oregrubdeposit)
 "f" = (
-/obj/item/weapon/pickaxe/silver,
+/obj/item/pickaxe/silver,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/oregrubdeposit)
 

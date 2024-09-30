@@ -10,35 +10,35 @@
 /area/survivalpod/superpose/AnimalHospital)
 "aP" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/device/laser_pointer,
+/obj/item/storage/firstaid/toxin,
+/obj/item/laser_pointer,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "bc" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/gps,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/gps,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "cf" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/gloves{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/masks,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/storage/box/masks,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "cG" = (
 /obj/structure/table/standard,
 /obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/weapon/surgical/bioregen,
-/obj/item/weapon/autopsy_scanner,
+/obj/item/surgical/bioregen,
+/obj/item/autopsy_scanner,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "cS" = (
@@ -97,7 +97,7 @@
 /area/survivalpod/superpose/AnimalHospital)
 "fg" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/denecrotizer/medical,
+/obj/item/denecrotizer/medical,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -168,8 +168,8 @@
 /area/survivalpod/superpose/AnimalHospital)
 "ko" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/backpack/dufflebag/med,
-/obj/item/device/flashlight/pen,
+/obj/item/storage/backpack/dufflebag/med,
+/obj/item/flashlight/pen,
 /obj/item/clothing/accessory/stethoscope,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
@@ -187,25 +187,25 @@
 	dir = 5
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/cookie{
+/obj/item/reagent_containers/food/snacks/cookie{
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cookie{
+/obj/item/reagent_containers/food/snacks/cookie{
 	pixel_y = 6
 	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cookie{
+/obj/item/reagent_containers/food/snacks/cookie{
 	pixel_y = 3
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "lz" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/box/bodybags,
-/obj/item/weapon/storage/box/freezer,
-/obj/item/weapon/storage/box/freezer,
+/obj/item/storage/box/bodybags,
+/obj/item/storage/box/freezer,
+/obj/item/storage/box/freezer,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "lA" = (
@@ -263,33 +263,33 @@
 /area/survivalpod/superpose/AnimalHospital)
 "nT" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/FixOVein{
+/obj/item/surgical/FixOVein{
 	pixel_x = 5
 	},
-/obj/item/weapon/surgical/bonegel{
+/obj/item/surgical/bonegel{
 	pixel_x = -5;
 	pixel_y = 2
 	},
-/obj/item/weapon/surgical/bonesetter{
+/obj/item/surgical/bonesetter{
 	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "oa" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/hemostat{
+/obj/item/surgical/hemostat{
 	pixel_x = -4
 	},
-/obj/item/weapon/surgical/retractor,
+/obj/item/surgical/retractor,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "oC" = (
 /obj/structure/closet,
-/obj/item/weapon/gun/launcher/syringe,
-/obj/item/weapon/storage/box/syringegun,
+/obj/item/gun/launcher/syringe,
+/obj/item/storage/box/syringegun,
 /obj/random/cigarettes,
-/obj/item/weapon/storage/box/syringes,
-/obj/item/weapon/storage/box/matches,
+/obj/item/storage/box/syringes,
+/obj/item/storage/box/matches,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -297,7 +297,7 @@
 /area/survivalpod/superpose/AnimalHospital)
 "py" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -330,11 +330,11 @@
 /area/survivalpod/superpose/AnimalHospital)
 "qQ" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "rl" = (
-/obj/item/weapon/storage/bag/trash,
+/obj/item/storage/bag/trash,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/AnimalHospital)
 "rI" = (
@@ -365,10 +365,10 @@
 /area/survivalpod/superpose/AnimalHospital)
 "sI" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight/glowstick/blue,
-/obj/item/device/flashlight,
+/obj/item/flashlight/glowstick/blue,
+/obj/item/flashlight/glowstick/blue,
+/obj/item/flashlight/glowstick/blue,
+/obj/item/flashlight,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -381,16 +381,16 @@
 /area/survivalpod/superpose/AnimalHospital)
 "sM" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/cautery{
+/obj/item/surgical/cautery{
 	pixel_x = 2
 	},
-/obj/item/weapon/surgical/surgicaldrill,
+/obj/item/surgical/surgicaldrill,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "sV" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/dropper,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "tq" = (
@@ -417,7 +417,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "wx" = (
@@ -487,11 +487,11 @@
 "Bv" = (
 /obj/effect/floor_decal/corner/paleblue/full,
 /obj/structure/table/standard,
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000
 	},
-/obj/item/weapon/melee/baton/cattleprod,
+/obj/item/melee/baton/cattleprod,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
@@ -508,8 +508,8 @@
 /obj/structure/closet/secure_closet/medical1{
 	req_access = null
 	},
-/obj/item/weapon/storage/quickdraw/syringe_case,
-/obj/item/weapon/storage/quickdraw/syringe_case,
+/obj/item/storage/quickdraw/syringe_case,
+/obj/item/storage/quickdraw/syringe_case,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "Cj" = (
@@ -559,21 +559,21 @@
 /area/survivalpod/superpose/AnimalHospital)
 "Hd" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/item/clothing/accessory/stethoscope,
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/device/flashlight/pen,
-/obj/item/device/flashlight/pen,
+/obj/item/flashlight/pen,
+/obj/item/flashlight/pen,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "Hl" = (
 /obj/structure/closet/crate/trashcart,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/reagent_containers/food/drinks/bottle/vodka,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/AnimalHospital)
 "Hn" = (
@@ -583,13 +583,13 @@
 /obj/structure/closet/crate/bin{
 	anchored = 1
 	},
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick/random,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "Hz" = (
 /obj/structure/table/glass,
 /obj/machinery/light/small,
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "HK" = (
@@ -617,8 +617,8 @@
 /area/survivalpod/superpose/AnimalHospital)
 "IC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "IH" = (
@@ -626,14 +626,14 @@
 	dir = 9
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/tank/oxygen,
+/obj/item/tank/oxygen,
 /obj/item/clothing/mask/breath,
-/obj/item/weapon/gun/energy/netgun,
+/obj/item/gun/energy/netgun,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "IW" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "Jl" = (
@@ -647,15 +647,15 @@
 /area/survivalpod/superpose/AnimalHospital)
 "Jr" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/scalpel{
+/obj/item/surgical/scalpel{
 	pixel_y = 11
 	},
-/obj/item/weapon/surgical/circular_saw,
+/obj/item/surgical/circular_saw,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "JP" = (
 /obj/structure/table/reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "Kd" = (
@@ -696,12 +696,12 @@
 	dir = 1
 	},
 /obj/structure/closet/crate/medical/blood,
-/obj/item/weapon/reagent_containers/blood/prelabeled/BPlus,
-/obj/item/weapon/reagent_containers/blood/prelabeled/AMinus,
-/obj/item/weapon/reagent_containers/blood/prelabeled/BMinus,
-/obj/item/weapon/reagent_containers/blood/prelabeled/APlus,
-/obj/item/weapon/reagent_containers/blood/prelabeled/OPlus,
-/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/reagent_containers/blood/prelabeled/BPlus,
+/obj/item/reagent_containers/blood/prelabeled/AMinus,
+/obj/item/reagent_containers/blood/prelabeled/BMinus,
+/obj/item/reagent_containers/blood/prelabeled/APlus,
+/obj/item/reagent_containers/blood/prelabeled/OPlus,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
 /obj/structure/medical_stand,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
@@ -722,7 +722,7 @@
 "MA" = (
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/full,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/AnimalHospital)
 "MS" = (
@@ -730,12 +730,12 @@
 	dir = 4
 	},
 /obj/structure/closet,
-/obj/item/weapon/storage/belt/medical,
-/obj/item/weapon/storage/belt/medical,
+/obj/item/storage/belt/medical,
+/obj/item/storage/belt/medical,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/clothing/glasses/hud/health,
 /obj/item/clothing/glasses/hud/health,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/AnimalHospital)
 "Nv" = (
@@ -818,8 +818,8 @@
 /area/survivalpod/superpose/AnimalHospital)
 "SY" = (
 /obj/structure/table/standard,
-/obj/item/device/taperecorder,
-/obj/item/weapon/pen/blue{
+/obj/item/taperecorder,
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 5
 	},

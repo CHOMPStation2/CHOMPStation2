@@ -1,7 +1,7 @@
-/obj/item/weapon/gun/energy/locked/frontier/rifle
+/obj/item/gun/energy/locked/frontier/rifle
 	fire_delay = 12
 
-/obj/item/weapon/gun/energy/locked/frontier/shotgun
+/obj/item/gun/energy/locked/frontier/shotgun
 	name = "frontier shotgun"
 	desc = "A much larger, heavier weapon than the typical frontier-type weapons. This one has a safety interlock that prevents firing while in proximity to the facility."
 	icon = 'icons/obj/gun_vr.dmi'

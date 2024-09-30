@@ -118,7 +118,7 @@
 	var/datum/component/gargoyle/comp = statue.GetComponent(/datum/component/gargoyle)
 	if (no_clothes)
 		for(var/obj/item/W in statue)
-			if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
+			if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
 				continue
 			statue.drop_from_inventory(W)
 
@@ -249,6 +249,6 @@
 			return TRUE
 	return TRUE
 
-/obj/item/weapon/paper/petrification_notes
+/obj/item/paper/petrification_notes
 	name = "written notes"
 	info = "<font face=\"Times New Roman\"><i>Found this buried in the machine over there after digging through it a bit- I hooked it up to one of our displays so it was a bit more usable- seems to be a spare part, it was right next to another one that actually <b>was</b> hooked up. Turns things into other materials, probably one of the components that makes that machine work.</i></font>"

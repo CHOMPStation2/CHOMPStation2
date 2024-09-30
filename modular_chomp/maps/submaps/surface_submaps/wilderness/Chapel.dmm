@@ -16,12 +16,12 @@
 /obj/structure/closet/hydrant{
 	pixel_y = 32
 	},
-/obj/item/weapon/book/tome,
-/obj/item/weapon/telecube,
+/obj/item/book/tome,
+/obj/item/telecube,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "af" = (
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/outdoors/rocks,
 /area/template_noop)
 "ag" = (
@@ -52,7 +52,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "an" = (
-/obj/item/weapon/material/knife/ritual,
+/obj/item/material/knife/ritual,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "ao" = (
@@ -61,7 +61,7 @@
 /area/template_noop)
 "ap" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/coin/diamond,
+/obj/item/coin/diamond,
 /obj/item/clothing/under/technomancer/master,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
@@ -77,7 +77,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "as" = (
-/obj/item/weapon/scepter,
+/obj/item/scepter,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "at" = (
@@ -95,12 +95,12 @@
 /area/submap/Chapel1)
 "aw" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "ax" = (
 /obj/structure/closet/crate/trashcart{
-	starts_with = list(/obj/item/weapon/stock_parts/capacitor/omni = 5, /obj/item/weapon/stock_parts/manipulator/omni = 5, /obj/item/weapon/stock_parts/matter_bin/omni = 5, /obj/item/weapon/stock_parts/micro_laser/omni = 5, /obj/item/weapon/stock_parts/scanning_module/omni = 5)
+	starts_with = list(/obj/item/stock_parts/capacitor/omni = 5, /obj/item/stock_parts/manipulator/omni = 5, /obj/item/stock_parts/matter_bin/omni = 5, /obj/item/stock_parts/micro_laser/omni = 5, /obj/item/stock_parts/scanning_module/omni = 5)
 	},
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
@@ -137,7 +137,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/weapon/stock_parts/capacitor/omni = 1, /obj/item/weapon/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
+	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/stock_parts/capacitor/omni = 1, /obj/item/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
@@ -165,7 +165,7 @@
 "aI" = (
 /obj/structure/ghost_pod/automatic/gravekeeper_drone,
 /obj/effect/floor_decal/industrial/warning/dust,
-/obj/item/device/gps/internal/poi{
+/obj/item/gps/internal/poi{
 	desc = "A safe haven in a harsh place.";
 	gps_tag = "Wilderness Chapel Signal"
 	},
@@ -186,7 +186,7 @@
 /area/submap/Chapel1)
 "aL" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "aM" = (
@@ -229,7 +229,7 @@
 "aT" = (
 /obj/structure/closet/coffin,
 /obj/random/drinkbottle,
-/obj/item/weapon/ectoplasm,
+/obj/item/ectoplasm,
 /obj/effect/decal/remains/human,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
@@ -240,13 +240,13 @@
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/Chapel1)
 "aV" = (
-/obj/item/weapon/flame/candle/candelabra,
+/obj/item/flame/candle/candelabra,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/Chapel1)
 "aW" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra,
+/obj/item/flame/candle/candelabra,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "aX" = (
@@ -276,7 +276,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "bc" = (
-/obj/item/weapon/flame/candle/candelabra,
+/obj/item/flame/candle/candelabra,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
@@ -319,12 +319,12 @@
 "bj" = (
 /obj/structure/table/sifwoodentable,
 /obj/random/toolbox,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "bk" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/chainsaw,
+/obj/item/chainsaw,
 /obj/random/tool/powermaint,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
@@ -341,7 +341,7 @@
 /turf/simulated/floor/outdoors/grass/sif/forest,
 /area/template_noop)
 "bo" = (
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "bp" = (
@@ -359,21 +359,21 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "bs" = (
-/obj/item/weapon/ore,
-/obj/item/weapon/ore,
-/obj/item/weapon/ore,
-/obj/item/weapon/ore,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/diamond,
-/obj/item/weapon/ore/silver,
-/obj/item/weapon/ore/uranium,
-/obj/item/weapon/ore,
-/obj/item/weapon/ore,
-/obj/item/weapon/ore,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/ore/coal,
-/obj/item/weapon/pickaxe/hand,
+/obj/item/ore,
+/obj/item/ore,
+/obj/item/ore,
+/obj/item/ore,
+/obj/item/ore/gold,
+/obj/item/ore/diamond,
+/obj/item/ore/silver,
+/obj/item/ore/uranium,
+/obj/item/ore,
+/obj/item/ore,
+/obj/item/ore,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/ore/coal,
+/obj/item/pickaxe/hand,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
@@ -394,7 +394,7 @@
 "bw" = (
 /obj/structure/closet/coffin,
 /obj/random/maintenance/cargo,
-/obj/item/weapon/ectoplasm,
+/obj/item/ectoplasm,
 /obj/effect/decal/remains/xeno,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
@@ -498,7 +498,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/fiftyspawner/phoron,
 /obj/fiftyspawner/phoron,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /obj/item/stack/cable_coil/cyan,
 /obj/item/stack/cable_coil/cyan,
 /turf/simulated/floor/wood/sif,
@@ -511,9 +511,9 @@
 /area/submap/Chapel1)
 "oO" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/material/harpoon,
-/obj/item/weapon/material/harpoon,
+/obj/item/material/fishing_net,
+/obj/item/material/harpoon,
+/obj/item/material/harpoon,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "pp" = (
@@ -530,7 +530,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/weapon/stock_parts/capacitor/omni = 1, /obj/item/weapon/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
+	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/stock_parts/capacitor/omni = 1, /obj/item/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 5
@@ -550,7 +550,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/weapon/stock_parts/capacitor/omni = 1, /obj/item/weapon/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
+	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/stock_parts/capacitor/omni = 1, /obj/item/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 10
@@ -588,7 +588,7 @@
 /area/submap/Chapel1)
 "CX" = (
 /obj/vehicle/boat/dragon/sifwood,
-/obj/item/weapon/oar/sifwood,
+/obj/item/oar/sifwood,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "Dz" = (
@@ -616,7 +616,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/weapon/stock_parts/capacitor/omni = 1, /obj/item/weapon/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
+	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/stock_parts/capacitor/omni = 1, /obj/item/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
@@ -634,7 +634,7 @@
 /area/submap/Chapel1)
 "Kb" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "OZ" = (

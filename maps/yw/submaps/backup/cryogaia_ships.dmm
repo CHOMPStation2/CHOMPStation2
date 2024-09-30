@@ -204,7 +204,7 @@
 /area/houseboat)
 "aD" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/book/codex,
+/obj/item/book/codex,
 /turf/simulated/floor/carpet/blue,
 /area/houseboat)
 "aE" = (
@@ -321,8 +321,8 @@
 /area/houseboat)
 "aX" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/white,
 /area/houseboat)
 "aY" = (
@@ -390,7 +390,7 @@
 /area/houseboat)
 "bj" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/steel_grid,
 /area/houseboat)
 "bk" = (
@@ -421,7 +421,7 @@
 /area/houseboat)
 "bo" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack,
+/obj/item/storage/secure/briefcase/nsfw_pack,
 /turf/simulated/floor/tiled/steel_grid,
 /area/houseboat)
 "bp" = (
@@ -437,7 +437,7 @@
 /area/houseboat)
 "br" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /obj/item/clothing/mask/breath/medical,
 /obj/machinery/light{
 	icon_state = "tube1";
@@ -493,7 +493,7 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/item/device/healthanalyzer/advanced,
+/obj/item/healthanalyzer/advanced,
 /turf/simulated/floor/tiled/white,
 /area/houseboat)
 "bA" = (
@@ -517,12 +517,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/houseboat)
 "bC" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/techmaint,
 /area/houseboat)
 "bD" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/tiled/techmaint,
 /area/houseboat)
 "bE" = (
@@ -707,11 +707,11 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/houseboat)
 "ce" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = -2;
 	pixel_y = 4
 	},
@@ -721,37 +721,37 @@
 /obj/item/bodybag/cryobag{
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/o2{
 	layer = 2.8;
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/box/masks{
+/obj/item/storage/box/masks{
 	pixel_x = 0;
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/gloves{
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/fire{
 	layer = 2.9;
 	pixel_x = 2;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_x = -2
 	},
-/obj/item/weapon/reagent_containers/blood/empty,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/empty,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /obj/structure/closet/medical_wall{
 	pixel_y = -32
 	},
-/obj/item/weapon/storage/box/body_record_disk,
+/obj/item/storage/box/body_record_disk,
 /turf/simulated/floor/tiled/white,
 /area/houseboat)
 "cf" = (
@@ -873,8 +873,8 @@
 /area/houseboat)
 "cx" = (
 /obj/structure/table/rack,
-/obj/item/device/suit_cooling_unit,
-/obj/item/weapon/tank/air,
+/obj/item/suit_cooling_unit,
+/obj/item/tank/air,
 /turf/simulated/floor/tiled/techfloor,
 /area/houseboat)
 "cy" = (
@@ -898,10 +898,10 @@
 /obj/structure/closet{
 	name = "custodial"
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop,
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
+/obj/item/storage/box/lights/mixed,
 /obj/machinery/light/small{
 	dir = 8;
 	pixel_x = 0
@@ -1127,7 +1127,7 @@
 /turf/simulated/floor/reinforced,
 /area/houseboat)
 "dh" = (
-/obj/item/device/perfect_tele,
+/obj/item/perfect_tele,
 /turf/simulated/floor/reinforced,
 /area/houseboat)
 "di" = (
@@ -1580,7 +1580,7 @@
 /area/houseboat)
 "ed" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/wood,
 /area/houseboat)
 "ee" = (
@@ -1671,7 +1671,7 @@
 /turf/simulated/floor/plating,
 /area/houseboat)
 "en" = (
-/obj/item/weapon/bedsheet/captaindouble,
+/obj/item/bedsheet/captaindouble,
 /obj/structure/bed/double,
 /turf/simulated/floor/wood,
 /area/houseboat)
@@ -1842,7 +1842,7 @@
 /turf/simulated/floor/holofloor/beach/sand,
 /area/houseboat/holodeck/beach)
 "eQ" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/houseboat/holodeck/beach)
 "eR" = (
@@ -2075,9 +2075,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/rcd,
-/obj/item/weapon/rcd_ammo,
-/obj/item/weapon/rcd_ammo,
+/obj/item/rcd,
+/obj/item/rcd_ammo,
+/obj/item/rcd_ammo,
 /turf/simulated/floor/plating,
 /area/houseboat)
 "fw" = (
@@ -2188,7 +2188,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/plating,
 /area/houseboat)
 "fJ" = (
@@ -2434,7 +2434,7 @@
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/red,
 /obj/item/clothing/under/color/red,
-/obj/item/weapon/holo/esword/red,
+/obj/item/holo/esword/red,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
@@ -2467,7 +2467,7 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/houseboat/holodeck/basketball)
 "gB" = (
-/obj/item/weapon/beach_ball/holoball,
+/obj/item/beach_ball/holoball,
 /turf/simulated/floor/holofloor/tiled,
 /area/houseboat/holodeck/basketball)
 "gC" = (
@@ -2512,7 +2512,7 @@
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/green,
 /obj/item/clothing/under/color/green,
-/obj/item/weapon/holo/esword/green,
+/obj/item/holo/esword/green,
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},

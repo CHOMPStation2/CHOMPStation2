@@ -25,12 +25,12 @@
 /area/submap/cliffmanor)
 "dU" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "ei" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/soulstone,
+/obj/item/soulstone,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "gX" = (
@@ -46,7 +46,7 @@
 	dir = 1
 	},
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -145,12 +145,12 @@
 /area/submap/cliffmanor)
 "uv" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "uS" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -160,7 +160,7 @@
 "va" = (
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -177,7 +177,7 @@
 /area/submap/cliffmanor)
 "vw" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
@@ -445,15 +445,15 @@
 /area/submap/cliffmanor)
 "Um" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/firework_star/weather/storm,
-/obj/item/weapon/firework_star/weather/storm,
-/obj/item/weapon/firework_star/weather/rain,
-/obj/item/weapon/firework_star/weather/rain,
-/obj/item/weapon/firework_star/weather/hail,
-/obj/item/weapon/firework_star/weather/hail,
-/obj/item/weapon/firework_star/weather/blizzard,
-/obj/item/weapon/firework_star/weather/blizzard,
-/obj/item/weapon/firework_star/weather/fallout,
+/obj/item/firework_star/weather/storm,
+/obj/item/firework_star/weather/storm,
+/obj/item/firework_star/weather/rain,
+/obj/item/firework_star/weather/rain,
+/obj/item/firework_star/weather/hail,
+/obj/item/firework_star/weather/hail,
+/obj/item/firework_star/weather/blizzard,
+/obj/item/firework_star/weather/blizzard,
+/obj/item/firework_star/weather/fallout,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "Us" = (

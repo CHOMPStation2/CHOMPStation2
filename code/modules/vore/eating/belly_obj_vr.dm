@@ -55,9 +55,9 @@
 	var/fancy_vore = FALSE					// Using the new sounds?
 	var/is_wet = TRUE						// Is this belly's insides made of slimy parts?
 	var/wet_loop = TRUE						// Does the belly have a fleshy loop playing?
-	var/obj/item/weapon/storage/vore_egg/ownegg	// Is this belly creating an egg?
+	var/obj/item/storage/vore_egg/ownegg	// Is this belly creating an egg?
 	var/egg_type = "Egg"					// Default egg type and path.
-	var/egg_path = /obj/item/weapon/storage/vore_egg
+	var/egg_path = /obj/item/storage/vore_egg
 	var/egg_name = null						// CHOMPAdd. Custom egg name
 	var/egg_size = 0						// CHOMPAdd. Custom egg size
 	var/list/list/emote_lists = list()			// Idle emotes that happen on their own, depending on the bellymode. Contains lists of strings indexed by bellymode
@@ -584,7 +584,7 @@
 		return
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
-	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi)) // Prevent reforming causing a lot of log spam/sounds
+	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/mmi)) // Prevent reforming causing a lot of log spam/sounds
 		return //Someone getting reformed most likely (And if not, uh... shouldn't happen anyways?)
 	//CHOMPEdit end
 
@@ -1138,7 +1138,7 @@
 		L.muffled = FALSE
 		L.forced_psay = FALSE
 
-	for(var/obj/item/weapon/holder/H in M.contents)
+	for(var/obj/item/holder/H in M.contents)
 		H.held_mob.muffled = FALSE
 		H.held_mob.forced_psay = FALSE
 
@@ -1623,14 +1623,14 @@
 	if(is_vore_predator(M))
 		M.release_vore_contents(include_absorbed = TRUE, silent = TRUE)
 
-	var/obj/item/device/mmi/hasMMI // CHOMPEdit - Adjust how MMI's are handled
+	var/obj/item/mmi/hasMMI // CHOMPEdit - Adjust how MMI's are handled
 
 	//Drop all items into the belly.
 	if(CONFIG_GET(flag/items_survive_digestion)) // CHOMPEdit
 		for(var/obj/item/W in M)
 			if(istype(W, /obj/item/organ/internal/mmi_holder/posibrain))
 				var/obj/item/organ/internal/mmi_holder/MMI = W
-				var/obj/item/device/mmi/brainbox = MMI.removed()
+				var/obj/item/mmi/brainbox = MMI.removed()
 				if(brainbox)
 					items_preserved += brainbox
 					hasMMI = brainbox // CHOMPEdit - Adjust how MMI's are handled
@@ -1642,7 +1642,7 @@
 						I.gurgle_contaminate(contents, contamination_flavor, contamination_color) //We do an initial contamination pass to get stuff like IDs wet.
 					if(item_digest_mode == IM_HOLD)
 						items_preserved |= I
-					else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I,/obj/item/organ)))
+					else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(I,/obj/item/reagent_containers/food) || istype(I,/obj/item/organ)))
 						items_preserved |= I
 
 	//Reagent transfer
@@ -1678,7 +1678,7 @@
 			else
 				R.mmi.loc = src
 				items_preserved += R.mmi
-				var/obj/item/weapon/robot_module/MB = locate() in R.contents
+				var/obj/item/robot_module/MB = locate() in R.contents
 				if(MB)
 					R.mmi.brainmob.languages = MB.original_languages
 				else
@@ -2402,7 +2402,7 @@
 		ourmob.reset_view(owner)
 	if(isitem(content))
 		var/obj/item/I = content
-		if(istype(I,/obj/item/weapon/card/id))
+		if(istype(I,/obj/item/card/id))
 			I.gurgle_contaminate(target.contents, target.contamination_flavor, target.contamination_color)
 		if(I.gurgled && target.contaminates)
 			I.decontaminate()
@@ -2548,9 +2548,9 @@
 		if(blacklist & autotransfer_flags_list_items["Trash"])
 			if(istype(prey, /obj/item/trash)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Eggs"])
-			if(istype(prey, /obj/item/weapon/storage/vore_egg)) return FALSE
+			if(istype(prey, /obj/item/storage/vore_egg)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Remains"])
-			if(istype(prey, /obj/item/weapon/digestion_remains)) return FALSE
+			if(istype(prey, /obj/item/digestion_remains)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Indigestible Items"])
 			if(prey in items_preserved) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Recyclable Items"])
@@ -2558,20 +2558,20 @@
 				var/obj/item/I = prey
 				if(I.matter) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Ores"])
-			if(istype(prey, /obj/item/weapon/ore)) return FALSE
+			if(istype(prey, /obj/item/ore)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Clothes and Bags"])
-			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/weapon/storage)) return FALSE
+			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/storage)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Food"])
-			if(istype(prey, /obj/item/weapon/reagent_containers/food)) return FALSE
+			if(istype(prey, /obj/item/reagent_containers/food)) return FALSE
 		if(whitelist == 0) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Items"])
 			if(isitem(prey)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Trash"])
 			if(istype(prey, /obj/item/trash)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Eggs"])
-			if(istype(prey, /obj/item/weapon/storage/vore_egg)) return TRUE
+			if(istype(prey, /obj/item/storage/vore_egg)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Remains"])
-			if(istype(prey, /obj/item/weapon/digestion_remains)) return TRUE
+			if(istype(prey, /obj/item/digestion_remains)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Indigestible Items"])
 			if(prey in items_preserved) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Recyclable Items"])
@@ -2579,11 +2579,11 @@
 				var/obj/item/I = prey
 				if(I.matter) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Ores"])
-			if(istype(prey, /obj/item/weapon/ore)) return TRUE
+			if(istype(prey, /obj/item/ore)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Clothes and Bags"])
-			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/weapon/storage)) return TRUE
+			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/storage)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Food"])
-			if(istype(prey, /obj/item/weapon/reagent_containers/food)) return TRUE
+			if(istype(prey, /obj/item/reagent_containers/food)) return TRUE
 	return FALSE //CHOMPEdit end
 
 // Belly copies and then returns the copy

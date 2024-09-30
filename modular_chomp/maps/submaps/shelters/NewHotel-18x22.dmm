@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/cell/hyper,
+/obj/item/cell/hyper,
 /obj/random/coin,
 /obj/random/cash/huge,
 /turf/simulated/floor/wood,
@@ -22,15 +22,15 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/NewHotel)
 "aJ" = (
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/NewHotel)
 "bb" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -46,7 +46,7 @@
 /area/survivalpod/superpose/NewHotel)
 "cA" = (
 /obj/structure/closet/cabinet,
-/obj/item/device/binoculars/spyglass,
+/obj/item/binoculars/spyglass,
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/maintenance/medical,
@@ -68,7 +68,7 @@
 /area/survivalpod/superpose/NewHotel)
 "dn" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
 "dr" = (
@@ -130,16 +130,16 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/NewHotel)
 "dz" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/yellowdouble,
+/obj/item/bedsheet/yellowdouble,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -155,12 +155,12 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 2;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/condiment/spacespice{
+/obj/item/reagent_containers/food/condiment/spacespice{
 	pixel_x = 5;
 	pixel_y = 9
 	},
@@ -216,9 +216,9 @@
 /area/survivalpod/superpose/NewHotel)
 "ja" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/everburn,
-/obj/item/device/multitool,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/flame/candle/everburn,
+/obj/item/multitool,
+/obj/item/storage/toolbox/mechanical,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -240,14 +240,14 @@
 /area/survivalpod/superpose/NewHotel)
 "kW" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
 "lI" = (
-/obj/item/weapon/stool{
+/obj/item/stool{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -271,7 +271,7 @@
 /area/survivalpod/superpose/NewHotel)
 "pn" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -281,7 +281,7 @@
 /area/survivalpod/superpose/NewHotel)
 "qY" = (
 /obj/structure/table/woodentable,
-/obj/item/device/tape,
+/obj/item/tape,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
@@ -305,8 +305,8 @@
 /area/survivalpod/superpose/NewHotel)
 "tz" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
@@ -314,7 +314,7 @@
 "tE" = (
 /obj/structure/table/woodentable,
 /obj/random/coin,
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/carpet/blue,
 /area/survivalpod/superpose/NewHotel)
 "tV" = (
@@ -331,7 +331,7 @@
 /area/survivalpod/superpose/NewHotel)
 "vA" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/telecube/randomized{
+/obj/item/telecube/randomized{
 	name = "Odd artifact"
 	},
 /turf/simulated/floor/wood,
@@ -345,11 +345,11 @@
 /area/survivalpod/superpose/NewHotel)
 "vR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra,
+/obj/item/flame/candle/candelabra,
 /turf/simulated/floor/carpet/blue,
 /area/survivalpod/superpose/NewHotel)
 "wK" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
@@ -504,18 +504,18 @@
 /area/survivalpod/superpose/NewHotel)
 "GV" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/flame/lighter/random,
+/obj/item/flame/lighter/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
 "Ha" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "This is a stupid tresure hunt task, that thing is not taking us anywhere. Go on and have fun finding a waste of time.";
 	name = "Wrinkled sheet of paper"
 	},
@@ -533,51 +533,51 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/NewHotel)
 "Mk" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/closet/crate,
 /turf/simulated/floor/wood/broken,
 /area/survivalpod/superpose/NewHotel)
@@ -620,10 +620,10 @@
 /area/survivalpod/superpose/NewHotel)
 "Qv" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
 "QG" = (
@@ -741,7 +741,7 @@
 /area/survivalpod/superpose/NewHotel)
 "SZ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -758,8 +758,8 @@
 /area/survivalpod/superpose/NewHotel)
 "UU" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/lighter/zippo/royal,
-/obj/item/weapon/lipstick/random,
+/obj/item/flame/lighter/zippo/royal,
+/obj/item/lipstick/random,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/NewHotel)
 "Vf" = (
@@ -795,11 +795,11 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat{
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat{
 	pixel_y = -2
 	},
-/obj/item/weapon/reagent_containers/food/snacks/meat{
+/obj/item/reagent_containers/food/snacks/meat{
 	pixel_y = -5
 	},
 /turf/simulated/floor/concrete{
@@ -812,14 +812,14 @@
 /area/survivalpod/superpose/NewHotel)
 "YQ" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/book/manual/chef_recipes,
 /turf/simulated/floor/concrete{
 	outdoors = 1
 	},
 /area/survivalpod/superpose/NewHotel)
 "ZG" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/machinery/light/small{
 	dir = 4
 	},

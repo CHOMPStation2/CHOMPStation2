@@ -1,7 +1,7 @@
 // Light Painter.
 
 
-/obj/item/device/lightpainter
+/obj/item/lightpainter
 	name = "light painter"
 	desc = "A device to configure the emission color of lighting fixtures. Use this device in-hand to set/reset the color. Use the device on a light fixture to assign the color."
 	icon = 'icons/obj/janitor.dmi'
@@ -21,10 +21,10 @@
 	var/dimming = 0.7 // multiply value to dim lights from setcolor to nightcolor
 
 
-/obj/item/device/lightpainter/New()
+/obj/item/lightpainter/New()
 	. = ..()
 
-/obj/item/device/lightpainter/examine(mob/user)
+/obj/item/lightpainter/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		if(resetmode)
@@ -32,7 +32,7 @@
 		else
 			. += "It is currently coloring lights."
 
-/obj/item/device/lightpainter/attack_self(mob/user)
+/obj/item/lightpainter/attack_self(mob/user)
 
 	if(!resetmode)
 		resetmode = 1
@@ -50,7 +50,7 @@
 			to_chat(usr, "Painter color set.")
 
 
-/obj/item/device/lightpainter/proc/ColorLight(var/obj/machinery/light/target, var/mob/living/U)
+/obj/item/lightpainter/proc/ColorLight(var/obj/machinery/light/target, var/mob/living/U)
 
 	src.add_fingerprint(U)
 

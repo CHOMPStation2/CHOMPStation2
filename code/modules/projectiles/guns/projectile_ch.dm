@@ -10,7 +10,7 @@
 ////////////// CADYN'S BALLISTICS ////////////////////////////////////////////////////////////////////////// ORIGINAL FROM CHOMPSTATION ////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/obj/item/weapon/gun/projectile
+/obj/item/gun/projectile
 	var/manual_chamber = TRUE
 	var/only_open_load = FALSE
 	var/auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK | LOCK_SLAPPABLE
@@ -24,7 +24,7 @@
 	var/sound_eject = 'sound/weapons/ballistics/pistol_eject.ogg'
 	var/sound_chamber = 'sound/weapons/ballistics/pistol_chamber.ogg'
 
-/obj/item/weapon/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
+/obj/item/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
 	if(fire_anim)
 		flick(fire_anim, src)
 
@@ -66,7 +66,7 @@
 	if(manual_chamber && auto_loading_type)
 		bolt_toggle()
 
-/obj/item/weapon/gun/projectile/attack_self(mob/user as mob)
+/obj/item/gun/projectile/attack_self(mob/user as mob)
 	if(manual_chamber)
 		if(do_after(user,4))
 			bolt_handle(user)
@@ -75,7 +75,7 @@
 	else
 		unload_ammo(user)
 
-/obj/item/weapon/gun/projectile/proc/bolt_handle(mob/user)
+/obj/item/gun/projectile/proc/bolt_handle(mob/user)
 	var/previous_chambered = chambered
 	var/result = bolt_toggle(TRUE)
 	update_icon()
@@ -127,7 +127,7 @@
 				"<span class='notice'>You close \the [bolt_name][casing_chambered].</span>")
 		user.hud_used.update_ammo_hud(user, src)
 
-/obj/item/weapon/gun/projectile/proc/bolt_toggle(var/manual)
+/obj/item/gun/projectile/proc/bolt_toggle(var/manual)
 	if(!bolt_open)
 		if(auto_loading_type)
 			var/able_to_lock = (CHECK_BITFIELD(auto_loading_type,LOCK_OPEN_EMPTY) || (CHECK_BITFIELD(auto_loading_type,LOCK_MANUAL_LOCK) && manual))
@@ -195,7 +195,7 @@
 			return output
 
 
-/obj/item/weapon/gun/projectile/process_chambered()
+/obj/item/gun/projectile/process_chambered()
 	if (!chambered) return 0
 
 	// Aurora forensics port, gunpowder residue.
@@ -231,7 +231,7 @@
 		chambered = null
 	return 0
 
-/obj/item/weapon/gun/projectile/consume_next_projectile()
+/obj/item/gun/projectile/consume_next_projectile()
 	if(!manual_chamber)
 		//get the next casing
 		if(loaded.len)
@@ -249,7 +249,7 @@
 		return chambered.BB
 	return null
 
-/obj/item/weapon/gun/projectile/proc/chamber_bullet()
+/obj/item/gun/projectile/proc/chamber_bullet()
 	if(chambered)
 		return 0
 	var/obj/item/ammo_casing/to_chamber
@@ -267,7 +267,7 @@
 	else
 		return 0
 
-/obj/item/weapon/gun/projectile/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/load_ammo(var/obj/item/A, mob/user)
 	if(istype(A, /obj/item/ammo_magazine))
 		var/obj/item/ammo_magazine/AM = A
 		if(!(load_method & AM.mag_type) || caliber != AM.caliber || allowed_magazines && !is_type_in_list(A, allowed_magazines))
@@ -365,8 +365,8 @@
 		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 		user.hud_used.update_ammo_hud(user, src)
 
-	else if(istype(A, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/storage = A
+	else if(istype(A, /obj/item/storage))
+		var/obj/item/storage/storage = A
 		if(!(load_method & SINGLE_CASING))
 			return //incompatible
 
@@ -386,7 +386,7 @@
 
 	update_icon()
 
-/obj/item/weapon/gun/projectile/afterattack(atom/A, mob/living/user, adjacent, params)
+/obj/item/gun/projectile/afterattack(atom/A, mob/living/user, adjacent, params)
 	afteratt(A,user,adjacent,params)
 	if(auto_eject && ammo_magazine && ammo_magazine.stored_ammo && !ammo_magazine.stored_ammo.len && !(manual_chamber && chambered && chambered.BB != null))
 		ammo_magazine.loc = get_turf(src.loc)
@@ -400,7 +400,7 @@
 		ammo_magazine = null
 		update_icon()
 
-/obj/item/weapon/gun/projectile/proc/afteratt(atom/A, mob/living/user, adjacent, params)
+/obj/item/gun/projectile/proc/afteratt(atom/A, mob/living/user, adjacent, params)
 	if(adjacent) return //A is adjacent, is the user, or is on the user's person
 
 	if(!user.aiming)
@@ -418,7 +418,7 @@
 		Fire(A, user, params) //Otherwise, fire normally.
 		return
 
-/obj/item/weapon/gun/projectile/special_check(var/mob/user)
+/obj/item/gun/projectile/special_check(var/mob/user)
 	if(..())
 		if(manual_chamber)
 			if(CHECK_BITFIELD(auto_loading_type,OPEN_BOLT) && !bolt_open)
@@ -435,13 +435,13 @@
 		else
 			return 1
 
-/obj/item/weapon/gun/projectile/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/unload_ammo(mob/user, var/allow_dump=1)
 	if(manual_chamber && only_open_load && !bolt_open)
 		to_chat(user,"<span class='warning'>You must open the bolt to load or unload this gun!</span>")
 	else
 		return ..()
 
-/obj/item/weapon/gun/projectile/handle_click_empty(mob/user)
+/obj/item/gun/projectile/handle_click_empty(mob/user)
 	if (user)
 		user.visible_message("*click click*", "<span class='danger'>*click*</span>")
 	else
@@ -450,20 +450,20 @@
 	if(!manual_chamber)
 		process_chambered()
 
-/obj/item/weapon/gun/projectile/New(loc, var/starts_loaded = 1)
+/obj/item/gun/projectile/New(loc, var/starts_loaded = 1)
 	..()
 	if(manual_chamber)
-		verbs |= /obj/item/weapon/gun/projectile/verb/change_firemode
+		verbs |= /obj/item/gun/projectile/verb/change_firemode
 	update_icon()
 
-/obj/item/weapon/gun/projectile/verb/change_firemode()
+/obj/item/gun/projectile/verb/change_firemode()
 	set name = "Switch firemode"
 	set category = "Object"
 	set src in view(1)
 
 	switch_firemodes(usr)
 
-/obj/item/weapon/gun/projectile/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+/obj/item/gun/projectile/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	. = ..()
 	var/obj/item/projectile/bullet/P = projectile
 	if(!istype(P))
@@ -472,14 +472,14 @@
 
 //Special ammo handling bullshit
 
-/obj/item/weapon/gun/projectile/pirate/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+/obj/item/gun/projectile/pirate/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	. = ..()
 	var/obj/item/projectile/bullet/P = projectile
 	if(!istype(P))
 		return
 	P.sub_velocity(P.velocity * 0.3)	//Yeah, a gun that supposedly shoots any bullet is gonna be pretty shit.
 
-/obj/item/weapon/gun/projectile/revolver/lemat/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+/obj/item/gun/projectile/revolver/lemat/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	. = ..()
 	var/obj/item/projectile/bullet/P = projectile
 	P.velocity = initial(P.velocity)

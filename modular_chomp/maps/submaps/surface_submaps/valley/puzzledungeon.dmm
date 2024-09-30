@@ -9,9 +9,9 @@
 "d" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/suit/armor/pcarrier/laserproof/full,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/dungeon,
 /area/submap/puzzledungeon)
 "g" = (
@@ -35,9 +35,9 @@
 "l" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/suit/armor/pcarrier/bulletproof/full,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/dungeon,
 /area/submap/puzzledungeon)
 "s" = (
@@ -51,9 +51,9 @@
 /area/submap/puzzledungeon)
 "w" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/dungeon,
 /area/submap/puzzledungeon)
 "z" = (

@@ -28,7 +28,7 @@
 		if(!(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam)))
 			visible_message("<span class='danger'>The [P.name] bounces off of [src]'s shield!</span>", \
 						"<span class='userdanger'>The [P.name] bounces off of [src]'s shield!</span>")
-			new /obj/item/weapon/material/shard/shrapnel(src.loc)
+			new /obj/item/material/shard/shrapnel(src.loc)
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))
 				projectile_dam_type = BRUTE
 				incoming_damage = round(incoming_damage / 4) //Damage from strange sources is converted to brute for physical projectiles, though severely decreased.
@@ -92,7 +92,7 @@
 	wreckage = null
 	pilot_type = null
 
-	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/homing
+	var/grenade_type = /obj/item/grenade/shooter/energy/homing
 	var/grenade_timer = 50	//CHOMPEdit
 	special_attack_cooldown = 45 SECONDS
 	special_attack_min_range = 2
@@ -120,7 +120,7 @@
 	set waitfor = FALSE
 	set_AI_busy(TRUE)
 
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(A, G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer	//CHOMPEdit
@@ -129,7 +129,7 @@
 
 	set_AI_busy(FALSE)
 
-/obj/item/weapon/grenade/shooter/energy/homing //This is a horrid idea
+/obj/item/grenade/shooter/energy/homing //This is a horrid idea
 	name = "homing grenade"
 	desc = "A horrifically dangerous rave in a can."
 	projectile_types = list(/obj/item/projectile/energy/homing_bolt)

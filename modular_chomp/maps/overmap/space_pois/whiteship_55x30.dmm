@@ -7,7 +7,7 @@
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "al" = (
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "aJ" = (
@@ -55,7 +55,7 @@
 "cT" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/analyzer,
+/obj/item/analyzer,
 /turf/simulated/floor/tiled/eris/steel/techfloor_grid,
 /area/submap/whiteship)
 "dw" = (
@@ -137,7 +137,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/whiteship)
 "gr" = (
-/obj/item/weapon/surgical/scalpel,
+/obj/item/surgical/scalpel,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/whiteship)
@@ -247,7 +247,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/whiteship)
 "ok" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -291,7 +291,7 @@
 /turf/simulated/floor/tiled/eris/steel/techfloor_grid,
 /area/submap/whiteship)
 "tb" = (
-/obj/item/weapon/cell{
+/obj/item/cell{
 	charge = 100;
 	maxcharge = 15000
 	},
@@ -323,7 +323,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/whiteship)
 "tK" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
@@ -395,10 +395,10 @@
 /area/submap/whiteship)
 "xw" = (
 /obj/structure/table/rack,
-/obj/item/weapon/tank/emergency/oxygen,
-/obj/item/weapon/tank/emergency/oxygen,
-/obj/item/weapon/tank/emergency/oxygen,
-/obj/item/weapon/tank/emergency/oxygen,
+/obj/item/tank/emergency/oxygen,
+/obj/item/tank/emergency/oxygen,
+/obj/item/tank/emergency/oxygen,
+/obj/item/tank/emergency/oxygen,
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "yw" = (
@@ -441,7 +441,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/whiteship)
 "zY" = (
-/obj/item/weapon/cell{
+/obj/item/cell{
 	charge = 100;
 	maxcharge = 15000
 	},
@@ -450,7 +450,7 @@
 /area/submap/whiteship)
 "An" = (
 /obj/structure/table/standard,
-/obj/item/device/radio/off,
+/obj/item/radio/off,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -619,19 +619,19 @@
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "LW" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "Ma" = (
-/obj/item/weapon/banner/solgov,
+/obj/item/banner/solgov,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/whiteship)
 "Md" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 6;
 	pixel_y = -5
 	},
@@ -667,12 +667,12 @@
 /area/submap/whiteship)
 "Nq" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/oxygen,
+/obj/item/tank/oxygen,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/whiteship)
 "NE" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "QH" = (
@@ -687,7 +687,7 @@
 /area/submap/whiteship)
 "So" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/screwdriver,
+/obj/item/tool/screwdriver,
 /obj/machinery/light,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
@@ -718,7 +718,7 @@
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "Uq" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -735,7 +735,7 @@
 /obj/structure/salvageable/console_broken_os{
 	dir = 4
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Soontm"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,

@@ -49,31 +49,31 @@ var/list/mining_overlay_cache = list()
 	var/next_rock = 0
 	var/archaeo_overlay = ""
 	var/excav_overlay = ""
-	var/obj/item/weapon/last_find
+	var/obj/item/last_find
 	var/datum/artifact_find/artifact_find
 	var/ignore_mapgen
 
 	var/static/list/ore_types = list(
-		"hematite" = /obj/item/weapon/ore/iron,
-		"uranium" = /obj/item/weapon/ore/uranium,
-		"gold" = /obj/item/weapon/ore/gold,
-		"silver" = /obj/item/weapon/ore/silver,
-		"diamond" = /obj/item/weapon/ore/diamond,
-		"phoron" = /obj/item/weapon/ore/phoron,
-		"platinum" = /obj/item/weapon/ore/osmium,
-		"mhydrogen" = /obj/item/weapon/ore/hydrogen,
-		"sand" = /obj/item/weapon/ore/glass,
-		"carbon" = /obj/item/weapon/ore/coal,
-		"verdantium" = /obj/item/weapon/ore/verdantium,
-		"marble" = /obj/item/weapon/ore/marble,
-		"lead" = /obj/item/weapon/ore/lead,
-//		"copper" = /obj/item/weapon/ore/copper,
-//		"tin" = /obj/item/weapon/ore/tin,
-//		"bauxite" = /obj/item/weapon/ore/bauxite,
-//		"void opal" = /obj/item/weapon/ore/void_opal,
-//		"painite" = /obj/item/weapon/ore/painite,
-//		"quartz" = /obj/item/weapon/ore/quartz,
-		"rutile" = /obj/item/weapon/ore/rutile
+		"hematite" = /obj/item/ore/iron,
+		"uranium" = /obj/item/ore/uranium,
+		"gold" = /obj/item/ore/gold,
+		"silver" = /obj/item/ore/silver,
+		"diamond" = /obj/item/ore/diamond,
+		"phoron" = /obj/item/ore/phoron,
+		"platinum" = /obj/item/ore/osmium,
+		"mhydrogen" = /obj/item/ore/hydrogen,
+		"sand" = /obj/item/ore/glass,
+		"carbon" = /obj/item/ore/coal,
+		"verdantium" = /obj/item/ore/verdantium,
+		"marble" = /obj/item/ore/marble,
+		"lead" = /obj/item/ore/lead,
+//		"copper" = /obj/item/ore/copper,
+//		"tin" = /obj/item/ore/tin,
+//		"bauxite" = /obj/item/ore/bauxite,
+//		"void opal" = /obj/item/ore/void_opal,
+//		"painite" = /obj/item/ore/painite,
+//		"quartz" = /obj/item/ore/quartz,
+		"rutile" = /obj/item/ore/rutile
 	)
 
 	has_resources = 1
@@ -327,13 +327,13 @@ var/list/mining_overlay_cache = list()
 
 	if(istype(AM,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = AM
-		var/obj/item/weapon/pickaxe/P = H.get_inactive_hand()
+		var/obj/item/pickaxe/P = H.get_inactive_hand()
 		if(istype(P))
 			src.attackby(P, H)
 
 	else if(istype(AM,/mob/living/silicon/robot))
 		var/mob/living/silicon/robot/R = AM
-		if(istype(R.module_active,/obj/item/weapon/pickaxe))
+		if(istype(R.module_active,/obj/item/pickaxe))
 			attackby(R.module_active,R)
 
 	else if(istype(AM,/obj/mecha))
@@ -359,7 +359,7 @@ var/list/mining_overlay_cache = list()
 	update_icon()
 
 //Not even going to touch this pile of spaghetti
-/turf/simulated/mineral/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/turf/simulated/mineral/attackby(obj/item/W as obj, mob/user as mob)
 
 	if (!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
@@ -369,13 +369,13 @@ var/list/mining_overlay_cache = list()
 		var/valid_tool = 0
 		var/digspeed = 40
 
-		if(istype(W, /obj/item/weapon/shovel))
-			var/obj/item/weapon/shovel/S = W
+		if(istype(W, /obj/item/shovel))
+			var/obj/item/shovel/S = W
 			valid_tool = 1
 			digspeed = S.digspeed
 
-		if(istype(W, /obj/item/weapon/pickaxe))
-			var/obj/item/weapon/pickaxe/P = W
+		if(istype(W, /obj/item/pickaxe))
+			var/obj/item/pickaxe/P = W
 			if(P.sand_dig)
 				valid_tool = 1
 				digspeed = P.digspeed
@@ -397,17 +397,17 @@ var/list/mining_overlay_cache = list()
 			to_chat(user, "<span class='notice'>You dug a hole.</span>")
 			GetDrilled()
 
-		else if(istype(W,/obj/item/weapon/storage/bag/ore))
-			var/obj/item/weapon/storage/bag/ore/S = W
+		else if(istype(W,/obj/item/storage/bag/ore))
+			var/obj/item/storage/bag/ore/S = W
 			if(S.collection_mode)
-				for(var/obj/item/weapon/ore/O in contents)
+				for(var/obj/item/ore/O in contents)
 					O.attackby(W,user)
 					return
 
-		else if(istype(W,/obj/item/weapon/storage/bag/fossils))
-			var/obj/item/weapon/storage/bag/fossils/S = W
+		else if(istype(W,/obj/item/storage/bag/fossils))
+			var/obj/item/storage/bag/fossils/S = W
 			if(S.collection_mode)
-				for(var/obj/item/weapon/fossil/F in contents)
+				for(var/obj/item/fossil/F in contents)
 					F.attackby(W,user)
 					return
 
@@ -422,26 +422,26 @@ var/list/mining_overlay_cache = list()
 
 
 	else
-		if (istype(W, /obj/item/device/core_sampler))
+		if (istype(W, /obj/item/core_sampler))
 			geologic_data.UpdateNearbyArtifactInfo(src)
-			var/obj/item/device/core_sampler/C = W
+			var/obj/item/core_sampler/C = W
 			C.sample_item(src, user)
 			return
 
-		if (istype(W, /obj/item/device/depth_scanner))
-			var/obj/item/device/depth_scanner/C = W
+		if (istype(W, /obj/item/depth_scanner))
+			var/obj/item/depth_scanner/C = W
 			C.scan_atom(user, src)
 			return
 
-		if (istype(W, /obj/item/device/measuring_tape))
-			var/obj/item/device/measuring_tape/P = W
+		if (istype(W, /obj/item/measuring_tape))
+			var/obj/item/measuring_tape/P = W
 			user.visible_message("<b>\The [user]</b> extends \a [P] towards \the [src].","<span class='notice'>You extend \the [P] towards \the [src].</span>")
 			if(do_after(user, 15))
 				to_chat(user, "<span class='notice'>\The [src] has been excavated to a depth of [excavation_level]cm.</span>")
 			return
 
-		if(istype(W, /obj/item/device/xenoarch_multi_tool))
-			var/obj/item/device/xenoarch_multi_tool/C = W
+		if(istype(W, /obj/item/xenoarch_multi_tool))
+			var/obj/item/xenoarch_multi_tool/C = W
 			if(C.mode) //Mode means scanning
 				C.depth_scanner.scan_atom(user, src)
 			else
@@ -450,11 +450,11 @@ var/list/mining_overlay_cache = list()
 					to_chat(user, "<span class='notice'>\The [src] has been excavated to a depth of [excavation_level]cm.</span>")
 			return
 
-		if (istype(W, /obj/item/weapon/melee/shock_maul))
+		if (istype(W, /obj/item/melee/shock_maul))
 			if(!istype(user.loc, /turf))
 				return
 
-			var/obj/item/weapon/melee/shock_maul/S = W
+			var/obj/item/melee/shock_maul/S = W
 			if(!S.wielded)	//CHOMPEdit - slight maul buff
 				to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands to be used for mining!</span>")	//CHOMPEdit - fixed improper name
 				return
@@ -488,16 +488,16 @@ var/list/mining_overlay_cache = list()
 			next_rock += S.excavation_amount
 			while(next_rock > 50)
 				next_rock -= 50
-				var/obj/item/weapon/ore/O = new(src)
+				var/obj/item/ore/O = new(src)
 				geologic_data.UpdateNearbyArtifactInfo(src)
 				O.geologic_data = geologic_data
 			//CHOMPEdit end
 
-		if (istype(W, /obj/item/weapon/pickaxe))
+		if (istype(W, /obj/item/pickaxe))
 			if(!istype(user.loc, /turf))
 				return
 
-			var/obj/item/weapon/pickaxe/P = W
+			var/obj/item/pickaxe/P = W
 			if(last_act + P.digspeed > world.time)//prevents message spam
 				return
 			last_act = world.time
@@ -539,7 +539,7 @@ var/list/mining_overlay_cache = list()
 				next_rock += P.excavation_amount
 				while(next_rock > 50)
 					next_rock -= 50
-					var/obj/item/weapon/ore/O = new(src)
+					var/obj/item/ore/O = new(src)
 					geologic_data.UpdateNearbyArtifactInfo(src)
 					O.geologic_data = geologic_data
 			return
@@ -603,7 +603,7 @@ var/list/mining_overlay_cache = list()
 		return
 	clear_ore_effects()
 	geologic_data = new /datum/geosample(src) //CHOMPEdit
-	var/obj/item/weapon/ore/O = new mineral.ore (src)
+	var/obj/item/ore/O = new mineral.ore (src)
 	if(istype(O))
 		geologic_data.UpdateNearbyArtifactInfo(src)
 		O.geologic_data = geologic_data
@@ -635,7 +635,7 @@ var/list/mining_overlay_cache = list()
 		if(!sand_dug)
 			sand_dug = 1
 			for(var/i=0;i<5;i++)
-				new/obj/item/weapon/ore/glass(src)
+				new/obj/item/ore/glass(src)
 			update_icon()
 		return
 
@@ -677,16 +677,16 @@ var/list/mining_overlay_cache = list()
 	//with skill and luck, players can cleanly extract finds
 	//otherwise, they come out inside a chunk of rock
 	geologic_data = new /datum/geosample(src) //CHOMPEdit
-	var/obj/item/weapon/X
+	var/obj/item/X
 	if(is_clean)
-		X = new /obj/item/weapon/archaeological_find(src, new_item_type = F.find_type)
+		X = new /obj/item/archaeological_find(src, new_item_type = F.find_type)
 	else
-		X = new /obj/item/weapon/strangerock(src, inside_item_type = F.find_type)
+		X = new /obj/item/strangerock(src, inside_item_type = F.find_type)
 		geologic_data.UpdateNearbyArtifactInfo(src)
-		var/obj/item/weapon/strangerock/SR = X
+		var/obj/item/strangerock/SR = X
 		SR.geologic_data = geologic_data
 
-	//some find types delete the /obj/item/weapon/archaeological_find and replace it with something else, this handles when that happens
+	//some find types delete the /obj/item/archaeological_find and replace it with something else, this handles when that happens
 	//yuck
 	var/display_name = "Something"
 	if(!X)
@@ -721,10 +721,10 @@ var/list/mining_overlay_cache = list()
 				new /obj/item/stack/material/plasteel(src, rand(5,25))
 			if(5)
 				for(var/i=1 to rand(1,3))
-					new /obj/item/weapon/material/shard(src)
+					new /obj/item/material/shard(src)
 			if(6)
 				for(var/i=1 to rand(1,3))
-					new /obj/item/weapon/material/shard/phoron(src)
+					new /obj/item/material/shard/phoron(src)
 			if(7)
 				new /obj/item/stack/material/uranium(src, rand(5,25))
 

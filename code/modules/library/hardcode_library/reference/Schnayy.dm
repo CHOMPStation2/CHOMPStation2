@@ -5,7 +5,7 @@ CATEGORY: Reference
 
 ///Thermodynamic Reactions and Research: A Guide to Phoron Studies and Safety by I.R.I.S.
 
-/obj/item/weapon/book/bundle/custom_library/reference/ThermodynamicReactionsandResearch
+/obj/item/book/bundle/custom_library/reference/ThermodynamicReactionsandResearch
 	name = "Thermodynamic Reactions and Research"
 	desc = "A hardbound book titled \"Thermodynamic Reactions and Research: A Guide to Phoron Studies and Safety\" by I.R.I.S.."
 	description_info = "This book is titled \"Thermodynamic Reactions and Research: A Guide to Phoron Studies and Safety\" by I.R.I.S.. It appears to cover the fundamentals of phoron and thermodynamic research."

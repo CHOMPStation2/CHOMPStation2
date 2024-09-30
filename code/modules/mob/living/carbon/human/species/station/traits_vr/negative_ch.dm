@@ -218,7 +218,7 @@
 	else
 		return find_held_by(item.loc)
 
-/datum/trait/negative/agoraphobia/proc/holder_check(var/mob/living/carbon/human/H,var/obj/item/weapon/holder/H_holder)
+/datum/trait/negative/agoraphobia/proc/holder_check(var/mob/living/carbon/human/H,var/obj/item/holder/H_holder)
 	var/list/in_range = list()
 	if(istype(H_holder))
 		var/mob/living/held_by = find_held_by(H_holder)
@@ -259,8 +259,8 @@
 	if(!item || !istype(item) || current_layer > max_layer)
 		return in_range
 	for(var/datum/content in item.contents)
-		if(istype(content,/obj/item/weapon/holder))
-			var/obj/item/weapon/holder/contentholder = content
+		if(istype(content,/obj/item/holder))
+			var/obj/item/holder/contentholder = content
 			in_range |= check_mob_company(H,contentholder.held_mob)
 		else
 			in_range |= check_contents(content,H,max_layer,current_layer+1)
@@ -318,8 +318,8 @@
 	if(!item || !istype(item) || current_layer > max_layer)
 		return 0
 	for(var/datum/content in item.contents)
-		if(istype(content,/obj/item/weapon/holder))
-			var/obj/item/weapon/holder/contentholder = content
+		if(istype(content,/obj/item/holder))
+			var/obj/item/holder/contentholder = content
 			if(check_mob_company(H,contentholder.held_mob))
 				return 1
 		else
@@ -339,7 +339,7 @@
 		if(isbelly(H.loc))
 			sub_loneliness(H)
 			return
-		if(istype(H.loc, /obj/item/weapon/holder))
+		if(istype(H.loc, /obj/item/holder))
 			sub_loneliness(H)
 			return
 		// Check for company.
@@ -356,7 +356,7 @@
 					if(istype(content))
 						if(check_mob_company(H,content))
 							return
-		for(var/obj/item/weapon/holder/micro/M in range(1, H))
+		for(var/obj/item/holder/micro/M in range(1, H))
 			sub_loneliness(H)
 		for(var/obj/effect/overlay/aiholo/A in range(5, H))
 			sub_loneliness(H)

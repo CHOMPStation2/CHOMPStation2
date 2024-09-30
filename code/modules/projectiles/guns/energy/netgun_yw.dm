@@ -1,5 +1,5 @@
 
-/obj/item/weapon/gun/energy/hunter
+/obj/item/gun/energy/hunter
 	name = "Hybrid 'Hunter' net gun"
 	desc = "A Hephaestus-designed hybrid of a taser and the energy net gun, usually dubbed 'Hunter' stunner and energy net launcher, \
 			for when you want criminals to stop acting like they're on a 20th century British comedy sketch show."
@@ -21,7 +21,7 @@
 		list(mode_name="capture", projectile_type=/obj/item/projectile/beam/energy_net, fire_sound = 'sound/weapons/eluger.ogg', charge_cost=1200, fire_delay=50)
 	)
 
-/obj/item/weapon/gun/energy/hunter/update_icon()
+/obj/item/gun/energy/hunter/update_icon()
 	overlays.Cut()
 
 	if(power_supply)

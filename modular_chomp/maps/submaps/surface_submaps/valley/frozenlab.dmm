@@ -70,7 +70,7 @@
 /obj/random/material/precious,
 /obj/random/material,
 /obj/structure/closet,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/bicaridine,
+/obj/item/reagent_containers/chem_disp_cartridge/bicaridine,
 /turf/simulated/floor/snow,
 /area/template_noop)
 "q" = (
@@ -158,7 +158,7 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/security,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Failure rate continues to increase. Heavy casualties and interruptions are constantly disrupting the processes. Three cyromancers formed, and given partial training. Due to high risk zone, sent to Admiral Narsch's flag ship for reassignment. Stalker units are being sent to other high risk facilities. Suggesting evac as soon as possible, the facility's structure has been damaged due to the 98.7 percent failure fate.";
 	name = "Status Report"
 	},
@@ -179,7 +179,7 @@
 /area/submap/frozenlab)
 "R" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/belt/medical/alien,
+/obj/item/storage/belt/medical/alien,
 /turf/simulated/floor/outdoors/shelfice{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
@@ -191,7 +191,7 @@
 /obj/random/material/precious,
 /obj/random/material,
 /obj/structure/closet,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/coco,
+/obj/item/reagent_containers/chem_disp_cartridge/coco,
 /turf/simulated/floor/snow,
 /area/template_noop)
 "T" = (
@@ -223,7 +223,7 @@
 /area/submap/frozenlab)
 "W" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/outdoors/shelfice{
 	nitrogen = 82.1472;
 	oxygen = 21.8366;
