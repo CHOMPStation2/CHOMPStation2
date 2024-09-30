@@ -235,9 +235,9 @@
 /area/submap/virgo2/Rockybase)
 "aR" = (
 /obj/structure/table/rack,
-/obj/item/storage/box/shotgunshells,
-/obj/item/storage/box/shotgunshells,
-/obj/item/storage/box/shotgunshells,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /obj/item/ammo_magazine/m10mm,
 /obj/item/ammo_magazine/m10mm,
 /obj/item/ammo_magazine/m10mm,
@@ -654,12 +654,6 @@
 /obj/item/mecha_parts/chassis/gygax,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/submap/virgo2/Rockybase)
-"co" = (
-/mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced{
-	faction = "syndicate"
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/submap/virgo2/Rockybase)
 "cp" = (
 /obj/machinery/vending/robotics,
 /obj/machinery/light{
@@ -671,7 +665,6 @@
 "cq" = (
 /obj/structure/cable{
 	icon_state = "0-4";
-	
 	},
 /obj/machinery/light{
 	dir = 8
@@ -1288,7 +1281,7 @@ al
 bA
 ao
 ao
-co
+ao
 bq
 ao
 al
