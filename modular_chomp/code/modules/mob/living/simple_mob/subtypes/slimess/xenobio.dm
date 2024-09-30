@@ -98,7 +98,7 @@
 	required = /obj/item/slime_extract/redspace
 
 /decl/chemical_reaction/instant/slime/soulstone/on_reaction(var/datum/reagents/holder)
-	new /obj/item/device/soulstone(get_turf(holder.my_atom))
+	new /obj/item/soulstone(get_turf(holder.my_atom))
 	..()
 
 /decl/chemical_reaction/instant/slime/obj/item/slime_extract/redspace_smoke
@@ -267,7 +267,7 @@
 	required = /obj/item/slime_extract/plague
 
 /decl/chemical_reaction/instant/slime/virusdish/on_reaction(var/datum/reagents/holder)
-	new /obj/item/weapon/virusdish(get_turf(holder.my_atom))
+	new /obj/item/virusdish(get_turf(holder.my_atom))
 	..()
 
 /decl/chemical_reaction/instant/slime/obj/item/slime_extract/plague_jelly

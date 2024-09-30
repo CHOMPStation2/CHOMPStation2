@@ -145,7 +145,7 @@
 
 /area/survivalpod/superpose/XenoBotanySetup
 
-/obj/item/device/survivalcapsule/superpose
+/obj/item/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"
 	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; right-click to reset the pod. There's a license for use printed on the bottom."
 	description_info = "The capsule contains pockets of compressed space in a super position stabilized by a miniscule supermatter crystal. \
@@ -155,14 +155,14 @@
 	var/pod_initialized = FALSE
 
 // Override since the parent proc has a sanity check to delete the capsule if no template is found, which doesn't exactly work with this item considering examining calls this proc.
-/obj/item/device/survivalcapsule/superpose/get_template()
+/obj/item/survivalcapsule/superpose/get_template()
 	if(template)
 		return
 	template = SSmapping.shelter_templates[template_id]
 	if(!template)
 		template = null
 
-/obj/item/device/survivalcapsule/superpose/attack_self()
+/obj/item/survivalcapsule/superpose/attack_self()
 	if(!pod_initialized) // Populate list after round start as map templates might not exist when this item is created.
 		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter))
 			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.superpose))) // Limits map templates to those marked for the superpose capsule.
@@ -181,7 +181,7 @@
 	..()
 
 // Allows resetting the capsule if the wrong template is chosen.
-/obj/item/device/survivalcapsule/superpose/verb/resetpod()
+/obj/item/survivalcapsule/superpose/verb/resetpod()
 	set name = "Reset Active Pod"
 	set desc = "Resets the pod back to factory settings."
 	set category = "Object"
@@ -191,11 +191,11 @@
 		unique_id = null
 		to_chat(usr, span_notice("You reset the pod's selection."))
 
-/obj/item/device/survivalcapsule/superpose/shuttle
+/obj/item/survivalcapsule/superpose/shuttle
 	name = "superposed surfluid shuttle capsule"
 	is_ship = TRUE //So you cant just make holes in planets
 
-/obj/item/device/survivalcapsule/superpose/shuttle/attack_self()
+/obj/item/survivalcapsule/superpose/shuttle/attack_self()
 	if(!pod_initialized)
 		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter/))
 			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.shuttle)))

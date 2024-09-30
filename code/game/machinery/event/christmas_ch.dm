@@ -41,7 +41,7 @@
 			to_chat(usr,"<span class='notice'>You bind the sack, none can make off with it now!</span> ")
 		else
 			anchored = 0
-			to_chat(usr,"<span class='You unbind the sack, you can now drag it off. But so can anyone else!</span> ")
+			to_chat(usr,"<span class='notice'>You unbind the sack, you can now drag it off. But so can anyone else!</span> ")
 	else
 		to_chat(usr, span("warning", "Only Santa can bind and unbind his sack!"))
 	return
@@ -64,7 +64,7 @@
 		to_chat(usr, span("warning", "This one already got a present!"))
 		return
 
-	new /obj/item/weapon/a_gift/advanced(src.loc)
+	new /obj/item/a_gift/advanced(src.loc)
 	for(var/mob/O in view(src, null))
 		O.show_message("<span class='warning'>Santa pulls out a present for [T.name]! \"Merry Christmas!</span>",1)
 

@@ -82,8 +82,9 @@
 				removed *= mod.metabolism_percent
 				ingest_rem_mult *= mod.metabolism_percent
 		// Species
-		removed *= M.species.metabolic_rate
-		ingest_rem_mult *= M.species.metabolic_rate
+		if(M.species) //CHOMPEdit
+			removed *= M.species.metabolic_rate
+			ingest_rem_mult *= M.species.metabolic_rate
 		// Metabolism
 		removed *= active_metab.metabolism_speed
 		ingest_rem_mult *= active_metab.metabolism_speed
@@ -171,9 +172,9 @@
 				affect_ingest(M, alien, removed * ingest_abs_mult)
 			if(CHEM_TOUCH)
 				affect_touch(M, alien, removed)
-	if(overdose && (volume > overdose * M?.species.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH || can_overdose_touch))
+	if(overdose && (volume > overdose * M?.species?.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH || can_overdose_touch)) //CHOMPEdit
 		overdose(M, alien, removed)
-	if(M.species.allergens & allergen_type)	//uhoh, we can't handle this!
+	if(M.species?.allergens & allergen_type)	//uhoh, we can't handle this! //CHOMPEdit
 		M.add_chemical_effect(CE_ALLERGEN, allergen_factor * removed)
 	remove_self(removed)
 	return

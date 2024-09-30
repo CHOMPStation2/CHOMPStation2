@@ -4,9 +4,9 @@
 /area/survivalpod/superpose/CultShip)
 "aP" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/book/tome/imbued,
-/obj/item/weapon/digestion_remains/skull/unathi,
-/obj/item/device/soulstone,
+/obj/item/book/tome/imbued,
+/obj/item/digestion_remains/skull/unathi,
+/obj/item/soulstone,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CultShip)
 "be" = (
@@ -50,7 +50,7 @@
 /area/survivalpod/superpose/CultShip)
 "fd" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/hosdouble,
+/obj/item/bedsheet/hosdouble,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CultShip)
 "fw" = (
@@ -126,10 +126,10 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/cult,
 /area/survivalpod/superpose/CultShip)
@@ -209,9 +209,9 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/CultShip)
 "nq" = (
-/obj/item/weapon/melee/cultblade,
+/obj/item/melee/cultblade,
 /obj/structure/table/fancyblack,
-/obj/item/device/soulstone,
+/obj/item/soulstone,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/CultShip)
 "oY" = (
@@ -286,49 +286,49 @@
 /area/survivalpod/superpose/CultShip)
 "yi" = (
 /obj/structure/closet/walllocker_double/north,
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/CultShip)
 "ym" = (
@@ -369,16 +369,16 @@
 	pixel_y = 5
 	},
 /obj/random/soap,
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 4
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 4
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 8
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 8
 	},
 /turf/simulated/floor/cult,
@@ -415,7 +415,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/CultShip)
 "BV" = (
-/obj/item/weapon/storage/backpack/cultpack,
+/obj/item/storage/backpack/cultpack,
 /obj/structure/table/fancyblack,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/CultShip)
@@ -489,19 +489,19 @@
 /obj/structure/closet/cabinet,
 /obj/random/curseditem,
 /obj/random/curseditem,
-/obj/item/weapon/melee/cursedblade,
-/obj/item/weapon/melee/cultblade,
-/obj/item/weapon/beartrap/hunting,
-/obj/item/weapon/beartrap/hunting,
+/obj/item/melee/cursedblade,
+/obj/item/melee/cultblade,
+/obj/item/beartrap/hunting,
+/obj/item/beartrap/hunting,
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
-/obj/item/device/soulstone,
-/obj/item/device/soulstone,
-/obj/item/weapon/storage/belt/soulstone/full,
+/obj/item/soulstone,
+/obj/item/soulstone,
+/obj/item/storage/belt/soulstone/full,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CultShip)
 "Kq" = (
@@ -589,7 +589,7 @@
 /turf/simulated/floor/cult,
 /area/survivalpod/superpose/CultShip)
 "NJ" = (
-/obj/item/weapon/material/knife/ritual,
+/obj/item/material/knife/ritual,
 /obj/structure/table/fancyblack,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/CultShip)
@@ -711,7 +711,7 @@
 /area/survivalpod/superpose/CultShip)
 "WT" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -756,7 +756,7 @@
 /area/survivalpod/superpose/CultShip)
 "YO" = (
 /obj/structure/cult/talisman,
-/obj/item/device/soulstone,
+/obj/item/soulstone,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/CultShip)
 "ZJ" = (

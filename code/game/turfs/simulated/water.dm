@@ -48,13 +48,13 @@
 	return "water_shallow"
 
 /turf/simulated/floor/water/attackby(obj/item/O as obj, mob/user as mob)
-	var/obj/item/weapon/reagent_containers/RG = O
+	var/obj/item/reagent_containers/RG = O
 	if (istype(RG) && RG.is_open_container())
 		RG.reagents.add_reagent(reagent_type, min(RG.volume - RG.reagents.total_volume, RG.amount_per_transfer_from_this))
 		user.visible_message("<span class='notice'>[user] fills \the [RG] using \the [src].</span>","<span class='notice'>You fill \the [RG] using \the [src].</span>")
 		return 1
 
-	else if(istype(O, /obj/item/weapon/mop))
+	else if(istype(O, /obj/item/mop))
 		O.reagents.add_reagent(reagent_type, 5)
 		to_chat(user, "<span class='notice'>You wet \the [O] in \the [src].</span>")
 		playsound(src, 'sound/effects/slosh.ogg', 25, 1)
@@ -82,7 +82,7 @@
 			water_breath.adjust_gas(gasid, BREATH_MOLES) // They have no oxygen, but non-zero moles and temp
 			water_breath.temperature = above_air.temperature
 			return water_breath
-	if(L && L.is_bad_swimmer() && depth >= 2 && !L.buckled())
+	if(L && L.is_bad_swimmer() && depth >= 2 && !L.buckled() && !L.flying)
 		if(prob(10))
 			L.visible_message("<span class='notice'>[L] splashes wildly.</span>","<span class='warning'>You struggle to keep your head above the water!</span>")
 		if(L.can_breathe_water())

@@ -238,7 +238,7 @@
 	visible_message("<span class='danger'>[user] [attack_message] the [src]!</span>")
 	damage(damage)
 
-/obj/structure/gargoyle/attackby(var/obj/item/weapon/W as obj, var/mob/living/user as mob)
+/obj/structure/gargoyle/attackby(var/obj/item/W as obj, var/mob/living/user as mob)
 	if(W.is_wrench())
 		if (isspace(loc) || isopenspace(loc))
 			to_chat(user, "<span class='warning'>You can't anchor that here!</span>")
@@ -249,7 +249,7 @@
 			to_chat(user, "<span class='notice'>You [anchored ? "un" : ""]anchor the [src].</span>")
 			anchored = !anchored
 	else if(!isrobot(user) && gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
-		if(istype(W,/obj/item/weapon/grab || /obj/item/weapon/holder))
+		if(istype(W,/obj/item/grab || /obj/item/holder))
 			gargoyle.vore_attackby(W, user)
 			return
 		if(gargoyle.adminbus_trash || is_type_in_list(W,edible_trash) && W.trash_eatable && !is_type_in_list(W,item_vore_blacklist))

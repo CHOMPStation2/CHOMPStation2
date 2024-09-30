@@ -5,10 +5,10 @@ merge conflicts down the line.
 So here it sits, snowflake code for a single item.
 */
 
-/obj/item/weapon/rig/protean/tgui_state(mob/user)
+/obj/item/rig/protean/tgui_state(mob/user)
 	return GLOB.tgui_always_state
 
-/obj/item/weapon/rig/protean/tgui_data(mob/user)
+/obj/item/rig/protean/tgui_data(mob/user)
 	var/list/data = list()
 
 	if(selected_module)
@@ -87,7 +87,7 @@ So here it sits, snowflake code for a single item.
 
 	return data
 /*
-/obj/item/weapon/rig/protean/tgui_act(action, params)
+/obj/item/rig/protean/tgui_act(action, params)
 	switch(action)
 		if("toggle_seals")
 			toggle_seals(wearer)

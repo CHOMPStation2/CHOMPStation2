@@ -73,12 +73,12 @@
 "aq" = (
 /obj/structure/table/marble,
 /obj/random/drinkbottle,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled,
 /area/submap/explorerhouse)
 "ar" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/tiled,
 /area/submap/explorerhouse)
 "as" = (
@@ -88,9 +88,9 @@
 /area/submap/explorerhouse)
 "at" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/brute,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/burn,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/purity,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/brute,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/burn,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/purity,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/explorerhouse)
 "au" = (
@@ -104,7 +104,7 @@
 "aw" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
-/obj/item/weapon/coin/phoron{
+/obj/item/coin/phoron{
 	desc = "This phoron coin is a very early mint. It still flips as good as any other.";
 	name = "vintage phoron coin"
 	},
@@ -127,7 +127,7 @@
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "ay" = (
-/obj/item/weapon/material/harpoon{
+/obj/item/material/harpoon{
 	desc = "This harpoon looks like it's seen better days, but is reinforced enough to still skewer beasts.";
 	name = "vintage harpoon"
 	},
@@ -153,7 +153,7 @@
 /area/submap/explorerhouse)
 "aA" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/cane,
+/obj/item/cane,
 /obj/item/stack/medical/splint,
 /obj/item/stack/medical/crude_pack,
 /turf/simulated/floor/carpet/sblucarpet,
@@ -175,7 +175,7 @@
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "aC" = (
-/obj/item/weapon/towel,
+/obj/item/towel,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/explorerhouse)
 "aD" = (
@@ -235,17 +235,17 @@
 /area/submap/explorerhouse)
 "aM" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/explorerhouse)
 "aN" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/binoculars/spyglass,
+/obj/item/binoculars/spyglass,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/explorerhouse)
 "aO" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/explorerhouse)
 "aP" = (
@@ -256,7 +256,7 @@
 /area/submap/explorerhouse)
 "aQ" = (
 /obj/structure/table/rack,
-/obj/item/device/gps/explorer,
+/obj/item/gps/explorer,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
 "aR" = (
@@ -299,14 +299,14 @@
 "aY" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/explorer,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
+/obj/item/cell/device,
+/obj/item/cell/device,
+/obj/item/cell/device,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
 "aZ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/book/manual/excavation,
+/obj/item/book/manual/excavation,
 /obj/item/clothing/glasses/regular,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/explorerhouse)
@@ -315,7 +315,7 @@
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/explorerhouse)
 "bb" = (
-/obj/item/weapon/bedsheet/hopdouble,
+/obj/item/bedsheet/hopdouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/explorerhouse)
@@ -349,7 +349,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hooded/explorer,
 /obj/item/clothing/mask/gas/explorer,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/material/knife/tacknife/survival,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
 "bi" = (
@@ -363,7 +363,7 @@
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
 "bk" = (
-/obj/item/weapon/tool/prybar,
+/obj/item/tool/prybar,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/explorerhouse)
 "bl" = (

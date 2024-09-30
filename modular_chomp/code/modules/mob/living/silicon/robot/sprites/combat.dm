@@ -32,24 +32,24 @@
 	var/has_blade_sprite = FALSE
 
 /datum/robot_sprite/dogborg/wide/combat/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
-	if(has_gun_sprite && (istype(ourborg.module_active, /obj/item/weapon/gun/energy/laser/mounted) || istype(ourborg.module_active, /obj/item/weapon/gun/energy/lasercannon/mounted)))
+	if(has_gun_sprite && (istype(ourborg.module_active, /obj/item/gun/energy/laser/mounted) || istype(ourborg.module_active, /obj/item/gun/energy/lasercannon/mounted)))
 		ourborg.add_overlay("[sprite_icon_state]-laser")
-	if (has_taser_sprite && (istype(ourborg.module_active, /obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun)))
+	if (has_taser_sprite && (istype(ourborg.module_active, /obj/item/gun/energy/taser/mounted/cyborg/ertgun)))
 		ourborg.add_overlay("[sprite_icon_state]-taser")
-	if (has_blade_sprite && (istype(ourborg.module_active, /obj/item/weapon/melee/combat_borgblade)))
+	if (has_blade_sprite && (istype(ourborg.module_active, /obj/item/melee/combat_borgblade)))
 		ourborg.add_overlay("[sprite_icon_state]-blade")
 
-/datum/robot_sprite/dogborg/wide/combat/blade/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
+/datum/robot_sprite/dogborg/wide/combat/blade/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
 
 	..()
 
-	var/obj/item/weapon/melee/combat_borgblade/CBB = locate() in module.modules
+	var/obj/item/melee/combat_borgblade/CBB = locate() in module.modules
 	if(CBB)
 		CBB.name = "combat saw"
 		CBB.desc = "A high frequency blade attached to the end of a cyborg's tail. It appears to be extremely sharp."
-	var/obj/item/weapon/melee/borg_combat_shocker/BCS = locate() in module.modules
+	var/obj/item/melee/borg_combat_shocker/BCS = locate() in module.modules
 	if(BCS)
 		BCS.name = "combat jaws"
 		BCS.desc = "Shockingly chompy!"

@@ -121,7 +121,7 @@
 			if(!T.is_outdoors())
 				continue
 
-			var/obj/item/weapon/melee/umbrella/U = H.get_active_hand()
+			var/obj/item/melee/umbrella/U = H.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = H.get_inactive_hand()
 
@@ -314,7 +314,7 @@
 			// If they have an open umbrella, knock it off, this is more then an umbrella
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
-				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				var/obj/item/melee/umbrella/U = L.get_active_hand()
 				if(!istype(U) || !U.open)
 					U = L.get_inactive_hand()
 
@@ -374,7 +374,7 @@
 			// Knock the umbrella off your hands, aint protecting you c:
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
-				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				var/obj/item/melee/umbrella/U = L.get_active_hand()
 				if(!istype(U) || !U.open)
 					U = L.get_inactive_hand()
 

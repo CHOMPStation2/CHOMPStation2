@@ -32,10 +32,10 @@
 
 	loot_list = list(/obj/item/clothing/head/vrwizard = 10,
 			/obj/item/clothing/suit/vrwizard = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/frost = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/poison = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting = 10
+			/obj/item/gun/magic/firestaff/vrwizard/fire = 10,
+			/obj/item/gun/magic/firestaff/vrwizard/frost = 10,
+			/obj/item/gun/magic/firestaff/vrwizard/poison = 10,
+			/obj/item/gun/magic/firestaff/vrwizard/lighting = 10
 			)
 
 /mob/living/simple_mob/vr/firewiz

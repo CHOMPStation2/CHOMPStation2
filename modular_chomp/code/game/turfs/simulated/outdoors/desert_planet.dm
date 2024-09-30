@@ -22,12 +22,12 @@
 	icon_state = "sand[rand(0,2)]"
 
 /turf/simulated/floor/outdoors/desert_planet/sand/attackby(var/obj/item/W, var/mob/user)
-	if(istype(W, /obj/item/weapon/shovel))
+	if(istype(W, /obj/item/shovel))
 		to_chat(user, "<span class='notice'>You begin to remove \the [src] with your [W].</span>")
 		if(do_after(user, 4 SECONDS * W.toolspeed))
 			to_chat(user, "<span class='notice'>\The [src] has been dug up, and now lies in a pile nearby.</span>")
 			icon_state = "sand_dug"
-			new /obj/item/weapon/ore/glass (src)
+			new /obj/item/ore/glass (src)
 		else
 			to_chat(user, "<span class='notice'>You decide to not finish removing \the [src].</span>")
 	else
@@ -87,16 +87,16 @@
 	var/last_act = 0
 
 // Stolen from mineral turf code.
-/turf/simulated/floor/outdoors/desert_planet/stonewall/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/turf/simulated/floor/outdoors/desert_planet/stonewall/attackby(obj/item/W as obj, mob/user as mob)
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return
 
-	if(istype(W, /obj/item/weapon/pickaxe))
+	if(istype(W, /obj/item/pickaxe))
 		if(!istype(user.loc, /turf))
 			return
 
-		var/obj/item/weapon/pickaxe/P = W
+		var/obj/item/pickaxe/P = W
 		if(last_act + P.digspeed > world.time)//prevents message spam
 			return
 		last_act = world.time

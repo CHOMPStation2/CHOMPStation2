@@ -30,7 +30,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/mine/explored)
 "ai" = (
-/obj/item/weapon/circuitboard/teleporter,
+/obj/item/circuitboard/teleporter,
 /turf/simulated/floor/airless,
 /area/mine/explored)
 "aj" = (
@@ -69,7 +69,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/mine/unexplored)
 "as" = (
-/obj/item/weapon/ore,
+/obj/item/ore,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/mine/unexplored)
 "at" = (
@@ -96,17 +96,17 @@
 /area/wreck/main)
 "az" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
 /obj/item/stack/rods,
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "aA" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/surgical/scalpel/laser3,
+/obj/item/surgical/scalpel/laser3,
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "aB" = (
-/obj/item/weapon/surgical/circular_saw,
+/obj/item/surgical/circular_saw,
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "aC" = (
@@ -122,7 +122,7 @@
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "aF" = (
-/obj/item/weapon/ore,
+/obj/item/ore,
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "aG" = (
@@ -154,7 +154,7 @@
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "aN" = (
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "aO" = (
@@ -177,7 +177,7 @@
 /turf/simulated/floor/tiled/white/airless,
 /area/wreck/main)
 "aS" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "aT" = (
@@ -196,7 +196,7 @@
 /turf/simulated/floor/tiled/white/airless,
 /area/wreck/main)
 "aW" = (
-/obj/item/weapon/ore,
+/obj/item/ore,
 /obj/item/stack/rods,
 /turf/simulated/floor/airless,
 /area/wreck/main)
@@ -213,16 +213,16 @@
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "ba" = (
-/obj/item/device/flashlight/flare,
+/obj/item/flashlight/flare,
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "bb" = (
 /obj/item/stack/material/wood,
 /obj/item/stack/material/wood,
 /obj/structure/ore_box,
-/obj/item/weapon/ore/iron,
-/obj/item/weapon/ore/iron,
-/obj/item/weapon/ore/iron,
+/obj/item/ore/iron,
+/obj/item/ore/iron,
+/obj/item/ore/iron,
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "bc" = (
@@ -267,7 +267,7 @@
 /turf/simulated/floor/reinforced/phoron,
 /area/wreck/main)
 "bg" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "bh" = (
@@ -275,7 +275,7 @@
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "bi" = (
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "bj" = (
@@ -283,7 +283,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "bk" = (
-/obj/item/weapon/ore,
+/obj/item/ore,
 /turf/simulated/floor/tiled/white/airless,
 /area/wreck/main)
 "bl" = (
@@ -297,7 +297,7 @@
 /area/wreck/main)
 "bn" = (
 /obj/structure/table/rack,
-/obj/item/weapon/tank/jetpack/void,
+/obj/item/tank/jetpack/void,
 /obj/item/clothing/suit/space/syndicate/green,
 /obj/item/clothing/head/helmet/space/syndicate/green,
 /turf/simulated/floor/tiled/airless,
@@ -308,7 +308,7 @@
 /area/wreck/main)
 "bp" = (
 /obj/structure/table/rack,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "bq" = (
@@ -324,7 +324,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "bs" = (
-/obj/item/weapon/tank/oxygen/yellow,
+/obj/item/tank/oxygen/yellow,
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "bt" = (
@@ -347,12 +347,12 @@
 /area/wreck/main)
 "bx" = (
 /obj/item/frame/apc,
-/obj/item/weapon/module/power_control,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/module/power_control,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/tiled/white/airless,
 /area/wreck/main)
 "by" = (
-/obj/item/device/flashlight/glowstick,
+/obj/item/flashlight/glowstick,
 /turf/simulated/floor/tiled/airless,
 /area/wreck/main)
 "bz" = (
@@ -485,7 +485,7 @@
 /area/wreck/main)
 "bX" = (
 /obj/effect/decal/mecha_wreckage/mauler,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "bY" = (
@@ -499,11 +499,11 @@
 /area/wreck/main)
 "ca" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/airless,
 /area/wreck/main)
 "cb" = (
-/obj/item/weapon/circuitboard/teleporter,
+/obj/item/circuitboard/teleporter,
 /turf/simulated/floor/tiled/white/airless,
 /area/wreck/main)
 "cc" = (
@@ -565,8 +565,8 @@
 	density = 0;
 	icon_state = "brokengrille"
 	},
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/airless,
@@ -609,7 +609,7 @@
 /turf/simulated/floor,
 /area/outpost/abandoned)
 "cx" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/airless,
 /area/outpost/abandoned)
 "cy" = (
@@ -934,10 +934,10 @@
 /area/outpost/abandoned)
 "dg" = (
 /obj/structure/table/rack,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
+/obj/item/pickaxe,
+/obj/item/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/floor,
 /area/outpost/abandoned)
 "dh" = (
@@ -1213,7 +1213,7 @@
 	d2 = 4
 	},
 /obj/item/frame/apc,
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor,
 /area/outpost/abandoned)
 "dS" = (
@@ -1551,7 +1551,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/abandoned)
 "ev" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	broadcasting = 0;
 	listening = 1;
 	name = "Station Intercom (General)";
@@ -1696,7 +1696,7 @@
 /area/outpost/abandoned)
 "eO" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/orange,
+/obj/item/bedsheet/orange,
 /turf/simulated/floor/tiled,
 /area/outpost/abandoned)
 "eP" = (
@@ -2060,7 +2060,7 @@
 /area/outpost/abandoned)
 "fA" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/motor,
+/obj/item/stock_parts/motor,
 /turf/simulated/floor/tiled,
 /area/outpost/abandoned)
 "fB" = (
@@ -2092,7 +2092,7 @@
 /area/outpost/abandoned)
 "fE" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 0;
 	pixel_y = -28
@@ -2155,7 +2155,7 @@
 	density = 0;
 	icon_state = "brokengrille"
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/airless,

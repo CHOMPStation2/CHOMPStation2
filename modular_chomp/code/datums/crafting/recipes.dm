@@ -1,11 +1,11 @@
 /datum/crafting_recipe/ziplaser
 	name = "Ziplaser"
-	result = /obj/item/weapon/gun/energy/zip/craftable
-	reqs = list(list(/obj/item/weapon/cell/high  = 1),
+	result = /obj/item/gun/energy/zip/craftable
+	reqs = list(list(/obj/item/cell/high  = 1),
 		list(/obj/item/stack/rods  = 2),
 		list(/obj/item/stack/material/steel  = 8),
 		list(/obj/item/stack/material/plastic  = 5),
-		list(/obj/item/weapon/cell/device  = 2)
+		list(/obj/item/cell/device  = 2)
 		)
 	time = 120
 	category = CAT_WEAPONRY
@@ -61,7 +61,7 @@
 		list(/obj/item/stack/material/cloth = 10),
 		list(/obj/item/stack/material/crystalscale = 2),
 		list(/obj/item/stack/material/resin = 8),
-		list(/obj/item/weapon/stock_parts/capacitor = 1)
+		list(/obj/item/stock_parts/capacitor = 1)
 	)
 	time = 60
 	category = CAT_CLOTHING
@@ -78,11 +78,11 @@
 
 /datum/crafting_recipe/strangepistol
 	name = "Strange Weapon"
-	result = /obj/item/weapon/gun/energy/icelauncher
+	result = /obj/item/gun/energy/icelauncher
 	reqs = list(
 		list(/obj/item/stack/material/steel  = 8),
 		list(/obj/item/stack/material/plastic  = 3),
-		list(/obj/item/weapon/cell/device  = 1),
+		list(/obj/item/cell/device  = 1),
 		list(/obj/item/stack/material/frostscale = 2)
 		)
 	time = 60
@@ -91,7 +91,7 @@
 
 /datum/crafting_recipe/solarrapier
 	name = "Solar Rapier"
-	result = /obj/item/weapon/material/sword/rapier/solar
+	result = /obj/item/material/sword/rapier/solar
 	reqs = list(
 		list(/obj/item/stack/material/steel  = 15),
 		list(/obj/item/stack/material/leather  = 3),
@@ -103,11 +103,11 @@
 
 /datum/crafting_recipe/gravityhammer
 	name = "Gravity Hammer"
-	result = /obj/item/weapon/material/twohanded/sledgehammer/gravity
+	result = /obj/item/material/twohanded/sledgehammer/gravity
 	reqs = list(list(/obj/item/stack/material/steel  = 15),
 		list(/obj/item/stack/material/leather  = 3),
 		list(/obj/item/stack/material/shellchitin = 2),
-		list(/obj/item/weapon/cell/high  = 1)
+		list(/obj/item/cell/high  = 1)
 		)
 	time = 60
 	category = CAT_WEAPONRY
@@ -115,7 +115,7 @@
 
 /datum/crafting_recipe/harvester
 	name = "Harvester"
-	result = /obj/item/weapon/material/twohanded/fireaxe/scythe/harvester
+	result = /obj/item/material/twohanded/fireaxe/scythe/harvester
 	reqs = list(list(/obj/item/stack/material/steel  = 15),
 		list(/obj/item/stack/material/leather  = 3),
 		list(/obj/item/stack/material/dreamscale = 2)
@@ -129,13 +129,13 @@
 /datum/crafting_recipe/sandstone
 	name = "sandstone brick"
 	result = /obj/item/stack/material/sandstone
-	reqs = list(list(/obj/item/weapon/ore/glass = 4))
+	reqs = list(list(/obj/item/ore/glass = 4))
 	time = 10 //Not realstic but I don't want to waste too much time.
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/marble
 	name = "marble brick"
 	result = /obj/item/stack/material/marble
-	reqs = list(list(/obj/item/weapon/ore/marble = 4))
+	reqs = list(list(/obj/item/ore/marble = 4))
 	time = 10 //Not realstic but I don't want to waste too much time.
 	category = CAT_PRIMAL

@@ -286,13 +286,14 @@
 	var/client_missing = 0		//How long the client has been missing
 	universal_understand = TRUE
 
-	var/obj/item/device/nif/nif
+	var/obj/item/nif/nif
 	var/datum/nifsoft/soulcatcher/soulcatcher
 	var/identifying_gender
 
 /mob/living/carbon/brain/caught_soul/Login()
 	..()
 	plane_holder.set_vis(VIS_AUGMENTED, TRUE)
+	plane_holder.set_vis(VIS_SOULCATCHER, TRUE) //CHOMPAdd
 	identifying_gender = client.prefs.identifying_gender
 
 /mob/living/carbon/brain/caught_soul/Destroy()
@@ -579,7 +580,7 @@
 ///////////////////
 //Verbs for soulbrains
 /mob/living/carbon/brain/caught_soul/verb/ar_project()
-	set name = "AR Project"
+	set name = "AR/SR Project" //CHOMPEdit
 	set desc = "Project your form into Augmented Reality for those around your predator with the appearance of your loaded character."
 	set category = "Soulcatcher"
 

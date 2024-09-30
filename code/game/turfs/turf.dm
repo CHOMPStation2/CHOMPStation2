@@ -122,15 +122,15 @@
 		step(user.pulling, get_dir(user.pulling.loc, src))
 	return 1
 
-/turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = W
+/turf/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/storage))
+		var/obj/item/storage/S = W
 		if(S.use_to_pickup && S.collection_mode)
 			S.gather_all(src, user)
 	return ..()
 
 // Hits a mob on the tile.
-/turf/proc/attack_tile(obj/item/weapon/W, mob/living/user)
+/turf/proc/attack_tile(obj/item/W, mob/living/user)
 	if(!istype(W))
 		return FALSE
 
@@ -328,7 +328,7 @@
 /turf/proc/can_engrave()
 	return FALSE
 
-/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool)
+/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool, click_parameters) // CHOMPEdt - click_parameters
 
 	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE
@@ -360,6 +360,20 @@
 	var/obj/effect/decal/writing/graffiti = new(src)
 	graffiti.message = message
 	graffiti.author = vandal.ckey
+
+	// CHOMPAdd - Cooler graffitis
+	if(click_parameters)
+		var/list/mouse_control = params2list(click_parameters)
+		var/p_x = 0
+		var/p_y = 0
+		if(mouse_control["icon-x"])
+			p_x = text2num(mouse_control["icon-x"]) - 16
+		if(mouse_control["icon-y"])
+			p_y = text2num(mouse_control["icon-y"]) - 16
+
+		graffiti.pixel_x = p_x
+		graffiti.pixel_y = p_y
+	// CHOMPAdd End
 
 	if(lowertext(message) == "elbereth")
 		to_chat(vandal, "<span class='notice'>You feel much safer.</span>")
@@ -394,7 +408,7 @@
 // This is all the way up here since its the common ancestor for things that need to get replaced with a floor when an RCD is used on them.
 // More specialized turfs like walls should instead override this.
 // The code for applying lattices/floor tiles onto lattices could also utilize something similar in the future.
-/turf/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(density || !can_build_into_floor)
 		return FALSE
 	if(passed_mode == RCD_FLOORWALL)
@@ -409,7 +423,7 @@
 			)
 	return FALSE
 
-/turf/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_FLOORWALL)
 		to_chat(user, span("notice", "You build a floor."))
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)

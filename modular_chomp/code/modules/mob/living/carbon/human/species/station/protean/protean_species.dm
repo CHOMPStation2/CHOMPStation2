@@ -64,7 +64,7 @@
 	species_sounds = "Robotic"
 
 	crit_mod = 4	//Unable to go crit
-	var/obj/item/weapon/rig/protean/OurRig
+	var/obj/item/rig/protean/OurRig
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
@@ -141,7 +141,7 @@
 			abilities += new path()
 
 /datum/species/protean/create_organs(var/mob/living/carbon/human/H)
-	var/obj/item/device/nif/saved_nif = H.nif
+	var/obj/item/nif/saved_nif = H.nif
 	if(saved_nif)
 		H.nif.unimplant(H) //Needs reference to owner to unimplant right.
 		H.nif.moveToNullspace()
@@ -220,12 +220,12 @@
 		if(!H) //Human could have been deleted in this amount of time. Observing does this, mannequins, etc.
 			return
 		if(!H.nif)
-			var/obj/item/device/nif/protean/new_nif = new()
+			var/obj/item/nif/protean/new_nif = new()
 			new_nif.quick_implant(H)
 		else
 			H.nif.durability = 25
 
-		new /obj/item/weapon/rig/protean(H,H)
+		new /obj/item/rig/protean(H,H)
 
 /datum/species/protean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 	return ..() //Wut
@@ -249,7 +249,7 @@
 	temp.visible_message("<b>[temp.name]</b> shudders and retreats inwards, coalescing into a single core componant!")
 	to_chat(temp, "<span class='warning'>You've died as a Protean! While dead, you will be locked to your core RIG control module until you can be repaired. Instructions to your revival can be found in the Examine tab when examining your module.</span>")
 	if(H.temporary_form)
-		if(!istype(H.temporary_form.loc, /obj/item/weapon/rig/protean))
+		if(!istype(H.temporary_form.loc, /obj/item/rig/protean))
 			H.nano_rig_transform(1)
 	else
 		H.nano_rig_transform(1)

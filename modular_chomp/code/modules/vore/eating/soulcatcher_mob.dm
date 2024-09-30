@@ -12,7 +12,7 @@
 		gem = null
 	if(eyeobj)
 		QDEL_NULL(eyeobj)
-		gem.notify_holder("[name] ended AR projection.")
+		gem.notify_holder("[name] ended SR projection.")
 	container = null
 	return ..()
 
@@ -133,14 +133,18 @@
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
 
-// AR project as captured soul
+// SR projecting mob
+/mob/observer/eye/ar_soul/vore
+	plane = PLANE_SOULCATCHER
+
+// SR project as captured soul
 /mob/living/carbon/brain/caught_soul/vore/ar_project()
-	set name = "AR Project"
+	set name = "AR/SR Project"
 	set desc = "Project your form into Augmented Reality for those around your predator with the appearance of your loaded character."
 	set category = "Soulcatcher"
 
 	if(eyeobj)
-		to_chat(src, span_warning("You're already projecting in AR!"))
+		to_chat(src, span_warning("You're already projecting in SR!"))
 		return
 
 	if(!(gem.setting_flags & NIF_SC_PROJECTING))
@@ -150,39 +154,39 @@
 	if(!client || !client.prefs)
 		return //Um...
 
-	eyeobj = new/mob/observer/eye/ar_soul(src, gem.owner)
-	gem.notify_holder("[src] now AR projecting.")
+	eyeobj = new/mob/observer/eye/ar_soul/vore(src, gem.owner)
+	gem.notify_holder("[src] now SR projecting.")
 	gem.clear_vore_fx(src)
 
-// Jump to the owner as AR projection
+// Jump to the owner as SR projection
 /mob/living/carbon/brain/caught_soul/vore/jump_to_owner()
 	set name = "Jump to Owner"
 	set desc = "Jump your projection back to the owner of the soulcatcher you're inside."
 	set category = "Soulcatcher"
 
 	if(!eyeobj)
-		to_chat(src, span_warning("You're not projecting into AR!"))
+		to_chat(src, span_warning("You're not projecting into SR!"))
 		return
 
 	eyeobj.forceMove(get_turf(gem))
 
-// End AR projecting and return to the soulcatcher containing the soul
+// End SR projecting and return to the soulcatcher containing the soul
 /mob/living/carbon/brain/caught_soul/vore/reenter_soulcatcher()
 	set name = "Re-enter Soulcatcher"
-	set desc = "Leave AR projection and drop back into the soulcatcher."
+	set desc = "Leave SR projection and drop back into the soulcatcher."
 	set category = "Soulcatcher"
 
 	if(!eyeobj)
-		to_chat(src, span_warning("You're not projecting into AR!"))
+		to_chat(src, span_warning("You're not projecting into SR!"))
 		return
 
 	QDEL_NULL(eyeobj)
-	gem.notify_holder("[src] ended AR projection.")
+	gem.notify_holder("[src] ended SR projection.")
 	gem.show_vore_fx(src, TRUE)
 
 /mob/living/carbon/brain/caught_soul/vore/nsay_brain()
 	set name = "NSay"
-	set desc = "Speak to your Soulcatcher (circumventing AR speaking)."
+	set desc = "Speak to your Soulcatcher (circumventing SR speaking)."
 	set category = "Soulcatcher"
 
 	var/message = tgui_input_text(usr, "Type a message to say.","Speak into Soulcatcher", multiline=TRUE)
@@ -192,7 +196,7 @@
 
 /mob/living/carbon/brain/caught_soul/vore/nme_brain()
 	set name = "NMe"
-	set desc = "Emote to your Soulcatcher (circumventing AR speaking)."
+	set desc = "Emote to your Soulcatcher (circumventing SR speaking)."
 	set category = "Soulcatcher"
 
 	var/message = tgui_input_text(usr, "Type an action to perform.","Emote into Soulcatcher", multiline=TRUE)
@@ -207,7 +211,7 @@
 	set category = "Soulcatcher"
 
 	if(eyeobj)
-		to_chat(src, span_warning("You can't do that while AR projecting!"))
+		to_chat(src, span_warning("You can't do that while SR projecting!"))
 		return
 	if(gem.own_mind != mind)
 		to_chat(src, span_warning("You aren't in your own soulcatcher!"))
@@ -228,6 +232,6 @@
 	set category = "Soulcatcher"
 
 	if(eyeobj)
-		to_chat(src, span_warning("You can't do that while AR projecting!"))
+		to_chat(src, span_warning("You can't do that while SR projecting!"))
 		return
 	gem.return_to_body(mind)

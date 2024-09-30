@@ -4,45 +4,44 @@
 /area/template_noop)
 "b" = (
 /turf/template_noop,
-/area/submap/epod2)
+/area/submap/Epod2)
 "c" = (
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/epod2)
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+/area/submap/Epod2)
 "d" = (
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/epod2)
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/submap/Epod2)
 "e" = (
 /obj/structure/boulder{
 	icon_state = "boulder3"
 	},
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/epod2)
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/submap/Epod2)
 "f" = (
 /obj/structure/boulder{
 	icon_state = "boulder2"
 	},
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/epod2)
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/submap/Epod2)
 "g" = (
 /obj/structure/boulder{
 	icon_state = "boulder3"
 	},
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/epod2)
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+/area/submap/Epod2)
 "h" = (
 /turf/simulated/shuttle/wall,
-/area/submap/epod2)
+/area/submap/Epod2)
 "i" = (
 /obj/structure/shuttle/engine/propulsion/burst{
-	dir = 4;
-	icon_state = "propulsion"
+	dir = 4
 	},
 /turf/simulated/shuttle/wall,
-/area/submap/epod2)
+/area/submap/Epod2)
 "j" = (
 /obj/structure/boulder,
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/epod2)
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+/area/submap/Epod2)
 "k" = (
 /obj/structure/grille{
 	density = 0;
@@ -54,16 +53,15 @@
 	},
 /obj/structure/window/reinforced,
 /obj/item/stack/rods,
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
-/turf/simulated/shuttle/plating,
-/area/submap/epod2)
+/turf/simulated/shuttle/floor/virgo3b,
+/area/submap/Epod2)
 "l" = (
 /obj/structure/bed/chair{
-	dir = 8;
-	icon_state = "chair_preview"
+	dir = 8
 	},
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/decal/cleanable/blood,
@@ -71,17 +69,16 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/shuttle/floor,
-/area/submap/epod2)
+/turf/simulated/shuttle/floor/virgo3b,
+/area/submap/Epod2)
 "m" = (
 /obj/structure/bed/chair{
-	dir = 8;
-	icon_state = "chair_preview"
+	dir = 8
 	},
 /obj/structure/loot_pile/surface/medicine_cabinet{
 	pixel_y = 28
@@ -91,21 +88,20 @@
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/empty,
-/turf/simulated/shuttle/floor,
-/area/submap/epod2)
+/obj/item/reagent_containers/hypospray/autoinjector/empty,
+/turf/simulated/shuttle/floor/virgo3b,
+/area/submap/Epod2)
 "n" = (
 /obj/structure/bed/chair{
-	dir = 8;
-	icon_state = "chair_preview"
+	dir = 8
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 28
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/shuttle/floor,
-/area/submap/epod2)
+/turf/simulated/shuttle/floor/virgo3b,
+/area/submap/Epod2)
 "o" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/machinery/door/airlock/external{
@@ -113,20 +109,20 @@
 	locked = 1;
 	name = "Escape Pod Hatch"
 	},
-/turf/simulated/shuttle/floor,
-/area/submap/epod2)
+/turf/simulated/shuttle/floor/virgo3b,
+/area/submap/Epod2)
 "p" = (
 /obj/structure/boulder{
 	icon_state = "boulder4"
 	},
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/epod2)
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/submap/Epod2)
 "q" = (
 /obj/structure/boulder{
 	icon_state = "boulder2"
 	},
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/epod2)
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+/area/submap/Epod2)
 
 (1,1,1) = {"
 a

@@ -1,42 +1,29 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/cell/hyper,
-/obj/random/coin,
-/obj/random/cash/huge,
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
-"ab" = (
-/obj/structure/closet/crate,
-/obj/random/cash,
-/obj/random/cigarettes,
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
 "ai" = (
 /obj/random/trash,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/oldhotel)
 "aJ" = (
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/storage/firstaid,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "bb" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/item/device/multitool,
-/turf/simulated/floor/wood,
+/obj/item/multitool,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "bQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "bW" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/submap/oldhotel)
 "cA" = (
@@ -46,24 +33,20 @@
 "cZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
-/turf/simulated/floor/carpet/oracarpet,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "da" = (
-/obj/structure/bed/chair/oldsofa/right,
-/turf/simulated/floor/carpet/blue,
-/area/submap/oldhotel)
-"dc" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/oracarpet,
+/obj/structure/bed/chair/sofa/right/teal,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "dn" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/everburn,
-/turf/simulated/floor/wood,
+/obj/item/flame/candle/everburn,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "dr" = (
 /obj/item/stack/material/log/sif,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "dz" = (
 /obj/structure/sink{
@@ -76,171 +59,208 @@
 	pixel_x = -28
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "dL" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille/rustic,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "eK" = (
-/obj/structure/grille,
 /obj/structure/bonfire/sifwood,
-/turf/simulated/floor/outdoors/dirt,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "go" = (
 /obj/structure/simple_door/iron,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "gA" = (
 /turf/template_noop,
 /area/template_noop)
 "gM" = (
 /obj/machinery/appliance/cooker/oven,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "hc" = (
 /obj/random/trash,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "hp" = (
 /obj/random/junk,
-/turf/simulated/floor/carpet/sblucarpet,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "hQ" = (
 /turf/simulated/wall/wood,
 /area/submap/oldhotel)
 "if" = (
-/obj/structure/bed/chair/oldsofa/left{
+/obj/structure/bed/chair/sofa/left/teal{
 	dir = 8
 	},
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "iU" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/tray,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "ja" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/oldhotel)
-"jO" = (
-/obj/structure/bed/chair/oldsofa,
-/turf/simulated/floor/carpet/blue,
+"je" = (
+/obj/structure/closet/cabinet,
+/obj/item/binoculars/spyglass,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/maintenance/medical,
+/obj/random/cash,
+/obj/random/drinkbottle,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
-"kh" = (
-/turf/simulated/floor/carpet/blue,
+"jO" = (
+/obj/structure/bed/chair/sofa/teal,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
+/area/submap/oldhotel)
+"jS" = (
+/obj/structure/closet/cabinet,
+/obj/random/maintenance/medical,
+/obj/random/cash,
+/obj/random/cigarettes,
+/obj/random/firstaid,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/maintenance,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "kw" = (
 /obj/structure/lightpost,
 /turf/template_noop,
 /area/submap/oldhotel)
-"kI" = (
-/turf/simulated/floor/carpet/sblucarpet,
-/area/submap/oldhotel)
 "kW" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "lj" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/material/kitchen/rollingpin,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/material/kitchen/rollingpin,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "ly" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
-/turf/simulated/floor/wood,
+/obj/item/bedsheet/mimedouble,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "lZ" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/tray,
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
+/area/submap/oldhotel)
+"mr" = (
+/obj/structure/table/woodentable,
+/obj/item/cell/hyper,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "mR" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "nD" = (
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/oldhotel)
 "nG" = (
-/obj/item/weapon/material/shard,
-/turf/simulated/floor/outdoors/dirt,
+/obj/item/material/shard,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "nZ" = (
 /obj/fiftyspawner/wood,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "op" = (
 /obj/structure/table/woodentable,
 /obj/random/cigarettes,
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
+/area/submap/oldhotel)
+"pi" = (
+/obj/item/material/shard,
+/obj/item/material/shard{
+	icon_state = "medium";
+	pixel_x = 12;
+	pixel_y = 7
+	},
+/turf/template_noop,
 /area/submap/oldhotel)
 "pn" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	pixel_x = 7
 	},
 /turf/template_noop,
 /area/submap/oldhotel)
-"qg" = (
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
 "qY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "rb" = (
-/obj/item/weapon/module/power_control,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/module/power_control,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "rK" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
+/area/submap/oldhotel)
+"rZ" = (
+/obj/item/material/shard{
+	icon_state = "medium"
+	},
+/turf/template_noop,
 /area/submap/oldhotel)
 "sd" = (
 /obj/structure/toilet,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "sV" = (
 /obj/structure/table/woodentable,
 /obj/random/contraband,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "tn" = (
 /obj/structure/simple_door/wood,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "tz" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
-/turf/simulated/floor/wood,
+/obj/item/bedsheet/rddouble,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "tE" = (
 /obj/structure/table/woodentable,
 /obj/random/coin,
-/obj/item/weapon/reagent_containers/glass/rag,
-/turf/simulated/floor/carpet/blue,
+/obj/item/reagent_containers/glass/rag,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "tV" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
-/obj/item/weapon/material/shard,
-/turf/simulated/floor/wood,
+/obj/item/material/shard,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "uF" = (
 /obj/fiftyspawner/steel,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "uU" = (
 /obj/structure/closet/cabinet,
@@ -252,58 +272,73 @@
 /obj/random/junk,
 /obj/random/junk,
 /obj/random/maintenance,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "vh" = (
-/obj/structure/bed/chair/oldsofa/corner,
-/turf/simulated/floor/carpet/blue,
+/obj/structure/bed/chair/sofa/corner/teal,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "vA" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/telecube/randomized{
+/obj/item/telecube/randomized{
 	name = "Odd artifact"
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "vM" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	pixel_y = -6
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 9
 	},
-/obj/structure/grille/broken,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/structure/grille/broken/rustic,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
+/area/submap/oldhotel)
+"vN" = (
+/obj/random/humanoidremains,
+/obj/random/humanoidremains,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "vR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/candelabra,
-/turf/simulated/floor/carpet/blue,
+/obj/item/flame/candle/candelabra,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "wm" = (
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "wK" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/material/shard,
+/obj/item/material/shard,
+/obj/item/material/shard{
+	icon_state = "medium";
+	pixel_x = 12;
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "wV" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "wX" = (
-/obj/random/trash_pile,
-/turf/template_noop,
+/obj/item/material/shard,
+/obj/item/material/shard{
+	icon_state = "medium";
+	pixel_x = 12;
+	pixel_y = 7
+	},
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "yj" = (
 /obj/random/mob/sif/peaceful,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "yM" = (
 /obj/item/stack/cable_coil,
@@ -312,90 +347,100 @@
 "zs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "zt" = (
 /obj/structure/noticeboard,
 /turf/simulated/wall/wood,
 /area/submap/oldhotel)
-"zE" = (
+"zO" = (
+/obj/item/material/shard,
+/obj/structure/grille/broken/rustic,
+/obj/item/material/shard{
+	icon_state = "medium";
+	pixel_x = 12;
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
+/area/submap/oldhotel)
+"zP" = (
+/obj/random/plushie,
+/turf/simulated/floor/wood/virgo3b,
+/area/submap/oldhotel)
+"Ac" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/material/knife/butch,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
+/area/submap/oldhotel)
+"AO" = (
+/obj/structure/railing,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/submap/oldhotel)
+"AU" = (
+/obj/structure/table/woodentable,
+/obj/item/rectape,
+/turf/simulated/floor/wood/virgo3b,
+/area/submap/oldhotel)
+"AZ" = (
+/obj/structure/table/woodentable,
+/obj/item/trash/candle,
+/obj/item/paper{
+	info = "This is a stupid tresure hunt task, that thing is not taking us anywhere. Go on and have fun finding a waste of time.";
+	name = "Wrinkled sheet of paper"
+	},
+/turf/simulated/floor/wood/virgo3b,
+/area/submap/oldhotel)
+"Bt" = (
 /obj/structure/closet/cabinet,
-/obj/random/maintenance/medical,
-/obj/random/cash,
-/obj/random/cigarettes,
-/obj/random/firstaid,
+/obj/item/clothing/gloves/yellow,
+/obj/random/projectile/scrapped_pistol,
 /obj/random/junk,
 /obj/random/junk,
 /obj/random/junk,
 /obj/random/maintenance,
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
-"zP" = (
-/obj/random/plushie,
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
-"Ac" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/weapon/material/knife/butch,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/oldhotel)
-"AO" = (
-/obj/structure/railing,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/oldhotel)
-"AU" = (
-/obj/structure/table/woodentable,
-/obj/item/device/tape,
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
-"Bt" = (
-/obj/structure/closet/cabinet,
-/obj/random/ammo_all,
-/obj/random/cargopod,
-/obj/random/cargopod,
-/obj/random/cargopod,
-/obj/item/clothing/gloves/yellow,
-/turf/simulated/floor/wood,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Cx" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "CS" = (
-/obj/item/weapon/storage/toolbox/mechanical,
-/turf/simulated/floor/wood,
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Di" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/microwave,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "Dx" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/medical,
 /obj/random/medical,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "DN" = (
 /obj/structure/bed/chair/wood,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Es" = (
 /obj/random/junk,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "ES" = (
 /obj/random/trash,
-/turf/simulated/floor/carpet/oracarpet,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "Gk" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Gr" = (
 /obj/item/frame/apc,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Gz" = (
 /obj/structure/window/reinforced/tinted{
@@ -405,12 +450,12 @@
 	dir = 1
 	},
 /obj/structure/curtain/open/shower/medical,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "GC" = (
 /obj/random/trash,
 /obj/random/trash,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "GN" = (
 /obj/structure/flora/tree/sif,
@@ -418,48 +463,50 @@
 /area/submap/oldhotel)
 "GV" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/melee/umbrella/random,
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
-"Ha" = (
-/obj/structure/table/woodentable,
-/obj/item/trash/candle,
-/obj/item/weapon/paper{
-	info = "This is a stupid tresure hunt task, that thing is not taking us anywhere. Go on and have fun finding a waste of time.";
-	name = "Wrinkled sheet of paper"
-	},
-/turf/simulated/floor/wood,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/flame/lighter/random,
+/obj/item/flame/lighter/random,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Ik" = (
-/obj/item/weapon/material/shard,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/material/shard,
+/obj/item/material/shard{
+	icon_state = "medium"
+	},
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "Il" = (
 /obj/structure/closet/secure_closet/freezer/kitchen{
 	locked = 0
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "IQ" = (
 /obj/structure/railing,
 /obj/structure/closet/crate/bin,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "Jq" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "JT" = (
 /obj/random/junk,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "JV" = (
 /obj/structure/table/bench/sifwooden,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/submap/oldhotel)
+"Lg" = (
+/obj/item/material/shard,
+/obj/structure/grille/broken/rustic,
+/obj/item/material/shard{
+	icon_state = "medium"
+	},
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "Mk" = (
 /obj/structure/closet/crate,
@@ -467,7 +514,7 @@
 /obj/random/action_figure,
 /obj/random/action_figure,
 /obj/random/action_figure,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Mo" = (
 /obj/structure/railing,
@@ -476,112 +523,96 @@
 "Mq" = (
 /obj/structure/closet/crate,
 /obj/random/firstaid,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "MD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/simple_door/wood,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "MU" = (
 /turf/template_noop,
 /area/submap/oldhotel)
 "Nu" = (
 /obj/random/soap,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
+/area/submap/oldhotel)
+"OQ" = (
+/obj/structure/closet/crate,
+/obj/random/cash,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Pd" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/sblucarpet,
-/area/submap/oldhotel)
-"PO" = (
-/obj/machinery/space_heater,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "Qv" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
-/turf/simulated/floor/wood,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Qw" = (
-/obj/item/weapon/stool,
-/obj/random/projectile/scrapped_shotgun,
+/obj/item/stool,
 /obj/random/cash,
 /obj/machinery/light/small,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "QG" = (
-/obj/structure/bed/chair/oldsofa{
+/obj/structure/bed/chair/sofa/teal{
 	dir = 8
 	},
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "RM" = (
 /obj/machinery/space_heater,
-/turf/simulated/floor/wood,
-/area/submap/oldhotel)
-"RQ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
-/area/submap/oldhotel)
-"Se" = (
-/obj/structure/closet/cabinet,
-/obj/item/device/binoculars/spyglass,
-/obj/random/contraband,
-/obj/random/contraband,
-/obj/random/maintenance/medical,
-/obj/random/cash,
-/obj/random/drinkbottle,
-/obj/random/junk,
-/obj/random/junk,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Sf" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/yellowdouble,
-/turf/simulated/floor/wood,
+/obj/item/bedsheet/yellowdouble,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Sy" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "SG" = (
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/oldhotel)
 "SL" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
-	pixel_x = 9
+/obj/item/material/shard,
+/obj/item/material/shard,
+/obj/item/material/shard{
+	icon_state = "medium";
+	pixel_x = 12;
+	pixel_y = 7
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/oldhotel)
 "SZ" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "TU" = (
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Ut" = (
 /obj/structure/kitchenspike,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/oldhotel)
 "Uw" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/book/manual/chef_recipes,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/book/manual/chef_recipes,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "UU" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/lighter/zippo/royal,
-/obj/item/weapon/lipstick/random,
-/turf/simulated/floor/wood,
+/obj/item/flame/lighter/zippo/royal,
+/obj/item/lipstick/random,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "Vf" = (
 /obj/structure/window/reinforced/tinted{
@@ -592,20 +623,18 @@
 	},
 /obj/structure/curtain/open/shower/medical,
 /obj/random/soap,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "Vj" = (
-/turf/simulated/floor/carpet/oracarpet,
+/turf/simulated/floor/carpet/sblucarpet/virgo3b,
 /area/submap/oldhotel)
 "Wy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "WD" = (
-/obj/structure/closet/secure_closet/freezer/fridge{
-	locked = 0
-	},
+/obj/structure/closet/secure_closet/freezer/fridge,
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
@@ -616,27 +645,28 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/random/meat,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "WH" = (
-/obj/item/device/flashlight{
+/obj/item/flashlight{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "YI" = (
 /obj/structure/coatrack,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/virgo3b,
 /area/submap/oldhotel)
 "YQ" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/grille/broken/rustic,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/oldhotel)
 "ZG" = (
 /obj/structure/girder,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/oldhotel)
 
 (1,1,1) = {"
@@ -707,7 +737,7 @@ MU
 MU
 MU
 MU
-wX
+MU
 MU
 bW
 MU
@@ -730,7 +760,7 @@ YI
 GV
 hQ
 hQ
-MU
+rZ
 nG
 hQ
 nD
@@ -763,7 +793,7 @@ hQ
 ZG
 hQ
 Ik
-YQ
+Lg
 ZG
 ZG
 hQ
@@ -791,22 +821,22 @@ nD
 DN
 iU
 Gk
-ab
+OQ
 hQ
 Mk
 DN
 vA
 Gk
-nD
+hQ
 MU
 gA
 "}
 (7,1,1) = {"
 gA
 MU
-nG
+wX
 vM
-qg
+TU
 rK
 Qw
 hQ
@@ -818,12 +848,12 @@ hQ
 RM
 ai
 ja
-qg
+TU
 hQ
-PO
+RM
 Pd
 hp
-qg
+TU
 ZG
 MU
 gA
@@ -838,7 +868,7 @@ UU
 Gr
 ZG
 RM
-dc
+Pd
 cZ
 SZ
 hQ
@@ -847,10 +877,10 @@ SG
 yM
 Wy
 ZG
-TU
-kI
+vN
+Vj
 Pd
-qg
+TU
 hQ
 MU
 gA
@@ -858,26 +888,26 @@ gA
 (9,1,1) = {"
 gA
 MU
-bW
+pi
 wK
 JT
 AU
-qg
+TU
 nD
 rK
 tz
 uU
-qg
+TU
 hQ
 rK
 Sf
-zE
+jS
 SZ
 hQ
-qg
-Se
+JT
+je
 ly
-Ha
+AZ
 hQ
 MU
 gA
@@ -889,7 +919,7 @@ ZG
 hQ
 zP
 TU
-qg
+TU
 hQ
 hQ
 hQ
@@ -914,19 +944,19 @@ gA
 MU
 nD
 hQ
-qg
-qg
+TU
+TU
 SZ
-qg
+TU
 SZ
 JT
 tn
-qg
+TU
 hc
 SZ
-qg
+TU
 SZ
-RQ
+SZ
 SZ
 SZ
 SZ
@@ -941,11 +971,11 @@ gA
 MU
 MU
 dL
-qg
+TU
 da
 op
 lZ
-kh
+Vj
 SZ
 tn
 SZ
@@ -966,14 +996,14 @@ gA
 (13,1,1) = {"
 gA
 MU
-nG
-YQ
+wX
+zO
 JT
 jO
 vR
 tE
-kh
-qg
+Vj
+TU
 hQ
 ZG
 hQ
@@ -995,14 +1025,14 @@ gA
 MU
 MU
 dL
-qg
+TU
 vh
 QG
 QG
 if
 SZ
 go
-bQ
+Jq
 rb
 lj
 Ac
@@ -1022,14 +1052,14 @@ gA
 MU
 hQ
 hQ
-aa
+mr
 TU
 hc
 SZ
-qg
+TU
 TU
 go
-bQ
+Jq
 Cx
 Jq
 Cx
@@ -1159,9 +1189,9 @@ MU
 MU
 MU
 MU
-bW
-wX
-wX
+MU
+MU
+MU
 MU
 Cx
 Cx

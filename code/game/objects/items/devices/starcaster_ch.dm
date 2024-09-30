@@ -6,7 +6,7 @@
 	a stable exonet connection."
 	value = CATALOGUER_REWARD_TRIVIAL
 
-/obj/item/device/starcaster_news
+/obj/item/starcaster_news
 	name = "\improper Starcaster"
 	desc = "A device from the Starfire Report for reading the news and nothing else."
 	icon = 'icons/obj/library.dmi'
@@ -18,19 +18,19 @@
 
 
 
-/obj/item/device/starcaster_news/attack_self(mob/user as mob)
+/obj/item/starcaster_news/attack_self(mob/user as mob)
 
 	user.set_machine(src)
 	tgui_interact(user) //Activates tgui. Bless tgui.
 	return
 
-/obj/item/device/starcaster_news/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
+/obj/item/starcaster_news/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "StarcasterCh", name) 
 		ui.open()
 
-/obj/item/device/starcaster_news/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state) //Mostly ripped off from news_browser.dm
+/obj/item/starcaster_news/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state) //Mostly ripped off from news_browser.dm
 	var/list/data = list()
 
 	var/list/all_articles = list()
@@ -55,7 +55,7 @@
 
 	return data
 
-/obj/item/device/starcaster_news/tgui_act(action, list/params, datum/tgui/ui) //Also ripped from news_browser.dm. Bless tgui
+/obj/item/starcaster_news/tgui_act(action, list/params, datum/tgui/ui) //Also ripped from news_browser.dm. Bless tgui
 	if(..())
 		return TRUE
 	switch(action)
@@ -76,7 +76,7 @@
 			show_archived = !show_archived
 
 /* Deprecated nanoUI code. Keeping mostly for reference.
-/obj/item/device/starcaster_news/Topic(href, href_list) //Mostly ripped off from news_browser.dm
+/obj/item/starcaster_news/Topic(href, href_list) //Mostly ripped off from news_browser.dm
 	if(..())
 		return 1
 	if(href_list["PRG_openarticle"])
@@ -97,8 +97,8 @@
 	if(.)
 		SSnanoui.update_uis(src)
 
-/obj/item/device/starcaster_news/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1) //Also ripped from news_browser.dm. Fuck nanoUI
-	var/obj/item/device/starcaster_news/PRG = src //If you're trying to understand this shit go to nano/templates/starcaster_ch.tmpl
+/obj/item/starcaster_news/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1) //Also ripped from news_browser.dm. Fuck nanoUI
+	var/obj/item/starcaster_news/PRG = src //If you're trying to understand this shit go to nano/templates/starcaster_ch.tmpl
 
 	var/list/data = list()
 

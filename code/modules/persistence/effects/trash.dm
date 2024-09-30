@@ -1,6 +1,7 @@
 /datum/persistent/filth/trash
 	name = "trash"
 	saves_dirt = FALSE //VOREStation edit
+	has_admin_data = FALSE // CHOMPEdit
 
 /datum/persistent/filth/trash/CheckTurfContents(var/turf/T, var/list/tokens)
 	var/too_much_trash = 0

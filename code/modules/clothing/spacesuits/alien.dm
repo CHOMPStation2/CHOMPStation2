@@ -16,7 +16,7 @@
 	name = "Skrellian voidsuit"
 	desc = "Seems like a wetsuit with reinforced plating seamlessly attached to it. Very chic."
 	armor = list(melee = 20, bullet = 20, laser = 20, energy = 50, bomb = 50, bio = 100, rad = 50)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/storage/bag/ore,/obj/item/t_scanner,/obj/item/pickaxe, /obj/item/rcd)
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	species_restricted = list(SPECIES_SKRELL,SPECIES_HUMAN)
@@ -33,7 +33,7 @@
 	w_class = ITEMSIZE_NORMAL
 	flags = PHORONGUARD
 	item_flags = THICKMATERIAL
-	allowed = list(/obj/item/weapon/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/melee/energy/sword,/obj/item/weapon/handcuffs,/obj/item/weapon/tank)
+	allowed = list(/obj/item/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/melee/energy/sword,/obj/item/handcuffs,/obj/item/tank)
 	armor = list(melee = 60, bullet = 50, laser = 40,energy = 15, bomb = 30, bio = 100, rad = 50)
 	siemens_coefficient = 0.2
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
@@ -216,7 +216,7 @@
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers."
 	icon = 'icons/obj/clothing/suits_yw.dmi'
 	icon_state = "vox-civ-assistant"
-	allowed = list(/obj/item/weapon/tank,/obj/item/weapon/pen,/obj/item/device/flashlight/pen)
+	allowed = list(/obj/item/tank,/obj/item/pen,/obj/item/flashlight/pen)
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 100, rad = 25)
 	pressure_resistance = 5 * ONE_ATMOSPHERE
 
@@ -309,7 +309,7 @@
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one comes with more radiation protection."
 	icon_state = "vox-civ-engineer"
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 100, rad = 50)
-	allowed = list(/obj/item/device/flashlight, /obj/item/weapon/tank, /obj/item/device/t_scanner, /obj/item/weapon/rcd, /obj/item/weapon/tool)
+	allowed = list(/obj/item/flashlight, /obj/item/tank, /obj/item/t_scanner, /obj/item/rcd, /obj/item/tool)
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	pressure_resistance = 200 * ONE_ATMOSPHERE
 
@@ -389,7 +389,7 @@
 	name = "vox medical pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one is for medical personnel."
 	icon_state = "vox-civ-medical"
-	allowed = list(/obj/item/weapon/tank,/obj/item/device/flashlight,/obj/item/weapon/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical)
+	allowed = list(/obj/item/tank,/obj/item/flashlight,/obj/item/storage/firstaid,/obj/item/healthanalyzer,/obj/item/stack/medical)
 	pressure_resistance = 40 * ONE_ATMOSPHERE
 
 /obj/item/clothing/head/helmet/space/vox/civ/medical
@@ -432,7 +432,7 @@
 	name = "vox paramedic pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one is for paramedics."
 	icon_state = "vox-civ-paramedic"
-	allowed = list(/obj/item/weapon/tank,/obj/item/device/flashlight,/obj/item/weapon/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical,/obj/item/roller)
+	allowed = list(/obj/item/tank,/obj/item/flashlight,/obj/item/storage/firstaid,/obj/item/healthanalyzer,/obj/item/stack/medical,/obj/item/roller)
 
 /obj/item/clothing/head/helmet/space/vox/civ/medical/paramedic
 	name = "vox paramedic pressure helmet"
@@ -443,7 +443,7 @@
 	name = "vox cmo pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one is for the CMO."
 	icon_state = "vox-civ-cmo"
-	allowed = list(/obj/item/weapon/tank,/obj/item/device/flashlight,/obj/item/weapon/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical,/obj/item/roller)
+	allowed = list(/obj/item/tank,/obj/item/flashlight,/obj/item/storage/firstaid,/obj/item/healthanalyzer,/obj/item/stack/medical,/obj/item/roller)
 
 /obj/item/clothing/head/helmet/space/vox/civ/medical/cmo
 	name = "vox cmo pressure helmet"
@@ -456,7 +456,7 @@
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers. This one is for security aligned vox."
 	icon_state = "vox-civ-security"
 	armor = list(melee = 60, bullet = 10, laser = 30, energy = 5, bomb = 45, bio = 100, rad = 10)
-	allowed = list(/obj/item/weapon/tank,/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/melee/baton)
+	allowed = list(/obj/item/tank,/obj/item/gun,/obj/item/flashlight,/obj/item/tank,/obj/item/melee/baton)
 	pressure_resistance = 40 * ONE_ATMOSPHERE
 
 /obj/item/clothing/head/helmet/space/vox/civ/security

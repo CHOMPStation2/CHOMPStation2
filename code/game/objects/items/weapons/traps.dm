@@ -4,7 +4,7 @@
  * Buckles crossing individuals, doing moderate brute damage.
  */
 
-/obj/item/weapon/beartrap
+/obj/item/beartrap
 	name = "mechanical trap"
 	throw_speed = 2
 	throw_range = 1
@@ -23,10 +23,10 @@
 	var/camo_net = FALSE
 	var/stun_length = 0.25 SECONDS
 
-/obj/item/weapon/beartrap/proc/can_use(mob/user)
+/obj/item/beartrap/proc/can_use(mob/user)
 	return (user.IsAdvancedToolUser() && !issilicon(user) && !user.stat && !user.restrained())
 
-/obj/item/weapon/beartrap/attack_self(mob/user as mob)
+/obj/item/beartrap/attack_self(mob/user as mob)
 	..()
 	if(!deployed && can_use(user))
 		user.visible_message(
@@ -48,7 +48,7 @@
 			update_icon()
 			anchored = TRUE
 
-/obj/item/weapon/beartrap/attack_hand(mob/user as mob)
+/obj/item/beartrap/attack_hand(mob/user as mob)
 	if(has_buckled_mobs() && can_use(user))
 		var/victim = english_list(buckled_mobs)
 		user.visible_message(
@@ -79,7 +79,7 @@
 	else
 		..()
 
-/obj/item/weapon/beartrap/proc/attack_mob(mob/living/L)
+/obj/item/beartrap/proc/attack_mob(mob/living/L)
 
 	var/target_zone
 	if(L.lying)
@@ -120,7 +120,7 @@
 	anchored = FALSE
 	can_buckle = initial(can_buckle)
 
-/obj/item/weapon/beartrap/Crossed(atom/movable/AM as mob|obj)
+/obj/item/beartrap/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
 		return
 	if(deployed && isliving(AM))
@@ -138,7 +138,7 @@
 			update_icon()
 	..()
 
-/obj/item/weapon/beartrap/update_icon()
+/obj/item/beartrap/update_icon()
 	..()
 
 	if(!deployed)
@@ -152,7 +152,7 @@
 
 		icon_state = "beartrap1"
 
-/obj/item/weapon/beartrap/hunting
+/obj/item/beartrap/hunting
 	name = "hunting trap"
 	desc = "A mechanically activated leg trap. High-tech and reliable. Looks like it could really hurt if you set it off."
 	stun_length = 1 SECOND
@@ -166,7 +166,7 @@
  * Slows individuals crossing it. Barefoot individuals will be cut. Can be electrified by placing over a cable node.
  */
 
-/obj/item/weapon/material/barbedwire
+/obj/item/material/barbedwire
 	name = "barbed wire"
 	desc = "A coil of wire."
 	icon = 'icons/obj/trap.dmi'
@@ -182,17 +182,17 @@
 
 	sharp = TRUE
 
-/obj/item/weapon/material/barbedwire/set_material(var/new_material)
+/obj/item/material/barbedwire/set_material(var/new_material)
 	..()
 
 	if(!QDELETED(src))
 		health = round(material.integrity / 3)
 		name = (material.get_edge_damage() * force_divisor > 15) ?  "[material.display_name] razor wire" : "[material.display_name] [initial(name)]"
 
-/obj/item/weapon/material/barbedwire/proc/can_use(mob/user)
+/obj/item/material/barbedwire/proc/can_use(mob/user)
 	return (user.IsAdvancedToolUser() && !issilicon(user) && !user.stat && !user.restrained())
 
-/obj/item/weapon/material/barbedwire/attack_hand(mob/user as mob)
+/obj/item/material/barbedwire/attack_hand(mob/user as mob)
 	if(anchored && can_use(user))
 		user.visible_message(
 			"<span class='danger'>[user] starts to collect \the [src].</span>",
@@ -211,7 +211,7 @@
 	else
 		..()
 
-/obj/item/weapon/material/barbedwire/attack_self(mob/user as mob)
+/obj/item/material/barbedwire/attack_self(mob/user as mob)
 	..()
 	if(!anchored && can_use(user))
 		user.visible_message(
@@ -234,7 +234,7 @@
 			anchored = TRUE
 			update_icon()
 
-/obj/item/weapon/material/barbedwire/attackby(obj/item/W as obj, mob/user as mob)
+/obj/item/material/barbedwire/attackby(obj/item/W as obj, mob/user as mob)
 	if(!istype(W))
 		return
 
@@ -259,7 +259,7 @@
 
 	..()
 
-/obj/item/weapon/material/barbedwire/update_icon()
+/obj/item/material/barbedwire/update_icon()
 	..()
 
 	if(anchored)
@@ -267,7 +267,7 @@
 	else
 		icon_state = "[initial(icon_state)]"
 
-/obj/item/weapon/material/barbedwire/Crossed(atom/movable/AM as mob|obj)
+/obj/item/material/barbedwire/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
 		return
 	if(anchored && isliving(AM))
@@ -282,7 +282,7 @@
 			update_icon()
 	..()
 
-/obj/item/weapon/material/barbedwire/proc/shock(mob/user as mob, prb, var/target_zone = BP_TORSO)
+/obj/item/material/barbedwire/proc/shock(mob/user as mob, prb, var/target_zone = BP_TORSO)
 	if(!anchored || health == 0)		// anchored/destroyed grilles are never connected
 		return 0
 	if(material.conductivity <= 0)
@@ -327,7 +327,7 @@
 			return 0
 	return 0
 
-/obj/item/weapon/material/barbedwire/proc/attack_mob(mob/living/L)
+/obj/item/material/barbedwire/proc/attack_mob(mob/living/L)
 	var/target_zone
 	if(L.lying)
 		target_zone = ran_zone()
@@ -392,6 +392,6 @@
 
 	return
 
-/obj/item/weapon/material/barbedwire/plastic
+/obj/item/material/barbedwire/plastic
 	name = "snare wire"
 	default_material = MAT_PLASTIC

@@ -56,7 +56,7 @@
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "p" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/submap/MilitaryCamp1)
 "q" = (
@@ -101,7 +101,7 @@
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "y" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/random/landmine,
 /turf/template_noop,
 /area/submap/MilitaryCamp1)
@@ -145,7 +145,7 @@
 "I" = (
 /obj/structure/table/standard,
 /obj/random/cigarettes,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "J" = (

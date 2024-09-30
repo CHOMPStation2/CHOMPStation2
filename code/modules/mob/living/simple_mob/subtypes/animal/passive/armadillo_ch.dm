@@ -40,7 +40,7 @@
 	cold_damage_per_tick = 3
 
 	meat_amount = 2
-	holder_type = /obj/item/weapon/holder/armadillo
+	holder_type = /obj/item/holder/armadillo
 	ai_holder_type = /datum/ai_holder/simple_mob/armadillo
 
 	speak_emote = list("rumbles", "chirr?", "churr")
@@ -112,7 +112,7 @@
 	hat = null
 	update_icon()
 
-/obj/item/weapon/holder/armadillo
+/obj/item/holder/armadillo
 	origin_tech = list(TECH_BIO = 1)
 	default_worn_icon = 'modular_chomp/icons/mob/head_ch.dmi'
 	//item_state = "armadillo_rest" //Commented here as a reminder that holders will always set the item_state to icon_rest. You cannot override it like this.

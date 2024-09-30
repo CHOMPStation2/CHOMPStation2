@@ -815,18 +815,18 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		return //Why bother, if no ear sprites
 
 	if(hide_headset) //CHOMPEdit Start
-		if(l_ear && istype(l_ear, /obj/item/device/radio/headset)) //No need to generate blank images if only headsets are present.
-			if(!r_ear || istype(r_ear, /obj/item/device/radio/headset))
+		if(l_ear && istype(l_ear, /obj/item/radio/headset)) //No need to generate blank images if only headsets are present.
+			if(!r_ear || istype(r_ear, /obj/item/radio/headset))
 				return
-		if(r_ear && istype(r_ear, /obj/item/device/radio/headset))
-			if(!l_ear || istype(l_ear, /obj/item/device/radio/headset))
+		if(r_ear && istype(r_ear, /obj/item/radio/headset))
+			if(!l_ear || istype(l_ear, /obj/item/radio/headset))
 				return
 
 	// Blank image upon which to layer left & right overlays.
 	var/image/both = image(icon = 'icons/effects/effects.dmi', icon_state = "nothing", layer = BODY_LAYER+EARS_LAYER)
 
 	if(l_ear)
-		if(istype(l_ear, /obj/item/device/radio/headset))
+		if(istype(l_ear, /obj/item/radio/headset))
 			if(!hide_headset)
 				var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
 				both.add_overlay(standing)
@@ -835,7 +835,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			both.add_overlay(standing)
 
 	if(r_ear)
-		if(istype(r_ear, /obj/item/device/radio/headset))
+		if(istype(r_ear, /obj/item/radio/headset))
 			if(!hide_headset)
 				var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
 				both.add_overlay(standing)
@@ -925,8 +925,8 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 
 	//Toggle for belt layering with uniform
 	var/belt_layer = BELT_LAYER
-	if(istype(belt, /obj/item/weapon/storage/belt))
-		var/obj/item/weapon/storage/belt/ubelt = belt
+	if(istype(belt, /obj/item/storage/belt))
+		var/obj/item/storage/belt/ubelt = belt
 		if(ubelt.show_above_suit)
 			belt_layer = BELT_LAYER_ALT
 
@@ -998,7 +998,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 
 	var/icon/c_mask = tail_style?.clip_mask
 	if(c_mask)
-		if(istype(back, /obj/item/weapon/storage/backpack/saddlebag) || istype(back, /obj/item/weapon/storage/backpack/saddlebag_common))
+		if(istype(back, /obj/item/storage/backpack/saddlebag) || istype(back, /obj/item/storage/backpack/saddlebag_common))
 			c_mask = null
 
 	overlays_standing[BACK_LAYER] = back.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_back_str, default_icon = INV_BACK_DEF_ICON, default_layer = BACK_LAYER, clip_mask = c_mask)
@@ -1457,7 +1457,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(vore_belly_image)
 		vore_belly_image.layer = BODY_LAYER+VORE_BELLY_LAYER
 		overlays_standing[VORE_BELLY_LAYER] = vore_belly_image
-		vore_belly_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
+		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_belly_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
 		vore_belly_image.appearance_flags = appearance_flags
 
 	apply_layer(VORE_BELLY_LAYER)
@@ -1490,7 +1490,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(vore_tail_image)
 		vore_tail_image.layer = BODY_LAYER+VORE_TAIL_LAYER
 		overlays_standing[VORE_TAIL_LAYER] = vore_tail_image
-		vore_tail_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
+		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_tail_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
 		vore_tail_image.appearance_flags = appearance_flags
 
 	apply_layer(VORE_TAIL_LAYER)

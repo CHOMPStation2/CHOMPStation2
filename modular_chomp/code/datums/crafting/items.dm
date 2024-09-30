@@ -161,7 +161,7 @@
 	var/obj/item/projectile/P = new /obj/item/projectile/fire(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
 
-/obj/item/weapon/material/sword/rapier/solar
+/obj/item/material/sword/rapier/solar
 	name = "solar rapier"
 	desc = "A slender, fancy and sharply pointed sword, wisps of fire swirling around it."
 	icon_state = "rapier"
@@ -171,12 +171,12 @@
 	force_divisor = 0.50
 	color = "#F13C00"
 
-/obj/item/weapon/material/sword/rapier/solar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/material/sword/rapier/solar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	. = ..()
 	target.add_modifier(/datum/modifier/fire/weak, 12 SECONDS) //should be 12 damage?
 
 //Icicle
-/obj/item/weapon/gun/energy/icelauncher
+/obj/item/gun/energy/icelauncher
 	name = "Strange Pistol"
 	desc = "A homemade and somehow functional icicle launcher."
 	icon = 'icons/obj/gun_ch.dmi'
@@ -188,7 +188,7 @@
 	charge_cost = 300 //You got 5 shot
 	battery_lock = 1
 	projectile_type = /obj/item/projectile/icicle //But it hurts a lot
-	cell_type = /obj/item/weapon/cell/device/weapon
+	cell_type = /obj/item/cell/device/weapon
 
 /obj/item/clothing/shoes/boots/frost
 	name = "frost boots"
@@ -204,7 +204,7 @@
 	item_flags = NOSLIP
 
 //Turtle
-/obj/item/weapon/material/twohanded/sledgehammer/gravity
+/obj/item/material/twohanded/sledgehammer/gravity
 	name = "Gravity Sledgehammer"
 	desc = "A sledgehammer in bits of a gravity turtle's shell."
 	unwielded_force_divisor = 0.25
@@ -215,7 +215,7 @@
 	force_wielded = 25
 	applies_material_colour = 1
 
-/obj/item/weapon/material/twohanded/sledgehammer/gravity/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/material/twohanded/sledgehammer/gravity/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	. = ..()
 	var/atom/target_zone = get_edge_target_turf(user,get_dir(user, target))
 	if(!target.anchored)
@@ -224,7 +224,7 @@
 	playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
 
 //Eel stuff
-/obj/item/weapon/material/twohanded/fireaxe/scythe/harvester
+/obj/item/material/twohanded/fireaxe/scythe/harvester
 	name = "Scaled Scythe"
 	desc = "A scythe cladded in dream eel scales, allowing for better defense at the cost of offense."
 	force_wielded = 18
@@ -243,7 +243,7 @@
 	slowdown = -0.5
 
 //uggg, why isnt this apart of the base material melee weapons
-/obj/item/weapon/material/twohanded/fireaxe/scythe/harvester/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/material/twohanded/fireaxe/scythe/harvester/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(.)
 		return .
 	if(default_parry_check(user, attacker, damage_source) && prob(defend_chance))

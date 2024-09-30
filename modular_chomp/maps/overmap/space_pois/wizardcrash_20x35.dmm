@@ -13,7 +13,7 @@
 	density = 0;
 	icon_state = "brokengrille"
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/wood/broken,
@@ -23,7 +23,7 @@
 	density = 0;
 	icon_state = "brokengrille"
 	},
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/wood/broken,
 /area/submap/wizardcrash)
 "aj" = (
@@ -34,7 +34,7 @@
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "ak" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
@@ -46,11 +46,11 @@
 /area/submap/wizardcrash)
 "am" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/dice/d20,
+/obj/item/dice/d20,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "an" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/structure/bed/chair{
@@ -63,7 +63,7 @@
 	dir = 1;
 	in_use = 1
 	},
-/obj/item/weapon/flag/advent,
+/obj/item/flag/advent,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "ap" = (
@@ -80,7 +80,7 @@
 	dir = 1;
 	in_use = 1
 	},
-/obj/item/weapon/flag/advent,
+/obj/item/flag/advent,
 /turf/simulated/floor/wood/broken,
 /area/submap/wizardcrash)
 "as" = (
@@ -91,13 +91,13 @@
 /area/submap/wizardcrash)
 "at" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/cosmos,
+/obj/item/bedsheet/cosmos,
 /turf/simulated/floor/carpet,
 /area/submap/wizardcrash)
 "au" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen,
-/obj/item/weapon/paper{
+/obj/item/pen,
+/obj/item/paper{
 	info = "To the Magnificent Z.A.P.<BR>A small mining base has been created within our territory by wandless scum. Send them a message from the wizard federation they will not forget. I know your kind is rather fragile, but a group of lightly armed miners should not pose any threat to you at all. Just be warned they have a security cyborg for self defence, you might want to tune your spells to that threat. I look forward to hearing of your success.<BR>Grand Magus Abra the Wonderous";
 	name = "Mission Briefing"
 	},
@@ -110,7 +110,7 @@
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "aw" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/wood,
@@ -123,7 +123,7 @@
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "az" = (
-/obj/item/weapon/spellbook/oneuse/charge,
+/obj/item/spellbook/oneuse/charge,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
@@ -138,19 +138,19 @@
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "aD" = (
-/obj/item/weapon/storage/backpack/satchel,
+/obj/item/storage/backpack/satchel,
 /obj/structure/closet/cabinet,
-/obj/item/weapon/flame/lighter/zippo/royal,
+/obj/item/flame/lighter/zippo/royal,
 /turf/simulated/floor/carpet,
 /area/submap/wizardcrash)
 "aE" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/hydroponics_pod_people,
+/obj/item/book/manual/hydroponics_pod_people,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "aF" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/spellbook/oneuse/mindswap,
+/obj/item/spellbook/oneuse/mindswap,
 /turf/simulated/floor/wood/broken,
 /area/submap/wizardcrash)
 "aG" = (
@@ -193,20 +193,20 @@
 /area/submap/wizardcrash)
 "aN" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/barman_recipes,
-/obj/item/weapon/book/manual/wiki/engineering_hacking,
+/obj/item/book/manual/barman_recipes,
+/obj/item/book/manual/wiki/engineering_hacking,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "aO" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/spellbook/oneuse/smoke,
+/obj/item/spellbook/oneuse/smoke,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "aP" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/weapon/weldingtool/experimental,
+/obj/item/weldingtool/experimental,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
@@ -238,7 +238,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/submap/wizardcrash)
 "aV" = (
-/obj/item/weapon/flag/advent,
+/obj/item/flag/advent,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "aX" = (
@@ -271,7 +271,7 @@
 /area/submap/wizardcrash)
 "bc" = (
 /obj/effect/decal/remains/human,
-/obj/item/weapon/reagent_containers/food/snacks/meat/monkey,
+/obj/item/reagent_containers/food/snacks/meat/monkey,
 /turf/simulated/shuttle/plating,
 /area/submap/wizardcrash)
 "bd" = (
@@ -290,14 +290,14 @@
 /turf/simulated/floor/plating,
 /area/submap/wizardcrash)
 "bf" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/shuttle/plating,
 /area/submap/wizardcrash)
 "bg" = (
-/obj/item/weapon/reagent_containers/food/snacks/meat/monkey,
+/obj/item/reagent_containers/food/snacks/meat/monkey,
 /turf/simulated/shuttle/plating,
 /area/submap/wizardcrash)
 "bh" = (
@@ -313,7 +313,7 @@
 /turf/simulated/floor/tiled/kafel_full/red,
 /area/submap/wizardcrash)
 "bj" = (
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/floor_decal/chapel,
 /obj/effect/decal/cleanable/dirt,
@@ -329,7 +329,7 @@
 /turf/simulated/shuttle/plating,
 /area/submap/wizardcrash)
 "bm" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/wood,
@@ -351,7 +351,7 @@
 	dir = 4
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/staff,
+/obj/item/staff,
 /turf/simulated/floor/tiled/kafel_full/red,
 /area/submap/wizardcrash)
 "bq" = (
@@ -371,7 +371,7 @@
 /area/submap/wizardcrash)
 "bu" = (
 /obj/effect/floor_decal/chapel,
-/obj/item/weapon/staff/broom,
+/obj/item/staff/broom,
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/kafel_full/red,
 /area/submap/wizardcrash)
@@ -380,7 +380,7 @@
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
 "bw" = (
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /obj/structure/table/standard,
 /turf/simulated/floor/bronze,
 /area/submap/wizardcrash)
@@ -400,8 +400,8 @@
 /area/submap/wizardcrash)
 "bA" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/weldingtool,
+/obj/item/tool/wrench,
+/obj/item/weldingtool,
 /turf/simulated/floor/bronze,
 /area/submap/wizardcrash)
 "bB" = (
@@ -420,7 +420,7 @@
 	dir = 4
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/material/knife/ritual,
+/obj/item/material/knife/ritual,
 /turf/simulated/floor/tiled/kafel_full/red,
 /area/submap/wizardcrash)
 "bD" = (
@@ -492,7 +492,7 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/obj/item/weapon/book/manual/engineering_singularity_safety,
+/obj/item/book/manual/engineering_singularity_safety,
 /turf/simulated/floor/bronze,
 /area/submap/wizardcrash)
 "de" = (
@@ -622,7 +622,7 @@
 /turf/simulated/floor/bmarble,
 /area/submap/wizardcrash)
 "Qm" = (
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/construct/proteon,
 /turf/simulated/floor/wood,
@@ -657,7 +657,7 @@
 /turf/simulated/floor/wood/broken,
 /area/submap/wizardcrash)
 "Yk" = (
-/obj/item/weapon/flag/advent,
+/obj/item/flag/advent,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)

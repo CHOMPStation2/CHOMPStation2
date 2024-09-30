@@ -185,9 +185,9 @@
 /obj/item/stack/cable_coil/random,
 /obj/item/stack/cable_coil/random,
 /obj/item/stack/cable_coil/random,
-/obj/item/weapon/storage/belt/utility/full/multitool,
-/obj/item/weapon/storage/belt/utility/full/multitool,
-/obj/item/weapon/storage/belt/utility/full/multitool,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/storage/belt/utility/full/multitool,
 /obj/item/clothing/head/welding,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -263,7 +263,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "aX" = (
-/obj/item/device/gps/internal/base{
+/obj/item/gps/internal/base{
 	gps_tag = "NT_SATELLITE"
 	},
 /turf/simulated/floor/tiled,
@@ -315,7 +315,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/airlock_electronics,
+/obj/item/airlock_electronics,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
 	},
@@ -325,7 +325,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/blowntcommsat)
 "bf" = (
-/obj/item/weapon/paper/crumpled,
+/obj/item/paper/crumpled,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "bg" = (
@@ -401,7 +401,7 @@
 /area/submap/blowntcommsat)
 "bs" = (
 /obj/structure/table/steel,
-/obj/item/weapon/cell/super/empty,
+/obj/item/cell/super/empty,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "bt" = (
@@ -523,7 +523,7 @@
 	},
 /area/submap/blowntcommsat)
 "bL" = (
-/obj/item/weapon/circuitboard/teleporter,
+/obj/item/circuitboard/teleporter,
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
@@ -553,7 +553,7 @@
 /area/submap/blowntcommsat)
 "bP" = (
 /obj/structure/table/steel,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -579,9 +579,9 @@
 	dir = 4
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/circuitboard/protolathe,
-/obj/item/weapon/circuitboard/destructive_analyzer,
-/obj/item/weapon/circuitboard/circuit_imprinter,
+/obj/item/circuitboard/protolathe,
+/obj/item/circuitboard/destructive_analyzer,
+/obj/item/circuitboard/circuit_imprinter,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "bT" = (
@@ -596,8 +596,8 @@
 "bU" = (
 /obj/structure/table/steel,
 /obj/item/ammo_casing/microbattery/combat/lethal,
-/obj/item/weapon/reagent_containers/syringe/drugs,
-/obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral{
+/obj/item/reagent_containers/syringe/drugs,
+/obj/item/reagent_containers/syringe/ld50_syringe/choral{
 	pixel_y = 8
 	},
 /turf/simulated/floor/bluegrid{
@@ -608,12 +608,12 @@
 	},
 /area/submap/blowntcommsat)
 "bV" = (
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "bW" = (
 /obj/structure/table/steel,
-/obj/item/device/radio/electropack,
+/obj/item/radio/electropack,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 500;
 	oxygen = 0;
@@ -622,7 +622,7 @@
 /area/submap/blowntcommsat)
 "bX" = (
 /obj/structure/table/steel,
-/obj/item/weapon/surgical/hemostat,
+/obj/item/surgical/hemostat,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -632,7 +632,7 @@
 /area/submap/blowntcommsat)
 "bY" = (
 /obj/structure/table/steel,
-/obj/item/weapon/surgical/circular_saw{
+/obj/item/surgical/circular_saw{
 	pixel_y = 8
 	},
 /turf/simulated/floor/bluegrid{
@@ -852,7 +852,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 500;
 	oxygen = 0;
@@ -901,8 +901,8 @@
 /area/submap/blowntcommsat)
 "eA" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/inducer/syndicate,
-/obj/item/weapon/inducer/syndicate,
+/obj/item/inducer/syndicate,
+/obj/item/inducer/syndicate,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "eI" = (
@@ -966,7 +966,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
 "oy" = (
-/obj/item/device/radio/beacon,
+/obj/item/radio/beacon,
 /obj/random/trash,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
@@ -1045,12 +1045,12 @@
 /turf/simulated/floor/airless,
 /area/submap/blowntcommsat)
 "EX" = (
-/obj/item/device/radio/off,
+/obj/item/radio/off,
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
 /turf/simulated/floor/airless,
 /area/submap/blowntcommsat)
 "Ho" = (
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 500;
 	oxygen = 0;

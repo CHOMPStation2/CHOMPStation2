@@ -37,9 +37,9 @@ RUN apt-get install -y --no-install-recommends \
     && git init \
     && git remote add origin https://github.com/tgstation/rust-g
 
-COPY _build_dependencies.sh .
+COPY dependencies.sh .
 
-RUN /bin/bash -c "source _build_dependencies.sh \
+RUN /bin/bash -c "source dependencies.sh \
     && git fetch --depth 1 origin \$RUST_G_VERSION" \
     && git checkout FETCH_HEAD \
     && ~/.cargo/bin/cargo build --release

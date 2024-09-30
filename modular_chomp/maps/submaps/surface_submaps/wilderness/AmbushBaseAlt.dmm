@@ -21,8 +21,8 @@
 /area/submap/DugOutMercs)
 "aQ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/oar,
-/obj/item/weapon/oar,
+/obj/item/oar,
+/obj/item/oar,
 /turf/simulated/floor/wood{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -129,9 +129,9 @@
 "dp" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/surgicaldrill/alien,
+/obj/item/surgical/surgicaldrill/alien,
 /obj/machinery/light,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "dr" = (
@@ -214,14 +214,14 @@
 "gc" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/revolver/nova,
+/obj/item/gun/projectile/revolver/nova,
 /obj/machinery/light,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "gg" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/material/fishing_net,
+/obj/item/material/fishing_net,
 /turf/simulated/floor/wood{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -262,7 +262,7 @@
 "in" = (
 /obj/structure/table/reinforced,
 /obj/random/cigarettes,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled,
 /area/submap/DugOutMercs)
@@ -287,7 +287,7 @@
 	dir = 9
 	},
 /obj/structure/table/rack,
-/obj/item/weapon/rig/robotics,
+/obj/item/rig/robotics,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "je" = (
@@ -310,8 +310,8 @@
 /obj/item/ammo_magazine/ammo_box/b12g/flechette,
 /obj/item/ammo_magazine/ammo_box/b12g/flechette,
 /obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel/quad,
-/obj/item/weapon/gun/projectile/shotgun/pump,
+/obj/item/gun/projectile/shotgun/doublebarrel/quad,
+/obj/item/gun/projectile/shotgun/pump,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "jE" = (
@@ -358,8 +358,8 @@
 "lN" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/telecube/randomized,
-/obj/item/weapon/archaeological_find,
+/obj/item/telecube/randomized,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "lO" = (
@@ -372,9 +372,9 @@
 /area/submap/DugOutMercs)
 "ma" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/radio,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/binoculars,
+/obj/item/radio,
+/obj/item/storage/mre/random,
+/obj/item/binoculars,
 /turf/simulated/floor/wood{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -445,8 +445,8 @@
 "pg" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat/sif/murkfish,
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat/sif/murkfish,
+/obj/item/reagent_containers/food/snacks/carpmeat/sif/murkfish,
+/obj/item/reagent_containers/food/snacks/carpmeat/sif/murkfish,
 /turf/simulated/floor/tiled/hydro{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -464,21 +464,21 @@
 /area/submap/DugOutMercs)
 "qo" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "qR" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/energy/vepr,
-/obj/item/weapon/gun/energy/laser,
+/obj/item/gun/energy/vepr,
+/obj/item/gun/energy/laser,
 /obj/random/energy,
 /obj/random/energy,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "rg" = (
@@ -492,9 +492,9 @@
 "rp" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/fishing_rod/modern/built,
-/obj/item/weapon/material/fishing_rod/modern/built,
-/obj/item/weapon/material/fishing_rod/modern/built,
+/obj/item/material/fishing_rod/modern/built,
+/obj/item/material/fishing_rod/modern/built,
+/obj/item/material/fishing_rod/modern/built,
 /turf/simulated/floor/tiled/hydro{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -519,9 +519,9 @@
 /area/submap/DugOutMercs)
 "tt" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/radio,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/binoculars,
+/obj/item/radio,
+/obj/item/storage/mre/random,
+/obj/item/binoculars,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/DugOutMercs)
 "tY" = (
@@ -588,7 +588,7 @@
 	dir = 6
 	},
 /obj/structure/table/rack,
-/obj/item/weapon/rig/robotics,
+/obj/item/rig/robotics,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "wt" = (
@@ -639,7 +639,7 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/random/janusmodule,
-/obj/item/weapon/surgical/bone_clamp/alien,
+/obj/item/surgical/bone_clamp/alien,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -653,7 +653,7 @@
 /obj/random/energy,
 /obj/item/clothing/suit/space/syndicate/black/blue,
 /obj/item/clothing/head/helmet/space/syndicate/black/blue,
-/obj/item/weapon/tank/oxygen/welded,
+/obj/item/tank/oxygen/welded,
 /turf/simulated/floor/tiled{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -695,7 +695,7 @@
 /area/submap/DugOutMercs)
 "CB" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/oar,
+/obj/item/oar,
 /turf/simulated/floor/wood{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -891,7 +891,7 @@
 	dir = 5
 	},
 /obj/structure/table/rack,
-/obj/item/weapon/rig/ch/precursor,
+/obj/item/rig/ch/precursor,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "Ly" = (
@@ -902,7 +902,7 @@
 	dir = 10
 	},
 /obj/structure/table/rack,
-/obj/item/weapon/rig/ch/precursor,
+/obj/item/rig/ch/precursor,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "LU" = (
@@ -916,7 +916,7 @@
 /area/submap/DugOutMercs)
 "LY" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/material/fishing_rod/modern/built,
+/obj/item/material/fishing_rod/modern/built,
 /turf/simulated/floor/wood{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -991,9 +991,9 @@
 "OC" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/material/fishing_net,
+/obj/item/material/fishing_net,
+/obj/item/material/fishing_net,
+/obj/item/material/fishing_net,
 /turf/simulated/floor/tiled/hydro{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -1057,8 +1057,8 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish/sharkmeat,
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish/sharkmeat,
+/obj/item/reagent_containers/food/snacks/carpmeat/fish/sharkmeat,
+/obj/item/reagent_containers/food/snacks/carpmeat/fish/sharkmeat,
 /turf/simulated/floor/tiled/hydro{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -1071,7 +1071,7 @@
 /area/submap/DugOutMercs)
 "SG" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/random/mob/merc/all,
 /turf/simulated/floor/tiled,
@@ -1083,7 +1083,7 @@
 "SW" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /turf/simulated/floor/tiled/techmaint,
@@ -1121,13 +1121,13 @@
 /obj/structure/table/standard,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
-/obj/item/weapon/storage/belt/holding,
-/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/storage/belt/holding,
+/obj/item/cell/device/weapon/recharge/alien/hybrid,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 "VI" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled,
 /area/submap/DugOutMercs)
@@ -1149,7 +1149,7 @@
 "WN" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/toolbox/lunchbox/syndicate/filled,
+/obj/item/storage/toolbox/lunchbox/syndicate/filled,
 /turf/simulated/floor/tiled/hydro{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -1184,7 +1184,7 @@
 /obj/random/energy,
 /obj/item/clothing/suit/space/syndicate/black/blue,
 /obj/item/clothing/head/helmet/space/syndicate/black/blue,
-/obj/item/weapon/tank/oxygen/welded,
+/obj/item/tank/oxygen/welded,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -1215,9 +1215,9 @@
 "Zf" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/jellyfishcore,
-/obj/item/weapon/reagent_containers/food/snacks/monkfishfillet,
-/obj/item/weapon/reagent_containers/food/snacks/monkfishfillet,
+/obj/item/reagent_containers/food/snacks/jellyfishcore,
+/obj/item/reagent_containers/food/snacks/monkfishfillet,
+/obj/item/reagent_containers/food/snacks/monkfishfillet,
 /turf/simulated/floor/tiled/hydro{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -1227,9 +1227,9 @@
 "Zj" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/gun/magnetic/gasthrower,
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni,
-/obj/item/weapon/archaeological_find,
+/obj/item/gun/magnetic/gasthrower,
+/obj/item/cell/device/weapon/recharge/alien/omni,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
 

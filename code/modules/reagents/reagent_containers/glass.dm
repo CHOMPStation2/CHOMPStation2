@@ -2,7 +2,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 /// (Mixing)Glass.
 ////////////////////////////////////////////////////////////////////////////////
-/obj/item/weapon/reagent_containers/glass
+/obj/item/reagent_containers/glass
 	name = " "
 	var/base_name = " "
 	desc = " "
@@ -18,6 +18,7 @@
 	unacidable = TRUE //glass doesn't dissolve in acid
 	drop_sound = 'sound/items/drop/bottle.ogg'
 	pickup_sound = 'sound/items/pickup/bottle.ogg'
+	description_info = "Clicking on a venomous animal (or person) with the lid closed will express their venom into the beaker!"
 
 	var/label_text = ""
 
@@ -30,12 +31,12 @@
 		/obj/structure/table,
 		/obj/structure/closet,
 		/obj/structure/sink,
-		/obj/item/weapon/storage,
+		/obj/item/storage,
 		/obj/machinery/atmospherics/unary/cryo_cell,
 		/obj/machinery/dna_scannernew,
-		/obj/item/weapon/grenade/chem_grenade,
+		/obj/item/grenade/chem_grenade,
 		/mob/living/bot/medbot,
-		/obj/item/weapon/storage/secure/safe,
+		/obj/item/storage/secure/safe,
 		/obj/machinery/iv_drip,
 		/obj/structure/medical_stand, //VOREStation Add,
 		/obj/machinery/disease2/incubator,
@@ -50,11 +51,12 @@
 		/obj/machinery/radiocarbon_spectrometer,
 		/obj/machinery/portable_atmospherics/powered/reagent_distillery,
 		/obj/machinery/feeder,
-		/obj/machinery/chemical_synthesizer //CHOMPedit,
+		/obj/machinery/chemical_synthesizer, //CHOMPedit,
+		/obj/machinery/food_replicator // CHOMPAdd
 		)
 //CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 
-/obj/item/weapon/reagent_containers/glass/Initialize()
+/obj/item/reagent_containers/glass/Initialize()
 	. = ..()
 	if(LAZYLEN(prefill))
 		for(var/R in prefill)
@@ -64,7 +66,7 @@
 	base_name = name
 	base_desc = desc
 
-/obj/item/weapon/reagent_containers/glass/examine(var/mob/user)
+/obj/item/reagent_containers/glass/examine(var/mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		if(reagents && reagents.reagent_list.len)
@@ -74,7 +76,7 @@
 		if(!is_open_container())
 			. += "<span class='notice'>Airtight lid seals it completely.</span>"
 
-/obj/item/weapon/reagent_containers/glass/attack_self()
+/obj/item/reagent_containers/glass/attack_self()
 	..()
 	if(is_open_container())
 		// to_chat(usr, "<span class = 'notice'>You put the lid on \the [src].</span>")
@@ -86,29 +88,55 @@
 		flags |= OPENCONTAINER
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/attack(mob/M as mob, mob/user as mob, def_zone)
+/obj/item/reagent_containers/glass/attack(mob/M as mob, mob/user as mob, def_zone)
 	if(force && !(flags & NOBLUDGEON) && user.a_intent == I_HURT)
 		return	..()
+
+	// If the container is *closed* we do snake milking!~
+	if(!is_open_container() && isliving(M))
+		return attempt_snake_milking(user, M)
 
 	if(standard_feed_mob(user, M))
 		return
 
 	return 0
 
-/obj/item/weapon/reagent_containers/glass/standard_feed_mob(var/mob/user, var/mob/target)
-	if(!is_open_container())
-		to_chat(user, "<span class='notice'>You need to open \the [src] first.</span>")
-		return 1
+/obj/item/reagent_containers/glass/standard_feed_mob(var/mob/user, var/mob/target)
 	if(user.a_intent == I_HURT)
 		return 1
 	return ..()
 
-/obj/item/weapon/reagent_containers/glass/self_feed_message(var/mob/user)
+/obj/item/reagent_containers/glass/self_feed_message(var/mob/user)
 	// to_chat(user, "<span class='notice'>You swallow a gulp from \the [src].</span>")
 	balloon_alert(user, "Swallowed from \the [src]") // CHOMPEdit - Changed to balloon alert
 
-/obj/item/weapon/reagent_containers/glass/afterattack(var/obj/target, var/mob/user, var/proximity)
-	if(!is_open_container() || !proximity) //Is the container open & are they next to whatever they're clicking?
+/obj/item/reagent_containers/glass/proc/attempt_snake_milking(mob/living/user, mob/living/target)
+	var/reagent
+	var/amount
+
+	if(target.trait_injection_selected)
+		reagent = target.trait_injection_selected
+		amount = target.trait_injection_amount
+	else if(istype(target, /mob/living/simple_mob/animal/giant_spider))
+		var/mob/living/simple_mob/animal/giant_spider/spider = target
+		reagent = spider.poison_type
+		amount = spider.poison_per_bite
+
+	if(!reagent || !amount)
+		to_chat(user, span_warning("[target] does not have venom you can express. Open the beaker to drink from it."))
+		return TRUE
+
+	if(TIMER_COOLDOWN_RUNNING(target, COOLDOWN_VENOM_MILKING))
+		user.visible_message(span_warning("[user] attempts to express venom from [target], but nothing happens."), span_warning("[target] had their venom expressed too recently, try again later."))
+		return TRUE
+
+	TIMER_COOLDOWN_START(target, COOLDOWN_VENOM_MILKING, 30 SECONDS)
+	user.visible_message(span_notice("[user] expresses venom from [target]."))
+	reagents.add_reagent(reagent, amount)
+	return TRUE
+
+/obj/item/reagent_containers/glass/afterattack(var/obj/target, var/mob/user, var/proximity)
+	if(!proximity || !is_open_container()) //Is the container open & are they next to whatever they're clicking?
 		return 1 //If not, do nothing.
 	for(var/type in can_be_placed_into) //Is it something it can be placed into?
 		if(istype(target, type))
@@ -127,8 +155,8 @@
 			return 1
 	..()
 
-/obj/item/weapon/reagent_containers/glass/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/pen) || istype(W, /obj/item/device/flashlight/pen))
+/obj/item/reagent_containers/glass/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/pen) || istype(W, /obj/item/flashlight/pen))
 		var/tmp_label = sanitizeSafe(tgui_input_text(user, "Enter a label for [name]", "Label", label_text, MAX_NAME_LEN), MAX_NAME_LEN)
 		if(length(tmp_label) > 50)
 			to_chat(user, "<span class='notice'>The label can be at most 50 characters long.</span>")
@@ -142,14 +170,14 @@
 			balloon_alert(user, "Label set to \"[tmp_label]\"") // CHOMPEdit - Changed to balloon alert
 			label_text = tmp_label
 			update_name_label()
-	if(istype(W,/obj/item/weapon/storage/bag))
+	if(istype(W,/obj/item/storage/bag))
 		..()
 	if(W && W.w_class <= w_class && (flags & OPENCONTAINER) && user.a_intent != I_HELP)
 		// to_chat(user, "<span class='notice'>You dip \the [W] into \the [src].</span>")
 		balloon_alert(user, "[W] dipped into \the [src].") // CHOMPEdit - Changed to balloon alert
 		reagents.touch_obj(W, reagents.total_volume)
 
-/obj/item/weapon/reagent_containers/glass/proc/update_name_label()
+/obj/item/reagent_containers/glass/proc/update_name_label()
 	if(label_text == "")
 		name = base_name
 	else if(length(label_text) > 20)
@@ -160,7 +188,7 @@
 	desc = "[base_desc] It is labeled \"[label_text]\"."
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker
+/obj/item/reagent_containers/glass/beaker
 	name = "beaker"
 	desc = "A beaker."
 	icon = 'icons/obj/chemical.dmi'
@@ -173,29 +201,29 @@
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 	var/rating = 1
 
-/obj/item/weapon/reagent_containers/glass/beaker/get_rating()
+/obj/item/reagent_containers/glass/beaker/get_rating()
 	return rating
 
-/obj/item/weapon/reagent_containers/glass/beaker/Initialize()
+/obj/item/reagent_containers/glass/beaker/Initialize()
 	. = ..()
 	desc += " Can hold up to [volume] units."
 
-/obj/item/weapon/reagent_containers/glass/beaker/on_reagent_change()
+/obj/item/reagent_containers/glass/beaker/on_reagent_change()
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/pickup(mob/user)
+/obj/item/reagent_containers/glass/beaker/pickup(mob/user)
 	..()
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/dropped(mob/user)
+/obj/item/reagent_containers/glass/beaker/dropped(mob/user)
 	..()
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/attack_hand()
+/obj/item/reagent_containers/glass/beaker/attack_hand()
 	..()
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/update_icon()
+/obj/item/reagent_containers/glass/beaker/update_icon()
 	cut_overlays()
 
 	if(reagents.total_volume)
@@ -219,7 +247,7 @@
 	if (label_text)
 		add_overlay("label_[initial(icon_state)]")
 
-/obj/item/weapon/reagent_containers/glass/beaker/large
+/obj/item/reagent_containers/glass/beaker/large
 	name = "large beaker"
 	desc = "A large beaker."
 	icon_state = "beakerlarge"
@@ -232,7 +260,7 @@
 	flags = OPENCONTAINER
 	rating = 3
 
-/obj/item/weapon/reagent_containers/glass/beaker/noreact
+/obj/item/reagent_containers/glass/beaker/noreact
 	name = "cryostasis beaker"
 	desc = "A cryostasis beaker that allows for chemical storage without reactions."
 	icon_state = "beakernoreact"
@@ -243,7 +271,7 @@
 	amount_per_transfer_from_this = 10
 	flags = OPENCONTAINER | NOREACT
 
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace
+/obj/item/reagent_containers/glass/beaker/bluespace
 	name = "bluespace beaker"
 	desc = "A bluespace beaker, powered by experimental bluespace technology."
 	icon_state = "beakerbluespace"
@@ -256,7 +284,7 @@
 	flags = OPENCONTAINER
 	rating = 5
 
-/obj/item/weapon/reagent_containers/glass/beaker/vial
+/obj/item/reagent_containers/glass/beaker/vial
 	name = "vial"
 	desc = "A small glass vial."
 	icon_state = "vial"
@@ -269,14 +297,14 @@
 	possible_transfer_amounts = list(5,10,15,30)
 	flags = OPENCONTAINER
 
-/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone
+/obj/item/reagent_containers/glass/beaker/cryoxadone
 	name = "beaker (cryoxadone)"
 	prefill = list("cryoxadone" = 30)
 
-/obj/item/weapon/reagent_containers/glass/beaker/sulphuric
+/obj/item/reagent_containers/glass/beaker/sulphuric
 	prefill = list("sacid" = 60)
 
-/obj/item/weapon/reagent_containers/glass/beaker/stopperedbottle
+/obj/item/reagent_containers/glass/beaker/stopperedbottle
 	name = "stoppered bottle"
 	desc = "A stoppered bottle for keeping beverages fresh."
 	icon_state = "stopperedbottle"
@@ -287,7 +315,7 @@
 	possible_transfer_amounts = list(5,10,15,25,30,60,120)
 	flags = OPENCONTAINER
 
-/obj/item/weapon/reagent_containers/glass/bucket
+/obj/item/reagent_containers/glass/bucket
 	desc = "It's a bucket."
 	name = "bucket"
 	icon = 'icons/obj/janitor.dmi'
@@ -305,11 +333,11 @@
 	drop_sound = 'sound/items/drop/helm.ogg'
 	pickup_sound = 'sound/items/pickup/helm.ogg'
 
-/obj/item/weapon/reagent_containers/glass/bucket/attackby(var/obj/item/D, mob/user as mob)
+/obj/item/reagent_containers/glass/bucket/attackby(var/obj/item/D, mob/user as mob)
 	if(isprox(D))
 		to_chat(user, "You add [D] to [src].")
 		qdel(D)
-		user.put_in_hands(new /obj/item/weapon/bucket_sensor)
+		user.put_in_hands(new /obj/item/bucket_sensor)
 		user.drop_from_inventory(src)
 		qdel(src)
 		return
@@ -323,7 +351,7 @@
 	else if(istype(D, /obj/item/stack/material) && D.get_material_name() == MAT_STEEL)
 		var/obj/item/stack/material/M = D
 		if (M.use(1))
-			var/obj/item/weapon/secbot_assembly/edCLN_assembly/B = new /obj/item/weapon/secbot_assembly/edCLN_assembly
+			var/obj/item/secbot_assembly/edCLN_assembly/B = new /obj/item/secbot_assembly/edCLN_assembly
 			B.loc = get_turf(src)
 			// to_chat(user, "<span class='notice'>You armed the robot frame.</span>")
 			balloon_alert(user, "Armed the robot frame.")
@@ -334,7 +362,7 @@
 		else
 			// to_chat(user, "<span class='warning'>You need one sheet of metal to arm the robot frame.</span>")
 			balloon_alert(user, "One sheet of metal is needed to arm the robot frame.") // CHOMPEdit - Changed to balloon alert
-	else if(istype(D, /obj/item/weapon/mop) || istype(D, /obj/item/weapon/soap) || istype(D, /obj/item/weapon/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
+	else if(istype(D, /obj/item/mop) || istype(D, /obj/item/soap) || istype(D, /obj/item/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
 		if(reagents.total_volume < 1)
 			// to_chat(user, "<span class='warning'>\The [src] is empty!</span>")
 			balloon_alert(user, "\The [src] is empty!") // CHOMPEdit - Changed to balloon alert
@@ -345,12 +373,12 @@
 	else
 		return ..()
 
-/obj/item/weapon/reagent_containers/glass/bucket/update_icon()
+/obj/item/reagent_containers/glass/bucket/update_icon()
 	cut_overlays()
 	if (!is_open_container())
 		add_overlay("lid_[initial(icon_state)]")
 
-/obj/item/weapon/reagent_containers/glass/bucket/wood
+/obj/item/reagent_containers/glass/bucket/wood
 	desc = "An old wooden bucket."
 	name = "wooden bucket"
 	icon = 'icons/obj/janitor.dmi'
@@ -368,17 +396,17 @@
 	drop_sound = 'sound/items/drop/wooden.ogg'
 	pickup_sound = 'sound/items/pickup/wooden.ogg'
 
-/obj/item/weapon/reagent_containers/glass/bucket/wood/attackby(var/obj/D, mob/user as mob)
+/obj/item/reagent_containers/glass/bucket/wood/attackby(var/obj/D, mob/user as mob)
 	if(isprox(D))
 		to_chat(user, "This wooden bucket doesn't play well with electronics.")
 		return
-	else if(istype(D, /obj/item/weapon/material/knife/machete/hatchet))
+	else if(istype(D, /obj/item/material/knife/machete/hatchet))
 		to_chat(user, "<span class='notice'>You cut a big hole in \the [src] with \the [D].  It's kinda useless as a bucket now.</span>")
 		user.put_in_hands(new /obj/item/clothing/head/helmet/bucket/wood)
 		user.drop_from_inventory(src)
 		qdel(src)
 		return
-	else if(istype(D, /obj/item/weapon/mop))
+	else if(istype(D, /obj/item/mop))
 		if(reagents.total_volume < 1)
 			to_chat(user, "<span class='warning'>\The [src] is empty!</span>")
 		else
@@ -389,7 +417,7 @@
 	else
 		return ..()
 
-/obj/item/weapon/reagent_containers/glass/cooler_bottle
+/obj/item/reagent_containers/glass/cooler_bottle
 	desc = "A bottle for a water-cooler."
 	name = "water-cooler bottle"
 	icon = 'icons/obj/vending.dmi'
@@ -400,7 +428,7 @@
 	possible_transfer_amounts = list(10,20,30,60,120)
 	volume = 120
 
-/obj/item/weapon/reagent_containers/glass/pint_mug
+/obj/item/reagent_containers/glass/pint_mug
 	desc = "A rustic pint mug designed for drinking ale."
 	name = "pint mug"
 	icon = 'icons/obj/drinks.dmi'

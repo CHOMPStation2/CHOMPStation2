@@ -48,7 +48,7 @@
 /area/survivalpod/superpose/SurvivalMedical)
 "h" = (
 /obj/structure/table/survival_pod,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/structure/sink/kitchen{
 	dir = 8;
 	pixel_x = -13
@@ -68,12 +68,12 @@
 /area/survivalpod/superpose/SurvivalMedical)
 "j" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/mask/muzzle,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/mask/muzzle,
-/obj/item/device/sleevemate,
+/obj/item/sleevemate,
 /obj/item/roller{
 	pixel_y = 8
 	},
@@ -83,94 +83,94 @@
 /obj/item/roller{
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner";
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner";
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/storage/firstaid/surgery,
-/obj/item/device/defib_kit/compact/loaded,
+/obj/item/storage/firstaid/surgery,
+/obj/item/defib_kit/compact/loaded,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
-/obj/item/device/binoculars,
-/obj/item/device/bluespaceradio,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/device/radio/emergency,
-/obj/item/device/radio/emergency,
-/obj/item/device/radio/emergency,
-/obj/item/device/radio/emergency,
-/obj/item/device/radio/emergency,
-/obj/item/device/radio/emergency,
-/obj/item/weapon/storage/backpack/dufflebag/emt,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/binoculars,
+/obj/item/bluespaceradio,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/radio/emergency,
+/obj/item/radio/emergency,
+/obj/item/radio/emergency,
+/obj/item/radio/emergency,
+/obj/item/radio/emergency,
+/obj/item/radio/emergency,
+/obj/item/storage/backpack/dufflebag/emt,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalMedical)
 "k" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/fitnessflask/glucose,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/fitnessflask/glucose,
-/obj/item/weapon/storage/box/freezer,
-/obj/item/weapon/storage/box/freezer,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/food/drinks/drinkingglass/fitnessflask/glucose,
+/obj/item/reagent_containers/food/drinks/drinkingglass/fitnessflask/glucose,
+/obj/item/storage/box/freezer,
+/obj/item/storage/box/freezer,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/device/defib_kit/loaded,
-/obj/item/device/defib_kit/loaded,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalMedical)
 "l" = (
@@ -184,15 +184,15 @@
 /area/survivalpod/superpose/SurvivalMedical)
 "m" = (
 /obj/structure/table/survival_pod,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/fire{
 	pixel_x = 5;
 	pixel_y = 5
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalMedical)
 "n" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalMedical)
 "o" = (
@@ -203,8 +203,8 @@
 /obj/structure/closet/secure_closet/guncabinet/phase{
 	pixel_y = -32
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun/pistol,
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/permit/gun/planetside,
 /obj/item/clothing/accessory/holster/waist,
@@ -238,8 +238,8 @@
 	dir = 1
 	},
 /obj/structure/table/gamblingtable,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/deck/cards,
+/obj/item/starcaster_news,
+/obj/item/deck/cards,
 /obj/structure/fireaxecabinet{
 	pixel_y = 27
 	},
@@ -258,8 +258,8 @@
 /area/survivalpod/superpose/SurvivalMedical)
 "x" = (
 /obj/structure/table/survival_pod,
-/obj/item/weapon/storage/firstaid/adv,
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/o2{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -303,7 +303,7 @@
 /area/survivalpod/superpose/SurvivalMedical)
 "F" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/curtain/open/privacy,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalMedical)
@@ -329,8 +329,8 @@
 /area/survivalpod/superpose/SurvivalMedical)
 "J" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/box/masks,
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/masks,
+/obj/item/storage/box/gloves{
 	pixel_x = 4;
 	pixel_y = 4
 	},
@@ -347,7 +347,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /obj/structure/curtain,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalMedical)

@@ -17,6 +17,7 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
+      # Caches
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
@@ -24,7 +25,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/SpacemanDMM
-          key: ${{ runner.os }}-spacemandmm-${{ hashFiles('_dependencies.sh') }}
+          key: ${{ runner.os }}-spacemandmm-${{ hashFiles('dependencies.sh') }}
           restore-keys: |
             ${{ runner.os }}-spacemandmm-
       - name: Restore Yarn cache
@@ -38,7 +39,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.nvm
-          key: ${{ runner.os }}-node-${{ hashFiles('_dependencies.sh') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('dependencies.sh') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Restore Bootstrap cache
@@ -48,15 +49,24 @@ jobs:
           key: ${{ runner.os }}-bootstrap-${{ hashFiles('tools/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-bootstrap-
+      - name: Restore Rust cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo
+          key: ${{ runner.os }}-rust-${{ hashFiles('tools/ci/ci_dependencies.sh')}}
+          restore-keys: |
+            ${{ runner.os }}-rust-
       - name: Restore Cutter cache
         uses: actions/cache@v4
         with:
           path: tools/icon_cutter/cache
-          key: ${{ runner.os }}-cutter-${{ hashFiles('_dependencies.sh') }}
+          key: ${{ runner.os }}-cutter-${{ hashFiles('dependencies.sh') }}
+      # End Caches
       - name: Install Tools
         run: |
           pip3 install setuptools
           bash tools/ci/install_build_deps.sh
+          bash tools/ci/install_ripgrep.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
           tools/bootstrap/python -c ''
       - name: Run Tests
@@ -71,6 +81,10 @@ jobs:
   unit_tests:
     timeout-minutes: 30
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    strategy:
+      matrix:
+        map: ['southern_cross']
+    # name: Integration Tests (${{ matrix.map }})
     name: Integration Tests
     # needs: ['run_linters', 'dreamchecker']
     runs-on: ubuntu-22.04
@@ -98,15 +112,9 @@ jobs:
         env:
           TEST_DEFINE: "UNIT_TEST"
           TEST_FILE: "code/_unit_tests.dm"
+          MAP: ${{ matrix.map }}
+          REPLACE: true
           RUN: "1"
-      - name: Compile away missions
-        run: |
-          tools/ci/install_byond.sh
-          tools/ci/compile_and_run.sh
-        env:
-          TEST_DEFINE: "AWAY_MISSION_TEST"
-          TEST_FILE: "code/_away_mission_tests.dm"
-          RUN: "0"
       - name: Compile POIs
         run: |
           tools/ci/install_byond.sh
@@ -114,6 +122,18 @@ jobs:
         env:
           TEST_DEFINE: "MAP_TEST"
           TEST_FILE: "code/_map_tests.dm"
+          MAP: ${{ matrix.map }}
+          REPLACE: false
+          RUN: "0"
+      - name: Compile away missions
+        run: |
+          tools/ci/install_byond.sh
+          tools/ci/compile_and_run.sh
+        env:
+          TEST_DEFINE: "AWAY_MISSION_TEST"
+          TEST_FILE: "code/_away_mission_tests.dm"
+          MAP: ${{ matrix.map }}
+          REPLACE: false
           RUN: "0"
 
   tests_successful:

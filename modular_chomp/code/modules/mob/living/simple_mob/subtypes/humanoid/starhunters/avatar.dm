@@ -20,12 +20,12 @@
 	digestable = 0
 	devourable = 0
 	//note to self, expand the loot list later
-	loot_list = list(/obj/item/weapon/storage/belt/holding = 60,
+	loot_list = list(/obj/item/storage/belt/holding = 60,
 			/obj/item/clothing/glasses/omni = 60,
-			/obj/item/weapon/kinetic_crusher/glaive = 60,
+			/obj/item/kinetic_crusher/glaive = 60,
 			/obj/item/slime_extract/sepia = 60,
-			/obj/item/weapon/circuitboard/defenseonelisk = 60,
-			/obj/item/weapon/circuitboard/paradoxrift = 60,
+			/obj/item/circuitboard/defenseonelisk = 60,
+			/obj/item/circuitboard/paradoxrift = 60,
 			/obj/item/capture_crystal = 60
 			)
 

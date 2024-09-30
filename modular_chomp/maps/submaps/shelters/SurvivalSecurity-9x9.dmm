@@ -3,19 +3,19 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalSecurity)
 "b" = (
-/obj/item/device/tape/random,
-/obj/item/device/taperecorder,
+/obj/item/tape/random,
+/obj/item/taperecorder,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 7
 	},
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
+/obj/item/pen,
+/obj/item/pen,
 /obj/structure/table/survival_pod,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalSecurity)
@@ -90,7 +90,7 @@
 	pixel_x = 2;
 	pixel_y = 18
 	},
-/obj/item/weapon/storage/laundry_basket{
+/obj/item/storage/laundry_basket{
 	pixel_x = -1;
 	pixel_y = -7
 	},
@@ -227,7 +227,7 @@
 /area/survivalpod/superpose/SurvivalSecurity)
 "t" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/red,
+/obj/item/bedsheet/red,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalSecurity)
 "u" = (
@@ -378,7 +378,7 @@
 /area/survivalpod/superpose/SurvivalSecurity)
 "K" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/green,
+/obj/item/bedsheet/green,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalSecurity)
 "L" = (
@@ -435,83 +435,83 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalSecurity)
 "Q" = (
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},
 /obj/machinery/smartfridge/survival_pod{
 	pixel_y = 28
 	},
-/obj/item/device/reagent_scanner,
-/obj/item/device/mass_spectrometer/adv,
-/obj/item/weapon/forensics/sample_kit/powder,
-/obj/item/weapon/forensics/sample_kit,
+/obj/item/reagent_scanner,
+/obj/item/mass_spectrometer/adv,
+/obj/item/forensics/sample_kit/powder,
+/obj/item/forensics/sample_kit,
 /obj/item/clothing/gloves/sterile/latex,
-/obj/item/weapon/reagent_containers/spray/luminol,
-/obj/item/weapon/storage/briefcase/crimekit,
-/obj/item/weapon/storage/briefcase/crimekit,
-/obj/item/weapon/storage/box/bodybags,
-/obj/item/weapon/storage/box/bodybags,
-/obj/item/device/camera{
+/obj/item/reagent_containers/spray/luminol,
+/obj/item/storage/briefcase/crimekit,
+/obj/item/storage/briefcase/crimekit,
+/obj/item/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
+/obj/item/camera{
 	desc = "A one use - polaroid camera. 30 photos left.";
 	name = "detectives camera";
 	pictures_left = 30;
 	pixel_x = 2;
 	pixel_y = 3
 	},
-/obj/item/device/camera_film,
-/obj/item/weapon/storage/photo_album{
+/obj/item/camera_film,
+/obj/item/storage/photo_album{
 	pixel_y = -10
 	},
-/obj/item/device/flash,
-/obj/item/device/flash,
-/obj/item/device/flash,
+/obj/item/flash,
+/obj/item/flash,
+/obj/item/flash,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalSecurity)
 "S" = (
 /obj/structure/table/steel,
-/obj/item/device/starcaster_news{
+/obj/item/starcaster_news{
 	pixel_x = -6;
 	pixel_y = 10
 	},
@@ -538,8 +538,8 @@
 /area/survivalpod/superpose/SurvivalSecurity)
 "V" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/purple,
-/obj/item/device/gps/computer{
+/obj/item/bedsheet/purple,
+/obj/item/gps/computer{
 	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
@@ -567,9 +567,9 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalSecurity)
 "Z" = (
-/obj/item/weapon/newspaper,
-/obj/item/device/tape,
-/obj/item/device/taperecorder{
+/obj/item/newspaper,
+/obj/item/tape,
+/obj/item/taperecorder{
 	pixel_x = -4;
 	pixel_y = 2
 	},
@@ -577,8 +577,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalSecurity)
 

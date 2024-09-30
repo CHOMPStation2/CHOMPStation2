@@ -121,7 +121,7 @@
 	push_data()
 	activate_pin(2)
 
-/obj/item/device/electronic_assembly/drone
+/obj/item/electronic_assembly/drone
 	w_class = ITEMSIZE_NORMAL
 	max_components = IC_COMPONENTS_BASE * 6
 	max_complexity = IC_COMPLEXITY_BASE * 6

@@ -2,7 +2,7 @@
 // Uses 'white plush' inhand/onback sprites
 // Overrides the make_worn_icon to inject skin color setting on the sprite
 // without changing the color of the icon in the hand slot
-/obj/item/weapon/holder/micro/Initialize(mapload, mob/held)
+/obj/item/holder/micro/Initialize(mapload, mob/held)
 	. = ..()
 	var/mob/living/carbon/human/H = held_mob
 	if(istype(H) && H.species.get_bodytype() == SPECIES_TESHARI)
@@ -20,7 +20,7 @@
 		// Add back slot
 		slot_flags = SLOT_FEET | SLOT_HEAD | SLOT_ID | SLOT_BACK
 
-/obj/item/weapon/holder/micro/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer,var/icon/clip_mask = null)
+/obj/item/holder/micro/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer,var/icon/clip_mask = null)
 	var/mob/living/carbon/human/H = held_mob
 	// Only proceed if dealing with a tesh (or something shaped like a tesh)
 	if(istype(H) && H.species.get_bodytype() == SPECIES_TESHARI)

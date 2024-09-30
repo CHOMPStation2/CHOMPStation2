@@ -583,8 +583,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		data["soulcatcher"]["ext_hearing"] = host.soulgem.flag_check(NIF_SC_ALLOW_EARS)
 		data["soulcatcher"]["ext_vision"] = host.soulgem.flag_check(NIF_SC_ALLOW_EYES)
 		data["soulcatcher"]["mind_backups"] = host.soulgem.flag_check(NIF_SC_BACKUPS)
-		data["soulcatcher"]["ar_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
+		data["soulcatcher"]["sr_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
 		data["soulcatcher"]["show_vore_sfx"] = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
+		data["soulcatcher"]["see_sr_projecting"] = host.soulgem.flag_check(SOULGEM_SEE_SR_SOULS)
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
 		var/mob/living/H = host
@@ -2312,12 +2313,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.soulgem.toggle_setting(NIF_SC_BACKUPS)
 			unsaved_changes = TRUE
 			return TRUE
-		if("toggle_ar_projecting")
+		if("toggle_sr_projecting")
 			host.soulgem.toggle_setting(NIF_SC_PROJECTING)
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_vore_sfx")
 			host.soulgem.toggle_setting(SOULGEM_SHOW_VORE_SFX)
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_sr_vision")
+			host.soulgem.toggle_setting(SOULGEM_SEE_SR_SOULS)
 			unsaved_changes = TRUE
 			return TRUE
 		if("soulcatcher_rename")
@@ -2502,7 +2507,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		available_options += "Transform"
 		available_options += "Health Check"
 	//CHOMPEdit Begin - Add Reforming
-	if(isobserver(target) || istype(target,/obj/item/device/mmi))
+	if(isobserver(target) || istype(target,/obj/item/mmi))
 		available_options += "Reform"
 	//CHOMPEdit End
 	if(isliving(target))
@@ -2672,8 +2677,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							sm.icon_state = sm.icon_living
 					T.update_icon()
 					announce_ghost_joinleave(T.mind, 0, "They now occupy their body again.")
-			else if(istype(target,/obj/item/device/mmi)) // A good bit of repeated code, sure, but... cleanest way to do this.
-				var/obj/item/device/mmi/MMI = target
+			else if(istype(target,/obj/item/mmi)) // A good bit of repeated code, sure, but... cleanest way to do this.
+				var/obj/item/mmi/MMI = target
 				if(!ismob(MMI.body_backup) || !MMI.brainmob.mind || prevent_respawns.Find(MMI.brainmob.mind.name))
 					to_chat(user,"<span class='warning'>They don't seem to be reformable!</span>")
 					return TRUE
@@ -2698,10 +2703,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						R.mmi.brainmob.add_language("Robot Talk")
 					else //reference /datum/surgery_step/robotics/install_mmi/end_step
 						var/obj/item/organ/internal/mmi_holder/holder
-						if(istype(MMI, /obj/item/device/mmi/digital/posibrain))
+						if(istype(MMI, /obj/item/mmi/digital/posibrain))
 							var/obj/item/organ/internal/mmi_holder/posibrain/holdertmp = new(body_backup, 1)
 							holder = holdertmp
-						else if(istype(MMI, /obj/item/device/mmi/digital/robot))
+						else if(istype(MMI, /obj/item/mmi/digital/robot))
 							var/obj/item/organ/internal/mmi_holder/robot/holdertmp = new(body_backup, 1)
 							holder = holdertmp
 						else

@@ -3,7 +3,7 @@
 /obj/structure/table/steel,
 /obj/random/projectile,
 /obj/machinery/recharger,
-/obj/item/weapon/gun/projectile/automatic/fal,
+/obj/item/gun/projectile/automatic/fal,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
@@ -53,7 +53,7 @@
 "eH" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/medical,
-/obj/item/weapon/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
@@ -515,7 +515,7 @@
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "Yz" = (
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/bed/padded,
 /turf/simulated/floor/concrete,
