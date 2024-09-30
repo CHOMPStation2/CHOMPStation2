@@ -20,7 +20,7 @@
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
 #include "gateway/hiddeneclipse.dmm"
-#include "virtual_reality/constructVR.dmm"
+#include "modular_chomp/maps/virtual_reality/constructVR.dmm"
 #endif
 
 
@@ -88,14 +88,15 @@
 
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
+//#include "modular_chomp/maps/virtual_reality/constructVR.dm" Included in .dme
 /datum/map_template/sc_lateload/vr_world
 	name = "VR World"
 	desc = "A dynamic, virtual world."
-	mappath = 'virtual_reality/constructVR.dmm'
+	mappath = 'modular_chomp/maps/virtual_reality/constructVR.dmm' //Use modular
 	associated_map_datum = /datum/map_z_level/sc_lateload/vr_world
 
 /datum/map_z_level/sc_lateload/vr_world
-	name = "Away Mission - Fuel Depot"
+	name = "VR World"
 	z = Z_LEVEL_VR_REALM
 
 /datum/map_template/sc_lateload/thor
