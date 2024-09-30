@@ -119,4 +119,6 @@ export type Belly = {
 
   absorbchance: number;
   digestchance: number;
+
+  belchchance: number;
 };
