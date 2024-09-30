@@ -17,9 +17,9 @@
 	attack_edge = 1
 
 	meat_amount = 3
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/ant
+	meat_type = /obj/item/reagent_containers/food/snacks/ant
 
-	tame_items = list(/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 20)
+	tame_items = list(/obj/item/reagent_containers/food/snacks/crabmeat = 20)
 
 	faction = FACTION_TYR_ANT
 
@@ -207,7 +207,7 @@ ANT STRUCTURES
 	density = FALSE
 	var/health = 15 //1 thwack with sword, 2 with spear
 
-/obj/effect/ant_structure/attackby(var/obj/item/weapon/W, var/mob/user)
+/obj/effect/ant_structure/attackby(var/obj/item/W, var/mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
 
 	if(LAZYLEN(W.attack_verb))
@@ -218,7 +218,7 @@ ANT STRUCTURES
 	var/damage = W.force / 4.0
 
 	if(W.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/WT = W.get_welder()
+		var/obj/item/weldingtool/WT = W.get_welder()
 
 		if(WT.remove_fuel(0, user))
 			damage = 15

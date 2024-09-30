@@ -50,14 +50,14 @@
 	singular_name = "weathered agate"
 	default_type = "weathered agate"
 
-/obj/item/weapon/reagent_containers/food/snacks/weatherlily
+/obj/item/reagent_containers/food/snacks/weatherlily
 	name = "strange leaves"
 	desc = "A strange flower producing an odd substance."
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
 	icon_state = "leaves"
 	bitesize = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/weatherlily/Initialize()
+/obj/item/reagent_containers/food/snacks/weatherlily/Initialize()
 	. = ..()
 	//reagents.add_reagent("amatoxin", 1) I want this for lore of this being a strange bioenginered thing to mess with organic things buuuut it's one of two food sources
 	reagents.add_reagent("luminol",1)
@@ -84,8 +84,8 @@
 
 	randomize_size = TRUE
 
-	removal_tool = /obj/item/weapon/shovel
-	harvest_tool = /obj/item/weapon/material/knife
+	removal_tool = /obj/item/shovel
+	harvest_tool = /obj/item/material/knife
 	harvest_count = 0
 	destroy_on_harvest = FALSE
 	randomize_harvest_count = FALSE
@@ -102,7 +102,7 @@
 	name = "flora"
 	desc = "A strange plant."
 	icon_state = "lilly"
-	harvest_loot = list(/obj/item/weapon/reagent_containers/food/snacks/weatherlily = 1)
+	harvest_loot = list(/obj/item/reagent_containers/food/snacks/weatherlily = 1)
 
 /obj/structure/flora/tyr/flowers
 	name = "flora"
@@ -114,7 +114,7 @@
 	icon_state = "tyrflora[rand(1, 5)]gb"
 
 //tier 2
-/obj/item/weapon/reagent_containers/food/snacks/ant
+/obj/item/reagent_containers/food/snacks/ant
 	name = "ant meat"
 	desc = "A slice from a strange beast"
 	icon_state = "meat"
@@ -124,7 +124,7 @@
 	nutriment_desc = list("protein" = 4)
 	bitesize = 2
 
-/obj/item/weapon/reagent_containers/food/snacks/mutatedmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/mutatedmeat/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 4)
 
@@ -151,7 +151,7 @@
 	origin_tech[TECH_PRECURSOR] = rand(0,3)
 
 /* Yoinked for refrence
-/obj/item/weapon/arrow/standard
+/obj/item/arrow/standard
 	name = "arrow"
 	desc = "It's got a tip for you - get the point?"
 	icon = 'icons/obj/guns/projectile/bows.dmi'
@@ -171,7 +171,7 @@
 //spear gets reach
 //sword middling damage
 //Tier 1 gear
-/obj/item/weapon/melee/agate_spear
+/obj/item/melee/agate_spear
 	name = "makeshift spear"
 	desc = "A spear made from strange wood and gemstones"
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
@@ -183,7 +183,7 @@
 		slot_r_hand_str = 'modular_chomp/icons/mob/items/righthand_melee.dmi',
 		)*/
 
-/obj/item/weapon/melee/agate_sword
+/obj/item/melee/agate_sword
 	name = "makeshift sword"
 	desc = "A sword made from strange wood and gemstones"
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
@@ -194,7 +194,7 @@
 		)*/
 	force = 15
 
-/obj/item/weapon/melee/agate_hammer
+/obj/item/melee/agate_hammer
 	name = "makeshift hammer"
 	desc = "A hammer made from strange wood and gemstones"
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
@@ -229,23 +229,23 @@
 
 
 //Blizzard
-/obj/item/weapon/tool/wirecutters/hybrid/alien
+/obj/item/tool/wirecutters/hybrid/alien
 	toolspeed = 0.2
 
-/obj/item/weapon/tool/wrench/hybrid/alien
+/obj/item/tool/wrench/hybrid/alien
 	toolspeed = 0.2
 
-/obj/item/weapon/tool/crowbar/hybrid/alien
+/obj/item/tool/crowbar/hybrid/alien
 	toolspeed = 0.2
 
-/obj/item/weapon/tool/screwdriver/hybrid/alien
+/obj/item/tool/screwdriver/hybrid/alien
 	toolspeed = 0.2
 
-/obj/item/weapon/weldingtool/experimental/hybrid/alien
+/obj/item/weldingtool/experimental/hybrid/alien
 	eye_safety_modifier = 0
 
 //Rad Storm
-/obj/item/weapon/pickaxe/diamonddrill/alien
+/obj/item/pickaxe/diamonddrill/alien
 	name = "strane mining drill"
 	icon_state = "diamonddrill"
 	item_state = "jackhammer"
@@ -255,7 +255,7 @@
 	color = "#FF3300"
 
 //Blood Moon
-/obj/item/weapon/melee/energy/sword/dualsaber
+/obj/item/melee/energy/sword/dualsaber
 	name = "dual energy sword"
 	desc = "May the force be within you."
 	active_force = 40

@@ -60,7 +60,7 @@
 	hud_state = "laser"
 	hud_state_empty = "battery_empty"
 
-/obj/item/weapon/gun/energy/energyballchain
+/obj/item/gun/energy/energyballchain
 	name = "remade prototype weapon"
 	desc = "A weapon created from strange alien junk and blueprints"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
@@ -72,8 +72,8 @@
 	charge_cost = 5000 //Uses all it's charge in a single shot.
 	battery_lock = 1 //No changing
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon/recharge/alien
 	projectile_type = /obj/item/projectile/energy/spikeenergy_ball
 
 	force = 30 //functions as a melee weapon too! Ain't great, but still works.
@@ -84,7 +84,7 @@
 	move_delay = 0
 	one_handed_penalty = 50
 
-/obj/item/weapon/gun/energy/curse_tyrshotgun
+/obj/item/gun/energy/curse_tyrshotgun
 	name = "remade prototype weapon"
 	desc = "A weapon created from strange alien junk and blueprints"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
@@ -96,8 +96,8 @@
 	charge_cost = 1000 //Five shots
 	battery_lock = 1 //No changing
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon/recharge/alien
 	projectile_type = /obj/item/projectile/energy/wp_shotgun
 
 	recoil_mode = 0
@@ -106,7 +106,7 @@
 	move_delay = 0
 	one_handed_penalty = 50
 
-/obj/item/weapon/gun/energy/curse_blaster
+/obj/item/gun/energy/curse_blaster
 	name = "remade prototype weapon"
 	desc = "A weapon created from strange alien junk and blueprints"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
@@ -118,8 +118,8 @@
 	charge_cost = 250
 	battery_lock = 1 //No changing
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon/recharge/alien
 	projectile_type = /obj/item/projectile/energy/wp_blaster
 
 	recoil_mode = 0
@@ -128,7 +128,7 @@
 	move_delay = 0
 	one_handed_penalty = 50
 
-/obj/item/weapon/gun/energy/curse_lasershooter
+/obj/item/gun/energy/curse_lasershooter
 	name = "remade prototype weapon"
 	desc = "A weapon created from strange alien junk and blueprints"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
@@ -139,8 +139,8 @@
 	charge_cost = 250 //twenty shots
 	battery_lock = 1 //No changing
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon/recharge/alien
 	projectile_type = /obj/item/projectile/beam/precursor_tyr
 
 	recoil_mode = 0
