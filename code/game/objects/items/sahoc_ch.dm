@@ -1,4 +1,4 @@
-/obj/item/device/buttonofnormal
+/obj/item/buttonofnormal
 	name = "Chaos button"
 	desc = "It radiates an aura of chaotic size energy."
 	icon = 'icons/obj/mobcap.dmi'
@@ -12,18 +12,18 @@
 	var/mob/living/capsuleowner = null //taken from Capsule Code
 	var/sizetouse = 0.25
 
-/obj/item/device/buttonofnormal/pickup(mob/user)
+/obj/item/buttonofnormal/pickup(mob/user)
 	if(!capsuleowner)
 		capsuleowner = user
 
-/obj/item/device/buttonofnormal/attack_self(mob/user)
+/obj/item/buttonofnormal/attack_self(mob/user)
 	if(colorindex)
 		nonrandom()
 	sleep(10)
 	capsuleowner.resize(sizetouse)
 	sizetouse = rand(25,200)/100 //randmization occurs after press
 
-/obj/item/device/buttonofnormal/throw_impact(atom/A, speed, mob/user)
+/obj/item/buttonofnormal/throw_impact(atom/A, speed, mob/user)
 	..()
 	if(isliving(A))
 		if(colorindex)
@@ -33,16 +33,16 @@
 		capsulehit.resize(sizetouse)
 		sizetouse = rand(25,200)/100 //randmization occurs after press
 
-/obj/item/device/buttonofnormal/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/pen))
+/obj/item/buttonofnormal/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/pen))
 		colorindex = (colorindex + 1) % 6
 		icon_state = "mobcap[colorindex]"
 		update_icon()
-	if(istype(W, /obj/item/weapon/card/id))
+	if(istype(W, /obj/item/card/id))
 		capsuleowner = null
 	..()
 
-/obj/item/device/buttonofnormal/proc/nonrandom() //Secret ball randmoizer rig code
+/obj/item/buttonofnormal/proc/nonrandom() //Secret ball randmoizer rig code
 	switch(colorindex)
 		if(1)	sizetouse = RESIZE_HUGE
 		if(2)	sizetouse = RESIZE_BIG
@@ -50,7 +50,7 @@
 		if(4)	sizetouse = RESIZE_SMALL
 		if(5)	sizetouse = RESIZE_TINY
 
-/obj/item/device/daredevice
+/obj/item/daredevice
 	name = "Dare button"
 	desc = "A strange button, the only distinguishing feature being an engraved text reading 'Suffer to Gain.'."
 	icon = 'icons/obj/mobcap.dmi'
@@ -64,13 +64,13 @@
 	var/colorindex = 1
 
 	var/list/winitems = list(
-				/obj/item/weapon/reagent_containers/food/snacks/sugarcookie,
-				/obj/item/weapon/spacecasinocash,
-				/obj/item/weapon/reagent_containers/syringe/drugs,
+				/obj/item/reagent_containers/food/snacks/sugarcookie,
+				/obj/item/spacecasinocash,
+				/obj/item/reagent_containers/syringe/drugs,
 	)
 
-/obj/item/device/daredevice/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/pen))
+/obj/item/daredevice/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/pen))
 		colorindex += 1
 		if(colorindex >= 6)
 			colorindex = 0
@@ -78,7 +78,7 @@
 		update_icon()
 	..()
 
-/obj/item/device/daredevice/attack_self(mob/user)
+/obj/item/daredevice/attack_self(mob/user)
 	var/mob/living/capsuleowner = user
 	playsound(src, 'sound/effects/splat.ogg', 30, 1)
 	var/item = pick(winitems)
@@ -90,12 +90,12 @@
 		if(4)	capsuleowner.hallucination += 66 //loss woah, dude.
 		if(5)	new	item(capsuleowner.loc) //Win!
 		if(7)
-			new	/obj/item/weapon/material/butterfly/switchblade(capsuleowner.loc)
+			new	/obj/item/material/butterfly/switchblade(capsuleowner.loc)
 			capsuleowner.apply_damage(10, BRUTE) //Loss Damaging! WIN KNIVE!
 		if(9)
-			new	/obj/item/weapon/gun/energy/sizegun/not_advanced(capsuleowner.loc)
+			new	/obj/item/gun/energy/sizegun/not_advanced(capsuleowner.loc)
 			qdel(src)
-		if(777)	new	/obj/item/weapon/spacecash/c1000(capsuleowner.loc) //for rigging
+		if(777)	new	/obj/item/spacecash/c1000(capsuleowner.loc) //for rigging
 		else luckynumber7 = (rand(0,10))
 	luckynumber7 = rand(0,10)
 	sleep(100)
@@ -106,7 +106,7 @@
 //
 //BADvanced size gun
 //
-/obj/item/weapon/gun/energy/sizegun/not_advanced
+/obj/item/gun/energy/sizegun/not_advanced
 	name = "\improper corrupted size gun"	// CHOMPedit Adds \improper
 	desc = "A highly advanced ray gun with a knob on the side to adjust the size you desire. Or at least that's what it used to be."
 	projectile_type = /obj/item/projectile/beam/sizelaser/chaos

@@ -132,7 +132,7 @@
 /turf/simulated/floor/lino,
 /area/awaymission/carpfarm/base)
 "az" = (
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /obj/structure/cable,
 /obj/machinery/power/apc{
 	alarms_hidden = 1;
@@ -165,7 +165,7 @@
 /turf/space,
 /area/space)
 "aE" = (
-/obj/item/weapon/paper/awaygate/carpfarm/suicide,
+/obj/item/paper/awaygate/carpfarm/suicide,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/carpfarm/base)
 "aF" = (
@@ -178,7 +178,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/carpfarm/base)
 "aH" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed/padded,
 /turf/simulated/floor/lino,
 /area/awaymission/carpfarm/base)
@@ -190,8 +190,8 @@
 /obj/item/clothing/suit/space/void/mining,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/head/helmet/space/void/mining,
-/obj/item/weapon/mining_scanner,
-/obj/item/weapon/tank/jetpack/oxygen,
+/obj/item/mining_scanner,
+/obj/item/tank/jetpack/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/awaymission/carpfarm/base)
@@ -200,9 +200,9 @@
 /area/awaymission/carpfarm/base)
 "aL" = (
 /obj/structure/closet/toolcloset,
-/obj/item/weapon/pickaxe/jackhammer,
+/obj/item/pickaxe/jackhammer,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/plating,
 /area/awaymission/carpfarm/base)
 "aM" = (
@@ -338,9 +338,9 @@
 	dir = 8
 	},
 /obj/structure/closet/crate/internals,
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
@@ -367,7 +367,7 @@
 /area/awaymission/carpfarm/base)
 "br" = (
 /obj/item/mecha_parts/mecha_equipment/tool/drill,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/awaymission/carpfarm/base)
@@ -444,9 +444,9 @@
 /area/awaymission/carpfarm/base)
 "bD" = (
 /obj/structure/closet/crate/internals,
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
@@ -556,13 +556,13 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/carpfarm/base)
 "bS" = (
-/obj/item/weapon/reagent_containers/food/snacks/cubancarp,
+/obj/item/reagent_containers/food/snacks/cubancarp,
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled,
 /area/awaymission/carpfarm/base)
 "bT" = (
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
+/obj/item/reagent_containers/food/snacks/carpmeat,
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled,
@@ -611,7 +611,7 @@
 /area/awaymission/carpfarm/base)
 "bX" = (
 /obj/structure/closet/emcloset,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /obj/machinery/airlock_sensor{
 	frequency = 1375;
 	id_tag = "carp_sensor";
@@ -711,7 +711,7 @@
 "cm" = (
 /obj/structure/closet/crate/secure/weapon,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/weapon/gun/projectile/automatic/serdy/mosin,
+/obj/item/gun/projectile/automatic/serdy/mosin,
 /turf/simulated/floor/airless,
 /area/awaymission/carpfarm/base)
 "cn" = (
@@ -808,7 +808,7 @@
 /area/awaymission/carpfarm/hostilebase)
 "fX" = (
 /obj/structure/lattice,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/space,
@@ -905,7 +905,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/carpfarm/hostilebase)
 "pT" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/space,
 /area/space)
 "qR" = (
@@ -938,7 +938,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/carpfarm/hostilebase)
 "sL" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/space,
@@ -951,7 +951,7 @@
 /area/awaymission/carpfarm/hostilebase)
 "to" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/projectile/automatic/serdy/hectate,
+/obj/item/gun/projectile/automatic/serdy/hectate,
 /obj/item/ammo_magazine/hectate/ap,
 /obj/item/ammo_magazine/hectate/ap,
 /obj/item/ammo_magazine/hectate,
@@ -1003,7 +1003,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/carpfarm/hostilebase)
 "wc" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/tiled/airless,
@@ -1192,8 +1192,8 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/carpfarm/hostilebase)
 "KQ" = (
-/obj/item/device/multitool,
-/obj/item/device/multitool,
+/obj/item/multitool,
+/obj/item/multitool,
 /obj/structure/table/rack,
 /turf/simulated/floor/plating,
 /area/awaymission/carpfarm/hostilebase)
@@ -1220,7 +1220,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/space)
 "No" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/airless,

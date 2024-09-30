@@ -67,24 +67,24 @@
 	item_list = list()
 	//CHOMPEdit Start
 	item_list["Weapons"] = list(
-		CASINO_PRIZE("Scepter", /obj/item/weapon/scepter, 1, 500, "weapons"),
-		CASINO_PRIZE("Chain of Command", /obj/item/weapon/melee/chainofcommand, 1, 250, "weapons"),
-		CASINO_PRIZE("Size Gun", /obj/item/weapon/gun/energy/sizegun, 1, 100, "weapons"),
-		CASINO_PRIZE("Advanced Particle Rifle", /obj/item/weapon/gun/energy/particle/advanced, 1, 500, "weapons"),
-		CASINO_PRIZE("Temperature Gun", /obj/item/weapon/gun/energy/temperature, 1, 250, "weapons"),
-		CASINO_PRIZE("Alien Pistol", /obj/item/weapon/gun/energy/alien, 1, 1000, "weapons"),
-		CASINO_PRIZE("Floral Gun", /obj/item/weapon/gun/energy/floragun, 1, 250, "weapons"),
-		CASINO_PRIZE("Net Gun", /obj/item/weapon/gun/energy/netgun, 1, 500, "weapons"),
+		CASINO_PRIZE("Scepter", /obj/item/scepter, 1, 500, "weapons"),
+		CASINO_PRIZE("Chain of Command", /obj/item/melee/chainofcommand, 1, 250, "weapons"),
+		CASINO_PRIZE("Size Gun", /obj/item/gun/energy/sizegun, 1, 100, "weapons"),
+		CASINO_PRIZE("Advanced Particle Rifle", /obj/item/gun/energy/particle/advanced, 1, 500, "weapons"),
+		CASINO_PRIZE("Temperature Gun", /obj/item/gun/energy/temperature, 1, 250, "weapons"),
+		CASINO_PRIZE("Alien Pistol", /obj/item/gun/energy/alien, 1, 1000, "weapons"),
+		CASINO_PRIZE("Floral Gun", /obj/item/gun/energy/floragun, 1, 250, "weapons"),
+		CASINO_PRIZE("Net Gun", /obj/item/gun/energy/netgun, 1, 500, "weapons"),
 	)
 	item_list["Gear"] = list(
-		CASINO_PRIZE("Experimental Welder", /obj/item/weapon/weldingtool/experimental, 1, 500, "gear"),
-		CASINO_PRIZE("Alien Belt", /obj/item/weapon/storage/belt/utility/alien, 1, 500, "gear"),
+		CASINO_PRIZE("Experimental Welder", /obj/item/weldingtool/experimental, 1, 500, "gear"),
+		CASINO_PRIZE("Alien Belt", /obj/item/storage/belt/utility/alien, 1, 500, "gear"),
 		CASINO_PRIZE("Alien Armor", /obj/item/clothing/suit/armor/alien, 1, 1000, "gear"),
 		CASINO_PRIZE("Monocoole", /obj/item/clothing/glasses/monocoole, 1, 1000, "gear"),
 		CASINO_PRIZE("Chameleon Tie", /obj/item/clothing/accessory/chameleon, 1, 250, "gear"),
-		CASINO_PRIZE("Chemsprayer", /obj/item/weapon/reagent_containers/spray/chemsprayer, 1, 250, "gear"),
-		CASINO_PRIZE("Bluespace Beaker", /obj/item/weapon/reagent_containers/glass/beaker/bluespace, 1, 200, "gear"),
-		CASINO_PRIZE("Cryo Beaker", /obj/item/weapon/reagent_containers/glass/beaker/noreact, 1, 200, "gear"),
+		CASINO_PRIZE("Chemsprayer", /obj/item/reagent_containers/spray/chemsprayer, 1, 250, "gear"),
+		CASINO_PRIZE("Bluespace Beaker", /obj/item/reagent_containers/glass/beaker/bluespace, 1, 200, "gear"),
+		CASINO_PRIZE("Cryo Beaker", /obj/item/reagent_containers/glass/beaker/noreact, 1, 200, "gear"),
 	)
 	item_list["Clothing"] = list(
 		CASINO_PRIZE("Purple cap", /obj/item/clothing/head/soft/purple/wah, 1, 50, "clothing"),
@@ -99,34 +99,34 @@
 		CASINO_PRIZE("Chameleon mask", /obj/item/clothing/under/chameleon, 1, 250, "clothing"),
 		CASINO_PRIZE("Ian costume", /obj/item/clothing/suit/storage/hooded/costume/ian, 1, 50, "clothing"),
 		CASINO_PRIZE("Carp costume", /obj/item/clothing/suit/storage/hooded/costume/carp, 1, 50, "clothing"),
-		CASINO_PRIZE("White bunnygirl outfit", /obj/item/weapon/storage/box/casino/costume_whitebunny, 1, 100, "clothing"),
-		CASINO_PRIZE("Black bunnygirl outfit", /obj/item/weapon/storage/box/casino/costume_blackbunny, 1, 100, "clothing"),
-		CASINO_PRIZE("Sexy mime costume", /obj/item/weapon/storage/box/casino/costume_sexymime, 1, 100, "clothing"),
-		CASINO_PRIZE("Sexy clown costume", /obj/item/weapon/storage/box/casino/costume_sexyclown, 1, 100, "clothing"),
-		CASINO_PRIZE("Catgirl costume", /obj/item/weapon/storage/box/casino/costume_nyangirl, 1, 100, "clothing"),
-		CASINO_PRIZE("Wizard costume", /obj/item/weapon/storage/box/casino/costume_wizard, 1, 100, "clothing"),
-		CASINO_PRIZE("Chicken costume", /obj/item/weapon/storage/box/casino/costume_chicken, 1, 100, "clothing"),
-		CASINO_PRIZE("Gladiator costume", /obj/item/weapon/storage/box/casino/costume_gladiator, 1, 100, "clothing"),
-		CASINO_PRIZE("Pirate costume", /obj/item/weapon/storage/box/casino/costume_pirate, 1, 100, "clothing"),
-		CASINO_PRIZE("Commie costume", /obj/item/weapon/storage/box/casino/costume_commie, 1, 100, "clothing"),
-		CASINO_PRIZE("Imperium monk costume", /obj/item/weapon/storage/box/casino/costume_imperiummonk, 1, 100, "clothing"),
-		CASINO_PRIZE("Plague doctor costume", /obj/item/weapon/storage/box/casino/costume_plaguedoctor, 1, 100, "clothing"),
-		CASINO_PRIZE("Witch costume", /obj/item/weapon/storage/box/casino/costume_cutewitch, 1, 100, "clothing"),
+		CASINO_PRIZE("White bunnygirl outfit", /obj/item/storage/box/casino/costume_whitebunny, 1, 100, "clothing"),
+		CASINO_PRIZE("Black bunnygirl outfit", /obj/item/storage/box/casino/costume_blackbunny, 1, 100, "clothing"),
+		CASINO_PRIZE("Sexy mime costume", /obj/item/storage/box/casino/costume_sexymime, 1, 100, "clothing"),
+		CASINO_PRIZE("Sexy clown costume", /obj/item/storage/box/casino/costume_sexyclown, 1, 100, "clothing"),
+		CASINO_PRIZE("Catgirl costume", /obj/item/storage/box/casino/costume_nyangirl, 1, 100, "clothing"),
+		CASINO_PRIZE("Wizard costume", /obj/item/storage/box/casino/costume_wizard, 1, 100, "clothing"),
+		CASINO_PRIZE("Chicken costume", /obj/item/storage/box/casino/costume_chicken, 1, 100, "clothing"),
+		CASINO_PRIZE("Gladiator costume", /obj/item/storage/box/casino/costume_gladiator, 1, 100, "clothing"),
+		CASINO_PRIZE("Pirate costume", /obj/item/storage/box/casino/costume_pirate, 1, 100, "clothing"),
+		CASINO_PRIZE("Commie costume", /obj/item/storage/box/casino/costume_commie, 1, 100, "clothing"),
+		CASINO_PRIZE("Imperium monk costume", /obj/item/storage/box/casino/costume_imperiummonk, 1, 100, "clothing"),
+		CASINO_PRIZE("Plague doctor costume", /obj/item/storage/box/casino/costume_plaguedoctor, 1, 100, "clothing"),
+		CASINO_PRIZE("Witch costume", /obj/item/storage/box/casino/costume_cutewitch, 1, 100, "clothing"),
 	)
 	item_list["Miscellaneous"] = list(
 		CASINO_PRIZE("Toy sword", /obj/item/toy/sword, 1, 50, "misc"),
-		CASINO_PRIZE("Waterflower", /obj/item/weapon/reagent_containers/spray/waterflower, 1, 50, "misc"),
+		CASINO_PRIZE("Waterflower", /obj/item/reagent_containers/spray/waterflower, 1, 50, "misc"),
 		CASINO_PRIZE("Horse stick", /obj/item/toy/stickhorse, 1, 50, "misc"),
 		CASINO_PRIZE("katana", /obj/item/toy/katana, 1, 50, "misc"),
 		CASINO_PRIZE("Conch", /obj/item/toy/eight_ball/conch, 1, 50, "misc"),
 		CASINO_PRIZE("Eight ball", /obj/item/toy/eight_ball, 1, 50, "misc"),
-		CASINO_PRIZE("Foam sword", /obj/item/weapon/material/sword/foam, 1, 50, "misc"),
-		CASINO_PRIZE("Foam crossbow", /obj/item/weapon/storage/box/casino/foamcrossbow, 1, 50, "misc"),
+		CASINO_PRIZE("Foam sword", /obj/item/material/sword/foam, 1, 50, "misc"),
+		CASINO_PRIZE("Foam crossbow", /obj/item/storage/box/casino/foamcrossbow, 1, 50, "misc"),
 		CASINO_PRIZE("Whistle", /obj/item/toy/bosunwhistle, 1, 50, "misc"),
-		CASINO_PRIZE("Golden cup", /obj/item/weapon/reagent_containers/food/drinks/golden_cup, 1, 50, "misc"),
-		CASINO_PRIZE("Quality cigars", /obj/item/weapon/storage/fancy/cigar/havana, 1, 50, "misc"),
-		CASINO_PRIZE("Casino wallet (kept after event)", /obj/item/weapon/storage/wallet/casino, 1, 50, "misc"),
-		CASINO_PRIZE("Casino cards", /obj/item/weapon/deck/cards/casino, 1, 50, "misc"),
+		CASINO_PRIZE("Golden cup", /obj/item/reagent_containers/food/drinks/golden_cup, 1, 50, "misc"),
+		CASINO_PRIZE("Quality cigars", /obj/item/storage/fancy/cigar/havana, 1, 50, "misc"),
+		CASINO_PRIZE("Casino wallet (kept after event)", /obj/item/storage/wallet/casino, 1, 50, "misc"),
+		CASINO_PRIZE("Casino cards", /obj/item/deck/cards/casino, 1, 50, "misc"),
 		CASINO_PRIZE("Casino Sentient Prize Collar", /obj/item/clothing/accessory/collar/holo/casinoslave_fake, 1, 50, "misc"),
 		CASINO_PRIZE("Instrument: Accordion", /obj/item/instrument/accordion, 1, 100, "misc"),
 		CASINO_PRIZE("Instrument: Banjo", /obj/item/instrument/banjo, 1, 100, "misc"),
@@ -150,83 +150,83 @@
 		CASINO_PRIZE("Instrument: Musical Moth (you monster)", /obj/item/instrument/musicalmoth, 1, 100, "misc"),
 	)
 	item_list["Drinks"] = list(
-		CASINO_PRIZE("Redeemer's brew", /obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew, 1, 50, "drinks"),
-		CASINO_PRIZE("Poison wine", /obj/item/weapon/reagent_containers/food/drinks/bottle/pwine, 1, 50, "drinks"),
-		CASINO_PRIZE("Patron", /obj/item/weapon/reagent_containers/food/drinks/bottle/patron, 1, 50, "drinks"),
-		CASINO_PRIZE("Holy water", /obj/item/weapon/reagent_containers/food/drinks/bottle/holywater, 1, 50, "drinks"),
-		CASINO_PRIZE("Goldschlager", /obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager, 1, 50, "drinks"),
-		CASINO_PRIZE("Champagne", /obj/item/weapon/reagent_containers/food/drinks/bottle/champagne, 1, 50, "drinks"),
-		CASINO_PRIZE("Bottle of Nothing", /obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing, 1, 50, "drinks"),
-		CASINO_PRIZE("Whiskey bliss", /obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey, 1, 50, "drinks"),
-		CASINO_PRIZE("Snaps", /obj/item/weapon/reagent_containers/food/drinks/bottle/snaps, 1, 50, "drinks"),
+		CASINO_PRIZE("Redeemer's brew", /obj/item/reagent_containers/food/drinks/bottle/redeemersbrew, 1, 50, "drinks"),
+		CASINO_PRIZE("Poison wine", /obj/item/reagent_containers/food/drinks/bottle/pwine, 1, 50, "drinks"),
+		CASINO_PRIZE("Patron", /obj/item/reagent_containers/food/drinks/bottle/patron, 1, 50, "drinks"),
+		CASINO_PRIZE("Holy water", /obj/item/reagent_containers/food/drinks/bottle/holywater, 1, 50, "drinks"),
+		CASINO_PRIZE("Goldschlager", /obj/item/reagent_containers/food/drinks/bottle/goldschlager, 1, 50, "drinks"),
+		CASINO_PRIZE("Champagne", /obj/item/reagent_containers/food/drinks/bottle/champagne, 1, 50, "drinks"),
+		CASINO_PRIZE("Bottle of Nothing", /obj/item/reagent_containers/food/drinks/bottle/bottleofnothing, 1, 50, "drinks"),
+		CASINO_PRIZE("Whiskey bliss", /obj/item/reagent_containers/food/drinks/bottle/specialwhiskey, 1, 50, "drinks"),
+		CASINO_PRIZE("Snaps", /obj/item/reagent_containers/food/drinks/bottle/snaps, 1, 50, "drinks"),
 	)
 	item_list["Pets"] = list(
-		CASINO_PRIZE("Casino Geese", /obj/item/weapon/grenade/spawnergrenade/casino, 1, 200, "pets"),
-		CASINO_PRIZE("Goat", /obj/item/weapon/grenade/spawnergrenade/casino/goat, 1, 150, "pets"),
-		CASINO_PRIZE("Armadillo", /obj/item/weapon/grenade/spawnergrenade/casino/armadillo, 1, 150, "pets"),
-		CASINO_PRIZE("Cat", /obj/item/weapon/grenade/spawnergrenade/casino/cat, 1, 150, "pets"),
-		CASINO_PRIZE("Chicken", /obj/item/weapon/grenade/spawnergrenade/casino/chicken, 1, 200, "pets"),
-		CASINO_PRIZE("Cow", /obj/item/weapon/grenade/spawnergrenade/casino/cow, 1, 200, "pets"),
-		CASINO_PRIZE("Corgi", /obj/item/weapon/grenade/spawnergrenade/casino/corgi, 1, 200, "pets"),
-		CASINO_PRIZE("Fox", /obj/item/weapon/grenade/spawnergrenade/casino/fox, 1, 150, "pets"),
-		CASINO_PRIZE("Lizard", /obj/item/weapon/grenade/spawnergrenade/casino/lizard, 1, 150, "pets"),
-		CASINO_PRIZE("Penguin", /obj/item/weapon/grenade/spawnergrenade/casino/penguin, 1, 150, "pets"),
-		CASINO_PRIZE("Snake", /obj/item/weapon/grenade/spawnergrenade/casino/snake, 1, 200, "pets"),
-		CASINO_PRIZE("Yithian", /obj/item/weapon/grenade/spawnergrenade/casino/yithian, 1, 200, "pets"),
-		CASINO_PRIZE("Tindalos", /obj/item/weapon/grenade/spawnergrenade/casino/tindalos, 1, 200, "pets"),
-		CASINO_PRIZE("Fennec", /obj/item/weapon/grenade/spawnergrenade/casino/fennec, 1, 300, "pets"),
-		CASINO_PRIZE("Red panda", /obj/item/weapon/grenade/spawnergrenade/casino/redpanda, 1, 300, "pets"),
-		CASINO_PRIZE("Horse", /obj/item/weapon/grenade/spawnergrenade/casino/horse, 1, 300, "pets"),
-		CASINO_PRIZE("Otie", /obj/item/weapon/grenade/spawnergrenade/casino/otie, 1, 500, "pets"),
-		CASINO_PRIZE("Absolute unit of an Otie", /obj/item/weapon/grenade/spawnergrenade/casino/otie/chubby, 1, 500, "pets"),
-		CASINO_PRIZE("Zorgoia", /obj/item/weapon/grenade/spawnergrenade/casino/zorgoia, 1, 500, "pets"),
+		CASINO_PRIZE("Casino Geese", /obj/item/grenade/spawnergrenade/casino, 1, 200, "pets"),
+		CASINO_PRIZE("Goat", /obj/item/grenade/spawnergrenade/casino/goat, 1, 150, "pets"),
+		CASINO_PRIZE("Armadillo", /obj/item/grenade/spawnergrenade/casino/armadillo, 1, 150, "pets"),
+		CASINO_PRIZE("Cat", /obj/item/grenade/spawnergrenade/casino/cat, 1, 150, "pets"),
+		CASINO_PRIZE("Chicken", /obj/item/grenade/spawnergrenade/casino/chicken, 1, 200, "pets"),
+		CASINO_PRIZE("Cow", /obj/item/grenade/spawnergrenade/casino/cow, 1, 200, "pets"),
+		CASINO_PRIZE("Corgi", /obj/item/grenade/spawnergrenade/casino/corgi, 1, 200, "pets"),
+		CASINO_PRIZE("Fox", /obj/item/grenade/spawnergrenade/casino/fox, 1, 150, "pets"),
+		CASINO_PRIZE("Lizard", /obj/item/grenade/spawnergrenade/casino/lizard, 1, 150, "pets"),
+		CASINO_PRIZE("Penguin", /obj/item/grenade/spawnergrenade/casino/penguin, 1, 150, "pets"),
+		CASINO_PRIZE("Snake", /obj/item/grenade/spawnergrenade/casino/snake, 1, 200, "pets"),
+		CASINO_PRIZE("Yithian", /obj/item/grenade/spawnergrenade/casino/yithian, 1, 200, "pets"),
+		CASINO_PRIZE("Tindalos", /obj/item/grenade/spawnergrenade/casino/tindalos, 1, 200, "pets"),
+		CASINO_PRIZE("Fennec", /obj/item/grenade/spawnergrenade/casino/fennec, 1, 300, "pets"),
+		CASINO_PRIZE("Red panda", /obj/item/grenade/spawnergrenade/casino/redpanda, 1, 300, "pets"),
+		CASINO_PRIZE("Horse", /obj/item/grenade/spawnergrenade/casino/horse, 1, 300, "pets"),
+		CASINO_PRIZE("Otie", /obj/item/grenade/spawnergrenade/casino/otie, 1, 500, "pets"),
+		CASINO_PRIZE("Absolute unit of an Otie", /obj/item/grenade/spawnergrenade/casino/otie/chubby, 1, 500, "pets"),
+		CASINO_PRIZE("Zorgoia", /obj/item/grenade/spawnergrenade/casino/zorgoia, 1, 500, "pets"),
 	)
 	item_list["Mechs and Rigs"] = list(
-		CASINO_PRIZE("Mech:Mining Ripley", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/mining, 1, 1000, "mechs"),
-		CASINO_PRIZE("Mech:Firefighter Ripley", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/firefighter, 1, 750, "mechs"),
-		CASINO_PRIZE("Mech:Serenity", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/serenity, 1, 1500, "mechs"),
-		CASINO_PRIZE("Mech:Odysseus", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/Odysseus, 1, 1250, "mechs"),
-		CASINO_PRIZE("Mech:Phazon Scuttlebug", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/scree, 1, 2000, "mechs"),
-		CASINO_PRIZE("Mech:Phazon Janus", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/janus, 1, 2500, "mechs"),
-		CASINO_PRIZE("Mech:Scarab", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/scarab, 1, 500, "mechs"),
-		CASINO_PRIZE("Mech:Shuttlepod", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlepod, 1, 250, "mechs"),
-		CASINO_PRIZE("Mech:Shuttlecraft", /obj/item/weapon/grenade/spawnergrenade/casino/gygax/shuttlecraft, 1, 500, "mechs"),
-		CASINO_PRIZE("Rig: Solgov engineering hardsuit control module", /obj/item/weapon/rig/bayeng, 1, 500, "mechs"),
-		CASINO_PRIZE("Rig: Solgov medical hardsuit control module", /obj/item/weapon/rig/baymed, 1, 500, "mechs"),
-		CASINO_PRIZE("Rig: Advanced hardsuit control module", /obj/item/weapon/rig/ce, 1, 500, "mechs"),//CHOMPEDIT: Hardsuit
-		CASINO_PRIZE("Rig: Pursuit hardsuit control module", /obj/item/weapon/rig/ch/pursuit, 1, 750, "mechs"),
-		CASINO_PRIZE("Rig: Combat hardsuit control module", /obj/item/weapon/rig/combat, 1, 750, "mechs"),
-		CASINO_PRIZE("Rig: ERT-J suit control module (Elite Janitor NT approved)", /obj/item/weapon/rig/ert/janitor, 1, 250, "mechs"),
-		CASINO_PRIZE("Rig: Augmented tie (Elite Paper-Pusher NT approved)", /obj/item/weapon/rig/internalaffairs, 1, 250, "mechs"),
-		CASINO_PRIZE("Rig: Industrial suit control module", /obj/item/weapon/rig/industrial, 1, 300, "mechs"),
-		CASINO_PRIZE("Rig: Rescue suit control module", /obj/item/weapon/rig/medical, 1, 300, "mechs"),
+		CASINO_PRIZE("Mech:Mining Ripley", /obj/item/grenade/spawnergrenade/casino/gygax/mining, 1, 1000, "mechs"),
+		CASINO_PRIZE("Mech:Firefighter Ripley", /obj/item/grenade/spawnergrenade/casino/gygax/firefighter, 1, 750, "mechs"),
+		CASINO_PRIZE("Mech:Serenity", /obj/item/grenade/spawnergrenade/casino/gygax/serenity, 1, 1500, "mechs"),
+		CASINO_PRIZE("Mech:Odysseus", /obj/item/grenade/spawnergrenade/casino/gygax/Odysseus, 1, 1250, "mechs"),
+		CASINO_PRIZE("Mech:Phazon Scuttlebug", /obj/item/grenade/spawnergrenade/casino/gygax/scree, 1, 2000, "mechs"),
+		CASINO_PRIZE("Mech:Phazon Janus", /obj/item/grenade/spawnergrenade/casino/gygax/janus, 1, 2500, "mechs"),
+		CASINO_PRIZE("Mech:Scarab", /obj/item/grenade/spawnergrenade/casino/gygax/scarab, 1, 500, "mechs"),
+		CASINO_PRIZE("Mech:Shuttlepod", /obj/item/grenade/spawnergrenade/casino/gygax/shuttlepod, 1, 250, "mechs"),
+		CASINO_PRIZE("Mech:Shuttlecraft", /obj/item/grenade/spawnergrenade/casino/gygax/shuttlecraft, 1, 500, "mechs"),
+		CASINO_PRIZE("Rig: Solgov engineering hardsuit control module", /obj/item/rig/bayeng, 1, 500, "mechs"),
+		CASINO_PRIZE("Rig: Solgov medical hardsuit control module", /obj/item/rig/baymed, 1, 500, "mechs"),
+		CASINO_PRIZE("Rig: Advanced hardsuit control module", /obj/item/rig/ce, 1, 500, "mechs"),//CHOMPEDIT: Hardsuit
+		CASINO_PRIZE("Rig: Pursuit hardsuit control module", /obj/item/rig/ch/pursuit, 1, 750, "mechs"),
+		CASINO_PRIZE("Rig: Combat hardsuit control module", /obj/item/rig/combat, 1, 750, "mechs"),
+		CASINO_PRIZE("Rig: ERT-J suit control module (Elite Janitor NT approved)", /obj/item/rig/ert/janitor, 1, 250, "mechs"),
+		CASINO_PRIZE("Rig: Augmented tie (Elite Paper-Pusher NT approved)", /obj/item/rig/internalaffairs, 1, 250, "mechs"),
+		CASINO_PRIZE("Rig: Industrial suit control module", /obj/item/rig/industrial, 1, 300, "mechs"),
+		CASINO_PRIZE("Rig: Rescue suit control module", /obj/item/rig/medical, 1, 300, "mechs"),
 	)
 	item_list["Implants and Genemods"] = list(
-		CASINO_PRIZE("Implanter (Remember to get one unless you want to borrow from station!)", /obj/item/weapon/implanter, 1, 100, "implants"),
-		CASINO_PRIZE("Implant: Tazer", /obj/item/weapon/implantcase/taser, 1, 1000, "implants"),
-		CASINO_PRIZE("Implant: Medkit", /obj/item/weapon/implantcase/medkit, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Shades", /obj/item/weapon/implantcase/shades, 1, 750, "implants"),
-		CASINO_PRIZE("Implant: Sprinter", /obj/item/weapon/implantcase/sprinter, 1, 1000, "implants"),
-		CASINO_PRIZE("Implant: Toolkit", /obj/item/weapon/implantcase/toolkit, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Language", /obj/item/weapon/implantcase/vrlanguage, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Analyzer", /obj/item/weapon/implantcase/analyzer, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Size control", /obj/item/weapon/implant/sizecontrol , 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Adrenaline", /obj/item/weapon/implantcase/adrenalin, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Armblade", /obj/item/weapon/implantcase/armblade, 1, 1000, "implants"),
-		CASINO_PRIZE("Implant: Wrist dartgun", /obj/item/weapon/implantcase/dart, 1, 1000, "implants"),
-		CASINO_PRIZE("Implant: Freedom", /obj/item/weapon/implantcase/freedom, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Handblade", /obj/item/weapon/implantcase/handblade, 1, 1000, "implants"),
-		CASINO_PRIZE("Implant: Hand laser", /obj/item/weapon/implantcase/laser, 1, 1000, "implants"),
-		CASINO_PRIZE("Implant: Loyalty", /obj/item/weapon/implantcase/loyalty, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Restraining bolt", /obj/item/weapon/implantcase/restrainingbolt, 1, 1000, "implants"),
-		CASINO_PRIZE("Implant: Surge", /obj/item/weapon/implantcase/surge, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Wrist sword", /obj/item/weapon/implantcase/sword, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: No breath", /obj/item/weapon/dnainjector/nobreath, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Regenerate", /obj/item/weapon/dnainjector/regenerate, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Remote view", /obj/item/weapon/dnainjector/remoteview, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Sprinter", /obj/item/weapon/dnainjector/runfast, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/weapon/dnainjector/telemut, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: X-ray", /obj/item/weapon/dnainjector/xraymut, 1, 1000, "implants"),
+		CASINO_PRIZE("Implanter (Remember to get one unless you want to borrow from station!)", /obj/item/implanter, 1, 100, "implants"),
+		CASINO_PRIZE("Implant: Tazer", /obj/item/implantcase/taser, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Medkit", /obj/item/implantcase/medkit, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Shades", /obj/item/implantcase/shades, 1, 750, "implants"),
+		CASINO_PRIZE("Implant: Sprinter", /obj/item/implantcase/sprinter, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Toolkit", /obj/item/implantcase/toolkit, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Language", /obj/item/implantcase/vrlanguage, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Analyzer", /obj/item/implantcase/analyzer, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Size control", /obj/item/implant/sizecontrol , 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Adrenaline", /obj/item/implantcase/adrenalin, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Armblade", /obj/item/implantcase/armblade, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Wrist dartgun", /obj/item/implantcase/dart, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Freedom", /obj/item/implantcase/freedom, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Handblade", /obj/item/implantcase/handblade, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Hand laser", /obj/item/implantcase/laser, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Loyalty", /obj/item/implantcase/loyalty, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Restraining bolt", /obj/item/implantcase/restrainingbolt, 1, 1000, "implants"),
+		CASINO_PRIZE("Implant: Surge", /obj/item/implantcase/surge, 1, 500, "implants"),
+		CASINO_PRIZE("Implant: Wrist sword", /obj/item/implantcase/sword, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: No breath", /obj/item/dnainjector/nobreath, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Regenerate", /obj/item/dnainjector/regenerate, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Remote view", /obj/item/dnainjector/remoteview, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Sprinter", /obj/item/dnainjector/runfast, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/dnainjector/telemut, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: X-ray", /obj/item/dnainjector/xraymut, 1, 1000, "implants"),
 	)
 
 	item_list["Event"] = list(
@@ -249,26 +249,26 @@
 		return
 	tgui_interact(user)
 
-/obj/machinery/casino_prize_dispenser/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/casino_prize_dispenser/attackby(obj/item/W as obj, mob/user as mob)
 	if(currently_vending)
-		if(istype(W, /obj/item/weapon/spacecasinocash))
+		if(istype(W, /obj/item/spacecasinocash))
 			to_chat(usr, "<span class='warning'>Please select prize on display with sufficient amount of chips.</span>")
 		else
 			SStgui.update_uis(src)
 			return // don't smack that machine with your 2 chips
 
-	if(istype(W, /obj/item/weapon/spacecasinocash))
+	if(istype(W, /obj/item/spacecasinocash))
 		attack_hand(user)
 		return
 	..()
 
-/obj/machinery/casino_prize_dispenser/proc/pay_with_chips(var/obj/item/weapon/spacecasinocash/cashmoney, mob/user, var/price)
+/obj/machinery/casino_prize_dispenser/proc/pay_with_chips(var/obj/item/spacecasinocash/cashmoney, mob/user, var/price)
 	//"cashmoney_:[cashmoney] user:[user] currently_vending:[currently_vending]"
 	if(price > cashmoney.worth)
 		to_chat(usr, "[icon2html(cashmoney, user.client)] <span class='warning'>That is not enough chips.</span>") //CHOMPEdit
 		return 0
 
-	if(istype(cashmoney, /obj/item/weapon/spacecasinocash))
+	if(istype(cashmoney, /obj/item/spacecasinocash))
 		visible_message("<span class='info'>\The [usr] inserts some chips into \the [src].</span>")
 		cashmoney.worth -= price
 
@@ -358,8 +358,8 @@
 
 			currently_vending = bi
 
-			if(istype(usr.get_active_hand(), /obj/item/weapon/spacecasinocash))
-				var/obj/item/weapon/spacecasinocash/cash = usr.get_active_hand()
+			if(istype(usr.get_active_hand(), /obj/item/spacecasinocash))
+				var/obj/item/spacecasinocash/cash = usr.get_active_hand()
 				paid = pay_with_chips(cash, usr, price)
 			else
 				to_chat(usr, "<span class='warning'>Payment failure: Improper payment method, please provide chips.</span>")

@@ -7,8 +7,8 @@
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/hotel)
 "cd" = (
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
-/obj/item/weapon/tool/screwdriver,
+/obj/item/gun/projectile/shotgun/doublebarrel,
+/obj/item/tool/screwdriver,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
@@ -17,7 +17,7 @@
 /area/survivalpod/superpose/hotel)
 "cq" = (
 /obj/structure/table/marble,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "cr" = (
@@ -42,7 +42,7 @@
 /area/survivalpod/superpose/hotel)
 "eD" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "fP" = (
@@ -80,13 +80,13 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/book/manual/chef_recipes,
-/obj/item/weapon/reagent_containers/food/drinks/jar,
+/obj/item/book/manual/chef_recipes,
+/obj/item/reagent_containers/food/drinks/jar,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/hotel)
 "hv" = (
 /obj/structure/table/marble,
-/obj/item/device/universal_translator,
+/obj/item/universal_translator,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "hw" = (
@@ -105,8 +105,8 @@
 /area/survivalpod/superpose/hotel)
 "id" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/mop,
-/obj/item/weapon/soap/grey_soap,
+/obj/item/mop,
+/obj/item/soap/grey_soap,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/hotel)
 "ig" = (
@@ -133,7 +133,7 @@
 /area/survivalpod/superpose/hotel)
 "jG" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 8
 	},
 /turf/simulated/floor/wood/sif,
@@ -213,20 +213,20 @@
 /area/survivalpod/superpose/hotel)
 "nu" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/chainsaw,
-/obj/item/weapon/shovel{
+/obj/item/chainsaw,
+/obj/item/shovel{
 	pixel_y = 6
 	},
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/hotel)
 "og" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/greendouble,
+/obj/item/bedsheet/greendouble,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "os" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
@@ -289,51 +289,51 @@
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/hotel)
 "rv" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/closet/cabinet{
 	density = 0;
@@ -396,7 +396,7 @@
 /area/survivalpod/superpose/hotel)
 "vm" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /obj/random/junk,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
@@ -451,13 +451,13 @@
 /area/survivalpod/superpose/hotel)
 "AB" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "AJ" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/storage/fancy/blackcandle_box,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/storage/fancy/blackcandle_box,
+/obj/item/flame/lighter/random,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "AM" = (
@@ -487,7 +487,7 @@
 /area/survivalpod/superpose/hotel)
 "Ci" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "Cp" = (
@@ -510,12 +510,12 @@
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "Dc" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "DA" = (
 /obj/structure/table/marble,
-/obj/item/device/universal_translator,
+/obj/item/universal_translator,
 /obj/machinery/light/floortube/flicker{
 	pixel_y = 5
 	},
@@ -525,7 +525,7 @@
 /obj/structure/table/sifwoodentable,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/toy/plushie/deer,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 8
 	},
 /turf/simulated/floor/wood/sif,
@@ -548,11 +548,11 @@
 "EY" = (
 /obj/structure/janitorialcart,
 /obj/structure/mopbucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
 /obj/structure/closet/jcloset,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "Fn" = (
@@ -564,7 +564,7 @@
 /area/survivalpod/superpose/hotel)
 "FR" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/machinery/light/floortube/flicker{
 	pixel_y = 5
 	},
@@ -603,8 +603,8 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife/butch,
 /obj/machinery/light/floortube/flicker{
 	pixel_y = 5
 	},
@@ -621,7 +621,7 @@
 /area/survivalpod/superpose/hotel)
 "IT" = (
 /obj/structure/table/bench/marble,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -651,7 +651,7 @@
 /area/survivalpod/superpose/hotel)
 "Jh" = (
 /obj/structure/table/steel,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /obj/machinery/light/floortube/flicker{
 	pixel_y = 5
 	},
@@ -662,7 +662,7 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/hotel)
 "KA" = (
@@ -689,10 +689,10 @@
 /area/survivalpod/superpose/hotel)
 "Ls" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical{
 	pixel_y = 7
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/hotel)
 "Lw" = (
@@ -710,21 +710,21 @@
 "Nm" = (
 /obj/structure/closet/gmcloset,
 /obj/item/glass_jar,
-/obj/item/device/retail_scanner/civilian,
-/obj/item/device/retail_scanner/civilian,
+/obj/item/retail_scanner/civilian,
+/obj/item/retail_scanner/civilian,
 /obj/item/clothing/head/that{
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/fancy/blackcandle_box,
-/obj/item/weapon/storage/fancy/blackcandle_box,
-/obj/item/weapon/storage/fancy/blackcandle_box,
-/obj/item/weapon/storage/fancy/blackcandle_box,
+/obj/item/flame/lighter/random,
+/obj/item/flame/lighter/random,
+/obj/item/flame/lighter/random,
+/obj/item/flame/lighter/random,
+/obj/item/flame/lighter/random,
+/obj/item/storage/fancy/blackcandle_box,
+/obj/item/storage/fancy/blackcandle_box,
+/obj/item/storage/fancy/blackcandle_box,
+/obj/item/storage/fancy/blackcandle_box,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "NZ" = (
@@ -795,21 +795,21 @@
 /area/survivalpod/superpose/hotel)
 "RS" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/material/knife/machete/hatchet{
+/obj/item/material/knife/machete/hatchet{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/pickaxe/silver{
+/obj/item/pickaxe/silver{
 	pixel_x = -1;
 	pixel_y = 9
 	},
-/obj/item/weapon/pickaxe/silver,
-/obj/item/weapon/material/twohanded/fireaxe,
+/obj/item/pickaxe/silver,
+/obj/item/material/twohanded/fireaxe,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/hotel)
 "RU" = (
 /obj/structure/table/bench/marble,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 8
 	},
 /turf/simulated/floor/wood/sif,
@@ -822,7 +822,7 @@
 /area/survivalpod/superpose/hotel)
 "SI" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "Ty" = (
@@ -852,13 +852,13 @@
 /area/survivalpod/superpose/hotel)
 "WQ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "Yl" = (
 /obj/machinery/reagentgrinder,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/packageWrap,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/packageWrap,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)

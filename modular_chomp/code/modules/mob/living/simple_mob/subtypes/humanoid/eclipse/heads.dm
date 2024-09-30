@@ -19,8 +19,8 @@
 	special_attack_cooldown = 10 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 8
-	loot_list = list(/obj/item/weapon/gun/energy/flamegun = 100,
-		/obj/item/weapon/bone/skull = 100
+	loot_list = list(/obj/item/gun/energy/flamegun = 100,
+		/obj/item/bone/skull = 100
 			)
 
 
@@ -130,10 +130,10 @@
 	special_attack_max_range = 10
 	projectiletype = /obj/item/projectile/bullet/pistol/ap
 
-	loot_list = list(/obj/item/weapon/circuitboard/mecha/hades/targeting = 100,
-		/obj/item/weapon/circuitboard/mecha/hades/peripherals = 100,
-		/obj/item/weapon/circuitboard/mecha/hades/main = 100,
-		/obj/item/weapon/bone/skull = 100
+	loot_list = list(/obj/item/circuitboard/mecha/hades/targeting = 100,
+		/obj/item/circuitboard/mecha/hades/peripherals = 100,
+		/obj/item/circuitboard/mecha/hades/main = 100,
+		/obj/item/bone/skull = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
@@ -205,13 +205,13 @@
 			/obj/item/prop/alien/junk = 60,
 			/obj/random/tool/alien = 60,
 			/obj/random/tool/alien = 60,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
+			/obj/item/cell/device/weapon/recharge/alien = 60,
 			/obj/random/tool/alien = 60,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
-			/obj/item/weapon/bluespace_harpoon = 60,
-			/obj/item/weapon/flame/lighter/supermatter/syndismzippo = 60,
-			/obj/item/weapon/gun/energy/medigun = 60,
-			/obj/item/weapon/bone/skull = 100
+			/obj/item/cell/device/weapon/recharge/alien = 60,
+			/obj/item/bluespace_harpoon = 60,
+			/obj/item/flame/lighter/supermatter/syndismzippo = 60,
+			/obj/item/gun/energy/medigun = 60,
+			/obj/item/bone/skull = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
@@ -340,7 +340,7 @@
 	special_attack_min_range = 0
 	special_attack_max_range = 7
 
-	loot_list = list(/obj/item/weapon/gun/energy/pulseglove = 100
+	loot_list = list(/obj/item/gun/energy/pulseglove = 100
 			)
 
 

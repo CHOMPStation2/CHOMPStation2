@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aG" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox,
+/obj/item/storage/toolbox,
 /obj/random/tool,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
@@ -51,7 +51,7 @@
 /area/survivalpod/superpose/FieldLab)
 "gS" = (
 /obj/structure/table/standard,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /obj/item/clothing/glasses/welding,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
@@ -140,12 +140,12 @@
 /area/survivalpod/superpose/FieldLab)
 "ns" = (
 /obj/machinery/autolathe,
-/obj/item/weapon/rcd/advanced/loaded{
+/obj/item/rcd/advanced/loaded{
 	pixel_x = -5;
 	pixel_y = 9
 	},
-/obj/item/weapon/rcd_ammo/large,
-/obj/item/weapon/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/FieldLab)
 "pr" = (
@@ -181,7 +181,7 @@
 /area/survivalpod/superpose/FieldLab)
 "sx" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	desc = "Gladstone for the last fucking time, We have crowbars for a REASON. Stop breaking in through the goddamn windows! We big red shiny doors for god's sakes!"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -206,7 +206,7 @@
 /area/survivalpod/superpose/FieldLab)
 "xJ" = (
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/hyper;
+	cell_type = /obj/item/cell/hyper;
 	dir = 8;
 	name = "Unknown APC";
 	pixel_x = -24
@@ -228,7 +228,7 @@
 "yX" = (
 /obj/structure/table/standard,
 /obj/random/toolbox,
-/obj/item/weapon/cell/super,
+/obj/item/cell/super,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "zf" = (
@@ -253,11 +253,11 @@
 /area/survivalpod/superpose/FieldLab)
 "AB" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "AZ" = (
-/obj/item/weapon/storage/bag/circuits,
+/obj/item/storage/bag/circuits,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
@@ -291,51 +291,51 @@
 /turf/simulated/floor,
 /area/survivalpod/superpose/FieldLab)
 "Gk" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/closet/crate,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/FieldLab)
@@ -376,12 +376,12 @@
 /area/survivalpod/superpose/FieldLab)
 "Jg" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "KC" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "Me" = (
@@ -575,10 +575,10 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/FieldLab)
 "Ue" = (
@@ -609,7 +609,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "Xv" = (
-/obj/item/weapon/cell/super,
+/obj/item/cell/super,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "XW" = (

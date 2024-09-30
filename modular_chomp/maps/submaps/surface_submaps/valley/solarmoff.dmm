@@ -23,7 +23,7 @@
 /turf/simulated/floor,
 /area/submap/solarmoff)
 "d" = (
-/obj/item/weapon/melee/energy/sword/imperial,
+/obj/item/melee/energy/sword/imperial,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/solarmoff)
 "g" = (
@@ -43,7 +43,7 @@
 /turf/simulated/floor,
 /area/submap/solarmoff)
 "m" = (
-/obj/item/weapon/storage/secure/briefcase/fuelrod,
+/obj/item/storage/secure/briefcase/fuelrod,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/solarmoff)
 "n" = (

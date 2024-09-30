@@ -49,16 +49,16 @@
 	var/obj/screen/robot_modules_background
 
 //3 Modules can be activated at any one time.
-	var/obj/item/weapon/robot_module/module = null
+	var/obj/item/robot_module/module = null
 	var/module_active = null
 	var/module_state_1 = null
 	var/module_state_2 = null
 	var/module_state_3 = null
 
-	var/obj/item/device/radio/borg/radio = null
-	var/obj/item/device/communicator/integrated/communicator = null
+	var/obj/item/radio/borg/radio = null
+	var/obj/item/communicator/integrated/communicator = null
 	var/mob/living/silicon/ai/connected_ai = null
-	var/obj/item/weapon/cell/cell = null
+	var/obj/item/cell/cell = null
 	var/obj/machinery/camera/camera = null
 
 	var/cell_emp_mult = 2
@@ -72,9 +72,9 @@
 	// Components are basically robot organs.
 	var/list/components = list()
 
-	var/obj/item/device/mmi/mmi = null
+	var/obj/item/mmi/mmi = null
 
-	var/obj/item/device/pda/ai/rbPDA = null
+	var/obj/item/pda/ai/rbPDA = null
 
 	var/opened = 0
 	var/emagged = 0
@@ -105,7 +105,7 @@
 	var/tracking_entities = 0 //The number of known entities currently accessing the internal camera
 	var/braintype = JOB_CYBORG
 
-	var/obj/item/weapon/implant/restrainingbolt/bolt	// The restraining bolt installed into the cyborg.
+	var/obj/item/implant/restrainingbolt/bolt	// The restraining bolt installed into the cyborg.
 
 	var/list/robot_verbs_default = list(
 		/mob/living/silicon/robot/proc/sensor_mode,
@@ -147,8 +147,8 @@
 	ident = rand(1, 999)
 	updatename(modtype)
 
-	radio = new /obj/item/device/radio/borg(src)
-//	communicator = new /obj/item/device/communicator/integrated(src)
+	radio = new /obj/item/radio/borg(src)
+//	communicator = new /obj/item/communicator/integrated(src)
 //	communicator.register_device(src)
 	common_radio = radio
 
@@ -169,7 +169,7 @@
 		C.wrapped = new C.external_type
 
 	if(!cell)
-		cell = new /obj/item/weapon/cell/robot_station(src)
+		cell = new /obj/item/cell/robot_station(src)
 	else if(ispath(cell))
 		cell = new cell(src)
 
@@ -212,11 +212,11 @@
 				if("radio")
 					C.wrapped = new /obj/item/robot_parts/robot_component/radio(src)
 				if("power cell")
-					var/list/recommended_cells = list(/obj/item/weapon/cell/robot_station, /obj/item/weapon/cell/high, /obj/item/weapon/cell/super, /obj/item/weapon/cell/robot_syndi, /obj/item/weapon/cell/hyper,
-						/obj/item/weapon/cell/infinite, /obj/item/weapon/cell/potato, /obj/item/weapon/cell/slime)
+					var/list/recommended_cells = list(/obj/item/cell/robot_station, /obj/item/cell/high, /obj/item/cell/super, /obj/item/cell/robot_syndi, /obj/item/cell/hyper,
+						/obj/item/cell/infinite, /obj/item/cell/potato, /obj/item/cell/slime)
 					var/list/cell_names = list()
 					for(var/cell_type in recommended_cells)
-						var/obj/item/weapon/cell/single_cell = cell_type
+						var/obj/item/cell/single_cell = cell_type
 						cell_names[capitalize(initial(single_cell.name))] = cell_type
 					var/selected_cell = tgui_input_list(usr, "What kind of cell do you want to install? Cancel installs a default robot cell.", "Cells", cell_names)
 					if(!selected_cell || selected_cell == "Cancel")
@@ -238,7 +238,7 @@
 	..()
 
 /mob/living/silicon/robot/proc/init()
-	aiCamera = new/obj/item/device/camera/siliconcam/robot_camera(src)
+	aiCamera = new/obj/item/camera/siliconcam/robot_camera(src)
 	laws = new global.using_map.default_law_type // VOREstation edit: use map's default
 	additional_law_channels["Binary"] = "#b"
 	var/new_ai = select_active_ai_with_fewest_borgs()
@@ -281,15 +281,15 @@
 // setup the PDA and its name
 /mob/living/silicon/robot/proc/setup_PDA()
 	if (!rbPDA)
-		rbPDA = new/obj/item/device/pda/ai(src)
+		rbPDA = new/obj/item/pda/ai(src)
 	rbPDA.set_name_and_job(name,"[modtype] [braintype]")
-	add_verb(src, /obj/item/device/pda/ai/verb/cmd_pda_open_ui) //ChompEDIT - TGPanel
+	add_verb(src, /obj/item/pda/ai/verb/cmd_pda_open_ui) //ChompEDIT - TGPanel
 
 /mob/living/silicon/robot/proc/setup_communicator()
 	if (!communicator)
-		communicator = new/obj/item/device/communicator/integrated(src)
+		communicator = new/obj/item/communicator/integrated(src)
 	communicator.register_device(name, "[modtype] [braintype]")
-	add_verb(src, /obj/item/device/communicator/integrated/verb/activate) //ChompEDIT - TGPanel
+	add_verb(src, /obj/item/communicator/integrated/verb/activate) //ChompEDIT - TGPanel
 
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 //Improved /N
@@ -298,7 +298,7 @@
 		var/turf/T = get_turf(loc)//To hopefully prevent run time errors.
 		if(T)	mmi.loc = T
 		if(mmi.brainmob)
-			var/obj/item/weapon/robot_module/M = locate() in contents
+			var/obj/item/robot_module/M = locate() in contents
 			if(M)
 				mmi.brainmob.languages = M.original_languages
 			else
@@ -381,11 +381,11 @@
 	notify_ai(ROBOT_NOTIFICATION_NEW_MODULE, module.name)
 
 /mob/living/silicon/robot/proc/update_braintype()
-	if(istype(mmi, /obj/item/device/mmi/digital/posibrain))
+	if(istype(mmi, /obj/item/mmi/digital/posibrain))
 		braintype = BORG_BRAINTYPE_POSI
-	else if(istype(mmi, /obj/item/device/mmi/digital/robot))
+	else if(istype(mmi, /obj/item/mmi/digital/robot))
 		braintype = BORG_BRAINTYPE_DRONE
-	else if(istype(mmi, /obj/item/device/mmi/inert/ai_remote))
+	else if(istype(mmi, /obj/item/mmi/inert/ai_remote))
 		braintype = BORG_BRAINTYPE_AI_SHELL
 	else
 		braintype = BORG_BRAINTYPE_CYBORG
@@ -533,7 +533,7 @@
 //ChompEDIT START - TGPanel
 /mob/living/silicon/robot/proc/show_jetpack_pressure()
 	// if you have a jetpack, show the internal tank pressure
-	var/obj/item/weapon/tank/jetpack/current_jetpack = installed_jetpack()
+	var/obj/item/tank/jetpack/current_jetpack = installed_jetpack()
 	if (current_jetpack)
 		. += "Internal Atmosphere Info: [current_jetpack.name]"
 		. += "Tank Pressure: [current_jetpack.air_contents.return_pressure()]"
@@ -542,7 +542,7 @@
 // this function returns the robots jetpack, if one is installed
 /mob/living/silicon/robot/proc/installed_jetpack()
 	if(module)
-		return (locate(/obj/item/weapon/tank/jetpack) in module.modules)
+		return (locate(/obj/item/tank/jetpack) in module.modules)
 	return 0
 
 
@@ -584,8 +584,8 @@
 	if(prob(75) && Proj.damage > 0) spark_system.start()
 	return 2
 
-/mob/living/silicon/robot/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if (istype(W, /obj/item/weapon/handcuffs)) // fuck i don't even know why isrobot() in handcuff code isn't working so this will have to do
+/mob/living/silicon/robot/attackby(obj/item/W as obj, mob/user as mob)
+	if (istype(W, /obj/item/handcuffs)) // fuck i don't even know why isrobot() in handcuff code isn't working so this will have to do
 		return
 
 	if(opened) // Are they trying to insert something?
@@ -607,7 +607,7 @@
 
 				return
 
-		if(istype(W, /obj/item/weapon/implant/restrainingbolt) && !cell)
+		if(istype(W, /obj/item/implant/restrainingbolt) && !cell)
 			if(bolt)
 				to_chat(user, "<span class='notice'>There is already a restraining bolt installed in this cyborg.</span>")
 				return
@@ -621,7 +621,7 @@
 
 				return
 
-	if(istype(W, /obj/item/weapon/aiModule)) // Trying to modify laws locally.
+	if(istype(W, /obj/item/aiModule)) // Trying to modify laws locally.
 		if(!opened)
 			to_chat(user, "<span class='warning'>You need to open \the [src]'s panel before you can modify them.</span>")
 			return
@@ -630,7 +630,7 @@
 			to_chat(user, "<span class='warning'>\The [src] is controlled remotely! You cannot upload new laws this way!</span>")
 			return
 
-		var/obj/item/weapon/aiModule/M = W
+		var/obj/item/aiModule/M = W
 		M.install(src, user)
 		return
 
@@ -642,7 +642,7 @@
 		if(!getBruteLoss())
 			to_chat(user, "<span class='filter_notice'>Nothing to fix here!</span>")
 			return
-		var/obj/item/weapon/weldingtool/WT = W.get_welder()
+		var/obj/item/weldingtool/WT = W.get_welder()
 		if(WT.remove_fuel(0))
 			user.setClickCooldown(user.get_attack_speed(WT))
 			adjustBruteLoss(-30)
@@ -722,7 +722,7 @@
 				opened = 1
 				update_icon()
 
-	else if (istype(W, /obj/item/weapon/cell) && opened)	// trying to put a cell inside
+	else if (istype(W, /obj/item/cell) && opened)	// trying to put a cell inside
 		var/datum/robot_component/C = components["power cell"]
 		if(wiresexposed)
 			to_chat(user, "<span class='filter_notice'>Close the panel first.</span>")
@@ -743,7 +743,7 @@
 			C.brute_damage = 0
 			C.electronics_damage = 0
 
-	else if (W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/device/multitool))
+	else if (W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/multitool))
 		if (wiresexposed)
 			wires.Interact(user)
 		else
@@ -777,7 +777,7 @@
 
 		return
 
-	else if(istype(W, /obj/item/device/encryptionkey/) && opened)
+	else if(istype(W, /obj/item/encryptionkey/) && opened)
 		if(radio)//sanityyyyyy
 			radio.attackby(W,user)//GTFO, you have your own procs
 		else
@@ -815,7 +815,7 @@
 
 
 	else
-		if( !(istype(W, /obj/item/device/robotanalyzer) || istype(W, /obj/item/device/healthanalyzer)) )
+		if( !(istype(W, /obj/item/robotanalyzer) || istype(W, /obj/item/healthanalyzer)) )
 			if(W.force > 0)
 				spark_system.start()
 		return ..()
@@ -826,7 +826,7 @@
 	return idcard
 
 /mob/living/silicon/robot/get_restraining_bolt()
-	var/obj/item/weapon/implant/restrainingbolt/RB = bolt
+	var/obj/item/implant/restrainingbolt/RB = bolt
 
 	if(istype(RB))
 		if(!RB.malfunction)
@@ -960,7 +960,7 @@
 			return 1
 	else if(istype(M, /mob/living/silicon/robot))
 		var/mob/living/silicon/robot/R = M
-		if(check_access(R.get_active_hand()) || istype(R.get_active_hand(), /obj/item/weapon/card/robot))
+		if(check_access(R.get_active_hand()) || istype(R.get_active_hand(), /obj/item/card/robot))
 			return 1
 	return 0
 
@@ -1540,8 +1540,8 @@
 
 
 /mob/living/silicon/robot/drop_item()
-	if(module_active && istype(module_active,/obj/item/weapon/gripper))
-		var/obj/item/weapon/gripper/G = module_active
+	if(module_active && istype(module_active,/obj/item/gripper))
+		var/obj/item/gripper/G = module_active
 		G.drop_item_nm()
 
 /mob/living/silicon/robot/disable_spoiler_vision()
@@ -1597,7 +1597,7 @@
 
 //RIDING
 /datum/riding/dogborg
-	keytype = /obj/item/weapon/material/twohanded/riding_crop // Crack!
+	keytype = /obj/item/material/twohanded/riding_crop // Crack!
 	nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.
 	key_name = "a riding crop"		// What the 'keys' for the thing being rided on would be called.
 	only_one_driver = TRUE			// If true, only the person in 'front' (first on list of riding mobs) can drive.
@@ -1716,7 +1716,7 @@
 // Most of the advanced ones, we can easily check, but a few special cases exist and need to be handled specially
 /mob/living/silicon/robot/proc/has_advanced_upgrade(var/given_type)
 	if(given_type == /obj/item/borg/upgrade/advanced/bellysizeupgrade)
-		var/obj/item/device/dogborg/sleeper/T = has_upgrade_module(/obj/item/device/dogborg/sleeper)
+		var/obj/item/dogborg/sleeper/T = has_upgrade_module(/obj/item/dogborg/sleeper)
 		if(T && T.upgraded_capacity)
 			return T
 		else if(!T)
@@ -1724,11 +1724,11 @@
 		else
 			return FALSE
 	if(given_type == /obj/item/borg/upgrade/advanced/jetpack)
-		return has_upgrade_module(/obj/item/weapon/tank/jetpack/carbondioxide)
+		return has_upgrade_module(/obj/item/tank/jetpack/carbondioxide)
 	if(given_type == /obj/item/borg/upgrade/advanced/advhealth)
-		return has_upgrade_module(/obj/item/device/healthanalyzer/advanced)
+		return has_upgrade_module(/obj/item/healthanalyzer/advanced)
 	if(given_type == /obj/item/borg/upgrade/advanced/sizegun)
-		return has_upgrade_module(/obj/item/weapon/gun/energy/sizegun/mounted)
+		return has_upgrade_module(/obj/item/gun/energy/sizegun/mounted)
 	return null
 
 // Do we support specific upgrades?
@@ -1738,7 +1738,7 @@
 // Most of the restricted ones, we can easily check, but a few special cases exist and need to be handled specially
 /mob/living/silicon/robot/proc/has_restricted_upgrade(var/given_type)
 	if(given_type == /obj/item/borg/upgrade/restricted/bellycapupgrade)
-		var/obj/item/device/dogborg/sleeper/T = has_upgrade_module(/obj/item/device/dogborg/sleeper)
+		var/obj/item/dogborg/sleeper/T = has_upgrade_module(/obj/item/dogborg/sleeper)
 		if(T && T.compactor)
 			return T
 		else if(!T)
@@ -1746,7 +1746,7 @@
 		else
 			return FALSE
 	if(given_type == /obj/item/borg/upgrade/restricted/tasercooler)
-		var/obj/item/weapon/gun/energy/taser/mounted/cyborg/T = has_upgrade_module(/obj/item/weapon/gun/energy/taser/mounted/cyborg)
+		var/obj/item/gun/energy/taser/mounted/cyborg/T = has_upgrade_module(/obj/item/gun/energy/taser/mounted/cyborg)
 		if(T && T.recharge_time <= 2)
 			return T
 		else if(!T)
@@ -1754,17 +1754,17 @@
 		else
 			return FALSE
 	if(given_type == /obj/item/borg/upgrade/restricted/advrped)
-		return has_upgrade_module(/obj/item/weapon/storage/part_replacer/adv)
+		return has_upgrade_module(/obj/item/storage/part_replacer/adv)
 	if(given_type == /obj/item/borg/upgrade/restricted/diamonddrill)
-		return has_upgrade_module(/obj/item/weapon/pickaxe/diamonddrill)
+		return has_upgrade_module(/obj/item/pickaxe/diamonddrill)
 	if(given_type == /obj/item/borg/upgrade/restricted/pka)
-		return has_upgrade_module(/obj/item/weapon/gun/energy/kinetic_accelerator/cyborg)
+		return has_upgrade_module(/obj/item/gun/energy/kinetic_accelerator/cyborg)
 	return null
 
 // Check if we have any non production upgrades
 /mob/living/silicon/robot/proc/has_no_prod_upgrade(var/given_type)
 	if(given_type == /obj/item/borg/upgrade/no_prod/toygun)
-		return has_upgrade_module(/obj/item/weapon/gun/projectile/cyborgtoy)
+		return has_upgrade_module(/obj/item/gun/projectile/cyborgtoy)
 	if(given_type == /obj/item/borg/upgrade/no_prod/vision_xray)
 		return has_upgrade_module(/obj/item/borg/sight/xray)
 	if(given_type == /obj/item/borg/upgrade/no_prod/vision_thermal)

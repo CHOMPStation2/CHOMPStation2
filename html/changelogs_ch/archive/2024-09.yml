@@ -264,3 +264,18 @@
   - bugfix: soulcatcher SR vision
   - rscadd: ATMOS holo-combifan projector to engiborgs
   - rscadd: PENLITE barrier projector to crisisborgs
+2024-09-30:
+  CHOMPStation2:
+  - rscadd: You can now choose your own runechat color.
+  - rscadd: You can now turn on automatic punctuation for say messages.
+  Kashargul:
+  - bugfix: naming of the pme ch and player narrate ch input windows
+  TheCaramelion:
+  - rscadd: New junk mail in the mail
+  - balance: Severely reduced the chance of receveing non-job goodies
+  - balance: Slightly raised the mail per minute
+  - rscadd: Slightly raised the chance of special goodies
+  - qol: Mail bags can hold contraband packages now
+  tacoguy7765093:
+  - code_imp: Modularizes the VR map.
+  - maptweak: VR map is latest.

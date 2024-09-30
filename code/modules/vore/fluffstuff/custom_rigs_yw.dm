@@ -1,4 +1,4 @@
-/obj/item/device/modkit_conversion/fluff/sheri_rig_kit
+/obj/item/modkit_conversion/fluff/sheri_rig_kit
     name = "Sheri's modkit"
     desc = "A kit containing all the needed tools and parts to modify a Research Director rig suit. It has a snake painted on it."
     owner_ckey = "esperkin"
@@ -6,10 +6,10 @@
     icon = 'icons/vore/custom_items_vr.dmi'
     icon_state = "modkit"
 
-    from_suit = /obj/item/weapon/rig/hazmat
-    to_suit = /obj/item/weapon/rig/hazmat/fluff/sheri
+    from_suit = /obj/item/rig/hazmat
+    to_suit = /obj/item/rig/hazmat/fluff/sheri
 
-/obj/item/weapon/rig/hazmat/fluff/sheri
+/obj/item/rig/hazmat/fluff/sheri
     name = "AHS-VPR Control Module"
     desc = "This is the control module for a prototype hazardous environment suit, designed to protect the wearer from radiation, pressure, and hostile aliens alike. This particular suit was designed to fit a naga, and is labeled as the model 'Viper'. A small tag on it marks it as belonging to a 'Sheri Calen'"
     icon = 'icons/vore/rig_yw/rigs_module.dmi'
@@ -57,7 +57,7 @@
 
 
 
-/obj/item/weapon/rig/medical/equipped/fluff/saur
+/obj/item/rig/medical/equipped/fluff/saur
     name = "AMR-DRGN"
     desc = "This seems to be a highly customized Medical RIG suit, coloured black and purple, and with an added extendable plating to include a pair of wings and a tail comfortably within the suits protection. There's a nametag on the chest piece, and on the control module itself, with the name 'Saur Darastrix' on it."
     icon = 'icons/vore/rig_yw/rigs_module.dmi'

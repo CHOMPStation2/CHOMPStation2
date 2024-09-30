@@ -83,7 +83,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "am" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/grenade/explosive,
+/obj/item/grenade/explosive,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "an" = (
@@ -91,19 +91,19 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = -6;
 	pixel_x = -13
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = -7;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppergrinder{
+/obj/item/reagent_containers/food/condiment/small/peppergrinder{
 	pixel_y = 7;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppergrinder{
+/obj/item/reagent_containers/food/condiment/small/peppergrinder{
 	pixel_y = 4;
 	pixel_x = -12
 	},
@@ -147,18 +147,18 @@
 	dir = 4
 	},
 /obj/structure/undies_wardrobe,
-/obj/item/device/mindbinder,
+/obj/item/mindbinder,
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/diescraper/indoors/floor9)
 "au" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/carbon,
-/obj/item/weapon/storage/pill_bottle/carthatoline,
-/obj/item/weapon/storage/pill_bottle/citalopram,
-/obj/item/weapon/storage/pill_bottle/dexalin_plus,
-/obj/item/weapon/storage/pill_bottle/dexalin_plus,
-/obj/item/weapon/storage/pill_bottle/iron,
-/obj/item/weapon/storage/pill_bottle/iron,
+/obj/item/storage/pill_bottle/carbon,
+/obj/item/storage/pill_bottle/carthatoline,
+/obj/item/storage/pill_bottle/citalopram,
+/obj/item/storage/pill_bottle/dexalin_plus,
+/obj/item/storage/pill_bottle/dexalin_plus,
+/obj/item/storage/pill_bottle/iron,
+/obj/item/storage/pill_bottle/iron,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "av" = (
@@ -187,7 +187,7 @@
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "ay" = (
-/obj/item/weapon/bananapeel,
+/obj/item/bananapeel,
 /turf/simulated/floor/carpet/happy,
 /area/awaymission/diescraper/indoors/floor7)
 "az" = (
@@ -239,8 +239,8 @@
 /area/awaymission/diescraper/indoors/floor9)
 "aH" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/secure/briefcase/nerd_pack_med,
-/obj/item/device/defib_kit/loaded,
+/obj/item/storage/secure/briefcase/nerd_pack_med,
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "aI" = (
@@ -259,8 +259,8 @@
 /area/awaymission/diescraper/indoors/floor3)
 "aK" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/stamp/clown,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/stamp/clown,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "aM" = (
@@ -289,7 +289,7 @@
 /area/awaymission/diescraper/indoors/floor3)
 "aP" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/book/bundle/custom_library/nonfiction/skrelliancastesystem,
+/obj/item/book/bundle/custom_library/nonfiction/skrelliancastesystem,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor6)
 "aQ" = (
@@ -301,7 +301,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "aR" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor8)
 "aS" = (
@@ -420,11 +420,11 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "bn" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/assorted,
-/obj/item/weapon/storage/pill_bottle/assorted,
-/obj/item/weapon/storage/pill_bottle/benzilate,
-/obj/item/weapon/storage/pill_bottle/benzilate,
-/obj/item/weapon/storage/pill_bottle/neotane,
+/obj/item/storage/pill_bottle/assorted,
+/obj/item/storage/pill_bottle/assorted,
+/obj/item/storage/pill_bottle/benzilate,
+/obj/item/storage/pill_bottle/benzilate,
+/obj/item/storage/pill_bottle/neotane,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "bp" = (
@@ -445,12 +445,12 @@
 /area/awaymission/diescraper/indoors/floor10)
 "bs" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
 /obj/fruitspawner/soybean,
 /obj/fruitspawner/soybean,
 /obj/fruitspawner/soybean,
@@ -459,8 +459,8 @@
 /obj/fruitspawner/soybean,
 /obj/fruitspawner/soybean,
 /obj/fruitspawner/soybean,
-/obj/item/weapon/reagent_containers/food/condiment/soysauce,
-/obj/item/weapon/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/soysauce,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor4)
 "bt" = (
@@ -469,13 +469,13 @@
 /area/awaymission/diescraper/indoors/floor112)
 "bu" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/coffee,
-/obj/item/weapon/reagent_containers/food/drinks/coffee{
+/obj/item/reagent_containers/food/drinks/coffee,
+/obj/item/reagent_containers/food/drinks/coffee{
 	pixel_y = 2;
 	pixel_x = 5
 	},
-/obj/item/weapon/spacecasinocash,
-/obj/item/weapon/card/id/diescrapergun,
+/obj/item/spacecasinocash,
+/obj/item/card/id/diescrapergun,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "bv" = (
@@ -493,7 +493,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/gun/energy/hooklauncher,
+/obj/item/gun/energy/hooklauncher,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "bx" = (
@@ -505,34 +505,34 @@
 /area/awaymission/diescraper/indoors/floor10)
 "by" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen/fountain,
+/obj/item/pen/fountain,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "bz" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey{
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey{
 	pixel_y = 8;
 	pixel_x = 10
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_y = 13
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
+/obj/item/reagent_containers/food/drinks/bottle/wine{
 	pixel_y = 2;
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_y = 1;
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 3;
 	pixel_x = 12
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "bA" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
 /turf/simulated/floor/plating{
 	temperature = 277;
@@ -547,8 +547,8 @@
 /area/awaymission/diescraper/indoors/floor2)
 "bC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/virusdish/random,
-/obj/item/device/defib_kit/loaded,
+/obj/item/virusdish/random,
+/obj/item/defib_kit/loaded,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "bD" = (
@@ -557,7 +557,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "bE" = (
 /obj/structure/salvageable/bliss,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "ATM Flyer";
 	info = "Invest in Teshcoin!"
 	},
@@ -651,25 +651,25 @@
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
 /turf/simulated/floor/wood/alt,
@@ -691,7 +691,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/sky)
 "bV" = (
-/obj/item/device/radio/uplink,
+/obj/item/radio/uplink,
 /obj/item/clothing/under/suit_jacket/charcoal,
 /obj/item/clothing/accessory/jacket/charcoal,
 /obj/structure/table/standard,
@@ -715,7 +715,7 @@
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "cb" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/overlay/snow/floor,
 /obj/effect/mobblocker{
@@ -729,19 +729,19 @@
 /area/awaymission/diescraper/indoors/floor7)
 "cc" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -4;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 4;
 	pixel_y = -4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 4;
 	pixel_y = 5
 	},
@@ -749,29 +749,29 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "cd" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/cb01{
+/obj/item/reagent_containers/food/snacks/cb01{
 	pixel_y = 6;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb01{
+/obj/item/reagent_containers/food/snacks/cb01{
 	pixel_y = 6;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb01{
+/obj/item/reagent_containers/food/snacks/cb01{
 	pixel_y = 6;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb01{
+/obj/item/reagent_containers/food/snacks/cb01{
 	pixel_y = 6;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb08{
+/obj/item/reagent_containers/food/snacks/cb08{
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb08{
+/obj/item/reagent_containers/food/snacks/cb08{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cb08{
+/obj/item/reagent_containers/food/snacks/cb08{
 	pixel_x = -1
 	},
 /turf/simulated/floor/bmarble,
@@ -797,7 +797,7 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "ch" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/coffee,
+/obj/item/reagent_containers/food/drinks/coffee,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "ci" = (
@@ -842,7 +842,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "cq" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "cr" = (
@@ -889,7 +889,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "cz" = (
 /obj/structure/table/steel,
-/obj/item/weapon/fluff/fidgetspinner/yellow,
+/obj/item/fluff/fidgetspinner/yellow,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
 "cA" = (
@@ -945,7 +945,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "cJ" = (
 /obj/random/junk,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/plating{
 	temperature = 277;
 	oxygen = 20.7263;
@@ -953,7 +953,7 @@
 	},
 /area/awaymission/diescraper/indoors/floor7)
 "cK" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	name = "Maintinence Paper";
 	info = "What do you mean the elevator is out of service? This teleporting lookin ass thing doesnt fit with the asthetic? I want the old elevator back this instant.";
 	pixel_y = 26
@@ -966,8 +966,8 @@
 /area/awaymission/diescraper/indoors/floor6)
 "cM" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/disk/integrated_circuit/upgrade/illegal,
-/obj/item/weapon/disk/integrated_circuit/upgrade/advanced,
+/obj/item/disk/integrated_circuit/upgrade/illegal,
+/obj/item/disk/integrated_circuit/upgrade/advanced,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor4)
 "cO" = (
@@ -981,8 +981,8 @@
 /obj/structure/bed/double/padded{
 	pixel_y = -24
 	},
-/obj/item/weapon/bedsheet/piratedouble,
-/obj/item/weapon/bedsheet/piratedouble{
+/obj/item/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble{
 	pixel_y = -25
 	},
 /turf/simulated/floor/carpet/retro,
@@ -997,7 +997,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "cS" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/lunchbox/survival/zaddat,
+/obj/item/storage/toolbox/lunchbox/survival/zaddat,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor9)
 "cU" = (
@@ -1016,7 +1016,7 @@
 /area/awaymission/diescraper/indoors/floor4)
 "cW" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/gun/energy/lasertag/red,
+/obj/item/gun/energy/lasertag/red,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "cX" = (
@@ -1041,7 +1041,7 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "dd" = (
-/obj/item/weapon/gun/magic/firestaff/vrwizard/frost,
+/obj/item/gun/magic/firestaff/vrwizard/frost,
 /turf/simulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor5)
 "de" = (
@@ -1123,7 +1123,7 @@
 /area/awaymission/diescraper/indoors/floor3)
 "ds" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /obj/structure/sign/warning/cold{
 	pixel_y = -32
 	},
@@ -1155,19 +1155,19 @@
 /area/awaymission/diescraper/indoors/floor10)
 "dz" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/glasses/square{
+/obj/item/storage/box/glasses/square{
 	pixel_x = 9;
 	pixel_y = 1
 	},
-/obj/item/weapon/storage/box/glasses/rocks{
+/obj/item/storage/box/glasses/rocks{
 	pixel_y = 1;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/box/glasses/pint{
+/obj/item/storage/box/glasses/pint{
 	pixel_y = 11;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/box/glasses/meta/metapint{
+/obj/item/storage/box/glasses/meta/metapint{
 	pixel_y = 11;
 	pixel_x = 9
 	},
@@ -1237,7 +1237,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "dJ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "dK" = (
@@ -1267,7 +1267,7 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "dO" = (
 /obj/structure/table/bench/sifwooden/padded,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/unsimulated/floor/wood/alt/parquet,
 /area/awaymission/diescraper/indoors/floor9)
 "dP" = (
@@ -1328,7 +1328,7 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor3)
 "dY" = (
-/obj/item/weapon/storage/secure/briefcase/rifle,
+/obj/item/storage/secure/briefcase/rifle,
 /obj/structure/table/standard,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
@@ -1338,7 +1338,7 @@
 /area/awaymission/diescraper/indoors/floor11)
 "ea" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/coin/iron,
+/obj/item/coin/iron,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "eb" = (
@@ -1359,7 +1359,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "ee" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/laundry_basket,
+/obj/item/storage/laundry_basket,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor9)
 "ef" = (
@@ -1376,14 +1376,14 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/item/weapon/reagent_containers/food/snacks/tossedsalad,
-/obj/item/weapon/reagent_containers/food/snacks/tossedsalad{
+/obj/item/reagent_containers/food/snacks/tossedsalad,
+/obj/item/reagent_containers/food/snacks/tossedsalad{
 	pixel_y = 14
 	},
-/obj/item/weapon/reagent_containers/food/snacks/tossedsalad{
+/obj/item/reagent_containers/food/snacks/tossedsalad{
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/tossedsalad{
+/obj/item/reagent_containers/food/snacks/tossedsalad{
 	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/white,
@@ -1396,7 +1396,7 @@
 /area/awaymission/diescraper/indoors/floor3)
 "ej" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "ek" = (
@@ -1409,7 +1409,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "em" = (
 /obj/item/clothing/under/suit_jacket/charcoal,
-/obj/item/weapon/gun/projectile/automatic/serdy/awp,
+/obj/item/gun/projectile/automatic/serdy/awp,
 /obj/item/ammo_magazine/awp,
 /obj/item/ammo_magazine/awp,
 /obj/item/clothing/shoes/dress,
@@ -1418,7 +1418,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "en" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/cell/mech/super,
+/obj/item/cell/mech/super,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "eo" = (
@@ -1451,13 +1451,13 @@
 /area/awaymission/diescraper/indoors/floor8)
 "ev" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
@@ -1486,7 +1486,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor1)
 "eC" = (
-/obj/item/weapon/storage/mrebag/pill,
+/obj/item/storage/mrebag/pill,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "eD" = (
@@ -1570,8 +1570,8 @@
 /area/awaymission/diescraper/sky)
 "eQ" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/arithrazine,
-/obj/item/weapon/storage/pill_bottle/arithrazine,
+/obj/item/storage/pill_bottle/arithrazine,
+/obj/item/storage/pill_bottle/arithrazine,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "eR" = (
@@ -1603,7 +1603,7 @@
 	color = "grey"
 	},
 /obj/machinery/recharger,
-/obj/item/weapon/inducer/syndicate,
+/obj/item/inducer/syndicate,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor6)
 "eX" = (
@@ -1613,8 +1613,8 @@
 "eY" = (
 /obj/random/junk,
 /obj/random/junk,
-/obj/item/weapon/material/shard/shrapnel,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/plating{
 	temperature = 277;
@@ -1624,7 +1624,7 @@
 /area/awaymission/diescraper/indoors/floor7)
 "eZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor3)
 "fa" = (
@@ -1638,7 +1638,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor8)
 "fb" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "splinterslarge"
 	},
 /obj/effect/floor_decal/corner/purple/diagonal{
@@ -1674,7 +1674,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "ff" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor3)
 "fg" = (
@@ -1724,11 +1724,11 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margherita,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/crunch{
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita,
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/crunch{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/pineapple{
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/pineapple{
 	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/white,
@@ -1773,7 +1773,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "fv" = (
 /obj/item/ammo_magazine/awp,
-/obj/item/weapon/gun/projectile/automatic/serdy/awp,
+/obj/item/gun/projectile/automatic/serdy/awp,
 /turf/simulated/floor/reinforced{
 	temperature = 277;
 	outdoors = 1
@@ -1820,17 +1820,17 @@
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor9)
 "fE" = (
 /obj/structure/table/standard,
-/obj/item/weapon/pen/crayon/marker/black,
-/obj/item/weapon/pen/crayon/marker/black{
+/obj/item/pen/crayon/marker/black,
+/obj/item/pen/crayon/marker/black{
 	pixel_y = 5
 	},
-/obj/item/weapon/pen/crayon/marker/black{
+/obj/item/pen/crayon/marker/black{
 	pixel_y = 3
 	},
 /turf/simulated/floor/lino,
@@ -1860,15 +1860,15 @@
 /area/awaymission/diescraper/indoors/floor2)
 "fI" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_x = -5;
 	pixel_y = -9
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_x = -5;
 	pixel_y = -5
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_x = -5;
 	pixel_y = -1
 	},
@@ -1914,7 +1914,7 @@
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "fN" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -1965,7 +1965,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "fS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "fT" = (
@@ -1999,14 +1999,14 @@
 /area/awaymission/diescraper/indoors/floor10)
 "ga" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/aesirsalad,
-/obj/item/weapon/reagent_containers/food/snacks/flowerchildsalad{
+/obj/item/reagent_containers/food/snacks/aesirsalad,
+/obj/item/reagent_containers/food/snacks/flowerchildsalad{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/rosesalad{
+/obj/item/reagent_containers/food/snacks/rosesalad{
 	pixel_y = 12
 	},
-/obj/item/weapon/reagent_containers/food/snacks/tossedsalad{
+/obj/item/reagent_containers/food/snacks/tossedsalad{
 	pixel_y = -4
 	},
 /obj/structure/window/reinforced,
@@ -2151,7 +2151,7 @@
 /area/awaymission/diescraper/roof)
 "gw" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet/turcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "gx" = (
@@ -2162,7 +2162,7 @@
 /obj/structure/table/steel,
 /obj/random/tool/powermaint,
 /obj/random/tool/power,
-/obj/item/weapon/rcd/advanced/loaded,
+/obj/item/rcd/advanced/loaded,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
 "gz" = (
@@ -2170,12 +2170,12 @@
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/omelette,
-/obj/item/weapon/reagent_containers/food/snacks/omelette{
+/obj/item/reagent_containers/food/snacks/omelette,
+/obj/item/reagent_containers/food/snacks/omelette{
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/omelette,
-/obj/item/weapon/reagent_containers/food/snacks/omelette{
+/obj/item/reagent_containers/food/snacks/omelette,
+/obj/item/reagent_containers/food/snacks/omelette{
 	pixel_y = 4
 	},
 /turf/simulated/floor/wmarble,
@@ -2203,14 +2203,14 @@
 /area/awaymission/diescraper/indoors/floor3)
 "gE" = (
 /obj/structure/safe/floor,
-/obj/item/weapon/reagent_containers/pill/cyanide,
-/obj/item/weapon/storage/pill_bottle/healing_nanites,
+/obj/item/reagent_containers/pill/cyanide,
+/obj/item/storage/pill_bottle/healing_nanites,
 /obj/effect/landmark/corpse/doctor,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/supermatter,
+/obj/item/reagent_containers/glass/beaker/vial/supermatter,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "gF" = (
-/obj/item/weapon/grenade/confetti,
+/obj/item/grenade/confetti,
 /turf/simulated/floor/carpet/retro,
 /area/awaymission/diescraper/indoors/floor9)
 "gG" = (
@@ -2255,7 +2255,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "gO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/cell/device/super,
+/obj/item/cell/device/super,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "gP" = (
@@ -2285,7 +2285,7 @@
 	color = "#f700ff"
 	},
 /obj/structure/table/survival_pod,
-/obj/item/weapon/spacecash/c1000,
+/obj/item/spacecash/c1000,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "gS" = (
@@ -2461,7 +2461,7 @@
 "hr" = (
 /obj/machinery/light/poi,
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/belt/utility/full/multitool,
+/obj/item/storage/belt/utility/full/multitool,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
@@ -2506,8 +2506,8 @@
 /area/awaymission/diescraper/indoors/floor4)
 "hA" = (
 /obj/structure/table/bench/sifwooden/padded,
-/obj/item/weapon/firework_star/weather/confetti,
-/obj/item/weapon/reagent_containers/food/snacks/tomatomeat,
+/obj/item/firework_star/weather/confetti,
+/obj/item/reagent_containers/food/snacks/tomatomeat,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "hB" = (
@@ -2519,11 +2519,11 @@
 /area/awaymission/diescraper/indoors/floor9)
 "hD" = (
 /obj/effect/decal/cleanable/liquid_fuel,
-/obj/item/weapon/weldingtool/alien,
+/obj/item/weldingtool/alien,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
 "hE" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station{
 	outdoors = 0
 	},
@@ -2557,7 +2557,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "hM" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/greendouble,
+/obj/item/bedsheet/greendouble,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "hN" = (
@@ -2606,7 +2606,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "hU" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/devilledegg,
+/obj/item/reagent_containers/food/snacks/devilledegg,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor9)
 "hV" = (
@@ -2719,7 +2719,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "in" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/quickdraw/syringe_case,
+/obj/item/storage/quickdraw/syringe_case,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "ip" = (
@@ -2771,12 +2771,12 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
 "iy" = (
@@ -2850,7 +2850,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "iN" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/unsimulated/floor/wood/alt/parquet,
 /area/awaymission/diescraper/indoors/floor9)
 "iO" = (
@@ -2878,21 +2878,21 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(43,67)
 	},
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
 "iT" = (
@@ -2920,17 +2920,17 @@
 "iX" = (
 /obj/structure/table/marble,
 /obj/structure/window/reinforced,
-/obj/item/weapon/reagent_containers/food/snacks/monkeykabob,
-/obj/item/weapon/reagent_containers/food/snacks/monkeykabob{
+/obj/item/reagent_containers/food/snacks/monkeykabob,
+/obj/item/reagent_containers/food/snacks/monkeykabob{
 	pixel_y = 14
 	},
-/obj/item/weapon/reagent_containers/food/snacks/monkeykabob{
+/obj/item/reagent_containers/food/snacks/monkeykabob{
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/monkeykabob{
+/obj/item/reagent_containers/food/snacks/monkeykabob{
 	pixel_y = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/monkeykabob{
+/obj/item/reagent_containers/food/snacks/monkeykabob{
 	pixel_y = 11
 	},
 /turf/simulated/floor/wood/alt,
@@ -2948,9 +2948,9 @@
 /area/awaymission/diescraper/indoors/floor4)
 "ja" = (
 /obj/structure/table/standard,
-/obj/item/weapon/autopsy_scanner,
-/obj/item/weapon/surgical/FixOVein,
-/obj/item/weapon/surgical/surgicaldrill,
+/obj/item/autopsy_scanner,
+/obj/item/surgical/FixOVein,
+/obj/item/surgical/surgicaldrill,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "jb" = (
@@ -2962,11 +2962,11 @@
 /area/awaymission/diescraper/indoors/floor1)
 "jc" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind,
-/obj/item/weapon/reagent_containers/food/drinks/cans/root_beer,
-/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/starkist,
+/obj/item/reagent_containers/food/drinks/cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/cans/root_beer,
+/obj/item/reagent_containers/food/drinks/cans/gingerale,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
@@ -3008,7 +3008,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "jh" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/spacecash/c1000,
+/obj/item/spacecash/c1000,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "ji" = (
@@ -3095,7 +3095,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "jy" = (
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 2
 	},
 /obj/structure/table/bench/sifwooden,
@@ -3146,7 +3146,7 @@
 	light_power = 1;
 	light_range = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "jG" = (
@@ -3182,7 +3182,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "jL" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "jM" = (
@@ -3192,7 +3192,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "jN" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "jO" = (
@@ -3254,14 +3254,14 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "jY" = (
-/obj/item/weapon/gun/magic/firestaff/vrwizard/fire,
+/obj/item/gun/magic/firestaff/vrwizard/fire,
 /turf/simulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor5)
 "jZ" = (
@@ -3290,34 +3290,34 @@
 /area/awaymission/diescraper/indoors/floor6)
 "kd" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola{
+/obj/item/reagent_containers/food/drinks/cans/terra_cola{
 	pixel_y = 12;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola{
+/obj/item/reagent_containers/food/drinks/cans/terra_cola{
 	pixel_y = 12;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola{
+/obj/item/reagent_containers/food/drinks/cans/terra_cola{
 	pixel_y = 12;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/terra_cola{
+/obj/item/reagent_containers/food/drinks/cans/terra_cola{
 	pixel_y = 12;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice{
+/obj/item/reagent_containers/food/drinks/bottle/orangejuice{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk{
+/obj/item/reagent_containers/food/drinks/bottle/milk{
 	pixel_y = -3;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk{
+/obj/item/reagent_containers/food/drinks/bottle/milk{
 	pixel_y = -3;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk{
+/obj/item/reagent_containers/food/drinks/bottle/milk{
 	pixel_y = -3;
 	pixel_x = -3
 	},
@@ -3340,7 +3340,7 @@
 "kg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/mucus/mapped,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "splinterslarge"
 	},
 /turf/simulated/floor/tiled/steel{
@@ -3368,41 +3368,41 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11;
 	pixel_x = 10
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_y = 11;
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/decaf_cola{
+/obj/item/reagent_containers/food/drinks/cans/decaf_cola{
 	pixel_x = 5
 	},
 /turf/simulated/floor/bmarble,
@@ -3418,7 +3418,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "km" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/spacecasinocash,
+/obj/item/spacecasinocash,
 /turf/unsimulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor6)
 "kn" = (
@@ -3449,7 +3449,7 @@
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
 "kr" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	pixel_y = 0;
 	dir = 4
 	},
@@ -3521,15 +3521,15 @@
 /obj/structure/closet/crate/medical{
 	name = "surgery crate"
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner";
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/storage/firstaid/surgery,
-/obj/item/weapon/storage/firstaid/surgery,
-/obj/item/device/defib_kit/loaded,
+/obj/item/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
+/obj/item/defib_kit/loaded,
 /obj/random/contraband/nofail,
 /obj/item/organ/internal/augment/armmounted,
 /turf/simulated/floor/tiled/dark,
@@ -3550,8 +3550,8 @@
 /obj/machinery/microwave{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/condiment/soysauce,
-/obj/item/weapon/reagent_containers/food/condiment/soysauce{
+/obj/item/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/soysauce{
 	pixel_y = 0;
 	pixel_x = 5
 	},
@@ -3570,13 +3570,13 @@
 	dir = 8;
 	health = null
 	},
-/obj/item/weapon/reagent_containers/food/snacks/generalschicken{
+/obj/item/reagent_containers/food/snacks/generalschicken{
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/generalschicken{
+/obj/item/reagent_containers/food/snacks/generalschicken{
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/generalschicken{
+/obj/item/reagent_containers/food/snacks/generalschicken{
 	pixel_y = 0
 	},
 /turf/simulated/floor/wood,
@@ -3650,8 +3650,8 @@
 	pixel_y = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
 "kV" = (
@@ -3663,9 +3663,9 @@
 /area/awaymission/diescraper/indoors/floor5)
 "kW" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/butterscotch,
-/obj/item/weapon/reagent_containers/food/snacks/burrito_spicy,
-/obj/item/weapon/reagent_containers/food/snacks/burrito_hell{
+/obj/item/reagent_containers/food/snacks/butterscotch,
+/obj/item/reagent_containers/food/snacks/burrito_spicy,
+/obj/item/reagent_containers/food/snacks/burrito_hell{
 	pixel_x = 3
 	},
 /obj/structure/window/basic{
@@ -3692,11 +3692,11 @@
 "kY" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
 "kZ" = (
@@ -3712,7 +3712,7 @@
 /turf/simulated/wall/concrete,
 /area/awaymission/diescraper/indoors/floor2)
 "lb" = (
-/obj/item/weapon/banner/red{
+/obj/item/banner/red{
 	name = "CONVENTION CENTER CLOSED"
 	},
 /turf/simulated/floor/bmarble,
@@ -3728,11 +3728,11 @@
 	dir = 4
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/glasses/square{
+/obj/item/storage/box/glasses/square{
 	pixel_y = 0;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/glass_extras/straws,
+/obj/item/storage/box/glass_extras/straws,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor10)
 "le" = (
@@ -3798,7 +3798,7 @@
 	pixel_y = 0;
 	dir = 4
 	},
-/obj/item/weapon/card/emag,
+/obj/item/card/emag,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "lp" = (
@@ -3811,12 +3811,12 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/freezer/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
 "ls" = (
@@ -3840,7 +3840,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "lw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/neurotoxin,
+/obj/item/reagent_containers/glass/beaker/neurotoxin,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "ly" = (
@@ -3851,29 +3851,29 @@
 /area/awaymission/diescraper/indoors/floor6)
 "lz" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/bottle/stoxin{
+/obj/item/reagent_containers/glass/bottle/stoxin{
 	pixel_x = -6;
 	pixel_y = 10
 	},
-/obj/item/weapon/reagent_containers/glass/bottle/antitoxin{
+/obj/item/reagent_containers/glass/bottle/antitoxin{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline{
+/obj/item/reagent_containers/glass/bottle/inaprovaline{
 	pixel_x = 1
 	},
 /obj/random/medical,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/random/medical,
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/gloves{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/masks,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -3888,7 +3888,7 @@
 	dir = 1
 	},
 /obj/effect/decal/remains,
-/obj/item/weapon/gun/energy/staff/focus,
+/obj/item/gun/energy/staff/focus,
 /turf/simulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor5)
 "lB" = (
@@ -3907,8 +3907,8 @@
 /area/awaymission/diescraper/indoors/floor8)
 "lF" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor11)
 "lG" = (
@@ -3925,7 +3925,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "lK" = (
@@ -3999,15 +3999,15 @@
 /area/awaymission/diescraper/indoors/floor3)
 "lW" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
 "lX" = (
-/obj/item/weapon/gun/magnetic/gasthrower,
+/obj/item/gun/magnetic/gasthrower,
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
@@ -4083,8 +4083,8 @@
 /area/awaymission/diescraper/indoors/floor9)
 "mj" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/folder,
-/obj/item/weapon/folder/white,
+/obj/item/folder,
+/obj/item/folder/white,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "mk" = (
@@ -4105,14 +4105,14 @@
 /area/awaymission/diescraper/indoors/floor10)
 "mn" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/material/knife/butch,
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -4120,8 +4120,8 @@
 /area/awaymission/diescraper/indoors/floor10)
 "mo" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -4131,7 +4131,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "mp" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/bag/mail,
+/obj/item/storage/bag/mail,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor2)
 "mq" = (
@@ -4188,9 +4188,9 @@
 /area/awaymission/diescraper/indoors/floor5)
 "mz" = (
 /obj/structure/table/rack/wood,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -4198,14 +4198,14 @@
 /area/awaymission/diescraper/indoors/floor7)
 "mA" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/book/bundle/custom_library/reference/ThermodynamicReactionsandResearch,
-/obj/item/weapon/book/bundle/custom_library/fiction/coldmountain,
+/obj/item/book/bundle/custom_library/reference/ThermodynamicReactionsandResearch,
+/obj/item/book/bundle/custom_library/fiction/coldmountain,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor6)
 "mB" = (
 /obj/machinery/light/floortube,
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "mC" = (
@@ -4219,7 +4219,7 @@
 /turf/unsimulated/floor/wood/alt/parquet,
 /area/awaymission/diescraper/indoors/floor9)
 "mE" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "splinterslarge"
 	},
 /turf/simulated/floor/plating{
@@ -4327,7 +4327,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "mX" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/moneybag,
+/obj/item/moneybag,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "mY" = (
@@ -4371,7 +4371,7 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "nf" = (
-/obj/item/weapon/reagent_containers/food/drinks/cans/nukie_banana,
+/obj/item/reagent_containers/food/drinks/cans/nukie_banana,
 /turf/simulated/floor/carpet/happy,
 /area/awaymission/diescraper/indoors/floor7)
 "ng" = (
@@ -4386,7 +4386,7 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor2)
 "ni" = (
-/obj/item/weapon/computer_hardware/battery_module/super,
+/obj/item/computer_hardware/battery_module/super,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "nj" = (
@@ -4420,25 +4420,25 @@
 /area/awaymission/diescraper/indoors/floor4)
 "nn" = (
 /obj/structure/table/rack/steel,
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
 	pixel_y = 6
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
 	pixel_y = -5
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
 	pixel_y = -2
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
@@ -4465,7 +4465,7 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor7)
 "nt" = (
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /mob/living/simple_mob/animal/passive/mouse/rat,
 /mob/living/simple_mob/animal/passive/mouse/rat,
 /mob/living/simple_mob/animal/passive/mouse/rat,
@@ -4504,8 +4504,8 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/cornoil,
-/obj/item/weapon/reagent_containers/food/condiment/cookingoil,
+/obj/item/reagent_containers/food/condiment/cornoil,
+/obj/item/reagent_containers/food/condiment/cookingoil,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
 "nx" = (
@@ -4534,12 +4534,12 @@
 /area/awaymission/diescraper/indoors/floor8)
 "nB" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor4)
 "nC" = (
@@ -4557,11 +4557,11 @@
 /area/awaymission/diescraper/indoors/floor8)
 "nE" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/rollingpin{
+/obj/item/material/kitchen/rollingpin{
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/item/weapon/material/knife{
+/obj/item/material/knife{
 	pixel_x = 10;
 	pixel_y = 0
 	},
@@ -4743,7 +4743,7 @@
 /area/awaymission/diescraper/indoors/floor1)
 "od" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "oe" = (
@@ -4799,7 +4799,7 @@
 /turf/unsimulated/wall/seperator,
 /area/awaymission/diescraper/indoors/floor3)
 "ol" = (
-/obj/item/weapon/gun/magic/firestaff,
+/obj/item/gun/magic/firestaff,
 /turf/simulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor5)
 "om" = (
@@ -4848,9 +4848,9 @@
 /area/awaymission/diescraper/indoors/floor2)
 "ou" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor2)
 "ov" = (
@@ -4866,7 +4866,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
 "oz" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	pixel_y = 0;
 	dir = 4
 	},
@@ -4908,7 +4908,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor11)
 "oE" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "oF" = (
@@ -5025,8 +5025,8 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
 "pc" = (
@@ -5038,23 +5038,23 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor9)
 "pd" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey{
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey{
 	pixel_y = 8;
 	pixel_x = 10
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/snaps{
+/obj/item/reagent_containers/food/drinks/bottle/snaps{
 	pixel_y = 7
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
+/obj/item/reagent_containers/food/drinks/bottle/wine{
 	pixel_y = 2;
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_y = 1;
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 0;
 	pixel_x = 13
 	},
@@ -5066,7 +5066,7 @@
 /area/awaymission/diescraper/indoors/floor5)
 "pg" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/rcd/electric/mounted/rig,
+/obj/item/rcd/electric/mounted/rig,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
 "ph" = (
@@ -5081,10 +5081,10 @@
 /area/awaymission/diescraper/indoors/floor9)
 "pi" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/cell/device/giga{
+/obj/item/cell/device/giga{
 	pixel_y = -3
 	},
-/obj/item/weapon/cell/device/giga{
+/obj/item/cell/device/giga{
 	pixel_y = -8
 	},
 /obj/structure/window/basic{
@@ -5104,13 +5104,13 @@
 	dir = 8;
 	health = null
 	},
-/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon{
+/obj/item/reagent_containers/food/snacks/kitsuneudon{
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon{
+/obj/item/reagent_containers/food/snacks/kitsuneudon{
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon{
+/obj/item/reagent_containers/food/snacks/kitsuneudon{
 	pixel_y = 0
 	},
 /turf/simulated/floor/wood,
@@ -5133,7 +5133,7 @@
 /area/awaymission/diescraper/indoors/floor3)
 "pn" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "po" = (
@@ -5204,7 +5204,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor8)
 "py" = (
-/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting,
+/obj/item/gun/magic/firestaff/vrwizard/lighting,
 /turf/simulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor5)
 "pz" = (
@@ -5219,13 +5219,13 @@
 /area/awaymission/diescraper/indoors/floor1)
 "pB" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/tramadol,
-/obj/item/weapon/storage/pill_bottle/tramadol,
-/obj/item/weapon/storage/pill_bottle/vermicetol,
-/obj/item/weapon/storage/pill_bottle/vermicetol,
-/obj/item/weapon/storage/pill_bottle/zoom,
-/obj/item/weapon/storage/pill_bottle/zoom,
-/obj/item/weapon/storage/pill_bottle/zoom,
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/storage/pill_bottle/vermicetol,
+/obj/item/storage/pill_bottle/vermicetol,
+/obj/item/storage/pill_bottle/zoom,
+/obj/item/storage/pill_bottle/zoom,
+/obj/item/storage/pill_bottle/zoom,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "pC" = (
@@ -5276,7 +5276,7 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 8
 	},
-/obj/item/weapon/computer_hardware/processor_unit,
+/obj/item/computer_hardware/processor_unit,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "pL" = (
@@ -5305,10 +5305,10 @@
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/old/pizza,
-/obj/item/weapon/reagent_containers/food/snacks/old/pizza,
-/obj/item/weapon/reagent_containers/food/snacks/old/pizza,
-/obj/item/weapon/reagent_containers/food/snacks/old/pizza{
+/obj/item/reagent_containers/food/snacks/old/pizza,
+/obj/item/reagent_containers/food/snacks/old/pizza,
+/obj/item/reagent_containers/food/snacks/old/pizza,
+/obj/item/reagent_containers/food/snacks/old/pizza{
 	pixel_y = -3
 	},
 /turf/simulated/floor/wmarble,
@@ -5407,7 +5407,7 @@
 	},
 /area/awaymission/diescraper/sky)
 "qc" = (
-/obj/item/weapon/gun/magnetic/fuelrod,
+/obj/item/gun/magnetic/fuelrod,
 /turf/unsimulated/floor/tiled/eris/dark/techfloor{
 	temperature = 277;
 	nitrogen = 93.7835;
@@ -5470,11 +5470,11 @@
 /area/awaymission/diescraper/indoors/floor7)
 "qk" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife{
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife{
 	pixel_y = 0;
 	pixel_x = 11
 	},
@@ -5533,31 +5533,31 @@
 /area/awaymission/diescraper/indoors/floor1)
 "qu" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/ketchup{
+/obj/item/reagent_containers/food/condiment/ketchup{
 	pixel_y = 2;
 	pixel_x = -10
 	},
-/obj/item/weapon/reagent_containers/food/condiment/ketchup{
+/obj/item/reagent_containers/food/condiment/ketchup{
 	pixel_y = -3;
 	pixel_x = -10
 	},
-/obj/item/weapon/reagent_containers/food/condiment/mustard{
+/obj/item/reagent_containers/food/condiment/mustard{
 	pixel_y = 12;
 	pixel_x = -10
 	},
-/obj/item/weapon/reagent_containers/food/condiment/mustard{
+/obj/item/reagent_containers/food/condiment/mustard{
 	pixel_y = 6;
 	pixel_x = -10
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = 0;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = -8;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/packet/mayo{
+/obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_y = -4;
 	pixel_x = -3
 	},
@@ -5581,7 +5581,7 @@
 	},
 /area/awaymission/diescraper/roof)
 "qw" = (
-/obj/item/weapon/storage/mrebag/side,
+/obj/item/storage/mrebag/side,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "qx" = (
@@ -5604,7 +5604,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "qA" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/clown{
+/obj/item/flashlight/lamp/clown{
 	pixel_y = 5
 	},
 /turf/unsimulated/floor/wood/alt/panel,
@@ -5631,8 +5631,8 @@
 /area/awaymission/diescraper/indoors/floor10)
 "qF" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/souldew,
-/obj/item/weapon/storage/pill_bottle/souldew,
+/obj/item/storage/pill_bottle/souldew,
+/obj/item/storage/pill_bottle/souldew,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "qG" = (
@@ -5671,8 +5671,8 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "qL" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/plating{
 	temperature = 277;
 	icon_state = "dmg4"
@@ -5716,7 +5716,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "qT" = (
-/obj/item/weapon/grenade/confetti/party_ball,
+/obj/item/grenade/confetti/party_ball,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/diescraper/indoors/floor9)
 "qU" = (
@@ -5833,7 +5833,7 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "rl" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/coin/verdantium,
+/obj/item/coin/verdantium,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "rm" = (
@@ -5860,7 +5860,7 @@
 	color = "#f700ff"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/projectile/revolver/toy/big_iron,
+/obj/item/gun/projectile/revolver/toy/big_iron,
 /obj/item/toy/plushie/green_fox{
 	icon = 'icons/obj/surgery_vr.dmi';
 	name = "The most beautiful plushie ever";
@@ -5929,7 +5929,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "rz" = (
-/obj/item/weapon/gun/launcher/confetti_cannon/fake_shottie,
+/obj/item/gun/launcher/confetti_cannon/fake_shottie,
 /turf/unsimulated/floor/wood/alt/parquet,
 /area/awaymission/diescraper/indoors/floor9)
 "rA" = (
@@ -5967,17 +5967,17 @@
 /area/awaymission/diescraper/indoors/floor10)
 "rH" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
 "rI" = (
@@ -6001,43 +6001,43 @@
 "rL" = (
 /obj/structure/table/standard,
 /obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/weapon/surgical/retractor,
+/obj/item/surgical/retractor,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "rM" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese_spicy{
+/obj/item/reagent_containers/food/snacks/burrito_cheese_spicy{
 	pixel_x = -3;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_hell{
+/obj/item/reagent_containers/food/snacks/burrito_hell{
 	pixel_x = -12;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese{
+/obj/item/reagent_containers/food/snacks/burrito_cheese{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito{
+/obj/item/reagent_containers/food/snacks/burrito{
 	pixel_x = 13;
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/meatburrito{
+/obj/item/reagent_containers/food/snacks/meatburrito{
 	pixel_y = -4;
 	pixel_x = -12
 	},
-/obj/item/weapon/reagent_containers/food/snacks/meatburrito{
+/obj/item/reagent_containers/food/snacks/meatburrito{
 	pixel_y = -4;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburrito{
+/obj/item/reagent_containers/food/snacks/cheeseburrito{
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_vegan{
+/obj/item/reagent_containers/food/snacks/burrito_vegan{
 	pixel_x = 5;
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery{
+/obj/item/reagent_containers/food/snacks/burrito_mystery{
 	pixel_x = 11;
 	pixel_y = -4
 	},
@@ -6086,8 +6086,8 @@
 /area/awaymission/diescraper/indoors/floor6)
 "rV" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/purifyingagent,
-/obj/item/weapon/storage/pill_bottle/purifyingagent,
+/obj/item/storage/pill_bottle/purifyingagent,
+/obj/item/storage/pill_bottle/purifyingagent,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "rZ" = (
@@ -6176,15 +6176,15 @@
 /area/awaymission/diescraper/indoors/floor9)
 "sl" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
+/obj/item/reagent_containers/glass/beaker/measuring_cup{
 	pixel_x = 10;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/dropper{
+/obj/item/reagent_containers/dropper{
 	pixel_x = -4;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/glass/rag{
+/obj/item/reagent_containers/glass/rag{
 	pixel_x = 7;
 	pixel_y = 2
 	},
@@ -6200,15 +6200,15 @@
 /obj/structure/closet/crate/large{
 	anchored = 1
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/vial/random,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/random,
-/obj/item/weapon/reagent_containers/pill/happy,
-/obj/item/weapon/reagent_containers/pill/happy,
-/obj/item/weapon/reagent_containers/pill/happy,
-/obj/item/weapon/reagent_containers/pill/vermicetol,
-/obj/item/weapon/reagent_containers/pill/vermicetol,
-/obj/item/weapon/reagent_containers/pill/vermicetol,
-/obj/item/weapon/reagent_containers/pill/vermicetol,
+/obj/item/reagent_containers/glass/beaker/vial/random,
+/obj/item/reagent_containers/glass/beaker/vial/random,
+/obj/item/reagent_containers/pill/happy,
+/obj/item/reagent_containers/pill/happy,
+/obj/item/reagent_containers/pill/happy,
+/obj/item/reagent_containers/pill/vermicetol,
+/obj/item/reagent_containers/pill/vermicetol,
+/obj/item/reagent_containers/pill/vermicetol,
+/obj/item/reagent_containers/pill/vermicetol,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "sp" = (
@@ -6234,7 +6234,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor9)
 "su" = (
-/obj/item/weapon/storage/secure/briefcase/money{
+/obj/item/storage/secure/briefcase/money{
 	locked = 0
 	},
 /turf/simulated/floor/outdoors/sidewalk/side{
@@ -6247,8 +6247,8 @@
 	dir = 2
 	},
 /obj/structure/table/woodentable,
-/obj/item/weapon/melee/baton/cattleprod,
-/obj/item/weapon/cell/hyper,
+/obj/item/melee/baton/cattleprod,
+/obj/item/cell/hyper,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "sw" = (
@@ -6323,11 +6323,11 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza{
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza,
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza{
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatpizza{
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza{
 	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/white,
@@ -6362,7 +6362,7 @@
 /turf/unsimulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor8)
 "sM" = (
-/obj/item/weapon/storage/secure/briefcase/rifle{
+/obj/item/storage/secure/briefcase/rifle{
 	locked = 0
 	},
 /turf/simulated/floor/outdoors/dirt/turfpack/station,
@@ -6374,7 +6374,7 @@
 /area/awaymission/diescraper/indoors/floor4)
 "sO" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen/fountain,
+/obj/item/pen/fountain,
 /obj/item/modular_computer/laptop/preset,
 /obj/machinery/light/floortube{
 	dir = 4
@@ -6389,7 +6389,7 @@
 /area/awaymission/diescraper/roof)
 "sQ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/clowndouble,
+/obj/item/bedsheet/clowndouble,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -6426,7 +6426,7 @@
 /area/awaymission/diescraper/indoors/floor1)
 "sX" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/gun/energy/mouseray/otie,
+/obj/item/gun/energy/mouseray/otie,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor1)
 "sY" = (
@@ -6485,13 +6485,13 @@
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/item/clothing/suit/space/void/exploration,
 /obj/item/clothing/head/helmet/space/void/exploration,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/device/suit_cooling_unit,
-/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/suit_cooling_unit,
+/obj/item/tank/jetpack/carbondioxide,
 /obj/item/clothing/suit/space/void/exploration,
 /obj/item/clothing/head/helmet/space/void/exploration,
 /turf/simulated/floor/tiled,
@@ -6543,8 +6543,8 @@
 /area/awaymission/diescraper/outside)
 "tn" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "to" = (
@@ -6558,14 +6558,14 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/space_mountain_wind{
+/obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind{
 	pixel_y = 0;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/space_up{
+/obj/item/reagent_containers/food/drinks/bottle/space_up{
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cola,
+/obj/item/reagent_containers/food/drinks/bottle/cola,
 /obj/machinery/light{
 	pixel_y = 0;
 	dir = 8
@@ -6605,7 +6605,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
-/obj/item/weapon/bedsheet/double,
+/obj/item/bedsheet/double,
 /turf/unsimulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor8)
 "tv" = (
@@ -6637,7 +6637,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
 "tz" = (
-/obj/item/weapon/toy/partypopper,
+/obj/item/toy/partypopper,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/diescraper/indoors/floor9)
 "tA" = (
@@ -6649,30 +6649,30 @@
 /area/awaymission/diescraper/roof)
 "tC" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass{
+/obj/item/reagent_containers/glass/bottle/biomass{
 	pixel_y = 13;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/synaptizine,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/hyperzine,
+/obj/item/reagent_containers/chem_disp_cartridge/synaptizine,
+/obj/item/reagent_containers/chem_disp_cartridge/hyperzine,
 /obj/machinery/chemical_dispenser,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
 "tD" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/box/glasses/square{
+/obj/item/storage/box/glasses/square{
 	pixel_x = 9;
 	pixel_y = 1
 	},
-/obj/item/weapon/storage/box/glasses/rocks{
+/obj/item/storage/box/glasses/rocks{
 	pixel_y = 1;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/box/glasses/pint{
+/obj/item/storage/box/glasses/pint{
 	pixel_y = 11;
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/box/glasses/meta/metapint{
+/obj/item/storage/box/glasses/meta/metapint{
 	pixel_y = 11;
 	pixel_x = 9
 	},
@@ -6800,7 +6800,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "tV" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -6856,7 +6856,7 @@
 /obj/structure/table/steel,
 /obj/random/tool/powermaint,
 /obj/random/tool/power,
-/obj/item/weapon/tool/transforming/altevian,
+/obj/item/tool/transforming/altevian,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
 "uh" = (
@@ -6870,7 +6870,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "ui" = (
 /obj/structure/table/borosilicate,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "uj" = (
@@ -6978,38 +6978,38 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 8;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 9;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 10;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 8;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/box/wings{
+/obj/item/storage/box/wings{
 	pixel_y = 1;
 	pixel_x = 3
 	},
-/obj/item/weapon/storage/box/wings{
+/obj/item/storage/box/wings{
 	pixel_y = 1;
 	pixel_x = -10
 	},
-/obj/item/weapon/storage/box/wings{
+/obj/item/storage/box/wings{
 	pixel_y = 1;
 	pixel_x = -3
 	},
@@ -7092,7 +7092,7 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "uM" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper/pamphlet/violent_video_games,
+/obj/item/paper/pamphlet/violent_video_games,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "uN" = (
@@ -7124,7 +7124,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "uT" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor1)
@@ -7149,12 +7149,12 @@
 /area/awaymission/diescraper/indoors/floor4)
 "uY" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen/fountain8,
+/obj/item/pen/fountain8,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "uZ" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/rollingpapers,
+/obj/item/storage/rollingpapers,
 /turf/simulated/floor/carpet/geo,
 /area/awaymission/diescraper/indoors/floor6)
 "vb" = (
@@ -7172,19 +7172,19 @@
 	dir = 8;
 	health = null
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenkatsu{
+/obj/item/reagent_containers/food/snacks/chickenkatsu{
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenkatsu{
+/obj/item/reagent_containers/food/snacks/chickenkatsu{
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/hotandsoursoup,
-/obj/item/weapon/reagent_containers/food/snacks/hotandsoursoup{
+/obj/item/reagent_containers/food/snacks/hotandsoursoup,
+/obj/item/reagent_containers/food/snacks/hotandsoursoup{
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenmomo,
-/obj/item/weapon/reagent_containers/food/snacks/chickenmomo,
-/obj/item/weapon/reagent_containers/food/snacks/chickenmomo,
+/obj/item/reagent_containers/food/snacks/chickenmomo,
+/obj/item/reagent_containers/food/snacks/chickenmomo,
+/obj/item/reagent_containers/food/snacks/chickenmomo,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor4)
 "vd" = (
@@ -7210,14 +7210,14 @@
 /area/awaymission/diescraper/indoors/floor3)
 "vh" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = 10
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco,
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco,
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = -5
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -7225,7 +7225,7 @@
 /area/awaymission/diescraper/indoors/floor1)
 "vi" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -7235,7 +7235,7 @@
 /area/awaymission/diescraper/indoors/floor11)
 "vj" = (
 /obj/structure/table/bench/sifwooden/padded,
-/obj/item/weapon/grenade/confetti/party_ball,
+/obj/item/grenade/confetti/party_ball,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/diescraper/indoors/floor9)
 "vk" = (
@@ -7253,7 +7253,7 @@
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "vo" = (
-/obj/item/weapon/reagent_containers/food/snacks/tomatosoup,
+/obj/item/reagent_containers/food/snacks/tomatosoup,
 /obj/effect/decal/remains,
 /obj/effect/decal/cleanable/filth,
 /turf/unsimulated/floor/wood/alt/parquet,
@@ -7275,7 +7275,7 @@
 /area/awaymission/diescraper/roof)
 "vs" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/gun/energy/supercannon,
+/obj/item/gun/energy/supercannon,
 /turf/unsimulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor11)
 "vt" = (
@@ -7414,7 +7414,7 @@
 /obj/structure/window/titanium{
 	dir = 4
 	},
-/obj/item/weapon/cell/giga,
+/obj/item/cell/giga,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "vO" = (
@@ -7434,7 +7434,7 @@
 /area/awaymission/diescraper/indoors/floor5)
 "vS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/chipplate,
+/obj/item/reagent_containers/food/snacks/chipplate,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor10)
 "vT" = (
@@ -7632,7 +7632,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "wz" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/cell/device/weapon/recharge/alien/hybrid,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "wA" = (
@@ -7643,7 +7643,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 4
 	},
-/obj/item/weapon/gun/energy/gun/burst,
+/obj/item/gun/energy/gun/burst,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "wB" = (
@@ -7679,23 +7679,23 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "wF" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = -8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito{
+/obj/item/reagent_containers/food/snacks/sliceable/supremoburrito{
 	pixel_x = 12
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fuegoburrito,
-/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito/filled{
+/obj/item/reagent_containers/food/snacks/fuegoburrito,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/filled{
 	pixel_y = 0;
 	pixel_x = -8
 	},
@@ -7710,38 +7710,38 @@
 /area/awaymission/diescraper/indoors/floor7)
 "wH" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/meatburrito{
+/obj/item/reagent_containers/food/snacks/meatburrito{
 	pixel_y = -4;
 	pixel_x = -12
 	},
-/obj/item/weapon/reagent_containers/food/snacks/meatburrito{
+/obj/item/reagent_containers/food/snacks/meatburrito{
 	pixel_y = -4;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburrito{
+/obj/item/reagent_containers/food/snacks/cheeseburrito{
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_vegan{
+/obj/item/reagent_containers/food/snacks/burrito_vegan{
 	pixel_x = 5;
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery{
+/obj/item/reagent_containers/food/snacks/burrito_mystery{
 	pixel_x = 11;
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_hell{
+/obj/item/reagent_containers/food/snacks/burrito_hell{
 	pixel_x = -12;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese_spicy{
+/obj/item/reagent_containers/food/snacks/burrito_cheese_spicy{
 	pixel_x = -3;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese{
+/obj/item/reagent_containers/food/snacks/burrito_cheese{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/burrito{
+/obj/item/reagent_containers/food/snacks/burrito{
 	pixel_x = 13;
 	pixel_y = 6
 	},
@@ -7767,7 +7767,7 @@
 /area/awaymission/diescraper/indoors/floor7)
 "wL" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/reagent_containers/spray/chemsprayer,
+/obj/item/reagent_containers/spray/chemsprayer,
 /obj/random/tool/power,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
@@ -7893,12 +7893,12 @@
 /area/awaymission/diescraper/indoors/floor6)
 "xi" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
 "xj" = (
@@ -7987,11 +7987,11 @@
 	color = "#f700ff"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/projectile/revolver/toy,
-/obj/item/weapon/gun/projectile/revolver/toy,
-/obj/item/weapon/gun/projectile/revolver/toy,
-/obj/item/weapon/gun/projectile/revolver/toy,
-/obj/item/weapon/gun/projectile/revolver,
+/obj/item/gun/projectile/revolver/toy,
+/obj/item/gun/projectile/revolver/toy,
+/obj/item/gun/projectile/revolver/toy,
+/obj/item/gun/projectile/revolver/toy,
+/obj/item/gun/projectile/revolver,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "xt" = (
@@ -8030,9 +8030,9 @@
 /area/awaymission/diescraper/indoors/floor9)
 "xy" = (
 /obj/structure/table/rack/shelf/wood,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
+/obj/item/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "xz" = (
@@ -8100,8 +8100,8 @@
 /area/awaymission/diescraper/indoors/floor8)
 "xL" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/melee/baton/cattleprod,
-/obj/item/weapon/cell/hyper,
+/obj/item/melee/baton/cattleprod,
+/obj/item/cell/hyper,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "xM" = (
@@ -8131,8 +8131,8 @@
 "xQ" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/salvageable/implant_container,
-/obj/item/weapon/reagent_containers/food/condiment/ketchup,
-/obj/item/weapon/reagent_containers/food/condiment/mustard,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/mustard,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
 "xR" = (
@@ -8189,7 +8189,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "yc" = (
 /obj/structure/table/bench/sifwooden/padded,
-/obj/item/weapon/gun/launcher/confetti_cannon/overdrive,
+/obj/item/gun/launcher/confetti_cannon/overdrive,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/diescraper/indoors/floor9)
 "yd" = (
@@ -8228,11 +8228,11 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "yi" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour/rustic{
+/obj/item/reagent_containers/food/condiment/carton/flour/rustic{
 	pixel_y = 0;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/condiment/carton/sugar,
+/obj/item/reagent_containers/food/condiment/carton/sugar,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -8243,10 +8243,10 @@
 /area/awaymission/diescraper/indoors/floor112)
 "yk" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/burncard,
-/obj/item/weapon/storage/pill_bottle/burncard,
-/obj/item/weapon/storage/pill_bottle/juggernog,
-/obj/item/weapon/storage/pill_bottle/juggernog,
+/obj/item/storage/pill_bottle/burncard,
+/obj/item/storage/pill_bottle/burncard,
+/obj/item/storage/pill_bottle/juggernog,
+/obj/item/storage/pill_bottle/juggernog,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "yl" = (
@@ -8267,11 +8267,11 @@
 	dir = 8;
 	health = 1e+006
 	},
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/fire{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "yq" = (
@@ -8281,7 +8281,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "yr" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/book/bundle/custom_library/fiction/beyondthedoor,
+/obj/item/book/bundle/custom_library/fiction/beyondthedoor,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor6)
 "ys" = (
@@ -8312,32 +8312,32 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = 2
 	},
 /turf/simulated/floor/bmarble,
@@ -8390,7 +8390,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4second)
 "yG" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "splinterslarge"
 	},
 /turf/simulated/floor/plating{
@@ -8538,7 +8538,7 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "yZ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/spacecasinocash,
+/obj/item/spacecasinocash,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "za" = (
@@ -8563,7 +8563,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor7)
 "ze" = (
-/obj/item/weapon/c_tube,
+/obj/item/c_tube,
 /obj/structure/table/standard,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
@@ -8606,28 +8606,28 @@
 /area/awaymission/diescraper/indoors/floor9)
 "zl" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/reagent_containers/food/snacks/lomein{
+/obj/item/reagent_containers/food/snacks/lomein{
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/lomein{
+/obj/item/reagent_containers/food/snacks/lomein{
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/lomein{
+/obj/item/reagent_containers/food/snacks/lomein{
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fortunecookie{
+/obj/item/reagent_containers/food/snacks/fortunecookie{
 	pixel_y = 7;
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fortunecookie{
+/obj/item/reagent_containers/food/snacks/fortunecookie{
 	pixel_y = 7;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fortunecookie{
+/obj/item/reagent_containers/food/snacks/fortunecookie{
 	pixel_y = 7;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fortunecookie{
+/obj/item/reagent_containers/food/snacks/fortunecookie{
 	pixel_y = 7
 	},
 /obj/structure/window/reinforced{
@@ -8665,8 +8665,8 @@
 /area/awaymission/diescraper/indoors/floor10)
 "zq" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/mop,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "zr" = (
@@ -8690,7 +8690,7 @@
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
-/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "zu" = (
@@ -8710,27 +8710,27 @@
 /area/awaymission/diescraper/indoors/floor2)
 "zw" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/jager{
+/obj/item/reagent_containers/food/drinks/bottle/jager{
 	pixel_y = 11;
 	pixel_x = 16
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/gin{
+/obj/item/reagent_containers/food/drinks/bottle/gin{
 	pixel_y = 3;
 	pixel_x = 13
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac{
+/obj/item/reagent_containers/food/drinks/bottle/cognac{
 	pixel_y = 7;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/patron{
+/obj/item/reagent_containers/food/drinks/bottle/patron{
 	pixel_y = 11;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao{
+/obj/item/reagent_containers/food/drinks/bottle/bluecuracao{
 	pixel_y = 1;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine{
+/obj/item/reagent_containers/food/drinks/bottle/whitewine{
 	pixel_y = 2;
 	pixel_x = 6
 	},
@@ -8785,30 +8785,30 @@
 /area/awaymission/diescraper/indoors/floor9)
 "zE" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 0;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 0;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 0;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 1;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 1;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 1;
 	pixel_x = 6
 	},
@@ -8848,12 +8848,12 @@
 /area/awaymission/diescraper/indoors/floor6)
 "zK" = (
 /obj/structure/closet/secure_closet/freezer/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
-/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
+/obj/item/reagent_containers/food/snacks/meat/chicken,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor4)
 "zL" = (
@@ -8877,13 +8877,13 @@
 /area/awaymission/diescraper/indoors/floor5)
 "zO" = (
 /obj/structure/table/rack/shelf/wood,
-/obj/item/weapon/pen/autostun/paralyse,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen/fountain,
-/obj/item/weapon/pen/fountain2,
-/obj/item/weapon/pen/fountain3,
+/obj/item/pen/autostun/paralyse,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen/fountain,
+/obj/item/pen/fountain2,
+/obj/item/pen/fountain3,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "zP" = (
@@ -8988,12 +8988,12 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Ac" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/rcd/electric/mounted/mecha,
+/obj/item/rcd/electric/mounted/mecha,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
 "Ad" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/launcher/syringe,
+/obj/item/gun/launcher/syringe,
 /obj/machinery/recharger,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
@@ -9077,10 +9077,10 @@
 /area/awaymission/diescraper/indoors/floor6)
 "Aq" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/paracetamol,
-/obj/item/weapon/storage/pill_bottle/paracetamol,
-/obj/item/weapon/storage/pill_bottle/peridaxon,
-/obj/item/weapon/storage/pill_bottle/peridaxon,
+/obj/item/storage/pill_bottle/paracetamol,
+/obj/item/storage/pill_bottle/paracetamol,
+/obj/item/storage/pill_bottle/peridaxon,
+/obj/item/storage/pill_bottle/peridaxon,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "Ar" = (
@@ -9088,38 +9088,38 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 8;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 9;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 10;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenwing{
+/obj/item/reagent_containers/food/snacks/chickenwing{
 	pixel_y = 8;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/box/wings{
+/obj/item/storage/box/wings{
 	pixel_y = 1;
 	pixel_x = 3
 	},
-/obj/item/weapon/storage/box/wings{
+/obj/item/storage/box/wings{
 	pixel_y = 1;
 	pixel_x = -10
 	},
-/obj/item/weapon/storage/box/wings{
+/obj/item/storage/box/wings{
 	pixel_y = 1;
 	pixel_x = -3
 	},
@@ -9133,12 +9133,12 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife{
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife{
 	pixel_y = 0;
 	pixel_x = 11
 	},
@@ -9152,7 +9152,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
-/obj/item/weapon/newspaper,
+/obj/item/newspaper,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "Aw" = (
@@ -9187,7 +9187,7 @@
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "AB" = (
-/obj/item/weapon/grenade/supermatter,
+/obj/item/grenade/supermatter,
 /turf/simulated/floor/carpet/happy,
 /area/awaymission/diescraper/indoors/floor7)
 "AC" = (
@@ -9203,7 +9203,7 @@
 /turf/simulated/floor/cult,
 /area/awaymission/diescraper/indoors/floor2)
 "AE" = (
-/obj/item/weapon/spacecasinocash,
+/obj/item/spacecasinocash,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "AF" = (
@@ -9248,10 +9248,10 @@
 /area/awaymission/diescraper/indoors/floor9)
 "AM" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = 4
 	},
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = -5
 	},
 /turf/simulated/floor/tiled,
@@ -9398,23 +9398,23 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor6)
 "Bi" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey{
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey{
 	pixel_y = 8;
 	pixel_x = 10
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_y = 13
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
+/obj/item/reagent_containers/food/drinks/bottle/wine{
 	pixel_y = 2;
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_y = 1;
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_y = 3;
 	pixel_x = 14
 	},
@@ -9425,7 +9425,7 @@
 	dir = 2
 	},
 /obj/structure/table/woodentable,
-/obj/item/weapon/card/id/diescrapergun,
+/obj/item/card/id/diescrapergun,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "Bk" = (
@@ -9492,7 +9492,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Bt" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/energy/medigun,
+/obj/item/gun/energy/medigun,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "Bu" = (
@@ -9547,7 +9547,7 @@
 /area/awaymission/diescraper/indoors/floor1)
 "BG" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/integrated_circuit_printer/all_upgrades,
+/obj/item/integrated_circuit_printer/all_upgrades,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor4)
 "BH" = (
@@ -9557,15 +9557,15 @@
 	dir = 4;
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/glass/rag{
+/obj/item/reagent_containers/glass/rag{
 	pixel_x = 7;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
+/obj/item/reagent_containers/glass/beaker/measuring_cup{
 	pixel_x = 10;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/dropper{
+/obj/item/reagent_containers/dropper{
 	pixel_x = -4;
 	pixel_y = 0
 	},
@@ -9643,15 +9643,15 @@
 /area/awaymission/diescraper/indoors/floor6)
 "BS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_y = -5
 	},
-/obj/item/weapon/pen/blue,
+/obj/item/pen/blue,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "BT" = (
 /obj/structure/closet,
-/obj/item/weapon/gun/energy/gun/rifle,
+/obj/item/gun/energy/gun/rifle,
 /turf/simulated/floor/tiled/kafel_full,
 /area/awaymission/diescraper/indoors/floor2)
 "BU" = (
@@ -9679,23 +9679,23 @@
 /area/awaymission/diescraper/indoors/floor3)
 "BX" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 14;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua{
+/obj/item/reagent_containers/food/drinks/bottle/kahlua{
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/lemonadeschnapps{
+/obj/item/reagent_containers/food/drinks/bottle/lemonadeschnapps{
 	pixel_y = 5;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager{
+/obj/item/reagent_containers/food/drinks/bottle/goldschlager{
 	pixel_y = 13;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe{
+/obj/item/reagent_containers/food/drinks/bottle/absinthe{
 	pixel_y = 3;
 	pixel_x = -8
 	},
@@ -9726,7 +9726,7 @@
 	amount = 10
 	},
 /obj/structure/mopbucket,
-/obj/item/weapon/mop,
+/obj/item/mop,
 /mob/living/simple_mob/animal/passive/mouse/rat,
 /mob/living/simple_mob/animal/passive/mouse/rat,
 /mob/living/simple_mob/animal/passive/mouse/rat,
@@ -9745,21 +9745,21 @@
 /area/awaymission/diescraper/indoors/floor1)
 "Cf" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/device/radio{
+/obj/item/storage/box/lights/mixed,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/radio{
 	frequency = 1487;
 	icon_state = "med_walkietalkie";
 	name = "Medbay Emergency Radio Link"
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	frequency = 1487;
 	icon_state = "med_walkietalkie";
 	name = "Medbay Emergency Radio Link"
 	},
-/obj/item/weapon/tool/crowbar/red,
-/obj/item/weapon/tool/crowbar/red,
+/obj/item/tool/crowbar/red,
+/obj/item/tool/crowbar/red,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/suit/straight_jacket,
 /obj/machinery/light{
@@ -9796,7 +9796,7 @@
 	dir = 4;
 	req_access = list(886)
 	},
-/obj/item/weapon/cell/giga,
+/obj/item/cell/giga,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "Cl" = (
@@ -9811,7 +9811,7 @@
 /area/awaymission/diescraper/indoors/floor7)
 "Cm" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/mimedouble,
+/obj/item/bedsheet/mimedouble,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/diescraper/indoors/floor9)
 "Co" = (
@@ -9838,13 +9838,13 @@
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/item/clothing/suit/space/void/pilot,
 /obj/item/clothing/head/helmet/space/void/pilot,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
-/obj/item/device/suit_cooling_unit,
-/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/suit_cooling_unit,
+/obj/item/tank/jetpack/carbondioxide,
 /obj/item/clothing/suit/space/void/pilot,
 /obj/item/clothing/head/helmet/space/void/pilot,
 /turf/simulated/floor/tiled,
@@ -9927,7 +9927,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
 "CI" = (
-/obj/item/weapon/computer_hardware/battery_module/lambda,
+/obj/item/computer_hardware/battery_module/lambda,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "CJ" = (
@@ -10004,7 +10004,7 @@
 /area/awaymission/diescraper/sky)
 "CV" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "CW" = (
@@ -10128,15 +10128,15 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Dl" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/tonic,
-/obj/item/weapon/reagent_containers/food/drinks/cans/tonic,
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind,
-/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater,
-/obj/item/weapon/reagent_containers/food/drinks/cans/root_beer,
-/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice,
-/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale,
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/tonic,
+/obj/item/reagent_containers/food/drinks/cans/tonic,
+/obj/item/reagent_containers/food/drinks/cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/cans/sodawater,
+/obj/item/reagent_containers/food/drinks/cans/root_beer,
+/obj/item/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/reagent_containers/food/drinks/cans/gingerale,
+/obj/item/reagent_containers/food/drinks/cans/dr_gibb,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -10157,47 +10157,47 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/chickenfillet{
+/obj/item/reagent_containers/food/snacks/chickenfillet{
 	pixel_y = 3;
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenfillet{
+/obj/item/reagent_containers/food/snacks/chickenfillet{
 	pixel_y = -5;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenfillet{
+/obj/item/reagent_containers/food/snacks/chickenfillet{
 	pixel_y = -4;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenfillet{
+/obj/item/reagent_containers/food/snacks/chickenfillet{
 	pixel_y = 0;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit{
+/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit{
 	pixel_y = 3;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit{
+/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit{
 	pixel_y = 7;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit{
+/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit{
 	pixel_y = 10;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nugget{
+/obj/item/reagent_containers/food/snacks/nugget{
 	pixel_y = -12;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nugget{
+/obj/item/reagent_containers/food/snacks/nugget{
 	pixel_y = -3;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nugget{
+/obj/item/reagent_containers/food/snacks/nugget{
 	pixel_y = -6;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nugget{
+/obj/item/reagent_containers/food/snacks/nugget{
 	pixel_y = -9;
 	pixel_x = 8
 	},
@@ -10243,7 +10243,7 @@
 /area/awaymission/diescraper/indoors/floor1)
 "Dx" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor3)
 "Dy" = (
@@ -10290,7 +10290,7 @@
 /area/awaymission/diescraper/roof)
 "DD" = (
 /obj/random/junk,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/plating{
 	temperature = 277;
@@ -10356,7 +10356,7 @@
 /area/awaymission/diescraper/indoors/floor4)
 "DM" = (
 /obj/structure/table/reinforced,
-/obj/item/device/retail_scanner,
+/obj/item/retail_scanner,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor7)
 "DN" = (
@@ -10410,7 +10410,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/diescraper/indoors/floor7)
 "DW" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/plating{
@@ -10457,7 +10457,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "Ee" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "splinterslarge"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -10505,7 +10505,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/sky)
 "En" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/plating{
 	temperature = 277;
@@ -10547,7 +10547,7 @@
 "Eu" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/tool/power,
-/obj/item/weapon/rcd/advanced/loaded,
+/obj/item/rcd/advanced/loaded,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
 "Ev" = (
@@ -10600,8 +10600,8 @@
 /area/awaymission/diescraper/indoors/floor4)
 "ED" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/vial,
-/obj/item/weapon/storage/fancy/vials,
+/obj/item/reagent_containers/glass/beaker/vial,
+/obj/item/storage/fancy/vials,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "EE" = (
@@ -10685,7 +10685,7 @@
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "EQ" = (
-/obj/item/weapon/storage/secure/briefcase/fuelrod,
+/obj/item/storage/secure/briefcase/fuelrod,
 /turf/unsimulated/floor/tiled/eris/dark/techfloor{
 	temperature = 277;
 	nitrogen = 93.7835;
@@ -10700,7 +10700,7 @@
 /area/awaymission/diescraper/indoors/floor4)
 "ES" = (
 /obj/machinery/washing_machine,
-/obj/item/weapon/reagent_containers/food/snacks/badrecipe,
+/obj/item/reagent_containers/food/snacks/badrecipe,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor9)
 "ET" = (
@@ -10711,7 +10711,7 @@
 	dir = 8
 	},
 /obj/effect/decal/remains,
-/obj/item/weapon/gun/projectile/revolver{
+/obj/item/gun/projectile/revolver{
 	pixel_y = 1;
 	pixel_x = -13
 	},
@@ -10719,10 +10719,10 @@
 /area/awaymission/diescraper/indoors/floor10)
 "EV" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/blood_regen,
-/obj/item/weapon/storage/pill_bottle/blood_regen,
-/obj/item/weapon/storage/pill_bottle/kelotane,
-/obj/item/weapon/storage/pill_bottle/kelotane,
+/obj/item/storage/pill_bottle/blood_regen,
+/obj/item/storage/pill_bottle/blood_regen,
+/obj/item/storage/pill_bottle/kelotane,
+/obj/item/storage/pill_bottle/kelotane,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "EW" = (
@@ -10731,7 +10731,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "EX" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/twohanded/sledgehammer,
+/obj/item/material/twohanded/sledgehammer,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
 "EY" = (
@@ -10768,7 +10768,7 @@
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
 "Fe" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/plating{
 	temperature = 277;
 	oxygen = 20.7263;
@@ -10795,47 +10795,47 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/chickenfillet{
+/obj/item/reagent_containers/food/snacks/chickenfillet{
 	pixel_y = 3;
 	pixel_x = -6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenfillet{
+/obj/item/reagent_containers/food/snacks/chickenfillet{
 	pixel_y = -5;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenfillet{
+/obj/item/reagent_containers/food/snacks/chickenfillet{
 	pixel_y = -4;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chickenfillet{
+/obj/item/reagent_containers/food/snacks/chickenfillet{
 	pixel_y = 0;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit{
+/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit{
 	pixel_y = 3;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit{
+/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit{
 	pixel_y = 7;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit{
+/obj/item/reagent_containers/food/snacks/plumphelmetbiscuit{
 	pixel_y = 10;
 	pixel_x = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nugget{
+/obj/item/reagent_containers/food/snacks/nugget{
 	pixel_y = -12;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nugget{
+/obj/item/reagent_containers/food/snacks/nugget{
 	pixel_y = -3;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nugget{
+/obj/item/reagent_containers/food/snacks/nugget{
 	pixel_y = -6;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nugget{
+/obj/item/reagent_containers/food/snacks/nugget{
 	pixel_y = -9;
 	pixel_x = 8
 	},
@@ -10851,7 +10851,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Fj" = (
 /obj/structure/table/standard,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
@@ -10927,25 +10927,25 @@
 /area/awaymission/diescraper/indoors/floor4)
 "Ft" = (
 /obj/structure/table/rack/steel,
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
 	pixel_y = 6
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
 	pixel_y = -5
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
 	pixel_y = -2
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
@@ -10994,7 +10994,7 @@
 /area/awaymission/diescraper/indoors/floor7)
 "FB" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor2)
 "FC" = (
@@ -11038,11 +11038,11 @@
 /area/awaymission/diescraper/indoors/floor9)
 "FI" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/paper/pamphlet,
-/obj/item/weapon/paper/pamphlet,
-/obj/item/weapon/paper/pamphlet,
-/obj/item/weapon/paper/pamphlet,
-/obj/item/weapon/paper/pamphlet/violent_video_games,
+/obj/item/paper/pamphlet,
+/obj/item/paper/pamphlet,
+/obj/item/paper/pamphlet,
+/obj/item/paper/pamphlet,
+/obj/item/paper/pamphlet/violent_video_games,
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor1)
 "FJ" = (
@@ -11071,7 +11071,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "FM" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/burrito_hell,
+/obj/item/reagent_containers/food/snacks/burrito_hell,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor6)
 "FN" = (
@@ -11168,7 +11168,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Gc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen/fountain7,
+/obj/item/pen/fountain7,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "Gd" = (
@@ -11181,17 +11181,17 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
-/obj/item/weapon/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
+/obj/item/reagent_containers/food/snacks/spagetti,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
 "Gf" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/energy/medigun,
+/obj/item/gun/energy/medigun,
 /obj/effect/decal/cleanable/mucus/mapped,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
@@ -11203,7 +11203,7 @@
 /area/awaymission/diescraper/indoors/floor4)
 "Gh" = (
 /obj/structure/table/bench/wooden,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "Gi" = (
@@ -11240,8 +11240,8 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "Gp" = (
-/obj/item/weapon/material/shard/shrapnel,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/item/stack/material/steel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/plating{
@@ -11258,7 +11258,7 @@
 	dir = 4;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/snacks/badrecipe,
+/obj/item/reagent_containers/food/snacks/badrecipe,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "Gr" = (
@@ -11318,38 +11318,38 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Gz" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/pill/inaprovaline{
+/obj/item/reagent_containers/pill/inaprovaline{
 	pixel_y = 11;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/pill/inaprovaline{
+/obj/item/reagent_containers/pill/inaprovaline{
 	pixel_y = -3;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/pill/inaprovaline{
+/obj/item/reagent_containers/pill/inaprovaline{
 	pixel_y = 0;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/pill/inaprovaline{
+/obj/item/reagent_containers/pill/inaprovaline{
 	pixel_y = 1;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/pill/inaprovaline{
+/obj/item/reagent_containers/pill/inaprovaline{
 	pixel_y = 8;
 	pixel_x = 9
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "GA" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
 "GB" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/book/bundle/custom_library/reference/recyclingprocedures,
-/obj/item/weapon/spellbook/oneuse/fireball,
+/obj/item/book/bundle/custom_library/reference/recyclingprocedures,
+/obj/item/spellbook/oneuse/fireball,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor6)
 "GC" = (
@@ -11358,9 +11358,9 @@
 	layer = 3
 	},
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper/pamphlet,
-/obj/item/weapon/paper/pamphlet,
-/obj/item/weapon/paper/pamphlet,
+/obj/item/paper/pamphlet,
+/obj/item/paper/pamphlet,
+/obj/item/paper/pamphlet,
 /turf/unsimulated/floor/tiled/milspec,
 /area/awaymission/diescraper/indoors/floor6)
 "GD" = (
@@ -11389,15 +11389,15 @@
 /obj/structure/sink/countertop{
 	pixel_y = 15
 	},
-/obj/item/weapon/reagent_containers/glass/rag{
+/obj/item/reagent_containers/glass/rag{
 	pixel_x = 7;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
+/obj/item/reagent_containers/glass/beaker/measuring_cup{
 	pixel_x = 10;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/dropper{
+/obj/item/reagent_containers/dropper{
 	pixel_x = -4;
 	pixel_y = 0
 	},
@@ -11440,13 +11440,13 @@
 /area/awaymission/diescraper/indoors/floor4)
 "GP" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/osteodaxon,
-/obj/item/weapon/storage/pill_bottle/osteodaxon,
-/obj/item/weapon/storage/pill_bottle/osteodaxon,
-/obj/item/weapon/storage/pill_bottle/combat,
-/obj/item/weapon/storage/pill_bottle/corophizine,
-/obj/item/weapon/storage/pill_bottle/corophizine,
-/obj/item/weapon/storage/pill_bottle/nutriment,
+/obj/item/storage/pill_bottle/osteodaxon,
+/obj/item/storage/pill_bottle/osteodaxon,
+/obj/item/storage/pill_bottle/osteodaxon,
+/obj/item/storage/pill_bottle/combat,
+/obj/item/storage/pill_bottle/corophizine,
+/obj/item/storage/pill_bottle/corophizine,
+/obj/item/storage/pill_bottle/nutriment,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "GQ" = (
@@ -11464,11 +11464,11 @@
 	health = 25;
 	name = "reinforced grille"
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 5;
 	pixel_y = 10
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor,
@@ -11485,7 +11485,7 @@
 /area/awaymission/diescraper/indoors/floor7)
 "GT" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/flashlight/lamp/clown,
+/obj/item/flashlight/lamp/clown,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/diescraper/indoors/floor10)
 "GU" = (
@@ -11626,16 +11626,16 @@
 /area/awaymission/diescraper/indoors/floor4)
 "Ht" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/radium,
+/obj/item/reagent_containers/chem_disp_cartridge/radium,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
 "Hu" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/mustard{
+/obj/item/reagent_containers/food/condiment/mustard{
 	pixel_y = 6;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/ketchup,
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor10)
 "Hv" = (
@@ -11653,8 +11653,8 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Hx" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/hemostat,
-/obj/item/weapon/surgical/cautery,
+/obj/item/surgical/hemostat,
+/obj/item/surgical/cautery,
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#DDFFD3"
@@ -11776,16 +11776,16 @@
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/ghostmuffin/poison,
-/obj/item/weapon/reagent_containers/food/snacks/ghostmuffin/berry{
+/obj/item/reagent_containers/food/snacks/ghostmuffin/poison,
+/obj/item/reagent_containers/food/snacks/ghostmuffin/berry{
 	pixel_y = -2;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/ghostmuffin/berry{
+/obj/item/reagent_containers/food/snacks/ghostmuffin/berry{
 	pixel_y = 2;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/ghostmuffin/berry{
+/obj/item/reagent_containers/food/snacks/ghostmuffin/berry{
 	pixel_y = -5;
 	pixel_x = 6
 	},
@@ -11850,7 +11850,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/diescraper/indoors/floor6)
 "HZ" = (
-/obj/item/weapon/storage/mrebag/menu3,
+/obj/item/storage/mrebag/menu3,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "Ia" = (
@@ -11878,11 +11878,11 @@
 	pixel_y = 32;
 	locked = 0
 	},
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "Ih" = (
@@ -11896,34 +11896,34 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "Ii" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/chips{
+/obj/item/reagent_containers/food/snacks/chips{
 	pixel_y = -3;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chips{
+/obj/item/reagent_containers/food/snacks/chips{
 	pixel_y = -3;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chips{
+/obj/item/reagent_containers/food/snacks/chips{
 	pixel_y = -3;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chips{
+/obj/item/reagent_containers/food/snacks/chips{
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chips{
+/obj/item/reagent_containers/food/snacks/chips{
 	pixel_y = -3;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/unajerky{
+/obj/item/reagent_containers/food/snacks/unajerky{
 	pixel_y = 12;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/unajerky{
+/obj/item/reagent_containers/food/snacks/unajerky{
 	pixel_y = 12;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/unajerky{
+/obj/item/reagent_containers/food/snacks/unajerky{
 	pixel_y = 15;
 	pixel_x = -2
 	},
@@ -12012,12 +12012,12 @@
 /area/awaymission/diescraper/indoors/floor5)
 "Iu" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "Iv" = (
-/obj/item/weapon/material/shard/shrapnel,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/plating{
 	temperature = 277;
@@ -12111,8 +12111,8 @@
 "IH" = (
 /obj/structure/railing,
 /obj/structure/table/hardwoodtable,
-/obj/item/device/multitool,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/multitool,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor1)
 "II" = (
@@ -12385,9 +12385,9 @@
 /area/awaymission/diescraper/indoors/floor8)
 "JD" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/bonesetter,
-/obj/item/weapon/surgical/bonegel,
-/obj/item/weapon/surgical/bioregen,
+/obj/item/surgical/bonesetter,
+/obj/item/surgical/bonegel,
+/obj/item/surgical/bioregen,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "JE" = (
@@ -12437,9 +12437,9 @@
 /area/awaymission/diescraper/indoors/floor5)
 "JN" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/bicaridine,
-/obj/item/weapon/storage/pill_bottle/bicaridine,
-/obj/item/weapon/storage/pill_bottle/myelamine,
+/obj/item/storage/pill_bottle/bicaridine,
+/obj/item/storage/pill_bottle/bicaridine,
+/obj/item/storage/pill_bottle/myelamine,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "JO" = (
@@ -12454,8 +12454,8 @@
 /area/awaymission/diescraper/indoors/floor2)
 "JR" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/scalpel,
-/obj/item/weapon/surgical/circular_saw{
+/obj/item/surgical/scalpel,
+/obj/item/surgical/circular_saw{
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -12470,8 +12470,8 @@
 	color = "#f700ff"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/launcher/pneumatic,
-/obj/item/weapon/tank/oxygen/yellow,
+/obj/item/gun/launcher/pneumatic,
+/obj/item/tank/oxygen/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "JU" = (
@@ -12485,8 +12485,8 @@
 /obj/structure/table/marble{
 	color = "grey"
 	},
-/obj/item/weapon/cell/giga,
-/obj/item/weapon/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor6)
 "JX" = (
@@ -12517,32 +12517,32 @@
 /obj/machinery/light{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_cola{
+/obj/item/reagent_containers/food/drinks/cans/lemon_cola{
 	pixel_y = 12;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/straw_cola{
+/obj/item/reagent_containers/food/drinks/cans/straw_cola{
 	pixel_x = 2
 	},
 /obj/structure/window/basic{
@@ -12585,7 +12585,7 @@
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
 "Kj" = (
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor6)
 "Kk" = (
@@ -12606,9 +12606,9 @@
 /area/awaymission/diescraper/indoors/floor1)
 "Kn" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper/pamphlet,
-/obj/item/weapon/paper/pamphlet,
-/obj/item/weapon/paper/pamphlet,
+/obj/item/paper/pamphlet,
+/obj/item/paper/pamphlet,
+/obj/item/paper/pamphlet,
 /turf/unsimulated/floor/tiled/milspec,
 /area/awaymission/diescraper/indoors/floor6)
 "Ko" = (
@@ -12618,7 +12618,7 @@
 	},
 /area/awaymission/diescraper/indoors/floor5)
 "Kp" = (
-/obj/item/weapon/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
@@ -12648,7 +12648,7 @@
 /obj/item/ammo_magazine/m9mm/compact,
 /obj/item/ammo_magazine/m9mm/compact,
 /obj/item/ammo_magazine/m9mm/compact,
-/obj/item/weapon/gun/projectile/pistol,
+/obj/item/gun/projectile/pistol,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
 	},
@@ -12679,7 +12679,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor4)
 "Ky" = (
-/obj/item/weapon/digestion_remains/skull/teshari,
+/obj/item/digestion_remains/skull/teshari,
 /obj/effect/decal/cleanable/filth,
 /mob/living/simple_mob/animal/passive/mouse/rat,
 /mob/living/simple_mob/animal/passive/mouse/rat,
@@ -12786,12 +12786,12 @@
 /area/awaymission/diescraper/indoors/floor7)
 "KN" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko,
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_up,
-/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater,
-/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice,
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/thirteenloko,
+/obj/item/reagent_containers/food/drinks/cans/space_up,
+/obj/item/reagent_containers/food/drinks/cans/sodawater,
+/obj/item/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/reagent_containers/food/drinks/cans/dr_gibb_diet,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
@@ -12955,7 +12955,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Lm" = (
 /obj/structure/closet/grave,
-/obj/item/weapon/material/gravemarker,
+/obj/item/material/gravemarker,
 /turf/simulated/floor/grass2,
 /area/awaymission/diescraper/indoors/floor5)
 "Ln" = (
@@ -12998,10 +12998,10 @@
 /area/awaymission/diescraper/indoors/floor4)
 "Ls" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/storage/backpack/parachute,
-/obj/item/weapon/storage/backpack/parachute,
-/obj/item/weapon/storage/backpack/parachute,
-/obj/item/weapon/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
 /turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/awaymission/diescraper/indoors/floor10)
 "Lt" = (
@@ -13045,11 +13045,11 @@
 /area/awaymission/diescraper/outside)
 "Lz" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/pandenata{
+/obj/item/reagent_containers/food/snacks/pandenata{
 	pixel_y = 11;
 	pixel_x = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/pandenata{
+/obj/item/reagent_containers/food/snacks/pandenata{
 	pixel_y = 0;
 	pixel_x = 1
 	},
@@ -13083,19 +13083,19 @@
 /area/awaymission/diescraper/indoors/floor10)
 "LE" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/validsalad{
+/obj/item/reagent_containers/food/snacks/validsalad{
 	pixel_y = 18
 	},
-/obj/item/weapon/reagent_containers/food/snacks/validsalad{
+/obj/item/reagent_containers/food/snacks/validsalad{
 	pixel_y = 13
 	},
-/obj/item/weapon/reagent_containers/food/snacks/boiledrice{
+/obj/item/reagent_containers/food/snacks/boiledrice{
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/boiledrice{
+/obj/item/reagent_containers/food/snacks/boiledrice{
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/boiledrice{
+/obj/item/reagent_containers/food/snacks/boiledrice{
 	pixel_y = 0
 	},
 /obj/structure/window/reinforced,
@@ -13116,7 +13116,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/random/ammo_all,
 /obj/random/ammo_all,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "LI" = (
@@ -13226,15 +13226,15 @@
 /area/awaymission/diescraper/indoors/floor10)
 "LS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/pill/osteodaxon{
+/obj/item/reagent_containers/pill/osteodaxon{
 	pixel_x = 7;
 	pixel_y = 1
 	},
-/obj/item/weapon/reagent_containers/pill/osteodaxon{
+/obj/item/reagent_containers/pill/osteodaxon{
 	pixel_x = 8;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/pill/osteodaxon{
+/obj/item/reagent_containers/pill/osteodaxon{
 	pixel_x = 6;
 	pixel_y = 5
 	},
@@ -13250,9 +13250,9 @@
 /area/awaymission/diescraper/indoors/floor2)
 "LV" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/phenethylamine,
-/obj/item/weapon/storage/pill_bottle/phenethylamine,
-/obj/item/weapon/storage/pill_bottle/phenethylamine,
+/obj/item/storage/pill_bottle/phenethylamine,
+/obj/item/storage/pill_bottle/phenethylamine,
+/obj/item/storage/pill_bottle/phenethylamine,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "LX" = (
@@ -13281,19 +13281,19 @@
 /area/awaymission/diescraper/indoors/floor5)
 "Mb" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_y = -6
 	},
-/obj/item/device/camera{
+/obj/item/camera{
 	name = "Autopsy Camera";
 	pixel_x = -2;
 	pixel_y = 7
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = -1;
 	pixel_y = -9
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 3;
 	pixel_y = -5
 	},
@@ -13309,15 +13309,15 @@
 /area/awaymission/diescraper/indoors/floor2)
 "Me" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/tamales{
+/obj/item/reagent_containers/food/snacks/tamales{
 	pixel_x = 1;
 	pixel_y = 18
 	},
-/obj/item/weapon/reagent_containers/food/snacks/tamales{
+/obj/item/reagent_containers/food/snacks/tamales{
 	pixel_x = 1;
 	pixel_y = 11
 	},
-/obj/item/weapon/reagent_containers/food/snacks/enchiladas{
+/obj/item/reagent_containers/food/snacks/enchiladas{
 	pixel_y = -4
 	},
 /obj/structure/window/reinforced,
@@ -13334,13 +13334,13 @@
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/waffles,
-/obj/item/weapon/reagent_containers/food/snacks/waffles,
-/obj/item/weapon/reagent_containers/food/snacks/waffles,
-/obj/item/weapon/reagent_containers/food/snacks/waffles{
+/obj/item/reagent_containers/food/snacks/waffles,
+/obj/item/reagent_containers/food/snacks/waffles,
+/obj/item/reagent_containers/food/snacks/waffles,
+/obj/item/reagent_containers/food/snacks/waffles{
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/waffles{
+/obj/item/reagent_containers/food/snacks/waffles{
 	pixel_y = 4
 	},
 /turf/simulated/floor/wmarble,
@@ -13357,8 +13357,8 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Mj" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/spacecasinocash,
-/obj/item/weapon/spacecasinocash,
+/obj/item/spacecasinocash,
+/obj/item/spacecasinocash,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "Mk" = (
@@ -13436,7 +13436,7 @@
 	health = 25;
 	name = "reinforced grille"
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor,
@@ -13480,7 +13480,7 @@
 /area/awaymission/diescraper/indoors/floor3)
 "MC" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
 "MD" = (
@@ -13563,7 +13563,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "MP" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/magnetic/railgun,
+/obj/item/gun/magnetic/railgun,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "MQ" = (
@@ -13581,9 +13581,9 @@
 	color = "#f700ff"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/fluff/fidgetspinner,
-/obj/item/weapon/fluff/fidgetspinner/red,
-/obj/item/weapon/fluff/fidgetspinner/yellow,
+/obj/item/fluff/fidgetspinner,
+/obj/item/fluff/fidgetspinner/red,
+/obj/item/fluff/fidgetspinner/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "MS" = (
@@ -13601,8 +13601,8 @@
 /area/awaymission/diescraper/indoors/floor8)
 "MU" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/rig/industrial/equipped,
-/obj/item/weapon/gun/launcher/spikethrower,
+/obj/item/rig/industrial/equipped,
+/obj/item/gun/launcher/spikethrower,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
 "MV" = (
@@ -13610,7 +13610,7 @@
 /turf/simulated/floor/reinforced,
 /area/awaymission/diescraper/indoors/floor112)
 "MW" = (
-/obj/item/weapon/material/minihoe,
+/obj/item/material/minihoe,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station{
 	outdoors = 0
 	},
@@ -13678,7 +13678,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Ni" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/alkysine,
+/obj/item/reagent_containers/glass/beaker/vial/alkysine,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "Nj" = (
@@ -13694,8 +13694,8 @@
 /area/awaymission/diescraper/indoors/floor3)
 "Nl" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/book/bundle/custom_library/nonfiction/viabilityofcorporategov,
-/obj/item/weapon/book/bundle/custom_library/fiction/silence,
+/obj/item/book/bundle/custom_library/nonfiction/viabilityofcorporategov,
+/obj/item/book/bundle/custom_library/fiction/silence,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor6)
 "Nm" = (
@@ -13734,16 +13734,16 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Nr" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee,
+/obj/item/reagent_containers/food/drinks/bluespace_coffee,
 /turf/unsimulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor6)
 "Ns" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 5
 	},
-/obj/item/device/flashlight/lamp/green,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green{
 	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/kafel_full/beige,
@@ -13765,8 +13765,8 @@
 	color = "#f700ff"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/toy/desk/officetoy,
-/obj/item/weapon/toy/partypopper,
+/obj/item/toy/desk/officetoy,
+/obj/item/toy/partypopper,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "Nw" = (
@@ -13790,13 +13790,13 @@
 "Nz" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/item/weapon/storage/box/buns{
+/obj/item/storage/box/buns{
 	pixel_y = -3
 	},
-/obj/item/weapon/storage/box/buns{
+/obj/item/storage/box/buns{
 	pixel_y = 10
 	},
-/obj/item/weapon/storage/box/buns,
+/obj/item/storage/box/buns,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
 "NA" = (
@@ -13807,11 +13807,11 @@
 /obj/structure/window/basic{
 	dir = 2
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,
-/obj/item/weapon/reagent_containers/food/snacks/candy/donor,
-/obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar,
+/obj/item/reagent_containers/food/snacks/candy/gummy,
+/obj/item/reagent_containers/food/snacks/candy/gummy,
+/obj/item/reagent_containers/food/snacks/candy/gummy,
+/obj/item/reagent_containers/food/snacks/candy/donor,
+/obj/item/reagent_containers/food/snacks/candy/proteinbar,
 /turf/simulated/floor/wood/alt,
 /area/awaymission/diescraper/indoors/floor7)
 "NC" = (
@@ -13842,7 +13842,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "NH" = (
@@ -13856,20 +13856,20 @@
 /area/awaymission/diescraper/sky)
 "NK" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/diescraper/indoors/floor9)
 "NL" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky{
+/obj/item/reagent_containers/food/snacks/sosjerky{
 	pixel_y = -3;
 	pixel_x = 10
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky{
+/obj/item/reagent_containers/food/snacks/sosjerky{
 	pixel_y = -3;
 	pixel_x = -7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky{
+/obj/item/reagent_containers/food/snacks/sosjerky{
 	pixel_y = -3;
 	pixel_x = 3
 	},
@@ -13883,7 +13883,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "NN" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor2)
 "NO" = (
@@ -13902,14 +13902,14 @@
 	pixel_y = 0
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor2)
 "NR" = (
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "NS" = (
-/obj/item/weapon/computer_hardware/network_card,
+/obj/item/computer_hardware/network_card,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "NT" = (
@@ -13958,8 +13958,8 @@
 /area/awaymission/diescraper/indoors/floor5)
 "Oc" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/folder,
-/obj/item/weapon/folder/white,
+/obj/item/folder,
+/obj/item/folder/white,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "Od" = (
@@ -13981,27 +13981,27 @@
 /area/awaymission/diescraper/indoors/floor1)
 "Og" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/jager{
+/obj/item/reagent_containers/food/drinks/bottle/jager{
 	pixel_y = 11;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/gin{
+/obj/item/reagent_containers/food/drinks/bottle/gin{
 	pixel_y = 3;
 	pixel_x = 13
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac{
+/obj/item/reagent_containers/food/drinks/bottle/cognac{
 	pixel_y = 7;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/patron{
+/obj/item/reagent_containers/food/drinks/bottle/patron{
 	pixel_y = 11;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/bluecuracao{
+/obj/item/reagent_containers/food/drinks/bottle/bluecuracao{
 	pixel_y = 1;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whitewine{
+/obj/item/reagent_containers/food/drinks/bottle/whitewine{
 	pixel_y = 2;
 	pixel_x = 6
 	},
@@ -14012,12 +14012,12 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/melee/baton/cattleprod,
-/obj/item/weapon/cell/hyper,
+/obj/item/melee/baton/cattleprod,
+/obj/item/cell/hyper,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "Oi" = (
-/obj/item/weapon/fuel_assembly/blitz/shielded,
+/obj/item/fuel_assembly/blitz/shielded,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/unsimulated/floor/tiled/eris/dark/techfloor{
 	temperature = 277;
@@ -14077,7 +14077,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
 "Op" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating{
 	temperature = 277;
 	oxygen = 20.7263;
@@ -14117,12 +14117,12 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Ox" = (
 /obj/structure/table/standard,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "Oy" = (
 /obj/structure/safe/floor,
-/obj/item/weapon/gun/projectile/gyropistol,
+/obj/item/gun/projectile/gyropistol,
 /obj/item/ammo_magazine/m75,
 /obj/item/ammo_magazine/m75,
 /obj/item/ammo_magazine/m75,
@@ -14200,11 +14200,11 @@
 /obj/machinery/door/window/eastleft{
 	dir = 8
 	},
-/obj/item/weapon/storage/firstaid/toxin{
+/obj/item/storage/firstaid/toxin{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/toxin,
+/obj/item/storage/firstaid/toxin,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -14410,16 +14410,16 @@
 /obj/fruitspawner/tomato,
 /obj/fruitspawner/tomato,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
 "Pu" = (
@@ -14475,12 +14475,12 @@
 /obj/structure/closet/crate{
 	name = "blood crate"
 	},
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "PC" = (
@@ -14529,9 +14529,9 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "PK" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/spaceacillin,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "PL" = (
@@ -14602,11 +14602,11 @@
 /area/awaymission/diescraper/indoors/floor1)
 "PW" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/beacon_locator{
+/obj/item/beacon_locator{
 	pixel_y = 4
 	},
-/obj/item/device/beacon_locator,
-/obj/item/device/beacon_locator{
+/obj/item/beacon_locator,
+/obj/item/beacon_locator{
 	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -14639,7 +14639,7 @@
 	pixel_x = -32;
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/tomatosoup,
+/obj/item/reagent_containers/food/snacks/tomatosoup,
 /turf/simulated/floor/carpet/purcarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "Qh" = (
@@ -14740,17 +14740,17 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/storage/box/buns{
+/obj/item/storage/box/buns{
 	pixel_y = -3
 	},
-/obj/item/weapon/storage/box/buns{
+/obj/item/storage/box/buns{
 	pixel_y = 10
 	},
-/obj/item/weapon/storage/box/buns,
+/obj/item/storage/box/buns,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor10)
 "QB" = (
-/obj/item/weapon/storage/secure/briefcase/money,
+/obj/item/storage/secure/briefcase/money,
 /turf/unsimulated/floor/tiled/eris/dark/techfloor{
 	temperature = 277;
 	nitrogen = 93.7835;
@@ -14768,7 +14768,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -14796,7 +14796,7 @@
 	dir = 1;
 	pixel_y = -27
 	},
-/obj/item/weapon/surgical/cautery,
+/obj/item/surgical/cautery,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "QI" = (
@@ -14856,7 +14856,7 @@
 /area/awaymission/diescraper/indoors/floor3)
 "QR" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni,
+/obj/item/cell/device/weapon/recharge/alien/omni,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "QT" = (
@@ -14912,7 +14912,7 @@
 /area/awaymission/diescraper/indoors/floor4)
 "Ra" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "Rb" = (
@@ -14928,7 +14928,7 @@
 /area/awaymission/diescraper/indoors/floor1)
 "Rd" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "Re" = (
@@ -15020,7 +15020,7 @@
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor3)
 "Ru" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor8)
 "Rv" = (
@@ -15073,8 +15073,8 @@
 	dir = 1;
 	pixel_y = -27
 	},
-/obj/item/weapon/surgical/scalpel,
-/obj/item/weapon/autopsy_scanner,
+/obj/item/surgical/scalpel,
+/obj/item/autopsy_scanner,
 /turf/simulated/floor/tiled/old_tile,
 /area/awaymission/diescraper/indoors/floor8)
 "RD" = (
@@ -15204,7 +15204,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "RZ" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/diescraper/indoors/floor10)
 "Sa" = (
@@ -15215,7 +15215,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Sb" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/storage/backpack/dufflebag/cratebooze,
+/obj/item/storage/backpack/dufflebag/cratebooze,
 /mob/living/simple_mob/animal/giant_spider/ion,
 /turf/simulated/floor,
 /area/awaymission/diescraper/indoors/floor3)
@@ -15260,7 +15260,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "Si" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/rig/industrial/equipped,
+/obj/item/rig/industrial/equipped,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
 "Sj" = (
@@ -15292,7 +15292,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "Sm" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/donut,
+/obj/item/storage/box/donut,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "Sn" = (
@@ -15328,10 +15328,10 @@
 /area/awaymission/diescraper/sky)
 "St" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/alkysine,
-/obj/item/weapon/storage/pill_bottle/alkysine,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/pill_bottle/antitox,
+/obj/item/storage/pill_bottle/alkysine,
+/obj/item/storage/pill_bottle/alkysine,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/pill_bottle/antitox,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "Su" = (
@@ -15381,19 +15381,19 @@
 /area/awaymission/diescraper/indoors/floor4)
 "Sz" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = 0;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = -8;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = -4;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = 4;
 	pixel_x = 7
 	},
@@ -15402,32 +15402,32 @@
 /area/awaymission/diescraper/indoors/floor4)
 "SA" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/reagent_containers/food/snacks/soydope{
+/obj/item/reagent_containers/food/snacks/soydope{
 	pixel_y = -10
 	},
-/obj/item/weapon/reagent_containers/food/snacks/friedrice,
-/obj/item/weapon/reagent_containers/food/snacks/friedrice{
+/obj/item/reagent_containers/food/snacks/friedrice,
+/obj/item/reagent_containers/food/snacks/friedrice{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/friedrice{
+/obj/item/reagent_containers/food/snacks/friedrice{
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/eggroll{
+/obj/item/reagent_containers/food/snacks/eggroll{
 	pixel_y = 7;
 	pixel_x = -10
 	},
-/obj/item/weapon/reagent_containers/food/snacks/eggroll{
+/obj/item/reagent_containers/food/snacks/eggroll{
 	pixel_y = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/eggroll{
+/obj/item/reagent_containers/food/snacks/eggroll{
 	pixel_y = 7;
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/eggroll{
+/obj/item/reagent_containers/food/snacks/eggroll{
 	pixel_y = 7;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/eggroll{
+/obj/item/reagent_containers/food/snacks/eggroll{
 	pixel_y = 7;
 	pixel_x = -5
 	},
@@ -15498,7 +15498,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor3)
 "SK" = (
-/obj/item/weapon/spacecasinocash,
+/obj/item/spacecasinocash,
 /turf/unsimulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor6)
 "SL" = (
@@ -15508,8 +15508,8 @@
 /area/awaymission/diescraper/indoors/floor1)
 "SM" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/material/shard/shrapnel,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/overlay/snow/floor,
 /obj/effect/mobblocker{
 	dir = 2
@@ -15522,8 +15522,8 @@
 /area/awaymission/diescraper/indoors/floor7)
 "SN" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/pill_bottle/rezadone,
-/obj/item/weapon/storage/pill_bottle/rezadone,
+/obj/item/storage/pill_bottle/rezadone,
+/obj/item/storage/pill_bottle/rezadone,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor2)
 "SO" = (
@@ -15549,23 +15549,23 @@
 /area/awaymission/diescraper/indoors/floor10)
 "SS" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 14;
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua{
+/obj/item/reagent_containers/food/drinks/bottle/kahlua{
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/lemonadeschnapps{
+/obj/item/reagent_containers/food/drinks/bottle/lemonadeschnapps{
 	pixel_y = 5;
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager{
+/obj/item/reagent_containers/food/drinks/bottle/goldschlager{
 	pixel_y = 13;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe{
+/obj/item/reagent_containers/food/drinks/bottle/absinthe{
 	pixel_y = 3;
 	pixel_x = -8
 	},
@@ -15608,19 +15608,19 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = -6;
 	pixel_x = -13
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = -7;
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppergrinder{
+/obj/item/reagent_containers/food/condiment/small/peppergrinder{
 	pixel_y = 7;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppergrinder{
+/obj/item/reagent_containers/food/condiment/small/peppergrinder{
 	pixel_y = 4;
 	pixel_x = -12
 	},
@@ -15637,7 +15637,7 @@
 	color = "#f700ff"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/toy/desk/officetoy,
+/obj/item/toy/desk/officetoy,
 /obj/item/toy/plushie/ipc,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
@@ -15667,7 +15667,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
 "Te" = (
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /obj/structure/table/standard,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
@@ -15714,7 +15714,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Tm" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/donut,
+/obj/item/storage/box/donut,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "Tn" = (
@@ -15722,22 +15722,22 @@
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/pancakes,
-/obj/item/weapon/reagent_containers/food/snacks/pancakes{
+/obj/item/reagent_containers/food/snacks/pancakes,
+/obj/item/reagent_containers/food/snacks/pancakes{
 	pixel_y = -3;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/pancakes{
+/obj/item/reagent_containers/food/snacks/pancakes{
 	pixel_y = 1;
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/pancakes{
+/obj/item/reagent_containers/food/snacks/pancakes{
 	pixel_y = -4
 	},
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "To" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "splinterslarge"
 	},
 /obj/effect/floor_decal/corner/purple/diagonal{
@@ -15766,7 +15766,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Tr" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/donut,
+/obj/item/storage/box/donut,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor2)
 "Ts" = (
@@ -15820,7 +15820,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor3)
 "TB" = (
@@ -15897,19 +15897,19 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 4
 	},
-/obj/item/weapon/fluff/fidgetspinner,
+/obj/item/fluff/fidgetspinner,
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "TM" = (
 /obj/structure/table/steel,
-/obj/item/weapon/autopsy_scanner,
-/obj/item/weapon/surgical/scalpel,
-/obj/item/weapon/surgical/cautery,
+/obj/item/autopsy_scanner,
+/obj/item/surgical/scalpel,
+/obj/item/surgical/cautery,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor8)
 "TN" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/bag/circuits/all,
+/obj/item/storage/bag/circuits/all,
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor4)
 "TO" = (
@@ -15953,15 +15953,15 @@
 /obj/structure/sink/countertop{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/glass/rag{
+/obj/item/reagent_containers/glass/rag{
 	pixel_x = 7;
 	pixel_y = 2
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
+/obj/item/reagent_containers/glass/beaker/measuring_cup{
 	pixel_x = 10;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/dropper{
+/obj/item/reagent_containers/dropper{
 	pixel_x = -4;
 	pixel_y = 0
 	},
@@ -16191,7 +16191,7 @@
 /area/awaymission/diescraper/indoors/floor11)
 "UD" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rainbowdouble,
+/obj/item/bedsheet/rainbowdouble,
 /turf/simulated/floor/carpet,
 /area/awaymission/diescraper/indoors/floor9)
 "UE" = (
@@ -16260,7 +16260,7 @@
 	dir = 4
 	},
 /obj/structure/table/borosilicate,
-/obj/item/weapon/gun/energy/lasertag/blue,
+/obj/item/gun/energy/lasertag/blue,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "UR" = (
@@ -16327,15 +16327,15 @@
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nt_muffin{
+/obj/item/reagent_containers/food/snacks/nt_muffin{
 	pixel_y = 3;
 	pixel_x = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nt_muffin{
+/obj/item/reagent_containers/food/snacks/nt_muffin{
 	pixel_y = -3;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/nt_muffin{
+/obj/item/reagent_containers/food/snacks/nt_muffin{
 	pixel_y = -2;
 	pixel_x = 1
 	},
@@ -16389,7 +16389,7 @@
 	pixel_x = 32;
 	pixel_y = -4
 	},
-/obj/item/weapon/toy/partypopper,
+/obj/item/toy/partypopper,
 /turf/simulated/floor/carpet/retro_red,
 /area/awaymission/diescraper/indoors/floor9)
 "Vl" = (
@@ -16405,25 +16405,25 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Vo" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/vermouth,
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/sake{
+/obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 6
 	},
 /obj/structure/window/basic{
@@ -16458,7 +16458,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Vs" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/coin/uranium,
+/obj/item/coin/uranium,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor8)
 "Vt" = (
@@ -16502,15 +16502,15 @@
 /area/awaymission/diescraper/indoors/floor2)
 "Vz" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_x = -5;
 	pixel_y = -9
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_x = -5;
 	pixel_y = -5
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_x = -5;
 	pixel_y = -1
 	},
@@ -16544,13 +16544,13 @@
 /area/awaymission/diescraper/indoors/floor9)
 "VB" = (
 /obj/effect/decal/remains,
-/obj/item/weapon/gun/energy/stunrevolver,
-/obj/item/weapon/melee/baton,
+/obj/item/gun/energy/stunrevolver,
+/obj/item/melee/baton,
 /turf/simulated/floor/outdoors/rocks,
 /area/awaymission/diescraper/outside)
 "VC" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet,
 /area/awaymission/diescraper/indoors/floor9)
 "VD" = (
@@ -16577,11 +16577,11 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "VI" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife{
+/obj/item/material/knife{
 	pixel_x = 10;
 	pixel_y = 0
 	},
-/obj/item/weapon/material/kitchen/rollingpin{
+/obj/item/material/kitchen/rollingpin{
 	pixel_x = -8;
 	pixel_y = 4
 	},
@@ -16649,7 +16649,7 @@
 /area/awaymission/diescraper/indoors/floor7)
 "VT" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/item/stack/material/steel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/plating{
@@ -16660,8 +16660,8 @@
 /area/awaymission/diescraper/indoors/floor7)
 "VU" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/spacecasinocash,
-/obj/item/weapon/spacecasinocash,
+/obj/item/spacecasinocash,
+/obj/item/spacecasinocash,
 /obj/random/awayloot/nofail,
 /turf/unsimulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor6)
@@ -16698,7 +16698,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "Wa" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor10)
 "Wb" = (
@@ -16707,11 +16707,11 @@
 	pixel_y = 0;
 	dir = 8
 	},
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/o2{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "Wc" = (
@@ -16813,7 +16813,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Wr" = (
 /obj/structure/closet/grave,
-/obj/item/weapon/material/gravemarker,
+/obj/item/material/gravemarker,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station{
 	outdoors = 0
 	},
@@ -16852,7 +16852,7 @@
 	color = "#f700ff"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/toy/desk/fan,
+/obj/item/toy/desk/fan,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "WA" = (
@@ -16887,11 +16887,11 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/lasagna,
-/obj/item/weapon/reagent_containers/food/snacks/lasagna{
+/obj/item/reagent_containers/food/snacks/lasagna,
+/obj/item/reagent_containers/food/snacks/lasagna{
 	pixel_y = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/lasagna{
+/obj/item/reagent_containers/food/snacks/lasagna{
 	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -16941,12 +16941,12 @@
 /area/awaymission/diescraper/indoors/floor2)
 "WN" = (
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/item/device/camera,
+/obj/item/camera,
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
 "WO" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen/fountain6,
+/obj/item/pen/fountain6,
 /obj/machinery/light/floortube{
 	dir = 4
 	},
@@ -17023,7 +17023,7 @@
 "Xc" = (
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/item/stack/material/steel,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/plating{
@@ -17041,13 +17041,13 @@
 /area/awaymission/diescraper/indoors/floor4)
 "Xe" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife{
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife{
 	pixel_y = 0;
 	pixel_x = 11
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/glass/beaker,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor6)
 "Xf" = (
@@ -17171,7 +17171,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "XB" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/clowndouble,
+/obj/item/bedsheet/clowndouble,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -17197,7 +17197,7 @@
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor3)
 "XF" = (
-/obj/item/weapon/gun/projectile/revolver/stainless,
+/obj/item/gun/projectile/revolver/stainless,
 /turf/simulated/floor/wood/alt/panel,
 /area/awaymission/diescraper/indoors/floor3)
 "XG" = (
@@ -17259,7 +17259,7 @@
 /turf/simulated/floor/wmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "XS" = (
-/obj/item/weapon/storage/mrebag/menu6,
+/obj/item/storage/mrebag/menu6,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/awaymission/diescraper/indoors/floor3)
 "XT" = (
@@ -17330,15 +17330,15 @@
 /area/awaymission/diescraper/indoors/floor2)
 "Yc" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/beacon{
+/obj/item/radio/beacon{
 	pixel_y = 4;
 	on = 0
 	},
-/obj/item/device/radio/beacon{
+/obj/item/radio/beacon{
 	pixel_y = 1;
 	on = 0
 	},
-/obj/item/device/radio/beacon{
+/obj/item/radio/beacon{
 	pixel_y = -2;
 	on = 0
 	},
@@ -17383,7 +17383,7 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Yj" = (
 /obj/structure/closet/jcloset,
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "Yk" = (
@@ -17417,7 +17417,7 @@
 /area/awaymission/diescraper/indoors/floor6)
 "Yo" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/rcd/advanced/loaded,
+/obj/item/rcd/advanced/loaded,
 /obj/random/awayloot/looseloot,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
@@ -17440,7 +17440,7 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Yr" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor10)
 "Ys" = (
@@ -17609,7 +17609,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "YT" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/lampshade,
+/obj/item/lampshade,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -17668,7 +17668,7 @@
 /obj/structure/table/steel,
 /obj/random/tool/powermaint,
 /obj/random/tool/power,
-/obj/item/weapon/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor6)
 "Zd" = (
@@ -17702,39 +17702,39 @@
 /area/awaymission/diescraper/indoors/floor1)
 "Zj" = (
 /obj/structure/table/rack/wood,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor7)
 "Zk" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = 4;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = -8;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = -4;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/fish_taco{
+/obj/item/reagent_containers/food/snacks/fish_taco{
 	pixel_y = 0;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = -8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/taco{
+/obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = 2
 	},
 /turf/simulated/floor/wood/alt/panel,
@@ -17751,15 +17751,15 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice{
+/obj/item/reagent_containers/food/drinks/bottle/orangejuice{
 	pixel_y = 0;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/tomatojuice{
+/obj/item/reagent_containers/food/drinks/bottle/tomatojuice{
 	pixel_y = 0;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/applejuice{
+/obj/item/reagent_containers/food/drinks/bottle/applejuice{
 	pixel_y = 2;
 	pixel_x = 4
 	},
@@ -17775,7 +17775,7 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Zq" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/launcher/syringe,
+/obj/item/gun/launcher/syringe,
 /obj/random/organ,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
@@ -17793,8 +17793,8 @@
 	pixel_y = 0
 	},
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/spray/chemsprayer,
-/obj/item/weapon/reagent_containers/glass/bottle/lube,
+/obj/item/reagent_containers/spray/chemsprayer,
+/obj/item/reagent_containers/glass/bottle/lube,
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "Zt" = (
@@ -17839,19 +17839,19 @@
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/snacks/bacon_and_eggs{
+/obj/item/reagent_containers/food/snacks/bacon_and_eggs{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/snacks/bacon_and_eggs{
+/obj/item/reagent_containers/food/snacks/bacon_and_eggs{
 	pixel_y = -5
 	},
-/obj/item/weapon/reagent_containers/food/snacks/bacon_and_eggs{
+/obj/item/reagent_containers/food/snacks/bacon_and_eggs{
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/bacon_and_eggs{
+/obj/item/reagent_containers/food/snacks/bacon_and_eggs{
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/snacks/bacon_and_eggs{
+/obj/item/reagent_containers/food/snacks/bacon_and_eggs{
 	pixel_y = 3
 	},
 /turf/simulated/floor/wmarble,
@@ -17862,11 +17862,11 @@
 	dir = 8;
 	health = 1e+006
 	},
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor8)
 "ZC" = (
@@ -17906,18 +17906,18 @@
 	},
 /area/awaymission/diescraper/indoors/floor7)
 "ZH" = (
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/o2{
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/fire{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/toxin{
+/obj/item/storage/firstaid/toxin{
 	pixel_x = -5
 	},
 /obj/structure/table/rack/shelf,
@@ -17994,12 +17994,12 @@
 /area/awaymission/diescraper/indoors/floor10)
 "ZS" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/cans/icecoffee,
-/obj/item/weapon/reagent_containers/food/drinks/cans/icecoffee{
+/obj/item/reagent_containers/food/drinks/cans/icecoffee,
+/obj/item/reagent_containers/food/drinks/cans/icecoffee{
 	pixel_y = 2;
 	pixel_x = 4
 	},
-/obj/item/weapon/spacecasinocash,
+/obj/item/spacecasinocash,
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "ZT" = (
@@ -18044,7 +18044,7 @@
 /area/awaymission/diescraper/indoors/floor3)
 "ZW" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/greendouble,
+/obj/item/bedsheet/greendouble,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/awaymission/diescraper/indoors/floor9)
 "ZX" = (

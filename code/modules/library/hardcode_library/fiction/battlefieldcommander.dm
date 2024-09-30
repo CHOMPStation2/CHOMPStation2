@@ -5,7 +5,7 @@ CATEGORY: Fiction
 
 /// The Chronicles of Margata: Volume I by Molly Highlander
 
-/obj/item/weapon/book/bundle/custom_library/fiction/chroniclesofmargatavol1
+/obj/item/book/bundle/custom_library/fiction/chroniclesofmargatavol1
 	name = "The Chronicles of Margata: Volume I"
 	desc = "A hardbound book titled \"The Chronicles of Margata: Volume I\" by Molly Highlander."
 	description_info = "This book is titled \"The Chronicles of Margata: Volume I\" by Molly Highlander. There's a blurb on the back: <br>\

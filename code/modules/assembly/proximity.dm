@@ -1,4 +1,4 @@
-/obj/item/device/assembly/prox_sensor
+/obj/item/assembly/prox_sensor
 	name = "proximity sensor"
 	desc = "Used for scanning and alerting when someone enters a certain proximity."
 	icon_state = "prox"
@@ -14,14 +14,14 @@
 
 	var/range = 2
 
-/obj/item/device/assembly/prox_sensor/activate()
+/obj/item/assembly/prox_sensor/activate()
 	if(!..())
 		return FALSE
 	timing = !timing
 	update_icon()
 	return FALSE
 
-/obj/item/device/assembly/prox_sensor/toggle_secure()
+/obj/item/assembly/prox_sensor/toggle_secure()
 	secured = !secured
 	if(secured)
 		START_PROCESSING(SSobj, src)
@@ -33,7 +33,7 @@
 	return secured
 
 // CHOMPEdit Start
-/obj/item/device/assembly/prox_sensor/HasProximity(turf/T, datum/weakref/WF, old_loc)
+/obj/item/assembly/prox_sensor/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
@@ -47,7 +47,7 @@
 	if (!isobserver(AM) && AM.move_speed < 12)
 		sense()
 
-/obj/item/device/assembly/prox_sensor/proc/sense()
+/obj/item/assembly/prox_sensor/proc/sense()
 	if((!holder && !secured) || !scanning || !process_cooldown())
 		return FALSE
 	var/turf/mainloc = get_turf(src)
@@ -55,7 +55,7 @@
 	if(!holder)
 		mainloc.visible_message("[icon2html(src,viewers(src))] *beep* *beep*", "*beep* *beep*")
 
-/obj/item/device/assembly/prox_sensor/process()
+/obj/item/assembly/prox_sensor/process()
 	if(scanning)
 		var/turf/mainloc = get_turf(src)
 		for(var/mob/living/A in range(range,mainloc))
@@ -69,16 +69,16 @@
 		toggle_scan()
 		time = initial(time)
 
-/obj/item/device/assembly/prox_sensor/dropped()
+/obj/item/assembly/prox_sensor/dropped()
 	sense()
 
-/obj/item/device/assembly/prox_sensor/proc/toggle_scan()
+/obj/item/assembly/prox_sensor/proc/toggle_scan()
 	if(!secured)
 		return FALSE
 	scanning = !scanning
 	update_icon()
 
-/obj/item/device/assembly/prox_sensor/update_icon()
+/obj/item/assembly/prox_sensor/update_icon()
 	cut_overlays()
 	LAZYCLEARLIST(attached_overlays)
 	if(timing)
@@ -89,11 +89,11 @@
 		LAZYADD(attached_overlays, "prox_scanning")
 	if(holder)
 		holder.update_icon()
-	if(holder && istype(holder.loc,/obj/item/weapon/grenade/chem_grenade))
-		var/obj/item/weapon/grenade/chem_grenade/grenade = holder.loc
+	if(holder && istype(holder.loc,/obj/item/grenade/chem_grenade))
+		var/obj/item/grenade/chem_grenade/grenade = holder.loc
 		grenade.primed(scanning)
 
-/obj/item/device/assembly/prox_sensor/Moved(atom/old_loc, direction, forced = FALSE)
+/obj/item/assembly/prox_sensor/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(isturf(old_loc))
 		unsense_proximity(range = range, callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
@@ -101,7 +101,7 @@
 		sense_proximity(range = range, callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 	sense()
 
-/obj/item/device/assembly/prox_sensor/tgui_interact(mob/user, datum/tgui/ui)
+/obj/item/assembly/prox_sensor/tgui_interact(mob/user, datum/tgui/ui)
 	if(!secured)
 		to_chat(user, "<span class='warning'>[src] is unsecured!</span>")
 		return FALSE
@@ -110,7 +110,7 @@
 		ui = new(user, src, "AssemblyProx", name)
 		ui.open()
 
-/obj/item/device/assembly/prox_sensor/tgui_data(mob/user)
+/obj/item/assembly/prox_sensor/tgui_data(mob/user)
 	var/list/data = ..()
 
 	data["time"] = time
@@ -121,7 +121,7 @@
 
 	return data
 
-/obj/item/device/assembly/prox_sensor/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
+/obj/item/assembly/prox_sensor/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
 

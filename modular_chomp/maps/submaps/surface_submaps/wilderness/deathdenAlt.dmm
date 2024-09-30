@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aj" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/item/clothing/suit/storage/fluff/techpriestrobes,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
@@ -17,8 +17,8 @@
 /area/submap/DeathDen)
 "av" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/deadringer,
-/obj/item/weapon/reagent_containers/food/snacks/bearstew,
+/obj/item/deadringer,
+/obj/item/reagent_containers/food/snacks/bearstew,
 /obj/effect/floor_decal/carpet,
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -51,7 +51,7 @@
 	},
 /area/submap/DeathDen)
 "ex" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -88,7 +88,7 @@
 /area/submap/DeathDen)
 "hL" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/shreddedp,
+/obj/item/shreddedp,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "ii" = (
@@ -140,7 +140,7 @@
 /area/submap/DeathDen)
 "mC" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 10
 	},
 /obj/effect/floor_decal/carpet{
@@ -152,14 +152,14 @@
 /obj/effect/floor_decal/carpet{
 	dir = 5
 	},
-/obj/item/weapon/storage/bible,
+/obj/item/storage/bible,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
 	},
 /area/submap/DeathDen)
 "mR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -196,7 +196,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "pz" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -227,7 +227,7 @@
 /area/template_noop)
 "rQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -247,13 +247,13 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/ceremonial,
+/obj/item/gun/projectile/shotgun/pump/rifle/ceremonial,
 /turf/template_noop,
 /area/template_noop)
 "ua" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "uy" = (
@@ -269,11 +269,11 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "uL" = (
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/weapon/material/shard/plastitaniumglass{
+/obj/item/material/shard/plastitaniumglass{
 	pixel_x = 7;
 	pixel_y = 8
 	},
@@ -306,7 +306,7 @@
 /area/template_noop)
 "xw" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/shreddedp,
+/obj/item/shreddedp,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "xF" = (
@@ -315,12 +315,12 @@
 	},
 /obj/structure/table/wooden_reinforced,
 /obj/random/soap,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "yA" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_y = 6
 	},
 /obj/effect/floor_decal/carpet,
@@ -349,7 +349,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "AQ" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -358,7 +358,7 @@
 	},
 /area/submap/DeathDen)
 "AS" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
 	},
@@ -429,7 +429,7 @@
 	},
 /area/submap/DeathDen)
 "Fe" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -464,7 +464,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -480,7 +480,7 @@
 "GT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -513,18 +513,18 @@
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "Kg" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -546,7 +546,7 @@
 /obj/effect/floor_decal/carpet{
 	dir = 4
 	},
-/obj/item/weapon/scrying,
+/obj/item/scrying,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
 	},
@@ -558,7 +558,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "Mn" = (
@@ -568,7 +568,7 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn,
+/obj/item/gun/projectile/shotgun/doublebarrel/sawn,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "Mz" = (
@@ -588,7 +588,7 @@
 /turf/simulated/wall/sifwood,
 /area/submap/DeathDen)
 "OB" = (
-/obj/item/weapon/flame/lighter/zippo/gonzo,
+/obj/item/flame/lighter/zippo/gonzo,
 /obj/random/trash,
 /obj/random/junk,
 /turf/simulated/floor/wood/sif{
@@ -607,7 +607,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -616,7 +616,7 @@
 "PJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -635,7 +635,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/material/knife/machete,
+/obj/item/material/knife/machete,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -648,7 +648,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/material/knife/hook,
+/obj/item/material/knife/hook,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -656,18 +656,18 @@
 /area/template_noop)
 "Rc" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
 /obj/item/trash/plate,
 /obj/item/trash/plate,
-/obj/item/weapon/storage/box/cups,
-/obj/item/weapon/storage/box/donut,
+/obj/item/storage/box/cups,
+/obj/item/storage/box/donut,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "RZ" = (
@@ -679,7 +679,7 @@
 /area/submap/DeathDen)
 "Sf" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "Sy" = (
@@ -689,7 +689,7 @@
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/material/knife/ritual,
+/obj/item/material/knife/ritual,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -728,7 +728,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -751,12 +751,12 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "ZG" = (
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn,
-/obj/item/weapon/reagent_containers/food/snacks/candy_corn{
+/obj/item/reagent_containers/food/snacks/candy_corn,
+/obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/item/weapon/gun/projectile/deagle,
+/obj/item/gun/projectile/deagle,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
 	},

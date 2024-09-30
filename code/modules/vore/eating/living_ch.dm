@@ -238,9 +238,9 @@
 			if(RTB.reagentid == "stomacid")
 				return
 			var/list/choices = list()
-			for(var/obj/item/weapon/reagent_containers/rc in view(1,user.loc))
+			for(var/obj/item/reagent_containers/rc in view(1,user.loc))
 				choices += rc
-			var/obj/item/weapon/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
+			var/obj/item/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
 			if(!T)
 				return FALSE
 			if(!Adjacent(T) || !Adjacent(TG))

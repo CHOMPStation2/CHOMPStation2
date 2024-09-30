@@ -40,10 +40,10 @@
 			/obj/item/clothing/suit/cultrobes/void = 100,
 			/obj/item/clothing/shoes/boots/cult/void = 100,
 			/obj/item/clothing/gloves/tactical/void = 100,
-			/obj/item/weapon/melee/voidblade = 25,
-			/obj/item/device/soulstone = 25,
-			/obj/item/device/soulstone = 25,
-			/obj/item/device/soulstone = 25,
+			/obj/item/melee/voidblade = 25,
+			/obj/item/soulstone = 25,
+			/obj/item/soulstone = 25,
+			/obj/item/soulstone = 25,
 			/obj/item/capture_crystal/demon = 25,
 			/obj/item/capture_crystal/wendigo = 25
 			)
@@ -117,7 +117,7 @@
 	target_turf.visible_message(span("warning", "\The [src] appears!"))
 	s2.start()
 
-/obj/item/weapon/grenade/spawnergrenade/riftwallers
+/obj/item/grenade/spawnergrenade/riftwallers
 	name = "manhack delivery grenade"
 	spawner_type = /mob/living/simple_mob/vore/demonAI
 	deliveryamt = 1
@@ -208,7 +208,7 @@
 	punch_force = 8
 	armor = list(melee = 30, bullet = 25, laser = 25, energy = 40, bomb = 30, bio = 10, rad = 10)
 
-/obj/item/weapon/melee/voidblade
+/obj/item/melee/voidblade
 	name = "cult blade"
 	desc = "An arcane weapon wielded by the followers of Nar-Sie."
 	icon_state = "cultblade"

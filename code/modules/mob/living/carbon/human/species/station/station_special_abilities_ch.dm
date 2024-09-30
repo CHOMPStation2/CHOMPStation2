@@ -12,7 +12,7 @@
 
 	var/mob/living/carbon/human/C = src
 
-	var/obj/item/weapon/grab/G = src.get_active_hand()
+	var/obj/item/grab/G = src.get_active_hand()
 
 	if(!istype(G))
 		to_chat(C, "<span class='warning'>You must be grabbing a creature in your active hand to bite them.</span>")
@@ -148,7 +148,7 @@ var/eggs = 0
 			while(eggs > 0)
 				src.show_message("<span class='warning'>You lay a egg!</span>")
 				eggs--
-				var/obj/item/weapon/reagent_containers/food/snacks/egg/E = new(get_turf(src))
+				var/obj/item/reagent_containers/food/snacks/egg/E = new(get_turf(src))
 				E.pixel_x = rand(-6,6)
 				E.pixel_y = rand(-6,6)
 			return
@@ -163,7 +163,7 @@ var/eggs = 0
 	while(eggs > 0)
 		src.show_message("<span class='warning'>You lay you egg!</span>")
 		eggs--
-		var/obj/item/weapon/reagent_containers/food/snacks/egg/E = new(get_turf(src))
+		var/obj/item/reagent_containers/food/snacks/egg/E = new(get_turf(src))
 		E.pixel_x = rand(-6,6)
 		E.pixel_y = rand(-6,6)
 	layeggs--

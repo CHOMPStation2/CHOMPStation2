@@ -18,9 +18,9 @@
 /area/submap/mouseattack)
 "i" = (
 /obj/structure/table/rack,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/mounted/phase,
 /obj/random/maintenance/research,
@@ -39,9 +39,9 @@
 /area/submap/mouseattack)
 "o" = (
 /obj/structure/table/rack,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/voice,
 /obj/random/maintenance/research,
@@ -69,9 +69,9 @@
 /area/submap/mouseattack)
 "v" = (
 /obj/structure/table/rack,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/item/rig_module/chem_dispenser/injector/advanced,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
@@ -82,9 +82,9 @@
 "w" = (
 /obj/structure/table/rack,
 /obj/item/rig_module/device/defib,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/random/maintenance/security,
@@ -104,9 +104,9 @@
 /area/submap/mouseattack)
 "C" = (
 /obj/structure/table/rack,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/rad_shield,
 /obj/random/maintenance/research,
@@ -123,9 +123,9 @@
 /obj/structure/table/rack,
 /obj/random/rigsuit/chancetofail,
 /obj/item/rig_module/fabricator,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/random/maintenance/security,

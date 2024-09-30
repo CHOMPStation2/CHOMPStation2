@@ -156,8 +156,8 @@
 /area/submap/Blackshuttledown)
 "ax" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/projectile/automatic/wt550,
-/obj/item/weapon/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/wt550,
+/obj/item/gun/projectile/automatic/p90,
 /obj/random/rigsuit/chancetofail,
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/Blackshuttledown)
@@ -308,7 +308,7 @@
 /area/submap/Blackshuttledown)
 "aV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10;
 	icon_state = "bordercolor"
@@ -317,7 +317,7 @@
 /area/submap/Blackshuttledown)
 "aW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
@@ -334,14 +334,14 @@
 /area/submap/Blackshuttledown)
 "aZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "ba" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/masks,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6;
 	icon_state = "bordercolor"
@@ -409,7 +409,7 @@
 /area/submap/Blackshuttledown)
 "bk" = (
 /obj/structure/table/steel,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bl" = (
@@ -483,7 +483,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bu" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bv" = (
@@ -605,7 +605,7 @@
 /area/submap/Blackshuttledown)
 "bN" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "We need to take a short stop. The engine's are in need of minor repairs due to turbulence, should be a week's time. We've got reserve food supplies but pleanty of locale fauna to subsist on too if need be. PCRC is keeping most of there assets near New Reykjavik and locale authorities are more mindful then most to travel in this kind of weather. Our outfit should be at the rendezvous point in less then ten days assuming the upper ecehelon hasn't dropped ties with us yet.";
 	name = "Operation Progress/M-53"
 	},
@@ -613,7 +613,7 @@
 /area/submap/Blackshuttledown)
 "bO" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bP" = (
@@ -685,7 +685,7 @@
 /area/submap/Blackshuttledown)
 "bY" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "bZ" = (
@@ -701,7 +701,7 @@
 /area/submap/Blackshuttledown)
 "cc" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/projectile/pistol,
+/obj/item/gun/projectile/pistol,
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
@@ -716,7 +716,7 @@
 /area/submap/Blackshuttledown)
 "ce" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
@@ -776,7 +776,7 @@
 /area/submap/Blackshuttledown)
 "cm" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
@@ -787,7 +787,7 @@
 /area/submap/Blackshuttledown)
 "co" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
@@ -817,7 +817,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "jW" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle/poi,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)

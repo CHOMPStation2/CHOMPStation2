@@ -71,17 +71,17 @@
 	if(!istype(held) || is_robot_module(held))
 		stripping = TRUE
 		//CHOMPEdit Start - Let borg grippers put stuff on.
-		if(is_robot_module(held) && istype(held, /obj/item/weapon/gripper))
-			var/obj/item/weapon/gripper/G = held
+		if(is_robot_module(held) && istype(held, /obj/item/gripper))
+			var/obj/item/gripper/G = held
 			if(istype(G.wrapped))
 				stripping = FALSE
 		//CHOMPEdit End
 	else
-		var/obj/item/weapon/holder/holder = held
+		var/obj/item/holder/holder = held
 		if(istype(holder) && src == holder.held_mob)
 			stripping = TRUE
 		else
-			var/obj/item/weapon/grab/grab = held
+			var/obj/item/grab/grab = held
 			if(istype(grab) && grab.affecting == src)
 				stripping = TRUE
 
@@ -92,15 +92,15 @@
 			to_chat(user, "<span class='warning'>You cannot remove \the [src]'s [target_slot.name].</span>")
 			return
 		visible_message("<span class='danger'>\The [user] is trying to remove \the [src]'s [target_slot.name]!</span>")
-	else if(!istype(held, /obj/item/weapon/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
-		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/weapon/grenade))
+	else if(!istype(held, /obj/item/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
+		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/grenade))
 			visible_message("<span class='danger'>\The [user] is trying to put \a [held] in \the [src]'s mouth!</span>")
 		else
 			visible_message("<span class='danger'>\The [user] is trying to put \a [held] on \the [src]!</span>")
 	//CHOMPEdit Start - Let borg grippers put stuff on.
 	else
-		var/obj/item/weapon/gripper/G = held
-		if(slot_to_strip == slot_wear_mask && istype(G.wrapped, /obj/item/weapon/grenade))
+		var/obj/item/gripper/G = held
+		if(slot_to_strip == slot_wear_mask && istype(G.wrapped, /obj/item/grenade))
 			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] in \the [src]'s mouth!</span>")
 		else
 			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] on \the [src]!</span>")
@@ -112,7 +112,7 @@
 	if(!stripping)
 		if(user.get_active_hand() != held)
 			return
-		var/obj/item/weapon/holder/mobheld = held
+		var/obj/item/holder/mobheld = held
 		if(istype(mobheld)&&mobheld.held_mob==src)
 			to_chat(user, "<span class='warning'>You can't put someone on themselves! Stop trying to break reality!</span>")
 			return
@@ -121,8 +121,8 @@
 		add_attack_logs(user,src,"Removed equipment from slot [target_slot]")
 		unEquip(target_slot)
 	//CHOMPEdit Start - Let borg grippers put stuff on.
-	else if(is_robot_module(held) && istype(held, /obj/item/weapon/gripper))
-		var/obj/item/weapon/gripper/G = held
+	else if(is_robot_module(held) && istype(held, /obj/item/gripper))
+		var/obj/item/gripper/G = held
 		var/obj/item/wrapped = G.wrapped
 		if(istype(wrapped))
 			G.drop_item_nm()
@@ -193,11 +193,11 @@
 		if(!(istype(wear_mask, /obj/item/clothing/mask) || istype(head, /obj/item/clothing/head/helmet/space)))
 			return
 		// Find an internal source.
-		if(istype(back, /obj/item/weapon/tank))
+		if(istype(back, /obj/item/tank))
 			internal = back
-		else if(istype(s_store, /obj/item/weapon/tank))
+		else if(istype(s_store, /obj/item/tank))
 			internal = s_store
-		else if(istype(belt, /obj/item/weapon/tank))
+		else if(istype(belt, /obj/item/tank))
 			internal = belt
 
 	if(internal)

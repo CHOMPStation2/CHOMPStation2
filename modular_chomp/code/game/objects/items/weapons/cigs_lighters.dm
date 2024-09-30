@@ -1,4 +1,4 @@
-/obj/item/weapon/flame/lighter/supermatter
+/obj/item/flame/lighter/supermatter
     name = "Hardlight Supermatter Zippo"	// Base SM Lighter
     desc = "State of the Art Supermatter Lighter."
     description_fluff = "A zippo style lighter with a tiny supermatter sliver held by a hardlight shield. When lighting a cigar, make sure to hover the tip near the sliver, not against it!"
@@ -8,7 +8,7 @@
     activation_sound = 'modular_chomp/sound/items/open.ogg'
     deactivation_sound = 'sound/items/zippo_off.ogg'
 
-/obj/item/weapon/flame/lighter/supermatter/syndismzippo
+/obj/item/flame/lighter/supermatter/syndismzippo
     name = "Phoron Supermatter Zippo"		// Syndicate SM Lighter
     desc = "State of the Art Supermatter Lighter."
     description_fluff = "A red zippo style lighter with a tiny supermatter sliver held by a phoron field."
@@ -18,7 +18,7 @@
     activation_sound = 'modular_chomp/sound/items/open.ogg'
     deactivation_sound = 'sound/items/zippo_off.ogg'
 
-/obj/item/weapon/flame/lighter/supermatter/expsmzippo
+/obj/item/flame/lighter/supermatter/expsmzippo
 	name = "Experimental SM Lighter"		// Dangerous WIP (admin/event only ATM)
 	desc = "State of the Art Supermatter Lighter"
 	description_fluff = "A unique take originating from the zippo design, a shard of supermatter placed within lead-lined walls. Cautious, VERY DANGEROUS do NOT touch!"
@@ -29,7 +29,7 @@
 	deactivation_sound = 'modular_chomp/sound/items/button-close.ogg'
 
 // safe smzippo
-/obj/item/weapon/flame/lighter/supermatter/attack_self(mob/living/user)
+/obj/item/flame/lighter/supermatter/attack_self(mob/living/user)
 	if(!base_state)
 		base_state = icon_state
 	if(!lit)
@@ -63,7 +63,7 @@
 		icon_state = "[base_state]"
 		item_state = "[base_state]"
 		playsound(src, deactivation_sound, 75, 1)
-		if(istype(src, /obj/item/weapon/flame/lighter/supermatter) )
+		if(istype(src, /obj/item/flame/lighter/supermatter) )
 			user.visible_message("<span class='rose'>You hear a quiet click, as [user] shuts the [src] without even looking at what they're doing.</span>")
 		else
 			user.visible_message("<span class='notice'>[user] quietly shuts the [src].</span>")
@@ -73,7 +73,7 @@
 	return
 
 
-/obj/item/weapon/flame/lighter/supermatter/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/flame/lighter/supermatter/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 	if(!istype(M, /mob))
 		return
 
@@ -86,21 +86,21 @@
 		if(M == user)
 			cig.attackby(src, user)
 		else
-			if(istype(src, /obj/item/weapon/flame/lighter/supermatter))
+			if(istype(src, /obj/item/flame/lighter/supermatter))
 				cig.light("<span class='rose'>[user] whips the [name] out and holds it for [M].</span>")
 			else
 				cig.light("<span class='notice'>[user] holds the [name] out for [M], and lights the [cig.name].</span>")
 	else
 		..()
 
-/obj/item/weapon/flame/lighter/supermatter/process()
+/obj/item/flame/lighter/supermatter/process()
 	var/turf/location = get_turf(src)
 	if(location)
 		location.hotspot_expose(700, 5)
 	return
 
 // syndicate smzippo
-/obj/item/weapon/flame/lighter/supermatter/syndismzippo/attack_self(mob/living/user)
+/obj/item/flame/lighter/supermatter/syndismzippo/attack_self(mob/living/user)
 	if(!base_state)
 		base_state = icon_state
 	if(!lit)
@@ -134,7 +134,7 @@
 		icon_state = "[base_state]"
 		item_state = "[base_state]"
 		playsound(src, deactivation_sound, 75, 1)
-		if(istype(src, /obj/item/weapon/flame/lighter/supermatter/syndismzippo) )
+		if(istype(src, /obj/item/flame/lighter/supermatter/syndismzippo) )
 			user.visible_message("<span class='rose'>You hear a quiet click, as [user] shuts the [src] without even looking at what they're doing.</span>")
 		else
 			user.visible_message("<span class='notice'>[user] quietly shuts the [src].</span>")
@@ -144,7 +144,7 @@
 	return
 
 
-/obj/item/weapon/flame/lighter/supermatter/syndismzippo/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/flame/lighter/supermatter/syndismzippo/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 	if(!istype(M, /mob))
 		return
 
@@ -157,21 +157,21 @@
 		if(M == user)
 			cig.attackby(src, user)
 		else
-			if(istype(src, /obj/item/weapon/flame/lighter/supermatter/syndismzippo))
+			if(istype(src, /obj/item/flame/lighter/supermatter/syndismzippo))
 				cig.light("<span class='rose'>[user] whips the [name] out and holds it for [M].</span>")
 			else
 				cig.light("<span class='notice'>[user] holds the [name] out for [M], and lights the [cig.name].</span>")
 	else
 		..()
 
-/obj/item/weapon/flame/lighter/process()
+/obj/item/flame/lighter/process()
 	var/turf/location = get_turf(src)
 	if(location)
 		location.hotspot_expose(700, 5)
 	return
 
 // Experimental smzippo
-/obj/item/weapon/flame/lighter/supermatter/expsmzippo/attack_self(mob/living/user)
+/obj/item/flame/lighter/supermatter/expsmzippo/attack_self(mob/living/user)
 	if (!base_state)
 		base_state = icon_state
 	if (!lit)
@@ -302,7 +302,7 @@
 		icon_state = "[base_state]"
 		item_state = "[base_state]"
 		playsound(src, deactivation_sound, 75, 1)
-		if (istype(src, /obj/item/weapon/flame/lighter/supermatter/expsmzippo))
+		if (istype(src, /obj/item/flame/lighter/supermatter/expsmzippo))
 			user.visible_message("<span class='rose'>You hear a quiet click, as [user] closes the [src].</span>")
 		else
 			user.visible_message("<span class='notice'>[user] quietly shuts the [src].</span>")
@@ -310,7 +310,7 @@
 		set_light(0)
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/weapon/flame/lighter/supermatter/expsmzippo/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/flame/lighter/supermatter/expsmzippo/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 	if (!istype(M, /mob))
 		return
 
@@ -323,14 +323,14 @@
 		if (M == user)
 			cig.attackby(src, user)
 		else
-			if (istype(src, /obj/item/weapon/flame/lighter/supermatter/expsmzippo))
+			if (istype(src, /obj/item/flame/lighter/supermatter/expsmzippo))
 				cig.light("<span class='rose'>[user] whips the [name] out and holds it for [M].</span>")
 			else
 				cig.light("<span class='notice'>[user] holds the [name] out for [M], and lights the [cig.name].</span>")
 	else
 		..()
 
-/obj/item/weapon/flame/lighter/supermatter/expsmzippo/process()
+/obj/item/flame/lighter/supermatter/expsmzippo/process()
 	var/turf/location = get_turf(src)
 	if (location)
 		location.hotspot_expose(700, 5)

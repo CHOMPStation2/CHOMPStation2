@@ -178,7 +178,7 @@
 /area/submap/spooderchurch)
 "zY" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/card/emag,
+/obj/item/card/emag,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "Ah" = (
@@ -345,12 +345,12 @@
 /area/submap/spooderchurch)
 "Zl" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "ZX" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/spellbook/oneuse/smoke,
+/obj/item/spellbook/oneuse/smoke,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 

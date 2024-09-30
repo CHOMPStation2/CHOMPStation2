@@ -1,8 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - rscadd: "New junk mail in the mail"
-  - balance: "Severely reduced the chance of receveing non-job goodies"
-  - balance: "Slightly raised the mail per minute"
-  - rscadd: "Slightly raised the chance of special goodies"
-  - qol: "Mail bags can hold contraband packages now"

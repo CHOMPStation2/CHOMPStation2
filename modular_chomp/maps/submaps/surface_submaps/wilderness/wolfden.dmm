@@ -10,7 +10,7 @@
 	},
 /area/submap/WolfDen)
 "c" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/gibspawner/human,
 /obj/random/maintenance/engineering,
@@ -50,7 +50,7 @@
 	},
 /area/submap/WolfDen)
 "m" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -140,7 +140,7 @@
 	},
 /area/submap/WolfDen)
 "G" = (
-/obj/item/weapon/bone/arm,
+/obj/item/bone/arm,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
@@ -187,7 +187,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/WolfDen)
 "S" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks{

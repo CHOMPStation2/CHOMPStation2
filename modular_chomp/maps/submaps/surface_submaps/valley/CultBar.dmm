@@ -5,9 +5,9 @@
 /area/submap/CultBar)
 "aH" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/anomaly_spectroscopy,
+/obj/item/book/manual/anomaly_spectroscopy,
 /obj/effect/decal/cleanable/cobweb2,
-/obj/item/weapon/book/manual/bar_guide,
+/obj/item/book/manual/bar_guide,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "aN" = (
@@ -28,14 +28,14 @@
 /obj/structure/table/fancyblack,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/cargo,
-/obj/item/weapon/gun/magic/firestaff/cultstaff,
+/obj/item/gun/magic/firestaff/cultstaff,
 /obj/random/maintenance/research,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "cq" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/cook_guide,
-/obj/item/weapon/book/manual/barman_recipes,
+/obj/item/book/manual/cook_guide,
+/obj/item/book/manual/barman_recipes,
 /obj/machinery/light/small/emergency/flicker{
 	dir = 1
 	},
@@ -80,7 +80,7 @@
 "cY" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/cobweb2,
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
@@ -105,7 +105,7 @@
 "ea" = (
 /obj/structure/table/marble,
 /obj/random/meat,
-/obj/item/weapon/reagent_containers/food/snacks/sharkmeatcubes,
+/obj/item/reagent_containers/food/snacks/sharkmeatcubes,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
@@ -132,13 +132,13 @@
 "eW" = (
 /obj/structure/table/marble,
 /obj/random/meat,
-/obj/item/weapon/reagent_containers/food/snacks/stewedsoymeat,
+/obj/item/reagent_containers/food/snacks/stewedsoymeat,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "fe" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/taco,
+/obj/item/reagent_containers/food/snacks/taco,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
@@ -168,8 +168,8 @@
 /area/submap/CultBar)
 "fR" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/codex/casino,
-/obj/item/weapon/book/manual/wiki/engineering_guide,
+/obj/item/book/codex/casino,
+/obj/item/book/manual/wiki/engineering_guide,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "gh" = (
@@ -177,7 +177,7 @@
 /obj/structure/table/fancyblack,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/security,
-/obj/item/weapon/melee/energy/sword/ionic_rapier,
+/obj/item/melee/energy/sword/ionic_rapier,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "go" = (
@@ -254,7 +254,7 @@
 /area/submap/CultBar)
 "jk" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/decaf,
+/obj/item/reagent_containers/food/drinks/decaf,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "jy" = (
@@ -274,21 +274,21 @@
 /area/submap/CultBar)
 "kD" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/codex/lore/robutt,
-/obj/item/weapon/book/manual/stasis,
+/obj/item/book/codex/lore/robutt,
+/obj/item/book/manual/stasis,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "kK" = (
 /obj/effect/rune,
 /obj/item/clothing/head/culthood/magus,
-/obj/item/weapon/melee/cultblade,
+/obj/item/melee/cultblade,
 /obj/item/clothing/suit/cultrobes/magusred,
 /obj/item/clothing/shoes/cult,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/soulstone,
-/obj/item/weapon/gun/magic/firestaff,
-/obj/item/weapon/holosign_creator/smokewand,
+/obj/item/soulstone,
+/obj/item/gun/magic/firestaff,
+/obj/item/holosign_creator/smokewand,
 /turf/simulated/floor/gorefloor2,
 /area/submap/CultBar)
 "kY" = (
@@ -304,7 +304,7 @@
 "lg" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/item/weapon/melee/energy/sword/red,
+/obj/item/melee/energy/sword/red,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
 "lm" = (
@@ -314,9 +314,9 @@
 /area/submap/CultBar)
 "lu" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/nuclear,
+/obj/item/book/manual/nuclear,
 /obj/effect/decal/cleanable/cobweb,
-/obj/item/weapon/book/manual/detective,
+/obj/item/book/manual/detective,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "lV" = (
@@ -362,7 +362,7 @@
 "nj" = (
 /obj/structure/table/marble,
 /obj/random/meat,
-/obj/item/weapon/reagent_containers/food/snacks/turkeyslice,
+/obj/item/reagent_containers/food/snacks/turkeyslice,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
@@ -420,8 +420,8 @@
 /area/submap/CultBar)
 "oZ" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/anomaly_testing,
-/obj/item/weapon/book/manual/atmospipes,
+/obj/item/book/manual/anomaly_testing,
+/obj/item/book/manual/atmospipes,
 /obj/machinery/light/small/emergency/flicker{
 	dir = 1
 	},
@@ -453,7 +453,7 @@
 /area/submap/CultBar)
 "pE" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/cans/redarmy,
+/obj/item/reagent_containers/food/drinks/cans/redarmy,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "pG" = (
@@ -470,7 +470,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "qD" = (
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "qG" = (
@@ -494,7 +494,7 @@
 /area/submap/CultBar)
 "sh" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/cans/shambler,
+/obj/item/reagent_containers/food/drinks/cans/shambler,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "tE" = (
@@ -531,7 +531,7 @@
 /area/submap/CultBar)
 "wA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "xb" = (
@@ -592,8 +592,8 @@
 /area/submap/CultBar)
 "Ak" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/research_and_development,
-/obj/item/weapon/book/manual/tesla_engine,
+/obj/item/book/manual/research_and_development,
+/obj/item/book/manual/tesla_engine,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "AO" = (
@@ -607,8 +607,8 @@
 /area/submap/CultBar)
 "Br" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/nuclear,
-/obj/item/weapon/book/manual/wiki/engineering_construction,
+/obj/item/book/manual/nuclear,
+/obj/item/book/manual/wiki/engineering_construction,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "BV" = (
@@ -658,7 +658,7 @@
 /area/submap/CultBar)
 "Dp" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/melee/energy/sword/ionic_rapier/lance,
+/obj/item/melee/energy/sword/ionic_rapier/lance,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/misc,
@@ -761,7 +761,7 @@
 "Ip" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/item/weapon/reagent_containers/food/snacks/pancakes/berry,
+/obj/item/reagent_containers/food/snacks/pancakes/berry,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
 "ID" = (
@@ -776,8 +776,8 @@
 /area/submap/CultBar)
 "Jj" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/ribplate,
-/obj/item/weapon/reagent_containers/food/snacks/ribplate,
+/obj/item/reagent_containers/food/snacks/ribplate,
+/obj/item/reagent_containers/food/snacks/ribplate,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
@@ -825,14 +825,14 @@
 /area/submap/CultBar)
 "KF" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "KV" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/item/device/soulstone,
+/obj/item/soulstone,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
 "Le" = (
@@ -861,7 +861,7 @@
 /area/submap/CultBar)
 "LY" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/cans/kvass,
+/obj/item/reagent_containers/food/drinks/cans/kvass,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Mw" = (
@@ -871,14 +871,14 @@
 /area/submap/CultBar)
 "Mx" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/superbiteburger,
-/obj/item/weapon/reagent_containers/food/snacks/superbiteburger,
+/obj/item/reagent_containers/food/snacks/superbiteburger,
+/obj/item/reagent_containers/food/snacks/superbiteburger,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "MF" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/pancakes,
+/obj/item/reagent_containers/food/snacks/pancakes,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/freezer,
@@ -894,8 +894,8 @@
 /area/submap/CultBar)
 "MO" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/codex/lore/vir,
-/obj/item/weapon/book/manual/supermatter_engine,
+/obj/item/book/codex/lore/vir,
+/obj/item/book/manual/supermatter_engine,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "MS" = (
@@ -987,14 +987,14 @@
 /obj/machinery/light/small/flicker,
 /obj/random/maintenance/misc,
 /obj/random/mainttoyloot/nofail,
-/obj/item/weapon/telecube/randomized,
+/obj/item/telecube/randomized,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "Sn" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/manual/ripley_build_and_repair,
-/obj/item/weapon/book/manual/virology,
-/obj/item/weapon/book/manual/wiki/engineering_hacking,
+/obj/item/book/manual/ripley_build_and_repair,
+/obj/item/book/manual/virology,
+/obj/item/book/manual/wiki/engineering_hacking,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "SN" = (
@@ -1033,7 +1033,7 @@
 "Uc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "Uy" = (
@@ -1078,9 +1078,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb2,
 /obj/effect/landmark/loot_spawn,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/spaceacillin,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/singulo,
-/obj/item/weapon/melee/cursedblade,
+/obj/item/reagent_containers/chem_disp_cartridge/spaceacillin,
+/obj/item/reagent_containers/chem_disp_cartridge/singulo,
+/obj/item/melee/cursedblade,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Vs" = (
@@ -1145,7 +1145,7 @@
 /area/submap/CultBar)
 "Xa" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Xs" = (
@@ -1176,11 +1176,11 @@
 /area/submap/CultBar)
 "YU" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/bloodsoup,
-/obj/item/weapon/reagent_containers/food/snacks/bloodsoup,
+/obj/item/reagent_containers/food/snacks/stew,
+/obj/item/reagent_containers/food/snacks/stew,
+/obj/item/reagent_containers/food/snacks/stew,
+/obj/item/reagent_containers/food/snacks/bloodsoup,
+/obj/item/reagent_containers/food/snacks/bloodsoup,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
@@ -1190,18 +1190,18 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Zi" = (
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "Zl" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/melee/energy/sword/red,
+/obj/item/melee/energy/sword/red,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Zx" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/sharkmeatcooked,
+/obj/item/reagent_containers/food/snacks/sharkmeatcooked,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
@@ -1217,7 +1217,7 @@
 /obj/random/meat,
 /obj/random/meat,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
-/obj/item/weapon/reagent_containers/food/snacks/waffles,
+/obj/item/reagent_containers/food/snacks/waffles,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
 "ZG" = (

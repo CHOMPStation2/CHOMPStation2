@@ -22,7 +22,7 @@
 	set name = "Refill Extinguisher"
 	set category = "Object"
 	var/datum/matter_synth/water = water_res
-	for(var/obj/item/weapon/extinguisher/E in module.modules)
+	for(var/obj/item/extinguisher/E in module.modules)
 		if(E.reagents.total_volume < E.max_water)
 			if(water && water.energy > 0)
 				var/amount = E.max_water - E.reagents.total_volume

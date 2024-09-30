@@ -1,4 +1,4 @@
-/obj/item/weapon/lego
+/obj/item/lego
 	name = "Lego of Doom"
 	throw_speed = 5
 	throw_range = 4
@@ -12,7 +12,7 @@
 	throwforce = 0
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/weapon/lego/Crossed(atom/movable/AM as mob|obj)
+/obj/item/lego/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
 		return
 	if(isliving(AM))
@@ -28,7 +28,7 @@
 			qdel(src)
 	..()
 
-/obj/item/weapon/lego/gib
+/obj/item/lego/gib
 	name = "Lego of Doom"
 	throw_speed = 5
 	throw_range = 4
@@ -42,7 +42,7 @@
 	throwforce = 0
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/weapon/lego/gib/Crossed(atom/movable/AM as mob|obj)
+/obj/item/lego/gib/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
 		return
 	if(isliving(AM))

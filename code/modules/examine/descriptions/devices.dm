@@ -1,4 +1,4 @@
-/obj/item/device/communicator
+/obj/item/communicator
 	description_info = "This device allows someone to speak to another player sourced from the observer pool, as well as other communicators linked to it.  \
 	To use the device, use it in your hand, and it will open an interface with various buttons.  Near the bottom will be a list of devices currently available \
 	for you to call, both from communications on the station, and communicators very far away (observers).  To call someone, send a communications request to \
@@ -21,17 +21,17 @@
 	description_antag = "Electromagnetic pulses will cause the device to disconnect all linked communicators.  Turning off the Exonet node at the Telecomms \
 	satellite will also accomplish this, but for all communicators on and near the station.  This may be needed to allow for a quiet kill or capture."
 
-/obj/item/device/electronic_assembly/device
+/obj/item/electronic_assembly/device
 	description_info = "This is the guts of a 'device' type electronic assembly, and can either be used in this form or can be used inside of the assembly to \
 	allow it to interact with other assembly type devices (igniter, signaler, proximity sensor, etc). This device has unique inputs that allow it to either send \
 	or receive pulsed signals from an attached items when inside an electronic assembly device frame (looks not unlike a signaler). Ensure the assembly is closed \
 	before placing it inside the frame."
 
-/obj/item/device/assembly/electronic_assembly
+/obj/item/assembly/electronic_assembly
 	description_info = "This is the casing for the 'device' type of electronic assembly. It behaves like any other 'assembly' type device such as an igniter or signaler \
 	and can be attached to others in the same way. Use the 'toggle-open' verb (right click) or a crowbar to pop the electronic device open to add components and close when finished."
 
-/obj/item/device/personal_shield_generator
+/obj/item/personal_shield_generator
 	description_info = "This is a personal shield generator. Depending on the type, it can either be worn on your backpack slot, your belt slot, or in a rigsuit \
 	storage slot. It runs on an internal battery, which is usually self-charging. Some versions come with a gun. To active the shield, click the button in the upper \
 	right of the screen, use the 'Toggle Shield' command under your objects tab, or click the device itself while it is on you. Some units come with an active weapon \
