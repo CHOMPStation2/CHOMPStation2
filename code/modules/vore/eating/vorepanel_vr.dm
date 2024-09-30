@@ -340,6 +340,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		selected_list["escapable"] = selected.escapable
 		selected_list["interacts"] = list()
+		selected_list["interacts"]["belchchance"] = selected.belchchance
 		if(selected.escapable)
 			selected_list["interacts"]["escapechance"] = selected.escapechance
 			selected_list["interacts"]["escapechance_absorbed"] = selected.escapechance_absorbed
@@ -582,9 +583,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		data["soulcatcher"]["ext_hearing"] = host.soulgem.flag_check(NIF_SC_ALLOW_EARS)
 		data["soulcatcher"]["ext_vision"] = host.soulgem.flag_check(NIF_SC_ALLOW_EYES)
 		data["soulcatcher"]["mind_backups"] = host.soulgem.flag_check(NIF_SC_BACKUPS)
-		data["soulcatcher"]["sr_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
+		data["soulcatcher"]["ar_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
 		data["soulcatcher"]["show_vore_sfx"] = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
-		data["soulcatcher"]["see_sr_projecting"] = host.soulgem.flag_check(SOULGEM_SEE_SR_SOULS)
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
 		var/mob/living/H = host
@@ -1477,7 +1477,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["escapetime"]))
 					var/new_escapetime = belly_data["escapetime"]
 					new_belly.escapetime = sanitize_integer(new_escapetime*10, 10, 600, initial(new_belly.escapetime))
-
+				if(isnum(belly_data["belchchance"]))
+					var/new_belchchance = belly_data["belchchance"]
+					new_belly.belchchance = sanitize_integer(new_belchchance, 0, 100, initial(new_belly.belchchance))
 				if(isnum(belly_data["transferchance"]))
 					var/new_transferchance = belly_data["transferchance"]
 					new_belly.transferchance = sanitize_integer(new_transferchance, 0, 100, initial(new_belly.transferchance))
@@ -2306,16 +2308,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.soulgem.toggle_setting(NIF_SC_BACKUPS)
 			unsaved_changes = TRUE
 			return TRUE
-		if("toggle_sr_projecting")
+		if("toggle_ar_projecting")
 			host.soulgem.toggle_setting(NIF_SC_PROJECTING)
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_vore_sfx")
 			host.soulgem.toggle_setting(SOULGEM_SHOW_VORE_SFX)
-			unsaved_changes = TRUE
-			return TRUE
-		if("toggle_sr_vision")
-			host.soulgem.toggle_setting(SOULGEM_SEE_SR_SOULS)
 			unsaved_changes = TRUE
 			return TRUE
 		if("soulcatcher_rename")
@@ -2500,7 +2498,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		available_options += "Transform"
 		available_options += "Health Check"
 	//CHOMPEdit Begin - Add Reforming
-	if(isobserver(target) || istype(target,/obj/item/mmi))
+	if(isobserver(target) || istype(target,/obj/item/device/mmi))
 		available_options += "Reform"
 	//CHOMPEdit End
 	if(isliving(target))
@@ -2670,8 +2668,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 							sm.icon_state = sm.icon_living
 					T.update_icon()
 					announce_ghost_joinleave(T.mind, 0, "They now occupy their body again.")
-			else if(istype(target,/obj/item/mmi)) // A good bit of repeated code, sure, but... cleanest way to do this.
-				var/obj/item/mmi/MMI = target
+			else if(istype(target,/obj/item/device/mmi)) // A good bit of repeated code, sure, but... cleanest way to do this.
+				var/obj/item/device/mmi/MMI = target
 				if(!ismob(MMI.body_backup) || !MMI.brainmob.mind || prevent_respawns.Find(MMI.brainmob.mind.name))
 					to_chat(user,"<span class='warning'>They don't seem to be reformable!</span>")
 					return TRUE
@@ -2696,10 +2694,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						R.mmi.brainmob.add_language("Robot Talk")
 					else //reference /datum/surgery_step/robotics/install_mmi/end_step
 						var/obj/item/organ/internal/mmi_holder/holder
-						if(istype(MMI, /obj/item/mmi/digital/posibrain))
+						if(istype(MMI, /obj/item/device/mmi/digital/posibrain))
 							var/obj/item/organ/internal/mmi_holder/posibrain/holdertmp = new(body_backup, 1)
 							holder = holdertmp
-						else if(istype(MMI, /obj/item/mmi/digital/robot))
+						else if(istype(MMI, /obj/item/device/mmi/digital/robot))
 							var/obj/item/organ/internal/mmi_holder/robot/holdertmp = new(body_backup, 1)
 							holder = holdertmp
 						else
@@ -3607,6 +3605,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/escape_absorbed_chance_input = tgui_input_number(user, "Set absorbed prey escape chance on resist (as %)", "Prey Absorbed Escape Chance", null, 100, 0)
 			if(!isnull(escape_absorbed_chance_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
 				host.vore_selected.escapechance_absorbed = sanitize_integer(escape_absorbed_chance_input, 0, 100, initial(host.vore_selected.escapechance_absorbed))
+			. = TRUE
+		if("b_belchchance")
+			var/belch_chance_input = tgui_input_number(user, "Set chance for belch emote on prey resist (as %)", "Resist Belch Chance", null, 100, 0)
+			if(!isnull(belch_chance_input))
+				host.vore_selected.belchchance = sanitize_integer(belch_chance_input, 0, 100, initial(host.vore_selected.belchchance))
 			. = TRUE
 		if("b_escapetime")
 			var/escape_time_input = tgui_input_number(user, "Set number of seconds for prey to escape on resist (1-60)", "Prey Escape Time", null, 60, 1)
