@@ -14,4 +14,8 @@ The following folders will be listed here. If there’s been an update and this 
 * Public Ship Templates
     * This folder exists for SHIP templates that do not normally go into the ships folder (For reference, this ship folder is maps/offmap_vr/om_ships, or overmap/ships). This is for example ships, or for EM-specific, public ships.
 * Templates
+<<<<<<< HEAD
     * This folder is specifically for pre-prepared, ready-to-place templates for things such as drop pods, small maps, etc, things EM-staff will use regularly that are not necessarily related to events.
+=======
+    * This folder is specifically for pre-prepared, ready-to-place templates for things such as drop pods, small maps, etc, things EM-staff will use regularly that are not necessarily related to events.
+>>>>>>> c13a352941... Merge pull request #16389 from Kashargul/datumsadnsome
