@@ -7,16 +7,16 @@
 What Borgs are available is sadly handled in the above file in the proc
 
 /hook/startup/proc/robot_modules_vr()
-	robot_modules["Medihound"] = /obj/item/weapon/robot_module/robot/medihound
-	robot_modules["K9"] = /obj/item/weapon/robot_module/robot/knine
-	robot_modules["ERT"] = /obj/item/weapon/robot_module/robot/ert
-	robot_modules["Janihound"] = /obj/item/weapon/robot_module/robot/scrubpup
-	robot_modules["Sci-borg"] = /obj/item/weapon/robot_module/robot/science
-	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
+	robot_modules["Medihound"] = /obj/item/robot_module/robot/medihound
+	robot_modules["K9"] = /obj/item/robot_module/robot/knine
+	robot_modules["ERT"] = /obj/item/robot_module/robot/ert
+	robot_modules["Janihound"] = /obj/item/robot_module/robot/scrubpup
+	robot_modules["Sci-borg"] = /obj/item/robot_module/robot/science
+	robot_modules["Pupdozer"] = /obj/item/robot_module/robot/engiedog
 	return 1
 */
 
-/obj/item/weapon/robot_module/robot/booze
+/obj/item/robot_module/robot/booze
 	name = "BoozeHound robot module"
 	channels = list("Service" = 1)
 	languages = list(
@@ -35,7 +35,7 @@ What Borgs are available is sadly handled in the above file in the proc
 					LANGUAGE_SIGN		= 0
 					)
 
-/obj/item/weapon/robot_module/robot/booze
+/obj/item/robot_module/robot/booze
 	sprites = list(
 				"Beer Buddy" = "boozeborg",
 				"Brilliant Blue" = "boozeborg(blue)",
@@ -46,31 +46,31 @@ What Borgs are available is sadly handled in the above file in the proc
 				"Vampire's Aid" = "boozeborg(red)",
 				"Vodka Komrade" = "boozeborg(vodka)"
 				)
-/obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
-	src.modules += new /obj/item/weapon/gripper/service(src)
-	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
-	//src.modules += new /obj/item/weapon/material/minihoe(src)
-	//src.modules += new /obj/item/device/analyzer/plant_analyzer(src)
-	//src.modules += new /obj/item/weapon/storage/bag/plants(src)
-	//src.modules += new /obj/item/weapon/robot_harvester(src)
-	src.modules += new /obj/item/weapon/material/knife(src)
-	src.modules += new /obj/item/weapon/material/kitchen/rollingpin(src)
-	src.modules += new /obj/item/device/multitool(src) //to freeze trays
-	src.modules += new /obj/item/weapon/dogborg/jaws/small(src)
-	src.modules += new /obj/item/device/dogborg/boop_module(src)
-	src.modules += new /obj/item/device/dogborg/sleeper/compactor/brewer(src)
-	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker(src)//For holding the ALCOHOL
-	src.emag 	 = new /obj/item/weapon/dogborg/pounce(src)
+/obj/item/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/gripper/service(src)
+	//src.modules += new /obj/item/reagent_containers/glass/bucket(src)
+	//src.modules += new /obj/item/material/minihoe(src)
+	//src.modules += new /obj/item/analyzer/plant_analyzer(src)
+	//src.modules += new /obj/item/storage/bag/plants(src)
+	//src.modules += new /obj/item/robot_harvester(src)
+	src.modules += new /obj/item/material/knife(src)
+	src.modules += new /obj/item/material/kitchen/rollingpin(src)
+	src.modules += new /obj/item/multitool(src) //to freeze trays
+	src.modules += new /obj/item/dogborg/jaws/small(src)
+	src.modules += new /obj/item/dogborg/boop_module(src)
+	src.modules += new /obj/item/dogborg/sleeper/compactor/brewer(src)
+	src.modules += new /obj/item/reagent_containers/glass/beaker(src)//For holding the ALCOHOL
+	src.emag 	 = new /obj/item/dogborg/pounce(src)
 	add_verb(R,/mob/living/silicon/robot/proc/reskin_booze)  //CHOMPEdit
 
-	var/obj/item/weapon/rsf/M = new /obj/item/weapon/rsf(src)
+	var/obj/item/rsf/M = new /obj/item/rsf(src)
 	M.stored_matter = 30
 	src.modules += M
 
-	src.modules += new /obj/item/weapon/reagent_containers/dropper/industrial(src)
+	src.modules += new /obj/item/reagent_containers/dropper/industrial(src)
 
 	/* Remembered this causes the dogs to catch on fire lol.
-	var/obj/item/weapon/flame/lighter/zippo/L = new /obj/item/weapon/flame/lighter/zippo(src)
+	var/obj/item/flame/lighter/zippo/L = new /obj/item/flame/lighter/zippo(src)
 	L.lit = 1
 	src.modules += L
 	*/
@@ -83,14 +83,14 @@ What Borgs are available is sadly handled in the above file in the proc
 	R.water_res = water
 	synths += water
 
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	var/obj/item/dogborg/tongue/T = new /obj/item/dogborg/tongue(src)
 	T.water = water
 	src.modules += T
 
 
-	src.modules += new /obj/item/weapon/tray/robotray(src)
-	src.modules += new /obj/item/weapon/reagent_containers/borghypo/service/booze(src)
-	src.emag = new /obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer(src)
+	src.modules += new /obj/item/tray/robotray(src)
+	src.modules += new /obj/item/reagent_containers/borghypo/service/booze(src)
+	src.emag = new /obj/item/reagent_containers/food/drinks/bottle/small/beer(src)
 
 	var/datum/reagents/N = new/datum/reagents(50)
 	src.emag.reagents = N
@@ -113,15 +113,15 @@ What Borgs are available is sadly handled in the above file in the proc
 	add_verb(R,/mob/living/silicon/robot/proc/ex_reserve_refill) //CHOMPEdit TGPanel
 	..()
 
-/obj/item/weapon/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
-	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
+/obj/item/robot_module/robot/booze/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+	var/obj/item/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
 	E.reagents.add_reagent("enzyme", 2 * amount)
 	if(src.emag)
-		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
+		var/obj/item/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
 		B.reagents.add_reagent("beer2", 2 * amount)
 
 //BORGHYPO
-/obj/item/weapon/reagent_containers/borghypo/service/booze
+/obj/item/reagent_containers/borghypo/service/booze
 	name = "cyborg drink synthesizer"
 	desc = "A portable drink dispencer."
 	icon = 'icons/obj/drinks.dmi'
@@ -158,14 +158,14 @@ What Borgs are available is sadly handled in the above file in the proc
 		return 1
 
 //SLEEPER "Brewer"
-/obj/item/device/dogborg/sleeper/compactor/brewer //Boozehound gut.
+/obj/item/dogborg/sleeper/compactor/brewer //Boozehound gut.
 	name = "Brew Belly"
 	desc = "A mounted drunk tank unit with fuel processor."
 	icon_state = "brewer"
 	injection_chems = list("vodka","beer","gin") //Injected alcohol is 3 times as strong
 	max_item_count = 1
 
-/obj/item/device/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem)
+/obj/item/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem)
 	if(patient && patient.reagents)
 		if(chem in injection_chems + "inaprovaline")
 			if(hound.cell.charge < 200) //This is so borgs don't kill themselves with it.

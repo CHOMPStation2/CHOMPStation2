@@ -33,7 +33,7 @@
 "cD" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /turf/simulated/floor/tiled,
 /area/submap/unfinishedoutpost)
 "dl" = (
@@ -77,7 +77,7 @@
 "iM" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo,
+/obj/item/storage/backpack/dufflebag/syndie/ammo,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -92,7 +92,7 @@
 /area/submap/unfinishedoutpost)
 "kv" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/rainbow,
+/obj/item/bedsheet/rainbow,
 /obj/item/toy/plushie/slimeplushie,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)
@@ -106,7 +106,7 @@
 /area/submap/unfinishedoutpost)
 "kP" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -140,7 +140,7 @@
 /area/submap/unfinishedoutpost)
 "oc" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/mime,
+/obj/item/bedsheet/mime,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)
@@ -159,14 +159,14 @@
 /area/submap/unfinishedoutpost)
 "rP" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/clowndouble,
+/obj/item/bedsheet/clowndouble,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)
 "tq" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/backpack/dufflebag/syndie/med,
+/obj/item/storage/backpack/dufflebag/syndie/med,
 /turf/simulated/floor/tiled,
 /area/submap/unfinishedoutpost)
 "tC" = (
@@ -218,7 +218,7 @@
 	},
 /area/submap/unfinishedoutpost)
 "wf" = (
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -251,7 +251,7 @@
 "AY" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/floor/tiled,
 /area/submap/unfinishedoutpost)
 "BC" = (
@@ -272,7 +272,7 @@
 /area/submap/unfinishedoutpost)
 "Dj" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/reddouble,
+/obj/item/bedsheet/reddouble,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)
@@ -295,7 +295,7 @@
 /area/submap/unfinishedoutpost)
 "FM" = (
 /obj/structure/catwalk,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -321,7 +321,7 @@
 /area/submap/unfinishedoutpost)
 "GM" = (
 /obj/structure/table/bench/wooden,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)
 "GT" = (
@@ -334,7 +334,7 @@
 /area/submap/unfinishedoutpost)
 "HC" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/item/weapon/cell/super,
+/obj/item/cell/super,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -347,7 +347,7 @@
 /area/submap/unfinishedoutpost)
 "IJ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)
@@ -416,7 +416,7 @@
 /area/submap/unfinishedoutpost)
 "RI" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)
@@ -436,7 +436,7 @@
 /area/submap/unfinishedoutpost)
 "TK" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/red,
+/obj/item/bedsheet/red,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)
@@ -517,7 +517,7 @@
 	},
 /area/submap/unfinishedoutpost)
 "Xw" = (
-/obj/item/weapon/cell/super/empty,
+/obj/item/cell/super/empty,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -526,7 +526,7 @@
 /area/submap/unfinishedoutpost)
 "Yc" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/random/plushie,
 /turf/simulated/floor/wood,
 /area/submap/unfinishedoutpost)

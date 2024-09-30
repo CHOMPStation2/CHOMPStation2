@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(dreams, populate_dream_list())
 	var/list/custom_dream_nouns = list()
 	var/fragment = ""
 
-	for(var/obj/item/weapon/bedsheet/sheet in dreamer.loc)
+	for(var/obj/item/bedsheet/sheet in dreamer.loc)
 		custom_dream_nouns += sheet.dream_messages
 
 	. = list()

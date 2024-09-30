@@ -202,17 +202,17 @@
 /area/surface/outpost/shelter/utilityroom)
 "hu" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/practice{
+/obj/item/gun/projectile/shotgun/pump/rifle/practice{
 	pixel_y = -3
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/practice{
+/obj/item/gun/projectile/shotgun/pump/rifle/practice{
 	pixel_y = 6
 	},
-/obj/item/device/binoculars{
+/obj/item/binoculars{
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/item/device/binoculars{
+/obj/item/binoculars{
 	pixel_x = 5;
 	pixel_y = -3
 	},
@@ -289,7 +289,7 @@
 	pixel_y = 31;
 	req_access = null;
 	req_one_access = list(1,3,43,66,67);
-	starts_with = list(/obj/item/device/defib_kit/loaded)
+	starts_with = list(/obj/item/defib_kit/loaded)
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -329,22 +329,22 @@
 	anchored = 1;
 	req_one_access = list(1,3,43,67)
 	},
-/obj/item/weapon/storage/box/syndie_kit{
+/obj/item/storage/box/syndie_kit{
 	max_storage_space = 20;
 	name = "box of 7.62mm clips";
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
 	},
-/obj/item/weapon/storage/box/syndie_kit{
+/obj/item/storage/box/syndie_kit{
 	max_storage_space = 20;
 	name = "box of 7.62mm clips";
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
 	},
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle{
+/obj/item/binoculars,
+/obj/item/binoculars,
+/obj/item/gun/projectile/shotgun/pump/rifle{
 	pixel_y = -3
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle{
+/obj/item/gun/projectile/shotgun/pump/rifle{
 	pixel_y = 6
 	},
 /turf/simulated/floor/wood/sif,
@@ -355,19 +355,19 @@
 /turf/simulated/floor/outdoors/grass/heavy)
 "kg" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/deck/cards{
+/obj/item/deck/cards{
 	pixel_x = -1;
 	pixel_y = 4
 	},
-/obj/item/weapon/deck/cah{
+/obj/item/deck/cah{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/deck/holder{
+/obj/item/deck/holder{
 	pixel_x = -9;
 	pixel_y = 1
 	},
-/obj/item/weapon/deck/cah/black{
+/obj/item/deck/cah/black{
 	pixel_x = 1;
 	pixel_y = -1
 	},
@@ -492,7 +492,7 @@
 "nj" = (
 /obj/structure/closet/walllocker_double/survival/north{
 	name = "Wilderness Shelter Emergency Survival Wall Cabinet";
-	starts_with = list(/obj/item/device/gps=5,/obj/item/weapon/material/knife/tacknife/survival=5,/obj/random/mre=5,/obj/item/device/flashlight/color/yellow=5,/obj/item/device/flashlight/flare=5,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle=5,/obj/item/weapon/whetstone)
+	starts_with = list(/obj/item/gps=5,/obj/item/material/knife/tacknife/survival=5,/obj/random/mre=5,/obj/item/flashlight/color/yellow=5,/obj/item/flashlight/flare=5,/obj/item/reagent_containers/food/drinks/cans/waterbottle=5,/obj/item/whetstone)
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -561,13 +561,13 @@
 	})
 "ph" = (
 /obj/structure/closet,
-/obj/item/weapon/storage/box/lights/bulbs,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/mixed,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/utilityroom)
 "pl" = (
@@ -827,16 +827,16 @@
 /turf/simulated/floor/water)
 "vS" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/shelter/dorms)
 "wb" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/surface/outpost/shelter/dorms)
@@ -865,10 +865,10 @@
 /turf/simulated/floor/outdoors/grass)
 "xv" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/storage/toolbox/emergency{
+/obj/item/storage/toolbox/emergency{
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = -1
 	},
 /obj/machinery/alarm/sifwilderness{
@@ -934,7 +934,7 @@
 /turf/simulated/floor/water)
 "yJ" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /obj/machinery/camera/network/carrier{
 	c_tag = "WILD - Shelter Crew Dorms";
 	dir = 4
@@ -975,7 +975,7 @@
 /area/surface/outpost/shelter/exterior)
 "Ae" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/storage/box{
+/obj/item/storage/box{
 	max_storage_space = 20;
 	name = "box of 7.62mm practice clips";
 	pixel_x = 3;
@@ -987,15 +987,15 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/storage/bag/trash{
+/obj/item/storage/bag/trash{
 	pixel_x = -9;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/bag/trash{
+/obj/item/storage/bag/trash{
 	pixel_x = -9;
 	pixel_y = -5
 	},
-/obj/item/weapon/storage/box{
+/obj/item/storage/box{
 	max_storage_space = 20;
 	name = "box of 7.62mm practice clips";
 	pixel_x = 3;
@@ -1230,7 +1230,7 @@
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
 	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/firstaid/regular=2,/obj/item/weapon/storage/pill_bottle/spaceacillin)
+	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/storage/firstaid/regular=2,/obj/item/storage/pill_bottle/spaceacillin)
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -1909,7 +1909,7 @@
 /turf/simulated/floor/outdoors/snow)
 "XJ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/yellowdouble,
+/obj/item/bedsheet/yellowdouble,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
 "XK" = (
@@ -1964,7 +1964,7 @@
 /obj/structure/bedsheetbin{
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	pixel_x = -5;
 	pixel_y = 2
 	},

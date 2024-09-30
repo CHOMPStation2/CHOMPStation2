@@ -1,4 +1,4 @@
-/obj/item/weapon/implant/reagent_generator/egg
+/obj/item/implant/reagent_generator/egg
 	name = "regular egg laying implant"
 	desc = "This is an implant that allows the user to lay eggs."
 	generated_reagents = list("egg" = 2)
@@ -10,10 +10,10 @@
 	self_emote_descriptor = list("lay", "force out", "push out")
 	random_emote = list("lets out an embarrassed moan", "yelps in embarrassment", "quietly groans in a mixture of discomfort and pleasure")
 	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_egg
-	var/eggtype = /obj/item/weapon/reagent_containers/food/snacks/egg
+	var/eggtype = /obj/item/reagent_containers/food/snacks/egg
 	var/cascade
 
-/obj/item/weapon/implant/reagent_generator/egg/post_implant(mob/living/carbon/source)
+/obj/item/implant/reagent_generator/egg/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
 	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
@@ -32,10 +32,10 @@
 	if(usr.incapacitated() || usr.stat > CONSCIOUS)
 		return
 
-	var/obj/item/weapon/implant/reagent_generator/egg/rimplant
+	var/obj/item/implant/reagent_generator/egg/rimplant
 	for(var/obj/item/organ/external/E in organs)
-		for(var/obj/item/weapon/implant/I in E.implants)
-			if(istype(I, /obj/item/weapon/implant/reagent_generator))
+		for(var/obj/item/implant/I in E.implants)
+			if(istype(I, /obj/item/implant/reagent_generator))
 				rimplant = I
 				break
 
@@ -95,10 +95,10 @@
 	set desc = "Toggle whether or not being forced to lay an egg will cause you to lay all others as well, in rapid succession"
 	set category = "Object"
 
-	var/obj/item/weapon/implant/reagent_generator/egg/rimplant
+	var/obj/item/implant/reagent_generator/egg/rimplant
 	for(var/obj/item/organ/external/E in organs)
-		for(var/obj/item/weapon/implant/I in E.implants)
-			if(istype(I, /obj/item/weapon/implant/reagent_generator))
+		for(var/obj/item/implant/I in E.implants)
+			if(istype(I, /obj/item/implant/reagent_generator))
 				rimplant = I
 				break
 
@@ -110,32 +110,32 @@
 		to_chat(src, "<span class='notice'>You toggle cascading on</span>")
 
 
-/obj/item/weapon/implant/reagent_generator/egg/slow
+/obj/item/implant/reagent_generator/egg/slow
 	name = "slow egg laying implant"
 	usable_volume = 3000
 	transfer_amount = 600
 
-/obj/item/weapon/implant/reagent_generator/egg/veryslow
+/obj/item/implant/reagent_generator/egg/veryslow
 	name = "very slow egg laying implant"
 	usable_volume = 6000
 	transfer_amount = 1200
 
-/obj/item/weapon/implant/reagent_generator/egg/hicap
+/obj/item/implant/reagent_generator/egg/hicap
 	name = "high capacity egg laying implant" // Note that the capacity does not affect the regeneration rate, rather, the transfer amount does
 	usable_volume = 3000 // Effectively, the transfer_amount is the cost/time of making an egg. Usable volume is simply the max number of eggs.
 	transfer_amount = 300
 
-/obj/item/weapon/implant/reagent_generator/egg/doublehicap
+/obj/item/implant/reagent_generator/egg/doublehicap
 	name = "extreme capacity egg laying implant"
 	usable_volume = 6000
 	transfer_amount = 300
 
-/obj/item/weapon/implant/reagent_generator/egg/slowlowcap
+/obj/item/implant/reagent_generator/egg/slowlowcap
 	name = "slow, low capacity egg laying implant"
 	usable_volume = 3000
 	transfer_amount = 3000
 
-/obj/item/weapon/implant/reagent_generator/egg/veryslowlowcap
+/obj/item/implant/reagent_generator/egg/veryslowlowcap
 	name = "very slow, low capacity egg laying implant"
 	usable_volume = 6000
 	transfer_amount = 6000

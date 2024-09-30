@@ -65,7 +65,7 @@
 /area/submap/siegepoint)
 "ji" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/projectile/SVD,
+/obj/item/gun/projectile/SVD,
 /obj/item/clothing/suit/armor/pcarrier/blue/sol,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/techfloor,
@@ -92,7 +92,7 @@
 /area/submap/siegepoint)
 "lL" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/projectile/revolver/lemat,
+/obj/item/gun/projectile/revolver/lemat,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "nl" = (
@@ -249,7 +249,7 @@
 /area/submap/siegepoint)
 "AW" = (
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/gun/projectile/revolver/webley,
+/obj/item/gun/projectile/revolver/webley,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Bz" = (
@@ -263,7 +263,7 @@
 /area/submap/siegepoint)
 "BY" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/projectile/revolver/saa,
+/obj/item/gun/projectile/revolver/saa,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Da" = (
@@ -435,7 +435,7 @@
 /area/submap/siegepoint)
 "We" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/energy/medigun,
+/obj/item/gun/energy/medigun,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Xi" = (

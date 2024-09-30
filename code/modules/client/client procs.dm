@@ -529,7 +529,7 @@
 
 /client/verb/game_options()
 	set name = "Game Options"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	if(prefs)
 		prefs.tgui_interact(usr)
 

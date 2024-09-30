@@ -22,7 +22,7 @@
 
 // CHOMPAdd - Grand piano moving
 
-/obj/structure/musician/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/musician/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WRENCH))
 		playsound(src, W.usesound, 100, 1)
 		if(anchored)

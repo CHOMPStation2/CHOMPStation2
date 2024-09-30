@@ -131,7 +131,7 @@
 		caller.visible_message("<span class='notify'>[caller] rapidly contorts and shifts!</span>", "<span class='danger'>You begin to reassemble.</span>")
 		if(do_after(caller, 40,exclusive = TASK_ALL_EXCLUSIVE))
 			if(caller.client.prefs)	//Make sure we didn't d/c
-				var/obj/item/weapon/rig/protean/Rig = species?:OurRig
+				var/obj/item/rig/protean/Rig = species?:OurRig
 				caller.client.prefs.vanity_copy_to(src, FALSE, flavour, oocnotes, TRUE)
 				species?:OurRig = Rig	//Get a reference to our Rig and put it back after reassembling
 				caller.visible_message("<span class='notify'>[caller] adopts a new form!</span>", "<span class='danger'>You have reassembled.</span>")
@@ -148,7 +148,7 @@
 
 	var/grabbing_but_not_enough
 	var/mob/living/carbon/human/victim = null
-	for(var/obj/item/weapon/grab/G in caller)
+	for(var/obj/item/grab/G in caller)
 		if(G.state < GRAB_AGGRESSIVE)
 			grabbing_but_not_enough = TRUE
 			return
@@ -182,7 +182,7 @@
 		flavour = 1
 
 	var/checking = FALSE
-	for(var/obj/item/weapon/grab/G in caller)
+	for(var/obj/item/grab/G in caller)
 		if(G.affecting == victim && G.state >= GRAB_AGGRESSIVE)
 			checking = TRUE
 	if (!checking)
@@ -193,14 +193,14 @@
 	caller.visible_message("<span class='notify'>[caller] rapidly contorts and shifts!</span>", "<span class='danger'>You begin to reassemble into [victim].</span>")
 	if(do_after(caller, 40,exclusive = TASK_ALL_EXCLUSIVE))
 		checking = FALSE
-		for(var/obj/item/weapon/grab/G in caller)
+		for(var/obj/item/grab/G in caller)
 			if(G.affecting == victim && G.state >= GRAB_AGGRESSIVE)
 				checking = TRUE
 		if (!checking)
 			to_chat(caller, "<span class='warning'>You lost your grip on [victim]!</span>")
 			return
 		if(caller.client)	//Make sure we didn't d/c
-			var/obj/item/weapon/rig/protean/Rig = species?:OurRig
+			var/obj/item/rig/protean/Rig = species?:OurRig
 			transform_into_other_human(victim, FALSE, flavour, TRUE)
 			species?:OurRig = Rig	//Get a reference to our Rig and put it back after reassembling
 			caller.visible_message("<span class='notify'>[caller] adopts the form of [victim]!</span>", "<span class='danger'>You have reassembled into [victim].</span>")
@@ -367,7 +367,7 @@
 				P.reset_view()
 			else	//Make one if not
 				to_chat(temporary_form, "<span class='warning'>Somehow, your RIG got disconnected from your species. This may have been caused by an admin heal. A new one has been created for you, contact a coder.</span>")
-				new /obj/item/weapon/rig/protean(src,src)
+				new /obj/item/rig/protean(src,src)
 	else
 		to_chat(caller, "<span class='warning'>You must remain still to condense!</span>")
 
@@ -536,8 +536,8 @@
 	if(temporary_form)
 		if(blobstyle)
 			temporary_form.update_icon()
-			if(istype(temporary_form.loc, /obj/item/weapon/holder/protoblob))
-				var/obj/item/weapon/holder/protoblob/PB = temporary_form.loc
+			if(istype(temporary_form.loc, /obj/item/holder/protoblob))
+				var/obj/item/holder/protoblob/PB = temporary_form.loc
 				PB.item_state = S.blob_appearance
 
 /mob/living/carbon/human/proc/nano_latch()
@@ -561,8 +561,8 @@
 				to_chat(caller, "<span class='warning'>You aren't being worn, dummy.</span>")
 			return
 	var/obj/held_item = caller.get_active_hand()
-	if(istype(held_item,/obj/item/weapon/grab))
-		var/obj/item/weapon/grab/G = held_item
+	if(istype(held_item,/obj/item/grab))
+		var/obj/item/grab/G = held_item
 		if(istype(G.affecting, /mob/living/carbon/human))
 			target = G.affecting
 			if(istype(target.species, /datum/species/protean))

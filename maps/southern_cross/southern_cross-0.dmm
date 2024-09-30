@@ -118,8 +118,8 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 5
 	},
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 3;
 	pixel_y = 6
 	},
@@ -158,13 +158,13 @@
 "aC" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)";
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
@@ -321,12 +321,12 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/thrift)
 "aZ" = (
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/water,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol{
+/obj/item/reagent_containers/chem_disp_cartridge/water,
+/obj/item/reagent_containers/chem_disp_cartridge/ethanol{
 	pixel_y = 7;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/chlorine{
+/obj/item/reagent_containers/chem_disp_cartridge/chlorine{
 	pixel_x = -5
 	},
 /obj/effect/decal/cleanable/cobweb2,
@@ -423,7 +423,7 @@
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
 "bo" = (
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
 "bp" = (
@@ -722,7 +722,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/backuppowerlobby)
 "cz" = (
-/obj/item/weapon/laserdome_flag/red,
+/obj/item/laserdome_flag/red,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
 "cD" = (
@@ -1103,7 +1103,7 @@
 /turf/simulated/floor/grass,
 /area/maintenance/zeroaft)
 "ec" = (
-/obj/item/weapon/storage/bag/cash,
+/obj/item/storage/bag/cash,
 /obj/machinery/button/remote/airlock{
 	id = "cage";
 	name = "Cage Bolts";
@@ -1288,7 +1288,7 @@
 /obj/structure/table/rack/shelf,
 /obj/random/tool,
 /obj/random/maintenance/cargo,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /obj/item/seeds/random,
 /obj/random/action_figure,
 /obj/item/clothing/head/fishing,
@@ -1396,7 +1396,7 @@
 "fl" = (
 /obj/structure/table/rack/shelf,
 /obj/random/mainttoyloot,
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick/random,
 /obj/item/seeds/random,
 /obj/random/mug,
 /obj/item/clothing/head/fishing,
@@ -2542,16 +2542,16 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "jP" = (
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/mercury,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar{
+/obj/item/reagent_containers/chem_disp_cartridge/mercury,
+/obj/item/reagent_containers/chem_disp_cartridge/sugar{
 	pixel_x = 10;
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/lithium{
+/obj/item/reagent_containers/chem_disp_cartridge/lithium{
 	pixel_y = 10;
 	pixel_x = -4
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
@@ -2819,7 +2819,7 @@
 /turf/simulated/floor/smole,
 /area/maintenance/smoleroom)
 "kS" = (
-/obj/item/weapon/broken_bottle,
+/obj/item/broken_bottle,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
 "kU" = (
@@ -2847,7 +2847,7 @@
 /obj/item/clothing/head/fishing,
 /obj/random/toolbox,
 /obj/random/maintenance/misc,
-/obj/item/device/tape/random,
+/obj/item/rectape/random,
 /obj/random/donkpocketbox,
 /turf/simulated/floor/tiled,
 /area/maintenance/thrift)
@@ -3158,7 +3158,7 @@
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/maintenance/zerobar)
 "mx" = (
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
@@ -3237,7 +3237,7 @@
 "mK" = (
 /obj/structure/table/rack/shelf,
 /obj/random/powercell,
-/obj/item/weapon/storage/wallet/random,
+/obj/item/storage/wallet/random,
 /obj/item/clothing/head/fishing,
 /obj/random/forgotten_tram,
 /turf/simulated/floor/plating/turfpack/station,
@@ -3516,7 +3516,7 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/maintenance/zeroaft)
 "nA" = (
-/obj/item/weapon/storage/backpack/clown/loaded,
+/obj/item/storage/backpack/clown/loaded,
 /turf/simulated/floor/plating,
 /area/maintenance/abtheatre)
 "nC" = (
@@ -3621,7 +3621,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abscience)
 "nX" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -3699,7 +3699,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /obj/structure/table/steel,
-/obj/item/weapon/folder/yellow,
+/obj/item/folder/yellow,
 /turf/simulated/floor/tiled,
 /area/maintenance/abcargo)
 "ol" = (
@@ -3891,17 +3891,17 @@
 /area/engineering/lowlobby)
 "pc" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer{
 	pixel_y = 10;
 	pixel_z = 5;
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer{
 	pixel_y = 10;
 	pixel_z = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/beercan,
-/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+/obj/item/reagent_containers/food/drinks/cans/beercan,
+/obj/item/reagent_containers/food/drinks/cans/beercan{
 	pixel_y = 5;
 	pixel_x = 10
 	},
@@ -4094,7 +4094,7 @@
 /area/maintenance/abtheatre)
 "pS" = (
 /obj/structure/table/woodentable,
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/wood/alt/parquet/broken/turfpack/station,
 /area/maintenance/lookout)
 "pT" = (
@@ -4342,7 +4342,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/zeroport)
 "qN" = (
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/bmarble,
 /area/maintenance/thrift)
 "qO" = (
@@ -4372,11 +4372,11 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 6;
 	pixel_y = -5
 	},
@@ -4540,7 +4540,7 @@
 /area/maintenance/zerocent)
 "rD" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/glasses/meta/metapint,
+/obj/item/storage/box/glasses/meta/metapint,
 /obj/random/drinkbottle,
 /turf/simulated/floor/lino,
 /area/maintenance/zerobar)
@@ -4602,7 +4602,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 9
 	},
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical{
 	pixel_y = 6;
 	pixel_x = -2
 	},
@@ -4685,11 +4685,11 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/zerobar)
 "sh" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 6;
 	pixel_y = -5
 	},
@@ -4737,7 +4737,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/lookout)
 "sn" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/filth,
@@ -4859,7 +4859,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fieldhallway)
 "sL" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 2;
 	pixel_y = 3
 	},
@@ -5075,7 +5075,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/fieldthrift)
 "tN" = (
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerofore)
 "tO" = (
@@ -5097,8 +5097,8 @@
 /obj/item/clothing/accessory/bowtie,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/morestuff,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/device/tape/random,
+/obj/item/flame/lighter/random,
+/obj/item/rectape/random,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
@@ -5131,7 +5131,7 @@
 /area/maintenance/abfirstaid)
 "ud" = (
 /obj/structure/hyperball_pedestal,
-/obj/item/weapon/laserdome_hyperball,
+/obj/item/laserdome_hyperball,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/maintenance/field)
 "ue" = (
@@ -5182,7 +5182,7 @@
 /obj/structure/table/rack/shelf,
 /obj/random/powercell/device,
 /obj/random/maintenance/morestuff,
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick/random,
 /obj/item/broken_device/random,
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled,
@@ -5269,7 +5269,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/fieldhallway)
 "uG" = (
-/obj/item/weapon/laserdome_flag/blue,
+/obj/item/laserdome_flag/blue,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
 "uH" = (
@@ -5317,7 +5317,7 @@
 /area/maintenance/zeroaft)
 "uQ" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "uR" = (
@@ -5416,7 +5416,7 @@
 "vp" = (
 /obj/structure/table/rack/shelf,
 /obj/random/maintenance/misc,
-/obj/item/weapon/storage/wallet/random,
+/obj/item/storage/wallet/random,
 /obj/item/broken_device/random,
 /obj/random/forgotten_tram,
 /turf/simulated/floor/plating/turfpack/station,
@@ -5454,11 +5454,11 @@
 /area/maintenance/fieldhallway)
 "vx" = (
 /obj/structure/closet/lasertag/blue,
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	channel = "NLS Southern Cross Hyperball";
 	name = "hyperball camera drone"
 	},
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	channel = "NLS Southern Cross Hyperball";
 	name = "hyperball camera drone"
 	},
@@ -5494,7 +5494,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "vF" = (
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -5530,11 +5530,11 @@
 /area/maintenance/abfirstaid)
 "vL" = (
 /obj/structure/closet/lasertag/red,
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	channel = "NLS Southern Cross Hyperball";
 	name = "hyperball camera drone"
 	},
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	channel = "NLS Southern Cross Hyperball";
 	name = "hyperball camera drone"
 	},
@@ -5763,7 +5763,7 @@
 /turf/simulated/floor/wood/broken/turfpack/station,
 /area/maintenance/zerobar)
 "wH" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	dir = 8
 	},
 /turf/simulated/floor/wood/turfpack/station,
@@ -5925,7 +5925,7 @@
 /area/maintenance/abcargo)
 "xm" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/energy/mouseray,
+/obj/item/gun/energy/mouseray,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
 	},
@@ -6264,7 +6264,7 @@
 "yT" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/revolver/capgun,
+/obj/item/gun/projectile/revolver/capgun,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
 "yU" = (
@@ -6343,7 +6343,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
 "zf" = (
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/expired,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/expired,
 /obj/machinery/light/small,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
@@ -6361,7 +6361,7 @@
 	dir = 9
 	},
 /obj/structure/table/standard,
-/obj/item/device/mindbinder,
+/obj/item/mindbinder,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
 "zm" = (
@@ -6404,8 +6404,8 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "zB" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	icon_state = "medium";
 	pixel_y = -7;
 	pixel_x = -3
@@ -6571,7 +6571,7 @@
 /obj/random/thermalponcho,
 /obj/random/mouseray,
 /obj/random/coin/sometimes,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /obj/random/maintenance,
 /obj/random/mech_toy,
 /obj/random/material/refined,
@@ -6644,8 +6644,8 @@
 /area/maintenance/abfirstaid)
 "AB" = (
 /obj/structure/table/steel,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/minihoe,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/minihoe,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/hydro,
@@ -7257,7 +7257,7 @@
 /area/maintenance/zerofore)
 "CP" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
 "CR" = (
@@ -7681,7 +7681,7 @@
 "EO" = (
 /obj/structure/table/rack/shelf,
 /obj/machinery/light/small,
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
 "EP" = (
@@ -7696,7 +7696,7 @@
 /area/maintenance/zeroaft)
 "ET" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -7727,7 +7727,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "EZ" = (
-/obj/item/weapon/mop,
+/obj/item/mop,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -7770,7 +7770,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/zeroport)
 "Fe" = (
-/obj/item/weapon/storage/backpack/genetics,
+/obj/item/storage/backpack/genetics,
 /obj/effect/floor_decal/rust,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -7913,11 +7913,11 @@
 /area/maintenance/smoleroom)
 "FI" = (
 /obj/structure/table/reinforced,
-/obj/item/device/geiger/wall/west,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/geiger/wall/west,
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = 5
 	},
-/obj/item/weapon/paper/guide/gravity{
+/obj/item/paper/guide/gravity{
 	pixel_y = -4;
 	pixel_x = 5
 	},
@@ -8102,7 +8102,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "Gr" = (
-/obj/item/weapon/gun/energy/sizegun,
+/obj/item/gun/energy/sizegun,
 /turf/simulated/floor/smole,
 /area/maintenance/smoleroom)
 "Gt" = (
@@ -8166,7 +8166,7 @@
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/accessory/collar/bell,
 /obj/random/maintenance/medical,
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick/random,
 /obj/random/action_figure,
 /turf/simulated/floor/tiled,
 /area/maintenance/thrift)
@@ -8206,7 +8206,7 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
 "GO" = (
-/obj/item/weapon/storage/pill_bottle{
+/obj/item/storage/pill_bottle{
 	pixel_x = 5;
 	pixel_y = 8
 	},
@@ -8231,15 +8231,15 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
 "GQ" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium";
 	pixel_y = -7;
 	pixel_x = -3
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/large{
+/obj/item/reagent_containers/glass/beaker/large{
 	pixel_y = 5;
 	pixel_x = -8
 	},
@@ -8250,7 +8250,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/abcargo)
 "GS" = (
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/expired,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/expired,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -8379,7 +8379,7 @@
 /area/maintenance/zerocent)
 "Hr" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
@@ -8746,8 +8746,8 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerobar)
 "IP" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/material/shard,
+/obj/item/reagent_containers/glass/beaker,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
 "IR" = (
@@ -8874,8 +8874,8 @@
 "Jw" = (
 /obj/structure/table/rack/shelf,
 /obj/random/maintenance/engineering,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/towel/random,
+/obj/item/melee/umbrella/random,
 /obj/random/cigarettes,
 /obj/random/instrument,
 /turf/simulated/floor/tiled,
@@ -9067,7 +9067,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerofore)
 "Ki" = (
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "Kj" = (
@@ -9127,7 +9127,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/abhydroponicssupp)
 "Kr" = (
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "Ks" = (
@@ -9236,7 +9236,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abhydroponics)
 "KL" = (
-/obj/item/weapon/material/twohanded/baseballbat,
+/obj/item/material/twohanded/baseballbat,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "KM" = (
@@ -9249,7 +9249,7 @@
 /area/maintenance/zerocent)
 "KR" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -9263,10 +9263,10 @@
 "KV" = (
 /obj/structure/table/rack/shelf,
 /obj/random/toolbox,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/storage/wallet/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/device/tape/random,
+/obj/item/towel/random,
+/obj/item/storage/wallet/random,
+/obj/item/melee/umbrella/random,
+/obj/item/rectape/random,
 /obj/random/cash{
 	pixel_x = -5;
 	pixel_y = 5
@@ -9326,7 +9326,7 @@
 "Lp" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
-/obj/item/weapon/storage/pill_bottle{
+/obj/item/storage/pill_bottle{
 	pixel_x = -4;
 	pixel_y = 4
 	},
@@ -9501,7 +9501,7 @@
 /area/maintenance/zeroaft)
 "Ms" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder/white,
+/obj/item/folder/white,
 /obj/item/clothing/head/pizzaguy,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerobar)
@@ -9628,8 +9628,8 @@
 /turf/simulated/wall,
 /area/maintenance/fieldthrift)
 "MS" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -9809,9 +9809,9 @@
 	dir = 8
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen,
+/obj/item/folder/yellow,
+/obj/item/folder/yellow,
+/obj/item/pen,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/lowlobby)
 "NJ" = (
@@ -9846,13 +9846,13 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "NR" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)";
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
@@ -9947,7 +9947,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/janitoral)
 "Oh" = (
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/expired,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/expired,
 /obj/machinery/firealarm{
 	layer = 3.3;
 	pixel_y = 26
@@ -10075,7 +10075,7 @@
 "OF" = (
 /obj/structure/table/marble,
 /obj/random/cigarettes,
-/obj/item/device/radio/subspace{
+/obj/item/radio/subspace{
 	pixel_y = 8;
 	pixel_x = 6
 	},
@@ -10177,7 +10177,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/abcargo)
 "Pa" = (
-/obj/item/weapon/stamp/clown,
+/obj/item/stamp/clown,
 /turf/simulated/floor/carpet/retro,
 /area/maintenance/abtheatre)
 "Pb" = (
@@ -10369,7 +10369,7 @@
 /area/maintenance/abcargo)
 "PS" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 5;
 	pixel_y = -7
 	},
@@ -10518,11 +10518,11 @@
 /area/maintenance/zerocent)
 "QH" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/storage/pill_bottle{
+/obj/item/storage/pill_bottle{
 	pixel_x = 5;
 	pixel_y = 8
 	},
-/obj/item/weapon/storage/pill_bottle,
+/obj/item/storage/pill_bottle,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 4;
@@ -10657,7 +10657,7 @@
 /area/maintenance/abcargo)
 "Rh" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "Rj" = (
@@ -10838,7 +10838,7 @@
 	dir = 8
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/lowlobby)
 "Sk" = (
@@ -10918,7 +10918,7 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/maintenance/abtheatre)
 "SC" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "SE" = (
@@ -11338,7 +11338,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abtheatre)
 "Ul" = (
-/obj/item/weapon/material/twohanded/baseballbat,
+/obj/item/material/twohanded/baseballbat,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
 "Uo" = (
@@ -11442,7 +11442,7 @@
 /area/maintenance/janitoral)
 "UP" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/food/drinks/shaker,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "UQ" = (
@@ -11465,12 +11465,12 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
-/obj/item/weapon/smes_coil/super_io,
-/obj/item/device/multitool{
+/obj/item/smes_coil/super_io,
+/obj/item/multitool{
 	pixel_y = -9;
 	pixel_x = 8
 	},
-/obj/item/weapon/tool/screwdriver{
+/obj/item/tool/screwdriver{
 	pixel_x = -5
 	},
 /obj/machinery/firealarm{
@@ -11503,11 +11503,11 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "Va" = (
-/obj/item/weapon/reagent_containers/syringe/drugs{
+/obj/item/reagent_containers/syringe/drugs{
 	pixel_y = 5;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/syringe/drugs,
+/obj/item/reagent_containers/syringe/drugs,
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
 "Vb" = (
@@ -11653,7 +11653,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abhydroponics)
 "Vz" = (
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -3;
 	pixel_x = -32
@@ -11740,8 +11740,8 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/abcargo)
 "VN" = (
-/obj/item/weapon/handcuffs/fuzzy,
-/obj/item/weapon/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
 /obj/item/clothing/under/fluff/latexmaid,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
@@ -11797,7 +11797,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "Wb" = (
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/plating,
 /area/maintenance/field)
 "Wc" = (
@@ -11813,7 +11813,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "Wj" = (
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "Wl" = (
@@ -12050,7 +12050,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
 "Xg" = (
-/obj/item/weapon/storage/smolebrickcase,
+/obj/item/storage/smolebrickcase,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/smoleroom)
 "Xl" = (
@@ -12103,12 +12103,12 @@
 /turf/simulated/floor/lino,
 /area/maintenance/zerobar)
 "Xt" = (
-/obj/item/weapon/reagent_containers/syringe/drugs{
+/obj/item/reagent_containers/syringe/drugs{
 	pixel_y = 5;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/syringe/drugs,
-/obj/item/weapon/storage/pill_bottle/happy{
+/obj/item/reagent_containers/syringe/drugs,
+/obj/item/storage/pill_bottle/happy{
 	pixel_x = 5
 	},
 /turf/simulated/floor/plating/turfpack/station,
@@ -12594,7 +12594,7 @@
 /obj/random/fishing_junk,
 /obj/random/powercell/device,
 /obj/random/miniature,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /obj/random/tool/powermaint,
 /obj/random/mouseray,
 /turf/simulated/floor/plating/turfpack/station,
@@ -12644,12 +12644,12 @@
 /area/maintenance/zeroaft)
 "Zk" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/syringe/drugs{
+/obj/item/reagent_containers/syringe/drugs{
 	pixel_y = 5;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/pill_bottle/happy,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/microcillin{
+/obj/item/storage/pill_bottle/happy,
+/obj/item/reagent_containers/glass/beaker/vial/microcillin{
 	pixel_y = 4;
 	pixel_x = -6
 	},
@@ -12707,75 +12707,75 @@
 /area/maintenance/abcargo)
 "Zw" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = 5;
 	pixel_y = -6
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 15;
 	pixel_x = -5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 5;
 	pixel_x = -5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 15;
 	pixel_x = 5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 15;
 	pixel_x = -5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 15;
 	pixel_x = -5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 15;
 	pixel_x = 5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 15;
 	pixel_x = 5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 5;
 	pixel_x = -5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_y = 5;
 	pixel_x = -5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = 5;
 	pixel_y = -6
 	},
-/obj/item/weapon/cell/apc{
+/obj/item/cell/apc{
 	pixel_x = 5;
 	pixel_y = -6
 	},
@@ -12865,7 +12865,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/expired,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/expired,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";

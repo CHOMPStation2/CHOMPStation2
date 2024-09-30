@@ -6,7 +6,7 @@
 /obj/machinery/light/poi{
 	dir = 1
 	},
-/obj/item/weapon/rig/baymed,
+/obj/item/rig/baymed,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "cH" = (
@@ -53,7 +53,7 @@
 /area/submap/piratevox)
 "fL" = (
 /obj/structure/table/standard,
-/obj/item/weapon/flame/lighter/zippo/rainbow,
+/obj/item/flame/lighter/zippo/rainbow,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "fV" = (
@@ -77,7 +77,7 @@
 /obj/random/gun/random,
 /obj/random/gun/random,
 /obj/machinery/light/poi,
-/obj/item/weapon/rig/baymed,
+/obj/item/rig/baymed,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "hB" = (
@@ -153,7 +153,7 @@
 /area/submap/piratevox)
 "pV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/card/emag/used,
+/obj/item/card/emag/used,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "rp" = (
@@ -169,15 +169,15 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/random/gun/random,
 /obj/random/gun/random,
-/obj/item/weapon/rig/bayeng,
+/obj/item/rig/bayeng,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "tX" = (
 /obj/structure/table/standard,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
 /obj/item/rig_module/mounted/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /obj/machinery/light/poi{
 	dir = 4
 	},
@@ -376,10 +376,10 @@
 /area/submap/piratevox)
 "WN" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /obj/item/rig_module/cleaner_launcher,
-/obj/item/weapon/mop/advanced,
+/obj/item/mop/advanced,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Xl" = (

@@ -448,7 +448,7 @@
 /area/space)
 "ij" = (
 /obj/structure/closet/emcloset,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -679,7 +679,7 @@
 /area/shuttle/escape_pod1/transit)
 "Nx" = (
 /obj/structure/closet/emcloset,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
@@ -777,7 +777,7 @@
 /area/space)
 "Vp" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/codex/lore/vir,
+/obj/item/book/codex/lore/vir,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
 "VC" = (

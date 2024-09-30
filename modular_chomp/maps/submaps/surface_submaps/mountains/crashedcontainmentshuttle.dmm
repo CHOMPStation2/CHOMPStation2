@@ -46,14 +46,14 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "ah" = (
 /obj/structure/grille,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "ai" = (
 /obj/structure/grille,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -69,13 +69,13 @@
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "al" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/crashedcontainmentshuttle)
 "am" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/submap/cave/crashedcontainmentshuttle)
 "an" = (
@@ -90,16 +90,16 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/crashedcontainmentshuttle)
 "aq" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/crashedcontainmentshuttle)
 "ar" = (
 /obj/structure/grille,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "as" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "at" = (
@@ -132,7 +132,7 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "ax" = (
 /obj/item/frame/mirror,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/shuttle/wall/dark{
@@ -228,14 +228,14 @@
 	density = 0;
 	icon_state = "brokengrille"
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/item/stack/rods,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/cave/crashedcontainmentshuttle)
 "aL" = (
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /turf/simulated/shuttle/floor/black{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -244,7 +244,7 @@
 /area/submap/cave/crashedcontainmentshuttle)
 "aM" = (
 /obj/structure/frame,
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /turf/simulated/shuttle/floor/black{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -262,7 +262,7 @@
 "aO" = (
 /obj/structure/closet/walllocker/emerglocker/north,
 /obj/structure/frame,
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /turf/simulated/shuttle/floor/white{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -331,7 +331,7 @@
 	},
 /area/submap/cave/crashedcontainmentshuttle)
 "aX" = (
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/crashedcontainmentshuttle)
 "aY" = (
@@ -368,7 +368,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/crashedcontainmentshuttle)
 "be" = (
-/obj/item/weapon/material/knife/ritual,
+/obj/item/material/knife/ritual,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/crashedcontainmentshuttle)
 "bf" = (
@@ -391,9 +391,9 @@
 	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bi" = (
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /obj/effect/decal/remains/human,
-/obj/item/weapon/gun/energy/laser,
+/obj/item/gun/energy/laser,
 /turf/simulated/shuttle/floor/black{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -401,7 +401,7 @@
 	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bj" = (
-/obj/item/device/gps/internal/poi,
+/obj/item/gps/internal/poi,
 /turf/simulated/shuttle/floor/red{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -451,7 +451,7 @@
 	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bq" = (
-/obj/item/weapon/circuitboard/broken,
+/obj/item/circuitboard/broken,
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
@@ -504,7 +504,7 @@
 	},
 /area/submap/cave/crashedcontainmentshuttle)
 "bw" = (
-/obj/item/weapon/material/knife/ritual,
+/obj/item/material/knife/ritual,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/shuttle/floor/red{
 	nitrogen = 93.7835;
@@ -648,7 +648,7 @@
 	},
 /obj/effect/gibspawner/generic,
 /obj/effect/decal/remains/human,
-/obj/item/weapon/card/id/syndicate{
+/obj/item/card/id/syndicate{
 	age = "\\42";
 	blood_type = "\\O+";
 	desc = "A strange ID card.";
@@ -667,7 +667,7 @@
 "bO" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/decal/remains/human,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/crashedcontainmentshuttle)
 "bP" = (

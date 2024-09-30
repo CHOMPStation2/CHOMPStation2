@@ -25,9 +25,9 @@
 	},
 /area/submap/syndiecakesfactory)
 "cc" = (
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
 /turf/simulated/floor/plating,
 /area/submap/syndiecakesfactory)
 "dy" = (
@@ -184,12 +184,12 @@
 	},
 /area/submap/syndiecakesfactory)
 "om" = (
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -254,7 +254,7 @@
 /turf/template_noop,
 /area/submap/syndiecakesfactory)
 "rL" = (
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/syndiecakesfactory)
@@ -279,7 +279,7 @@
 /area/submap/syndiecakesfactory)
 "uA" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -582,7 +582,7 @@
 	},
 /area/submap/syndiecakesfactory)
 "OK" = (
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
 /turf/template_noop,
 /area/submap/syndiecakesfactory)
 "OU" = (
@@ -656,7 +656,7 @@
 /area/submap/syndiecakesfactory)
 "Tj" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15

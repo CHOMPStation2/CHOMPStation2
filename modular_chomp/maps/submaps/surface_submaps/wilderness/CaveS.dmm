@@ -14,7 +14,7 @@
 /area/submap/CaveS)
 "e" = (
 /obj/item/ammo_casing/a45,
-/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat,
+/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
 /turf/template_noop,
 /area/submap/CaveS)
 "f" = (
@@ -49,7 +49,7 @@
 	},
 /area/submap/CaveS)
 "l" = (
-/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat,
+/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
 /turf/template_noop,
 /area/submap/CaveS)
 "m" = (
@@ -58,7 +58,7 @@
 /area/submap/CaveS)
 "n" = (
 /obj/item/clothing/accessory/storage/webbing,
-/obj/item/weapon/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -134,7 +134,7 @@
 /obj/structure/closet/crate,
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
-/obj/item/weapon/storage/toolbox,
+/obj/item/storage/toolbox,
 /obj/random/toolbox,
 /turf/simulated/floor,
 /area/submap/CaveS)
@@ -159,13 +159,13 @@
 /area/submap/CaveS)
 "G" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/hypospray,
-/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
-/obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
-/obj/item/weapon/reagent_containers/pill/antitox,
-/obj/item/weapon/reagent_containers/pill/antitox,
-/obj/item/weapon/reagent_containers/pill/antitox,
-/obj/item/weapon/reagent_containers/pill/paracetamol,
+/obj/item/reagent_containers/hypospray,
+/obj/item/reagent_containers/glass/bottle/stoxin,
+/obj/item/reagent_containers/glass/bottle/antitoxin,
+/obj/item/reagent_containers/pill/antitox,
+/obj/item/reagent_containers/pill/antitox,
+/obj/item/reagent_containers/pill/antitox,
+/obj/item/reagent_containers/pill/paracetamol,
 /obj/random/firstaid,
 /turf/simulated/floor,
 /area/submap/CaveS)
@@ -184,11 +184,11 @@
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/energy,
-/obj/item/weapon/material/star,
-/obj/item/weapon/material/star,
-/obj/item/weapon/material/star,
-/obj/item/weapon/material/star,
-/obj/item/weapon/material/star,
+/obj/item/material/star,
+/obj/item/material/star,
+/obj/item/material/star,
+/obj/item/material/star,
+/obj/item/material/star,
 /turf/simulated/floor,
 /area/submap/CaveS)
 "J" = (

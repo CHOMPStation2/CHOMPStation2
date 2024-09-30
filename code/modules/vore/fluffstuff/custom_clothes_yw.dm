@@ -349,7 +349,7 @@
 	icon_badge = "mercvest_badge"
 	icon_nobadge = "mercvest_nobadge"
 
-/obj/item/weapon/storage/belt/security/tactical/amara_belt
+/obj/item/storage/belt/security/tactical/amara_belt
 	name = "Mercenary belt"
 	desc = "A sturdy military belt with a shiny buckle and a bunch of pouches."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -452,7 +452,7 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "pilotboots_mob"
 
-/obj/item/weapon/storage/belt/utility/fluff/sam_belt
+/obj/item/storage/belt/utility/fluff/sam_belt
 	name = "Mech Pilot Belt"
 	desc = "A white-blue toolbelt with many slots to hold tools in, seems to be made to literally be attached onto a suit."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -515,7 +515,7 @@
 
 //Raja Bastet
 
-/obj/item/weapon/storage/belt/utility/fluff/raja_belt
+/obj/item/storage/belt/utility/fluff/raja_belt
 	name = "Mech Engineer Belt"
 	desc = "A black-golden toolbelt with many slots to hold tools in. Also comes with a blue buckle."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -898,7 +898,7 @@
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
-	allowed = list(/obj/item/device/analyzer,/obj/item/stack/medical,/obj/item/weapon/dnainjector,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,/obj/item/weapon/reagent_containers/hypospray,/obj/item/device/healthanalyzer,/obj/item/device/flashlight/pen,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle,/obj/item/weapon/paper)
+	allowed = list(/obj/item/analyzer,/obj/item/stack/medical,/obj/item/dnainjector,/obj/item/reagent_containers/dropper,/obj/item/reagent_containers/syringe,/obj/item/reagent_containers/hypospray,/obj/item/healthanalyzer,/obj/item/flashlight/pen,/obj/item/reagent_containers/glass/bottle,/obj/item/reagent_containers/glass/beaker,/obj/item/reagent_containers/pill,/obj/item/storage/pill_bottle,/obj/item/paper)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
@@ -1045,7 +1045,7 @@
 	icon_state = "jiao_boots"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 
-/obj/item/weapon/storage/belt/medical/fluff/jiao_belt
+/obj/item/storage/belt/medical/fluff/jiao_belt
 	name = "Navy medical belt"
 	desc = "A customized medical belt to sport the navy colors of the Kanghu force."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -1104,7 +1104,7 @@
 
 //Saur Darastrix
 
-/obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+/obj/item/storage/backpack/dufflebag/fluff/saur_dufflebag
 	name = "Saur's Dufflebag"
 	desc = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Saur Darastrix' written under it."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -1543,14 +1543,14 @@
 	siemens_coefficient = 0.9
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35) // Inferior to sec vests in bullet/laser but better for environmental protection.
 	allowed = list(
-		/obj/item/device/flashlight,
-		/obj/item/weapon/gun,
+		/obj/item/flashlight,
+		/obj/item/gun,
 		/obj/item/ammo_magazine,
-		/obj/item/weapon/melee,
-		/obj/item/weapon/material/knife,
-		/obj/item/weapon/tank,
-		/obj/item/device/radio,
-		/obj/item/weapon/pickaxe
+		/obj/item/melee,
+		/obj/item/material/knife,
+		/obj/item/tank,
+		/obj/item/radio,
+		/obj/item/pickaxe
 		)
 
 /obj/item/clothing/head/hood/mocha_hood
@@ -1591,7 +1591,7 @@
 // ******
 // Foxicide
 // ******
-/obj/item/weapon/storage/backpack/fluff/kaith
+/obj/item/storage/backpack/fluff/kaith
 	name = "Light duffle bag"
 	desc = "A compact duffle bag, meant for long hikes."
 	icon = 'icons/inventory/back/item.dmi'

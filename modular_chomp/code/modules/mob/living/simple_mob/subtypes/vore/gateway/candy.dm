@@ -352,7 +352,7 @@
 	loot_list = list(/obj/item/clothing/head/psy_crown/candycrown = 30,
 			/obj/item/clothing/gloves/stamina = 30,
 			/obj/item/clothing/suit/armor/buffvest = 30,
-			/obj/item/weapon/melee/cullingcane = 30
+			/obj/item/melee/cullingcane = 30
 			)
 
 /mob/living/simple_mob/vore/candy/marshmellowserpent/do_special_attack(atom/A)
@@ -441,7 +441,7 @@
 
 	melee_damage_lower = 25
 	melee_damage_upper = 35
-	var/grenade_type = /obj/item/weapon/grenade/concussion
+	var/grenade_type = /obj/item/grenade/concussion
 	var/grenade_timer = 1
 
 	special_attack_min_range = 1
@@ -525,7 +525,7 @@
 /mob/living/simple_mob/vore/candy/ouroboros/proc/debuff_combo(atom/target)
 	visible_message(span("warning", "\The [src] prepares to let out a thunderous roar!"))
 	sleep(2.5 SECONDS)
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer	//CHOMPEdit

@@ -3,11 +3,11 @@
 	return 1
 
 //Chomp override, handle unwrenching with the yeet code
-/obj/machinery/atmospherics/pipe/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+/obj/machinery/atmospherics/pipe/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if (istype(src, /obj/machinery/atmospherics/pipe/tank))
 		return ..()
 
-	if(istype(W,/obj/item/device/pipe_painter))
+	if(istype(W,/obj/item/pipe_painter))
 		return 0
 
 	if (!W.is_wrench())

@@ -99,7 +99,7 @@
 	},
 /area/awaymission)
 "u" = (
-/obj/item/weapon/paper/pamphlet,
+/obj/item/paper/pamphlet,
 /turf/simulated/floor/plating,
 /area/awaymission)
 "v" = (

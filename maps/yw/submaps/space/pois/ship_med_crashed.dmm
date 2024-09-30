@@ -134,11 +134,11 @@
 /area/tether_away/debrisfield/explored)
 "D" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/shuttle/plating/airless,
 /area/tether_away/debrisfield/explored)
 "E" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/tether_away/debrisfield/explored)
 "F" = (
@@ -161,11 +161,11 @@
 /area/tether_away/debrisfield/explored)
 "J" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/shuttle/plating/airless,
 /area/tether_away/debrisfield/explored)
 "K" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/shuttle/floor/airless,
 /area/tether_away/debrisfield/explored)
 "L" = (

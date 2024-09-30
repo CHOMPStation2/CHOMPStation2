@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee
+/obj/item/reagent_containers/food/drinks/bluespace_coffee
 	name = "bluespace coffee"
 	desc = "Dreamt up in a strange feverish dream, this coffee cup seems to have been heavily modified with a variety of unlikely parts and wires, and never seems to run out of coffee. Truly the differance between madmen and genius is success."
 	icon = 'icons/obj/coffee.dmi'
@@ -7,11 +7,11 @@
 	center_of_mass_y= 10 //CHOMPEdit
 	volume = 50
 
-/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee/Initialize()
+/obj/item/reagent_containers/food/drinks/bluespace_coffee/Initialize()
 	..()
 	reagents.add_reagent("coffee", 50)
 
 	//Infinite Coffee
-/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee/attack(mob/M as mob, mob/user as mob, def_zone)
+/obj/item/reagent_containers/food/drinks/bluespace_coffee/attack(mob/M as mob, mob/user as mob, def_zone)
 	..()
 	src.reagents.add_reagent("coffee", 50)

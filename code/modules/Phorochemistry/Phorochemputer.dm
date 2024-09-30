@@ -6,7 +6,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	icon_state = "frame-rnd"
 	icon_keyboard = "kb9"
 	icon_screen = "powerold"
-	circuit = /obj/item/weapon/circuitboard/phoronics
+	circuit = /obj/item/circuitboard/phoronics
 //	var/turf/simulated/floor/phoronics/source
 	var/turf/simulated/floor/source
 	var/intensity = 1
@@ -170,7 +170,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 		return abort("ERROR: Recalibrate to locate electromagnetic tile and or telepads")
 
 	var/datum/reagent/reactant
-	var/obj/item/weapon/reagent_containers/container
+	var/obj/item/reagent_containers/container
 
 	//check for beaker, and that beaker contains only one reagent
 	var/num_containers = 0
@@ -179,7 +179,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 			return abort("ERROR: Input telepad not where expected, please recalibrate")
 		if(!source_pad.anchored)
 			return abort("ERROR: Input telepad not anchored")
-		for(var/obj/item/weapon/reagent_containers/R in source_pad.loc.contents)
+		for(var/obj/item/reagent_containers/R in source_pad.loc.contents)
 			num_containers++
 			container = R
 
@@ -189,7 +189,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 								"asshat", "dumbass", "fucklechuck", "scrub", "moron", "typical NT worker")
 			return abort("ERROR: Open reagent container, you [insult]")
 
-		if(istype(container, /obj/item/weapon/reagent_containers/glass/beaker/noreact)) //container doesn't react, insult user
+		if(istype(container, /obj/item/reagent_containers/glass/beaker/noreact)) //container doesn't react, insult user
 			var/insult = pick("idiot", "failure", "ass", "scrub", "chucklefuck", \
 								"asshat", "dumbass", "fucklechuck", "scrub", "moron")
 			return abort("ERROR: Reactions don't happen in a cryostasis beaker, you [insult]")
@@ -316,7 +316,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 		aborting = 1
 
 //Buildable computers stuff
-/obj/item/weapon/circuitboard/phoronics
+/obj/item/circuitboard/phoronics
 	name = T_BOARD("phorochemputer")
 	build_path = /obj/machinery/computer/phoronics
 	origin_tech = "programming=2;bluespace=2"
@@ -325,5 +325,5 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	name = "phorochemputer"
 	id = "phorochemputer"
 	req_tech = list("programming" = 3, "bluespace" = 2)
-	build_path = /obj/item/weapon/circuitboard/phoronics
+	build_path = /obj/item/circuitboard/phoronics
 */
