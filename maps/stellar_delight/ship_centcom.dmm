@@ -8,6 +8,20 @@
 /obj/item/gun/energy/lasercannon,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/specops)
+"ac" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = null
+	},
+/obj/effect/map_helper/airlock/atmos/pump_out_internal,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "ccboat";
+	pixel_y = 29
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
 "ad" = (
 /obj/structure/table/rack,
 /obj/item/gun/energy/xray,
@@ -515,6 +529,43 @@
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/shuttle/ccboat)
+"bB" = (
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	frequency = 1380;
+	id_tag = null;
+	pixel_x = 24
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = null
+	},
+/obj/effect/map_helper/airlock/atmos/pump_out_internal,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
+"bC" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = null
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/shuttle_landmark/shuttle_initializer/ccboat,
+/obj/effect/overmap/visitable/ship/landable/ccboat,
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
+"bD" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = null
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/turf/simulated/floor/plating,
+/area/shuttle/ccboat)
 "bE" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tram"
@@ -522,6 +573,9 @@
 /obj/structure/closet/walllocker/medical/east,
 /turf/simulated/floor/tiled,
 /area/centcom/terminal/tramfluff)
+"bF" = (
+/turf/simulated/floor/reinforced,
+/area/shuttle/centcom/ccbay)
 "bG" = (
 /obj/trader/general{
 	move_trader = 1
@@ -615,11 +669,11 @@
 "bZ" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced,
-/obj/item/storage/box/shotgunammo,
-/obj/item/storage/box/shotgunammo,
-/obj/item/storage/box/shotgunshells,
-/obj/item/storage/box/shotgunshells,
-/obj/item/storage/box/shotgunshells,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/simulated/floor/tiled{
 	icon_state = "dark"
 	},
@@ -2340,6 +2394,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/centcom/control)
+"hK" = (
+/obj/machinery/item_bank{
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled,
+/area/centcom/living)
 "hL" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Special Operations";
@@ -2424,16 +2484,6 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape)
-"id" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	id_tag = null
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/shuttle_landmark/shuttle_initializer/ccboat,
-/obj/effect/overmap/visitable/ship/landable/ccboat,
-/turf/simulated/floor/tiled/eris/dark/danger,
-/area/shuttle/ccboat)
 "ih" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
@@ -4005,6 +4055,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
+"of" = (
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/machinery/item_bank{
+	dir = 8;
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled,
+/area/centcom/living)
 "oj" = (
 /obj/structure/bed/chair/sofa/bench/left{
 	dir = 4;
@@ -4570,20 +4631,6 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled,
 /area/centcom/main_hall)
-"qV" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1380;
-	id_tag = null
-	},
-/obj/effect/map_helper/airlock/atmos/pump_out_internal,
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "ccboat";
-	pixel_y = 29
-	},
-/turf/simulated/floor/tiled/eris/dark/danger,
-/area/shuttle/ccboat)
 "qZ" = (
 /obj/machinery/body_scanconsole{
 	dir = 4
@@ -4689,14 +4736,6 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape)
-"rR" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	id_tag = null
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/turf/simulated/floor/tiled/eris/dark/danger,
-/area/shuttle/ccboat)
 "rU" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
@@ -6127,25 +6166,6 @@
 	name = "reinforced floor"
 	},
 /area/centcom)
-"zx" = (
-/obj/machinery/airlock_sensor{
-	dir = 8;
-	frequency = 1380;
-	id_tag = null;
-	pixel_x = 24
-	},
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1380;
-	id_tag = null
-	},
-/obj/effect/map_helper/airlock/atmos/pump_out_internal,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/eris/dark/danger,
-/area/shuttle/ccboat)
 "zy" = (
 /obj/effect/floor_decal/derelict/d11,
 /turf/simulated/floor/tiled,
@@ -7227,14 +7247,14 @@
 /area/centcom/control)
 "Eq" = (
 /obj/structure/table/rack,
-/obj/item/storage/box/stunshells/large,
-/obj/item/storage/box/stunshells/large,
-/obj/item/storage/box/stunshells/large,
-/obj/item/storage/box/stunshells/large,
-/obj/item/storage/box/stunshells/large,
-/obj/item/storage/box/stunshells/large,
-/obj/item/storage/box/stunshells/large,
-/obj/item/storage/box/stunshells/large,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
@@ -12112,9 +12132,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
-"QZ" = (
-/turf/simulated/floor/reinforced/airless,
-/area/shuttle/centcom/ccbay)
 "Ra" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
@@ -14416,14 +14433,14 @@
 	})
 "Wq" = (
 /obj/structure/table/rack,
-/obj/item/storage/box/flashshells/large,
-/obj/item/storage/box/flashshells/large,
-/obj/item/storage/box/flashshells/large,
-/obj/item/storage/box/flashshells/large,
-/obj/item/storage/box/flashshells/large,
-/obj/item/storage/box/flashshells/large,
-/obj/item/storage/box/flashshells/large,
-/obj/item/storage/box/flashshells/large,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
@@ -25716,12 +25733,12 @@ ZQ
 lM
 Bx
 Nv
-QZ
-QZ
-QZ
-QZ
-QZ
-QZ
+bF
+bF
+bF
+bF
+bF
+bF
 Cg
 wO
 DY
@@ -25729,8 +25746,8 @@ HB
 kX
 TF
 kX
-QZ
-QZ
+bF
+bF
 MX
 Bx
 lM
@@ -25858,16 +25875,16 @@ ZQ
 lM
 Bx
 Nv
-QZ
-QZ
+bF
+bF
 lL
 kX
 kX
 TF
 TF
 Cr
-qV
-id
+ac
+bC
 wO
 vT
 kX
@@ -26008,8 +26025,8 @@ bA
 GK
 Vw
 Cr
-zx
-rR
+bB
+bD
 xB
 Bj
 AR
@@ -26926,10 +26943,10 @@ bl
 An
 An
 An
-An
 bl
+Vz
+Wb
 bl
-An
 An
 An
 WR
@@ -26994,9 +27011,9 @@ ZQ
 lM
 Bx
 Nv
-QZ
-QZ
-QZ
+bF
+bF
+bF
 kX
 kX
 TF
@@ -27070,9 +27087,9 @@ Am
 Am
 Am
 Am
+Am
+Am
 UO
-Am
-Am
 Am
 Wl
 Xx
@@ -27136,12 +27153,12 @@ ZQ
 lM
 Bx
 Nv
-QZ
-QZ
-QZ
-QZ
-QZ
-QZ
+bF
+bF
+bF
+bF
+bF
+bF
 Cg
 lo
 kX
@@ -27149,8 +27166,8 @@ kX
 kX
 TF
 kX
-QZ
-QZ
+bF
+bF
 MX
 Bx
 nX
@@ -29069,7 +29086,7 @@ vu
 Zy
 Zy
 Zy
-Zy
+of
 Zy
 Zy
 Zy
@@ -33731,7 +33748,7 @@ Ll
 OA
 Xf
 as
-VH
+hK
 VH
 VH
 VH

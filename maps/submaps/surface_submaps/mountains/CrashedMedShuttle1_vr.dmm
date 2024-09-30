@@ -594,7 +594,7 @@
 "cf" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
-	id_tag = "crashed_med_admin_shuttle";
+	id_tag = "admin_shuttle";
 	pixel_x = -25;
 	pixel_y = 0;
 	req_one_access = list(101);

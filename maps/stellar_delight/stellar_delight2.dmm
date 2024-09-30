@@ -754,7 +754,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/stellardelight/deck2/aftstarboard)
 "bw" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -812,7 +812,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck2/starboardescape)
 "bD" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -4227,7 +4227,7 @@
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
 "iU" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -5286,7 +5286,6 @@
 /obj/structure/closet/secure_closet/captains,
 /obj/item/clothing/glasses/omnihud/all,
 /obj/item/disk/nuclear,
-/obj/item/paper/dockingcodes/sd,
 /obj/item/retail_scanner/command,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -7566,7 +7565,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /turf/simulated/floor/airless,
@@ -9408,7 +9407,7 @@
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/starboard)
 "ur" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -10155,7 +10154,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/structure/cable/orange{
@@ -11939,7 +11938,7 @@
 /turf/simulated/floor,
 /area/stellardelight/deck2/combustionworkshop)
 "Ar" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -12068,7 +12067,7 @@
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/locker_room)
 "AF" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -13019,7 +13018,7 @@
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/exterior)
 "CQ" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -13093,7 +13092,7 @@
 /turf/simulated/floor/tiled/eris/steel/brown_platform,
 /area/crew_quarters/bar)
 "CZ" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -16148,7 +16147,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /turf/simulated/floor/airless,
@@ -18155,7 +18154,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /turf/simulated/floor/airless,
@@ -19544,7 +19543,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/recreation_area)
 "QW" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -20030,7 +20029,7 @@
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/chemistry)
 "Sj" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -20038,7 +20037,7 @@
 /turf/simulated/floor/airless,
 /area/stellardelight/deck2/exterior)
 "Sk" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
@@ -20879,7 +20878,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/structure/cable/orange{
@@ -21293,7 +21292,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /turf/simulated/floor/airless,
@@ -21813,7 +21812,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "Wn" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "sd_pd"
 	},
 /obj/effect/floor_decal/industrial/warning/full,

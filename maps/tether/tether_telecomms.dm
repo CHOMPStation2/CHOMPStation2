@@ -78,7 +78,7 @@
 		num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
 		num2text(SUP_FREQ) = list(access_cargo),
 		num2text(SRV_FREQ) = list(access_janitor, access_hydroponics),
-		num2text(EXP_FREQ) = list(access_awayteam)
+		num2text(EXP_FREQ) = list(access_explorer)
 	)
 
 /obj/item/multitool/station_buffered

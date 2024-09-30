@@ -138,15 +138,10 @@
 	timeoff_factor = 1
 	access = list(access_talon)
 	minimal_access = list(access_talon)
-	alt_titles = list(JOB_ALT_TALON_SECURITY = /datum/alt_title/talon_security, JOB_ALT_TALON_MARINE = /datum/alt_title/talon_marine) // CHOMPEdit
+	alt_titles = list(JOB_ALT_TALON_SECURITY = /datum/alt_title/talon_security)
 
 /datum/alt_title/talon_security
 	title = JOB_ALT_TALON_SECURITY
-
-// CHOMPAdd Start
-/datum/alt_title/talon_marine
-	title = JOB_ALT_TALON_MARINE
-// CHOMPAdd End
 
 /datum/job/talon_miner
 	title = JOB_TALON_MINER
@@ -193,7 +188,6 @@
 
 /decl/hierarchy/outfit/job/talon_pilot
 	name = OUTFIT_JOB_NAME(JOB_TALON_PILOT)
-	id_pda_assignment = JOB_TALON_PILOT
 
 	id_type = /obj/item/card/id/talon/pilot
 	id_slot = slot_wear_id
