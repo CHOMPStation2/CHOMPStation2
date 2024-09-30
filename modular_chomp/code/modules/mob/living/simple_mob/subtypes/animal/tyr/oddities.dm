@@ -126,7 +126,7 @@
 	pass_flags = PASSTABLE //flying bug
 	movement_cooldown = 1
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/grubmeat
 	meat_amount = 2
 
 	butchery_loot = list(\
@@ -164,7 +164,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/carpmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/carpmeat
 	meat_amount = 2
 
 	butchery_loot = list(\
