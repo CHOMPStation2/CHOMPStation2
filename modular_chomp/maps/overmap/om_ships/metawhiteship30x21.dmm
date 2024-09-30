@@ -2,15 +2,15 @@
 "aQ" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth{
+/obj/item/reagent_containers/food/drinks/bottle/vermouth{
 	pixel_x = -9;
 	pixel_y = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum{
+/obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_x = 10;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine{
+/obj/item/reagent_containers/food/drinks/bottle/wine{
 	pixel_x = 0;
 	pixel_y = 12
 	},
@@ -31,9 +31,9 @@
 "ca" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop,
-/obj/item/weapon/storage/bag/trash,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
+/obj/item/storage/bag/trash,
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/cargo)
 "cQ" = (
@@ -81,9 +81,9 @@
 /area/shuttle/metawhiteship/eng)
 "et" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/belt/utility/full/multitool,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off{
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/radio/off,
+/obj/item/radio/off{
 	pixel_x = -4;
 	pixel_y = 4
 	},
@@ -133,15 +133,15 @@
 "fJ" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup{
+/obj/item/reagent_containers/glass/beaker/measuring_cup{
 	pixel_x = 6;
 	pixel_y = 10
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = -9;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -9;
 	pixel_y = 0
 	},
@@ -341,7 +341,7 @@
 "kp" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/table/rack,
-/obj/item/device/analyzer,
+/obj/item/analyzer,
 /obj/item/clothing/mask/breath{
 	pixel_x = 6;
 	pixel_y = -5
@@ -354,7 +354,7 @@
 	pixel_y = -2;
 	pixel_x = 3
 	},
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/wrench,
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/cargo)
 "kv" = (
@@ -371,7 +371,7 @@
 /area/shuttle/metawhiteship/cargo)
 "kH" = (
 /obj/structure/closet/crate/medical,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/cargo)
@@ -391,11 +391,11 @@
 "ld" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	pixel_y = 1;
 	pixel_x = 3
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	pixel_x = -4;
 	pixel_y = -2
 	},
@@ -510,19 +510,19 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe{
+/obj/item/reagent_containers/food/drinks/bottle/absinthe{
 	pixel_x = -7;
 	pixel_y = 1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey{
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_x = 17;
 	pixel_y = 13
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_x = 1;
 	pixel_y = 12
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac{
+/obj/item/reagent_containers/food/drinks/bottle/cognac{
 	pixel_x = 8;
 	pixel_y = 1
 	},
@@ -608,15 +608,15 @@
 	},
 /obj/structure/table/rack,
 /obj/item/clothing/head/welding,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/food)
 "qp" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/belt/utility/full/multitool,
-/obj/item/device/radio/off,
-/obj/item/device/radio/off{
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/radio/off,
+/obj/item/radio/off{
 	pixel_x = -4;
 	pixel_y = 4
 	},
@@ -683,9 +683,9 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/item/device/camera,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/camera,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/photocopier/faxmachine{
 	department = "Metamaterial White Ship"
@@ -840,7 +840,7 @@
 	dir = 8
 	},
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/gen)
@@ -947,19 +947,19 @@
 "yd" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass{
+/obj/item/reagent_containers/food/drinks/drinkingglass{
 	pixel_x = -2;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola{
+/obj/item/reagent_containers/food/drinks/cans/cola{
 	pixel_x = 6;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -9;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = -9;
 	pixel_y = 8
 	},
@@ -1005,7 +1005,7 @@
 "Az" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	pixel_x = -3;
 	pixel_y = -2
 	},
@@ -1028,8 +1028,8 @@
 /area/shuttle/metawhiteship/eng)
 "Bo" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/device/flashlight,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/flashlight,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/firealarm{
 	dir = 1;
@@ -1087,8 +1087,8 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/table/rack,
 /obj/item/clothing/head/welding,
-/obj/item/weapon/storage/belt/utility/full/multitool,
-/obj/item/weapon/weldingtool,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/weldingtool,
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/cargo)
 "DH" = (
@@ -1109,11 +1109,11 @@
 	dir = 9
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/shovel/spade,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/device/analyzer/plant_analyzer,
-/obj/item/weapon/storage/bag/plants,
+/obj/item/shovel/spade,
+/obj/item/material/minihoe,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/storage/bag/plants,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/hydro,
 /area/shuttle/metawhiteship/food)
@@ -1223,7 +1223,7 @@
 	dir = 4
 	},
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/gen)
@@ -1275,7 +1275,7 @@
 /area/shuttle/metawhiteship/gen)
 "Gd" = (
 /obj/structure/cable/yellow,
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/wrench,
 /obj/machinery/power/port_gen/pacman/super,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 6
@@ -1434,8 +1434,8 @@
 /area/shuttle/metawhiteship/eng)
 "Kf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox,
-/obj/item/weapon/cell/high,
+/obj/item/storage/toolbox,
+/obj/item/cell/high,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/firealarm{
 	dir = 1;
@@ -1471,9 +1471,9 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/device/megaphone,
-/obj/item/device/radio,
-/obj/item/weapon/tool/wrench{
+/obj/item/megaphone,
+/obj/item/radio,
+/obj/item/tool/wrench{
 	pixel_x = 11;
 	pixel_y = -1
 	},
@@ -1487,15 +1487,15 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/standard,
 /obj/machinery/reagentgrinder,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+/obj/item/reagent_containers/food/condiment/enzyme{
 	pixel_x = -10;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+/obj/item/reagent_containers/food/condiment/carton/flour{
 	pixel_x = -8;
 	pixel_y = 15
 	},
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/metawhiteship/food)
@@ -1538,9 +1538,9 @@
 	locked = 0
 	},
 /obj/structure/closet/crate,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
@@ -1594,15 +1594,15 @@
 "Nm" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/donut{
+/obj/item/storage/box/donut{
 	pixel_x = -10;
 	pixel_y = 0
 	},
-/obj/item/weapon/reagent_containers/food/snacks/chocolatebar{
+/obj/item/reagent_containers/food/snacks/chocolatebar{
 	pixel_x = 7;
 	pixel_y = -3
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer{
+/obj/item/reagent_containers/food/drinks/bottle/small/beer{
 	pixel_x = 5;
 	pixel_y = 13
 	},
@@ -1618,11 +1618,11 @@
 /area/shuttle/metawhiteship/cargo)
 "NE" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical{
 	pixel_x = 2;
 	pixel_y = 7
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/item/clothing/head/welding,
 /obj/machinery/light/small{
 	dir = 4
@@ -1742,14 +1742,14 @@
 	pixel_x = -5;
 	pixel_y = 4
 	},
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork{
 	pixel_x = 6
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_x = 2
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_x = 4
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -1908,8 +1908,8 @@
 "SY" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/table/rack,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/bulbs,
 /obj/item/stack/cable_coil/yellow,
 /turf/simulated/floor/tiled,
 /area/shuttle/metawhiteship/cargo)
@@ -1928,7 +1928,7 @@
 /area/shuttle/metawhiteship/cargo)
 "Ts" = (
 /obj/structure/closet/crate/weapon,
-/obj/item/weapon/gun/energy/retro,
+/obj/item/gun/energy/retro,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/cargo)
@@ -2083,7 +2083,7 @@
 	},
 /obj/machinery/shower,
 /obj/structure/curtain/open/shower,
-/obj/item/weapon/soap,
+/obj/item/soap,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile,
 /area/shuttle/metawhiteship/gen)
@@ -2115,7 +2115,7 @@
 /obj/structure/closet,
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
-/obj/item/weapon/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/metawhiteship/cargo)
@@ -2134,11 +2134,11 @@
 /area/shuttle/metawhiteship/food)
 "YS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/photo_album{
+/obj/item/storage/photo_album{
 	pixel_x = -16;
 	pixel_y = 0
 	},
-/obj/item/weapon/folder/blue{
+/obj/item/folder/blue{
 	pixel_x = 7;
 	pixel_y = 8
 	},

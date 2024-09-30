@@ -78,18 +78,18 @@
 /area/survivalpod/superpose/SurvivalPool)
 "gE" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/reagent_containers/food/drinks/cans/waterbottle{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/reagent_containers/food/drinks/cans/waterbottle{
 	pixel_x = 5;
 	pixel_y = 6
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalPool)
 "hC" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalPool)
 "ih" = (
@@ -226,10 +226,10 @@
 	use_power = 1
 	},
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/reagent_containers/glass/bucket/wood{
+/obj/item/reagent_containers/glass/bucket/wood{
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/glass/bucket/wood,
+/obj/item/reagent_containers/glass/bucket/wood,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalPool)
 "ul" = (
@@ -263,7 +263,7 @@
 /turf/simulated/floor/water/pool,
 /area/survivalpod/superpose/SurvivalPool)
 "wS" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/simulated/floor/water/deep/pool,
 /area/survivalpod/superpose/SurvivalPool)
 "xf" = (
@@ -379,7 +379,7 @@
 	use_power = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/item/weapon/bikehorn/rubberducky,
+/obj/item/bikehorn/rubberducky,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalPool)
 "Mm" = (
@@ -391,55 +391,55 @@
 /area/survivalpod/superpose/SurvivalPool)
 "Nd" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalPool)
 "Nk" = (
 /turf/simulated/shuttle/wall/voidcraft/survival,
 /area/survivalpod/superpose/SurvivalPool)
 "Ok" = (
-/obj/item/weapon/inflatable_duck,
+/obj/item/inflatable_duck,
 /turf/simulated/floor/water/pool,
 /area/survivalpod/superpose/SurvivalPool)
 "PV" = (
@@ -490,7 +490,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalPool)
 "RD" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalPool)

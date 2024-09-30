@@ -3,7 +3,7 @@
 	if(!C || !user)
 		return 0
 
-	if(isliving(user) && istype(C, /obj/item/weapon)) //CHOMPEDIT START - Making engraving require disarm intent (and simplifying the proc)
+	if(isliving(user) && istype(C, /obj/item)) //CHOMPEDIT START - Making engraving require disarm intent (and simplifying the proc)
 		var/mob/living/L = user
 		if(L.a_intent != I_HELP)
 			if(L.a_intent == I_GRAB)
@@ -59,7 +59,7 @@
 
 	// Floor has flooring set
 	if(!is_plating())
-		if(istype(C, /obj/item/weapon))
+		if(istype(C, /obj/item))
 			try_deconstruct_tile(C, user)
 			return
 		else if(istype(C, /obj/item/stack/cable_coil))
@@ -124,7 +124,7 @@
 				return
 		// Plating repairs and removal
 		else if(C.has_tool_quality(TOOL_WELDER))
-			var/obj/item/weapon/weldingtool/welder = C.get_welder()
+			var/obj/item/weldingtool/welder = C.get_welder()
 			if(welder.isOn())
 				// Needs repairs
 				if(broken || burnt)
@@ -153,7 +153,7 @@
 							return // Someone slapped down some flooring or cables or something
 						do_remove_plating(C, user, base_type)
 
-/turf/simulated/floor/proc/try_deconstruct_tile(obj/item/weapon/W as obj, mob/user as mob)
+/turf/simulated/floor/proc/try_deconstruct_tile(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_CROWBAR))
 		if(broken || burnt)
 			to_chat(user, "<span class='notice'>You remove the broken [flooring.descriptor].</span>")
@@ -180,7 +180,7 @@
 		make_plating(1)
 		playsound(src, W.usesound, 80, 1)
 		return 1
-	else if(istype(W, /obj/item/weapon/shovel) && (flooring.flags & TURF_REMOVE_SHOVEL))
+	else if(istype(W, /obj/item/shovel) && (flooring.flags & TURF_REMOVE_SHOVEL))
 		to_chat(user, "<span class='notice'>You shovel off the [flooring.descriptor].</span>")
 		make_plating(1)
 		playsound(src, 'sound/items/Deconstruct.ogg', 80, 1)
@@ -190,7 +190,7 @@
 /turf/simulated/floor/proc/try_replace_tile(obj/item/stack/tile/T as obj, mob/user as mob)
 	if(T.type == flooring.build_type)
 		return
-	var/obj/item/weapon/W = user.is_holding_item_of_type(/obj/item/weapon)
+	var/obj/item/W = user.is_holding_item_of_type(/obj/item)
 	if(!istype(W))
 		return
 	if(!try_deconstruct_tile(W, user))
@@ -208,9 +208,9 @@
 		return FALSE
 	return TRUE
 
-/turf/simulated/floor/proc/do_remove_plating(obj/item/weapon/W, mob/user, base_type)
+/turf/simulated/floor/proc/do_remove_plating(obj/item/W, mob/user, base_type)
 	if(W.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/WT = W.get_welder()
+		var/obj/item/weldingtool/WT = W.get_welder()
 		if(!WT.remove_fuel(5,user))
 			to_chat(user, "<span class='warning'>You don't have enough fuel in [WT] finish cutting through [src].</span>")
 			return

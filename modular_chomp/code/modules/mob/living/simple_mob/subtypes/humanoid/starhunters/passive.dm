@@ -2,24 +2,24 @@
 	name = "Starhunter Weapon Smith"
 	icon_state = "sunetrader"
 	icon_living = "sunetrader"
-	products	= list(/obj/item/weapon/gun/energy/sickshot = 5,
-		/obj/item/weapon/material/twohanded/fireaxe/scythe = 3,
-		/obj/item/weapon/material/twohanded/spear/lance = 3,
-		/obj/item/weapon/beartrap = 12,
-		/obj/item/weapon/material/barbedwire = 12,
-		/obj/item/weapon/material/sword/battleaxe = 3
+	products	= list(/obj/item/gun/energy/sickshot = 5,
+		/obj/item/material/twohanded/fireaxe/scythe = 3,
+		/obj/item/material/twohanded/spear/lance = 3,
+		/obj/item/beartrap = 12,
+		/obj/item/material/barbedwire = 12,
+		/obj/item/material/sword/battleaxe = 3
 
 		) // For each, use the following pattern:
 
-	premium 	= list(/obj/item/weapon/gun/energy/maghowitzer) //This may be a mistake
+	premium 	= list(/obj/item/gun/energy/maghowitzer) //This may be a mistake
 
-	prices     = list(/obj/item/weapon/gun/energy/maghowitzer = 8000,
-		/obj/item/weapon/gun/energy/sickshot = 800,
-		/obj/item/weapon/material/twohanded/fireaxe/scythe = 400,
-		/obj/item/weapon/material/twohanded/spear/lance = 400,
-		/obj/item/weapon/beartrap = 80,
-		/obj/item/weapon/material/barbedwire = 80,
-		/obj/item/weapon/material/sword/battleaxe = 400
+	prices     = list(/obj/item/gun/energy/maghowitzer = 8000,
+		/obj/item/gun/energy/sickshot = 800,
+		/obj/item/material/twohanded/fireaxe/scythe = 400,
+		/obj/item/material/twohanded/spear/lance = 400,
+		/obj/item/beartrap = 80,
+		/obj/item/material/barbedwire = 80,
+		/obj/item/material/sword/battleaxe = 400
 		)
 
 /mob/living/simple_mob/humanoid/starhunter/trader/reliccollecter
@@ -32,9 +32,9 @@
 		/obj/item/clothing/suit/cultrobes = 3,
 		/obj/item/clothing/head/helmet/space/cult = 3,
 		/obj/item/clothing/suit/space/cult = 3,
-		/obj/item/device/soulstone = 8,
+		/obj/item/soulstone = 8,
 		/obj/item/clothing/glasses/monocoole = 3,
-		/obj/item/weapon/storage/belt/holding = 1,
+		/obj/item/storage/belt/holding = 1,
 		/obj/item/clothing/gloves/regen = 1
 		) // For each, use the following pattern:
 
@@ -46,9 +46,9 @@
 		/obj/item/clothing/suit/cultrobes = 600,
 		/obj/item/clothing/head/helmet/space/cult = 600,
 		/obj/item/clothing/suit/space/cult = 600,
-		/obj/item/device/soulstone = 80,
+		/obj/item/soulstone = 80,
 		/obj/item/clothing/glasses/monocoole = 1200,
-		/obj/item/weapon/storage/belt/holding = 1800,
+		/obj/item/storage/belt/holding = 1800,
 		/obj/item/clothing/gloves/regen = 1800,
 		/obj/item/clothing/glasses/omni = 2600
 		)
@@ -57,31 +57,31 @@
 	name = "Starhunter Miner"
 	icon_state = "snektrader"
 	icon_living = "snektrader"
-	products	= list(/obj/item/weapon/kinetic_crusher/glaive = 5,
-		/obj/item/weapon/kinetic_crusher = 3,
-		/obj/item/weapon/gun/energy/mininglaser = 3,
-		/obj/item/weapon/melee/shock_maul = 3,
+	products	= list(/obj/item/kinetic_crusher/glaive = 5,
+		/obj/item/kinetic_crusher = 3,
+		/obj/item/gun/energy/mininglaser = 3,
+		/obj/item/melee/shock_maul = 3,
 		/obj/item/stack/material/phoron = 50,
 		/obj/item/stack/material/uranium = 50,
 		/obj/item/stack/material/tritium = 50,
 		/obj/item/stack/material/deuterium = 50,
 		/obj/item/stack/material/bronze = 50,
-		/obj/item/weapon/circuitboard/paradoxrift = 3
+		/obj/item/circuitboard/paradoxrift = 3
 		) // For each, use the following pattern:
 
-	premium 	= list(/obj/item/weapon/circuitboard/defenseonelisk) // No specified amount = only one in stock
+	premium 	= list(/obj/item/circuitboard/defenseonelisk) // No specified amount = only one in stock
 
-	prices     = list(/obj/item/weapon/kinetic_crusher/glaive = 600,
-		/obj/item/weapon/kinetic_crusher = 600,
-		/obj/item/weapon/gun/energy/mininglaser = 800,
-		/obj/item/weapon/melee/shock_maul = 600,
+	prices     = list(/obj/item/kinetic_crusher/glaive = 600,
+		/obj/item/kinetic_crusher = 600,
+		/obj/item/gun/energy/mininglaser = 800,
+		/obj/item/melee/shock_maul = 600,
 		/obj/item/stack/material/phoron = 12,
 		/obj/item/stack/material/uranium = 12,
 		/obj/item/stack/material/tritium = 12,
 		/obj/item/stack/material/deuterium = 12,
 		/obj/item/stack/material/bronze = 12,
-		/obj/item/weapon/circuitboard/paradoxrift = 2400,
-		/obj/item/weapon/circuitboard/defenseonelisk = 5000
+		/obj/item/circuitboard/paradoxrift = 2400,
+		/obj/item/circuitboard/defenseonelisk = 5000
 		)
 
 /mob/living/simple_mob/humanoid/starhunter/trader/farmer

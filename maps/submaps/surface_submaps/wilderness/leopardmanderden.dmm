@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aK" = (
-/obj/item/weapon/ore/silver,
+/obj/item/ore/silver,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
@@ -9,14 +9,18 @@
 "aT" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/animal/sif/siffet{
-	faction = "neutral"
+	faction = "neutral";
+	max_co2 = 0;
+	max_tox = 0;
+	min_oxy = 0;
+	minbodytemp = 0
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
 /area/submap/LeopardmanderDen)
 "bj" = (
-/obj/item/weapon/bluespace_crystal,
+/obj/item/bluespace_crystal,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "bO" = (
@@ -48,7 +52,7 @@
 	},
 /area/template_noop)
 "fe" = (
-/obj/item/weapon/coin/diamond,
+/obj/item/coin/diamond,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
@@ -56,7 +60,7 @@
 /area/submap/LeopardmanderDen)
 "fQ" = (
 /obj/effect/landmark/loot_spawn/low,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -66,7 +70,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "gC" = (
-/obj/item/weapon/flame/lighter/zippo/gold,
+/obj/item/flame/lighter/zippo/gold,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -82,7 +86,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "gU" = (
-/obj/item/weapon/coin/gold,
+/obj/item/coin/gold,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -206,7 +210,7 @@
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "qg" = (
-/obj/structure/bed/chair/oldsofa/right{
+/obj/structure/bed/chair/sofa/right{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks{
@@ -252,13 +256,21 @@
 /area/submap/LeopardmanderDen)
 "sY" = (
 /mob/living/simple_mob/animal/sif/sakimm{
-	faction = "neutral"
+	faction = "neutral";
+	max_co2 = 0;
+	max_tox = 0;
+	min_oxy = 0;
+	minbodytemp = 0
 	},
 /turf/template_noop,
 /area/template_noop)
 "tP" = (
 /mob/living/simple_mob/animal/sif/sakimm{
-	faction = "neutral"
+	faction = "neutral";
+	max_co2 = 0;
+	max_tox = 0;
+	min_oxy = 0;
+	minbodytemp = 0
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
@@ -279,17 +291,11 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
-"vk" = (
-/mob/living/simple_mob/animal/sif/tymisian{
-	faction = "neutral"
-	},
-/turf/template_noop,
-/area/template_noop)
 "xf" = (
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "xg" = (
-/obj/item/weapon/ore/silver,
+/obj/item/ore/silver,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -311,7 +317,11 @@
 /area/submap/LeopardmanderDen)
 "zJ" = (
 /mob/living/simple_mob/animal/sif/siffet{
-	faction = "neutral"
+	faction = "neutral";
+	max_co2 = 0;
+	max_tox = 0;
+	min_oxy = 0;
+	minbodytemp = 0
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
@@ -331,7 +341,7 @@
 /turf/simulated/floor/water/ocean,
 /area/submap/LeopardmanderDen)
 "AP" = (
-/obj/structure/bed/chair/oldsofa/right{
+/obj/structure/bed/chair/sofa/right{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks{
@@ -371,7 +381,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "Gw" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
@@ -382,7 +392,7 @@
 /turf/simulated/wall/sifwood,
 /area/template_noop)
 "HV" = (
-/obj/structure/bed/chair/oldsofa/left{
+/obj/structure/bed/chair/sofa/left{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks{
@@ -414,7 +424,7 @@
 /area/template_noop)
 "KT" = (
 /obj/structure/flora/ausbushes/brflowers,
-/obj/structure/flora/tree/winter,
+/obj/structure/flora/tree/bigtree,
 /turf/simulated/floor/outdoors/grass/sif/forest,
 /area/submap/LeopardmanderDen)
 "Lb" = (
@@ -446,9 +456,6 @@
 "Pc" = (
 /obj/item/stack/material/diamond,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/LeopardmanderDen)
-"Pr" = (
-/turf/unsimulated/wall/bronze,
 /area/submap/LeopardmanderDen)
 "PO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -491,26 +498,30 @@
 	},
 /area/submap/LeopardmanderDen)
 "Te" = (
-/obj/item/weapon/coin/silver,
+/obj/item/coin/silver,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
 /area/submap/LeopardmanderDen)
 "Tj" = (
 /mob/living/simple_mob/animal/sif/tymisian{
-	faction = "neutral"
+	faction = "neutral";
+	max_co2 = 0;
+	max_tox = 0;
+	min_oxy = 0;
+	minbodytemp = 0
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "Tt" = (
 /obj/structure/flora/ausbushes/brflowers,
-/obj/item/weapon/coin/iron,
+/obj/item/coin/iron,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
 /area/submap/LeopardmanderDen)
 "TF" = (
-/obj/structure/bed/chair/oldsofa/left{
+/obj/structure/bed/chair/sofa/left{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks{
@@ -518,16 +529,16 @@
 	},
 /area/submap/LeopardmanderDen)
 "Uc" = (
-/obj/item/weapon/ore/diamond,
+/obj/item/ore/diamond,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "Ul" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "UA" = (
 /obj/structure/flora/ausbushes/brflowers,
-/obj/item/weapon/coin/gold,
+/obj/item/coin/gold,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -560,7 +571,10 @@
 	},
 /area/submap/LeopardmanderDen)
 "Xt" = (
-/mob/living/simple_mob/vore/leopardmander,
+/mob/living/simple_mob/vore/leopardmander{
+	max_co2 = 0;
+	min_oxy = 0
+	},
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -576,7 +590,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "YJ" = (
-/obj/item/weapon/ore/diamond,
+/obj/item/ore/diamond,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -664,7 +678,7 @@ bj
 Pc
 xf
 IQ
-Pr
+cu
 IQ
 IQ
 IQ
@@ -745,7 +759,7 @@ gP
 (8,1,1) = {"
 Ls
 IQ
-Pr
+cu
 xf
 mu
 nw
@@ -889,7 +903,7 @@ xf
 cu
 cu
 Qa
-Pr
+cu
 IQ
 IQ
 IQ
@@ -943,7 +957,7 @@ Kv
 (17,1,1) = {"
 rn
 rn
-tP
+Sm
 rn
 Sm
 ll
@@ -977,9 +991,9 @@ eD
 mW
 uw
 Kd
-Sm
-vk
 tP
+rn
+Tj
 rn
 rn
 rn

@@ -239,7 +239,7 @@
 		stack_trace("Persist (NIF): Given a nonhuman: [H]")
 		return
 
-	var/obj/item/device/nif/nif = H.nif
+	var/obj/item/nif/nif = H.nif
 
 	if(nif && H.ckey != nif.owner_key)
 		return

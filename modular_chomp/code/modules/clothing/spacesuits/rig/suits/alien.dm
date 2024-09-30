@@ -22,7 +22,7 @@
 		SPECIES_VOX = 'modular_chomp/icons/inventory/hands/mob_vox.dmi'
 		)
 
-/obj/item/weapon/rig/vox/engineering
+/obj/item/rig/vox/engineering
 	name = "fluid alien control module"
 	suit_type = "\improper industrial alien"
 	icon_state = "vox_engineer_rig"
@@ -39,7 +39,7 @@
 
 	req_one_access = list()
 	req_access = list(access_engine)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage)
 	offline_vision_restriction = 1
 
 	initial_modules = list(
@@ -49,7 +49,7 @@
 		/obj/item/rig_module/vision/meson
 	)
 
-	air_type = /obj/item/weapon/tank/nitrogen
+	air_type = /obj/item/tank/nitrogen
 
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 
@@ -58,7 +58,7 @@
 	chest_type = /obj/item/clothing/suit/space/rig/vox/ch
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/vox/ch
 
-/obj/item/weapon/rig/vox/security
+/obj/item/rig/vox/security
 	name = "sturdy alien control module"
 	suit_type = "\improper sturdy alien"
 	icon_state = "vox_sec_rig"
@@ -72,13 +72,13 @@
 	emp_protection = 40 //change this to 30 if too high.
 
 	req_one_access = list()
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage)
 	offline_vision_restriction = 1
 
 	initial_modules = list(
 	)
 
-	air_type = /obj/item/weapon/tank/vox
+	air_type = /obj/item/tank/vox
 
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 

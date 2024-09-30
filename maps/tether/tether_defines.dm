@@ -71,6 +71,7 @@
 
 	station_name  = "NSB Adephagia"
 	station_short = "Tether"
+	facility_type = "station"
 	dock_name     = "Virgo-3B Colony"
 	dock_type     = "surface"
 	boss_name     = "Central Command"
@@ -141,17 +142,28 @@
 		/area/crew_quarters/sleep/Dorm_5/holo,
 		/area/crew_quarters/sleep/Dorm_7/holo,
 		/area/looking_glass/lg_1,
-		/area/rnd/miscellaneous_lab
+		/area/rnd/miscellaneous_lab,
+		/area/tether/transit, // Tether Debug Transit
+		/area/tether/surfacebase/outside/outside2, // Very Outside
+		/area/tether/surfacebase/outside/outside3 // Very Outside
 		)
 
 	unit_test_exempt_from_atmos = list(
 		/area/engineering/atmos_intake, // Outside,
+		/area/engineering/engine_gas,
 		/area/rnd/external, //  Outside,
+		/area/rnd/outpost/xenobiology/outpost_stairs,
+		/area/tether/surfacebase/entertainment/stage, // Connected to entertainment area
+		/area/tether/surfacebase/emergency_storage/atmos,
 		/area/tether/surfacebase/emergency_storage/rnd,
 		/area/tether/surfacebase/emergency_storage/atrium,
 		/area/tether/surfacebase/lowernortheva, // it airlock
 		/area/tether/surfacebase/lowernortheva/external, //it outside
-		/area/tether/surfacebase/security/gasstorage) //it maint
+		/area/tether/surfacebase/security/gasstorage, // Maint
+		/area/tcommsat/chamber,
+		/area/tether/outpost/solars_outside, // Outside
+		/area/vacant/vacant_bar_upper // Maint
+		)
 
 	unit_test_z_levels = list(
 		Z_LEVEL_SURFACE_LOW,
@@ -226,6 +238,14 @@
 
 	planet_datums_to_make = list(/datum/planet/virgo3b,
 								/datum/planet/virgo4)
+
+/datum/map/tether/get_map_info()
+	. = list()
+	. +=  "The [full_name] is an ancient ruin turned workplace in the Virgo-Erigone System, deep in the midst of the Coreward Periphery.<br>"
+	. +=  "Humanity has spread across the stars and has met many species on similar or even more advanced terms than them - it's a brave new world and many try to find their place in it . <br>"
+	. +=  "Though Virgo-Erigone is not important for the great movers and shakers, it sees itself in the midst of the interests of a reviving alien species of the Zorren, corporate and subversive interests and other exciting dangers the Periphery has to face.<br>"
+	. +=  "As an employee or contractor of NanoTrasen, operators of the Adephagia and one of the galaxy's largest corporations, you're probably just here to do a job."
+	return jointext(., "<br>")
 
 /datum/map/tether/perform_map_generation()
 

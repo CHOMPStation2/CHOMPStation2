@@ -67,7 +67,7 @@
 /mob/living/simple_mob/slime/xenobio/gold{
 	unity = 1
 	},
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "fz" = (
@@ -203,7 +203,7 @@
 	},
 /area/submap/xenobio)
 "ri" = (
-/obj/item/device/perfect_tele/frontier,
+/obj/item/perfect_tele/frontier,
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "rw" = (
@@ -212,9 +212,9 @@
 /area/submap/xenobio)
 "rS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/energy/taser/xeno,
-/obj/item/weapon/gun/energy/taser/xeno,
-/obj/item/weapon/xenobio/monkey_gun,
+/obj/item/gun/energy/taser/xeno,
+/obj/item/gun/energy/taser/xeno,
+/obj/item/xenobio/monkey_gun,
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -222,7 +222,7 @@
 /area/submap/xenobio)
 "sl" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /turf/simulated/floor/carpet/green,
 /area/submap/xenobio)
 "tw" = (
@@ -384,8 +384,8 @@
 /area/submap/xenobio)
 "Ha" = (
 /obj/structure/table/standard,
-/obj/item/weapon/melee/baton/slime/loaded,
-/obj/item/weapon/melee/baton/slime/loaded,
+/obj/item/melee/baton/slime/loaded,
+/obj/item/melee/baton/slime/loaded,
 /obj/item/clothing/glasses/graviton,
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
@@ -440,7 +440,7 @@
 /area/submap/xenobio)
 "Me" = (
 /obj/structure/table/standard,
-/obj/item/weapon/melee/energy/spear,
+/obj/item/melee/energy/spear,
 /turf/simulated/floor/reinforced/phoron{
 	phoron = 100
 	},
@@ -451,21 +451,21 @@
 	},
 /area/submap/xenobio)
 "MR" = (
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /obj/structure/bed,
 /turf/simulated/floor/carpet/green,
 /area/submap/xenobio)
 "Ng" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
 /obj/item/stolenpackage,
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "Np" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -492,11 +492,11 @@
 /area/submap/xenobio)
 "RZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/beakers{
+/obj/item/storage/box/beakers{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/mop/advanced,
+/obj/item/mop/advanced,
 /turf/simulated/floor/tiled,
 /area/submap/xenobio)
 "SD" = (
@@ -553,7 +553,7 @@
 /turf/simulated/floor/plating,
 /area/submap/xenobio)
 "VK" = (
-/obj/item/weapon/grenade/shooter/energy/tesla,
+/obj/item/grenade/shooter/energy/tesla,
 /turf/simulated/floor/reinforced,
 /area/submap/xenobio)
 "WL" = (

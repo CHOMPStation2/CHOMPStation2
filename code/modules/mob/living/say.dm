@@ -131,7 +131,7 @@ var/list/channel_to_radio_key = new
 
 /mob/living/proc/handle_message_mode(message_mode, list/message_pieces, verb, used_radios)
 	if(message_mode == "intercom")
-		for(var/obj/item/device/radio/intercom/I in view(1, null))
+		for(var/obj/item/radio/intercom/I in view(1, null))
 			I.talk_into(src, message_pieces, verb)
 			used_radios += I
 	return 0
@@ -439,7 +439,7 @@ var/list/channel_to_radio_key = new
 /mob/living/proc/say_signlang(var/message, var/verb="gestures", var/verb_understood="gestures", var/datum/language/language, var/type = 1)
 	var/turf/T = get_turf(src)
 	//We're in something, gesture to people inside the same thing
-	if(loc != T && !istype(loc, /obj/item/weapon/holder)) //CHOMPEdit - Partially fixes sign language while being held.
+	if(loc != T && !istype(loc, /obj/item/holder)) //CHOMPEdit - Partially fixes sign language while being held.
 		for(var/mob/M in loc)
 			M.hear_signlang(message, verb, verb_understood, language, src, type)
 

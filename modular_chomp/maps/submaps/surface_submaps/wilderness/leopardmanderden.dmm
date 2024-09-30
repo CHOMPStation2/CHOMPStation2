@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aK" = (
-/obj/item/weapon/ore/silver,
+/obj/item/ore/silver,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
@@ -16,7 +16,7 @@
 	},
 /area/submap/LeopardmanderDen)
 "bj" = (
-/obj/item/weapon/bluespace_crystal,
+/obj/item/bluespace_crystal,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "bO" = (
@@ -48,7 +48,7 @@
 	},
 /area/template_noop)
 "fe" = (
-/obj/item/weapon/coin/diamond,
+/obj/item/coin/diamond,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
@@ -56,7 +56,7 @@
 /area/submap/LeopardmanderDen)
 "fQ" = (
 /obj/effect/landmark/loot_spawn/low,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -66,7 +66,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "gC" = (
-/obj/item/weapon/flame/lighter/zippo/gold,
+/obj/item/flame/lighter/zippo/gold,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -82,7 +82,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "gU" = (
-/obj/item/weapon/coin/gold,
+/obj/item/coin/gold,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -289,7 +289,7 @@
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "xg" = (
-/obj/item/weapon/ore/silver,
+/obj/item/ore/silver,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -371,7 +371,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "Gw" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
@@ -491,7 +491,7 @@
 	},
 /area/submap/LeopardmanderDen)
 "Te" = (
-/obj/item/weapon/coin/silver,
+/obj/item/coin/silver,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -504,7 +504,7 @@
 /area/template_noop)
 "Tt" = (
 /obj/structure/flora/ausbushes/brflowers,
-/obj/item/weapon/coin/iron,
+/obj/item/coin/iron,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -518,16 +518,16 @@
 	},
 /area/submap/LeopardmanderDen)
 "Uc" = (
-/obj/item/weapon/ore/diamond,
+/obj/item/ore/diamond,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "Ul" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/LeopardmanderDen)
 "UA" = (
 /obj/structure/flora/ausbushes/brflowers,
-/obj/item/weapon/coin/gold,
+/obj/item/coin/gold,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},
@@ -576,7 +576,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "YJ" = (
-/obj/item/weapon/ore/diamond,
+/obj/item/ore/diamond,
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
 	},

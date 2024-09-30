@@ -8,7 +8,7 @@
 /area/submap/Rockybase)
 "az" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/item/toy/plushie/spider,
 /turf/simulated/floor/holofloor/lino,
 /area/submap/Rockybase)
@@ -71,9 +71,9 @@
 /area/submap/Rockybase)
 "cE" = (
 /obj/structure/table/standard,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1"
@@ -89,7 +89,7 @@
 /area/submap/Rockybase)
 "cZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "I've decided to go forward and start some small scale tests of the Vicerator delivery grenades, Might as wall make sure they work like the real ones. There are a few Fauna areas nearbye and we're working to make sure the kinks in the code are worked out. Once we've made sure they stay flying we'll work on the IFF signals.";
 	name = "V-Grenade Notice 2"
 	},
@@ -143,7 +143,7 @@
 /area/submap/Rockybase)
 "gc" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/energy/ionrifle/pistol,
+/obj/item/gun/energy/ionrifle/pistol,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/Rockybase)
 "gT" = (
@@ -205,12 +205,12 @@
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "lN" = (
-/obj/item/weapon/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
 /turf/template_noop,
 /area/template_noop)
 "mk" = (
 /obj/structure/table/standard,
-/obj/item/device/kit/paint/gygax/darkgygax,
+/obj/item/kit/paint/gygax/darkgygax,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "mt" = (
@@ -245,7 +245,7 @@
 /area/submap/Rockybase)
 "mQ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/holofloor/lino,
 /area/submap/Rockybase)
 "nw" = (
@@ -266,7 +266,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "ok" = (
-/obj/item/weapon/surgical/surgicaldrill,
+/obj/item/surgical/surgicaldrill,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
@@ -347,7 +347,7 @@
 	pixel_y = 0
 	},
 /obj/structure/curtain/open/shower,
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Rockybase)
 "rC" = (
@@ -362,12 +362,12 @@
 /area/submap/Rockybase)
 "sf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox,
+/obj/item/storage/toolbox,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "ts" = (
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
+	cell_type = /obj/item/cell/super;
 	dir = 8;
 	name = "Unknown APC";
 	pixel_x = -24
@@ -424,8 +424,8 @@
 /area/submap/Rockybase)
 "wj" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/projectile/shotgun/pump/combat,
-/obj/item/weapon/gun/projectile/shotgun/pump/combat,
+/obj/item/gun/projectile/shotgun/pump/combat,
+/obj/item/gun/projectile/shotgun/pump/combat,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/Rockybase)
 "wo" = (
@@ -450,7 +450,7 @@
 /area/submap/Rockybase)
 "wu" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Carl's absolutly fucked in the head. He's trying to squeeze as much drone production out as he can since he's worried we're gonna get found out but he's getting sloppier with each batch. Now's he's telling us he can speed the time on the IFF encoding. I already have a hard enough time getting these damn things not to stare at walls and now he's gonna shortchange the only part of these tincans that tells em not to turn us into paste on a wall. I told Richter to get out while he can, We're counting days before either some Sif task force shows up at our door or these things decide we aren't there friends anymore.";
 	name = "Note"
 	},
@@ -490,7 +490,7 @@
 "xM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor,
 /area/submap/Rockybase)
 "xN" = (
@@ -506,7 +506,7 @@
 /area/submap/Rockybase)
 "yf" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/holofloor/lino,
 /area/submap/Rockybase)
 "yn" = (
@@ -522,7 +522,7 @@
 /area/submap/Rockybase)
 "yB" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/projectile/pistol,
+/obj/item/gun/projectile/pistol,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1;
 	icon_state = "bordercolor"
@@ -540,14 +540,14 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/circuitboard/mecha/gygax/main,
-/obj/item/weapon/circuitboard/mecha/gygax/peripherals,
-/obj/item/weapon/circuitboard/mecha/gygax/targeting,
+/obj/item/circuitboard/mecha/gygax/main,
+/obj/item/circuitboard/mecha/gygax/peripherals,
+/obj/item/circuitboard/mecha/gygax/targeting,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "zc" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/energy/gun/taser,
+/obj/item/gun/energy/gun/taser,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1;
 	icon_state = "bordercolor"
@@ -646,7 +646,7 @@
 "Dk" = (
 /obj/machinery/light,
 /obj/structure/table/standard,
-/obj/item/weapon/pen,
+/obj/item/pen,
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
@@ -747,8 +747,8 @@
 /area/submap/Rockybase)
 "Jm" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
-/obj/item/weapon/gun/projectile/pistol,
+/obj/item/bedsheet,
+/obj/item/gun/projectile/pistol,
 /turf/simulated/floor/holofloor/lino,
 /area/submap/Rockybase)
 "Jz" = (
@@ -767,14 +767,14 @@
 /area/submap/Rockybase)
 "Kk" = (
 /obj/structure/table/standard,
-/obj/item/device/mmi/digital/robot,
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/scanning_module/adv,
+/obj/item/mmi/digital/robot,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/scanning_module/adv,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "Kz" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "KD" = (
@@ -784,7 +784,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "KE" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "KP" = (
@@ -809,7 +809,7 @@
 /area/submap/Rockybase)
 "Lp" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /mob/living/simple_mob/mechanical/viscerator,
 /turf/simulated/floor/holofloor/lino,
 /area/submap/Rockybase)
@@ -817,11 +817,11 @@
 /obj/structure/table/standard,
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/burn,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/burn,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "Lz" = (
-/obj/item/weapon/storage/belt/janitor,
+/obj/item/storage/belt/janitor,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
@@ -930,7 +930,7 @@
 /turf/template_noop,
 /area/template_noop)
 "PU" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor,
 /area/submap/Rockybase)
 "Qb" = (
@@ -962,8 +962,8 @@
 /area/submap/Rockybase)
 "RS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/bag/trash,
-/obj/item/weapon/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "RY" = (
@@ -985,12 +985,12 @@
 /area/template_noop)
 "SI" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/pickaxe/plasmacutter,
+/obj/item/pickaxe/plasmacutter,
 /turf/simulated/floor/holofloor/lino,
 /area/submap/Rockybase)
 "Tf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10;
 	icon_state = "bordercolor"
@@ -1028,7 +1028,7 @@
 /area/submap/Rockybase)
 "UU" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "We've finally been able to get the Vicerator delivery grenades working, Took awhile to make sure the latching mechanism didn't fail but we're sure we've got it this time. Vel'Shem's worried about the miners having there own drone fab now but I say it's a small price to pay to keep the metal flowing, Especially since there telling us NT's starting to monopolize the metal rich parts.";
 	name = "V-Grenade Notice 1"
 	},
@@ -1068,7 +1068,7 @@
 /area/submap/Rockybase)
 "Wc" = (
 /obj/structure/table/rack,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/simulated/floor/tiled/techfloor,
@@ -1081,7 +1081,7 @@
 /area/submap/Rockybase)
 "Wy" = (
 /obj/structure/table/standard,
-/obj/item/weapon/grenade/spawnergrenade/manhacks,
+/obj/item/grenade/spawnergrenade/manhacks,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "WP" = (

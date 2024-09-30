@@ -167,7 +167,7 @@
 	icon_state = "posi"
 	parent_organ = BP_TORSO
 
-	brain_type = /obj/item/device/mmi/digital/posibrain/nano
+	brain_type = /obj/item/mmi/digital/posibrain/nano
 
 /obj/item/organ/internal/mmi_holder/posibrain/nano/robotize()
 	. = ..()
@@ -189,29 +189,29 @@
 	return	//Proteans handle EMP's differently
 
 // The 'out on the ground' object, not the organ holder
-/obj/item/device/mmi/digital/posibrain/nano
+/obj/item/mmi/digital/posibrain/nano
 	name = "protean posibrain"
 	desc = "A more advanced version of the standard posibrain, typically found in protean bodies."
 	icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
 	icon_state = "posi"
 
-/obj/item/device/mmi/digital/posibrain/nano/Initialize()
+/obj/item/mmi/digital/posibrain/nano/Initialize()
 	. = ..()
 	icon_state = "posi"
 
-/obj/item/device/mmi/digital/posibrain/nano/request_player()
+/obj/item/mmi/digital/posibrain/nano/request_player()
 	icon_state = initial(icon_state)
 	return //We don't do this stuff
 
-/obj/item/device/mmi/digital/posibrain/nano/reset_search()
+/obj/item/mmi/digital/posibrain/nano/reset_search()
 	icon_state = initial(icon_state)
 	return //Don't do this either because of the above
 
-/obj/item/device/mmi/digital/posibrain/nano/transfer_personality()
+/obj/item/mmi/digital/posibrain/nano/transfer_personality()
 	. = ..()
 	icon_state = "posi1"
 
-/obj/item/device/mmi/digital/posibrain/nano/transfer_identity()
+/obj/item/mmi/digital/posibrain/nano/transfer_identity()
 	. = ..()
 	icon_state = "posi1"
 
@@ -222,10 +222,10 @@
 	name = "Protean Reboot Programmer"
 	id = "protean_reboot"
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 1000, MAT_PLASTEEL = 10000)
-	build_path = /obj/item/device/protean_reboot
+	build_path = /obj/item/protean_reboot
 	sort_string = "JVAAZ"
 
-/obj/item/device/protean_reboot
+/obj/item/protean_reboot
 	name = "Protean Reboot Programmer"
 	desc = "A small, highly specialized programmer used to form the basis of a Protean swarm. A necessary component in reconstituting a Protean who has lost total body cohesion."
 	icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'

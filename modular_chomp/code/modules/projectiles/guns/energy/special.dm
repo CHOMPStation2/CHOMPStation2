@@ -1,9 +1,9 @@
-/obj/item/weapon/gun/energy/medigun/mounted
+/obj/item/gun/energy/medigun/mounted
 	name = "mounted directed restoration system"
 	self_recharge = 1
 	use_external_power = 1
 
-/obj/item/weapon/gun/energy/taser/disabler/slow
+/obj/item/gun/energy/taser/disabler/slow
 	name = "plasma snare device"
 	desc = "A modified disabler adjusted to impulse a target with a restrictive slowdown."
 	icon_state = "disabler"
@@ -29,7 +29,7 @@
 		L.add_modifier(/datum/modifier/entangled, 10 SECONDS)
 
 
-/obj/item/weapon/gun/energy/rednetgun
+/obj/item/gun/energy/rednetgun
 	name = "experimental capture gun"
 	desc = "An experimental gun, in efforts to expand net gun technology. Utilizing eletronic interferance and a \
 	heat aura it in theory stops the subject from fighting back."
@@ -82,7 +82,7 @@
 	return 1
 
 
-/obj/item/weapon/gun/energy/supercannon
+/obj/item/gun/energy/supercannon
 	name = "Super-Rail Cannon"
 	desc = "This weapon seems to be vibrating with a barely containable energy, with no charging ports or battery ports in sight, you only have a singlular shot of this. Ever"
 	icon = 'modular_chomp/icons/obj/guns/supercannon/supercannon.dmi'
@@ -96,7 +96,7 @@
 	self_recharge = TRUE
 	recharge_time = 6 HOURS //This is how to get around rechargers being able to recharge it, I dont wanna rewrite base level code
 	projectile_type = /obj/item/projectile/bullet/magnetic/supercannon //Fuck you.
-	cell_type = /obj/item/weapon/cell/device/weapon
+	cell_type = /obj/item/cell/device/weapon
 	battery_lock = 1
 	force = 15 //pretty robust
 	one_handed_penalty = 90

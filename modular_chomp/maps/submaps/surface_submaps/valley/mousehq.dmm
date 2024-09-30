@@ -86,8 +86,8 @@
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "s" = (
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/cell/device/weapon/recharge/alien/omni,
 /obj/structure/table/alien/blue,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
@@ -128,9 +128,9 @@
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "A" = (
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
 /obj/structure/table/alien/blue,
-/obj/item/device/multitool/alien,
+/obj/item/multitool/alien,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "B" = (
@@ -145,7 +145,7 @@
 /turf/simulated/floor/bmarble,
 /area/submap/mousehq)
 "F" = (
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
 /obj/structure/table/alien/blue,
 /obj/item/clothing/suit/armor/alien,
 /turf/simulated/floor/wmarble,
@@ -213,7 +213,7 @@
 /area/template_noop)
 "W" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/cell/device/weapon/recharge/alien/hybrid,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "X" = (

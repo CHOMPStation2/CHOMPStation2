@@ -9,7 +9,7 @@
 /turf/simulated/floor/water,
 /area/submap/phorondragon)
 "d" = (
-/obj/item/weapon/cell/hyper,
+/obj/item/cell/hyper,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/phorondragon)
 "i" = (
@@ -52,7 +52,7 @@
 /turf/simulated/mineral,
 /area/submap/phorondragon)
 "P" = (
-/obj/item/weapon/gun/magnetic/matfed/phoronbore,
+/obj/item/gun/magnetic/matfed/phoronbore,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/phorondragon)
 "S" = (

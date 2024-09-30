@@ -120,7 +120,7 @@
 	emagged = !emagged
 	update()
 
-/obj/machinery/v_garbosystem/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/v_garbosystem/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.is_crowbar())
 		if(!operating)
 			to_chat(user, "You crowbar the filter hatch open, releasing the items trapped within.")

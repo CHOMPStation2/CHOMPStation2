@@ -26,7 +26,7 @@
 /turf/simulated/floor/plating/external,
 /area/submap/cave/digsite)
 "h" = (
-/obj/item/weapon/ore,
+/obj/item/ore,
 /turf/simulated/floor/plating/external,
 /area/submap/cave/digsite)
 "i" = (
@@ -83,7 +83,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/digsite)
 "p" = (
-/obj/item/weapon/ore,
+/obj/item/ore,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/digsite)
 "q" = (
@@ -99,7 +99,7 @@
 /area/submap/cave/digsite)
 "t" = (
 /obj/item/frame/apc,
-/obj/item/weapon/module/power_control,
+/obj/item/module/power_control,
 /turf/simulated/floor/plating/external,
 /area/submap/cave/digsite)
 "u" = (
@@ -110,8 +110,8 @@
 /area/submap/cave/digsite)
 "v" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/excavation,
-/obj/item/device/measuring_tape,
+/obj/item/storage/excavation,
+/obj/item/measuring_tape,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/digsite)
 "w" = (
@@ -137,12 +137,12 @@
 /area/submap/cave/digsite)
 "z" = (
 /obj/structure/table/steel,
-/obj/item/weapon/folder,
+/obj/item/folder,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/digsite)
 "A" = (
 /obj/structure/table/rack,
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/digsite)
 "B" = (
@@ -160,7 +160,7 @@
 /area/submap/cave/digsite)
 "E" = (
 /obj/structure/table/rack,
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/digsite)
 "F" = (
@@ -178,8 +178,8 @@
 /area/submap/cave/digsite)
 "I" = (
 /obj/structure/table/steel,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/storage/box/samplebags,
+/obj/item/tool/wrench,
+/obj/item/storage/box/samplebags,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/digsite)
 "J" = (

@@ -3,4 +3,4 @@
 	uniform = /obj/item/clothing/under/rank/mailman2
 	head = /obj/item/clothing/head/mailman2
 	pda_slot = slot_l_store
-	backpack_contents = list(/obj/item/weapon/storage/bag/mail = 1, /obj/item/mail_scanner = 1)
+	backpack_contents = list(/obj/item/storage/bag/mail = 1, /obj/item/mail_scanner = 1)

@@ -365,16 +365,16 @@
 "bn" = (
 /obj/structure/table/rack,
 /obj/item/stack/material/morphium,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/item/capture_crystal,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "bo" = (
 /obj/structure/table/rack,
-/obj/item/weapon/rig/combat/empty,
+/obj/item/rig/combat/empty,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "bq" = (
@@ -390,10 +390,10 @@
 /area/submap/DoomP)
 "br" = (
 /obj/structure/table/rack,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /obj/random/energy,
 /obj/random/energy,
 /obj/random/energy/highend,
@@ -402,10 +402,10 @@
 /area/submap/DoomP)
 "bs" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/projectile/contender,
+/obj/item/gun/projectile/contender,
 /obj/item/ammo_magazine/s357,
 /obj/item/ammo_magazine/s357,
-/obj/item/weapon/gun/projectile/contender,
+/obj/item/gun/projectile/contender,
 /obj/item/ammo_magazine/s357,
 /obj/item/ammo_magazine/s357,
 /obj/random/projectile/random,
@@ -414,7 +414,7 @@
 /area/submap/DoomP)
 "bt" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/item/toy/plushie/spider,
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 8
@@ -430,17 +430,17 @@
 "bv" = (
 /obj/structure/table/rack,
 /obj/item/stack/material/morphium,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/item/capture_crystal/cheap,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "bw" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
 	},
@@ -570,8 +570,8 @@
 /area/submap/DoomP)
 "bP" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper,
-/obj/item/weapon/pen,
+/obj/item/paper,
+/obj/item/pen,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -595,7 +595,7 @@
 /area/submap/DoomP)
 "jD" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
@@ -676,12 +676,12 @@
 "px" = (
 /obj/structure/table/standard,
 /obj/item/clothing/head/welding,
-/obj/item/weapon/weldingtool,
+/obj/item/weldingtool,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
 	},
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
 "pB" = (
@@ -729,17 +729,17 @@
 /area/submap/DoomP)
 "yp" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/mecha/imperion/main,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/circuitboard/mecha/imperion/main,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "yF" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/corner/lime/full,
 /obj/item/toy/plushie/basset,
 /turf/simulated/floor/tiled/white,
@@ -840,13 +840,13 @@
 "Nl" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
-/obj/item/weapon/tool/screwdriver{
+/obj/item/tool/screwdriver{
 	pixel_y = 15
 	},
-/obj/item/weapon/melee/baton/loaded,
-/obj/item/device/multitool,
+/obj/item/melee/baton/loaded,
+/obj/item/multitool,
 /obj/effect/floor_decal/borderfloorwhite,
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/item/clothing/gloves/sterile/latex,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DoomP)
@@ -897,7 +897,7 @@
 /area/submap/DoomP)
 "TX" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/pancakes/berry,
+/obj/item/reagent_containers/food/snacks/pancakes/berry,
 /obj/effect/floor_decal/corner/lime/border,
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
@@ -921,7 +921,7 @@
 /area/submap/DoomP)
 "VV" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
@@ -930,11 +930,11 @@
 /area/submap/DoomP)
 "Wt" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/mecha/imperion/targeting,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/circuitboard/mecha/imperion/targeting,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "Ww" = (
@@ -959,7 +959,7 @@
 /area/submap/DoomP)
 "XV" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/gun/energy/imperial,
+/obj/item/gun/energy/imperial,
 /obj/item/clothing/suit/armor/swat/officer,
 /obj/item/clothing/glasses/graviton/medgravpatch,
 /obj/item/clothing/head/psy_crown/wrath,

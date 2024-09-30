@@ -1,13 +1,13 @@
-/obj/item/weapon/storage/box/casino
+/obj/item/storage/box/casino
 	name = "prize box"
 	desc = "It's a lovely golden tinted cardboard box, maybe theres something valuable inside?"
 	icon = 'icons/obj/storage_ch.dmi'
 	icon_state = "box_casino"
 
-/obj/item/weapon/storage/box/casino/foamcrossbow
+/obj/item/storage/box/casino/foamcrossbow
 	name = "foam crossbow"
 	starts_with = list(
-	/obj/item/weapon/gun/projectile/revolver/toy/crossbow,
+	/obj/item/gun/projectile/revolver/toy/crossbow,
 	/obj/item/ammo_casing/afoam_dart,
 	/obj/item/ammo_casing/afoam_dart,
 	/obj/item/ammo_casing/afoam_dart,
@@ -15,7 +15,7 @@
 	/obj/item/ammo_casing/afoam_dart
 	)
 
-/obj/item/weapon/storage/box/casino/costume_whitebunny
+/obj/item/storage/box/casino/costume_whitebunny
 	name = "white bunnygirl outfit"
 	starts_with = list(
 	/datum/sprite_accessory/ears/bunny_white,
@@ -23,7 +23,7 @@
 	/datum/gear/shoes/heels
 	)
 
-/obj/item/weapon/storage/box/casino/costume_blackbunny
+/obj/item/storage/box/casino/costume_blackbunny
 	name = "black bunnygirl outfit"
 	starts_with = list(
 	/datum/sprite_accessory/ears/bunny_white,
@@ -31,7 +31,7 @@
 	/datum/gear/shoes/heels
 	)
 
-/obj/item/weapon/storage/box/casino/costume_sexymime
+/obj/item/storage/box/casino/costume_sexymime
 	name = "sexy mime costume"
 	starts_with = list(
 	/obj/item/clothing/mask/gas/sexymime,
@@ -40,7 +40,7 @@
 	/obj/item/clothing/head/soft/mime
 	)
 
-/obj/item/weapon/storage/box/casino/costume_sexyclown
+/obj/item/storage/box/casino/costume_sexyclown
 	name = "sexy clown costume"
 	starts_with = list(
 	/obj/item/clothing/mask/gas/clown_hat,
@@ -49,47 +49,47 @@
 	/obj/item/clothing/under/sexyclown
 	)
 
-/obj/item/weapon/storage/box/casino/costume_nyangirl
+/obj/item/storage/box/casino/costume_nyangirl
 	name = "cat girl costume"
 	starts_with = list(
 	/obj/item/clothing/under/schoolgirl,
 	/obj/item/clothing/head/kitty
 	)
 
-/obj/item/weapon/storage/box/casino/costume_wizard
+/obj/item/storage/box/casino/costume_wizard
 	name = "wizard costume"
 	starts_with = list(
 	/obj/item/clothing/suit/wizrobe/fake,
 	/obj/item/clothing/head/wizard/fake,
-	/obj/item/weapon/staff
+	/obj/item/staff
 	)
 
-/obj/item/weapon/storage/box/casino/costume_chicken
+/obj/item/storage/box/casino/costume_chicken
 	name = "chicken costume"
 	starts_with = list(
 	/obj/item/clothing/suit/chickensuit,
 	/obj/item/clothing/head/chicken,
-	/obj/item/weapon/reagent_containers/food/snacks/egg
+	/obj/item/reagent_containers/food/snacks/egg
 	)
 
-/obj/item/weapon/storage/box/casino/costume_gladiator
+/obj/item/storage/box/casino/costume_gladiator
 	name = "gladiator costume"
 	starts_with = list(
 	/obj/item/clothing/under/gladiator,
 	/obj/item/clothing/head/helmet/gladiator
 	)
 
-/obj/item/weapon/storage/box/casino/costume_imperiummonk
+/obj/item/storage/box/casino/costume_imperiummonk
 	name = "imperium monk costume"
 	starts_with = list(
 	/obj/item/clothing/suit/imperium_monk,
 	/obj/item/clothing/mask/gas/cyborg
 	)
 
-/obj/item/weapon/storage/box/casino/costume_cutewitch
+/obj/item/storage/box/casino/costume_cutewitch
 	name = "witch costume"
 	starts_with = list(
 	/obj/item/clothing/under/sundress,
 	/obj/item/clothing/head/wizard/marisa/fake,
-	/obj/item/weapon/staff/broom
+	/obj/item/staff/broom
 	)

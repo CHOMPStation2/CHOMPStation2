@@ -106,7 +106,7 @@
 	set desc = "Opens your headset's GUI, if you have one."
 	set category = "Abilities.Mob"
 
-	if(istype(mob_radio, /obj/item/device/radio/headset))
+	if(istype(mob_radio, /obj/item/radio/headset))
 		mob_radio.tgui_interact(src)
 	else
 		to_chat(src, "<span class='warning'>Your mob does not have a radio in its radio slot.</span>")
@@ -116,7 +116,7 @@
 	set desc = "Opens your PDA's GUI, if you have one."
 	set category = "Abilities.Mob"
 
-	if(istype(myid, /obj/item/device/pda))
+	if(istype(myid, /obj/item/pda))
 		myid.tgui_interact(src)
 	else
 		to_chat(src, "<span class='warning'>Your mob does not have a PDA in its ID slot.</span>")

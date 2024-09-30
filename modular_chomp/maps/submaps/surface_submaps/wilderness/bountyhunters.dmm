@@ -193,7 +193,7 @@
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "uC" = (
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)

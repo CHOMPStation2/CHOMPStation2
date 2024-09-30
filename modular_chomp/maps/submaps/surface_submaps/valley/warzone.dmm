@@ -13,7 +13,7 @@
 /area/submap/warzone)
 "gL" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/telecube/randomized/mated,
+/obj/item/telecube/randomized/mated,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
 "jY" = (
@@ -44,7 +44,7 @@
 /obj/random/cash,
 /obj/random/maintenance,
 /obj/random/material,
-/obj/item/device/radio/headset/heads/captain/sfr,
+/obj/item/radio/headset/heads/captain/sfr,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
 "yW" = (

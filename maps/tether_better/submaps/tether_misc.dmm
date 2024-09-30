@@ -772,7 +772,7 @@
 /area/holodeck/source_chess)
 "cn" = (
 /obj/structure/table/gold,
-/obj/item/weapon/reagent_containers/food/drinks/golden_cup,
+/obj/item/reagent_containers/food/drinks/golden_cup,
 /turf/simulated/floor/carpet/oracarpet,
 /area/shuttle/escape)
 "co" = (
@@ -889,7 +889,7 @@
 /area/shuttle/escape)
 "cH" = (
 /obj/structure/table/gold,
-/obj/item/weapon/moneybag,
+/obj/item/moneybag,
 /obj/random/cash/huge,
 /obj/random/cash/huge,
 /obj/random/cash/huge,
@@ -903,10 +903,10 @@
 /area/shuttle/escape)
 "cJ" = (
 /obj/structure/table/gold,
-/obj/item/weapon/coin/gold,
-/obj/item/weapon/coin/gold,
-/obj/item/weapon/coin/gold,
-/obj/item/weapon/storage/bag/cash,
+/obj/item/coin/gold,
+/obj/item/coin/gold,
+/obj/item/coin/gold,
+/obj/item/storage/bag/cash,
 /turf/simulated/floor/carpet/oracarpet,
 /area/shuttle/escape)
 "cK" = (
@@ -996,13 +996,13 @@
 /area/holodeck/source_courtroom)
 "cV" = (
 /obj/structure/table/gold,
-/obj/item/weapon/flame/lighter/zippo/gold,
+/obj/item/flame/lighter/zippo/gold,
 /turf/simulated/floor/carpet/purcarpet,
 /area/shuttle/escape)
 "cW" = (
 /obj/structure/table/gold,
-/obj/item/weapon/storage/box/matches,
-/obj/item/weapon/storage/fancy/cigar/havana,
+/obj/item/storage/box/matches,
+/obj/item/storage/fancy/cigar/havana,
 /turf/simulated/floor/carpet/purcarpet,
 /area/shuttle/escape)
 "cX" = (
@@ -1014,7 +1014,7 @@
 /area/shuttle/escape)
 "cY" = (
 /obj/structure/table/gold,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/carpet/purcarpet,
 /area/shuttle/escape)
 "cZ" = (
@@ -1033,12 +1033,12 @@
 /area/holodeck/source_picnicarea)
 "db" = (
 /obj/structure/table/gold,
-/obj/item/weapon/reagent_containers/food/drinks/glass2/rocks,
+/obj/item/reagent_containers/food/drinks/glass2/rocks,
 /turf/simulated/floor/carpet/purcarpet,
 /area/shuttle/escape)
 "dc" = (
 /obj/structure/table/gold,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
 /turf/simulated/floor/carpet/purcarpet,
 /area/shuttle/escape)
 "dd" = (
@@ -1359,7 +1359,7 @@
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/red,
 /obj/item/clothing/under/color/red,
-/obj/item/weapon/holo/esword/red,
+/obj/item/holo/esword/red,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
@@ -1502,7 +1502,7 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_meetinghall)
 "eM" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_beach)
 "eS" = (
@@ -1572,7 +1572,7 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
 "fa" = (
-/obj/item/weapon/beach_ball/holoball,
+/obj/item/beach_ball/holoball,
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
@@ -1585,7 +1585,7 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
 "fc" = (
-/obj/item/weapon/inflatable_duck,
+/obj/item/inflatable_duck,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_beach)
 "fd" = (
@@ -1777,7 +1777,7 @@
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/clothing/suit/armor/tdome/green,
 /obj/item/clothing/under/color/green,
-/obj/item/weapon/holo/esword/green,
+/obj/item/holo/esword/green,
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
@@ -2330,7 +2330,7 @@
 	},
 /area/centcom/suppy)
 "ug" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "You're not supposed to be here.";
 	name = "unnerving letter"
 	},
@@ -2536,7 +2536,7 @@
 /area/space)
 "Dw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "DF" = (
@@ -2660,12 +2660,12 @@
 /area/centcom/control)
 "Ik" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "In" = (
@@ -2848,7 +2848,7 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "No" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/unsimulated/beach/sand,
 /area/beach)
 "Nq" = (
@@ -3055,24 +3055,24 @@
 /area/unknown/dorm4)
 "Sz" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu13,
-/obj/item/weapon/storage/mre/menu13,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm4)
 "SA" = (
@@ -3084,7 +3084,7 @@
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm4)
 "SC" = (
-/obj/item/device/perfect_tele_beacon/stationary{
+/obj/item/perfect_tele_beacon/stationary{
 	tele_name = "Unknown";
 	tele_network = "unkfour"
 	},
@@ -3092,7 +3092,7 @@
 /area/unknown/dorm4)
 "SD" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/hopdouble,
+/obj/item/bedsheet/hopdouble,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm4)
 "SE" = (
@@ -3161,7 +3161,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/centcom/simulated/main_hall)
 "SW" = (
-/obj/item/device/perfect_tele_beacon/stationary{
+/obj/item/perfect_tele_beacon/stationary{
 	tele_name = "Transfer";
 	tele_network = "centcom"
 	},
@@ -3245,24 +3245,24 @@
 /area/beach)
 "To" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu13,
-/obj/item/weapon/storage/mre/menu13,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm3)
 "Tp" = (
@@ -3274,7 +3274,7 @@
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm3)
 "Tr" = (
-/obj/item/device/perfect_tele_beacon/stationary{
+/obj/item/perfect_tele_beacon/stationary{
 	tele_name = "Unknown";
 	tele_network = "unkthree"
 	},
@@ -3286,7 +3286,7 @@
 /area/beach)
 "Tt" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/hopdouble,
+/obj/item/bedsheet/hopdouble,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm3)
 "Tu" = (
@@ -3403,24 +3403,24 @@
 /area/unknown/dorm2)
 "TW" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu13,
-/obj/item/weapon/storage/mre/menu13,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm2)
 "TX" = (
@@ -3440,14 +3440,14 @@
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm2)
 "Ub" = (
-/obj/item/device/perfect_tele_beacon/stationary{
+/obj/item/perfect_tele_beacon/stationary{
 	tele_name = "Unknown";
 	tele_network = "unktwo"
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/unknown/dorm2)
 "Uc" = (
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm2)
@@ -3580,24 +3580,24 @@
 /area/unknown/dorm1)
 "UJ" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu13,
-/obj/item/weapon/storage/mre/menu13,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu13,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm1)
 "UK" = (
@@ -3609,14 +3609,14 @@
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm1)
 "UN" = (
-/obj/item/device/perfect_tele_beacon/stationary{
+/obj/item/perfect_tele_beacon/stationary{
 	tele_name = "Unknown";
 	tele_network = "unkone"
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/unknown/dorm1)
 "UP" = (
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/shuttle/floor/alien,
 /area/unknown/dorm1)
@@ -3924,12 +3924,12 @@
 /area/centcom/simulated/restaurant)
 "Wb" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/pastatomato,
+/obj/item/reagent_containers/food/snacks/pastatomato,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "Wc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meatballspagetti,
+/obj/item/reagent_containers/food/snacks/meatballspagetti,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "Wd" = (
@@ -3940,7 +3940,7 @@
 /area/centcom/simulated/restaurant)
 "We" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/fries,
+/obj/item/reagent_containers/food/snacks/fries,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "Wf" = (
@@ -3968,27 +3968,27 @@
 /area/centcom/simulated/living)
 "Wk" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburger{
+/obj/item/reagent_containers/food/snacks/cheeseburger{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburger,
+/obj/item/reagent_containers/food/snacks/cheeseburger,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "Wl" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/kitsuneudon,
+/obj/item/reagent_containers/food/snacks/kitsuneudon,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "Wm" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/lasagna,
+/obj/item/reagent_containers/food/snacks/lasagna,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "Wo" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/hotdog,
-/obj/item/weapon/reagent_containers/food/snacks/hotdog{
+/obj/item/reagent_containers/food/snacks/hotdog,
+/obj/item/reagent_containers/food/snacks/hotdog{
 	pixel_x = -5;
 	pixel_y = -3
 	},
@@ -4031,7 +4031,7 @@
 	})
 "Wu" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/bigbiteburger,
+/obj/item/reagent_containers/food/snacks/bigbiteburger,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "Wv" = (
@@ -4048,7 +4048,7 @@
 /area/centcom/simulated/restaurant)
 "WA" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/grilledcheese,
+/obj/item/reagent_containers/food/snacks/grilledcheese,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "WB" = (
@@ -4081,16 +4081,16 @@
 	})
 "WF" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meatballsoup,
+/obj/item/reagent_containers/food/snacks/meatballsoup,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "WH" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
 "WI" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/roastbeef,
+/obj/item/reagent_containers/food/snacks/roastbeef,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "WJ" = (
@@ -4099,11 +4099,11 @@
 	req_access = list(63);
 	req_one_access = list(1)
 	},
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 9
 	},
-/obj/item/weapon/pen,
+/obj/item/pen,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -4142,7 +4142,7 @@
 	})
 "WL" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
+/obj/item/reagent_containers/food/snacks/meatsteak,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/restaurant)
 "WN" = (
@@ -4156,7 +4156,7 @@
 /area/centcom/simulated/restaurant)
 "WO" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cola,
+/obj/item/reagent_containers/food/drinks/bottle/cola,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
 "WP" = (
@@ -4166,12 +4166,12 @@
 /area/centcom/simulated/bar)
 "WQ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
 "WR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/toastedsandwich{
+/obj/item/reagent_containers/food/snacks/toastedsandwich{
 	pixel_y = 10
 	},
 /turf/simulated/floor/wood,
@@ -4185,7 +4185,7 @@
 /area/centcom/simulated/medical)
 "WU" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner";
 	pixel_x = 2;
@@ -4239,7 +4239,7 @@
 /area/centcom/simulated/bar)
 "Xj" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/white,
 /area/centcom/simulated/medical)
 "Xk" = (
@@ -4282,7 +4282,7 @@
 /obj/machinery/computer/card{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	frequency = 1475;
 	name = "Station Intercom (Security)";
@@ -4370,7 +4370,7 @@
 /area/centcom/simulated/terminal)
 "XJ" = (
 /obj/structure/table/glass,
-/obj/item/device/healthanalyzer/improved,
+/obj/item/healthanalyzer/improved,
 /turf/simulated/floor/tiled/white,
 /area/centcom/simulated/medical)
 "XK" = (
@@ -4417,12 +4417,12 @@
 /area/centcom/simulated/medical)
 "XS" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/white,
 /area/centcom/simulated/medical)
 "XU" = (
@@ -4466,7 +4466,7 @@
 /area/centcom/simulated/medical)
 "Yb" = (
 /obj/structure/table/glass,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -1;
 	pixel_y = 3
 	},
@@ -4582,16 +4582,16 @@
 	})
 "YB" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone{
+/obj/item/reagent_containers/glass/beaker/cryoxadone{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone,
-/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone{
+/obj/item/reagent_containers/glass/beaker/cryoxadone,
+/obj/item/reagent_containers/glass/beaker/cryoxadone{
 	pixel_x = 7;
 	pixel_y = 1
 	},
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/wrench,
 /turf/simulated/floor/tiled/white,
 /area/centcom/simulated/medical)
 "YC" = (
@@ -4610,7 +4610,7 @@
 /area/centcom/simulated/main_hall)
 "YF" = (
 /obj/structure/table/glass,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /turf/simulated/floor/tiled/white,
 /area/centcom/simulated/medical)
 "YG" = (
@@ -4621,23 +4621,23 @@
 /area/centcom/simulated/living)
 "YH" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/spaceacillin,
 /turf/simulated/floor/tiled/white,
 /area/centcom/simulated/medical)
 "YI" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/melee/baton/loaded,
-/obj/item/weapon/melee/baton/loaded,
-/obj/item/weapon/gun/energy/taser,
+/obj/item/melee/baton/loaded,
+/obj/item/melee/baton/loaded,
+/obj/item/gun/energy/taser,
 /turf/simulated/floor/tiled,
 /area/centcom/simulated/security{
 	name = "\improper CentCom Security Arrivals"
 	})
 "YJ" = (
 /obj/structure/closet/secure_closet/nanotrasen_security,
-/obj/item/weapon/storage/box/handcuffs,
-/obj/item/weapon/gun/energy/gun,
-/obj/item/weapon/shield/riot,
+/obj/item/storage/box/handcuffs,
+/obj/item/gun/energy/gun,
+/obj/item/shield/riot,
 /turf/simulated/floor/tiled,
 /area/centcom/simulated/security{
 	name = "\improper CentCom Security Arrivals"
@@ -4756,9 +4756,9 @@
 /area/centcom/simulated/medical)
 "Zh" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
-/obj/item/weapon/reagent_containers/glass/rag,
-/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
+/obj/item/reagent_containers/food/drinks/flask/barflask,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/food/drinks/flask/vacuumflask,
 /turf/simulated/floor/wood,
 /area/centcom/simulated/bar)
 "Zi" = (
@@ -4767,7 +4767,7 @@
 /area/centcom/simulated/main_hall)
 "Zj" = (
 /obj/structure/table/standard,
-/obj/item/device/healthanalyzer,
+/obj/item/healthanalyzer,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -4775,8 +4775,8 @@
 /area/centcom/simulated/medical)
 "Zk" = (
 /obj/structure/table/reinforced,
-/obj/item/device/camera,
-/obj/item/weapon/storage/box/ids,
+/obj/item/camera,
+/obj/item/storage/box/ids,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -4786,13 +4786,13 @@
 	})
 "Zl" = (
 /obj/structure/table/glass,
-/obj/item/weapon/backup_implanter{
+/obj/item/backup_implanter{
 	pixel_y = -8
 	},
-/obj/item/weapon/backup_implanter{
+/obj/item/backup_implanter{
 	pixel_y = 8
 	},
-/obj/item/weapon/backup_implanter,
+/obj/item/backup_implanter,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -4806,8 +4806,8 @@
 /area/centcom/simulated/medical)
 "Zp" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/book/manual/security_space_law,
-/obj/item/weapon/book/manual/security_space_law,
+/obj/item/book/manual/security_space_law,
+/obj/item/book/manual/security_space_law,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -4845,8 +4845,8 @@
 /area/centcom/simulated/terminal)
 "Zw" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -4856,8 +4856,8 @@
 	})
 "Zx" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -4865,7 +4865,7 @@
 /area/centcom/simulated/medical)
 "Zy" = (
 /obj/structure/table/glass,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -4873,15 +4873,15 @@
 /area/centcom/simulated/medical)
 "Zz" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass{
+/obj/item/reagent_containers/glass/bottle/biomass{
 	pixel_x = -4;
 	pixel_y = 8
 	},
-/obj/item/weapon/reagent_containers/glass/bottle/biomass{
+/obj/item/reagent_containers/glass/bottle/biomass{
 	pixel_x = -3;
 	pixel_y = -2
 	},
-/obj/item/weapon/reagent_containers/glass/bottle/biomass{
+/obj/item/reagent_containers/glass/bottle/biomass{
 	pixel_x = 3;
 	pixel_y = 5
 	},
@@ -4898,7 +4898,7 @@
 /area/centcom/simulated/restaurant)
 "ZD" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/grenadine,
+/obj/item/reagent_containers/food/drinks/bottle/grenadine,
 /obj/machinery/light{
 	dir = 8
 	},

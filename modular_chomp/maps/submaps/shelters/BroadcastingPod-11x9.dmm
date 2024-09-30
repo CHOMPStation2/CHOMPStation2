@@ -22,7 +22,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "h" = (
@@ -33,7 +33,7 @@
 /area/survivalpod/superpose/BroadcastingPod)
 "i" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/folder,
+/obj/item/folder,
 /turf/simulated/floor/atoll,
 /area/survivalpod/superpose/BroadcastingPod)
 "j" = (
@@ -74,7 +74,7 @@
 /area/survivalpod/superpose/BroadcastingPod)
 "p" = (
 /obj/structure/table/alien/blue,
-/obj/item/device/radio/intercom/entertainment{
+/obj/item/radio/intercom/entertainment{
 	pixel_y = 5
 	},
 /turf/simulated/floor/atoll,
@@ -127,68 +127,68 @@
 /obj/structure/table/glass,
 /obj/item/clothing/suit/storage/vest/press,
 /obj/item/clothing/accessory/badge/press/independent,
-/obj/item/device/camera,
-/obj/item/device/camera_film,
+/obj/item/camera,
+/obj/item/camera_film,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "y" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/fountain4,
+/obj/item/paper_bin,
+/obj/item/pen/fountain4,
 /turf/simulated/floor/atoll,
 /area/survivalpod/superpose/BroadcastingPod)
 "z" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
-/obj/item/weapon/circuitboard/batteryrack,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
+/obj/item/circuitboard/batteryrack,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/matter_bin,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "A" = (
@@ -229,7 +229,7 @@
 /area/survivalpod/superpose/BroadcastingPod)
 "F" = (
 /obj/structure/table/glass,
-/obj/item/device/camerabug,
+/obj/item/camerabug,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -240,16 +240,16 @@
 "G" = (
 /obj/structure/table/glass,
 /obj/machinery/light,
-/obj/item/device/taperecorder{
+/obj/item/taperecorder{
 	pixel_y = 0;
 	pixel_x = 5
 	},
-/obj/item/device/taperecorder{
+/obj/item/taperecorder{
 	pixel_y = 0
 	},
-/obj/item/weapon/barcodescanner,
-/obj/item/device/tape/random,
-/obj/item/device/tape/random{
+/obj/item/barcodescanner,
+/obj/item/tape/random,
+/obj/item/tape/random{
 	pixel_y = -4
 	},
 /obj/structure/cable{
@@ -380,7 +380,7 @@
 	pixel_y = 0;
 	pixel_x = 1
 	},
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/gun/energy/locked/frontier/holdout/unlocked,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/BroadcastingPod)
 "R" = (
@@ -388,10 +388,10 @@
 /obj/machinery/power/apc/alarms_hidden{
 	pixel_y = -20
 	},
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	pixel_y = 0
 	},
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	pixel_y = 5;
 	pixel_x = -5
 	},

@@ -293,7 +293,7 @@
 /area/submap/MechHangar)
 "WZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/telecube/randomized,
+/obj/item/telecube/randomized,
 /turf/simulated/floor/tiled/dark,
 /area/submap/MechHangar)
 "XS" = (

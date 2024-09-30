@@ -16,9 +16,9 @@
 	color = "#ccff4a"
 	projectilesound = 'sound/weapons/wave.ogg'
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/tesla
+	var/grenade_type = /obj/item/grenade/shooter/energy/tesla
 	var/grenade_timer = 10
-	var/grenade_type2 = /obj/item/weapon/grenade/shooter/rubber
+	var/grenade_type2 = /obj/item/grenade/shooter/rubber
 	size_multiplier = 1.75
 	shock_resist = 3
 	water_resist = 3
@@ -43,12 +43,12 @@
 			/obj/item/prop/alien/junk = 50,
 			/obj/item/prop/alien/junk = 50,
 			/obj/item/prop/alien/junk = 50,
-			/obj/item/weapon/gun/energy/alien = 30,
-			/obj/item/weapon/gun/energy/alien = 30,
+			/obj/item/gun/energy/alien = 30,
+			/obj/item/gun/energy/alien = 30,
 			/obj/random/tool/alien = 30,
 			/obj/random/tool/alien = 30,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 30,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 30
+			/obj/item/cell/device/weapon/recharge/alien = 30,
+			/obj/item/cell/device/weapon/recharge/alien = 30
 			)
 
 /mob/living/simple_mob/mechanical/hivebot/precusor/chrono/apply_melee_effects(atom/A)
@@ -72,7 +72,7 @@
 	set waitfor = FALSE
 	visible_message(span("warning", "\The [src] drops a ticking time bomb!"))
 
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer	//CHOMPEdit
@@ -84,7 +84,7 @@
 	set waitfor = FALSE
 	visible_message(span("warning", "\The [src] creates weak looking hivebots!"))
 
-	var/obj/item/weapon/grenade/G = new grenade_type2(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type2(get_turf(src))
 	if(istype(G))
 		G.throw_at(G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer
@@ -103,7 +103,7 @@
 	sphere.fire()
 
 //Screw it scuffed way
-/obj/item/weapon/grenade/spawnboss
+/obj/item/grenade/spawnboss
 	desc = "It is set to detonate in 5 seconds. It will unleash an unspecified anomaly into the vicinity."
 	name = "delivery grenade"
 	icon = 'icons/obj/grenade.dmi'
@@ -114,7 +114,7 @@
 	var/spawner_type = null // must be an object path
 	var/deliveryamt = 1 // amount of type to deliver
 
-/obj/item/weapon/grenade/spawnergrenade/detonate()
+/obj/item/grenade/spawnergrenade/detonate()
 
 	if(spawner_type && deliveryamt)
 		// Make a quick flash
@@ -128,6 +128,6 @@
 	qdel(src)
 	return
 
-/obj/item/weapon/grenade/spawnboss/hivebot
+/obj/item/grenade/spawnboss/hivebot
 	spawner_type = /mob/living/simple_mob/mechanical/hivebot/swarm
 	deliveryamt = 3

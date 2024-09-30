@@ -35,10 +35,10 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalCargo)
 "fm" = (
-/obj/item/weapon/shovel,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/tool/crowbar,
+/obj/item/shovel,
+/obj/item/tool/wrench,
+/obj/item/pickaxe,
+/obj/item/tool/crowbar,
 /obj/item/stack/flag/yellow{
 	pixel_x = 4
 	},
@@ -53,13 +53,13 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
-/obj/item/device/gps/mining{
+/obj/item/gps/mining{
 	pixel_x = -5
 	},
-/obj/item/device/gps/mining{
+/obj/item/gps/mining{
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalCargo)
 "gj" = (
@@ -97,12 +97,12 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalCargo)
 "nM" = (
-/obj/item/weapon/mining_scanner,
+/obj/item/mining_scanner,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/suit/space/void/mining,
 /obj/item/clothing/head/helmet/space/void/mining,
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
@@ -140,16 +140,16 @@
 /area/survivalpod/superpose/SurvivalCargo)
 "qh" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/ce,
+/obj/item/bedsheet/ce,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalCargo)
 "qp" = (
-/obj/item/weapon/mining_scanner,
+/obj/item/mining_scanner,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/suit/space/void/mining,
 /obj/item/clothing/head/helmet/space/void/mining,
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -184,7 +184,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalCargo)
 "rc" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalCargo)
 "sz" = (
@@ -221,51 +221,51 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/SurvivalCargo)
 "By" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/closet/walllocker_double/east,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalCargo)
@@ -297,10 +297,10 @@
 /area/survivalpod/superpose/SurvivalCargo)
 "Cu" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle{
+/obj/item/gun/energy/locked/phasegun/rifle{
 	pixel_y = 3
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/rifle{
+/obj/item/gun/energy/locked/phasegun/rifle{
 	pixel_y = -4
 	},
 /obj/machinery/light{
@@ -314,8 +314,8 @@
 /area/survivalpod/superpose/SurvivalCargo)
 "Dp" = (
 /obj/structure/table/steel,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/crowbar,
+/obj/item/tool/wrench,
 /obj/machinery/recharger,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalCargo)
@@ -341,10 +341,10 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalCargo)
 "Hi" = (
-/obj/item/weapon/shovel,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/tool/crowbar,
+/obj/item/shovel,
+/obj/item/tool/wrench,
+/obj/item/pickaxe,
+/obj/item/tool/crowbar,
 /obj/item/stack/flag/yellow{
 	pixel_x = 4
 	},
@@ -359,20 +359,20 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
-/obj/item/device/gps/mining{
+/obj/item/gps/mining{
 	pixel_x = -5
 	},
-/obj/item/device/gps/mining{
+/obj/item/gps/mining{
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalCargo)
 "HC" = (
 /obj/structure/closet/secure_closet/miner{
 	locked = 0
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -445,48 +445,48 @@
 /area/survivalpod/superpose/SurvivalCargo)
 "Tx" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/SurvivalCargo)
 "Ue" = (
@@ -500,10 +500,10 @@
 /area/survivalpod/superpose/SurvivalCargo)
 "Vl" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle{
+/obj/item/gun/energy/locked/phasegun/rifle{
 	pixel_y = 3
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/rifle{
+/obj/item/gun/energy/locked/phasegun/rifle{
 	pixel_y = -4
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
@@ -551,7 +551,7 @@
 /obj/structure/closet/secure_closet/miner{
 	locked = 0
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalCargo)
 "Ye" = (
@@ -562,13 +562,13 @@
 "Zt" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 2;
 	pixel_y = 4
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000
 	},

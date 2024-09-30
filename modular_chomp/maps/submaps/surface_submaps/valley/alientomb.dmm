@@ -44,7 +44,7 @@
 /area/submap/alientomb)
 "u" = (
 /obj/structure/table/alien/blue,
-/obj/item/device/perfect_tele/alien,
+/obj/item/perfect_tele/alien,
 /turf/simulated/floor/flock,
 /area/submap/alientomb)
 "x" = (
@@ -60,7 +60,7 @@
 /area/submap/alientomb)
 "I" = (
 /obj/structure/table/alien/blue,
-/obj/item/device/multitool/alien,
+/obj/item/multitool/alien,
 /turf/simulated/floor/flock,
 /area/submap/alientomb)
 "K" = (
@@ -68,7 +68,7 @@
 /area/submap/alientomb)
 "L" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/storage/pill_bottle/healing_nanites,
+/obj/item/storage/pill_bottle/healing_nanites,
 /turf/simulated/floor/flock,
 /area/submap/alientomb)
 "T" = (

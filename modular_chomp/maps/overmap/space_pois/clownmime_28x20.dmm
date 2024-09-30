@@ -20,12 +20,12 @@
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "f" = (
-/obj/item/weapon/broken_bottle,
+/obj/item/broken_bottle,
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "g" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/structure/loot_pile/surface/bones,
@@ -44,7 +44,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/clownmime)
 "p" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/mineral/floor/vacuum,
@@ -68,16 +68,16 @@
 /area/submap/clownmime)
 "y" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/tool/wrench/fuelrod,
-/obj/item/weapon/fuel_assembly/tritium,
-/obj/item/weapon/fuel_assembly/tritium,
-/obj/item/weapon/fuel_assembly/tritium,
-/obj/item/weapon/fuel_assembly/tritium,
+/obj/item/tool/wrench/fuelrod,
+/obj/item/fuel_assembly/tritium,
+/obj/item/fuel_assembly/tritium,
+/obj/item/fuel_assembly/tritium,
+/obj/item/fuel_assembly/tritium,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "z" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/grenade/supermatter,
+/obj/item/grenade/supermatter,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "A" = (
@@ -116,7 +116,7 @@
 /turf/simulated/shuttle/plating,
 /area/submap/clownmime)
 "F" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 9
 	},
 /obj/machinery/computer/ship{
@@ -133,7 +133,7 @@
 /turf/simulated/shuttle/floor,
 /area/submap/clownmime)
 "I" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/random/trash,
@@ -169,16 +169,16 @@
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "P" = (
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "Q" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/fuel_assembly/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "R" = (
@@ -195,22 +195,22 @@
 /turf/simulated/shuttle/plating,
 /area/submap/clownmime)
 "S" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 9
 	},
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/clownmime)
 "T" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/fuel_assembly/deuterium,
-/obj/item/weapon/fuel_assembly/deuterium,
-/obj/item/weapon/fuel_assembly/deuterium,
-/obj/item/weapon/fuel_assembly/deuterium,
-/obj/item/weapon/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "U" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/random/trash,
@@ -225,17 +225,17 @@
 /area/submap/clownmime)
 "W" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/gun/magnetic/fuelrod,
-/obj/item/weapon/fuel_assembly/blitz/shielded,
-/obj/item/weapon/fuel_assembly/blitz/shielded,
-/obj/item/weapon/fuel_assembly/blitz/shielded,
-/obj/item/weapon/fuel_assembly/blitz/shielded,
+/obj/item/gun/magnetic/fuelrod,
+/obj/item/fuel_assembly/blitz/shielded,
+/obj/item/fuel_assembly/blitz/shielded,
+/obj/item/fuel_assembly/blitz/shielded,
+/obj/item/fuel_assembly/blitz/shielded,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "Y" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/fuel_assembly/supermatter,
-/obj/item/weapon/fuel_assembly/supermatter,
+/obj/item/fuel_assembly/supermatter,
+/obj/item/fuel_assembly/supermatter,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 

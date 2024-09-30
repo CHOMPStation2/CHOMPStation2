@@ -16,6 +16,12 @@
 	mappath = 'maps/submaps/depreciated_vr/talon/talon1.dmm'
 	associated_map_datum = /datum/map_z_level/tether_lateload/talon1
 
+/datum/map_template/tether_lateload/offmap/talon2
+	name = "Offmap Ship - Talon Z2"
+	desc = "Offmap spawn ship, the Talon."
+	mappath = 'maps/submaps/depreciated_vr/talon/talon2.dmm'
+	associated_map_datum = /datum/map_z_level/tether_lateload/talon2
+
 /datum/map_z_level/tether_lateload/talon1
 	name = "Talon Deck One"
 	flags = MAP_LEVEL_PLAYER

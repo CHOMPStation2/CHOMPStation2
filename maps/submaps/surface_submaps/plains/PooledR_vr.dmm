@@ -18,7 +18,7 @@
 /area/submap/PooledR)
 "f" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/template_noop,
 /area/submap/PooledR)
 "g" = (
@@ -27,8 +27,8 @@
 /area/submap/PooledR)
 "h" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/gun/energy/retro{
-	cell_type = /obj/item/weapon/cell/device/weapon/empty
+/obj/item/gun/energy/retro{
+	cell_type = /obj/item/cell/device/weapon/empty
 	},
 /turf/template_noop,
 /area/submap/PooledR)
@@ -37,21 +37,21 @@
 /turf/template_noop,
 /area/submap/PooledR)
 "j" = (
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/virgo3b,
 /area/submap/PooledR)
 "k" = (
 /obj/structure/flora/ausbushes,
 /turf/template_noop,
 /area/submap/PooledR)
 "l" = (
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/virgo3b,
 /area/submap/PooledR)
 "m" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/template_noop,
 /area/submap/PooledR)
 "n" = (
-/turf/simulated/floor/water/deep,
+/turf/simulated/floor/water/deep/virgo3b,
 /area/submap/PooledR)
 
 (1,1,1) = {"
