@@ -18,7 +18,7 @@
 		. = trans_to_holder(R, amount, multiplier, copy)
 		R.touch_mob(target)
 
-/datum/reagents/proc/vore_trans_to_con(var/obj/item/weapon/reagent_containers/T, var/amount = 1, var/multiplier = 1, var/copy = 0) // Transfer after checking into which holder...
+/datum/reagents/proc/vore_trans_to_con(var/obj/item/reagent_containers/T, var/amount = 1, var/multiplier = 1, var/copy = 0) // Transfer after checking into which holder...
 	if(!T || !istype(T))
 		return
 

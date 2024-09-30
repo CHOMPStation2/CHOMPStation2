@@ -1,4 +1,4 @@
-/obj/item/weapon/card/id/blueshield
+/obj/item/card/id/blueshield
 	assignment = JOB_BLUESHIELD_GUARD
 	rank= JOB_BLUESHIELD_GUARD
 	icon_state = "blueshield"

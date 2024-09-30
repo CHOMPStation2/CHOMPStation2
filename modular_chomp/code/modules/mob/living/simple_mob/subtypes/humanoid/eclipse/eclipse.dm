@@ -59,7 +59,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
-		/obj/item/weapon/bone/skull = 100
+		/obj/item/bone/skull = 100
 			)
 
 	special_attack_cooldown = 15 SECONDS
@@ -131,7 +131,7 @@
 	special_attack_cooldown = 20 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
-	var/grenade_type = /obj/item/weapon/grenade/chem_grenade/incendiary
+	var/grenade_type = /obj/item/grenade/chem_grenade/incendiary
 	var/grenade_timer = 20	//CHOMPEdit
 
 	projectiletype = /obj/item/projectile/energy/electrode/eclipse
@@ -155,7 +155,7 @@
 	set waitfor = FALSE
 	set_AI_busy(TRUE)
 
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(A, G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer	//CHOMPEdit
@@ -259,7 +259,7 @@
 	glow_intensity = 3
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
-		/obj/item/weapon/bone/skull/unathi = 100
+		/obj/item/bone/skull/unathi = 100
 			)
 
 	projectiletype = /obj/item/projectile/energy/declone/burn
@@ -306,7 +306,7 @@
 
 	projectiletype = /obj/item/projectile/bullet/pistol/medium/ap/eclipse
 
-	var/grenade_type = /obj/item/weapon/grenade/chem_grenade/teargas
+	var/grenade_type = /obj/item/grenade/chem_grenade/teargas
 	var/grenade_timer = 20
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle/should_special_attack(atom/A)
@@ -328,7 +328,7 @@
 	set waitfor = FALSE
 	set_AI_busy(TRUE)
 
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(A, G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer	//CHOMPEdit
@@ -800,12 +800,12 @@
 	cold_resist = 1.0
 	has_heal_droid = TRUE
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/cyro
-	var/grenade_type = /obj/item/weapon/grenade/chem_grenade/frost
+	var/grenade_type = /obj/item/grenade/chem_grenade/frost
 	var/grenade_timer = 20	//CHOMPEdit
 
 	ranged_attack_delay = 1.5 SECONDS
 
-	loot_list = list(/obj/item/weapon/gun/energy/freezegun = 100,
+	loot_list = list(/obj/item/gun/energy/freezegun = 100,
 			)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/cryomancer/should_special_attack(atom/A)
@@ -827,7 +827,7 @@
 	set waitfor = FALSE
 	set_AI_busy(TRUE)
 
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(A, G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer	//CHOMPEdit
@@ -836,7 +836,7 @@
 
 	set_AI_busy(FALSE)
 
-/obj/item/weapon/grenade/chem_grenade/frost
+/obj/item/grenade/chem_grenade/frost
 	name = "frost grenade"
 	desc = "Currently in the testing phase, pratical purposes are unknown."
 	icon_state = "foam"
@@ -844,17 +844,17 @@
 	stage = 2
 	sealed = TRUE
 
-/obj/item/weapon/grenade/chem_grenade/frost/Initialize()
+/obj/item/grenade/chem_grenade/frost/Initialize()
 	. = ..()
-	var/obj/item/weapon/reagent_containers/glass/beaker/bluespace/B1 = new(src)
-	var/obj/item/weapon/reagent_containers/glass/beaker/bluespace/B2 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/bluespace/B1 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/bluespace/B2 = new(src)
 
 	B1.reagents.add_reagent("cryoslurry", 150)
 	B1.reagents.add_reagent("potassium", 150)
 	B2.reagents.add_reagent("phosphorous", 150)
 	B2.reagents.add_reagent("sugar", 150)
 
-	detonator = new/obj/item/device/assembly_holder/timer_igniter(src)
+	detonator = new/obj/item/assembly_holder/timer_igniter(src)
 
 	beakers += B1
 

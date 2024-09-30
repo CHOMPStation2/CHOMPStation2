@@ -248,5 +248,5 @@
 	)
 
 // VR EXCLUSIVE ITEMS
-/obj/item/weapon/reagent_containers/glass/beaker/mayo
+/obj/item/reagent_containers/glass/beaker/mayo
 	prefill = list("mayo" = 30) //;)

@@ -80,7 +80,7 @@
 	//CHOMPEdit Begin
 	if(assembly)
 		var/atom/light_source = assembly
-		if(istype(assembly,/obj/item/device/electronic_assembly/clothing))
+		if(istype(assembly,/obj/item/electronic_assembly/clothing))
 			light_source = assembly.loc
 		if(light_toggled)
 			light_source.set_light(l_range = light_brightness, l_power = light_brightness, l_color = light_rgb)

@@ -51,30 +51,30 @@
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "ca" = (
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
+/obj/item/coin/phoron,
 /obj/machinery/smartfridge/survival_pod{
 	icon = 'icons/obj/vending.dmi';
 	icon_base = "fridge_sci";
@@ -157,10 +157,10 @@
 /area/survivalpod/superpose/TradingShip)
 "dZ" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/hyper,
-/obj/item/weapon/cell/potato,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/hyper,
+/obj/item/cell/potato,
 /obj/structure/window/reinforced,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -195,10 +195,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/item/device/kit/paint/ripley/death,
-/obj/item/device/kit/paint/ripley/flames_blue,
-/obj/item/device/kit/paint/ripley/flames_red,
-/obj/item/device/kit/paint/ripley,
+/obj/item/kit/paint/ripley/death,
+/obj/item/kit/paint/ripley/flames_blue,
+/obj/item/kit/paint/ripley/flames_red,
+/obj/item/kit/paint/ripley,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "fe" = (
@@ -215,7 +215,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes=10,/obj/item/weapon/storage/box/matches=10,/obj/item/weapon/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
+	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -396,64 +396,64 @@
 /area/survivalpod/superpose/TradingShip)
 "kV" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/card/id/external{
+/obj/item/card/id/external{
 	access = list(160)
 	},
-/obj/item/weapon/card/id/external{
+/obj/item/card/id/external{
 	access = list(160)
 	},
-/obj/item/weapon/card/id/external{
+/obj/item/card/id/external{
 	access = list(160)
 	},
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/TradingShip)
 "lm" = (
 /obj/structure/closet/walllocker_double/north,
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "lv" = (
@@ -484,7 +484,7 @@
 /area/survivalpod/superpose/TradingShip)
 "lW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "md" = (
@@ -522,26 +522,26 @@
 /obj/structure/table/standard,
 /obj/item/clothing/gloves/sterile/latex,
 /obj/item/clothing/mask/surgical,
-/obj/item/weapon/surgical/retractor{
+/obj/item/surgical/retractor{
 	pixel_y = 6
 	},
-/obj/item/weapon/surgical/scalpel,
-/obj/item/weapon/surgical/surgicaldrill,
-/obj/item/weapon/surgical/circular_saw,
+/obj/item/surgical/scalpel,
+/obj/item/surgical/surgicaldrill,
+/obj/item/surgical/circular_saw,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/surgical/hemostat{
+/obj/item/surgical/hemostat{
 	pixel_y = 4
 	},
-/obj/item/weapon/surgical/cautery{
+/obj/item/surgical/cautery{
 	pixel_y = 4
 	},
-/obj/item/weapon/surgical/FixOVein{
+/obj/item/surgical/FixOVein{
 	pixel_x = -6;
 	pixel_y = 1
 	},
 /obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/weapon/surgical/bonesetter,
-/obj/item/weapon/surgical/bonegel{
+/obj/item/surgical/bonesetter,
+/obj/item/surgical/bonegel{
 	pixel_x = 4;
 	pixel_y = 3
 	},
@@ -555,11 +555,11 @@
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "mR" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_y = 4
 	},
 /obj/machinery/light,
@@ -568,13 +568,13 @@
 /area/survivalpod/superpose/TradingShip)
 "mY" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/coin/uranium,
-/obj/item/weapon/coin/silver,
-/obj/item/weapon/coin/platinum,
-/obj/item/weapon/coin/phoron,
-/obj/item/weapon/coin/iron,
-/obj/item/weapon/coin/gold,
-/obj/item/weapon/coin/diamond,
+/obj/item/coin/uranium,
+/obj/item/coin/silver,
+/obj/item/coin/platinum,
+/obj/item/coin/phoron,
+/obj/item/coin/iron,
+/obj/item/coin/gold,
+/obj/item/coin/diamond,
 /obj/structure/window/reinforced,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -692,11 +692,11 @@
 /area/survivalpod/superpose/TradingShip)
 "qc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_y = 4
 	},
 /turf/simulated/floor/carpet,
@@ -888,7 +888,7 @@
 /area/survivalpod/superpose/TradingShip)
 "ua" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/glasses/square,
+/obj/item/storage/box/glasses/square,
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/TradingShip)
 "uo" = (
@@ -976,18 +976,18 @@
 "uA" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/warning,
-/obj/item/device/kit/paint/gygax/darkgygax,
-/obj/item/device/kit/paint/gygax/recitence,
-/obj/item/device/kit/paint/durand,
-/obj/item/device/kit/paint/durand/phazon,
-/obj/item/device/kit/paint/durand/seraph,
+/obj/item/kit/paint/gygax/darkgygax,
+/obj/item/kit/paint/gygax/recitence,
+/obj/item/kit/paint/durand,
+/obj/item/kit/paint/durand/phazon,
+/obj/item/kit/paint/durand/seraph,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "uL" = (
 /obj/machinery/light,
 /obj/structure/table/standard,
-/obj/item/weapon/soap,
-/obj/item/weapon/towel{
+/obj/item/soap,
+/obj/item/towel{
 	color = "#0000FF"
 	},
 /turf/simulated/shuttle/floor/black,
@@ -1009,7 +1009,7 @@
 /obj/machinery/vending/assist{
 	contraband = null;
 	name = "Old Vending Machine";
-	products = list(/obj/item/device/assembly/prox_sensor=5,/obj/item/device/assembly/signaler=4,/obj/item/device/assembly/infra=4,/obj/item/device/assembly/prox_sensor=4,/obj/item/weapon/handcuffs=8,/obj/item/device/flash=4,/obj/item/weapon/cartridge/signal=4,/obj/item/clothing/glasses/sunglasses=4)
+	products = list(/obj/item/assembly/prox_sensor=5,/obj/item/assembly/signaler=4,/obj/item/assembly/infra=4,/obj/item/assembly/prox_sensor=4,/obj/item/handcuffs=8,/obj/item/flash=4,/obj/item/cartridge/signal=4,/obj/item/clothing/glasses/sunglasses=4)
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -1078,12 +1078,12 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
-/obj/item/weapon/weldpack,
+/obj/item/weldpack,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "xi" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/inflatable_duck,
+/obj/item/inflatable_duck,
 /obj/random/tech_supply/nofail,
 /obj/random/tech_supply/nofail,
 /obj/random/tech_supply/nofail,
@@ -1139,12 +1139,12 @@
 /area/survivalpod/superpose/TradingShip)
 "yw" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/rd,
+/obj/item/bedsheet/rd,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "yx" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/rig/internalaffairs,
+/obj/item/rig/internalaffairs,
 /obj/item/clothing/head/helmet/space/void/wizard,
 /obj/item/clothing/suit/space/void/wizard,
 /turf/simulated/shuttle/floor/black,
@@ -1213,10 +1213,10 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "zh" = (
@@ -1344,52 +1344,52 @@
 /area/survivalpod/superpose/TradingShip)
 "Fy" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
 	},
-/obj/item/weapon/card/id/casino{
+/obj/item/card/id/casino{
 	desc = "An alien id card with strange glowing markings.";
 	icon_state = "changeling";
 	name = "Alien id"
@@ -1491,7 +1491,7 @@
 /area/survivalpod/superpose/TradingShip)
 "Hp" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/TradingShip)
 "HB" = (
@@ -1587,11 +1587,11 @@
 /area/survivalpod/superpose/TradingShip)
 "Kv" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/lipstick/black,
-/obj/item/weapon/lipstick/jade,
-/obj/item/weapon/lipstick/purple,
-/obj/item/weapon/lipstick,
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick/black,
+/obj/item/lipstick/jade,
+/obj/item/lipstick/purple,
+/obj/item/lipstick,
+/obj/item/lipstick/random,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "Lp" = (
@@ -1645,7 +1645,7 @@
 /area/survivalpod/superpose/TradingShip)
 "MO" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "MP" = (
@@ -1718,11 +1718,11 @@
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "Od" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = -2;
 	pixel_y = 4
 	},
@@ -1732,30 +1732,30 @@
 /obj/item/bodybag/cryobag{
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/o2{
 	layer = 2.8;
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/box/masks,
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/masks,
+/obj/item/storage/box/gloves{
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/fire{
 	layer = 2.9;
 	pixel_x = 2;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_x = -2
 	},
-/obj/item/weapon/reagent_containers/blood/empty,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/empty,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /obj/structure/closet/medical_wall{
 	pixel_y = 32
 	},
@@ -1810,7 +1810,7 @@
 /area/survivalpod/superpose/TradingShip)
 "Qm" = (
 /obj/structure/closet/wardrobe/captain,
-/obj/item/weapon/gun/projectile/revolver/mateba,
+/obj/item/gun/projectile/revolver/mateba,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "Qp" = (
@@ -1844,11 +1844,11 @@
 /area/survivalpod/superpose/TradingShip)
 "Ry" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_y = 4
 	},
 /turf/simulated/shuttle/floor/black,
@@ -1919,7 +1919,7 @@
 /area/survivalpod/superpose/TradingShip)
 "TJ" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/hos,
+/obj/item/bedsheet/hos,
 /obj/structure/sign/poster{
 	pixel_y = -32
 	},
@@ -1956,9 +1956,9 @@
 /obj/structure/closet{
 	name = "custodial"
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/mop,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "Uz" = (
@@ -2028,7 +2028,7 @@
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/contraband,
-/obj/item/weapon/bikehorn,
+/obj/item/bikehorn,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
 "WG" = (

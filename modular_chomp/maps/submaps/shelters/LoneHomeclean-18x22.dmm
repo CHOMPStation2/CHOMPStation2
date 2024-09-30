@@ -63,13 +63,13 @@
 /turf/simulated/floor/wood/broken,
 /area/survivalpod/superpose/LoneHomeclean)
 "au" = (
-/obj/item/device/tape,
+/obj/item/tape,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "av" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/extinguisher{
+/obj/item/extinguisher{
 	pixel_x = 8;
 	pixel_y = 1
 	},
@@ -82,9 +82,9 @@
 	pixel_x = -8;
 	pixel_y = -4
 	},
-/obj/item/weapon/mop,
-/obj/item/device/multitool,
-/obj/item/device/flashlight{
+/obj/item/mop,
+/obj/item/multitool,
+/obj/item/flashlight{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -102,39 +102,39 @@
 	dir = 8
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/box/glasses/square{
+/obj/item/storage/box/glasses/square{
 	pixel_y = -2
 	},
-/obj/item/weapon/storage/box/glass_extras/sticks{
+/obj/item/storage/box/glass_extras/sticks{
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/glass_extras/straws{
+/obj/item/storage/box/glass_extras/straws{
 	pixel_y = 7
 	},
-/obj/item/weapon/packageWrap,
+/obj/item/packageWrap,
 /obj/structure/curtain/open/bed,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/LoneHomeclean)
 "aA" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/condimentbottles,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/condimentbottles,
+/obj/item/reagent_containers/food/condiment/sugar,
 /obj/structure/curtain/open/bed,
 /obj/structure/window/reinforced/polarized{
 	dir = 4;
 	id = "h-kitchen"
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour/rustic,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/carton/flour/rustic,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/LoneHomeclean)
 "aB" = (
@@ -160,20 +160,20 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "aG" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/LoneHomeclean)
 "aH" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/fork,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/LoneHomeclean)
 "aI" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/sharpeningkit,
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/material/sharpeningkit,
+/obj/item/reagent_containers/dropper,
 /obj/item/clothing/suit/storage/apron/white,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/LoneHomeclean)
@@ -230,12 +230,12 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "bd" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar{
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/reagent_containers/food/condiment/small/sugar{
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 0;
 	pixel_x = -4
 	},
@@ -243,7 +243,7 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "be" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
 /obj/structure/window/reinforced/polarized{
@@ -304,7 +304,7 @@
 	dir = 4;
 	id = "h-kitchen"
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
 /turf/simulated/floor/wood,
@@ -410,14 +410,14 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "bz" = (
 /obj/structure/table/rack,
-/obj/item/weapon/material/knife/ritual,
+/obj/item/material/knife/ritual,
 /obj/structure/curtain/open/bed,
 /obj/item/clothing/under/suit_jacket/really_black,
 /obj/item/clothing/under/suit_jacket/navy,
 /obj/item/clothing/head/soft/solgov/veteranhat,
 /obj/item/clothing/under/swimsuit/fluff/penelope,
-/obj/item/weapon/makeover,
-/obj/item/weapon/cell/high/empty,
+/obj/item/makeover,
+/obj/item/cell/high/empty,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "bA" = (
@@ -438,13 +438,13 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "bE" = (
 /obj/item/seeds/random,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "bF" = (
 /obj/machinery/light/small,
-/obj/item/weapon/ore/diamond,
+/obj/item/ore/diamond,
 /obj/structure/sign/goldenplaque{
 	desc = "Done No Harm.";
 	name = "Best Doctor 2552";
@@ -454,16 +454,16 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "bG" = (
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /obj/item/clothing/gloves/ring/engagement,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "bI" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/storage/wallet/random,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/storage/wallet/random,
+/obj/item/towel/random,
+/obj/item/melee/umbrella/random,
 /obj/random/carp_plushie,
 /obj/random/curseditem,
 /obj/random/maintenance/medical,
@@ -490,9 +490,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/paper/courtroom,
-/obj/item/weapon/paper/courtroom,
-/obj/item/weapon/paper_bin,
+/obj/item/paper/courtroom,
+/obj/item/paper/courtroom,
+/obj/item/paper_bin,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
@@ -505,7 +505,7 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "bV" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/box/characters,
+/obj/item/storage/box/characters,
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
@@ -520,8 +520,8 @@
 	dir = 1
 	},
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/cosmos,
-/obj/item/weapon/book/custom_library/fiction/truelovehathmyheart,
+/obj/item/bedsheet/cosmos,
+/obj/item/book/custom_library/fiction/truelovehathmyheart,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "bY" = (
@@ -533,16 +533,16 @@
 /obj/random/multiple,
 /obj/random/toy,
 /obj/random/toy,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "bZ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburger{
+/obj/item/reagent_containers/food/snacks/cheeseburger{
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburger{
+/obj/item/reagent_containers/food/snacks/cheeseburger{
 	pixel_y = -3
 	},
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -555,9 +555,9 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "cb" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/storage/wallet/random,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/storage/wallet/random,
+/obj/item/towel/random,
+/obj/item/melee/umbrella/random,
 /obj/random/ammo,
 /obj/random/cigarettes,
 /obj/random/contraband,
@@ -569,19 +569,19 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "ce" = (
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/LoneHomeclean)
 "cg" = (
-/obj/item/weapon/reagent_containers/blood,
-/obj/item/weapon/pack/cardemon,
-/obj/item/weapon/pack/cardemon,
-/obj/item/weapon/deck/tarot,
+/obj/item/reagent_containers/blood,
+/obj/item/pack/cardemon,
+/obj/item/pack/cardemon,
+/obj/item/deck/tarot,
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/pack/cardemon,
+/obj/item/pack/cardemon,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "ch" = (
@@ -591,9 +591,9 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/structure/table/marble,
 /obj/item/organ/internal/intestine/unathi,
-/obj/item/weapon/surgical/bonesetter,
-/obj/item/weapon/bone/ribs,
-/obj/item/weapon/bone/skull{
+/obj/item/surgical/bonesetter,
+/obj/item/bone/ribs,
+/obj/item/bone/skull{
 	pixel_x = 4;
 	pixel_y = 6
 	},
@@ -604,7 +604,7 @@
 /turf/simulated/wall/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "cl" = (
-/obj/item/weapon/phone,
+/obj/item/phone,
 /obj/structure/table/bench/wooden,
 /obj/machinery/button/windowtint{
 	id = "h-master";
@@ -614,7 +614,7 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "cn" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "co" = (
@@ -624,7 +624,7 @@
 "cq" = (
 /obj/structure/table/marble,
 /obj/item/organ/internal/brain/grey,
-/obj/item/weapon/material/knife/plastic,
+/obj/item/material/knife/plastic,
 /obj/item/clothing/mask/muzzle,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHomeclean)
@@ -659,51 +659,51 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)
 "cv" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood,
@@ -711,7 +711,7 @@
 "cx" = (
 /obj/structure/table/marble,
 /obj/item/organ/internal/fruitgland,
-/obj/item/weapon/material/knife/hook,
+/obj/item/material/knife/hook,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHomeclean)
 "cz" = (
@@ -817,7 +817,7 @@
 /obj/fiftyspawner/wood,
 /obj/fiftyspawner/steel,
 /obj/item/clothing/gloves/yellow,
-/obj/item/device/flashlight{
+/obj/item/flashlight{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -825,13 +825,13 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "cF" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/chainsaw,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/extinguisher,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
+/obj/item/chainsaw,
+/obj/item/storage/box/lights/mixed,
+/obj/item/extinguisher,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -851,7 +851,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/LoneHomeclean)
 "cK" = (
-/obj/item/weapon/material/minihoe,
+/obj/item/material/minihoe,
 /obj/structure/closet/crate/solar,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/LoneHomeclean)

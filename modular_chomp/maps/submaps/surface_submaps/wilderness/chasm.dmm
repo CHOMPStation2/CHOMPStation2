@@ -4,7 +4,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "aE" = (
-/obj/item/weapon/storage/firstaid/bonemed,
+/obj/item/storage/firstaid/bonemed,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
@@ -21,7 +21,7 @@
 /turf/template_noop,
 /area/submap/Chasm)
 "bF" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
@@ -48,7 +48,7 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust/color_rustedfull,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cat_box/black,
+/obj/item/cat_box/black,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
 "hG" = (
@@ -80,7 +80,7 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
 "iF" = (
-/obj/item/weapon/bone/skull,
+/obj/item/bone/skull,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
@@ -141,7 +141,7 @@
 /area/submap/Chasm)
 "nJ" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/material/knife/machete/deluxe,
+/obj/item/material/knife/machete/deluxe,
 /turf/simulated/floor/plating,
 /area/submap/Chasm)
 "oA" = (
@@ -168,7 +168,7 @@
 	dir = 2
 	},
 /obj/effect/landmark/loot_spawn/low,
-/obj/item/weapon/bone/arm,
+/obj/item/bone/arm,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
@@ -210,7 +210,7 @@
 "st" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone/arm,
+/obj/item/bone/arm,
 /turf/simulated/floor/plating,
 /area/submap/Chasm)
 "tg" = (
@@ -229,7 +229,7 @@
 /turf/simulated/wall/solidrock,
 /area/submap/Chasm)
 "uc" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/random/junk,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
@@ -245,7 +245,7 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
-/obj/item/weapon/bone/skull/unknown,
+/obj/item/bone/skull/unknown,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
@@ -279,7 +279,7 @@
 	},
 /area/submap/Chasm)
 "yq" = (
-/obj/item/weapon/bone/leg,
+/obj/item/bone/leg,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust/color_rusted,
 /obj/effect/decal/cleanable/dirt,
@@ -324,7 +324,7 @@
 	},
 /area/submap/Chasm)
 "BQ" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
@@ -395,7 +395,7 @@
 "Ea" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/pickaxe/excavationdrill,
+/obj/item/pickaxe/excavationdrill,
 /turf/simulated/floor/plating,
 /area/submap/Chasm)
 "Ec" = (
@@ -417,7 +417,7 @@
 	},
 /area/submap/Chasm)
 "Eu" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
@@ -511,7 +511,7 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
 "Qi" = (
-/obj/item/weapon/bone/skull/tajaran,
+/obj/item/bone/skull/tajaran,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -564,12 +564,12 @@
 "SS" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust/color_rustedfull,
-/obj/item/weapon/book/manual/rust_engine,
+/obj/item/book/manual/rust_engine,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
 "Tl" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/storage/bag/ore,
+/obj/item/storage/bag/ore,
 /turf/simulated/floor/plating,
 /area/submap/Chasm)
 "Tp" = (
@@ -616,7 +616,7 @@
 	},
 /area/submap/Chasm)
 "XZ" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
@@ -666,7 +666,7 @@
 	maxHealth = 150;
 	name = "Cavern jelly blob"
 	},
-/obj/item/weapon/bone/skull,
+/obj/item/bone/skull,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},

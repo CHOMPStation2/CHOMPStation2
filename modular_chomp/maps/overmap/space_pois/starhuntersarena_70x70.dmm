@@ -7,7 +7,7 @@
 /area/submap/starhunterarena)
 "c" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Come face us. If we fall, you shall be rewarded.";
 	name = "Challenge"
 	},

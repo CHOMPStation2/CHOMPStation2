@@ -1,7 +1,7 @@
 /*
  * Lever-Action Rifle
  */
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever
+/obj/item/gun/projectile/shotgun/pump/rifle/lever
 	name = "lever-action rifle"
 	desc = "The Weissen Company's version of an iconic manually operated lever action rifle, \
 	the Bushhog, offering adequate stopping power due to it's still powerful cartridge while at \
@@ -24,7 +24,7 @@
 /*
  * Vintage Lever-Action
  */
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/vintage
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/vintage
 	name = "vintage lever-action rifle"
 	desc = "The Weissen Company's version of an iconic manually operated lever action rifle, \
 	the Bushhog, offering adequate stopping power due to it's still powerful cartridge while at \
@@ -43,7 +43,7 @@
 /*
  * Cowboy Repeater
  */
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/repeater
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/repeater
 	name = "repeater"
 	desc = "The Weissen Company's answer to varmint shooting on frontier ranches, the T-7 Boone \
 	gives ranchers and farmers alike a perfect rider rifle for protecting the fenceline. Uses .357 rounds."
@@ -63,7 +63,7 @@
 /*
  * Brushgun
  */
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/brushgun
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/brushgun
 	name = "brushgun"
 	desc = "Weissen Company's newest budget caravan rifle for those that want a light yet effective rifle, \
 	the T-10 Cassidy Uses .44 rounds."
@@ -83,7 +83,7 @@
 /*
  * Trailgun
  */
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/trailgun
+/obj/item/gun/projectile/shotgun/pump/rifle/lever/trailgun
 	name = "brushgun"
 	desc = "Weissen Company's newest budget caravan rifle for those that want a light yet effective rifle, \
 	the T-10 Cassidy Uses .44 rounds."

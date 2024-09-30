@@ -59,7 +59,7 @@
 					 		"backkey"=IS_CROWBAR,
 					 		"desc"="Advanced capacitor is installed"),
 					 //8
-					 list("key"=/obj/item/weapon/stock_parts/capacitor/adv,
+					 list("key"=/obj/item/stock_parts/capacitor/adv,
 					 		"backkey"=IS_SCREWDRIVER,
 					 		"desc"="Advanced scanner module is secured"),
 					 //9
@@ -67,7 +67,7 @@
 					 		"backkey"=IS_CROWBAR,
 					 		"desc"="Advanced scanner module is installed"),
 					 //10
-					 list("key"=/obj/item/weapon/stock_parts/scanning_module/adv,
+					 list("key"=/obj/item/stock_parts/scanning_module/adv,
 					 		"backkey"=IS_SCREWDRIVER,
 					 		"desc"="Targeting module is secured"),
 					 //11
@@ -75,7 +75,7 @@
 					 		"backkey"=IS_CROWBAR,
 					 		"desc"="Targeting module is installed"),
 					 //12
-					 list("key"=/obj/item/weapon/circuitboard/mecha/scarab/targeting,
+					 list("key"=/obj/item/circuitboard/mecha/scarab/targeting,
 					 		"backkey"=IS_SCREWDRIVER,
 					 		"desc"="Peripherals control module is secured"),
 					 //13
@@ -83,7 +83,7 @@
 					 		"backkey"=IS_CROWBAR,
 					 		"desc"="Peripherals control module is installed"),
 					 //14
-					 list("key"=/obj/item/weapon/circuitboard/mecha/scarab/peripherals,
+					 list("key"=/obj/item/circuitboard/mecha/scarab/peripherals,
 					 		"backkey"=IS_SCREWDRIVER,
 					 		"desc"="Central control module is secured"),
 					 //15
@@ -91,7 +91,7 @@
 					 		"backkey"=IS_CROWBAR,
 					 		"desc"="Central control module is installed"),
 					 //16
-					 list("key"=/obj/item/weapon/circuitboard/mecha/scarab/main,
+					 list("key"=/obj/item/circuitboard/mecha/scarab/main,
 					 		"backkey"=IS_SCREWDRIVER,
 					 		"desc"="The wiring is adjusted"),
 					 //17
@@ -158,7 +158,7 @@
 				holder.icon_state = "scarab_chip1"
 			else
 				user.visible_message("[user] removes the central control module from [holder].", "You remove the central computer mainboard from [holder].")
-				new /obj/item/weapon/circuitboard/mecha/scarab/main(get_turf(holder))
+				new /obj/item/circuitboard/mecha/scarab/main(get_turf(holder))
 				holder.icon_state = "scarab_wire2"
 		if(14)
 			if(diff==FORWARD)
@@ -174,7 +174,7 @@
 				holder.icon_state = "scarab_chip2"
 			else
 				user.visible_message("[user] removes the peripherals control module from [holder].", "You remove the peripherals control module from [holder].")
-				new /obj/item/weapon/circuitboard/mecha/scarab/peripherals(get_turf(holder))
+				new /obj/item/circuitboard/mecha/scarab/peripherals(get_turf(holder))
 				holder.icon_state = "scarab_chip1"
 		if(12)
 			if(diff==FORWARD)
@@ -190,7 +190,7 @@
 				holder.icon_state = "scarab_chip3"
 			else
 				user.visible_message("[user] removes the weapon control module from [holder].", "You remove the weapon control module from [holder].")
-				new /obj/item/weapon/circuitboard/mecha/scarab/targeting(get_turf(holder))
+				new /obj/item/circuitboard/mecha/scarab/targeting(get_turf(holder))
 				holder.icon_state = "scarab_chip2"
 		if(10)
 			if(diff==FORWARD)
@@ -206,7 +206,7 @@
 				holder.icon_state = "scarab_chip4"
 			else
 				user.visible_message("[user] removes the advanced scanner module from [holder].", "You remove the advanced scanner module from [holder].")
-				new /obj/item/weapon/stock_parts/scanning_module/adv(get_turf(holder))
+				new /obj/item/stock_parts/scanning_module/adv(get_turf(holder))
 				holder.icon_state = "scarab_chip3"
 		if(8)
 			if(diff==FORWARD)
@@ -222,7 +222,7 @@
 				holder.icon_state = "scarab_chip5"
 			else
 				user.visible_message("[user] removes the advanced capacitor from [holder].", "You remove the advanced capacitor from [holder].")
-				new /obj/item/weapon/stock_parts/capacitor/adv(get_turf(holder))
+				new /obj/item/stock_parts/capacitor/adv(get_turf(holder))
 				holder.icon_state = "scarab_chip5"
 		if(6)
 			if(diff==FORWARD)

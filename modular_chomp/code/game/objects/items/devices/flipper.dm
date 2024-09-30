@@ -13,14 +13,14 @@
 	var/gut2
 
 // The following code defines the Flipper as a Personal AI (PAI) card, as it is the most complex part of the system.
-/obj/item/device/paicard/flipper
+/obj/item/paicard/flipper
 	name 				= "Vix"
 	icon 				= 'icons/obj/paicard_ch.dmi'
 	var/systems_list 	= list("MultiTool","Emag","PAI","Signaler")
 	var/selected 		= "" //Currently selected SubSystem
 	origin_tech 		= list(TECH_DATA = 2, TECH_ILLEGAL = 2) //Added illegal Tech
-	var/obj/item/device/multitool/MultiTool
-	var/obj/item/device/assembly/signaler/Signal
+	var/obj/item/multitool/MultiTool
+	var/obj/item/assembly/signaler/Signal
 
 /*
 *
@@ -28,23 +28,23 @@
 * This is how we further proxy the systems
 *
 */
-/obj/item/device/paicard/flipper/attack_self(mob/user)
+/obj/item/paicard/flipper/attack_self(mob/user)
 	if(selected && selected != "Emag")
 		var/obj/item/module = selected
 		return module.attack_self(user)
 	..()
 
-/obj/item/device/paicard/flipper/Initialize() //ChompEDIT New --> Initialize
+/obj/item/paicard/flipper/Initialize() //ChompEDIT New --> Initialize
 	..()
 	desc 		= "The [name] is a versatile security device designed to protect and empower users in a variety of contexts. With features such as wireless hacking, radio analysis, signal jamming, and physical lock picking, the [name] is the ultimate tool for security professionals, hobbyists, and anyone seeking to better understand and defend against modern threats. Whether you're investigating a security breach, testing your own defenses, or simply curious about the workings of wireless technology, the [name] has you covered."
-	MultiTool 	= new /obj/item/device/multitool(src)
-	Signal 	= new /obj/item/device/assembly/signaler(src)
+	MultiTool 	= new /obj/item/multitool(src)
+	Signal 	= new /obj/item/assembly/signaler(src)
 
 /*
  * This function is called before an attack is executed. If a system is selected, it will use the selected system to attack.
  * Returns true to prevent the attackby function on the source object from being executed.
  */
-/obj/item/device/paicard/flipper/pre_attack(atom/A, mob/user, params)
+/obj/item/paicard/flipper/pre_attack(atom/A, mob/user, params)
 	if(selected)
 		if(selected=="Emag")
 			if(istype(A,/obj/machinery/door))
@@ -57,13 +57,13 @@
 /*
  * This function is used to call the attackby function on the intercepted object.
  */
-/obj/item/device/paicard/flipper/proc/proxy_attackby(atom/A,atom/B, mob/user, var/click_parameters)
+/obj/item/paicard/flipper/proc/proxy_attackby(atom/A,atom/B, mob/user, var/click_parameters)
 	A.attackby(B,user) //Directly call attackby on the intercepted object
 
 /*
  * This function allows the user to select which subsystem to use for an attack
  */
-/obj/item/device/paicard/flipper/proc/system_select(mob/user)
+/obj/item/paicard/flipper/proc/system_select(mob/user)
 	var/selected = tgui_input_list(user, "Which System to Use?", "Systems", systems_list)
 	if(selected=="PAI")
 		selected = ""
@@ -75,7 +75,7 @@
 /*
  * This function is called when the user Alt-clicks the Flipper. It calls the system_select function to allow the user to select a subsystem.
  */
-/obj/item/device/paicard/flipper/AltClick(mob/living/user)
+/obj/item/paicard/flipper/AltClick(mob/living/user)
 	system_select(user)
 
 //Vore
@@ -172,7 +172,7 @@
 
 //Custom pai handler since we need to access a child class
 //and i dont wanna inflate the original one even more with if checks
-/obj/item/device/paicard/flipper/attack_ghost(mob/user as mob)
+/obj/item/paicard/flipper/attack_ghost(mob/user as mob)
 	if(pai != null) //Have a person in them already?
 		return ..()
 	if(is_damage_critical())
@@ -207,7 +207,7 @@
 		actual_pai_name = sanitize_name(pai_name, ,1)
 		if(isnull(actual_pai_name))
 			return ..()
-		var/obj/item/device/paicard/flipper/card = new(location)
+		var/obj/item/paicard/flipper/card = new(location)
 		var/mob/living/silicon/pai/flipper/new_pai = new(card)
 		new_pai.key = user.key
 		paikeys |= new_pai.ckey
@@ -215,7 +215,7 @@
 		new_pai.SetName(actual_pai_name)
 
 	if(choice == "Yes")
-		var/obj/item/device/paicard/flipper/card = new(location)
+		var/obj/item/paicard/flipper/card = new(location)
 		var/mob/living/silicon/pai/flipper/new_pai = new(card)
 		new_pai.key = user.key
 		paikeys |= new_pai.ckey

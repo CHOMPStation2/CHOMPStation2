@@ -44,7 +44,7 @@
 /turf/simulated/floor/airless,
 /area/mine/explored/belt_miner)
 "h" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 27

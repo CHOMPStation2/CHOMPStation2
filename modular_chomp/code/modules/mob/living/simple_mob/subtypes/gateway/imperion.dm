@@ -361,12 +361,12 @@
 			/obj/item/prop/alien/junk = 60,
 			/obj/item/prop/alien/junk = 60,
 			/obj/item/prop/alien/junk = 60,
-			/obj/item/weapon/gun/energy/alien = 60,
-			/obj/item/weapon/gun/energy/alien = 60,
+			/obj/item/gun/energy/alien = 60,
+			/obj/item/gun/energy/alien = 60,
 			/obj/random/tool/alien = 60,
 			/obj/random/tool/alien = 60,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
+			/obj/item/cell/device/weapon/recharge/alien = 60,
+			/obj/item/cell/device/weapon/recharge/alien = 60,
 			/obj/item/clothing/suit/armor/alien = 60,
 			/obj/item/clothing/suit/armor/alien/tank = 60,
 			/obj/item/prop/alien/junk = 50,
@@ -374,12 +374,12 @@
 			/obj/item/prop/alien/junk = 50,
 			/obj/item/prop/alien/junk = 50,
 			/obj/item/prop/alien/junk = 50,
-			/obj/item/weapon/gun/energy/alien = 60,
-			/obj/item/weapon/gun/energy/alien = 60,
+			/obj/item/gun/energy/alien = 60,
+			/obj/item/gun/energy/alien = 60,
 			/obj/random/tool/alien = 60,
 			/obj/random/tool/alien = 60,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
+			/obj/item/cell/device/weapon/recharge/alien = 60,
+			/obj/item/cell/device/weapon/recharge/alien = 60,
 			/obj/item/clothing/suit/armor/reactive/vistor = 50,
 			/obj/item/clothing/suit/armor/reactive/vistor = 50,
 			/obj/item/clothing/suit/armor/protectionbubble = 50,
@@ -390,18 +390,18 @@
 			/obj/item/shield_projector/rectangle/automatic/imperion = 0.5,
 			/obj/item/clothing/head/vrwizard = 60,
 			/obj/item/clothing/suit/vrwizard = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/frost = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/poison = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting = 60,
+			/obj/item/gun/magic/firestaff/vrwizard/fire = 60,
+			/obj/item/gun/magic/firestaff/vrwizard/frost = 60,
+			/obj/item/gun/magic/firestaff/vrwizard/poison = 60,
+			/obj/item/gun/magic/firestaff/vrwizard/lighting = 60,
 			/obj/item/clothing/head/psy_crown/candycrown = 60,
 			/obj/item/clothing/gloves/stamina = 60,
 			/obj/item/clothing/suit/armor/buffvest = 60,
-			/obj/item/weapon/melee/cullingcane = 60,
-			/obj/item/weapon/bluespace_harpoon = 60,
-			/obj/item/weapon/flame/lighter/supermatter/syndismzippo = 60,
-			/obj/item/weapon/gun/energy/vepr/plasma = 60,
-			/obj/item/weapon/gun/energy/medigun = 60
+			/obj/item/melee/cullingcane = 60,
+			/obj/item/bluespace_harpoon = 60,
+			/obj/item/flame/lighter/supermatter/syndismzippo = 60,
+			/obj/item/gun/energy/vepr/plasma = 60,
+			/obj/item/gun/energy/medigun = 60
 			)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase5/proc/electric_defense(atom/target)
@@ -562,7 +562,7 @@
 
 //Cool boss visuals, auras, and me saying no to stun.
 
-/obj/item/weapon/grenade/shooter/laserpellet
+/obj/item/grenade/shooter/laserpellet
 	name = "laser pellet grenade"
 	desc = "Unleashes not hit scan lasers."
 	projectile_types = list(/obj/item/projectile/energy/mob/midlaser)

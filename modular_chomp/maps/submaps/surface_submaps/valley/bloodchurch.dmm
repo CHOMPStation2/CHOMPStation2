@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aq" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "ce" = (
@@ -69,13 +69,13 @@
 "hQ" = (
 /obj/structure/bed/double/padded,
 /mob/living/simple_mob/humanoid/cultist/castertesh,
-/obj/item/weapon/bedsheet/hosdouble,
+/obj/item/bedsheet/hosdouble,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "il" = (
 /obj/structure/closet,
 /obj/random/energy/highend,
-/obj/item/weapon/storage/belt/holding,
+/obj/item/storage/belt/holding,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -88,7 +88,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bloodchurch)
 "ke" = (
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /obj/structure/table/sifwoodentable,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
@@ -104,7 +104,7 @@
 "mn" = (
 /obj/item/clothing/suit/wizrobe/psypurple,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/holosign_creator/forcewand,
+/obj/item/holosign_creator/forcewand,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "mG" = (
@@ -138,7 +138,7 @@
 "qb" = (
 /obj/structure/bed/double/padded,
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
-/obj/item/weapon/bedsheet/hosdouble,
+/obj/item/bedsheet/hosdouble,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -207,7 +207,7 @@
 /area/submap/bloodchurch)
 "yD" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/holosign_creator/forcewand,
+/obj/item/holosign_creator/forcewand,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -225,7 +225,7 @@
 /area/submap/bloodchurch)
 "Ac" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -244,13 +244,13 @@
 /area/submap/bloodchurch)
 "Cf" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Ch" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
@@ -263,7 +263,7 @@
 /area/submap/bloodchurch)
 "EZ" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "FG" = (
@@ -305,7 +305,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bloodchurch)
 "MC" = (
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -317,7 +317,7 @@
 /area/submap/bloodchurch)
 "MK" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/storage/backpack/holding/duffle,
+/obj/item/storage/backpack/holding/duffle,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "MQ" = (

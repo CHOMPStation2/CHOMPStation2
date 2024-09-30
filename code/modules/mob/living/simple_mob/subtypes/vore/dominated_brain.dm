@@ -387,7 +387,7 @@
 			else
 				continue
 	//CHOMPEdit Start - Let dominate prey work on grabbed people
-	var/obj/item/weapon/grab/G = src.get_active_hand()
+	var/obj/item/grab/G = src.get_active_hand()
 	if(istype(G))
 		var/mob/living/L = G.affecting
 		if(istype(L) && L.allow_mind_transfer)

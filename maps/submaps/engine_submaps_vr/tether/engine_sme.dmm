@@ -134,6 +134,9 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "az" = (
@@ -211,13 +214,13 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
+	nightshift_setting = 2;
 	pixel_x = 28
 	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "aL" = (
 /obj/effect/floor_decal/industrial/warning/cee{
-	icon_state = "warningcee";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/nitrogen{
@@ -626,7 +629,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/geiger/wall/west{
+/obj/item/geiger/wall/west{
 	pixel_x = -36
 	},
 /turf/simulated/floor,
@@ -660,7 +663,7 @@
 /turf/simulated/floor,
 /area/template_noop)
 "bA" = (
-/obj/item/weapon/book/manual/supermatter_engine,
+/obj/item/book/manual/supermatter_engine,
 /turf/template_noop,
 /area/template_noop)
 "bB" = (
@@ -808,10 +811,6 @@
 "bP" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -822,6 +821,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
@@ -929,10 +931,6 @@
 "ce" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -943,6 +941,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
@@ -1021,10 +1022,6 @@
 "cp" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -1033,6 +1030,9 @@
 	opacity = 0
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "cq" = (
@@ -1379,7 +1379,7 @@
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "dh" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -24
 	},
 /turf/simulated/floor,
@@ -1538,9 +1538,13 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/template_noop)
 "vA" = (
-/obj/item/device/geiger/wall/south,
+/obj/item/geiger/wall/south,
 /turf/template_noop,
 /area/template_noop)
+"UW" = (
+/obj/machinery/light,
+/turf/simulated/floor,
+/area/engineering/engine_room)
 
 (1,1,1) = {"
 aa
@@ -1916,7 +1920,7 @@ bQ
 cf
 cq
 cB
-aE
+UW
 cJ
 cY
 cN

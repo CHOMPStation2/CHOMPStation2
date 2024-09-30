@@ -46,7 +46,7 @@
 /turf/simulated/shuttle/plating,
 /area/submap/derelict4)
 "m" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/airless,
 /area/submap/derelict4)
 "n" = (
@@ -64,7 +64,7 @@
 /turf/simulated/shuttle/floor,
 /area/submap/derelict4)
 "q" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/bed/chair/bay/comfy/captain{
 	dir = 8
 	},
@@ -124,7 +124,7 @@
 /turf/simulated/floor/airless,
 /area/submap/derelict4)
 "X" = (
-/obj/item/weapon/storage/backpack/holding,
+/obj/item/storage/backpack/holding,
 /turf/simulated/shuttle/floor,
 /area/submap/derelict4)
 "Z" = (

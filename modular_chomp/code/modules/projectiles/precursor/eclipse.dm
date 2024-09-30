@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/energy/freezegun
+/obj/item/gun/energy/freezegun
 	name = "Pulse Froster Prototype"
 	desc = "A strange gun pulsing with energy, it's touch chilling you to the core."
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -11,8 +11,8 @@
 
 	charge_cost = 80 //How much energy is needed to fire.
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/frostsphere
 
 	recoil_mode = 0
@@ -27,7 +27,7 @@
 		list(mode_name="shotgun", fire_delay=15, projectile_type=/obj/item/projectile/bullet/frostshotgun, charge_cost = 240),
 		)
 
-/obj/item/weapon/gun/energy/flamegun
+/obj/item/gun/energy/flamegun
 	name = "Flame Crystal Projector"
 	desc = "A strange gun pulsing with energy, it's touch warming you up."
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -37,8 +37,8 @@
 
 	w_class = ITEMSIZE_LARGE
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/flamecrystal
 
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
@@ -59,7 +59,7 @@
 		list(mode_name="explosive", fire_delay=10, projectile_type=/obj/item/projectile/energy/fireball, charge_cost = 160),
 		)
 
-/obj/item/weapon/gun/energy/elementalray
+/obj/item/gun/energy/elementalray
 	name = "Proto-type Weapon Avatar"
 	desc = "A strange gun vibrating with energy, lathered with diffrent buttons and switches."
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -67,8 +67,8 @@
 	item_state = "avatar"
 	wielded_item_state = "avatar-wielded"
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/bullet/flamegun
 
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
@@ -90,7 +90,7 @@
 		list(mode_name="acid", burst=1, fire_delay=0.5, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10, modifystate="avataracid"),
 		)
 
-/obj/item/weapon/gun/energy/elementalray/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/gun/energy/elementalray/emag_act(var/remaining_charges, var/mob/user)
 	..()
 	to_chat(user, "<span class='notice'>You short circuit the internal locking mechanisms of \the [src]!</span>")
 	firemodes = list(
@@ -139,7 +139,7 @@
 	slowdown = 0.2
 
 
-/obj/item/weapon/gun/energy/pulseglove
+/obj/item/gun/energy/pulseglove
 	name = "Strange Glove"
 	desc = "A bulky glove cladded with strange tech. It hums with energy, and the battery port is inaccessiable"
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -149,7 +149,7 @@
 	charge_cost = 380 // 13 shots
 
 	projectile_type = /obj/item/projectile/bullet/lightingburst
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
+	cell_type = /obj/item/cell/device/weapon/recharge/alien
 	battery_lock = 1
 
 

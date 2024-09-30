@@ -31,13 +31,13 @@
 /turf/template_noop,
 /area/template_noop)
 "ai" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/template_noop,
 /area/template_noop)
 "aj" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/template_noop)
 "ak" = (
@@ -57,13 +57,13 @@
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "ax" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "az" = (
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "<b>Aug. 28th, 2532</b><hr><small>Our listening outpost has relayed some alarming reports about TSF activity in the sector. While intercepted communications suggests it's a simple research effort, I can't shake the feeling that those dogged bastards have finally chased us down.<br><br>The Captain assures me that there's nothing to worry about, but I find it hard to take a man who's paranoid of a powered shower door seriously.<br><br><i>- Comms Officer Vostok</i></small>";
 	name = "personal log";
 	pixel_x = 26;
@@ -76,7 +76,7 @@
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "aC" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "aG" = (
@@ -99,7 +99,7 @@
 /area/derelict/bridge)
 "aL" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/phone{
+/obj/item/phone{
 	desc = "An old Russian phone. The dial tone is still humming.";
 	name = "spin-dial phone"
 	},
@@ -112,7 +112,7 @@
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "aN" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/carpet,
@@ -301,8 +301,8 @@
 /area/derelict/crew_quarters)
 "bB" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "bC" = (
@@ -324,7 +324,7 @@
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
 "bG" = (
-/obj/item/weapon/melee/classic_baton{
+/obj/item/melee/classic_baton{
 	desc = "A wooden truncheon for beating capitalist scum."
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -360,8 +360,8 @@
 /area/derelict/bridge)
 "bO" = (
 /obj/structure/table/standard,
-/obj/item/device/taperecorder,
-/obj/item/device/tape/random,
+/obj/item/taperecorder,
+/obj/item/rectape/random,
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "bR" = (
@@ -376,7 +376,7 @@
 /area/derelict/bridge)
 "bX" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "ca" = (
@@ -385,18 +385,18 @@
 /area/derelict/bridge)
 "cb" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder,
+/obj/item/folder,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "cd" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "cf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/folder/red,
+/obj/item/folder/red,
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "cg" = (
@@ -435,7 +435,7 @@
 	name = "Human remains"
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
 "cl" = (
@@ -458,7 +458,7 @@
 /area/derelict/bridge)
 "cr" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
@@ -477,7 +477,7 @@
 /area/derelict/bridge)
 "cv" = (
 /obj/machinery/light/spot,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "cw" = (
@@ -577,7 +577,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/derelict/bridge)
 "cR" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/template_noop,
@@ -605,7 +605,7 @@
 /area/derelict/bridge)
 "cV" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/reagent_containers/food/drinks/bottle/vodka,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
@@ -616,8 +616,8 @@
 "cZ" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
 "da" = (
@@ -625,7 +625,7 @@
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
 "dc" = (
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/bed,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
@@ -647,7 +647,7 @@
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
 "di" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/shuttle/window,
 /obj/structure/grille/rustic,
 /turf/simulated/floor,
@@ -669,7 +669,7 @@
 	name = "Derelict Annex"
 	})
 "dk" = (
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/bed,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
@@ -729,7 +729,7 @@
 	name = "Derelict Annex"
 	})
 "dv" = (
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/bed,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/blue,
@@ -740,7 +740,7 @@
 /area/derelict/crew_quarters)
 "dy" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
@@ -755,17 +755,17 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/weapon/grenade/empgrenade,
+/obj/item/grenade/empgrenade,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
 "dC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/southright,
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = 31;
 	pixel_y = 1
 	},
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "<b>Recommended Party</b> Comrade Blyatski<br><b>Signing Officer:</b> Mikail Gogochev<hr><small>Captain,<br><br>I recognize the nature of this request my seem strange, but please, hear me out. Comrade Blyatski, though he is but a wee bot, is like iron fist of Commissar Grigor himself! Just the other day he chased that useless bastard Totstoi clean out of brig, you should have seen the way that drunkard whimpered! Like a dog with his tail between his legs.<br><br>Anyways, I digress! If any one is worth of recognition, it is our ever-vigilant and beloved Blyatski, true champion of USSP.<br><br>If you wish to, perhaps, see his vigilance and dedication in person, well! You need only come to inspect armoury.<br><br>Comrade Blyatski awaits your decision.";
 	name = "recommendation for commendation"
 	},
@@ -778,8 +778,8 @@
 /area/derelict/arrival)
 "dE" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /obj/structure/window/reinforced,
 /obj/machinery/newscaster{
 	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space stations. Strange that it's on a Russian station.";
@@ -793,7 +793,7 @@
 	density = 0;
 	icon_state = "brokengrille"
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor,
@@ -811,7 +811,7 @@
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
 "dM" = (
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
 "dN" = (
@@ -892,7 +892,7 @@
 	name = "Derelict Annex"
 	})
 "dZ" = (
-/obj/item/weapon/paper/crumpled{
+/obj/item/paper/crumpled{
 	info = "<b>I KNOW IT WAS YOU WHO THREW AWAY MY LUCKY UNDERWEAR THIS TIME. I SWEAR, IF I SEE YOUR SKINNY RAT NECK AROUND I AM GOING TO WRING IT UNTIL YOU GO PURPLE!<br><br>NOBODY! NOBODY TOUCHES BORIS' LUCKY UNDERWEAR WITHOUT SUFFERING THE CONSEQUENCES!</b>";
 	name = "LISTEN UP CYKA"
 	},
@@ -917,7 +917,7 @@
 /area/derelict/arrival)
 "ee" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/spray/pepper,
+/obj/item/reagent_containers/spray/pepper,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
 	},
@@ -983,7 +983,7 @@
 /area/derelict/arrival)
 "er" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /obj/machinery/light/spot{
 	dir = 1
 	},
@@ -1125,7 +1125,7 @@
 	})
 "eO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/scalpel{
+/obj/item/surgical/scalpel{
 	pixel_y = 12
 	},
 /turf/simulated/floor/tiled/old_tile/beige,
@@ -1319,7 +1319,7 @@
 	name = "Derelict Annex"
 	})
 "ft" = (
-/obj/item/weapon/paper/crumpled{
+/obj/item/paper/crumpled{
 	info = "<i>This note has been effaced with all manner of crude drawings that are too vile to properly give a description to.</i><br><small>Totstoi,<br><br>I know it's you who's been feeding my cats alcohol, I do not care what your reasons are but you are getting in the way of important research. This is the fifth cat that I've had to replace this month because of your crude sense of humour, and I will be speaking with Chief Borachov if you don't stop.<br><br>- <i>Nikolai Kartov</i>, Deputy Researcher";
 	name = "Desist at once!"
 	},
@@ -1428,7 +1428,7 @@
 	})
 "fI" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/circular_saw{
+/obj/item/surgical/circular_saw{
 	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/old_tile/beige,
@@ -1497,7 +1497,7 @@
 /area/derelict/arrival)
 "fY" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "August 21 - Most Excellent Commissar Grigor<br>August 22 - Nobody<br>August 23 - Nobody<br>August 24 - Nobody<br>August 25 - Why do I even bother?<br>August 26 - Nobody<br>August 27 -";
 	name = "visitor log"
 	},
@@ -1507,8 +1507,8 @@
 /area/derelict/arrival)
 "fZ" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
@@ -1678,7 +1678,7 @@
 	name = "Derelict Annex"
 	})
 "gD" = (
-/obj/item/device/t_scanner,
+/obj/item/t_scanner,
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
 /obj/machinery/light/spot{
@@ -1708,11 +1708,11 @@
 /area/derelict/crew_quarters)
 "gI" = (
 /obj/structure/closet/secure_closet/bar,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua,
+/obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/kahlua,
 /turf/simulated/floor/carpet/turcarpet,
 /area/derelict/crew_quarters)
 "gK" = (
@@ -1741,18 +1741,18 @@
 	})
 "gP" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/syringes,
+/obj/item/storage/box/syringes,
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
 "gQ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/disk/data/demo{
+/obj/item/disk/data/demo{
 	pixel_x = -14;
 	pixel_y = -1
 	},
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "We have finally hit upon it, no more shall Katerina look past me in favor of other company! Experiment 432-A shows an incredible rate of cellular regeneration, and I posit that we have finally breaken down the great boundary between life and death--true biological immortality!<br><br>Of course, the aggressive behaviour is an undue side-effect, but it is only cat after all. I am certain a few sedative-laced cat treats will suffice to prep for autopsy.";
 	name = "Experiment 432-A"
 	},
@@ -1783,7 +1783,7 @@
 	})
 "gV" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/carpet/turcarpet,
 /area/derelict/crew_quarters)
 "gW" = (
@@ -1799,7 +1799,7 @@
 /area/derelict/crew_quarters)
 "gX" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/wrench,
 /obj/machinery/light/spot{
 	dir = 4;
 	tag = "icon-tube1 (EAST)"
@@ -1837,7 +1837,7 @@
 	},
 /area/derelict/arrival)
 "hc" = (
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
@@ -1881,7 +1881,7 @@
 	})
 "hj" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "This is the fifth time this month I've had to replace the cabling to the damn lockdown circuit. It's bad enough the condensor is constantly on the fritz and the damn systems take nearly a week to cycle and reboot, but now I've got the captain breathing down my neck over his stupid shower and Commissar Grigor. Mikail was telling me the man's face went so red when the lights popped that you could see him glowing in the dark.<br><br>If he thought that was bad, well, if I hadn't installed an override in the mess hall we would have been sitting in the dark for the week.<br><br>Rusthven says we should be getting a new shipment of cabling, though I'm not sure we'll ever have enough supplies to keep this place properly operational.";
 	name = "maintenance report"
 	},
@@ -1904,7 +1904,7 @@
 /area/derelict/crew_quarters)
 "hn" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass/shotglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
 /turf/simulated/floor/carpet/turcarpet,
 /area/derelict/crew_quarters)
 "ho" = (
@@ -1983,8 +1983,8 @@
 	})
 "hy" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva{
@@ -1992,8 +1992,8 @@
 	})
 "hA" = (
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight,
-/obj/item/weapon/cell/super,
+/obj/item/flashlight,
+/obj/item/cell/super,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -2106,7 +2106,7 @@
 "hV" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "Father Gregor,<br><br>You will have to forgive me, but I am unable to get your order for one of those 'veil shifters' like you asked. I am admittedly unsure what you planned to do with it, the business of the clergy is not mine, but Vostok was quick to put the kaibosh on your order after we lost the last shipment.<br><br>The boys are still reeling from the headaches from last time, and Khoma complains that he sees the blue lights whenever he closes his eyes.<br><br>I am not one to question a man of God but I beg of you, please do not try to order any more of these artifacts. They are cursed, and all manner of demons seem to follow in their wake.<br><br>- <small><i>Andrei Vostovich</i></small>, Supply Technician";
 	name = "My apologies, father"
 	},
@@ -2134,7 +2134,7 @@
 	})
 "ic" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -2147,7 +2147,7 @@
 	})
 "ie" = (
 /obj/structure/closet/secure_closet/chemical,
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "<i>A primitive rendition of a crying egg being stomped on by a boot has been scribbled in the right-hand margin of the paper.</i><br><br>Wahwahwah! True egghead! I do not give two shits about your cats or 'syence,' if you write to Chief I will tell that bitch Katerina about your baby boy crush.<br><br>Also, why you sign name on paper? I am next door, fuckhead, I know baby man note is yours as soon as I see it. You write girly letter like I am your lover, maybe if you spend less time in corner with cat you would be real man? Of course, you would still look like camel shit stuck to Totstoi's boot!";
 	name = "dear baby man"
 	},
@@ -2199,7 +2199,7 @@
 /area/derelict/crew_quarters)
 "ip" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/chapel{
 	dir = 4
@@ -2226,7 +2226,7 @@
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
 "iA" = (
-/obj/item/weapon/paper/crumpled{
+/obj/item/paper/crumpled{
 	info = "<i>This note has been crossed out so many times it's hard to make out its contents.</i><br><small>Katerina,<br><br><s>Your eyes are like diamonds,<br>Forged in the very fire of Cygni-A.<br>My heart yearns for you,<br>For your soft beauty<br>Fuckfucknothat'sbad.<br><br>Your voice is like liquid gold,<br>Smothering me in its delicate contours.<br>Never before had I known,<br>The touch,<br>The touch!<br>The touch of an angel's voice</s><br><br>note to self: stick to science, poetry is not my forte.</small>";
 	name = "love poem"
 	},
@@ -2237,8 +2237,8 @@
 	})
 "iB" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/fancy/vials,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/storage/fancy/vials,
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/old_tile/beige,
@@ -2247,11 +2247,11 @@
 	})
 "iC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 7;
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/dropper{
+/obj/item/reagent_containers/dropper{
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/old_tile/beige,
@@ -2259,7 +2259,7 @@
 	name = "Derelict Annex"
 	})
 "iG" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/template_noop,
@@ -2450,7 +2450,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/derelict/arrival)
 "jj" = (
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "Fuck. Fuckfuckfuck. I knew this mission was a mistake, that idiot Thomas got himself killed by some angry Russian security bot in the armoury, and the Lt. ran into the annex like a moron and got himself trapped. Now I'm just sitting on my god damn hands because this shuttle won't bloody move. Stupid USSP piece of shit docking arm must be jammed and I don't have the kit to go out and fix it.<br><br>Who the hell attacks a space station without EVA gear anyways? It's not like you can just bloody well waltz out into space with a hot coffee and shrug it off.";
 	name = "unknown report"
 	},
@@ -2538,7 +2538,7 @@
 	})
 "jI" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
 "jJ" = (
@@ -2996,10 +2996,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/weapon/storage/bible{
+/obj/item/storage/bible{
 	layer = 4.1
 	},
-/obj/item/weapon/paper/djstation{
+/obj/item/paper/djstation{
 	info = "I am worried about Totstoi. It is the fifth time this week he has been sent to the drunk tank, and no matter how many times I come to him he can only seem to find God at the bottom of a glass of Tunguska.<br><br>All this drinking, I hate to think poorly of the USSP but, in placing no cost on such things are we not just as bad as the TSF? Many have even forgotten their true heritage in favour of Galactic Common. Such indulgence, such forgetfulness, it can not be good for the spirits, let alone the soul.";
 	layer = 2;
 	name = "a confession"
@@ -3191,7 +3191,7 @@
 "lm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/fancyblack,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
 "ln" = (
@@ -3418,7 +3418,7 @@
 	})
 "lR" = (
 /obj/structure/table/standard,
-/obj/item/weapon/newspaper{
+/obj/item/newspaper{
 	desc = "An issue of The Griffon. Was Nanotrasen supplying this station at some point?"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -3502,7 +3502,7 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
 "ma" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -3632,7 +3632,7 @@
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
 "my" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/airless,
@@ -3640,7 +3640,7 @@
 	name = "Derelict Annex"
 	})
 "mC" = (
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /turf/template_noop,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -3753,7 +3753,7 @@
 /area/derelict/arrival)
 "mX" = (
 /obj/structure/lattice,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/template_noop,
@@ -3849,7 +3849,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
 "nk" = (
-/obj/item/weapon/firstaid_arm_assembly,
+/obj/item/firstaid_arm_assembly,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
 "nm" = (
@@ -3925,7 +3925,7 @@
 "nx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
 "ny" = (
@@ -3959,11 +3959,11 @@
 	name = "Derelict Annex"
 	})
 "nD" = (
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
 "nE" = (
-/obj/item/weapon/beach_ball/holoball,
+/obj/item/beach_ball/holoball,
 /obj/machinery/light/spot{
 	dir = 4;
 	tag = "icon-tube1 (EAST)"
@@ -4016,17 +4016,17 @@
 	dir = 4
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_y = 8
 	},
-/obj/item/weapon/pen/red,
+/obj/item/pen/red,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/eva{
 	name = "Derelict Annex"
 	})
 "nS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/beetsoup,
+/obj/item/reagent_containers/food/snacks/beetsoup,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -4071,7 +4071,7 @@
 /area/derelict/crew_quarters)
 "nY" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/arrival)
 "oc" = (
@@ -4125,8 +4125,8 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour{
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour{
 	pixel_y = -6
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -4160,7 +4160,7 @@
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
 "oq" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/tiled/old_tile/green,
@@ -4258,7 +4258,7 @@
 	name = "Derelict Annex"
 	})
 "oB" = (
-/obj/item/weapon/beach_ball/holoball,
+/obj/item/beach_ball/holoball,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
@@ -4283,7 +4283,7 @@
 /area/derelict/arrival)
 "oH" = (
 /obj/structure/lattice,
-/obj/item/weapon/surgical/retractor,
+/obj/item/surgical/retractor,
 /turf/template_noop,
 /area/derelict/arrival)
 "oI" = (
@@ -4349,7 +4349,7 @@
 	name = "Derelict Annex"
 	})
 "oU" = (
-/obj/item/weapon/reagent_containers/spray/plantbgone,
+/obj/item/reagent_containers/spray/plantbgone,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/eva{
@@ -4391,7 +4391,7 @@
 	name = "Derelict Annex"
 	})
 "oZ" = (
-/obj/item/weapon/newspaper{
+/obj/item/newspaper{
 	desc = "An issue of The Griffon. Was Nanotrasen supplying this station at some point?"
 	},
 /obj/machinery/newscaster{
@@ -4441,7 +4441,7 @@
 	})
 "pf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /obj/machinery/light/spot{
 	dir = 8;
 	tag = "icon-tube1 (WEST)"
@@ -4494,7 +4494,7 @@
 /turf/simulated/floor/airless,
 /area/derelict/arrival)
 "pq" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/template_noop,
@@ -4529,11 +4529,11 @@
 	dir = 4;
 	tag = "icon-rwindow (EAST)"
 	},
-/obj/item/weapon/mop,
+/obj/item/mop,
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/item/weapon/storage/bag/trash,
+/obj/item/storage/bag/trash,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
 "pv" = (
@@ -4578,7 +4578,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
 "pF" = (
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
@@ -4629,7 +4629,7 @@
 /turf/template_noop,
 /area/template_noop)
 "pR" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/derelict/arrival)
 "pS" = (
@@ -5031,7 +5031,7 @@
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
 "rl" = (
-/obj/item/weapon/newspaper{
+/obj/item/newspaper{
 	desc = "An issue of The Griffon. Was Nanotrasen supplying this station at some point?"
 	},
 /turf/simulated/floor/tiled/old_tile/green,
@@ -5167,7 +5167,7 @@
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
 "rH" = (
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
 "rI" = (
@@ -5179,7 +5179,7 @@
 "rJ" = (
 /obj/item/trash/popcorn,
 /obj/item/trash/semki,
-/obj/item/weapon/paper/crumpled{
+/obj/item/paper/crumpled{
 	info = "That idiot bastard Totstoi found my button. Stupid drunk was trying to put change into the free cigarette machine and dropped it. Lo' and behold, dumbass decides to look under the machine for his precious rubles.<br><br>Thankfully that green-livered swine cares more about drink than anything else, managed to buy him off. Will have to move the switch somewhere else now, but where?";
 	name = "worn paper"
 	},
@@ -5325,7 +5325,7 @@
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
 "rY" = (
-/obj/item/weapon/surgical/cautery,
+/obj/item/surgical/cautery,
 /turf/template_noop,
 /area/derelict/arrival)
 "rZ" = (
@@ -5528,7 +5528,7 @@
 /turf/template_noop,
 /area/derelict/solar_control)
 "so" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/derelict/solar_control)
 "sp" = (
@@ -5540,7 +5540,7 @@
 	},
 /area/derelict/solar_control)
 "sq" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/template_noop,
@@ -5618,7 +5618,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
 "vN" = (
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
 "vU" = (
@@ -5650,7 +5650,7 @@
 /area/derelict/arrival)
 "ye" = (
 /obj/structure/table/standard,
-/obj/item/weapon/circuitboard/teleporter,
+/obj/item/circuitboard/teleporter,
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "yE" = (
@@ -5727,8 +5727,8 @@
 "GG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
-/obj/item/weapon/storage/belt/utility/holding,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/belt/utility/holding,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -5809,7 +5809,7 @@
 /area/derelict/crew_quarters)
 "Ol" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/energy/medigun,
+/obj/item/gun/energy/medigun,
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -5852,13 +5852,13 @@
 /area/derelict/arrival)
 "Ql" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
 "Rq" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/carpet,
 /area/derelict/crew_quarters)
 "RE" = (
@@ -5876,7 +5876,7 @@
 	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
 	name = "Human remains"
 	},
-/obj/item/weapon/reagent_containers/food/snacks/meat/human,
+/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
 "Td" = (
@@ -5925,7 +5925,7 @@
 /area/derelict/crew_quarters)
 "WX" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/inducer/syndicate,
+/obj/item/inducer/syndicate,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva{
 	name = "Derelict Annex"
@@ -5939,7 +5939,7 @@
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/arrival)
 "XW" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/item/stack/material/steel,
 /turf/template_noop,
 /area/derelict/eva{

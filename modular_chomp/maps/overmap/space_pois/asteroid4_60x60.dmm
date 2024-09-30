@@ -17,14 +17,14 @@
 "cc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/cubancarp,
+/obj/item/reagent_containers/food/snacks/cubancarp,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "cF" = (
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/obj/item/weapon/ore/uranium,
+/obj/item/ore/uranium,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "db" = (
@@ -167,13 +167,13 @@
 /area/submap/asteroid4)
 "mh" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/transforming/jawsoflife,
+/obj/item/tool/transforming/jawsoflife,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "mT" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
@@ -232,7 +232,7 @@
 /area/submap/asteroid4)
 "pS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cell/crap,
+/obj/item/cell/crap,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "qF" = (
@@ -280,14 +280,14 @@
 /area/submap/asteroid4)
 "tv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/melee/baton/cattleprod,
+/obj/item/melee/baton/cattleprod,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "tJ" = (
 /obj/structure/table/standard,
 /obj/item/clothing/head/sombrero,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "tK" = (
@@ -318,7 +318,7 @@
 /area/submap/asteroid4)
 "vo" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "vS" = (
@@ -515,13 +515,13 @@
 "FK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/cubannachos,
+/obj/item/reagent_containers/food/snacks/cubannachos,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "Gb" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/melee/baton/cattleprod,
-/obj/item/weapon/cell/high,
+/obj/item/melee/baton/cattleprod,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "GZ" = (
@@ -537,11 +537,11 @@
 /area/submap/asteroid4)
 "He" = (
 /obj/structure/table/standard,
-/obj/item/device/transfer_valve,
-/obj/item/device/transfer_valve,
-/obj/item/device/transfer_valve,
-/obj/item/device/transfer_valve,
-/obj/item/device/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
@@ -587,7 +587,7 @@
 /area/submap/asteroid4)
 "Ke" = (
 /obj/effect/decal/remains,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "Ku" = (
@@ -605,7 +605,7 @@
 /area/submap/asteroid4)
 "LO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/transforming/powerdrill,
+/obj/item/tool/transforming/powerdrill,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
@@ -622,7 +622,7 @@
 /area/submap/asteroid4)
 "LV" = (
 /obj/structure/table/standard,
-/obj/item/device/multitool/alien{
+/obj/item/multitool/alien{
 	pixel_y = -14
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -658,7 +658,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "Ns" = (
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "OU" = (
@@ -670,7 +670,7 @@
 /area/submap/asteroid4)
 "Pv" = (
 /obj/effect/catwalk_plated/techfloor,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "PB" = (
@@ -693,7 +693,7 @@
 /area/submap/asteroid4)
 "RB" = (
 /obj/structure/table/standard,
-/obj/item/weapon/weldingtool/alien,
+/obj/item/weldingtool/alien,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
@@ -788,7 +788,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "XO" = (
@@ -814,12 +814,12 @@
 /area/submap/asteroid4)
 "YU" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "Zf" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "Zp" = (
@@ -844,7 +844,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/submap/asteroid4)
 "ZP" = (
-/obj/item/weapon/ore/uranium,
+/obj/item/ore/uranium,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "ZZ" = (

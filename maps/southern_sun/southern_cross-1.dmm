@@ -647,11 +647,11 @@
 	pixel_y = 5;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/oxygen/engi{
+/obj/item/tank/emergency/oxygen/engi{
 	pixel_y = 6;
 	pixel_x = 4
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = -6;
 	pixel_x = -10
 	},
@@ -879,7 +879,7 @@
 /area/SouthernCrossV2/Harbor/Dock2)
 "ael" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/storage/box/beakers,
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Surgery)
@@ -1255,23 +1255,23 @@
 /area/SouthernCrossV2/Cargo/Mining_Ship_Bay)
 "agI" = (
 /obj/machinery/iv_drip,
-/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus{
+/obj/item/reagent_containers/blood/prelabeled/OMinus{
 	pixel_y = 6;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus{
+/obj/item/reagent_containers/blood/prelabeled/OMinus{
 	pixel_y = 3;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/blood/empty{
+/obj/item/reagent_containers/blood/empty{
 	pixel_y = -1;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/blood/empty{
+/obj/item/reagent_containers/blood/empty{
 	pixel_y = -5;
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/quickdraw/syringe_case{
+/obj/item/storage/quickdraw/syringe_case{
 	pixel_y = 4;
 	pixel_x = -8
 	},
@@ -1464,7 +1464,7 @@
 	},
 /area/SouthernCrossV2/Harbor/Port_Docking_Foyer)
 "ahH" = (
-/obj/item/device/geiger/wall/west,
+/obj/item/geiger/wall/west,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -1565,11 +1565,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -1809,43 +1809,43 @@
 	dir = 8;
 	layer = 2.6
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = 11;
 	pixel_x = 7
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = 7;
 	pixel_x = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = 3;
 	pixel_x = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = -2;
 	pixel_x = 6
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 12;
 	pixel_x = -3
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = -6;
 	pixel_x = 6
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 8;
 	pixel_x = -3
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 4;
 	pixel_x = -3
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = -1;
 	pixel_x = -3
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = -6;
 	pixel_x = -3
 	},
@@ -2023,26 +2023,26 @@
 /area/SouthernCrossV2/Commons/AftStar_1_Deck_Observatory)
 "aka" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/telecomms/server{
+/obj/item/circuitboard/telecomms/server{
 	pixel_y = 11;
 	pixel_x = 2
 	},
-/obj/item/weapon/circuitboard/telecomms/server{
+/obj/item/circuitboard/telecomms/server{
 	pixel_y = 7;
 	pixel_x = 1
 	},
-/obj/item/weapon/circuitboard/telecomms/bus{
+/obj/item/circuitboard/telecomms/bus{
 	pixel_y = 3
 	},
-/obj/item/weapon/circuitboard/telecomms/bus{
+/obj/item/circuitboard/telecomms/bus{
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/obj/item/weapon/circuitboard/telecomms/broadcaster{
+/obj/item/circuitboard/telecomms/broadcaster{
 	pixel_x = -2;
 	pixel_y = -5
 	},
-/obj/item/weapon/circuitboard/telecomms/exonet_node{
+/obj/item/circuitboard/telecomms/exonet_node{
 	pixel_y = -9;
 	pixel_x = -3
 	},
@@ -2340,7 +2340,7 @@
 	pixel_y = 13;
 	pixel_x = 2
 	},
-/obj/item/device/retail_scanner/cargo{
+/obj/item/retail_scanner/cargo{
 	pixel_x = 5
 	},
 /obj/machinery/firealarm{
@@ -2396,15 +2396,15 @@
 	pixel_x = -6;
 	pixel_y = -2
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_y = -4;
 	pixel_x = 8
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_x = 8
 	},
 /obj/structure/table/reinforced,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -3310,7 +3310,7 @@
 /area/SouthernCrossV2/Harbor/Ship_Bay1)
 "arN" = (
 /obj/structure/table/steel,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "arO" = (
@@ -3339,25 +3339,25 @@
 /area/SouthernCrossV2/Maints/Distro_Harbor)
 "arX" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/bluespace_crystal/artificial{
+/obj/item/bluespace_crystal/artificial{
 	pixel_x = -7;
 	pixel_y = 7
 	},
-/obj/item/weapon/bluespace_crystal/artificial{
+/obj/item/bluespace_crystal/artificial{
 	pixel_y = 7
 	},
-/obj/item/weapon/bluespace_crystal/artificial{
+/obj/item/bluespace_crystal/artificial{
 	pixel_x = 7;
 	pixel_y = 7
 	},
-/obj/item/weapon/bluespace_crystal/artificial{
+/obj/item/bluespace_crystal/artificial{
 	pixel_x = -7;
 	pixel_y = -4
 	},
-/obj/item/weapon/bluespace_crystal/artificial{
+/obj/item/bluespace_crystal/artificial{
 	pixel_y = -4
 	},
-/obj/item/weapon/bluespace_crystal/artificial{
+/obj/item/bluespace_crystal/artificial{
 	pixel_x = 7;
 	pixel_y = -4
 	},
@@ -3397,15 +3397,15 @@
 /area/shuttle/escape_pod4/station)
 "asB" = (
 /obj/structure/table/reinforced,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
-/obj/item/weapon/tool/crowbar/red{
+/obj/item/tool/crowbar/red{
 	pixel_x = 7
 	},
-/obj/item/weapon/tool/screwdriver{
+/obj/item/tool/screwdriver{
 	pixel_y = 7
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -3710,11 +3710,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -3808,16 +3808,16 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Stairwell_Aft)
 "avb" = (
-/obj/item/weapon/gun/energy/locked/frontier/rifle{
+/obj/item/gun/energy/locked/frontier/rifle{
 	pixel_y = 9
 	},
-/obj/item/weapon/cell/device/weapon{
+/obj/item/cell/device/weapon{
 	pixel_y = 4
 	},
-/obj/item/weapon/cell/device/weapon{
+/obj/item/cell/device/weapon{
 	pixel_y = 2
 	},
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(1,19)
 	},
@@ -3825,7 +3825,7 @@
 	pixel_y = -7;
 	pixel_x = 5
 	},
-/obj/item/weapon/gun/energy/locked/frontier/rifle{
+/obj/item/gun/energy/locked/frontier/rifle{
 	pixel_y = 6
 	},
 /obj/item/ammo_magazine/clip/c762{
@@ -3836,10 +3836,10 @@
 	pixel_y = -7;
 	pixel_x = -1
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle{
+/obj/item/gun/projectile/shotgun/pump/rifle{
 	pixel_y = -2
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle{
+/obj/item/gun/projectile/shotgun/pump/rifle{
 	pixel_y = -5
 	},
 /obj/machinery/recharger/wallcharger{
@@ -3857,18 +3857,18 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint)
 "avd" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/west{
 	name = "Ration Cabinet"
 	},
@@ -3983,7 +3983,7 @@
 /area/SouthernCrossV2/Domicile/Public_EVA)
 "avy" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/material/twohanded/baseballbat,
+/obj/item/material/twohanded/baseballbat,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "avz" = (
@@ -4027,7 +4027,7 @@
 	name = "1N-lighting fixture"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -4084,22 +4084,22 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/escape_pod7/station)
 "awB" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/south{
 	name = "Ration Cabinet"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -4231,7 +4231,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/SouthernCrossV2/Science/Xenobotany_Isolation_Chamber)
 "axP" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -4264,7 +4264,7 @@
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor2)
 "ayc" = (
 /obj/structure/table/glass,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -4305,7 +4305,7 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Science/Xenobotany_Isolation_Chamber)
 "ayE" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Surgery)
 "ayH" = (
@@ -4338,16 +4338,16 @@
 	dir = 5
 	},
 /obj/structure/closet/walllocker_double/kitchen/north,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -4513,7 +4513,7 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/obj/item/device/t_scanner/upgraded{
+/obj/item/t_scanner/upgraded{
 	pixel_x = 11;
 	pixel_y = 3
 	},
@@ -4547,7 +4547,7 @@
 	pixel_x = -7;
 	pixel_y = 2
 	},
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = 4
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -5560,25 +5560,25 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "aJy" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
 	},
 /obj/structure/closet/walllocker_double/kitchen/north{
 	name = "Ration Cabinet"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -5751,7 +5751,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/SouthernCrossV2/Science/Xenobotany_Lab)
 "aKE" = (
-/obj/item/device/geiger/wall/south,
+/obj/item/geiger/wall/south,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
@@ -5872,24 +5872,24 @@
 	req_one_access = list(1,19);
 	pixel_y = -24
 	},
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/folder/red{
+/obj/item/folder/red{
 	pixel_y = 3;
 	pixel_x = -6
 	},
@@ -5902,7 +5902,7 @@
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint)
 "aLm" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/form_printer{
+/obj/item/form_printer{
 	pixel_y = 4
 	},
 /obj/machinery/ai_status_display{
@@ -6012,8 +6012,8 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor2)
 "aLQ" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	icon_state = "medium";
 	pixel_y = -7;
 	pixel_x = -3
@@ -6124,7 +6124,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock2)
 "aMD" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -6237,14 +6237,14 @@
 /area/SouthernCrossV2/Harbor/Ship_Bay2)
 "aNh" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/retail_scanner/cargo{
+/obj/item/retail_scanner/cargo{
 	pixel_x = 17
 	},
 /obj/item/clothing/accessory/armband/cargo{
 	pixel_y = 11;
 	pixel_x = 32
 	},
-/obj/item/device/reagent_scanner{
+/obj/item/reagent_scanner{
 	pixel_y = 4;
 	pixel_x = -2
 	},
@@ -6463,7 +6463,7 @@
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor1)
 "aOm" = (
 /obj/structure/closet/secure_closet/miner,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -6707,7 +6707,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Security/Exploration_Sling_Shuttle)
 "aQA" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /obj/effect/decal/cleanable/blood/splatter{
 	color = "#ffc43b";
 	name = "Honey splatter";
@@ -6818,7 +6818,7 @@
 /area/SouthernCrossV2/Security/Aft_Security_Post)
 "aRz" = (
 /obj/structure/closet/emcloset,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /obj/machinery/light{
 	dir = 8;
 	layer = 3;
@@ -6929,24 +6929,24 @@
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "aSg" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
@@ -7013,28 +7013,28 @@
 	name = "Honey splatter";
 	icon_state = "mfloor3"
 	},
-/obj/item/weapon/bone,
+/obj/item/bone,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_Hydroponics)
 "aSH" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/wirecutters/clippers{
+/obj/item/tool/wirecutters/clippers{
 	pixel_y = -3;
 	pixel_x = -5
 	},
-/obj/item/weapon/storage/toolbox/hydro{
+/obj/item/storage/toolbox/hydro{
 	pixel_y = 15;
 	pixel_x = -4
 	},
-/obj/item/weapon/material/minihoe{
+/obj/item/material/minihoe{
 	pixel_y = 1;
 	pixel_x = 4
 	},
-/obj/item/weapon/material/minihoe{
+/obj/item/material/minihoe{
 	pixel_y = 6;
 	pixel_x = 4
 	},
-/obj/item/weapon/tool/wirecutters/clippers{
+/obj/item/tool/wirecutters/clippers{
 	pixel_y = 2;
 	pixel_x = -5
 	},
@@ -7088,8 +7088,8 @@
 /area/SouthernCrossV2/Harbor/Ship_Bay1)
 "aTk" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/subspace/transmitter,
-/obj/item/weapon/stock_parts/subspace/transmitter{
+/obj/item/stock_parts/subspace/transmitter,
+/obj/item/stock_parts/subspace/transmitter{
 	pixel_y = 3;
 	pixel_x = 2
 	},
@@ -7485,7 +7485,7 @@
 /area/SouthernCrossV2/Cargo/Depot2)
 "aVF" = (
 /obj/structure/table/steel,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Corridor3)
 "aVH" = (
@@ -8007,7 +8007,7 @@
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "bbQ" = (
-/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube,
+/obj/item/reagent_containers/food/snacks/monkeycube/wrapped/stokcube,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
 "bce" = (
@@ -8019,7 +8019,7 @@
 /area/SouthernCrossV2/Cargo/Mining_EVA)
 "bcg" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "bci" = (
@@ -8169,7 +8169,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor1)
 "beQ" = (
-/obj/item/device/geiger/wall/west,
+/obj/item/geiger/wall/west,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -8305,7 +8305,7 @@
 	pixel_y = -1;
 	pixel_x = -1
 	},
-/obj/item/weapon/material/knife/machete/hatchet{
+/obj/item/material/knife/machete/hatchet{
 	pixel_x = -4;
 	pixel_y = 5
 	},
@@ -8368,7 +8368,7 @@
 	pixel_y = 4;
 	pixel_x = 7
 	},
-/obj/item/device/personal_shield_generator/belt/mining/loaded{
+/obj/item/personal_shield_generator/belt/mining/loaded{
 	pixel_y = 12;
 	pixel_x = -17
 	},
@@ -8501,27 +8501,27 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Security/Exploration_Ship_Bay)
 "blP" = (
-/obj/item/weapon/storage/box/flare{
+/obj/item/storage/box/flare{
 	pixel_y = 1;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/box/flare{
+/obj/item/storage/box/flare{
 	pixel_y = 11;
 	pixel_x = 7
 	},
-/obj/item/device/flashlight/glowstick/radioisotope{
+/obj/item/flashlight/glowstick/radioisotope{
 	pixel_y = -4;
 	pixel_x = -6
 	},
-/obj/item/device/flashlight/glowstick/radioisotope{
+/obj/item/flashlight/glowstick/radioisotope{
 	pixel_y = -1;
 	pixel_x = -5
 	},
-/obj/item/device/flashlight/glowstick/radioisotope{
+/obj/item/flashlight/glowstick/radioisotope{
 	pixel_y = 3;
 	pixel_x = -6
 	},
-/obj/item/device/flashlight/glowstick/radioisotope{
+/obj/item/flashlight/glowstick/radioisotope{
 	pixel_y = 7;
 	pixel_x = -5
 	},
@@ -8562,25 +8562,25 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Aft_Security_Post)
 "bmt" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
 	},
 /obj/structure/closet/walllocker_double/kitchen/north{
 	name = "Ration Cabinet"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -8619,11 +8619,11 @@
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Corridor3)
 "bmJ" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/item/weapon/storage/vore_egg/tajaran{
+/obj/item/storage/vore_egg/tajaran{
 	pixel_y = 3;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/vore_egg/green{
+/obj/item/storage/vore_egg/green{
 	pixel_y = -3;
 	pixel_x = -4
 	},
@@ -8745,11 +8745,11 @@
 /area/SouthernCrossV2/Science/Observation_Hall)
 "bqn" = (
 /obj/structure/bed/pillowpilefront/orange,
-/obj/item/weapon/storage/vore_egg/chocolate{
+/obj/item/storage/vore_egg/chocolate{
 	pixel_y = -2;
 	pixel_x = 4
 	},
-/obj/item/weapon/storage/vore_egg/blue{
+/obj/item/storage/vore_egg/blue{
 	pixel_y = 1;
 	pixel_x = -4
 	},
@@ -9094,10 +9094,10 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "bvd" = (
 /obj/structure/table/rack,
-/obj/item/weapon/material/fishing_rod/modern/cheap,
-/obj/item/weapon/material/fishing_rod/modern/cheap,
-/obj/item/weapon/material/fishing_rod/modern/cheap,
-/obj/item/weapon/material/fishing_rod/modern/cheap,
+/obj/item/material/fishing_rod/modern/cheap,
+/obj/item/material/fishing_rod/modern/cheap,
+/obj/item/material/fishing_rod/modern/cheap,
+/obj/item/material/fishing_rod/modern/cheap,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Market_Stall_6)
 "bvo" = (
@@ -9135,16 +9135,16 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "bws" = (
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/mercury,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar{
+/obj/item/reagent_containers/chem_disp_cartridge/mercury,
+/obj/item/reagent_containers/chem_disp_cartridge/sugar{
 	pixel_x = 10;
 	pixel_y = -4
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/lithium{
+/obj/item/reagent_containers/chem_disp_cartridge/lithium{
 	pixel_y = 10;
 	pixel_x = -4
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
@@ -9249,7 +9249,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/ForPort_1_Deck_Observatory)
 "bxD" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -9463,33 +9463,33 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "bCn" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
 /obj/structure/table/steel,
-/obj/item/weapon/stamp/cargo{
+/obj/item/stamp/cargo{
 	pixel_y = 6;
 	pixel_x = -9
 	},
-/obj/item/weapon/stamp/denied{
+/obj/item/stamp/denied{
 	pixel_x = -5;
 	pixel_y = 2
 	},
@@ -10094,15 +10094,15 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "bLW" = (
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_y = 21;
 	pixel_x = -6
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_y = 21;
 	pixel_x = 6
 	},
-/obj/item/weapon/material/knife{
+/obj/item/material/knife{
 	pixel_y = 20;
 	pixel_x = 1
 	},
@@ -10117,7 +10117,7 @@
 /area/SouthernCrossV2/Commons/Star_1Deck_Central_Corridor_1)
 "bMh" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deck/tarot,
+/obj/item/deck/tarot,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_CardTrading)
 "bMq" = (
@@ -10365,7 +10365,7 @@
 /area/SouthernCrossV2/Harbor/Ship_Bay1)
 "bQe" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/wirecutters/clippers/trimmers,
+/obj/item/tool/wirecutters/clippers/trimmers,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Market_Stall_1)
 "bQl" = (
@@ -10373,24 +10373,24 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
 "bQm" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/item/weapon/folder/blue{
+/obj/item/folder/blue{
 	pixel_y = 4;
 	pixel_x = -6
 	},
@@ -10951,8 +10951,8 @@
 	dir = 8;
 	pixel_x = 22
 	},
-/obj/item/weapon/tool/wrench,
-/obj/item/device/flashlight/color/yellow{
+/obj/item/tool/wrench,
+/obj/item/flashlight/color/yellow{
 	pixel_y = 6;
 	pixel_x = -10
 	},
@@ -10997,7 +10997,7 @@
 /obj/structure/bed/chair/oldsofa/left{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -11158,7 +11158,7 @@
 /turf/simulated/floor/bmarble,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
 "cgH" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -11394,45 +11394,45 @@
 /area/SouthernCrossV2/Maints/ab_Surgery)
 "cld" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = 8
 	},
-/obj/item/weapon/storage/toolbox/emergency{
+/obj/item/storage/toolbox/emergency{
 	pixel_y = 11;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = -7;
 	pixel_y = 4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -11;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -8;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
@@ -11515,7 +11515,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
-/obj/item/device/t_scanner{
+/obj/item/t_scanner{
 	pixel_y = 5;
 	pixel_x = 2
 	},
@@ -11633,7 +11633,7 @@
 /obj/random/thermalponcho,
 /obj/random/mouseray,
 /obj/random/coin/sometimes,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /obj/random/maintenance,
 /obj/random/mech_toy,
 /obj/random/material/refined,
@@ -11720,7 +11720,7 @@
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "coq" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/destTagger{
+/obj/item/destTagger{
 	pixel_x = -3
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -11790,14 +11790,14 @@
 /area/SouthernCrossV2/Harbor/Dock3)
 "cpH" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = 10
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_y = -1;
 	pixel_x = -5
 	},
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = 5
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -11883,18 +11883,18 @@
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "csE" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/subspace/ansible{
+/obj/item/stock_parts/subspace/ansible{
 	pixel_y = 15;
 	pixel_x = 2
 	},
-/obj/item/weapon/stock_parts/subspace/ansible{
+/obj/item/stock_parts/subspace/ansible{
 	pixel_y = 11
 	},
-/obj/item/weapon/stock_parts/subspace/treatment{
+/obj/item/stock_parts/subspace/treatment{
 	pixel_y = 4;
 	pixel_x = -3
 	},
-/obj/item/weapon/stock_parts/subspace/treatment{
+/obj/item/stock_parts/subspace/treatment{
 	pixel_y = -1;
 	pixel_x = 2
 	},
@@ -12000,24 +12000,24 @@
 /area/SouthernCrossV2/Maints/Deck1_Security_PortCorridor2)
 "cvF" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/item/weapon/folder/yellow{
+/obj/item/folder/yellow{
 	pixel_x = -6
 	},
-/obj/item/weapon/folder/yellow{
+/obj/item/folder/yellow{
 	pixel_x = -6;
 	pixel_y = 4
 	},
@@ -12344,12 +12344,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1)
 "cBL" = (
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/water,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol{
+/obj/item/reagent_containers/chem_disp_cartridge/water,
+/obj/item/reagent_containers/chem_disp_cartridge/ethanol{
 	pixel_y = 7;
 	pixel_x = -4
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/chlorine{
+/obj/item/reagent_containers/chem_disp_cartridge/chlorine{
 	pixel_x = -5
 	},
 /obj/effect/decal/cleanable/cobweb2,
@@ -12584,7 +12584,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Star_Corridor)
 "cEg" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -12843,22 +12843,22 @@
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/weapon/pen/crayon/marker/black{
+/obj/item/pen/crayon/marker/black{
 	pixel_y = 5
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = -2;
 	pixel_x = 1
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 4;
 	pixel_x = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_y = 8;
 	pixel_x = -7
 	},
@@ -13354,7 +13354,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_PortCorridor1)
 "cUb" = (
-/obj/item/device/vac_attachment,
+/obj/item/vac_attachment,
 /obj/structure/closet/jequipcloset,
 /obj/machinery/light{
 	dir = 4;
@@ -13699,16 +13699,16 @@
 /obj/structure/closet/crate/engineering,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/device/multitool,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/device/geiger,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/multitool,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/geiger,
 /obj/item/clothing/glasses/goggles,
 /obj/item/clothing/glasses/goggles,
-/obj/item/device/t_scanner,
+/obj/item/t_scanner,
 /obj/item/clothing/glasses/welding,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -13882,7 +13882,7 @@
 /area/SouthernCrossV2/Harbor/Port_Docking_Foyer)
 "ddb" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/hand_labeler,
+/obj/item/hand_labeler,
 /obj/machinery/light{
 	name = "1S-light fixture"
 	},
@@ -14247,7 +14247,7 @@
 /area/space)
 "diy" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -14457,7 +14457,7 @@
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "dmc" = (
 /obj/structure/table/marble,
-/obj/item/weapon/coin/phoron,
+/obj/item/coin/phoron,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Kitchen)
@@ -14503,7 +14503,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Public_EVA)
 "dnB" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -14631,25 +14631,25 @@
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
-/obj/item/weapon/storage/pill_bottle/carbon{
+/obj/item/storage/pill_bottle/carbon{
 	pixel_y = -2
 	},
-/obj/item/weapon/storage/pill_bottle/iron{
+/obj/item/storage/pill_bottle/iron{
 	pixel_y = -2;
 	pixel_x = -9
 	},
-/obj/item/weapon/storage/pill_bottle/antitox{
+/obj/item/storage/pill_bottle/antitox{
 	pixel_y = 9
 	},
-/obj/item/weapon/storage/pill_bottle/spaceacillin{
+/obj/item/storage/pill_bottle/spaceacillin{
 	pixel_y = 9;
 	pixel_x = -9
 	},
-/obj/item/weapon/storage/pill_bottle/inaprovaline{
+/obj/item/storage/pill_bottle/inaprovaline{
 	pixel_y = -2;
 	pixel_x = 9
 	},
-/obj/item/weapon/storage/pill_bottle/paracetamol{
+/obj/item/storage/pill_bottle/paracetamol{
 	pixel_y = 9;
 	pixel_x = 9
 	},
@@ -15071,11 +15071,11 @@
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "dxb" = (
 /obj/structure/bed/pillowpilefront/white,
-/obj/item/weapon/storage/vore_egg/rainbow{
+/obj/item/storage/vore_egg/rainbow{
 	pixel_y = 4;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/vore_egg/slime{
+/obj/item/storage/vore_egg/slime{
 	pixel_x = -2
 	},
 /turf/simulated/floor/wood/alt/tile,
@@ -15132,7 +15132,7 @@
 /obj/random/fishing_junk,
 /obj/random/powercell/device,
 /obj/random/miniature,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /obj/random/tool/powermaint,
 /obj/random/mouseray,
 /turf/simulated/floor/tiled,
@@ -15155,11 +15155,11 @@
 	pixel_y = 5;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/oxygen/engi{
+/obj/item/tank/emergency/oxygen/engi{
 	pixel_y = 6;
 	pixel_x = 4
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = -6;
 	pixel_x = -10
 	},
@@ -15327,13 +15327,13 @@
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Corridor1)
 "dAU" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/fountain,
+/obj/item/paper_bin,
+/obj/item/pen/fountain,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "dAV" = (
 /obj/effect/decal/cleanable/greenglow,
-/obj/item/weapon/implant/sizecontrol,
+/obj/item/implant/sizecontrol,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "dBh" = (
@@ -15476,10 +15476,10 @@
 /area/shuttle/escape_pod13/station)
 "dEs" = (
 /obj/structure/table/rack,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/material/fishing_net,
+/obj/item/material/fishing_net,
+/obj/item/material/fishing_net,
+/obj/item/material/fishing_net,
+/obj/item/material/fishing_net,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Market_Stall_6)
 "dEw" = (
@@ -15498,7 +15498,7 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "dFb" = (
-/obj/item/weapon/stool{
+/obj/item/stool{
 	color = "grey"
 	},
 /obj/structure/sign/poster{
@@ -15535,7 +15535,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Ship_Bay4)
 "dFt" = (
-/obj/item/weapon/reagent_containers/glass/bucket{
+/obj/item/reagent_containers/glass/bucket{
 	pixel_x = 6;
 	pixel_y = 7
 	},
@@ -15778,7 +15778,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/ursula)
 "dIO" = (
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "dIT" = (
@@ -15957,13 +15957,13 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Market_Stall_1)
 "dMh" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)";
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
@@ -16166,7 +16166,7 @@
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "dQz" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/ruinedvirusdish,
+/obj/item/ruinedvirusdish,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_Medical)
@@ -16350,7 +16350,7 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Deck1_Star_Corridor)
 "dTP" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = -6;
 	pixel_x = 9
 	},
@@ -16386,8 +16386,8 @@
 /area/SouthernCrossV2/Maints/ab_Hydroponics)
 "dUf" = (
 /obj/structure/bed/chair/oldsofa/left,
-/obj/item/weapon/handcuffs/fuzzy,
-/obj/item/weapon/digestion_remains/variant3,
+/obj/item/handcuffs/fuzzy,
+/obj/item/digestion_remains/variant3,
 /obj/machinery/button/windowtint{
 	pixel_y = 24;
 	id = "sc-WTmaintgamble1"
@@ -16467,11 +16467,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -16498,7 +16498,7 @@
 /area/shuttle/escape_pod5/station)
 "dVG" = (
 /obj/structure/table/glass,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -16509,7 +16509,7 @@
 /area/SouthernCrossV2/Science/Observation_Hall)
 "dVH" = (
 /obj/structure/table/glass,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/effect/floor_decal/corner/purple/diagonal{
 	dir = 4
@@ -16805,18 +16805,18 @@
 /area/SouthernCrossV2/Harbor/Fueling_Post)
 "dWz" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_y = 9;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/fire{
 	pixel_x = -7;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/toxin{
+/obj/item/storage/firstaid/toxin{
 	pixel_x = -7
 	},
-/obj/item/device/healthanalyzer{
+/obj/item/healthanalyzer{
 	pixel_y = -1;
 	pixel_x = 12
 	},
@@ -16841,7 +16841,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "dWI" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -16868,7 +16868,7 @@
 /area/SouthernCrossV2/Maints/ab_CardTrading)
 "dWO" = (
 /obj/structure/closet,
-/obj/item/weapon/bikehorn/rubberducky/grey,
+/obj/item/bikehorn/rubberducky/grey,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "dWP" = (
@@ -16879,8 +16879,8 @@
 /area/SouthernCrossV2/Science/Xenobotany_Isolation_Chamber)
 "dWS" = (
 /obj/structure/table/glass,
-/obj/item/weapon/surgical/circular_saw,
-/obj/item/weapon/surgical/scalpel/laser1{
+/obj/item/surgical/circular_saw,
+/obj/item/surgical/scalpel/laser1{
 	pixel_y = 13
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -17054,25 +17054,25 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Cargo/Depot2)
 "dXk" = (
-/obj/item/weapon/stock_parts/subspace/crystal{
+/obj/item/stock_parts/subspace/crystal{
 	pixel_x = -7;
 	pixel_y = -4
 	},
-/obj/item/weapon/stock_parts/subspace/crystal{
+/obj/item/stock_parts/subspace/crystal{
 	pixel_y = -4
 	},
-/obj/item/weapon/stock_parts/subspace/crystal{
+/obj/item/stock_parts/subspace/crystal{
 	pixel_x = 7;
 	pixel_y = -4
 	},
-/obj/item/weapon/stock_parts/subspace/crystal{
+/obj/item/stock_parts/subspace/crystal{
 	pixel_x = -7;
 	pixel_y = 6
 	},
-/obj/item/weapon/stock_parts/subspace/crystal{
+/obj/item/stock_parts/subspace/crystal{
 	pixel_y = 6
 	},
-/obj/item/weapon/stock_parts/subspace/crystal{
+/obj/item/stock_parts/subspace/crystal{
 	pixel_x = 7;
 	pixel_y = 6
 	},
@@ -17089,18 +17089,18 @@
 /area/shuttle/large_escape_pod2/station)
 "dXn" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_y = 9;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/fire{
 	pixel_x = -7;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/firstaid/toxin{
+/obj/item/storage/firstaid/toxin{
 	pixel_x = -7
 	},
-/obj/item/device/healthanalyzer{
+/obj/item/healthanalyzer{
 	pixel_y = -1;
 	pixel_x = 12
 	},
@@ -17436,35 +17436,35 @@
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "dYv" = (
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -11;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -8;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/gps/security{
+/obj/item/gps/security{
 	pixel_y = 7;
 	pixel_x = -10
 	},
-/obj/item/device/gps/security{
+/obj/item/gps/security{
 	pixel_y = 7;
 	pixel_x = -8
 	},
-/obj/item/device/gps/security{
+/obj/item/gps/security{
 	pixel_y = 7;
 	pixel_x = -6
 	},
-/obj/item/device/megaphone{
+/obj/item/megaphone{
 	pixel_y = 8;
 	pixel_x = 5
 	},
@@ -17519,7 +17519,7 @@
 /area/SouthernCrossV2/Science/Observation_Hall)
 "dYE" = (
 /obj/machinery/disposal,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -17546,7 +17546,7 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/SouthernCrossV2/Science/Observation_Hall)
 "dYJ" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -17592,19 +17592,19 @@
 /area/SouthernCrossV2/Commons/ForStar_1_Deck_Observatory)
 "dYZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/syringes{
+/obj/item/storage/box/syringes{
 	pixel_y = 2;
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/gloves{
 	pixel_x = 5;
 	pixel_y = 12
 	},
-/obj/item/device/analyzer/plant_analyzer{
+/obj/item/analyzer/plant_analyzer{
 	pixel_y = -1;
 	pixel_x = -12
 	},
-/obj/item/device/analyzer/plant_analyzer{
+/obj/item/analyzer/plant_analyzer{
 	pixel_y = 4;
 	pixel_x = -14
 	},
@@ -17662,11 +17662,11 @@
 	pixel_y = 12
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_y = -1;
 	pixel_x = 14
 	},
-/obj/item/weapon/reagent_containers/dropper{
+/obj/item/reagent_containers/dropper{
 	pixel_y = -4;
 	pixel_x = -8
 	},
@@ -18039,7 +18039,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -18122,46 +18122,46 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "eaP" = (
-/obj/item/weapon/stock_parts/micro_laser{
+/obj/item/stock_parts/micro_laser{
 	pixel_x = 9
 	},
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/micro_laser/high{
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/micro_laser/high{
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/weapon/stock_parts/capacitor{
+/obj/item/stock_parts/capacitor{
 	pixel_y = -5;
 	pixel_x = -6
 	},
-/obj/item/weapon/stock_parts/micro_laser/high{
+/obj/item/stock_parts/micro_laser/high{
 	pixel_y = 8;
 	pixel_x = -1
 	},
-/obj/item/weapon/stock_parts/micro_laser/high{
+/obj/item/stock_parts/micro_laser/high{
 	pixel_y = 8;
 	pixel_x = 4
 	},
-/obj/item/weapon/stock_parts/capacitor{
+/obj/item/stock_parts/capacitor{
 	pixel_y = -2;
 	pixel_x = -6
 	},
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/manipulator/nano{
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/manipulator/nano{
 	pixel_y = 2;
 	pixel_x = 4
 	},
-/obj/item/weapon/stock_parts/matter_bin/adv{
+/obj/item/stock_parts/matter_bin/adv{
 	pixel_y = -7;
 	pixel_x = -6
 	},
-/obj/item/weapon/stock_parts/scanning_module/omni{
+/obj/item/stock_parts/scanning_module/omni{
 	pixel_y = -4;
 	pixel_x = 6
 	},
-/obj/item/weapon/stock_parts/scanning_module/omni{
+/obj/item/stock_parts/scanning_module/omni{
 	pixel_y = -6;
 	pixel_x = 2
 	},
@@ -18187,14 +18187,14 @@
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "eaS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/item/weapon/rig/industrial/equipped{
+/obj/item/rig/industrial/equipped{
 	pixel_x = -5
 	},
 /obj/structure/table/rack{
 	dir = 8;
 	layer = 2.6
 	},
-/obj/item/weapon/rig/industrial/equipped{
+/obj/item/rig/industrial/equipped{
 	pixel_x = 6
 	},
 /obj/item/clothing/mask/breath{
@@ -18426,13 +18426,13 @@
 /obj/machinery/cell_charger{
 	pixel_y = 11
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 8;
@@ -18978,15 +18978,15 @@
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "epU" = (
 /obj/structure/bed/pillowpilefront/orange,
-/obj/item/weapon/storage/vore_egg/chicken{
+/obj/item/storage/vore_egg/chicken{
 	pixel_y = -2;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/vore_egg/chicken{
+/obj/item/storage/vore_egg/chicken{
 	pixel_y = -2;
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/vore_egg/red,
+/obj/item/storage/vore_egg/red,
 /turf/simulated/floor/wood/alt/tile/broken,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "eqf" = (
@@ -19257,7 +19257,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
 "evv" = (
-/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus{
+/obj/item/reagent_containers/blood/prelabeled/OMinus{
 	pixel_y = 6;
 	pixel_x = 8
 	},
@@ -19270,27 +19270,27 @@
 /area/shuttle/large_escape_pod1/station)
 "ewm" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/item/weapon/storage/vore_egg/yellow{
+/obj/item/storage/vore_egg/yellow{
 	pixel_y = 4;
 	pixel_x = 9
 	},
-/obj/item/weapon/bikehorn/rubberducky/pink,
-/obj/item/weapon/storage/vore_egg/rock,
+/obj/item/bikehorn/rubberducky/pink,
+/obj/item/storage/vore_egg/rock,
 /turf/simulated/floor/wood/alt/tile/broken,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "ewn" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/north{
 	name = "Ration Cabinet"
 	},
@@ -19314,16 +19314,16 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "exh" = (
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/expired,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/expired,
 /obj/machinery/light/small,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_Medical)
 "ext" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deck/cards/casino{
+/obj/item/deck/cards/casino{
 	pixel_y = 8
 	},
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /obj/machinery/light_construct{
 	dir = 1
 	},
@@ -19331,11 +19331,11 @@
 /area/SouthernCrossV2/Maints/ab_CardTrading)
 "exI" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/knife/butch{
+/obj/item/material/knife/butch{
 	pixel_x = 3;
 	pixel_y = -2
 	},
-/obj/item/weapon/material/knife/hook{
+/obj/item/material/knife/hook{
 	pixel_x = -3;
 	pixel_y = 3
 	},
@@ -19373,7 +19373,7 @@
 	dir = 4
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/syringe/ld50_syringe/choral,
+/obj/item/reagent_containers/syringe/ld50_syringe/choral,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Medical)
 "exY" = (
@@ -19392,22 +19392,22 @@
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor1)
 "eyu" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/rollingpapers{
+/obj/item/storage/rollingpapers{
 	pixel_x = -6;
 	pixel_y = 1
 	},
-/obj/item/weapon/storage/rollingpapers{
+/obj/item/storage/rollingpapers{
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/rollingpapers{
+/obj/item/storage/rollingpapers{
 	pixel_x = -6;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/rollingpapers/blunt{
+/obj/item/storage/rollingpapers/blunt{
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/rollingpapers/blunt{
+/obj/item/storage/rollingpapers/blunt{
 	pixel_x = 7;
 	pixel_y = 2
 	},
@@ -19710,7 +19710,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -19735,7 +19735,7 @@
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
 "eED" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/radio/subspace{
+/obj/item/radio/subspace{
 	pixel_y = 9;
 	pixel_x = -1
 	},
@@ -20382,15 +20382,15 @@
 	pixel_y = 3;
 	pixel_x = -7
 	},
-/obj/item/weapon/grenade/chem_grenade/cleaner{
+/obj/item/grenade/chem_grenade/cleaner{
 	pixel_y = -1;
 	pixel_x = -8
 	},
-/obj/item/weapon/grenade/chem_grenade/cleaner{
+/obj/item/grenade/chem_grenade/cleaner{
 	pixel_y = 1;
 	pixel_x = -2
 	},
-/obj/item/weapon/grenade/chem_grenade/cleaner{
+/obj/item/grenade/chem_grenade/cleaner{
 	pixel_y = 3;
 	pixel_x = 4
 	},
@@ -20402,7 +20402,7 @@
 /area/SouthernCrossV2/Domicile/Custodial_Office)
 "eQy" = (
 /obj/structure/table/marble,
-/obj/item/weapon/gun/projectile/revolver/capgun,
+/obj/item/gun/projectile/revolver/capgun,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Kitchen)
@@ -20479,7 +20479,7 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/SouthernCrossV2/Maints/ab_Kitchen)
 "eSo" = (
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "eSz" = (
@@ -20623,26 +20623,26 @@
 /area/SouthernCrossV2/Cargo/Mining_Ship_Bay)
 "eUq" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/telecomms/receiver{
+/obj/item/circuitboard/telecomms/receiver{
 	pixel_y = 11;
 	pixel_x = 2
 	},
-/obj/item/weapon/circuitboard/telecomms/receiver{
+/obj/item/circuitboard/telecomms/receiver{
 	pixel_y = 7;
 	pixel_x = 1
 	},
-/obj/item/weapon/circuitboard/telecomms/receiver{
+/obj/item/circuitboard/telecomms/receiver{
 	pixel_y = 3
 	},
-/obj/item/weapon/circuitboard/telecomms/processor{
+/obj/item/circuitboard/telecomms/processor{
 	pixel_y = -1;
 	pixel_x = -1
 	},
-/obj/item/weapon/circuitboard/telecomms/processor{
+/obj/item/circuitboard/telecomms/processor{
 	pixel_y = -5;
 	pixel_x = -2
 	},
-/obj/item/weapon/circuitboard/telecomms/processor{
+/obj/item/circuitboard/telecomms/processor{
 	pixel_y = -9;
 	pixel_x = -3
 	},
@@ -20805,11 +20805,11 @@
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
 "eWB" = (
 /obj/structure/closet/lasertag/blue,
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	channel = "NLS Southern Cross Hyperball";
 	name = "hyperball camera drone"
 	},
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	channel = "NLS Southern Cross Hyperball";
 	name = "hyperball camera drone"
 	},
@@ -20952,11 +20952,11 @@
 	layer = 1;
 	pixel_y = 12
 	},
-/obj/item/weapon/reagent_containers/glass/bucket{
+/obj/item/reagent_containers/glass/bucket{
 	pixel_x = -6;
 	pixel_y = 7
 	},
-/obj/item/weapon/reagent_containers/glass/bucket{
+/obj/item/reagent_containers/glass/bucket{
 	pixel_x = 6;
 	pixel_y = 7
 	},
@@ -20991,43 +20991,43 @@
 /area/SouthernCrossV2/Harbor/Dock1)
 "eZG" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = -5;
 	pixel_x = 8
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = -2;
 	pixel_x = 9
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = 1;
 	pixel_x = 8
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = 4;
 	pixel_x = 9
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = 7;
 	pixel_x = 8
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = 10;
 	pixel_x = 9
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = -6;
 	pixel_x = -5
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = -2;
 	pixel_x = -5
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = 2;
 	pixel_x = -3
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = 6;
 	pixel_x = -4
 	},
@@ -21307,7 +21307,7 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck1_Science_ForCorridor1)
 "fed" = (
-/obj/item/device/pda/chef,
+/obj/item/pda/chef,
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_Kitchen)
@@ -21475,15 +21475,15 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor1)
 "fiF" = (
-/obj/item/weapon/material/kitchen/utensil/foon{
+/obj/item/material/kitchen/utensil/foon{
 	pixel_x = -6;
 	pixel_y = 21
 	},
-/obj/item/weapon/material/kitchen/utensil/spork{
+/obj/item/material/kitchen/utensil/spork{
 	pixel_y = 21;
 	pixel_x = 6
 	},
-/obj/item/weapon/material/knife/table{
+/obj/item/material/knife/table{
 	pixel_y = 21;
 	pixel_x = 1
 	},
@@ -21497,7 +21497,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor3)
 "fiV" = (
-/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/wolpincube,
+/obj/item/reagent_containers/food/snacks/monkeycube/wrapped/wolpincube,
 /obj/structure/table/standard,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
@@ -21784,11 +21784,11 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "fnx" = (
 /obj/structure/bed/pillowpilefront/white,
-/obj/item/weapon/storage/vore_egg/badrecipe{
+/obj/item/storage/vore_egg/badrecipe{
 	pixel_y = 3;
 	pixel_x = 4
 	},
-/obj/item/weapon/storage/vore_egg/purple{
+/obj/item/storage/vore_egg/purple{
 	pixel_y = 1;
 	pixel_x = -9
 	},
@@ -22399,16 +22399,16 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Mining_Ship_Bay)
 "fBA" = (
-/obj/item/weapon/gun/energy/locked/frontier/rifle{
+/obj/item/gun/energy/locked/frontier/rifle{
 	pixel_y = 9
 	},
-/obj/item/weapon/cell/device/weapon{
+/obj/item/cell/device/weapon{
 	pixel_y = 4
 	},
-/obj/item/weapon/cell/device/weapon{
+/obj/item/cell/device/weapon{
 	pixel_y = 2
 	},
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(1,19)
 	},
@@ -22416,7 +22416,7 @@
 	pixel_y = -7;
 	pixel_x = 5
 	},
-/obj/item/weapon/gun/energy/locked/frontier/rifle{
+/obj/item/gun/energy/locked/frontier/rifle{
 	pixel_y = 6
 	},
 /obj/item/ammo_magazine/clip/c762{
@@ -22427,10 +22427,10 @@
 	pixel_y = -7;
 	pixel_x = -1
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle{
+/obj/item/gun/projectile/shotgun/pump/rifle{
 	pixel_y = -2
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle{
+/obj/item/gun/projectile/shotgun/pump/rifle{
 	pixel_y = -5
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -22712,11 +22712,11 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "fIw" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/survival/comp{
+/obj/item/storage/box/survival/comp{
 	pixel_y = 2;
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/box/survival/synth{
+/obj/item/storage/box/survival/synth{
 	pixel_y = 13;
 	pixel_x = 5
 	},
@@ -22812,7 +22812,7 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
 	},
-/obj/item/device/depth_scanner,
+/obj/item/depth_scanner,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "fKo" = (
@@ -23080,7 +23080,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock5)
 "fPg" = (
-/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus{
+/obj/item/reagent_containers/blood/prelabeled/OMinus{
 	pixel_y = 6;
 	pixel_x = 8
 	},
@@ -23101,7 +23101,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "fQn" = (
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Observation_Hall)
@@ -23142,7 +23142,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Chamber2)
 "fQE" = (
-/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/sparracube,
+/obj/item/reagent_containers/food/snacks/monkeycube/wrapped/sparracube,
 /obj/random/tool,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
@@ -23166,11 +23166,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -23741,11 +23741,11 @@
 /area/SouthernCrossV2/Science/Xenobotany_Isolation_Chamber)
 "fYh" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_y = -1;
 	pixel_x = 14
 	},
-/obj/item/weapon/reagent_containers/dropper{
+/obj/item/reagent_containers/dropper{
 	pixel_y = -4;
 	pixel_x = -8
 	},
@@ -24043,11 +24043,11 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor2)
 "gdM" = (
-/obj/item/weapon/storage/box/monkeycubes/wolpincubes,
-/obj/item/weapon/storage/box/monkeycubes/sparracubes,
-/obj/item/weapon/storage/box/monkeycubes/farwacubes,
+/obj/item/storage/box/monkeycubes/wolpincubes,
+/obj/item/storage/box/monkeycubes/sparracubes,
+/obj/item/storage/box/monkeycubes/farwacubes,
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube,
+/obj/item/reagent_containers/food/snacks/monkeycube/wrapped/farwacube,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
 "gdQ" = (
@@ -24346,15 +24346,15 @@
 /obj/item/stack/material/cardboard{
 	amount = 25
 	},
-/obj/item/weapon/packageWrap{
+/obj/item/packageWrap{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/packageWrap{
+/obj/item/packageWrap{
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/obj/item/weapon/tape_roll{
+/obj/item/tape_roll{
 	pixel_x = 3;
 	pixel_y = -5
 	},
@@ -24688,16 +24688,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Harbor/Dock1)
 "gpk" = (
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -24830,7 +24830,7 @@
 /area/SouthernCrossV2/Science/PA_Chamber)
 "gti" = (
 /obj/effect/decal/cleanable/greenglow,
-/obj/item/weapon/implant/dud,
+/obj/item/implant/dud,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "gtm" = (
@@ -24943,13 +24943,13 @@
 /obj/machinery/cell_charger{
 	pixel_y = 11
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
@@ -25075,12 +25075,12 @@
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/SouthernCrossV2/Commons/Cryostorage_Lounge)
 "gxR" = (
-/obj/item/weapon/reagent_containers/syringe/drugs{
+/obj/item/reagent_containers/syringe/drugs{
 	pixel_y = 5;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/syringe/drugs,
-/obj/item/weapon/storage/pill_bottle/happy{
+/obj/item/reagent_containers/syringe/drugs,
+/obj/item/storage/pill_bottle/happy{
 	pixel_x = 5
 	},
 /obj/machinery/power/apc{
@@ -25210,22 +25210,22 @@
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/weapon/pen/crayon/marker/black{
+/obj/item/pen/crayon/marker/black{
 	pixel_y = 5
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = -2;
 	pixel_x = 1
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 4;
 	pixel_x = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_y = 8;
 	pixel_x = -7
 	},
@@ -25464,11 +25464,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -25891,7 +25891,7 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "gPY" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -25965,7 +25965,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
 "gRn" = (
-/obj/item/device/uv_light{
+/obj/item/uv_light{
 	pixel_y = 3;
 	pixel_x = 9
 	},
@@ -25987,15 +25987,15 @@
 	pixel_y = 22
 	},
 /obj/structure/bed/pillowpile/orange,
-/obj/item/weapon/card/id/security/detective,
-/obj/item/weapon/storage/vore_egg/chicken{
+/obj/item/card/id/security/detective,
+/obj/item/storage/vore_egg/chicken{
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/vore_egg/red{
+/obj/item/storage/vore_egg/red{
 	pixel_y = 5;
 	pixel_x = -3
 	},
-/obj/item/weapon/storage/vore_egg/chicken{
+/obj/item/storage/vore_egg/chicken{
 	pixel_y = -4;
 	pixel_x = -11
 	},
@@ -26087,7 +26087,7 @@
 "gST" = (
 /obj/structure/table/rack/shelf,
 /obj/random/mainttoyloot,
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick/random,
 /obj/item/seeds/random,
 /obj/random/mug,
 /obj/item/clothing/head/fishing,
@@ -26116,7 +26116,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/ab_Kitchen)
 "gTf" = (
-/obj/item/weapon/paper/awaygate/snowfield/final_note,
+/obj/item/paper/awaygate/snowfield/final_note,
 /obj/random/trash,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
@@ -26449,9 +26449,9 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "gYt" = (
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /obj/structure/table/glass,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -26548,14 +26548,14 @@
 /area/SouthernCrossV2/Commons/AftPort_1_Deck_Observatory)
 "ham" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/tool/screwdriver{
+/obj/item/tool/screwdriver{
 	pixel_y = 15
 	},
 /obj/item/clothing/head/welding{
 	pixel_y = 11;
 	pixel_x = 5
 	},
-/obj/item/weapon/weldingtool{
+/obj/item/weldingtool{
 	pixel_y = -2;
 	pixel_x = -4
 	},
@@ -26668,11 +26668,11 @@
 /area/SouthernCrossV2/Harbor/Ship_Bay3)
 "hcd" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/lights/bulbs{
+/obj/item/storage/box/lights/bulbs{
 	pixel_y = 5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/lights/tubes{
+/obj/item/storage/box/lights/tubes{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -26805,7 +26805,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor1)
 "hga" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -26879,8 +26879,8 @@
 /area/SouthernCrossV2/Harbor/Fueling_Post)
 "hgS" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/melee/baton/loaded,
-/obj/item/device/multitool,
+/obj/item/melee/baton/loaded,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
 "hgW" = (
@@ -26896,10 +26896,10 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
 "hhu" = (
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/regular,
 /obj/item/roller,
 /obj/structure/closet/walllocker_double/medical/south,
 /turf/simulated/floor/tiled/milspec,
@@ -26952,10 +26952,10 @@
 "hir" = (
 /obj/structure/table/rack/shelf,
 /obj/random/toolbox,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/storage/wallet/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/device/tape/random,
+/obj/item/towel/random,
+/obj/item/storage/wallet/random,
+/obj/item/melee/umbrella/random,
+/obj/item/rectape/random,
 /obj/random/cash{
 	pixel_x = -5;
 	pixel_y = 5
@@ -26967,7 +26967,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
 "hiv" = (
-/obj/item/weapon/bone/skull/unknown,
+/obj/item/bone/skull/unknown,
 /obj/effect/decal/cleanable/blood/splatter{
 	color = "#ffc43b";
 	name = "Honey splatter"
@@ -27142,7 +27142,7 @@
 /area/SouthernCrossV2/Harbor/Port_Docking_Foyer)
 "hnJ" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/deck/tarot,
+/obj/item/deck/tarot,
 /obj/machinery/light_construct{
 	dir = 1
 	},
@@ -27156,7 +27156,7 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Commons/Stairwell_Star)
 "hon" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -27203,9 +27203,9 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/virusdish/random,
+/obj/item/virusdish/random,
 /obj/structure/table/rack,
-/obj/item/weapon/virusdish/random{
+/obj/item/virusdish/random{
 	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -28162,11 +28162,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -28211,8 +28211,8 @@
 /obj/item/clothing/accessory/bowtie,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/morestuff,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/device/tape/random,
+/obj/item/flame/lighter/random,
+/obj/item/rectape/random,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
@@ -28260,7 +28260,7 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -28396,7 +28396,7 @@
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "hLA" = (
 /obj/structure/table/steel,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Science_ForCorridor1)
 "hLC" = (
@@ -28755,8 +28755,8 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock4)
 "hRx" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/material/shard,
+/obj/item/reagent_containers/glass/beaker,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_Medical)
@@ -28917,11 +28917,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -29169,7 +29169,7 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "ibE" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deck/egy,
+/obj/item/deck/egy,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_CardTrading)
 "ibZ" = (
@@ -29272,31 +29272,31 @@
 /area/SouthernCrossV2/Harbor/Fueling_Storage)
 "idL" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/handcuffs{
+/obj/item/handcuffs{
 	pixel_y = 7;
 	pixel_x = -4
 	},
-/obj/item/weapon/handcuffs{
+/obj/item/handcuffs{
 	pixel_y = 5;
 	pixel_x = -2
 	},
-/obj/item/weapon/reagent_containers/spray/pepper{
+/obj/item/reagent_containers/spray/pepper{
 	pixel_y = 7;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/spray/pepper{
+/obj/item/reagent_containers/spray/pepper{
 	pixel_y = 7;
 	pixel_x = 4
 	},
-/obj/item/weapon/hand_labeler{
+/obj/item/hand_labeler{
 	pixel_y = -3;
 	pixel_x = -5
 	},
-/obj/item/device/flash{
+/obj/item/flash{
 	pixel_y = -1;
 	pixel_x = 9
 	},
-/obj/item/device/flash{
+/obj/item/flash{
 	pixel_y = -1;
 	pixel_x = 6
 	},
@@ -29980,11 +29980,11 @@
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "ipa" = (
 /obj/structure/table/glass,
-/obj/item/weapon/gun/energy/taser/xeno{
+/obj/item/gun/energy/taser/xeno{
 	pixel_y = 7;
 	pixel_x = -3
 	},
-/obj/item/weapon/gun/energy/taser/xeno,
+/obj/item/gun/energy/taser/xeno,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -30783,7 +30783,7 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/flour,
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/storage/backpack/genetics,
+/obj/item/storage/backpack/genetics,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_Medical)
 "iEL" = (
@@ -30836,7 +30836,7 @@
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Commons/ForPort_1_Deck_Observatory)
 "iGu" = (
-/obj/item/weapon/deck/wizoff,
+/obj/item/deck/wizoff,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_CardTrading)
@@ -30856,13 +30856,13 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor3)
 "iIr" = (
-/obj/item/device/defib_kit/loaded,
-/obj/item/weapon/storage/pill_bottle/tramadol{
+/obj/item/defib_kit/loaded,
+/obj/item/storage/pill_bottle/tramadol{
 	pixel_y = 1;
 	pixel_x = 9
 	},
 /obj/structure/closet/walllocker_double/medical/south,
-/obj/item/weapon/storage/pill_bottle/dexalin{
+/obj/item/storage/pill_bottle/dexalin{
 	pixel_y = 1;
 	pixel_x = -7
 	},
@@ -30900,22 +30900,22 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Commons/For_Locker_Room)
 "iJO" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/south{
 	name = "Ration Cabinet"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -31375,7 +31375,7 @@
 /obj/structure/closet/secure_closet/hydroponics{
 	req_access = list(47)
 	},
-/obj/item/device/multitool,
+/obj/item/multitool,
 /obj/machinery/light{
 	name = "1S-light fixture"
 	},
@@ -31417,7 +31417,7 @@
 /obj/machinery/atmospherics/binary/pump/high_power{
 	name = "PA-Room pump"
 	},
-/obj/item/device/geiger/wall/east,
+/obj/item/geiger/wall/east,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Science/PA_Chamber)
@@ -31438,7 +31438,7 @@
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "iVq" = (
 /obj/structure/table,
-/obj/item/weapon/storage/toolbox/hydro{
+/obj/item/storage/toolbox/hydro{
 	pixel_y = 15;
 	pixel_x = -4
 	},
@@ -32023,7 +32023,7 @@
 /obj/structure/curtain/bed{
 	name = "curtain"
 	},
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/storage/pill_bottle/dice_nerd,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_CardTrading)
 "jhQ" = (
@@ -32254,7 +32254,7 @@
 /area/SouthernCrossV2/Science/Observation_Hall)
 "jlS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/handcuffs/cable/white,
+/obj/item/handcuffs/cable/white,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -32488,7 +32488,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Deck1_Transit_Hall)
 "jpR" = (
-/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus{
+/obj/item/reagent_containers/blood/prelabeled/OMinus{
 	pixel_y = 6;
 	pixel_x = 8
 	},
@@ -32507,7 +32507,7 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Domicile/For_Restroom)
 "jqu" = (
-/obj/item/device/geiger/wall/north,
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "jqz" = (
@@ -32621,7 +32621,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "jsR" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -32825,8 +32825,8 @@
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "jxi" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/cups,
 /obj/item/stack/material/plastic{
 	amount = 25
 	},
@@ -33205,24 +33205,24 @@
 /obj/structure/closet/walllocker_double/kitchen/east{
 	name = "Ration Cabinet"
 	},
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -33384,7 +33384,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "jGg" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -33418,7 +33418,7 @@
 /turf/simulated/floor/reinforced,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "jGA" = (
-/obj/item/weapon/reagent_containers/blood/prelabeled/OMinus{
+/obj/item/reagent_containers/blood/prelabeled/OMinus{
 	pixel_y = 6;
 	pixel_x = 8
 	},
@@ -33520,25 +33520,25 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor1)
 "jJe" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/folder/white{
+/obj/item/folder/white{
 	pixel_y = 4;
 	pixel_x = -7
 	},
@@ -33592,31 +33592,31 @@
 /area/SouthernCrossV2/Commons/Star_1Deck_Central_Corridor_1)
 "jKo" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/o2{
 	pixel_y = 11;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/firstaid/toxin{
+/obj/item/storage/firstaid/toxin{
 	pixel_y = 5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/fire{
 	pixel_y = -1;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_y = -7;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/beakers{
+/obj/item/storage/box/beakers{
 	pixel_x = -8;
 	pixel_y = -5
 	},
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/gloves{
 	pixel_y = 5;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/box/masks/white{
+/obj/item/storage/box/masks/white{
 	pixel_y = 15;
 	pixel_x = -8
 	},
@@ -33631,7 +33631,7 @@
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "jKC" = (
 /obj/random/crate,
-/obj/item/device/chameleon,
+/obj/item/chameleon,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarChamber1)
 "jKE" = (
@@ -33926,8 +33926,8 @@
 	dir = 4
 	},
 /obj/machinery/reagentgrinder,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/packageWrap,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/packageWrap,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "jQX" = (
@@ -33951,11 +33951,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "jSv" = (
-/obj/item/weapon/reagent_containers/syringe/drugs{
+/obj/item/reagent_containers/syringe/drugs{
 	pixel_y = 5;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/syringe/drugs,
+/obj/item/reagent_containers/syringe/drugs,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Medical)
 "jSw" = (
@@ -34020,7 +34020,7 @@
 /area/SouthernCrossV2/Science/Xenobotany_Lab)
 "jTK" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/monkeycubes/sobakacubes,
+/obj/item/storage/box/monkeycubes/sobakacubes,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
 "jTS" = (
@@ -34039,7 +34039,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "jTZ" = (
-/obj/item/weapon/broken_bottle,
+/obj/item/broken_bottle,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "jUm" = (
@@ -34136,7 +34136,7 @@
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Commons/ForStar_1_Deck_Observatory)
 "jVy" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -34667,7 +34667,7 @@
 /area/SouthernCrossV2/Cargo/Deck1_Stairwell)
 "kew" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deskbell,
+/obj/item/deskbell,
 /obj/structure/curtain/bed{
 	name = "curtain"
 	},
@@ -34822,7 +34822,7 @@
 /area/SouthernCrossV2/Maints/ab_SportsField)
 "kiF" = (
 /obj/structure/filingcabinet/chestdrawer,
-/obj/item/device/radio/intercom/department/security{
+/obj/item/radio/intercom/department/security{
 	dir = 4;
 	icon_override = "secintercom";
 	pixel_x = 22;
@@ -35229,7 +35229,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Port_Corridor)
 "kqY" = (
-/obj/item/weapon/digestion_remains/ribcage,
+/obj/item/digestion_remains/ribcage,
 /obj/item/clothing/under/fluff/latexmaid{
 	pixel_y = 5
 	},
@@ -35344,7 +35344,7 @@
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "ktD" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = 10;
 	pixel_x = -5
 	},
@@ -35726,7 +35726,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "kBo" = (
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_Kitchen)
@@ -36645,20 +36645,20 @@
 /obj/structure/urinal{
 	pixel_y = 28
 	},
-/obj/item/weapon/card/id/security,
-/obj/item/weapon/digestion_remains/ribcage,
-/obj/item/weapon/digestion_remains{
+/obj/item/card/id/security,
+/obj/item/digestion_remains/ribcage,
+/obj/item/digestion_remains{
 	pixel_y = -8;
 	pixel_x = -5
 	},
 /obj/effect/decal/cleanable/blood{
 	icon_state = "remainsposi"
 	},
-/obj/item/weapon/haircomb{
+/obj/item/haircomb{
 	pixel_y = 7;
 	pixel_x = -3
 	},
-/obj/item/weapon/digestion_remains/skull/teshari{
+/obj/item/digestion_remains/skull/teshari{
 	pixel_y = 8;
 	pixel_x = -5
 	},
@@ -36765,11 +36765,11 @@
 /area/SouthernCrossV2/Cargo/Depot1)
 "kWq" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/lights/bulbs{
+/obj/item/storage/box/lights/bulbs{
 	pixel_y = 5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/lights/tubes{
+/obj/item/storage/box/lights/tubes{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -36823,11 +36823,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -36917,7 +36917,7 @@
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/accessory/collar/bell,
 /obj/random/maintenance/medical,
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick/random,
 /obj/random/action_figure,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
@@ -36930,24 +36930,24 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "kYw" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
@@ -37210,7 +37210,7 @@
 "lds" = (
 /obj/structure/table/rack/shelf,
 /obj/random/maintenance/misc,
-/obj/item/weapon/storage/wallet/random,
+/obj/item/storage/wallet/random,
 /obj/item/broken_device/random,
 /obj/random/forgotten_tram,
 /obj/effect/floor_decal/rust,
@@ -37247,12 +37247,12 @@
 "len" = (
 /obj/effect/decal/remains,
 /obj/item/clothing/under/color/grey,
-/obj/item/device/pda,
+/obj/item/pda,
 /obj/item/clothing/shoes/black,
-/obj/item/weapon/storage/backpack,
-/obj/item/device/radio/headset,
+/obj/item/storage/backpack,
+/obj/item/radio/headset,
 /obj/effect/decal/cleanable/vomit,
-/obj/item/weapon/digestion_remains/skull,
+/obj/item/digestion_remains/skull,
 /obj/random/organ,
 /obj/random/organ,
 /obj/random/organ,
@@ -37465,7 +37465,7 @@
 /obj/structure/table/rack/shelf,
 /obj/random/tool,
 /obj/random/maintenance/cargo,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /obj/item/seeds/random,
 /obj/random/action_figure,
 /obj/item/clothing/head/fishing,
@@ -37506,22 +37506,22 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_PortCorridor1)
 "ljv" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/south{
 	name = "Ration Cabinet"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -37713,11 +37713,11 @@
 	pixel_y = -30;
 	name = "1S-newscaster"
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 10;
 	pixel_x = 6
 	},
-/obj/item/device/threadneedle{
+/obj/item/threadneedle{
 	pixel_y = 11;
 	pixel_x = -7
 	},
@@ -38502,22 +38502,22 @@
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/weapon/pen/crayon/marker/black{
+/obj/item/pen/crayon/marker/black{
 	pixel_y = 5
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = -2;
 	pixel_x = 1
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 4;
 	pixel_x = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_y = 8;
 	pixel_x = -7
 	},
@@ -38584,7 +38584,7 @@
 /area/SouthernCrossV2/Cargo/Depot1)
 "lBN" = (
 /obj/structure/table/steel,
-/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
 /obj/random/tech_supply,
 /obj/effect/landmark{
 	name = "blobstart"
@@ -39161,11 +39161,11 @@
 	pixel_y = -1;
 	pixel_x = -1
 	},
-/obj/item/weapon/material/knife/machete/hatchet{
+/obj/item/material/knife/machete/hatchet{
 	pixel_x = -4;
 	pixel_y = 5
 	},
-/obj/item/weapon/material/knife/machete/hatchet{
+/obj/item/material/knife/machete/hatchet{
 	pixel_x = 1;
 	pixel_y = 4
 	},
@@ -39688,8 +39688,8 @@
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "lUk" = (
 /obj/structure/bed/pillowpile/white,
-/obj/item/weapon/storage/vore_egg/tajaran,
-/obj/item/weapon/storage/vore_egg/yellow{
+/obj/item/storage/vore_egg/tajaran,
+/obj/item/storage/vore_egg/yellow{
 	pixel_y = -2;
 	pixel_x = 11
 	},
@@ -39860,24 +39860,24 @@
 /area/SouthernCrossV2/Harbor/Port_Docking_Foyer)
 "lXs" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
@@ -40307,7 +40307,7 @@
 /obj/structure/table/rack/shelf,
 /obj/random/powercell/device,
 /obj/random/maintenance/morestuff,
-/obj/item/weapon/lipstick/random,
+/obj/item/lipstick/random,
 /obj/item/broken_device/random,
 /obj/random/forgotten_tram,
 /obj/effect/floor_decal/rust,
@@ -40477,7 +40477,7 @@
 	dir = 4;
 	c_tag = "D1-Sec-Elevator1"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -40643,11 +40643,11 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "mmI" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/lights/bulbs{
+/obj/item/storage/box/lights/bulbs{
 	pixel_y = 5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/lights/tubes{
+/obj/item/storage/box/lights/tubes{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -40943,7 +40943,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -40952,7 +40952,7 @@
 /area/SouthernCrossV2/Harbor/Fueling_Post)
 "mrp" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = 10;
 	pixel_x = -5
 	},
@@ -41030,15 +41030,15 @@
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint)
 "msi" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium";
 	pixel_y = -7;
 	pixel_x = -3
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/large{
+/obj/item/reagent_containers/glass/beaker/large{
 	pixel_y = 5;
 	pixel_x = -8
 	},
@@ -41120,25 +41120,25 @@
 /area/SouthernCrossV2/Harbor/Ship_Bay1)
 "mtY" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/box/monkeycubes/sparracubes{
+/obj/item/storage/box/monkeycubes/sparracubes{
 	pixel_y = -7;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/box/monkeycubes/sparracubes{
+/obj/item/storage/box/monkeycubes/sparracubes{
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/box/monkeycubes/stokcubes{
+/obj/item/storage/box/monkeycubes/stokcubes{
 	pixel_y = 7;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/box/monkeycubes/stokcubes{
+/obj/item/storage/box/monkeycubes/stokcubes{
 	pixel_y = -7;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/monkeycubes/wolpincubes{
+/obj/item/storage/box/monkeycubes/wolpincubes{
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/monkeycubes/wolpincubes{
+/obj/item/storage/box/monkeycubes/wolpincubes{
 	pixel_y = 7;
 	pixel_x = 6
 	},
@@ -41215,11 +41215,11 @@
 /area/SouthernCrossV2/Commons/Deck1_Transit_Hall)
 "mvp" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/survival/comp{
+/obj/item/storage/box/survival/comp{
 	pixel_y = 2;
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/box/survival/synth{
+/obj/item/storage/box/survival/synth{
 	pixel_y = 13;
 	pixel_x = 5
 	},
@@ -41315,31 +41315,31 @@
 	pixel_y = 30
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/handcuffs{
+/obj/item/handcuffs{
 	pixel_y = 7;
 	pixel_x = -4
 	},
-/obj/item/weapon/handcuffs{
+/obj/item/handcuffs{
 	pixel_y = 5;
 	pixel_x = -2
 	},
-/obj/item/weapon/reagent_containers/spray/pepper{
+/obj/item/reagent_containers/spray/pepper{
 	pixel_y = 7;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/spray/pepper{
+/obj/item/reagent_containers/spray/pepper{
 	pixel_y = 7;
 	pixel_x = 4
 	},
-/obj/item/weapon/hand_labeler{
+/obj/item/hand_labeler{
 	pixel_y = -3;
 	pixel_x = -5
 	},
-/obj/item/device/flash{
+/obj/item/flash{
 	pixel_y = -1;
 	pixel_x = 9
 	},
-/obj/item/device/flash{
+/obj/item/flash{
 	pixel_y = -1;
 	pixel_x = 6
 	},
@@ -41518,18 +41518,18 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor3)
 "mzf" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/south{
 	name = "Ration Cabinet"
 	},
@@ -41553,39 +41553,39 @@
 	dir = 8;
 	layer = 2.6
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 7;
 	pixel_x = 7
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 4;
 	pixel_x = 7
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 1;
 	pixel_x = 7
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = -2;
 	pixel_x = 7
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 5;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 2;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = -1;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = -4;
 	pixel_x = -7
 	},
@@ -41593,31 +41593,31 @@
 /area/SouthernCrossV2/Cargo/Mining_EVA)
 "mzL" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/box/monkeycubes{
+/obj/item/storage/box/monkeycubes{
 	pixel_y = -6;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/box/monkeycubes{
+/obj/item/storage/box/monkeycubes{
 	pixel_y = 1;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/box/monkeycubes/farwacubes{
+/obj/item/storage/box/monkeycubes/farwacubes{
 	pixel_y = 8;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/box/monkeycubes/neaeracubes{
+/obj/item/storage/box/monkeycubes/neaeracubes{
 	pixel_y = -6;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/monkeycubes/neaeracubes{
+/obj/item/storage/box/monkeycubes/neaeracubes{
 	pixel_y = -6;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/monkeycubes/sarucubes{
+/obj/item/storage/box/monkeycubes/sarucubes{
 	pixel_y = 1;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/monkeycubes/sobakacubes{
+/obj/item/storage/box/monkeycubes/sobakacubes{
 	pixel_y = 8;
 	pixel_x = 6
 	},
@@ -41918,8 +41918,8 @@
 /area/shuttle/cryo/station)
 "mFP" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/mop/advanced,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/mop/advanced,
+/obj/item/reagent_containers/glass/bucket,
 /obj/machinery/newscaster{
 	pixel_x = -28;
 	name = "1W-newscaster"
@@ -42021,8 +42021,8 @@
 "mHy" = (
 /obj/structure/table/rack/shelf,
 /obj/random/maintenance/engineering,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/towel/random,
+/obj/item/melee/umbrella/random,
 /obj/random/cigarettes,
 /obj/random/instrument,
 /obj/effect/floor_decal/rust,
@@ -42219,15 +42219,15 @@
 	pixel_y = -32
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/beaker/large{
+/obj/item/reagent_containers/glass/beaker/large{
 	pixel_y = 10;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/dropper{
+/obj/item/reagent_containers/dropper{
 	pixel_y = -4;
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/sulphuric{
+/obj/item/reagent_containers/glass/beaker/sulphuric{
 	pixel_y = 8;
 	pixel_x = -4
 	},
@@ -42300,7 +42300,7 @@
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "mMT" = (
 /obj/machinery/vending/snack,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -42455,8 +42455,8 @@
 	dir = 4
 	},
 /obj/structure/table/steel,
-/obj/item/weapon/storage/belt/janitor,
-/obj/item/weapon/storage/belt/janitor{
+/obj/item/storage/belt/janitor,
+/obj/item/storage/belt/janitor{
 	pixel_x = 2;
 	pixel_y = 6
 	},
@@ -42915,19 +42915,19 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "mWk" = (
 /obj/structure/table/rack,
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = -7
 	},
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = -3
 	},
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = 1
 	},
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = 1
 	},
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = 5
 	},
 /obj/machinery/camera/network/security{
@@ -43079,7 +43079,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Market_Stall_1)
 "mZn" = (
-/obj/item/weapon/bone/skull/unathi,
+/obj/item/bone/skull/unathi,
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
@@ -43093,7 +43093,7 @@
 /area/SouthernCrossV2/Engineering/GravGen_Room)
 "mZy" = (
 /obj/structure/hyperball_pedestal,
-/obj/item/weapon/laserdome_hyperball,
+/obj/item/laserdome_hyperball,
 /obj/effect/floor_decal/road/center{
 	dir = 8
 	},
@@ -43250,7 +43250,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Security_StarChamber1)
 "ndt" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -43435,8 +43435,8 @@
 /area/SouthernCrossV2/Commons/Aft_1_Deck_Stairwell)
 "njR" = (
 /obj/structure/bed/pillowpile/white,
-/obj/item/weapon/storage/vore_egg/blue,
-/obj/item/weapon/storage/vore_egg/orange{
+/obj/item/storage/vore_egg/blue,
+/obj/item/storage/vore_egg/orange{
 	pixel_y = -3;
 	pixel_x = -9
 	},
@@ -43550,7 +43550,7 @@
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "nlX" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/pen/fountain4,
+/obj/item/pen/fountain4,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the Particle Accelerator chamber.";
 	layer = 4;
@@ -43756,12 +43756,12 @@
 /area/SouthernCrossV2/Cargo/Depot2)
 "nqa" = (
 /obj/structure/table/steel,
-/obj/item/weapon/virusdish/random,
-/obj/item/weapon/virusdish/random,
-/obj/item/weapon/surgical/scalpel,
-/obj/item/weapon/surgical/cautery,
-/obj/item/weapon/surgical/FixOVein,
-/obj/item/weapon/surgical/retractor,
+/obj/item/virusdish/random,
+/obj/item/virusdish/random,
+/obj/item/surgical/scalpel,
+/obj/item/surgical/cautery,
+/obj/item/surgical/FixOVein,
+/obj/item/surgical/retractor,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "nqx" = (
@@ -43781,11 +43781,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -44053,7 +44053,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Corridor3)
 "nvF" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -44075,7 +44075,7 @@
 /obj/machinery/atmospherics/unary/heater{
 	icon_state = "heater"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -44126,11 +44126,11 @@
 	pixel_y = 5;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/oxygen/engi{
+/obj/item/tank/emergency/oxygen/engi{
 	pixel_y = 6;
 	pixel_x = 4
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = -6;
 	pixel_x = -10
 	},
@@ -44218,11 +44218,11 @@
 /area/SouthernCrossV2/Engineering/Telecomms_Foyer)
 "nza" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/wirecutters/clippers{
+/obj/item/tool/wirecutters/clippers{
 	pixel_y = -3;
 	pixel_x = -5
 	},
-/obj/item/weapon/material/minihoe{
+/obj/item/material/minihoe{
 	pixel_y = 6;
 	pixel_x = 4
 	},
@@ -44237,7 +44237,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "nzy" = (
-/obj/item/device/analyzer/plant_analyzer{
+/obj/item/analyzer/plant_analyzer{
 	pixel_y = -1;
 	pixel_x = -4
 	},
@@ -44277,19 +44277,19 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Deck1_Security_PortCorridor2)
 "nAJ" = (
-/obj/item/weapon/anobattery{
+/obj/item/anobattery{
 	pixel_x = -6;
 	pixel_y = 2
 	},
-/obj/item/weapon/anobattery{
+/obj/item/anobattery{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/weapon/anobattery{
+/obj/item/anobattery{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/anobattery{
+/obj/item/anobattery{
 	pixel_x = 6;
 	pixel_y = 6
 	},
@@ -44381,11 +44381,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -45004,18 +45004,18 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock4)
 "nMF" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/north{
 	name = "Ration Cabinet"
 	},
@@ -45498,7 +45498,7 @@
 	pixel_y = -5;
 	pixel_x = 8
 	},
-/obj/item/device/pda/botanist{
+/obj/item/pda/botanist{
 	pixel_y = 4;
 	pixel_x = -5
 	},
@@ -45557,11 +45557,11 @@
 	pixel_y = 1;
 	pixel_x = 4
 	},
-/obj/item/device/healthanalyzer{
+/obj/item/healthanalyzer{
 	pixel_y = 9;
 	pixel_x = 4
 	},
-/obj/item/device/healthanalyzer{
+/obj/item/healthanalyzer{
 	pixel_y = 9;
 	pixel_x = -3
 	},
@@ -45947,7 +45947,7 @@
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor3)
 "obS" = (
 /obj/structure/table/glass,
-/obj/item/weapon/weldingtool{
+/obj/item/weldingtool{
 	pixel_y = 7;
 	pixel_x = 2
 	},
@@ -46331,10 +46331,10 @@
 /area/SouthernCrossV2/Harbor/Dock4)
 "oju" = (
 /obj/structure/closet/walllocker_double/medical/west,
-/obj/item/weapon/storage/firstaid,
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/o2,
+/obj/item/storage/firstaid,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2,
 /obj/item/roller,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/needle)
@@ -46914,25 +46914,25 @@
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
-/obj/item/weapon/storage/pill_bottle/carbon{
+/obj/item/storage/pill_bottle/carbon{
 	pixel_y = -2
 	},
-/obj/item/weapon/storage/pill_bottle/iron{
+/obj/item/storage/pill_bottle/iron{
 	pixel_y = -2;
 	pixel_x = -9
 	},
-/obj/item/weapon/storage/pill_bottle/antitox{
+/obj/item/storage/pill_bottle/antitox{
 	pixel_y = 9
 	},
-/obj/item/weapon/storage/pill_bottle/spaceacillin{
+/obj/item/storage/pill_bottle/spaceacillin{
 	pixel_y = 9;
 	pixel_x = -9
 	},
-/obj/item/weapon/storage/pill_bottle/inaprovaline{
+/obj/item/storage/pill_bottle/inaprovaline{
 	pixel_y = -2;
 	pixel_x = 9
 	},
-/obj/item/weapon/storage/pill_bottle/paracetamol{
+/obj/item/storage/pill_bottle/paracetamol{
 	pixel_y = 9;
 	pixel_x = 9
 	},
@@ -47080,10 +47080,10 @@
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Corridor1)
 "owI" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle{
+/obj/item/gun/energy/locked/phasegun/rifle{
 	pixel_y = -4
 	},
-/obj/item/weapon/gun/energy/locked/phasegun/rifle{
+/obj/item/gun/energy/locked/phasegun/rifle{
 	pixel_y = 3
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -48052,7 +48052,7 @@
 "oLv" = (
 /obj/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/hatch/blue,
-/obj/item/weapon/holosign_creator/combifan{
+/obj/item/holosign_creator/combifan{
 	pixel_y = 9;
 	pixel_x = -4
 	},
@@ -48075,11 +48075,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -48125,7 +48125,7 @@
 /turf/simulated/floor/carpet/sblucarpet/turfpack/station,
 /area/SouthernCrossV2/Commons/Cryostorage_Lounge)
 "oMN" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -48385,14 +48385,14 @@
 /area/space)
 "oSc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deck/wizoff{
+/obj/item/deck/wizoff{
 	pixel_y = 7
 	},
-/obj/item/weapon/deck/wizoff{
+/obj/item/deck/wizoff{
 	pixel_y = 12;
 	pixel_x = -9
 	},
-/obj/item/weapon/deck/wizoff{
+/obj/item/deck/wizoff{
 	pixel_y = 7
 	},
 /turf/simulated/floor/plating,
@@ -48558,27 +48558,27 @@
 	dir = 8;
 	layer = 2.6
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 6;
 	pixel_x = 6
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 6;
 	pixel_x = -7
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 2;
 	pixel_x = 6
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 2;
 	pixel_x = -7
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = -2;
 	pixel_x = -7
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = -2;
 	pixel_x = 6
 	},
@@ -48638,10 +48638,10 @@
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
 "oVV" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deck/holder{
+/obj/item/deck/holder{
 	pixel_x = -9
 	},
-/obj/item/weapon/deck/holder{
+/obj/item/deck/holder{
 	pixel_y = -4
 	},
 /obj/structure/curtain/bed{
@@ -48651,7 +48651,7 @@
 /area/SouthernCrossV2/Maints/ab_CardTrading)
 "oWj" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
@@ -49062,7 +49062,7 @@
 "pdi" = (
 /obj/structure/table/standard,
 /obj/random/soap,
-/obj/item/weapon/haircomb{
+/obj/item/haircomb{
 	pixel_y = 7;
 	pixel_x = -3
 	},
@@ -49316,24 +49316,24 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
 "phi" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
@@ -49376,7 +49376,7 @@
 /area/SouthernCrossV2/Harbor/Dock4)
 "pid" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp{
+/obj/item/flashlight/lamp{
 	pixel_y = 5;
 	on = 0
 	},
@@ -49433,7 +49433,7 @@
 /obj/item/clothing/head/fishing,
 /obj/random/toolbox,
 /obj/random/maintenance/misc,
-/obj/item/device/tape/random,
+/obj/item/rectape/random,
 /obj/random/donkpocketbox,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
@@ -49511,11 +49511,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -49739,27 +49739,27 @@
 /area/SouthernCrossV2/Harbor/Dock3)
 "pmq" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/subspace/sub_filter{
+/obj/item/stock_parts/subspace/sub_filter{
 	pixel_y = -2;
 	pixel_x = -2
 	},
-/obj/item/weapon/stock_parts/subspace/sub_filter{
+/obj/item/stock_parts/subspace/sub_filter{
 	pixel_y = 3;
 	pixel_x = 2
 	},
-/obj/item/weapon/stock_parts/subspace/amplifier{
+/obj/item/stock_parts/subspace/amplifier{
 	pixel_y = 13;
 	pixel_x = -9
 	},
-/obj/item/weapon/stock_parts/subspace/amplifier{
+/obj/item/stock_parts/subspace/amplifier{
 	pixel_y = 17;
 	pixel_x = -6
 	},
-/obj/item/weapon/stock_parts/subspace/analyzer{
+/obj/item/stock_parts/subspace/analyzer{
 	pixel_y = 15;
 	pixel_x = 3
 	},
-/obj/item/weapon/stock_parts/subspace/analyzer{
+/obj/item/stock_parts/subspace/analyzer{
 	pixel_y = 9;
 	pixel_x = 7
 	},
@@ -49982,7 +49982,7 @@
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
 "poY" = (
 /obj/machinery/disposal,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -50103,11 +50103,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -50340,13 +50340,13 @@
 /obj/machinery/cell_charger{
 	pixel_y = 11
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
@@ -50357,7 +50357,7 @@
 	pixel_y = -2
 	},
 /obj/structure/table/steel,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -50431,11 +50431,11 @@
 /area/SouthernCrossV2/Domicile/Custodial_Office)
 "pxK" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/lights/bulbs{
+/obj/item/storage/box/lights/bulbs{
 	pixel_y = 5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/lights/tubes{
+/obj/item/storage/box/lights/tubes{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -50744,7 +50744,7 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/obj/item/weapon/gun/energy/mouseray,
+/obj/item/gun/energy/mouseray,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_Medical)
@@ -50807,7 +50807,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -51011,11 +51011,11 @@
 	pixel_y = 13;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/botanydisk{
+/obj/item/storage/box/botanydisk{
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/beakers{
+/obj/item/storage/box/beakers{
 	pixel_x = -8;
 	pixel_y = 15
 	},
@@ -51285,18 +51285,18 @@
 /area/SouthernCrossV2/Harbor/Star_Docking_Foyer)
 "pOw" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/mousetraps{
+/obj/item/storage/box/mousetraps{
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/box/mousetraps{
+/obj/item/storage/box/mousetraps{
 	pixel_y = 10;
 	pixel_x = 7
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	pixel_y = 7;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	pixel_y = 1;
 	pixel_x = -9
 	},
@@ -51389,8 +51389,8 @@
 	dir = 6
 	},
 /obj/structure/table/steel,
-/obj/item/device/lightreplacer,
-/obj/item/device/lightreplacer,
+/obj/item/lightreplacer,
+/obj/item/lightreplacer,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Custodial_Office)
 "pOT" = (
@@ -51440,11 +51440,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -51539,11 +51539,11 @@
 	pixel_x = -6;
 	pixel_y = -2
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_y = -4;
 	pixel_x = 8
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_x = 8
 	},
 /obj/structure/table/standard,
@@ -51576,11 +51576,11 @@
 	pixel_y = -8;
 	pixel_x = 4
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_x = -3;
 	pixel_y = -7
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = -6;
 	pixel_y = 6
 	},
@@ -51598,11 +51598,11 @@
 /area/SouthernCrossV2/Maints/ab_Surgery)
 "pRn" = (
 /obj/structure/closet/lasertag/red,
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	channel = "NLS Southern Cross Hyperball";
 	name = "hyperball camera drone"
 	},
-/obj/item/device/tvcamera{
+/obj/item/tvcamera{
 	channel = "NLS Southern Cross Hyperball";
 	name = "hyperball camera drone"
 	},
@@ -51693,11 +51693,11 @@
 	pixel_x = -6;
 	pixel_y = -2
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_y = -4;
 	pixel_x = 8
 	},
-/obj/item/weapon/cell/device{
+/obj/item/cell/device{
 	pixel_x = 8
 	},
 /obj/structure/table/reinforced,
@@ -51771,23 +51771,23 @@
 /area/SouthernCrossV2/Commons/Aft_1_Deck_Stairwell)
 "pUA" = (
 /obj/structure/table/reinforced,
-/obj/item/device/taperecorder{
+/obj/item/taperecorder{
 	pixel_y = 7;
 	pixel_x = 7
 	},
-/obj/item/device/tape{
+/obj/item/tape{
 	pixel_y = -1;
 	pixel_x = 6
 	},
-/obj/item/device/tape{
+/obj/item/tape{
 	pixel_y = -4;
 	pixel_x = 6
 	},
-/obj/item/device/camera_film{
+/obj/item/camera_film{
 	pixel_y = 10;
 	pixel_x = -7
 	},
-/obj/item/device/camera{
+/obj/item/camera{
 	pixel_y = -3;
 	pixel_x = -6
 	},
@@ -51821,22 +51821,22 @@
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/weapon/pen/crayon/marker/black{
+/obj/item/pen/crayon/marker/black{
 	pixel_y = 5
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = -2;
 	pixel_x = 1
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 4;
 	pixel_x = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_y = 8;
 	pixel_x = -7
 	},
@@ -52025,11 +52025,11 @@
 /area/SouthernCrossV2/Science/Observation_Hall)
 "pXn" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/lights/bulbs{
+/obj/item/storage/box/lights/bulbs{
 	pixel_y = 5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/lights/tubes{
+/obj/item/storage/box/lights/tubes{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -52074,11 +52074,11 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Cargo/Mining_Ship_Bay)
 "pYf" = (
-/obj/item/weapon/flame/candle/candelabra/everburn{
+/obj/item/flame/candle/candelabra/everburn{
 	pixel_y = -6;
 	pixel_x = -9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/turkey{
+/obj/item/reagent_containers/food/snacks/sliceable/turkey{
 	pixel_y = -10;
 	pixel_x = 16;
 	nutriment_desc = list("plastic" = 20);
@@ -52226,7 +52226,7 @@
 /area/SouthernCrossV2/Commons/Star_1Deck_Central_Corridor_1)
 "pZZ" = (
 /obj/structure/table/standard,
-/obj/item/device/flash,
+/obj/item/flash,
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor3)
@@ -52344,8 +52344,8 @@
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3)
 "qee" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/mop/advanced,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/mop/advanced,
+/obj/item/reagent_containers/glass/bucket,
 /obj/machinery/light{
 	dir = 8;
 	name = "1E-light fixture"
@@ -52360,7 +52360,7 @@
 /area/SouthernCrossV2/Domicile/Custodial_Office)
 "qev" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 3;
 	on = 0
 	},
@@ -52455,7 +52455,7 @@
 "qgf" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -52957,7 +52957,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Chamber1)
 "qpJ" = (
-/obj/item/weapon/handcuffs/cable/red,
+/obj/item/handcuffs/cable/red,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "qpK" = (
@@ -53411,11 +53411,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -53457,7 +53457,7 @@
 /area/SouthernCrossV2/Harbor/Dock2)
 "qAr" = (
 /obj/random/crate,
-/obj/item/device/batterer,
+/obj/item/batterer,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
 "qAD" = (
@@ -53525,11 +53525,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -53624,7 +53624,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Market_Stall_4)
 "qFZ" = (
-/obj/item/weapon/laserdome_flag/blue,
+/obj/item/laserdome_flag/blue,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_SportsField)
 "qGg" = (
@@ -53657,7 +53657,7 @@
 /area/SouthernCrossV2/Maints/Market_Stall_6)
 "qGt" = (
 /obj/machinery/vending/snix,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -53827,11 +53827,11 @@
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "qHR" = (
 /obj/structure/table/glass,
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_y = 4;
 	pixel_x = 6
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_y = 4;
 	pixel_x = -5
 	},
@@ -53959,7 +53959,7 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/obj/item/device/t_scanner/upgraded{
+/obj/item/t_scanner/upgraded{
 	pixel_x = 11;
 	pixel_y = 3
 	},
@@ -53993,7 +53993,7 @@
 	pixel_x = -7;
 	pixel_y = 2
 	},
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = 4
 	},
 /obj/machinery/power/apc{
@@ -54519,10 +54519,10 @@
 /area/SouthernCrossV2/Cargo/Deck1_Stairwell)
 "qTd" = (
 /obj/structure/table/steel,
-/obj/item/weapon/photo,
-/obj/item/weapon/photo,
-/obj/item/weapon/disk/nifsoft/compliance,
-/obj/item/weapon/implanter,
+/obj/item/photo,
+/obj/item/photo,
+/obj/item/disk/nifsoft/compliance,
+/obj/item/implanter,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "qTf" = (
@@ -54545,22 +54545,22 @@
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/weapon/pen/crayon/marker/black{
+/obj/item/pen/crayon/marker/black{
 	pixel_y = 5
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = -2;
 	pixel_x = 1
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 4;
 	pixel_x = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_y = 8;
 	pixel_x = -7
 	},
@@ -54635,15 +54635,15 @@
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor2)
 "qUq" = (
 /obj/structure/table/glass,
-/obj/item/device/slime_scanner{
+/obj/item/slime_scanner{
 	pixel_y = 6;
 	pixel_x = -3
 	},
-/obj/item/device/slime_scanner{
+/obj/item/slime_scanner{
 	pixel_y = 2;
 	pixel_x = -1
 	},
-/obj/item/device/slime_scanner{
+/obj/item/slime_scanner{
 	pixel_y = -3;
 	pixel_x = 1
 	},
@@ -54731,20 +54731,20 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Telecomms_Foyer)
 "qVu" = (
-/obj/item/weapon/storage/box/lights/mixed{
+/obj/item/storage/box/lights/mixed{
 	pixel_y = -4;
 	pixel_x = 7
 	},
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/box/lights/mixed{
+/obj/item/storage/box/lights/mixed{
 	pixel_y = 6;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/box/lights/mixed{
+/obj/item/storage/box/lights/mixed{
 	pixel_y = -4;
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/box/lights/mixed{
+/obj/item/storage/box/lights/mixed{
 	pixel_y = 6;
 	pixel_x = -8
 	},
@@ -54960,43 +54960,43 @@
 	layer = 2.6
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = 11;
 	pixel_x = 7
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = 7;
 	pixel_x = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = 3;
 	pixel_x = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = -2;
 	pixel_x = 6
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 12;
 	pixel_x = -3
 	},
-/obj/item/weapon/tank/emergency/oxygen{
+/obj/item/tank/emergency/oxygen{
 	pixel_y = -6;
 	pixel_x = 6
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 8;
 	pixel_x = -3
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = 4;
 	pixel_x = -3
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = -1;
 	pixel_x = -3
 	},
-/obj/item/weapon/tank/emergency/nitrogen{
+/obj/item/tank/emergency/nitrogen{
 	pixel_y = -6;
 	pixel_x = -3
 	},
@@ -55287,7 +55287,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Science_ForCorridor1)
 "rdb" = (
-/obj/item/weapon/ruinedvirusdish,
+/obj/item/ruinedvirusdish,
 /obj/random/humanoidremains,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_Medical)
@@ -55474,22 +55474,22 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber1)
 "rfH" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/south{
 	name = "Ration Cabinet"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -55956,13 +55956,13 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
 "rqP" = (
-/obj/item/weapon/shovel,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/tool/crowbar,
+/obj/item/shovel,
+/obj/item/tool/wrench,
+/obj/item/pickaxe,
+/obj/item/tool/crowbar,
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/item/device/flashlight/lantern{
+/obj/item/flashlight/lantern{
 	pixel_y = 3;
 	pixel_x = -9
 	},
@@ -56058,7 +56058,7 @@
 	dir = 8
 	},
 /obj/structure/table/reinforced,
-/obj/item/device/mindbinder,
+/obj/item/mindbinder,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Medical)
 "rsi" = (
@@ -56264,13 +56264,13 @@
 /obj/machinery/cell_charger{
 	pixel_y = 11
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
@@ -56841,11 +56841,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -56919,24 +56919,24 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Medical)
 "rIu" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/item/weapon/folder/yellow{
+/obj/item/folder/yellow{
 	pixel_y = 4;
 	pixel_x = -6
 	},
@@ -57092,7 +57092,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor2)
 "rKR" = (
-/obj/item/device/geiger/wall/north,
+/obj/item/geiger/wall/north,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
@@ -57192,7 +57192,7 @@
 /area/SouthernCrossV2/Security/Quantum_Pad_Storage)
 "rMI" = (
 /obj/structure/table/standard,
-/obj/item/weapon/bikehorn/rubberducky/blue{
+/obj/item/bikehorn/rubberducky/blue{
 	pixel_y = 3
 	},
 /turf/simulated/floor/plating,
@@ -57247,7 +57247,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Telecomms_Control_Room)
 "rPG" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -57352,11 +57352,11 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Corridor3)
 "rRz" = (
-/obj/item/weapon/reagent_containers/syringe/steroid,
-/obj/item/weapon/material/shard{
+/obj/item/reagent_containers/syringe/steroid,
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 7
 	},
 /turf/simulated/floor/plating/turfpack/station,
@@ -57421,7 +57421,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "rTk" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain{
@@ -57431,7 +57431,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "rTM" = (
-/obj/item/weapon/virusdish/random{
+/obj/item/virusdish/random{
 	pixel_y = 4
 	},
 /obj/structure/table/reinforced,
@@ -57671,19 +57671,19 @@
 /obj/item/stack/material/cardboard{
 	amount = 25
 	},
-/obj/item/weapon/packageWrap{
+/obj/item/packageWrap{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/packageWrap{
+/obj/item/packageWrap{
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/obj/item/weapon/hand_labeler{
+/obj/item/hand_labeler{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/weapon/tape_roll{
+/obj/item/tape_roll{
 	pixel_x = 3;
 	pixel_y = -5
 	},
@@ -57753,13 +57753,13 @@
 "rZP" = (
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/table/darkglass,
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
+/obj/item/gps,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/echidna)
 "rZR" = (
@@ -57778,24 +57778,24 @@
 /turf/simulated/floor,
 /area/shuttle/needle)
 "sal" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/item/weapon/folder/white{
+/obj/item/folder/white{
 	pixel_y = 4;
 	pixel_x = -7
 	},
@@ -58108,8 +58108,8 @@
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "sdN" = (
 /obj/structure/closet/walllocker_double/hydrant/south,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/regular,
 /obj/effect/floor_decal/milspec/color/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/ursula)
@@ -58192,7 +58192,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_1_Deck_Hall)
 "seX" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -58351,11 +58351,11 @@
 /obj/random/soap{
 	pixel_y = -7
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	pixel_x = 6;
 	pixel_y = 7
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	pixel_y = 7;
 	pixel_x = -6
 	},
@@ -58388,7 +58388,7 @@
 "six" = (
 /obj/structure/table/steel,
 /obj/item/clothing/gloves/black,
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = 5
 	},
 /obj/random/tech_supply,
@@ -58443,7 +58443,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
 "skn" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	dir = 4
 	},
 /obj/effect/floor_decal/rust,
@@ -58463,7 +58463,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2)
 "skF" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -58648,11 +58648,11 @@
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
 "spI" = (
 /obj/structure/closet/firecloset/full/double,
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = -4;
 	pixel_x = 8
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_x = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -58837,11 +58837,11 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/ab_StripBar)
 "suq" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	empty = 1;
 	name = "First-Aid (empty)"
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 6;
 	pixel_y = -5
 	},
@@ -59237,16 +59237,16 @@
 /area/SouthernCrossV2/Science/Observation_Hall)
 "sBz" = (
 /obj/structure/closet/crate,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
 "sCl" = (
@@ -59670,7 +59670,7 @@
 /area/SouthernCrossV2/Commons/Aft_Transit_Lobby)
 "sHV" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/storage/box/capguntoy{
+/obj/item/storage/box/capguntoy{
 	pixel_x = 6;
 	pixel_y = -5
 	},
@@ -59700,15 +59700,15 @@
 	pixel_x = -7;
 	pixel_y = 7
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets/berry{
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets/berry{
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/box/donkpockets/gondola{
+/obj/item/storage/box/donkpockets/gondola{
 	pixel_y = 6
 	},
 /obj/item/stack/material/wood{
@@ -59903,11 +59903,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -60042,11 +60042,11 @@
 /area/SouthernCrossV2/Harbor/Dock3)
 "sNs" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/lights/bulbs{
+/obj/item/storage/box/lights/bulbs{
 	pixel_y = 5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/lights/tubes{
+/obj/item/storage/box/lights/tubes{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -60252,26 +60252,26 @@
 /area/SouthernCrossV2/Harbor/Dock5)
 "sRT" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/teleporter_station{
+/obj/item/circuitboard/teleporter_station{
 	pixel_y = 11;
 	pixel_x = 2
 	},
-/obj/item/weapon/circuitboard/teleporter_hub{
+/obj/item/circuitboard/teleporter_hub{
 	pixel_y = 7;
 	pixel_x = 1
 	},
-/obj/item/weapon/circuitboard/teleporter{
+/obj/item/circuitboard/teleporter{
 	pixel_y = 3
 	},
-/obj/item/weapon/circuitboard/teleporter{
+/obj/item/circuitboard/teleporter{
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/obj/item/weapon/circuitboard/telecomms/relay{
+/obj/item/circuitboard/telecomms/relay{
 	pixel_x = -2;
 	pixel_y = -5
 	},
-/obj/item/weapon/circuitboard/telecomms/relay{
+/obj/item/circuitboard/telecomms/relay{
 	pixel_x = -3;
 	pixel_y = -9
 	},
@@ -60910,7 +60910,7 @@
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor1)
 "thc" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
@@ -61276,7 +61276,7 @@
 /area/SouthernCrossV2/Commons/AftStar_1_Deck_Observatory)
 "tmM" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = 6
 	},
 /turf/simulated/floor/plating,
@@ -61302,12 +61302,12 @@
 	name = "parachute crate";
 	req_access = list(67)
 	},
-/obj/item/weapon/storage/backpack/parachute,
-/obj/item/weapon/storage/backpack/parachute,
-/obj/item/weapon/storage/backpack/parachute,
-/obj/item/weapon/storage/backpack/parachute,
-/obj/item/weapon/storage/backpack/parachute,
-/obj/item/weapon/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
+/obj/item/storage/backpack/parachute,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Stairwell_For)
 "tnW" = (
@@ -61438,25 +61438,25 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Deck1_Corridor)
 "tqn" = (
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 5
 	},
-/obj/item/weapon/folder{
+/obj/item/folder{
 	pixel_x = -6
 	},
-/obj/item/weapon/pen/blue{
+/obj/item/pen/blue{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/pen/multi{
+/obj/item/pen/multi{
 	pixel_x = 5
 	},
-/obj/item/weapon/pen/red{
+/obj/item/pen/red{
 	pixel_x = 5;
 	pixel_y = -3
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/folder/white{
+/obj/item/folder/white{
 	pixel_y = 4;
 	pixel_x = -7
 	},
@@ -61477,7 +61477,7 @@
 /turf/simulated/floor/grass2,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "tqB" = (
-/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube,
+/obj/item/reagent_containers/food/snacks/monkeycube/wrapped/stokcube,
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2)
@@ -62028,7 +62028,7 @@
 /area/SouthernCrossV2/Cargo/Supply_Ship_Bay)
 "tzN" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 3;
 	on = 0
 	},
@@ -62036,7 +62036,7 @@
 /area/SouthernCrossV2/Maints/ab_Kitchen)
 "tzO" = (
 /obj/structure/closet/jcloset,
-/obj/item/weapon/grenade/chem_grenade/cleaner{
+/obj/item/grenade/chem_grenade/cleaner{
 	pixel_x = 7;
 	pixel_y = 7
 	},
@@ -62689,11 +62689,11 @@
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "tMD" = (
 /obj/structure/bed/pillowpilefront/white,
-/obj/item/weapon/storage/vore_egg/shark{
+/obj/item/storage/vore_egg/shark{
 	pixel_y = 3;
 	pixel_x = 11
 	},
-/obj/item/weapon/storage/vore_egg/pinkspots,
+/obj/item/storage/vore_egg/pinkspots,
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "tMJ" = (
@@ -62712,15 +62712,15 @@
 /obj/structure/closet/walllocker_double/kitchen/south{
 	name = "Ration Cabinet"
 	},
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
@@ -62931,19 +62931,19 @@
 /obj/item/stack/material/cardboard{
 	amount = 25
 	},
-/obj/item/weapon/packageWrap{
+/obj/item/packageWrap{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/packageWrap{
+/obj/item/packageWrap{
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/obj/item/weapon/hand_labeler{
+/obj/item/hand_labeler{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/weapon/tape_roll{
+/obj/item/tape_roll{
 	pixel_x = 3;
 	pixel_y = -5
 	},
@@ -63122,7 +63122,7 @@
 /area/SouthernCrossV2/Cargo/Depot2)
 "tUz" = (
 /obj/structure/reagent_dispensers/watertank/high,
-/obj/item/weapon/reagent_containers/glass/bucket{
+/obj/item/reagent_containers/glass/bucket{
 	pixel_y = 14;
 	pixel_x = -6
 	},
@@ -63489,12 +63489,12 @@
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "ubD" = (
 /obj/structure/table/bench/marble,
-/obj/item/device/flashlight/lamp/clown{
+/obj/item/flashlight/lamp/clown{
 	pixel_y = 6;
 	pixel_x = -1;
 	on = 0
 	},
-/obj/item/weapon/storage/backpack{
+/obj/item/storage/backpack{
 	pixel_y = 7;
 	pixel_x = 10
 	},
@@ -63604,7 +63604,7 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Security/Aft_Security_Post)
 "udT" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -63660,11 +63660,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -63829,7 +63829,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/AftPort_1_Deck_Observatory)
 "uhk" = (
-/obj/item/weapon/tool/wirecutters/clippers/trimmers{
+/obj/item/tool/wirecutters/clippers/trimmers{
 	pixel_y = -3;
 	pixel_x = -2
 	},
@@ -63856,11 +63856,11 @@
 /turf/simulated/floor/carpet/blue,
 /area/SouthernCrossV2/Harbor/Port_Docking_Foyer)
 "uje" = (
-/obj/item/weapon/anodevice{
+/obj/item/anodevice{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/anodevice,
+/obj/item/anodevice,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
@@ -63896,12 +63896,12 @@
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "ujv" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/tool/wrench{
+/obj/item/tool/wrench{
 	pixel_y = 4;
 	pixel_x = -3
 	},
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/crowbar/red,
+/obj/item/tool/wrench,
+/obj/item/tool/crowbar/red,
 /obj/structure/window/titanium{
 	dir = 1
 	},
@@ -64103,13 +64103,13 @@
 /obj/machinery/cell_charger{
 	pixel_y = 11
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 6;
@@ -64426,7 +64426,7 @@
 	name = "Liquid";
 	icon_state = "mfloor6"
 	},
-/obj/item/weapon/bone/skull/unathi{
+/obj/item/bone/skull/unathi{
 	pixel_y = 5;
 	pixel_x = -7
 	},
@@ -65051,11 +65051,11 @@
 /obj/structure/sink/kitchen{
 	pixel_y = 21
 	},
-/obj/item/weapon/reagent_containers/glass/bucket{
+/obj/item/reagent_containers/glass/bucket{
 	pixel_y = 1;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/glass/bucket{
+/obj/item/reagent_containers/glass/bucket{
 	pixel_y = 1;
 	pixel_x = -8
 	},
@@ -65100,12 +65100,12 @@
 /area/SouthernCrossV2/Maints/Distro_Harbor)
 "uHI" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/digestion_remains/variant1{
+/obj/item/digestion_remains/variant1{
 	pixel_y = 9;
 	pixel_x = -7
 	},
-/obj/item/weapon/digestion_remains/variant1,
-/obj/item/weapon/handcuffs/legcuffs/fuzzy{
+/obj/item/digestion_remains/variant1,
+/obj/item/handcuffs/legcuffs/fuzzy{
 	pixel_y = -5;
 	pixel_x = -3
 	},
@@ -65122,45 +65122,45 @@
 /area/SouthernCrossV2/Domicile/Public_Gateway)
 "uHY" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = 8
 	},
-/obj/item/weapon/storage/toolbox/emergency{
+/obj/item/storage/toolbox/emergency{
 	pixel_y = 11;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = -7;
 	pixel_y = 4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -11;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -8;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
@@ -65223,7 +65223,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 5
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -65306,7 +65306,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "uJz" = (
-/obj/item/device/paicard,
+/obj/item/paicard,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "uJF" = (
@@ -65345,11 +65345,11 @@
 /area/SouthernCrossV2/Engineering/Telecomms_Control_Room)
 "uKO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/lights/bulbs{
+/obj/item/storage/box/lights/bulbs{
 	pixel_y = 5;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/lights/tubes{
+/obj/item/storage/box/lights/tubes{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -65477,7 +65477,7 @@
 /area/SouthernCrossV2/Maints/Distro_Harbor)
 "uNe" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper/petrification_notes,
+/obj/item/paper/petrification_notes,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
@@ -65573,11 +65573,11 @@
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "uPZ" = (
 /obj/structure/bed/pillowpilefront/teal,
-/obj/item/weapon/storage/vore_egg/human{
+/obj/item/storage/vore_egg/human{
 	pixel_y = 5;
 	pixel_x = -5
 	},
-/obj/item/weapon/storage/vore_egg/chocolate{
+/obj/item/storage/vore_egg/chocolate{
 	pixel_y = 1;
 	pixel_x = 6
 	},
@@ -65672,7 +65672,7 @@
 /turf/simulated/floor/grass,
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "uRj" = (
-/obj/item/weapon/laserdome_flag/red,
+/obj/item/laserdome_flag/red,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_SportsField)
 "uRD" = (
@@ -65989,7 +65989,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Ship_Bay1)
 "uXa" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -66044,19 +66044,19 @@
 /obj/item/stack/material/cardboard{
 	amount = 25
 	},
-/obj/item/weapon/packageWrap{
+/obj/item/packageWrap{
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/weapon/packageWrap{
+/obj/item/packageWrap{
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/obj/item/weapon/hand_labeler{
+/obj/item/hand_labeler{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/weapon/tape_roll{
+/obj/item/tape_roll{
 	pixel_x = 3;
 	pixel_y = -5
 	},
@@ -66069,7 +66069,7 @@
 /obj/effect/decal/cleanable/blood/oil/streak{
 	amount = 0
 	},
-/obj/item/weapon/tool/wirecutters,
+/obj/item/tool/wirecutters,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "uYj" = (
@@ -66077,7 +66077,7 @@
 /area/SouthernCrossV2/Cargo/Mining_Ship_Bay)
 "uYn" = (
 /obj/structure/bed/chair/oldsofa,
-/obj/item/weapon/digestion_remains/variant2{
+/obj/item/digestion_remains/variant2{
 	pixel_y = -3;
 	pixel_x = 8
 	},
@@ -66244,17 +66244,17 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/closet/crate/engineering,
-/obj/item/device/t_scanner,
+/obj/item/t_scanner,
 /obj/item/clothing/glasses/welding,
-/obj/item/device/geiger,
+/obj/item/geiger,
 /obj/item/clothing/glasses/goggles,
 /obj/item/clothing/glasses/goggles,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/device/multitool,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/multitool,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/steel,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -66287,7 +66287,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/item/weapon/digestion_remains{
+/obj/item/digestion_remains{
 	pixel_y = -4;
 	pixel_x = -4
 	},
@@ -66310,15 +66310,15 @@
 /area/shuttle/ursula)
 "vdN" = (
 /obj/structure/undies_wardrobe,
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 10;
 	pixel_x = 6
 	},
-/obj/item/weapon/towel/random{
+/obj/item/towel/random{
 	pixel_y = 14;
 	pixel_x = 6
 	},
-/obj/item/device/threadneedle{
+/obj/item/threadneedle{
 	pixel_y = 11;
 	pixel_x = -7
 	},
@@ -66417,19 +66417,19 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock3)
 "vfq" = (
-/obj/item/weapon/shovel,
-/obj/item/weapon/pickaxe,
-/obj/item/weapon/tool/crowbar,
+/obj/item/shovel,
+/obj/item/pickaxe,
+/obj/item/tool/crowbar,
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/item/clothing/accessory/permit/gun/planetside,
-/obj/item/weapon/storage/belt/utility/full,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle{
+/obj/item/storage/belt/utility/full,
+/obj/item/gun/energy/locked/phasegun/rifle{
 	pixel_y = -4
 	},
 /obj/item/clothing/accessory/holster/hip,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/device/gps/mining,
+/obj/item/gps/mining,
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/echidna)
 "vfw" = (
@@ -66677,25 +66677,25 @@
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "viu" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = -4;
 	pixel_y = -6
 	},
-/obj/item/weapon/storage/toolbox/emergency{
+/obj/item/storage/toolbox/emergency{
 	pixel_y = 2;
 	pixel_x = -4
 	},
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical{
 	pixel_y = 10;
 	pixel_x = -4
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_y = -4;
 	pixel_x = 7
 	},
-/obj/item/weapon/cell/high{
+/obj/item/cell/high{
 	charge = 100;
 	maxcharge = 15000;
 	pixel_x = 9
@@ -66734,9 +66734,9 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "viW" = (
-/obj/item/weapon/holosign_creator,
+/obj/item/holosign_creator,
 /obj/structure/table/steel,
-/obj/item/weapon/holosign_creator{
+/obj/item/holosign_creator{
 	pixel_y = 5;
 	pixel_x = 2
 	},
@@ -67190,25 +67190,25 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Market_Stall_5)
 "vqN" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
 	},
 /obj/structure/closet/walllocker_double/kitchen/north{
 	name = "Ration Cabinet"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -67309,12 +67309,12 @@
 /area/SouthernCrossV2/Harbor/Ship_Bay2)
 "vtG" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/tool/wrench{
+/obj/item/tool/wrench{
 	pixel_y = 4;
 	pixel_x = -3
 	},
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/crowbar/red,
+/obj/item/tool/wrench,
+/obj/item/tool/crowbar/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -67357,7 +67357,7 @@
 "vub" = (
 /obj/structure/table/rack/shelf,
 /obj/random/powercell,
-/obj/item/weapon/storage/wallet/random,
+/obj/item/storage/wallet/random,
 /obj/item/clothing/head/fishing,
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled,
@@ -67386,12 +67386,12 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Ship_Bay3)
 "vuv" = (
-/obj/item/device/radio/subspace{
+/obj/item/radio/subspace{
 	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO THE BAR!";
 	name = "Bar subspace radio";
 	pixel_y = 5
 	},
-/obj/item/weapon/deck/cards{
+/obj/item/deck/cards{
 	pixel_x = -5;
 	pixel_y = -2
 	},
@@ -67488,7 +67488,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 1
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium";
 	pixel_y = -7;
 	pixel_x = -3
@@ -67525,7 +67525,7 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -67669,7 +67669,7 @@
 	pixel_y = 14;
 	pixel_x = 6
 	},
-/obj/item/device/t_scanner{
+/obj/item/t_scanner{
 	pixel_y = 5;
 	pixel_x = 2
 	},
@@ -67910,42 +67910,42 @@
 /area/SouthernCrossV2/Commons/For_Locker_Room)
 "vBT" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = -6;
 	pixel_x = 6
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = -2;
 	pixel_x = 7
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 2;
 	pixel_x = 6
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = 6;
 	pixel_x = 7
 	},
-/obj/item/device/flashlight/color/orange{
+/obj/item/flashlight/color/orange{
 	pixel_y = -9;
 	pixel_x = -8
 	},
-/obj/item/device/flashlight/color/orange{
+/obj/item/flashlight/color/orange{
 	pixel_y = -6;
 	pixel_x = -7
 	},
-/obj/item/device/flashlight/color/orange{
+/obj/item/flashlight/color/orange{
 	pixel_y = -3;
 	pixel_x = -8
 	},
-/obj/item/device/flashlight/color/orange{
+/obj/item/flashlight/color/orange{
 	pixel_x = -7
 	},
-/obj/item/device/flashlight/color/orange{
+/obj/item/flashlight/color/orange{
 	pixel_y = 3;
 	pixel_x = -8
 	},
-/obj/item/device/flashlight/color/orange{
+/obj/item/flashlight/color/orange{
 	pixel_y = 7;
 	pixel_x = -7
 	},
@@ -68100,34 +68100,34 @@
 	dir = 8;
 	layer = 2.6
 	},
-/obj/item/weapon/mining_scanner{
+/obj/item/mining_scanner{
 	pixel_y = 9;
 	pixel_x = 5
 	},
-/obj/item/weapon/mining_scanner{
+/obj/item/mining_scanner{
 	pixel_y = 6;
 	pixel_x = 5
 	},
-/obj/item/weapon/mining_scanner{
+/obj/item/mining_scanner{
 	pixel_y = 3;
 	pixel_x = 5
 	},
-/obj/item/weapon/mining_scanner{
+/obj/item/mining_scanner{
 	pixel_x = 5
 	},
-/obj/item/device/gps/mining{
+/obj/item/gps/mining{
 	pixel_x = -8;
 	pixel_y = 7
 	},
-/obj/item/device/gps/mining{
+/obj/item/gps/mining{
 	pixel_x = -8;
 	pixel_y = 4
 	},
-/obj/item/device/gps/mining{
+/obj/item/gps/mining{
 	pixel_x = -8;
 	pixel_y = 1
 	},
-/obj/item/device/gps/mining{
+/obj/item/gps/mining{
 	pixel_x = -8;
 	pixel_y = -2
 	},
@@ -68135,7 +68135,7 @@
 /area/SouthernCrossV2/Cargo/Mining_EVA)
 "vEh" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/surgicaldrill,
+/obj/item/surgical/surgicaldrill,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Surgery)
 "vEt" = (
@@ -68265,7 +68265,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Harbor/Dock2)
 "vGT" = (
-/obj/item/weapon/laserdome_flag/blue,
+/obj/item/laserdome_flag/blue,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_SportsField)
@@ -68567,7 +68567,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_Star_Corridor)
 "vNk" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -68585,7 +68585,7 @@
 /area/SouthernCrossV2/Science/PA_Access)
 "vNw" = (
 /obj/structure/bed/pillowpilefront/white,
-/obj/item/weapon/storage/vore_egg/floppy,
+/obj/item/storage/vore_egg/floppy,
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "vNA" = (
@@ -68593,22 +68593,22 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "vNE" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -68867,55 +68867,55 @@
 /obj/item/stack/cable_coil,
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/welding,
-/obj/item/device/t_scanner,
-/obj/item/device/t_scanner,
+/obj/item/t_scanner,
+/obj/item/t_scanner,
 /obj/item/clothing/glasses/goggles,
 /obj/item/clothing/glasses/goggles,
-/obj/item/device/geiger,
-/obj/item/device/geiger,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/device/multitool,
-/obj/item/device/multitool,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
+/obj/item/geiger,
+/obj/item/geiger,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/multitool,
+/obj/item/multitool,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
 /obj/item/stack/rods{
 	amount = 50
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/device/gps{
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/stock_parts/matter_bin,
-/obj/item/weapon/stock_parts/matter_bin,
-/obj/item/weapon/stock_parts/micro_laser,
-/obj/item/weapon/stock_parts/micro_laser,
-/obj/item/weapon/stock_parts/scanning_module,
-/obj/item/weapon/stock_parts/scanning_module,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/reagent_containers/glass/beaker,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/scanning_module,
+/obj/item/stock_parts/scanning_module,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
 /obj/effect/floor_decal/milspec/color/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/ursula)
@@ -69052,9 +69052,9 @@
 /area/SouthernCrossV2/Maints/Deck1_Security_PortChamber2)
 "vVV" = (
 /obj/structure/table/glass,
-/obj/item/weapon/gun/energy/floragun,
+/obj/item/gun/energy/floragun,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -69131,19 +69131,19 @@
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "vXM" = (
 /obj/structure/table/rack,
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = -7
 	},
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = -3
 	},
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = 1
 	},
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = 1
 	},
-/obj/item/weapon/melee/umbrella/random{
+/obj/item/melee/umbrella/random{
 	pixel_y = 5
 	},
 /obj/effect/floor_decal/borderfloorblack,
@@ -69247,13 +69247,13 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/GravGen_Room)
 "vZO" = (
-/obj/item/device/defib_kit/loaded,
-/obj/item/weapon/storage/pill_bottle/tramadol{
+/obj/item/defib_kit/loaded,
+/obj/item/storage/pill_bottle/tramadol{
 	pixel_y = 1;
 	pixel_x = 9
 	},
 /obj/structure/closet/walllocker_double/medical/south,
-/obj/item/weapon/storage/pill_bottle/dexalin{
+/obj/item/storage/pill_bottle/dexalin{
 	pixel_y = 1;
 	pixel_x = -7
 	},
@@ -69277,11 +69277,11 @@
 	pixel_y = 5;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/oxygen/engi{
+/obj/item/tank/emergency/oxygen/engi{
 	pixel_y = 6;
 	pixel_x = 4
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = -6;
 	pixel_x = -10
 	},
@@ -69318,10 +69318,10 @@
 	name = "1S-light fixture"
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/clipboard{
+/obj/item/clipboard{
 	pixel_x = -3
 	},
-/obj/item/weapon/folder/blue{
+/obj/item/folder/blue{
 	pixel_y = 4;
 	pixel_x = 6
 	},
@@ -69488,11 +69488,11 @@
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "wdj" = (
 /obj/structure/closet/firecloset/full/double,
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_y = -4;
 	pixel_x = 8
 	},
-/obj/item/device/suit_cooling_unit{
+/obj/item/suit_cooling_unit{
 	pixel_x = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -69624,34 +69624,34 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Harbor/Dock1)
 "wgm" = (
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = 8
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = -7;
 	pixel_y = 8
 	},
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical{
 	pixel_y = 1;
 	pixel_x = -7
 	},
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/toolbox/emergency{
+/obj/item/storage/toolbox/emergency{
 	pixel_y = -6;
 	pixel_x = -7
 	},
@@ -69938,7 +69938,7 @@
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
 "wmA" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/item/weapon/storage/vore_egg/green,
+/obj/item/storage/vore_egg/green,
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "wmB" = (
@@ -69988,7 +69988,7 @@
 /turf/simulated/floor,
 /area/shuttle/needle)
 "wnJ" = (
-/obj/item/weapon/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Surgery)
 "wnS" = (
@@ -70020,7 +70020,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Chamber1)
 "wor" = (
-/obj/item/device/analyzer,
+/obj/item/analyzer,
 /turf/simulated/floor/tiled/hydro,
 /area/SouthernCrossV2/Maints/ab_Hydroponics)
 "wos" = (
@@ -70449,7 +70449,7 @@
 /area/SouthernCrossV2/Maints/Deck1_Port_Corridor)
 "wwj" = (
 /obj/structure/table/steel,
-/obj/item/weapon/folder/yellow,
+/obj/item/folder/yellow,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "wwB" = (
@@ -70515,7 +70515,7 @@
 /area/SouthernCrossV2/Commons/Star_1Deck_Atrium)
 "wyj" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
@@ -70554,7 +70554,7 @@
 	pixel_y = 8;
 	pixel_x = 9
 	},
-/obj/item/weapon/storage/backpack/messenger/chem{
+/obj/item/storage/backpack/messenger/chem{
 	pixel_x = 9;
 	pixel_y = -6
 	},
@@ -70611,12 +70611,12 @@
 	pixel_y = 9;
 	pixel_x = 8
 	},
-/obj/item/weapon/weldingtool/hugetank,
+/obj/item/weldingtool/hugetank,
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor3)
 "wAp" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -70756,12 +70756,12 @@
 /area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor1)
 "wDD" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/syringe/drugs{
+/obj/item/reagent_containers/syringe/drugs{
 	pixel_y = 5;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/pill_bottle/happy,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/microcillin{
+/obj/item/storage/pill_bottle/happy,
+/obj/item/reagent_containers/glass/beaker/vial/microcillin{
 	pixel_y = 4;
 	pixel_x = -6
 	},
@@ -70873,7 +70873,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Science/Xenobiology_Lab)
 "wFx" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -71136,7 +71136,7 @@
 /area/SouthernCrossV2/Maints/Deck1_Port_Corridor)
 "wLS" = (
 /obj/item/clothing/under/dress/redeveninggown,
-/obj/item/device/pda/cargo{
+/obj/item/pda/cargo{
 	pixel_y = 6;
 	pixel_x = 7
 	},
@@ -71243,7 +71243,7 @@
 /area/SouthernCrossV2/Domicile/Custodial_Office)
 "wNP" = (
 /obj/structure/bed/chair/bay,
-/obj/item/weapon/handcuffs/cable/cyan,
+/obj/item/handcuffs/cable/cyan,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/ab_ChuteTrade)
 "wNR" = (
@@ -71355,7 +71355,7 @@
 /area/SouthernCrossV2/Science/PA_Chamber)
 "wPq" = (
 /obj/structure/bed/chair/oldsofa/left,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "1N-Station Intercom (General)";
 	pixel_y = 22
@@ -71638,7 +71638,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor2)
 "wTB" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = 2;
 	pixel_y = 3
 	},
@@ -71659,7 +71659,7 @@
 	},
 /obj/effect/decal/cleanable/greenglow,
 /obj/effect/decal/cleanable/filth,
-/obj/item/weapon/digestion_remains/variant2{
+/obj/item/digestion_remains/variant2{
 	pixel_y = -10;
 	pixel_x = 7
 	},
@@ -72875,22 +72875,22 @@
 	pixel_y = 8;
 	pixel_x = 3
 	},
-/obj/item/weapon/pen/crayon/marker/black{
+/obj/item/pen/crayon/marker/black{
 	pixel_y = 5
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = -2;
 	pixel_x = 1
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/device/flashlight/flare{
+/obj/item/flashlight/flare{
 	pixel_y = 4;
 	pixel_x = 3
 	},
-/obj/item/weapon/extinguisher/mini{
+/obj/item/extinguisher/mini{
 	pixel_y = 8;
 	pixel_x = -7
 	},
@@ -72969,11 +72969,11 @@
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/box/nifsofts_mining{
+/obj/item/storage/box/nifsofts_mining{
 	pixel_y = 12;
 	pixel_x = 4
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = -2;
 	pixel_x = 2
 	},
@@ -73048,7 +73048,7 @@
 /area/SouthernCrossV2/Commons/Port_1Deck_Atrium)
 "xrY" = (
 /obj/machinery/vending/event/costume,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -73094,25 +73094,25 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Science/PA_Chamber)
 "xsL" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
 	},
 /obj/structure/closet/walllocker_double/kitchen/north{
 	name = "Ration Cabinet"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -73171,11 +73171,11 @@
 	pixel_y = 5;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/oxygen/engi{
+/obj/item/tank/emergency/oxygen/engi{
 	pixel_y = 6;
 	pixel_x = 4
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = -6;
 	pixel_x = -10
 	},
@@ -73333,7 +73333,7 @@
 /area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor1)
 "xya" = (
 /obj/structure/table/reinforced,
-/obj/item/device/xenoarch_multi_tool,
+/obj/item/xenoarch_multi_tool,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
 "xyC" = (
@@ -73721,11 +73721,11 @@
 	pixel_y = 5;
 	pixel_x = -7
 	},
-/obj/item/weapon/tank/emergency/oxygen/engi{
+/obj/item/tank/emergency/oxygen/engi{
 	pixel_y = 6;
 	pixel_x = 4
 	},
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_y = -6;
 	pixel_x = -10
 	},
@@ -73826,22 +73826,22 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Maints/ab_Surgery)
 "xKr" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -74226,8 +74226,8 @@
 /area/shuttle/needle)
 "xSO" = (
 /obj/structure/table/darkglass,
-/obj/item/device/gps,
-/obj/item/device/gps{
+/obj/item/gps,
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -74370,12 +74370,12 @@
 /area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor1)
 "xVw" = (
 /obj/structure/table/glass,
-/obj/item/weapon/melee/baton/slime/loaded{
+/obj/item/melee/baton/slime/loaded{
 	pixel_y = 3;
 	pixel_x = -3
 	},
-/obj/item/weapon/melee/baton/slime/loaded,
-/obj/item/weapon/melee/baton/slime/loaded{
+/obj/item/melee/baton/slime/loaded,
+/obj/item/melee/baton/slime/loaded{
 	pixel_y = -3;
 	pixel_x = 3
 	},
@@ -74391,7 +74391,7 @@
 /area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint)
 "xVJ" = (
 /obj/structure/table/glass,
-/obj/item/weapon/xenobio/monkey_gun,
+/obj/item/xenobio/monkey_gun,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -74419,7 +74419,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Harbor_Substation)
 "xWo" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
@@ -74458,18 +74458,18 @@
 /turf/simulated/floor/wood/alt/tile/broken,
 /area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1)
 "xXL" = (
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gps,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/structure/closet/walllocker_double/kitchen/south{
 	name = "Ration Cabinet"
 	},
@@ -74539,11 +74539,11 @@
 	pixel_y = 8;
 	pixel_x = -7
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -10;
 	pixel_y = -1
 	},
@@ -74677,45 +74677,45 @@
 /area/SouthernCrossV2/Commons/Planetside_Equipment)
 "yad" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 8;
 	pixel_y = 8
 	},
-/obj/item/weapon/storage/toolbox/emergency{
+/obj/item/storage/toolbox/emergency{
 	pixel_y = 11;
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = -7;
 	pixel_y = 4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -11;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -8;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = -1
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -2;
 	pixel_y = -1
 	},
@@ -74723,12 +74723,12 @@
 /area/SouthernCrossV2/Maints/Distro_Central)
 "yae" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/tool/wrench{
+/obj/item/tool/wrench{
 	pixel_y = 4;
 	pixel_x = -3
 	},
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/crowbar/red,
+/obj/item/tool/wrench,
+/obj/item/tool/crowbar/red,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -75132,7 +75132,7 @@
 	pixel_y = -7;
 	pixel_x = -5
 	},
-/obj/item/weapon/storage/wallet/casino{
+/obj/item/storage/wallet/casino{
 	pixel_y = -10;
 	pixel_x = 10
 	},
@@ -75251,7 +75251,7 @@
 /area/SouthernCrossV2/Harbor/Dock1)
 "yjP" = (
 /obj/structure/table/glass,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /obj/machinery/light{
 	dir = 1;
 	name = "1N-lighting fixture"

@@ -3,24 +3,24 @@
 	card_icon = "card_back"
 	back_icon = "card_back"
 
-/obj/item/weapon/deck/casino
+/obj/item/deck/casino
 	w_class = ITEMSIZE_SMALL
 	icon = 'icons/obj/playing_cards_ch.dmi'
 	cooldown = 0 // to prevent spam shuffle
 
-/obj/item/weapon/deck/holder/casino //WIP In future do a cool holder
+/obj/item/deck/holder/casino //WIP In future do a cool holder
 	name = "card box"
 	desc = "A small leather case to show how classy you are compared to everyone else."
 	icon = 'icons/obj/playing_cards_ch.dmi'
 	icon_state = "card_holder"
 
-/obj/item/weapon/deck/cards/casino
+/obj/item/deck/cards/casino
 	name = "deck of casino cards"
 	desc = "A deck of playing cards from the golden goose casino, comes without a joker card!"
 	icon = 'icons/obj/playing_cards_ch.dmi'
 	icon_state = "casino_deck"
 
-/obj/item/weapon/deck/cards/casino/New()
+/obj/item/deck/cards/casino/New()
 	var/datum/playingcard/casino/P
 	for(var/suit in list("spades","clubs","diamonds","hearts"))
 

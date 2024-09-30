@@ -53,16 +53,16 @@
 // Will eventually leave a full corpse with an activated RIG on it. But not yet.
 
 //Miasma Cloud "Item"
-/obj/item/weapon/grenade/chem_grenade/miasma
+/obj/item/grenade/chem_grenade/miasma
 	name = "Miasma Bomb"
 	desc = "You probably shouldn't be able to see this."
 	stage = 2
 	path = 1
 
-/obj/item/weapon/grenade/chem_grenade/miasma/Initialize(mapload)
+/obj/item/grenade/chem_grenade/miasma/Initialize(mapload)
 	. = ..()
-	var/obj/item/weapon/reagent_containers/glass/beaker/B1 = new(src)
-	var/obj/item/weapon/reagent_containers/glass/beaker/B2 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/B1 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/B2 = new(src)
 
 	B1.reagents.add_reagent("miasma", 30)
 	B1.reagents.add_reagent("potassium", 5)
@@ -110,7 +110,7 @@
 		new rig2(droploc)
 	*/
 	new /obj/effect/decal/remains/human(droploc)
-	new /obj/item/weapon/grenade/chem_grenade/miasma(droploc)
+	new /obj/item/grenade/chem_grenade/miasma(droploc)
 	/*Broken smoke spawn code. Above line is a bandaid.
 	var/datum/reagents/R = new/datum/reagents(30)
 	reagents.add_reagent("miasma", 30)
@@ -125,7 +125,7 @@
 /mob/living/simple_mob/humanoid/possessed/Login()
 	to_chat(src,"<b>Why are you in this [src]? Why can't you say more than a few phrases? Why. What. Kill. Kill. Kill. Kill. KILL! KILL! KILL!</b> [player_msg]")
 
-/obj/item/weapon/rig/eva/old
+/obj/item/rig/eva/old
 	name = "old EVA suit control module"
 	desc = "A light hardsuit for repairs and maintenance to the outside of habitats and vessels. It appears to be pretty old and worn down."
 
@@ -134,10 +134,10 @@
 	name = "old industrial RIG suit"
 	desc = "A heavy, powerful hardsuit used by construction crews and mining corporations. Seems to be worn down and damaged. But it seems to still be moving. Is someone in it?"
 	icon_state = "industrial-rig"
-	loot_list = list(/obj/item/weapon/rig/industrial/old = 100)
+	loot_list = list(/obj/item/rig/industrial/old = 100)
 	armor = list(melee = 60, bullet = 50, laser = 30,energy = 15, bomb = 30, bio = 100, rad = 100)
 
-/obj/item/weapon/rig/industrial/old
+/obj/item/rig/industrial/old
 	name = "old Industrial hardsuit"
 	desc = "A heavy, powerful hardsuit used by construction crews and mining corporations. It appears to be pretty old and worn down."
 
@@ -145,10 +145,10 @@
 	name = "old crimson hardsuit"
 	desc = "A blood-red hardsuit featuring some fairly illegal technology. Seems to be worn down and damaged. But it seems to still be moving. Is someone in it?"
 	icon_state = "merc-rig"
-	loot_list = list(/obj/item/weapon/rig/merc/old = 100)
+	loot_list = list(/obj/item/rig/merc/old = 100)
 	armor = list(melee = 80, bullet = 65, laser = 50, energy = 15, bomb = 80, bio = 100, rad = 60)
 
-/obj/item/weapon/rig/merc/old
+/obj/item/rig/merc/old
 	name = "old crimson hardsuit control module"
 	desc = "A blood-red hardsuit featuring some fairly illegal technology. It appears to be pretty old and worn down."
 

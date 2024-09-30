@@ -1,4 +1,4 @@
-/obj/item/weapon/hammer_head
+/obj/item/hammer_head
 	name = "hammer head"
 	desc = "A rectangular plasteel head. Feels very heavy in your hand.."
 	icon = 'icons/obj/hammer_construction_ch.dmi'
@@ -7,7 +7,7 @@
 
 	var/construction_stage = 1
 
-/obj/item/weapon/hammer_head/attackby(var/obj/item/thing, var/mob/user)
+/obj/item/hammer_head/attackby(var/obj/item/thing, var/mob/user)
 
 	if(istype(thing, /obj/item/stack/rods) && construction_stage == 1)
 		var/obj/item/stack/rods = thing
@@ -19,8 +19,8 @@
 		increment_construction_stage()
 		return
 
-	if(istype(thing, /obj/item/weapon/weldingtool) && construction_stage == 2)
-		var/obj/item/weapon/weldingtool/welder = thing
+	if(istype(thing, /obj/item/weldingtool) && construction_stage == 2)
+		var/obj/item/weldingtool/welder = thing
 		if(!welder.isOn())
 			to_chat(user, "<span class='warning'>Turn it on first!</span>")
 			return
@@ -45,8 +45,8 @@
 		increment_construction_stage()
 		return
 
-	if(istype(thing, /obj/item/weapon/weldingtool) && construction_stage == 4)
-		var/obj/item/weapon/weldingtool/welder = thing
+	if(istype(thing, /obj/item/weldingtool) && construction_stage == 4)
+		var/obj/item/weldingtool/welder = thing
 
 		if(!welder.isOn())
 			to_chat(user, "<span class='warning'>Turn it on first!</span>")
@@ -74,8 +74,8 @@
 			increment_construction_stage()
 			return
 
-	if(istype(thing, /obj/item/weapon/weldingtool) && construction_stage == 6)
-		var/obj/item/weapon/weldingtool/welder = thing
+	if(istype(thing, /obj/item/weldingtool) && construction_stage == 6)
+		var/obj/item/weldingtool/welder = thing
 		if(!welder.isOn())
 			to_chat(user, "<span class='warning'>Turn it on first!</span>")
 			return
@@ -88,11 +88,11 @@
 		return
 
 
-	if(istype(thing, /obj/item/weapon/tool/wrench) && construction_stage == 7)
+	if(istype(thing, /obj/item/tool/wrench) && construction_stage == 7)
 		user.visible_message("<span class='notice'>\The [user] whacks at \the [src] like a caveman, shaping the metal with \the [thing] into a rough handle, finishing it off.</span>")
 		increment_construction_stage()
 		playsound(src.loc, 'sound/weapons/smash5.ogg', 100, 1)
-		var/obj/item/weapon/material/twohanded/sledgehammer/sledge = new(loc)
+		var/obj/item/material/twohanded/sledgehammer/sledge = new(loc)
 		var/put_in_hands
 		var/mob/M = src.loc
 		if(istype(M))
@@ -106,12 +106,12 @@
 
 	return ..()
 
-/obj/item/weapon/hammer_head/proc/increment_construction_stage()
+/obj/item/hammer_head/proc/increment_construction_stage()
 	if(construction_stage < 7)
 		construction_stage++
 	icon_state = "hammer_construction_[construction_stage]"
 
-/obj/item/weapon/hammer_head/examine(var/mob/user)
+/obj/item/hammer_head/examine(var/mob/user)
 	. = ..(user,2)
 	if(.)
 		switch(construction_stage)

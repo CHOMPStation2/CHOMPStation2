@@ -135,7 +135,7 @@
 	// Loop through some slots, and add up their slowdowns.
 	// Includes slots which can provide armor, the back slot, and suit storage.
 	for(var/obj/item/I in list(wear_suit, w_uniform, back, gloves, head, s_store))
-		if(istype(I,/obj/item/weapon/rig)) //CHOMPAdd
+		if(istype(I,/obj/item/rig)) //CHOMPAdd
 			for(var/obj/item/II in I.contents)
 				. += II.slowdown
 		. += I.slowdown
@@ -195,8 +195,8 @@
 
 /mob/living/carbon/human/get_jetpack()
 	if(back)
-		var/obj/item/weapon/rig/rig = get_rig()
-		if(istype(back, /obj/item/weapon/tank/jetpack))
+		var/obj/item/rig/rig = get_rig()
+		if(istype(back, /obj/item/tank/jetpack))
 			return back
 		else if(istype(rig))
 			for(var/obj/item/rig_module/maneuvering_jets/module in rig.installed_modules)
@@ -216,7 +216,7 @@
 		return TRUE  //VOREStation Edit.
 
 	//Do we have a working jetpack?
-	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
+	var/obj/item/tank/jetpack/thrust = get_jetpack()
 
 	if(thrust)
 		if(((!check_drift) || (check_drift && thrust.stabilization_on)) && (!lying) && (thrust.do_thrust(0.01, src)))
@@ -236,7 +236,7 @@
 	if(species.can_space_freemove || species.can_zero_g_move)
 		return FALSE
 
-	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
+	var/obj/item/tank/jetpack/thrust = get_jetpack()
 	if(thrust?.can_thrust(0.01))
 		return FALSE
 

@@ -14,17 +14,17 @@
 /area/submap/asteroid3)
 "e" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid3)
 "f" = (
-/obj/item/weapon/pickaxe/diamond,
+/obj/item/pickaxe/diamond,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid3)
 "h" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid3)
 "i" = (
@@ -39,7 +39,7 @@
 /area/submap/asteroid3)
 "m" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid3)
 "o" = (
@@ -55,7 +55,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid3)
 "u" = (
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid3)
 "v" = (
@@ -77,7 +77,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid3)
 "B" = (
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /mob/living/simple_mob/humanoid/cultist/initiate{
 	min_oxy = 0
 	},
@@ -127,7 +127,7 @@
 /area/submap/asteroid3)
 "P" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/magnetic/matfed/phoronbore/loaded,
+/obj/item/gun/magnetic/matfed/phoronbore/loaded,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid3)
 "T" = (
