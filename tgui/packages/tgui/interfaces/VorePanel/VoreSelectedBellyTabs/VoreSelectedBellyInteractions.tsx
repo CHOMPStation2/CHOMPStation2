@@ -114,7 +114,7 @@ export const VoreSelectedBellyInteractions = (props) => {
               {interacts.digestchance + '%'}
             </Button>
           </LabeledList.Item>
-		  <LabeledList.Item label="Belch Chance">
+          <LabeledList.Item label="Belch Chance">
             <Button
               onClick={() =>
                 act('set_attribute', { attribute: 'b_belchchance' })

@@ -177,6 +177,7 @@ export type interactData = {
   transferlocation_secondary: string;
   absorbchance: number;
   digestchance: number;
+  belchchance: number;
 };
 
 export type autotransferData = {

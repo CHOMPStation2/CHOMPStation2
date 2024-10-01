@@ -116,6 +116,8 @@ export const generateBellyString = (belly: Belly, index: number) => {
 
     absorbchance,
     digestchance,
+
+    belchchance,
   } = belly;
 
   let result = '';
@@ -586,6 +588,7 @@ export const generateBellyString = (belly: Belly, index: number) => {
   result += '<li class="list-group-item">Secondary Transfer Location: ' + transferlocation_secondary + '</li>';
   result += '<li class="list-group-item">Absorb Chance: ' + absorbchance + '%</li>';
   result += '<li class="list-group-item">Digest Chance: ' + digestchance + '%</li>';
+  result += '<li class="list-group-item">Belch Chance:' + belchchance + '%</li>';
   result += '</ul>';
   result += '</div></div></div>';
 
