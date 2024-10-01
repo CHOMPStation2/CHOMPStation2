@@ -114,16 +114,6 @@ export const VoreSelectedBellyInteractions = (props) => {
               {interacts.digestchance + '%'}
             </Button>
           </LabeledList.Item>
-          <LabeledList.Item label="Belch Chance">
-            <Button
-              onClick={() =>
-                act('set_attribute', { attribute: 'b_belchchance' })
-              }
-            >
-              {interacts.belchchance + '%'}
-            </Button>
-          </LabeledList.Item>
-          <LabeledList.Divider />
         </LabeledList>
       ) : (
         'These options only display while interactions are turned on.'
