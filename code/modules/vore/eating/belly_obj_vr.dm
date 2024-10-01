@@ -1992,8 +1992,6 @@
 			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		else
 			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
-	//CHOMPEdit End
-	//CHOMPEdit Start
 	if(prob(belchchance))//Unsure if this should go in escapable or not, leaving it here for now.
 		owner.emote("belch")
 	//CHOMPEdit End
