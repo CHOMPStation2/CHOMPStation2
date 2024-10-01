@@ -2617,7 +2617,6 @@
 	dupe.can_taste = can_taste
 	dupe.escapable = escapable
 	dupe.escapetime = escapetime
-	dupe.belchchance = belchchance
 	dupe.digestchance = digestchance
 	dupe.absorbchance = absorbchance
 	dupe.escapechance = escapechance
@@ -2706,6 +2705,7 @@
 	dupe.noise_freq = noise_freq
 	dupe.item_digest_logs = item_digest_logs
 	dupe.show_fullness_messages = show_fullness_messages
+	dupe.belchchance = belchchance
 	dupe.digest_max = digest_max //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
