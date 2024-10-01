@@ -1,0 +1,8 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - balance: "Hanner no longer have NO_SCAN."
+  - qol: "face of glamour uses a new pref, allow_mimicry"
+  - qol: "domination no longer checks resleeve lock"
+  - qol: "morph uses new pref, allow _mimicry,"
+  - rscadd: "The Grower Pod now shows progress bars when you examine it."
