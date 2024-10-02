@@ -29,6 +29,14 @@
 			to_chat(usr,"<span class='danger'>The target's mind is too complex to be affected!</span>")
 			return
 
+		/* CHOMPRemove Start, we have a vore pref for that
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			if(H.resleeve_lock && usr.ckey != H.resleeve_lock)
+				to_chat(src, span_danger("[H] cannot be impersonated!"))
+				return
+		*///CHOMPRemove End
+
 		if(M.stat == DEAD) //Are they dead?
 			to_chat(usr,"<span class='warning'>A warning pops up on the device, informing you that [M] is dead, and, as such, the mind transfer can not be done.</span>")
 			return
