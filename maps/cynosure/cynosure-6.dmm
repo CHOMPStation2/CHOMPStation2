@@ -1205,13 +1205,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
-"boo" = (
-/obj/structure/shuttle/falsewall_no_join{
-	icon = 'icons/turf/wall_masks_tgmc.dmi';
-	icon_state = "white2"
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/escape/centcom)
 "bos" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 10
