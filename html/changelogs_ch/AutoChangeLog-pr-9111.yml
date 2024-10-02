@@ -1,0 +1,4 @@
+author: "Darlantanis"
+delete-after: True
+changes:
+  - bugfix: "fixes kelpie init again"
