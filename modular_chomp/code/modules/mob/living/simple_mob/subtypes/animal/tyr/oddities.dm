@@ -180,3 +180,31 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		L.add_modifier(/datum/modifier/fire, 3 SECONDS)
+	var/exploded = FALSE
+	var/explosion_dev_range		= 0
+	var/explosion_heavy_range	= 1
+	var/explosion_light_range	= 2
+	var/explosion_flash_range	= 3 // This doesn't do anything iirc.
+
+	var/explosion_delay_lower	= 1 SECOND	// Lower bound for explosion delay.
+	var/explosion_delay_upper	= 2 SECONDS	// Upper bound.
+
+/mob/living/simple_mob/animal/tyr/explode_beetle/death()
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	spawn(0)
+		// Flash black and red as a warning.
+		for(var/i = 1 to delay)
+			if(i % 2 == 0)
+				color = "#000000"
+			else
+				color = "#FF0000"
+			sleep(1)
+
+	spawn(delay)
+		// The actual boom.
+		if(src && !exploded)
+			visible_message(span_danger("\The [src]'s body detonates!"))
+			exploded = TRUE
+			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
+	return ..()

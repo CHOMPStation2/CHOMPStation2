@@ -101,7 +101,7 @@
 
 	// Telegraph our next move.
 	Beam(target, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
-	visible_message(span("warning", "\The [src] deploys a missile rack!"))
+	visible_message(span_warning("\The [src] deploys a missile rack!"))
 	playsound(src, 'sound/effects/turret/move1.wav', 50, 1)
 	sleep(0.5 SECONDS)
 
@@ -109,7 +109,7 @@
 		if(target) // Might get deleted in the meantime.
 			var/turf/T = get_turf(target)
 			if(T)
-				visible_message(span("warning", "\The [src] fires a rocket into the air!"))
+				visible_message(span_warning("\The [src] fires a rocket into the air!"))
 				playsound(src, 'sound/weapons/rpg.ogg', 70, 1)
 				face_atom(T)
 				var/obj/item/projectile/arc/explosive_rocket/rocket = new(loc)
@@ -117,7 +117,7 @@
 				rocket.fire()
 				sleep(1 SECOND)
 
-	visible_message(span("warning", "\The [src] retracts the missile rack."))
+	visible_message(span_warning("\The [src] retracts the missile rack."))
 	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase1/proc/launch_rockets(atom/target)
@@ -146,7 +146,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase2/proc/electric_defense(atom/target)
 	var/turf/T = get_turf(target)
-	visible_message(span("warning", "\The [src] fires an energetic sphere into the air!"))
+	visible_message(span_warning("\The [src] fires an energetic sphere into the air!"))
 	playsound(src, 'sound/weapons/Laser.ogg', 50, 1)
 	face_atom(T)
 	var/obj/item/projectile/arc/microsingulo/sphere = new(loc)
@@ -180,7 +180,7 @@
 /mob/living/simple_mob/mechanical/mecha/imperion/phase3/do_special_attack(atom/A)
 	// Teleport attack.
 	if(!A)
-		to_chat(src, span("warning", "There's nothing to teleport to."))
+		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
 	var/list/nearby_things = range(1, A)
@@ -198,7 +198,7 @@
 			valid_turfs.Add(potential_turf)
 
 	if(!(valid_turfs.len))
-		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
 		return FALSE
 
 	var/turf/target_turf = pick(valid_turfs)
@@ -210,14 +210,14 @@
 	s2.set_up(5, 1, target_turf)
 
 
-	T.visible_message(span("notice", "\The [src] vanishes!"))
+	T.visible_message(span_notice("\The [src] vanishes!"))
 	s1.start()
 
 	forceMove(target_turf)
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 
 /datum/ai_holder/simple_mob/ranged/aggressive/meleeimperion
@@ -251,7 +251,7 @@
 
 	// Telegraph our next move.
 	Beam(target, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
-	visible_message(span("warning", "\The [src] deploys a missile rack!"))
+	visible_message(span_warning("\The [src] deploys a missile rack!"))
 	playsound(src, 'sound/effects/turret/move1.wav', 50, 1)
 	sleep(0.5 SECONDS)
 
@@ -259,7 +259,7 @@
 		if(target) // Might get deleted in the meantime.
 			var/turf/T = get_turf(target)
 			if(T)
-				visible_message(span("warning", "\The [src] fires a rocket into the air!"))
+				visible_message(span_warning("\The [src] fires a rocket into the air!"))
 				playsound(src, 'sound/weapons/rpg.ogg', 70, 1)
 				face_atom(T)
 				var/obj/item/projectile/arc/explosive_rocket/rocket = new(loc)
@@ -267,12 +267,12 @@
 				rocket.fire()
 				sleep(1 SECOND)
 
-	visible_message(span("warning", "\The [src] retracts the missile rack."))
+	visible_message(span_warning("\The [src] retracts the missile rack."))
 	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase4/proc/launch_rockets(atom/target)
 	if(!target)
-		to_chat(src, span("warning", "There's nothing to teleport to."))
+		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
 	var/list/nearby_things = range(1, target)
@@ -290,7 +290,7 @@
 			valid_turfs.Add(potential_turf)
 
 	if(!(valid_turfs.len))
-		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
 		return FALSE
 
 	var/turf/target_turf = pick(valid_turfs)
@@ -302,19 +302,19 @@
 	s2.set_up(5, 1, target_turf)
 
 
-	T.visible_message(span("notice", "\The [src] vanishes!"))
+	T.visible_message(span_notice("\The [src] vanishes!"))
 	s1.start()
 
 	forceMove(target_turf)
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 
 /mob/living/simple_mob/mechanical/mecha/imperion/phase4/proc/launch_microsingularity(atom/target)
 	var/turf/T = get_turf(target)
-	visible_message(span("warning", "\The [src] fires an energetic sphere into the air!"))
+	visible_message(span_warning("\The [src] fires an energetic sphere into the air!"))
 	playsound(src, 'sound/weapons/Laser.ogg', 50, 1)
 	face_atom(T)
 	var/obj/item/projectile/arc/microsingulo/sphere = new(loc)
@@ -430,7 +430,7 @@
 
 	// Telegraph our next move.
 	Beam(target, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
-	visible_message(span("warning", "\The [src] deploys a missile rack!"))
+	visible_message(span_warning("\The [src] deploys a missile rack!"))
 	playsound(src, 'sound/effects/turret/move1.wav', 50, 1)
 	sleep(0.5 SECONDS)
 
@@ -438,7 +438,7 @@
 		if(target) // Might get deleted in the meantime.
 			var/turf/T = get_turf(target)
 			if(T)
-				visible_message(span("warning", "\The [src] fires a rocket into the air!"))
+				visible_message(span_warning("\The [src] fires a rocket into the air!"))
 				playsound(src, 'sound/weapons/rpg.ogg', 70, 1)
 				face_atom(T)
 				var/obj/item/projectile/arc/explosive_rocket/rocket = new(loc)
@@ -446,7 +446,7 @@
 				rocket.fire()
 				sleep(1 SECOND)
 
-	visible_message(span("warning", "\The [src] retracts the missile rack."))
+	visible_message(span_warning("\The [src] retracts the missile rack."))
 	playsound(src, 'sound/effects/turret/move2.wav', 50, 1)
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/imperiontesla(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)

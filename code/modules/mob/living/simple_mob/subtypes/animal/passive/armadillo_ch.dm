@@ -82,16 +82,16 @@
 // Hat simulator
 /mob/living/simple_mob/animal/passive/armadillo/proc/give_hat(var/obj/item/clothing/head/new_hat, var/mob/living/user)
 	if(!istype(new_hat))
-		to_chat(user, span("warning", "\The [new_hat] isn't a hat."))
+		to_chat(user, span_warning("\The [new_hat] isn't a hat."))
 		return
 	if(hat)
-		to_chat(user, span("warning", "\The [src] is already wearing \a [hat]."))
+		to_chat(user, span_warning("\The [src] is already wearing \a [hat]."))
 		return
 	else
 		user.drop_item(new_hat)
 		hat = new_hat
 		new_hat.forceMove(src)
-		to_chat(user, span("notice", "You place \a [new_hat] on \the [src].  How adorable!"))
+		to_chat(user, span_notice("You place \a [new_hat] on \the [src].  How adorable!"))
 		update_icon()
 		return
 

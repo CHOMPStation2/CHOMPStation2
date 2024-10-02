@@ -228,6 +228,6 @@
 	icon_rest = "mouse_[new_mouse_colour]_sleep"
 	desc = "A small [new_mouse_colour] rodent, often seen hiding in maintenance areas and making a nuisance of itself."
 	holder_type = text2path("/obj/item/holder/mouse/[new_mouse_colour]")
-	to_chat(src, SPAN_NOTICE("You are now a [new_mouse_colour] mouse!"))
+	to_chat(src, span_notice("You are now a [new_mouse_colour] mouse!"))
 	remove_verb(src,/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour) //CHOMPEdit TGPanel
 // CHOMPAdd End

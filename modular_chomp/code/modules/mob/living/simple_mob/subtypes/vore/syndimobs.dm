@@ -125,7 +125,7 @@
 	sleep(leap_warmup) // For the telegraphing.
 
 	status_flags |= LEAPING
-	visible_message(span("danger","\The [src] leaps at \the [A]!"))
+	visible_message(span_danger("\The [src] leaps at \the [A]!"))
 	throw_at(get_step(get_turf(A), get_turf(src)), special_attack_max_range+1, 1, src)
 	playsound(src, leap_sound, 75, 1)
 
@@ -154,8 +154,8 @@
 
 	if(victim)
 		victim.Weaken(2)
-		victim.visible_message(span("danger","\The [src] knocks down \the [victim]!"))
-		to_chat(victim, span("critical", "\The [src] jumps on you!"))
+		victim.visible_message(span_danger("\The [src] knocks down \the [victim]!"))
+		to_chat(victim, span_critical("\The [src] jumps on you!"))
 		. = TRUE
 
 	set_AI_busy(FALSE)
@@ -318,7 +318,7 @@
 	resize(oursize)
 
 /mob/living/simple_mob/vore/wolftaur/syndicate/death()
-	visible_message(span("critical", "\The [src]'s explosive implant lets out a shrill beep!!!"))
+	visible_message(span_critical("\The [src]'s explosive implant lets out a shrill beep!!!"))
 	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
 	spawn(0)
 		// Flash black and red as a warning.
@@ -332,7 +332,7 @@
 	spawn(delay)
 		// The actual boom.
 		if(src && !exploded)
-			visible_message(span("danger", "\The [src]'s body violentl explodes!"))
+			visible_message(span_danger("\The [src]'s body violentl explodes!"))
 			exploded = TRUE
 			new /obj/effect/decal/cleanable/blood/gibs(src.loc)
 			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)

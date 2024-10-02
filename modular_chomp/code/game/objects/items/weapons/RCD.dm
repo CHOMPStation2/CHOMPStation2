@@ -39,7 +39,7 @@ rborosilicate = 12
 	..()
 	if(!emagged)
 		emagged = 1
-		to_chat(user, span("warning","You short out the safeties on \the [src]'s construction limiter"))
+		to_chat(user, span_warning("You short out the safeties on \the [src]'s construction limiter"))
 		return TRUE
 
 /obj/item/rcd/attackby(obj/item/W, mob/user)
@@ -48,12 +48,12 @@ rborosilicate = 12
 		var/obj/item/rcd_ammo/cartridge = W
 		var/can_store = min(max_stored_matter - stored_matter, cartridge.remaining)
 		if(can_store <= 0)
-			to_chat(user, span("warning", "There's either no space or \the [cartridge] is empty!"))
+			to_chat(user, span_warning("There's either no space or \the [cartridge] is empty!"))
 			return FALSE
 		stored_matter += can_store
 		cartridge.remaining -= can_store
 		if(!cartridge.remaining)
-			to_chat(user, span("warning", "\The [cartridge] dissolves as it empties of compressed matter."))
+			to_chat(user, span_warning("\The [cartridge] dissolves as it empties of compressed matter."))
 			user.drop_from_inventory(W)
 			qdel(W)
 		loaded = 1
@@ -78,7 +78,7 @@ rborosilicate = 12
 	if(loaded)
 		playsound(src, 'sound/machines/click.ogg', 50, 1)
 		update_icon()
-		to_chat(user, span("notice", "The RCD now holds [stored_matter]/[max_stored_matter] matter-units."))
+		to_chat(user, span_notice("The RCD now holds [stored_matter]/[max_stored_matter] matter-units."))
 	return ..()
 
 /obj/item/rcd/proc/loadwithsheets(obj/item/stack/S, value, mob/user)
@@ -462,7 +462,7 @@ rborosilicate = 12
 
 /turf/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_FLOORWALL)
-		to_chat(user, span("notice", "You build a floor."))
+		to_chat(user, span_notice("You build a floor."))
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)
 		return TRUE
 	return FALSE
@@ -544,13 +544,13 @@ rborosilicate = 12
 /turf/simulated/floor/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
-			to_chat(user, span("notice", "You build a girder."))
+			to_chat(user, span_notice("You build a girder."))
 			new the_rcd.girder_type(src)
 			return TRUE
 		if(RCD_AIRLOCK)
 			if(locate(/obj/machinery/door/airlock) in src)
 				return FALSE // No more airlock stacking.
-			to_chat(user, span("notice", "You build an airlock."))
+			to_chat(user, span_notice("You build an airlock."))
 			var/obj/machinery/door/airlock/A = new the_rcd.airlock_type(src)
 			A.electronics = new/obj/item/airlock_electronics(A)
 			A.electronics.req_access = null
@@ -624,18 +624,18 @@ rborosilicate = 12
 		if(RCD_FIRELOCK)
 			if(locate(/obj/machinery/door/firedoor) in src)
 				return FALSE
-			to_chat(user, span("notice", "You build a firelock."))
+			to_chat(user, span_notice("You build a firelock."))
 			new /obj/machinery/door/firedoor/glass(src)
 			return TRUE
 		if(RCD_WINDOWGRILLE)
 			if(locate(/obj/structure/grille) in src)
 				return FALSE
-			to_chat(user, span("notice", "You construct the grille."))
+			to_chat(user, span_notice("You construct the grille."))
 			var/obj/structure/grille/G = new(src)
 			G.anchored = TRUE
 			return TRUE
 		if(RCD_DECONSTRUCT)
-			to_chat(user, span("notice", "You deconstruct \the [src]."))
+			to_chat(user, span_notice("You deconstruct \the [src]."))
 			ChangeTurf(get_base_turf_by_area(src), preserve_outdoors = TRUE)
 			return TRUE
 		if(RCD_FRAME)
@@ -670,7 +670,7 @@ rborosilicate = 12
 				if("WEST")
 					frame.dir = WEST
 			frame.anchored = 1
-			to_chat(user, span("notice", "You build a frame"))
+			to_chat(user, span_notice("You build a frame"))
 			return TRUE
 		if(RCD_CONVEYOR)
 			var/list/conveyor_dirs = list(
@@ -692,7 +692,7 @@ rborosilicate = 12
 					C.set_dir(EAST)
 				if("WEST")
 					C.set_dir(WEST)
-			to_chat(user, span("notice", "You build a conveyor"))
+			to_chat(user, span_notice("You build a conveyor"))
 			return TRUE
 		if(RCD_TURRET)
 			if(locate(/obj/machinery/porta_turret) in src)
@@ -730,7 +730,7 @@ rborosilicate = 12
 /turf/simulated/wall/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
-			to_chat(user, span("notice", "You deconstruct \the [src]."))
+			to_chat(user, span_notice("You deconstruct \the [src]."))
 			ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)
 			return TRUE
 		if(RCD_WALLFRAME)
@@ -747,7 +747,7 @@ rborosilicate = 12
 				if(dx > 0)	direction = EAST
 				else		direction = WEST
 			if(gotwallitem(get_step(src,direction), direction))
-				to_chat(user, span("warning", "There is already a wall item there!"))
+				to_chat(user, span_warning("There is already a wall item there!"))
 				return FALSE
 			var/obj/O = new the_rcd.wall_frame_type(get_step(src,direction))
 			O.dir = direction
@@ -817,7 +817,7 @@ rborosilicate = 12
 
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
-			to_chat(user, span("notice", "You finish a wall."))
+			to_chat(user, span_notice("You finish a wall."))
 			// This is mostly the same as using on a floor. The girder's material is preserved, however.
 			T.ChangeTurf(wall_type)
 			var/turf/simulated/wall/new_T = get_turf(src) // Ref to the wall we just built.
@@ -830,7 +830,7 @@ rborosilicate = 12
 			return TRUE
 
 		if(RCD_DECONSTRUCT)
-			to_chat(user, span("notice", "You deconstruct \the [src]."))
+			to_chat(user, span_notice("You deconstruct \the [src]."))
 			qdel(src)
 			return TRUE
 
@@ -852,7 +852,7 @@ rborosilicate = 12
 /obj/structure/window/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
-			to_chat(user, span("notice", "You deconstruct \the [src]."))
+			to_chat(user, span_notice("You deconstruct \the [src]."))
 			qdel(src)
 			return TRUE
 	return FALSE
@@ -898,7 +898,7 @@ rborosilicate = 12
 /obj/structure/grille/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
-			to_chat(user, span("notice", "You deconstruct \the [src]."))
+			to_chat(user, span_notice("You deconstruct \the [src]."))
 			qdel(src)
 			return TRUE
 		if(RCD_WINDOWGRILLE)
@@ -907,7 +907,7 @@ rborosilicate = 12
 				health = initial(health)
 				update_icon()
 				density = 1
-				to_chat(user, span("notice", "You repair \the [src]."))
+				to_chat(user, span_notice("You repair \the [src]."))
 				return TRUE
 			var/temp_dir
 			switch(the_rcd.window_dir)
@@ -923,10 +923,10 @@ rborosilicate = 12
 					temp_dir = 10
 			for(var/obj/structure/window/W in src.loc)
 				if(W && W.dir == temp_dir)
-					to_chat(user, span("warning", "There is already a window there."))
+					to_chat(user, span_warning("There is already a window there."))
 					return FALSE
 
-			to_chat(user, span("notice", "You construct a window."))
+			to_chat(user, span_notice("You construct a window."))
 			var/window_to_spawn = /obj/structure/window/basic
 			switch(the_rcd.window_type)
 				if("glass")
@@ -967,7 +967,7 @@ rborosilicate = 12
 /obj/machinery/door/airlock/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_DECONSTRUCT)
-			to_chat(user, span("notice", "You deconstruct \the [src]."))
+			to_chat(user, span_notice("You deconstruct \the [src]."))
 			qdel(src)
 			return TRUE
 	return FALSE
@@ -986,7 +986,7 @@ rborosilicate = 12
 
 /obj/machinery/door/firedoor/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1004,7 +1004,7 @@ rborosilicate = 12
 
 /obj/machinery/computer/security/telescreen/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1020,7 +1020,7 @@ rborosilicate = 12
 
 /obj/machinery/doorbell_chime/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1036,7 +1036,7 @@ rborosilicate = 12
 
 /obj/machinery/status_display/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1052,7 +1052,7 @@ rborosilicate = 12
 
 /obj/machinery/requests_console/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1068,7 +1068,7 @@ rborosilicate = 12
 
 /obj/machinery/atm/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1084,7 +1084,7 @@ rborosilicate = 12
 
 /obj/machinery/newscaster/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1100,7 +1100,7 @@ rborosilicate = 12
 
 /obj/machinery/recharger/wallcharger/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1116,7 +1116,7 @@ rborosilicate = 12
 
 /obj/machinery/firealarm/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1132,7 +1132,7 @@ rborosilicate = 12
 
 /obj/machinery/alarm/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1148,7 +1148,7 @@ rborosilicate = 12
 
 /obj/machinery/computer/guestpass/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1164,7 +1164,7 @@ rborosilicate = 12
 
 /obj/item/radio/intercom/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1180,7 +1180,7 @@ rborosilicate = 12
 
 /obj/machinery/keycard_auth/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1196,7 +1196,7 @@ rborosilicate = 12
 
 /obj/item/geiger/wall/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1212,7 +1212,7 @@ rborosilicate = 12
 
 /obj/machinery/button/windowtint/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1228,7 +1228,7 @@ rborosilicate = 12
 
 /obj/machinery/computer/id_restorer/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1244,7 +1244,7 @@ rborosilicate = 12
 
 /obj/machinery/computer/timeclock/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1260,7 +1260,7 @@ rborosilicate = 12
 
 /obj/machinery/station_map/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1276,7 +1276,7 @@ rborosilicate = 12
 
 /obj/structure/trash_pile/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1292,7 +1292,7 @@ rborosilicate = 12
 
 /obj/structure/loot_pile/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1308,7 +1308,7 @@ rborosilicate = 12
 
 /obj/structure/frame/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1324,7 +1324,7 @@ rborosilicate = 12
 
 /obj/machinery/ai_status_display/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1340,7 +1340,7 @@ rborosilicate = 12
 
 /obj/machinery/light/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1356,7 +1356,7 @@ rborosilicate = 12
 
 /obj/machinery/hologram/holopad/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1372,7 +1372,7 @@ rborosilicate = 12
 
 /obj/machinery/light_switch/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1388,7 +1388,7 @@ rborosilicate = 12
 
 /obj/structure/table/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1404,7 +1404,7 @@ rborosilicate = 12
 
 /obj/machinery/conveyor/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1420,7 +1420,7 @@ rborosilicate = 12
 
 /obj/machinery/door/window/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1436,7 +1436,7 @@ rborosilicate = 12
 
 /obj/structure/firedoor_assembly/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1452,7 +1452,7 @@ rborosilicate = 12
 
 /obj/structure/door_assembly/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE
@@ -1468,7 +1468,7 @@ rborosilicate = 12
 
 /obj/machinery/button/doorbell/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		qdel(src)
 		return TRUE
 	return FALSE

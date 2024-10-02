@@ -48,6 +48,7 @@ export const VoreUserPreferences = (props: {
     allow_spontaneous_tf,
     allow_mind_transfer,
     eating_privacy_global,
+    allow_mimicry,
     strip_mechanics_active,
     autotransferable,
     liq_rec,
@@ -508,6 +509,19 @@ export const VoreUserPreferences = (props: {
       content: {
         enabled: 'Global Vore Privacy: Subtle',
         disabled: 'Global Vore Privacy: Loud',
+      },
+    },
+    allow_mimicry: {
+      action: 'toggle_mimicry',
+      test: allow_mimicry,
+      tooltip: {
+        main: 'Allows some creatures to mimick your apperance.',
+        enable: ' Click here to allow mimicry.',
+        disable: ' Click here to forbid mimicry.',
+      },
+      content: {
+        enabled: 'Allow Mimicry: Yes',
+        disabled: 'Allow Mimicry: No',
       },
     },
     autotransferable: {

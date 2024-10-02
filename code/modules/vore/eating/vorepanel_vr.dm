@@ -549,6 +549,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"weight_message_visible" = host.weight_message_visible,
 		"weight_messages" = host.weight_messages,
 		"eating_privacy_global" = host.eating_privacy_global,
+		"allow_mimicry" = host.allow_mimicry,
 		//CHOMPEdit start, vore sprites
 		"belly_rub_target" = host.belly_rub_target,
 		"vore_sprite_color" = host.vore_sprite_color,
@@ -1944,6 +1945,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.eating_privacy_global = !host.eating_privacy_global
 			if(host.client.prefs_vr)
 				host.eating_privacy_global = host.eating_privacy_global
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_mimicry")
+			host.allow_mimicry = !host.allow_mimicry
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.allow_mimicry = host.allow_mimicry
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_devour")

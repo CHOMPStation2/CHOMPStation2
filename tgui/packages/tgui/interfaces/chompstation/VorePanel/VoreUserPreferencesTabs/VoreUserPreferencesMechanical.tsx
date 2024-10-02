@@ -106,8 +106,14 @@ export const VoreUserPreferencesMechanical = (props: {
         <Flex.Item basis="33%">
           <VoreUserPreferenceItem
             spec={preferences.mind_transfer}
-            tooltipPosition="top"
+            tooltipPosition="left"
           />
+          <Flex.Item basis="33%">
+            <VoreUserPreferenceItem
+              spec={preferences.allow_mimicry}
+              tooltipPosition="right"
+            />
+          </Flex.Item>
         </Flex.Item>
       </Flex>
     </Section>

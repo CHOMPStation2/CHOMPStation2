@@ -9,7 +9,7 @@
 
 // Energy Weapons
 
-/datum/design/item/energy/protector
+/datum/design/item/weapon/energy/protector
 	desc = "The 'Protector' is an advanced energy gun that cannot be fired in lethal mode on low security alert levels, but features DNA locking and a powerful stun."
 	id = "protector"
 	req_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
@@ -18,7 +18,7 @@
 	sort_string = "MAAVA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
-/datum/design/item/energy/sickshot
+/datum/design/item/weapon/energy/sickshot
 	desc = "A 'Sickshot' is a 4-shot energy revolver that causes nausea and confusion."
 	id = "sickshot"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_MAGNET = 2)
@@ -27,7 +27,7 @@
 	sort_string = "MAAVB"
 	department = LATHE_ALL | LATHE_SECURITY | LATHE_MEDICAL // CHOMPAdd
 
-/datum/design/item/energy/netgun
+/datum/design/item/weapon/energy/netgun
 	desc  = "The \"Varmint Catcher\" is an energy net projector designed to immobilize dangerous wildlife."
 	id = "netgun"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_MAGNET = 3)
@@ -38,7 +38,7 @@
 
 // Misc weapons
 
-/datum/design/item/pummeler
+/datum/design/item/weapon/pummeler
 	desc = "With the 'Pummeler', punt anyone you don't like out of the room!"
 	id = "pummeler"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_MAGNET = 5)
@@ -49,11 +49,11 @@
 
 // Anti-particle stuff
 
-/datum/design/item/particle/AssembleDesignName()
+/datum/design/item/weapon/particle/AssembleDesignName()
 	..()
 	name = "Anti-particle weapon prototype ([item_name])"
 
-/datum/design/item/particle/advparticle
+/datum/design/item/weapon/particle/advparticle
 	name = "Advanced anti-particle rifle"
 	id = "advparticle"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 5, TECH_POWER = 3, TECH_MAGNET = 3)
@@ -62,7 +62,7 @@
 	sort_string = "MAAUA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
-/datum/design/item/particle/particlecannon
+/datum/design/item/weapon/particle/particlecannon
 	name = "Anti-particle cannon"
 	id = "particlecannon"
 	req_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 5, TECH_POWER = 4, TECH_MAGNET = 4)
@@ -71,7 +71,7 @@
 	sort_string = "MAAUB"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
-/datum/design/item/particle/pressureinterlock
+/datum/design/item/weapon/particle/pressureinterlock
 	name = "APP pressure interlock"
 	id = "pressureinterlock"
 	req_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
@@ -82,11 +82,11 @@
 
 // NSFW gun and cells
 /*
-/datum/design/item/cell_based/AssembleDesignName()
+/datum/design/item/weapon/cell_based/AssembleDesignName()
 	..()
 	name = "Cell-based weapon prototype ([item_name])"
 
-/datum/design/item/cell_based/prototype_nsfw
+/datum/design/item/weapon/cell_based/prototype_nsfw
 	name = "cell-loaded revolver"
 	id = "nsfw_prototype"
 	req_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 4, TECH_POWER = 4, TECH_COMBAT = 7)
@@ -94,7 +94,7 @@
 	build_path = /obj/item/gun/projectile/cell_loaded/combat/prototype
 	sort_string = "MAVAA"
 
-/datum/design/item/cell_based/prototype_nsfw_mag
+/datum/design/item/weapon/cell_based/prototype_nsfw_mag
 	name = "combat cell magazine"
 	id = "nsfw_mag_prototype"
 	req_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 4, TECH_POWER = 4, TECH_COMBAT = 7)
@@ -166,7 +166,7 @@
 	sort_string = "MAVCG"
 None of these for now, too. -DHA */
 
-/datum/design/item/ballistic/ammo/ptrshell
+/datum/design/item/weapon/ballistic/ammo/ptrshell
 	name = "14.5mm shell"
 	desc = "A dense-core projectile fired from a small cannon."
 	id = "ptrshell"

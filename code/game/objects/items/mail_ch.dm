@@ -359,7 +359,7 @@
 
 /obj/item/mail_scanner/examine(mob/user)
 	. = ..()
-	. += SPAN_NOTICE("Scan a letter to log it into the active database, then scan the person you wish to hand the letter to. Correctly scanning the recipient of the letter logged into the active database will add points to the supply budget.")
+	. += span_notice("Scan a letter to log it into the active database, then scan the person you wish to hand the letter to. Correctly scanning the recipient of the letter logged into the active database will add points to the supply budget.")
 
 /obj/item/mail_scanner/attack()
 	return
@@ -386,15 +386,15 @@
 		var/mob/living/recipient = saved.recipient
 
 		if(M.stat == DEAD)
-			to_chat(user, SPAN_WARNING("Consent Verification failed: You can't deliver mail to a corpse!"))
+			to_chat(user, span_warning("Consent Verification failed: You can't deliver mail to a corpse!"))
 			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 		if(M.real_name != recipient.real_name)
-			to_chat(user, SPAN_WARNING("Identity Verification failed: Target is not authorized recipient of this envelope!"))
+			to_chat(user, span_warning("Identity Verification failed: Target is not authorized recipient of this envelope!"))
 			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 		if(!M.client)
-			to_chat(user, SPAN_WARNING("Consent Verification failed: The scanner does not accept orders from SSD crewmemmbers!"))
+			to_chat(user, span_warning("Consent Verification failed: The scanner does not accept orders from SSD crewmemmbers!"))
 			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 
@@ -402,7 +402,7 @@
 		saved = null
 
 		cargo_points = rand(5, 10)
-		to_chat(user, SPAN_NOTICE("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
+		to_chat(user, span_notice("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
 		playsound(loc, 'modular_chomp/sound/items/mail/mailapproved.ogg', 50, TRUE)
 		SSsupply.points += cargo_points
 
