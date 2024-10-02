@@ -1,0 +1,4 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - maptweak: "Fixes tape spawning in place of recording tape"
