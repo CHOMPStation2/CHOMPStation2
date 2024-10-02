@@ -102,8 +102,13 @@
 	if(cloaked)
 		if(isliving(A))
 			var/mob/living/L = A
+<<<<<<< HEAD
 			L.add_modifier(/datum/modifier/entangled, 2 SECONDS) //L.Weaken(cloaked_weaken_amount) CHOMPEdit: Trying to remove hardstuns
 			to_chat(L, span("danger", "\The [src] ambushes you!"))
+=======
+			L.Weaken(cloaked_weaken_amount)
+			to_chat(L, span_danger("\The [src] ambushes you!"))
+>>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 			playsound(src, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()
 	..() // For the poison.

@@ -69,10 +69,15 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		if(prob(knockdown_chance))
+<<<<<<< HEAD
 			L.add_modifier(/datum/modifier/entangled, 4 SECONDS) //CHOMPedit, replacing weaken/slowdown with slow down
 			L.visible_message(span("danger", "\The [src] buffets \the [L]!"))
+=======
+			L.Weaken(4)
+			L.visible_message(span_danger("\The [src] buffets \the [L]!"))
+>>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 			src.ai_holder.remove_target()
-			L.visible_message(span("notice", "\The [src] seems to lose interest in \the [L]..."))
+			L.visible_message(span_notice("\The [src] seems to lose interest in \the [L]..."))
 
 /datum/say_list/space_ray
 	emote_see = list("swoops","dives","drifts on a solar current","glides elegantly through the void","briefly tumbles")
