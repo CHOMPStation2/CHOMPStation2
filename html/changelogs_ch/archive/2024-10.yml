@@ -32,3 +32,12 @@
   - maptweak: Replaced the air tank in engineering's suit storage with an oxygen tank
       so it can be used for internals refill
   - spellcheck: Fixed a typo in the CE office, RIP emergecny bag of holding
+2024-10-02:
+  CHOMPStation2:
+  - balance: Hanner no longer have NO_SCAN.
+  - qol: face of glamour uses a new pref, allow_mimicry
+  - qol: domination no longer checks resleeve lock
+  - qol: morph uses new pref, allow _mimicry,
+  - rscadd: The Grower Pod now shows progress bars when you examine it.
+  Darlantanis:
+  - bugfix: adds missing vore init check to kelpie
