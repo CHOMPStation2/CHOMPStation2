@@ -281,12 +281,12 @@
 	if(!recipients)
 		return
 	new_mail.initialize_for_recipient(recipients, TRUE)
-	new chosen(new_mail)
 
 	var/shuttle_spawn = tgui_alert(usr, "Spawn mail at location or in the shuttle?", "Spawn mail", list("Location", "Shuttle"))
 	if(!shuttle_spawn)
 		return
 	if(shuttle_spawn == "Shuttle")
+		new chosen(new_mail)
 		SSmail.admin_mail += new_mail
 		log_and_message_admins("spawned [chosen] inside an envelope at the shuttle")
 	else
