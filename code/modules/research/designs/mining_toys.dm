@@ -69,6 +69,7 @@
 	materials = list(MAT_STEEL = 1000,MAT_GLASS = 500)
 	build_path = /obj/item/mining_scanner/advanced
 	sort_string = "FBAAB"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/weapon/mining/upgradeAOE
 	name = "Mining Explosion Upgrade"

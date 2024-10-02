@@ -4,14 +4,10 @@
 
 // Xenoarch tools
 
-<<<<<<< HEAD
-/datum/design/item/xenoarch // CHOMPAdd
+/datum/design/item/weapon/xenoarch // CHOMPAdd
 	department = LATHE_ALL | LATHE_SCIENCE
 
-/datum/design/item/xenoarch/ano_scanner
-=======
 /datum/design/item/weapon/xenoarch/ano_scanner
->>>>>>> 8a5f51b37c... Merge pull request #16399 from Kashargul/somefixes
 	name = "Alden-Saraspova counter"
 	id = "ano_scanner"
 	desc = "Aids in triangulation of exotic particles."

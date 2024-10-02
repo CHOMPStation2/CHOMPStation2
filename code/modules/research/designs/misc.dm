@@ -95,9 +95,7 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 2000, MAT_GOLD = 1000)
 	build_path = /obj/item/mop/advanced
 	sort_string = "TBAAE"
-<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
-=======
 
 /datum/design/item/general/hyperfiber_jumpsuit
 	name = "HYPER jumpsuit"
@@ -106,6 +104,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 1000)
 	build_path = /obj/item/clothing/under/hyperfiber
 	sort_string = "TAVAA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/bluespace_jumpsuit
 	name = "Bluespace jumpsuit"
@@ -114,6 +113,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000)
 	build_path = /obj/item/clothing/under/hyperfiber/bluespace
 	sort_string = "TAVAB"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/sizegun
 	name = "Size gun"
@@ -122,6 +122,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000)
 	build_path = /obj/item/gun/energy/sizegun
 	sort_string = "TAVBA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/sizegun_gradual
 	name = "Gradual size gun"
@@ -130,6 +131,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000)
 	build_path = /obj/item/slow_sizegun
 	sort_string = "TAVBB"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/bluespace_collar
 	name = "Bluespace collar"
@@ -138,6 +140,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
 	build_path = /obj/item/clothing/accessory/collar/shock/bluespace
 	sort_string = "TAVBC"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/bodysnatcher
 	name = "Body Snatcher"
@@ -146,6 +149,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
 	build_path = /obj/item/bodysnatcher
 	sort_string = "TBVAA"
+	department = LATHE_ALL | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/inducer_sci
 	name = "Inducer (Scientific)"
@@ -154,6 +158,7 @@
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 2000, MAT_URANIUM = 4000, MAT_PHORON = 4000)
 	build_path = /obj/item/inducer/sci
 	sort_string = "TCVAA"
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/general/inducer_eng
 	name = "Inducer (Industrial)"
@@ -162,6 +167,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000, MAT_URANIUM = 2000, MAT_TITANIUM = 2000)
 	build_path = /obj/item/inducer/unloaded
 	sort_string = "TCVAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/general/walkpod
 	name = "PodZu Music Player"
@@ -170,6 +176,7 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
 	build_path = /obj/item/walkpod
 	sort_string = "TCVAD"
+	department = LATHE_ALL | LATHE_SERVICE | LATHE_PUBLIC // CHOMPAdd
 
 /datum/design/item/general/juke_remote
 	name = "BoomTown Cordless Speaker"
@@ -178,4 +185,4 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
 	build_path = /obj/item/juke_remote
 	sort_string = "TCVAE"
->>>>>>> 8a5f51b37c... Merge pull request #16399 from Kashargul/somefixes
+	department = LATHE_ALL | LATHE_SERVICE | LATHE_PUBLIC // CHOMPAdd

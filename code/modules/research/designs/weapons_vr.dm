@@ -81,12 +81,8 @@
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
 // NSFW gun and cells
-<<<<<<< HEAD
 /*
-/datum/design/item/cell_based/AssembleDesignName()
-=======
 /datum/design/item/weapon/cell_based/AssembleDesignName()
->>>>>>> 8a5f51b37c... Merge pull request #16399 from Kashargul/somefixes
 	..()
 	name = "Cell-based weapon prototype ([item_name])"
 
