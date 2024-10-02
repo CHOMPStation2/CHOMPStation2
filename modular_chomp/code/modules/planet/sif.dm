@@ -112,6 +112,7 @@
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
+	imminent_transition_message = "The sky fills with green clouds."
 
 /datum/weather/sif/toxinrain/process_effects()
 	..()
@@ -154,7 +155,7 @@
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
-
+	imminent_transition_message = "Pebbles fly through the sky."
 
 
 /datum/weather/sif/sandstorm/process_effects()
@@ -193,6 +194,7 @@
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
+	imminent_transition_message = "Stars begin to dance closer then before."
 
 /datum/weather/sif/starryrift/process_effects()
 	..()
@@ -240,6 +242,7 @@
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
+	imminent_transition_message = "Fog emerges from nowhere."
 
 /datum/weather/sif/midnightfog/process_effects()
 	..()
