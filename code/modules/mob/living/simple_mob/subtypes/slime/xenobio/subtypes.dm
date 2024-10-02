@@ -416,13 +416,9 @@
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 		else
-<<<<<<< HEAD
-			to_chat(L, span("warning", "\The [src] hits you with incredible force, but you remain in place."))
-			visible_message(span("danger", "\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
-			playsound(src, "punch", 50, 1) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
-=======
 			to_chat(L, span_warning("\The [src] hits you with incredible force, but you remain in place."))
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
+			visible_message(span_danger("\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
+			playsound(src, "punch", 50, 1) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 
 
 /mob/living/simple_mob/slime/xenobio/amber

@@ -85,14 +85,13 @@
 /mob/living/carbon/human/proc/check_can_attach_modular_limb(var/obj/item/organ/external/E)
 	if(world.time < last_special + (2 SECONDS) || get_active_hand() != E)
 		return FALSE
-<<<<<<< HEAD
-=======
+	/*CHOMPRemove Start
 	//VOREStation Addition Start
 	if(species.name == SPECIES_PROTEAN)
 		to_chat(src, span_warning("This is not compatible with your nanomachine body!"))
 		return FALSE
 	//VOREStation Addition End
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
+	*///CHOMPRemove End
 	if(incapacitated() || restrained())
 		to_chat(src, span_warning("You can't do that in your current state!"))
 		return FALSE
@@ -125,14 +124,13 @@
 /mob/living/carbon/human/proc/check_can_detach_modular_limb(var/obj/item/organ/external/E)
 	if(world.time < last_special + (2 SECONDS))
 		return FALSE
-<<<<<<< HEAD
-=======
+	/*CHOMPRemove Start
 	//VOREStation Addition Start
 	if(species.name == SPECIES_PROTEAN)
 		to_chat(src, span_warning("You can't just detach parts of your nanomachine body!"))
 		return FALSE
 	//VOREStation Addition End
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
+	*///CHOMPRemove End
 	if(incapacitated() || restrained())
 		to_chat(src, span_warning("You can't do that in your current state!"))
 		return FALSE

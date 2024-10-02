@@ -35,10 +35,6 @@
 			var/throw_dist = L.incapacitated(INCAPACITATION_DISABLED) ? 4 : 1
 			L.throw_at(get_edge_target_turf(L, throw_dir), throw_dist, 1, src)
 		else
-<<<<<<< HEAD
-			to_chat(L, span("warning", "\The [src] punches you with incredible force, but you remain in place."))
-			visible_message(span("danger", "\The [src] slams it's mechanized fist into \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Mechpunch visible/audible feedback for *resisting* the punch.
-			playsound(src, "punch", 50, 1) // CHOMPEdit: Mechpunch visible/audible feedback for *resisting* the punch.
-=======
 			to_chat(L, span_warning("\The [src] punches you with incredible force, but you remain in place."))
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
+			visible_message(span_danger("\The [src] slams it's mechanized fist into \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Mechpunch visible/audible feedback for *resisting* the punch.
+			playsound(src, "punch", 50, 1) // CHOMPEdit: Mechpunch visible/audible feedback for *resisting* the punch.

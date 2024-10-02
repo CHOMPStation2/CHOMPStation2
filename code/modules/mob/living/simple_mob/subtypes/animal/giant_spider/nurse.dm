@@ -101,13 +101,9 @@
 /mob/living/simple_mob/animal/giant_spider/nurse/proc/spin_cocoon(atom/movable/AM)
 	if(!istype(AM))
 		return FALSE // We can't cocoon walls sadly.
-<<<<<<< HEAD
 	if(istype(AM, /mob/living/simple_mob/animal/giant_spider)) //CHOMPEdit addition
 		return FALSE
-	visible_message(span("notice", "\The [src] begins to secrete a sticky substance around \the [AM].") )
-=======
-	visible_message(span_notice("\The [src] begins to secrete a sticky substance around \the [AM].") )
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
+	visible_message(span_notice("\The [src] begins to secrete a sticky substance around \the [AM]."))
 
 	// Get our AI to stay still.
 	set_AI_busy(TRUE)

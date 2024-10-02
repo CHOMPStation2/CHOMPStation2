@@ -226,8 +226,4 @@
 		H.Stun(1)
 		playsound(H, "rustle", 25, 1)
 	return TRUE
-<<<<<<< HEAD
 */ //CHOMPedit end. CHOMPEdit IIC: looks like upstream disabled it too because they made it a trait instead.
-=======
-*/
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes

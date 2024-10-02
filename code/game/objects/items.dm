@@ -227,18 +227,12 @@
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
 	..()
-<<<<<<< HEAD
 	if(anchored) // Start CHOMPStation Edit
 		if(hascall(src, "attack_self"))
 			return src.attack_self(user)
 		else
-			to_chat (user, "This is anchored and you can't lift it.")
+			to_chat(user, span_notice("This is anchored and you can't lift it."))
 		return // End CHOMPStation Edit
-=======
-	if(anchored)
-		to_chat(user, span_notice("\The [src] won't budge, you can't pick it up!"))
-		return
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 	if (hasorgans(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name["r_hand"]

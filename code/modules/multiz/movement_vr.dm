@@ -181,13 +181,8 @@
 	if(L.nutrition >= 100 && L.nutrition <= 200)
 		to_chat(L, span_notice("Climbing while [L.isSynthetic() ? "low on power" : "hungry"] slows you down"))
 		climb_time += 1 SECONDS
-<<<<<<< HEAD
 	else if(L.nutrition >= nutrition_cost && L.nutrition < 100)
-		to_chat(L, SPAN_DANGER("You [L.isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
-=======
-	else if(L.nutrition >= nutrition_cost && L.nutrition <= 100)
 		to_chat(L, span_danger("You [L.isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 		climb_time +=3 SECONDS
 		if(fall_chance < 30)
 			fall_chance = 30
@@ -299,19 +294,11 @@
 			climb_time += 10 SECONDS
 		if(climbing_delay_min > 1.0)
 			climb_time += 2.5 SECONDS
-<<<<<<< HEAD
 	if(nutrition >= 100 && nutrition <= 200)
-		to_chat(src, SPAN_NOTICE("Climbing while [isSynthetic() ? "low on power" : "hungry"] slows you down"))
-		climb_time += 1 SECONDS
-	else if(nutrition >= nutrition_cost && nutrition < 100)
-		to_chat(src, SPAN_DANGER("You [isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
-=======
-	if(nutrition >= 100 && nutrition <= 200) //Values are 50 lower than the warning icon appearing
 		to_chat(src, span_notice("Climbing while [isSynthetic() ? "low on power" : "hungry"] slows you down"))
 		climb_time += 1 SECONDS
-	else if(nutrition >= nutrition_cost && nutrition <= 100)
+	else if(nutrition >= nutrition_cost && nutrition < 100)
 		to_chat(src, span_danger("You [isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 		climb_time +=3 SECONDS
 		if(fall_chance < 30)
 			fall_chance = 30

@@ -7,13 +7,8 @@
 	return ..()
 
 /mob/living/silicon/ai/proc/deploy_to_shell(var/mob/living/silicon/robot/target)
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
-		to_chat(src, span("warning", "AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
-=======
-	if(!config.allow_ai_shells)
 		to_chat(src, span_warning("AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 		return
 
 	if(incapacitated())

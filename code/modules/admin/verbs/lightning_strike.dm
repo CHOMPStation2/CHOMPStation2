@@ -93,12 +93,8 @@
 			if(iscarbon(L))
 				var/mob/living/carbon/C = L
 				C.ear_deaf += 10
-<<<<<<< HEAD
 				C.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
-			to_chat(L, span("danger", "Lightning struck nearby, and the thunderclap is deafening!"))
-=======
 			to_chat(L, span_danger("Lightning struck nearby, and the thunderclap is deafening!"))
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 
 #undef LIGHTNING_REDIRECT_RANGE
 #undef LIGHTNING_ZAP_RANGE

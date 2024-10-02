@@ -77,17 +77,11 @@
 	if(!istype(H) || !istype(user))
 		return FALSE
 
-<<<<<<< HEAD
 	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) // CHOMPEdit - Changed to balloon alert
-	// to_chat(user, span("notice", "You inject \the [H] with \the [src]."))
-	// to_chat(H, span("warning", "You feel a tiny prick!"))
+	// to_chat(user, span_notice("You inject \the [H] with \the [src]."))
+	// to_chat(H, span_warning("You feel a tiny prick!"))
 	balloon_alert(user, "Injected \the [H] with \the [src]")
 	balloon_alert(H, "You feel a tiny prick!")
-=======
-	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
-	to_chat(user, span_notice("You inject \the [H] with \the [src]."))
-	to_chat(H, span_warning("You feel a tiny prick!"))
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 
 	if(hyposound)
 		playsound(src, hyposound, 25)

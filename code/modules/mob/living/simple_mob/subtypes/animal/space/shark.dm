@@ -49,13 +49,8 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		if(prob(knockdown_chance))
-<<<<<<< HEAD
 			L.add_modifier(/datum/modifier/entangled, 4 SECONDS) //CHOMPedit, replacing weaken/slowdown with slow down
-			L.visible_message(span("danger", "\The [src] knocks down \the [L]!"))
-=======
-			L.Weaken(3)
-			L.visible_message(span_danger("\The [src] knocks down \the [L]!"))
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
+			L.visible_message(span(span_danger("\The [src] knocks down \the [L]!"))
 
 /mob/living/simple_mob/animal/space/shark/event
 	ai_holder_type = /datum/ai_holder/simple_mob/event

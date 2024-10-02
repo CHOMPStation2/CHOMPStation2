@@ -231,11 +231,7 @@
 		flick("qpad-beam-out", src)
 		//playsound(src, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
 		flick("qpad-beam-in", linked_pad)
-<<<<<<< HEAD
 		//playsound(linked_pad, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
-=======
-		playsound(linked_pad, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
->>>>>>> 37d67be0c2... Merge pull request #16402 from Kashargul/somefixes
 
 		transport_objects(get_turf(linked_pad))
 
