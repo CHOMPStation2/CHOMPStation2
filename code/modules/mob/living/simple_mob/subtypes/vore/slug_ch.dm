@@ -129,7 +129,7 @@
 		if(missed) // Most likely we have a slow attack and they dodged it or we somehow got moved.
 			add_attack_logs(src, A, "Animal-attacked (dodged)", admin_notify = FALSE)
 			playsound(src, 'sound/rakshasa/Decay1.ogg', 75, 1)
-			visible_message(span("warning", "\The [src] misses."))
+			visible_message(span_warning("\The [src] misses."))
 			return FALSE
 		tryBumpNom(A) //Meant for bump noms but this works as intended here and has sanity checks.
 
@@ -194,7 +194,7 @@
 		return ..()
 	else if(istype(AM, /mob/living))
 		if(prob(50))
-			to_chat(AM, span("warning", "You stick to \the [my_turf]!"))
+			to_chat(AM, span_warning("You stick to \the [my_turf]!"))
 			return FALSE
 	return ..()
 

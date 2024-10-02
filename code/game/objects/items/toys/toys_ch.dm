@@ -87,5 +87,5 @@
 			'sound/voice/teppi/whine1.ogg',
 			'sound/voice/teppi/whine2.ogg')
 		playsound(user, teppi_noise, 10, 0)
-		src.visible_message(SPAN_NOTICE("Gyooooooooh!"))
+		src.visible_message(span_notice("Gyooooooooh!"))
 	return ..()
