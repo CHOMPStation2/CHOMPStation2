@@ -121,6 +121,7 @@
 	name = "charged beetle"
 	desc = "A large insect."
 	icon_state = "lighting_beetle"
+	icon_dead = "beetle_dead"
 	maxHealth = 40
 	health = 40
 	pass_flags = PASSTABLE //flying bug
@@ -133,30 +134,30 @@
 		/obj/item/stack/material/chitin = 1\
 		)
 
-	var/emp_heavy = 1
-	var/emp_med = 2
-	var/emp_light = 3
-	var/emp_long = 4
-
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 	see_in_dark = 3
 	melee_damage_lower = 12 //Kills you 8ish if unarmored, or 10ish if wearing the tribal armor
 	melee_damage_upper = 12 //Rng numbers are wierd
 
-/mob/living/simple_mob/animal/tyr/electronic_beetle/proc/explode()
-	if(empulse(src, emp_heavy, emp_med, emp_light, emp_long))
-		qdel(src)
-	return
+/mob/living/simple_mob/animal/tyr/electronic_beetle/apply_melee_effects(var/atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		A.emp_act(4) //The weakest strength of EMP
+		playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
+		L.Weaken(4)
+		L.Stun(4)
+		L.stuttering = max(L.stuttering, 4)
+		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+		s.set_up(5, 1, L)
+		s.start()
 
-/mob/living/simple_mob/animal/tyr/electronic_beetle/death()
-	explode()
-	..()
 
 /mob/living/simple_mob/animal/tyr/explode_beetle
-	name = "charged beetle"
+	name = "fiery beetle"
 	desc = "A large insect."
 	icon_state = "fire_beetle"
+	icon_dead = "beetle_dead"
 	maxHealth = 40
 	health = 40
 	pass_flags = PASSTABLE //flying bug
@@ -172,34 +173,10 @@
 		)
 
 	see_in_dark = 3
-	melee_damage_lower = 12 //Kills you 8ish if unarmored, or 10ish if wearing the tribal armor
-	melee_damage_upper = 12 //Rng numbers are wierd
+	melee_damage_lower = 6 //Kills you 8ish if unarmored, or 10ish if wearing the tribal armor
+	melee_damage_upper = 6 //Rng numbers are wierd
 
-	var/exploded = FALSE
-	var/explosion_dev_range		= 0
-	var/explosion_heavy_range	= 1
-	var/explosion_light_range	= 2
-	var/explosion_flash_range	= 3 // This doesn't do anything iirc.
-
-	var/explosion_delay_lower	= 1 SECOND	// Lower bound for explosion delay.
-	var/explosion_delay_upper	= 2 SECONDS	// Upper bound.
-
-/mob/living/simple_mob/animal/tyr/explode_beetle/death()
-	visible_message(span("critical", "\The [src]'s body begins to rupture!"))
-	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
-	spawn(0)
-		// Flash black and red as a warning.
-		for(var/i = 1 to delay)
-			if(i % 2 == 0)
-				color = "#000000"
-			else
-				color = "#FF0000"
-			sleep(1)
-
-	spawn(delay)
-		// The actual boom.
-		if(src && !exploded)
-			visible_message(span("danger", "\The [src]'s body detonates!"))
-			exploded = TRUE
-			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
-	return ..()
+/mob/living/simple_mob/animal/tyr/explode_beetle/apply_melee_effects(var/atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		L.add_modifier(/datum/modifier/fire, 3 SECONDS)
