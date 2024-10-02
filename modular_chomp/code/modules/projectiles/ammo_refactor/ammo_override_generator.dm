@@ -33,11 +33,11 @@ Leave this unticked by default. This was used to generate ammo_overrides.dm
 	for(var/caliber in listof)
 		output += caliber + "\n"
 	rustg_file_write(output, "data/calibers.txt")
-	types = typesof(/obj/item/weapon/gun/projectile)
+	types = typesof(/obj/item/gun/projectile)
 	var/list/magtypes = list()
 	var/list/startmags = list()
 	for(var/type in types)
-		var/obj/item/weapon/gun/projectile/wep = new type(null)
+		var/obj/item/gun/projectile/wep = new type(null)
 		magtypes |= wep.allowed_magazines
 		startmags |= wep.magazine_type
 		qdel(wep)
@@ -73,7 +73,7 @@ Leave this unticked by default. This was used to generate ammo_overrides.dm
 	rustg_file_write(output, "data/magazines.txt")
 
 /proc/override_gen()
-	var/list/types = typesof(/obj/item/weapon/gun/projectile)
+	var/list/types = typesof(/obj/item/gun/projectile)
 	var/list/casing_overrides = list(
 		"small" = /obj/item/ammo_casing/simple/small,
 		"medium" = /obj/item/ammo_casing/simple/medium,
@@ -89,7 +89,7 @@ Leave this unticked by default. This was used to generate ammo_overrides.dm
 	var/output_large = ""
 	for(var/type in types)
 		var/output = ""
-		var/obj/item/weapon/gun/projectile/wep = new type(null)
+		var/obj/item/gun/projectile/wep = new type(null)
 		if(!(wep.caliber in override_calibers))
 			qdel(wep)
 			continue

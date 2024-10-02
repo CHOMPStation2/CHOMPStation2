@@ -22,7 +22,7 @@
 "g" = (
 /obj/random/handgun/sec,
 /obj/effect/decal/remains/human,
-/obj/item/weapon/spacecash/c200,
+/obj/item/spacecash/c200,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/Rocky1)
 

@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/projectile/revolver/slab
+/obj/item/gun/projectile/revolver/slab
 	name = "slab revolver"
 	desc = "No coins. Cope."
 	caliber = "14.5mm" //This will ultrakill anything in front of it

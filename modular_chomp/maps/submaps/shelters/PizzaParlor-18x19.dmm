@@ -2,7 +2,7 @@
 "ah" = (
 /obj/structure/table/woodentable,
 /obj/random/cigarettes,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -197,49 +197,49 @@
 /area/survivalpod/superpose/PizzaParlor)
 "hA" = (
 /obj/structure/closet/walllocker_double/north,
-/obj/item/device/gps,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/gps,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -276,7 +276,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/whetstone,
+/obj/item/whetstone,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
 "ka" = (
@@ -415,17 +415,17 @@
 /area/survivalpod/superpose/PizzaParlor)
 "rN" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/survivalpod/superpose/PizzaParlor)
 "rX" = (
@@ -549,7 +549,7 @@
 /area/survivalpod/superpose/PizzaParlor)
 "zY" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
@@ -598,7 +598,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
 "Cf" = (
@@ -624,9 +624,9 @@
 /area/survivalpod/superpose/PizzaParlor)
 "Cr" = (
 /obj/structure/table/marble,
-/obj/item/weapon/book/manual/chef_recipes,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/book/manual/chef_recipes,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -642,15 +642,15 @@
 "CS" = (
 /obj/structure/closet/chefcloset,
 /obj/item/glass_jar,
-/obj/item/device/retail_scanner/civilian,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/device/destTagger{
+/obj/item/retail_scanner/civilian,
+/obj/item/soap/nanotrasen,
+/obj/item/destTagger{
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
+/obj/item/packageWrap,
+/obj/item/packageWrap,
+/obj/item/packageWrap,
 /obj/item/clothing/gloves/sterile/latex,
 /obj/item/clothing/gloves/sterile/latex,
 /obj/item/clothing/under/color/red,
@@ -694,13 +694,13 @@
 /area/survivalpod/superpose/PizzaParlor)
 "Fz" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/survivalpod/superpose/PizzaParlor)
 "FG" = (
@@ -730,14 +730,14 @@
 /area/survivalpod/superpose/PizzaParlor)
 "HD" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+/obj/item/reagent_containers/food/condiment/enzyme{
 	pixel_x = -8;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -790,7 +790,7 @@
 /area/survivalpod/superpose/PizzaParlor)
 "Kf" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/donkpockets/pizza,
+/obj/item/storage/box/donkpockets/pizza,
 /obj/item/pizzavoucher{
 	pixel_y = 7;
 	pixel_x = 5
@@ -845,8 +845,8 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
 "Mo" = (
@@ -859,10 +859,10 @@
 /area/survivalpod/superpose/PizzaParlor)
 "ML" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 5;
 	pixel_x = -5
 	},
@@ -900,10 +900,10 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 5;
 	pixel_x = -5
 	},
@@ -921,11 +921,11 @@
 /area/survivalpod/superpose/PizzaParlor)
 "QN" = (
 /obj/structure/table/hardwoodtable,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -2;
 	pixel_y = 14
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 9;
 	pixel_x = -10
 	},
@@ -936,11 +936,11 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_y = 5;
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_y = 5
 	},
 /turf/simulated/floor/wood/alt/parquet,
@@ -1025,7 +1025,7 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/survivalpod/superpose/PizzaParlor)
 "Tp" = (
-/obj/item/weapon/storage/bag/trash,
+/obj/item/storage/bag/trash,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -1094,13 +1094,13 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/card/id/generic{
+/obj/item/card/id/generic{
 	access = list(515);
 	assignment = "Pizza Courier";
 	pixel_y = 0;
 	name = "Pizza Delivery ID"
 	},
-/obj/item/weapon/card/id/generic{
+/obj/item/card/id/generic{
 	access = list(515);
 	assignment = "Pizza Courier";
 	pixel_y = 0;
@@ -1120,36 +1120,36 @@
 /area/survivalpod/superpose/PizzaParlor)
 "VK" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_y = 0;
 	pixel_x = -4
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_y = 0;
 	pixel_x = -12
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_y = 0;
 	pixel_x = -10
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_y = 0;
 	pixel_x = -8
 	},
-/obj/item/weapon/material/kitchen/utensil/fork{
+/obj/item/material/kitchen/utensil/fork{
 	pixel_y = 0;
 	pixel_x = -6
 	},
-/obj/item/weapon/material/knife/plastic{
+/obj/item/material/knife/plastic{
 	pixel_x = 6
 	},
-/obj/item/weapon/material/knife/plastic{
+/obj/item/material/knife/plastic{
 	pixel_x = 12
 	},
-/obj/item/weapon/material/knife/plastic{
+/obj/item/material/knife/plastic{
 	pixel_x = 10
 	},
-/obj/item/weapon/material/knife/plastic{
+/obj/item/material/knife/plastic{
 	pixel_x = 8
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1197,12 +1197,12 @@
 	health = null
 	},
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/device/multitool,
-/obj/item/weapon/tool/wirecutters/clippers/trimmers,
-/obj/item/weapon/paper{
+/obj/item/material/minihoe,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/multitool,
+/obj/item/tool/wirecutters/clippers/trimmers,
+/obj/item/paper{
 	info = "Additional gardening supplies are found in the back"
 	},
 /obj/item/seeds/tomatoseed,
@@ -1210,8 +1210,8 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 9
 	},
-/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom,
-/obj/item/weapon/storage/bag/plants,
+/obj/item/reagent_containers/food/snacks/grown/mushroom,
+/obj/item/storage/bag/plants,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/PizzaParlor)
 "Zs" = (
@@ -1242,15 +1242,15 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/storage/box/glasses{
+/obj/item/storage/box/glasses{
 	pixel_y = 6;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/glasses{
+/obj/item/storage/box/glasses{
 	pixel_y = 0;
 	pixel_x = 6
 	},
-/obj/item/weapon/storage/box/glass_extras/straws{
+/obj/item/storage/box/glass_extras/straws{
 	pixel_y = 6;
 	pixel_x = 6
 	},

@@ -74,7 +74,7 @@
 			if(contents.len > 0)
 				to_chat(user, "Eject the items first!")
 				return
-			var/obj/item/weapon/weldingtool/W = I.get_welder()
+			var/obj/item/weldingtool/W = I.get_welder()
 			if(W.remove_fuel(0,user))
 				playsound(src, W.usesound, 100, 1)
 				to_chat(user, "You start slicing the floorweld off the disposal unit.")
@@ -94,12 +94,12 @@
 				to_chat(user, "You need more welding fuel to complete this task.")
 				return
 
-	if(istype(I, /obj/item/weapon/melee/energy/blade))
+	if(istype(I, /obj/item/melee/energy/blade))
 		to_chat(user, "You can't place that item inside the disposal unit.")
 		return
 
-	if(istype(I, /obj/item/weapon/storage/bag/trash))
-		var/obj/item/weapon/storage/bag/trash/T = I
+	if(istype(I, /obj/item/storage/bag/trash))
+		var/obj/item/storage/bag/trash/T = I
 		to_chat(user, span_blue("You empty the bag."))
 		for(var/obj/item/O in T.contents)
 			T.remove_from_storage(O,src)
@@ -107,8 +107,8 @@
 		update()
 		return
 
-	if(istype(I, /obj/item/weapon/material/ashtray))
-		var/obj/item/weapon/material/ashtray/A = I
+	if(istype(I, /obj/item/material/ashtray))
+		var/obj/item/material/ashtray/A = I
 		if(A.contents.len > 0)
 			user.visible_message("<b>\The [user]</b> empties \the [A] into [src].")
 			for(var/obj/item/O in A.contents)
@@ -117,7 +117,7 @@
 			update()
 			return
 
-	var/obj/item/weapon/grab/G = I
+	var/obj/item/grab/G = I
 	if(istype(G))	// handle grabbed mob
 		if(ismob(G.affecting))
 			var/mob/GM = G.affecting
@@ -142,9 +142,9 @@
 
 	user.drop_item()
 	if(I)
-		if(istype(I, /obj/item/weapon/holder/micro))
+		if(istype(I, /obj/item/holder/micro))
 			log_and_message_admins("placed [I.name] inside \the [src]", user)
-			var/obj/item/weapon/holder/H = I
+			var/obj/item/holder/H = I
 			H.held_mob.forceMove(src)
 			qdel(I)
 		else
@@ -536,7 +536,7 @@
 	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
 			AM.forceMove(src)
-			if(istype(AM, /obj/item/weapon/holder/micro) || istype(AM, /mob/living))
+			if(istype(AM, /obj/item/holder/micro) || istype(AM, /mob/living))
 				log_and_message_admins("[AM] was thrown into \the [src]")
 				visible_message("\The [AM] lands in \the [src]!")
 				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse
@@ -559,7 +559,7 @@
 			return
 		if(prob(75))
 			I.forceMove(src)
-			if(istype(I, /obj/item/weapon/holder/micro))
+			if(istype(I, /obj/item/holder/micro))
 				log_and_message_admins("[I.name] was thrown into \the [src]")
 			for(var/mob/M in viewers(src))
 				M.show_message("\The [I] lands in \the [src].", 3)
@@ -1013,7 +1013,7 @@
 		return		// prevent interaction with T-scanner revealed pipes
 	src.add_fingerprint(user)
 	if(I.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/W = I.get_welder()
+		var/obj/item/weldingtool/W = I.get_welder()
 
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 50, 1)
@@ -1298,8 +1298,8 @@
 	if(..())
 		return
 
-	if(istype(I, /obj/item/device/destTagger))
-		var/obj/item/device/destTagger/O = I
+	if(istype(I, /obj/item/destTagger))
+		var/obj/item/destTagger/O = I
 
 		if(O.currTag)// Tag set
 			sort_tag = O.currTag
@@ -1366,8 +1366,8 @@
 	if(..())
 		return
 
-	if(istype(I, /obj/item/device/destTagger))
-		var/obj/item/device/destTagger/O = I
+	if(istype(I, /obj/item/destTagger))
+		var/obj/item/destTagger/O = I
 
 		if(O.currTag)// Tag set
 			sortType = O.currTag
@@ -1488,7 +1488,7 @@
 		return		// prevent interaction with T-scanner revealed pipes
 	src.add_fingerprint(user)
 	if(I.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/W = I.get_welder()
+		var/obj/item/weldingtool/W = I.get_welder()
 
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 100, 1)
@@ -1621,7 +1621,7 @@
 			playsound(src, I.usesound, 50, 1)
 			return
 	else if(I.has_tool_quality(TOOL_WELDER) && mode==1)
-		var/obj/item/weapon/weldingtool/W = I.get_welder()
+		var/obj/item/weldingtool/W = I.get_welder()
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 100, 1)
 			to_chat(user, "You start slicing the floorweld off the disposal outlet.")

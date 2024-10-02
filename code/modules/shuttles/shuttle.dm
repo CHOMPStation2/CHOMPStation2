@@ -350,7 +350,7 @@
 		for(var/obj/structure/cable/C in A)
 			powernets |= C.powernet
 		//CHOMPEdit Begin
-		for(var/obj/item/device/radio/intercom/I in A)
+		for(var/obj/item/radio/intercom/I in A)
 			radios |= I
 		//CHOMPEdit End
 
@@ -382,7 +382,7 @@
 		qdel(P)
 	SSmachines.setup_powernets_for_cables(cables)
 	//CHOMPEdit Begin
-	for(var/obj/item/device/radio/intercom/I in radios)
+	for(var/obj/item/radio/intercom/I in radios)
 		if(istype(I))
 			I.update_broadcast_tiles()
 	//CHOMPEdit End

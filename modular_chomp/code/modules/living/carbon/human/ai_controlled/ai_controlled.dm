@@ -1,9 +1,9 @@
 /mob/living/carbon/human/ai_controlled/greytide/Initialize()
 	to_wear_r_hand = pick(
-		prob(20); /obj/item/weapon/storage/toolbox/electrical,
-		prob(20); /obj/item/weapon/storage/toolbox/mechanical,
-		prob(20); /obj/item/weapon/storage/toolbox/emergency,
-		prob(50); /obj/item/weapon/melee/baton/cattleprod,
+		prob(20); /obj/item/storage/toolbox/electrical,
+		prob(20); /obj/item/storage/toolbox/mechanical,
+		prob(20); /obj/item/storage/toolbox/emergency,
+		prob(50); /obj/item/melee/baton/cattleprod,
 	)
 	if(prob(50))
 		to_wear_mask = /obj/item/clothing/mask/gas
@@ -27,19 +27,19 @@
 	//to_wear_helmet = null
 	to_wear_glasses = null
 	//to_wear_mask =
-	to_wear_l_radio = /obj/item/device/radio/headset
+	to_wear_l_radio = /obj/item/radio/headset
 	to_wear_r_radio = null
 	to_wear_uniform = /obj/item/clothing/under/color/grey
 	to_wear_suit = null
 	//to_wear_gloves = /obj/item/clothing/gloves/fyellow
 	to_wear_shoes = /obj/item/clothing/shoes/black
-	to_wear_belt = /obj/item/weapon/storage/belt/utility/full
-	to_wear_l_pocket = /obj/item/weapon/soap
-	to_wear_r_pocket = /obj/item/device/pda
-	to_wear_back = /obj/item/weapon/storage/backpack
-	to_wear_id_type = /obj/item/weapon/card/id
+	to_wear_belt = /obj/item/storage/belt/utility/full
+	to_wear_l_pocket = /obj/item/soap
+	to_wear_r_pocket = /obj/item/pda
+	to_wear_back = /obj/item/storage/backpack
+	to_wear_id_type = /obj/item/card/id
 	to_wear_id_job = "Assistant"
 
 	to_wear_l_hand = null
-	//to_wear_r_hand = /obj/item/weapon/storage/toolbox/mechanical
+	//to_wear_r_hand = /obj/item/storage/toolbox/mechanical
 	faction = "syndicate"

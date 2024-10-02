@@ -58,6 +58,7 @@
 
 	station_name  = "NRV Stellar Delight"
 	station_short = "Stellar Delight"
+	facility_type = "ship"
 	dock_name     = "Virgo-3B Colony"
 	dock_type     = "surface"
 	boss_name     = "Central Command"
@@ -70,7 +71,7 @@
 	shuttle_leaving_dock = "The shuttle has departed. Estimate %ETA% until arrival at %dock_name%."
 	shuttle_called_message = "A scheduled crew transfer to the %dock_name% is occuring. The shuttle will arrive shortly. Those departing should proceed to deck three, aft within %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
-	shuttle_name = "Evacuation Shuttle"
+	shuttle_name = "Crew Transport"
 	emergency_shuttle_docked_message = "The evacuation shuttle has arrived. You have approximately %ETD% to board the shuttle."
 	emergency_shuttle_leaving_dock = "The emergency shuttle has departed. Estimate %ETA% until arrival at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule shuttle has been called. It will arrive at deck three, aft in approximately %ETA%."
@@ -121,7 +122,15 @@
 	unit_test_exempt_areas = list(
 		/area/stellardelight/deck1/exterior,
 		/area/stellardelight/deck1/exploshuttle,
-		/area/stellardelight/deck1/miningshuttle
+		/area/stellardelight/deck1/miningshuttle,
+		/area/stellardelight/deck2/exterior,
+		/area/stellardelight/deck2/portescape,
+		/area/stellardelight/deck2/starboardescape,
+		/area/stellardelight/deck3/exterior,
+
+		/area/medical/cryo,
+		/area/holodeck_control,
+		/area/tcommsat/chamber
 		)
 
 	unit_test_exempt_from_atmos = list() //it maint
@@ -356,8 +365,6 @@
 	name = "V3b Asteroid Field"
 	base_turf = /turf/space
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
-
-
 
 /datum/map_template/ship_lateload/overmap
 	name = "Overmap"

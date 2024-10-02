@@ -69,7 +69,7 @@
 /turf/simulated/floor/outdoors/mud,
 /area/submap/ChemSpill2)
 "t" = (
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/floor/outdoors/dirt/sif,
 /area/submap/ChemSpill2)
 "u" = (

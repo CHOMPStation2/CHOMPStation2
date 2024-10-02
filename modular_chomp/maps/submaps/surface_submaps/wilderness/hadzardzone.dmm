@@ -4,7 +4,7 @@
 /area/template_noop)
 "b" = (
 /obj/structure/table/glass,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Daniel, I am done waiting. If your stuff gets stolen despite my security measures, it's on you. And you still better give me my dam money.";
 	name = "Notice"
 	},
@@ -56,7 +56,7 @@
 /area/submap/Hadzardzone)
 "k" = (
 /obj/machinery/power/rtg/advanced{
-	component_parts = list(/obj/item/stack/cable_coil=5,/obj/item/weapon/stock_parts/capacitor/omni=1,/obj/item/weapon/stock_parts/micro_laser/omni=1,/obj/item/stack/material/uranium=10,/obj/item/stack/material/phoron=5)
+	component_parts = list(/obj/item/stack/cable_coil=5,/obj/item/stock_parts/capacitor/omni=1,/obj/item/stock_parts/micro_laser/omni=1,/obj/item/stack/material/uranium=10,/obj/item/stack/material/phoron=5)
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -74,13 +74,13 @@
 /area/submap/Hadzardzone)
 "m" = (
 /obj/structure/safe,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/device/personal_shield_generator/security/strong/loaded,
-/obj/item/device/personal_shield_generator/security/strong/loaded,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/personal_shield_generator/security/strong/loaded,
+/obj/item/personal_shield_generator/security/strong/loaded,
 /turf/simulated/floor,
 /area/submap/Hadzardzone)
 "o" = (
@@ -141,13 +141,13 @@
 /area/submap/Hadzardzone)
 "C" = (
 /obj/structure/safe,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/spacecash/c1000,
-/obj/item/weapon/storage/pill_bottle/alkysine,
-/obj/item/weapon/storage/pill_bottle/nutriment,
-/obj/item/weapon/storage/pill_bottle/osteodaxon,
-/obj/item/weapon/storage/pill_bottle/assorted,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/storage/pill_bottle/alkysine,
+/obj/item/storage/pill_bottle/nutriment,
+/obj/item/storage/pill_bottle/osteodaxon,
+/obj/item/storage/pill_bottle/assorted,
 /turf/simulated/floor{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;

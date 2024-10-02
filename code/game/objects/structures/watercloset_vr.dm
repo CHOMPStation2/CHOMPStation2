@@ -94,13 +94,13 @@
 	return TRUE
 
 /obj/structure/biowaste_tank/Entered(atom/movable/thing, atom/OldLoc)
-	if(istype(thing, /obj/item/weapon/reagent_containers/food))
+	if(istype(thing, /obj/item/reagent_containers/food))
 		qdel(thing)
 		return
 	if(istype(thing, /obj/item/organ))
 		qdel(thing)
 		return
-	if(istype(thing, /obj/item/weapon/storage/vore_egg))
+	if(istype(thing, /obj/item/storage/vore_egg))
 		if(thing.contents.len)
 			for(var/atom/movable/C in thing.contents)
 				C.forceMove(src)

@@ -42,21 +42,21 @@
 /area/submap/settlement)
 "cY" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/condiment/carton/sugar,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/condiment/carton/sugar,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/spaceup,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/goldschlager,
+/obj/item/reagent_containers/chem_disp_cartridge/spaceup,
+/obj/item/reagent_containers/chem_disp_cartridge/goldschlager,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "dE" = (
@@ -100,7 +100,7 @@
 /area/submap/settlement)
 "ft" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
@@ -203,7 +203,7 @@
 /turf/simulated/floor/tiled/red,
 /area/submap/settlement)
 "jZ" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
@@ -243,7 +243,7 @@
 /area/submap/settlement)
 "lz" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 9
 	},
@@ -294,7 +294,7 @@
 /area/template_noop)
 "qa" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 6
 	},
@@ -302,7 +302,7 @@
 /area/submap/settlement)
 "qv" = (
 /obj/structure/table/fancyblack,
-/obj/item/device/soulstone,
+/obj/item/soulstone,
 /obj/random/material/precious,
 /turf/simulated/floor/cult,
 /area/submap/settlement)
@@ -337,13 +337,13 @@
 /area/submap/settlement)
 "sn" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/settlement)
 "st" = (
@@ -366,7 +366,7 @@
 /area/submap/settlement)
 "uc" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/book/manual/chef_recipes,
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
@@ -440,9 +440,9 @@
 /area/submap/settlement)
 "xY" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/snacks/crabmeat,
-/obj/item/weapon/reagent_containers/food/snacks/crabmeat,
-/obj/item/weapon/reagent_containers/food/snacks/crabmeat,
+/obj/item/reagent_containers/food/snacks/crabmeat,
+/obj/item/reagent_containers/food/snacks/crabmeat,
+/obj/item/reagent_containers/food/snacks/crabmeat,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/settlement)
 "xZ" = (
@@ -515,7 +515,7 @@
 /turf/simulated/floor/carpet/blue2,
 /area/submap/settlement)
 "Cd" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -586,13 +586,13 @@
 /area/submap/settlement)
 "HK" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/storage/belt/soulstone/full,
-/obj/item/weapon/gun/energy/imperial,
+/obj/item/storage/belt/soulstone/full,
+/obj/item/gun/energy/imperial,
 /turf/simulated/floor/cult,
 /area/submap/settlement)
 "HR" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/lino,
 /area/submap/settlement)
 "HV" = (
@@ -600,7 +600,7 @@
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/submap/settlement)
 "Il" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /turf/simulated/floor/carpet/blue2,
 /area/submap/settlement)
@@ -620,7 +620,7 @@
 /turf/simulated/floor/carpet/blue2,
 /area/submap/settlement)
 "Kw" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /mob/living/simple_mob/construct/harvester/greater,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -634,7 +634,7 @@
 /area/submap/settlement)
 "KZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "Lj" = (
@@ -664,8 +664,8 @@
 /area/submap/settlement)
 "Mm" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/glass/beaker,
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
@@ -717,7 +717,7 @@
 /area/submap/settlement)
 "Po" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/tiled/white,
@@ -733,7 +733,7 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 1
 	},
@@ -754,21 +754,21 @@
 /area/submap/settlement)
 "Re" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/condiment/carton/sugar,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/condiment/carton/sugar,
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 5
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/tequila,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/doctorsdelight,
+/obj/item/reagent_containers/chem_disp_cartridge/tequila,
+/obj/item/reagent_containers/chem_disp_cartridge/doctorsdelight,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "RL" = (
@@ -778,7 +778,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "Sr" = (
-/obj/item/weapon/chainsaw,
+/obj/item/chainsaw,
 /mob/living/simple_mob/creature/cult/strong,
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -811,10 +811,10 @@
 /turf/simulated/floor/cult,
 /area/submap/settlement)
 "Vp" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /mob/living/simple_mob/creature/cult/strong,
 /obj/effect/floor_decal/corner/orange/diagonal,
-/obj/item/device/soulstone,
+/obj/item/soulstone,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "Vu" = (
@@ -849,7 +849,7 @@
 /area/submap/settlement)
 "ZR" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /turf/simulated/floor/carpet/blue2,
 /area/submap/settlement)
 

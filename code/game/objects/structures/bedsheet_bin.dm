@@ -4,7 +4,7 @@ BEDSHEETS
 LINEN BINS
 */
 
-/obj/item/weapon/bedsheet
+/obj/item/bedsheet
 	name = "bedsheet"
 	desc = "A surprisingly soft linen bedsheet."
 	icon = 'icons/obj/items.dmi'
@@ -22,7 +22,7 @@ LINEN BINS
 	/// Custom nouns to act as the subject of dreams
 	var/list/dream_messages = list("white")
 
-/obj/item/weapon/bedsheet/attack_self(mob/user as mob)
+/obj/item/bedsheet/attack_self(mob/user as mob)
 	user.drop_item()
 	if(layer == initial(layer))
 		layer = ABOVE_MOB_LAYER
@@ -31,153 +31,153 @@ LINEN BINS
 	add_fingerprint(user)
 	return
 
-/obj/item/weapon/bedsheet/attackby(obj/item/I, mob/user)
+/obj/item/bedsheet/attackby(obj/item/I, mob/user)
 	if(is_sharp(I))
 		user.visible_message("<b>\The [user]</b> begins cutting up [src] with [I].", "<span class='notice'>You begin cutting up [src] with [I].</span>")
 		if(do_after(user, 50))
 			to_chat(user, "<span class='notice'>You cut [src] into pieces!</span>")
 			for(var/i in 1 to rand(2,5))
-				new /obj/item/weapon/reagent_containers/glass/rag(drop_location())
+				new /obj/item/reagent_containers/glass/rag(drop_location())
 			qdel(src)
 		return
 	..()
 
-/obj/item/weapon/bedsheet/blue
+/obj/item/bedsheet/blue
 	icon_state = "sheetblue"
 	dream_messages = list("blue")
 
-/obj/item/weapon/bedsheet/green
+/obj/item/bedsheet/green
 	icon_state = "sheetgreen"
 	dream_messages = list("green")
 
-/obj/item/weapon/bedsheet/orange
+/obj/item/bedsheet/orange
 	icon_state = "sheetorange"
 	dream_messages = list("orange")
 
-/obj/item/weapon/bedsheet/purple
+/obj/item/bedsheet/purple
 	icon_state = "sheetpurple"
 	dream_messages = list("purple")
 
-/obj/item/weapon/bedsheet/rainbow
+/obj/item/bedsheet/rainbow
 	icon_state = "sheetrainbow"
 	dream_messages = list("red", "orange", "yellow", "green", "blue", "purple", "a rainbow")
 
-/obj/item/weapon/bedsheet/red
+/obj/item/bedsheet/red
 	icon_state = "sheetred"
 	dream_messages = list("red")
 
-/obj/item/weapon/bedsheet/yellow
+/obj/item/bedsheet/yellow
 	icon_state = "sheetyellow"
 	dream_messages = list("yellow")
 
-/obj/item/weapon/bedsheet/mime
+/obj/item/bedsheet/mime
 	icon_state = "sheetmime"
 	dream_messages = list("silence", "gestures", "a pale face", "a gaping mouth", "the mime")
 
-/obj/item/weapon/bedsheet/clown
+/obj/item/bedsheet/clown
 	icon_state = "sheetclown"
 	item_state = "sheetrainbow"
 	dream_messages = list("honk", "laughter", "a prank", "a joke", "a smiling face", "the clown")
 
-/obj/item/weapon/bedsheet/captain
+/obj/item/bedsheet/captain
 	icon_state = "sheetcaptain"
 	dream_messages = list("authority", "a golden ID", "sunglasses", "a green disc", "an antique gun", "the captain")
 
-/obj/item/weapon/bedsheet/rd
+/obj/item/bedsheet/rd
 	icon_state = "sheetrd"
 	dream_messages = list("authority", "a silvery ID", "a bomb", "a mech", "a facehugger", "maniacal laughter", "the research director")
 
-/obj/item/weapon/bedsheet/medical
+/obj/item/bedsheet/medical
 	name = "medical blanket"
 	desc = "It's a sterilized* blanket commonly used in the Medbay.  *Sterilization is voided if a virologist is present onboard the station."
 	icon_state = "sheetmedical"
 	dream_messages = list("healing", "life", "surgery", "a doctor")
 
-/obj/item/weapon/bedsheet/hos
+/obj/item/bedsheet/hos
 	icon_state = "sheethos"
 	dream_messages = list("authority", "a silvery ID", "handcuffs", "a baton", "a flashbang", "sunglasses", "the head of security")
 
-/obj/item/weapon/bedsheet/hop
+/obj/item/bedsheet/hop
 	icon_state = "sheethop"
 	dream_messages = list("authority", "a silvery ID", "obligation", "a computer", "an ID", "a corgi", "the head of personnel")
 
-/obj/item/weapon/bedsheet/ce
+/obj/item/bedsheet/ce
 	icon_state = "sheetce"
 	dream_messages = list("authority", "a silvery ID", "the engine", "power tools", "an APC", "a parrot", "the chief engineer")
 
-/obj/item/weapon/bedsheet/brown
+/obj/item/bedsheet/brown
 	icon_state = "sheetbrown"
 	dream_messages = list("brown")
 
-/obj/item/weapon/bedsheet/ian
+/obj/item/bedsheet/ian
 	icon_state = "sheetian"
 	dream_messages = list("a dog", "a corgi", "woof", "bark", "arf")
 
-/obj/item/weapon/bedsheet/double
+/obj/item/bedsheet/double
 	icon_state = "doublesheet"
 	item_state = "sheet"
 
-/obj/item/weapon/bedsheet/bluedouble
+/obj/item/bedsheet/bluedouble
 	icon_state = "doublesheetblue"
 	item_state = "sheetblue"
 
-/obj/item/weapon/bedsheet/greendouble
+/obj/item/bedsheet/greendouble
 	icon_state = "doublesheetgreen"
 	item_state = "sheetgreen"
 
-/obj/item/weapon/bedsheet/orangedouble
+/obj/item/bedsheet/orangedouble
 	icon_state = "doublesheetorange"
 	item_state = "sheetorange"
 
-/obj/item/weapon/bedsheet/purpledouble
+/obj/item/bedsheet/purpledouble
 	icon_state = "doublesheetpurple"
 	item_state = "sheetpurple"
 
-/obj/item/weapon/bedsheet/rainbowdouble //all the way across the sky.
+/obj/item/bedsheet/rainbowdouble //all the way across the sky.
 	icon_state = "doublesheetrainbow"
 	item_state = "sheetrainbow"
 
-/obj/item/weapon/bedsheet/reddouble
+/obj/item/bedsheet/reddouble
 	icon_state = "doublesheetred"
 	item_state = "sheetred"
 
-/obj/item/weapon/bedsheet/yellowdouble
+/obj/item/bedsheet/yellowdouble
 	icon_state = "doublesheetyellow"
 	item_state = "sheetyellow"
 
-/obj/item/weapon/bedsheet/mimedouble
+/obj/item/bedsheet/mimedouble
 	icon_state = "doublesheetmime"
 	item_state = "sheetmime"
 
-/obj/item/weapon/bedsheet/clowndouble
+/obj/item/bedsheet/clowndouble
 	icon_state = "doublesheetclown"
 	item_state = "sheetrainbow"
 
-/obj/item/weapon/bedsheet/captaindouble
+/obj/item/bedsheet/captaindouble
 	icon_state = "doublesheetcaptain"
 	item_state = "sheetcaptain"
 
-/obj/item/weapon/bedsheet/rddouble
+/obj/item/bedsheet/rddouble
 	icon_state = "doublesheetrd"
 	item_state = "sheetrd"
 
-/obj/item/weapon/bedsheet/hosdouble
+/obj/item/bedsheet/hosdouble
 	icon_state = "doublesheethos"
 	item_state = "sheethos"
 
-/obj/item/weapon/bedsheet/hopdouble
+/obj/item/bedsheet/hopdouble
 	icon_state = "doublesheethop"
 	item_state = "sheethop"
 
-/obj/item/weapon/bedsheet/cedouble
+/obj/item/bedsheet/cedouble
 	icon_state = "doublesheetce"
 	item_state = "sheetce"
 
-/obj/item/weapon/bedsheet/browndouble
+/obj/item/bedsheet/browndouble
 	icon_state = "doublesheetbrown"
 	item_state = "sheetbrown"
 
-/obj/item/weapon/bedsheet/iandouble
+/obj/item/bedsheet/iandouble
 	icon_state = "doublesheetian"
 	item_state = "sheetian"
 
@@ -212,7 +212,7 @@ LINEN BINS
 
 
 /obj/structure/bedsheetbin/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I, /obj/item/weapon/bedsheet))
+	if(istype(I, /obj/item/bedsheet))
 		user.drop_item()
 		I.loc = src
 		sheets.Add(I)
@@ -228,13 +228,13 @@ LINEN BINS
 	if(amount >= 1)
 		amount--
 
-		var/obj/item/weapon/bedsheet/B
+		var/obj/item/bedsheet/B
 		if(sheets.len > 0)
 			B = sheets[sheets.len]
 			sheets.Remove(B)
 
 		else
-			B = new /obj/item/weapon/bedsheet(loc)
+			B = new /obj/item/bedsheet(loc)
 
 		B.loc = user.loc
 		user.put_in_hands(B)
@@ -252,13 +252,13 @@ LINEN BINS
 	if(amount >= 1)
 		amount--
 
-		var/obj/item/weapon/bedsheet/B
+		var/obj/item/bedsheet/B
 		if(sheets.len > 0)
 			B = sheets[sheets.len]
 			sheets.Remove(B)
 
 		else
-			B = new /obj/item/weapon/bedsheet(loc)
+			B = new /obj/item/bedsheet(loc)
 
 		B.loc = loc
 		to_chat(user, "<span class='notice'>You telekinetically remove [B] from [src].</span>")

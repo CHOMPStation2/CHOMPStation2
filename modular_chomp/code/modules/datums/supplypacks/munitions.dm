@@ -1,7 +1,7 @@
 /datum/supply_pack/munitions/Cowboy
 	name = "Cowboy Crate"
 	contains = list(
-			/obj/item/weapon/gun/projectile/revolver/saa,
+			/obj/item/gun/projectile/revolver/saa,
 			/obj/item/clothing/head/cowboy/ranger,
 			/obj/item/clothing/accessory/holster/hip,
 			/obj/item/clothing/accessory/badge/sheriff,

@@ -1,5 +1,5 @@
 ///START OF GAUSS WEAPONRY -Radiantflash ///
-/obj/item/weapon/gun/energy/soapenergy/gauss
+/obj/item/gun/energy/soapenergy/gauss
 	name = "gauss pistol"
 	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "gausspistol"
@@ -16,7 +16,7 @@
 	charge_meter = 1
 	fire_delay = 10 //old technology
 
-/obj/item/weapon/gun/energy/soapenergy/gaussrifle
+/obj/item/gun/energy/soapenergy/gaussrifle
 	name = "gauss rifle"
 	icon = 'icons/obj/gun_yw.dmi'
 	icon_state = "gaussrifle"
