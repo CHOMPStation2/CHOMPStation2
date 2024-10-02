@@ -145,6 +145,7 @@ var/datum/planet/tyr/planet_tyr = null
 		)
 	sky_visible = TRUE
 	observed_message = "The sky is orange."
+	imminent_transition_message = "The sky flares orange."
 
 
 /datum/weather/tyr/flamestorm
@@ -158,6 +159,7 @@ var/datum/planet/tyr/planet_tyr = null
 		)
 	sky_visible = TRUE
 	observed_message = "The sky is on fire."
+	imminent_transition_message = "The sky is set ablaze."
 
 /datum/weather/tyr/flamestorm/process_effects()
 	..()
@@ -196,6 +198,7 @@ var/datum/planet/tyr/planet_tyr = null
 		)
 	sky_visible = TRUE
 	observed_message = "The sky is full of sand."
+	imminent_transition_message = "Pebbles begin to fill the sky."
 
 
 /datum/weather/tyr/sandstorm/process_effects()
@@ -238,6 +241,8 @@ var/datum/planet/tyr/planet_tyr = null
 	light_color = "#996600"
 	light_modifier = 0.5
 
+	imminent_transition_message = "The sky is blocked out by rock."
+
 /datum/weather/tyr/sandstorm_fierce/process_effects()
 	..()
 	for(var/mob/living/carbon/H as anything in human_mob_list)
@@ -270,6 +275,8 @@ var/datum/planet/tyr/planet_tyr = null
 		WEATHER_CLEAR = 50,
 		WEATHER_FALLOUT_TEMP = 50)
 
+	imminent_transition_message = "The sky is rapidly begins to glow."
+
 /datum/weather/tyr/starrynight/process_effects()
 	..()
 	for(var/mob/living/carbon/H as anything in human_mob_list)
@@ -290,6 +297,8 @@ var/datum/planet/tyr/planet_tyr = null
 	outdoor_sounds_type = /datum/looping_sound/weather/storm
 	indoor_sounds_type = /datum/looping_sound/weather/storm/indoors
 
+	imminent_transition_message = "The sky is overtaken by snow."
+
 /datum/weather/tyr/storm
 	icon_state = "fallout"
 	light_modifier = 0.7
@@ -300,6 +309,8 @@ var/datum/planet/tyr/planet_tyr = null
 	imminent_transition_message = "Sky and clouds are growing sickly green... Radiation storm is approaching, get to cover!"
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+
+	imminent_transition_message = "The sky is overtaken by green clouds."
 
 	// How much radiation a mob gets while on an outside tile.
 	var/direct_rad_low = RAD_LEVEL_LOW
@@ -340,6 +351,9 @@ var/datum/planet/tyr/planet_tyr = null
 	transition_chances = list(
 		WEATHER_CLEAR = 50,
 		WEATHER_FOG = 50)
+
+	imminent_transition_message = "Fog emerges from nowhere."
+
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
 	var/max_lightning_cooldown = 1 MINUTE
