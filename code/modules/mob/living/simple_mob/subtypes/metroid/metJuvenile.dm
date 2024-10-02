@@ -1,4 +1,4 @@
-//Some basic metroid specific mechanics. Lifted from slime code, but gutted all the xenobio taming stuff. Feel free to add it back in, but I recommend making a new specific subset of tamable metroids and leaving the others as wild or soemthing. 
+//Some basic metroid specific mechanics. Lifted from slime code, but gutted all the xenobio taming stuff. Feel free to add it back in, but I recommend making a new specific subset of tamable metroids and leaving the others as wild or soemthing.
 
 /mob/living/simple_mob/metroid/juvenile
 	desc = "This metroid should not be spawned. Yell at your local dev or event manager."
@@ -41,7 +41,7 @@
 	set desc = "This will let you advance to next form."
 
 	if(stat)
-		to_chat(src, span("warning", "I must be conscious to do this..."))
+		to_chat(src, span_warning("I must be conscious to do this..."))
 		return
 
 	if(is_queen)
@@ -53,10 +53,10 @@
 		adjust_nutrition(-500)
 		paralysis = 0
 		return
-		
+
 	if(nutrition >= evo_point && !buckled && vore_fullness == 0 && !victim)
 		if(next == "/mob/living/simple_mob/metroid/juvenile/queen" && GLOB.queen_amount > 0)
-			to_chat(src, span("warning", "There is already a queen."))
+			to_chat(src, span_warning("There is already a queen."))
 			return
 		playsound(src, 'sound/metroid/metroidgrow.ogg', 50, 1)
 		paralysis = 7998
@@ -67,9 +67,9 @@
 		release_vore_contents()
 		prey_excludes.Cut()
 		stop_consumption()
-		
+
 	else
-		to_chat(src, span("warning", "I am not ready to evolve yet..."))
+		to_chat(src, span_warning("I am not ready to evolve yet..."))
 
 /mob/living/simple_mob/metroid/juvenile/proc/expand_troid()
 	var/mob/living/L
@@ -77,7 +77,7 @@
 	if(mind)
 		src.mind.transfer_to(L)
 	visible_message("<span class='warning'>\The [src] suddenly evolves!</span>")
-	qdel(src)	
+	qdel(src)
 
 // Code for metroids attacking other things.
 // metroid attacks change based on intent.
@@ -97,8 +97,8 @@
 				if(prob(stun_power * 10)) // Try an electric shock.
 					power_charge = max(0, power_charge - 3)
 					L.visible_message(
-						span("danger", "\The [src] has shocked \the [L]!"),
-						span("danger", "\The [src] has shocked you!")
+						span_danger("\The [src] has shocked \the [L]!"),
+						span_danger("\The [src] has shocked you!")
 						)
 					playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
 					L.Weaken(4)
@@ -118,8 +118,8 @@
 
 				else if(prob(20)) // Try to do a regular disarm attack.
 					L.visible_message(
-						span("danger", "\The [src] has pounced at \the [L]!"),
-						span("danger", "\The [src] has pounced at you!")
+						span_danger("\The [src] has pounced at \the [L]!"),
+						span_danger("\The [src] has pounced at you!")
 						)
 					playsound(src, 'sound/weapons/thudswoosh.ogg', 75, 1)
 					L.Weaken(2)
@@ -130,8 +130,8 @@
 
 				else // Failed to do anything this time.
 					L.visible_message(
-						span("warning", "\The [src] has tried to pounce at \the [L]!"),
-						span("warning", "\The [src] has tried to pounce at you!")
+						span_warning("\The [src] has tried to pounce at \the [L]!"),
+						span_warning("\The [src] has tried to pounce at you!")
 						)
 					playsound(src, 'sound/weapons/punchmiss.ogg', 75, 1)
 					do_attack_animation(L)
@@ -159,11 +159,11 @@
 			fail_odds = 60
 
 		if(prob(fail_odds))
-			visible_message(span("warning", "\The [L] attempts to wrestle \the [name] off!"))
+			visible_message(span_warning("\The [L] attempts to wrestle \the [name] off!"))
 			playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 
 		else
-			visible_message(span("warning", "\The [L] manages to wrestle \the [name] off!"))
+			visible_message(span_warning("\The [L] manages to wrestle \the [name] off!"))
 			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 			stop_consumption()
 			step_away(src, L)

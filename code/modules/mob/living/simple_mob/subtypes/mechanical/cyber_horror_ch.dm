@@ -51,7 +51,7 @@
 	threaten = TRUE
 	threaten_delay = 1 SECOND
 	threaten_timeout = 30 SECONDS
-	
+
 /datum/ai_holder/simple_mob/melee/cyber_horror
 	threaten = TRUE
 	threaten_delay = 1 SECOND
@@ -148,7 +148,7 @@
 
 /datum/say_list/cyber_horror/ling
 	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Changeling.ogg'
-	
+
  // Multiplies damage if the victim is stunned in some form, including a successful leap.
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror/apply_bonus_melee_damage(atom/A, damage_amount)
 	if(isliving(A))
@@ -170,7 +170,7 @@
  // Do the actual leap.
  // Lets us pass over everything.
 	status_flags |= LEAPING
-	visible_message(span("danger","\The [src] leaps at \the [A]!"))
+	visible_message(span_danger("\The [src] leaps at \the [A]!"))
 	throw_at(get_step(get_turf(A), get_turf(src)), special_attack_max_range+1, 1, src)
 	playsound(src, leap_sound, 75, 1)
  // For the throw to complete. It won't hold up the AI SSticker due to waitfor being false.
@@ -202,8 +202,8 @@
 
 	if(victim)
 		victim.Weaken(2)
-		victim.visible_message(span("danger","\The [src] knocks down \the [victim]!"))
-		to_chat(victim, span("critical", "\The [src] jumps on you!"))
+		victim.visible_message(span_danger("\The [src] knocks down \the [victim]!"))
+		to_chat(victim, span_critical("\The [src] jumps on you!"))
 		. = TRUE
 
 	set_AI_busy(FALSE)
@@ -286,7 +286,7 @@
 		if(isliving(A))
 			var/mob/living/L = A
 			L.Weaken(cloaked_weaken_amount)
-			to_chat(L, span("danger", "\The [src] tears into you!"))
+			to_chat(L, span_danger("\The [src] tears into you!"))
 			playsound(L, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()
 	..()
@@ -339,7 +339,7 @@
 
 /datum/say_list/cyber_horror/corgi
 	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Corgi.ogg'
-	
+
 
 //Cats and mayhem
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror

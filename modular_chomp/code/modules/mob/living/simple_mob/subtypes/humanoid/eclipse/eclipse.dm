@@ -644,7 +644,7 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster/death()
-	visible_message(span("critical", "\The [src]'s body begins to rupture!"))
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
 	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
 	spawn(0)
 		// Flash black and red as a warning.
@@ -658,7 +658,7 @@
 	spawn(delay)
 		// The actual boom.
 		if(src && !exploded)
-			visible_message(span("danger", "\The [src]'s body detonates!"))
+			visible_message(span_danger("\The [src]'s body detonates!"))
 			exploded = TRUE
 			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
 	return ..()
@@ -747,7 +747,7 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker/do_special_attack(atom/A)
 	// Teleport attack.
 	if(!A)
-		to_chat(src, span("warning", "There's nothing to teleport to."))
+		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
 	var/list/nearby_things = range(1, A)
@@ -765,7 +765,7 @@
 			valid_turfs.Add(potential_turf)
 
 	if(!(valid_turfs.len))
-		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
 		return FALSE
 
 	var/turf/target_turf = pick(valid_turfs)
@@ -777,14 +777,14 @@
 	s2.set_up(5, 1, target_turf)
 
 
-	T.visible_message(span("notice", "\The [src] vanishes!"))
+	T.visible_message(span_notice("\The [src] vanishes!"))
 	s1.start()
 
 	forceMove(target_turf)
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 
 /mob/living/simple_mob/humanoid/eclipse/solar/cryomancer //Freezing slowdown unit

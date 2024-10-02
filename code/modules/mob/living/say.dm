@@ -121,7 +121,7 @@ var/list/channel_to_radio_key = new
 		//VOREStation Edit End
 		//YW Edit start
 		if(wingdings)
-			S.message = span("wingdings",(S.message))
+			S.message = span_wingdings(S.message)
 			. = 1
 		//YW Edit End
 

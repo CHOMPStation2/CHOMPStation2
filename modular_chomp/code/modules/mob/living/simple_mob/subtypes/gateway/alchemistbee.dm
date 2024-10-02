@@ -184,29 +184,29 @@
 	set waitfor = FALSE
 
 	Beam(target, icon_state = "sat_beam", time = 1.5 SECONDS, maxdistance = INFINITY)
-	visible_message(span("warning", "\The [src] prepares a pouch of vials!"))
+	visible_message(span_warning("\The [src] prepares a pouch of vials!"))
 	sleep(0.5 SECONDS)
 
 	if(prob(25))
-		visible_message(span("warning", "\The [src] throws a blue vial!"))
+		visible_message(span_warning("\The [src] throws a blue vial!"))
 		var/obj/item/projectile/B = new /obj/item/projectile/arc/vial/frostvial(get_turf(src))
 		B.launch_projectile(target, BP_TORSO, src)
 
 	if(prob(25))
-		visible_message(span("warning", "\The [src] throws a green vial!"))
+		visible_message(span_warning("\The [src] throws a green vial!"))
 		var/obj/item/projectile/B = new /obj/item/projectile/arc/vial/poisonvial(get_turf(src))
 		B.launch_projectile(target, BP_TORSO, src)
 
 	if(prob(25))
-		visible_message(span("warning", "\The [src] throws a red vial!"))
+		visible_message(span_warning("\The [src] throws a red vial!"))
 		var/obj/item/projectile/B = new /obj/item/projectile/arc/vial/firevial(get_turf(src))
 		B.launch_projectile(target, BP_TORSO, src)
 	else
-		visible_message(span("warning", "\The [src] throws a strange vial"))
+		visible_message(span_warning("\The [src] throws a strange vial"))
 		var/obj/item/projectile/A = new /obj/item/projectile/arc/vial/lightingvial(get_turf(src))
 		A.launch_projectile(target, BP_TORSO, src)
 
-	visible_message(span("warning", "\The [src] puts them pouch away."))
+	visible_message(span_warning("\The [src] puts them pouch away."))
 
 
 /mob/living/simple_mob/vr/alchemistbee/proc/homingcluster(atom/target)
@@ -214,7 +214,7 @@
 	A.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vr/alchemistbee/proc/dangerbolt(atom/target)
-	visible_message(span("warning", "\The [src] prepares a powerful spell!"))
+	visible_message(span_warning("\The [src] prepares a powerful spell!"))
 	Beam(target, icon_state = "sat_beam", time = 2.0 SECONDS, maxdistance = INFINITY)
 	sleep(1.5 SECONDS)
 	var/obj/item/projectile/A = new /obj/item/projectile/energy/nuclearblast(get_turf(src))

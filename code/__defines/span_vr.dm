@@ -53,6 +53,8 @@
 
 #define span_reflex_shoot(str) ("<span class='reflex_shoot'>" + str + "</span>")
 
+#define span_wingdings(str) ("<span class='wingdings'>" + str + "</span>") //CHOMPAdd
+
 /* Vore messages */
 
 #define span_vdanger(str) ("<span class='vdanger'>" + str + "</span>")

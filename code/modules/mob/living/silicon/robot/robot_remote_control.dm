@@ -48,19 +48,19 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	var/mob/living/silicon/ai/AI = mainframe
 	//relay AI
 	if(!CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
-		to_chat(src, span("warning", "AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
+		to_chat(src, span_warning("AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
 		return
 
 	if(incapacitated())
-		to_chat(src, span("warning", "You are incapacitated!"))
+		to_chat(src, span_warning("You are incapacitated!"))
 		return
 
 	if(AI.lacks_power())
-		to_chat(src, span("warning", "Your core lacks power, wireless is disabled."))
+		to_chat(src, span_warning("Your core lacks power, wireless is disabled."))
 		return
 
 	if(AI.control_disabled)
-		to_chat(src, span("warning", "Wireless networking module is offline."))
+		to_chat(src, span_warning("Wireless networking module is offline."))
 		return
 
 	var/list/possible = list()
@@ -80,7 +80,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 				possible += R
 
 	if(!LAZYLEN(possible))
-		to_chat(src, span("warning", "No usable AI shell beacons detected."))
+		to_chat(src, span_warning("No usable AI shell beacons detected."))
 
 	if(LAZYLEN(possible) < 2)
 		target = possible[1]
@@ -91,13 +91,13 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 	if(!target || target.stat == DEAD || target.deployed || !(!target.connected_ai || (target.connected_ai == AI) ) )
 		if(target)
-			to_chat(src, span("warning", "It is no longer possible to deploy to \the [target]."))
+			to_chat(src, span_warning("It is no longer possible to deploy to \the [target]."))
 		else
-			to_chat(src, span("notice", "Deployment aborted."))
+			to_chat(src, span_notice("Deployment aborted."))
 		return
 
 	else if(mind)
-		to_chat(src, span("notice", "Transferring Shell"))
+		to_chat(src, span_notice("Transferring Shell"))
 		deployed = FALSE
 		update_icon()
 		mainframe.teleop = null

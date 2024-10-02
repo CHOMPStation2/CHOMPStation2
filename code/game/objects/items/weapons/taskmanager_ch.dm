@@ -111,7 +111,7 @@
 			return
 
 	scanreq = rand(3,9)
-	to_chat(user, span("notice", "Changed mode to '[choice]'."))
+	to_chat(user, span_notice("Changed mode to '[choice]'."))
 	playsound(src.loc, 'sound/effects/pop.ogg', 50, 0)
 	return ..()
 
