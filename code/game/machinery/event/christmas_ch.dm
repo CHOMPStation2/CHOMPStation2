@@ -43,13 +43,13 @@
 			anchored = 0
 			to_chat(usr,"<span class='notice'>You unbind the sack, you can now drag it off. But so can anyone else!</span> ")
 	else
-		to_chat(usr, span("warning", "Only Santa can bind and unbind his sack!"))
+		to_chat(usr, span_warning("Only Santa can bind and unbind his sack!"))
 	return
 
 /obj/structure/event/santa_sack/attack_hand(mob/user as mob)
 	. = ..()
 	if(usr.ckey != santa_ckey)
-		to_chat(usr, span("warning", "Only Santa can give presents! (Be nice or you might end up in Santa's sack!)"))
+		to_chat(usr, span_warning("Only Santa can give presents! (Be nice or you might end up in Santa's sack!)"))
 		return
 
 	var/list/receivers = list()
@@ -61,7 +61,7 @@
 		return
 
 	if(ckey_log[T.ckey])
-		to_chat(usr, span("warning", "This one already got a present!"))
+		to_chat(usr, span_warning("This one already got a present!"))
 		return
 
 	new /obj/item/a_gift/advanced(src.loc)

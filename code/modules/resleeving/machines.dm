@@ -33,7 +33,14 @@
 	var/datum/dna2/record/R = current_project.mydna
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src, R.dna.species)
 	if(current_project.locked)
-		H.resleeve_lock = current_project.ckey
+		H.resleeve_lock = current_project.ckey //CHOMPAdd, keep the lock
+		/*CHOMPRemove Start
+		if(current_project.ckey)
+			H.resleeve_lock = current_project.ckey
+		else
+			// Ensure even body scans without an attached ckey respect locking
+			H.resleeve_lock = "@badckey"
+		*///CHOMPRemove End
 
 	//Fix the external organs
 	for(var/part in current_project.limb_data)
@@ -191,6 +198,7 @@
 		occupant = null
 		if(locked)
 			locked = 0
+		update_icon()
 		return
 
 	return
@@ -199,6 +207,12 @@
 	if(occupant)
 		return 100 * ((occupant.health + abs(CONFIG_GET(number/health_threshold_dead))) / (occupant.maxHealth + abs(CONFIG_GET(number/health_threshold_dead)))) // CHOMPEdit
 	return 0
+
+/obj/machinery/clonepod/transhuman/examine(mob/user, infix, suffix)
+	. = ..()
+	if(occupant)
+		var/completion = get_completion()
+		. += "Progress: [round(completion)]% [chat_progress_bar(round(completion), TRUE)]"
 
 //Synthetic version
 /obj/machinery/transhuman/synthprinter
@@ -293,7 +307,14 @@
 	var/datum/dna2/record/R = current_project.mydna
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src, R.dna.species)
 	if(current_project.locked)
-		H.resleeve_lock = current_project.ckey
+		H.resleeve_lock = current_project.ckey //CHOMPAdd, keep the lock
+		/*CHOMPRemove Start
+		if(current_project.ckey)
+			H.resleeve_lock = current_project.ckey
+		else
+			// Ensure even body scans without an attached ckey respect locking
+			H.resleeve_lock = "@badckey"
+		*///CHOMPRemove End
 
 	//Fix the external organs
 	for(var/part in current_project.limb_data)
@@ -560,7 +581,7 @@
 	if(O.buckled)
 		return 0
 	if(O.has_buckled_mobs())
-		to_chat(user, span("warning", "\The [O] has other entities attached to it. Remove them first."))
+		to_chat(user, span_warning("\The [O] has other entities attached to it. Remove them first."))
 		return
 
 	if(put_mob(O))

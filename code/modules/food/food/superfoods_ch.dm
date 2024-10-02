@@ -193,7 +193,7 @@
 		if(edible == 1)
 			HasSliceMissing()
 			if(slices <= 0)
-				to_chat(usr, span("warning", "The cake hums away quietly as the singulo powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."))
+				to_chat(usr, span_warning("The cake hums away quietly as the singulo powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."))
 				return
 			else
 				to_chat(user, "<span class='notice'>You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!</span>")
@@ -215,15 +215,15 @@
 			edible = 1
 			name = "The Infinity Cake!"
 		else if(stage == maxstages)
-			to_chat(usr, span("warning", "The cake is already done!"))
+			to_chat(usr, span_warning("The cake is already done!"))
 		else if(stage == C.layer_stage)
-			to_chat(usr, span("warning", "You add another layer to the cake, nice."))
+			to_chat(usr, span_warning("You add another layer to the cake, nice."))
 			qdel(W)
 			stage++
 			desc = desclist[stage]
 			icon_state = "thecake_stage-[stage]"
 		else
-			to_chat(usr, span("warning", "Hmm, doesnt seem like this layer is supposed to be added there?"))
+			to_chat(usr, span_warning("Hmm, doesnt seem like this layer is supposed to be added there?"))
 
 // Chaos cake
 

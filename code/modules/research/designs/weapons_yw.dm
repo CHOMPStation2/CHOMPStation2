@@ -1,4 +1,4 @@
-/datum/design/item/energy/hunter
+/datum/design/item/weapon/energy/hunter
 	name = "Hybrid 'Hunter' net gun"
 	id = "huntergun"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 6, TECH_MAGNET = 4)

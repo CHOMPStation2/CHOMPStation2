@@ -15,7 +15,7 @@
 /obj/item/clothing/mask/chewable/attack_self(mob/user)
 	if(wrapped)
 		wrapped = FALSE
-		to_chat(user, span("notice", "You unwrap \the [name]."))
+		to_chat(user, span_notice("You unwrap \the [name]."))
 		playsound(src.loc, 'sound/items/drop/wrapper.ogg', 50, 1)
 		slot_flags = SLOT_EARS | SLOT_MASK
 		update_icon()
@@ -41,7 +41,7 @@
 		if(C.check_has_mouth())
 			START_PROCESSING(SSprocessing, src)
 		else
-			to_chat(user, span("notice", "You don't have a mouth, and can't make much use of \the [src]."))
+			to_chat(user, span_notice("You don't have a mouth, and can't make much use of \the [src]."))
 
 /obj/item/clothing/mask/chewable/dropped()
 	STOP_PROCESSING(SSprocessing, src)
@@ -90,7 +90,7 @@
 		if(ismob(loc))
 			var/mob/living/M = loc
 			if(!no_message)
-				to_chat(M, SPAN_NOTICE("The [name] runs out of flavor."))
+				to_chat(M, span_notice("The [name] runs out of flavor."))
 			if(M.wear_mask)
 				M.remove_from_mob(src) //un-equip it so the overlays can update
 				M.update_inv_wear_mask(0)
@@ -268,7 +268,7 @@
 	if(istype(M, /mob/living/voice)) return
 	if(victims)
 		victims -= M
-	to_chat(M, SPAN_WARNING("You manage to pull yourself free of \the [src]."))
+	to_chat(M, span_warning("You manage to pull yourself free of \the [src]."))
 	M.forceMove(get_turf(src))
 
 /obj/item/clothing/mask/chewable/candy/lolli/chew()
@@ -280,7 +280,7 @@
 				"The sweet drool of your captor permeates you...",
 				"The candy sticks to you, not allowing you to leave the mouth at all!",
 				"You get squeezed under the candy, against the tongue!")
-			to_chat(F, SPAN_NOTICE(message))
+			to_chat(F, span_notice(message))
 	return ..()
 
 /obj/item/clothing/mask/chewable/candy/lolli/spitout()
@@ -289,8 +289,8 @@
 		if(M.can_be_drop_pred && M.food_vore && M.vore_selected)
 			for(var/mob/living/F in victims)
 				if(!F.can_be_drop_prey || !F.food_vore)
-					to_chat(F, SPAN_WARNING("You manage to pull yourself free of \the [src] at the last second!"))
-					to_chat(M, SPAN_NOTICE("[F] barely escapes from your mouth!"))
+					to_chat(F, span_warning("You manage to pull yourself free of \the [src] at the last second!"))
+					to_chat(M, span_notice("[F] barely escapes from your mouth!"))
 					F.forceMove(get_turf(src))
 				else
 					F.forceMove(M.vore_selected)
@@ -304,7 +304,7 @@
 			return
 
 		if(wrapped)
-			to_chat(user, SPAN_WARNING("You cannot stick [W] to \the [src] without unwrapping it!"))
+			to_chat(user, span_warning("You cannot stick [W] to \the [src] without unwrapping it!"))
 			return
 
 		var/obj/item/holder/H = W
@@ -321,15 +321,15 @@
 
 		victims += M
 
-		to_chat(user, SPAN_NOTICE("You stick [M] to \the [src]."))
-		to_chat(M, SPAN_WARNING("[user] sticks you to \the [src]!"))
+		to_chat(user, span_notice("You stick [M] to \the [src]."))
+		to_chat(M, span_warning("[user] sticks you to \the [src]!"))
 		return
 
 /obj/item/clothing/mask/chewable/candy/lolli/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
 		if(victims && victims.len)
-			. += SPAN_NOTICE("It has [english_list(victims)] stuck on it.")
+			. += span_notice("It has [english_list(victims)] stuck on it.")
 
 // CHOMPAdd End
 
