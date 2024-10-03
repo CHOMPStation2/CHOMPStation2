@@ -20,11 +20,16 @@
 /datum/persistent/filth/CheckTokenSanity(var/list/token)
 	// byond's json implementation is "questionable", and uses types as keys and values without quotes sometimes even though they aren't valid json
 	token["path"] = istext(token["path"]) ? text2path(token["path"]) : token["path"]
+<<<<<<< HEAD
 	// CHOMPAdd - Cooler graffiti
 	token["pixel_x"] = istext(token["pixel_x"]) ? text2num(token["pixel_x"]) : token["pixel_x"]
 	token["pixel_y"] = istext(token["pixel_y"]) ? text2num(token["pixel_y"]) : token["pixel_y"]
 	return ..() && ispath(token["path"]) && (!saves_dirt || isnum(token["dirt"])) && isnum(token["pixel_x"]) && isnum(token["pixel_y"])
 	// CHOMPAdd End
+=======
+	return ..() && ispath(token["path"]) && (!saves_dirt || isnum(token["dirt"]))
+
+>>>>>>> 4d12123643... Merge pull request #16415 from Kashargul/merge-some-vR
 /datum/persistent/filth/CheckTurfContents(var/turf/T, var/list/token)
 	var/_path = token["path"]
 	// CHOMPEdit Start - Cooler graffitis
@@ -45,6 +50,7 @@
 	var/_path = token["path"]
 	if (isspace(creating) || iswall(creating) ||isopenspace(creating))
 		return
+<<<<<<< HEAD
 	// CHOMPEdit Start
 	// new _path(creating, token["age"]+1)
 	var/atom/inst
@@ -60,6 +66,12 @@
 	if(token["pixel_y"])
 		inst.pixel_y = token["pixel_y"]
 	// CHOMPEdit End
+=======
+	if (saves_dirt)
+		new _path(creating, token["age"]+1, token["dirt"])
+	else
+		new _path(creating, token["age"]+1)
+>>>>>>> 4d12123643... Merge pull request #16415 from Kashargul/merge-some-vR
 
 /datum/persistent/filth/GetEntryAge(var/atom/entry)
 	var/obj/effect/decal/cleanable/filth = entry
@@ -80,6 +92,7 @@
 	LAZYADDASSOC(., "path", "[GetEntryPath(entry)]")
 	if (saves_dirt)
 		LAZYADDASSOC(., "dirt", GetEntryDirt(entry))
+<<<<<<< HEAD
 	// CHOMPAdd Start - Cooler graffiti
 	LAZYADDASSOC(., "pixel_x", "[entry.pixel_x]")
 	LAZYADDASSOC(., "pixel_y", "[entry.pixel_y]")
@@ -90,3 +103,5 @@
 		LAZYADDASSOC(., "art_color", "[Inst.art_color]")
 		LAZYADDASSOC(., "art_shade", "[Inst.art_shade]")
 	// CHOMPAdd End
+=======
+>>>>>>> 4d12123643... Merge pull request #16415 from Kashargul/merge-some-vR
