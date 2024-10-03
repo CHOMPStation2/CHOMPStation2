@@ -97,6 +97,9 @@ class DMMParser:
                     if var_edit[0] == None and var_edit[1] == None:
                         break
                     content.var_edits[var_edit[0]] = var_edit[1]
+                else:
+                    continue # inner loop didn't break
+                break # inner loop did break indicating a })
             elif content_end == ",":
                 continue
 
