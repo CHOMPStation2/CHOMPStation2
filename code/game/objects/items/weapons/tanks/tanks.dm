@@ -668,7 +668,7 @@ var/list/global/tank_gauge_cache = list()
 		return
 	var/atom/movable/AM = WF
 	if(isnull(AM))
-		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
 	assembly?.HasProximity(T, WEAKREF(AM), old_loc)
 // CHOMPEdit End
