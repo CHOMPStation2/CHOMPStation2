@@ -45,6 +45,7 @@
 		WEATHER_RAIN = 5,
 		WEATHER_EERIE_WIND = 5
 		)
+	imminent_transition_message = "Fog settles down."
 
 /datum/weather/sif/fallout/temp //fixys firework stars
 	name = "short-term fallout"
@@ -57,6 +58,7 @@
 		WEATHER_STORM = 20,
 		WEATHER_OVERCAST = 5
 		)
+	imminent_transition_message = "Fireworks begin to fly."
 
 /datum/weather/sif/confetti //fixys firework stars
 	name = "confetti"
@@ -89,7 +91,7 @@
 		WEATHER_OVERCAST = 5,
 		WEATHER_EERIE_WIND = 5
 		)
-
+	imminent_transition_message = "A blinding snowstorm rolls in."
 
 
 //Anomalous Weather
@@ -101,6 +103,7 @@
 		WEATHER_STARRY_RIFT	= 25,
 		WEATHER_MIDNIGHT_FOG = 25
 		)
+	imminent_transition_message = "The wind begins to howl."
 
 /datum/weather/sif/toxinrain //wanted phoron but explosions come with phoron
 	name = "toxic rain"
@@ -112,6 +115,7 @@
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
+	imminent_transition_message = "The sky fills with green clouds."
 
 /datum/weather/sif/toxinrain/process_effects()
 	..()
@@ -154,7 +158,7 @@
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
-
+	imminent_transition_message = "Pebbles fly through the sky."
 
 
 /datum/weather/sif/sandstorm/process_effects()
@@ -193,6 +197,7 @@
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
+	imminent_transition_message = "Stars begin to dance closer then before."
 
 /datum/weather/sif/starryrift/process_effects()
 	..()
@@ -240,6 +245,7 @@
 	transition_chances = list(
 		WEATHER_OVERCAST = 100
 		)
+	imminent_transition_message = "Fog emerges from nowhere."
 
 /datum/weather/sif/midnightfog/process_effects()
 	..()
@@ -261,11 +267,15 @@
 		WEATHER_STORM = 20,
 		WEATHER_OVERCAST = 5
 		)
+	imminent_transition_message = "A fallout has settled upon sif."
+
 /datum/weather/sif/downpourwarning
 	name = "early extreme monsoon"
 	light_modifier = 0.4
 	timer_low_bound = 1
 	timer_high_bound = 2
+
+	imminent_transition_message = "A fatal monsoon approaches."
 
 	transition_chances = list(
 		WEATHER_DOWNPOUR = 100
@@ -287,6 +297,8 @@
 	wind_low = 2
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is knocking you down!")
+
+	imminent_transition_message = "A fatal monsoon approaches."
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
@@ -349,6 +361,8 @@
 	wind_low = 4
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is crushing you!")
+	
+	imminent_transition_message = "A fatal monsoon approaches."
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 1 SECONDS
