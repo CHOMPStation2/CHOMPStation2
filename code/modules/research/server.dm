@@ -295,7 +295,7 @@
 	if(!emagged)
 		playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 		emagged = 1
-		to_chat(user, "<span class='notice'>You you disable the security protocols.</span>")
+		to_chat(user, span_notice("You you disable the security protocols."))
 		SStgui.update_uis(src)
 		return 1
 
@@ -308,5 +308,9 @@
 /obj/machinery/r_n_d/server/core
 	name = "Core R&D Server"
 	id_with_upload_string = "1"
+<<<<<<< HEAD
 	id_with_download_string = "1;3;4;5;6;7" // CHOMPEdit - Departmental lathes
+=======
+	id_with_download_string = "1"
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	server_id = 1

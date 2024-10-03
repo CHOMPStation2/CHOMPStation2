@@ -52,7 +52,7 @@
 	var/darkness = 1
 	var/turf/T = get_turf(src)
 	if(!T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPAdd - Mapping tools to control phasing
 		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
@@ -101,10 +101,10 @@
 	var/datum/species/shadekin/SK = species
 	/* CHOMPEdit start - general shadekin ability check
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	//CHOMPEdit Start - Dark Respite
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
@@ -121,7 +121,7 @@
 	//CHOMPEdit End
 
 	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
 
 	if(!(ability_flags & AB_PHASE_SHIFTED))
@@ -129,7 +129,7 @@
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
 
 	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 
 	forceMove(T)
@@ -185,12 +185,16 @@
 				var/mob/living/target = pick(potentials)
 				if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
 					target.forceMove(vore_selected)
+<<<<<<< HEAD
 					to_chat(target, "<span class='vwarning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 					to_chat(src, "<span class='vwarning'>You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!</span>")
 				else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
 					forceMove(target.vore_selected)
 					to_chat(target, "<span class='vwarning'>\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!</span>")
 					to_chat(src, "<span class='vwarning'>You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!</span>")
+=======
+					to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		ability_flags &= ~AB_PHASE_SHIFTING
 
@@ -315,10 +319,10 @@
 	/* CHOMPEdit start - general shadekin ability check
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	//CHOMPEdit Start - Dark Respite
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
@@ -329,10 +333,10 @@
 		return FALSE
 		//CHOMPEdit End
 	else if(shadekin_get_energy() < ability_cost)
-		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
 	else if(ability_flags & AB_PHASE_SHIFTED)
-		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
 
 	var/list/viewed = oview(1)
@@ -340,7 +344,7 @@
 	for(var/mob/living/L in viewed)
 		targets += L
 	if(!targets.len)
-		to_chat(src,"<span class='warning'>Nobody nearby to mend!</span>")
+		to_chat(src,span_warning("Nobody nearby to mend!"))
 		return FALSE
 
 	var/mob/living/target = tgui_input_list(src,"Pick someone to mend:","Mend Other", targets)
@@ -350,7 +354,7 @@
 	target.add_modifier(/datum/modifier/shadekin/heal_boop,1 MINUTE)
 	playsound(src, 'sound/effects/EMPulse.ogg', 75, 1)
 	shadekin_adjust_energy(-ability_cost)
-	visible_message("<span class='notice'>\The [src] gently places a hand on \the [target]...</span>")
+	visible_message(span_notice("\The [src] gently places a hand on \the [target]..."))
 	face_atom(target)
 	return TRUE
 
@@ -359,8 +363,8 @@
 	desc = "You feel serene and well rested."
 	mob_overlay_state = "green_sparkles"
 
-	on_created_text = "<span class='notice'>Sparkles begin to appear around you, and all your ills seem to fade away.</span>"
-	on_expired_text = "<span class='notice'>The sparkles have faded, although you feel much healthier than before.</span>"
+	on_created_text = span_notice("Sparkles begin to appear around you, and all your ills seem to fade away.")
+	on_expired_text = span_notice("The sparkles have faded, although you feel much healthier than before.")
 	stacks = MODIFIER_STACK_EXTEND
 
 /datum/modifier/shadekin/heal_boop/tick()
@@ -393,10 +397,10 @@
 	/* CHOMPEdit start - general shadekin ability check
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	//CHOMPEdit Start - Dark Respite
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
@@ -407,10 +411,10 @@
 		return FALSE
 		//CHOMPEdit End
 	else if(shadekin_get_energy() < ability_cost)
-		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
 	else if(ability_flags & AB_PHASE_SHIFTED)
-		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
 
 	playsound(src, 'sound/effects/bamf.ogg', 75, 1)
@@ -424,8 +428,8 @@
 	desc = "Darkness envelops you."
 	mob_overlay_state = ""
 
-	on_created_text = "<span class='notice'>You drag part of The Dark into realspace, enveloping yourself.</span>"
-	on_expired_text = "<span class='warning'>You lose your grasp on The Dark and realspace reasserts itself.</span>"
+	on_created_text = span_notice("You drag part of The Dark into realspace, enveloping yourself.")
+	on_expired_text = span_warning("You lose your grasp on The Dark and realspace reasserts itself.")
 	stacks = MODIFIER_STACK_EXTEND
 	var/mob/living/simple_mob/shadekin/my_kin
 

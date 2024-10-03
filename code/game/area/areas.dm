@@ -451,9 +451,15 @@ var/list/mob/living/forced_ambiance_list = new
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(6) // CHOMPedit: No longer weakens.
 		else
+<<<<<<< HEAD
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(3) // CHOMPedit: No longer weakens.
 		to_chat(mob, "<span class='notice'>The sudden appearance of gravity makes you fall to the floor!</span>")
+=======
+			H.AdjustStunned(3)
+			H.AdjustWeakened(3)
+		to_chat(mob, span_notice("The sudden appearance of gravity makes you fall to the floor!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		playsound(mob, "bodyfall", 50, 1)
 
 /area/proc/prison_break(break_lights = TRUE, open_doors = TRUE, open_blast_doors = FALSE) //CHOMP Edit set blast doors to FALSE

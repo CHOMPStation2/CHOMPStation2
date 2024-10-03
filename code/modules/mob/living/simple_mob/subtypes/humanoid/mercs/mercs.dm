@@ -125,15 +125,15 @@
 /mob/living/simple_mob/humanoid/merc/melee/sword/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(O.force)
 		if(prob(20))
-			visible_message("<span class='danger'>\The [src] blocks \the [O] with its shield!</span>")
+			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
 			if(user)
 				ai_holder.react_to_attack(user)
 			return
 		else
 			..()
 	else
-		to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
-		visible_message("<span class='warning'>\The [user] gently taps [src] with \the [O].</span>")
+		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
+		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
 
 /mob/living/simple_mob/humanoid/merc/melee/sword/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)	return
@@ -328,6 +328,7 @@
 			try_reload()
 			return FALSE
 
+<<<<<<< HEAD
 	/*
 	 * CHOMP Addition: This section here is (duplicated) special snowflake code because sniper does not call parent. Basically, this is a non-stupid version of the above intended for ranged mobs.
 	 * ranged_attack_delay is stupid because it sleeps the entire mob.
@@ -344,6 +345,9 @@
 	// CHOMPAddition End
 
 	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+=======
+	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)

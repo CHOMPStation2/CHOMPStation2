@@ -26,8 +26,13 @@
 	if(istype(src, /mob/living/simple_mob/animal/passive/mouse) && !T.ckey)
 		// Mice can't eat logged out players!
 		return
+<<<<<<< HEAD
 	/*if(client && IsAdvancedToolUser()) //CHOMPedit: Mob QOL, not everything can be grabbed and nobody wants wiseguy gotchas for trying.
 		to_chat(src, "<span class='warning'>Put your hands to good use instead!</span>")
+=======
+	if(client && IsAdvancedToolUser())
+		to_chat(src, span_warning("Put your hands to good use instead!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	*/
 	feed_grabbed_to_self(src,T)
@@ -55,12 +60,12 @@
 	if(!istype(user) || user.stat) return
 
 	if(!vore_selected)
-		to_chat(user, "<span class='warning'>[src] isn't planning on eating anything much less digesting it.</span>")
+		to_chat(user, span_warning("[src] isn't planning on eating anything much less digesting it."))
 		return
 /*ChompStation edit: This prevented some flexibility with mob vore and the returned message was highly unprofessional.
 
 	if(ai_holder.retaliate || (ai_holder.hostile && faction != user.faction))
-		to_chat(user, "<span class='warning'>This predator isn't friendly, and doesn't give a shit about your opinions of it digesting you.</span>")
+		to_chat(user, span_warning("This predator isn't friendly, and doesn't give a shit about your opinions of it digesting you."))
 		return
 */
 	if(vore_selected.digest_mode == DM_HOLD)
@@ -83,7 +88,7 @@
 	var/mob/living/user = usr	//I mean, At least ghosts won't use it.
 	if(!istype(user) || user.stat) return
 	if(!vore_selected)
-		to_chat(user, "<span class='warning'>[src] isn't vore capable.</span>")
+		to_chat(user, span_warning("[src] isn't vore capable."))
 		return
 
 	vore_selected.fancy_vore = !vore_selected.fancy_vore
@@ -104,7 +109,7 @@
 				//AttackTarget() //VOREStation AI Temporary Removal
 				//LoseTarget() // only make one attempt at an attack rather than going into full rage mode
 		else
-			user.visible_message("<span class='info'>[user] swats [src] with [O]!</span>")
+			user.visible_message(span_info("[user] swats [src] with [O]!"))
 			release_vore_contents()
 			for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
 				if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.
@@ -112,7 +117,7 @@
 					addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(L)), 5 MINUTES)
 	else if(istype(O, /obj/item/healthanalyzer))
 		var/healthpercent = health/maxHealth*100
-		to_chat(user, "<span class='notice'>[src] seems to be [healthpercent]% healthy.</span>")
+		to_chat(user, span_notice("[src] seems to be [healthpercent]% healthy."))
 	else
 		..()
 

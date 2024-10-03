@@ -7,7 +7,11 @@
 			playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 			user.drop_item()
 			forceMove(H.vore_selected)
+<<<<<<< HEAD
 			balloon_alert(H, "You can taste the flavor of garbage. Wait what?") // CHOMPEdit - Balloon alerts
+=======
+			to_chat(H, span_notice("You can taste the flavor of garbage. Wait what?"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 
 	if(isrobot(M))
@@ -16,7 +20,11 @@
 			playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 			user.drop_item()
 			forceMove(R.vore_selected)
+<<<<<<< HEAD
 			R.balloon_alert_visible("[user] feeds [R] with [src]!", "You feed [R] \the [src]!") // CHOMPEdit - Balloon alerts
+=======
+			R.visible_message(span_warning("[user] feeds [R] with [src]!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 	..()
 

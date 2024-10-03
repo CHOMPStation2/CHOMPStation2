@@ -12,12 +12,17 @@
 	set category = "Object"
 	set src in view(1)
 
+<<<<<<< HEAD
 	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
 		to_chat(usr, "<span class='warning'>You can't do that.</span>")
+=======
+	if(usr.incapacitated() || !istype(usr, /mob/living))
+		to_chat(usr, span_warning("You can't do that."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	if(!Adjacent(usr))
-		to_chat(usr, "<span class='warning'>You can't reach it.</span>")
+		to_chat(usr, span_warning("You can't reach it."))
 		return
 
 	if(enabled)
@@ -36,12 +41,17 @@
 	set category = "Object"
 	set src in view(1)
 
+<<<<<<< HEAD
 	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
 		to_chat(usr, "<span class='warning'>You can't do that.</span>")
+=======
+	if(usr.incapacitated() || !istype(usr, /mob/living))
+		to_chat(usr, span_warning("You can't do that."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	if(!Adjacent(usr))
-		to_chat(usr, "<span class='warning'>You can't reach it.</span>")
+		to_chat(usr, span_warning("You can't reach it."))
 		return
 
 	proc_eject_id(usr)
@@ -52,12 +62,17 @@
 	set category = "Object"
 	set src in view(1)
 
+<<<<<<< HEAD
 	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
 		to_chat(usr, "<span class='warning'>You can't do that.</span>")
+=======
+	if(usr.incapacitated() || !istype(usr, /mob/living))
+		to_chat(usr, span_warning("You can't do that."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	if(!Adjacent(usr))
-		to_chat(usr, "<span class='warning'>You can't reach it.</span>")
+		to_chat(usr, span_warning("You can't reach it."))
 		return
 
 	proc_eject_usb(usr)

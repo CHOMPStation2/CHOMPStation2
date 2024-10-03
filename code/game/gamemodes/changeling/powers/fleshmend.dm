@@ -22,10 +22,10 @@
 	var/heal_amount = 2
 	if(src.mind.changeling.recursive_enhancement)
 		heal_amount = heal_amount * 2
-		to_chat(src, "<span class='notice'>We will heal much faster.</span>")
+		to_chat(src, span_notice("We will heal much faster."))
 
 	spawn(0)
-		to_chat(src, "<span class='notice'>We begin to heal ourselves.</span>")
+		to_chat(src, span_notice("We begin to heal ourselves."))
 		for(var/i = 0, i<50,i++)
 			if(C)
 				C.adjustBruteLoss(-heal_amount)
@@ -35,7 +35,12 @@
 
 	remove_verb(src,/mob/proc/changeling_fleshmend)  //CHOMPEdit
 	spawn(50 SECONDS)
+<<<<<<< HEAD
 		to_chat(src, "<span class='notice'>Our regeneration has slowed to normal levels.</span>")
 		add_verb(src,/mob/proc/changeling_fleshmend) //CHOMPEdit
+=======
+		to_chat(src, span_notice("Our regeneration has slowed to normal levels."))
+		src.verbs += /mob/proc/changeling_fleshmend
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	feedback_add_details("changeling_powers","FM")
 	return 1

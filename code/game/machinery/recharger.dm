@@ -100,6 +100,7 @@
 		if(istype(G, allowed_type)) allowed = 1
 
 	if(allowed)
+<<<<<<< HEAD
 		if(!do_allowed_checks(G, user))
 			return
 
@@ -119,6 +120,55 @@
 		if(!do_allowed_checks(G, user))
 			return
 		//CHOMPEdit End
+=======
+		if(charging)
+			to_chat(user, span_warning("\A [charging] is already charging here."))
+			return
+		// Checks to make sure he's not in space doing it, and that the area got proper power.
+		if(!powered())
+			to_chat(user, span_warning("\The [src] blinks red as you try to insert [G]!"))
+			return
+		if(istype(G, /obj/item/gun/energy))
+			var/obj/item/gun/energy/E = G
+			if(E.self_recharge)
+				to_chat(user, span_notice("\The [E] has no recharge port."))
+				return
+		if(istype(G, /obj/item/modular_computer))
+			var/obj/item/modular_computer/C = G
+			if(!C.battery_module)
+				to_chat(user, span_notice("\The [C] does not have a battery installed. "))
+				return
+		if(istype(G, /obj/item/melee/baton))
+			var/obj/item/melee/baton/B = G
+			if(B.use_external_power)
+				to_chat(user, span_notice("\The [B] has no recharge port."))
+				return
+		if(istype(G, /obj/item/flash))
+			var/obj/item/flash/F = G
+			if(F.use_external_power)
+				to_chat(user, span_notice("\The [F] has no recharge port."))
+				return
+		if(istype(G, /obj/item/weldingtool/electric))
+			var/obj/item/weldingtool/electric/EW = G
+			if(EW.use_external_power)
+				to_chat(user, span_notice("\The [EW] has no recharge port."))
+				return
+		if(!G.get_cell() && !istype(G, /obj/item/ammo_casing/microbattery) && !istype(G, /obj/item/paicard))	//VOREStation Edit: NSFW charging
+			to_chat(user, "\The [G] does not have a battery installed.")
+			return
+		if(istype(G, /obj/item/paicard))
+			var/obj/item/paicard/ourcard = G
+			if(ourcard.panel_open)
+				to_chat(user, span_warning("\The [ourcard] won't fit in the recharger with its panel open."))
+				return
+			if(ourcard.pai)
+				if(ourcard.pai.stat == CONSCIOUS)
+					to_chat(user, span_warning("\The [ourcard] boops... it doesn't need to be recharged!"))
+					return
+			else
+				to_chat(user, span_warning("\The [ourcard] doesn't have a personality!"))
+				return
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		user.drop_item()
 		G.loc = src
@@ -128,7 +178,7 @@
 
 	else if(portable && G.has_tool_quality(TOOL_WRENCH))
 		if(charging)
-			to_chat(user, "<span class='warning'>Remove [charging] first!</span>")
+			to_chat(user, span_warning("Remove [charging] first!"))
 			return
 		anchored = !anchored
 		to_chat(user, "You [anchored ? "attached" : "detached"] [src].")

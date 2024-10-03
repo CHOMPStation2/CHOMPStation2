@@ -22,10 +22,10 @@
 /obj/machinery/fusion_fuel_compressor/proc/do_special_fuel_compression(var/obj/item/thing, var/mob/user)
 	if(istype(thing) && thing.reagents && thing.reagents.total_volume && thing.is_open_container())
 		if(thing.reagents.reagent_list.len > 1)
-			to_chat(user, "<span class='warning'>The contents of \the [thing] are impure and cannot be used as fuel.</span>")
+			to_chat(user, span_warning("The contents of \the [thing] are impure and cannot be used as fuel."))
 			return 1
 		if(thing.reagents.total_volume < 300)
-			to_chat(user, "<span class='warning'>You need at least three hundred units of material to form a fuel rod.</span>")
+			to_chat(user, span_warning("You need at least three hundred units of material to form a fuel rod."))
 			return 1
 		var/datum/reagent/R = thing.reagents.reagent_list[1]
 		visible_message("<b>\The [src]</b> compresses the contents of \the [thing] into a new fuel assembly.")
@@ -53,6 +53,7 @@
 	if(istype(thing, /obj/item/stack/material))
 		var/obj/item/stack/material/M = thing
 		var/datum/material/mat = M.get_material()
+<<<<<<< HEAD
 		if(!blitzprogress)
 			if(!mat.is_fusion_fuel)
 				to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
@@ -84,12 +85,25 @@
 			else
 				to_chat(user, "<span class='warning'>A blitz rod is currently in progress! Either add 25 phoron sheets to complete it, or eject the supermatter sheet!</span>")
 				return
+=======
+		if(!mat.is_fusion_fuel)
+			to_chat(user, span_warning("It would be pointless to make a fuel rod out of [mat.use_name]."))
+			return
+		if(M.get_amount() < FUSION_ROD_SHEET_AMT)
+			to_chat(user, span_warning("You need at least 25 [mat.sheet_plural_name] to make a fuel rod."))
+			return
+		var/obj/item/fuel_assembly/F = new(get_turf(src), mat.name)
+		visible_message("<b>\The [src]</b> compresses the [mat.use_name] into a new fuel assembly.")
+		M.use(FUSION_ROD_SHEET_AMT)
+		user.put_in_hands(F)
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 	else if(do_special_fuel_compression(thing, user))
 		return
 
 	return ..()
 
+<<<<<<< HEAD
 /obj/machinery/fusion_fuel_compressor/verb/eject_sheet()
 	set name = "Eject Supermatter Sheet"
 	set category = "Object"
@@ -101,4 +115,6 @@
 	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
 //CHOMPEdit End
 
+=======
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 #undef FUSION_ROD_SHEET_AMT

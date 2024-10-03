@@ -228,12 +228,23 @@
 /// Called after the config has been loaded or reloaded.
 /datum/controller/subsystem/proc/OnConfigLoad()
 
+<<<<<<< HEAD
 /**
  * Used to initialize the subsystem. This is expected to be overriden by subtypes.
  */
 /datum/controller/subsystem/Initialize()
 	return SS_INIT_NONE
 // CHOMPEdit End
+=======
+//used to initialize the subsystem AFTER the map has loaded
+/datum/controller/subsystem/Initialize(start_timeofday)
+	subsystem_initialized = TRUE
+	var/time = (REALTIMEOFDAY - start_timeofday) / 10
+	var/msg = "Initialized [name] subsystem within [time] second[time == 1 ? "" : "s"]!"
+	to_chat(world, span_boldannounce("[msg]"))
+	log_world(msg)
+	return time
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 //hook for printing stats to the "MC" statuspanel for admins to see performance and related stats etc.
 //CHOMPEdit Begin

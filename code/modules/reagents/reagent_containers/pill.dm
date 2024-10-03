@@ -31,12 +31,19 @@
 				return
 			var/obj/item/blocked = H.check_mouth_coverage()
 			if(blocked)
+<<<<<<< HEAD
 				// to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
 				balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 				return
 
 			// to_chat(M, "<span class='notice'>You swallow \the [src].</span>")
 			balloon_alert(user, "Swallowed \the [src]")	// CHOMPEdit - Changed to balloon alert
+=======
+				to_chat(user, span_warning("\The [blocked] is in the way!"))
+				return
+
+			to_chat(M, span_notice("You swallow \the [src]."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			M.drop_from_inventory(src) //icon update
 			if(reagents.total_volume)
 				reagents.trans_to_mob(M, reagents.total_volume, CHEM_INGEST)
@@ -52,20 +59,31 @@
 			return
 		var/obj/item/blocked = H.check_mouth_coverage()
 		if(blocked)
+<<<<<<< HEAD
 			// to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
 			balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 			return
 
 		// user.visible_message("<span class='warning'>[user] attempts to force [M] to swallow \the [src].</span>")
 		balloon_alert_visible("[user] attempts to force [M] to swallow \the [src].") // CHOMPEdit - Changed to balloon alert
+=======
+			to_chat(user, span_warning("\The [blocked] is in the way!"))
+			return
+
+		user.visible_message(span_warning("[user] attempts to force [M] to swallow \the [src]."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		user.setClickCooldown(user.get_attack_speed(src))
 		if(!do_mob(user, M))
 			return
 
 		user.drop_from_inventory(src) //icon update
+<<<<<<< HEAD
 		// user.visible_message("<span class='warning'>[user] forces [M] to swallow \the [src].</span>")
 		balloon_alert_visible("[user] forces [M] to swallow \the [src].") // CHOMPEdit - Changed to balloon alert
+=======
+		user.visible_message(span_warning("[user] forces [M] to swallow \the [src]."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		var/contained = reagentlist()
 		add_attack_logs(user,M,"Fed a pill containing [contained]")
@@ -83,18 +101,30 @@
 
 	if(target.is_open_container() && target.reagents)
 		if(!target.reagents.total_volume)
+<<<<<<< HEAD
 			// to_chat(user, "<span class='notice'>[target] is empty. Can't dissolve \the [src].</span>")
 			balloon_alert(user, "[target] is empty.") // CHOMPEdit - Changed to balloon alert
 			return
 		// to_chat(user, "<span class='notice'>You dissolve \the [src] in [target].</span>")
 		balloon_alert_visible("[user] puts something in \the [target]", "[target] dissolves in \the [src]", 2) // CHOMPEdit - Changed to balloon alert
+=======
+			to_chat(user, span_notice("[target] is empty. Can't dissolve \the [src]."))
+			return
+		to_chat(user, span_notice("You dissolve \the [src] in [target]."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		add_attack_logs(user,null,"Spiked [target.name] with a pill containing [reagentlist()]")
 
 		reagents.trans_to(target, reagents.total_volume)
+<<<<<<< HEAD
 		/* for(var/mob/O in viewers(2, user)) // CHOMPEdit - balloon_alert_visible handles this
 			O.show_message("<span class='warning'>[user] puts something in \the [target].</span>", 1)
 		*/
+=======
+		for(var/mob/O in viewers(2, user))
+			O.show_message(span_warning("[user] puts something in \the [target]."), 1)
+
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		qdel(src)
 
 	return
@@ -102,8 +132,12 @@
 /obj/item/reagent_containers/pill/attackby(obj/item/W as obj, mob/user as mob)
 	if(is_sharp(W))
 		var/obj/item/reagent_containers/powder/J = new /obj/item/reagent_containers/powder(src.loc)
+<<<<<<< HEAD
 		// user.visible_message("<span class='warning'>[user] gently cuts up [src] with [W]!</span>")
 		balloon_alert_visible("[user] gently cuts up [src] with [W]!", "You gently cut up \the [src] with [W]") // CHOMPEdit - Changed to balloon alert
+=======
+		user.visible_message(span_warning("[user] gently cuts up [src] with [W]!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		playsound(src.loc, 'sound/effects/chop.ogg', 50, 1)
 
 		if(reagents)
@@ -113,8 +147,12 @@
 
 	if(istype(W, /obj/item/card/id))
 		var/obj/item/reagent_containers/powder/J = new /obj/item/reagent_containers/powder(src.loc)
+<<<<<<< HEAD
 		// user.visible_message("<span class='warning'>[user] clumsily cuts up [src] with [W]!</span>")
 		balloon_alert_visible("[user] clumsily cuts up [src] with [W]!", "You clumsily cut up \the [src] with [W]") // CHOMPEdit - Changed to balloon alert
+=======
+		user.visible_message(span_warning("[user] clumsily chops up [src] with [W]!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		playsound(src.loc, 'sound/effects/chop.ogg', 50, 1)
 
 		if(reagents)

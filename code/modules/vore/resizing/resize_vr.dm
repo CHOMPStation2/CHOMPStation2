@@ -195,7 +195,7 @@
 			return 0
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size() || ignore_size)
 		if(buckled)
-			to_chat(usr,"<span class='notice'>You have to unbuckle \the [src] before you pick them up.</span>")
+			to_chat(usr,span_notice("You have to unbuckle \the [src] before you pick them up."))
 			return 0
 		holder_type = /obj/item/holder/micro
 		var/obj/item/holder/m_holder = get_scooped(M, G)
@@ -252,9 +252,9 @@
 				tmob_message = tail.msg_owner_stepunder
 
 		if(src_message)
-			to_chat(src, "<span class='filter_notice'>[STEP_TEXT_OWNER(src_message)]</span>")
+			to_chat(src, span_filter_notice("[STEP_TEXT_OWNER(src_message)]"))
 		if(tmob_message)
-			to_chat(tmob, "<span class='filter_notice'>[STEP_TEXT_PREY(tmob_message)]</span>")
+			to_chat(tmob, span_filter_notice("[STEP_TEXT_PREY(tmob_message)]"))
 		return TRUE
 	return FALSE
 
@@ -317,7 +317,15 @@
 	if(a_intent == I_HELP) // Theoretically not possible, but just in case.
 		return FALSE
 
+<<<<<<< HEAD
 	//CHOMPEdit - removed chance to dodge steppies. Get rng out of my combat.
+=======
+	if(tmob.a_intent != I_HELP && prob(35))
+		to_chat(pred, span_danger("[prey] dodges out from under your foot!"))
+		to_chat(prey, span_danger("You narrowly avoid [pred]'s foot!"))
+		return FALSE
+
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	now_pushing = 0
 	forceMove(tmob.loc)
 	if(a_intent != I_HELP)
@@ -361,6 +369,7 @@
 				message_pred = "You pin [prey] down onto the floor with your foot and curl your toes up around their body, trapping them inbetween them!"
 				message_prey = "[pred] pins you down to the floor with their foot and curls their toes up around your body, trapping you inbetween them!"
 				if(tail)
+<<<<<<< HEAD
 					message_pred = STEP_TEXT_OWNER(tail.msg_owner_grab_success)
 					message_prey = STEP_TEXT_PREY(tail.msg_prey_grab_success)
 				equip_to_slot_if_possible(prey.get_scooped(pred), slot_shoes, 0, 1)
@@ -412,6 +421,41 @@
 		to_chat(pred, "<span class='danger'>[message_pred]</span>")
 		to_chat(prey, "<span class='danger'>[message_prey]</span>")
 		return TRUE
+=======
+					message_pred = STEP_TEXT_OWNER(tail.msg_owner_harm_run)
+					message_prey = STEP_TEXT_PREY(tail.msg_prey_harm_run)
+
+				for(var/obj/item/organ/external/I in prey.organs)
+					I.take_damage(calculated_damage, 0) // 5 damage min, 26.25 damage max, depending on size & RNG. If they're only stepped on once, the damage will (probably not...) heal over time.
+				prey.drip(0.1)
+				add_attack_logs(pred, prey, "Crushed underfoot (run, about [calculated_damage] damage)")
+	else
+		switch(a_intent)
+			if(I_DISARM)
+				message_pred = "You firmly push your foot down on [prey], painfully but harmlessly pinning them to the ground!"
+				message_prey = "[pred] firmly pushes their foot down on you, quite painfully but harmlessly pinning you to the ground!"
+				if(tail)
+					message_pred = STEP_TEXT_OWNER(tail.msg_owner_disarm_walk)
+					message_prey = STEP_TEXT_PREY(tail.msg_prey_disarm_walk)
+				add_attack_logs(pred, prey, "Pinned underfoot (walk, about [damage] halloss)")
+				tmob.Weaken(2) //Removed halloss because it was being abused
+			if(I_HURT)
+				message_pred = "You methodically place your foot down upon [prey]'s body, slowly applying pressure, crushing them against the floor below!"
+				message_prey = "[pred] methodically places their foot upon your body, slowly applying pressure, crushing you against the floor below!"
+				if(tail)
+					message_pred = STEP_TEXT_OWNER(tail.msg_owner_harm_walk)
+					message_prey = STEP_TEXT_PREY(tail.msg_prey_harm_walk)
+				// Multiplies the above damage by 3.5. This means a min of 1.75 damage, or a max of 9.1875. damage to each limb, depending on size and RNG.
+				calculated_damage *= 3.5
+				for(var/obj/item/organ/I in prey.organs)
+					I.take_damage(calculated_damage, 0)
+				prey.drip(3)
+				add_attack_logs(pred, prey, "Crushed underfoot (walk, about [calculated_damage] damage)")
+
+	to_chat(pred, span_danger("[message_pred]"))
+	to_chat(prey, span_danger("[message_prey]"))
+	return TRUE
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /mob/living/verb/toggle_pickups()
 	set name = "Toggle Micro Pick-up"
@@ -419,7 +463,7 @@
 	set category = "IC.Settings" //CHOMPEdit
 
 	pickup_active = !pickup_active
-	to_chat(src, "<span class='filter_notice'>You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent.</span>")
+	to_chat(src, span_filter_notice("You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent."))
 
 #undef STEP_TEXT_OWNER
 #undef STEP_TEXT_PREY

@@ -72,17 +72,27 @@
 	if(istype(W,/obj/item/stack/cable_coil))
 		var/obj/item/stack/cable_coil/CC = W
 		if(string_attached)
+<<<<<<< HEAD
 			// to_chat(user, "<span class='notice'>There already is a string attached to this coin.</span>")
 			balloon_alert(user, "There is a string already attached to \the [src]") // CHOMPEdit - Changed to balloon alert
+=======
+			to_chat(user, span_notice("There already is a string attached to this coin."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 		if (CC.use(1))
 			add_overlay("coin_string_overlay")
 			string_attached = 1
+<<<<<<< HEAD
 			// to_chat(user, "<span class='notice'>You attach a string to the coin.</span>")
 			balloon_alert(user, "String attached to \the [src]") // CHOMPEdit - Changed to balloon alert
 		else
 			// to_chat(user, "<span class='notice'>This cable coil appears to be empty.</span>")
 			balloon_alert(user, "The coil seems to be empty...") // CHOMPEdit - Changed to balloon alert
+=======
+			to_chat(user, span_notice("You attach a string to the coin."))
+		else
+			to_chat(user, span_notice("This cable coil appears to be empty."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	else if(W.has_tool_quality(TOOL_WIRECUTTER))
 		if(!string_attached)
@@ -93,8 +103,12 @@
 		CC.update_icon()
 		cut_overlays()
 		string_attached = null
+<<<<<<< HEAD
 		// to_chat(user, "<span class='notice'>You detach the string from the coin.</span>")
 		balloon_alert(user, "String detached") // CHOMPEdit - Changed to balloon alert
+=======
+		to_chat(user, span_notice("You detach the string from the coin."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	else ..()
 
 /obj/item/coin/attack_self(mob/user as mob)
@@ -104,6 +118,11 @@
 		comment = "tails"
 	else if(result == 2)
 		comment = "heads"
+<<<<<<< HEAD
 	user.visible_message("<span class='notice'>[user] has thrown \the [src]. It lands on [comment]! </span>", \
 						 "<span class='notice'>You throw \the [src]. It lands on [comment]! </span>")
 	balloon_alert_visible("\the [src] lands on [comment]!", "\the [src] lands on [comment]!")
+=======
+	user.visible_message(span_notice("[user] has thrown \the [src]. It lands on [comment]! "), \
+						 span_notice("You throw \the [src]. It lands on [comment]! "))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

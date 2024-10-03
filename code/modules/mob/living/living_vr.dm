@@ -33,7 +33,7 @@
 	if(new_metadata && CanUseTopic(usr))
 		ooc_notes = new_metadata
 		client.prefs.metadata = new_metadata
-		to_chat(usr, "<span class='filter_notice'>OOC notes updated. Don't forget to save!</span>")
+		to_chat(usr, span_filter_notice("OOC notes updated. Don't forget to save!"))
 		log_admin("[key_name(usr)] updated their OOC notes mid-round.")
 		ooc_notes_window(usr)
 		//CHOMPEdit Start
@@ -52,9 +52,15 @@
 	if(new_metadata && CanUseTopic(user))
 		ooc_notes = new_metadata
 		client.prefs.metadata = new_metadata
+<<<<<<< HEAD
 		to_chat(user, "<span class='filter_notice'>OOC notes updated. Don't forget to save!</span>")
 		log_admin("[key_name(user)] updated their OOC notes mid-round.")
 		ooc_notes_window(user)
+=======
+		to_chat(usr, span_filter_notice("OOC notes updated. Don't forget to save!"))
+		log_admin("[key_name(usr)] updated their OOC notes mid-round.")
+		ooc_notes_window(usr)
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /mob/living/proc/set_metainfo_likes(var/mob/user, var/reopen = TRUE)
 	if(user != src)
@@ -65,8 +71,13 @@
 			new_metadata = ""
 		ooc_notes_likes = new_metadata
 		client.prefs.metadata_likes = new_metadata
+<<<<<<< HEAD
 		to_chat(user, "<span class='filter_notice'>OOC note likes have been updated. Don't forget to save!</span>")
 		log_admin("[key_name(user)] updated their OOC note likes mid-round.")
+=======
+		to_chat(usr, span_filter_notice("OOC note likes have been updated. Don't forget to save!"))
+		log_admin("[key_name(usr)] updated their OOC note likes mid-round.")
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		if(reopen)
 			ooc_notes_window(user)
 
@@ -79,8 +90,13 @@
 			new_metadata = ""
 		ooc_notes_dislikes = new_metadata
 		client.prefs.metadata_dislikes = new_metadata
+<<<<<<< HEAD
 		to_chat(user, "<span class='filter_notice'>OOC note dislikes have been updated. Don't forget to save!</span>")
 		log_admin("[key_name(user)] updated their OOC note dislikes mid-round.")
+=======
+		to_chat(usr, span_filter_notice("OOC note dislikes have been updated. Don't forget to save!"))
+		log_admin("[key_name(usr)] updated their OOC note dislikes mid-round.")
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		if(reopen)
 			ooc_notes_window(user)
 
@@ -88,15 +104,23 @@
 	if(user != src)
 		return
 	if(client.prefs.real_name != real_name)
+<<<<<<< HEAD
 		to_chat(user, "<span class='danger'>Your selected character slot name is not the same as your character's name. Aborting save. Please select [real_name]'s character slot in character setup before saving.</span>")
 		return
 	if(client.prefs.save_character())
 		to_chat(user, "<span class='filter_notice'>Character preferences saved.</span>")
+=======
+		to_chat(usr, span_danger("Your selected character slot name is not the same as your character's name. Aborting save. Please select [real_name]'s character slot in character setup before saving."))
+		return
+	if(client.prefs.save_character())
+		to_chat(usr, span_filter_notice("Character preferences saved."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /mob/living/proc/print_ooc_notes_to_chat(var/mob/user)
 	if(!ooc_notes)
 		return
 	var/msg = ooc_notes
+<<<<<<< HEAD
 	//CHOMPEdit Start
 	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes) && !user.client?.prefs?.read_preference(/datum/preference/toggle/vchat_enable)) // Oldchat hates proper formatting
 		msg += "<br><br>"
@@ -143,6 +167,14 @@
 	to_chat(user, "<span class='chatexport'><b>[src]'s Metainfo:</b><br>[msg]</span>")
 	//CHOMPEdit End
 //ChompEDIT END - Removal of usr
+=======
+	if(ooc_notes_likes)
+		msg += "<br><br><b>LIKES</b><br><br>[ooc_notes_likes]"
+	if(ooc_notes_dislikes)
+		msg += "<br><br><b>DISLIKES</b><br><br>[ooc_notes_dislikes]"
+	to_chat(usr, span_chatexport("[src]'s Metainfo:<br>[msg]"))
+
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 /mob/living/verb/set_custom_link()
 	set name = "Set Custom Link"
 	set desc = "Set a custom link to show up with your examine text."

@@ -58,7 +58,7 @@
 	set desc = "Check the current server code revision"
 
 	if(!GLOB.revdata)
-		to_chat(src, "<span class='warning'>Please wait until server initializations are complete.</span>")
+		to_chat(src, span_warning("Please wait until server initializations are complete."))
 		return
 
 	var/list/msg = list()

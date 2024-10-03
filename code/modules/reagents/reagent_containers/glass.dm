@@ -70,11 +70,11 @@
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		if(reagents && reagents.reagent_list.len)
-			. += "<span class='notice'>It contains [reagents.total_volume] units of liquid.</span>"
+			. += span_notice("It contains [reagents.total_volume] units of liquid.")
 		else
-			. += "<span class='notice'>It is empty.</span>"
+			. += span_notice("It is empty.")
 		if(!is_open_container())
-			. += "<span class='notice'>Airtight lid seals it completely.</span>"
+			. += span_notice("Airtight lid seals it completely.")
 
 /obj/item/reagent_containers/glass/attack_self()
 	..()
@@ -107,8 +107,12 @@
 	return ..()
 
 /obj/item/reagent_containers/glass/self_feed_message(var/mob/user)
+<<<<<<< HEAD
 	// to_chat(user, "<span class='notice'>You swallow a gulp from \the [src].</span>")
 	balloon_alert(user, "Swallowed from \the [src]") // CHOMPEdit - Changed to balloon alert
+=======
+	to_chat(user, span_notice("You swallow a gulp from \the [src]."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /obj/item/reagent_containers/glass/proc/attempt_snake_milking(mob/living/user, mob/living/target)
 	var/reagent
@@ -149,8 +153,12 @@
 		if(standard_splash_mob(user,target))
 			return 1
 		if(reagents && reagents.total_volume)
+<<<<<<< HEAD
 			// to_chat(user, "<span class='notice'>You splash the solution onto [target].</span>") //They are on harm intent, aka wanting to spill it.
 			balloon_alert(user, "Splashed the solution onto [target]")
+=======
+			to_chat(user, span_notice("You splash the solution onto [target].")) //They are on harm intent, aka wanting to spill it.
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			reagents.splash(target, reagents.total_volume)
 			return 1
 	..()
@@ -159,8 +167,9 @@
 	if(istype(W, /obj/item/pen) || istype(W, /obj/item/flashlight/pen))
 		var/tmp_label = sanitizeSafe(tgui_input_text(user, "Enter a label for [name]", "Label", label_text, MAX_NAME_LEN), MAX_NAME_LEN)
 		if(length(tmp_label) > 50)
-			to_chat(user, "<span class='notice'>The label can be at most 50 characters long.</span>")
+			to_chat(user, span_notice("The label can be at most 50 characters long."))
 		else if(length(tmp_label) > 10)
+<<<<<<< HEAD
 			// to_chat(user, "<span class='notice'>You set the label.</span>")
 			balloon_alert(user, "Label set.") // CHOMPEdit - Changed to balloon alert
 			label_text = tmp_label
@@ -168,13 +177,24 @@
 		else
 			// to_chat(user, "<span class='notice'>You set the label to \"[tmp_label]\".</span>")
 			balloon_alert(user, "Label set to \"[tmp_label]\"") // CHOMPEdit - Changed to balloon alert
+=======
+			to_chat(user, span_notice("You set the label."))
+			label_text = tmp_label
+			update_name_label()
+		else
+			to_chat(user, span_notice("You set the label to \"[tmp_label]\"."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			label_text = tmp_label
 			update_name_label()
 	if(istype(W,/obj/item/storage/bag))
 		..()
 	if(W && W.w_class <= w_class && (flags & OPENCONTAINER) && user.a_intent != I_HELP)
+<<<<<<< HEAD
 		// to_chat(user, "<span class='notice'>You dip \the [W] into \the [src].</span>")
 		balloon_alert(user, "[W] dipped into \the [src].") // CHOMPEdit - Changed to balloon alert
+=======
+		to_chat(user, span_notice("You dip \the [W] into \the [src]."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		reagents.touch_obj(W, reagents.total_volume)
 
 /obj/item/reagent_containers/glass/proc/update_name_label()
@@ -342,8 +362,12 @@
 		qdel(src)
 		return
 	else if(D.has_tool_quality(TOOL_WIRECUTTER))
+<<<<<<< HEAD
 		// to_chat(user, "<span class='notice'>You cut a big hole in \the [src] with \the [D].  It's kinda useless as a bucket now.</span>")
 		balloon_alert(user, "You cut a big hole in \the [src] with \the [D]. It's kinda useless now.") // CHOMPEdit - Changed to balloon alert
+=======
+		to_chat(user, span_notice("You cut a big hole in \the [src] with \the [D].  It's kinda useless as a bucket now."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		user.put_in_hands(new /obj/item/clothing/head/helmet/bucket)
 		user.drop_from_inventory(src)
 		qdel(src)
@@ -353,22 +377,33 @@
 		if (M.use(1))
 			var/obj/item/secbot_assembly/edCLN_assembly/B = new /obj/item/secbot_assembly/edCLN_assembly
 			B.loc = get_turf(src)
+<<<<<<< HEAD
 			// to_chat(user, "<span class='notice'>You armed the robot frame.</span>")
 			balloon_alert(user, "Armed the robot frame.")
+=======
+			to_chat(user, span_notice("You armed the robot frame."))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			if (user.get_inactive_hand()==src)
 				user.remove_from_mob(src)
 				user.put_in_inactive_hand(B)
 			qdel(src)
 		else
+<<<<<<< HEAD
 			// to_chat(user, "<span class='warning'>You need one sheet of metal to arm the robot frame.</span>")
 			balloon_alert(user, "One sheet of metal is needed to arm the robot frame.") // CHOMPEdit - Changed to balloon alert
 	else if(istype(D, /obj/item/mop) || istype(D, /obj/item/soap) || istype(D, /obj/item/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
 		if(reagents.total_volume < 1)
 			// to_chat(user, "<span class='warning'>\The [src] is empty!</span>")
 			balloon_alert(user, "\The [src] is empty!") // CHOMPEdit - Changed to balloon alert
+=======
+			to_chat(user, span_warning("You need one sheet of metal to arm the robot frame."))
+	else if(istype(D, /obj/item/mop) || istype(D, /obj/item/soap) || istype(D, /obj/item/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
+		if(reagents.total_volume < 1)
+			to_chat(user, span_warning("\The [src] is empty!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		else
 			reagents.trans_to_obj(D, 5)
-			to_chat(user, "<span class='notice'>You wet \the [D] in \the [src].</span>")
+			to_chat(user, span_notice("You wet \the [D] in \the [src]."))
 			playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 	else
 		return ..()
@@ -401,17 +436,17 @@
 		to_chat(user, "This wooden bucket doesn't play well with electronics.")
 		return
 	else if(istype(D, /obj/item/material/knife/machete/hatchet))
-		to_chat(user, "<span class='notice'>You cut a big hole in \the [src] with \the [D].  It's kinda useless as a bucket now.</span>")
+		to_chat(user, span_notice("You cut a big hole in \the [src] with \the [D].  It's kinda useless as a bucket now."))
 		user.put_in_hands(new /obj/item/clothing/head/helmet/bucket/wood)
 		user.drop_from_inventory(src)
 		qdel(src)
 		return
 	else if(istype(D, /obj/item/mop))
 		if(reagents.total_volume < 1)
-			to_chat(user, "<span class='warning'>\The [src] is empty!</span>")
+			to_chat(user, span_warning("\The [src] is empty!"))
 		else
 			reagents.trans_to_obj(D, 5)
-			to_chat(user, "<span class='notice'>You wet \the [D] in \the [src].</span>")
+			to_chat(user, span_notice("You wet \the [D] in \the [src]."))
 			playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 		return
 	else

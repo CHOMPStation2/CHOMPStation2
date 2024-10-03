@@ -15,7 +15,11 @@
 	pixel_y = rand(-5, 5)
 
 /obj/item/bluespace_crystal/attack_self(mob/user)
+<<<<<<< HEAD
 	user.balloon_alert_visible("[user] crushes [src]!", "Crushed [src]!") // CHOMPEdit - Balloon alert
+=======
+	user.visible_message(span_warning("[user] crushes [src]!"), span_danger("You crush [src]!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(5, 1, get_turf(src))
 	s.start()
@@ -28,7 +32,11 @@
 
 /obj/item/bluespace_crystal/throw_impact(atom/hit_atom)
 	if(!..()) // not caught in mid-air
+<<<<<<< HEAD
 		balloon_alert_visible("[src] fizzles and disappears upon impact!") // CHOMPEdit - Balloon alert
+=======
+		visible_message(span_notice("[src] fizzles and disappears upon impact!"))
+>>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		var/turf/T = get_turf(hit_atom)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 		s.set_up(5, 1, T)
