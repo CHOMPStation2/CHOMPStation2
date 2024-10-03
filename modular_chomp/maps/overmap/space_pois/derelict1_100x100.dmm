@@ -29,7 +29,6 @@
 "bL" = (
 /obj/structure/window/reinforced{
 	dir = 1;
-	tag = "icon-rwindow (NORTH)"
 	},
 /turf/template_noop,
 /area/submap/derelict1)
@@ -50,7 +49,6 @@
 "cU" = (
 /obj/machinery/light/small{
 	dir = 4;
-	tag = "icon-bulb1 (EAST)"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
@@ -280,11 +278,9 @@
 "sF" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
-	tag = "icon-rwindow (WEST)"
 	},
 /turf/simulated/floor/plating,
 /area/submap/derelict1)
@@ -314,7 +310,6 @@
 "tV" = (
 /obj/machinery/light/small{
 	dir = 8;
-	tag = "icon-bulb1 (WEST)"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
@@ -337,7 +332,6 @@
 "vP" = (
 /obj/machinery/light/small{
 	dir = 1;
-	tag = "icon-bulb1 (NORTH)"
 	},
 /obj/machinery/power/apc{
 	dir = 8;
@@ -363,7 +357,6 @@
 "wx" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /turf/template_noop,
 /area/submap/derelict1)
@@ -410,7 +403,6 @@
 "ze" = (
 /obj/structure/window/reinforced{
 	dir = 8;
-	tag = "icon-rwindow (WEST)"
 	},
 /obj/structure/bed/chair/bay/comfy/lime{
 	dir = 1
@@ -461,7 +453,6 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1;
-	tag = "icon-rwindow (NORTH)"
 	},
 /turf/simulated/floor/plating,
 /area/submap/derelict1)
@@ -472,7 +463,6 @@
 "Cy" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
-	tag = "icon-propulsion (WEST)"
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/derelict1)
@@ -519,7 +509,6 @@
 "Fb" = (
 /obj/structure/window/reinforced{
 	dir = 8;
-	tag = "icon-rwindow (WEST)"
 	},
 /obj/structure/bed/chair/bay/comfy/lime,
 /turf/simulated/shuttle/floor,
@@ -751,7 +740,6 @@
 "Tr" = (
 /obj/structure/window/reinforced{
 	dir = 8;
-	tag = "icon-rwindow (WEST)"
 	},
 /turf/template_noop,
 /area/submap/derelict1)

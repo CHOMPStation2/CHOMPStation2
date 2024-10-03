@@ -77,7 +77,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /turf/template_noop,
 /area/submap/debris1)

@@ -529,7 +529,6 @@
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
 	dir = 4;
-	tag = "icon-shower (EAST)"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,

@@ -114,7 +114,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
-	tag = ""
 	},
 /turf/simulated/wall,
 /area/submap/syndiecakesfactory)
@@ -241,7 +240,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "SyndiCakes"
@@ -374,7 +372,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/syndiecakesfactory)
@@ -430,7 +427,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /obj/random/maintenance,
 /obj/effect/floor_decal/rust,
@@ -479,7 +475,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
-	tag = ""
 	},
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
@@ -504,7 +499,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /obj/random/junk,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -543,7 +537,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -617,7 +610,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -691,13 +683,11 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4";
-	tag = "90Curve"
 	},
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
@@ -743,7 +733,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
@@ -754,7 +743,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,

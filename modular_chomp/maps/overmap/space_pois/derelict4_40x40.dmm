@@ -25,7 +25,6 @@
 "i" = (
 /obj/structure/window/reinforced{
 	dir = 8;
-	tag = "icon-rwindow (WEST)"
 	},
 /obj/structure/bed/chair/bay/comfy/lime,
 /turf/simulated/shuttle/floor,
@@ -41,7 +40,6 @@
 "l" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
-	tag = "icon-propulsion (WEST)"
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/derelict4)
@@ -73,7 +71,6 @@
 "r" = (
 /obj/structure/window/reinforced{
 	dir = 8;
-	tag = "icon-rwindow (WEST)"
 	},
 /obj/structure/bed/chair/bay/comfy/lime{
 	dir = 1

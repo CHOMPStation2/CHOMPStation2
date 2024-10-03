@@ -10,7 +10,6 @@
 "c" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 1;
-	tag = "icon-heater (NORTH)"
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/shuttle/plating,
@@ -83,7 +82,6 @@
 "A" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 4;
-	tag = "icon-heater (EAST)"
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -94,12 +92,10 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
 	icon_state = "propulsion_l";
-	tag = "icon-propulsion_l (WEST)"
 	},
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
 	icon_state = "burst_r";
-	tag = "icon-burst_r (WEST)"
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/clownmime)
@@ -111,7 +107,6 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
 	icon_state = "propulsion_l";
-	tag = "icon-propulsion_l (WEST)"
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/clownmime)
@@ -185,12 +180,10 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
 	icon_state = "propulsion_l";
-	tag = "icon-propulsion_l (WEST)"
 	},
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
 	icon_state = "propulsion_l";
-	tag = "icon-propulsion_l (WEST)"
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/clownmime)

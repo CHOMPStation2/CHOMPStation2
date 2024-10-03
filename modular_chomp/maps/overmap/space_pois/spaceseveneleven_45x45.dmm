@@ -1545,7 +1545,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
 	oxygen = 0;
