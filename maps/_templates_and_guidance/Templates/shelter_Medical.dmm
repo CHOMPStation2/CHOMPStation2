@@ -332,7 +332,6 @@
 /area/survivalpod)
 "S" = (
 /obj/machinery/iv_drip,
-/obj/machinery/iv_drip,
 /obj/machinery/vending/wallmed1{
 	dir = 8;
 	pixel_x = 22;

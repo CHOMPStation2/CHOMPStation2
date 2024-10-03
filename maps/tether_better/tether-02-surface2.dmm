@@ -32613,7 +32613,6 @@
 	health = 1e+006
 	},
 /obj/structure/grille,
-/obj/structure/grille,
 /turf/simulated/floor/reinforced,
 /area/rnd/outpost/xenobiology/outpost_slimepens)
 "bjH" = (

@@ -514,7 +514,6 @@
 /area/cryogaia_away/aerostat/inside)
 "bo" = (
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating/bor4,
 /area/cryogaia_away/aerostat/inside)

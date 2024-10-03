@@ -54,7 +54,6 @@
 	health = 1e+007
 	},
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/machinery/door/poddoor{
 	density = 0;
 	icon_state = "pdoor0";

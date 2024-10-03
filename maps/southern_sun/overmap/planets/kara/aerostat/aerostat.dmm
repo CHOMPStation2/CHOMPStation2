@@ -521,7 +521,6 @@
 /area/sc_away/aerostat/inside)
 "bo" = (
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)

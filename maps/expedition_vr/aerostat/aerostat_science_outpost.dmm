@@ -530,7 +530,6 @@
 /area/offmap/aerostat/inside/airlock/north)
 "bo" = (
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -2106,7 +2105,6 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -2159,7 +2157,6 @@
 /turf/simulated/wall,
 /area/offmap/aerostat/inside/atmos)
 "fW" = (
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -3505,7 +3502,6 @@
 /area/offmap/aerostat/inside/arm/nw)
 "lt" = (
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -4048,7 +4044,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 8
 	},
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -4948,7 +4943,6 @@
 /turf/simulated/floor,
 /area/offmap/aerostat/inside/toxins)
 "qM" = (
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -6480,7 +6474,6 @@
 	dir = 8
 	},
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -7614,7 +7607,6 @@
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
 "BV" = (
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -9246,7 +9238,6 @@
 /area/offmap/aerostat/inside/virology)
 "IB" = (
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 8
@@ -9380,7 +9371,6 @@
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
 "Jd" = (
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -12572,7 +12562,6 @@
 /turf/simulated/floor,
 /area/offmap/aerostat/inside/arm/se)
 "Ww" = (
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
