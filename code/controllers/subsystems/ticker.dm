@@ -87,7 +87,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 
 	if(start_immediately)
 		pregame_timeleft = 0
-	else if(SSvote.time_remaining)
+	else if(SSvote.active_vote)
 		return // vote still going, wait for it.
 
 	// Time to start the game!
@@ -98,16 +98,26 @@ var/global/datum/controller/subsystem/ticker/ticker
 			fire() // Don't wait for next tick, do it now!
 		return
 
+<<<<<<< HEAD
 	if(pregame_timeleft <= CONFIG_GET(number/vote_autogamemode_timeleft) && !SSvote.gamemode_vote_called)
 		SSvote.autogamemode() // Start the game mode vote (if we haven't had one already)
+=======
+	//if(pregame_timeleft <= config.vote_autogamemode_timeleft && !SSvote.gamemode_vote_called)
+		//.autogamemode() // Start the game mode vote (if we haven't had one already)
+>>>>>>> a29eb8811b... Merge pull request #16383 from TheCaramelion/TGUI-Vote
 
 // Called during GAME_STATE_SETTING_UP (RUNLEVEL_SETUP)
 /datum/controller/subsystem/ticker/proc/setup_tick(resumed = FALSE)
 	round_start_time = world.time //otherwise round_start_time would be 0 for the signals
 	if(!setup_choose_gamemode())
 		// It failed, go back to lobby state and re-send the welcome message
+<<<<<<< HEAD
 		pregame_timeleft = CONFIG_GET(number/pregame_time) // CHOMPEdit
 		SSvote.gamemode_vote_called = FALSE // Allow another autogamemode vote
+=======
+		pregame_timeleft = config.pregame_time
+		// SSvote.gamemode_vote_called = FALSE // Allow another autogamemode vote
+>>>>>>> a29eb8811b... Merge pull request #16383 from TheCaramelion/TGUI-Vote
 		current_state = GAME_STATE_PREGAME
 		Master.SetRunLevel(RUNLEVEL_LOBBY)
 		pregame_welcome()
@@ -229,7 +239,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 		mode.cleanup()
 		//call a transfer shuttle vote
 		to_world("<span class='danger'>The round has ended!</span>")
-		SSvote.autotransfer()
+		new /datum/vote/crew_transfer
 
 // Called during GAME_STATE_FINISHED (RUNLEVEL_POSTGAME)
 /datum/controller/subsystem/ticker/proc/post_game_tick()
