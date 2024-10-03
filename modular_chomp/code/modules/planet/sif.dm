@@ -267,11 +267,15 @@
 		WEATHER_STORM = 20,
 		WEATHER_OVERCAST = 5
 		)
+	imminent_transition_message = "A fallout has settled upon sif."
+
 /datum/weather/sif/downpourwarning
 	name = "early extreme monsoon"
 	light_modifier = 0.4
 	timer_low_bound = 1
 	timer_high_bound = 2
+
+	imminent_transition_message = "A fatal monsoon approaches."
 
 	transition_chances = list(
 		WEATHER_DOWNPOUR = 100
@@ -293,6 +297,8 @@
 	wind_low = 2
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is knocking you down!")
+
+	imminent_transition_message = "A fatal monsoon approaches."
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
@@ -355,6 +361,8 @@
 	wind_low = 4
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is crushing you!")
+	
+	imminent_transition_message = "A fatal monsoon approaches."
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 1 SECONDS
