@@ -41,6 +41,10 @@
 	desc = "It's a bowl, with candy! Take only one, please."
 	anchored = FALSE
 	density = FALSE
+	icon = 'modular_chomp/icons/obj/halloween/bowls.dmi'
+	icon_state = "fullcandy"
+
+	var/searching = FALSE
 
 	var/list/candy = list(
 		/obj/item/reagent_containers/food/snacks/chocolatebar,
@@ -66,21 +70,30 @@
 
 /obj/structure/candybowl/attack_hand(mob/user)
 
-	var/thegoods = pick(candy)
+	var/thegoods
+
+	if(searching)
+		to_chat(SPAN_WARNING("Someone is already looking through \the [src]!"))
+
+	searching = TRUE
+
+	do_after(user, 5 SECONDS)
 
 	if(user.ckey in treated)
-		var/choice = tgui_alert(user, "You already took one! Take more?", "Take another...", list("Reach in...", "Leave for the others"))
+		var/choice = tgui_alert(user, "You already took one! Take more?", "Take another...", list("Reach in...", "Leave it!"))
 		if(choice == "Reach in...")
-			do_after(user, 5)
-				if(prob(35))
-					thegoods = pick(badcandy)
+			if(prob(35))
+				thegoods = pick(badcandy)
+			else
+				thegoods = pick(candy)
 	else
-		do_after(user, 5)
 		thegoods = pick(candy)
 		treated += user.ckey
 
-	new thegoods(src)
-	user.put_in_active_hand(thegoods)
+	searching = FALSE
+
+	var/goodie = new thegoods(src)
+	user.put_in_hands(goodie)
 
 /obj/structure/candybowl/medical
 	name = "medical candy bowl"
@@ -88,7 +101,6 @@
 /obj/structure/candybowl/medical/Initialize()
 	. = ..()
 	candy += list(
-		/obj/item/reagent_containers/food/snacks/candy/donor,
 		/obj/item/clothing/mask/chewable/candy/lolli,
 		/obj/item/reagent_containers/food/snacks/organ,
 		/obj/item/storage/box/shrimpsandbananas
