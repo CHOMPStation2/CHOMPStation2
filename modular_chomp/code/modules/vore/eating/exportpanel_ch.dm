@@ -356,6 +356,8 @@
 			belly_data["escapechance_absorbed"] = B.escapechance_absorbed
 			belly_data["escapetime"] = B.escapetime/10
 
+			belly_data["belchchance"] = B.belchchance
+
 			belly_data["transferchance"] = B.transferchance
 			belly_data["transferlocation"] = B.transferlocation
 

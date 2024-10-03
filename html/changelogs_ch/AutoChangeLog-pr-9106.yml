@@ -1,0 +1,5 @@
+author: "NickBelmont"
+delete-after: True
+changes:
+  - rscadd: "Belch chance parameter to the interactions tab of the vorepanel"
+  - rscadd: "Prey resisting can trigger a belch emote if interactions are set up to allow it."
