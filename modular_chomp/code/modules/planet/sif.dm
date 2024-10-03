@@ -45,6 +45,7 @@
 		WEATHER_RAIN = 5,
 		WEATHER_EERIE_WIND = 5
 		)
+	imminent_transition_message = "Fog settles down."
 
 /datum/weather/sif/fallout/temp //fixys firework stars
 	name = "short-term fallout"
@@ -57,6 +58,7 @@
 		WEATHER_STORM = 20,
 		WEATHER_OVERCAST = 5
 		)
+	imminent_transition_message = "Fireworks begin to fly."
 
 /datum/weather/sif/confetti //fixys firework stars
 	name = "confetti"
@@ -89,7 +91,7 @@
 		WEATHER_OVERCAST = 5,
 		WEATHER_EERIE_WIND = 5
 		)
-
+	imminent_transition_message = "A blinding snowstorm rolls in."
 
 
 //Anomalous Weather
@@ -101,6 +103,7 @@
 		WEATHER_STARRY_RIFT	= 25,
 		WEATHER_MIDNIGHT_FOG = 25
 		)
+	imminent_transition_message = "The wind begins to howl."
 
 /datum/weather/sif/toxinrain //wanted phoron but explosions come with phoron
 	name = "toxic rain"
