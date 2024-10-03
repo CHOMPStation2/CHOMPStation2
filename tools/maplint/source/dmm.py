@@ -83,6 +83,8 @@ class DMMParser:
             next_line = next_line.rstrip()
             content_match = REGEX_POP_CONTENT_HEADER.match(next_line)
             if content_match is None:
+                if next_line == "})":
+                    break
                 self.raise_error("Pop content didn't lead to a path")
 
             content = Content(Typepath(content_match.group("path")), self.reader.name, self.line)
