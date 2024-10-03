@@ -665,7 +665,6 @@
 /area/submap/derelict1)
 "Pb" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/template_noop,
 /area/submap/derelict1)
 "Pr" = (
@@ -718,7 +717,6 @@
 	},
 /area/submap/derelict1)
 "St" = (
-/obj/structure/lattice,
 /obj/structure/lattice,
 /turf/template_noop,
 /area/template_noop)

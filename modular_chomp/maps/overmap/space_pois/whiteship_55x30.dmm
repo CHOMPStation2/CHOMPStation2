@@ -525,7 +525,6 @@
 /area/submap/whiteship)
 "FB" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/template_noop,
 /area/submap/whiteship)
 "FT" = (

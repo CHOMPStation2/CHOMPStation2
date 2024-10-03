@@ -165,7 +165,6 @@
 /area/submap/debris1)
 "kf" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/template_noop,
 /area/submap/debris1)
 "kg" = (

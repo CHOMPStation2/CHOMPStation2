@@ -63,7 +63,6 @@
 /area/template_noop)
 "ak" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/template_noop,
 /area/template_noop)
 "al" = (
