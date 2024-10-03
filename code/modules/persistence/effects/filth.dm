@@ -23,7 +23,7 @@
 	// CHOMPAdd - Cooler graffiti
 	token["pixel_x"] = istext(token["pixel_x"]) ? text2num(token["pixel_x"]) : token["pixel_x"]
 	token["pixel_y"] = istext(token["pixel_y"]) ? text2num(token["pixel_y"]) : token["pixel_y"]
-	return ..() && ispath(token["path"]) && isnum(token["pixel_x"]) && isnum(token["pixel_y"])
+	return ..() && ispath(token["path"]) && (!saves_dirt || isnum(token["dirt"])) && isnum(token["pixel_x"]) && isnum(token["pixel_y"])
 	// CHOMPAdd End
 /datum/persistent/filth/CheckTurfContents(var/turf/T, var/list/token)
 	var/_path = token["path"]
@@ -43,29 +43,33 @@
 
 /datum/persistent/filth/CreateEntryInstance(var/turf/creating, var/list/token)
 	var/_path = token["path"]
+	if (isspace(creating) || iswall(creating) ||isopenspace(creating))
+		return
 	// CHOMPEdit Start
 	// new _path(creating, token["age"]+1)
-	var/atom/inst = new _path(creating, token["age"]+1)
+	var/atom/inst
+	if(ispath(_path, /obj/effect/decal/cleanable/crayon))
+		inst = new _path(creating, token["art_color"], token["art_shade"], token["art_type"], token["age"]+1)
+	else
+		if (saves_dirt)
+			new _path(creating, token["age"]+1, token["dirt"])
+		else
+			new _path(creating, token["age"]+1)
 	if(token["pixel_x"])
 		inst.pixel_x = token["pixel_x"]
 	if(token["pixel_y"])
 		inst.pixel_y = token["pixel_y"]
-
-	if(istype(inst, /obj/effect/decal/cleanable/crayon))
-		var/obj/effect/decal/cleanable/crayon/Crayart = inst
-		if(token["art_type"])
-			Crayart.art_type = token["art_type"]
-		if(token["art_color"])
-			Crayart.art_color = token["art_color"]
-		if(token["art_shade"])
-			Crayart.art_shade = token["art_shade"]
-
-		Crayart.update_icon()
 	// CHOMPEdit End
 
 /datum/persistent/filth/GetEntryAge(var/atom/entry)
 	var/obj/effect/decal/cleanable/filth = entry
 	return filth.age
+
+/datum/persistent/filth/proc/GetEntryDirt(var/atom/entry)
+	var/turf/simulated/T = get_turf(entry)
+	if (istype(T))
+		return T.dirt
+	return 0
 
 /datum/persistent/filth/proc/GetEntryPath(var/atom/entry)
 	var/obj/effect/decal/cleanable/filth = entry
@@ -74,19 +78,15 @@
 /datum/persistent/filth/CompileEntry(var/atom/entry)
 	. = ..()
 	LAZYADDASSOC(., "path", "[GetEntryPath(entry)]")
+	if (saves_dirt)
+		LAZYADDASSOC(., "dirt", GetEntryDirt(entry))
 	// CHOMPAdd Start - Cooler graffiti
-	to_world("path is [GetEntryPath(entry)]")
 	LAZYADDASSOC(., "pixel_x", "[entry.pixel_x]")
-	to_world("pixel_x is [entry.pixel_x]")
 	LAZYADDASSOC(., "pixel_y", "[entry.pixel_y]")
-	to_world("pixel_y is [entry.pixel_y]")
 
 	if(istype(entry, /obj/effect/decal/cleanable/crayon))
 		var/obj/effect/decal/cleanable/crayon/Inst = entry
 		LAZYADDASSOC(., "art_type", "[Inst.art_type]")
-		to_world("art type is [Inst.art_type]")
 		LAZYADDASSOC(., "art_color", "[Inst.art_color]")
-		to_world("art color is [Inst.art_color]")
 		LAZYADDASSOC(., "art_shade", "[Inst.art_shade]")
-		to_world("art shade is [Inst.art_shade]")
 	// CHOMPAdd End
