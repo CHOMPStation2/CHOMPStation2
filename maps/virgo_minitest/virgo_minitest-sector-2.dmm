@@ -54,7 +54,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-4";
-	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission)
