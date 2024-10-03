@@ -127,6 +127,7 @@
 	panel.set_content(output)
 	panel.open()
 	return
+
 //CHOMPEdit Begin
 /mob/new_player/get_status_tab_items()
 	. = ..()
@@ -134,8 +135,8 @@
 
 	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
 
-	if(SSvote.mode)
-		. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
+	//if(SSvote.mode)
+	//	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
 
 	if(SSticker.current_state == GAME_STATE_INIT)
 		. += "Time To Start: Server Initializing"

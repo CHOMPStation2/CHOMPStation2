@@ -1,3 +1,4 @@
+/*
 SUBSYSTEM_DEF(vote)
 	name = "Vote"
 	wait = 10
@@ -391,3 +392,4 @@ SUBSYSTEM_DEF(vote)
 
 	if(SSvote)
 		src << browse(SSvote.interface(src), "window=vote;size=500x[300 + SSvote.choices.len * 25]")
+*/
