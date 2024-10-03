@@ -46,8 +46,8 @@
 	// CHOMPEdit Start
 	// new _path(creating, token["age"]+1)
 	var/atom/inst
-	if(_path == /obj/effect/decal/cleanable/crayon)
-		inst = new _path(creating,  token["art_color"], token["art_shade"],  token["art_type"], token["age"]+1)
+	if(ispath(_path, /obj/effect/decal/cleanable/crayon))
+		inst = new _path(creating, token["art_color"], token["art_shade"], token["art_type"], token["age"]+1)
 	else
 		inst = new _path(creating, token["age"]+1)
 	if(token["pixel_x"])

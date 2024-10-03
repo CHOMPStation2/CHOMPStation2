@@ -28,8 +28,6 @@
 
 	update_icon()
 
-	add_hiddenprint(usr)
-
 /obj/effect/decal/cleanable/crayon/update_icon()
 	cut_overlays()
 	var/icon/mainOverlay = new/icon('icons/effects/crayondecal.dmi',"[art_type]",2.1)
