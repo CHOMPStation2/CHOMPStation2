@@ -127,7 +127,7 @@
 	panel.set_content(output)
 	panel.open()
 	return
-<<<<<<< HEAD
+
 //CHOMPEdit Begin
 /mob/new_player/get_status_tab_items()
 	. = ..()
@@ -135,8 +135,8 @@
 
 	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
 
-	if(SSvote.mode)
-		. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
+	//if(SSvote.mode)
+	//	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
 
 	if(SSticker.current_state == GAME_STATE_INIT)
 		. += "Time To Start: Server Initializing"
@@ -161,39 +161,6 @@
 			totalPlayers++
 			if(player.ready)totalPlayersReady++
 //CHOMPEdit End
-=======
-
-/mob/new_player/Stat()
-	..()
-
-	if(statpanel("Lobby") && SSticker)
-		stat("Game Mode:", SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]")
-
-		// if(SSvote.mode)
-		//	stat("Vote: [capitalize(SSvote.mode)]", "Time Left: [SSvote.time_remaining] s")
-
-		if(SSticker.current_state == GAME_STATE_INIT)
-			stat("Time To Start:", "Server Initializing")
-
-		else if(SSticker.current_state == GAME_STATE_PREGAME)
-			stat("Time To Start:", "[round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (DELAYED)"]")
-			stat("Players: [totalPlayers]", "Players Ready: [totalPlayersReady]")
-			totalPlayers = 0
-			totalPlayersReady = 0
-			var/datum/job/refJob = null
-			for(var/mob/new_player/player in player_list)
-				refJob = player.client.prefs.get_highest_job()
-				if(player.client.prefs.obfuscate_key && player.client.prefs.obfuscate_job)
-					stat("Anonymous User", (player.ready)?("Ready!"):(null))
-				else if(player.client.prefs.obfuscate_key)
-					stat("Anonymous User", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
-				else if(player.client.prefs.obfuscate_job)
-					stat("[player.key]", (player.ready)?("Ready!"):(null))
-				else
-					stat("[player.key]", (player.ready)?("(Playing as: [(refJob)?(refJob.title):("Unknown")])"):(null))
-				totalPlayers++
-				if(player.ready)totalPlayersReady++
->>>>>>> a29eb8811b... Merge pull request #16383 from TheCaramelion/TGUI-Vote
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
