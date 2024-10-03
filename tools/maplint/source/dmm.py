@@ -83,8 +83,6 @@ class DMMParser:
             next_line = next_line.rstrip()
             content_match = REGEX_POP_CONTENT_HEADER.match(next_line)
             if content_match is None:
-                if next_line == "})":
-                    break
                 self.raise_error("Pop content didn't lead to a path")
 
             content = Content(Typepath(content_match.group("path")), self.reader.name, self.line)
@@ -96,6 +94,8 @@ class DMMParser:
                 break
             elif content_end == "{":
                 while (var_edit := self.parse_var_edit()) is not None:
+                    if var_edit[0] == None and var_edit[1] == None:
+                        break
                     content.var_edits[var_edit[0]] = var_edit[1]
             elif content_end == ",":
                 continue
@@ -109,7 +109,7 @@ class DMMParser:
         if line == "\t},":
             return None
         if line == "\t})":
-            return None
+            return None, None
 
         var_edit_match = REGEX_VAR_EDIT.match(line)
         self.expect(var_edit_match is not None, "Var edits ended too early, expected a newline in between.")
