@@ -210,7 +210,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 					LAZYSET(prey_excludes, H, world.time)
 					vore_selected.release_specific_contents(H)
 					N = 1
-					addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), weakref(H)), 1 MINUTES)
+					addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(H)), 1 MINUTES)
 					break
 				else
 					to_chat(user, "The victim slips from your grasp!")
