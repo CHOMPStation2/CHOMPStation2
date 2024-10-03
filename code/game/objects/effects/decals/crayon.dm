@@ -10,8 +10,8 @@
 	var/art_color
 	var/art_shade
 
-/obj/effect/decal/cleanable/crayon/Initialize(var/ml, main = "#FFFFFF",shade = "#000000",var/type = "rune")
-	. = ..(ml, 0) // mapload, age
+/obj/effect/decal/cleanable/crayon/Initialize(var/ml, main = "#FFFFFF",shade = "#000000",var/type = "rune", new_age = 0)
+	. = ..(ml, new_age) // mapload, age
 	name = type
 	desc = "A [type] drawn in crayon."
 
