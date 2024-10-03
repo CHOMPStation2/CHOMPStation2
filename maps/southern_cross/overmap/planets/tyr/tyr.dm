@@ -67,17 +67,17 @@
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/mining_depot
-	name = "Lost Town Mining Depot"
+	name = "Wreckage Town - Barn"
 	icon_state = "away"
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/town_hall
-	name = "Lost Town Grand Hall"
+	name = "Wreckage Town - Church"
 	icon_state = "away"
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/huntery
-	name = "Lost Town Hunter Lodge"
+	name = "Wreckage Town - Shuttle"
 	icon_state = "away"
 	outdoors = OUTDOORS_NO
 
