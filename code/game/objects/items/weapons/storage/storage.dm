@@ -240,7 +240,7 @@
 	if (use_sound)
 		//CHOMPStation Edit
 		var/obj/belly/B = user.loc
-		if(!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS))
+		if(isliving(user) && (!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS)))
 			playsound(src, src.use_sound, 50, 0, -5)
 		//CHOMPStation Edit end
 
