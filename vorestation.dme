@@ -4675,6 +4675,12 @@
 #include "interface\interface.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+<<<<<<< HEAD
+=======
+#include "maps\expedition_vr\beach\submaps\mountains.dm"
+#include "maps\expedition_vr\beach\submaps\mountains_areas.dm"
+#include "maps\expedition_vr\virgo5\v5_features.dm"
+>>>>>>> 85e956f1c9... Merge pull request #16412 from SatinIsle/v5_outpost
 #include "maps\gateway_archive_vr\blackmarketpackers.dm"
 #include "maps\redgate\facility_items.dm"
 #include "maps\redgate\fantasy_items.dm"
