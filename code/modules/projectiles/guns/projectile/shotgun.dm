@@ -171,7 +171,7 @@
 	options["Blued"] = "dshotgun_b"
 	var/choice = tgui_input_list(M,"Choose your sprite!","Resprite Gun", options)
 	if(sawn_off)
-		to_chat(M, "<span class='warning'>The [src] is already shortened and cannot be resprited!</span>")
+		to_chat(M, span_warning("The [src] is already shortened and cannot be resprited!"))
 		return
 	if(src && choice && !M.stat && in_range(M,src))
 		icon_state = options[choice]
@@ -184,14 +184,14 @@
 	if(istype(A, /obj/item/ammo_casing/a12g) || istype(A, /obj/item/ammo_magazine)) //CHOMPEdit: Trying to make sawn offs reload able
 		..()
 	if(sawn_off)
-		to_chat(user, "<span class='warning'>The [src] is already shortened!</span>")
+		to_chat(user, span_warning("The [src] is already shortened!"))
 		return
 	if(istype(A, /obj/item/surgical/circular_saw) || istype(A, /obj/item/melee/energy) || istype(A, /obj/item/pickaxe/plasmacutter))
-		to_chat(user, "<span class='notice'>You begin to shorten the barrel of \the [src].</span>")
+		to_chat(user, span_notice("You begin to shorten the barrel of \the [src]."))
 		if(loaded.len)
 			var/burstsetting = burst
 			burst = 2
-			user.visible_message("<span class='danger'>The shotgun goes off!</span>", "<span class='danger'>The shotgun goes off in your face!</span>")
+			user.visible_message(span_danger("The shotgun goes off!"), span_danger("The shotgun goes off in your face!"))
 			Fire_userless(user)
 			user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD Port
 			burst = burstsetting
@@ -210,7 +210,7 @@
 			slot_flags |= (SLOT_BELT|SLOT_HOLSTER) // but you can wear it on your belt (poorly concealed under a trenchcoat, ideally) - or in a holster, why not.
 			name = "sawn-off shotgun"
 			desc = "Omar's coming!"
-			to_chat(user, "<span class='warning'>You shorten the barrel of \the [src]!</span>")
+			to_chat(user, span_warning("You shorten the barrel of \the [src]!"))
 			sawn_off = TRUE
 	else
 		..()

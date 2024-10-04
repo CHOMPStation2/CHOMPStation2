@@ -46,6 +46,8 @@
 	var/opening = FALSE
 	// If the mail has been scanned with a mail scanner
 	var/scanned
+	// Does it have a colored envelope?
+	var/colored_envelope
 
 /obj/item/mail/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return
@@ -143,6 +145,10 @@
 /obj/item/mail/update_icon()
 	. = ..()
 	cut_overlays()
+	if(colored_envelope)
+		var/image/envelope = image(icon, icon_state)
+		envelope.color = colored_envelope
+		add_overlay(envelope)
 	var/bonus_stamp_offset = 0
 	for(var/stamp in stamps)
 		var/image/stamp_image = image(
@@ -221,9 +227,7 @@
 
 	var/list/goodies = generic_goodies
 	if(this_job)
-		var/image/envelope = image(icon, icon_state)
-		envelope.color = this_job.get_mail_color()
-		add_overlay(envelope)
+		colored_envelope = this_job.get_mail_color()
 		if(!preset_goodies)
 			var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
 			if(LAZYLEN(job_goodies))

@@ -207,10 +207,10 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 			if(do_after(user, rand(3 SECONDS, 7 SECONDS))) //You can just spam click to stack attempts if you feel like abusing it.
 				if(prob(15))
 					user.visible_message("[user] tugs a sticky [H] free from \the [src].", "You heft [H] free from \the [src].")
-					prey_excludes += H
+					LAZYSET(prey_excludes, H, world.time)
 					vore_selected.release_specific_contents(H)
 					N = 1
-					//addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), weakref(H)), 1 MINUTES) //At the time of this PR, removeMobFromPreyExcludes breaks prey_excludes by deleting the list which causes problems with the Crossed() vore override before. This can be commented back in if that gets fixed.
+					addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(H)), 1 MINUTES)
 					break
 				else
 					to_chat(user, "The victim slips from your grasp!")
