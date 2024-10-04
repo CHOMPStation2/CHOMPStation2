@@ -303,7 +303,11 @@ Book Cart End
 	if(user.zone_sel.selecting == O_EYES)
 		user.visible_message(span_notice("You open up the book and show it to [M]."), \
 			span_notice(" [user] opens up a book and shows it to [M]."))
+<<<<<<< HEAD
 		display_content(M) // CHOMPEdit
+=======
+		M << browse("<TT><I>Penned by [author].</I></TT> <BR>" + "[dat]", "window=book")
+>>>>>>> 26f9164e84... Merge pull request #16420 from Kashargul/camerascreen
 		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //to prevent spam
 
 /*
