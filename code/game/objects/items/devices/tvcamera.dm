@@ -200,6 +200,14 @@
 	bradio.icon_state = src.icon_state
 	update_icon()
 
+/obj/item/clothing/accessory/bodycam/on_attached(var/obj/item/clothing/S, var/mob/user)
+	RegisterSignal(user, COMSIG_OBSERVER_MOVED, PROC_REF(update_feed))
+	. = ..()
+
+/obj/item/clothing/accessory/bodycam/on_removed(mob/user)
+	UnregisterSignal(user, COMSIG_OBSERVER_MOVED)
+	. = ..()
+
 /obj/item/clothing/accessory/bodycam/hear_talk(mob/M, list/message_pieces, verb)
 	bradio.hear_talk(M, message_pieces, verb)
 	. = ..()
@@ -299,8 +307,9 @@
 	if(!A || QDELETED(A))
 		show_bodycamera_tvs(loc)
 
-	if(get_dist(get_turf(src), get_turf(A)) > 5)
-		show_bodycamera_tvs(loc)
+	/obj/item/clothing/accessory/bodycam/proc/update_feed()
+		if(bcamera.status)
+			SEND_SIGNAL(bcamera, COMSIG_OBSERVER_MOVED) // Forward the movement signal
 
 /obj/item/clothing/accessory/bodycam/update_icon()
 	..()
