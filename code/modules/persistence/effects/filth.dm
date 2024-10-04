@@ -49,7 +49,7 @@
 	// new _path(creating, token["age"]+1)
 	var/atom/inst
 	if(ispath(_path, /obj/effect/decal/cleanable/crayon))
-		if(!istext(token["art_color"]) || !istext(token["art_shade"]) || !istext(token["art_type"]))
+		if(!findtext(token["art_color"], GLOB.is_color) || !findtext(token["art_shade"], GLOB.is_color) || !istext(token["art_type"]))
 			return
 		inst = new _path(creating, token["art_color"], token["art_shade"], token["art_type"], token["age"]+1)
 	else
