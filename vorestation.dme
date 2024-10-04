@@ -5098,6 +5098,7 @@
 #include "modular_chomp\code\modules\xenobio\machinery\monkey_processor.dm"
 #include "modular_chomp\datums\tgs_event_handler.dm"
 #include "modular_chomp\game\effects\spawner.dm"
+#include "modular_chomp\game\machinery\bluespace_denier.dm"
 #include "modular_chomp\game\machinery\buttons.dm"
 #include "modular_chomp\game\machinery\traptiles.dm"
 #include "modular_chomp\game\machinery\turrets.dm"
