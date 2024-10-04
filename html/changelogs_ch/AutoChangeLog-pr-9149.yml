@@ -1,0 +1,5 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - qol: "better styling of the vorepanel"
+  - bugfix: "a rare crash condition after reloading bellies"
