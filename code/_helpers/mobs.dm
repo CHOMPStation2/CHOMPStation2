@@ -200,10 +200,10 @@ Proc for attack log creation, because really why not
 	if(!time)
 		return TRUE //Done!
 	if(user.status_flags & DOING_TASK)
-		to_chat(user, "<span class='warning'>You're in the middle of doing something else already.</span>")
+		to_chat(user, span_warning("You're in the middle of doing something else already."))
 		return FALSE //Performing an exclusive do_after or do_mob already
 	if(target?.flags & IS_BUSY)
-		to_chat(user, "<span class='warning'>Someone is already doing something with \the [target].</span>")
+		to_chat(user, span_warning("Someone is already doing something with \the [target]."))
 		return FALSE
 	var/user_loc = user.loc
 	var/target_loc = target.loc
@@ -266,10 +266,10 @@ Proc for attack log creation, because really why not
 	if(!delay)
 		return TRUE //Okay. Done.
 	if(user.status_flags & DOING_TASK)
-		to_chat(user, "<span class='warning'>You're in the middle of doing something else already.</span>")
+		to_chat(user, span_warning("You're in the middle of doing something else already."))
 		return FALSE //Performing an exclusive do_after or do_mob already
 	if(target?.flags & IS_BUSY)
-		to_chat(user, "<span class='warning'>Someone is already doing something with \the [target].</span>")
+		to_chat(user, span_warning("Someone is already doing something with \the [target]."))
 		return FALSE
 
 	var/atom/target_loc = null
@@ -375,6 +375,6 @@ Proc for attack log creation, because really why not
 
 /proc/not_has_ooc_text(mob/user)
 	if (CONFIG_GET(flag/allow_metadata) && (!user.client?.prefs?.metadata || length(user.client.prefs.metadata) < 15)) // CHOMPEdit
-		to_chat(user, "<span class='warning'>Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup.</span>")
+		to_chat(user, span_warning("Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup."))
 		return TRUE
 	return FALSE

@@ -150,9 +150,9 @@ FIRE ALARM
 		if(istype(W, /obj/item/multitool))
 			detecting = !(detecting)
 			if(detecting)
-				user.visible_message("<span class='notice'>\The [user] has reconnected [src]'s detecting unit!</span>", "<span class='notice'>You have reconnected [src]'s detecting unit.</span>")
+				user.visible_message(span_notice("\The [user] has reconnected [src]'s detecting unit!"), span_notice("You have reconnected [src]'s detecting unit."))
 			else
-				user.visible_message("<span class='notice'>\The [user] has disconnected [src]'s detecting unit!</span>", "<span class='notice'>You have disconnected [src]'s detecting unit.</span>")
+				user.visible_message(span_notice("\The [user] has disconnected [src]'s detecting unit!"), span_notice("You have disconnected [src]'s detecting unit."))
 		return
 
 	alarm()

@@ -87,23 +87,23 @@
 		switch(bantype)
 			if(BANTYPE_PERMA)
 				if(!banckey || !banreason)
-					to_chat(usr, "<span class='filter_adminlog'>Not enough parameters (Requires ckey and reason)</span>")
+					to_chat(usr, span_filter_adminlog("Not enough parameters (Requires ckey and reason)"))
 					return
 				banduration = null
 				banjob = null
 			if(BANTYPE_TEMP)
 				if(!banckey || !banreason || !banduration)
-					to_chat(usr, "<span class='filter_adminlog'>Not enough parameters (Requires ckey, reason and duration)</span>")
+					to_chat(usr, span_filter_adminlog("Not enough parameters (Requires ckey, reason and duration)"))
 					return
 				banjob = null
 			if(BANTYPE_JOB_PERMA)
 				if(!banckey || !banreason || !banjob)
-					to_chat(usr, "<span class='filter_adminlog'>Not enough parameters (Requires ckey, reason and job)</span>")
+					to_chat(usr, span_filter_adminlog("Not enough parameters (Requires ckey, reason and job)"))
 					return
 				banduration = null
 			if(BANTYPE_JOB_TEMP)
 				if(!banckey || !banreason || !banjob || !banduration)
-					to_chat(usr, "<span class='filter_adminlog'>Not enough parameters (Requires ckey, reason and job)</span>")
+					to_chat(usr, span_filter_adminlog("Not enough parameters (Requires ckey, reason and job)"))
 					return
 
 		var/mob/playermob
@@ -142,14 +142,14 @@
 			var/new_ckey = ckey(tgui_input_text(usr,"New admin's ckey","Admin ckey", null))
 			if(!new_ckey)	return
 			if(new_ckey in admin_datums)
-				to_chat(usr, "<span class='filter_adminlog warning'>Error: Topic 'editrights': [new_ckey] is already an admin</span>")
+				to_chat(usr, span_filter_adminlog(span_warning("Error: Topic 'editrights': [new_ckey] is already an admin")))
 				return
 			adm_ckey = new_ckey
 			task = "rank"
 		else if(task != "show")
 			adm_ckey = ckey(href_list["ckey"])
 			if(!adm_ckey)
-				to_chat(usr, "<span class='filter_adminlog warning'>Error: Topic 'editrights': No valid ckey</span>")
+				to_chat(usr, span_filter_adminlog(span_warning("Error: Topic 'editrights': No valid ckey")))
 				return
 
 		var/datum/admins/D = admin_datums[adm_ckey]
@@ -181,7 +181,7 @@
 					if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
 						new_rank = ckeyEx(new_rank)
 					if(!new_rank)
-						to_chat(usr, "<span class='filter_adminlog warning'>Error: Topic 'editrights': Invalid rank</span>")
+						to_chat(usr, span_filter_adminlog(span_warning("Error: Topic 'editrights': Invalid rank")))
 						return
 					if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
 						if(admin_ranks.len)
@@ -290,7 +290,7 @@
 
 		var/mob/M = locate(href_list["mob"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 
 		var/delmob = 0
@@ -398,14 +398,14 @@
 
 		var/mob/M = locate(href_list["jobban2"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 
 		if(!M.ckey)	//sanity
-			to_chat(usr, "<span class='filter_adminlog'>This mob has no ckey</span>")
+			to_chat(usr, span_filter_adminlog("This mob has no ckey"))
 			return
 		if(!job_master)
-			to_chat(usr, "<span class='filter_adminlog'>Job Master has not been setup!</span>")
+			to_chat(usr, span_filter_adminlog("Job Master has not been setup!"))
 			return
 
 		var/dat = ""
@@ -679,16 +679,16 @@
 	//JOBBAN'S INNARDS
 	else if(href_list["jobban3"])
 		if(!check_rights(R_MOD,0) && !check_rights(R_ADMIN,0))
-			to_chat(usr, "<span class='filter_adminlog warning'>You do not have the appropriate permissions to add job bans!</span>")
+			to_chat(usr, span_filter_adminlog(span_warning("You do not have the appropriate permissions to add job bans!")))
 			return
 
 		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN,0) && !CONFIG_GET(flag/mods_can_job_tempban)) // If mod and tempban disabled // CHOMPEdit
-			to_chat(usr, "<span class='filter_adminlog warning'>Mod jobbanning is disabled!</span>")
+			to_chat(usr, span_filter_adminlog(span_warning("Mod jobbanning is disabled!")))
 			return
 
 		var/mob/M = locate(href_list["jobban4"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 
 		if(M != usr)																//we can jobban ourselves
@@ -697,7 +697,7 @@
 				return
 
 		if(!job_master)
-			to_chat(usr, "<span class='filter_adminlog'>Job Master has not been setup!</span>")
+			to_chat(usr, span_filter_adminlog("Job Master has not been setup!"))
 			return
 
 		//get jobs for department if specified, otherwise just returnt he one job in a list.
@@ -783,16 +783,16 @@
 					return
 				if("Yes")
 					if(!check_rights(R_MOD,0) && !check_rights(R_BAN, 0))
-						to_chat(usr, "<span class='filter_adminlog warning'> You cannot issue temporary job-bans!</span>")
+						to_chat(usr, span_filter_adminlog(span_warning("You cannot issue temporary job-bans!")))
 						return
 					if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
-						to_chat(usr, "<span class='filter_adminlog warning'>Your server is using the legacy banning system, which does not support temporary job bans. Consider upgrading. Aborting ban.</span>")
+						to_chat(usr, span_filter_adminlog(span_warning("Your server is using the legacy banning system, which does not support temporary job bans. Consider upgrading. Aborting ban.")))
 						return
 					var/mins = tgui_input_number(usr,"How long (in minutes)?","Ban time",1440)
 					if(!mins)
 						return
 					if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_job_tempban_max)) // CHOMPEdit
-						to_chat(usr, "<span class='filter_adminlog warning'> Moderators can only job tempban up to [CONFIG_GET(number/mod_job_tempban_max)] minutes!</span>") // CHOMPEdit
+						to_chat(usr, span_filter_adminlog(span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_job_tempban_max)] minutes!"))) // CHOMPEdit
 						return
 					var/reason = sanitize(tgui_input_text(usr,"Reason?","Please State Reason",""))
 					if(!reason)
@@ -812,9 +812,9 @@
 							msg += ", [job]"
 					notes_add(M.ckey, "Banned  from [msg] - [reason]", usr)
 					message_admins(span_blue("[key_name_admin(usr)] banned [key_name_admin(M)] from [msg] for [mins] minutes"), 1)
-					to_chat(M, "<span class='filter_system'>[span_red("<BIG><B>You have been jobbanned by [usr.client.ckey] from: [msg].</B></BIG>")]</span>")
-					to_chat(M, "<span class='filter_system'>[span_red("<B>The reason is: [reason]</B>")]</span>")
-					to_chat(M, "<span class='filter_system'>[span_red("This jobban will be lifted in [mins] minutes.")]</span>")
+					to_chat(M, span_filter_system("[span_red("<BIG><B>You have been jobbanned by [usr.client.ckey] from: [msg].</B></BIG>")]"))
+					to_chat(M, span_filter_system("[span_red("<B>The reason is: [reason]</B>")]"))
+					to_chat(M, span_filter_system("[span_red("This jobban will be lifted in [mins] minutes.")]"))
 					href_list["jobban2"] = 1 // lets it fall through and refresh
 					return 1
 				if("No")
@@ -833,9 +833,9 @@
 							else		msg += ", [job]"
 						notes_add(M.ckey, "Banned  from [msg] - [reason]", usr)
 						message_admins(span_blue("[key_name_admin(usr)] banned [key_name_admin(M)] from [msg]"), 1)
-						to_chat(M, "<span class='filter_system'>[span_red("<BIG><B>You have been jobbanned by [usr.client.ckey] from: [msg].</B></BIG>")]</span>")
-						to_chat(M, "<span class='filter_system'>[span_red("<B>The reason is: [reason]</B>")]</span>")
-						to_chat(M, "<span class='filter_system'>[span_red("Jobban can be lifted only upon request.")]</span>")
+						to_chat(M, span_filter_system("[span_red("<BIG><B>You have been jobbanned by [usr.client.ckey] from: [msg].</B></BIG>")]"))
+						to_chat(M, span_filter_system("[span_red("<B>The reason is: [reason]</B>")]"))
+						to_chat(M, span_filter_system("[span_red("Jobban can be lifted only upon request.")]"))
 						href_list["jobban2"] = 1 // lets it fall through and refresh
 						return 1
 				if("Cancel")
@@ -845,7 +845,7 @@
 		//all jobs in joblist are banned already OR we didn't give a reason (implying they shouldn't be banned)
 		if(joblist.len) //at least 1 banned job exists in joblist so we have stuff to unban.
 			if(!CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
-				to_chat(usr, "<span class='filter_adminlog'>Unfortunately, database based unbanning cannot be done through this panel</span>")
+				to_chat(usr, span_filter_adminlog("Unfortunately, database based unbanning cannot be done through this panel"))
 				DB_ban_panel(M.ckey)
 				return
 			var/msg
@@ -866,7 +866,7 @@
 						continue
 			if(msg)
 				message_admins(span_blue("[key_name_admin(usr)] unbanned [key_name_admin(M)] from [msg]"), 1)
-				to_chat(M, "<span class='filter_system danger'><BIG>You have been un-jobbanned by [usr.client.ckey] from [msg].</BIG></span>")
+				to_chat(M, span_filter_system(span_danger("<BIG>You have been un-jobbanned by [usr.client.ckey] from [msg].</BIG>")))
 				href_list["jobban2"] = 1 // lets it fall through and refresh
 			return 1
 		return 0 //we didn't do anything!
@@ -904,11 +904,11 @@
 
 	else if(href_list["newban"])
 		if(!check_rights(R_MOD,0) && !check_rights(R_BAN, 0))
-			to_chat(usr, "<span class='warning'>You do not have the appropriate permissions to add bans!</span>")
+			to_chat(usr, span_warning("You do not have the appropriate permissions to add bans!"))
 			return
 
 		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN, 0) && !CONFIG_GET(flag/mods_can_job_tempban)) // If mod and tempban disabled // CHOMPEdit
-			to_chat(usr, "<span class='warning'>Mod jobbanning is disabled!</span>")
+			to_chat(usr, span_warning("Mod jobbanning is disabled!"))
 			return
 
 		var/mob/M = locate(href_list["newban"])
@@ -924,7 +924,7 @@
 				if(!mins)
 					return
 				if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_tempban_max)) // CHOMPEdit
-					to_chat(usr, "<span class='warning'>Moderators can only job tempban up to [CONFIG_GET(number/mod_tempban_max)] minutes!</span>") // CHOMPEdit
+					to_chat(usr, span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_tempban_max)] minutes!")) // CHOMPEdit
 					return
 				if(mins >= 525600) mins = 525599
 				var/reason = sanitize(tgui_input_text(usr,"Reason?","reason","Griefer"))
@@ -933,15 +933,15 @@
 				AddBan(M.ckey, M.computer_id, reason, usr.ckey, 1, mins)
 				ban_unban_log_save("[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.")
 				notes_add(M.ckey,"[usr.client.ckey] has banned [M.ckey]. - Reason: [reason] - This will be removed in [mins] minutes.",usr)
-				to_chat(M, "<span class='filter_system critical'>You have been banned by [usr.client.ckey].\nReason: [reason].</span>")
-				to_chat(M, "<span class='filter_system warning'>This is a temporary ban, it will be removed in [mins] minutes.</span>")
+				to_chat(M, span_filter_system(span_critical("You have been banned by [usr.client.ckey].\nReason: [reason].")))
+				to_chat(M, span_filter_system(span_warning("This is a temporary ban, it will be removed in [mins] minutes.")))
 				feedback_inc("ban_tmp",1)
 				DB_ban_record(BANTYPE_TEMP, M, mins, reason)
 				feedback_inc("ban_tmp_mins",mins)
 				if(CONFIG_GET(string/banappeals)) // CHOMPEdit
-					to_chat(M, "<span class='filter_system warning'>To try to resolve this matter head to [CONFIG_GET(string/banappeals)]</span>") // CHOMPEdit
+					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [CONFIG_GET(string/banappeals)]"))) // CHOMPEdit
 				else
-					to_chat(M, "<span class='filter_system warning'>No ban appeals URL has been set.</span>")
+					to_chat(M, span_filter_system(span_warning("No ban appeals URL has been set.")))
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
 				message_admins(span_blue("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes."))
 				// CHOMPedit Start - Tickets System
@@ -962,12 +962,12 @@
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0, M.lastKnownIP)
 					if("No")
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0)
-				to_chat(M, "<span class='filter_system critical'>You have been banned by [usr.client.ckey].\nReason: [reason].</span>")
-				to_chat(M, "<span class='filter_system warning'>This is a permanent ban.</span>")
+				to_chat(M, span_filter_system(span_critical("You have been banned by [usr.client.ckey].\nReason: [reason].")))
+				to_chat(M, span_filter_system(span_warning("This is a permanent ban.")))
 				if(CONFIG_GET(string/banappeals)) // CHOMPEdit
-					to_chat(M, "<span class='filter_system warning'>To try to resolve this matter head to [CONFIG_GET(string/banappeals)]</span>") // CHOMPEdit
+					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [CONFIG_GET(string/banappeals)]"))) // CHOMPEdit
 				else
-					to_chat(M, "<span class='filter_system warning'>No ban appeals URL has been set.</span>")
+					to_chat(M, span_filter_system(span_warning("No ban appeals URL has been set.")))
 				ban_unban_log_save("[usr.client.ckey] has permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
 				notes_add(M.ckey,"[usr.client.ckey] has permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.",usr)
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban.")
@@ -1055,7 +1055,7 @@
 
 		var/mob/living/carbon/human/H = locate(href_list["monkeyone"])
 		if(!istype(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 
 		log_admin("[key_name(usr)] attempting to monkeyize [key_name(H)]")
@@ -1067,7 +1067,7 @@
 
 		var/mob/living/carbon/human/H = locate(href_list["corgione"])
 		if(!istype(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 
 		log_admin("[key_name(usr)] attempting to corgize [key_name(H)]")
@@ -1079,7 +1079,7 @@
 
 		var/mob/M = locate(href_list["forcespeech"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>this can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("this can only be used on instances of type /mob"))
 
 		var/speech = tgui_input_text(usr, "What will [key_name(M)] say?.", "Force speech", "") // Don't need to sanitize, since it does that in say(), we also trust our admins.
 		if(!speech)	return
@@ -1096,10 +1096,10 @@
 
 		var/mob/M = locate(href_list["sendtoprison"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 		if(istype(M, /mob/living/silicon/ai))
-			to_chat(usr, "<span class='filter_adminlog'>This cannot be used on instances of type /mob/living/silicon/ai</span>")
+			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
 		var/turf/prison_cell = pick(prisonwarp)
@@ -1124,7 +1124,7 @@
 			prisoner.equip_to_slot_or_del(new /obj/item/clothing/under/color/prison(prisoner), slot_w_uniform)
 			prisoner.equip_to_slot_or_del(new /obj/item/clothing/shoes/orange(prisoner), slot_shoes)
 
-		to_chat(M, "<span class='filter_system warning'>You have been sent to the prison station!</span>")
+		to_chat(M, span_filter_system(span_warning("You have been sent to the prison station!")))
 		log_admin("[key_name(usr)] sent [key_name(M)] to the prison station.")
 		message_admins(span_blue("[key_name_admin(usr)] sent [key_name_admin(M)] to the prison station."), 1)
 
@@ -1134,11 +1134,11 @@
 
 		var/mob/M = locate(href_list["sendbacktolobby"])
 		if(!isobserver(M))
-			to_chat(usr, "<span class='filter_adminlog notice'>You can only send ghost players back to the Lobby.</span>")
+			to_chat(usr, span_filter_adminlog(span_notice("You can only send ghost players back to the Lobby.")))
 			return
 
 		if(!M.client)
-			to_chat(usr, "<span class='filter_adminlog warning'>[M] doesn't seem to have an active client.</span>")
+			to_chat(usr, span_filter_adminlog(span_warning("[M] doesn't seem to have an active client.")))
 			return
 
 		if(tgui_alert(usr, "Send [key_name(M)] back to Lobby?", "Message", list("Yes", "No")) != "Yes")
@@ -1159,10 +1159,10 @@
 
 		var/mob/M = locate(href_list["tdome1"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 		if(istype(M, /mob/living/silicon/ai))
-			to_chat(usr, "<span class='filter_adminlog'>This cannot be used on instances of type /mob/living/silicon/ai</span>")
+			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
 		for(var/obj/item/I in M)
@@ -1172,7 +1172,7 @@
 		sleep(5)
 		M.loc = pick(tdome1)
 		spawn(50)
-			to_chat(M, "<span class='filter_system notice'>You have been sent to the Thunderdome.</span>")
+			to_chat(M, span_filter_system(span_notice("You have been sent to the Thunderdome.")))
 		log_admin("[key_name(usr)] has sent [key_name(M)] to the thunderdome. (Team 1)")
 		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to the thunderdome. (Team 1)", 1)
 
@@ -1184,10 +1184,10 @@
 
 		var/mob/M = locate(href_list["tdome2"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 		if(istype(M, /mob/living/silicon/ai))
-			to_chat(usr, "<span class='filter_adminlog'>This cannot be used on instances of type /mob/living/silicon/ai</span>")
+			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
 		for(var/obj/item/I in M)
@@ -1197,7 +1197,7 @@
 		sleep(5)
 		M.loc = pick(tdome2)
 		spawn(50)
-			to_chat(M, "<span class='filter_system notice'>You have been sent to the Thunderdome.</span>")
+			to_chat(M, span_filter_system(span_notice("You have been sent to the Thunderdome.")))
 		log_admin("[key_name(usr)] has sent [key_name(M)] to the thunderdome. (Team 2)")
 		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to the thunderdome. (Team 2)", 1)
 
@@ -1209,17 +1209,17 @@
 
 		var/mob/M = locate(href_list["tdomeadmin"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 		if(istype(M, /mob/living/silicon/ai))
-			to_chat(usr, "<span class='filter_adminlog'>This cannot be used on instances of type /mob/living/silicon/ai</span>")
+			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
 		M.Paralyse(5)
 		sleep(5)
 		M.loc = pick(tdomeadmin)
 		spawn(50)
-			to_chat(M, "<span class='filter_system notice'>You have been sent to the Thunderdome.</span>")
+			to_chat(M, span_filter_system(span_notice("You have been sent to the Thunderdome.")))
 		log_admin("[key_name(usr)] has sent [key_name(M)] to the thunderdome. (Admin.)")
 		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to the thunderdome. (Admin.)", 1)
 
@@ -1231,10 +1231,10 @@
 
 		var/mob/M = locate(href_list["tdomeobserve"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 		if(istype(M, /mob/living/silicon/ai))
-			to_chat(usr, "<span class='filter_adminlog'>This cannot be used on instances of type /mob/living/silicon/ai</span>")
+			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
 		for(var/obj/item/I in M)
@@ -1248,7 +1248,7 @@
 		sleep(5)
 		M.loc = pick(tdomeobserve)
 		spawn(50)
-			to_chat(M, "<span class='filter_system notice'>You have been sent to the Thunderdome.</span>")
+			to_chat(M, span_filter_system(span_notice("You have been sent to the Thunderdome.")))
 		log_admin("[key_name(usr)] has sent [key_name(M)] to the thunderdome. (Observer.)")
 		message_admins("[key_name_admin(usr)] has sent [key_name_admin(M)] to the thunderdome. (Observer.)", 1)
 
@@ -1257,7 +1257,7 @@
 
 		var/mob/living/L = locate(href_list["revive"])
 		if(!istype(L))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living"))
 			return
 
 		if(CONFIG_GET(flag/allow_admin_rev)) // CHOMPEdit
@@ -1265,14 +1265,14 @@
 			message_admins(span_red("Admin [key_name_admin(usr)] healed / revived [key_name_admin(L)]!"), 1)
 			log_admin("[key_name(usr)] healed / Rrvived [key_name(L)]")
 		else
-			to_chat(usr, "<span class='filter_adminlog filter_warning'>Admin Rejuvinates have been disabled</span>")
+			to_chat(usr, span_filter_adminlog(span_filter_warning("Admin Rejuvinates have been disabled")))
 
 	else if(href_list["makeai"])
 		if(!check_rights(R_SPAWN))	return
 
 		var/mob/living/carbon/human/H = locate(href_list["makeai"])
 		if(!istype(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 
 		message_admins(span_red("Admin [key_name_admin(usr)] AIized [key_name_admin(H)]!"), 1)
@@ -1284,7 +1284,7 @@
 
 		var/mob/living/carbon/human/H = locate(href_list["makealien"])
 		if(!istype(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 
 		usr.client.cmd_admin_alienize(H)
@@ -1294,7 +1294,7 @@
 
 		var/mob/living/carbon/human/H = locate(href_list["makerobot"])
 		if(!istype(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 
 		usr.client.cmd_admin_robotize(H)
@@ -1304,7 +1304,7 @@
 
 		var/mob/M = locate(href_list["makeanimal"])
 		if(istype(M, /mob/new_player))
-			to_chat(usr, "<span class='filter_adminlog'>This cannot be used on instances of type /mob/new_player</span>")
+			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/new_player"))
 			return
 
 		usr.client.cmd_admin_animalize(M)
@@ -1323,7 +1323,7 @@
 
 		var/mob/living/carbon/human/H = locate(href_list["togmutate"])
 		if(!istype(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 		var/block=text2num(href_list["block"])
 		usr.client.cmd_admin_toggle_block(H,block)
@@ -1362,11 +1362,11 @@
 
 		var/mob/M = locate(href_list["take_question"])
 		if(ismob(M))
-			var/take_msg = "<span class='notice'><b>ADMINHELP</b>: <b>[key_name(usr.client)]</b> is attending to <b>[key_name(M)]'s</b> adminhelp, please don't dogpile them.</span>"
+			var/take_msg = span_notice("<b>ADMINHELP</b>: <b>[key_name(usr.client)]</b> is attending to <b>[key_name(M)]'s</b> adminhelp, please don't dogpile them.")
 			for(var/client/X in GLOB.admins)
 				if((R_ADMIN|R_MOD|R_SERVER) & X.holder.rights) //VOREStation Edit
 					to_chat(X, take_msg)
-			to_chat(M, "<span class='filter_pm notice'><b>Your adminhelp is being attended to by [usr.client]. Thanks for your patience!</b></span>")
+			to_chat(M, span_filter_pm(span_notice("<b>Your adminhelp is being attended to by [usr.client]. Thanks for your patience!</b>")))
 			// VoreStation Edit Start
 			if (CONFIG_GET(string/chat_webhook_url)) // CHOMPEdit
 				spawn(0)
@@ -1377,7 +1377,7 @@
 					world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
 			// VoreStation Edit End
 		else
-			to_chat(usr, "<span class='warning'>Unable to locate mob.</span>")
+			to_chat(usr, span_warning("Unable to locate mob."))
 
 	else if(href_list["adminplayerobservecoodjump"])
 		if(!check_rights(R_ADMIN|R_SERVER|R_MOD))	return //VOREStation Edit
@@ -1397,7 +1397,7 @@
 	else if(href_list["adminmoreinfo"])
 		var/mob/M = locate(href_list["adminmoreinfo"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
 
 		var/location_description = ""
@@ -1450,7 +1450,7 @@
 
 		var/mob/living/carbon/human/H = locate(href_list["adminspawncookie"])
 		if(!ishuman(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 
 		H.equip_to_slot_or_del( new /obj/item/reagent_containers/food/snacks/cookie(H), slot_l_hand )
@@ -1467,14 +1467,14 @@
 		log_admin("[key_name(H)] got their cookie, spawned by [key_name(src.owner)]")
 		message_admins("[key_name(H)] got their cookie, spawned by [key_name(src.owner)]")
 		feedback_inc("admin_cookies_spawned",1)
-		to_chat(H, "<span class='notice'>Your prayers have been answered!! You received the <b>best cookie</b>!</span>")
+		to_chat(H, span_notice("Your prayers have been answered!! You received the <b>best cookie</b>!"))
 
 	else if(href_list["adminsmite"])
 		if(!check_rights(R_ADMIN|R_FUN|R_EVENT))	return
 
 		var/mob/living/carbon/human/H = locate(href_list["adminsmite"])
 		if(!ishuman(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 
 		owner.smite(H)
@@ -1484,7 +1484,7 @@
 
 		var/mob/living/M = locate(href_list["BlueSpaceArtillery"])
 		if(!isliving(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living"))
 			return
 
 		if(tgui_alert(src.owner, "Are you sure you wish to hit [key_name(M)] with Blue Space Artillery?", "Confirm Firing?", list("Yes", "No")) != "Yes")
@@ -1495,39 +1495,39 @@
 	else if(href_list["CentComReply"])
 		var/mob/living/L = locate(href_list["CentComReply"])
 		if(!istype(L))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/"))
 			return
 
 		if(L.can_centcom_reply())
 			var/input = sanitize(tgui_input_text(src.owner, "Please enter a message to reply to [key_name(L)] via their headset.","Outgoing message from CentCom", ""))
 			if(!input)		return
 
-			to_chat(src.owner, "<span class='filter_adminlog'>You sent [input] to [L] via a secure channel.</span>")
+			to_chat(src.owner, span_filter_adminlog("You sent [input] to [L] via a secure channel."))
 			log_admin("[src.owner] replied to [key_name(L)]'s CentCom message with the message [input].")
 			message_admins("[src.owner] replied to [key_name(L)]'s CentCom message with: \"[input]\"")
 			if(!isAI(L))
-				to_chat(L, "<span class='info'>You hear something crackle in your headset for a moment before a voice speaks.</span>")
-			to_chat(L, "<span class='info'>Please stand by for a message from Central Command.</span>")
-			to_chat(L, "<span class='info'>Message as follows.</span>")
-			to_chat(L, "<span class='notice'>[input]</span>")
-			to_chat(L, "<span class='info'>Message ends.</span>")
+				to_chat(L, span_info("You hear something crackle in your headset for a moment before a voice speaks."))
+			to_chat(L, span_info("Please stand by for a message from Central Command."))
+			to_chat(L, span_info("Message as follows."))
+			to_chat(L, span_notice("[input]"))
+			to_chat(L, span_info("Message ends."))
 		else
-			to_chat(src.owner, "<span class='filter_adminlog'>The person you are trying to contact does not have functional radio equipment.</span>")
+			to_chat(src.owner, span_filter_adminlog("The person you are trying to contact does not have functional radio equipment."))
 
 
 	else if(href_list["SyndicateReply"])
 		var/mob/living/carbon/human/H = locate(href_list["SyndicateReply"])
 		if(!istype(H))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob/living/carbon/human</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 		if(!istype(H.l_ear, /obj/item/radio/headset) && !istype(H.r_ear, /obj/item/radio/headset))
-			to_chat(usr, "<span class='filter_adminlog'>The person you are trying to contact is not wearing a headset</span>")
+			to_chat(usr, span_filter_adminlog("The person you are trying to contact is not wearing a headset"))
 			return
 
 		var/input = sanitize(tgui_input_text(src.owner, "Please enter a message to reply to [key_name(H)] via their headset.","Outgoing message from a shadowy figure...", ""))
 		if(!input)	return
 
-		to_chat(src.owner, "<span class='filter_adminlog'>You sent [input] to [H] via a secure channel.</span>")
+		to_chat(src.owner, span_filter_adminlog("You sent [input] to [H] via a secure channel."))
 		log_admin("[src.owner] replied to [key_name(H)]'s illegal message with the message [input].")
 		to_chat(H, "<span class='filter_notice'>You hear something crackle in your headset for a moment before a voice speaks.  \
 					\"Please stand by for a message from your benefactor.  Message as follows, agent. <b>\"[input]\"</b>  Message ends.\"</span>")
@@ -1552,7 +1552,7 @@
 
 			usr << browse(data, "window=[B.name]")
 		else
-			to_chat(usr, "<span class='warning'>The faxed item is not viewable. This is probably a bug, and should be reported on the tracker: [fax.type]</span>")
+			to_chat(usr, span_warning("The faxed item is not viewable. This is probably a bug, and should be reported on the tracker: [fax.type]"))
 
 	else if (href_list["AdminFaxViewPage"])
 		var/page = text2num(href_list["AdminFaxViewPage"])
@@ -1602,7 +1602,7 @@
 			feedback_add_details("admin_verb","JM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 			log_and_message_admins("[key_name_admin(usr)] jumped to [key_name_admin(M)]")
 		else
-			to_chat(usr, "<span class='filter_adminlog'>This mob is not located in the game world.</span>")
+			to_chat(usr, span_filter_adminlog("This mob is not located in the game world."))
 
 	else if(href_list["getmob"])
 		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
@@ -1671,7 +1671,7 @@
 
 		var/mob/M = locate(href_list["traitor"])
 		if(!ismob(M))
-			to_chat(usr, "<span class='filter_adminlog'>This can only be used on instances of type /mob.</span>")
+			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob."))
 			return
 		show_traitor_panel(M)
 
@@ -1695,7 +1695,7 @@
 		if(!check_rights(R_SPAWN))	return
 
 		if(!CONFIG_GET(flag/allow_admin_spawning)) // CHOMPEdit
-			to_chat(usr, "<span class='filter_adminlog'>Spawning of items is not allowed.</span>")
+			to_chat(usr, span_filter_adminlog("Spawning of items is not allowed."))
 			return
 
 		var/atom/loc = usr.loc
@@ -1755,24 +1755,24 @@
 			where = "onfloor"
 
 		if( where == "inhand" )
-			to_chat(usr, "<span class='filter_adminlog'>Support for inhand not available yet. Will spawn on floor.</span>")
+			to_chat(usr, span_filter_adminlog("Support for inhand not available yet. Will spawn on floor."))
 			where = "onfloor"
 
 		if ( where == "inhand" )	//Can only give when human or monkey
 			if ( !( ishuman(usr) || issmall(usr) ) )
-				to_chat(usr, "<span class='filter_adminlog'>Can only spawn in hand when you're a human or a monkey.</span>")
+				to_chat(usr, span_filter_adminlog("Can only spawn in hand when you're a human or a monkey."))
 				where = "onfloor"
 			else if ( usr.get_active_hand() )
-				to_chat(usr, "<span class='filter_adminlog'>Your active hand is full. Spawning on floor.</span>")
+				to_chat(usr, span_filter_adminlog("Your active hand is full. Spawning on floor."))
 				where = "onfloor"
 
 		if ( where == "inmarked" )
 			if ( !marked_datum )
-				to_chat(usr, "<span class='filter_adminlog'>You don't have any object marked. Abandoning spawn.</span>")
+				to_chat(usr, span_filter_adminlog("You don't have any object marked. Abandoning spawn."))
 				return
 			else
 				if ( !istype(marked_datum,/atom) )
-					to_chat(usr, "<span class='filter_adminlog'>The object you have marked cannot be used as a target. Target must be of type /atom. Abandoning spawn.</span>")
+					to_chat(usr, span_filter_adminlog("The object you have marked cannot be used as a target. Target must be of type /atom. Abandoning spawn."))
 					return
 
 		var/atom/target //Where the object will be spawned
@@ -2028,17 +2028,17 @@
 		if(check_rights(R_SPAWN)) //VOREStation Edit
 			var/mob/M = locate(href_list["toglang"])
 			if(!istype(M))
-				to_chat(usr, "<span class='filter_adminlog'>[M] is illegal type, must be /mob!</span>")
+				to_chat(usr, span_filter_adminlog("[M] is illegal type, must be /mob!"))
 				return
 			var/lang2toggle = href_list["lang"]
 			var/datum/language/L = GLOB.all_languages[lang2toggle]
 
 			if(L in M.languages)
 				if(!M.remove_language(lang2toggle))
-					to_chat(usr, "<span class='filter_adminlog'>Failed to remove language '[lang2toggle]' from \the [M]!</span>")
+					to_chat(usr, span_filter_adminlog("Failed to remove language '[lang2toggle]' from \the [M]!"))
 			else
 				if(!M.add_language(lang2toggle))
-					to_chat(usr, "<span class='filter_adminlog'>Failed to add language '[lang2toggle]' from \the [M]!</span>")
+					to_chat(usr, span_filter_adminlog("Failed to add language '[lang2toggle]' from \the [M]!"))
 
 			show_player_panel(M)
 
@@ -2047,7 +2047,7 @@
 
 		var/mob/living/carbon/M = locate(href_list["cryoplayer"]) //VOREStation edit from just an all mob check to mob/living/carbon
 		if(!istype(M))
-			to_chat(usr, "<span class='warning'>Mob doesn't exist!</span>")
+			to_chat(usr, span_warning("Mob doesn't exist!"))
 			return
 
 		var/client/C = usr.client

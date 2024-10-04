@@ -172,7 +172,7 @@
 		else
 			return
 	playsound(src, 'sound/effects/pop.ogg', 50, FALSE)
-	to_chat(user, "<span class='notice'>You change RCD's mode to '[choice]'.</span>")
+	to_chat(user, span_notice("You change RCD's mode to '[choice]'."))
 */
 
 //////////////////

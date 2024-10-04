@@ -37,16 +37,16 @@
 
 /datum/surgery_step/fix_vein/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='filter_notice'>[user] starts patching the damaged vein in [target]'s [affected.name] with \the [tool].</span>" , \
-	"<span class='filter_notice'>You start patching the damaged vein in [target]'s [affected.name] with \the [tool].</span>")
+	user.visible_message(span_filter_notice("[user] starts patching the damaged vein in [target]'s [affected.name] with \the [tool].") , \
+	span_filter_notice("You start patching the damaged vein in [target]'s [affected.name] with \the [tool]."))
 	user.balloon_alert_visible("Starts patching the damaged ven in [target]'s [affected.name]", "Patching the damaged vein in \the [affected.name]") // CHOMPEdit
 	target.custom_pain("The pain in [affected.name] is unbearable!", 100)
 	..()
 
 /datum/surgery_step/fix_vein/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] has patched the damaged vein in [target]'s [affected.name] with \the [tool].</span>", \
-		"<span class='notice'>You have patched the damaged vein in [target]'s [affected.name] with \the [tool].</span>")
+	user.visible_message(span_notice("[user] has patched the damaged vein in [target]'s [affected.name] with \the [tool]."), \
+		span_notice("You have patched the damaged vein in [target]'s [affected.name] with \the [tool]."))
 	user.balloon_alert_visible("Patches the damaged vein in [target]'s [affected.name]", "Patched the damaged vein in \the [affected.name]") // CHOMPEdit
 
 	for(var/datum/wound/W in affected.wounds) if(W.internal)
@@ -56,8 +56,8 @@
 
 /datum/surgery_step/fix_vein/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>" , \
-	"<span class='danger'>Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>")
+	user.visible_message(span_danger("[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!") , \
+	span_danger("Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!"))
 	user.balloon_alert_visible("Slips, smearing [tool] in the incision in [target]'s [affected.name]", "Your hand slips, smearing [tool] in the incisiom in [affected.name]") // CHOMPEdit
 	affected.take_damage(5, 0)
 
@@ -94,23 +94,23 @@
 
 /datum/surgery_step/fix_dead_tissue/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='filter_notice'>[user] starts cutting away necrotic tissue in [target]'s [affected.name] with \the [tool].</span>" , \
-	"<span class='filter_notice'>You start cutting away necrotic tissue in [target]'s [affected.name] with \the [tool].</span>")
+	user.visible_message(span_filter_notice("[user] starts cutting away necrotic tissue in [target]'s [affected.name] with \the [tool].") , \
+	span_filter_notice("You start cutting away necrotic tissue in [target]'s [affected.name] with \the [tool]."))
 	user.balloon_alert_visible("Starts cutting away necrotic tissue in [target]'s [affected.name]", "Cutting away necrotic issue in \the [affected.name]") // CHOMPEdit
 	target.custom_pain("The pain in [affected.name] is unbearable!", 100)
 	..()
 
 /datum/surgery_step/fix_dead_tissue/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] has cut away necrotic tissue in [target]'s [affected.name] with \the [tool].</span>", \
-		"<span class='notice'>You have cut away necrotic tissue in [target]'s [affected.name] with \the [tool].</span>")
+	user.visible_message(span_notice("[user] has cut away necrotic tissue in [target]'s [affected.name] with \the [tool]."), \
+		span_notice("You have cut away necrotic tissue in [target]'s [affected.name] with \the [tool]."))
 	user.balloon_alert_visible("Cuts away necrotic tissue in [target]'s [affected.name]", "Cut away necrotic tissue in \the [affected.name]") // CHOMPEdit
 	affected.open = 3
 
 /datum/surgery_step/fix_dead_tissue/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, slicing an artery inside [target]'s [affected.name] with \the [tool]!</span>", \
-	"<span class='danger'>Your hand slips, slicing an artery inside [target]'s [affected.name] with \the [tool]!</span>")
+	user.visible_message(span_danger("[user]'s hand slips, slicing an artery inside [target]'s [affected.name] with \the [tool]!"), \
+	span_danger("Your hand slips, slicing an artery inside [target]'s [affected.name] with \the [tool]!"))
 	user.balloon_alert_visible("Slips, slicing an artery inside [target]'s [affected.name]", "Your hand slips, slicing an artery inside \the [affected.name]") // CHOMPEdit
 	affected.createwound(CUT, 20, 1)
 
@@ -155,8 +155,8 @@
 
 /datum/surgery_step/treat_necrosis/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='filter_notice'>[user] starts applying medication to the affected tissue in [target]'s [affected.name] with \the [tool].</span>" , \
-	"<span class='filter_notice'>You start applying medication to the affected tissue in [target]'s [affected.name] with \the [tool].</span>")
+	user.visible_message(span_filter_notice("[user] starts applying medication to the affected tissue in [target]'s [affected.name] with \the [tool].") , \
+	span_filter_notice("You start applying medication to the affected tissue in [target]'s [affected.name] with \the [tool]."))
 	user.balloon_alert_visible("Starts applying medication to the affected tissue in [target]'s [affected.name]", "Applying medication to the affected tissue in \the [affected.name]") // CHOMPEdit
 	target.custom_pain("Something in your [affected.name] is causing you a lot of pain!", 50)
 	..()
@@ -174,8 +174,8 @@
 		affected.status &= ~ORGAN_DEAD
 		affected.owner.update_icons_body()
 
-		user.visible_message("<span class='notice'>[user] applies [trans] units of the solution to affected tissue in [target]'s [affected.name].</span>", \
-			"<span class='notice'>You apply [trans] units of the solution to affected tissue in [target]'s [affected.name] with \the [tool].</span>")
+		user.visible_message(span_notice("[user] applies [trans] units of the solution to affected tissue in [target]'s [affected.name]."), \
+			span_notice("You apply [trans] units of the solution to affected tissue in [target]'s [affected.name] with \the [tool]."))
 		user.balloon_alert_visible("Applies [trans] units of the solution to affected tissue in [target]'s [affected.name]", "Applied [trans] units of the solution to afected tissue in [affected.name]") // CHOMPEdit
 
 /datum/surgery_step/treat_necrosis/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -188,8 +188,8 @@
 
 	var/trans = container.reagents.trans_to_mob(target, container.amount_per_transfer_from_this, CHEM_BLOOD)
 
-	user.visible_message("<span class='danger'>[user]'s hand slips, applying [trans] units of the solution to the wrong place in [target]'s [affected.name] with the [tool]!</span>" , \
-	"<span class='danger'>Your hand slips, applying [trans] units of the solution to the wrong place in [target]'s [affected.name] with the [tool]!</span>")
+	user.visible_message(span_danger("[user]'s hand slips, applying [trans] units of the solution to the wrong place in [target]'s [affected.name] with the [tool]!") , \
+	span_danger("Your hand slips, applying [trans] units of the solution to the wrong place in [target]'s [affected.name] with the [tool]!"))
 	user.balloon_alert_visible("Slips, applying [trans] units of the solution to the wrong place in [target]'s [affected.name]",
 	"Your hand slips, applying [trans] units of the solution to the wrong place in \the [affected.name]") // CHOMPEdit
 
@@ -229,8 +229,8 @@
 		rig = target.belt
 		if(!istype(rig))
 			return
-	user.visible_message("<span class='filter_notice'>[user] starts cutting through the support systems of \the [rig] on [target] with \the [tool].</span>" , \
-	"<span class='filter_notice'>You start cutting through the support systems of \the [rig] on [target] with \the [tool].</span>")
+	user.visible_message(span_filter_notice("[user] starts cutting through the support systems of \the [rig] on [target] with \the [tool].") , \
+	span_filter_notice("You start cutting through the support systems of \the [rig] on [target] with \the [tool]."))
 	user.balloon_alert_visible("Starts cutting through the support systems of \the [rig] on [target]", "Cutting through the support systems of \the [rig] on [target]") // CHOMPEdit
 	..()
 
@@ -241,13 +241,13 @@
 		if(!istype(rig))
 			return
 	rig.cut_suit()
-	user.visible_message("<span class='notice'>[user] has cut through the support systems of \the [rig] on [target] with \the [tool].</span>", \
-		"<span class='notice'>You have cut through the support systems of \the [rig] on [target] with \the [tool].</span>")
+	user.visible_message(span_notice("[user] has cut through the support systems of \the [rig] on [target] with \the [tool]."), \
+		span_notice("You have cut through the support systems of \the [rig] on [target] with \the [tool]."))
 	user.balloon_alert_visible("Cuts through the support systems of \the [rig] on [target]", "Cut through the support systems of \the [rig]") // CHOMPEdit
 
 /datum/surgery_step/hardsuit/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='danger'>[user]'s [tool] can't quite seem to get through the metal...</span>", \
-	"<span class='danger'>\The [tool] can't quite seem to get through the metal. It's weakening, though - try again.</span>")
+	user.visible_message(span_danger("[user]'s [tool] can't quite seem to get through the metal..."), \
+	span_danger("\The [tool] can't quite seem to get through the metal. It's weakening, though - try again."))
 	user.balloon_alert_visible("[tool] can't quite seem to get through the metal", "\The [tool] can't quite seem to get through the metal.") // CHOMPEdit
 
 ///////////////////////////////////////////
@@ -285,22 +285,22 @@
 	return ..() && target.op_stage.dehusk == 0
 
 /datum/surgery_step/dehusk/structinitial/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] begins to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>", \
-	"<span class='notice'>You begin to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>")
+	user.visible_message(span_notice("[user] begins to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool]."), \
+	span_notice("You begin to create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool]."))
 	user.balloon_alert_visible("Begins to create a fleshy mesh over gaps in [target]'s flesh.", "Creating a flesh mesh over gaps") // CHOMPEdit
 	..()
 
 /datum/surgery_step/dehusk/structinitial/end_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] creates a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>", \
-	"<span class='notice'>You create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool].</span>")
+	user.visible_message(span_notice("[user] creates a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool]."), \
+	span_notice("You create a fleshy but rigid looking mesh over gaps in [target]'s flesh with \the [tool]."))
 	user.balloon_alert_visible("Creates a fleshy mesh over gaps in [target]'s flesh", "Created a fleshy mesh over gaps in the flesh") // CHOMPEdit
 	target.op_stage.dehusk = 1
 	..()
 
 /datum/surgery_step/dehusk/structinitial/fail_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, and the mesh falls, with \the [tool] scraping [target]'s body.</span>", \
-	"<span class='danger'>Your hand slips, and the mesh falls, with \the [tool] scraping [target]'s body.</span>")
+	user.visible_message(span_danger("[user]'s hand slips, and the mesh falls, with \the [tool] scraping [target]'s body."), \
+	span_danger("Your hand slips, and the mesh falls, with \the [tool] scraping [target]'s body."))
 	user.balloon_alert_visible("Slips, the mesh falls and scrapes [target]'s body", "Your hand slips, the mesh falls and scrapes the body") // CHOMPEdit
 	affected.createwound(CUT, 15)
 	affected.createwound(BRUISE, 10)
@@ -320,22 +320,22 @@
 	return ..() && target.op_stage.dehusk == 1
 
 /datum/surgery_step/dehusk/relocateflesh/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] begins to relocate some of [target]'s flesh with \the [tool], using it to fill in gaps.</span>", \
-	"<span class='notice'>You begin to relocate some of [target]'s flesh with \the [tool], using it to fill in gaps.</span>")
+	user.visible_message(span_notice("[user] begins to relocate some of [target]'s flesh with \the [tool], using it to fill in gaps."), \
+	span_notice("You begin to relocate some of [target]'s flesh with \the [tool], using it to fill in gaps."))
 	user.balloon_alert_visible("Begins relocating [target]'s flesh", "Relocating the flesh") // CHOMPEdit
 	..()
 
 /datum/surgery_step/dehusk/relocateflesh/end_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] relocates some of [target]'s flesh with \the [tool], using it to fill in gaps.</span>", \
-	"<span class='notice'>You relocate some of [target]'s flesh with \the [tool], using it to fill in gaps.</span>")
+	user.visible_message(span_notice("[user] relocates some of [target]'s flesh with \the [tool], using it to fill in gaps."), \
+	span_notice("You relocate some of [target]'s flesh with \the [tool], using it to fill in gaps."))
 	user.balloon_alert_visible("Relocates [target]'s flesh", "Relocated the flesh") // CHOMPEdit
 	target.op_stage.dehusk = 2
 	..()
 
 /datum/surgery_step/dehusk/relocateflesh/fail_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user] accidentally rips a massive chunk out of [target]'s flesh with \the [tool], causing massive damage.</span>", \
-	"<span class='danger'>You accidentally rip a massive chunk out of [target]'s flesh with \the [tool], causing massive damage.</span>")
+	user.visible_message(span_danger("[user] accidentally rips a massive chunk out of [target]'s flesh with \the [tool], causing massive damage."), \
+	span_danger("You accidentally rip a massive chunk out of [target]'s flesh with \the [tool], causing massive damage."))
 	user.balloon_alert_visible("Accidentally rips a massive chunk out of [target]'s flesh, causing massive damage",
 	"You accidentally rip a massive chunk out of the flesh, causing massive damage") // CHOMPEdit
 	affected.createwound(CUT, 25)
@@ -356,18 +356,18 @@
 
 /datum/surgery_step/dehusk/structfinish/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(istype(tool,/obj/item/surgical/bioregen))
-		user.visible_message("<span class='notice'>[user] begins to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].</span>", \
-	"<span class='notice'>You begin to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].</span>")
+		user.visible_message(span_notice("[user] begins to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool]."), \
+	span_notice("You begin to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool]."))
 		user.balloon_alert_visible("Begins recreating blood vessels and filing gaps in [target]'s flesh", "Recreating blood vessels and filling gaps in the flesh") // CHOMPEdit
 	else if(istype(tool,/obj/item/surgical/FixOVein))
-		user.visible_message("<span class='notice'>[user] attempts to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].</span>", \
-	"<span class='notice'>You attempt to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool].</span>")
+		user.visible_message(span_notice("[user] attempts to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool]."), \
+	span_notice("You attempt to recreate blood vessels and fill in the gaps in [target]'s flesh with \the [tool]."))
 		user.balloon_alert_visible("Attempts to recreate blood vessesl and fill the gaps in [target]'s flesh", "Attempting to recreate blood vessels and fill gaps in the flesh") // CHOMPEdit
 	..()
 
 /datum/surgery_step/dehusk/structfinish/end_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] finishes recreating the missing biological structures and filling in gaps in [target]'s flesh with \the [tool].</span>", \
-	"<span class='notice'>You finish recreating the missing biological structures and filling in gaps in [target]'s flesh with \the [tool].</span>")
+	user.visible_message(span_notice("[user] finishes recreating the missing biological structures and filling in gaps in [target]'s flesh with \the [tool]."), \
+	span_notice("You finish recreating the missing biological structures and filling in gaps in [target]'s flesh with \the [tool]."))
 	user.balloon_alert_visible("Recreates the missing biological structures and gaps in [target]'s flesh", "Recreated the missing bological structures and gaps in the flesh") // CHOMPEdit
 	target.op_stage.dehusk = 0
 	target.mutations.Remove(HUSK)
@@ -378,12 +378,12 @@
 /datum/surgery_step/dehusk/structfinish/fail_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(istype(tool,/obj/item/surgical/bioregen))
-		user.visible_message("<span class='danger'>[user]'s hand slips, causing \the [tool] to scrape [target]'s body.</span>", \
-	"<span class='danger'>Your hand slips, causing \the [tool] to scrape [target]'s body.</span>")
+		user.visible_message(span_danger("[user]'s hand slips, causing \the [tool] to scrape [target]'s body."), \
+	span_danger("Your hand slips, causing \the [tool] to scrape [target]'s body."))
 		user.balloon_alert_visible("Slips, scraping [target]'s body", "You slip, scraping the body.") // CHOMPEdit
 	else if(istype(tool,/obj/item/surgical/FixOVein))
-		user.visible_message("<span class='danger'>[user] fails to finish the structure over the gaps in [target]'s flesh, doing more damage than good.</span>", \
-	"<span class='danger'>You fail to finish the structure over the gaps in [target]'s flesh, doing more damage than good.</span>")
+		user.visible_message(span_danger("[user] fails to finish the structure over the gaps in [target]'s flesh, doing more damage than good."), \
+	span_danger("You fail to finish the structure over the gaps in [target]'s flesh, doing more damage than good."))
 		user.balloon_alert_visible("Fails to finish the structure in [target]'s flesh, doing more damage", "You fail to finish the structur, doing more damage") // CHOMPEdit
 
 	affected.createwound(CUT, 15)
@@ -401,14 +401,14 @@
 	return ..() && target_zone == BP_TORSO && (target.toxloss > 25 || target.oxyloss > 25)
 
 /datum/surgery_step/internal/detoxify/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] begins to pull toxins from, and restore oxygen to [target]'s musculature and organs with \the [tool].</span>", \
-	"<span class='notice'>You begin to pull toxins from, and restore oxygen to [target]'s musculature and organs with \the [tool].</span>")
+	user.visible_message(span_notice("[user] begins to pull toxins from, and restore oxygen to [target]'s musculature and organs with \the [tool]."), \
+	span_notice("You begin to pull toxins from, and restore oxygen to [target]'s musculature and organs with \the [tool]."))
 	user.balloon_alert_visible("Begins pulling from, and restoring oxygen to [target]'s organs", "Pulling toxins from and restoring oxygen to the organs") // CHOMPEdit
 	..()
 
 /datum/surgery_step/internal/detoxify/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] finishes pulling toxins from, and restoring oxygen to [target]'s musculature and organs with \the [tool].</span>", \
-	"<span class='notice'>You finish pulling toxins from, and restoring oxygen to [target]'s musculature and organs with \the [tool].</span>")
+	user.visible_message(span_notice("[user] finishes pulling toxins from, and restoring oxygen to [target]'s musculature and organs with \the [tool]."), \
+	span_notice("You finish pulling toxins from, and restoring oxygen to [target]'s musculature and organs with \the [tool]."))
 	user.balloon_alert_visible("Finishes pulling toxins and restoring oxygen to [target]'s organs", "Pulled toxins from and restored oxygen to the organs") // CHOMPEdit
 	if(target.toxloss>25)
 		target.adjustToxLoss(-20)
@@ -418,8 +418,8 @@
 
 /datum/surgery_step/internal/detoxify/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, failing to finish the surgery, and damaging [target] with \the [tool].</span>", \
-	"<span class='danger'>Your hand slips, failing to finish the surgery, and damaging [target] with \the [tool].</span>")
+	user.visible_message(span_danger("[user]'s hand slips, failing to finish the surgery, and damaging [target] with \the [tool]."), \
+	span_danger("Your hand slips, failing to finish the surgery, and damaging [target] with \the [tool]."))
 	user.balloon_alert_visible("Slips, failing to finish the surgery and damaging [target]", "Your hand slips, failing to finish the surgery and damaging [target]") // CHOMPEdit
 	affected.createwound(CUT, 15)
 	affected.createwound(BRUISE, 10)
