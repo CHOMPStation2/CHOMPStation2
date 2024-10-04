@@ -301,13 +301,8 @@
 		to_chat(user, span_warning("Power is not sufficient to complete a teleport. Teleport aborted."))
 		return
 
-<<<<<<< HEAD
-	//sparks()
-	to_chat(user, "<span class='warning'>You feel yourself pulled in different directions, before ending up not far from where you started.</span>")
-=======
-	sparks()
+	//sparks() //CHOMPRemove
 	to_chat(user, span_warning("You feel yourself pulled in different directions, before ending up not far from where you started."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	flick("qpad-beam-out", src)
 	transport_objects(get_turf(dest))
 

@@ -1736,13 +1736,8 @@
 	else if(href_list["object_list"])			//this is the laggiest thing ever
 		if(!check_rights(R_SPAWN))	return
 
-<<<<<<< HEAD
 		if(!CONFIG_GET(flag/allow_admin_spawning)) // CHOMPEdit
-			to_chat(usr, "<span class='filter_adminlog'>Spawning of items is not allowed.</span>")
-=======
-		if(!config.allow_admin_spawning)
 			to_chat(usr, span_filter_adminlog("Spawning of items is not allowed."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 
 		var/atom/loc = usr.loc

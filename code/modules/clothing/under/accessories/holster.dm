@@ -188,7 +188,4 @@
 	name = "black leg holster" // CHOMPedit: Loadout bugfix
 	desc = "A tacticool handgun holster. Worn on the upper leg."
 	icon_state = "holster_b_leg"
-<<<<<<< HEAD
 	overlay_state = "holster_b_leg" // CHOMPedit
-=======
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

@@ -607,17 +607,13 @@
 	var/obj/item/I = O
 	if(!I || !istype(I,/obj/item)) return
 
-<<<<<<< HEAD
 	//CHOMPAdd Start
 	if(istype(I, /obj/item/robot_tongue) && isrobot(user))
 		var/obj/item/robot_tongue/J = I
 		if(J.water.energy < J.water.max_energy) return
 	//CHOMPAdd End
 
-	to_chat(usr, "<span class='notice'>You start washing \the [I].</span>")
-=======
 	to_chat(usr, span_notice("You start washing \the [I]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 	busy = 1
 	if(!do_after(user, 40, src))

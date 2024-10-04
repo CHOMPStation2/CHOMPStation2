@@ -105,15 +105,9 @@
 	if(leader_welcome_text && player == leader)
 		to_chat(player.current, span_notice("[leader_welcome_text]"))
 	else
-<<<<<<< HEAD
-		to_chat(player.current, "<span class='notice'>[welcome_text]</span>")
-	if (CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
-		to_chat(player.current, "<span class='notice'>[antag_text]</span>")
-=======
 		to_chat(player.current, span_notice("[welcome_text]"))
-	if (config.objectives_disabled)
+	if (CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
 		to_chat(player.current, span_notice("[antag_text]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 	if((flags & ANTAG_HAS_NUKE) && !spawned_nuke)
 		create_nuke()

@@ -76,9 +76,8 @@
 
 #define span_reflex_shoot(str) ("<span class='reflex_shoot'>" + str + "</span>")
 
-<<<<<<< HEAD
 #define span_wingdings(str) ("<span class='wingdings'>" + str + "</span>") //CHOMPAdd
-=======
+
 /* Direct communication spans */
 
 #define span_psay(str) ("<span class='psay'>" + str + "</span>")
@@ -87,7 +86,6 @@
 /* Export spans */
 
 #define span_chatexport(str) ("<span class='chatexport'>" + str + "</span>")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /* Vore messages */
 
@@ -95,12 +93,8 @@
 #define span_vdanger(str) ("<span class='vdanger'>" + str + "</span>")
 #define span_vwarning(str) ("<span class='vwarning'>" + str + "</span>")
 #define span_vnotice(str) ("<span class='vnotice'>" + str + "</span>")
-<<<<<<< HEAD
-#define span_nif(str) ("<span class='nif'>" + str + "</span>") //CHOMPAdd
-=======
 #define span_nif(str) ("<span class='nif'>" + str + "</span>")
 #define span_filter_nif(str) ("<span class='filter_nif'>" + str + "</span>")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /* Languages */
 

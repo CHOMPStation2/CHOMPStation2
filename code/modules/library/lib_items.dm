@@ -301,15 +301,9 @@ Book Cart End
 
 /obj/item/book/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 	if(user.zone_sel.selecting == O_EYES)
-<<<<<<< HEAD
-		user.visible_message("<span class='notice'>You open up the book and show it to [M]. </span>", \
-			"<span class='notice'> [user] opens up a book and shows it to [M]. </span>")
+		user.visible_message(span_notice("You open up the book and show it to [M]."), \
+			span_notice(" [user] opens up a book and shows it to [M]."))
 		display_content(M) // CHOMPEdit
-=======
-		user.visible_message(span_notice("You open up the book and show it to [M]. "), \
-			span_notice(" [user] opens up a book and shows it to [M]. "))
-		M << browse("<TT><I>Penned by [author].</I></TT> <BR>" + "[dat]", "window=book")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //to prevent spam
 
 /*

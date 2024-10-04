@@ -16,13 +16,8 @@
 		return
 
 	if(!src.client.holder)
-<<<<<<< HEAD
 		if(!CONFIG_GET(flag/dsay_allowed)) // CHOMPEdit
-			to_chat(src, "<span class='danger'>Deadchat is globally muted.</span>")
-=======
-		if(!config.dsay_allowed)
 			to_chat(src, span_danger("Deadchat is globally muted."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 
 

@@ -84,13 +84,8 @@
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
 
-<<<<<<< HEAD
 	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED))
-		to_chat(ghost, "<span class='warning'>This species cannot be resleeved!</span>")
-=======
-	if(chosen_species.flags && NO_SCAN) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
 		to_chat(ghost, span_warning("This species cannot be resleeved!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
 

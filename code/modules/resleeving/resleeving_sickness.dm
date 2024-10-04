@@ -21,11 +21,6 @@
 	desc = "You feel somewhat weak and unfocused, having been sleeved not so long ago. (OOC: No real penalty for vore-related deaths)"
 	stacks = MODIFIER_STACK_EXTEND
 
-<<<<<<< HEAD
-	on_created_text = "<span class='warning'>You feel slightly weak and unfocused.</span>"
-	on_expired_text = "<span class='notice'>You feel your strength and focus return to you.</span>"
-	
-=======
 	on_created_text = span_warning("You feel slightly weak and unfocused.")
 	on_expired_text = span_notice("You feel your strength and focus return to you.")
 
@@ -51,4 +46,3 @@
 		cached_mind?.vore_death = TRUE
 	cached_mind = null //Don't keep a hardref
 	return ..()
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

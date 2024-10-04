@@ -217,12 +217,8 @@
 		var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
 		if(!do_mob(user, M, calc_duration * toolspeed, zone, exclusive = TRUE))
 			success = FALSE
-<<<<<<< HEAD
-			to_chat(user, "<span class='warning'>You must remain close to and keep focused on your patient to conduct surgery.</span>")
-			user.balloon_alert(user, "You must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
-=======
 			to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			user.balloon_alert(user, "You must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
 
 	if(success)
 		selected_surgery.end_step(user, M, zone, src)

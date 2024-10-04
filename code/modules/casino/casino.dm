@@ -77,17 +77,13 @@
 	if(result == 37)
 		result = "00"
 	spawn(5 SECONDS)
-<<<<<<< HEAD
-		// visible_message("<span class='notice'>The roulette stops spinning, the ball landing on [result], [color].</span>") //CHOMPRemove
-=======
-		visible_message(span_notice("The roulette stops spinning, the ball landing on [result], [color]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		// visible_message(span_notice("The roulette stops spinning, the ball landing on [result], [color].")) //CHOMPRemove
 		busy = 0
 		icon_state = initial(icon_state)
 
 		//CHOMPAdd Start
 		if(color=="gold") // Happy celebrations!
-			visible_message("<span class='notice'>The roulette stops spinning, the ball lands on the golden zero! Fortune favors all bets!</span>")
+			visible_message(span_notice("The roulette stops spinning, the ball lands on the golden zero! Fortune favors all bets!"))
 			src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
 			src.confetti_spread.attach(src) //If somehow people start dragging roulette
 			spawn(0)
@@ -95,7 +91,7 @@
 					src.confetti_spread.start()
 					sleep(10)
 		else
-			visible_message("<span class='notice'>The roulette stops spinning, the ball landing on [result], [color].</span>")
+			visible_message(span_notice("The roulette stops spinning, the ball landing on [result], [color]."))
 		//CHOMPAdd End
 
 /obj/structure/casino_table/roulette_table/attackby(obj/item/W as obj, mob/user as mob)
@@ -616,19 +612,15 @@
 					to_chat(user, span_warning("The SPASM beeps in an upset manner, you already have a collar!"))
 					return
 				var/confirm = tgui_alert(usr, "Are you sure you want to become a sentient prize?", "Confirm Sentient Prize", list("Yes", "No"))
+				//CHOMPEdit Start
 				if(confirm == "Yes")
-					to_chat(user, "<span class='warning'>You are now a prize!</span>")
-				//CHOMPAdd Start
+					to_chat(user, span_warning("You are now a prize!"))
 				if(!confirm)
 					return
 				if(confirm == "No")
-					to_chat(user, "<span class='warning'>The SPASM beeps in a sad manner at your impolite decline..</span>")
+					to_chat(user, span_warning("The SPASM beeps in a sad manner at your impolite decline..."))
 					return
-<<<<<<< HEAD
-				//CHOMPAdd End
-=======
-				to_chat(user, span_warning("You are now a prize!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				//CHOMPEdit End
 				if(safety_ckey in sentientprizes_ckeys_list)
 					to_chat(user, span_warning("The SPASM beeps in an upset manner, you already have a collar!"))
 					return

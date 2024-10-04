@@ -168,13 +168,8 @@
 		else
 			message_admins("[key_name_admin(user)] triggered a fueltank explosion with a welding tool.")
 			log_game("[key_name(user)] triggered a fueltank explosion with a welding tool.")
-<<<<<<< HEAD
-			to_chat(user, "<span class='danger'>You begin welding on the fueltank and with a moment of lucidity you realize... you are doomed.</span>") //CHOMP Edit: changed yawn edit to just say you are doomed
-			var/obj/structure/reagent_dispensers/fueltank/tank = O // CHOMPS edit - Readds welderbombing 
-=======
-			to_chat(user, span_danger("You begin welding on the fueltank and with a moment of lucidity you realize, this might not have been the smartest thing you've ever done."))
-			var/obj/structure/reagent_dispensers/fueltank/tank = O
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			to_chat(user, span_danger("You begin welding on the fueltank and with a moment of lucidity you realize... you are doomed.")) //CHOMP Edit: changed yawn edit to just say you are doomed
+			var/obj/structure/reagent_dispensers/fueltank/tank = O // CHOMPS edit - Readds welderbombing
 			tank.explode()
 			return
 	if (src.welding)

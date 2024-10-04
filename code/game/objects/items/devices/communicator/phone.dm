@@ -290,13 +290,8 @@
 	if(confirm != "Yes")
 		return
 
-<<<<<<< HEAD
 	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1) // CHOMPEdit
-		to_chat(src, "<span class='danger'>You have used the antagHUD and cannot respawn or use communicators!</span>")
-=======
-	if(config.antag_hud_restricted && has_enabled_antagHUD == 1)
 		to_chat(src, span_danger("You have used the antagHUD and cannot respawn or use communicators!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	for(var/mob/living/L in mob_list) //Simple check so you don't have dead people calling.

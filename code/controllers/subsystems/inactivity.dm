@@ -15,13 +15,8 @@ SUBSYSTEM_DEF(inactivity)
 	while(client_list.len)
 		var/client/C = client_list[client_list.len]
 		client_list.len--
-<<<<<<< HEAD
 		if(C.is_afk(CONFIG_GET(number/kick_inactive) MINUTES) && can_kick(C)) // CHOMPEdit
-			to_chat_immediate(C, world.time, "<span class='warning'>You have been inactive for more than [CONFIG_GET(number/kick_inactive)] minute\s and have been disconnected.</span>") // CHOMPEdit
-=======
-		if(C.is_afk(config.kick_inactive MINUTES) && can_kick(C))
-			to_chat_immediate(C, world.time, span_warning("You have been inactive for more than [config.kick_inactive] minute\s and have been disconnected."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			to_chat_immediate(C, world.time, span_warning("You have been inactive for more than [CONFIG_GET(number/kick_inactive)] minute\s and have been disconnected.</span>")) // CHOMPEdit
 
 			var/information
 			if(C.mob)

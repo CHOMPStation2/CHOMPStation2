@@ -603,12 +603,6 @@
 	charge_delay = 300
 
 /obj/item/cell/device/shield_generator/parry //The cell for the 'parry' shield gen.
-<<<<<<< HEAD
 	maxcharge = 200 //CHOMPedit: 100 to 200.
 	charge_amount = 200 //CHOMPedit: 100 to 200.
 	charge_delay = 30 //CHOMPedit: Starts charging three seconds after it's discharged.
-=======
-	maxcharge = 100
-	charge_amount = 100
-	charge_delay = 20 //Starts charging two seconds after it's discharged.
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

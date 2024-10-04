@@ -271,13 +271,8 @@
 	if(!check_rights(R_BAN))	return
 
 	establish_db_connection()
-<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Failed to establish database connection")]</span>")
-=======
-	if(!dbcon.IsConnected())
 		to_chat(usr, span_filter_adminlog("[span_red("Failed to establish database connection")]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	var/output = "<div align='center'><table width='90%'><tr>"

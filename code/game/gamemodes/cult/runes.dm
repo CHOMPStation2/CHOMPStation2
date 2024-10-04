@@ -912,12 +912,8 @@ var/list/sacrificed = list()
 			if(N)
 				continue
 			C.ear_deaf += 50
-<<<<<<< HEAD
 			C.deaf_loop.start(skip_start_sound = TRUE) // CHOMPStation Add: Ear Ringing/Deafness
-			C.show_message("<span class='warning'>The world around you suddenly becomes quiet.</span>", 3)
-=======
 			C.show_message(span_warning("The world around you suddenly becomes quiet."), 3)
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			affected += C
 			if(prob(1))
 				C.sdisabilities |= DEAF

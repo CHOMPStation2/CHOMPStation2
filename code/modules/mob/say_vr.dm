@@ -202,15 +202,9 @@
 			if(isnewplayer(M))
 				continue
 			if(src.client && M && !(get_z(src) == get_z(M)))
-<<<<<<< HEAD
-				message = "<span class='multizsay'>[message]</span>"
+				message = span_multizsay("[message]")
 			if(isobserver(M) && (!(M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || (isbelly(M.loc) && src == M.loc:owner)) || \
 			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
-=======
-				message = span_multizsay("[message]")
-			if(isobserver(M) && (!M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || \
-			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else

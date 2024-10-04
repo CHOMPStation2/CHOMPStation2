@@ -84,13 +84,8 @@
 		return ..()
 
 /obj/structure/trash_pile/attack_ghost(mob/observer/user as mob)
-<<<<<<< HEAD
 	if(CONFIG_GET(flag/disable_player_mice)) // CHOMPEdit
-		to_chat(user, "<span class='warning'>Spawning as a mouse is currently disabled.</span>")
-=======
-	if(config.disable_player_mice)
 		to_chat(user, span_warning("Spawning as a mouse is currently disabled."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	//VOREStation Add Start
@@ -176,17 +171,13 @@
 				if(I)
 					searchedby += user.ckey
 					I.forceMove(get_turf(src))
-<<<<<<< HEAD
-					to_chat(H,"<span class='notice'>You found \a [I]!</span>")
+					to_chat(H,span_notice("You found \a [I]!"))
 					//CHOMPedit begin
 					var/disturbed_sleep = rand(1,100) //spawning of mobs, for now only the trash panda.
 					if(disturbed_sleep <= 5)
 						new /mob/living/simple_mob/animal/passive/raccoon_ch(get_turf(user), name)
 						visible_message("A raccoon jumps out of the trash!.")
 					//CHOMPedit end
-=======
-					to_chat(H,span_notice("You found \a [I]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 	else
 		return ..()

@@ -59,7 +59,7 @@
 
 /obj/machinery/slot_machine/attackby(obj/item/W as obj, mob/user as mob)
 	if(busy)
-		to_chat(user,"<span class='notice'>The slot machine is currently running.</span> ")
+		to_chat(user,span_notice("The slot machine is currently running."))
 		return
 	if(W.has_tool_quality(TOOL_WRENCH))
 		playsound(src, W.usesound, 100, 1)
@@ -104,10 +104,10 @@
 	if (isbroken)
 		return
 	if (busy)
-		to_chat(user,"<span class='notice'>The slot machine is currently rolling.</span> ")
+		to_chat(user,span_notice("The slot machine is currently rolling."))
 		return
 	if(cashmoney.worth < 5)
-		to_chat(user,"<span class='notice'>You dont have enough chips to gamble!</span> ")
+		to_chat(user,span_notice("You dont have enough chips to gamble!"))
 		return
 
 	to_chat(user,span_notice("You puts 5 credits in the slot machine and presses start."))
@@ -188,33 +188,18 @@
 			winnings = 200
 
 		if (symbol1 == "seven" && symbol2 == "seven" && symbol3 == "seven")
-<<<<<<< HEAD
-			output = "<span class='notice'>Three sevens! The slot machine deposits a 300 credit chip!</span>" //CHOMPEdit
+			output = span_notice("Three sevens! The slot machine deposits a 300 credit chip!") //CHOMPEdit
 			winnings = 300 //CHOMPEdit
 			celebrate = 1
 
 		if (symbol1 == "diamond" && symbol2 == "diamond" && symbol3 == "diamond")
-			output = "<span class='notice'>Three diamonds! The slot machine deposits a 500 credit chip!</span>" //CHOMPEdit
+			output = span_notice("Three diamonds! The slot machine deposits a 500 credit chip!") //CHOMPEdit
 			winnings = 500 //CHOMPEdit
 			celebrate = 1
 
 		if (symbol1 == "platinum coin" && symbol2 == "platinum coin" && symbol3 == "platinum coin")
-			output = "<span class='notice'>Three platinum coins! The slot machine deposits a 1000 credit chip!</span>" //CHOMPEdit
+			output = span_notice("Three platinum coins! The slot machine deposits a 1000 credit chip!") //CHOMPEdit
 			winnings = 1000 //CHOMPEdit
-=======
-			output = span_notice("Three sevens! The slot machine deposits a 500 credit chip!")
-			winnings = 500
-			celebrate = 1
-
-		if (symbol1 == "diamond" && symbol2 == "diamond" && symbol3 == "diamond")
-			output = span_notice("Three diamonds! The slot machine deposits a 1000 credit chip!")
-			winnings = 1000
-			celebrate = 1
-
-		if (symbol1 == "platinum coin" && symbol2 == "platinum coin" && symbol3 == "platinum coin")
-			output = span_notice("Three platinum coins! The slot machine deposits a platinum chip!")
-			platinumwin = TRUE
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			celebrate = 1
 
 		icon_state = initial(icon_state) // Set it back to the original iconstate.
@@ -306,7 +291,7 @@
 
 /obj/machinery/station_slot_machine/attackby(obj/item/W as obj, mob/user as mob)
 	if(busy)
-		to_chat(user,"<span class='notice'>The slot machine is currently running.</span> ")
+		to_chat(user,span_notice("The slot machine is currently running."))
 		return
 	if(W.has_tool_quality(TOOL_WRENCH))
 		playsound(src, W.usesound, 100, 1)
@@ -350,10 +335,10 @@
 	if (isbroken)
 		return
 	if (busy)
-		to_chat(user,"<span class='notice'>The slot machine is currently rolling.</span> ")
+		to_chat(user,span_notice("The slot machine is currently rolling."))
 		return
 	if(cashmoney.worth < 5)
-		to_chat(user,"<span class='notice'>You dont have enough Thalers to gamble!</span> ")
+		to_chat(user,span_notice("You dont have enough Thalers to gamble!"))
 		return
 
 	to_chat(user,span_notice("You puts 5 Thalers in the slot machine and presses start."))

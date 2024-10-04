@@ -581,13 +581,8 @@
 			formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
 			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
 			formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
-<<<<<<< HEAD
-			to_chat(thing, "<span class='vnotice'><B>[formatted_desc]</B></span>")
+			to_chat(thing, span_vnotice("<B>[formatted_desc]</B>"))
 		return
-=======
-			to_chat(thing, span_notice("<B>[formatted_desc]</B>"))
-
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
 	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/mmi)) // Prevent reforming causing a lot of log spam/sounds
@@ -595,14 +590,9 @@
 	//CHOMPEdit end
 
 	//Generic entered message
-<<<<<<< HEAD
 	if(!owner.mute_entry && entrance_logs) //CHOMPEdit
 		if(!istype(thing, /mob/observer))	//Don't have ghosts announce they're reentering the belly on death
-			to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
-=======
-	if(!istype(thing, /mob/observer))	//Don't have ghosts announce they're reentering the belly on death
-		to_chat(owner,span_vnotice("[thing] slides into your [lowertext(name)]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			to_chat(owner,span_vnotice("[thing] slides into your [lowertext(name)]."))
 
 	//Sound w/ antispam flag setting
 	if(vore_sound && !recent_sound && !istype(thing, /mob/observer))
@@ -648,18 +638,12 @@
 			to_chat(M, span_vnotice("<B>[formatted_desc]</B>"))
 
 		var/taste
-<<<<<<< HEAD
 		if(can_taste && M.loc == src && (taste = M.get_taste_message(FALSE))) //CHOMPEdit - Prevent indirect tasting
-			to_chat(owner, "<span class='vnotice'>[M] tastes of [taste].</span>")
+			to_chat(owner, span_vnotice("[M] tastes of [taste]."))
 		vore_fx(M, TRUE) //CHOMPEdit: update belleh
 		if(owner.previewing_belly == src) //CHOMPEdit
 			vore_fx(owner, TRUE) //CHOMPEdit: update belleh
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
-		if(can_taste && (taste = M.get_taste_message(FALSE)))
-			to_chat(owner, span_vnotice("[M] tastes of [taste]."))
-		vore_fx(M)
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
@@ -1214,15 +1198,10 @@
 			//privacy_volume = 25
 
 	//Print notifications/sound if necessary
-<<<<<<< HEAD
 	if(istype(M, /mob/observer)) //CHOMPEdit
 		silent = TRUE
 	if(!silent)
-		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]</span>",range = privacy_range)
-=======
-	if(!silent && !isobserver(M))
 		owner.visible_message(span_vnotice("[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]"),range = privacy_range)
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]

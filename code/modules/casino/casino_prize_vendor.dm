@@ -343,11 +343,7 @@
 				if("event")
 					restriction_check = category_event
 				else
-<<<<<<< HEAD
-					to_chat(usr, "<span class='warning'>Prize checkout error has occured, purchase cancelled.</span>")
-=======
 					to_chat(usr, span_warning("Prize checkout error has occurred, purchase cancelled."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 					return FALSE
 
 			if(restriction_check < 1)

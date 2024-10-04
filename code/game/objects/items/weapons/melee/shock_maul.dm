@@ -219,14 +219,6 @@
 	..()
 	//CHOMPEdit start - maul changes
 	if(A && wielded && status)
-<<<<<<< HEAD
-=======
-		deductcharge()
-		status = 0
-		user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
-		playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
-		update_held_icon()
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		if(istype(A,/obj/structure/window))
 			var/obj/structure/window/W = A
 			visible_message(span_warning("\The [W] crumples under the force of the impact!"))
@@ -247,7 +239,7 @@
 			return ..()	//Don't do anything if we don't resolve anything on our target
 		deductcharge()
 		status = 0
-		user.visible_message("<span class='warning'>\The [src] discharges with a thunderous, hair-raising crackle!</span>")
+		user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
 		playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
 		update_held_icon()
 		powercheck(hitcost)

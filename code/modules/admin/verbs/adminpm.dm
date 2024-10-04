@@ -5,13 +5,8 @@
 /client/proc/cmd_admin_pm_context(mob/M in mob_list)
 	set category = null
 	set name = "Admin PM Mob"
-<<<<<<< HEAD
 	if(!holder) //CHOMP Edit: Reverting this to let all staff respond to ahelps
-		to_chat(src, "<span class='pm warning'>Error: Admin-PM-Context: Only administrators may use this command.</span>")
-=======
-	if(!check_rights(R_ADMIN))
 		to_chat(src, span_pm(span_warning("Error: Admin-PM-Context: Only administrators may use this command.")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	if( !ismob(M) || !M.client )
 		return
@@ -22,13 +17,8 @@
 /client/proc/cmd_admin_pm_panel()
 	set category = "Admin"
 	set name = "Admin PM"
-<<<<<<< HEAD
 	if(!holder) //CHOMP Edit: Reverting this to let all staff respond to ahelps
-		to_chat(src, "<span class='pm warning'>Error: Admin-PM-Panel: Only administrators may use this command.</span>")
-=======
-	if(!check_rights(R_ADMIN))
 		to_chat(src, span_pm(span_warning("Error: Admin-PM-Panel: Only administrators may use this command.")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	var/list/client/targets[0]
 	for(var/client/T)
@@ -65,13 +55,8 @@
 
 	var/datum/ticket/T = C.current_ticket // CHOMPedit - Ticket System
 
-<<<<<<< HEAD
 	if(T) // CHOMPedit - Ticket System
-		message_admins("<span class='pm'>[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help.</span>")
-=======
-	if(AH)
 		message_admins(span_pm("[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	var/msg = tgui_input_text(src,"Message:", "Private message to [key_name(C, 0, 0)]", multiline = TRUE)
 	if (!msg)
 		message_admins(span_pm("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help."))

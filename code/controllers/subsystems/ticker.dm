@@ -148,11 +148,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 	job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
 
 	if(!src.mode.can_start())
-<<<<<<< HEAD
-		to_world("<span class='danger'><B>Unable to start [mode.name].</B> Not enough players readied, [CONFIG_GET(keyed_list/player_requirements)[mode.config_tag]] players needed. Reverting to pregame lobby.</span>") // CHOMPEdit
-=======
-		to_world(span_danger("<B>Unable to start [mode.name].</B> Not enough players readied, [config.player_requirements[mode.config_tag]] players needed. Reverting to pregame lobby."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		to_world(span_danger("<B>Unable to start [mode.name].</B> Not enough players readied, [CONFIG_GET(keyed_list/player_requirements)[mode.config_tag]] players needed. Reverting to pregame lobby.")) // CHOMPEdit
 		mode.fail_setup()
 		mode = null
 		job_master.ResetOccupations()
@@ -188,13 +184,8 @@ var/global/datum/controller/subsystem/ticker/ticker
 			//Deleting Startpoints but we need the ai point to AI-ize people later
 			if (S.name != "AI")
 				qdel(S)
-<<<<<<< HEAD
-		to_world("<span class='boldannounce notice'><em>Enjoy the game!</em></span>")
-		world << sound('sound/AI/welcome.ogg') //CHOMPEdit: Reverted to default welcome from Yawn edit
-=======
 		to_world(span_boldannounce(span_notice("<em>Enjoy the game!</em>")))
 		world << sound('sound/AI/welcome.ogg') // Skie
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		//Holiday Round-start stuff	~Carn
 		Holiday_Game_Start()
 

@@ -97,8 +97,4 @@
 				if(prob(5))
 					src.visible_message(span_notice("[src] [pick(rimplant.random_emote)].")) // M-mlem.
 			if(rimplant.reagents.total_volume == rimplant.reagents.maximum_volume * 0.05)
-<<<<<<< HEAD
-				to_chat(src, "<span class='notice'>[pick(rimplant.empty_message)]</span>")
-=======
 				to_chat(src, span_notice("[pick(rimplant.empty_message)]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

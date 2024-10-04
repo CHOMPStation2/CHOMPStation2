@@ -100,11 +100,7 @@
 	if (istype(W, /obj/item/melee/shock_maul))
 		var/obj/item/melee/shock_maul/S = W
 		if(!S.wielded || !S.status)
-<<<<<<< HEAD
-			to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands and powered on to be used to mine this!</span>") //CHOMPEdit - fix improper name
-=======
-			to_chat(user, span_warning("\The [src] must be wielded in two hands and powered on to be used for mining!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			to_chat(user, span_warning("\The [S] must be wielded in two hands and powered on to be used to mine this!")) //CHOMPEdit
 			return
 		to_chat(user, span_notice("You pulverize \the [src]!"))
 		for(var/i=0;i<(rand(mindrop,upperdrop));i++)

@@ -109,13 +109,8 @@
 	if(src.imprinted != "empty")
 		to_chat(U, span_danger("Capture failed!") + ": The soul stone has already been imprinted with [src.imprinted]'s mind!")
 		return
-<<<<<<< HEAD
 	if ((T.health + T.halloss) > CONFIG_GET(number/health_threshold_crit) && T.stat != DEAD) // CHOMPEdit
-		to_chat(U, "<span class='danger'>Capture failed!</span>: Kill or maim the victim first!")
-=======
-	if ((T.health + T.halloss) > config.health_threshold_crit && T.stat != DEAD)
 		to_chat(U, span_danger("Capture failed!") + ": Kill or maim the victim first!")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	if(T.client == null)
 		to_chat(U, span_danger("Capture failed!") + ": The soul has already fled it's mortal frame.")

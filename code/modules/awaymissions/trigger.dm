@@ -6,16 +6,12 @@
 /obj/effect/step_trigger/message/Trigger(mob/M as mob)
 	//CHOMPEdit start - tweaked message trigger to be more sane
 	if(M.client)
-<<<<<<< HEAD
-=======
-		to_chat(M, span_info("[message]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		if(once)
 			if(M in mobs)
 				return
 			else
 				mobs += M
-		to_chat(M, "[message]")
+		to_chat(M, span_info("[message]"))
 	//CHOMPEdit end
 
 /obj/effect/step_trigger/teleport_fancy

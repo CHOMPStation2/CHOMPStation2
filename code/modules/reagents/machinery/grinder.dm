@@ -280,7 +280,6 @@
 		beaker = new_beaker
 	update_icon()
 	return TRUE
-<<<<<<< HEAD
 
 // CHOMPedit start: Repurposed coffee grinders and supermatter do not mix.
 /obj/machinery/reagentgrinder/proc/puny_protons(regrets = 0)
@@ -297,10 +296,8 @@
 			holdingitems -= S
 			regrets += S.get_amount()
 		SSradiation.radiate(get_turf(src), 15 + regrets)
-		visible_message("<span class=\"warning\">\The [src] glows brightly, bursting into flames and flashing into ash.</span>",\
-		"<span class=\"warning\">You hear an unearthly shriek, burning heat washing over you.</span>")
+		visible_message(span_warning("\The [src] glows brightly, bursting into flames and flashing into ash."),\
+		span_warning("You hear an unearthly shriek, burning heat washing over you."))
 		new /obj/effect/decal/cleanable/ash(src.loc)
 		qdel(src)
 // CHOMPedit end
-=======
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

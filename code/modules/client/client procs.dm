@@ -103,15 +103,9 @@
 		var/sql_ckey = sql_sanitize_text(ckey)
 		var/datum/db_query/query = SSdbcore.NewQuery("UPDATE erro_player SET discord_id = :t_discord_id WHERE ckey = :t_ckey", list("t_discord_id" = sql_discord, "t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
 		if(query.Execute())
-<<<<<<< HEAD
-			to_chat(src, "<span class='notice'>Registration complete! Thank you for taking the time to register your Discord ID.</span>")
+			to_chat(src, span_notice("Registration complete! Thank you for taking the time to register your Discord ID."))
 			log_and_message_admins("[ckey] has registered their Discord ID. Their Discord snowflake ID is: [their_id]") //YW EDIT
 			admin_chat_message(message = "[ckey] has registered their Discord ID. Their Discord is: <@[their_id]>", color = "#4eff22") //YW EDIT
-=======
-			to_chat(src, span_notice("Registration complete! Thank you for taking the time to register your Discord ID."))
-			log_and_message_admins("[ckey] has registered their Discord ID to obtain the Crew Member role. Their Discord snowflake ID is: [their_id]")
-			admin_chat_message(message = "[ckey] has registered their Discord ID to obtain the Crew Member role. Their Discord is: <@[their_id]>", color = "#4eff22")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			notes_add(ckey, "Discord ID: [their_id]")
 			world.VgsAddMemberRole(their_id)
 			qdel(query) //CHOMPEdit TGSQL

@@ -73,27 +73,15 @@ RSF
 		return
 	if(mode == 2)
 		mode = 3
-<<<<<<< HEAD
-		to_chat(user,"Changed dispensing mode to 'Metamorphic Glass: Pint'") //YW Changes begin
-=======
-		to_chat(user,span_notice("Changed dispensing mode to 'Paper'"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		to_chat(user,span_notice("Changed dispensing mode to 'Metamorphic Glass: Pint'")) //YW Changes begin
 		return
 	if(mode == 3)
 		mode = 4
-<<<<<<< HEAD
-		to_chat(user,"Changed dispensing mode to 'Paper'")
-=======
-		to_chat(user,span_notice("Changed dispensing mode to 'Pen'"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		to_chat(user,span_notice("Changed dispensing mode to 'Paper'"))
 		return
 	if(mode == 4)
 		mode = 5
-<<<<<<< HEAD
-		to_chat(user,"Changed dispensing mode to 'Pen'")
-=======
-		to_chat(user,span_notice("Changed dispensing mode to 'Dice Pack'"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		to_chat(user,span_notice("Changed dispensing mode to 'Pen'"))
 		return
 	if(mode == 5)
 		mode = 6
@@ -101,11 +89,7 @@ RSF
 		return
 	if(mode == 6)
 		mode = 1
-<<<<<<< HEAD
-		to_chat(user,"Changed dispensing mode to 'Cigarette'") // YW Changes end
-=======
-		to_chat(user,span_notice("Changed dispensing mode to 'Cigarette'"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		to_chat(user,span_notice("Changed dispensing mode to 'Cigarette'")) // YW Changes end
 		return
 
 /obj/item/rsf/afterattack(atom/A, mob/user as mob, proximity)

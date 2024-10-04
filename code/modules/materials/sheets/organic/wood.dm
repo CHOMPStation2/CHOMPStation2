@@ -80,8 +80,4 @@
 
 /obj/item/stack/material/stick/fivestack
 	amount = 5
-<<<<<<< HEAD
-	color = "#824B28" 
-=======
 	color = "#824B28"
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

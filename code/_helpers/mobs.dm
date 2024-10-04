@@ -374,12 +374,7 @@ Proc for attack log creation, because really why not
 		cached_character_icons[cachekey] = .
 
 /proc/not_has_ooc_text(mob/user)
-<<<<<<< HEAD
 	if (CONFIG_GET(flag/allow_metadata) && (!user.client?.prefs?.metadata || length(user.client.prefs.metadata) < 15)) // CHOMPEdit
-		to_chat(user, "<span class='warning'>Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup.</span>")
-=======
-	if (config.allow_Metadata && (!user.client?.prefs?.metadata || length(user.client.prefs.metadata) < 15))
 		to_chat(user, span_warning("Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return TRUE
 	return FALSE

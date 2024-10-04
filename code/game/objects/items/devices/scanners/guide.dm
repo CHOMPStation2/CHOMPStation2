@@ -109,13 +109,10 @@
 
 	var/peeb
 	if(dat)
-		peeb +="<span class='notice'><b>GUIDANCE SYSTEM BEGIN</b></span><br>"
+		peeb +=s pan_notice("<b>GUIDANCE SYSTEM BEGIN</b>")
+		peeb += "<br>"
 		peeb += dat
-<<<<<<< HEAD
-		peeb += "<span class='notice'>For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.</span>"
-=======
-		peeb += span_notice("For more detailed information about patient condition, use the stationary scanner in medbay.")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		peeb += span_notice("For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.")
 
 	user.show_message(peeb, 1)
 //CHOMPedit end.

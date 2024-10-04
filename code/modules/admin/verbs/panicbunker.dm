@@ -5,13 +5,8 @@
 	if(!check_rights(R_ADMIN))
 		return
 
-<<<<<<< HEAD
 	if (!CONFIG_GET(flag/sql_enabled)) // CHOMPEdit
-		to_chat(usr, "<span class='adminnotice'>The Database is not enabled!</span>")
-=======
-	if (!config.sql_enabled)
 		to_chat(usr, span_adminnotice("The Database is not enabled!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	CONFIG_SET(flag/panic_bunker, !CONFIG_GET(flag/panic_bunker)) // CHOMPEdit

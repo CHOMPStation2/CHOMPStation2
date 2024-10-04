@@ -48,12 +48,7 @@
 					if(feral_passing)
 						var/turf/T = get_turf(H)
 						if(T.get_lumcount() <= 0.1)
-<<<<<<< HEAD
-							to_chat(usr, "<span class='notice'>You are slowly calming down in darkness' safety...</span>")
-
-=======
 							to_chat(usr, span_notice("You are slowly calming down in darkness' safety..."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 						else if(isbelly(H.loc)) // Safety message for if inside a belly.
 							to_chat(usr, span_notice("You are slowly calming down within the darkness of something's belly, listening to their body as it moves around you. ...safe..."))
 						else

@@ -336,16 +336,12 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		icon_state = initial(icon_state)
 
 /obj/item/sleevemate/emag_act(var/remaining_charges, var/mob/user)
-<<<<<<< HEAD
 	//CHOMPEdit Start
 	var/list/choices = list("Body Snatcher","Mind Binder")
 	var/choice = tgui_input_list(user, "How would you like to modify the [src]?", "", choices)
 	if(!choice || !(choice in choices)) return
 	//CHOMPEdit End
-	to_chat(user,"<span class='danger'>You hack [src]!</span>")
-=======
 	to_chat(user,span_danger("You hack [src]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src.loc)
 	spark_system.start()

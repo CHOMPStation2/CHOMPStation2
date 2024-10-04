@@ -377,13 +377,8 @@
 
 /obj/machinery/porta_turret/proc/isLocked(mob/user)
 	if(locked && !issilicon(user))
-<<<<<<< HEAD
-		to_chat(user, "<span class='notice'>Controls locked.</span>")
-		return TRUE // CHOMPEdit
-=======
 		to_chat(user, span_notice("Controls locked."))
-		return 1
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		return TRUE // CHOMPEdit
 	if(HasController())
 		return TRUE
 	if(isrobot(user) || isAI(user))

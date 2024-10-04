@@ -218,8 +218,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		var/admin_number_present = send2irc_adminless_only(initiator_ckey, name)
 		log_admin("Ticket #[id]: [key_name(initiator)]: [name] - heard by [admin_number_present] non-AFK admins who have +BAN.")
 		if(admin_number_present <= 0)
-<<<<<<< HEAD
-			to_chat(C, "<span class='pm notice'>No active admins are online, your adminhelp was sent to the admin discord.</span>")		//VOREStation Edit
+			to_chat(C, span_pm(span_notice("No active admins are online, your adminhelp was sent to the admin discord.")))		//VOREStation Edit
 	send2adminchat() //VOREStation Add
 	//YW EDIT START
 	var/list/adm = get_admin_counts()
@@ -230,9 +229,6 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	else
 		ahelp_discord_message("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.") //CHOMPEdit
 	//YW EDIT END
-=======
-			to_chat(C, span_pm(span_notice("No active admins are online, your adminhelp was sent to the admin discord.")))		//VOREStation Edit
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		// Also send it to discord since that's the hip cool thing now.
 		SSwebhooks.send(

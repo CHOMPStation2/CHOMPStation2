@@ -309,26 +309,18 @@ var/global/list/obj/item/communicator/all_communicators = list()
 		if(!idcard.registered_name || !idcard.assignment)
 			to_chat(user, span_notice("\The [src] rejects the ID."))
 		else if(!owner)
-<<<<<<< HEAD
-			to_chat(user, "<span class='notice'>\The [src] rejects the ID.</span>")
+			to_chat(user, span_notice("\The [src] rejects the ID."))
 		else if(owner == idcard.registered_name && occupation != idcard.assignment) //CHMPEDIT only edit assigment if different
 			occupation = idcard.assignment
-			to_chat(user, "<span class='notice'>Occupation updated.</span>")
+			to_chat(user, span_notice(">Occupation updated."))
 		//CHOMPADDITION START Communicator ID slotting if we have an ID thats also already scanned
 		else if(((src in user.contents) && (C in user.contents)) || (istype(loc, /turf) && in_range(src, user) && (C in user.contents)) )
 			if(id_check(user, 2))
-				to_chat(user, "<span class='notice'>You put the ID into \the [src]'s slot.</span>")
+				to_chat(user, span_notice("You put the ID into \the [src]'s slot."))
 				add_overlay("pda-id")
 				updateSelfDialog()//Update self dialog on success.
 				return	//Return in case of failed check or when successful.
 		//CHOMPADDITION END
-=======
-			to_chat(user, span_notice("\The [src] rejects the ID."))
-		else if(owner == idcard.registered_name)
-			occupation = idcard.assignment
-			to_chat(user, span_notice("Occupation updated."))
-
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	return
 
 // Proc: attack_self()

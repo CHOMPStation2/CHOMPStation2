@@ -26,13 +26,8 @@
 	if(istype(src, /mob/living/simple_mob/animal/passive/mouse) && !T.ckey)
 		// Mice can't eat logged out players!
 		return
-<<<<<<< HEAD
 	/*if(client && IsAdvancedToolUser()) //CHOMPedit: Mob QOL, not everything can be grabbed and nobody wants wiseguy gotchas for trying.
-		to_chat(src, "<span class='warning'>Put your hands to good use instead!</span>")
-=======
-	if(client && IsAdvancedToolUser())
 		to_chat(src, span_warning("Put your hands to good use instead!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	*/
 	feed_grabbed_to_self(src,T)

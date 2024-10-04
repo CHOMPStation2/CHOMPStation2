@@ -194,10 +194,5 @@
 		LAZYCLEARLIST(req_one_access)
 		locked = 0
 		subverted = 1
-<<<<<<< HEAD
-		to_chat(user, "<span class='danger'>You short out the access protocol for the suit.</span>")
-		return 1
-=======
 		to_chat(user, span_danger("You short out the access protocol for the suit."))
 		return 1
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

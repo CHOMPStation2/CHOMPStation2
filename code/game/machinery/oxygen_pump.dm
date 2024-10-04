@@ -30,12 +30,8 @@
 		if(breather.internals)
 			breather.internals.icon_state = "internal0"
 		breather.remove_from_mob(contained)
-<<<<<<< HEAD
 		breather.cozyloop.stop()  // CHOMPStation Add: Cozy Music
-		visible_message("<span class='notice'>\The [contained] rapidly retracts just before /the [src] is destroyed!</span>")
-=======
 		visible_message(span_notice("\The [contained] rapidly retracts just before /the [src] is destroyed!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		breather = null
 
 	QDEL_NULL(tank)
@@ -166,12 +162,8 @@
 				tank.forceMove(src)
 			breather.remove_from_mob(contained)
 			contained.forceMove(src)
-<<<<<<< HEAD
 			breather.cozyloop.stop() // CHOMPStation Add: Cozy Music
-			src.visible_message("<span class='notice'>\The [contained] rapidly retracts back into \the [src]!</span>")
-=======
 			src.visible_message(span_notice("\The [contained] rapidly retracts back into \the [src]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			breather = null
 			update_use_power(USE_POWER_IDLE)
 		else if(!breather.internal && tank)

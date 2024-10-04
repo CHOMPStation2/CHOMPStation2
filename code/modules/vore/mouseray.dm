@@ -391,7 +391,6 @@
 					continue
 				M.drop_from_inventory(W)
 
-<<<<<<< HEAD
 		if(M.tf_form == ourmob)
 			if(M.tf_form_ckey)
 				M.ckey = M.tf_form_ckey
@@ -401,11 +400,7 @@
 			M.forceMove(ourmob)
 		else
 			qdel(target) //CHOMPEdit End
-		firer.visible_message("<span class='notice'>\The [shot_from] boops pleasantly.</span>")
-=======
-		qdel(target)
 		firer.visible_message(span_notice("\The [shot_from] boops pleasantly."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	else
 		firer.visible_message(span_warning("\The [shot_from] buzzes impolitely."))

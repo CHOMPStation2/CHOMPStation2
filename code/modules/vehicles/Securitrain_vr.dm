@@ -182,13 +182,8 @@
 
 	if(is_train_head() && istype(load, /mob/living/carbon/human))
 		var/mob/living/carbon/human/D = load
-<<<<<<< HEAD
-		to_chat(D, "<span class='danger'>You ran over \the [M]!</span>")
-		visible_message("<span class='danger'>\The [src] ran over \the [M]!</span>")
-=======
-		to_chat(D, span_danger("You ran over \the [M]!")
+		to_chat(D, span_danger("You ran over \the [M]!"))
 		visible_message(span_danger("\The [src] ran over \the [M]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		add_attack_logs(D,M,"Ran over with [src.name]")
 		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])")]")
 	else
