@@ -6,7 +6,7 @@
 	var/exit_landmark
 	var/exit_container
 	var/refill_cooldown = 200
-	var/refilling = FALSE
+	var/refilling = FALSE //CHOMPAdd
 
 /obj/structure/toilet/Initialize()
 	if(z in global.using_map.map_levels)
@@ -20,7 +20,7 @@
 	return ..()
 
 /obj/structure/toilet/attack_hand(mob/living/user as mob)
-	if(open && teleplumbed && exit_landmark && !refilling)
+	if(open && teleplumbed && exit_landmark && !refilling) //CHOMPEdit
 		var/list/bowl_contents = list()
 		for(var/obj/item/I in loc.contents)
 			if(istype(I) && !I.anchored)
@@ -29,8 +29,8 @@
 			if(L.resting || L.lying && L.size_multiplier <= 0.75 && !L.buckled)
 				bowl_contents += L
 		if(bowl_contents.len)
-			refilling = TRUE
-			user.visible_message("<span class='notice'>[user] flushes the toilet.</span>", "<span class='notice'>You flush the toilet.</span>")
+			refilling = TRUE  //CHOMPAdd
+			user.visible_message(span_notice("[user] flushes the toilet."), span_notice("You flush the toilet."))
 			playsound(src, 'sound/vore/death7.ogg', 50, 1) //Got lazy about getting new sound files. Have a sick remix lmao.
 			playsound(src, 'sound/effects/bubbles.ogg', 50, 1)
 			playsound(src, 'sound/mecha/powerup.ogg', 30, 1)
@@ -48,11 +48,11 @@
 					if(F.loc == src)
 						F.forceMove(exit_landmark)
 				bowl_contents.Cut()
-				refilling = FALSE
+				refilling = FALSE  //CHOMPAdd
 			return
-	if(refilling)
+	if(refilling) //CHOMPAdd Refilling
 		playsound(src, 'sound/machines/door_locked.ogg', 30, 1)
-		to_chat(user, "<span class='notice'>The toilet is still refilling its tank.</span>")
+		to_chat(user, span_notice("The toilet is still refilling its tank."))
 	return ..()
 
 /obj/structure/toilet/attackby(obj/item/I as obj, mob/living/user as mob)

@@ -362,7 +362,7 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/attackby(obj/item/W as obj, mob/user as mob)
 
 	if (!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		to_chat(user, span_warning("You don't have the dexterity to do this!"))
 		return
 
 	if(!density)
@@ -382,19 +382,19 @@ var/list/mining_overlay_cache = list()
 
 		if(valid_tool)
 			if (sand_dug)
-				to_chat(user, "<span class='warning'>This area has already been dug.</span>")
+				to_chat(user, span_warning("This area has already been dug."))
 				return
 
 			var/turf/T = user.loc
 			if (!(istype(T)))
 				return
 
-			to_chat(user, "<span class='notice'>You start digging.</span>")
+			to_chat(user, span_notice("You start digging."))
 			playsound(user, 'sound/effects/rustle1.ogg', 50, 1)
 
 			if(!do_after(user,digspeed)) return
 
-			to_chat(user, "<span class='notice'>You dug a hole.</span>")
+			to_chat(user, span_notice("You dug a hole."))
 			GetDrilled()
 
 		else if(istype(W,/obj/item/storage/bag/ore))
@@ -435,9 +435,9 @@ var/list/mining_overlay_cache = list()
 
 		if (istype(W, /obj/item/measuring_tape))
 			var/obj/item/measuring_tape/P = W
-			user.visible_message("<b>\The [user]</b> extends \a [P] towards \the [src].","<span class='notice'>You extend \the [P] towards \the [src].</span>")
+			user.visible_message("<b>\The [user]</b> extends \a [P] towards \the [src].",span_notice("You extend \the [P] towards \the [src]."))
 			if(do_after(user, 15))
-				to_chat(user, "<span class='notice'>\The [src] has been excavated to a depth of [excavation_level]cm.</span>")
+				to_chat(user, span_notice("\The [src] has been excavated to a depth of [excavation_level]cm."))
 			return
 
 		if(istype(W, /obj/item/xenoarch_multi_tool))
@@ -445,9 +445,9 @@ var/list/mining_overlay_cache = list()
 			if(C.mode) //Mode means scanning
 				C.depth_scanner.scan_atom(user, src)
 			else
-				user.visible_message("<b>\The [user]</b> extends \the [C] over \the [src], a flurry of red beams scanning \the [src]'s surface!", "<span class='notice'>You extend \the [C] over \the [src], a flurry of red beams scanning \the [src]'s surface!</span>")
+				user.visible_message("<b>\The [user]</b> extends \the [C] over \the [src], a flurry of red beams scanning \the [src]'s surface!", span_notice("You extend \the [C] over \the [src], a flurry of red beams scanning \the [src]'s surface!"))
 				if(do_after(user, 15))
-					to_chat(user, "<span class='notice'>\The [src] has been excavated to a depth of [excavation_level]cm.</span>")
+					to_chat(user, span_notice("\The [src] has been excavated to a depth of [excavation_level]cm."))
 			return
 
 		if (istype(W, /obj/item/melee/shock_maul))
@@ -456,7 +456,7 @@ var/list/mining_overlay_cache = list()
 
 			var/obj/item/melee/shock_maul/S = W
 			if(!S.wielded)	//CHOMPEdit - slight maul buff
-				to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands to be used for mining!</span>")	//CHOMPEdit - fixed improper name
+				to_chat(user, span_warning("\The [W] must be wielded in two hands to be used for mining!"))	//CHOMPEdit - fixed improper name
 				return
 
 			var/newDepth = excavation_level + S.excavation_amount // Used commonly below
@@ -469,9 +469,9 @@ var/list/mining_overlay_cache = list()
 					fail_message = ". <b>[pick("There is a crunching noise","[S] collides with some different rock","Part of the rock face crumbles away","Something breaks under [S]")]</b>"
 					wreckfinds(S.destroy_artefacts)
 
-			to_chat(user, "<span class='notice'>You smash through \the [src][fail_message].</span>")
+			to_chat(user, span_notice("You smash through \the [src][fail_message]."))
 			//CHOMPEdit start - Moved the maul sounds up here and made it not cost energy to mine
-			user.visible_message("<span class='warning'>\The [src] discharges with a thunderous, hair-raising crackle!</span>")
+			user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
 			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
 
 			if(newDepth >= 200) // This means the rock is mined out fully
@@ -512,7 +512,7 @@ var/list/mining_overlay_cache = list()
 				if(newDepth > F.excavation_required) // Digging too deep can break the item. At least you won't summon a Balrog (probably)
 					fail_message = ". <b>[pick("There is a crunching noise","[W] collides with some different rock","Part of the rock face crumbles away","Something breaks under [W]")]</b>"
 					wreckfinds(P.destroy_artefacts)
-			to_chat(user, "<span class='notice'>You start [P.drill_verb][fail_message].</span>")
+			to_chat(user, span_notice("You start [P.drill_verb][fail_message]."))
 
 			if(do_after(user,P.digspeed))
 
@@ -523,7 +523,7 @@ var/list/mining_overlay_cache = list()
 					else if(newDepth > F.excavation_required - F.clearance_range) // Not quite right but you still extract your find, the closer to the bottom the better, but not above 80%
 						excavate_find(prob(80 * (F.excavation_required - newDepth) / F.clearance_range), F)
 
-				to_chat(user, "<span class='notice'>You finish [P.drill_verb] \the [src].</span>")
+				to_chat(user, span_notice("You finish [P.drill_verb] \the [src]."))
 
 				if(newDepth >= 200) // This means the rock is mined out fully
 					if(P.destroy_artefacts)
@@ -654,7 +654,7 @@ var/list/mining_overlay_cache = list()
 		if(prob(50))
 			pain = 1
 		for(var/mob/living/M in range(src, 200))
-			to_chat(M, "<span class='danger'>[pick("A high-pitched [pick("keening","wailing","whistle")]","A rumbling noise like [pick("thunder","heavy machinery")]")] somehow penetrates your mind before fading away!</span>")
+			to_chat(M, span_danger("[pick("A high-pitched [pick("keening","wailing","whistle")]","A rumbling noise like [pick("thunder","heavy machinery")]")] somehow penetrates your mind before fading away!"))
 			if(pain)
 				flick("pain",M.pain)
 				if(prob(50))
@@ -667,7 +667,7 @@ var/list/mining_overlay_cache = list()
 		if(prob(25))
 			excavate_find(prob(5), finds[1])
 	else if(rand(1,500) == 1)
-		visible_message("<span class='notice'>An old dusty crate was buried within!</span>")
+		visible_message(span_notice("An old dusty crate was buried within!"))
 		new /obj/structure/closet/crate/secure/loot(src)
 
 	make_floor()
@@ -699,7 +699,7 @@ var/list/mining_overlay_cache = list()
 		var/obj/effect/suspension_field/S = locate() in src
 		if(!S)
 			if(X)
-				visible_message("<span class='danger'>\The [pick("[display_name] crumbles away into dust","[display_name] breaks apart")].</span>")
+				visible_message(span_danger("\The [pick("[display_name] crumbles away into dust","[display_name] breaks apart")]."))
 				qdel(X)
 
 	finds.Remove(F)
