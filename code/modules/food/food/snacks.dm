@@ -371,12 +371,8 @@
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
 				user.visible_message(span_notice("<b>\The [user]</b> slices \the [src]!"), span_notice("You slice \the [src]!"))
-<<<<<<< HEAD
 				user.balloon_alert_visible("Slices \the [src]", "Sliced \the [src]!") // CHOMPEdit
 	// CHOMPEdit End - A long list of to_chat to balloon_alert
-=======
-
->>>>>>> 26f9164e84... Merge pull request #16420 from Kashargul/camerascreen
 			var/reagents_per_slice = reagents.total_volume/slices_num
 			for(var/i=1 to (slices_num-slices_lost))
 				var/obj/slice = new slice_path (src.loc)

@@ -100,11 +100,7 @@
 	if (istype(W, /obj/item/melee/shock_maul))
 		var/obj/item/melee/shock_maul/S = W
 		if(!S.wielded || !S.status)
-<<<<<<< HEAD
 			to_chat(user, span_warning("\The [S] must be wielded in two hands and powered on to be used to mine this!")) //CHOMPEdit
-=======
-			to_chat(user, span_warning("\The [S] must be wielded in two hands and powered on to be used for mining!"))
->>>>>>> 26f9164e84... Merge pull request #16420 from Kashargul/camerascreen
 			return
 		to_chat(user, span_notice("You pulverize \the [src]!"))
 		for(var/i=0;i<(rand(mindrop,upperdrop));i++)

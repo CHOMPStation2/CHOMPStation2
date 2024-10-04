@@ -582,11 +582,7 @@
 			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
 			formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
 			to_chat(thing, span_vnotice("<B>[formatted_desc]</B>"))
-<<<<<<< HEAD
 		return
-=======
-
->>>>>>> 26f9164e84... Merge pull request #16420 from Kashargul/camerascreen
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
 	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/mmi)) // Prevent reforming causing a lot of log spam/sounds

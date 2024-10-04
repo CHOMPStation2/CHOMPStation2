@@ -154,7 +154,10 @@
 		H.update_inv_l_hand()
 		H.update_inv_belt()
 
-<<<<<<< HEAD
+/obj/item/tvcamera/proc/update_feed()
+	if(camera.status)
+		SEND_SIGNAL(camera, COMSIG_OBSERVER_MOVED) // Forward the movement signal
+
 // CHOMPEdit Start - Bodycam
 // Security Bodycam
 
@@ -322,11 +325,6 @@
 		H.update_inv_l_hand()
 		H.update_inv_belt()
 // CHOMPEdit End
-=======
-/obj/item/tvcamera/proc/update_feed()
-	if(camera.status)
-		SEND_SIGNAL(camera, COMSIG_OBSERVER_MOVED) // Forward the movement signal
->>>>>>> 26f9164e84... Merge pull request #16420 from Kashargul/camerascreen
 
 //Assembly by roboticist
 

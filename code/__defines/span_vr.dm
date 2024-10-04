@@ -77,13 +77,8 @@
 
 #define span_sinister(str) ("<span class='sinister'>" + str + "</span>")
 
-<<<<<<< HEAD
-#define span_reflex_shoot(str) ("<span class='reflex_shoot'>" + str + "</span>")
-
 #define span_wingdings(str) ("<span class='wingdings'>" + str + "</span>") //CHOMPAdd
 
-=======
->>>>>>> 26f9164e84... Merge pull request #16420 from Kashargul/camerascreen
 /* Direct communication spans */
 
 #define span_psay(str) ("<span class='psay'>" + str + "</span>")
