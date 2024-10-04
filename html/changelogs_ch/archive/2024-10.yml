@@ -55,3 +55,21 @@
       allow it.
   TheCaramelion:
   - maptweak: Fixes tape spawning in place of recording tape
+2024-10-04:
+  Asher-42:
+  - qol: swapped chest transparency toggle for proteans to make everything but their
+      head stransparent to allow for a metal shell.
+  CHOMPStation2:
+  - bugfix: Tooltips in the body scanner now work again.
+  - bugfix: The patient monitor/OR console has a scrollbar that works now.
+  - bugfix: Resleeving console OOC notes no longer overflow and a bunch of other random
+      little things
+  - bugfix: Medical records console has a proper scroller now.
+  Kashargul:
+  - bugfix: runtime flood from graffiti and makes them persist properly
+  - bugfix: pitcher plant vore excludes
+  - bugfix: mails have colours again
+  - bugfix: icon overflow on mail
+  - bugfix: nulls being passable after the tgui input selection
+  TheGreatKitsune:
+  - bugfix: Removed ability for ghosts to make sound with bags.

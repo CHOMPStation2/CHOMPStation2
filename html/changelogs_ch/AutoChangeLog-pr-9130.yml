@@ -1,7 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - bugfix: "Tooltips in the body scanner now work again."
-  - bugfix: "The patient monitor/OR console has a scrollbar that works now."
-  - bugfix: "Resleeving console OOC notes no longer overflow and a bunch of other random little things"
-  - bugfix: "Medical records console has a proper scroller now."
