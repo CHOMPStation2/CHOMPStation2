@@ -7,7 +7,7 @@ export type Data = {
   inside: insideData;
   host_mobtype: hostMob;
   our_bellies: bellyData[];
-  selected: selectedData;
+  selected: selectedData | null;
   prefs: prefData;
   soulcatcher: soulcatcherData | null;
   abilities: abilities;

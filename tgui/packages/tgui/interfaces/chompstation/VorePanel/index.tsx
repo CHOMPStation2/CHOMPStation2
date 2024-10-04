@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import { Button, Flex, Icon, NoticeBox, Tabs } from 'tgui/components';
+import { Window } from 'tgui/layouts';
 
-import { useBackend } from '../../../backend';
-import { Button, Flex, Icon, NoticeBox, Tabs } from '../../../components';
-import { Window } from '../../../layouts';
 import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
@@ -162,6 +162,7 @@ export const VorePanel = () => {
     show_pictures,
     icon_overflow,
     host_mobtype,
+    unsaved_changes,
   } = data;
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -172,6 +173,7 @@ export const VorePanel = () => {
     <VoreBellySelectionAndCustomization
       our_bellies={our_bellies}
       selected={selected}
+      unsaved_changes={unsaved_changes}
       show_pictures={show_pictures}
       host_mobtype={host_mobtype}
       icon_overflow={icon_overflow}
@@ -179,6 +181,7 @@ export const VorePanel = () => {
   );
   tabs[1] = (
     <VoreSoulcatcher
+      unsaved_changes={unsaved_changes}
       our_bellies={our_bellies}
       soulcatcher={soulcatcher}
       abilities={abilities}
@@ -186,6 +189,7 @@ export const VorePanel = () => {
   );
   tabs[2] = (
     <VoreUserPreferences
+      unsaved_changes={unsaved_changes}
       prefs={prefs}
       selected={selected}
       show_pictures={show_pictures}
@@ -194,9 +198,9 @@ export const VorePanel = () => {
   );
 
   return (
-    <Window width={990} height={660} theme="abstract">
-      <Window.Content scrollable>
-        {(data.unsaved_changes && (
+    <Window width={1000} height={660} theme="abstract">
+      <Window.Content>
+        {(unsaved_changes && (
           <NoticeBox danger>
             <Flex>
               <Flex.Item basis="90%">Warning: Unsaved Changes!</Flex.Item>
