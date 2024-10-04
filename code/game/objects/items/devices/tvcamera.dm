@@ -299,8 +299,12 @@
 	if(!A || QDELETED(A))
 		show_bodycamera_tvs(loc)
 
-	if(get_dist(get_turf(src), get_turf(A)) > 5)
-		show_bodycamera_tvs(loc)
+	if(get_dist(get_turf(src), get_turf(A)) > 0) // No realtime updates
+		update_feed()
+
+/obj/item/clothing/accessory/bodycam/proc/update_feed()
+	if(bcamera.status)
+		SEND_SIGNAL(bcamera, COMSIG_OBSERVER_MOVED) // Forward the movement signal
 
 /obj/item/clothing/accessory/bodycam/update_icon()
 	..()
