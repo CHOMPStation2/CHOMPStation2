@@ -279,7 +279,7 @@
 	if(m_intent == "run" && step_count++ % 2 != 0)
 		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
 	*/
-	if(shoes && loc == T && has_gravity(loc) && !flying)
+	if(shoes && loc == T && get_gravity(loc) && !flying)
 		if(SEND_SIGNAL(shoes, COMSIG_SHOES_STEP_ACTION, m_intent))	//CHOMPEdit - Shoe step comsig
 			return
 	/*
