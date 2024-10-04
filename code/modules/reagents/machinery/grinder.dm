@@ -45,25 +45,25 @@
 /obj/machinery/reagentgrinder/examine(mob/user)
 	. = ..()
 	if(!in_range(user, src) && !issilicon(user) && !isobserver(user))
-		. += "<span class='warning'>You're too far away to examine [src]'s contents and display!</span>"
+		. += span_warning("You're too far away to examine [src]'s contents and display!")
 		return
 
 	if(inuse)
-		. += "<span class='warning'>\The [src] is operating.</span>"
+		. += span_warning("\The [src] is operating.")
 		return
 
 	if(beaker || length(holdingitems))
-		. += "<span class='notice'>\The [src] contains:</span>"
+		. += span_notice("\The [src] contains:")
 		if(beaker)
-			. += "<span class='notice'>- \A [beaker].</span>"
+			. += span_notice("- \A [beaker].")
 		for(var/obj/item/O as anything in holdingitems)
-			. += "<span class='notice'>- \A [O.name].</span>"
+			. += span_notice("- \A [O.name].")
 
 	if(!(stat & (NOPOWER|BROKEN)))
 		. += "<span class='notice'>The status display reads:</span>\n"
 		if(beaker)
 			for(var/datum/reagent/R in beaker.reagents.reagent_list)
-				. += "<span class='notice'>- [R.volume] units of [R.name].</span>"
+				. += span_notice("- [R.volume] units of [R.name].")
 
 /obj/machinery/reagentgrinder/update_icon()
 	icon_state = "juicer"+num2text(!isnull(beaker))
@@ -296,8 +296,8 @@
 			holdingitems -= S
 			regrets += S.get_amount()
 		SSradiation.radiate(get_turf(src), 15 + regrets)
-		visible_message("<span class=\"warning\">\The [src] glows brightly, bursting into flames and flashing into ash.</span>",\
-		"<span class=\"warning\">You hear an unearthly shriek, burning heat washing over you.</span>")
+		visible_message(span_warning("\The [src] glows brightly, bursting into flames and flashing into ash."),\
+		span_warning("You hear an unearthly shriek, burning heat washing over you."))
 		new /obj/effect/decal/cleanable/ash(src.loc)
 		qdel(src)
 // CHOMPedit end

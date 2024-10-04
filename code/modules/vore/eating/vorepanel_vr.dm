@@ -1817,7 +1817,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("move_belly")
 			var/dir = text2num(params["dir"])
 			if(LAZYLEN(host.vore_organs) <= 1)
-				to_chat(usr, "<span class='warning'>You can't sort bellies with only one belly to sort...</span>")
+				to_chat(usr, span_warning("You can't sort bellies with only one belly to sort..."))
 				return TRUE
 
 			var/current_index = host.vore_organs.Find(host.vore_selected)
@@ -1842,7 +1842,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!host.save_vore_prefs())
 				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to save!","Error")
 			else
-				to_chat(usr, "<span class='notice'>Chomp-specific preferences saved!</span>")
+				to_chat(usr, span_notice("Chomp-specific preferences saved!"))
 				unsaved_changes = FALSE
 			return TRUE
 		if("reloadprefs")
@@ -1852,7 +1852,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!host.apply_vore_prefs())
 				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to apply!","Error")
 			else
-				to_chat(usr,"<span class='notice'>Chomp-specific preferences applied from active slot!</span>")
+				to_chat(usr,span_notice("Chomp-specific preferences applied from active slot!"))
 				unsaved_changes = FALSE
 			return TRUE
 		if("loadprefsfromslot")
@@ -1862,14 +1862,14 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(!host.load_vore_prefs_from_slot())
 				tgui_alert_async(usr, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
 			else
-				to_chat(usr,"<span class='notice'>Vore-specific preferences applied from active slot!</span>") //CHOMPEdit
+				to_chat(usr,span_notice("Vore-specific preferences applied from active slot!")) //CHOMPEdit
 				unsaved_changes = TRUE
 			return TRUE
 		//CHOMPEdit - "Belly HTML Export Earlyport"
 		if("exportpanel")
 			var/mob/living/user = usr
 			if(!user)
-				to_chat(usr,"<span class='notice'>Mob undefined: [user]</span>")
+				to_chat(usr,span_notice("Mob undefined: [user]"))
 				return FALSE
 
 			var/datum/vore_look/export_panel/exportPanel
@@ -1877,7 +1877,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				exportPanel = new(usr)
 
 			if(!exportPanel)
-				to_chat(user,"<span class='notice'>Export panel undefined: [exportPanel]</span>")
+				to_chat(user,span_notice("Export panel undefined: [exportPanel]"))
 				return FALSE
 
 			exportPanel.open_export_panel(user)
@@ -2414,7 +2414,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		if("Use Hand")
 			if(host.stat)
-				to_chat(user, "<span class='warning'>You can't do that in your state!</span>")
+				to_chat(user, span_warning("You can't do that in your state!"))
 				return TRUE
 
 			host.ClickOn(target)
@@ -2427,43 +2427,43 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	switch(intent)
 		if("Help Out") //Help the inside-mob out
 			if(host.stat || host.absorbed || M.absorbed)
-				to_chat(user, "<span class='warning'>You can't do that in your state!</span>")
+				to_chat(user, span_warning("You can't do that in your state!"))
 				return TRUE
 
 			to_chat(user,"<span vnotice>[span_green("You begin to push [M] to freedom!")]</span>")
 			to_chat(M,"<span vnotice>[host] begins to push you to freedom!</span>")
-			to_chat(OB.owner,"<span class='vwarning'>Someone is trying to escape from inside you!</span>")
+			to_chat(OB.owner,span_vwarning("Someone is trying to escape from inside you!"))
 			sleep(50)
 			if(prob(33))
 				OB.release_specific_contents(M)
 				to_chat(user,"<span vnotice>[span_green("You manage to help [M] to safety!")]</span>")
 				to_chat(M, "<span vnotice>[span_green("[host] pushes you free!")]</span>")
-				to_chat(OB.owner,"<span class='valert'>[M] forces free of the confines of your body!</span>")
+				to_chat(OB.owner,span_valert("[M] forces free of the confines of your body!"))
 			else
-				to_chat(user,"<span class='valert'>[M] slips back down inside despite your efforts.</span>")
-				to_chat(M,"<span class='valert'> Even with [host]'s help, you slip back inside again.</span>")
+				to_chat(user,span_valert("[M] slips back down inside despite your efforts."))
+				to_chat(M,span_valert(" Even with [host]'s help, you slip back inside again."))
 				to_chat(OB.owner,"<span vnotice>[span_green("Your body efficiently shoves [M] back where they belong.")]</span>")
 			return TRUE
 
 		if("Devour") //Eat the inside mob
 			if(host.absorbed || host.stat)
-				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				to_chat(user,span_warning("You can't do that in your state!"))
 				return TRUE
 
 			if(!host.vore_selected)
-				to_chat(user,"<span class='warning'>Pick a belly on yourself first!</span>")
+				to_chat(user,span_warning("Pick a belly on yourself first!"))
 				return TRUE
 
 			var/obj/belly/TB = host.vore_selected
-			to_chat(user,"<span class='vwarning'>You begin to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>")
-			to_chat(M,"<span class='vwarning'>[host] begins to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>")
-			to_chat(OB.owner,"<span class='vwarning'>Someone inside you is eating someone else!</span>")
+			to_chat(user,span_vwarning("You begin to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!"))
+			to_chat(M,span_vwarning("[host] begins to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!"))
+			to_chat(OB.owner,span_vwarning("Someone inside you is eating someone else!"))
 
 			sleep(TB.nonhuman_prey_swallow_time) //Can't do after, in a stomach, weird things abound.
 			if((host in OB) && (M in OB)) //Make sure they're still here.
-				to_chat(user,"<span class='vwarning'>You manage to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!</span>")
-				to_chat(M,"<span class='vwarning'>[host] manages to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!</span>")
-				to_chat(OB.owner,"<span class='vwarning'>Someone inside you has eaten someone else!</span>")
+				to_chat(user,span_vwarning("You manage to [lowertext(TB.vore_verb)] [M] into your [lowertext(TB.name)]!"))
+				to_chat(M,span_vwarning("[host] manages to [lowertext(TB.vore_verb)] you into their [lowertext(TB.name)]!"))
+				to_chat(OB.owner,span_vwarning("Someone inside you has eaten someone else!"))
 				if(M.absorbed)
 					M.absorbed = FALSE
 					OB.handle_absorb_langs(M, OB.owner)
@@ -2481,7 +2481,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 			if("Eject all")
 				if(host.stat)
-					to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+					to_chat(user,span_warning("You can't do that in your state!"))
 					return TRUE
 
 				host.vore_selected.release_all_contents()
@@ -2489,7 +2489,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 			if("Move all")
 				if(host.stat)
-					to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+					to_chat(user,span_warning("You can't do that in your state!"))
 					return TRUE
 
 				var/obj/belly/choice = tgui_input_list(user, "Move all where?","Select Belly", host.vore_organs)
@@ -2497,9 +2497,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					return FALSE
 
 				for(var/atom/movable/target in host.vore_selected)
-					to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
+					to_chat(target,span_vwarning("You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!"))
 					//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
-					to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
+					to_chat(host.vore_selected.get_belly_surrounding(target.contents),span_warning("You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!"))
 					host.vore_selected.transfer_contents(target, choice, 1)
 				return TRUE
 		return
@@ -2534,7 +2534,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		if("Eject")
 			if(host.stat)
-				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				to_chat(user,span_warning("You can't do that in your state!"))
 				return TRUE
 
 			host.vore_selected.release_specific_contents(target)
@@ -2542,20 +2542,20 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		if("Move")
 			if(host.stat)
-				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				to_chat(user,span_warning("You can't do that in your state!"))
 				return TRUE
 			var/obj/belly/choice = tgui_input_list(user, "Move [target] where?","Select Belly", host.vore_organs) //ChompEDIT - user, not usr
 			if(!choice || !(target in host.vore_selected))
 				return TRUE
-			to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+			to_chat(target,span_vwarning("You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!"))
 			//CHOMPAdd - Send the transfer message to indirect targets as well. Slightly different message because why not.
-			to_chat(host.vore_selected.get_belly_surrounding(target.contents),"<span class='warning'>You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!</span>")
+			to_chat(host.vore_selected.get_belly_surrounding(target.contents),span_warning("You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!"))
 			host.vore_selected.transfer_contents(target, choice)
 
 
 		if("Transfer")
 			if(host.stat)
-				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				to_chat(user,span_warning("You can't do that in your state!"))
 				return TRUE
 
 			var/mob/living/belly_owner = host
@@ -2566,7 +2566,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(candidate.vore_organs.len && candidate.feeding && !candidate.no_vore)
 						viable_candidates += candidate
 			if(!viable_candidates.len)
-				to_chat(user, "<span class='notice'>There are no viable candidates around you!</span>")
+				to_chat(user, span_notice("There are no viable candidates around you!"))
 				return TRUE
 			belly_owner = tgui_input_list(user, "Who do you want to receive the target?", "Select Predator", viable_candidates)
 
@@ -2578,24 +2578,24 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return TRUE
 
 			if(belly_owner != host)
-				to_chat(user, "<span class='vnotice'>Transfer offer sent. Await their response.</span>")
+				to_chat(user, span_vnotice("Transfer offer sent. Await their response."))
 				var/accepted = tgui_alert(belly_owner, "[host] is trying to transfer [target] from their [lowertext(host.vore_selected.name)] into your [lowertext(choice.name)]. Do you accept?", "Feeding Offer", list("Yes", "No"))
 				if(accepted != "Yes")
-					to_chat(user, "<span class='vwarning'>[belly_owner] refused the transfer!!</span>")
+					to_chat(user, span_vwarning("[belly_owner] refused the transfer!!"))
 					return TRUE
 				if(!belly_owner || !(belly_owner in range(1, host)))
 					return TRUE
-				to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to [belly_owner]'s [lowertext(choice.name)]!</span>")
-				to_chat(belly_owner,"<span class='vwarning'>[target] is squished from [host]'s [lowertext(host.vore_selected.name)] to your [lowertext(choice.name)]!</span>")
+				to_chat(target,span_vwarning("You're squished from [host]'s [lowertext(host.vore_selected.name)] to [belly_owner]'s [lowertext(choice.name)]!"))
+				to_chat(belly_owner,span_vwarning("[target] is squished from [host]'s [lowertext(host.vore_selected.name)] to your [lowertext(choice.name)]!"))
 				host.vore_selected.transfer_contents(target, choice)
 			else
-				to_chat(target,"<span class='vwarning'>You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!</span>")
+				to_chat(target,span_vwarning("You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!"))
 				host.vore_selected.transfer_contents(target, choice)
 			return TRUE
 
 		if("Transform")
 			if(host.stat)
-				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				to_chat(user,span_warning("You can't do that in your state!"))
 				return TRUE
 
 			var/mob/living/carbon/human/H = target
@@ -2609,22 +2609,22 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		//CHOMPEdit Begin - Add Reforming
 		if("Reform")
 			if(host.stat)
-				to_chat(user,"<span class='warning'>You can't do that in your state!</span>")
+				to_chat(user,span_warning("You can't do that in your state!"))
 				return TRUE
 
 			if(isobserver(target))
 				var/mob/observer/T = target
 				if(!ismob(T.body_backup) || prevent_respawns.Find(T.mind.name) || ispAI(T.body_backup))
-					to_chat(user,"<span class='warning'>They don't seem to be reformable!</span>")
+					to_chat(user,span_warning("They don't seem to be reformable!"))
 					return TRUE
 
 				var/accepted = tgui_alert(T, "[host] is trying to reform your body! Would you like to get reformed inside [host]'s [lowertext(host.vore_selected.name)]?", "Reforming Attempt", list("Yes", "No"))
 				if(accepted != "Yes")
-					to_chat(user,"<span class='warning'>[T] refused to be reformed!</span>")
+					to_chat(user,span_warning("[T] refused to be reformed!"))
 					return TRUE
 				if(!isbelly(T.loc))
-					to_chat(user,"<span class='warning'>[T] is no longer inside to be reformed!</span>")
-					to_chat(T,"<span class='warning'>You can't be reformed outside of a belly!</span>")
+					to_chat(user,span_warning("[T] is no longer inside to be reformed!"))
+					to_chat(T,span_warning("You can't be reformed outside of a belly!"))
 					return TRUE
 
 				if(isliving(T.body_backup))
@@ -2685,11 +2685,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			else if(istype(target,/obj/item/mmi)) // A good bit of repeated code, sure, but... cleanest way to do this.
 				var/obj/item/mmi/MMI = target
 				if(!ismob(MMI.body_backup) || !MMI.brainmob.mind || prevent_respawns.Find(MMI.brainmob.mind.name))
-					to_chat(user,"<span class='warning'>They don't seem to be reformable!</span>")
+					to_chat(user,span_warning("They don't seem to be reformable!"))
 					return TRUE
 				var/accepted = tgui_alert(MMI.brainmob, "[host] is trying to reform your body! Would you like to get reformed inside [host]'s [lowertext(host.vore_selected.name)]?", "Reforming Attempt", list("Yes", "No"))
 				if(accepted != "Yes")
-					to_chat(user,"<span class='warning'>[MMI] refused to be reformed!</span>")
+					to_chat(user,span_warning("[MMI] refused to be reformed!"))
 					return TRUE
 
 				if(isliving(MMI.body_backup))
@@ -2759,7 +2759,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		if("Health")
 			var/mob/living/ourtarget = target
-			to_chat(user, "<span class='notice'>Current health reading for \The [ourtarget]: [ourtarget.health] / [ourtarget.maxHealth] </span>")
+			to_chat(user, span_notice("Current health reading for \The [ourtarget]: [ourtarget.health] / [ourtarget.maxHealth] "))
 			return TRUE
 		//CHOMPEdit End
 		if("Process")
@@ -2980,10 +2980,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			if(new_egg_size == 0) //Disable.
 				host.vore_selected.egg_size = 0
-				to_chat(user,"<span class='notice'>Eggs will automatically calculate size depending on contents.</span>")
+				to_chat(user,span_notice("Eggs will automatically calculate size depending on contents."))
 			else if (!ISINRANGE(new_egg_size,25,200))
 				host.vore_selected.egg_size = 0.25 //Set it to the default.
-				to_chat(user,"<span class='notice'>Invalid size.</span>")
+				to_chat(user,span_notice("Invalid size."))
 			else if(new_egg_size)
 				host.vore_selected.egg_size = (new_egg_size/100)
 			. = TRUE
@@ -3509,10 +3509,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			if(new_bulge == 0) //Disable.
 				host.vore_selected.bulge_size = 0
-				to_chat(user,"<span class='notice'>Your stomach will not be seen on examine.</span>")
+				to_chat(user,span_notice("Your stomach will not be seen on examine."))
 			else if (!ISINRANGE(new_bulge,25,200))
 				host.vore_selected.bulge_size = 0.25 //Set it to the default.
-				to_chat(user,"<span class='notice'>Invalid size.</span>")
+				to_chat(user,span_notice("Invalid size."))
 			else if(new_bulge)
 				host.vore_selected.bulge_size = (new_bulge/100)
 			. = TRUE
@@ -3525,7 +3525,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			if (!ISINRANGE(new_grow,25,200))
 				host.vore_selected.shrink_grow_size = 1 //Set it to the default
-				to_chat(user,"<span class='notice'>Invalid size.</span>")
+				to_chat(user,span_notice("Invalid size."))
 			else if(new_grow)
 				host.vore_selected.shrink_grow_size = (new_grow*0.01)
 			. = TRUE
@@ -3602,10 +3602,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_escapable")
 			if(host.vore_selected.escapable == 0) //Possibly escapable and special interactions.
 				host.vore_selected.escapable = 1
-				to_chat(user,"<span class='warning'>Prey now have special interactions with your [lowertext(host.vore_selected.name)] depending on your settings.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Prey now have special interactions with your [lowertext(host.vore_selected.name)] depending on your settings.")) //ChompEDIT - user, not usr
 			else if(host.vore_selected.escapable == 1) //Never escapable.
 				host.vore_selected.escapable = 0
-				to_chat(user,"<span class='warning'>Prey will not be able to have special interactions with your [lowertext(host.vore_selected.name)].</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Prey will not be able to have special interactions with your [lowertext(host.vore_selected.name)].")) //ChompEDIT - user, not usr
 			else
 				tgui_alert_async(user, "Something went wrong. Your stomach will now not have special interactions. Press the button enable them again and tell a dev.","Error") //If they somehow have a varable that's not 0 or 1 //ChompEDIT - user, not usr
 				host.vore_selected.escapable = 0
@@ -4038,18 +4038,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_show_liq")
 			if(!host.vore_selected.show_liquids)
 				host.vore_selected.show_liquids = 1
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid options.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] now has liquid options.")) //ChompEDIT - user, not usr
 			else
 				host.vore_selected.show_liquids = 0
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid options.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] no longer has liquid options.")) //ChompEDIT - user, not usr
 			. = TRUE
 		if("b_liq_reagent_gen")
 			if(!host.vore_selected.reagentbellymode) //liquid container adjustments and interactions.
 				host.vore_selected.reagentbellymode = 1
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has interactions which can produce liquids.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] now has interactions which can produce liquids.")) //ChompEDIT - user, not usr
 			else //Doesnt produce liquids
 				host.vore_selected.reagentbellymode = 0
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] wont produce liquids, liquids already in your [lowertext(host.vore_selected.name)] must be emptied out or removed with purge.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] wont produce liquids, liquids already in your [lowertext(host.vore_selected.name)] must be emptied out or removed with purge.")) //ChompEDIT - user, not usr
 			. = TRUE
 		if("b_liq_reagent_type")
 			var/list/menu_list = host.vore_selected.reagent_choices.Copy() //Useful if we want to make certain races, synths, borgs, and other things result in additional reagents to produce - Jack
@@ -4108,10 +4108,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_liq_sloshing")
 			if(!host.vore_selected.vorefootsteps_sounds)
 				host.vore_selected.vorefootsteps_sounds = 1
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] can now make sounds when you walk around depending on how full you are.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] can now make sounds when you walk around depending on how full you are.")) //ChompEDIT - user, not usr
 			else
 				host.vore_selected.vorefootsteps_sounds = 0
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] wont make any liquid sounds no matter how full it is.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] wont make any liquid sounds no matter how full it is.")) //ChompEDIT - user, not usr
 			. = TRUE
 		if("b_liq_reagent_addons")
 			var/list/menu_list = host.vore_selected.reagent_mode_flag_list.Copy()
@@ -4123,10 +4123,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_liquid_overlay")
 			if(!host.vore_selected.liquid_overlay)
 				host.vore_selected.liquid_overlay = 1
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid overlay enabled.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] now has liquid overlay enabled.")) //ChompEDIT - user, not usr
 			else
 				host.vore_selected.liquid_overlay = 0
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid overlay enabled.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] no longer has liquid overlay enabled.")) //ChompEDIT - user, not usr
 			. = TRUE
 		if("b_max_liquid_level")
 			var/new_max_liquid_level = input(user, "Set custom maximum liquid level. 0-100%", "Set Custom Max Level.", host.vore_selected.max_liquid_level) as num|null
@@ -4155,18 +4155,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_reagent_touches")
 			if(!host.vore_selected.reagent_touches)
 				host.vore_selected.reagent_touches = 1
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] will now apply reagents to creatures when digesting.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] will now apply reagents to creatures when digesting.")) //ChompEDIT - user, not usr
 			else
 				host.vore_selected.reagent_touches = 0
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] will no longer apply reagents to creatures when digesting.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] will no longer apply reagents to creatures when digesting.")) //ChompEDIT - user, not usr
 			. = TRUE
 		if("b_mush_overlay")
 			if(!host.vore_selected.mush_overlay)
 				host.vore_selected.mush_overlay = 1
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has fullness overlay enabled.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] now has fullness overlay enabled.")) //ChompEDIT - user, not usr
 			else
 				host.vore_selected.mush_overlay = 0
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has fullness overlay enabled.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] no longer has fullness overlay enabled.")) //ChompEDIT - user, not usr
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_mush_color")
@@ -4208,10 +4208,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_metabolism_overlay")
 			if(!host.vore_selected.metabolism_overlay)
 				host.vore_selected.metabolism_overlay = 1
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has ingested metabolism overlay enabled.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] now has ingested metabolism overlay enabled.")) //ChompEDIT - user, not usr
 			else
 				host.vore_selected.metabolism_overlay = 0
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has ingested metabolism overlay enabled.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] no longer has ingested metabolism overlay enabled.")) //ChompEDIT - user, not usr
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_metabolism_mush_ratio")
@@ -4264,10 +4264,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_show_liq_fullness")
 			if(!host.vore_selected.show_fullness_messages)
 				host.vore_selected.show_fullness_messages = 1
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] now has liquid examination options.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] now has liquid examination options.")) //ChompEDIT - user, not usr
 			else
 				host.vore_selected.show_fullness_messages = 0
-				to_chat(user,"<span class='warning'>Your [lowertext(host.vore_selected.name)] no longer has liquid examination options.</span>") //ChompEDIT - user, not usr
+				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] no longer has liquid examination options.")) //ChompEDIT - user, not usr
 			. = TRUE
 		if("b_liq_msg_toggle1")
 			host.vore_selected.liquid_fullness1_messages = !host.vore_selected.liquid_fullness1_messages

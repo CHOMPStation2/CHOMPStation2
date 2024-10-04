@@ -161,7 +161,7 @@
 	if(in_range(user, src) || istype(user, /mob/observer/dead))
 		show_content(usr)
 	else
-		. += "<span class='notice'>You have to go closer if you want to read it.</span>"
+		. += span_notice("You have to go closer if you want to read it.")
 
 /obj/item/paper/proc/show_content(var/mob/user, var/forceshow=0)
 	if(!(forceshow || (istype(user, /mob/living/carbon/human) || istype(user, /mob/observer/dead) || istype(user, /mob/living/silicon) || (istype(user) && user.universal_understand))))
@@ -177,7 +177,7 @@
 	set src in usr
 
 	if((CLUMSY in usr.mutations) && prob(50))
-		to_chat(usr, "<span class='warning'>You cut yourself on the paper.</span>")
+		to_chat(usr, span_warning("You cut yourself on the paper."))
 		return
 	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the paper?", "Paper Labelling", null, MAX_NAME_LEN), MAX_NAME_LEN)
 
@@ -193,7 +193,7 @@
 /obj/item/paper/attack_self(mob/living/user as mob)
 	if(user.a_intent == I_HURT)
 		if(icon_state == "scrap")
-			user.show_message("<span class='warning'>\The [src] is already crumpled.</span>")
+			user.show_message(span_warning("\The [src] is already crumpled."))
 			return
 		//crumple dat paper
 		info = stars(info,85)
@@ -226,8 +226,8 @@
 
 /obj/item/paper/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 	if(user.zone_sel.selecting == O_EYES)
-		user.visible_message("<span class='notice'>You show the paper to [M]. </span>", \
-			"<span class='notice'> [user] holds up a paper and shows it to [M]. </span>")
+		user.visible_message(span_notice("You show the paper to [M]. "), \
+			span_notice(" [user] holds up a paper and shows it to [M]. "))
 		M.examinate(src)
 
 	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping and paper eating
@@ -235,32 +235,32 @@
 			var/mob/living/carbon/human/H = M
 			if(H == user)
 				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
-					user << "<span class='warning'>You begin to stuff \the [src] into your mouth!</span>"
+					user << span_warning("You begin to stuff \the [src] into your mouth!")
 					if(do_after(user, 30))
-						user << "<span class='warning'>You stuff \the [src] into your mouth!</span>"
+						user << span_warning("You stuff \the [src] into your mouth!")
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
 						qdel(src)
 				else
-					user << "<span class='notice'>You wipe off the lipstick with [src].</span>"
+					user << span_notice("You wipe off the lipstick with [src].")
 					H.lip_style = null
 					H.update_icons_body()
 			else
 				if(icon_state == "scrap" && H.check_has_mouth())
-					user.visible_message("<span class='warning'>[user] begins to stuff \the [src] into [H]'s mouth!</span>", \
-										 "<span class='warning'>You begin to stuff \the [src] into [H]'s mouth!</span>",)
+					user.visible_message(span_warning("[user] begins to stuff \the [src] into [H]'s mouth!"), \
+										 span_warning("You begin to stuff \the [src] into [H]'s mouth!"),)
 					if(do_after(user, 30, H))
-						user.visible_message("<span class='warning'>[user] stuffs \the [src] into [H]'s mouth!</span>",\
-											 "<span class='warning'>You stuff \the [src] into [H]'s mouth!</span>")
+						user.visible_message(span_warning("[user] stuffs \the [src] into [H]'s mouth!"),\
+											 span_warning("You stuff \the [src] into [H]'s mouth!"))
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
 						qdel(src)
 				else
-					user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
-								 	 "<span class='notice'>You begin to wipe off [H]'s lipstick.</span>")
+					user.visible_message(span_warning("[user] begins to wipe [H]'s lipstick off with \the [src]."), \
+								 	 span_notice("You begin to wipe off [H]'s lipstick."))
 					if(do_after(user, 10, H))
-						user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
-										 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
+						user.visible_message(span_notice("[user] wipes [H]'s lipstick off with \the [src]."), \
+										 span_notice("You wipe off [H]'s lipstick."))
 						H.lip_style = null
 						H.update_icons_body() //YW Edit End
 
@@ -453,7 +453,7 @@
 		//var/t = strip_html_simple(input(usr, "What text do you wish to add to " + (id=="end" ? "the end of the paper" : "field "+id) + "?", "[name]", null),8192) as message
 
 		if(free_space <= 0)
-			to_chat(usr, "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>")
+			to_chat(usr, span_info("There isn't enough space left on \the [src] to write anything."))
 			return
 
 		var/raw = tgui_input_text(usr, "Enter what you want to write:", "Write", multiline = TRUE, prevent_enter = TRUE)
@@ -514,7 +514,7 @@
 
 
 		if(fields > 50)//large amount of fields creates a heavy load on the server, see updateinfolinks() and addtofield()
-			to_chat(usr, "<span class='warning'>Too many fields. Sorry, you can't do this.</span>")
+			to_chat(usr, span_warning("Too many fields. Sorry, you can't do this."))
 			fields = last_fields_value
 			return
 
@@ -557,20 +557,20 @@
 		src.loc = CB
 		CB.toppaper = src
 		CB.update_icon()
-		to_chat(user, "<span class='notice'>You clip the [src] onto \the [CB].</span>")
+		to_chat(user, span_notice("You clip the [src] onto \the [CB]."))
 
 	if(istype(P, /obj/item/folder))
 		if(src.loc == user)
 			user.drop_from_inventory(src)
 		src.loc = P
 		P.update_icon()
-		to_chat(user, "<span class='notice'>You tuck the [src] into \the [P].</span>")
+		to_chat(user, span_notice("You tuck the [src] into \the [P]."))
 
 	if(istype(P, /obj/item/paper) || istype(P, /obj/item/photo))
 		if (istype(P, /obj/item/paper/carbon))
 			var/obj/item/paper/carbon/C = P
 			if (!C.iscopy && !C.copied)
-				to_chat(user, "<span class='notice'>Take off the carbon copy first.</span>")
+				to_chat(user, span_notice("Take off the carbon copy first."))
 				add_fingerprint(user)
 				return
 		var/obj/item/paper_bundle/B = new(src.loc)
@@ -602,7 +602,7 @@
 				src.loc = get_turf(h_user)
 				if(h_user.client)	h_user.client.screen -= src
 				h_user.put_in_hands(B)
-		to_chat(user, "<span class='notice'>You clip the [P.name] to [(src.name == "paper") ? "the paper" : src.name].</span>")
+		to_chat(user, span_notice("You clip the [P.name] to [(src.name == "paper") ? "the paper" : src.name]."))
 		src.loc = B
 		P.loc = B
 
@@ -612,7 +612,7 @@
 
 	else if(istype(P, /obj/item/pen))
 		if(icon_state == "scrap")
-			to_chat(usr, "<span class='warning'>\The [src] is too crumpled to write on.</span>")
+			to_chat(usr, span_warning("\The [src] is too crumpled to write on."))
 			return
 
 		var/obj/item/pen/robopen/RP = P
@@ -652,7 +652,7 @@
 
 		if(istype(P, /obj/item/stamp/clown))
 			if(!clown)
-				to_chat(user, "<span class='notice'>You are totally unable to use the stamp. HONK!</span>")
+				to_chat(user, span_notice("You are totally unable to use the stamp. HONK!"))
 				return
 
 		if(!ico)
@@ -666,7 +666,7 @@
 		add_overlay(stampoverlay)
 
 		playsound(src, 'sound/bureaucracy/stamp.ogg', 50, 1)
-		to_chat(user, "<span class='notice'>You stamp the paper with your rubber stamp.</span>")
+		to_chat(user, span_notice("You stamp the paper with your rubber stamp."))
 
 	else if(istype(P, /obj/item/flame))
 		burnpaper(P, user)
