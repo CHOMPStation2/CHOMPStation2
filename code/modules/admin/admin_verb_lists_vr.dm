@@ -129,8 +129,12 @@ var/list/admin_verbs_admin = list(
 	/client/proc/removetickets,
 	/client/proc/delbook,
 	/client/proc/toggle_spawning_with_recolour,
+<<<<<<< HEAD
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
+=======
+	/client/proc/start_vote
+>>>>>>> 4f2057e05a... Merge pull request #16421 from TheCaramelion/TGUI-Vote-Fix
 	)
 
 var/list/admin_verbs_ban = list(
@@ -427,9 +431,13 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
+<<<<<<< HEAD
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
+=======
+	/client/proc/start_vote
+>>>>>>> 4f2057e05a... Merge pull request #16421 from TheCaramelion/TGUI-Vote-Fix
 )
 
 var/list/admin_verbs_event_manager = list(
@@ -573,10 +581,14 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
+<<<<<<< HEAD
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
+=======
+	/client/proc/start_vote
+>>>>>>> 4f2057e05a... Merge pull request #16421 from TheCaramelion/TGUI-Vote-Fix
 
 )
 
