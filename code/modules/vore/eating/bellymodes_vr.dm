@@ -286,13 +286,12 @@
 			did_an_item = digest_item(I, touchable_amount) //CHOMPEdit
 	return did_an_item
 
-<<<<<<< HEAD
 /obj/belly/proc/handle_digestion_death(mob/living/M, instant = FALSE) //CHOMPEdit
 	if(!instant && slow_digestion) //CHOMPAdd Start: Gradual corpse digestion
 		if(!M.digestion_in_progress)
 			M.digestion_in_progress = TRUE
 			if(M.health > -36 || (ishuman(M) && M.health > -136))
-				to_chat(M, "<span class='vnotice'>(Your predator has enabled gradual body digestion. Stick around for a second round of churning to reach the true finisher.)</span>")
+				to_chat(M, span_vnotice("(Your predator has enabled gradual body digestion. Stick around for a second round of churning to reach the true finisher.)"))
 		if(M.health < M.maxHealth * -1) //Siplemobs etc
 			if(ishuman(M))
 				if(M.health < (M.maxHealth * -1) -100) //Spacemans can go much deeper. Jank but maxHealth*-2 doesn't work with flat standard -100hp death threshold.
@@ -317,13 +316,8 @@
 				M.digestion_in_progress = FALSE
 		if(M.digestion_in_progress)
 			return //CHOMPAdd End
-	var/digest_alert_owner = pick(digest_messages_owner)
-	var/digest_alert_prey = pick(digest_messages_prey)
-=======
-/obj/belly/proc/handle_digestion_death(mob/living/M)
 	var/digest_alert_owner = span_vnotice(belly_format_string(digest_messages_owner, M))
 	var/digest_alert_prey = span_vnotice(belly_format_string(digest_messages_prey, M))
->>>>>>> 4946fc0d5e... Merge pull request #16417 from ShadowLarkens/vore_messages
 	var/compensation = M.maxHealth / 5 //Dead body bonus.
 	if(ishuman(M))
 		compensation += M.getOxyLoss() //How much of the prey's damage was caused by passive crit oxyloss to compensate the lost nutrition.
