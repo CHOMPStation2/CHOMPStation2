@@ -599,7 +599,7 @@
 		return SURGERY_FAILURE
 
 	if(!(affected.model != "Skrellian Exoskeleton"))
-		to_chat(user, span_dangerou("You're fairly certain a nymph can't pilot a normal robot."))
+		to_chat(user, span_danger("You're fairly certain a nymph can't pilot a normal robot."))
 		user.balloon_alert(user, "You're fairly certain a nymph can't pilot a normal robot") // CHOMPEdit
 		return SURGERY_FAILURE
 

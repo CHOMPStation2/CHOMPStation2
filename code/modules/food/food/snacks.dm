@@ -370,7 +370,7 @@
 				user.balloon_alert_visible("Crudely slices \the [src]", "Crudely sliced \the [src]") // CHOMPEdit
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
-				user.visible_message(span_notice_boldnotice("\The [user]</b> slices \the [src]!"), span_notice("You slice \the [src]!"))
+				user.visible_message(span_boldnotice("\The [user]</b> slices \the [src]!"), span_notice("You slice \the [src]!"))
 				user.balloon_alert_visible("Slices \the [src]", "Sliced \the [src]!") // CHOMPEdit
 	// CHOMPEdit End - A long list of to_chat to balloon_alert
 			var/reagents_per_slice = reagents.total_volume/slices_num

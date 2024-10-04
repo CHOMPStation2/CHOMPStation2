@@ -565,11 +565,11 @@
 		return FALSE
 
 	if(has_modifier_of_type(/datum/modifier/dark_respite))
-		to_chat(src, span_Notice("You stop focusing the Dark on healing yourself."))
+		to_chat(src, span_notice("You stop focusing the Dark on healing yourself."))
 		SK.manual_respite = FALSE
 		remove_a_modifier_of_type(/datum/modifier/dark_respite)
 		return TRUE
-	to_chat(src, span_Notice("You start focusing the Dark on healing yourself. (Leave the dark or trigger the ability again to end this.)"))
+	to_chat(src, span_notice("You start focusing the Dark on healing yourself. (Leave the dark or trigger the ability again to end this.)"))
 	SK.manual_respite = TRUE
 	add_modifier(/datum/modifier/dark_respite)
 	return TRUE
