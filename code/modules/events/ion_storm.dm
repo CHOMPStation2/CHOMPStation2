@@ -55,7 +55,7 @@
 		if(target.deployed_shell)
 			var/mob/living/silicon/robot/shell = target.deployed_shell
 			if(!shell.emagged) // emagged ignores law updates
-				to_chat(shell, "<span class='danger'>You have detected a change in your laws information:</span>")
+				to_chat(shell, span_danger("You have detected a change in your laws information:"))
 				to_chat(shell, law)
 				var/org_lu = shell.lawupdate // force a law update due to controlling AI being changed
 				shell.lawupdate = TRUE
@@ -63,7 +63,7 @@
 				shell.lawupdate = org_lu
 				shell.show_laws()
 		else
-			to_chat(target, "<span class='danger'>You have detected a change in your laws information:</span>")
+			to_chat(target, span_danger("You have detected a change in your laws information:"))
 			to_chat(target, law)
 			target.show_laws()
 		ionBorgs = FALSE
