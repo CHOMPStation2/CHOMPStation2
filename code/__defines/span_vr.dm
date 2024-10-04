@@ -1,5 +1,8 @@
 // Sorted by however I felt like it
-// We have two other ways of doing this, so why not a third. This one atleast has more span options.
+
+// Adds a generic box around whatever message you're sending in chat. Really makes things stand out.
+#define examine_block(str) ("<div class='examine_block'>" + str + "</div>")
+
 #define span_ooc(str) ("<span class='ooc'>" + str + "</span>")
 #define span_looc(str) ("<span class='looc'>" + str + "</span>")
 #define span_rlooc(str) ("<span class='rlooc'>" + str + "</span>")
@@ -50,14 +53,15 @@
 #define span_hear(str) ("<span class='hear'>" + str + "</span>")
 
 #define span_attack(str) ("<span class='attack'>" + str + "</span>")
-#define span_moderate(str) ("<span class='moderate'>" + str + "</span>")
 #define span_disarm(str) ("<span class='disarm'>" + str + "</span>")
 #define span_passive(str) ("<span class='passive'>" + str + "</span>")
 
 #define span_critical(str) ("<span class='critical'>" + str + "</span>")
 #define span_danger(str) ("<span class='danger'>" + str + "</span>")
+#define span_bolddanger(str) ("<span class='bolddanger'>" + str + "</span>")
 #define span_userdanger(str) ("<span class='userdanger'>" + str + "</span>")
 #define span_warning(str) ("<span class='warning'>" + str + "</span>")
+#define span_warningplain(str) ("<span class='warningplain'>" + str + "</span>")
 #define span_boldwarning(str) ("<span class='boldwarning'>" + str + "</span>")
 #define span_filter_warning(str) ("<span class='filter_warning'>" + str + "</span>")
 #define span_filter_combat(str) ("<span class='filter_combat'>" + str + "</span>")
@@ -73,8 +77,6 @@
 #define span_cult(str) ("<span class='cult'>" + str + "</span>")
 
 #define span_sinister(str) ("<span class='sinister'>" + str + "</span>")
-
-#define span_reflex_shoot(str) ("<span class='reflex_shoot'>" + str + "</span>")
 
 #define span_wingdings(str) ("<span class='wingdings'>" + str + "</span>") //CHOMPAdd
 
@@ -165,6 +167,14 @@
 #define span_adminhelp(str) ("<span class='adminhelp'>" + str + "</span>")
 #define span_mentor(str) ("<span class='mentor'>" + str + "</span>")
 #define span_filter_pray(str) ("<span class='filter_pray'>" + str + "</span>")
+
+/* Admin only usage */
+
+#define span_admin_pm_notice(str) ("<span class='pm notice'>" + str + "</span>")
+#define span_admin_pm_warning(str) ("<span class='pm warning'>" + str + "</span>")
+
+#define span_mentor_pm_notice(str) ("<span class='mentor notice'>" + str + "</span>")
+#define span_mentor_pm_warning(str) ("<span class='mentor warning'>" + str + "</span>")
 
 /* Adminchat */
 

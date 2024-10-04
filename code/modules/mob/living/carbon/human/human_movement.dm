@@ -279,7 +279,7 @@
 	if(m_intent == "run" && step_count++ % 2 != 0)
 		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
 	*/
-	if(shoes && loc == T && has_gravity(loc) && !flying)
+	if(shoes && loc == T && get_gravity(loc) && !flying)
 		if(SEND_SIGNAL(shoes, COMSIG_SHOES_STEP_ACTION, m_intent))	//CHOMPEdit - Shoe step comsig
 			return
 	/*
@@ -302,7 +302,7 @@
 	if(buckled || lying || throwing)
 		return // people flying, lying down or sitting do not step
 
-	if(!has_gravity(src) && prob(75))
+	if(!get_gravity(src) && prob(75))
 		return // Far less likely to make noise in no gravity
 
 	playsound(T, S, volume, FALSE)

@@ -1,0 +1,5 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - qol: "The R&D Console has had a major facelift!"
+  - bugfix: "The R&D Console will no longer automatically pop open it's UI against your will when it's done building stuff."
