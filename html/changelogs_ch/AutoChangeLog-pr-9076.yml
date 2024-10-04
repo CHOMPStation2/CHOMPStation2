@@ -1,0 +1,4 @@
+author: "Asher-42"
+delete-after: True
+changes:
+  - qol: "swapped chest transparency toggle for proteans to make everything but their head stransparent to allow for a metal shell."
