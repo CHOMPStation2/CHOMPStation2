@@ -49,12 +49,14 @@
 	// new _path(creating, token["age"]+1)
 	var/atom/inst
 	if(ispath(_path, /obj/effect/decal/cleanable/crayon))
+		if(!istext(token["art_color"]) || !istext(token["art_shade"]) || !istext(token["art_type"]))
+			return
 		inst = new _path(creating, token["art_color"], token["art_shade"], token["art_type"], token["age"]+1)
 	else
 		if (saves_dirt)
-			inst = new _path(creating, token["age"]+1, token["dirt"])
+			new _path(creating, token["age"]+1, token["dirt"])
 		else
-			inst = new _path(creating, token["age"]+1)
+			new _path(creating, token["age"]+1)
 	if(inst)
 		if(token["pixel_x"])
 			inst.pixel_x = token["pixel_x"]
