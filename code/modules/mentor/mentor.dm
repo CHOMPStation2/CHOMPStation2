@@ -202,17 +202,9 @@ var/list/mentor_verbs_default = list(
 		return
 
 	//Not a mentor and no open ticket
-<<<<<<< HEAD
 	if(!has_mentor_powers(src) && !current_ticket) // CHOMPedit - Ticket System
-		to_chat(src, span_pm(span_warning("You can no longer reply to this ticket, please open another one by using the Mentorhelp verb if need be.")))
-		to_chat(src, span_pm(span_notice("Message: [msg]")))
-=======
-	if(!has_mentor_powers(src) && !current_mentorhelp)
 		to_chat(src, span_mentor_pm_warning("You can no longer reply to this ticket, please open another one by using the Mentorhelp verb if need be."))
 		to_chat(src, span_mentor_pm_notice("Message: [msg]"))
->>>>>>> 2ec6fe97cd... Merge pull request #16425 from Kashargul/fixadminpms
-		return
-
 	var/client/recipient
 
 	if(istext(whom))
@@ -242,17 +234,9 @@ var/list/mentor_verbs_default = list(
 			return
 
 	//Has mentor powers but the recipient no longer has an open ticket
-<<<<<<< HEAD
 	if(has_mentor_powers(src) && !recipient.current_ticket) // CHOMPedit - Ticket System
-		to_chat(src, span_pm(span_warning("You can no longer reply to this ticket.")))
-		to_chat(src, span_pm(span_notice("Message: [msg]")))
-=======
-	if(has_mentor_powers(src) && !recipient.current_mentorhelp)
 		to_chat(src, span_mentor_pm_warning("You can no longer reply to this ticket."))
 		to_chat(src, span_mentor_pm_notice("Message: [msg]"))
->>>>>>> 2ec6fe97cd... Merge pull request #16425 from Kashargul/fixadminpms
-		return
-
 	if (src.handle_spam_prevention(msg,MUTE_ADMINHELP))
 		return
 

@@ -5,13 +5,8 @@
 /client/proc/cmd_admin_pm_context(mob/M in mob_list)
 	set category = null
 	set name = "Admin PM Mob"
-<<<<<<< HEAD
 	if(!holder) //CHOMP Edit: Reverting this to let all staff respond to ahelps
-		to_chat(src, span_pm(span_warning("Error: Admin-PM-Context: Only administrators may use this command.")))
-=======
-	if(!check_rights(R_ADMIN))
 		to_chat(src, span_admin_pm_warning("Error: Admin-PM-Context: Only administrators may use this command."))
->>>>>>> 2ec6fe97cd... Merge pull request #16425 from Kashargul/fixadminpms
 		return
 	if( !ismob(M) || !M.client )
 		return
@@ -22,14 +17,8 @@
 /client/proc/cmd_admin_pm_panel()
 	set category = "Admin"
 	set name = "Admin PM"
-<<<<<<< HEAD
 	if(!holder) //CHOMP Edit: Reverting this to let all staff respond to ahelps
-		to_chat(src, span_pm(span_warning("Error: Admin-PM-Panel: Only administrators may use this command.")))
-=======
-	if(!check_rights(R_ADMIN))
 		to_chat(src, span_admin_pm_warning("Error: Admin-PM-Panel: Only administrators may use this command."))
->>>>>>> 2ec6fe97cd... Merge pull request #16425 from Kashargul/fixadminpms
-		return
 	var/list/client/targets[0]
 	for(var/client/T)
 		if(T.mob)
