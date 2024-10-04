@@ -1,7 +1,18 @@
+<<<<<<< HEAD:tgui/packages/tgui/components/NanoMap.jsx
 import { Component } from 'react';
 
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
+=======
+import { KEY_DOWN, KEY_E, KEY_S, KEY_UP, KEY_W } from 'common/keycodes';
+import React, { Component, PropsWithChildren } from 'react';
+import { resolveAsset } from 'tgui/assets';
+import { useBackend } from 'tgui/backend';
+import { KeyEvent } from 'tgui/events';
+import { KeyListener } from 'tgui-core/components';
+
+import { logger } from '../logging';
+>>>>>>> 4946fc0d5e... Merge pull request #16417 from ShadowLarkens/vore_messages:tgui/packages/tgui/components/NanoMap.tsx
 import { Box, Button, Icon, LabeledList, Slider, Tooltip } from '.';
 
 const pauseEvent = (e) => {

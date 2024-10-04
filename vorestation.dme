@@ -4506,7 +4506,11 @@
 #include "code\modules\vore\appearance\sprite_accessories_yw.dm"
 #include "code\modules\vore\appearance\update_icons_vr.dm"
 #include "code\modules\vore\eating\belly_dat_vr.dm"
+<<<<<<< HEAD
 #include "code\modules\vore\eating\belly_obj_ch.dm"
+=======
+#include "code\modules\vore\eating\belly_messages.dm"
+>>>>>>> 4946fc0d5e... Merge pull request #16417 from ShadowLarkens/vore_messages
 #include "code\modules\vore\eating\belly_obj_vr.dm"
 #include "code\modules\vore\eating\bellymodes_datum_vr.dm"
 #include "code\modules\vore\eating\bellymodes_vr.dm"
