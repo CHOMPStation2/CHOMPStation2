@@ -136,8 +136,9 @@
 	if(!A || QDELETED(A))
 		show_tvs(loc)
 
-	if(get_dist(get_turf(src), get_turf(A)) > 5)
+	if(get_dist(get_turf(src), get_turf(A)) > 0) // No realtime updates
 		show_tvs(loc)
+		update_feed()
 
 /obj/item/tvcamera/update_icon()
 	..()
@@ -152,6 +153,10 @@
 		H.update_inv_r_hand()
 		H.update_inv_l_hand()
 		H.update_inv_belt()
+
+/obj/item/tvcamera/proc/update_feed()
+	if(camera.status)
+		SEND_SIGNAL(camera, COMSIG_OBSERVER_MOVED) // Forward the movement signal
 
 // CHOMPEdit Start - Bodycam
 // Security Bodycam
