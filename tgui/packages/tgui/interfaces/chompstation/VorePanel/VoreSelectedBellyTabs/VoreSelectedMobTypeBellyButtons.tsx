@@ -1,7 +1,7 @@
 import { capitalize } from 'common/string';
+import { useBackend } from 'tgui/backend';
+import { Button, LabeledList, Section } from 'tgui/components';
 
-import { useBackend } from '../../../../backend';
-import { Button, LabeledList, Section } from '../../../../components';
 import { hostMob, selectedData } from '../types';
 
 export const VoreSelectedMobTypeBellyButtons = (props: {

@@ -441,7 +441,6 @@
 			/obj/item/reagent_containers/food/snacks/donkpocket/teriyaki,
 			/obj/item/toy/figure,
 			/obj/item/contraband,
-			/obj/item/,
 			/obj/item/tool/screwdriver/sdriver,
 			/obj/item/storage/briefcase/target_toy
 		))

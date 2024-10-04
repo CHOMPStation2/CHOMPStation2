@@ -1,5 +1,5 @@
 /client/verb/vote()
-	set category = "OOC"
+	set category = "OOC.Game" // CHOMPedit
 	set name = "Vote"
 
 	if(SSvote.active_vote)
@@ -8,7 +8,7 @@
 		to_chat(usr, "There is no active vote")
 
 /client/proc/start_vote()
-	set category = "Admin"
+	set category = "Admin.Game" // CHOMPEdit
 	set name = "Start Vote"
 	set desc = "Start a vote on the server"
 

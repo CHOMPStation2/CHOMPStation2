@@ -1,11 +1,12 @@
-import { useBackend } from '../../../../backend';
-import { Button, Flex, Section } from '../../../../components';
+import { useBackend } from 'tgui/backend';
+import { Button, Flex, Section } from 'tgui/components';
+
 import { localPrefs, selectedData } from '../types';
 import { VoreUserPreferenceItem } from '../VoreUserPreferenceItem';
 
 export const VoreUserPreferencesAesthetic = (props: {
   belly_rub_target: string | null;
-  selected: selectedData;
+  selected: selectedData | null;
   preferences: localPrefs;
 }) => {
   const { act } = useBackend();
@@ -62,7 +63,7 @@ export const VoreUserPreferencesAesthetic = (props: {
             {'Belly Rub Target: ' +
               (belly_rub_target
                 ? belly_rub_target
-                : 'Current Active (' + selected.belly_name + ')')}
+                : 'Current Active (' + (selected && selected.belly_name) + ')')}
           </Button>
         </Flex.Item>
       </Flex>

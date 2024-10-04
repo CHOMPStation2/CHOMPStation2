@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - rscadd: "bluespace disruptor for admin event use"

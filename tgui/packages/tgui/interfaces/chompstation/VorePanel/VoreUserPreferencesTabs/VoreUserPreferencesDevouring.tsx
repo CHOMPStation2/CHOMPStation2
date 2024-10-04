@@ -1,8 +1,8 @@
 import { BooleanLike } from 'common/react';
 import { capitalize } from 'common/string';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, Flex, Section } from 'tgui/components';
 
-import { useBackend } from '../../../../backend';
-import { Box, Button, Flex, Section } from '../../../../components';
 import { localPrefs } from '../types';
 import { VoreUserPreferenceItem } from '../VoreUserPreferenceItem';
 
