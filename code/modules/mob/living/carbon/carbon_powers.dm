@@ -58,9 +58,5 @@
 		new /mob/living/simple_mob/animal/borer(get_turf(src))
 
 	else
-<<<<<<< HEAD
-		to_chat(src, "<span class='warning'>You do not have enough chemicals stored to reproduce.</span>")
-=======
 		to_chat(src, span_warning("You do not have enough chemicals stored to reproduce."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return

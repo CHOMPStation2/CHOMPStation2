@@ -56,13 +56,8 @@
 
 			// Was dead, still dead.
 			else
-<<<<<<< HEAD
-				to_chat(src, "<span class='notice'>Consciousness begins to stir as your new body awakens, ready to hatch.</span>")
-				add_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
-=======
 				to_chat(src, span_notice("Consciousness begins to stir as your new body awakens, ready to hatch."))
-				verbs |= /mob/living/carbon/human/proc/hatch
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				add_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
 				revive_ready = REVIVING_DONE
 				src << sound('sound/effects/mob_effects/xenochimera/hatch_notification.ogg',0,0,0,30)
 				clear_alert("regen")
@@ -83,13 +78,8 @@
 			if(stat != DEAD || hasnutriment())
 				to_chat(src, span_notice("Consciousness begins to stir as your new body awakens, ready to hatch.."))
 			else
-<<<<<<< HEAD
-				to_chat(src, "<span class='warning'>Consciousness begins to stir as your battered body struggles to recover from its ordeal..</span>")
-			add_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
-=======
 				to_chat(src, span_warning("Consciousness begins to stir as your battered body struggles to recover from its ordeal.."))
-			verbs |= /mob/living/carbon/human/proc/hatch
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			add_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
 			revive_ready = REVIVING_DONE
 			src << sound('sound/effects/mob_effects/xenochimera/hatch_notification.ogg',0,0,0,30)
 			clear_alert("regen")
@@ -148,13 +138,8 @@
 			clear_alert("hatch")
 
 /mob/living/carbon/human/proc/chimera_hatch()
-<<<<<<< HEAD
 	remove_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
-	to_chat(src, "<span class='notice'>Your new body awakens, bursting free from your old skin.</span>")
-=======
-	verbs -= /mob/living/carbon/human/proc/hatch
 	to_chat(src, span_notice("Your new body awakens, bursting free from your old skin."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	//Modify and record values (half nutrition and braindamage)
 	var/old_nutrition = nutrition
 	var/braindamage = min(5, max(0, (brainloss-1) * 0.5)) //brainloss is tricky to heal and might take a couple of goes to get rid of completely.
@@ -1252,15 +1237,9 @@
 			return
 		if(target.buckled) //how are you buckled in the water?!
 			target.buckled.unbuckle_mob()
-<<<<<<< HEAD
-		target.visible_message("<span class='vwarning'>\The [target] suddenly disappears, being dragged into the water!</span>",\
-			"<span class='vdanger'>You are dragged below the water and feel yourself slipping directly into \the [src]'s [lowertext(vore_selected)]!</span>")
-		to_chat(src, "<span class='vnotice'>You successfully drag \the [target] into the water, slipping them into your [lowertext(vore_selected)].</span>")
-=======
 		target.visible_message(span_vwarning("\The [target] suddenly disappears, being dragged into the water!"),\
-			span_vdanger("You are dragged below the water and feel yourself slipping directly into \the [src]'s [vore_selected]!"))
-		to_chat(src, span_vnotice("You successfully drag \the [target] into the water, slipping them into your [vore_selected]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			span_vdanger("You are dragged below the water and feel yourself slipping directly into \the [src]'s [lowertext(vore_selected)]!"))
+		to_chat(src, span_vnotice("You successfully drag \the [target] into the water, slipping them into your [lowertext(vore_selected)]."))
 		target.forceMove(src.vore_selected)
 
 /mob/living/carbon/human/proc/toggle_pain_module()

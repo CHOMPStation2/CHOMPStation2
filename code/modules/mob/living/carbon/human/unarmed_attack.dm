@@ -76,11 +76,7 @@ var/global/list/sparring_attack_cache = list()
 						target.set_dir(reverse_dir[target.dir])
 					target.apply_effect(attack_damage * 0.4, WEAKEN, armour)
 			if(BP_GROIN)
-<<<<<<< HEAD
-				target.visible_message("<span class='warning'>[target] looks like [TT.he] [TT.is] in pain!</span>", "<span class='warning'>Oh god that hurt!</span>") // Chompstation edit
-=======
-				target.visible_message(span_warning("[target] looks like [TT.he] [TT.is] in pain!"), span_warning("[(target.gender=="female") ? "Oh god that hurt!" : "Oh no, not your[pick("testicles", "crown jewels", "clockweights", "family jewels", "marbles", "bean bags", "teabags", "sweetmeats", "goolies")]!"]")) // I see no easy way to fix this for non-organic or neuter characters.
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				target.visible_message(span_warning("[target] looks like [TT.he] [TT.is] in pain!"), span_warning("Oh god that hurt!")) // Chompstation edit
 				target.apply_effects(stutter = attack_damage * 2, agony = attack_damage* 3, blocked = armour)
 			if("l_leg", "l_foot", "r_leg", "r_foot")
 				if(!target.lying)

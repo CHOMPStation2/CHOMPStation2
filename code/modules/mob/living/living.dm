@@ -97,8 +97,7 @@
 	if(!..())
 		return 0
 
-<<<<<<< HEAD
-	usr.visible_message("<span class='filter_notice'><b>[src]</b> points to [A].</span>")
+	usr.visible_message(span_filter_notice("<b>[src]</b> points to [A]."))
 */
 	return ..()
 
@@ -108,10 +107,6 @@
 
 	visible_message(span_info("<b>[src]</b> points at [pointing_at]."), span_info("You point at [pointing_at]."))
 // CHOMPEdit End
-=======
-	usr.visible_message(span_filter_notice("<b>[src]</b> points to [A]."))
-	return 1
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"

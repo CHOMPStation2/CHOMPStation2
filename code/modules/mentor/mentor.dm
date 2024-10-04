@@ -161,13 +161,8 @@ var/list/mentor_verbs_default = list(
 
 	var/datum/ticket/T = C.current_ticket // CHOMPedit - Ticket System
 
-<<<<<<< HEAD
 	if(T) // CHOMPedit - Ticket System
-		message_mentors("<span class='mentor_channel'>[src] has started replying to [C]'s mentor help.</span>")
-=======
-	if(MH)
 		message_mentors(span_mentor_channel("[src] has started replying to [C]'s mentor help."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	var/msg = tgui_input_text(src,"Message:", "Private message to [C]", multiline = TRUE)
 	if (!msg)
 		message_mentors(span_mentor_channel("[src] has cancelled their reply to [C]'s mentor help."))
@@ -207,15 +202,9 @@ var/list/mentor_verbs_default = list(
 		return
 
 	//Not a mentor and no open ticket
-<<<<<<< HEAD
 	if(!has_mentor_powers(src) && !current_ticket) // CHOMPedit - Ticket System
-		to_chat(src, "<span class='pm warning'>You can no longer reply to this ticket, please open another one by using the Mentorhelp verb if need be.</span>")
-		to_chat(src, "<span class='pm notice'>Message: [msg]</span>")
-=======
-	if(!has_mentor_powers(src) && !current_mentorhelp)
 		to_chat(src, span_pm(span_warning("You can no longer reply to this ticket, please open another one by using the Mentorhelp verb if need be.")))
 		to_chat(src, span_pm(span_notice("Message: [msg]")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	var/client/recipient
@@ -247,15 +236,9 @@ var/list/mentor_verbs_default = list(
 			return
 
 	//Has mentor powers but the recipient no longer has an open ticket
-<<<<<<< HEAD
 	if(has_mentor_powers(src) && !recipient.current_ticket) // CHOMPedit - Ticket System
-		to_chat(src, "<span class='pm warning'>You can no longer reply to this ticket.</span>")
-		to_chat(src, "<span class='pm notice'>Message: [msg]</span>")
-=======
-	if(has_mentor_powers(src) && !recipient.current_mentorhelp)
 		to_chat(src, span_pm(span_warning("You can no longer reply to this ticket.")))
 		to_chat(src, span_pm(span_notice("Message: [msg]")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	if (src.handle_spam_prevention(msg,MUTE_ADMINHELP))

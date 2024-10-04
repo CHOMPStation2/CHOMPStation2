@@ -90,13 +90,8 @@
 	if(ownturf.z != T.z || get_dist(T,ownturf) > world.view)
 		to_chat(user, span_warning("The target is out of range!"))
 		return
-<<<<<<< HEAD
 	if((get_area(A).flags & BLUE_SHIELDED) || (T.block_tele) || (ownturf.block_tele))	//CHOMPedit, consistency smh
-		to_chat(user, "<span class='warning'>The target area protected by bluespace shielding!</span>")
-=======
-	if(get_area(A).flags & BLUE_SHIELDED)
 		to_chat(user, span_warning("The target area protected by bluespace shielding!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	if(!(A in view(user, world.view)))
 		to_chat(user, span_warning("Harpoon fails to lock on the obstructed target!"))

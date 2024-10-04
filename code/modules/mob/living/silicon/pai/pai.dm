@@ -310,15 +310,9 @@
 	canmove = TRUE
 
 	var/turf/T = get_turf(src)
-<<<<<<< HEAD
-	if(istype(T)) T.visible_message("<span class='filter_notice'><b>[src]</b> folds outwards, expanding into a mobile form.</span>")
+	if(istype(T)) T.visible_message(span_filter_notice("<b>[src]</b> folds outwards, expanding into a mobile form."))
 	add_verb(src,/mob/living/silicon/pai/proc/pai_nom) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
-=======
-	if(istype(T)) T.visible_message(span_filter_notice("<b>[src]</b> folds outwards, expanding into a mobile form."))
-	verbs |= /mob/living/silicon/pai/proc/pai_nom
-	verbs |= /mob/living/proc/vertical_nom
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	update_icon()
 
 /mob/living/silicon/pai/verb/fold_up()
@@ -521,11 +515,7 @@
 				if("Cancel", null)
 					return
 		else if (istype(W, /obj/item/card/id) && idaccessible == 0)
-<<<<<<< HEAD
-			to_chat(user, "<span class='notice'>[src] is not accepting access modifications at this time.</span>")		// CHOMPEDIT : purdev (spelling fix)
-=======
-			to_chat(user, span_notice("[src] is not accepting access modifcations at this time."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			to_chat(user, span_notice("[src] is not accepting access modifications at this time."))		// CHOMPEDIT : purdev (spelling fix)
 			return
 
 /mob/living/silicon/pai/verb/allowmodification()

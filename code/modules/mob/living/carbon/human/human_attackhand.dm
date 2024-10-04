@@ -313,12 +313,8 @@
 				apply_effect(3, WEAKEN, armor_check)
 				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 				if(armor_check < 60)
-<<<<<<< HEAD
 					drop_both_hands()	// CHOMPEdit - We've been pushed! Drop our stuff as well
-					visible_message("<span class='danger'>[M] has pushed [src]!</span>")
-=======
 					visible_message(span_danger("[M] has pushed [src]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				else
 					visible_message(span_warning("[M] attempted to push [src]!"))
 				return

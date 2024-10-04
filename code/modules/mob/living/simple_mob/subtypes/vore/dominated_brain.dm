@@ -217,7 +217,7 @@
 
 //CHOMPRemove - this check is handled in "CHOMPEdit start - Ability to use dominate pred trait against whitelisted mobs"
 //	if(!pred.ckey)
-//		to_chat(prey, "<span class='notice'>\The [pred] isn't able to be dominated.</span>")
+//		to_chat(prey, span_notice("\The [pred] isn't able to be dominated."))
 //		return
 
 	if(prey.stat == DEAD)
@@ -228,12 +228,6 @@
 		to_chat(prey, span_warning("[pred] is unable to be dominated."))
 		return
 
-<<<<<<< HEAD
-=======
-	if(!pred.ckey)
-		to_chat(prey, span_notice("\The [pred] isn't able to be dominated."))
-		return
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	if(isrobot(pred) && jobban_isbanned(prey, JOB_CYBORG))
 		to_chat(prey, span_warning("Forces beyond your comprehension forbid you from taking control of [pred]."))
 		return
@@ -247,12 +241,11 @@
 		return
 	to_chat(prey, span_notice("You attempt to exert your control over \the [pred]..."))
 	log_admin("[key_name_admin(prey)] attempted to take over [pred].")
-<<<<<<< HEAD
 
 //CHOMPEdit start - Ability to use dominate pred trait against whitelisted mobs
 	if(pred.ckey) //check if body is assigned to another player currently
 		if(tgui_alert(pred, "\The [prey] has elected to attempt to take control of you. Is this something you will allow to happen?", "Allow Prey Domination",list("No","Yes")) != "Yes")
-			to_chat(prey, "<span class='warning'>\The [pred] declined your request for control.</span>")
+			to_chat(prey, span_warning("\The [pred] declined your request for control."))
 			return
 		if(tgui_alert(pred, "Are you sure? If you should decide to revoke this, you will have the ability to do so in your 'Abilities' tab.", "Allow Prey Domination",list("No","Yes")) != "Yes")
 			return
@@ -265,17 +258,8 @@
 		is_mob = TRUE
 //CHOMPEdit end
 
-	to_chat(pred, "<span class='warning'>You can feel the will of another overwriting your own, control of your body being sapped away from you...</span>")
-	to_chat(prey, "<span class='warning'>You can feel the will of your host diminishing as you exert your will over them!</span>")
-=======
-	if(tgui_alert(pred, "\The [prey] has elected to attempt to take control of you. Is this something you will allow to happen?", "Allow Prey Domination",list("No","Yes")) != "Yes")
-		to_chat(prey, span_warning("\The [pred] declined your request for control."))
-		return
-	if(tgui_alert(pred, "Are you sure? If you should decide to revoke this, you will have the ability to do so in your 'Abilities' tab.", "Allow Prey Domination",list("No","Yes")) != "Yes")
-		return
 	to_chat(pred, span_warning("You can feel the will of another overwriting your own, control of your body being sapped away from you..."))
 	to_chat(prey, span_warning("You can feel the will of your host diminishing as you exert your will over them!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	if(!do_after(prey, 10 SECONDS, exclusive = TRUE))
 		to_chat(prey, span_notice("Your attempt to regain control has been interrupted..."))
 		to_chat(pred, span_notice("The dominant sensation fades away..."))
@@ -352,9 +336,8 @@
 		if(istype(I, /mob/living/dominated_brain))
 			var/mob/living/dominated_brain/db = I
 			if(db.ckey == db.pred_ckey)
-<<<<<<< HEAD
-				to_chat(src, "<span class='notice'>You ease off of your control, releasing \the [db].</span>")
-				to_chat(db, "<span class='notice'>You feel the alien presence fade, and restore control of your body to you of their own will...</span>")
+				to_chat(src, span_notice("You ease off of your control, releasing \the [db]."))
+				to_chat(db, span_notice("You feel the alien presence fade, and restore control of your body to you of their own will..."))
 				if(db.was_mob) //CHOMPEdit start - clean up if the dominated body was a playerless mob
 					db.pred_ckey = null
 					db.ckey = null
@@ -364,18 +347,8 @@
 				return //CHOMPEdit end
 			else
 				continue
-	to_chat(src, "<span class='danger'>You haven't been taken over, and shouldn't have this verb. I'll clean that up for you. Report this on the github, it is a bug.</span>")
-	remove_verb(src,/mob/proc/release_predator) //CHOMPEdit TGPanel
-=======
-				to_chat(src, span_notice("You ease off of your control, releasing \the [db]."))
-				to_chat(db, span_notice("You feel the alien presence fade, and restore control of your body to you of their own will..."))
-				db.restore_control()
-				return
-			else
-				continue
 	to_chat(src, span_danger("You haven't been taken over, and shouldn't have this verb. I'll clean that up for you. Report this on the github, it is a bug."))
-	verbs -= /mob/proc/release_predator
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	remove_verb(src,/mob/proc/release_predator) //CHOMPEdit TGPanel
 
 /mob/living/dominated_brain/proc/resist_control()
 	set category = "Abilities.Vore" //CHOMPEdit
@@ -427,7 +400,7 @@
 	var/mob/living/M = input
 	//CHOMPEdit Start - Let dominate prey work on grabbed people
 	if(!istype(M))
-		to_chat(src, "<span class='warning'>You must have a tighter grip to dominate this creature.</span>")
+		to_chat(src, span_warning("You must have a tighter grip to dominate this creature."))
 		return
 	//CHOMPEdit End
 	if(!M.allow_mind_transfer) //check if the dominated mob pref is enabled
@@ -448,21 +421,15 @@
 
 	//CHOMPEdit Start - Let dominate prey work on grabbed people
 	if(istype(G) && M == G.affecting)
-		src.visible_message("<span class='danger'>[src] seems to be doing something to [M], resulting in [M]'s body looking increasingly drowsy with every passing moment!</span>")
+		src.visible_message(span_danger("[src] seems to be doing something to [M], resulting in [M]'s body looking increasingly drowsy with every passing moment!"))
 	//CHOMPEdit End
 	if(!do_after(src, 10 SECONDS, exclusive = TRUE))
 		to_chat(M, span_notice("The alien presence fades, and you are left along in your body..."))
 		to_chat(src, span_notice("Your attempt to gather [M]'s mind has been interrupted."))
 		return
-<<<<<<< HEAD
 	if(!isbelly(M.loc) && !(istype(G) && M == G.affecting && G.state == GRAB_NECK)) //CHOMPEdit - Let dominate prey work on grabbed people
-		to_chat(M, "<span class='notice'>The alien presence fades, and you are left along in your body...</span>")
-		to_chat(src, "<span class='notice'>Your attempt to gather [M]'s mind has been interrupted.</span>")
-=======
-	if(!isbelly(M.loc))
 		to_chat(M, span_notice("The alien presence fades, and you are left along in your body..."))
 		to_chat(src, span_notice("Your attempt to gather [M]'s mind has been interrupted."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	var/mob/living/dominated_brain/db = new /mob/living/dominated_brain(src, src, M.name, M)
@@ -496,17 +463,12 @@
 
 	db.ckey = db.prey_ckey
 	log_admin("[db] ([db.ckey]) has agreed to [src]'s dominate prey attempt, and so no longer occupies their original body.")
-<<<<<<< HEAD
-	to_chat(src, "<span class='notice'>You feel your mind expanded as [M] is incorporated into you.</span>")
-	to_chat(M, "<span class='warning'>Your mind is gathered into \the [src], becoming part of them...</span>")
-	//CHOMPEdit Start - Let dominate prey work on grabbed people
-	if(istype(G) && M == G.affecting)
-		visible_message("<span class='danger'>[src] seems to finish whatever they were doing to [M].</span>")
-	//CHOMPEdit End
-=======
 	to_chat(src, span_notice("You feel your mind expanded as [M] is incorporated into you."))
 	to_chat(M, span_warning("Your mind is gathered into \the [src], becoming part of them..."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	//CHOMPEdit Start - Let dominate prey work on grabbed people
+	if(istype(G) && M == G.affecting)
+		visible_message(span_danger("[src] seems to finish whatever they were doing to [M]."))
+	//CHOMPEdit End
 
 /mob/living/dominated_brain/proc/cease_this_foolishness()
 	set category = "Abilities.Vore" //CHOMPEdit
@@ -532,13 +494,8 @@
 	else if(prey_body)
 		to_chat(src, span_warning("You can sense your body... but it is not contained within [pred_body]... You cannot return to it at this time."))
 	else
-<<<<<<< HEAD
-		to_chat(src, "<span class='warning'>Your body seems to no longer exist, so, you cannot return to it.</span>")
-		remove_verb(src,/mob/living/dominated_brain/proc/cease_this_foolishness) //CHOMPEdit TGPanel
-=======
 		to_chat(src, span_warning("Your body seems to no longer exist, so, you cannot return to it."))
-		verbs -= /mob/living/dominated_brain/proc/cease_this_foolishness
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		remove_verb(src,/mob/living/dominated_brain/proc/cease_this_foolishness) //CHOMPEdit TGPanel
 
 /mob/living/proc/lend_prey_control()
 	set category = "Abilities.Vore" //CHOMPEdit

@@ -69,12 +69,8 @@
 	switch(mode)
 		if(SYRINGE_CAPPED)
 			mode = SYRINGE_DRAW
-<<<<<<< HEAD
-			// to_chat(user,"<span class='notice'>You uncap the syringe.</span>")
+			// to_chat(user,span_notice("You uncap the syringe."))
 			balloon_alert(user, "[src] uncapped") // CHOMPEdit - Changed to balloon_alert
-=======
-			to_chat(user,span_notice("You uncap the syringe."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		if(SYRINGE_DRAW)
 			mode = SYRINGE_INJECT
 		if(SYRINGE_INJECT)
@@ -190,13 +186,8 @@
 			if(istype(target, /obj/item/implantcase/chem))
 				return
 
-<<<<<<< HEAD
 			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable)) // CHOMPEdit
-				to_chat(user, "<span class='notice'>You cannot directly fill this object.</span>")
-=======
-			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes))
 				to_chat(user, span_notice("You cannot directly fill this object."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				return
 			if(!target.reagents.get_free_space())
 				to_chat(user, span_notice("[target] is full."))
@@ -278,11 +269,7 @@
 		var/obj/item/organ/external/affecting = H.get_organ(target_zone)
 
 		if (!affecting || affecting.is_stump())
-<<<<<<< HEAD
 			balloon_alert(user, "They are missing that limb!") // CHOMPEdit - Changed to balloon_alert
-=======
-			to_chat(user, span_danger("They are missing that limb!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 
 		var/hit_area = affecting.name
@@ -300,23 +287,15 @@
 
 			return
 
-<<<<<<< HEAD
-		// user.visible_message("<span class='danger'>[user] stabs [target] in \the [hit_area] with [src.name]!</span>")
+		// user.visible_message(span_danger("[user] stabs [target] in \the [hit_area] with [src.name]!"))
 		balloon_alert_visible("Stabs [target] in \the [hit_area] with [src.name]!") // CHOMPEdit - Changed to balloon alert
-=======
-		user.visible_message(span_danger("[user] stabs [target] in \the [hit_area] with [src.name]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		if(affecting.take_damage(3))
 			H.UpdateDamageIcon()
 
 	else
-<<<<<<< HEAD
-		// user.visible_message("<span class='danger'>[user] stabs [target] with [src.name]!</span>")
+		// user.visible_message(span_danger("[user] stabs [target] with [src.name]!"))
 		balloon_alert_visible("Stabs [user] in \the [target] with [src.name]!") // CHOMPEdit - Changed to balloon alert
-=======
-		user.visible_message(span_danger("[user] stabs [target] with [src.name]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		target.take_organ_damage(3)// 7 is the same as crowbar punch
 
 

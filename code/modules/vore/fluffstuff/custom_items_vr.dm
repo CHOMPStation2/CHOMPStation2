@@ -86,7 +86,7 @@
 		to_type = to_suit
 		keycheck = TRUE
 	else
-		to_chat(user, "<span class='notice'>This kit doesn't seem to have any tools or parts for whatever you're trying to use it on.</span>") //new error message
+		to_chat(user, span_notice("This kit doesn't seem to have any tools or parts for whatever you're trying to use it on.")) //CHOMPAdd new error message
 		return
 	if(!isturf(O.loc))
 		to_chat(user, span_warning("You need to put \the [O] on the ground, a table, or other worksurface before modifying it."))
@@ -565,11 +565,7 @@
 		sleep(30)
 		visible_message(span_warning("The [name] shatters into dust!"))
 		if(owner_c)
-<<<<<<< HEAD
-			to_chat(owner_c, "<span class='notice'>A signal is sent notifying of your demise by \the [name].</span>")
-=======
-			to_chat(owner_c, span_notice("The HAVENS system is notified of your demise via \the [name]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			to_chat(owner_c, span_notice("A signal is sent notifying of your demise by \the [name]."))
 		update_state(3)
 		name = "broken [initial(name)]"
 		desc = "This seems like a necklace, but the actual pendant is missing."

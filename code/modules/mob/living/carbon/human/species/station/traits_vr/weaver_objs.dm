@@ -132,11 +132,8 @@
 	item_state = "web_bindings_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
-<<<<<<< HEAD
 	//CHOMPedit - Teshari sprite, this was originally a YW edit of the old web bindings
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
 		)
 	//CHOMPedit end
-=======
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

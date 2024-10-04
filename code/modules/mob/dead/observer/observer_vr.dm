@@ -83,13 +83,8 @@
 			record.last_notification = world.time
 			to_chat(src, span_notice("New notification has been sent."))
 	else
-<<<<<<< HEAD
-		to_chat(src,"<span class='warning'>No backup record could be found, sorry.</span>")
-// CHOMPEdit: Revert Removal
-=======
 		to_chat(src,span_warning("No backup record could be found, sorry."))
-/*
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+// CHOMPEdit: Revert Removal
 /mob/observer/dead/verb/backup_delay()
 	set category = "Ghost.Settings" //CHOMPEdit
 	set name = "Cancel Transcore Notification"
@@ -107,13 +102,8 @@
 			record.do_notify = FALSE
 			to_chat(src, span_notice("Overdue mind backup notification delayed successfully."))
 	else
-<<<<<<< HEAD
-		to_chat(src,"<span class='warning'>No backup record could be found, sorry.</span>")
-
-=======
 		to_chat(src,span_warning("No backup record could be found, sorry."))
-*/
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+
 /mob/observer/dead/verb/findghostpod() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
 	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Find Ghost Pod"

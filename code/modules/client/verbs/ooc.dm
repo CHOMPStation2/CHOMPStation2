@@ -20,19 +20,11 @@
 		return
 
 	if(!holder)
-<<<<<<< HEAD
 		if(!CONFIG_GET(flag/ooc_allowed)) // CHOMPEdit
-			to_chat(src, "<span class='danger'>OOC is globally muted.</span>")
-			return
-		if(!CONFIG_GET(flag/dooc_allowed) && (mob.stat == DEAD)) // CHOMPEdit
-			to_chat(usr, "<span class='danger'>OOC for dead mobs has been turned off.</span>")
-=======
-		if(!config.ooc_allowed)
 			to_chat(src, span_danger("OOC is globally muted."))
 			return
-		if(!config.dooc_allowed && (mob.stat == DEAD))
+		if(!CONFIG_GET(flag/dooc_allowed) && (mob.stat == DEAD)) // CHOMPEdit
 			to_chat(usr, span_danger("OOC for dead mobs has been turned off."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 		if(prefs.muted & MUTE_OOC)
 			to_chat(src, span_danger("You cannot use OOC (muted)."))
@@ -84,13 +76,8 @@
 						display_name = "[holder.fakekey]/([src.key])"
 					else
 						display_name = holder.fakekey
-<<<<<<< HEAD
 			if(holder && !holder.fakekey && (holder.rights & R_ADMIN|R_FUN|R_EVENT) && CONFIG_GET(flag/allow_admin_ooccolor) && (src.prefs.ooccolor != initial(src.prefs.ooccolor))) // keeping this for the badmins // CHOMPEdit
-				to_chat(target, "<span class='ooc'><font color='[src.prefs.ooccolor]'>" + create_text_tag("ooc", "OOC:", target) + " <EM>[display_name]:</EM> <span class='message'>[msg]</span></font></span>")
-=======
-			if(holder && !holder.fakekey && (holder.rights & R_ADMIN|R_FUN|R_EVENT) && config.allow_admin_ooccolor && (src.prefs.ooccolor != initial(src.prefs.ooccolor))) // keeping this for the badmins
 				to_chat(target, span_ooc("<font color='[src.prefs.ooccolor]'>" + create_text_tag("ooc", "OOC:", target) + " <EM>[display_name]:</EM> [span_message(msg)]</font>"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			else
 				to_chat(target, span_ooc("<span class='[ooc_style]'>" + create_text_tag("ooc", "OOC:", target) + " <EM>[display_name]:</EM> " + span_message(msg)))
 
@@ -119,19 +106,11 @@
 		return
 
 	if(!holder)
-<<<<<<< HEAD
 		if(!CONFIG_GET(flag/looc_allowed)) // CHOMPEdit
-			to_chat(src, "<span class='danger'>LOOC is globally muted.</span>")
-			return
-		if(!CONFIG_GET(flag/dooc_allowed) && (mob.stat == DEAD)) // CHOMPEdit
-			to_chat(usr, "<span class='danger'>OOC for dead mobs has been turned off.</span>")
-=======
-		if(!config.looc_allowed)
 			to_chat(src, span_danger("LOOC is globally muted."))
 			return
-		if(!config.dooc_allowed && (mob.stat == DEAD))
+		if(!CONFIG_GET(flag/dooc_allowed) && (mob.stat == DEAD)) // CHOMPEdit
 			to_chat(usr, span_danger("OOC for dead mobs has been turned off."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 		if(prefs.muted & MUTE_LOOC)
 			to_chat(src, span_danger("You cannot use OOC (muted)."))
@@ -207,11 +186,7 @@
 	for(var/client/target in r_receivers)
 		var/admin_stuff = "/([key])([admin_jump_link(mob, target.holder)])"
 
-<<<<<<< HEAD
-		to_chat(target, "<span class='rlooc'>" + create_text_tag("rlooc", "RLOOC:", target) + " <span class='prefix'>(R)</span><EM>[display_name][admin_stuff]:</EM> <span class='message'>[msg]</span></span>")
-=======
 		to_chat(target, span_rlooc("" + create_text_tag("looc", "LOOC:", target) + " <span class='prefix'>(R)</span><EM>[display_name][admin_stuff]:</EM> <span class='message'>[msg]</span>"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /mob/proc/get_looc_source()
 	return src

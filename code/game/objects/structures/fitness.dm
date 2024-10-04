@@ -14,29 +14,19 @@
 	if(!istype(user))
 		..()
 		return
-<<<<<<< HEAD
 	if(user.nutrition < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
-		to_chat(user, "<span class='warning'>You need more energy to use the punching bag. Go eat something.</span>")
-	else if(user.weight < 70) // CHOMPAdd Begin Add weight loss to old fitness equipment
-		to_chat(user, "<span class='notice'>You're too skinny to risk losing any more weight!</span>") // CHOMPAdd End
-=======
-	if(user.nutrition < 20)
 		to_chat(user, span_warning("You need more energy to use the punching bag. Go eat something."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	else if(user.weight < 70) // CHOMPAdd Begin Add weight loss to old fitness equipment
+		to_chat(user, span_notice("You're too skinny to risk losing any more weight!")) // CHOMPAdd End
 	else
 		if(user.a_intent == I_HURT)
 			user.setClickCooldown(user.get_attack_speed())
 			flick("[icon_state]_hit", src)
 			playsound(src, 'sound/effects/woodhit.ogg', 25, 1, -1)
 			user.do_attack_animation(src)
-<<<<<<< HEAD
 			user.adjust_nutrition(-10) //CHOMPEdit Set nutrition drain to be the same as in fitness_machines_vr.dm
 			user.weight -= 0.1 * (0.01 * user.weight_loss) // CHOMPAdd Add weight loss to old fitness equipment
-			to_chat(user, "<span class='warning'>You [pick(hit_message)] \the [src].</span>")
-=======
-			user.nutrition = user.nutrition - 5
 			to_chat(user, span_warning("You [pick(hit_message)] \the [src]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /obj/structure/fitness/weightlifter
 	name = "weightlifting machine"
@@ -58,13 +48,8 @@
 	if(user.loc != src.loc)
 		to_chat(user, span_warning("You must be on the weight machine to use it."))
 		return
-<<<<<<< HEAD
 	if(user.nutrition < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
-		to_chat(user, "<span class='warning'>You need more energy to lift weights. Go eat something.</span>")
-=======
-	if(user.nutrition < 50)
 		to_chat(user, span_warning("You need more energy to lift weights. Go eat something."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	if(user.weight < 70) //CHOMPAdd Begin Add weight loss to old fitness equipment
 		to_chat(user, "<span class='notice'>You're too skinny to risk losing any more weight!</span>")
@@ -80,12 +65,8 @@
 		if(do_after(user, 30 + (weight * 10))) //CHOMPEdit Set timer to be similar to the machines in fitness_machines_vr.dm
 			playsound(src, 'sound/effects/weightdrop.ogg', 25, 1)
 			user.adjust_nutrition(weight * -10)
-<<<<<<< HEAD
 			user.weight -= 0.1 * weight * (0.01 * user.weight_loss) // CHOMPAdd Add weight loss to old fitness equipment
-			to_chat(user, "<span class='notice'>You lift the weights [qualifiers[weight]].</span>")
-=======
 			to_chat(user, span_notice("You lift the weights [qualifiers[weight]]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			being_used = 0
 		else
 			to_chat(user, span_notice("Against your previous judgement, perhaps working out is not for you."))

@@ -32,39 +32,24 @@
 /datum/surgery_step/glue_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.stage == 0)
-<<<<<<< HEAD
-		user.visible_message("<span class='notice'>[user] starts applying medication to the damaged bones in [target]'s [affected.name] with \the [tool].</span>" , \
-		"<span class='notice'>You start applying medication to the damaged bones in [target]'s [affected.name] with \the [tool].</span>")
-		user.balloon_alert_visible("Applies medication to the damaged bones.", "Applying medication to the damaged bones.") // CHOMPEdit
-=======
 		user.visible_message(span_notice("[user] starts applying medication to the damaged bones in [target]'s [affected.name] with \the [tool].") , \
 		span_notice("You start applying medication to the damaged bones in [target]'s [affected.name] with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		user.balloon_alert_visible("Applies medication to the damaged bones.", "Applying medication to the damaged bones.") // CHOMPEdit
 	target.custom_pain("Something in your [affected.name] is causing you a lot of pain!", 50)
 	..()
 
 /datum/surgery_step/glue_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] applies some [tool] to [target]'s bone in [affected.name]</span>", \
-		"<span class='notice'>You apply some [tool] to [target]'s bone in [affected.name] with \the [tool].</span>")
-	user.balloon_alert_visible("Applies [tool] to [target]'s bone.", "Applying [tool] to [target]'s bone.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] applies some [tool] to [target]'s bone in [affected.name]"), \
 		span_notice("You apply some [tool] to [target]'s bone in [affected.name] with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Applies [tool] to [target]'s bone.", "Applying [tool] to [target]'s bone.") // CHOMPEdit
 	affected.stage = 1
 
 /datum/surgery_step/glue_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='danger'>[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>" , \
-	"<span class='danger'>Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>")
-	user.balloon_alert_visible("Slips, damaging [target]'s [affected.name]", "Your hand slips.") // CHOMPEdit
-=======
 	user.visible_message(span_danger("[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!") , \
 	span_danger("Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, damaging [target]'s [affected.name]", "Your hand slips.") // CHOMPEdit
 
 ///////////////////////////////////////////////////////////////
 // Bone Setting Surgery
@@ -91,28 +76,18 @@
 
 /datum/surgery_step/set_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] is beginning to set the bone in [target]'s [affected.name] in place with \the [tool].</span>" , \
-		"<span class='notice'>You are beginning to set the bone in [target]'s [affected.name] in place with \the [tool].</span>")
-	user.balloon_alert_visible("Begins to set the bone in place.", "Setting the bone in place.") // CHOMPEdit - Balloon alert
-=======
 	user.visible_message(span_notice("[user] is beginning to set the bone in [target]'s [affected.name] in place with \the [tool].") , \
 		span_notice("You are beginning to set the bone in [target]'s [affected.name] in place with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Begins to set the bone in place.", "Setting the bone in place.") // CHOMPEdit - Balloon alert
 	target.custom_pain("The pain in your [affected.name] is going to make you pass out!", 50)
 	..()
 
 /datum/surgery_step/set_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.status & ORGAN_BROKEN)
-<<<<<<< HEAD
-		user.visible_message("<span class='notice'>[user] sets the bone in [target]'s [affected.name] in place with \the [tool].</span>", \
-			"<span class='notice'>You set the bone in [target]'s [affected.name] in place with \the [tool].</span>")
-		user.balloon_alert_visible("Sets the bone in place.", "Bone set in place.") // CHOMPEdit - Balloon alert
-=======
 		user.visible_message(span_notice("[user] sets the bone in [target]'s [affected.name] in place with \the [tool]."), \
 			span_notice("You set the bone in [target]'s [affected.name] in place with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		user.balloon_alert_visible("Sets the bone in place.", "Bone set in place.") // CHOMPEdit - Balloon alert
 		affected.stage = 2
 	else
 		user.visible_message("[user] sets the bone in [target]'s [affected.name]<span class='danger'> in the WRONG place with \the [tool].</span>", \
@@ -122,14 +97,9 @@
 
 /datum/surgery_step/set_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='danger'>[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</span>" , \
-		"<span class='danger'>Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</span>")
-	user.balloon_alert_visible("Slips, damaging the bone.", "Your hand slips, damaging the bone") // CHOMPEdit - Balloon alert
-=======
 	user.visible_message(span_danger("[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!") , \
 		span_danger("Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, damaging the bone.", "Your hand slips, damaging the bone") // CHOMPEdit - Balloon alert
 	affected.createwound(BRUISE, 5)
 
 ///////////////////////////////////////////////////////////////
@@ -156,38 +126,23 @@
 	return affected && affected.organ_tag == BP_HEAD && (affected.robotic < ORGAN_ROBOT) && affected.open >= 2 && affected.stage == 1
 
 /datum/surgery_step/mend_skull/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] is beginning to piece together [target]'s skull with \the [tool].</span>"  , \
-		"<span class='notice'>You are beginning to piece together [target]'s skull with \the [tool].</span>")
-	user.balloon_alert_visible("Pieces the skull together", "Piecing skull together.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] is beginning to piece together [target]'s skull with \the [tool].")  , \
 		span_notice("You are beginning to piece together [target]'s skull with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Pieces the skull together", "Piecing skull together.") // CHOMPEdit
 	..()
 
 /datum/surgery_step/mend_skull/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] sets [target]'s skull with \the [tool].</span>" , \
-		"<span class='notice'>You set [target]'s skull with \the [tool].</span>")
-	user.balloon_alert_visible("Sets the skull back.", "Skull set back.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] sets [target]'s skull with \the [tool].") , \
 		span_notice("You set [target]'s skull with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Sets the skull back.", "Skull set back.") // CHOMPEdit
 	affected.stage = 2
 
 /datum/surgery_step/mend_skull/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='danger'>[user]'s hand slips, damaging [target]'s face with \the [tool]!</span>"  , \
-		"<span class='danger'>Your hand slips, damaging [target]'s face with \the [tool]!</span>")
-	user.balloon_alert_visible("Slips, damaging [target]'s face", "Your hand slips, damaging [target]'s face") // CHOMPEdit
-=======
 	user.visible_message(span_danger("[user]'s hand slips, damaging [target]'s face with \the [tool]!")  , \
 		span_danger("Your hand slips, damaging [target]'s face with \the [tool]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, damaging [target]'s face", "Your hand slips, damaging [target]'s face") // CHOMPEdit
 	var/obj/item/organ/external/head/h = affected
 	h.createwound(BRUISE, 10)
 	h.disfigured = 1
@@ -220,39 +175,24 @@
 
 /datum/surgery_step/finish_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] starts to finish mending the damaged bones in [target]'s [affected.name] with \the [tool].</span>", \
-	"<span class='notice'>You start to finish mending the damaged bones in [target]'s [affected.name] with \the [tool].</span>")
-	user.balloon_alert_visible("Begins mending damaged bones.", "Mending damaged bones.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] starts to finish mending the damaged bones in [target]'s [affected.name] with \the [tool]."), \
 	span_notice("You start to finish mending the damaged bones in [target]'s [affected.name] with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Begins mending damaged bones.", "Mending damaged bones.") // CHOMPEdit
 	..()
 
 /datum/surgery_step/finish_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] has mended the damaged bones in [target]'s [affected.name] with \the [tool].</span>"  , \
-		"<span class='notice'>You have mended the damaged bones in [target]'s [affected.name] with \the [tool].</span>" )
-	user.balloon_alert_visible("Mends damaged bones.", "Mended damaged bones.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] has mended the damaged bones in [target]'s [affected.name] with \the [tool].")  , \
 		span_notice("You have mended the damaged bones in [target]'s [affected.name] with \the [tool].") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Mends damaged bones.", "Mended damaged bones.") // CHOMPEdit
 	affected.status &= ~ORGAN_BROKEN
 	affected.stage = 0
 
 /datum/surgery_step/finish_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='danger'>[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>" , \
-	"<span class='danger'>Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!</span>")
-	user.balloon_alert_visible("Slips, smearing [tool] in the incision.", "Your hand slips, smearing [tool].") // CHOMPEdit
-=======
 	user.visible_message(span_danger("[user]'s hand slips, smearing [tool] in the incision in [target]'s [affected.name]!") , \
 	span_danger("Your hand slips, smearing [tool] in the incision in [target]'s [affected.name]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, smearing [tool] in the incision.", "Your hand slips, smearing [tool].") // CHOMPEdit
 
 ///////////////////////////////////////////////////////////////
 // Bone Clamp Surgery
@@ -281,37 +221,22 @@
 /datum/surgery_step/clamp_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected.stage == 0)
-<<<<<<< HEAD
-		user.visible_message("<span class='notice'>[user] starts repairing the damaged bones in [target]'s [affected.name] with \the [tool].</span>" , \
-		"<span class='notice'>You starts repairing the damaged bones in [target]'s [affected.name] with \the [tool].</span>")
-		user.balloon_alert_visible("Begins repairing damaged bones.", "Repairing damaged bones.") // CHOMPEdit
-=======
 		user.visible_message(span_notice("[user] starts repairing the damaged bones in [target]'s [affected.name] with \the [tool].") , \
 		span_notice("You starts repairing the damaged bones in [target]'s [affected.name] with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		user.balloon_alert_visible("Begins repairing damaged bones.", "Repairing damaged bones.") // CHOMPEdit
 	target.custom_pain("Something in your [affected.name] is causing you a lot of pain!", 50)
 	..()
 
 /datum/surgery_step/clamp_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] sets the bone in [target]'s [affected.name] with \the [tool].</span>", \
-		"<span class='notice'>You sets [target]'s bone in [affected.name] with \the [tool].</span>")
-	user.balloon_alert_visible("Sets the bone back in.", "Bone set in.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] sets the bone in [target]'s [affected.name] with \the [tool]."), \
 		span_notice("You sets [target]'s bone in [affected.name] with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Sets the bone back in.", "Bone set in.") // CHOMPEdit
 	affected.status &= ~ORGAN_BROKEN
 
 /datum/surgery_step/clamp_bone/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='danger'>[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</span>" , \
-		"<span class='danger'>Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</span>")
-	user.balloon_alert_visible("Slips, damaging [target]'s [affected.name]", "Your hand slips, damaging the bone.") // CHOMPEdit
-=======
 	user.visible_message(span_danger("[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!") , \
 		span_danger("Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, damaging [target]'s [affected.name]", "Your hand slips, damaging the bone.") // CHOMPEdit
 	affected.createwound(BRUISE, 5)

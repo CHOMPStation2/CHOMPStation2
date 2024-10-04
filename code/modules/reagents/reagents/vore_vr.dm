@@ -184,15 +184,9 @@
 			if(!(H.gender == PLURAL))
 				H.set_gender(PLURAL)
 				H.change_gender_identity(PLURAL)
-<<<<<<< HEAD
-				H.visible_message("<span class='notice'>[H] suddenly twitches as some of their features seem to contort and reshape, adjusting... In the end, it seems they are now of mixed gender.</span>",
-								"<span class='warning'>Your body suddenly contorts, feeling very different in various ways... By the time the rushing feeling is over it seems you just became of mixed gender.</span>")
-*/
-=======
 				H.visible_message(span_notice("[H] suddenly twitches as some of their features seem to contort and reshape, adjusting... In the end, it seems they are now of mixed gender."),
 								span_warning("Your body suddenly contorts, feeling very different in various ways... By the time the rushing feeling is over it seems you just became of mixed gender."))
-
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+*/
 
 ////////////////////////// Misc Drugs //////////////////////////
 

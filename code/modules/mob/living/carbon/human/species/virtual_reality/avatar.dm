@@ -123,7 +123,6 @@
 	if(istype(vr_holder.loc, /obj/machinery/vr_sleeper))
 		var/obj/machinery/vr_sleeper/V = vr_holder.loc
 		V.go_out()
-<<<<<<< HEAD
 
 	if(died_in_vr)
 		spawn(3000) //Delete the body after 5 minutes to make sure mob subsystem doesn't cry
@@ -134,5 +133,3 @@
 					unEquip(I,force = TRUE)
 			release_vore_contents(include_absorbed = TRUE, silent = TRUE)
 			qdel(src)
-=======
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

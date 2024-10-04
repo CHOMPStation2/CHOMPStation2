@@ -102,13 +102,8 @@
 		to_chat(src, span_danger("The game hasn't started yet!"))
 		return
 
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/allow_drone_spawn)) // CHOMPEdit
-		to_chat(src, "<span class='danger'>That verb is not currently permitted.</span>")
-=======
-	if(!(config.allow_drone_spawn))
 		to_chat(src, span_danger("That verb is not currently permitted."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	if (!src.stat)

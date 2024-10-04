@@ -254,13 +254,8 @@
 				return
 		*/ //Vorestation Removal End
 
-<<<<<<< HEAD
 		if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
-			to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
-=======
-		if(!config.enter_allowed)
 			to_chat(usr, span_notice("There is an administrative lock on entering the game!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 		else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)
 			to_chat(usr, span_danger("The station is currently exploding. Joining would go poorly."))
@@ -476,13 +471,8 @@
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 		to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 		return 0
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
-		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
-=======
-	if(!config.enter_allowed)
 		to_chat(usr, span_notice("There is an administrative lock on entering the game!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return 0
 	if(!IsJobAvailable(rank))
 		tgui_alert_async(src,"[rank] is not available. Please try another.")

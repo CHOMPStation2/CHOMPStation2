@@ -326,13 +326,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Toggle AntagHUD"
 	set desc = "Toggles AntagHUD allowing you to see who is the antagonist"
 
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/antag_hud_allowed) && !client.holder) // CHOMPEdit
-		to_chat(src, "<span class='filter_notice'>[span_red("Admins have disabled this for this round.")]</span>")
-=======
-	if(!config.antag_hud_allowed && !client.holder)
 		to_chat(src, span_filter_notice("[span_red("Admins have disabled this for this round.")]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	if(jobban_isbanned(src, JOB_ANTAGHUD))
 		to_chat(src, span_filter_notice("[span_red("<B>You have been banned from using this feature</B>")]"))
@@ -668,13 +663,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Become mouse"
 	set category = "Ghost.Join" //CHOMPEdit
 
-<<<<<<< HEAD
 	if(CONFIG_GET(flag/disable_player_mice)) // CHOMPEdit
-		to_chat(src, "<span class='warning'>Spawning as a mouse is currently disabled.</span>")
-=======
-	if(config.disable_player_mice)
 		to_chat(src, span_warning("Spawning as a mouse is currently disabled."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	//VOREStation Add Start
@@ -749,13 +739,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Write in blood"
 	set desc = "If the round is sufficiently spooky, write a short message in blood on the floor or a wall. Remember, no IC in OOC or OOC in IC."
 
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/cult_ghostwriter)) // CHOMPEdit
-		to_chat(src, "<span class='filter_notice'>[span_red("That verb is not currently permitted.")]</span>")
-=======
-	if(!(config.cult_ghostwriter))
 		to_chat(src, span_filter_notice("[span_red("That verb is not currently permitted.")]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	if (!src.stat)
@@ -839,15 +824,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/manifest(mob/user)
 	is_manifest = TRUE
-<<<<<<< HEAD
 	add_verb(src,/mob/observer/dead/proc/toggle_visibility) //CHOMPEdit TGPanel
 	add_verb(src,/mob/observer/dead/proc/ghost_whisper) //CHOMPEdit TGPanel
-	to_chat(src, "<span class='filter_notice'>[span_purple("As you are now in the realm of the living, you can whisper to the living with the <b>Spectral Whisper</b> verb, inside the IC tab.")]</span>")
-=======
-	verbs |= /mob/observer/dead/proc/toggle_visibility
-	verbs |= /mob/observer/dead/proc/ghost_whisper
 	to_chat(src, span_filter_notice("[span_purple("As you are now in the realm of the living, you can whisper to the living with the <b>Spectral Whisper</b> verb, inside the IC tab.")]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	if(plane != PLANE_WORLD)
 		user.visible_message( \
 			span_warning("\The [user] drags ghost, [src], to our plane of reality!"), \

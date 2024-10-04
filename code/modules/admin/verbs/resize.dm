@@ -15,17 +15,10 @@
 	var/can_be_big = L.has_large_resize_bounds()
 	var/very_big = is_extreme_size(size_multiplier)
 
-<<<<<<< HEAD
 	if(very_big && can_be_big) // made an extreme size in an area that allows it, don't assume adminbuse
-		to_chat(src,"<span class='warning'>[L] will lose this size upon moving into an area where this size is not allowed.</span>")
+		to_chat(src,span_warning("[L] will lose this size upon moving into an area where this size is not allowed."))
 	else if(very_big) // made an extreme size in an area that doesn't allow it, assume adminbuse
-		to_chat(src,"<span class='warning'>[L] will retain this normally unallowed size outside this area.</span>")
-=======
-    if(very_big && can_be_big) // made an extreme size in an area that allows it, don't assume adminbuse
-        to_chat(src,span_warning("[L] will lose this size upon moving into an area where this size is not allowed."))
-    else if(very_big) // made an extreme size in an area that doesn't allow it, assume adminbuse
-        to_chat(src,span_warning("[L] will retain this normally unallowed size outside this area."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		to_chat(src,span_warning("[L] will retain this normally unallowed size outside this area."))
 
 	L.resize(size_multiplier, animate = TRUE, uncapped = TRUE, ignore_prefs = TRUE)
 

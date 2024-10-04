@@ -1241,13 +1241,8 @@
 
 	if(R)
 		R.UnlinkSelf()
-<<<<<<< HEAD
-		to_chat(R, "<span class='filter_notice'>Buffers flushed and reset. Camera system shutdown. All systems operational.</span>")
-		remove_verb(src,/mob/living/silicon/robot/proc/ResetSecurityCodes)  //CHOMPEdit
-=======
 		to_chat(R, span_filter_notice("Buffers flushed and reset. Camera system shutdown. All systems operational."))
-		src.verbs -= /mob/living/silicon/robot/proc/ResetSecurityCodes
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		remove_verb(src,/mob/living/silicon/robot/proc/ResetSecurityCodes)  //CHOMPEdit
 
 /mob/living/silicon/robot/proc/SetLockdown(var/state = 1)
 	// They stay locked down if their wire is cut.

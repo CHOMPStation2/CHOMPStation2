@@ -53,19 +53,18 @@
 	if(istype(thing, /obj/item/stack/material))
 		var/obj/item/stack/material/M = thing
 		var/datum/material/mat = M.get_material()
-<<<<<<< HEAD
 		if(!blitzprogress)
 			if(!mat.is_fusion_fuel)
-				to_chat(user, "<span class='warning'>It would be pointless to make a fuel rod out of [mat.use_name].</span>")
+				to_chat(user, span_warning("It would be pointless to make a fuel rod out of [mat.use_name]."))
 				return
 			if(M.get_amount() < FUSION_ROD_SHEET_AMT)
 				if(mat.name=="supermatter")
-					visible_message("<span class='notice'>\The [user] places the [mat.use_name] into the compressor.</span>")
+					visible_message(span_notice("\The [user] places the [mat.use_name] into the compressor."))
 					M.use(1)
 					blitzprogress = 1
 					verbs |= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
 					return
-				to_chat(user, "<span class='warning'>You need at least 25 [mat.sheet_plural_name] to make a fuel rod.</span>")
+				to_chat(user, span_warning("You need at least 25 [mat.sheet_plural_name] to make a fuel rod."))
 				return
 			var/obj/item/fuel_assembly/F = new(get_turf(src), mat.name)
 			visible_message("<b>\The [src]</b> compresses \the [thing] into a new fuel assembly.")
@@ -74,36 +73,23 @@
 		else
 			if(mat.name=="phoron")
 				if(M.get_amount() < 25)
-					to_chat(user, "<span class='warning'>You need at least 25 phoron sheets to make a blitz rod!</span>")
+					to_chat(user, span_warning("You need at least 25 phoron sheets to make a blitz rod!"))
 					return
 				var/obj/item/fuel_assembly/blitz/unshielded/F = new(get_turf(src))
-				visible_message("<span class='notice'>\The [src] compresses the supermatter and phoron into a new blitz rod! It looks unstable, maybe you should be careful with it.</span>")
+				visible_message(span_notice("\The [src] compresses the supermatter and phoron into a new blitz rod! It looks unstable, maybe you should be careful with it."))
 				M.use(25)
 				user.put_in_hands(F)
 				blitzprogress = 0
 				verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
 			else
-				to_chat(user, "<span class='warning'>A blitz rod is currently in progress! Either add 25 phoron sheets to complete it, or eject the supermatter sheet!</span>")
+				to_chat(user, span_warning("A blitz rod is currently in progress! Either add 25 phoron sheets to complete it, or eject the supermatter sheet!"))
 				return
-=======
-		if(!mat.is_fusion_fuel)
-			to_chat(user, span_warning("It would be pointless to make a fuel rod out of [mat.use_name]."))
-			return
-		if(M.get_amount() < FUSION_ROD_SHEET_AMT)
-			to_chat(user, span_warning("You need at least 25 [mat.sheet_plural_name] to make a fuel rod."))
-			return
-		var/obj/item/fuel_assembly/F = new(get_turf(src), mat.name)
-		visible_message("<b>\The [src]</b> compresses the [mat.use_name] into a new fuel assembly.")
-		M.use(FUSION_ROD_SHEET_AMT)
-		user.put_in_hands(F)
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 	else if(do_special_fuel_compression(thing, user))
 		return
 
 	return ..()
 
-<<<<<<< HEAD
 /obj/machinery/fusion_fuel_compressor/verb/eject_sheet()
 	set name = "Eject Supermatter Sheet"
 	set category = "Object"
@@ -115,6 +101,4 @@
 	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet
 //CHOMPEdit End
 
-=======
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 #undef FUSION_ROD_SHEET_AMT

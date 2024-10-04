@@ -153,7 +153,6 @@
 	damage = damage * damage_mod
 
 	return damage
-<<<<<<< HEAD
 
 /*
  * CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
@@ -189,5 +188,3 @@
 						if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
 							emote("pain")
 	// CHOMPEdit End: Pain
-=======
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

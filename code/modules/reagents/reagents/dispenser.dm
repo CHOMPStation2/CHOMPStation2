@@ -368,13 +368,8 @@
 	if(ishuman(M) && !isbelly(M.loc)) //CHOMPEdit Start
 		var/mob/living/carbon/human/H = M
 		if(H.head)
-<<<<<<< HEAD
 			if(H.head.unacidable || is_type_in_list(H.head,item_digestion_blacklist))
-				to_chat(H, "<span class='danger'>Your [H.head] protects you from the acid.</span>")
-=======
-			if(H.head.unacidable)
 				to_chat(H, span_danger("Your [H.head] protects you from the acid."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				remove_self(volume)
 				return
 			else if(removed > meltdose)
@@ -387,13 +382,8 @@
 			return
 
 		if(H.wear_mask)
-<<<<<<< HEAD
 			if(H.wear_mask.unacidable || is_type_in_list(H.wear_mask,item_digestion_blacklist))
-				to_chat(H, "<span class='danger'>Your [H.wear_mask] protects you from the acid.</span>")
-=======
-			if(H.wear_mask.unacidable)
 				to_chat(H, span_danger("Your [H.wear_mask] protects you from the acid."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				remove_self(volume)
 				return
 			else if(removed > meltdose)
@@ -406,13 +396,8 @@
 			return
 
 		if(H.glasses)
-<<<<<<< HEAD
 			if(H.glasses.unacidable || is_type_in_list(H.glasses,item_digestion_blacklist))
-				to_chat(H, "<span class='danger'>Your [H.glasses] partially protect you from the acid!</span>")
-=======
-			if(H.glasses.unacidable)
 				to_chat(H, span_danger("Your [H.glasses] partially protect you from the acid!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				removed /= 2
 			else if(removed > meltdose)
 				to_chat(H, span_danger("Your [H.glasses] melt away!"))

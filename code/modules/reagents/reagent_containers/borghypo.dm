@@ -70,24 +70,16 @@
 		return
 
 	if(!reagent_volumes[reagent_ids[mode]])
-<<<<<<< HEAD
-		// to_chat(user, "<span class='warning'>The injector is empty.</span>")
+		// to_chat(user, span_warning("The injector is empty."))
 		balloon_alert(user, "The injector is empty.") // CHOMPEdit - Changed to balloon alert
-=======
-		to_chat(user, span_warning("The injector is empty."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	var/mob/living/carbon/human/H = M
 	if(istype(H))
 		var/obj/item/organ/external/affected = H.get_organ(user.zone_sel.selecting)
 		if(!affected)
-<<<<<<< HEAD
-			// to_chat(user, "<span class='danger'>\The [H] is missing that limb!</span>")
+			// to_chat(user, span_danger("\The [H] is missing that limb!"))
 			balloon_alert("\The [H] is missing that limb.") // CHOMPEdit - Changed to balloon alert
-=======
-			to_chat(user, span_danger("\The [H] is missing that limb!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 		/* since synths have oil/coolant streams now, it only makes sense that you should be able to inject stuff. preserved for posterity.
 		else if(affected.robotic >= ORGAN_ROBOT)
@@ -96,16 +88,11 @@
 		*/
 
 	if(M.can_inject(user, 1, ignore_thickness = bypass_protection))
-<<<<<<< HEAD
 		// CHOMPEdit - Changed to balloon alert
-		// to_chat(user, "<span class='notice'>You inject [M] with the injector.</span>")
-		// to_chat(M, "<span class='notice'>You feel a tiny prick!</span>")
+		// to_chat(user, span_notice("You inject [M] with the injector."))
+		// to_chat(M, span_notice("You feel a tiny prick!"))
 		balloon_alert(user, "You inject [M] with the injector.")
 		balloon_alert(user, "You feel a tiny prick!")
-=======
-		to_chat(user, span_notice("You inject [M] with the injector."))
-		to_chat(M, span_notice("You feel a tiny prick!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		if(M.reagents)
 			var/t = min(amount_per_transfer_from_this, reagent_volumes[reagent_ids[mode]])
@@ -136,12 +123,8 @@
 			playsound(src, 'sound/effects/pop.ogg', 50, 0)
 			mode = t
 			var/datum/reagent/R = SSchemistry.chemical_reagents[reagent_ids[mode]]
-<<<<<<< HEAD
-			// to_chat(usr, "<span class='notice'>Synthesizer is now producing '[R.name]'.</span>")
+			// to_chat(usr, span_notice("Synthesizer is now producing '[R.name]'."))
 			balloon_alert(usr, "Synthesizer is now producing '[R.name]'") // CHOMPAdd
-=======
-			to_chat(usr, span_notice("Synthesizer is now producing '[R.name]'."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /obj/item/reagent_containers/borghypo/examine(mob/user)
 	. = ..()
@@ -218,21 +201,13 @@
 		return
 
 	if(!target.reagents.get_free_space())
-<<<<<<< HEAD
-		// to_chat(user, "<span class='notice'>[target] is full.</span>")
+		// to_chat(user, span_notice("[target] is full."))
 		balloon_alert(user, "[target] is full.") // CHOMPEdit - Changed to balloon alert
-=======
-		to_chat(user, span_notice("[target] is full."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	var/t = min(amount_per_transfer_from_this, reagent_volumes[reagent_ids[mode]])
 	target.reagents.add_reagent(reagent_ids[mode], t)
 	reagent_volumes[reagent_ids[mode]] -= t
-<<<<<<< HEAD
-	// to_chat(user, "<span class='notice'>You transfer [t] units of the solution to [target].</span>")
+	// to_chat(user, span_notice("You transfer [t] units of the solution to [target]."))
 	balloon_alert(user, "Transfered [t] units to [target].") // CHOMPEdit - Changed to balloon alert
-=======
-	to_chat(user, span_notice("You transfer [t] units of the solution to [target]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	return

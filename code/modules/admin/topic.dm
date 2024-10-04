@@ -682,13 +682,8 @@
 			to_chat(usr, span_filter_adminlog(span_warning("You do not have the appropriate permissions to add job bans!")))
 			return
 
-<<<<<<< HEAD
 		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN,0) && !CONFIG_GET(flag/mods_can_job_tempban)) // If mod and tempban disabled // CHOMPEdit
-			to_chat(usr, "<span class='filter_adminlog warning'>Mod jobbanning is disabled!</span>")
-=======
-		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN,0) && !config.mods_can_job_tempban) // If mod and tempban disabled
 			to_chat(usr, span_filter_adminlog(span_warning("Mod jobbanning is disabled!")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 
 		var/mob/M = locate(href_list["jobban4"])
@@ -790,24 +785,14 @@
 					if(!check_rights(R_MOD,0) && !check_rights(R_BAN, 0))
 						to_chat(usr, span_filter_adminlog(span_warning("You cannot issue temporary job-bans!")))
 						return
-<<<<<<< HEAD
 					if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
-						to_chat(usr, "<span class='filter_adminlog warning'>Your server is using the legacy banning system, which does not support temporary job bans. Consider upgrading. Aborting ban.</span>")
-=======
-					if(config.ban_legacy_system)
 						to_chat(usr, span_filter_adminlog(span_warning("Your server is using the legacy banning system, which does not support temporary job bans. Consider upgrading. Aborting ban.")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 						return
 					var/mins = tgui_input_number(usr,"How long (in minutes)?","Ban time",1440)
 					if(!mins)
 						return
-<<<<<<< HEAD
 					if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_job_tempban_max)) // CHOMPEdit
-						to_chat(usr, "<span class='filter_adminlog warning'> Moderators can only job tempban up to [CONFIG_GET(number/mod_job_tempban_max)] minutes!</span>") // CHOMPEdit
-=======
-					if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > config.mod_job_tempban_max)
-						to_chat(usr, span_filter_adminlog(span_warning("Moderators can only job tempban up to [config.mod_job_tempban_max] minutes!")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+						to_chat(usr, span_filter_adminlog(span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_job_tempban_max)] minutes!"))) // CHOMPEdit
 						return
 					var/reason = sanitize(tgui_input_text(usr,"Reason?","Please State Reason",""))
 					if(!reason)
@@ -859,13 +844,8 @@
 		//Unbanning joblist
 		//all jobs in joblist are banned already OR we didn't give a reason (implying they shouldn't be banned)
 		if(joblist.len) //at least 1 banned job exists in joblist so we have stuff to unban.
-<<<<<<< HEAD
 			if(!CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
-				to_chat(usr, "<span class='filter_adminlog'>Unfortunately, database based unbanning cannot be done through this panel</span>")
-=======
-			if(!config.ban_legacy_system)
 				to_chat(usr, span_filter_adminlog("Unfortunately, database based unbanning cannot be done through this panel"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				DB_ban_panel(M.ckey)
 				return
 			var/msg
@@ -927,13 +907,8 @@
 			to_chat(usr, span_warning("You do not have the appropriate permissions to add bans!"))
 			return
 
-<<<<<<< HEAD
 		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN, 0) && !CONFIG_GET(flag/mods_can_job_tempban)) // If mod and tempban disabled // CHOMPEdit
-			to_chat(usr, "<span class='warning'>Mod jobbanning is disabled!</span>")
-=======
-		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN, 0) && !config.mods_can_job_tempban) // If mod and tempban disabled
 			to_chat(usr, span_warning("Mod jobbanning is disabled!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 
 		var/mob/M = locate(href_list["newban"])
@@ -948,13 +923,8 @@
 				var/mins = tgui_input_number(usr,"How long (in minutes)?","Ban time",1440)
 				if(!mins)
 					return
-<<<<<<< HEAD
 				if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_tempban_max)) // CHOMPEdit
-					to_chat(usr, "<span class='warning'>Moderators can only job tempban up to [CONFIG_GET(number/mod_tempban_max)] minutes!</span>") // CHOMPEdit
-=======
-				if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > config.mod_tempban_max)
-					to_chat(usr, span_warning("Moderators can only job tempban up to [config.mod_tempban_max] minutes!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+					to_chat(usr, span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_tempban_max)] minutes!")) // CHOMPEdit
 					return
 				if(mins >= 525600) mins = 525599
 				var/reason = sanitize(tgui_input_text(usr,"Reason?","reason","Griefer"))
@@ -968,13 +938,8 @@
 				feedback_inc("ban_tmp",1)
 				DB_ban_record(BANTYPE_TEMP, M, mins, reason)
 				feedback_inc("ban_tmp_mins",mins)
-<<<<<<< HEAD
 				if(CONFIG_GET(string/banappeals)) // CHOMPEdit
-					to_chat(M, "<span class='filter_system warning'>To try to resolve this matter head to [CONFIG_GET(string/banappeals)]</span>") // CHOMPEdit
-=======
-				if(config.banappeals)
-					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [config.banappeals]")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [CONFIG_GET(string/banappeals)]"))) // CHOMPEdit
 				else
 					to_chat(M, span_filter_system(span_warning("No ban appeals URL has been set.")))
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
@@ -997,17 +962,10 @@
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0, M.lastKnownIP)
 					if("No")
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0)
-<<<<<<< HEAD
-				to_chat(M, "<span class='filter_system critical'>You have been banned by [usr.client.ckey].\nReason: [reason].</span>")
-				to_chat(M, "<span class='filter_system warning'>This is a permanent ban.</span>")
-				if(CONFIG_GET(string/banappeals)) // CHOMPEdit
-					to_chat(M, "<span class='filter_system warning'>To try to resolve this matter head to [CONFIG_GET(string/banappeals)]</span>") // CHOMPEdit
-=======
 				to_chat(M, span_filter_system(span_critical("You have been banned by [usr.client.ckey].\nReason: [reason].")))
 				to_chat(M, span_filter_system(span_warning("This is a permanent ban.")))
-				if(config.banappeals)
-					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [config.banappeals]")))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				if(CONFIG_GET(string/banappeals)) // CHOMPEdit
+					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [CONFIG_GET(string/banappeals)]"))) // CHOMPEdit
 				else
 					to_chat(M, span_filter_system(span_warning("No ban appeals URL has been set.")))
 				ban_unban_log_save("[usr.client.ckey] has permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")

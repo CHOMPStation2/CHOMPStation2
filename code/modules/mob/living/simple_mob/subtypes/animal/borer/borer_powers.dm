@@ -347,13 +347,8 @@
 		to_chat(usr, "Your host is already alive.")
 		return
 
-<<<<<<< HEAD
 	remove_verb(src,/mob/living/carbon/human/proc/jumpstart) //CHOMPEdit TGPanel
-	visible_message("<span class='warning'>With a hideous, rattling moan, [src] shudders back to life!</span>")
-=======
-	verbs -= /mob/living/carbon/human/proc/jumpstart
 	visible_message(span_warning("With a hideous, rattling moan, [src] shudders back to life!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 	rejuvenate()
 	restore_blood()

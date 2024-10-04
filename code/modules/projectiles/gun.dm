@@ -450,9 +450,9 @@
 				nerd.Weaken(1*recoil_mode)
 				if(!istype(src,/obj/item/gun/energy))
 					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
-					to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
+					to_chat(nerd, span_danger("You're so tiny that you drop the gun and hurt yourself from the recoil!"))
 				else
-					to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
+					to_chat(nerd, span_danger("You're so tiny that the pull of the trigger causes you to drop the gun!"))
 
 	//YAWNEDIT: Knockdown code end
 
@@ -788,13 +788,8 @@
 		sel_mode = 1
 	var/datum/firemode/new_mode = firemodes[sel_mode]
 	new_mode.apply_to(src)
-<<<<<<< HEAD
-	to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
-	user.hud_used.update_ammo_hud(user, src)
-=======
 	to_chat(user, span_notice("\The [src] is now set to [new_mode.name]."))
-	user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.hud_used.update_ammo_hud(user, src)
 
 	return new_mode
 

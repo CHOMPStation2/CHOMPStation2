@@ -409,17 +409,11 @@
 				B.stored_ore[ore] += ore_amount 	// Add the ore to the machine.
 				stored_ore[ore] = 0 				// Set the value of the ore in the satchel to 0.
 				current_capacity = 0				// Set the amount of ore in the drill to 0.
-<<<<<<< HEAD
-		// to_chat(usr, "<span class='notice'>You unload the drill's storage cache into the ore box.</span>")
+		// to_chat(usr, span_notice("You unload the drill's storage cache into the ore box."))
 		balloon_alert(usr, "You onload the drill's storage cache into the ore box.") // CHOMPEdit - Changed to balloon alert
 	else
-		// to_chat(usr, "<span class='notice'>You must move an ore box up to the drill before you can unload it.</span>")
+		// to_chat(usr, span_notice("You must move an ore box up to the drill before you can unload it."))
 		balloon_alert(usr, "Move an ore box to the droll before unloading it.") // CHOMPEdit - Changed to balloon alert
-=======
-		to_chat(usr, span_notice("You unload the drill's storage cache into the ore box."))
-	else
-		to_chat(usr, span_notice("You must move an ore box up to the drill before you can unload it."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 
 /obj/machinery/mining/brace
@@ -447,12 +441,8 @@
 
 /obj/machinery/mining/brace/attackby(obj/item/W as obj, mob/user as mob)
 	if(connected && connected.active)
-<<<<<<< HEAD
-		// to_chat(user, "<span class='notice'>You can't work with the brace of a running drill!</span>")
+		// to_chat(user, span_notice("You can't work with the brace of a running drill!"))
 		balloon_alert(user, "You can't work with the brace of a running drill.") // CHOMPEdit - Changed to balloon alert
-=======
-		to_chat(user, span_notice("You can't work with the brace of a running drill!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	if(default_deconstruction_screwdriver(user, W))
@@ -465,21 +455,13 @@
 	if(W.has_tool_quality(TOOL_WRENCH))
 
 		if(istype(get_turf(src), /turf/space))
-<<<<<<< HEAD
-			// to_chat(user, "<span class='notice'>You can't anchor something to empty space. Idiot.</span>")
+			// to_chat(user, span_notice("You can't anchor something to empty space. Idiot."))
 			balloon_alert(user, "You can't anchor something to empty space. Idiot.") // CHOMPEdit - Changed to balloon alert
 			return
 
 		playsound(src, W.usesound, 100, 1)
-		// to_chat(user, "<span class='notice'>You [anchored ? "un" : ""]anchor the brace.</span>")
+		// to_chat(user, span_notice("You [anchored ? "un" : ""]anchor the brace."))
 		balloon_alert(user, "[anchored ? "Una" : "A"]nchored the brace") // CHOMPEdit - Changed to balloon alert
-=======
-			to_chat(user, span_notice("You can't anchor something to empty space. Idiot."))
-			return
-
-		playsound(src, W.usesound, 100, 1)
-		to_chat(user, span_notice("You [anchored ? "un" : ""]anchor the brace."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		anchored = !anchored
 		if(anchored)

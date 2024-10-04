@@ -189,9 +189,5 @@
 	species.base_species = new_species
 	wrapped_species_by_ref["\ref[src]"] = new_species
 	if (visible)
-<<<<<<< HEAD
-		visible_message("<span class='filter_notice'><b>\The [src]</b> shifts and contorts, taking the form of \a [new_species]!</span>")
-=======
 		visible_message(span_filter_notice("<b>\The [src]</b> shifts and contorts, taking the form of \a [new_species]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		regenerate_icons()

@@ -83,8 +83,4 @@
 		message = "reveals their tail!"
 	else
 		message = "hides their tail."
-<<<<<<< HEAD
-	visible_message("<span class='filter_notice'>[src] [message]</span>")
-=======
 	visible_message(span_filter_notice("[src] [message]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

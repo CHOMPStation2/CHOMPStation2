@@ -527,18 +527,13 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-<<<<<<< HEAD
 	if(tasted == src) //CHOMPEdit Start
-		visible_message("<span class='vwarning'>[src] licks themself!</span>","<span class='notice'>You lick yourself. You taste rather like [tasted.get_taste_message()].</span>")
+		visible_message(span_vwarning("[src] licks themself!"),span_notice("You lick yourself. You taste rather like [tasted.get_taste_message()]."))
 		balloon_alert_visible("Licks themself!", "Tastes like [tasted.get_taste_message()]")
 	else
-		visible_message("<span class='vwarning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>")
+		visible_message(span_vwarning("[src] licks [tasted]!"),span_notice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."))
 		balloon_alert_visible("Licks [tasted]!", "Tastes like [tasted.get_taste_message()]")
 		//CHOMPEdit End
-=======
-
-	visible_message(span_vwarning("[src] licks [tasted]!"),span_vnotice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),"<b>Slurp!</b>")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -577,17 +572,13 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-<<<<<<< HEAD
 	if(smelled == src) //CHOMPEdit Start
-		visible_message("<span class='vwarning'>[src] smells themself!</span>","<span class='notice'>You smell yourself. You smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+		visible_message(span_vwarning("[src] smells themself!"),span_notice("You smell yourself. You smell like [smelled.get_smell_message()]."),"<b>Sniff!</b>")
 		balloon_alert_visible("Smells themself!", "Smells like [smelled.get_smell_message()]")
 	else
-		visible_message("<span class='vwarning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+		visible_message(span_vwarning("[src] smells [smelled]!"),span_notice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),"<b>Sniff!</b>")
 		balloon_alert_visible("Smells [smelled]!", "Smells like [smelled.get_smell_message()]")
 		//CHOMPEdit End
-=======
-	visible_message(span_vwarning("[src] smells [smelled]!"),span_vnotice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),"<b>Sniff!</b>")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
@@ -1056,15 +1047,9 @@
 		else if(istype(I,/obj/item/paper))
 			to_chat(src, span_notice("You can taste the dry flavor of bureaucracy."))
 		else if(istype(I,/obj/item/book))
-<<<<<<< HEAD
-			to_chat(src, "<span class='notice'>You can taste the dry flavor of knowledge.</span>")
-		else if(istype(I,/obj/item/dice)) //CHOMPedit: Removed roulette ball because that's not active here.
-			to_chat(src, "<span class='notice'>You can taste the bitter flavor of cheating.</span>")
-=======
 			to_chat(src, span_notice("You can taste the dry flavor of knowledge."))
-		else if(istype(I,/obj/item/dice) || istype(I,/obj/item/roulette_ball))
+		else if(istype(I,/obj/item/dice)) //CHOMPedit: Removed roulette ball because that's not active here.
 			to_chat(src, span_notice("You can taste the bitter flavor of cheating."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		else if(istype(I,/obj/item/lipstick))
 			to_chat(src, span_notice("You can taste the flavor of couture and style. Toddler at the make-up bag style."))
 		else if(istype(I,/obj/item/soap))
@@ -1101,53 +1086,42 @@
 			var/obj/item/capture_crystal/C = I
 			if(C.bound_mob && (C.bound_mob in C.contents))
 				if(isbelly(C.loc))
-<<<<<<< HEAD
 					//var/obj/belly/B = C.loc //CHOMPedit
 					//to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>") //CHOMPedit: moved to modular_chomp capture_crystal.dm
-					to_chat(src, "<span class='notice'>You can taste the the power of command.</span>")
+					to_chat(src, span_notice("You can taste the the power of command."))
 		// CHOMPedit begin
 		else if(istype(I,/obj/item/starcaster_news))
-			to_chat(src, "<span class='notice'>You can taste the dry flavor of digital garbage, oh wait its just the news.</span>")
+			to_chat(src, span_notice("You can taste the dry flavor of digital garbage, oh wait its just the news."))
 		else if(istype(I,/obj/item/newspaper))
-			to_chat(src, "<span class='notice'>You can taste the dry flavor of garbage, oh wait its just the news.</span>")
+			to_chat(src, span_notice("You can taste the dry flavor of garbage, oh wait its just the news."))
 		else if (istype(I,/obj/item/cell))
-			visible_message("<span class='warning'>[src] sates their electric appetite with a [I]!</span>")
-			to_chat(src, "<span class='notice'>You can taste the spicy flavor of electrolytes, yum.</span>")
+			visible_message(span_warning("[src] sates their electric appetite with a [I]!"))
+			to_chat(src, span_notice("You can taste the spicy flavor of electrolytes, yum."))
 		else if (istype(I,/obj/item/walkpod))
-			visible_message("<span class='warning'>[src] sates their musical appetite with a [I]!</span>")
-			to_chat(src, "<span class='notice'>You can taste the jazzy flavor of music.</span>")
+			visible_message(span_warning("[src] sates their musical appetite with a [I]!"))
+			to_chat(src, span_notice("You can taste the jazzy flavor of music."))
 		else if (istype(I,/obj/item/mail/junkmail))
-			visible_message("<span class='warning'>[src] devours the [I]!</span>")
-			to_chat(src, "<span class='notice'>You can taste the flavor of the galactic postal service.</span>")
+			visible_message(span_warning("[src] devours the [I]!"))
+			to_chat(src, span_notice("You can taste the flavor of the galactic postal service."))
 		else if (istype(I,/obj/item/gun/energy/sizegun))
-			visible_message("<span class='warning'>[src] devours the [I]!</span>")
-			to_chat(src, "<span class='notice'>You didn't read the warning label, did you?</span>")
+			visible_message(span_warning("[src] devours the [I]!"))
+			to_chat(src, span_notice("You didn't read the warning label, did you?"))
 		else if (istype(I,/obj/item/slow_sizegun))
-			visible_message("<span class='warning'>[src] devours the [I]!</span>")
-			to_chat(src, "<span class='notice'>You taste the flavor of sunday driver bluespace.</span>")
+			visible_message(span_warning("[src] devours the [I]!"))
+			to_chat(src, span_notice("You taste the flavor of sunday driver bluespace."))
 		else if (istype(I,/obj/item/laser_pointer))
-			visible_message("<span class='warning'>[src] devours the [I]!</span>")
-			to_chat(src, "<span class='notice'>You taste the flavor of a laser.</span>")
+			visible_message(span_warning("[src] devours the [I]!"))
+			to_chat(src, span_notice("You taste the flavor of a laser."))
 		else if (istype(I,/obj/item/canvas))
-			visible_message("<span class='warning'>[src] devours the [I]!</span>")
-			to_chat(src, "<span class='notice'>You taste the flavor of priceless artwork.</span>")
+			visible_message(span_warning("[src] devours the [I]!"))
+			to_chat(src, span_notice("You taste the flavor of priceless artwork."))
 		//CHOMPedit end
 
 		else
-			to_chat(src, "<span class='notice'>You can taste the flavor of garbage. Delicious.</span>")
-		visible_message("<span class='vwarning'>[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!</span>") //CHOMPedit
-		return
-	to_chat(src, "<span class='notice'>This snack is too powerful to go down that easily.</span>") //CHOMPEdit
-=======
-					var/obj/belly/B = C.loc
-					to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>")
-					to_chat(src, span_notice("You can taste the the power of command."))
-		else
 			to_chat(src, span_notice("You can taste the flavor of garbage. Delicious."))
-		visible_message(span_warning("[src] demonstrates their voracious capabilities by swallowing [I] whole!"))
+		visible_message(span_vwarning("[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!")) //CHOMPedit
 		return
-	to_chat(src, span_notice("This item is not appropriate for ethical consumption."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	to_chat(src, span_notice("This snack is too powerful to go down that easily.")) //CHOMPEdit
 	return
 
 /mob/living/proc/toggle_trash_catching() //Ported from chompstation
@@ -1155,11 +1129,7 @@
 	set category = "Abilities.Vore"
 	set desc = "Toggle Trash Eater throw vore abilities."
 	trash_catching = !trash_catching
-<<<<<<< HEAD
-	to_chat(src, "<span class='vwarning'>Trash catching [trash_catching ? "enabled" : "disabled"].</span>") //CHOMPEdit
-=======
-	to_chat(src, span_warning("Trash catching [trash_catching ? "enabled" : "disabled"]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	to_chat(src, span_vwarning("Trash catching [trash_catching ? "enabled" : "disabled"].")) //CHOMPEdit
 
 /mob/living/proc/eat_minerals() //Actual eating abstracted so the user isn't given a prompt due to an argument in this verb.
 	set name = "Eat Minerals"

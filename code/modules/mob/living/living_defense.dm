@@ -268,11 +268,7 @@
 		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //ported from chompstation
 			var/obj/item/I = O
 			if(adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
-<<<<<<< HEAD
-				visible_message("<span class='vwarning'>[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!</span>") //CHOMPEdit
-=======
-				visible_message(span_warning("[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				visible_message(span_vwarning("[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!")) //CHOMPEdit
 				I.throwing = 0
 				I.forceMove(vore_selected)
 				return
@@ -285,17 +281,10 @@
 			miss_chance = max(15*(distance-2), 0)
 
 		if (prob(miss_chance))
-<<<<<<< HEAD
-			visible_message("<span class='notice'>\The [O] misses [src] narrowly!</span>")
+			visible_message(span_notice("\The [O] misses [src] narrowly!"))
 			return*/
 		//CHOMPEDIT - removing baymiss
-		src.visible_message("<span class='filter_warning'>[span_red("[src] has been hit by [O].")]</span>")
-=======
-			visible_message(span_notice("\The [O] misses [src] narrowly!"))
-			return
-
 		src.visible_message(span_filter_warning("[span_red("[src] has been hit by [O].")]"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		var/armor = run_armor_check(null, "melee")
 		var/soaked = get_armor_soak(null, "melee")
 

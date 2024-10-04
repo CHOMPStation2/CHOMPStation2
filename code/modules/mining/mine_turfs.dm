@@ -455,13 +455,8 @@ var/list/mining_overlay_cache = list()
 				return
 
 			var/obj/item/melee/shock_maul/S = W
-<<<<<<< HEAD
 			if(!S.wielded)	//CHOMPEdit - slight maul buff
-				to_chat(user, "<span class='warning'>\The [W] must be wielded in two hands to be used for mining!</span>")	//CHOMPEdit - fixed improper name
-=======
-			if(!S.wielded || !S.status)	//if we're not wielded OR not powered up, do nothing
-				to_chat(user, span_warning("\The [src] must be wielded in two hands and powered on to be used for mining!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				to_chat(user, span_warning("\The [W] must be wielded in two hands to be used for mining!"))	//CHOMPEdit - fixed improper name
 				return
 
 			var/newDepth = excavation_level + S.excavation_amount // Used commonly below
@@ -474,14 +469,10 @@ var/list/mining_overlay_cache = list()
 					fail_message = ". <b>[pick("There is a crunching noise","[S] collides with some different rock","Part of the rock face crumbles away","Something breaks under [S]")]</b>"
 					wreckfinds(S.destroy_artefacts)
 
-<<<<<<< HEAD
-			to_chat(user, "<span class='notice'>You smash through \the [src][fail_message].</span>")
-			//CHOMPEdit start - Moved the maul sounds up here and made it not cost energy to mine
-			user.visible_message("<span class='warning'>\The [src] discharges with a thunderous, hair-raising crackle!</span>")
-			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
-=======
 			to_chat(user, span_notice("You smash through \the [src][fail_message]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			//CHOMPEdit start - Moved the maul sounds up here and made it not cost energy to mine
+			user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
+			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
 
 			if(newDepth >= 200) // This means the rock is mined out fully
 				if(S.destroy_artefacts)
@@ -500,16 +491,7 @@ var/list/mining_overlay_cache = list()
 				var/obj/item/ore/O = new(src)
 				geologic_data.UpdateNearbyArtifactInfo(src)
 				O.geologic_data = geologic_data
-<<<<<<< HEAD
 			//CHOMPEdit end
-=======
-
-			user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
-			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
-			S.deductcharge()
-			S.status = 0
-			S.update_held_icon()
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		if (istype(W, /obj/item/pickaxe))
 			if(!istype(user.loc, /turf))

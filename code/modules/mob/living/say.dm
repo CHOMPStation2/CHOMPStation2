@@ -376,13 +376,8 @@ var/list/channel_to_radio_key = new
 			if(M && src) //If we still exist, when the spawn processes
 				//VOREStation Add - Ghosts don't hear whispers
 				if(whispering && isobserver(M) && (!M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || \
-<<<<<<< HEAD
 				(!(client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner))  && !M.client?.holder))) // CHOMPedit
-					M.show_message("<span class='game say'><span class='name'>[src.name]</span> [w_not_heard].</span>", 2)
-=======
-				(!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis)  && !M.client?.holder)))
 					M.show_message(span_game(span_say(span_name(src.name) + " [w_not_heard].")), 2)
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 					return
 				//VOREStation Add End
 

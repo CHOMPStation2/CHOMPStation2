@@ -225,18 +225,13 @@
 					if(isobserver(M))
 						message = span_emote("<B>[src]</B> ([ghost_follow_link(src, M)]) [input]")
 					if(usr && usr.client && M && !(get_z(usr) == get_z(M)))
-<<<<<<< HEAD
-						message = "<span class='multizsay'>[message]</span>"
+						message = span_multizsay("[message]")
 					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
 					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/holder) && src.loc.loc == M)))
 						M.show_message(message)
 					else
 						M.show_message(message, m_type)
 					//CHOMPEdit End
-=======
-						message = span_multizsay("[message]")
-					M.show_message(message, m_type)
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 					M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), (m_type == AUDIBLE_MESSAGE))
 
 		for(var/obj/O as anything in o_viewers)

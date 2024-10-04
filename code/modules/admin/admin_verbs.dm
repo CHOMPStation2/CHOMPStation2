@@ -390,13 +390,8 @@
 		deadmin_holder.reassociate()
 		log_admin("[src] re-admined themself.")
 		message_admins("[src] re-admined themself.", 1)
-<<<<<<< HEAD
-		to_chat(src, "<span class='filter_system interface'>You now have the keys to control the planet, or at least a small space station</span>")
-		remove_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
-=======
 		to_chat(src, span_filter_system(span_interface("You now have the keys to control the planet, or at least a small space station")))
-		verbs -= /client/proc/readmin_self
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		remove_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
 
 /client/proc/deadmin_self()
 	set name = "De-admin self"
@@ -407,13 +402,8 @@
 			log_admin("[src] deadmined themself.")
 			message_admins("[src] deadmined themself.", 1)
 			deadmin()
-<<<<<<< HEAD
-			to_chat(src, "<span class='filter_system interface'>You are now a normal player.</span>")
-			add_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
-=======
 			to_chat(src, span_filter_system(span_interface("You are now a normal player.")))
-			verbs |= /client/proc/readmin_self
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			add_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
 	feedback_add_details("admin_verb","DAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_log_hrefs()

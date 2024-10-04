@@ -683,7 +683,6 @@ var/global/datum/controller/occupations/job_master
 
 	//Spawn them at their preferred one
 	if(C && C.prefs.spawnpoint)
-<<<<<<< HEAD
 		if(C.prefs.spawnpoint == "Vorespawn - Prey")
 			var/list/preds = list()
 			var/list/pred_names = list() //This is cringe
@@ -730,7 +729,7 @@ var/global/datum/controller/occupations/job_master
 					else if(alert(C, "[pred]'s [vore_spawn_gut] will start with you absorbed. Continue?", "Confirm", "Yes", "No") != "Yes")
 						return
 				//CHOMPAdd End
-				to_chat(C, "<b><span class='warning'>[pred] has received your spawn request. Please wait.</span></b>")
+				to_chat(C, span_boldwarning("[pred] has received your spawn request. Please wait."))
 				log_admin("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
 				message_admins("[key_name(C)] has requested to vore spawn into [key_name(pred)]")
 
@@ -753,36 +752,31 @@ var/global/datum/controller/occupations/job_master
 						confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
 					//CHOMPEdit End
 				if(confirm != "Yes")
-					to_chat(C, "<span class='warning'>[pred] has declined your spawn request.</span>")
+					to_chat(C, span_warning("[pred] has declined your spawn request."))
 					var/message = sanitizeSafe(input(pred,"Do you want to leave them a message?")as text|null)
 					if(message)
-						to_chat(C, "<span class='notice'>[pred] message : [message]</span>")
+						to_chat(C, span_notice("[pred] message : [message]"))
 					return
 				if(!vore_spawn_gut || QDELETED(vore_spawn_gut))
-					to_chat(C, "<span class='warning'>Somehow, the belly you were trying to enter no longer exists.</span>")
+					to_chat(C, span_warning("Somehow, the belly you were trying to enter no longer exists."))
 					return
 				if(pred.stat == UNCONSCIOUS || pred.stat == DEAD)
-					to_chat(C, "<span class='warning'>[pred] is not conscious.</span>")
-					to_chat(pred, "<span class='warning'>You must be conscious to accept.</span>")
+					to_chat(C, span_warning("[pred] is not conscious."))
+					to_chat(pred, span_warning("You must be conscious to accept."))
 					return
 				if(!(pred.z in using_map.vorespawn_levels))
-					to_chat(C, "<span class='warning'>[pred] is no longer in station grounds.</span>")
-					to_chat(pred, "<span class='warning'>You must be within station grounds to accept.</span>")
+					to_chat(C, span_warning("[pred] is no longer in station grounds."))
+					to_chat(pred, span_warning("You must be within station grounds to accept."))
 					return
 				if(backup)
 					addtimer(CALLBACK(src, PROC_REF(m_backup_client), C), 5 SECONDS)
 				log_admin("[key_name(C)] has vore spawned into [key_name(pred)]")
 				message_admins("[key_name(C)] has vore spawned into [key_name(pred)]")
-				to_chat(C, "<span class='notice'>You have been spawned via vore. You are free to roleplay how you got there as you please, such as teleportation or having had already been there.</span>")
+				to_chat(C, span_notice("You have been spawned via vore. You are free to roleplay how you got there as you please, such as teleportation or having had already been there."))
 				if(vore_spawn_gut.entrance_logs) //CHOMPEdit
-					to_chat(pred, "<span class='notice'>Your prey has spawned via vore. You are free to roleplay this how you please, such as teleportation or having had already been there.</span>")
+					to_chat(pred, span_notice("Your prey has spawned via vore. You are free to roleplay this how you please, such as teleportation or having had already been there."))
 			else
-				to_chat(C, "<span class='warning'>No predators were available to accept you.</span>")
-=======
-		if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
-			if(fail_deadly)
-				to_chat(C, span_warning("Your chosen spawnpoint is unavailable for this map and your job requires a specific spawnpoint. Please correct your spawn point choice."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				to_chat(C, span_warning("No predators were available to accept you."))
 				return
 			spawnpos = spawntypes[C.prefs.spawnpoint]
 		if(C.prefs.spawnpoint == "Vorespawn - Pred") //Same as above, but in reverse!
@@ -841,25 +835,24 @@ var/global/datum/controller/occupations/job_master
 						confirm = alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
 					//CHOMPEdit End
 				if(confirm != "Yes")
-					to_chat(C, "<span class='warning'>[prey] has declined your spawn request.</span>")
+					to_chat(C, span_warning("[prey] has declined your spawn request."))
 					var/message = sanitizeSafe(input(prey,"Do you want to leave them a message?")as text|null)
 					if(message)
-						to_chat(C, "<span class='notice'>[prey] message : [message]</span>")
+						to_chat(C, span_notice("[prey] message : [message]"))
 					return
 				if(prey.stat == UNCONSCIOUS || prey.stat == DEAD)
-					to_chat(C, "<span class='warning'>[prey] is not conscious.</span>")
-					to_chat(prey, "<span class='warning'>You must be conscious to accept.</span>")
+					to_chat(C, span_warning("[prey] is not conscious."))
+					to_chat(prey, span_warning("You must be conscious to accept."))
 					return
 				if(!(prey.z in using_map.vorespawn_levels))
-					to_chat(C, "<span class='warning'>[prey] is no longer in station grounds.</span>")
-					to_chat(prey, "<span class='warning'>You must be within station grounds to accept.</span>")
+					to_chat(C, span_warning("[prey] is no longer in station grounds."))
+					to_chat(prey, span_warning("You must be within station grounds to accept."))
 					return
 				log_admin("[key_name(C)] has pred spawned onto [key_name(prey)]")
 				message_admins("[key_name(C)] has pred spawned onto [key_name(prey)]")
 				prey_to_nomph = prey
 			else
-<<<<<<< HEAD
-				to_chat(C, "<span class='warning'>No prey were available to accept you.</span>")
+				to_chat(C, span_warning("No prey were available to accept you."))
 				return
 		//CHOMPEdit - Item TF spawnpoints!
 		else if(C.prefs.spawnpoint == "Item TF spawn")
@@ -926,18 +919,18 @@ var/global/datum/controller/occupations/job_master
 
 					var/confirm = alert(carrier, "[C.prefs.real_name] is attempting to join as the [item_name] in your possession.", "Confirm", "No", "Yes")
 					if(confirm != "Yes")
-						to_chat(C, "<span class='warning'>[carrier] has declined your spawn request.</span>")
+						to_chat(C, span_warning("[carrier] has declined your spawn request."))
 						var/message = sanitizeSafe(input(carrier,"Do you want to leave them a message?")as text|null)
 						if(message)
-							to_chat(C, "<span class='notice'>[carrier] message : [message]</span>")
+							to_chat(C, span_notice("[carrier] message : [message]"))
 						return
 					if(carrier.stat == UNCONSCIOUS || carrier.stat == DEAD)
-						to_chat(C, "<span class='warning'>[carrier] is not conscious.</span>")
-						to_chat(carrier, "<span class='warning'>You must be conscious to accept.</span>")
+						to_chat(C, span_warning("[carrier] is not conscious."))
+						to_chat(carrier, span_warning("You must be conscious to accept."))
 						return
 					if(!(carrier.z in using_map.vorespawn_levels))
-						to_chat(C, "<span class='warning'>[carrier] is no longer in station grounds.</span>")
-						to_chat(carrier, "<span class='warning'>You must be within station grounds to accept.</span>")
+						to_chat(C, span_warning("[carrier] is no longer in station grounds."))
+						to_chat(carrier, span_warning("You must be within station grounds to accept."))
 						return
 					log_and_message_admins("[key_name(C)] has item spawned onto [key_name(carrier)]")
 					item_to_be = item
@@ -959,20 +952,16 @@ var/global/datum/controller/occupations/job_master
 						if(confirm == "Yes")
 							vorgans = TRUE
 			else
-				to_chat(C, "<span class='warning'>No items were available to accept you.</span>")
+				to_chat(C, span_warning("No items were available to accept you."))
 				return
 		//CHOMPEdit End
-=======
-				to_chat(C, span_warning("Your chosen spawnpoint ([C.prefs.spawnpoint]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead."))
-				spawnpos = null
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		else
 			if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
 				if(fail_deadly)
-					to_chat(C, "<span class='warning'>Your chosen spawnpoint is unavailable for this map and your job requires a specific spawnpoint. Please correct your spawn point choice.</span>")
+					to_chat(C, span_warning("Your chosen spawnpoint is unavailable for this map and your job requires a specific spawnpoint. Please correct your spawn point choice."))
 					return
 				else
-					to_chat(C, "<span class='warning'>Your chosen spawnpoint ([C.prefs.spawnpoint]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead.</span>")
+					to_chat(C, span_warning("Your chosen spawnpoint ([C.prefs.spawnpoint]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead."))
 					spawnpos = null
 			else
 				spawnpos = spawntypes[C.prefs.spawnpoint]
@@ -996,14 +985,9 @@ var/global/datum/controller/occupations/job_master
 			.["msg"] = spawnpos.msg
 			.["channel"] = spawnpos.announce_channel
 		else
-<<<<<<< HEAD
 			var/datum/job/J = SSjob.get_job(rank)
 			if(fail_deadly || J?.offmap_spawn)
-				to_chat(C, "<span class='warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Please correct your spawn point choice.</span>")
-=======
-			if(fail_deadly)
 				to_chat(C, span_warning("Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Please correct your spawn point choice."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				return
 			to_chat(C, span_filter_warning("Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job. Spawning you at the Arrivals shuttle instead."))
 			var/spawning = pick(latejoin)

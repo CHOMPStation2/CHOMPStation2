@@ -272,33 +272,29 @@
 		to_chat(user, span_warning("You are already licking something else."))
 		return
 	if(user.client && (target in user.client.screen))
-<<<<<<< HEAD
-		to_chat(user, "<span class='warning'>You need to take \the [target.name] off before cleaning it!</span>")
+		to_chat(user, span_warning("You need to take \the [target.name] off before cleaning it!"))
 	//CHOMPADD Start
 	if(istype(target, /obj/structure/sink) || istype(target, /obj/structure/toilet)) //Dog vibes.
 		if (water.energy == water.max_energy && istype(target, /obj/structure/sink)) return
 		if (water.energy == water.max_energy && istype(target, /obj/structure/toilet))
-			to_chat(user, "<span class='notice'>You refrain from lapping water from the [target.name] with your reserves filled.</span>")
+			to_chat(user, span_notice("You refrain from lapping water from the [target.name] with your reserves filled."))
 			return
-		user.visible_message("<span class='filter_notice'>[user] begins to lap up water from [target.name].</span>", "<span class='notice'>You begin to lap up water from [target.name].</span>")
+		user.visible_message(span_filter_notice("[user] begins to lap up water from [target.name]."), span_notice("You begin to lap up water from [target.name]."))
 		busy = 1
 		if(do_after(user, 50))
 			water.add_charge(50)
-			to_chat(src, "<span class='filter_notice'>You refill some of your water reserves.</span>")
+			to_chat(src, span_filter_notice("You refill some of your water reserves."))
 		busy = 0
 	else if(water.energy < 5)
-		to_chat(user, "<span class='notice'>Your mouth feels dry. You should drink up some water .</span>")
+		to_chat(user, span_notice("Your mouth feels dry. You should drink up some water ."))
 	//CHOMPADD End
-=======
-		to_chat(user, span_warning("You need to take \the [target.name] off before cleaning it!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 	//CHOMPADD Start
 	else if(istype(target,/obj/effect/decal/cleanable))
-		user.visible_message("<span class='filter_notice'>[user] begins to lick off \the [target.name].</span>", "<span class='notice'>You begin to lick off \the [target.name]...</span>")
+		user.visible_message(span_filter_notice("[user] begins to lick off \the [target.name]."), span_notice("You begin to lick off \the [target.name]..."))
 		busy = 1
 		if(do_after(user, 50))
-			to_chat(user, "<span class='notice'>You finish licking off \the [target.name].</span>")
+			to_chat(user, span_notice("You finish licking off \the [target.name]."))
 			water.use_charge(5)
 			qdel(target)
 			var/mob/living/silicon/robot/R = user
@@ -319,11 +315,11 @@
 			busy = 0 //CHOMPAdd prevents abuse
 			return
 		if(istype(target,/obj/item/reagent_containers/food))
-			user.visible_message("[user] nibbles away at \the [target.name].", "<span class='notice'>You begin to nibble away at \the [target.name]...</span>")
+			user.visible_message("[user] nibbles away at \the [target.name].", span_notice("You begin to nibble away at \the [target.name]..."))
 			busy = 1 //CHOMPAdd prevents abuse
 			if(do_after (user, 50))
-				user.visible_message("[user] finishes eating \the [target.name].", "<span class='notice'>You finish eating \the [target.name].</span>")
-				user << "<span class='notice'>You finish off \the [target.name].</span>"
+				user.visible_message("[user] finishes eating \the [target.name].", span_notice("You finish eating \the [target.name]."))
+				user << span_notice("You finish off \the [target.name].")
 				del(target)
 				var/mob/living/silicon/robot/R = user
 				R.cell.charge = R.cell.charge + 250
@@ -343,10 +339,10 @@
 			busy = 0 //CHOMPAdd prevents abuse
 			return
 		//CHOMPAdd Start
-		user.visible_message("<span class='filter_notice'>[user] begins to lick \the [target.name] clean...</span>", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
+		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
 		if(do_after(user, 50, exclusive = TRUE))
-			to_chat(user, "<span class='notice'>You clean \the [target.name].</span>")
+			to_chat(user, span_notice("You clean \the [target.name]."))
 			water.use_charge(5)
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
@@ -375,10 +371,10 @@
 				H.Weaken(3)
 	//CHOMPAdd Start
 	else
-		user.visible_message("<span class='filter_notice'>[user] begins to lick \the [target.name] clean...</span>", "<span class='notice'>You begin to lick \the [target.name] clean...</span>")
+		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
 		if(do_after(user, 50))
-			to_chat(user, "<span class='notice'>You clean \the [target.name].</span>")
+			to_chat(user, span_notice("You clean \the [target.name]."))
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
 			target.clean_blood()
@@ -585,12 +581,8 @@
 	status_flags |= LEAPING
 	pixel_y = pixel_y + 10
 
-<<<<<<< HEAD
-	src.visible_message("<span class='danger'>\The [src] leaps at [T]!</span>")
-	/* //ChompEDIT START - disable for now
-=======
 	src.visible_message(span_danger("\The [src] leaps at [T]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	/* //ChompEDIT START - disable for now
 	if(bluespace)
 		src.forceMove(get_turf(T))
 		T.hitby(src)

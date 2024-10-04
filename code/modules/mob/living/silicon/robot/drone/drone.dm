@@ -239,13 +239,8 @@ var/list/mob_hat_cache = list()
 		var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 		if(stat == 2)
 
-<<<<<<< HEAD
 			if(!CONFIG_GET(flag/allow_drone_spawn) || emagged || health < -35) //It's dead, Dave. // CHOMPEdit
-				to_chat(user, "<span class='danger'>The interface is fried, and a distressing burned smell wafts from the robot's interior. You're not rebooting this one.</span>")
-=======
-			if(!config.allow_drone_spawn || emagged || health < -35) //It's dead, Dave.
 				to_chat(user, span_danger("The interface is fried, and a distressing burned smell wafts from the robot's interior. You're not rebooting this one."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				return
 
 			if(!allowed(usr))
@@ -260,13 +255,8 @@ var/list/mob_hat_cache = list()
 				request_player()
 			return
 
-<<<<<<< HEAD
 		/*else //CHOMPEdit - Comment out drone shutting down since it seems to be a round remove with no recourse
-			user.visible_message("<span class='danger'>\The [user] swipes [TU.his] ID card through \the [src], attempting to shut it down.</span>", "<span class='danger'>You swipe your ID card through \the [src], attempting to shut it down.</span>")
-=======
-		else
 			user.visible_message(span_danger("\The [user] swipes [TU.his] ID card through \the [src], attempting to shut it down."), span_danger("You swipe your ID card through \the [src], attempting to shut it down."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 			if(emagged)
 				return
@@ -274,11 +264,7 @@ var/list/mob_hat_cache = list()
 			if(allowed(usr))
 				shut_down()
 			else
-<<<<<<< HEAD
-				to_chat(user, "<span class='danger'>Access denied.</span>")*/
-=======
-				to_chat(user, span_danger("Access denied."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				to_chat(user, span_danger("Access denied."))*/
 
 		return
 

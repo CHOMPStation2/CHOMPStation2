@@ -48,7 +48,7 @@
 		return FALSE
 	//CHOMPEdit Begin - Dark Respite
 	if(my_kin.ability_flags & AB_DARK_RESPITE)
-		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	//CHOMPEdit End
 	if(shift_mode == NOT_WHILE_SHIFTED && (my_kin.ability_flags & AB_PHASE_SHIFTED))
@@ -171,7 +171,6 @@
 	if(!..())
 		return
 */
-<<<<<<< HEAD
 
 //CHOMPEdit start - Add dark tunneling ability
 /obj/effect/shadekin_ability/dark_tunneling
@@ -183,7 +182,7 @@
 	ab_sound = 'sound/effects/stealthoff.ogg'
 /obj/effect/shadekin_ability/dark_tunneling/do_ability()
 	if(my_kin.ability_flags & AB_DARK_TUNNEL)
-		to_chat(src, "<span class='warning'>You have already made a tunnel to the Dark!</span>")
+		to_chat(src, span_warning("You have already made a tunnel to the Dark!"))
 		return FALSE
 	if(!..())
 		return
@@ -207,5 +206,3 @@
 	if(!my_kin.dark_maw())
 		my_kin.energy += cost //Refund due to abort
 //CHOMPEdit End
-=======
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

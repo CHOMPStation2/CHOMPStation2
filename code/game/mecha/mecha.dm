@@ -1134,23 +1134,13 @@
 
 			var/pass_damage = O.throwforce
 			var/pass_damage_reduc_mod
-<<<<<<< HEAD
 			if(pass_damage <= damage_minimum)//Too little to go through. //CHOMPedit temp_damage_mininum -> damage_minimum
-				src.occupant_message("<span class='notice'>\The [A] bounces off the armor.</span>")
-				src.visible_message("\The [A] bounces off \the [src] armor")
-				return
-
-			else if(O.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage //CHOMPedit, temp_minimum_penetration -> minimum_penetration
-				src.occupant_message("<span class='notice'>\The [A] struggles to bypass \the [src] armor.</span>")
-=======
-			if(pass_damage <= temp_damage_minimum)//Too little to go through.
 				src.occupant_message(span_notice("\The [A] bounces off the armor."))
 				src.visible_message("\The [A] bounces off \the [src] armor")
 				return
 
-			else if(O.armor_penetration < temp_minimum_penetration)	//If you don't have enough pen, you won't do full damage
+			else if(O.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage //CHOMPedit, temp_minimum_penetration -> minimum_penetration
 				src.occupant_message(span_notice("\The [A] struggles to bypass \the [src] armor."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				src.visible_message("\The [A] struggles to bypass \the [src] armor")
 				pass_damage_reduc_mod = temp_fail_penetration_value	//This will apply to reduce damage to 2/3 or 66% by default
 			else
@@ -1220,23 +1210,13 @@
 		for(var/obj/item/mecha_parts/mecha_equipment/ME in equipment)
 			pass_damage = ME.handle_projectile_contact(Proj, pass_damage)
 
-<<<<<<< HEAD
 		if(pass_damage < damage_minimum)//too pathetic to really damage you. //CHOMPedit temp_damage_minimum -> damage_minimum
-			src.occupant_message("<span class='notice'>The armor deflects incoming projectile.</span>")
-			src.visible_message("The [src.name] armor deflects\the [Proj]")
-			return
-
-		else if(Proj.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage //CHOMPedit temp_minimum_penetration -> damage_minimum
-			src.occupant_message("<span class='notice'>\The [Proj] struggles to pierce \the [src] armor.</span>")
-=======
-		if(pass_damage < temp_damage_minimum)//too pathetic to really damage you.
 			src.occupant_message(span_notice("The armor deflects incoming projectile."))
 			src.visible_message("The [src.name] armor deflects\the [Proj]")
 			return
 
-		else if(Proj.armor_penetration < temp_minimum_penetration)	//If you don't have enough pen, you won't do full damage
+		else if(Proj.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage //CHOMPedit temp_minimum_penetration -> damage_minimum
 			src.occupant_message(span_notice("\The [Proj] struggles to pierce \the [src] armor."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			src.visible_message("\The [Proj] struggles to pierce \the [src] armor")
 			pass_damage_reduc_mod = temp_fail_penetration_value	//This will apply to reduce damage to 2/3 or 66% by default
 
@@ -1374,23 +1354,13 @@
 		to_chat(user, span_danger("\The [W] bounces off [src.name]."))
 		src.log_append_to_last("Armor saved.")
 
-<<<<<<< HEAD
 	else if(W.force < damage_minimum)	//Is your attack too PATHETIC to do anything. 3 damage to a person shouldn't do anything to a mech. //CHOMPedit temp_damage_minimum -> damage_minumum
-		src.occupant_message("<span class='notice'>\The [W] bounces off the armor.</span>")
-		src.visible_message("\The [W] bounces off \the [src] armor")
-		return
-
-	else if(W.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage ////CHOMPedit temp_minimum_penetration -> minimum_penetration
-		src.occupant_message("<span class='notice'>\The [W] struggles to bypass \the [src] armor.</span>")
-=======
-	else if(W.force < temp_damage_minimum)	//Is your attack too PATHETIC to do anything. 3 damage to a person shouldn't do anything to a mech.
 		src.occupant_message(span_notice("\The [W] bounces off the armor."))
 		src.visible_message("\The [W] bounces off \the [src] armor")
 		return
 
-	else if(W.armor_penetration < temp_minimum_penetration)	//If you don't have enough pen, you won't do full damage
+	else if(W.armor_penetration < minimum_penetration)	//If you don't have enough pen, you won't do full damage ////CHOMPedit temp_minimum_penetration -> minimum_penetration
 		src.occupant_message(span_notice("\The [W] struggles to bypass \the [src] armor."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		src.visible_message("\The [W] struggles to bypass \the [src] armor")
 		pass_damage_reduc_mod = temp_fail_penetration_value	//This will apply to reduce damage to 2/3 or 66% by default
 
@@ -2817,13 +2787,8 @@
 		user.attack_log += text("\[[time_stamp()]\] [span_red("attacked [src.name]")]")
 		playsound(src, 'sound/weapons/slash.ogg', 50, 1, -1)
 
-<<<<<<< HEAD
 	else if(damage < damage_minimum)//Pathetic damage levels just don't harm MECH. //CHOMPedit temp_damage_minimum -> damage_minimum
-		src.occupant_message("<span class='notice'>\The [user]'s doesn't dent \the [src] paint.</span>")
-=======
-	else if(damage < temp_damage_minimum)//Pathetic damage levels just don't harm MECH.
 		src.occupant_message(span_notice("\The [user]'s doesn't dent \the [src] paint."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		src.visible_message("\The [user]'s attack doesn't dent \the [src] armor")
 		src.log_append_to_last("Armor saved.")
 		playsound(src, 'sound/effects/Glasshit.ogg', 50, 1)

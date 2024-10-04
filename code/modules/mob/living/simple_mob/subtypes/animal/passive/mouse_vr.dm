@@ -50,7 +50,7 @@
 
 	add_attack_logs(grabber, H.held_mob, "Scooped up", FALSE) // Not important enough to notify admins, but still helpful.
 	return H
-	
+
 /mob/living/simple_mob/animal/passive/mouse/white/apple
 	name = "Apple"
 	desc = "Dainty, well groomed and cared for, her eyes glitter with untold knowledge..."
@@ -61,15 +61,11 @@
 	// Change my name back, don't want to be named Apple (666)
 	name = initial(name)
 	desc = initial(desc)
-	
+
 
 /obj/item/holder/mouse/attack_self(mob/living/carbon/user)
 	user.setClickCooldown(user.get_attack_speed())
 	for(var/L in contents)
 		if(isanimal(L))
 			var/mob/living/simple_mob/S = L
-<<<<<<< HEAD
-			user.visible_message("<span class='notice'>[user] [S.response_help] \the [S].</span>")
-=======
 			user.visible_message(span_notice("[user] [S.response_help] \the [S]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

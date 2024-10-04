@@ -1944,29 +1944,21 @@
 	if(shock_stage >= 80)
 		if (prob(5))
 			if(traumatic_shock >= 80)
-<<<<<<< HEAD
-				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+				to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
 				// CHOMPEdit: Pain
 				if(prob(20) && !isbelly(loc)) // Hopefully not spammy, only 20% of the time will we groan in pain + sanity for in-belly
 					emote("pain")
 				// CHOMPEdit End
-=======
-				to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			Weaken(20)
 
 	if(shock_stage >= 120)
 		if (prob(2))
 			if(traumatic_shock >= 80)
-<<<<<<< HEAD
-				to_chat(src, "<span class='danger'>[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!</span>")
+				to_chat(src, span_danger("[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!"))
 				// CHOMPEdit: Pain
 				if(prob(40) && !isbelly(loc)) // Hopefully not spammy, only 40% of the time will we groan in pain + sanity for in-belly
 					emote("pain")
 				// CHOMPEdit End
-=======
-				to_chat(src, span_danger("[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			Paralyse(5)
 
 	if(shock_stage == 150)

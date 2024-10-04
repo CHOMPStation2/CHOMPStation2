@@ -42,14 +42,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-<<<<<<< HEAD
-	user.visible_message("<span class='filter_notice'>[user] begins to cut through [target]'s [affected.encased] with \the [tool].</span>", \
-	"<span class='filter_notice'>You begin to cut through [target]'s [affected.encased] with \the [tool].</span>")
-	user.balloon_alert_visible("Begins to cut", "Cutting through the [affected.encased]'s ") // CHOMPEdit
-=======
 	user.visible_message(span_filter_notice("[user] begins to cut through [target]'s [affected.encased] with \the [tool]."), \
 	span_filter_notice("You begin to cut through [target]'s [affected.encased] with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Begins to cut", "Cutting through the [affected.encased]'s ") // CHOMPEdit
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 60)
 	..()
 
@@ -58,14 +53,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] has cut [target]'s [affected.encased] open with \the [tool].</span>", \
-	"<span class='notice'>You have cut [target]'s [affected.encased] open with \the [tool].</span>")
-	user.balloon_alert_visible("Cuts [target]'s [affected.encased] open.", "[affected.encased] cut open.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] has cut [target]'s [affected.encased] open with \the [tool]."), \
 	span_notice("You have cut [target]'s [affected.encased] open with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Cuts [target]'s [affected.encased] open.", "[affected.encased] cut open.") // CHOMPEdit
 	affected.open = 2.5
 
 /datum/surgery_step/open_encased/saw/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -73,14 +63,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-<<<<<<< HEAD
-	user.visible_message("<span class='danger'>[user]'s hand slips, cracking [target]'s [affected.encased] with \the [tool]!</span>" , \
-	"<span class='danger'>Your hand slips, cracking [target]'s [affected.encased] with \the [tool]!</span>" )
-	user.balloon_alert_visible("Slips, crackng [target]'s [affected.encased]","Your hand slips.") // CHOMPEdit
-=======
 	user.visible_message(span_danger("[user]'s hand slips, cracking [target]'s [affected.encased] with \the [tool]!") , \
 	span_danger("Your hand slips, cracking [target]'s [affected.encased] with \the [tool]!") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, crackng [target]'s [affected.encased]","Your hand slips.") // CHOMPEdit
 
 	affected.createwound(CUT, 20)
 	affected.fracture()
@@ -275,14 +260,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-<<<<<<< HEAD
-	user.visible_message("<span class='filter_notice'>[user] begins to open [target]'s [affected.encased] with \the [tool].</span>", \
-	"<span class='filter_notice'>You begin to open [target]'s [affected.encased] with \the [tool].</span>")
-	user.balloon_alert_visible("Begins to open \the [affected.encased]", "Opening \the [affected.encased]") // CHOMPEdit
-=======
 	user.visible_message(span_filter_notice("[user] begins to open [target]'s [affected.encased] with \the [tool]."), \
 	span_filter_notice("You begin to open [target]'s [affected.encased] with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Begins to open \the [affected.encased]", "Opening \the [affected.encased]") // CHOMPEdit
 	target.custom_pain("Something hurts horribly in your [affected.name]!", 60)
 	..()
 
@@ -291,14 +271,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] has cut [target]'s [affected.encased] wide open with \the [tool].</span>", \
-	"<span class='notice'>You have cut [target]'s [affected.encased] wide open with \the [tool].</span>")
-	user.balloon_alert_visible("Cuts \the [affected.encased] wide open.", "Cut \the [affected.encased] wide open.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] has cut [target]'s [affected.encased] wide open with \the [tool]."), \
 	span_notice("You have cut [target]'s [affected.encased] wide open with \the [tool]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Cuts \the [affected.encased] wide open.", "Cut \the [affected.encased] wide open.") // CHOMPEdit
 	affected.open = 3
 
 /datum/surgery_step/open_encased/advancedsaw_open/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -306,14 +281,9 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-<<<<<<< HEAD
-	user.visible_message("<span class='danger'>[user]'s hand slips, searing [target]'s [affected.encased] with \the [tool]!</span>" , \
-	"<span class='danger'>Your hand slips, searing [target]'s [affected.encased] with \the [tool]!</span>" )
-	user.balloon_alert_visible("Slips, searing \the [affected.encased]", "Your hand slips, searing [affected.encased]") // CHOMPEdit
-=======
 	user.visible_message(span_danger("[user]'s hand slips, searing [target]'s [affected.encased] with \the [tool]!") , \
 	span_danger("Your hand slips, searing [target]'s [affected.encased] with \the [tool]!") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, searing \the [affected.encased]", "Your hand slips, searing [affected.encased]") // CHOMPEdit
 
 	affected.createwound(CUT, 20)
 	affected.createwound(BURN, 15)

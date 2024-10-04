@@ -234,49 +234,35 @@
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(H == user)
-<<<<<<< HEAD
 				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
-					user << "<span class='warning'>You begin to stuff \the [src] into your mouth!</span>"
+					user << span_warning("You begin to stuff \the [src] into your mouth!")
 					if(do_after(user, 30))
-						user << "<span class='warning'>You stuff \the [src] into your mouth!</span>"
+						user << span_warning("You stuff \the [src] into your mouth!")
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
 						qdel(src)
 				else
-					user << "<span class='notice'>You wipe off the lipstick with [src].</span>"
+					user << span_notice("You wipe off the lipstick with [src].")
 					H.lip_style = null
 					H.update_icons_body()
 			else
 				if(icon_state == "scrap" && H.check_has_mouth())
-					user.visible_message("<span class='warning'>[user] begins to stuff \the [src] into [H]'s mouth!</span>", \
-										 "<span class='warning'>You begin to stuff \the [src] into [H]'s mouth!</span>",)
+					user.visible_message(span_warning("[user] begins to stuff \the [src] into [H]'s mouth!"), \
+										 span_warning("You begin to stuff \the [src] into [H]'s mouth!"),)
 					if(do_after(user, 30, H))
-						user.visible_message("<span class='warning'>[user] stuffs \the [src] into [H]'s mouth!</span>",\
-											 "<span class='warning'>You stuff \the [src] into [H]'s mouth!</span>")
+						user.visible_message(span_warning("[user] stuffs \the [src] into [H]'s mouth!"),\
+											 span_warning("You stuff \the [src] into [H]'s mouth!"))
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
 						qdel(src)
 				else
-					user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
-								 	 "<span class='notice'>You begin to wipe off [H]'s lipstick.</span>")
+					user.visible_message(span_warning("[user] begins to wipe [H]'s lipstick off with \the [src]."), \
+								 	 span_notice("You begin to wipe off [H]'s lipstick."))
 					if(do_after(user, 10, H))
-						user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
-										 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
+						user.visible_message(span_notice("[user] wipes [H]'s lipstick off with \the [src]."), \
+										 span_notice("You wipe off [H]'s lipstick."))
 						H.lip_style = null
 						H.update_icons_body() //YW Edit End
-=======
-				to_chat(user, span_notice("You wipe off the lipstick with [src]."))
-				H.lip_style = null
-				H.update_icons_body()
-			else
-				user.visible_message(span_warning("[user] begins to wipe [H]'s lipstick off with \the [src]."), \
-								 	 span_notice("You begin to wipe off [H]'s lipstick."))
-				if(do_after(user, 10) && do_after(H, 10, 5, 0))	//user needs to keep their active hand, H does not.
-					user.visible_message(span_notice("[user] wipes [H]'s lipstick off with \the [src]."), \
-										 span_notice("You wipe off [H]'s lipstick."))
-					H.lip_style = null
-					H.update_icons_body()
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 /obj/item/paper/proc/set_content(text,title)
 	if(title)

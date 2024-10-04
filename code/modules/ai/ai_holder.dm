@@ -384,8 +384,7 @@
 				holder.resist()
 			else
 				C.open()
-<<<<<<< HEAD
-=======
+		/* CHOMPRemove Start
 		else if(isbelly(holder_loc))
 			ai_log("handle_stance_tactical() : Inside a belly, will move out to turf if owner is stat.", AI_LOG_TRACE)
 			var/obj/belly/B = holder_loc
@@ -396,7 +395,7 @@
 				holder.forceMove(get_turf(L))
 				holder.visible_message(span_danger("[src] climbs out of [L], ready to continue fighting!"))
 				playsound(holder, 'sound/effects/splat.ogg')
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		*///CHOMPRemove End
 
 		// Should we flee?
 		if(should_flee())

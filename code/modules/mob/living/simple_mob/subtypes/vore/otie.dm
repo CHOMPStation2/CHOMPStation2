@@ -283,14 +283,10 @@
 	switch(M.a_intent)
 		if(I_HELP)
 			if(health > 0)
-<<<<<<< HEAD
 				if(M.zone_sel.selecting == BP_GROIN) //CHOMPEdit
 					if(M.vore_bellyrub(src))
 						return
-				M.visible_message("<span class='notice'>[M] [response_help] \the [src].</span>")
-=======
 				M.visible_message(span_notice("[M] [response_help] \the [src]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				if(has_AI())
 					var/datum/ai_holder/AI = ai_holder
 					AI.set_stance(STANCE_IDLE)

@@ -91,14 +91,10 @@
 		var/regen_sounds = H.regen_sounds
 		if(prob(2)) // 2% chance of playing squelchy noise while reviving, which is run roughly every 2 seconds/tick while regenerating.
 			playsound(H, pick(regen_sounds), 30)
-<<<<<<< HEAD
-			H.visible_message("<span class='danger'><p><font size=4>[H.name]'s motionless form shudders grotesquely, rippling unnaturally.</font></p></span>")
+			H.visible_message(span_danger("<p><font size=4>[H.name]'s motionless form shudders grotesquely, rippling unnaturally.</font></p>"))
 		// CHOMPAdd - F A L L
 		if(!H.lying)
 			H.lay_down()
-=======
-			H.visible_message(span_danger("<p><font size=4>[H.name]'s motionless form shudders grotesquely, rippling unnaturally.</font></p>"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 	//Cold/pressure effects when not regenerating
 	else

@@ -81,11 +81,7 @@
 					food_inserted_micros -= F
 
 	if(!reagents.total_volume)
-<<<<<<< HEAD
 		M.balloon_alert_visible("Finishes eating \the [src].","Finished eating \the [src].") // CHOMPEdit - Balloon alert
-=======
-		M.visible_message(span_notice("[M] finishes eating \the [src]."),span_notice("You finish eating \the [src]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 		usr.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
@@ -103,32 +99,20 @@
 
 /obj/item/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/living/user as mob, def_zone) //CHOMPEdit
 	if(reagents && !reagents.total_volume)
-<<<<<<< HEAD
-		// to_chat(user, "<span class='danger'>None of [src] left!</span>")
+		// to_chat(user, span_danger("None of [src] left!"))
 		balloon_alert(user, "None of [src] left!") // CHOMPEdit - Changed to balloon alert
-=======
-		to_chat(user, span_danger("None of [src] left!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		user.drop_from_inventory(src)
 		qdel(src)
 		return 0
 
 	if(package)
-<<<<<<< HEAD
-		// to_chat(M, "<span class='warning'>How do you expect to eat this with the package still on?</span>")
+		// to_chat(M, span_warning("How do you expect to eat this with the package still on?"))
 		balloon_alert(user, "The package is in the way.") // CHOMPEdit - Changed to balloon alert
 		return FALSE
 
 	if(canned)
-		// to_chat(M, "<span class='warning'>How do you expect to eat this without opening it?</span>")
+		// to_chat(M, span_warning("How do you expect to eat this without opening it?"))
 		balloon_alert(user, "The can is closed.") // CHOMPEdit - Changed to balloon alert
-=======
-		to_chat(M, span_warning("How do you expect to eat this with the package still on?"))
-		return FALSE
-
-	if(canned)
-		to_chat(M, span_warning("How do you expect to eat this without opening it?"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return FALSE
 
 	if(istype(M, /mob/living/carbon))
@@ -150,12 +134,8 @@
 				else
 					blocked = H.check_mouth_coverage()
 				if(blocked)
-<<<<<<< HEAD
-					// to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+					// to_chat(user, span_warning("\The [blocked] is in the way!"))
 					balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
-=======
-					to_chat(user, span_warning("\The [blocked] is in the way!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 					return
 
 			user.setClickCooldown(user.get_attack_speed(src)) //puts a limit on how fast people can eat/drink things
@@ -212,17 +192,12 @@
 					return
 
 				if(blocked)
-<<<<<<< HEAD
-					// to_chat(user, "<span class='warning'>\The [blocked] is in the way!</span>")
+					// to_chat(user, span_warning("\The [blocked] is in the way!"))
 					balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
-=======
-					to_chat(user, span_warning("\The [blocked] is in the way!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 					return
 
 				if(swallow_whole)
 					if(!(M.feeding))
-<<<<<<< HEAD
 						balloon_alert(user, "You can't feed [H] a whole [src] as they refuse to be fed whole things!") // CHOMPEdit
 						return
 					if(!belly_target)
@@ -233,18 +208,6 @@
 					user.balloon_alert_visible("[user] attempts to make [M] consume [src] whole into their [belly_target].") // CHOMPEdit
 				else
 					user.balloon_alert_visible("[user] attempts to feed [M] [src].") // CHOMPEdit
-=======
-						to_chat(user, span_warning("You can't feed [H] a whole [src] as they refuse to be fed whole things!"))
-						return
-					if(!belly_target)
-						to_chat(user, span_warning("You can't feed [H] a whole [src] as they don't appear to have a belly to fit it!"))
-						return
-
-				if(swallow_whole)
-					user.visible_message(span_danger("[user] attempts to make [M] consume [src] whole into their [belly_target]."))
-				else
-					user.visible_message(span_danger("[user] attempts to feed [M] [src]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 				var/feed_duration = 3 SECONDS
 				if(swallow_whole)
@@ -257,19 +220,12 @@
 
 				if(swallow_whole)
 					add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
-<<<<<<< HEAD
 					user.visible_message("[user] successfully forces [src] into [M]'s [belly_target].")
 					user.balloon_alert_visible("Forces [src] into [M]'s [belly_target]") // CHOMPEdit
 				else
 					add_attack_logs(user,M,"Fed with [src.name] containing [reagentlist(src)]", admin_notify = FALSE)
 					user.visible_message("[user] feeds [M] [src].")
 					user.balloon_alert_visible("Feeds [M] [src].") // CHOMPEdit
-=======
-					user.visible_message(span_danger("[user] successfully forces [src] into [M]'s [belly_target]."))
-				else
-					add_attack_logs(user,M,"Fed with [src.name] containing [reagentlist(src)]", admin_notify = FALSE)
-					user.visible_message(span_danger("[user] feeds [M] [src]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 			else
 				balloon_alert(user, "This creature does not seem to have a mouth!") // CHOMPEdit
@@ -358,12 +314,8 @@
 			return
 
 		if(package || canned)
-<<<<<<< HEAD
-			to_chat(user, "You cannot stuff anything into \the [src] without opening it first.") // CHOMPEdit
+			to_chat(user, span_warning("You cannot stuff anything into \the [src] without opening it first.")) // CHOMPEdit
 			balloon_alert(user, "Open \the [src] first!") // CHOMPEdit
-=======
-			to_chat(user, span_warning("You cannot stuff anything into \the [src] without opening it first."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			return
 
 		var/obj/item/holder/H = W
@@ -380,14 +332,9 @@
 
 		food_inserted_micros += M
 
-<<<<<<< HEAD
 		to_chat(user, "Stuffed [M] into \the [src].")
 		balloon_alert(user, "Stuffs [M] into \the [src].") // CHOMPEdit
-		to_chat(M, "<span class='warning'>[user] stuffs you into \the [src].</span>")
-=======
-		to_chat(user, span_warning("You stuff [M] into \the [src]."))
 		to_chat(M, span_warning("[user] stuffs you into \the [src]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	if (is_sliceable())
@@ -400,19 +347,12 @@
 				return
 
 			if(tgui_alert(user,"You can't slice \the [src] here. Would you like to hide \the [W] inside it instead?","No Cutting Surface!",list("Yes","No")) != "Yes")
-<<<<<<< HEAD
-				to_chat(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.")
+				to_chat(user, span_warning("You cannot slice \the [src] here! You need a table or at least a tray to do it."))
 				balloon_alert(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.") // CHOMPEdit
 				return
 			else
 				to_chat(user, "Slipped \the [W] inside \the [src].")
 				balloon_alert(user, "Slipped \the [W] inside \the [src].") // CHOMPEdit
-=======
-				to_chat(user, span_warning("You cannot slice \the [src] here! You need a table or at least a tray to do it."))
-				return
-			else
-				to_chat(user, span_warning("You slip \the [W] inside \the [src]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 				user.drop_from_inventory(W, src)
 				add_fingerprint(user)
 				contents += W
@@ -420,31 +360,19 @@
 
 		if (has_edge(W))
 			if (!can_slice_here)
-<<<<<<< HEAD
-				to_chat(user, "You cannot slice \the [src] here! You need a table or at least a tray to do it.")
-				balloon_alert(user, "You need a table or at least a tray to slice it.") // CHOMPEdit
-=======
 				to_chat(user, span_warning("You cannot slice \the [src] here! You need a table or at least a tray to do it."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+				balloon_alert(user, "You need a table or at least a tray to slice it.") // CHOMPEdit
 				return
 
 			var/slices_lost = 0
 			if (W.w_class > 3)
-<<<<<<< HEAD
-				user.visible_message("\The [user] crudely slices \the [src] with [W]!", "You crudely slice \the [src] with your [W]!")
+				user.visible_message(span_notice("\The [user] crudely slices \the [src] with [W]!"), span_notice("You crudely slice \the [src] with your [W]!"))
 				user.balloon_alert_visible("Crudely slices \the [src]", "Crudely sliced \the [src]") // CHOMPEdit
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
-				user.visible_message("\The [user] slices \the [src]!", "You slice \the [src]!")
+				user.visible_message(span_notice_boldnotice("\The [user]</b> slices \the [src]!"), span_notice("You slice \the [src]!"))
 				user.balloon_alert_visible("Slices \the [src]", "Sliced \the [src]!") // CHOMPEdit
 	// CHOMPEdit End - A long list of to_chat to balloon_alert
-=======
-				user.visible_message(span_notice("\The [user] crudely slices \the [src] with [W]!"), span_notice("You crudely slice \the [src] with your [W]!"))
-				slices_lost = rand(1,min(1,round(slices_num/2)))
-			else
-				user.visible_message("<b>\The [user]</b> slices \the [src]!", span_notice("You slice \the [src]!"))
-
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 			var/reagents_per_slice = reagents.total_volume/slices_num
 			for(var/i=1 to (slices_num-slices_lost))
 				var/obj/slice = new slice_path (src.loc)
@@ -490,12 +418,8 @@
 
 /obj/item/reagent_containers/food/snacks/proc/unpackage(mob/user)
 	package = FALSE
-<<<<<<< HEAD
-	to_chat(user, "You unwrap [src].")
-	balloon_alert(user, "Unwrapped \the [src].") // CHOMPEdit
-=======
 	to_chat(user, span_notice("You unwrap [src]."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	balloon_alert(user, "Unwrapped \the [src].") // CHOMPEdit
 	playsound(user,opening_sound, 15, 1)
 	if(package_trash)
 		var/obj/item/T = new package_trash
@@ -507,12 +431,8 @@
 
 /obj/item/reagent_containers/food/snacks/proc/uncan(mob/user)
 	canned = FALSE
-<<<<<<< HEAD
-	to_chat(user, "You unseal \the [src] with a crack of metal.")
-	balloon_alert(user, "Unsealed \the [src]") // CHOMPEdit
-=======
 	to_chat(user, span_notice("You unseal \the [src] with a crack of metal."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	balloon_alert(user, "Unsealed \the [src]") // CHOMPEdit
 	playsound(loc,opening_sound, rand(10,50), 1)
 	if(canned_open_state)
 		icon_state = canned_open_state

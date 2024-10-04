@@ -700,13 +700,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	set category = "OOC.Game Settings" //CHOMPEdit
 
 	if(!nif)
-<<<<<<< HEAD
 		remove_verb(src, /mob/living/carbon/human/proc/set_nif_examine) //ChompEDIT
-		to_chat(src,"<span class='warning'>You don't have a NIF, not sure why this was here.</span>")
-=======
-		verbs -= /mob/living/carbon/human/proc/set_nif_examine
 		to_chat(src,span_warning("You don't have a NIF, not sure why this was here."))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 		return
 
 	var/new_flavor = sanitize(tgui_input_text(src,"Describe how your NIF alters your appearance, like glowy eyes or metal plate on your head, etc. Be sensible. Clear this for no examine text. 128ch max.","Describe NIF", nif.examine_msg, 128), max_length = 128)

@@ -481,15 +481,10 @@
 			span_notice("You shake [target]'s hand."), )
 	else if(H.zone_sel.selecting == "mouth")
 		H.visible_message( \
-<<<<<<< HEAD
-			"<span class='notice'>[H] boops [target]'s nose.</span>", \
-			"<span class='notice'>You boop [target] on the nose.</span>", )
-	else if(H.zone_sel.selecting == BP_GROIN) //CHOMPEdit
-		H.vore_bellyrub(target)
-=======
 			span_notice("[H] boops [target]'s nose."), \
 			span_notice("You boop [target] on the nose."), )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	else if(H.zone_sel.selecting == BP_GROIN) //CHOMPEdit
+		H.vore_bellyrub(target)
 	//VOREStation Edit End
 	else
 		H.visible_message(span_notice("[H] hugs [target] to make [t_him] feel better!"), \

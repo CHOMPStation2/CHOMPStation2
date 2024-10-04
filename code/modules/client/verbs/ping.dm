@@ -8,9 +8,5 @@
 
 /client/verb/ping()
 	set name = "Ping"
-<<<<<<< HEAD
 	set category = "OOC.Debug" //CHOMPEdit
-=======
-	set category = "OOC"
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	winset(src, null, "command=.display_ping+[world.time+world.tick_lag*world.tick_usage/100]")

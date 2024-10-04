@@ -91,29 +91,20 @@
 		if(!target_slot.canremove)
 			to_chat(user, span_warning("You cannot remove \the [src]'s [target_slot.name]."))
 			return
-<<<<<<< HEAD
-		visible_message("<span class='danger'>\The [user] is trying to remove \the [src]'s [target_slot.name]!</span>")
-	else if(!istype(held, /obj/item/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
-=======
 		visible_message(span_danger("\The [user] is trying to remove \the [src]'s [target_slot.name]!"))
-	else
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	else if(!istype(held, /obj/item/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
 		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/grenade))
 			visible_message(span_danger("\The [user] is trying to put \a [held] in \the [src]'s mouth!"))
 		else
-<<<<<<< HEAD
-			visible_message("<span class='danger'>\The [user] is trying to put \a [held] on \the [src]!</span>")
+			visible_message(span_danger("\The [user] is trying to put \a [held] on \the [src]!"))
 	//CHOMPEdit Start - Let borg grippers put stuff on.
 	else
 		var/obj/item/gripper/G = held
 		if(slot_to_strip == slot_wear_mask && istype(G.wrapped, /obj/item/grenade))
-			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] in \the [src]'s mouth!</span>")
+			visible_message(span_danger("\The [user] is trying to put \a [G.wrapped] in \the [src]'s mouth!"))
 		else
-			visible_message("<span class='danger'>\The [user] is trying to put \a [G.wrapped] on \the [src]!</span>")
+			visible_message(span_danger("\The [user] is trying to put \a [G.wrapped] on \the [src]!"))
 	//CHOMPEdit End
-=======
-			visible_message(span_danger("\The [user] is trying to put \a [held] on \the [src]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 
 	if(!do_after(user,HUMAN_STRIP_DELAY,src))
 		return

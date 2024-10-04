@@ -1810,7 +1810,7 @@
 
 	rest_dir = 1 // CHOMPEdit
 	resting = !resting
-	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
+	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
 	update_canmove()
 
 /mob/living/carbon/human/verb/lay_down_right()
@@ -1818,7 +1818,7 @@
 
 	rest_dir = 0 // CHOMPEdit
 	resting = !resting
-	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
+	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
 	update_canmove()
 
 /*CHOMPRemove Start
@@ -1837,23 +1837,4 @@
 	vore_fullness = min(vore_capacity, vore_fullness)
 	update_vore_belly_sprite()
 	update_vore_tail_sprite()
-<<<<<<< HEAD
 *///CHOMPRemove End
-=======
-
-/mob/living/carbon/human/verb/lay_down_left()
-	set name = "Rest-Left"
-
-	rest_dir = -1
-	resting = !resting
-	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
-	update_canmove()
-
-/mob/living/carbon/human/verb/lay_down_right()
-	set name = "Rest-Right"
-
-	rest_dir = 1
-	resting = !resting
-	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
-	update_canmove()
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework

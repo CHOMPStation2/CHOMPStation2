@@ -308,9 +308,5 @@
 /obj/machinery/r_n_d/server/core
 	name = "Core R&D Server"
 	id_with_upload_string = "1"
-<<<<<<< HEAD
 	id_with_download_string = "1;3;4;5;6;7" // CHOMPEdit - Departmental lathes
-=======
-	id_with_download_string = "1"
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	server_id = 1

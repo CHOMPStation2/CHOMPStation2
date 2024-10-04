@@ -271,7 +271,6 @@
 	if(loaded) //Safety.
 		if(istype(loaded, /obj/item/fuel_assembly))
 			var/obj/item/fuel_assembly/rod = loaded
-<<<<<<< HEAD
 			//CHOMPEdit Begin
 			switch(rod.fuel_type)
 				if("composite") //Safety check for rods spawned in without a fueltype.
@@ -284,26 +283,26 @@
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
 				if("supermatter")
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
-					visible_message("<span class='danger'>The barrel of \the [src] glows a blinding white!</span>")
+					visible_message(span_danger("The barrel of \the [src] glows a blinding white!"))
 					spawn(5)
-						visible_message("<span class='danger'>\The [src] begins to rattle, its acceleration chamber collapsing in on itself!</span>")
+						visible_message(span_danger("\The [src] begins to rattle, its acceleration chamber collapsing in on itself!"))
 						removable_components = FALSE
 						spawn(15)
-							audible_message("<span class='critical'>\The [src]'s power supply begins to overload as the device crumples!</span>", runemessage = "VWRRRRRRRR") //Why are you still holding this?
+							audible_message(span_critical("\The [src]'s power supply begins to overload as the device crumples!"), runemessage = "VWRRRRRRRR") //Why are you still holding this?
 							playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
 							var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 							var/turf/T = get_turf(src)
 							sparks.set_up(2, 1, T)
 							sparks.start()
 							spawn(15)
-								visible_message("<span class='critical'>\The [src] explodes in a blinding white light!</span>")
+								visible_message(span_critical("\The [src] explodes in a blinding white light!"))
 								explosion(src.loc, -1, 1, 2, 3)
 								qdel(src)
 				if("blitz")
 					var/max_range = 6																// -- Polymorph
 					var/banglet = 0
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/blitz
-					visible_message("<span class='critical'>\The [src] explodes in a blinding white light with a deafening bang!</span>")
+					visible_message(span_critical("\The [src] explodes in a blinding white light with a deafening bang!"))
 					for(var/obj/structure/closet/L in hear(max_range, get_turf(src)))
 						if(locate(/mob/living/carbon/, L))
 							for(var/mob/living/carbon/M in L)
@@ -315,40 +314,12 @@
 					spawn(2)
 						qdel(src)
 				if("blitzu")
-					visible_message("<span class='critical'>\The [src] explodes in a blinding white light with a deafening bang!</span>")
+					visible_message(span_critical("\The [src] explodes in a blinding white light with a deafening bang!"))
 					explosion(get_turf(src),1,2,4,6)
 					qdel(src)
 					return
 				else
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-=======
-			if(rod.fuel_type == "composite" || rod.fuel_type == "deuterium") //Safety check for rods spawned in without a fueltype.
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-			else if(rod.fuel_type == "tritium")
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
-			else if(rod.fuel_type == "phoron")
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
-			else if(rod.fuel_type == "supermatter")
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
-				visible_message(span_danger("The barrel of \the [src] glows a blinding white!"))
-				spawn(5)
-					visible_message(span_danger("\The [src] begins to rattle, its acceleration chamber collapsing in on itself!"))
-					removable_components = FALSE
-					spawn(15)
-						audible_message(span_critical("\The [src]'s power supply begins to overload as the device crumples!"), runemessage = "VWRRRRRRRR") //Why are you still holding this?
-						playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
-						var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
-						var/turf/T = get_turf(src)
-						sparks.set_up(2, 1, T)
-						sparks.start()
-						spawn(15)
-							visible_message(span_critical("\The [src] explodes in a blinding white light!"))
-							explosion(src.loc, -1, 1, 2, 3)
-							qdel(src)
-			else
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
 	use_ammo()
 	capacitor.use(power_cost)
 	update_icon()
@@ -358,7 +329,7 @@
 		return
 
 /obj/item/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, var/mob/living/carbon/M, var/max_range, var/banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
-	to_chat(M, "<span class='danger'>BANG</span>")						// Called during the loop that bangs people in lockers/containers and when banging
+	to_chat(M, span_danger("BANG"))						// Called during the loop that bangs people in lockers/containers and when banging
 	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
 
 
@@ -413,18 +384,18 @@
 	if(ishuman(M))
 		var/obj/item/organ/internal/eyes/E = H.internal_organs_by_name[O_EYES]
 		if (E && E.damage >= E.min_bruised_damage)
-			to_chat(M, "<span class='danger'>Your eyes start to burn badly!</span>")
+			to_chat(M, span_danger("Your eyes start to burn badly!"))
 			if(!banglet && !(istype(src , /obj/item/grenade/flashbang/clusterbang)))
 				if (E.damage >= E.min_broken_damage)
-					to_chat(M, "<span class='danger'>You can't see anything!</span>")
+					to_chat(M, span_danger("You can't see anything!"))
 	if (M.ear_damage >= 15)
-		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
+		to_chat(M, span_danger("Your ears start to ring badly!"))
 		if(!banglet && !(istype(src , /obj/item/grenade/flashbang/clusterbang)))
 			if (prob(M.ear_damage - 10 + 5))
-				to_chat(M, "<span class='danger'>You can't hear anything!</span>")
+				to_chat(M, span_danger("You can't hear anything!"))
 				M.sdisabilities |= DEAF
 	else if(M.ear_damage >= 5)
-		to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
+		to_chat(M, span_danger("Your ears start to ring!"))
 //CHOMPEdit End
 /obj/item/gun/magnetic/fuelrod/New()
 	cell = new /obj/item/cell/high

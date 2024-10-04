@@ -38,14 +38,9 @@
 
 /datum/surgery_step/cavity/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='danger'>[user]'s hand slips, scraping around inside [target]'s [affected.name] with \the [tool]!</span>", \
-	"<span class='danger'>Your hand slips, scraping around inside [target]'s [affected.name] with \the [tool]!</span>")
-	user.balloon_alert_visible("Slips, scraping around inside [target]'s [affected.name]", "Your hand slips, scraping around inside \the [affected.name]") // CHOMPEdit
-=======
 	user.visible_message(span_danger("[user]'s hand slips, scraping around inside [target]'s [affected.name] with \the [tool]!"), \
 	span_danger("Your hand slips, scraping around inside [target]'s [affected.name] with \the [tool]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, scraping around inside [target]'s [affected.name]", "Your hand slips, scraping around inside \the [affected.name]") // CHOMPEdit
 	affected.createwound(CUT, 20)
 
 ///////////////////////////////////////////////////////////////
@@ -70,28 +65,18 @@
 
 /datum/surgery_step/cavity/make_space/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='filter_notice'>[user] starts making some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].</span>", \
-	"<span class='filter_notice'>You start making some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].</span>" )
-	user.balloon_alert_visible("Starts making space inside [target]'s [get_cavity(affected)]", "Making space inside [get_cavity(affected)]") // CHOMPEdit
-=======
 	user.visible_message(span_filter_notice("[user] starts making some space inside [target]'s [get_cavity(affected)] cavity with \the [tool]."), \
 	span_filter_notice("You start making some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Starts making space inside [target]'s [get_cavity(affected)]", "Making space inside [get_cavity(affected)]") // CHOMPEdit
 	target.custom_pain("The pain in your chest is living hell!",1)
 	affected.cavity = 1
 	..()
 
 /datum/surgery_step/cavity/make_space/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] makes some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].</span>", \
-	"<span class='notice'>You make some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].</span>" )
-	user.balloon_alert_visible("Makes space inside [target]'s [get_cavity(affected)]", "Made space inside \the [get_cavity(affected)]") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] makes some space inside [target]'s [get_cavity(affected)] cavity with \the [tool]."), \
 	span_notice("You make some space inside [target]'s [get_cavity(affected)] cavity with \the [tool].") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Makes space inside [target]'s [get_cavity(affected)]", "Made space inside \the [get_cavity(affected)]") // CHOMPEdit
 
 ///////////////////////////////////////////////////////////////
 // Cavity Closing Surgery
@@ -117,28 +102,18 @@
 
 /datum/surgery_step/cavity/close_space/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='filter_notice'>[user] starts mending [target]'s [get_cavity(affected)] cavity wall with \the [tool].</span>", \
-	"<span class='filter_notice'>You start mending [target]'s [get_cavity(affected)] cavity wall with \the [tool].</span>" )
-	user.balloon_alert_visible("Starts mending [target]'s [get_cavity(affected)] cavity wall.", "Mending \the [get_cavity(affected)] cavity wall.") // CHOMPEdit
-=======
 	user.visible_message(span_filter_notice("[user] starts mending [target]'s [get_cavity(affected)] cavity wall with \the [tool]."), \
 	span_filter_notice("You start mending [target]'s [get_cavity(affected)] cavity wall with \the [tool].") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Starts mending [target]'s [get_cavity(affected)] cavity wall.", "Mending \the [get_cavity(affected)] cavity wall.") // CHOMPEdit
 	target.custom_pain("The pain in your chest is living hell!",1)
 	affected.cavity = 0
 	..()
 
 /datum/surgery_step/cavity/close_space/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] mends [target]'s [get_cavity(affected)] cavity walls with \the [tool].</span>", \
-	"<span class='notice'> You mend [target]'s [get_cavity(affected)] cavity walls with \the [tool].</span>" )
-	user.balloon_alert_visible("Mends [target]'s [get_cavity(affected)] cavity walls", "Mended [get_cavity(affected)] cavity walls.") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] mends [target]'s [get_cavity(affected)] cavity walls with \the [tool]."), \
-	span_notice(" You mend[target]'s [get_cavity(affected)] cavity walls with \the [tool].") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	span_notice(" You mend [target]'s [get_cavity(affected)] cavity walls with \the [tool].") )
+	user.balloon_alert_visible("Mends [target]'s [get_cavity(affected)] cavity walls", "Mended [get_cavity(affected)] cavity walls.") // CHOMPEdit
 
 ///////////////////////////////////////////////////////////////
 // Item Implantation Surgery
@@ -179,14 +154,9 @@
 	if(isrobot(user) && istype(tool, /obj/item/gripper))
 		var/obj/item/gripper/G = tool
 		tool = G.wrapped
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] starts putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>", \
-	"<span class='notice'>You start putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>" ) //Nobody will probably ever see this, but I made these two blue. ~CK
-	user.balloon_alert_visible("Starts putting \the [tool] inside [target]'s [get_cavity(affected)]", "Putting \the [tool] inside \the [get_cavity(affected)]") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] starts putting \the [tool] inside [target]'s [get_cavity(affected)] cavity."), \
 	span_notice("You start putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.") ) //Nobody will probably ever see this, but I made these two blue. ~CK
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Starts putting \the [tool] inside [target]'s [get_cavity(affected)]", "Putting \the [tool] inside \the [get_cavity(affected)]") // CHOMPEdit
 	target.custom_pain("The pain in your chest is living hell!",1)
 	..()
 
@@ -198,14 +168,9 @@
 		G.drop_item()
 	else
 		user.drop_item()
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] puts \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>", \
-	"<span class='notice'>You put \the [tool] inside [target]'s [get_cavity(affected)] cavity.</span>" )
-	user.balloon_alert_visible("Puts \the [tool] inside [target]'s [get_cavity(affected)]", "\the [tool] placed inside [get_cavity(affected)]") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] puts \the [tool] inside [target]'s [get_cavity(affected)] cavity."), \
 	span_notice("You put \the [tool] inside [target]'s [get_cavity(affected)] cavity.") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Puts \the [tool] inside [target]'s [get_cavity(affected)]", "\the [tool] placed inside [get_cavity(affected)]") // CHOMPEdit
 	if (tool.w_class > get_max_wclass(affected)/2 && prob(50) && (affected.robotic < ORGAN_ROBOT))
 		to_chat(user, span_danger(" You tear some blood vessels trying to fit such a big object in this cavity."))
 		var/datum/wound/internal_bleeding/I = new (10)
@@ -242,14 +207,9 @@
 
 /datum/surgery_step/cavity/implant_removal/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] starts poking around inside [target]'s [affected.name] with \the [tool].</span>", \
-	"<span class='notice'>You start poking around inside [target]'s [affected.name] with \the [tool].</span>" )
-	user.balloon_alert_visible("Pokes inside [target]'s [affected.name]", "Poking around inside [affected.name]") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] starts poking around inside [target]'s [affected.name] with \the [tool]."), \
 	span_notice("You start poking around inside [target]'s [affected.name] with \the [tool].") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Pokes inside [target]'s [affected.name]", "Poking around inside [affected.name]") // CHOMPEdit
 	target.custom_pain("The pain in your [affected.name] is living hell!",1)
 	..()
 
@@ -260,56 +220,33 @@
 
 		var/obj/item/obj = tgui_input_list(user, "Which embedded item do you wish to remove?", "Surgery Select", affected.implants)
 		if(isnull(obj)) //They clicked cancel.
-<<<<<<< HEAD
-			user.visible_message("<span class='notice'>[user] takes \the [tool] out of [target]'s [affected.name].</span>", \
-			"<span class='notice'>You take \the [tool] out of the incision on [target]'s [affected.name].</span>" )
-			user.balloon_alert_visible("Takes \the [tool] out of [target]'s [affected.name]", "\the [tool] taken out of the incison on \the [affected.name]") // CHOMPEdit
-			return
-		if(!do_mob(user, target, 1)) //They moved away
-			to_chat(user, "<span class='warning'>You must remain close to and keep focused on your patient to conduct surgery.</span>")
-			user.visible_message("<span class='notice'>[user] fails to remove anything from [target]'s [affected.name] with \the [tool]!</span>", \
-			"<span class='notice'>You fail to remove the [obj] from [target]'s [affected.name]s with \the [tool]!</span>" )
-			user.balloon_alert_visible("Fails to remove anything from [target]'s [affected.name]", "Failed to remove \the [obj] from \the [affected.name]") // CHOMPEdit
-=======
 			user.visible_message(span_notice("[user] takes \the [tool] out of [target]'s [affected.name]."), \
 			span_notice("You take \the [tool] out of the incision on [target]'s [affected.name].") )
+			user.balloon_alert_visible("Takes \the [tool] out of [target]'s [affected.name]", "\the [tool] taken out of the incison on \the [affected.name]") // CHOMPEdit
 			return
 		if(!do_mob(user, target, 1)) //They moved away
 			to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
 			user.visible_message(span_notice("[user] fails to remove anything from [target]'s [affected.name] with \the [tool]!"), \
 			span_notice("You fail to remove the [obj] from [target]'s [affected.name]s with \the [tool]!") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+			user.balloon_alert_visible("Fails to remove anything from [target]'s [affected.name]", "Failed to remove \the [obj] from \the [affected.name]") // CHOMPEdit
 			return
 
 		if(istype(obj,/obj/item/implant))
 			var/obj/item/implant/imp = obj
 			if (!imp.islegal()) //ILLEGAL IMPLANT ALERT!!!!!!!!!!
-<<<<<<< HEAD
-				user.visible_message("<span class='notice'>[user] seems to be intently working on something within [target]'s [affected.name] with \the [tool]!</span>", \
-				"<span class='notice'>You intently begin to take [obj] out of the incision on [target]'s [affected.name]s with \the [tool]!</span>" )
-				user.balloon_alert_visible("Intently works on something within [target]'s [affected.name]", "Intently taking \the [obj] out of the incision in \the [affected.name]") // CHOMPEdit
-				if(!do_after(user, min_duration, target))
-					user.visible_message("<span class='notice'>[user] fails to remove anything from [target]'s [affected.name] with \the [tool]!</span>", \
-					"<span class='notice'>You fail to remove the [obj] from [target]'s [affected.name]s with \the [tool]!</span>" )
-					user.balloon_alert_visible("Fails to remove anything from [target]'s [affected.name]", "Failed to remove \the [obj] from \the [affected.name]") // CHOMPEdit
-					return
-
-
-		user.visible_message("<span class='notice'>[user] takes something out of the incision on [target]'s [affected.name] with \the [tool]!</span>", \
-		"<span class='notice'>You take [obj] out of the incision on [target]'s [affected.name]s with \the [tool]!</span>" )
-		user.balloon_alert_visible("Takes something out of the incision on [target]'s [affected.name]", "[obj] taken out of the incision on [affected.name]") // CHOMPEdit
-=======
 				user.visible_message(span_notice("[user] seems to be intently working on something within [target]'s [affected.name] with \the [tool]!"), \
 				span_notice("You intently begin to take [obj] out of the incision on [target]'s [affected.name]s with \the [tool]!") )
+				user.balloon_alert_visible("Intently works on something within [target]'s [affected.name]", "Intently taking \the [obj] out of the incision in \the [affected.name]") // CHOMPEdit
 				if(!do_after(user, min_duration, target))
 					user.visible_message(span_notice("[user] fails to remove anything from [target]'s [affected.name] with \the [tool]!"), \
 					span_notice("You fail to remove the [obj] from [target]'s [affected.name]s with \the [tool]!") )
+					user.balloon_alert_visible("Fails to remove anything from [target]'s [affected.name]", "Failed to remove \the [obj] from \the [affected.name]") // CHOMPEdit
 					return
 
 
 		user.visible_message(span_notice("[user] takes something out of the incision on [target]'s [affected.name] with \the [tool]!"), \
 		span_notice("You take [obj] out of the incision on [target]'s [affected.name]s with \the [tool]!") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		user.balloon_alert_visible("Takes something out of the incision on [target]'s [affected.name]", "[obj] taken out of the incision on [affected.name]") // CHOMPEdit
 		affected.implants -= obj
 		if(!target.has_embedded_objects())
 			target.clear_alert("embeddedobject")
@@ -333,14 +270,9 @@
 				imp.implanted = 0
 			else if(istype(tool,/obj/item/nif)){var/obj/item/nif/N = tool;N.unimplant(target)} //VOREStation Add - NIF support
 	else
-<<<<<<< HEAD
-		user.visible_message("<span class='notice'>[user] could not find anything inside [target]'s [affected.name], and pulls \the [tool] out.</span>", \
-		"<span class='notice'>You could not find anything inside [target]'s [affected.name].</span>" )
-		user.balloon_alert_visible("Could not find anything inside", "Nothing found inside") // CHOMPEdit
-=======
 		user.visible_message(span_notice("[user] could not find anything inside [target]'s [affected.name], and pulls \the [tool] out."), \
 		span_notice("You could not find anything inside [target]'s [affected.name].") )
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+		user.balloon_alert_visible("Could not find anything inside", "Nothing found inside") // CHOMPEdit
 
 /datum/surgery_step/cavity/implant_removal/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	..()

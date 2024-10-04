@@ -21,15 +21,6 @@
 		plane = OBJ_PLANE
 		to_chat(src,span_notice("You are now hiding."))
 
-<<<<<<< HEAD
-//ChompEDIT START - re-assert our layer and plane
-/mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
-	. = ..()
-	if(status_flags & HIDING)
-		layer = HIDING_LAYER
-		plane = OBJ_PLANE
-//ChompEDIT END
-=======
 /mob/living/proc/toggle_selfsurgery()
 	set name = "Allow Self Surgery"
 	set desc = "Toggles the 'safeties' on self-surgery, allowing you to do so."
@@ -39,4 +30,11 @@
 
 	to_chat(usr, span_notice("You will [allow_self_surgery ? "now" : "no longer"] attempt to operate upon yourself."))
 	log_admin("DEBUG \[[world.timeofday]\]: [src.ckey ? "[src.name]:([src.ckey])" : "[src.name]"] has [allow_self_surgery ? "Enabled" : "Disabled"] self surgery.")
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+
+//ChompEDIT START - re-assert our layer and plane
+/mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
+	. = ..()
+	if(status_flags & HIDING)
+		layer = HIDING_LAYER
+		plane = OBJ_PLANE
+//ChompEDIT END

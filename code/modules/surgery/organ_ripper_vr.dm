@@ -42,14 +42,9 @@
 
 /datum/surgery_step/generic/ripper/tear_vessel/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='notice'>[user] has ripped [target]'s [affected] \the [tool], blood and viscera spraying everywhere!</span>", \
-	"<span class='notice'>You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool], spraying blood all through the room!</span>")
-	user.balloon_alert_visible("Rips into [target]'s [affected], blood and viscera everywhere!", "Ripped into [target]'s [affected], blood and viscera everywhere!") // CHOMPEdit
-=======
 	user.visible_message(span_notice("[user] has ripped [target]'s [affected] \the [tool], blood and viscera spraying everywhere!"), \
 	span_notice("You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool], spraying blood all through the room!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Rips into [target]'s [affected], blood and viscera everywhere!", "Ripped into [target]'s [affected], blood and viscera everywhere!") // CHOMPEdit
 	var/datum/wound/internal_bleeding/I = new (30) //splurt. New severed artery.
 	affected.wounds += I
 	affected.owner.custom_pain("You feel something rip in your [affected.name]!", 1)
@@ -59,14 +54,9 @@
 
 /datum/surgery_step/generic/ripper/tear_vessel/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-<<<<<<< HEAD
-	user.visible_message("<span class='warning'>[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>", \
-	"<span class='warning'>Your hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>")
-	user.balloon_alert_visible("Slips, damaging [target]'s [affected.name]", "Your hand slips, damaging \the [affected.name]") // CHOMPEdit
-=======
 	user.visible_message(span_warning("[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!"), \
 	span_warning("Your hand slips, damaging [target]'s [affected.name] with \the [tool]!"))
->>>>>>> 7b5dfe54be... Merge pull request #16413 from Kashargul/span_rework
+	user.balloon_alert_visible("Slips, damaging [target]'s [affected.name]", "Your hand slips, damaging \the [affected.name]") // CHOMPEdit
 	affected.createwound(BRUISE, 20) //Only bruised...Sad.
 
 
