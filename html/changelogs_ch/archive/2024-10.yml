@@ -41,3 +41,17 @@
   - rscadd: The Grower Pod now shows progress bars when you examine it.
   Darlantanis:
   - bugfix: adds missing vore init check to kelpie
+2024-10-03:
+  CHOMPStation2:
+  - qol: fixed a stray pixel on the inner thighs marking
+  - rscadd: new inner thighs marking
+  Darlantanis:
+  - bugfix: fixes kelpie init again
+  FluffMedic:
+  - bugfix: fixes some null messaging
+  NickBelmont:
+  - rscadd: Belch chance parameter to the interactions tab of the vorepanel
+  - rscadd: Prey resisting can trigger a belch emote if interactions are set up to
+      allow it.
+  TheCaramelion:
+  - maptweak: Fixes tape spawning in place of recording tape

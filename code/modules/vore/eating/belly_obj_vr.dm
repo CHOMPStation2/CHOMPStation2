@@ -359,6 +359,7 @@
 	"transferchance_secondary",
 	"transferlocation",
 	"transferlocation_secondary",
+	"belchchance",	//CHOMPAdd
 	"bulge_size",
 	"display_absorbed_examine",
 	"shrink_grow_size",
@@ -1990,8 +1991,9 @@
 			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		else
 			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+	if(prob(belchchance))//Unsure if this should go in escapable or not, leaving it here for now.
+		owner.emote("belch")
 	//CHOMPEdit End
-
 	if(escapable) //If the stomach has escapable enabled.
 		if(prob(escapechance)) //Let's have it check to see if the prey escapes first.
 			to_chat(R, escape_attempt_prey_message)
@@ -2700,6 +2702,7 @@
 	dupe.noise_freq = noise_freq
 	dupe.item_digest_logs = item_digest_logs
 	dupe.show_fullness_messages = show_fullness_messages
+	dupe.belchchance = belchchance
 	dupe.digest_max = digest_max //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen

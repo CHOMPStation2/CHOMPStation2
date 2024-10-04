@@ -46,6 +46,8 @@
 	var/opening = FALSE
 	// If the mail has been scanned with a mail scanner
 	var/scanned
+	// Does it have a colored envelope?
+	var/colored_envelope
 
 /obj/item/mail/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return
@@ -142,6 +144,11 @@
 
 /obj/item/mail/update_icon()
 	. = ..()
+	cut_overlays()
+	if(colored_envelope)
+		var/image/envelope = image(icon, icon_state)
+		envelope.color = colored_envelope
+		add_overlay(envelope)
 	var/bonus_stamp_offset = 0
 	for(var/stamp in stamps)
 		var/image/stamp_image = image(
@@ -220,9 +227,7 @@
 
 	var/list/goodies = generic_goodies
 	if(this_job)
-		var/image/envelope = image(icon, icon_state)
-		envelope.color = this_job.get_mail_color()
-		add_overlay(envelope)
+		colored_envelope = this_job.get_mail_color()
 		if(!preset_goodies)
 			var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
 			if(LAZYLEN(job_goodies))
@@ -253,7 +258,6 @@
 
 	if(!check_rights(R_SPAWN)) return
 
-	var/obj/item/mail/new_mail = new
 	var/list/types = typesof(/atom)
 	var/list/matches = new()
 	var/list/recipients = list()
@@ -277,14 +281,16 @@
 
 	recipients = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
 
-	if(recipients)
-		new_mail.initialize_for_recipient(recipients, TRUE)
-		new chosen(new_mail)
+	if(!recipients)
+		return
 
 	var/shuttle_spawn = tgui_alert(usr, "Spawn mail at location or in the shuttle?", "Spawn mail", list("Location", "Shuttle"))
 	if(!shuttle_spawn)
 		return
 	if(shuttle_spawn == "Shuttle")
+		var/obj/item/mail/new_mail = new
+		new_mail.initialize_for_recipient(recipients, TRUE)
+		new chosen(new_mail)
 		SSmail.admin_mail += new_mail
 		log_and_message_admins("spawned [chosen] inside an envelope at the shuttle")
 	else

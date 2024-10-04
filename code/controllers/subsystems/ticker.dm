@@ -87,7 +87,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 
 	if(start_immediately)
 		pregame_timeleft = 0
-	else if(SSvote.time_remaining)
+	else if(SSvote.active_vote)
 		return // vote still going, wait for it.
 
 	// Time to start the game!
@@ -98,8 +98,8 @@ var/global/datum/controller/subsystem/ticker/ticker
 			fire() // Don't wait for next tick, do it now!
 		return
 
-	if(pregame_timeleft <= CONFIG_GET(number/vote_autogamemode_timeleft) && !SSvote.gamemode_vote_called)
-		SSvote.autogamemode() // Start the game mode vote (if we haven't had one already)
+	//if(pregame_timeleft <= CONFIG_GET(number/vote_autogamemode_timeleft) && !SSvote.gamemode_vote_called) //CHOMPEdit
+		//SSvote.autogamemode() // Start the game mode vote (if we haven't had one already) //CHOMPEdit
 
 // Called during GAME_STATE_SETTING_UP (RUNLEVEL_SETUP)
 /datum/controller/subsystem/ticker/proc/setup_tick(resumed = FALSE)
@@ -107,7 +107,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 	if(!setup_choose_gamemode())
 		// It failed, go back to lobby state and re-send the welcome message
 		pregame_timeleft = CONFIG_GET(number/pregame_time) // CHOMPEdit
-		SSvote.gamemode_vote_called = FALSE // Allow another autogamemode vote
+		// SSvote.gamemode_vote_called = FALSE // Allow another autogamemode vote
 		current_state = GAME_STATE_PREGAME
 		Master.SetRunLevel(RUNLEVEL_LOBBY)
 		pregame_welcome()
@@ -229,7 +229,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 		mode.cleanup()
 		//call a transfer shuttle vote
 		to_world("<span class='danger'>The round has ended!</span>")
-		SSvote.autotransfer()
+		new /datum/vote/crew_transfer
 
 // Called during GAME_STATE_FINISHED (RUNLEVEL_POSTGAME)
 /datum/controller/subsystem/ticker/proc/post_game_tick()

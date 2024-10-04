@@ -350,6 +350,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			selected_list["interacts"]["transferlocation_secondary"] = selected.transferlocation_secondary
 			selected_list["interacts"]["absorbchance"] = selected.absorbchance
 			selected_list["interacts"]["digestchance"] = selected.digestchance
+			selected_list["interacts"]["belchchance"] = selected.belchchance
 
 		selected_list["autotransfer_enabled"] = selected.autotransfer_enabled
 		selected_list["autotransfer"] = list()
@@ -1606,6 +1607,10 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(isnum(belly_data["autotransfer_max_amount"]))
 					var/new_autotransfer_max_amount = belly_data["autotransfer_max_amount"]
 					new_belly.autotransfer_max_amount = sanitize_integer(new_autotransfer_max_amount, 0, 100, initial(new_belly.autotransfer_max_amount))
+
+				if(isnum(belly_data["belchchance"]))
+					var/new_belchchance = belly_data["belchchance"]
+					new_belly.belchchance = sanitize_integer(new_belchchance, 0, 100, initial(new_belly.belchchance))
 
 				// Liquid Options
 				if(isnum(belly_data["show_liquids"]))
@@ -3609,6 +3614,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/escape_chance_input = tgui_input_number(user, "Set prey escape chance on resist (as %)", "Prey Escape Chance", null, 100, 0)
 			if(!isnull(escape_chance_input)) //These have to be 'null' because both cancel and 0 are valid, separate options
 				host.vore_selected.escapechance = sanitize_integer(escape_chance_input, 0, 100, initial(host.vore_selected.escapechance))
+			. = TRUE
+		if("b_belchchance")
+			var/belch_chance_input = tgui_input_number(user, "Set chance for belch emote on prey resist (as %)", "Resist Belch Chance", host.vore_selected.belchchance , 100, 0)
+			if(!isnull(belch_chance_input))
+				host.vore_selected.belchchance = sanitize_integer(belch_chance_input, 0, 100, initial(host.vore_selected.belchchance))
 			. = TRUE
 		if("b_escapechance_absorbed")
 			var/escape_absorbed_chance_input = tgui_input_number(user, "Set absorbed prey escape chance on resist (as %)", "Prey Absorbed Escape Chance", null, 100, 0)
