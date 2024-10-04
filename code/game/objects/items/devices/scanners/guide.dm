@@ -109,7 +109,7 @@
 
 	var/peeb
 	if(dat)
-		peeb +=s span_notice("<b>GUIDANCE SYSTEM BEGIN</b>")
+		peeb += span_notice("<b>GUIDANCE SYSTEM BEGIN</b>")
 		peeb += "<br>"
 		peeb += dat
 		peeb += span_notice("For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.")
