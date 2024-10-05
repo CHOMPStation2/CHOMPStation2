@@ -73,7 +73,8 @@
 	var/thegoods
 
 	if(searching)
-		to_chat(SPAN_WARNING("Someone is already looking through \the [src]!"))
+		to_chat(user, SPAN_WARNING("Someone is already looking through \the [src]!"))
+		return
 
 	searching = TRUE
 
