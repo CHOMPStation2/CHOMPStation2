@@ -92,6 +92,7 @@
 
 	var/list/secondary_transfer_messages_prey = list(
 		"Your attempt to escape %pred's %belly has failed and your struggles only results in you sliding into %pred's %dest!")
+<<<<<<< HEAD
 
 	//CHOMPAdd Start
 	var/list/primary_autotransfer_messages_owner = list(
@@ -106,6 +107,8 @@
 	var/list/secondary_autotransfer_messages_prey = list(
 		"%pred's %belly moves you along into their %dest!")
 	//CHOMPAdd End
+=======
+>>>>>>> ab0f06a827... Merge pull request #16427 from Kashargul/bellystrings
 
 	var/list/digest_chance_messages_owner = list(
 		"You feel your %belly beginning to become active!")
