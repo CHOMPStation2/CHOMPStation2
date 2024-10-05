@@ -11,6 +11,7 @@ export type Data = {
   prefs: prefData;
   soulcatcher: soulcatcherData | null;
   abilities: abilities;
+  vore_words: Record<string, string[]>;
 };
 
 export type abilities = {
