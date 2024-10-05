@@ -73,3 +73,32 @@
   - bugfix: nulls being passable after the tgui input selection
   TheGreatKitsune:
   - bugfix: Removed ability for ghosts to make sound with bags.
+2024-10-05:
+  CHOMPStation2:
+  - refactor: Belly message formatting has been unified into one proc.
+  - rscadd: 'All formatted belly messages can now use a number of new %replacements,
+      which choose from a list of preset words. You can see all of the words that
+      will be used in a new help menu next to the belly description, but this PR adds
+      the following: %goo, %happybelly, %fat, %dick, %boob, %pussy, %grip, %cozy,
+      %angry, %acid, %snack, %hot'
+  - rscadd: For example, %goo will be replaced randomly with "muck", or "goo", or
+      "sludge", or "slime", or another 10 different options - this random replacement
+      happens every time a message is printed, so it's really helpful for idle messages!
+  - bugfix: NanoMap components (air alarm computer, crew monitor) have been much improved.
+  - bugfix: You can now use W/S and Up Arrow/Down Arrow to zoom on a NanoMap.
+  - bugfix: NanoMap zooming should be centered more correctly.
+  - bugfix: Tooltips show up when hovering over icons in a NanoMap.
+  - bugfix: The Atmospherics Control interface occasionally started to scroll weirdly
+      in map ivew.
+  - qol: The R&D Console has had a major facelift!
+  - bugfix: The R&D Console will no longer automatically pop open it's UI against
+      your will when it's done building stuff.
+  Kashargul:
+  - rscadd: bluespace disruptor for admin event use
+  - bugfix: AI shells getting out of sync with the AI during ion storms
+  - qol: better styling of the vorepanel
+  - bugfix: a rare crash condition after reloading bellies
+  - bugfix: Bodycam screen view now updates on move
+  TheCaramelion:
+  - bugfix: Removed a default object from the junk mail
+  - bugfix: Verb vote placed in the correct verb panel location

@@ -112,7 +112,7 @@
 	data["safetyDisabled"] = safety_disabled
 	data["emagged"] = emagged
 	data["gravity"] = FALSE
-	if(linkedholodeck.has_gravity)
+	if(linkedholodeck.get_gravity())
 		data["gravity"] = TRUE
 
 	return data
@@ -264,7 +264,7 @@
 	else
 		loadProgram(powerdown_program, 0)
 
-		if(!linkedholodeck.has_gravity)
+		if(!linkedholodeck.get_gravity())
 			linkedholodeck.gravitychange(1)
 
 		active = 0
@@ -371,7 +371,7 @@
 	active = 1
 	update_use_power(USE_POWER_IDLE)
 
-	if(A.has_gravity)
+	if(A.get_gravity())
 		A.gravitychange(0)
 	else
 		A.gravitychange(1)
@@ -380,7 +380,7 @@
 	//Turn it back to the regular non-holographic room
 	loadProgram(powerdown_program, 0)
 
-	if(!linkedholodeck.has_gravity)
+	if(!linkedholodeck.get_gravity())
 		linkedholodeck.gravitychange(1)
 
 	active = 0

@@ -1,7 +1,7 @@
 import { BooleanLike } from 'common/react';
 import { useState } from 'react';
+import { Tabs } from 'tgui/components';
 
-import { Tabs } from '../../../components';
 import { hostMob, selectedData } from './types';
 import { VoreContentsPanel } from './VoreContentsPanel';
 import { VoreSelectedBellyControls } from './VoreSelectedBellyTabs/VoreSelectedBellyControls';
@@ -20,8 +20,10 @@ export const VoreSelectedBelly = (props: {
   show_pictures: BooleanLike;
   host_mobtype: hostMob;
   icon_overflow: BooleanLike;
+  vore_words: Record<string, string[]>;
 }) => {
-  const { belly, show_pictures, host_mobtype, icon_overflow } = props;
+  const { belly, show_pictures, host_mobtype, icon_overflow, vore_words } =
+    props;
   const { contents } = belly;
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -29,7 +31,9 @@ export const VoreSelectedBelly = (props: {
   const tabs: React.JSX.Element[] = [];
 
   tabs[0] = <VoreSelectedBellyControls belly={belly} />;
-  tabs[1] = <VoreSelectedBellyDescriptions belly={belly} />;
+  tabs[1] = (
+    <VoreSelectedBellyDescriptions belly={belly} vore_words={vore_words} />
+  );
   tabs[2] = (
     <VoreSelectedBellyOptions belly={belly} host_mobtype={host_mobtype} />
   );

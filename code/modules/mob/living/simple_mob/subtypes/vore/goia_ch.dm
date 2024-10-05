@@ -277,18 +277,18 @@
 	add_verb(src,/mob/living/proc/injection) //Poison sting c:
 	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/export_style)
 	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/import_style)
-	src.trait_injection_reagents += "microcillin"		// get small
-	src.trait_injection_reagents += "macrocillin"		// get BIG
-	src.trait_injection_reagents += "normalcillin"	// normal
-	src.trait_injection_reagents += "numbenzyme"		// no feelings
-	src.trait_injection_reagents += "androrovir" 		// -> MALE
-	src.trait_injection_reagents += "gynorovir" 		// -> FEMALE
-	src.trait_injection_reagents += "androgynorovir" 	// -> PLURAL
-	src.trait_injection_reagents += "stoxin"			// night night chem
-	src.trait_injection_reagents += "rainbowtoxin" 	// Funny flashing lights.
-	src.trait_injection_reagents += "paralysistoxin" 	// Paralysis!
-	src.trait_injection_reagents += "painenzyme"		// Pain INCREASER
-	src.trait_injection_reagents += "aphrodisiac"		// Horni
+	src.trait_injection_reagents += "microcillin"			// get small
+	src.trait_injection_reagents += "macrocillin"			// get BIG
+	src.trait_injection_reagents += "normalcillin"			// normal
+	src.trait_injection_reagents += "numbenzyme"			// no feelings
+	src.trait_injection_reagents += "change_drug_male"		// -> MALE
+	src.trait_injection_reagents += "change_drug_female"	// -> FEMALE
+	src.trait_injection_reagents += "change_drug_intersex"	// -> PLURAL
+	src.trait_injection_reagents += "stoxin"				// night night chem
+	src.trait_injection_reagents += "rainbowtoxin" 			// Funny flashing lights.
+	src.trait_injection_reagents += "paralysistoxin" 		// Paralysis!
+	src.trait_injection_reagents += "painenzyme"			// Pain INCREASER
+	src.trait_injection_reagents += "aphrodisiac"			// Horni
 
 	var/list/goia_colors = list("#1a00ff", "#6c5bff", "#ff00fe", "#ff0000", "#00d3ff", "#00ff7c", "#00ff35", "#e1ff00", "#ff9f00", "#393939")
 	var/bodycolor = pick(goia_colors)

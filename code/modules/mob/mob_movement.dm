@@ -216,7 +216,7 @@
 			return result
 
 	// Can't control ourselves when drifting
-	if((isspace(loc) || my_mob.lastarea?.has_gravity == 0) && isturf(loc))
+	if((isspace(loc) || my_mob.lastarea?.get_gravity() == 0) && isturf(loc))
 		if(!my_mob.Process_Spacemove(0))
 			return 0
 
@@ -498,7 +498,7 @@
 
 		if(istype(turf,/turf/simulated/floor)) // Floors don't count if they don't have gravity
 			var/area/A = turf.loc
-			if(istype(A) && A.has_gravity == 0)
+			if(istype(A) && A.get_gravity() == 0)
 				if(shoegrip == null)
 					shoegrip = Check_Shoegrip() //Shoegrip is only ever checked when a zero-gravity floor is encountered to reduce load
 				if(!shoegrip)
@@ -539,8 +539,8 @@
 	return(prob_slip)
 */// CHOMPedit end.
 
-/mob/proc/mob_has_gravity(turf/T)
-	return has_gravity(src, T)
+/mob/proc/mob_get_gravity(turf/T)
+	return get_gravity(src, T)
 
 /mob/proc/update_gravity()
 	return
