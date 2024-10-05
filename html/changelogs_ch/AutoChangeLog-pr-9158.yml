@@ -1,8 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - bugfix: "NanoMap components (air alarm computer, crew monitor) have been much improved."
-  - bugfix: "You can now use W/S and Up Arrow/Down Arrow to zoom on a NanoMap."
-  - bugfix: "NanoMap zooming should be centered more correctly."
-  - bugfix: "Tooltips show up when hovering over icons in a NanoMap."
-  - bugfix: "The Atmospherics Control interface occasionally started to scroll weirdly in map ivew."

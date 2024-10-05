@@ -1,6 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - refactor: "Belly message formatting has been unified into one proc."
-  - rscadd: "All formatted belly messages can now use a number of new %replacements, which choose from a list of preset words. You can see all of the words that will be used in a new help menu next to the belly description, but this PR adds the following: %goo, %happybelly, %fat, %dick, %boob, %pussy, %grip, %cozy, %angry, %acid, %snack, %hot"
-  - rscadd: "For example, %goo will be replaced randomly with \"muck\", or \"goo\", or \"sludge\", or \"slime\", or another 10 different options - this random replacement happens every time a message is printed, so it's really helpful for idle messages!"
