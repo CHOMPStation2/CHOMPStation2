@@ -131,16 +131,19 @@
 	..()
 	if(istype(H) && H.head == src && H.is_sentient())
 		START_PROCESSING(SSobj, src)
-		to_chat(H, flavor_equip)
+		if(flavor_equip)
+			to_chat(H, span_info(flavor_equip))
 
 /obj/item/clothing/suit/armor/buffvest/dropped(var/mob/living/carbon/human/H)
 	..()
 	STOP_PROCESSING(SSobj, src)
 	if(H.is_sentient())
 		if(loc == H) // Still inhand.
-			to_chat(H, flavor_unequip)
+			if(flavor_unequip)
+				to_chat(H, span_info(flavor_unequip))
 		else
-			to_chat(H, flavor_drop)
+			if(flavor_drop)
+				to_chat(H, span_info(flavor_drop))
 
 /obj/item/clothing/suit/armor/buffvest/Destroy()
 	STOP_PROCESSING(SSobj, src)

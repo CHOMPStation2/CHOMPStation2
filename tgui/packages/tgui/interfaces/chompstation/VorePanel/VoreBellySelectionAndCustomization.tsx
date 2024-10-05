@@ -13,6 +13,7 @@ export const VoreBellySelectionAndCustomization = (props: {
   show_pictures: BooleanLike;
   host_mobtype: hostMob;
   icon_overflow: BooleanLike;
+  vore_words: Record<string, string[]>;
 }) => {
   const { act } = useBackend();
 
@@ -23,6 +24,7 @@ export const VoreBellySelectionAndCustomization = (props: {
     unsaved_changes,
     host_mobtype,
     icon_overflow,
+    vore_words,
   } = props;
 
   return (
@@ -68,6 +70,7 @@ export const VoreBellySelectionAndCustomization = (props: {
         {selected && (
           <Section scrollable fill title={selected.belly_name}>
             <VoreSelectedBelly
+              vore_words={vore_words}
               belly={selected}
               show_pictures={show_pictures}
               host_mobtype={host_mobtype}
