@@ -25,7 +25,7 @@
 		return // no feet = no slosh? Might prevent some entities from sloshing around
 	if(buckled || lying || throwing)
 		return // people flying, lying down or sitting do not slosh
-	if(!has_gravity(src) && prob(75))
+	if(!get_gravity(src) && prob(75))
 		return // Far less likely to make noise in no gravity
 	playsound(T, S, volume, FALSE, preference = /datum/client_preference/digestion_noises)
 	return

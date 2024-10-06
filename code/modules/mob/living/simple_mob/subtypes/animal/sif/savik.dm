@@ -21,7 +21,7 @@
 	name = "savik"
 	tt_desc = "S Pistris tellus" //landshark
 	catalogue_data = list(/datum/category_item/catalogue/fauna/savik)
-	faction = "savik"
+	faction = FACTION_SAVIK
 
 	icon_state = "savik"
 	icon_living = "savik"
@@ -49,8 +49,8 @@
 
 	tame_items = list(
 	/obj/item/organ = 70,
-	/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 30,
-	/obj/item/weapon/reagent_containers/food/snacks/meat = 20
+	/obj/item/reagent_containers/food/snacks/crabmeat = 30,
+	/obj/item/reagent_containers/food/snacks/meat = 20
 	)
 
 	say_list_type = /datum/say_list/savik

@@ -8,7 +8,7 @@
 
 	density = TRUE
 	anchored = TRUE
-	circuit = /obj/item/weapon/circuitboard/vr_sleeper
+	circuit = /obj/item/circuitboard/vr_sleeper
 	var/mob/living/carbon/human/occupant = null
 	var/mob/living/carbon/human/avatar = null
 	var/datum/mind/vr_mind = null
@@ -75,7 +75,7 @@
 /obj/machinery/vr_sleeper/attackby(var/obj/item/I, var/mob/user)
 	add_fingerprint(user)
 
-	if(occupant && (istype(I, /obj/item/device/healthanalyzer) || istype(I, /obj/item/device/robotanalyzer)))
+	if(occupant && (istype(I, /obj/item/healthanalyzer) || istype(I, /obj/item/robotanalyzer)))
 		I.attack(occupant, user)
 		return
 
@@ -196,7 +196,7 @@
 	if(!occupant)
 		return
 
-	if(!forced && avatar && tgui_alert(avatar, "Someone wants to remove you from virtual reality. Do you want to leave?", "Leave VR?", list("Yes", "No")) == "No")
+	if(!forced && avatar && tgui_alert(avatar, "Someone wants to remove you from virtual reality. Do you want to leave?", "Leave VR?", list("Yes", "No")) != "Yes")
 		return
 
 	if(avatar)
@@ -233,7 +233,7 @@
 
 	avatar = occupant.vr_link
 	// If they've already enterred VR, and are reconnecting, prompt if they want a new body
-	if(avatar && tgui_alert(occupant, "You already have a [avatar.stat == DEAD ? "" : "deceased "]Virtual Reality avatar. Would you like to use it?", "New avatar", list("Yes", "No")) == "No")
+	if(avatar && tgui_alert(occupant, "You already have a [avatar.stat == DEAD ? "" : "deceased "]Virtual Reality avatar. Would you like to use it?", "New avatar", list("Yes", "No")) != "Yes")
 		// Delink the mob
 		occupant.vr_link = null
 		avatar = null

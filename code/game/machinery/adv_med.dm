@@ -9,7 +9,7 @@
 	density = TRUE
 	anchored = TRUE
 	unacidable = TRUE
-	circuit = /obj/item/weapon/circuitboard/body_scanner
+	circuit = /obj/item/circuitboard/body_scanner
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 60
 	active_power_usage = 10000	//10 kW. It's a big all-body scanner.
@@ -34,25 +34,25 @@
 		set_light(0)
 
 /obj/machinery/bodyscanner/attackby(var/obj/item/G, user as mob)
-	if(istype(G, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/H = G
+	if(istype(G, /obj/item/grab))
+		var/obj/item/grab/H = G
 		if(panel_open)
-			to_chat(user, "<span class='notice'>Close the maintenance panel first.</span>")
+			to_chat(user, span_notice("Close the maintenance panel first."))
 			return
 		if(!ismob(H.affecting))
 			return
 		if(!ishuman(H.affecting))
-			to_chat(user, "<span class='warning'>\The [src] is not designed for that organism!</span>")
+			to_chat(user, span_warning("\The [src] is not designed for that organism!"))
 			return
 		if(occupant)
-			to_chat(user, "<span class='notice'>\The [src] is already occupied!</span>")
+			to_chat(user, span_notice("\The [src] is already occupied!"))
 			return
 		if(H.affecting.has_buckled_mobs())
-			to_chat(user, span("warning", "\The [H.affecting] has other entities attached to it. Remove them first."))
+			to_chat(user, span_warning("\The [H.affecting] has other entities attached to it. Remove them first."))
 			return
 		var/mob/M = H.affecting
 		if(M.abiotic())
-			to_chat(user, "<span class='notice'>Subject cannot have abiotic items on.</span>")
+			to_chat(user, span_notice("Subject cannot have abiotic items on."))
 			return
 		M.forceMove(src)
 		occupant = M
@@ -79,19 +79,19 @@
 	if(!ishuman(user) && !isrobot(user))
 		return 0 //not a borg or human
 	if(panel_open)
-		to_chat(user, "<span class='notice'>Close the maintenance panel first.</span>")
+		to_chat(user, span_notice("Close the maintenance panel first."))
 		return 0 //panel open
 	if(occupant)
-		to_chat(user, "<span class='notice'>\The [src] is already occupied.</span>")
+		to_chat(user, span_notice("\The [src] is already occupied."))
 		return 0 //occupied
 
 	if(O.buckled)
 		return 0
 	if(O.abiotic())
-		to_chat(user, "<span class='notice'>Subject cannot have abiotic items on.</span>")
+		to_chat(user, span_notice("Subject cannot have abiotic items on."))
 		return 0
 	if(O.has_buckled_mobs())
-		to_chat(user, span("warning", "\The [O] has other entities attached to it. Remove them first."))
+		to_chat(user, span_warning("\The [O] has other entities attached to it. Remove them first."))
 		return
 
 	if(O == user)
@@ -262,9 +262,9 @@
 			var/implantData[0]
 			for(var/obj/thing in E.implants)
 				var/implantSubData[0]
-				var/obj/item/weapon/implant/I = thing
+				var/obj/item/implant/I = thing
 			//VOREStation Block Edit Start
-				var/obj/item/device/nif/N = thing
+				var/obj/item/nif/N = thing
 				if(istype(I))
 					implantSubData["name"] =  I.name
 					implantSubData["known"] = istype(I) && I.known_implant
@@ -334,6 +334,7 @@
 
 		occupantData["blind"] = (H.sdisabilities & BLIND)
 		occupantData["nearsighted"] = (H.disabilities & NEARSIGHTED)
+		occupantData["husked"] = (HUSK in H.mutations) // VOREstation edit
 		occupantData = attempt_vr(src, "get_occupant_data_vr", list(occupantData, H)) //VOREStation Insert
 	data["occupant"] = occupantData
 
@@ -349,9 +350,9 @@
 			eject()
 		if("print_p")
 			var/atom/target = console ? console : src
-			visible_message("<span class='notice'>[target] rattles and prints out a sheet of paper.</span>")
+			visible_message(span_notice("[target] rattles and prints out a sheet of paper."))
 			playsound(src, 'sound/machines/printer.ogg', 50, 1)
-			var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(get_turf(target))
+			var/obj/item/paper/P = new /obj/item/paper(get_turf(target))
 			var/name = occupant ? occupant.name : "Unknown"
 			P.info = "<CENTER><B>Body Scan - [name]</B></CENTER><BR>"
 			P.info += "<b>Time of scan:</b> [stationtime2text()]<br><br>"
@@ -480,8 +481,8 @@
 					infected = "Gangrene Detected:"
 
 			var/unknown_body = 0
-			for(var/obj/item/weapon/implant/I as anything in e.implants)
-				var/obj/item/device/nif/N = I //VOREStation Add: NIFs
+			for(var/obj/item/implant/I as anything in e.implants)
+				var/obj/item/nif/N = I //VOREStation Add: NIFs
 				if(istype(I) && I.known_implant)
 					imp += "[I] implanted:"
 				else if(istype(N) && N.known_implant) //VOREStation Add: NIFs
@@ -537,6 +538,8 @@
 			dat += "<font color='red'>Cataracts detected.</font><BR>"
 		if(occupant.disabilities & NEARSIGHTED)
 			dat += "<font color='red'>Retinal misalignment detected.</font><BR>"
+		if(HUSK in occupant.mutations) // VOREstation edit
+			dat += "<font color='red'>Anatomical structure lost, resuscitation not possible!</font><BR>"
 	else
 		dat += "\The [src] is empty."
 
@@ -554,7 +557,7 @@
 	density = FALSE
 	anchored = TRUE
 	unacidable = TRUE
-	circuit = /obj/item/weapon/circuitboard/scanner_console
+	circuit = /obj/item/circuitboard/scanner_console
 	var/printing = null
 
 /obj/machinery/body_scanconsole/New()
@@ -569,16 +572,16 @@
 /obj/machinery/body_scanconsole/attackby(var/obj/item/I, var/mob/user)
 	if(computer_deconstruction_screwdriver(user, I))
 		return
-	else if(istype(I, /obj/item/device/multitool)) //Did you want to link it?
-		var/obj/item/device/multitool/P = I
+	else if(istype(I, /obj/item/multitool)) //Did you want to link it?
+		var/obj/item/multitool/P = I
 		if(P.connectable)
 			if(istype(P.connectable, /obj/machinery/bodyscanner))
 				var/obj/machinery/bodyscanner/C = P.connectable
 				scanner = C
 				C.console = src
-				to_chat(user, "<span class='warning'> You link the [src] to the [P.connectable]!</span>")
+				to_chat(user, span_warning(" You link the [src] to the [P.connectable]!"))
 		else
-			to_chat(user, "<span class='warning'> You store the [src] in the [P]'s buffer!</span>")
+			to_chat(user, span_warning(" You store the [src] in the [P]'s buffer!"))
 			P.connectable = src
 		return
 	else
@@ -638,11 +641,11 @@
 	if(!scanner)
 		findscanner()
 		if(!scanner)
-			to_chat(user, "<span class='notice'>Scanner not found!</span>")
+			to_chat(user, span_notice("Scanner not found!"))
 			return
 
 	if(scanner.panel_open)
-		to_chat(user, "<span class='notice'>Close the maintenance panel first.</span>")
+		to_chat(user, span_notice("Close the maintenance panel first."))
 		return
 
 	if(scanner)

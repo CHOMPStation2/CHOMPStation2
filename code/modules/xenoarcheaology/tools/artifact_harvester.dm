@@ -8,7 +8,7 @@
 	active_power_usage = 750
 	use_power = USE_POWER_IDLE
 	var/harvesting = 0
-	var/obj/item/weapon/anobattery/inserted_battery
+	var/obj/item/anobattery/inserted_battery
 	var/obj/machinery/artifact/cur_artifact
 	var/obj/machinery/artifact_scanpad/owned_scanner = null
 	var/last_process = 0
@@ -20,7 +20,7 @@
 		owned_scanner = locate(/obj/machinery/artifact_scanpad) in orange(1, src)
 
 /obj/machinery/artifact_harvester/attackby(var/obj/I as obj, var/mob/user as mob)
-	if(istype(I,/obj/item/weapon/anobattery))
+	if(istype(I,/obj/item/anobattery))
 		if(!inserted_battery)
 			to_chat(user, span_blue("You insert [I] into [src]."))
 			user.drop_item()
@@ -101,7 +101,7 @@
 		if("drainbattery")
 			if(inserted_battery)
 				if(inserted_battery.battery_effect && inserted_battery.stored_charge > 0)
-					if(tgui_alert(usr, "This action will dump all charge, safety gear is recommended before proceeding","Warning",list("Continue","Cancel")))
+					if(tgui_alert(usr, "This action will dump all charge, safety gear is recommended before proceeding","Warning",list("Continue","Cancel")) == "Continue")
 						if(!inserted_battery.battery_effect.activated)
 							inserted_battery.battery_effect.ToggleActivate(1)
 						last_process = world.time

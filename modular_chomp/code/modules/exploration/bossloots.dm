@@ -1,25 +1,25 @@
 /mob/living/simple_mob/vore/weatherbeast/acidrain/death()
-	new /obj/item/weapon/melee/jellyfishwhip (src.loc)
-	new /obj/item/weapon/cell/slime/jellyfish (src.loc)
+	new /obj/item/melee/jellyfishwhip (src.loc)
+	new /obj/item/cell/slime/jellyfish (src.loc)
 	.=..()
 
 /mob/living/simple_mob/vore/weatherbeast/starsky/death()
-	new /obj/item/weapon/gun/energy/astarrail (src.loc)
-	new /obj/item/weapon/weldingtool/silver (src.loc)
+	new /obj/item/gun/energy/astarrail (src.loc)
+	new /obj/item/weldingtool/silver (src.loc)
 	.=..()
 
 /mob/living/simple_mob/vore/weatherbeast/darkmist/death()
-	new /obj/item/weapon/melee/midnightblade (src.loc)
-	new /obj/item/weapon/reagent_containers/glass/beaker/gilded  (src.loc)
+	new /obj/item/melee/midnightblade (src.loc)
+	new /obj/item/reagent_containers/glass/beaker/gilded  (src.loc)
 	.=..()
 
 /mob/living/simple_mob/vore/weatherbeast/sandstorm/death()
-	new /obj/item/weapon/gun/magnetic/matfed/phoronbore/modified (src.loc)
-	new /obj/item/device/personal_shield_generator/belt/magnetbelt (src.loc)
+	new /obj/item/gun/magnetic/matfed/phoronbore/modified (src.loc)
+	new /obj/item/personal_shield_generator/belt/magnetbelt (src.loc)
 	.=..()
 
 //Acid Rain Boss
-/obj/item/weapon/melee/jellyfishwhip
+/obj/item/melee/jellyfishwhip
 	name = "dettached jellyfish tendril"
 	desc = "The detatched limb of a titan jellyfish."
 	sharp = FALSE
@@ -33,7 +33,7 @@
 	icon_state = "whip"
 	item_state = "chain"
 
-/obj/item/weapon/melee/jellyfishwhip/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/jellyfishwhip/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	if(user.a_intent == I_HURT) //Healy mode
 		. = ..()
 		target.adjustFireLoss(10)
@@ -46,7 +46,7 @@
 		. = ..()
 		target.add_modifier(/datum/modifier/hivebot_weaken, 20)
 
-/obj/item/weapon/cell/slime/jellyfish //Less max charge then slime but faster recharge
+/obj/item/cell/slime/jellyfish //Less max charge then slime but faster recharge
 	name = "Jellyfish Cell Core"
 	desc = "An energezied core of a toxic jellyfish titan."
 	description_info = "This 'cell' holds a max charge of 10k and self recharges over time."
@@ -54,7 +54,7 @@
 	charge_amount = 1000
 
 //Starry Nights
-/obj/item/weapon/gun/energy/astarrail
+/obj/item/gun/energy/astarrail
 	name = "Astral Slicer"
 	desc = "A strange gun pulsing with energy, it feeling oddly lightweight."
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -67,8 +67,8 @@
 
 	charge_cost = 600 //How much energy is needed to fire.
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/astralrail
 
 	recoil_mode = 0
@@ -99,7 +99,7 @@
 	holder.adjustBruteLoss(2.5)
 	holder.adjustFireLoss(2.5)
 
-/obj/item/weapon/weldingtool/silver
+/obj/item/weldingtool/silver
 	name = "strange welding tool"
 	desc = "A strange welding tool. Whilst slower then advanced gear of RnD and precursor technolgy, has benefits from both courses."
 	icon_state = "hybwelder"
@@ -110,14 +110,14 @@
 	always_process = TRUE
 	reach = 2
 
-/obj/item/weapon/weldingtool/silver/process()
+/obj/item/weldingtool/silver/process()
 	if(get_fuel() <= get_max_fuel())
 		reagents.add_reagent("fuel", 1)
 	..()
 
 //Midnightfog
 //funny melee weapon
-/obj/item/weapon/melee/midnightblade
+/obj/item/melee/midnightblade
 	name = "midnight blade"
 	icon_state = "katana"
 	slot_flags = SLOT_BELT | SLOT_BACK //should make a proper sprite some time but spriting energy is hard
@@ -125,7 +125,7 @@
 	force = 32 //I don't think weakning melee/speed, or weaking healing is quite the same vaule as 50% block/deflect chance.
 	armor_penetration = 50
 
-/obj/item/weapon/melee/midnightblade/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+/obj/item/melee/midnightblade/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	if(user.a_intent == I_HURT) //Anti-Heal mode
 		. = ..()
 		target.add_modifier(/datum/modifier/grievous_wounds, 20)
@@ -138,7 +138,7 @@
 			target.add_modifier(/datum/modifier/doomed, 120)
 
 //A wierd beaker
-/obj/item/weapon/reagent_containers/glass/beaker/gilded //Soo technically a good item but cumbersome to use.
+/obj/item/reagent_containers/glass/beaker/gilded //Soo technically a good item but cumbersome to use.
 	name = "golden beaker"
 	desc = "An odd gold beaker, light seeming to bend around it, it's shadow dancing.."
 	icon_state = "beakergold_unused"
@@ -151,13 +151,13 @@
 
 //Sandstorm
 //Sticking with the mining theme
-/obj/item/weapon/gun/magnetic/matfed/phoronbore/modified
+/obj/item/gun/magnetic/matfed/phoronbore/modified
 	name = "modified portable phoron bore"
 	mat_cost = 100 //more unwieldy ammo better effiency
 	ammo_material = MAT_TRITIUM
 
 //Mining tool
-/obj/item/device/personal_shield_generator/belt/magnetbelt
+/obj/item/personal_shield_generator/belt/magnetbelt
 	name = "magnet generator belt"
 	desc = "A belt that will pull in minerals torwards you."
 	generator_hit_cost = 0
@@ -169,5 +169,5 @@
 	name = "Magnet Pull"
 
 /datum/modifier/magnet/tick()
-	for(var/obj/item/weapon/ore/O in orange(4, holder))
+	for(var/obj/item/ore/O in orange(4, holder))
 		step_towards(O, get_turf(holder))

@@ -18,7 +18,7 @@
 /area/submap/Manor1)
 "ae" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /obj/random/medical,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -43,7 +43,7 @@
 "aj" = (
 /obj/structure/table/woodentable,
 /obj/item/clothing/mask/smokable/cigarette/cigar,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/material/ashtray/glass,
 /obj/effect/spider/stickyweb,
 /obj/random/medical,
 /turf/simulated/floor/holofloor/wood,
@@ -61,7 +61,7 @@
 /area/submap/Manor1)
 "am" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -91,13 +91,13 @@
 /area/submap/Manor1)
 "at" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/effect/decal/cleanable/blood/gibs/robot,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "au" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/animal/giant_spider/pepper,
@@ -109,8 +109,8 @@
 /area/submap/Manor1)
 "aw" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/mop,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ax" = (
@@ -143,13 +143,13 @@
 /area/submap/Manor1)
 "aC" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/maglight,
+/obj/item/flashlight/maglight,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aD" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aE" = (
@@ -168,12 +168,12 @@
 /area/submap/Manor1)
 "aG" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper,
+/obj/item/paper,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aH" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen,
+/obj/item/pen,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aI" = (
@@ -204,7 +204,7 @@
 /area/submap/Manor1)
 "aO" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aP" = (
@@ -236,17 +236,17 @@
 /area/submap/Manor1)
 "aV" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aX" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "aY" = (
@@ -255,7 +255,7 @@
 /area/submap/Manor1)
 "aZ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ba" = (
@@ -264,19 +264,19 @@
 /area/submap/Manor1)
 "bb" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tray,
-/obj/item/weapon/tray,
+/obj/item/tray,
+/obj/item/tray,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bc" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bd" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "be" = (
@@ -294,7 +294,7 @@
 /area/submap/Manor1)
 "bg" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -327,7 +327,7 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/submap/Manor1)
 "bo" = (
-/obj/item/weapon/material/twohanded/baseballbat/metal,
+/obj/item/material/twohanded/baseballbat/metal,
 /turf/simulated/floor/carpet/blucarpet,
 /area/submap/Manor1)
 "bp" = (
@@ -361,7 +361,7 @@
 /area/submap/Manor1)
 "bv" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
+/obj/item/reagent_containers/food/condiment/small/sugar,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -395,20 +395,20 @@
 /area/submap/Manor1)
 "bA" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bB" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/stew,
-/obj/item/weapon/reagent_containers/food/snacks/meat/worm,
+/obj/item/reagent_containers/food/snacks/stew,
+/obj/item/reagent_containers/food/snacks/stew,
+/obj/item/reagent_containers/food/snacks/meat/worm,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bC" = (
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -423,9 +423,9 @@
 /area/submap/Manor1)
 "bE" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -436,8 +436,8 @@
 /area/submap/Manor1)
 "bG" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/sausage,
-/obj/item/weapon/reagent_containers/food/snacks/sausage,
+/obj/item/reagent_containers/food/snacks/sausage,
+/obj/item/reagent_containers/food/snacks/sausage,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -461,19 +461,19 @@
 /area/submap/Manor1)
 "bJ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bK" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
+/obj/item/reagent_containers/glass/bottle/stoxin,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bL" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bM" = (
@@ -511,7 +511,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "bT" = (
-/obj/item/weapon/material/minihoe,
+/obj/item/material/minihoe,
 /turf/simulated/floor/carpet/blucarpet,
 /area/submap/Manor1)
 "bU" = (
@@ -547,7 +547,7 @@
 /area/submap/Manor1)
 "ca" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cb" = (
@@ -559,25 +559,25 @@
 /area/submap/Manor1)
 "cc" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /obj/random/energy,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cd" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ce" = (
 /obj/structure/bed/double,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cf" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/wallet/random,
+/obj/item/storage/wallet/random,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -595,12 +595,12 @@
 /area/submap/Manor1)
 "ci" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /obj/random/powercell,
 /obj/random/contraband,
 /obj/random/contraband/nofail,
 /obj/random/cash/huge,
-/obj/item/weapon/material/sword,
+/obj/item/material/sword,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cj" = (
@@ -627,14 +627,14 @@
 /area/submap/Manor1)
 "cn" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/storage/wallet/random,
+/obj/item/storage/wallet/random,
 /obj/random/contraband,
 /obj/random/contraband/nofail,
 /obj/random/cash/huge,
 /obj/item/stack/material/tritium{
 	amount = 20
 	},
-/obj/item/weapon/cell/super,
+/obj/item/cell/super,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "co" = (
@@ -659,7 +659,7 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "cs" = (
-/obj/item/weapon/material/twohanded/spear,
+/obj/item/material/twohanded/spear,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -673,7 +673,7 @@
 /area/submap/Manor1)
 "cu" = (
 /obj/effect/decal/remains,
-/obj/item/weapon/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cv" = (
@@ -693,8 +693,8 @@
 /area/submap/Manor1)
 "cy" = (
 /obj/structure/table/standard,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Manor1)
 "cz" = (
@@ -703,7 +703,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cA" = (
-/obj/item/weapon/paper/crumpled,
+/obj/item/paper/crumpled,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -714,8 +714,8 @@
 /area/submap/Manor1)
 "cD" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/gun/energy/locked/frontier/handbow,
-/obj/item/weapon/gun/energy/locked/frontier/handbow,
+/obj/item/gun/energy/locked/frontier/handbow,
+/obj/item/gun/energy/locked/frontier/handbow,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "cE" = (
@@ -821,8 +821,8 @@
 /area/submap/Manor1)
 "eI" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/sandwich,
-/obj/item/weapon/gun/projectile/revolver/cappeacekeeper,
+/obj/item/reagent_containers/food/snacks/sandwich,
+/obj/item/gun/projectile/revolver/cappeacekeeper,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "eL" = (
@@ -868,7 +868,7 @@
 /area/submap/Manor1)
 "gF" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "gY" = (
@@ -892,8 +892,8 @@
 /area/submap/Manor1)
 "hN" = (
 /obj/structure/table/woodentable,
-/obj/item/device/soulstone,
-/obj/item/weapon/holosign_creator/smokewand,
+/obj/item/soulstone,
+/obj/item/holosign_creator/smokewand,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ie" = (
@@ -915,7 +915,7 @@
 /area/submap/Manor1)
 "jc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
+/obj/item/reagent_containers/food/snacks/meatsteak,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -931,14 +931,14 @@
 /area/submap/Manor1)
 "jr" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/sandwich,
-/obj/item/weapon/storage/firstaid/combat,
+/obj/item/reagent_containers/food/snacks/sandwich,
+/obj/item/storage/firstaid/combat,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "jD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/material/whip,
+/obj/item/material/whip,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "jG" = (
@@ -963,7 +963,7 @@
 /area/submap/Manor1)
 "kb" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
+/obj/item/reagent_containers/food/snacks/meatsteak,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ks" = (
@@ -1004,7 +1004,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb/dark,
-/obj/item/weapon/gun/energy/medigun,
+/obj/item/gun/energy/medigun,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "nP" = (
@@ -1029,7 +1029,7 @@
 /area/submap/Manor1)
 "pA" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "I am done with all of you. Father has gone missing, and no one cares. Mother contunies to stay up all day, chanting, and staring into space. Brother keeps going out hunting with his gang of friends. The spiders are watching me and just keep getting bigger. I am done. After the feast tonight, I am leaving, and I am taking our squish butler.";
 	name = "Goodbye"
 	},
@@ -1062,7 +1062,7 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "ro" = (
-/obj/item/weapon/bone/skull/unknown,
+/obj/item/bone/skull/unknown,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "rS" = (
@@ -1094,11 +1094,11 @@
 /area/submap/Manor1)
 "tM" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/lasagna,
+/obj/item/reagent_containers/food/snacks/lasagna,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ua" = (
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ut" = (
@@ -1128,22 +1128,22 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/submap/Manor1)
 "ws" = (
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ww" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/sausage,
+/obj/item/reagent_containers/food/snacks/sausage,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "xH" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/sharkmeatcooked,
+/obj/item/reagent_containers/food/snacks/sharkmeatcooked,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "xI" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "yn" = (
@@ -1157,7 +1157,7 @@
 /area/submap/Manor1)
 "zV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/jelliedtoast,
+/obj/item/reagent_containers/food/snacks/jelliedtoast,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Aq" = (
@@ -1172,7 +1172,7 @@
 /area/submap/Manor1)
 "AJ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
@@ -1192,7 +1192,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Bz" = (
-/obj/item/weapon/bone/leg,
+/obj/item/bone/leg,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Manor1)
 "BC" = (
@@ -1218,17 +1218,17 @@
 /area/submap/Manor1)
 "DL" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
+/obj/item/reagent_containers/food/snacks/meatsteak,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "DW" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/gun/energy/locked/frontier/rifle,
+/obj/item/gun/energy/locked/frontier/rifle,
 /obj/item/clothing/suit/storage/hooded/techpriest{
 	armor = list("melee"=20,"bullet"=10,"laser"=50,"energy"=60,"bomb"=25,"bio"=50,"rad"=25)
 	},
-/obj/item/weapon/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Fc" = (
@@ -1263,7 +1263,7 @@
 "Gg" = (
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/gun/projectile/gyropistol,
+/obj/item/gun/projectile/gyropistol,
 /obj/item/ammo_magazine/m75,
 /obj/item/ammo_magazine/m75,
 /obj/item/ammo_magazine/m75,
@@ -1294,13 +1294,13 @@
 /area/submap/Manor1)
 "Hu" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "HJ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -1357,7 +1357,7 @@
 /area/submap/Manor1)
 "LR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/sharkmeatcooked,
+/obj/item/reagent_containers/food/snacks/sharkmeatcooked,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -1370,7 +1370,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/gun/projectile/automatic/advanced_smg,
+/obj/item/gun/projectile/automatic/advanced_smg,
 /obj/random/humanoidremains,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -1395,8 +1395,8 @@
 /area/submap/Manor1)
 "ND" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/knife/ritual,
-/obj/item/weapon/whetstone,
+/obj/item/material/knife/ritual,
+/obj/item/whetstone,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Oo" = (
@@ -1421,13 +1421,13 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Pg" = (
-/obj/item/weapon/bone/arm,
+/obj/item/bone/arm,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Manor1)
 "Pi" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/gun/projectile/deagle/gold,
+/obj/item/gun/projectile/deagle/gold,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Pw" = (
@@ -1438,7 +1438,7 @@
 "PY" = (
 /obj/structure/table/standard,
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/reagent_containers/food/snacks/slice/meatbread/filled,
+/obj/item/reagent_containers/food/snacks/slice/meatbread/filled,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Qh" = (
@@ -1455,7 +1455,7 @@
 /area/submap/Manor1)
 "QW" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -1466,17 +1466,17 @@
 /area/submap/Manor1)
 "RX" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/gun/energy/hooklauncher/ring,
+/obj/item/gun/energy/hooklauncher/ring,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Sl" = (
-/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Sx" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper,
+/obj/item/paper,
 /obj/effect/spider/stickyweb,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
@@ -1536,21 +1536,21 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "XE" = (
-/obj/item/weapon/bone/leg,
+/obj/item/bone/leg,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "YL" = (
 /obj/effect/spider/stickyweb/dark,
-/obj/item/weapon/bone,
-/obj/item/weapon/bone,
-/obj/item/weapon/bone/arm,
-/obj/item/weapon/bone/arm,
-/obj/item/weapon/bone/leg,
-/obj/item/weapon/bone/leg,
-/obj/item/weapon/bone/ribs,
-/obj/item/weapon/bone/ribs,
-/obj/item/weapon/bone/skull,
-/obj/item/weapon/gun/energy/pummeler,
+/obj/item/bone,
+/obj/item/bone,
+/obj/item/bone/arm,
+/obj/item/bone/arm,
+/obj/item/bone/leg,
+/obj/item/bone/leg,
+/obj/item/bone/ribs,
+/obj/item/bone/ribs,
+/obj/item/bone/skull,
+/obj/item/gun/energy/pummeler,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
 "YP" = (
@@ -1559,7 +1559,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "YY" = (
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)

@@ -37,6 +37,7 @@
 	docking_controller_tag = "pizza_shuttle_docker" //This is the only thing you map in and var edit, use the map helpers to designate doors and pumps
 	shuttle_area = list(/area/shuttle/pizza_shuttle)
 	defer_initialisation = TRUE //We're not loaded until an admin does it
+	fuel_consumption = 1
 
 // The 'ship'
 /obj/effect/overmap/visitable/ship/landable/pizza_shuttle
@@ -48,6 +49,7 @@
 	vessel_mass = 900 //YEET
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Pizza Gut" //These names must match
+	known = FALSE
 
 /datum/map_template/shelter/superpose/pizzashuttle
 	shelter_id = "PizzaShuttle"

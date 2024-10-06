@@ -104,7 +104,7 @@ var/list/runechat_image_cache = list()
 	owned_by = owner.client
 	RegisterSignal(owned_by, COMSIG_PARENT_QDELETING, PROC_REF(unregister_qdel_self)) // this should only call owned_by if the client is destroyed
 
-	var/extra_length = owned_by.is_preference_enabled(/datum/client_preference/runechat_long_messages)
+	var/extra_length = owned_by.prefs?.read_preference(/datum/preference/toggle/runechat_long_messages)
 	var/maxlen = extra_length ? CHAT_MESSAGE_EXT_LENGTH : CHAT_MESSAGE_LENGTH
 	var/msgwidth = extra_length ? CHAT_MESSAGE_EXT_WIDTH : CHAT_MESSAGE_WIDTH
 
@@ -117,6 +117,13 @@ var/list/runechat_image_cache = list()
 		target.chat_color = colorize_string(target.name)
 		target.chat_color_darkened = colorize_string(target.name, 0.85, 0.85)
 		target.chat_color_name = target.name
+
+		// Always force it back to a pref if they have one
+		if(ismob(target))
+			var/mob/M = target
+			if(M?.client?.prefs && M.client.prefs.runechat_color != COLOR_BLACK)
+				target.chat_color = M.client.prefs.runechat_color
+				target.chat_color_darkened = M.client.prefs.runechat_color
 
 	// Get rid of any URL schemes that might cause BYOND to automatically wrap something in an anchor tag
 	var/static/regex/url_scheme = new(@"[A-Za-z][A-Za-z0-9+-\.]*:\/\/", "g")
@@ -244,10 +251,10 @@ var/list/runechat_image_cache = list()
 	if(QDELETED(speaker))
 		return
 	// Doesn't want to hear
-	if(ismob(speaker) && !client.is_preference_enabled(/datum/client_preference/runechat_mob))
+	if(ismob(speaker) && !client.prefs?.read_preference(/datum/preference/toggle/runechat_mob))
 		return
 	// I know the pref is 'obj' but people dunno what turfs are
-	else if(!client.is_preference_enabled(/datum/client_preference/runechat_obj))
+	else if(!client.prefs?.read_preference(/datum/preference/toggle/runechat_obj))
 		return
 
 	// Incapable of receiving
@@ -270,7 +277,7 @@ var/list/runechat_image_cache = list()
 	if(italics)
 		extra_classes |= "italics"
 
-	if(client.is_preference_enabled(/datum/client_preference/runechat_border))
+	if(client.prefs?.read_preference(/datum/preference/toggle/runechat_border))
 		extra_classes |= "black_outline"
 
 	var/dist = get_dist(src, speaker)
@@ -379,7 +386,7 @@ var/list/runechat_image_cache = list()
 	return src
 
 /mob/runechat_holder(datum/chatmessage/CM)
-	if(istype(loc, /obj/item/weapon/holder))
+	if(istype(loc, /obj/item/holder))
 		return loc
 	return ..()
 

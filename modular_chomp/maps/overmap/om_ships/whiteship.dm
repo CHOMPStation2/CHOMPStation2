@@ -55,6 +55,7 @@
 	docking_controller_tag = "whiteship_docker" //This is the only thing you map in and var edit, use the map helpers to designate doors and pumps
 	shuttle_area = list(/area/shuttle/whiteshipOM)
 	defer_initialisation = TRUE //We're not loaded until an admin does it
+	fuel_consumption = 2.5
 
 /datum/shuttle/autodock/overmap/whiteship2
 	name = "White Ship II" //These names must match
@@ -62,6 +63,7 @@
 	docking_controller_tag = "whiteship_docker2" //This is the only thing you map in and var edit, use the map helpers to designate doors and pumps
 	shuttle_area = list(/area/shuttle/whiteshipOM2)
 	defer_initialisation = TRUE //We're not loaded until an admin does it
+	fuel_consumption = 2.5
 
 // The 'ship'
 /obj/effect/overmap/visitable/ship/landable/whiteship
@@ -74,6 +76,7 @@
 	vessel_size = SHIP_SIZE_LARGE
 	shuttle = "White Ship" //These names must match
 	fore_dir = WEST
+	known = FALSE
 
 /obj/effect/overmap/visitable/ship/landable/whiteship2
 	name = "White Ship II" //These names must match
@@ -85,12 +88,13 @@
 	vessel_size = SHIP_SIZE_LARGE
 	shuttle = "White Ship II" //These names must match
 	fore_dir = WEST
+	known = FALSE
 
 //Player accessable superposed pod
 /datum/map_template/shelter/superpose/whiteship2
 	shelter_id = "WhiteShipII"
 	mappath = 'whiteship-26x33.dmm'
-	name = "White Ship Mk 22"
+	name = "White Ship Mk II"
 	description = "A large titanium ship."
 	superpose = FALSE
 	shuttle = TRUE

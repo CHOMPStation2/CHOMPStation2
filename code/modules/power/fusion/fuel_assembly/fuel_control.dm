@@ -1,7 +1,7 @@
 /obj/machinery/computer/fusion_fuel_control
 	name = "fuel injection control computer"
 	desc = "Displays information about the fuel rods."
-	circuit = /obj/item/weapon/circuitboard/fusion_fuel_control
+	circuit = /obj/item/circuitboard/fusion_fuel_control
 
 	icon_keyboard = "tech_key"
 	icon_screen = "fuel_screen"
@@ -47,7 +47,7 @@
 		return
 
 	if(!id_tag)
-		to_chat(user, "<span class='warning'>This console has not been assigned an ident tag. Please contact your system administrator or conduct a manual update with a standard multitool.</span>")
+		to_chat(user, span_warning("This console has not been assigned an ident tag. Please contact your system administrator or conduct a manual update with a standard multitool."))
 		return
 
 	var/dat = "<B>Reactor Core Fuel Control #[id_tag]</B><BR>"
@@ -116,7 +116,7 @@
 
 /obj/machinery/computer/fusion_fuel_control/attackby(var/obj/item/W, var/mob/user)
 	..()
-	if(istype(W, /obj/item/device/multitool))
+	if(istype(W, /obj/item/multitool))
 		var/new_ident = tgui_input_text(usr, "Enter a new ident tag.", "Fuel Control", monitor.fuel_tag, MAX_NAME_LEN)
 		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && user.Adjacent(src))

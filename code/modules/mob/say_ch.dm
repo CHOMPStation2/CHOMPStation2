@@ -76,7 +76,7 @@
 	set name = "Pme CH"
 	set category = "IC.Subtle"
 
-	var/message = tgui_input_text(usr, "Emote to people affected by complete absorbed or dominate predator/prey.\nType your message:", "Psay")
+	var/message = tgui_input_text(usr, "Emote to people affected by complete absorbed or dominate predator/prey.\nType your message:", "Pme")
 
 	if(message)
 		pme(message)
@@ -85,7 +85,7 @@
 	set name = "Narrate (Player) CH"
 	set category = "IC.Chat"
 
-	var/message = tgui_input_text(usr, "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!\nType your message:", "Psay")
+	var/message = tgui_input_text(usr, "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!\nType your message:", "Narrate (Player)")
 
 	if(message)
 		player_narrate(message)

@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 	icon_keyboard = "teleport_key"
 	icon_screen = "helm"
 	light_color = "#7faaff"
-	circuit = /obj/item/weapon/circuitboard/helm
+	circuit = /obj/item/circuitboard/helm
 	core_skill = /datum/skill/pilot
 	var/autopilot = 0
 	var/autopilot_disabled = TRUE
@@ -167,7 +167,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 				sec_name = "Sector #[known_sectors.len]"
 			R.fields["name"] = sec_name
 			if(sec_name in known_sectors)
-				to_chat(usr, "<span class='warning'>Sector with that name already exists, please input a different name.</span>")
+				to_chat(usr, span_warning("Sector with that name already exists, please input a different name."))
 				return TRUE
 			switch(params["add"])
 				if("current")
@@ -266,7 +266,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 	name = "navigation console"
 	icon_keyboard = "generic_key"
 	icon_screen = "helm"
-	circuit = /obj/item/weapon/circuitboard/nav
+	circuit = /obj/item/circuitboard/nav
 	var/datum/tgui_module/ship/nav/nav_tgui
 
 /obj/machinery/computer/ship/navigation/Initialize()
@@ -288,7 +288,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 	layer = ABOVE_WINDOW_LAYER
 	icon_keyboard = null
 	icon_screen = null
-	circuit = /obj/item/weapon/circuitboard/nav/tele
+	circuit = /obj/item/circuitboard/nav/tele
 	density = FALSE
 
 /obj/machinery/computer/ship/navigation/telescreen/update_icon()

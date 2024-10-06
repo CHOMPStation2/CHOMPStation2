@@ -6,7 +6,7 @@ import { Window } from '../../layouts';
 import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
-import { VoreUserPreferences } from './VoreUserPreferences.tsx';
+import { VoreUserPreferences } from './VoreUserPreferences';
 
 /**
  * There are three main sections to this UI.
@@ -37,7 +37,7 @@ export const VorePanel = (props) => {
 
   return (
     <Window width={890} height={660} theme="abstract">
-      <Window.Content scrollable>
+      <Window.Content>
         {(data.unsaved_changes && (
           <NoticeBox danger>
             <Flex>

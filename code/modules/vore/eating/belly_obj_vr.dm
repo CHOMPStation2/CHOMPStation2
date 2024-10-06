@@ -8,6 +8,12 @@
 //
 // Parent type of all the various "belly" varieties.
 //
+
+// # define DM_FLAG_VORESPRITE_TAIL     0x2 //CHOMPRemove
+// # define DM_FLAG_VORESPRITE_MARKING  0x4 //CHOMPRemove
+// # define DM_FLAG_VORESPRITE_ARTICLE	0x8 //CHOMPRemove
+
+
 /obj/belly
 	name = "belly"							// Name of this location
 	desc = "It's a belly! You're in it!"	// Flavor text description of inside sight/sound/smells/feels.
@@ -49,9 +55,9 @@
 	var/fancy_vore = FALSE					// Using the new sounds?
 	var/is_wet = TRUE						// Is this belly's insides made of slimy parts?
 	var/wet_loop = TRUE						// Does the belly have a fleshy loop playing?
-	var/obj/item/weapon/storage/vore_egg/ownegg	// Is this belly creating an egg?
+	var/obj/item/storage/vore_egg/ownegg	// Is this belly creating an egg?
 	var/egg_type = "Egg"					// Default egg type and path.
-	var/egg_path = /obj/item/weapon/storage/vore_egg
+	var/egg_path = /obj/item/storage/vore_egg
 	var/egg_name = null						// CHOMPAdd. Custom egg name
 	var/egg_size = 0						// CHOMPAdd. Custom egg size
 	var/list/list/emote_lists = list()			// Idle emotes that happen on their own, depending on the bellymode. Contains lists of strings indexed by bellymode
@@ -66,6 +72,30 @@
 	var/belly_item_mult = 1 	//Multiplier for how filling items are in borg borg bellies. Items are also weighted on item size
 	var/belly_overall_mult = 1	//Multiplier applied ontop of any other specific multipliers
 	var/private_struggle = FALSE			// If struggles are made public or not //CHOMPAdd
+
+
+	var/vore_sprite_flags = DM_FLAG_VORESPRITE_BELLY //CHOMPEdit
+	var/tmp/static/list/vore_sprite_flag_list= list(
+		"Normal Belly Sprite" = DM_FLAG_VORESPRITE_BELLY, //CHOMPEdit
+		//"Tail adjustment" = DM_FLAG_VORESPRITE_TAIL,
+		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
+		"Undergarment addition" = DM_FLAG_VORESPRITE_ARTICLE, //CHOMPAdd
+		)
+	var/affects_vore_sprites = FALSE
+	var/count_absorbed_prey_for_sprite = TRUE
+	var/absorbed_multiplier = 1
+	var/count_liquid_for_sprite = FALSE
+	var/liquid_multiplier = 1
+	var/count_items_for_sprite = FALSE
+	var/item_multiplier = 1
+	var/health_impacts_size = TRUE
+	var/resist_triggers_animation = TRUE
+	var/size_factor_for_sprite = 1
+	var/belly_sprite_to_affect = "stomach"
+	var/datum/sprite_accessory/tail/tail_to_change_to = FALSE
+	var/tail_extra_overlay = FALSE
+	var/tail_extra_overlay2 = FALSE
+	var/undergarment_chosen = "Underwear, bottom"
 
 	// Generally just used by AI
 	var/autotransferchance = 0 				// % Chance of prey being autotransferred to transfer location
@@ -109,176 +139,6 @@
 	var/tmp/list/items_preserved = list()		// Stuff that wont digest so we shouldn't process it again.
 	var/tmp/recent_sound = FALSE				// Prevent audio spam
 	var/tmp/drainmode = DR_NORMAL				// Simply drains the prey then does nothing.
-
-	// Don't forget to watch your commas at the end of each line if you change these.
-	var/list/struggle_messages_outside = list(
-		"%pred's %belly wobbles with a squirming meal.",
-		"%pred's %belly jostles with movement.",
-		"%pred's %belly briefly swells outward as someone pushes from inside.",
-		"%pred's %belly fidgets with a trapped victim.",
-		"%pred's %belly jiggles with motion from inside.",
-		"%pred's %belly sloshes around.",
-		"%pred's %belly gushes softly.",
-		"%pred's %belly lets out a wet squelch.")
-
-	var/list/struggle_messages_inside = list(
-		"Your useless squirming only causes %pred's slimy %belly to squelch over your body.",
-		"Your struggles only cause %pred's %belly to gush softly around you.",
-		"Your movement only causes %pred's %belly to slosh around you.",
-		"Your motion causes %pred's %belly to jiggle.",
-		"You fidget around inside of %pred's %belly.",
-		"You shove against the walls of %pred's %belly, making it briefly swell outward.",
-		"You jostle %pred's %belly with movement.",
-		"You squirm inside of %pred's %belly, making it wobble around.")
-
-	var/list/absorbed_struggle_messages_outside = list(
-		"%pred's %belly wobbles, seemingly on its own.",
-		"%pred's %belly jiggles without apparent cause.",
-		"%pred's %belly seems to shake for a second without an obvious reason.")
-
-	var/list/absorbed_struggle_messages_inside = list(
-		"You try and resist %pred's %belly, but only cause it to jiggle slightly.",
-		"Your fruitless mental struggles only shift %pred's %belly a tiny bit.",
-		"You can't make any progress freeing yourself from %pred's %belly.")
-
-	var/list/escape_attempt_messages_owner = list(
-		"%prey is attempting to free themselves from your %belly!")
-
-	var/list/escape_attempt_messages_prey = list(
-		"You start to climb out of %pred's %belly.")
-
-	var/list/escape_messages_owner = list(
-		"%prey climbs out of your %belly!")
-
-	var/list/escape_messages_prey = list(
-		"You climb out of %pred's %belly.")
-
-	var/list/escape_messages_outside = list(
-		"%prey climbs out of %pred's %belly!")
-
-	var/list/escape_item_messages_owner = list(
-		"%item suddenly slips out of your %belly!")
-
-	var/list/escape_item_messages_prey = list(
-		"Your struggles successfully cause %pred to squeeze your %item out of their %belly.")
-
-	var/list/escape_item_messages_outside = list(
-		"%item suddenly slips out of %pred's %belly!")
-
-	var/list/escape_fail_messages_owner = list(
-		"%prey's attempt to escape from your %belly has failed!")
-
-	var/list/escape_fail_messages_prey = list(
-		"Your attempt to escape %pred's %belly has failed!")
-
-	var/list/escape_attempt_absorbed_messages_owner = list(
-		"%prey is attempting to free themselves from your %belly!")
-
-	var/list/escape_attempt_absorbed_messages_prey = list(
-		"You try to force yourself out of %pred's %belly.")
-
-	var/list/escape_absorbed_messages_owner = list(
-		"%prey forces themselves free of your %belly!")
-
-	var/list/escape_absorbed_messages_prey = list(
-		"You manage to free yourself from %pred's %belly.")
-
-	var/list/escape_absorbed_messages_outside = list(
-		"%prey climbs out of %pred's %belly!")
-
-	var/list/escape_fail_absorbed_messages_owner = list(
-		"%prey's attempt to escape form your %belly has failed!")
-
-	var/list/escape_fail_absorbed_messages_prey = list(
-		"Before you manage to reach freedom, you feel yourself getting dragged back into %pred's %belly!")
-
-	var/list/primary_transfer_messages_owner = list(
-		"%prey slid into your %dest due to their struggling inside your %belly!")
-
-	var/list/primary_transfer_messages_prey = list(
-		"Your attempt to escape %pred's %belly has failed and your struggles only results in you sliding into %pred's %dest!") //CHOMPEdit
-
-	var/list/secondary_transfer_messages_owner = list(
-		"%prey slid into your %dest due to their struggling inside your %belly!")
-
-	var/list/secondary_transfer_messages_prey = list(
-		"Your attempt to escape %pred's %belly has failed and your struggles only results in you sliding into %pred's %dest!") //CHOMPEdit
-
-	//CHOMPAdd Start
-	var/list/primary_autotransfer_messages_owner = list(
-		"%prey moves along into your %dest!")
-
-	var/list/primary_autotransfer_messages_prey = list(
-		"%pred's %belly moves you along into their %dest!")
-
-	var/list/secondary_autotransfer_messages_owner = list(
-		"%prey moves along into your %dest!")
-
-	var/list/secondary_autotransfer_messages_prey = list(
-		"%pred's %belly moves you along into their %dest!")
-	//CHOMPAdd End
-
-	var/list/digest_chance_messages_owner = list(
-		"You feel your %belly beginning to become active!")
-
-	var/list/digest_chance_messages_prey = list(
-		"In response to your struggling, %pred's %belly begins to get more active...")
-
-	var/list/absorb_chance_messages_owner = list(
-		"You feel your %belly start to cling onto its contents...")
-
-	var/list/absorb_chance_messages_prey = list(
-		"In response to your struggling, %pred's %belly begins to cling more tightly...")
-
-	var/list/select_chance_messages_owner = list(
-		"You feel your %belly beginning to become active!")
-
-	var/list/select_chance_messages_prey = list(
-		"In response to your struggling, %pred's %belly begins to get more active...")
-
-	var/list/digest_messages_owner = list(
-		"You feel %prey's body succumb to your digestive system, which breaks it apart into soft slurry.",
-		"You hear a lewd glorp as your %belly muscles grind %prey into a warm pulp.",
-		"Your %belly lets out a rumble as it melts %prey into sludge.",
-		"You feel a soft gurgle as %prey's body loses form in your %belly. They're nothing but a soft mass of churning slop now.",
-		"Your %belly begins gushing %prey's remains through your system, adding some extra weight to your thighs.",
-		"Your %belly begins gushing %prey's remains through your system, adding some extra weight to your rump.",
-		"Your %belly begins gushing %prey's remains through your system, adding some extra weight to your belly.",
-		"Your %belly groans as %prey falls apart into a thick soup. You can feel their remains soon flowing deeper into your body to be absorbed.",
-		"Your %belly kneads on every fiber of %prey, softening them down into mush to fuel your next hunt.",
-		"Your %belly churns %prey down into a hot slush. You can feel the nutrients coursing through your digestive track with a series of long, wet glorps.")
-
-	var/list/digest_messages_prey = list(
-		"Your body succumbs to %pred's digestive system, which breaks you apart into soft slurry.",
-		"%pred's %belly lets out a lewd glorp as their muscles grind you into a warm pulp.",
-		"%pred's %belly lets out a rumble as it melts you into sludge.",
-		"%pred feels a soft gurgle as your body loses form in their %belly. You're nothing but a soft mass of churning slop now.",
-		"%pred's %belly begins gushing your remains through their system, adding some extra weight to %pred's thighs.",
-		"%pred's %belly begins gushing your remains through their system, adding some extra weight to %pred's rump.",
-		"%pred's %belly begins gushing your remains through their system, adding some extra weight to %pred's belly.",
-		"%pred's %belly groans as you fall apart into a thick soup. Your remains soon flow deeper into %pred's body to be absorbed.",
-		"%pred's %belly kneads on every fiber of your body, softening you down into mush to fuel their next hunt.",
-		"%pred's %belly churns you down into a hot slush. Your nutrient-rich remains course through their digestive track with a series of long, wet glorps.")
-
-	var/list/absorb_messages_owner = list(
-		"You feel %prey becoming part of you.")
-
-	var/list/absorb_messages_prey = list(
-		"You feel yourself becoming part of %pred's %belly!")
-
-	var/list/unabsorb_messages_owner = list(
-		"You feel %prey reform into a recognizable state again.")
-
-	var/list/unabsorb_messages_prey = list(
-		"You are released from being part of %pred's %belly.")
-
-	var/list/examine_messages = list(
-		"They have something solid in their %belly!",
-		"It looks like they have something in their %belly!")
-
-	var/list/examine_messages_absorbed = list(
-		"Their body looks somewhat larger than usual around the area of their %belly.",
-		"Their %belly looks larger than usual.")
 
 	var/item_digest_mode = IM_DIGEST_FOOD	// Current item-related mode from item_digest_modes
 	var/contaminates = TRUE					// Whether the belly will contaminate stuff // CHOMPedit: reset to true like it always was
@@ -329,6 +189,7 @@
 	"transferchance_secondary",
 	"transferlocation",
 	"transferlocation_secondary",
+	"belchchance",	//CHOMPAdd
 	"bulge_size",
 	"display_absorbed_examine",
 	"shrink_grow_size",
@@ -440,18 +301,9 @@
 	"vorespawn_blacklist",
 	"vorespawn_whitelist",
 	"vorespawn_absorbed",
-	"vore_sprite_flags",
-	"affects_vore_sprites",
-	"count_absorbed_prey_for_sprite",
 	"absorbed_multiplier",
 	"count_liquid_for_sprite",
 	"liquid_multiplier",
-	"count_items_for_sprite",
-	"item_multiplier",
-	"health_impacts_size",
-	"resist_triggers_animation",
-	"size_factor_for_sprite",
-	"belly_sprite_to_affect",
 	"undergarment_chosen",
 	"undergarment_if_none",
 	"undergarment_color",
@@ -486,6 +338,7 @@
 	"noise_freq",
 	"private_struggle",
 	"item_digest_logs",
+	"show_fullness_messages",
 	"digest_max", //CHOMP end of variables from CHOMP
 	"egg_type",
 	"save_digest_mode",
@@ -495,6 +348,15 @@
 	"belly_item_mult",
 	"belly_overall_mult",
 	"drainmode",
+	"vore_sprite_flags",
+	"affects_vore_sprites",
+	"count_absorbed_prey_for_sprite",
+	"resist_triggers_animation",
+	"size_factor_for_sprite",
+	"belly_sprite_to_affect",
+	"health_impacts_size",
+	"count_items_for_sprite",
+	"item_multiplier"
 	)
 
 	if (save_digest_mode == 1)
@@ -539,28 +401,24 @@
 		// var/turf/simulated/T = owner.loc // CHOMPEdit
 		var/S = pick(GLOB.slosh) //ChompEDIT
 		if(S)
-			playsound(owner.loc, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/client_preference/digestion_noises) //CHOMPEdit
+			playsound(owner.loc, S, sound_volume * (reagents.total_volume / 100), FALSE, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises) //CHOMPEdit
 			cycle_sloshed = TRUE
 	thing.belly_cycles = 0 //reset cycle count
 	if(istype(thing, /mob/observer)) //Ports CHOMPStation PR#3072
 		if(desc) //Ports CHOMPStation PR#4772
 			//Allow ghosts see where they are if they're still getting squished along inside.
-			var/formatted_desc
-			formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
-			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
-			formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
-			to_chat(thing, "<span class='vnotice'><B>[formatted_desc]</B></span>")
-		return
+			to_chat(thing, span_vnotice("<B>[belly_format_string(desc, thing)]</B>"))
+
 	if(OldLoc in contents)
 		return //Someone dropping something (or being stripdigested)
-	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/device/mmi)) // Prevent reforming causing a lot of log spam/sounds
+	if(istype(OldLoc, /mob/observer) || istype(OldLoc, /obj/item/mmi)) // Prevent reforming causing a lot of log spam/sounds
 		return //Someone getting reformed most likely (And if not, uh... shouldn't happen anyways?)
 	//CHOMPEdit end
 
 	//Generic entered message
 	if(!owner.mute_entry && entrance_logs) //CHOMPEdit
 		if(!istype(thing, /mob/observer))	//Don't have ghosts announce they're reentering the belly on death
-			to_chat(owner,"<span class='vnotice'>[thing] slides into your [lowertext(name)].</span>")
+			to_chat(owner,span_vnotice("[thing] slides into your [lowertext(name)]."))
 
 	//Sound w/ antispam flag setting
 	if(vore_sound && !recent_sound && !istype(thing, /mob/observer))
@@ -572,7 +430,7 @@
 		if(special_entrance_sound) //CHOMPEdit: Custom sound set by mob's init_vore or ingame varedits.
 			soundfile = special_entrance_sound
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 			recent_sound = TRUE
 
 	if(reagents.total_volume >= 5 && !isliving(thing) && (item_digest_mode == IM_DIGEST || item_digest_mode == IM_DIGEST_PARALLEL)) //CHOMPAdd
@@ -599,15 +457,11 @@
 		//Was there a description text? If so, it's time to format it!
 		if(raw_desc)
 			//Replace placeholder vars
-			var/formatted_desc
-			formatted_desc = replacetext(raw_desc, "%belly", lowertext(name)) //replace with this belly's name
-			formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
-			formatted_desc = replacetext(formatted_desc, "%prey", M) //replace with whatever mob entered into this belly
-			to_chat(M, "<span class='vnotice'><B>[formatted_desc]</B></span>")
+			to_chat(M, span_vnotice("<B>[belly_format_string(raw_desc, M)]</B>"))
 
 		var/taste
 		if(can_taste && M.loc == src && (taste = M.get_taste_message(FALSE))) //CHOMPEdit - Prevent indirect tasting
-			to_chat(owner, "<span class='vnotice'>[M] tastes of [taste].</span>")
+			to_chat(owner, span_vnotice("[M] tastes of [taste]."))
 		vore_fx(M, TRUE) //CHOMPEdit: update belleh
 		if(owner.previewing_belly == src) //CHOMPEdit
 			vore_fx(owner, TRUE) //CHOMPEdit: update belleh
@@ -868,7 +722,7 @@
 
 	if(disable_hud && L != owner)
 		if(L?.hud_used?.hud_shown)
-			to_chat(L, "<span class='vnotice'>((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))</span>")
+			to_chat(L, span_vnotice("((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))"))
 			L.toggle_hud_vis(TRUE)
 
 /obj/belly/proc/vore_preview(mob/living/L)
@@ -1081,14 +935,14 @@
 
 	//Print notifications/sound if necessary
 	if(!silent && count)
-		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] everything from their [lowertext(name)]!</b>")]</span>", range = privacy_range)
+		owner.visible_message(span_vnotice("[span_green("<b>[owner] [release_verb] everything from their [lowertext(name)]!</b>")]"), range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 
 	return count
 
@@ -1107,7 +961,7 @@
 		L.muffled = FALSE
 		L.forced_psay = FALSE
 
-	for(var/obj/item/weapon/holder/H in M.contents)
+	for(var/obj/item/holder/H in M.contents)
 		H.held_mob.muffled = FALSE
 		H.held_mob.forced_psay = FALSE
 
@@ -1169,14 +1023,14 @@
 	if(istype(M, /mob/observer)) //CHOMPEdit
 		silent = TRUE
 	if(!silent)
-		owner.visible_message("<span class='vnotice'>[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]</span>",range = privacy_range)
+		owner.visible_message(span_vnotice("[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]"),range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
 		else
 			soundfile = fancy_release_sounds[release_sound]
 		if(soundfile)
-			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, soundfile, vol = sound_volume, vary = 1, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 	//Should fix your view not following you out of mobs sometimes!
 	if(ismob(M))
 		var/mob/ourmob = M
@@ -1211,327 +1065,6 @@
 		GLOB.prey_eaten_roundstat++
 		if(owner.mind)
 			owner.mind.vore_prey_eaten++
-
-// Get the line that should show up in Examine message if the owner of this belly
-// is examined.   By making this a proc, we not only take advantage of polymorphism,
-// but can easily make the message vary based on how many people are inside, etc.
-// Returns a string which shoul be appended to the Examine output.
-/obj/belly/proc/get_examine_msg()
-	if(!(contents?.len) || !(examine_messages?.len)) //ChompEDIT - runtimes
-		return ""
-
-	var/formatted_message
-	var/raw_message = pick(examine_messages)
-	var/total_bulge = 0
-
-	var/living_count = 0
-	for(var/mob/living/L in contents)
-		living_count++
-
-	var/count_total = contents.len
-	for(var/mob/observer/C in contents)
-		count_total-- //Exclude any ghosts from %count
-
-	var/list/vore_contents = list()
-	for(var/G in contents)
-		if(!isobserver(G))
-			vore_contents += G //Exclude any ghosts from %prey
-
-	for(var/mob/living/P in contents)
-		if(!P.absorbed) //This is required first, in case there's a person absorbed and not absorbed in a stomach.
-			total_bulge += P.size_multiplier
-
-	if(total_bulge < bulge_size || bulge_size == 0)
-		return ""
-
-	formatted_message = replacetext(raw_message, "%belly", lowertext(name))
-	formatted_message = replacetext(formatted_message, "%pred", owner)
-	formatted_message = replacetext(formatted_message, "%prey", english_list(vore_contents))
-	formatted_message = replacetext(formatted_message, "%countprey", living_count)
-	formatted_message = replacetext(formatted_message, "%count", count_total)
-
-	return(span_red("<i>[formatted_message]</i>"))
-
-/obj/belly/proc/get_examine_msg_absorbed()
-	if(!(contents?.len) || !(examine_messages_absorbed?.len) || !display_absorbed_examine) //ChompEDIT - runtimes
-		return ""
-
-	var/formatted_message
-	var/raw_message = pick(examine_messages_absorbed)
-
-	var/absorbed_count = 0
-	var/list/absorbed_victims = list()
-	for(var/mob/living/L in contents)
-		if(L.absorbed)
-			absorbed_victims += L
-			absorbed_count++
-
-	if(!absorbed_count)
-		return ""
-
-	formatted_message = replacetext(raw_message, "%belly", lowertext(name))
-	formatted_message = replacetext(formatted_message, "%pred", owner)
-	formatted_message = replacetext(formatted_message, "%prey", english_list(absorbed_victims))
-	formatted_message = replacetext(formatted_message, "%countprey", absorbed_count)
-
-	return(span_red("<i>[formatted_message]</i>"))
-
-// The next function gets the messages set on the belly, in human-readable format.
-// This is useful in customization boxes and such. The delimiter right now is \n\n so
-// in message boxes, this looks nice and is easily delimited.
-/obj/belly/proc/get_messages(type, delim = "\n\n")
-	ASSERT(type == "smo" || type == "smi" || type == "asmo" || type == "asmi" || type == "escao" || type == "escap" || type == "escp" || type == "esco" || type == "escout" || type == "escip" || type == "escio" || type == "esciout" || type == "escfp" || type == "escfo" || type == "aescao" || type == "aescap" || type == "aescp" || type == "aesco" || type == "aescout" || type == "aescfp" || type == "aescfo" || type == "trnspp" || type == "trnspo" || type == "trnssp" || type == "trnsso" || type == "atrnspp" || type == "atrnspo" || type == "atrnssp" || type == "atrnsso" || type == "stmodp" || type == "stmodo" || type == "stmoap" || type == "stmoao" || type == "dmo" || type == "dmp" || type == "amo" || type == "amp" || type == "uamo" || type == "uamp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") //CHOMPEdit
-
-	var/list/raw_messages
-	switch(type)
-		if("smo")
-			raw_messages = struggle_messages_outside
-		if("smi")
-			raw_messages = struggle_messages_inside
-		if("asmo")
-			raw_messages = absorbed_struggle_messages_outside
-		if("asmi")
-			raw_messages = absorbed_struggle_messages_inside
-		if("escao")
-			raw_messages = escape_attempt_messages_owner
-		if("escap")
-			raw_messages = escape_attempt_messages_prey
-		if("esco")
-			raw_messages = escape_messages_owner
-		if("escp")
-			raw_messages = escape_messages_prey
-		if("escout")
-			raw_messages = escape_messages_outside
-		if("escio")
-			raw_messages = escape_item_messages_owner
-		if("escip")
-			raw_messages = escape_item_messages_prey
-		if("esciout")
-			raw_messages = escape_item_messages_outside
-		if("escfo")
-			raw_messages = escape_fail_messages_owner
-		if("escfp")
-			raw_messages = escape_fail_messages_prey
-		if("aescao")
-			raw_messages = escape_attempt_absorbed_messages_owner
-		if("aescap")
-			raw_messages = escape_attempt_absorbed_messages_prey
-		if("aesco")
-			raw_messages = escape_absorbed_messages_owner
-		if("aescp")
-			raw_messages = escape_absorbed_messages_prey
-		if("aescout")
-			raw_messages = escape_absorbed_messages_outside
-		if("aescfo")
-			raw_messages = escape_fail_absorbed_messages_owner
-		if("aescfp")
-			raw_messages = escape_fail_absorbed_messages_prey
-		if("trnspo")
-			raw_messages = primary_transfer_messages_owner
-		if("trnspp")
-			raw_messages = primary_transfer_messages_prey
-		if("trnsso")
-			raw_messages = secondary_transfer_messages_owner
-		if("trnssp")
-			raw_messages = secondary_transfer_messages_prey
-		//CHOMPAdd Start
-		if("atrnspo")
-			raw_messages = primary_autotransfer_messages_owner
-		if("atrnspp")
-			raw_messages = primary_autotransfer_messages_prey
-		if("atrnsso")
-			raw_messages = secondary_autotransfer_messages_owner
-		if("atrnssp")
-			raw_messages = secondary_autotransfer_messages_prey
-		//CHOMPAdd End
-		if("stmodo")
-			raw_messages = digest_chance_messages_owner
-		if("stmodp")
-			raw_messages = digest_chance_messages_prey
-		if("stmoao")
-			raw_messages = absorb_chance_messages_owner
-		if("stmoap")
-			raw_messages = absorb_chance_messages_prey
-		if("dmo")
-			raw_messages = digest_messages_owner
-		if("dmp")
-			raw_messages = digest_messages_prey
-		if("em")
-			raw_messages = examine_messages
-		if("ema")
-			raw_messages = examine_messages_absorbed
-		if("amo")
-			raw_messages = absorb_messages_owner
-		if("amp")
-			raw_messages = absorb_messages_prey
-		if("uamo")
-			raw_messages = unabsorb_messages_owner
-		if("uamp")
-			raw_messages = unabsorb_messages_prey
-		if("im_digest")
-			raw_messages = emote_lists[DM_DIGEST]
-		if("im_hold")
-			raw_messages = emote_lists[DM_HOLD]
-		if("im_holdabsorbed")
-			raw_messages = emote_lists[DM_HOLD_ABSORBED]
-		if("im_absorb")
-			raw_messages = emote_lists[DM_ABSORB]
-		if("im_heal")
-			raw_messages = emote_lists[DM_HEAL]
-		if("im_drain")
-			raw_messages = emote_lists[DM_DRAIN]
-		if("im_steal")
-			raw_messages = emote_lists[DM_SIZE_STEAL]
-		if("im_egg")
-			raw_messages = emote_lists[DM_EGG]
-		if("im_shrink")
-			raw_messages = emote_lists[DM_SHRINK]
-		if("im_grow")
-			raw_messages = emote_lists[DM_GROW]
-		if("im_unabsorb")
-			raw_messages = emote_lists[DM_UNABSORB]
-	var/messages = null
-	if(raw_messages)
-		messages = raw_messages.Join(delim)
-	return messages
-
-// The next function sets the messages on the belly, from human-readable var
-// replacement strings and linebreaks as delimiters (two \n\n by default).
-// They also sanitize the messages.
-/obj/belly/proc/set_messages(raw_text, type, delim = "\n\n")
-	ASSERT(type == "smo" || type == "smi" || type == "asmo" || type == "asmi" || type == "escao" || type == "escap" || type == "escp" || type == "esco" || type == "escout" || type == "escip" || type == "escio" || type == "esciout" || type == "escfp" || type == "escfo" || type == "aescao" || type == "aescap" || type == "aescp" || type == "aesco" || type == "aescout" || type == "aescfp" || type == "aescfo" || type == "trnspp" || type == "trnspo" || type == "trnssp" || type == "trnsso" || type == "atrnspp" || type == "atrnspo" || type == "atrnssp" || type == "atrnsso" || type == "stmodp" || type == "stmodo" || type == "stmoap" || type == "stmoao" || type == "dmo" || type == "dmp" || type == "amo" || type == "amp" || type == "uamo" || type == "uamp" || type == "em" || type == "ema" || type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") //CHOMPEdit
-
-	var/list/raw_list = splittext(html_encode(raw_text),delim)
-	if(raw_list.len > 10)
-		raw_list.Cut(11)
-		log_debug("[owner] tried to set [lowertext(name)] with 11+ messages")
-
-	for(var/i = 1, i <= raw_list.len, i++)
-		if((length(raw_list[i]) > 160 || length(raw_list[i]) < 10) && !(type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb")) //160 is fudged value due to htmlencoding increasing the size
-			raw_list.Cut(i,i)
-			log_debug("[owner] tried to set [lowertext(name)] with >121 or <10 char message")
-		else if((type == "im_digest" || type == "im_hold" || type == "im_holdabsorbed" || type == "im_absorb" || type == "im_heal" || type == "im_drain" || type == "im_steal" || type == "im_egg" || type == "im_shrink" || type == "im_grow" || type == "im_unabsorb") && (length(raw_list[i]) > 510 || length(raw_list[i]) < 10))
-			raw_list.Cut(i,i)
-			log_debug("[owner] tried to set [lowertext(name)] idle message with >501 or <10 char message")
-		else if((type == "em" || type == "ema") && (length(raw_list[i]) > 260 || length(raw_list[i]) < 10))
-			raw_list.Cut(i,i)
-			log_debug("[owner] tried to set [lowertext(name)] examine message with >260 or <10 char message")
-		else
-			raw_list[i] = readd_quotes(raw_list[i])
-			//Also fix % sign for var replacement
-			raw_list[i] = replacetext(raw_list[i],"&#37;","%")
-
-	ASSERT(raw_list.len <= 10) //Sanity
-
-	switch(type)
-		if("smo")
-			struggle_messages_outside = raw_list
-		if("smi")
-			struggle_messages_inside = raw_list
-		if("asmo")
-			absorbed_struggle_messages_outside = raw_list
-		if("asmi")
-			absorbed_struggle_messages_inside = raw_list
-		if("escao")
-			escape_attempt_messages_owner = raw_list
-		if("escap")
-			escape_attempt_messages_prey = raw_list
-		if("esco")
-			escape_messages_owner = raw_list
-		if("escp")
-			escape_messages_prey = raw_list
-		if("escout")
-			escape_messages_outside = raw_list
-		if("escio")
-			escape_item_messages_owner = raw_list
-		if("escip")
-			escape_item_messages_prey = raw_list
-		if("esciout")
-			escape_item_messages_outside = raw_list
-		if("escfo")
-			escape_fail_messages_owner = raw_list
-		if("escfp")
-			escape_fail_messages_prey = raw_list
-		if("aescao")
-			escape_attempt_absorbed_messages_owner = raw_list
-		if("aescap")
-			escape_attempt_absorbed_messages_prey = raw_list
-		if("aesco")
-			escape_absorbed_messages_owner = raw_list
-		if("aescp")
-			escape_absorbed_messages_prey = raw_list
-		if("aescout")
-			escape_absorbed_messages_outside = raw_list
-		if("aescfo")
-			escape_fail_absorbed_messages_owner = raw_list
-		if("aescfp")
-			escape_fail_absorbed_messages_prey = raw_list
-		if("trnspo")
-			primary_transfer_messages_owner = raw_list
-		if("trnspp")
-			primary_transfer_messages_prey = raw_list
-		if("trnsso")
-			secondary_transfer_messages_owner = raw_list
-		if("trnssp")
-			secondary_transfer_messages_prey = raw_list
-		//CHOMPAdd Start
-		if("atrnspo")
-			primary_autotransfer_messages_owner = raw_list
-		if("atrnspp")
-			primary_autotransfer_messages_prey = raw_list
-		if("atrnsso")
-			secondary_autotransfer_messages_owner = raw_list
-		if("atrnssp")
-			secondary_autotransfer_messages_prey = raw_list
-		//CHOMPAdd End
-		if("stmodo")
-			digest_chance_messages_owner = raw_list
-		if("stmodp")
-			digest_chance_messages_prey = raw_list
-		if("stmoao")
-			absorb_chance_messages_owner = raw_list
-		if("stmoap")
-			absorb_chance_messages_prey = raw_list
-		if("dmo")
-			digest_messages_owner = raw_list
-		if("dmp")
-			digest_messages_prey = raw_list
-		if("amo")
-			absorb_messages_owner = raw_list
-		if("amp")
-			absorb_messages_prey = raw_list
-		if("uamo")
-			unabsorb_messages_owner = raw_list
-		if("uamp")
-			unabsorb_messages_prey = raw_list
-		if("em")
-			examine_messages = raw_list
-		if("ema")
-			examine_messages_absorbed = raw_list
-		if("im_digest")
-			emote_lists[DM_DIGEST] = raw_list
-		if("im_hold")
-			emote_lists[DM_HOLD] = raw_list
-		if("im_holdabsorbed")
-			emote_lists[DM_HOLD_ABSORBED] = raw_list
-		if("im_absorb")
-			emote_lists[DM_ABSORB] = raw_list
-		if("im_heal")
-			emote_lists[DM_HEAL] = raw_list
-		if("im_drain")
-			emote_lists[DM_DRAIN] = raw_list
-		if("im_steal")
-			emote_lists[DM_SIZE_STEAL] = raw_list
-		if("im_egg")
-			emote_lists[DM_EGG] = raw_list
-		if("im_shrink")
-			emote_lists[DM_SHRINK] = raw_list
-		if("im_grow")
-			emote_lists[DM_GROW] = raw_list
-		if("im_unabsorb")
-			emote_lists[DM_UNABSORB] = raw_list
-
-	return
 
 //CHOMPEdit Start - new procs for handling digestion damage as a total rather than per-type
 // Returns the current total digestion damage per tick of a belly.
@@ -1581,14 +1114,14 @@
 	if(is_vore_predator(M))
 		M.release_vore_contents(include_absorbed = TRUE, silent = TRUE)
 
-	var/obj/item/device/mmi/hasMMI // CHOMPEdit - Adjust how MMI's are handled
+	var/obj/item/mmi/hasMMI // CHOMPEdit - Adjust how MMI's are handled
 
 	//Drop all items into the belly.
 	if(CONFIG_GET(flag/items_survive_digestion)) // CHOMPEdit
 		for(var/obj/item/W in M)
 			if(istype(W, /obj/item/organ/internal/mmi_holder/posibrain))
 				var/obj/item/organ/internal/mmi_holder/MMI = W
-				var/obj/item/device/mmi/brainbox = MMI.removed()
+				var/obj/item/mmi/brainbox = MMI.removed()
 				if(brainbox)
 					items_preserved += brainbox
 					hasMMI = brainbox // CHOMPEdit - Adjust how MMI's are handled
@@ -1600,7 +1133,7 @@
 						I.gurgle_contaminate(contents, contamination_flavor, contamination_color) //We do an initial contamination pass to get stuff like IDs wet.
 					if(item_digest_mode == IM_HOLD)
 						items_preserved |= I
-					else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(I,/obj/item/weapon/reagent_containers/food) || istype(I,/obj/item/organ)))
+					else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(I,/obj/item/reagent_containers/food) || istype(I,/obj/item/organ)))
 						items_preserved |= I
 
 	//Reagent transfer
@@ -1636,7 +1169,7 @@
 			else
 				R.mmi.loc = src
 				items_preserved += R.mmi
-				var/obj/item/weapon/robot_module/MB = locate() in R.contents
+				var/obj/item/robot_module/MB = locate() in R.contents
 				if(MB)
 					R.mmi.brainmob.languages = MB.original_languages
 				else
@@ -1671,33 +1204,13 @@
 
 // Handle a mob being absorbed
 /obj/belly/proc/absorb_living(mob/living/M)
-	var/absorb_alert_owner = pick(absorb_messages_owner)
-	var/absorb_alert_prey = pick(absorb_messages_prey)
-
-	var/absorbed_count = 0
-	for(var/mob/living/L in contents)
-		if(L.absorbed)
-			absorbed_count++
-
-	//Replace placeholder vars
-	absorb_alert_owner = replacetext(absorb_alert_owner, "%pred", owner)
-	absorb_alert_owner = replacetext(absorb_alert_owner, "%prey", M)
-	absorb_alert_owner = replacetext(absorb_alert_owner, "%belly", lowertext(name))
-	absorb_alert_owner = replacetext(absorb_alert_owner, "%countprey", absorbed_count)
-
-	absorb_alert_prey = replacetext(absorb_alert_prey, "%pred", owner)
-	absorb_alert_prey = replacetext(absorb_alert_prey, "%prey", M)
-	absorb_alert_prey = replacetext(absorb_alert_prey, "%belly", lowertext(name))
-	absorb_alert_prey = replacetext(absorb_alert_prey, "%countprey", absorbed_count)
-
 	M.absorbed = TRUE
 	if(M.ckey)
 		handle_absorb_langs(M, owner)
-
 		GLOB.prey_absorbed_roundstat++
 
-	to_chat(M, "<span class='vnotice'>[absorb_alert_prey]</span>")
-	to_chat(owner, "<span class='vnotice'>[absorb_alert_owner]</span>")
+	to_chat(M, span_vnotice("[belly_format_string(absorb_messages_prey, M, use_absorbed_count = TRUE)]"))
+	to_chat(owner, span_vnotice("[belly_format_string(absorb_messages_owner, M, use_absorbed_count = TRUE)]"))
 	if(M.noisy) //Mute drained absorbee hunger if enabled.
 		M.noisy = FALSE
 
@@ -1736,11 +1249,7 @@
 
 	if(absorbed_desc)
 		//Replace placeholder vars
-		var/formatted_abs_desc
-		formatted_abs_desc = replacetext(absorbed_desc, "%belly", lowertext(name)) //replace with this belly's name
-		formatted_abs_desc = replacetext(formatted_abs_desc, "%pred", owner) //replace with this belly's owner
-		formatted_abs_desc = replacetext(formatted_abs_desc, "%prey", M) //replace with whatever mob entered into this belly
-		to_chat(M, "<span class='vnotice'><B>[formatted_abs_desc]</B></span>")
+		to_chat(M, span_vnotice("<B>[belly_format_string(absorbed_desc, M)]</B>"))
 
 	//Update owner
 	owner.updateVRPanel()
@@ -1755,7 +1264,7 @@
 				dest_belly = B
 				break
 		if(!dest_belly)
-			to_chat(owner, "<span class='vwarning'>Something went wrong with your belly transfer settings. Your <b>[lowertext(name)]</b> has had its transfer location cleared as a precaution.</span>")
+			to_chat(owner, span_vwarning("Something went wrong with your belly transfer settings. Your <b>[lowertext(name)]</b> has had its transfer location cleared as a precaution."))
 			transferlocation_absorb = null
 			return
 
@@ -1763,32 +1272,13 @@
 
 // Handle a mob being unabsorbed
 /obj/belly/proc/unabsorb_living(mob/living/M)
-	var/unabsorb_alert_owner = pick(unabsorb_messages_owner)
-	var/unabsorb_alert_prey = pick(unabsorb_messages_prey)
-
-	var/absorbed_count = 0
-	for(var/mob/living/L in contents)
-		if(L.absorbed)
-			absorbed_count++
-
-	//Replace placeholder vars
-	unabsorb_alert_owner = replacetext(unabsorb_alert_owner, "%pred", owner)
-	unabsorb_alert_owner = replacetext(unabsorb_alert_owner, "%prey", M)
-	unabsorb_alert_owner = replacetext(unabsorb_alert_owner, "%belly", lowertext(name))
-	unabsorb_alert_owner = replacetext(unabsorb_alert_owner, "%countprey", absorbed_count)
-
-	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%pred", owner)
-	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%prey", M)
-	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%belly", lowertext(name))
-	unabsorb_alert_prey = replacetext(unabsorb_alert_prey, "%countprey", absorbed_count)
-
 	M.absorbed = FALSE
 	handle_absorb_langs(M, owner)
-	to_chat(M, "<span class='vnotice'>[unabsorb_alert_prey]</span>")
-	to_chat(owner, "<span class='vnotice'>[unabsorb_alert_owner]</span>")
+	to_chat(M, span_vnotice(belly_format_string(unabsorb_messages_prey, M, use_absorbed_count = TRUE)))
+	to_chat(owner, span_vnotice(belly_format_string(unabsorb_messages_owner, M, use_absorbed_count = TRUE)))
 
 	if(desc)
-		to_chat(M, "<span class='vnotice'><B>[desc]</B></span>")
+		to_chat(M, span_vnotice("<B>[belly_format_string(desc, M)]</B>"))
 
 	//Update owner
 	owner.updateVRPanel()
@@ -1846,46 +1336,13 @@
 
 	R.setClickCooldown(50)
 
-	var/living_count = 0
-	for(var/mob/living/L in contents)
-		living_count++
-
-	var/escape_attempt_owner_message = pick(escape_attempt_messages_owner)
-	var/escape_attempt_prey_message = pick(escape_attempt_messages_prey)
-	var/escape_fail_owner_message = pick(escape_fail_messages_owner)
-	var/escape_fail_prey_message = pick(escape_fail_messages_prey)
-
-	escape_attempt_owner_message = replacetext(escape_attempt_owner_message, "%pred", owner)
-	escape_attempt_owner_message = replacetext(escape_attempt_owner_message, "%prey", R)
-	escape_attempt_owner_message = replacetext(escape_attempt_owner_message, "%belly", lowertext(name))
-	escape_attempt_owner_message = replacetext(escape_attempt_owner_message, "%countprey", living_count)
-	escape_attempt_owner_message = replacetext(escape_attempt_owner_message, "%count", contents.len)
-
-	escape_attempt_prey_message = replacetext(escape_attempt_prey_message, "%pred", owner)
-	escape_attempt_prey_message = replacetext(escape_attempt_prey_message, "%prey", R)
-	escape_attempt_prey_message = replacetext(escape_attempt_prey_message, "%belly", lowertext(name))
-	escape_attempt_prey_message = replacetext(escape_attempt_prey_message, "%countprey", living_count)
-	escape_attempt_prey_message = replacetext(escape_attempt_prey_message, "%count", contents.len)
-
-	escape_fail_owner_message = replacetext(escape_fail_owner_message, "%pred", owner)
-	escape_fail_owner_message = replacetext(escape_fail_owner_message, "%prey", R)
-	escape_fail_owner_message = replacetext(escape_fail_owner_message, "%belly", lowertext(name))
-	escape_fail_owner_message = replacetext(escape_fail_owner_message, "%countprey", living_count)
-	escape_fail_owner_message = replacetext(escape_fail_owner_message, "%count", contents.len)
-
-	escape_fail_prey_message = replacetext(escape_fail_prey_message, "%pred", owner)
-	escape_fail_prey_message = replacetext(escape_fail_prey_message, "%prey", R)
-	escape_fail_prey_message = replacetext(escape_fail_prey_message, "%belly", lowertext(name))
-	escape_fail_prey_message = replacetext(escape_fail_prey_message, "%countprey", living_count)
-	escape_fail_prey_message = replacetext(escape_fail_prey_message, "%count", contents.len)
-
-	escape_attempt_owner_message = "<span class='vwarning'>[escape_attempt_owner_message]</span>"
-	escape_attempt_prey_message = "<span class='vwarning'>[escape_attempt_prey_message]</span>"
-	escape_fail_owner_message = "<span class='vwarning'>[escape_fail_owner_message]</span>"
-	escape_fail_prey_message = "<span class='vnotice'>[escape_fail_prey_message]</span>"
+	var/escape_attempt_owner_message = span_vwarning(belly_format_string(escape_attempt_messages_owner, R))
+	var/escape_attempt_prey_message = span_vwarning(belly_format_string(escape_attempt_messages_prey, R))
+	var/escape_fail_owner_message = span_vwarning(belly_format_string(escape_fail_messages_owner, R))
+	var/escape_fail_prey_message = span_vnotice(belly_format_string(escape_fail_messages_prey, R))
 
 	if(owner.stat) //If owner is stat (dead, KO) we can actually escape
-		escape_attempt_prey_message = replacetext(escape_attempt_prey_message, new/regex("^(<span(?: \[^>]*)?>.*)(</span>)$", ""), "$1 (This will take around [escapetime/10] seconds.)$2")
+		escape_attempt_prey_message = span_vwarning("[escape_attempt_prey_message] (will take around [escapetime/10] seconds.)")
 		to_chat(R, escape_attempt_prey_message)
 		to_chat(owner, escape_attempt_owner_message)
 
@@ -1904,23 +1361,9 @@
 				to_chat(owner, escape_fail_owner_message)
 				return
 			return
-	var/struggle_outer_message = pick(struggle_messages_outside)
-	var/struggle_user_message = pick(struggle_messages_inside)
 
-	struggle_outer_message = replacetext(struggle_outer_message, "%pred", owner)
-	struggle_outer_message = replacetext(struggle_outer_message, "%prey", R)
-	struggle_outer_message = replacetext(struggle_outer_message, "%belly", lowertext(name))
-	struggle_outer_message = replacetext(struggle_outer_message, "%countprey", living_count)
-	struggle_outer_message = replacetext(struggle_outer_message, "%count", contents.len)
-
-	struggle_user_message = replacetext(struggle_user_message, "%pred", owner)
-	struggle_user_message = replacetext(struggle_user_message, "%prey", R)
-	struggle_user_message = replacetext(struggle_user_message, "%belly", lowertext(name))
-	struggle_user_message = replacetext(struggle_user_message, "%countprey", living_count)
-	struggle_user_message = replacetext(struggle_user_message, "%count", contents.len)
-
-	struggle_outer_message = "<span class='valert'>[struggle_outer_message]</span>"
-	struggle_user_message = "<span class='valert'>[struggle_user_message]</span>"
+	var/struggle_outer_message = span_valert(belly_format_string(struggle_messages_outside, R))
+	var/struggle_user_message = span_valert(belly_format_string(struggle_messages_inside, R))
 
 	//CHOMPEdit Start
 	if(private_struggle)
@@ -1945,45 +1388,21 @@
 				struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
 			else
 				struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
-			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		else
-			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+	if(prob(belchchance))//Unsure if this should go in escapable or not, leaving it here for now.
+		owner.emote("belch")
 	//CHOMPEdit End
-
 	if(escapable) //If the stomach has escapable enabled.
 		if(prob(escapechance)) //Let's have it check to see if the prey escapes first.
 			to_chat(R, escape_attempt_prey_message)
 			to_chat(owner, escape_attempt_owner_message)
 			if(do_after(R, escapetime))
 				if(escapable && C)
-					var/escape_item_owner_message = pick(escape_item_messages_owner)
-					var/escape_item_prey_message = pick(escape_item_messages_prey)
-					var/escape_item_outside_message = pick(escape_item_messages_outside)
-
-					escape_item_owner_message = replacetext(escape_item_owner_message, "%pred", owner)
-					escape_item_owner_message = replacetext(escape_item_owner_message, "%prey", R)
-					escape_item_owner_message = replacetext(escape_item_owner_message, "%belly", lowertext(name))
-					escape_item_owner_message = replacetext(escape_item_owner_message, "%countprey", living_count)
-					escape_item_owner_message = replacetext(escape_item_owner_message, "%count", contents.len)
-					escape_item_owner_message = replacetext(escape_item_owner_message, "%item", C)
-
-					escape_item_prey_message = replacetext(escape_item_prey_message, "%pred", owner)
-					escape_item_prey_message = replacetext(escape_item_prey_message, "%prey", R)
-					escape_item_prey_message = replacetext(escape_item_prey_message, "%belly", lowertext(name))
-					escape_item_prey_message = replacetext(escape_item_prey_message, "%countprey", living_count)
-					escape_item_prey_message = replacetext(escape_item_prey_message, "%count", contents.len)
-					escape_item_prey_message = replacetext(escape_item_prey_message, "%item", C)
-
-					escape_item_outside_message = replacetext(escape_item_outside_message, "%pred", owner)
-					escape_item_outside_message = replacetext(escape_item_outside_message, "%prey", R)
-					escape_item_outside_message = replacetext(escape_item_outside_message, "%belly", lowertext(name))
-					escape_item_outside_message = replacetext(escape_item_outside_message, "%countprey", living_count)
-					escape_item_outside_message = replacetext(escape_item_outside_message, "%count", contents.len)
-					escape_item_outside_message = replacetext(escape_item_outside_message, "%item", C)
-
-					escape_item_owner_message = "<span class='vwarning'>[escape_item_owner_message]</span>"
-					escape_item_prey_message = "<span class='vwarning'>[escape_item_prey_message]</span>"
-					escape_item_outside_message = "<span class='vwarning'>[escape_item_outside_message]</span>"
+					var/escape_item_owner_message = span_vwarning(belly_format_string(escape_item_messages_owner, R, item = C))
+					var/escape_item_prey_message = span_vwarning(belly_format_string(escape_item_messages_prey, R, item = C))
+					var/escape_item_outside_message = span_vwarning(belly_format_string(escape_item_messages_outside, R, item = C))
 
 					release_specific_contents(C)
 					to_chat(R, escape_item_prey_message)
@@ -1995,31 +1414,10 @@
 					//CHOMPEdit End
 					return
 				if(escapable && (R.loc == src) && !R.absorbed) //Does the owner still have escapable enabled?
-					var/escape_owner_message = pick(escape_messages_owner)
-					var/escape_prey_message = pick(escape_messages_prey)
-					var/escape_outside_message = pick(escape_messages_outside)
+					var/escape_owner_message = span_vwarning(belly_format_string(escape_messages_owner, R))
+					var/escape_prey_message = span_vwarning(belly_format_string(escape_messages_prey, R))
+					var/escape_outside_message = span_vwarning(belly_format_string(escape_messages_outside, R))
 
-					escape_owner_message = replacetext(escape_owner_message, "%pred", owner)
-					escape_owner_message = replacetext(escape_owner_message, "%prey", R)
-					escape_owner_message = replacetext(escape_owner_message, "%belly", lowertext(name))
-					escape_owner_message = replacetext(escape_owner_message, "%countprey", living_count)
-					escape_owner_message = replacetext(escape_owner_message, "%count", contents.len)
-
-					escape_prey_message = replacetext(escape_prey_message, "%pred", owner)
-					escape_prey_message = replacetext(escape_prey_message, "%prey", R)
-					escape_prey_message = replacetext(escape_prey_message, "%belly", lowertext(name))
-					escape_prey_message = replacetext(escape_prey_message, "%countprey", living_count)
-					escape_prey_message = replacetext(escape_prey_message, "%count", contents.len)
-
-					escape_outside_message = replacetext(escape_outside_message, "%pred", owner)
-					escape_outside_message = replacetext(escape_outside_message, "%prey", R)
-					escape_outside_message = replacetext(escape_outside_message, "%belly", lowertext(name))
-					escape_outside_message = replacetext(escape_outside_message, "%countprey", living_count)
-					escape_outside_message = replacetext(escape_outside_message, "%count", contents.len)
-
-					escape_owner_message = "<span class='vwarning'>[escape_owner_message]</span>"
-					escape_prey_message = "<span class='vwarning'>[escape_prey_message]</span>"
-					escape_outside_message = "<span class='vwarning'>[escape_outside_message]</span>"
 					release_specific_contents(R)
 					to_chat(R, escape_prey_message)
 					to_chat(owner, escape_owner_message)
@@ -2044,29 +1442,12 @@
 					break
 
 			if(!dest_belly)
-				to_chat(owner, "<span class='vwarning'>Something went wrong with your belly transfer settings. Your <b>[lowertext(name)]</b> has had it's transfer chance and transfer location cleared as a precaution.</span>")
+				to_chat(owner, span_vwarning("Something went wrong with your belly transfer settings. Your <b>[lowertext(name)]</b> has had it's transfer chance and transfer location cleared as a precaution."))
 				transferchance = 0
 				transferlocation = null
 				return
-			var/primary_transfer_owner_message = pick(primary_transfer_messages_owner)
-			var/primary_transfer_prey_message = pick(primary_transfer_messages_prey)
-
-			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%pred", owner)
-			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%prey", R)
-			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%belly", lowertext(name))
-			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%countprey", living_count)
-			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%count", contents.len)
-			primary_transfer_owner_message = replacetext(primary_transfer_owner_message, "%dest", transferlocation)
-
-			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%pred", owner)
-			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%prey", R)
-			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%belly", lowertext(name))
-			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%countprey", living_count)
-			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%count", contents.len)
-			primary_transfer_prey_message = replacetext(primary_transfer_prey_message, "%dest", transferlocation)
-
-			primary_transfer_owner_message = "<span class='vwarning'>[primary_transfer_owner_message]</span>"
-			primary_transfer_prey_message = "<span class='vwarning'>[primary_transfer_prey_message]</span>"
+			var/primary_transfer_owner_message = span_vwarning(belly_format_string(primary_transfer_messages_owner, R, dest = transferlocation))
+			var/primary_transfer_prey_message = span_vwarning(belly_format_string(primary_transfer_messages_prey, R, dest = transferlocation))
 
 			to_chat(R, primary_transfer_prey_message)
 			to_chat(owner, primary_transfer_owner_message)
@@ -2084,30 +1465,13 @@
 					break
 
 			if(!dest_belly)
-				to_chat(owner, "<span class='vwarning'>Something went wrong with your belly transfer settings. Your <b>[lowertext(name)]</b> has had it's transfer chance and transfer location cleared as a precaution.</span>")
+				to_chat(owner, span_vwarning("Something went wrong with your belly transfer settings. Your <b>[lowertext(name)]</b> has had it's transfer chance and transfer location cleared as a precaution."))
 				transferchance_secondary = 0
 				transferlocation_secondary = null
 				return
 
-			var/secondary_transfer_owner_message = pick(secondary_transfer_messages_owner)
-			var/secondary_transfer_prey_message = pick(secondary_transfer_messages_prey)
-
-			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%pred", owner)
-			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%prey", R)
-			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%belly", lowertext(name))
-			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%countprey", living_count)
-			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%count", contents.len)
-			secondary_transfer_owner_message = replacetext(secondary_transfer_owner_message, "%dest", transferlocation_secondary)
-
-			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%pred", owner)
-			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%prey", R)
-			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%belly", lowertext(name))
-			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%countprey", living_count)
-			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%count", contents.len)
-			secondary_transfer_prey_message = replacetext(secondary_transfer_prey_message, "%dest", transferlocation_secondary)
-
-			secondary_transfer_owner_message = "<span class='vwarning'>[secondary_transfer_owner_message]</span>"
-			secondary_transfer_prey_message = "<span class='vwarning'>[secondary_transfer_prey_message]</span>"
+			var/secondary_transfer_owner_message = span_vwarning(belly_format_string(secondary_transfer_messages_owner, R, dest = transferlocation_secondary))
+			var/secondary_transfer_prey_message = span_vwarning(belly_format_string(secondary_transfer_messages_prey, R, dest = transferlocation_secondary))
 
 			to_chat(R, secondary_transfer_prey_message)
 			to_chat(owner, secondary_transfer_owner_message)
@@ -2118,23 +1482,8 @@
 			return
 
 		else if(prob(absorbchance) && digest_mode != DM_ABSORB) //After that, let's have it run the absorb chance.
-			var/absorb_chance_owner_message = pick(absorb_chance_messages_owner)
-			var/absorb_chance_prey_message = pick(absorb_chance_messages_prey)
-
-			absorb_chance_owner_message = replacetext(absorb_chance_owner_message, "%pred", owner)
-			absorb_chance_owner_message = replacetext(absorb_chance_owner_message, "%prey", R)
-			absorb_chance_owner_message = replacetext(absorb_chance_owner_message, "%belly", lowertext(name))
-			absorb_chance_owner_message = replacetext(absorb_chance_owner_message, "%countprey", living_count)
-			absorb_chance_owner_message = replacetext(absorb_chance_owner_message, "%count", contents.len)
-
-			absorb_chance_prey_message = replacetext(absorb_chance_prey_message, "%pred", owner)
-			absorb_chance_prey_message = replacetext(absorb_chance_prey_message, "%prey", R)
-			absorb_chance_prey_message = replacetext(absorb_chance_prey_message, "%belly", lowertext(name))
-			absorb_chance_prey_message = replacetext(absorb_chance_prey_message, "%countprey", living_count)
-			absorb_chance_prey_message = replacetext(absorb_chance_prey_message, "%count", contents.len)
-
-			absorb_chance_owner_message = "<span class='vwarning'>[absorb_chance_owner_message]</span>"
-			absorb_chance_prey_message = "<span class='vwarning'>[absorb_chance_prey_message]</span>"
+			var/absorb_chance_owner_message = span_vwarning(belly_format_string(absorb_chance_messages_owner, R))
+			var/absorb_chance_prey_message = span_vwarning(belly_format_string(absorb_chance_messages_prey, R))
 
 			to_chat(R, absorb_chance_prey_message)
 			to_chat(owner, absorb_chance_owner_message)
@@ -2142,46 +1491,16 @@
 			return
 
 		else if(prob(digestchance) && digest_mode != DM_DIGEST) //Then, let's see if it should run the digest chance.
-			var/digest_chance_owner_message = pick(digest_chance_messages_owner)
-			var/digest_chance_prey_message = pick(digest_chance_messages_prey)
-
-			digest_chance_owner_message = replacetext(digest_chance_owner_message, "%pred", owner)
-			digest_chance_owner_message = replacetext(digest_chance_owner_message, "%prey", R)
-			digest_chance_owner_message = replacetext(digest_chance_owner_message, "%belly", lowertext(name))
-			digest_chance_owner_message = replacetext(digest_chance_owner_message, "%countprey", living_count)
-			digest_chance_owner_message = replacetext(digest_chance_owner_message, "%count", contents.len)
-
-			digest_chance_prey_message = replacetext(digest_chance_prey_message, "%pred", owner)
-			digest_chance_prey_message = replacetext(digest_chance_prey_message, "%prey", R)
-			digest_chance_prey_message = replacetext(digest_chance_prey_message, "%belly", lowertext(name))
-			digest_chance_prey_message = replacetext(digest_chance_prey_message, "%countprey", living_count)
-			digest_chance_prey_message = replacetext(digest_chance_prey_message, "%count", contents.len)
-
-			digest_chance_owner_message = "<span class='vwarning'>[digest_chance_owner_message]</span>"
-			digest_chance_prey_message = "<span class='vwarning'>[digest_chance_prey_message]</span>"
+			var/digest_chance_owner_message = span_vwarning(belly_format_string(digest_chance_messages_owner, R))
+			var/digest_chance_prey_message = span_vwarning(belly_format_string(digest_chance_messages_prey, R))
 
 			to_chat(R, digest_chance_prey_message)
 			to_chat(owner, digest_chance_owner_message)
 			digest_mode = DM_DIGEST
 			return
 		else if(prob(selectchance) && digest_mode != DM_SELECT) //Finally, let's see if it should run the selective mode chance.
-			var/select_chance_owner_message = pick(select_chance_messages_owner)
-			var/select_chance_prey_message = pick(select_chance_messages_prey)
-
-			select_chance_owner_message = replacetext(select_chance_owner_message, "%pred", owner)
-			select_chance_owner_message = replacetext(select_chance_owner_message, "%prey", R)
-			select_chance_owner_message = replacetext(select_chance_owner_message, "%belly", lowertext(name))
-			select_chance_owner_message = replacetext(select_chance_owner_message, "%countprey", living_count)
-			select_chance_owner_message = replacetext(select_chance_owner_message, "%count", contents.len)
-
-			select_chance_prey_message = replacetext(select_chance_prey_message, "%pred", owner)
-			select_chance_prey_message = replacetext(select_chance_prey_message, "%prey", R)
-			select_chance_prey_message = replacetext(select_chance_prey_message, "%belly", lowertext(name))
-			select_chance_prey_message = replacetext(select_chance_prey_message, "%countprey", living_count)
-			select_chance_prey_message = replacetext(select_chance_prey_message, "%count", contents.len)
-
-			select_chance_owner_message = "<span class='vwarning'>[select_chance_owner_message]</span>"
-			select_chance_prey_message = "<span class='vwarning'>[select_chance_prey_message]</span>"
+			var/select_chance_owner_message = span_vwarning(belly_format_string(select_chance_messages_owner, R))
+			var/select_chance_prey_message = span_vwarning(belly_format_string(select_chance_messages_prey, R))
 
 			to_chat(R, select_chance_prey_message)
 			to_chat(owner, select_chance_owner_message)
@@ -2189,7 +1508,7 @@
 
 		else //Nothing interesting happened.
 			to_chat(R, struggle_user_message)
-			to_chat(owner, "<span class='vwarning'>Your prey appears to be unable to make any progress in escaping your [lowertext(name)].</span>")
+			to_chat(owner, span_vwarning("Your prey appears to be unable to make any progress in escaping your [lowertext(name)]."))
 			return
 	to_chat(R, struggle_user_message)
 
@@ -2199,26 +1518,8 @@
 
 	R.setClickCooldown(50)
 
-	var/struggle_outer_message = pick(absorbed_struggle_messages_outside)
-	var/struggle_user_message = pick(absorbed_struggle_messages_inside)
-
-	var/absorbed_count = 0
-	for(var/mob/living/L in contents)
-		if(L.absorbed)
-			absorbed_count++
-
-	struggle_outer_message = replacetext(struggle_outer_message, "%pred", owner)
-	struggle_outer_message = replacetext(struggle_outer_message, "%prey", R)
-	struggle_outer_message = replacetext(struggle_outer_message, "%belly", lowertext(name))
-	struggle_outer_message = replacetext(struggle_outer_message, "%countprey", absorbed_count)
-
-	struggle_user_message = replacetext(struggle_user_message, "%pred", owner)
-	struggle_user_message = replacetext(struggle_user_message, "%prey", R)
-	struggle_user_message = replacetext(struggle_user_message, "%belly", lowertext(name))
-	struggle_user_message = replacetext(struggle_user_message, "%countprey", absorbed_count)
-
-	struggle_outer_message = "<span class='valert'>[struggle_outer_message]</span>"
-	struggle_user_message = "<span class='valert'>[struggle_user_message]</span>"
+	var/struggle_outer_message = span_valert(belly_format_string(absorbed_struggle_messages_outside, R, use_absorbed_count = TRUE))
+	var/struggle_user_message = span_valert(belly_format_string(absorbed_struggle_messages_inside, R, use_absorbed_count = TRUE))
 
 	//CHOMPEdit Start
 	if(private_struggle)
@@ -2238,67 +1539,24 @@
 				struggle_snuggle = sound(get_sfx("classic_struggle_sounds"))
 			else
 				struggle_snuggle = sound(get_sfx("fancy_prey_struggle"))
-			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_snuggle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 		else
-			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/client_preference/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
+			playsound(src, struggle_rustle, vary = 1, vol = 75, falloff = VORE_SOUND_FALLOFF, frequency = noise_freq, preference = /datum/preference/toggle/digestion_noises, volume_channel = VOLUME_CHANNEL_VORE) //CHOMPEdit
 	//CHOMPEdit End
 
 	//absorb resists
 	if(escapable || owner.stat) //If the stomach has escapable enabled or the owner is dead/unconscious
 		if(prob(escapechance) || owner.stat) //Let's have it check to see if the prey's escape attempt starts.
-
-
-			var/living_count = 0
-			for(var/mob/living/L in contents)
-				living_count++
-
-			var/escape_attempt_absorbed_owner_message = pick(escape_attempt_absorbed_messages_owner)
-			var/escape_attempt_absorbed_prey_message = pick(escape_attempt_absorbed_messages_prey)
-
-			escape_attempt_absorbed_owner_message = replacetext(escape_attempt_absorbed_owner_message, "%pred", owner)
-			escape_attempt_absorbed_owner_message = replacetext(escape_attempt_absorbed_owner_message, "%prey", R)
-			escape_attempt_absorbed_owner_message = replacetext(escape_attempt_absorbed_owner_message, "%belly", lowertext(name))
-			escape_attempt_absorbed_owner_message = replacetext(escape_attempt_absorbed_owner_message, "%countprey", living_count)
-			escape_attempt_absorbed_owner_message = replacetext(escape_attempt_absorbed_owner_message, "%count", contents.len)
-
-			escape_attempt_absorbed_prey_message = replacetext(escape_attempt_absorbed_prey_message, "%pred", owner)
-			escape_attempt_absorbed_prey_message = replacetext(escape_attempt_absorbed_prey_message, "%prey", R)
-			escape_attempt_absorbed_prey_message = replacetext(escape_attempt_absorbed_prey_message, "%belly", lowertext(name))
-			escape_attempt_absorbed_prey_message = replacetext(escape_attempt_absorbed_prey_message, "%countprey", living_count)
-			escape_attempt_absorbed_prey_message = replacetext(escape_attempt_absorbed_prey_message, "%count", contents.len)
-
-			escape_attempt_absorbed_owner_message = "<span class='vwarning'>[escape_attempt_absorbed_owner_message]</span>"
-			escape_attempt_absorbed_prey_message = "<span class='vwarning'>[escape_attempt_absorbed_prey_message]</span>"
+			var/escape_attempt_absorbed_owner_message = span_vwarning(belly_format_string(escape_attempt_absorbed_messages_owner, R))
+			var/escape_attempt_absorbed_prey_message = span_vwarning(belly_format_string(escape_attempt_absorbed_messages_prey, R))
 
 			to_chat(R, escape_attempt_absorbed_prey_message)
 			to_chat(owner, escape_attempt_absorbed_owner_message)
 			if(do_after(R, escapetime))
 				if((escapable || owner.stat) && (R.loc == src) && prob(escapechance_absorbed)) //Does the escape attempt succeed?
-					var/escape_absorbed_owner_message = pick(escape_absorbed_messages_owner)
-					var/escape_absorbed_prey_message = pick(escape_absorbed_messages_prey)
-					var/escape_absorbed_outside_message = pick(escape_absorbed_messages_outside)
-
-					escape_absorbed_owner_message = replacetext(escape_absorbed_owner_message, "%pred", owner)
-					escape_absorbed_owner_message = replacetext(escape_absorbed_owner_message, "%prey", R)
-					escape_absorbed_owner_message = replacetext(escape_absorbed_owner_message, "%belly", lowertext(name))
-					escape_absorbed_owner_message = replacetext(escape_absorbed_owner_message, "%countprey", living_count)
-					escape_absorbed_owner_message = replacetext(escape_absorbed_owner_message, "%count", contents.len)
-
-					escape_absorbed_prey_message = replacetext(escape_absorbed_prey_message, "%pred", owner)
-					escape_absorbed_prey_message = replacetext(escape_absorbed_prey_message, "%prey", R)
-					escape_absorbed_prey_message = replacetext(escape_absorbed_prey_message, "%belly", lowertext(name))
-					escape_absorbed_prey_message = replacetext(escape_absorbed_prey_message, "%countprey", living_count)
-					escape_absorbed_prey_message = replacetext(escape_absorbed_prey_message, "%count", contents.len)
-
-					escape_absorbed_outside_message = replacetext(escape_absorbed_outside_message, "%pred", owner)
-					escape_absorbed_outside_message = replacetext(escape_absorbed_outside_message, "%prey", R)
-					escape_absorbed_outside_message = replacetext(escape_absorbed_outside_message, "%belly", lowertext(name))
-					escape_absorbed_outside_message = replacetext(escape_absorbed_outside_message, "%countprey", living_count)
-					escape_absorbed_outside_message = replacetext(escape_absorbed_outside_message, "%count", contents.len)
-
-					escape_absorbed_owner_message = "<span class='vwarning'>[escape_absorbed_owner_message]</span>"
-					escape_absorbed_prey_message = "<span class='vwarning'>[escape_absorbed_prey_message]</span>"
-					escape_absorbed_outside_message = "<span class='vwarning'>[escape_absorbed_outside_message]</span>"
+					var/escape_absorbed_owner_message = span_vwarning(belly_format_string(escape_absorbed_messages_owner, R))
+					var/escape_absorbed_prey_message = span_vwarning(belly_format_string(escape_absorbed_messages_prey, R))
+					var/escape_absorbed_outside_message = span_vwarning(belly_format_string(escape_absorbed_messages_outside, R))
 
 					release_specific_contents(R)
 					to_chat(R, escape_absorbed_prey_message)
@@ -2312,24 +1570,8 @@
 				else if(!(R.loc == src)) //Aren't even in the belly. Quietly fail.
 					return
 				else //Belly became inescapable or you failed your roll.
-
-					var/escape_fail_absorbed_owner_message = pick(escape_fail_absorbed_messages_owner)
-					var/escape_fail_absorbed_prey_message = pick(escape_fail_absorbed_messages_prey)
-
-					escape_fail_absorbed_owner_message = replacetext(escape_fail_absorbed_owner_message, "%pred", owner)
-					escape_fail_absorbed_owner_message = replacetext(escape_fail_absorbed_owner_message, "%prey", R)
-					escape_fail_absorbed_owner_message = replacetext(escape_fail_absorbed_owner_message, "%belly", lowertext(name))
-					escape_fail_absorbed_owner_message = replacetext(escape_fail_absorbed_owner_message, "%countprey", living_count)
-					escape_fail_absorbed_owner_message = replacetext(escape_fail_absorbed_owner_message, "%count", contents.len)
-
-					escape_fail_absorbed_prey_message = replacetext(escape_fail_absorbed_prey_message, "%pred", owner)
-					escape_fail_absorbed_prey_message = replacetext(escape_fail_absorbed_prey_message, "%prey", R)
-					escape_fail_absorbed_prey_message = replacetext(escape_fail_absorbed_prey_message, "%belly", lowertext(name))
-					escape_fail_absorbed_prey_message = replacetext(escape_fail_absorbed_prey_message, "%countprey", living_count)
-					escape_fail_absorbed_prey_message = replacetext(escape_fail_absorbed_prey_message, "%count", contents.len)
-
-					escape_fail_absorbed_owner_message = "<span class='vwarning'>[escape_fail_absorbed_owner_message]</span>"
-					escape_fail_absorbed_prey_message = "<span class='vnotice'>[escape_fail_absorbed_prey_message]</span>"
+					var/escape_fail_absorbed_owner_message = span_vwarning(belly_format_string(escape_fail_absorbed_messages_owner, R))
+					var/escape_fail_absorbed_prey_message = span_vnotice(belly_format_string(escape_fail_absorbed_messages_prey, R))
 
 					to_chat(R, escape_fail_absorbed_prey_message)
 					to_chat(owner, escape_fail_absorbed_owner_message)
@@ -2360,7 +1602,7 @@
 		ourmob.reset_view(owner)
 	if(isitem(content))
 		var/obj/item/I = content
-		if(istype(I,/obj/item/weapon/card/id))
+		if(istype(I,/obj/item/card/id))
 			I.gurgle_contaminate(target.contents, target.contamination_flavor, target.contamination_color)
 		if(I.gurgled && target.contaminates)
 			I.decontaminate()
@@ -2397,32 +1639,14 @@
 			break
 	if(!dest_belly) return
 	if(ismob(prey))
-		var/living_count = 0
-		for(var/mob/living/L in contents)
-			living_count++
-
-		var/autotransfer_owner_message = pick(primary_autotransfer_messages_owner)
-		var/autotransfer_prey_message = pick(primary_autotransfer_messages_prey)
-		if(dest_belly_name == autotransferlocation_secondary)
-			autotransfer_owner_message = pick(secondary_autotransfer_messages_owner)
-			autotransfer_prey_message = pick(secondary_autotransfer_messages_prey)
-
-		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%pred", owner)
-		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%prey", prey)
-		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%belly", lowertext(name))
-		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%countprey", living_count)
-		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%count", contents.len)
-		autotransfer_owner_message = replacetext(autotransfer_owner_message, "%dest", dest_belly_name)
-
-		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%pred", owner)
-		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%prey", prey)
-		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%belly", lowertext(name))
-		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%countprey", living_count)
-		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%count", contents.len)
-		autotransfer_prey_message = replacetext(autotransfer_prey_message, "%dest", dest_belly_name)
-
-		autotransfer_owner_message = "<span class='vwarning'>[autotransfer_owner_message]</span>"
-		autotransfer_prey_message = "<span class='vwarning'>[autotransfer_prey_message]</span>"
+		var/autotransfer_owner_message
+		var/autotransfer_prey_message
+		if(dest_belly_name == autotransferlocation)
+			autotransfer_owner_message = span_vwarning(belly_format_string(primary_autotransfer_messages_owner, prey, dest = dest_belly_name))
+			autotransfer_prey_message = span_vwarning(belly_format_string(primary_autotransfer_messages_prey, prey, dest = dest_belly_name))
+		else
+			autotransfer_owner_message =  span_vwarning(belly_format_string(secondary_autotransfer_messages_owner, prey, dest = dest_belly_name))
+			autotransfer_prey_message = span_vwarning(belly_format_string(secondary_autotransfer_messages_prey, prey, dest = dest_belly_name))
 
 		to_chat(prey, autotransfer_prey_message)
 		if(entrance_logs)
@@ -2506,9 +1730,9 @@
 		if(blacklist & autotransfer_flags_list_items["Trash"])
 			if(istype(prey, /obj/item/trash)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Eggs"])
-			if(istype(prey, /obj/item/weapon/storage/vore_egg)) return FALSE
+			if(istype(prey, /obj/item/storage/vore_egg)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Remains"])
-			if(istype(prey, /obj/item/weapon/digestion_remains)) return FALSE
+			if(istype(prey, /obj/item/digestion_remains)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Indigestible Items"])
 			if(prey in items_preserved) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Recyclable Items"])
@@ -2516,20 +1740,20 @@
 				var/obj/item/I = prey
 				if(I.matter) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Ores"])
-			if(istype(prey, /obj/item/weapon/ore)) return FALSE
+			if(istype(prey, /obj/item/ore)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Clothes and Bags"])
-			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/weapon/storage)) return FALSE
+			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/storage)) return FALSE
 		if(blacklist & autotransfer_flags_list_items["Food"])
-			if(istype(prey, /obj/item/weapon/reagent_containers/food)) return FALSE
+			if(istype(prey, /obj/item/reagent_containers/food)) return FALSE
 		if(whitelist == 0) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Items"])
 			if(isitem(prey)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Trash"])
 			if(istype(prey, /obj/item/trash)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Eggs"])
-			if(istype(prey, /obj/item/weapon/storage/vore_egg)) return TRUE
+			if(istype(prey, /obj/item/storage/vore_egg)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Remains"])
-			if(istype(prey, /obj/item/weapon/digestion_remains)) return TRUE
+			if(istype(prey, /obj/item/digestion_remains)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Indigestible Items"])
 			if(prey in items_preserved) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Recyclable Items"])
@@ -2537,11 +1761,11 @@
 				var/obj/item/I = prey
 				if(I.matter) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Ores"])
-			if(istype(prey, /obj/item/weapon/ore)) return TRUE
+			if(istype(prey, /obj/item/ore)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Clothes and Bags"])
-			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/weapon/storage)) return TRUE
+			if(istype(prey, /obj/item/clothing) || istype(prey, /obj/item/storage)) return TRUE
 		if(whitelist & autotransfer_flags_list_items["Food"])
-			if(istype(prey, /obj/item/weapon/reagent_containers/food)) return TRUE
+			if(istype(prey, /obj/item/reagent_containers/food)) return TRUE
 	return FALSE //CHOMPEdit end
 
 // Belly copies and then returns the copy
@@ -2632,18 +1856,9 @@
 	dupe.vorespawn_blacklist = vorespawn_blacklist
 	dupe.vorespawn_whitelist = vorespawn_whitelist
 	dupe.vorespawn_absorbed = vorespawn_absorbed
-	dupe.vore_sprite_flags = vore_sprite_flags
-	dupe.affects_vore_sprites = affects_vore_sprites
-	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
 	dupe.absorbed_multiplier = absorbed_multiplier
 	dupe.count_liquid_for_sprite = count_liquid_for_sprite
 	dupe.liquid_multiplier = liquid_multiplier
-	dupe.count_items_for_sprite = count_items_for_sprite
-	dupe.item_multiplier = item_multiplier
-	dupe.health_impacts_size = health_impacts_size
-	dupe.resist_triggers_animation = resist_triggers_animation
-	dupe.size_factor_for_sprite = size_factor_for_sprite
-	dupe.belly_sprite_to_affect = belly_sprite_to_affect
 	dupe.undergarment_chosen = undergarment_chosen
 	dupe.undergarment_if_none = undergarment_if_none
 	dupe.undergarment_color = undergarment_color
@@ -2666,6 +1881,8 @@
 	dupe.entrance_logs = entrance_logs
 	dupe.noise_freq = noise_freq
 	dupe.item_digest_logs = item_digest_logs
+	dupe.show_fullness_messages = show_fullness_messages
+	dupe.belchchance = belchchance
 	dupe.digest_max = digest_max //CHOMP end of variables from CHOMP
 
 	dupe.belly_fullscreen = belly_fullscreen
@@ -2684,6 +1901,15 @@
 	dupe.belly_mob_mult = belly_mob_mult
 	dupe.belly_item_mult = belly_item_mult
 	dupe.belly_overall_mult	= belly_overall_mult
+	dupe.vore_sprite_flags = vore_sprite_flags
+	dupe.affects_vore_sprites = affects_vore_sprites
+	dupe.count_absorbed_prey_for_sprite = count_absorbed_prey_for_sprite
+	dupe.resist_triggers_animation = resist_triggers_animation
+	dupe.size_factor_for_sprite = size_factor_for_sprite
+	dupe.belly_sprite_to_affect = belly_sprite_to_affect
+	dupe.health_impacts_size = health_impacts_size
+	dupe.count_items_for_sprite = count_items_for_sprite
+	dupe.item_multiplier = item_multiplier
 
 	//// Object-holding variables
 	//struggle_messages_outside - strings
@@ -2919,3 +2145,44 @@
 
 /obj/belly/container_resist(mob/M)
 	return relay_resist(M)
+
+/obj/belly/proc/GetFullnessFromBelly()
+	if(!affects_vore_sprites)
+		return 0
+	var/belly_fullness = 0
+	for(var/mob/living/M in src)
+		if(count_absorbed_prey_for_sprite || !M.absorbed)
+			var/fullness_to_add = M.size_multiplier
+			fullness_to_add *= M.mob_size / 20
+			if(M.absorbed)
+				fullness_to_add *= absorbed_multiplier
+			if(health_impacts_size)
+			//CHOMPEdit Start
+				if(ishuman(M))
+					fullness_to_add *= (M.health + 100) / (M.getMaxHealth() + 100)
+				else
+					fullness_to_add *= M.health / M.getMaxHealth()
+			if(fullness_to_add > 0)
+				belly_fullness += fullness_to_add
+			//CHOMPEdit End
+	if(count_liquid_for_sprite)
+		belly_fullness += (reagents.total_volume / 100) * liquid_multiplier
+	if(count_items_for_sprite)
+		for(var/obj/item/I in src)
+			var/fullness_to_add = 0
+			if(I.w_class == ITEMSIZE_TINY)
+				fullness_to_add = ITEMSIZE_COST_TINY
+			else if(I.w_class == ITEMSIZE_SMALL)
+				fullness_to_add = ITEMSIZE_COST_SMALL
+			else if(I.w_class == ITEMSIZE_NORMAL)
+				fullness_to_add = ITEMSIZE_COST_NORMAL
+			else if(I.w_class == ITEMSIZE_LARGE)
+				fullness_to_add = ITEMSIZE_COST_LARGE
+			else if(I.w_class == ITEMSIZE_HUGE)
+				fullness_to_add = ITEMSIZE_COST_HUGE
+			else
+				fullness_to_add = I.w_class //CHOMPEdit
+			fullness_to_add /= 32
+			belly_fullness += fullness_to_add * item_multiplier
+	belly_fullness *= size_factor_for_sprite
+	return belly_fullness

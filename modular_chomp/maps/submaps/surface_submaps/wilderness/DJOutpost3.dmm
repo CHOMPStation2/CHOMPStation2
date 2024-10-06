@@ -94,12 +94,12 @@
 /obj/effect/decal/cleanable/blood,
 /obj/item/clothing/under/frontier,
 /obj/random_multi/single_item/sfr_headset,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "ar" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	icon_state = "intercom"
 	},
@@ -108,7 +108,7 @@
 /area/submap/DJOutpost1)
 "as" = (
 /obj/machinery/computer/message_monitor,
-/obj/item/weapon/paper/monitorkey,
+/obj/item/paper/monitorkey,
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 4;
@@ -118,11 +118,11 @@
 /area/submap/DJOutpost1)
 "at" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	icon_state = "intercom"
 	},
-/obj/item/weapon/book/codex/lore/news,
+/obj/item/book/codex/lore/news,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "au" = (
@@ -154,14 +154,14 @@
 /area/submap/DJOutpost1)
 "aw" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/codex/lore/robutt,
+/obj/item/book/codex/lore/robutt,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "ax" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/codex/lore/vir,
-/obj/item/weapon/book/manual/excavation,
-/obj/item/weapon/book/manual/wiki/engineering_construction,
+/obj/item/book/codex/lore/vir,
+/obj/item/book/manual/excavation,
+/obj/item/book/manual/wiki/engineering_construction,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "ay" = (
@@ -169,29 +169,29 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "az" = (
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "aA" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /obj/random_multi/single_item/sfr_headset,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "aB" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/intercom/syndicate{
+/obj/item/radio/intercom/syndicate{
 	desc = "Talk through this.";
 	name = "station intercom (General)"
 	},
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "aC" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio,
+/obj/item/radio,
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/hyper;
+	cell_type = /obj/item/cell/hyper;
 	dir = 4;
 	environ = 1;
 	equipment = 1;
@@ -219,10 +219,10 @@
 "aF" = (
 /obj/structure/bookcase,
 /obj/structure/safe/floor,
-/obj/item/weapon/gun/energy/ionrifle/pistol,
-/obj/item/weapon/bone/skull/unknown,
-/obj/item/weapon/bone,
-/obj/item/weapon/bone/ribs,
+/obj/item/gun/energy/ionrifle/pistol,
+/obj/item/bone/skull/unknown,
+/obj/item/bone,
+/obj/item/bone/ribs,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "aG" = (
@@ -230,7 +230,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "aH" = (
-/obj/item/weapon/reagent_containers/food/snacks/unajerky,
+/obj/item/reagent_containers/food/snacks/unajerky,
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1"
@@ -258,10 +258,10 @@
 /area/submap/DJOutpost1)
 "aL" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/material/minihoe,
-/obj/item/device/analyzer/plant_analyzer,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/material/minihoe,
+/obj/item/analyzer/plant_analyzer,
 /obj/random_multi/single_item/sfr_headset,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
@@ -286,18 +286,18 @@
 /area/submap/DJOutpost1)
 "aP" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/clown,
+/obj/item/bedsheet/clown,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "aQ" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/energy/lasershotgun,
+/obj/item/gun/energy/lasershotgun,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "aR" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard,
+/obj/item/material/shard{
 	icon_state = "shardmedium"
 	},
 /obj/item/stack/rods,
@@ -327,7 +327,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
 "aW" = (
-/obj/item/device/gps/internal/poi,
+/obj/item/gps/internal/poi,
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/DJOutpost1)

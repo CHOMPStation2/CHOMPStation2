@@ -19,8 +19,8 @@
 	special_attack_cooldown = 10 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 8
-	loot_list = list(/obj/item/weapon/gun/energy/flamegun = 100,
-		/obj/item/weapon/bone/skull = 100
+	loot_list = list(/obj/item/gun/energy/flamegun = 100,
+		/obj/item/bone/skull = 100
 			)
 
 
@@ -130,10 +130,10 @@
 	special_attack_max_range = 10
 	projectiletype = /obj/item/projectile/bullet/pistol/ap
 
-	loot_list = list(/obj/item/weapon/circuitboard/mecha/hades/targeting = 100,
-		/obj/item/weapon/circuitboard/mecha/hades/peripherals = 100,
-		/obj/item/weapon/circuitboard/mecha/hades/main = 100,
-		/obj/item/weapon/bone/skull = 100
+	loot_list = list(/obj/item/circuitboard/mecha/hades/targeting = 100,
+		/obj/item/circuitboard/mecha/hades/peripherals = 100,
+		/obj/item/circuitboard/mecha/hades/main = 100,
+		/obj/item/bone/skull = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
@@ -179,7 +179,7 @@
 		special_attack_cooldown = 5 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/head/scientist/do_special_attack(atom/A)
-	visible_message(span("warning", "\The [src] begins to fabricate drones!"))
+	visible_message(span_warning("\The [src] begins to fabricate drones!"))
 	sleep(3)
 	if(vore_fullness == 1)
 		new /mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse (src.loc)
@@ -205,13 +205,13 @@
 			/obj/item/prop/alien/junk = 60,
 			/obj/random/tool/alien = 60,
 			/obj/random/tool/alien = 60,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
+			/obj/item/cell/device/weapon/recharge/alien = 60,
 			/obj/random/tool/alien = 60,
-			/obj/item/weapon/cell/device/weapon/recharge/alien = 60,
-			/obj/item/weapon/bluespace_harpoon = 60,
-			/obj/item/weapon/flame/lighter/supermatter/syndismzippo = 60,
-			/obj/item/weapon/gun/energy/medigun = 60,
-			/obj/item/weapon/bone/skull = 100
+			/obj/item/cell/device/weapon/recharge/alien = 60,
+			/obj/item/bluespace_harpoon = 60,
+			/obj/item/flame/lighter/supermatter/syndismzippo = 60,
+			/obj/item/gun/energy/medigun = 60,
+			/obj/item/bone/skull = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
@@ -301,7 +301,7 @@
 		bomb_range -= T
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokecargo(atom/A)
-	visible_message(span("warning", "\The [src] calls for their help on radio!"))
+	visible_message(span_warning("\The [src] calls for their help on radio!"))
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokeengi(atom/A) //place holdery
 	var/obj/item/projectile/P = new /obj/item/projectile/temp(get_turf(src))
@@ -310,14 +310,14 @@
 	P2.launch_projectile(A, BP_TORSO, src)
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokesci(atom/A)
-	visible_message(span("warning", "\The [src] begins to fabricate drones!"))
+	visible_message(span_warning("\The [src] begins to fabricate drones!"))
 	sleep(3)
 	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokemedical(atom/A)
-	visible_message(span("warning", "\The [src] begins to tend to their wounds!"))
+	visible_message(span_warning("\The [src] begins to tend to their wounds!"))
 	sleep(3)
 	adjustBruteLoss(-12)
 	adjustFireLoss(-12)
@@ -340,7 +340,7 @@
 	special_attack_min_range = 0
 	special_attack_max_range = 7
 
-	loot_list = list(/obj/item/weapon/gun/energy/pulseglove = 100
+	loot_list = list(/obj/item/gun/energy/pulseglove = 100
 			)
 
 

@@ -2,7 +2,7 @@ var/datum/antagonist/ert/ert
 
 /datum/antagonist/ert
 	id = MODE_ERT
-	bantype = "Emergency Response Team"
+	bantype = JOB_EMERGENCY_RESPONSE_TEAM
 	role_type = BE_OPERATIVE
 	role_text = "Emergency Responder"
 	role_text_plural = "Emergency Responders"
@@ -14,9 +14,9 @@ var/datum/antagonist/ert/ert
 		and before taking extreme actions, please try to also contact the administration! \
 		Think through your actions and make the roleplay immersive! <b>Please remember all \
 		rules aside from those without explicit exceptions apply to the ERT.</b>"
-	leader_welcome_text = "As leader of the Emergency Response Team, you answer only to the Company, and have authority to override the Site Manager where it is necessary to achieve your mission goals. It is recommended that you attempt to cooperate with the Site Manager where possible, however."
+	leader_welcome_text = "As leader of the Emergency Response Team, you answer only to the Company, and have authority to override the " + JOB_SITE_MANAGER + " where it is necessary to achieve your mission goals. It is recommended that you attempt to cooperate with the " + JOB_SITE_MANAGER + " where possible, however."
 	landmark_id = "Response Team"
-	id_type = /obj/item/weapon/card/id/centcom/ERT
+	id_type = /obj/item/card/id/centcom/ERT
 
 	flags = ANTAG_OVERRIDE_JOB | ANTAG_SET_APPEARANCE | ANTAG_HAS_LEADER | ANTAG_CHOOSE_NAME
 	antaghud_indicator = "hudloyalist"
@@ -46,7 +46,7 @@ var/datum/antagonist/ert/ert
 /datum/antagonist/ert/equip(var/mob/living/carbon/human/player)
 
 	//Special radio setup
-	player.equip_to_slot_or_del(new /obj/item/device/radio/headset/ert(src), slot_l_ear)
+	player.equip_to_slot_or_del(new /obj/item/radio/headset/ert(src), slot_l_ear)
 	player.equip_to_slot_or_del(new /obj/item/clothing/under/ert(src), slot_w_uniform)
 	player.equip_to_slot_or_del(new /obj/item/clothing/shoes/boots/swat(src), slot_shoes)
 	player.equip_to_slot_or_del(new /obj/item/clothing/gloves/swat(src), slot_gloves)

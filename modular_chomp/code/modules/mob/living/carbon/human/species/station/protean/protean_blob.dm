@@ -55,7 +55,7 @@
 	has_hands = 1
 	shock_resist = 1
 	nameset = 1
-	holder_type = /obj/item/weapon/holder/protoblob
+	holder_type = /obj/item/holder/protoblob
 	var/hiding = 0
 	vore_icons = 1
 	vore_active = 1
@@ -299,7 +299,7 @@
 		return ..()
 
 /mob/living/simple_mob/protean_blob/rad_act(severity)
-	if(istype(loc, /obj/item/weapon/rig))
+	if(istype(loc, /obj/item/rig))
 		return	//Don't irradiate us while we're in rig mode
 	if(humanform)
 		return humanform.rad_act(severity)
@@ -334,7 +334,7 @@
 			healing = null
 
 /mob/living/simple_mob/protean_blob/lay_down()
-	var/obj/item/weapon/rig/rig = src.get_rig()
+	var/obj/item/rig/rig = src.get_rig()
 	if(rig)
 		rig.force_rest(src)
 		return
@@ -452,7 +452,7 @@
 
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
-	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)
+	if(!force && !isturf(loc) && !loc == /obj/item/rig/protean)
 		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
 		return
 	to_chat(src, "<span class='notice'>You rapidly disassociate your form.</span>")
@@ -490,7 +490,7 @@
 		blob.ckey = ckey
 		blob.ooc_notes = ooc_notes
 		temporary_form = blob
-		var/obj/item/device/radio/R = null
+		var/obj/item/radio/R = null
 		if(isradio(l_ear))
 			R = l_ear
 		if(isradio(r_ear))
@@ -542,7 +542,7 @@
 /proc/remove_micros(var/src, var/mob/root)
 	for(var/obj/item/I in src)
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
-		if(istype(I, /obj/item/weapon/holder))
+		if(istype(I, /obj/item/holder))
 			root.remove_from_mob(I)
 
 /mob/living/proc/usehardsuit()
@@ -550,8 +550,8 @@
 	set desc = "Allows a protean blob to open hardsuit interface."
 	set category = "Abilities.Protean"
 
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
+	if(istype(loc, /obj/item/rig/protean))
+		var/obj/item/rig/protean/prig = loc
 		to_chat(src, "You attempt to interface with the [prig].")
 		prig.tgui_interact(src)
 	else
@@ -560,7 +560,7 @@
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
 	if(!istype(blob))
 		return
-	if(blob.loc == /obj/item/weapon/rig/protean)
+	if(blob.loc == /obj/item/rig/protean)
 		return
 	if(!force && !isturf(blob.loc))
 		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
@@ -646,7 +646,7 @@
 		C.statpanel = "Protean"
 
 /mob/living/simple_mob/protean_blob/ClickOn(var/atom/A, var/params)
-	if(istype(loc, /obj/item/weapon/rig/protean))
+	if(istype(loc, /obj/item/rig/protean))
 		HardsuitClickOn(A)
 	..()
 
@@ -654,8 +654,8 @@
 	return 1
 
 /mob/living/simple_mob/protean_blob/HardsuitClickOn(var/atom/A, var/alert_ai = 0)
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
+	if(istype(loc, /obj/item/rig/protean))
+		var/obj/item/rig/protean/prig = loc
 		if(istype(prig) && !prig.offline && prig.selected_module)
 			if(!prig.ai_can_move_suit(src))
 				return 0

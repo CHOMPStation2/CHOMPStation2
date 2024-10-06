@@ -6,9 +6,9 @@
 	icon_state = "dnaopen"
 	anchored = TRUE
 	density = TRUE
-	circuit = /obj/item/weapon/circuitboard/dna_analyzer
+	circuit = /obj/item/circuitboard/dna_analyzer
 
-	var/obj/item/weapon/forensics/swab/bloodsamp = null
+	var/obj/item/forensics/swab/bloodsamp = null
 	var/scanning = 0
 	var/scanner_progress = 0
 	var/scanner_rate = 5
@@ -21,11 +21,11 @@
 
 /obj/machinery/dnaforensics/attackby(obj/item/W, mob/user)
 	if(bloodsamp)
-		to_chat(user, "<span class='warning'>There is a sample in the machine.</span>")
+		to_chat(user, span_warning("There is a sample in the machine."))
 		return
 
 	if(scanning)
-		to_chat(user, "<span class='warning'>[src] is busy scanning right now.</span>")
+		to_chat(user, span_warning("[src] is busy scanning right now."))
 		return
 
 	if(default_deconstruction_screwdriver(user, W))
@@ -33,15 +33,15 @@
 	if(default_deconstruction_crowbar(user, W))
 		return
 
-	var/obj/item/weapon/forensics/swab/swab = W
+	var/obj/item/forensics/swab/swab = W
 	if(istype(swab) && swab.is_used())
 		user.unEquip(W)
 		bloodsamp = swab
 		swab.forceMove(src)
-		to_chat(user, "<span class='notice'>You insert [W] into [src].</span>")
+		to_chat(user, span_notice("You insert [W] into [src]."))
 		update_icon()
 	else
-		to_chat(user, "<span class='warning'>\The [src] only accepts used swabs.</span>")
+		to_chat(user, span_warning("\The [src] only accepts used swabs."))
 		return
 
 /obj/machinery/dnaforensics/tgui_interact(mob/user, datum/tgui/ui)
@@ -77,10 +77,10 @@
 				if(bloodsamp)
 					scanner_progress = 0
 					scanning = TRUE
-					to_chat(usr, "<span class='notice'>Scan initiated.</span>")
+					to_chat(usr, span_notice("Scan initiated."))
 					update_icon()
 				else
-					to_chat(usr, "<span class='warning'>Insert an item to scan.</span>")
+					to_chat(usr, span_warning("Insert an item to scan."))
 			. = TRUE
 
 		if("ejectItem")
@@ -105,12 +105,12 @@
 	last_process_worldtime = world.time
 
 /obj/machinery/dnaforensics/proc/complete_scan()
-	visible_message("<span class='notice'>[icon2html(src,viewers(src))] makes an insistent chime.</span>", 2)
+	visible_message(span_notice("[icon2html(src,viewers(src))] makes an insistent chime."), 2)
 	update_icon()
 	if(bloodsamp)
-		var/obj/item/weapon/paper/P = new(src)
+		var/obj/item/paper/P = new(src)
 		P.name = "[src] report #[++report_num]: [bloodsamp.name]"
-		P.stamped = list(/obj/item/weapon/stamp)
+		P.stamped = list(/obj/item/stamp)
 		P.cut_overlays()
 		P.add_overlay("paper_stamped")
 		//dna data itself

@@ -66,13 +66,13 @@
 /area/template_noop)
 "cw" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,
 /area/template_noop)
 "cK" = (
@@ -87,7 +87,7 @@
 /area/template_noop)
 "cL" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,
 /area/template_noop)
 "cN" = (
@@ -111,7 +111,7 @@
 /area/template_noop)
 "dc" = (
 /obj/structure/disposalpipe/segment,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -162,7 +162,7 @@
 /turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,
 /area/template_noop)
 "dS" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 22
@@ -171,8 +171,8 @@
 /area/template_noop)
 "ed" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/lino,
 /area/template_noop)
 "ej" = (
@@ -265,11 +265,11 @@
 /area/template_noop)
 "gq" = (
 /obj/machinery/smartfridge/drinks,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine,
+/obj/item/reagent_containers/food/drinks/bottle/pwine,
+/obj/item/reagent_containers/food/drinks/bottle/pwine,
+/obj/item/reagent_containers/food/drinks/bottle/pwine,
+/obj/item/reagent_containers/food/drinks/bottle/pwine,
+/obj/item/reagent_containers/food/drinks/bottle/pwine,
 /turf/simulated/floor/lino,
 /area/template_noop)
 "gv" = (
@@ -333,7 +333,7 @@
 /area/template_noop)
 "ik" = (
 /obj/structure/table/marble,
-/obj/item/weapon/whetstone,
+/obj/item/whetstone,
 /turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,
 /area/template_noop)
 "im" = (
@@ -484,10 +484,10 @@
 /area/template_noop)
 "lY" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
 /turf/simulated/floor/lino,
@@ -617,7 +617,7 @@
 /obj/item/honey_frame,
 /obj/item/honey_frame,
 /obj/item/honey_frame,
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/item/honey_frame,
 /obj/item/honey_frame,
 /obj/item/bee_pack,
@@ -671,7 +671,7 @@
 /obj/structure/bed/chair/bay/chair/padded/lime{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -769,7 +769,7 @@
 /turf/unsimulated/floor/tiled/asteroid_steel/turfpack/sif,
 /area/template_noop)
 "qC" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -785,8 +785,8 @@
 /area/template_noop)
 "qF" = (
 /obj/structure/table/marble,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/multi,
+/obj/item/paper_bin,
+/obj/item/pen/multi,
 /turf/simulated/floor/lino,
 /area/template_noop)
 "qG" = (
@@ -812,7 +812,7 @@
 /turf/simulated/floor/carpet/purcarpet/turfpack/station,
 /area/template_noop)
 "rd" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -836,7 +836,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -899,7 +899,7 @@
 /obj/structure/bed/chair/bay/chair/padded/red{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -946,10 +946,10 @@
 /area/template_noop)
 "sD" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
 /turf/simulated/floor/carpet/purcarpet/turfpack/station,
@@ -1048,19 +1048,19 @@
 /area/template_noop)
 "vg" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/glasses/coffeemug{
+/obj/item/storage/box/glasses/coffeemug{
 	pixel_x = -6;
 	pixel_y = 12
 	},
-/obj/item/weapon/storage/box/glasses/meta{
+/obj/item/storage/box/glasses/meta{
 	pixel_y = 12;
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/box/glasses/coffeecup{
+/obj/item/storage/box/glasses/coffeecup{
 	pixel_x = -6;
 	pixel_y = 1
 	},
-/obj/item/weapon/storage/box/glasses/meta/metapint{
+/obj/item/storage/box/glasses/meta/metapint{
 	pixel_x = 7;
 	pixel_y = 1
 	},
@@ -1151,7 +1151,7 @@
 /area/template_noop)
 "wQ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/reddouble,
+/obj/item/bedsheet/reddouble,
 /turf/simulated/floor/carpet/purcarpet/turfpack/station,
 /area/template_noop)
 "xl" = (
@@ -1230,7 +1230,7 @@
 	dir = 4;
 	dispense_reagents = list("iron","radium","lemon_lime","sugar","orangejuice","limejuice","sodawater","tonic","beer","kahlua","whiskey","redwine","whitewine","vodka","cider","gin","rum","tequilla","vermouth","cognac","ale","mead","bitters")
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol,
+/obj/item/reagent_containers/chem_disp_cartridge/ethanol,
 /turf/simulated/floor/lino,
 /area/template_noop)
 "yB" = (
@@ -1488,45 +1488,45 @@
 /obj/structure/closet/walllocker_double/north{
 	name = "Survival Cabinet"
 	},
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/device/starcaster_news,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
-/obj/item/weapon/flame/lighter/zippo/royal,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/starcaster_news,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
+/obj/item/flame/lighter/zippo/royal,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /obj/item/bodybag/cryobag,
-/obj/item/weapon/cell/device/hyper,
+/obj/item/cell/device/hyper,
 /obj/item/sticky_pad/random,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/pen/multi,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/card/id/external,
+/obj/item/pen/multi,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/gun/energy/gun/taser,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/gun/energy/gun/taser,
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/template_noop)
 "Ep" = (
@@ -1588,9 +1588,9 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/storage/pill_bottle/dice,
-/obj/item/weapon/storage/dicecup/loaded,
-/obj/item/weapon/deck/holder,
+/obj/item/storage/pill_bottle/dice,
+/obj/item/storage/dicecup/loaded,
+/obj/item/deck/holder,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/template_noop)
 "FO" = (
@@ -1659,7 +1659,7 @@
 /area/template_noop)
 "GT" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /turf/simulated/floor/carpet/purcarpet/turfpack/station,
 /area/template_noop)
 "GW" = (
@@ -1706,16 +1706,16 @@
 /area/template_noop)
 "IT" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/condiment/carton/sugar,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/condiment/carton/sugar,
 /turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,
 /area/template_noop)
 "IX" = (
@@ -1753,7 +1753,7 @@
 /area/template_noop)
 "JE" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 3
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
@@ -1793,7 +1793,7 @@
 /area/template_noop)
 "KN" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,
 /area/template_noop)
 "KT" = (
@@ -1851,7 +1851,7 @@
 "Me" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/table/marble,
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/book/manual/chef_recipes,
 /turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,
 /area/template_noop)
 "Mj" = (
@@ -1990,7 +1990,7 @@
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -22
 	},
@@ -2001,7 +2001,7 @@
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/nothing,
+/obj/item/reagent_containers/chem_disp_cartridge/nothing,
 /turf/simulated/floor/lino,
 /area/template_noop)
 "PD" = (
@@ -2032,7 +2032,7 @@
 	pixel_y = -22
 	},
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /obj/machinery/recharger,
 /obj/item/instrument/violin,
 /obj/item/instrument/guitar,
@@ -2040,7 +2040,7 @@
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/template_noop)
 "QM" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -2167,7 +2167,7 @@
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,
+/obj/item/reagent_containers/chem_disp_cartridge/gelatin,
 /turf/simulated/floor/lino,
 /area/template_noop)
 "TM" = (
@@ -2215,8 +2215,8 @@
 /obj/effect/floor_decal/spline/plain,
 /obj/structure/railing/grey,
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/multi,
+/obj/item/paper_bin,
+/obj/item/pen/multi,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/template_noop)
 "Vv" = (
@@ -2385,7 +2385,7 @@
 /obj/effect/map_effect/perma_light,
 /obj/effect/map_effect/perma_light,
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /turf/unsimulated/floor/tiled/eris/cafe/turfpack/station,
 /area/template_noop)
 "Zh" = (
@@ -2393,9 +2393,9 @@
 /obj/structure/railing/grey,
 /obj/structure/table/gamblingtable,
 /obj/structure/disposalpipe/segment,
-/obj/item/weapon/storage/pill_bottle/dice,
-/obj/item/weapon/storage/dicecup/loaded,
-/obj/item/weapon/deck/holder,
+/obj/item/storage/pill_bottle/dice,
+/obj/item/storage/dicecup/loaded,
+/obj/item/deck/holder,
 /obj/structure/railing/grey{
 	dir = 8
 	},

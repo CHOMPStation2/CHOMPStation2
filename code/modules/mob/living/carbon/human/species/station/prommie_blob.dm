@@ -256,13 +256,13 @@
 
 	var/atom/movable/to_locate = src
 	if(!isturf(to_locate.loc))
-		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
+		to_chat(src,span_warning("You need more space to perform this action!"))
 		return
 
 	//Blob form
 	if(!ishuman(src))
 		if(humanform.temporary_form.stat || paralysis || stunned || weakened || restrained())
-			to_chat(src,"<span class='warning'>You can only do this while not stunned.</span>")
+			to_chat(src,span_warning("You can only do this while not stunned."))
 		else
 			humanform.prommie_outofblob(src)
 
@@ -341,7 +341,7 @@
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/prommie_intoblob(force)
 	if(!force && !isturf(loc))
-		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(src,span_warning("You can't change forms while inside something."))
 		return
 
 	handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
@@ -440,7 +440,7 @@
 	temporary_form = blob
 
 //ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.
-	var/obj/item/device/radio/R = null
+	var/obj/item/radio/R = null
 	if(isradio(l_ear))
 		R = l_ear
 	if(isradio(r_ear))
@@ -478,7 +478,7 @@
 		return
 
 	if(!force && !isturf(blob.loc))
-		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(blob,span_warning("You can't change forms while inside something."))
 		return
 
 	if(buckled)

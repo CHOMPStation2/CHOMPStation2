@@ -18,8 +18,6 @@ var/list/admin_verbs_default = list(
 //	/client/proc/cmd_mod_say,
 //	/client/proc/deadchat				//toggles deadchat on/off,
 //	/client/proc/toggle_ahelp_sound,
-	/client/proc/toggle_admin_global_looc,
-	/client/proc/toggle_admin_deadchat
 	)
 
 var/list/admin_verbs_admin = list(
@@ -118,8 +116,6 @@ var/list/admin_verbs_admin = list(
 	/client/proc/change_security_level,
 	/client/proc/view_chemical_reaction_logs,
 	/client/proc/makepAI,
-	/client/proc/toggle_debug_logs,
-	/client/proc/toggle_attack_logs,
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
 	/datum/admins/proc/quick_nif, //VOREStation Add,
@@ -133,6 +129,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/removetickets,
 	/client/proc/delbook,
 	/client/proc/toggle_spawning_with_recolour,
+	/client/proc/start_vote,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
@@ -167,7 +164,8 @@ var/list/admin_verbs_fun = list(
 	/client/proc/roll_dices,
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
-	/client/proc/smite,
+//	/client/proc/smite,  //Replaced by player_effects
+	/client/proc/player_effects,
 	/client/proc/admin_lightning_strike,
 	/client/proc/resize, //VOREStation Add,
 	/client/proc/tgui_admin_lists, //CHOMPStation Add
@@ -200,7 +198,9 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/map_template_load_on_new_z,
 	/client/proc/eventkit_open_mob_spawner,
 	/client/proc/generic_structure, //VOREStation Add
-	/client/proc/generic_item //VOREStation Add
+	/client/proc/generic_item, //VOREStation Add
+	/client/proc/create_gm_message,
+	/client/proc/remove_gm_message
 	)
 
 var/list/admin_verbs_server = list(
@@ -271,7 +271,6 @@ var/list/admin_verbs_debug = list(
 	/client/proc/jumptomob,
 	/client/proc/jumptocoord,
 	/client/proc/dsay,
-	/client/proc/toggle_debug_logs,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/datum/admins/proc/show_player_panel,	//shows an interface for individual players, with various links (links require additional flags, //VOREStation Add,
 	/client/proc/player_panel_new, //shows an interface for all players, with links to various panels, //VOREStation Add,
@@ -419,7 +418,6 @@ var/list/admin_verbs_mod = list(
 	/client/proc/check_antagonists,
 	/client/proc/aooc,
 	/client/proc/jobbans,
-	/client/proc/toggle_attack_logs,
 	/client/proc/cmd_admin_subtle_message, 	//send an message to somebody as a 'voice in their head',
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/cmd_admin_direct_narrate,
@@ -430,6 +428,7 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
+	/client/proc/start_vote,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
@@ -558,8 +557,6 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/change_human_appearance_self,      // Allows the human-based mob itself change its basic appearance ,
 	/client/proc/change_security_level,
 	/client/proc/makepAI,
-	/client/proc/toggle_debug_logs,
-	/client/proc/toggle_attack_logs,
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
 	/datum/admins/proc/sendFax,
@@ -578,11 +575,11 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
+	/client/proc/start_vote,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
-
 )
 
 /client/proc/add_admin_verbs()

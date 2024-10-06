@@ -24,32 +24,35 @@
 	name = "Size"
 	sort_order = 2
 
-/datum/category_item/player_setup_item/vore/size/load_character(var/savefile/S)
-	S["size_multiplier"]	>> pref.size_multiplier
-	S["weight_vr"]			>> pref.weight_vr
-	S["weight_gain"]		>> pref.weight_gain
-	S["weight_loss"]		>> pref.weight_loss
-	S["fuzzy"]				>> pref.fuzzy
-	S["offset_override"]	>> pref.offset_override
-	S["voice_freq"]			>> pref.voice_freq
-	S["voice_sound"]		>> pref.voice_sound
-	S["custom_speech_bubble"]		>> pref.custom_speech_bubble
-	S["custom_footstep"]	>> pref.custom_footstep // CHOMPEdit
-	S["species_sound"]		>> pref.species_sound  // CHOMPEdit
+/datum/category_item/player_setup_item/vore/size/load_character(list/save_data)
+	pref.size_multiplier	= save_data["size_multiplier"]
+	pref.weight_vr			= save_data["weight_vr"]
+	pref.weight_gain		= save_data["weight_gain"]
+	pref.weight_loss		= save_data["weight_loss"]
+	pref.fuzzy				= save_data["fuzzy"]
+	pref.offset_override	= save_data["offset_override"]
+	pref.voice_freq			= save_data["voice_freq"]
+	pref.voice_sound		= save_data["voice_sound"]
+	pref.custom_speech_bubble	= save_data["custom_speech_bubble"]
+	//CHOMPAdd Start
+	pref.custom_footstep	= save_data["custom_footstep"]
+	pref.species_sound		= save_data["species_sound"]
+	//CHOMPAdd End
 
-/datum/category_item/player_setup_item/vore/size/save_character(var/savefile/S)
-	S["size_multiplier"]	<< pref.size_multiplier
-	S["weight_vr"]			<< pref.weight_vr
-	S["weight_gain"]		<< pref.weight_gain
-	S["weight_loss"]		<< pref.weight_loss
-	S["fuzzy"]				<< pref.fuzzy
-	S["offset_override"]	<< pref.offset_override
-	S["voice_freq"]			<< pref.voice_freq
-	S["voice_sound"]		<< pref.voice_sound
-	S["custom_speech_bubble"]		<< pref.custom_speech_bubble
-	S["custom_footstep"]	<< pref.custom_footstep // CHOMPEdit
-	S["species_sound"]		<< pref.species_sound // CHOMPEdit
-
+/datum/category_item/player_setup_item/vore/size/save_character(list/save_data)
+	save_data["size_multiplier"]	= pref.size_multiplier
+	save_data["weight_vr"]			= pref.weight_vr
+	save_data["weight_gain"]		= pref.weight_gain
+	save_data["weight_loss"]		= pref.weight_loss
+	save_data["fuzzy"]				= pref.fuzzy
+	save_data["offset_override"]	= pref.offset_override
+	save_data["voice_freq"]			= pref.voice_freq
+	save_data["voice_sound"]		= pref.voice_sound
+	save_data["custom_speech_bubble"]		= pref.custom_speech_bubble
+	//CHOMPAdd Start
+	save_data["custom_footstep"]	= pref.custom_footstep
+	save_data["species_sound"]		= pref.species_sound
+	//CHOMPAdd End
 
 /datum/category_item/player_setup_item/vore/size/sanitize_character()
 	pref.weight_vr			= sanitize_integer(pref.weight_vr, WEIGHT_MIN, WEIGHT_MAX, initial(pref.weight_vr))
@@ -154,7 +157,7 @@
 		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from 25% to 200%", "Set Size", null, 200, 25)
 		if (!ISINRANGE(new_size,25,200))
 			pref.size_multiplier = 1
-			to_chat(user, "<span class='notice'>Invalid size.</span>")
+			to_chat(user, span_notice("Invalid size."))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 		else if(new_size)
 			pref.size_multiplier = (new_size/100)
@@ -176,6 +179,8 @@
 			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN, round_value=FALSE)
 		if(new_weight)
 			var/unit_of_measurement = tgui_alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", list("Pounds", "Kilograms"))
+			if(!unit_of_measurement)
+				return TOPIC_NOACTION
 			if(unit_of_measurement == "Pounds")
 				new_weight = round(text2num(new_weight),4)
 			if(unit_of_measurement == "Kilograms")

@@ -239,9 +239,9 @@
 		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
-			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.l_hand)
-			if(istype(M.r_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.r_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.r_hand)
 			// CHOMPEdit End
 	return 1
@@ -256,11 +256,11 @@
 			var/obj/item/clothing/suit/redtag/S = M.wear_suit
 			if (S.lasertag_health <= 1)
 				M.Weaken(5)
-				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				to_chat(M,span_warning("You have been defeated!"))
 				S.lasertag_health = initial(S.lasertag_health)
 			else
 				S.lasertag_health--
-				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+				to_chat(M,span_warning("Danger! You have [num2text(S.lasertag_health)] hits remaining!"))
 	return 1
 
 /obj/item/projectile/beam/lasertag/red
@@ -274,9 +274,9 @@
 		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
-			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.l_hand)
-			if(istype(M.r_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.r_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.r_hand)
 			// CHOMPEdit End
 	return 1
@@ -291,11 +291,11 @@
 			var/obj/item/clothing/suit/bluetag/S = M.wear_suit
 			if(S.lasertag_health <= 1)
 				M.Weaken(5)
-				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				to_chat(M,span_warning("You have been defeated!"))
 				S.lasertag_health = initial(S.lasertag_health)
 			else
 				S.lasertag_health--
-				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+				to_chat(M,span_warning("Danger! You have [num2text(S.lasertag_health)] hits remaining!"))
 	return 1
 
 /obj/item/projectile/beam/lasertag/omni//A laser tag bolt that stuns EVERYONE
@@ -528,7 +528,7 @@
 	..()
 
 /obj/item/projectile/beam/energy_net/proc/do_net(var/mob/M)
-	var/obj/item/weapon/energy_net/net = new (get_turf(M))
+	var/obj/item/energy_net/net = new (get_turf(M))
 	net.throw_impact(M)
 
 //
@@ -561,7 +561,7 @@
 			pulse.anchored = TRUE
 			spawn(20)
 				qdel(pulse)
-			to_chat(target, "<span class='notice'>As the beam strikes you, your injuries close up!</span>")
+			to_chat(target, span_notice("As the beam strikes you, your injuries close up!"))
 			M.adjustBruteLoss(-15)
 			M.adjustFireLoss(-15)
 			M.adjustToxLoss(-5)

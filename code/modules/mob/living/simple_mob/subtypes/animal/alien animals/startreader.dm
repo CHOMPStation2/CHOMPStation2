@@ -17,7 +17,7 @@
 	icon_living = "startreader"
 	icon_dead = "startreader_dead"
 
-	faction = "space turtle"
+	faction = FACTION_SPACE_TURTLE
 	maxHealth = 1000
 	health = 1000
 	movement_cooldown = 10
@@ -128,7 +128,7 @@
 		flip_cooldown = 0
 		flipped = FALSE
 		handle_flip()
-		visible_message("<span class='notice'>\The [src] rights itself!!!</span>")
+		visible_message(span_notice("\The [src] rights itself!!!"))
 		return
 	if(flip_cooldown)
 		flip_cooldown --

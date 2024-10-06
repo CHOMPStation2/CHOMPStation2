@@ -42,13 +42,13 @@
 /area/submap/redshuttledown)
 "dG" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "dL" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -97,7 +97,7 @@
 /area/submap/redshuttledown)
 "iw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/masks,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6;
 	icon_state = "bordercolor"
@@ -144,7 +144,7 @@
 /area/submap/redshuttledown)
 "kj" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled/steel,
@@ -223,7 +223,7 @@
 "mp" = (
 /obj/structure/table/steel,
 /obj/item/mecha_parts/part/phazon_left_arm,
-/obj/item/weapon/circuitboard/mecha/phazon/targeting,
+/obj/item/circuitboard/mecha/phazon/targeting,
 /obj/random/tool,
 /obj/random/maintenance/research,
 /obj/random/maintenance/engineering,
@@ -257,7 +257,7 @@
 "nF" = (
 /obj/structure/table/steel,
 /obj/item/mecha_parts/part/phazon_left_leg,
-/obj/item/weapon/circuitboard/mecha/phazon/peripherals,
+/obj/item/circuitboard/mecha/phazon/peripherals,
 /obj/random/tool,
 /obj/random/maintenance/research,
 /obj/random/maintenance/engineering,
@@ -271,8 +271,8 @@
 /area/submap/redshuttledown)
 "nU" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
 /obj/effect/floor_decal/corner/green/border,
 /obj/random/firstaid,
 /obj/item/mecha_parts/mecha_equipment/crisis_drone,
@@ -348,8 +348,8 @@
 /obj/random/grenade/box,
 /obj/item/stolenpackage,
 /obj/item/stolenpackage,
-/obj/item/weapon/rig/merc,
-/obj/item/weapon/rig/internalaffairs,
+/obj/item/rig/merc,
+/obj/item/rig/internalaffairs,
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
 /obj/random/maintenance/medical,
@@ -369,7 +369,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "tB" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -385,7 +385,7 @@
 /turf/template_noop,
 /area/submap/redshuttledown)
 "uT" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -407,7 +407,7 @@
 /obj/effect/floor_decal/borderfloor/full,
 /obj/item/clothing/suit/space/void/chrono,
 /obj/item/clothing/head/helmet/space/void/chrono,
-/obj/item/weapon/gun/projectile/revolver/cappeacekeeper,
+/obj/item/gun/projectile/revolver/cappeacekeeper,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "wo" = (
@@ -419,7 +419,7 @@
 /area/submap/redshuttledown)
 "wp" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -449,7 +449,7 @@
 /area/submap/redshuttledown)
 "wN" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "We need to take a short stop. The engine's are in need of minor repairs due to turbulence, should be a week's time. We've got reserve food supplies but pleanty of locale fauna to subsist on too if need be. PCRC is keeping most of there assets near New Reykjavik and locale authorities are more mindful then most to travel in this kind of weather. Our outfit should be at the rendezvous point in less then ten days assuming the upper ecehelon hasn't dropped ties with us yet.";
 	name = "Operation Progress/M-53"
 	},
@@ -493,7 +493,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "yf" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /mob/living/simple_mob/humanoid/merc/ranged/deagle,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -534,7 +534,7 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/engineering,
 /obj/random/material/refined,
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni,
+/obj/item/cell/device/weapon/recharge/alien/omni,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "zv" = (
@@ -592,7 +592,7 @@
 /area/submap/redshuttledown)
 "Ci" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /obj/effect/floor_decal/corner/green/border,
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
@@ -627,7 +627,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Eg" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/tiled/red,
 /area/submap/redshuttledown)
 "EC" = (
@@ -685,7 +685,7 @@
 	icon_state = "bordercolor"
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/pill_bottle/combat,
+/obj/item/storage/pill_bottle/combat,
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -779,7 +779,7 @@
 /area/submap/redshuttledown)
 "MX" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -795,7 +795,7 @@
 "Ok" = (
 /obj/structure/table/steel,
 /obj/item/stack/cable_coil/alien/blood,
-/obj/item/weapon/circuitboard/mecha/phazon/main,
+/obj/item/circuitboard/mecha/phazon/main,
 /obj/random/tool/power,
 /obj/random/maintenance/research,
 /obj/random/maintenance/engineering,
@@ -804,7 +804,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Ow" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle,
 /turf/simulated/floor/tiled/red,
 /area/submap/redshuttledown)
@@ -833,7 +833,7 @@
 /obj/effect/floor_decal/borderfloor/full,
 /obj/item/clothing/head/helmet/space/void/refurb/marine/talon,
 /obj/item/clothing/suit/space/void/refurb/marine/talon,
-/obj/item/weapon/gun/energy/x01,
+/obj/item/gun/energy/x01,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Qw" = (
@@ -879,7 +879,7 @@
 "Sz" = (
 /obj/machinery/shower,
 /obj/structure/curtain/open/shower,
-/obj/item/weapon/smes_coil/super_capacity,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/redshuttledown)
 "SD" = (
@@ -928,7 +928,7 @@
 /area/submap/redshuttledown)
 "Vk" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -981,9 +981,9 @@
 /obj/random/gun/random,
 /obj/random/energy/highend,
 /obj/random/energy/highend,
-/obj/item/weapon/rig/pmc/commander/grey/equipped,
-/obj/item/weapon/rig/pmc/commander/grey/equipped,
-/obj/item/weapon/card/emag/used,
+/obj/item/rig/pmc/commander/grey/equipped,
+/obj/item/rig/pmc/commander/grey/equipped,
+/obj/item/card/emag/used,
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
 /obj/random/maintenance/medical,
@@ -1013,12 +1013,12 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/item/device/perfect_tele,
+/obj/item/perfect_tele,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "YZ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -1026,7 +1026,7 @@
 /area/submap/redshuttledown)
 "ZC" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10;
 	icon_state = "bordercolor"
@@ -1036,7 +1036,7 @@
 /area/submap/redshuttledown)
 "ZN" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},

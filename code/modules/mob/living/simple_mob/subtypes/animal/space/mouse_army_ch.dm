@@ -54,8 +54,8 @@
 
 	has_langs = list("Mouse")
 
-	holder_type = /obj/item/weapon/holder/mouse
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	holder_type = /obj/item/holder/mouse
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	say_list_type = /datum/say_list/mouse
 
@@ -317,7 +317,7 @@
 		if(isliving(A))
 			var/mob/living/L = A
 			L.Weaken(cloaked_weaken_amount)
-			to_chat(L, span("danger", "\The [src] ambushes you!"))
+			to_chat(L, span_danger("\The [src] ambushes you!"))
 			playsound(L, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()
 	..()

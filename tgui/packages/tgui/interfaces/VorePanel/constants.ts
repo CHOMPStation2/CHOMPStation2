@@ -27,3 +27,11 @@ export const digestModeToPreyMode = {
   Heal: 'being healed.',
   'Encase In Egg': 'being encased in an egg.',
 };
+
+export const SYNTAX_REGEX =
+  /%belly|%pred|%prey|%countpreytotal|%countpreyabsorbed|%countprey|%countghosts|%count|%ghost|%item|%dest|%goo|%happybelly|%fat|%grip|%cozy|%angry|%acid|%snack|%hot|%snake/g;
+export const SYNTAX_COLOR = {
+  '%belly': 'average',
+  '%pred': 'bad',
+  '%prey': 'good',
+};

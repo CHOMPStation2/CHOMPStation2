@@ -238,9 +238,9 @@
 			if(RTB.reagentid == "stomacid")
 				return
 			var/list/choices = list()
-			for(var/obj/item/weapon/reagent_containers/rc in view(1,user.loc))
+			for(var/obj/item/reagent_containers/rc in view(1,user.loc))
 				choices += rc
-			var/obj/item/weapon/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
+			var/obj/item/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
 			if(!T)
 				return FALSE
 			if(!Adjacent(T) || !Adjacent(TG))
@@ -286,7 +286,7 @@
 			else
 				soundfile = fancy_release_sounds[RTB.release_sound]
 			if(soundfile)
-				playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/client_preference/eating_noises)
+				playsound(src, soundfile, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, preference = /datum/preference/toggle/eating_noises)
 
 /mob/living/proc/vore_bellyrub(var/mob/living/T in view(1,src))
 	set name = "Give Bellyrubs"

@@ -51,13 +51,13 @@
 		return
 
 	if(!usr.client.holder || !(usr.client.holder.rights & R_PERMISSIONS))
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("You do not have permission to do this!")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red("You do not have permission to do this!")]"))
 		return
 
 	establish_db_connection()
 
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Failed to establish database connection")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red("Failed to establish database connection")]"))
 		return
 
 	if(!adm_ckey || !new_rank)
@@ -87,7 +87,7 @@
 		var/datum/db_query/log_query = SSdbcore.NewQuery("INSERT INTO `test`.`erro_admin_log` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Added new admin [adm_ckey] to rank [new_rank]');") //CHOMPEdit TGSQL
 		log_query.Execute()
 		qdel(log_query) //CHOMPEdit TGSQL
-		to_chat(usr, "<span class='filter_adminlog'>[span_blue("New admin added.")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_blue("New admin added.")]"))
 	else
 		if(!isnull(admin_id) && isnum(admin_id))
 			var/datum/db_query/insert_query = SSdbcore.NewQuery("UPDATE `erro_admin` SET rank = '[new_rank]' WHERE id = [admin_id]") //CHOMPEdit TGSQL
@@ -96,7 +96,7 @@
 			var/datum/db_query/log_query = SSdbcore.NewQuery("INSERT INTO `test`.`erro_admin_log` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Edited the rank of [adm_ckey] to [new_rank]');") //CHOMPEdit TGSQL
 			log_query.Execute()
 			qdel(log_query) //CHOMPEdit TGSQL
-			to_chat(usr, "<span class='filter_adminlog'>[span_blue("Admin rank changed.")]</span>")
+			to_chat(usr, span_filter_adminlog("[span_blue("Admin rank changed.")]"))
 
 /datum/admins/proc/log_admin_permission_modification(var/adm_ckey, var/new_permission)
 	if(CONFIG_GET(flag/admin_legacy_system))	return // CHOMPEdit
@@ -105,12 +105,12 @@
 		return
 
 	if(!usr.client.holder || !(usr.client.holder.rights & R_PERMISSIONS))
-		to_chat(usr, "<span class='filter_adminlog'>[span_red(">You do not have permission to do this!")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red(">You do not have permission to do this!")]"))
 		return
 
 	establish_db_connection()
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Failed to establish database connection!")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red("Failed to establish database connection!")]"))
 		return
 
 	if(!adm_ckey || !new_permission)
@@ -146,7 +146,7 @@
 		var/datum/db_query/log_query = SSdbcore.NewQuery("INSERT INTO `test`.`erro_admin_log` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Removed permission [rights2text(new_permission)] (flag = [new_permission]) to admin [adm_ckey]');") //CHOMPEdit TGSQL
 		log_query.Execute()
 		qdel(log_query) //CHOMPEdit TGSQL
-		to_chat(usr, "<span class='filter_adminlog'>[span_blue("Permission removed.")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_blue("Permission removed.")]"))
 	else //This admin doesn't have this permission, so we are adding it.
 		var/datum/db_query/insert_query = SSdbcore.NewQuery("UPDATE `erro_admin` SET flags = '[admin_rights | new_permission]' WHERE id = [admin_id]") //CHOMPEdit TGSQL
 		insert_query.Execute()
@@ -154,4 +154,4 @@
 		var/datum/db_query/log_query = SSdbcore.NewQuery("INSERT INTO `test`.`erro_admin_log` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Added permission [rights2text(new_permission)] (flag = [new_permission]) to admin [adm_ckey]')") //CHOMPEdit TGSQL
 		log_query.Execute()
 		qdel(log_query) //CHOMPEdit TGSQL
-		to_chat(usr, "<span class='filter_adminlog'>[span_blue("Permission added.")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_blue("Permission added.")]"))

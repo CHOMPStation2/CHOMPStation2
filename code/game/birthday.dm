@@ -32,7 +32,7 @@
 		else
 			var/howmuch = GLOB.world_time_year - lastyear // CHOMPEdit - Managed Globals
 			age += howmuch
-		to_chat(src, "<span class = 'notice'>You are now [age]! Happy birthday!</span>")
+		to_chat(src, span_notice("You are now [age]! Happy birthday!"))
 		client.prefs.age = age	//Set the age on the character sheet
 
 	client.prefs.save_character()	//Save the info

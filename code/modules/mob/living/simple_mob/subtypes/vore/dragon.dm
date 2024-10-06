@@ -8,7 +8,7 @@
 	icon = 'icons/mob/vore64x64.dmi'
 	vis_height = 64
 
-	faction = "dragon"
+	faction = FACTION_DRAGON
 	maxHealth = 500 // Boss
 	health = 500
 	see_in_dark = 8
@@ -17,7 +17,7 @@
 	melee_damage_upper = 30
 
 	meat_amount = 15
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	//Space dragons aren't affected by atmos.
 	min_oxy = 0
@@ -107,7 +107,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/phoron_dragon)
 	maxHealth = 300
 	health = 300
-	faction = "virgo3b"
+	faction = FACTION_VIRGO3B
 	icon_dead = "phoron_dragon_dead"
 	icon_living = "phoron_dragon"
 	icon_state = "phoron_dragon"
@@ -135,7 +135,7 @@
 	tt_desc = "Astra Draconinae"
 	maxHealth = 300
 	health = 300
-	faction = "dragon"
+	faction = FACTION_DRAGON
 	icon_dead = "space_dragon_dead"
 	icon_living = "space_dragon"
 	icon_state = "space_dragon"

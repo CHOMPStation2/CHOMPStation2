@@ -5,7 +5,7 @@
 	icon = 'icons/mob/vore_shadekin.dmi'
 	icon_state = "map_example"
 	icon_living = "map_example"
-	faction = "shadekin"
+	faction = FACTION_SHADEKIN
 	ui_icons = 'icons/mob/shadekin_hud.dmi'
 	mob_class = MOB_CLASS_HUMANOID
 	mob_bump_flag = HUMAN
@@ -472,7 +472,7 @@
 						if((get_dist(src,henlo_human) <= 1))
 							dir = moving_to
 							if(prob(speak_chance))
-								visible_message("<span class='notice'>\The [src] [pick(friendly)] \the [henlo_human].</span>")
+								visible_message(span_notice("\The [src] [pick(friendly)] \the [henlo_human]."))
 								shy_approach = FALSE //ACCLIMATED
 							lifes_since_move = 0
 							return //No need to move

@@ -40,10 +40,10 @@
 			/obj/item/clothing/suit/cultrobes/void = 100,
 			/obj/item/clothing/shoes/boots/cult/void = 100,
 			/obj/item/clothing/gloves/tactical/void = 100,
-			/obj/item/weapon/melee/voidblade = 25,
-			/obj/item/device/soulstone = 25,
-			/obj/item/device/soulstone = 25,
-			/obj/item/device/soulstone = 25,
+			/obj/item/melee/voidblade = 25,
+			/obj/item/soulstone = 25,
+			/obj/item/soulstone = 25,
+			/obj/item/soulstone = 25,
 			/obj/item/capture_crystal/demon = 25,
 			/obj/item/capture_crystal/wendigo = 25
 			)
@@ -77,7 +77,7 @@
 
 /mob/living/simple_mob/humanoid/cultist/magus/rift/proc/launch_rockets(atom/target)
 	if(!target)
-		to_chat(src, span("warning", "There's nothing to teleport to."))
+		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
 	var/list/nearby_things = range(1, target)
@@ -95,7 +95,7 @@
 			valid_turfs.Add(potential_turf)
 
 	if(!(valid_turfs.len))
-		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
 		return FALSE
 
 	var/turf/target_turf = pick(valid_turfs)
@@ -107,17 +107,17 @@
 	s2.set_up(5, 1, target_turf)
 
 
-	T.visible_message(span("notice", "\The [src] vanishes!"))
+	T.visible_message(span_notice("\The [src] vanishes!"))
 	s1.start()
 
 	forceMove(target_turf)
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 
-/obj/item/weapon/grenade/spawnergrenade/riftwallers
+/obj/item/grenade/spawnergrenade/riftwallers
 	name = "manhack delivery grenade"
 	spawner_type = /mob/living/simple_mob/vore/demonAI
 	deliveryamt = 1
@@ -208,7 +208,7 @@
 	punch_force = 8
 	armor = list(melee = 30, bullet = 25, laser = 25, energy = 40, bomb = 30, bio = 10, rad = 10)
 
-/obj/item/weapon/melee/voidblade
+/obj/item/melee/voidblade
 	name = "cult blade"
 	desc = "An arcane weapon wielded by the followers of Nar-Sie."
 	icon_state = "cultblade"

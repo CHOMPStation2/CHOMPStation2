@@ -35,7 +35,7 @@ But for now, for what it's been used for, it works.
 		H.forceMove(Mtarget.loc)
 	var/obj/locker = new /obj/structure/closet/secure_closet/mind(target.loc, mind_target = H.mind)
 	for(var/obj/item/W in H)
-		if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
+		if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
 			continue	//VOREStation Edit
 		if(H.drop_from_inventory(W))
 			W.forceMove(locker)
@@ -56,7 +56,7 @@ But for now, for what it's been used for, it works.
 				if(COLD_RESISTANCE)
 					mut = FIREBLOCK
 			if(mut)
-				new /obj/item/weapon/dnainjector/safe(locker, block_type = mut)
+				new /obj/item/dnainjector/safe(locker, block_type = mut)
 				H.dna.SetSEState(mut,0)
 		H.mutations = list()
 		H.disabilities = 0
@@ -68,7 +68,7 @@ But for now, for what it's been used for, it works.
 		H.species.equip_survival_gear(H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/chameleon(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/device/radio/headset(H),slot_l_ear)
+	H.equip_to_slot_or_del(new /obj/item/radio/headset(H),slot_l_ear)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/permit(H), slot_l_hand)
 
 

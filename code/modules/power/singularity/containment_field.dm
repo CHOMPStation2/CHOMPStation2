@@ -59,7 +59,7 @@
 		return
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
-		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
 // CHOMPEdit End
 	if(!istype(AM, /mob/living) || AM:incorporeal_move)

@@ -31,11 +31,11 @@
 		if(world.time > data + 90 SECONDS && volume > 0.5) /// Spam prevention.
 			data = world.time
 			var/msg = pick(high_message_list)
-			to_chat(M, "<span class='warning'>[msg]</span>")
+			to_chat(M, span_warning("[msg]"))
 		else if(volume <= 0.2 && data != -1)
 			data = -1
 			var/msg = pick(sober_message_list)
-			to_chat(M, "<span class='warning'>[msg]</span>")
+			to_chat(M, span_warning("[msg]"))
 	if(prob(5) && prob_proc == FALSE) /// Enables procs to activate, remains true until THAT PROC sets it to false again.
 		prob_proc = TRUE
 
@@ -232,6 +232,11 @@
 	high_message_list = list("Everything feels a bit more steady.", "Your mind feels stable.")
 	sober_message_list = list("You feel a little tired.", "You feel a little more listless...")
 
+/datum/reagent/drugs/citalopram/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+
+	M.fear = max((M.fear - 3),0)
+
 /datum/reagent/drugs/paroxetine
 	name = "Paroxetine"
 	id = "paroxetine"
@@ -243,8 +248,10 @@
 
 /datum/reagent/drugs/paroxetine/affect_blood(mob/living/carbon/M, var/alien, var/removed)
 	..()
+
+	M.fear = max((M.fear - 6),0)
 	if(prob(5) && prob_proc == TRUE)
-		to_chat(M, "<span class='warning'>Everything feels out of control...</span>")
+		to_chat(M, span_warning("Everything feels out of control..."))
 		M.hallucination += 200
 		prob_proc = FALSE
 

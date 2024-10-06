@@ -278,7 +278,7 @@ var/datum/planet/thor/planet_thor = null
 				continue // They're indoors, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = L.get_inactive_hand()
 
@@ -328,7 +328,7 @@ var/datum/planet/thor/planet_thor = null
 				continue // They're indoors, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = L.get_inactive_hand()
 
@@ -384,7 +384,7 @@ var/datum/planet/thor/planet_thor = null
 				continue // They're indoors, so no need to pelt them with ice.
 
 			// If they have an open umbrella, it'll guard from hail
-			var/obj/item/weapon/melee/umbrella/U = H.get_active_hand()
+			var/obj/item/melee/umbrella/U = H.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = H.get_inactive_hand()
 
@@ -658,7 +658,7 @@ var/datum/planet/thor/planet_thor = null
 			// If they have an open umbrella, knock it off
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
-				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				var/obj/item/melee/umbrella/U = L.get_active_hand()
 				if(!istype(U) || !U.open)
 					U = L.get_inactive_hand()
 
@@ -718,7 +718,7 @@ var/datum/planet/thor/planet_thor = null
 			// Knock the umbrella off your hands, aint protecting you c:
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
-				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				var/obj/item/melee/umbrella/U = L.get_active_hand()
 				if(!istype(U) || !U.open)
 					U = L.get_inactive_hand()
 

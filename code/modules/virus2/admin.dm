@@ -194,7 +194,7 @@
 			if(!antigens.len)
 				var/a = tgui_alert(usr, "This disease has no antigens; it will be impossible to permanently immunise anyone without them.\
 								It is strongly recommended to set at least one antigen. Do you want to go back and edit your virus?", "Antigens", list("Yes", "No"))
-				if(a == "Yes") return
+				if(!a || a == "Yes") return
 			var/datum/disease2/disease/D = new
 			D.infectionchance = infectionchance
 			D.spreadtype = spreadtype
@@ -215,7 +215,7 @@
 
 			spawned_viruses += D
 
-			message_admins("<span class='danger'>[key_name_admin(usr)] infected [key_name_admin(infectee)] with a virus (<a href='?src=\ref[D];[HrefToken()];info=1'>Info</a>)</span>")
+			message_admins(span_danger("[key_name_admin(usr)] infected [key_name_admin(infectee)] with a virus (<a href='?src=\ref[D];[HrefToken()];info=1'>Info</a>)"))
 			log_admin("[key_name_admin(usr)] infected [key_name_admin(infectee)] with a virus!")
 			infect_virus2(infectee, D, forced=1)
 

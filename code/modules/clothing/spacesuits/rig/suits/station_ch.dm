@@ -1,5 +1,5 @@
 //Hardsuits
-/obj/item/weapon/rig/ch //Some blank bs
+/obj/item/rig/ch //Some blank bs
 	desc = "This is a dev item and should not be spawned."
 	default_mob_icon = 'modular_chomp/icons/mob/rig_back_ch.dmi'
 	chest_type = /obj/item/clothing/suit/space/rig/ch
@@ -22,7 +22,7 @@
 
 
 //A second security suit. Comes with a grenade launcher that only accepts flashbangs and adds a new sprinter and flash modules.
-/obj/item/weapon/rig/ch/pursuit
+/obj/item/rig/ch/pursuit
 	name = "pursuit hardsuit control module"
 	icon = 'icons/obj/rig_modules_ch.dmi'
 	icon_state = "pursuit_rig"
@@ -36,18 +36,18 @@
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ch/pursuit
 
 	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank,
-		/obj/item/device/suit_cooling_unit,
-		/obj/item/weapon/melee/baton,
-		/obj/item/weapon/storage/backpack,
+		/obj/item/gun,
+		/obj/item/flashlight,
+		/obj/item/tank,
+		/obj/item/suit_cooling_unit,
+		/obj/item/melee/baton,
+		/obj/item/storage/backpack,
 		)
 
 	req_access = list(access_hos)
 	req_one_access = list()
 
-/obj/item/weapon/rig/ch/pursuit/equipped
+/obj/item/rig/ch/pursuit/equipped
 
 	initial_modules = list(
 		/obj/item/rig_module/maneuvering_jets,

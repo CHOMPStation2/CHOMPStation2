@@ -6,7 +6,7 @@ on:
     paths:
     - '.tgs.yml'
     - '.github/workflows/tgs_test.yml'
-    - '_build_dependencies.sh'
+    - 'dependencies.sh'
     - 'code/__DEFINES/tgs.config.dm'
     - 'code/__DEFINES/tgs.dm'
     - 'code/game/world.dm'
@@ -19,7 +19,7 @@ on:
     paths:
     - '.tgs.yml'
     - '.github/workflows/tgs_test.yml'
-    - '_build_dependencies.sh'
+    - 'dependencies.sh'
     - 'code/__DEFINES/tgs.config.dm'
     - 'code/__DEFINES/tgs.dm'
     - 'code/game/world.dm'

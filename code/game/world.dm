@@ -478,10 +478,10 @@ var/world_topic_spam_protect_time = world.timeofday
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")
 			message_admins("[key_name_admin(usr)] Has requested an immediate world restart via client side debugging tools")
-			to_world("<span class='boldannounce'>[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools</span>")
+			to_world(span_boldannounce("[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools"))
 
 		else
-			to_world("<span class='boldannounce'>Rebooting world immediately due to host request</span>")
+			to_world(span_boldannounce("Rebooting world immediately due to host request"))
 	else
 		Master.Shutdown()	//run SS shutdowns
 		for(var/client/C in GLOB.clients)
@@ -679,6 +679,8 @@ var/failed_old_db_connections = 0
 	return 1
 
 /*/proc/setup_database_connection() CHOMPEdit TGSQL
+	if(!config.sql_enabled)
+		return 0
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
@@ -727,6 +729,8 @@ var/failed_old_db_connections = 0
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
 /*/proc/setup_old_database_connection() //CHOMPStation TGSQL
+	if(!config.sql_enabled)
+		return 0
 
 	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0

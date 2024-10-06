@@ -16,7 +16,7 @@ var/list/ghost_traps
 
 /datum/ghosttrap
 	var/object = "positronic brain"
-	var/list/ban_checks = list("AI","Cyborg")
+	var/list/ban_checks = list(JOB_AI,JOB_CYBORG)
 	var/pref_check = BE_AI
 	var/ghost_trap_message = "They are occupying a positronic brain now."
 	var/ghost_trap_role = "Positronic Brain"
@@ -84,7 +84,7 @@ var/list/ghost_traps
 	to_chat(target, "<b>Use say #b to speak to other artificial intelligences.</b>")
 	var/turf/T = get_turf(target)
 	T.visible_message("<b>\The [src]</b> chimes quietly.")
-	var/obj/item/device/mmi/digital/posibrain/P = target.loc
+	var/obj/item/mmi/digital/posibrain/P = target.loc
 	if(!istype(P)) //wat
 		return
 	P.searching = 0
@@ -101,13 +101,13 @@ var/list/ghost_traps
 // Doona pods and walking mushrooms.
 /datum/ghosttrap/plant
 	object = "living plant"
-	ban_checks = list("Dionaea")
+	ban_checks = list(JOB_DIONAEA)
 	pref_check = BE_PLANT
 	ghost_trap_message = "They are occupying a living plant now."
 	ghost_trap_role = "Plant"
 
 /datum/ghosttrap/plant/welcome_candidate(var/mob/target)
-	to_chat(target, "<span class='alium'><B>You awaken slowly, stirring into sluggish motion as the air caresses you.</B></span>")
+	to_chat(target, span_alium("<B>You awaken slowly, stirring into sluggish motion as the air caresses you.</B>"))
 	// This is a hack, replace with some kind of species blurb proc.
 	if(istype(target,/mob/living/carbon/alien/diona))
 		to_chat(target, "<B>You are \a [target], one of a race of drifting interstellar plantlike creatures that sometimes share their seeds with human traders.</B>")

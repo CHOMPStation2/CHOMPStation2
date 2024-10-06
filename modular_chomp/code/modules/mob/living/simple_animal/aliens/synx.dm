@@ -115,7 +115,7 @@
 	src.adjust_nutrition(src.max_nutrition)
 	build_icons(1)
 	voremob_loaded = 1
-	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
+	mob_radio = new /obj/item/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
 
 //Vore stuff//leaving most of this here even though its no going to be an AI controlled variant.
 	vore_active = 1
@@ -325,7 +325,7 @@
 		M.custom_pain("I have no horn but i must honk!",60)
 	if(prob(2))
 		var/location = get_turf(M)
-		new /obj/item/weapon/bikehorn(location)
+		new /obj/item/bikehorn(location)
 		M.custom_pain("You suddenly cough up a bikehorn!",60)
 
   /*why is this in here twice? -Lo

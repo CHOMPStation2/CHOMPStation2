@@ -107,7 +107,7 @@
 	sleep(jaunt_warning) // For the telegraphing.
 
 	// Do the dig!
-	visible_message(span("danger","\The [src] sinks into a puddle of blood \the [A]!"))
+	visible_message(span_danger("\The [src] sinks into a puddle of blood \the [A]!"))
 	new /obj/effect/decal/cleanable/blood (src.loc)
 	flick("blood_out",A)
 	icon_state = "bloodout"
@@ -132,7 +132,7 @@
 		if(L == src)
 			continue
 
-		visible_message(span("danger","\The [src] suddenly rises from a pool of blood \the [L]!"))
+		visible_message(span_danger("\The [src] suddenly rises from a pool of blood \the [L]!"))
 		new /obj/effect/decal/cleanable/blood (src.loc)
 		playsound(L, 'sound/weapons/heavysmash.ogg', 75, 1)
 		L.add_modifier(/datum/modifier/entangled, 1 SECONDS) //L.Weaken(3) CHOMPedit: Trying to remove hardstuns, replacing it with slow down
@@ -145,7 +145,7 @@
 		return TRUE
 
 	// Otherwise we need to keep going.
-	to_chat(src, span("warning", "You overshoot your target!"))
+	to_chat(src, span_warning("You overshoot your target!"))
 	playsound(src, 'sound/weapons/punchmiss.ogg', 75, 1)
 	var/dir_to_go = get_dir(starting_turf, destination)
 	for(var/i = 1 to rand(2, 4))
@@ -176,7 +176,7 @@
 		// Update T.
 		T = get_step(src, get_dir(src, destination))
 		if(T.check_density(ignore_mobs = TRUE))
-			to_chat(src, span("critical", "You hit something really solid!"))
+			to_chat(src, span_critical("You hit something really solid!"))
 			playsound(src, "punch", 75, 1)
 			Weaken(5)
 			add_modifier(/datum/modifier/tunneler_vulnerable, 10 SECONDS)
@@ -519,7 +519,7 @@
 /mob/living/simple_mob/humanoid/cultist/elite/death()
 	new /obj/effect/decal/remains/human (src.loc)
 	new /obj/effect/decal/cleanable/blood/gibs (src.loc)
-	new /obj/item/weapon/material/shard (src.loc)
+	new /obj/item/material/shard (src.loc)
 	..(null,"shatters into bone and blood like pieces like the now shattered mirror.")
 	playsound(src, 'sound/effects/Glassbr2.ogg', 100, 1)
 	ghostize()
@@ -643,7 +643,7 @@
 
 	base_attack_cooldown = 7.5
 
-	loot_list = list(/obj/item/weapon/material/butterfly/saw = 100, /obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn/alt = 100)
+	loot_list = list(/obj/item/material/butterfly/saw = 100, /obj/item/gun/projectile/shotgun/doublebarrel/sawn/alt = 100)
 
 	needs_reload = TRUE
 	reload_max = 2

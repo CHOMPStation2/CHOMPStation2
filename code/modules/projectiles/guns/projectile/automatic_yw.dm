@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/projectile/automatic/mg42
+/obj/item/gun/projectile/automatic/mg42
 	name = "MG42"
 	desc = "Entfesseln die Holle" //Unleash the hell
 	icon = 'icons/obj/gun_yw.dmi'
@@ -32,42 +32,42 @@
 
 	var/cover_open = 0
 
-/obj/item/weapon/gun/projectile/automatic/mg42/special_check(mob/user)
+/obj/item/gun/projectile/automatic/mg42/special_check(mob/user)
 	if(cover_open)
 		user << "<span class='warning'>[src]'s cover is open! Close it before firing!</span>"
 		return 0
 	return ..()
 
-/obj/item/weapon/gun/projectile/automatic/mg42/proc/toggle_cover(mob/user)
+/obj/item/gun/projectile/automatic/mg42/proc/toggle_cover(mob/user)
 	cover_open = !cover_open
 	user << "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>"
 	update_icon()
 	update_held_icon()
 
-/obj/item/weapon/gun/projectile/automatic/mg42/attack_self(mob/user as mob)
+/obj/item/gun/projectile/automatic/mg42/attack_self(mob/user as mob)
 	if(cover_open)
 		toggle_cover(user) //close the cover
 	else
 		return ..() //once closed, behave like normal
 
-/obj/item/weapon/gun/projectile/automatic/mg42/attack_hand(mob/user as mob)
+/obj/item/gun/projectile/automatic/mg42/attack_hand(mob/user as mob)
 	if(!cover_open && user.get_inactive_hand() == src)
 		toggle_cover(user) //open the cover
 	else
 		return ..() //once open, behave like normal
 
-/obj/item/weapon/gun/projectile/automatic/mg42/update_icon()
+/obj/item/gun/projectile/automatic/mg42/update_icon()
 	icon_state = "mg42[cover_open ? "open" : "closed"][ammo_magazine ? "" : "-empty"][cover_open && ammo_magazine && ammo_magazine.stored_ammo.len == 0 ? "0" : ""]"
 	item_state = "mg42"
 	update_held_icon()
 
-/obj/item/weapon/gun/projectile/automatic/mg42/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/automatic/mg42/load_ammo(var/obj/item/A, mob/user)
 	if(!cover_open)
 		user << "<span class='warning'>You need to open the cover to load [src].</span>"
 		return
 	..()
 
-/obj/item/weapon/gun/projectile/automatic/mg42/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/automatic/mg42/unload_ammo(mob/user, var/allow_dump=1)
 	if(!cover_open)
 		user << "<span class='warning'>You need to open the cover to unload [src].</span>"
 		return

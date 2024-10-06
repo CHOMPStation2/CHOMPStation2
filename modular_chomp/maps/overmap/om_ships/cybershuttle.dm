@@ -49,6 +49,7 @@
 	burn_delay = 0.25 SECONDS //Fast as fuck
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Cyber Shuttle" //These names must match
+	known = FALSE
 
 /datum/map_template/shelter/superpose/cybershuttle
 	shelter_id = "CyberShuttle"

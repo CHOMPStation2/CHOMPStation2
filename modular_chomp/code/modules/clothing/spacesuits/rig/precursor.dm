@@ -1,4 +1,4 @@
-/obj/item/weapon/rig/ch/precursor
+/obj/item/rig/ch/precursor
 	name = "xenotech hardsuit control module"
 	desc = "A purple hardsuit gleaming with energy and alien metals."
 	suit_type = "precursor hardsuit"
@@ -41,7 +41,7 @@
 	desc = "A pair of grabby boots"
 	var/block_chance = 15
 
-/obj/item/weapon/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message("<span class='danger'>\The [src] completely absorbs [attack_text]!</span>")
 		return TRUE

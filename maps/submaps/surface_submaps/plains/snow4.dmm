@@ -6,7 +6,7 @@
 /turf/template_noop,
 /area/submap/snow4)
 "c" = (
-/turf/simulated/floor/outdoors/snow,
+/turf/simulated/floor/outdoors/snow/virgo3b,
 /area/submap/snow4)
 
 (1,1,1) = {"

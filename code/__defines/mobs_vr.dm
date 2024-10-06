@@ -7,7 +7,10 @@
 
 #define VIS_AUGMENTED		32
 
-#define VIS_COUNT			32
+#define VIS_CH_STOMACH		33
+#define VIS_SOULCATCHER		34 // CHOMPAdd
+
+#define VIS_COUNT			34
 
 //Protean organs
 #define O_ORCH		"orchestrator"
@@ -34,6 +37,7 @@
 #define SPECIES_CUSTOM			"Custom Species"
 #define SPECIES_TAJARAN			"Tajara"
 #define SPECIES_LLEILL			"Lleill"
+#define SPECIES_HANNER			"Hanner"
 //monkey species
 #define SPECIES_MONKEY_AKULA		"Sobaka"
 #define SPECIES_MONKEY_NEVREAN		"Sparra"

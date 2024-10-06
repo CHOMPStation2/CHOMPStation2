@@ -209,7 +209,7 @@
 /area/submap/fallenlab)
 "sS" = (
 /obj/structure/table/standard,
-/obj/item/device/nif,
+/obj/item/nif,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/corner/orange/diagonal,
@@ -245,7 +245,7 @@
 /area/submap/fallenlab)
 "wi" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/cell_loaded/medical,
+/obj/item/gun/projectile/cell_loaded/medical,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/corner/orange/diagonal,
@@ -253,7 +253,7 @@
 /area/submap/fallenlab)
 "xo" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/orange/diagonal,

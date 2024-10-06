@@ -140,7 +140,7 @@
 /area/residential/ship_bay)
 "ax" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/green,
+/obj/item/bedsheet/green,
 /obj/structure/curtain/bed,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
@@ -149,7 +149,7 @@
 /area/residential/ship_bay)
 "az" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/curtain/bed,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
@@ -164,7 +164,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "aB" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "aC" = (
@@ -259,13 +259,13 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "aR" = (
@@ -466,13 +466,13 @@
 	icon_state = "tube1";
 	pixel_x = 0
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/ship_bay)
 "bB" = (
@@ -482,17 +482,17 @@
 "bC" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "bD" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "bE" = (
@@ -504,7 +504,7 @@
 /area/residential/ship_bay)
 "bF" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "bG" = (
@@ -525,7 +525,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/ship_bay)
 "bK" = (
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/bed/padded,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/ship_bay)
@@ -537,7 +537,7 @@
 /area/residential/ship_bay)
 "bM" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/hopdouble,
+/obj/item/bedsheet/hopdouble,
 /obj/structure/curtain/black,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
@@ -582,7 +582,7 @@
 /area/residential/ship_bay)
 "bT" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "bU" = (
@@ -755,7 +755,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "cy" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "cz" = (
@@ -807,23 +807,23 @@
 	dir = 1
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
 /turf/simulated/floor/lino,
 /area/residential/ship_bay)
 "cG" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/lino,
 /area/residential/ship_bay)
 "cH" = (
@@ -838,7 +838,7 @@
 /area/residential/ship_bay)
 "cJ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
 "cK" = (
@@ -857,12 +857,12 @@
 /area/residential/ship_bay)
 "cN" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/folder/yellow,
+/obj/item/folder/yellow,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "cO" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "cP" = (
@@ -880,7 +880,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "cS" = (
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
@@ -961,7 +961,7 @@
 /area/residential/ship_bay)
 "dc" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/machinery/power/thermoregulator/cryogaia{
 	desc = "A massive custom made Thermal regulator or CTR for short, intended to keep heat loss when going in our outside to a minimum, they are hardwired to minus fourty celsius";
 	dir = 8;
@@ -1030,7 +1030,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "dk" = (
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
@@ -1090,24 +1090,24 @@
 /area/residential/ship_bay)
 "du" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /turf/simulated/floor/carpet/blue,
 /area/residential/ship_bay)
 "dv" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/fountain,
+/obj/item/paper_bin,
+/obj/item/pen/fountain,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "dw" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "dx" = (
@@ -1153,10 +1153,10 @@
 /area/residential/ship_bay)
 "dD" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "dE" = (
@@ -1177,7 +1177,7 @@
 "dG" = (
 /obj/structure/table/woodentable,
 /obj/item/clothing/gloves/boxing,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "dH" = (
@@ -1196,7 +1196,7 @@
 /area/residential/ship_bay)
 "dI" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/residential/ship_bay)
 "dJ" = (
@@ -1213,7 +1213,7 @@
 "dL" = (
 /obj/structure/table/marble,
 /obj/item/roller,
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
 "dM" = (
@@ -1364,13 +1364,13 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "ei" = (
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "ej" = (
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
@@ -1415,19 +1415,19 @@
 /area/residential/mansion)
 "et" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "eu" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/coldsauce,
-/obj/item/weapon/reagent_containers/food/condiment/cornoil,
-/obj/item/weapon/reagent_containers/food/condiment/hotsauce,
-/obj/item/weapon/reagent_containers/food/condiment/ketchup,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/coldsauce,
+/obj/item/reagent_containers/food/condiment/cornoil,
+/obj/item/reagent_containers/food/condiment/hotsauce,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/soysauce,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "ev" = (
@@ -1569,8 +1569,8 @@
 /area/residential/mansion)
 "eN" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/drinks/bluespace_coffee,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "eO" = (
@@ -1616,12 +1616,12 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "eW" = (
-/obj/item/weapon/soap/syndie,
+/obj/item/soap/syndie,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "eX" = (
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
@@ -1673,8 +1673,8 @@
 /area/residential/mansion)
 "fh" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/material/knife/butch,
+/obj/item/reagent_containers/dropper,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "fi" = (
@@ -1752,7 +1752,7 @@
 /turf/simulated/floor/wood,
 /area/residential/lobby)
 "fw" = (
-/obj/item/weapon/storage/laundry_basket,
+/obj/item/storage/laundry_basket,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
@@ -1777,7 +1777,7 @@
 /area/residential/mansion)
 "fC" = (
 /obj/structure/table/bench/marble,
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "fD" = (
@@ -1809,9 +1809,9 @@
 /area/residential/corridors)
 "fG" = (
 /obj/structure/closet,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
 "fH" = (
@@ -1855,8 +1855,8 @@
 /area/residential/medbay)
 "fO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/light{
 	dir = 1
@@ -1868,7 +1868,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
 "fQ" = (
@@ -1876,16 +1876,16 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/fire,
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
 "fR" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/weapon/storage/box/gloves,
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/gloves,
+/obj/item/storage/box/masks,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -1954,7 +1954,7 @@
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
 "gd" = (
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
@@ -2028,7 +2028,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "gm" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "gn" = (
@@ -2479,7 +2479,7 @@
 /area/residential/medbay)
 "hs" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "ht" = (
@@ -3298,7 +3298,7 @@
 "jc" = (
 /obj/structure/closet/crate,
 /obj/item/clothing/accessory/medal/silver/valor,
-/obj/item/weapon/storage/photo_album,
+/obj/item/storage/photo_album,
 /obj/item/clothing/head/fez,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -3527,7 +3527,7 @@
 /area/residential/room1)
 "jE" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/wood,
 /area/residential/room1)
 "jF" = (
@@ -3542,7 +3542,7 @@
 /area/residential/room3)
 "jH" = (
 /obj/structure/bed/double,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /turf/simulated/floor/lino,
 /area/residential/room3)
 "jI" = (
@@ -3696,7 +3696,7 @@
 /area/residential/room1)
 "jZ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1";
@@ -3778,7 +3778,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/tiled/white,
 /area/residential/room1)
 "km" = (
@@ -3865,7 +3865,7 @@
 /area/residential/room3)
 "ku" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "kv" = (
@@ -3897,7 +3897,7 @@
 	pixel_x = -5;
 	pixel_y = 0
 	},
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /turf/simulated/floor/tiled/neutral,
 /area/residential/room3)
 "kx" = (
@@ -4103,12 +4103,12 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "kN" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /mob/living/bot/cleanbot,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "kO" = (
-/obj/item/weapon/mop,
+/obj/item/mop,
 /obj/structure/mopbucket,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
@@ -4387,15 +4387,15 @@
 /area/residential/room5)
 "lC" = (
 /obj/structure/table/rack,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "lD" = (
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "lE" = (
@@ -4637,7 +4637,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/mopbucket,
-/obj/item/weapon/mop,
+/obj/item/mop,
 /obj/machinery/light/small{
 	icon_state = "bulb1";
 	dir = 1
@@ -4657,16 +4657,16 @@
 /obj/item/trash/bowl,
 /obj/item/trash/bowl,
 /obj/item/trash/bowl,
-/obj/item/weapon/tray,
-/obj/item/weapon/tray,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/tray,
+/obj/item/tray,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /turf/simulated/floor/tiled/white,
 /area/residential/room5)
 "mc" = (
@@ -4770,8 +4770,8 @@
 /area/residential/room5)
 "mq" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife,
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -4779,7 +4779,7 @@
 	icon_state = "tube1";
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/white,
 /area/residential/room5)
 "mr" = (
@@ -4804,13 +4804,13 @@
 /area/residential/mansion)
 "mv" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/lino,
 /area/residential/room1)
 "mw" = (
@@ -4845,10 +4845,10 @@
 /area/residential/room3)
 "mD" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/white,
 /area/residential/room3)
 "mE" = (
@@ -4879,7 +4879,7 @@
 /area/residential/room1)
 "mK" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -4887,7 +4887,7 @@
 /area/residential/room1)
 "mL" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /turf/simulated/floor/wood,
 /area/residential/room1)
 "mM" = (
@@ -4907,7 +4907,7 @@
 /area/residential/room3)
 "mO" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
 /turf/simulated/floor/tiled/white,
 /area/residential/room3)
 "mP" = (
@@ -4991,11 +4991,11 @@
 /area/residential/room5)
 "mW" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/white,
 /area/residential/room5)
 "mX" = (
@@ -5006,7 +5006,7 @@
 /area/residential/room5)
 "mY" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/box/glasses,
+/obj/item/storage/box/glasses,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -5076,7 +5076,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/room3)
 "nk" = (
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/blue,
 /area/residential/room5)
@@ -5107,7 +5107,7 @@
 /area/residential/room5)
 "nq" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/holofloor/wood,
 /area/residential/mansion)
 "nr" = (
@@ -5140,12 +5140,12 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/room5)
 "nw" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/tool/wirecutters/clippers/trimmers,
-/obj/item/weapon/storage/bag/plants,
-/obj/item/device/analyzer/plant_analyzer,
-/obj/item/weapon/reagent_containers/spray/plantbgone,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/material/minihoe,
+/obj/item/tool/wirecutters/clippers/trimmers,
+/obj/item/storage/bag/plants,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/reagent_containers/spray/plantbgone,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/residential/room5)
@@ -5276,7 +5276,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/room5)
 "nQ" = (
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/room5)
@@ -5401,7 +5401,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/lino,
 /area/residential/room1)
 "oi" = (
@@ -5414,8 +5414,8 @@
 	pixel_y = 22
 	},
 /obj/structure/closet/cabinet,
-/obj/item/weapon/handcuffs/legcuffs/fuzzy,
-/obj/item/weapon/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
 /obj/item/clothing/head/headband/maid,
 /obj/item/clothing/under/fluff/latexmaid,
 /obj/item/clothing/head/nursehat,
@@ -5424,7 +5424,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/room2)
 "ok" = (
-/obj/item/weapon/bedsheet/hosdouble,
+/obj/item/bedsheet/hosdouble,
 /obj/structure/bed/double/padded,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/curtain/black,
@@ -5519,7 +5519,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/room4)
 "oz" = (
-/obj/item/weapon/bedsheet/double,
+/obj/item/bedsheet/double,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet,
 /area/residential/room4)
@@ -5641,10 +5641,10 @@
 /area/residential/room4)
 "oN" = (
 /obj/machinery/portable_atmospherics/hydroponics,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/tool/wirecutters/clippers/trimmers,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
-/obj/item/weapon/material/minihoe,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/tool/wirecutters/clippers/trimmers,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
+/obj/item/material/minihoe,
 /turf/simulated/floor/wood,
 /area/residential/room2)
 "oO" = (
@@ -5687,7 +5687,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "oW" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "oX" = (
@@ -5909,9 +5909,9 @@
 	icon_state = "intact-scrubbers";
 	dir = 4
 	},
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/knife/plastic,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/knife/plastic,
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "pp" = (
@@ -5919,7 +5919,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/item/weapon/storage/box/glasses,
+/obj/item/storage/box/glasses,
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "pq" = (
@@ -5985,9 +5985,9 @@
 /area/residential/room6)
 "pC" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/white,
 /area/residential/room6)
 "pD" = (
@@ -5995,16 +5995,16 @@
 /obj/item/trash/bowl,
 /obj/item/trash/bowl,
 /obj/item/trash/bowl,
-/obj/item/weapon/tray,
-/obj/item/weapon/tray,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/tray,
+/obj/item/tray,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /turf/simulated/floor/tiled/white,
 /area/residential/room6)
 "pE" = (
@@ -6044,7 +6044,7 @@
 	icon_state = "tube1";
 	pixel_x = 0
 	},
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/lino,
 /area/residential/room4)
 "pK" = (
@@ -6091,7 +6091,7 @@
 /area/residential/room6)
 "pR" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/box/glasses,
+/obj/item/storage/box/glasses,
 /turf/simulated/floor/tiled/white,
 /area/residential/room6)
 "pS" = (
@@ -6263,11 +6263,11 @@
 /area/residential/room6)
 "qh" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/white,
 /area/residential/room6)
 "qi" = (
@@ -6289,25 +6289,25 @@
 /area/residential/room2)
 "ql" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/lino,
 /area/residential/room2)
 "qm" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "qn" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/lino,
 /area/residential/room4)
 "qo" = (
@@ -6582,7 +6582,7 @@
 /area/residential/room6)
 "re" = (
 /obj/structure/closet/cabinet,
-/obj/item/device/instrument/guitar,
+/obj/item/instrument/guitar,
 /turf/simulated/floor/carpet,
 /area/residential/room6)
 "rf" = (
@@ -6592,7 +6592,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/room6)
 "rg" = (
-/obj/item/weapon/bedsheet/hos,
+/obj/item/bedsheet/hos,
 /obj/structure/bed/padded,
 /turf/simulated/floor/carpet,
 /area/residential/room6)
@@ -6678,7 +6678,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/room6)
 "rt" = (
-/obj/item/weapon/bedsheet/yellow,
+/obj/item/bedsheet/yellow,
 /obj/structure/bed/padded,
 /turf/simulated/floor/carpet,
 /area/residential/room6)
@@ -6753,7 +6753,7 @@
 /area/residential/room6)
 "rD" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen/fountain,
+/obj/item/pen/fountain,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -6842,13 +6842,13 @@
 /area/residential/room6)
 "rP" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/carpet,
 /area/residential/room6)
 "rQ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/folder/red_hos,
-/obj/item/weapon/folder/red,
+/obj/item/folder/red_hos,
+/obj/item/folder/red,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -7028,11 +7028,11 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
 /obj/structure/sink/kitchen{
 	pixel_x = -30
 	},

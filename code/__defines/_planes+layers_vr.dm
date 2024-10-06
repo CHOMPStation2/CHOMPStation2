@@ -6,3 +6,4 @@
 #define PLANE_CH_STOMACH			-11 //Stomach Plane
 
 #define PLANE_AUGMENTED				40 //Augmented-reality plane
+#define PLANE_SOULCATCHER			41 //CHOMPAdd Soulcatcher

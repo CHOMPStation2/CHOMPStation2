@@ -122,7 +122,7 @@
 /area/template_noop)
 "u" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/asteroid2)
 "v" = (
@@ -161,8 +161,8 @@
 /area/template_noop)
 "B" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/magnetic/railgun/flechette/pistol/khi,
-/obj/item/weapon/magnetic_ammo/pistol/khi,
+/obj/item/gun/magnetic/railgun/flechette/pistol/khi,
+/obj/item/magnetic_ammo/pistol/khi,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/asteroid2)
 "C" = (
@@ -244,8 +244,8 @@
 /area/submap/asteroid2)
 "Q" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/nif,
-/obj/item/weapon/storage/belt/medical/alien,
+/obj/item/nif,
+/obj/item/storage/belt/medical/alien,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/asteroid2)
 "R" = (
@@ -258,7 +258,7 @@
 /turf/simulated/mineral,
 /area/submap/asteroid2)
 "U" = (
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Man, its great being one of the most hyper advances species known to the univere, wait what is this blue ball?"
 	},
 /obj/structure/prop/blackbox,

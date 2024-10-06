@@ -1,0 +1,281 @@
+2024-09-01:
+  Hunter-Dovetail:
+  - rscadd: VBO_22
+2024-09-02:
+  Kashargul:
+  - bugfix: pred spawn leading to a null as selected belly
+  tacoguy7765093:
+  - rscadd: Adds a new spawnpoint for outsiders to spawn in the fuel depot. Spacefarer
+      subjob highly recommended.
+  - maptweak: Fixed docking the whiteship II
+  - maptweak: Overhauled the fuel depot and made it spawn randomly in the OM
+  - maptweak: Fixed broken door bolts on whiteship II, removed stray door.
+  - maptweak: Cybershuttle access fix
+2024-09-03:
+  CHOMPStation2:
+  - qol: hacktools can now be found in a new NULL contraband crate set
+  - qol: hacktools can now hack secure crates and lockers open (but not relock them)
+  - rscadd: added two spice smites; one harmless, one extra spicy
+  FluffMedic:
+  - balance: culling of materials happens at 2500 instead of the previous 500
+  - balance: material loss is 50% instead of the roughly 22% average of before.
+  - balance: material loss can happen until a single material remains.
+  - balance: Illell have normal pain and burn mods
+  TheCaramelion:
+  - rscadd: Re-Enabled wormhole event
+  - rscadd: Wormholes have a chance to pick a belly as an exit
+  - qol: Wormholes won't throw you into Sif anymore
+  - rscadd: Phobia traits actually make you fear
+2024-09-04:
+  CHOMPStation2:
+  - qol: filled in the public teleporter sprite with an alpha layer to make it easier
+      to use them
+  - qol: samples have a more useful description, and are now safer to handle (container
+      still advised) with voidsuits but can have other effects besides just burning
+      your hands
+2024-09-05:
+  Kashargul:
+  - bugfix: description label of the bellyrub target in examine
+2024-09-06:
+  tacoguy7765093:
+  - qol: Superposed pods can be rightclicked to be reset now instead of needing a
+      pen
+  - balance: Buffed the metawhiteship's generator to be a superpacman
+  - balance: Added a fuel cost to the superposed ship's short jumps
+  - maptweak: Fixed a wiring issue in the fuel depot
+2024-09-08:
+  CHOMPStation2:
+  - rscadd: New pAI chassis
+  - bugfix: Vox can take shaved beards
+  - rscadd: Vox dino muzzle
+  - rscadd: Allows prometheans to use teshari and vox icon bases
+  - bugfix: AI default laws use the mapset default laws
+  - qol: You can't run yourself over by pulling a vehicle
+  - qol: Buffs space cleaner to match other cleaning methods
+  - bugfix: Formats greatwolf mode_flags correctly
+  - rscadd: Allows more medical equipment to be stored in the medical toolbelt
+  - qol: Climb crates with mouse drag
+  - qol: Check airlock electrification with the doorbell
+  - qol: Med scanners can detect husking
+  - rscadd: Players can spawn with a one-time mindscan
+  tacoguy7765093:
+  - image: Added a new tail, the feathered raptor tail
+  - maptweak: Whiteship mk2 rewiring plus duplicate fax removal
+  - code_imp: Fax machine inits instead of new now, fixes superposed pod fax machines
+      not updating the list.
+2024-09-12:
+  CHOMPStation2:
+  - rscadd: You can now hold spacebar to throw items.
+  Kashargul:
+  - rscadd: Id card to exploration borg to transfer points from the cataloguer and
+      use on the vendor
+2024-09-14:
+  CHOMPStation2:
+  - rscadd: Examining a mob now puts their description in a box. It's pretty.
+2024-09-15:
+  CHOMPStation2:
+  - rscadd: Fit Viewport verb to automatically remove letterboxing around the map
+  - rscadd: Auto fit viewport preference to do Fit Viewport on login/when view size
+      changes
+  FluffMedic:
+  - qol: ' Broke Cocoon Spinner out of prison, aka everyone acce'
+  - qol: spacebar no longers triggers throw
+  - qol: lets proteans do weaver things again
+  - qol: ' A non-existent list and a non-existent list are apparently two different
+      things. Anyway, reverted to Weaver to how it was before upstream changes, aka
+      open to all species.'
+  Kashargul:
+  - bugfix: liquid belly examine setting not saving
+2024-09-16:
+  Asher-42:
+  - rscadd: Two abilities for protean that makes either their entire body transparent
+      or just the chest.
+  Kashargul:
+  - balance: energy shield life 35 -> 90
+  - balance: energy shield regen 10 -> 25
+  - balance: combat spear damage 25 -> 45 damage
+  - balance: 'explo jaws: 40 -> 60 damage'
+  - bugfix: cleanbot not reaching dirty turfs
+  Missile597:
+  - bugfix: Fixed the broken chain of scrubber pipes near the elevator to be connected
+      now as intended
+  - maptweak: Replaced the cursed unsimulated carpet tiles with proper carpet that
+      can actually be removed
+  tacoguy7765093:
+  - rscadd: Added more shuttles for spacefarers
+  - code_imp: Added documentation to generic_shuttle.dm on how to make your own OM
+      ship
+  - rscadd: SDF Corvette adjustments
+  - rscadd: Daedelus adjustments.
+  - rscadd: Fixes the shockmaul being a missing texture.
+2024-09-17:
+  CHOMPStation2:
+  - rscadd: PDAs will now display image embeds for cdn.discordapp.com and i.imgur.com
+      links.
+  - rscadd: Preference to turn off image embedding completely.
+  TheCaramelion:
+  - balance: 'Osteo/Milk effect: Weakened to Stun'
+  - code_imp: custom_pain proc actually hurts you now
+  - bugfix: Only osteodaxon/milk makes you be in pain now
+2024-09-18:
+  Kashargul:
+  - balance: patches will apply touch again
+  tacoguy7765093:
+  - maptweak: SDF Corvette not cycling airlocks properly
+  - bugfix: SurvivalDIY11x11 lite works now
+2024-09-19:
+  TheCaramelion:
+  - rscadd: Brig Physician role
+  - bugfix: Geneticists start with their right headset now
+2024-09-21:
+  TheCaramelion:
+  - bugfix: Brig Physician is now selectable
+  - bugfix: Fixed onelife trait runtimes
+2024-09-22:
+  CHOMPStation2:
+  - rscadd: added HYPER binder underwear
+  - bugfix: tweaks mouse holes to not iterate over world contents
+  - bugfix: prevents micros from teleporting out of your hand if removed from a mouse
+      hole
+  - rscadd: Line tool and paint bucket tool to Canvases.
+  - rscadd: Click-and-drag brush in Canvas.
+  - rscadd: You can now select 1 of 47 different plushies to bring with you from loadout
+      accessories~!
+2024-09-23:
+  CHOMPStation2:
+  - rscadd: PDAs now show a little animation when opening apps.
+  - rscadd: The PDA flashlight button is now highlighted.
+  - qol: med/sec records and ids no longer out you as a hanner (useful for characters
+      who are unaware of their own status)
+  - rscadd: Closing a beaker and clicking on venomous animals/people with it will
+      allow you to express their venom into the beaker once every 30 seconds.
+  Kashargul:
+  - bugfix: turrets properly target simple mobs and xenos/aliens again
+  tacoguy7765093:
+  - qol: Zorgoia simplemobs now can have their style exported and imported for later!
+  - qol: Zorgoia simplemobs now spawn with random colors and markings.
+2024-09-24:
+  Missile597:
+  - rscadd: Added railings to many areas in maintenance which were missing them causing
+      easy fall risk, especially around ladders. Maints is now 90% more Space OSHA
+      approved!
+  - rscadd: Added lattices above the dock areas where maints trash exists. Hopefully
+      this should keep the mice and raccoons safe.
+  - rscadd: Gave the AI a light switch so they don't have to live in a dark basement
+  - rscdel: Deleted the signs on deck 3 for a transit tube that did not exist, and
+      filled in the missing emergency shutter
+  - rscdel: Deleted the APC in the abandoned chapel. Area doesn't need power anyway
+      and if someone wants to power it they can build their own APC. It wasn't wired
+      up anyway.
+  - rscdel: Removed the AI entertainment monitors. AI doesn't like TV anyway and they
+      were blocking intercoms
+  - rscdel: Removed the nitrous anaesthetic from Robotics
+  - qol: The command office request consoles are now allowed to make station announcements
+  - qol: Gave the kitchen their booze back
+  - qol: Gives engineering a light replacer tool
+  - qol: Added plating under the catwalks on the tesla platform so borgs can go for
+      a space walk
+  - bugfix: Fixed a couple of bypass breakers with wires underneath still, bypassing
+      the bypass.
+  - bugfix: Fixed a disposals bin above the botanical kitchen that wasn't connected
+      to the network
+  - bugfix: Added a missing connector for the airlock tanks on the secondary engine
+      airlock
+  - bugfix: Replaced airless plating in toxins lab with some breathable air.
+  - bugfix: Fixed the air alarm naming conventions
+  - bugfix: Hopefully fixed persistent storages (though can't test this). Locations
+      of storages are up for debate but given the location of the qpad, I think cargo
+      could benefit from a transit tube in future updates
+  - bugfix: 'Fixed the terrain below medical that was having shields generated on
+      it (lost the Sif look for now)
+
+      fix; Fixed the AI chamber wiring being back to front and causing the AI to die
+      at round start'
+  - bugfix: Fixed some powernet sensors that weren't connected to the subgrids properly
+      and added a distinction for outpost R-UST Input and Output grids. Deleted a
+      doubled up engineering sensor.
+  - maptweak: Remapped the supermatter cold loop to be a bit more beginner-friendly
+      for modifications as well as making it flow better normally. Feel free to play
+      with the setup in-round though!
+  - maptweak: Replaced two Nitrogen canisters with phoron canisters in the supermatter
+      gas storage (4 nitrogen 4 phoron to 2 nitrogen 6 phoron). Nitrogen gets used
+      a lot more rarely and surprisingly few phoron canisters about. This should be
+      a better QoL change for SM engines.
+  - maptweak: Replaced engineering's advanced shield equipment with basic ones, so
+      cargo still had one more reason to exist.
+  - maptweak: Recoloured the secondary engine output wires from pink to yellow to
+      differentiate it from the primary engine. This will be particularly useful later
+      with plans I have for shield gens at some point-. Also recoloured the coils
+      left for setup to cyan and yellow to match the wires in use in that area.
+  - maptweak: Closed off a few drop vore spots that allowed too easy access to restricted
+      areas with glass. You can still see and break in to eat people but no easy dropping
+      in and printing whatever you want off the protolathe. Some less secure spots
+      are left unprotected and have some lattices to allow escape, and I did the same
+      with the public area spots as well.
+  - maptweak: Rewired the solar APCs to run off mains so they don't shut down the
+      airlocks when solars aren't working. Added an extra coil to the Eastern SMES
+      to allow them to cope with the additional load from the extra arrays.
+  - maptweak: Gave the bar pretty see-through shutters so it looks less industrial
+      while closed
+  - maptweak: Replaced the SM doors and blast doors with ones that shouldn't melt
+      so easy this time. Also the doors should be obvious that they're bolted now.
+  - maptweak: Set the secondary engine power supply SMES output to off at round start
+      so it doesn't drain all it's power before the second engine can be set up.
+  TheCaramelion:
+  - rscadd: Food replicator machine
+  - qol: Graffitis will take your mouse position now
+  Verkister:
+  - qol: Disabled bellysprite vis plane separation until a less destructive method
+      for hiding other people's bellysprites is available.
+  tacoguy7765093:
+  - maptweak: Removed floating button in medbay maints
+  - maptweak: Reduced steel/glass in all 4 tool staroages having more material then
+      engineering
+  - maptweak: Replaced chemistry roof catwalks with plating, as players could 'climb
+      down through' catwalks
+  - maptweak: Removed ERT level hardsuits for janitors (Why do janitors have hardsuits
+      in the first place??)
+  - maptweak: Replaces SPACE STON 13 with generic NT logo for now
+  - maptweak: Makes 'public suit cyclers' actually public
+  - maptweak: Makes medbay less G R E E N
+  - maptweak: Removed floating medbay chunk
+  - maptweak: Xenobio airlocks work now
+  - bugfix: Fixes radio being broadcasted twice
+2024-09-26:
+  Kashargul:
+  - bugfix: some runtimes
+2024-09-27:
+  TheCaramelion:
+  - bugfix: Food replicator will use the right amount of nutriment
+2024-09-28:
+  CHOMPStation2:
+  - bugfix: Conveyors no longer move jan hud objects
+  - rscadd: You can now dissipate AI holograms by attacking them.
+  - qol: laserdome now has holoprojectors to provide some info about the location
+      and the two arenas, also added floor markings and touched up the stores and
+      restaurant, plus some other touchups
+  Kashargul:
+  - bugfix: PA crates will only check for either CE or science access
+  TheCaramelion:
+  - code_imp: Graffitis make sure there's an icon before attempting to Blend()
+2024-09-29:
+  Kashargul:
+  - qol: moves captured soul projections to a new plane
+  - bugfix: soulcatcher SR vision
+  - rscadd: ATMOS holo-combifan projector to engiborgs
+  - rscadd: PENLITE barrier projector to crisisborgs
+2024-09-30:
+  CHOMPStation2:
+  - rscadd: You can now choose your own runechat color.
+  - rscadd: You can now turn on automatic punctuation for say messages.
+  Kashargul:
+  - bugfix: naming of the pme ch and player narrate ch input windows
+  TheCaramelion:
+  - rscadd: New junk mail in the mail
+  - balance: Severely reduced the chance of receveing non-job goodies
+  - balance: Slightly raised the mail per minute
+  - rscadd: Slightly raised the chance of special goodies
+  - qol: Mail bags can hold contraband packages now
+  tacoguy7765093:
+  - code_imp: Modularizes the VR map.
+  - maptweak: VR map is latest.

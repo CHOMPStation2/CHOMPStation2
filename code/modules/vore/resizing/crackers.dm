@@ -2,7 +2,7 @@
 //The winner of the pull has an effect applied to them.
 //Crackers do already exist, but these ones are a more memey scene item.
 
-/obj/item/weapon/cracker
+/obj/item/cracker
 	name = "bluespace cracker" //I have no idea why this was called shrink ray when this increased and decreased size.
 	desc = "A celebratory little game with a bluespace twist! Pull it between two people until it snaps, and the person who recieves the larger end gets a prize!"
 	icon = 'icons/obj/crackers.dmi'
@@ -15,7 +15,7 @@
 	var/rigged = 0 //So that they can be rigged by varedits to go one way or the other. positive values mean holder always wins, negative values mean target always wins.
 	var/list/prizes = list("shrinking","growing","drugged","invisibility","knocked over","teleport","wealth")
 	var/list/jokes = list(
-						"When is a boat just like snow? When it’s adrift.",
+						"When is a boat just like snow? When it's adrift.",
 						"What happens to naughty elves? Santa gives them the sack.",
 						"What do you call an old snowman? Water.",
 						"Why has Santa been banned from sooty chimneys? Carbon footprints.",
@@ -29,32 +29,32 @@
 						"What's red, and smells like blue paint? Red paint.",
 						"Where do cows go to dance? A meat ball.",
 						"What do you call a person who steals all your toenail clippings? A cliptoemaniac.",
-						"What’s brown and sticky? A stick.",
+						"What's brown and sticky? A stick.",
 						"What's the best way to kill a circus? Go for the juggler.",
 						"What do you call a cow with no legs? Ground Beef.",
 						"Why'd the scarecrow win the Nobel prize? He was outstanding in his field.")
 
-/obj/item/weapon/cracker/attack(atom/A, mob/living/user, adjacent, params)
+/obj/item/cracker/attack(atom/A, mob/living/user, adjacent, params)
 	var/mob/living/carbon/human/target = A
 	if(!istype(target))
 		return
 	if(target.stat)
 		return
 	if(target == user)
-		to_chat(user, "<span class='notice'>You can't pull \the [src] by yourself, that would just be sad!</span>")
+		to_chat(user, span_notice("You can't pull \the [src] by yourself, that would just be sad!"))
 		return
-	to_chat(user, "<span class='notice'>You offer \the [src] to \the [target] to pull and wait to see how whether they do.</span>")
+	to_chat(user, span_notice("You offer \the [src] to \the [target] to pull and wait to see how whether they do."))
 	var/check_pull = tgui_alert(target, "\The [user] is offering to pull \the [src] with you, do you want to pull it?", "Pull Cracker", list("Yes", "No"))
-	if(check_pull == "No")
-		to_chat(user, "<span class='notice'>\The [target] chose not to pull \the [src]!</span>")
+	if(!check_pull || check_pull == "No")
+		to_chat(user, span_notice("\The [target] chose not to pull \the [src]!"))
 		return
 	if(!adjacent)
-		to_chat(user, "<span class='notice'>\The [target] is not standing close enough to pull \the [src]!</span>")
+		to_chat(user, span_notice("\The [target] is not standing close enough to pull \the [src]!"))
 		return
 	var/obj/item/check_hand = user.get_active_hand()
 	if(check_hand != src)
-		to_chat(user, "<span class='notice'>\The [src] is no longer in-hand!</span>")
-		to_chat(target, "<span class='notice'>\The [src] is no longer in-hand!</span>")
+		to_chat(user, span_notice("\The [src] is no longer in-hand!"))
+		to_chat(target, span_notice("\The [src] is no longer in-hand!"))
 		return
 	var/prize = pick(prizes)
 	var/joke = pick(jokes)
@@ -77,7 +77,7 @@
 
 	var/spawnloc = get_turf(winner)
 
-	winner.visible_message("<span class='notice'>\The [winner] wins the cracker prize!</span>","<span class='notice'>You win the cracker prize!</span>")
+	winner.visible_message(span_notice("\The [winner] wins the cracker prize!"),span_notice("You win the cracker prize!"))
 	if(prize == "shrinking")
 		winner.resize(0.25)
 		winner.visible_message("<b>\The [winner]</b> shrinks suddenly!")
@@ -119,42 +119,42 @@
 	user.drop_item(src)
 	new /obj/random/toy(spawnloc)
 	new /obj/item/clothing/head/paper_crown(spawnloc)
-	var/obj/item/weapon/paper/cracker_joke/J = new(spawnloc)
+	var/obj/item/paper/cracker_joke/J = new(spawnloc)
 	J.info = joke
 	qdel(src)
 
-/obj/item/weapon/cracker/Initialize()
+/obj/item/cracker/Initialize()
 	var/list/styles = list("blue","green","yellow","red","heart","hazard")
 	var/style = pick(styles)
 	icon_state = style
 	item_state = style
 	..()
 
-/obj/item/weapon/cracker/shrinking
+/obj/item/cracker/shrinking
 	name = "shrinking bluespace cracker"
 	prizes = list("shrinking")
 
-/obj/item/weapon/cracker/growing
+/obj/item/cracker/growing
 	name = "growing bluespace cracker"
 	prizes = list("growing")
 
-/obj/item/weapon/cracker/invisibility
+/obj/item/cracker/invisibility
 	name = "cloaking bluespace cracker"
 	prizes = list("invisibility")
 
-/obj/item/weapon/cracker/drugged
+/obj/item/cracker/drugged
 	name = "psychedelic bluespace cracker"
 	prizes = list("drugged")
 
-/obj/item/weapon/cracker/knockover
+/obj/item/cracker/knockover
 	name = "forceful bluespace cracker"
 	prizes = list("knocked over")
 
-/obj/item/weapon/cracker/vore
+/obj/item/cracker/vore
 	name = "teleporting bluespace cracker"
 	prizes = list("teleport")
 
-/obj/item/weapon/cracker/money
+/obj/item/cracker/money
 	name = "fortuitous bluespace cracker"
 	prizes = list("wealth")
 
@@ -175,9 +175,9 @@
 	item_state = style
 	..()
 
-/obj/item/weapon/paper/cracker_joke
+/obj/item/paper/cracker_joke
 	name = "joke"
 	icon_state = "joke"
 
-/obj/item/weapon/paper/cracker_joke/update_icon()
+/obj/item/paper/cracker_joke/update_icon()
 	return

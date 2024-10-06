@@ -6,7 +6,7 @@
 	icon_living = "goose"
 	icon_dead = "goose_dead"
 
-	faction = "geese"
+	faction = FACTION_GEESE
 
 	maxHealth = 30
 	health = 30
@@ -25,7 +25,7 @@
 
 	has_langs = list(LANGUAGE_ANIMAL)
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/chicken
 	meat_amount = 3
 
 	can_be_drop_prey = FALSE //CHOMP Add

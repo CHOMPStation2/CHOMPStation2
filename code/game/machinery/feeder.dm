@@ -5,7 +5,7 @@
 	anchored = FALSE
 	density = FALSE
 	var/mob/living/carbon/human/attached = null
-	var/obj/item/weapon/reagent_containers/beaker = null
+	var/obj/item/reagent_containers/beaker = null
 
 /obj/machinery/feeder/update_icon()
 	if(attached)
@@ -51,8 +51,8 @@
 		update_icon()
 
 
-/obj/machinery/feeder/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/reagent_containers))
+/obj/machinery/feeder/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/reagent_containers))
 		if(!isnull(beaker))
 			. += "There is already a reagent container inserted!"
 			return

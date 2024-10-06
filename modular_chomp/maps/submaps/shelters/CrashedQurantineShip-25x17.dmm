@@ -26,7 +26,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ae" = (
-/obj/item/weapon/tool/crowbar/red,
+/obj/item/tool/crowbar/red,
 /obj/machinery/power/apc/hyper{
 	dir = 8;
 	pixel_y = 0;
@@ -68,7 +68,7 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ak" = (
-/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
@@ -89,12 +89,12 @@
 "an" = (
 /obj/machinery/vending/snack{
 	contraband = null;
-	products = list(/obj/item/weapon/reagent_containers/food/snacks/candy=0,/obj/item/weapon/reagent_containers/food/drinks/dry_ramen=0,/obj/item/weapon/reagent_containers/food/snacks/chips=0,/obj/item/weapon/reagent_containers/food/snacks/sosjerky=0,/obj/item/weapon/reagent_containers/food/snacks/no_raisin=0,/obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie=0,/obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers=0,/obj/item/weapon/reagent_containers/food/snacks/tastybread=0,/obj/item/weapon/reagent_containers/food/snacks/skrellsnacks=0)
+	products = list(/obj/item/reagent_containers/food/snacks/candy=0,/obj/item/reagent_containers/food/drinks/dry_ramen=0,/obj/item/reagent_containers/food/snacks/chips=0,/obj/item/reagent_containers/food/snacks/sosjerky=0,/obj/item/reagent_containers/food/snacks/no_raisin=0,/obj/item/reagent_containers/food/snacks/packaged/spacetwinkie=0,/obj/item/reagent_containers/food/snacks/cheesiehonkers=0,/obj/item/reagent_containers/food/snacks/tastybread=0,/obj/item/reagent_containers/food/snacks/skrellsnacks=0)
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ao" = (
-/obj/item/weapon/pickaxe/drill,
+/obj/item/pickaxe/drill,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ap" = (
@@ -143,7 +143,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aw" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ax" = (
@@ -231,7 +231,7 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aJ" = (
 /obj/structure/table/rack,
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aK" = (
@@ -241,14 +241,14 @@
 	name = "Virus Samples - FRAGILE";
 	opened = 1
 	},
-/obj/item/weapon/virusdish/random,
-/obj/item/weapon/virusdish/random,
-/obj/item/weapon/virusdish/random,
+/obj/item/virusdish/random,
+/obj/item/virusdish/random,
+/obj/item/virusdish/random,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aL" = (
 /obj/structure/table/standard,
-/obj/item/device/taperecorder,
+/obj/item/taperecorder,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aM" = (
@@ -295,13 +295,13 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aV" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aW" = (
-/obj/item/weapon/coin/silver,
+/obj/item/coin/silver,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aX" = (
@@ -315,7 +315,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bf" = (
-/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bh" = (
@@ -400,7 +400,7 @@
 "bu" = (
 /obj/machinery/vending/cola{
 	contraband = null;
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/cola=0,/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind=0,/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb=0,/obj/item/weapon/reagent_containers/food/drinks/cans/starkist=0,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle=0,/obj/item/weapon/reagent_containers/food/drinks/cans/space_up=0,/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea=0,/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice=0,/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale=0)
+	products = list(/obj/item/reagent_containers/food/drinks/cans/cola=0,/obj/item/reagent_containers/food/drinks/cans/space_mountain_wind=0,/obj/item/reagent_containers/food/drinks/cans/dr_gibb=0,/obj/item/reagent_containers/food/drinks/cans/starkist=0,/obj/item/reagent_containers/food/drinks/cans/waterbottle=0,/obj/item/reagent_containers/food/drinks/cans/space_up=0,/obj/item/reagent_containers/food/drinks/cans/iced_tea=0,/obj/item/reagent_containers/food/drinks/cans/grape_juice=0,/obj/item/reagent_containers/food/drinks/cans/gingerale=0)
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
@@ -485,51 +485,51 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bw" = (
 /obj/structure/closet/walllocker_double/north,
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bx" = (
@@ -548,18 +548,18 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bA" = (
 /obj/item/trash/cigbutt,
-/obj/item/weapon/tank/emergency/oxygen,
+/obj/item/tank/emergency/oxygen,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bB" = (
-/obj/item/weapon/material/knife/tacknife/boot,
+/obj/item/material/knife/tacknife/boot,
 /obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bD" = (
 /obj/item/trash/sosjerky,
-/obj/item/weapon/storage/box/donut/empty,
-/obj/item/weapon/reagent_containers/food/drinks/sillycup,
+/obj/item/storage/box/donut/empty,
+/obj/item/reagent_containers/food/drinks/sillycup,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bE" = (
@@ -587,7 +587,7 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bG" = (
 /obj/item/trash/tastybread,
-/obj/item/weapon/material/butterfly/boxcutter,
+/obj/item/material/butterfly/boxcutter,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
@@ -630,7 +630,7 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bP" = (
-/obj/item/weapon/virusdish/random,
+/obj/item/virusdish/random,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bQ" = (
@@ -741,17 +741,17 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bZ" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/item/weapon/card/id/external{
+/obj/item/card/id/external{
 	desc = "An identification card of some sort. Looks like this one was issued by the Vir Independent Mining Corp.";
 	name = "VIMC identification card";
 	rank = "Miner";
@@ -772,7 +772,7 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "cb" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "cc" = (
@@ -854,12 +854,12 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "hJ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "jX" = (
 /obj/structure/table/steel,
-/obj/item/weapon/tool/crowbar/power,
+/obj/item/tool/crowbar/power,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ky" = (
@@ -892,7 +892,7 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "Lm" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
 	name = "Chemistry Cleaner"
 	},
@@ -900,7 +900,7 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "MX" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "Pl" = (
@@ -914,11 +914,11 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "UU" = (
-/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "WS" = (
-/obj/item/weapon/weldingtool/largetank,
+/obj/item/weldingtool/largetank,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "Xh" = (

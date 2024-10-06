@@ -24,9 +24,9 @@
 		return
 
 	if(H.species.flags & NO_SCAN)
-		new /obj/item/device/nif/authenticbio(H)
+		new /obj/item/nif/authenticbio(H)
 	else
-		new /obj/item/device/nif/authentic(H)
+		new /obj/item/nif/authentic(H)
 
 	log_and_message_admins("[key_name(src)] Quick Authentic NIF'd [H.real_name].")
 	feedback_add_details("admin_verb","QANIF") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

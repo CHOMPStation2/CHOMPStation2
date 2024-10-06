@@ -145,9 +145,9 @@
 
 /area/survivalpod/superpose/XenoBotanySetup
 
-/obj/item/device/survivalcapsule/superpose
+/obj/item/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"
-	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; use a pen to reach the reset button. There's a license for use printed on the bottom."
+	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; right-click to reset the pod. There's a license for use printed on the bottom."
 	description_info = "The capsule contains pockets of compressed space in a super position stabilized by a miniscule supermatter crystal. \
 	NanoTrasen stresses the safety of this model over previous prototypes but assumes no liability for sub-kiloton explosions."
 	template_id = null
@@ -155,14 +155,14 @@
 	var/pod_initialized = FALSE
 
 // Override since the parent proc has a sanity check to delete the capsule if no template is found, which doesn't exactly work with this item considering examining calls this proc.
-/obj/item/device/survivalcapsule/superpose/get_template()
+/obj/item/survivalcapsule/superpose/get_template()
 	if(template)
 		return
 	template = SSmapping.shelter_templates[template_id]
 	if(!template)
 		template = null
 
-/obj/item/device/survivalcapsule/superpose/attack_self()
+/obj/item/survivalcapsule/superpose/attack_self()
 	if(!pod_initialized) // Populate list after round start as map templates might not exist when this item is created.
 		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter))
 			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.superpose))) // Limits map templates to those marked for the superpose capsule.
@@ -181,18 +181,21 @@
 	..()
 
 // Allows resetting the capsule if the wrong template is chosen.
-/obj/item/device/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/pen) && !used)
+/obj/item/survivalcapsule/superpose/verb/resetpod()
+	set name = "Reset Active Pod"
+	set desc = "Resets the pod back to factory settings."
+	set category = "Object"
+	if(!used)
 		template_id = null
 		template = null // Important to reset both, otherwise the template cannot be reset once the pod has been deployed.
-		to_chat(user, "<span class='notice'>You reset the pod's selection.</span>")
-	..()
+		unique_id = null
+		to_chat(usr, span_notice("You reset the pod's selection."))
 
-/obj/item/device/survivalcapsule/superpose/shuttle
+/obj/item/survivalcapsule/superpose/shuttle
 	name = "superposed surfluid shuttle capsule"
 	is_ship = TRUE //So you cant just make holes in planets
 
-/obj/item/device/survivalcapsule/superpose/shuttle/attack_self()
+/obj/item/survivalcapsule/superpose/shuttle/attack_self()
 	if(!pod_initialized)
 		for(var/datum/map_template/shelter/superpose/shelter_type as anything in subtypesof(/datum/map_template/shelter/))
 			if(!(initial(shelter_type.mappath)) || !(initial(shelter_type.shuttle)))
@@ -207,12 +210,4 @@
 			template_id = answer
 			unique_id = answer
 			return
-	..()
-
-/obj/item/device/survivalcapsule/superpose/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/pen) && !used)
-		template_id = null
-		unique_id = null
-		template = null
-		to_chat(user, SPAN_NOTICE("You reset the pod's selection."))
 	..()

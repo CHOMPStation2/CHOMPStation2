@@ -154,6 +154,7 @@ export type Belly = {
 
   absorbchance: number;
   digestchance: number;
+  belchchance: number;
 
   // Interactions (Auto-Transfer)
   autotransferwait: number;

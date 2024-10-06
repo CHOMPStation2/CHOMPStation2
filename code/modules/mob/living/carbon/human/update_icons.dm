@@ -815,18 +815,18 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		return //Why bother, if no ear sprites
 
 	if(hide_headset) //CHOMPEdit Start
-		if(l_ear && istype(l_ear, /obj/item/device/radio/headset)) //No need to generate blank images if only headsets are present.
-			if(!r_ear || istype(r_ear, /obj/item/device/radio/headset))
+		if(l_ear && istype(l_ear, /obj/item/radio/headset)) //No need to generate blank images if only headsets are present.
+			if(!r_ear || istype(r_ear, /obj/item/radio/headset))
 				return
-		if(r_ear && istype(r_ear, /obj/item/device/radio/headset))
-			if(!l_ear || istype(l_ear, /obj/item/device/radio/headset))
+		if(r_ear && istype(r_ear, /obj/item/radio/headset))
+			if(!l_ear || istype(l_ear, /obj/item/radio/headset))
 				return
 
 	// Blank image upon which to layer left & right overlays.
 	var/image/both = image(icon = 'icons/effects/effects.dmi', icon_state = "nothing", layer = BODY_LAYER+EARS_LAYER)
 
 	if(l_ear)
-		if(istype(l_ear, /obj/item/device/radio/headset))
+		if(istype(l_ear, /obj/item/radio/headset))
 			if(!hide_headset)
 				var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
 				both.add_overlay(standing)
@@ -835,7 +835,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			both.add_overlay(standing)
 
 	if(r_ear)
-		if(istype(r_ear, /obj/item/device/radio/headset))
+		if(istype(r_ear, /obj/item/radio/headset))
 			if(!hide_headset)
 				var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
 				both.add_overlay(standing)
@@ -925,8 +925,8 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 
 	//Toggle for belt layering with uniform
 	var/belt_layer = BELT_LAYER
-	if(istype(belt, /obj/item/weapon/storage/belt))
-		var/obj/item/weapon/storage/belt/ubelt = belt
+	if(istype(belt, /obj/item/storage/belt))
+		var/obj/item/storage/belt/ubelt = belt
 		if(ubelt.show_above_suit)
 			belt_layer = BELT_LAYER_ALT
 
@@ -998,7 +998,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 
 	var/icon/c_mask = tail_style?.clip_mask
 	if(c_mask)
-		if(istype(back, /obj/item/weapon/storage/backpack/saddlebag) || istype(back, /obj/item/weapon/storage/backpack/saddlebag_common))
+		if(istype(back, /obj/item/storage/backpack/saddlebag) || istype(back, /obj/item/storage/backpack/saddlebag_common))
 			c_mask = null
 
 	overlays_standing[BACK_LAYER] = back.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_back_str, default_icon = INV_BACK_DEF_ICON, default_layer = BACK_LAYER, clip_mask = c_mask)
@@ -1446,6 +1446,76 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 /mob/living/carbon/human/stop_flying()
 	if((. = ..()))
 		update_wing_showing()
+
+/mob/living/carbon/human/proc/update_vore_belly_sprite()
+	if(QDESTROYING(src))
+		return
+
+	remove_layer(VORE_BELLY_LAYER)
+
+	var/image/vore_belly_image = get_vore_belly_image()
+	if(vore_belly_image)
+		vore_belly_image.layer = BODY_LAYER+VORE_BELLY_LAYER
+		overlays_standing[VORE_BELLY_LAYER] = vore_belly_image
+		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_belly_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
+		vore_belly_image.appearance_flags = appearance_flags
+
+	apply_layer(VORE_BELLY_LAYER)
+
+/mob/living/carbon/human/proc/get_vore_belly_image()
+	if(!(wear_suit && wear_suit.flags_inv & HIDETAIL))
+		var/vs_fullness = vore_fullness_ex["stomach"]
+		var/icon/vorebelly_s = new/icon(icon = 'modular_chomp/icons/mob/vore/Bellies.dmi', icon_state = "[species.vore_belly_default_variant]Belly[vs_fullness][struggle_anim_stomach ? "" : " idle"]") //CHOMPEdit
+		vorebelly_s.Blend(vore_sprite_color["stomach"], vore_sprite_multiply["stomach"] ? ICON_MULTIPLY : ICON_ADD)
+		var/image/working = image(vorebelly_s)
+		working.overlays += em_block_image_generic(working)
+		return working
+	return null
+
+/mob/living/carbon/human/proc/vore_belly_animation()
+	if(!struggle_anim_stomach)
+		struggle_anim_stomach = TRUE
+		update_vore_belly_sprite()
+		spawn(12)
+			struggle_anim_stomach = FALSE
+			update_vore_belly_sprite()
+
+/mob/living/carbon/human/proc/update_vore_tail_sprite()
+	if(QDESTROYING(src))
+		return
+
+	remove_layer(VORE_TAIL_LAYER)
+
+	var/image/vore_tail_image = get_vore_tail_image()
+	if(vore_tail_image)
+		vore_tail_image.layer = BODY_LAYER+VORE_TAIL_LAYER
+		overlays_standing[VORE_TAIL_LAYER] = vore_tail_image
+		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_tail_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
+		vore_tail_image.appearance_flags = appearance_flags
+
+	apply_layer(VORE_TAIL_LAYER)
+
+/mob/living/carbon/human/proc/get_vore_tail_image()
+	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
+		var/vs_fullness = vore_fullness_ex["taur belly"]
+		var/loaf_alt = lying && tail_style:belly_variant_when_loaf
+		var/fullness_icons = min(tail_style.fullness_icons, vs_fullness)
+		var/icon/vorebelly_s = new/icon(icon = tail_style.bellies_icon_path, icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[fullness_icons][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
+		vorebelly_s.Blend(vore_sprite_color["taur belly"], vore_sprite_multiply["taur belly"] ? ICON_MULTIPLY : ICON_ADD)
+		var/image/working = image(vorebelly_s)
+		working.pixel_x = -16
+		if(tail_style.em_block)
+			working.overlays += em_block_image_generic(working)
+		return working
+	return null
+
+/mob/living/carbon/human/proc/vore_tail_animation()
+	if(tail_style.struggle_anim && !struggle_anim_taur)
+		struggle_anim_taur = TRUE
+		update_vore_tail_sprite()
+		spawn(12)
+			struggle_anim_taur = FALSE
+			update_vore_tail_sprite()
 
 //Human Overlays Indexes/////////
 /* CHOMPEdit - why are these undefined??

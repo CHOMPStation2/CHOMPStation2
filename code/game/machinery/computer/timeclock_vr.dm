@@ -14,16 +14,16 @@
 	light_power_on = 0.5
 	layer = ABOVE_WINDOW_LAYER
 	density = FALSE
-	circuit = /obj/item/weapon/circuitboard/timeclock
+	circuit = /obj/item/circuitboard/timeclock
 	clicksound = null
 	var/channel = "Common" //Radio channel to announce on
 
-	var/obj/item/weapon/card/id/card // Inserted Id card
-	var/obj/item/device/radio/intercom/announce	// Integreated announcer
+	var/obj/item/card/id/card // Inserted Id card
+	var/obj/item/radio/intercom/announce	// Integreated announcer
 
 
 /obj/machinery/computer/timeclock/New()
-	announce = new /obj/item/device/radio/intercom(src)
+	announce = new /obj/item/radio/intercom(src)
 	..()
 
 /obj/machinery/computer/timeclock/Destroy()
@@ -51,7 +51,7 @@
 		set_light(light_range_on, light_power_on)
 
 /obj/machinery/computer/timeclock/attackby(obj/I, mob/user)
-	if(istype(I, /obj/item/weapon/card/id))
+	if(istype(I, /obj/item/card/id))
 		if(!card && user.unEquip(I))
 			I.forceMove(src)
 			card = I
@@ -59,7 +59,7 @@
 			SStgui.update_uis(src)
 			update_icon()
 		else if(card)
-			to_chat(user, "<span class='warning'>There is already ID card inside.</span>")
+			to_chat(user, span_warning("There is already ID card inside."))
 		return
 	. = ..()
 
@@ -123,7 +123,7 @@
 				playsound(src, 'modular_chomp/sound/effects/remove_id_card.ogg', 75, 0) // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
 			else
 				var/obj/item/I = usr.get_active_hand()
-				if (istype(I, /obj/item/weapon/card/id) && usr.unEquip(I))
+				if (istype(I, /obj/item/card/id) && usr.unEquip(I))
 					I.forceMove(src)
 					card = I
 					playsound(src, 'modular_chomp/sound/effects/insert_id_card.ogg', 75, 0)  // CHOMPEdit: Timeclock beepboop. TODO: Make clocks delay reading the card for ~3 seconds to line up with quiet boops
@@ -240,18 +240,18 @@
 /obj/machinery/computer/timeclock/proc/checkFace()
 	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
 	if(!card)
-		to_chat(usr, "<span class='notice'>No ID is inserted.</span>")
+		to_chat(usr, span_notice("No ID is inserted."))
 		return FALSE
 /* CHOMPedit start. Allows anyone to change people's IDs.
 	var/mob/living/carbon/human/H = usr
 	if(!(istype(H)))
-		to_chat(usr, "<span class='warning'>Invalid user detected. Access denied.</span>")
+		to_chat(usr, span_warning("Invalid user detected. Access denied."))
 		return FALSE
 	else if((H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE)) || (H.head && (H.head.flags_inv & HIDEFACE)))	//Face hiding bad
-		to_chat(usr, "<span class='warning'>Facial recognition scan failed due to physical obstructions. Access denied.</span>")
+		to_chat(usr, span_warning("Facial recognition scan failed due to physical obstructions. Access denied."))
 		return FALSE
 	else if(H.get_face_name() == "Unknown" || !(H.real_name == card.registered_name))
-		to_chat(usr, "<span class='warning'>Facial recognition scan failed. Access denied.</span>")
+		to_chat(usr, span_warning("Facial recognition scan failed. Access denied."))
 		return FALSE
 CHOMPedit end. */
 	else
@@ -259,10 +259,10 @@ CHOMPedit end. */
 		log_game("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal.") // CHOMPedit: Logging
 		return TRUE
 
-/obj/item/weapon/card/id
+/obj/item/card/id
 	var/last_job_switch
 
-/obj/item/weapon/card/id/New()
+/obj/item/card/id/New()
 	.=..()
 	last_job_switch = world.time
 

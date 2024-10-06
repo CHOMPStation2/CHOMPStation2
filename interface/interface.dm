@@ -9,11 +9,11 @@
 				var/output = replacetext(CONFIG_GET(string/wikisearchurl), "%s", url_encode(query)) // CHOMPEdit
 				src << link(output)
 			else
-				to_chat(src, "<span class='warning'> The wiki search URL is not set in the server configuration.</span>")
+				to_chat(src, span_warning(" The wiki search URL is not set in the server configuration."))
 		else
 			src << link(CONFIG_GET(string/wikiurl)) // CHOMPEdit
 	else
-		to_chat(src, "<span class='warning'>The wiki URL is not set in the server configuration.</span>")
+		to_chat(src, span_warning("The wiki URL is not set in the server configuration."))
 		return
 
 /client/verb/forum()
@@ -21,11 +21,11 @@
 	set desc = "Visit the forum."
 	set hidden = 1
 	if(CONFIG_GET(string/forumurl)) // CHOMPEdit
-		if(tgui_alert(usr, "This will open the forum in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+		if(tgui_alert(usr, "This will open the forum in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/forumurl)) // CHOMPEdit
 	else
-		to_chat(src, "<span class='warning'>The forum URL is not set in the server configuration.</span>")
+		to_chat(src, span_warning("The forum URL is not set in the server configuration."))
 		return
 
 /client/verb/rules()
@@ -34,11 +34,11 @@
 	set hidden = 1
 
 	if(CONFIG_GET(string/rulesurl)) // CHOMPEdit
-		if(tgui_alert(usr, "This will open the rules in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+		if(tgui_alert(usr, "This will open the rules in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/rulesurl)) // CHOMPEdit
 	else
-		to_chat(src, "<span class='danger'>The rules URL is not set in the server configuration.</span>")
+		to_chat(src, span_danger("The rules URL is not set in the server configuration."))
 	return
 
 /client/verb/map()
@@ -47,11 +47,11 @@
 	set hidden = 1
 
 	if(CONFIG_GET(string/mapurl)) // CHOMPEdit
-		if(tgui_alert(usr, "This will open the map in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+		if(tgui_alert(usr, "This will open the map in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/mapurl)) // CHOMPEdit
 	else
-		to_chat(src, "<span class='danger'>The map URL is not set in the server configuration.</span>")
+		to_chat(src, span_danger("The map URL is not set in the server configuration."))
 	return
 
 /client/verb/github()
@@ -60,11 +60,11 @@
 	set hidden = 1
 
 	if(CONFIG_GET(string/githuburl)) // CHOMPEdit
-		if(tgui_alert(usr, "This will open the GitHub in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+		if(tgui_alert(usr, "This will open the GitHub in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/githuburl)) // CHOMPEdit
 	else
-		to_chat(src, "<span class='danger'>The GitHub URL is not set in the server configuration.</span>")
+		to_chat(src, span_danger("The GitHub URL is not set in the server configuration."))
 	return
 
 /client/verb/discord()
@@ -73,11 +73,11 @@
 	set hidden = 1
 
 	if(CONFIG_GET(string/discordurl)) // CHOMPEdit
-		if(tgui_alert(usr, "This will open the Discord in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+		if(tgui_alert(usr, "This will open the Discord in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/discordurl)) // CHOMPEdit
 	else
-		to_chat(src, "<span class='danger'>The Discord URL is not set in the server configuration.</span>")
+		to_chat(src, span_danger("The Discord URL is not set in the server configuration."))
 	return
 
 /client/verb/patreon()
@@ -86,11 +86,11 @@
 	set hidden = 1
 
 	if(CONFIG_GET(string/patreonurl)) // CHOMPEdit
-		if(tgui_alert(usr, "This will open the Patreon in your browser. Are you sure?","Visit Website",list("Yes","No"))=="No")
+		if(tgui_alert(usr, "This will open the Patreon in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/patreonurl)) // CHOMPEdit
 	else
-		to_chat(src, "<span class='danger'>The Patreon URL is not set in the server configuration.</span>")
+		to_chat(src, span_danger("The Patreon URL is not set in the server configuration."))
 	return
 
 /client/verb/hotkeys_help()
@@ -223,7 +223,7 @@ Any-Mode: (hotkey doesn't need to be on)
 /client/proc/set_hotkeys_macro(macro_name = "macro", hotkey_macro_name = "hotkeymode", hotkeys_enabled = null)
 	// If hotkeys mode was not specified, fall back to choice of default in client preferences.
 	if(isnull(hotkeys_enabled))
-		hotkeys_enabled = is_preference_enabled(/datum/client_preference/hotkeys_default)
+		hotkeys_enabled = prefs?.read_preference(/datum/preference/toggle/hotkeys_default)
 
 	if(hotkeys_enabled)
 		winset(src, null, "mainwindow.macro=[hotkey_macro_name] hotkey_toggle.is-checked=true mapwindow.map.focus=true")

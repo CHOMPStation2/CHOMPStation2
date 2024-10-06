@@ -32,8 +32,10 @@
 
 /datum/persistent/storage/smartfridge/sheet_storage/lossy
 	name = "sheet storage lossy"
-	min_storage = 20	//if the amount is at or below this, don't cull
-	max_storage = 500	//if the amount is above this, cull it to this amount THEN do math
+	min_retained = 50 //CHOMPedit: Altering how many items can be held between rounds.
+	max_retained = 50 //CHOMPedit: Altering how many items can be held between rounds.
+	min_storage = 1	//if the amount is at or below this, don't cull //CHOMPedit: Altering how many items can be held between rounds.
+	max_storage = 2500	//if the amount is above this, cull it to this amount THEN do math //CHOMPedit: Altering how many items can be held between rounds.
 	stacks_go_missing = TRUE
 	minimum_storage_reserve = TRUE
 
@@ -104,7 +106,7 @@
 				. += A
 
 /datum/persistent/storage/smartfridge/produce/create_item(var/seedtype)
-	return new /obj/item/weapon/reagent_containers/food/snacks/grown(null, seedtype) // Smartfridge will be stock()ed with it, loc is unimportant
+	return new /obj/item/reagent_containers/food/snacks/grown(null, seedtype) // Smartfridge will be stock()ed with it, loc is unimportant
 
 /datum/persistent/storage/smartfridge/produce/get_storage_list(var/obj/machinery/smartfridge/produce/entry)
 	if(!istype(entry))
@@ -115,7 +117,7 @@
 		if(prob(go_missing_chance))
 			continue
 		if(LAZYLEN(I.instances))
-			var/obj/item/weapon/reagent_containers/food/snacks/grown/G = I.instances[1]
+			var/obj/item/reagent_containers/food/snacks/grown/G = I.instances[1]
 			if(!istype(G))
 				continue
 			.[G.plantname] = I.get_amount() // Store the seed type, because that's what's used to generate the fruit

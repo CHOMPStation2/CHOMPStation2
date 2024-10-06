@@ -75,13 +75,13 @@
 
 	to_chat(nif.human,
 			type = MESSAGE_TYPE_NIF,
-			html = "<span class='nif'><b>\[[icon2html(nif.big_icon, nif.human)]NIF\]</b> <b>Soulcatcher</b> displays, \"<span class='notice nif'>[message]</span>\"</span>")
+			html = span_nif("<b>\[[icon2html(nif.big_icon, nif.human)]NIF\]</b> <b>Soulcatcher</b> displays, \"<span class='notice nif'>[message]</span>\""))
 	nif.human << sound
 
 	for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 		to_chat(CS,
 				type = MESSAGE_TYPE_NIF,
-				html = "<span class='nif'><b>\[[icon2html(nif.big_icon, CS.client)]NIF\]</b> <b>Soulcatcher</b> displays, \"<span class='notice nif'>[message]</span>\"</span>")
+				html = span_nif("<b>\[[icon2html(nif.big_icon, CS.client)]NIF\]</b> <b>Soulcatcher</b> displays, \"<span class='notice nif'>[message]</span>\""))
 		CS << sound
 
 /datum/nifsoft/soulcatcher/proc/say_into(var/message, var/mob/living/sender, var/mob/eyeobj)
@@ -89,17 +89,17 @@
 
 	//AR Projecting
 	if(eyeobj)
-		sender.eyeobj.visible_message("<span class='game say'><b>[sender_name]</b> says, \"[message]\"</span>")
+		sender.eyeobj.visible_message(span_game(span_say("<b>[sender_name]</b> says, \"[message]\"")))
 
 	//Not AR Projecting
 	else
 		to_chat(nif.human,
 				type = MESSAGE_TYPE_NIF,
-				html = "<span class='nif'><b>\[[icon2html(nif.big_icon, nif.human.client)]NIF\]</b> <b>[sender_name]</b> speaks, \"[message]\"</span>")
+				html = span_nif("<b>\[[icon2html(nif.big_icon, nif.human.client)]NIF\]</b> <b>[sender_name]</b> speaks, \"[message]\""))
 		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 			to_chat(CS,
 					type = MESSAGE_TYPE_NIF,
-					html = "<span class='nif'><b>\[[icon2html(nif.big_icon, CS.client)]NIF\]</b> <b>[sender_name]</b> speaks, \"[message]\"</span>")
+					html = span_nif("<b>\[[icon2html(nif.big_icon, CS.client)]NIF\]</b> <b>[sender_name]</b> speaks, \"[message]\""))
 
 	log_nsay(message,nif.human.real_name,sender)
 
@@ -108,17 +108,17 @@
 
 	//AR Projecting
 	if(eyeobj)
-		sender.eyeobj.visible_message("<span class='emote'>[sender_name] [message]</span>")
+		sender.eyeobj.visible_message(span_emote("[sender_name] [message]"))
 
 	//Not AR Projecting
 	else
 		to_chat(nif.human,
 				type = MESSAGE_TYPE_NIF,
-				html = "<span class='nif'><b>\[[icon2html(nif.big_icon,nif.human.client)]NIF\]</b> <b>[sender_name]</b> [message]</span>")
+				html = span_nif("<b>\[[icon2html(nif.big_icon,nif.human.client)]NIF\]</b> <b>[sender_name]</b> [message]"))
 		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 			to_chat(CS,
 					type = MESSAGE_TYPE_NIF,
-					html = "<span class='nif'><b>\[[icon2html(nif.big_icon,CS.client)]NIF\]</b> <b>[sender_name]</b> [message]</span>")
+					html = span_nif("<b>\[[icon2html(nif.big_icon,CS.client)]NIF\]</b> <b>[sender_name]</b> [message]"))
 
 	log_nme(message,nif.human.real_name,sender)
 
@@ -286,13 +286,14 @@
 	var/client_missing = 0		//How long the client has been missing
 	universal_understand = TRUE
 
-	var/obj/item/device/nif/nif
+	var/obj/item/nif/nif
 	var/datum/nifsoft/soulcatcher/soulcatcher
 	var/identifying_gender
 
 /mob/living/carbon/brain/caught_soul/Login()
 	..()
 	plane_holder.set_vis(VIS_AUGMENTED, TRUE)
+	plane_holder.set_vis(VIS_SOULCATCHER, TRUE) //CHOMPAdd
 	identifying_gender = client.prefs.identifying_gender
 
 /mob/living/carbon/brain/caught_soul/Destroy()
@@ -391,7 +392,7 @@
 			return
 		if (src.client)
 			if (client.prefs.muted & MUTE_IC)
-				to_chat(src, "<span class='warning'>You cannot send IC messages (muted).</span>")
+				to_chat(src, span_warning("You cannot send IC messages (muted)."))
 				return
 		if (stat)
 			return
@@ -409,7 +410,7 @@
 	set name = "Resist"
 	set category = "IC.Game" //CHOMPEdit
 
-	to_chat(src,"<span class='warning'>There's no way out! You're stuck in VR.</span>")
+	to_chat(src,span_warning("There's no way out! You're stuck in VR."))
 
 ///////////////////
 //A projected AR soul thing
@@ -523,21 +524,21 @@
 	src.nsay_act(message)
 
 /mob/proc/nsay_act(message as text)
-	to_chat(src, SPAN_WARNING("You must be a humanoid with a NIF implanted to use that."))
+	to_chat(src, span_warning("You must be a humanoid with a NIF implanted to use that."))
 
 /mob/living/carbon/human/nsay_act(message as text)
 	if(stat != CONSCIOUS)
-		to_chat(src,SPAN_WARNING("You can't use NSay while unconscious."))
+		to_chat(src,span_warning("You can't use NSay while unconscious."))
 		return
 	if(!nif)
-		to_chat(src,SPAN_WARNING("You can't use NSay without a NIF."))
+		to_chat(src,span_warning("You can't use NSay without a NIF."))
 		return
 	var/datum/nifsoft/soulcatcher/SC = nif.imp_check(NIF_SOULCATCHER)
 	if(!SC)
-		to_chat(src,SPAN_WARNING("You need the Soulcatcher software to use NSay."))
+		to_chat(src,span_warning("You need the Soulcatcher software to use NSay."))
 		return
 	if(!SC.brainmobs.len)
-		to_chat(src,SPAN_WARNING("You need a loaded mind to use NSay."))
+		to_chat(src,span_warning("You need a loaded mind to use NSay."))
 		return
 	if(!message)
 		message = tgui_input_text(usr, "Type a message to say.","Speak into Soulcatcher")
@@ -553,21 +554,21 @@
 	src.nme_act(message)
 
 /mob/proc/nme_act(message as message)
-	to_chat(src, SPAN_WARNING("You must be a humanoid with a NIF implanted to use that."))
+	to_chat(src, span_warning("You must be a humanoid with a NIF implanted to use that."))
 
 /mob/living/carbon/human/nme_act(message as message)
 	if(stat != CONSCIOUS)
-		to_chat(src,SPAN_WARNING("You can't use NMe while unconscious."))
+		to_chat(src,span_warning("You can't use NMe while unconscious."))
 		return
 	if(!nif)
-		to_chat(src,SPAN_WARNING("You can't use NMe without a NIF."))
+		to_chat(src,span_warning("You can't use NMe without a NIF."))
 		return
 	var/datum/nifsoft/soulcatcher/SC = nif.imp_check(NIF_SOULCATCHER)
 	if(!SC)
-		to_chat(src,SPAN_WARNING("You need the Soulcatcher software to use NMe."))
+		to_chat(src,span_warning("You need the Soulcatcher software to use NMe."))
 		return
 	if(!SC.brainmobs.len)
-		to_chat(src,SPAN_WARNING("You need a loaded mind to use NMe."))
+		to_chat(src,span_warning("You need a loaded mind to use NMe."))
 		return
 
 	if(!message)
@@ -579,16 +580,16 @@
 ///////////////////
 //Verbs for soulbrains
 /mob/living/carbon/brain/caught_soul/verb/ar_project()
-	set name = "AR Project"
+	set name = "AR/SR Project" //CHOMPEdit
 	set desc = "Project your form into Augmented Reality for those around your predator with the appearance of your loaded character."
 	set category = "Soulcatcher"
 
 	if(eyeobj)
-		to_chat(src,"<span class='warning'>You're already projecting in AR!</span>")
+		to_chat(src,span_warning("You're already projecting in AR!"))
 		return
 
 	if(!(soulcatcher.setting_flags & NIF_SC_PROJECTING))
-		to_chat(src,"<span class='warning'>Projecting from this NIF has been disabled!</span>")
+		to_chat(src,span_warning("Projecting from this NIF has been disabled!"))
 		return
 
 	if(!client || !client.prefs)
@@ -603,7 +604,7 @@
 	set category = "Soulcatcher"
 
 	if(!eyeobj)
-		to_chat(src,"<span class='warning'>You're not projecting into AR!</span>")
+		to_chat(src,span_warning("You're not projecting into AR!"))
 		return
 
 	eyeobj.forceMove(get_turf(nif))
@@ -614,7 +615,7 @@
 	set category = "Soulcatcher"
 
 	if(!eyeobj)
-		to_chat(src,"<span class='warning'>You're not projecting into AR!</span>")
+		to_chat(src,span_warning("You're not projecting into AR!"))
 		return
 
 	QDEL_NULL(eyeobj)

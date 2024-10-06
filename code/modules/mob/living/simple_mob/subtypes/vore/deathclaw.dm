@@ -32,7 +32,7 @@
 
 	attacktext = list("mauled")
 
-	faction = "awaymission" //makes away mobs fuckin' be on the same side.
+	faction = FACTION_AWAYMISSION //makes away mobs fuckin' be on the same side.
 
 	maxHealth = 200
 	health = 200
@@ -42,7 +42,7 @@
 	melee_damage_upper = 30
 
 	meat_amount = 8
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	old_x = -16
 	old_y = 0

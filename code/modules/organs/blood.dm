@@ -85,7 +85,10 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		if(species && should_have_organ(O_HEART))
 			var/obj/item/organ/internal/heart/heart = internal_organs_by_name[O_HEART]
 
-			if(!heart)
+			if(has_modifier_of_type(/datum/modifier/bloodpump))
+				blood_volume_raw *= 1
+				blood_volume *= 1
+			else if(!heart)
 				blood_volume_raw = 0
 				blood_volume = 0
 			else if(heart.is_broken())
@@ -221,6 +224,11 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	if(!amt)
 		return 0
 
+	//CHOMNPAdd Start, deathbringers for example delete those before the fire damage is calculated
+	if(!vessel)
+		return 0
+	//CHOMPAdd End
+
 	var/current_blood = vessel.get_reagent_amount("blood")
 	if(current_blood < BLOOD_MINIMUM_STOP_PROCESS)
 		return 0 //We stop processing under 3 units of blood because apparently weird shit can make it overflowrandomly.
@@ -235,7 +243,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 ****************************************************/
 
 //Gets blood from mob to the container, preserving all data in it.
-/mob/living/carbon/proc/take_blood(obj/item/weapon/reagent_containers/container, var/amount)
+/mob/living/carbon/proc/take_blood(obj/item/reagent_containers/container, var/amount)
 
 	var/datum/reagent/B = get_blood(container.reagents)
 	if(!B)
@@ -266,7 +274,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	return B
 
 //For humans, blood does not appear from blue, it comes from vessels.
-/mob/living/carbon/human/take_blood(obj/item/weapon/reagent_containers/container, var/amount)
+/mob/living/carbon/human/take_blood(obj/item/reagent_containers/container, var/amount)
 
 	if(!should_have_organ(O_HEART))
 		return null

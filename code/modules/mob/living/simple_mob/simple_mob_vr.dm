@@ -51,7 +51,7 @@
 	var/mount_offset_x = 5				// Horizontal riding offset.
 	var/mount_offset_y = 8				// Vertical riding offset
 
-	var/obj/item/device/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
+	var/obj/item/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 	can_be_drop_pred = TRUE				// Mobs are pred by default.
 	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
@@ -322,7 +322,7 @@
 
 // Riding
 /datum/riding/simple_mob
-	keytype = /obj/item/weapon/material/twohanded/riding_crop // Crack!
+	keytype = /obj/item/material/twohanded/riding_crop // Crack!
 	nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.
 	key_name = "a riding crop"		// What the 'keys' for the thing being rided on would be called.
 	only_one_driver = TRUE			// If true, only the person in 'front' (first on list of riding mobs) can drive.
@@ -339,7 +339,7 @@
 
 /datum/riding/simple_mob/force_dismount(mob/M)
 	. =..()
-	ridden.visible_message("<span class='notice'>[M] stops riding [ridden]!</span>")
+	ridden.visible_message(span_notice("[M] stops riding [ridden]!"))
 
 /datum/riding/simple_mob/get_offsets(pass_index) // list(dir = x, y, layer)
 	var/mob/living/simple_mob/L = ridden
@@ -366,7 +366,7 @@
 	if(M in buckled_mobs)
 		return FALSE
 	if(M.size_multiplier > size_multiplier * 1.2)
-		to_chat(src,"<span class='warning'>This isn't a pony show! You need to be bigger for them to ride.</span>")
+		to_chat(src,span_warning("This isn't a pony show! You need to be bigger for them to ride."))
 		return FALSE
 
 	var/mob/living/carbon/human/H = M
@@ -406,21 +406,21 @@
 	if(!can_buckle || !istype(M) || !M.Adjacent(src) || M.buckled)
 		return
 	if(buckle_mob(M))
-		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
+		visible_message(span_notice("[M] starts riding [name]!"))
 
 /mob/living/simple_mob/handle_message_mode(message_mode, message, verb, used_radios, speaking, alt_name)
 	//CHOMPEdit - This whole proc tbh
 	if(message_mode)
 		if(message_mode == "intercom")
-			for(var/obj/item/device/radio/intercom/I in view(1, null))
+			for(var/obj/item/radio/intercom/I in view(1, null))
 				I.talk_into(src,message,message_mode,verb,speaking)
 				used_radios += I
 		if(message_mode == "headset")
-			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+			if(mob_radio && istype(mob_radio,/obj/item/radio/headset))
 				mob_radio.talk_into(src,message,message_mode,verb,speaking)
 				used_radios += mob_radio
 		else
-			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+			if(mob_radio && istype(mob_radio,/obj/item/radio/headset))
 				if(mob_radio.channels[message_mode])
 					mob_radio.talk_into(src,message,message_mode,verb,speaking)
 					used_radios += mob_radio
@@ -462,7 +462,7 @@
 	status_flags |= LEAPING
 	pixel_y = pixel_y + 10
 
-	src.visible_message("<span class='danger'>\The [src] leaps at [T]!</span>")
+	src.visible_message(span_danger("\The [src] leaps at [T]!"))
 	src.throw_at(get_step(get_turf(T),get_turf(src)), 4, 1, src)
 	playsound(src, 'sound/effects/bodyfall1.ogg', 50, 1)
 	pixel_y = default_pixel_y
@@ -472,7 +472,7 @@
 	if(status_flags & LEAPING) status_flags &= ~LEAPING
 
 	if(!src.Adjacent(T))
-		to_chat(src, "<span class='warning'>You miss!</span>")
+		to_chat(src, span_warning("You miss!"))
 		return
 
 	if(ishuman(T))

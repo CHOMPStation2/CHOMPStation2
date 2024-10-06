@@ -1,8 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ai" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/fountain,
+/obj/item/paper_bin,
+/obj/item/pen/fountain,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "as" = (
@@ -10,11 +10,11 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/submap/methlab)
 "aY" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 9
 	},
 /turf/template_noop,
@@ -24,28 +24,29 @@
 /turf/template_noop,
 /area/submap/methlab)
 "bA" = (
-/obj/item/device/multitool,
-/turf/template_noop,
+/obj/item/cell/hyper,
+/turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "bJ" = (
-/obj/structure/sign/atmos_waste,
-/turf/simulated/wall/r_wall,
+/obj/effect/floor_decal/rust,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "bQ" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 9
 	},
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 5
 	},
 /turf/template_noop,
 /area/submap/methlab)
 "cg" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio{
+/obj/item/radio{
 	anchored = 1;
 	canhear_range = 1;
 	frequency = 1487;
@@ -59,12 +60,12 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/seeds/ambrosiadeusseed,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/old_tile/white,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "dy" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/storage/bag/chemistry,
+/obj/random/maintenance,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "fr" = (
@@ -80,14 +81,14 @@
 "fY" = (
 /obj/item/stack/cable_coil,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "hf" = (
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "hj" = (
 /obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "hE" = (
 /obj/machinery/door/airlock/vault/bolted,
@@ -103,41 +104,35 @@
 	},
 /obj/item/seeds/ambrosiavulgarisseed,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/old_tile/white,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "iz" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
-/area/submap/methlab)
-"iB" = (
-/obj/effect/floor_decal/rust,
-/obj/random/maintenance,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "iN" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/random/medical/pillbottle,
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "jm" = (
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/methlab)
 "jo" = (
 /obj/machinery/vending/hydronutrients,
-/turf/simulated/floor/tiled/old_tile/white,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "kp" = (
 /obj/effect/floor_decal/rust/mono_rusted3,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "lb" = (
 /obj/machinery/biogenerator,
-/turf/simulated/floor/tiled/old_tile/white,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "lt" = (
 /obj/item/frame/apc,
@@ -146,10 +141,10 @@
 	pixel_x = 11;
 	pixel_y = 22
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "lx" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/methlab)
 "lJ" = (
 /obj/structure/fence/corner,
@@ -170,19 +165,18 @@
 /area/submap/methlab)
 "mw" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/syndicate,
-/obj/random/medical/pillbottle,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "nq" = (
 /obj/random/junk,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "oo" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/seeds/ambrosiainfernusseed,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/old_tile/white,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "oF" = (
 /obj/structure/fence/cut/large,
@@ -202,12 +196,11 @@
 /turf/template_noop,
 /area/submap/methlab)
 "rK" = (
-/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "rU" = (
-/obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/under/suit_jacket,
 /obj/item/clothing/shoes/dress{
 	pixel_y = -9
@@ -220,11 +213,11 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/storage/bag/chemistry,
+/obj/random/maintenance,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "sW" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 9
 	},
 /turf/template_noop,
@@ -246,7 +239,7 @@
 /area/submap/methlab)
 "tQ" = (
 /obj/structure/girder,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "uA" = (
 /obj/structure/fence/cut/large{
@@ -259,10 +252,10 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "wd" = (
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "wI" = (
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -284,17 +277,15 @@
 /area/submap/methlab)
 "yr" = (
 /obj/random/trash,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "yM" = (
-/obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/under/suit_jacket/really_black,
 /obj/item/clothing/shoes/dress{
 	pixel_y = -9
 	},
-/obj/item/clothing/mask/fluff/lucerna_1,
+/obj/item/clothing/mask/luchador,
 /obj/structure/curtain/black,
-/obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/methlab)
 "yY" = (
@@ -305,7 +296,7 @@
 "zu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "zG" = (
 /obj/random/junk,
@@ -325,7 +316,7 @@
 /area/submap/methlab)
 "AB" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "AM" = (
@@ -346,29 +337,27 @@
 /area/submap/methlab)
 "BR" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "BT" = (
 /obj/structure/safe/floor,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
-/obj/effect/floor_decal/industrial/outline/red,
-/obj/item/weapon/storage/bag/cash,
-/obj/item/weapon/storage/bag/cash,
-/turf/simulated/floor,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiavulgaris,
+/obj/item/storage/bag/cash,
+/obj/item/storage/bag/cash,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "CH" = (
-/obj/structure/table/rack/shelf/steel,
 /obj/item/seeds/ambrosiavulgarisseed,
 /obj/item/seeds/ambrosiavulgarisseed,
 /obj/item/seeds/ambrosiavulgarisseed,
@@ -378,14 +367,15 @@
 /obj/item/seeds/ambrosiadeusseed,
 /obj/item/seeds/ambrosiadeusseed,
 /obj/item/seeds/ambrosiadeusseed,
-/turf/simulated/floor/tiled/old_tile/white,
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "CL" = (
 /obj/structure/grille/rustic,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "CW" = (
 /obj/machinery/light{
@@ -395,10 +385,10 @@
 /area/submap/methlab)
 "DG" = (
 /obj/structure/fence,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/methlab)
 "DP" = (
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
@@ -407,16 +397,16 @@
 /obj/item/seeds/ambrosiadeusseed,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/old_tile/white,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "EW" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "Fg" = (
 /obj/machinery/door/airlock,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "Gs" = (
 /obj/structure/table/steel_reinforced,
@@ -432,13 +422,13 @@
 "HA" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille/rustic,
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "HN" = (
 /obj/machinery/porta_turret/lasertag/red{
 	name = "REAL turret"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "HX" = (
 /obj/machinery/light,
@@ -446,6 +436,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "Ih" = (
@@ -454,14 +445,14 @@
 /area/submap/methlab)
 "IH" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "IQ" = (
 /obj/item/clothing/accessory/stethoscope,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "JQ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -469,22 +460,17 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/steeldecal/steel_decals3,
-/obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "Kg" = (
 /obj/structure/fence/cut/medium{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/methlab)
 "KK" = (
 /obj/machinery/chem_master,
 /obj/effect/floor_decal/rust/color_rustedfull,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/submap/methlab)
-"KR" = (
-/obj/item/weapon/cell/hyper,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "Lh" = (
@@ -498,14 +484,14 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "LX" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "Mn" = (
 /obj/structure/barricade,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "Of" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -516,7 +502,7 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "Oq" = (
 /obj/structure/fence{
@@ -526,22 +512,21 @@
 /area/submap/methlab)
 "Py" = (
 /obj/random/trash,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/methlab)
 "PH" = (
 /obj/machinery/seed_extractor,
-/turf/simulated/floor/tiled/old_tile/white,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "PO" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/module/power_control,
-/obj/random/medical/pillbottle,
+/obj/item/module/power_control,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "PZ" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "QP" = (
 /obj/structure/table/steel_reinforced,
@@ -549,7 +534,7 @@
 /area/submap/methlab)
 "QW" = (
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "Sn" = (
 /obj/structure/barricade,
@@ -570,20 +555,19 @@
 	},
 /obj/item/seeds/ambrosiadeusseed,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/old_tile/white,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "Tr" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/effect/floor_decal/rust,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "Ts" = (
-/obj/structure/barricade/cutout/fukken_xeno,
-/turf/template_noop,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/steel_dirty,
 /area/submap/methlab)
 "Ty" = (
-/obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/under/suit_jacket/burgundy,
 /obj/item/clothing/shoes/dress{
 	pixel_y = -9
@@ -594,20 +578,19 @@
 /area/submap/methlab)
 "TU" = (
 /obj/structure/safe/floor,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus,
-/obj/effect/floor_decal/industrial/outline/red,
-/obj/item/weapon/storage/bag/cash,
-/obj/item/weapon/storage/bag/cash,
-/turf/simulated/floor,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosiadeus,
+/obj/item/storage/bag/cash,
+/obj/item/storage/bag/cash,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "Uy" = (
 /obj/structure/fence/corner{
@@ -616,7 +599,6 @@
 /turf/template_noop,
 /area/submap/methlab)
 "UD" = (
-/obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/under/suit_jacket/red,
 /obj/item/clothing/shoes/dress{
 	pixel_y = -9
@@ -626,14 +608,16 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/methlab)
 "UO" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/template_noop,
 /area/submap/methlab)
 "Vf" = (
-/obj/structure/barricade/cutout/fukken_xeno,
-/turf/simulated/floor/outdoors/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/maintenance/cargo,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "Vu" = (
 /obj/structure/fence/cut/medium{
@@ -661,8 +645,9 @@
 /turf/simulated/wall,
 /area/submap/methlab)
 "Xo" = (
-/obj/random/maintenance,
-/turf/simulated/floor,
+/obj/effect/floor_decal/rust,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "Xr" = (
 /obj/item/stack/material/phoron{
@@ -671,30 +656,23 @@
 /obj/item/stack/material/phoron{
 	amount = 5
 	},
-/obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/extinguisher,
-/obj/item/weapon/storage/box/lights/mixed,
-/turf/simulated/floor,
+/obj/item/extinguisher,
+/obj/item/storage/box/lights/mixed,
+/turf/simulated/floor/plating/external/virgo3b,
 /area/submap/methlab)
 "Yz" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/seeds/ambrosiavulgarisseed,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/old_tile/white,
-/area/submap/methlab)
-"Zh" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance/engineering,
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/white/virgo3b,
 /area/submap/methlab)
 "Zp" = (
 /obj/structure/grille/rustic,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/turf/simulated/floor/tiled/old_tile/green,
+/turf/simulated/floor/tiled/old_tile/green/virgo3b,
 /area/submap/methlab)
 "Zt" = (
 /obj/structure/salvageable/autolathe,
@@ -734,8 +712,8 @@ ps
 ps
 lx
 ps
+Wp
 ps
-Ts
 ps
 bQ
 sW
@@ -779,7 +757,7 @@ Xi
 mw
 BR
 tQ
-bA
+ps
 HA
 Yz
 Yz
@@ -798,7 +776,7 @@ ps
 ps
 Xi
 Zt
-Xo
+hf
 Lh
 Xi
 HA
@@ -806,7 +784,7 @@ HA
 PZ
 PZ
 wd
-QW
+Xo
 wd
 HA
 ps
@@ -820,12 +798,12 @@ ps
 zG
 Of
 cg
-hQ
+Ts
 uY
 xM
 kp
 Ol
-Zh
+Vf
 PH
 jo
 lb
@@ -843,13 +821,13 @@ Py
 Of
 tt
 Lh
-Xo
+hf
 Xi
 HA
 HA
 zu
 Ol
-zu
+Vf
 IH
 QW
 HA
@@ -861,7 +839,7 @@ Vu
 ps
 ps
 ps
-Vf
+lx
 tz
 ai
 pq
@@ -926,9 +904,9 @@ Vu
 Oq
 Xi
 Xi
-KR
+bA
 KK
-iB
+bJ
 KK
 wI
 Vw
@@ -981,7 +959,7 @@ Xi
 Xi
 Xi
 mi
-Ts
+ps
 ps
 ps
 ps
@@ -1040,7 +1018,7 @@ tQ
 oN
 oN
 hE
-bJ
+oN
 oN
 Xi
 Xi
@@ -1058,7 +1036,7 @@ ps
 Vu
 ps
 ps
-ps
+Wp
 oN
 BT
 fD

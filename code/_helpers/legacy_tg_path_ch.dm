@@ -160,7 +160,7 @@ GLOBAL_LIST_INIT(legacy_tg_space_type_cache, typecacheof(/turf/space))
 
 	// general pathfinding vars/args
 	/// An ID card representing what access we have and what doors we can open. Its location relative to the pathing atom is irrelevant
-	var/obj/item/weapon/card/id/id
+	var/obj/item/card/id/id
 	/// How far away we have to get to the end target before we can call it quits
 	var/mintargetdist = 0
 	/// I don't know what this does vs , but they limit how far we can search before giving up on a path

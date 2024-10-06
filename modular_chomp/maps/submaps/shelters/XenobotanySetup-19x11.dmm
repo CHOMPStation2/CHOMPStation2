@@ -4,8 +4,8 @@
 /area/survivalpod/superpose/XenoBotanySetup)
 "aV" = (
 /obj/structure/table/glass,
-/obj/item/weapon/gun/energy/floragun,
-/obj/item/weapon/stock_parts/micro_laser/hyper,
+/obj/item/gun/energy/floragun,
+/obj/item/stock_parts/micro_laser/hyper,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/XenoBotanySetup)
 "bo" = (
@@ -45,7 +45,7 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/XenoBotanySetup)
 "ee" = (
@@ -70,51 +70,51 @@
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/XenoBotanySetup)
 "fk" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/closet/cabinet{
 	density = 0;
@@ -198,14 +198,14 @@
 /area/survivalpod/superpose/XenoBotanySetup)
 "pG" = (
 /obj/structure/table/glass,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/material/minihoe,
-/obj/item/device/analyzer/plant_analyzer,
-/obj/item/device/analyzer/plant_analyzer,
-/obj/item/weapon/shovel/spade,
-/obj/item/weapon/shovel/spade,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/material/minihoe,
+/obj/item/material/minihoe,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/shovel/spade,
+/obj/item/shovel/spade,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/XenoBotanySetup)
 "pU" = (
@@ -219,7 +219,7 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/survivalpod/superpose/XenoBotanySetup)
 "qf" = (
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/XenoBotanySetup)
 "uf" = (
@@ -309,9 +309,9 @@
 	pixel_y = -30
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/XenoBotanySetup)
 "Dd" = (
@@ -396,7 +396,7 @@
 	},
 /obj/effect/floor_decal/corner/green/border,
 /obj/structure/table/glass,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/XenoBotanySetup)
 "IN" = (
@@ -511,7 +511,7 @@
 /area/survivalpod/superpose/XenoBotanySetup)
 "Qo" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /turf/simulated/floor/wood/alt/panel,
 /area/survivalpod/superpose/XenoBotanySetup)
 "Qu" = (
@@ -552,8 +552,8 @@
 /area/survivalpod/superpose/XenoBotanySetup)
 "Yi" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flash,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flash,
+/obj/item/flashlight/lamp/green{
 	pixel_y = 6;
 	pixel_x = 5
 	},

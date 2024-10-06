@@ -64,6 +64,10 @@
 /obj/effect/alien/weeds,
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/misc_debris)
+"W" = (
+/obj/effect/alien/weeds,
+/turf/simulated/floor/airless,
+/area/submap/debrisfield/misc_debris)
 "X" = (
 /obj/effect/alien/weeds,
 /mob/living/simple_mob/animal/space/alien/drone,
@@ -81,7 +85,7 @@ a
 h
 X
 U
-U
+W
 D
 "}
 (3,1,1) = {"
@@ -100,7 +104,7 @@ a
 "}
 (5,1,1) = {"
 h
-U
+W
 U
 X
 a

@@ -20,13 +20,13 @@
 /area/submap/peninsula)
 "g" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/template_noop,
 /area/submap/peninsula)
 "h" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
+/obj/item/cell/device,
+/obj/item/cell/device,
 /turf/template_noop,
 /area/submap/peninsula)
 "i" = (

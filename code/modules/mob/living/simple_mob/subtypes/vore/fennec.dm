@@ -31,7 +31,7 @@
 	icon_rest = "fennec_rest"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "fennec"
+	faction = FACTION_FENNEC
 	maxHealth = 30
 	health = 30
 
@@ -40,7 +40,7 @@
 	response_harm = "hits"
 
 	meat_amount = 2
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/fox
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/fox
 
 	harm_intent_damage = 5
 	melee_damage_lower = 1
