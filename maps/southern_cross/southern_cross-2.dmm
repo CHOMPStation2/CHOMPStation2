@@ -48290,13 +48290,12 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "eYr" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/doorbell_chime{
+	id_tag = "sc-ChimeMed";
+	name = "Medbay doorbell chime"
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/sleeper)
+/turf/simulated/wall,
+/area/medical/ward)
 "eYu" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -48483,14 +48482,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
-"fed" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay_primary_storage)
 "fee" = (
 /obj/structure/sign/department/shield,
 /turf/simulated/wall/r_wall,
@@ -49480,13 +49471,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
-"fDA" = (
-/obj/machinery/doorbell_chime{
-	id = "medbay";
-	name = "Medbay doorbell chime"
-	},
-/turf/simulated/wall/r_wall,
-/area/medical/virology)
 "fDD" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -50953,6 +50937,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"goD" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "goF" = (
 /obj/machinery/vending/tool{
 	dir = 8;
@@ -51059,11 +51051,12 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "gro" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/doorbell_chime{
+	id_tag = "sc-ChimeMed";
+	name = "Medbay doorbell chime"
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/sleeper)
+/turf/simulated/wall/r_wall,
+/area/medical/virology)
 "grM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -64166,6 +64159,12 @@
 /obj/structure/backup_implanter_ch{
 	pixel_y = 8
 	},
+/obj/machinery/button/doorbell{
+	pixel_y = 26;
+	pixel_x = -12;
+	id = "sc-ChimeMed";
+	name = "Medbay Doorbell"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "nwl" = (
@@ -68632,6 +68631,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/coffee_shop)
+"pSG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "pTK" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /obj/machinery/meter,
@@ -70832,14 +70837,13 @@
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D3)
 "rrv" = (
-/obj/machinery/button/doorbell{
-	pixel_x = -12;
-	pixel_y = -6;
-	id = "medbay";
-	name = "Medbay Doorbell"
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/wall/r_wall,
-/area/medical/foyer)
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "rrB" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -74922,6 +74926,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"tKB" = (
+/obj/effect/floor_decal/borderfloorwhite/corner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "tMo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -80621,11 +80630,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
-"xoS" = (
-/obj/effect/floor_decal/borderfloorwhite/corner,
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay_primary_storage)
 "xoU" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/machinery/power/apc{
@@ -81797,13 +81801,6 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
-"ybD" = (
-/obj/machinery/doorbell_chime{
-	id = "medbay";
-	name = "Medbay doorbell chime"
-	},
-/turf/simulated/wall,
-/area/medical/ward)
 "ycd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -124214,7 +124211,7 @@ wrz
 byt
 aql
 bMc
-fed
+goD
 hHj
 tAA
 oew
@@ -124474,7 +124471,7 @@ aql
 bBQ
 bDO
 bHt
-xoS
+tKB
 xaD
 aql
 hhC
@@ -125247,8 +125244,8 @@ jKa
 bKu
 eHh
 bHo
-eYr
-gro
+rrv
+pSG
 gcc
 bSu
 btJ
@@ -126266,7 +126263,7 @@ vyA
 aWf
 xeV
 xTX
-rrv
+bwB
 nwc
 rXR
 xft
@@ -126282,7 +126279,7 @@ bHo
 mUw
 bHo
 bIT
-ybD
+eYr
 bMf
 bNU
 rfQ
@@ -132466,7 +132463,7 @@ hBo
 hBo
 sYl
 hBo
-fDA
+gro
 fWS
 jFL
 vGp
