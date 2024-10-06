@@ -210,6 +210,12 @@
 	name = "Smooth Breasts"
 	icon_state = "breasts_smooth"
 
+/datum/sprite_accessory/marking/ch/hippo_head-head
+	name = "Full Hippo Head"
+	icon_state = "hippo_head-head"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/marking/ch/breasts/reptile
 	name = "Reptile Breasts"
 	icon_state = "breasts_reptile"
@@ -336,15 +342,6 @@
 	body_parts = list(BP_HEAD)
 	hide_body_parts = list(BP_HEAD)
 
-/datum/sprite_accessory/marking/ch/hippo_head
-	name = "full hippo head"
-<<<<<<< HEAD
-	icon_state = "hippo_head-head"
-=======
-	icon_state = "hippo_head"
->>>>>>> Hunter-Dovetail/master
-	body_parts = list(BP_HEAD)
-	color_blend_mode = ICON_MULTIPLY
 
 // TEETH //
 
