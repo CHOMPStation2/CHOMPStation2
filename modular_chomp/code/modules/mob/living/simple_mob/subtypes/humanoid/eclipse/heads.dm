@@ -194,7 +194,7 @@
 
 
 /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse
-	faction = "eclipse"
+	faction = FACTION_ECLIPSE
 
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain
@@ -366,3 +366,194 @@
 		var/turf/T = pick(bomb_range)
 		P.launch_projectile(target, BP_TORSO, src)
 		bomb_range -= T
+
+/mob/living/simple_mob/mechanical/combat_drone/artillery
+	faction = FACTION_ECLIPSE
+	projectiletype = /obj/item/projectile/arc/blue_energy
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead
+	name = "Eclipse Precursor Overseer"
+	icon_state = "overseer"
+	health = 300
+	maxHealth = 300
+	grab_resist = 100
+	var/fullshield = 6
+	var/shieldrage = 6
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/bullet_act(obj/item/projectile/P) //Projectiles will be absorbed by the shield. Note to self do funky sprite. 10 hits to remove
+	if(fullshield > 0)
+		fullshield--
+		if(fullshield > 0)
+			visible_message(span_warning(span_orange("<B>[P] is absorbed by the shield!.</B>")))
+		else
+			visible_message(span_warning(span_orange("<B>[P] breaks the shield!!.</B>")))
+	else
+		..()
+		shieldrage--
+		if(shieldrage == 0)
+			shieldrage = 6
+			fullshield = 6
+			visible_message(span_warning(span_orange("<B>The shield reactivates!!.</B>")))
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/do_special_attack(atom/A)
+	if(vore_fullness > 2) //If they nompf someone already
+		fullsummon(A)
+	var/mob/living/L = A
+
+	if(istype(A, /obj/mecha))//if target is a mecha
+		switch(a_intent)
+			if(I_DISARM) // Phase 3
+				mech_three(A)
+			if(I_HURT) // Phase 1
+				mech_one(A)
+			if(I_GRAB) // Phase 2
+				mech_two(A)
+
+	if(!L.devourable || !L.allowmobvore || !L.can_be_drop_prey || !L.throw_vore) //if they aren't edible
+		if(fullshield > 0)
+			switch(a_intent)
+				if(I_DISARM) // Phase 3
+					shield_three(A)
+				if(I_HURT) // Phase 1
+					shield_one(A)
+				if(I_GRAB) // Phase 2
+					shield_two(A)
+		else
+			switch(a_intent)
+				if(I_DISARM) // Phase 3
+					phase_three(A)
+				if(I_HURT) // Phase 1
+					phase_one(A)
+				if(I_GRAB) // Phase 2
+					phase_two(A)
+	else
+		var/obj/belly/belly_dest
+		L.forceMove(belly_dest)
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/fullsummon(atom/target) //Summons a wall whilst the boss tries to enjoy their meal
+	visible_message(span_warning("\The [src] calls in drone support!"))
+	new /mob/living/simple_mob/mechanical/combat_drone/artillery (src.loc)
+	sleep(30)
+	new /mob/living/simple_mob/mechanical/combat_drone/artillery (src.loc)
+	sleep(30)
+	new /mob/living/simple_mob/mechanical/combat_drone/artillery (src.loc)
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/mech_two(atom/target) //Forces the mecha user in a strange dance, being forced out, likly dodging one projectile and getting back in
+	var/obj/mecha/M = target
+	visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
+	M.go_out()
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/mech_one(atom/target) //might alter this one to a machine gun esque ion fire
+	var/obj/item/projectile/P = new /obj/item/projectile/ion(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+	sleep(5)
+	P.launch_projectile(target, BP_TORSO, src)
+	sleep(5)
+	P.launch_projectile(target, BP_TORSO, src)
+	sleep(5)
+	P.launch_projectile(target, BP_TORSO, src)
+	sleep(5)
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/mech_three(atom/target) //did we ever fix fire bypassing mechas?
+	var/obj/item/projectile/P = new /obj/item/projectile/scatter/flamethrower(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/phase_one(atom/target) //Simply tries to disable you
+	visible_message(span_alien("\The [src] pulls out a flash!"))
+	if(isliving(target))
+		var/mob/living/L = target
+		if(iscarbon(L))
+			var/mob/living/carbon/C = L
+			if(C.stat != DEAD)
+				var/safety = C.eyecheck()
+				if(safety <= 0)
+					var/flash_strength = 8
+					if(ishuman(C))
+						var/mob/living/carbon/human/H = C
+						flash_strength *= H.species.flash_mod
+						if(flash_strength > 0)
+							to_chat(H, span_alien("You are disoriented by \the [src]!"))
+							H.eye_blurry = max(H.eye_blurry, flash_strength + 5)
+							H.flash_eyes()
+							H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0, "Photon burns")
+
+		else if(issilicon(L))
+			if(isrobot(L))
+				var/flashfail = FALSE
+				var/mob/living/silicon/robot/R = L
+				if(!flashfail)
+					to_chat(R, span_alien("Your optics are scrambled by \the [src]!"))
+					R.Confuse(10)
+					R.flash_eyes()
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/phase_two(atom/target)
+	if(!target)
+		to_chat(src, span_warning("There's nothing to teleport to."))
+		return FALSE
+
+	var/list/nearby_things = range(1, target)
+	var/list/valid_turfs = list()
+
+	// All this work to just go to a non-dense tile.
+	for(var/turf/potential_turf in nearby_things)
+		var/valid_turf = TRUE
+		if(potential_turf.density)
+			continue
+		for(var/atom/movable/AM in potential_turf)
+			if(AM.density)
+				valid_turf = FALSE
+		if(valid_turf)
+			valid_turfs.Add(potential_turf)
+
+	if(!(valid_turfs.len))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
+		return FALSE
+
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
+
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/spark_spread
+	s1.set_up(5, 1, T)
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/spark_spread
+	s2.set_up(5, 1, target_turf)
+
+
+	T.visible_message(span_notice("\The [src] vanishes!"))
+	s1.start()
+
+	forceMove(target_turf)
+	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
+
+	target_turf.visible_message(span_warning("\The [src] appears!"))
+	s2.start()
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/phase_three(atom/target) //This might friendly fire itself, but funny and final phase
+	Beam(target, icon_state = "sat_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
+	sleep(30)
+	var/obj/item/projectile/P = new /obj/item/projectile/beam/chain_lightning(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/shield_one(atom/target)
+	var/obj/item/projectile/P = new /obj/item/projectile/temp/hot(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/shield_two(atom/target)
+	if(prob(50))
+		visible_message(span_alien("\The [src] begins to bandage their wounds."))
+		sleep(30)
+		adjustBruteLoss(-25.0)
+		visible_message(span_alien("\The [src] begins to salve their burns."))
+		sleep(30)
+		adjustFireLoss(-25.0)
+	else
+		visible_message(span_alien("\The [src] consumes an odd pill."))
+		add_modifier(/datum/modifier/aura/slime_heal, 15, src)
+
+/mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/shield_three(atom/target)
+	Beam(target, icon_state = "sat_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
+	sleep(30)
+	var/obj/item/projectile/P = new /obj/item/projectile/beam/lightning(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)

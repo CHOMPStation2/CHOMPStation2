@@ -41,3 +41,12 @@
 /datum/spawnpoint/fueldepot/New()
 	..()
 	turfs = GLOB.latejoin_fueldepot
+
+/datum/spawnpoint/tyrspawn
+	display_name = "Tyr Wreckage"
+	msg = "woke up in a ruined shuttle"
+	restrict_job = list(JOB_OUTSIDER)
+
+/datum/spawnpoint/tyrspawn/New()
+	..()
+	turfs = GLOB.latejoin_tyrvillage

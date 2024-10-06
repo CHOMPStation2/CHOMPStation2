@@ -1,7 +1,7 @@
 /datum/job/captain
 	disallow_jobhop = TRUE
 	pto_type = PTO_CIVILIAN
-	dept_time_required = 80 //Pending something more complicated
+	dept_time_required = 200 //Pending something more complicated - CHOMPEdit
 	alt_titles = list(JOB_ALT_OVERSEER= /datum/alt_title/overseer, JOB_ALT_FACILITY_DIRECTOR = /datum/alt_title/facility_director, JOB_ALT_CHIEF_SUPERVISOR = /datum/alt_title/chief_supervisor,
 						JOB_ALT_CAPTAIN = /datum/alt_title/captain)
 
@@ -22,7 +22,7 @@
 	pto_type = PTO_CIVILIAN
 	departments = list(DEPARTMENT_COMMAND, DEPARTMENT_CIVILIAN)
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
-	dept_time_required = 60
+	dept_time_required = 120 // CHOMPEdit
 
 	alt_titles = list(JOB_ALT_CREW_RESOURCE_OFFICER = /datum/alt_title/cro, JOB_ALT_DEPUTY_MANAGER = /datum/alt_title/deputy_manager, JOB_ALT_STAFF_MANAGER = /datum/alt_title/staff_manager,
 						JOB_ALT_FACILITY_STEWARD = /datum/alt_title/facility_steward, JOB_ALT_FIRST_MATE = /datum/alt_title/first_mate //CHOMPEdit

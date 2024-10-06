@@ -52,7 +52,7 @@
 
 /datum/job/qm
 	pto_type = PTO_CARGO
-	dept_time_required = 20
+	dept_time_required = 60 // CHOMPEdit
 	alt_titles = list(JOB_ALT_SUPPLY_CHIEF = /datum/alt_title/supply_chief, JOB_ALT_LOGISTICS_MANAGER = /datum/alt_title/logistics_manager, JOB_ALT_CARGO_SUPERVISOR = /datum/alt_title/cargo_supervisor)
 
 /datum/alt_title/logistics_manager

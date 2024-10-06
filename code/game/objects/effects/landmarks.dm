@@ -50,6 +50,10 @@
 			GLOB.latejoin_fueldepot += loc
 			delete_me = 1
 			return
+		if("JoinLateTyrVillage")
+			GLOB.latejoin_tyrvillage += loc
+			delete_me = 1
+			return
 		//CHOMPEdit End
 		if("JoinLateElevator")
 			latejoin_elevator += loc

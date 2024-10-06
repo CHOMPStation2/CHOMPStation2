@@ -102,3 +102,10 @@
   TheCaramelion:
   - bugfix: Removed a default object from the junk mail
   - bugfix: Verb vote placed in the correct verb panel location
+2024-10-06:
+  Hunter-Dovetail:
+  - rscadd: hippo_head body marking!
+  Kashargul:
+  - bugfix: chomp specific auto transfer dest placeholder
+  TheCaramelion:
+  - bugfix: Geneticist now gain PTO
