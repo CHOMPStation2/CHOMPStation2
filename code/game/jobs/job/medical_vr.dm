@@ -1,7 +1,7 @@
 /datum/job/cmo
 	disallow_jobhop = TRUE
 	pto_type = PTO_MEDICAL
-	dept_time_required = 60
+	dept_time_required = 120 // CHOMPEdit
 
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter, //CHOMPEdit
