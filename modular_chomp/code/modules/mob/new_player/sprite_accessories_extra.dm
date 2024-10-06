@@ -214,6 +214,12 @@
 	name = "Reptile Breasts"
 	icon_state = "breasts_reptile"
 
+/datum/sprite_accessory/marking/ch/hippo_head
+	name = "full hippo head"
+	icon_state = "hippo_head"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
 /// NEW XENOMORPH SPRITE_ACCESSORIES - Basesprites borrowed from Citadel and tidied up by Makkinindorn, should blend a bit more nicely. ///
 
 /datum/sprite_accessory/marking/ch/xenomorph // This is just here to create an easy-to-follow typepath.
@@ -335,12 +341,6 @@
 	icon_state = "xeno_queen_striped"
 	body_parts = list(BP_HEAD)
 	hide_body_parts = list(BP_HEAD)
-
-/datum/sprite_accessory/marking/ch/hippo_head
-	name = "full hippo head"
-	icon_state = "hippo_head"
-	body_parts = list(BP_HEAD)
-	color_blend_mode = ICON_MULTIPLY
 
 // TEETH //
 
