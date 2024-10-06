@@ -49,6 +49,21 @@ sharplight - Protean
 tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
 timidvi - Diona
+<<<<<<< HEAD
+=======
+tombomb90 - Protean
+torquegstc - Protean
+trifireblade - Protean
+trikonei - Protean
+umbraferros - Black-Eyed Shadekin
+umbraferros - Protean
+umbraferros - Xenochimera
+umbraferros - Hanner
+umbrenos - Black-Eyed Shadekin
+unkindnaysayer - Hanner
+varkaselyn - Protean
+varonis - Protean
+>>>>>>> e5db0b3245... Merge pull request #16435 from SatinIsle/hanner-again
 varonis - Xenochimera
 verkister - Xenochimera
 vitoras - Protean
