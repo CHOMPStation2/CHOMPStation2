@@ -289,7 +289,7 @@
 	movement_cooldown = -1
 	special_attack_min_range = 1
 	special_attack_max_range = 7
-	special_attack_cooldown = 0.5 SECONDS
+	special_attack_cooldown = 3.5 SECONDS
 	projectiletype = /obj/item/projectile/energy/mob/precursor
 	weatherprojectile = /obj/item/projectile/energy/mob/precursor
 	var/attack_cycle = 1

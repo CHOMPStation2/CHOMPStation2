@@ -87,12 +87,12 @@ var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance dec
 	listening_level = Z_LEVEL_SURFACE_SKYLANDS
 	autolinkers = list("sky_relay")
 */
-
+/*
 /obj/machinery/telecomms/relay/preset/southerncross/valley
 	id = "Valley Relay"
 	listening_level = Z_LEVEL_SURFACE_VALLEY
 	autolinkers = list("valley_relay")
-
+*/
 //Temp Removal TFF 15/2/20
 /*
 /obj/machinery/telecomms/relay/preset/belt_outpost // CHOMPedit: Tcomms relay for Belt Outpost
@@ -111,8 +111,8 @@ var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance dec
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub",
-		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "cnt_relay", "explorer", "exp_relay", "valley_relay",
-		//"belt_relay", // Chompstation edit - adds belt outpost to relays.	Temp Removal of Belt Relay TFF 15/2/20, Added Valley comn stuff 2/14/2023
+		"d1_relay", "d2_relay", "d3_relay", "pnt_relay", "cve_relay", "wld_relay", "tns_relay", "cnt_relay", "explorer", "exp_relay",
+		//"belt_relay", // Chompstation edit - adds belt outpost to relays.	Temp Removal of Belt Relay TFF 15/2/20, Added Valley comn stuff 2/14/2023 Removed it 9/30/2024
 		//"sky_relay", // Sky islands removal due to lack of use
 		"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused",
 		"hb_relay", "receiverA", "broadcasterA"

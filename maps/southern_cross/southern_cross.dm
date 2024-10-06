@@ -53,7 +53,7 @@
 		#include "southern_cross-9.dmm" //Transit z8
 		#include "southern_cross-10.dmm" //Sif wilds z9
 //		#include "southern_cross-12.dmm" //Skylands z10 //Remove due to lack of use
-		#include "southern_cross-13.dmm" //Valley z10 seemingly. For stranger critters and POIs.
+//		#include "southern_cross-13.dmm" //Valley z10 seemingly. For stranger critters and POIs.
 	#endif
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
@@ -73,6 +73,7 @@
 	#include "overmap/planets/kara/aerostat/aerostat.dm" //This is an installation for Kara.
 	*/
 	#include "overmap/planets/thor/thor.dm"
+	#include "overmap/planets/tyr/tyr.dm"
 
 	//SPACE - Anything random in space
 	#include "overmap/space/fueldepot.dm" //This is a fuel depot in space.

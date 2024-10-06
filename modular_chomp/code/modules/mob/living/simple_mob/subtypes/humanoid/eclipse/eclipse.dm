@@ -14,7 +14,7 @@
 	icon_gib = "syndicate_gib"
 	taser_kill = 0
 
-	faction = "eclipse"
+	faction = FACTION_ECLIPSE
 	movement_cooldown = 0
 
 	status_flags = 0
@@ -108,8 +108,8 @@
 	name = "Solar Eclipse Initiate"
 	desc = "You shouldn't be seeing this. But don't use lasers or energy weapons"
 
-	armor = list(melee = -50, bullet = -50, laser = 0, energy = 0, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
-	armor_soak = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = -100, bullet = -100, laser = 30, energy = 30, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor_soak = list(melee = 0, bullet = 0, laser = 18, energy = 18, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
@@ -231,7 +231,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
@@ -279,8 +279,8 @@
 	name = "Lunar Eclipse Initiate"
 	desc = "You shouldn't be seeing this, but don't use melee weapons or bullets."
 
-	armor = list(melee = 0, bullet = 0, laser = -50, energy = -50, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
-	armor_soak = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
+	armor = list(melee = 30, bullet = 30, laser = -100, energy = -100, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor_soak = list(melee = 18, bullet = 18, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/bullet))
@@ -290,58 +290,14 @@
 		..()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
+	to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
 	.=..()
-
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
-	name = "Lunar Eclipse Silver Serpent"
-	desc = "A hungry looking naga, their strange armor protecting them from ballistics and physical weaponry."
-	health = 100 //Old 40
-	maxHealth = 100
-	reload_max = 6
-	movement_cooldown = 1
-
-	icon_state = "eclipse_silver"
-	icon_living = "eclipse_silver"
-
-	projectiletype = /obj/item/projectile/bullet/pistol/medium/ap/eclipse
-
-	var/grenade_type = /obj/item/grenade/chem_grenade/teargas
-	var/grenade_timer = 20
-
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle/should_special_attack(atom/A)
-	var/mob_count = 0				// Are there enough mobs to consider grenading?
-	var/turf/T = get_turf(A)
-	for(var/mob/M in range(T, 2))
-		if(M.faction == faction) 	// Don't grenade our friends
-			return FALSE
-		if(M in oview(src, special_attack_max_range))	// And lets check if we can actually see at least two people before we throw a grenade
-			if(!M.stat)			// Dead things don't warrant a grenade
-				mob_count ++
-	if(mob_count < 2)
-		return FALSE
-	else
-		return TRUE
-
-// Yes? Throw the grenade
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle/do_special_attack(atom/A)
-	set waitfor = FALSE
-	set_AI_busy(TRUE)
-
-	var/obj/item/grenade/G = new grenade_type(get_turf(src))
-	if(istype(G))
-		G.throw_at(A, G.throw_range, G.throw_speed, src)
-		G.det_time = grenade_timer	//CHOMPEdit
-		G.activate(src)	//CHOMPEdit
-		special_attack_charges = max(special_attack_charges-1, 0)
-
-	set_AI_busy(FALSE)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner //wuff with shotgun
 	name = "Lunar Eclipse Shotgunner"
 	desc = "A Vulpkanin or the like in a red-purple flashing rigsuit, it defending them from physical damage of close and long ranges."
-	health = 75 //old 40
-	maxHealth = 75
+	health = 40
+	maxHealth = 40
 	reload_max = 1
 
 	icon_state = "eclipse_shotwuff"
@@ -377,7 +333,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
@@ -533,7 +489,7 @@
 // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(L, span_warning("You feel a tiny prick."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger/apply_melee_effects(var/atom/A)
@@ -547,7 +503,7 @@
 // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(L, span_warning("You feel a tiny prick."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 
@@ -606,7 +562,7 @@
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 			s.set_up(5, 1, L)
 			s.start()
-			visible_message("<span class='danger'>The pummler releases a powerful shock!</span>")
+			visible_message(span_danger("The pummler releases a powerful shock!"))
 		else
 			return
 
@@ -690,7 +646,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
@@ -725,67 +681,6 @@
 	health = 1
 	maxHealth = 1
 	faction = "eclipse"
-
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker //teleporting stalker
-	name = "Solar Eclipse Froststalker"
-	health = 30
-	maxHealth = 30
-	desc = "A somewhat see through being wearing a burn resistaint coat."
-	melee_damage_lower = 20
-	melee_damage_upper = 20
-	attack_armor_pen = 30
-	special_attack_cooldown = 25 SECONDS
-	special_attack_min_range = 1
-	special_attack_max_range = 7
-	projectiletype = null
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
-	icon_state = "froststalker"
-	icon_living = "froststalker"
-	cold_resist = 1.0
-	melee_attack_delay = 2.5
-
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker/do_special_attack(atom/A)
-	// Teleport attack.
-	if(!A)
-		to_chat(src, span_warning("There's nothing to teleport to."))
-		return FALSE
-
-	var/list/nearby_things = range(1, A)
-	var/list/valid_turfs = list()
-
-	// All this work to just go to a non-dense tile.
-	for(var/turf/potential_turf in nearby_things)
-		var/valid_turf = TRUE
-		if(potential_turf.density)
-			continue
-		for(var/atom/movable/AM in potential_turf)
-			if(AM.density)
-				valid_turf = FALSE
-		if(valid_turf)
-			valid_turfs.Add(potential_turf)
-
-	if(!(valid_turfs.len))
-		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
-		return FALSE
-
-	var/turf/target_turf = pick(valid_turfs)
-	var/turf/T = get_turf(src)
-
-	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/smoke_spread/frost
-	s1.set_up(5, 1, T)
-	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/smoke_spread
-	s2.set_up(5, 1, target_turf)
-
-
-	T.visible_message(span_notice("\The [src] vanishes!"))
-	s1.start()
-
-	forceMove(target_turf)
-	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span_notice("You teleport to \the [target_turf]."))
-
-	target_turf.visible_message(span_warning("\The [src] appears!"))
-	s2.start()
 
 /mob/living/simple_mob/humanoid/eclipse/solar/cryomancer //Freezing slowdown unit
 	name = "Solar Eclipse Cryomancer"
@@ -889,3 +784,259 @@
 	dying_threshold = 0.3		// How low on health the holder needs to be before fleeing. Defaults to 30% or lower health.
 	flee_when_outmatched = TRUE	// If they should flee upon reaching a specific tension threshold.
 	outmatched_threshold = 300
+
+//Some new eclipse folks for tyr, although one is a rework of the exsisting naga
+
+/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle //If you have a Nif, or are a borg you get hit with confusion and adds Edit, can't currently figure out NIF targeting
+	name = "Solar Eclipse Disabler Serpent"
+	desc = "A naga cladded in strange orange armor, seemingly guarded from lasers and energy based weaponry."
+	health = 120
+	maxHealth = 120
+	icon_state = "eclipse_disabler"
+	icon_living = "eclipse_disabler"
+	reload_max = 5
+	movement_cooldown = 1
+
+	special_attack_cooldown = 30 SECONDS
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+
+	projectiletype = /obj/item/projectile/energy/electrode
+
+/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A)
+	visible_message(span_critical("\The [src] pulls out a flash!"))
+	if(isliving(A))
+		var/mob/living/L = A
+		if(iscarbon(L))
+			var/mob/living/carbon/C = L
+			if(C.stat != DEAD)
+				var/safety = C.eyecheck()
+				if(safety <= 0)
+					var/flash_strength = 8
+					if(ishuman(C))
+						var/mob/living/carbon/human/H = C
+						flash_strength *= H.species.flash_mod
+						if(flash_strength > 0)
+							to_chat(H, span_critical("You are disoriented by \the [src]!"))
+							H.eye_blurry = max(H.eye_blurry, flash_strength + 5)
+							H.flash_eyes()
+							H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0, "Photon burns")
+
+		else if(issilicon(L))
+			if(isrobot(L))
+				var/flashfail = FALSE
+				var/mob/living/silicon/robot/R = L
+				if(!flashfail)
+					to_chat(R, span_critical("Your optics are scrambled by \the [src]!"))
+					R.Confuse(10)
+					R.flash_eyes()
+
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
+	name = "Lunar Eclipse Silver Serpent"
+	desc = "A hungry looking naga, their strange armor protecting them from ballistics and physical weaponry."
+	health = 120
+	maxHealth = 120
+	reload_max = 6
+	movement_cooldown = 1
+
+	icon_state = "eclipse_silver"
+	icon_living = "eclipse_silver"
+
+	projectiletype = /obj/item/projectile/bullet/pistol/medium
+	special_attack_cooldown = 30 SECONDS
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+
+/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A) //I am bringing back the netgun attack. 4 seconds
+	visible_message(span_warning("\The [src] begins to create an energy net!"))
+	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
+	sleep(40)
+	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
+	P.launch_projectile(A, BP_TORSO, src)
+
+
+/mob/living/simple_mob/humanoid/eclipse/solar/plant
+	name = "Solar Eclipse Bioexpirment"
+	desc = "A strange armored looking plant."
+	health = 120
+	maxHealth = 120
+	reload_max = 6
+	movement_cooldown = 1
+
+	icon_state = "eclipse_plant"
+	icon_living = "eclipse_plant"
+
+	projectiletype = /obj/item/projectile/bullet/thorn
+	special_attack_cooldown = 30 SECONDS
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+
+/mob/living/simple_mob/humanoid/eclipse/solar/plant/do_special_attack(atom/A)
+	var/mob/living/carbon/human/H = A
+	var/obj/item/I = H.get_active_hand()
+	H.drop_item()
+	if(I)
+		I.throw_at(src, 2, 4) // Just yoinked.
+		src.visible_message(span_danger("The [name] heaves, pulling \the [A]'s weapon from their hands!"))
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/experimenter
+	name = "Lunar Eclipse Experimenter"
+	desc = "A lizard cladded in strange red-purple armor, seemingly guarded from lasers and energy based weaponry."
+	health = 120
+	maxHealth = 120
+	icon_state = "eclipse_gravliz"
+	icon_living = "eclipse_gravliz"
+	reload_max = 1
+	movement_cooldown = 1
+
+	special_attack_cooldown = 30 SECONDS
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+
+	projectiletype = /obj/item/projectile/energy/spikeenergy_ball //using the weapon found upon tyr
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/experimenter/do_special_attack(atom/A)
+	var/D = src
+	var/mob/living/carbon/human/H = A
+	H.throw_at(D, 2, 4) // Just yoinked.
+	visible_message(span_danger("The [src]'s armor glows silver, pulling [A] closer!"))
+
+//The Precursor intative big folks
+/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit
+	name = "Lunar Eclipse Titan Hunter"
+	health = 120
+	maxHealth = 120
+	desc = "A strange being with resistance to brunt force trauma."
+	icon_state = "eclipse_titan"
+	icon_living = "eclipse_titan"
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	attack_armor_pen = 20
+	projectiletype = null
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter/apply_melee_effects(atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		L.add_modifier(/datum/modifier/deep_wounds, 10 SECONDS)
+		if(L.mob_size <= MOB_MEDIUM)
+			visible_message(span_danger("\The [src] sends \the [L] flying with the impact!"))
+			playsound(src, "punch", 50, 1)
+			L.Weaken(1)
+			var/throwdir = get_dir(src, L)
+			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
+		else
+			to_chat(L, span_warning("\The [src] hits you with incredible force, but you remain in place."))
+			visible_message(span_danger("\The [src] hits \the [L] with incredible force, to no visible effect!"))
+			playsound(src, "punch", 50, 1)
+
+
+/mob/living/simple_mob/humanoid/eclipse/solar/nuclear
+	name = "Solar Eclipse Nuclear Technician"
+	health = 120
+	maxHealth = 120
+	desc = "A strange being wearing a burn resistaint coat."
+	icon_state = "eclipse_nuke"
+	projectiletype = /obj/item/projectile/energy/declone
+	special_attack_cooldown = 15 SECONDS
+	special_attack_min_range = 1
+	special_attack_max_range = 9
+
+
+/obj/item/projectile/arc/radioactive/weak
+	rad_power = 25
+
+/mob/living/simple_mob/humanoid/eclipse/solar/nuclear/do_special_attack(atom/A)
+	visible_message(span_warning("\The [src] begins to glow green!"))
+	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
+	sleep(30)
+	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
+	P.launch_projectile(A, BP_TORSO, src)
+
+//Vistors of the other
+//One is a familiar shape from Sif, the other is new and anomalous based.
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker //teleporting stalker
+	name = "Solar Eclipse Froststalker"
+	health = 120
+	maxHealth = 120
+	desc = "A somewhat see through being wearing a burn resistaint coat."
+	melee_damage_lower = 10
+	melee_damage_upper = 10
+	attack_armor_pen = 40
+	special_attack_cooldown = 25 SECONDS
+	special_attack_min_range = 1
+	special_attack_max_range = 7
+	projectiletype = null
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	icon_state = "froststalker"
+	icon_living = "froststalker"
+	cold_resist = 1.0
+	melee_attack_delay = 1.5
+
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker/do_special_attack(atom/A)
+	// Teleport attack.
+	if(!A)
+		to_chat(src, span_warning("There's nothing to teleport to."))
+		return FALSE
+
+	var/list/nearby_things = range(4, A)
+	var/list/valid_turfs = list()
+
+	// All this work to just go to a non-dense tile.
+	for(var/turf/potential_turf in nearby_things)
+		var/valid_turf = TRUE
+		if(potential_turf.density)
+			continue
+		for(var/atom/movable/AM in potential_turf)
+			if(AM.density)
+				valid_turf = FALSE
+		if(valid_turf)
+			valid_turfs.Add(potential_turf)
+
+	if(!(valid_turfs.len))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
+		return FALSE
+
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
+
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/smoke_spread/frost
+	s1.set_up(5, 1, T)
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/smoke_spread
+	s2.set_up(5, 1, target_turf)
+
+
+	T.visible_message(span_warning("\The [src] vanishes!"))
+	s1.start()
+
+	forceMove(target_turf)
+	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
+
+	target_turf.visible_message(span_warning("\The [src] appears!"))
+	s2.start()
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver
+	name = "Lunar Eclipse Abyss Diver"
+	health = 120
+	maxHealth = 120
+	desc = "A strange being wearing a blunt resistaint coat."
+	projectiletype = /obj/item/projectile/scatter/shotgun
+	icon_state = "eclipse_diver" //note to self try to redo this sprite sometime
+	reload_count = 1
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
+	var/mob/living/L = A
+	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
+	sleep(30)
+	if(isliving(A))
+		if(iscarbon(L))
+			return
+		else if(issilicon(L))
+			if(isrobot(L))
+				L.Weaken(10)
+	else if(istype(A, /obj/mecha))
+		var/obj/mecha/M = A
+		visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
+		M.go_out()
