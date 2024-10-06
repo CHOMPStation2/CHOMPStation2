@@ -7312,7 +7312,6 @@
 /obj/effect/floor_decal/industrial/arrows/blue{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
 	id_tag = "spacebus_south"
 	},
@@ -11797,19 +11796,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/fore)
-"cHT" = (
-/obj/structure/morgue,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/medical/morgue)
 "cIq" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -17347,18 +17333,6 @@
 	},
 /turf/space,
 /area/space)
-"gtl" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/medical/morgue)
 "gtw" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -18725,6 +18699,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
+"hUq" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "hUz" = (
 /obj/structure/curtain/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -20288,22 +20274,6 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
-"jDv" = (
-/obj/structure/morgue{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4;
-	layer = 3
-	},
-/turf/simulated/floor/tiled,
-/area/medical/morgue)
 "jDV" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
@@ -26834,6 +26804,19 @@
 /obj/machinery/computer/timeclock/premade/west,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
+"qBY" = (
+/obj/structure/morgue,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "qCc" = (
 /obj/machinery/door/airlock/glass{
 	name = "Central Access"
@@ -33800,6 +33783,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/hangar/two)
+"xwf" = (
+/obj/structure/morgue{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	layer = 3
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "xwI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -80653,13 +80652,13 @@ fVu
 bjM
 fiA
 hbK
-cHT
+qBY
 ppt
 ppt
 ppt
 kJV
 uPj
-gtl
+hUq
 aMP
 dHz
 sal
@@ -81688,7 +81687,7 @@ kfy
 tYn
 tYn
 tYn
-jDv
+xwf
 lRR
 ldt
 wYG
