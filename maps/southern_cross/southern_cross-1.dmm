@@ -16449,7 +16449,20 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/elevator)
 "fwG" = (
-/turf/space,
+/obj/structure/morgue{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	layer = 3
+	},
+/turf/simulated/floor/tiled,
 /area/medical/morgue)
 "fwR" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -17442,6 +17455,19 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod2/station)
+"gAa" = (
+/obj/structure/morgue,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "gAm" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -18699,18 +18725,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
-"hUq" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/medical/morgue)
 "hUz" = (
 /obj/structure/curtain/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -26804,19 +26818,6 @@
 /obj/machinery/computer/timeclock/premade/west,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
-"qBY" = (
-/obj/structure/morgue,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/medical/morgue)
 "qCc" = (
 /obj/machinery/door/airlock/glass{
 	name = "Central Access"
@@ -31225,7 +31226,7 @@
 /area/hallway/primary/firstdeck/starboard)
 "uRT" = (
 /obj/structure/stairs/spawner/east,
-/turf/space,
+/turf/simulated/floor/tiled,
 /area/medical/morgue)
 "uRV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -33092,6 +33093,18 @@
 "wGo" = (
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/aft)
+"wHq" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "wHF" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
@@ -33783,22 +33796,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hangar/two)
-"xwf" = (
-/obj/structure/morgue{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4;
-	layer = 3
-	},
-/turf/simulated/floor/tiled,
-/area/medical/morgue)
 "xwI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -80652,13 +80649,13 @@ fVu
 bjM
 fiA
 hbK
-qBY
+gAa
 ppt
 ppt
 ppt
 kJV
 uPj
-hUq
+wHq
 aMP
 dHz
 sal
@@ -81175,7 +81172,7 @@ tDq
 exY
 thk
 iEb
-fwG
+iEb
 dHz
 sal
 qwb
@@ -81687,7 +81684,7 @@ kfy
 tYn
 tYn
 tYn
-xwf
+fwG
 lRR
 ldt
 wYG
