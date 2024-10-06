@@ -15898,6 +15898,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
+"eTr" = (
+/obj/structure/morgue,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 8
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Starboard";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "eTN" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -22316,13 +22330,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/tcomm/computer)
-"lUk" = (
-/obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "pr1_window_tint"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/medical/morgue)
 "lXb" = (
 /obj/machinery/computer/telecomms/server{
 	dir = 4;
@@ -24649,20 +24656,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
-"orm" = (
-/obj/structure/morgue,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 8
-	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Virology Starboard";
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/medical/morgue)
 "osl" = (
 /obj/structure/table/rack/holorack,
 /obj/item/circuitboard/fusion_core{
@@ -32663,6 +32656,11 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
+"wle" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor,
+/area/medical/morgue)
 "wlp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -80675,7 +80673,7 @@ fiA
 hbK
 gAa
 ppt
-orm
+eTr
 ppt
 kJV
 uPj
@@ -81963,11 +81961,11 @@ moQ
 moQ
 fiA
 fiA
-lUk
-lUk
-lUk
-lUk
-lUk
+wle
+wle
+wle
+wle
+wle
 fiA
 fiA
 fiA
