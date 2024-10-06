@@ -1,7 +1,7 @@
 /datum/job/chief_engineer
 	disallow_jobhop = TRUE
 	pto_type = PTO_ENGINEERING
-	dept_time_required = 60
+	dept_time_required = 120 // CHOMPEdit
 
 	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
