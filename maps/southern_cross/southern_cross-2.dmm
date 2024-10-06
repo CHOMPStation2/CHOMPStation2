@@ -28208,8 +28208,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "bHt" = (
-/obj/effect/floor_decal/borderfloorwhite/corner,
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "bHu" = (
@@ -44891,12 +44898,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/crew_quarters/coffee_shop)
-"djY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/sleeper)
 "dkb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -48289,14 +48290,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "eYr" = (
-/obj/machinery/button/doorbell{
-	pixel_x = -12;
-	pixel_y = -6;
-	id = Medbay;
-	name = "Medaby Doorbell"
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/wall/r_wall,
-/area/medical/foyer)
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "eYu" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -48483,6 +48483,14 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
+"fed" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "fee" = (
 /obj/structure/sign/department/shield,
 /turf/simulated/wall/r_wall,
@@ -49472,6 +49480,13 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
+"fDA" = (
+/obj/machinery/doorbell_chime{
+	id = "medbay";
+	name = "Medbay doorbell chime"
+	},
+/turf/simulated/wall/r_wall,
+/area/medical/virology)
 "fDD" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -51044,10 +51059,8 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "gro" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -54940,18 +54953,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
-"iqy" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay_primary_storage)
 "iqP" = (
 /obj/machinery/computer/diseasesplicer{
 	dir = 1
@@ -70831,13 +70832,14 @@
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D3)
 "rrv" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/button/doorbell{
+	pixel_x = -12;
+	pixel_y = -6;
+	id = "medbay";
+	name = "Medbay Doorbell"
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay_primary_storage)
+/turf/simulated/wall/r_wall,
+/area/medical/foyer)
 "rrB" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -72762,12 +72764,6 @@
 /obj/structure/sign/warning/hot_exhaust,
 /turf/simulated/wall/r_wall,
 /area/engineering/engine_waste)
-"sxs" = (
-/obj/machinery/doorbell_chime{
-	id = Medbay
-	},
-/turf/simulated/wall,
-/area/medical/ward)
 "sxu" = (
 /obj/structure/closet/crate/internals,
 /obj/effect/floor_decal/borderfloor,
@@ -76666,12 +76662,6 @@
 /obj/random/plushielarge,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
-"uTD" = (
-/obj/machinery/doorbell_chime{
-	id = Medbay
-	},
-/turf/simulated/wall/r_wall,
-/area/medical/virology)
 "uUh" = (
 /obj/structure/closet/wardrobe/red,
 /obj/effect/floor_decal/borderfloor{
@@ -80631,6 +80621,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
+"xoS" = (
+/obj/effect/floor_decal/borderfloorwhite/corner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "xoU" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/machinery/power/apc{
@@ -81802,6 +81797,13 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
+"ybD" = (
+/obj/machinery/doorbell_chime{
+	id = "medbay";
+	name = "Medbay doorbell chime"
+	},
+/turf/simulated/wall,
+/area/medical/ward)
 "ycd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -124212,7 +124214,7 @@ wrz
 byt
 aql
 bMc
-rrv
+fed
 hHj
 tAA
 oew
@@ -124471,8 +124473,8 @@ bys
 aql
 bBQ
 bDO
-iqy
 bHt
+xoS
 xaD
 aql
 hhC
@@ -125245,8 +125247,8 @@ jKa
 bKu
 eHh
 bHo
+eYr
 gro
-djY
 gcc
 bSu
 btJ
@@ -126264,7 +126266,7 @@ vyA
 aWf
 xeV
 xTX
-eYr
+rrv
 nwc
 rXR
 xft
@@ -126280,7 +126282,7 @@ bHo
 mUw
 bHo
 bIT
-sxs
+ybD
 bMf
 bNU
 rfQ
@@ -132464,7 +132466,7 @@ hBo
 hBo
 sYl
 hBo
-uTD
+fDA
 fWS
 jFL
 vGp
