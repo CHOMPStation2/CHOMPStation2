@@ -338,7 +338,11 @@
 
 /datum/sprite_accessory/marking/ch/hippo_head
 	name = "full hippo head"
+<<<<<<< HEAD
+	icon_state = "hippo_head-head"
+=======
 	icon_state = "hippo_head"
+>>>>>>> Hunter-Dovetail/master
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
