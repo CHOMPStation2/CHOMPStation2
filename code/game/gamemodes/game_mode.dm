@@ -546,13 +546,9 @@ var/global/list/additional_antag_types = list()
 						msg += "[span_bold(L.name)] ([ckey(D.mind.key)]), the [L.job] ([span_red(span_bold("Ghosted"))])<br>"
 						continue //Ghosted while alive
 
-<<<<<<< HEAD
 			continue // CHOMPEdit: Escape infinite loop in case there's nobody connected. Shouldn't happen ever, but.
 
-	msg += "</span>" // close the span from right at the top
-=======
 	msg = span_notice(msg)// close the span from right at the top
->>>>>>> 98d23e3f53... Merge pull request #16430 from Kashargul/morespans
 
 	for(var/mob/M in mob_list)
 		if(M.client && M.client.holder)

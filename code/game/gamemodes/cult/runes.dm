@@ -197,13 +197,8 @@ var/list/sacrificed = list()
 			cultists.Add(M)
 	if(cultists.len >= 9)
 		if(!narsie_cometh)//so we don't initiate Hell more than one time.
-<<<<<<< HEAD
-			to_world("<font size='15' color='red'><b>THE VEIL HAS BEEN SHATTERED!</b></font>")
-			world << sound('sound/effects/weather/old_wind/wind_5_1.ogg')
-=======
 			to_world(span_narsie(span_red(span_bold("THE VEIL HAS BEEN SHATTERED!"))))
 			world << sound('sound/effects/weather/wind/wind_5_1.ogg')
->>>>>>> 98d23e3f53... Merge pull request #16430 from Kashargul/morespans
 
 			SetUniversalState(/datum/universal_state/hell)
 			narsie_cometh = 1

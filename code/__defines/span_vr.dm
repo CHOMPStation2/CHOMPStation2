@@ -93,13 +93,8 @@
 #define span_alium(str) ("<span class='alium'>" + str + "</span>")
 #define span_cult(str) ("<span class='cult'>" + str + "</span>")
 
-<<<<<<< HEAD
-#define span_sinister(str) ("<span class='sinister'>" + str + "</span>")
-
 #define span_wingdings(str) ("<span class='wingdings'>" + str + "</span>") //CHOMPAdd
 
-=======
->>>>>>> 98d23e3f53... Merge pull request #16430 from Kashargul/morespans
 /* Direct communication spans */
 // Local pred / prey filter
 #define span_psay(str) ("<span class='psay'>" + str + "</span>")

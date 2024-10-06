@@ -148,11 +148,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 	job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
 
 	if(!src.mode.can_start())
-<<<<<<< HEAD
-		to_world(span_danger("<B>Unable to start [mode.name].</B> Not enough players readied, [CONFIG_GET(keyed_list/player_requirements)[mode.config_tag]] players needed. Reverting to pregame lobby.")) // CHOMPEdit
-=======
-		to_world(span_danger(span_bold("Unable to start [mode.name].") + " Not enough players readied, [config.player_requirements[mode.config_tag]] players needed. Reverting to pregame lobby."))
->>>>>>> 98d23e3f53... Merge pull request #16430 from Kashargul/morespans
+		to_world(span_danger(span_bold("Unable to start [mode.name].") + " Not enough players readied, [CONFIG_GET(keyed_list/player_requirements)[mode.config_tag]] players needed. Reverting to pregame lobby.")) // CHOMPEdit
 		mode.fail_setup()
 		mode = null
 		job_master.ResetOccupations()
