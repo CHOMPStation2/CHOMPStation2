@@ -11797,6 +11797,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/fore)
+"cHT" = (
+/obj/structure/morgue,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "cIq" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -17334,6 +17347,18 @@
 	},
 /turf/space,
 /area/space)
+"gtl" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "gtw" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -20263,6 +20288,22 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
+"jDv" = (
+/obj/structure/morgue{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	layer = 3
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "jDV" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
@@ -80612,13 +80653,13 @@ fVu
 bjM
 fiA
 hbK
-ppt
+cHT
 ppt
 ppt
 ppt
 kJV
 uPj
-uvG
+gtl
 aMP
 dHz
 sal
@@ -81647,7 +81688,7 @@ kfy
 tYn
 tYn
 tYn
-tYn
+jDv
 lRR
 ldt
 wYG
