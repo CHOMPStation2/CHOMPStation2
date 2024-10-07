@@ -8,7 +8,7 @@ var/datum/planet/tyr/planet_tyr = null
 	desc = "Tyr, a hot planet." //rewrite me
 	current_time = new /datum/time/tyr()
 //	expected_z_levels = list(1) // This is defined elsewhere.
-	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/thor
+	planetary_wall_type = /turf/unsimulated/wall/planetary/normal/tyr
 
 /datum/planet/tyr/New()
 	..()
@@ -391,6 +391,10 @@ var/datum/planet/tyr/planet_tyr = null
 	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
 	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
 	lightning_strike(T)
+
+/turf/unsimulated/wall/planetary/normal/tyr
+	name = "vast desert"
+	alpha = 0
 
 /*
 WEATHER_BLIZZARD	= new (),
