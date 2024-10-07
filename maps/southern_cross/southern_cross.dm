@@ -53,7 +53,7 @@
 		#include "southern_cross-9.dmm" //	Transit z9
 		#include "southern_cross-10.dmm" //	Sif wilds z10
 //		#include "southern_cross-12-unused.dmm" //Skylands z10 //Remove due to lack of use
-		#include "southern_cross-13.dmm" //Valley z11 seemingly. For stranger critters and POIs.
+		// #include "southern_cross-13.dmm" //Valley z11 seemingly. For stranger critters and POIs.
 	#endif
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
