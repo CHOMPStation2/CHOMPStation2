@@ -599,7 +599,7 @@
 	info = "<center>" + span_bold(span_giganteus("Congradulations!")) + "</center><BR><BR>You have just found a paper that \
 	was sitting at out of nowhere.<BR>Let there be a celebration to you, finding this tiny paper. But leaving this empty \
 	will be awkward, so, some few honorable mentions shall be here.<BR><BR>" + span_bold("Maker of the Map:") + " H.K <BR><BR>" + span_bold("Huge \
-	Emotional Support (And my life changer):") + "</B> BlackMajor, Salty S<BR><BR>" + span_bold("Supporters in the most troubled times") + ": \
+	Emotional Support (And my life changer):") + " BlackMajor, Salty S<BR><BR>" + span_bold("Supporters in the most troubled times") + ": \
 	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR>" + span_bold("Helpers on the map work:") + " \
 	BlackMajor, Blitzkrieg, Dan 'Clanker' Neposh, Kassc, Mango, Rykka Stormheart, Salty S, Serdy, Verkister<BR><BR>\
 	" + span_bold("Map recovery helper (Curse you github, almost deleting the project):") + " BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
