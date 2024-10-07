@@ -63,25 +63,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/water,
 /area/surface/outside/valley/end)
-"kf" = (
-/obj/effect/map_effect/portal/master/side_b/wilderness_to_valley{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/surface/outside/valley/river)
 "kI" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/outside/valley/inner)
-"kL" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/deep,
-/area/surface/outside/valley/river)
 "kW" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/deep{
@@ -185,13 +170,6 @@
 	outdoors = 0
 	},
 /area/surface/outside/valley/river)
-"DA" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 8
-	},
-/obj/structure/railing,
-/turf/simulated/floor/water/deep,
-/area/surface/outside/valley/river)
 "DP" = (
 /turf/simulated/floor/outdoors/grass/sif/valley/edge,
 /area/surface/outside/valley/end)
@@ -271,12 +249,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/outside/valley/edge)
-"WK" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/surface/outside/valley/river)
 "WT" = (
 /turf/simulated/wall/wood,
 /area/surface/outside/valley/inner)
@@ -65951,12 +65923,12 @@ FG
 FG
 Yl
 Yl
-WK
-WK
-kL
-DA
-WK
-kf
+EA
+EA
+hx
+bH
+EA
+EA
 Yl
 Yl
 FG
