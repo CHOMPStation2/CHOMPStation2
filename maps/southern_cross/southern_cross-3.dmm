@@ -3723,7 +3723,6 @@
 "aja" = (
 /obj/structure/table/standard,
 /obj/item/taperecorder,
-/obj/item/tape,
 /obj/item/megaphone,
 /obj/item/packageWrap,
 /obj/item/storage/box,
@@ -3742,6 +3741,7 @@
 /obj/item/gps/security,
 /obj/item/gps/security,
 /obj/item/gps/security,
+/obj/item/rectape/random,
 /turf/simulated/floor/tiled,
 /area/security/security_lockerroom)
 "ajb" = (
