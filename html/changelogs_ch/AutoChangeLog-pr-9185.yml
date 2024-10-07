@@ -1,0 +1,5 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - code_imp: "converts our spans"
+  - qol: "phased kin can now be clicked"
