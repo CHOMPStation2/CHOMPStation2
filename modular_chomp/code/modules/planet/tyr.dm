@@ -392,6 +392,10 @@ var/datum/planet/tyr/planet_tyr = null
 	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
 	lightning_strike(T)
 
+/turf/unsimulated/wall/planetary/normal/tyr
+	name = "vast desert"
+	alpha = 0
+
 /*
 WEATHER_BLIZZARD	= new (),
 		WEATHER_STORM		= new(),
