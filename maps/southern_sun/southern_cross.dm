@@ -41,17 +41,16 @@
 	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
 
 	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm
-		#include "southern_cross-1.dmm" //Deck 0 z1
-		#include "southern_cross-2.dmm" //Deck 1 z2
-		#include "southern_cross-3.dmm" //Deck 2 z3
-		#include "southern_cross-4.dmm" //Deck 3 z4
-		#include "southern_cross-5.dmm" //Sif outpost z5
-		#include "southern_cross-6.dmm" //Sif mine z6
-		#include "southern_cross-7.dmm" //Carrier z7
-		#include "southern_cross-8.dmm" //Centcom z8
-		#include "southern_cross-9.dmm" //Transit z9
-		#include "southern_cross-10.dmm"//Sif wilds z10
-
+//		#include "southern_cross-0.dmm" // Deck 0
+		#include "southern_cross-1.dmm" //Deck 1 z1
+		#include "southern_cross-2.dmm" //Deck 2 z2
+		#include "southern_cross-3.dmm" //Deck 3 z3
+		#include "southern_cross-4.dmm" //Sif outpost z4
+		#include "southern_cross-5.dmm" //Sif mine z5
+		#include "southern_cross-6.dmm" //Carrier z6
+		#include "southern_cross-7.dmm" //Centcom z7
+		#include "southern_cross-8.dmm" //Transit z8
+		#include "southern_cross-9.dmm" //Sif wilds z9
 //		#include "southern_cross-10.dmm" //Valley z10 seemingly. For stranger critters and POIs. //Removed for an event.
 //		#include "southern_cross-12.dmm" //Skylands z10 //Remove due to lack of use
 //		#include "southern_cross-13.dmm" //Valley z10 seemingly. For stranger critters and POIs. //Removed for an event.
