@@ -647,15 +647,15 @@
 /mob/living/simple_mob/vore/candy/peppermint/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(O.force)
 		if(prob(80))
-			visible_message("<span class='danger'>\The [src] deflects \the [O] with its shell!</span>")
+			visible_message(span_danger("\The [src] deflects \the [O] with its shell!"))
 			if(user)
 				ai_holder.react_to_attack(user)
 			return
 		else
 			..()
 	else
-		to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
-		visible_message("<span class='warning'>\The [user] gently taps [src] with \the [O].</span>")
+		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
+		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
 
 /*
 /mob/living/simple_mob/vore/candy/worm

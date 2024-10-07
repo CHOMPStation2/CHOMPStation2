@@ -37,8 +37,8 @@
 /obj/item/rig/ch/aegis/bullet_act(var/obj/item/projectile/P)
 	var/reflectchance = 70 - round(P.damage)
 	if(prob(reflectchance))
-		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))
 
 		// Find a turf near or on the original location to bounce to
 		if(P.starting)
@@ -57,8 +57,8 @@
 /obj/item/clothing/suit/space/rig/ch/aegis/bullet_act(var/obj/item/projectile/P)
 	var/reflectchance = 70 - round(P.damage)
 	if(prob(reflectchance))
-		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))
 
 		// Find a turf near or on the original location to bounce to
 		if(P.starting)
@@ -77,8 +77,8 @@
 /obj/item/clothing/head/helmet/space/rig/ch/aegis/bullet_act(var/obj/item/projectile/P)
 	var/reflectchance = 70 - round(P.damage)
 	if(prob(reflectchance))
-		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))
 
 		// Find a turf near or on the original location to bounce to
 		if(P.starting)
@@ -98,8 +98,8 @@
 /obj/item/clothing/gloves/gauntlets/rig/ch/aegis/bullet_act(var/obj/item/projectile/P)
 	var/reflectchance = 70 - round(P.damage)
 	if(prob(reflectchance))
-		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))
 
 		// Find a turf near or on the original location to bounce to
 		if(P.starting)
@@ -119,8 +119,8 @@
 /obj/item/clothing/shoes/magboots/rig/ch/aegis/bullet_act(var/obj/item/projectile/P)
 	var/reflectchance = 70 - round(P.damage)
 	if(prob(reflectchance))
-		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))
 
 		// Find a turf near or on the original location to bounce to
 		if(P.starting)

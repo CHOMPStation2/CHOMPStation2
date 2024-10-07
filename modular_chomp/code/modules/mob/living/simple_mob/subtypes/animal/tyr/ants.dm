@@ -254,7 +254,7 @@ ANT STRUCTURES
 			L.visible_message(
 				span_danger("[L] steps in \the [src]."),
 				span_danger("You step in \the [src]!"),
-				"<b>You hear a strange rustling!</b>"
+				span_hear(span_bold("You hear a strange rustling!"))
 				)
 			attack_mob(L)
 			update_icon()

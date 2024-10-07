@@ -96,7 +96,7 @@ So here it sits, snowflake code for a single item.
 			toggle_cooling(wearer)
 			. = TRUE
 		if("toggle_ai_control")
-			to_chat(usr, "<span class='notice'>Proteans cannot be AI controlled.</span>")
+			to_chat(usr, span_notice("Proteans cannot be AI controlled."))
 			. = TRUE
 		if("toggle_suit_lock")
 			locked = !locked

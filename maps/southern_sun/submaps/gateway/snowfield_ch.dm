@@ -498,7 +498,7 @@
 /obj/item/gun/launcher/scopedrocket/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
-		. += "<font color='blue'>[rockets.len] / [max_rockets] rockets.</font>"
+		. += span_blue("[rockets.len] / [max_rockets] rockets.")
 
 /obj/item/gun/launcher/scopedrocket/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/ammo_casing/rocket))
@@ -537,38 +537,38 @@
 
 /obj/item/paper/awaygate/snowfield/evacuation_order
 	name = "Order Directives"
-	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
-	TO <B>ALL CLASS 1, 2, 3 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
-	Directives : <B>Evacuation preparation from Facility. <BR>All related personnel, EXCLUDING 3M personnel \
+	info = "<center>" + span_bold(span_giganteus("HIGH PRIORITY ORDERS")) + "<BR><BR><BR>ORDERS \
+	TO " + span_bold("ALL CLASS 1, 2, 3 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 10, 1979") + ".</center> <BR><BR><BR>\
+	Directives : " + span_bold("Evacuation preparation from Facility. <BR>All related personnel, EXCLUDING 3M personnel \
 	must head to Chelyabinsk until 2100, April 10 and await for further directives.<BR>Base MUST \
-	maintain necessary items only. </B><BR><BR>Further directives and details shall be guided by <B>Class 4 \
-	or above personnel.</B>"
+	maintain necessary items only.") + "<BR><BR>Further directives and details shall be guided by " span_boild("Class 4 \
+	or above personnel.")
 
 /obj/item/paper/awaygate/snowfield/evacuation_order2
 	name = "Mid Command Order Directives"
-	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
-	TO <B>ALL CLASS 4 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
-	Directives : <B>Evacuation preparation from Facility. <BR>All class 1,2,3 personnel must head to \
+	info = "<center>" + span_bold(span_giganteus("HIGH PRIORITY ORDERS")) + "<BR><BR><BR>ORDERS \
+	TO " + span_bold("ALL CLASS 4 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 10, 1979") + ".</center> <BR><BR><BR>\
+	Directives : " + span_bold("Evacuation preparation from Facility. <BR>All class 1,2,3 personnel must head to \
 	Chelyabinsk and empty the facility, EXCLUDING Medical team. (3M)<BR>Base MUST maintain necessary items only \
 	to operate 'Tunguska' and supplies for the crews who remains. 'Tunguska' Activation time at 0300, April 11, \
-	1979.</B><BR><BR>Further directives and details shall be guided by <B>Class 6 or above personnel.</B>"
+	1979.") + "<BR><BR>Further directives and details shall be guided by " + span_bold("Class 6 or above personnel.") + ""
 
 /obj/item/paper/awaygate/snowfield/evacuation_order3
 	name = "High Command Order Directives"
-	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
-	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
-	Directives : <B>Evacuation preparation from Facility. <BR>All Class 1, 2, 3 personnel must head to \
+	info = "<center>" + span_bold(span_giganteus("HIGH PRIORITY ORDERS")) + "<BR><BR><BR>ORDERS \
+	TO " + span_bold("ALL CLASS 5, 6 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 10, 1979") + ".</center> <BR><BR><BR>\
+	Directives : " + span_bold("Evacuation preparation from Facility. <BR>All Class 1, 2, 3 personnel must head to \
 	Chelyabinsk and empty the facility, excluding Class 3M, guided by Class 4 personnel. <BR>All Class 5, 6 must \
-	check the stability of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979.</B>"
+	check the stability of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979.")
 
 /obj/item/paper/awaygate/snowfield/activation_order
 	name = "High Command Order Directives"
-	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
-	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 11, 1979</B>.</center> <BR><BR><BR>\
-	Directives : <B>Activation of 'Tunguska.' <BR>All class 5, 6 personnel must have a full search by \
+	info = "<center>" + span_bold(span_giganteus("HIGH PRIORITY ORDERS")) + "<BR><BR><BR>ORDERS \
+	TO " + span_bold("ALL CLASS 5, 6 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 11, 1979") + ".</center> <BR><BR><BR>\
+	Directives : " + span_bold("Activation of 'Tunguska.' <BR>All class 5, 6 personnel must have a full search by \
 	Class 4 before entering the operation room. <BR>Any personnel who is not on the operations area shall \
-	be terminated on the spot. Notify to nearest Class 4 and 6 personnel if necessary.</B><BR><BR>Further directives \
-	and details shall be guided by <B>Class 6 Personnel.</B>"
+	be terminated on the spot. Notify to nearest Class 4 and 6 personnel if necessary.") + "<BR><BR>Further directives \
+	and details shall be guided by " + span_bold("Class 6 Personnel.") + ""
 
 /obj/item/paper/awaygate/snowfield/interrogation
 	name = "Interrogation note"
@@ -584,10 +584,10 @@
 /obj/item/paper/awaygate/snowfield/final_note
 	name = "Final note"
 	info = "Gosh. We have opened up the hell's gate...<BR>Everyone is screaming and yelling into mid-air like a mania, \
-	and this... Whispering voice!<BR><B>It's in my head!</B><BR><BR>Peoples who managed to escape after the initial lockdown \
+	and this... Whispering voice!<BR>" + span_bold("It's in my head!") + "<BR><BR>Peoples who managed to escape after the initial lockdown \
 	are now trying their damnnest to break back INSIDE the base!<BR><BR>I tried my best to ignore the voice and cornered \
 	in this security outpost, but I'm not sure how long I will maintain sane, unlike those peoples out there...\
-	The voice is now <B>yelling, SCREAMING</B> at me as the time passes by! <BR><BR> I can't take this anymore longer, \
+	The voice is now " + span_bold("yelling, SCREAMING") + " at me as the time passes by! <BR><BR> I can't take this anymore longer, \
 	it is madness... Pure madness... <BR>I blew up the fastest way to the command center, so these maniacs won't be able to \
 	get to the command center, where the voice is echoing... But they have guns now... <BR> I'm not sure how long the blockade \
 	will last with that much firepower and manpower... And their pure will of madness... <BR><BR> I don't want to be one of them..."
@@ -596,14 +596,14 @@
 	desc = "A gift card with a heart on the cover. Hey, there's a scribble on its back..."
 	name = "letter"
 	icon_state = "greetingcard_heart"
-	info = "<center><B><font size=\"6\">Congradulations!</font></B></center><BR><BR>You have just found a paper that \
+	info = "<center>" + span_bold(span_giganteus("Congradulations!")) + "</center><BR><BR>You have just found a paper that \
 	was sitting at out of nowhere.<BR>Let there be a celebration to you, finding this tiny paper. But leaving this empty \
-	will be awkward, so, some few honorable mentions shall be here.<BR><BR><B>Maker of the Map:</B> H.K <BR><BR><B>Huge \
-	Emotional Support (And my life changer):</B> BlackMajor, Salty S<BR><BR><B>Supporters in the most troubled times</B>: \
-	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR><B>Helpers on the map work:</B> \
+	will be awkward, so, some few honorable mentions shall be here.<BR><BR>" + span_bold("Maker of the Map:") + " H.K <BR><BR>" + span_bold("Huge \
+	Emotional Support (And my life changer):") + " BlackMajor, Salty S<BR><BR>" + span_bold("Supporters in the most troubled times") + ": \
+	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR>" + span_bold("Helpers on the map work:") + " \
 	BlackMajor, Blitzkrieg, Dan 'Clanker' Neposh, Kassc, Mango, Rykka Stormheart, Salty S, Serdy, Verkister<BR><BR>\
-	<B>Map recovery helper (Curse you github, almost deleting the project):</B> BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
-	<B>Also, not to forget - Huge thank you to</B>:You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
+	" + span_bold("Map recovery helper (Curse you github, almost deleting the project):") + " BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
+	" + span_bold("Also, not to forget - Huge thank you to") + ":You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
 
 /obj/item/paper/awaygate/snowfield/diary
 	desc = "A part of a ripped paper, likely from the book."
@@ -614,8 +614,8 @@
 	Thank goodness. <BR> What the militsiya says it is from the government's orders. We had to leave \
 	sometime soon and find another coal vein, anyways. <BR><BR> Anatoly, two days ago, said he saw the army \
 	truck passing by few times around the mountains, so I think this is one of it. <BR><BR> Best to \
-	take our stuffs tomorrow. And some vodka bottles I have hidden.<BR><BR><BR><BR><B>BLAST, \
-	IT'S EMPTY! DIMITRY, THAT SCUMBAG - HOW DID HE EVEN KNEW THE BOTTLE'S THERE?!</B>"
+	take our stuffs tomorrow. And some vodka bottles I have hidden.<BR><BR><BR><BR>" + span_vold("BLAST, \
+	IT'S EMPTY! DIMITRY, THAT SCUMBAG - HOW DID HE EVEN KNEW THE BOTTLE'S THERE?!")
 
 /obj/item/card/id/gateway/snowfield // Basic access
 	name = "Class 1 ID"

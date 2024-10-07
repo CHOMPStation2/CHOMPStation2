@@ -15,7 +15,7 @@
 	if (stat != CONSCIOUS || nutrition <= 1000)
 		return
 	nutrition = 1000
-	to_chat(src, "<span class='warning'>You have purged most of the nutrition lingering in your systems.</span>")
+	to_chat(src, span_warning("You have purged most of the nutrition lingering in your systems."))
 	return TRUE
 
 /mob/living/silicon/robot/proc/ex_reserve_refill()
@@ -30,9 +30,9 @@
 					amount = water.energy
 				water.use_charge(amount)
 				E.reagents.add_reagent("water", amount)
-				to_chat(src, "<span class='filter_notice'>You refill the extinguisher using your water reserves.</span>")
+				to_chat(src, span_filter_notice("You refill the extinguisher using your water reserves."))
 			else
-				to_chat(src, "<span class='filter_notice'>Insufficient water reserves.</span>")
+				to_chat(src, span_filter_notice("Insufficient water reserves."))
 
 /mob/living/silicon/robot/proc/reset_belly_lights(var/b_class)
 	if(sprite_datum.belly_light_list.len && sprite_datum.belly_light_list.Find(b_class))

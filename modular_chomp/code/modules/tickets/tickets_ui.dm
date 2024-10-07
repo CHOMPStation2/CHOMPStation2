@@ -118,12 +118,12 @@
 					player = C
 
 			if(!player)
-				to_chat(usr, "<span class='warning'>Ckey ([ckey]) not online.</span>")
+				to_chat(usr, span_warning("Ckey ([ckey]) not online."))
 				return
 
 			var/ticket_text = tgui_input_text(usr, "What should the initial text be?", "New Ticket")
 			if(!ticket_text)
-				to_chat(usr, "<span class='warning'>Ticket message cannot be empty.</span>")
+				to_chat(usr, span_warning("Ticket message cannot be empty."))
 				return
 
 			var/level = tgui_alert(usr, "Is this ticket Admin-Level or Mentor-Level?", "Ticket Level", list("Admin", "Mentor"))
@@ -138,10 +138,10 @@
 				if(input == "Yes")
 					if(player.current_ticket)
 						player.current_ticket.MessageNoRecipient(ticket_text)
-						to_chat(usr, "<span class='adminnotice'>PM to-<b>Admins</b>: [ticket_text]</span>")
+						to_chat(usr, span_adminnotice("PM to-" + span_bold("Admins") + ": [ticket_text]"))
 						return
 					else
-						to_chat(usr, "<span class='warning'>Ticket not found, creating new one...</span>")
+						to_chat(usr, span_warning("Ticket not found, creating new one..."))
 				else
 					player.current_ticket.AddInteraction("[key_name_admin(usr)] opened a new ticket.")
 					player.current_ticket.Close()
@@ -268,9 +268,9 @@
 	dat += "<b>State: "
 	switch(state)
 		if(AHELP_ACTIVE)
-			dat += "<font color='red'>OPEN</font>"
+			dat += span_red("OPEN")
 		if(AHELP_RESOLVED)
-			dat += "<font color='green'>RESOLVED</font>"
+			dat += span_green("RESOLVED")
 		else
 			dat += "UNKNOWN"
 	dat += "</b>[GLOB.TAB][TicketHref("Refresh", ref_src)]"
@@ -281,9 +281,9 @@
 		dat += "<br>Closed at: [gameTimestamp(wtime = closed_at)] (Approx [(world.time - closed_at) / 600] minutes ago)"
 	dat += "<br><br>"
 	if(initiator)
-		dat += "<b>Actions:</b> [Context(ref_src)]<br>"
+		dat += span_bold("Actions:") + " [Context(ref_src)]<br>"
 	else
-		dat += "<b>DISCONNECTED</b>[GLOB.TAB][ClosureLinks(ref_src)]<br>"
+		dat += span_bold("DISCONNECTED") + "[GLOB.TAB][ClosureLinks(ref_src)]<br>"
 	dat += "<br><b>Log:</b><br><br>"
 	for(var/I in _interactions)
 		dat += "[I]<br>"
@@ -296,9 +296,9 @@
 	dat += "<b>State: "
 	switch(state)
 		if(AHELP_ACTIVE)
-			dat += "<font color='red'>OPEN</font>"
+			dat += span_red("OPEN")
 		if(AHELP_RESOLVED)
-			dat += "<font color='green'>RESOLVED</font>"
+			dat += span_green("RESOLVED")
 		if(AHELP_CLOSED)
 			dat += "CLOSED"
 		else
@@ -311,9 +311,9 @@
 		dat += "<br>Closed at: [gameTimestamp(wtime = closed_at)] (Approx [(world.time - closed_at) / 600] minutes ago)"
 	dat += "<br><br>"
 	if(initiator)
-		dat += "<b>Actions:</b> [FullMonty(ref_src)]<br>"
+		dat += span_bold("Actions:") + " [FullMonty(ref_src)]<br>"
 	else
-		dat += "<b>DISCONNECTED</b>[GLOB.TAB][ClosureLinks(ref_src)]<br>"
+		dat += span_bold("DISCONNECTED") + "[GLOB.TAB][ClosureLinks(ref_src)]<br>"
 	dat += "<br><b>Log:</b><br><br>"
 	for(var/I in _interactions)
 		dat += "[I]<br>"

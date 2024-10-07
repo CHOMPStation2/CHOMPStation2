@@ -198,27 +198,27 @@
 	keywords += list("Packs")
 	data = "There are several packs you may come across;<small>\
 	<br><br>\
-	<b>Eshi</b><br>\
+	" + span_bold("Eshi") + "<br>\
 	A large, old, politically neutral pack heavily involved in efforts to get Teshari into space. Probably the most \
 	common pack to see outside of a [quick_link("Skrell")] colony, and probably the most numerous Teshari pack outside of Sirisai and associated colonies.\
 	<br><br>\
-	<b>Nasemari</b><br>\
+	" + span_bold("Nasemari") + "<br>\
 	A very small pack. Generally focused around supporting and providing for packs on the homeworlds, they have devoted \
 	themselves to training as technicians and engineers in order to obtain skills and training to take back to Sirisai. \
 	The pack is only around thirty people in size, but owns and maintains a nuclear power plant.\
 	<br><br>\
-	<b>Schasaraca</b><br>\
+	" + span_bold("Schasaraca") + "<br>\
 	One of the more Skrell-devoted and integrated packs. They tend to be rather sycophantic towards the Skrell and work as \
 	scientists and field researchers on a variety of projects, generally biology or technical research. They have a reputation \
 	for working as spies and informants for the Skrell governments amongst other Teshari.\
 	<br><br>\
-	<b>Ceea</b><br>\
+	" + span_bold("Ceea") + "<br>\
 	An isolationist pack from the northern tundra of Sirisai; generally known as disliking the Skrell. Small to average in size; \
 	only around sixty members. Their regional culture is built around the study culture and anthropology, as well as archaeology, \
 	originally for the purposes of recovering history and materials \"lost\" due to Skrell interference.  It would be very rare to \
 	see them on your travels, however they are listed here for the sake of completeness.\
 	<br><br>\
-	<b>Resca</b><br>\
+	" + span_bold("Resca") + "<br>\
 	A pack that sold off its small native territory for the chance to get into space. Very musically inclined. They tend towards medical professions.</small>"
 
 /datum/lore/codex/page/teshari_physical/add_content()
@@ -255,7 +255,7 @@
 	name = "Physical Structure of a Positronic Brain"
 	keywords = list("Physical Posibrain", "Physical Positronic")
 	data = "A positronic brain is a cube of complex metal alloy between two and six inches to a side. They usually weigh just under ten kilograms and are \
-	<b>very fragile</b> when exposed to the stresses of heat or cold, as well as physical trauma. The exterior surface is chased with a network of grooves, forming \
+	" + span_bold("very fragile") + " when exposed to the stresses of heat or cold, as well as physical trauma. The exterior surface is chased with a network of grooves, forming \
 	a maze of geometric patterns right down to the molecular level, and the interior is hollow; complex particle generators and densely packed computational \
 	arrays form the basis of a self-computing neural network, complex and somewhat poorly understood. Most modern positronic brains are equipped with \
 	standardized I/O ports, and all have some interface for imprinting."
@@ -391,7 +391,7 @@
 
 /datum/lore/codex/page/class_aa
 	name = "AA Class"
-	data = "AA-class drones <b>do not yet exist</b>. Hypothetically, they are equal to living in every respect, with psychology that would not be abnormal in a baseline \
+	data = "AA-class drones " + span_bold("do not yet exist") + ". Hypothetically, they are equal to living in every respect, with psychology that would not be abnormal in a baseline \
 	human. The type of AA-class drone most frequently discussed is a hypothetical digitized consciousness of a human, a human brain that is somehow translated into \
 	software. Some argue that a small fraction of the A-class drones would more properly be considered AA, but as of yet no action has been taken. Some Mercurials \
 	will jokingly refer to themselves or other organics and positronics as AA’s. Research into brain uploading is heavily regulated and generally illegal."

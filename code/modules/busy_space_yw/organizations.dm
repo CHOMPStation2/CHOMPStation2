@@ -290,7 +290,7 @@
 			"Gamma Librae",
 			"Gliese 667 C",
 			"LHS 1140",
-			"Phact",			
+			"Phact",
 			/* fictional systems from Polaris and other sources*/
 			"Zhu Que",
 			"Oasis",
@@ -1234,7 +1234,7 @@
 	acronym = "SFI"
 	desc = "Founded in 2437 by Astara Junea, StarFlight Incorporated is now one of the biggest passenger liner businesses in human-occupied space and has even begun breaking into alien markets -  all despite a rocky start, and several high-profile ship disappearances and shipjackings. With space traffic at an all-time high, it's a depressing reality that SFI's incidents are just a tiny drop in the bucket compared to everything else going on. \
 	<br><br> \
-	SFI's fleet is, somewhat endearingly, named after various species of bird, though the designation <i>Pigeon</i> was removed from the lineup after a particularly unusual chain of events involving a business liner. For reasons that have continued to remain unclear since the company's foundation, SFI vessels are permitted to use the same high-level identifier pattern as governmental vessels."
+	SFI's fleet is, somewhat endearingly, named after various species of bird, though the designation " + span_italics("Pigeon") + " was removed from the lineup after a particularly unusual chain of events involving a business liner. For reasons that have continued to remain unclear since the company's foundation, SFI vessels are permitted to use the same high-level identifier pattern as governmental vessels."
 	history = ""
 	work = "luxury, business, and economy passenger flights"
 	headquarters = "Spin Aerostat, Jupiter"
@@ -1297,7 +1297,7 @@
 	work = "news media"
 	headquarters = ""
 	motto = "News from all across the spectrum"
-	
+
 	ship_prefixes = list("OBV" = "an investigation", "OBV" = "a distribution", "OBV" = "a journalism", "OBV" = "a general operations")
 	destination_names = list(
 			"Oculus HQ"
@@ -1312,7 +1312,7 @@
 	work = "catering, food, drinks"
 	headquarters = "Alpha Centauri"
 	motto = "The largest brands of food and drink - most of them are Centauri."
-	
+
 	ship_prefixes = list("CPTV" = "a transport", "CPCV" = "a catering", "CPRV" = "a resupply", "CPV" = "a general operations")
 	destination_names = list(
 			"Centauri Provisions HQ",
@@ -1329,7 +1329,7 @@
 	work = "catering, food, drinks"
 	headquarters = ""
 	motto = "Engine designs, emergency generators, and old memories"
-	
+
 	ship_prefixes = list("EETV" = "a transport", "EERV" = "a research", "EEV" = "a general operations")
 	destination_names = list(
 			"Einstein HQ"
@@ -1344,7 +1344,7 @@
 	work = "starship construction"
 	headquarters = ""
 	motto = "We build it - you fly it"
-	
+
 	ship_prefixes = list("WATV" = "a transport", "WARV" = "a repair", "WAV" = "a general operations")
 	destination_names = list(
 			"Wulf Aeronautics HQ",
@@ -1361,7 +1361,7 @@
 	work = "luxury goods"
 	headquarters = ""
 	motto = ""
-	
+
 	ship_prefixes = list("GETV" = "a transport", "GECV" = "a luxury catering", "GEV" = "a general operations")
 	//precious stones
 	ship_names = list(
@@ -1437,7 +1437,7 @@
 	work = "salvage and shipbreaking"
 	headquarters = "N/A"
 	motto = "one man's trash is another man's treasure"
-	
+
 	ship_prefixes = list("CSV" = "a salvage", "CRV" = "a recovery", "CTV" = "a transport", "CSV" = "a shipbreaking", "CHV" = "a towing")
 	//mostly-original, maybe some references, and more than a few puns
 	ship_names = list(
@@ -1972,7 +1972,7 @@
 	destination_names = list(
 			)
 	*/
-	
+
 /datum/lore/organization/other/uekatish
 	name = "Ue-Katish Pirates"
 	short_name = ""
@@ -1986,7 +1986,7 @@
 	lawful = FALSE
 	hostile = TRUE
 	autogenerate_destination_names = TRUE
-	
+
 	ship_prefixes = list("Ue-Katish pirate" = "a raiding", "Ue-Katish bandit" = "a raiding", "Ue-Katish raider" = "a raiding", "Ue-Katish enforcer" = "an enforcement")
 	ship_names = list(
 			"Keqxuer'xeu's Prize",
@@ -2173,7 +2173,7 @@
 			"a classified location"
 			)
 			// autogen will add a lot of other places as well.
-			
+
 /datum/lore/organization/gov/almachi
 	name = "Almach Association"
 	short_name = "Almachi "
@@ -2233,7 +2233,7 @@
 			"Alar-Selna, Arrakthiir",
 			"a minor colony in Arrakthiir",
 			"a Coalition outpost in Arrakthiir",
-			"a tajaran colony in Mesomori",			
+			"a tajaran colony in Mesomori",
 			"a Coalition outpost in Mesomori",
 			"a mining base in Mesomori"
 			)
@@ -2608,7 +2608,7 @@
 	acronym = "SAARE"
 	desc = "SAARE consistently have the worst reputation of any paramilitary group. This is because they specialize in deniability and secrecy. Although publically they work in asset recovery, they have a substantiated reputation for info-theft and piracy that has lead to them butting heads with the law on more than one occasion. Nonetheless, they are an invaluable part of the Solar economy, and other TSCs and small colonial governments keep them in business.\
 	<br><br>\
-	For the purposes of plausible deniability, SAARE designates their ships using a series of rotating identifiers, with ships on a specific operation or in a particular area all using the same initial designation (<i>e.g.</i> 'Sledgehammer') and having a different numerical identifier, with the most important ships involved bearing a unique additional codename (such as 'Actual' for Command \& Control ships). As ships are shuffled in and out of operating areas, it can be difficult to pin down exactly which ship in SAARE's fleet was responsible for which act. SAARE's misdirection is multilayered, including elements such as extensive use of repainting, false IFFs, bribes, forged documents, intimidation, camouflage, and all manner of other underhanded tactics."
+	For the purposes of plausible deniability, SAARE designates their ships using a series of rotating identifiers, with ships on a specific operation or in a particular area all using the same initial designation (" + span_italics("e.g.") + " 'Sledgehammer') and having a different numerical identifier, with the most important ships involved bearing a unique additional codename (such as 'Actual' for Command \& Control ships). As ships are shuffled in and out of operating areas, it can be difficult to pin down exactly which ship in SAARE's fleet was responsible for which act. SAARE's misdirection is multilayered, including elements such as extensive use of repainting, false IFFs, bribes, forged documents, intimidation, camouflage, and all manner of other underhanded tactics."
 	history = ""
 	work = "mercenary contractors"
 	headquarters = ""
@@ -2712,7 +2712,7 @@
 	//probably a more elegant (read: fancier) way to do the second part but fuck it, this works just fine
 
 /datum/lore/organization/gov/altevian_hegemony
-	name = "The Altevian Hegemony" 
+	name = "The Altevian Hegemony"
 	short_name = "Altevian Hegemony "
 	acronym = "AH"
 	desc = "The Altevians are a space-faring race of rodents that resemble Earth-like rats. They do not have a place they call home in terms of a planet, and instead have massive multiple-kilometer-long colony-ships that are constantly on the move and typically keep operations outside of known populated systems to not eat the resources from others. Their primary focus is trade and slavage operations and can be expected to be seen around both densely populated and empty systems for their work."

@@ -12,15 +12,15 @@
 		return
 
 	if(!istype(H))
-		to_chat(usr,"<span class='warning'>That mob type ([H.type]) doesn't support NIFs, sorry.</span>")
+		to_chat(usr,span_warning("That mob type ([H.type]) doesn't support NIFs, sorry."))
 		return
 
 	if(!H.get_organ(BP_HEAD))
-		to_chat(usr,"<span class='warning'>Target is unsuitable.</span>")
+		to_chat(usr,span_warning("Target is unsuitable."))
 		return
 
 	if(H.nif)
-		to_chat(usr,"<span class='warning'>Target already has a NIF.</span>")
+		to_chat(usr,span_warning("Target already has a NIF."))
 		return
 
 	if(H.species.flags & NO_SCAN)

@@ -14,9 +14,9 @@
 			continue
 		full++
 	if(full >= 2)
-		to_chat(user, "<span class='warning'>It doesn't seem like there is room in \the [src]!</span>")
+		to_chat(user, span_warning("It doesn't seem like there is room in \the [src]!"))
 	else
-		to_chat(user, "<span class='warning'>You crawl into \the [src]!</span>")
+		to_chat(user, span_warning("You crawl into \the [src]!"))
 		user.forceMove(src)
 
 	return ..()
@@ -56,7 +56,7 @@
 						"The wearer of \the [name] walks, and their feet press down on you heavily with each step.",
 						"With each step of their unhurried walk, you're tightly sandwiched between [pred]'s feet and the insole of their boots.",
 						"As [pred] walks, their foot presses you tightly against the insole of their boots with each step.")
-				to_chat(prey, span_emote_subtle("<I>[message_prey]</I>"))
+				to_chat(prey, span_emote_subtle(span_italics("[message_prey]")))
 
 			return  //No message for pred if I_HELP
 

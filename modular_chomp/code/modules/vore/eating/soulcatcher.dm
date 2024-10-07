@@ -67,10 +67,10 @@
 
 // Sends messages to the owner of the soulcatcher
 /obj/soulgem/proc/notify_holder(var/message)
-	to_chat(owner, span_nif("<b>[name]</b> displays, \"<span class='notice nif'>[message]</span>\""))
+	to_chat(owner, span_nif(span_bold("[name]") + " displays, \"" + span_notice("[message]") + "\""))
 
 	for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-		to_chat(CS, span_nif("<b>[name]</b> displays, \"<span class='notice nif'>[message]</span>\""))
+		to_chat(CS, span_nif(span_bold("[name]") + " displays, \"" + span_notice("[message]") + "\""))
 
 // Forwards the speech of captured souls
 /obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, var/mob/eyeobj)
@@ -78,13 +78,13 @@
 
 	//AR Projecting
 	if(eyeobj)
-		sender.eyeobj.visible_message("<span class='game say'><b>[sender_name]</b> says, \"[message]\"</span>")
+		sender.eyeobj.visible_message(span_game(span_say(span_bold("[sender_name]") + " says, \"[message]\"")))
 
 	//Not AR Projecting
 	else
-		to_chat(owner, span_nif("<b>\[SC\] [sender_name]</b> speaks, \"[message]\""))
+		to_chat(owner, span_nif(span_bold("\[SC\] [sender_name]") + " speaks, \"[message]\""))
 		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-			to_chat(CS, span_nif("<b>\[SC\] [sender_name]</b> speaks, \"[message]\""))
+			to_chat(CS, span_nif(span_bold("\[SC\] [sender_name]") + " speaks, \"[message]\""))
 
 	log_nsay(message, owner.real_name, sender)
 
@@ -94,13 +94,13 @@
 
 	//AR Projecting
 	if(eyeobj)
-		sender.eyeobj.visible_message("<span class='emote'>[sender_name] [message]</span>")
+		sender.eyeobj.visible_message(span_emote("[sender_name] [message]"))
 
 	//Not AR Projecting
 	else
-		to_chat(owner, span_nif("<b>[sender_name]</b> [message]"))
+		to_chat(owner, span_nif(span_bold("[sender_name]") + " [message]"))
 		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-			to_chat(CS, span_nif("<b>[sender_name]</b> [message]"))
+			to_chat(CS, span_nif(span_bold("[sender_name]") + " [message]"))
 
 	log_nme(message, owner.real_name,sender)
 

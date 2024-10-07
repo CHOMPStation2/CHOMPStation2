@@ -1020,7 +1020,7 @@
 /*
 /obj/item/gun/projectile/automatic/serdy/kord/afteratt(atom/A, mob/living/user, adjacent, params)
 	if(user.size_multiplier <= 0.5) //They're 50% or lower. If they fire this gun, they're gonna get obliterated.
-		to_chat(user,"<span class='warning'>You struggle to reach the trigger. Maybe shooting such a big gun isn't such a good idea...</span>")
+		to_chat(user,span_warning("You struggle to reach the trigger. Maybe shooting such a big gun isn't such a good idea..."))
 		if(do_after(user, 5 SECONDS)) //Give them a chance to take it back.
 			. = ..() //RIP
 
@@ -1041,8 +1041,8 @@
 		if(is_human && H.eyecheck() < 1)
 			user.flash_eyes() //Flashbang effect
 
-		user.visible_message(/*What other people experience*/"<span class='notice'>[user] manages to pull the trigger on the [src], causing a large bang and a big flash before [src] recoils backwards, crashing violently into [user] and causing them to go flying!</span>", \
-		/*What you experience*/ "<span class='warning'>As you pull the trigger, you suddenly see a flash of bright white light and a loud bang which immediately triggers ringing in your ears. Before you can even react, you feel the giant gun crashing into you and propelling you backwards, and then everything goes black!</span>")
+		user.visible_message(/*What other people experience*/span_notice("[user] manages to pull the trigger on the [src], causing a large bang and a big flash before [src] recoils backwards, crashing violently into [user] and causing them to go flying!"), \
+		/*What you experience*/ span_warning("As you pull the trigger, you suddenly see a flash of bright white light and a loud bang which immediately triggers ringing in your ears. Before you can even react, you feel the giant gun crashing into you and propelling you backwards, and then everything goes black!"))
 		if(user.organs && user.organs.len) //You are going to break a lot of bones.
 			user.apply_damage(15, BRUTE, BP_L_ARM)
 			user.apply_damage(15, BRUTE, BP_R_ARM)
@@ -1071,7 +1071,7 @@
 		var/damage_factor = (1 - unhappy_factor) //Unhappy factor is 0 at max unhappiness. Damage_factor is 1 at max unhappiness.
 		var/prob_to_drop = (33 + damage_factor*66) //100% if just above 50%, 33% if just below 125%
 		var/damage_taken = 5 + 10 * damage_factor //15 damage if just above 50%, 5 if just below 125%
-		var/message_on_fire = "<span class='notice'>As you pull the trigger, you feel the gun painfully slam into your shoulder, leaving a painful bruise!</span>"
+		var/message_on_fire = span_notice("As you pull the trigger, you feel the gun painfully slam into your shoulder, leaving a painful bruise!")
 		var/in_left_hand = TRUE
 		if(user.r_hand == src)
 			in_left_hand = FALSE
@@ -1079,7 +1079,7 @@
 		user.apply_damage(damage_taken,BRUTE,damaged_body_part) //Bruise
 		user.apply_damage(damage_taken * 3,HALLOSS) //Ouchie juice
 		if(prob(prob_to_drop))
-			message_on_fire += "<span class='notice'> The force causes you to stumble backwards, dropping the gun and falling to the ground.</span>"
+			message_on_fire += span_notice(" The force causes you to stumble backwards, dropping the gun and falling to the ground.")
 			user.drop_item()
 			user.apply_effect(25,WEAKEN)
 */
@@ -1637,11 +1637,11 @@
 	if(istype(A, /obj/item/surgical/circular_saw) || istype(A, /obj/item/melee/energy) || istype(A, /obj/item/pickaxe/plasmacutter))
 		if(sawn_off) //Don't do anything if we were already sawed off.
 			return
-		to_chat(user, "<span class='notice'>You begin to shorten the barrel of \the [src].</span>")
+		to_chat(user, span_notice("You begin to shorten the barrel of \the [src]."))
 		if(loaded.len)
 			var/burstsetting = burst
 			burst = 2
-			user.visible_message("<span class='danger'>The shotgun goes off!</span>", "<span class='danger'>The shotgun goes off in your face!</span>")
+			user.visible_message(span_danger("The shotgun goes off!"), span_danger("The shotgun goes off in your face!"))
 			Fire_userless(user)
 			burst = burstsetting
 			return
@@ -1650,7 +1650,7 @@
 			item_state = "sawnshotgun"
 
 			desc = "Omar's coming!"
-			to_chat(user, "<span class='warning'>You shorten the barrel of \the [src]!</span>")
+			to_chat(user, span_warning("You shorten the barrel of \the [src]!"))
 	else
 		..()
 

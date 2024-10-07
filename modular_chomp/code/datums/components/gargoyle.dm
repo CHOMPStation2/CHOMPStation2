@@ -66,10 +66,10 @@
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
 	if (comp)
 		if (comp.energy <= 0 && isturf(loc))
-			to_chat(src, "<span class='danger'>You suddenly turn into a [comp.identifier] as you run out of energy!</span>")
+			to_chat(src, span_danger("You suddenly turn into a [comp.identifier] as you run out of energy!"))
 		else if (comp.cooldown > world.time)
 			var/time_to_wait = (comp.cooldown - world.time) / (1 SECONDS)
-			to_chat(src, "<span class='warning'>You can't transform just yet again! Wait for another [round(time_to_wait,0.1)] seconds!</span>")
+			to_chat(src, span_warning("You can't transform just yet again! Wait for another [round(time_to_wait,0.1)] seconds!"))
 			return
 	if (istype(loc, /obj/structure/gargoyle))
 		qdel(loc)
@@ -89,7 +89,7 @@
 		comp.paused = TRUE
 		comp.paused_loc = loc
 		comp.RegisterSignal(src, COMSIG_ATOM_ENTERING, /datum/component/gargoyle/proc/unpause)
-		to_chat(src, "<span class='notice'>You start conserving your energy.</span>")
+		to_chat(src, span_notice("You start conserving your energy."))
 
 /mob/living/carbon/human/proc/gargoyle_checkenergy()
 	set name = "Gargoyle - Check Energy"
@@ -98,4 +98,4 @@
 
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
 	if (comp)
-		to_chat(src, "<span class='notice'>You have [round(comp.energy,0.01)] energy remaining. It is currently [comp.paused ? "stable" : (comp.transformed ? "increasing" : "decreasing")].</span>")
+		to_chat(src, span_notice("You have [round(comp.energy,0.01)] energy remaining. It is currently [comp.paused ? "stable" : (comp.transformed ? "increasing" : "decreasing")]."))

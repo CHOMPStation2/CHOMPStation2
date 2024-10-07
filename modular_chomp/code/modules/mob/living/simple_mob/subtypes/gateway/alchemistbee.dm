@@ -87,8 +87,8 @@
 	desc = "Can you even see this in game?"
 	mob_overlay_state = "cult_aura"
 
-	on_created_text = "<span class='warning'>You feel incrediably vulnerable.</span>"
-	on_expired_text = "<span class='notice'>You feel better.</span>"
+	on_created_text = span_warning("You feel incrediably vulnerable.")
+	on_expired_text = span_notice("You feel better.")
 	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
 	incoming_damage_percent = 2			// Adjusts all incoming damage.
 	incoming_brute_damage_percent = 2	// Only affects bruteloss.

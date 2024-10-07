@@ -128,7 +128,7 @@
 
 	if(L.can_be_drop_prey && L.devourable)
 		L.forceMove(belly_dest)
-		to_chat(target, "<span class='danger'>[src] materializes around you, as you end up in their [belly_dest]!</span>")
+		to_chat(target, span_danger("[src] materializes around you, as you end up in their [belly_dest]!"))
 
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/proc/smokebomb(atom/target)
