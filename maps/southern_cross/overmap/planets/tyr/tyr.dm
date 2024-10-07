@@ -173,37 +173,37 @@
 
 /turf/simulated/floor/water/tyr
 	color = "#505564"
-	oxygen		= THOR_MOL_O2
-	nitrogen	= THOR_MOL_N2
-	temperature	= THOR_AVG_TEMP
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
 
 /turf/simulated/floor/outdoors/desert_planet/sand/tyr
-	oxygen		= THOR_MOL_O2
-	nitrogen	= THOR_MOL_N2
-	temperature	= THOR_AVG_TEMP
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
 
 
 /turf/simulated/floor/outdoors/desert_planet/deep_sand/tyr
-	oxygen		= THOR_MOL_O2
-	nitrogen	= THOR_MOL_N2
-	temperature	= THOR_AVG_TEMP
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
 
 /turf/simulated/floor/outdoors/desert_planet/grass/tyr
-	oxygen		= THOR_MOL_O2
-	nitrogen	= THOR_MOL_N2
-	temperature	= THOR_AVG_TEMP
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
 
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr
-	oxygen		= THOR_MOL_O2
-	nitrogen	= THOR_MOL_N2
-	temperature	= THOR_AVG_TEMP
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
 
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr
-	oxygen		= THOR_MOL_O2
-	nitrogen	= THOR_MOL_N2
-	temperature	= THOR_AVG_TEMP
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
 
 /turf/simulated/floor/outdoors/desert_planet/mud/tyr
-	oxygen		= THOR_MOL_O2
-	nitrogen	= THOR_MOL_N2
-	temperature	= THOR_AVG_TEMP
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
