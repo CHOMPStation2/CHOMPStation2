@@ -109,3 +109,11 @@
   - bugfix: chomp specific auto transfer dest placeholder
   TheCaramelion:
   - bugfix: Geneticist now gain PTO
+2024-10-07:
+  CHOMPStation2:
+  - rscadd: Circuit assemblies now use a visual coding system.
+  FluffMedic:
+  - rscadd: The planet of Tyr, an anomalous valley landing spot. Replacement for valley.
+      Beta stage
+  TheCaramelion:
+  - qol: Heads of staff now use time instead of whitelists
