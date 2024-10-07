@@ -23,13 +23,13 @@
 
 /turf/simulated/floor/outdoors/desert_planet/sand/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W, /obj/item/shovel))
-		to_chat(user, "<span class='notice'>You begin to remove \the [src] with your [W].</span>")
+		to_chat(user, span_notice("You begin to remove \the [src] with your [W]."))
 		if(do_after(user, 4 SECONDS * W.toolspeed))
-			to_chat(user, "<span class='notice'>\The [src] has been dug up, and now lies in a pile nearby.</span>")
+			to_chat(user, span_notice("\The [src] has been dug up, and now lies in a pile nearby."))
 			icon_state = "sand_dug"
 			new /obj/item/ore/glass (src)
 		else
-			to_chat(user, "<span class='notice'>You decide to not finish removing \the [src].</span>")
+			to_chat(user, span_notice("You decide to not finish removing \the [src]."))
 	else
 		..()
 
@@ -89,7 +89,7 @@
 // Stolen from mineral turf code.
 /turf/simulated/floor/outdoors/desert_planet/stonewall/attackby(obj/item/W as obj, mob/user as mob)
 	if(!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		to_chat(user, span_warning("You don't have the dexterity to do this!"))
 		return
 
 	if(istype(W, /obj/item/pickaxe))
@@ -102,11 +102,11 @@
 		last_act = world.time
 
 		playsound(user, P.drill_sound, 20, 1)
-		to_chat(user, "<span class='notice'>You start [P.drill_verb].</span>")
+		to_chat(user, span_notice("You start [P.drill_verb]."))
 
 		if(do_after(user,P.digspeed))
 
-			to_chat(user, "<span class='notice'>You finish [P.drill_verb] \the [src].</span>")
+			to_chat(user, span_notice("You finish [P.drill_verb] \the [src]."))
 			new /obj/item/stack/material/sandstone(src)
 			density = FALSE
 			opacity = FALSE

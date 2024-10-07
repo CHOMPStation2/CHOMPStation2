@@ -179,7 +179,7 @@
 		if(I.damage > 0)
 			I.damage = max(I.damage - heal_rate, 0)
 			if (prob(5))
-				to_chat(H, "<span class='alien'>We feel a soothing sensation within our [I.parent_organ]...</span>")
+				to_chat(H, span_alien("We feel a soothing sensation within our [I.parent_organ]..."))
 			return 1
 
 	// Next, heal external damage.
@@ -189,7 +189,7 @@
 		H.adjustOxyLoss(-heal_rate)
 		H.adjustToxLoss(-heal_rate)
 		if (prob(5))
-			to_chat(H, "<span class='alien'>A soothing sensation falls over us...</span>")
+			to_chat(H, span_alien("A soothing sensation falls over us..."))
 		return 1
 
 	// Lastly, mend broken bones. May remove this if it's abused.
@@ -197,7 +197,7 @@
 		if (E.status & ORGAN_BROKEN)
 			if (prob(mend_prob))
 				if (E.mend_fracture())
-					to_chat(H, "<span class='alien'>We feel something mend within our [E.name].</span>")
+					to_chat(H, span_alien("We feel something mend within our [E.name]."))
 			return 1
 
 	return 0
@@ -212,7 +212,7 @@
 	set category = "Abilities.Alien"
 
 	if(check_alien_ability(150,1,O_RESIN))
-		visible_message("<span class='alium'><B>[src] has planted some alien weeds!</B></span>")
+		visible_message(span_alium(span_bold("[src] has planted some alien weeds!")))
 		new /obj/effect/alien/weeds/node/weak(get_turf(src), null, "#321D37")	// Aliens.dm for weed node origin.
 		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 	return
@@ -223,7 +223,7 @@
 
 	var/obj/item/organ/internal/xenos/plasmavessel/I = M.internal_organs_by_name[O_PLASMA]
 	if(!istype(I))
-		to_chat(src, "<span class='alium'>Our plasma vessel is missing!</span>")
+		to_chat(src, span_alium("Our plasma vessel is missing!"))
 		return
 
 	to_chat(src, "Our plasma reserves are at [I.stored_plasma]/[I.max_plasma].")
@@ -273,7 +273,7 @@
 			else O = new /obj/item/stack/material/resin(targetLoc)
 
 	if(O)
-		visible_message("<span class='warning'><B>[src] vomits up a thick purple substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
+		visible_message(span_warning(span_bold("[src] vomits up a thick purple substance and begins to shape it!")), span_alium("You shape a [choice]."))
 //		O.color = "#321D37" // Adding predefined colour icons.
 		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 

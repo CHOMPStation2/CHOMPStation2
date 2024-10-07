@@ -370,7 +370,7 @@
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,span_warning("\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 	update_canmove()
 
 /mob/living/simple_mob/protean_blob/update_canmove()
@@ -392,22 +392,22 @@
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
+			visible_message(span_infoplain(span_bold("[name]") + " gloms over some of \the [S], absorbing it."))
 	else if(isitem(A) && a_intent == "grab") //CHOMP Add all this block, down to I.forceMove.
 		var/obj/item/I = A
 		if(!vore_selected)
-			to_chat(src,"<span class='warning'>You either don't have a belly selected, or don't have a belly!</span>")
+			to_chat(src,span_warning("You either don't have a belly selected, or don't have a belly!"))
 			return FALSE
 		if(is_type_in_list(I,item_vore_blacklist) || I.anchored)
-			to_chat(src, "<span class='warning'>You can't eat this.</span>")
+			to_chat(src, span_warning("You can't eat this."))
 			return
 
 		if(is_type_in_list(I,edible_trash) | adminbus_trash)
 			if(I.hidden_uplink)
-				to_chat(src, "<span class='warning'>You really should not be eating this.</span>")
+				to_chat(src, span_warning("You really should not be eating this."))
 				message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>" : "null"])")
 				return
-		visible_message("<b>[name]</b> stretches itself over the [I], engulfing it whole!")
+		visible_message(span_infoplain(span_bold("[name]") + " stretches itself over the [I], engulfing it whole!"))
 		I.forceMove(vore_selected)
 	else
 		return ..()
@@ -423,7 +423,7 @@
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
+			visible_message(span_infoplain(span_bold("[name]") + " gloms over some of \the [S], absorbing it."))
 	else
 		return ..()
 
@@ -453,9 +453,9 @@
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
 	if(!force && !isturf(loc) && !loc == /obj/item/rig/protean)
-		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(src,span_warning("You can't change forms while inside something."))
 		return
-	to_chat(src, "<span class='notice'>You rapidly disassociate your form.</span>")
+	to_chat(src, span_notice("You rapidly disassociate your form."))
 	if(force || do_after(src,20,exclusive = TASK_ALL_EXCLUSIVE))
 		handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
 		remove_micros(src, src) //Living things don't fare well in roblobs.
@@ -506,7 +506,7 @@
 		moveToNullspace()
 
 		//Message
-		blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
+		blob.visible_message(span_infoplain(span_bold("[src.name]") + " collapses into a gooey blob!"))
 
 		//Duration of the to_puddle iconstate that the blob starts with
 		sleep(13)
@@ -536,7 +536,7 @@
 		//Return our blob in case someone wants it
 		return blob
 	else
-		to_chat(src, "<span class='warning'>You must remain still to blobform!</span>")
+		to_chat(src, span_warning("You must remain still to blobform!"))
 
 //For some reason, there's no way to force drop all the mobs grabbed. This ought to fix that. And be moved elsewhere. Call with caution, doesn't handle cycles.
 /proc/remove_micros(var/src, var/mob/root)
@@ -563,9 +563,9 @@
 	if(blob.loc == /obj/item/rig/protean)
 		return
 	if(!force && !isturf(blob.loc))
-		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(blob,span_warning("You can't change forms while inside something."))
 		return
-	to_chat(src, "<span class='notice'>You rapidly reassemble your form.</span>")
+	to_chat(src, span_notice("You rapidly reassemble your form."))
 	if(force || do_after(blob,20,exclusive = TASK_ALL_EXCLUSIVE))
 		if(buckled)
 			buckled.unbuckle_mob()
@@ -593,7 +593,7 @@
 		blob.icon_state = "from_puddle"
 
 		//Message
-		blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
+		blob.visible_message(span_infoplain(span_bold("[src.name]") + " reshapes into a humanoid appearance!"))
 
 		//Size update
 		resize(blob.size_multiplier, FALSE, TRUE, ignore_prefs = TRUE)
@@ -639,7 +639,7 @@
 		//Return ourselves in case someone wants it
 		return src
 	else
-		to_chat(src, "<span class='warning'>You must remain still to reshape yourself!</span>")
+		to_chat(src, span_warning("You must remain still to reshape yourself!"))
 
 /mob/living/carbon/human/proc/nano_set_panel(var/client/C)
 	if(C)

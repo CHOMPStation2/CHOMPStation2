@@ -23,7 +23,7 @@
 
 /obj/item/fuel_assembly/blitz/throw_impact(atom/hit_atom)
 	if(!..())
-		visible_message("<span class='warning'>\The [src] loses stability and shatters in a violent explosion!</span>")
+		visible_message(span_warning("\The [src] loses stability and shatters in a violent explosion!"))
 		explosion(src.loc, 1, 2, 4, 6)
 		qdel(src)
 
@@ -32,13 +32,13 @@
 	var/obj/item/stack/material/lead/M = I
 	if(istype(M))
 		if(M.get_amount() > 5)
-			to_chat(user,"<span class='notice'>You add a lead shell to the blitz rod.</span>")
+			to_chat(user,span_notice("You add a lead shell to the blitz rod."))
 			qdel(src)
 			var/obj/item/fuel_assembly/blitz/shielded/rod = new(get_turf(user))
 			user.put_in_hands(rod)
 			return
 		else
-			to_chat(user,"<span class='warning'>You need at least five sheets of lead to add shielding!</span>")
+			to_chat(user,span_warning("You need at least five sheets of lead to add shielding!"))
 
 /obj/item/fuel_assembly/blitz/unshielded/attack_hand(mob/user)
 	. = ..()
@@ -56,7 +56,7 @@
 			burn_user = FALSE
 
 		if(burn_user)
-			H.visible_message("<span class='danger'>\The [src] flashes as it scorches [H]'s hands!</span>")
+			H.visible_message(span_danger("\The [src] flashes as it scorches [H]'s hands!"))
 			H.apply_damage(7, BURN, "r_hand", used_weapon="Blitz Rod")
 			H.apply_damage(7, BURN, "l_hand", used_weapon="Blitz Rod")
 			H.drop_from_inventory(src, get_turf(H))

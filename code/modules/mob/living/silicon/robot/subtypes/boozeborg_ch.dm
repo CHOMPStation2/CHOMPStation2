@@ -169,12 +169,12 @@ What Borgs are available is sadly handled in the above file in the proc
 	if(patient && patient.reagents)
 		if(chem in injection_chems + "inaprovaline")
 			if(hound.cell.charge < 200) //This is so borgs don't kill themselves with it.
-				to_chat(hound, "<span class='notice'>You don't have enough power to synthesize fluids.</span>")
+				to_chat(hound, span_notice("You don't have enough power to synthesize fluids."))
 				return
 			else if(patient.reagents.get_reagent_amount(chem) + 10 >= 50) //Preventing people from accidentally killing themselves by trying to inject too many chemicals!
-				to_chat(hound, "<span class='notice'>Your stomach is currently too full of fluids to secrete more fluids of this kind.</span>")
+				to_chat(hound, span_notice("Your stomach is currently too full of fluids to secrete more fluids of this kind."))
 			else if(patient.reagents.get_reagent_amount(chem) + 10 <= 50) //No overdoses for you
 				patient.reagents.add_reagent(chem, inject_amount)
 				drain(100) //-100 charge per injection
 			var/units = round(patient.reagents.get_reagent_amount(chem))
-			to_chat(hound, "<span class='notice'>Injecting [units] unit\s into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
+			to_chat(hound, span_notice("Injecting [units] unit\s into occupant.")) //If they were immersed, the reagents wouldn't leave with them.

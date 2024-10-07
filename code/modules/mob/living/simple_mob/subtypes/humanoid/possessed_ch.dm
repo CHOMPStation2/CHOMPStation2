@@ -123,7 +123,7 @@
 
 //What about if someone's in it? Well here you go.
 /mob/living/simple_mob/humanoid/possessed/Login()
-	to_chat(src,"<b>Why are you in this [src]? Why can't you say more than a few phrases? Why. What. Kill. Kill. Kill. Kill. KILL! KILL! KILL!</b> [player_msg]")
+	to_chat(src,span_infoplain(span_bold("Why are you in this [src]? Why can't you say more than a few phrases? Why. What. Kill. Kill. Kill. Kill. KILL! KILL! KILL!") + " [player_msg]"))
 
 /obj/item/rig/eva/old
 	name = "old EVA suit control module"

@@ -12,10 +12,10 @@
 	if(istype(W, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/C = W
 		if(C.caliber != caliber)
-			to_chat(user, "<span class='warning'>[C] does not fit into [src].</span>")
+			to_chat(user, span_warning("[C] does not fit into [src]."))
 			return
 		if(stored_ammo.len >= max_ammo)
-			to_chat(user, "<span class='warning'>[src] is full!</span>")
+			to_chat(user, span_warning("[src] is full!"))
 			return
 		user.remove_from_mob(C)
 		C.forceMove(src)
@@ -24,13 +24,13 @@
 	if(istype(W, /obj/item/ammo_magazine))
 		var/obj/item/ammo_magazine/L = W
 		if(L.caliber != caliber)
-			to_chat(user, "<span class='warning'>The ammo in [L] does not fit into [src].</span>")
+			to_chat(user, span_warning("The ammo in [L] does not fit into [src]."))
 			return
 		if(!L.stored_ammo.len)
-			to_chat(user, "<span class='warning'>There's no more ammo [L]!</span>")
+			to_chat(user, span_warning("There's no more ammo [L]!"))
 			return
 		if(stored_ammo.len >= max_ammo)
-			to_chat(user, "<span class='warning'>[src] is full!</span>")
+			to_chat(user, span_warning("[src] is full!"))
 			return
 		while(L.stored_ammo.len && stored_ammo.len < max_ammo)
 			var/obj/item/ammo_casing/AC = L.stored_ammo[1] //select the next casing.

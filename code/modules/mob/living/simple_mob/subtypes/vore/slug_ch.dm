@@ -220,7 +220,7 @@
 			buckle_mob(L)
 			L.stop_pulling()
 			L.Weaken(2)
-			to_chat(L, "<span class='warning'>You tripped in the sticky substance, sticking to [my_turf]!</span>")
+			to_chat(L, span_warning("You tripped in the sticky substance, sticking to [my_turf]!"))
 			playsound(src, 'sound/rakshasa/Decay3.ogg', 100, 1)
 			alert_slug(L)
 

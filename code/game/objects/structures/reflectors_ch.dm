@@ -47,9 +47,9 @@
 		. += "It is set to [rotation_angle] degrees, and the rotation is [can_rotate ? "unlocked" : "locked"]."
 		if(!admin)
 			if(can_rotate)
-				. += "<span class='notice'>Alt-click to adjust its direction.</span>"
+				. += span_notice("Alt-click to adjust its direction.")
 			else
-				. += "<span class='notice'>Use screwdriver to unlock the rotation.</span>"
+				. += span_notice("Use screwdriver to unlock the rotation.")
 
 /obj/structure/reflector/proc/Fire()
 	UNTIL(!bullet_act_in_progress)
@@ -105,16 +105,16 @@
 
 	if(W.is_screwdriver())
 		can_rotate = !can_rotate
-		to_chat(user, "<span class='notice'>You [can_rotate ? "unlock" : "lock"] [src]'s rotation.</span>")
+		to_chat(user, span_notice("You [can_rotate ? "unlock" : "lock"] [src]'s rotation."))
 		playsound(W, W.usesound, 50, 1)
 		return
 
 	if(W.is_wrench() && can_decon)
 		if(anchored)
-			to_chat(user, "<span class='warning'>Unweld [src] from the floor first!</span>")
+			to_chat(user, span_warning("Unweld [src] from the floor first!"))
 			return
-		user.visible_message("<span class='notice'>[user] starts to dismantle [src].</span>", "<span class='notice'>You start to dismantle [src]...</span>")
-		to_chat(user, "<span class='notice'>You dismantle [src].</span>")
+		user.visible_message(span_notice("[user] starts to dismantle [src]."), span_notice("You start to dismantle [src]..."))
+		to_chat(user, span_notice("You dismantle [src]."))
 		new framebuildstacktype(drop_location(), framebuildstackamount)
 		if(buildstackamount)
 			new buildstacktype(drop_location(), buildstackamount)
@@ -125,20 +125,20 @@
 			if(!I.remove_fuel(1,user))
 				return
 
-			user.visible_message("<span class='notice'>[user] starts to weld [src] to the floor.</span>",
-								"<span class='notice'>You start to weld [src] to the floor...</span>",
-								"<span class='hear'>You hear welding.</span>")
+			user.visible_message(span_notice("[user] starts to weld [src] to the floor."),
+								span_notice("You start to weld [src] to the floor..."),
+								span_hear("You hear welding."))
 			anchored = TRUE
-			to_chat(user, "<span class='notice'>You weld [src] to the floor.</span>")
+			to_chat(user, span_notice("You weld [src] to the floor."))
 		else
 			if(!I.remove_fuel(1,user))
 				return
 
-			user.visible_message("<span class='notice'>[user] starts to cut [src] free from the floor.</span>",
-								"<span class='notice'>You start to cut [src] free from the floor...</span>",
-								"<span class='hear'>You hear welding.</span>")
+			user.visible_message(span_notice("[user] starts to cut [src] free from the floor."),
+								span_notice("You start to cut [src] free from the floor..."),
+								span_hear("You hear welding."))
 			anchored = FALSE
-			to_chat(user, "<span class='notice'>You cut [src] free from the floor.</span>")
+			to_chat(user, span_notice("You cut [src] free from the floor."))
 
 	//Finishing the frame
 	else if(istype(W, /obj/item/stack/material))
@@ -150,14 +150,14 @@
 				new /obj/structure/reflector/single(drop_location())
 				qdel(src)
 			else
-				to_chat(user, "<span class='warning'>You need five sheets of glass to create a reflector!</span>")
+				to_chat(user, span_warning("You need five sheets of glass to create a reflector!"))
 				return
 		if(istype(S, /obj/item/stack/material/glass/reinforced))
 			if(S.use(10))
 				new /obj/structure/reflector/double(drop_location())
 				qdel(src)
 			else
-				to_chat(user, "<span class='warning'>You need ten sheets of reinforced glass to create a double reflector!</span>")
+				to_chat(user, span_warning("You need ten sheets of reinforced glass to create a double reflector!"))
 				return
 		if(istype(S, /obj/item/stack/material/diamond))
 			if(S.use(1))
@@ -168,7 +168,7 @@
 
 /obj/structure/reflector/proc/rotate(mob/user)
 	if (!can_rotate || admin)
-		to_chat(user, "<span class='warning'>The rotation is locked!</span>")
+		to_chat(user, span_warning("The rotation is locked!"))
 		return FALSE
 	var/new_angle = input(user, "Input a new angle for primary reflection face.", "Reflector Angle", rotation_angle) as null|num
 	if(!CanUseTopic(user))

@@ -33,8 +33,8 @@
 	recharging = 1
 	update_icon()
 	playsound(src,'modular_chomp/sound/weapons/clockwork/clockwork_cock.ogg',25,1)
-	user.visible_message("<span class='notice'>[user] pulls the charging handle on \the [src] and it whirrs to life!</span>", \
-						"<span class='notice'>You pull the charging handle on \the [src] and begin the reloading sequence.</span>")
+	user.visible_message(span_notice("[user] pulls the charging handle on \the [src] and it whirrs to life!"), \
+						span_notice("You pull the charging handle on \the [src] and begin the reloading sequence."))
 	playsound(src,'modular_chomp/sound/weapons/clockwork/cwc_rifle_fabricate.ogg',25,5)
 	while(recharging)
 		if(!do_after(user, 50, src))
