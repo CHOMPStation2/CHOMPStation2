@@ -121,31 +121,31 @@
 	if(!proximity)
 		return
 	if(!ready)
-		to_chat(user, "<span class='notice'>The Task Manager is still recharging!</span>")
+		to_chat(user, span_notice("The Task Manager is still recharging!"))
 		return
 	if(mode == 0)
-		to_chat(user, "<span class='notice'>You must choose a department first!</span>")
+		to_chat(user, span_notice("You must choose a department first!"))
 		return
 	if((target.type in scannables) && scancount < scanreq && !(target.type in scanned))
 		scancount = scancount + 1
 		scanned.Add(target.type)
 		var/scansleft = scanreq - scancount
 		playsound(src, 'sound/machines/beep.ogg', 50)
-		to_chat(user, "<span class='notice'>You must scan [scansleft] more department objects!</span>")
+		to_chat(user, span_notice("You must scan [scansleft] more department objects!"))
 		if (scancount == scanreq)
 			formatx1 = rand(1,5)
 			formatx2 = rand(0,80)
 			formatx3 = rand(1,6)
 			format = "Greetings supervisors,<BR> I have detected [formatx1] infractions in this department alone.<BR> Scans indicate that this department is functioning at [formatx2]% capacity.<BR> Additional supplies are requested, priority level [formatx3]<BR> I await your delivery"
-			to_chat(user, "<span class='notice'>Scans complete! [formatx1] infractions detected, department at [formatx2]% capacity, alert level [formatx3]</span>")
-			to_chat(user, "<span class='notice'>Please write down the following form on a paper, and replace all X's with the appopriate number. Do NOT change anything but the X's</span>")
-			to_chat(user, "<span class='notice'>Greetings supervisors,<BR> I have detected X infractions in this department alone.<BR> Scans indicate that this department is functioning at X% capacity.<BR> Additional supplies are requested, priority level X<BR> I await your delivery</span>")
+			to_chat(user, span_notice("Scans complete! [formatx1] infractions detected, department at [formatx2]% capacity, alert level [formatx3]"))
+			to_chat(user, span_notice("Please write down the following form on a paper, and replace all X's with the appopriate number. Do NOT change anything but the X's"))
+			to_chat(user, span_notice("Greetings supervisors,<BR> I have detected X infractions in this department alone.<BR> Scans indicate that this department is functioning at X% capacity.<BR> Additional supplies are requested, priority level X<BR> I await your delivery"))
 		return
 	if(istype(target,/obj/item/paper) && scancount == scanreq)
 		scan_paper(user,target)
 		return
 	else
-		to_chat(user, "<span class='notice'>The Task Manager can't scan this!</span>")
+		to_chat(user, span_notice("The Task Manager can't scan this!"))
 		return
 
 /obj/item/taskmanager/proc/scan_paper(user,paper)
@@ -155,16 +155,16 @@
 		scancount = 0
 		scanned = list()
 		del(P)
-		to_chat(user, "<span class='notice'>Format accepted, printing voucher!</span>")
+		to_chat(user, span_notice("Format accepted, printing voucher!"))
 		ready = 0
 		spawn(300 SECONDS)
 			ready = 1
 		return
 	if(!findtext(P.info,format))
-		to_chat(user, "<span class='notice'>Incorrect format!</span>")
+		to_chat(user, span_notice("Incorrect format!"))
 		return
 	else
-		to_chat(user, "<span class='notice'>If you are reading this, something has gone horribly wrong!</span>")
+		to_chat(user, span_notice("If you are reading this, something has gone horribly wrong!"))
 		return
 
 /obj/item/taskmanager/proc/deploy_voucher(var/turf/T)

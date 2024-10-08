@@ -87,9 +87,9 @@ rborosilicate = 12
 		var/amount_to_use = min(S.amount, maxsheets)
 		S.use(amount_to_use)
 		stored_matter += value*amount_to_use
-		to_chat(user, "<span class='notice'>You insert [amount_to_use] [S.name] sheets into [src]. </span>")
+		to_chat(user, span_notice("You insert [amount_to_use] [S.name] sheets into [src]. "))
 		return 1
-	to_chat(user, "<span class='warning'>You can't insert any more [S.name] sheets into [src]!</span>")
+	to_chat(user, span_warning("You can't insert any more [S.name] sheets into [src]!"))
 	return 0
 
 /obj/item/rcd/attack_self(mob/living/user)
@@ -242,7 +242,7 @@ rborosilicate = 12
 		else
 			return
 	playsound(src, 'sound/effects/pop.ogg', 50, FALSE)
-	to_chat(user, "<span class='notice'>You change RCD's mode to '[choice]'.</span>")
+	to_chat(user, span_notice("You change RCD's mode to '[choice]'."))
 
 /obj/item/rcd/proc/get_airlock_image(airlock_type)
 	var/obj/machinery/door/airlock/proto = airlock_type
@@ -385,17 +385,17 @@ rborosilicate = 12
 	t1 += "<a href='?src=[REF(src)];access=all'>Remove All</a><br>"
 
 	var/accesses = ""
-	accesses += "<div align='center'><b>Access</b></div>"
+	accesses += "<div align='center'>" + span_bold("Access") + "</div>"
 	accesses += "<table style='width:100%'>"
 	accesses += "<tr>"
 	for(var/i = 1; i <= 7; i++)
-		accesses += "<td style='width:14%'><b>[get_region_accesses_name(i)]:</b></td>"
+		accesses += "<td style='width:14%'>" + span_bold("[get_region_accesses_name(i)]:") + "</td>"
 	accesses += "</tr><tr>"
 	for(var/i = 1; i <= 7; i++)
 		accesses += "<td style='width:14%' valign='top'>"
 		for(var/A in get_region_accesses(i))
 			if(A in conf_access)
-				accesses += "<a href='?src=[REF(src)];access=[A]'><font color=\"red\">[replacetext(get_access_desc(A), " ", "&nbsp")]</font></a> "
+				accesses += "<a href='?src=[REF(src)];access=[A]'>" + span_red("[replacetext(get_access_desc(A), " ", "&nbsp")]") + "</a> "
 			else
 				accesses += "<a href='?src=[REF(src)];access=[A]'>[replacetext(get_access_desc(A), " ", "&nbsp")]</a> "
 			accesses += "<br>"

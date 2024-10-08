@@ -8,10 +8,10 @@
 	var/darkness = 1
 	var/turf/T = get_turf(src)
 	if(!T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPAdd - Mapping tools to control phasing
-		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
 
 	if(ability_flags & AB_PHASE_SHIFTING)
@@ -48,23 +48,23 @@
 		log_debug("[src] attempted to shift with [watcher] observers with a  cost of [ability_cost] in a darkness level of [darkness]")
 	//CHOMPEdit start - inform about the observers affecting phasing
 	if(darkness<=0.4 && watcher>=2)
-		to_chat(src, "<span class='warning'>You have a few observers in a well-lit area! This may prevent phasing. (Working cameras count towards observers)</span>")
+		to_chat(src, span_warning("You have a few observers in a well-lit area! This may prevent phasing. (Working cameras count towards observers)"))
 	else if(watcher>=3)
-		to_chat(src, "<span class='warning'>You have a large number of observers! This may prevent phasing. (Working cameras count towards observers)</span>")
+		to_chat(src, span_warning("You have a large number of observers! This may prevent phasing. (Working cameras count towards observers)"))
 	//CHOMPEdit end
 
 
 	var/datum/species/shadekin/SK = species
 	/* CHOMPEdit start - general shadekin ability check
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	//CHOMPEdit Start - Dark Respite
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	*/
 	if(!shadekin_ability_check())
@@ -72,12 +72,12 @@
 		//CHOMPEdit End
 	//CHOMPEdit Start - Prevent bugs when spamming phase button
 	else if(SK.doing_phase)
-		to_chat(src, "<span class='warning'>You are already trying to phase!</span>")
+		to_chat(src, span_warning("You are already trying to phase!"))
 		return FALSE
 	//CHOMPEdit End
 
 	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
 
 	if(!(ability_flags & AB_PHASE_SHIFTED))
@@ -85,7 +85,7 @@
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
 
 	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 
 
@@ -119,7 +119,6 @@
 		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
 		ability_flags |= AB_PHASE_SHIFTING
-		mouse_opacity = 1
 		name = get_visible_name()
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = initial(B.escapable)
@@ -158,12 +157,12 @@
 				var/mob/living/target = pick(potentials)
 				if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
 					target.forceMove(vore_selected)
-					to_chat(target, "<span class='vwarning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
-					to_chat(src, "<span class='vwarning'>You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!</span>")
+					to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
+					to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!"))
 				else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
 					forceMove(target.vore_selected)
-					to_chat(target, "<span class='vwarning'>\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!</span>")
-					to_chat(src, "<span class='vwarning'>You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!</span>")
+					to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!"))
+					to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!"))
 
 		ability_flags &= ~AB_PHASE_SHIFTING
 
@@ -230,7 +229,6 @@
 		// change
 		ability_flags |= AB_PHASE_SHIFTED
 		ability_flags |= AB_PHASE_SHIFTING
-		mouse_opacity = 0
 		custom_emote(1,"phases out!")
 		name = get_visible_name()
 
@@ -301,13 +299,13 @@
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 
 	if(SK.phase_gentle)
-		to_chat(src, "<span class='notice'>Phasing toggled to Normal. You may damage lights.</span>")
+		to_chat(src, span_notice("Phasing toggled to Normal. You may damage lights."))
 		SK.phase_gentle = 0
 	else
-		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
+		to_chat(src, span_notice("Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun."))
 		SK.phase_gentle = 1
 //CHOMPEdit End

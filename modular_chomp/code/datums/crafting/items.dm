@@ -220,7 +220,7 @@
 	var/atom/target_zone = get_edge_target_turf(user,get_dir(user, target))
 	if(!target.anchored)
 		target.throw_at(target_zone, 6, 2, user, FALSE)
-	user.visible_message("<span class='warning'>\The [src] discharges with a thunderous boom!</span>")
+	user.visible_message(span_warning("\The [src] discharges with a thunderous boom!"))
 	playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
 
 //Eel stuff
@@ -247,10 +247,10 @@
 	if(.)
 		return .
 	if(default_parry_check(user, attacker, damage_source) && prob(defend_chance))
-		user.visible_message("<span class='danger'>\The [user] parries [attack_text] with \the [src]!</span>")
+		user.visible_message(span_danger("\The [user] parries [attack_text] with \the [src]!"))
 		return 1
 	if(unique_parry_check(user, attacker, damage_source) && prob(projectile_parry_chance))
-		user.visible_message("<span class='danger'>\The [user] deflects [attack_text] with \the [src]!</span>")
+		user.visible_message(span_danger("\The [user] deflects [attack_text] with \the [src]!"))
 		return 1
 
 	return 0
@@ -271,7 +271,7 @@
 	if(H && H.gloves == src)
 		wearer = H
 		if(wearer.can_feel_pain())
-			to_chat(H, "<span class='danger'>You feel a stabbing sensation in your hands as you slide \the [src] on!</span>")
+			to_chat(H, span_danger("You feel a stabbing sensation in your hands as you slide \the [src] on!"))
 			wearer.custom_pain("You feel a sharp pain in your hands!",1)
 	..()
 
@@ -279,7 +279,7 @@
 	..()
 	if(wearer)
 		if(wearer.can_feel_pain())
-			to_chat(wearer, "<span class='danger'>You feel the hypodermic needles as you slide \the [src] off!</span>")
+			to_chat(wearer, span_danger("You feel the hypodermic needles as you slide \the [src] off!"))
 			wearer.custom_pain("Your hands hurt like hell!",1)
 		wearer = null
 

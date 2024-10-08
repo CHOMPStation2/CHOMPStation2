@@ -36,7 +36,7 @@
 				O = new /obj/effect/alien/weeds/node(targetLoc)
 
 		if(O)
-			visible_message("<span class='warning'><B>[src] vomits up a thick purple substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
+			visible_message(span_boldwarning("[src] vomits up a thick purple substance and begins to shape it!"), span_alium("You shape a [choice]."))
 			O.color = "#321D37"
 			playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 

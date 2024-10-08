@@ -22,11 +22,11 @@
 	var/turf/T = get_turf(target)
 	var/obj/structure/holosign/H = locate(holosign_type) in T
 	if(H)
-		to_chat(user, "<span class='notice'>You use [src] to deactivate [H].</span>")
+		to_chat(user, span_notice("You use [src] to deactivate [H]."))
 		qdel(H)
 	else
 		if(holocreator_busy)
-			to_chat(user, "<span class='notice'>[src] is busy creating a hologram.</span>")
+			to_chat(user, span_notice("[src] is busy creating a hologram."))
 			return
 		if(signs.len < max_signs)
 			playsound(src.loc, 'sound/machines/click.ogg', 20, 1)
@@ -41,9 +41,9 @@
 				if(is_blocked_turf(T, TRUE)) //don't try to sneak dense stuff on our tile during the wait.
 					return
 			H = new holosign_type(get_turf(target), src)
-			to_chat(user, "<span class='notice'>You create \a [H] with [src].</span>")
+			to_chat(user, span_notice("You create \a [H] with [src]."))
 		else
-			to_chat(user, "<span class='notice'>[src] is projecting at max capacity!</span>")
+			to_chat(user, span_notice("[src] is projecting at max capacity!"))
 
 /obj/item/holosign_creator/attack_self(mob/user)
 	. = ..()
@@ -52,7 +52,7 @@
 	if(signs.len)
 		for(var/H in signs)
 			qdel(H)
-		to_chat(user, "<span class='notice'>You clear all active holograms.</span>")
+		to_chat(user, span_notice("You clear all active holograms."))
 
 /obj/item/holosign_creator/combifan
 	name = "ATMOS holo-combifan projector"

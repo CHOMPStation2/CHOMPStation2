@@ -571,8 +571,8 @@
 /datum/modifier/bossbuff
 	name = "boss_buff"
 
-	on_created_text = "<span class='critical'>You feel an intense and overwhelming rage overtake you as you go berserk!</span>"
-	on_expired_text = "<span class='notice'>The blaze of rage inside you has ran out.</span>"
+	on_created_text = span_critical("You feel an intense and overwhelming rage overtake you as you go berserk!")
+	on_expired_text = span_notice("The blaze of rage inside you has ran out.")
 	stacks = MODIFIER_STACK_EXTEND
 
 	disable_duration_percent = 0
@@ -587,8 +587,8 @@
 
 	aura_max_distance = 28
 
-	on_created_text = "<span class='critical'>You feel like you're falling into ruin!</span>"
-	on_expired_text = "<span class='notice'>The ruin feeling is gone.</span>"
+	on_created_text = span_critical("You feel like you're falling into ruin!")
+	on_expired_text = span_notice("The ruin feeling is gone.")
 	stacks = MODIFIER_STACK_EXTEND
 
 /datum/modifier/aura/despair/tick()

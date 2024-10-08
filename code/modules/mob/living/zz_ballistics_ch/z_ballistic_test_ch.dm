@@ -145,7 +145,7 @@
 
 		var/absorber = ballistic_armor ? "armor" : "body"	//There is a super tiny chance that small rounds can get deflected without armor, so this is just incase.
 
-		to_chat(src,"<span class='warning'>You feel the energy of the bullet painfully transfered [pain_hit] as your [absorber] deflects it!</span>")
+		to_chat(src,span_warning("You feel the energy of the bullet painfully transfered [pain_hit] as your [absorber] deflects it!"))
 		apply_damage(hurt_value_pain,HALLOSS,def_zone)
 		if(hurt_value_bruise)
 			apply_damage(hurt_value_bruise,BRUTE,def_zone)

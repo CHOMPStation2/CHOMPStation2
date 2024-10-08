@@ -9,4 +9,4 @@
 	name = "target notice"
 
 /obj/item/paper/target/New()
-	info = {"Your target is <b>[random_name(pick(MALE,FEMALE))]</b>. Make sure they don't get out of there alive."}
+	info = "Your target is " + span_bold("[random_name(pick(MALE,FEMALE))]") + ". Make sure they don't get out of there alive."

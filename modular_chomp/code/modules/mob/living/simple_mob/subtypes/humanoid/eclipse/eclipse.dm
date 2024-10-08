@@ -113,7 +113,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
-		visible_message(span_orange("<B>[P] seems ineffective!.</B>"))
+		visible_message(span_boldwarning(span_orange("[P] seems ineffective!.")))
 		..()
 	else
 		..()
@@ -231,7 +231,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
+	visible_message(span_danger(span_bold("\The [src]") + " fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
@@ -284,7 +284,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/bullet))
-		visible_message(span_orange("<B>[P] seems ineffective!.</B>"))
+		visible_message(span_boldwarning(span_orange("[P] seems ineffective!.")))
 		..()
 	else
 		..()
@@ -333,7 +333,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
+	visible_message(span_danger(span_bold("\The [src]") + " fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
@@ -646,7 +646,7 @@
 			try_reload()
 			return FALSE
 
-	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
+	visible_message(span_danger(span_bold("\The [src]") + " fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)

@@ -18,7 +18,7 @@
 		mimic_active = FALSE
 		if(prob(mimic_chance))
 			var/mob/living/simple_mob/vore/aggressive/mimic/airlock/new_mimic = new(loc, src)
-			visible_message(span_red("<b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b>")) //Controls the vars of the mimic that spawns
+			visible_message(span_bolddanger("The [new_mimic] suddenly growls as it turns out to be a mimic!")) //Controls the vars of the mimic that spawns
 			forceMove(new_mimic)
 			new_mimic.real_crate = src
 			new_mimic.name = name
@@ -41,7 +41,7 @@
 
 /obj/structure/closet/crate/mimic/airlock/damage(var/damage)
 	if(contents.len)
-		visible_message(span_red("<b>The [src] let's out an enraged screach!</b>"))
+		visible_message(span_bolddanger("The [src] let's out an enraged screach!"))
 		for(var/obj/O in src.contents)
 			qdel(O)
 	..()
@@ -115,7 +115,7 @@
 		mimic_active = FALSE
 		if(prob(mimic_chance))
 			var/mob/living/simple_mob/vore/aggressive/mimic/closet/new_mimic = new(loc, src)
-			visible_message(span_red("<b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b>")) //Controls the mimic that spawns
+			visible_message(span_bolddanger("The [new_mimic] suddenly growls as it turns out to be a mimic!")) //Controls the mimic that spawns
 			forceMove(new_mimic)
 			new_mimic.real_crate = src
 			new_mimic.name = name
@@ -135,7 +135,7 @@
 
 /obj/structure/closet/crate/mimic/closet/damage(var/damage)
 	if(contents.len)
-		visible_message(span_red("<b>The [src] makes out a crunchy noise as its contents are destroyed!</b>"))
+		visible_message(span_bolddanger("The [src] makes out a crunchy noise as its contents are destroyed!"))
 		for(var/obj/O in src.contents)
 			qdel(O)
 	..()
@@ -224,7 +224,7 @@
 		qdel(src)
 		return
 	var/mob/living/simple_mob/vore/aggressive/mimic/floor/new_mimic = new mimic_type(drop_location())
-	visible_message("<span class='boldwarning'>The [new_mimic] suddenly growls beneath you as it turns out to be a mimic!</span>")
+	visible_message(span_boldwarning("The [new_mimic] suddenly growls beneath you as it turns out to be a mimic!"))
 	qdel(src)
 
 /obj/effect/floormimic/attackby(obj/item/I, mob/living/L)

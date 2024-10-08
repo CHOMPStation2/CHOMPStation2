@@ -11,7 +11,7 @@
 	set category = "IC.Settings"
 
 	if(stat)
-		to_chat(src, "<span class='warning'>You must be awake and standing to perform this action!</span>")
+		to_chat(src, span_warning("You must be awake and standing to perform this action!"))
 		return
 
 	speech_sound_enabled = !speech_sound_enabled

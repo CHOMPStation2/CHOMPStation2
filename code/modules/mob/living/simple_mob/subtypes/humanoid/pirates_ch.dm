@@ -143,20 +143,20 @@
 /mob/living/simple_mob/humanoid/pirate/shield/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(O.force)
 		if(prob(15))
-			visible_message("<span class='danger'>\The [src] blocks \the [O] with its shield!</span>")
+			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
 			if(user)
 				ai_holder.react_to_attack(user)
 			return
 		else
 			..()
 	else
-		to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
-		visible_message("<span class='warning'>\The [user] gently taps [src] with \the [O].</span>")
+		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
+		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
 
 /mob/living/simple_mob/humanoid/merc/melee/sword/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)	return
 	if(prob(25))
-		visible_message(span_red("<B>[src] blocks [Proj] with its shield!</B>"))
+		visible_message(span_bolddanger("[src] blocks [Proj] with its shield!"))
 		if(Proj.firer)
 			ai_holder.react_to_attack(Proj.firer)
 		return

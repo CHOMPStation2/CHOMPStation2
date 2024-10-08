@@ -117,3 +117,9 @@
       Beta stage
   TheCaramelion:
   - qol: Heads of staff now use time instead of whitelists
+2024-10-08:
+  FluffMedic:
+  - bugfix: fixes a tyr softlock, and planetary turf things
+  Kashargul:
+  - code_imp: converts our spans
+  - qol: phased kin can now be clicked

@@ -111,7 +111,7 @@
 	sleep(1 * world.tick_lag)
 	if(istype(M, /mob/living))
 		if(M.stunned == 0)
-			to_chat(M, "<span class='warning'>You slide across the ice!</span>")
+			to_chat(M, span_warning("You slide across the ice!"))
 		M.SetStunned(1)
 		step(M,M.dir)
 

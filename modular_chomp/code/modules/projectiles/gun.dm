@@ -4,12 +4,12 @@
 	var/mob/living/L = user
 	if(istype(L))
 		if(L.has_modifier_of_type(/datum/modifier/underwater_stealth))
-			to_chat(user,"<span class='warning'>You cannot use guns whilst hiding underwater!</span>")
+			to_chat(user,span_warning("You cannot use guns whilst hiding underwater!"))
 			return 0
 		else if(L.has_modifier_of_type(/datum/modifier/rednet))
-			to_chat(user,"<span class='warning'>Your gun refuses to fire!</span>")
+			to_chat(user,span_warning("Your gun refuses to fire!"))
 			return 0
 		else if(L.has_modifier_of_type(/datum/modifier/trait/thickdigits))
-			to_chat(user,"<span class='warning'>Your hands can't pull the trigger!!</span>")
+			to_chat(user,span_warning("Your hands can't pull the trigger!!"))
 			return 0
 	return ..()

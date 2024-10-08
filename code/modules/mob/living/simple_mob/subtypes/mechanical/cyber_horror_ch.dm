@@ -103,7 +103,7 @@
  // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel nanites digging into your skin!</span>")
+		to_chat(L, span_warning("You feel nanites digging into your skin!"))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 
@@ -388,7 +388,7 @@
  // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel an uncomfortable prick!</span>")
+		to_chat(L, span_warning("You feel an uncomfortable prick!"))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 //These are the projectiles mobs use

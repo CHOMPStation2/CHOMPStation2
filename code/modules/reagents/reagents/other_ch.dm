@@ -35,7 +35,7 @@
 			var/spiderling = new spider_type(M.loc, M)
 			if(O)
 				O.implants += spiderling
-        
+
 /datum/reagent/nutriment/pitcher_nectar //Pitcher plant reagent, doubles plant growth speed.
 	name = "Pitcher Nectar"
 	id = "pitcher_nectar"
@@ -44,14 +44,14 @@
 	reagent_state = LIQUID
 	nutriment_factor = 60
 	color = "#a839a2"
-  
-//New reagent definitions/overrides. If some of these get added upstream and cause a conflict later they might need deleting. 
+
+//New reagent definitions/overrides. If some of these get added upstream and cause a conflict later they might need deleting.
 /datum/reagent/toxin/plantbgone/touch_mob(var/mob/living/L, amount) //Plantbgone override to damage plant mobs. Part of pitcher plants, touch_mob doesn't exist for plantbgone at the time of writing.
 	if(istype(L) && L.faction)
 		if(L.faction == "plants") //This would be better with a variable but I'm not adding that because upstream conflicts. If you send this upstream please do this.
 			L.adjustToxLoss(15 * amount)
-			L.visible_message("<span class='warning'>[L] withers rapidly!</span>", "<span class='danger'>The chemical burns you!</span>")
-			
+			L.visible_message(span_warning("[L] withers rapidly!"), span_danger("The chemical burns you!"))
+
 //////SAP IN UNREFINED FORM////
 
 /datum/reagent/toxin/bluesap //This is the first sap. Blue one.
@@ -77,7 +77,7 @@
 	description = "Orange liquid. It wobbles around a bit like jelly."
 	color = "#e0962f"
 	taste_description = "Ammonia"
-      
+
 //YW stuff
 
 /datum/reagent/benzilate
@@ -101,11 +101,11 @@
 		switch(data["count"])
 			if(1 to 30)
 				if(prob(9)) M.visible_emote("blushes")
-				if(prob(9)) to_chat(M, "<span class='warning'>You feel so needy..</span>")
+				if(prob(9)) to_chat(M, span_warning("You feel so needy.."))
 			if (30 to INFINITY)
 				if(prob(3)) M.visible_emote("blushes")
 				if(prob(5)) M.audible_emote("moans out lewdly!")
-				if(prob(9)) to_chat(M, "<span class='warning'>You can't help but want to touch yourself then and now!</span>")
+				if(prob(9)) to_chat(M, span_warning("You can't help but want to touch yourself then and now!"))
 		data["count"]++
 	holder.remove_reagent(src.id, 0.2)
 	//..()
