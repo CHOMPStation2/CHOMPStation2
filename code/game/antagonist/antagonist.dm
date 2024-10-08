@@ -72,7 +72,7 @@
 
 	// ID card stuff.
 	var/default_access = list()
-	var/id_type = /obj/item/weapon/card/id
+	var/id_type = /obj/item/card/id
 
 	var/antag_text = "You are an antagonist! Within the rules, \
 		try to act as an opposing force to the crew. Further RP and try to make sure \
@@ -145,7 +145,7 @@
 	if(!istype(player))
 		message_admins("[uppertext(ticker.mode.name)]: Failed to find a candidate for [role_text].")
 		return 0
-	to_chat(player.current, "<span class='danger'><i>You have been selected this round as an antagonist!</i></span>")
+	to_chat(player.current, span_danger("<i>You have been selected this round as an antagonist!</i>"))
 	message_admins("[uppertext(ticker.mode.name)]: Selected [player] as a [role_text].")
 	if(istype(player.current, /mob/observer/dead))
 		create_default(player.current)

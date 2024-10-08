@@ -40,7 +40,7 @@
 	cold_damage_per_tick = 3
 
 	meat_amount = 2
-	holder_type = /obj/item/weapon/holder/armadillo
+	holder_type = /obj/item/holder/armadillo
 	ai_holder_type = /datum/ai_holder/simple_mob/armadillo
 
 	speak_emote = list("rumbles", "chirr?", "churr")
@@ -82,26 +82,26 @@
 // Hat simulator
 /mob/living/simple_mob/animal/passive/armadillo/proc/give_hat(var/obj/item/clothing/head/new_hat, var/mob/living/user)
 	if(!istype(new_hat))
-		to_chat(user, span("warning", "\The [new_hat] isn't a hat."))
+		to_chat(user, span_warning("\The [new_hat] isn't a hat."))
 		return
 	if(hat)
-		to_chat(user, span("warning", "\The [src] is already wearing \a [hat]."))
+		to_chat(user, span_warning("\The [src] is already wearing \a [hat]."))
 		return
 	else
 		user.drop_item(new_hat)
 		hat = new_hat
 		new_hat.forceMove(src)
-		to_chat(user, span("notice", "You place \a [new_hat] on \the [src].  How adorable!"))
+		to_chat(user, span_notice("You place \a [new_hat] on \the [src].  How adorable!"))
 		update_icon()
 		return
 
 /mob/living/simple_mob/animal/passive/armadillo/proc/remove_hat(var/mob/living/user)
 	if(!hat)
-		to_chat(user, "<span class='warning'>\The [src] doesn't have a hat to remove.</span>")
+		to_chat(user, span_warning("\The [src] doesn't have a hat to remove."))
 	else
 		hat.forceMove(get_turf(src))
 		user.put_in_hands(hat)
-		to_chat(user, "<span class='warning'>You take away \the [src]'s [hat.name].  How mean.</span>")
+		to_chat(user, span_warning("You take away \the [src]'s [hat.name].  How mean."))
 		hat = null
 		update_icon()
 
@@ -112,7 +112,7 @@
 	hat = null
 	update_icon()
 
-/obj/item/weapon/holder/armadillo
+/obj/item/holder/armadillo
 	origin_tech = list(TECH_BIO = 1)
 	default_worn_icon = 'modular_chomp/icons/mob/head_ch.dmi'
 	//item_state = "armadillo_rest" //Commented here as a reminder that holders will always set the item_state to icon_rest. You cannot override it like this.

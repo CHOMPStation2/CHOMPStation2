@@ -13,7 +13,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "aV" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -25,14 +25,14 @@
 /area/submap/eclipseaqua)
 "ca" = (
 /obj/structure/table/rack,
-/obj/item/weapon/rig/combat/equipped,
+/obj/item/rig/combat/equipped,
 /obj/item/rig_module/vision/nvg,
 /obj/random/energy/highend,
 /obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "cC" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
@@ -71,7 +71,7 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Secured the old fortress. Attempts to set up mass stimm farms have been unfruitful. Supply drops continue to get intercepted by cultists, pirates or the various mercenary groups.  Lake reads to be much deeper then it appears to be. Please forward a suggestion to the Precursor Initiative to send a task force to investigate. For the possibility of precursor ruins or sunken technology.";
 	name = "Status Report"
 	},
@@ -132,7 +132,7 @@
 "jR" = (
 /obj/machinery/light,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -150,7 +150,7 @@
 /area/submap/eclipseaqua)
 "lS" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/ambrosiadeus,
+/obj/item/storage/box/ambrosiadeus,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -468,7 +468,7 @@
 /area/submap/eclipseaqua)
 "IY" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/glass/bottle/left4zed,
+/obj/item/reagent_containers/glass/bottle/left4zed,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -480,7 +480,7 @@
 /area/submap/eclipseaqua)
 "JQ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -660,7 +660,7 @@
 /area/submap/eclipseaqua)
 "TA" = (
 /obj/structure/table/rack,
-/obj/item/weapon/rig/breacher,
+/obj/item/rig/breacher,
 /obj/item/rig_module/pat_module,
 /obj/random/energy/highend,
 /obj/effect/floor_decal/corner/blue/diagonal,
@@ -733,7 +733,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Vg" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -760,7 +760,7 @@
 /area/submap/eclipseaqua)
 "WG" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/iandouble,
+/obj/item/bedsheet/iandouble,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1

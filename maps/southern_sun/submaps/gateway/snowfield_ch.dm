@@ -440,7 +440,7 @@
 
 //Gateway mission exclusive special loot
 
-/obj/item/weapon/gun/projectile/automatic/serdy/sr25c
+/obj/item/gun/projectile/automatic/serdy/sr25c
 	name = "SR-25 Carbine"
 	icon_state="m4"
 	desc = "Heavily modified, this gun uses 7.62mm rather than 5.54mm and still has its automated fire mode. Equipped with suppressor, telescopic sight and the red dot sight on its side, it has a capability of handling the CQC and both in long range combat, without making much noises. Multi-dozens of accessories provides the improvement on the recoil, too. An old terran flag stamp and a spec-ops mark on the receiver approves its authentic state. Unmodified, cheep slack-off can be found just about everywhere, but this versions are very hard to come by. Chambered in 7.62x51mm."
@@ -464,17 +464,17 @@
 	silenced = 1
 	recoil = 0.5
 
-/obj/item/weapon/gun/projectile/automatic/serdy/sr25c/ui_action_click()
+/obj/item/gun/projectile/automatic/serdy/sr25c/ui_action_click()
 	scope()
 
-/obj/item/weapon/gun/projectile/automatic/serdy/sr25c/verb/scope()
+/obj/item/gun/projectile/automatic/serdy/sr25c/verb/scope()
 	set category = "Object"
 	set name = "Use Scope"
 	set popup_menu = 1
 
 	toggle_scope(2.0)
 
-/obj/item/weapon/gun/launcher/scopedrocket
+/obj/item/gun/launcher/scopedrocket
 	name = "scoped rocket launcher"
 	desc = "Upon looking into the scope, you see the word on its center: MAGGOT."
 	icon_state = "rocket"
@@ -495,12 +495,12 @@
 	var/max_rockets = 1
 	var/list/rockets = new/list()
 
-/obj/item/weapon/gun/launcher/scopedrocket/examine(mob/user)
+/obj/item/gun/launcher/scopedrocket/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
-		. += "<font color='blue'>[rockets.len] / [max_rockets] rockets.</font>"
+		. += span_blue("[rockets.len] / [max_rockets] rockets.")
 
-/obj/item/weapon/gun/launcher/scopedrocket/attackby(obj/item/I as obj, mob/user as mob)
+/obj/item/gun/launcher/scopedrocket/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/ammo_casing/rocket))
 		if(rockets.len < max_rockets)
 			user.drop_item()
@@ -511,22 +511,22 @@
 		else
 			to_chat(usr, span_red("[src] cannot hold more rockets."))
 
-/obj/item/weapon/gun/launcher/scopedrocket/consume_next_projectile()
+/obj/item/gun/launcher/scopedrocket/consume_next_projectile()
 	if(rockets.len)
 		var/obj/item/ammo_casing/rocket/I = rockets[1]
 		rockets -= I
 		return new I.projectile_type(src)
 	return null
 
-/obj/item/weapon/gun/launcher/scopedrocket/handle_post_fire(mob/user, atom/target)
+/obj/item/gun/launcher/scopedrocket/handle_post_fire(mob/user, atom/target)
 	message_admins("[key_name_admin(user)] fired a rocket from a rocket launcher ([src.name]) at [target].")
 	log_game("[key_name_admin(user)] used a rocket launcher ([src.name]) at [target].")
 	..()
 
-/obj/item/weapon/gun/launcher/scopedrocket/ui_action_click()
+/obj/item/gun/launcher/scopedrocket/ui_action_click()
 	scope()
 
-/obj/item/weapon/gun/launcher/scopedrocket/verb/scope()
+/obj/item/gun/launcher/scopedrocket/verb/scope()
 	set category = "Object"
 	set name = "Use Scope"
 	set popup_menu = 1
@@ -535,42 +535,42 @@
 
 //Lore Notes
 
-/obj/item/weapon/paper/awaygate/snowfield/evacuation_order
+/obj/item/paper/awaygate/snowfield/evacuation_order
 	name = "Order Directives"
-	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
-	TO <B>ALL CLASS 1, 2, 3 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
-	Directives : <B>Evacuation preparation from Facility. <BR>All related personnel, EXCLUDING 3M personnel \
+	info = "<center>" + span_bold(span_giganteus("HIGH PRIORITY ORDERS")) + "<BR><BR><BR>ORDERS \
+	TO " + span_bold("ALL CLASS 1, 2, 3 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 10, 1979") + ".</center> <BR><BR><BR>\
+	Directives : " + span_bold("Evacuation preparation from Facility. <BR>All related personnel, EXCLUDING 3M personnel \
 	must head to Chelyabinsk until 2100, April 10 and await for further directives.<BR>Base MUST \
-	maintain necessary items only. </B><BR><BR>Further directives and details shall be guided by <B>Class 4 \
-	or above personnel.</B>"
+	maintain necessary items only.") + "<BR><BR>Further directives and details shall be guided by " span_boild("Class 4 \
+	or above personnel.")
 
-/obj/item/weapon/paper/awaygate/snowfield/evacuation_order2
+/obj/item/paper/awaygate/snowfield/evacuation_order2
 	name = "Mid Command Order Directives"
-	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
-	TO <B>ALL CLASS 4 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
-	Directives : <B>Evacuation preparation from Facility. <BR>All class 1,2,3 personnel must head to \
+	info = "<center>" + span_bold(span_giganteus("HIGH PRIORITY ORDERS")) + "<BR><BR><BR>ORDERS \
+	TO " + span_bold("ALL CLASS 4 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 10, 1979") + ".</center> <BR><BR><BR>\
+	Directives : " + span_bold("Evacuation preparation from Facility. <BR>All class 1,2,3 personnel must head to \
 	Chelyabinsk and empty the facility, EXCLUDING Medical team. (3M)<BR>Base MUST maintain necessary items only \
 	to operate 'Tunguska' and supplies for the crews who remains. 'Tunguska' Activation time at 0300, April 11, \
-	1979.</B><BR><BR>Further directives and details shall be guided by <B>Class 6 or above personnel.</B>"
+	1979.") + "<BR><BR>Further directives and details shall be guided by " + span_bold("Class 6 or above personnel.") + ""
 
-/obj/item/weapon/paper/awaygate/snowfield/evacuation_order3
+/obj/item/paper/awaygate/snowfield/evacuation_order3
 	name = "High Command Order Directives"
-	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
-	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 10, 1979</B>.</center> <BR><BR><BR>\
-	Directives : <B>Evacuation preparation from Facility. <BR>All Class 1, 2, 3 personnel must head to \
+	info = "<center>" + span_bold(span_giganteus("HIGH PRIORITY ORDERS")) + "<BR><BR><BR>ORDERS \
+	TO " + span_bold("ALL CLASS 5, 6 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 10, 1979") + ".</center> <BR><BR><BR>\
+	Directives : " + span_bold("Evacuation preparation from Facility. <BR>All Class 1, 2, 3 personnel must head to \
 	Chelyabinsk and empty the facility, excluding Class 3M, guided by Class 4 personnel. <BR>All Class 5, 6 must \
-	check the stability of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979.</B>"
+	check the stability of 'Tunguska' before the operation. Activation time at 0300, April 11, 1979.")
 
-/obj/item/weapon/paper/awaygate/snowfield/activation_order
+/obj/item/paper/awaygate/snowfield/activation_order
 	name = "High Command Order Directives"
-	info = "<center><B><font size=\"6\">HIGH PRIORITY ORDERS</font></B><BR><BR><BR>ORDERS \
-	TO <B>ALL CLASS 5, 6 PERSONNEL</B><BR>Date of Order : <B>April 11, 1979</B>.</center> <BR><BR><BR>\
-	Directives : <B>Activation of 'Tunguska.' <BR>All class 5, 6 personnel must have a full search by \
+	info = "<center>" + span_bold(span_giganteus("HIGH PRIORITY ORDERS")) + "<BR><BR><BR>ORDERS \
+	TO " + span_bold("ALL CLASS 5, 6 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 11, 1979") + ".</center> <BR><BR><BR>\
+	Directives : " + span_bold("Activation of 'Tunguska.' <BR>All class 5, 6 personnel must have a full search by \
 	Class 4 before entering the operation room. <BR>Any personnel who is not on the operations area shall \
-	be terminated on the spot. Notify to nearest Class 4 and 6 personnel if necessary.</B><BR><BR>Further directives \
-	and details shall be guided by <B>Class 6 Personnel.</B>"
+	be terminated on the spot. Notify to nearest Class 4 and 6 personnel if necessary.") + "<BR><BR>Further directives \
+	and details shall be guided by " + span_bold("Class 6 Personnel.") + ""
 
-/obj/item/weapon/paper/awaygate/snowfield/interrogation
+/obj/item/paper/awaygate/snowfield/interrogation
 	name = "Interrogation note"
 	info = "(Recording Start)<BR>(00:00) This is Yemelyan Fedoro, the Warden of Sector 108.<BR>(00:09) Time of the \
 	record... <BR>(00:14) Twenty one-Fourty.<BR>(00:17) Three months of interrogation is finally coming up with \
@@ -581,31 +581,31 @@
 	Punching bag, now. <BR>(00:59) Gosh, their screams are worser than my grandma. Who would know an overgrown lizard \
 	would sound like that..<BR>(01:07) Best to finish up, now. We can get more informations from'em. Yemelyan Fedoro, out."
 
-/obj/item/weapon/paper/awaygate/snowfield/final_note
+/obj/item/paper/awaygate/snowfield/final_note
 	name = "Final note"
 	info = "Gosh. We have opened up the hell's gate...<BR>Everyone is screaming and yelling into mid-air like a mania, \
-	and this... Whispering voice!<BR><B>It's in my head!</B><BR><BR>Peoples who managed to escape after the initial lockdown \
+	and this... Whispering voice!<BR>" + span_bold("It's in my head!") + "<BR><BR>Peoples who managed to escape after the initial lockdown \
 	are now trying their damnnest to break back INSIDE the base!<BR><BR>I tried my best to ignore the voice and cornered \
 	in this security outpost, but I'm not sure how long I will maintain sane, unlike those peoples out there...\
-	The voice is now <B>yelling, SCREAMING</B> at me as the time passes by! <BR><BR> I can't take this anymore longer, \
+	The voice is now " + span_bold("yelling, SCREAMING") + " at me as the time passes by! <BR><BR> I can't take this anymore longer, \
 	it is madness... Pure madness... <BR>I blew up the fastest way to the command center, so these maniacs won't be able to \
 	get to the command center, where the voice is echoing... But they have guns now... <BR> I'm not sure how long the blockade \
 	will last with that much firepower and manpower... And their pure will of madness... <BR><BR> I don't want to be one of them..."
 
-/obj/item/weapon/paper/awaygate/snowfield/note // Little easter egg for appreciation.
+/obj/item/paper/awaygate/snowfield/note // Little easter egg for appreciation.
 	desc = "A gift card with a heart on the cover. Hey, there's a scribble on its back..."
 	name = "letter"
 	icon_state = "greetingcard_heart"
-	info = "<center><B><font size=\"6\">Congradulations!</font></B></center><BR><BR>You have just found a paper that \
+	info = "<center>" + span_bold(span_giganteus("Congradulations!")) + "</center><BR><BR>You have just found a paper that \
 	was sitting at out of nowhere.<BR>Let there be a celebration to you, finding this tiny paper. But leaving this empty \
-	will be awkward, so, some few honorable mentions shall be here.<BR><BR><B>Maker of the Map:</B> H.K <BR><BR><B>Huge \
-	Emotional Support (And my life changer):</B> BlackMajor, Salty S<BR><BR><B>Supporters in the most troubled times</B>: \
-	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR><B>Helpers on the map work:</B> \
+	will be awkward, so, some few honorable mentions shall be here.<BR><BR>" + span_bold("Maker of the Map:") + " H.K <BR><BR>" + span_bold("Huge \
+	Emotional Support (And my life changer):") + " BlackMajor, Salty S<BR><BR>" + span_bold("Supporters in the most troubled times") + ": \
+	BlackMajor, Ender, Jack, Lone/Einarr, Mango, Nickner, Salty S, Serdy, Skitz, Verkister<BR><BR>" + span_bold("Helpers on the map work:") + " \
 	BlackMajor, Blitzkrieg, Dan 'Clanker' Neposh, Kassc, Mango, Rykka Stormheart, Salty S, Serdy, Verkister<BR><BR>\
-	<B>Map recovery helper (Curse you github, almost deleting the project):</B> BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
-	<B>Also, not to forget - Huge thank you to</B>:You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
+	" + span_bold("Map recovery helper (Curse you github, almost deleting the project):") + " BlackMajor, Helmian, Jennard.L, Kashtan <BR>\
+	" + span_bold("Also, not to forget - Huge thank you to") + ":You, who is reading this note. <BR><BR><BR>Let this be my 25c to remember."
 
-/obj/item/weapon/paper/awaygate/snowfield/diary
+/obj/item/paper/awaygate/snowfield/diary
 	desc = "A part of a ripped paper, likely from the book."
 	name = "diary, 18 of January, 1971"
 	info = "Dear diary.<BR><BR> This will be the last diary I write in this little outpost.<BR><BR> Militsiya \
@@ -614,79 +614,79 @@
 	Thank goodness. <BR> What the militsiya says it is from the government's orders. We had to leave \
 	sometime soon and find another coal vein, anyways. <BR><BR> Anatoly, two days ago, said he saw the army \
 	truck passing by few times around the mountains, so I think this is one of it. <BR><BR> Best to \
-	take our stuffs tomorrow. And some vodka bottles I have hidden.<BR><BR><BR><BR><B>BLAST, \
-	IT'S EMPTY! DIMITRY, THAT SCUMBAG - HOW DID HE EVEN KNEW THE BOTTLE'S THERE?!</B>"
+	take our stuffs tomorrow. And some vodka bottles I have hidden.<BR><BR><BR><BR>" + span_vold("BLAST, \
+	IT'S EMPTY! DIMITRY, THAT SCUMBAG - HOW DID HE EVEN KNEW THE BOTTLE'S THERE?!")
 
-/obj/item/weapon/card/id/gateway/snowfield // Basic access
+/obj/item/card/id/gateway/snowfield // Basic access
 	name = "Class 1 ID"
 	desc = "An ID card with a basic access for the base. There's a mark of a \
 	red star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp", "top-generic", "stamp-s", "clip")
 
-/obj/item/weapon/card/id/gateway/snowfield/class2 // Service
+/obj/item/card/id/gateway/snowfield/class2 // Service
 	name = "Class 2 ID"
 	desc = "An ID card with a service work access for the base.There's a mark of \
 	a red star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp","top-green", "stamp-s", "clip")
 	access = list(26, 28)
 
-/obj/item/weapon/card/id/gateway/snowfield/class3M // Medical
+/obj/item/card/id/gateway/snowfield/class3M // Medical
 	name = "Class 3M ID"
 	desc = "An ID card with an advanced medical support access for the base. \
 	There's a mark of a red star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp","top-medblu", "stamp-s", "pips-medblu", "clip")
 	access = list(5, 33, 45)
 
-/obj/item/weapon/card/id/gateway/snowfield/class3E // Engineering Part time worker
+/obj/item/card/id/gateway/snowfield/class3E // Engineering Part time worker
 	name = "Class 3E ID"
 	desc = "An ID card with a basic engineering support access for the base. \
 	There's a mark of a red star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-s", "clip")
 	access = list (10)
 
-/obj/item/weapon/card/id/gateway/snowfield/class4 // Security
+/obj/item/card/id/gateway/snowfield/class4 // Security
 	name = "Class 4 ID"
 	desc = "An ID card with a security access for the base. There's a mark of a \
 	red star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp", "top-red", "stamp-s", "clip")
 	access = list (1, 2)
 
-/obj/item/weapon/card/id/gateway/snowfield/class4D // Detective
+/obj/item/card/id/gateway/snowfield/class4D // Detective
 	name = "Class 4D ID"
 	desc = "An ID card with a forensic security access for the base. There's a mark \
 	of a red star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp", "top-red", "pips-brown", "stamp-s", "clip")
 	access = list (1, 2, 4)
 
-/obj/item/weapon/card/id/gateway/snowfield/class5R // Researcher
+/obj/item/card/id/gateway/snowfield/class5R // Researcher
 	name = "Class 5R ID"
 	desc = "An ID card with a research access for the base. There's a mark of a red \
 	star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp", "top-purple", "stamp-s", "clip")
 	access = list (47, 61)
 
-/obj/item/weapon/card/id/gateway/snowfield/class5E // Engineering
+/obj/item/card/id/gateway/snowfield/class5E // Engineering
 	name = "Class 5E ID"
 	desc = "An ID card with an advanced engineering access for the base. There's a mark \
 	of a red star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp-dark", "top-orange", "stripe-white", "stamp-s", "clip")
 	access = list (10, 11)
 
-/obj/item/weapon/card/id/gateway/snowfield/class6S // Head of Security-Warden
+/obj/item/card/id/gateway/snowfield/class6S // Head of Security-Warden
 	name = "Class 6S ID"
 	desc = "An ID card with a full access towards the security of the base. There's a \
 	mark of a red star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp-dark", "top-red", "stripe-gold", "stamp-s", "clip")
 	access = list (1, 2, 3, 4)
 
-/obj/item/weapon/card/id/gateway/snowfield/class6R // Research Director
+/obj/item/card/id/gateway/snowfield/class6R // Research Director
 	name = "Class 6R ID"
 	desc = "An ID card with a full access towards the secrets of the base. There's a mark of a red \
 	star in the corner with hammer and sickle inside."
 	initial_sprite_stack = list("base-stamp-dark", "top-purple", "stripe-gold", "stamp-s", "clip")
 	access = list (30, 47, 61)
 
-/obj/item/weapon/card/id/gateway/snowfield/class7 // Facility Director
+/obj/item/card/id/gateway/snowfield/class7 // Facility Director
 	name = "Class 7"
 	desc = "An ID card with a full access through out the base. There's a mark of a red \
 	star in the corner with hammer and sickle inside."

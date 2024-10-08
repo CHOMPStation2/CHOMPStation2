@@ -75,7 +75,7 @@
 	},
 /area/tether/surfacebase/outside/wilderness)
 "k" = (
-/obj/item/weapon/material/star,
+/obj/item/material/star,
 /turf/simulated/floor/outdoors/dirt{
 	desc = "Quite dirty!";
 	icon = 'icons/turf/outdoors.dmi';
@@ -96,7 +96,7 @@
 	},
 /area/tether/surfacebase/temple)
 "m" = (
-/obj/item/weapon/cell/infinite,
+/obj/item/cell/infinite,
 /obj/effect/gibspawner/human,
 /turf/simulated/floor/outdoors/dirt{
 	desc = "Quite dirty!";
@@ -106,7 +106,7 @@
 	},
 /area/tether/surfacebase/temple)
 "n" = (
-/obj/item/weapon/material/sword/katana,
+/obj/item/material/sword/katana,
 /turf/simulated/floor/outdoors/dirt{
 	desc = "Quite dirty!";
 	icon = 'icons/turf/outdoors.dmi';

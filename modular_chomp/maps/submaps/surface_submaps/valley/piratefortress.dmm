@@ -49,7 +49,7 @@
 "ck" = (
 /obj/structure/closet/crate/secure/loot,
 /obj/item/stolenpackage,
-/obj/item/weapon/card/emag,
+/obj/item/card/emag,
 /obj/item/rig_module/mounted/energy_blade,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -101,7 +101,7 @@
 /obj/item/clothing/suit/pirate,
 /obj/item/clothing/head/collectable/pirate,
 /obj/item/clothing/under/pirate,
-/obj/item/weapon/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi{
 	dir = 4
@@ -269,7 +269,7 @@
 /area/submap/piratefortress)
 "lw" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -285,7 +285,7 @@
 /area/submap/piratefortress)
 "mU" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -297,7 +297,7 @@
 /turf/template_noop,
 /area/template_noop)
 "nj" = (
-/obj/item/weapon/dnainjector/telemut,
+/obj/item/dnainjector/telemut,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -355,8 +355,8 @@
 "uB" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/mask/gas/syndicate,
-/obj/item/weapon/implantcase/surge,
-/obj/item/weapon/gun/projectile/lamia,
+/obj/item/implantcase/surge,
+/obj/item/gun/projectile/lamia,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/piratefortress)
 "uU" = (
@@ -383,9 +383,9 @@
 /area/submap/piratefortress)
 "vB" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/projectile/revolver/lombardi/gold,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/minihoe,
+/obj/item/gun/projectile/revolver/lombardi/gold,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/minihoe,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -469,7 +469,7 @@
 /area/submap/piratefortress)
 "xX" = (
 /obj/structure/table/gold,
-/obj/item/weapon/aliencoin/gold,
+/obj/item/aliencoin/gold,
 /obj/random/energy/highend,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
@@ -503,8 +503,8 @@
 /area/submap/piratefortress)
 "Av" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/bottle/robustharvest,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
+/obj/item/reagent_containers/glass/bottle/robustharvest,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -530,7 +530,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "Di" = (
-/obj/item/weapon/dnainjector/telemut,
+/obj/item/dnainjector/telemut,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/piratefortress)
 "DD" = (
@@ -582,8 +582,8 @@
 /area/submap/piratefortress)
 "FC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/bottle/left4zed,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
+/obj/item/reagent_containers/glass/bottle/left4zed,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/machinery/light/poi{
 	dir = 4
@@ -650,7 +650,7 @@
 /area/submap/piratefortress)
 "Lr" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/machinery/light/poi{
 	dir = 8
@@ -685,7 +685,7 @@
 /area/submap/piratefortress)
 "OB" = (
 /obj/structure/table/gold,
-/obj/item/weapon/flame/lighter/zippo/gold,
+/obj/item/flame/lighter/zippo/gold,
 /obj/item/capture_crystal,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
@@ -783,7 +783,7 @@
 /area/submap/piratefortress)
 "Td" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/projectile/deagle/gold,
+/obj/item/gun/projectile/deagle/gold,
 /obj/item/clothing/suit/pirate,
 /obj/item/clothing/head/collectable/pirate,
 /obj/item/clothing/under/pirate,
@@ -844,7 +844,7 @@
 /obj/item/clothing/suit/pirate,
 /obj/item/clothing/head/collectable/pirate,
 /obj/item/clothing/under/pirate,
-/obj/item/weapon/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi{
 	dir = 8

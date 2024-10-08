@@ -1,4 +1,4 @@
-/obj/item/device/geiger/wall
+/obj/item/geiger/wall
 	name = "mounted geiger counter"
 	desc = "A wall mounted device used for detecting and measuring radiation in an area."
 	icon = 'icons/obj/devices_yw.dmi'
@@ -11,37 +11,37 @@
 	layer = ABOVE_TURF_LAYER
 	w_class = ITEMSIZE_LARGE
 	flags = NOBLOODY
-	var/circuit = /obj/item/weapon/circuitboard/geiger
+	var/circuit = /obj/item/circuitboard/geiger
 	var/number = 0
 	var/last_tick //used to delay the powercheck
 	var/wiresexposed = 0
 
-/obj/item/device/geiger/wall/Initialize()
+/obj/item/geiger/wall/Initialize()
 	START_PROCESSING(SSobj, src)
 	soundloop = new(list(src), FALSE)
 	return ..()
 
-/obj/item/device/geiger/wall/Destroy()
+/obj/item/geiger/wall/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	QDEL_NULL(soundloop)
 	return ..()
 /*
-/obj/item/device/geiger/wall/process()
+/obj/item/geiger/wall/process()
 	get_radiation()
 
-/obj/item/device/geiger/wall/proc/get_radiation()
+/obj/item/geiger/wall/proc/get_radiation()
 	if(!scanning)
 		return
 	radiation_count = SSradiation.get_rads_at_turf(get_turf(src))
 	update_icon()
 	update_sound()
 
-/obj/item/device/geiger/wall/examine(mob/user)
+/obj/item/geiger/wall/examine(mob/user)
 	..(user)
 	get_radiation()
 	to_chat(user, "<span class='warning'>[scanning ? "Ambient" : "Stored"] radiation level: [radiation_count ? radiation_count : "0"]Bq.</span>")
 
-/obj/item/device/geiger/wall/rad_act(amount)
+/obj/item/geiger/wall/rad_act(amount)
 	if(!amount || !scanning)
 		return FALSE
 
@@ -52,13 +52,13 @@
 	update_sound()
 */
 
-/obj/item/device/geiger/wall/attack_self(var/mob/user)
+/obj/item/geiger/wall/attack_self(var/mob/user)
 	scanning = !scanning
 	update_icon()
 	update_sound()
 	to_chat(user, "<span class='notice'>[icon2html(src,user.client)] You switch [scanning ? "on" : "off"] \the [src].</span>")
 
-/obj/item/device/geiger/wall/update_icon()
+/obj/item/geiger/wall/update_icon()
 	if(!scanning)
 		icon_state = "geiger_wall-p"
 		return 1
@@ -77,7 +77,7 @@
 		if(RAD_LEVEL_VERY_HIGH to INFINITY)
 			icon_state = "geiger_level_5"
 /*
-/obj/item/device/geiger/wall/process()
+/obj/item/geiger/wall/process()
 	if(((world.timeofday - last_tick) > 30) || ((world.timeofday - last_tick) < 0))
 		last_tick = world.timeofday
 
@@ -101,12 +101,12 @@
 			else
 				icon_state = initial(icon_state) */
 
-/obj/item/device/geiger/wall/attack_ai(mob/user as mob)
+/obj/item/geiger/wall/attack_ai(mob/user as mob)
 	src.add_fingerprint(user)
 	spawn (0)
 		attack_self(user)
 
-/obj/item/device/geiger/wall/attack_hand(mob/user as mob)
+/obj/item/geiger/wall/attack_hand(mob/user as mob)
 	src.add_fingerprint(user)
 	spawn (0)
 		attack_self(user)

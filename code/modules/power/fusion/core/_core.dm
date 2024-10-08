@@ -18,7 +18,7 @@ GLOBAL_LIST_EMPTY(fusion_cores)
 	active_power_usage = 500 //multiplied by field strength
 	anchored = FALSE
 
-	circuit = /obj/item/weapon/circuitboard/fusion_core
+	circuit = /obj/item/circuitboard/fusion_core
 
 	var/obj/item/hose_connector/output/Output
 
@@ -139,7 +139,7 @@ GLOBAL_LIST_EMPTY(fusion_cores)
 /obj/machinery/power/fusion_core/attackby(var/obj/item/W, var/mob/user)
 
 	if(owned_field)
-		to_chat(user,"<span class='warning'>Shut \the [src] off first!</span>")
+		to_chat(user,span_warning("Shut \the [src] off first!"))
 		return
 
 	if(default_deconstruction_screwdriver(user, W))
@@ -149,7 +149,7 @@ GLOBAL_LIST_EMPTY(fusion_cores)
 	if(default_part_replacement(user, W))
 		return
 
-	if(istype(W, /obj/item/device/multitool))
+	if(istype(W, /obj/item/multitool))
 		var/new_ident = tgui_input_text(usr, "Enter a new ident tag.", "Fusion Core", id_tag, MAX_NAME_LEN)
 		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && user.Adjacent(src))

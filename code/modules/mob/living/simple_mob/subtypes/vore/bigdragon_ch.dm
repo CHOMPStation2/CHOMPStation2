@@ -59,7 +59,7 @@ I think I covered everything.
 	icon_living = "dragon_maneNone"
 	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
 	meat_amount = 40
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
 	melee_damage_lower = 35
@@ -124,7 +124,7 @@ I think I covered everything.
 	var/flames
 
 	tame_items = list(
-	/obj/item/weapon/coin/gold = 100,
+	/obj/item/coin/gold = 100,
 	/obj/item/stack/material/gold = 100
 	)
 
@@ -256,7 +256,7 @@ I think I covered everything.
 	voremob_loaded = 1
 	add_language(LANGUAGE_DRUDAKAR)
 	add_language(LANGUAGE_UNATHI)
-	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
+	mob_radio = new /obj/item/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
 
 /mob/living/simple_mob/vore/bigdragon/MouseDrop_T(mob/living/M, mob/living/user)
 	return
@@ -296,11 +296,11 @@ I think I covered everything.
 	set category = "Abilities.Settings"
 
 	if(norange)
-		to_chat(src, "<span class='userdanger'>You don't have a breath attack!</span>")
+		to_chat(src, span_userdanger("You don't have a breath attack!"))
 		return
 
 	flametoggle = !flametoggle
-	to_chat(src, "<span class='notice'>You will [flametoggle?"now breath":"no longer breath"] attack on harm intent.</span>")
+	to_chat(src, span_notice("You will [flametoggle?"now breath":"no longer breath"] attack on harm intent."))
 
 /mob/living/simple_mob/vore/bigdragon/proc/special_toggle()
 	set name = "Toggle special attacks"
@@ -308,11 +308,11 @@ I think I covered everything.
 	set category = "Abilities.Settings"
 
 	if(nospecial)
-		to_chat(src, "<span class='userdanger'>You don't have special attacks!</span>")
+		to_chat(src, span_userdanger("You don't have special attacks!"))
 		return
 
 	specialtoggle = !specialtoggle
-	to_chat(src, "<span class='notice'>You will [specialtoggle?"now special":"no longer special"] attack on grab/disarm intent.</span>")
+	to_chat(src, span_notice("You will [specialtoggle?"now special":"no longer special"] attack on grab/disarm intent."))
 
 /* //Implemented upstream
 /mob/living/simple_mob/vore/bigdragon/proc/set_name()
@@ -320,7 +320,7 @@ I think I covered everything.
 	set desc = "Sets your mobs name. You only get to do this once."
 	set category = "Abilities.Settings"
 	if(nameset)
-		to_chat(src, "<span class='userdanger'>You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must.</span>")
+		to_chat(src, span_userdanger("You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must."))
 		return
 	var/newname
 	newname = sanitizeSafe(input(src,"Set your name. You only get to do this once. Max 52 chars.", "Name set","") as text, MAX_NAME_LEN)
@@ -784,14 +784,14 @@ I think I covered everything.
 			M.Weaken(5)
 			if(!gentle)
 				M.adjustBruteLoss(50)	//A dragon just slammed ontop of you
-			to_chat(M, "<span class='userdanger'>You're slammed into the floor by [src]!</span>")
+			to_chat(M, span_userdanger("You're slammed into the floor by [src]!"))
 	else
 		if(isliving(AM))
 			var/mob/living/M = AM
 			M.Weaken(1.5)
 			if(!gentle)
 				M.adjustBruteLoss(20)
-			to_chat(M, "<span class='userdanger'>You're thrown back by [src]!</span>")
+			to_chat(M, span_userdanger("You're thrown back by [src]!"))
 			playsound(src, get_sfx("punch"), 50, 1)
 		AM.throw_at(throwtarget, maxthrow, 3, src)
 
@@ -808,7 +808,7 @@ I think I covered everything.
 	status_flags |= LEAPING
 	flying  = 1		//So we can thunk into things
 	hovering = 1	// So we don't hurt ourselves running off cliffs
-	visible_message(span("danger","\The [src] charges at \the [A]!"))
+	visible_message(span_danger("\The [src] charges at \the [A]!"))
 	throw_at(A, 7, 2)
 	playsound(src, charge_sound, 75, 1)
 	if(status_flags & LEAPING)
@@ -844,7 +844,7 @@ I think I covered everything.
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
-	src.visible_message("<span class='danger'>\The [src] spews fire at \the [A]!</span>")
+	src.visible_message(span_danger("\The [src] spews fire at \the [A]!"))
 	playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
 	P.launch_projectile(A, BP_TORSO, src)
 	set_AI_busy(FALSE)

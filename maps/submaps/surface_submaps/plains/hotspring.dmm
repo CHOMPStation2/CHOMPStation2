@@ -4,110 +4,84 @@
 /area/submap/hotspring)
 "c" = (
 /obj/structure/bonfire/sifwood,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/hotspring)
 "e" = (
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
 	},
-/obj/random/trash_pile,
-/turf/simulated/floor/outdoors/grass/sif,
-/area/submap/hotspring)
-"f" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
+/obj/structure/loot_pile/maint/trash,
+/turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/submap/hotspring)
 "g" = (
-/turf/simulated/floor/outdoors/mud,
+/turf/simulated/floor/outdoors/mud/virgo3b,
 /area/submap/hotspring)
 "h" = (
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
 	},
-/turf/simulated/floor/outdoors/grass/sif,
+/turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/submap/hotspring)
 "i" = (
 /obj/random/trash,
-/turf/simulated/floor/outdoors/grass/sif,
+/turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/submap/hotspring)
 "j" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/fancy/candle_box,
-/obj/item/weapon/flame/lighter/random{
+/obj/item/storage/fancy/candle_box,
+/obj/item/flame/lighter/random{
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/fancy/candle_box{
+/obj/item/storage/fancy/candle_box{
 	pixel_x = -6
 	},
-/obj/item/weapon/storage/firstaid{
+/obj/item/storage/firstaid{
 	pixel_x = 4;
 	pixel_y = -6
 	},
-/obj/item/weapon/wrapping_paper,
-/turf/simulated/floor/wood/sif,
+/obj/item/wrapping_paper,
+/turf/simulated/floor/wood/sif/virgo3b,
 /area/submap/hotspring)
 "k" = (
 /obj/effect/effect/steam,
 /obj/effect/map_effect/interval/effect_emitter/steam,
-/turf/simulated/floor/water/hotspring,
-/area/submap/hotspring)
-"m" = (
-/obj/effect/effect/steam,
-/turf/simulated/floor/water/hotspring,
-/area/submap/hotspring)
-"n" = (
-/obj/item/clothing/accessory/medal/fluff/rindeimos,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/water/virgo3b,
 /area/submap/hotspring)
 "o" = (
 /obj/structure/table/woodentable,
-/obj/item/pizzavoucher,
-/obj/item/pizzavoucher{
-	pixel_x = -4;
-	pixel_y = 6
-	},
-/obj/item/weapon/material/harpoon,
-/turf/simulated/floor/wood/sif,
+/obj/item/material/harpoon,
+/obj/item/pizzabox/vegetable,
+/turf/simulated/floor/wood/sif/virgo3b,
 /area/submap/hotspring)
 "r" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif/virgo3b,
 /area/submap/hotspring)
 "s" = (
 /obj/random/junk,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/hotspring)
 "t" = (
 /obj/structure/table/bench/wooden,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/hotspring)
 "u" = (
 /obj/random/junk,
-/turf/simulated/floor/outdoors/mud,
+/turf/simulated/floor/outdoors/mud/virgo3b,
 /area/submap/hotspring)
 "w" = (
 /obj/structure/closet/crate/bin,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif/virgo3b,
 /area/submap/hotspring)
 "x" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
-/obj/item/clothing/glasses/fluff/scylla,
-/turf/simulated/floor/wood/sif,
-/area/submap/hotspring)
-"A" = (
-/obj/item/weapon/material/shard,
-/turf/template_noop,
+/turf/simulated/floor/wood/sif/virgo3b,
 /area/submap/hotspring)
 "D" = (
 /obj/structure/window/reinforced{
@@ -116,51 +90,35 @@
 	},
 /turf/template_noop,
 /area/submap/hotspring)
-"E" = (
-/mob/living/simple_mob/animal/passive/gaslamp/snow,
-/turf/simulated/floor/outdoors/grass/sif,
-/area/submap/hotspring)
 "F" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/hotspring)
 "H" = (
 /obj/random/trash,
-/turf/simulated/floor/outdoors/mud,
+/turf/simulated/floor/outdoors/mud/virgo3b,
 /area/submap/hotspring)
 "J" = (
 /obj/structure/simple_door/sifwood,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif/virgo3b,
 /area/submap/hotspring)
 "K" = (
-/turf/simulated/floor/outdoors/grass/sif,
+/turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/submap/hotspring)
 "L" = (
-/obj/item/weapon/inflatable_duck,
+/obj/item/inflatable_duck,
 /obj/effect/effect/steam,
-/turf/simulated/floor/water/hotspring,
+/turf/simulated/floor/water/virgo3b,
 /area/submap/hotspring)
 "M" = (
 /obj/random/junk,
 /obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif/virgo3b,
 /area/submap/hotspring)
 "N" = (
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/virgo3b,
 /area/submap/hotspring)
 "O" = (
-/obj/random/trash_pile,
-/turf/template_noop,
-/area/submap/hotspring)
-"P" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/obj/item/weapon/material/shard{
-	pixel_x = 4;
-	pixel_y = 7
-	},
+/obj/structure/loot_pile/maint/trash,
 /turf/template_noop,
 /area/submap/hotspring)
 "R" = (
@@ -168,32 +126,35 @@
 	dir = 8;
 	health = 1e+006
 	},
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
+/obj/structure/loot_pile/maint/trash,
 /turf/template_noop,
 /area/submap/hotspring)
 "T" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif/virgo3b,
 /area/submap/hotspring)
 "U" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/swimsuit/striped,
-/obj/item/clothing/under/swimsuit/fluff/zara_uniform,
 /obj/item/clothing/under/swimsuit/stripper/stripper_pink,
-/turf/simulated/floor/wood/sif,
+/turf/simulated/floor/wood/sif/virgo3b,
+/area/submap/hotspring)
+"V" = (
+/obj/effect/effect/steam,
+/turf/simulated/floor/water/virgo3b,
 /area/submap/hotspring)
 "X" = (
 /obj/random/junk,
 /obj/random/junk,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/hotspring)
 "Y" = (
 /turf/simulated/wall/log_sif,
 /area/submap/hotspring)
 "Z" = (
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard{
-	pixel_x = 5
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
 	},
 /turf/template_noop,
 /area/submap/hotspring)
@@ -201,8 +162,8 @@
 (1,1,1) = {"
 D
 D
-A
-P
+D
+D
 a
 a
 a
@@ -252,10 +213,10 @@ a
 (4,1,1) = {"
 Y
 w
-n
+T
 Y
 X
-E
+K
 K
 F
 K
@@ -269,7 +230,7 @@ a
 (5,1,1) = {"
 Y
 j
-f
+T
 J
 g
 F
@@ -307,9 +268,9 @@ e
 h
 F
 g
-m
-m
-m
+V
+V
+V
 N
 t
 K
@@ -326,7 +287,7 @@ g
 N
 L
 k
-m
+V
 g
 t
 K
@@ -340,10 +301,10 @@ a
 K
 t
 g
-m
-m
-m
-m
+V
+V
+V
+V
 g
 F
 K
@@ -357,9 +318,9 @@ a
 K
 t
 H
-m
-m
-g
+V
+V
+V
 g
 g
 g
@@ -374,9 +335,9 @@ K
 F
 u
 g
-m
-g
-g
+V
+V
+N
 F
 s
 F
@@ -411,7 +372,7 @@ g
 g
 s
 K
-E
+K
 K
 F
 F

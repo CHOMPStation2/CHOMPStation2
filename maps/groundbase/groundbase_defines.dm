@@ -27,6 +27,7 @@
 	..()
 	var/choice = pickweight(list(
 		"virgo3C" = 200,
+		"rp2" = 200,
 		"logo1" = 20,
 		"logo2" = 20,
 		"gateway" = 5
@@ -70,12 +71,12 @@
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has arrived. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The shuttle has departed. Estimate %ETA% until arrival at %dock_name%."
-	shuttle_called_message = "A scheduled crew transfer to the %dock_name% is occuring. The shuttle will arrive shortly. Those departing should proceed to deck three, aft within %ETA%."
+	shuttle_called_message = "A scheduled crew transfer to the %dock_name% is occuring. The shuttle will arrive shortly. Those departing should proceed to the upper level on the west side of the main facility within %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
 	shuttle_name = "Crew Transport"
 	emergency_shuttle_docked_message = "The evacuation shuttle has arrived. You have approximately %ETD% to board the shuttle."
 	emergency_shuttle_leaving_dock = "The emergency shuttle has departed. Estimate %ETA% until arrival at %dock_name%."
-	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule shuttle has been called. It will arrive at deck three, aft in approximately %ETA%."
+	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule shuttle has been called. It will arrive at the upper level on the west side of the main facility in approximately %ETA%."
 	emergency_shuttle_recall_message = "The evacuation shuttle has been recalled."
 
 	station_networks = list(
@@ -168,31 +169,12 @@
 		/area/groundbase/civilian/hydroponics/out,
 		/area/groundbase/level3/escapepad,
 		/area/maintenance/groundbase/poi/caves,
-		/area/groundbase/poi,
+		/area/submap/groundbase/poi,
 		/area/maintenance/groundbase/poi/caves,
-		/area/groundbase/poi/outdoor,
-		/area/groundbase/poi/outdoor/roofed,
-		/area/groundbase/poi/outdoor/cabin1,
-		/area/groundbase/poi/outdoor/cabin2,
-		/area/groundbase/poi/outdoor/cabin3,
-		/area/groundbase/poi/outdoor/cabin4,
-		/area/groundbase/poi/outdoor/cabin5,
 		/area/groundbase/unexplored/outdoors,
 		/area/groundbase/unexplored/rock,
 		/area/groundbase/engineering/solarshed,
-		/area/groundbase/engineering/solarfield,
-		/area/groundbase/wilderness/north,
-		/area/groundbase/wilderness/north/unexplored,
-		/area/groundbase/wilderness/north/cave,
-		/area/groundbase/wilderness/south,
-		/area/groundbase/wilderness/south/unexplored,
-		/area/groundbase/wilderness/south/cave,
-		/area/groundbase/wilderness/east,
-		/area/groundbase/wilderness/east/unexplored,
-		/area/groundbase/wilderness/east/cave,
-		/area/groundbase/wilderness/west,
-		/area/groundbase/wilderness/west/unexplored,
-		/area/groundbase/wilderness/west/cave
+		/area/groundbase/engineering/solarfield
 		)
 
 	unit_test_exempt_from_atmos = list()
@@ -252,7 +234,8 @@
 		)
 	lateload_gb_south = list(
 		list("Southern Wilds 1"),
-		list("Southern Wilds 2")
+		list("Southern Wilds 2"),
+		list("Southern Wilds 3")
 		)
 	lateload_gb_east = list(
 		list("Eastern Wilds 1"),
@@ -446,7 +429,7 @@
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
-#include "gb-mining.dm"
+#include "groundbase_mining.dm"
 /datum/map_template/gb_lateload/mining
 	name = "V3c Underground"
 	desc = "The caves underneath the survace of Virgo 3C"

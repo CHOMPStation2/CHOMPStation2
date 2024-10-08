@@ -1,4 +1,4 @@
-/obj/item/weapon/book/manual/chemistry_guide
+/obj/item/book/manual/chemistry_guide
 	name = "Chemical Recipes and Refreshers"
 	desc = "A lengthy guide on the most commonly used chemicals on a modern orbital facility"
 	icon_state = "bookMedical"
@@ -6,7 +6,7 @@
 	author = "NanoTrasen"
 	title = "Chemical Recipes and Refreshers"
 
-/obj/item/weapon/book/manual/chemistry_guide/New()
+/obj/item/book/manual/chemistry_guide/New()
 	..()
 	dat = {"
 				<head>

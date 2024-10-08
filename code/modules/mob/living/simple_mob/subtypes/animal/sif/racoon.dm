@@ -66,7 +66,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative/sakimm
 
 	var/obj/item/clothing/head/hat = null // The hat the Sakimm may be wearing.
-	var/list/friend_loot_list = list(/obj/item/weapon/coin)	// What will make this animal non-hostile if held?
+	var/list/friend_loot_list = list(/obj/item/coin)	// What will make this animal non-hostile if held?
 	var/randomize_size = TRUE
 	can_be_drop_prey = TRUE //CHOMP Add
 	// CHOMPAdd: Pain/Death Sounds
@@ -89,14 +89,14 @@
 		hat = null
 		update_icon()
 		if(user == src)
-			to_chat(user, "<span class='notice'>You removed your hat.</span>")
+			to_chat(user, span_notice("You removed your hat."))
 			return
-		to_chat(user, "<span class='warning'>You removed \the [src]'s hat. You monster.</span>")
+		to_chat(user, span_warning("You removed \the [src]'s hat. You monster."))
 	else
 		if(user == src)
-			to_chat(user, "<span class='notice'>You are not wearing a hat!</span>")
+			to_chat(user, span_notice("You are not wearing a hat!"))
 			return
-		to_chat(user, "<span class='notice'>\The [src] is not wearing a hat!</span>")
+		to_chat(user, span_notice("\The [src] is not wearing a hat!"))
 
 /mob/living/simple_mob/animal/sif/sakimm/verb/give_hat()
 	set name = "Give Hat"
@@ -109,16 +109,16 @@
 /mob/living/simple_mob/animal/sif/sakimm/proc/take_hat(var/mob/user)
 	if(hat)
 		if(user == src)
-			to_chat(user, "<span class='notice'>You already have a hat!</span>")
+			to_chat(user, span_notice("You already have a hat!"))
 			return
-		to_chat(user, "<span class='notice'>\The [src] already has a hat!</span>")
+		to_chat(user, span_notice("\The [src] already has a hat!"))
 	else
 		if(user == src)
 			if(istype(get_active_hand(), /obj/item/clothing/head))
 				hat = get_active_hand()
 				drop_from_inventory(hat, src)
 				hat.forceMove(src)
-				to_chat(user, "<span class='notice'>You put on the hat.</span>")
+				to_chat(user, span_notice("You put on the hat."))
 				update_icon()
 			return
 		else if(ishuman(user))
@@ -131,10 +131,10 @@
 					a_intent = I_HELP
 					newhat.attack_hand(src)
 			else if(src.get_active_hand())
-				to_chat(user, "<span class='notice'>\The [src] seems busy with \the [get_active_hand()] already!</span>")
+				to_chat(user, span_notice("\The [src] seems busy with \the [get_active_hand()] already!"))
 
 			else
-				to_chat(user, "<span class='warning'>You aren't holding a hat...</span>")
+				to_chat(user, span_warning("You aren't holding a hat..."))
 
 /datum/say_list/sakimm
 	speak = list("Shurr.", "|R|rr?", "Hss.")
@@ -204,7 +204,7 @@
 	flee_when_dying = TRUE
 
 	var/greed = 0	// The probability we will try to steal something. Increases over time if we are not holding something, or wearing a hat.
-	var/list/steal_loot_list = list(/obj/item/weapon/coin, /obj/item/weapon/gun, /obj/item/weapon/fossil, /obj/item/stack/material, /obj/item/weapon/material, /obj/item/weapon/reagent_containers/food/snacks, /obj/item/clothing/head, /obj/item/weapon/reagent_containers/glass, /obj/item/device/flashlight, /obj/item/stack/medical, /obj/item/seeds, /obj/item/weapon/spacecash)
+	var/list/steal_loot_list = list(/obj/item/coin, /obj/item/gun, /obj/item/fossil, /obj/item/stack/material, /obj/item/material, /obj/item/reagent_containers/food/snacks, /obj/item/clothing/head, /obj/item/reagent_containers/glass, /obj/item/flashlight, /obj/item/stack/medical, /obj/item/seeds, /obj/item/spacecash)
 	var/hoard_items = TRUE
 	var/hoard_distance = 1	// How far an item can be from the Sakimm's home turf to be counted inside its 'hoard'.
 	var/original_home_distance = null
@@ -301,7 +301,7 @@
 
 	else if(istype(A, /obj/item))
 		var/obj/item/I = A
-		if(istype(I, /obj/item/weapon/reagent_containers/food/snacks))	// If we can't pick it up, or it's edible, go to harm.
+		if(istype(I, /obj/item/reagent_containers/food/snacks))	// If we can't pick it up, or it's edible, go to harm.
 			holder.a_intent = I_HURT
 		else
 			holder.a_intent = I_HELP

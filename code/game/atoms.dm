@@ -232,7 +232,7 @@
 		else
 			f_name = "a "
 		if(blood_color != SYNTH_BLOOD_COLOUR)
-			f_name += "<span class='danger'>blood-stained</span> [name][infix]!"
+			f_name += "[span_danger("blood-stained")] [name][infix]!"
 		else
 			f_name += "oil-stained [name][infix]."
 
@@ -289,10 +289,10 @@
 // Returns an assoc list of RCD information.
 // Example would be: list(RCD_VALUE_MODE = RCD_DECONSTRUCT, RCD_VALUE_DELAY = 50, RCD_VALUE_COST = RCD_SHEETS_PER_MATTER_UNIT * 4)
 // This occurs before rcd_act() is called, and it won't be called if it returns FALSE.
-/atom/proc/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/atom/proc/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	return FALSE
 
-/atom/proc/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/atom/proc/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	return
 
 /atom/proc/melt()
@@ -496,7 +496,7 @@
 		return TRUE
 	blood_color = null //chompfixy, cleaning objects saved its future blood color no matter what
 
-/atom/proc/on_rag_wipe(var/obj/item/weapon/reagent_containers/glass/rag/R)
+/atom/proc/on_rag_wipe(var/obj/item/reagent_containers/glass/rag/R)
 	clean_blood()
 	R.reagents.splash(src, 1)
 
@@ -571,13 +571,13 @@
 /atom/proc/InsertedContents()
 	return contents
 
-/atom/proc/has_gravity(turf/T)
+/atom/proc/get_gravity(turf/T)
 	if(!T || !isturf(T))
 		T = get_turf(src)
 	if(istype(T, /turf/space)) // Turf never has gravity
 		return FALSE
 	var/area/A = get_area(T)
-	if(A && A.has_gravity())
+	if(A && A.get_gravity())
 		return TRUE
 	return FALSE
 
@@ -674,7 +674,7 @@
 		return
 	var/list/speech_bubble_hearers = list()
 	for(var/mob/M in get_mobs_in_view(7, src))
-		M.show_message("<span class='npcsay'><span class='name'>[src]</span> [atom_say_verb], \"[message]\"</span>", 2, null, 1)
+		M.show_message(span_npc_say(span_name("[src]") + " [atom_say_verb], \"[message]\""), 2, null, 1)
 		if(M.client)
 			speech_bubble_hearers += M.client
 

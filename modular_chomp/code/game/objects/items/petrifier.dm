@@ -20,9 +20,9 @@
 /obj/item/petrifier/attack_self(var/mob/user)
 	. = ..()
 	if (!isturf(user.loc) && user.get_ultimate_mob() != target)
-		to_chat(user, "<span class='warning'>The device beeps but does nothing.</span>")
+		to_chat(user, span_warning("The device beeps but does nothing."))
 		return
 	if (linked?.petrify(src))
-		visible_message("<span class='notice'>A ray of purple light streams out of \the [src], aimed directly at [target]. Everywhere the light touches on them quickly [adjective] into [material].</span>")
-		to_chat(user, "<span class='warning'>The device fizzles and crumbles into dust.</span>")
+		visible_message(span_notice("A ray of purple light streams out of \the [src], aimed directly at [target]. Everywhere the light touches on them quickly [adjective] into [material]."))
+		to_chat(user, span_warning("The device fizzles and crumbles into dust."))
 		qdel(src)

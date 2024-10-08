@@ -170,14 +170,14 @@
 
 /obj/machinery/cash_register/attackby(obj/item/O as obj, user as mob)
 	// Check for a method of paying (ID, PDA, e-wallet, cash, ect.)
-	var/obj/item/weapon/card/id/I = O.GetID()
+	var/obj/item/card/id/I = O.GetID()
 	if(I)
 		scan_card(I, O)
-	else if (istype(O, /obj/item/weapon/spacecash/ewallet))
-		var/obj/item/weapon/spacecash/ewallet/E = O
+	else if (istype(O, /obj/item/spacecash/ewallet))
+		var/obj/item/spacecash/ewallet/E = O
 		scan_wallet(E)
-	else if (istype(O, /obj/item/weapon/spacecash))
-		var/obj/item/weapon/spacecash/SC = O
+	else if (istype(O, /obj/item/spacecash))
+		var/obj/item/spacecash/SC = O
 		if(cash_open)
 			to_chat(user, "You neatly sort the cash into the box.")
 			cash_stored += SC.worth
@@ -188,10 +188,10 @@
 			qdel(SC)
 		else
 			scan_cash(SC)
-	else if(istype(O, /obj/item/weapon/card/emag))
+	else if(istype(O, /obj/item/card/emag))
 		return ..()
-	else if(O.has_tool_quality(TOOL_WRENCH))
-		var/obj/item/weapon/tool/wrench/W = O
+	else if(istype(O) && O.has_tool_quality(TOOL_WRENCH))
+		var/obj/item/tool/wrench/W = O
 		toggle_anchors(W, user)
 	// Not paying: Look up price and add it to transaction_amount
 	else
@@ -213,7 +213,7 @@
 		return 0
 
 
-/obj/machinery/cash_register/proc/scan_card(obj/item/weapon/card/id/I, obj/item/ID_container)
+/obj/machinery/cash_register/proc/scan_card(obj/item/card/id/I, obj/item/ID_container)
 	if (!transaction_amount)
 		return
 
@@ -278,7 +278,7 @@
 					transaction_complete()
 
 
-/obj/machinery/cash_register/proc/scan_wallet(obj/item/weapon/spacecash/ewallet/E)
+/obj/machinery/cash_register/proc/scan_wallet(obj/item/spacecash/ewallet/E)
 	if (!transaction_amount)
 		return
 
@@ -316,7 +316,7 @@
 			transaction_complete()
 
 
-/obj/machinery/cash_register/proc/scan_cash(obj/item/weapon/spacecash/SC)
+/obj/machinery/cash_register/proc/scan_cash(obj/item/spacecash/SC)
 	if (!transaction_amount)
 		return
 
@@ -478,28 +478,28 @@
 		if(cash_stored)
 			add_overlay("register_cash")
 	else
-		to_chat(usr, "<span class='warning'>The cash box is locked.</span>")
+		to_chat(usr, span_warning("The cash box is locked."))
 
 
-/obj/machinery/cash_register/proc/toggle_anchors(obj/item/weapon/tool/wrench/W, mob/user)
+/obj/machinery/cash_register/proc/toggle_anchors(obj/item/tool/wrench/W, mob/user)
 	if(manipulating) return
 	manipulating = 1
 	if(!anchored)
 		user.visible_message("\The [user] begins securing \the [src] to the floor.",
 	                         "You begin securing \the [src] to the floor.")
 	else
-		user.visible_message("<span class='warning'>\The [user] begins unsecuring \the [src] from the floor.</span>",
+		user.visible_message(span_warning("\The [user] begins unsecuring \the [src] from the floor."),
 	                         "You begin unsecuring \the [src] from the floor.")
 	playsound(src, W.usesound, 50, 1)
 	if(!do_after(user, 20 * W.toolspeed))
 		manipulating = 0
 		return
 	if(!anchored)
-		user.visible_message("<span class='notice'>\The [user] has secured \the [src] to the floor.</span>",
-	                         "<span class='notice'>You have secured \the [src] to the floor.</span>")
+		user.visible_message(span_notice("\The [user] has secured \the [src] to the floor."),
+	                         span_notice("You have secured \the [src] to the floor."))
 	else
-		user.visible_message("<span class='warning'>\The [user] has unsecured \the [src] from the floor.</span>",
-	                         "<span class='notice'>You have unsecured \the [src] from the floor.</span>")
+		user.visible_message(span_warning("\The [user] has unsecured \the [src] from the floor."),
+	                         span_notice("You have unsecured \the [src] from the floor."))
 	anchored = !anchored
 	manipulating = 0
 	return
@@ -508,7 +508,7 @@
 
 /obj/machinery/cash_register/emag_act(var/remaining_charges, var/mob/user)
 	if(!emagged)
-		src.visible_message("<span class='danger'>The [src]'s cash box springs open as [user] swipes the card through the scanner!</span>")
+		src.visible_message(span_danger("The [src]'s cash box springs open as [user] swipes the card through the scanner!"))
 		playsound(src, "sparks", 50, 1)
 		req_access = list()
 		emagged = 1

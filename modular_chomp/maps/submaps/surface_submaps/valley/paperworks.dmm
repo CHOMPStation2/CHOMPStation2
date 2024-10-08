@@ -4,7 +4,7 @@
 /area/submap/paperworks)
 "b" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "In an attempt to fully master freezing tempatures, our elite scientists have begun work on creating a absoulete zero shield for our commander. We are still researching the bluespace technolgy needed, alongisde obtaining true absoulte zero.";
 	name = "Perfect Zero"
 	},
@@ -22,7 +22,7 @@
 	dir = 1
 	},
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/steel,
 /area/submap/paperworks)
@@ -34,14 +34,14 @@
 /area/submap/paperworks)
 "y" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "In an effort to make sure our goals, and beliefs are known throughout history, we have decieded to use both digital and physical note keeping. This location will be one of many to begin to write and collect notes of our expirments.";
 	name = "Goals"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/paperworks)
 "A" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -60,7 +60,7 @@
 /area/submap/paperworks)
 "E" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "In an attempt to expirment on the effects and potential of suns, we used a great deal of resources on constructing a station to orbit a sun. This had wonderful but unntended results. Within the first half year, we had to spend more resources to fish it out of orbit as it was half melted from a solar storm. Most of our intended expirments failed, but there was a great deal of goods we recovered. Attempts are being made to replicate the results, the main target being the Kronos Core.";
 	name = "Solar Station"
 	},
@@ -85,7 +85,7 @@
 /area/submap/paperworks)
 "O" = (
 /obj/structure/table/gold,
-/obj/item/device/soulstone,
+/obj/item/soulstone,
 /turf/simulated/floor/tiled/steel,
 /area/submap/paperworks)
 "Q" = (
@@ -102,7 +102,7 @@
 /area/submap/paperworks)
 "X" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "What is fact, fiction, and soon to be fact. It is a great deal of importance is it not. What realms can we traverse, and what are nothing but in our minds. And what can we force out of our minds, and into reality. This is one of our goals to find out.";
 	name = "Fact and Fiction."
 	},

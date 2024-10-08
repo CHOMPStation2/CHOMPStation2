@@ -74,7 +74,7 @@
 						var/mob/living/L = A
 						if(!emagged && ishuman(L) && L.mind)
 							playsound(src, 'sound/machines/warning-buzzer.ogg', 50, 0, 0)
-							visible_message("<span class='warning'>POSSIBLE CREW MEMBER DETECTED! EMERGENCY STOP ENGAGED!</span>")
+							visible_message(span_warning("POSSIBLE CREW MEMBER DETECTED! EMERGENCY STOP ENGAGED!"))
 							global_announcer.autosay("Possible crew member detected in grinder feed. Emergency Stop Protocols engaged!", "Recycling Grinder Alert", "Supply")
 							operating = FALSE
 							update()
@@ -120,7 +120,7 @@
 	emagged = !emagged
 	update()
 
-/obj/machinery/v_garbosystem/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/v_garbosystem/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.is_crowbar())
 		if(!operating)
 			to_chat(user, "You crowbar the filter hatch open, releasing the items trapped within.")

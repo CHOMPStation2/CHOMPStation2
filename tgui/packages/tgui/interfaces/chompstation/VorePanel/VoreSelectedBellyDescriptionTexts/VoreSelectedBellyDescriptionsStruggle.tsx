@@ -1,5 +1,5 @@
-import { useBackend } from '../../../../backend';
-import { Button, LabeledList } from '../../../../components';
+import { useBackend } from 'tgui/backend';
+import { Button, LabeledList } from 'tgui/components';
 
 export const VoreSelectedBellyDescriptionsStruggle = (props) => {
   const { act } = useBackend();

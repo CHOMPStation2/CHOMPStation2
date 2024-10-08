@@ -54,7 +54,7 @@ var/list/mob_hat_cache = list()
 	var/mail_destination = ""
 	var/obj/machinery/drone_fabricator/master_fabricator
 	var/law_type = /datum/ai_laws/drone
-	var/module_type = /obj/item/weapon/robot_module/drone
+	var/module_type = /obj/item/robot_module/drone
 	var/obj/item/hat
 	var/hat_x_offset = 0
 	var/hat_y_offset = -13
@@ -63,7 +63,7 @@ var/list/mob_hat_cache = list()
 
 	var/foreign_droid = FALSE
 
-	holder_type = /obj/item/weapon/holder/drone
+	holder_type = /obj/item/holder/drone
 
 	can_be_antagged = FALSE
 
@@ -84,7 +84,7 @@ var/list/mob_hat_cache = list()
 	name = "construction drone"
 	icon_state = "constructiondrone"
 	law_type = /datum/ai_laws/construction_drone
-	module_type = /obj/item/weapon/robot_module/drone/construction
+	module_type = /obj/item/robot_module/drone/construction
 	hat_x_offset = 1
 	hat_y_offset = -12
 	can_pull_mobs = MOB_PULL_SAME
@@ -95,7 +95,7 @@ var/list/mob_hat_cache = list()
 	icon_state = "miningdrone"
 	item_state = "constructiondrone"
 	law_type = /datum/ai_laws/mining_drone
-	module_type = /obj/item/weapon/robot_module/drone/mining
+	module_type = /obj/item/robot_module/drone/mining
 	hat_x_offset = 1
 	hat_y_offset = -12
 	can_pull_mobs = MOB_PULL_SAME
@@ -135,7 +135,7 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/init()
 	if(!scrambledcodes && !foreign_droid)
-		aiCamera = new/obj/item/device/camera/siliconcam/drone_camera(src)
+		aiCamera = new/obj/item/camera/siliconcam/drone_camera(src)
 	additional_law_channels["Drone"] = ":d"
 	if(!laws) laws = new law_type
 	if(!module) module = new module_type(src)
@@ -175,7 +175,7 @@ var/list/mob_hat_cache = list()
 	set category = "Abilities.Settings" //ChompEDIT - TGPanel
 
 	if(!can_pick_shell)
-		to_chat(src, "<span class='warning'>You already selected a shell or this drone type isn't customizable.</span>")
+		to_chat(src, span_warning("You already selected a shell or this drone type isn't customizable."))
 		return
 
 	var/list/choices = shell_types.Copy()
@@ -217,37 +217,37 @@ var/list/mob_hat_cache = list()
 	update_icon()
 
 //Drones cannot be upgraded with borg modules so we need to catch some items before they get used in ..().
-/mob/living/silicon/robot/drone/attackby(var/obj/item/weapon/W, var/mob/user)
+/mob/living/silicon/robot/drone/attackby(var/obj/item/W, var/mob/user)
 
 	if(user.a_intent == "help" && istype(W, /obj/item/clothing/head))
 		if(hat)
-			to_chat(user, "<span class='warning'>\The [src] is already wearing \the [hat].</span>")
+			to_chat(user, span_warning("\The [src] is already wearing \the [hat]."))
 			return
 		user.unEquip(W)
 		wear_hat(W)
 		user.visible_message("<b>\The [user]</b> puts \the [W] on \the [src].")
 		return
 	else if(istype(W, /obj/item/borg/upgrade/))
-		to_chat(user, "<span class='danger'>\The [src] is not compatible with \the [W].</span>")
+		to_chat(user, span_danger("\The [src] is not compatible with \the [W]."))
 		return
 
 	else if (W.has_tool_quality(TOOL_CROWBAR))
-		to_chat(user, "<span class='danger'>\The [src] is hermetically sealed. You can't open the case.</span>")
+		to_chat(user, span_danger("\The [src] is hermetically sealed. You can't open the case."))
 		return
 
-	else if (istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))
+	else if (istype(W, /obj/item/card/id)||istype(W, /obj/item/pda))
 		var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 		if(stat == 2)
 
 			if(!CONFIG_GET(flag/allow_drone_spawn) || emagged || health < -35) //It's dead, Dave. // CHOMPEdit
-				to_chat(user, "<span class='danger'>The interface is fried, and a distressing burned smell wafts from the robot's interior. You're not rebooting this one.</span>")
+				to_chat(user, span_danger("The interface is fried, and a distressing burned smell wafts from the robot's interior. You're not rebooting this one."))
 				return
 
 			if(!allowed(usr))
-				to_chat(user, "<span class='danger'>Access denied.</span>")
+				to_chat(user, span_danger("Access denied."))
 				return
 
-			user.visible_message("<span class='danger'>\The [user] swipes [TU.his] ID card through \the [src], attempting to reboot it.</span>", "<span class='danger'>>You swipe your ID card through \the [src], attempting to reboot it.</span>")
+			user.visible_message(span_danger("\The [user] swipes [TU.his] ID card through \the [src], attempting to reboot it."), span_danger(">You swipe your ID card through \the [src], attempting to reboot it."))
 			var/drones = 0
 			for(var/mob/living/silicon/robot/drone/D in player_list)
 				drones++
@@ -256,7 +256,7 @@ var/list/mob_hat_cache = list()
 			return
 
 		/*else //CHOMPEdit - Comment out drone shutting down since it seems to be a round remove with no recourse
-			user.visible_message("<span class='danger'>\The [user] swipes [TU.his] ID card through \the [src], attempting to shut it down.</span>", "<span class='danger'>You swipe your ID card through \the [src], attempting to shut it down.</span>")
+			user.visible_message(span_danger("\The [user] swipes [TU.his] ID card through \the [src], attempting to shut it down."), span_danger("You swipe your ID card through \the [src], attempting to shut it down."))
 
 			if(emagged)
 				return
@@ -264,7 +264,7 @@ var/list/mob_hat_cache = list()
 			if(allowed(usr))
 				shut_down()
 			else
-				to_chat(user, "<span class='danger'>Access denied.</span>")*/
+				to_chat(user, span_danger("Access denied."))*/
 
 		return
 
@@ -272,17 +272,17 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/emag_act(var/remaining_charges, var/mob/user)
 	if(!client || stat == 2)
-		to_chat(user, "<span class='danger'>There's not much point subverting this heap of junk.</span>")
+		to_chat(user, span_danger("There's not much point subverting this heap of junk."))
 		return
 
 	if(emagged)
-		to_chat(src, "<span class='danger'>\The [user] attempts to load subversive software into you, but your hacked subroutines ignore the attempt.</span>")
-		to_chat(user, "<span class='danger'>You attempt to subvert [src], but the sequencer has no effect.</span>")
+		to_chat(src, span_danger("\The [user] attempts to load subversive software into you, but your hacked subroutines ignore the attempt."))
+		to_chat(user, span_danger("You attempt to subvert [src], but the sequencer has no effect."))
 		return
 
-	to_chat(user, "<span class='danger'>You swipe the sequencer across [src]'s interface and watch its eyes flicker.</span>")
+	to_chat(user, span_danger("You swipe the sequencer across [src]'s interface and watch its eyes flicker."))
 
-	to_chat(src, "<span class='danger'>You feel a sudden burst of malware loaded into your execute-as-root buffer. Your tiny brain methodically parses, loads and executes the script.</span>")
+	to_chat(src, span_danger("You feel a sudden burst of malware loaded into your execute-as-root buffer. Your tiny brain methodically parses, loads and executes the script."))
 
 	log_game("[key_name(user)] emagged drone [key_name(src)]. Laws overridden.")
 	var/time = time2text(world.realtime,"hh:mm:ss")
@@ -299,7 +299,7 @@ var/list/mob_hat_cache = list()
 
 	to_chat(src, "<b>Obey these laws:</b>")
 	laws.show_laws(src)
-	to_chat(src, "<span class='danger'>ALERT: [user.real_name] is your new master. Obey your new laws and \his commands.</span>")
+	to_chat(src, span_danger("ALERT: [user.real_name] is your new master. Obey your new laws and \his commands."))
 	return 1
 
 //DRONE LIFE/DEATH
@@ -334,18 +334,18 @@ var/list/mob_hat_cache = list()
 /mob/living/silicon/robot/drone/proc/law_resync()
 	if(stat != DEAD)
 		if(emagged)
-			to_chat(src, "<span class='danger'>You feel something attempting to modify your programming, but your hacked subroutines are unaffected.</span>")
+			to_chat(src, span_danger("You feel something attempting to modify your programming, but your hacked subroutines are unaffected."))
 		else
-			to_chat(src, "<span class='danger'>A reset-to-factory directive packet filters through your data connection, and you obediently modify your programming to suit it.</span>")
+			to_chat(src, span_danger("A reset-to-factory directive packet filters through your data connection, and you obediently modify your programming to suit it."))
 			full_law_reset()
 			show_laws()
 
 /mob/living/silicon/robot/drone/proc/shut_down()
 	if(stat != DEAD)
 		if(emagged)
-			to_chat(src, "<span class='danger'>You feel a system kill order percolate through your tiny brain, but it doesn't seem like a good idea to you.</span>")
+			to_chat(src, span_danger("You feel a system kill order percolate through your tiny brain, but it doesn't seem like a good idea to you."))
 		else
-			to_chat(src, "<span class='danger'>You feel a system kill order percolate through your tiny brain, and you obediently destroy yourself.</span>")
+			to_chat(src, span_danger("You feel a system kill order percolate through your tiny brain, and you obediently destroy yourself."))
 			death()
 
 /mob/living/silicon/robot/drone/proc/full_law_reset()

@@ -4,21 +4,21 @@
 	use_power = USE_POWER_OFF
 	icon = 'modular_chomp/icons/obj/machines/defense.dmi'
 	icon_state = "paradox"
-	circuit = /obj/item/weapon/circuitboard/paradoxrift
+	circuit = /obj/item/circuitboard/paradoxrift
 	var/build_eff = 1
 	var/loot_eff = 1
 	var/chaos_eff = 1
 
-/obj/item/weapon/circuitboard/paradoxrift
+/obj/item/circuitboard/paradoxrift
 	name = "paradox rift generator circuit"
 	build_path = /obj/machinery/paradoxrift
 	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_DATA = 8, TECH_PRECURSOR = 3)
 	req_components = list(
 							/obj/item/stack/cable_coil = 10,
-							/obj/item/weapon/stock_parts/capacitor = 4,
-							/obj/item/weapon/stock_parts/manipulator = 6,
-							/obj/item/weapon/stock_parts/scanning_module = 10)
+							/obj/item/stock_parts/capacitor = 4,
+							/obj/item/stock_parts/manipulator = 6,
+							/obj/item/stock_parts/scanning_module = 10)
 
 /obj/machinery/paradoxrift/RefreshParts()
 	..()
@@ -26,12 +26,12 @@
 	var/scan_rating = 0
 	var/cap_rating = 0
 
-	for(var/obj/item/weapon/stock_parts/P in component_parts)
-		if(istype(P, /obj/item/weapon/stock_parts/scanning_module))
+	for(var/obj/item/stock_parts/P in component_parts)
+		if(istype(P, /obj/item/stock_parts/scanning_module))
 			scan_rating += P.rating
-		if(istype(P, /obj/item/weapon/stock_parts/manipulator))
+		if(istype(P, /obj/item/stock_parts/manipulator))
 			man_rating += P.rating
-		if(istype(P, /obj/item/weapon/stock_parts/capacitor))
+		if(istype(P, /obj/item/stock_parts/capacitor))
 			cap_rating += P.rating
 
 	build_eff = man_rating
@@ -66,11 +66,11 @@
 	icon_state = "medicalkit"
 
 /obj/random/portalloot/item_to_spawn()
-	return pick(prob(6);/obj/item/weapon/stock_parts/capacitor/omni,
-				prob(6);/obj/item/weapon/stock_parts/manipulator/omni,
-				prob(6);/obj/item/weapon/stock_parts/scanning_module/omni,
-				prob(6);/obj/item/weapon/stock_parts/matter_bin/omni,
-				prob(6);/obj/item/weapon/stock_parts/micro_laser/omni,
+	return pick(prob(6);/obj/item/stock_parts/capacitor/omni,
+				prob(6);/obj/item/stock_parts/manipulator/omni,
+				prob(6);/obj/item/stock_parts/scanning_module/omni,
+				prob(6);/obj/item/stock_parts/matter_bin/omni,
+				prob(6);/obj/item/stock_parts/micro_laser/omni,
 				prob(6);/obj/item/stack/material/phoron,
 				prob(6);/obj/item/stack/material/deuterium,
 				prob(6);/obj/item/stack/material/tritium,
@@ -83,17 +83,17 @@
 	icon_state = "medicalkit"
 
 /obj/random/greaterportalloot/item_to_spawn()
-	return pick(prob(6);/obj/item/weapon/stock_parts/capacitor/omni,
-				prob(6);/obj/item/weapon/stock_parts/manipulator/omni,
-				prob(6);/obj/item/weapon/stock_parts/scanning_module/omni,
-				prob(6);/obj/item/weapon/stock_parts/matter_bin/omni,
-				prob(6);/obj/item/weapon/stock_parts/micro_laser/omni,
+	return pick(prob(6);/obj/item/stock_parts/capacitor/omni,
+				prob(6);/obj/item/stock_parts/manipulator/omni,
+				prob(6);/obj/item/stock_parts/scanning_module/omni,
+				prob(6);/obj/item/stock_parts/matter_bin/omni,
+				prob(6);/obj/item/stock_parts/micro_laser/omni,
 				prob(4);/obj/random/smes_coil,
 				prob(4);/obj/random/bomb_supply,
 				prob(4);/obj/random/powercell,
 				prob(4);/obj/random/tool/powermaint,
-				prob(1);/obj/item/weapon/rcd,
-				prob(4);/obj/item/weapon/rcd/advanced,
+				prob(1);/obj/item/rcd,
+				prob(4);/obj/item/rcd/advanced,
 				prob(1);/obj/vehicle/bike/random,
 				prob(1);/obj/vehicle/train/engine/quadbike/random,
 				prob(4);/obj/random/material,
@@ -101,7 +101,7 @@
 				prob(4);/obj/random/material/precious,
 				prob(1);/obj/random/bluespace,
 				prob(4);/obj/random/tool/alien,
-				prob(1);/obj/item/weapon/circuitboard/paradoxrift,
+				prob(1);/obj/item/circuitboard/paradoxrift,
 				prob(4);/obj/item/prop/alien/junk
 				)
 

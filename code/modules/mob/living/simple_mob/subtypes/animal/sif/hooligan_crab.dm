@@ -72,7 +72,7 @@
 	attack_edge = TRUE
 	melee_attack_delay = 1 SECOND
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/crabmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/crabmeat
 	meat_amount = 6
 
 	response_help  = "pets"
@@ -101,9 +101,9 @@
 		if(was_stunned) // Try to prevent chain-stuns by having them thrown.
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 5, 1, src)
-			visible_message(span("danger", "\The [src] hurls \the [L] away!"))
+			visible_message(span_danger("\The [src] hurls \the [L] away!"))
 		else
-			visible_message(span("danger", "\The [src] crushes \the [L]!"))
+			visible_message(span_danger("\The [src] crushes \the [L]!"))
 
 // The AI for hooligan crabs. Follows people for awhile.
 /datum/ai_holder/simple_mob/melee/hooligan

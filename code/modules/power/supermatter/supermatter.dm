@@ -204,7 +204,7 @@
 			continue
 
 		mob.Weaken(DETONATION_MOB_CONCUSSION)
-		to_chat(mob, "<span class='danger'>An invisible force slams you against the ground!</span>")
+		to_chat(mob, span_danger("An invisible force slams you against the ground!"))
 
 	// Effect 2: Z-level wide electrical pulse
 	for(var/obj/machinery/power/apc/A in GLOB.apcs)
@@ -547,7 +547,7 @@
 	return data
 
 
-/obj/machinery/power/supermatter/attackby(obj/item/weapon/W as obj, mob/living/user as mob)
+/obj/machinery/power/supermatter/attackby(obj/item/W as obj, mob/living/user as mob)
 	user.visible_message("<span class=\"warning\">\The [user] touches \a [W] to \the [src] as a silence fills the room...</span>",\
 		"<span class=\"danger\">You touch \the [W] to \the [src] when everything suddenly goes silent.\"</span>\n<span class=\"notice\">\The [W] flashes into dust as you flinch away from \the [src].</span>",\
 		"<span class=\"warning\">Everything suddenly goes silent.</span>")

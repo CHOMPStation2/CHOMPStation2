@@ -76,7 +76,7 @@
 		var/datum/callback/something_happens = next_message
 		next_message = something_happens.InvokeAsync(src)
 
-	to_chat(src, span_notice("<i>... [next_message] ...</i>"))
+	to_chat(src, span_notice(span_italics("... [next_message] ...")))
 
 	if(LAZYLEN(dream_fragments))
 		var/next_wait = rand(10, 30)
@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(dreams, populate_dream_list())
 	var/list/custom_dream_nouns = list()
 	var/fragment = ""
 
-	for(var/obj/item/weapon/bedsheet/sheet in dreamer.loc)
+	for(var/obj/item/bedsheet/sheet in dreamer.loc)
 		custom_dream_nouns += sheet.dream_messages
 
 	. = list()

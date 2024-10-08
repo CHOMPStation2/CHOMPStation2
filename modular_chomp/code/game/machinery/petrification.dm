@@ -68,7 +68,7 @@
 	if (notice)
 		message = "A notice pops up on the interface: \"[message]\""
 	if (target)
-		to_chat(usr, "<span class='notice'>[message]</span>")
+		to_chat(usr, span_notice("[message]"))
 
 /obj/machinery/petrification/proc/petrify(var/obj/item/petrifier/petrifier = null)
 	. = FALSE
@@ -118,7 +118,7 @@
 	var/datum/component/gargoyle/comp = statue.GetComponent(/datum/component/gargoyle)
 	if (no_clothes)
 		for(var/obj/item/W in statue)
-			if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
+			if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
 				continue
 			statue.drop_from_inventory(W)
 
@@ -135,7 +135,7 @@
 		comp?.cooldown = INFINITY
 
 	if (!petrifier)
-		visible_message("<span class='notice'>A ray of purple light streams out of \the [src], aimed directly at [statue]. Everywhere the light touches on them quickly [adj] into [mat].</span>")
+		visible_message(span_notice("A ray of purple light streams out of \the [src], aimed directly at [statue]. Everywhere the light touches on them quickly [adj] into [mat]."))
 	SStgui.update_uis(src)
 	return TRUE
 
@@ -234,7 +234,7 @@
 			if (is_valid_target(target) && istext(material) && istext(identifier) && istext(adjective) && istext(tint))
 				var/obj/item/petrifier/PE = remotes[target]
 				if (!QDELETED(PE))
-					PE.visible_message("<span class='warning'>\The [PE] disappears!</span>")
+					PE.visible_message(span_warning("\The [PE] disappears!"))
 					qdel(PE)
 				var/obj/item/petrifier/P = new(loc, src)
 				P.material = material
@@ -249,6 +249,6 @@
 			return TRUE
 	return TRUE
 
-/obj/item/weapon/paper/petrification_notes
+/obj/item/paper/petrification_notes
 	name = "written notes"
-	info = "<font face=\"Times New Roman\"><i>Found this buried in the machine over there after digging through it a bit- I hooked it up to one of our displays so it was a bit more usable- seems to be a spare part, it was right next to another one that actually <b>was</b> hooked up. Turns things into other materials, probably one of the components that makes that machine work.</i></font>"
+	info = "<font face=\"Times New Roman\">" + span_italics("Found this buried in the machine over there after digging through it a bit- I hooked it up to one of our displays so it was a bit more usable- seems to be a spare part, it was right next to another one that actually " + span_bold("was") + " hooked up. Turns things into other materials, probably one of the components that makes that machine work.") + "</font>"

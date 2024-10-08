@@ -159,7 +159,7 @@
 			if(antag.add_antagonist(src, 1, 1, 0, 1, 1)) // Ignore equipment and role type for this.
 				log_admin("[key_name_admin(usr)] made [key_name(src)] into a [antag.role_text].")
 			else
-				to_chat(usr, "<span class='warning'>[src] could not be made into a [antag.role_text]!</span>")
+				to_chat(usr, span_warning("[src] could not be made into a [antag.role_text]!"))
 
 	else if(href_list["remove_antagonist"])
 		var/datum/antagonist/antag = all_antag_types[href_list["remove_antagonist"]]
@@ -196,7 +196,7 @@
 			return
 		if(mind)
 			mind.ambitions = sanitize(new_ambition)
-			to_chat(mind.current, "<span class='warning'>Your ambitions have been changed by higher powers, they are now: [mind.ambitions]</span>")
+			to_chat(mind.current, span_warning("Your ambitions have been changed by higher powers, they are now: [mind.ambitions]"))
 		log_and_message_admins("made [key_name(mind.current)]'s ambitions be '[mind.ambitions]'.")
 
 	else if (href_list["obj_edit"] || href_list["obj_add"])
@@ -341,15 +341,15 @@
 
 		switch(href_list["implant"])
 			if("remove")
-				for(var/obj/item/weapon/implant/loyalty/I in H.contents)
+				for(var/obj/item/implant/loyalty/I in H.contents)
 					for(var/obj/item/organ/external/organs in H.organs)
 						if(I in organs.implants)
 							qdel(I)
 							break
-				to_chat(H, "<span class='notice'><font size =3><B>Your loyalty implant has been deactivated.</B></font></span>")
+				to_chat(H, span_notice("<font size =3><B>Your loyalty implant has been deactivated.</B></font>"))
 				log_admin("[key_name_admin(usr)] has de-loyalty implanted [current].")
 			if("add")
-				to_chat(H, "<span class='danger'><font size =3>You somehow have become the recepient of a loyalty transplant, and it just activated!</font></span>")
+				to_chat(H, span_danger("<font size =3>You somehow have become the recepient of a loyalty transplant, and it just activated!</font>"))
 				H.implant_loyalty(override = TRUE)
 				log_admin("[key_name_admin(usr)] has loyalty implanted [current].")
 			else
@@ -403,7 +403,7 @@
 				memory = null//Remove any memory they may have had.
 			if("crystals")
 				if (usr.client.holder.rights & R_FUN)
-				//	var/obj/item/device/uplink/hidden/suplink = find_syndicate_uplink() No longer needed, uses stored in mind
+				//	var/obj/item/uplink/hidden/suplink = find_syndicate_uplink() No longer needed, uses stored in mind
 					var/crystals
 					crystals = tcrystals
 					crystals = tgui_input_number(usr, "Amount of telecrystals for [key]", crystals)
@@ -426,7 +426,7 @@
 	return null
 
 /datum/mind/proc/take_uplink()
-	var/obj/item/device/uplink/hidden/H = find_syndicate_uplink()
+	var/obj/item/uplink/hidden/H = find_syndicate_uplink()
 	if(H)
 		qdel(H)
 
@@ -441,10 +441,10 @@
 	var/is_currently_brigged = 0
 	if(istype(T.loc,/area/security/brig))
 		is_currently_brigged = 1
-		for(var/obj/item/weapon/card/id/card in current)
+		for(var/obj/item/card/id/card in current)
 			is_currently_brigged = 0
 			break // if they still have ID they're not brigged
-		for(var/obj/item/device/pda/P in current)
+		for(var/obj/item/pda/P in current)
 			if(P.id)
 				is_currently_brigged = 0
 				break // if they still have ID they're not brigged

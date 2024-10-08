@@ -119,7 +119,7 @@
 /area/submap/CaveS)
 "S" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/rig/industrial,
+/obj/item/rig/industrial,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -132,22 +132,22 @@
 /area/submap/CaveS)
 "X" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/pill/healing_nanites,
-/obj/item/weapon/reagent_containers/pill/healing_nanites,
+/obj/item/reagent_containers/pill/healing_nanites,
+/obj/item/reagent_containers/pill/healing_nanites,
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/acidspit,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/cola,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/dexalin,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/hot_coco,
+/obj/item/reagent_containers/chem_disp_cartridge/acidspit,
+/obj/item/reagent_containers/chem_disp_cartridge/cola,
+/obj/item/reagent_containers/chem_disp_cartridge/dexalin,
+/obj/item/reagent_containers/chem_disp_cartridge/hot_coco,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "Y" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/kinetic_crusher,
+/obj/item/kinetic_crusher,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},

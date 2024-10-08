@@ -1,5 +1,5 @@
 //Universal translator
-/obj/item/device/universal_translator
+/obj/item/universal_translator
 	name = "handheld translator"
 	desc = "This handy device appears to translate the languages it hears into onscreen text for a user."
 	icon = 'icons/obj/device.dmi'
@@ -12,28 +12,28 @@
 	var/listening = 0
 	var/datum/language/langset
 
-/obj/item/device/universal_translator/attack_self(mob/user)
+/obj/item/universal_translator/attack_self(mob/user)
 	if(!listening) //Turning ON
 		langset = tgui_input_list(user,"Translate to which of your languages?","Language Selection", user.languages)
 		if(langset)
 			if(langset && ((langset.flags & NONVERBAL) || (langset.flags & HIVEMIND) || (!langset.machine_understands)))
 				//Nonverbal means no spoken words to translate, so I didn't see the need to remove it.
-				to_chat(user, "<span class='warning'>\The [src] cannot output that language.</span>")
+				to_chat(user, span_warning("\The [src] cannot output that language."))
 				return
 			else
 				listening = 1
 				listening_objects |= src
 				if(mult_icons)
 					icon_state = "[initial(icon_state)]1"
-				to_chat(user, "<span class='notice'>You enable \the [src], translating into [langset.name].</span>")
+				to_chat(user, span_notice("You enable \the [src], translating into [langset.name]."))
 	else	//Turning OFF
 		listening = 0
 		listening_objects -= src
 		langset = null
 		icon_state = "[initial(icon_state)]"
-		to_chat(user, "<span class='notice'>You disable \the [src].</span>")
+		to_chat(user, span_notice("You disable \the [src]."))
 
-/obj/item/device/universal_translator/hear_talk(mob/M, list/message_pieces, verb)
+/obj/item/universal_translator/hear_talk(mob/M, list/message_pieces, verb)
 	if(!listening || !istype(M))
 		return
 
@@ -71,16 +71,16 @@
 	if(!L.say_understands(null, langset))
 		new_message = langset.scramble(new_message)
 
-	to_chat(L, "<span class='filter_say'><i><b>[src]</b> translates, </i>\"<span class='[langset.colour]'>[new_message]</span>\"</span>")
+	to_chat(L, span_filter_say("<i><b>[src]</b> translates, </i>\"<span class='[langset.colour]'>[new_message]</span>\""))
 
-/obj/item/device/universal_translator/proc/user_understands(mob/M, mob/living/L, list/message_pieces)
+/obj/item/universal_translator/proc/user_understands(mob/M, mob/living/L, list/message_pieces)
 	for(var/datum/multilingual_say_piece/S in message_pieces)
 		if(S.speaking && !L.say_understands(M, S.speaking))
 			return FALSE
 	return TRUE
 
 //Let's try an ear-worn version
-/obj/item/device/universal_translator/ear
+/obj/item/universal_translator/ear
 	name = "translator earpiece"
 	desc = "This handy device appears to translate the languages it hears into another language for a user."
 	icon_state = "earpiece"

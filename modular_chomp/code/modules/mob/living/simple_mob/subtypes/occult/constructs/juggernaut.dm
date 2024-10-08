@@ -19,14 +19,14 @@
 	projectiletype = /obj/item/projectile/energy/inversion
 	movement_cooldown = 1
 
-	loot_list = list(/obj/item/weapon/rig/ch/aegis = 100)
+	loot_list = list(/obj/item/rig/ch/aegis = 100)
 
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/unstoppable/bullet_act(var/obj/item/projectile/P)
 	var/reflectchance = 100 - round(P.damage*2)
 	if(prob(reflectchance))
-		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))
 
 		// Find a turf near or on the original location to bounce to
 		if(P.starting)

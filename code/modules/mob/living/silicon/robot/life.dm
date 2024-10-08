@@ -333,7 +333,7 @@
 	if(client)
 		client.screen -= contents
 		for(var/obj/I in contents)
-			if(I && !(istype(I,/obj/item/weapon/cell) || istype(I,/obj/item/device/radio)  || istype(I,/obj/machinery/camera) || istype(I,/obj/item/device/mmi)))
+			if(I && !(istype(I,/obj/item/cell) || istype(I,/obj/item/radio)  || istype(I,/obj/machinery/camera) || istype(I,/obj/item/mmi)))
 				client.screen += I
 	if(module_state_1)
 		module_state_1:screen_loc = ui_inv1
@@ -348,7 +348,7 @@
 		killswitch_time --
 		if(killswitch_time <= 0)
 			if(src.client)
-				to_chat(src, "<span class='danger'>Killswitch Activated</span>")
+				to_chat(src, span_danger("Killswitch Activated"))
 			killswitch = 0
 			spawn(5)
 				gib()
@@ -359,7 +359,7 @@
 		weaponlock_time --
 		if(weaponlock_time <= 0)
 			if(src.client)
-				to_chat(src, "<span class='danger'>Weapon Lock Timed Out!</span>")
+				to_chat(src, span_danger("Weapon Lock Timed Out!"))
 			weapon_lock = 0
 			weaponlock_time = 120
 

@@ -603,7 +603,7 @@ var/global/floorIsLava = 0
 	if(!confirm || confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		to_world("<span class='danger'>Restarting world!</span> <span class='notice'>Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]!</span>")
+		to_world(span_danger("Restarting world!" ) + span_notice("Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]!"))
 		log_admin("[key_name(usr)] initiated a reboot.")
 
 		feedback_set_details("end_error","admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]")
@@ -702,12 +702,12 @@ var/datum/announcement/minor/admin_min_announcer = new
 	//Time to find how they screwed up.
 	//Wasn't the right length
 	if((decomposed.len) % 3) //+1 to accomidate the lack of a wait time for the last message
-		to_chat(usr, "<span class='warning'>You passed [decomposed.len] segments (senders+messages+pauses). You must pass a multiple of 3, minus 1 (no pause after the last message). That means a sender and message on every other line (starting on the first), separated by a pipe character (|), and a number every other line that is a pause in seconds.</span>")
+		to_chat(usr, span_warning("You passed [decomposed.len] segments (senders+messages+pauses). You must pass a multiple of 3, minus 1 (no pause after the last message). That means a sender and message on every other line (starting on the first), separated by a pipe character (|), and a number every other line that is a pause in seconds."))
 		return
 
 	//Too long a conversation
 	if((decomposed.len / 3) > 20)
-		to_chat(usr, "<span class='warning'>This conversation is too long! 20 messages maximum, please.</span>")
+		to_chat(usr, span_warning("This conversation is too long! 20 messages maximum, please."))
 		return
 
 	//Missed some sleeps, or sanitized to nothing.
@@ -716,24 +716,24 @@ var/datum/announcement/minor/admin_min_announcer = new
 		//Sanitize sender
 		var/clean_sender = sanitize(decomposed[i])
 		if(!clean_sender)
-			to_chat(usr, "<span class='warning'>One part of your conversation was not able to be sanitized. It was the sender of the [(i+2)/3]\th message.</span>")
+			to_chat(usr, span_warning("One part of your conversation was not able to be sanitized. It was the sender of the [(i+2)/3]\th message."))
 			return
 		decomposed[i] = clean_sender
 
 		//Sanitize message
 		var/clean_message = sanitize(decomposed[++i])
 		if(!clean_message)
-			to_chat(usr, "<span class='warning'>One part of your conversation was not able to be sanitized. It was the body of the [(i+2)/3]\th message.</span>")
+			to_chat(usr, span_warning("One part of your conversation was not able to be sanitized. It was the body of the [(i+2)/3]\th message."))
 			return
 		decomposed[i] = clean_message
 
 		//Sanitize wait time
 		var/clean_time = text2num(decomposed[++i])
 		if(!isnum(clean_time))
-			to_chat(usr, "<span class='warning'>One part of your conversation was not able to be sanitized. It was the wait time after the [(i+2)/3]\th message.</span>")
+			to_chat(usr, span_warning("One part of your conversation was not able to be sanitized. It was the wait time after the [(i+2)/3]\th message."))
 			return
 		if(clean_time > 60)
-			to_chat(usr, "<span class='warning'>Max 60 second wait time between messages for sanity's sake please.</span>")
+			to_chat(usr, span_warning("Max 60 second wait time between messages for sanity's sake please."))
 			return
 		decomposed[i] = clean_time
 
@@ -842,7 +842,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if(!check_rights(R_SERVER|R_EVENT))
 		return
 	if(SSticker.current_state > GAME_STATE_PREGAME)
-		to_chat(usr, "<span class='warning'>Error: Start Now: Game has already started.</span>")
+		to_chat(usr, span_warning("Error: Start Now: Game has already started."))
 		return
 	if(!SSticker.start_immediately)
 		SSticker.start_immediately = TRUE
@@ -850,11 +850,11 @@ var/datum/announcement/minor/admin_min_announcer = new
 		if(SSticker.current_state == GAME_STATE_INIT)
 			msg = " (The server is still setting up, but the round will be started as soon as possible.)"
 		log_admin("[key_name(usr)] has started the game.[msg]")
-		message_admins("<span class='notice'>[key_name_admin(usr)] has started the game.[msg]</span>")
+		message_admins(span_notice("[key_name_admin(usr)] has started the game.[msg]"))
 		feedback_add_details("admin_verb","SN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	else
 		SSticker.start_immediately = FALSE
-		to_world("<span class='notice'>Immediate game start canceled.  Normal startup resumed.</span>")
+		to_world(span_notice("Immediate game start canceled.  Normal startup resumed."))
 		log_and_message_admins("cancelled immediate game start.")
 
 /datum/admins/proc/toggleenter()
@@ -1396,7 +1396,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 		if(body)
 			if(body.teleop)
 				body.teleop = tomob
-	message_admins("<span class='adminnotice'>[key_name_admin(usr)] has put [frommob.ckey] in control of [tomob.name].</span>")
+	message_admins(span_adminnotice("[key_name_admin(usr)] has put [frommob.ckey] in control of [tomob.name]."))
 	log_admin("[key_name(usr)] stuffed [frommob.ckey] into [tomob.name].")
 	feedback_add_details("admin_verb","CGD")
 	tomob.ckey = frommob.ckey
@@ -1512,7 +1512,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 			var/replyorigin = tgui_input_text(src.owner, "Please specify who the fax is coming from", "Origin")
 
-			var/obj/item/weapon/paper/admin/P = new /obj/item/weapon/paper/admin( null ) //hopefully the null loc won't cause trouble for us
+			var/obj/item/paper/admin/P = new /obj/item/paper/admin( null ) //hopefully the null loc won't cause trouble for us
 			faxreply = P
 
 			P.admindatum = src
@@ -1522,9 +1522,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 			P.adminbrowse()
 
 
-/datum/admins/var/obj/item/weapon/paper/admin/faxreply // var to hold fax replies in
+/datum/admins/var/obj/item/paper/admin/faxreply // var to hold fax replies in
 
-/datum/admins/proc/faxCallback(var/obj/item/weapon/paper/admin/P, var/obj/machinery/photocopier/faxmachine/destination)
+/datum/admins/proc/faxCallback(var/obj/item/paper/admin/P, var/obj/machinery/photocopier/faxmachine/destination)
 	var/customname = tgui_input_text(src.owner, "Pick a title for the report", "Title")
 
 	P.name = "[P.origin] - [customname]"
@@ -1553,7 +1553,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 		if(!P.stamped)
 			P.stamped = new
-		P.stamped += /obj/item/weapon/stamp/centcomm
+		P.stamped += /obj/item/stamp/centcomm
 		P.add_overlay(stampoverlay)
 
 	var/obj/item/rcvdcopy
@@ -1564,17 +1564,17 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 
 	if(destination.receivefax(P))
-		to_chat(src.owner, "<span class='notice'>Message reply to transmitted successfully.</span>")
+		to_chat(src.owner, span_notice("Message reply to transmitted successfully."))
 		if(P.sender) // sent as a reply
 			log_admin("[key_name(src.owner)] replied to a fax message from [key_name(P.sender)]")
 			for(var/client/C in GLOB.admins)
 				if((R_ADMIN | R_MOD | R_EVENT) & C.holder.rights)
-					to_chat(C, "<span class='log_message'><span class='prefix'>FAX LOG:</span>[key_name_admin(src.owner)] replied to a fax message from [key_name_admin(P.sender)] (<a href='?_src_=holder;[HrefToken()];AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>")
+					to_chat(C, span_log_message("[span_prefix("FAX LOG:")][key_name_admin(src.owner)] replied to a fax message from [key_name_admin(P.sender)] (<a href='?_src_=holder;[HrefToken()];AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)"))
 		else
 			log_admin("[key_name(src.owner)] has sent a fax message to [destination.department]")
 			for(var/client/C in GLOB.admins)
 				if((R_ADMIN | R_MOD | R_EVENT) & C.holder.rights)
-					to_chat(C, "<span class='log_message'><span class='prefix'>FAX LOG:</span>[key_name_admin(src.owner)] has sent a fax message to [destination.department] (<a href='?_src_=holder;[HrefToken()];AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>")
+					to_chat(C, span_log_message("[span_prefix("FAX LOG:")][key_name_admin(src.owner)] has sent a fax message to [destination.department] (<a href='?_src_=holder;[HrefToken()];AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)"))
 
 		var/plaintext_title = P.sender ? "replied to [key_name(P.sender)]'s fax" : "sent a fax message to [destination.department]"
 		var/fax_text = paper_html_to_plaintext(P.info)
@@ -1590,7 +1590,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 		)
 
 	else
-		to_chat(src.owner, "<span class='warning'>Message reply failed.</span>")
+		to_chat(src.owner, span_warning("Message reply failed."))
 
 	spawn(100)
 		qdel(P)

@@ -21,11 +21,11 @@
 
 	if(usr == src) //client-called emote
 		if (client && (client.prefs.muted & MUTE_IC))
-			to_chat(src, "<span class='warning'>You cannot send IC messages (muted).</span>")
+			to_chat(src, span_warning("You cannot send IC messages (muted)."))
 			return
 
 		if(world.time < next_emote)
-			to_chat(src, SPAN_WARNING("You cannot use another emote yet."))
+			to_chat(src, span_warning("You cannot use another emote yet."))
 			return
 		//VOREStation Addition Start
 		if(forced_psay)
@@ -49,7 +49,7 @@
 			return
 
 		if(!can_emote(m_type))
-			to_chat(src, SPAN_WARNING("You cannot currently [m_type == AUDIBLE_MESSAGE ? "audibly" : "visually"] emote!"))
+			to_chat(src, span_warning("You cannot currently [m_type == AUDIBLE_MESSAGE ? "audibly" : "visually"] emote!"))
 			return
 
 		if(act == "me")
@@ -83,11 +83,11 @@
 
 	var/decl/emote/use_emote = get_emote_by_key(act)
 	if(!istype(use_emote))
-		to_chat(src, SPAN_WARNING("Unknown emote '[act]'. Type <b>say *help</b> for a list of usable emotes. ([act] [message])")) //CHOMPEdit - Add full message in the event you used * instead of ! or something like that
+		to_chat(src, span_warning("Unknown emote '[act]'. Type <b>say *help</b> for a list of usable emotes. ([act] [message])")) //CHOMPEdit - Add full message in the event you used * instead of ! or something like that
 		return
 
 	if(!use_emote.mob_can_use(src))
-		to_chat(src, SPAN_WARNING("You cannot use the emote '[act]'. Type <b>say *help</b> for a list of usable emotes."))
+		to_chat(src, span_warning("You cannot use the emote '[act]'. Type <b>say *help</b> for a list of usable emotes."))
 		return
 
 	if(m_type != use_emote.message_type && use_emote.conscious && stat != CONSCIOUS)
@@ -100,7 +100,7 @@
 
 	next_emote = world.time + use_emote.emote_delay
 	use_emote.do_emote(src, message)
-	for (var/obj/item/weapon/implant/I in src)
+	for (var/obj/item/implant/I in src)
 		if (I.implanted)
 			I.trigger(act, src)
 
@@ -130,8 +130,8 @@
 	// Oh shit, we got this far! Let's see... did the user attempt to use more than one token?
 	if(findtext(subtext, "*"))
 		// abort abort!
-		to_chat(emoter, SPAN_WARNING("You may use only one \"["*"]\" symbol in your emote."))
-		to_chat(emoter, SPAN_WARNING(message))
+		to_chat(emoter, span_warning("You may use only one \"["*"]\" symbol in your emote."))
+		to_chat(emoter, span_warning(message))
 		return
 
 	if(pretext)
@@ -189,9 +189,9 @@
 	if(input)
 		log_emote(message,src) //Log before we add junk
 		if(usr && usr.client)
-			message = "<span class='emote'><B>[src]</B> [input]</span>"
+			message = span_emote("<B>[src]</B> [input]")
 		else
-			message = "<span class='npcemote'><B>[src]</B> [input]</span>"
+			message = span_npc_emote("<B>[src]</B> [input]")
 	else
 		return
 
@@ -223,11 +223,11 @@
 			spawn(0) // It's possible that it could be deleted in the meantime, or that it runtimes.
 				if(M)
 					if(isobserver(M))
-						message = "<span class='emote'><B>[src]</B> ([ghost_follow_link(src, M)]) [input]</span>"
+						message = span_emote("<B>[src]</B> ([ghost_follow_link(src, M)]) [input]")
 					if(usr && usr.client && M && !(get_z(usr) == get_z(M)))
-						message = "<span class='multizsay'>[message]</span>"
+						message = span_multizsay("[message]")
 					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
-					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/weapon/holder) && src.loc.loc == M)))
+					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/holder) && src.loc.loc == M)))
 						M.show_message(message)
 					else
 						M.show_message(message, m_type)

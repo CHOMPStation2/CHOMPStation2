@@ -98,8 +98,8 @@
 "ak" = (
 /obj/structure/table/standard,
 /obj/machinery/light,
-/obj/item/device/radio,
-/obj/item/device/radio/intercom{
+/obj/item/radio,
+/obj/item/radio/intercom{
 	pixel_y = -32
 	},
 /turf/simulated/floor{
@@ -264,7 +264,7 @@
 	 icon_state = "tube1";
 	dir = 8
 	},
-/obj/item/weapon/gun/energy/stunrevolver,
+/obj/item/gun/energy/stunrevolver,
 /obj/structure/closet/cabinet,
 /turf/simulated/floor{
 	 icon_state = "cult";
@@ -273,15 +273,15 @@
 /area/ship/scrap/command/captain)
 "az" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /turf/simulated/floor{
 	 icon_state = "cult";
 	dir = 2
 	},
 /area/ship/scrap/command/captain)
 "aA" = (
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /obj/structure/table/woodentable,
 /obj/machinery/alarm{
 	dir = 8;
@@ -444,7 +444,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -32
 	},
 /obj/machinery/alarm{
@@ -482,11 +482,11 @@
 	 icon_state = "tube1";
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_x = -32
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/shotgun/pump/combat{
+/obj/item/gun/projectile/shotgun/pump/combat{
 	desc = "When words don't strike hard enough.";
 	name = "Solid Argument"
 	},
@@ -822,7 +822,7 @@
 /area/ship/scrap/dock)
 "bx" = (
 /obj/structure/closet/walllocker/emerglocker/south,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_x = -32
 	},
 /turf/simulated/floor{
@@ -925,7 +925,7 @@
 	level = 2;
 	on = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -32
 	},
 /obj/machinery/alarm{
@@ -962,7 +962,7 @@
 	level = 2;
 	on = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -32
 	},
 /obj/machinery/alarm{
@@ -1216,7 +1216,7 @@
 	 icon_state = "bulb1";
 	dir = 8
 	},
-/obj/item/weapon/crowbar,
+/obj/item/crowbar,
 /obj/machinery/atmospherics/pipe/simple{
 	 icon_state = "intact";
 	dir = 2;
@@ -1267,7 +1267,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/simulated/floor{
 	 icon_state = "hydrofloor";
 	dir = 6
@@ -1426,7 +1426,7 @@
 /area/ship/scrap/crew/dorms)
 "cv" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor,
 /area/ship/scrap/crew/dorms)
 "cw" = (
@@ -1707,7 +1707,7 @@
 	level = 2;
 	on = 1
 	},
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /turf/simulated/floor{
 	 icon_state = "floorgrime";
 	dir = 6
@@ -1854,7 +1854,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -32
 	},
 /turf/simulated/floor{
@@ -1893,7 +1893,7 @@
 /area/ship/scrap/crew)
 "cZ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_x = -32
 	},
 /obj/structure/cable{
@@ -1905,7 +1905,7 @@
 /area/ship/scrap/crew/dorms)
 "da" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/orange,
+/obj/item/bedsheet/orange,
 /turf/simulated/floor,
 /area/ship/scrap/crew/dorms)
 "db" = (
@@ -1975,7 +1975,7 @@
 "di" = (
 /obj/structure/stool/bed,
 /obj/structure/closet/walllocker/emerglocker/south,
-/obj/item/weapon/bedsheet/green,
+/obj/item/bedsheet/green,
 /turf/simulated/floor,
 /area/ship/scrap/crew/dorms)
 "dj" = (
@@ -1996,7 +1996,7 @@
 /area/ship/scrap/crew/kitchen)
 "dl" = (
 /obj/machinery/processor,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = 32
 	},
 /turf/simulated/floor{
@@ -2046,7 +2046,7 @@
 	 icon_state = "bulb1";
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = 32
 	},
 /turf/simulated/floor{
@@ -2271,8 +2271,8 @@
 /area/ship/scrap/crew/medbay)
 "dL" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/medical,
-/obj/item/device/radio/intercom{
+/obj/item/bedsheet/medical,
+/obj/item/radio/intercom{
 	pixel_y = 32
 	},
 /obj/machinery/alarm{
@@ -2296,7 +2296,7 @@
 	 icon_state = "bulb1";
 	dir = 8
 	},
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/simulated/floor{
 	 icon_state = "bar";
 	dir = 6
@@ -2553,7 +2553,7 @@
 /turf/simulated/wall/r_wall,
 /area/ship/scrap/maintenance/engine)
 "ef" = (
-/obj/item/weapon/storage/pill_bottle/happy,
+/obj/item/storage/pill_bottle/happy,
 /turf/simulated/floor/plating{
 	dir = 2;
 	icon_state = "warnplate"
@@ -2659,8 +2659,8 @@
 /area/ship/scrap/cargo)
 "ep" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/pill_bottle/kelotane,
-/obj/item/weapon/storage/box/syringes,
+/obj/item/storage/pill_bottle/kelotane,
+/obj/item/storage/box/syringes,
 /obj/structure/cable,
 /obj/machinery/power/apc{
 	name = "Medical Bay APC"
@@ -2674,8 +2674,8 @@
 /area/ship/scrap/crew/medbay)
 "eq" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/pill_bottle/kelotane,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/pill_bottle/kelotane,
 /obj/item/clothing/tie/stethoscope,
 /turf/simulated/floor{
 	icon_state = "white"
@@ -2683,14 +2683,14 @@
 /area/ship/scrap/crew/medbay)
 "er" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid,
-/obj/item/device/healthanalyzer,
+/obj/item/storage/firstaid,
+/obj/item/healthanalyzer,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
 /area/ship/scrap/crew/medbay)
 "es" = (
-/obj/item/device/radio,
+/obj/item/radio,
 /turf/simulated/floor/plating,
 /area)
 "et" = (
@@ -2698,8 +2698,8 @@
 	 icon_state = "bulb1";
 	dir = 1
 	},
-/obj/item/weapon/coin/gold,
-/obj/item/weapon/coin/silver,
+/obj/item/coin/gold,
+/obj/item/coin/silver,
 /turf/simulated/floor/plating{
 	dir = 2;
 	icon_state = "warnplate"
@@ -2728,7 +2728,7 @@
 /turf/simulated/floor/plating/airless,
 /area/ship/scrap/maintenance/engine)
 "ex" = (
-/obj/item/weapon/screwdriver,
+/obj/item/screwdriver,
 /turf/simulated/floor/plating,
 /area)
 "ey" = (
@@ -2817,7 +2817,7 @@
 	 icon_state = "bulb1";
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/pipe/simple{
@@ -3065,13 +3065,13 @@
 /area/ship/scrap/crew)
 "ff" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical{
 	pixel_x = 7;
 	pixel_y = 4
 	},
-/obj/item/device/t_scanner,
-/obj/item/weapon/cell/high,
+/obj/item/t_scanner,
+/obj/item/cell/high,
 /obj/machinery/light_switch{
 	pixel_y = 25
 	},
@@ -3088,7 +3088,7 @@
 	 icon_state = "bulb1";
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = 32
 	},
 /obj/machinery/vending/tool,
@@ -3130,7 +3130,7 @@
 /area/ship/scrap/maintenance/storage)
 "fj" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/jetpack/oxygen,
+/obj/item/tank/jetpack/oxygen,
 /obj/item/clothing/suit/space/rig,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/head/helmet/space/rig,
@@ -3155,7 +3155,7 @@
 /area/ship/scrap/crew)
 "fl" = (
 /obj/effect/decal/cleanable/generic,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/plating,
 /area/ship/scrap/unused2)
 "fm" = (
@@ -3225,13 +3225,13 @@
 /area/ship/scrap/crew)
 "ft" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_x = 5;
 	pixel_y = -7
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/item/clothing/head/welding,
-/obj/item/device/analyzer,
+/obj/item/analyzer,
 /turf/simulated/floor{
 	 icon_state = "orange";
 	dir = 8
@@ -3276,7 +3276,7 @@
 /area/ship/scrap/maintenance/storage)
 "fx" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/jetpack/oxygen,
+/obj/item/tank/jetpack/oxygen,
 /obj/item/clothing/suit/space/rig,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/head/helmet/space/rig,
@@ -3513,10 +3513,10 @@
 /area/ship/scrap/maintenance)
 "fR" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/box/lights/bulbs,
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/mixed,
 /obj/structure/cable,
 /obj/machinery/power/apc{
 	name = "Tools Storage APC"
@@ -3529,7 +3529,7 @@
 "fS" = (
 /obj/structure/table/standard,
 /obj/item/clothing/head/welding,
-/obj/item/device/radio,
+/obj/item/radio,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -3707,8 +3707,8 @@
 /area/ship/scrap/unused3)
 "gi" = (
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight/lamp,
-/obj/item/weapon/spacecash/c1000,
+/obj/item/flashlight/lamp,
+/obj/item/spacecash/c1000,
 /turf/simulated/floor/plating,
 /area/ship/scrap/unused3)
 "gj" = (
@@ -3805,7 +3805,7 @@
 	 icon_state = "bulb1";
 	dir = 1
 	},
-/obj/item/weapon/crowbar,
+/obj/item/crowbar,
 /turf/simulated/floor/plating,
 /area/ship/scrap/maintenance)
 "gr" = (
@@ -3924,7 +3924,7 @@
 "gF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = 32
 	},
 /obj/structure/cable{
@@ -4009,8 +4009,8 @@
 /area/ship/scrap/maintenance/power)
 "gL" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/flashlight,
+/obj/item/storage/toolbox/electrical{
 	pixel_x = 7;
 	pixel_y = 4
 	},

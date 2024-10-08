@@ -7,25 +7,25 @@
 	each component spell. Hark, reader beware! To peruse beyond permission of the mighty Wizard Federation is to \
 	be struck with a 10,000 year imprisonment curse of cuboidal containment sphere!\
 	<br><br>\
-	<hr><b>Heat Applicator</b>: A device, commonly of metal, into which component spells are inserted and transmogrified \
+	<hr>" + span_bold("Heat Applicator") + ": A device, commonly of metal, into which component spells are inserted and transmogrified \
 	into the Gustomancic Product. Applicators convert Electromancy into heat, and may require heating to an ideal \
 	temperature before spellcrafting. Overapplication will result in failure of the spell, and respiratory distress! \
 	<br>\
-	<hr><b>Pure Fluids</b>: A purified substance, typically of liquid form, added to the Applicator from a fluid vessel. \
+	<hr>" + span_bold("Pure Fluids") + ": A purified substance, typically of liquid form, added to the Applicator from a fluid vessel. \
 	Fluids are typically extracted from a bearing object, ground from bulk form, or produced by Chemomancy. \
 	<br>\
-	<hr><b>Material Objects</b>: Any component spell object not created by Botanomancy. Most are created by lesser \
+	<hr>" + span_bold("Material Objects") + ": Any component spell object not created by Botanomancy. Most are created by lesser \
 	Gustomancy tools or Gustomancy spells. Others may require creative acquistion methods! \
 	<br>\
-	<hr><b>Grown Produce</b>: A product of the soils and vessels of Botanomancy, typically fruit or vegetable. The \
+	<hr>" + span_bold("Grown Produce") + ": A product of the soils and vessels of Botanomancy, typically fruit or vegetable. The \
 	methods of Botanomancy lie beyond the scope of this Gustomancy tome! \
 	<br>\
-	<hr><b>Cooked Shell</b>: A coating of specified pure fluid, typically batter, applied to all component spell \
+	<hr>" + span_bold("Cooked Shell") + ": A coating of specified pure fluid, typically batter, applied to all component spell \
 	objects. Traditionally, specified fluid is placed in a glass vessel and each component spell dipped within. \
 	<br>\
-	<hr><b>Temporal Shift</b>: Length of passage through the temporial medium, unaffected by Chronomancy. \
+	<hr>" + span_bold("Temporal Shift") + ": Length of passage through the temporial medium, unaffected by Chronomancy. \
 	<br>\
-	<hr><b>Meal Quantity</b>: Number of uses of the completed spell. \
+	<hr>" + span_bold("Meal Quantity") + ": Number of uses of the completed spell. \
 	<hr><br><br>\
 	The segmented fusion of Gustomancy and Chemomancy is currently beyond the scope of this tome, as is the \
 	usage of simple Gustomantic techniques such as rolling flat and slicing dough. The Gustomancer is reminded \
@@ -76,7 +76,7 @@
 				text = "Cereal maker"
 			else
 				text = ""
-		D.data = "<b>Heat Applicator</b>: [text ? text : "none"]<br>"
+		D.data = span_bold("Heat Applicator") + ": [text ? text : "none"]<br>"
 		text = ""
 
 		if(LAZYLEN(R.reagents))
@@ -86,7 +86,7 @@
 					text += ", "
 				text += "[capitalize(thing)]: [R.reagents[thing]] units"
 				i++
-		D.data += "<b>Pure Fluids</b>: [text ? text : "none"]<br>"
+		D.data += span_bold("Pure Fluids") + ": [text ? text : "none"]<br>"
 		text = ""
 
 		if(LAZYLEN(R.items))
@@ -96,7 +96,7 @@
 					text += ", "
 				text += "[capitalize(initial(AM.name))]"
 				i++
-		D.data += "<b>Material Objects</b>: [text ? text : "none"]<br>"
+		D.data += span_bold("Material Objects") + ": [text ? text : "none"]<br>"
 		text = ""
 
 		if(LAZYLEN(R.fruit)) // Inelegant copypasta time
@@ -106,23 +106,23 @@
 					text += ", "
 				text += "[capitalize(thing)]: [R.fruit[thing]] quantity"
 				i++
-		D.data += "<b>Grown Produce</b>: [text ? text : "none"]<br>"
+		D.data += span_bold("Grown Produce") + ": [text ? text : "none"]<br>"
 		text = ""
 
 		if(R.coating)
 			var/datum/reagent/ooze = initial(R.coating) // Datum typepath
 			text = capitalize(initial(ooze.name))
-		D.data += "<b>Cooked Shell</b>: [text ? text : "none"]<br>"
+		D.data += span_bold("Cooked Shell") + ": [text ? text : "none"]<br>"
 		text = 0
 
 		if(R.time) // Deciseconds
 			text = R.time
-		D.data += "<b>Temporal Shift</b>: [text ? text/10 : 0] second\s<br>"
+		D.data += span_bold("Temporal Shift") + ": [text ? text/10 : 0] second\s<br>"
 		text = 0
 
 		if(R.result_quantity) // Should never be null.
 			text = R.result_quantity
-		D.data += "<b>Meal Quantity</b>: [text ? text : 0] plate\s<br>"
+		D.data += span_bold("Meal Quantity") + ": [text ? text : 0] plate\s<br>"
 
 		new_children_list[D.name] = D // We make this an associative list so we can alphabetize later
 		qdel(R) // Delete recipe datum after we're done with it

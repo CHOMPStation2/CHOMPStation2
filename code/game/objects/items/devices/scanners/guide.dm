@@ -1,22 +1,22 @@
-/obj/item/device/healthanalyzer/verb/toggle_guide()
+/obj/item/healthanalyzer/verb/toggle_guide()
 	set name = "Toggle Guidance"
 	set desc = "Toggles whether or not \the [src] will provide guidance and instruction in addition to scanning."
 	set category = "Object"
 	guide = !guide
-	to_chat(usr, "<span class='notice'>You toggle \the [src]'s guidance system [guide ? "on" : "off"].</span>")
+	to_chat(usr, span_notice("You toggle \the [src]'s guidance system [guide ? "on" : "off"]."))
 
 
-/obj/item/device/healthanalyzer/guide
+/obj/item/healthanalyzer/guide
 	name = "Instructional health analyzer"
 	desc = "A hand-held body scanner able to distinguish vital signs of the subject. It shows extra information to medical personnel!"
 	guide = TRUE
 	icon_state = "health-g"
 
-/obj/item/device/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user)
+/obj/item/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user)
 
 /* CHOMPedit remove: Anyone can get this info. *
 
-	var/obj/item/weapon/card/id/ourid = user?.GetIdCard()
+	var/obj/item/card/id/ourid = user?.GetIdCard()
 	if(!ourid)
 		return
 	if(access_change_ids in ourid.GetAccess())
@@ -109,9 +109,10 @@
 
 	var/peeb
 	if(dat)
-		peeb +="<span class='notice'><b>GUIDANCE SYSTEM BEGIN</b></span><br>"
+		peeb += span_notice("<b>GUIDANCE SYSTEM BEGIN</b>")
+		peeb += "<br>"
 		peeb += dat
-		peeb += "<span class='notice'>For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.</span>"
+		peeb += span_notice("For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.")
 
 	user.show_message(peeb, 1)
 //CHOMPedit end.

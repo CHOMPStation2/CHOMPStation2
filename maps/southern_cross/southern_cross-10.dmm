@@ -161,9 +161,9 @@
 "aS" = (
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
+	outdoors = 1;
 	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
+	temperature = 243.15
 	},
 /area/surface/outside/path/wilderness)
 "aT" = (
@@ -268,17 +268,17 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/device/radio/subspace{
+/obj/item/radio/subspace{
 	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO WILDERNESS SHELTER!";
 	name = "Wilderness Shelter subspace radio"
 	},
-/obj/item/device/spaceflare{
-	pixel_y = -10;
-	pixel_x = 5
+/obj/item/spaceflare{
+	pixel_x = 5;
+	pixel_y = -10
 	},
-/obj/item/device/spaceflare{
-	pixel_y = -10;
-	pixel_x = -5
+/obj/item/spaceflare{
+	pixel_x = -5;
+	pixel_y = -10
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -314,11 +314,11 @@
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/outpost/wall/checkpoint)
 "bm" = (
-/obj/item/weapon/banner/nt,
+/obj/item/banner/nt,
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/outpost/wall/checkpoint)
 "bn" = (
-/obj/item/weapon/banner/virgov,
+/obj/item/banner/virgov,
 /obj/effect/zone_divider,
 /turf/simulated/shuttle/floor/voidcraft/external,
 /area/surface/outpost/wall/checkpoint)
@@ -379,8 +379,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "bx" = (
@@ -400,7 +400,7 @@
 	},
 /area/shuttle/shuttle3/mining)
 "bB" = (
-/obj/item/weapon/banner/virgov,
+/obj/item/banner/virgov,
 /obj/machinery/light/small,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
@@ -487,7 +487,7 @@
 	dir = 4
 	},
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/turcarpet,
 /area/surface/outpost/shelter/dorms)
 "cG" = (
@@ -538,7 +538,7 @@
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
 	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/firstaid/regular=2,/obj/item/weapon/storage/pill_bottle/spaceacillin)
+	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/storage/firstaid/regular=2,/obj/item/storage/pill_bottle/spaceacillin)
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -696,10 +696,10 @@
 /area/surface/outpost/shelter/utilityroom)
 "jf" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "wilderness_s";
-	name = "Wilderness Shelter";
 	base_area = /area/surface/outpost/shelter/exterior;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "wilderness_s";
+	name = "Wilderness Shelter"
 	},
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -711,12 +711,16 @@
 	tree_chance = 0
 	},
 /area/surface/outpost/shelter/exterior)
+"jz" = (
+/obj/structure/boulder,
+/turf/simulated/floor/water/deep,
+/area/surface/outside/river/svartan)
 "jX" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/shelter/dorms)
@@ -730,10 +734,10 @@
 /area/surface/outside/wilderness/normal)
 "kU" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "wilderness_se";
-	name = "Southeast of Wilderness";
 	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "wilderness_se";
+	name = "Southeast of Wilderness"
 	},
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -783,8 +787,8 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
 	},
-/obj/item/device/floor_painter,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/floor_painter,
+/obj/item/reagent_containers/spray/cleaner,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /turf/simulated/floor/plating,
@@ -802,7 +806,7 @@
 /obj/structure/frame{
 	anchored = 1
 	},
-/obj/item/device/geiger/wall/south,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "mP" = (
@@ -849,7 +853,7 @@
 /area/surface/outside/wilderness/normal)
 "oU" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/yellowdouble,
+/obj/item/bedsheet/yellowdouble,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
 "oW" = (
@@ -882,11 +886,11 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/structure/table/rack,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/item/roller,
 /obj/item/roller,
-/obj/item/weapon/storage/box/bodybags{
+/obj/item/storage/box/bodybags{
 	pixel_x = 8;
 	pixel_y = -5
 	},
@@ -897,10 +901,10 @@
 /obj/structure/closet/hydrant{
 	pixel_y = -32
 	},
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/tool/crowbar/red,
-/obj/item/weapon/tool/crowbar/red,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/tool/crowbar/red,
+/obj/item/tool/crowbar/red,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "qq" = (
@@ -920,10 +924,10 @@
 /area/surface/outside/wilderness/mountains)
 "rl" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/storage/toolbox/emergency{
+/obj/item/storage/toolbox/emergency{
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = -1
 	},
 /obj/machinery/alarm/sifwilderness{
@@ -945,15 +949,11 @@
 	tree_chance = 0
 	},
 /area/surface/outside/landing/wilderness)
-"sC" = (
-/obj/structure/railing,
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "sJ" = (
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
 	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/firstaid/regular=2,/obj/item/weapon/storage/pill_bottle/spaceacillin)
+	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/storage/firstaid/regular=2,/obj/item/storage/pill_bottle/spaceacillin)
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -1029,13 +1029,13 @@
 /area/surface/outside/wilderness/normal)
 "tS" = (
 /obj/structure/closet,
-/obj/item/weapon/storage/box/lights/bulbs,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/mixed,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/utilityroom)
 "ub" = (
@@ -1065,22 +1065,22 @@
 /area/surface/outpost/shelter/utilityroom)
 "vq" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/storage/box{
+/obj/item/storage/box{
 	max_storage_space = 20;
 	name = "box of 7.62mm practice clips";
 	pixel_x = 3;
 	pixel_y = 3;
 	starts_with = list(/obj/item/ammo_magazine/clip/c762/practice=10)
 	},
-/obj/item/weapon/storage/bag/trash{
+/obj/item/storage/bag/trash{
 	pixel_x = -9;
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/bag/trash{
+/obj/item/storage/bag/trash{
 	pixel_x = -9;
 	pixel_y = -5
 	},
-/obj/item/weapon/storage/box{
+/obj/item/storage/box{
 	max_storage_space = 20;
 	name = "box of 7.62mm practice clips";
 	pixel_x = 3;
@@ -1115,7 +1115,7 @@
 "xj" = (
 /obj/structure/closet/walllocker_double/survival/north{
 	name = "Wilderness Shelter Emergency Survival Wall Cabinet";
-	starts_with = list(/obj/item/device/gps=5,/obj/item/weapon/material/knife/tacknife/survival=5,/obj/random/mre=5,/obj/item/device/flashlight/color/yellow=5,/obj/item/device/flashlight/flare=5,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle=5,/obj/item/weapon/whetstone)
+	starts_with = list(/obj/item/gps=5,/obj/item/material/knife/tacknife/survival=5,/obj/random/mre=5,/obj/item/flashlight/color/yellow=5,/obj/item/flashlight/flare=5,/obj/item/reagent_containers/food/drinks/cans/waterbottle=5,/obj/item/whetstone)
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -1128,17 +1128,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/wilderness)
-"xx" = (
-/obj/effect/map_effect/portal/master/side_a/wilderness_to_valley{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "xA" = (
 /obj/machinery/light/bigfloorlamp,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
@@ -1185,7 +1174,7 @@
 	pixel_y = 31;
 	req_access = null;
 	req_one_access = list(1,3,43,66,67);
-	starts_with = list(/obj/item/device/defib_kit/loaded)
+	starts_with = list(/obj/item/defib_kit/loaded)
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -1213,9 +1202,9 @@
 "As" = (
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
+	outdoors = 1;
 	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
+	temperature = 243.15
 	},
 /area/surface/outside/river/svartan)
 "AB" = (
@@ -1228,15 +1217,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
-"AX" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/deep,
-/area/surface/outside/river/svartan)
 "AY" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1267,33 +1247,22 @@
 /area/surface/outpost/shelter/dorms)
 "Bz" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/practice{
+/obj/item/gun/projectile/shotgun/pump/rifle/practice{
 	pixel_y = -3
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/practice{
+/obj/item/gun/projectile/shotgun/pump/rifle/practice{
 	pixel_y = 6
 	},
-/obj/item/device/binoculars{
+/obj/item/binoculars{
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/item/device/binoculars{
+/obj/item/binoculars{
 	pixel_x = 5;
 	pixel_y = -3
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
-"BF" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15;
-	outdoors = 1
-	},
-/area/surface/outside/river/svartan)
 "BY" = (
 /obj/structure/simple_door/sifwood,
 /obj/structure/cable{
@@ -1349,7 +1318,7 @@
 /area/surface/outpost/shelter)
 "EF" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/surface/outpost/shelter/dorms)
@@ -1366,11 +1335,11 @@
 /area/surface/outside/wilderness/mountains)
 "Gd" = (
 /obj/structure/table/rack,
-/obj/item/weapon/circuitboard/machine/rtg/advanced,
-/obj/item/weapon/circuitboard/machine/rtg/advanced,
-/obj/item/weapon/circuitboard/machine/rtg/advanced,
+/obj/item/circuitboard/machine/rtg/advanced,
+/obj/item/circuitboard/machine/rtg/advanced,
+/obj/item/circuitboard/machine/rtg/advanced,
 /obj/item/stack/cable_coil,
-/obj/item/weapon/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
 /obj/random/powercell,
 /obj/random/powercell,
 /obj/random/powercell,
@@ -1461,7 +1430,7 @@
 /obj/machinery/vending/engivend{
 	desc = "Spare tool vending for the Wilderness Shelter. What? Did you expect some witty description?";
 	name = "Wild Shelter-Vend";
-	products = list(/obj/item/device/geiger=4,/obj/item/weapon/cell/high=10,/obj/item/weapon/airlock_electronics=10,/obj/item/weapon/module/power_control=10,/obj/item/weapon/circuitboard/airalarm=10,/obj/item/weapon/circuitboard/firealarm=10,/obj/item/weapon/circuitboard/status_display=2,/obj/item/weapon/circuitboard/ai_status_display=2,/obj/item/weapon/circuitboard/newscaster=2,/obj/item/weapon/circuitboard/holopad=2,/obj/item/weapon/circuitboard/intercom=4,/obj/item/weapon/circuitboard/security/telescreen/entertainment=4,/obj/item/weapon/stock_parts/motor=2,/obj/item/weapon/stock_parts/spring=2,/obj/item/weapon/stock_parts/gear=2,/obj/item/weapon/circuitboard/atm,/obj/item/weapon/circuitboard/guestpass,/obj/item/weapon/circuitboard/keycard_auth,/obj/item/weapon/circuitboard/geiger,/obj/item/weapon/circuitboard/photocopier,/obj/item/weapon/circuitboard/fax,/obj/item/weapon/circuitboard/request,/obj/item/weapon/circuitboard/microwave,/obj/item/weapon/circuitboard/washing,/obj/item/weapon/circuitboard/scanner_console,/obj/item/weapon/circuitboard/sleeper_console,/obj/item/weapon/circuitboard/body_scanner,/obj/item/weapon/circuitboard/medical_kiosk,/obj/item/weapon/circuitboard/sleeper,/obj/item/weapon/circuitboard/dna_analyzer);
+	products = list(/obj/item/geiger=4,/obj/item/cell/high=10,/obj/item/airlock_electronics=10,/obj/item/module/power_control=10,/obj/item/circuitboard/airalarm=10,/obj/item/circuitboard/firealarm=10,/obj/item/circuitboard/status_display=2,/obj/item/circuitboard/ai_status_display=2,/obj/item/circuitboard/newscaster=2,/obj/item/circuitboard/holopad=2,/obj/item/circuitboard/intercom=4,/obj/item/circuitboard/security/telescreen/entertainment=4,/obj/item/stock_parts/motor=2,/obj/item/stock_parts/spring=2,/obj/item/stock_parts/gear=2,/obj/item/circuitboard/atm,/obj/item/circuitboard/guestpass,/obj/item/circuitboard/keycard_auth,/obj/item/circuitboard/geiger,/obj/item/circuitboard/photocopier,/obj/item/circuitboard/fax,/obj/item/circuitboard/request,/obj/item/circuitboard/microwave,/obj/item/circuitboard/washing,/obj/item/circuitboard/scanner_console,/obj/item/circuitboard/sleeper_console,/obj/item/circuitboard/body_scanner,/obj/item/circuitboard/medical_kiosk,/obj/item/circuitboard/sleeper,/obj/item/circuitboard/dna_analyzer);
 	req_access = null
 	},
 /turf/simulated/floor/plating,
@@ -1484,22 +1453,22 @@
 	anchored = 1;
 	req_one_access = list(1,3,43,67)
 	},
-/obj/item/weapon/storage/box/syndie_kit{
+/obj/item/storage/box/syndie_kit{
 	max_storage_space = 20;
 	name = "box of 7.62mm clips";
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
 	},
-/obj/item/weapon/storage/box/syndie_kit{
+/obj/item/storage/box/syndie_kit{
 	max_storage_space = 20;
 	name = "box of 7.62mm clips";
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
 	},
-/obj/item/device/binoculars,
-/obj/item/device/binoculars,
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle{
+/obj/item/binoculars,
+/obj/item/binoculars,
+/obj/item/gun/projectile/shotgun/pump/rifle{
 	pixel_y = -3
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle{
+/obj/item/gun/projectile/shotgun/pump/rifle{
 	pixel_y = 6
 	},
 /turf/simulated/floor/wood/sif,
@@ -1520,17 +1489,16 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/surface/outpost/shelter/dorms)
 "LI" = (
-/obj/structure/railing{
-	dir = 8
+/obj/structure/boulder,
+/turf/simulated/floor/wood{
+	nitrogen = 93.7835;
+	outdoors = 1;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
-/turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
 "Mg" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
-	},
-/obj/structure/railing,
-/turf/simulated/floor/water/deep,
+/turf/simulated/wall/solidrock,
 /area/surface/outside/river/svartan)
 "Mk" = (
 /obj/structure/simple_door/sifwood,
@@ -1610,10 +1578,7 @@
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "Qz" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/deep,
+/turf/simulated/mineral/sif,
 /area/surface/outside/river/svartan)
 "Rc" = (
 /obj/machinery/light/small{
@@ -1650,7 +1615,7 @@
 	icon_state = "sheet-wood_3";
 	pixel_y = 2
 	},
-/obj/item/weapon/chainsaw{
+/obj/item/chainsaw{
 	layer = 3.01
 	},
 /turf/simulated/floor/plating,
@@ -1715,27 +1680,27 @@
 /area/surface/outside/landing/wilderness)
 "Uj" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = 6
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_x = -6;
 	pixel_y = 4
 	},
-/obj/item/device/radio/off,
+/obj/item/radio/off,
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
 "Us" = (
 /obj/effect/zone_divider,
 /obj/effect/shuttle_landmark/automatic/clearing{
-	name = "Northwest Outpost Perimiter";
 	base_area = /area/surface/outside/plains/normal;
 	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
-	landmark_tag = "outpost_nw"
+	landmark_tag = "outpost_nw";
+	name = "Northwest Outpost Perimiter"
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/normal)
@@ -1768,7 +1733,7 @@
 	},
 /obj/structure/closet/walllocker_double/survival/north{
 	name = "Wilderness Shelter Emergency Food Wall Cabinet";
-	starts_with = list(/obj/random/mre=20,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle=20)
+	starts_with = list(/obj/random/mre=20,/obj/item/reagent_containers/food/drinks/cans/waterbottle=20)
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
@@ -1796,7 +1761,7 @@
 	pixel_y = 31;
 	req_access = null;
 	req_one_access = list(1,3,43,66,67);
-	starts_with = list(/obj/item/device/defib_kit/loaded)
+	starts_with = list(/obj/item/defib_kit/loaded)
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -1808,10 +1773,10 @@
 /area/surface/outpost/shelter)
 "WL" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "wilderness_w";
-	name = "West of Wilderness";
 	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "wilderness_w";
+	name = "West of Wilderness"
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse{
 	tree_chance = 0
@@ -1840,7 +1805,7 @@
 /obj/structure/bedsheetbin{
 	pixel_x = 2
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	pixel_x = -5;
 	pixel_y = 2
 	},
@@ -1883,10 +1848,10 @@
 /area/surface/outside/wilderness/deep)
 "Zs" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "wilderness_n";
-	name = "North of Wilderness";
 	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	landmark_tag = "wilderness_n";
+	name = "North of Wilderness"
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse{
 	tree_chance = 0
@@ -1894,8 +1859,8 @@
 /area/surface/outside/landing/wilderness)
 "Zt" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/storage/belt/utility,
-/obj/item/weapon/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/item/stack/cable_coil{
@@ -1921,19 +1886,19 @@
 /area/surface/outpost/shelter/utilityroom)
 "Zz" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/weapon/deck/cah{
+/obj/item/deck/cah{
 	pixel_x = 5;
 	pixel_y = 3
 	},
-/obj/item/weapon/deck/cah/black{
+/obj/item/deck/cah/black{
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/item/weapon/deck/cards{
+/obj/item/deck/cards{
 	pixel_x = -1;
 	pixel_y = 4
 	},
-/obj/item/weapon/deck/holder{
+/obj/item/deck/holder{
 	pixel_x = -9;
 	pixel_y = 1
 	},
@@ -2090,12 +2055,12 @@ ad
 ab
 XD
 XD
-BF
-BF
-AX
 Mg
-BF
-xx
+Mg
+Mg
+Mg
+Mg
+Mg
 kh
 kh
 ab
@@ -2348,12 +2313,12 @@ ak
 ac
 Za
 Za
-As
-As
 Qz
-sC
-As
-As
+Qz
+Qz
+Qz
+Qz
+Qz
 IZ
 IZ
 ac
@@ -2606,12 +2571,12 @@ ak
 ah
 ah
 ah
-As
-As
-Qz
-sC
-As
-As
+LI
+LI
+jz
+jz
+LI
+LI
 ap
 ap
 ap
@@ -2865,10 +2830,10 @@ ah
 ah
 ah
 As
-As
-Qz
-sC
-As
+LI
+jz
+jz
+LI
 As
 ap
 ap
@@ -3122,12 +3087,12 @@ aw
 ah
 ah
 ah
-LI
-LI
+am
+am
+jz
 an
-an
-LI
-LI
+am
+am
 am
 ap
 ap

@@ -16,11 +16,12 @@
 //#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm" //Disabled due to low usage
 #include "../overmap/space/fueldepot.dmm"
 #include "../overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
+#include "../overmap/planets/tyr/tyr.dmm" //The datum is in southern_cross_defines.dm
 #include "gateway/BaseBlep.dmm"
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
 #include "gateway/hiddeneclipse.dmm"
-#include "virtual_reality/constructVR.dmm"
+#include "modular_chomp/maps/virtual_reality/constructVR.dmm"
 #endif
 
 
@@ -88,14 +89,15 @@
 
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
+//#include "modular_chomp/maps/virtual_reality/constructVR.dm" Included in .dme
 /datum/map_template/sc_lateload/vr_world
 	name = "VR World"
 	desc = "A dynamic, virtual world."
-	mappath = 'virtual_reality/constructVR.dmm'
+	mappath = 'modular_chomp/maps/virtual_reality/constructVR.dmm' //Use modular
 	associated_map_datum = /datum/map_z_level/sc_lateload/vr_world
 
 /datum/map_z_level/sc_lateload/vr_world
-	name = "Away Mission - Fuel Depot"
+	name = "VR World"
 	z = Z_LEVEL_VR_REALM
 
 /datum/map_template/sc_lateload/thor
@@ -103,6 +105,12 @@
 	desc = "The jungle like surface of Sif's moon"
 	mappath = 'maps/southern_cross/overmap/planets/thor/thor.dmm'
 	associated_map_datum = /datum/planet/thor
+
+/datum/map_template/sc_lateload/tyr
+	name = "Desert Valley"
+	desc = "An anomalous valley within tyr"
+	mappath = 'maps/southern_sun/overmap/planets/tyr/tyr.dmm'
+	associated_map_datum = /datum/planet/tyr
 
 //Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
 /* Pretty sure we don't use this.

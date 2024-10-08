@@ -134,8 +134,7 @@
 /area/outpost/mining_main/hangar)
 "ax" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 8;
-	icon_state = "warning"
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
@@ -167,8 +166,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/hangar)
@@ -230,9 +228,7 @@
 	dir = 1
 	},
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /turf/simulated/floor/plating,
@@ -281,7 +277,7 @@
 	},
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/item/weapon/storage/belt/utility,
+/obj/item/storage/belt/utility,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/break_room)
 "aN" = (
@@ -340,7 +336,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -359,7 +354,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -422,7 +416,6 @@
 /area/outpost/mining_main/hangar)
 "aZ" = (
 /obj/machinery/power/apc{
-	dir = 2;
 	name = "south bump";
 	pixel_y = -32
 	},
@@ -518,11 +511,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 8
 	},
-/obj/item/weapon/storage/box/cups{
+/obj/item/storage/box/cups{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/machinery/vending/wallmed1{
 	pixel_y = -30
 	},
@@ -554,9 +547,7 @@
 /area/outpost/mining_main/maintenance)
 "bm" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 9
@@ -669,7 +660,7 @@
 /area/outpost/mining_main/maintenance)
 "bA" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
 "bB" = (
@@ -688,9 +679,7 @@
 "bD" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Substation - Mining Outpost";
-	charge = 0;
-	output_attempt = 0;
-	outputting = 0
+	output_attempt = 0
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -816,8 +805,7 @@
 /area/outpost/mining_main/secondary_gear_storage)
 "bP" = (
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1;
-	icon_state = "warningcorner"
+	dir = 1
 	},
 /obj/machinery/firealarm{
 	dir = 4;
@@ -863,9 +851,7 @@
 	pixel_x = -26
 	},
 /obj/effect/floor_decal/borderfloor{
-	dir = 8;
-	icon_state = "borderfloor";
-	pixel_x = 0
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
@@ -959,9 +945,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
-	dir = 8;
-	icon_state = "borderfloor";
-	pixel_x = 0
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
@@ -976,10 +960,10 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
 	},
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/secondary_gear_storage)
 "cf" = (
@@ -1006,9 +990,7 @@
 "cj" = (
 /obj/structure/closet/secure_closet/miner,
 /obj/effect/floor_decal/borderfloor{
-	dir = 8;
-	icon_state = "borderfloor";
-	pixel_x = 0
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
@@ -1039,8 +1021,7 @@
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/borderfloor{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
@@ -1051,7 +1032,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner2{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	pixel_y = 24;
 	req_access = list()
@@ -1095,8 +1076,8 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/outpost/mining_main/drill_equipment)
 "ct" = (
@@ -1195,9 +1176,9 @@
 /area/outpost/mining_main/hangar)
 "cC" = (
 /obj/structure/table/steel,
-/obj/item/weapon/tool/screwdriver,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/screwdriver,
+/obj/item/tool/crowbar,
+/obj/item/tool/wrench,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
@@ -1213,8 +1194,7 @@
 	},
 /obj/machinery/washing_machine,
 /obj/effect/floor_decal/borderfloor{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
@@ -1231,7 +1211,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -1246,8 +1225,7 @@
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/borderfloor{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
@@ -1290,8 +1268,7 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -1303,8 +1280,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/structure/bed/chair{
 	dir = 1
@@ -1365,7 +1341,6 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 2;
 	name = "south bump";
 	pixel_y = -32
 	},
@@ -1405,8 +1380,7 @@
 /area/outpost/mining_main/break_room)
 "cS" = (
 /obj/effect/floor_decal/borderfloor{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
@@ -1486,8 +1460,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/secondary_gear_storage)
@@ -1534,11 +1507,9 @@
 "di" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	dir = 2;
 	frequency = 1379;
 	master_tag = "mining_outpost_airlock";
 	name = "Mining Outpost Access Button";
-	pixel_x = 0;
 	pixel_y = 24;
 	req_access = list(48,54)
 	},
@@ -1562,7 +1533,6 @@
 	frequency = 1379;
 	master_tag = "mining_outpost_airlock";
 	name = "Mining Outpost Access Button";
-	pixel_x = 0;
 	pixel_y = 24;
 	req_access = list(48,54)
 	},
@@ -1605,8 +1575,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -1667,7 +1636,6 @@
 "BD" = (
 /obj/machinery/embedded_controller/radio/airlock/phoron{
 	id_tag = "mining_outpost_airlock";
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /obj/machinery/airlock_sensor/phoron{
@@ -1742,7 +1710,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -1778,7 +1745,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -1795,15 +1761,13 @@
 	dir = 8
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_dirty/virgo3b,
 /area/outpost/mining_main/airlock)
 "IA" = (
 /obj/structure/closet/firecloset,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 2;
 	frequency = 1379;
 	id_tag = "mining_outpost_airlock_pump"
 	},
@@ -1817,7 +1781,7 @@
 /turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/mine/explored)
 "JA" = (
-/obj/item/weapon/bedsheet/orange,
+/obj/item/bedsheet/orange,
 /obj/structure/bed/padded,
 /turf/simulated/floor/wood,
 /area/outpost/mining_main/dorms)
@@ -1843,8 +1807,7 @@
 /area/outpost/mining_main/dorms)
 "Nh" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/mine/explored)
@@ -1936,8 +1899,7 @@
 /area/outpost/mining_main/break_room)
 "Wy" = (
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/grass/sif/virgo3b,
 /area/mine/explored)
@@ -1951,6 +1913,9 @@
 	},
 /obj/machinery/alarm{
 	pixel_y = 22
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = -30
 	},
 /turf/simulated/floor/wood,
 /area/outpost/mining_main/dorms)
@@ -13778,7 +13743,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -14202,7 +14167,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -14629,7 +14594,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -14912,7 +14877,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -15479,7 +15444,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -15620,7 +15585,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -15905,7 +15870,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -16330,7 +16295,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -17042,7 +17007,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -17182,7 +17147,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -17326,7 +17291,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -17608,7 +17573,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -17753,7 +17718,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -18036,8 +18001,8 @@ ab
 ab
 ab
 ab
-ab
-ab
+af
+af
 ab
 ab
 ab
@@ -18461,7 +18426,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -18889,7 +18854,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -19174,8 +19139,8 @@ ab
 ab
 ab
 ab
-ab
-ab
+af
+af
 ab
 ab
 ab
@@ -19317,7 +19282,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -19460,7 +19425,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -19744,7 +19709,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -20028,7 +19993,7 @@ ab
 ab
 ab
 ab
-ab
+af
 ab
 ab
 ab
@@ -20187,130 +20152,130 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 Nh
 Nh
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
 ab
 ab
 ab
@@ -20328,132 +20293,132 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 SW
 Cx
 Cx
 Wy
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
 ab
 ab
 ab
@@ -20470,132 +20435,132 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 SW
 IY
 IY
 Wy
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
 ab
 ab
 ab
@@ -20612,132 +20577,132 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 SW
 ab
 ab
 Wy
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
 ab
 ab
 ab
@@ -20895,134 +20860,134 @@ ab
 ab
 ab
 ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 QI
 ab
 ab
 ab
 ab
 QI
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
 ab
 ab
 ab

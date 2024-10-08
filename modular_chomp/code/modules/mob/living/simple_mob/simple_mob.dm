@@ -26,15 +26,15 @@
 	set category = "Abilities.Vore"
 
 	if(!vore_icons && !vore_icons_cache)
-		to_chat(src,"<span class='warning'>This simplemob has no vore sprite.</span>")
+		to_chat(src,span_warning("This simplemob has no vore sprite."))
 	else if(isnull(vore_icons_cache))
 		vore_icons_cache = vore_icons
 		vore_icons = 0
-		to_chat(src,"<span class='warning'>Vore sprite disabled.</span>")
+		to_chat(src,span_warning("Vore sprite disabled."))
 	else
 		vore_icons = vore_icons_cache
 		vore_icons_cache = null
-		to_chat(src,"<span class='warning'>Vore sprite enabled.</span>")
+		to_chat(src,span_warning("Vore sprite enabled."))
 
 	update_icon()
 
@@ -44,7 +44,7 @@
 	set category = "IC.Mob"
 
 	if(stat)
-		to_chat(src, "<span class='warning'>You must be awake and standing to perform this action!</span>")
+		to_chat(src, span_warning("You must be awake and standing to perform this action!"))
 		return
 
 	speech_sound_enabled = !speech_sound_enabled
@@ -106,20 +106,20 @@
 	set desc = "Opens your headset's GUI, if you have one."
 	set category = "Abilities.Mob"
 
-	if(istype(mob_radio, /obj/item/device/radio/headset))
+	if(istype(mob_radio, /obj/item/radio/headset))
 		mob_radio.tgui_interact(src)
 	else
-		to_chat(src, "<span class='warning'>Your mob does not have a radio in its radio slot.</span>")
+		to_chat(src, span_warning("Your mob does not have a radio in its radio slot."))
 
 /mob/living/simple_mob/proc/use_pda()
 	set name = "Use PDA"
 	set desc = "Opens your PDA's GUI, if you have one."
 	set category = "Abilities.Mob"
 
-	if(istype(myid, /obj/item/device/pda))
+	if(istype(myid, /obj/item/pda))
 		myid.tgui_interact(src)
 	else
-		to_chat(src, "<span class='warning'>Your mob does not have a PDA in its ID slot.</span>")
+		to_chat(src, span_warning("Your mob does not have a PDA in its ID slot."))
 
 /mob/living/simple_mob/New(var/newloc)
 	..()

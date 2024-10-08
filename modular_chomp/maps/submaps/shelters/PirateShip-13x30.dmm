@@ -68,7 +68,7 @@
 /area/survivalpod/superpose/PirateShip)
 "fd" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "fh" = (
@@ -191,8 +191,8 @@
 /area/survivalpod/superpose/PirateShip)
 "mR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "nb" = (
@@ -213,35 +213,35 @@
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "pz" = (
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/starcaster_news,
+/obj/item/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/starcaster_news,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
 /obj/structure/closet{
 	name = "Survival closet"
 	},
@@ -410,7 +410,7 @@
 /area/survivalpod/superpose/PirateShip)
 "JF" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /obj/machinery/button/remote/airlock{
 	id = "pshiproom1";
 	name = "Bolt Control";
@@ -430,11 +430,11 @@
 /area/survivalpod/superpose/PirateShip)
 "Ki" = (
 /obj/structure/closet/crate/wooden,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "Kk" = (
@@ -444,14 +444,14 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	locked = 0
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped,
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle,
-/obj/item/weapon/storage/box/syndie_kit{
+/obj/item/gun/projectile/shotgun/pump/rifle/scoped,
+/obj/item/gun/projectile/shotgun/pump/rifle,
+/obj/item/storage/box/syndie_kit{
 	max_storage_space = 20;
 	name = "box of 7.62mm clips";
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
 	},
-/obj/item/weapon/storage/box/syndie_kit{
+/obj/item/storage/box/syndie_kit{
 	max_storage_space = 20;
 	name = "box of 7.62mm clips";
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
@@ -518,11 +518,11 @@
 /area/survivalpod/superpose/PirateShip)
 "PS" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "Qd" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "Qw" = (

@@ -58,7 +58,7 @@
 		return
 	if(is_shadekin(M))
 		if(get_ability_flags(M) & AB_DARK_RESPITE)
-			to_chat(M, "<span class='warning'>You can't go through this portal so soon after an emergency warp!</span>")
+			to_chat(M, span_warning("You can't go through this portal so soon after an emergency warp!"))
 			var/mob/living/user = M
 			user.Stun(10)
 			return
@@ -96,10 +96,10 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 /obj/structure/dark_portal/hub/attack_hand(mob/user)
 	if(is_shadekin(user))
 		if(get_ability_flags(user) & AB_DARK_RESPITE)
-			to_chat(user, "<span class='warning'>You can't use this so soon after an emergency warp!</span>")
+			to_chat(user, span_warning("You can't use this so soon after an emergency warp!"))
 			return
 		if(get_ability_flags(user) & AB_PHASE_SHIFTED)
-			to_chat(user, "<span class='warning'>You can't use this while phase shifted!</span>")
+			to_chat(user, span_warning("You can't use this while phase shifted!"))
 			return
 		if(locked != src)
 			var/confirm = alert(user, "This portal is currently open to [locked_name]. Change the portal destination?", "Change Portal Destination", "Yes", "Cancel")
@@ -121,7 +121,7 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 		locked_name = desc
 		return
 	else if(locked_name == "somewhere on the station" || locked_name == "somewhere in the wilderness")
-		to_chat(user, "<span class='warning'>The portal distorts for a moment, before returning to how it was, seemingly already determined where to send you.</span>")
+		to_chat(user, span_warning("The portal distorts for a moment, before returning to how it was, seemingly already determined where to send you."))
 		return
 	else if(istype(user, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
@@ -132,7 +132,7 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 				floors.Add(floor)
 			if(!LAZYLEN(floors))
 				log_and_message_admins("[src]: There were no floors to teleport to in [picked_area]!")
-				to_chat(user, "<span class='warning'>The portal distorts for a moment, seemingly unable to determine where to send you.</span>")
+				to_chat(user, span_warning("The portal distorts for a moment, seemingly unable to determine where to send you."))
 				close_portal()
 				destination_station_areas.Remove(picked_area)
 				return
@@ -140,10 +140,10 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 			locked_name = "somewhere on the station"
 			one_time_use = TRUE
 			precision = 0
-			to_chat(user, "<span class='notice'>The portal distorts for a moment, resolving itself soon after. You feel like it will lead you to the station now.</span>")
+			to_chat(user, span_notice("The portal distorts for a moment, resolving itself soon after. You feel like it will lead you to the station now."))
 			return
 	if(!LAZYLEN(destination_wilderness_areas))
-		to_chat(user, "<span class='warning'>The portal distorts for a moment, seemingly unable to determine where to send you.</span>")
+		to_chat(user, span_warning("The portal distorts for a moment, seemingly unable to determine where to send you."))
 		close_portal()
 		return
 	var/list/floors = list()
@@ -152,7 +152,7 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 		floors.Add(floor)
 	if(!LAZYLEN(floors))
 		log_and_message_admins("[src]: There were no floors to teleport to in [picked_area]!")
-		to_chat(user, "<span class='warning'>The portal distorts for a moment, seemingly unable to determine where to send you.</span>")
+		to_chat(user, span_warning("The portal distorts for a moment, seemingly unable to determine where to send you."))
 		close_portal()
 		destination_wilderness_areas.Remove(picked_area)
 		return
@@ -160,7 +160,7 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 	locked_name = "somewhere in the wilderness"
 	one_time_use = TRUE
 	precision = 0
-	to_chat(user, "<span class='notice'>The portal distorts for a moment, resolving itself soon after. You feel like it will lead you to somewhere in the wilderness now.</span>")
+	to_chat(user, span_notice("The portal distorts for a moment, resolving itself soon after. You feel like it will lead you to somewhere in the wilderness now."))
 	return
 
 /obj/structure/dark_portal/hub/Bumped(M as mob|obj)
@@ -183,10 +183,10 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minio
 /obj/structure/dark_portal/minion/attack_hand(mob/user)
 	if(is_shadekin(user))
 		if(get_ability_flags(user) & AB_DARK_RESPITE)
-			to_chat(user, "<span class='warning'>You can't use this so soon after an emergency warp!</span>")
+			to_chat(user, span_warning("You can't use this so soon after an emergency warp!"))
 			return FALSE
 		if(get_ability_flags(user) & AB_PHASE_SHIFTED)
-			to_chat(user, "<span class='warning'>You can't use this while phase shifted!</span>")
+			to_chat(user, span_warning("You can't use this while phase shifted!"))
 			return FALSE
 		if(icon_state == "minion1")
 			var/confirm = alert(user, "This portal is currently open to [locked_name]. Close this portal to the dark?", "Close Portal", "Yes", "Cancel")
@@ -196,10 +196,10 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minio
 				close_portal()
 				return
 		if(get_shadekin_energy(user) < 10)
-			to_chat(user, "<span class='warning'>Not enough energy to open up the portal! (10 required)</span>")
+			to_chat(user, span_warning("Not enough energy to open up the portal! (10 required)"))
 			return
 		if(!LAZYLEN(GLOB.all_darkportal_hubs))
-			to_chat(user, "<span class='warning'>No hub portals exist!</span>")
+			to_chat(user, span_warning("No hub portals exist!"))
 			return
 		if(LAZYLEN(GLOB.all_darkportal_hubs) == 1)
 			adjust_shadekin_energy(user, -10)
@@ -226,9 +226,9 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minio
 	else if(!istype(user, /mob/living))
 		return
 	else if(icon_state == "minion0")
-		to_chat(user, "<span class='notice'>You touch the portal... nothing happens.</span>")
+		to_chat(user, span_notice("You touch the portal... nothing happens."))
 	else
-		to_chat(user, "<span class='notice'>You touch the portal, your hand able to pass through without harm.</span>")
+		to_chat(user, span_notice("You touch the portal, your hand able to pass through without harm."))
 
 /obj/structure/dark_portal/minion/Bumped(M as mob|obj)
 	spawn()

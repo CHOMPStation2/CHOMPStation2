@@ -11,7 +11,7 @@
 
 // P90K
 
-/obj/item/weapon/gun/projectile/automatic/p90
+/obj/item/gun/projectile/automatic/p90
 	name = "\improper P90K PDW"
 	desc = "The P90K Personal Defense Weapon is a MarsTech-assembled modernized variation of the ancient FN P90, a compact, high-capacity submachine gun of human origin. Its fierce reputation owes to its minimal recoil and ergonomic design. Chambered in 5.7x28mm caseless rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms subsidiary of Hephaestus Industries, MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
@@ -46,12 +46,12 @@
 		list(mode_name="three-round burst", burst=3, fire_delay=null, burst_delay=1, move_delay=0, burst_accuracy=list(0,-15,-20), dispersion=list(0.0, 1.0, 1.5))
 		)
 
-/obj/item/weapon/gun/projectile/automatic/p90/update_icon() // Code for visually updating the item depending on current magazine capacity.
+/obj/item/gun/projectile/automatic/p90/update_icon() // Code for visually updating the item depending on current magazine capacity.
 	icon_state = "p90smgnew-[ammo_magazine ? round(ammo_magazine.stored_ammo.len, 6) : "empty"]"
 
 // C-20R
 
-/obj/item/weapon/gun/projectile/automatic/c20r
+/obj/item/gun/projectile/automatic/c20r
 	name = "\improper C-20R"
 	desc = "The C-20R is a lightweight, heavy-hitting submachine gun with an infamous reputation for being the weapon of choice among mercenary outfits and insurgent cabals. It has 'Scarborough Arms - Per Falcis, Per Pravitas' inscribed on the stock. Chambered in 10mm caseless rounds."
 	description_fluff = "The C-20R is produced by Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
@@ -87,20 +87,20 @@
 		list(mode_name="two-shot rapidfire", burst=2, fire_delay=null, burst_delay=1, move_delay=0, burst_accuracy=list(-5,-10), dispersion=list(0.5, 1.0)),
 		)
 
-/obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
+/obj/item/gun/projectile/automatic/c20r/update_icon()
 	icon_state = "c20r-[ammo_magazine ? round(ammo_magazine.stored_ammo.len,4) : "empty"]"
 
-/obj/item/weapon/gun/projectile/automatic/c20r/rubber
+/obj/item/gun/projectile/automatic/c20r/rubber
 	magazine_type = /obj/item/ammo_magazine/m10mm/rubber
 
-/obj/item/weapon/gun/projectile/automatic/c20r/empty
+/obj/item/gun/projectile/automatic/c20r/empty
 	magazine_type = null
 
 /*
  * RIFLES
 */
 
-/obj/item/weapon/gun/projectile/automatic/fal
+/obj/item/gun/projectile/automatic/fal
 	name = "FN-FAL"
 	desc = "A 20th century Assault Rifle originally designed by Fabrique National. Famous for its use by mercs in grinding proxy wars in backwater nations. This reproduction was probably made for similar purposes."
 	icon = 'icons/obj/gun_ch.dmi'
@@ -122,7 +122,7 @@
 		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=6,    burst_accuracy=list(60,35), dispersion=list(0.0, 0.6))
 		)
 
-/obj/item/weapon/gun/projectile/automatic/fal/update_icon(var/ignore_inhands)
+/obj/item/gun/projectile/automatic/fal/update_icon(var/ignore_inhands)
 	..()
 	if(ammo_magazine)
 		icon_state = initial(icon_state)

@@ -55,7 +55,7 @@
 	has_hands = 1
 	shock_resist = 1
 	nameset = 1
-	holder_type = /obj/item/weapon/holder/protoblob
+	holder_type = /obj/item/holder/protoblob
 	var/hiding = 0
 	vore_icons = 1
 	vore_active = 1
@@ -299,7 +299,7 @@
 		return ..()
 
 /mob/living/simple_mob/protean_blob/rad_act(severity)
-	if(istype(loc, /obj/item/weapon/rig))
+	if(istype(loc, /obj/item/rig))
 		return	//Don't irradiate us while we're in rig mode
 	if(humanform)
 		return humanform.rad_act(severity)
@@ -334,7 +334,7 @@
 			healing = null
 
 /mob/living/simple_mob/protean_blob/lay_down()
-	var/obj/item/weapon/rig/rig = src.get_rig()
+	var/obj/item/rig/rig = src.get_rig()
 	if(rig)
 		rig.force_rest(src)
 		return
@@ -370,7 +370,7 @@
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,span_warning("\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 	update_canmove()
 
 /mob/living/simple_mob/protean_blob/update_canmove()
@@ -392,22 +392,22 @@
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
+			visible_message(span_infoplain(span_bold("[name]") + " gloms over some of \the [S], absorbing it."))
 	else if(isitem(A) && a_intent == "grab") //CHOMP Add all this block, down to I.forceMove.
 		var/obj/item/I = A
 		if(!vore_selected)
-			to_chat(src,"<span class='warning'>You either don't have a belly selected, or don't have a belly!</span>")
+			to_chat(src,span_warning("You either don't have a belly selected, or don't have a belly!"))
 			return FALSE
 		if(is_type_in_list(I,item_vore_blacklist) || I.anchored)
-			to_chat(src, "<span class='warning'>You can't eat this.</span>")
+			to_chat(src, span_warning("You can't eat this."))
 			return
 
 		if(is_type_in_list(I,edible_trash) | adminbus_trash)
 			if(I.hidden_uplink)
-				to_chat(src, "<span class='warning'>You really should not be eating this.</span>")
+				to_chat(src, span_warning("You really should not be eating this."))
 				message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>" : "null"])")
 				return
-		visible_message("<b>[name]</b> stretches itself over the [I], engulfing it whole!")
+		visible_message(span_infoplain(span_bold("[name]") + " stretches itself over the [I], engulfing it whole!"))
 		I.forceMove(vore_selected)
 	else
 		return ..()
@@ -423,7 +423,7 @@
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
+			visible_message(span_infoplain(span_bold("[name]") + " gloms over some of \the [S], absorbing it."))
 	else
 		return ..()
 
@@ -452,10 +452,10 @@
 
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
-	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)
-		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+	if(!force && !isturf(loc) && !loc == /obj/item/rig/protean)
+		to_chat(src,span_warning("You can't change forms while inside something."))
 		return
-	to_chat(src, "<span class='notice'>You rapidly disassociate your form.</span>")
+	to_chat(src, span_notice("You rapidly disassociate your form."))
 	if(force || do_after(src,20,exclusive = TASK_ALL_EXCLUSIVE))
 		handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
 		remove_micros(src, src) //Living things don't fare well in roblobs.
@@ -490,7 +490,7 @@
 		blob.ckey = ckey
 		blob.ooc_notes = ooc_notes
 		temporary_form = blob
-		var/obj/item/device/radio/R = null
+		var/obj/item/radio/R = null
 		if(isradio(l_ear))
 			R = l_ear
 		if(isradio(r_ear))
@@ -506,7 +506,7 @@
 		moveToNullspace()
 
 		//Message
-		blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
+		blob.visible_message(span_infoplain(span_bold("[src.name]") + " collapses into a gooey blob!"))
 
 		//Duration of the to_puddle iconstate that the blob starts with
 		sleep(13)
@@ -536,13 +536,13 @@
 		//Return our blob in case someone wants it
 		return blob
 	else
-		to_chat(src, "<span class='warning'>You must remain still to blobform!</span>")
+		to_chat(src, span_warning("You must remain still to blobform!"))
 
 //For some reason, there's no way to force drop all the mobs grabbed. This ought to fix that. And be moved elsewhere. Call with caution, doesn't handle cycles.
 /proc/remove_micros(var/src, var/mob/root)
 	for(var/obj/item/I in src)
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
-		if(istype(I, /obj/item/weapon/holder))
+		if(istype(I, /obj/item/holder))
 			root.remove_from_mob(I)
 
 /mob/living/proc/usehardsuit()
@@ -550,8 +550,8 @@
 	set desc = "Allows a protean blob to open hardsuit interface."
 	set category = "Abilities.Protean"
 
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
+	if(istype(loc, /obj/item/rig/protean))
+		var/obj/item/rig/protean/prig = loc
 		to_chat(src, "You attempt to interface with the [prig].")
 		prig.tgui_interact(src)
 	else
@@ -560,12 +560,12 @@
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
 	if(!istype(blob))
 		return
-	if(blob.loc == /obj/item/weapon/rig/protean)
+	if(blob.loc == /obj/item/rig/protean)
 		return
 	if(!force && !isturf(blob.loc))
-		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(blob,span_warning("You can't change forms while inside something."))
 		return
-	to_chat(src, "<span class='notice'>You rapidly reassemble your form.</span>")
+	to_chat(src, span_notice("You rapidly reassemble your form."))
 	if(force || do_after(blob,20,exclusive = TASK_ALL_EXCLUSIVE))
 		if(buckled)
 			buckled.unbuckle_mob()
@@ -593,7 +593,7 @@
 		blob.icon_state = "from_puddle"
 
 		//Message
-		blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
+		blob.visible_message(span_infoplain(span_bold("[src.name]") + " reshapes into a humanoid appearance!"))
 
 		//Size update
 		resize(blob.size_multiplier, FALSE, TRUE, ignore_prefs = TRUE)
@@ -639,14 +639,14 @@
 		//Return ourselves in case someone wants it
 		return src
 	else
-		to_chat(src, "<span class='warning'>You must remain still to reshape yourself!</span>")
+		to_chat(src, span_warning("You must remain still to reshape yourself!"))
 
 /mob/living/carbon/human/proc/nano_set_panel(var/client/C)
 	if(C)
 		C.statpanel = "Protean"
 
 /mob/living/simple_mob/protean_blob/ClickOn(var/atom/A, var/params)
-	if(istype(loc, /obj/item/weapon/rig/protean))
+	if(istype(loc, /obj/item/rig/protean))
 		HardsuitClickOn(A)
 	..()
 
@@ -654,8 +654,8 @@
 	return 1
 
 /mob/living/simple_mob/protean_blob/HardsuitClickOn(var/atom/A, var/alert_ai = 0)
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
+	if(istype(loc, /obj/item/rig/protean))
+		var/obj/item/rig/protean/prig = loc
 		if(istype(prig) && !prig.offline && prig.selected_module)
 			if(!prig.ai_can_move_suit(src))
 				return 0

@@ -229,7 +229,7 @@
 	if(!(locate(O) in src.module.modules) && !(locate(O) in src.module.emag))
 		return
 	if(activated(O))
-		to_chat(src, "<span class='notice'>Already activated</span>")
+		to_chat(src, span_notice("Already activated"))
 		return
 	if(!module_state_1)
 		module_state_1 = O
@@ -253,25 +253,25 @@
 		if(istype(module_state_3,/obj/item/borg/sight))
 			sight_mode |= module_state_3:sight_mode
 	else
-		to_chat(src, "<span class='notice'>You need to disable a module first!</span>")
+		to_chat(src, span_notice("You need to disable a module first!"))
 		return
 	after_equip(O)
 
 /mob/living/silicon/robot/proc/after_equip(var/obj/item/O)
-	if(istype(O, /obj/item/device/gps))
-		var/obj/item/device/gps/tracker = O
+	if(istype(O, /obj/item/gps))
+		var/obj/item/gps/tracker = O
 		if(tracker.tracking)
 			tracker.tracking = FALSE
 			tracker.toggle_tracking()
 	/* //ChompEDIT START - remove bluespace pounce
 	if(sight_mode & BORGANOMALOUS)
-		var/obj/item/weapon/dogborg/pounce/pounce = has_upgrade_module(/obj/item/weapon/dogborg/pounce)
+		var/obj/item/dogborg/pounce/pounce = has_upgrade_module(/obj/item/dogborg/pounce)
 		if(pounce)
 			pounce.name = "bluespace pounce"
 			pounce.icon_state = "bluespace_pounce"
 			pounce.bluespace = TRUE
 	else
-		var/obj/item/weapon/dogborg/pounce/pounce = has_upgrade_module(/obj/item/weapon/dogborg/pounce)
+		var/obj/item/dogborg/pounce/pounce = has_upgrade_module(/obj/item/dogborg/pounce)
 		if(pounce)
 			pounce.name = initial(pounce.name)
 			pounce.icon_state = initial(pounce.icon_state)

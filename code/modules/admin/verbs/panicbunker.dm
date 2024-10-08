@@ -6,7 +6,7 @@
 		return
 
 	if (!CONFIG_GET(flag/sql_enabled)) // CHOMPEdit
-		to_chat(usr, "<span class='adminnotice'>The Database is not enabled!</span>")
+		to_chat(usr, span_adminnotice("The Database is not enabled!"))
 		return
 
 	CONFIG_SET(flag/panic_bunker, !CONFIG_GET(flag/panic_bunker)) // CHOMPEdit

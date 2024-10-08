@@ -301,7 +301,7 @@
 						area_enabled = 1
 						area_name = tgui_input_text(usr, "New area name", "Room Buildmode", max_length = MAX_NAME_LEN)
 						if(isnull(area_name))
-							to_chat(usr, "<span class='notice'>You must enter a non-null name.</span>")
+							to_chat(usr, span_notice("You must enter a non-null name."))
 							area_enabled = 0
 							return
 						area_name = sanitize(area_name,MAX_NAME_LEN)
@@ -418,7 +418,7 @@ CHOMP Remove end */
 					qdel(object)
 			else if(pa.Find("ctrl"))
 				holder.buildmode.objholder = object.type
-				to_chat(user, "<span class='notice'>[object]([object.type]) copied to buildmode.</span>")
+				to_chat(user, span_notice("[object]([object.type]) copied to buildmode."))
 			if(pa.Find("middle"))
 				holder.buildmode.objholder = text2path("[object.type]")
 				if(holder.buildmode.objsay)
@@ -430,13 +430,13 @@ CHOMP Remove end */
 					log_admin("[key_name(usr)] modified [object.name]'s [holder.buildmode.varholder] to [holder.buildmode.valueholder]")
 					object.vars[holder.buildmode.varholder] = holder.buildmode.valueholder
 				else
-					to_chat(user, "<span class='danger'>[initial(object.name)] does not have a var called '[holder.buildmode.varholder]'</span>")
+					to_chat(user, span_danger("[initial(object.name)] does not have a var called '[holder.buildmode.varholder]'"))
 			if(pa.Find("right"))
 				if(object.vars.Find(holder.buildmode.varholder))
 					log_admin("[key_name(usr)] modified [object.name]'s [holder.buildmode.varholder] to [holder.buildmode.valueholder]")
 					object.vars[holder.buildmode.varholder] = initial(object.vars[holder.buildmode.varholder])
 				else
-					to_chat(user, "<span class='danger'>[initial(object.name)] does not have a var called '[holder.buildmode.varholder]'</span>")
+					to_chat(user, span_danger("[initial(object.name)] does not have a var called '[holder.buildmode.varholder]'"))
 
 		if(BUILDMODE_THROW)
 			if(pa.Find("left"))
@@ -450,19 +450,19 @@ CHOMP Remove end */
 		if(BUILDMODE_ROOM)
 			if(pa.Find("left"))
 				holder.buildmode.coordA = get_turf(object)
-				to_chat(user, "<span class='notice'>Defined [object] ([object.type]) as point A.</span>")
+				to_chat(user, span_notice("Defined [object] ([object.type]) as point A."))
 
 			if(pa.Find("right"))
 				holder.buildmode.coordB = get_turf(object)
-				to_chat(user, "<span class='notice'>Defined [object] ([object.type]) as point B.</span>")
+				to_chat(user, span_notice("Defined [object] ([object.type]) as point B."))
 
 			if(holder.buildmode.coordA && holder.buildmode.coordB)
 				if(isnull(holder.buildmode.area_name))
-					to_chat(user, "<span class='notice'>ERROR: Insert area name before use.</span>")
+					to_chat(user, span_notice("ERROR: Insert area name before use."))
 					holder.buildmode.coordA = null
 					holder.buildmode.coordB = null
 					return
-				to_chat(user, "<span class='notice'>A and B set, creating rectangle.</span>")
+				to_chat(user, span_notice("A and B set, creating rectangle."))
 				holder.buildmode.make_rectangle(
 					holder.buildmode.coordA,
 					holder.buildmode.coordB,
@@ -476,14 +476,14 @@ CHOMP Remove end */
 		if(BUILDMODE_LADDER)
 			if(pa.Find("left"))
 				holder.buildmode.coordA = get_turf(object)
-				to_chat(user, "<span class='notice'>Defined [object] ([object.type]) as upper ladder location.</span>")
+				to_chat(user, span_notice("Defined [object] ([object.type]) as upper ladder location."))
 
 			if(pa.Find("right"))
 				holder.buildmode.coordB = get_turf(object)
-				to_chat(user, "<span class='notice'>Defined [object] ([object.type]) as lower ladder location.</span>")
+				to_chat(user, span_notice("Defined [object] ([object.type]) as lower ladder location."))
 
 			if(holder.buildmode.coordA && holder.buildmode.coordB)
-				to_chat(user, "<span class='notice'>Ladder locations set, building ladders.</span>")
+				to_chat(user, span_notice("Ladder locations set, building ladders."))
 				var/obj/structure/ladder/A = new /obj/structure/ladder/up(holder.buildmode.coordA)
 				var/obj/structure/ladder/B = new /obj/structure/ladder(holder.buildmode.coordB)
 				A.target_up = B
@@ -522,13 +522,13 @@ CHOMP Remove end */
 							var/datum/ai_holder/AI = L.ai_holder
 							if(stance == STANCE_SLEEP)
 								AI.go_wake()
-								to_chat(user, span("notice", "\The [L]'s AI has been enabled."))
+								to_chat(user, span_notice("\The [L]'s AI has been enabled."))
 							else
 								AI.go_sleep()
-								to_chat(user, span("notice", "\The [L]'s AI has been disabled."))
+								to_chat(user, span_notice("\The [L]'s AI has been disabled."))
 							return
 						else
-							to_chat(user, span("warning", "\The [L] is not AI controlled."))
+							to_chat(user, span_warning("\The [L] is not AI controlled."))
 						return
 
 					// Toggle hostility
@@ -536,28 +536,28 @@ CHOMP Remove end */
 						if(!isnull(L.get_AI_stance()))
 							var/datum/ai_holder/AI = L.ai_holder
 							AI.hostile = !AI.hostile
-							to_chat(user, span("notice", "\The [L] is now [AI.hostile ? "hostile" : "passive"]."))
+							to_chat(user, span_notice("\The [L] is now [AI.hostile ? "hostile" : "passive"]."))
 						else
-							to_chat(user, span("warning", "\The [L] is not AI controlled."))
+							to_chat(user, span_warning("\The [L] is not AI controlled."))
 						return
 
 					// Copy faction
 					if(pa.Find("ctrl"))
 						holder.copied_faction = L.faction
-						to_chat(user, span("notice", "Copied faction '[holder.copied_faction]'."))
+						to_chat(user, span_notice("Copied faction '[holder.copied_faction]'."))
 						return
 
 					// Select/Deselect
 					if(!isnull(L.get_AI_stance()))
 						if(L in holder.selected_mobs)
 							holder.deselect_AI_mob(user.client, L)
-							to_chat(user, span("notice", "Deselected \the [L]."))
+							to_chat(user, span_notice("Deselected \the [L]."))
 						else
 							holder.select_AI_mob(user.client, L)
-							to_chat(user, span("notice", "Selected \the [L]."))
+							to_chat(user, span_notice("Selected \the [L]."))
 						return
 					else
-						to_chat(user, span("warning", "\The [L] is not AI controlled."))
+						to_chat(user, span_warning("\The [L] is not AI controlled."))
 						return
 				else //Not living
 					for(var/mob/living/unit in holder.selected_mobs)
@@ -565,17 +565,17 @@ CHOMP Remove end */
 
 			if(pa.Find("middle"))
 				if(pa.Find("shift"))
-					to_chat(user, SPAN_NOTICE("All selected mobs set to wander"))
+					to_chat(user, span_notice("All selected mobs set to wander"))
 					for(var/mob/living/unit in holder.selected_mobs)
 						var/datum/ai_holder/AI = unit.ai_holder
 						AI.wander = TRUE
 				if(pa.Find("ctrl"))
-					to_chat(user, SPAN_NOTICE("Setting mobs set to NOT wander"))
+					to_chat(user, span_notice("Setting mobs set to NOT wander"))
 					for(var/mob/living/unit in holder.selected_mobs)
 						var/datum/ai_holder/AI = unit.ai_holder
 						AI.wander = FALSE
 				if(pa.Find("alt") && isatom(object))
-					to_chat(user, SPAN_NOTICE("Adding [object] to Entity Narrate List!"))
+					to_chat(user, span_notice("Adding [object] to Entity Narrate List!"))
 					user.client.add_mob_for_narration(object)
 
 
@@ -583,12 +583,12 @@ CHOMP Remove end */
 				// Paste faction
 				if(pa.Find("ctrl") && isliving(object))
 					if(!holder.copied_faction)
-						to_chat(user, span("warning", "LMB+Shift a mob to copy their faction before pasting."))
+						to_chat(user, span_warning("LMB+Shift a mob to copy their faction before pasting."))
 						return
 					else
 						var/mob/living/L = object
 						L.faction = holder.copied_faction
-						to_chat(user, span("notice", "Pasted faction '[holder.copied_faction]'."))
+						to_chat(user, span_notice("Pasted faction '[holder.copied_faction]'."))
 						return
 
 				if(istype(object, /atom)) // Force attack.
@@ -600,7 +600,7 @@ CHOMP Remove end */
 							var/datum/ai_holder/AI = unit.ai_holder
 							AI.give_target(A)
 							i++
-						to_chat(user, span("notice", "Commanded [i] mob\s to attack \the [A]."))
+						to_chat(user, span_notice("Commanded [i] mob\s to attack \the [A]."))
 						var/image/orderimage = image(buildmode_hud,A,"ai_targetorder")
 						orderimage.plane = PLANE_BUILDMODE
 						flick_overlay(orderimage, list(user.client), 8, TRUE)
@@ -627,7 +627,7 @@ CHOMP Remove end */
 							message += "."
 					if(j)
 						message += "[j] mob\s to follow \the [L]."
-					to_chat(user, span("notice", message))
+					to_chat(user, span_notice(message))
 					var/image/orderimage = image(buildmode_hud,L,"ai_targetorder")
 					orderimage.plane = PLANE_BUILDMODE
 					flick_overlay(orderimage, list(user.client), 8, TRUE)
@@ -646,7 +646,7 @@ CHOMP Remove end */
 						else
 							AI.give_destination(T, 1, pa.Find("shift")) // If shift is held, the mobs will not stop moving to attack a visible enemy.
 							told++
-					to_chat(user, span("notice", "Commanded [told] mob\s to move to \the [T], and manually placed [forced] of them."))
+					to_chat(user, span_notice("Commanded [told] mob\s to move to \the [T], and manually placed [forced] of them."))
 					var/image/orderimage = image(buildmode_hud,T,"ai_turforder")
 					orderimage.plane = PLANE_BUILDMODE
 					flick_overlay(orderimage, list(user.client), 8, TRUE)
@@ -655,7 +655,7 @@ CHOMP Remove end */
 
 		if(BUILDMODE_DROP)
 			if(ispath(holder.buildmode.objholder,/turf))
-				to_chat(user, "<span class='warning'>Cannot use turfs with this mode.</span>")
+				to_chat(user, span_warning("Cannot use turfs with this mode."))
 				return
 			if(pa.Find("left") && !pa.Find("ctrl"))
 				if(ispath(holder.buildmode.objholder))
@@ -667,7 +667,7 @@ CHOMP Remove end */
 					FE.crushing = TRUE
 			else if(pa.Find("ctrl"))
 				holder.buildmode.objholder = object.type
-				to_chat(user, "<span class='notice'>[object]([object.type]) copied to buildmode.</span>")
+				to_chat(user, span_notice("[object]([object.type]) copied to buildmode."))
 			if(pa.Find("middle"))
 				holder.buildmode.objholder = text2path("[object.type]")
 				if(holder.buildmode.objsay)
@@ -709,7 +709,7 @@ CHOMP Remove end */
 					holder.select_AI_mob(user, L)
 					i++
 
-			to_chat(user, span("notice", "Band-selected [i] mobs."))
+			to_chat(user, span_notice("Band-selected [i] mobs."))
 			return
 
 /obj/effect/bmode/buildmode/proc/get_path_from_partial_text(default_path)

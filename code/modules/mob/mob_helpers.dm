@@ -142,7 +142,7 @@
 		if(target.buckled || target.lying)
 			return zone
 		// if your target is being grabbed aggressively by someone you cannot miss either
-		for(var/obj/item/weapon/grab/G in target.grabbed_by)
+		for(var/obj/item/grab/G in target.grabbed_by)
 			if(G.state >= GRAB_AGGRESSIVE)
 				return zone
 
@@ -437,7 +437,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 					else										// Everyone else (dead people who didn't ghost yet, etc.)
 						lname = name
 				lname = "<span class='name'>[lname]</span> "
-			to_chat(M, "<span class='deadsay'>" + create_text_tag("dead", "DEAD:", M.client) + " [lname][follow][message]</span>")
+			to_chat(M, span_deadsay("" + create_text_tag("dead", "DEAD:", M.client) + " [lname][follow][message]"))
 
 /proc/say_dead_object(var/message, var/obj/subject = null)
 	for(var/mob/M in player_list)
@@ -451,7 +451,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 				lname = "[subject.name] ([subject.x],[subject.y],[subject.z])"
 
 			lname = "<span class='name'>[lname]</span> "
-			to_chat(M, "<span class='deadsay'>" + create_text_tag("event_dead", "EVENT:", M.client) + " [lname][follow][message]</span>")
+			to_chat(M, span_deadsay("" + create_text_tag("event_dead", "EVENT:", M.client) + " [lname][follow][message]"))
 
 //Announces that a ghost has joined/left, mainly for use with wizards
 /proc/announce_ghost_joinleave(O, var/joined_ghosts = 1, var/message = "")
@@ -534,24 +534,24 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		return SAFE_PERP
 
 	//Agent cards lower threatlevel.
-	var/obj/item/weapon/card/id/id = GetIdCard()
-	if(id && istype(id, /obj/item/weapon/card/id/syndicate))
+	var/obj/item/card/id/id = GetIdCard()
+	if(id && istype(id, /obj/item/card/id/syndicate))
 		threatcount -= 2
 	// A proper	CentCom id is hard currency.
-	else if(id && istype(id, /obj/item/weapon/card/id/centcom))
+	else if(id && istype(id, /obj/item/card/id/centcom))
 		return SAFE_PERP
 
 	if(check_access && !access_obj.allowed(src))
 		threatcount += 4
 
 	if(auth_weapons && !access_obj.allowed(src))
-		if(istype(l_hand, /obj/item/weapon/gun) || istype(l_hand, /obj/item/weapon/melee) && !istype(l_hand, /obj/item/weapon/gun/energy/floragun) && !istype(l_hand, /obj/item/weapon/gun/energy/sizegun) && !istype(l_hand, /obj/item/weapon/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/weapon/gun/energy/lasertag)) //CHOMP Edit: Specific guns to the exclusion list.
+		if(istype(l_hand, /obj/item/gun) || istype(l_hand, /obj/item/melee) && !istype(l_hand, /obj/item/gun/energy/floragun) && !istype(l_hand, /obj/item/gun/energy/sizegun) && !istype(l_hand, /obj/item/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/gun/energy/lasertag)) //CHOMP Edit: Specific guns to the exclusion list.
 			threatcount += 4
 
-		if(istype(r_hand, /obj/item/weapon/gun) || istype(r_hand, /obj/item/weapon/melee))
+		if(istype(r_hand, /obj/item/gun) || istype(r_hand, /obj/item/melee))
 			threatcount += 4
 
-		if(istype(belt, /obj/item/weapon/gun) || istype(belt, /obj/item/weapon/melee))
+		if(istype(belt, /obj/item/gun) || istype(belt, /obj/item/melee))
 			threatcount += 2
 
 		if(species.name != SPECIES_HUMAN)

@@ -1,4 +1,5 @@
-import { useBackend } from '../../../backend';
+import { BooleanLike } from 'common/react';
+import { useBackend } from 'tgui/backend';
 import {
   Box,
   Button,
@@ -6,7 +7,8 @@ import {
   LabeledList,
   Section,
   Stack,
-} from '../../../components';
+} from 'tgui-core/components';
+
 import { abilities, bellyData, DropdownEntry, soulcatcherData } from './types';
 import { VoreAbilities } from './VoreAbilities';
 import { CatchSettings } from './VoreSoulcatcherSettings/CatchSettings';
@@ -15,20 +17,21 @@ import { GlobalSettings } from './VoreSoulcatcherSettings/GlobalSettings';
 import { SoulOptions } from './VoreSoulcatcherSettings/SoulOptions';
 
 export const VoreSoulcatcher = (props: {
+  unsaved_changes: BooleanLike;
   soulcatcher: soulcatcherData | null;
   our_bellies: Required<bellyData[]> & {
     map(arg0: (belly: bellyData) => DropdownEntry): DropdownEntry[];
   };
   abilities: abilities;
 }) => {
-  const { soulcatcher, our_bellies, abilities } = props;
+  const { unsaved_changes, soulcatcher, our_bellies, abilities } = props;
 
   const getBellies = our_bellies.map((belly) => {
     return { ...belly, displayText: belly.name, value: belly.ref };
   });
 
   return (
-    <>
+    <Section scrollable height={unsaved_changes ? '78%' : '83%'}>
       {soulcatcher && (
         <VoreSoulcatcherSection
           soulcatcher={soulcatcher}
@@ -36,7 +39,7 @@ export const VoreSoulcatcher = (props: {
         />
       )}
       <VoreAbilities abilities={abilities} />
-    </>
+    </Section>
   );
 };
 
@@ -61,7 +64,8 @@ const VoreSoulcatcherSection = (props: {
     ext_hearing,
     ext_vision,
     mind_backups,
-    ar_projecting,
+    sr_projecting,
+    see_sr_projecting,
     selected_sfx,
     show_vore_sfx,
     taken_over,
@@ -125,7 +129,8 @@ const VoreSoulcatcherSection = (props: {
             ext_hearing={ext_hearing}
             ext_vision={ext_vision}
             mind_backups={mind_backups}
-            ar_projecting={ar_projecting}
+            sr_projecting={sr_projecting}
+            see_sr_projecting={see_sr_projecting}
             show_vore_sfx={show_vore_sfx}
           />
           <LabeledList.Item

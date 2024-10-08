@@ -180,9 +180,9 @@
 	H.trait_injection_reagents += "macrocillin"		// get BIG
 	H.trait_injection_reagents += "normalcillin"	// normal
 	H.trait_injection_reagents += "numbenzyme"		// no feelings
-	H.trait_injection_reagents += "androrovir" 		// -> MALE
-	H.trait_injection_reagents += "gynorovir" 		// -> FEMALE
-	H.trait_injection_reagents += "androgynorovir" 	// -> PLURAL
+	H.trait_injection_reagents += "change_drug_male"		// -> MALE // CHOMPEdit
+	H.trait_injection_reagents += "change_drug_female"		// -> FEMALE // CHOMPEdit
+	H.trait_injection_reagents += "change_drug_intersex"	// -> PLURAL // CHOMPEdit
 	H.trait_injection_reagents += "stoxin"			// night night chem
 	H.trait_injection_reagents += "rainbowtoxin" 	// Funny flashing lights.
 	H.trait_injection_reagents += "paralysistoxin" 	// Paralysis!

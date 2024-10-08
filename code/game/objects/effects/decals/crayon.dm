@@ -10,8 +10,8 @@
 	var/art_color
 	var/art_shade
 
-/obj/effect/decal/cleanable/crayon/Initialize(var/ml, main = "#FFFFFF",shade = "#000000",var/type = "rune")
-	. = ..(ml, 0) // mapload, age
+/obj/effect/decal/cleanable/crayon/Initialize(var/ml, main = "#FFFFFF",shade = "#000000",var/type = "rune", new_age = 0)
+	. = ..(ml, new_age) // mapload, age
 	name = type
 	desc = "A [type] drawn in crayon."
 
@@ -28,17 +28,16 @@
 
 	update_icon()
 
-	add_hiddenprint(usr)
-
 /obj/effect/decal/cleanable/crayon/update_icon()
 	cut_overlays()
 	var/icon/mainOverlay = new/icon('icons/effects/crayondecal.dmi',"[art_type]",2.1)
 	var/icon/shadeOverlay = new/icon('icons/effects/crayondecal.dmi',"[art_type]s",2.1)
 
-	mainOverlay.Blend(art_color,ICON_ADD)
-	shadeOverlay.Blend(art_shade,ICON_ADD)
+	if(mainOverlay && shadeOverlay)
+		mainOverlay.Blend(art_color,ICON_ADD)
+		shadeOverlay.Blend(art_shade,ICON_ADD)
 
-	add_overlay(mainOverlay)
-	add_overlay(shadeOverlay)
+		add_overlay(mainOverlay)
+		add_overlay(shadeOverlay)
 	return
 // CHOMPEdit End

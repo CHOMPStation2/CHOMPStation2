@@ -33,7 +33,7 @@
 				to_chat(src, "<span class = 'warning'>The [S] pulls \the [hand] from your grip!</span>")
 
 	if(!lying && (!shoes || !(shoes.item_flags & NOSLIP)) && (!species || !(species.flags & NOSLIP)) && prob(current_size*5))
-		to_chat(src, "<span class='danger'>A strong gravitational force slams you to the ground!</span>")
+		to_chat(src, span_danger("A strong gravitational force slams you to the ground!"))
 		Weaken(current_size)
 	..()
 
@@ -89,7 +89,7 @@
 /obj/effect/projectile/emitter/singularity_pull()
 	return
 
-/obj/item/weapon/storage/backpack/holding/singularity_act(S, current_size)
+/obj/item/storage/backpack/holding/singularity_act(S, current_size)
 	var/dist = max((current_size - 2), 1)
 	explosion(src.loc,(dist),(dist*2),(dist*4))
 	return -1000	//CHOMPEDIT - Consistency with literally every other codebase

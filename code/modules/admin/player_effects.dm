@@ -1,7 +1,7 @@
 /client/proc/player_effects(var/mob/target in mob_list)
 	set name = "Player Effects"
 	set desc = "Modify a player character with various 'special treatments' from a list."
-	set category = "Fun"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	if(!check_rights(R_FUN))
 		return
 
@@ -66,7 +66,7 @@
 				to_chat(user,"[target] didn't have any breakable legs, sorry.")
 
 		if("bluespace_artillery")
-			bluespace_artillery(target,src)
+			bluespace_artillery(target,usr)
 
 		if("spont_combustion")
 			var/mob/living/carbon/human/Tar = target
@@ -187,26 +187,26 @@
 
 
 		if("redspace_abduct")
-			redspace_abduction(target, src)
+			redspace_abduction(target, usr)
 
 		if("autosave")
-			fake_autosave(target, src)
+			fake_autosave(target, usr)
 
 		if("autosave2")
-			fake_autosave(target, src, TRUE)
+			fake_autosave(target, usr, TRUE)
 
 		if("adspam")
 			if(target.client)
 				target.client.create_fake_ad_popup_multiple(/obj/screen/popup/default, 15)
 
 		if("peppernade")
-			var/obj/item/weapon/grenade/chem_grenade/teargas/grenade = new /obj/item/weapon/grenade/chem_grenade/teargas
+			var/obj/item/grenade/chem_grenade/teargas/grenade = new /obj/item/grenade/chem_grenade/teargas
 			grenade.loc = target.loc
 			to_chat(target,span_warning("GRENADE?!"))
 			grenade.detonate()
 
 		if("spicerequest")
-			var/obj/item/weapon/reagent_containers/food/condiment/spacespice/spice = new /obj/item/weapon/reagent_containers/food/condiment/spacespice
+			var/obj/item/reagent_containers/food/condiment/spacespice/spice = new /obj/item/reagent_containers/food/condiment/spacespice
 			spice.loc = target.loc
 			to_chat(target,"A bottle of spices appears at your feet... be careful what you wish for!")
 
@@ -280,6 +280,64 @@
 			sleep(5 SECONDS)
 			qdel(suit)
 			qdel(hood)
+
+		if("mob_tf")
+			var/mob/living/M = target
+
+			if(!istype(M))
+				return
+
+			var/list/types = typesof(/mob/living)
+			var/chosen_beast = tgui_input_list(user, "Which form would you like to take?", "Choose Beast Form", types)
+
+			if(!chosen_beast)
+				return
+
+			var/mob/living/new_mob = new chosen_beast(get_turf(M))
+			new_mob.faction = M.faction
+
+			if(new_mob && isliving(new_mob))
+				for(var/obj/belly/B as anything in new_mob.vore_organs)
+					new_mob.vore_organs -= B
+					qdel(B)
+				new_mob.vore_organs = list()
+				new_mob.name = M.name
+				new_mob.real_name = M.real_name
+				for(var/lang in M.languages)
+					new_mob.languages |= lang
+				M.copy_vore_prefs_to_mob(new_mob)
+				new_mob.vore_selected = M.vore_selected
+				if(ishuman(M))
+					var/mob/living/carbon/human/H = M
+					if(ishuman(new_mob))
+						var/mob/living/carbon/human/N = new_mob
+						N.gender = H.gender
+						N.identifying_gender = H.identifying_gender
+					else
+						new_mob.gender = H.gender
+				else
+					new_mob.gender = M.gender
+					if(ishuman(new_mob))
+						var/mob/living/carbon/human/N = new_mob
+						N.identifying_gender = M.gender
+
+				for(var/obj/belly/B as anything in M.vore_organs)
+					B.loc = new_mob
+					B.forceMove(new_mob)
+					B.owner = new_mob
+					M.vore_organs -= B
+					new_mob.vore_organs += B
+
+				new_mob.ckey = M.ckey
+				if(M.ai_holder && new_mob.ai_holder)
+					var/datum/ai_holder/old_AI = M.ai_holder
+					old_AI.set_stance(STANCE_SLEEP)
+					var/datum/ai_holder/new_AI = new_mob.ai_holder
+					new_AI.hostile = old_AI.hostile
+					new_AI.retaliate = old_AI.retaliate
+				M.loc = new_mob
+				M.forceMove(new_mob)
+				new_mob.tf_mob_holder = M
 
 		////////MEDICAL//////////////
 
@@ -395,6 +453,41 @@
 			else
 				Tar.Stasis(100000)
 
+		if("give_chem")
+			var/mob/living/carbon/human/Tar = target
+			if(!istype(Tar))
+				return
+			var/list/chem_list = typesof(/datum/reagent)
+			var/datum/reagent/chemical = tgui_input_list(user, "Which chemical would you like to add?", "Chemicals", chem_list)
+
+			if(!chemical)
+				return
+
+			var/chem = chemical.id
+
+			var/amount = tgui_input_number(user, "How much of the chemical would you like to add?", "Amount", 5)
+			if(!amount)
+				return
+
+			var/location = tgui_alert(user, "Where do you want to add the chemical?", "Location", list("Blood", "Stomach", "Skin", "Cancel"))
+
+			if(!location || location == "Cancel")
+				return
+			if(location == "Blood")
+				Tar.bloodstr.add_reagent(chem, amount)
+			if(location == "Stomach")
+				Tar.ingested.add_reagent(chem, amount)
+			if(location == "Skin")
+				Tar.touching.add_reagent(chem, amount)
+
+		if("purge")
+			var/mob/living/carbon/Tar = target
+			if(!istype(Tar))
+				return
+			Tar.bloodstr.clear_reagents()
+			Tar.ingested.clear_reagents()
+			Tar.touching.clear_reagents()
+
 		////////ABILITIES//////////////
 
 		if("vent_crawl")
@@ -501,7 +594,7 @@
 				return
 
 			for(var/obj/item/W in Tar)
-				if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))	//VOREStation Edit - There's basically no reason to remove either of these
+				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))	//VOREStation Edit - There's basically no reason to remove either of these
 					continue	//VOREStation Edit
 				Tar.drop_from_inventory(W)
 
@@ -567,15 +660,15 @@
 				to_chat(user,span_warning("Target already has a NIF."))
 				return
 			if(Tar.species.flags & NO_SCAN)
-				var/obj/item/device/nif/S = /obj/item/device/nif/bioadap
+				var/obj/item/nif/S = /obj/item/nif/bioadap
 				input_NIF = initial(S.name)
-				new /obj/item/device/nif/bioadap(Tar)
+				new /obj/item/nif/bioadap(Tar)
 			else
-				var/list/NIF_types = typesof(/obj/item/device/nif)
+				var/list/NIF_types = typesof(/obj/item/nif)
 				var/list/NIFs = list()
 
 				for(var/NIF_type in NIF_types)
-					var/obj/item/device/nif/S = NIF_type
+					var/obj/item/nif/S = NIF_type
 					NIFs[capitalize(initial(S.name))] = NIF_type
 
 				var/list/show_NIFs = sortList(NIFs) // the list that will be shown to the user to pick from
@@ -586,7 +679,7 @@
 				if(chosen_NIF)
 					new chosen_NIF(Tar)
 				else
-					new /obj/item/device/nif(Tar)
+					new /obj/item/nif(Tar)
 			log_and_message_admins("[key_name(user)] Quick NIF'd [Tar.real_name] with a [input_NIF].")
 
 		if("resize")
@@ -664,6 +757,12 @@
 			if(tgui_alert(usr, "Make mob wake up? This is needed for carbon mobs.", "Wake mob?", list("Yes", "No")) == "Yes")
 				L.AdjustSleeping(-100)
 
+		if("cloaking")
+			if(target.cloaked)
+				target.uncloak()
+			else if(!target.cloaked)
+				target.cloak()
+
 
 		////////FIXES//////////////
 
@@ -688,3 +787,9 @@
 			if(target.orbiters)
 				qdel(target.orbiters)
 			//CHOMPEdit End
+
+		if("revert-mob-tf")
+			var/mob/living/Tar = target
+			if(!istype(Tar))
+				return
+			Tar.revert_mob_tf()

@@ -18,10 +18,10 @@
 /* Temp removal while I figure out how to reduce the respawn time to 1 minute
 	var/time_till_respawn = time_till_respawn()
 	if(time_till_respawn == -1) // Special case, never allowed to respawn
-		to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
+		to_chat(usr, span_warning("Respawning is not allowed!"))
 		return
 	if(time_till_respawn) // Nonzero time to respawn
-		to_chat(usr, "<span class='warning'>You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes.</span>")
+		to_chat(usr, span_warning("You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
 		return
 */
 	var/datum/data/record/record_found

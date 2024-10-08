@@ -9,7 +9,7 @@
 /turf/space,
 /area/shuttle/beltferry/belt)
 "ad" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	pixel_y = 24;
 	req_access = list()
@@ -333,7 +333,7 @@
 /area/outpost/mining_main/belt_outpost/atmos)
 "aP" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	pixel_y = 24;
 	req_access = list()
@@ -445,7 +445,7 @@
 /area/outpost/mining_main/belt_outpost/airlock)
 "aY" = (
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
+	cell_type = /obj/item/cell/super;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -30
@@ -1021,11 +1021,11 @@
 	pixel_x = 24
 	},
 /obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/donkpockets{
+/obj/item/storage/box/donkpockets{
 	pixel_x = 3;
 	pixel_y = 2
 	},
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/item/pizzabox/meat,
 /turf/simulated/floor/wood,
 /area/outpost/mining_main/belt_outpost/dorms)
@@ -2037,13 +2037,13 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/steel,
 /area/outpost/mining_main/belt_outpost/dorms)
 "dJ" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,

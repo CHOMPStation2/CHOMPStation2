@@ -65,8 +65,8 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/weapon/hand_labeler,
-/obj/item/device/tape/random,
+/obj/item/hand_labeler,
+/obj/item/tape/random,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "bI" = (
@@ -129,9 +129,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/template_noop,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "de" = (
@@ -146,7 +146,7 @@
 	name = "Laser Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/hooklauncher,
+/obj/item/gun/energy/hooklauncher,
 /turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "dx" = (
@@ -414,7 +414,7 @@
 	name = "Combat Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/rig/hazard/equipped,
+/obj/item/rig/hazard/equipped,
 /turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "hV" = (
@@ -442,7 +442,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/device/sleevemate,
+/obj/item/sleevemate,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "iG" = (
@@ -501,12 +501,12 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/toolbox,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate,
 /obj/fiftyspawner/phoronrglass,
 /obj/fiftyspawner/phoronrglass,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "jm" = (
@@ -577,7 +577,7 @@
 	name = "Combat Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/slow_sizegun,
+/obj/item/slow_sizegun,
 /turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "kO" = (
@@ -664,9 +664,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "mT" = (
@@ -679,10 +679,10 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "nj" = (
 /obj/structure/table/alien,
-/obj/item/weapon/soap/deluxe,
-/obj/item/weapon/soap/deluxe,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/soap/deluxe,
+/obj/item/soap/deluxe,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "nt" = (
@@ -723,12 +723,12 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/toolbox,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate,
 /obj/fiftyspawner/plasteel,
 /obj/fiftyspawner/plasteel,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -851,9 +851,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "qo" = (
@@ -895,51 +895,51 @@
 /turf/simulated/floor,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "qY" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/closet/crate,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedInfestedShip)
@@ -1074,9 +1074,9 @@
 	dir = 1
 	},
 /obj/structure/table/alien/blue,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen/reagent/paralysis,
+/obj/item/paper_bin,
+/obj/item/folder/yellow,
+/obj/item/pen/reagent/paralysis,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "uI" = (
@@ -1108,8 +1108,8 @@
 "ve" = (
 /obj/structure/table/alien/blue,
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/hand_labeler,
-/obj/item/device/tape/random,
+/obj/item/hand_labeler,
+/obj/item/tape/random,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "vg" = (
@@ -1410,7 +1410,7 @@
 	name = "Laser Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/crossbow/largecrossbow,
+/obj/item/gun/energy/crossbow/largecrossbow,
 /turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "Bd" = (
@@ -1593,7 +1593,7 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "Dn" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/storage/belt/medical/alien{
+/obj/item/storage/belt/medical/alien{
 	pixel_y = 6
 	},
 /turf/simulated/shuttle/floor/white,
@@ -1656,7 +1656,7 @@
 "DK" = (
 /obj/structure/table/alien/blue,
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/tape_roll,
+/obj/item/tape_roll,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "DX" = (
@@ -1702,9 +1702,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -1785,9 +1785,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/shuttle/floor/alien,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "Ib" = (
@@ -1802,9 +1802,9 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen/reagent/paralysis,
+/obj/item/paper_bin,
+/obj/item/folder/yellow,
+/obj/item/pen/reagent/paralysis,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "Is" = (
@@ -1997,7 +1997,7 @@
 "NI" = (
 /obj/structure/table/alien/blue,
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "NJ" = (
@@ -2224,10 +2224,10 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "RY" = (
@@ -2377,9 +2377,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/CrashedInfestedShip)
@@ -2609,9 +2609,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "YP" = (

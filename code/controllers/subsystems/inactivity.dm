@@ -16,7 +16,7 @@ SUBSYSTEM_DEF(inactivity)
 		var/client/C = client_list[client_list.len]
 		client_list.len--
 		if(C.is_afk(CONFIG_GET(number/kick_inactive) MINUTES) && can_kick(C)) // CHOMPEdit
-			to_chat_immediate(C, world.time, "<span class='warning'>You have been inactive for more than [CONFIG_GET(number/kick_inactive)] minute\s and have been disconnected.</span>") // CHOMPEdit
+			to_chat_immediate(C, world.time, span_warning("You have been inactive for more than [CONFIG_GET(number/kick_inactive)] minute\s and have been disconnected.")) // CHOMPEdit
 
 			var/information
 			if(C.mob)

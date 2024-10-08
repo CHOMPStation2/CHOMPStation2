@@ -1,7 +1,7 @@
 import { toFixed } from 'common/math';
+import { useBackend } from 'tgui/backend';
+import { Flex, LabeledList, Section, Slider } from 'tgui/components';
 
-import { useBackend } from '../../../backend';
-import { Flex, LabeledList, Section, Slider } from '../../../components';
 import { abilities } from './types';
 
 export const VoreAbilities = (props: { abilities: abilities }) => {

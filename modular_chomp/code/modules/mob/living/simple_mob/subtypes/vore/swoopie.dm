@@ -50,14 +50,14 @@
 	var/static/list/pest_creatures = list(	/mob/living/simple_mob/animal/passive/mouse,
 											/mob/living/simple_mob/animal/passive/lizard,
 											/mob/living/simple_mob/animal/passive/cockroach)
-	var/obj/item/device/vac_attachment/swoopie/Vac
+	var/obj/item/vac_attachment/swoopie/Vac
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize()
 	. = ..()
 	if(!voremob_loaded)
 		voremob_loaded = TRUE
 		init_vore()
-	Vac = new /obj/item/device/vac_attachment/swoopie(src)
+	Vac = new /obj/item/vac_attachment/swoopie(src)
 	if(istype(Vac))
 		Vac.output_dest = vore_selected
 		Vac.vac_power = 3
@@ -235,7 +235,7 @@
 		return ..()
 	if(stat) //Cant suck if we're not able to...
 		return ..()
-	if(istype(A, /obj/item/weapon/storage)) //Dont put the nossle in bags
+	if(istype(A, /obj/item/storage)) //Dont put the nossle in bags
 		return ..()
 	if(istype(Vac) && A.Adjacent(src))
 		face_atom(A)
@@ -253,15 +253,15 @@
 					if(istype(AM, /mob/living))
 						var/mob/living/M = AM
 						if(!M.devourable || !M.can_be_drop_prey)
-							to_chat(M, "<span class='warning'>[src] plunges their head into \the [D], while you narrowly avoid being sucked up!</span>")
+							to_chat(M, span_warning("[src] plunges their head into \the [D], while you narrowly avoid being sucked up!"))
 							continue
-						to_chat(M, "<span class='warning'>[src] plunges their head into \the [D], sucking up everything inside- Including you!</span>")
+						to_chat(M, span_warning("[src] plunges their head into \the [D], sucking up everything inside- Including you!"))
 					foundstuff = 1
 					AM.forceMove(src)
 				if(foundstuff)
-					src.visible_message("<span class='warning'>[src] plunges their head into \the [D], greedily sucking up everything inside!</span>")
+					src.visible_message(span_warning("[src] plunges their head into \the [D], greedily sucking up everything inside!"))
 				else //Oh, Nothing was inside...
-					to_chat(src, "You poke your head into \the [D], but there doesnt seem to be anything of interest...")
+					to_chat(src, span_infoplain("You poke your head into \the [D], but there doesnt seem to be anything of interest..."))
 				return
 			var/resolved = Vac.resolve_attackby(A, src, click_parameters = params)
 			if(!resolved && A && Vac)
@@ -278,7 +278,7 @@
 	if(L.a_intent == I_GRAB && Vac && Vac.loc == src)
 		if(L.zone_sel.selecting == BP_HEAD)
 			if(L.put_in_active_hand(Vac))
-				L.visible_message("<span class='warning'>[L] grabs [src] by the neck, brandishing the thing like a regular vacuum cleaner!</span>")
+				L.visible_message(span_warning("[L] grabs [src] by the neck, brandishing the thing like a regular vacuum cleaner!"))
 				L.start_pulling(src)
 				return
 	. = ..()
@@ -303,9 +303,9 @@
 	set category = "IC"
 	set src in oview(1)
 	if(!has_AI() || !IIsAlly(usr))
-		to_chat(usr, "<span class=danger></span>")
+		to_chat(usr, span_danger(""))
 	if(!ai_holder == /datum/ai_holder/simple_mob/retaliate/swoopie || !ai_holder)
-		to_chat(usr, "<span class=warning>This [src] doesnt seem to have changable settings!</span>")
+		to_chat(usr, span_warning("This [src] doesnt seem to have changable settings!"))
 		return
 	var/datum/ai_holder/simple_mob/retaliate/swoopie/ai = ai_holder
 	var/list/swooping_options = list(
@@ -329,13 +329,13 @@
 	verbs -= /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/change_settings //Controlled swoopies dont need their settings changed externally
 
 //Special Swoopie vaccum so it can be handled better than a vareditted vacpack.
-/obj/item/device/vac_attachment/swoopie
+/obj/item/vac_attachment/swoopie
 	name = "Swoopie Vac-Beak"
 	desc = "Useful for slurping mess off the floors. Even dirt and pests depending on settings. This vaccum seems to be permanantly attached to the swoopie's rumbling rubber trashbag."
 	icon = 'modular_chomp/icons/mob/vacpack_swoop.dmi'
 	item_state = null
 
-/obj/item/device/vac_attachment/swoopie/dropped(mob/user) //This should fix it sitting on the ground until the next life() tick
+/obj/item/vac_attachment/swoopie/dropped(mob/user) //This should fix it sitting on the ground until the next life() tick
 	. = ..()
 	if(!vac_owner)
 		return
