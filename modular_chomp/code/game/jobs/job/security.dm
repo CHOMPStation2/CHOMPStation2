@@ -1,3 +1,6 @@
+/datum/job/hos
+	camp_protection = TRUE
+
 /datum/job/brigphysician
 	title = JOB_BRIG_PHYSICIAN
 	flag = BRIGPHYS
