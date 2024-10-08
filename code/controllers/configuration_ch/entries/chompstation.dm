@@ -3,7 +3,7 @@
 //	default = FALSE
 
 /datum/config_entry/flag/use_jobwhitelist
-	default = FALSE
+	default = TRUE
 
 // FIXME: Unused
 ///datum/config_entry/flag/emojis
