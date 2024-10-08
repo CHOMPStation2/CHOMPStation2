@@ -1,5 +1,6 @@
 /datum/job/hos
 	camp_protection = TRUE
+	whitelist_only = FALSE
 
 /datum/job/brigphysician
 	title = JOB_BRIG_PHYSICIAN
