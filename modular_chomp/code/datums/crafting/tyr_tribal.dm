@@ -92,3 +92,4 @@
 		)
 	time = 40
 	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
