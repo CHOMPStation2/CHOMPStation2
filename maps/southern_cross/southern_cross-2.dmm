@@ -25866,6 +25866,10 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Locker Room";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/escape/firstdeck/ep_starboard)
 "pET" = (
