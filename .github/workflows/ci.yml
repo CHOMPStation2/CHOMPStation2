@@ -71,7 +71,14 @@ jobs:
           tools/bootstrap/python -c ''
       - name: Run Tests
         run: |
-          tools/ci/validate_files.sh
+          bash tools/ci/validate_files.sh
+      - name: Run DMI Tests
+        run: |
+          tools/bootstrap/python -m dmi.test
+      - name: Run Map Checks
+        run: |
+          tools/bootstrap/python -m tools.maplint.source
+          tools/bootstrap/python -m mapmerge2.dmm_test
       - name: Run DreamChecker
         shell: bash
         run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh

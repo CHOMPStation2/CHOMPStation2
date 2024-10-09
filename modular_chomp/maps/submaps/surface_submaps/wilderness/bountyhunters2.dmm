@@ -80,7 +80,6 @@
 /area/submap/BountyHunters)
 "gT" = (
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -167,7 +166,6 @@
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "pG" = (
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -385,7 +383,6 @@
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "Ly" = (
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4

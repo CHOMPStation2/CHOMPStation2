@@ -1051,7 +1051,6 @@
 /area/submap/debrisfield/luxury_boat/bridge)
 "CZ" = (
 /obj/structure/grille,
-/obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/luxury_boat/crew)

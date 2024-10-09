@@ -700,7 +700,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -711,7 +710,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -870,7 +868,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
@@ -1061,7 +1058,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8";
-	tag = ""
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/external,

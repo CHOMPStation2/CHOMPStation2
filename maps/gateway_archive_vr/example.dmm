@@ -21,7 +21,6 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	
 	},
 /turf/simulated/floor,
 /area/awaymission/example)
@@ -32,7 +31,6 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	
 	},
 /turf/simulated/floor,
 /area/awaymission/example)
@@ -46,7 +44,6 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	
 	},
 /turf/simulated/floor,
 /area/awaymission/example)
@@ -106,7 +103,6 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	
 	},
 /obj/machinery/gateway/centeraway,
 /turf/simulated/floor,
@@ -163,7 +159,6 @@
 "ax" = (
 /obj/structure/cable{
 	icon_state = "0-4";
-	
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/example)

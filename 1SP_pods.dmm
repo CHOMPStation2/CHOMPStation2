@@ -1473,7 +1473,6 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/template_noop,
 /area/template_noop)
 "bcf" = (

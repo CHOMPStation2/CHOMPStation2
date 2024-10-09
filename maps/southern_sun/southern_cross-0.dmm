@@ -9281,7 +9281,6 @@
 "Lb" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
-/obj/structure/grille/broken,
 /obj/item/stack/rods,
 /turf/space,
 /area/space)
