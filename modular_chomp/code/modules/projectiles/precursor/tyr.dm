@@ -190,6 +190,6 @@
 	fragment_amount = 10 // Same as a grenade.
 	spread_range = 60
 
- /obj/item/projectile/energy/spikeenergy_ball/slow
+/obj/item/projectile/energy/spikeenergy_ball/slow
  	speed = 15
  	range = 20
