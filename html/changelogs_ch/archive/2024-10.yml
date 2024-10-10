@@ -126,3 +126,6 @@
 2024-10-09:
   tacoguy7765093:
   - rscadd: Head positions have anti job camping now
+2024-10-10:
+  Kashargul:
+  - bugfix: missing subcategory in tyr crafting leading to crafting UI crashes
