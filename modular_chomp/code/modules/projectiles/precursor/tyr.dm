@@ -19,7 +19,7 @@
 	icon_state = "spikeenergyball"
 	damage = 60 //after remebering throwing things into walls deals bonus damage. Will that wall thwacking out damage this 5 bonus...yes. But shotgun likly wins most DPS tests anyway
 	armor_penetration = 60 //damage and AP matching makes brain happy for some reason. No real logic here, just brain saying yes, this is right
-	range = 7
+	range = 8
 	speed = 5
 	check_armour = "melee"
 	damage_type = BRUTE
@@ -28,8 +28,8 @@
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "shotgun_blast"
-	damage = 45
-	range = 3
+	damage = 50
+	range = 4
 	check_armour = "laser"
 
 /obj/item/projectile/energy/wp_shotgun/on_hit(var/atom/movable/target, var/blocked = 0)
@@ -44,7 +44,7 @@
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "blaster_blast"
-	damage = 30
+	damage = 40
 	range = 5
 	check_armour = "laser"
 
@@ -54,7 +54,7 @@
 	damage = 30
 	damage_type = BURN
 	check_armour = "laser"
-	range = 4
+	range = 5
 	eyeblur = 0 //no no no no no
 	hitscan = 1
 	hud_state = "laser"
@@ -69,11 +69,11 @@
 	wielded_item_state = "placeholder"
 	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
-	charge_cost = 5000 //Uses all it's charge in a single shot.
+	charge_cost = 2500 //Uses all it's charge in a single shot.
 	battery_lock = 1 //No changing
 
 	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon/recharge/alien
+	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	projectile_type = /obj/item/projectile/energy/spikeenergy_ball
 
 	force = 30 //functions as a melee weapon too! Ain't great, but still works.
@@ -93,11 +93,11 @@
 	wielded_item_state = "placeholder"
 	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
-	charge_cost = 1000 //Five shots
+	charge_cost = 500 //Five shots
 	battery_lock = 1 //No changing
 
 	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon/recharge/alien
+	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	projectile_type = /obj/item/projectile/energy/wp_shotgun
 
 	recoil_mode = 0
@@ -119,7 +119,7 @@
 	battery_lock = 1 //No changing
 
 	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon/recharge/alien
+	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	projectile_type = /obj/item/projectile/energy/wp_blaster
 
 	recoil_mode = 0
@@ -136,11 +136,11 @@
 	item_state = "crystal_blaster"
 	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
-	charge_cost = 250 //twenty shots
+	charge_cost = 250 //10 shots
 	battery_lock = 1 //No changing
 
 	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon/recharge/alien
+	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	projectile_type = /obj/item/projectile/beam/precursor_tyr
 
 	recoil_mode = 0
@@ -148,3 +148,48 @@
 
 	move_delay = 0
 	one_handed_penalty = 50
+
+
+/obj/item/cell/device/weapon/recharge/alien/tyr
+	name = "odd cell"
+	icon = 'icons/obj/abductor.dmi'
+	icon_state = "cell"
+	maxcharge = 2500
+	charge_amount = 250 // 10%.
+	charge_delay = 50 // Every five seconds, bit faster than the default.
+
+/obj/item/gun/energy/weatherbombardment
+	name = "prototype cannon - Weather Bombardment"
+	desc = "A massive weapon torn of a precursor mech."
+	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+	icon_state = "ultima"
+	item_state = "ultima"
+	w_class = ITEMSIZE_HUGE		// This thing is big.
+	slot_flags = SLOT_BACK
+	one_handed_penalty = 70
+
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
+	battery_lock = 1
+	recoil_mode = 0
+	charge_meter = 1
+	move_delay = 0
+
+	firemodes = list(
+		list(mode_name="lighting storm", burst=1, fire_delay=15, projectile_type=/obj/item/projectile/beam/chain_lightning, charge_cost = 500),
+		list(mode_name="acid rain", burst=5, fire_delay=15, projectile_type=/obj/item/projectile/energy/neurotoxin/toxic, charge_cost = 50),
+		list(mode_name="meteor shower", burst=1, fire_delay=15, projectile_type=/obj/item/projectile/arc/fragmentation/metoerstrike, charge_cost = 500),
+		list(mode_name="starry night", burst=5, fire_delay=15, projectile_type=/obj/item/projectile/beam/medical_cell/omni, charge_cost = 50),
+		)
+
+
+/obj/item/projectile/arc/fragmentation/metoerstrike
+	name = "fragmentation shot"
+	icon_state = "shell"
+	fragment_types = list(/obj/item/projectile/energy/spikeenergy_ball/slow)
+	fragment_amount = 10 // Same as a grenade.
+	spread_range = 60
+
+/obj/item/projectile/energy/spikeenergy_ball/slow
+ 	speed = 15
+ 	range = 20
