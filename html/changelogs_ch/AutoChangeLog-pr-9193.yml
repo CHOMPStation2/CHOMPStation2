@@ -1,0 +1,5 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "A new hidden boss has been added to Tyr,"
+  - balance: "Some Tyr items and creatures have been altered"
