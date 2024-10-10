@@ -142,3 +142,25 @@
 	required_reagents = list("liquidfire" = 1, "sulfur" = 1, "phoron" = 0.1)
 	catalysts = list("phoron" = 5)
 	result_amount = 1
+
+//Some extra metal solidification reactions
+/decl/chemical_reaction/instant/solidification/deuterium
+	name = "Solid Deuterium"
+	id = "soliddeuterium"
+	required_reagents = list("frostoil" = 5, "deuterium" = REAGENTS_PER_SHEET)
+	sheet_to_give = /obj/item/stack/material/deuterium
+
+//Injectable toxin reactions
+/decl/chemical_reaction/instant/succubi_paralize
+	name = "paralyzingfluid"
+	id = "paralyzingfluid"
+	result = "succubi_paralize"
+	required_reagents = list("benzilate" = 1, "cryptobiolin" = 1)
+	result_amount = 2
+
+/decl/chemical_reaction/instant/numbingenzyme
+	name = "numbingenzyme"
+	id = "numbingenzyme"
+	result = "numbenzyme"
+	required_reagents = list("tramadol" = 1, "protein" = 2, "adranol" = 1)
+	result_amount = 4

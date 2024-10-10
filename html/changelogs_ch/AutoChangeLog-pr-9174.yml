@@ -1,0 +1,7 @@
+author: "Missile597"
+delete-after: True
+changes:
+  - rscadd: "Added reaction for Paralysing Fluid"
+  - rscadd: "Added reaction for Numbing Enzyme"
+  - rscadd: "Added reaction for Deuterium solidification"
+  - balance: "Reduced the cost of the SMES coil crates. Standard coils are changed 75 -> 20. Upgraded coils are changed 90 -> 35"
