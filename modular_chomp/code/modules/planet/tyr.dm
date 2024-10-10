@@ -1,7 +1,7 @@
 var/datum/planet/tyr/planet_tyr = null
 
 /datum/time/tyr
-	seconds_in_day = 24 HOURS
+	seconds_in_day = 12 HOURS
 
 /datum/planet/tyr
 	name = "Tyr"
@@ -117,13 +117,13 @@ var/datum/planet/tyr/planet_tyr = null
 	name = "tyr"
 	temp_high = 323.15
 	temp_low = 300.15
+	light_modifier = 1
 
 /datum/weather/tyr/clear
 	name = "clear"
 	transition_chances = list(
-		WEATHER_FIRESTART = 20,
-		WEATHER_CLEAR = 45,
-		WEATHER_SANDSTORM = 30
+		WEATHER_CLEAR = 50,
+		WEATHER_SANDSTORM = 50
 		)
 	transition_messages = list(
 		"The sky clears up.",
@@ -189,10 +189,9 @@ var/datum/planet/tyr/planet_tyr = null
 	name = "sandstorm"
 	icon_state = "sandstorm"
 	transition_chances = list(
-		WEATHER_FIRESTART = 15,
-		WEATHER_CLEAR = 55,
-		WEATHER_SANDSTORM = 15,
-		WEATHER_HEAVYSANDSTORM = 15)
+		WEATHER_CLEAR = 60,
+		WEATHER_SANDSTORM = 20,
+		WEATHER_HEAVYSANDSTORM = 20)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)
@@ -213,7 +212,7 @@ var/datum/planet/tyr/planet_tyr = null
 			var/amount_blocked = H.run_armor_check(target_zone, "melee")
 			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
-			var/damage = rand(1,2)
+			var/damage = rand(2,2)
 
 			if(amount_blocked >= 10)
 				continue
@@ -229,10 +228,9 @@ var/datum/planet/tyr/planet_tyr = null
 	name = "fierce sandstorm"
 	icon_state = "sandstorm"
 	transition_chances = list(
-		WEATHER_FIRESTART = 15,
-		WEATHER_CLEAR = 55,
-		WEATHER_SANDSTORM = 15,
-		WEATHER_HEAVYSANDSTORM = 15)
+		WEATHER_CLEAR = 60,
+		WEATHER_SANDSTORM = 20,
+		WEATHER_HEAVYSANDSTORM = 20)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)
@@ -255,7 +253,7 @@ var/datum/planet/tyr/planet_tyr = null
 			var/amount_blocked = H.run_armor_check(target_zone, "melee")
 			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
-			var/damage = rand(7,7)
+			var/damage = rand(5,5)
 
 			if(amount_blocked >= 40)
 				continue
@@ -289,8 +287,8 @@ var/datum/planet/tyr/planet_tyr = null
 /datum/weather/tyr/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy_old"
-	temp_high = 123.15
-	temp_low = 100.15
+	temp_high = 153.15
+	temp_low = 130.15
 	transition_chances = list(
 		WEATHER_CLEAR = 50,
 		WEATHER_BLIZZARD = 50)
@@ -303,6 +301,8 @@ var/datum/planet/tyr/planet_tyr = null
 	icon_state = "fallout"
 	light_modifier = 0.7
 	light_color = "#CCFFCC"
+	temp_high = 233.15
+	temp_low = 200.15
 	transition_chances = list(
 		WEATHER_CLEAR = 50,
 		WEATHER_STORM = 50)
@@ -348,6 +348,8 @@ var/datum/planet/tyr/planet_tyr = null
 /datum/weather/tyr/fog
 	light_modifier = 0.5
 	light_color = "#FF0000"
+	temp_high = 183.15
+	temp_low = 160.15
 	transition_chances = list(
 		WEATHER_CLEAR = 50,
 		WEATHER_FOG = 50)
