@@ -186,7 +186,7 @@
 /obj/item/projectile/arc/fragmentation/metoerstrike
 	name = "fragmentation shot"
 	icon_state = "shell"
-	fragment_types = list( /obj/item/projectile/energy/spikeenergy_ball/slow)
+	fragment_types = list(/obj/item/projectile/energy/spikeenergy_ball/slow)
 	fragment_amount = 10 // Same as a grenade.
 	spread_range = 60
 
