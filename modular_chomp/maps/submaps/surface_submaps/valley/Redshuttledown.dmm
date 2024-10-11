@@ -12,7 +12,7 @@
 /area/submap/redshuttledown)
 "bU" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto{
-	loot_list = list(/obj/item/gun/projectile/automatic/as24 = 100, obj/item/perfect_tele = 20)
+	loot_list = list(/obj/item/gun/projectile/automatic/as24 = 100, /obj/item/perfect_tele = 20)
 	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -393,7 +393,7 @@
 /area/submap/redshuttledown)
 "vX" = (
 /mob/living/simple_mob/humanoid/merc/ranged/deagle{
-	loot_list = list(/obj/item/gun/projectile/deagle = 100, obj/item/perfect_tele = 20)
+	loot_list = list(/obj/item/gun/projectile/deagle = 100, /obj/item/perfect_tele = 20)
 	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
