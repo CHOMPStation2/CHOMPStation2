@@ -129,3 +129,15 @@
 2024-10-10:
   Kashargul:
   - bugfix: missing subcategory in tyr crafting leading to crafting UI crashes
+2024-10-11:
+  FluffMedic:
+  - rscadd: A new hidden boss has been added to Tyr,
+  - balance: Some Tyr items and creatures have been altered
+  Kashargul:
+  - code_imp: database query deletion fix
+  Missile597:
+  - rscadd: Added reaction for Paralysing Fluid
+  - rscadd: Added reaction for Numbing Enzyme
+  - rscadd: Added reaction for Deuterium solidification
+  - balance: Reduced the cost of the SMES coil crates. Standard coils are changed
+      75 -> 20. Upgraded coils are changed 90 -> 35
