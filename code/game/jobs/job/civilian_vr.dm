@@ -52,7 +52,7 @@
 
 /datum/job/qm
 	pto_type = PTO_CARGO
-	dept_time_required = 60 // CHOMPEdit
+	dept_time_required = 20
 	alt_titles = list(JOB_ALT_SUPPLY_CHIEF = /datum/alt_title/supply_chief, JOB_ALT_LOGISTICS_MANAGER = /datum/alt_title/logistics_manager, JOB_ALT_CARGO_SUPERVISOR = /datum/alt_title/cargo_supervisor)
 
 /datum/alt_title/logistics_manager
@@ -168,6 +168,7 @@
 	pto_type = PTO_CIVILIAN
 	alt_titles = list(JOB_ALT_INTERNAL_AFFAIRS_LIAISON = /datum/alt_title/ia_liaison, JOB_ALT_INTERNAL_AFFAIRS_DELEGATE = /datum/alt_title/ia_delegate,
 						JOB_ALT_INTERNAL_AFFAIRS_INVESTIGATOR = /datum/alt_title/ia_investigator)
+	dept_time_required = 20 // CHOMPEdit
 
 /datum/alt_title/ia_liaison
 	title = JOB_ALT_INTERNAL_AFFAIRS_LIAISON
