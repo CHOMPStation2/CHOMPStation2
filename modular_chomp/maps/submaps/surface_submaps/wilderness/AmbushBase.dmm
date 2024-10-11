@@ -1203,7 +1203,7 @@
 "YE" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /mob/living/simple_mob/humanoid/merc/ranged/technician{
-	loot_list = list(/obj/item/gun/projectile/dartgun = 100, /obj/item/gun/launcher/grenade = 100, /obj/item/grenade/spawnergrenade/manhacks/mercenary = 50, /obj/item/grenade/spawnergrenade/manhacks/mercenary = 30, /obj/item/weapon/projectile/revolver/nova = 50)
+	loot_list = list(/obj/item/gun/projectile/dartgun = 100, /obj/item/gun/launcher/grenade = 100, /obj/item/grenade/spawnergrenade/manhacks/mercenary = 50, /obj/item/grenade/spawnergrenade/manhacks/mercenary = 30, /obj/item/gun/projectile/revolver/nova = 50)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
