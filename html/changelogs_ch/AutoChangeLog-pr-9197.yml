@@ -1,0 +1,7 @@
+author: "Hunter-Dovetail"
+delete-after: True
+changes:
+  - rscadd: "VBO_maw23"
+  - rscadd: "VBOanim_belly8"
+  - rscadd: "VBOanim_belly9"
+  - rscadd: "VBOanim_belly10"
