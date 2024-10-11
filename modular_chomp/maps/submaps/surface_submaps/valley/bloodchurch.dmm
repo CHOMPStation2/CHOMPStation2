@@ -162,7 +162,7 @@
 /area/submap/bloodchurch)
 "wh" = (
 /mob/living/simple_mob/humanoid/cultist/elite{
-	loot_list = list(/obj/item/clothing/head/psy_crown/wrath = 25, /obj/item/clothing/gloves/regen = 10, /obj/item/clothing/belt/holding = 10)
+	loot_list = list(/obj/item/clothing/head/psy_crown/wrath = 25, /obj/item/clothing/gloves/regen = 10, /obj/item/storage/belt/utility/holding = 10)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
