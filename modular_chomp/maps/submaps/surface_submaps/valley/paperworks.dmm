@@ -58,14 +58,6 @@
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/steel,
 /area/submap/paperworks)
-"E" = (
-/obj/structure/closet/crate,
-/obj/item/paper{
-	info = "In an attempt to expirment on the effects and potential of suns, we used a great deal of resources on constructing a station to orbit a sun. This had wonderful but unntended results. Within the first half year, we had to spend more resources to fish it out of orbit as it was half melted from a solar storm. Most of our intended expirments failed, but there was a great deal of goods we recovered. Attempts are being made to replicate the results, the main target being the Kronos Core.";
-	name = "Solar Station"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/submap/paperworks)
 "F" = (
 /turf/simulated/wall/rplastihull,
 /area/submap/paperworks)
@@ -86,6 +78,7 @@
 "O" = (
 /obj/structure/table/gold,
 /obj/item/soulstone,
+/obj/item/salvage/ruin/nanotrasen,
 /turf/simulated/floor/tiled/steel,
 /area/submap/paperworks)
 "Q" = (
@@ -102,10 +95,7 @@
 /area/submap/paperworks)
 "X" = (
 /obj/structure/closet/crate,
-/obj/item/paper{
-	info = "What is fact, fiction, and soon to be fact. It is a great deal of importance is it not. What realms can we traverse, and what are nothing but in our minds. And what can we force out of our minds, and into reality. This is one of our goals to find out.";
-	name = "Fact and Fiction."
-	},
+/obj/item/salvage/ruin/nanotrasen,
 /turf/simulated/floor/tiled/steel,
 /area/submap/paperworks)
 "Z" = (
@@ -394,7 +384,7 @@ a
 F
 y
 F
-E
+X
 F
 f
 F

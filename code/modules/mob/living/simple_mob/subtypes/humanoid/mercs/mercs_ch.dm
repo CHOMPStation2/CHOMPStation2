@@ -69,6 +69,10 @@
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/human)
 
+/mob/living/simple_mob/humanoid/merc/Initialize()
+	. = ..()
+	loot_list += list(/obj/item/salvage/loot/syndicate = 10)
+
 /mob/living/simple_mob/humanoid/merc/ranged
 	desc = "A tough looking individual armed with an pistol."
 

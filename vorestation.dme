@@ -5088,6 +5088,8 @@
 #include "modular_chomp\code\modules\research\designs\weapons.dm"
 #include "modular_chomp\code\modules\research\designs\circuits\circuits.dm"
 #include "modular_chomp\code\modules\research\lathes\protolathe.dm"
+#include "modular_chomp\code\modules\salvage\bags.dm"
+#include "modular_chomp\code\modules\salvage\salvage.dm"
 #include "modular_chomp\code\modules\shieldgen\shield_capacitor.dm"
 #include "modular_chomp\code\modules\shieldgen\shield_gen.dm"
 #include "modular_chomp\code\modules\spells\spells.dm"

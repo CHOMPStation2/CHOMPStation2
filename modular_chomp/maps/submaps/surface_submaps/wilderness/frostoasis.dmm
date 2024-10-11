@@ -207,7 +207,6 @@
 "EW" = (
 /obj/structure/table/standard,
 /obj/item/gift,
-/obj/item/gun/energy/temperature,
 /turf/simulated/floor/wood/broken,
 /area/submap/FrostOasis)
 "Fl" = (

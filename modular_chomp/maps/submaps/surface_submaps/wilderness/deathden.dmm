@@ -26,7 +26,6 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "bk" = (
-/obj/random/maintenance/medical,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "by" = (
@@ -51,7 +50,6 @@
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "dL" = (
-/obj/random/maintenance/medical,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
@@ -636,7 +634,6 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
-/obj/item/gun/projectile/shotgun/doublebarrel/sawn,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "DH" = (
@@ -653,7 +650,6 @@
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/item/gun/projectile/deagle,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "EL" = (
