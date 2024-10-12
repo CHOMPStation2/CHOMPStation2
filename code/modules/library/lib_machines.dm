@@ -339,6 +339,7 @@
 				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];delid=[id]'>\[Del\]</A>"
 				dat += "</td></tr>"
 			dat += "</table>"
+			qdel(query) // CHOMPEdit
 		dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
 		user << browse(dat, "window=library")
