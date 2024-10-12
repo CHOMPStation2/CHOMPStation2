@@ -54,7 +54,7 @@
 /datum/map_template/surface/plains/boathouse
 	name = "Boathouse"
 	desc = "A fancy house on a lake."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/boathouse.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/Boathouse.dmm"
 	cost = 30
 
 /datum/map_template/surface/plains/bonfire
@@ -66,21 +66,21 @@
 /datum/map_template/surface/plains/buriedtreasure
 	name = "Buried Treasure"
 	desc = "A hole in the ground, who knows what might be inside!"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/buriedtreasure.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/BuriedTreasure.dmm"
 	cost = 10
 	template_group = "Shallow Grave"
 
 /datum/map_template/surface/plains/buriedtreasure2
 	name = "Buried Treasure 2"
 	desc = "A hole in the ground, who knows what might be inside!"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/buriedtreasure2.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/BuriedTreasure2.dmm"
 	cost = 10
 	template_group = "Shallow Grave"
 
 /datum/map_template/surface/plains/buriedtreasure3
 	name = "Buried Treasure 3"
 	desc = "A hole in the ground, who knows what might be inside!"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/buriedtreasure3.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/BuriedTreasure3.dmm"
 	cost = 10
 	template_group = "Shallow Grave"
 
@@ -105,7 +105,7 @@
 /datum/map_template/surface/plains/diner
 	name = "Diner"
 	desc = "An old timey diner. Looks like you could get something tasty here."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/diner.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/Diner.dmm"
 	cost = 25
 
 /datum/map_template/surface/plains/dragon
@@ -117,13 +117,13 @@
 /datum/map_template/surface/plains/epod
 	name = "Emergency Pod"
 	desc = "A vacant Emergency pod in the middle of nowhere."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/epod.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/Epod.dmm"
 	cost = 5
 
 /datum/map_template/surface/plains/epod2
 	name = "Emergency Pod 2"
 	desc = "A locked Emergency pod in the middle of nowhere."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/epod2.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/Epod2.dmm"
 	cost = 5
 
 /datum/map_template/surface/plains/explorerhouse
@@ -189,7 +189,7 @@
 /datum/map_template/surface/plains/pascalb
 	name = "Irradiated Manhole Cover"
 	desc = "How did this old thing get all the way out here?"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/pascalb.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/PascalB.dmm"
 	cost = 5
 
 /datum/map_template/surface/plains/pooledrocks
@@ -207,7 +207,7 @@
 /datum/map_template/surface/plains/rationcache
 	name = "Ration Cache"
 	desc = "A forgotten cache of emergency rations."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/rationcache.dmm" //VOREStation Edit
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/RationCache.dmm" //VOREStation Edit
 	cost = 5
 
 /datum/map_template/surface/plains/rockyoutcrop
@@ -249,7 +249,7 @@
 /datum/map_template/surface/plains/shakden
 	name = "Shakden"
 	desc = "A den of bitey bois!"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/shakden.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/Shakden.dmm"
 	cost = 15
 
 /datum/map_template/surface/plains/supplydrop
@@ -267,7 +267,7 @@
 /datum/map_template/surface/plains/vrden
 	name = "VR Den"
 	desc = "A temporarily abandoned VR den, still functional."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/vrden.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/VRDen.dmm"
 	cost = 10
 
 

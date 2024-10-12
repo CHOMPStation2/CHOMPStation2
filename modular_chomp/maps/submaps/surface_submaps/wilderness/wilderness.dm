@@ -134,7 +134,7 @@
 /datum/map_template/surface/wilderness/normal/butchershack
 	name = "Butcher Shack"
 	desc = "An old, bloody butcher's shack. Get your meat here!"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/ButcherShack.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/butchershack.dmm"
 	cost = 5
 
 /datum/map_template/surface/wilderness/deep/cave
@@ -247,14 +247,14 @@
 /datum/map_template/surface/wilderness/deep/doomP
 	name = "DoomP"
 	desc = "Witty description here."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/doomP.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/DoomP.dmm"
 	cost = 30
 	template_group = "doomP"
 
 /datum/map_template/surface/wilderness/deep/doomPAlt
 	name = "Doom Bridge"
 	desc = "Witty description here 2."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/doomPAlt.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/DoomPAlt.dmm"
 	cost = 30
 	template_group = "doomP"
 
@@ -365,14 +365,14 @@
 /datum/map_template/surface/wilderness/deep/manor1
 	name = "Manor 1"
 	desc = "Whodunit"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/manor1.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Manor1.dmm"
 	cost = 20
 	template_group = "Manor"
 
 /datum/map_template/surface/wilderness/deep/manor1Alt
 	name = "Manor 2"
 	desc = "Whodunit2"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/manor1Alt.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Manor1Alt.dmm"
 	cost = 20
 	template_group = "Manor"
 
@@ -391,7 +391,7 @@
 /datum/map_template/surface/wilderness/normal/musk
 	name = "Musk"
 	desc = "0 to 60 in 1.9 seconds."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/musk.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Musk.dmm"
 	cost = 10
 
 /datum/map_template/surface/wilderness/deep/otieshelter
@@ -403,47 +403,47 @@
 /datum/map_template/surface/wilderness/normal/rocky1
 	name = "Rocky 1"
 	desc = "DununanununanununuNAnana"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/rocky1.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Rocky1.dmm"
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/surface/wilderness/normal/rocky2
 	name =  "Rocky 2"
 	desc = "More rocks."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/rocky2.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Rocky2.dmm"
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/surface/wilderness/normal/Rocky3
 	name = "Rocky 3"
 	desc = "More and more and more rocks."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/rocky3.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Rocky3.dmm"
 	cost = 5
 
 /datum/map_template/surface/wilderness/normal/rocky4
 	name = "Rocky 4"
 	desc = "An interesting geographic formation."
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/rocky4.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Rocky4.dmm"
 	cost = 5
 
 /datum/map_template/surface/wilderness/deep/rockybase
 	name = "Rocky Base"
 	desc = "A guide to upsetting Icarus and the EIO"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/rockybase.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Rockybase.dmm"
 	cost = 35
 	template_group = "Rocky Base"
 
 /datum/map_template/surface/wilderness/deep/rockybaseAlt
 	name = "Rocky Mining Base"
 	desc = "A guide to upsetting mining"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/rockybaseAlt.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/RockybaseAlt.dmm"
 	cost = 35
 	template_group = "Rocky Base"
 
 /datum/map_template/surface/wilderness/normal/shack1
 	name = "Shack 1"
 	desc = "A small shack in the middle of nowhere, Your halloween murder happens here"
-	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/shack1.dmm"
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/Shack1.dmm"
 	cost = 5
 
 /datum/map_template/surface/wilderness/normal/shelter1
