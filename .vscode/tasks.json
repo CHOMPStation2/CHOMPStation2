@@ -30,7 +30,7 @@
 			"args": ["-DLOWMEMORYMODE"],
 			"windows": {
 				"command": ".\\tools\\build\\build.bat",
-				"args": ["-DLOWMEMORYMODE"]
+				"args": ["-DLOWMEMORYMODE", "-DENABLE_BYOND_TRACY"]
 			},
 			"options": {
 				"env": {

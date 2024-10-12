@@ -42,20 +42,20 @@
 /datum/map_template/sc_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"
-	mappath = 'gateway/snowfield.dmm'
+	mappath = "maps/southern_cross/submaps/gateway/snowfield.dmm"
 
 #include "gateway/darkrps.dm"
 /datum/map_template/sc_lateload/gateway/darkrps
 	name = "Abandoned City"
 	desc = "An abandoned city overrun with piracy and mercernaries."
-	mappath = 'gateway/darkrps.dmm'
+	mappath = "maps/southern_cross/submaps/gateway/darkrps.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/diescraper.dm"
 /datum/map_template/sc_lateload/gateway/diescraper
 	name = "Skyscraper"
 	desc = "A skyscraper of various businesses, apartments, and recreations. Do not fall"
-	mappath = 'gateway/diescraper.dmm'
+	mappath = "maps/southern_cross/submaps/gateway/diescraper.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/BaseBlep.dm"
@@ -63,28 +63,28 @@
 	name = "Base Blep"
 	desc = "A brand new but already lost base at the end of a squishy canyon"
 
-	mappath = 'gateway/BaseBlep.dmm'
+	mappath = "maps/southern_cross/submaps/gateway/BaseBlep.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/maddnesslab.dm"
 /datum/map_template/sc_lateload/gateway/maddnesslab
 	name = "Maddness Lab"
 	desc = "An ancient base brimming with creations of maddness"
-	mappath = 'gateway/maddnesslab.dmm'
+	mappath = "maps/southern_cross/submaps/gateway/maddnesslab.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/carpfarm.dm"
 /datum/map_template/sc_lateload/gateway/carpfarm
 	name = "Carp Farm"
 	desc = "Asteroid base surrounded by carp"
-	mappath = 'gateway/carpfarm.dmm'
+	mappath = "maps/southern_cross/submaps/gateway/carpfarm.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/hiddeneclipse.dm"
 /datum/map_template/sc_lateload/gateway/hiddeneclipse
 	name = "Distant Mining Facility"
 	desc = "Asteroid mining facility, lost to unknown horrors"
-	mappath = 'gateway/hiddeneclipse.dmm'
+	mappath = "maps/southern_cross/submaps/gateway/hiddeneclipse.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 //VR maps go here, tell me if theres a better way to load this
@@ -93,7 +93,7 @@
 /datum/map_template/sc_lateload/vr_world
 	name = "VR World"
 	desc = "A dynamic, virtual world."
-	mappath = 'modular_chomp/maps/virtual_reality/constructVR.dmm' //Use modular
+	mappath = "modular_chomp/maps/virtual_reality/constructVR.dmm" //Use modular
 	associated_map_datum = /datum/map_z_level/sc_lateload/vr_world
 
 /datum/map_z_level/sc_lateload/vr_world
@@ -103,13 +103,13 @@
 /datum/map_template/sc_lateload/thor
 	name = "Thor Surface"
 	desc = "The jungle like surface of Sif's moon"
-	mappath = 'maps/southern_cross/overmap/planets/thor/thor.dmm'
+	mappath = "maps/southern_cross/overmap/planets/thor/thor.dmm"
 	associated_map_datum = /datum/planet/thor
 
 /datum/map_template/sc_lateload/tyr
 	name = "Desert Valley"
 	desc = "An anomalous valley within tyr"
-	mappath = 'maps/southern_sun/overmap/planets/tyr/tyr.dmm'
+	mappath = "maps/southern_sun/overmap/planets/tyr/tyr.dmm"
 	associated_map_datum = /datum/planet/tyr
 
 
@@ -119,7 +119,7 @@
 /datum/map_template/sc_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
 	desc = "An unmanned fuel depot floating in space."
-	mappath = 'maps/expedition_vr/space/fueldepot.dmm'
+	mappath = "maps/expedition_vr/space/fueldepot.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/away_fueldepot
 
 /datum/map_z_level/sc_lateload/away_fueldepot
