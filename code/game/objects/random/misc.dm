@@ -1165,8 +1165,6 @@
 		prob(1);/obj/item/cracker/vore,
 		prob(1);/obj/item/cracker/money
 	)
-<<<<<<< HEAD
-=======
 
 /obj/random/translator
 	name = "Random language translator"
@@ -1198,4 +1196,3 @@
 		/obj/item/universal_translator/limited/echosong,
 		/obj/item/universal_translator/limited/akhani,
 		/obj/item/universal_translator/limited/alai)
->>>>>>> 7b21a61228... Single language translators (#16460)
