@@ -86,11 +86,7 @@
 	if(chambered.leaves_residue)
 		var/mob/living/carbon/human/H = loc
 		if(istype(H))
-<<<<<<< HEAD
-			if(!istype(H.gloves, /obj/item/clothing)) // CHOMPEdit
-=======
 			if(!istype(H.gloves, /obj/item/clothing))
->>>>>>> 98293e1aa9... gunshot residue should only be on clothing/human (#16446)
 				H.gunshot_residue = chambered.caliber
 			else
 				var/obj/item/clothing/G = H.gloves

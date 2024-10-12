@@ -80,11 +80,6 @@ var/global/list/obj/item/pda/PDAs = list()
 	var/list/notifying_programs = list()
 	var/retro_mode = 0
 
-<<<<<<< HEAD
-	// var/gunshot_residue // VOREstation edit: prevents wrist PDA from preventing gun use // CHOMPRemove no bandaids
-
-=======
->>>>>>> 98293e1aa9... gunshot residue should only be on clothing/human (#16446)
 /obj/item/pda/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
