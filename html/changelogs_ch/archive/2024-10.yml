@@ -141,3 +141,11 @@
   - rscadd: Added reaction for Deuterium solidification
   - balance: Reduced the cost of the SMES coil crates. Standard coils are changed
       75 -> 20. Upgraded coils are changed 90 -> 35
+2024-10-12:
+  Hunter-Dovetail:
+  - rscadd: VBO_maw23
+  - rscadd: VBOanim_belly8
+  - rscadd: VBOanim_belly9
+  - rscadd: VBOanim_belly10
+  TheCaramelion:
+  - balance: Adjusted the time needed for various job positions
