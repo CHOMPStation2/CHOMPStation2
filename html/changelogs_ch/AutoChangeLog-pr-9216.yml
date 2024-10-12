@@ -1,0 +1,5 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - bugfix: "Just clicking on a port will no longer crash the circuit UI"
+  - qol: "Removed broken click to connect ports, UI now expects you to always hold down the mouse button while connecting ports"
