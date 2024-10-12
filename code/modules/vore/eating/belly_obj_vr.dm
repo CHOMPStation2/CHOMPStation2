@@ -588,7 +588,10 @@
 
 			// Chomp EDIT Begin
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly, severity) //CHOMPEdit Start: preserving save data
-			F.icon = file("modular_chomp/icons/mob/vore_fullscreens/[belly_fullscreen].dmi")
+			var/datum/belly_overlays/lookup_belly_path = text2path("/datum/belly_overlays/[lowertext(belly_fullscreen)]")
+			if(!lookup_belly_path)
+				CRASH("Icon datum was not defined for [belly_fullscreen]")
+			F.icon = initial(lookup_belly_path.belly_icon)
 			F.cut_overlays()
 			var/image/I = image(F.icon, belly_fullscreen) //Would be cool if I could just include color and alpha in the image define so we don't have to copy paste
 			I.color = belly_fullscreen_color

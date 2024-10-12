@@ -4818,6 +4818,7 @@
 #include "modular_chomp\code\modules\admin\verbs\randomverbs.dm"
 #include "modular_chomp\code\modules\admin\verbs\tgui_verbs.dm"
 #include "modular_chomp\code\modules\artifice\deadringer.dm"
+#include "modular_chomp\code\modules\asset_cache\belly_assets.dm"
 #include "modular_chomp\code\modules\balloon_alert\balloon_alert.dm"
 #include "modular_chomp\code\modules\casino\casino_book.dm"
 #include "modular_chomp\code\modules\casino\casino_items.dm"
