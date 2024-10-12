@@ -157,7 +157,6 @@ h4
 }
 
 .uiTitleWrapper
-<<<<<<< HEAD
 {
 	position:fixed;
 	top:0px;
@@ -174,25 +173,6 @@ h4
 	height:32px;
 	z-index:11;
 }
-=======
- {
- 	position:fixed;
- 	top:0px;
- 	left:0px;
- 	right:0px;
- 	z-index: 10
- }
-
- .uiTitleButtons
- {
- 	position:fixed;
- 	top:0px;
- 	right:0px;
- 	height:32px;
- 	z-index:11;
- }
->>>>>>> 66ef0c42d1... Dark-mode color-coded mechanical vore preferences tab (#16444)
-
 
 .uiTitle.icon
 {
@@ -232,7 +212,6 @@ h4
 {
 	color: #272727;
 }
-
 
 .darkgreen {
 	color: #008000;
@@ -417,7 +396,6 @@ div.notice
 	width: 100%;
 	clear: both;
 }
-<<<<<<< HEAD
 
 .italic,
 .italics {
@@ -431,5 +409,3 @@ div.notice
 .underline {
 	text-decoration: underline;
 }
-=======
->>>>>>> 66ef0c42d1... Dark-mode color-coded mechanical vore preferences tab (#16444)
