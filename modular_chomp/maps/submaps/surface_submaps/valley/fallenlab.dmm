@@ -453,7 +453,7 @@
 /area/submap/fallenlab)
 "PB" = (
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror{
-	loot_list = list()list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
 	},
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,

@@ -523,7 +523,7 @@
 "uI" = (
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /mob/living/simple_mob/humanoid/merc/melee/sword/space{
-	loot_list = list(/obj/item/melee/energy/sword = 100, /obj/item/shield/energy = 100, /obj/item/cell/device/weapon/recharge/alien/omni = 40, /obj/item/weapon/gun/projectile/revolver/nova = 50)
+	loot_list = list(/obj/item/melee/energy/sword = 100, /obj/item/shield/energy = 100, /obj/item/cell/device/weapon/recharge/alien/omni = 40, /obj/item/gun/projectile/revolver/nova = 50)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/DugOutMercs)
