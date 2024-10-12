@@ -657,12 +657,8 @@
 
 	show_verb_panel = !show_verb_panel
 
-<<<<<<< HEAD
-	to_chat(usr, "Your verbs are now [show_verb_panel ? "on" : "off. To turn them back on, type 'toggle-verbs' into the command bar."].")
-*///CHOMPRemove End
-=======
 	to_chat(src, "Your verbs are now [show_verb_panel ? "on" : "off. To turn them back on, type 'toggle-verbs' into the command bar."].")
->>>>>>> 5f90b7eafc... adds a verb to print playtime (#16462)
+*///CHOMPRemove End
 
 /*
 /client/verb/toggle_status_bar()
@@ -677,7 +673,23 @@
 		winset(usr, "input", "is-visible=false")
 */
 
-<<<<<<< HEAD
+/client/verb/show_active_playtime()
+	set name = "Active Playtime"
+	set category = "IC.Game"
+
+	if(!play_hours.len)
+		to_chat(src, span_warning("Persistent playtime disabled!"))
+		return
+
+	var/department_hours = ""
+	for(var/play_hour in play_hours)
+		if(!isnum(play_hour) && isnum(play_hours[play_hour]))
+			department_hours += "<br>\t[capitalize(play_hour)]: [play_hours[play_hour]]"
+	if(!department_hours)
+		to_chat(src, span_warning("No recorded playtime found!"))
+		return
+	to_chat(src, span_info("Your department hours:" + department_hours))
+
 /// compiles a full list of verbs and sends it to the browser
 /client/proc/init_verbs()
 	if(IsAdminAdvancedProcCall())
@@ -717,21 +729,3 @@
 		if("Set-Tab")
 			stat_tab = payload["tab"]
 			SSstatpanels.immediate_send_stat_data(src)
-=======
-/client/verb/show_active_playtime()
-	set name = "Active Playtime"
-	set category = "IC"
-
-	if(!play_hours.len)
-		to_chat(src, span_warning("Persistent playtime disabled!"))
-		return
-
-	var/department_hours = ""
-	for(var/play_hour in play_hours)
-		if(!isnum(play_hour) && isnum(play_hours[play_hour]))
-			department_hours += "<br>\t[capitalize(play_hour)]: [play_hours[play_hour]]"
-	if(!department_hours)
-		to_chat(src, span_warning("No recorded playtime found!"))
-		return
-	to_chat(src, span_info("Your department hours:" + department_hours))
->>>>>>> 5f90b7eafc... adds a verb to print playtime (#16462)
