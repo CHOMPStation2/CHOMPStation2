@@ -1,4 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - rscadd: "Crew Manifest now uses pretty TGUI in lobby and for ghosts."

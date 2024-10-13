@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - qol: "moves all belly dmis to datums to get the icon cache path from"
