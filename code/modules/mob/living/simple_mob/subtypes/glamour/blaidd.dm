@@ -55,11 +55,15 @@
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/blaidd/init_vore()
+<<<<<<< HEAD
  	//CHONOEdit Start
 	if(!voremob_loaded)
 		return
 	.=..()
 	//CHONOEdit End
+=======
+	. = ..()
+>>>>>>> c479ccd4f9 (Merge pull request #16456 from SatinIsle/glamour-mob-pack)
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The canine pounces atop you and wastes now time in wrapping its jaws around your entire head. The beast is strong and determined, there is no wriggling out of it's iron grip. Within its maw, the tongue slathers canine drool across you, hot doglike breaths wash across your face, triangular teeth hold you firmly in place. It doesn't take long before the blaidd is gulping you down aggressively, like a big chunk of meat. The creature's stomach distends and hangs beneath it with your weight, swaying heavily not just with your movements, but every step from the wolf. Bound up uncomfortably tight in this sweltering, dark gut, movement is almost impossible and it's hard to tell which way is up."

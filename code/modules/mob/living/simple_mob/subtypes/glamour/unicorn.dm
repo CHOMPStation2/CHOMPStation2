@@ -36,11 +36,15 @@
 	projectile_accuracy = -20
 
 /mob/living/simple_mob/vore/horse/unicorn/init_vore()
+<<<<<<< HEAD
  	//CHONOEdit Start
 	if(!voremob_loaded)
 		return
 	.=..()
 	//CHONOEdit End
+=======
+	..()
+>>>>>>> c479ccd4f9 (Merge pull request #16456 from SatinIsle/glamour-mob-pack)
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a final few gulps, the unicorn finishes swallowing you down into its hot, humid gut... and with a slosh, your weight makes the equine's belly hang down slightly like some sort of organic hammock. The thick, damp air is tinged with the smell of... candyfloss(?), and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder."
