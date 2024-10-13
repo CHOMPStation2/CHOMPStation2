@@ -142,6 +142,7 @@
 //VOREStation edit ends
 /obj/effect/projectile/tracer/pointdefense
 	icon_state = "beam_pointdef"
+<<<<<<< HEAD
 //CHOMPStation add coilgun pointdefense
 /obj/effect/projectile/tracer/coildefense
 	icon = 'icons/obj/projectiles_tracer_ch.dmi'
@@ -150,3 +151,11 @@
 	light_power = 2
 	light_color = "#FFFFFF"
 //CHOMPStation add end <3
+=======
+
+/obj/effect/projectile/tracer/rainbow
+	icon_state = "rainbow"
+	light_range = 3
+	light_power = 1
+	light_color = "#ffffff"
+>>>>>>> c479ccd4f9... Merge pull request #16456 from SatinIsle/glamour-mob-pack
