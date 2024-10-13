@@ -8,7 +8,10 @@
 	var/last_print
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
+<<<<<<< HEAD
 	w_class = ITEMSIZE_SMALL //CHOMP Add because something so small, trivial, and used for silly RP should not be practically gigantic.
+=======
+>>>>>>> 5afcb29d9c (Merge pull request #16445 from TheCaramelion/fixes)
 
 /obj/item/ticket_printer/attack_self(mob/user)
 	. = ..()
