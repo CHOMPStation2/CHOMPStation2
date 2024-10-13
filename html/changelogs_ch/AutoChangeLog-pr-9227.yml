@@ -1,0 +1,5 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "You can now modify internal tank settings from the RIG UI."
+  - qol: "RIG UI top buttons shifted about and minimized."
