@@ -103,7 +103,13 @@
 //VOREStation edit ends
 /obj/effect/projectile/impact/pointdefense
 	icon_state = "impact_pointdef"
-<<<<<<< HEAD
+
+/obj/effect/projectile/impact/rainbow
+	icon_state = "impact_rainbow"
+	light_range = 3
+	light_power = 1
+	light_color = "#ffffff"
+
 	//CHOMPStation add coilgun pointdefense
 /obj/effect/projectile/impact/coildefense
 	icon = 'icons/obj/projectiles_impact_ch.dmi'
@@ -112,11 +118,3 @@
 	light_power = 3
 	light_color = "#FFFFFF"
 //CHOMPStation add end <3
-=======
-
-/obj/effect/projectile/impact/rainbow
-	icon_state = "impact_rainbow"
-	light_range = 3
-	light_power = 1
-	light_color = "#ffffff"
->>>>>>> c479ccd4f9... Merge pull request #16456 from SatinIsle/glamour-mob-pack
