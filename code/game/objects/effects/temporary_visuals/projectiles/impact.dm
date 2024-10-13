@@ -109,6 +109,7 @@
 	light_range = 3
 	light_power = 1
 	light_color = "#ffffff"
+<<<<<<< HEAD
 
 	//CHOMPStation add coilgun pointdefense
 /obj/effect/projectile/impact/coildefense
@@ -118,3 +119,5 @@
 	light_power = 3
 	light_color = "#FFFFFF"
 //CHOMPStation add end <3
+=======
+>>>>>>> c479ccd4f9 (Merge pull request #16456 from SatinIsle/glamour-mob-pack)
