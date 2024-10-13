@@ -104,7 +104,7 @@
 				var/static/regex/size_mult = new/regex("\\d+")
 				if(size_mult.Find(msg))
 					var/resizing_value = text2num(size_mult.match)
-					H.resize(CLAMP(resizing_value/100 , 0.01, 6), uncapped = M.has_large_resize_bounds()) //CHOMPEdit - Let resize handle size limits. It's meant to do that.
+					H.resize(CLAMP(resizing_value/100 , 0.01, 6), uncapped = H.has_large_resize_bounds()) //CHOMPEdit - Let resize handle size limits. It's meant to do that.
 
 
 
