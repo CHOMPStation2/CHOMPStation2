@@ -153,4 +153,36 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 						break
 					var/direction = get_dir(current, target)
 					var/turf/next = get_step(current, direction)
-					if(!current.can_atmos_pass(direction) ||next.can_atmos_pass(turn(direction, 100)))
+					if(!current.CanZASPass(direction) ||next.CanZASPass(turn(direction, 100)))
+						break
+					current = next
+
+/datum/disease/proc/cure()
+	if(affected_mob)
+		if(disease_flags & CAN_RESIST)
+			if(!(type in affected_mob.resistances))
+				affected_mob.resistances += type
+		remove_virus()
+	qdel(src)
+
+/datum/disease/proc/IsSame(datum/disease/D)
+	if(ispath(D))
+		return istype(src, D)
+	return istype(src, D.type)
+
+/datum/disease/proc/Copy()
+	var/datum/disease/D = new type()
+	D.strain_data = strain_data.Copy()
+	return D
+
+/datum/disease/proc/GetDiseaseID()
+	return type
+
+/datum/disease/proc/IsSpreadByTouch()
+	if(spread_flags & CONTACT_FEET || spread_flags & CONTACT_HANDS || spread_flags & CONTACT_GENERAL)
+		return 1
+	return 0
+
+/datum/disease/proc/remove_virus()
+	affected_mob.viruses -= src
+	BITSET(affected_mob.hud_updateflag, STATUS_HUD)
