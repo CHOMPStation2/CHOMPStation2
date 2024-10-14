@@ -121,6 +121,11 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
+					// CHOMPAdd Start - Sell salvage
+					if(istype(A, /obj/item/salvage))
+						var/obj/item/salvage/salvagedStuff = A
+						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
+					// CHOMPAdd End
 
 
 			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything

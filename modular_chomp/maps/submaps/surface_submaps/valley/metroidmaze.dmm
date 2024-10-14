@@ -2,6 +2,19 @@
 "a" = (
 /turf/simulated/floor/dungeon,
 /area/submap/metroidmaze)
+"b" = (
+/obj/structure/table/standard,
+/obj/random/projectile/random,
+/obj/random/energy/highend,
+/turf/simulated/floor/dungeon,
+/area/submap/metroidmaze)
+"e" = (
+/obj/structure/table/standard,
+/obj/random/projectile/random,
+/obj/random/energy/highend,
+/obj/random/firstaid,
+/turf/simulated/floor/dungeon,
+/area/submap/metroidmaze)
 "p" = (
 /turf/simulated/wall/gold{
 	can_open = 1
@@ -16,6 +29,12 @@
 /mob/living/simple_mob/metroid/juvenile/omega,
 /turf/simulated/floor/dungeon,
 /area/submap/metroidmaze)
+"C" = (
+/obj/structure/table/standard,
+/obj/random/projectile/random,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/dungeon,
+/area/submap/metroidmaze)
 "D" = (
 /turf/template_noop,
 /area/template_noop)
@@ -26,9 +45,7 @@
 "F" = (
 /obj/structure/table/standard,
 /obj/random/projectile/random,
-/obj/random/energy/highend,
 /obj/random/firstaid,
-/obj/random/medical/pillbottle,
 /turf/simulated/floor/dungeon,
 /area/submap/metroidmaze)
 "Z" = (
@@ -432,7 +449,7 @@ Z
 a
 Z
 Z
-F
+C
 a
 a
 F
@@ -560,10 +577,10 @@ Z
 a
 Z
 Z
-F
+b
 a
 a
-F
+e
 Z
 Z
 a

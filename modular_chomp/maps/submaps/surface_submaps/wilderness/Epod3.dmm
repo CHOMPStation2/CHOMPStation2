@@ -111,6 +111,12 @@
 /obj/structure/grille,
 /turf/simulated/shuttle/plating,
 /area/submap/Epod3)
+"w" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg{
+	activated = 1
+	},
+/turf/template_noop,
+/area/submap/Epod3)
 
 (1,1,1) = {"
 a
@@ -271,7 +277,7 @@ a
 (14,1,1) = {"
 a
 b
-b
+w
 b
 b
 b
