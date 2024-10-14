@@ -4735,6 +4735,7 @@
 #include "modular_chomp\code\datums\crafting\tyr_tribal.dm"
 #include "modular_chomp\code\datums\diseases\_disease.dm"
 #include "modular_chomp\code\datums\diseases\_MobProcs.dm"
+#include "modular_chomp\code\datums\diseases\symptoms\advance.dm"
 #include "modular_chomp\code\datums\elements\footstep.dm"
 #include "modular_chomp\code\datums\elements\footstep_override.dm"
 #include "modular_chomp\code\datums\elements\slosh.dm"
