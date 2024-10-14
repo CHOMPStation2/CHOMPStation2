@@ -51,15 +51,6 @@
 /obj/item/spacecash/c1,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
-"cr" = (
-/obj/structure/sink{
-	pixel_y = 16
-	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar/dorms)
 "cv" = (
 /obj/machinery/door/airlock/freezer{
 	name = "Restroom Stall";
@@ -111,6 +102,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"ef" = (
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
 "fg" = (
 /obj/machinery/light{
 	dir = 8
@@ -298,12 +298,6 @@
 /obj/effect/decal/cleanable/fruit_smudge,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
-"kJ" = (
-/obj/structure/toilet{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar)
 "kK" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
@@ -384,11 +378,6 @@
 "oh" = (
 /turf/template_noop,
 /area/space)
-"ou" = (
-/turf/simulated/wall/sandstone{
-	color = "purple"
-	},
-/area/survivalpod/superpose/secondlifebar/dorms)
 "oE" = (
 /obj/effect/decal/remains,
 /turf/simulated/floor/tiled/old_tile,
@@ -421,6 +410,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"rx" = (
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/survivalpod/superpose/secondlifebar/dorms)
 "rQ" = (
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	color = "#f700ff";
@@ -450,6 +444,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"tf" = (
+/turf/template_noop,
+/area/survivalpod/superpose/secondlifebar)
 "ti" = (
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/milspec/raised,
@@ -462,6 +459,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"tJ" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
 "uf" = (
 /obj/item/toy/plushie/black_fox{
 	pixel_y = 0;
@@ -554,9 +554,6 @@
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar)
-"AG" = (
-/turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar/dorms)
 "Ba" = (
 /obj/structure/bed/pillowpile/green,
 /obj/item/toy/plushie/pink_fox{
@@ -565,9 +562,6 @@
 	},
 /obj/item/bedsheet/pillow/teal,
 /obj/item/toy/plushie/borgplushie/drake/med,
-/turf/simulated/floor/carpet/gaycarpet,
-/area/survivalpod/superpose/secondlifebar)
-"Bw" = (
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar)
 "BC" = (
@@ -775,9 +769,6 @@
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
-"JO" = (
-/turf/template_noop,
-/area/survivalpod/superpose/secondlifebar)
 "Ki" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/dirt,
@@ -932,10 +923,24 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/secondlifebar/dorms)
+"QQ" = (
+/obj/machinery/replicator/clothing,
+/obj/item/toy/plushie/bigcat{
+	desc = "A big, fluffy looking cat that just looks very huggable. Though, there's an odd feeling to them..";
+	name = "Odd Cat Plushie"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
 "RX" = (
 /obj/machinery/door/airlock/gold,
 /turf/simulated/floor/flock,
 /area/survivalpod/superpose/secondlifebar)
+"Sb" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
 "Sp" = (
 /obj/structure/bed/double,
 /turf/simulated/floor/carpet/purcarpet,
@@ -957,7 +962,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar/dorms)
+/area/survivalpod/superpose/secondlifebar)
 "SW" = (
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
@@ -1038,17 +1043,6 @@
 	},
 /turf/unsimulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
-"Us" = (
-/obj/structure/table/darkglass,
-/obj/item/toy/tennis/purple{
-	pixel_x = -6
-	},
-/obj/item/toy/tennis/blue{
-	pixel_y = 0;
-	pixel_x = 4
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/survivalpod/superpose/secondlifebar)
 "Uu" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -1090,12 +1084,26 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"YS" = (
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
 "Zj" = (
 /obj/machinery/light{
 	dir = 4;
 	pixel_y = 0
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"Zq" = (
+/obj/structure/table/darkglass,
+/obj/item/toy/tennis/purple{
+	pixel_x = -6
+	},
+/obj/item/toy/tennis/blue{
+	pixel_y = 0;
+	pixel_x = 4
+	},
+/turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
 "ZC" = (
 /obj/item/melee/chainofcommand/curator_whip,
@@ -1144,10 +1152,10 @@ js
 js
 js
 js
-ou
-ou
-ou
-ou
+rx
+rx
+rx
+rx
 oh
 oh
 oh
@@ -1166,11 +1174,11 @@ ti
 IJ
 kj
 Gf
-ou
-cr
+rx
+ef
 CG
-ou
-ou
+rx
+rx
 Ab
 oh
 "}
@@ -1184,15 +1192,15 @@ Fn
 Fn
 Fn
 Fn
-Us
+Zq
 kj
 kj
 TG
-ou
+rx
 KY
-AG
+tJ
 wT
-ou
+rx
 Qy
 oh
 "}
@@ -1210,11 +1218,11 @@ bp
 kj
 kj
 TG
-ou
-ou
+rx
+rx
 QI
-ou
-ou
+rx
+rx
 Qy
 oh
 "}
@@ -1232,11 +1240,11 @@ pC
 kj
 kj
 lC
-ou
+rx
 Wd
 KJ
 HJ
-ou
+rx
 Ki
 oh
 "}
@@ -1246,7 +1254,7 @@ ZD
 jA
 jg
 bn
-Us
+Zq
 SR
 ti
 pc
@@ -1258,7 +1266,7 @@ LA
 KJ
 Wd
 Mf
-ou
+rx
 Qy
 oh
 "}
@@ -1276,7 +1284,7 @@ To
 To
 Hq
 kj
-ou
+rx
 Wa
 gp
 Sp
@@ -1298,11 +1306,11 @@ Jw
 Qa
 UR
 Lh
-ou
-ou
-ou
-ou
-ou
+rx
+rx
+rx
+rx
+rx
 Ab
 TP
 "}
@@ -1386,17 +1394,17 @@ Qa
 vC
 lL
 Lz
-ou
-ou
-ou
-ou
-ou
+rx
+rx
+rx
+rx
+rx
 yg
 TP
 "}
 (13,1,1) = {"
 js
-kj
+QQ
 kj
 kj
 aB
@@ -1408,11 +1416,11 @@ SW
 SW
 ac
 kj
-ou
+rx
 IN
 ZC
 Mt
-ou
+rx
 Ab
 qq
 "}
@@ -1434,7 +1442,7 @@ vY
 aQ
 aQ
 aQ
-ou
+rx
 MH
 oh
 "}
@@ -1452,11 +1460,11 @@ ZI
 Hl
 Qd
 kj
-ou
+rx
 ap
 aQ
 yb
-ou
+rx
 MH
 oh
 "}
@@ -1474,11 +1482,11 @@ cW
 FQ
 fP
 Cj
-ou
-ou
+rx
+rx
 ki
-ou
-ou
+rx
+rx
 Ki
 oh
 "}
@@ -1493,14 +1501,14 @@ uf
 Dr
 kb
 zo
-Bw
+YS
 Qd
 jo
-ou
+rx
 Uu
 jY
 wT
-ou
+rx
 Qy
 oh
 "}
@@ -1518,16 +1526,16 @@ AE
 TL
 CW
 rg
-ou
+rx
 oa
-SS
-ou
-ou
+Sb
+rx
+rx
 Qy
 oh
 "}
 (19,1,1) = {"
-JO
+tf
 js
 js
 js
@@ -1540,10 +1548,10 @@ js
 js
 js
 js
-ou
-ou
-ou
-ou
+rx
+rx
+rx
+rx
 oh
 oh
 oh
@@ -1603,7 +1611,7 @@ js
 lr
 js
 fi
-kJ
+SS
 js
 oh
 oh
