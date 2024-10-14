@@ -17904,6 +17904,10 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 9
 	},
+/obj/item/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
 "hen" = (
@@ -19379,6 +19383,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
+"iGI" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/medical/morgue)
 "iHD" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Telecommunications Satellite";
@@ -20916,6 +20926,9 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 5
 	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
 "kfM" = (
@@ -21318,9 +21331,9 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 1
 	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
@@ -31242,6 +31255,9 @@
 /area/hallway/primary/firstdeck/starboard)
 "uRT" = (
 /obj/structure/stairs/spawner/east,
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
 "uRV" = (
@@ -31646,14 +31662,14 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "vhz" = (
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
+	},
+/obj/machinery/status_display{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
@@ -34384,9 +34400,8 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
+/obj/machinery/ai_status_display{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
@@ -81194,7 +81209,7 @@ tDq
 exY
 thk
 iEb
-iEb
+iGI
 dHz
 sal
 qwb
