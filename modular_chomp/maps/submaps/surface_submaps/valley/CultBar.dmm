@@ -27,7 +27,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/fancyblack,
 /obj/random/maintenance/foodstuff,
-/obj/random/maintenance/cargo,
 /obj/item/gun/magic/firestaff/cultstaff,
 /obj/random/maintenance/research,
 /turf/simulated/floor/carpet,
@@ -288,7 +287,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/soulstone,
 /obj/item/gun/magic/firestaff,
-/obj/item/holosign_creator/smokewand,
 /turf/simulated/floor/gorefloor2,
 /area/submap/CultBar)
 "kY" = (
@@ -447,8 +445,6 @@
 /obj/structure/table/sifwooden_reinforced,
 /obj/random/maintenance/misc,
 /obj/random/maintenance/cargo,
-/obj/item/stack/nanopaste/advanced,
-/obj/random/maintenance/security,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "pE" = (
@@ -499,10 +495,8 @@
 /area/submap/CultBar)
 "tE" = (
 /obj/structure/table/standard,
-/obj/random/cash/big,
-/obj/random/cash/big,
-/obj/random/cash/big,
 /obj/effect/floor_decal/corner/red/diagonal,
+/obj/random/cash,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
 "tO" = (
@@ -553,8 +547,7 @@
 /area/submap/CultBar)
 "xX" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stolenpackage,
+/obj/item/stack/nanopaste/advanced,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "yI" = (
@@ -621,8 +614,9 @@
 /area/submap/CultBar)
 "BW" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/stolenpackage,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/maintenance/security,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Cf" = (
@@ -738,11 +732,6 @@
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/CultBar)
-"GO" = (
-/obj/structure/table/sifwooden_reinforced,
-/obj/random/contraband,
-/turf/simulated/floor/wood/sif,
-/area/submap/CultBar)
 "Hw" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
@@ -777,7 +766,6 @@
 "Jj" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/snacks/ribplate,
-/obj/item/reagent_containers/food/snacks/ribplate,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/CultBar)
@@ -794,8 +782,8 @@
 /area/submap/CultBar)
 "Ka" = (
 /obj/structure/table/gamblingtable,
-/obj/random/cash/big,
 /obj/effect/decal/cleanable/dirt,
+/obj/random/cash,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Kb" = (
@@ -850,7 +838,8 @@
 "LD" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/humanoid/cultist/elite{
-	faction = "demon"
+	faction = "demon";
+	loot_list = list(/obj/item/telecube = 50)
 	},
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
@@ -887,22 +876,11 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
-"MJ" = (
-/obj/structure/table/sifwooden_reinforced,
-/obj/random/energy,
-/turf/simulated/floor/wood/sif,
-/area/submap/CultBar)
 "MO" = (
 /obj/structure/bookcase,
 /obj/item/book/codex/lore/vir,
 /obj/item/book/manual/supermatter_engine,
 /turf/simulated/floor/carpet,
-/area/submap/CultBar)
-"MS" = (
-/obj/structure/table/sifwooden_reinforced,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/firstaid,
-/turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "Na" = (
 /obj/structure/table/sifwooden_reinforced,
@@ -983,11 +961,8 @@
 /area/submap/CultBar)
 "RO" = (
 /obj/structure/table/fancyblack,
-/obj/random/contraband,
 /obj/machinery/light/small/flicker,
 /obj/random/maintenance/misc,
-/obj/random/mainttoyloot/nofail,
-/obj/item/telecube/randomized,
 /turf/simulated/floor/carpet,
 /area/submap/CultBar)
 "Sn" = (
@@ -1069,7 +1044,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/humanoid/cultist/elite{
-	faction = "demon"
+	faction = "demon";
+	loot_list = list(/obj/item/telecube = 50)
 	},
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
@@ -1136,7 +1112,7 @@
 /area/submap/CultBar)
 "WT" = (
 /obj/structure/table/gamblingtable,
-/obj/random/cash/huge,
+/obj/random/cash,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/CultBar)
 "WW" = (
@@ -1165,9 +1141,7 @@
 /obj/structure/table/sifwooden_reinforced,
 /obj/random/maintenance/misc,
 /obj/random/maintenance/morestuff,
-/obj/random/maintenance/medical,
 /obj/random/maintenance/research,
-/obj/random/firstaid,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "YT" = (
@@ -1770,7 +1744,7 @@ EH
 qP
 zU
 Ah
-GO
+qP
 Le
 zy
 dt
@@ -1807,7 +1781,7 @@ eT
 gu
 Ah
 zU
-qP
+lm
 rJ
 HK
 dY
@@ -1844,7 +1818,7 @@ qG
 cL
 or
 YZ
-MJ
+qP
 LY
 mT
 zU
@@ -1918,8 +1892,8 @@ EH
 qP
 yP
 NZ
-GO
-xX
+qP
+gu
 Ah
 or
 ZZ
@@ -1993,7 +1967,7 @@ VZ
 Ks
 mT
 Ot
-Ot
+gu
 SN
 zU
 ZZ
@@ -2177,7 +2151,7 @@ Xa
 or
 HK
 at
-qP
+xX
 pv
 zU
 or
@@ -2252,7 +2226,7 @@ or
 ez
 HK
 gP
-gP
+BW
 HK
 or
 ZZ
@@ -2288,8 +2262,8 @@ cX
 Ah
 dt
 Ki
-MS
-BW
+gu
+gu
 Ah
 HK
 VZ

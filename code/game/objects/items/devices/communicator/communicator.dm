@@ -90,6 +90,8 @@ var/global/list/obj/item/communicator/all_communicators = list()
 								"spark" = 'sound/effects/sparks4.ogg',
 								"rad" = 'sound/items/geiger/high1.ogg',
 								"servo" = 'sound/machines/rig/rigservo.ogg')
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 // Proc: New()
 // Parameters: None
@@ -461,7 +463,6 @@ var/global/list/obj/item/communicator/all_communicators = list()
 	icon = 'icons/obj/device.dmi'
 	icon_state = "commwatch"
 	slot_flags = SLOT_GLOVES | SLOT_ID | SLOT_BELT //CHOMPEDIT, Commwatches and Wrtist PDAs can go on ID and belt slots
-	// var/gunshot_residue	//CHOMPEDIT - Fixes a bug where guns cannot be operated while wearing a watch // CHOMPRemove no bandaids
 
 /obj/item/communicator/watch/update_icon()
 	if(video_source)

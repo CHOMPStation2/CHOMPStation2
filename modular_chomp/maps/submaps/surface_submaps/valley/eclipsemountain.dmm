@@ -12,8 +12,10 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "bN" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
 /obj/effect/floor_decal/corner/black/diagonal,
+/mob/living/simple_mob/humanoid/eclipse/solar/firemoff{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipsemountain)
 "bY" = (
@@ -63,7 +65,6 @@
 /obj/structure/table/gold,
 /obj/random/ammo,
 /obj/random/maintenance/security,
-/obj/random/maintenance/research,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -92,8 +93,8 @@
 "jt" = (
 /obj/structure/table/wooden_reinforced,
 /obj/random/tool/alien,
-/obj/random/contraband,
 /obj/machinery/light,
+/obj/random/contraband,
 /turf/simulated/floor/wood{
 	oxygen = 20.7263;
 	nitrogen = 93.7835;
@@ -202,6 +203,12 @@
 /obj/machinery/telecomms/relay/preset,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipsemountain)
+"sr" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/random/medical/pillbottle,
+/turf/simulated/floor/tiled/dark,
+/area/submap/eclipsemountain)
 "sy" = (
 /obj/structure/table/gold,
 /obj/random/ammo,
@@ -287,8 +294,10 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "vC" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
 /obj/effect/floor_decal/corner/grey/diagonal,
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "vO" = (
@@ -309,7 +318,6 @@
 /area/submap/eclipsemountain)
 "yy" = (
 /obj/structure/table/steel,
-/obj/random/firstaid,
 /obj/random/material/refined,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/steel,
@@ -432,8 +440,10 @@
 /turf/simulated/floor/bluegrid,
 /area/submap/eclipsemountain)
 "IQ" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
 /obj/effect/floor_decal/corner/grey/diagonal,
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/cell/device/weapon/recharge/alien/hybrid = 50)
+	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "Jg" = (
@@ -483,7 +493,6 @@
 /obj/structure/table/gold,
 /obj/random/ammo,
 /obj/random/maintenance/security,
-/obj/random/maintenance/research,
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled/yellow,
@@ -595,15 +604,11 @@
 	},
 /area/submap/eclipsemountain)
 "Tp" = (
-/obj/structure/table/wooden_reinforced,
-/obj/random/contraband,
-/obj/random/contraband,
-/obj/random/firstaid,
-/turf/simulated/floor/wood{
-	oxygen = 20.7263;
-	nitrogen = 93.7835;
-	temperature = 243.15
-	},
+/obj/structure/table/gold,
+/obj/random/maintenance/security,
+/obj/random/maintenance/research,
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/turf/simulated/floor/tiled/yellow,
 /area/submap/eclipsemountain)
 "TT" = (
 /obj/structure/table/rack,
@@ -667,7 +672,6 @@
 /area/submap/eclipsemountain)
 "XM" = (
 /obj/structure/table/gold,
-/obj/random/ammo,
 /obj/random/maintenance/security,
 /obj/random/maintenance/research,
 /obj/machinery/light{
@@ -1324,7 +1328,7 @@ MM
 MM
 LV
 LV
-kX
+sr
 kX
 LV
 LV
@@ -1367,7 +1371,7 @@ MM
 kx
 LV
 yy
-Ln
+yy
 LV
 kx
 MM
@@ -1488,7 +1492,7 @@ JO
 JO
 JO
 JO
-bY
+QT
 MM
 LV
 LV
@@ -1529,8 +1533,8 @@ MM
 JO
 JO
 Tc
+QT
 bY
-Tp
 MM
 kx
 qv
@@ -1610,7 +1614,7 @@ Cz
 yY
 Cz
 MM
-sy
+Tp
 VM
 ec
 xO

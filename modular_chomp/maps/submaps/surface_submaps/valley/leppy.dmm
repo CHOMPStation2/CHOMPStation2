@@ -27,7 +27,7 @@
 /area/submap/leppy)
 "r" = (
 /obj/structure/table/gold,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/mineral/floor/cave{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -57,7 +57,6 @@
 /area/template_noop)
 "D" = (
 /obj/structure/table/gold,
-/obj/random/medical/pillbottle,
 /turf/simulated/mineral/floor/cave{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;

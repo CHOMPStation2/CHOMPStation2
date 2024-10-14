@@ -12,7 +12,9 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "bh" = (
-/mob/living/simple_mob/animal/space/carp/large,
+/mob/living/simple_mob/animal/space/carp/large{
+	loot_list = list(/obj/item/salvage/ruin/carp = 100)
+	},
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -24,7 +26,6 @@
 /obj/structure/cable/green,
 /obj/structure/cable/blue,
 /obj/structure/table/gold,
-/obj/random/material/precious,
 /obj/machinery/light/poi{
 	dir = 8
 	},
@@ -80,6 +81,15 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft,
 /area/submap/carriershuttle)
+"gp" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/machinery/light/poi{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
 "gu" = (
 /obj/structure/grille/cult{
 	name = "Alien grille"
@@ -113,18 +123,15 @@
 /area/submap/carriershuttle)
 "ju" = (
 /obj/structure/table/standard,
-/obj/random/maintenance/foodstuff,
-/obj/random/medical/pillbottle,
 /obj/machinery/light/poi,
 /obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "ln" = (
 /obj/structure/table/standard,
-/obj/random/ammo,
-/obj/random/contraband/nofail,
 /obj/machinery/light/poi,
 /obj/effect/floor_decal/corner/red/diagonal,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "lR" = (
@@ -237,6 +244,18 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
+"tv" = (
+/obj/structure/table/standard,
+/obj/machinery/recharger,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
+"tN" = (
+/obj/structure/table/standard,
+/obj/random/medical/lite,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
 "tQ" = (
 /obj/machinery/light/poi{
 	dir = 8
@@ -309,7 +328,6 @@
 "yb" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
-/obj/random/medical/lite,
 /obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
@@ -332,7 +350,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/table/gold,
-/obj/random/material/precious,
 /obj/machinery/light/poi{
 	dir = 8
 	},
@@ -399,6 +416,13 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
+"BW" = (
+/obj/structure/table/standard,
+/obj/random/ammo,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/random/contraband,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
 "Cz" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -410,7 +434,6 @@
 /area/submap/carriershuttle)
 "CR" = (
 /obj/structure/table/standard,
-/obj/random/ammo,
 /obj/random/grenade/lethal,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/shuttle/floor/darkred,
@@ -422,7 +445,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/table/gold,
-/obj/random/material/precious,
 /obj/machinery/light/poi{
 	dir = 8
 	},
@@ -460,7 +482,6 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "EN" = (
-/obj/random/maintenance/morestuff,
 /obj/random/maintenance/morestuff,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/shuttle/floor/darkred,
@@ -508,6 +529,11 @@
 /obj/machinery/light/poi{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/shuttle/floor/darkred,
+/area/submap/carriershuttle)
+"JQ" = (
+/obj/structure/table/standard,
 /obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
@@ -566,11 +592,11 @@
 "MZ" = (
 /obj/structure/table/standard,
 /obj/random/ammo,
-/obj/random/contraband/nofail,
 /obj/machinery/light/poi{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "NI" = (
@@ -591,9 +617,8 @@
 /area/submap/carriershuttle)
 "PM" = (
 /obj/structure/table/standard,
-/obj/random/ammo,
-/obj/random/contraband/nofail,
 /obj/effect/floor_decal/corner/red/diagonal,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Qm" = (
@@ -643,6 +668,13 @@
 "Uq" = (
 /obj/effect/floor_decal/corner/lightorange/diagonal,
 /turf/simulated/shuttle/floor/yellow,
+/area/submap/carriershuttle)
+"Vr" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/machinery/light/poi,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/shuttle/floor/darkred,
 /area/submap/carriershuttle)
 "Vv" = (
 /obj/machinery/light/poi{
@@ -1171,7 +1203,7 @@ Qm
 BP
 QQ
 QQ
-PM
+BW
 Qm
 mM
 mM
@@ -1251,11 +1283,11 @@ mM
 mM
 mM
 Qm
-dI
+gp
 VX
 VX
 VX
-ju
+Vr
 Qm
 mM
 "}
@@ -1288,18 +1320,18 @@ mM
 mM
 mM
 Qm
-yb
+tN
 VX
 VX
 VX
-yb
+JQ
 Qm
 mM
 "}
 (17,1,1) = {"
 mM
 Qm
-ZO
+tv
 Eb
 VX
 Eb
@@ -1325,7 +1357,7 @@ mM
 mM
 mM
 Qm
-ZO
+tv
 Eb
 VX
 Eb

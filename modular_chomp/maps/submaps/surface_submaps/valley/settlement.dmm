@@ -121,11 +121,11 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "gl" = (
-/obj/structure/table/standard,
-/obj/random/maintenance/foodstuff,
-/obj/effect/floor_decal/corner/orange/diagonal,
-/obj/random/energy/sec,
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/rack,
+/obj/random/cash,
+/obj/random/cash,
+/turf/simulated/floor/tiled/red,
 /area/submap/settlement)
 "gz" = (
 /mob/living/simple_mob/construct/juggernaut,
@@ -151,9 +151,7 @@
 "hy" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/rack,
-/obj/random/cash/huge,
-/obj/random/cash/huge,
-/obj/random/cash/huge,
+/obj/random/cash,
 /turf/simulated/floor/tiled/red,
 /area/submap/settlement)
 "hV" = (
@@ -169,7 +167,7 @@
 /area/submap/settlement)
 "im" = (
 /obj/structure/table/woodentable,
-/obj/random/multiple/gun/projectile/handgun,
+/obj/random/energy/sec,
 /turf/simulated/floor/lino,
 /area/submap/settlement)
 "it" = (
@@ -208,7 +206,9 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
 "kg" = (
-/mob/living/simple_mob/humanoid/cultist/magus,
+/mob/living/simple_mob/humanoid/cultist/magus{
+	loot_list = list(/obj/item/gun/energy/imperial = 40)
+	},
 /turf/simulated/floor/cult,
 /area/submap/settlement)
 "km" = (
@@ -267,10 +267,9 @@
 "oa" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/rack,
-/obj/random/cash/huge,
-/obj/random/cash/huge,
-/obj/random/cash/huge,
 /obj/random/rigsuit/chancetofail,
+/obj/random/cash,
+/obj/random/cash,
 /turf/simulated/floor/tiled/red,
 /area/submap/settlement)
 "oq" = (
@@ -587,7 +586,6 @@
 "HK" = (
 /obj/structure/table/fancyblack,
 /obj/item/storage/belt/soulstone/full,
-/obj/item/gun/energy/imperial,
 /turf/simulated/floor/cult,
 /area/submap/settlement)
 "HR" = (
@@ -684,10 +682,9 @@
 "MN" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/rack,
-/obj/random/cash/huge,
-/obj/random/cash/huge,
-/obj/random/cash/huge,
 /obj/random/rigsuit,
+/obj/random/cash,
+/obj/random/cash,
 /turf/simulated/floor/tiled/red,
 /area/submap/settlement)
 "MS" = (
@@ -1038,7 +1035,7 @@ Mm
 OI
 yR
 lt
-xQ
+TJ
 jZ
 lt
 lt
@@ -1080,7 +1077,7 @@ ft
 OI
 GU
 lt
-xQ
+TJ
 jZ
 lt
 lt
@@ -1210,7 +1207,7 @@ xQ
 Vp
 lt
 lt
-gl
+xQ
 xQ
 rh
 PG
@@ -1519,7 +1516,7 @@ PP
 PP
 PP
 PP
-BT
+Ja
 PP
 PP
 Fi
@@ -2440,7 +2437,7 @@ PG
 PG
 TU
 TU
-hy
+gl
 xH
 TU
 TU

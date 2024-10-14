@@ -149,3 +149,25 @@
   - rscadd: VBOanim_belly10
   TheCaramelion:
   - balance: Adjusted the time needed for various job positions
+2024-10-13:
+  CHOMPStation2:
+  - rscadd: '%digestedprey in a belly message will give the number of prey digested
+      in that specific belly in the same shift.'
+  - rscadd: The mechanical vore preferences UI is now in dark mode and is color coded
+      to easily distinguish yes and no
+  - rscadd: Crew Manifest now uses pretty TGUI in lobby and for ghosts.
+  - rscadd: 'The latest and greatest from the hit studio TotallyNotMalware:tm:, Fishy
+      Fishy 905:tm: has been brought to a local NtOS:tm: software repository near
+      you. (It''s a stardew valley fishing minigame!)'
+  - bugfix: Just clicking on a port will no longer crash the circuit UI
+  - qol: Removed broken click to connect ports, UI now expects you to always hold
+      down the mouse button while connecting ports
+  - rscadd: ATMs now use a fancy new UI
+  Kashargul:
+  - qol: moves all belly dmis to datums to get the icon cache path from
+2024-10-14:
+  CHOMPStation2:
+  - rscadd: You can now modify internal tank settings from the RIG UI.
+  - qol: RIG UI top buttons shifted about and minimized.
+  tacoguy7765093:
+  - maptweak: Fixed area issues and maphelpers in the lone home shuttle
