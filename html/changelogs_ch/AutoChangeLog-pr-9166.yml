@@ -1,0 +1,12 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - maptweak: "Revamped Chemistry"
+  - maptweak: "Revamped Patient rooms"
+  - maptweak: "Revamped Destillery room"
+  - maptweak: "Revamped Medical storage"
+  - maptweak: "Virology is now on Deck 2"
+  - maptweak: "Genetics is now on Deck 2"
+  - maptweak: "Morgue is now on Deck 1"
+  - maptweak: "Cryo has been expanded"
+  - maptweak: "Medical has now two scanners and two sleepers"
