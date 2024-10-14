@@ -1,0 +1,1192 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"ap" = (
+/obj/machinery/door/airlock/gold{
+	id_tag = "secondlifepod2"
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"aB" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"aQ" = (
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"bn" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/energy/sizegun,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"bp" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"bu" = (
+/obj/structure/table/darkglass,
+/obj/item/glass_jar,
+/obj/item/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"cW" = (
+/obj/structure/bed/pillowpile/teal,
+/obj/item/toy/plushie/borgplushie/drake/trauma{
+	pixel_y = -5;
+	pixel_x = 5
+	},
+/obj/item/bedsheet/pillow/white,
+/obj/item/toy/plushie/teshari/w_yw,
+/obj/item/toy/plushie/shark{
+	pixel_y = 3;
+	pixel_x = -15
+	},
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"dx" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"fs" = (
+/obj/structure/table/darkglass,
+/obj/structure/stripper_pole,
+/obj/item/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"fv" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"fD" = (
+/obj/structure/table/darkglass,
+/obj/structure/stripper_pole,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"fI" = (
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/space)
+"fU" = (
+/obj/machinery/vending/deluxe_boozeomat{
+	req_access = null;
+	dir = 4
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"ht" = (
+/obj/structure/bed/pillowpile/white,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"je" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/structure/sign/atmos{
+	pixel_y = 0;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"jg" = (
+/obj/structure/table/darkglass,
+/obj/item/reagent_containers/pill/zoom,
+/obj/item/reagent_containers/pill/zoom{
+	pixel_y = 7;
+	pixel_x = -1
+	},
+/obj/item/reagent_containers/pill/zoom{
+	pixel_y = 4;
+	pixel_x = 4
+	},
+/obj/item/glass_extra/straw,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"jo" = (
+/obj/machinery/feeder,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"js" = (
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/space)
+"jx" = (
+/obj/structure/table/darkglass,
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"jA" = (
+/obj/structure/table/darkglass,
+/obj/item/card/id,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"jU" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"jY" = (
+/obj/structure/table/darkglass,
+/obj/machinery/chemical_dispenser/deluxe/full,
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"kb" = (
+/obj/item/bedsheet/pillow,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"kj" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"kC" = (
+/obj/structure/table/bench/marble,
+/obj/item/reagent_containers/glass/beaker/mayo{
+	pixel_y = 5
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"lC" = (
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"lG" = (
+/obj/structure/bed/pillowpile/orange,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"lL" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"mb" = (
+/obj/structure/table/darkglass,
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	dir = 4
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"mh" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"ml" = (
+/obj/structure/bed/pillowpile/yellow,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"oa" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"oh" = (
+/turf/template_noop,
+/area/space)
+"pc" = (
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"pC" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/energy/sizegun,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"rg" = (
+/obj/machinery/vending/loadout/loadout_misc{
+	emagged = 1
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"rq" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"rQ" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"sR" = (
+/obj/structure/table/darkglass,
+/obj/item/storage/box/glasses/rocks{
+	pixel_y = -2;
+	pixel_x = -4
+	},
+/obj/item/storage/box/glasses/square{
+	pixel_y = -2;
+	pixel_x = 12
+	},
+/obj/item/storage/secure/briefcase/money,
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"ta" = (
+/obj/structure/table/darkglass,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"ti" = (
+/obj/structure/table/darkglass,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"tr" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 1;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"uf" = (
+/obj/item/toy/plushie/black_fox{
+	pixel_y = 0;
+	name = "latex black fox"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"uV" = (
+/obj/structure/bed/pillowpile,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"vC" = (
+/obj/structure/table/darkglass,
+/obj/item/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"wL" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"yb" = (
+/obj/machinery/vending/deluxe_dinner{
+	req_access = null;
+	dir = 4
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"zo" = (
+/obj/item/bedsheet/pillow/orange,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"Ab" = (
+/obj/structure/table/darkglass,
+/obj/item/mindbinder{
+	pixel_y = 4;
+	pixel_x = -2
+	},
+/obj/item/mindbinder{
+	pixel_y = -4;
+	pixel_x = -3
+	},
+/obj/item/mindbinder{
+	pixel_y = 2;
+	pixel_x = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Af" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"Av" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 8
+	},
+/obj/structure/bed/pillowpile/green,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"AE" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"Ba" = (
+/obj/structure/bed/pillowpile/green,
+/obj/item/toy/plushie/pink_fox{
+	pixel_x = -5;
+	pixel_y = -13
+	},
+/obj/item/bedsheet/pillow/teal,
+/obj/item/toy/plushie/borgplushie/drake/med,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"BC" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 8
+	},
+/obj/structure/bed/pillowpile/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"BK" = (
+/obj/item/gun/energy/mouseray/metamorphosis/advanced/random,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Cj" = (
+/obj/machinery/vending/loadout/gadget,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"Cp" = (
+/obj/structure/table/darkglass,
+/obj/item/bodysnatcher{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/obj/item/bodysnatcher{
+	pixel_y = -2;
+	pixel_x = -2
+	},
+/obj/item/bodysnatcher{
+	pixel_y = -4;
+	pixel_x = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"CW" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"Dr" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"DC" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"Eh" = (
+/obj/effect/floor_decal/industrial/stand_clear,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"El" = (
+/obj/structure/bed/pillowpile/orange,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Fn" = (
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"FQ" = (
+/obj/item/bedsheet/pillow/teal,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"Gf" = (
+/obj/structure/table/darkglass,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/toy/balloon,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"Gm" = (
+/obj/structure/table/darkglass,
+/obj/item/material/whip,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"Hl" = (
+/obj/item/bedsheet/pillow/red,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"Hq" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 4
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"IJ" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/item/material/twohanded/riding_crop,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"IR" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/projectile/shotgun/pump{
+	hud_enabled = 0
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/blank{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/item/clothing/mask/demon,
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"Jr" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 8
+	},
+/obj/machinery/light/floortube{
+	overlay_color = "#e060e0";
+	brightness_color_ns = "#9C439C";
+	light_color = "#e060e0";
+	brightness_color = "#e060e0";
+	name = "tinted light fixture";
+	dir = 8
+	},
+/obj/structure/bed/pillowpile/red,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Jw" = (
+/obj/structure/table/darkglass,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Ki" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"Kr" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"KB" = (
+/obj/structure/table/darkglass,
+/obj/structure/stripper_pole,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"KJ" = (
+/turf/simulated/floor/carpet/purcarpet,
+/area/space)
+"Lh" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Lz" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 1
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Md" = (
+/turf/simulated/floor/flock,
+/area/space)
+"Mn" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/flock,
+/area/space)
+"Mz" = (
+/obj/structure/bed/pillowpile/red,
+/obj/item/toy/plushie/foxbear,
+/obj/item/toy/plushie/marble_fox{
+	pixel_x = -17;
+	pixel_y = -8
+	},
+/obj/item/toy/plushie/teshari/y_yw{
+	pixel_y = -5;
+	pixel_x = 7
+	},
+/obj/item/toy/plushie/snakeplushie{
+	pixel_y = -21
+	},
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"NY" = (
+/obj/structure/table/darkglass,
+/obj/item/clothing/under/swimsuit/stripper/stripper_pink,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"On" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Qa" = (
+/obj/structure/table/darkglass,
+/obj/item/glass_jar,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Qd" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+"QI" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"Sq" = (
+/obj/structure/table/darkglass,
+/obj/machinery/chemical_dispenser/bar_soft{
+	dir = 4
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"SR" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/energy/mouseray/metamorphosis/advanced,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"SS" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"SW" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"To" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"TG" = (
+/obj/item/clothing/accessory/shiny/gloves,
+/obj/item/clothing/accessory/shiny/socks,
+/obj/item/clothing/head/shiny_hood,
+/obj/item/clothing/head/shiny_hood/closed,
+/obj/item/clothing/under/shiny/catsuit,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/material/twohanded/riding_crop,
+/obj/item/tape_roll,
+/obj/item/stack/cable_coil/random,
+/obj/item/clothing/under/fluff/latexmaid,
+/obj/item/melee/fluff/holochain/mass,
+/obj/item/clothing/accessory/collar/shock,
+/obj/item/clothing/glasses/sunglasses/blindfold,
+/obj/item/clothing/mask/muzzle,
+/obj/item/clothing/mask/muzzle/ballgag,
+/obj/item/clothing/mask/muzzle/ballgag/ringgag,
+/obj/item/clothing/under/skinsuit,
+/obj/item/clothing/under/skinsuit/fem,
+/obj/item/clothing/under/skinsuit/fem/gray,
+/obj/item/clothing/under/skinsuit/fem/leotard,
+/obj/item/clothing/under/skinsuit/fem/leotard/gray,
+/obj/item/clothing/under/skinsuit/gray,
+/obj/item/clothing/under/skinsuit/leotard,
+/obj/item/clothing/under/skinsuit/leotard/gray,
+/obj/item/clothing/under/rank/nullsuit/civ,
+/obj/item/clothing/accessory/shiny/gloves/poly,
+/obj/item/clothing/accessory/shiny/socks/poly,
+/obj/item/clothing/head/shiny_hood/poly,
+/obj/item/clothing/head/shiny_hood/closed/poly,
+/obj/item/clothing/under/shiny/catsuit/poly,
+/obj/structure/table/darkglass,
+/obj/item/toy/balloon,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"TN" = (
+/obj/structure/bed/pillowpile/red,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"Uo" = (
+/obj/structure/table/darkglass,
+/obj/item/storage/box/glasses/meta/metapint{
+	pixel_y = 2;
+	pixel_x = -2
+	},
+/obj/item/storage/box/glasses/meta/metapint{
+	pixel_y = 4;
+	pixel_x = -4
+	},
+/obj/item/storage/box/glasses/meta/metapint{
+	pixel_y = 6;
+	pixel_x = -6
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/space)
+"UR" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Wa" = (
+/obj/machinery/door/airlock/gold{
+	id_tag = "secondlifepod1"
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/space)
+"Wd" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/carpet/purcarpet,
+/area/space)
+"WX" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"Zj" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/space)
+"ZD" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/energy/mouseray/metamorphosis/advanced/random,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/space)
+"ZI" = (
+/obj/structure/bed/pillowpile/yellow,
+/obj/item/toy/plushie/borgplushie/drake/jani,
+/obj/item/toy/plushie/red_fox{
+	pixel_y = -8;
+	pixel_x = 7
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/space)
+
+(1,1,1) = {"
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+"}
+(2,1,1) = {"
+oh
+oh
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+oh
+oh
+"}
+(3,1,1) = {"
+oh
+js
+js
+mb
+jY
+Sq
+fU
+yb
+Uo
+jx
+ti
+IJ
+kj
+Gf
+js
+jU
+jU
+js
+js
+oh
+"}
+(4,1,1) = {"
+oh
+js
+IR
+Fn
+Fn
+Fn
+Fn
+Fn
+Fn
+Fn
+ti
+kj
+kj
+TG
+js
+QI
+jU
+jU
+js
+oh
+"}
+(5,1,1) = {"
+oh
+js
+sR
+Fn
+Fn
+DC
+Fn
+Fn
+Fn
+Fn
+bp
+kj
+kj
+TG
+js
+js
+KJ
+js
+js
+oh
+"}
+(6,1,1) = {"
+oh
+js
+Fn
+Fn
+Fn
+Fn
+Fn
+Fn
+Gm
+ti
+pC
+kj
+kj
+lC
+js
+Wd
+KJ
+KJ
+js
+oh
+"}
+(7,1,1) = {"
+oh
+js
+ZD
+jA
+jg
+bn
+ti
+SR
+ti
+pc
+pc
+kj
+kj
+kj
+Wa
+KJ
+Wd
+KJ
+js
+oh
+"}
+(8,1,1) = {"
+oh
+js
+lG
+pc
+ml
+pc
+ht
+pc
+TN
+rQ
+To
+To
+Hq
+kj
+js
+KJ
+Zj
+KJ
+js
+oh
+"}
+(9,1,1) = {"
+oh
+js
+UR
+To
+El
+To
+On
+To
+To
+uV
+Jw
+Qa
+UR
+Lh
+js
+js
+js
+js
+js
+oh
+"}
+(10,1,1) = {"
+oh
+js
+Jw
+Qa
+NY
+Qa
+Jw
+Jw
+Qa
+Jw
+Jw
+Jw
+vC
+tr
+fI
+Md
+Md
+Md
+fI
+oh
+"}
+(11,1,1) = {"
+oh
+js
+vC
+fD
+Jw
+fs
+ta
+Jw
+KB
+vC
+Jw
+fD
+Jw
+tr
+Md
+Md
+Mn
+Md
+Md
+oh
+"}
+(12,1,1) = {"
+oh
+js
+Jw
+Qa
+Jw
+Qa
+Jw
+Jw
+bu
+vC
+Jw
+Jw
+Jw
+tr
+fI
+Md
+Md
+Md
+fI
+oh
+"}
+(13,1,1) = {"
+oh
+js
+lL
+Av
+SW
+SW
+BC
+SW
+Jr
+WX
+Qa
+vC
+lL
+Lz
+js
+js
+js
+js
+js
+oh
+"}
+(14,1,1) = {"
+oh
+js
+kj
+kj
+kj
+aB
+kj
+kj
+kj
+rq
+SW
+SW
+ac
+kj
+js
+aQ
+dx
+aQ
+js
+oh
+"}
+(15,1,1) = {"
+oh
+js
+kj
+kj
+kj
+kj
+kj
+kj
+Kr
+wL
+wL
+wL
+Af
+kj
+ap
+aQ
+aQ
+aQ
+js
+oh
+"}
+(16,1,1) = {"
+oh
+js
+BK
+aB
+aB
+kj
+kj
+kj
+Dr
+Ba
+ZI
+Hl
+Qd
+kj
+js
+aQ
+aQ
+mh
+js
+oh
+"}
+(17,1,1) = {"
+oh
+js
+aB
+kC
+Eh
+fv
+kj
+kj
+Dr
+Mz
+cW
+FQ
+Qd
+Cj
+js
+js
+aQ
+js
+js
+oh
+"}
+(18,1,1) = {"
+oh
+js
+aB
+aB
+aB
+kj
+kj
+uf
+Dr
+kb
+zo
+aQ
+Qd
+jo
+js
+SS
+jU
+jU
+js
+oh
+"}
+(19,1,1) = {"
+oh
+js
+js
+je
+kj
+kj
+Cp
+Ab
+Ki
+AE
+AE
+AE
+CW
+rg
+js
+oa
+jU
+js
+js
+oh
+"}
+(20,1,1) = {"
+oh
+oh
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+js
+oh
+oh
+"}
+(21,1,1) = {"
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+oh
+"}
