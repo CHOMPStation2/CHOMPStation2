@@ -165,3 +165,9 @@
   - rscadd: ATMs now use a fancy new UI
   Kashargul:
   - qol: moves all belly dmis to datums to get the icon cache path from
+2024-10-14:
+  CHOMPStation2:
+  - rscadd: You can now modify internal tank settings from the RIG UI.
+  - qol: RIG UI top buttons shifted about and minimized.
+  tacoguy7765093:
+  - maptweak: Fixed area issues and maphelpers in the lone home shuttle
