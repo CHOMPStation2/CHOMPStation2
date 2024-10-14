@@ -224,16 +224,20 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 // Will generate a random cure, the less resistance the symptoms have, the harder the cure.
 /datum/disease/advance/proc/GenerateCure(list/properties = list())
-	if(properties && length(properties))
-		var/res = clamp(properties["resistance"] - (length(symptoms) / 2), 1, length(GLOB.advance_cures))
-		cures = list(GLOB.advance_cures[res])
+    if(properties && length(properties))
+        // Generate a list of all reagents
+        var/list/reagent_list = typesof(/datum/reagent)
 
-		// Get the cure name from the cure_id
-		var/datum/reagent/D = GLOB.chemical_reagents_list[cures[1]]
-		cure_text = D.name
+        // Determine the resistance level to select the cure
+        var/res = clamp(properties["resistance"] - (length(symptoms) / 2), 1, length(reagent_list))
+        cures = list(reagent_list[res])
 
+        // Get the cure name from the reagent path
+        var/datum/reagent/D = cures[1]
+        cure_text = D.name
 
-	return
+    return
+
 
 // Randomly generate a symptom, has a chance to lose or gain a symptom.
 /datum/disease/advance/proc/Evolve(min_level, max_level)

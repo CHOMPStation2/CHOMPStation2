@@ -51,6 +51,11 @@
 	//Chemicals in the body, this is moved over here so that blood can be added after death
 	handle_chemicals_in_body()
 
+	// CHOMPAdd - Virus 1
+	if(LAZYLEN(viruses))
+		handle_diseases()
+	// CHOMPEnd
+
 	//Handle temperature/pressure differences between body and environment
 	if(environment)
 		handle_environment(environment)

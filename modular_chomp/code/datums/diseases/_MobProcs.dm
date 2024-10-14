@@ -146,3 +146,6 @@
 	if(. == -1)
 		if(D.viable_mobtypes.Find(/mob/living/carbon/human))
 			return 1
+
+/mob/living/proc/handle_diseases()
+	return

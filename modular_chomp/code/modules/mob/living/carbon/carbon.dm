@@ -11,3 +11,12 @@
 /mob/living/carbon/Destroy()
 	. = ..()
 	QDEL_NULL(cozyloop)
+
+/mob/living/carbon/handle_diseases()
+	for(var/thing in viruses)
+		var/datum/disease/D = thing
+		if(prob(D.infectivity))
+			D.spread()
+
+		if(stat != DEAD || D.allow_dead)
+			D.stage_act()
