@@ -170,40 +170,47 @@
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
 
 /turf/simulated/floor/water/tyr
 	color = "#505564"
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
 
 /turf/simulated/floor/outdoors/desert_planet/sand/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
-
+	outdoors = OUTDOORS_AREA
 
 /turf/simulated/floor/outdoors/desert_planet/deep_sand/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
 
 /turf/simulated/floor/outdoors/desert_planet/grass/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
 
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
 
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
 
 /turf/simulated/floor/outdoors/desert_planet/mud/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
