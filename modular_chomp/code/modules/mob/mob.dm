@@ -6,6 +6,8 @@
 	var/last_move_time = 0 //For movement smoothing
 	/// dict of custom stat tabs with data
 	var/list/list/misc_tabs = list()
+	var/list/viruses = list()
+	var/list/resistances = list()
 
 /mob/proc/update_misc_tabs()
 	misc_tabs = list() //Reset misc_tabs every Stat() to prevent old shit sticking around

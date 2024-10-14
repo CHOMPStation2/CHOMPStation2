@@ -29,6 +29,8 @@
 
 GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 
+GLOBAL_LIST_EMPTY(active_diseases)
+
 /datum/disease
 	//Flags
 	var/visibility_flags = 0

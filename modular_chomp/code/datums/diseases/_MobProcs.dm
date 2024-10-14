@@ -6,7 +6,7 @@
 	return FALSE
 
 /mob/proc/CanContractDisease(datum/disease/D)
-	if(stat = DEAD && !D.allow_dead)
+	if(stat == DEAD && !D.allow_dead)
 		return FALSE
 
 	if(D.GetDiseaseID() in resistances)
@@ -23,7 +23,7 @@
 
 	return TRUE
 
-/mob/proc/CanContractDisease(datum/disease/D)
+/mob/proc/ContractDisease(datum/disease/D)
 	if(!CanContractDisease(D))
 		return 0
 	AddDisease(D)
@@ -32,7 +32,7 @@
 /mob/proc/AddDisease(datum/disease/D, respect_carrier = FALSE)
 	var/datum/disease/DD = new D.type(1, D, 0)
 	viruses += DD
-	DD.afected_mob = src
+	DD.affected_mob = src
 	GLOB.active_diseases += DD
 
 	var/list/skipped = list("affected_mob", "holder", "carrier", "stage", "type", "parent_type", "vars", "transformed")
@@ -48,7 +48,6 @@
 			DD.vars[V] = D.vars[V]
 
 	log_admin("[key_name(usr)] has contracted the virus \"[DD]\"")
-	BITSET(hud_updateflag, STATUS_HUD)
 
 
 /mob/living/carbon/ContractDisease(datum/disease/D)
