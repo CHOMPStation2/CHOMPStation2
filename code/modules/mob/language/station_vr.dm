@@ -109,7 +109,7 @@
 	key = "9"
 	signlang_verb = list("mars something silently", "shifts their ears")
 	signlang_verb_understood = list("mars")
-	colour = "marish"
+	colour = "echosong"
 	flags = INAUDIBLE
 	ignore_adverb = TRUE
 	machine_understands = FALSE
