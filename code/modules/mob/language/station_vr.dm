@@ -186,10 +186,6 @@
 /datum/language/echosong/scramble(var/input, var/list/known_languages)
 	return stars(input)
 
-/datum/language/echosong/broadcast(var/mob/living/speaker, var/message, var/speaker_mask)
-	log_say("(INAUDIBLE) [message]", speaker)
-	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
-
 /datum/language/lleill
 	name = LANGUAGE_LLEILL
 	desc = "An ancient, gutteral language involving a lot of spitting."
@@ -204,6 +200,10 @@
 	)
 	machine_understands = FALSE
 	flags = WHITELISTED
+
+/datum/language/echosong/broadcast(var/mob/living/speaker, var/message, var/speaker_mask)
+	log_say("(INAUDIBLE) [message]", speaker)
+	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
 
 /datum/language/unathi
 	flags = 0
