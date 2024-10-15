@@ -1,7 +1,7 @@
 // Light Painter.
 
 
-/obj/item/device/lightpainter
+/obj/item/lightpainter
 	name = "light painter"
 	desc = "A device to configure the emission color of lighting fixtures. Use this device in-hand to set/reset the color. Use the device on a light fixture to assign the color."
 	icon = 'icons/obj/janitor.dmi'
@@ -21,10 +21,10 @@
 	var/dimming = 0.7 // multiply value to dim lights from setcolor to nightcolor
 
 
-/obj/item/device/lightpainter/New()
+/obj/item/lightpainter/New()
 	. = ..()
 
-/obj/item/device/lightpainter/examine(mob/user)
+/obj/item/lightpainter/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		if(resetmode)
@@ -32,11 +32,11 @@
 		else
 			. += "It is currently coloring lights."
 
-/obj/item/device/lightpainter/attack_self(mob/user)
+/obj/item/lightpainter/attack_self(mob/user)
 
 	if(!resetmode)
 		resetmode = 1
-		to_chat(usr, "Painter reset.")
+		to_chat(usr, span_infoplain("Painter reset."))
 	else
 		var/color_input = input(usr,"","Choose Light Color",setcolor) as color|null
 		if(color_input)
@@ -47,19 +47,19 @@
 			var/setcolorB = num2hex(setcolorRGB[3] * dimming, 2)
 			setnightcolor = addtext("#", setcolorR, setcolorG, setcolorB)
 			resetmode = 0
-			to_chat(usr, "Painter color set.")
+			to_chat(usr, span_infoplain("Painter color set."))
 
 
-/obj/item/device/lightpainter/proc/ColorLight(var/obj/machinery/light/target, var/mob/living/U)
+/obj/item/lightpainter/proc/ColorLight(var/obj/machinery/light/target, var/mob/living/U)
 
 	src.add_fingerprint(U)
 
 	if(resetmode)
-		to_chat(U, "<span class='notice'>You reset the color of the [target.get_fitting_name()].</span>")
+		to_chat(U, span_notice("You reset the color of the [target.get_fitting_name()]."))
 		target.brightness_color = dcolor
 		target.brightness_color_ns = dnightcolor
 	else
-		to_chat(U, "<span class='notice'>You set the color of the [target.get_fitting_name()].</span>")
+		to_chat(U, span_notice("You set the color of the [target.get_fitting_name()]."))
 
 		target.brightness_color = setcolor
 		target.brightness_color_ns = setnightcolor

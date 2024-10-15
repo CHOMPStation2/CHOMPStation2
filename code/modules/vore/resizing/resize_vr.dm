@@ -12,7 +12,7 @@
 
 // Define holder_type on types we want to be scoop-able
 /mob/living/carbon/human
-	holder_type = /obj/item/weapon/holder/micro
+	holder_type = /obj/item/holder/micro
 
 // The reverse lookup of player_sizes_list, number to name.
 /proc/player_size_name(var/size_multiplier)
@@ -156,7 +156,7 @@
 
 /mob/living/proc/set_size()
 	set name = "Adjust Mass"
-	set category = "Abilities" //Seeing as prometheans have an IC reason to be changing mass.
+	set category = "Abilities.General" //Seeing as prometheans have an IC reason to be changing mass. //CHOMPEdit
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
 	var/default = size_multiplier * 100
@@ -195,10 +195,10 @@
 			return 0
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size() || ignore_size)
 		if(buckled)
-			to_chat(usr,"<span class='notice'>You have to unbuckle \the [src] before you pick them up.</span>")
+			to_chat(usr,span_notice("You have to unbuckle \the [src] before you pick them up."))
 			return 0
-		holder_type = /obj/item/weapon/holder/micro
-		var/obj/item/weapon/holder/m_holder = get_scooped(M, G)
+		holder_type = /obj/item/holder/micro
+		var/obj/item/holder/m_holder = get_scooped(M, G)
 		holder_type = holder_default
 		if (m_holder)
 			return 1
@@ -213,6 +213,9 @@
  * @return false if normal code should continue, true to prevent normal code.
  */
 /mob/living/proc/handle_micro_bump_helping(mob/living/tmob)
+	// CHOMPAdd - Phased
+	if(is_incorporeal() || tmob.is_incorporeal())
+		return FALSE
 	//Riding and being moved to us or something similar
 	if(tmob in buckled_mobs)
 		return TRUE
@@ -237,8 +240,6 @@
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 				src_message = tail.msg_owner_help_run
 				tmob_message = tail.msg_prey_help_run
-			if(tmob.is_incorporeal())	// CHOMPEdit - Nothing to step over.
-				return TRUE
 
 		//Smaller person stepping under larger person
 		else if(get_effective_size(TRUE) < tmob.get_effective_size(TRUE) && ishuman(tmob))
@@ -249,13 +250,11 @@
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 				src_message = tail.msg_prey_stepunder
 				tmob_message = tail.msg_owner_stepunder
-			if(tmob.is_incorporeal())	// CHOMPEdit - Can't run between what's not there
-				return TRUE
 
 		if(src_message)
-			to_chat(src, "<span class='filter_notice'>[STEP_TEXT_OWNER(src_message)]</span>")
+			to_chat(src, span_filter_notice("[STEP_TEXT_OWNER(src_message)]"))
 		if(tmob_message)
-			to_chat(tmob, "<span class='filter_notice'>[STEP_TEXT_PREY(tmob_message)]</span>")
+			to_chat(tmob, span_filter_notice("[STEP_TEXT_PREY(tmob_message)]"))
 		return TRUE
 	return FALSE
 
@@ -275,6 +274,9 @@
 		return
 	//We can't be stepping on anyone
 	if(!canmove || buckled)
+		return
+	// CHOMPAdd - Phased
+	if(is_incorporeal() || tmob.is_incorporeal())
 		return
 
 	//Riding and being moved to us or something similar
@@ -320,14 +322,14 @@
 	forceMove(tmob.loc)
 	if(a_intent != I_HELP)
 		if(tmob.size_multiplier > 0.75 && nofetish) //So we can stun micros with step mechanics off, but prevent macros from stunning regular heights
-			to_chat(pred, "<span class='danger'>You pass over [tmob.name].</span>")
-			to_chat(prey, "<span class='danger'>[src.name] passes over you.</span>")
+			to_chat(pred, span_danger("You pass over [tmob.name]."))
+			to_chat(prey, span_danger("[src.name] passes over you."))
 			return FALSE
 		tmob.resting = 1
 		tmob.Weaken(3)		//CHOMPEdit - do both regardless of intent, dummy
 		if(nofetish)
-			to_chat(pred, "<span class='danger'>You casually knock [tmob.name] over.</span>")
-			to_chat(prey, "<span class='danger'>[src.name] casually knocks you over.</span>")
+			to_chat(pred, span_danger("You casually knock [tmob.name] over."))
+			to_chat(prey, span_danger("[src.name] casually knocks you over."))
 			return TRUE
 
 	var/size_damage_multiplier = size_multiplier - tmob.size_multiplier
@@ -407,17 +409,17 @@
 					prey.drip(3)
 					add_attack_logs(pred, prey, "Crushed underfoot (walk, about [calculated_damage] damage)")
 
-		to_chat(pred, "<span class='danger'>[message_pred]</span>")
-		to_chat(prey, "<span class='danger'>[message_prey]</span>")
+		to_chat(pred, span_danger("[message_pred]"))
+		to_chat(prey, span_danger("[message_prey]"))
 		return TRUE
 
 /mob/living/verb/toggle_pickups()
 	set name = "Toggle Micro Pick-up"
 	set desc = "Toggles whether your help-intent action attempts to pick up the micro or pet/hug/help them. Does not disable participation in pick-up mechanics entirely, refer to Vore Panel preferences for that."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	pickup_active = !pickup_active
-	to_chat(src, "<span class='filter_notice'>You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent.</span>")
+	to_chat(src, span_filter_notice("You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent."))
 
 #undef STEP_TEXT_OWNER
 #undef STEP_TEXT_PREY

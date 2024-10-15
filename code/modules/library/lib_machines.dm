@@ -53,7 +53,7 @@
 				dat += {"<table>
 				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
 
-				var/DBQuery/query = SSdbcore.NewQuery(SQLquery, SQLargs) //CHOMPEdit TGSQL
+				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery, SQLargs) //CHOMPEdit TGSQL
 				query.Execute()
 
 				while(query.NextRow())
@@ -151,29 +151,29 @@
 
 	if(!base_genre_books || !base_genre_books.len)
 		base_genre_books = list(
-			/obj/item/weapon/book/custom_library/fiction,
-			/obj/item/weapon/book/custom_library/nonfiction,
-			/obj/item/weapon/book/custom_library/reference,
-			/obj/item/weapon/book/custom_library/religious,
-			/obj/item/weapon/book/bundle/custom_library/fiction,
-			/obj/item/weapon/book/bundle/custom_library/nonfiction,
-			/obj/item/weapon/book/bundle/custom_library/reference,
-			/obj/item/weapon/book/bundle/custom_library/religious
+			/obj/item/book/custom_library/fiction,
+			/obj/item/book/custom_library/nonfiction,
+			/obj/item/book/custom_library/reference,
+			/obj/item/book/custom_library/religious,
+			/obj/item/book/bundle/custom_library/fiction,
+			/obj/item/book/bundle/custom_library/nonfiction,
+			/obj/item/book/bundle/custom_library/reference,
+			/obj/item/book/bundle/custom_library/religious
 			)
 
 	if(!all_books || !all_books.len)
 		all_books = list()
 
-		for(var/path in subtypesof(/obj/item/weapon/book/codex/lore))
-			var/obj/item/weapon/book/C = new path(null)
+		for(var/path in subtypesof(/obj/item/book/codex/lore))
+			var/obj/item/book/C = new path(null)
 			all_books[C.name] = C
 
-		for(var/path in subtypesof(/obj/item/weapon/book/custom_library) - base_genre_books)
-			var/obj/item/weapon/book/B = new path(null)
+		for(var/path in subtypesof(/obj/item/book/custom_library) - base_genre_books)
+			var/obj/item/book/B = new path(null)
 			all_books[B.title] = B
 
-		for(var/path in subtypesof(/obj/item/weapon/book/bundle/custom_library) - base_genre_books)
-			var/obj/item/weapon/book/M = new path(null)
+		for(var/path in subtypesof(/obj/item/book/bundle/custom_library) - base_genre_books)
+			var/obj/item/book/M = new path(null)
 			all_books[M.title] = M
 
 /obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
@@ -192,15 +192,15 @@
 			if(src.emagged)
 				dat += "<A href='?src=\ref[src];switchscreen=7'>7. Access the Forbidden Lore Vault</A><BR>"
 			if(src.arcanecheckout)
-				new /obj/item/weapon/book/tome(src.loc)
+				new /obj/item/book/tome(src.loc)
 				var/datum/gender/T = gender_datums[user.get_visible_gender()]
-				to_chat(user, "<span class='warning'>Your sanity barely endures the seconds spent in the vault's browsing window. The only thing to remind you of this when you stop browsing is a dusty old tome sitting on the desk. You don't really remember printing it.</span>")
+				to_chat(user, span_warning("Your sanity barely endures the seconds spent in the vault's browsing window. The only thing to remind you of this when you stop browsing is a dusty old tome sitting on the desk. You don't really remember printing it."))
 				user.visible_message("<b>\The [user]</b> stares at the blank screen for a few moments, [T.his] expression frozen in fear. When [T.he] finally awakens from it, [T.he] looks a lot older.", 2)
 				src.arcanecheckout = 0
 		if(1)
 			// Inventory
 			dat += "<H3>Inventory</H3><BR>"
-			for(var/obj/item/weapon/book/b in inventory)
+			for(var/obj/item/book/b in inventory)
 				dat += "[b.name] <A href='?src=\ref[src];delbook=\ref[b]'>(Delete)</A><BR>"
 			dat += "<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 		if(2)
@@ -242,7 +242,7 @@
 				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
 
 				for(var/name in all_books)
-					var/obj/item/weapon/book/masterbook = all_books[name]
+					var/obj/item/book/masterbook = all_books[name]
 					var/id = masterbook.type
 					var/author = masterbook.author
 					var/title = masterbook.name
@@ -291,7 +291,7 @@
 				dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 				<table>
 				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-				var/DBQuery/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
+				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
 				query.Execute()
 
 				while(query.NextRow())
@@ -328,7 +328,7 @@
 			dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 			<table>
 			<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-			var/DBQuery/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
 			query.Execute()
 
 			while(query.NextRow())
@@ -339,6 +339,7 @@
 				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];delid=[id]'>\[Del\]</A>"
 				dat += "</td></tr>"
 			dat += "</table>"
+			qdel(query) // CHOMPEdit
 		dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
 		user << browse(dat, "window=library")
@@ -350,9 +351,9 @@
 		src.emagged = 1
 		return 1
 
-/obj/machinery/librarycomp/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/barcodescanner))
-		var/obj/item/weapon/barcodescanner/scanner = W
+/obj/machinery/librarycomp/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/barcodescanner))
+		var/obj/item/barcodescanner/scanner = W
 		scanner.computer = src
 		to_chat(user, "[scanner]'s associated machine has been set to [src].")
 		for (var/mob/V in hearers(src))
@@ -382,7 +383,7 @@
 				screenstate = 5
 			if("6")
 				if(!bibledelay)
-					new /obj/item/weapon/storage/bible(src.loc)
+					new /obj/item/storage/bible(src.loc)
 					bibledelay = 1
 					spawn(60)
 						bibledelay = 0
@@ -420,7 +421,7 @@
 		var/datum/borrowbook/b = locate(href_list["checkin"])
 		checkouts.Remove(b)
 	if(href_list["delbook"])
-		var/obj/item/weapon/book/b = locate(href_list["delbook"])
+		var/obj/item/book/b = locate(href_list["delbook"])
 		inventory.Remove(b)
 	if(href_list["setauthor"])
 		var/newauthor = sanitize(tgui_input_text(usr, "Enter the author's name: "))
@@ -455,7 +456,7 @@
 							var/sqlauthor = sanitizeSQL(scanner.cache.author)
 							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
 							var/sqlcategory = sanitizeSQL(upload_category)*/
-							var/DBQuery/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES (:t_author, :t_title, :t_content, :t_category)", sql_args) //CHOMPEdit TGSQL
+							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES (:t_author, :t_title, :t_content, :t_category)", sql_args) //CHOMPEdit TGSQL
 							if(!query.Execute())
 								to_chat(usr,query.ErrorMsg())
 							else
@@ -476,14 +477,14 @@
 			bibledelay = 1
 			spawn(6)
 				bibledelay = 0
-			var/DBQuery/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]") //CHOMPEdit TGSQL
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]") //CHOMPEdit TGSQL
 			query.Execute()
 
 			while(query.NextRow())
 				var/author = query.item[2]
 				var/title = query.item[3]
 				var/content = query.item[4]
-				var/obj/item/weapon/book/B = new(src.loc)
+				var/obj/item/book/B = new(src.loc)
 				B.name = "Book: [title]"
 				B.title = title
 				B.author = author
@@ -504,7 +505,7 @@
 		sortby = href_list["sort"]
 	if(href_list["hardprint"])
 		var/newpath = href_list["hardprint"]
-		var/obj/item/weapon/book/NewBook = new newpath(get_turf(src))
+		var/obj/item/book/NewBook = new newpath(get_turf(src))
 		NewBook.name = "Book: [NewBook.name]"
 	src.add_fingerprint(usr)
 	src.updateUsrDialog()
@@ -520,10 +521,10 @@
 	icon_state = "bigscanner"
 	anchored = TRUE
 	density = TRUE
-	var/obj/item/weapon/book/cache		// Last scanned book
+	var/obj/item/book/cache		// Last scanned book
 
 /obj/machinery/libraryscanner/attackby(var/obj/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/weapon/book))
+	if(istype(O, /obj/item/book))
 		user.drop_item()
 		O.loc = src
 
@@ -549,13 +550,13 @@
 		return
 
 	if(href_list["scan"])
-		for(var/obj/item/weapon/book/B in contents)
+		for(var/obj/item/book/B in contents)
 			cache = B
 			break
 	if(href_list["clear"])
 		cache = null
 	if(href_list["eject"])
-		for(var/obj/item/weapon/book/B in contents)
+		for(var/obj/item/book/B in contents)
 			B.loc = src.loc
 	src.add_fingerprint(usr)
 	src.updateUsrDialog()
@@ -574,15 +575,15 @@
 	density = TRUE
 
 /obj/machinery/bookbinder/attackby(var/obj/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/weapon/paper) || istype(O, /obj/item/weapon/paper_bundle))
-		if(istype(O, /obj/item/weapon/paper))
+	if(istype(O, /obj/item/paper) || istype(O, /obj/item/paper_bundle))
+		if(istype(O, /obj/item/paper))
 			user.drop_item()
 			O.loc = src
 			user.visible_message("[user] loads some paper into [src].", "You load some paper into [src].")
 			src.visible_message("[src] begins to hum as it warms up its printing drums.")
 			sleep(rand(200,400))
 			src.visible_message("[src] whirs as it prints and binds a new book.")
-			var/obj/item/weapon/book/b = new(src.loc)
+			var/obj/item/book/b = new(src.loc)
 			b.dat = O:info
 			b.name = "Print Job #" + "[rand(100, 999)]"
 			b.icon_state = "book[rand(1,7)]"
@@ -594,11 +595,11 @@
 			src.visible_message("[src] begins to hum as it warms up its printing drums.")
 			sleep(rand(300,500))
 			src.visible_message("[src] whirs as it prints and binds a new book.")
-			var/obj/item/weapon/book/bundle/b = new(src.loc)
+			var/obj/item/book/bundle/b = new(src.loc)
 			b.pages = O:pages
-			for(var/obj/item/weapon/paper/P in O.contents)
+			for(var/obj/item/paper/P in O.contents)
 				P.forceMove(b)
-			for(var/obj/item/weapon/photo/P in O.contents)
+			for(var/obj/item/photo/P in O.contents)
 				P.forceMove(b)
 			b.name = "Print Job #" + "[rand(100, 999)]"
 			b.icon_state = "book[rand(1,7)]"

@@ -6,8 +6,6 @@ The more pressure, the more boom.
 If it gains pressure too slowly, it may leak or just rupture instead of exploding.
 */
 
-//#define FIREDBG
-
 /turf/var/obj/fire/fire = null
 
 //Some legacy definitions so fires can be started.
@@ -115,7 +113,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "1"
 	light_color = "#ED9200"
-	layer = TURF_LAYER
+	layer = GASFIRE_LAYER		// CHOMPEdit
 
 	var/firelevel = 1 //Calculated by gas_mixture.calculate_firelevel()
 
@@ -365,7 +363,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	var/total_combustables = (total_fuel + total_oxidizers)
 	var/active_combustables = (FIRE_REACTION_OXIDIZER_AMOUNT/FIRE_REACTION_FUEL_AMOUNT + 1)*reaction_limit
 
-	if(total_combustables > 0)
+	if(total_combustables > 0 && total_moles > 0)
 		//slows down the burning when the concentration of the reactants is low
 		var/damping_multiplier = min(1, active_combustables / (total_moles/group_multiplier))
 

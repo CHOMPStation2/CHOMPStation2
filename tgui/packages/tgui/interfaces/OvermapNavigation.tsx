@@ -1,5 +1,5 @@
 import { BooleanLike } from 'common/react';
-import { Fragment } from 'inferno';
+
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -7,7 +7,7 @@ import { OvermapFlightData } from './common/Overmap';
 
 export const OvermapNavigation = () => {
   return (
-    <Window width={380} height={530} resizable>
+    <Window width={380} height={530}>
       <Window.Content>
         <OvermapNavigationContent />
       </Window.Content>
@@ -23,18 +23,19 @@ type Data = {
   viewing: BooleanLike;
 };
 
-export const OvermapNavigationContent = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const OvermapNavigationContent = (props) => {
+  const { act, data } = useBackend<Data>();
   const { sector, s_x, s_y, sector_info, viewing } = data;
   return (
-    <Fragment>
+    <>
       <Section
         title="Current Location"
         buttons={
           <Button icon="eye" selected={viewing} onClick={() => act('viewing')}>
             Map View
           </Button>
-        }>
+        }
+      >
         <LabeledList>
           <LabeledList.Item label="Current Location">{sector}</LabeledList.Item>
           <LabeledList.Item label="Coordinates">
@@ -48,6 +49,6 @@ export const OvermapNavigationContent = (props, context) => {
       <Section title="Flight Data">
         <OvermapFlightData disableLimiterControls />
       </Section>
-    </Fragment>
+    </>
   );
 };

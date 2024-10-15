@@ -112,7 +112,7 @@
 /area/groundbase/science/rnd
 	name = "Research and Development"
 /area/groundbase/science/robotics
-	name = "Rocotics"
+	name = "Robotics"
 /area/groundbase/science/server
 	name = "Science Server Room"
 /area/groundbase/science/rd
@@ -250,6 +250,7 @@
 	name = "Psychiatrist's Office"
 /area/groundbase/medical/Chemistry
 	name = "Chemistry"
+	lightswitch = 1
 /area/groundbase/medical/triage
 	name = "Medical Triage"
 	lightswitch = 1
@@ -260,6 +261,7 @@
 	name = "Resleeving"
 /area/groundbase/medical/autoresleeving
 	name = "Auto-Resleeving"
+	lightswitch = 1
 /area/groundbase/medical/or1
 	name = "Medical Operating Room 1"
 /area/groundbase/medical/or2
@@ -335,6 +337,9 @@
 /area/groundbase/cargo/office
 	name = "Cargo Office"
 	lightswitch = 1
+/area/groundbase/cargo/storage
+	name = "Cargo Storage"
+	lightswitch = 0
 /area/groundbase/cargo/bay
 	name = "Cargo Bay"
 	lightswitch = 1
@@ -373,13 +378,15 @@
 /area/groundbase/civilian/cafe
 	name = "Cafe"
 	sound_env = SMALL_SOFTFLOOR
+	lightswitch = 1
 /area/groundbase/civilian/hydroponics
 	name = "Hydroponics"
+	lightswitch = 1
 /area/groundbase/civilian/hydroponics/out
 	name = "Hydroponics Animal Pen"
-	lightswitch = 1
 /area/groundbase/civilian/kitchen
 	name = "Kitchen"
+	lightswitch = 1
 /area/groundbase/civilian/kitchen/freezer
 	name = "Kitchen Freezer"
 /area/groundbase/civilian/kitchen/backroom
@@ -387,6 +394,7 @@
 /area/groundbase/civilian/chapel
 	name = "Chapel"
 	ambience = AMBIENCE_CHAPEL
+	lightswitch = 1
 /area/groundbase/civilian/chapel/office
 	name = "Chaplain's Office"
 /area/groundbase/civilian/library
@@ -420,6 +428,17 @@
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	lightswitch = 1
 	forbid_events = TRUE
+
+/area/groundbase/civilian/entrepreneur
+	name = "\improper Shared Office"
+	icon_state = "entertainment"
+
+/area/groundbase/civilian/entrepreneur/session
+	name = "\improper Shared Office Session Room"
+
+/area/groundbase/civilian/entrepreneur/meeting
+	name = "\improper Shared Office Meeting Room"
+
 
 /area/groundbase/exploration
 	name = "Exploration"

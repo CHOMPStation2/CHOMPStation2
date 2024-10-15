@@ -45,8 +45,8 @@
 	color = "#A020F0"
 
 /obj/item/shield_projector/rectangle/automatic/hivebot_drone
-	shield_health = 50
-	max_shield_health = 50
+	shield_health = 100 //Old 50
+	max_shield_health = 100 //Old 50
 	shield_regen_delay = 5 SECONDS
 	shield_regen_amount = 20
 	size_x = 3

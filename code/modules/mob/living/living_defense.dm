@@ -29,15 +29,15 @@
 		armor = max(armor - armour_pen, 0)			//Armor pen makes armor less effective.
 		if(armor >= 100)
 			if(absorb_text)
-				to_chat(src, "<span class='danger'>[absorb_text]</span>")
+				to_chat(src, span_danger("[absorb_text]"))
 			else
-				to_chat(src, "<span class='danger'>Your armor absorbs the blow!</span>")
+				to_chat(src, span_danger("Your armor absorbs the blow!"))
 
 		else if(armor > 0)
 			if(soften_text)
-				to_chat(src, "<span class='danger'>[soften_text]</span>")
+				to_chat(src, span_danger("[soften_text]"))
 			else
-				to_chat(src, "<span class='danger'>Your armor softens the blow!</span>")
+				to_chat(src, span_danger("Your armor softens the blow!"))
 		if(Debug2)
 			to_world_log("## DEBUG: Armor when [src] was attacked was [armor].")
 	return armor
@@ -66,13 +66,13 @@
 		if(absorb_text)
 			show_message("[absorb_text]")
 		else
-			show_message("<span class='warning'>Your armor absorbs the blow!</span>")
+			show_message(span_warning("Your armor absorbs the blow!"))
 		return 2
 	if(absorb == 1)
 		if(absorb_text)
 			show_message("[soften_text]",4)
 		else
-			show_message("<span class='warning'>Your armor softens the blow!</span>")
+			show_message(span_warning("Your armor softens the blow!"))
 		return 1
 	return 0
 */
@@ -100,6 +100,14 @@
 			ai_holder.react_to_attack(L)
 
 /mob/living/bullet_act(var/obj/item/projectile/P, var/def_zone)
+	//CHOMPedit begin, re-adds stealth removed feature
+	if(istype(get_active_hand(),/obj/item/assembly/signaler))
+		var/obj/item/assembly/signaler/signaler = get_active_hand()
+		if(signaler.deadman && prob(80))
+			log_and_message_admins("has triggered a signaler deadman's switch")
+			src.visible_message("<font color='red'>[src] triggers their deadman's switch!</font>")
+			signaler.signal()
+	//CHOMPedit end
 
 	if(ai_holder && P.firer)
 		ai_holder.react_to_attack(P.firer)
@@ -200,7 +208,7 @@
 		damage_type = BRUTE
 		damage *= 0.66 // Take 2/3s as much damage.
 
-	visible_message("<span class='danger'>\The [B] [attack_verb] \the [src]!</span>", "<span class='danger'>[attack_message]!</span>")
+	visible_message(span_danger("\The [B] [attack_verb] \the [src]!"), span_danger("[attack_message]!"))
 	playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
 
 	//Armor
@@ -217,7 +225,7 @@
 
 //Called when the mob is hit with an item in combat. Returns the blocked result
 /mob/living/proc/hit_with_weapon(obj/item/I, mob/living/user, var/effective_force, var/hit_zone)
-	visible_message("<span class='danger'>[src] has been [LAZYLEN(I.attack_verb) ? pick(I.attack_verb) : "attacked"] with [I.name] by [user]!</span>")
+	visible_message(span_danger("[src] has been [LAZYLEN(I.attack_verb) ? pick(I.attack_verb) : "attacked"] with [I.name] by [user]!"))
 
 	if(ai_holder)
 		ai_holder.react_to_attack(user)
@@ -257,13 +265,13 @@
 /mob/living/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)//Standardization and logging -Sieve
 	if(istype(AM,/obj/))
 		var/obj/O = AM
-		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //CHOMPADD Start
+		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //ported from chompstation
 			var/obj/item/I = O
 			if(adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
-				visible_message("<span class='warning'>[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!</span>")
+				visible_message(span_vwarning("[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!")) //CHOMPEdit
 				I.throwing = 0
 				I.forceMove(vore_selected)
-				return //CHOMPADD End
+				return
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
 
@@ -273,10 +281,10 @@
 			miss_chance = max(15*(distance-2), 0)
 
 		if (prob(miss_chance))
-			visible_message("<span class='notice'>\The [O] misses [src] narrowly!</span>")
+			visible_message(span_notice("\The [O] misses [src] narrowly!"))
 			return*/
 		//CHOMPEDIT - removing baymiss
-		src.visible_message("<span class='filter_warning'><font color='red'>[src] has been hit by [O].</font></span>")
+		src.visible_message(span_filter_warning("[span_red("[src] has been hit by [O].")]"))
 		var/armor = run_armor_check(null, "melee")
 		var/soaked = get_armor_soak(null, "melee")
 
@@ -303,7 +311,7 @@
 		if(O.throw_source && momentum >= THROWNOBJ_KNOCKBACK_SPEED)
 			var/dir = get_dir(O.throw_source, src)
 
-			visible_message("<span class='filter_warning'><font color='red'>[src] staggers under the impact!</font></span>","<span class='filter_warning'><font color='red'>You stagger under the impact!</font></span>")
+			visible_message(span_filter_warning("[span_red("[src] staggers under the impact!")]"),span_filter_warning("[span_red("You stagger under the impact!")]"))
 			src.throw_at(get_edge_target_turf(src,dir),1,momentum)
 
 			if(!O || !src) return
@@ -319,7 +327,7 @@
 
 				if(T)
 					src.loc = T
-					visible_message("<span class='warning'>[src] is pinned to the wall by [O]!</span>","<span class='warning'>You are pinned to the wall by [O]!</span>")
+					visible_message(span_warning("[src] is pinned to the wall by [O]!"),span_warning("You are pinned to the wall by [O]!"))
 					src.anchored = TRUE
 					src.pinned += O
 
@@ -331,10 +339,10 @@
 		// PERSON BEING HIT: CAN BE DROP PRED, ALLOWS THROW VORE.
 		// PERSON BEING THROWN: DEVOURABLE, ALLOWS THROW VORE, CAN BE DROP PREY.
 		if((can_be_drop_pred && throw_vore) && (thrown_mob.devourable && thrown_mob.throw_vore && thrown_mob.can_be_drop_prey)) //Prey thrown into pred.
-			if(!thrown_mob.allowmobvore && isanimal(src)) //Does the person being thrown not allow mob vore and is the person being hit (us) a simple_mob?
+			if(!thrown_mob.allowmobvore && isanimal(src) || !vore_selected) //Does the person being thrown not allow mob vore and is the person being hit (us) a simple_mob?
 				return
 			vore_selected.nom_mob(thrown_mob) //Eat them!!!
-			visible_message("<span class='warning'>[thrown_mob] is thrown right into [src]'s [lowertext(vore_selected.name)]!</span>")
+			visible_message(span_vwarning("[thrown_mob] is thrown right into [src]'s [lowertext(vore_selected.name)]!"))
 			if(thrown_mob.loc != vore_selected)
 				thrown_mob.forceMove(vore_selected) //Double check. Should never happen but...Weirder things have happened!
 			on_throw_vore_special(TRUE, thrown_mob)
@@ -344,9 +352,9 @@
 		// PERSON BEING HIT: CAN BE DROP PREY, ALLOWS THROW VORE, AND IS DEVOURABLE.
 		// PERSON BEING THROWN: CAN BE DROP PRED, ALLOWS THROW VORE.
 		else if((can_be_drop_prey && throw_vore && devourable) && (thrown_mob.can_be_drop_pred && thrown_mob.throw_vore)) //Pred thrown into prey.
-			if(!allowmobvore && isanimal(thrown_mob)) //Does the person being hit not allow mob vore and the perrson being thrown a simple_mob?
+			if(!allowmobvore && isanimal(thrown_mob) || !thrown_mob.vore_selected) //Does the person being hit not allow mob vore and the perrson being thrown a simple_mob?
 				return
-			visible_message("<span class='warning'>[src] suddenly slips inside of [thrown_mob]'s [lowertext(thrown_mob.vore_selected.name)] as [thrown_mob] flies into them!</span>")
+			visible_message(span_vwarning("[src] suddenly slips inside of [thrown_mob]'s [lowertext(thrown_mob.vore_selected.name)] as [thrown_mob] flies into them!"))
 			thrown_mob.vore_selected.nom_mob(src) //Eat them!!!
 			if(src.loc != thrown_mob.vore_selected)
 				src.forceMove(thrown_mob.vore_selected) //Double check. Should never happen but...Weirder things have happened!
@@ -360,12 +368,14 @@
 /mob/living/proc/embed(var/obj/O, var/def_zone=null)
 	O.loc = src
 	src.embedded += O
-	src.verbs += /mob/proc/yank_out_object
+	add_verb(src,/mob/proc/yank_out_object)  //CHOMPEdit
 	throw_alert("embeddedobject", /obj/screen/alert/embeddedobject)
 
 //This is called when the mob is thrown into a dense turf
 /mob/living/proc/turf_collision(var/turf/T, var/speed)
-	src.take_organ_damage(speed*5)
+	src.take_organ_damage(speed * 5)	// used to be 5 * speed. That's a default of 25 and I dont see anything ever changing the "speed" value. //CHOMPEdit, no. We keep the damage values, no reduction to 12
+	//src.Weaken(3)				// That is absurdly high so im just setting it to a flat 12 with a bit of stun ontop. //Stun is too dangerous
+	playsound(src, get_sfx("punch"), 50) //ouch sound
 
 /mob/living/proc/near_wall(var/direction,var/distance=1)
 	var/turf/T = get_step(get_turf(src),direction)
@@ -391,7 +401,7 @@
 	add_attack_logs(user,src,"Generic attack (probably animal)", admin_notify = FALSE) //Usually due to simple_mob attacks
 	if(ai_holder)
 		ai_holder.react_to_attack(user)
-	src.visible_message("<span class='danger'>[user] has [attack_message] [src]!</span>")
+	src.visible_message(span_danger("[user] has [attack_message] [src]!"))
 	user.do_attack_animation(src)
 	spawn(1) updatehealth()
 	return 1
@@ -506,7 +516,7 @@
 	stuttering += 20
 	make_jittery(150)
 	emp_act(1)
-	to_chat(src, span("critical", "You've been struck by lightning!"))
+	to_chat(src, span_critical("You've been struck by lightning!"))
 
 // Called when touching a lava tile.
 // Does roughly 70 damage (30 instantly, up to ~40 over time) to unprotected mobs, and 10 to fully protected mobs.

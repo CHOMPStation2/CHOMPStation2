@@ -22,7 +22,9 @@
 	say_list_type = /datum/say_list/bat
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/edible
 
-	faction = "vampire"
+	faction = FACTION_VAMPIRE
+
+	allow_mind_transfer = TRUE
 
 // Activate Noms!
 /mob/living/simple_mob/vore/bat
@@ -55,4 +57,3 @@
 	B.escapechance = 15
 	B.selective_preference = DM_DRAIN
 	B.escape_stun = 5
-

@@ -42,7 +42,7 @@
 
 /client/verb/tgui_feedback()
 	set name = "Submit TGUI Feedback"
-	set category = "OOC"
+	set category = "OOC.Debug"
 
 	var/datum/tgui_feedback/feedback = new()
 	feedback.tgui_interact(usr)

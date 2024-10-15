@@ -1,5 +1,3 @@
-#define STAIR_MOVE_DELAY 10 // Animation delay for non-living objects moving up/down stairs
-
 /obj/structure/stairs
 	name = "Stairs"
 	desc = "Stairs leading to another deck.  Not too useful if the gravity goes out."
@@ -173,7 +171,7 @@
 		// If the object is pulling or grabbing anything, we'll want to move those too. A grab chain may be disrupted in doing so.
 		if(L.pulling && !L.pulling.anchored)
 			pulling |= L.pulling
-		for(var/obj/item/weapon/grab/G in list(L.l_hand, L.r_hand))
+		for(var/obj/item/grab/G in list(L.l_hand, L.r_hand))
 			pulling |= G.affecting
 
 	// If the stairs aren't broken, go up.
@@ -214,15 +212,19 @@
 		if(L.buckled)
 			L.buckled.forceMove(get_turf(top))
 
+		var/atom/movable/P = null
+		if(L.pulling && !L.pulling.anchored)
+			P = L.pulling
+			P.forceMove(get_turf(L))
+
 		L.forceMove(get_turf(top))
 
 		// If the object is pulling or grabbing anything, we'll want to move those too. A grab chain may be disrupted in doing so.
-		if(L.pulling && !L.pulling.anchored)
-			var/atom/movable/P = L.pulling
+		if(P)
 			P.forceMove(get_turf(top))
 			L.continue_pulling(P)
 
-		for(var/obj/item/weapon/grab/G in list(L.l_hand, L.r_hand))
+		for(var/obj/item/grab/G in list(L.l_hand, L.r_hand))
 			G.affecting.forceMove(get_turf(top))
 
 		if(L.client)
@@ -431,7 +433,7 @@
 		// If the object is pulling or grabbing anything, we'll want to move those too. A grab chain may be disrupted in doing so.
 		if(L.pulling && !L.pulling.anchored)
 			pulling |= L.pulling
-		for(var/obj/item/weapon/grab/G in list(L.l_hand, L.r_hand))
+		for(var/obj/item/grab/G in list(L.l_hand, L.r_hand))
 			pulling |= G.affecting
 
 	// If the stairs aren't broken, go up.
@@ -469,15 +471,19 @@
 		if(L.buckled)
 			L.buckled.forceMove(get_turf(bottom))
 
+		var/atom/movable/P = null
+		if(L.pulling && !L.pulling.anchored)
+			P = L.pulling
+			P.forceMove(get_turf(L))
+
 		L.forceMove(get_turf(bottom))
 
 		// If the object is pulling or grabbing anything, we'll want to move those too. A grab chain may be disrupted in doing so.
-		if(L.pulling && !L.pulling.anchored)
-			var/atom/movable/P = L.pulling
+		if(P)
 			P.forceMove(get_turf(bottom))
 			L.continue_pulling(P)
 
-		for(var/obj/item/weapon/grab/G in list(L.l_hand, L.r_hand))
+		for(var/obj/item/grab/G in list(L.l_hand, L.r_hand))
 			G.affecting.forceMove(get_turf(bottom))
 
 		if(L.client)

@@ -5,6 +5,7 @@
  */
 
 import { createAction } from 'common/redux';
+
 import { createPage } from './model';
 
 export const loadChat = createAction('chat/load');
@@ -20,3 +21,5 @@ export const removeChatPage = createAction('chat/removePage');
 export const changeScrollTracking = createAction('chat/changeScrollTracking');
 export const saveChatToDisk = createAction('chat/saveToDisk');
 export const purgeChatMessageArchive = createAction('chat/purgeMessageArchive');
+export const moveChatPageLeft = createAction('chat/movePageLeft');
+export const moveChatPageRight = createAction('chat/movePageRight');

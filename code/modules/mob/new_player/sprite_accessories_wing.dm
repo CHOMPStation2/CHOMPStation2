@@ -40,7 +40,7 @@
 /datum/sprite_accessory/wing/moth
 	name = "moth wings"
 	desc = ""
-	icon_state = "moth"
+	icon_state = "moth"//deprecated but leave these here to not break character slots
 
 /datum/sprite_accessory/wing/mothc
 	name = "moth wings, colorable"

@@ -9,7 +9,7 @@
 	icon_rest = "rest"
 	icon_dead = "puddle"
 
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	maxHealth = 200
 	health = 200
 	say_list_type = /datum/say_list/protean_blob
@@ -63,8 +63,8 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		verbs |= /mob/living/proc/ventcrawl
-		verbs |= /mob/living/proc/hide
+		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	else
 		update_icon()
 
@@ -99,10 +99,12 @@
 /mob/living/simple_mob/protean_blob/isSynthetic()
 	return TRUE // yup
 
-/mob/living/simple_mob/protean_blob/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/protean_blob/get_status_tab_items()
+	. = ..()
 	if(humanform)
-		humanform.species.Stat(humanform)
+		humanform.species.update_misc_tabs(humanform)
+//ChompEDIT END
 
 /mob/living/simple_mob/protean_blob/update_icon()
 	if(humanform)
@@ -276,7 +278,7 @@
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,span_vwarning("\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 
 /mob/living/simple_mob/protean_blob/attack_target(var/atom/A)
 	if(refactory && istype(A,/obj/item/stack/material))
@@ -320,7 +322,7 @@ var/global/list/disallowed_protean_accessories = list(
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
 	if(!force && !isturf(loc))
-		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(src,span_warning("You can't change forms while inside something."))
 		return
 
 	var/panel_was_up = FALSE
@@ -383,6 +385,11 @@ var/global/list/disallowed_protean_accessories = list(
 	blob.ooc_notes = ooc_notes
 	blob.ooc_notes_likes = ooc_notes_likes
 	blob.ooc_notes_dislikes = ooc_notes_dislikes
+	//CHOMPEdit Start
+	blob.ooc_notes_favs = ooc_notes_favs
+	blob.ooc_notes_maybes = ooc_notes_maybes
+	blob.ooc_notes_style = ooc_notes_style
+	//CHOMPEdit End
 	temporary_form = blob
 
 	//Mail them to nullspace
@@ -402,6 +409,8 @@ var/global/list/disallowed_protean_accessories = list(
 		B.forceMove(blob)
 		B.owner = blob
 
+	soulgem.owner = blob //CHOMPAdd
+
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
 
@@ -416,7 +425,7 @@ var/global/list/disallowed_protean_accessories = list(
 /proc/remove_micros(var/src, var/mob/root)
 	for(var/obj/item/I in src)
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
-		if(istype(I, /obj/item/weapon/holder))
+		if(istype(I, /obj/item/holder))
 			root.remove_from_mob(I)
 
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
@@ -424,7 +433,7 @@ var/global/list/disallowed_protean_accessories = list(
 		return
 
 	if(!force && !isturf(blob.loc))
-		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(blob,span_warning("You can't change forms while inside something."))
 		return
 
 	var/panel_was_up = FALSE
@@ -467,6 +476,11 @@ var/global/list/disallowed_protean_accessories = list(
 	ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
 	ooc_notes_likes = blob.ooc_notes_likes
 	ooc_notes_dislikes = blob.ooc_notes_dislikes
+	//CHOMPEdit Start
+	ooc_notes_favs = blob.ooc_notes_favs
+	ooc_notes_maybes = blob.ooc_notes_maybes
+	ooc_notes_style = blob.ooc_notes_style
+	//CHOMPEdit End
 	temporary_form = null
 
 	//Transfer vore organs
@@ -474,6 +488,8 @@ var/global/list/disallowed_protean_accessories = list(
 	for(var/obj/belly/B as anything in blob.vore_organs)
 		B.forceMove(src)
 		B.owner = src
+
+	soulgem.owner = src //CHOMPAdd
 
 	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) //The restore for when reforming.
 	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)

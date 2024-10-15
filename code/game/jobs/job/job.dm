@@ -2,12 +2,12 @@
 
 	//The name of the job
 	var/title = "NOPE"
-	//Job access. The use of minimal_access or access is determined by a config setting: config.jobs_have_minimal_access
+	//Job access. The use of minimal_access or access is determined by a config setting: CONFIG_GET(flag/jobs_have_minimal_access) // CHOMPEdit
 	var/list/minimal_access = list()      // Useful for servers which prefer to only have access given to the places a job absolutely needs (Larger server population)
 	var/list/access = list()              // Useful for servers which either have fewer players, so each person needs to fill more than one role, or servers which like to give more access, so players can't hide forever in their super secure departments (I'm looking at you, chemistry!)
 	var/flag = 0 	                      // Bitflags for the job
 	var/department_flag = 0
-	var/faction = "None"	              // Players will be allowed to spawn in as jobs that are set to "Station"
+	var/faction = FACTION_NONE            // Players will be allowed to spawn in as jobs that are set to FACTION_STATION
 	var/total_positions = 0               // How many players can be this job
 	var/spawn_positions = 0               // How many players can spawn in as this job
 	var/current_positions = 0             // How many players have this job
@@ -38,6 +38,10 @@
 
 	// Description of the job's role and minimum responsibilities.
 	var/job_description = "This Job doesn't have a description! Please report it!"
+
+	var/camp_protection = FALSE				//CHOMPadd
+	var/list/restricted_keys = list()		//CHOMPadd
+	var/list/shift_keys = list()			//CHOMPadd
 
 /datum/job/New()
 	. = ..()
@@ -88,7 +92,7 @@
 
 		H.mind.initial_account = M
 
-	to_chat(H, "<span class='notice'><b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b></span>")
+	to_chat(H, span_notice("<b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b>"))
 
 // overrideable separately so AIs/borgs can have cardborg hats without unneccessary new()/qdel()
 /datum/job/proc/equip_preview(mob/living/carbon/human/H, var/alt_title)
@@ -98,7 +102,7 @@
 	. = outfit.equip_base(H, title, alt_title)
 
 /datum/job/proc/get_access()
-	if(!config || config.jobs_have_minimal_access)
+	if(!config || CONFIG_GET(flag/jobs_have_minimal_access)) // CHOMPEdit
 		return src.minimal_access.Copy()
 	else
 		return src.access.Copy()
@@ -108,7 +112,7 @@
 	return (available_in_days(C) == 0) //Available in 0 days = available right now = player is old enough to play.
 
 /datum/job/proc/available_in_days(client/C)
-	if(C && config.use_age_restriction_for_jobs && isnum(C.player_age) && isnum(minimal_player_age))
+	if(C && CONFIG_GET(flag/use_age_restriction_for_jobs) && isnum(C.player_age) && isnum(minimal_player_age)) // CHOMPEdit
 		return max(0, minimal_player_age - C.player_age)
 	return 0
 
@@ -188,3 +192,15 @@
 	if(brain_type in banned_job_species)
 		return TRUE
 	*/
+
+//CHOMPadd start
+/datum/job/proc/register_shift_key(key)
+	if(key)
+		var/list/keylist = list(key)
+		SSjob.shift_keys[title] += keylist
+//CHOMPadd end
+
+//CHOMPAdd Start
+/datum/job/proc/update_limit(var/comperator)
+	return
+//CHOMPAdd End

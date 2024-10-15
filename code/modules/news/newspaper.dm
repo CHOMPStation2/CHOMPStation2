@@ -2,7 +2,7 @@
 //###################################### NEWSPAPER! ######################################################################
 //########################################################################################################################
 
-/obj/item/weapon/newspaper
+/obj/item/newspaper
 	name = "newspaper"
 	desc = "An issue of The Griffon, the newspaper circulating aboard most stations."
 	icon = 'icons/obj/bureaucracy.dmi'
@@ -19,7 +19,7 @@
 	drop_sound = 'sound/items/drop/wrapper.ogg'
 	pickup_sound = 'sound/items/pickup/wrapper.ogg'
 
-/obj/item/weapon/newspaper/attack_self(mob/user as mob)
+/obj/item/newspaper/attack_self(mob/user as mob)
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
 		var/dat
@@ -27,7 +27,7 @@
 		switch(screen)
 			if(0) //Cover
 				dat+="<DIV ALIGN='center'><B><FONT SIZE=6>The Griffon</FONT></B></div>"
-				dat+="<DIV ALIGN='center'><FONT SIZE=2>[using_map.company_name]-standard newspaper, for use on [using_map.company_name]� Space Facilities</FONT></div><HR>"
+				dat+="<DIV ALIGN='center'><FONT SIZE=2>[using_map.company_name]-standard newspaper, for use on [using_map.company_name] Space Facilities</FONT></div><HR>"
 				if(isemptylist(news_content))
 					if(important_message)
 						dat+="Contents:<BR><ul><B><FONT COLOR='red'>**</FONT>Important Security Announcement<FONT COLOR='red'>**</FONT></B> <FONT SIZE=2>\[page [pages+2]\]</FONT><BR></ul>"
@@ -99,7 +99,7 @@
 	else
 		to_chat(user, "The paper is full of intelligible symbols!")
 
-/obj/item/weapon/newspaper/Topic(href, href_list)
+/obj/item/newspaper/Topic(href, href_list)
 	var/mob/living/U = usr
 	..()
 	if((src in U.contents) || (istype(loc, /turf) && in_range(src, U)))
@@ -130,10 +130,10 @@
 		if(istype(src.loc, /mob))
 			attack_self(src.loc)
 
-/obj/item/weapon/newspaper/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/pen))
+/obj/item/newspaper/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/pen))
 		if(scribble_page == curr_page)
-			to_chat(user, "<FONT COLOR='blue'>There's already a scribble in this page... You wouldn't want to make things too cluttered, would you?</FONT>")
+			to_chat(user, span_blue("There's already a scribble in this page... You wouldn't want to make things too cluttered, would you?"))
 		else
 			var/s = sanitize(tgui_input_text(user, "Write something", "Newspaper", ""))
 			s = sanitize(s)

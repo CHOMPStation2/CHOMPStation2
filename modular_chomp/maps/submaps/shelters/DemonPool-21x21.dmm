@@ -1,77 +1,876 @@
-"aq" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"fb" = (/obj/structure/table/hardwoodtable,/obj/item/weapon/flame/candle/candelabra/everburn{pixel_y = 8},/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"fv" = (/obj/structure/bed/chair/wood/wings{dir = 8},/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"hg" = (/obj/structure/simple_door/sandstone{color = "#D35400"},/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"hP" = (/obj/fire,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"kL" = (/turf/simulated/floor/cult{icon_state = "cult-narsie"},/area/survivalpod/superpose/DemonPool)
-"kM" = (/turf/simulated/wall/cult,/area/survivalpod/superpose/DemonPool)
-"ok" = (/obj/structure/bed/chair/wood/wings{dir = 4},/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"ot" = (/obj/structure/closet/walllocker_double/north,/obj/item/device/gps,/obj/item/sticky_pad/random,/obj/item/device/starcaster_news,/obj/item/weapon/pen/blue,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/reagent_containers/food/snacks/sosjerky,/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/weapon/material/knife/tacknife/survival,/obj/item/clothing/accessory/permit/gun,/obj/item/device/camera,/obj/item/device/binoculars,/obj/item/device/threadneedle,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare,/obj/item/device/flashlight/color/yellow,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/flame/lighter/random,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/weapon/reagent_containers/pill/spaceacillin,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/suit_cooling_unit/emergency,/obj/item/stack/nanopaste,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/backpack/messenger,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/poncho/thermal,/obj/item/weapon/storage/box/survival/comp,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/khcrystal,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"oD" = (/turf/simulated/floor/lava/outdoors,/area/survivalpod/superpose/DemonPool)
-"oT" = (/mob/living/simple_mob/vore/demonAI{faction = "neutral"},/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"pi" = (/turf/simulated/gore,/area/survivalpod/superpose/DemonPool)
-"qR" = (/obj/structure/grille/cult,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"ra" = (/obj/fire,/mob/living/simple_mob/vore/demonAI/lutra{faction = "neutral"},/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"rx" = (/obj/fire,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"sn" = (/obj/structure/grille/cult,/obj/structure/bonfire/permanent,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"tU" = (/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"wH" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/DemonPool)
-"xx" = (/mob/living/simple_mob/vore/demonAI/wendigo{faction = "neutral"},/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"yi" = (/obj/structure/bed/chair/bay/chair/padded/red/bignest,/turf/simulated/floor/wood/alt/tile,/area/survivalpod/superpose/DemonPool)
-"zf" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/DemonPool)
-"zp" = (/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"By" = (/obj/fire,/obj/fire,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"BE" = (/obj/structure/grille/broken/cult,/obj/fire,/turf/template_noop,/area/survivalpod/superpose/DemonPool)
-"CF" = (/obj/structure/grille/cult,/obj/structure/window/phoronreinforced/full,/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 4},/turf/simulated/floor/tiled/steel_dirty{color = "grey"},/area/survivalpod/superpose/DemonPool)
-"DW" = (/turf/simulated/goreeyes,/area/survivalpod/superpose/DemonPool)
-"Eb" = (/obj/structure/closet/crate,/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/plastic{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/steel{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/material/glass{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/rods{amount = 50},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil{pixel_x = 3; pixel_y = 3},/obj/item/stack/cable_coil/green,/obj/item/stack/cable_coil/blue,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/storage/briefcase/inflatable,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"Gf" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood/alt/tile,/area/survivalpod/superpose/DemonPool)
-"HR" = (/obj/effect/gateway,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"Ie" = (/obj/fire,/obj/fire,/turf/simulated/floor/lava/outdoors,/area/survivalpod/superpose/DemonPool)
-"Ig" = (/obj/structure/cult/forge,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"In" = (/obj/structure/cult/pylon,/turf/simulated/floor/wood/alt/tile,/area/survivalpod/superpose/DemonPool)
-"It" = (/mob/living/simple_mob/vore/demonAI/covern{faction = "neutral"},/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"IQ" = (/obj/structure/constructshell/cult,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"KC" = (/obj/structure/cult/tome,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"KM" = (/obj/structure/grille/cult,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"KS" = (/obj/fire,/turf/simulated/floor/lava/outdoors,/area/survivalpod/superpose/DemonPool)
-"Lp" = (/obj/structure/grille/broken/cult,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"NU" = (/obj/fire,/obj/fire,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"OC" = (/obj/structure/table/marble{color = "#B03A2E"},/obj/item/clothing/shoes/cult,/obj/item/clothing/suit/cultrobes/alt,/obj/item/clothing/head/helmet/space/cult,/obj/item/device/soulstone,/turf/simulated/floor/wood/alt/tile,/area/survivalpod/superpose/DemonPool)
-"Qs" = (/obj/structure/bed/chair/wood/wings{dir = 1},/turf/simulated/floor/wood/alt/tile,/area/survivalpod/superpose/DemonPool)
-"Rj" = (/obj/structure/table/marble{color = "#B03A2E"},/obj/item/clothing/suit/cultrobes/alt,/obj/item/clothing/head/helmet/space/cult,/obj/item/clothing/shoes/cult,/obj/item/device/soulstone,/turf/simulated/floor/wood/alt/tile,/area/survivalpod/superpose/DemonPool)
-"Ru" = (/turf/simulated/floor/wood/alt/tile,/area/survivalpod/superpose/DemonPool)
-"Rz" = (/obj/structure/cult/talisman,/obj/item/weapon/melee/cultblade,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"RL" = (/mob/living/simple_mob/vore/demonAI/engorge{evasion = 1; faction = "neutral"; health = 750; projectilesound = 'sound/weapons/taser2.ogg'; projectiletype = /obj/item/projectile/beam/stun/electric_spider; size_multiplier = 3},/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"RR" = (/obj/structure/grille/broken/cult,/turf/template_noop,/area/survivalpod/superpose/DemonPool)
-"RW" = (/obj/structure/grille/cult,/turf/template_noop,/area/survivalpod/superpose/DemonPool)
-"Sp" = (/obj/effect/gateway,/turf/simulated/floor/gorefloor,/area/survivalpod/superpose/DemonPool)
-"Tl" = (/turf/template_noop,/area/survivalpod/superpose/DemonPool)
-"VK" = (/obj/fire,/turf/simulated/floor/gorefloor2,/area/survivalpod/superpose/DemonPool)
-"VV" = (/obj/fire,/turf/template_noop,/area/survivalpod/superpose/DemonPool)
-"We" = (/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
-"XD" = (/obj/structure/table/hardwoodtable,/obj/item/weapon/reagent_containers/food/snacks/sliceable/braincake,/turf/simulated/floor/cult,/area/survivalpod/superpose/DemonPool)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aq" = (
+/obj/structure/grille/broken/cult,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"fb" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = 8
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"fv" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"hg" = (
+/obj/structure/simple_door/sandstone{
+	color = "#D35400"
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"hP" = (
+/obj/fire,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"kL" = (
+/turf/simulated/floor/cult{
+	icon_state = "cult-narsie"
+	},
+/area/survivalpod/superpose/DemonPool)
+"kM" = (
+/turf/simulated/wall/cult,
+/area/survivalpod/superpose/DemonPool)
+"ok" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"ot" = (
+/obj/structure/closet/walllocker_double/north,
+/obj/item/gps,
+/obj/item/sticky_pad/random,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"oD" = (
+/turf/simulated/floor/lava/outdoors,
+/area/survivalpod/superpose/DemonPool)
+"oT" = (
+/mob/living/simple_mob/vore/demonAI{
+	faction = "neutral"
+	},
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"pi" = (
+/turf/simulated/gore,
+/area/survivalpod/superpose/DemonPool)
+"qR" = (
+/obj/structure/grille/cult,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"ra" = (
+/obj/fire,
+/mob/living/simple_mob/vore/demonAI/lutra{
+	faction = "neutral"
+	},
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"rx" = (
+/obj/fire,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"sn" = (
+/obj/structure/grille/cult,
+/obj/structure/bonfire/permanent,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"tU" = (
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"wH" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/DemonPool)
+"xx" = (
+/mob/living/simple_mob/vore/demonAI/wendigo{
+	faction = "neutral"
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"yi" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/turf/simulated/floor/wood/alt/tile,
+/area/survivalpod/superpose/DemonPool)
+"zf" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/DemonPool)
+"zp" = (
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"By" = (
+/obj/fire,
+/obj/fire,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"BE" = (
+/obj/structure/grille/broken/cult,
+/obj/fire,
+/turf/template_noop,
+/area/survivalpod/superpose/DemonPool)
+"CF" = (
+/obj/structure/grille/cult,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty{
+	color = "grey"
+	},
+/area/survivalpod/superpose/DemonPool)
+"DW" = (
+/turf/simulated/goreeyes,
+/area/survivalpod/superpose/DemonPool)
+"Eb" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"Gf" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/hosdouble,
+/turf/simulated/floor/wood/alt/tile,
+/area/survivalpod/superpose/DemonPool)
+"HR" = (
+/obj/effect/gateway,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"Ie" = (
+/obj/fire,
+/obj/fire,
+/turf/simulated/floor/lava/outdoors,
+/area/survivalpod/superpose/DemonPool)
+"Ig" = (
+/obj/structure/cult/forge,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"In" = (
+/obj/structure/cult/pylon,
+/turf/simulated/floor/wood/alt/tile,
+/area/survivalpod/superpose/DemonPool)
+"It" = (
+/mob/living/simple_mob/vore/demonAI/covern{
+	faction = "neutral"
+	},
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"IQ" = (
+/obj/structure/constructshell/cult,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"KC" = (
+/obj/structure/cult/tome,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"KM" = (
+/obj/structure/grille/cult,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"KS" = (
+/obj/fire,
+/turf/simulated/floor/lava/outdoors,
+/area/survivalpod/superpose/DemonPool)
+"Lp" = (
+/obj/structure/grille/broken/cult,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"NU" = (
+/obj/fire,
+/obj/fire,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"OC" = (
+/obj/structure/table/marble{
+	color = "#B03A2E"
+	},
+/obj/item/clothing/shoes/cult,
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/head/helmet/space/cult,
+/obj/item/soulstone,
+/turf/simulated/floor/wood/alt/tile,
+/area/survivalpod/superpose/DemonPool)
+"Qs" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt/tile,
+/area/survivalpod/superpose/DemonPool)
+"Rj" = (
+/obj/structure/table/marble{
+	color = "#B03A2E"
+	},
+/obj/item/clothing/suit/cultrobes/alt,
+/obj/item/clothing/head/helmet/space/cult,
+/obj/item/clothing/shoes/cult,
+/obj/item/soulstone,
+/turf/simulated/floor/wood/alt/tile,
+/area/survivalpod/superpose/DemonPool)
+"Ru" = (
+/turf/simulated/floor/wood/alt/tile,
+/area/survivalpod/superpose/DemonPool)
+"Rz" = (
+/obj/structure/cult/talisman,
+/obj/item/melee/cultblade,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"RL" = (
+/mob/living/simple_mob/vore/demonAI/engorge{
+	evasion = 1;
+	faction = "neutral";
+	health = 750;
+	projectilesound = 'sound/weapons/taser2.ogg';
+	projectiletype = /obj/item/projectile/beam/stun/electric_spider;
+	size_multiplier = 3
+	},
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"RR" = (
+/obj/structure/grille/broken/cult,
+/turf/template_noop,
+/area/survivalpod/superpose/DemonPool)
+"RW" = (
+/obj/structure/grille/cult,
+/turf/template_noop,
+/area/survivalpod/superpose/DemonPool)
+"Sp" = (
+/obj/effect/gateway,
+/turf/simulated/floor/gorefloor,
+/area/survivalpod/superpose/DemonPool)
+"Tl" = (
+/turf/template_noop,
+/area/survivalpod/superpose/DemonPool)
+"VK" = (
+/obj/fire,
+/turf/simulated/floor/gorefloor2,
+/area/survivalpod/superpose/DemonPool)
+"VV" = (
+/obj/fire,
+/turf/template_noop,
+/area/survivalpod/superpose/DemonPool)
+"We" = (
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
+"XD" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/reagent_containers/food/snacks/sliceable/braincake,
+/turf/simulated/floor/cult,
+/area/survivalpod/superpose/DemonPool)
 
 (1,1,1) = {"
-TlTlTltUTltUTltUTlTlTlTlTltUTlTlTlTlTlTlTl
-tUVKTlDWpipipipiKMpiDWtUTlTlTltUTlVVTlTlTl
-TlVKVVtUtUTlzpzpzppipiKMpipipiaqDWBEtUtUTl
-TlTlKMVKVKVKrxrxrxrxrxzpoDoDtUtUpiVKpiTlTl
-VVVKaqzpVKhPhPByVKVKtUzpKSKSVKtUTlVKpitUTl
-VVVKKMzprxoTzptUzpIQWezprxzptUItVKVKpitUTl
-TlVVaqtUrxpipikMpikMkMpipipiKMWehPVKpiTltU
-TlVVLptUVKzpkMOCRuGfkMyiInpiHRzpVKVKDWtUTl
-tUtUzppirxEbkMQsRuInkMRuRjkMWepiVKVKDWTlTl
-TltUqRKSsnzpkMDWhgkMpihgkMkMzpDWsnVKpiTlDW
-TlpipiIeKSWezfWekLWeRLkLWehgWetUtUVKpitUpi
-TlDWpihPWeSpkMokXDfbfvRzKCkMWeoDtUtURRtUTl
-tUtUtUWezppipikMwHCFkMkMkMDWIQtUzptUKMtUTl
-TltUKMVKrapiDWzpoDoDzpotIgkMzprxVKzppitUTl
-tUTlaqrxrxzptUzpoDoDWexxtUtUrxByVKTlpiTltU
-TlTlqRtUrxrxzpVKVKVKrxVKrxVKNUVKzpTlpitUTl
-pitUKMtUTlzpzpByByVKpipitUVKVKtUzpzppiTlTl
-TlpipiTltUVKVKByVKBypiDWtUzpzpzpTlpiDWTlTl
-TlDWpiRWRRVVVVVVTltUTlTlLpaqqRqRpiTlTltUTl
-TlTlTlTlpipipipipitUtUtUtUtUTlTlTlTlTlTlTl
-TlTlTlTlTlTlTlTlTltUTlTlTlTlTlTlTlTlTlTlTl
+Tl
+tU
+Tl
+Tl
+VV
+VV
+Tl
+Tl
+tU
+Tl
+Tl
+Tl
+tU
+Tl
+tU
+Tl
+pi
+Tl
+Tl
+Tl
+Tl
+"}
+(2,1,1) = {"
+Tl
+VK
+VK
+Tl
+VK
+VK
+VV
+VV
+tU
+tU
+pi
+DW
+tU
+tU
+Tl
+Tl
+tU
+pi
+DW
+Tl
+Tl
+"}
+(3,1,1) = {"
+Tl
+Tl
+VV
+KM
+aq
+KM
+aq
+Lp
+zp
+qR
+pi
+pi
+tU
+KM
+aq
+qR
+KM
+pi
+pi
+Tl
+Tl
+"}
+(4,1,1) = {"
+tU
+DW
+tU
+VK
+zp
+zp
+tU
+tU
+pi
+KS
+Ie
+hP
+We
+VK
+rx
+tU
+tU
+Tl
+RW
+Tl
+Tl
+"}
+(5,1,1) = {"
+Tl
+pi
+tU
+VK
+VK
+rx
+rx
+VK
+rx
+sn
+KS
+We
+zp
+ra
+rx
+rx
+Tl
+tU
+RR
+pi
+Tl
+"}
+(6,1,1) = {"
+tU
+pi
+Tl
+VK
+hP
+oT
+pi
+zp
+Eb
+zp
+We
+Sp
+pi
+pi
+zp
+rx
+zp
+VK
+VV
+pi
+Tl
+"}
+(7,1,1) = {"
+Tl
+pi
+zp
+rx
+hP
+zp
+pi
+kM
+kM
+kM
+zf
+kM
+pi
+DW
+tU
+zp
+zp
+VK
+VV
+pi
+Tl
+"}
+(8,1,1) = {"
+tU
+pi
+zp
+rx
+By
+tU
+kM
+OC
+Qs
+DW
+We
+ok
+kM
+zp
+zp
+VK
+By
+By
+VV
+pi
+Tl
+"}
+(9,1,1) = {"
+Tl
+KM
+zp
+rx
+VK
+zp
+pi
+Ru
+Ru
+hg
+kL
+XD
+wH
+oD
+oD
+VK
+By
+VK
+Tl
+pi
+Tl
+"}
+(10,1,1) = {"
+Tl
+pi
+pi
+rx
+VK
+IQ
+kM
+Gf
+In
+kM
+We
+fb
+CF
+oD
+oD
+VK
+VK
+By
+tU
+tU
+tU
+"}
+(11,1,1) = {"
+Tl
+DW
+pi
+rx
+tU
+We
+kM
+kM
+kM
+pi
+RL
+fv
+kM
+zp
+We
+rx
+pi
+pi
+Tl
+tU
+Tl
+"}
+(12,1,1) = {"
+Tl
+tU
+KM
+zp
+zp
+zp
+pi
+yi
+Ru
+hg
+kL
+Rz
+kM
+ot
+xx
+VK
+pi
+DW
+Tl
+tU
+Tl
+"}
+(13,1,1) = {"
+Tl
+Tl
+pi
+oD
+KS
+rx
+pi
+In
+Rj
+kM
+We
+KC
+kM
+Ig
+tU
+rx
+tU
+tU
+Lp
+tU
+Tl
+"}
+(14,1,1) = {"
+tU
+Tl
+pi
+oD
+KS
+zp
+pi
+pi
+kM
+kM
+hg
+kM
+DW
+kM
+tU
+VK
+VK
+zp
+aq
+tU
+Tl
+"}
+(15,1,1) = {"
+Tl
+Tl
+pi
+tU
+VK
+tU
+KM
+HR
+We
+zp
+We
+We
+IQ
+zp
+rx
+NU
+VK
+zp
+qR
+Tl
+Tl
+"}
+(16,1,1) = {"
+Tl
+tU
+aq
+tU
+tU
+It
+We
+zp
+pi
+DW
+tU
+oD
+tU
+rx
+By
+VK
+tU
+zp
+qR
+Tl
+Tl
+"}
+(17,1,1) = {"
+Tl
+Tl
+DW
+pi
+Tl
+VK
+hP
+VK
+VK
+sn
+tU
+tU
+zp
+VK
+VK
+zp
+zp
+Tl
+pi
+Tl
+Tl
+"}
+(18,1,1) = {"
+Tl
+VV
+BE
+VK
+VK
+VK
+VK
+VK
+VK
+VK
+VK
+tU
+tU
+zp
+Tl
+Tl
+zp
+pi
+Tl
+Tl
+Tl
+"}
+(19,1,1) = {"
+Tl
+Tl
+tU
+pi
+pi
+pi
+pi
+DW
+DW
+pi
+pi
+RR
+KM
+pi
+pi
+pi
+pi
+DW
+Tl
+Tl
+Tl
+"}
+(20,1,1) = {"
+Tl
+Tl
+tU
+Tl
+tU
+tU
+Tl
+tU
+Tl
+Tl
+tU
+tU
+tU
+tU
+Tl
+tU
+Tl
+Tl
+tU
+Tl
+Tl
+"}
+(21,1,1) = {"
+Tl
+Tl
+Tl
+Tl
+Tl
+Tl
+tU
+Tl
+Tl
+DW
+pi
+Tl
+Tl
+Tl
+tU
+Tl
+Tl
+Tl
+Tl
+Tl
+Tl
 "}

@@ -8,6 +8,7 @@
 								*/
 
 // ZAS Compile Options
+//#define FIREDBG		// Uncomment to turn on ZAS debugging related to fire stuff.
 //#define ZASDBG	 	// Uncomment to turn on super detailed ZAS debugging that probably won't even compile.
 #define MULTIZAS		// Uncomment to turn on Multi-Z ZAS Support!
 
@@ -27,6 +28,7 @@
 //#define REFERENCE_TRACKING
 #ifdef REFERENCE_TRACKING
 
+//#define FIND_REF_NO_CHECK_TICK //CHOMPEdit new ref tracking
 ///Should we be logging our findings or not
 #define REFERENCE_TRACKING_LOG
 
@@ -38,5 +40,12 @@
 #ifdef GC_FAILURE_HARD_LOOKUP
 #define FIND_REF_NO_CHECK_TICK
 #endif //ifdef GC_FAILURE_HARD_LOOKUP
+
+//CHOMPEdit begin
+#ifdef FIND_REF_NO_CHECK_TICK
+/world
+	loop_checks = FALSE
+#endif
+//CHOMPEdit end
 
 #endif //ifdef REFERENCE_TRACKING

@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -9,8 +10,8 @@ type Data = {
   strength: number;
 };
 
-export const ParticleAccelerator = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const ParticleAccelerator = (props) => {
+  const { act, data } = useBackend<Data>();
   const { assembled, power, strength } = data;
   return (
     <Window width={350} height={185}>
@@ -20,12 +21,11 @@ export const ParticleAccelerator = (props, context) => {
             <LabeledList.Item
               label="Status"
               buttons={
-                <Button
-                  icon={'sync'}
-                  content={'Run Scan'}
-                  onClick={() => act('scan')}
-                />
-              }>
+                <Button icon={'sync'} onClick={() => act('scan')}>
+                  Run Scan
+                </Button>
+              }
+            >
               <Box color={assembled ? 'good' : 'bad'}>
                 {assembled
                   ? 'Ready - All parts in place'
@@ -39,11 +39,12 @@ export const ParticleAccelerator = (props, context) => {
             <LabeledList.Item label="Power">
               <Button
                 icon={power ? 'power-off' : 'times'}
-                content={power ? 'On' : 'Off'}
                 selected={power}
                 disabled={!assembled}
                 onClick={() => act('power')}
-              />
+              >
+                {power ? 'On' : 'Off'}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Particle Strength">
               <Button

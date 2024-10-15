@@ -31,3 +31,8 @@
 				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 			)
 	*/
+
+/decl/emote/audible/malehumanscream
+	key = "malehumanscream"
+	emote_message_3p = "screams!"
+	emote_sound = 'sound/voice/malescream_2.ogg'

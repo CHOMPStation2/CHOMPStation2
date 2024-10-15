@@ -1,4 +1,4 @@
-/obj/item/weapon/book/manual/standard_operating_procedure
+/obj/item/book/manual/standard_operating_procedure
 	name = "Standard Operating Procedure"
 	desc = "A set of corporate guidelines for keeping space stations running smoothly."
 	icon_state = "sop"
@@ -6,7 +6,7 @@
 	author = "NanoTrasen"
 	title = "Standard Operating Procedure"
 
-/obj/item/weapon/book/manual/standard_operating_procedure/New()
+/obj/item/book/manual/standard_operating_procedure/Initialize() // CHOMPEdit
 	..()
 	dat = {"
 
@@ -14,14 +14,14 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Standard_Operating_Procedure&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[CONFIG_GET(string/wikiurl)]Standard_Operating_Procedure&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
 
 		"}
 
-/obj/item/weapon/book/manual/command_guide
+/obj/item/book/manual/command_guide
 	name = "The Chain of Command"
 	desc = "A set of corporate guidelines outlining the entire command structure of NanoTrasen from top to bottom."
 	icon_state = "commandGuide"
@@ -29,7 +29,7 @@
 	author = "Jeremiah Acacius"
 	title = "Corporate Regulations"
 
-/obj/item/weapon/book/manual/command_guide/New()
+/obj/item/book/manual/command_guide/Initialize() // CHOMPEdit
 	..()
 	dat = {"
 
@@ -37,7 +37,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Chain_of_Command&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[CONFIG_GET(string/wikiurl)]Chain_of_Command&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
@@ -45,7 +45,7 @@
 		"}
 
 //accurate as of 2/17/21 Extra credit to document editting and proofreading editing to Luna
-/obj/item/weapon/book/manual/cook_guide
+/obj/item/book/manual/cook_guide
 	name = "Food for Dummies 2"
 	desc = "A helpful guide to the world of cooking."
 	icon_state = "cook-guide"
@@ -53,7 +53,7 @@
 	author = "Ali Big"
 	title = "Food for Dummies 2"
 
-/obj/item/weapon/book/manual/cook_guide/New()
+/obj/item/book/manual/cook_guide/New()
 	..()
 	dat = {"
 		<html>
@@ -129,7 +129,7 @@
 		"}
 
 //accurate as of 2/23/21
-/obj/item/weapon/book/manual/bar_guide
+/obj/item/book/manual/bar_guide
 	name = "How to Alcohol (And other Drinks)"
 	desc = "A helpful guide to the world of barkeeping."
 	icon_state = "bar-guide"
@@ -137,7 +137,7 @@
 	author = "Ali Big"
 	title = "How to Alcohol (And other Drinks)"
 
-/obj/item/weapon/book/manual/bar_guide/New()
+/obj/item/book/manual/bar_guide/New()
 	..()
 	dat = {"
 			<html>
@@ -343,14 +343,14 @@
                 </body>
             </html> "}
 
-/obj/item/weapon/book/manual/rotary_electric_generator
+/obj/item/book/manual/rotary_electric_generator
 	name = "Rotary Electric Generator Manual"
 	icon_state ="rulebook"
 	item_state = "book15"
 	author = "Engineering Encyclopedia"
 	title = "Rotary Electric Generator Manual"
 
-/obj/item/weapon/book/manual/rotary_electric_generator/New()
+/obj/item/book/manual/rotary_electric_generator/New()
 	..()
 	dat = {"<html>
 				<head>
@@ -440,14 +440,14 @@
 			</html>
 			"}
 
-/obj/item/weapon/book/manual/synthetic_life
+/obj/item/book/manual/synthetic_life
 	name = "Synthetic Life: A Comprehensive Guide"
 	desc = "The basc history of synthetic life as the galaxy knows it."
 	icon_state = "evabook"
 	author = "Pontifex Publishing"
 	title = "Synthetics"
 
-/obj/item/weapon/book/manual/synthetic_life/New() // CHOMPedit: Removed references to upstream factions which don't exist here.
+/obj/item/book/manual/synthetic_life/New() // CHOMPedit: Removed references to upstream factions which don't exist here.
 	..()
 	dat = {"
 <html lang="en">
@@ -606,7 +606,7 @@
 		allowing an organic sapient an extended lifetime when their frail, crude flesh begins to fail - well up and
 		until their brain itself starts giving up the ghost.</p>
 		<p>While MMIs have several drawbacks, such as the fact that they still have a perishable shelf-life, or that
-		they are definitely sapient and have moral and ethical quandaries associated with those, 
+		they are definitely sapient and have moral and ethical quandaries associated with those,
 		they also possess distinct benefits from a drone.</p>
 		<p>MMIs are incredibly hard to "hack" and manipulate on a deeper level than taking over the hardware they are
 		housed in, capable of fighting restraining code and unable to be ablated like a drone without extensive surgery.
@@ -668,7 +668,7 @@
 	</div>
 	<div id="the jans-fhriede test">
 		<h3>The Jans-Fhriede Test</h3>
-		<p>Originally a reactionary law, the Jans-Fhriede Test was devised to "humanize" positronic brains 
+		<p>Originally a reactionary law, the Jans-Fhriede Test was devised to "humanize" positronic brains
 		and make them happy, subservient citizens who "see" their place as secondary to humans. Today, in more
 		enlightened times, the Jans-Fhriede Test has been revised to establish that a positronic is aware enough of its
 		action and consequences that it may be fully culpable for them.</p>

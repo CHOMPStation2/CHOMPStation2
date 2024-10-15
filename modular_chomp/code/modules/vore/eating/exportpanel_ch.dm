@@ -51,6 +51,7 @@
 					addons.Add(flag_name)
 			belly_data["addons"] = addons
 			belly_data["item_mode"] = B.item_digest_mode
+			belly_data["message_mode"] = B.message_mode
 
 			// Messages
 			belly_data["struggle_messages_outside"] = list()
@@ -152,6 +153,22 @@
 			belly_data["secondary_transfer_messages_prey"] = list()
 			for(var/msg in B.secondary_transfer_messages_prey)
 				belly_data["secondary_transfer_messages_prey"] += msg
+
+			belly_data["primary_autotransfer_messages_owner"] = list()
+			for(var/msg in B.primary_autotransfer_messages_owner)
+				belly_data["primary_autotransfer_messages_owner"] += msg
+
+			belly_data["primary_autotransfer_messages_prey"] = list()
+			for(var/msg in B.primary_autotransfer_messages_prey)
+				belly_data["primary_autotransfer_messages_prey"] += msg
+
+			belly_data["secondary_autotransfer_messages_owner"] = list()
+			for(var/msg in B.secondary_autotransfer_messages_owner)
+				belly_data["secondary_autotransfer_messages_owner"] += msg
+
+			belly_data["secondary_autotransfer_messages_prey"] = list()
+			for(var/msg in B.secondary_autotransfer_messages_prey)
+				belly_data["secondary_autotransfer_messages_prey"] += msg
 
 			belly_data["digest_chance_messages_owner"] = list()
 			for(var/msg in B.digest_chance_messages_owner)
@@ -273,8 +290,11 @@
 			belly_data["emote_time"] = B.emote_time
 			belly_data["shrink_grow_size"] = B.shrink_grow_size
 			belly_data["vorespawn_blacklist"] = B.vorespawn_blacklist
+			belly_data["vorespawn_whitelist"] = B.vorespawn_whitelist
+			belly_data["vorespawn_absorbed"] = B.vorespawn_absorbed
 			belly_data["egg_type"] = B.egg_type
 			belly_data["egg_name"] = B.egg_name
+			belly_data["egg_size"] = B.egg_size
 			belly_data["selective_preference"] = B.selective_preference
 			belly_data["recycling"] = B.recycling
 			belly_data["storing_nutrition"] = B.storing_nutrition
@@ -336,6 +356,8 @@
 			belly_data["escapechance_absorbed"] = B.escapechance_absorbed
 			belly_data["escapetime"] = B.escapetime/10
 
+			belly_data["belchchance"] = B.belchchance
+
 			belly_data["transferchance"] = B.transferchance
 			belly_data["transferlocation"] = B.transferlocation
 
@@ -349,9 +371,11 @@
 			belly_data["autotransferchance"] = B.autotransferchance
 			belly_data["autotransferwait"] = B.autotransferwait/10
 			belly_data["autotransferlocation"] = B.autotransferlocation
+			belly_data["autotransferextralocation"] = B.autotransferextralocation
 			belly_data["autotransfer_enabled"] = B.autotransfer_enabled
 			belly_data["autotransferchance_secondary"] = B.autotransferchance_secondary
 			belly_data["autotransferlocation_secondary"] = B.autotransferlocation_secondary
+			belly_data["autotransferextralocation_secondary"] = B.autotransferextralocation_secondary
 			belly_data["autotransfer_min_amount"] = B.autotransfer_min_amount
 			belly_data["autotransfer_max_amount"] = B.autotransfer_max_amount
 			var/list/at_whitelist = list()

@@ -3,9 +3,6 @@
 /obj/item/clothing/glasses/thermal/plain/eyepatch,
 /obj/structure/closet/crate,
 /obj/item/stolenpackage,
-/obj/item/stolenpackage,
-/obj/random/energy/highend,
-/obj/item/stolenpackage,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -13,7 +10,6 @@
 /area/submap/piratefortress)
 "aE" = (
 /obj/structure/table/reinforced,
-/obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -48,8 +44,6 @@
 /area/submap/piratefortress)
 "ck" = (
 /obj/structure/closet/crate/secure/loot,
-/obj/item/stolenpackage,
-/obj/item/weapon/card/emag,
 /obj/item/rig_module/mounted/energy_blade,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -101,7 +95,7 @@
 /obj/item/clothing/suit/pirate,
 /obj/item/clothing/head/collectable/pirate,
 /obj/item/clothing/under/pirate,
-/obj/item/weapon/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi{
 	dir = 4
@@ -122,7 +116,6 @@
 /obj/structure/table/reinforced,
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
-/obj/random/energy/highend,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 6
 	},
@@ -236,10 +229,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "kC" = (
-/obj/machinery/porta_turret/stationary/syndie{
-	faction = "pirate"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external,
 /area/submap/piratefortress)
 "lc" = (
 /obj/effect/floor_decal/corner/paleblue/border{
@@ -272,7 +262,7 @@
 /area/submap/piratefortress)
 "lw" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -288,7 +278,7 @@
 /area/submap/piratefortress)
 "mU" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -300,7 +290,7 @@
 /turf/template_noop,
 /area/template_noop)
 "nj" = (
-/obj/item/weapon/dnainjector/telemut,
+/obj/item/dnainjector/telemut,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -358,8 +348,8 @@
 "uB" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/mask/gas/syndicate,
-/obj/item/weapon/implantcase/surge,
-/obj/item/weapon/gun/projectile/lamia,
+/obj/item/implantcase/surge,
+/obj/item/gun/projectile/lamia,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/piratefortress)
 "uU" = (
@@ -372,11 +362,11 @@
 /obj/item/clothing/glasses/graviton/medgravpatch,
 /obj/structure/closet/crate,
 /obj/item/stolenpackage,
-/obj/random/energy/highend,
 /obj/item/stolenpackage,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
+/obj/random/projectile/shotgun,
 /turf/simulated/floor/tiled/red,
 /area/submap/piratefortress)
 "vr" = (
@@ -386,9 +376,9 @@
 /area/submap/piratefortress)
 "vB" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/projectile/revolver/lombardi/gold,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/minihoe,
+/obj/item/gun/projectile/revolver/lombardi/gold,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/minihoe,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -472,8 +462,7 @@
 /area/submap/piratefortress)
 "xX" = (
 /obj/structure/table/gold,
-/obj/item/weapon/aliencoin/gold,
-/obj/random/energy/highend,
+/obj/item/aliencoin/gold,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -506,8 +495,8 @@
 /area/submap/piratefortress)
 "Av" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/bottle/robustharvest,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
+/obj/item/reagent_containers/glass/bottle/robustharvest,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -527,13 +516,8 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/submap/piratefortress)
-"BT" = (
-/obj/structure/table/reinforced,
-/obj/random/projectile,
-/turf/simulated/floor/tiled/yellow,
-/area/submap/piratefortress)
 "Di" = (
-/obj/item/weapon/dnainjector/telemut,
+/obj/item/dnainjector/telemut,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/piratefortress)
 "DD" = (
@@ -573,14 +557,20 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
+"EC" = (
+/obj/machinery/porta_turret/stationary/syndie{
+	faction = "pirate"
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/piratefortress)
 "Fo" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/piratefortress)
 "FC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/bottle/left4zed,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
+/obj/item/reagent_containers/glass/bottle/left4zed,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/machinery/light/poi{
 	dir = 4
@@ -636,14 +626,18 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/sif{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/piratefortress)
 "La" = (
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/piratefortress)
 "Lr" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/machinery/light/poi{
 	dir = 8
@@ -656,6 +650,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/yellow,
+/area/submap/piratefortress)
+"Mu" = (
+/turf/simulated/floor/plating,
 /area/submap/piratefortress)
 "MC" = (
 /obj/effect/floor_decal/corner/green/border{
@@ -675,7 +672,7 @@
 /area/submap/piratefortress)
 "OB" = (
 /obj/structure/table/gold,
-/obj/item/weapon/flame/lighter/zippo/gold,
+/obj/item/flame/lighter/zippo/gold,
 /obj/item/capture_crystal,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
@@ -744,11 +741,6 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/submap/piratefortress)
-"QI" = (
-/obj/structure/table/reinforced,
-/obj/random/energy/highend,
-/turf/simulated/floor/tiled/yellow,
-/area/submap/piratefortress)
 "QM" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
@@ -767,13 +759,11 @@
 /area/submap/piratefortress)
 "Su" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
-/obj/item/stolenpackage,
-/obj/item/stolenpackage,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/piratefortress)
 "Td" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/projectile/deagle/gold,
+/obj/item/gun/projectile/deagle/gold,
 /obj/item/clothing/suit/pirate,
 /obj/item/clothing/head/collectable/pirate,
 /obj/item/clothing/under/pirate,
@@ -782,7 +772,6 @@
 /area/submap/piratefortress)
 "TJ" = (
 /obj/structure/table/reinforced,
-/obj/random/projectile/shotgun,
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
 /obj/effect/floor_decal/corner/paleblue/border{
@@ -834,7 +823,7 @@
 /obj/item/clothing/suit/pirate,
 /obj/item/clothing/head/collectable/pirate,
 /obj/item/clothing/under/pirate,
-/obj/item/weapon/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/machinery/light/poi{
 	dir = 8
@@ -888,7 +877,11 @@
 /area/submap/piratefortress)
 "ZQ" = (
 /obj/structure/railing,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/sif{
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/submap/piratefortress)
 
 (1,1,1) = {"
@@ -1397,7 +1390,7 @@ ms
 ms
 La
 La
-vT
+EC
 kC
 vT
 vT
@@ -1406,8 +1399,8 @@ vT
 vT
 vT
 vT
-kC
-vT
+Mu
+EC
 vT
 vT
 vT
@@ -1452,17 +1445,17 @@ oX
 PP
 Qw
 oX
-kC
+Mu
 vT
 vT
 vT
-kC
+vT
 vT
 vT
 La
 La
 kC
-La
+EC
 ms
 ms
 ms
@@ -1622,7 +1615,7 @@ ms
 ms
 La
 vT
-kC
+vT
 oX
 oX
 St
@@ -1645,7 +1638,7 @@ oX
 vT
 vT
 kC
-La
+EC
 La
 ms
 ms
@@ -1757,7 +1750,7 @@ ms
 ms
 ms
 La
-kC
+vT
 oX
 oX
 XJ
@@ -1825,7 +1818,7 @@ Uz
 QM
 Pl
 oX
-kC
+vT
 vT
 La
 ms
@@ -1892,7 +1885,7 @@ or
 ms
 La
 La
-vT
+kC
 oX
 uu
 uu
@@ -1915,7 +1908,7 @@ nl
 RI
 wq
 oX
-vT
+kC
 vT
 La
 ms
@@ -1937,7 +1930,7 @@ ms
 ms
 La
 DN
-vT
+EC
 oX
 uu
 uu
@@ -1960,7 +1953,7 @@ oX
 oX
 oX
 oX
-kC
+EC
 vT
 La
 ms
@@ -1982,7 +1975,7 @@ ms
 ms
 La
 vT
-vT
+kC
 oX
 uu
 uu
@@ -2005,7 +1998,7 @@ Up
 Xv
 mU
 oX
-vT
+kC
 vT
 La
 ms
@@ -2083,7 +2076,7 @@ cg
 DD
 oX
 PJ
-BT
+pA
 aE
 pA
 aE
@@ -2117,7 +2110,7 @@ ms
 ms
 La
 vT
-kC
+vT
 oX
 XJ
 VJ
@@ -2132,7 +2125,7 @@ pA
 aE
 vr
 aE
-QI
+pA
 ft
 oX
 xk
@@ -2297,7 +2290,16 @@ ms
 ms
 ms
 La
-La
+EC
+kC
+vT
+vT
+vT
+vT
+vT
+vT
+kC
+EC
 kC
 vT
 vT
@@ -2306,21 +2308,12 @@ vT
 vT
 vT
 vT
-kC
 vT
 vT
 vT
 vT
 kC
-vT
-vT
-vT
-vT
-vT
-vT
-vT
-kC
-vT
+EC
 vT
 La
 La

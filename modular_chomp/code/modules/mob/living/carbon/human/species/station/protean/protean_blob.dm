@@ -5,9 +5,9 @@
 	tt_desc = "Animated nanogoop"
 	icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
 	icon_state = "to_puddle"
-	icon_living = "puddle2"
-	icon_rest = "rest"
-	icon_dead = "puddle"
+	icon_living = "puddle0-eyes"	//Null icon, since we're made of overlays now.
+	icon_rest = "puddle0-eyes"
+	icon_dead = "puddle0-eyes"
 
 	faction = "neutral"
 	maxHealth = 200
@@ -36,7 +36,7 @@
 	max_n2 = 0
 	minbodytemp = 0
 	maxbodytemp = 1100
-	movement_cooldown = 2
+	movement_cooldown = 0
 	hunger_rate = 0
 
 	var/mob/living/carbon/human/humanform
@@ -55,10 +55,12 @@
 	has_hands = 1
 	shock_resist = 1
 	nameset = 1
-	holder_type = /obj/item/weapon/holder/protoblob
+	holder_type = /obj/item/holder/protoblob
 	var/hiding = 0
 	vore_icons = 1
 	vore_active = 1
+
+	plane = ABOVE_MOB_PLANE	//Necessary for overlay based icons
 
 /datum/say_list/protean_blob
 	speak = list("Blrb?","Sqrsh.","Glrsh!")
@@ -72,68 +74,67 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		verbs |= /mob/living/proc/usehardsuit
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_partswap
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_regenerate
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_metalnom
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_blobform
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_rig_transform
-		verbs |= /mob/living/simple_mob/protean_blob/proc/appearance_switch
-		verbs |= /mob/living/simple_mob/protean_blob/proc/nano_latch
-		verbs -= /mob/living/simple_mob/proc/nutrition_heal
+		add_verb(src,/mob/living/proc/usehardsuit) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_partswap) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_regenerate) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_metalnom) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_blobform) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_rig_transform) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/appearance_switch) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_latch) //CHOMPEdit TGPanel
+		remove_verb(src,/mob/living/simple_mob/proc/nutrition_heal) //CHOMPEdit TGPanel
 	else
 		update_icon()
-	verbs |= /mob/living/proc/hide
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 
 //Hidden verbs for macro hotkeying
 /mob/living/simple_mob/protean_blob/proc/nano_partswap()
 	set name = "Ref - Single Limb"
 	set desc = "Allows you to replace and reshape your limbs as you see fit."
-	set category = "Abilities"
+	//set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_partswap()
 
 /mob/living/simple_mob/protean_blob/proc/nano_regenerate()
 	set name = "Total Reassembly (wip)"
 	set desc = "Completely reassemble yourself from whatever save slot you have loaded in preferences. Assuming you meet the requirements."
-	set category = "Abilities"
+	//set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_regenerate()
 
 /mob/living/simple_mob/protean_blob/proc/nano_blobform()
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	//set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_blobform()
 
 /mob/living/simple_mob/protean_blob/proc/nano_metalnom()
 	set name = "Ref - Store Metals"
 	set desc = "If you're holding a stack of material, you can consume some and store it for later."
-	set category = "Abilities"
+	//set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_metalnom()
 
 /mob/living/simple_mob/protean_blob/proc/nano_rig_transform()
 	set name = "Modify Form - Hardsuit"
 	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
-	set category = "Abilities"
+	//set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_rig_transform()
 
 /mob/living/simple_mob/protean_blob/proc/appearance_switch()
 	set name = "Switch Blob Appearance"
 	set desc = "Allows a protean blob to switch its outwards appearance."
-	set category = "Abilities"
+	//set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.appearance_switch()
 
 /mob/living/simple_mob/protean_blob/proc/nano_latch()
 	set name = "Latch/Unlatch host"
 	set desc = "Allows a protean to forcibly latch or unlatch from a host."
-	set category = "Abilities"
+	//set category = "Abilities.Protean"
 	set hidden = 1
 	humanform.nano_latch()
 
@@ -185,10 +186,12 @@
 	fulllist |= global._human_default_emotes //they're living nanites, they can make whatever sounds they want
 	return fulllist
 
-/mob/living/simple_mob/protean_blob/Stat()
-	..()
+//ChompEDIT START - TGPanel
+/mob/living/simple_mob/protean_blob/update_misc_tabs()
+	. = ..()
 	if(humanform)
-		humanform.species.Stat(humanform)
+		humanform.species.update_misc_tabs(src)
+//ChompEDIT END
 
 /mob/living/simple_mob/protean_blob/updatehealth()
 	if(humanform.nano_dead_check(src))
@@ -296,7 +299,7 @@
 		return ..()
 
 /mob/living/simple_mob/protean_blob/rad_act(severity)
-	if(istype(loc, /obj/item/weapon/rig))
+	if(istype(loc, /obj/item/rig))
 		return	//Don't irradiate us while we're in rig mode
 	if(humanform)
 		return humanform.rad_act(severity)
@@ -331,7 +334,7 @@
 			healing = null
 
 /mob/living/simple_mob/protean_blob/lay_down()
-	var/obj/item/weapon/rig/rig = src.get_rig()
+	var/obj/item/rig/rig = src.get_rig()
 	if(rig)
 		rig.force_rest(src)
 		return
@@ -340,18 +343,21 @@
 /mob/living/simple_mob/protean_blob/verb/prot_hide()
 	set name = "Hide Self"
 	set desc = "Disperses your mass into a thin veil, making a trap to snatch prey with, or simply hide."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 
 	if(!hiding)
+		cut_overlays()
+		icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
 		icon_state = "hide"
 		sleep(7)
 		mouse_opacity = 0
 		plane = ABOVE_OBJ_PLANE
 		hiding = 1
 	else
+		icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
 		mouse_opacity = 1
 		icon_state = "wake"
-		plane = MOB_PLANE
+		plane = initial(plane)
 		sleep(7)
 		update_icon()
 		hiding = 0
@@ -364,7 +370,7 @@
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,span_warning("\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 	update_canmove()
 
 /mob/living/simple_mob/protean_blob/update_canmove()
@@ -386,22 +392,22 @@
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
+			visible_message(span_infoplain(span_bold("[name]") + " gloms over some of \the [S], absorbing it."))
 	else if(isitem(A) && a_intent == "grab") //CHOMP Add all this block, down to I.forceMove.
 		var/obj/item/I = A
 		if(!vore_selected)
-			to_chat(src,"<span class='warning'>You either don't have a belly selected, or don't have a belly!</span>")
+			to_chat(src,span_warning("You either don't have a belly selected, or don't have a belly!"))
 			return FALSE
 		if(is_type_in_list(I,item_vore_blacklist) || I.anchored)
-			to_chat(src, "<span class='warning'>You can't eat this.</span>")
+			to_chat(src, span_warning("You can't eat this."))
 			return
 
 		if(is_type_in_list(I,edible_trash) | adminbus_trash)
 			if(I.hidden_uplink)
-				to_chat(src, "<span class='warning'>You really should not be eating this.</span>")
+				to_chat(src, span_warning("You really should not be eating this."))
 				message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>" : "null"])")
 				return
-		visible_message("<b>[name]</b> stretches itself over the [I], engulfing it whole!")
+		visible_message(span_infoplain(span_bold("[name]") + " stretches itself over the [I], engulfing it whole!"))
 		I.forceMove(vore_selected)
 	else
 		return ..()
@@ -417,7 +423,7 @@
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
+			visible_message(span_infoplain(span_bold("[name]") + " gloms over some of \the [S], absorbing it."))
 	else
 		return ..()
 
@@ -446,10 +452,10 @@
 
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob(force)
-	if(!force && !isturf(loc) && !loc == /obj/item/weapon/rig/protean)
-		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+	if(!force && !isturf(loc) && !loc == /obj/item/rig/protean)
+		to_chat(src,span_warning("You can't change forms while inside something."))
 		return
-	to_chat(src, "<span class='notice'>You rapidly disassociate your form.</span>")
+	to_chat(src, span_notice("You rapidly disassociate your form."))
 	if(force || do_after(src,20,exclusive = TASK_ALL_EXCLUSIVE))
 		handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
 		remove_micros(src, src) //Living things don't fare well in roblobs.
@@ -484,7 +490,7 @@
 		blob.ckey = ckey
 		blob.ooc_notes = ooc_notes
 		temporary_form = blob
-		var/obj/item/device/radio/R = null
+		var/obj/item/radio/R = null
 		if(isradio(l_ear))
 			R = l_ear
 		if(isradio(r_ear))
@@ -500,7 +506,7 @@
 		moveToNullspace()
 
 		//Message
-		blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
+		blob.visible_message(span_infoplain(span_bold("[src.name]") + " collapses into a gooey blob!"))
 
 		//Duration of the to_puddle iconstate that the blob starts with
 		sleep(13)
@@ -514,39 +520,38 @@
 			B.owner = blob
 		vore_organs.Cut()
 
+		soulgem.owner = blob
+
 		//We can still speak our languages!
 		blob.languages = languages.Copy()
 		blob.name = real_name
 		blob.real_name = real_name
 		blob.voice_name = name
-		var/datum/species/protean/S = src.species
-		blob.icon_living = S.blob_appearance
-		blob.item_state = S.blob_appearance
-		blob.icon_rest = S.blob_appearance + "_rest"
-		blob.update_icon()
+
+		blob.update_icon(1)
 
 		//Flip them to the protean panel
-		addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
+		addtimer(CALLBACK(src, PROC_REF(nano_set_panel), C), 4)
 
 		//Return our blob in case someone wants it
 		return blob
 	else
-		to_chat(src, "<span class='warning'>You must remain still to blobform!</span>")
+		to_chat(src, span_warning("You must remain still to blobform!"))
 
 //For some reason, there's no way to force drop all the mobs grabbed. This ought to fix that. And be moved elsewhere. Call with caution, doesn't handle cycles.
 /proc/remove_micros(var/src, var/mob/root)
 	for(var/obj/item/I in src)
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
-		if(istype(I, /obj/item/weapon/holder))
+		if(istype(I, /obj/item/holder))
 			root.remove_from_mob(I)
 
 /mob/living/proc/usehardsuit()
 	set name = "Utilize Hardsuit Interface"
 	set desc = "Allows a protean blob to open hardsuit interface."
-	set category = "Abilities"
+	set category = "Abilities.Protean"
 
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
+	if(istype(loc, /obj/item/rig/protean))
+		var/obj/item/rig/protean/prig = loc
 		to_chat(src, "You attempt to interface with the [prig].")
 		prig.tgui_interact(src)
 	else
@@ -555,12 +560,12 @@
 /mob/living/carbon/human/proc/nano_outofblob(var/mob/living/simple_mob/protean_blob/blob, force)
 	if(!istype(blob))
 		return
-	if(blob.loc == /obj/item/weapon/rig/protean)
+	if(blob.loc == /obj/item/rig/protean)
 		return
 	if(!force && !isturf(blob.loc))
-		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(blob,span_warning("You can't change forms while inside something."))
 		return
-	to_chat(src, "<span class='notice'>You rapidly reassemble your form.</span>")
+	to_chat(src, span_notice("You rapidly reassemble your form."))
 	if(force || do_after(blob,20,exclusive = TASK_ALL_EXCLUSIVE))
 		if(buckled)
 			buckled.unbuckle_mob()
@@ -588,7 +593,7 @@
 		blob.icon_state = "from_puddle"
 
 		//Message
-		blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
+		blob.visible_message(span_infoplain(span_bold("[src.name]") + " reshapes into a humanoid appearance!"))
 
 		//Size update
 		resize(blob.size_multiplier, FALSE, TRUE, ignore_prefs = TRUE)
@@ -621,25 +626,27 @@
 			B.owner = src
 		languages = blob.languages.Copy()
 
+		soulgem.owner = src
+
 		Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
 		//Get rid of friend blob
 		qdel(blob)
 
 		//Flip them to the protean panel
-		addtimer(CALLBACK(src, .proc/nano_set_panel, C), 4)
+		addtimer(CALLBACK(src, PROC_REF(nano_set_panel), C), 4)
 
 		//Return ourselves in case someone wants it
 		return src
 	else
-		to_chat(src, "<span class='warning'>You must remain still to reshape yourself!</span>")
+		to_chat(src, span_warning("You must remain still to reshape yourself!"))
 
 /mob/living/carbon/human/proc/nano_set_panel(var/client/C)
 	if(C)
 		C.statpanel = "Protean"
 
 /mob/living/simple_mob/protean_blob/ClickOn(var/atom/A, var/params)
-	if(istype(loc, /obj/item/weapon/rig/protean))
+	if(istype(loc, /obj/item/rig/protean))
 		HardsuitClickOn(A)
 	..()
 
@@ -647,8 +654,8 @@
 	return 1
 
 /mob/living/simple_mob/protean_blob/HardsuitClickOn(var/atom/A, var/alert_ai = 0)
-	if(istype(loc, /obj/item/weapon/rig/protean))
-		var/obj/item/weapon/rig/protean/prig = loc
+	if(istype(loc, /obj/item/rig/protean))
+		var/obj/item/rig/protean/prig = loc
 		if(istype(prig) && !prig.offline && prig.selected_module)
 			if(!prig.ai_can_move_suit(src))
 				return 0
@@ -673,3 +680,107 @@
 
 /mob/living/simple_mob/protean_blob/handle_mutations_and_radiation()
 	humanform.handle_mutations_and_radiation()
+
+/mob/living/simple_mob/protean_blob/update_icon()
+	..()
+	if(humanform)
+		vis_height = 32
+		cut_overlays()
+		var/list/wide_icons = list(
+		"lizard",
+		"rat",
+		"wolf"
+		)
+		var/list/tall_icons = list(
+		"drake",
+		"teppi",
+		"panther"
+		)
+		var/list/big_icons = list(
+		"robodrgn"
+		)
+		var/datum/species/protean/S = humanform.species
+		icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
+		default_pixel_x = 0
+		pixel_x = 0
+		vore_capacity = 1
+		if(S.blob_appearance == "dragon")
+			vore_capacity = 2
+			icon = 'icons/mob/vore128x64.dmi'
+			mount_offset_y = 32
+			mount_offset_x = -16
+			var/image/I = image(icon, "[S.dragon_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -48)
+			I.color = S.dragon_overlays[S.dragon_overlays[1]]
+			I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+			I.plane = MOB_PLANE
+			I.layer = MOB_LAYER
+			add_overlay(I)
+			qdel(I)
+
+			I = image(icon, "[S.dragon_overlays[2]][resting? "-rest" : null]", pixel_x = -48)
+			I.color = S.dragon_overlays[S.dragon_overlays[2]]
+			I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+			I.plane = MOB_PLANE
+			I.layer = MOB_LAYER
+			add_overlay(I)
+			qdel(I)
+
+			I = image(icon, "[S.dragon_overlays[3]][resting? "-rest" : null]", pixel_x = -48)
+			I.color = S.dragon_overlays[S.dragon_overlays[3]]
+			I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+			I.plane = MOB_PLANE
+			I.layer = MOB_LAYER
+			add_overlay(I)
+			qdel(I)
+
+			I = image(icon, "[S.dragon_overlays[4]][resting? "-rest" : null]", pixel_x = -48)
+			I.color = S.dragon_overlays[S.dragon_overlays[4]]
+			I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+			I.plane = MOB_PLANE
+			I.layer = MOB_LAYER
+			add_overlay(I)
+			qdel(I)
+
+			I = image(icon, "[S.dragon_overlays[5]][resting? "-rest" : null]", pixel_x = -48)
+			I.color = S.dragon_overlays[S.dragon_overlays[5]]
+			I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+			I.plane = MOB_PLANE
+			I.layer = MOB_LAYER
+			add_overlay(I)
+			qdel(I)
+
+			I = image(icon, "[S.dragon_overlays[6]][resting? "-rest" : null]", pixel_x = -48)
+			I.color = S.dragon_overlays[S.dragon_overlays[6]]
+			I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+			I.plane = PLANE_LIGHTING_ABOVE
+			add_overlay(I)
+			qdel(I)
+
+		//You know technically I could just put all the icons into the 128x64.dmi file and off-set them to fit..
+		if(S.blob_appearance in wide_icons)
+			icon = 'modular_chomp/icons/mob/species/protean/protean64x32.dmi'
+			default_pixel_x = -16
+			pixel_x = -16
+		if(S.blob_appearance in tall_icons)
+			icon = 'modular_chomp/icons/mob/species/protean/protean64x64.dmi'
+			default_pixel_x = -16
+			pixel_x = -16
+			vis_height = 64
+		if(S.blob_appearance in big_icons)
+			icon = 'modular_chomp/icons/mob/species/protean/protean128x64.dmi'
+			default_pixel_x = -48
+			pixel_x = -48
+			vis_height = 64
+		var/image/I = image(icon, S.blob_appearance+"[resting? "_rest":null][vore_fullness? "-[vore_fullness]" : null]")
+		I.color = S.blob_color_1
+		I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+		I.plane = MOB_PLANE
+		I.layer = MOB_LAYER
+		add_overlay(I)
+		qdel(I)
+		eye_layer = image(icon, "[S.blob_appearance][resting? "_rest" : null]-eyes")
+		eye_layer.appearance_flags = appearance_flags
+		eye_layer.color = S.blob_color_2
+		eye_layer.plane = PLANE_LIGHTING_ABOVE
+		add_overlay(eye_layer)
+		qdel(eye_layer)

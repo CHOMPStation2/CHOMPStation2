@@ -1,5 +1,5 @@
 /client/proc/adminorbit()
-	set category = "Fun"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set name = "Orbit Things"
 	set desc = "Makes something orbit around something else."
 	set popup_menu = FALSE
@@ -57,7 +57,7 @@
 
 /client/proc/removetickets()
 	set name = "Security Tickets"
-	set category = "Admin"
+	set category = "Admin.Investigate" //CHOMPEdit
 	set desc = "Allows one to remove tickets from the global list."
 
 	if(!check_rights(R_ADMIN))
@@ -78,7 +78,7 @@
 /client/proc/delbook()
 	set name = "Delete Book"
 	set desc = "Permamently deletes a book from the database."
-	set category = "Admin"
+	set category = "Admin.Game" //CHOMPEdit
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -103,7 +103,7 @@
 		dat += {"<A href='?our_comp=\ref[our_comp];[HrefToken()];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 		<table>
 		<tr><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=author>AUTHOR</A></td><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=title>TITLE</A></td><td><A href='?our_comp=\ref[our_comp];[HrefToken()];sort=category>CATEGORY</A></td><td></td></tr>"}
-		var/DBQuery/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [our_comp.sortby]")
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [our_comp.sortby]")
 		query.Execute()
 
 		var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
@@ -119,5 +119,23 @@
 			dat += "</td></tr>"
 		dat += "</table>"
 
+		qdel(query) // CHOMPEdit
 	usr << browse(dat, "window=library")
 	onclose(usr, "library")
+
+/client/proc/toggle_spawning_with_recolour()
+	set name = "Toggle Simple/Robot recolour verb"
+	set desc = "Makes it so new robots/simple_mobs spawn with a verb to recolour themselves for this round. You must set them separately."
+	set category = "Server.Game" //CHOMPEdit
+
+	if(!check_rights(R_ADMIN|R_EVENT|R_FUN))
+		return
+
+	var/which = tgui_alert(usr, "Which do you want to toggle?", "Choose Recolour Toggle", list("Robot", "Simple Mob"))
+	switch(which)
+		if("Robot")
+			CONFIG_SET(flag/allow_robot_recolor, !CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
+			to_chat(usr, "You have [CONFIG_GET(flag/allow_robot_recolor) ? "enabled" : "disabled"] newly spawned cyborgs to spawn with the recolour verb") // CHOMPEdit
+		if("Simple Mob")
+			CONFIG_SET(flag/allow_simple_mob_recolor, !CONFIG_GET(flag/allow_simple_mob_recolor)) //CHOMPEdit
+			to_chat(usr, "You have [CONFIG_GET(flag/allow_simple_mob_recolor) ? "enabled" : "disabled"] newly spawned simple mobs to spawn with the recolour verb") //CHOMPEdit

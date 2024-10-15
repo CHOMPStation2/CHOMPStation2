@@ -7,22 +7,27 @@ so those just need to be updated every time someone rearranges the level load or
 but they don't actually change anything about the load order
 */
 //TO DO: Reorganize all #include for z-levels into one file
-#define Z_LEVEL_STATION_ONE				1
-#define Z_LEVEL_STATION_TWO				2
-#define Z_LEVEL_STATION_THREE			3
-#define Z_LEVEL_SURFACE					4
-#define Z_LEVEL_SURFACE_MINE			5
-#define Z_LEVEL_MISC					6 //Carrier, actually
-#define Z_LEVEL_CENTCOM					7
-#define Z_LEVEL_TRANSIT					8
-#define Z_LEVEL_SURFACE_WILD			9
-#define Z_LEVEL_SURFACE_SKYLANDS		10
-#define Z_LEVEL_SURFACE_VALLEY 			11
-#define Z_LEVEL_VR_REALM                12
-#define Z_LEVEL_FUELDEPOT				13
-#define Z_LEVEL_AEROSTAT				14
-#define Z_LEVEL_NS_MINE					15
-#define Z_LEVEL_GATEWAY					16
+#define Z_LEVEL_STATION_MAINTS			1
+#define Z_LEVEL_STATION_ONE				2
+#define Z_LEVEL_STATION_TWO				3
+#define Z_LEVEL_STATION_THREE			4
+#define Z_LEVEL_SURFACE					5
+#define Z_LEVEL_SURFACE_MINE			6
+#define Z_LEVEL_MISC					7 //Carrier, actually
+#define Z_LEVEL_CENTCOM					8
+#define Z_LEVEL_TRANSIT					9
+#define Z_LEVEL_SURFACE_WILD			10
+//#define Z_LEVEL_SURFACE_VALLEY 			11 //CHOMpedit: Repalcing with Tyr
+#define Z_LEVEL_VR_REALM                11
+#define Z_LEVEL_FUELDEPOT				12
+#define Z_LEVEL_JUNGLE					13
+#define Z_LEVEL_DEATH_VALLEY			14
+#define Z_LEVEL_GATEWAY					15
+
+//#define Z_LEVEL_SURFACE_SKYLANDS		//Sky islands removal due to lack of use
+//#define Z_LEVEL_AEROSTAT			//Disabled due to lack of use
+//#define Z_LEVEL_NS_MINE				//Disabled due to lack of use
+
 
 //#define Z_LEVEL_SURFACE_CASINO			xx	//CHOMPedit - KSC = So there is weather on the casino. //Raz - When you do casino again, launch it in a test server, note what z-level it is on, and then replace xx with that z-level you noted. Revert back to xx and comment out when done.
 //#define Z_LEVEL_EMPTY_SPACE				xx //CHOMPedit: Disabling empty space as now the overmap generates empty space on demand.
@@ -100,14 +105,15 @@ but they don't actually change anything about the load order
 							NETWORK_SUPPLY
 							)
 	usable_email_tlds = list("freemail.nt")
-	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway", "Sif plains")
+	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway", "Sif plains", "Fuel Depot", "Tyr Wreckage")
 	default_skybox = /datum/skybox_settings/southern_cross
 	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
-	planet_datums_to_make = list(/datum/planet/sif) //This must be added to load maps at round start otherwise they will have weather or sun.
+	planet_datums_to_make = list(/datum/planet/sif,/datum/planet/thor, /datum/planet/tyr) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 	map_levels = list(
+			Z_LEVEL_STATION_MAINTS,
 			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
@@ -120,15 +126,19 @@ but they don't actually change anything about the load order
 	lateload_z_levels = list(
 			list("VR World"),
 			list("Fuel Depot - Z1 Space"),
-			list("Kara Aerostat - Z1 Aerostat"),
-			list("Kara - Z1 Northern Star")
+			list("Thor Surface"),
+			list("Desert Valley")
+			//list("Kara Aerostat - Z1 Aerostat"), //Remove Kara Z layers
+			//list("Kara - Z1 Northern Star") //Remove Kara Z layers
 			)
 
 	//CHOMPStation Addition End
 	lateload_gateway = list(
 		list("Snow Field"),
 		list("Maddness Lab"),
-		list("Abandoned City")
+		list("Abandoned City"),
+		list("Distant Mining Facility"),
+		list("Skyscraper")
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 
 	lateload_gateway = null
@@ -170,9 +180,6 @@ but they don't actually change anything about the load order
 	// Wilderness is next.
 	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)  //CHOMPEdit bumped up from 60 to 150
 	seed_submaps(list(Z_LEVEL_SURFACE_WILD), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)  //CHOMPEdit bumped up from 60 to 150
-	seed_submaps(list(Z_LEVEL_SURFACE_VALLEY), 200, /area/surface/outside/valley/walls, /datum/map_template/surface/valley/walls)
-	seed_submaps(list(Z_LEVEL_SURFACE_VALLEY), 200, /area/surface/outside/valley/inner, /datum/map_template/surface/valley/inner)
-	seed_submaps(list(Z_LEVEL_SURFACE_VALLEY), 200, /area/surface/outside/valley/end, /datum/map_template/surface/valley/end)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
@@ -245,18 +252,20 @@ but they don't actually change anything about the load order
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
+/* //Sky islands removal due to lack of use
 /datum/map_z_level/southern_cross/surface_skylands
 	z = Z_LEVEL_SURFACE_SKYLANDS
 	name = "Floating Islands"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/open
-
+*/
+/* Replaced with Tyr
 /datum/map_z_level/southern_cross/surface_valley
 	z = Z_LEVEL_SURFACE_VALLEY
 	name = "Valley"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
-
+*/
 //CHOMPedit - KSC = So Christmas Casino has weather.
 /*/datum/map_z_level/southern_cross/surface_casino
 	z = Z_LEVEL_SURFACE_CASINO
@@ -279,6 +288,28 @@ but they don't actually change anything about the load order
 	z = Z_LEVEL_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
+
+//Thor Z-Level
+/datum/map_z_level/southern_cross/thor
+	z = Z_LEVEL_JUNGLE
+	name = "Thor Surface"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
+/datum/map_z_level/southern_cross/valley
+	z = Z_LEVEL_DEATH_VALLEY
+	name = "Desert Valley"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
+// Deck 0 Z-Level
+/datum/map_z_level/southern_cross/station/station_maintenance
+	z = Z_LEVEL_STATION_MAINTS
+	name = "Maintenance Deck"
+	base_turf = /turf/simulated/open
+	transit_chance = 15
+	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
+	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
 /*
  KSC 9/29/20 = No longer relevant code as we have nonencludian portals to jump between outpost,caves and wilderness
@@ -316,10 +347,20 @@ but they don't actually change anything about the load order
 		Z_LEVEL_SURFACE,
 		Z_LEVEL_SURFACE_MINE,
 		Z_LEVEL_SURFACE_WILD,
-		Z_LEVEL_SURFACE_SKYLANDS,
-		Z_LEVEL_SURFACE_VALLEY
+		//Z_LEVEL_SURFACE_SKYLANDS, //Sky islands removal due to lack of use
+		//Z_LEVEL_SURFACE_VALLEY //Replaced with Tyr
 	)
 //Z_LEVEL_SURFACE_CASINO //CHOMPedit - KSC = So there is weather on the Casino. //Move this into /datum/planet/sif and remember to add a coma for the new entry, for when you need the casino again
+
+/datum/planet/thor
+	expected_z_levels = list(
+		Z_LEVEL_JUNGLE
+	)
+
+/datum/planet/tyr
+	expected_z_levels = list(
+		Z_LEVEL_DEATH_VALLEY
+	)
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize()
 	teleport_x = src.x - 4

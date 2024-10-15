@@ -190,7 +190,7 @@ var/global/list/breach_burn_descriptors = list(
 			return
 
 		if(istype(src.loc,/mob/living))
-			to_chat(user, "<span class='warning'>How do you intend to patch a hardsuit while someone is wearing it?</span>")
+			to_chat(user, span_warning("How do you intend to patch a hardsuit while someone is wearing it?"))
 			return
 
 		if(!damage || !burn_damage)
@@ -206,16 +206,16 @@ var/global/list/breach_burn_descriptors = list(
 	else if(W.has_tool_quality(TOOL_WELDER))
 
 		if(istype(src.loc,/mob/living))
-			to_chat(user, "<font color='red'>How do you intend to patch a hardsuit while someone is wearing it?</font>")
+			to_chat(user, span_red("How do you intend to patch a hardsuit while someone is wearing it?"))
 			return
 
 		if (!damage || ! brute_damage)
 			to_chat(user, "There is no structural damage on \the [src] to repair.")
 			return
 
-		var/obj/item/weapon/weldingtool/WT = W.get_welder()
+		var/obj/item/weldingtool/WT = W.get_welder()
 		if(!WT.remove_fuel(5))
-			to_chat(user, "<font color='red'>You need more welding fuel to repair this suit.</font>")
+			to_chat(user, span_red("You need more welding fuel to repair this suit."))
 			return
 
 		repair_breaches(BRUTE, 3, user)
@@ -227,4 +227,4 @@ var/global/list/breach_burn_descriptors = list(
 	. = ..()
 	if(can_breach && breaches?.len)
 		for(var/datum/breach/B in breaches)
-			. += "<font color='red'><B>It has \a [B.descriptor].</B></font>"
+			. += span_red("<B>It has \a [B.descriptor].</B>")

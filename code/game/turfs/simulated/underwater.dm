@@ -43,7 +43,7 @@
 		if(L.check_submerged() <= 0)
 			return
 		if(!istype(oldloc, /turf/simulated/floor/water/underwater))
-			to_chat(L, "<span class='warning'>You get drenched in water from entering \the [src]!</span>")
+			to_chat(L, span_warning("You get drenched in water from entering \the [src]!"))
 	AM.water_act(5)
 	..()
 
@@ -54,7 +54,7 @@
 		if(L.check_submerged() <= 0)
 			return
 		if(!istype(newloc, /turf/simulated/floor/water/underwater))
-			to_chat(L, "<span class='warning'>You climb out of \the [src].</span>")
+			to_chat(L, span_warning("You climb out of \the [src]."))
 	..()
 
 /turf/simulated/floor/water/deep/ocean/diving
@@ -71,9 +71,9 @@
 	water_state = "cult"
 
 /turf/simulated/floor/water/underwater/ruins
-	icon = 'maps/atoll/icons/turfs/marble.dmi'
+	icon = 'maps/redgate/falls/icons/turfs/marble.dmi'
 	icon_state = "1" // So it shows up in the map editor as water.
-	water_icon = 'maps/atoll/icons/turfs/marble.dmi'
+	water_icon = 'maps/redgate/falls/icons/turfs/marble.dmi'
 	water_state = "1"
 
 /turf/simulated/floor/water/underwater/sand
@@ -93,4 +93,3 @@
 	icon_state = "wood-broken0" // So it shows up in the map editor as water.
 	water_icon = 'icons/turf/flooring/wood_vr.dmi'
 	water_state = "wood-broken0"
-

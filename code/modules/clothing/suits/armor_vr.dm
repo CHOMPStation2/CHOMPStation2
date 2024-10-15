@@ -24,7 +24,7 @@
 		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/wolf))
 			return ..()
 		else
-			to_chat(H,"<span class='warning'>You need to have a wolf-taur half to wear this.</span>")
+			to_chat(H,span_warning("You need to have a wolf-taur half to wear this."))
 			return 0
 
 // HoS armor improved by Vorestation to be slightly better than normal security stuff.
@@ -156,14 +156,14 @@
 	siemens_coefficient = 0.9
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35) // Inferior to sec vests in bullet/laser but better for environmental protection.
 	allowed = list(
-		/obj/item/device/flashlight,
-		/obj/item/weapon/gun,
+		/obj/item/flashlight,
+		/obj/item/gun,
 		/obj/item/ammo_magazine,
-		/obj/item/weapon/melee,
-		/obj/item/weapon/material/knife,
-		/obj/item/weapon/tank,
-		/obj/item/device/radio,
-		/obj/item/weapon/pickaxe
+		/obj/item/melee,
+		/obj/item/material/knife,
+		/obj/item/tank,
+		/obj/item/radio,
+		/obj/item/pickaxe
 		)
 
 /obj/item/clothing/suit/armor/combat/crusader_explo/FM
@@ -173,6 +173,10 @@
 // martian miner coat
 /obj/item/clothing/suit/storage/vest/martian_miner
 	name = "martian miner's coat"
-	desc = "A sturdy, rugged coat once favoured by miners on Mars. These coats became strongly associated with early Martian Independence movements as a result, and remain moderately popular amongst members of the Third Ares Confederation."
+	desc = "A sturdy, rugged coat once favoured by miners on Mars. These coats became strongly associated with early Martian Independence movements as a result, and so remain moderately popular amongst members of the Third Ares Confederation to this day."
 	icon_state = "martian_miner"
+
+/obj/item/clothing/suit/storage/vest/martian_miner/reinforced
+	name = "reinforced martian miner's coat"
+	desc = "A sturdy, rugged coat once favoured by miners on Mars. These coats became strongly associated with early Martian Independence movements as a result, and so remain moderately popular amongst members of the Third Ares Confederation to this day. This one appears to have been discreetly lined with a hardened polymesh substrate, rendering it more resilient to physical damage."
 	armor = list(melee = 25, bullet = 15, laser = 15, energy = 0, bomb = 25, bio = 0, rad = 0)

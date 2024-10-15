@@ -111,9 +111,9 @@
 	// Canes and crutches help you stand (if the latter is ever added)
 	// One cane mitigates a broken leg+foot, or a missing foot.
 	// Two canes are needed for a lost leg. If you are missing both legs, canes aren't gonna help you.
-	if (l_hand && istype(l_hand, /obj/item/weapon/cane))
+	if (l_hand && istype(l_hand, /obj/item/cane))
 		stance_damage -= 2
-	if (r_hand && istype(r_hand, /obj/item/weapon/cane))
+	if (r_hand && istype(r_hand, /obj/item/cane))
 		stance_damage -= 2
 
 	// standing is poor
@@ -133,7 +133,7 @@
 		for(var/limb_tag in list(BP_L_HAND, BP_L_ARM))
 			var/obj/item/organ/external/E = get_organ(limb_tag)
 			if(!E)
-				visible_message("<span class='danger'>Lacking a functioning left hand, \the [src] drops \the [l_hand].</span>")
+				visible_message(span_danger("Lacking a functioning left hand, \the [src] drops \the [l_hand]."))
 				drop_from_inventory(l_hand)
 				break
 
@@ -141,7 +141,7 @@
 		for(var/limb_tag in list(BP_R_HAND, BP_R_ARM))
 			var/obj/item/organ/external/E = get_organ(limb_tag)
 			if(!E)
-				visible_message("<span class='danger'>Lacking a functioning right hand, \the [src] drops \the [r_hand].</span>")
+				visible_message(span_danger("Lacking a functioning right hand, \the [src] drops \the [r_hand]."))
 				drop_from_inventory(r_hand)
 				break
 

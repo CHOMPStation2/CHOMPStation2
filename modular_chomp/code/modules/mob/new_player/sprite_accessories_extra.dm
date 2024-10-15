@@ -194,6 +194,32 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/marking/ch/bignostrils
+	name = "Big Nostrils"
+	icon_state = "bignostrils"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/breasts
+	name = "Breasts"
+	icon_state = "breasts"
+	body_parts = list(BP_TORSO)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/breasts/smooth
+	name = "Smooth Breasts"
+	icon_state = "breasts_smooth"
+
+/datum/sprite_accessory/marking/ch/breasts/reptile
+	name = "Reptile Breasts"
+	icon_state = "breasts_reptile"
+
+/datum/sprite_accessory/marking/ch/hippo_head
+	name = "full hippo head"
+	icon_state = "hippo_head"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
 /// NEW XENOMORPH SPRITE_ACCESSORIES - Basesprites borrowed from Citadel and tidied up by Makkinindorn, should blend a bit more nicely. ///
 
 /datum/sprite_accessory/marking/ch/xenomorph // This is just here to create an easy-to-follow typepath.
@@ -327,3 +353,51 @@
 	name = "Xenomorph teeth (queen)"
 	icon_state = "xeno_teeth_queen"
 	body_parts = list(BP_HEAD)
+
+// WHISKIES //
+
+/datum/sprite_accessory/marking/ch/mole_whiskers
+	name = "mole whiskers"
+	icon_state = "molewhiskers"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SNOOT //
+
+/datum/sprite_accessory/marking/ch/vulp_lips
+	name = "face, vulp (Lips)"
+	icon_state = "vulp_lips"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SHROOM //
+
+/datum/sprite_accessory/marking/ch/shroomhead
+	name = "Mushroom Head (Base)"
+	icon_state = "mushroom_head"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SHROOM UNDER //
+
+/datum/sprite_accessory/marking/ch/shroomhead_under
+	name = "Mushroom Head (Under)"
+	icon_state = "mushroom_head_under"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SHROOM TOP //
+
+/datum/sprite_accessory/marking/ch/shroomhead_top
+	name = "Mushroom Head (Top)"
+	icon_state = "mushroom_head_top"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+// SHROOM SPOTS //
+
+/datum/sprite_accessory/marking/ch/shroomhead_spots
+	name = "Mushroom Head (Spots)"
+	icon_state = "mushroom_head_spots"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY

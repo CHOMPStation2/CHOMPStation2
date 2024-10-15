@@ -7,6 +7,7 @@
 #define LOC_HANGAR1 6
 #define LOC_HANGAR2 7
 #define LOC_HANGAR3 8
+#define LOC_FIELD 9 // CHOMPEdit - More mutant places! This one might allow them to grow
 
 
 #define VERM_RATS 0
@@ -22,7 +23,7 @@
 
 /datum/event/mutants/start()
 
-	location = rand(0,8)
+	location = rand(0,9) // CHOMPEdit - Bumping up to 9
 	var/list/turf/simulated/floor/turfs = list()
 	var/spawn_area_type
 	switch(location)
@@ -53,6 +54,9 @@
 		if(LOC_HANGAR3)
 			spawn_area_type = /area/hangar/three
 			locstring = "the hangar deck"
+		if(LOC_FIELD) // CHOMPEdit - Another one for the list...
+			spawn_area_type = /area/maintenance/field
+			locstring = "the maintenance deck"
 
 	for(var/areapath in typesof(spawn_area_type))
 		var/area/A = locate(areapath)

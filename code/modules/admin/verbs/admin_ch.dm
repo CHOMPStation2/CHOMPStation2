@@ -1,6 +1,6 @@
 /client/proc/admin_teleport()
 	set name = "Admin teleport"
-	set category = "Admin"
+	set category = "Admin.Game"
 	set desc = "Teleports an atom to a set of coordinates or to the contents of another atom"
 
 	var/list/value = vv_get_value(VV_ATOM_REFERENCE)

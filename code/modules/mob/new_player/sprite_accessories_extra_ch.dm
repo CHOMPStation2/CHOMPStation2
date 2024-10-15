@@ -505,6 +505,19 @@
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
 
+//Hellscout abdomen markings
+/datum/sprite_accessory/marking/digi/hellscout_abdomen
+	name = "Erebus - Hellscout FBP Abdomen (Digitigrade)"
+	icon_state = "hellscout_r"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_LEG,BP_R_LEG,BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/hellscout_abdomen_p
+	name = "Erebus - Hellscout FBP Abdomen (Plantigrade)"
+	icon_state = "hellscout_r"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_GROIN,BP_TORSO)
+
 /datum/sprite_accessory/marking/ch/spectre_panels
 	name = "RACS Spectre FBP Panels"
 	icon_state = "spectre"
@@ -546,3 +559,72 @@
 	icon_state = "organs_ribs"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/chestfluff_big
+	name = "Chest Fluff, Big"
+	icon_state = "chestfluff_big"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/softbelly
+	name = "Belly Fur, Soft"
+	icon_state = "softbelly"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/softbelly_navel
+	name = "Belly Fur, Soft With Navel"
+	icon_state = "softbelly_navel"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/softbelly_fem
+	name = "Belly Fur, Soft (Female)"
+	icon_state = "softbelly_fem"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/softbelly_fem_navel
+	name = "Belly Fur, Soft With Navel (Female)"
+	icon_state = "softbelly_fem_navel"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/chitinbelly
+	name = "Chitinous Scutes"
+	icon_state = "chitin_belly"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/chitinbelly_fem
+	name = "Chitinous Scutes (Female)"
+	icon_state = "chitinbelly_fem"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/extraeyes
+	name = "Extra Eyes"
+	icon_state = "extra_eyes"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch_gloss
+	name = "Full body gloss (additive)"
+	icon = 'icons/mob/human_races/markings_vr.dmi'
+	color_blend_mode = ICON_ADD
+	icon_state = "gloss"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO,BP_HEAD)
+
+/datum/sprite_accessory/marking/digi/digigloss
+	name = "Body gloss (digitigrade legs)"
+	icon = 'icons/mob/human_races/markings_digi.dmi'
+	color_blend_mode = ICON_MULTIPLY
+	icon_state = "gloss"
+	body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_FOOT,BP_R_FOOT)
+
+/datum/sprite_accessory/marking/digi/digiglossadd
+	name = "Body gloss (digitigrade legs, additive)"
+	icon = 'icons/mob/human_races/markings_digi.dmi'
+	color_blend_mode = ICON_ADD
+	icon_state = "gloss"
+	body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_FOOT,BP_R_FOOT)

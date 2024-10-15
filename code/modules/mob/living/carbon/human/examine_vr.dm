@@ -25,7 +25,7 @@
 		else
 			message = weight_messages[10]
 	if(message)
-		message = "<span class='notice'>[message]</span>"
+		message = span_notice("[message]")
 	return message //Credit to Aronai for helping me actually get this working!
 
 /mob/living/carbon/human/proc/examine_nutrition()
@@ -57,7 +57,7 @@
 		if(5125 to INFINITY) // More.
 			message = nutrition_messages[10]
 	if(message)
-		message = "<span class='notice'>[message]</span>"
+		message = span_notice("[message]")
 	return message
 
 //For OmniHUD records access for appropriate models
@@ -89,18 +89,18 @@
 /mob/living/carbon/human/proc/examine_pickup_size(mob/living/H)
 	var/message = ""
 	if(istype(H) && (H.get_effective_size(FALSE) - src.get_effective_size(TRUE)) >= 0.50)
-		message = "<font color='blue'>They are small enough that you could easily pick them up!</font>"
+		message = span_blue("They are small enough that you could easily pick them up!")
 	return message
 
 /mob/living/carbon/human/proc/examine_step_size(mob/living/H)
 	var/message = ""
 	if(istype(H) && (H.get_effective_size(FALSE) - src.get_effective_size(TRUE)) >= 0.75)
-		message = "<font color='red'>They are small enough that you could easily trample them!</font>"
+		message = span_red("They are small enough that you could easily trample them!")
 	return message
 
 /mob/living/carbon/human/proc/examine_nif(mob/living/carbon/human/H)
 	if(nif && nif.examine_msg) //If you have one set, anyway.
-		return "<span class='notice'>[nif.examine_msg]</span>"
+		return span_notice("[nif.examine_msg]")
 
 /mob/living/carbon/human/proc/examine_chimera(mob/living/carbon/human/H)
 	var/t_He 	= "It" //capitalised for use at the start of each line.
@@ -133,8 +133,8 @@
 			t_his 	= "hir"
 	if(revive_ready == REVIVING_NOW || revive_ready == REVIVING_DONE)
 		if(stat == DEAD)
-			return "<span class='warning'>[t_His] body is twitching subtly.</span>"
+			return span_warning("[t_His] body is twitching subtly.")
 		else
-			return "<span class='notice'>[t_He] [t_appear] to be in some sort of torpor.</span>"
+			return span_notice("[t_He] [t_appear] to be in some sort of torpor.")
 	if(feral)
-		return "<span class='warning'>[t_He] [t_has] a crazed, wild look in [t_his] eyes!</span>"
+		return span_warning("[t_He] [t_has] a crazed, wild look in [t_his] eyes!")

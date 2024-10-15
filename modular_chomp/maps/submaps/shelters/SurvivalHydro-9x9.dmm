@@ -1,51 +1,527 @@
-"a" = (/obj/structure/table/standard,/obj/item/weapon/reagent_containers/glass/bucket{pixel_x = -6; pixel_y = 7},/obj/item/weapon/reagent_containers/glass/bucket{pixel_x = 6; pixel_y = 7},/obj/structure/sink/kitchen{layer = 1; pixel_y = 12},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"c" = (/obj/machinery/smartfridge/survival_pod,/obj/item/weapon/tape_roll,/obj/item/sticky_pad/random,/obj/item/weapon/pen/blue,/obj/item/weapon/pen/blue,/obj/item/fulton_core,/obj/item/fulton_core,/obj/item/extraction_pack,/obj/item/extraction_pack,/obj/item/modular_computer/laptop/preset/custom_loadout/standard,/obj/item/weapon/pickaxe/hand,/obj/item/device/flashlight/color/yellow,/obj/item/device/flashlight/color/orange,/obj/item/device/threadneedle,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/radio,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/flame/lighter/zippo,/obj/item/weapon/flame/lighter/zippo,/obj/item/device/flashlight/lantern,/obj/random/soap,/obj/random/soap,/obj/item/weapon/towel/random,/obj/item/weapon/towel/random,/obj/item/bodybag/cryobag,/obj/item/bodybag/cryobag,/obj/item/weapon/storage/pill_bottle/spaceacillin,/obj/item/weapon/storage/pill_bottle/antitox,/obj/item/device/healthanalyzer,/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/storage/firstaid/o2,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/stack/nanopaste,/obj/item/device/suit_cooling_unit/emergency,/obj/item/device/suit_cooling_unit/emergency,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,/obj/item/weapon/storage/toolbox/brass,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/pill_bottle/dice_nerd,/obj/item/weapon/storage/box/flare,/obj/item/weapon/storage/box/khcrystal,/obj/item/weapon/storage/box/khcrystal,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/stack/marker_beacon/ten,/obj/item/device/starcaster_news,/obj/item/device/mapping_unit,/obj/item/weapon/storage/box/dosimeter,/obj/item/device/gps,/obj/item/device/gps,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/weapon/cell/device/hyper,/obj/item/device/pda,/obj/item/device/pda,/obj/item/weapon/card/id/external,/obj/item/weapon/card/id/external,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,/obj/item/weapon/gun/energy/locked/phasegun/pistol,/obj/item/weapon/gun/energy/locked/phasegun,/obj/item/weapon/cell/device/weapon{pixel_x = -2; pixel_y = -2},/obj/item/weapon/cell/device/weapon{pixel_x = -2; pixel_y = -2},/obj/item/clothing/accessory/permit/gun,/obj/item/clothing/accessory/permit/gun,/obj/item/weapon/material/knife/machete,/obj/item/weapon/material/fishing_net,/obj/item/weapon/storage/backpack/sport,/obj/item/weapon/storage/backpack/sport,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/clothing/accessory/storage/black_drop_pouches,/obj/item/weapon/storage/belt,/obj/item/clothing/accessory/poncho/thermal,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
-"d" = (/obj/structure/fans/tiny,/obj/effect/floor_decal/industrial/danger/full,/obj/machinery/door/airlock/voidcraft/vertical,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/SurvivalHydro)
-"e" = (/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"f" = (/obj/effect/floor_decal/techfloor{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalHydro)
-"g" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/green,/area/survivalpod/superpose/SurvivalHydro)
-"h" = (/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalHydro)
-"k" = (/obj/structure/sign/mining/survival{dir = 1},/turf/simulated/shuttle/wall/voidcraft/green,/area/survivalpod/superpose/SurvivalHydro)
-"l" = (/obj/machinery/seed_storage/garden,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"m" = (/obj/machinery/sleeper/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
-"p" = (/obj/structure/sign/mining,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalHydro)
-"q" = (/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalHydro)
-"r" = (/obj/machinery/smartfridge/survival_pod{icon = 'icons/obj/vending.dmi'; icon_base = "smartfridge"; icon_contents = "boxes"; icon_state = "smartfridge"; name = "Advanced storage"; pixel_y = -1},/obj/item/device/multitool,/obj/item/device/multitool,/obj/item/bee_pack,/obj/item/bee_pack,/obj/item/bee_smoker,/obj/item/bee_smoker,/obj/item/beehive_assembly,/obj/item/beehive_assembly,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/honey_frame,/obj/item/weapon/tool/crowbar,/obj/item/weapon/tool/crowbar,/obj/item/device/analyzer/plant_analyzer,/obj/item/device/analyzer/plant_analyzer,/obj/item/clothing/gloves/botanic_leather,/obj/item/clothing/gloves/botanic_leather,/obj/item/clothing/head/greenbandana,/obj/item/clothing/head/greenbandana,/obj/item/weapon/material/minihoe,/obj/item/weapon/material/minihoe,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/tool/wirecutters/clippers/trimmers,/obj/item/weapon/tool/wirecutters/clippers/trimmers,/obj/item/weapon/reagent_containers/spray/plantbgone,/obj/item/weapon/reagent_containers/spray/plantbgone,/obj/item/clothing/suit/storage/apron/overalls,/obj/item/clothing/suit/storage/apron/overalls,/obj/item/weapon/storage/toolbox/mechanical,/obj/item/weapon/storage/toolbox/mechanical,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"s" = (/obj/structure/window/reinforced/polarized{dir = 4; id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 1; id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 8; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalHydro)
-"u" = (/obj/machinery/portable_atmospherics/hydroponics,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"v" = (/obj/structure/window/reinforced/polarized{id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 4; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalHydro)
-"w" = (/obj/effect/floor_decal/industrial/loading{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
-"x" = (/obj/machinery/door/window/survival_pod{dir = 2},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
-"y" = (/obj/machinery/button/windowtint{id = "SP-Hydro"; pixel_x = -28; pixel_y = 6},/obj/machinery/light_switch{name = "light switch "; pixel_x = -27; pixel_y = -5},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"z" = (/obj/structure/table/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod,/obj/item/modular_computer/laptop/preset/custom_loadout/cheap{pixel_x = 3; pixel_y = 12},/obj/item/weapon/material/kitchen/utensil/fork,/obj/item/weapon/material/kitchen/utensil/spoon{pixel_x = 2},/obj/item/pizzavoucher,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
-"B" = (/obj/structure/window/reinforced/polarized{id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 8; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalHydro)
-"E" = (/obj/structure/sign/mining/survival{dir = 8},/turf/simulated/shuttle/wall/voidcraft/green,/area/survivalpod/superpose/SurvivalHydro)
-"F" = (/obj/machinery/portable_atmospherics/hydroponics,/obj/machinery/light,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"H" = (/obj/structure/window/reinforced/polarized{id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 1; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalHydro)
-"K" = (/obj/structure/tubes,/obj/structure/window/reinforced/survival_pod,/obj/structure/reagent_dispensers/watertank/high,/obj/machinery/power/apc/alarms_hidden{dir = 4; pixel_x = 20},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
-"L" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalHydro)
-"M" = (/obj/item/device/gps/computer,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
-"N" = (/obj/machinery/smartfridge/produce,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalHydro)
-"O" = (/obj/machinery/biogenerator,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"P" = (/obj/effect/floor_decal/techfloor{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalHydro)
-"Q" = (/obj/machinery/honey_extractor,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"S" = (/obj/structure/bed/pod,/obj/item/weapon/bedsheet/brown,/obj/machinery/newscaster{pixel_x = 30},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
-"T" = (/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalHydro)
-"U" = (/turf/simulated/shuttle/wall/voidcraft/green,/area/survivalpod/superpose/SurvivalHydro)
-"V" = (/obj/machinery/smartfridge/drying_rack{pixel_x = 9},/obj/machinery/smartfridge/drying_rack{pixel_x = -8},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"W" = (/obj/machinery/vending/hydronutrients,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"X" = (/obj/structure/window/reinforced/polarized{dir = 4; id = "SP-Hydro"},/obj/structure/window/reinforced/polarized{dir = 8; id = "SP-Hydro"},/obj/structure/grille/rustic,/obj/structure/window/reinforced/polarized/full{id = "SP-Hydro"},/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalHydro)
-"Y" = (/obj/machinery/seed_extractor,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalHydro)
-"Z" = (/obj/structure/fans,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalHydro)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/structure/sink/kitchen{
+	layer = 1;
+	pixel_y = 12
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"c" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/tape_roll,
+/obj/item/sticky_pad/random,
+/obj/item/pen/blue,
+/obj/item/pen/blue,
+/obj/item/fulton_core,
+/obj/item/fulton_core,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard,
+/obj/item/pickaxe/hand,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/orange,
+/obj/item/threadneedle,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flashlight/lantern,
+/obj/random/soap,
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/healthanalyzer,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/o2,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/stack/nanopaste,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/stack/marker_beacon/ten,
+/obj/item/starcaster_news,
+/obj/item/mapping_unit,
+/obj/item/storage/box/dosimeter,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/pda,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun,
+/obj/item/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/material/knife/machete,
+/obj/item/material/fishing_net,
+/obj/item/storage/backpack/sport,
+/obj/item/storage/backpack/sport,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/storage/belt,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
+"d" = (
+/obj/structure/fans/tiny,
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/machinery/door/airlock/voidcraft/vertical,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/SurvivalHydro)
+"e" = (
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"f" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"g" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHydro)
+"h" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalHydro)
+"k" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHydro)
+"l" = (
+/obj/machinery/seed_storage/garden,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"m" = (
+/obj/machinery/sleeper/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
+"p" = (
+/obj/structure/sign/mining,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalHydro)
+"q" = (
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/survivalpod/superpose/SurvivalHydro)
+"r" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/multitool,
+/obj/item/multitool,
+/obj/item/bee_pack,
+/obj/item/bee_pack,
+/obj/item/bee_smoker,
+/obj/item/bee_smoker,
+/obj/item/beehive_assembly,
+/obj/item/beehive_assembly,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/honey_frame,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/clothing/gloves/botanic_leather,
+/obj/item/clothing/gloves/botanic_leather,
+/obj/item/clothing/head/greenbandana,
+/obj/item/clothing/head/greenbandana,
+/obj/item/material/minihoe,
+/obj/item/material/minihoe,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/tool/wirecutters/clippers/trimmers,
+/obj/item/tool/wirecutters/clippers/trimmers,
+/obj/item/reagent_containers/spray/plantbgone,
+/obj/item/reagent_containers/spray/plantbgone,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/item/clothing/suit/storage/apron/overalls,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"s" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Hydro"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Hydro"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Hydro"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Hydro"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"u" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"v" = (
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Hydro"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Hydro"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Hydro"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"w" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
+"x" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 2
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
+"y" = (
+/obj/machinery/button/windowtint{
+	id = "SP-Hydro";
+	pixel_x = -28;
+	pixel_y = 6
+	},
+/obj/machinery/light_switch{
+	name = "light switch ";
+	pixel_x = -27;
+	pixel_y = -5
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"z" = (
+/obj/structure/table/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap{
+	pixel_x = 3;
+	pixel_y = 12
+	},
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/item/pizzavoucher,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
+"B" = (
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Hydro"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Hydro"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Hydro"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"E" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHydro)
+"F" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"H" = (
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Hydro"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Hydro"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Hydro"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"K" = (
+/obj/structure/tubes,
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/reagent_dispensers/watertank/high,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
+"L" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"M" = (
+/obj/item/gps/computer,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
+"N" = (
+/obj/machinery/smartfridge/produce,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalHydro)
+"O" = (
+/obj/machinery/biogenerator,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"P" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"Q" = (
+/obj/machinery/honey_extractor,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"S" = (
+/obj/structure/bed/pod,
+/obj/item/bedsheet/brown,
+/obj/machinery/newscaster{
+	pixel_x = 30
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
+"T" = (
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"U" = (
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalHydro)
+"V" = (
+/obj/machinery/smartfridge/drying_rack{
+	pixel_x = 9
+	},
+/obj/machinery/smartfridge/drying_rack{
+	pixel_x = -8
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"W" = (
+/obj/machinery/vending/hydronutrients,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"X" = (
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Hydro"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Hydro"
+	},
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-Hydro"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalHydro)
+"Y" = (
+/obj/machinery/seed_extractor,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalHydro)
+"Z" = (
+/obj/structure/fans,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalHydro)
 
 (1,1,1) = {"
-qUkhphkUq
-UVrOYZcMU
-EyeeemwSg
-NeQaezxKh
-dPTTTLTfd
-selWuuues
-XeeeeeeeX
-XuFuuuFuX
-BHHHHHHHv
+q
+U
+E
+N
+d
+s
+X
+X
+B
+"}
+(2,1,1) = {"
+U
+V
+y
+e
+P
+e
+e
+u
+H
+"}
+(3,1,1) = {"
+k
+r
+e
+Q
+T
+l
+e
+F
+H
+"}
+(4,1,1) = {"
+h
+O
+e
+a
+T
+W
+e
+u
+H
+"}
+(5,1,1) = {"
+p
+Y
+e
+e
+T
+u
+e
+u
+H
+"}
+(6,1,1) = {"
+h
+Z
+m
+z
+L
+u
+e
+u
+H
+"}
+(7,1,1) = {"
+k
+c
+w
+x
+T
+u
+e
+F
+H
+"}
+(8,1,1) = {"
+U
+M
+S
+K
+f
+e
+e
+u
+H
+"}
+(9,1,1) = {"
+q
+U
+g
+h
+d
+s
+X
+X
+v
 "}

@@ -89,10 +89,15 @@
 	has_hands = 1
 	pass_flags = PASSTABLE
 
+	/*
 	response_help  = "pokes the synx, shifting the fur-like bristles on its body."
 	response_disarm = "gently pushes aside the synx, dislodging a clump of bristly hair in your hand. The substance quickly melts upon contact with your sweat."
 	response_harm   = "tries to hit the synx. This tears out an area of fur which firmly melts upon contact, covering you in something sticky."
-
+	*/
+	// I dont think the person who wrote the above descriptions realized what they were used for, because they dont work at all. Leaving these commented incase someone wants to reimplement this properly someday.
+	response_help = "pokes"
+	response_disarm = "awkwardly shoves"
+	//Leaving response_harm the same as default; "hits".
 
 	melee_damage_lower = SYNX_LOWER_DAMAGE //Massive damage reduction, will be balanced with toxin injection/ //LO-  Made up for in skills. Toxin injection does not technically cause damage with these guys. Stomach acid does when they disegage their stomach from their mouths does, but that could be done differently.
 	melee_damage_upper = SYNX_UPPER_DAMAGE
@@ -110,7 +115,7 @@
 	src.adjust_nutrition(src.max_nutrition)
 	build_icons(1)
 	voremob_loaded = 1
-	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
+	mob_radio = new /obj/item/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
 
 //Vore stuff//leaving most of this here even though its no going to be an AI controlled variant.
 	vore_active = 1
@@ -124,7 +129,7 @@
 	vore_digest_chance = 45		// Chance to switch to digest mode if resisted
 	vore_absorb_chance = 0
 	vore_escape_chance = 10
-	vore_icons = 0 //no vore icons //TODO: Implement these, I have the sprites done but they're unnecessary for core function rn and I'd rather get this into a working state first -Azel
+	vore_icons = SA_ICON_LIVING //no vore icons //TODO: Implement these, I have the sprites done but they're unnecessary for core function rn and I'd rather get this into a working state first -Azel
 	swallowTime = 6 SECONDS //Enter the eel you nerd
 
 //Shouldn't be affected by lack of atmos, it's a space eel. //nah lets give him some temperature
@@ -141,10 +146,13 @@
 	max_n2 = 0 //Maybe add a max
 	// TODO: Set a max temperature of about 20-30 above room temperatures. Synx don't like the heat.
 
+/mob/living/simple_mob/animal/synx/get_available_emotes()
+	. = ..()
+	. |= _human_default_emotes //Synx are great at mimicking
+
 /mob/living/simple_mob/animal/synx/ai //AI controlled variant
 
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
-
 
 /mob/living/simple_mob/animal/synx/init_vore()
 	if(!voremob_loaded)
@@ -208,14 +216,14 @@
 /mob/living/simple_mob/animal/synx/New() //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
 //some things should be here that arent tho.
 	..()
-	verbs |= /mob/living/proc/ventcrawl
-	verbs |= /mob/living/simple_mob/animal/synx/proc/distend_stomach
-	verbs |= /mob/living/simple_mob/proc/contort
-	verbs |= /mob/living/simple_mob/animal/synx/proc/sonar_ping
-	verbs |= /mob/living/proc/shred_limb
-	verbs |= /mob/living/simple_mob/animal/synx/proc/disguise
-	verbs |= /mob/living/simple_mob/animal/synx/proc/randomspeech
-	verbs |= /mob/living/simple_mob/animal/synx/proc/set_style
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/distend_stomach) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/contort) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/sonar_ping) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/disguise) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/randomspeech) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/proc/set_style) //CHOMPEdit TGPanel
 	realname = name
 	voices += "Garbled voice"
 	voices += "Unidentifiable Voice"
@@ -317,7 +325,7 @@
 		M.custom_pain("I have no horn but i must honk!",60)
 	if(prob(2))
 		var/location = get_turf(M)
-		new /obj/item/weapon/bikehorn(location)
+		new /obj/item/bikehorn(location)
 		M.custom_pain("You suddenly cough up a bikehorn!",60)
 
   /*why is this in here twice? -Lo
@@ -371,7 +379,7 @@
 				L.adjustFireLoss(damage_done)
 				return
 			else
-				to_chat(src,"<span class='notice'>Your stomach bounces off of the victim's armor!</span>")
+				to_chat(src,span_notice("Your stomach bounces off of the victim's armor!"))
 				return
 		return //If stomach is distended, return here to perform no forcefeeding or poison injecton.
 
@@ -390,7 +398,7 @@
 			var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
 			if(L.can_inject(src, null, target_zone))
 				if(prob(poison_chance))
-					to_chat(L, "<span class='warning'>You feel a strange substance on you.</span>")
+					to_chat(L, span_warning("You feel a strange substance on you."))
 					L.reagents.add_reagent(poison_type, poison_per_bite)
 
 
@@ -427,7 +435,7 @@
 
 /mob/living/simple_mob/animal/synx/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay) //Synx can only eat people if their organs are on the inside.
 	if(stomach_distended)
-		to_chat(src,"<span class='notice'>You can't eat people without your stomach inside of you!</span>")
+		to_chat(src,span_notice("You can't eat people without your stomach inside of you!"))
 		return
 	else
 		..()
@@ -439,7 +447,7 @@
 /mob/living/simple_mob/proc/contort()
 	set name = "contort"
 	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	if(stat == DEAD || paralysis || weakened || stunned || restrained())
 		return
@@ -447,12 +455,12 @@
 	if(status_flags & HIDING)
 		status_flags &= ~HIDING
 		reset_plane_and_layer()
-		to_chat(src,"<span class='notice'>You have stopped hiding.</span>")
+		to_chat(src,span_notice("You have stopped hiding."))
 	else
 		status_flags |= HIDING
 		layer = HIDING_LAYER //Just above cables with their 2.44
 		plane = OBJ_PLANE
-		to_chat(src,"<span class='notice'>You are now hiding.</span>")
+		to_chat(src,span_notice("You are now hiding."))
 
 
 	update_icons()
@@ -460,21 +468,21 @@
 /mob/living/simple_mob/animal/synx/proc/disguise()
 	set name = "Toggle Form"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	if(stat == DEAD || paralysis || weakened || stunned || restrained())
 		return
 
 	// If transform isn't true
 	if(stomach_distended)
-		to_chat(src,"<span class='warning'>You can't disguise with your stomach outside of your body!</span>")
+		to_chat(src,span_warning("You can't disguise with your stomach outside of your body!"))
 		return
 	if(!transformed)
-		to_chat(src,"<span class='warning'>Now they see your true form.</span>")
+		to_chat(src,span_warning("Now they see your true form."))
 		icon_living = transformed_state //Switch state to transformed state
 		movement_cooldown = 3
 	else // If transformed is true.
-		to_chat(src,"<span class='warning'>You changed back into your disguise.</span>")
+		to_chat(src,span_warning("You changed back into your disguise."))
 		icon_living = initial(icon_living) //Switch state to what it was originally defined.
 		movement_cooldown = 6
 
@@ -485,11 +493,11 @@
 /mob/living/simple_mob/animal/synx/proc/randomspeech()
 	set name = "speak"
 	set desc = "Take a sentence you heard and speak it."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 	if(speak && voices)
 		handle_mimic()
 	else
-		usr << "<span class='warning'>YOU NEED TO HEAR THINGS FIRST, try using Ventcrawl to eevesdrop on nerds.</span>"
+		usr << span_warning("YOU NEED TO HEAR THINGS FIRST, try using Ventcrawl to eevesdrop on nerds.")
 
 /mob/living/simple_mob/animal/synx/proc/handle_mimic()
 	name = pick(voices)
@@ -506,27 +514,27 @@
 /mob/living/simple_mob/animal/synx/proc/sonar_ping()
 	set name = "Listen In"
 	set desc = "Allows you to listen in to movement and noises around you."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	if(incapacitated())
-		to_chat(src, "<span class='warning'>You need to recover before you can use this ability.</span>")
+		to_chat(src, span_warning("You need to recover before you can use this ability."))
 		return
 	if(world.time < next_sonar_ping)
-		to_chat(src, "<span class='warning'>You need another moment to focus.</span>")
+		to_chat(src, span_warning("You need another moment to focus."))
 		return
 	if(is_deaf() || is_below_sound_pressure(get_turf(src)))
-		to_chat(src, "<span class='warning'>You are for all intents and purposes currently deaf!</span>")
+		to_chat(src, span_warning("You are for all intents and purposes currently deaf!"))
 		return
 	next_sonar_ping += 10 SECONDS
 	var/heard_something = FALSE
-	to_chat(src, "<span class='notice'>You take a moment to listen in to your environment...</span>")
+	to_chat(src, span_notice("You take a moment to listen in to your environment..."))
 	for(var/mob/living/L in range(client.view, src))
 		var/turf/T = get_turf(L)
 		if(!T || L == src || L.stat == DEAD || is_below_sound_pressure(T))
 			continue
 		heard_something = TRUE
 		var/feedback = list()
-		feedback += "<span class='notice'>There are noises of movement "
+		feedback += "There are noises of movement "
 		var/direction = get_dir(src, L)
 		if(direction)
 			feedback += "towards the [dir2text(direction)], "
@@ -543,10 +551,9 @@
 					feedback += "far away."
 		else // No need to check distance if they're standing right on-top of us
 			feedback += "right on top of you."
-		feedback += "</span>"
-		to_chat(src,jointext(feedback,null))
+		to_chat(src,span_notice(jointext(feedback,null)))
 	if(!heard_something)
-		to_chat(src, "<span class='notice'>You hear no movement but your own.</span>")
+		to_chat(src, span_notice("You hear no movement but your own."))
 
 
 
@@ -555,15 +562,15 @@
 /mob/living/simple_mob/animal/synx/proc/distend_stomach()
 	set name = "Distend Stomach"
 	set desc = "Allows you to throw up your stomach, giving your attacks burn damage at the cost of your stomach contents going everywhere. Yuck."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	if(transformed)
-		to_chat(src,"<span class='warning'>Your limbs are in the way!</span>") //Kind of a weak excuse but since you already can't transform when your stomach is out, this avoids situations calling a sprite that doesn't exist and lightens my workload on making and implementing them
+		to_chat(src,span_warning("Your limbs are in the way!")) //Kind of a weak excuse but since you already can't transform when your stomach is out, this avoids situations calling a sprite that doesn't exist and lightens my workload on making and implementing them
 		return
 
 	if(!stomach_distended && !transformed) //true if stomach distended is null, 0, or ""
 		stomach_distended = !stomach_distended //switch statement
-		to_chat (src, "<span class='notice'>You disgorge your stomach, spilling its contents!</span>")
+		to_chat (src, span_notice("You disgorge your stomach, spilling its contents!"))
 		melee_damage_lower = 1 //Hopefully this will make all brute damage not apply while stomach is distended. I don't see a better way to do this.
 		melee_damage_upper = 1
 		icon_living = stomach_distended_state
@@ -581,7 +588,7 @@
 
 	if(stomach_distended) //If our stomach has been vomitted
 		stomach_distended = !stomach_distended
-		to_chat (src, "<span class='notice'>You swallow your insides!</span>")
+		to_chat (src, span_notice("You swallow your insides!"))
 		melee_damage_lower = SYNX_LOWER_DAMAGE //This is why I'm using a define
 		melee_damage_upper = SYNX_UPPER_DAMAGE
 		icon_living = initial(icon_living)
@@ -598,7 +605,14 @@
 /mob/living/simple_mob/animal/synx/update_icon()
 	update_fullness()
 	build_icons()
-
+	for(var/belly_class in vore_fullness_ex)
+		var/vs_fullness = vore_fullness_ex[belly_class]
+		if(vs_fullness > 0)
+			if(transformed)
+				//transformed bellysprites dont exist yet. Uncomment this when they do. -Reo
+				//add_overlay("[iconstate]-t_[belly_class]-[vs_fullness]")
+			else
+				add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
 
 
 /mob/living/simple_mob/animal/synx/proc/build_icons(var/random)
@@ -653,7 +667,7 @@
 /mob/living/simple_mob/animal/synx/proc/set_style()
 	set name = "Set Style"
 	set desc = "Customise your icons."
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 
 	var/list/options = list("Body","Horns","Marks","Eyes")
 	for(var/option in options)
@@ -755,7 +769,7 @@
 /*/mob/living/simple_mob/animal/synx/proc/honk()
 	set name = "HONK"
 	set desc = "TAAA RAINBOW"
-	set category = "Abilities"
+	set category = "Abilities.Synx"
 	icon_state = "synx_pet_rainbow"
 	icon_living = "synx_pet_rainbow"
 	playsound(src.loc, 'sound/items/bikehorn.ogg', 50, 1)
@@ -766,13 +780,13 @@
 //HOLOSEEDSPAWNCODE
 /mob/living/simple_mob/animal/synx/ai/pet/holo/death()
 	..()
-	visible_message("<span class='notice'>\The [src] fades away!</span>")
+	visible_message(span_notice("\The [src] fades away!"))
 	var/location = get_turf(src)
 	new /obj/item/seeds/hardlightseed/typesx(location)
 	qdel(src)
 
 /mob/living/simple_mob/animal/synx/ai/pet/holo/gib()
-	visible_message("<span class='notice'>\The [src] fades away!</span>")
+	visible_message(span_notice("\The [src] fades away!"))
 	var/location = get_turf(src)
 	new /obj/item/seeds/hardlightseed/typesx(location)
 	qdel(src)
@@ -947,9 +961,9 @@
 	icon_state = input(usr, "What would you like to change icon_state to?", "Respriting", null)
 
 /mob/living/simple_mob/animal/synx/ai/pet/debug/New()
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite
-	verbs |= /mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc) //CHOMPEdit TGPanel
 
 ////////////////////////////////////////
 ////////////////SYNX SPAWNER////////////

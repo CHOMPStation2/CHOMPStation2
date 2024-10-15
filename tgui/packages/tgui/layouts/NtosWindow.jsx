@@ -6,12 +6,12 @@
 
 import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
-import { Box, Button } from '../components';
+import { Box, Button, Image } from '../components';
 import { Window } from './Window';
 
-export const NtosWindow = (props, context) => {
+export const NtosWindow = (props) => {
   const { title, width = 575, height = 700, children } = props;
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const {
     PC_device_theme,
     PC_batteryicon,
@@ -47,7 +47,7 @@ export const NtosWindow = (props, context) => {
           <div className="NtosHeader__right">
             {PC_programheaders.map((header) => (
               <Box key={header.icon} inline mr={1}>
-                <img
+                <Image
                   className="NtosHeader__icon"
                   src={resolveAsset(header.icon)}
                 />
@@ -55,7 +55,7 @@ export const NtosWindow = (props, context) => {
             ))}
             <Box inline>
               {PC_ntneticon && (
-                <img
+                <Image
                   className="NtosHeader__icon"
                   src={resolveAsset(PC_ntneticon)}
                 />
@@ -63,7 +63,7 @@ export const NtosWindow = (props, context) => {
             </Box>
             {!!(PC_showbatteryicon && PC_batteryicon) && (
               <Box inline mr={1}>
-                <img
+                <Image
                   className="NtosHeader__icon"
                   src={resolveAsset(PC_batteryicon)}
                 />

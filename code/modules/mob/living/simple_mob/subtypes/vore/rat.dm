@@ -28,7 +28,7 @@
 	icon_living = "rous"
 	icon_dead = "rous-dead"
 	icon_rest = "rous_rest"
-	faction = "mouse"
+	faction = FACTION_MOUSE
 	icon = 'icons/mob/vore64x32.dmi'
 
 	maxHealth = 150
@@ -46,7 +46,7 @@
 	friendly = list("nuzzles", "licks", "noses softly at", "noseboops", "headbumps against", "leans on", "nibbles affectionately on")
 
 	meat_amount = 6
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	old_x = -16
 	old_y = 0
@@ -69,8 +69,9 @@
 
 	say_list_type = /datum/say_list/rat
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/rat
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/aggressive/rat/init_vore()
 	if(!voremob_loaded)
@@ -114,7 +115,7 @@
 
 	if(hunger > 0 && life_since_foodscan++ > 5) //Only look for floor food when hungry.
 		life_since_foodscan = 0
-		for(var/obj/item/weapon/reagent_containers/food/snacks/S in oview(src,3)) //Accept thrown offerings and scavenge surroundings.
+		for(var/obj/item/reagent_containers/food/snacks/S in oview(src,3)) //Accept thrown offerings and scavenge surroundings.
 			if(get_dist(src,S) <=1)
 				visible_emote("hungrily devours \the [S].")
 				playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
@@ -179,7 +180,7 @@
 			food = null
 
 /mob/living/simple_mob/vore/aggressive/rat/tame/attackby(var/obj/item/O, var/mob/user) // Feed the rat your food to satisfy it.
-	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks))
+	if(istype(O, /obj/item/reagent_containers/food/snacks))
 		qdel(O)
 		playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 		hunger = 0
@@ -192,7 +193,7 @@
 		return null
 	else if(ishuman(found_atom) && will_eat(found_atom))
 		var/mob/living/carbon/human/H = found_atom
-		for(var/obj/item/weapon/reagent_containers/food/snacks/S in H)
+		for(var/obj/item/reagent_containers/food/snacks/S in H)
 			if(!food)
 				visible_emote("sniffs around the air intently, seeming to have caught a whiff of food!")
 			if(resting)
@@ -221,8 +222,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 0
 
 /mob/living/simple_mob/vore/aggressive/rat/MouseDrop_T(mob/living/M, mob/living/user)

@@ -1,9 +1,9 @@
 #define SIZE_SHRINK 0
 #define SIZE_GROW 1
 
-/obj/item/device/slow_sizegun
+/obj/item/slow_sizegun
 	name = "gradual size gun"
-	desc = "A highly advanced ray gun, designed for progressive and gradual changing of size."
+	desc = "A highly advanced ray gun, designed for progressive and gradual changing of size. Size trading can be toggled on via alt-clicking."
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "sizegun-old-0"
 	var/base_icon_state = "sizegun-old"
@@ -17,14 +17,15 @@
 	var/dorm_size = TRUE
 	var/size_increment = 0.01
 	var/current_target
+	var/trading = 0
 
-/obj/item/device/slow_sizegun/update_icon()
+/obj/item/slow_sizegun/update_icon()
 	icon_state = "[base_icon_state]-[sizeshift_mode]"
 
 	if(busy)
 		icon_state = "[icon_state]-active"
 
-/obj/item/device/slow_sizegun/proc/should_stop(var/mob/living/target, var/mob/living/user, var/active_hand)
+/obj/item/slow_sizegun/proc/should_stop(var/mob/living/target, var/mob/living/user, var/active_hand)
 	if(!target || !user || !active_hand || !istype(target) || !istype(user) || !busy)
 		return TRUE
 
@@ -50,6 +51,9 @@
 	if(unresizable)
 		return TRUE
 
+	if(trading == 1 && !(user.resizable))
+		return TRUE
+
 	if(!(target.has_large_resize_bounds()) && (target.size_multiplier >= RESIZE_MAXIMUM) && sizeshift_mode == SIZE_GROW)
 		return TRUE
 
@@ -62,9 +66,21 @@
 	if(target.size_multiplier <= RESIZE_MINIMUM_DORMS && sizeshift_mode == SIZE_SHRINK)
 		return TRUE
 
+	if(trading == 1 && !(user.has_large_resize_bounds()) && (user.size_multiplier >= RESIZE_MAXIMUM) && sizeshift_mode == SIZE_GROW)
+		return TRUE
+
+	if(trading == 1 && user.size_multiplier >= RESIZE_MAXIMUM_DORMS && sizeshift_mode == SIZE_GROW)
+		return TRUE
+
+	if(trading == 1 && !(user.has_large_resize_bounds()) && (user.size_multiplier <= RESIZE_MINIMUM) && sizeshift_mode == SIZE_SHRINK)
+		return TRUE
+
+	if(trading == 1 && user.size_multiplier <= RESIZE_MINIMUM_DORMS && sizeshift_mode == SIZE_SHRINK)
+		return TRUE
+
 	return FALSE
 
-/obj/item/device/slow_sizegun/afterattack(atom/target, mob/user, proximity_flag)
+/obj/item/slow_sizegun/afterattack(atom/target, mob/user, proximity_flag)
 	// Things that invalidate the scan immediately.
 	if(isturf(target))
 		for(var/atom/A as anything in target) // If we can't scan the turf, see if we can scan anything on it, to help with aiming.
@@ -73,17 +89,18 @@
 				break
 
 	if(busy && !(target == current_target))
-		to_chat(user, span("warning", "\The [src] is already targeting something."))
+		to_chat(user, span_warning("\The [src] is already targeting something."))
 		return
 
 	if(!isliving(target))
-		to_chat(user, span("warning", "\the [target] is not a valid target."))
+		to_chat(user, span_warning("\the [target] is not a valid target."))
 		return
 
 	var/mob/living/L = target
+	var/mob/living/U = user
 
 	if(get_dist(target, user) > beam_range)
-		to_chat(user, span("warning", "You are too far away from \the [target] to affect it. Get closer."))
+		to_chat(user, span_warning("You are too far away from \the [target] to affect it. Get closer."))
 		return
 
 	if(target == current_target && busy)
@@ -100,8 +117,11 @@
 	if(!(L.resizable))
 		unresizable = TRUE
 
+	if(trading == 1 && !(user.resizable))
+		unresizable = TRUE
+
 	if(unresizable)
-		to_chat(user, span("warning", "\the [target] is immune to resizing."))
+		to_chat(user, span_warning("\the [target] is immune to resizing."))
 
 	// Start the effects
 	current_target = target
@@ -119,14 +139,25 @@
 
 	var/active_hand = user.get_active_hand()
 
-	while(!should_stop(target, user, active_hand))
-		stoplag(3)
+	if (trading == 0)
+		while(!should_stop(target, user, active_hand))
+			stoplag(3)
 
-		if(sizeshift_mode == SIZE_SHRINK)
-			L.resize((L.size_multiplier - size_increment), uncapped = L.has_large_resize_bounds(), aura_animation = FALSE)
-		else if(sizeshift_mode == SIZE_GROW)
-			L.resize((L.size_multiplier + size_increment), uncapped = L.has_large_resize_bounds(), aura_animation = FALSE)
+			if(sizeshift_mode == SIZE_SHRINK)
+				L.resize((L.size_multiplier - size_increment), uncapped = L.has_large_resize_bounds(), aura_animation = FALSE)
+			else if(sizeshift_mode == SIZE_GROW)
+				L.resize((L.size_multiplier + size_increment), uncapped = L.has_large_resize_bounds(), aura_animation = FALSE)
 
+	if (trading == 1)
+		while(!should_stop(target, user, active_hand))
+			stoplag(3)
+
+			if(sizeshift_mode == SIZE_SHRINK)
+				L.resize((L.size_multiplier - size_increment), uncapped = L.has_large_resize_bounds(), aura_animation = FALSE)
+				U.resize((U.size_multiplier + size_increment), uncapped = U.has_large_resize_bounds(), aura_animation = FALSE)
+			else if(sizeshift_mode == SIZE_GROW)
+				L.resize((L.size_multiplier + size_increment), uncapped = L.has_large_resize_bounds(), aura_animation = FALSE)
+				U.resize((U.size_multiplier - size_increment), uncapped = U.has_large_resize_bounds(), aura_animation = FALSE)
 	busy = FALSE
 	current_target = null
 
@@ -138,13 +169,13 @@
 	if(user.client) // If for some reason they logged out mid-scan the box will be gone anyways.
 		delete_box(box_segments, user.client)
 
-/obj/item/device/slow_sizegun/attack_self(mob/living/user)
+/obj/item/slow_sizegun/attack_self(mob/living/user)
 	if(busy)
 		busy = !busy
 	else
 		sizeshift_mode = !sizeshift_mode
 		update_icon()
-		to_chat(user, span("notice", "\The [src] will now [sizeshift_mode ? "grow" : "shrink"] its targets."))
+		to_chat(user, span_notice("\The [src] will now [sizeshift_mode ? "grow" : "shrink"] its targets."))
 
 
 #undef SIZE_SHRINK
@@ -155,7 +186,7 @@
 
 // Draws a box showing the limits of movement while scanning something.
 // Only the client supplied will see the box.
-/obj/item/device/slow_sizegun/proc/draw_box(atom/A, box_size, client/C)
+/obj/item/slow_sizegun/proc/draw_box(atom/A, box_size, client/C)
 	. = list()
 	// Things moved with pixel_[x|y] will move the box, so this is to correct that.
 	var/pixel_x_correction = -A.pixel_x
@@ -200,7 +231,7 @@
 #undef ICON_SIZE
 
 // Draws an individual segment of the box.
-/obj/item/device/slow_sizegun/proc/draw_line(atom/A, line_dir, line_pixel_x, line_pixel_y, client/C)
+/obj/item/slow_sizegun/proc/draw_line(atom/A, line_dir, line_pixel_x, line_pixel_y, client/C)
 	var/image/line = image(icon = 'icons/effects/effects.dmi', loc = A, icon_state = "stripes", dir = line_dir)
 	line.pixel_x = line_pixel_x
 	line.pixel_y = line_pixel_y
@@ -211,11 +242,21 @@
 	return line
 
 // Removes the box that was generated before from the client.
-/obj/item/device/slow_sizegun/proc/delete_box(list/box_segments, client/C)
+/obj/item/slow_sizegun/proc/delete_box(list/box_segments, client/C)
 	for(var/i in box_segments)
 		C.images -= i
 		qdel(i)
 
-/obj/item/device/slow_sizegun/proc/color_box(list/box_segments, new_color, new_time)
+/obj/item/slow_sizegun/proc/color_box(list/box_segments, new_color, new_time)
 	for(var/i in box_segments)
 		animate(i, color = new_color, time = new_time)
+
+//Alt click to activate size trading
+
+/obj/item/slow_sizegun/AltClick(mob/user)
+	if (trading == 0)
+		trading = 1
+		to_chat(user, span_notice("\The [src] will now trade your targets size for your own."))
+	else
+		trading = 0
+		to_chat(user, span_notice("\The [src] will no longer trade your targets size for your own."))

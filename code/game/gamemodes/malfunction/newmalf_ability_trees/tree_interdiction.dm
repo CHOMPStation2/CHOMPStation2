@@ -116,8 +116,8 @@
 			to_chat(target, "Unlock signal received..")
 			target.SetLockdown(0)
 			if(target.lockcharge)
-				to_chat(user, "<span class='notice'>Unlock Failed, lockdown wire cut.</span>")
-				to_chat(target, "<span class='notice'>Unlock Failed, lockdown wire cut.</span>")
+				to_chat(user, span_notice("Unlock Failed, lockdown wire cut."))
+				to_chat(target, span_notice("Unlock Failed, lockdown wire cut."))
 			else
 				to_chat(user, "Cyborg unlocked.")
 				to_chat(target, "You have been unlocked.")
@@ -137,7 +137,7 @@
 
 	var/list/L = get_unlinked_cyborgs(user)
 	if(!L.len)
-		to_chat(user, "<span class='notice'>ERROR: No unlinked cyborgs detected!</span>")
+		to_chat(user, span_notice("ERROR: No unlinked cyborgs detected!"))
 
 
 	if(target && !istype(target))
@@ -202,7 +202,7 @@
 
 	var/list/L = get_other_ais(user)
 	if(!L.len)
-		to_chat(user, "<span class='notice'>ERROR: No other AIs detected!</span>")
+		to_chat(user, span_notice("ERROR: No other AIs detected!"))
 
 	if(target && !istype(target))
 		to_chat(user, "This is not an AI.")
@@ -250,7 +250,7 @@
 				to_chat(target, "SYSTEM LOG: User: Admin - Connection Lost. Changes Reverted.")
 				return
 			to_chat(user, "Hack succeeded. The AI is now under your exclusive control.")
-			to_chat(target, "SYSTEM LOG: System re�3RT5�^#COMU@(#$)TED)@$")
+			to_chat(target, "SYSTEM LOG: System re'3RT5°^#COMU@(#$)TED)@$")
 			for(var/i = 0, i < 5, i++)
 				var/temptxt = pick("1101000100101001010001001001",\
 							   	   "0101000100100100000100010010",\

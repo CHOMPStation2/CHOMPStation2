@@ -30,7 +30,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	//Person just died in guts!
 	if(L.stat == DEAD)
 		if(!L.digestion_in_progress) //CHOMPEdit Start
-			if(L.is_preference_enabled(/datum/client_preference/digestion_noises))
+			if(L.check_sound_preference(/datum/preference/toggle/digestion_noises))
 				if(!B.fancy_vore)
 					SEND_SOUND(L, sound(get_sfx("classic_death_sounds")))
 				else
@@ -62,7 +62,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
  		//CHOMPedit end
 
 	// Deal digestion damage (and feed the pred)
-	var/old_health = L.health; //CHOMPEdit - Store old health for the hard crit calculation
+	var/old_health = L.health
 	var/old_brute = L.getBruteLoss()
 	var/old_burn = L.getFireLoss()
 	var/old_oxy = L.getOxyLoss()
@@ -87,8 +87,11 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		damage_gain = damage_gain * 0.5
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
+
 	if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+
+	consider_healthbar(L, old_health, B.owner)
 	/*if(isrobot(B.owner)) //CHOMPEdit: Borgos can now use nutrition too
 		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			var/mob/living/silicon/robot/R = B.owner
@@ -99,7 +102,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			var/mob/living/silicon/robot/R = B.owner
 			R.cell.charge += 25*damage_gain */
 	if(offset && damage_gain > 0) // If any different than default weight, multiply the % of offset.
-		if(B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
+		if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSDIGEST && B.reagents.total_volume < B.reagents.maximum_volume) //digestion producing reagents
 			B.owner_adjust_nutrition(offset * (3 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier()) //Uncertain if balanced fairly, can adjust by multiplier for the cost of reagent, dont go below 1 or else it will result in more nutrition than normal - Jack
 			B.digest_nutri_gain += offset * (1.5 * damage_gain / difference) * L.get_digestion_nutrition_modifier() * B.owner.get_digestion_efficiency_modifier() //for transfering nutrition value over to GenerateBellyReagents_digesting()
 			B.GenerateBellyReagents_digesting()
@@ -117,12 +120,17 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/absorb/process_mob(obj/belly/B, mob/living/L)
 	if(!L.absorbable || L.absorbed)
 		return null
+
+	var/old_nutrition = L.nutrition
 	B.steal_nutrition(L)
 	if(L.nutrition < 100)
 		B.absorb_living(L)
-		if(B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
+		if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
 			B.GenerateBellyReagents_absorbed() //CHOMPedit end: A bonus for pred, I know for a fact prey is usually at zero nutrition when absorption finally happens
+		consider_healthbar(L, old_nutrition, B.owner)
 		return list("to_update" = TRUE)
+	else
+		consider_healthbar(L, old_nutrition, B.owner)
 
 /datum/digest_mode/unabsorb
 	id = DM_UNABSORB
@@ -138,7 +146,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	noise_chance = 10
 
 /datum/digest_mode/drain/process_mob(obj/belly/B, mob/living/L)
+	var/old_nutrition = L.nutrition
 	B.steal_nutrition(L)
+	consider_healthbar(L, old_nutrition, B.owner)
 
 /datum/digest_mode/drain/shrink
 	id = DM_SHRINK
@@ -182,7 +192,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 /datum/digest_mode/heal/process_mob(obj/belly/B, mob/living/L)
 	var/oldstat = L.stat
-	if(L.stat == DEAD)
+	if(L.stat == DEAD || !L.permit_healbelly) //CHOMPEdit healpref check
 		return null // Can't heal the dead with healbelly
 	var/mob/living/carbon/human/H = L
 	if(B.owner.nutrition > 90 && H.isSynthetic())
@@ -235,8 +245,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	for(var/E in touchable_atoms)
 		if(istype(E, /mob/observer))
 			continue
-		if(istype(E, /obj/item/weapon/storage/vore_egg)) // Don't egg other eggs.
-			var/obj/item/weapon/storage/vore_egg/EG = E
+		if(istype(E, /obj/item/storage/vore_egg)) // Don't egg other eggs.
+			var/obj/item/storage/vore_egg/EG = E
 			if(EG.egg_name != B.egg_name)
 				if(!B.egg_name)
 					EG.egg_name = null
@@ -267,8 +277,12 @@ GLOBAL_LIST_INIT(digest_modes, list())
 				B.ownegg.w_class = I.w_class
 				B.ownegg.max_storage_space = B.ownegg.w_class
 				I.forceMove(B.ownegg)
-				B.ownegg.icon_scale_x = 0.2 * B.ownegg.w_class
-				B.ownegg.icon_scale_y = 0.2 * B.ownegg.w_class
+				if(B.egg_size)
+					B.ownegg.icon_scale_x = B.egg_size
+					B.ownegg.icon_scale_y = B.egg_size
+				else
+					B.ownegg.icon_scale_x = 0.2 * B.ownegg.w_class
+					B.ownegg.icon_scale_y = 0.2 * B.ownegg.w_class
 				B.ownegg.update_transform()
 				egg_contents -= I
 				B.ownegg = null
@@ -279,11 +293,11 @@ GLOBAL_LIST_INIT(digest_modes, list())
 				I.forceMove(B.ownegg)
 			if(isliving(C))
 				var/mob/living/M = C
-				var/mob_holder_type = M.holder_type || /obj/item/weapon/holder
+				var/mob_holder_type = M.holder_type || /obj/item/holder
 				B.ownegg.w_class += M.size_multiplier * 4 //Egg size and weight scaled to match occupant.
 				if(M.size_multiplier > scale_clamp)
 					scale_clamp = M.size_multiplier
-				var/obj/item/weapon/holder/H = new mob_holder_type(B.ownegg, M)
+				var/obj/item/holder/H = new mob_holder_type(B.ownegg, M)
 				B.ownegg.max_storage_space = H.w_class
 				//B.ownegg.icon_scale_x = 0.25 * B.ownegg.w_class
 				//B.ownegg.icon_scale_y = 0.25 * B.ownegg.w_class
@@ -296,8 +310,12 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		B.ownegg.calibrate_size()
 		B.ownegg.orient2hud()
 		B.ownegg.w_class = clamp(B.ownegg.w_class * 0.25, 1, 8) //A total w_class of 16 will result in a backpack sized egg.
-		B.ownegg.icon_scale_x = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
-		B.ownegg.icon_scale_y = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
+		if(B.egg_size)
+			B.ownegg.icon_scale_x = B.egg_size
+			B.ownegg.icon_scale_y = B.egg_size
+		else
+			B.ownegg.icon_scale_x = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
+			B.ownegg.icon_scale_y = clamp(0.25 * B.ownegg.w_class, 0.25, scale_clamp)
 		B.ownegg.update_transform()
 		if(B.ownegg.w_class > 4)
 			B.ownegg.slowdown = 4 //CHOMPEdit End
@@ -377,3 +395,114 @@ GLOBAL_LIST_INIT(digest_modes, list())
 					else
 						tempmode = DM_DRAIN			// Otherwise drain.
 	return tempmode
+
+/datum/digest_mode/proc/consider_healthbar()
+	return
+
+/datum/digest_mode/digest/consider_healthbar(mob/living/L, old_health, mob/living/reciever)
+
+	if(old_health <= L.health)
+		return
+
+	var/old_percent
+	var/new_percent
+
+	if(ishuman(L))
+		old_percent = ((old_health + 50) / (L.maxHealth + 50)) * 100
+		new_percent = ((L.health + 50) / (L.maxHealth + 50)) * 100
+	else
+		old_percent = (old_health / L.maxHealth) * 100
+		new_percent = (L.health / L.maxHealth) * 100
+
+	var/lets_announce = FALSE
+	if(new_percent <= 95 && old_percent > 95)
+		lets_announce = TRUE
+	else if(new_percent <= 75 && old_percent > 75)
+		lets_announce = TRUE
+	else if(new_percent <= 50 && old_percent > 50)
+		lets_announce = TRUE
+	else if(new_percent <= 25 && old_percent > 25)
+		lets_announce = TRUE
+	else if(new_percent <= 0 && old_percent > 0)
+		lets_announce = TRUE
+
+	if(lets_announce)
+		L.chat_healthbar(reciever)
+		L.chat_healthbar(L)
+
+/datum/digest_mode/heal/consider_healthbar(mob/living/L, old_health, mob/living/reciever)
+
+	if(old_health >= L.health)
+		return
+
+	var/old_percent
+	var/new_percent
+
+	if(ishuman(L))
+		old_percent = ((old_health + 50) / (L.maxHealth + 50)) * 100
+		new_percent = ((L.health + 50) / (L.maxHealth + 50)) * 100
+	else
+		old_percent = (old_health / L.maxHealth) * 100
+		new_percent = (L.health / L.maxHealth) * 100
+
+	var/lets_announce = FALSE
+	if(new_percent >= 100 && old_percent < 100)
+		lets_announce = TRUE
+	else if(new_percent >= 75 && old_percent < 75)
+		lets_announce = TRUE
+	else if(new_percent >= 50 && old_percent < 50)
+		lets_announce = TRUE
+	else if(new_percent >= 25 && old_percent < 25)
+		lets_announce = TRUE
+	else if(new_percent >= 5 && old_percent < 5)
+		lets_announce = TRUE
+
+	if(lets_announce)
+		L.chat_healthbar(reciever)
+		L.chat_healthbar(L)
+
+/datum/digest_mode/absorb/consider_healthbar(mob/living/L, old_nutrition, mob/living/reciever)
+	if(old_nutrition <= L.nutrition)
+		return
+
+	var/old_percent = ((old_nutrition - 100) / 500) * 100
+	var/new_percent = ((L.nutrition - 100) / 500) * 100
+	var/lets_announce = FALSE
+	if(new_percent <= 95 && old_percent > 95)
+		lets_announce = TRUE
+	else if(new_percent <= 75 && old_percent > 75)
+		lets_announce = TRUE
+	else if(new_percent <= 50 && old_percent > 50)
+		lets_announce = TRUE
+	else if(new_percent <= 25 && old_percent > 25)
+		lets_announce = TRUE
+	else if(new_percent <= 0 && old_percent > 0)
+		lets_announce = TRUE
+
+	if(lets_announce)
+		L.chat_healthbar(reciever)
+		L.chat_healthbar(L)
+
+/datum/digest_mode/drain/consider_healthbar(mob/living/L, old_nutrition, mob/living/reciever)
+
+	if(old_nutrition <= L.nutrition)
+		return
+
+	var/old_percent = ((old_nutrition - 100) / 500) * 100
+	var/new_percent = ((L.nutrition - 100) / 500) * 100
+
+	var/lets_announce = FALSE
+	if(new_percent <= 95 && old_percent > 95)
+		lets_announce = TRUE
+	else if(new_percent <= 75 && old_percent > 75)
+		lets_announce = TRUE
+	else if(new_percent <= 50 && old_percent > 50)
+		lets_announce = TRUE
+	else if(new_percent <= 25 && old_percent > 25)
+		lets_announce = TRUE
+	else if(new_percent <= 0 && old_percent > 0)
+		lets_announce = TRUE
+
+	if(lets_announce)
+		L.chat_healthbar(reciever)
+		L.chat_healthbar(L)

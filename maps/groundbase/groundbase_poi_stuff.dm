@@ -1,4 +1,4 @@
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "pois/outdoors1.dmm"
 #include "pois/outdoors2.dmm"
 #include "pois/outdoors3.dmm"
@@ -188,7 +188,7 @@
 #endif
 
 
-/area/groundbase/poi
+/area/submap/groundbase/poi
 	name = "POI - Rascal's Pass"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "orawhisqu"
@@ -199,20 +199,20 @@
 	name = "maintenance cave"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/groundbase/poi/outdoor
+/area/submap/groundbase/poi/outdoor
 	name = "Outdoors"
 	ceiling_type = /turf/simulated/floor/virgo3c
-/area/groundbase/poi/outdoor/roofed
+/area/submap/groundbase/poi/outdoor/roofed
 	name = "Outdoors"
-/area/groundbase/poi/outdoor/cabin1
+/area/submap/groundbase/poi/outdoor/cabin1
 	name = "Cabin"
-/area/groundbase/poi/outdoor/cabin2
+/area/submap/groundbase/poi/outdoor/cabin2
 	name = "Cabin"
-/area/groundbase/poi/outdoor/cabin3
+/area/submap/groundbase/poi/outdoor/cabin3
 	name = "Cabin"
-/area/groundbase/poi/outdoor/cabin4
+/area/submap/groundbase/poi/outdoor/cabin4
 	name = "Cabin"
-/area/groundbase/poi/outdoor/cabin5
+/area/submap/groundbase/poi/outdoor/cabin5
 	name = "Cabin"
 
 /datum/map_template/groundbase/outdoor
@@ -945,6 +945,7 @@
 	cost = 3
 	allow_duplicates = FALSE
 
+
 /obj/effect/landmark/poi_loader/gb_square
 	name = "Square House Loader"
 	size_x = 12
@@ -963,12 +964,14 @@
 	size_y = 24
 	poi_type = /datum/map_template/groundbase/wildvillage/long
 
+
 /area/submap/groundbase/poi/wildvillage
 	name = "POI - Wilderness Village"
 	icon = 'icons/turf/areas_vr.dmi'
 	ambience = AMBIENCE_OUTPOST
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	requires_power = 0
+	base_turf = /turf/simulated/mineral/floor/virgo3c
 
 /area/submap/groundbase/poi/wildvillage/plot
 	icon_state = "grewhisqu"
@@ -1066,7 +1069,7 @@
 	name = "wide building 6"
 	mappath = 'southwilds/villagepois/wide6.dmm'
 /area/submap/groundbase/poi/wildvillage/wide/wide6
-/obj/item/weapon/paper/wide6
+/obj/item/paper/wide6
 	name = "\improper hand written letter"
 	info = {"It is hard for me to write this out, and I hope you will be back soon, but I fear that by the time you return I will already be gone. I will try my best to hold on, but even as I write this, I can feel myself slipping.<BR><BR>
 	I know that you all do not believe me but I really can see them, just beyond the walls, and they're even closer now than they were before. I can see them even when I close my eyes. Seven golden eyes watch me, and I can feel their heat pouring into me. As they come closer, I can feel myself being tugged in. Like I'm a little lost moon being tugged into the embrace of a passing star. <BR><BR>It still doesn't hurt. It's getting hard to see anything else, and I can't move anymore. I feel like everything is going to be okay. If you see seven eyes, don't be afraid. Just promise you'll come find me, okay?<BR><BR>
@@ -1080,12 +1083,11 @@
 	name = "long building 2"
 	mappath = 'southwilds/villagepois/long2.dmm'
 /area/submap/groundbase/poi/wildvillage/long/long2
-/datum/map_template/groundbase/wildvillage/wide/long3
+/datum/map_template/groundbase/wildvillage/long/long3
 	name = "wide building 3"
 	mappath = 'southwilds/villagepois/long3.dmm'
 /area/submap/groundbase/poi/wildvillage/long/long3
-/datum/map_template/groundbase/wildvillage/wide/long4
+/datum/map_template/groundbase/wildvillage/long/long4
 	name = "wide building 4"
 	mappath = 'southwilds/villagepois/long4.dmm'
 /area/submap/groundbase/poi/wildvillage/long/long4
-

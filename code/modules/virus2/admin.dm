@@ -32,7 +32,7 @@
 /datum/admins/var/datum/virus2_editor/virus2_editor_datum = new
 /client/proc/virus2_editor()
 	set name = "Virus Editor"
-	set category = "Admin"
+	set category = "Admin.Events" //CHOMPEdit
 	if(!holder || !check_rights(R_SPAWN)) return // spawn privileges to create viruses
 
 	holder.virus2_editor_datum.show_ui(src)
@@ -150,7 +150,7 @@
 				if(!infectee.species || !(infectee.species.get_bodytype() in species))
 					infectee = null
 		if("ichance")
-			var/I = tgui_input_number(usr, "Input infection chance", "Infection Chance", infectionchance)
+			var/I = tgui_input_number(usr, "Input infection chance", "Infection Chance", infectionchance, 100)
 			if(!I) return
 			infectionchance = I
 		if("stype")
@@ -172,7 +172,7 @@
 			else if(href_list["reset"])
 				antigens = list()
 		if("resistance")
-			var/S = tgui_input_number(usr, "Input % resistance to antibiotics", "Resistance", resistance)
+			var/S = tgui_input_number(usr, "Input % resistance to antibiotics", "Resistance", resistance, 100)
 			if(!S) return
 			resistance = S
 		if("infectee")
@@ -194,7 +194,7 @@
 			if(!antigens.len)
 				var/a = tgui_alert(usr, "This disease has no antigens; it will be impossible to permanently immunise anyone without them.\
 								It is strongly recommended to set at least one antigen. Do you want to go back and edit your virus?", "Antigens", list("Yes", "No"))
-				if(a == "Yes") return
+				if(!a || a == "Yes") return
 			var/datum/disease2/disease/D = new
 			D.infectionchance = infectionchance
 			D.spreadtype = spreadtype
@@ -215,7 +215,7 @@
 
 			spawned_viruses += D
 
-			message_admins("<span class='danger'>[key_name_admin(usr)] infected [key_name_admin(infectee)] with a virus (<a href='?src=\ref[D];[HrefToken()];info=1'>Info</a>)</span>")
+			message_admins(span_danger("[key_name_admin(usr)] infected [key_name_admin(infectee)] with a virus (<a href='?src=\ref[D];[HrefToken()];info=1'>Info</a>)"))
 			log_admin("[key_name_admin(usr)] infected [key_name_admin(infectee)] with a virus!")
 			infect_virus2(infectee, D, forced=1)
 

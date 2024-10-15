@@ -2,177 +2,168 @@
 	name = "Cave Submap Area"
 	icon_state = "submap"
 	ambience = AMBIENCE_RUINS
-	base_turf = /turf/simulated/mineral/floor/ignore_mapgen/cave
 
 /area/submap/cave/deadBeacon
-	name = "POI Caves - Abandoned Relay"
+	name = "POI - abandoned relay"
 	ambience = AMBIENCE_TECH_RUINS
 
 /area/submap/cave/prepper1
-	name = "POI Caves - Prepper Bunker"
+	name = "POI - Prepper Bunker"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/cave/qShuttle
-	name = "POI Caves - Quarantined Shuttle"
+	name = "POI - Quarantined Shuttle"
 	ambience = AMBIENCE_RUINS
 
 /area/submap/cave/AMine1
-	name = "POI Caves - Abandoned Mine"
+	name = "POI - Abandoned Mine"
 
 /area/submap/cave/Scave1
-	name = "POI Caves - Spider Cave"
+	name = "POI - Spider Cave 1"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/cave/crashed_ufo
-	name = "POI Caves - Crashed Alien Vessel"
+	name = "POI - Crashed Alien Vessel"
 	requires_power = FALSE
 	ambience = AMBIENCE_OTHERWORLDLY
 
 /area/submap/cave/crashed_ufo_frigate
-	name = "POI Caves - Crashed Alien Frigate"
+	name = "POI - Crashed Alien Frigate"
 	requires_power = FALSE
 	ambience = AMBIENCE_OTHERWORLDLY
 
 /area/submap/cave/crystal1
-	name = "POI Caves - Crystaline Cave"
+	name = "POI - Crystaline Cave"
 	ambience = AMBIENCE_SPACE
 
 /area/submap/cave/crystal2
-	name = "POI Caves - Crystaline Cave 2"
+	name = "POI - Crystaline Cave"
 	ambience = AMBIENCE_SPACE
 
 /area/submap/cave/crystal3
-	name = "POI Caves - Crystaline Cave 3"
+	name = "POI - Crystaline Cave"
 	ambience = AMBIENCE_SPACE
 
 /area/submap/cave/lost_explorer
-	name = "POI Caves - Final Resting Place"
+	name = "POI - Final Resting Place"
 	ambience = AMBIENCE_GHOSTLY
 
-/area/submap/cave/Rockb1
-	name = "POI Caves - Rocky Base"
+/area/submap/Rockb1
+	name = "POI - RockyBase1"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/Cavelake
-	name = "POI Caves - Cave Lake"
+/area/submap/Cavelake
+	name = "POI - Cavelake"
 	ambience = AMBIENCE_SPACE
 
-/area/submap/cave/CaveTrench
-	name = "POI Caves - Cave River"
+/area/submap/CaveTrench
+	name = "POI - Cave River"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/CorgiRitual
-	name = "POI Caves - Dark Ritual"
+/area/submap/CorgiRitual
+	name = "POI - Dark Ritual"
 	ambience = AMBIENCE_UNHOLY
 
-/area/submap/cave/AbandonedTemple
-	name = "POI Caves - Abandoned Temple"
+/area/submap/AbandonedTemple
+	name = "POI - Abandoned Temple"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/cave/CrashedMedShuttle
-	name = "POI Caves - Crashed Med Shuttle"
+/area/submap/CrashedMedShuttle
+	name = "POI - Crashed Med Shuttle"
 	ambience = AMBIENCE_RUINS
 
 /area/submap/cave/digsite
-	name = "POI Caves - Dig Site"
+	name = "POI - Dig Site"
 	ambience = AMBIENCE_OTHERWORLDLY
 
 /area/submap/cave/vault1
-	name = "POI Caves - Mine Vault"
+	name = "POI - Mine Vault"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/cave/vault2
-	name = "POI Caves - Mine Vault 2"
+	name = "POI - Mine Vault"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/cave/vault3
-	name = "POI Caves - Mine Vault 3"
+	name = "POI - Mine Vault"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/cave/vault4
-	name = "POI Caves - Mine Vault 4"
+	name = "POI - Mine Vault"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/cave/vault5
-	name = "POI Caves - Mine Vault 5"
+	name = "POI - Mine Vault"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/cave/vault6
-	name = "POI Caves - Mine Vault 6"
+	name = "POI - Mine Vault"
 	ambience = AMBIENCE_FOREBODING
 
 /area/submap/cave/IceCave1A
-	name = "POI Caves - Ice Cave"
+	name = "POI - Ice Cave 1A"
 	ambience = AMBIENCE_SPACE
 
 /area/submap/cave/IceCave1B
-	name = "POI Caves - Ice Cave 2"
+	name = "POI - Ice Cave 1B"
 	ambience = AMBIENCE_SPACE
 
 /area/submap/cave/IceCave1C
-	name = "POI Caves - Ice Cave 3"
+	name = "POI - Ice Cave 1C"
 	ambience = AMBIENCE_SPACE
 
 /area/submap/cave/swordcave
-	name = "POI Caves - Cursed Sword Cave"
+	name = "POI - Cursed Sword Cave"
 	ambience = AMBIENCE_UNHOLY
 
 /area/submap/cave/SupplyDrop1
-	name = "POI Caves - Supply Drop"
+	name = "POI - Supply Drop 1"
 	ambience = AMBIENCE_TECH_RUINS
 
 /area/submap/cave/BlastMine1
-	name = "POI Caves - Blast Mine"
+	name = "POI - Blast Mine 1"
 
-/area/submap/cave/crashedcontainmentshuttle
-	name = "POI Caves - Crashed Containment Shuttle"
+/area/submap/crashedcontainmentshuttle
+	name = "POI - Crashed Containment Shuttle"
 	ambience = AMBIENCE_HIGHSEC
 
-/area/submap/cave/geyser_1
-	name = "POI Caves - Ore-Rich Geyser"
+/area/submap/geyser_1
+	name = "POI - Ore-Rich Geyser"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/cave/geyser_2
-	name = "POI Caves - Fenced Geyser"
+/area/submap/geyser_2
+	name = "POI - Fenced Geyser"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/cave/geyser_3
-	name = "POI Caves - Magmatic Geyser"
+/area/submap/geyser_3
+	name = "POI - Magmatic Geyser"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/cave/ore_cliff
-	name = "POI Caves - Ore-Topped Cliff"
+/area/submap/ore_cliff
+	name = "POI - Ore-Topped Cliff"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/cave/deadspy
-	name = "POI Caves - Dead Spy"
+/area/submap/deadspy
+	name = "POI - Dead Spy"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/lava_trench
-	name = "POI Caves - Lava Trench"
+/area/submap/lava_trench
+	name = "POI - Lava Trench"
 	ambience = AMBIENCE_LAVA
 
-/area/submap/cave/lava_trench/outpost
-	name = "POI Caves - Trench Outpost"
+/area/submap/lava_trench/outpost
+	name = "POI - Trench Outpost"
 	requires_power = FALSE
 	icon_state = "submap2"
 
-/area/submap/cave/Excavation
-	name = "POI Caves - Excavation Site"
+/area/submap/Excavation
+	name = "POI - Excavation Site"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/spatial_anomaly
-	name = "POI Caves - Spatial Anomaly"
+/area/submap/spatial_anomaly
+	name = "POI - Spatial Anomaly"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/cave/Speakeasy  //VOREStation add
-	name = "POI Caves - Speakeasy"
+/area/submap/Speakeasy  //VOREStation add
+	name = "POI - Speakeasy"
 	requires_power = FALSE
-
-/area/submap/cave/ratden
-	name = "POI Caves - Rat Den"
-	ambience = AMBIENCE_SPACE
-
-/area/submap/cave/oregrubdeposit
-	name = "POI Caves - Oregrub Deposit"
-	ambience = AMBIENCE_SPACE

@@ -216,3 +216,7 @@
 /area/submap/wizardcrash
 	name = "POI - Wizard crash"
 	ambience = AMBIENCE_OTHERWORLDLY
+
+/area/submap/spaceseveneleven
+	name = "POI - Gas Station?"
+	ambience = AMBIENCE_FOREBODING

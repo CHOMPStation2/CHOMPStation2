@@ -46,37 +46,38 @@
 							'sound/voice/hiss5.ogg')
 	has_hands = TRUE
 
-	can_enter_vent_with = list(	/obj/item/weapon/implant,
-								/obj/item/device/radio/borg,
-								/obj/item/weapon/holder,
+	can_enter_vent_with = list(	/obj/item/implant,
+								/obj/item/radio/borg,
+								/obj/item/holder,
 								/obj/machinery/camera,
 								/obj/belly,
+								/obj/soulgem, // CHOMPAdd
 								/obj/screen,
 								/atom/movable/emissive_blocker,
-								/obj/item/weapon/material,
-								/obj/item/weapon/melee,
+								/obj/item/material,
+								/obj/item/melee,
 								/obj/item/stack/,
-								/obj/item/weapon/tool,
-								/obj/item/weapon/reagent_containers/food,
-								/obj/item/weapon/coin,
-								/obj/item/weapon/aliencoin,
-								/obj/item/weapon/ore,
-								/obj/item/weapon/disk/nuclear,
+								/obj/item/tool,
+								/obj/item/reagent_containers/food,
+								/obj/item/coin,
+								/obj/item/aliencoin,
+								/obj/item/ore,
+								/obj/item/disk/nuclear,
 								/obj/item/toy,
-								/obj/item/weapon/card,
-								/obj/item/device/radio,
-								/obj/item/device/perfect_tele_beacon,
-								/obj/item/weapon/clipboard,
-								/obj/item/weapon/paper,
-								/obj/item/weapon/pen,
+								/obj/item/card,
+								/obj/item/radio,
+								/obj/item/perfect_tele_beacon,
+								/obj/item/clipboard,
+								/obj/item/paper,
+								/obj/item/pen,
 								/obj/item/canvas,
 								/obj/item/paint_palette,
 								/obj/item/paint_brush,
-								/obj/item/device/camera,
-								/obj/item/weapon/photo,
-								/obj/item/device/camera_film,
-								/obj/item/device/taperecorder,
-								/obj/item/device/tape)
+								/obj/item/camera,
+								/obj/item/photo,
+								/obj/item/camera_film,
+								/obj/item/taperecorder,
+								/obj/item/tape)
 
 	var/xeno_build_time = 5 //time to build a structure
 
@@ -98,8 +99,8 @@
 /mob/living/simple_mob/xeno_ch/Login()
 	. = ..()
 	faction = "neutral"
-	verbs |= /mob/living/simple_mob/xeno_ch/proc/xeno_build
-	verbs |= /mob/living/simple_mob/verb/toggle_speech_sounds
+	add_verb(src,/mob/living/simple_mob/xeno_ch/proc/xeno_build) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/verb/toggle_speech_sounds) //CHOMPEdit TGPanel
 	build_action.Grant(src)
 
 
@@ -125,9 +126,9 @@
 
 /mob/living/simple_mob/xeno_ch/hunter/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/proc/pounce_toggle
-	verbs |= /mob/living/proc/ventcrawl
-	verbs |= /mob/living/proc/hide
+	add_verb(src,/mob/living/simple_mob/proc/pounce_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	pounce_action.Grant(src)
 
 //Xenomorph Sentinel subtype
@@ -153,11 +154,11 @@
 
 /mob/living/simple_mob/xeno_ch/sentinel/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/proc/pounce_toggle
-	verbs |= /mob/living/proc/hide
-	verbs |= /mob/living/simple_mob/proc/neurotoxin
-	verbs |= /mob/living/simple_mob/proc/acidspit
-	verbs |= /mob/living/simple_mob/proc/corrosive_acid
+	add_verb(src,/mob/living/simple_mob/proc/pounce_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/neurotoxin) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/acidspit) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/corrosive_acid) //CHOMPEdit TGPanel
 	pounce_action.Grant(src)
 	neurotox_action.Grant(src)
 	acidspit_action.Grant(src)
@@ -187,10 +188,10 @@
 
 /mob/living/simple_mob/xeno_ch/queen/Login()
 	. = ..()
-	verbs |= /mob/living/simple_mob/proc/neurotoxin
-	verbs |= /mob/living/simple_mob/proc/acidspit
-	verbs |= /mob/living/simple_mob/proc/corrosive_acid
-	verbs |= /mob/living/simple_mob/proc/speen
+	add_verb(src,/mob/living/simple_mob/proc/neurotoxin) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/acidspit) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/corrosive_acid) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/speen) //CHOMPEdit TGPanel
 	neurotox_action.Grant(src)
 	acidspit_action.Grant(src)
 	corrode_action.Grant(src)

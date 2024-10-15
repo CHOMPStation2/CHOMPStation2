@@ -28,7 +28,7 @@
 	tt_desc = "B Lepidoptera cinereus"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/tymisian)
 
-	faction = "spiders" //Hostile to most mobs, not all.
+	faction = FACTION_SPIDERS //Hostile to most mobs, not all.
 
 	icon_state = "moth"
 	icon_living = "moth"
@@ -119,8 +119,8 @@
 /mob/living/simple_mob/animal/sif/tymisian/Initialize()
 	. = ..()
 	smoke_spore = new
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/animal/sif/tymisian/handle_special()
 	..()

@@ -3,13 +3,8 @@
 /turf/template_noop,
 /area/template_noop)
 "h" = (
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/newdirt/virgo3c,
-/area/groundbase/poi/outdoor)
-=======
 /turf/simulated/floor/outdoors/newdirt,
 /area/submap/groundbase/poi/outdoor)
->>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "i" = (
 /obj/random/crate,
 /obj/random/maintenance/misc,
@@ -17,7 +12,7 @@
 /obj/random/maintenance/misc,
 /obj/random/maintenance/misc,
 /turf/simulated/floor,
-/area/groundbase/poi/outdoor/roofed)
+/area/submap/groundbase/poi/outdoor/roofed)
 "z" = (
 /obj/structure/table/rack/steel,
 /obj/random/maintenance/misc,
@@ -25,21 +20,16 @@
 /obj/random/maintenance/misc,
 /obj/random/maintenance/misc,
 /turf/simulated/floor,
-/area/groundbase/poi/outdoor/roofed)
+/area/submap/groundbase/poi/outdoor/roofed)
 "C" = (
 /turf/simulated/wall,
-/area/groundbase/poi/outdoor/roofed)
+/area/submap/groundbase/poi/outdoor/roofed)
 "G" = (
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/virgo3c,
-/area/groundbase/poi/outdoor)
-=======
-/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/poi/outdoor)
->>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "T" = (
 /turf/simulated/floor,
-/area/groundbase/poi/outdoor/roofed)
+/area/submap/groundbase/poi/outdoor/roofed)
 
 (1,1,1) = {"
 C

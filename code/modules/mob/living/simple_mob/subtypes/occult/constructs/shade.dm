@@ -30,11 +30,11 @@
 
 	universal_speak = 1
 
-	loot_list = list(/obj/item/weapon/ectoplasm = 100)
+	loot_list = list(/obj/item/ectoplasm = 100)
 
 /mob/living/simple_mob/construct/shade/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/device/soulstone))
-		var/obj/item/device/soulstone/S = O;
+	if(istype(O, /obj/item/soulstone))
+		var/obj/item/soulstone/S = O;
 		S.transfer_soul("SHADE", src, user)
 		return
 	..()
@@ -43,7 +43,7 @@
 	..()
 	for(var/mob/M in viewers(src, null))
 		if((M.client && !( M.blinded )))
-			M.show_message("<font color='red'>[src] lets out a contented sigh as their form unwinds.</font>")
+			M.show_message(span_red("[src] lets out a contented sigh as their form unwinds."))
 
 	ghostize()
 	qdel(src)

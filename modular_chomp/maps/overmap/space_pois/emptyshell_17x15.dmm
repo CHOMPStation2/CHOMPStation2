@@ -1,40 +1,384 @@
-"a" = (/turf/template_noop,/area/template_noop)
-"b" = (/obj/structure/lattice,/turf/template_noop,/area/template_noop)
-"c" = (/turf/simulated/wall/r_wall,/area/submap/emptyshell)
-"d" = (/obj/structure/loot_pile/surface/drone,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"e" = (/obj/structure/loot_pile/maint/boxfort,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"f" = (/obj/random/junk,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"g" = (/obj/item/stack/rods,/obj/effect/landmark/loot_spawn,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"h" = (/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/emptyshell)
-"i" = (/obj/machinery/door/airlock,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"j" = (/obj/item/stack/cable_coil,/obj/random/junk,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"l" = (/obj/effect/landmark/loot_spawn/low,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"o" = (/obj/item/stack/rods,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"p" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"z" = (/mob/living/simple_mob/humanoid/merc/ranged/space,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"D" = (/obj/random/trash,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"G" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"H" = (/obj/effect/landmark/loot_spawn/low,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"I" = (/obj/random/junk,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"K" = (/obj/item/stack/rods{amount = 5},/turf/template_noop,/area/template_noop)
-"R" = (/obj/effect/landmark/loot_spawn,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"S" = (/obj/item/stack/rods,/obj/effect/landmark/loot_spawn/low,/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/emptyshell)
-"Z" = (/turf/simulated/floor/plating,/area/submap/emptyshell)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/turf/simulated/wall/r_wall,
+/area/submap/emptyshell)
+"d" = (
+/obj/structure/loot_pile/surface/drone,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"e" = (
+/obj/structure/loot_pile/maint/boxfort,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"f" = (
+/obj/random/junk,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"g" = (
+/obj/item/stack/rods,
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"h" = (
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/emptyshell)
+"i" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"j" = (
+/obj/item/stack/cable_coil,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"l" = (
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"o" = (
+/obj/item/stack/rods,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"p" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"z" = (
+/mob/living/simple_mob/humanoid/merc/ranged/space,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"D" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"G" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"H" = (
+/obj/effect/landmark/loot_spawn/low,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"I" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"K" = (
+/obj/item/stack/rods{
+	amount = 5
+	},
+/turf/template_noop,
+/area/template_noop)
+"R" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"S" = (
+/obj/item/stack/rods,
+/obj/effect/landmark/loot_spawn/low,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
+"Z" = (
+/turf/simulated/floor/plating,
+/area/submap/emptyshell)
 
 (1,1,1) = {"
-aaKaaaaaabaaaaaaa
-aaabbaaababaabaKa
-aaabccccccccccKba
-aabccccccccccccaa
-abKcccdeZpZGcccba
-abaccZZZDfIDZccbb
-bbbZcDgHpRllZccbb
-aaZhiZIopzZpDccaa
-aaZhiZZDZIGZIccbb
-abbZcplZlZlSZccbb
-aaaccjZppZIZeccbb
-aaacccGZeDZdcccKa
-aaKccccccccccccba
-aabaccccccccccaaa
-aaaabbaaaaaaaaKaa
+a
+a
+a
+a
+a
+a
+b
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+b
+b
+b
+a
+a
+b
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+K
+a
+a
+b
+K
+a
+b
+Z
+Z
+b
+a
+a
+K
+b
+a
+"}
+(4,1,1) = {"
+a
+b
+b
+c
+c
+c
+Z
+h
+h
+Z
+c
+c
+c
+a
+a
+"}
+(5,1,1) = {"
+a
+b
+c
+c
+c
+c
+c
+i
+i
+c
+c
+c
+c
+c
+b
+"}
+(6,1,1) = {"
+a
+a
+c
+c
+c
+Z
+D
+Z
+Z
+p
+j
+c
+c
+c
+b
+"}
+(7,1,1) = {"
+a
+a
+c
+c
+d
+Z
+g
+I
+Z
+l
+Z
+G
+c
+c
+a
+"}
+(8,1,1) = {"
+a
+a
+c
+c
+e
+Z
+H
+o
+D
+Z
+p
+Z
+c
+c
+a
+"}
+(9,1,1) = {"
+a
+b
+c
+c
+Z
+D
+p
+p
+Z
+l
+p
+e
+c
+c
+a
+"}
+(10,1,1) = {"
+b
+a
+c
+c
+p
+f
+R
+z
+I
+Z
+Z
+D
+c
+c
+a
+"}
+(11,1,1) = {"
+a
+b
+c
+c
+Z
+I
+l
+Z
+G
+l
+I
+Z
+c
+c
+a
+"}
+(12,1,1) = {"
+a
+a
+c
+c
+G
+D
+l
+p
+Z
+S
+Z
+d
+c
+c
+a
+"}
+(13,1,1) = {"
+a
+a
+c
+c
+c
+Z
+Z
+D
+I
+Z
+e
+c
+c
+c
+a
+"}
+(14,1,1) = {"
+a
+b
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+a
+"}
+(15,1,1) = {"
+a
+a
+K
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+a
+K
+"}
+(16,1,1) = {"
+a
+K
+b
+a
+b
+b
+b
+a
+b
+b
+b
+K
+b
+a
+a
+"}
+(17,1,1) = {"
+a
+a
+a
+a
+a
+b
+b
+a
+b
+b
+b
+a
+a
+a
+a
 "}

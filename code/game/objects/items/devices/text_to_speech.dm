@@ -1,4 +1,4 @@
-/obj/item/device/text_to_speech
+/obj/item/text_to_speech
 	name = "TTS device"
 	desc = "A device that speaks an inputted message. Given to crew which can not speak properly or at all."
 	icon = 'icons/obj/integrated_electronics/electronic_setups.dmi'
@@ -6,7 +6,7 @@
 	w_class = ITEMSIZE_SMALL
 	var/named
 
-/obj/item/device/text_to_speech/attack_self(mob/user as mob)
+/obj/item/text_to_speech/attack_self(mob/user as mob)
 	if(user.incapacitated(INCAPACITATION_KNOCKDOWN|INCAPACITATION_DISABLED)) // EDIT: We can use the device only if we are not in certain types of incapacitation. We don't want chairs stopping us from texting!!
 		to_chat(user, "You cannot activate the device in your state.")
 		return
@@ -24,9 +24,9 @@
 
 	var/message = sanitize(tgui_input_text(user,"Choose a message to relay to those around you."))
 	if(message)
-		audible_message("\icon[src][bicon(src)] \The [src.name] states, \"[message]\"", runemessage = "synthesized speech")
+		audible_message("[icon2html(src, user.client)] \The [src.name] states, \"[message]\"", runemessage = "synthesized speech")
 		if(ismob(loc))
-			loc.audible_message("", runemessage = "\[TTS Voice\] [message]")
+			loc.runechat_message("\[TTS Voice\] [message]")
 
-/obj/item/device/text_to_speech/AltClick(mob/user) // QOL Change
+/obj/item/text_to_speech/AltClick(mob/user) // QOL Change
 	attack_self(user)

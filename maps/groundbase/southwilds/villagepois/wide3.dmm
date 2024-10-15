@@ -39,7 +39,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/poi/wildvillage/wide/wide3)
 "i" = (
 /obj/machinery/light/small{
@@ -104,7 +104,7 @@
 /area/submap/groundbase/poi/wildvillage/wide/wide3)
 "r" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /obj/structure/curtain/open/bed{
 	color = "#4287f5"
 	},
@@ -237,7 +237,7 @@
 /area/submap/groundbase/poi/wildvillage/wide/wide3)
 "N" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /obj/random/plushie,
 /obj/structure/curtain/open/bed{
 	color = "#5e0c1d"
@@ -251,7 +251,7 @@
 /turf/simulated/floor/outdoors/sidewalk/slab,
 /area/submap/groundbase/poi/wildvillage/wide/wide3)
 "Q" = (
-/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/poi/wildvillage/wide/wide3)
 "R" = (
 /obj/machinery/light/small{

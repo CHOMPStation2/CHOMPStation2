@@ -10,12 +10,16 @@
 	desc = "Allows you to see a short distance in the dark. (Half the screen)."
 	cost = 1
 	var_changes = list("darksight" = 4)  //CHOMP Edit
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN, SPECIES_XENOHYBRID, SPECIES_VULPKANIN, SPECIES_XENO, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //These species already have strong darksight by default.
 
 /datum/trait/positive/darksight_plus
 	name = "Darksight, Major"
 	desc = "Allows you to see in the dark for the whole screen."
 	cost = 2
 	var_changes = list("darksight" = 8)
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN, SPECIES_XENOHYBRID, SPECIES_VULPKANIN, SPECIES_XENO, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //These species already have strong darksight by default.
 
 /datum/trait/positive/densebones
 	name = "Dense Bones"
@@ -144,7 +148,7 @@
 	..()
 	if (trait_prefs?["pass_table"] || !trait_prefs)
 		H.pass_flags |= PASSTABLE
-	H.verbs |= /mob/living/proc/toggle_pass_table
+	add_verb(H,/mob/living/proc/toggle_pass_table) //CHOMPEdit TGPanel
 
 /datum/trait/positive/grappling_expert
 	name = "Grappling Expert"
@@ -232,8 +236,8 @@
 /datum/modifier/adrenaline
 	name = "Adrenaline Rush"
 	desc = "A rush of adrenaline, usually caused by near death in situations."
-	on_created_text = "<span class='danger'>You suddenly feel adrenaline pumping through your veins as your body refuses to give up! You feel stronger, and faster, and the pain fades away quickly.</span>"
-	on_expired_text = "<span class='danger'>You feel your body finally give in once more as the adrenaline subsides. The pain returns in full blast, along with your strength fading once more.</span>"
+	on_created_text = span_danger("You suddenly feel adrenaline pumping through your veins as your body refuses to give up! You feel stronger, and faster, and the pain fades away quickly.")
+	on_expired_text = span_danger("You feel your body finally give in once more as the adrenaline subsides. The pain returns in full blast, along with your strength fading once more.")
 
 	disable_duration_percent = 0		//Immune to being disabled.
 	pain_immunity = TRUE				//Immune to pain
@@ -277,8 +281,8 @@
 /datum/modifier/adrenaline_recovery
 	name = "Adrenaline detox"
 	desc = "After an adrenaline rush, one will find themselves suffering from adrenaline detox, which is their body recovering from an intense adrenaline rush."
-	on_created_text = "<span class='danger'>Your body aches and groans, forcing you into a period of rest as it recovers from the intense adrenaline rush.</span>"
-	on_expired_text = "<span class='notice'>You finally recover from your adrenaline rush, your body returning to its normal state.</span>"
+	on_created_text = span_danger("Your body aches and groans, forcing you into a period of rest as it recovers from the intense adrenaline rush.")
+	on_expired_text = span_notice("You finally recover from your adrenaline rush, your body returning to its normal state.")
 
 	disable_duration_percent = 1.35
 	outgoing_melee_damage_percent = 0.75
@@ -300,7 +304,7 @@
 
 /datum/trait/positive/insect_sting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/insect_sting
+	add_verb(H,/mob/living/proc/insect_sting) //CHOMPEdit TGPanel
 
 // TANKINESS LETS GOOOOOOOOO
 /datum/trait/positive/burn_resist_plus // Equivalent to Burn Weakness Major, cannot be taken at the same time.
@@ -388,7 +392,7 @@
 
 /datum/trait/positive/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
+	add_verb(H,/mob/living/carbon/human/proc/bloodsuck) //CHOMPEdit TGPanel
 
 /datum/trait/positive/sonar
 	name ="Perceptive Hearing"
@@ -397,7 +401,7 @@
 
 /datum/trait/positive/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
+	add_verb(H,/mob/living/carbon/human/proc/sonar_ping) //CHOMPEdit TGPanel
 
 /datum/trait/positive/toxin_gut
 	name ="Robust Gut"
@@ -407,3 +411,26 @@
 /datum/trait/positive/toxin_gut/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.toxin_gut = TRUE
+
+/datum/trait/positive/nobreathe // CHOMPedit
+	name = "Breathless"
+	desc = "You or your species have adapted to no longer require lungs, and as such no longer need to breathe!"
+
+	can_take = ORGANICS
+
+	var_changes = list("breath_type" = "null", "poison_type" = "null", "exhale_type" = "null", "water_breather" = "TRUE")
+	excludes = list(/datum/trait/negative/breathes/phoron,
+					/datum/trait/negative/breathes/nitrogen,
+					/datum/trait/positive/light_breather,
+					/datum/trait/negative/deep_breather
+)
+	cost = 6
+
+/datum/trait/positive/nobreathe/apply(var/datum/species/S, var/mob/living/carbon/human/H)
+	..()
+	H.does_not_breathe = 1
+	var/obj/item/organ/internal/breathy = H.internal_organs_by_name[O_LUNGS]
+	if(!breathy)
+		return
+	H.internal_organs -= breathy
+	qdel(breathy)

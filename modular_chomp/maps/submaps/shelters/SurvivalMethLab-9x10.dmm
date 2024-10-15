@@ -1,53 +1,463 @@
-"a" = (/obj/structure/sign/mining/survival,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMethLab)
-"b" = (/obj/machinery/light{dir = 1},/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"d" = (/obj/structure/window/reinforced/survival_pod{dir = 4; opacity = 1},/obj/structure/window/reinforced/survival_pod{opacity = 1},/obj/machinery/door/window/survival_pod{dir = 1},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalMethLab)
-"f" = (/obj/structure/bed/chair/sofa/brown,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"g" = (/obj/machinery/recharger/wallcharger{pixel_x = -27; pixel_y = -10},/obj/machinery/recharger/wallcharger{pixel_x = -27; pixel_y = 3},/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"h" = (/obj/structure/table/woodentable,/obj/effect/floor_decal/rust,/obj/random/maintenance/engineering,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"i" = (/obj/machinery/button/remote/airlock{dir = 1; id = "stolenlock"; pixel_y = -24; specialfunctions = 4},/obj/machinery/light_switch{pixel_x = 8; pixel_y = -22},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"k" = (/obj/structure/table/reinforced,/obj/machinery/reagentgrinder,/obj/machinery/light,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"l" = (/obj/structure/bed/chair/sofa/left/brown{dir = 8},/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"m" = (/obj/item/device/gps/computer,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"n" = (/obj/machinery/smartfridge/survival_pod,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/weapon/storage/pill_bottle/antitox,/obj/item/weapon/storage/box/survival/space,/obj/item/device/healthanalyzer,/obj/item/weapon/storage/pill_bottle/dice_nerd,/obj/machinery/light{dir = 1},/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/starcaster_news,/obj/item/device/starcaster_news,/obj/item/device/threadneedle,/obj/item/device/flashlight,/obj/item/device/flashlight,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/pill_bottle/spaceacillin,/obj/random/soap,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/storage/box/flare,/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalMethLab)
-"o" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/grille,/obj/structure/curtain/black,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalMethLab)
-"q" = (/obj/structure/bed/chair/sofa/right/brown,/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"r" = (/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"s" = (/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/glass/beaker/large,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"t" = (/obj/structure/table/survival_pod,/obj/machinery/power/apc/alarms_hidden{pixel_y = -20},/obj/machinery/light{dir = 8},/obj/item/weapon/storage/toolbox/mechanical,/obj/item/clothing/glasses/welding,/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"u" = (/obj/structure/sign/mining/survival{dir = 1},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMethLab)
-"w" = (/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"y" = (/obj/structure/table/woodentable,/obj/random/maintenance/cargo,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"z" = (/obj/structure/table/survival_pod,/obj/random/maintenance/cargo,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"B" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMethLab)
-"C" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{opacity = 1},/obj/machinery/door/window/survival_pod{dir = 1},/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 4},/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"D" = (/obj/structure/table/reinforced,/obj/machinery/chemical_dispenser/biochemistry/full,/obj/machinery/light{dir = 1},/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"E" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMethLab)
-"F" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/door/window/survival_pod{dir = 2},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalMethLab)
-"H" = (/obj/structure/table/reinforced,/obj/machinery/chemical_dispenser/full,/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"I" = (/obj/machinery/vending/wallmed1{dir = 1; name = "Emergency NanoMed"; pixel_y = -25},/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"J" = (/obj/machinery/smartfridge/chemistry,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"L" = (/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"M" = (/obj/structure/window/reinforced/survival_pod{dir = 4; opacity = 1},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/machinery/door/window/survival_pod{dir = 2},/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 8},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalMethLab)
-"N" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/grille,/obj/structure/curtain/black,/obj/structure/barricade/planks,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalMethLab)
-"O" = (/obj/structure/table/survival_pod,/obj/structure/closet/walllocker_double/survival/west,/obj/effect/floor_decal/rust,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"Q" = (/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMethLab)
-"R" = (/obj/machinery/door/airlock/voidcraft/survival_pod{id_tag = "stolenlock"},/obj/structure/barricade/planks,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"S" = (/obj/structure/bed/chair/sofa/corner/brown,/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"T" = (/obj/machinery/newscaster{pixel_y = -28},/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"U" = (/turf/template_noop,/area/template_noop)
-"V" = (/obj/machinery/door/airlock/voidcraft/survival_pod{id_tag = "splock"},/obj/structure/barricade/planks,/obj/effect/floor_decal/rust,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"W" = (/obj/structure/fans,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
-"X" = (/obj/structure/sign/mining/survival{dir = 8},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalMethLab)
-"Z" = (/obj/machinery/chem_master,/turf/simulated/shuttle/floor/voidcraft,/area/survivalpod/superpose/SurvivalMethLab)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/sign/mining/survival,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMethLab)
+"b" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"d" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4;
+	opacity = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalMethLab)
+"f" = (
+/obj/structure/bed/chair/sofa/brown,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"g" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -27;
+	pixel_y = -10
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -27;
+	pixel_y = 3
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"h" = (
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/rust,
+/obj/random/maintenance/engineering,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"i" = (
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	id = "stolenlock";
+	pixel_y = -24;
+	specialfunctions = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 8;
+	pixel_y = -22
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"k" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"l" = (
+/obj/structure/bed/chair/sofa/left/brown{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"m" = (
+/obj/item/gps/computer,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"n" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/random/soap,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalMethLab)
+"o" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalMethLab)
+"q" = (
+/obj/structure/bed/chair/sofa/right/brown,
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"r" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"s" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/large,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"t" = (
+/obj/structure/table/survival_pod,
+/obj/machinery/power/apc/alarms_hidden{
+	pixel_y = -20
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/storage/toolbox/mechanical,
+/obj/item/clothing/glasses/welding,
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"u" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMethLab)
+"w" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"y" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/cargo,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"z" = (
+/obj/structure/table/survival_pod,
+/obj/random/maintenance/cargo,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"B" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMethLab)
+"C" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"D" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/biochemistry/full,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"E" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMethLab)
+"F" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 2
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalMethLab)
+"H" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/full,
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"I" = (
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	name = "Emergency NanoMed";
+	pixel_y = -25
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"J" = (
+/obj/machinery/smartfridge/chemistry,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"L" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"M" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4;
+	opacity = 1
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 2
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalMethLab)
+"N" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/obj/structure/barricade/planks,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalMethLab)
+"O" = (
+/obj/structure/table/survival_pod,
+/obj/structure/closet/walllocker_double/survival/west,
+/obj/effect/floor_decal/rust,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"Q" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMethLab)
+"R" = (
+/obj/machinery/door/airlock/voidcraft/survival_pod{
+	id_tag = "stolenlock"
+	},
+/obj/structure/barricade/planks,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"S" = (
+/obj/structure/bed/chair/sofa/corner/brown,
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"T" = (
+/obj/machinery/newscaster{
+	pixel_y = -28
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"U" = (
+/turf/template_noop,
+/area/template_noop)
+"V" = (
+/obj/machinery/door/airlock/voidcraft/survival_pod{
+	id_tag = "splock"
+	},
+/obj/structure/barricade/planks,
+/obj/effect/floor_decal/rust,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"W" = (
+/obj/structure/fans,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
+"X" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalMethLab)
+"Z" = (
+/obj/machinery/chem_master,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod/superpose/SurvivalMethLab)
 
 (1,1,1) = {"
-QuNuQuNuQU
-XnrDHZJFEM
-NzLLLwLLoU
-XOIsLkTCEd
-QQQQVQQQQU
-XWmQgqfSBU
-NLLbwyhlNU
-XtLiLwLwBU
-QaNaRaNaQU
+Q
+X
+N
+X
+Q
+X
+N
+X
+Q
+"}
+(2,1,1) = {"
+u
+n
+z
+O
+Q
+W
+L
+t
+a
+"}
+(3,1,1) = {"
+N
+r
+L
+I
+Q
+m
+L
+L
+N
+"}
+(4,1,1) = {"
+u
+D
+L
+s
+Q
+Q
+b
+i
+a
+"}
+(5,1,1) = {"
+Q
+H
+L
+L
+V
+g
+w
+L
+R
+"}
+(6,1,1) = {"
+u
+Z
+w
+k
+Q
+q
+y
+w
+a
+"}
+(7,1,1) = {"
+N
+J
+L
+T
+Q
+f
+h
+L
+N
+"}
+(8,1,1) = {"
+u
+F
+L
+C
+Q
+S
+l
+w
+a
+"}
+(9,1,1) = {"
+Q
+E
+o
+E
+Q
+B
+N
+B
+Q
+"}
+(10,1,1) = {"
+U
+M
+U
+d
+U
+U
+U
+U
+U
 "}

@@ -1,8 +1,8 @@
 /datum/supply_pack/security/secpsg
 	name = "Security Belt PSGs"
 	contains = list(
-			/obj/item/device/personal_shield_generator/belt/security/loaded,
-			/obj/item/device/personal_shield_generator/belt/security/loaded
+			/obj/item/personal_shield_generator/belt/security/loaded,
+			/obj/item/personal_shield_generator/belt/security/loaded
 			)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
@@ -11,7 +11,7 @@
 /datum/supply_pack/security/secstrongpsg
 	name = "Security Reinforced Backpack PSG"
 	contains = list(
-			/obj/item/device/personal_shield_generator/security/strong/loaded
+			/obj/item/personal_shield_generator/security/strong/loaded
 			)
 	cost = 200
 	containertype = /obj/structure/closet/crate/secure/gear
@@ -20,7 +20,7 @@
 /datum/supply_pack/security/secstrongpsg
 	name = "Security PSG-P"
 	contains = list(
-			/obj/item/device/personal_shield_generator/belt/parry
+			/obj/item/personal_shield_generator/belt/parry
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
@@ -30,7 +30,7 @@
 	name = "Experimental Capture Gun"
 	num_contained = 4
 	contains = list(
-			/obj/item/weapon/gun/energy/rednetgun
+			/obj/item/gun/energy/rednetgun
 			)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear

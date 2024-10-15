@@ -21,7 +21,7 @@
 	tt_desc = "S Carabidae glacios"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/frostfly)
 
-	faction = "diyaab"
+	faction = FACTION_DIYAAB
 
 	icon_state = "firefly"
 	icon_living = "firefly"
@@ -87,8 +87,8 @@
 /mob/living/simple_mob/animal/sif/frostfly/Initialize()
 	. = ..()
 	smoke_special = new
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 /datum/say_list/frostfly
 	speak = list("Zzzz.", "Kss.", "Zzt?")

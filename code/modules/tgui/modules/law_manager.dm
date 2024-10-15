@@ -89,7 +89,7 @@
 			return TRUE
 
 		if("change_supplied_law_position")
-			var/new_position = tgui_input_number(usr, "Enter new supplied law position between 1 and [MAX_SUPPLIED_LAW_NUMBER], inclusive. Inherent laws at the same index as a supplied law will not be stated.", "Law Position", supplied_law_position)
+			var/new_position = tgui_input_number(usr, "Enter new supplied law position between 1 and [MAX_SUPPLIED_LAW_NUMBER], inclusive. Inherent laws at the same index as a supplied law will not be stated.", "Law Position", supplied_law_position, MAX_SUPPLIED_LAW_NUMBER, 1)
 			if(isnum(new_position) && can_still_topic(usr, state))
 				supplied_law_position = CLAMP(new_position, 1, MAX_SUPPLIED_LAW_NUMBER)
 			return TRUE
@@ -130,15 +130,15 @@
 			return TRUE
 
 		if("notify_laws")
-			to_chat(owner, "<span class='danger'>Law Notice</span>")
+			to_chat(owner, span_danger("Law Notice"))
 			owner.laws.show_laws(owner)
 			if(isAI(owner))
 				var/mob/living/silicon/ai/AI = owner
 				for(var/mob/living/silicon/robot/R in AI.connected_robots)
-					to_chat(R, "<span class='danger'>Law Notice</span>")
+					to_chat(R, span_danger("Law Notice"))
 					R.laws.show_laws(R)
 			if(usr != owner)
-				to_chat(usr, "<span class='notice'>Laws displayed.</span>")
+				to_chat(usr, span_notice("Laws displayed."))
 			return TRUE
 
 /datum/tgui_module/law_manager/tgui_interact(mob/user, datum/tgui/ui)

@@ -11,7 +11,7 @@
 
 /client/proc/modify_server_news()
 	set name = "Modify Public News"
-	set category = "Server"
+	set category = "Server.Game" //CHOMPEdit
 
 	if(!check_rights(0))
 		return

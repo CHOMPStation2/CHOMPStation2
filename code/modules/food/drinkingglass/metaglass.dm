@@ -1,21 +1,22 @@
-/obj/item/weapon/reagent_containers/food/drinks/metaglass
+/obj/item/reagent_containers/food/drinks/metaglass
 	name = "metamorphic glass"
 	desc = "This glass changes shape and form depending on the drink inside... fancy!"
 	icon_state = "glass_empty"
 	amount_per_transfer_from_this = 5
 	volume = 30
 	unacidable = TRUE //glass
-	center_of_mass = list("x"=16, "y"=10)
+	center_of_mass_x = 16 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 	matter = list(MAT_GLASS = 500)
 	icon = 'icons/obj/drinks.dmi'
 
-/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint
+/obj/item/reagent_containers/food/drinks/metaglass/metapint
 	name = "metamorphic pint glass"
 	desc = "This glass changes shape and form depending on the drink inside... fancy!"
 	icon_state = "pglass_empty"
 	volume = 60
 
-/obj/item/weapon/reagent_containers/food/drinks/metaglass/on_reagent_change()
+/obj/item/reagent_containers/food/drinks/metaglass/on_reagent_change()
 	if (reagents.reagent_list.len > 0)
 		var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -40,25 +41,29 @@
 			desc = "You can't really tell what this is."
 
 		if(R.glass_center_of_mass)
-			center_of_mass = R.glass_center_of_mass
+			center_of_mass_x = R.glass_center_of_mass["x"] //CHOMPEdit
+			center_of_mass_y = R.glass_center_of_mass["x"] //CHOMPEdit
 		else
-			center_of_mass = list("x"=16, "y"=10)
+			center_of_mass_x = 16 //CHOMPEdit
+			center_of_mass_y= 10 //CHOMPEdit
 
 		if(R.price_tag)
 			price_tag = R.price_tag
 		else
 			price_tag = null
 	else
-		if(type == /obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint)
+		if(type == /obj/item/reagent_containers/food/drinks/metaglass/metapint)
 			icon_state = "pglass_empty"
 			name = "metamorphic pint glass"
 			desc = "This glass changes shape and form depending on the drink inside... fancy!"
-			center_of_mass = list("x"=16, "y"=10)
+			center_of_mass_x = 16 //CHOMPEdit
+			center_of_mass_y= 10 //CHOMPEdit
 		else
 			icon_state = "glass_empty"
 			name = "metamorphic glass"
 			desc = "This glass changes shape and form depending on the drink inside... fancy!"
-			center_of_mass = list("x"=16, "y"=10)
+			center_of_mass_x = 16 //CHOMPEdit
+			center_of_mass_y= 10 //CHOMPEdit
 			return
 
 /*

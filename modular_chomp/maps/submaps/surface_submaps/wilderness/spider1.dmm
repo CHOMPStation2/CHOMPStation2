@@ -14,7 +14,9 @@
 /turf/template_noop,
 /area/submap/spider1)
 "e" = (
-/obj/effect/spider/eggcluster/small/frost,
+/obj/effect/spider/eggcluster/small/frost{
+	faction = "awaymission"
+	},
 /turf/template_noop,
 /area/submap/spider1)
 "f" = (

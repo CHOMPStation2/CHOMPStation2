@@ -25,7 +25,7 @@ var/obj/screen/robot_inventory
 	using.color = HUD.ui_color
 	using.alpha = HUD.ui_alpha
 	using.icon_state = "radio"
-	using.screen_loc = ui_movi
+	using.screen_loc = ui_borg_radio
 	using.layer = HUD_LAYER
 	adding += using
 
@@ -80,6 +80,17 @@ var/obj/screen/robot_inventory
 	using.layer = HUD_LAYER
 	adding += using
 	HUD.action_intent = using
+
+	//Move intent (walk/run)
+	using = new /obj/screen()
+	using.name = "mov_intent"
+	using.icon = HUD.ui_style
+	using.icon_state = (m_intent == "run" ? "running" : "walking")
+	using.screen_loc = ui_movi
+	using.color = HUD.ui_color
+	using.alpha = HUD.ui_alpha
+	HUD.adding += using
+	HUD.move_intent = using
 
 //Health
 	healths = new /obj/screen()
@@ -205,7 +216,50 @@ var/obj/screen/robot_inventory
 		client.screen += list( throw_icon, zone_sel, hands, healths, pullin, robot_inventory, gun_setting_icon)
 		client.screen += HUD.adding + HUD.other
 		client.screen += client.void
+		if(vtec_active)
+			using = new /obj/screen()
+			using.name = "control_vtec"
+			using.icon = HUD.ui_style
+			using.screen_loc = ui_vtec_control
+			using.color = HUD.ui_color
+			using.alpha = HUD.ui_alpha
+			if(speed == 0)
+				using.icon_state = "speed_0"
+			else if(speed == -0.5)
+				using.icon_state = "speed_1"
+			else if(speed == -1)
+				using.icon_state = "speed_2"
+			HUD.control_vtec = using
+			m_intent = "run"
+			HUD.move_intent.icon_state = "running"
+			client.screen += HUD.control_vtec
 
+/datum/hud/proc/toggle_vtec_control()
+	if(!isrobot(mymob))
+		return
+
+	var/mob/living/silicon/robot/R = mymob
+	if(!control_vtec)
+		var/obj/screen/using = new /obj/screen()
+		using.name = "control_vtec"
+		using.icon = ui_style
+		using.screen_loc = ui_vtec_control
+		using.color = ui_color
+		using.alpha = ui_alpha
+		control_vtec = using
+	if(R.vtec_active)
+		if(R.speed == 0)
+			control_vtec.icon_state = "speed_0"
+		else if(R.speed == -0.5)
+			control_vtec.icon_state = "speed_1"
+		else if(R.speed == -1)
+			control_vtec.icon_state = "speed_2"
+		R.m_intent = "run"
+		R.hud_used.move_intent.icon_state = "running"
+		R.client?.screen += control_vtec
+	else
+		R.client?.screen -= control_vtec
+		R.speed = 0
 
 /datum/hud/proc/toggle_show_robot_modules()
 	if(!isrobot(mymob))
@@ -228,11 +282,11 @@ var/obj/screen/robot_inventory
 		//r.client.screen += robot_inventory	//"store" icon
 
 		if(!r.module)
-			to_chat(usr, "<span class='danger'>No module selected</span>")
+			to_chat(usr, span_danger("No module selected"))
 			return
 
 		if(!r.module.modules)
-			to_chat(usr, "<span class='danger'>Selected module has no modules to select</span>")
+			to_chat(usr, span_danger("Selected module has no modules to select"))
 			return
 
 		if(!r.robot_modules_background)
@@ -240,7 +294,8 @@ var/obj/screen/robot_inventory
 
 		var/display_rows = -round(-(r.module.modules.len) / 8)
 		r.robot_modules_background.screen_loc = "CENTER-4:16,SOUTH+1:7 to CENTER+3:16,SOUTH+[display_rows]:7"
-		r.client.screen += r.robot_modules_background
+		if(r.client)
+			r.client.screen += r.robot_modules_background
 
 		var/x = -4	//Start at CENTER-4,SOUTH+1
 		var/y = 1
@@ -251,14 +306,14 @@ var/obj/screen/robot_inventory
 		if(r.emagged || r.emag_items)
 			for(var/obj/O in r.module.emag)
 				if(!(O in r.module.modules))
-					r.module.modules.Add(r.module.emag)
+					r.module.modules.Add(O)
 		else
 			for(var/obj/O in r.module.emag)
 				if(O in r.module.modules)
-					r.module.modules.Remove(r.module.emag)
+					r.module.modules.Remove(O)
 
 		for(var/atom/movable/A in r.module.modules)
-			if( (A != r.module_state_1) && (A != r.module_state_2) && (A != r.module_state_3) )
+			if(r.client && (A != r.module_state_1) && (A != r.module_state_2) && (A != r.module_state_3) )
 				//Module is not currently active
 				r.client.screen += A
 				if(x < 0)
@@ -275,12 +330,13 @@ var/obj/screen/robot_inventory
 	else
 		//Modules display is hidden
 		//r.client.screen -= robot_inventory	//"store" icon
-		for(var/atom/A in r.module.modules)
-			if( (A != r.module_state_1) && (A != r.module_state_2) && (A != r.module_state_3) )
+		for(var/atom/A in r.module?.modules)
+			if(r.client && (A != r.module_state_1) && (A != r.module_state_2) && (A != r.module_state_3) )
 				//Module is not currently active
 				r.client.screen -= A
 		r.shown_robot_modules = 0
-		r.client.screen -= r.robot_modules_background
+		if(r.client)
+			r.client.screen -= r.robot_modules_background
 
 /mob/living/silicon/robot/update_hud()
 	if(modtype)

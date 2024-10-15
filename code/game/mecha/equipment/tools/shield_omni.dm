@@ -57,7 +57,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/omni_shield/get_equip_info()
 	if(!chassis) return
-	return "<span style=\"color:[equip_ready?"#0f0":"#f00"];\">*</span>&nbsp;[src.name] - <a href='?src=\ref[src];toggle_omnishield=1'>[shields?.active?"Dea":"A"]ctivate</a>"
+	return (equip_ready ? span_green("*") : span_red("*")) + "&nbsp;[src.name] - <a href='?src=\ref[src];toggle_omnishield=1'>[shields?.active?"Dea":"A"]ctivate</a>"
 
 
 ////// The shield projector object
@@ -77,7 +77,8 @@
 /obj/item/shield_projector/rectangle/mecha/Initialize()
 	. = ..()
 	my_mech = loc
-	GLOB.moved_event.register(my_mech, src, /obj/item/shield_projector/proc/update_shield_positions)
+	RegisterSignal(my_mech, COMSIG_OBSERVER_MOVED, /obj/item/shield_projector/proc/update_shield_positions)
+	my_mech.AddComponent(/datum/component/recursive_move)
 	update_shift(my_mech)
 
 /obj/item/shield_projector/rectangle/mecha/proc/update_shift(atom/movable/mech)
@@ -88,7 +89,7 @@
 	shift_y = round(y_dif, 1)
 
 /obj/item/shield_projector/rectangle/mecha/Destroy()
-	GLOB.moved_event.unregister(my_mech, src, /obj/item/shield_projector/proc/update_shield_positions)
+	UnregisterSignal(my_mech, COMSIG_OBSERVER_MOVED)
 	my_mech = null
 	..()
 

@@ -72,7 +72,7 @@ var/list/gamemode_cache = list()
 
 	var/static/respawn = 1
 	var/static/respawn_time = 3000			// time before a dead player is allowed to respawn (in ds, though the config file asks for minutes, and it's converted below)
-	var/static/respawn_message = "<span class='notice'><B>Make sure to play a different character, and please roleplay correctly!</B></span>"
+	var/static/respawn_message = span_notice("<B>Make sure to play a different character, and please roleplay correctly!</B>")
 
 	var/static/guest_jobban = 1
 	var/static/usewhitelist = 0
@@ -306,6 +306,22 @@ var/list/gamemode_cache = list()
 
 	var/static/invoke_youtubedl = null
 
+	//Enables/Disables the appropriate mob type from obtaining the verb on spawn. Still allows admins to manually give it to them.
+	var/static/allow_robot_recolor = FALSE
+	var/static/allow_simple_mob_recolor = FALSE
+
+	var/static/asset_transport
+
+	var/static/cache_assets = FALSE
+
+	var/static/save_spritesheets = FALSE
+
+	var/static/asset_simple_preload = FALSE
+
+	var/static/asset_cdn_webroot
+
+	var/static/asset_cdn_url
+
 /datum/configuration/New()
 	var/list/L = subtypesof(/datum/game_mode)
 	for (var/T in L)
@@ -516,7 +532,7 @@ var/list/gamemode_cache = list()
 					config.respawn_time = raw_minutes MINUTES
 
 				if ("respawn_message")
-					config.respawn_message = "<span class='notice'><B>[value]</B></span>"
+					config.respawn_message = span_notice("<B>[value]</B>")
 
 				if ("servername")
 					config.server_name = value
@@ -731,6 +747,7 @@ var/list/gamemode_cache = list()
 					var/ticklag = text2num(value)
 					if(ticklag > 0)
 						fps = 10 / ticklag
+						world.fps = fps //CHOMPEdit
 
 				if("tick_limit_mc_init")
 					tick_limit_mc_init = text2num(value)
@@ -987,6 +1004,30 @@ var/list/gamemode_cache = list()
 				if("invoke_youtubedl")
 					config.invoke_youtubedl = value
 
+				if("asset_transport")
+					config.asset_transport = value
+
+				if("cache_assets")
+					config.cache_assets = TRUE
+
+				if("save_spritesheets")
+					config.save_spritesheets = TRUE
+
+				if("asset_simple_preload")
+					config.asset_simple_preload = TRUE
+
+				if("asset_cdn_webroot")
+					config.asset_cdn_webroot = value
+
+				if("asset_cdn_url")
+					config.asset_cdn_url = value
+
+				if("allow_robot_recolor")
+					config.allow_robot_recolor = TRUE
+
+				if("allow_simple_mob_recolor")
+					config.allow_simple_mob_recolor = TRUE
+
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
 
@@ -1165,9 +1206,11 @@ var/list/gamemode_cache = list()
 	return runnable_modes
 
 /datum/configuration/proc/post_load()
+	SSdbcore.InitializeRound() // CHOMPEdit
+
 	//apply a default value to config.python_path, if needed
-	if (!config.python_path)
+	if (!CONFIG_GET(string/python_path)) // CHOMPEdit
 		if(world.system_type == UNIX)
-			config.python_path = "/usr/bin/env python2"
+			CONFIG_SET(string/python_path, "/usr/bin/env python2") // CHOMPEdit
 		else //probably windows, if not this should work anyway
-			config.python_path = "python"
+			CONFIG_SET(string/python_path, "python") // CHOMPEdit

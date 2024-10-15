@@ -4,8 +4,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	var/equip_preview_mob = EQUIP_PREVIEW_ALL
 	var/animations_toggle = FALSE
 
-	var/icon/bgstate = "000"
-	var/list/bgstate_options = list("000", "midgrey", "FFF", "white", "steel", "techmaint", "dark", "plating", "reinforced")
+	var/icon/bgstate = "steel"
+	var/list/bgstate_options = list("steel", "000", "midgrey", "FFF", "white", "techmaint", "desert", "grass", "snow")
 
 	var/ear_style		// Type of selected ear style
 	var/r_ears = 30		// Ear color.
@@ -90,152 +90,160 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	name = "Body"
 	sort_order = 3
 
-/datum/category_item/player_setup_item/general/body/load_character(var/savefile/S)
-	S["species"]			>> pref.species
-	S["hair_red"]			>> pref.r_hair
-	S["hair_green"]			>> pref.g_hair
-	S["hair_blue"]			>> pref.b_hair
-	S["grad_red"]			>> pref.r_grad
-	S["grad_green"]			>> pref.g_grad
-	S["grad_blue"]			>> pref.b_grad
-	S["facial_red"]			>> pref.r_facial
-	S["grad_red"]			>> pref.r_grad
-	S["grad_green"]			>> pref.g_grad
-	S["grad_blue"]			>> pref.b_grad
-	S["facial_green"]		>> pref.g_facial
-	S["facial_blue"]		>> pref.b_facial
-	S["skin_tone"]			>> pref.s_tone
-	S["skin_red"]			>> pref.r_skin
-	S["skin_green"]			>> pref.g_skin
-	S["skin_blue"]			>> pref.b_skin
-	S["hair_style_name"]	>> pref.h_style
-	S["grad_style_name"]	>> pref.grad_style
-	S["facial_style_name"]	>> pref.f_style
-	S["grad_style_name"]	>> pref.grad_style
-	S["eyes_red"]			>> pref.r_eyes
-	S["eyes_green"]			>> pref.g_eyes
-	S["eyes_blue"]			>> pref.b_eyes
-	S["b_type"]				>> pref.b_type
-	S["disabilities"]		>> pref.disabilities
-	S["organ_data"]			>> pref.organ_data
-	S["rlimb_data"]			>> pref.rlimb_data
-	S["body_markings"]		>> pref.body_markings
-	S["synth_color"]		>> pref.synth_color
-	S["synth_red"]			>> pref.r_synth
-	S["synth_green"]		>> pref.g_synth
-	S["synth_blue"]			>> pref.b_synth
-	S["synth_markings"]		>> pref.synth_markings
-	S["bgstate"]			>> pref.bgstate
-	S["body_descriptors"]	>> pref.body_descriptors
-	S["Wingdings"]			>> pref.wingdings //YWadd start
-	S["colorblind_mono"]	>> pref.colorblind_mono
-	S["colorblind_vulp"]	>> pref.colorblind_vulp
-	S["colorblind_taj"] 	>> pref.colorblind_taj
-	S["haemophilia"]        >> pref.haemophilia //YWadd end
-	S["ear_style"]		>> pref.ear_style
-	S["r_ears"]			>> pref.r_ears
-	S["g_ears"]			>> pref.g_ears
-	S["b_ears"]			>> pref.b_ears
-	S["r_ears2"]		>> pref.r_ears2
-	S["g_ears2"]		>> pref.g_ears2
-	S["b_ears2"]		>> pref.b_ears2
-	S["r_ears3"]		>> pref.r_ears3
-	S["g_ears3"]		>> pref.g_ears3
-	S["b_ears3"]		>> pref.b_ears3
-	S["tail_style"]		>> pref.tail_style
-	S["r_tail"]			>> pref.r_tail
-	S["g_tail"]			>> pref.g_tail
-	S["b_tail"]			>> pref.b_tail
-	S["r_tail2"]		>> pref.r_tail2
-	S["g_tail2"]		>> pref.g_tail2
-	S["b_tail2"]		>> pref.b_tail2
-	S["r_tail3"]		>> pref.r_tail3
-	S["g_tail3"]		>> pref.g_tail3
-	S["b_tail3"]		>> pref.b_tail3
-	S["wing_style"]		>> pref.wing_style
-	S["r_wing"]			>> pref.r_wing
-	S["g_wing"]			>> pref.g_wing
-	S["b_wing"]			>> pref.b_wing
-	S["r_wing2"]		>> pref.r_wing2
-	S["g_wing2"]		>> pref.g_wing2
-	S["b_wing2"]		>> pref.b_wing2
-	S["r_wing3"]		>> pref.r_wing3
-	S["g_wing3"]		>> pref.g_wing3
-	S["b_wing3"]		>> pref.b_wing3
-	S["digitigrade"] 	>> pref.digitigrade
+/datum/category_item/player_setup_item/general/body/load_character(list/save_data)
+	pref.species			= save_data["species"]
+	pref.r_hair				= save_data["hair_red"]
+	pref.g_hair				= save_data["hair_green"]
+	pref.b_hair				= save_data["hair_blue"]
+	pref.r_facial			= save_data["facial_red"]
+	pref.r_grad				= save_data["grad_red"]
+	pref.g_grad				= save_data["grad_green"]
+	pref.b_grad				= save_data["grad_blue"]
+	pref.g_facial			= save_data["facial_green"]
+	pref.b_facial			= save_data["facial_blue"]
+	pref.s_tone				= save_data["skin_tone"]
+	pref.r_skin				= save_data["skin_red"]
+	pref.g_skin				= save_data["skin_green"]
+	pref.b_skin				= save_data["skin_blue"]
+	pref.h_style			= save_data["hair_style_name"]
+	pref.f_style			= save_data["facial_style_name"]
+	pref.grad_style			= save_data["grad_style_name"]
+	pref.r_eyes				= save_data["eyes_red"]
+	pref.g_eyes				= save_data["eyes_green"]
+	pref.b_eyes				= save_data["eyes_blue"]
+	pref.b_type				= save_data["b_type"]
+	pref.disabilities		= save_data["disabilities"]
+	pref.organ_data			= check_list_copy(save_data["organ_data"])
+	pref.rlimb_data			= check_list_copy(save_data["rlimb_data"])
+	pref.body_markings		= check_list_copy(save_data["body_markings"])
+	for(var/i in pref.body_markings)
+		pref.body_markings[i] = check_list_copy(pref.body_markings[i])
+		for(var/j in pref.body_markings[i])
+			pref.body_markings[i][j] = check_list_copy(pref.body_markings[i][j])
+	pref.synth_color		= save_data["synth_color"]
+	pref.r_synth			= save_data["synth_red"]
+	pref.g_synth			= save_data["synth_green"]
+	pref.b_synth			= save_data["synth_blue"]
+	pref.synth_markings		= save_data["synth_markings"]
+	pref.bgstate			= save_data["bgstate"]
+	pref.body_descriptors	= check_list_copy(save_data["body_descriptors"])
+	//YWadd start
+	pref.wingdings			= save_data["Wingdings"]
+	pref.colorblind_mono	= save_data["colorblind_mono"]
+	pref.colorblind_vulp	= save_data["colorblind_vulp"]
+	pref.colorblind_taj		= save_data["colorblind_taj"]
+	pref.haemophilia		= save_data["haemophilia"]
+	//YWadd end
+	pref.ear_style			= save_data["ear_style"]
+	pref.r_ears				= save_data["r_ears"]
+	pref.g_ears				= save_data["g_ears"]
+	pref.b_ears				= save_data["b_ears"]
+	pref.r_ears2			= save_data["r_ears2"]
+	pref.g_ears2			= save_data["g_ears2"]
+	pref.b_ears2			= save_data["b_ears2"]
+	pref.r_ears3			= save_data["r_ears3"]
+	pref.g_ears3			= save_data["g_ears3"]
+	pref.b_ears3			= save_data["b_ears3"]
+	pref.tail_style			= save_data["tail_style"]
+	pref.r_tail				= save_data["r_tail"]
+	pref.g_tail				= save_data["g_tail"]
+	pref.b_tail				= save_data["b_tail"]
+	pref.r_tail2			= save_data["r_tail2"]
+	pref.g_tail2			= save_data["g_tail2"]
+	pref.b_tail2			= save_data["b_tail2"]
+	pref.r_tail3			= save_data["r_tail3"]
+	pref.g_tail3			= save_data["g_tail3"]
+	pref.b_tail3			= save_data["b_tail3"]
+	pref.wing_style			= save_data["wing_style"]
+	pref.r_wing				= save_data["r_wing"]
+	pref.g_wing				= save_data["g_wing"]
+	pref.b_wing				= save_data["b_wing"]
+	pref.r_wing2			= save_data["r_wing2"]
+	pref.g_wing2			= save_data["g_wing2"]
+	pref.b_wing2			= save_data["b_wing2"]
+	pref.r_wing3			= save_data["r_wing3"]
+	pref.g_wing3			= save_data["g_wing3"]
+	pref.b_wing3			= save_data["b_wing3"]
+	pref.digitigrade 		= save_data["digitigrade"]
 
-/datum/category_item/player_setup_item/general/body/save_character(var/savefile/S)
-	S["species"]			<< pref.species
-	S["hair_red"]			<< pref.r_hair
-	S["hair_green"]			<< pref.g_hair
-	S["hair_blue"]			<< pref.b_hair
-	S["grad_red"]			<< pref.r_grad
-	S["grad_green"]			<< pref.g_grad
-	S["grad_blue"]			<< pref.b_grad
-	S["facial_red"]			<< pref.r_facial
-	S["facial_green"]		<< pref.g_facial
-	S["facial_blue"]		<< pref.b_facial
-	S["skin_tone"]			<< pref.s_tone
-	S["skin_red"]			<< pref.r_skin
-	S["skin_green"]			<< pref.g_skin
-	S["skin_blue"]			<< pref.b_skin
-	S["hair_style_name"]	<< pref.h_style
-	S["grad_style_name"]	<< pref.grad_style
-	S["facial_style_name"]	<< pref.f_style
-	S["grad_style_name"]	<< pref.grad_style
-	S["eyes_red"]			<< pref.r_eyes
-	S["eyes_green"]			<< pref.g_eyes
-	S["eyes_blue"]			<< pref.b_eyes
-	S["b_type"]				<< pref.b_type
-	S["disabilities"]		<< pref.disabilities
-	S["organ_data"]			<< pref.organ_data
-	S["rlimb_data"]			<< pref.rlimb_data
-	S["body_markings"]		<< pref.body_markings
-	S["synth_color"]		<< pref.synth_color
-	S["synth_red"]			<< pref.r_synth
-	S["synth_green"]		<< pref.g_synth
-	S["synth_blue"]			<< pref.b_synth
-	S["synth_markings"]		<< pref.synth_markings
-	S["bgstate"]			<< pref.bgstate
-	S["body_descriptors"]	<< pref.body_descriptors
-	S["Wingdings"]          << pref.wingdings //YWadd start
-	S["colorblind_mono"]	<< pref.colorblind_mono
-	S["colorblind_vulp"]	<< pref.colorblind_vulp
-	S["colorblind_taj"] 	<< pref.colorblind_taj
-	S["haemophilia"]        << pref.haemophilia //YWadd end
-	S["ear_style"]		<< pref.ear_style
-	S["r_ears"]			<< pref.r_ears
-	S["g_ears"]			<< pref.g_ears
-	S["b_ears"]			<< pref.b_ears
-	S["r_ears2"]		<< pref.r_ears2
-	S["g_ears2"]		<< pref.g_ears2
-	S["b_ears2"]		<< pref.b_ears2
-	S["r_ears3"]		<< pref.r_ears3
-	S["g_ears3"]		<< pref.g_ears3
-	S["b_ears3"]		<< pref.b_ears3
-	S["tail_style"]		<< pref.tail_style
-	S["r_tail"]			<< pref.r_tail
-	S["g_tail"]			<< pref.g_tail
-	S["b_tail"]			<< pref.b_tail
-	S["r_tail2"]		<< pref.r_tail2
-	S["g_tail2"]		<< pref.g_tail2
-	S["b_tail2"]		<< pref.b_tail2
-	S["r_tail3"]		<< pref.r_tail3
-	S["g_tail3"]		<< pref.g_tail3
-	S["b_tail3"]		<< pref.b_tail3
-	S["wing_style"]		<< pref.wing_style
-	S["r_wing"]			<< pref.r_wing
-	S["g_wing"]			<< pref.g_wing
-	S["b_wing"]			<< pref.b_wing
-	S["r_wing2"]		<< pref.r_wing2
-	S["g_wing2"]		<< pref.g_wing2
-	S["b_wing2"]		<< pref.b_wing2
-	S["r_wing3"]		<< pref.r_wing3
-	S["g_wing3"]		<< pref.g_wing3
-	S["b_wing3"]		<< pref.b_wing3
-	S["digitigrade"]	<< pref.digitigrade
+/datum/category_item/player_setup_item/general/body/save_character(list/save_data)
+	save_data["species"]			= pref.species
+	save_data["hair_red"]			= pref.r_hair
+	save_data["hair_green"]			= pref.g_hair
+	save_data["hair_blue"]			= pref.b_hair
+	save_data["grad_red"]			= pref.r_grad
+	save_data["grad_green"]			= pref.g_grad
+	save_data["grad_blue"]			= pref.b_grad
+	save_data["facial_red"]			= pref.r_facial
+	save_data["facial_green"]		= pref.g_facial
+	save_data["facial_blue"]		= pref.b_facial
+	save_data["skin_tone"]			= pref.s_tone
+	save_data["skin_red"]			= pref.r_skin
+	save_data["skin_green"]			= pref.g_skin
+	save_data["skin_blue"]			= pref.b_skin
+	save_data["hair_style_name"]	= pref.h_style
+	save_data["facial_style_name"]	= pref.f_style
+	save_data["grad_style_name"]	= pref.grad_style
+	save_data["eyes_red"]			= pref.r_eyes
+	save_data["eyes_green"]			= pref.g_eyes
+	save_data["eyes_blue"]			= pref.b_eyes
+	save_data["b_type"]				= pref.b_type
+	save_data["disabilities"]		= pref.disabilities
+	save_data["organ_data"]			= check_list_copy(pref.organ_data)
+	save_data["rlimb_data"]			= check_list_copy(pref.rlimb_data)
+	var/list/body_markings 			= check_list_copy(pref.body_markings)
+	for(var/i in pref.body_markings)
+		body_markings[i] = check_list_copy(body_markings[i])
+		for(var/j in body_markings[i])
+			body_markings[i][j] = check_list_copy(body_markings[i][j])
+	save_data["body_markings"]		= body_markings
+	save_data["synth_color"]		= pref.synth_color
+	save_data["synth_red"]			= pref.r_synth
+	save_data["synth_green"]		= pref.g_synth
+	save_data["synth_blue"]			= pref.b_synth
+	save_data["synth_markings"]		= pref.synth_markings
+	save_data["bgstate"]			= pref.bgstate
+	save_data["body_descriptors"]	= check_list_copy(pref.body_descriptors)
+	//YWadd start
+	save_data["Wingdings"]			= pref.wingdings
+	save_data["colorblind_mono"]	= pref.colorblind_mono
+	save_data["colorblind_vulp"]	= pref.colorblind_vulp
+	save_data["colorblind_taj"]		= pref.colorblind_taj
+	save_data["haemophilia"]		= pref.haemophilia
+	//YWadd end
+	save_data["ear_style"]			= pref.ear_style
+	save_data["r_ears"]				= pref.r_ears
+	save_data["g_ears"]				= pref.g_ears
+	save_data["b_ears"]				= pref.b_ears
+	save_data["r_ears2"]			= pref.r_ears2
+	save_data["g_ears2"]			= pref.g_ears2
+	save_data["b_ears2"]			= pref.b_ears2
+	save_data["r_ears3"]			= pref.r_ears3
+	save_data["g_ears3"]			= pref.g_ears3
+	save_data["b_ears3"]			= pref.b_ears3
+	save_data["tail_style"]			= pref.tail_style
+	save_data["r_tail"]				= pref.r_tail
+	save_data["g_tail"]				= pref.g_tail
+	save_data["b_tail"]				= pref.b_tail
+	save_data["r_tail2"]			= pref.r_tail2
+	save_data["g_tail2"]			= pref.g_tail2
+	save_data["b_tail2"]			= pref.b_tail2
+	save_data["r_tail3"]			= pref.r_tail3
+	save_data["g_tail3"]			= pref.g_tail3
+	save_data["b_tail3"]			= pref.b_tail3
+	save_data["wing_style"]			= pref.wing_style
+	save_data["r_wing"]				= pref.r_wing
+	save_data["g_wing"]				= pref.g_wing
+	save_data["b_wing"]				= pref.b_wing
+	save_data["r_wing2"]			= pref.r_wing2
+	save_data["g_wing2"]			= pref.g_wing2
+	save_data["b_wing2"]			= pref.b_wing2
+	save_data["r_wing3"]			= pref.r_wing3
+	save_data["g_wing3"]			= pref.g_wing3
+	save_data["b_wing3"]			= pref.b_wing3
+	save_data["digitigrade"]		= pref.digitigrade
 
-/datum/category_item/player_setup_item/general/body/sanitize_character(var/savefile/S)
+/datum/category_item/player_setup_item/general/body/sanitize_character()
 	if(!pref.species || !(pref.species in GLOB.playable_species))
 		pref.species = SPECIES_HUMAN
 	pref.r_hair			= sanitize_integer(pref.r_hair, 0, 255, initial(pref.r_hair))
@@ -451,7 +459,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 		for(var/BP in mark_datum.body_parts)
 			var/obj/item/organ/external/O = character.organs_by_name[BP]
-			if(O)
+			if(O && islist(O.markings) && islist(pref.body_markings[M]) && islist(pref.body_markings[M][BP]))
 				O.markings[M] = list("color" = pref.body_markings[M][BP]["color"], "datum" = mark_datum, "priority" = priority, "on" = pref.body_markings[M][BP]["on"])
 	character.markings_len = priority
 
@@ -539,11 +547,17 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			++ind
 			if(ind > 1)
 				. += ", "
-			var/datum/robolimb/R
-			if(pref.rlimb_data[name] && all_robolimbs[pref.rlimb_data[name]])
-				R = all_robolimbs[pref.rlimb_data[name]]
+
+			var/datum/robolimb/R = basic_robolimb
+			var/key = pref.rlimb_data[name]
+			if(!istext(key))
+				log_debug("Bad rlimb_data for [key_name(pref.client)], [name] was set to [key]")
+				to_chat(usr, span_warning("Error loading robot limb data for `[name]`, clearing pref."))
+				pref.rlimb_data -= name
 			else
-				R = basic_robolimb
+				R = LAZYACCESS(all_robolimbs, key)
+				if(!istype(R))
+					R = basic_robolimb
 			. += "\t[R.company] [organ_name] prosthesis"
 		else if(status == "amputated")
 			++ind
@@ -698,7 +712,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/desc_id = href_list["change_descriptor"]
 			if(pref.body_descriptors[desc_id])
 				var/datum/mob_descriptor/descriptor = mob_species.descriptors[desc_id]
-				var/choice = tgui_input_list(usr, "Please select a descriptor.", "Descriptor", descriptor.chargen_value_descriptors)
+				var/choice = tgui_input_list(user, "Please select a descriptor.", "Descriptor", descriptor.chargen_value_descriptors) //ChompEDIT - usr removal
 				if(choice && mob_species.descriptors[desc_id]) // Check in case they sneakily changed species.
 					pref.body_descriptors[desc_id] = descriptor.chargen_value_descriptors[choice]
 					return TOPIC_REFRESH
@@ -711,7 +725,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	else if(href_list["show_species"])
 		// Actual whitelist checks are handled elsewhere, this is just for accessing the preview window.
-		var/choice = tgui_input_list(usr, "Which species would you like to look at?", "Species Choice", GLOB.playable_species)
+		var/choice = tgui_input_list(user, "Which species would you like to look at?", "Species Choice", GLOB.playable_species) //ChompEDIT - usr removal
 		if(!choice) return
 		pref.species_preview = choice
 		SetSpecies(preference_mob())
@@ -719,7 +733,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		return TOPIC_HANDLED
 
 	else if(href_list["disabilities_yw"])
-		Disabilities_YW(usr)
+		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	else if(href_list["set_species"])
 		user << browse(null, "window=species")
@@ -746,7 +760,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/list/valid_hairstyles = pref.get_valid_hairstyles()
 
 			if(valid_hairstyles.len)
-				pref.h_style = pick(valid_hairstyles)
+				if(!(pref.h_style in valid_hairstyles))
+					pref.h_style = pick(valid_hairstyles)
 			else
 				//this shouldn't happen
 				pref.h_style = hair_styles_list["Bald"]
@@ -755,7 +770,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/list/valid_facialhairstyles = pref.get_valid_facialhairstyles()
 
 			if(valid_facialhairstyles.len)
-				pref.f_style = pick(valid_facialhairstyles)
+				if(!(pref.f_style in valid_facialhairstyles))
+					pref.f_style = pick(valid_facialhairstyles)
 			else
 				//this shouldn't happen
 				pref.f_style = facial_hair_styles_list["Shaved"]
@@ -774,6 +790,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/min_age = get_min_age()
 			var/max_age = get_max_age()
 			pref.age = max(min(pref.age, max_age), min_age)
+			pref.blood_color = setting_species.blood_color // VOREstation edit
 
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
@@ -982,7 +999,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["marking_color"])
 		var/M = href_list["marking_color"]
 		if (isnull(pref.body_markings[M]["color"]))
-			if (tgui_alert(user, "You currently have customized marking colors. This will reset each bodypart's color. Are you sure you want to continue?","Reset Bodypart Colors",list("Yes","No")) == "No")
+			if (tgui_alert(user, "You currently have customized marking colors. This will reset each bodypart's color. Are you sure you want to continue?","Reset Bodypart Colors",list("Yes","No")) != "Yes")
 				return TOPIC_NOACTION
 		var/mark_color = input(user, "Choose the [M] color: ", "Character Preference", pref.body_markings[M]["color"]) as color|null
 		if(mark_color && CanUseTopic(user))
@@ -1193,7 +1210,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				organ = O_STOMACH
 			if("Brain")
 				if(pref.organ_data[BP_HEAD] != "cyborg")
-					to_chat(user, "<span class='warning'>You may only select a cybernetic or synthetic brain if you have a full prosthetic body.</span>")
+					to_chat(user, span_warning("You may only select a cybernetic or synthetic brain if you have a full prosthetic body."))
 					return
 				organ = "brain"
 
@@ -1236,7 +1253,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["disabilities"])
 		var/disability_flag = text2num(href_list["disabilities"])
 		pref.disabilities ^= disability_flag
-		Disabilities_YW(usr) //YW Edit
+		Disabilities_YW(user) //YW Edit //ChompEDIT - usr removal
 
 	else if(href_list["toggle_preview_value"])
 		pref.equip_preview_mob ^= text2num(href_list["toggle_preview_value"])
@@ -1270,23 +1287,23 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	else if(href_list["wingdings"])
 		pref.wingdings = !pref.wingdings
-		Disabilities_YW(usr)
+		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	else if(href_list["colorblind_mono"])
 		pref.colorblind_mono = !pref.colorblind_mono
-		Disabilities_YW(usr)
+		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	else if(href_list["colorblind_vulp"])
 		pref.colorblind_vulp = !pref.colorblind_vulp
-		Disabilities_YW(usr)
+		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	else if(href_list["colorblind_taj"])
 		pref.colorblind_taj = !pref.colorblind_taj
-		Disabilities_YW(usr)
+		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	else if(href_list["haemophilia"])
 		pref.haemophilia = !pref.haemophilia
-		Disabilities_YW(usr)
+		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	else if(href_list["reset_disabilities"])
 		pref.wingdings = 0
@@ -1294,7 +1311,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.colorblind_taj = 0
 		pref.colorblind_vulp = 0
 		pref.haemophilia = 0
-		Disabilities_YW(usr)
+		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	//YW Add End
 
@@ -1433,7 +1450,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	//vorestation edit end
 	dat += "<td width = 200 align='center'>"
 	if("preview" in cached_icon_states(current_species.icobase))
-		usr << browse_rsc(icon(current_species.icobase,"preview"), "species_preview_[current_species.name].png")
+		user << browse_rsc(icon(current_species.icobase,"preview"), "species_preview_[current_species.name].png") //ChompEDIT usr -> user
 		dat += "<img src='species_preview_[current_species.name].png' width='64px' height='64px'><br/><br/>"
 	dat += "<b>Language:</b> [current_species.species_language]<br/>"
 	dat += "<small>"

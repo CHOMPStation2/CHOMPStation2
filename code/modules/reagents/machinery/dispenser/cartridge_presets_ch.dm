@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/chem_disp_cartridge	
+/obj/item/reagent_containers/chem_disp_cartridge	
 	//CHOMP - Chems that are used but not meant for cargo supplies, at least for now. - Jack
 	champagne	spawn_reagent = "champagne"
 	singulo 	spawn_reagent = "singulo"

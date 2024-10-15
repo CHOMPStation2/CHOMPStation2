@@ -420,7 +420,7 @@
 
 /obj/item/clothing/under/dress/dress_cap
 	name = "site manager's dress uniform"
-	desc = "Feminine fashion for the style conscious Site Manager."
+	desc = "Feminine fashion for the style conscious " + JOB_SITE_MANAGER + "."
 	icon_state = "dress_cap"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
@@ -639,11 +639,15 @@
 	name = "white tabard-dress"
 	desc = "A gold-trimmed white tabard-dress with a large V-shaped boob window. For when you want to show off your hips and look classy at the same time."
 	icon_state = "white_tabard"
+	icon = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
 
 /obj/item/clothing/under/dress/tabard/black
 	name = "black tabard-dress"
 	desc = "A gold-trimmed black tabard-dress with a large circular boob window. For when you want to show off your hips and look classy at the same time."
 	icon_state = "black_tabard"
+	icon = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
+	icon_override = 'icons/inventory/uniform/mob_ch.dmi' //CHOMPedit
 
 /*
  * Wedding Stuff
@@ -753,7 +757,7 @@
 
 /obj/item/clothing/under/captainformal
 	name = "site manager's formal uniform"
-	desc = "A Site Manager's formal-wear, for special occasions."
+	desc = "A " + JOB_SITE_MANAGER + "'s formal-wear, for special occasions."
 	icon_state = "captain_formal"
 	item_state_slots = list(slot_r_hand_str = "lawyer_blue", slot_l_hand_str = "lawyer_blue")
 
@@ -982,6 +986,11 @@
 	name = "halter top"
 	desc = "Jean shorts and a black halter top. Perfect for casual Fridays!"
 	icon_state = "haltertop"
+
+/obj/item/clothing/under/tanktop
+	name = "tank top"
+	desc = "The most versatile top ever created."
+	icon_state = "tanktop"
 
 /obj/item/clothing/under/rippedpunk
 	name = "ripped punk jeans"
@@ -1212,6 +1221,11 @@
 	name = "hazard cohesion suit"
 	desc = "An orange cohesion suit with yellow hazard stripes intended to assist Prometheans in maintaining their form and prevent direct skin exposure."
 	icon_state = "cohesionsuit_hazard"
+
+/obj/item/clothing/under/vampirehunter
+	name = "18th century outfit"
+	desc = "A flashy, if rather stiff set of ancient-styled slacks and tabard. The unyielding nature of the clothes often make one walk stiffly, but with divine purpose."
+	icon_state = "belmont"
 
 //Ranger uniforms
 //On-mob sprites go in icons\mob\uniform.dmi with the format "white_ranger_uniform_s" - with 'white' replaced with green, cyan, etc... of course! Note the _s - this is not optional.
@@ -1679,6 +1693,24 @@
 /obj/item/clothing/under/turtlebaggy/black_fem
     name = "feminine black baggy turtleneck"
     icon_state = "bb_turtleblk_fem"
+
+//more big sweaters
+
+/obj/item/clothing/under/bigsweater
+	name = "cableknit sweater"
+	desc = "Why trade style for comfort?"
+	icon_state = "cableknit"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+
+/obj/item/clothing/under/bigsweater/keyhole
+	icon_state = "keyhole"
+
+/obj/item/clothing/under/keyhole
+	name = "cableknit sweater"
+	desc = "Why trade style for comfort?."
+	icon_state = "cableknit"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+
 
 //half-moon outfit
 /obj/item/clothing/under/half_moon

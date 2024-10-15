@@ -1,24 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ax" = (
 /obj/structure/closet/crate,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
-/obj/random/ammo,
-/obj/random/ammo,
-/obj/random/energy/highend,
-/obj/random/energy/highend,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/misc,
-/obj/random/maintenance/misc,
+/obj/random/contraband,
 /obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/refined,
-/obj/random/material/refined,
 /turf/simulated/floor/wood/sif{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -31,9 +15,6 @@
 /area/submap/demonranch)
 "aT" = (
 /obj/structure/table/sifwoodentable,
-/obj/random/mainttoyloot/nofail,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/wood/sif{
 	temperature = 243.15;
@@ -79,7 +60,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/demonranch)
 "gE" = (
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif{
 	temperature = 243.15;
@@ -133,13 +114,9 @@
 /area/submap/demonranch)
 "ml" = (
 /obj/structure/closet/crate/secure/loot,
-/obj/item/device/personal_shield_generator/belt/security,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
-/obj/item/weapon/storage/backpack/dufflebag/syndie/med,
-/obj/item/weapon/spellbook/oneuse/charge,
+/obj/item/personal_shield_generator/belt/security,
+/obj/item/storage/backpack/dufflebag/syndie/med,
+/obj/random/contraband,
 /turf/simulated/floor/wood/sif{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -164,15 +141,11 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/demonranch)
 "nX" = (
-/obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/random/medical/pillbottle,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
+/obj/structure/closet/crate,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/maintenance/morestuff,
+/obj/random/material/precious,
 /turf/simulated/floor/wood/sif{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -287,13 +260,12 @@
 /area/submap/demonranch)
 "Ak" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/random/medical/pillbottle,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood/sif{
@@ -319,9 +291,13 @@
 	},
 /area/submap/demonranch)
 "Dw" = (
-/obj/effect/landmark/loot_spawn,
-/obj/fire,
-/turf/simulated/floor/outdoors/dirt,
+/obj/structure/table/sifwoodentable,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/wood/sif{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
 /area/submap/demonranch)
 "Fw" = (
 /obj/structure/table/bench/sifwooden,
@@ -362,15 +338,7 @@
 /area/submap/demonranch)
 "IW" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/random/contraband/nofail,
-/obj/random/medical/pillbottle,
-/obj/random/maintenance/foodstuff,
+/obj/item/reagent_containers/food/snacks/meat,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood/sif{
 	temperature = 243.15;
@@ -441,7 +409,6 @@
 /area/submap/demonranch)
 "QH" = (
 /obj/structure/table/sifwoodentable,
-/obj/random/firstaid,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood/sif{
@@ -458,7 +425,7 @@
 /area/submap/demonranch)
 "Rp" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood/sif{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -514,7 +481,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/demonranch)
 "UM" = (
-/obj/item/weapon/spellbook/oneuse/charge,
+/obj/item/holosign_creator/smokewand,
 /turf/simulated/floor/water,
 /area/submap/demonranch)
 "VJ" = (
@@ -749,7 +716,7 @@ mG
 mG
 mG
 yT
-nX
+IW
 Kt
 mG
 yj
@@ -960,7 +927,7 @@ Zy
 Zy
 pr
 Kt
-aT
+Dw
 mG
 mG
 ie
@@ -1034,7 +1001,7 @@ Zy
 Zy
 pr
 Kt
-QH
+aT
 AI
 mG
 mG
@@ -1046,7 +1013,7 @@ TL
 su
 aM
 aM
-Si
+su
 su
 su
 su
@@ -1083,7 +1050,7 @@ aM
 aM
 aM
 ot
-mC
+su
 su
 hq
 hq
@@ -1116,7 +1083,7 @@ Rp
 Kt
 eM
 su
-su
+Si
 aM
 aM
 aM
@@ -1153,7 +1120,7 @@ Kt
 Kt
 eM
 su
-Si
+su
 aM
 su
 aM
@@ -1350,7 +1317,7 @@ hq
 hq
 su
 su
-mC
+su
 su
 sA
 su
@@ -1414,7 +1381,7 @@ vk
 su
 aM
 su
-mC
+su
 su
 su
 kd
@@ -1525,13 +1492,13 @@ eM
 su
 su
 su
-Dw
+aM
 aM
 aM
 aM
 su
 mC
-su
+iw
 su
 aM
 aM
@@ -1569,7 +1536,7 @@ su
 su
 su
 su
-Si
+su
 aM
 aM
 ot
@@ -1936,7 +1903,7 @@ hY
 hY
 Kt
 qA
-ax
+nX
 Rp
 Kt
 hY

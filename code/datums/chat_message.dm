@@ -51,6 +51,7 @@ var/list/runechat_image_cache = list()
 	/// If we are currently processing animation and cleanup at EOL
 	var/ending_life
 
+
 /**
   * Constructs a chat message overlay
   *
@@ -72,12 +73,11 @@ var/list/runechat_image_cache = list()
 	generate_image(text, target, owner, extra_classes, lifespan)
 
 /datum/chatmessage/Destroy()
-	if(owned_by)
+	if(istype(owned_by, /client)) // hopefully the PARENT_QDELETING on client should beat this if it's a disconnect
 		UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
-		LAZYREMOVEASSOC(owned_by.seen_messages, message_loc, src)
+		if(owned_by.seen_messages)
+			LAZYREMOVEASSOC(owned_by.seen_messages, message_loc, src)
 		owned_by.images.Remove(message)
-	if(message_loc)
-		UnregisterSignal(message_loc, COMSIG_PARENT_QDELETING)
 	owned_by = null
 	message_loc = null
 	message = null
@@ -102,9 +102,9 @@ var/list/runechat_image_cache = list()
 
 	// Register client who owns this message
 	owned_by = owner.client
-	RegisterSignal(owned_by, COMSIG_PARENT_QDELETING, PROC_REF(qdel_self))
+	RegisterSignal(owned_by, COMSIG_PARENT_QDELETING, PROC_REF(unregister_qdel_self)) // this should only call owned_by if the client is destroyed
 
-	var/extra_length = owned_by.is_preference_enabled(/datum/client_preference/runechat_long_messages)
+	var/extra_length = owned_by.prefs?.read_preference(/datum/preference/toggle/runechat_long_messages)
 	var/maxlen = extra_length ? CHAT_MESSAGE_EXT_LENGTH : CHAT_MESSAGE_LENGTH
 	var/msgwidth = extra_length ? CHAT_MESSAGE_EXT_WIDTH : CHAT_MESSAGE_WIDTH
 
@@ -117,6 +117,13 @@ var/list/runechat_image_cache = list()
 		target.chat_color = colorize_string(target.name)
 		target.chat_color_darkened = colorize_string(target.name, 0.85, 0.85)
 		target.chat_color_name = target.name
+
+		// Always force it back to a pref if they have one
+		if(ismob(target))
+			var/mob/M = target
+			if(M?.client?.prefs && M.client.prefs.runechat_color != COLOR_BLACK)
+				target.chat_color = M.client.prefs.runechat_color
+				target.chat_color_darkened = M.client.prefs.runechat_color
 
 	// Get rid of any URL schemes that might cause BYOND to automatically wrap something in an anchor tag
 	var/static/regex/url_scheme = new(@"[A-Za-z][A-Za-z0-9+-\.]*:\/\/", "g")
@@ -142,14 +149,14 @@ var/list/runechat_image_cache = list()
 
 	// Append prefixes
 	if(extra_classes.Find("virtual-speaker"))
-		LAZYADD(prefixes, "\icon[runechat_image_cache["radio"]]")
+		LAZYADD(prefixes, "[icon2html(runechat_image_cache["radio"],owner.client)]")
 	if(extra_classes.Find("emote"))
 		// Icon on both ends?
 		//var/image/I = runechat_image_cache["emote"]
-		//text = "\icon[I][text]\icon[I]"
+		//text = "icon2html(I)[text]icon2html(I)"
 
 		// Icon on one end?
-		//LAZYADD(prefixes, "\icon[runechat_image_cache["emote"]]")
+		//LAZYADD(prefixes, "icon2html(runechat_image_cache["emote")]")
 
 		// Asterisks instead?
 		text = "*&nbsp;[text]&nbsp;*"
@@ -211,6 +218,10 @@ var/list/runechat_image_cache = list()
 	spawn(lifespan - CHAT_MESSAGE_EOL_FADE)
 		end_of_life()
 
+/datum/chatmessage/proc/unregister_qdel_self()  // this should only call owned_by if the client is destroyed
+	UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
+	owned_by = null
+	qdel_self()
 /**
   * Applies final animations to overlay CHAT_MESSAGE_EOL_FADE deciseconds prior to message deletion
   */
@@ -220,7 +231,8 @@ var/list/runechat_image_cache = list()
 	ending_life = TRUE
 	animate(message, alpha = 0, time = fadetime, flags = ANIMATION_PARALLEL)
 	spawn(fadetime)
-		qdel(src)
+		if(!QDELETED(src))
+			qdel(src)
 
 /**
   * Creates a message overlay at a defined location for a given speaker
@@ -235,11 +247,14 @@ var/list/runechat_image_cache = list()
 	if(!client)
 		return
 
+	// Source Deleting
+	if(QDELETED(speaker))
+		return
 	// Doesn't want to hear
-	if(ismob(speaker) && !client.is_preference_enabled(/datum/client_preference/runechat_mob))
+	if(ismob(speaker) && !client.prefs?.read_preference(/datum/preference/toggle/runechat_mob))
 		return
 	// I know the pref is 'obj' but people dunno what turfs are
-	else if(!client.is_preference_enabled(/datum/client_preference/runechat_obj))
+	else if(!client.prefs?.read_preference(/datum/preference/toggle/runechat_obj))
 		return
 
 	// Incapable of receiving
@@ -262,7 +277,7 @@ var/list/runechat_image_cache = list()
 	if(italics)
 		extra_classes |= "italics"
 
-	if(client.is_preference_enabled(/datum/client_preference/runechat_border))
+	if(client.prefs?.read_preference(/datum/preference/toggle/runechat_border))
 		extra_classes |= "black_outline"
 
 	var/dist = get_dist(src, speaker)
@@ -327,6 +342,11 @@ var/list/runechat_image_cache = list()
 		if(5)
 			return rgb(c,m,x)
 
+#undef CM_COLOR_SAT_MIN
+#undef CM_COLOR_SAT_MAX
+#undef CM_COLOR_LUM_MIN
+#undef CM_COLOR_LUM_MAX
+
 /atom/proc/runechat_message(message, range = world.view, italics, list/classes = list(), audible = TRUE, list/specific_viewers)
 	var/hearing_mobs
 	if(islist(specific_viewers))
@@ -336,7 +356,7 @@ var/list/runechat_image_cache = list()
 		hearing_mobs = hear["mobs"]
 
 	for(var/mob/M as anything in hearing_mobs)
-		if(!M.client)
+		if(!M?.client)
 			continue
 		M.create_chat_message(src, message, italics, classes, audible)
 
@@ -366,6 +386,25 @@ var/list/runechat_image_cache = list()
 	return src
 
 /mob/runechat_holder(datum/chatmessage/CM)
-	if(istype(loc, /obj/item/weapon/holder))
+	if(istype(loc, /obj/item/holder))
 		return loc
 	return ..()
+
+#undef CHAT_MESSAGE_SPAWN_TIME
+#undef CHAT_MESSAGE_LIFESPAN
+#undef CHAT_MESSAGE_EOL_FADE
+#undef CHAT_MESSAGE_EXP_DECAY
+#undef CHAT_MESSAGE_HEIGHT_DECAY
+#undef CHAT_MESSAGE_APPROX_LHEIGHT
+
+#undef CHAT_MESSAGE_WIDTH
+#undef CHAT_MESSAGE_EXT_WIDTH
+#undef CHAT_MESSAGE_LENGTH
+#undef CHAT_MESSAGE_EXT_LENGTH
+
+#undef CHAT_MESSAGE_MOB
+#undef CHAT_MESSAGE_OBJ
+#undef WXH_TO_HEIGHT
+
+#undef CHAT_RUNE_EMOTE
+#undef CHAT_RUNE_RADIO

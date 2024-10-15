@@ -13,9 +13,10 @@
 #define INVISIBILITY_EYE		          61
 
 #define SEE_INVISIBLE_LIVING              25
-#define SEE_INVISIBLE_NOLIGHTING 15
+#define SEE_INVISIBLE_NOLIGHTING		  15
 #define SEE_INVISIBLE_LEVEL_ONE           35
 #define SEE_INVISIBLE_LEVEL_TWO           45
+#define SEE_INVISIBILITY_SHADEKIN         55
 #define SEE_INVISIBLE_CULT		          60
 #define SEE_INVISIBLE_OBSERVER            61
 
@@ -414,24 +415,6 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 
 #define send_link(target, url) target << link(url)
 
-#define SPAN_NOTICE(X) "<span class='notice'>[X]</span>"
-
-#define SPAN_WARNING(X) "<span class='warning'>[X]</span>"
-
-#define SPAN_DANGER(X) "<span class='danger'>[X]</span>"
-
-#define SPAN_OCCULT(X) "<span class='cult'>[X]</span>"
-
-#define FONT_SMALL(X) "<font size='1'>[X]</font>"
-
-#define FONT_NORMAL(X) "<font size='2'>[X]</font>"
-
-#define FONT_LARGE(X) "<font size='3'>[X]</font>"
-
-#define FONT_HUGE(X) "<font size='4'>[X]</font>"
-
-#define FONT_GIANT(X) "<font size='5'>[X]</font>"
-
 // Volume Channel Defines
 
 #define VOLUME_CHANNEL_MASTER "Master"
@@ -508,3 +491,7 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define SPECIES_SORT_WHITELISTED 2
 #define SPECIES_SORT_RESTRICTED 3
 #define SPECIES_SORT_CUSTOM 4
+
+// Vote Types
+#define VOTE_RESULT_TYPE_MAJORITY	"Majority"
+#define VOTE_RESULT_TYPE_SKEWED		"Seventy"

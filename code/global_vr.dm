@@ -50,6 +50,7 @@ var/global/list/acceptable_fruit_types= list(
 											"whitebeet")
 
 // Some "scary" sounds.
+/* CHOMPEdit Start
 var/static/list/scawwySownds = list(
 	'sound/voice/ScawwySownds/a scawey sownd.ogg',
 	'sound/voice/ScawwySownds/is that you.ogg',
@@ -63,3 +64,4 @@ var/static/list/scawwySownds = list(
 	'sound/voice/ScawwySownds/whats up with all the trash.ogg',
 	'sound/voice/ScawwySownds/youre afraid of the dark arent you.ogg'
 	)
+*/ // CHOMPedit End

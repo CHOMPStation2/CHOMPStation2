@@ -15,7 +15,7 @@
 	if(M.eye_blurry)
 		M.eye_blurry = max(M.eye_blurry - 25*removed, 0)
 	if(M.jitteriness)
-		M.make_jittery(max(M.jitteriness - 25*removed,0))
+		M.make_jittery(min(-25*removed,0))
 
 /datum/reagent/numbing_enzyme
 	name = "Numbing Enzyme"
@@ -32,7 +32,7 @@
 /datum/reagent/numbing_enzyme/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, 200)
 	if(prob(0.01)) //1 in 10000 chance per tick. Extremely rare.
-		to_chat(M,"<span class='warning'>Your body feels numb as a light, tingly sensation spreads throughout it, like some odd warmth.</span>")
+		to_chat(M,span_warning("Your body feels numb as a light, tingly sensation spreads throughout it, like some odd warmth."))
 	//Not noted here, but a movement debuff of 1.5 is handed out in human_movement.dm when numbing_enzyme is in a person's bloodstream!
 
 /datum/reagent/numbing_enzyme/overdose(var/mob/living/carbon/M, var/alien)
@@ -40,24 +40,24 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(prob(1))
-			to_chat(H,"<span class='warning'>Your entire body feels numb and the sensation of pins and needles continually assaults you. You blink and the next thing you know, your legs give out momentarily!</span>")
+			to_chat(H,span_warning("Your entire body feels numb and the sensation of pins and needles continually assaults you. You blink and the next thing you know, your legs give out momentarily!"))
 			H.AdjustWeakened(5) //Fall onto the floor for a few moments.
 			H.Confuse(15) //Be unable to walk correctly for a bit longer.
 		if(prob(1))
 			if(H.losebreath <= 1 && H.oxyloss <= 20) //Let's not suffocate them to the point that they pass out.
-				to_chat(H,"<span class='warning'>You feel a sharp stabbing pain in your chest and quickly realize that your lungs have stopped functioning!</span>") //Let's scare them a bit.
+				to_chat(H,span_warning("You feel a sharp stabbing pain in your chest and quickly realize that your lungs have stopped functioning!")) //Let's scare them a bit.
 				H.losebreath = 10
 				H.adjustOxyLoss(5)
 		if(prob(2))
-			to_chat(H,"<span class='warning'>You feel a dull pain behind your eyes and at thee back of your head...</span>")
+			to_chat(H,span_warning("You feel a dull pain behind your eyes and at thee back of your head..."))
 			H.hallucination += 20 //It messes with your mind for some reason.
 			H.eye_blurry += 20 //Groggy vision for a small bit.
 		if(prob(3))
-			to_chat(H,"<span class='warning'>You shiver, your body continually being assaulted by the sensation of pins and needles.</span>")
+			to_chat(H,span_warning("You shiver, your body continually being assaulted by the sensation of pins and needles."))
 			H.emote("shiver")
 			H.make_jittery(10)
 		if(prob(3))
-			to_chat(H,"<span class='warning'>Your tongue feels numb and unresponsive.</span>")
+			to_chat(H,span_warning("Your tongue feels numb and unresponsive."))
 			H.stuttering += 20
 
 /datum/reagent/vermicetol
@@ -77,7 +77,7 @@
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(8 * removed * chem_effective, 0)
-		
+
 /*CHOMPStation removal begin
 /datum/reagent/sleevingcure
 	name = "Vey-Med Resleeving Booster"
@@ -209,6 +209,8 @@
 	if(!istype(M))
 		log_debug("polymorph istype")
 		return
+	if(!M.allow_spontaneous_tf)
+		return
 	if(M.tf_mob_holder)
 		log_debug("polymorph tf_holder")
 		var/mob/living/ourmob = M.tf_mob_holder
@@ -231,12 +233,14 @@
 			M.vore_organs -= B
 			ourmob.vore_organs += B
 
+		M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+
 		ourmob.Life(1)
 		if(ishuman(M))
 			log_debug("polymorph human")
 			for(var/obj/item/W in M)
 				log_debug("polymorph items")
-				if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
+				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
 					log_debug("polymorph implants")
 					continue
 				M.drop_from_inventory(W)
@@ -290,6 +294,8 @@
 				M.vore_organs -= B
 				new_mob.vore_organs += B
 
+			M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
+
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)
 				var/datum/ai_holder/old_AI = M.ai_holder
@@ -315,3 +321,18 @@
 	log_debug("polymorph tf_type pass")
 	var/new_mob = new tf_type(get_turf(target))
 	return new_mob
+
+/datum/reagent/glamour
+	name = "Glamour"
+	id = "glamour"
+	description = "This material is from somewhere else, just being near produces changes."
+	taste_description = "change"
+	reagent_state = LIQUID
+	color = "#ffffff"
+	scannable = 1
+
+/datum/reagent/glamour/affect_blood(var/mob/living/carbon/target, var/removed)
+	target.verbs |= /mob/living/carbon/human/proc/enter_cocoon
+	target.bloodstr.clear_reagents() //instantly clears reagents afterwards
+	target.ingested.clear_reagents()
+	target.touching.clear_reagents()

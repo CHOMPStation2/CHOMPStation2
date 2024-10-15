@@ -9,6 +9,7 @@ vchat.db*
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 /tmp/**/*
+/cache/**/*
 
 #Ignore byond config folder.
 /cfg/**/*
@@ -143,6 +144,10 @@ cfg/
 #KDevelop and Kate
 *.kdev4*
 *.kate-swp
+
+#extra map stuff
+/_maps/**/backup/
+/_maps/templates.dm
 
 temp.dmi
 

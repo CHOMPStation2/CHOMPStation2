@@ -34,7 +34,7 @@
 		occupant_message("The sleeper is already occupied")
 		return
 	if(target.has_buckled_mobs())
-		occupant_message(span("warning", "\The [target] has other entities attached to it. Remove them first."))
+		occupant_message(span_warning("\The [target] has other entities attached to it. Remove them first."))
 		return
 	occupant_message("You start putting [target] into [src].")
 	chassis.visible_message("[chassis] starts putting [target] into the [src].")
@@ -44,7 +44,7 @@
 		if(chassis.loc!=C || target.loc!=T)
 			return
 		if(occupant)
-			occupant_message("<font color=\"red\"><B>The sleeper is already occupied!</B></font>")
+			occupant_message(span_red("<B>The sleeper is already occupied!</B>"))
 			return
 		target.forceMove(src)
 		occupant = target
@@ -57,7 +57,7 @@
 		*/
 		set_ready_state(FALSE)
 		START_PROCESSING(SSprocessing, src)
-		occupant_message("<font color='blue'>[target] successfully loaded into [src]. Life support functions engaged.</font>")
+		occupant_message(span_blue("[target] successfully loaded into [src]. Life support functions engaged."))
 		chassis.visible_message("[chassis] loads [target] into [src].")
 		log_message("[target] loaded. Life support functions engaged.")
 	return
@@ -204,7 +204,7 @@
 	set popup_menu = 0
 	if(usr!=src.occupant || usr.stat == 2)
 		return
-	to_chat(usr,"<span class='notice'>Release sequence activated. This will take one minute.</span>")
+	to_chat(usr,span_notice("Release sequence activated. This will take one minute."))
 	sleep(600)
 	if(!src || !usr || !occupant || (occupant != usr)) //Check if someone's released/replaced/bombed him already
 		return

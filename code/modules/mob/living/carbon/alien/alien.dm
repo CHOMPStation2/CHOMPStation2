@@ -27,8 +27,8 @@
 
 	time_of_birth = world.time
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 	instance_num = rand(1, 1000)
 	name = "[initial(name)] ([instance_num])"
@@ -66,4 +66,3 @@
 		else if(ending == "?")
 			verb = "hisses curiously"
 	return verb
-

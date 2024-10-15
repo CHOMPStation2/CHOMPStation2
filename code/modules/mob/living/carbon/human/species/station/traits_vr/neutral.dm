@@ -55,8 +55,9 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list(LANGUAGE_UNATHI))
-	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat) // CHOMPEdit: exclude vassillian hiss
+	custom_only = FALSE
+	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) //CHOMPRemove
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -68,7 +69,8 @@
 		),
 	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
-	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
+	custom_only = FALSE
+	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) //CHOMPRemove
 
 /datum/trait/neutral/autohiss_zaddat
 	name = "Autohiss (Zaddat)"
@@ -87,7 +89,8 @@
 		),
 	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
-	custom_only = FALSE //CHOMPedit: Normal folks of species can't take their autohiss for some reason. Also ascents.
+	custom_only = FALSE
+	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) // CHOMPRemove
 
 /datum/trait/neutral/bloodsucker
 	name = "Bloodsucker, Obligate"
@@ -109,7 +112,7 @@
 
 /datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
+	add_verb(H,/mob/living/carbon/human/proc/bloodsuck) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/bloodsucker_freeform
 	name = "Bloodsucker"
@@ -130,7 +133,7 @@
 
 /datum/trait/neutral/bloodsucker_freeform/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
+	add_verb(H,/mob/living/carbon/human/proc/bloodsuck) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/succubus_drain
 	name = "Succubus Drain"
@@ -140,9 +143,51 @@
 
 /datum/trait/neutral/succubus_drain/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/succubus_drain
-	H.verbs |= /mob/living/carbon/human/proc/succubus_drain_finalize
-	H.verbs |= /mob/living/carbon/human/proc/succubus_drain_lethal
+	add_verb(H,/mob/living/carbon/human/proc/succubus_drain) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/carbon/human/proc/succubus_drain_finalize) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/carbon/human/proc/succubus_drain_lethal) //CHOMPEdit TGPanel
+
+/datum/trait/neutral/venom_bite
+	name = "Venomous Injection"
+	desc = "Allows for injecting prey through one method or another to inject them with a variety of chemicals with varying effects!"
+	tutorial = "This trait allows you to bite prey with varying effects! <br> \
+		Options for venoms: <br> \
+		=====Size Chemicals ===== <br> \
+		Microcillin: Will make someone shrink. (This is 1% per 0.01 units. So 1 unit = 100% size change) <br> \
+		Macrocillin: Will make someone grow. (This is 1% per 0.01 units. So 1 unit = 100% size change) <br> \
+		Normalcillin: Will make someone normal size. (This is 1% per 0.01 units. So 1 unit = 100% size change) Stops at 100% size. <br> \
+		===== Gender Chemicals ===== <br> \
+		Androrovir: Will transform someone's sex to male. <br> \
+		Gynorovir: Will transform someone's sex to female. <br> \
+		Androgynorovir: Will transform someone's sex to pleural. <br> \
+		===== Special Chemicals ===== <br> \
+		Stoxin: Will make someone drowsy. <br> \
+		Rainbow Toxin: Will make someone see rainbows. <br> \
+		Paralysis Toxin: Will make someone paralyzed. <br> \
+		Numbing Enzyme: Will make someone unable to feel pain. <br> \
+		Pain Enzyme: Will make someone feel pain, amplifieed <br> \
+		Aphrodisiac: Will make someone feel in the mood.<br> \
+		===== Side Notes ===== <br> \
+		You aren't required to inject anything if you prefer to just use it as a normal bite!"
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/venom_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	//H.verbs |= /mob/living/proc/injection
+	add_verb(H,/mob/living/proc/injection) //CHOMPedit tgpanel
+	H.trait_injection_reagents += "microcillin"		// get small
+	H.trait_injection_reagents += "macrocillin"		// get BIG
+	H.trait_injection_reagents += "normalcillin"	// normal
+	H.trait_injection_reagents += "numbenzyme"		// no feelings
+	H.trait_injection_reagents += "change_drug_male"		// -> MALE // CHOMPEdit
+	H.trait_injection_reagents += "change_drug_female"		// -> FEMALE // CHOMPEdit
+	H.trait_injection_reagents += "change_drug_intersex"	// -> PLURAL // CHOMPEdit
+	H.trait_injection_reagents += "stoxin"			// night night chem
+	H.trait_injection_reagents += "rainbowtoxin" 	// Funny flashing lights.
+	H.trait_injection_reagents += "paralysistoxin" 	// Paralysis!
+	H.trait_injection_reagents += "painenzyme"		// Pain INCREASER
+	H.trait_injection_reagents += "aphrodisiac"		// Horni //CHOMPedit
 
 /datum/trait/neutral/long_vore
 	name = "Long Predatorial Reach"
@@ -163,7 +208,7 @@
 
 /datum/trait/neutral/long_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/long_vore
+	add_verb(H,/mob/living/proc/long_vore) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/feeder
 	name = "Feeder"
@@ -173,7 +218,7 @@
 
 /datum/trait/neutral/feeder/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/slime_feed
+	add_verb(H,/mob/living/carbon/human/proc/slime_feed) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/stuffing_feeder
 	name = "Food Stuffer"
@@ -184,7 +229,7 @@
 
 /datum/trait/neutral/stuffing_feeder/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/toggle_stuffing_mode
+	add_verb(H,/mob/living/proc/toggle_stuffing_mode) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/hard_vore
 	name = "Hard Vore" //CHOMPedit Renamed Brutal Predation to Hard Vore, because some people don't know what this actually does
@@ -194,7 +239,7 @@
 
 /datum/trait/neutral/hard_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/shred_limb
+	add_verb(H,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/trashcan
 	name = "Trash Can"
@@ -205,8 +250,8 @@
 
 /datum/trait/neutral/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/eat_trash
-	H.verbs |= /mob/living/proc/toggle_trash_catching //CHOMPEdit
+	add_verb(H,/mob/living/proc/eat_trash) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/proc/toggle_trash_catching) //Ported from chompstation //CHOMPEdit TGPanel
 
 /datum/trait/neutral/gem_eater
 	name = "Expensive Taste"
@@ -217,7 +262,7 @@
 
 /datum/trait/neutral/gem_eater/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/eat_minerals
+	add_verb(H,/mob/living/proc/eat_minerals) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/synth_chemfurnace
 	name = "Biofuel Processor"
@@ -254,7 +299,7 @@
 
 /datum/trait/neutral/glowing_eyes/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/toggle_eye_glow
+	add_verb(H,/mob/living/carbon/human/proc/toggle_eye_glow) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/glowing_body
 	name = "Glowing Body"
@@ -266,8 +311,8 @@
 
 /datum/trait/neutral/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/glow_toggle
-	H.verbs |= /mob/living/proc/glow_color
+	add_verb(H,/mob/living/proc/glow_toggle) //CHOMPEdit TGPanel
+	add_verb(H,/mob/living/proc/glow_color) //CHOMPEdit TGPanel
 
 //Allergen traits! Not available to any species with a base allergens var.
 /datum/trait/neutral/allergy
@@ -483,21 +528,21 @@
 	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Alcohol hits you three times as hard as they do other people."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("chem_strength_alcohol" = 3)
+	var_changes = list("chem_strength_alcohol" = 0.33)
 
 /datum/trait/neutral/alcohol_intolerance_basic
 	name = "Liver of Lilies"
 	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with your system... either way, alcohol hits you twice as hard."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("chem_strength_alcohol" = 2)
+	var_changes = list("chem_strength_alcohol" = 0.5)
 
 /datum/trait/neutral/alcohol_intolerance_slight
 	name = "Liver of Tulips"
 	desc = "You are what some might call 'a bit of a lightweight', but you can still keep your drinks down... most of the time. Alcohol hits you fifty percent harder."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("chem_strength_alcohol" = 1.5)
+	var_changes = list("chem_strength_alcohol" = 0.75)
 
 /datum/trait/neutral/alcohol_tolerance_reset
 	name = "Liver of Unremarkableness"
@@ -512,21 +557,21 @@
 	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr! Alcohol's effects on you are reduced by about a quarter."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("chem_strength_alcohol" = 0.75)
+	var_changes = list("chem_strength_alcohol" = 1.25)
 
 /datum/trait/neutral/alcohol_tolerance_advanced
 	name = "Liver of Steel"
 	desc = "Drinks tremble before your might! You can hold your alcohol twice as well as those blue-bellied barnacle boilers! Alcohol has just half the effect on you as it does on others."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("chem_strength_alcohol" = 0.5)
+	var_changes = list("chem_strength_alcohol" = 2)
 
 /datum/trait/neutral/alcohol_immunity
 	name = "Liver of Durasteel"
 	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("chem_strength_alcohol" = 0.25)
+	var_changes = list("chem_strength_alcohol" = 4)
 // Alcohol Traits End Here.
 
 /datum/trait/neutral/colorblind/mono
@@ -567,7 +612,7 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("icon_scale_y" = 1.09)
-	excludes = list(/datum/trait/neutral/tall, /datum/trait/neutral/short, /datum/trait/neutral/shorter)
+	excludes = list(/datum/trait/neutral/tall, /datum/trait/neutral/tallest, /datum/trait/neutral/short, /datum/trait/neutral/shorter, /datum/trait/neutral/shortest)
 
 /datum/trait/neutral/taller/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -580,9 +625,22 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("icon_scale_y" = 1.05)
-	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/short, /datum/trait/neutral/shorter)
+	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tallest, /datum/trait/neutral/short, /datum/trait/neutral/shorter, /datum/trait/neutral/shortest)
 
 /datum/trait/neutral/tall/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.update_transform()
+
+/datum/trait/neutral/tallest
+	name = "Tall, Major"
+	desc = "Your body is way taller than average."
+	sort = TRAIT_SORT_BODYTYPE
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("icon_scale_y" = 1.15)
+	excludes = list(/datum/trait/neutral/tall, /datum/trait/neutral/taller, /datum/trait/neutral/short, /datum/trait/neutral/shorter, /datum/trait/neutral/shortest)
+
+/datum/trait/neutral/tallest/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -593,7 +651,7 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("icon_scale_y" = 0.95)
-	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tall, /datum/trait/neutral/shorter)
+	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tall, /datum/trait/neutral/tallest, /datum/trait/neutral/shorter, /datum/trait/neutral/shortest)
 
 /datum/trait/neutral/short/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -606,9 +664,22 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("icon_scale_y" = 0.915)
-	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tall, /datum/trait/neutral/short)
+	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tall, /datum/trait/neutral/tallest, /datum/trait/neutral/short, /datum/trait/neutral/shortest)
 
 /datum/trait/neutral/shorter/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.update_transform()
+
+/datum/trait/neutral/shortest
+	name = "Short, Major"
+	desc = "Your body is way shorter than average."
+	sort = TRAIT_SORT_BODYTYPE
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("icon_scale_y" = 0.85)
+	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tall, /datum/trait/neutral/tallest, /datum/trait/neutral/short, /datum/trait/neutral/shorter)
+
+/datum/trait/neutral/shortest/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -672,7 +743,7 @@
 
 /datum/trait/neutral/dominate_predator/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/proc/dominate_predator
+	add_verb(H,/mob/proc/dominate_predator) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/dominate_prey
 	name = "Dominate Prey"
@@ -682,7 +753,7 @@
 
 /datum/trait/neutral/dominate_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/dominate_prey
+	add_verb(H,/mob/living/proc/dominate_prey) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/submit_to_prey
 	name = "Submit To Prey"
@@ -692,7 +763,7 @@
 
 /datum/trait/neutral/submit_to_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/lend_prey_control
+	add_verb(H,/mob/living/proc/lend_prey_control) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/vertical_nom
 	name = "Vertical Nom"
@@ -702,7 +773,7 @@
 
 /datum/trait/neutral/vertical_nom/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/vertical_nom
+	add_verb(H,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/micro_size_down
 	name = "Light Frame"
@@ -711,12 +782,26 @@
 	custom_only = FALSE
 	var_changes = list("micro_size_mod" = -0.15)
 
+/datum/trait/neutral/micro_size_down_plus
+	name = "Light Frame, Major"
+	desc = "You are considered much smaller than you are for micro interactions."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("micro_size_mod" = -0.30)
+
 /datum/trait/neutral/micro_size_up
 	name = "Heavy Frame"
 	desc = "You are considered bigger than you are for micro interactions."
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("micro_size_mod" = 0.15)
+
+/datum/trait/neutral/micro_size_up_plus
+	name = "Heavy Frame, Major"
+	desc = "You are considered much bigger than you are for micro interactions."
+	cost = 0
+	custom_only = FALSE
+	var_changes = list("micro_size_mod" = 0.30)
 
 /datum/trait/neutral/digestion_value_up
 	name = "Highly Filling"
@@ -784,4 +869,315 @@
 
 /datum/trait/neutral/synth_cosmetic_pain/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/toggle_pain_module
+	add_verb(H,/mob/living/carbon/human/proc/toggle_pain_module) //CHOMPEdit TGPanel
+
+//Food preferences ported from RogueStar
+
+/datum/trait/neutral/food_pref
+	name = "Food Preference - Carnivore"
+	desc = "You prefer to eat meat, and gain extra nutrition for doing so!"
+	cost = 0
+	custom_only = FALSE
+	can_take = ORGANICS
+	var_changes = list("food_preference_bonus" = 5)
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	var/list/our_allergens = list(ALLERGEN_MEAT)
+
+/datum/trait/neutral/food_pref/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	for(var/a in our_allergens)
+		S.food_preference |= a
+
+/datum/trait/neutral/food_pref/herbivore
+	name = "Food Preference - Herbivore"
+	desc = "You prefer to eat fruits and vegitables, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_VEGETABLE,ALLERGEN_FRUIT)
+
+/datum/trait/neutral/food_pref/beanivore
+	name = "Food Preference - Legumovore"
+	desc = "You prefer to eat bean related foods, such as tofu, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_BEANS)
+
+/datum/trait/neutral/food_pref/omnivore
+	name = "Food Preference - Omnivore"
+	desc = "You prefer to eat meat and vegitables, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_VEGETABLE,ALLERGEN_MEAT)
+
+/datum/trait/neutral/food_pref/fungivore
+	name = "Food Preference - Fungivore"
+	desc = "You prefer to eat mushrooms and fungus, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_FUNGI)
+
+/datum/trait/neutral/food_pref/piscivore
+	name = "Food Preference - Piscivore"
+	desc = "You prefer to eat fish, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_FISH)
+
+/datum/trait/neutral/food_pref/granivore
+	name = "Food Preference - Granivore"
+	desc = "You prefer to eat grains and seeds, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_GRAINS,ALLERGEN_SEEDS)
+
+/datum/trait/neutral/food_pref/cocoavore
+	name = "Food Preference - Cocoavore"
+	desc = "You prefer to eat chocolate, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_CHOCOLATE)
+
+/datum/trait/neutral/food_pref/glycovore
+	name = "Food Preference - Glycovore"
+	desc = "You prefer to eat sugar, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_SUGARS)
+
+/datum/trait/neutral/food_pref/lactovore
+	name = "Food Preference - Lactovore"
+	desc = "You prefer to eat and drink things with milk in them, and gain extra nutrition for doing so!"
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/coffee,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_DAIRY)
+
+/datum/trait/neutral/food_pref/coffee
+	name = "Food Preference - Coffee Dependant"
+	desc = "You can get by on coffee alone if you have to, and you like it that way."
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/stimulant
+	)
+	our_allergens = list(ALLERGEN_COFFEE)
+
+/datum/trait/neutral/food_pref/stimulant
+	name = "Food Preference - Stimulant Dependant"
+	desc = "You can get by on caffine alone if you have to, and you like it that way."
+	excludes = list(
+	/datum/trait/neutral/food_pref,
+	/datum/trait/neutral/food_pref/herbivore,
+	/datum/trait/neutral/food_pref/beanivore,
+	/datum/trait/neutral/food_pref/omnivore,
+	/datum/trait/neutral/food_pref/fungivore,
+	/datum/trait/neutral/food_pref/piscivore,
+	/datum/trait/neutral/food_pref/granivore,
+	/datum/trait/neutral/food_pref/cocoavore,
+	/datum/trait/neutral/food_pref/glycovore,
+	/datum/trait/neutral/food_pref/lactovore,
+	/datum/trait/neutral/food_pref/coffee
+	)
+	our_allergens = list(ALLERGEN_STIMULANT)
+
+
+//////////////PHOBIAS/////////////////
+
+/datum/trait/neutral/nyctophobia
+	name = "Phobia: Nyctophobia"
+	desc = "You are afraid of the dark. When in very dark conditions, you will become afraid."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/nyctophobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+	..()
+	H.phobias |= NYCTOPHOBIA
+
+/datum/trait/neutral/arachnophobia
+	name = "Phobia: Arachnophobia"
+	desc = "You are afraid of spiders. When you can see a large spider, you will become afraid."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/arachnophobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+	..()
+	H.phobias |= ARACHNOPHOBIA
+
+/datum/trait/neutral/hemophobia
+	name = "Phobia: Hemophobia"
+	desc = "You are afraid of blood. When you can see large amounts of blood, you will become afraid."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/hemophobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+	..()
+	H.phobias |= HEMOPHOBIA
+
+/datum/trait/neutral/thalassophobia
+	name = "Phobia: Thalassophobia"
+	desc = "You are afraid of deep water. When in deep water, you will become afraid."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/thalassophobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+	..()
+	H.phobias |= THALASSOPHOBIA
+
+/datum/trait/neutral/clasutrophobia_minor
+	name = "Phobia: Claustrophobia (non-vore)"
+	desc = "You are afraid of tight, enclosed spaces. When inside of another object, you will become afraid."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/clasutrophobia_minor/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+	..()
+	H.phobias |= CLAUSTROPHOBIA_MINOR
+
+/datum/trait/neutral/clasutrophobia_major
+	name = "Phobia: Claustrophobia (vore)"
+	desc = "You are afraid of tight, enclosed spaces. When inside of another object, including vore bellies, you will become afraid."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/clasutrophobia_major/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+	..()
+	H.phobias |= CLAUSTROPHOBIA_MAJOR
+
+/datum/trait/neutral/anatidaephobia
+	name = "Phobia: Anatidaephobia"
+	desc = "You are afraid of ducks. When you can see a duck (even rubber ones), you will become afraid."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/anatidaephobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+	..()
+	H.phobias |= ANATIDAEPHOBIA
+
+/datum/trait/neutral/agraviaphobia
+	name = "Phobia: Agraviaphobia"
+	desc = "You are afraid of a lack of gravity. When you find yourself floating, you will become afraid."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/agraviaphobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+	..()
+	H.phobias |= AGRAVIAPHOBIA

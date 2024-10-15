@@ -18,7 +18,8 @@
 
 /datum/event/wallrot/announce()
 	if(center)
-		command_announcement.Announce("Harmful fungi detected on \the [station_name()] nearby [center.loc.name]. Station structures may be contaminated.", "Biohazard Alert")
+		command_announcement.Announce("Harmful fungi detected on \the [station_name()]. Hull integrity near [center.loc.name] may be compromised.", "Hazardous Biomass")
+		// Chomp edit - Better wording as to what the hell it actually does.
 
 /datum/event/wallrot/start()
 	spawn()

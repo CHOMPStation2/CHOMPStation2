@@ -77,13 +77,13 @@ BLIND     // can't see anything
 /obj/item/clothing/glasses/attack_self(mob/user)
 	if(toggleable)
 		if(!can_toggle(user))
-			to_chat(user, span("warning", "You don't seem to be able to toggle \the [src] here."))
+			to_chat(user, span_warning("You don't seem to be able to toggle \the [src] here."))
 		else
 			toggle_active(user)
 			if(active)
-				to_chat(user, span("notice", "You activate the optical matrix on the [src]."))
+				to_chat(user, span_notice("You activate the optical matrix on the [src]."))
 			else
-				to_chat(user, span("notice", "You deactivate the optical matrix on the [src]."))
+				to_chat(user, span_notice("You deactivate the optical matrix on the [src]."))
 	..()
 
 /obj/item/clothing/glasses/meson
@@ -355,7 +355,7 @@ BLIND     // can't see anything
 
 /obj/item/clothing/glasses/sunglasses/bigshot/examine(mob/user as mob)
 	. = ..()
-	. += to_chat(usr, "<span class='notice'>Alt-click to toggle modes.</span>")
+	. += to_chat(usr, span_notice("Alt-click to toggle modes."))
 
 /obj/item/clothing/glasses/sunglasses/bigshot/AltClick()
 	set src in usr
@@ -537,7 +537,7 @@ BLIND     // can't see anything
 /obj/item/clothing/glasses/thermal/emp_act(severity)
 	if(istype(src.loc, /mob/living/carbon/human))
 		var/mob/living/carbon/human/M = src.loc
-		to_chat(M, "<font color='red'>The Optical Thermal Scanner overloads and blinds you!</font>")
+		to_chat(M, span_red("The Optical Thermal Scanner overloads and blinds you!"))
 		if(M.glasses == src)
 			M.Blind(3)
 			M.eye_blurry = 5
@@ -624,4 +624,3 @@ BLIND     // can't see anything
 			to_chat(usr, "You push \the [src] up from in front of your eyes.")
 		update_clothing_icon()
 		usr.update_action_buttons()
-

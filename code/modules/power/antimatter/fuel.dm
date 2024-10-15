@@ -1,4 +1,4 @@
-/obj/item/weapon/fuel
+/obj/item/fuel
 	name = "Magnetic Storage Ring"
 	desc = "A magnetic storage ring."
 	icon = 'icons/obj/items.dmi'
@@ -10,38 +10,38 @@
 	var/s_time = 1.0
 	var/content = null
 
-/obj/item/weapon/fuel/H
+/obj/item/fuel/H
 	name = "Hydrogen storage ring"
 	content = "Hydrogen"
 	fuel = 1e-12		//pico-kilogram
 
-/obj/item/weapon/fuel/antiH
+/obj/item/fuel/antiH
 	name = "Anti-Hydrogen storage ring"
 	content = "Anti-Hydrogen"
 	fuel = 1e-12		//pico-kilogram
 
-/obj/item/weapon/fuel/attackby(obj/item/weapon/fuel/F, mob/user)
+/obj/item/fuel/attackby(obj/item/fuel/F, mob/user)
 	..()
-	if(istype(src, /obj/item/weapon/fuel/antiH))
-		if(istype(F, /obj/item/weapon/fuel/antiH))
+	if(istype(src, /obj/item/fuel/antiH))
+		if(istype(F, /obj/item/fuel/antiH))
 			src.fuel += F.fuel
 			F.fuel = 0
 			to_chat(user, "You have added the anti-Hydrogen to the storage ring, it now contains [src.fuel]kg")
-		if(istype(F, /obj/item/weapon/fuel/H))
+		if(istype(F, /obj/item/fuel/H))
 			src.fuel += F.fuel
 			qdel(F)
 			src:annihilation(src.fuel)
-	if(istype(src, /obj/item/weapon/fuel/H))
-		if(istype(F, /obj/item/weapon/fuel/H))
+	if(istype(src, /obj/item/fuel/H))
+		if(istype(F, /obj/item/fuel/H))
 			src.fuel += F.fuel
 			F.fuel = 0
 			to_chat(user, "You have added the Hydrogen to the storage ring, it now contains [src.fuel]kg")
-		if(istype(F, /obj/item/weapon/fuel/antiH))
+		if(istype(F, /obj/item/fuel/antiH))
 			src.fuel += F.fuel
 			qdel(src)
 			F:annihilation(F.fuel)
 
-/obj/item/weapon/fuel/antiH/proc/annihilation(var/mass)
+/obj/item/fuel/antiH/proc/annihilation(var/mass)
 
 	var/strength = convert2energy(mass)
 
@@ -67,21 +67,21 @@
 	return
 
 
-/obj/item/weapon/fuel/examine(mob/user)
+/obj/item/fuel/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
 		. += "It contains [fuel]kg of [content ? content : "nothing"]."
 
-/obj/item/weapon/fuel/proc/injest(mob/M as mob)
+/obj/item/fuel/proc/injest(mob/M as mob)
 	switch(content)
 		if("Anti-Hydrogen")
 			M.gib() //Yikes!
 		if("Hydrogen")
-			to_chat(M, "<font color='blue'>You feel very light, as if you might just float away...</font>")
+			to_chat(M, span_blue("You feel very light, as if you might just float away..."))
 	qdel(src)
 	return
 
-/obj/item/weapon/fuel/attack(mob/M as mob, mob/user as mob)
+/obj/item/fuel/attack(mob/M as mob, mob/user as mob)
 	if (user != M)
 		var/obj/effect/equip_e/human/O = new /obj/effect/equip_e/human(  )
 		O.source = user
@@ -96,5 +96,5 @@
 			return
 	else
 		for(var/mob/O in viewers(M, null))
-			O.show_message(text("<font color='red'>[M] ate the [content ? content : "empty canister"]!</font>"), 1)
+			O.show_message(span_red(text("[M] ate the [content ? content : "empty canister"]!")), 1)
 		src.injest(M)

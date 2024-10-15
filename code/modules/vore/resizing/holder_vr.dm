@@ -1,13 +1,13 @@
-/obj/item/weapon/holder/dropped(mob/user)
+/obj/item/holder/dropped(mob/user)
 	..()
 	spawn(1)
 		if(!throwing && isturf(loc))
 			qdel(src)
 
-/obj/item/weapon/holder/attack_hand(mob/living/user as mob) //straight up just copypasted from objects/items.dm with a few things changed (doesn't called dropped unless +actually dropped+)
+/obj/item/holder/attack_hand(mob/living/user as mob) //straight up just copypasted from objects/items.dm with a few things changed (doesn't called dropped unless +actually dropped+)
 	if (!user) return
 	if(anchored)
-		to_chat(user, span("notice", "\The [src] won't budge, you can't pick it up!"))
+		to_chat(user, span_notice("\The [src] won't budge, you can't pick it up!"))
 		return
 	if (hasorgans(user))
 		var/mob/living/carbon/human/H = user
@@ -15,16 +15,16 @@
 		if (user.hand)
 			temp = H.organs_by_name["l_hand"]
 		if(temp && !temp.is_usable())
-			to_chat(user, "<span class='notice'>You try to move your [temp.name], but cannot!</span>")
+			to_chat(user, span_notice("You try to move your [temp.name], but cannot!"))
 			return
 		if(!temp)
-			to_chat(user, "<span class='notice'>You try to use your hand, but realize it is no longer attached!</span>")
+			to_chat(user, span_notice("You try to use your hand, but realize it is no longer attached!"))
 			return
 	if(held_mob == user) return // No picking your own micro self up
 
 	var/old_loc = src.loc
-	if (istype(src.loc, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = src.loc
+	if (istype(src.loc, /obj/item/storage))
+		var/obj/item/storage/S = src.loc
 		if(!S.remove_from_storage(src))
 			return
 
@@ -48,7 +48,7 @@
 		dropInto(user.drop_location())
 		dropped(user)
 	//VORESTATION EDIT START. This handles possessed items.
-	if(src.possessed_voice && src.possessed_voice.len && !(user.ckey in warned_of_possession)) //Is this item possessed?
+	if(src.possessed_voice && src.possessed_voice.len > 1 && !(user.ckey in warned_of_possession)) // CHOMPEdit Is this item possessed?
 		warned_of_possession |= user.ckey
 		tgui_alert_async(user,{"
 		THIS ITEM IS POSSESSED BY A PLAYER CURRENTLY IN THE ROUND. This could be by anomalous means or otherwise.

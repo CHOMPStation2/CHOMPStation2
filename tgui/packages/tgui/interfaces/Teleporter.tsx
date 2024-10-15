@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -11,8 +12,8 @@ type Data = {
   teleporter_on: BooleanLike;
 };
 
-export const Teleporter = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const Teleporter = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const {
     locked_name,
@@ -23,7 +24,7 @@ export const Teleporter = (props, context) => {
   } = data;
 
   return (
-    <Window width={300} height={200} resizable>
+    <Window width={300} height={200}>
       <Window.Content>
         <Section>
           <LabeledList>
@@ -32,8 +33,9 @@ export const Teleporter = (props, context) => {
                 fluid
                 icon="bullseye"
                 onClick={() => act('select_target')}
-                content={locked_name}
-              />
+              >
+                {locked_name}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Calibrated">
               <Button.Checkbox
@@ -41,8 +43,9 @@ export const Teleporter = (props, context) => {
                 checked={calibrated}
                 color={calibrated ? 'good' : 'bad'}
                 onClick={() => act('test_fire')}
-                content={calibrated ? 'Accurate' : 'Test Fire'}
-              />
+              >
+                {calibrated ? 'Accurate' : 'Test Fire'}
+              </Button.Checkbox>
             </LabeledList.Item>
             <LabeledList.Item label="Teleporter">
               <Button.Checkbox
@@ -50,8 +53,9 @@ export const Teleporter = (props, context) => {
                 checked={teleporter_on}
                 color={teleporter_on ? 'good' : 'bad'}
                 onClick={() => act('toggle_on')}
-                content={teleporter_on ? 'Online' : 'OFFLINE'}
-              />
+              >
+                {teleporter_on ? 'Online' : 'OFFLINE'}
+              </Button.Checkbox>
             </LabeledList.Item>
             <LabeledList.Item label="Station">
               {station_connected ? 'Connected' : 'Not Connected'}

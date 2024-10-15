@@ -19,7 +19,6 @@
 #include "field.dmm"
 #include "hotspring.dmm"
 #include "kururak.dmm"
-#include "lonehome.dmm"
 #include "mechpit.dmm"
 #include "merchantstand.dmm"
 #include "methlab.dmm"
@@ -156,12 +155,6 @@
 	desc = "A lone Kururak's den."
 	mappath = 'modular_chomp/maps/submaps/surface_submaps/plains/kururak.dmm'
 	cost = 10
-
-/datum/map_template/surface/plains/lonehome
-	name = "Lone Home"
-	desc = "A quite inoffensive looking home, damaged but still holding up."
-	mappath = 'modular_chomp/maps/submaps/surface_submaps/plains/lonehome.dmm'
-	cost = 15
 
 /datum/map_template/surface/plains/mechpit
 	name = "Mechpit"

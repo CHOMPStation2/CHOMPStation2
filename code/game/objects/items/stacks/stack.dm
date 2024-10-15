@@ -14,7 +14,8 @@
 	origin_tech = list(TECH_MATERIAL = 1)
 	icon = 'icons/obj/stacks_ch.dmi' //CHOMPedit - materials update
 	randpixel = 7
-	center_of_mass = null
+	center_of_mass_x = 0 //CHOMPEdit
+	center_of_mass_y = 0 //CHOMPEdit
 	var/list/datum/stack_recipe/recipes
 	var/singular_name
 	var/amount = 1
@@ -157,21 +158,21 @@
 
 	if (!can_use(required))
 		if (produced>1)
-			to_chat(user, "<span class='warning'>You haven't got enough [src] to build \the [produced] [recipe.title]\s!</span>")
+			to_chat(user, span_warning("You haven't got enough [src] to build \the [produced] [recipe.title]\s!"))
 		else
-			to_chat(user, "<span class='warning'>You haven't got enough [src] to build \the [recipe.title]!</span>")
+			to_chat(user, span_warning("You haven't got enough [src] to build \the [recipe.title]!"))
 		return
 
 	if (recipe.one_per_turf && (locate(recipe.result_type) in user.loc))
-		to_chat(user, "<span class='warning'>There is another [recipe.title] here!</span>")
+		to_chat(user, span_warning("There is another [recipe.title] here!"))
 		return
 
 	if (recipe.on_floor && !isfloor(user.loc))
-		to_chat(user, "<span class='warning'>\The [recipe.title] must be constructed on the floor!</span>")
+		to_chat(user, span_warning("\The [recipe.title] must be constructed on the floor!"))
 		return
 
 	if (recipe.time)
-		to_chat(user, "<span class='notice'>Building [recipe.title] ...</span>")
+		to_chat(user, span_notice("Building [recipe.title] ..."))
 		if (!do_after(user, recipe.time))
 			return
 
@@ -222,7 +223,7 @@
 			S.amount = produced
 			S.add_to_stacks(user)
 
-		if (istype(O, /obj/item/weapon/storage)) //BubbleWrap - so newly formed boxes are empty
+		if (istype(O, /obj/item/storage)) //BubbleWrap - so newly formed boxes are empty
 			for (var/obj/item/I in O)
 				qdel(I)
 
@@ -253,6 +254,7 @@
 	if(!uses_charge)
 		amount -= used
 		if (amount <= 0)
+			amount = 0 // stop amount going negative ideally
 			qdel(src) //should be safe to qdel immediately since if someone is still using this stack it will persist for a little while longer
 		update_icon()
 		return 1
@@ -396,7 +398,7 @@
 			continue
 		var/transfer = src.transfer_to(item)
 		if (transfer)
-			to_chat(user, "<span class='notice'>You add a new [item.singular_name] to the stack. It now contains [item.amount] [item.singular_name]\s.</span>")
+			to_chat(user, span_notice("You add a new [item.singular_name] to the stack. It now contains [item.amount] [item.singular_name]\s."))
 		if(!amount)
 			break
 
@@ -404,7 +406,7 @@
 	if (user.get_inactive_hand() == src)
 		var/N = tgui_input_number(usr, "How many stacks of [src] would you like to split off?  There are currently [amount].", "Split stacks", 1, amount, 1)
 		if(N != round(N))
-			to_chat(user, "<span class='warning'>You cannot separate a non-whole number of stacks!</span>")
+			to_chat(user, span_warning("You cannot separate a non-whole number of stacks!"))
 			return
 		if(N)
 			var/obj/item/stack/F = src.split(N)

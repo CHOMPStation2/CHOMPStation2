@@ -16,13 +16,13 @@
 		var/client/C = X
 		if(C)
 			counts++
-		if(C && !(istype(C.mob,/mob/new_player) || istype(C.mob, /mob/observer)))
-			if(C && C.mob && isbelly(C.mob.loc))
-				bellied++
-		if(C.is_afk())
-			afks++
-		else
-			active++
+			if(!(istype(C.mob,/mob/new_player) || istype(C.mob, /mob/observer)))
+				if(C.mob && isbelly(C.mob.loc))
+					bellied++
+			if(C.is_afk())
+				afks++
+			else
+				active++
 
 	return "Current server status:\n**Web Manifest:** <http://manifest.chompstation13.net/>\n**Players:** [counts]\n**Active:** [active]\n**Bar Statues:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]" //CHOMPEdit
 
@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 /datum/tgs_chat_command/register/Run(datum/tgs_chat_user/sender, params)
 	// Try to find if that ID is registered to someone already
 	//var/sql_discord = sql_sanitize_text(sender.id) //CHOMPEdit TGSQL
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=sender.id)) //CHOMPEdit TGSQL
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=sender.id)) //CHOMPEdit TGSQL
 	query.Execute()
 	if(query.NextRow())
 		qdel(query) //CHOMPEdit TGSQL
@@ -116,7 +116,7 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 		return "[sender.friendly_name], I couldn't find a logged-in user with the username of '[key_to_find]', which is what you provided after conversion to Byond's ckey format. Please connect to the game server and try again."
 
 	//var/sql_ckey = sql_sanitize_text(key_to_find) //CHOMPEdit TGSQL
-	var/DBQuery/query2 = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = :t_ckey",list("t_ckey" = key_to_find)) //CHOMPEdit TGSQL
+	var/datum/db_query/query2 = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = :t_ckey",list("t_ckey" = key_to_find)) //CHOMPEdit TGSQL
 	query2.Execute() //CHOMPEdit TGSQL
 
 	// We somehow found their client, BUT they don't exist in the database
@@ -156,5 +156,5 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 /datum/tgs_chat_command/readfax/Run(sender, params)
 	var/list/all_params = splittext(params, " ")
 	var/faxid = all_params[1]
-	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+	var/faxmsg = return_file_text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") // CHOMPEdit
 	return "FAX: ```[strip_html_properly(faxmsg)]```"

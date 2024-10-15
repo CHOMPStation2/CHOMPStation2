@@ -2643,6 +2643,10 @@ var/list/the_station_areas = list (
 	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
 
+/area/engineering/gravgen
+	name = "Gravity Generator"
+	icon_state = "engineering"
+
 //CHOMPedit KSC = overmap exploration shuttles
 
 /area/shuttle/stargazer
@@ -2669,3 +2673,23 @@ var/list/the_station_areas = list (
 	name = "\improper Baby_mammoth"
 	icon_state = "shuttlered"
 	requires_power = 1
+
+/area/shuttle/spacebus
+	name = "\improper Space Bus"
+	icon_state = "shuttlered"
+	requires_power = 1
+
+/area/shuttle/junker
+	name = "\improper Junker"
+	icon_state = "shuttlered"
+	requires_power = 1
+
+// CHOMPAdd Start new Map
+/area/SouthernCrossV2/Maints
+	name = "\improper Evac"
+	icon_state = "fsmaint"
+
+/area/SouthernCrossV2/Evac
+	name = "\improper Evac"
+	icon_state = "shuttle2"
+// CHOMPAdd End new Map

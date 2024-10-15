@@ -1,4 +1,5 @@
 import { sortBy } from 'common/collections';
+
 import { useBackend } from '../backend';
 import { Button, Section, Table } from '../components';
 import { Window } from '../layouts';
@@ -11,8 +12,8 @@ type Data = {
 type Shuttle = {
   ref: string;
   name: string;
-  current_location;
-  status;
+  current_location: string;
+  status: number;
 };
 
 type OvermapShip = {
@@ -22,7 +23,7 @@ type OvermapShip = {
 
 export const AdminShuttleController = () => {
   return (
-    <Window width={600} height={600} resizable>
+    <Window width={600} height={600}>
       <Window.Content scrollable>
         <ShuttleList />
       </Window.Content>
@@ -30,8 +31,8 @@ export const AdminShuttleController = () => {
   );
 };
 
-export const ShuttleList = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const ShuttleList = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { shuttles, overmap_ships } = data;
 
@@ -39,21 +40,23 @@ export const ShuttleList = (props, context) => {
     <Section noTopPadding>
       <Section title="Classic Shuttles">
         <Table>
-          {sortBy((f: Shuttle) => f.name)(shuttles).map((shuttle) => (
+          {sortBy(shuttles, (f: Shuttle) => f.name).map((shuttle) => (
             <Table.Row key={shuttle.ref}>
               <Table.Cell collapsing>
                 <Button
                   m={0}
-                  content="JMP"
                   onClick={() => act('adminobserve', { ref: shuttle.ref })}
-                />
+                >
+                  JMP
+                </Button>
               </Table.Cell>
               <Table.Cell collapsing>
                 <Button
                   m={0}
-                  content="Fly"
                   onClick={() => act('classicmove', { ref: shuttle.ref })}
-                />
+                >
+                  Fly
+                </Button>
               </Table.Cell>
               <Table.Cell>{shuttle.name}</Table.Cell>
               <Table.Cell>{shuttle.current_location}</Table.Cell>
@@ -64,21 +67,22 @@ export const ShuttleList = (props, context) => {
       </Section>
       <Section title="Overmap Ships">
         <Table>
-          {sortBy((f: OvermapShip) => f.name?.toLowerCase() || f.name || f.ref)(
-            overmap_ships
+          {sortBy(
+            overmap_ships,
+            (f: OvermapShip) => f.name?.toLowerCase() || f.name || f.ref,
           ).map((ship) => (
             <Table.Row key={ship.ref}>
               <Table.Cell collapsing>
-                <Button
-                  content="JMP"
-                  onClick={() => act('adminobserve', { ref: ship.ref })}
-                />
+                <Button onClick={() => act('adminobserve', { ref: ship.ref })}>
+                  JMP
+                </Button>
               </Table.Cell>
               <Table.Cell collapsing>
                 <Button
-                  content="Control"
                   onClick={() => act('overmap_control', { ref: ship.ref })}
-                />
+                >
+                  Control
+                </Button>
               </Table.Cell>
               <Table.Cell>{ship.name}</Table.Cell>
             </Table.Row>

@@ -108,13 +108,13 @@
 /mob/living/simple_mob/proc/pounce_toggle()
 	set name = "Toggle Pouncing"
 	set desc = "Toggle pouncing. Doubleclick to pounce."
-	set category = "Abilities"
+	set category = "Abilities.Mob"
 
 	if(pouncing)
-		to_chat(src, "<span class='notice'>Pouncing toggled off.</span>")
+		to_chat(src, span_notice("Pouncing toggled off."))
 		pouncing = 0
 	else
-		to_chat(src, "<span class='notice'>Pouncing toggled on! DoubleClick somewhere to pounce there.</span>")
+		to_chat(src, span_notice("Pouncing toggled on! DoubleClick somewhere to pounce there."))
 		pouncing = 1
 	update_icon()
 
@@ -152,7 +152,7 @@
 				playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 				// throw_at returns FALSE if it will not call it's callback - useful to prevent state jamming
-				if(!throw_at(T, 10, pounce_speed, callback = CALLBACK(src, .proc/pouncefinish, foundpt, foundpm, T)))
+				if(!throw_at(T, 10, pounce_speed, callback = CALLBACK(src, PROC_REF(pouncefinish), foundpt, foundpm, T)))
 					if(status_flags & LEAPING)
 						status_flags &= ~LEAPING
 						flying = 0
@@ -162,9 +162,9 @@
 						if(!foundpm)
 							pass_flags &= ~PASSMOB
 			else
-				to_chat(src, "<span class='warning'>Pouncing blind isn't wise!</span>")
+				to_chat(src, span_warning("Pouncing blind isn't wise!"))
 		else
-			to_chat(src, "<span class='warning'>You can't do that right now!</span>")
+			to_chat(src, span_warning("You can't do that right now!"))
 			// some sanity incase the callback didn't fire for some reason
 			if(status_flags & LEAPING)
 				status_flags &= ~LEAPING
@@ -227,7 +227,7 @@
 		return
 
 	if((spit_last + spit_delay) > world.time) //To prevent YATATATATATAT spitting.
-		to_chat(src, "<span class='warning'>You have not yet prepared your chemical glands. You must wait before spitting again.</span>")
+		to_chat(src, span_warning("You have not yet prepared your chemical glands. You must wait before spitting again."))
 		return
 	else
 		spit_last = world.time
@@ -238,7 +238,7 @@
 		update_icon()
 		return
 	else if(spitting)
-		//visible_message("<span class='warning'>[src] spits [spit_name] at \the [A]!</span>", "<span class='alium'>You spit [spit_name] at \the [A].</span>")
+		//visible_message(span_warning("[src] spits [spit_name] at \the [A]!"), span_alium("You spit [spit_name] at \the [A]."))
 		var/obj/item/projectile/P = new spit_projectile(get_turf(src))
 		P.firer = src
 		P.old_style_target(A)
@@ -248,38 +248,38 @@
 /mob/living/simple_mob/proc/neurotoxin()
 	set name = "Toggle Neurotoxic Spit"
 	set desc = "Readies a neurotoxic spit, which paralyzes the target for a short time if they are not wearing protective gear."
-	set category = "Abilities"
+	set category = "Abilities.Mob"
 
 	if(spitting)
-		to_chat(src, "<span class='notice'>You stop preparing to spit.</span>")
+		to_chat(src, span_notice("You stop preparing to spit."))
 		spitting = 0
 	else
 		spitting = 1
 		spit_projectile = /obj/item/projectile/energy/neurotoxin
-		to_chat(src, "<span class='notice'>You prepare to spit neurotoxin.</span>")
+		to_chat(src, span_notice("You prepare to spit neurotoxin."))
 	update_icon()
 
 /mob/living/simple_mob/proc/acidspit()
 	set name = "Toggle Acid Spit"
 	set desc = "Readies an acidic spit, which burns the target if they are not wearing protective gear."
-	set category = "Abilities"
+	set category = "Abilities.Mob"
 
 	if(spitting)
-		to_chat(src, "<span class='notice'>You stop preparing to spit.</span>")
+		to_chat(src, span_notice("You stop preparing to spit."))
 		spitting = 0
 	else
 		spitting = 1
 		spit_projectile = /obj/item/projectile/energy/acid
-		to_chat(src, "<span class='notice'>You prepare to spit acid.</span>")
+		to_chat(src, span_notice("You prepare to spit acid."))
 	update_icon()
 
 /mob/living/simple_mob/proc/corrosive_acid(O as obj|turf in oview(1)) //If they right click to corrode, an error will flash if its an invalid target./N
 	set name = "Corrosive Acid"
 	set desc = "Drench an object in acid, destroying it over time."
-	set category = "Abilities"
+	set category = "Abilities.Mob"
 
 	if(!(O in oview(1)))
-		to_chat(src, "<span class='notice'>[O] is too far away.</span>")
+		to_chat(src, span_notice("[O] is too far away."))
 		return
 
 	// OBJ CHECK
@@ -301,11 +301,11 @@
 			cannot_melt = 1 //Gurgs : Everything that isn't a object, simulated wall, or simulated floor is assumed to be acid immune. Includes weird things like unsimulated floors and space.
 
 	if(cannot_melt)
-		to_chat(src, "<span class='notice'>You cannot dissolve this object.</span>")
+		to_chat(src, span_notice("You cannot dissolve this object."))
 		return
 
 	new /obj/effect/alien/acid(get_turf(O), O)
-	visible_message("<span class='alium'><B>[src] vomits globs of vile stuff all over [O]. It begins to sizzle and melt under the bubbling mess of acid!</B></span>")
+	visible_message(span_alium(span_bold("[src] vomits globs of vile stuff all over [O]. It begins to sizzle and melt under the bubbling mess of acid!")))
 
 	return
 
@@ -313,10 +313,10 @@
 /mob/living/simple_mob/proc/speen(var/range = 2)
 	set name = "Spin Attack"
 	set desc = "Spins to strike enemies away from you."
-	set category = "Abilities"
+	set category = "Abilities.Mob"
 
 	if(world.time < speen_last)
-		to_chat(src, "<span class='warning'>You cannot spin again so soon.</span>")
+		to_chat(src, span_warning("You cannot spin again so soon."))
 		return
 
 	speen_last = world.time + speen_delay
@@ -328,7 +328,7 @@
 		var/atom/movable/AM = am
 		if(AM == src || AM.anchored)
 			continue
-		addtimer(CALLBACK(src, .proc/speen_throw, am), 1)
+		addtimer(CALLBACK(src, PROC_REF(speen_throw), am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 /mob/living/simple_mob/proc/speen_throw(var/atom/movable/AM, var/gentle = 0, var/damage = 10)
@@ -344,6 +344,6 @@
 		M.Weaken(1.5)
 		if(!gentle)
 			M.adjustBruteLoss(damage)
-		to_chat(M, "<span class='userdanger'>You're thrown back by [src]!</span>")
+		to_chat(M, span_userdanger("You're thrown back by [src]!"))
 		playsound(src, get_sfx("punch"), 50, 1)
 	AM.throw_at(throwtarget, maxthrow, 3, src)

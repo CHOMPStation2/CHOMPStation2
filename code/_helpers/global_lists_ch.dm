@@ -1,42 +1,43 @@
 
 //Reagent Vore belly Sounds
-var/global/list/vore_reagent_sounds = list(
-		'sound/vore/walkslosh1.ogg',
-		'sound/vore/walkslosh2.ogg',
-		'sound/vore/walkslosh3.ogg',
-		'sound/vore/walkslosh4.ogg',
-		'sound/vore/walkslosh5.ogg',
-		'sound/vore/walkslosh6.ogg',
-		'sound/vore/walkslosh7.ogg',
-		'sound/vore/walkslosh8.ogg',
-		'sound/vore/walkslosh9.ogg',
-		'sound/vore/walkslosh10.ogg',
-		"None" = null)
+GLOBAL_LIST_INIT(slosh, list(
+	'sound/vore/walkslosh1.ogg',
+	'sound/vore/walkslosh2.ogg',
+	'sound/vore/walkslosh3.ogg',
+	'sound/vore/walkslosh4.ogg',
+	'sound/vore/walkslosh5.ogg',
+	'sound/vore/walkslosh6.ogg',
+	'sound/vore/walkslosh7.ogg',
+	'sound/vore/walkslosh8.ogg',
+	'sound/vore/walkslosh9.ogg',
+	'sound/vore/walkslosh10.ogg'
+))
 
 var/global/list/item_tf_spawnpoints = list() // Global variable tracking which items are item tf spawnpoints
 
 /var/global/list/existing_metroids = list() //Global variable for tracking metroids for the event announcement. Needs to go here for load order.
 
 //stuff that only synths can eat
-var/global/list/edible_tech = list(/obj/item/weapon/cell,
-				/obj/item/weapon/circuitboard,
+var/global/list/edible_tech = list(/obj/item/cell,
+				/obj/item/circuitboard,
 				/obj/item/integrated_circuit,
 				/obj/item/broken_device,
 				/obj/item/brokenbug,
 				)
 
 var/global/list/item_digestion_blacklist = list(
-		/obj/item/weapon/hand_tele,
-		/obj/item/weapon/card/id,
-		/obj/item/weapon/gun,
-		/obj/item/weapon/pinpointer,
+		/obj/item/hand_tele,
+		/obj/item/card/id,
+		/obj/item/gun,
+		/obj/item/pinpointer,
 		/obj/item/clothing/shoes/magboots,
 		/obj/item/areaeditor/blueprints,
-		/obj/item/weapon/disk/nuclear,
-		/obj/item/device/perfect_tele_beacon,
+		/obj/item/disk/nuclear,
+		/obj/item/perfect_tele_beacon,
 		/obj/item/organ/internal/brain/slime,
-		/obj/item/device/mmi/digital/posibrain,
-		/obj/item/weapon/rig/protean)
+		/obj/item/mmi/digital/posibrain,
+		/obj/item/mmi/digital/robot,
+		/obj/item/rig/protean)
 
 // Options for transforming into a different mob in virtual reality.
 var/global/list/vr_mob_tf_options = list(
@@ -62,7 +63,11 @@ var/global/list/vr_mob_tf_options = list(
 	"Tech golem" = /mob/living/simple_mob/mechanical/technomancer_golem,
 	"Metroid" = /mob/living/simple_mob/metroid/juvenile/baby,
 	"Otie" = /mob/living/simple_mob/vore/otie/cotie/chubby,
-	"Shadekin" = /mob/living/simple_mob/shadekin,
+	"Red-eyed Shadekin" = /mob/living/simple_mob/shadekin/red,
+	"Blue-eyed Shadekin" = /mob/living/simple_mob/shadekin/blue,
+	"Purple-eyed Shadekin" = /mob/living/simple_mob/shadekin/purple,
+	"Green-eyed Shadekin" = /mob/living/simple_mob/shadekin/green,
+	"Yellow-eyed Shadekin" = /mob/living/simple_mob/shadekin/yellow,
 	"Slime" = /mob/living/simple_mob/slime/xenobio/metal,
 	"Corrupt hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 	"Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw/den,
@@ -191,3 +196,10 @@ var/global/list/vr_mob_spawner_options = list(
 	"Neaera" = /mob/living/carbon/human/neaera,
 	"Stok" = /mob/living/carbon/human/stok
 	)
+
+var/global/list/selectable_footstep = list(
+	"Default" = FOOTSTEP_MOB_HUMAN,
+	"Claw" = FOOTSTEP_MOB_CLAW,
+	"Light Claw" = FOOTSTEP_MOB_TESHARI,
+	"Slither" = FOOTSTEP_MOB_SLITHER,
+)

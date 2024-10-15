@@ -1,3 +1,4 @@
+/* //These ammo changes seem excessive from gameplay since, so trying reverting to defaults.
 /obj/item/ammo_magazine/mfoam_dart/pistol
 	max_ammo = 22
 
@@ -228,3 +229,4 @@
 
 /obj/item/ammo_magazine/s45lc
 	max_ammo = 18
+*/

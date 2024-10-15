@@ -90,8 +90,9 @@
 	requires_power = 0
 	})
 "dI" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -99,15 +100,15 @@
 "dO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
-/obj/random/maintenance/research,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
 /turf/simulated/floor/tiled/dark,
 /area/submap/AbandonedLab{
 	requires_power = 0
 	})
 "eg" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -163,7 +164,11 @@
 	requires_power = 0
 	})
 "gP" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong{
+	size_multiplier = 1.2;
+	health = 240;
+	loot_list = list(/obj/item/gun/energy/laser = 5, /obj/item/gun/energy/laser/sleek = 5, /obj/item/gun/energy/gun = 5, /obj/item/gun/energy/sniperrifle = 5)
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -201,9 +206,8 @@
 	},
 /obj/random/projectile/shotgun,
 /obj/random/ammo,
-/obj/random/ammo,
-/obj/item/weapon/storage/box/empslite,
-/obj/item/weapon/storage/box/handcuffs,
+/obj/item/storage/box/empslite,
+/obj/item/storage/box/handcuffs,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -232,7 +236,6 @@
 /obj/machinery/light/poi{
 	dir = 1
 	},
-/obj/effect/landmark/loot_spawn/low,
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/dark,
 /area/submap/AbandonedLab{
@@ -262,7 +265,6 @@
 	})
 "iA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance/research,
 /turf/simulated/floor/reinforced,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -296,13 +298,6 @@
 "jE" = (
 /obj/effect/wingrille_spawn,
 /turf/simulated/wall/iron,
-/area/submap/AbandonedLab{
-	requires_power = 0
-	})
-"jN" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/contraband/nofail,
-/turf/simulated/floor/tiled/hydro,
 /area/submap/AbandonedLab{
 	requires_power = 0
 	})
@@ -367,7 +362,6 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/random/maintenance/cargo,
 /turf/simulated/floor/tiled/dark,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -385,7 +379,6 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/random/maintenance/research,
 /turf/simulated/floor/tiled/dark,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -395,7 +388,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/reinforced,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -506,15 +499,13 @@
 	})
 "rd" = (
 /obj/structure/salvageable/implant_container,
-/obj/item/weapon/storage/box/syringes,
+/obj/item/storage/box/syringes,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab{
 	requires_power = 0
 	})
 "rs" = (
 /obj/structure/closet/cabinet,
-/obj/random/contraband,
-/obj/random/contraband,
 /obj/random/maintenance/medical,
 /obj/random/cash,
 /turf/simulated/floor/tiled/steel,
@@ -571,13 +562,12 @@
 	})
 "uu" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/random/energy,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/AbandonedLab{
 	requires_power = 0
 	})
 "uC" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled/steel,
@@ -612,14 +602,14 @@
 	requires_power = 0
 	})
 "xj" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/structure/grille/broken/rustic,
 /obj/item/ammo_casing/a10mm{
 	dir = 8
 	},
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
+/obj/item/material/shard,
+/obj/item/material/shard,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/gibspawner/robot,
 /turf/simulated/shuttle/floor/voidcraft,
@@ -649,7 +639,7 @@
 	req_access = null
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/melee/baton/slime/loaded{
+/obj/item/melee/baton/slime/loaded{
 	pixel_y = 13
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -700,7 +690,9 @@
 "AB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid{
+	loot_list = list(/obj/item/reagent_containers/glass/beaker/bluespace = 25)
+	},
 /turf/simulated/floor,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -726,13 +718,6 @@
 /area/submap/AbandonedLab{
 	requires_power = 0
 	})
-"Bb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/reinforced,
-/area/submap/AbandonedLab{
-	requires_power = 0
-	})
 "BC" = (
 /turf/simulated/wall/iron,
 /area/submap/AbandonedLab{
@@ -740,7 +725,6 @@
 	})
 "BD" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/tiled/old_tile/green,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -762,7 +746,6 @@
 	maxHealth = 15
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/random/projectile/scrapped_gun,
 /obj/item/ammo_casing/a10mm{
 	dir = 6
 	},
@@ -779,7 +762,7 @@
 /obj/random/junk,
 /obj/random/junk,
 /obj/structure/curtain/black,
-/obj/item/weapon/card/id/silver,
+/obj/item/card/id/silver,
 /obj/random/projectile/scrapped_gun,
 /turf/simulated/floor/tiled/dark,
 /area/submap/AbandonedLab{
@@ -809,8 +792,7 @@
 	})
 "DR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance/security,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/reinforced,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -842,7 +824,7 @@
 	requires_power = 0
 	})
 "EW" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/deployable/barrier{
 	anchored = 1;
@@ -871,7 +853,6 @@
 "FN" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/stolenpackage,
-/obj/item/weapon/storage/backpack/holding,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -908,7 +889,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/remains/human,
-/obj/item/weapon/broken_gun/ionrifle,
 /turf/simulated/floor/tiled/dark,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -924,7 +904,6 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -958,7 +937,6 @@
 "Iz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
-/obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/tiled/dark,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -966,8 +944,7 @@
 "IE" = (
 /obj/structure/table/glass,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -980,9 +957,9 @@
 "IU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
-/obj/item/weapon/material/shard/shrapnel,
-/obj/item/weapon/material/shard/shrapnel,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -1010,9 +987,6 @@
 	})
 "JC" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/spacecash/c500,
-/obj/item/weapon/spacecash/c500,
-/obj/item/weapon/spacecash/c500,
 /obj/structure/window/reinforced/survival_pod,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/AbandonedLab{
@@ -1059,7 +1033,6 @@
 "KR" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/stolenpackage,
-/obj/item/stolenpackage,
 /obj/structure/window/reinforced/survival_pod,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/AbandonedLab{
@@ -1071,7 +1044,7 @@
 /turf/simulated/floor/plating,
 /area/submap/AbandonedLab)
 "KV" = (
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito,
+/obj/item/reagent_containers/food/snacks/sliceable/supremoburrito,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -1123,7 +1096,6 @@
 	})
 "ML" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance/security,
 /obj/structure/table/steel,
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled/steel,
@@ -1198,7 +1170,7 @@
 	})
 "PK" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
@@ -1243,7 +1215,6 @@
 	})
 "QA" = (
 /obj/effect/decal/cleanable/cobweb2,
-/obj/random/maintenance/cargo,
 /obj/structure/catwalk,
 /obj/effect/floor_decal/rust{
 	pixel_y = 1
@@ -1300,7 +1271,6 @@
 	})
 "Ta" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance/security,
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab{
@@ -1387,11 +1357,8 @@
 	})
 "Xo" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/storage/pill_bottle/vermicetol,
-/obj/item/weapon/storage/pill_bottle/dermaline,
-/obj/item/weapon/storage/pill_bottle/dexalin_plus,
-/obj/item/weapon/storage/pill_bottle/carthatoline,
 /obj/structure/closet/crate,
+/obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -1418,8 +1385,8 @@
 	requires_power = 0
 	})
 "XW" = (
-/obj/item/weapon/digestion_remains/skull,
-/obj/item/weapon/tool/crowbar,
+/obj/item/digestion_remains/skull,
+/obj/item/tool/crowbar,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -1436,8 +1403,8 @@
 "YD" = (
 /obj/structure/table/steel,
 /obj/effect/decal/cleanable/blood/oil,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/fountain2,
+/obj/item/paper_bin,
+/obj/item/pen/fountain2,
 /obj/structure/curtain/black,
 /turf/simulated/floor/tiled/dark,
 /area/submap/AbandonedLab{
@@ -1445,7 +1412,6 @@
 	})
 "Za" = (
 /obj/effect/floor_decal/rust,
-/obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab{
 	requires_power = 0
@@ -1460,14 +1426,13 @@
 	requires_power = 0
 	})
 "Zi" = (
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
 /area/template_noop)
 "Zr" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/loot_spawn/low,
 /obj/effect/floor_decal/rust{
 	pixel_y = 1
 	},
@@ -1573,7 +1538,7 @@ ku
 sb
 gk
 oI
-jN
+bI
 ot
 SB
 WZ
@@ -1771,7 +1736,7 @@ ie
 LL
 yS
 mQ
-Bb
+iA
 mu
 ku
 Dh

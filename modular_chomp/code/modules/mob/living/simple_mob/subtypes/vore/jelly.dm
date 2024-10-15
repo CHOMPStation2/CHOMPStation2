@@ -17,7 +17,7 @@
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The yawning flesh orifice leans over you from above. Its throat dribbles with oozing slick globs of saliva, or maybe it's more like mucus. Then you realize that's not its throat; that's its whole stomach! You're swallowed right into the fleshy sack, and the sphincter above seals you inside. The unthinking [name] goes back to jiggling about its own mindless business. Such a creature isn't even sentient enough to be aware of what it ate. You also realize that the chamber you're in only has one way in or out. Yet the simplicity of \the [name]'s gut won't mean you'll have it easy. If you stay here for long enough, you'll be broken down until there's nothing left but scraps."
-	B.mode_flags = DM_FLAG_THICKBELLY | DM_FLAG_STRIPPING
+	B.mode_flags = DM_FLAG_THICKBELLY
 	B.digest_brute = 0.3
 	B.digest_burn = 0.3
 	B.escapechance = 10 // You were dumb enough to walk into it or stand still, now good luck escaping.

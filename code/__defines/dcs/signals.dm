@@ -128,7 +128,7 @@
 #define COMSIG_ATOM_DIR_CHANGE "atom_dir_change"
 ///from base of atom/handle_atom_del(): (atom/deleted)
 #define COMSIG_ATOM_CONTENTS_DEL "atom_contents_del"
-///from base of atom/has_gravity(): (turf/location, list/forced_gravities)
+///from base of atom/get_gravity(): (turf/location, list/forced_gravities)
 #define COMSIG_ATOM_HAS_GRAVITY "atom_has_gravity"
 ///from proc/get_rad_contents(): ()
 #define COMSIG_ATOM_RAD_PROBE "atom_rad_probe"
@@ -219,7 +219,7 @@
 
 ///from base of turf/ChangeTurf(): (path, list/new_baseturfs, flags, list/transferring_comps)
 #define COMSIG_TURF_CHANGE "turf_change"
-///from base of atom/has_gravity(): (atom/asker, list/forced_gravities)
+///from base of atom/get_gravity(): (atom/asker, list/forced_gravities)
 #define COMSIG_TURF_HAS_GRAVITY "turf_has_gravity"
 ///from base of turf/multiz_turf_del(): (turf/source, direction)
 #define COMSIG_TURF_MULTIZ_DEL "turf_multiz_del"
@@ -779,3 +779,20 @@
 	#define ELEMENT_CONFLICT_FOUND	(1<<0)
 //From reagents touch_x.
 #define COMSIG_REAGENTS_TOUCH "reagent_touch"
+
+
+//Moved observer stuff to DCS
+#define COMSIG_OBSERVER_MOVED "observer_move"
+#define COMSIG_OBSERVER_DESTROYED "observer_destroyed"
+#define COMSIG_OBSERVER_SHUTTLE_ADDED "observer_shuttle_added"
+#define COMSIG_OBSERVER_SHUTTLE_PRE_MOVE "observer_shuttle_premove"
+#define COMSIG_OBSERVER_SHUTTLE_MOVED "observer_shuttle_moved"
+#define COMSIG_OBSERVER_TURF_ENTERED "observer_turf_entered"
+#define COMSIG_OBSERVER_TURF_EXITED "observer_turf_exited"
+#define COMSIG_OBSERVER_Z_MOVED "observer_z_moved"
+#define COMSIG_OBSERVER_MOB_EQUIPPED "observer_mob_equipped"
+#define COMSIG_OBSERVER_ITEM_EQUIPPED "observer_item_equipped"
+#define COMSIG_OBSERVER_MOB_UNEQUIPPED "observer_mob_unequipped"
+#define COMSIG_OBSERVER_ITEM_UNEQUIPPED "observer_item_unequipped"
+#define COMSIG_OBSERVER_APC "observer_apc"
+#define COMSIG_OBSERVER_GLOBALMOVED "observer_global_move"

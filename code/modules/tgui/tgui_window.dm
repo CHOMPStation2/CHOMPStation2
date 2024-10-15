@@ -1,4 +1,4 @@
-/**
+/*!
  * Copyright (c) 2020 Aleksej Komarov
  * SPDX-License-Identifier: MIT
  */
@@ -25,6 +25,18 @@
 	var/initial_inline_js
 	var/initial_inline_css
 	var/mouse_event_macro_set = FALSE
+
+	/**
+	 * Static list used to map in macros that will then emit execute events to the tgui window
+	 * A small disclaimer though I'm no tech wiz: I don't think it's possible to map in right or middle
+	 * clicks in the current state, as they're keywords rather than modifiers.
+	 */
+	var/static/list/byondToTguiEventMap = list(
+		"MouseDown" = "byond/mousedown",
+		"MouseUp" = "byond/mouseup",
+		"Ctrl" = "byond/ctrldown",
+		"Ctrl+UP" = "byond/ctrlup",
+	)
 
 /**
  * public
@@ -107,11 +119,11 @@
 		html = replacetextEx(html, "<!-- tgui:inline-html -->", inline_html)
 	// Inject inline JS
 	if (inline_js)
-		inline_js = "<script>\n'use strict';\n[inline_js]\n</script>"
+		inline_js = "<script>\n'use strict';\n[isfile(inline_js) ? file2text(inline_js) : inline_js]\n</script>"
 		html = replacetextEx(html, "<!-- tgui:inline-js -->", inline_js)
 	// Inject inline CSS
 	if (inline_css)
-		inline_css = "<style>\n[inline_css]\n</style>"
+		inline_css = "<style>\n[isfile(inline_css) ? file2text(inline_css) : inline_css]\n</style>"
 		html = replacetextEx(html, "<!-- tgui:inline-css -->", inline_css)
 	// Open the window
 	client << browse(html, "window=[id];[options]")
@@ -134,6 +146,9 @@
 		inline_html = initial_inline_html,
 		inline_js = initial_inline_js,
 		inline_css = initial_inline_css)
+	// Resend assets
+	for(var/datum/asset/asset in sent_assets)
+		send_asset(asset)
 
 /**
  * public
@@ -165,8 +180,8 @@
  * Acquire the window lock. Pool will not be able to provide this window
  * to other UIs for the duration of the lock.
  *
- * Can be given an optional tgui datum, which will hook its on_message
- * callback into the message stream.
+ * Can be given an optional tgui datum, which will be automatically
+ * subscribed to incoming messages via the on_message proc.
  *
  * optional ui /datum/tgui
  */
@@ -175,6 +190,8 @@
 	locked_by = ui
 
 /**
+ * public
+ *
  * Release the window lock.
  */
 /datum/tgui_window/proc/release_lock()
@@ -391,11 +408,6 @@
 	if(mouse_event_macro_set)
 		return
 
-	var/list/byondToTguiEventMap = list(
-		"MouseDown" = "byond/mousedown",
-		"MouseUp" = "byond/mouseup"
-	)
-
 	for(var/mouseMacro in byondToTguiEventMap)
 		var/command_template = ".output CONTROL PAYLOAD"
 		var/event_message = TGUI_CREATE_MESSAGE(byondToTguiEventMap[mouseMacro], null)
@@ -416,10 +428,6 @@
 /datum/tgui_window/proc/remove_mouse_macro()
 	if(!mouse_event_macro_set)
 		stack_trace("Unsetting mouse macro on tgui window that has none")
-	var/list/byondToTguiEventMap = list(
-		"MouseDown" = "byond/mousedown",
-		"MouseUp" = "byond/mouseup"
-	)
 	for(var/mouseMacro in byondToTguiEventMap)
 		winset(client, null, "[mouseMacro]Window[id]Macro.parent=null")
 	mouse_event_macro_set = FALSE

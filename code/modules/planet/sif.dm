@@ -36,30 +36,30 @@ var/datum/planet/sif/planet_sif = null
 
 	switch(sun_position)
 		if(0 to 0.40) // Night
-			low_brightness = 0.2
-			low_color = "#000066"
+			low_brightness = 0.15 //CHOMPedit
+			low_color = "#19195c" //CHOMPedit
 
-			high_brightness = 0.5
+			high_brightness = 0.3
 			high_color = "#66004D"
 			min = 0
 
 		if(0.40 to 0.50) // Twilight
-			low_brightness = 0.6
+			low_brightness = 0.3
 			low_color = "#66004D"
 
-			high_brightness = 0.8
+			high_brightness = 0.65
 			high_color = "#CC3300"
 			min = 0.40
 
-		if(0.50 to 0.70) // Sunrise/set
-			low_brightness = 0.8
+		if(0.50 to 0.60) // Sunrise/set
+			low_brightness = 0.65
 			low_color = "#CC3300"
 
 			high_brightness = 0.9
 			high_color = "#FF9933"
 			min = 0.50
 
-		if(0.70 to 1.00) // Noon
+		if(0.60 to 1.00) // Noon
 			low_brightness = 0.9
 			low_color = "#DDDDDD"
 
@@ -122,7 +122,12 @@ var/datum/planet/sif/planet_sif = null
 		WEATHER_BLOOD_MOON	= new /datum/weather/sif/blood_moon(),
 		WEATHER_EMBERFALL	= new /datum/weather/sif/emberfall(),
 		WEATHER_ASH_STORM	= new /datum/weather/sif/ash_storm(),
-		WEATHER_FALLOUT		= new /datum/weather/sif/fallout()
+		WEATHER_FALLOUT		= new /datum/weather/sif/fallout(),
+		WEATHER_FALLOUT_TEMP	= new /datum/weather/sif/fallout/temp(), //CHOMPedit begin
+		WEATHER_CONFETTI		= new /datum/weather/sif/confetti(),
+		WEATHER_DOWNPOURWARNING = new /datum/weather/sif/downpourwarning(),
+		WEATHER_DOWNPOUR = new /datum/weather/sif/downpour(),
+		WEATHER_DOWNPOURFATAL = new /datum/weather/sif/downpourfatal() //CHOMPedit end
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 30,
@@ -280,7 +285,7 @@ var/datum/planet/sif/planet_sif = null
 	wind_high = 2
 	wind_low = 1
 	light_modifier = 0.5
-	effect_message = "<span class='warning'>Rain falls on you.</span>"
+	effect_message = span_warning("Rain falls on you.")
 
 	transition_chances = list(
 		WEATHER_OVERCAST = 20,
@@ -306,13 +311,13 @@ var/datum/planet/sif/planet_sif = null
 				continue // They're indoors, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = L.get_inactive_hand()
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella.</span>")
+					to_chat(L, span_notice("Rain patters softly onto your umbrella."))
 				continue
 
 			L.water_act(1)
@@ -328,7 +333,7 @@ var/datum/planet/sif/planet_sif = null
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
-	effect_message = "<span class='warning'>Rain falls on you, drenching you in water.</span>"
+	effect_message = span_warning("Rain falls on you, drenching you in water.")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
@@ -360,13 +365,13 @@ var/datum/planet/sif/planet_sif = null
 				continue // They're indoors, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = L.get_inactive_hand()
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
+					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
 				continue
 
 
@@ -394,7 +399,7 @@ var/datum/planet/sif/planet_sif = null
 	flight_failure_modifier = 15
 	timer_low_bound = 2
 	timer_high_bound = 5
-	effect_message = "<span class='warning'>The hail smacks into you!</span>"
+	effect_message = span_warning("The hail smacks into you!")
 
 	transition_chances = list(
 		WEATHER_RAIN = 45,
@@ -418,13 +423,13 @@ var/datum/planet/sif/planet_sif = null
 				continue // They're indoors, so no need to pelt them with ice.
 
 			// If they have an open umbrella, it'll guard from hail
-			var/obj/item/weapon/melee/umbrella/U = H.get_active_hand()
+			var/obj/item/melee/umbrella/U = H.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = H.get_inactive_hand()
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(H, "<span class='notice'>Hail patters onto your umbrella.</span>")
+					to_chat(H, span_notice("Hail patters onto your umbrella."))
 				continue
 
 			var/target_zone = pick(BP_ALL)
@@ -553,6 +558,7 @@ var/datum/planet/sif/planet_sif = null
 	transition_messages = list(
 		"Radioactive soot and ash start to float down around you, contaminating whatever they touch."
 	)
+	imminent_transition_message = "Sky and clouds are growing sickly green... Radiation storm is approaching, get to cover!"
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 

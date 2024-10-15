@@ -33,7 +33,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	if(!owner || owner.stat == DEAD)
 		defib_timer = max(--defib_timer, 0)
 	else
-		defib_timer = min(++defib_timer, (config.defib_timer MINUTES) / 2)
+		defib_timer = min(++defib_timer, (CONFIG_GET(number/defib_timer) MINUTES) / 2) // CHOMPEdit
 
 /obj/item/organ/internal/brain/proc/can_assist()
 	return can_assist
@@ -78,10 +78,10 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		tmp_owner.internal_organs_by_name[organ_tag] = new replace_path(tmp_owner, 1)
 		tmp_owner = null
 
-/obj/item/organ/internal/brain/New()
-	..()
-	health = config.default_brain_health
-	defib_timer = (config.defib_timer MINUTES) / 2
+/obj/item/organ/internal/brain/Initialize() // CHOMPEdit
+	. = ..() // CHOMPEdit
+	health = CONFIG_GET(number/default_brain_health) // CHOMPEdit
+	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2 // CHOMPEdit
 	spawn(5)
 		if(brainmob)
 			butcherable = FALSE
@@ -106,6 +106,11 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 			brainmob.ooc_notes = H.ooc_notes //VOREStation Edit
 			brainmob.ooc_notes_likes = H.ooc_notes_likes
 			brainmob.ooc_notes_dislikes = H.ooc_notes_dislikes
+			//CHOMPEdit Start
+			brainmob.ooc_notes_favs = H.ooc_notes_favs
+			brainmob.ooc_notes_maybes = H.ooc_notes_maybes
+			brainmob.ooc_notes_style = H.ooc_notes_style
+			//CHOMPEdit End
 
 		// Copy modifiers.
 		for(var/datum/modifier/M in H.modifiers)
@@ -117,7 +122,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 	brainmob.languages = H.languages
 
-	to_chat(brainmob, "<span class='notice'>You feel slightly disoriented. That's normal when you're just \a [initial(src.name)].</span>")
+	to_chat(brainmob, span_notice("You feel slightly disoriented. That's normal when you're just \a [initial(src.name)]."))
 	callHook("debrain", list(brainmob))
 
 /obj/item/organ/internal/brain/examine(mob/user) // -- TLE
@@ -139,7 +144,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 	var/obj/item/organ/internal/brain/B = src
 	if(istype(B) && owner)
-		if(istype(owner, /mob/living/carbon))
+		if(istype(owner, /mob/living/carbon) && owner.ckey) //CHOMPEdit - Make sure owner's mind isn't elsewhere otherwise on brain removal brings them back
 			B.transfer_identity(owner)
 
 	..()
@@ -258,6 +263,11 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	H.ooc_notes = brainmob.ooc_notes // VOREStation Edit
 	H.ooc_notes_likes = brainmob.ooc_notes_likes
 	H.ooc_notes_dislikes = brainmob.ooc_notes_dislikes
+	//CHOMPEdit Start
+	H.ooc_notes_favs = brainmob.ooc_notes_favs
+	H.ooc_notes_maybes = brainmob.ooc_notes_maybes
+	H.ooc_notes_style = brainmob.ooc_notes_style
+	//CHOMPEdit End
 
 	H.nutrition = 260 //Enough to try to regenerate ONCE.
 	H.adjustBruteLoss(40)
@@ -295,9 +305,9 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 /decl/chemical_reaction/instant/promethean_brain_revival/on_reaction(var/datum/reagents/holder)
 	var/obj/item/organ/internal/brain/slime/brain = holder.my_atom
 	if(brain.reviveBody())
-		brain.visible_message("<span class='notice'>[brain] bubbles, surrounding itself with a rapidly expanding mass of slime!</span>")
+		brain.visible_message(span_notice("[brain] bubbles, surrounding itself with a rapidly expanding mass of slime!"))
 	else
-		brain.visible_message("<span class='warning'>[brain] shifts strangely, but falls still.</span>")
+		brain.visible_message(span_warning("[brain] shifts strangely, but falls still."))
 
 /obj/item/organ/internal/brain/golem
 	name = "chem"

@@ -1,8 +1,8 @@
 /datum/species/sergal
 	name = SPECIES_SERGAL
 	name_plural = "Sergals"
-	icobase = 'icons/mob/human_races/r_sergal.dmi'
-	deform = 'icons/mob/human_races/r_def_sergal.dmi'
+	icobase = 'modular_chomp/icons/mob/human_races/r_sergal.dmi' //ChompEDIT - our icons
+	deform = 'modular_chomp/icons/mob/human_races/r_def_sergal.dmi' //ChompEDIT - our icons
 	tail = "tail"
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
@@ -386,7 +386,7 @@
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
-	var/obj/item/weapon/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
+	var/obj/item/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(L, slot_r_hand)
 	else

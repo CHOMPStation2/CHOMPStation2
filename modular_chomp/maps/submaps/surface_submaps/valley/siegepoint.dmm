@@ -5,8 +5,8 @@
 /area/submap/siegepoint)
 "cm" = (
 /obj/structure/table/steel_reinforced,
-/obj/random/contraband/nofail,
 /obj/machinery/light/poi,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "cM" = (
@@ -33,7 +33,8 @@
 /area/submap/siegepoint)
 "gL" = (
 /mob/living/simple_mob/humanoid/merc/ranged/smg/sol{
-	faction = "neutral"
+	faction = "neutral";
+	loot_list = list(/obj/item/gun/projectile/automatic/c20r = 100, /obj/item/gun/energy/medigun = 20)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
@@ -65,7 +66,7 @@
 /area/submap/siegepoint)
 "ji" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/projectile/SVD,
+/obj/item/gun/projectile/SVD,
 /obj/item/clothing/suit/armor/pcarrier/blue/sol,
 /obj/machinery/light/poi,
 /turf/simulated/floor/tiled/techfloor,
@@ -88,11 +89,6 @@
 "lc" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/suit/armor/pcarrier/blue/sol,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/siegepoint)
-"lL" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/projectile/revolver/lemat,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "nl" = (
@@ -129,7 +125,9 @@
 /obj/structure/bed/chair/office{
 	dir = 4
 	},
-/mob/living/simple_mob/humanoid/pirate/mate/ranged/shotgun,
+/mob/living/simple_mob/humanoid/pirate/mate/ranged/shotgun{
+	loot_list = list(/obj/item/gun/projectile/shotgun/doublebarrel/quad = 100, /obj/item/clothing/suit/pirate = 100, /obj/item/stack/medical/advanced/bruise_pack = 20)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "pW" = (
@@ -152,7 +150,8 @@
 	dir = 1
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/smg/sol{
-	faction = "neutral"
+	faction = "neutral";
+	loot_list = list(/obj/item/gun/projectile/automatic/c20r = 100, /obj/item/gun/energy/medigun = 20)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
@@ -224,7 +223,7 @@
 /area/submap/siegepoint)
 "zJ" = (
 /obj/structure/table/steel_reinforced,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "zZ" = (
@@ -249,7 +248,7 @@
 /area/submap/siegepoint)
 "AW" = (
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/gun/projectile/revolver/webley,
+/obj/item/gun/projectile/revolver/webley,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Bz" = (
@@ -260,11 +259,6 @@
 	},
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/submap/siegepoint)
-"BY" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/projectile/revolver/saa,
-/turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Da" = (
 /mob/living/simple_mob/humanoid/pirate/ranged/shotgun/armored,
@@ -299,7 +293,8 @@
 "GW" = (
 /mob/living/simple_mob/humanoid/merc/ranged{
 	health = 15;
-	maxHealth = 15
+	maxHealth = 15;
+	loot_list = list(/obj/item/gun/projectile/colt = 100, /obj/item/stack/medical/advanced/bruise_pack = 20)
 	},
 /obj/item/clothing/suit/armor/pcarrier/merc,
 /turf/simulated/floor/tiled/techfloor,
@@ -331,11 +326,6 @@
 /area/submap/siegepoint)
 "Ji" = (
 /obj/structure/bookcase,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/siegepoint)
-"Jv" = (
-/obj/structure/table/steel_reinforced,
-/obj/random/medical,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "KZ" = (
@@ -411,7 +401,9 @@
 /obj/structure/bed/chair/office{
 	dir = 8
 	},
-/mob/living/simple_mob/humanoid/pirate/las/armored,
+/mob/living/simple_mob/humanoid/pirate/las/armored{
+	loot_list = list(/obj/item/melee/energy/sword/pirate = 100, /obj/item/clothing/suit/armor/material/makeshift = 100, /obj/item/stack/medical/advanced/bruise_pack = 20)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Rs" = (
@@ -426,16 +418,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Tg" = (
-/mob/living/simple_mob/humanoid/pirate/captain,
+/mob/living/simple_mob/humanoid/pirate/captain{
+	loot_list = list(/obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/salvage/loot/pirate = 50)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Tp" = (
 /obj/structure/salvageable/autolathe,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/siegepoint)
-"We" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/gun/energy/medigun,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/siegepoint)
 "Xi" = (
@@ -685,7 +674,7 @@ Pm
 Pm
 xK
 oW
-AO
+oW
 oW
 Da
 oW
@@ -820,7 +809,7 @@ oW
 oW
 ZG
 oW
-AO
+oW
 xK
 FV
 hs
@@ -882,7 +871,7 @@ oW
 xK
 wV
 Yc
-Jv
+Yc
 Yc
 Nv
 xK
@@ -912,7 +901,7 @@ xK
 Xi
 xK
 xK
-AO
+oW
 Ap
 oW
 Ap
@@ -924,7 +913,7 @@ hs
 (15,1,1) = {"
 hs
 xK
-zJ
+Yc
 oW
 oW
 Lu
@@ -968,9 +957,9 @@ wF
 xK
 oW
 Yc
-We
+Yc
 oW
-lL
+Yc
 xK
 oW
 oW
@@ -992,7 +981,7 @@ QI
 oW
 ZG
 oW
-zJ
+Yc
 xK
 oW
 Tg
@@ -1004,13 +993,13 @@ ta
 oW
 ji
 xK
-AO
+oW
 oW
 Nv
 xK
 wV
 Yc
-Jv
+Yc
 Yc
 Nv
 xK
@@ -1034,7 +1023,7 @@ oW
 Yc
 IW
 oW
-BY
+Yc
 xK
 oW
 oW
@@ -1076,7 +1065,7 @@ oW
 oW
 XH
 oW
-AO
+oW
 xK
 FV
 hs
@@ -1152,7 +1141,7 @@ gA
 oW
 ZG
 oW
-zJ
+Yc
 xK
 wV
 oa
@@ -1201,7 +1190,7 @@ oW
 oW
 xK
 oW
-AO
+oW
 oW
 oW
 oW
@@ -1286,7 +1275,7 @@ oW
 oW
 oW
 oW
-AO
+oW
 fx
 oW
 oW

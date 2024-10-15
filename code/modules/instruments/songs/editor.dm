@@ -40,9 +40,9 @@
 		if(!playing)
 			dat += "<A href='?src=[REF(src)];play=1'>Play</A> <SPAN CLASS='linkOn'>Stop</SPAN><BR><BR>"
 			dat += "Repeat Song: "
-			dat += repeat > 0 ? "<A href='?src=[REF(src)];repeat=-10'>-</A><A href='?src=[REF(src)];repeat=-1'>-</A>" : "<SPAN CLASS='linkOff'>-</SPAN><SPAN CLASS='linkOff'>-</SPAN>"
+			dat += repeat > 0 ? "<A href='?src=[REF(src)];repeat=-10'>-</A><A href='?src=[REF(src)];repeat=-1'>-</A>" : span_linkOff("-</SPAN><SPAN CLASS='linkOff'>-")
 			dat += " [repeat] times "
-			dat += repeat < max_repeats ? "<A href='?src=[REF(src)];repeat=1'>+</A><A href='?src=[REF(src)];repeat=10'>+</A>" : "<SPAN CLASS='linkOff'>+</SPAN><SPAN CLASS='linkOff'>+</SPAN>"
+			dat += repeat < max_repeats ? "<A href='?src=[REF(src)];repeat=1'>+</A><A href='?src=[REF(src)];repeat=10'>+</A>" : span_linkOff("+</SPAN><SPAN CLASS='linkOff'>+")
 			dat += "<BR>"
 		else
 			dat += "<SPAN CLASS='linkOn'>Play</SPAN> <A href='?src=[REF(src)];stop=1'>Stop</A><BR>"
@@ -136,7 +136,7 @@
 
 			if(length_char(t) >= MUSIC_MAXLINES * MUSIC_MAXLINECHARS)
 				var/cont = tgui_alert(usr, "Your message is too long! Would you like to continue editing it?", "Too long!", list("Yes", "No"))
-				if(cont == "No")
+				if(cont != "Yes")
 					break
 		while(length_char(t) > MUSIC_MAXLINES * MUSIC_MAXLINECHARS)
 		ParseSong(t)
@@ -191,12 +191,12 @@
 		stop_playing()
 
 	else if(href_list["setlinearfalloff"])
-		var/amount = tgui_input_number(usr, "Set linear sustain duration in seconds", "Linear Sustain Duration")
+		var/amount = tgui_input_number(usr, "Set linear sustain duration in seconds", "Linear Sustain Duration", round_value=FALSE)
 		if(!isnull(amount))
 			set_linear_falloff_duration(round(amount * 10, world.tick_lag))
 
 	else if(href_list["setexpfalloff"])
-		var/amount = tgui_input_number(usr, "Set exponential sustain factor", "Exponential sustain factor")
+		var/amount = tgui_input_number(usr, "Set exponential sustain factor", "Exponential sustain factor", round_value=FALSE)
 		if(!isnull(amount))
 			set_exponential_drop_rate(round(amount, 0.00001))
 
@@ -206,7 +206,7 @@
 			set_volume(round(amount, 1))
 
 	else if(href_list["setdropoffvolume"])
-		var/amount = tgui_input_number(usr, "Set dropoff threshold", "Dropoff Threshold Volume")
+		var/amount = tgui_input_number(usr, "Set dropoff threshold", "Dropoff Threshold Volume", round_value=FALSE)
 		if(!isnull(amount))
 			set_dropoff_volume(round(amount, 0.01))
 
@@ -233,7 +233,7 @@
 			set_instrument(choice)
 
 	else if(href_list["setnoteshift"])
-		var/amount = tgui_input_number(usr, "Set note shift", "Note Shift")
+		var/amount = tgui_input_number(usr, "Set note shift", "Note Shift", null, note_shift_max, note_shift_min)
 		if(!isnull(amount))
 			note_shift = clamp(amount, note_shift_min, note_shift_max)
 

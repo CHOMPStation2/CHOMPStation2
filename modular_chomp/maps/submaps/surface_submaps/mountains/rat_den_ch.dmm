@@ -65,7 +65,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/ratden)
 "p" = (
-/obj/item/weapon/pickaxe/diamond,
+/obj/item/pickaxe/diamond,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/ratden)
 "q" = (

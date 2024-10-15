@@ -181,7 +181,12 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/flip/slip,
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
-	/decl/emote/audible/xenopurr
+	/decl/emote/audible/xenopurr,
+	/decl/emote/audible/gwah,
+	/decl/emote/audible/wawa,
+	/decl/emote/audible/malehumanscream,
+	/decl/emote/audible/scientist/scream,
+	/decl/emote/audible/scientist/pain
 	//CHOMP Add end
 )
 
@@ -346,7 +351,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/verb/pose()
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
@@ -355,7 +360,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
 	var/HTML = "<body>"
 	HTML += "<tt><center>"
@@ -396,7 +401,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/proc/toggle_tail(var/setting,var/message = 0)
 	if(!tail_style || !tail_style.ani_state)
 		if(message)
-			to_chat(src, "<span class='warning'>You don't have a tail that supports this.</span>")
+			to_chat(src, span_warning("You don't have a tail that supports this."))
 		return 0
 
 	var/new_wagging = isnull(setting) ? !wagging : setting
@@ -408,7 +413,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/proc/toggle_wing(var/setting,var/message = 0)
 	if(!wing_style || !wing_style.ani_state)
 		if(message)
-			to_chat(src, "<span class='warning'>You don't have a wingtype that supports this.</span>")
+			to_chat(src, span_warning("You don't have a wingtype that supports this."))
 		return 0
 
 	var/new_flapping = isnull(setting) ? !flapping : setting

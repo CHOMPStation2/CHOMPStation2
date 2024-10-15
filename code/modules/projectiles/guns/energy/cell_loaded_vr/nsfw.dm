@@ -1,5 +1,5 @@
 // The Gun //
-/obj/item/weapon/gun/projectile/cell_loaded/combat
+/obj/item/gun/projectile/cell_loaded/combat
 	name = "cell-loaded revolver"
 	desc = "Variety is the spice of life! The HI-102b 'Nanotech Selectable-Cell Weapon', or NSCW for short, is an unholy hybrid of an ammo-driven  \
 	energy weapon that allows the user to mix and match their own fire modes. Up to four combinations of \
@@ -9,7 +9,7 @@
 	description_fluff = "The Hephaestus 'Nanotech Selectable Cell Weapon' allows one to customize their loadout in the field, or before deploying, to achieve various results in a weapon they are already familiar with wielding."
 	allowed_magazines = list(/obj/item/ammo_magazine/cell_mag/combat)
 
-/obj/item/weapon/gun/projectile/cell_loaded/combat/prototype
+/obj/item/gun/projectile/cell_loaded/combat/prototype
 	name = "prototype cell-loaded revolver"
 	desc = "Variety is the spice of life! A prototype based on HI-102b 'Nanotech Selectable-Cell Weapon', or NSCW for short, is an unholy hybrid of an ammo-driven  \
 	energy weapon that allows the user to mix and match their own fire modes. Up to two combinations of \
@@ -19,7 +19,7 @@
 	description_antag = ""
 	allowed_magazines = list(/obj/item/ammo_magazine/cell_mag/combat/prototype)
 
-	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 4, TECH_MAGNETS = 3)
+	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 4, TECH_MAGNET = 3)
 
 
 // The Magazine //
@@ -39,34 +39,34 @@
 	max_ammo = 2
 	x_offset = 6
 	catalogue_data = null
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_MAGNETS = 2)
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 
 
 // The Pack //
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack
+/obj/item/storage/secure/briefcase/nsfw_pack
 	name = "\improper HI-102b \'NSCW\' gun kit"
 	desc = "A storage case for a multi-purpose handgun. Variety hour!"
 	w_class = ITEMSIZE_NORMAL
 	max_w_class = ITEMSIZE_NORMAL
-	can_hold = list(/obj/item/weapon/gun/projectile/cell_loaded/combat,/obj/item/ammo_magazine/cell_mag/combat,/obj/item/ammo_casing/microbattery/combat)
+	can_hold = list(/obj/item/gun/projectile/cell_loaded/combat,/obj/item/ammo_magazine/cell_mag/combat,/obj/item/ammo_casing/microbattery/combat)
 
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack/New()
+/obj/item/storage/secure/briefcase/nsfw_pack/New()
 	..()
-	new /obj/item/weapon/gun/projectile/cell_loaded/combat(src)
+	new /obj/item/gun/projectile/cell_loaded/combat(src)
 	new /obj/item/ammo_magazine/cell_mag/combat(src)
 	for(var/path in subtypesof(/obj/item/ammo_casing/microbattery/combat))
 		new path(src)
 
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos
+/obj/item/storage/secure/briefcase/nsfw_pack_hos
 	name = "\improper HI-102b \'NSCW\' gun kit"
 	desc = "A storage case for a multi-purpose handgun. Variety hour!"
 	w_class = ITEMSIZE_NORMAL
 	max_w_class = ITEMSIZE_NORMAL
-	can_hold = list(/obj/item/weapon/gun/projectile/cell_loaded/combat,/obj/item/ammo_magazine/cell_mag/combat,/obj/item/ammo_casing/microbattery/combat)
+	can_hold = list(/obj/item/gun/projectile/cell_loaded/combat,/obj/item/ammo_magazine/cell_mag/combat,/obj/item/ammo_casing/microbattery/combat)
 
-/obj/item/weapon/storage/secure/briefcase/nsfw_pack_hos/New()
+/obj/item/storage/secure/briefcase/nsfw_pack_hos/New()
 	..()
-	new /obj/item/weapon/gun/projectile/cell_loaded/combat(src)
+	new /obj/item/gun/projectile/cell_loaded/combat(src)
 	new /obj/item/ammo_magazine/cell_mag/combat(src)
 	new /obj/item/ammo_magazine/cell_mag/combat(src)
 	new /obj/item/ammo_casing/microbattery/combat/lethal(src)

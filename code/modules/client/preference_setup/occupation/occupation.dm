@@ -2,51 +2,51 @@
 	name = "Occupation"
 	sort_order = 1
 
-/datum/category_item/player_setup_item/occupation/load_character(var/savefile/S)
-	S["alternate_option"]	>> pref.alternate_option
-	S["job_civilian_high"]	>> pref.job_civilian_high
-	S["job_civilian_med"]	>> pref.job_civilian_med
-	S["job_civilian_low"]	>> pref.job_civilian_low
-	S["job_medsci_high"]	>> pref.job_medsci_high
-	S["job_medsci_med"]		>> pref.job_medsci_med
-	S["job_medsci_low"]		>> pref.job_medsci_low
-	S["job_engsec_high"]	>> pref.job_engsec_high
-	S["job_engsec_med"]		>> pref.job_engsec_med
-	S["job_engsec_low"]		>> pref.job_engsec_low
+/datum/category_item/player_setup_item/occupation/load_character(list/save_data)
+	pref.alternate_option	= save_data["alternate_option"]
+	pref.job_civilian_high	= save_data["job_civilian_high"]
+	pref.job_civilian_med	= save_data["job_civilian_med"]
+	pref.job_civilian_low	= save_data["job_civilian_low"]
+	pref.job_medsci_high	= save_data["job_medsci_high"]
+	pref.job_medsci_med		= save_data["job_medsci_med"]
+	pref.job_medsci_low		= save_data["job_medsci_low"]
+	pref.job_engsec_high	= save_data["job_engsec_high"]
+	pref.job_engsec_med		= save_data["job_engsec_med"]
+	pref.job_engsec_low		= save_data["job_engsec_low"]
 	//VOREStation Add
-	S["job_talon_low"]		>> pref.job_talon_low
-	S["job_talon_med"]		>> pref.job_talon_med
-	S["job_talon_high"]		>> pref.job_talon_high
+	pref.job_talon_low		= save_data["job_talon_low"]
+	pref.job_talon_med		= save_data["job_talon_med"]
+	pref.job_talon_high		= save_data["job_talon_high"]
 	//VOREStation Add End
-	S["player_alt_titles"]	>> pref.player_alt_titles
+	pref.player_alt_titles	= check_list_copy(save_data["player_alt_titles"])
 	//CHOMPStation Add
-	S["job_other_low"]		>> pref.job_other_low
-	S["job_other_med"]		>> pref.job_other_med
-	S["job_other_high"]		>> pref.job_other_high
+	pref.job_other_low	= save_data["job_other_low"]
+	pref.job_other_med	= save_data["job_other_med"]
+	pref.job_other_high	= save_data["job_other_high"]
 	//CHOMPStation Add End
 
-/datum/category_item/player_setup_item/occupation/save_character(var/savefile/S)
-	S["alternate_option"]	<< pref.alternate_option
-	S["job_civilian_high"]	<< pref.job_civilian_high
-	S["job_civilian_med"]	<< pref.job_civilian_med
-	S["job_civilian_low"]	<< pref.job_civilian_low
-	S["job_medsci_high"]	<< pref.job_medsci_high
-	S["job_medsci_med"]		<< pref.job_medsci_med
-	S["job_medsci_low"]		<< pref.job_medsci_low
-	S["job_engsec_high"]	<< pref.job_engsec_high
-	S["job_engsec_med"]		<< pref.job_engsec_med
-	S["job_engsec_low"]		<< pref.job_engsec_low
+/datum/category_item/player_setup_item/occupation/save_character(list/save_data)
+	save_data["alternate_option"]	= pref.alternate_option
+	save_data["job_civilian_high"]	= pref.job_civilian_high
+	save_data["job_civilian_med"]	= pref.job_civilian_med
+	save_data["job_civilian_low"]	= pref.job_civilian_low
+	save_data["job_medsci_high"]	= pref.job_medsci_high
+	save_data["job_medsci_med"]		= pref.job_medsci_med
+	save_data["job_medsci_low"]		= pref.job_medsci_low
+	save_data["job_engsec_high"]	= pref.job_engsec_high
+	save_data["job_engsec_med"]		= pref.job_engsec_med
+	save_data["job_engsec_low"]		= pref.job_engsec_low
 	//VOREStation Add
-	S["job_talon_low"]		<< pref.job_talon_low
-	S["job_talon_med"]		<< pref.job_talon_med
-	S["job_talon_high"]		<< pref.job_talon_high
+	save_data["job_talon_low"]		= pref.job_talon_low
+	save_data["job_talon_med"]		= pref.job_talon_med
+	save_data["job_talon_high"]		= pref.job_talon_high
 	//VOREStation Add End
-	S["player_alt_titles"]	<< pref.player_alt_titles
+	save_data["player_alt_titles"]	= check_list_copy(pref.player_alt_titles)
 	//CHOMPStation Add
-	S["job_other_low"]		<< pref.job_other_low
-	S["job_other_med"]		<< pref.job_other_med
-	S["job_other_high"]		<< pref.job_other_high
-	//CHOMPStation Add End
+	save_data["job_other_low"]	= pref.job_other_low
+	save_data["job_other_med"]	= pref.job_other_med
+	save_data["job_other_high"]	= pref.job_other_high
+	//CHOMPStation Add Endarkens/revert-16279-revert-16253-reprefs
 
 /datum/category_item/player_setup_item/occupation/sanitize_character()
 	pref.alternate_option	= sanitize_integer(pref.alternate_option, 0, 2, initial(pref.alternate_option))
@@ -148,7 +148,7 @@
 		lastJob = job
 		. += "<a href='?src=\ref[src];job_info=[rank]'>"
 		if(jobban_isbanned(user, rank))
-			if(config.usewhitelist && !check_whitelist(user)) // CHOMPedit start
+			if(CONFIG_GET(flag/usewhitelist) && !check_whitelist(user)) // CHOMPedit start
 				. += "<del>[rank]</del></td><td><b> \[WHITELISTED]</b></td></tr>"
 				continue
 			else
@@ -176,7 +176,7 @@
 		if((pref.job_civilian_low & ASSISTANT) && job.type != /datum/job/assistant)
 			. += "<font color=grey>[rank]</font></a></td><td></td></tr>"
 			continue
-		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == "AI"))//Bold head jobs
+		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == JOB_AI))//Bold head jobs
 			. += "<b>[rank]</b></a>"
 		else
 			. += "[rank]</a>"
@@ -255,7 +255,7 @@
 		var/datum/job/job = locate(href_list["select_alt_title"])
 		if (job)
 			var/choices = list(job.title) + job.alt_titles
-			var/choice = tgui_input_list(usr, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job))
+			var/choice = tgui_input_list(user, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job)) //ChompEDIT - usr removal
 			if(choice && CanUseTopic(user))
 				SetPlayerAltTitle(job, choice)
 				return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
@@ -282,7 +282,7 @@
 		dat += "You answer to <b>[job.supervisors]</b> normally."
 
 		dat += "<hr style='clear:left;'>"
-		if(config.wikiurl)
+		if(CONFIG_GET(string/wikiurl)) // CHOMPEdit
 			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
 
 		var/alt_title = pref.GetPlayerAltTitle(job)
@@ -300,7 +300,7 @@
 
 	else if(href_list["job_wiki"])
 		var/rank = href_list["job_wiki"]
-		open_link(user,"[config.wikiurl][rank]")
+		open_link(user,"[CONFIG_GET(string/wikiurl)][rank]") // CHOMPEdit
 
 	return ..()
 

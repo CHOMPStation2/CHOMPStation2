@@ -13,7 +13,7 @@
 	var/mob_offset_x = 0
 	var/mob_offset_y = 0
 	do_colouration = 0 //Set to 1 to enable coloration using the tail color.
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //This lets all races use
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN, SPECIES_LLEILL, SPECIES_HANNER) //This lets all races use
 
 	var/list/lower_layer_dirs = list(SOUTH)
 	var/icon_loaf = null
@@ -100,6 +100,24 @@
 	desc = ""
 	icon_state = "bunny"
 	do_colouration = 1
+
+/datum/sprite_accessory/tail/rabbit
+    name = "rabbit, colourable (vwag)"
+    desc = ""
+    icon_state = "rabbit"
+    do_colouration = TRUE
+    color_blend_mode = ICON_MULTIPLY
+    ani_state = "rabbit_w"
+
+/datum/sprite_accessory/tail/rabbitalt
+    name = "rabbit, dual color (vwag)"
+    desc = ""
+    icon_state = "rabbitalt"
+    extra_overlay = "rabbitalt-tips"
+    do_colouration = TRUE
+    color_blend_mode = ICON_MULTIPLY
+    ani_state = "rabbitalt_w"
+    extra_overlay_w = "rabbitalt-tips_w"
 
 /datum/sprite_accessory/tail/bear_brown
 	name = "bear, brown"
@@ -432,6 +450,19 @@
 	extra_overlay = "tigertail_mark"
 	extra_overlay_w = "tigertail_mark_w"
 
+/datum/sprite_accessory/tail/tigeralt
+	name = "tiger tail, alt (vwag)"
+	desc = ""
+	icon_state = "tigeralt"
+	extra_overlay = "tigeralt-tips"
+	extra_overlay2 = "tigeralt-tips2"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	ani_state = "tigeralt_w"
+	extra_overlay_w = "tigeralt-tips_w"
+	extra_overlay2_w = "tigeralt-tips2_w"
+
+
 /datum/sprite_accessory/tail/vulp_new
 	name = "new vulp tail (vwag)"
 	desc = ""
@@ -502,6 +533,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "deertail_mark"
+
+/datum/sprite_accessory/tail/deeralt
+	name = "deer alt, colorable (vwag)"
+	desc = ""
+	icon_state = "deeralt"
+	ani_state = "deeralt_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/tesh_feathered
 	name = "Teshari tail"
@@ -992,6 +1031,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/tail_smooth_dual
+	name = "Smooth Lizard Tail, dual color"
+	desc = ""
+	icon_state = "tail_smooth"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "tail_smooth_markings"
+
 /datum/sprite_accessory/tail/fennec_tail
 	name = "Fennec tail"
 	desc = ""
@@ -1478,3 +1525,38 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "spiketail-1"
+
+/datum/sprite_accessory/tail/longtail/kaiju_tail_a_long
+	name = "Kaiju tail A, dual color"
+	icon = 'icons/mob/vore/taurs_vr.dmi'
+	icon_state = "kaiju_long_a"
+	extra_overlay = "kaiju_long_a_spikes"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/longtail/kaiju_tail_a_long_glow
+	name = "Kaiju tail A, dual color, glow"
+	icon = 'icons/mob/vore/taurs_vr.dmi'
+	icon_state = "kaiju_long_a"
+	extra_overlay = "kaiju_long_a_spikes"
+	extra_overlay2 = "kaiju_long_a_spikes_glow"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+//RS ADD START
+
+/datum/sprite_accessory/tail/longtail/flagtail
+	name = "Flagtail"
+	icon = 'icons/rogue-star/tails_64x32_rs.dmi'
+	icon_state = "flagtail"
+	extra_overlay = "flagtail-1"
+	extra_overlay2 = "flagtail-2"
+
+/datum/sprite_accessory/tail/longtail/chonksqrl
+	name = "Squirrel (Big)"
+	icon = 'icons/rogue-star/tails_64x32_rs.dmi'
+	icon_state = "chonksqrl"
+	extra_overlay = "chonksqrl-m1"
+	extra_overlay2 = "chonksqrl-m2"
+
+//RS ADD END

@@ -18,8 +18,9 @@
 		build_faction_friends()
 
 /datum/ai_holder/Destroy()
-	if(faction_friends.len) //This list is shared amongst the faction
-		faction_friends -= src
+	if(faction_friends)
+		if(faction_friends.len) //This list is shared amongst the faction
+			faction_friends -= src
 	return ..()
 
 // Handles everything about that list.
@@ -66,7 +67,7 @@
 			// That might be for the best since I can imagine it getting spammy in a big fight.
 			if(L.client && call_players) // Dealing with a player.
 				ai_log("request_help() : Asking [L] (Player) for help.", AI_LOG_INFO)
-				to_chat(L, "<span class='critical'>\The [holder] [called_player_message]</span>")
+				to_chat(L, span_critical("\The [holder] [called_player_message]"))
 
 			else if(L.ai_holder) // Dealing with an AI.
 				ai_log("request_help() : Asking [L] (AI) for help.", AI_LOG_INFO)
@@ -114,4 +115,3 @@
 		add_attacker(their_target) // We won't wait and 'warn' them while they're stabbing our ally
 	set_follow(friend, 10 SECONDS)
 	ai_log("help_requested() : Exiting.", AI_LOG_DEBUG)
-

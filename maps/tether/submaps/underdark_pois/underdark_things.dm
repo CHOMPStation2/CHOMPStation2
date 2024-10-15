@@ -17,7 +17,7 @@
 // Adds Phoron Wolf
 /mob/living/simple_mob/vore/wolf/phoron
 
-	faction = "underdark"
+	faction = FACTION_UNDERDARK
 	movement_cooldown = -1.5
 
 	harm_intent_damage = 5
@@ -39,7 +39,7 @@
 // Underdark mob spawners
 /obj/tether_away_spawner/underdark_drone_swarm
 	name = "Underdark Drone Swarm Spawner"
-	faction = "underdark"
+	faction = FACTION_UNDERDARK
 	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 10
@@ -50,32 +50,34 @@
 
 /obj/tether_away_spawner/underdark_normal
 	name = "Underdark Normal Spawner"
-	faction = "underdark"
+	faction = FACTION_UNDERDARK
 	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 50
 	//guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/giant_spider/hunter = 1,
-		/mob/living/simple_mob/animal/giant_spider/phorogenic/weak = 1,
-		/mob/living/simple_mob/animal/giant_spider/tunneler = 1,
+		/mob/living/simple_mob/animal/giant_spider/hunter = 3,
+		/mob/living/simple_mob/animal/giant_spider/phorogenic/weak = 3,
+		/mob/living/simple_mob/animal/giant_spider/tunneler = 3,
+		/mob/living/simple_mob/vore/oregrub = 1,
 	)
 
 /obj/tether_away_spawner/underdark_hard
 	name = "Underdark Hard Spawner"
-	faction = "underdark"
+	faction = FACTION_UNDERDARK
 	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 50
 	//guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/vore/aggressive/corrupthound = 1,
-		/mob/living/simple_mob/vore/aggressive/rat/phoron = 2
+		/mob/living/simple_mob/vore/aggressive/corrupthound = 3,
+		/mob/living/simple_mob/vore/aggressive/rat/phoron = 6,
+		/mob/living/simple_mob/vore/oregrub/lava = 1,
 	)
 
 /obj/tether_away_spawner/underdark_boss
 	name = "Underdark Boss Spawner"
-	faction = "underdark"
+	faction = FACTION_UNDERDARK
 	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 100

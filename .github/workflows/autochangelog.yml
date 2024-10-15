@@ -1,90 +1,24 @@
-name: Autochangelog
+# Creates an entry in html/changelogs_ch automatically, to eventually be compiled by compile_changelogs
+name: Auto Changelog
 on:
   pull_request_target:
-    types: closed
+    types:
+      - closed
     branches:
       - master
-
-env:
-  BASENAME: "chompstation"
-
+permissions:
+  contents: write
 jobs:
-  autochangelog:
-    name: Autochangelog
-    runs-on: ubuntu-20.04
-    permissions:
-      contents: write # to push to branch
-      pull-requests: write # to create pull requests (repo-sync/pull-request)
-    concurrency: 
-      group: autochangelog_group
-      cancel-in-progress: false
-    if: github.event.pull_request.merged == true && ( contains(github.event.pull_request.body, ':cl:') || contains(github.event.pull_request.body, '🆑') )
+  auto_changelog:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
-      - name: Clone
-        uses: /actions/checkout@v3
-      - name: Branch or checkout
-        run: |
-          git fetch origin
-          git checkout changelog_generation 2>/dev/null || git checkout -b changelog_generation
-      - name: Ensure +x on CI directory
-        run: |
-          chmod -R +x ./tools/ci
-          chmod -R +x ./tools/GenerateChangelog/prbody.txt
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.7'
-      - name: Write PR body to prbody.txt
-        uses: "DamianReeves/write-file-action@master"
-        with:
-          path: ./tools/GenerateChangelog/prbody.txt
-          write-mode: overwrite
-          contents: '${{ github.event.pull_request.body }}'
-      - name: Generate Changelog
-        run: |
-          pip install pyyaml
-          python tools/GenerateChangelog/ss13_autochangelog_ch.py \
-            html/changelogs_ch \
-            ${{ github.event.pull_request.number }} \
-            '${{ github.event.pull_request.user.login }}' \
-            'tools/GenerateChangelog/prbody.txt'
-          python tools/GenerateChangelog/ss13_genchangelog_ch.py \
-            html/changelogs_ch
-      - name: Empty prbody.txt
-        uses: "DamianReeves/write-file-action@master"
-        with:
-          path: ./tools/GenerateChangelog/prbody.txt
-          write-mode: overwrite
-          contents: ' '
-      - name: Commit CL
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "Changelog Generation"
-          git add .
-          git commit -m "Changelog Auto-Update (`date`) [ci skip]" -a || true
-          git push -u origin changelog_generation
-      - name: Check if PR exists
-        id: check
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          prs=$(gh pr list \
-              --repo "$GITHUB_REPOSITORY" \
-              --json baseRefName,headRefName \
-              --jq '
-                  map(select(.baseRefName == "master" and .headRefName == "changelog_generation"))
-                  | length
-              ')
-          if ((prs > 0)); then
-              echo "skip=true" >> "$GITHUB_OUTPUT"
-          fi
-      - name: Create Pull Request
-        if: '!steps.check.outputs.skip'
-        uses: repo-sync/pull-request@v2
-        with:
-          source_branch: "changelog_generation"
-          destination_branch: "master"
-          pr_title: "Automatic Changelog Generation"
-          pr_body: "This pull request updates the changelog"
-          pr_label: "Infrastructure"
-          pr_allow_empty: false
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Run auto changelog
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const { processAutoChangelog } = await import('${{ github.workspace }}/tools/pull_request_hooks/autoChangelog.js')
+          await processAutoChangelog({ github, context })
+        github-token: ${{ secrets.COMFY_ORANGE_PAT || secrets.GITHUB_TOKEN }}

@@ -1,15 +1,15 @@
 var/global/list/total_extraction_beacons = list()
 
 /obj/item/extraction_pack
-	name = "fulton extraction pack"
-	desc = "A balloon that can be used to extract equipment or personnel to a Fulton Recovery Beacon. Anything not bolted down can be moved. Link the pack to a beacon by using the pack in hand."
+	name = "bluespace fulton extraction pack" // CHOMPedit
+	desc = "A balloon that can be used to extract equipment or personnel to anywhere a bluespace Fulton Recovery Beacon is. Anything not bolted down can be moved. Link the pack to a beacon by using the pack in hand." // CHOMPedit
 	icon = 'icons/obj/fulton.dmi'
 	icon_state = "extraction_pack"
 	w_class = ITEMSIZE_NORMAL
 	var/obj/structure/extraction_point/beacon
 	var/list/beacon_networks = list("station")
 	var/uses_left = 3
-	var/can_use_indoors = FALSE
+	var/can_use_indoors = TRUE // CHOMPedit: Can be used anywhere.
 	var/safe_for_living_creatures = 1
 
 /obj/item/extraction_pack/examine()
@@ -57,9 +57,9 @@ var/global/list/total_extraction_beacons = list()
 			return
 		if(A.anchored)
 			return
-		to_chat(user, "<span class='notice'>You start attaching the pack to [A]...</span>")
+		to_chat(user, span_notice("You start attaching the pack to [A]..."))
 		if(do_after(user,50,target=A))
-			to_chat(user, "<span class='notice'>You attach the pack to [A] and activate it.</span>")
+			to_chat(user, span_notice("You attach the pack to [A] and activate it."))
 			/* No components, sorry. No convienence for you!
 			if(loc == user && istype(user.back, /obj/item/storage/backpack))
 				var/obj/item/storage/backpack/B = user.back
@@ -136,23 +136,22 @@ var/global/list/total_extraction_beacons = list()
 			if(uses_left <= 0)
 				qdel(src)
 
+// CHOMPedit Start - Makes fultons work pretty much anywhere.
 
 /obj/item/fulton_core
-	name = "extraction beacon signaller"
-	desc = "Emits a signal which Fulton recovery devices can lock onto. Activate in hand to create a beacon."
-	icon = 'icons/obj/stock_parts.dmi'
-	icon_state = "subspace_amplifier"
+	name = "bluespace extraction beacon signaller"
+	desc = "Emits a signal which bluespace Fulton recovery devices can lock onto. Activate in hand to create a beacon. Cannot be moved after placing!"
+	icon = 'icons/obj/fulton.dmi'
+	icon_state = "extraction_pointoff"
 
 /obj/item/fulton_core/attack_self(mob/user)
-	var/turf/T = get_turf(user)
-	var/outdoors = T.is_outdoors()
-	if(do_after(user,15,target = user) && !QDELETED(src) && outdoors)
+	if(do_after(user,15,target = user) && !QDELETED(src))
 		new /obj/structure/extraction_point(get_turf(user))
 		qdel(src)
 
 /obj/structure/extraction_point
 	name = "fulton recovery beacon"
-	desc = "A beacon for the Fulton recovery system. Activate a pack in your hand to link it to a beacon."
+	desc = "A beacon for the bluespace Fulton recovery system. Activate a pack in your hand to link it to a beacon."
 	icon = 'icons/obj/fulton.dmi'
 	icon_state = "extraction_point"
 	anchored = TRUE

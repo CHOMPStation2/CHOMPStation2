@@ -19,7 +19,7 @@
 		layer = ABOVE_MOB_LAYER
 
 // Wall tube lights
-/obj/item/weapon/light/tube
+/obj/item/light/tube
 	brightness_range = 6
 	brightness_power = 1
 
@@ -27,7 +27,7 @@
 	nightshift_power = 0.45
 
 // Big tubes, unused I think
-/obj/item/weapon/light/tube/large
+/obj/item/light/tube/large
 	brightness_range = 8
 	brightness_power = 2
 
@@ -35,7 +35,7 @@
 	nightshift_power = 1
 
 // Small wall lights
-/obj/item/weapon/light/bulb
+/obj/item/light/bulb
 	brightness_range = 4
 	brightness_power = 1
 
@@ -43,7 +43,7 @@
 	nightshift_power = 0.45
 
 // Floor lamps
-/obj/item/weapon/light/bulb/large
+/obj/item/light/bulb/large
 	brightness_range = 6
 	brightness_power = 1
 
@@ -84,6 +84,16 @@
         return
 
     src.set_dir(turn(src.dir, 270))
+
+/obj/machinery/light_construct/floortube/verb/rotate_counterclockwise()
+    set name = "Rotate Fixture Counter-Clockwise"
+    set category = "Object"
+    set src in view(1)
+
+    if (usr.stat || usr.restrained() || anchored)
+        return
+
+    src.set_dir(turn(src.dir, 90))
 
 /obj/machinery/light_construct/floortube/update_icon()
 	switch(stage)
@@ -133,7 +143,7 @@
 
 // Fairy lights
 
-/obj/item/weapon/light/bulb/smol
+/obj/item/light/bulb/smol
 	brightness_range = 1
 	brightness_power = 0.5
 
@@ -146,7 +156,7 @@
 	icon_state = "fairy_lights1"
 	base_state = "fairy_lights"
 	desc = "A set of lights on a long string of wire, anchored to the walls."
-	light_type = /obj/item/weapon/light/bulb/smol
+	light_type = /obj/item/light/bulb/smol
 	shows_alerts = FALSE
 	anchored = TRUE
 	plane = ABOVE_MOB_PLANE
@@ -193,7 +203,7 @@
 	icon_state = "lamppost1"
 	base_state = "lamppost"
 	desc = "A tall lampost that extends over an area"
-	light_type = /obj/item/weapon/light/bulb
+	light_type = /obj/item/light/bulb
 	shows_alerts = FALSE
 	anchored = TRUE
 	plane = ABOVE_MOB_PLANE
@@ -223,7 +233,7 @@
 			icon_state = "big_flamp-empty"
 */
 
-/obj/item/weapon/light/bulb/torch
+/obj/item/light/bulb/torch
 	brightness_range = 6
 	color = "#fabf87"
 	brightness_color = "#fabf87"
@@ -235,7 +245,7 @@
 	icon_state = "torch1"
 	base_state = "torch"
 	desc = "A small torch held in a wall sconce."
-	light_type = /obj/item/weapon/light/bulb/torch
+	light_type = /obj/item/light/bulb/torch
 	shows_alerts = FALSE
 	anchored = TRUE
 	plane = ABOVE_MOB_PLANE
@@ -246,3 +256,17 @@
 
 /obj/machinery/light/small/torch/attackby()
 	return
+
+/obj/machinery/light/broken
+	icon_state = "tube-broken"
+
+/obj/machinery/light/broken/Initialize()
+	. = ..()
+	broken()
+
+/obj/machinery/light/broken/small
+	icon_state = "bulb-broken"
+
+/obj/machinery/light/broken/small/Initialize()
+	. = ..()
+	broken()

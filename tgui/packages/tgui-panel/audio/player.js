@@ -4,16 +4,12 @@
  * @license MIT
  */
 
-import { createLogger } from 'tgui_ch/logging'; // CHOMPEdit - tgui_ch
+import { createLogger } from 'tgui/logging';
 
 const logger = createLogger('AudioPlayer');
 
 export class AudioPlayer {
   constructor() {
-    // Doesn't support HTMLAudioElement
-    if (Byond.IS_LTE_IE9) {
-      return;
-    }
     // Set up the HTMLAudioElement node
     this.node = document.createElement('audio');
     this.node.style.setProperty('display', 'none');

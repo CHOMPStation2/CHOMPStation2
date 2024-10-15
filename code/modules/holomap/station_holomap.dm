@@ -12,7 +12,7 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 500
-	circuit = /obj/item/weapon/circuitboard/station_map
+	circuit = /obj/item/circuitboard/station_map
 	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 
 	// TODO - Port use_auto_lights from /vg - for now declare here
@@ -70,10 +70,10 @@
 
 /obj/machinery/station_map/attack_hand(var/mob/user)
 	if(watching_mob && (watching_mob != user))
-		to_chat(user, "<span class='warning'>Someone else is currently watching the holomap.</span>")
+		to_chat(user, span_warning("Someone else is currently watching the holomap."))
 		return
 	if(user.loc != loc)
-		to_chat(user, "<span class='warning'>You need to stand in front of \the [src].</span>")
+		to_chat(user, span_warning("You need to stand in front of \the [src]."))
 		return
 	startWatching(user)
 
@@ -112,15 +112,16 @@
 			user.client.images |= holomap_datum.station_map
 
 			watching_mob = user
-			GLOB.moved_event.register(watching_mob, src, /obj/machinery/station_map/proc/checkPosition)
-			GLOB.dir_set_event.register(watching_mob, src, /obj/machinery/station_map/proc/checkPosition)
-			GLOB.destroyed_event.register(watching_mob, src, /obj/machinery/station_map/proc/stopWatching)
+			watching_mob.AddComponent(/datum/component/recursive_move)
+			RegisterSignal(watching_mob, COMSIG_OBSERVER_MOVED, /obj/machinery/station_map/proc/checkPosition)
+			//GLOB.dir_set_event.register(watching_mob, src, /obj/machinery/station_map/proc/checkPosition)
+			RegisterSignal(watching_mob, COMSIG_OBSERVER_DESTROYED, /obj/machinery/station_map/proc/stopWatching)
 			update_use_power(USE_POWER_ACTIVE)
 
 			if(bogus)
-				to_chat(user, "<span class='warning'>The holomap failed to initialize. This area of space cannot be mapped.</span>")
+				to_chat(user, span_warning("The holomap failed to initialize. This area of space cannot be mapped."))
 			else
-				to_chat(user, "<span class='notice'>A hologram of the station appears before your eyes.</span>")
+				to_chat(user, span_notice("A hologram of the station appears before your eyes."))
 
 /obj/machinery/station_map/attack_ai(var/mob/living/silicon/robot/user)
 	return // TODO - Implement for AI ~Leshana
@@ -141,9 +142,9 @@
 			var/mob/M = watching_mob
 			spawn(5) //we give it time to fade out
 				M.client.images -= holomap_datum.station_map
-		GLOB.moved_event.unregister(watching_mob, src)
-		GLOB.dir_set_event.unregister(watching_mob, src)
-		GLOB.destroyed_event.unregister(watching_mob, src)
+		UnregisterSignal(watching_mob, COMSIG_OBSERVER_MOVED)
+		//GLOB.dir_set_event.unregister(watching_mob, src)
+		UnregisterSignal(watching_mob, COMSIG_OBSERVER_DESTROYED)
 	watching_mob = null
 	update_use_power(USE_POWER_IDLE)
 
@@ -163,7 +164,7 @@
 /obj/machinery/station_map/update_icon()
 	if(!holomap_datum)
 		return //Not yet.
-		
+
 	cut_overlays()
 	if(stat & BROKEN)
 		icon_state = "station_mapb"
@@ -191,7 +192,7 @@
 	else
 		cut_overlay("station_map-panel")
 
-/obj/machinery/station_map/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/station_map/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
 	if(default_deconstruction_screwdriver(user, W))
 		return
@@ -219,7 +220,7 @@
 	frame_style = "wall"
 	x_offset = WORLD_ICON_SIZE
 	y_offset = WORLD_ICON_SIZE
-	circuit = /obj/item/weapon/circuitboard/station_map
+	circuit = /obj/item/circuitboard/station_map
 	icon_override = 'icons/obj/machines/stationmap.dmi'
 
 /datum/frame/frame_types/station_map/get_icon_state(var/state)
@@ -228,7 +229,7 @@
 /obj/structure/frame
 	layer = ABOVE_WINDOW_LAYER
 
-/obj/item/weapon/circuitboard/station_map
+/obj/item/circuitboard/station_map
 	name = T_BOARD("Station Map")
 	board_type = new /datum/frame/frame_types/station_map
 	build_path = /obj/machinery/station_map

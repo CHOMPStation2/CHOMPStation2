@@ -2,21 +2,21 @@
 
 	set name = "Evolve"
 	set desc = "Evolve into your adult form."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	if(stat != CONSCIOUS)
 		return
 
 	if(!adult_form)
-		verbs -= /mob/living/carbon/alien/verb/evolve
+		remove_verb(src,/mob/living/carbon/alien/verb/evolve) //CHOMPEdit TGPanel
 		return
 
 	if(handcuffed || legcuffed)
-		to_chat(src, "<font color='red'>You cannot evolve when you are cuffed.</font>")
+		to_chat(src, span_red("You cannot evolve when you are cuffed."))
 		return
 
 	if(amount_grown < max_grown)
-		to_chat(src, "<font color='red'>You are not fully grown.</font>")
+		to_chat(src, span_red("You are not fully grown."))
 		return
 
 	// confirm_evolution() handles choices and other specific requirements.

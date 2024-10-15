@@ -4,17 +4,17 @@
 /area/template_noop)
 "b" = (
 /turf/template_noop,
-/area/submap/pascalb)
+/area/submap/PascalB)
 "c" = (
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/pascalb)
+/turf/simulated/floor/outdoors/dirt/virgo3b,
+/area/submap/PascalB)
 "d" = (
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/pascalb)
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+/area/submap/PascalB)
 "e" = (
 /obj/item/poi/pascalb,
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/pascalb)
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+/area/submap/PascalB)
 
 (1,1,1) = {"
 a

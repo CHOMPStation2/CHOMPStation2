@@ -4,15 +4,10 @@
 /area/template_noop)
 "b" = (
 /turf/simulated/floor/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "e" = (
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/virgo3c,
-/area/groundbase/poi/outdoor)
-=======
-/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/poi/outdoor)
->>>>>>> f9bfe4cb44... Merge pull request #14276 from Very-Soft/seasontime
 "j" = (
 /obj/random/crate,
 /obj/random/maintenance/misc,
@@ -20,53 +15,53 @@
 /obj/random/maintenance/misc,
 /obj/random/maintenance/misc,
 /turf/simulated/floor/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "n" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/misc,
 /turf/simulated/floor/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "o" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "q" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "r" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_x = 1;
 	pixel_y = 5
 	},
 /turf/simulated/floor/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "A" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "H" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/misc,
 /obj/random/maintenance/misc,
 /turf/simulated/floor/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "N" = (
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "O" = (
 /obj/structure/table/rack/steel,
 /obj/random/maintenance/misc,
 /turf/simulated/floor/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 "S" = (
 /turf/simulated/wall/wood,
-/area/groundbase/poi/outdoor/cabin3)
+/area/submap/groundbase/poi/outdoor/cabin3)
 
 (1,1,1) = {"
 S

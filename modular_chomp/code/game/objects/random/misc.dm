@@ -42,3 +42,17 @@
 				prob(5);/obj/item/organ/internal/metamorphgland/replicant,
 				prob(5);/obj/item/organ/internal/heart/replicant/rage,
 				prob(5);/obj/item/organ/internal/lungs/replicant/mending)
+
+/obj/random/vendorsnack
+	name = "random snack vending machine"
+	desc = "This is a random snack vending machine"
+	icon = 'icons/obj/vending.dmi'
+	icon_state = "generic"
+
+/obj/random/vendorsnack/item_to_spawn()
+	return pick(/obj/random/vendordrink,
+				/obj/random/vendorfood,
+				/obj/machinery/vending/hotfood,
+				/obj/machinery/vending/sovietvend,
+				/obj/machinery/vending/fooddessert,
+				/obj/machinery/vending/radren)

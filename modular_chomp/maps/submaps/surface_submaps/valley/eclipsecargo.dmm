@@ -15,23 +15,36 @@
 /area/submap/eclipsecargo)
 "e" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/curtain/bed,
-/obj/item/weapon/gun/energy/clockwork,
+/obj/item/gun/energy/clockwork,
 /turf/simulated/shuttle/floor/purple,
+/area/submap/eclipsecargo)
+"f" = (
+/obj/structure/closet/crate,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/contraband,
+/turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "g" = (
 /obj/structure/bed/chair/bay/comfy/teal{
 	dir = 1
 	},
-/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/shuttle/floor/red,
 /area/submap/eclipsecargo)
 "h" = (
 /obj/structure/bed/chair/bay/comfy/teal{
 	dir = 1
 	},
-/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/shuttle/floor/red,
 /area/submap/eclipsecargo)
 "i" = (
@@ -41,12 +54,9 @@
 "j" = (
 /obj/structure/closet/crate,
 /obj/item/mecha_parts/mecha_equipment/cloak,
-/obj/random/contraband/nofail,
-/obj/random/ammo,
-/obj/random/ammo,
 /obj/random/ammo,
 /obj/random/material,
-/obj/random/material/precious,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "k" = (
@@ -76,7 +86,9 @@
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "m" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "n" = (
@@ -105,13 +117,22 @@
 /obj/structure/window/plastitanium/full,
 /turf/simulated/shuttle/plating,
 /area/submap/eclipsecargo)
+"q" = (
+/obj/structure/closet/crate,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
 "r" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/radiation,
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "s" = (
 /obj/structure/table/glass,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "We have started to alter our shipping schedules. Attacks from pirates, mercs, and raiders have begun to increase at a rapid rate. Many more armored then some of our elite.";
 	name = "Shipping"
 	},
@@ -124,12 +145,12 @@
 "u" = (
 /obj/structure/closet/crate,
 /obj/item/organ/internal/immunehub/replicant,
-/obj/random/contraband/nofail,
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/material,
 /obj/random/material/precious,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "v" = (
@@ -138,8 +159,8 @@
 /area/submap/eclipsecargo)
 "w" = (
 /obj/structure/closet/crate/secure/lootsafe/numberlock,
-/obj/item/weapon/rig/ch/clockwork,
-/obj/item/weapon/gun/energy/clockwork,
+/obj/item/rig/ch/clockwork,
+/obj/item/gun/energy/clockwork,
 /obj/item/stack/material/void_opal,
 /turf/simulated/shuttle/floor/red,
 /area/submap/eclipsecargo)
@@ -160,7 +181,6 @@
 /area/submap/eclipsecargo)
 "y" = (
 /obj/structure/table/glass,
-/obj/item/prop/alien/junk,
 /turf/simulated/shuttle/floor/red,
 /area/submap/eclipsecargo)
 "z" = (
@@ -178,7 +198,7 @@
 /area/submap/eclipsecargo)
 "D" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/curtain/bed,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
@@ -220,7 +240,6 @@
 "H" = (
 /obj/structure/closet/crate,
 /obj/item/mecha_parts/mecha_equipment/weapon/honker,
-/obj/random/contraband/nofail,
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/ammo,
@@ -250,15 +269,25 @@
 "K" = (
 /turf/simulated/shuttle/floor/red,
 /area/submap/eclipsecargo)
+"L" = (
+/obj/structure/closet/crate,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/ammo,
+/obj/random/material,
+/obj/random/material/precious,
+/obj/random/contraband,
+/turf/simulated/shuttle/floor/black,
+/area/submap/eclipsecargo)
 "M" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
 "O" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/curtain/bed,
-/obj/item/weapon/rig/ch/clockwork,
+/obj/item/rig/ch/clockwork,
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
 "P" = (
@@ -275,9 +304,6 @@
 "S" = (
 /obj/structure/closet/crate,
 /obj/item/organ/internal/fruitgland,
-/obj/random/contraband/nofail,
-/obj/random/ammo,
-/obj/random/ammo,
 /obj/random/ammo,
 /obj/random/material,
 /obj/random/material/precious,
@@ -286,23 +312,20 @@
 "T" = (
 /obj/structure/closet/crate,
 /obj/item/organ/internal/augment/armmounted/dartbow,
-/obj/random/contraband/nofail,
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/material,
 /obj/random/material/precious,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "U" = (
 /obj/structure/closet/crate,
-/obj/random/contraband/nofail,
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/ammo,
-/obj/random/firstaid,
-/obj/random/material,
-/obj/random/material/precious,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "V" = (
@@ -310,7 +333,9 @@
 /turf/simulated/shuttle/floor/purple,
 /area/submap/eclipsecargo)
 "W" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
+/mob/living/simple_mob/humanoid/eclipse/solar/firemoff{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "X" = (
@@ -320,23 +345,16 @@
 "Y" = (
 /obj/structure/closet/crate,
 /obj/item/clothing/under/yw/blueshield,
-/obj/random/contraband/nofail,
-/obj/random/ammo,
-/obj/random/ammo,
-/obj/random/ammo,
-/obj/random/material,
-/obj/random/material/precious,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 "Z" = (
 /obj/structure/closet/crate,
-/obj/item/organ/internal/lungs/replicant/mending,
-/obj/random/contraband/nofail,
-/obj/random/ammo,
 /obj/random/ammo,
 /obj/random/ammo,
 /obj/random/material,
 /obj/random/material/precious,
+/obj/random/contraband,
 /turf/simulated/shuttle/floor/black,
 /area/submap/eclipsecargo)
 
@@ -507,7 +525,7 @@ e
 D
 B
 a
-o
+f
 a
 l
 m
@@ -534,7 +552,7 @@ B
 a
 S
 a
-o
+L
 a
 R
 C
@@ -559,7 +577,7 @@ B
 a
 T
 a
-o
+q
 a
 R
 C
@@ -632,7 +650,7 @@ B
 B
 B
 a
-o
+U
 a
 Z
 a

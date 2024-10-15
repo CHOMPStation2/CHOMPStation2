@@ -61,16 +61,16 @@
 	detect(user)
 	if(!linked_pad || QDELETED(linked_pad))
 		if(!map_pad_link_id || !initMappedLink())
-			to_chat(user, "<span class='warning'>There is no linked pad!</span>")
+			to_chat(user, span_warning("There is no linked pad!"))
 			return
 	if(teleporting)
-		to_chat(user, "<span class='warning'>[src] is charging up. Please wait.</span>")
+		to_chat(user, span_warning("[src] is charging up. Please wait."))
 		return
 	if(world.time < last_teleport + teleport_cooldown)
-		to_chat(user, "<span class='warning'>[src] is recharging power. Please wait [round((last_teleport + teleport_cooldown - world.time)/10)] seconds.</span>")
+		to_chat(user, span_warning("[src] is recharging power. Please wait [round((last_teleport + teleport_cooldown - world.time)/10)] seconds."))
 		return
 	if(linked_pad.teleporting)
-		to_chat(user, "<span class='warning'>Linked pad is busy. Please wait.</span>")
+		to_chat(user, span_warning("Linked pad is busy. Please wait."))
 		return
 	src.add_fingerprint(user)
 	startteleport(user)
@@ -102,17 +102,17 @@
 			ready = 1
 			start_charge()
 		else
-			to_chat(user, "<span class='warning'>Pad detect failed. Are all eight pieces linked?</span>")
+			to_chat(user, span_warning("Pad detect failed. Are all eight pieces linked?"))
 
 /obj/machinery/hyperpad/centre/proc/startteleport(mob/user)
 	if(!linked_pad)
 		return
 	playsound(get_turf(src), 'sound/weapons/flash.ogg', 25, 1)
 	teleporting = 1
-	addtimer(CALLBACK(src, .proc/doteleport, user), teleport_speed)
+	addtimer(CALLBACK(src, PROC_REF(doteleport), user), teleport_speed)
 	var/speed = teleport_speed/8
 	for(var/obj/machinery/hyperpad/P in linked)
-		addtimer(CALLBACK(src, .proc/animate_discharge, P), speed)
+		addtimer(CALLBACK(src, PROC_REF(animate_discharge), P), speed)
 		speed += teleport_speed/8
 
 /obj/machinery/hyperpad/centre/proc/animate_discharge(var/obj/machinery/hyperpad/Pad)
@@ -123,7 +123,7 @@
 		teleporting = 0
 		return
 	if(!linked_pad || QDELETED(linked_pad))
-		to_chat(user, "<span class='warning'>Linked pad is not responding to ping. Teleport aborted.</span>")
+		to_chat(user, span_warning("Linked pad is not responding to ping. Teleport aborted."))
 		teleporting = 0
 		return
 
@@ -171,7 +171,7 @@
 	color_overlay.color = newcolor
 	var/timer = teleport_cooldown/8
 	for(var/obj/machinery/hyperpad/P in linked)
-		addtimer(CALLBACK(src, .proc/animate_charge, P, color_overlay), timer)
+		addtimer(CALLBACK(src, PROC_REF(animate_charge), P, color_overlay), timer)
 		timer += teleport_cooldown/8
 
 /obj/machinery/hyperpad/centre/proc/animate_charge(var/obj/machinery/hyperpad/Pad, var/mutable_appearance/color)

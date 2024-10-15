@@ -1,6 +1,7 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section, Box, ProgressBar } from '../components';
+import { Box, Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
 type Data = {
@@ -11,8 +12,8 @@ type Data = {
   flushing: BooleanLike;
 };
 
-export const DisposalBin = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const DisposalBin = (props) => {
+  const { act, data } = useBackend<Data>();
   const { mode, pressure, isAI, panel_open, flushing } = data;
   let stateColor;
   let stateText;
@@ -61,41 +62,46 @@ export const DisposalBin = (props, context) => {
               <Button
                 icon="toggle-off"
                 disabled={isAI || panel_open}
-                content="Disengaged"
-                selected={flushing ? null : 'selected'}
+                selected={flushing ? null : true}
                 onClick={() => act('disengageHandle')}
-              />
+              >
+                Disengaged
+              </Button>
               <Button
                 icon="toggle-on"
                 disabled={isAI || panel_open}
-                content="Engaged"
-                selected={flushing ? 'selected' : null}
+                selected={flushing ? true : null}
                 onClick={() => act('engageHandle')}
-              />
+              >
+                Engaged
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Power">
               <Button
                 icon="toggle-off"
                 disabled={mode === -1}
-                content="Off"
-                selected={mode ? null : 'selected'}
+                selected={mode ? null : true}
                 onClick={() => act('pumpOff')}
-              />
+              >
+                Off
+              </Button>
               <Button
                 icon="toggle-on"
                 disabled={mode === -1}
-                content="On"
-                selected={mode ? 'selected' : null}
+                selected={mode ? true : null}
                 onClick={() => act('pumpOn')}
-              />
+              >
+                On
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Eject">
               <Button
                 icon="sign-out-alt"
                 disabled={isAI}
-                content="Eject Contents"
                 onClick={() => act('eject')}
-              />
+              >
+                Eject Contents
+              </Button>
             </LabeledList.Item>
           </LabeledList>
         </Section>

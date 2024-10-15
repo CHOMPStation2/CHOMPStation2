@@ -15,7 +15,7 @@
 	icon_living = "glitch_boss"
 	icon_dead = "glitch_boss_dead"
 
-	faction = "MATH"
+	faction = FACTION_MATH
 
 	maxHealth = 2000
 	health = 2000
@@ -39,7 +39,7 @@
 	var/recently_used_attack = GA_SPEEDUP
 	var/all_special_attacks = list(GA_ADS, GA_CALLDOWN, GA_LINES, GA_BULLETHELL, GA_ILLUSION, GA_CONFUSION, GA_SPEEDUP)
 
-	loot_list = list(/obj/item/device/nif/glitch = 100)
+	loot_list = list(/obj/item/nif/glitch = 100)
 
 	can_be_drop_prey = FALSE //CHOMP Add
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
@@ -206,13 +206,13 @@
 
 	if(target && istype(target))
 		if(target.client)
-			to_chat(target, "<span class='critical'>You feel as though you are losing your sense of direction! Brace yourself!</span>")
+			to_chat(target, span_critical("You feel as though you are losing your sense of direction! Brace yourself!"))
 		new /obj/effect/temp_visual/pre_confuse(get_turf(target))
 		spawn(5 SECONDS)
 			if(target)
 				target.Confuse(3)
 				if(target.client)
-					to_chat(target, "<span class='critical'>You feel confused!</span>")
+					to_chat(target, span_critical("You feel confused!"))
 				new /obj/effect/temp_visual/confuse(get_turf(target))
 
 /mob/living/simple_mob/glitch_boss/proc/bullethell(atom/A)
@@ -299,7 +299,7 @@
 	icon_state = "glitch_boss"
 	icon_living = "glitch_boss"
 	icon_dead = "glitch_boss_dead"
-	faction = "MATH"
+	faction = FACTION_MATH
 
 	maxHealth = 20
 	health = 20
@@ -350,3 +350,11 @@
 	intelligence_level = AI_SMART
 	vision_range = 9
 	closest_distance = 4
+
+#undef GA_ADS
+#undef GA_CALLDOWN
+#undef GA_SPEEDUP
+#undef GA_ILLUSION
+#undef GA_BULLETHELL
+#undef GA_LINES
+#undef GA_CONFUSION

@@ -18,9 +18,9 @@
 	if (!ishuman(parent))
 		return COMPONENT_INCOMPATIBLE
 	gargoyle = parent
-	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_transformation
-	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_pause
-	gargoyle.verbs |= /mob/living/carbon/human/proc/gargoyle_checkenergy
+	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_transformation) //CHOMPEdit TGPanel
+	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_pause) //CHOMPEdit TGPanel
+	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_checkenergy) //CHOMPEdit TGPanel
 
 	START_PROCESSING(SSprocessing, src)
 
@@ -57,7 +57,7 @@
 //verbs or action buttons...?
 /mob/living/carbon/human/proc/gargoyle_transformation()
 	set name = "Gargoyle - Petrification"
-	set category = "Abilities"
+	set category = "Abilities.Gargoyle"
 	set desc = "Turn yourself into (or back from) being a gargoyle."
 
 	if (stat == DEAD)
@@ -66,10 +66,10 @@
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
 	if (comp)
 		if (comp.energy <= 0 && isturf(loc))
-			to_chat(src, "<span class='danger'>You suddenly turn into a [comp.identifier] as you run out of energy!</span>")
+			to_chat(src, span_danger("You suddenly turn into a [comp.identifier] as you run out of energy!"))
 		else if (comp.cooldown > world.time)
 			var/time_to_wait = (comp.cooldown - world.time) / (1 SECONDS)
-			to_chat(src, "<span class='warning'>You can't transform just yet again! Wait for another [round(time_to_wait,0.1)] seconds!</span>")
+			to_chat(src, span_warning("You can't transform just yet again! Wait for another [round(time_to_wait,0.1)] seconds!"))
 			return
 	if (istype(loc, /obj/structure/gargoyle))
 		qdel(loc)
@@ -78,7 +78,7 @@
 
 /mob/living/carbon/human/proc/gargoyle_pause()
 	set name = "Gargoyle - Pause"
-	set category = "Abilities"
+	set category = "Abilities.Gargoyle"
 	set desc = "Pause your energy while standing still, so you don't use up any more, though you will lose a small amount upon moving again."
 
 	if (stat)
@@ -89,13 +89,13 @@
 		comp.paused = TRUE
 		comp.paused_loc = loc
 		comp.RegisterSignal(src, COMSIG_ATOM_ENTERING, /datum/component/gargoyle/proc/unpause)
-		to_chat(src, "<span class='notice'>You start conserving your energy.</span>")
+		to_chat(src, span_notice("You start conserving your energy."))
 
 /mob/living/carbon/human/proc/gargoyle_checkenergy()
 	set name = "Gargoyle - Check Energy"
-	set category = "Abilities"
+	set category = "Abilities.Gargoyle"
 	set desc = "Check how much energy you have remaining as a gargoyle."
 
 	var/datum/component/gargoyle/comp = GetComponent(/datum/component/gargoyle)
 	if (comp)
-		to_chat(src, "<span class='notice'>You have [round(comp.energy,0.01)] energy remaining. It is currently [comp.paused ? "stable" : (comp.transformed ? "increasing" : "decreasing")].</span>")
+		to_chat(src, span_notice("You have [round(comp.energy,0.01)] energy remaining. It is currently [comp.paused ? "stable" : (comp.transformed ? "increasing" : "decreasing")]."))
