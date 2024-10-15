@@ -9,8 +9,14 @@ on:
 permissions:
   contents: write
 jobs:
+<<<<<<< HEAD
   auto_changelog:
     runs-on: ubuntu-latest
+=======
+  autochangelog:
+    name: Autochangelog
+    runs-on: ubuntu-22.04
+>>>>>>> ed5fc193f7... Recompiled rust-g (#16476)
     if: github.event.pull_request.merged == true
     steps:
     - name: Checkout

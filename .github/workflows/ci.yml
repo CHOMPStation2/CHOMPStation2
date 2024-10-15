@@ -12,9 +12,13 @@ jobs:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Run Linters
     runs-on: ubuntu-22.04
+<<<<<<< HEAD
     concurrency:
       group: run_linters-${{ github.head_ref || github.run_id }}
       cancel-in-progress: true
+=======
+
+>>>>>>> ed5fc193f7... Recompiled rust-g (#16476)
     steps:
       - uses: actions/checkout@v4
       # Caches
@@ -78,6 +82,37 @@ jobs:
       - name: Run TGUI Checks
         run: tools/build/build --ci lint tgui-test
 
+<<<<<<< HEAD
+=======
+  dreamchecker:
+    name: DreamChecker
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore SpacemanDMM Cache
+        uses: actions/cache@v4
+        with:
+          path: ~/SpacemanDMM
+          key: ${{ runner.os }}-dreamchecker-${{ hashFiles('dependencies.sh')}}
+          restore-keys: ${{ runner.os }}-dreamchecker
+
+      - name: Install Dependencies
+        run: |
+          tools/ci/install_spaceman_dmm.sh dreamchecker
+
+      - name: Run Linter
+        id: linter
+        run: |
+          ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
+
+      - name: Annotate Linter
+        uses: yogstation13/DreamAnnotate@v2
+        if: always()
+        with:
+          outputFile: output-annotations.txt
+
+>>>>>>> ed5fc193f7... Recompiled rust-g (#16476)
   unit_tests:
     timeout-minutes: 30
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
@@ -115,6 +150,25 @@ jobs:
           MAP: ${{ matrix.map }}
           REPLACE: true
           RUN: "1"
+<<<<<<< HEAD
+=======
+
+  extra_map_tests:
+    name: Map Tests
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure +x on CI directory
+        run: |
+          chmod -R +x ./tools/ci
+      - name: Restore BYOND Cache
+        uses: actions/cache@v4
+        with:
+          path: $HOME/byond
+          key: ${{ runner.os }}-byond
+      - name: Install BYOND
+        run: tools/ci/install_byond.sh
+>>>>>>> ed5fc193f7... Recompiled rust-g (#16476)
       - name: Compile POIs
         run: |
           tools/ci/install_byond.sh
@@ -139,8 +193,13 @@ jobs:
   tests_successful:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
+<<<<<<< HEAD
     needs: ['run_linters', 'unit_tests']
     runs-on: ubuntu-20.04
+=======
+    needs: ['run_linters', 'dreamchecker', 'unit_tests', 'extra_map_tests']
+    runs-on: ubuntu-22.04
+>>>>>>> ed5fc193f7... Recompiled rust-g (#16476)
     steps:
       - name: Report Success
         run: |
