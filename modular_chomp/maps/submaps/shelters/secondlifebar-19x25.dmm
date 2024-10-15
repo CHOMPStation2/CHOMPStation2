@@ -196,21 +196,12 @@
 /area/survivalpod/superpose/secondlifebar/dorms)
 "hO" = (
 /turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar)
+/area/survivalpod/superpose/secondlifebar/dorms)
 "iA" = (
 /obj/structure/table/darkglass,
 /obj/item/material/whip,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
-"iE" = (
-/obj/structure/sink{
-	pixel_y = 16
-	},
-/obj/structure/mirror{
-	pixel_y = 32
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar/dorms)
 "jw" = (
 /obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/techfloor,
@@ -269,12 +260,6 @@
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
-"lE" = (
-/obj/structure/toilet{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar)
 "lX" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/under/shiny/catsuit/poly,
@@ -302,6 +287,15 @@
 "ok" = (
 /obj/machinery/power/port_gen/pacman,
 /turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar)
+"oq" = (
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar)
 "ow" = (
 /obj/structure/bed/chair/oldsofa,
@@ -534,6 +528,9 @@
 /obj/structure/mirror{
 	pixel_y = 32
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar)
 "yi" = (
@@ -581,13 +578,6 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar)
-"Ax" = (
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-stripbar"
-	},
-/turf/simulated/floor/plating,
-/area/survivalpod/superpose/secondlifebar/dorms)
 "AI" = (
 /obj/structure/table/darkglass,
 /obj/item/gun/energy/mouseray/metamorphosis/advanced/random,
@@ -599,6 +589,11 @@
 /area/survivalpod/superpose/secondlifebar)
 "Bi" = (
 /obj/machinery/vending/loadout/gadget,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
 "Bw" = (
@@ -615,6 +610,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"BL" = (
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
 "BN" = (
 /obj/structure/table/darkglass,
 /obj/item/gun/energy/mouseray/metamorphosis/advanced,
@@ -630,9 +628,6 @@
 /obj/structure/sign/poster/custom{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/gaycarpet,
-/area/survivalpod/superpose/secondlifebar)
-"Cs" = (
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar)
 "CG" = (
@@ -729,11 +724,6 @@
 /obj/machinery/door/airlock/gold,
 /turf/simulated/floor/flock,
 /area/survivalpod/superpose/secondlifebar/dorms)
-"Hj" = (
-/turf/simulated/wall/sandstone{
-	color = "purple"
-	},
-/area/survivalpod/superpose/secondlifebar/dorms)
 "Ht" = (
 /obj/machinery/light{
 	dir = 8
@@ -800,6 +790,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"Kp" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
 "Ky" = (
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	color = "#f700ff";
@@ -858,6 +856,9 @@
 /obj/item/storage/secure/briefcase/money,
 /turf/unsimulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
+"KP" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
 "KX" = (
 /obj/machinery/light{
 	dir = 4
@@ -907,6 +908,9 @@
 /area/survivalpod/superpose/secondlifebar)
 "Ng" = (
 /obj/item/gun/energy/mouseray/metamorphosis/advanced/random,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar)
 "Ns" = (
@@ -929,7 +933,7 @@
 /obj/random/soap_common,
 /obj/item/towel/random,
 /obj/item/gun/energy/sizegun,
-/turf/space,
+/turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar/dorms)
 "Ob" = (
 /obj/machinery/door/airlock/freezer{
@@ -942,6 +946,11 @@
 /obj/item/card/id,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
+"Oh" = (
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/survivalpod/superpose/secondlifebar/dorms)
 "Oo" = (
 /obj/structure/table/darkglass,
 /obj/item/mindbinder{
@@ -954,6 +963,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"Os" = (
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-stripbar"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar/dorms)
 "OB" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/outdoors/dirt,
@@ -963,6 +979,12 @@
 /obj/item/glass_jar,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"OG" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
 "OM" = (
 /obj/effect/decal/cleanable/fruit_smudge,
 /turf/simulated/floor/carpet/purcarpet,
@@ -1159,6 +1181,9 @@
 /obj/structure/toilet{
 	pixel_y = 12
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar)
 "Ws" = (
@@ -1178,6 +1203,15 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
+"WF" = (
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
 "Xl" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1264,9 +1298,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/secondlifebar/dorms)
-"Zq" = (
-/turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar/dorms)
 "ZF" = (
 /obj/structure/table/rack/steel,
 /obj/random/soap_common,
@@ -1278,8 +1309,11 @@
 /obj/structure/toilet{
 	dir = 8
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile,
-/area/survivalpod/superpose/secondlifebar/dorms)
+/area/survivalpod/superpose/secondlifebar)
 
 (1,1,1) = {"
 gl
@@ -1327,11 +1361,11 @@ vp
 rw
 qK
 qK
-Hj
-iE
+Oh
+WF
 Lq
-Hj
-Hj
+Oh
+Oh
 gl
 Bw
 "}
@@ -1339,7 +1373,7 @@ Bw
 ok
 gl
 xR
-oL
+Kp
 bD
 gl
 ER
@@ -1354,11 +1388,11 @@ qK
 Ws
 Ws
 qK
-Hj
+Oh
 Xl
-Zq
+hO
 NY
-Hj
+Oh
 QD
 Bw
 "}
@@ -1380,12 +1414,12 @@ dv
 Ws
 uY
 TT
-qK
-Hj
-Hj
+sd
+Oh
+Oh
 Zh
-Hj
-Hj
+Oh
+Oh
 QD
 Bw
 "}
@@ -1408,11 +1442,11 @@ Ws
 Ws
 Ws
 qK
-Hj
+Oh
 OM
 Qx
 yY
-Hj
+Oh
 ll
 Bw
 "}
@@ -1439,7 +1473,7 @@ hv
 Qx
 OM
 Zg
-Hj
+Oh
 QD
 Bw
 "}
@@ -1462,7 +1496,7 @@ Po
 cA
 qK
 qK
-Hj
+Oh
 XG
 KH
 tr
@@ -1489,11 +1523,11 @@ wZ
 SE
 JY
 qK
-Hj
-Hj
-Hj
-Hj
-Hj
+Oh
+Oh
+Oh
+Oh
+Oh
 Eg
 EB
 "}
@@ -1501,7 +1535,7 @@ EB
 Gg
 Qm
 qK
-qK
+sd
 wZ
 tH
 wZ
@@ -1516,7 +1550,7 @@ vN
 wZ
 kv
 qK
-Ax
+Os
 MC
 MC
 oX
@@ -1570,7 +1604,7 @@ vN
 wZ
 kv
 qK
-Ax
+Os
 MC
 MC
 oX
@@ -1597,11 +1631,11 @@ pF
 tT
 bG
 qK
-Hj
-Hj
-Hj
-Hj
-Hj
+Oh
+Oh
+Oh
+Oh
+Oh
 cQ
 EB
 "}
@@ -1624,20 +1658,20 @@ ta
 Ky
 qK
 qK
-Hj
+Oh
 Jv
 gi
 lX
-Hj
+Oh
 Eg
 Ht
 "}
 (14,1,1) = {"
 gl
 xZ
-hO
-hO
-hO
+KP
+KP
+KP
 rg
 qK
 qK
@@ -1655,15 +1689,15 @@ CG
 fM
 fM
 fM
-Hj
+Oh
 OB
 Bw
 "}
 (15,1,1) = {"
 gl
 GT
-hO
-hO
+KP
+KP
 gN
 gl
 IM
@@ -1678,20 +1712,20 @@ la
 kI
 zI
 jw
-Hj
+Oh
 sT
 fM
 KC
-Hj
+Oh
 OB
 Bw
 "}
 (16,1,1) = {"
 gl
-xZ
-hO
+oq
+KP
 Ng
-hO
+KP
 gl
 ow
 Yx
@@ -1705,11 +1739,11 @@ se
 ej
 TG
 Bi
-Hj
-Hj
+Oh
+Oh
 Ob
-Hj
-Hj
+Oh
+Oh
 ll
 Bw
 "}
@@ -1729,14 +1763,14 @@ GQ
 Xn
 HZ
 LG
-Cs
+BL
 zI
 pU
-Hj
+Oh
 Xt
 Tv
 ZF
-Hj
+Oh
 QD
 Bw
 "}
@@ -1745,7 +1779,7 @@ gl
 VZ
 QL
 gl
-lE
+ZP
 gl
 BJ
 MX
@@ -1759,11 +1793,11 @@ XI
 FT
 cp
 PO
-Hj
+Oh
 Ds
-ZP
-Hj
-Hj
+OG
+Oh
+Oh
 gl
 Bw
 "}
