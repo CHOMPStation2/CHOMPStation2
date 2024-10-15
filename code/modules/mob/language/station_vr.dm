@@ -105,14 +105,21 @@
 
 /datum/language/marish // CHOMPedit
 	name = LANGUAGE_MARISH
-	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and syllables that are as delicate as the emotions that shadekin normally communicate with."
-	speech_verb = "mars"
-	ask_verb = "mars"
-	exclaim_verb = "MARS"
-	colour = "shadekin"
+	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and gestures that are as delicate as the emotions that shadekin normally communicate with."
 	key = "9"
+	signlang_verb = list("mars something silently", "shifts their ears")
+	signlang_verb_understood = list("mars")
+	colour = "marish"
+	flags = INAUDIBLE
+	ignore_adverb = TRUE
 	machine_understands = FALSE
-	syllables = list("mar", "mwrrr", "maaAr", "'aarrr", "wrurrl", "mmar")  // Placeholder syllables until someone else has a better idea!
+
+/datum/language/marish/scramble(var/input, var/list/known_languages)
+	return stars(input)
+
+/datum/language/marish/broadcast(var/mob/living/speaker, var/message, var/speaker_mask)
+	log_say("(INAUDIBLE) [message]", speaker)
+	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
 
 /datum/language/slavic //CHOMP reAdd this language
 	name = LANGUAGE_SLAVIC
@@ -179,6 +186,10 @@
 /datum/language/echosong/scramble(var/input, var/list/known_languages)
 	return stars(input)
 
+/datum/language/echosong/broadcast(var/mob/living/speaker, var/message, var/speaker_mask)
+	log_say("(INAUDIBLE) [message]", speaker)
+	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
+
 /datum/language/lleill
 	name = LANGUAGE_LLEILL
 	desc = "An ancient, gutteral language involving a lot of spitting."
@@ -193,10 +204,6 @@
 	)
 	machine_understands = FALSE
 	flags = WHITELISTED
-
-/datum/language/echosong/broadcast(var/mob/living/speaker, var/message, var/speaker_mask)
-	log_say("(INAUDIBLE) [message]", speaker)
-	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
 
 /datum/language/unathi
 	flags = 0
