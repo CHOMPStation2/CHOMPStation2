@@ -17914,6 +17914,11 @@
 	pixel_x = -6;
 	pixel_y = 10
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "bcS" = (
@@ -27548,6 +27553,10 @@
 	dir = 8
 	},
 /obj/machinery/r_n_d/protolathe/medical,
+/obj/machinery/light{
+	dir = 8;
+	name = "1E-light fixture"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "bFv" = (
@@ -28602,6 +28611,10 @@
 	pixel_x = -34;
 	pixel_y = 1
 	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "bIO" = (
@@ -29450,10 +29463,6 @@
 	pixel_y = 5
 	},
 /obj/item/storage/firstaid/toxin,
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "bMf" = (
@@ -44507,8 +44516,8 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/structure/disposalpipe/junction/yjunction{
-	dir = 4
+/obj/structure/disposalpipe/sortjunction/flipped{
+	name = "Genetics"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -49392,7 +49401,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "fAK" = (
-/obj/structure/table/glass,
 /obj/item/roller,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -49400,6 +49408,7 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 10
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/steel,
 /area/medical/genetics)
 "fAL" = (
@@ -50790,6 +50799,10 @@
 	dir = 4
 	},
 /obj/machinery/organ_printer/flesh/full,
+/obj/machinery/light{
+	dir = 4;
+	name = "1E-light fixture"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "gju" = (
@@ -50993,11 +51006,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "goD" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -52060,6 +52068,14 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/medical/medbay2)
+"gSb" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "gSn" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -52339,10 +52355,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/fscenter)
 "hai" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23
-	},
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -12;
@@ -53306,14 +53318,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "hBX" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "virology_airlock_control";
-	name = "Virology Access Button";
-	pixel_y = 24;
-	req_access = list(39)
-	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
 	},
@@ -53494,16 +53498,16 @@
 "hHj" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/hologram/holopad,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -53998,10 +54002,10 @@
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/warehouse)
 "hPZ" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "hQg" = (
@@ -54553,7 +54557,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "ief" = (
-/obj/structure/table/glass,
 /obj/item/packageWrap,
 /obj/item/hand_labeler,
 /obj/item/reagent_containers/spray/cleaner{
@@ -54566,6 +54569,7 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 8
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "iej" = (
@@ -62860,6 +62864,10 @@
 	c_tag = "MED - Virology Airlock";
 	dir = 5
 	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
 /turf/simulated/floor/tiled/steel,
 /area/medical/virology)
 "mFY" = (
@@ -65996,6 +66004,15 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "SC-ALCvirology";
+	name = "Virology Access Button";
+	pixel_y = 0;
+	req_access = list(39);
+	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/virology)
@@ -78266,20 +78283,16 @@
 /area/maintenance/research_medical)
 "vLc" = (
 /obj/structure/closet/l3closet/virology,
-/obj/machinery/light_switch{
-	pixel_x = 11;
-	pixel_y = -24
-	},
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "xenostation_airlock_control";
-	name = "Xenobiology Access Button";
-	pixel_y = -26;
-	req_access = list(55)
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "SC-ALCvirology";
+	name = "Virology Access Console";
+	tag_exterior_door = "SC-ALEvirology";
+	tag_interior_door = "SC-ALIvirology";
+	dir = 1;
+	pixel_y = -23
 	},
 /turf/simulated/floor/tiled/steel,
 /area/medical/virology)
@@ -78819,6 +78832,10 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8;
+	name = "1E-light fixture"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
@@ -80002,6 +80019,14 @@
 /obj/structure/grille,
 /turf/space,
 /area/space)
+"wSM" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "wSU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -81535,6 +81560,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "xIB" = (
@@ -124250,8 +124276,8 @@ bys
 lvy
 bKt
 tAA
-tAA
-tAA
+wSM
+gSb
 bcR
 aql
 xLY
