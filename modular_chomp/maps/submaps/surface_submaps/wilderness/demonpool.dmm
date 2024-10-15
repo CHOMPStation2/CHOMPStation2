@@ -109,10 +109,6 @@
 /obj/effect/gibspawner/human/xenochimera,
 /turf/simulated/floor/cult,
 /area/submap/DemonPool)
-"hQ" = (
-/obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/cult,
-/area/submap/DemonPool)
 "hW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -648,7 +644,6 @@
 "YK" = (
 /obj/structure/table/woodentable,
 /obj/item/pen/fountain,
-/obj/item/stolenpackage,
 /turf/simulated/floor,
 /area/submap/DemonPool)
 "Zc" = (
@@ -1075,7 +1070,7 @@ qQ
 XB
 si
 jt
-hQ
+oi
 Yk
 eR
 Jo

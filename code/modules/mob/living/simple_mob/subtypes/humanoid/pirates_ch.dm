@@ -49,6 +49,10 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/merc
 	say_list_type = /datum/say_list/pirate
 
+/mob/living/simple_mob/humanoid/pirate/Initialize()
+	. = ..()
+	loot_list += list(/obj/item/salvage/loot/pirate = 35)
+
 //Armored Variant
 
 /mob/living/simple_mob/humanoid/pirate/armored

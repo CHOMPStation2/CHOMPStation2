@@ -77,7 +77,6 @@
 /obj/structure/table/standard,
 /mob/living/simple_mob/mechanical/viscerator,
 /mob/living/simple_mob/mechanical/viscerator,
-/obj/random/energy,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "u" = (
@@ -116,7 +115,6 @@
 /area/submap/MilitaryCamp1)
 "C" = (
 /obj/structure/table,
-/obj/random/firstaid,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/MilitaryCamp1)
 "D" = (

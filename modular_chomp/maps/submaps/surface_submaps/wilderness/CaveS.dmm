@@ -82,7 +82,9 @@
 	},
 /area/submap/CaveS)
 "r" = (
-/mob/living/simple_mob/animal/giant_spider/lurker,
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -116,7 +118,9 @@
 	},
 /area/submap/CaveS)
 "x" = (
-/mob/living/simple_mob/animal/giant_spider/lurker,
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/CaveS)
 "y" = (
@@ -166,7 +170,6 @@
 /obj/item/reagent_containers/pill/antitox,
 /obj/item/reagent_containers/pill/antitox,
 /obj/item/reagent_containers/pill/paracetamol,
-/obj/random/firstaid,
 /turf/simulated/floor,
 /area/submap/CaveS)
 "H" = (
@@ -183,7 +186,6 @@
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/contraband,
-/obj/random/energy,
 /obj/item/material/star,
 /obj/item/material/star,
 /obj/item/material/star,
@@ -226,6 +228,20 @@
 "N" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
+/area/submap/CaveS)
+"W" = (
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/CaveS)
+"Z" = (
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/CaveS)
 
 (1,1,1) = {"
@@ -763,7 +779,7 @@ d
 k
 k
 d
-x
+Z
 d
 d
 d
@@ -925,7 +941,7 @@ k
 k
 d
 d
-r
+W
 k
 k
 k
@@ -1356,7 +1372,7 @@ A
 A
 k
 k
-r
+W
 d
 d
 d
@@ -1430,7 +1446,7 @@ d
 k
 k
 d
-r
+W
 k
 A
 A

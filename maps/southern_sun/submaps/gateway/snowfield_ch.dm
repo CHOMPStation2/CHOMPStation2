@@ -541,7 +541,7 @@
 	TO " + span_bold("ALL CLASS 1, 2, 3 PERSONNEL") + "<BR>Date of Order : " + span_bold("April 10, 1979") + ".</center> <BR><BR><BR>\
 	Directives : " + span_bold("Evacuation preparation from Facility. <BR>All related personnel, EXCLUDING 3M personnel \
 	must head to Chelyabinsk until 2100, April 10 and await for further directives.<BR>Base MUST \
-	maintain necessary items only.") + "<BR><BR>Further directives and details shall be guided by " span_boild("Class 4 \
+	maintain necessary items only.") + "<BR><BR>Further directives and details shall be guided by " + span_bold("Class 4 \
 	or above personnel.")
 
 /obj/item/paper/awaygate/snowfield/evacuation_order2
@@ -568,7 +568,7 @@
 	Directives : " + span_bold("Activation of 'Tunguska.' <BR>All class 5, 6 personnel must have a full search by \
 	Class 4 before entering the operation room. <BR>Any personnel who is not on the operations area shall \
 	be terminated on the spot. Notify to nearest Class 4 and 6 personnel if necessary.") + "<BR><BR>Further directives \
-	and details shall be guided by " + span_bold("Class 6 Personnel.") + ""
+	and details shall be guided by " + span_bold("Class 6 Personnel.")
 
 /obj/item/paper/awaygate/snowfield/interrogation
 	name = "Interrogation note"
@@ -614,7 +614,7 @@
 	Thank goodness. <BR> What the militsiya says it is from the government's orders. We had to leave \
 	sometime soon and find another coal vein, anyways. <BR><BR> Anatoly, two days ago, said he saw the army \
 	truck passing by few times around the mountains, so I think this is one of it. <BR><BR> Best to \
-	take our stuffs tomorrow. And some vodka bottles I have hidden.<BR><BR><BR><BR>" + span_vold("BLAST, \
+	take our stuffs tomorrow. And some vodka bottles I have hidden.<BR><BR><BR><BR>" + span_bold("BLAST, \
 	IT'S EMPTY! DIMITRY, THAT SCUMBAG - HOW DID HE EVEN KNEW THE BOTTLE'S THERE?!")
 
 /obj/item/card/id/gateway/snowfield // Basic access

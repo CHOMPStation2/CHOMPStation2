@@ -171,3 +171,27 @@
   - qol: RIG UI top buttons shifted about and minimized.
   tacoguy7765093:
   - maptweak: Fixed area issues and maphelpers in the lone home shuttle
+2024-10-15:
+  AzulKitsune:
+  - bugfix: 'fixed the size implant not supporting larger/smaller sizes in dorms.
+
+      :cl:'
+  CHOMPStation2:
+  - rscadd: TGUI Say now has a slider for how tall you want the window to be by default.
+  - rscadd: TGUI Say can now be disabled just for me/subtle.
+  FluffMedic:
+  - qol: made tyr caverns caverns
+  Kashargul:
+  - rscdel: old assembly UI
+  TheCaramelion:
+  - maptweak: Revamped Chemistry
+  - maptweak: Revamped Patient rooms
+  - maptweak: Revamped Destillery room
+  - maptweak: Revamped Medical storage
+  - maptweak: Virology is now on Deck 2
+  - maptweak: Genetics is now on Deck 2
+  - maptweak: Morgue is now on Deck 1
+  - maptweak: Cryo has been expanded
+  - maptweak: Medical has now two scanners and two sleepers
+  - rscadd: Added "salvage items" that can be found with mobs or in specific PoIs
+  - balance: Reduced the amount of guns and weapons found in exploration Pois
