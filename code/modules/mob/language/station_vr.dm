@@ -108,7 +108,7 @@
 	name = LANGUAGE_MARISH
 	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and gestures that are as delicate as the emotions that shadekin normally communicate with."
 	key = "9"
-	signlang_verb = list("mars something silently", "shifts their ears")
+	signlang_verb = list("shifts their ears", "mars subtly", "swivels their ears", "twitches their nose", "leers intently", "hackles their fur")
 	signlang_verb_understood = list("mars")
 	colour = "echosong"
 	flags = INAUDIBLE
