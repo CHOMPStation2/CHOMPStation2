@@ -103,7 +103,8 @@
 	machine_understands = FALSE
 	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark
 
-/datum/language/marish // CHOMPedit
+//CHOMPAdd Start
+/datum/language/marish
 	name = LANGUAGE_MARISH
 	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and gestures that are as delicate as the emotions that shadekin normally communicate with."
 	key = "9"
@@ -121,7 +122,7 @@
 	log_say("(INAUDIBLE) [message]", speaker)
 	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
 
-/datum/language/slavic //CHOMP reAdd this language
+/datum/language/slavic
 	name = LANGUAGE_SLAVIC
 	desc = "The official language of the Independent Colonial Confederation of Gilgamesh, originally established in 2122 by the short-lived United Slavic Confederation on Earth."
 	speech_verb = "govorit" // All Russian for "says" "asks" and "shouts". Mostly here as a joke.
@@ -136,6 +137,7 @@
 		"ko", "ne", "en", "po", "tro", "ra", "li", "on", "byl", "cto", "eni", "ost", "ol", "ego",
 		"ver", "stv", "pro", "ski"
 	)
+//CHOMPAdd End
 
 /datum/language/drudakar
 	name = LANGUAGE_DRUDAKAR
