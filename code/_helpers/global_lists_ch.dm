@@ -194,7 +194,8 @@ var/global/list/vr_mob_spawner_options = list(
 	"Sobaka" = /mob/living/carbon/human/sharkm,
 	"Farwa" = /mob/living/carbon/human/farwa,
 	"Neaera" = /mob/living/carbon/human/neaera,
-	"Stok" = /mob/living/carbon/human/stok
+	"Stok" = /mob/living/carbon/human/stok,
+	"Gryphon" = /mob/living/simple_mob/vore/gryphon
 	)
 
 var/global/list/selectable_footstep = list(
