@@ -44,6 +44,19 @@
 		if(!temp || !temp.is_usable())
 			to_chat(H, span_warning("You can't use your hand."))
 			return
+
+		// CHOMPEdit Start - Virus spread
+		for(var/thing in viruses)
+			var/datum/disease/D = thing
+			if(D.IsSpreadByTouch())
+				H.ContractDisease(D)
+
+		for(var/thing in H.viruses)
+			var/datum/disease/D = thing
+			if(D.IsSpreadByTouch())
+				ContractDisease(D)
+		// CHOMPEdit End
+
 	if(H.lying)
 		return
 	M.break_cloak()

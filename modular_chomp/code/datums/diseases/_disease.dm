@@ -155,7 +155,7 @@ GLOBAL_LIST_EMPTY(active_diseases)
 						break
 					var/direction = get_dir(current, target)
 					var/turf/next = get_step(current, direction)
-					if(!current.CanZASPass(direction) ||next.CanZASPass(turn(direction, 100)))
+					if(!current.CanZASPass(direction) || next.CanZASPass(turn(direction, 100)))
 						break
 					current = next
 

@@ -149,3 +149,21 @@
 
 /mob/living/proc/handle_diseases()
 	return
+
+// Test procs, poke Guti if it forgets to remove it
+
+/mob/living/proc/sickEm()
+	var/datum/disease/thesick = tgui_input_list(usr, "Choose virus", "Viruses", subtypesof(/datum/disease), subtypesof(/datum/disease))
+
+	if(thesick)
+		var/datum/disease/D = new thesick(0)
+		ForceContractDisease(D)
+		return TRUE
+
+/mob/living/proc/getAColdStupid()
+	var/datum/disease/Cold = new /datum/disease/cold(0)
+	ForceContractDisease(Cold)
+
+/mob/living/proc/getAnxious()
+	var/datum/disease/Anxiety = new /datum/disease/anxiety(0)
+	ForceContractDisease(Anxiety)
