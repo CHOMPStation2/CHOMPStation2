@@ -8,7 +8,7 @@
 /area/submap/lonewolf)
 "f" = (
 /obj/effect/decal/remains/ribcage,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/lonewolf)
 "g" = (
@@ -17,7 +17,7 @@
 /area/submap/lonewolf)
 "j" = (
 /obj/effect/decal/remains/tajaran,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/lonewolf)
 "l" = (

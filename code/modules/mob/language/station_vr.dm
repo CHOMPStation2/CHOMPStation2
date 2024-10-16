@@ -103,18 +103,26 @@
 	machine_understands = FALSE
 	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark
 
-/datum/language/marish // CHOMPedit
+//CHOMPAdd Start
+/datum/language/marish
 	name = LANGUAGE_MARISH
-	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and syllables that are as delicate as the emotions that shadekin normally communicate with."
-	speech_verb = "mars"
-	ask_verb = "mars"
-	exclaim_verb = "MARS"
-	colour = "shadekin"
+	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and gestures that are as delicate as the emotions that shadekin normally communicate with."
 	key = "9"
+	signlang_verb = list("shifts their ears", "mars subtly", "swivels their ears", "twitches their nose", "leers intently", "hackles their fur")
+	signlang_verb_understood = list("mars")
+	colour = "echosong"
+	flags = INAUDIBLE
+	ignore_adverb = TRUE
 	machine_understands = FALSE
-	syllables = list("mar", "mwrrr", "maaAr", "'aarrr", "wrurrl", "mmar")  // Placeholder syllables until someone else has a better idea!
 
-/datum/language/slavic //CHOMP reAdd this language
+/datum/language/marish/scramble(var/input, var/list/known_languages)
+	return stars(input)
+
+/datum/language/marish/broadcast(var/mob/living/speaker, var/message, var/speaker_mask)
+	log_say("(INAUDIBLE) [message]", speaker)
+	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
+
+/datum/language/slavic
 	name = LANGUAGE_SLAVIC
 	desc = "The official language of the Independent Colonial Confederation of Gilgamesh, originally established in 2122 by the short-lived United Slavic Confederation on Earth."
 	speech_verb = "govorit" // All Russian for "says" "asks" and "shouts". Mostly here as a joke.
@@ -129,6 +137,7 @@
 		"ko", "ne", "en", "po", "tro", "ra", "li", "on", "byl", "cto", "eni", "ost", "ol", "ego",
 		"ver", "stv", "pro", "ski"
 	)
+//CHOMPAdd End
 
 /datum/language/drudakar
 	name = LANGUAGE_DRUDAKAR

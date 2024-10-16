@@ -330,11 +330,6 @@
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled,
 /area/submap/DoomP)
-"bg" = (
-/obj/structure/table/standard,
-/obj/random/firstaid,
-/turf/simulated/floor/tiled,
-/area/submap/DoomP)
 "bh" = (
 /obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled,
@@ -391,13 +386,7 @@
 "br" = (
 /obj/structure/table/rack,
 /obj/item/cell/device/weapon,
-/obj/item/cell/device/weapon,
-/obj/item/cell/device/weapon,
-/obj/item/cell/device/weapon,
 /obj/random/energy,
-/obj/random/energy,
-/obj/random/energy/highend,
-/obj/random/energy/highend,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DoomP)
 "bs" = (
@@ -951,11 +940,6 @@
 "WU" = (
 /obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/DoomP)
-"Xj" = (
-/obj/structure/table/standard,
-/obj/item/stolenpackage,
-/turf/simulated/floor/tiled,
 /area/submap/DoomP)
 "XV" = (
 /obj/structure/table/darkglass,
@@ -2501,7 +2485,7 @@ ad
 at
 aA
 aO
-Xj
+aN
 be
 bC
 JU
@@ -2625,7 +2609,7 @@ as
 at
 aB
 aO
-bg
+aN
 be
 at
 at

@@ -106,6 +106,12 @@
 /obj/structure/flora/grass/brown,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/Epod4)
+"J" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg{
+	activated = 1
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Epod4)
 
 (1,1,1) = {"
 a
@@ -145,7 +151,7 @@ a
 a
 b
 c
-c
+J
 c
 e
 f

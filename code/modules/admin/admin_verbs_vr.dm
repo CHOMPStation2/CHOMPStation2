@@ -119,6 +119,7 @@
 			dat += "</td></tr>"
 		dat += "</table>"
 
+		qdel(query) // CHOMPEdit
 	usr << browse(dat, "window=library")
 	onclose(usr, "library")
 
