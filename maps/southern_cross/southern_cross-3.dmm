@@ -52068,14 +52068,6 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/medical/medbay2)
-"gSb" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay_primary_storage)
 "gSn" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -57860,7 +57852,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/roller_holder,
+/obj/item/roller,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "jQa" = (
@@ -64856,7 +64848,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/roller_holder,
+/obj/item/roller,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "nMj" = (
@@ -66978,6 +66970,14 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/assembly/chargebay)
+"oWS" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "oWW" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/assembly/chargebay)
@@ -80019,14 +80019,6 @@
 /obj/structure/grille,
 /turf/space,
 /area/space)
-"wSM" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay_primary_storage)
 "wSU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -81455,6 +81447,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D1)
+"xFB" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "xFC" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
@@ -124276,8 +124276,8 @@ bys
 lvy
 bKt
 tAA
-wSM
-gSb
+oWS
+xFB
 bcR
 aql
 xLY
