@@ -138,7 +138,7 @@
 /mob/living/simple_mob/humanoid/merc/melee/sword/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)	return
 	if(prob(35))
-		visible_message(span_red("<B>[src] blocks [Proj] with its shield!</B>"))
+		visible_message(span_bolddanger("[src] blocks [Proj] with its shield!"))
 		if(Proj.firer)
 			ai_holder.react_to_attack(Proj.firer)
 		return
@@ -328,6 +328,7 @@
 			try_reload()
 			return FALSE
 
+<<<<<<< HEAD
 	/*
 	 * CHOMP Addition: This section here is (duplicated) special snowflake code because sniper does not call parent. Basically, this is a non-stupid version of the above intended for ranged mobs.
 	 * ranged_attack_delay is stupid because it sleeps the entire mob.
@@ -344,6 +345,9 @@
 	// CHOMPAddition End
 
 	visible_message(span_danger("<b>\The [src]</b> fires at \the [orig_targ]!"))
+=======
+	visible_message(span_danger(span_bold("\The [src]") + " fires at \the [orig_targ]!"))
+>>>>>>> b594520a74... next set of spans (#16434)
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)

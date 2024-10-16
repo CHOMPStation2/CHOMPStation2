@@ -31,8 +31,13 @@
 /datum/malf_research/proc/finish_research()
 	if(!focus)
 		return
+<<<<<<< HEAD
 	to_chat(owner, "<b>Research Completed</b>: [focus.name]")
 	add_verb(focus.ability) //CHOMPEdit TGPanel
+=======
+	to_chat(owner, span_bold("Research Completed") + ": [focus.name]")
+	add_verb(owner, focus.ability)
+>>>>>>> b594520a74... next set of spans (#16434)
 	available_abilities -= focus
 	if(focus.next)
 		available_abilities += focus.next

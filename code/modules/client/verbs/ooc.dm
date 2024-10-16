@@ -29,6 +29,7 @@
 		if(prefs.muted & MUTE_OOC)
 			to_chat(src, span_danger("You cannot use OOC (muted)."))
 			return
+<<<<<<< HEAD
 		if(findtext(msg, "byond://") && !CONFIG_GET(flag/allow_byond_links)) // CHOMPEdit
 			to_chat(src, "<B>Advertising other servers is not allowed.</B>")
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
@@ -41,6 +42,20 @@
 			return
 		if((findtext(msg, "http://") || findtext(msg, "https://")) && !CONFIG_GET(flag/allow_url_links)) // CHOMPEdit
 			to_chat(src, "<B>Posting external links is not allowed.</B>")
+=======
+		if(findtext(msg, "byond://") && !config.allow_byond_links)
+			to_chat(src, span_bold("Advertising other servers is not allowed."))
+			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
+			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
+			return
+		if(findtext(msg, "discord.gg") && !config.allow_discord_links)
+			to_chat(src, span_bold("Advertising discords is not allowed."))
+			log_admin("[key_name(src)] has attempted to advertise a discord server in OOC: [msg]")
+			message_admins("[key_name_admin(src)] has attempted to advertise a discord server in OOC: [msg]")
+			return
+		if((findtext(msg, "http://") || findtext(msg, "https://")) && !config.allow_url_links)
+			to_chat(src, span_bold("Posting external links is not allowed."))
+>>>>>>> b594520a74... next set of spans (#16434)
 			log_admin("[key_name(src)] has attempted to post a link in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to post a link in OOC: [msg]")
 			return
@@ -115,6 +130,7 @@
 		if(prefs.muted & MUTE_LOOC)
 			to_chat(src, span_danger("You cannot use OOC (muted)."))
 			return
+<<<<<<< HEAD
 		if(findtext(msg, "byond://") && !CONFIG_GET(flag/allow_byond_links)) // CHOMPEdit
 			to_chat(src, "<B>Advertising other servers is not allowed.</B>")
 			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
@@ -127,6 +143,20 @@
 			return
 		if((findtext(msg, "http://") || findtext(msg, "https://")) && !CONFIG_GET(flag/allow_url_links)) // CHOMPEdit
 			to_chat(src, "<B>Posting external links is not allowed.</B>")
+=======
+		if(findtext(msg, "byond://") && !config.allow_byond_links)
+			to_chat(src, span_bold("Advertising other servers is not allowed."))
+			log_admin("[key_name(src)] has attempted to advertise in OOC: [msg]")
+			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
+			return
+		if(findtext(msg, "discord.gg") && !config.allow_discord_links)
+			to_chat(src, span_bold("Advertising discords is not allowed."))
+			log_admin("[key_name(src)] has attempted to advertise a discord server in OOC: [msg]")
+			message_admins("[key_name_admin(src)] has attempted to advertise a discord server in OOC: [msg]")
+			return
+		if((findtext(msg, "http://") || findtext(msg, "https://")) && !config.allow_url_links)
+			to_chat(src, span_bold("Posting external links is not allowed."))
+>>>>>>> b594520a74... next set of spans (#16434)
 			log_admin("[key_name(src)] has attempted to post a link in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to post a link in OOC: [msg]")
 			return
@@ -181,12 +211,12 @@
 		if(target in GLOB.admins)
 			admin_stuff += "/([key])"
 
-		to_chat(target, span_looc("" + create_text_tag("looc", "LOOC:", target) + " <EM>[display_name][admin_stuff]:</EM> <span class='message'>[msg]</span>"))
+		to_chat(target, span_looc(create_text_tag("looc", "LOOC:", target) + " <EM>[display_name][admin_stuff]:</EM> " + span_message("[msg]")))
 
 	for(var/client/target in r_receivers)
 		var/admin_stuff = "/([key])([admin_jump_link(mob, target.holder)])"
 
-		to_chat(target, span_rlooc("" + create_text_tag("looc", "LOOC:", target) + " <span class='prefix'>(R)</span><EM>[display_name][admin_stuff]:</EM> <span class='message'>[msg]</span>"))
+		to_chat(target, span_rlooc(create_text_tag("rlooc", "RLOOC:", target) + " " + span_prefix("(R)") + "<EM>[display_name][admin_stuff]:</EM> " + span_message("[msg]")))
 
 /mob/proc/get_looc_source()
 	return src

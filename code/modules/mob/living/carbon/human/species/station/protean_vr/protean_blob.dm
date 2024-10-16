@@ -290,7 +290,7 @@
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
+			visible_message(span_infoplain(span_bold("[name]") + " gloms over some of \the [S], absorbing it."))
 	else
 		return ..()
 
@@ -304,7 +304,7 @@
 		if(!allowed)
 			return
 		if(refactory.add_stored_material(S.material.name,1*S.perunit) && S.use(1))
-			visible_message("<b>[name]</b> gloms over some of \the [S], absorbing it.")
+			visible_message(span_infoplain(span_bold("[name]") + " gloms over some of \the [S], absorbing it."))
 	else
 		return ..()
 
@@ -396,7 +396,7 @@ var/global/list/disallowed_protean_accessories = list(
 	moveToNullspace()
 
 	//Message
-	blob.visible_message("<b>[src.name]</b> collapses into a gooey blob!")
+	blob.visible_message(span_infoplain(span_bold("[src.name]") + " collapses into a gooey blob!"))
 
 	//Duration of the to_puddle iconstate that the blob starts with
 	sleep(13)
@@ -457,7 +457,7 @@ var/global/list/disallowed_protean_accessories = list(
 	blob.icon_state = "from_puddle"
 
 	//Message
-	blob.visible_message("<b>[src.name]</b> reshapes into a humanoid appearance!")
+	blob.visible_message(span_infoplain(span_bold("[src.name]") + " reshapes into a humanoid appearance!"))
 
 	//Duration of above animation
 	sleep(8)

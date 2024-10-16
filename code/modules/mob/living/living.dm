@@ -97,6 +97,7 @@
 	if(!..())
 		return 0
 
+<<<<<<< HEAD
 	usr.visible_message(span_filter_notice("<b>[src]</b> points to [A]."))
 */
 	return ..()
@@ -107,6 +108,10 @@
 
 	visible_message(span_info("<b>[src]</b> points at [pointing_at]."), span_info("You point at [pointing_at]."))
 // CHOMPEdit End
+=======
+	usr.visible_message(span_filter_notice(span_bold("[src]") + " points to [A]."))
+	return 1
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"
@@ -1229,7 +1234,7 @@
 		var/mob/living/carbon/human/H = target
 		if(H.in_throw_mode && H.a_intent == I_HELP && unEquip(I))
 			H.put_in_hands(I) // If this fails it will just end up on the floor, but that's fitting for things like dionaea.
-			visible_message(span_filter_notice("<b>[src]</b> hands \the [H] \a [I]."), span_notice("You give \the [target] \a [I]."))
+			visible_message(span_filter_notice(span_bold("[src]") + " hands \the [H] \a [I]."), span_notice("You give \the [target] \a [I]."))
 		else
 			to_chat(src, span_notice("You offer \the [I] to \the [target]."))
 			do_give(H)

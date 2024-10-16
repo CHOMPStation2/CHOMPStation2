@@ -4,11 +4,16 @@
 	set desc = "Check a player's attack logs."
 	show_cmd_admin_check_player_logs(M) //CHOMPEdit
 //Views specific attack logs belonging to one player.
+<<<<<<< HEAD
 /client/proc/show_cmd_admin_check_player_logs(mob/living/M) //CHOMPEdit
 	var/dat = "<B>[M]'s Attack Log:<HR></B>"
 	dat += "<b>Viewing attack logs of [M]</b> - (Played by ([key_name(M)]).<br>"
+=======
+	var/dat = span_bold("[M]'s Attack Log:<HR>")
+	dat += span_bold("Viewing attack logs of [M]") + " - (Played by ([key_name(M)]).<br>"
+>>>>>>> b594520a74... next set of spans (#16434)
 	if(M.mind)
-		dat += "<b>Current Antag?:</b> [(M.mind.special_role)?"Yes":"No"]<br>"
+		dat += span_bold("Current Antag?:") + " [(M.mind.special_role)?"Yes":"No"]<br>"
 	dat += "<br><b>Note:</b> This is arranged from earliest to latest. <br><br>"
 	//CHOMPEdit Begin
 	/*for(var/d in M.dialogue_log)
@@ -17,6 +22,7 @@
 	if(!query.Execute())
 		dat += "<i>Database query error</i>"
 	else
+<<<<<<< HEAD
 		var/messages = ""
 		while(query.NextRow())
 			messages += "([query.item[2]]) (ckey:[query.item[3]] real_name:[query.item[4]]) [query.item[5]]<br>"
@@ -29,6 +35,9 @@
 			dat += "</fieldset>"
 	qdel(query)
 	//CHOMPEdit End
+=======
+		dat += span_italics("No attack logs found for [M].")
+>>>>>>> b594520a74... next set of spans (#16434)
 
 	var/datum/browser/popup = new(usr, "admin_attack_log", "[src]", 650, 650, src)
 	popup.set_content(jointext(dat,null))
@@ -46,10 +55,10 @@
 
 /client/proc/show_cmd_admin_check_dialogue_logs(mob/living/M) //CHOMPEdit
 //Views specific dialogue logs belonging to one player.
-	var/dat = "<B>[M]'s Dialogue Log:<HR></B>"
-	dat += "<b>Viewing say and emote logs of [M]</b> - (Played by ([key_name(M)]).<br>"
+	var/dat = span_bold("[M]'s Dialogue Log:<HR>")
+	dat += span_bold("Viewing say and emote logs of [M]") + " - (Played by ([key_name(M)]).<br>"
 	if(M.mind)
-		dat += "<b>Current Antag?:</b> [(M.mind.special_role)?"Yes":"No"]<br>"
+		dat += span_bold("Current Antag?:") + " [(M.mind.special_role)?"Yes":"No"]<br>"
 	dat += "<br><b>Note:</b> This is arranged from earliest to latest. <br><br>"
 
 
@@ -60,6 +69,7 @@
 	if(!query.Execute())
 		dat += "<i>Database query error</i>"
 	else
+<<<<<<< HEAD
 		var/messages = ""
 		while(query.NextRow())
 			messages += "([query.item[2]]) (ckey:[query.item[3]] real_name:[query.item[4]] type:[query.item[5]]) [query.item[6]]<br>"
@@ -72,6 +82,9 @@
 			dat += "</fieldset>"
 	qdel(query)
 	//CHOMPEdit End
+=======
+		dat += span_italics("No dialogue logs found for [M].")
+>>>>>>> b594520a74... next set of spans (#16434)
 	var/datum/browser/popup = new(usr, "admin_dialogue_log", "[src]", 650, 650, src)
 	popup.set_content(jointext(dat,null))
 	popup.open()

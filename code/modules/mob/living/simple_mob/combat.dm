@@ -113,6 +113,7 @@
 			try_reload()
 			return FALSE
 
+<<<<<<< HEAD
 	//CHOMP Addition: This section here is special snowflake code for metroids only, or for whatever else in the future that you want to have move and shoot at the same time. Basically, this is a non-stupid version of the above intended for ranged vore mobs i.e. metroids. ranged_attack_delay is stupid because it sleeps the entire mob. This new ranged_cooldown_time is smarter in the sense that it is an internalized timer. Try not to confuse the names.
 	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
 		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
@@ -124,6 +125,9 @@
 		return TRUE	//End these commands here.
 
 	visible_message(span_danger("<b>\The [src]</b> fires at \the [A]!"))
+=======
+	visible_message(span_bolddanger("\The [src]") + " fires at \the [A]!")
+>>>>>>> b594520a74... next set of spans (#16434)
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)

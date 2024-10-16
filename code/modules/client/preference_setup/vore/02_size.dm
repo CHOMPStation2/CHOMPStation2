@@ -124,6 +124,7 @@
 
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
+<<<<<<< HEAD
 	. += "<b>Scale:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
 	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
 	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
@@ -147,10 +148,19 @@
 	. += "<a href='?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
 	. += "<a href='?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
 	// CHOMPEdit End: Pain/Scream/Death Custom Sounds
+=======
+	. += span_bold("Scale:") + " <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
+	. += span_bold("Scaled Appearance:") + " <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
+	. += span_bold("Scaling Center:") + " <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
+	. += span_bold("Voice Frequency:") + " <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
+	. += span_bold("Voice Sounds:") + " <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
+	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
+	. += span_bold("Custom Speech Bubble:") + " <a href='?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
+>>>>>>> b594520a74... next set of spans (#16434)
 	. += "<br>"
-	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
-	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
-	. += "<b>Weight Loss Rate:</b> <a href='?src=\ref[src];weight_loss=1'>[pref.weight_loss]</a><br>"
+	. += span_bold("Relative Weight:") + " <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
+	. += span_bold("Weight Gain Rate:") + " <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
+	. += span_bold("Weight Loss Rate:") + " <a href='?src=\ref[src];weight_loss=1'>[pref.weight_loss]</a><br>"
 
 /datum/category_item/player_setup_item/vore/size/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["size_multiplier"])

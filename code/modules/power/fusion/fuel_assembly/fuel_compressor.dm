@@ -28,14 +28,14 @@
 			to_chat(user, span_warning("You need at least three hundred units of material to form a fuel rod."))
 			return 1
 		var/datum/reagent/R = thing.reagents.reagent_list[1]
-		visible_message("<b>\The [src]</b> compresses the contents of \the [thing] into a new fuel assembly.")
+		visible_message(span_infoplain(span_bold("\The [src]") + " compresses the contents of \the [thing] into a new fuel assembly."))
 		var/obj/item/fuel_assembly/F = new(get_turf(src), R.id, R.color)
 		thing.reagents.remove_reagent(R.id, R.volume)
 		user.put_in_hands(F)
 
 	else if(istype(thing, /obj/machinery/power/supermatter))
 		var/obj/item/fuel_assembly/F = new(get_turf(src), "supermatter")
-		visible_message("<b>\The [src]</b> compresses \the [thing] into a new fuel assembly.")
+		visible_message(span_infoplain(span_bold("\The [src]") + " compresses \the [thing] into a new fuel assembly."))
 		qdel(thing)
 		user.put_in_hands(F)
 		return 1
@@ -53,6 +53,7 @@
 	if(istype(thing, /obj/item/stack/material))
 		var/obj/item/stack/material/M = thing
 		var/datum/material/mat = M.get_material()
+<<<<<<< HEAD
 		if(!blitzprogress)
 			if(!mat.is_fusion_fuel)
 				to_chat(user, span_warning("It would be pointless to make a fuel rod out of [mat.use_name]."))
@@ -84,6 +85,18 @@
 			else
 				to_chat(user, span_warning("A blitz rod is currently in progress! Either add 25 phoron sheets to complete it, or eject the supermatter sheet!"))
 				return
+=======
+		if(!mat.is_fusion_fuel)
+			to_chat(user, span_warning("It would be pointless to make a fuel rod out of [mat.use_name]."))
+			return
+		if(M.get_amount() < FUSION_ROD_SHEET_AMT)
+			to_chat(user, span_warning("You need at least 25 [mat.sheet_plural_name] to make a fuel rod."))
+			return
+		var/obj/item/fuel_assembly/F = new(get_turf(src), mat.name)
+		visible_message(span_infoplain(span_bold("\The [src]") + " compresses the [mat.use_name] into a new fuel assembly."))
+		M.use(FUSION_ROD_SHEET_AMT)
+		user.put_in_hands(F)
+>>>>>>> b594520a74... next set of spans (#16434)
 
 	else if(do_special_fuel_compression(thing, user))
 		return

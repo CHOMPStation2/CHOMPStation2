@@ -593,10 +593,15 @@ var/world_topic_spam_protect_time = world.timeofday
 /world/proc/update_status()
 	var/s = ""
 
+<<<<<<< HEAD
 	if (config && CONFIG_GET(string/servername)) // CHOMPEdit
 		s += "<b>[CONFIG_GET(string/servername)]</b> &#8212; " // CHOMPEdit
+=======
+	if (config && config.server_name)
+		s += span_bold("[config.server_name]") + " &#8212; "
+>>>>>>> b594520a74... next set of spans (#16434)
 
-	s += "<b>[station_name()]</b>";
+	s += span_bold("[station_name()]");
 	s += " ("
 	s += "<a href=\"https://\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
@@ -610,7 +615,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(master_mode)
 			features += master_mode
 	else
-		features += "<b>STARTING</b>"
+		features += span_bold("STARTING")
 
 	if (!CONFIG_GET(flag/enter_allowed))
 		features += "closed"

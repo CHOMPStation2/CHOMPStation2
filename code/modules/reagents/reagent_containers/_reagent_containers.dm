@@ -79,8 +79,12 @@
 
 	var/contained = reagentlist()
 	add_attack_logs(user,target,"Splashed with [src.name] containing [contained]")
+<<<<<<< HEAD
 	// user.visible_message(span_danger("[target] has been splashed with something by [user]!"), "<span class = 'notice'>You splash the solution onto [target].</span>")
 	balloon_alert_visible("[target] has been splashed with something by [user]!", "Splashed the solution onto [target]") // CHOMPEdit - Changed to balloon_alert
+=======
+	user.visible_message(span_danger("[target] has been splashed with something by [user]!"), span_notice("You splash the solution onto [target]."))
+>>>>>>> b594520a74... next set of spans (#16434)
 	reagents.splash(target, reagents.total_volume)
 	return 1
 

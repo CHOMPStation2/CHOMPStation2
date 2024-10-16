@@ -41,14 +41,22 @@
 /datum/lore/codex/page/virgo_one/add_content()
 	name = "Virgo 1 (Hot-Ice Giant)"
 	keywords += list("Virgo 1")
+<<<<<<< HEAD
 	data = "Virgo 1 is a tidally locked hot ice giant located closest to the star. Temperatures soar and drop between 490°K and 120°K. Winds on the planet often surpass \
+=======
+	data = "Virgo 1 is a tidally locked hot ice giant located closest to the star. Temperatures soar and drop between 490�K and 120�K. Winds on the planet often surpass \
+>>>>>>> b594520a74... next set of spans (#16434)
 	supersonic speeds."
 
 /datum/lore/codex/page/virgo_two/add_content()
 	name = "Virgo 2 (Metal-Rich Planet)"
 	keywords += list("Virgo 2")
 	data = "The second closest planet to [quick_link("Virgo-Erigone")], this planet has a high concentration of minerals inside its crust, as well as active volcanism and plate tectonics.  \
+<<<<<<< HEAD
 	The temperature on the surface can reach up to 405 degrees kelvin (132°C) due to the relatively high albedo of the surface, which has deterred most people from the planet, except for two [quick_link("TSC", "TSCs")], \
+=======
+	The temperature on the surface can reach up to 405 degrees kelvin (132�C) due to the relatively high albedo of the surface, which has deterred most people from the planet, except for two [quick_link("TSC", "TSCs")], \
+>>>>>>> b594520a74... next set of spans (#16434)
 	Greyson Manufactories and [quick_link("Xion Manufacturing Group")]. In orbit, the two companies each have a space station, used to coordinate and \
 	control their stations on the surface without having to suffer the intense heat. Xion's station also doubles as a control and oversight facility for their \
 	[quick_link("drones","autonomous mining drones")].\
@@ -88,7 +96,11 @@
 /datum/lore/codex/page/virgo_prime/add_content() // Virgo 4 technically.
 	name = "Virgo 4 / Virgo-Prime (Terrestrial Planet)"
 	keywords += list("Virgo 4","Virgo-Prime")
+<<<<<<< HEAD
 	data = "Virgo 4, also known as Virgo-Prime, is the fourth planet of Virgo-Eirgone. Although primarily desert, temperatures linger around only 287 kelvin (~14°C). \
+=======
+	data = "Virgo 4, also known as Virgo-Prime, is the fourth planet of Virgo-Eirgone. Although primarily desert, temperatures linger around only 287 kelvin (~14�C). \
+>>>>>>> b594520a74... next set of spans (#16434)
 	It is the only planet in the system with an environment that supports oxygen-breathing lifeforms. \
 	<br><br> \
 	While being about the size of Earth, it is home to only about 750,000 known residents, most of whom live \
@@ -103,7 +115,11 @@
 /datum/lore/codex/page/virgo_five/add_content()
 	name = "Virgo 5 (Rocky Ice Planet)"
 	keywords += list("Virgo 5")
+<<<<<<< HEAD
 	data = "Virgo 5 is a cold, inhospitable wasteland contaminated with toxic phoron-based compounds. At temperatures around 213 kelvin (-60°C), \
+=======
+	data = "Virgo 5 is a cold, inhospitable wasteland contaminated with toxic phoron-based compounds. At temperatures around 213 kelvin (-60�C), \
+>>>>>>> b594520a74... next set of spans (#16434)
 	it can support only the most hardy of phoron-based life, such as space carp, which are unaffected by the frigid temperatures or deadly \
 	atmosphere. Scientists believe this planet was once closer to its host star, but over time was pushed out beyond the habitable zone by \
 	other large planets."
@@ -112,14 +128,18 @@
 	name = "The Outer Worlds"
 	keywords += list("The Outer Worlds")
 	data = "The last three planets in the system are two small rocky worlds, Virgo 6 and 7, and finally Virgo 8 which is a frozen gas giant \
+<<<<<<< HEAD
 	whose temperatures reach only 49°K. The planet has several moons, but none of these worlds are of any significance. Virgo 6 and 7, as well \
+=======
+	whose temperatures reach only 49�K. The planet has several moons, but none of these worlds are of any significance. Virgo 6 and 7, as well \
+>>>>>>> b594520a74... next set of spans (#16434)
 	as 8's moons have no substantial deposits of any useful minerals, nor do they have an abundance of phoron. They are left largely ignored by \
 	the local [quick_link("TSC", "TSCs")], though this also makes them a safe haven for various pirate and smuggler stations."
 
 /datum/lore/codex/page/virgo_central_command/add_content()
 	name = "Virgo Central Command (Colony)"
 	keywords += list("Virgo Central Command")
-	data = "<i>This page has been ripped out. Odd.</i>"
+	data = span_italics("This page has been ripped out. Odd.")
 	/*data = "The Virgo Central Command is a large facility on [quick_link("Virgo-3B")] which handles the loading and \
 	unloading, refuelling, and general maintenance of large spacecraft. The main structure is owned by \
 	[quick_link("NanoTrasen")], but individual offices, docking/loading bays, and warehouses are often leased to individuals \

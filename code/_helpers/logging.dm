@@ -76,6 +76,7 @@
 
 	//Log the message to in-game dialogue logs, as well. //CHOMPEdit Begin
 	if(speaker.client)
+<<<<<<< HEAD
 		//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>SAY:</u> - <span style=\"color:#32cd32\">[text]</span>"
 		if(!SSdbcore.IsConnected())
 			establish_db_connection()
@@ -90,10 +91,15 @@
 		qdel(query_insert)
 		//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>SAY:</u> - <span style=\"color:#32cd32\">[text]</span>"
 		//CHOMPEdit End
+=======
+		speaker.dialogue_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("SAY:") + " - " + span_green("[text]")
+		GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("SAY:") + " - " + span_green("[text]")
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /proc/log_ooc(text, client/user)
 	if (CONFIG_GET(flag/log_ooc)) // CHOMPEdit
 		WRITE_LOG(diary, "OOC: [user.simple_info_line()]: [html_decode(text)]")
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected())
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
@@ -106,10 +112,15 @@
 		return
 	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>OOC:</u> - <span style=\"color:blue\"><b>[text]</b></span>"
+=======
+
+	GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[user]") + ") " + span_underline("OOC:") + " - " + span_blue(span_bold("[text]"))
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /proc/log_aooc(text, client/user)
 	if (CONFIG_GET(flag/log_ooc)) // CHOMPEdit
 		WRITE_LOG(diary, "AOOC: [user.simple_info_line()]: [html_decode(text)]")
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected())
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
@@ -122,10 +133,15 @@
 		return
 	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>AOOC:</u> - <span style=\"color:red\"><b>[text]</b></span>"
+=======
+
+	GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[user]") + ") " + span_underline("AOOC:") + " - " + span_red(span_bold("[text]"))
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /proc/log_looc(text, client/user)
 	if (CONFIG_GET(flag/log_ooc)) // CHOMPEdit
 		WRITE_LOG(diary, "LOOC: [user.simple_info_line()]: [html_decode(text)]")
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected())
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
@@ -138,12 +154,17 @@
 		return
 	qdel(query_insert)
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[user]</b>) <u>LOOC:</u> - <span style=\"color:orange\"><b>[text]</b></span>"
+=======
+
+	GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[user]") + ") " + span_underline("LOOC:") + " - " + span_orange(span_bold("[text]"))
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /proc/log_whisper(text, mob/speaker)
 	if (CONFIG_GET(flag/log_whisper)) // CHOMPEdit
 		WRITE_LOG(diary, "WHISPER: [speaker.simple_info_line()]: [html_decode(text)]")
 
 	if(speaker.client)
+<<<<<<< HEAD
 		//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>SAY:</u> - <span style=\"color:gray\"><i>[text]</i></span>"
 		//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>SAY:</u> - <span style=\"color:gray\"><i>[text]</i></span>"
 		if(!SSdbcore.IsConnected())
@@ -157,12 +178,17 @@
 			qdel(query_insert)
 			return
 		qdel(query_insert)
+=======
+		speaker.dialogue_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("SAY:") + " - " + span_gray(span_italics("[text]"))
+		GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("SAY:") + " - " + span_gray(span_italics("[text]"))
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /proc/log_emote(text, mob/speaker)
 	if (CONFIG_GET(flag/log_emote)) // CHOMPEdit
 		WRITE_LOG(diary, "EMOTE: [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
+<<<<<<< HEAD
 		//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>EMOTE:</u> - <span style=\"color:#CCBADC\">[text]</span>"
 		//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>EMOTE:</u> - <span style=\"color:#CCBADC\">[text]</span>"
 		if(!SSdbcore.IsConnected())
@@ -177,6 +203,10 @@
 			return
 		qdel(query_insert)
 	//CHOMPEdit End
+=======
+		speaker.dialogue_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("EMOTE:") + " - " + span_pink("[text]")
+		GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("EMOTE:") + " - " + span_pink("[text]")
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /proc/log_attack(attacker, defender, message)
 	if (CONFIG_GET(flag/log_attack)) // CHOMPEdit
@@ -197,6 +227,7 @@
 /proc/log_ghostsay(text, mob/speaker)
 	if (CONFIG_GET(flag/log_say)) // CHOMPEdit
 		WRITE_LOG(diary, "DEADCHAT: [speaker.simple_info_line()]: [html_decode(text)]")
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(speaker.client)
 		if(!SSdbcore.IsConnected())
@@ -214,6 +245,11 @@
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - <span style=\"color:green\">[text]</span>"
 	//GLOB.round_text_log += "<font size=1><span style=\"color:#7e668c\"><b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>DEADSAY:</u> - [text]</span></font>"
 	//CHOMPEdit End
+=======
+
+	speaker.dialogue_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("DEADSAY:") + " - " + span_green("[text]")
+	GLOB.round_text_log += span_small(span_purple(span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("DEADSAY:") + " - [text]"))
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /proc/log_ghostemote(text, mob/speaker)
 	if (CONFIG_GET(flag/log_emote)) // CHMOPEdit
@@ -240,6 +276,7 @@
 /proc/log_pda(text, mob/speaker)
 	if (CONFIG_GET(flag/log_pda)) // CHOMPEdit
 		WRITE_LOG(diary, "PDA: [speaker.simple_info_line()]: [html_decode(text)]")
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(speaker.client)
 		if(!SSdbcore.IsConnected())
@@ -257,6 +294,11 @@
 	//speaker.dialogue_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
 	//GLOB.round_text_log += "<b>([time_stamp()])</b> (<b>[speaker]/[speaker.client]</b>) <u>MSG:</u> - <span style=\"color:[COLOR_GREEN]\">[text]</span>"
 	//CHOMPEdit End
+=======
+
+	speaker.dialogue_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("MSG:") + " - " + span_darkgreen("[text]")
+	GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("MSG:") + " - " + span_darkgreen("[text]")
+>>>>>>> b594520a74... next set of spans (#16434)
 
 /proc/log_to_dd(text)
 	to_world_log(text) //this comes before the config check because it can't possibly runtime
