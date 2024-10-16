@@ -19,11 +19,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
 "cl" = (
-/obj/structure/sign/double/barsign,
-/turf/simulated/wall/sandstone{
-	color = "purple"
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/area/survivalpod/superpose/secondlifebar/dorms)
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
 "cp" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
@@ -116,7 +118,7 @@
 /obj/machinery/chemical_dispenser/bar_soft{
 	dir = 4
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "ej" = (
 /obj/item/bedsheet/pillow/teal,
@@ -125,12 +127,12 @@
 "ep" = (
 /obj/structure/table/darkglass,
 /obj/item/bodysnatcher{
-	pixel_y = -4;
-	pixel_x = 6
+	pixel_y = 2;
+	pixel_x = 5
 	},
 /obj/item/bodysnatcher{
 	pixel_y = 4;
-	pixel_x = 3
+	pixel_x = -2
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
@@ -194,7 +196,11 @@
 /obj/structure/sign/poster/custom{
 	dir = 8
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/obj/structure/noticeboard{
+	pixel_x = -26;
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "hv" = (
 /obj/machinery/door/airlock/gold{
@@ -211,6 +217,11 @@
 "iA" = (
 /obj/structure/table/darkglass,
 /obj/item/material/whip,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
 "jw" = (
@@ -229,6 +240,9 @@
 	dir = 5
 	},
 /obj/item/toy/plushie/shark,
+/obj/machinery/petrification{
+	pixel_x = 21
+	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar)
 "kE" = (
@@ -268,7 +282,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/secondlifebar)
 "lw" = (
-/obj/structure/table/darkglass,
+/obj/machinery/media/jukebox,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
 "lX" = (
@@ -279,6 +293,13 @@
 /obj/structure/sign/poster/custom,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/secondlifebar/dorms)
+"nq" = (
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/sign/double/barsign{
+	pixel_y = 32
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
 "ns" = (
 /obj/machinery/light{
 	dir = 4
@@ -296,7 +317,12 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar)
 "ok" = (
-/obj/machinery/power/port_gen/pacman,
+/obj/structure/table/steel,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/secondlifebar)
 "ow" = (
@@ -316,7 +342,7 @@
 	anchored = 1
 	},
 /turf/simulated/floor/flock,
-/area/survivalpod/superpose/secondlifebar/dorms)
+/area/survivalpod/superpose/secondlifebar)
 "oZ" = (
 /obj/structure/bed/chair/oldsofa/right{
 	dir = 4
@@ -359,6 +385,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
+"rE" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/deck/cards,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
 "rJ" = (
 /obj/structure/bed/pillowpile/red,
 /obj/item/toy/plushie/foxbear,
@@ -381,7 +412,16 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar)
 "rP" = (
-/obj/structure/table/steel,
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/secondlifebar)
 "sd" = (
@@ -416,7 +456,7 @@
 	req_access = null;
 	dir = 4
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "sz" = (
 /turf/simulated/floor/carpet/gaycarpet,
@@ -432,10 +472,9 @@
 /obj/machinery/button/remote/airlock{
 	id = "cutiedorm2";
 	name = "Bolt Control";
-	pixel_x = -10;
 	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
+	dir = 2;
+	pixel_y = 24
 	},
 /obj/item/toy/balloon,
 /obj/item/toy/plushie/green_fox{
@@ -452,7 +491,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
 "tr" = (
-/obj/structure/bed/double,
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/hosdouble,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/secondlifebar/dorms)
 "tH" = (
@@ -520,6 +560,9 @@
 /obj/item/clothing/under/sexymime/dress,
 /obj/item/clothing/under/dress/maid/sexy,
 /obj/item/clothing/under/sexyclown,
+/obj/item/storage/box/fluff/swimsuit/cowbikini,
+/obj/item/storage/box/fluff/swimsuit/strippergreen,
+/obj/item/storage/box/fluff/swimsuit/stripperpink,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
 "xR" = (
@@ -533,6 +576,7 @@
 /obj/structure/mirror{
 	pixel_y = 32
 	},
+/obj/random/trash,
 /turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar)
 "yi" = (
@@ -560,20 +604,36 @@
 /obj/machinery/button/windowtint{
 	id = "SP-stripbar";
 	pixel_x = -27;
-	pixel_y = -6;
+	pixel_y = -13;
 	range = 25
 	},
-/obj/machinery/light_switch{
-	dir = 4;
-	name = "W-light switch";
-	pixel_x = -27;
-	pixel_y = 8
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_x = -24
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "zI" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"zL" = (
+/obj/structure/table/darkglass,
+/obj/item/paper_bin,
+/obj/item/pen/red,
+/obj/item/pen{
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/obj/item/pen/blue{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
 "AI" = (
 /obj/structure/table/darkglass,
@@ -613,6 +673,11 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
 "BX" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/secondlifebar)
 "Cp" = (
@@ -663,13 +728,13 @@
 /obj/structure/sign/poster/custom{
 	dir = 1
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "Fs" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/survivalpod/superpose/secondlifebar/dorms)
+/area/survivalpod/superpose/secondlifebar)
 "FT" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -678,12 +743,8 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar)
 "Gg" = (
-/obj/structure/grille/rustic,
-/obj/structure/window/reinforced/polarized/full{
-	id = "SP-stripbar"
-	},
-/turf/simulated/floor/plating,
-/area/survivalpod/superpose/secondlifebar/dorms)
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
 "Gj" = (
 /obj/effect/map_effect/perma_light/brighter{
 	light_color = "#e060e0";
@@ -695,13 +756,23 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/secondlifebar)
+"Gl" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/storage/pill_bottle/dice,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
 "Go" = (
 /obj/structure/table/darkglass,
 /obj/machinery/chemical_dispenser/deluxe/full,
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "GO" = (
-/turf/unsimulated/shuttle/floor/purple,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "GQ" = (
 /obj/item/toy/plushie/black_fox{
@@ -717,7 +788,7 @@
 "GU" = (
 /obj/machinery/door/airlock/gold,
 /turf/simulated/floor/flock,
-/area/survivalpod/superpose/secondlifebar/dorms)
+/area/survivalpod/superpose/secondlifebar)
 "Ho" = (
 /obj/structure/sink{
 	pixel_y = 16
@@ -805,7 +876,8 @@
 /area/survivalpod/superpose/secondlifebar)
 "KC" = (
 /obj/effect/decal/cleanable/fruit_smudge,
-/obj/structure/bed/double,
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/iandouble,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/secondlifebar/dorms)
 "KH" = (
@@ -852,13 +924,30 @@
 	pixel_x = 12
 	},
 /obj/item/storage/secure/briefcase/money,
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"KJ" = (
+/obj/machinery/door/airlock/gold,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
 "KX" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"Le" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/secondlifebar)
 "Lq" = (
 /obj/structure/toilet{
@@ -876,7 +965,7 @@
 	light_power = 1;
 	light_range = 6
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "LQ" = (
 /obj/structure/bed/pillowpile/yellow,
@@ -894,7 +983,7 @@
 /area/survivalpod/superpose/secondlifebar)
 "MC" = (
 /turf/simulated/floor/flock,
-/area/survivalpod/superpose/secondlifebar/dorms)
+/area/survivalpod/superpose/secondlifebar)
 "MX" = (
 /obj/structure/bed/chair/oldsofa{
 	dir = 8
@@ -906,6 +995,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/oil/streak,
 /turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar)
 "Ns" = (
@@ -984,6 +1074,14 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar)
+"Pc" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar)
 "Po" = (
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
@@ -997,6 +1095,11 @@
 /area/survivalpod/superpose/secondlifebar)
 "Px" = (
 /obj/machinery/door/airlock/gold,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/unsimulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "PO" = (
@@ -1014,6 +1117,10 @@
 /obj/item/clothing/under/sexymime,
 /obj/item/clothing/under/dress/dress_yellow,
 /obj/item/clothing/suit/iasexy,
+/obj/item/storage/box/fluff/swimsuit,
+/obj/item/storage/box/fluff/swimsuit/blue,
+/obj/item/storage/box/fluff/swimsuit/white,
+/obj/item/storage/box/fluff/swimsuit/risque,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/secondlifebar)
 "Qp" = (
@@ -1031,6 +1138,10 @@
 /area/survivalpod/superpose/secondlifebar)
 "QL" = (
 /obj/effect/decal/remains,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"QZ" = (
+/obj/random/trash,
 /turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar)
 "Ra" = (
@@ -1103,7 +1214,7 @@
 	light_range = 6
 	},
 /turf/simulated/floor/flock,
-/area/survivalpod/superpose/secondlifebar/dorms)
+/area/survivalpod/superpose/secondlifebar)
 "TT" = (
 /obj/effect/floor_decal/industrial/stand_clear,
 /turf/simulated/floor/tiled/techfloor,
@@ -1197,7 +1308,7 @@
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 4
 	},
-/turf/unsimulated/shuttle/floor/purple,
+/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/secondlifebar)
 "Wz" = (
 /obj/structure/table/darkglass,
@@ -1209,8 +1320,8 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/random/trash,
 /obj/item/digestion_remains/skull/teshari,
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled/old_tile,
 /area/survivalpod/superpose/secondlifebar/dorms)
 "Xn" = (
@@ -1239,10 +1350,9 @@
 /obj/machinery/button/remote/airlock{
 	id = "cutiedorm1";
 	name = "Bolt Control";
-	pixel_x = -10;
 	specialfunctions = 4;
-	dir = 4;
-	pixel_y = 30
+	dir = 2;
+	pixel_y = 24
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/secondlifebar/dorms)
@@ -1338,7 +1448,7 @@ Bw
 Bw
 "}
 (2,1,1) = {"
-rP
+Pc
 gl
 wT
 oL
@@ -1355,7 +1465,7 @@ dv
 vp
 rw
 qK
-qK
+zL
 Yk
 NK
 Lq
@@ -1372,17 +1482,17 @@ gQ
 bD
 gl
 ER
-GO
-GO
-GO
-GO
+Gg
+Gg
+Gg
+Gg
 GO
 Ma
 dv
 qK
 Ws
 Ws
-qK
+wZ
 Yk
 Xl
 hK
@@ -1399,10 +1509,10 @@ oL
 YY
 gl
 KI
-GO
+Gg
 LO
-GO
-GO
+Gg
+Gg
 GO
 Gj
 dv
@@ -1420,16 +1530,16 @@ Bw
 "}
 (5,1,1) = {"
 BX
-rg
-oL
-oL
-oL
+KJ
+Le
+Le
+Le
 Px
-GO
-GO
-GO
-GO
-GO
+cl
+cl
+cl
+cl
+cl
 iA
 Wz
 dv
@@ -1495,8 +1605,8 @@ Yk
 XG
 KH
 tr
-cl
-ll
+Yk
+nq
 ns
 "}
 (8,1,1) = {"
@@ -1545,7 +1655,7 @@ vN
 wZ
 kv
 qK
-Gg
+Wo
 MC
 MC
 oX
@@ -1599,7 +1709,7 @@ vN
 wZ
 kv
 qK
-Gg
+Wo
 MC
 MC
 oX
@@ -1664,7 +1774,7 @@ Ht
 (14,1,1) = {"
 gl
 Ho
-hO
+QZ
 hO
 hO
 rg
@@ -1692,7 +1802,7 @@ Bw
 gl
 GT
 hO
-hO
+QZ
 gN
 gl
 IM
@@ -1723,7 +1833,7 @@ Ng
 hO
 gl
 ow
-Yx
+rE
 Yx
 Hw
 sd
@@ -1750,7 +1860,7 @@ gl
 gE
 gl
 yi
-Yx
+Gl
 Yx
 Hw
 qK

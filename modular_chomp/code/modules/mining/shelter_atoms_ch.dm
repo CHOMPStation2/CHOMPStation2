@@ -146,7 +146,6 @@
 /area/survivalpod/superpose/XenoBotanySetup
 
 /area/survivalpod/superpose/secondlifebar
-	requires_power = FALSE //The souls of the former cuties power this building
 	limit_mob_size = FALSE //Second life bars dont have ceilings
 
 /area/survivalpod/superpose/secondlifebar/dorms
